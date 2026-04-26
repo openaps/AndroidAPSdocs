@@ -1,156 +1,156 @@
-# EOPatch2 Instruction Manual
+# Manualul de instrucțiuni EOPatch2
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+Plasturele necesită utilizarea insulinei de tip U-100 cu acțiune rapidă, cum sunt NovoRapid sau Humalog. Utilizați o insulină cu acțiune rapidă potrivită pentru dumneavoastră în funcție de prescripția medicului dumneavoastră și injectați doza prescrisă.
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+Cea mai mică doză de insulină injectabilă atunci când se utilizează plasturele este de 0,05 U. Prin urmare, profilul bazal trebuie setat la o valoare minimă de 0,05 U/oră sau mai mult și un interval de 0,05 U/oră, în caz contrar, poate exista o eroare între cantitatea totală estimată din profil și cantitatea reală perfuzată din plasture. De asemenea, bolusul trebuie reglat și perfuzat cu un volum de perfuzie minim de 0,05 U.
 
-## Pump Setup
-1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
+## Configurare pompă
+1. Pe ecranul de pornire AAPS, faceți clic pe meniul hamburger din colțul din stânga sus și mergeți la Configurator.
+1. Selectați 'EOPatch2' din secțiunea Pompe.
+1. Apăsați tasta Înapoi pentru a reveni la ecranul de pornire.
 
 
 ![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
 
 ## Setări
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
+Selectați EOPATCH2 în partea de sus a ecranului de start pentru a merge în fila EOPATCH2.
 
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
+Selectați meniul Preferințe EOPatch2 făcând clic pe cele trei puncte din colțul din dreapta sus.
 
-The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
+Meniul Preferințe EOPatch2 oferă un meniu pentru a seta 3 tipuri de notificări.
 
-### Low reservoir Alerts
-A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
+### Alerte rezervor redus
+Un avertisment apare atunci când cantitatea de insulină rămasă în rezervor atinge valoarea stabilită sau mai mică în timp ce se utilizează plasturele. Poate fi stabilită de la 10 la 50U în incremente de 5U.
 
-### Patch expiration Reminder
-This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
+### Memento de expirare plasture
+Acesta este un memento pentru a vă notifica de timpul rămas până la expirarea plasturelui curent. Poate fi setat de la 1 la 24 de ore în incremente de 1 oră. Valoarea setării inițiale este de 4 ore.
 
-### Patch buzzer Reminder
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
+### Mementoul sonerie al plasturelui
+Aceasta este o funcție de reamintire pentru alte injecții decât injecția bazală. Dacă utilizați o injecție bolus (extinsă) sau o injecție bazală temporară, plasturele va produce un sunet în momentul în care începe injecția și când injecția este completă. Valoarea setării inițiale este pusă pe oprit.
 
 ![Image3](../images/EOPatch/Bild3.png)
 
-## Connecting the Patch
+## Conectarea plasturelui
 
-### Move to patch connection screen
+### Mutați-vă în ecranul de conectare al plasturelui
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+Selectați EOPATCH2 în partea de sus a ecranului de pornire și faceți clic pe butonul ACTIVARE din stânga jos.
 
 ![Image4](../images/EOPatch/Bild4.png)
 
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+### Conectarea plasturelui
+Introduceți acul seringii în orificiul de admisie a insulinei de pe plasture și apoi împingeți încet pistonul pentru a injecta insulina. Când insulina este umplută cu mai mult de 80U, plasturele emite un sunet de inițializare și pornește. După confirmarea sunetului, apăsați butonul PORNIȚI ASOCIERE de pe ecran.
 
-[Warning]
+[Atenție]
 
-- Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+- Nu rotiți maneta de acționare a acului până când nu primiți instrucțiuni. În caz contrar, poate cauza probleme grave în timpul injectării sau al verificărilor de siguranță.
+- Cantitatea de insulină care poate fi injectată în plasture este de 80~200U. Dacă injectați inițial mai puțin de 80U în plasture, plasturele nu va funcționa.
+- Luați insulina ce va fi introdusă în plasture din frigider și lăsați-o la temperatura camerei timp de 15 până la 30 de minute înainte. Temperatura insulinei care trebuie injectată trebuie să fie de cel puțin 10°C.
 
 ![Image5](../images/EOPatch/Bild5.png)
 
-### patch pairing
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
+### Asocierea plasturelui
+Ecranul de asociere al plasturelui va fi afișat și asocierea va fi încercată automat. În cazul în care comunicarea a reușit, apare o notificarea pentru solicitarea de asociere prin Bluetooth. Apăsați pe OK și atunci când notificarea solicitării de asociere Bluetooth apare a doua oară cu codul de autentificare, selectați din nou OK.
 
-[Warning]
+[Atenție]
 
-- For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
-- After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
+- Pentru asociere, plasturele și telefonul inteligent trebuie să fie la o distanță de 30 cm unul de celălalt.
+- După ce pornirea plasturelui a fost finalizată, plasturele va piui o dată la 3 minute până când asocierea se finalizează.
+- După pornirea plasturelui, aplicarea plasturelui trebuie finalizată prin intermediul aplicației în decurs de 60 de minute. Dacă aplicarea nu poate fi finalizată în decurs de 60 minute, plasturele trebuie aruncat.
 
 ![Image6](../images/EOPatch/Bild6.png) ![Image7](../images/EOPatch/Bild7.png) ![Image8](../images/EOPatch/Bild8.png)
 
 
-### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
+### Pregătirea plasturelui
+După ce ați îndepărtat banda adezivă a plasturelui, verificați dacă acul iese în afară. În cazul în care nu există probleme cu plasturele, apăsați URMĂTORUL.
 
 ![Image9](../images/EOPatch/Bild9.png)
 
-### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
+### Atașarea pompei
+Insulina trebuie injectată într-un loc, cu țesut adipos subcutanat, dar puțini nervi sau vase de sânge, de aceea se recomandă utilizarea abdomenului, brațului sau coapsei pentru locul de atașare a plasturelui. Alegeți un loc de atașare a plasturelui și aplicați plasturele după dezinfectarea locației.
 
-[Warning]
+[Atenție]
 
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
+- Asigurați-vă că ați întins uniform partea benzii plasturelui atașată de corp, astfel încât plasturele să adere complet la piele.
+- Dacă plasturele nu se lipește complet, poate pătrunde aerul între plasture și piele, care poate slăbi rezistența adezivă și efectul de impermeabilizare a plasturelui.
 
 ![Image10](../images/EOPatch/Bild10.png)
 
-### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
+### Verificare de siguranță
+Când aplicarea plasturelui este finalizată, apăsați "Pornire Verificare de Siguranță". Când verificarea de siguranță este finalizată, plasturele va emite un semnal sonor o dată.
 
-[Warning]
+[Atenție]
 
-- For safe use, do not turn the needle action lever until the safety check has been completed.
+- Pentru o utilizare sigură, nu rotiți maneta de acționare a acului până când nu este finalizată verificarea de siguranță.
 
 ![Image11](../images/EOPatch/Bild11.png) ![Image12](../images/EOPatch/Bild12.png)
 
 
-### Inserting the needle
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
+### Introducerea acului
+Acul este introdus prin ținerea plasturelui și rotirea manetei de acționare a acului cu mai mult de 100° în direcția în sus a manetei. Se aude un semnal sonor când acul este introdus corect. Rotiți maneta de acționare a acului mai departe în sensul acelor de ceasornic pentru a elibera maneta. Apăsați pe URMĂTORUL.
 
-[Caution]
+[Atenție]
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+- Dacă treceți la pasul următor fără ca semnalul sonor să se audă, va apărea un avertisment de eroare la introducerea acului.
 
-## Discarding the patch
-Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
+## Eliminarea plasturelui
+Plasturii trebuie înlocuiți în cazul unor valori mici ale cantității de insulină, al expirării duratei de utilizare și al defectelor. Perioada recomandată de utilizare pentru fiecare plasture este de 84 de ore după pornirea plasturelui.
 
-### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+### Eliminarea plasturelui
+Selectați EOPATCH2 în partea de sus a ecranului principal și faceți clic pe butonul ELIMINARE/SCHIMBARE PLASTURE din partea de jos. Pe ecranul următor, apăsați pe butonul ELIMINAȚI PLASTURE. Apare o casetă de dialog pentru a confirma încă o dată, iar dacă selectați butonul ELIMINAȚI PLASTURE, eliminarea este finalizată.
 
 ![Image13](../images/EOPatch/Bild13.png) ![Image14](../images/EOPatch/Bild14.png) ![Image15](../images/EOPatch/Bild15.png) ![Image16](../images/EOPatch/Bild16.png)
 
-## Suspending and Resuming Insulin Delivery
-Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+## Suspendarea și reluarea administrării insulinei
+Suspendarea administrării insulinei anulează, de asemenea, atât bolusul extins, cât și bazala temporală. La reluarea administrării insulinei, nu se va mai relua administrarea bolusului extins și a bazalei temporare anulate. Iar atunci când administrarea insulinei este suspendată, plasturele va emite un sunet la fiecare 15 minute.
 
-### Suspending insulin delivery
-Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
+### Suspendarea administrării insulinei
+Selectați EOPATCH2 în partea de sus a ecranului de pornire și faceți clic pe butonul SUSPENDARE din dreapta jos. Atunci când selectați CONFIRMARE în caseta de confirmare, apare o casetă de selectare a timpului. Dacă selectați butonul de CONFIRMARE după selectarea orei, administrarea insulinei va fi suspendată pentru perioada de timp setată.
 
 ![Image17](../images/EOPatch/Bild17.png) ![Image18](../images/EOPatch/Bild18.png) ![Image19](../images/EOPatch/Bild19.png)
 
 
-### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
+### Reluarea administrării insulinei
+Selectați EOPATCH2 în partea de sus a ecranului de pornire și faceți clic pe butonul RELUAȚI din dreapta jos. Administrarea insulinei va fi reluată selectând CONFIRMAȚI în caseta de dialog de confirmare.
 
 ![Image20](../images/EOPatch/Bild20.png) ![Image21](../images/EOPatch/Bild21.png)
 
-## Alarms/Warnings
+## Alarme/Avertizări
 
-### Alarm
+### Alarmă
 
-Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
+Se emit alarme pentru situații de urgență de maximă prioritate și care necesită măsuri imediate. Semnalul de alarmă nu dispare sau nu expiră până când nu este confirmat. O alarmă se declanșează atunci când există o problemă cu plasturele utilizat, așadar pot exista cazuri în care plasturele în uz trebuie eliminat și înlocuit cu un plasture nou. Avertismentul este afișat sub forma unei casete de dialog, iar comutarea la un alt ecran nu este posibilă până la finalizarea procesării.
 
 ![Image22](../images/EOPatch/Bild22.png) ![Image23](../images/EOPatch/Bild23.png)
 
-The different types of alarms are explained below.
+Diferitele tipuri de alarme sunt explicate mai jos.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+| Alarme                             | Explicație                                                                                                                                                                                                                                                                    |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Rezervor gol                       | Se întâmplă când rezervorul plasturelui rămâne fără insulină.                                                                                                                                                                                                                 |
+| Plasture expirat                   | Se întâmplă când durata de utilizare a expirat, și nu mai sunt posibile administrări suplimentare de insulină.                                                                                                                                                                |
+| Ocluzie                            | Se întâmplă când pare că orificiul de admisie a insulinei al plasturelui este înfundat.                                                                                                                                                                                       |
+| Eroare la auto-testarea de pornire | Se întâmplă atunci când plasturele detectează o eroare neașteptată în timpul procesului de auto-testare de după inițializare (post-boot).                                                                                                                                     |
+| Temperatură nepotrivită            | Se întâmplă când plasturele se află în afara intervalului normal de temperatură de funcționare în timpul aplicării și utilizării plasturelui. Pentru a gestiona această alarmă, mutați plasturele într-o condiție de temperatură de funcționare adecvată (de la 4,4 la 37°C). |
+| Eroare la inserarea acului         | Se întâmplă când inserția acului nu a decurs normal în timpul procesului de aplicare al plasturelui. Verificați dacă marginea de inserare a acului a plasturelui și butonul de activare a acului sunt aliniate.                                                               |
+| Eroare baterie plasture            | Se întâmplă chiar înainte ca bateria internă a plasturelui să se epuizeze și să se oprească (să se deconecteze de la alimentare).                                                                                                                                             |
+| Eroare la activarea plasturelui    | Se întâmplă când aplicația nu reușește să finalizeze procesul de aplicare a plasturelui în decurs de 60 de minute după ce plasturele a pornit.                                                                                                                                |
+| Eroare plasture                    | Se întâmplă atunci când plasturele se confruntă cu o eroare neașteptată la aplicarea și utilizarea plasturelui.                                                                                                                                                               |
 
-### Warning
+### Atenție
 
-A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
+O atenționare are loc într-o situație de prioritate medie sau redusă. Când are loc o atenționare, este afișată ca o notificare în vederea de ansamblu.
 
 ![Image24](../images/EOPatch/Bild24.png)
 
-The different types of warnings are explained below.
+Diferitele tipuri de atenționări sunt explicate mai jos.
 
-| Warnings                     | Explanation                                                                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
-| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low            | Occurs when the patch's battery is low.                                                                                               |
+| Atenționări                                   | Explicație                                                                                                                                             |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Sfârșitul suspendării de insulină             | Se întâmplă când timpul setat de utilizator s-a scurs după ce suspendarea perfuziei de insulină a fost finalizată.                                     |
+| Nivel rezervor scăzut                         | Se întâmplă atunci când cantitatea de insulină rămasă din plasture este sub valoarea fixată.                                                           |
+| Durata de funcționare a plasturelui a expirat | Se întâmplă când durata de utilizare a plasturelui s-a încheiat.                                                                                       |
+| Plasturele va expira în curând                | Se întâmplă cu o oră înainte de expirarea plasturelui.                                                                                                 |
+| Activarea plasturelui incompletă              | Se întâmplă când au trecut mai mult de 3 minute din cauza unei întreruperi în timpul aplicării plasturelui, în etapa de după finalizarea împerecherii. |
+| Baterie plasture slabă                        | Se întâmplă când bateria plasturelui este scăzută.                                                                                                     |
 

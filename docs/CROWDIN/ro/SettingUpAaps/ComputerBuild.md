@@ -6,7 +6,7 @@ This is the traditional method to build your AAPS app.
 
 You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
 
-## Build yourself instead of download
+## Construiți-vă în loc să descărcați
 
 **The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
 
@@ -420,7 +420,7 @@ In the Notifications box, click on the blue link "locate":
 
    ![File location apk](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
+Felicitări! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
 
 ```{tip}
 If you think you might want to use an Android Wear smartwatch in the future, this is the best time to build the AAPS Wear apk to be sure it will be synchronized with your AAPS apk.

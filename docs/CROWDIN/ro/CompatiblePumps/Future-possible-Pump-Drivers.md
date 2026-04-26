@@ -1,38 +1,38 @@
-# Future (possible) Pump Drivers
+# Controlere de pompe (posibile) viitoare
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+Aceasta este o listă a unor pompe care circulă, stadiul suportului pentru ele în oricare dintre sistemele de buclă închisă și apoi stadiul suportului în AAPS. La final există niște informații, ce este necesar pentru ca o pompă să fie capabilă de buclă.
 
-## Pumps that are Loopable
+## Pompe care pot fi folosită în buclă
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([Pagina de pornire](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Stare buclă:** Pompa este un candidat la buclă, dar protocolul este necunoscut în acest moment. Niciun interes pentru sursă deschisă din partea vânzătorului.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X2 ([Pagina de pornire](https://www.tandemdiabetes.com/))
 
-**Loop status:** Not yet loopable.
+**Stare buclă:** Încă nu se poate face bucla.
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+În timp ce, în trecut, compania a decis să nu permită ca pompele sale să fie controlate de dispozitive externe, se pare că ultimii câțiva ani au schimbat radical situația. Compania a decis să își îmbunătățească pompa t:slim X2 pentru a putea fi controlată de la distanță (prin intermediul aplicației t:connect), ceea ce înseamnă că se deschid noi posibilități și că am putea spera să controlăm pompa prin intermediul AAPS pe viitor. Un nou firmware pentru pompă este planificat să fie lansat în curând (anul acesta sau anul viitor, înainte să apară pompa fără fir t:sport). Încă nu există detalii, ce operațiuni vor fi posibile de la t:connect (bolus cu siguranță, orice altceva este necunoscut).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Pagina de pornire](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** All 3 pumps will be Loop candidates.
+**Stare buclă:** Toate cele 3 pompe vor fi candidate pentru buclă.
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+În așteptarea lansării t:mobi în Europa (celelalte două nu sunt încă lansate nicăieri). Dezvoltarea suportului AAPS pentru t:mobi a început deja și ar trebui să fie disponibil până la sfârșitul anului 2025 (a se vedea mai multe informații pe Discord).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Pompă de insulină Willcare ([Pagina de start](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Starea buclei:** Momentan nu este un candidat la buclă, dar am fost contactați de personalul lor și sunt interesați să își extindă pompa pentru a se putea face buclă (în acest moment, cred că lipsesc doar comenzile pentru a obține / seta profilul).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Comentarii:** Deoarece firma este interesată de integrarea cu AAPS, ar putea face implementarea chiar ei.
 
 ## Pompele nu se mai vând (companiile nu mai funcționează)
 
@@ -44,53 +44,53 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Comentarii:** Sfârșitul suportului martie 2025.
 
-## Pumps that aren't Loopable
+## Pompe cu care nu se poate face buclă
 
-### Medtronic Bluetooth
+### Bluetooth Medtronic
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Comentarii:** Medtronic [s-a retras](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Comentarii:** Niciun succes al comunității în comunicarea cu pompa Solo.
 
 ### Ypsomed Pump
 
-**Comments:** Ypso added very heavy 3rd party encryption.
+**Comentarii:** Ypso a adăugat o criptare terță foarte puternică.
 
 ## Cerințe pentru pompele cu care se poate face Buclă
 
 **Cerințe preliminare**
 
-- Pump has to support some kind of remote control. (BT, radio frecvență etc.)
-- Protocol is hacked/documented/etc.
+- Pompa trebuie să accepte un fel de control la distanță. (BT, radio frecvență etc.)
+- Protocolul este descifrat/documentat/șamd
 
-**Minimal requirement**
+**Cerință minimă**
 
 - Setează Rata Bazală Temporară
-- Get Status
+- Preia Starea
 - Anulează Rata Bazală Temporară
 
-**For oref1(SMB) or Bolusing:**
+**Pentru oref1(SMB) sau Bolus:**
 
 - Setează bolusul
 
-**Good to have**
+**Bine de avut**
 
 - Anulează Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Preia Profilul Bazalei (aproape obligatoriu)
+- Setare Profil Bazală (bine de avut)
+- Citește Istoric 
 
-**Other (not required but good to have)**
+**Altele (nu sunt necesare, dar bune de avut)**
 
-- Set Extended Bolus
+- Setați bolus extins
 - Renunță la bolusul extins
-- Read History
-- Read TDD
+- Citește Istoric
+- Citiți DTZ (Doză Totală Zilnică)
 
-### Other pumps support
+### Suport pentru alte pompe
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Dacă aveți și alte pompe a căror starea doriți să o aflați, vă rugăm să ne contactați pe Discord.

@@ -24,7 +24,7 @@ Carbs will also be absorbed via the methods described below based on which sensi
 
 ## Carbs Sensitivity - Oref1
 
-Unabsorbed carbs are cut off after specified time:
+Carbohidrații neabsorbiți sunt ignorați după timpul specificat:
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
@@ -40,7 +40,7 @@ Absorption is calculated to have COB = 0 after specified time:
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
 
 (CobCalculation-detection-of-wrong-cob-values)=
-## Detection of wrong COB values
+## Detectarea unor valori COB greșite
 
 **AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
 

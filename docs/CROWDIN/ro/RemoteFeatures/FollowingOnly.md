@@ -20,7 +20,7 @@ The most common strategies used in combination with **AAPS** are explained in mo
 
 ### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) and [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
-![image](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
+![imagine](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
 * Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data.
 
@@ -47,7 +47,7 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
-![image](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
+![imagine](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
 Pros (as reported by users):
 
@@ -73,7 +73,7 @@ Cons (as reported by users)
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
-![image](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
+![imagine](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
 * Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
@@ -96,23 +96,23 @@ You can use xDrip+ as a follower.
 
 Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
 
-![image](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
+![imagine](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
 #### Without Nightscout - xDrip+ BG data source
 
 If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
 
-![image](../images/remote_control_and_following/xDrip+_Master_Sync.png)
+![imagine](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
 #### Without Nightscout - xDrip+ BG companion app
 
 În cazul în care sursa de date **AAPS** nu este xDrip+, dar puteți afișa date glicemice din sursa de date a aplicației companion, îl poți folosi de la telefonul principal pentru a partaja date cu adepții xDrip+, afișând glice, tratamente și tarife bazale.
 
-![image](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
+![imagine](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
 ### xDrip4iOS (iOS)
 
-![image](../images/remote_control_and_following/xdrip4ios.jpg)
+![imagine](../images/remote_control_and_following/xdrip4ios.jpg)
 
 xDripSwift was created from porting the original xDrip app to iOS and evolved to "xDrip for iOS" written **xDrip4iOS** .
 
@@ -132,7 +132,7 @@ If you want, you can then become a "releaser" and [share a Personal Testflight x
 
 
 
-![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
+![imagine](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
 "What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
 
@@ -140,9 +140,9 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
-![image](../images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
+![imagine](../images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
 
-![image](../images/21b83c41-85c6-4619-a702-a65450768855.png)
+![imagine](../images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
 [Sugarmate](https://sugarmate.io/) is available to download onto iPhones from the App store. Sugarmate is compatible with:
@@ -155,7 +155,7 @@ It has been reported by users of Sugarmate that it can be used with Apple CarPla
 
 ### [Spike](https://spike-app.com/) (iOS)
 
-![image](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
+![imagine](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
 Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
 
@@ -175,7 +175,7 @@ See [here](../Getting-Started/Watches.md).
 
 ### M5 stack
 
-![image](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
+![imagine](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 The M5Stack is a small box which can be programmed for many applications, Martin's project [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) is displaying sensor glucose values and trends, IOB and COB. It is in a plastic box, equipped with a colour display, micro SD card slot, 3 buttons, speaker and internal battery. It is a great blood sugar monitor and is relatively easy to set up if you have a Nightscout account. Users typically run it on their home Wi-Fi, but some users report using it as a display when motorbiking, by running it off a phone Wi-Fi hotspot.
 
@@ -183,9 +183,9 @@ The M5Stack is a small box which can be programmed for many applications, Martin
 
 SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
 
-![image](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
+![imagine](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
-![image](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
+![imagine](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
 * SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values.
 * The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading.

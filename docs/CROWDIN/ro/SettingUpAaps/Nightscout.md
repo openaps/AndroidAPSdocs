@@ -8,7 +8,7 @@ Besides reporting Nightscout can also be used to control AAPS. I.e. you can set 
 
 Exercise maximum caution if using Nightscout as your AAPS data source.
 
-### Nightscout settings
+### Setări Nightscout
 
 You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
 
@@ -20,25 +20,25 @@ Nightscout `API_SECRET` is your site main password: don't share it publicly.
 
 You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
 
-* Access the NSClient or NSClientV3 plugin settings with either 1) Main view -> Config Builder -> Synchronization -> NSClient Cog icon 2) NSCLIENT tab -> Three dots menu -> Plugin preferences
+* Accesați setările modului NSClient sau NSClientV3 cu fie 1) Vizualizare principală -> Configurator-> Sincronizare -> roată dințată NSClient 2) NSCLIENT tab -> Meniu Trei puncte -> Preferințe modul
 * Enable all data upload to Nightscout (3) as this is now the standard method unless your BG data source is Nightscout.  
   If your AAPS BG data source is Nightscout **do not** enable Upload BG data to NS (3).
 * Do not enable Receive/backfill data (4) unless Nightscout is your BG data source.
 
-![Nightscout upload only](../images/NSsafety.png)
+![Doar încărcarea Nightscout](../images/NSsafety.png)
 
 #### Do not sync from Nightscout
 
 Disabling these options makes sure no Nightscout change will be used by AAPS.
 
-![Nightscout upload only](../images/NSsafety2.png)
+![Doar încărcarea Nightscout](../images/NSsafety2.png)
 
 #### Accept changes from Nightscout
 
 Enabling these options allow you to remotely change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS.  
 Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
 
-![Nightscout upload only](../images/NSsafety3.png)
+![Doar încărcarea Nightscout](../images/NSsafety3.png)
 
 ### Further security settings
 
@@ -58,7 +58,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Pot fi setate diferite alarme pentru [monitorizarea pompei](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), bateriei % în special este încurajată: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 

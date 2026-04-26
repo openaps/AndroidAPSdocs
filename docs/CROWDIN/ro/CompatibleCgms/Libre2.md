@@ -1,92 +1,92 @@
-# Freestyle Libre 2 and 2+
+# Freestyle Libre 2 și 2+
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+Senzorul Libre 2 Freestyle Libre este acum un adevărat CGM chiar și cu aplicația oficială. Totuși, LibreLink nu poate trimite date către AAPS. Există mai multe soluții pentru a-l utiliza cu AAPS.
 
-## 1. Use a Bluetooth bridge and OOP
+## 1. Utilizați o punte Bluetooth și OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) or 2+ (EU) and an out of process algorithm app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md).
+Transmițătoarele prin Bluetooth pot fi utilizate împreună cu Libre 2 (UE) sau 2 + (UE) și cu o aplicație algoritm în afara procesului. Poți primi valori ale glicemiei la fiecare 5 minute, ca în cazul [Libre 1](./Libre1.md).
 
-Check the bridge and app you want to use are compatible with your sensor and xDrip+.
+Verificați dacă puntea și aplicația pe care doriți să le utilizați sunt compatibile cu senzorul și xDrip+.
 
-The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings as with the original reader. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#libre2-value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+OOP pentru Libre2 (găsiți-l [aici](#Libre2_OOP2)) creează aceleași citiri de glicemie ca și în cazul cititorului original. AAPS cu Libre 2 face o uniformizare de 10 până la 25 de minute pentru a evita anumite salturi. Vedeți mai jos [Valoare uniformizată& valori brute](#libre2-value-smoothing-raw-values). OOP generează citiri la fiecare 5 minute, în medie cu o medie de 5 minute. Prin urmare, valorile glicemiei nu sunt atât de uniformizate, ci se potrivesc cu cele ale dispozitivului de citire original și urmează mai degrabă valorile "reale" ale glicemiei. Dacă încercați să faceți bucla cu OOP, vă rugăm să activați toate setările de uniformizare din xDrip+.
 
-There are some good reasons to use a Bluetooth transmitter:
+Există motive întemeiate pentru a utiliza un transmițător Bluetooth:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Puteți alege diferite strategii de calibrare OOP2 (1): cu valorile cititorului folosind "Fără calibrare", sau prin calibrarea senzorului ca un Libre 1 folosind "calibrare bazată pe valori brute" sau, în cele din urmă, să calibreze valorile cititorului cu "calibrare bazată pe glicemie".  
+  Asigurați-vă că lăsați OOP1 dezactivat (2).
 
-    → Hamburger Menu → Settings → Less common settings → Other misc. options
+    → Meniu Hamburger → Setări → Setări mai puțin frecvente → Alte diferite opțiuni
 
-![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
+![Calibrare OOP2](../images/Libre2_OOP2Calibration.png)
 
--   The Libre 2 sensor can be used 14.5 days as the Libre 1
--   8 hours backfilling is fully supported
+-   Senzorul Libre 2 poate fi utilizat 14,5 zile la fel ca Libre 1
+-   Reumplerea datelor pe ultimele 8 ore este completat integrată
 
-Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
+Observație: Transmițătorul poate fi utilizat în paralel cu aplicația LibreLink fără a interfera cu ea.
 
 ### Start sensor
 
-- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
+- → Meniu Hamburger (1) → Porniți senzorul (2) → Start senzor (3) → Răspuns "Nu astăzi (4)".
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start transmițător Libre & Senzor 3](../images/xDrip_Libre_Transmitter03.png)
 
-This will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+Acest lucru nu va porni fizic niciun senzor Libre2 și nici nu va interacționa cu aceștia în vreun fel. Acesta este doar pentru a indica xDrip+ faptul că un nou senzor transmite valorile glicemiei din sânge. Dacă este disponibil, introduceți două valori ale glicemiei din sânge pentru calibrarea inițială. Acum valorile glicemiei ar trebui să fie afișate în xDrip+ la fiecare 5 minute. Valorile pierdute, pentru că ați fost prea departe de telefon, nu vor fi recuperate înapoi.
 
-After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you blood glucose after activation and make a new initial calibration.
+După schimbarea senzorului, xDrip+ va detecta automat noul senzor și va șterge toate datele de calibrare. Vă puteți verifica glicemia după activarea și puteți face o nouă calibrare inițială.
 
-### Configure AAPS (for looping only)
+### Configurați AAPS (doar pentru buclă)
 
--   In AAPS go to Config Builder > BG Source and check 'xDrip+'
+-   În AAPS mergeți la Configurator > Sursă glicemie și bifați 'xDrip+'
 
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+![Sursă glicemie xDrip+](../images/ConfBuild_BG_xDrip.png)
 
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](#xdrip-identify-receiver).
+-   Dacă AAPS nu primește valorile glicemiei atunci când telefonul este în modul avion utilizați 'Identificați destinatarul' așa cum este descris în [pagina de setări xDrip+](#xdrip-identify-receiver).
 
-## 2. Use xDrip+ direct connection
+## 2. Utilizați conexiunea directă xDrip+
 
 ```{admonition} Libre 2 EU only
-:class: warning
-xDrip+ doesn't support direct connection to Libre 2 US and AUS.
-Only Libre 2 and 2+ **EU** models.
+:class: avertizare
+xDrip+ nu acceptă conexiune directă la Libre 2 US și AUS.
+Doar modelele Libre 2 și 2+ **UE**.
 ```
 
-- Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip+ as the original documentation links to an obsolete OOP2  version.
-- Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- Urmați [aceste instrucțiuni](./Libre2MinimalL00per.md) pentru a configura xDrip+ deoarece legătura originală a documentației trimite către o versiune OOP2 învechită.
+- Urmăriți instrucțiunile de configurare pe pagina [xDrip+ de setări](../CompatibleCgms/xDrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
 (libre2-value-smoothing-raw-values)=
 
-### Value smoothing & raw values
+### Uniformizarea valorilor & valorile brute
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Tehnic, valoarea actuală a glicemiei este transmisă către xDrip+ în fiecare minut. Un filtru de medie ponderată calculează o valoare uniformizată pe baza ultimelor 25 de minute, în mod implicit. Puteți schimba perioada din meniul de caracteristici NFC.
 
-→ Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+→ Meniu Hamburger → Setări → Caracteristici scanare NFC → Uniformizați libre 3 când se utilizează metoda xxx
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+![Setări avansate xDrip+ Libre 2 & valori brute](../images/xDrip_Libre3_Smooth.png)
 
-This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
+Acest lucru este obligatoriu pentru buclă. Curbele sunt uniformizate și rezultatele buclei sunt grozave. Valorile brute pe care se bazează alarmele oscilează puțin mai mult, dar corespund valorilor pe care le afișează și cititorul oficial. În plus, valorile brute pot fi afișate în graficul xDrip+ pentru a putea reacționa la timp pentru modificările rapide. Vă rugăm să porniți Setări mai puțin obișnuite \> Setări Avansate pentru Libre2 \> "Arătați valori brute" și "Arătați informațiile senzorului". Apoi valorile brute sunt afișate suplimentar ca puncte mici albe și informațiile suplimentare despre senzori sunt disponibile în meniul sistemului.
 
-The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
+Valorile brute sunt foarte utile atunci când glicemia din sânge variază rapid. Chiar dacă valorile oscilează mai mult, ați detecta tendința mult mai bine dacă ați folosi linia netezită pentru a lua decizii terapeutice adecvate.
 
-→ Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
+→ Meniu Hamburger → Setări → Setări mai puțin frecvente → Setări avansate pentru Libre 2
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
+![Setări avansate xDrip+ Libre 2 & valori brute](../images/Libre2_RawValues.png)
 
 
 
 #### Calibrare
 
-You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
+Puteți calibra Libre2 **cu un decalaj între -40 mg/dl și +20 mg/dL \[-2,2 mmol/l la +1,1 mmol/l\]** (intercept). Panta nu poate fi schimbată. Vă rugăm să verificați printr-o înțepătură în deget (prin glicemie capilară) după activarea unui senzor nou, și să rețineți că acesta ar putea să nu fie precis în primele 12 ore de la inserare. Deoarece pot exista diferențe mari față de măsurătorile sângelui, verificați la fiecare 24 de ore și calibrați dacă este necesar. Dacă senzorul oferă citiri eronate după câteva zile, atunci ar trebui să fie înlocuit.
 
-## 3. Use Diabox
+## 3. Utilizare Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
+- Instalați [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). În Setări, Integrare, activați Partajarea datelor cu alte aplicații.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
-## 4. Use Juggluco
+## 4. Utilizarea Juggluco
 
-See [here](./Juggluco.md).
+Vedeți [aici](./Juggluco.md).

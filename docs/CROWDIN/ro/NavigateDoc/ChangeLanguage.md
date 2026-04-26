@@ -7,7 +7,7 @@ The language selection can be found bottom right of the screen. Please click on 
 ![Open language menu](../images/documentation_language_menu.png)
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. Acest lucru se va întâmpla frecvent la schimbarea versiunii, dar nu ar trebui să se întâmple atunci când se schimbă limba: pagina va apărea în limba engleză, dacă nu este încă tradusă.
 ```
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders.
+Sunteți bineveniți să vă alăturați pe [Crowdin](https://crowdin.com/project/androidapsdocs) ca traducători și corectori.

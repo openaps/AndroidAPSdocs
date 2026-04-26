@@ -42,32 +42,32 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 - After the warm-up phase, the values are displayed as usual in the G7 app.
 
-### Configuration in AAPS
+### Configurarea în AAPS
 
-- Select 'BYODA' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source) - even if it is not the BYODA app!
+- Selectați 'BYODA' în [Configurator, Sursă glicemie](#Config-Builder-bg-source) - chiar dacă nu este aplicația BYODA!
 
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+- Dacă AAPS nu primește valori, comută la o altă sursă de glicemie și apoi înapoi la "BYODA" pentru a apela interogarea pentru aprobarea schimbului de date între AAPS și BYODA.
 
-## 3. xDrip+ (companion mode)
+## 3. xDrip+ (mod companion)
 
--   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
--   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Descărcați și instalați xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Ca sursă de date în xDrip+ "Companion App" trebuie selectată și în Setări Avansate > Setări Bluetooth > "Companion Bluetooth" trebuie activat.
+-   Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
 -   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
 
 ## 4. Juggluco
 
-Version 9.0+ required
+Versiunea 9.0+ necesară
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+- Dezactivați aplicația conectată anterior la senzor: Dezinstalați aplicația sau utilizați "Oprire forțată". Dezactivați permisiunea "Dispozitive apropiate" în setările aplicației. Restricționează utilizarea bateriei de către aplicație.
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- Uitați senzorul în setările Bluetooth: În setările Android, găsiți senzorul în dispozitivele asociate și selectați "Uitați". Numele senzorilor Dexcom G7 încep cu DXCM.
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+- Evitați interferențele ale altor senzori: Păstrați senzorii Dexcom vechi în afara razei Bluetooth.
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+- Conectați senzorul G7 la Juggluco: Deschide Juggluco → Meniul Stânga → Foto. Scanați matricea de date de pe aplicatorul G7 al senzorului. Așteptați până la 5 minute pentru ca Juggluco să găsească senzorul.
 
-- Cerințe de asociere: Acceptați împerecherea senzorului cu Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Cerințe de asociere: Acceptați împerecherea senzorului cu Juggluco. Asigurați-vă că ecranul nu este blocat în timpul asocierii. Dacă asocierea eșuează, așteptați 5 minute înainte de a încerca din nou.
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- Excepție: Ceasurile cu Wear OS se pot asocia fără a apăsa un buton de acceptare.

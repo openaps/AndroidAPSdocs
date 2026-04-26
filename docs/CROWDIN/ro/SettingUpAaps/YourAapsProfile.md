@@ -85,7 +85,7 @@ If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl 
 
 The **figure below** shows an example of how the target can be set in an **AAPS** profile.
 
-![Target](../images/Profile_Target.png)
+![Țintă](../images/Profile_Target.png)
 
 **BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
@@ -151,7 +151,7 @@ A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG
 
 A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
 
-**Example:**
+**Exemplu:**
 * **BG** is 190 mg/dL (10,5 mmol/L) and target is 100 mg/dL (5,6 mmol/L).
 * So, you want a correction of `190 - 110 = 90 mg/dL` or `10,5 - 5,6 = 4.9 mmol/L`
 * If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
@@ -199,13 +199,13 @@ It is common to have different **ICR** at different times of day due to hormone 
 
 > **NOTĂ:**
 > 
-> În unele ţări europene, se utilizează unităţi de pâine pentru determinarea cantității de insulină necesară pentru alimente. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> În unele țări europene, se utilizează unități de pâine pentru determinarea cantității de insulină necesară pentru alimente. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > În acest model s-a stabilit cantitatea de carbohidrați și cantitatea de insulină a fost variabilă. ("Cât insulină este necesară pentru a acoperi o felie de pâine?")
 > 
 > When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("Câte grame de carbohidrati pot fi acoperite de o singură unitate de insulină?")
 > 
-> Example:
+> Exemplu:
 > 
 > Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
@@ -297,7 +297,7 @@ The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a 
 
 **Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
 
-Asistentul de profil oferă seturi de date de la două spitale diferite pentru copii pentru a găsi profilul iniţial pentru copilul dumneavoastră de până la 18 ani.
+Asistentul de profil oferă seturi de date de la două spitale diferite pentru copii pentru a găsi profilul inițial pentru copilul dumneavoastră de până la 18 ani.
 
 ![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
@@ -319,7 +319,7 @@ See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-Pro
 (your-aaps-profile-clone-profile-switch)=
 ### Clone a Profile switch to a new Profile
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Schimbare profil](../images/TreatmentsView4.png)
 
 The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
 

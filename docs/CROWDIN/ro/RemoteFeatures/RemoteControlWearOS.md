@@ -59,16 +59,16 @@ Pictograma cu steaua umplută este pentru starea activată (**Pornit**), iar pic
 ### Setări fețe de ceas
 
 * **Afișați data** (implicit `Oprit`): notă, datele nu sunt disponibile pe toate fețele de ceas
-* **Afișați IOB** (implicit `Pornit`): Afișează sau nu valoarea IOB (setarea pentru valoarea detaliată este în parametrii de ceas din AAPS)
-* **Afișați COB** (implicit `Pornit`): Afișează sau nu valoarea COB
-* **Afișați Variația** (implicit `Pornit`): Afișează sau nu variația glicemiei din ultimele 5 minute
-* **Afișați variația medie** (implicit `Pornit`): Afișează sau nu variația medie a glicemiei din ultimele 15 minute
+* **Afișați IOB** (implicit `Pornit`): Afișați sau nu valoarea IOB (setarea pentru valoarea detaliată este în parametrii de ceas din AAPS)
+* **Afișați COB** (implicit `Pornit`): Afișați sau nu valoarea COB
+* **Afișați Variația** (implicit `Pornit`): Afișați sau nu variația glicemiei din ultimele 5 minute
+* **Afișați variația medie** (implicit `Pornit`): Afișați sau nu variația medie a glicemiei din ultimele 15 minute
 * **Afișați bateria telefonului** (implicit `Pornit`): Baterie telefon în %. Roșu dacă e sub 30%.
 * **Afișați baterie dispozitiv** (implicit `Oprit`): Bateria dispozitivului este o sinteză a bateriilor din telefon, pompă și senzor (în general, cea mai mică dintre cele 3 valori)
 * **Afișați Rata Bazală** (implicit `Pornit`): Afișare sau nu a ratei bazale curente (în U/h sau în % dacă RBT)
 * **Afișați starea buclei** (implicit `Pornit`): arată câte minute au trecut de la ultima buclă activă (săgețile din jurul valorii devin roșii dacă este peste 15').
-* **Afișați glicemia** (implicit `Pornit`): Afișează sau nu ultima valoare a glicemiei
-* **Afișați săgeata de direcție** (implicit `Pornit`): Afișează sau nu săgeata tendinței glicemiei
+* **Afișați glicemia** (implicit `Pornit`): Afișați sau nu ultima valoare a glicemiei
+* **Afișați săgeata de direcție** (implicit `Pornit`): Afișați sau nu săgeata tendinței glicemiei
 * **Afișați vechime** (implicit `Pornit`): arată numărul de minute de la ultima citire.
 * **Întunecat** (implicit `Pornit`): Puteți comuta de pe fundal negru pe fundal alb (cu excepția fețelor de ceas Cockpit și Steampunk)
 * **Evidențiați bazalele** (implicit `Oprit`): Îmbunătățirea vizibilității ratei bazalelor și bazalelor temporare
@@ -143,13 +143,13 @@ AAPS furnizează următoarele complicații:
 * **RB, CoB & IoB** (`TEXT SCURT`, deschide *Meniu*): Afișați *Rata Bazală* pe prima linie și *Carbohidrați la Bord* și *Insulină la Bord* pe linia a doua.
 * **Glicemia** (`TEXT SCURT`, deschide *Meniu*): Afișați valoarea *Glicemiei* și săgeata de *tendință* pe prima linie iar pe linia a doua *vechimea măsurătorii* și *Variația Glicemiei*.
 * **CoB & IoB** (`TEXT SCURT`, deschide *Meniu*): Afișați *Carbohidrați la Bord* în prima linie și *Insulină la Bord* în a doua linie.
-* **CoB Detaliat** (`TEXT SCURT`, deschide *Asistent*): Afișează în prima linie *Carbohidrații la Bord* activi și în a doua linie Carbohidrații planificați (viitori, carbohidrați extinși).
-* **Icoană CoB** (`TEXT SCURT`, deschide *Asistent*): Afișează o iconiță statică cu valoarea *Carbohidrați la Bord*.
+* **CoB Detaliat** (`TEXT SCURT`, deschide *Asistent*): Afișați în prima linie *Carbohidrații la Bord* activi și în a doua linie Carbohidrații planificați (viitori, carbohidrați extinși).
+* **Icoană CoB** (`TEXT SCURT`, deschide *Asistent*): Afișați o iconiță statică cu valoarea *Carbohidrați la Bord*.
 * **Stare Completă** (`TEXT LUNG`, deschide *Meniu*): Arată majoritatea datelor deodată: valoarea *glicemiei* și săgeata *tendinței*, *variația glicemiei* și *vechimea măsurătorii* pe prima linie. Pe linia a doua linie *Carbohidrați la Bord*, *Insulină la Bord* și *Rata bazală*.
 * **Stare completă (inversat)** (`TEXT LUNG`, deschide *Meniu*): Aceleași date ca și la *Stare completă*, dar liniile sunt inversate între ele. Poate fi folosit în fețele de ceas care ignoră una din cele două linii în `TEXT LUNG`
-* **IoB Detaliat** (`TEXT SCURT`, deschide *Bolus*): Afișează *Insulina la Bord* totală în prima linie și *IoB* defalcat pentru *Bolus* și *Bazală* în linia a doua.
-* **Iconiță IoB** (`TEXT SCURT`, deschide *Bolus*): Afișează valoarea *Insulinei la Bord* printr-o iconiță statică.
-* **Baterie Telefon/Încărcător** (`VALOARE INTERVAL`, deschide *Status*): Afișează în procente bateria telefonului cu AAPS (încărcătorului de date), așa cum este raportat de AAPS. Prezentat ca un indicator în procente cu o iconiță de baterie care afișează valoarea raportată. Este posibil să nu se actualizeze în timp real, doar atunci când apar alte modificări importante de date AAPS (de obicei: la fiecare ~ 5 minute cu noua valoare a *glicemiei*).
+* **IoB Detaliat** (`TEXT SCURT`, deschide *Bolus*): Afișați *Insulina la Bord* totală în prima linie și *IoB* defalcat pentru *Bolus* și *Bazală* în linia a doua.
+* **Iconiță IoB** (`TEXT SCURT`, deschide *Bolus*): Afișați valoarea *Insulinei la Bord* printr-o iconiță statică.
+* **Baterie Telefon/Încărcător** (`VALOARE INTERVAL`, deschide *Status*): Afișați în procente bateria telefonului cu AAPS (încărcătorului de date), așa cum este raportat de AAPS. Prezentat ca un indicator în procente cu o iconiță de baterie care afișează valoarea raportată. Este posibil să nu se actualizeze în timp real, doar atunci când apar alte modificări importante de date AAPS (de obicei: la fiecare ~ 5 minute cu noua valoare a *glicemiei*).
 
 În plus, există trei complicații de tip `IMAGINE MARE`: **fundal întunecat**, **fundal gri** și **fundal deschis**, ce afișează imaginea de fundal statică AAPS.
 
@@ -186,7 +186,7 @@ Vă rugăm să rețineți; că panourile nu păstrează starea actuală a aplica
 În funcție de versiunea dumneavoastră Wear OS, marca și telefonul dumneavoastră inteligent există două modalități de a activa panourile:
 
 1. Pe ceas, de pe fața ceasului; 
-  * Glisați de la dreapta la stânga până ajungeți la ”+ Adăugați panouri” 
+  * Glisați de la dreapta la stânga până ajungeți la "+ Adăugați panouri" 
   * Selectați unul dintre panouri.
 2. Pe telefonul dumneavoastră deschideți aplicația companion pentru ceas. 
   * Pentru Samsung deschideți "Galaxy Wearable" sau pentru alte mărci "Wear OS"
@@ -234,35 +234,35 @@ Panoul AsistentRapid poate ține 1 până la 4 butoane de acțiune rapide, defin
 
 ## Întotdeauna pornit
 
-Durata lungă de viață a bateriei pentru ceasurile inteligente Android Wear OS reprezintă o provocare. Unele ceasuri inteligente pot ajunge până la 30 de ore înainte de reîncărcare. Afișajul ar trebui să fie oprit pentru o economisire optimă a energiei atunci când nu este utilizat. Cele mai multe ceasuri inteligente acceptă afișajul „Întotdeauna pornit”.
+Durata lungă de viață a bateriei pentru ceasurile inteligente Android Wear OS reprezintă o provocare. Unele ceasuri inteligente pot ajunge până la 30 de ore înainte de reîncărcare. Afișajul ar trebui să fie oprit pentru o economisire optimă a energiei atunci când nu este utilizat. Cele mai multe ceasuri inteligente acceptă afișajul „Întotdeauna pornit".
 
-De la versiunea 3 AAPS, putem folosi o "Interfață Simplificată" în modul „Întotdeauna pornit”. Această interfață conține numai glicemia, direcția și timpul. Această interfață este optimizată din punctul de vedere al bateriei prin actualizări mai puțin frecvente, afișarea a mai puțină informație și iluminarea a mai puțini pixeli pentru a economisi energie pe ecranele OLED.
+De la versiunea 3 AAPS, putem folosi o "Interfață Simplificată" în modul „Întotdeauna pornit". Această interfață conține numai glicemia, direcția și timpul. Această interfață este optimizată din punctul de vedere al bateriei prin actualizări mai puțin frecvente, afișarea a mai puțină informație și iluminarea a mai puțini pixeli pentru a economisi energie pe ecranele OLED.
 
 Modul de interfață simplificat este disponibil pentru fețele de ceas: AAPS, AAPS V2, Home Big, Digital Style, Steampunk și Cockpit. Interfața simplificată este opțională și este configurată prin intermediul setărilor feței ceasului. (apăsați prelung fața ceasului și apăsați pe butonul "editare" sau pe icoana roata dințată) Selectați configurația "Interfață simplificată" și setați la "Mereu pornit" sau "Întotdeauna pornit și la încărcare".
 
 ### Modul de noapte
 
-În timpul încărcării, ar fi util ca afișajul să rămână „permanent pornit” și să arate glicemia în timpul nopții. Cu toate acestea, fețele standard de ceas sunt prea luminoase și au prea multe informații, iar detaliile sunt greu de citit cu ochii somnolenți. Prin urmare, am adăugat o opțiune pentru ca interfața de ceas să simplifice interfața doar în timpul încărcării atunci când este stabilită în configurație.
+În timpul încărcării, ar fi util ca afișajul să rămână „permanent pornit" și să arate glicemia în timpul nopții. Cu toate acestea, fețele standard de ceas sunt prea luminoase și au prea multe informații, iar detaliile sunt greu de citit cu ochii somnolenți. Prin urmare, am adăugat o opțiune pentru ca interfața de ceas să simplifice interfața doar în timpul încărcării atunci când este stabilită în configurație.
 
-Modul de interfață simplificat este disponibil pentru fețele de ceas: AAPS, AAPS V2, Home Big, Digital Style, Steampunk și Cockpit. Interfața simplificată este opțională și este configurată prin intermediul setărilor feței ceasului. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
+Modul de interfață simplificat este disponibil pentru fețele de ceas: AAPS, AAPS V2, Home Big, Digital Style, Steampunk și Cockpit. Interfața simplificată este opțională și este configurată prin intermediul setărilor feței ceasului. (apăsați prelung fața ceasului și apăsați pe butonul "editare" sau pe icoana roata dințată) Selectați configurația "Interfață simplificată" și setați la "În timpul încărcării" sau "Întotdeauna pornit și la încărcare"
 
-The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options”.
+Opțiunile de dezvoltator Android permit ceasului să rămână treaz în timpul încărcării. Pentru a face disponibile opțiunile de dezvoltator, consultați [documentația oficială](https://developer.android.com/training/wearables/get-started/debugging). Setați "Rămâneți treaz la încărcare" la "pornit" în "opțiunile dezvoltatorului”.
 
-Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+Notă: nu toate ecranele pot folosi modul mereu-aprins foarte bine. Poate cauza arderea ecranului, în special pe ecranele OLED mai vechi. În general, ceasurile vor estompa afișajul pentru a preveni arsurile; vă rugăm să verificați manualul, cu fabricantul sau internetul pentru recomandări.
 
-![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+![Mod noptieră pentru cadran](../images/Watchface_nightstand.jpg)
 
-![Simplified UI](../images/Watchface_simplified_ui.png)
+![Interfață simplificată](../images/Watchface_simplified_ui.png)
 
-## Snooze Alert shortcut
+## Scurtătură amânați alerta
 
-It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+Este posibil să creați o scurtătură pentru a amâna alertele/alarma AAPS. Amuțirea sunetului prin ceas este convenabilă și mai rapidă fără a ajunge la telefon. Notă; încă trebuie să verificați mesajul de alarmă de pe telefon și să-l gestionați în consecință, dar puteți verifica acest lucru mai târziu. Când ceasul are două butoane, poți atribui o tastă programului `Amânare alertă AAPS`.
 
-To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+Pentru a lega butonul din Samsung Watch 4 mergeți la `Setări > Caracteristici Avansate > Butoane de personalizare > Apăsare dublă > Amânare alertă AAPS`
 
-### Snooze xDrip
+### Amânați xDrip
 
-When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm.
+Când utilizați xDrip și aveți xDrip instalat pe ceas, scurtătura "Amânare alertă AAPS" va amâna, de asemenea, orice alarmă xDrip.
 
 ## Sfaturi legate de performanța și durata de viață a bateriei
 
@@ -282,19 +282,19 @@ Deoarece nu putem face compromisuri în comunicare (avem nevoie de date actualiz
 * Este mai bine să utilizați fețe de ceas care limitează cantitatea de date afișate în modul inactiv/estompat.
 * Fiți conștient când amestecați alte complicații, cum ar fi widgeturile meteorologice terțe, sau alte ce utilizează date din surse externe.
 * Începeti cu fețe de ceas mai simple. Adăugați pe rând câte o complicație și observați cum afectează durata de viața a bateriei.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). Pe dispozitivele OLED, va limita numărul de puncte iluminate și va limita defectarea ecranului.
-* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-* Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
+* Încercați să utilizați tema **întunecată** pentru ceasurile AAPS și [**separatoare de potrivire**](#watchface-settings). Pe dispozitivele OLED, va limita numărul de puncte iluminate și va limita defectarea ecranului.
+* Verificați ce funcționează mai bine pe ceas: fața standard de ceas sau alte fețe cu complicații AAPS.
+* Observați timp de câteva zile, cu diferite profiluri de activitate. Cele mai multe ceasuri activează afișarea la ridicarea încheieturii, mișcare și alți declanșatori legați de utilizare.
+* Verificați setările globale ale sistemului care afectează performanța: notificările, luminozitatea/timpul de expirare al ecranului activ, când este activat GPS-ul.
 * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+* **Nu putem garanta că datele afișate pe fața de ceas sau pe complicații sunt actuale**. În cele din urmă, depinde de Wear OS să decidă când actualizează fața de ceas sau complicațiile. Chiar și atunci când aplicația AAPS solicită actualizarea, Sistemul poate decide să amâne sau să ignore actualizările pentru a economisi bateria. Când aveți dubii și bateria ceasului este scăzută - verificați întotdeauna cu aplicația principală AAPS de pe telefon.
 
 (Watchfaces-troubleshooting-the-wear-app)=
 
-## Troubleshooting the wear app:
+## Depanarea aplicației de pe ceas:
 
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* Activați ADB debugging în Opțiuni Dezvoltator (de pe ceas), conectați ceasul prin intermediul unui USB și porniți aplicația de ceas cel puțin o dată în Android Studio.
+* Dacă complicațiile nu actualizează datele - verificați mai întâi dacă fețele de ceas AAPS funcționează.
 
 ## Additional AAPS custom watchfaces are also available
 

@@ -8,7 +8,7 @@ A glucose target, particularly if it is only short-term (less than 4 hours in du
 
 Temporary targets can be defined within those boundaries :
 
-|         | Temporary target       |
+|         | Țintă temporară        |
 | ------- | ---------------------- |
 | Minimum | 4 mmol/l or 72 mg/dL   |
 | Maximum | 15 mmol/l or 225 mg/dL |
@@ -19,7 +19,7 @@ Users should have realistic expectations on the results that can be achieved whe
 
 A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+Tabelul de mai jos rezumă caracteristicile **Țintă temporară exercițiu fizic**, **Țintă temporară mănânc în curând**, și **Țintă temporară hipoglicemie**.
 
 ### TT - Activity
 
@@ -91,7 +91,7 @@ Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
 
 ![Carbs TT](../images/TempTarget6.png)
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+- Apăsați lung pe ținta din colțul din dreapta sus pe ecranul de pornire sau folosiți scurtăturile de la butonul portocaliu "Carbohidrați" din partea de jos.
 
 ![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
 
@@ -103,7 +103,7 @@ To reconfigure the ‘BG target range’ and ‘duration’ allocated to the use
 2. scroll down to 'Overview’ 
 3. select ‘Default Temp-Targets’
 4. step 4 indicates (below) where to change **TT- Eating soon** time period
-5. step 5 indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
+5. pasul 5 indică (deasupra) unde să schimbați **Ținta temporară - Mănânc în curând** intervalul țintă al **glicemiei** (iar aceiași pași pot fi repetați pentru **Țintă temporară -Exercițiu fizic** și **Țintă temporară hipoglicemie**.
 
 ![Custom TT](../images/TempTarget7.png)
 

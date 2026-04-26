@@ -8,7 +8,7 @@ How to add questions to the FAQ: Follow the these [instructions](../SupportingAa
 
 Nu. There is no downloadable apk file for AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Iată de ce:
 
-AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distribuirea unui dispozitiv nereglementat este ilegală. Reglementări similare există şi în alte părţi ale lumii.
+AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distribuirea unui dispozitiv nereglementat este ilegală. Reglementări similare există și în alte părți ale lumii.
 
 This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
 
@@ -16,9 +16,9 @@ De aceea fișierele apk nu sunt disponibile.
 
 (FAQ-how-to-begin)=
 
-### How to begin?
+### Cum se pornește?
 
-First of all, you have to **get loopable hardware components**:
+În primul rând, trebuie să **aveți componentele fizice compatibile pentru buclă**:
 
 - A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
 - an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
@@ -26,76 +26,76 @@ First of all, you have to **get loopable hardware components**:
 
 Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. Toate recomandările presupun că nevoile dumneavoastră bazale sunt îndeplinite și orice creșteri sau scăderi bruște pe care le vedeți sunt un rezultat al altor factori care necesită, prin urmare, unele ajustări punctuale (exercițiu, stres șamd). Ajustările pe care le poate face bucla sunt limitate pentru siguranță (a se vedea bazala temporară maximă permisă în [designul de referință al OpenAPS](https://openaps.org/reference-design/)), ceea ce înseamnă că nu veți dori să pierdeți doza permisă pe corecții necesare pentru a repara greșelile bazalei. Dacă, de exemplu, ajungeți în mod frecvent la rate bazale temporare joase atunci când se apropie o masă, atunci este foarte probabil că sunt necesare ajustări ale bazalei. You can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
 
-### What practicalities of looping do I have?
+### Care sunt aspectele practice ale utilizării unui sistem de tip buclă?
 
-#### Password protection
+#### Protecția parolei
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+Dacă nu doriți ca setările dumneavoastră să poată fi schimbate cu ușurință, puteți stabili o parolă pentru a proteja secțiunea de setări prin selectarea opțiunii "parolă pentru setări" și introducerea unei parole. Data viitoare când veți intra în meniul de setări, vi se va cere o parolă înainte de a vi se permite accesul. Dacă veți dori să eliminați parola mai târziu, mergeți la "parolă pentru setări" și ștergeți textul.
 
-#### Android Wear Smartwatches
+#### Ceasuri inteligente cu Android Wear
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AAPS are not blocked. Confirmation of action comes via notification.
+Dacă intenționați să folosiți aplicația de ceas Wear pentru a bolusa sau pentru a schimba setări, atunci va trebui să activați notificările pentru AndroidAPS și să vă asigurați că nu sunt blocate. Confirmarea acțiunilor vine sub formă de notificare.
 
 (FAQ-disconnect-pump)=
 
-#### Disconnect pump
+#### Deconectați pompa
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
+Dacă vă scoateți pompa pentru duș, băi, înot, sporturi sau alte activități, trebuie să aduceți la cunoștință programului AAPS că nu s-a administrat insulină, pentru a menține IOB corect.
 
 The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](#AapsScreens-loop-status).
 
-#### Recommendations not only based on one single CGM reading
+#### Recomandări care se bazează nu doar pe o singură citire CGM
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
+Pentru siguranță, recomandările se bazează nu doar pe o singură citire a CGM, ci pe variația medie. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
 
-#### Further readings
+#### Referințe suplimentare
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Există mai multe bloguri cu sfaturi bune pentru a vă ajuta să înțelegeți cum e mai bine de făcut atunci când folosiți bucla închisă:
 
-- [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-- [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-- [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-- [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+- [Optimizare setări](https://seemycgm.com/2017/10/29/fine-tuning-settings/) vedeți CGM-ul
+- [De ce contează DIA](https://seemycgm.com/2017/08/09/why-dia-matters/) Vedeți CGM
+- [Cum să limităm vârfurile de după masă](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DiYPS
+- [Hormonii și autosens](https://seemycgm.com/2017/06/06/hormones-2/) Vedeți CGM
 
-### What emergency equipment is recommended to take with me?
+### Ce echipamente pentru situații de urgență se recomandă să aveți la dumneavoastră întotdeauna?
 
 You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-- Pump batteries
+- Baterii pentru pompă
 - Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Maintenance/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ### How can I safely and securely attach the CGM/FGM?
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
+You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Unii utilizatori de bucle folosesc banda simplă kinesiologică sau rocktape.
 
 You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
-## APS algorithm
+## Algoritm APS
 
-### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+### De ce se afișează "dia:3" în secțiunea "OpenAPS AMA" deși aveți o altă DIA setată în profil?
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
+În AMA, DIA nu înseamnă de fapt "durata de acțiune a insulinei". Este un parametru care era anterior conectat la DIA. Acum, înseamnă "în care timp ar trebui să se termine corecția". Nu are nicio legătură cu calcularea IOB. In OpenAPS SMB, there is no need for this parameter any longer.
 
-## Other settings
+## Alte setări
 
-### Nightscout settings
+### Setări Nightscout
 
 #### AAPSClient says 'not allowed' and does not upload data. Ce pot face?
 
-In AAPSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
+In AAPSClient check 'Connection settings'. Poate că de fapt nu sunteți într-o rețea WLAN permisă sau ați activat 'Doar dacă se încarcă' iar cablul de încărcare nu este atașat.
 
-### CGM settings
+### Setări CGM
 
 #### Why does AAPS say 'BG source doesn't support advanced filtering'?
 
 If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
 
-### Pump
+### Pompă
 
 #### Unde să montați pompa pe corp?
 
@@ -179,47 +179,47 @@ You can remove the pump to be 'free', but you should tell AAPS so that the IOB c
 
 #### Consumul de alcool
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
+Consumul de alcool este riscant în modul de buclă închisă deoarece algoritmul nu poate prezice corect dacă alcoolul a influențat glicemia. You have to check out your own method for treating this using the following functions in AAPS:
 
-- Deactivating closed loop mode and treating the diabetes manually or
-- setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-- do a profile switch to noticeably less than 100% 
+- Dezactivarea modului de buclă închisă și tratarea manuală a diabetului sau
+- stabilirea unor ținte temporare ridicate și dezactivarea UAM pentru a evita ca bucla să crească IOB din cauza unei mese inexistente sau
+- faceți o schimbare de profil la mult sub 100% 
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Atunci când consumați alcool, trebuie să fiți întotdeauna atent la CGM pentru a evita manual o hipoglicemie prin consumul de carbohidrați.
 
-#### Sleeping
+#### Dormitul
 
-##### How can I loop during the night without mobile and WIFI radiation?
+##### Cum pot repeta în timpul nopții fără radiații mobile și WiFi?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Mulți utilizatori activează modul avion pe timp de noapte. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Activați modul avion în telefon.
-2. Aşteptaţi până când modul avion este activ.
+2. Așteptați până când modul avion este activ.
 3. Activați Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Acum nu mai primiți apeluri și nici nu sunteți conectat la internet. Dar bucla încă rulează.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Unele persoane au descoperit probleme cu transmiterea locală (AAPS nu primește valorile glicemiei din xDrip+) atunci când telefonul este în modul avion. Mergeți la Setări > Setări între aplicații > Identificați destinatarul și introduceți <0>info.nightscout.androidaps</0>.
 
 ![xDrip+ identificare receptor prin setări de bază inter-aplicații](../images/xDrip_InterApp_NS.png)
 
-#### Travelling
+#### Călătoritul
 
-##### How to deal with time zone changes?
+##### Cum să facem față schimbărilor de fus orar?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+Cu Dana R și Dana R Korean nu trebuie să faci nimic. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
 
-### Medical topics
+### Subiecte medicale
 
-#### Hospitalization
+#### Spitalizare
 
 If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
 
-#### Medical appointment with your endocrinologist
+#### Programare medicală la endocrinologul dumneavoastră
 
-##### Reporting
+##### Raportare
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Puteți afișa rapoartele Nightscout (https://YOUR-NS-SITE.com/report) sau să verificați [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
 ## Frequent questions on Discord and their answers...
 
@@ -294,7 +294,7 @@ Properly configuring Power Management is important to prevent your Phone's OS to
 
 ### Pump unreachable alerts several times a day or at night.
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+Telefonul dumneavoastră ar putea suspenda serviciile AAPS sau chiar Bluetooth, ceea ce determină pierderea conexiunii la RL (a se vedea economisirea bateriei) Luați în considerare configurarea alertelor de inaccesibilitate la 120 de minute prin accesarea meniului cu trei puncte din partea dreaptă sus, și selectați Preferințe->Alerte Locale->Pompă prag inaccesibil [min].
 
 ### Where can I delete treatments in AAPS v3 ?
 

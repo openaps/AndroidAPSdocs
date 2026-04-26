@@ -1,6 +1,6 @@
 # Update with a browser
 
-## Build yourself instead of download
+## Construiți-vă în loc să descărcați
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
@@ -92,7 +92,7 @@ You have now synchronized (updated) your own copy with the latest release of And
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
 
-## Troubleshooting
+## Depanare
 
 If anything goes wrong, don't panic.
 

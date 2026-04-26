@@ -1,38 +1,38 @@
-# How to translate strings for the AAPS app or the documentation
+# Cum să traducem fraze pentru aplicația AAPS sau documentație
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Pentru frazele utilizate în aplicație mergeți la <https://crowdin.com/project/androidaps> și autentificați-vă folosind contul GitHub
+* Pentru documentație vă rugăm să vizitați <https://crowdin.com/project/androidapsdocs> și să vă autentificați folosind contul GitHub
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Trimiteți o cerere de aderare echipei ce se ocupă de documente. Pentru a face acest lucru, faceți clic pe steagul limbii dorite și apoi pe butonul "Alăturare" din colțul din dreapta sus al paginii următoare. Vă rugăm să menționați limba, oferiți câteva informații despre dumneavoastră și experiența AAPS și dacă dorești să fii traducător sau corector (numai persoane competente în traducere + utilizatori avansați AAPS).
 
 ```{admonition} Time for Approval :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+Aprobarea este un pas manual. Ca organizație non-profit, nu oferim SLA dar, în general, aprobarea va fi făcută în < 1 zi. Dacă nu, vă rugăm să contactați echipa Doc prin Facebook sau Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](../images/translation_flags.png)
+    <br />* Când vă aprobăm, faceți clic pe steagul
+       ! Când vă aprobăm, faceți clic pe steagul](../images/translation_flags.png)
     
-    ## Translation of the app
+    ## Traducerea aplicației
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Traducere fraze pentru aplicația AAPS
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Dacă nu aveți preferințe pentru frazele pe care le traduceți doar selectați butonul "Traducere Toate" pentru a începe. Vă va arăta frazele care necesită traducere.
     
-       ![Click translate all](../images/translations-click-translate-all.png)
+       ![Faceți clic pe toate](../images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Dacă doriți să traduceți un fișier individual, vă rugăm să căutați fișierul prin bara de căutare sau prin structura arborescentă și faceți clic pe numele fișierului pentru a începe activitatea de traducere pentru frazele din acel fișier.
     
-       ![Click strings.xml](../images/translations-click-strings.png)
+       ![Apăsați pe fraze. ml](../images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Traduceți propoziții în stânga prin adăugarea de text tradus sau folosiți & editare sugestie 
     
-       ![Translation app](../images/translations-translate.png)
+       ! Traducere aplicație](../images/translations-translate.png)
     
     
-    ### Proofread strings for AAPS app
+    ### Corectați frazele pentru aplicația AAPS
     
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
+    * Corectorii încep prin selectarea "Proofread" la începerea din ecranul de pornire al limbii.
     
        ![Proofreading mode app](../images/translations-proofreading-mode.png) 
     
@@ -91,14 +91,14 @@ You are translating the text which represents the link. Please you have to be ca
 
 It's the proofreaders job to have a special look on this!
 
-### Proofreading
+### Corectare
 
-* Proofreaders have to switch to Proofreading mode
+* Corectorii trebuie să treacă pe modul de corectare
     
-    ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png)
+    ![Documentația despre modul de corectare](../images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    și aprobă texte traduse
     
-    ![approve text](../images/translations-proofreading.png)
+    ![aprobă textul](../images/translations-proofreading.png)
 
 * When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.

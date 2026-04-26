@@ -57,9 +57,9 @@ A list of definitions exists at the bottom of this document. If you are unfamili
   - [*Step 8: Data Collection between 3 and 15 Minutes*](#minimallooper-step8)
   - [*Step 9: Verify Sensor is connected and delivering data*](#minimallooper-step9)
 
-- *[Notes](#minimallooper-notes)*
-- *[Advantages](#minimallooper-advantages)*
-- *[Disadvantages](#minimallooper-disadvantages)*
+- *[Note](#minimallooper-notes)*
+- *[Avantaje](#minimallooper-advantages)*
+- *[Dezavantaje](#minimallooper-disadvantages)*
 - <u>*\[Troubleshooting\](#minimallooper-troubleshooting)*</u>
 
 ## Before You Start
@@ -309,7 +309,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 (minimallooper-notes)=
 
-### **Notes**
+### **Note**
 
 - **Using LL NFC Scans AFTER bonding/pairing in xDrip+ is completed**: You can conduct NFC scans but the bonding/pairing process with xDrip+ needs to be completed first. Always look at xDrip+ and see if it is close to the 5 minute reading (i.e. 4 minutes ago), if it is near 5 min, wait for the new BT reading to come in and then conduct the NFC scan. If you catch it at the wrong time it will disturb the BT process in xDrip+ and not receive BT readings, which can take a while to re-bond and transmit again and sometimes a sensor BT connection can be “stolen” by LL. However between these BT readings I have not had any problems executing an NFC scan followed by immediately disabling the app. I am not sure if LL needs to be disabled each time but I disable it to be on the safe side.
 
@@ -341,7 +341,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 (minimallooper-advantages)=
 
-### **Advantages**
+### **Avantaje**
 
 - **LL patched app no longer required** You no longer need a patched version of the LL app to retrieve values from the FSL2 sensor. While you can use the LL patched app, the official versions of the LL app can start the first NFC initialization scan in the same manner as the patched app. There is no difference as far as NFC initialization scanning to start the sensor is concerned.
 
@@ -368,7 +368,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 (minimallooper-disadvantages)=
 
-### **Disadvantages**
+### **Dezavantaje**
 
 - **Phone Reboot:** Because the Bluetooth process has to start again when your phone reboots, you have to first ensure that you manually disable the LL app (if you did not uninstall it) and be patient for the first readings to come in (3 to 15 min). This means timing phone reboots so they do not occur during critical times like correction boluses or meal and snack times.
 
@@ -419,7 +419,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 (minimallooper-troubleshooting)=
 
-### Troubleshooting
+### Depanare
 
 #### Failure to scan the sensor with NFC
 

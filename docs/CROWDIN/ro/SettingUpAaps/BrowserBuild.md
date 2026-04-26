@@ -6,7 +6,7 @@ Building AAPS with GitHub Actions.
 
 **Minimum AAPS version supported is 3.3.2.1.**
 
-## Build yourself instead of download
+## Construiți-vă în loc să descărcați
 
 **The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
 
@@ -372,7 +372,7 @@ This script will export your previously configured keystore information (from Op
 Before using this export method, make sure your keystore and Google Drive settings have been completed.
 ```
 
-### Steps:
+### Pași:
 
 1. **Add ZIP Password Secret:**
    - Go to your repository's **Settings** → **Secrets and variables** → **Actions**

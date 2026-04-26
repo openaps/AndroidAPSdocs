@@ -2,7 +2,7 @@
 
 **This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+Pentru indiciile cum să se formateze textul (titlu, bold...) și setarea link-urilor vă rugăm să consultați secțiunea ["sintaxa de cod"](#code-syntax) a acestei pagini.
 
 ## General
 
@@ -16,7 +16,7 @@ At some point it will be suggested that you make a pull request (PR), which is h
 - Create a pull request, which asks the administrators to use your changes.
 - They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+(Notă de margine: Dacă sunteți o persoană care învață vizual, există un video YouTube [aici](https://youtu.be/4b6tsL0_kzg) care arată fluxul de lucru PR.)
 
 For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
 
@@ -36,23 +36,23 @@ Or click the pencil icon that appears in the top bar of the page contents to be 
 
 We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
 
-![Edit branch](../images/PR3.png)
+![Editați ramura](../images/PR3.png)
 
 4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
 
-![preview mode](../images/PR5.png)
+![mod previzualizare](../images/PR5.png)
 
 5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
 
-![commit comments](../images/PR4.png)
+![trimite comentarii](../images/PR4.png)
 
 6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
 
-![create pull request](../images/PR6.png)
+![inițiați o cerere de fuziune (pull request)](../images/PR6.png)
 
 7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
 
-![PR tracking](../images/PR7.png)
+![Monitorizare cereri de fuziune (PR)](../images/PR7.png)
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
@@ -79,14 +79,14 @@ Markdown is not a 100% fixed standard and we try to stay as near as possible to 
 
 ### Headlines
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
+- Titlul 1: `# titlu`
+- Titlu 2: `## titlu`
+- Titlul 3: `### titlu`
 - Headline 4: `#### headline`
 
 We try to avoid further levels of headlines.
 
-### Text format
+### Format text
 
 - **bold**: `**text**`
 - *italic*: `*text*`
@@ -100,7 +100,7 @@ We try to avoid further levels of headlines.
     
 
 1. first
-2. second
+2. secundă
 3. third
 
 ### Unordered list
@@ -130,7 +130,7 @@ You can insert lists in lists by indenting the next level with 4 more spaces to 
     
 
 1. first
-2. second
+2. secundă
 3. third 
     1. one element
     2. another element
@@ -139,11 +139,11 @@ You can insert lists in lists by indenting the next level with 4 more spaces to 
 5. five
 6. six
 
-### Images
+### Imagini
 
 To include images you use this markdown syntax.
 
-- images: `![alt text](../images/file.png)`
+- imagini: `![alt text](../images/file.png)`
 
 The type of image should be PNG or JPEG.
 
@@ -156,25 +156,25 @@ Images are located in the images folder for the english language and propagated 
 
 We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Utilizați o dimensiune rezonabilă pentru imaginile care trebuie să poată fi citite pe PC, tablete și mobile.
 
 - Screenshots from web pages images should be up to **1050 pixels wide**.
 - Diagrams of process flows should be up to **1050 pixels wide**.
 - Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
 
-### Links
+### Link-uri
 
 #### External links
 
 External links are links to external web sites.
 
-- external link: `[alt text](www.url.tld)`
+- link extern: `[alt text](www.url.tld)`
 
 #### Internal links to the start of a md file
 
 Internal links to pages are links to the start of a md file which is hosted on our own server.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- link intern către pagina .md: `[alt text](../folder/file.md)`
 
 #### Internal links to named inline references
 
@@ -200,7 +200,7 @@ You can add notes and warning boxes to documentation.
 
 Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
 
-#### Notes
+#### Note
 
     ```{admonition} Note headline
     :class: note
@@ -237,7 +237,7 @@ Furthermore you can add collapsing notes for detailed information which would us
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} mai multe citiri detaliate pentru cititorii interesați :class: dropdown Această admoniție a fost prăbușită, însemnând că poți adăuga conținut sub formă mai lungă aici, fără ca acesta să preia prea mult spațiu pe pagină.
 
 ```
 
@@ -247,7 +247,7 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
 
 ## Style Guide
 
-### Contents
+### Cuprins
 
 1. English language writing tips
 
@@ -261,7 +261,7 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
 
 Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
+În loc de: *"Ce provoacă vârfuri mari de după masă ale glicemiei în bucla închisă?"*
 
 Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
@@ -345,7 +345,7 @@ For example:
 
 | Verb      | Nominalization |
 | --------- | -------------- |
-| complete  | completion     |
+| complet   | completion     |
 | introduce | introduction   |
 | provide   | provision      |
 | fail      | failure        |
@@ -390,13 +390,13 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 ##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- naratorul vorbește direct cititorului: În acest tutorial **vei** (noi) ar putea fi folosit pentru a transmite ideea de „suntem împreună în asta” în unele cazuri rare
 
 - Future Tense -> to show the final target
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Modul Imperativ -> pentru realizarea sarcinilor -> Pași concreți - evită conceptele abstracte
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Timpul trecut -> pentru a arăta sarcinile îndeplinite -> Rezultate vizibile rapide și imediate
 
 - Minimum Explanations -> strict necessary to complete the task - **what and why**
 
@@ -410,7 +410,7 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 - Prerequisites (Level 2 heading)
 
-- Steps:
+- Pași:
 
 - Step 1 — Doing the First Thing (Level 2 heading)
 
@@ -468,7 +468,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 
 - Optional Prerequisites (paragraph or Level 2 heading if more than 1)
 
-- Steps:
+- Pași:
 
 - Step 1 — Doing the First Thing (Level 2 heading)
 
@@ -564,7 +564,7 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 [Diátaxis (diataxis.fr)](https://diataxis.fr/)
 
-[Technical Writer Style Guide Examples | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
+[Exemple de ghid de stil pentru scriitor tehnic | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
 
 [DigitalOcean's Technical Writing Guidelines | DigitalOcean](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
 

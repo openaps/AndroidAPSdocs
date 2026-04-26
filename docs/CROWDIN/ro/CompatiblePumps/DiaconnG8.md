@@ -1,91 +1,91 @@
-# Diaconn G8 Insulin Pump
+# Pompa de insulină Diaconn G8
 
-## Insulin Pump Bluetooth Pairing
+## Cuplarea pompei de insulină prin Bluetooth
 
-- Click on the hamburger menu in the top left corner.
+- Apăsați pe meniul hamburger din colțul din stânga sus.
 
-![image](../images/DiaconnG8/DiaconnG8_01.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_01.jpg)
 
-- Click on Config Builder.
+- Apăsați pe Configurator.
 
-![image](../images/DiaconnG8/DiaconnG8_02.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_02.jpg)
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+- După selectarea pompei Diaconn G8, apăsați pe pictograma Setări (rotița dințată).
 
-![image](../images/DiaconnG8/DiaconnG8_03.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_03.jpg)
 
-- Choose Selected pump.
+- Alegeți pompa selectată.
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Select your insulin pump’s model number once it appears in the list.
+- După ce apare în listă, alegeți modelul pompei de insulină.
 
-![image](../images/DiaconnG8/DiaconnG8_05.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_05.jpg)
 
-- There are two options to check your model number:
+- Există două opțiuni pentru a verifica numărul modelului:
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+1. Ultimele 5 cifre ale numărului SN de pe spatele pompei.
+2. Apăsați pe butonul O > Informații > BLE > Ultimele 5 cifre.
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+- Odată ce ați selectat pompa dumneavoastră, o fereastră va apărea și va cere un cod PIN. Introduceți numărul PIN afișat în pompă pentru a finaliza conexiunea.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![imagine](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-## Pump status check and log synchronization
+## Verificarea stării pompei și sincronizarea jurnalelor
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- Odată ce pompa este conectată, apăsați pe simbolul Bluetooth pentru a verifica starea și pentru a sincroniza jurnalele.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_08.jpg)
 
-## Bluetooth Troubleshooting
+## Depanare Bluetooth
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Ce trebuie să faceți în cazul unei conexiuni Bluetooth instabile cu pompa.**
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+### Metoda 1) Verificați pompa din nou după ce setările din aplicația AAPS au fost finalizate.
 
-- Click on the 3 dots button on the top right.
+- Atingeți pe butonul 3 puncte din dreapta sus.
 
-![image](../images/DiaconnG8/DiaconnG8_09.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_09.jpg)
 
-- Click on Exit.
+- Apăsați pe Ieșire.
 
-![image](../images/DiaconnG8/DiaconnG8_10.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_10.jpg)
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+### Metoda 2) Dacă prima metodă nu funcționează, deconectați Bluetooth și apoi reconectați.
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+- Apăsați și mențineți apăsat butonul Bluetooth din partea de sus timp de aproximativ 3 secunde.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Apăsați pe butonul de setare al pompei de insulină Diaconn G8 asociate.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-- Unpair.
+- Dezasociați.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![imagine](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Repetați procesul de asociere cu Bluetooth pentru pompă (vedeți mai sus).
 
-## Further Information
+## Informații suplimentare
 
-### Diaconn G8 Insulin pump option setting
+### Setări pompă de insulină Diaconn G8
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- Manager configurare > pompă > Diaconn G8 > Setări
+- DIACONN G8 din partea de sus> buton 3 puncte din dreapta sus > Preferințe Diaconn G8
 
-![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
+![Opțiuni pompă Diaconn G8](../images/DiaconnG8/DiaconnG8_14.jpg)
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- În cazul în care opțiunea **Înregistrați schimbările de rezervor** este activată, detaliile relevante sunt încărcate automat în Nightscout, atunci când apare un eveniment "Schimbare insulină".
+- Dacă opțiunea **Înregistrați schimbare ac** este activată, detaliile relevante sunt încărcate automat în Nightscout, atunci când are loc un eveniment "Schimbare loc".
+- În cazul în care opțiunea **Înregistrați schimbările de tub** este activată, detaliile relevante sunt încărcate automat în Nightscout, atunci când apare un eveniment "Schimbare tub".
+- În cazul în care opțiunea **Înregistrează schimbările de baterie** este activată, detaliile relevante sunt încărcate automat în Nightscout, atunci când are loc un eveniment "Schimbare baterie" și butonul SCHIMBARE BATERIE POMPĂ din fila ACȚIUNI este dezactivat. (Notă: Pentru a schimba bateria, vă rugăm să opriți toate funcțiile în curs ce implică injectar înainte de a continua)
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+![Meniu acțiuni Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
 
-### Extended Bolus function
+### Funcția de bolus extins
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Dacă utilizați bolusul extins, acesta va dezactiva bucla închisă.
+- Vedeți [această pagină](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) pentru detalii de ce bolusul extins nu funcționează într-un scenariu de buclă închisă.

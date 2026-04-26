@@ -8,7 +8,7 @@ The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alte
 
 Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
 
-## Requirements
+## Cerințe
 
 Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
 

@@ -46,7 +46,7 @@ In this screen, we aim to give some more background information, translate more 
 
 ![Permissions](../images/setup-wizard/Wizard03.png)
 
-### Notifications
+### Notificări
 
 Android requires special permission for apps if they want to send you notifications.
 
@@ -54,7 +54,7 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Please click the first "ASK FOR PERMISSION" button:
 
-![Notifications](../images/setup-wizard/Wizard04.png)
+![Notificări](../images/setup-wizard/Wizard04.png)
 
 Select the "AAPS" app:
 
@@ -62,11 +62,11 @@ Select the "AAPS" app:
 
 Enable "Allow display over other apps" by sliding the slider to the right:
 
-![image](../images/setup-wizard/Wizard04-AndroidSettings2.png)
+![imagine](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
 The slider should look this way if it is enabled:
 
-![image](../images/setup-wizard/Wizard04-AndroidSettings3.png)
+![imagine](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
 ### Battery optimization
 
@@ -137,7 +137,7 @@ Click the first "ASK FOR PERMISSION" button:
 
 Click "Allow":
 
-![image](../images/setup-wizard/Wizard06-Memory.png)
+![imagine](../images/setup-wizard/Wizard06-Memory.png)
 
 Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information.
 
@@ -190,7 +190,7 @@ Click the "NEXT" button:
 
 ![Location 2](../images/setup-wizard/Wizard11.png)
 
-## Master password
+## Parola principală
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
@@ -222,7 +222,7 @@ Tap RESTORE SETTINGS to select which file to restore, then NEXT.
 
 Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
 
-![Units](../images/setup-wizard/Wizard13.png)
+![Unități](../images/setup-wizard/Wizard13.png)
 
 ## Display settings
 
@@ -260,7 +260,7 @@ For Tidepool it is even simpler, as you only need your personal login informatio
 
 After making your selection, please press the cogwheel button next to the item you selected :
 
-![Synchronization](../images/setup-wizard/Wizard15.png)
+![Sincronizare](../images/setup-wizard/Wizard15.png)
 
 Here you are configuring the Nightscout reporting server.
 
@@ -291,7 +291,7 @@ If you have stored profiles on Nightscout and want to download them to **AAPS**,
 
 Go back to the previous screen and select "Alarm option":
 
-![Alarms](../images/setup-wizard/Wizard16-Alarm.png)
+![Alarme](../images/setup-wizard/Wizard16-Alarm.png)
 
 For now, leave the switches disabled. We only walked to the screen to make you familiar with possible options you might configure in the future. At the moment there is no need to do it.
 
@@ -319,9 +319,9 @@ Leave "Slow down uploads" disabled. You would only use it in unusual circumstanc
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Wizard16-App.png)
+![imagine](../images/setup-wizard/Wizard16-App.png)
 
-## Patient name
+## Limba
 
 Here you can setup your name in **AAPS**.
 
@@ -333,7 +333,7 @@ Press "NEXT" to go to the next screen.
 
 ![Name](../images/setup-wizard/Wizard17.png)
 
-## Patient type
+## Tip de pacient
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
 
@@ -404,7 +404,7 @@ If a robot has an incorrect input it will fail - consistently. **AAPS** can only
 
 Press "NEXT" to go to the next screen. Enter a "profile name":
 
-![image](../images/setup-wizard/Wizard21.png)
+![imagine](../images/setup-wizard/Wizard21.png)
 
 
 You can have several profiles in the long-term if needed. We only create one here.
@@ -433,7 +433,7 @@ Press "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-fact
 
 Press "BAS". Enter your [basal values](#your-aaps-profile-basal-rates):
 
-![image](../images/setup-wizard/Wizard21-Basal.png)
+![imagine](../images/setup-wizard/Wizard21-Basal.png)
 
 
 Press "TARG". Enter your blood sugar target values.
@@ -444,7 +444,7 @@ Later, for closed looping, you will generally have only one value for top and bo
 
 Enter/confirm the target values:
 
-![Target](../images/setup-wizard/Wizard22.png)
+![Țintă](../images/setup-wizard/Wizard22.png)
 
 Save the profile by clicking on "SAVE":
 
@@ -460,7 +460,7 @@ You can have several profiles defined, but only one activated profile running at
 
 Press "Activate Profile":
 
-![image](../images/setup-wizard/Wizard22-Activate.png)
+![imagine](../images/setup-wizard/Wizard22-Activate.png)
 
 
 
@@ -492,7 +492,7 @@ Your profile has now been set:
 ![Info](../images/setup-wizard/Wizard22-Info.png)
 
 
-## Insulin pump
+## Pompa de insulină
 
 
 
@@ -517,9 +517,9 @@ Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: A
 
 In this case we select "Virtual Pump".
 
-![Pump](../images/setup-wizard/Wizard23-Pump.png)
+![Pompă](../images/setup-wizard/Wizard23-Pump.png)
 
-## APS algorithm
+## Algoritm APS
 
 Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
 
@@ -577,7 +577,7 @@ This was done when we switched to our new profile.
 
 You can click "SNOOZE" and it will disappear.
 
-![image](../images/setup-wizard/Wizard26-Done.png)
+![imagine](../images/setup-wizard/Wizard26-Done.png)
 
 If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
 

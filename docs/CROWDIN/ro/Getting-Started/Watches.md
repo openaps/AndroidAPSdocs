@@ -27,7 +27,7 @@ Additionally, unlike parent/caregiver follower phones (which rely on the mobile 
 
 There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
 
-| Watch Setup         | Features                            | Requirements                                                                                                                                                                                                                                          |
+| Watch Setup         | Features                            | Cerințe                                                                                                                                                                                                                                               |
 | ------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Standalone          | AAPS without a phone                | Full Android smartwatch (check min Android)</br> Running **app-fullRelease**                                                                                                                                                                          |
 | Full remote control | Most AAPS functions                 | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease**                                                                                                                                                                        |
@@ -59,7 +59,7 @@ Most of the frustrations of standalone **AAPS** watches come from interacting wi
 
 Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor Bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below.
 
-![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![imagine](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -84,7 +84,7 @@ If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of di
 
 After [installing **AAPS** onto your watch](../WearOS/WearOsSmartwatch.md), you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the home screen until the screen shrinks and swipe right to select an alternative screen:
 
-![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![imagine](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
 These are the basic screens embedded in **AAPS**, there are [more watchfaces](#WearOS_changing-to-AAPS-watchface) and you can also use [complications](#Watchfaces-complications).
 
@@ -122,7 +122,7 @@ Google is phasing out Fitbit products. Custom watchfaces are not available in Eu
 
 **AAPS** supports sending data to the [Sentinel](http://ryanwchen.com/sentinel.html) watchface.
 
-![image](../images/98620770-2fb3-47af-a13e-28af7db69096.png)
+![imagine](../images/98620770-2fb3-47af-a13e-28af7db69096.png)
 
 
 
@@ -148,16 +148,16 @@ Here below some of the follow-only watch options popular with **AAPS** users:
 
 [Artem](https://github.com/bigdigital) has created an xDrip+ integration app WatchDrip+ for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
 
-![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![imagine](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 
 You can read more about them, including how to set up at his website [here](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable. They are a popular option especially for kids and those with smaller wrists to wear.
 
 ### Pebble watch
 
-![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![imagine](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
-![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![imagine](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
 Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS**  then send either an SMS or pushover notification.
@@ -165,7 +165,7 @@ Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))
 ### [Bluejay watches](https://bluejay.website/)
 
 
-![image](../images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
+![imagine](../images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
 
 
 These are unique pieces of technology which can receive glucose data **directly** from the Dexcom transmitter. It is not widely known that Dexcom G6/G7 transmitters actually broadcasts the current glucose data on _two_ separate channels, a phone channel and a medical channel. The Bluejay watches can be set to receive glucose data on either channel, so if **AAPS ** is using the phone channel, then the Bluejay watches can use the medical channel.

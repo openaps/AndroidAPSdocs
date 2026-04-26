@@ -2,7 +2,7 @@
 
 These instructions are for configuring the Medtrum insulin pump.
 
-This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
+Această aplicație face parte dintr-o soluție DIY (do-it-yourself/ o aplicație pe care o construiți singur) și nu este un produs finit; și necesită ca dumneavoastră să citiți, să învățați și să înțelegeți sistemul, de la construcție pana la modul de utilizare. You alone are responsible for what you do with it.
 
 ```{contents} Table of contents
 :depth: 1
@@ -14,7 +14,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
 * Automatic DST and timezone handling
 * Extended bolus is not supported by AAPS driver
 
-## Hardware and Software Requirements
+## Cerințe hardware și software
 * **Compatible Medtrum pumpbase and reservoir patches**
     - Currently supported:
         - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
@@ -25,7 +25,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
     - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 * [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-## Before you begin
+## Înainte să începeți
 
 **SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
 
@@ -45,7 +45,7 @@ CAUTION: When activating a patch with AAPS you **MUST** disable all other device
 
 ### Step 1: Select Medtrum pump
 
-#### Option 1: New installations
+#### Opțiunea 1: Instalări noi
 
 If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
 
@@ -53,7 +53,7 @@ If in doubt you can also select “Virtual Pump” and select “Medtrum” late
 
 ![Setup Wizard](../images/medtrum/SetupWizard.png)
 
-#### Option 2: The Config Builder
+#### Opțiunea 2: Configurator
 
 On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
 
@@ -367,7 +367,7 @@ After a settings import the driver will sync history with the pump, this can tak
 
 From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen: ![Sync progress](../images/medtrum/SyncProgress.png)
 
-## Troubleshooting
+## Depanare
 
 ### Connection issues
 
@@ -375,7 +375,7 @@ If you are experiencing connection timeouts or other connection issues:
 - In Android application settings for AAPS: Set location permission to "Allow all the time".
 
 ### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Pentru probleme cunoscute cu conexiunile Bluetooth, întreruperile pompei, activarea și problemele de conexiune [Depanarea Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ### Activation interrupted
 
@@ -391,7 +391,7 @@ The patch can give a variety of errors. To prevent frequent errors:
 
 All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
+-  **Nivelul 0:** Citiți secțiunea relevantă a acestei documentații pentru a vă asigura că înțelegeți cum ar trebui să meargă funcționalitatea cu care aveți dificultăți.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
 -  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Fiți răbdători - majoritatea membrilor comunității noastre sunt voluntari bine-voitori, și rezolvarea problemelor necesită adesea timp și răbdare atât din partea utilizatorilor cât și din partea dezvoltatorilor.**

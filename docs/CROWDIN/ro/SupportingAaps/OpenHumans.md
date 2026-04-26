@@ -8,17 +8,17 @@ Deții controlul deplin asupra a ceea ce se întâmplă cu datele tale și asupr
 
 Următoarele date vor fi încărcate în contul tău Open Humans:
 
-- Glucose values
-- Careportal events (except notes)
-- Extended boluses
-- Profile switches
-- Total daily doses
-- Temporary basals
-- Temp targets
+- Valori ale glicemiei
+- Evenimente Careportal (cu excepția notelor)
+- Bolusuri extinse
+- Schimbări de profil
+- Doze zilnice totale
+- Bazale temporare
+- Ținte temporare
 - Preferințe
-- Application version
-- Device model
-- Screen dimensions
+- Versiunea aplicației
+- Tipul dispozitivului
+- Dimensiuni ecran
 
 Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor fi încărcate.
 
@@ -29,15 +29,15 @@ Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor 
 3. Deschide setarea folosind iconița roata dințată. Poți restricționa încărcarea pe durata în care telefonul utilizează Wi-Fi și/sau este conectat la un încărcător.
 4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
 
-![Open Humans Config Builder](../images/OHUploader1.png)
+![Constructorul de configurare al Open Humans](../images/OHUploader1.png)
 
 5. Citește cu atenție informațiile furnizate despre funcția de Open Humans Uploader și termenii de utilizare.
-6. Confirmă prin bifarea căsuţei şi apasă pe "LOGIN".
+6. Confirmă prin bifarea căsuței și apasă pe "LOGIN".
 7. Site-ul Open Humans va fi deschis. Autentifică-te cu datele tale de autentificare.
 8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
-9. Apăsați butonul „Autorizează proiectul”.
+9. Apăsați butonul "Autorizează proiectul".
 
-![Open Humans Terms of Use + Login](../images/OHUploader2.png)
+![Termeni de utilizare + Autentificare pentru Open Humans ](../images/OHUploader2.png)
 
 10. Când revii la AAPS vei vedea logare reușită.
 11. Pentru finalizarea configurării păstrează conectarea Open Humans Uploader pornita și telefonul deschis.
@@ -45,17 +45,17 @@ Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor 
 13. Apasă pe 'LOGOUT' dacă vrei să oprești încărcarea datelor în Open Humans.
 14. Notificările Android te vor informa despre încărcarea în curs.
 
-![Open Humans finish setup](../images/OHUploader3.png)
+![Finalizați configurarea Open Humans](../images/OHUploader3.png)
 
-15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
+15. Vă puteți gestiona datele prin conectarea la [pagina Open Humans](https://www.openhumans.org).
 
-![Open Humans manage data](../images/OHWeb.png)
+![Gestionați datele Open Humans](../images/OHWeb.png)
 
 ## Oportunități de partajare
 
 ### [The 'OPEN' project](https://www.open-diabetes.eu/)
 
-Proiectul "OPEN" reuneşte un consorţiu internaţional şi intersectorial de pacienţi inovatori, medici, oameni de ştiinţă, informaticieni şi organizaţii care pledeaza pentru pacienti, cu scopul de a investiga diverse aspecte in legatura cu sistemele de pancreas-artificial-realizat-individual (DIY APS) utilizate de un număr din ce în ce mai mare de persoane cu diabet. For more details see their [website](https://www.open-diabetes.eu/).
+Proiectul "OPEN" reunește un consorțiu internațional și intersectorial de pacienți inovatori, medici, oameni de știință, informaticieni și organizații care pledeaza pentru pacienti, cu scopul de a investiga diverse aspecte in legatura cu sistemele de pancreas-artificial-realizat-individual (DIY APS) utilizate de un număr din ce în ce mai mare de persoane cu diabet. For more details see their [website](https://www.open-diabetes.eu/).
 
 September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. A [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
 
@@ -67,17 +67,17 @@ Poți să introduci datele tale în Open Humans prin unul din aceste trei moduri
 
 1. use the AAPS uploader option to get your data into Open Humans
 2. utilizează transferul de date Nightscout
-3. încarca manual fişiere de date în Open Humans.
+3. încarca manual fișiere de date în Open Humans.
 
 Odată ce ai creat contul și fluxul de date se transmite in Open Humans, alătura-te și la OpenAPS Data Commons pentru a dona datele pentru cercetare, dacă vrei.
 
 ## Condiții de utilizare
 
-This is an open source tool that will copy your data to [Open Humans](https://www.openhumans.org). Nu avem nici un drept de a partaja datele tale cu terţe părţi fără autorizaţia ta explicită. Datele pe care le primesc proiectul și aplicația sunt identificate printr-un ID de utilizator aleatoriu și vor fi transmise în siguranță într-un cont Open Humans cu autorizarea ta pentru acest proces. You can stop uploading and delete your upload data at any time via [www.openhumans.org](https://www.openhumans.org). Țineți cont că unele proiecte care primesc date s-ar putea să nu suporte acest lucru.
+This is an open source tool that will copy your data to [Open Humans](https://www.openhumans.org). Nu avem nici un drept de a partaja datele tale cu terțe părți fără autorizația ta explicită. Datele pe care le primesc proiectul și aplicația sunt identificate printr-un ID de utilizator aleatoriu și vor fi transmise în siguranță într-un cont Open Humans cu autorizarea ta pentru acest proces. You can stop uploading and delete your upload data at any time via [www.openhumans.org](https://www.openhumans.org). Țineți cont că unele proiecte care primesc date s-ar putea să nu suporte acest lucru.
 
-Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
+Consultați de asemenea [Termeni de Utilizare Open Humans](https://www.openhumans.org/terms/).
 
-## Confidenţialitatea datelor
+## Confidențialitatea datelor
 
 Open Humans iti protejeaza intimitatea prin atribuirea unui ID numeric pentru fiecare proiect. Aceasta permite proiectelor să recunoască sursa fara sa te idntifice. The Application ID uploaded by AAPS is similar and only helps administrate the data. Mai multe informații pot fi gasite aici:
 

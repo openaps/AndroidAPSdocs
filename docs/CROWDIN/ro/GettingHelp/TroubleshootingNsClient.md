@@ -14,7 +14,7 @@ Since AAPS version 2.0, when such behavior is detected, NSClient is paused for 1
 
 * Restart
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+Ceea ce ar trebui să încercați ca un prim pas este să le reporniți pe amândouă: Nightscout și apoi telefonul pentru a vedea dacă problema este permanentă
 
 If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
 
@@ -38,7 +38,7 @@ A workaround to connection issues in Azure is to set in Application settings HTT
 
 If AAPS connects to Nightscout correctly but does BG displays as N/A. Go to NSCLIENT tab, press the 3 dot menu top right, Click NSClient Preferences -> Synchronization turn on "Receive/backfill CGM data".
 
-* If you still get an error...
+* Dacă încă primiți o eroare...
 
 Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 

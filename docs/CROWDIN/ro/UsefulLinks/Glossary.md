@@ -1,6 +1,6 @@
 # Glosar
 
-**AAPS** = AndroidAPS is the name of the Android app.
+**AAPS** = AndroidAPS este numele aplicației Android.
 
 **AAPSClient** (or **NSClient**) = a remote control feature that can be used by caregivers via a follower phone to follow a user’s **AAPS** by connecting to the user’s **Nightscout's** site. Further info → Wiki - 'NS Client'. Objectives learning program within **AAPS** provides step by step guidance. Further info → Wiki - 'objectives'.
 
@@ -23,7 +23,7 @@
 
 **BAT** = status light low battery on **AAPS’** home screen **Preferences**, Screenshots → see also **CAN** / **RES** / **SEN**.
 
-**BG** = blood glucose.
+**BG** = glicemia din sânge.
 
 **BGI** = blood glucose impact. The degree to which **BG** 'should' rise or fall based on insulin activity alone.
 
@@ -33,7 +33,7 @@
 
 **BR** = Basal Rate. The amount of insulin in a given time block to maintain **BG** at a stable level. → see also **IC** / **ISF**.
 
-**BYODA** = Build Your Own Dexcom App. A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
+**BYODA** = Construiește-ți propria aplicație Dexcom. O modalitate de a genera propria aplicație Dexcom a utilizatorului pentru a citi datele senzorului Dexcom G6.
 
 **CAGE** = Cannula AGE. Displayed on **AAPS’** homescreen and Nightscout providing the user’s information entered in the Actions tab / menu → see also **Nightscout**.
 
@@ -51,7 +51,7 @@
 
 **DST** = Daylight Savings Time Wiki DST.
 
-**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+**Dinamic ISF (sau DynISF)** = o caracteristică în **AAPS** care adaptează dinamic factorul de sensibilitate la insulină (**ISF**) bazat pe al utilizatorului:
 
 - Total Daily Dose of insulin (**TDD**); and
 - current and predicted **BG** values.
@@ -106,7 +106,7 @@
 
 **Profile** = the user’s basic treatment settings (basal rate, **DIA**, **IC**, **ISF**, **BG** target). AAPSv3 only supports local profiles created within **AAPS** but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → Wiki - 'profile'.
 
-**Profile switch** = (temporary) switch of the user’ **Profile** to a different **Profile** saved within **AAPS**.
+**Schimbare profil** = schimbare (temporară) a **Profilului** utilizatorului la un alt **Profil** salvat în **AAPS**.
 
 **Profile Percentage** = a (temporary_ percentage increase or decrease applied to a user’s **Profile** for a selected time period.
 

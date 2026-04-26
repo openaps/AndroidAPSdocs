@@ -6,13 +6,13 @@
 
 - You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+![Deschideți preferințele modulului](../images/Pref2020_OpenPlugin2.png)
 
 - **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
 ![Open submenu](../images/Pref2020_Submenu2.png)
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+- With the **filter** on top of the preferences screen you can quickly access certain preferences. Trebuie doar începeți să tastați o parte din textul pe care îl căutați.
 
 ![Preferences filter](../images/Pref2021_Filter.png)
 
@@ -24,15 +24,15 @@
 (Preferences-general)=
 ## General
 
-![Preferences > General](../images/Pref2020_General.png)
+![Preferințe > General](../images/Pref2020_General.png)
 
-**Units**
+**Unități**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- Setați unitățile in mmol/l sau mg/dl în funcție de preferințe.
 
-**Language**
+**Limba**
 
-- New option to use phone's default language (recommended).
+- Opțiune nouă de utilizare a limbii implicite a telefonului (recomandat).
 
 - In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
 
@@ -43,17 +43,17 @@
 
 The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
 
-**Patient name**
+**Limba**
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Skin
+### Piele
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
-You can choose from four types of skins:
+Puteți alege din patru tipuri de piele:
 
 ![Select skin](../images/Pref2021_SkinWExample.png)
 
@@ -61,26 +61,26 @@ You can choose from four types of skins:
 
 Difference between the other skins depends on the phone's display orientation:
 
-#### Portrait orientation
+#### Orientare în mod vertical
 
 - **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
 - **Large Display** has an increased height for all graphs compared to other skins
 
-#### Landscape orientation
+#### Orientare în mod orizontal
 
 - Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
 
 - **Large Display** has an increased height for all graphs compared to other skins
 
-![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
+![Pieile în funcție de orientarea de afișare a telefonului](../images/Screenshots_Skins.png)
 
 (Preferences-protection)=
-## Protecţie
+## Protecție
 
 ![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 (Preferences-master-password)=
-### Master password
+### Parola principală
 
 Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
 
@@ -88,7 +88,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Set master password](../images/MasterPW.png)
 
-### Settings protection
+### Protecție setări
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
 
@@ -96,21 +96,21 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
 
-![Protecţie](../images/Pref2020_Protection.png)
+![Protecție](../images/Pref2020_Protection.png)
 
-### Application protection
+### Protecția aplicației
 
 If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
 
 **AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
-### Bolus protection
+### Protecția bolusului
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
+- In exemplul de mai jos se vede solicitarea pentru protecția biometrică. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
 
-![Prompt biometric protection](../images/Pref2020_PW.png)
+![Solicitați protecție biometrică](../images/Pref2020_PW.png)
 
 ### Password and PIN retention
 
@@ -120,19 +120,19 @@ Define how long (in seconds), the preferences or bolus functionalities remain un
 
 In the **Overview** section, you can define the preferences for the home screen.
 
-![Preferences > Overview](../images/Pref2020_OverviewII.png)
+![Preferințe > Vedere de ansamblu](../images/Pref2020_OverviewII.png)
 
 ### Keep screen on
 
 Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
 (Preferences-buttons)=
-### Buttons
+### Butoane
 
 - Define which buttons are visible on the bottom of your home screen.
 - Setting hidden in [simple mode](#preferences-simple-mode).
 
-![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
+![Preferințe > Butoane](../images/Pref2020_OV_Buttons.png)
 
 - The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogues, for easy entry.
 
@@ -145,92 +145,92 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 
 Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten.
 
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. Dacă sunt specificate ore diferite pentru diferite mese, veți avea întotdeauna butonul de masă standard corespunzător pe ecranul de pornire, în funcție de ora zilei.
 
 ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
 If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
-The proposal has to be confirmed before insulin is delivered.
+Propunerea trebuie confirmată înainte de a se administra insulină.
 
-![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
+![Preferințe > buton Asistent rapid](../images/Pref2020_OV_QuickWizard2.png)
 
 Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Ținte temporare implicite
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
 [Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
 
-Here you can change the target and the duration for each predefined TT. Preset values are:
+Here you can change the target and the duration for each predefined TT. Valorile prestabilite sunt:
 
 * Eating soon: target 72 mg/dL / 4.0 mmol/l, duration 45 min
 * Activity: target 140 mg/dL / 7.8 mmol/l, duration 90 min
 * Hypo: target 125 mg/dL / 6.9 mmol/l, duration 45 min
 
-![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
+![Preferințe > Ținte temporare implicite](../images/Pref2020_OV_DefaultTT.png)
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
-### Fill/Prime standard insulin amounts
+### Umplere/Amorsare cantități standard de insulină
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
 If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
 
-Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+În acest dialog pot fi definite valori prestabilite. Alege butonul corespunzător cantității implicite de insulina pentru umplere/amorsare, în funcție de lungimea cateterului.
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Intervalul pentru vizualizare
 
-Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. Este doar pentru vizualizare, nu este intervalul țintă al glicemiei. Exemplu: 70-180 mg/dl sau 3,9-10 mmol/l
 
-![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
+![Preferințe > Interval de vizualizare](../images/Pref2020_OV_Range2.png)
 
-### Shorten tab titles
+### Scurtează titlurile filelor
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
 Useful to see more tab titles on screen.
 
-For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+De exemplu, fila "OpenAPS AMA" devine "OAPS", "OBIECTIVE" devine "OBJ" șamd.
 
 ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
+### Afișați zona pentru note în dialogurile de tratamente
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Oferă posibilitatea sa adaugi texte scurte la tratament (ajutor la bolusare, carbohidrați, insulină...)
 
-![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
+![Preferințe > Note în dialogurile de tratament](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### Lumini de stare
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
-Status lights give a visual warning for:
+Luminile de stare oferă un avertisment vizual pentru:
 
-- Sensor age
+- Vechime senzor
 - Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
-- Cannula age
-- Pump battery age
-- Pump battery level (%)
+- Vechimea insulinei (de câte zile este utilizat rezervorul)
+- Nivelul rezervorului (unități)
+- Vechime canulă
+- Vechime baterie pompă
+- Nivel baterie pompă (%)
 
 If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
 
 The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
 
-![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
+![Preferințe > Lumini de stare](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+### Administrează doar această parte din cantitatea calculată de asistent
 
 Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
 
@@ -259,7 +259,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 % todo
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### Setări avansate (Privire generală)
 
 ![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
@@ -267,43 +267,43 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
-Option to enable superbolus in bolus wizard.
+Activarea superbolusului în asistentul de bolus.
 
 [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
 
-Use with caution and do not enable it until you learn what it really does. Practic, bazala pentru următoarele două ore este adăugată la bolus și se activează în următoarele două ore o bazală temporară zero. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+Use with caution and do not enable it until you learn what it really does. Practic, bazala pentru următoarele două ore este adăugată la bolus și se activează în următoarele două ore o bazală temporară zero. **Funcțiile buclei AAPS vor fi dezactivate - așa că utilizați cu grijă! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ## Siguranța tratamentului
 
 (preferences-patient-type)=
-### Patient type
+### Tip de pacient
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
+- Limitele de siguranță sunt stabilite în baza vârstei selectate în această setare.
+- Dacă începeți să vă loviți de aceste limite dure (cum ar fi bolusul maxim) este timpul să vă mutați cu un pas mai sus.
 - It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
 - If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 ### Max allowed bolus
 
 - Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
+- Este recomandat să stabiliți această valoare la o cantitate de bun simț, care corespunde în linii mari cu maximul de bolus de insulină pe care l-ați putea face la o masă sau ca pe o corecție în mod obișnuit.
+- Restricția este, de asemenea, aplicată și rezultatele calculatorului de bolus.
 
 ### Max allowed carbs
 
 - Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
+- Se recomandă să stabiliți această setare la o valoare de bun simț, care să corespundă, în linii mari, cantității maxime de carbohidrați pe care ați putea-o ingera la o masă.
 
 ## Buclă
 
 As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### Cereri minime pentru modificări
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. This defines the relative change required to trigger a notification.
+When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. Aceasta definește modificarea relativa care declanșează o notificare.
 
 ## Asistent avansat la masă (AMA) sau Super Micro bolus (SMB)
 
@@ -334,32 +334,32 @@ The algorithm uses BGI (blood glucose impact) to determine when [carbs are absor
 
 At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Practic, este un sistem de siguranță. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Schimbare mare=mulți carbohidrați etc.
+Pentru a spune mai simplu: Algoritmul "știe" cum *ar trebui* să se comporte glicemia ta atunci când este afectată de doza actuală de insulină șamd. Ori de câte ori există o deviere pozitivă de la comportamentul așteptat, câțiva carbohidrați sunt absorbiți/eliminați. Schimbare mare=mulți carbohidrați etc.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+Algoritmul min_5m_carbimpact definește impactul implicit al absorbției carbohidraților per 5 minute. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 5, for SMB it's 8.
+Valoarea standard pentru AMA este 5, pentru SMB este 8.
 
-The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+Graficul COB de pe ecranul principal indică atunci când este folosit min_5m_impact punând un cerc portocaliu în partea de sus.
 
 ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
 
 ### Meal max absorption time
 
-If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Dacă mâncați în mod obișnuit mâncăruri grase sau cu proteine multe, va trebui să creșteți timpul de absorbție.
 
-### Advanced settings - autosens ratio
+### Setări avansate - raport autosens
 
 ![Setări absorbție](../images/Pref2020_Absorption.png)
 
 - Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
-## Pump
+## Pompă
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Activate BT watchdog if necessary (e.g. for Dana pumps). Asta va opri Bluetooth pentru o secundă daca nu este posibilă conexiunea la pompă. Aceasta poate ajuta în cazul unor telefoane cărora le îngheață stiva Bluetooth.
 
 ## Setări pompă
 
@@ -380,7 +380,7 @@ Original communication protocol, can be used with older Nightscout versions.
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+- Verificați temeinic să nu existe greșeli de scriere în aceste setări, în cazul în care nu puteți îndeplini Obiectivul 1.
 
 ## NSClientV3
 
@@ -398,11 +398,11 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
+- Verificați temeinic să nu existe greșeli de scriere în aceste setări, în cazul în care nu puteți îndeplini Obiectivul 1.
 - Leave Connect to websockets enabled (recommended).
 
 (Preferences-nsclient-synchronization)=
-### Synchronization
+### Sincronizare
 
 ![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
 
@@ -410,9 +410,9 @@ Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
-### Alarm options
+### Opțiuni alarme
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+![Opțiuni alarme](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -421,20 +421,20 @@ You can select which data you want to [upload and download to or from Nightscout
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
-### Connection settings
+### Setări conexiune
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+![NSClient setări de conexiune](../images/ConfBuild_ConnectionSettings.png)
 
 - Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
+- Restricționați încărcarea Nightscout doar prin Wi-Fi sau doar prin anumite rețele Wi-Fi.
 - If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Rețele SSID multiple pot fi separate prin punct și virgulă.
+- Pentru a șterge toate rețelele SSID introduceți un spațiu gol în câmp.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Setări avansate (NSClient)
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
+![Setări avansate NS Client](../images/Pref2024_NSClientAdv.png)
 
 Options in advanced settings are self-explanatory.
 
@@ -444,26 +444,26 @@ More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.m
 
 ## Automatizare
 
-Select which location service shall be used:
+Selectați ce serviciu de localizare va fi folosit:
 
 - Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Folosiți locația de rețea: Locația Wi-Fi
+- Utilizează locația GPS (Atenție! Poate cauza un consum excesiv de baterie!)
 
 ## Alerte locale
 
 ![Alerte locale](../images/Pref2020_LocalAlerts.png)
 
-Settings should be self-explanatory.
+Setările ar trebui să fie de la sine înțelese.
 
 (preferences-maintenance-settings)=
-## Setări Întreţinere
+## Setări Întreținere
 
-![Setări Întreţinere](../images/Pref2020_Maintenance.png)
+![Setări Întreținere](../images/Pref2020_Maintenance.png)
 
 **Email recipient**: Standard recipient of logs is <logs@aaps.app>.
 
-**Data Choices**
+**Alegerea datelor**
 
 ![Selecție date](../images/Pref2020_DataChoice.png)
 
@@ -475,7 +475,7 @@ After the grace period of 1 week has passed the stored password expires and any 
 
 After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
 
-### Log files
+### Fișiere jurnal
 
 AAPS will save logs for troubleshooting.
 
@@ -529,4 +529,4 @@ Poți ajuta comunitatea prin donarea datelor tale către proiecte de cercetare! 
 
 In Preferences, you can define when data shall be uploaded
 - only if connected to Wi-Fi
-- only if charging
+- doar când se încarcă

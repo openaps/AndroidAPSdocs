@@ -1,6 +1,6 @@
 (troubleshooting_androidstudio-troubleshooting-android-studio)=
 
-# Troubleshooting Android Studio
+# Depanare Android Studio
 
 ```{contents} List of common issues
 :depth: 2
@@ -8,7 +8,7 @@
 ```
 
 (troubleshooting_androidstudio-lost-keystore)=
-## Lost keystore
+## Cheie (keystore) pierdută
 If you use the same keystore when updating **AAPS** you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a safe place.
 
 If you try to install the apk, signed with a different keystore than before, you will get an error message explaining that the installation failed!
@@ -25,9 +25,9 @@ In the event that you cannot trace your old keystore or password, proceed as fol
    If you can't find these on your phone, copy them from the external storage to your phone.
 
 8. Check your battery optimization options and disable them again.
-9. Keep on looping.
+9. Mențineți bucla.
 
-## Gradle Sync failed
+## Sincronizare Gradle eșuată
 Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
 
 ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
@@ -37,10 +37,10 @@ Gradle Sync can fail for various reasons. When you receive a message saying that
 :local: true
 ```
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Important*: După ce ați urmat instrucțiunile pentru problema specifică, trebuie să declanșați din nou [sincronizare Gradle](#gradle-resync).
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### Uncommitted changes
+### Modificări neangajate
 
 If you receive a failure message like this one:
 
@@ -90,7 +90,7 @@ Clone sources again as described in wiki and do not allow gradle update
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
 #### Step 2: Check for uncommitted changes.
 
-  * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * În Android Studio, deschideți fila 'Commit' (1) în partea stângă. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
   * You can see either a "Default changeset" (2) or "Unversioned files" (3):
 
     * For "Default changeset", you probably updated 'Gradle' or changed some of the file contents by mistake.
@@ -149,7 +149,7 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Or:
+Sau:
 
 ```
 Cause: error: invalid source release: 21
@@ -187,13 +187,13 @@ If you experience the above error message, you need to download a correct JVM ve
   You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
-### Could not resolve/No cached version
+### Nu s-a putut rezolva/nu există versiune cache
 
   You might get this error message:
 
 ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * În partea dreaptă, deschideți fila Gradle (1).
 
     Make sure the button shown at (2) is *NOT* selected.
 
@@ -202,18 +202,18 @@ If you experience the above error message, you need to download a correct JVM ve
   * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
-### Unable to start daemon process
+### Imposibil de pornit procesul daemon
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
+  Dacă vedeți un mesaj de eroare ca cel de mai jos, probabil folosiți un sistem Windows 10 pe 32 biți. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
 
   There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Captura de ecran Nu poate porni procesul daemon](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
 ### Gradle Resync
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Dacă încă puteți vedea mesajul că sincronizarea Gradle a eșuat, acum selectați link-ul "Încercați din nou". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   If you don't see the message anymore, you can still trigger this manually:
@@ -226,7 +226,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
   * Click on "Reload Gradle Project" (3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## Generează APK semnat generat cu succes cu 0 variante de construcție
 
 When you generate the signed apk, you might get the notification that generation was successfully but are told that this is with '0 build variants' were generated:
 
@@ -253,23 +253,23 @@ Your apk was built successfully and can be transferred to your phone!
 
 ## Apk not installed
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![aplicație telefon neinstalată](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Asigurați-vă că ați transferat fișierul “app-release.apk” pe telefon.
+* Dacă "Aplicația nu este instalată" este afișată pe telefon, urmați acești pași:
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
 2. Uninstall **AAPS** on your phone.
 3. Enable airplane mode & turn off bluetooth.
-4. Install new version (“app-full-release.apk”)
+4. Instalați noua versiune ("app-full release.apk")
 5. [Importă setările](../Maintenance/ExportImportSettings.md)
-6. Turn bluetooth back on and disable airplane mode
+6. Activați din nou Bluetooth și dezactivați modul avion
 
 ## Apk installed but old version
 
 If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
 
-## None of the above worked
+## Niciuna dintre cele de mai sus nu a funcționat
 
 If none of the above tips helped you might consider building the apk from scratch:
 
@@ -277,7 +277,7 @@ If none of the above tips helped you might consider building the apk from scratc
 
 2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
 
-    Or you just use a new keystore.
+    Sau folosiți o nouă cheie de identificare (keystore).
 
 3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
 
@@ -285,9 +285,9 @@ If none of the above tips helped you might consider building the apk from scratc
 5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
 6. You should check your battery optimization options and disable them again.
 
-## Worst case scenario
+## Scenariul cel mai nefavorabil
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuale pentru dezinstalare completă pot fi găsite online, spre exemplu
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 

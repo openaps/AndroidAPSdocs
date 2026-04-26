@@ -1,55 +1,55 @@
 # Automatizare
 
-## What is an Automation?
+## Ce este o Automatizare?
 
-"**Automation**" is a feature which can automate task for AAPS.
+"**Automatizarea**" este o caracteristică ce poate automatiza sarcini în AAPS.
 
-Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+Automatizările efectuează acțiuni specifice bazate pe una sau mai multe condiții sau în baza unor elemente declanșatoare. Declanșatoarele pot include evenimente neregulate, cum ar fi niveluri scăzute sau crescute ale glicemiei în sânge (BG) sau o cantitate negativă stabilită de insulină la bord (IOB). Automatizările pot face față și unor evenimente recurente, cum ar fi mesele sau exercițiile fizice la anumite ore ale zilei, sau când utilizatorul se află la o anumită distanță a unei locații GPS sau a unei zone SSID WiFi. Automatizarea poate face copiile de rezervă ale setărilor AAPS pe baza unei planificări sau la fiecare schimbare de pompă (Omnipod).
 
-Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+Regulile de automatizare sunt create și modificare din fila Automatizări. Fiecare regulă este definită de două caracteristici:
 
-- One or more conditions or 'triggers' that start an action.
+- Una sau mai multe condiții sau "declanșatoare" care inițiază o acțiune.
 
-    Think of a certain time schedule, an event or properties value in AAPS
+    Gândiți-vă la un anumită planificare, un eveniment sau valori ale caracteristicilor în AAPS
 
-- One or more actions to perform.
+- Una sau mai multe acțiuni de efectuat.
 
-    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+    Cum ar fi o alarmă sau setarea unui procentaj de profil sau exportul setărilor AAPS la schimbarea pompei (Omnipod).
 
 
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and ![**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
+Există o gamă largă de opțiuni de automatizare, iar utilizatorii sunt încurajați să le studieze în cadrul aplicației AAPS, în secțiunea Automatizare. De asemenea, puteți căuta grupurile de utilizatori AAPS pe ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) și ![**Discord**](https://discord.gg/4fQUWHZ4Mw) pentru exemple de automatizare de la alți utilizatori.
 
-## How Automation can help
+## Cum poate ajuta automatizarea
 
-1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
+1. **Automatizarea sarcinilor recurente:** Execută automat acțiunile programate fără interacțiunea utilizatorului.
 
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
+1. **Reducerea oboselii decizionale:** Beneficiul principal al **Automatizărilor** este de a scuti utilizatorul de sarcina de a face intervenții manuale în **AAPS**. [Cercetările](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimează că 180 de decizii zilnice suplimentare trebuie luate de cei care trăiesc cu diabet de tip 1. **Automatizările** pot reduce povara mentală, eliberând energia mentală a utilizatorului pentru alte aspecte ale vieții.
 
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
+1. **Îmbunătățirea potențială a controlului glicemic:** de exemplu **Automatizările** se pot asigura că **Țintele temporare** sunt întotdeauna stabilite atunci când este necesar, chiar și în situații de program încărcat sau în perioade de uitare. De exemplu, dacă un copil cu diabet zaharat are sporturi programate la școală marți, la ora 10:00 și joi, la ora 14:00 și necesită o țintă temporară ("TT") acționată cu 30 de minute înainte de activitatea sportivă; **Ținta temporară** poate fi activată prin intermediul unei **Automatizări**.
 
-1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
+1. **Permiterea AAPS să fie foarte personalizat** pentru a fi mai mult sau mai puțin agresiv în situații specifice, conform preferinței unui utilizator. De exemplu, declanșarea unei reduceri temporare a **Profilului** % pentru o perioadă de timp determinată dacă se strânge **IOB** negativ la mijlocul nopții, ceea ce indică că **Profilul** existent poate fi prea puternic.
 
-The example below illustrates how an **Automation** can enable steps to be eliminated.
+Exemplul de mai jos ilustrează cum o **Automatizare** poate permite eliminarea pașilor.
 
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
+Utilizatorul face exerciții în fiecare dimineață la ora 6 dimineața: trebuie să își amintească să stabilească manual o țintă temporară în AAPS la 5 dimineața, înainte de a face exerciții.
 
-![Alt text](../images/automation_2024-02-12_20-54-50.png)
+![Text alternativ](../images/automation_2024-02-12_20-54-50.png)
 
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
+Utilizatorul a setat o **Automatizare** care să declanșeze o "Țintă temporară de activitate" la ora 5 dimineața pentru a se asigura că **glicemia** și **IOB** sunt optime, în vederea pregătirii exercițiului său de la 6 dimineața:
 
-![Alt text](../images/automation_2024-02-12_20-54-49.png)
+![Text alternativ](../images/automation_2024-02-12_20-54-49.png)
 
-## Key considerations before starting with Automations
+## Considerații-cheie înainte de a începe cu automatizările
 
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
+1. Înainte de a configura anumite automatizări, ar trebui să aveți un control rezonabil **al glicemiei** cu **AAPS**. Automatizările nu ar trebui folosite pentru a compensa setările suboptime ale bazalelor, **ISF** sau **ICR** (discutate mai jos). Evitați să setați o **schimbare a profilului** automată pentru a compensa creșterile de **glicemie** din cauza _, spre exemplu, _ alimentelor, acestea sunt gestionate mai bine prin intermediul altor strategii (SMB șamd).
 
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
+1. Cum este cu orice tehnologie, **CGM**, **pompele** și telefoanele se pot defecta: probleme tehnice sau erori ale senzorilor pot întrerupe acțiunile **Automatizărilor**, și este nevoie de intervenții manuale.
 
-1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need a Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. **Cerințele pentru **Automatizări** se vor schimba probabil odată cu schimbarea rutinelor**. Atunci când schimbați între perioade de lucru/școală/vacanță, setați un memento în calendar pentru a verifica care **Automatizări** sunt în prezent active (sunt ușor de activat și de dezactivat). De exemplu, dacă mergeți în vacanță, și nu mai este nevoie de o automatizare pentru activitățile sportive școlare sau zilnice, sau dacă este necesară ajustarea orarului.
 
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
+1. **Automatizările** pot intra în conflict unele cu altele, și este bine să revizuiești orice nouă **Automatizare** care se stabilește cu atenție într-un mediu sigur; și să înțelegeți de ce o **automatizare** poate sau nu să fi fost declanșată în modul în care vă așteptați.
 
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
+1. Dacă utilizați Autosens, încercați să faceți uz de **Ținte Temporare** în locul **Schimbărilor de profil**. **Țintele temporare** nu resetează Autosens înapoi la 0. **Profile Switches** reset Autosens.
 
 1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
 
@@ -84,12 +84,12 @@ To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
 
 To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
 
-![Alt text](../images/automation_2024-02-12_20-56-08.png)
+![Text alternativ](../images/automation_2024-02-12_20-56-08.png)
 
 
 When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
 
-![Alt text](../images/automation_2024-02-12_20-55-05.png)
+![Text alternativ](../images/automation_2024-02-12_20-55-05.png)
 
 ```{admonition} Important note
 :class: note
@@ -116,7 +116,7 @@ Please be careful when selecting a negative value in **Automation**
 
 Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
 
-![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
 **Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
 
@@ -140,8 +140,8 @@ There are various ‘Triggers’ that can be selected by the user. Triggers are 
 **Options:**
 
 Several conditions can be linked with
-* “And”
-* “Or”
+* "Și"
+* "Sau"
 * “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
 **Trigger:** time vs. recurring time
@@ -162,8 +162,8 @@ Several conditions can be linked with
 **Options:**
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* Folosiți locația rețelei: locația Wi-Fi.
+* Utilizează locația GPS (Atenție! This can cause excessive battery drain!)
 
 **Triggers** : pump and sensor data
 
@@ -194,7 +194,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 **Options:**
 
-none
+niciunul
 
 **Actions:** **Profile Percentage**
 
@@ -205,38 +205,38 @@ none
 
 Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
 
-![Alt text](../images/automation_2024-02-12_20-57-07.png)
+![Text alternativ](../images/automation_2024-02-12_20-57-07.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters
  **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_20-57-48.png-500x.png)
 
 To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
 
-![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_20-58-00.png-500x.png)
 
 ## How to delete Automation rules
 
 To delete an **Automation** rule click on the trash icon.
 
-![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
 ## Examples of Automations
 
 Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
 
-### Low Glucose Temp Target
+### Țintă temporară în caz de hipoglicemie
 
 This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG** is at a certain threshold.
 
-![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_21-04-01.png-500x.png)
 
 ### Lunch Time Temp Target (with ‘Location’)
 
-![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
 This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will be activated.
 
@@ -244,7 +244,7 @@ This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to dri
 
 The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
 
-![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_21-04-40.png-500x.png)
 
 Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
 
@@ -263,14 +263,14 @@ and while being connected to a home wifi network (3).
 
 It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance.
 
-![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
 Here is the screenshot detailing the **Automation** triggers:
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
-1) WIFI SSID = My_Home_WiFi_Name
+1) În cadrul principalului „AND” (ambele condiții trebuie îndeplinite pentru a declanșa) 1) Timp recurent = L, M, Mi, J, V la 5:30 dimineața  
+1) Nume rețea WiFi = Rețeaua_mea_WiFi_de_acasă
 
-![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
 (automating-preference-settings-export)=
 
@@ -280,7 +280,7 @@ Here is the screenshot detailing the **Automation** triggers:
 
 Screenshots detailing the Automation triggers:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) Condiție: Timp recurent = L, M, Mi, J, V la 8:00 dimineața 1) Acțiune: Setări Export (pentru "Text în tratamente" introduceți "Zilnic")
 
 ![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
 
@@ -290,7 +290,7 @@ Note: Export execution will be logged on Careportal
 
 Screenshots detailing the Automation triggers:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) Condiție: Activare pompă 1) Acțiune: Setări Export (pentru "Text în tratamente" introduceți "Activare Pompă: setări export")
 
 ![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
 
@@ -320,17 +320,17 @@ The **Automation** will:
 * change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
 * stop **Temp Target** (if any)
 
-![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
-## Troubleshooting
+## Depanare
 
 * Problem: __My automations are not being triggered by AAPS?__
 
 Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
 
-## Troubleshooting
+## Depanare
 
-![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
+![Text alternativ](../images/automation_2024-02-12_21-06-12.png-500x.png)
 
 * Problem: __My automations are being triggered in the wrong order.__
 

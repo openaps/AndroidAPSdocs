@@ -4,7 +4,7 @@ This page is intended for clinicians who have expressed interest in open source 
 
 This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
 
-## The steps for building a DIY Closed Loop:
+## Pașii pentru construirea unei Bucle Închise DIY:
 
 To start using AAPS, the following steps should be taken:
 
@@ -12,7 +12,7 @@ To start using AAPS, the following steps should be taken:
 * [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
-## How A DIY Closed Loop Works
+## Cum funcționează o buclă închisă DIY
 
 Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
 
@@ -20,7 +20,7 @@ With automated insulin delivery, the system does the same thing: it gathers data
 
 If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates running.
 
-## How data is gathered:
+## Cum se colectează datele:
 
 With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
 
@@ -33,7 +33,7 @@ When the device has collected this data, the algorithm runs and does the decisio
 
 It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
 
-## How does it know what to do?
+## Cum știe ce să facă?
 
 The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
 
@@ -45,37 +45,37 @@ AAPS is designed to transparently track all input data it gathers, the resulting
 
 AAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AAPS uses different colors to separate these [prediction lines](#aaps-screens-prediction-lines). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
 
-### Here are examples of the purple prediction lines, and how they might differ:
+### Iată exemple de linii violet de predicție și cum ar putea acestea să difere:
 
 ![Purple prediction line examples](../images/Prediction_lines.jpg)
 
-### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+### Aici sunt exemple de intervale de timp diferite care influențează ajustările necesare pentru administrarea insulinei:
 
-### Scenario 1 - Zero Temp for safety
+### Scenariul 1 – Temporară zero pentru siguranță
 
 In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
 
 ![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
 
-### Scenario 2 - Zero temp for safety
+### Scenariul 2 – Temporară zero pentru siguranță
 
 In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
 
 ![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
 
-### Scenario 3 - More insulin needed
+### Scenariul 3 - Este necesară mai multă insulină
 
 In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
 
 ![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
 
-### Scenario 4 - Low temping for safety
+### Scenariul 4 – Temporară mică pentru siguranță
 
 In this example, AAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
 
 ![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
 
-## Optimizing settings and making changes
+## Optimizarea setărilor și efectuarea de modificări
 
 As a clinician who may not have experience with AAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
@@ -89,7 +89,7 @@ Additionally, human behavior (learned from manual diabetes mode) often influence
 
 **This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
 
-## Summary
+## Sumar
 
 This is meant to be a high-level overview of how AAPS works. For more details, ask your patient, reach out to the community, or read the full AAPS documentation available online.
 
@@ -97,5 +97,5 @@ Additional recommended reading:
 
 * The [full AAPS documentation](../index.md)
 * The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* Documentația [completă OpenAPS](https://openaps.readthedocs.io/en/latest/index.html) 
+  * Mai multe detalii [despre calculele OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

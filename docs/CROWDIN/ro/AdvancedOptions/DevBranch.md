@@ -1,17 +1,17 @@
-# Development branch
+# Ramura de dezvoltare
 
-<font color="#FF0000"><strong>Attention:</strong></font>
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000"><strong>not for actual looping!</strong></font>
+<font color="#FF0000"><strong>Atenție:</strong></font>
+Ramura Dev este doar pentru dezvoltarea viitoare a AAPS. Ar trebui folosit pe un telefon separat pentru testare <font color="#FF0000"><strong>nu pentru buclă reală!</strong></font>
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Cea mai stabilă versiune de AAPS este cea din [Ramura Principală](https://github.com/nightscout/AndroidAPS/tree/master). Este recomandat să rămâneți pe ramura principală pentru folosirea buclei.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
+Versiunea dev a AAPS este doar pentru dezvoltatori și cei care testează care sunt confortabili cu stacktraces; în căutarea fișierelor de jurnal și poate cu pornirea depanatorul pentru a produce rapoarte de erori care sunt de ajutor pentru dezvoltatori (pe scurt: oameni care știu ce fac fără a fi ajutați!). Prin urmare, multe caracteristici nefinalizate sunt dezactivate. Pentru a activa aceste caracteristici, intrați în **Modul inginerie** prin crearea unui fișier numit `inginer_mode` în directorul /AAPS/extra . Activarea modului de inginerie poate strica complet bucla.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Cu toate acestea, versiunea dev este un loc bun pentru a vedea care sunt funcțiile testate și pentru a ajuta la remedierea erorilor și pentru a oferi feedback cu privire la funcționarea practică a noilor caracteristici. Adesea, oamenii vor testa ramura dev pe un telefon vechi și o pompă până când vor avea încredere că este stabilă - orice utilizare a acesteia este pe propriul risc. Când testați orice caracteristici noi, țineți minte că alegeți să testați o caracteristică încă în dezvoltare. Faceți acest lucru pe propriul risc & cu grija cuvenită pentru a vă menține în siguranță.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Dacă găsiți o eroare sau credeți că s-a întâmplat ceva greșit atunci când folosiți ramura Dev, atunci vedeți [secțiunea probleme](https://github.com/nightscout/AndroidAPS/issues) pentru a verifica dacă altcineva a găsit-o sau adăugați-o chiar dumneavoastră dacă nu. Cu cât puteți partaja mai multe informații aici cu atât mai bine (nu uitați că poate fi nevoie să partajați [fișierele de jurnal](../GettingHelp/AccessingLogFiles.md). Noile caracteristici pot fi de asemenea discutate pe [discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+O versiune dev are o dată de expirare. Acest lucru pare deranjant atunci când o folosiți în mod satisfăcător, dar servește unui scop. Când o singură versiune de dezvoltator circulă, este mai ușor să urmărești erorile pe care oamenii le raportează. Dezvoltatorii nu doresc să se afle într-o poziție în care circulă trei versiuni de dev unde erorile sunt reparate în unele și în altele nu, iar oamenii continuă să le raporteze pe cele corectate.
 
 (branch-ci-test)=
 
@@ -25,11 +25,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Elemente de test într-o propunere de modificare (GitHub CI actions deploy)
 
-Available from 3.3.2.1.dev
+Disponibil de la 3.3.2.1.dev
 
-- Suitable for testers or those helping with testing.
+- Este adecvat pentru testatori sau pentru cei care contribuie la testare.
 
 ```{eval-rst}
 .. raw:: html
@@ -49,20 +49,20 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- PR number: Please enter the PR number that you want to test.
+- Numărul PR: Vă rugăm să introduceți numărul PR pe care doriți să-l testați.
 
-- PR reference types: PR reference types include two options:
+- Tipuri de referință PR: tipurile de referință PR includ două opțiuni:
     
     - head:
     - Preia conținutul real din ramura autorului PR, adică istoricul original al comiterii fără operațiuni de îmbinare).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Aceasta este echivalentă cu starea originală a ramurei PR, ca și cum ar fi fost preluată direct de pe o copie derivată sau o ramură cu caracteristici.
     
-    - merge:
+    - fuzionare:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Preia rezultatul fuzionării presimulate a PR a GitHub-ului în ramura țintă (de exemplu, dev).
+    - Aceasta este o comitere de îmbinare virtuală creată automat de GitHub.
+    - Această confirmare există doar atunci când cererea de integrare nu are conflicte și poate fi îmbinată.
     
     - variant:
     
-    - Please refer to <variant>
+    - Vă rugăm să consultați [varianta](variant)

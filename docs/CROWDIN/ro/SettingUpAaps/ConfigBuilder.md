@@ -8,7 +8,7 @@
 
 Când există setări suplimentare disponibile în cadrul modulului, poți face clic pe rotița dințată (B), care te va duce la setările specifice din secțiunea de preferințe.
 
-![Casuta Configurare sistem şi rotita](../images/ConfBuild_ConfigBuilder.png)
+![Casuta Configurare sistem și rotita](../images/ConfBuild_ConfigBuilder.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -52,7 +52,7 @@ Mai multe informații pentru a înțelege Profilul Insulinei așa cum este indic
 
 ![Tip de insulină Oref Acțiune-Rapidă](../images/ConfBuild_Insulin_RAO.png)
 
-* recomandat pentru Humalog, Novolog şi Novorapid
+* recomandat pentru Humalog, Novolog și Novorapid
 * DIA = cel puțin 5 ore
 * Maximum vârf = 75 minute după injectare (fix, nemodificabilă)
 
@@ -110,9 +110,9 @@ Vedeți [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseD
 
 (Config-Builder-pump)=
 
-## Pump
+## Pompă
 
-Alegeți tipul de pompă pe care îl folosiți. Vezi pagina [Pompe Compatibile](../Getting-Started/CompatiblePumps.md) pentru mai multe informații despre configurare.
+Alegeți tipul de pompă pe care îl folosiți. Vedeți pagina [Pompe Compatibile](../Getting-Started/CompatiblePumps.md) pentru mai multe informații despre configurare.
 
 ![Selecție pompă pentru configurare](../images/ConfBuild_Pump_AAPS33.png) ![Selecție pompă pentru configurare](../images/ConfBuild_Pump_AAPS33-2.png)
 
@@ -141,7 +141,7 @@ Vă puteți vedea sensibilitatea pe ecranul principal într-un [grafic adiționa
 
 ### Setări absorbție
 
-Dacă utilizați Oref1 cu **SMB** trebuie să schimbați **min_5m_carbimpact** (impactul estimat al carbohidraților la fiecare 5 minute) la 8. Valoarea este utilizată în timpul întreruperii citirilor **CGM** sau atunci când activitatea fizică „folosește” întreaga creștere a glicemiei, care altfel ar determina **AAPS** să scadă COB. În momentele în care [absorbția de carbohidrați](../DailyLifeWithAaps/CobCalculation.md) nu poate fi ajustată dinamic pe baza reacțiilor din sânge, se introduce o degradare implicită a carbohidraților. Practic, este un sistem de siguranță.
+Dacă utilizați Oref1 cu **SMB** trebuie să schimbați **min_5m_carbimpact** (impactul estimat al carbohidraților la fiecare 5 minute) la 8. Valoarea este utilizată în timpul întreruperii citirilor **CGM** sau atunci când activitatea fizică „folosește" întreaga creștere a glicemiei, care altfel ar determina **AAPS** să scadă COB. În momentele în care [absorbția de carbohidrați](../DailyLifeWithAaps/CobCalculation.md) nu poate fi ajustată dinamic pe baza reacțiilor din sânge, se introduce o degradare implicită a carbohidraților. Practic, este un sistem de siguranță.
 
 (Config-Builder-aps)=
 
@@ -171,7 +171,7 @@ Acest modul nu poate fi dezactivat deoarece este o parte de bază a **AAPS**.
 
 Vedeți pagina [Obiective](../SettingUpAaps/CompletingTheObjectives.md) pentru mai multe informații.
 
-## Synchronization
+## Sincronizare
 
 În această secțiune, puteți alege dacă/unde doriți **AAPS** să trimită datele dumnevoastră.
 
@@ -245,11 +245,11 @@ O filă pentru gestionarea <0>Automatizărilor</0>, disponibilă de la <1>Obiect
 
 ### Comunicator SMS
 
-Permite aparținătorilor să controleze de la distanță anumite funcții ale **AAPS**prin SMS, vezi [Comenzi SMS](../RemoteFeatures/SMSCommands.md) pentru mai multe informații privind configurarea.
+Permite aparținătorilor să controleze de la distanță anumite funcții ale **AAPS**prin SMS, vedeți [Comenzi SMS](../RemoteFeatures/SMSCommands.md) pentru mai multe informații privind configurarea.
 
 ### Mâncare
 
-Afișați presetările alimentare definite în baza de date Nightscout, vezi [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pentru mai multe informații despre configurare.
+Afișați presetările alimentare definite în baza de date Nightscout, vedeți [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pentru mai multe informații despre configurare.
 
 Notă: Intrările nu pot fi utilizate în calculatorul **AAPS**. (Numai vizualizare)
 
@@ -270,7 +270,7 @@ Prin fila Ceas (Wear) sau prin meniul principal (sus stânga ecranului, dacă fi
 
 ### Autotune
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+Puteți activa Autotune, vedeți [aici](../AdvancedOptions/Autotune.md).
 
 ### Mentenanță
 
