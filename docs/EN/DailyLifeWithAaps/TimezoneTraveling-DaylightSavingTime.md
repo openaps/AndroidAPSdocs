@@ -1,6 +1,6 @@
 # Timezone Change and Daylight Saving 
 
-## Timezone traveling with pumps
+(timezone-traveling-with-pumps)=
 
 ## Timezone change for Omnipod Dash
 
@@ -10,6 +10,8 @@
 ## Timezone change for DanaR, Korean DanaR
 
 There is no issue with changing timezone in phone because pump doesn't use history
+
+(timezone-traveling-danarv2-danars)=
 
 ## Timezone change for DanaRv2, DanaRS
 
@@ -24,7 +26,7 @@ To avoid this there are two possibilities:
 * Your phone must keep your standard time as at home for the whole travel period.
 
 * Time-shift your **Profile** according to time difference between home time and destination time.
-   * Long-press **Profile** name (middle of top section on homescreen)
+   * Long-press **Profile** name (middle of top section on home screen)
    * Select '**Profile Switch**'
    * Set 'Time shift' according to your destination.
    
@@ -46,6 +48,8 @@ When get out of plane:
 * change time in pump
 * turn on phone
 * let phone connect to the pump and fine-tune time
+
+(timezone-traveling-insight)=
 
 
 ## Timezone Change for Insight
@@ -74,18 +78,20 @@ Time zone changes keep the history intact, only TDD may be affected. Manually ch
 
 When the time zone or time changes running **TBR's** are stopped. 
 
+(time-adjustment-daylight-savings-time-dst)=
+
 
 ## DAYLIGHT SAVING (DST)
 Time adjustment daylight savings time 
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctlyy. 
+Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. 
 For instance with the Combo pump, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake and not during the night.
 
 
 ### DST automatic adjustment for most pumps
 
 * This adjustment feature is available for **AAPS** version 2.2 onwards.
-* Howeever, the fully closed Loop will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. 
+* However, the fully closed Loop will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. 
   This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
 * After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable fully closed Loop.
 * You will also receive a notification on **AAPS** main screen prior to DST change that the Fully Closed Loop has been disabled temporarily. This message will appear without beep, vibration or anything.**
@@ -112,6 +118,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
    * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF).
    * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
    
+
 <img width="576" height="1289" alt="Screenshot_20260329-110315 (1)" src="https://github.com/user-attachments/assets/ca40c1c6-1697-4832-ae10-5cf6a1dc0bce" />
 
 
