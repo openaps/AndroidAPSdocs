@@ -573,9 +573,9 @@ Release date: 31-01-2022
 
 - You can start activity temporary target during creation of profile switch @MilosKozak
 
-- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](#Update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfile is gone, just local profile can be used. Local profile can be synced to NS. @MilosKozak.
 
-- Forgotten [master password reset procedure](#Update3_0-reset-master-password) @MilosKozak
+- Forgotten master password reset procedure @MilosKozak
 
 - User actions tracing @Philoul
 
