@@ -119,7 +119,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
    * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
    
 
-<img width="576" height="1289" alt="Screenshot_20260329-110315 (1)" src="https://github.com/user-attachments/assets/ca40c1c6-1697-4832-ae10-5cf6a1dc0bce" />
+![Switch off auto date/time](../images/Dailylife/ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
 
 
@@ -131,7 +131,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 
 
-<img width="576" height="1289" alt="Screenshot_20260329-111830" src="https://github.com/user-attachments/assets/b7b7f738-f91e-40df-ad79-f404fbfb9ae6" />
+![Set to non-changing zone](../images/Dailylife/b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
 
 
