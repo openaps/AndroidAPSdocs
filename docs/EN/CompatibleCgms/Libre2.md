@@ -28,7 +28,7 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 
 - → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip+/xDrip_Libre_Transmitter03.png)
 
 This will not physically start any Libre2 sensor or interact
 with them in any case. This is simply to indicate xDrip+ that a new
@@ -72,7 +72,7 @@ Technically, the current blood sugar value is transmitted to xDrip+ every minute
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip+/xDrip_Libre3_Smooth.png)
 
 This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the
 alarms are based jitter a little more, but correspond to the values that
