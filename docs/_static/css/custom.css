@@ -36,3 +36,150 @@ pre code {
   background-color: transparent !important;
   font-weight: bold !important;
 }
+
+/* MyST-like admonitions for RTD theme with explicit icon rendering */
+.rst-content .admonition,
+.rst-content .note,
+.rst-content .warning,
+.rst-content .danger,
+.rst-content .tip,
+.rst-content .important,
+.rst-content .attention,
+.rst-content .caution,
+.rst-content .error,
+.rst-content .hint,
+.rst-content .seealso {
+  border: 1px solid #d9dce1;
+  border-left: 0.4rem solid #6b7280;
+  border-radius: 0.25rem;
+  background: #f8fafc;
+  box-shadow: none;
+}
+
+.rst-content .admonition .admonition-title,
+.rst-content .note .admonition-title,
+.rst-content .warning .admonition-title,
+.rst-content .danger .admonition-title,
+.rst-content .tip .admonition-title,
+.rst-content .important .admonition-title,
+.rst-content .attention .admonition-title,
+.rst-content .caution .admonition-title,
+.rst-content .error .admonition-title,
+.rst-content .hint .admonition-title,
+.rst-content .seealso .admonition-title {
+  margin: -1px -1px 0 -1px;
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: #64748b;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.rst-content .admonition p,
+.rst-content .note p,
+.rst-content .warning p,
+.rst-content .danger p,
+.rst-content .tip p,
+.rst-content .important p,
+.rst-content .attention p,
+.rst-content .caution p,
+.rst-content .error p,
+.rst-content .hint p,
+.rst-content .seealso p,
+.rst-content .admonition ul,
+.rst-content .admonition ol {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Ensure icons are shown with the bundled RTD FontAwesome (v4) */
+.rst-content .admonition-title:before {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+
+/* Type-specific colors and icons */
+.rst-content .note,
+.rst-content .seealso {
+  border-left-color: #2563eb;
+}
+
+.rst-content .note .admonition-title,
+.rst-content .seealso .admonition-title {
+  background: #2563eb;
+  color: #ffffff;
+  border-bottom-color: #1d4ed8;
+}
+
+.rst-content .note .admonition-title:before {
+  content: "\f05a";
+}
+
+.rst-content .seealso .admonition-title:before {
+  content: "\f064";
+}
+
+.rst-content .tip,
+.rst-content .hint {
+  border-left-color: #0d9488;
+}
+
+.rst-content .tip .admonition-title,
+.rst-content .hint .admonition-title {
+  background: #0f766e;
+  color: #ffffff;
+  border-bottom-color: #0b5f59;
+}
+
+.rst-content .tip .admonition-title:before,
+.rst-content .hint .admonition-title:before {
+  content: "\f0eb";
+}
+
+.rst-content .important,
+.rst-content .attention,
+.rst-content .warning,
+.rst-content .caution {
+  border-left-color: #d97706;
+}
+
+.rst-content .important .admonition-title,
+.rst-content .attention .admonition-title,
+.rst-content .warning .admonition-title,
+.rst-content .caution .admonition-title {
+  background: #c2410c;
+  color: #ffffff;
+  border-bottom-color: #9a3412;
+}
+
+.rst-content .important .admonition-title:before,
+.rst-content .attention .admonition-title:before {
+  content: "\f06a";
+}
+
+.rst-content .warning .admonition-title:before,
+.rst-content .caution .admonition-title:before {
+  content: "\f071";
+}
+
+.rst-content .danger,
+.rst-content .error {
+  border-left-color: #dc2626;
+}
+
+.rst-content .danger .admonition-title,
+.rst-content .error .admonition-title {
+  background: #b91c1c;
+  color: #ffffff;
+  border-bottom-color: #991b1b;
+}
+
+.rst-content .danger .admonition-title:before {
+  content: "\f06a";
+}
+
+.rst-content .error .admonition-title:before {
+  content: "\f057";
+}
