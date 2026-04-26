@@ -1,4 +1,4 @@
-# **Tweaking the AAPS' Profile**
+# Tweaking the AAPS' Profile
 
 ```{admonition} This is NOT a medical advice
 :class: warning
@@ -10,7 +10,7 @@ This guide explains the logic of the OpenAPS algorithm results with a given __Pr
 
 Using **closed loop** may make basal  testing easier and may significantly reduce  the hypo risk if your __Profile__ basal is too strong.
 
-## **Changing profile's settings, how to proceed**
+## Changing profile's settings, how to proceed
 
 1. Ensure you have read and understand __AAPS’__ recommended settings and advice below. Not following this advice will make the whole process problematic and less likely to get a well tuned __Profile__
 2. Carefully observe and compare, **over several days**, what is happening with your __BG__ and __IOB__.
@@ -23,7 +23,7 @@ Using **closed loop** may make basal  testing easier and may significantly reduc
 
 Don't rush, go slow!
 
-## **Recommended settings and advice while tweaking basal**
+## Recommended settings and advice while tweaking basal
 
 - Do all testing with [closed loop enabled](#AapsScreens-loop-status).
 - **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
@@ -46,7 +46,7 @@ Meaning that the meal is digested, and there are no more carbs in your body.
 
 AAPS might indicate [COB=0 while you still have carbs on board](../DailyLifeWithAaps/CobCalculation.md).
 
-## **[Profile](../SettingUpAaps/YourAapsProfile.md) definitions**
+## [Profile](../SettingUpAaps/YourAapsProfile.md) definitions
 
 A too **strong Profile** indicates some combination of the following:
 
@@ -54,19 +54,19 @@ A too **strong Profile** indicates some combination of the following:
 - The [basal](#your-aaps-profile-basal-rates) number is too big
 - [I:C](#your-aaps-profile-insulin-to-carbs-ratio) number is too small
 
-## **IOB Observations**
+## IOB Observations
 
 *Note: you can also use Loopalyzer IOB graph in Nightscout reports to view IOB on several days.*
 
 If you observe the following patterns after a few days, consider the following changes
 
-### **IOB positive**
+### IOB positive
 
 - **Profile** basal might not be strong enough (this could also be because of things like unannounced food, illness, bad site absorption, etc.)
 
 ![Positive IOB](../images/troubleshooting/profiletuning/PositiveInsulin.png)
 
-### **IOB negative**
+### IOB negative
 
 - Default basal too strong
 - May be the effect from past exercise/physical activity
@@ -77,9 +77,9 @@ If you observe the following patterns after a few days, consider the following c
 
 ![Negative IOB](../images/troubleshooting/profiletuning/NegativeInsulin2.png)
 
-## **BG Target Observations**
+## BG Target Observations
 
-### **Stuck High**
+### Stuck High
 
 - __ISF__ ‘s number is high and not strong enough (calculated insulin is too weak)
 
@@ -89,20 +89,20 @@ If you observe the following patterns after a few days, consider the following c
 - A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the [SMB](#Open-APS-features-super-micro-bolus-smb) tab.
 - Technical issue: site absorption, infusion set, ...
 
-### **Stuck Low**
+### Stuck Low
 
 - __ISF__ too strong and the number needs to be raised higher
 - __Profile__ basal too strong (if also negative IOB)
 
-### **Rollercoaster (ups and downs)**
+### Rollercoaster (ups and downs)
 
 - **ISF** too strong? See your [AAPS Profile](#your-aaps-profile-insulin-sensitivity-factor)
 
 ![Rollercoaster](../images/troubleshooting/profiletuning/StrongISF.png)
 
-## **BG After Meals Observations**
+## BG After Meals Observations
 
-### **Fast rise and BG going high**
+### Fast rise and BG going high
 
 - Food contains fast carbs
 - Consider doing a pre-bolus
@@ -110,14 +110,14 @@ If you observe the following patterns after a few days, consider the following c
 
 ![Rise High](../images/troubleshooting/profiletuning/FastRise.png)
 
-### **Fast rise and then BG going low**
+### Fast rise and then BG going low
 
 - Consider doing a pre-bolus, profile might be too aggressive (over correction of the raise)
 - Bolus too strong
 
 
 
-## **[How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)**
+## [How to calculate your I:C](#your-aaps-profile-insulin-to-carbs-ratio)
 
 1. First, you need the correct default basal settings in your **Profile**.
 2. Start on target, better without negative IOB.
@@ -127,7 +127,7 @@ If you observe the following patterns after a few days, consider the following c
 5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your profile settings.
 6. If __BG__ is in target, you'll have the total insulin used to “digest” your carbs. Calculate your **I:C**.
 
-### **Explanations for the I:C calculations**
+### Explanations for the I:C calculations
 
 - With a **Profile** that has the correct default basal rate, during any time frame, you should stay on target and have an IOB near 0. You get your **Profile** basal only.
 - You add carbs and bolus to this mix. Wait till your body digests all the carbs and be back on **BG** target. Your insulin usage will be the sum of your basal + the insulin needed for the carbs. You calculate the insulin used for your basal (by using your **Profile**) and the surplus will be the insulin used to digest the carbs.

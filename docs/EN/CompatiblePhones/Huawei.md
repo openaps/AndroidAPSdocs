@@ -1,5 +1,8 @@
 # How-to configure a Huawei phone
 
+| 🕸 This page is obsolete - consider revision or remove it 🕸 |
+| ---------------------------------------------------------- |
+
 There are different options, some Android specific, some Huawei specific:
 
 * Add AAPS and xdrip+ to apps list which ignore battery optimisations:
@@ -15,7 +18,7 @@ There are different options, some Android specific, some Huawei specific:
      * Automatic launch
      * Secondary launch (can be launched from other apps)
      * Background run
-          
+       
        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
   
 * Lock App
@@ -28,7 +31,7 @@ There are different options, some Android specific, some Huawei specific:
 For xDrip+, you must enable persistent notifications (within xDrip+ app):
 * Settings / less common settings / other misc options / Run Collector in foreground
 
-   ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
+   ![xdrip+ settings - collector in foreground](../images/xDrip+/xdrip_collector_foreground.png)
 
 
 Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
