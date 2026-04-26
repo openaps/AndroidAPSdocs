@@ -1,6 +1,8 @@
 # Insulin Concentration
 
-<font color="#FF0000">**Attention:**</font>All commercial pumps are designed to be used with Insulin U100 **ONLY**. Using other insulin concentration within a pump can be dangerous. Even if more and more users use AAPS with other insulin concentration, convertion must always be managed and often lead to errors (even with very skilled users!).
+```{warning}
+All commercial pumps are designed to be used with Insulin U100 **ONLY**. Using other insulin concentration within a pump can be dangerous. Even if more and more users use AAPS with other insulin concentration, convertion must always be managed and often lead to errors (even with very skilled users!).
+```
 
 ## Reminder of the basics of Insulin 
 
@@ -22,22 +24,28 @@ Insulin comes in different strengths, defined by the number of units per millili
 - **U40:** Less common, historical concentrations (40 IU/ml & 50 IU/ml). **U40 requires U40-specific syringes.**
 - **Manual Dilution:** A clinical practice to create highly diluted insulin (e.g., U50, U10) for rare cases like neonatal use or extreme sensitivity. This requires meticulous pharmacy preparation.
 
-**⚠️ Critical Warning:** Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
+```{admonition} Critical Warning
+:class: danger
+Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
+```
 
 ## When using non standard concentration?
 
 While insulin pumps are designed for U100 insulin, certain specific medical situations necessitate the use of non-standard concentrations. These scenarios require extreme caution and meticulous management.
 
-#### **Use Case 1: Diluted Insulin for Very Low Doses**
+### **Use Case 1: Diluted Insulin for Very Low Doses**
 
 - **Scenario:** Managing type 1 diabetes in very young babies and toddlers.
 - **Problem:** Their insulin needs are so low that the pump's minimum deliverable dose (e.g., 0.05 U) may still be too large, leading to difficulty in achieving precise glycemic control and a high risk of hypoglycemia.
 - **Solution:** Using highly diluted insulin (e.g., U10, which is 10 IU/ml).
 - **Effect:** This increases the volume of fluid delivered per unit of insulin. By making the "packages" of insulin larger in volume but weaker in concentration, it allows for much finer adjustments and greater dosing accuracy with the pump's existing settings.
 
-**⚠️ Critical Safety Note on Dilution:** Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
+```{admonition} Critical Safety Note on Dilution
+:class: danger
+Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
+```
 
-#### **Use Case 2: Concentrated Insulin for High Needs or Sensitivity**
+### **Use Case 2: Concentrated Insulin for High Needs or Sensitivity**
 
 - **Scenario:** Managing adults or adolescents with significant insulin resistance, or individuals who experience localized pain from the additives in standard insulin.
 - **Problem:**
@@ -65,7 +73,8 @@ This method involves tricking AAPS into thinking the patient's insulin needs are
 - **The Corrected Result:**
    AAPS now believes the patient only needs half the insulin. When it calculates and commands a **1-Unit** bolus, the pump (designed for U100 but filled with U200) delivers the **10 µL**, which contains **2 real units of U200 insulin**. Because AAPS calculated this dose based on a "half-strength" profile, this **2 real-unit** delivery is the correct, intended dose. The loop's "half-strength" math aligns with the pump's "double-strength" delivery.
 
-#### ⚠️ Critical Risks and Common Errors
+```{admonition} Critical Risks and Common Errors
+:class: caution
 
 This method introduces significant risks by creating a persistent disconnect between the app's data and physical reality.
 
@@ -77,6 +86,8 @@ The most common mistake occurs when delivering and logging insulin **outside** o
 - **The Dual Error:**
   1. **Wrong Dose Selection:** The user thinks "AAPS calculate 5 units" and think because of Pen U200 he can deliver **5 real units of U200** with the pen without any convertion. However, because the profile is halved, the body actually needs **10 real units**. This is a **50% underdose**, which can lead to hyperglycemia.
   2. **Wrong IOB Calculation (Overestimated IOB):** Then the user records this external bolus in AAPS, they log **5 units**. This is incorrect. Since the AAPS profile is for U200, **1 unit in AAPS equals 2 real units**. Therefore, the 5 real units delivered by the pen should be logged as **2.5 units** in the app. By logging 5 units, the user is **overestimating the IOB by 100%**. AAPS now thinks there are 5 "concentrated units" on board (equivalent to 10 real units) when only 5 real units are active. This can cause the loop to suppress basal insulin or reduce future boluses, worsening the hyperglycemia risks from the initial underdose.
+
+```
 
 **Other Risks:**
 
@@ -113,7 +124,10 @@ The core principle is a clear separation between the app's logic and the pump's 
 - **Manual Pump Bolus:** Using the pump's own bolus function (bypassing AAPS) will result in a 100% overdose, as the pump delivers U200 insulin using U100 volume calculations.
 - **General Warning:** Using non-standard concentrations remains an advanced procedure with risks and is not officially recommended.
 
-##### ⚠️ Critical Risks: Never use Pump User Interface (tube pump users) to deliver a bolus manually. Advice is to stick a permanent not on your pump "U200 Insulin" as a reminder to never forget it!
+```{admonition} Never use Pump User Interface (tube pump users) to deliver a bolus manually
+:class: danger
+Stick a permanent note on your pump **"U200 Insulin"** as a reminder, to never forget it!
+```
 
 ### **User Interface Display**
 
