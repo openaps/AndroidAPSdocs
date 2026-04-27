@@ -70,7 +70,7 @@ You have now synchronized (updated) your own copy with the latest release of And
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master, select the AAPS Version you want to build — either the latest version or a specific required version — choose the [variant](variant) (fullRelease), and then tap Run workflow.
+5. Keep the branch set to master, select the AAPS Version you want to build — either the latest version or a specific required version — choose the variant (fullRelease), and then tap Run workflow.
 
 
 

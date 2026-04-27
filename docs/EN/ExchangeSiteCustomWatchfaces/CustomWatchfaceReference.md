@@ -937,11 +937,11 @@ If you use a zip "v2" with a watch that includes CustomWachface V1, you will hav
 
 CustomWatchface V2 includes these new features:
 
-- [New Status view](cwf-reference-new-status-feature)
-- [New TempTarget view](cwf-reference-new-temp-target-feature)
-- [New Reservoir Level view](cwf-reference-new-reservoir-level-feature)
-- [New Formatting Feature](cwf-reference-new-formating-feature)
-- [Show External data for Follower](cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
+- [New Status view](#cwf-reference-new-status-feature)
+- [New TempTarget view](#cwf-reference-new-temp-target-feature)
+- [New Reservoir Level view](#cwf-reference-new-reservoir-level-feature)
+- [New Formatting Feature](#cwf-reference-new-formating-feature)
+- [Show External data for Follower](#cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
 
 (cwf-reference-new-status-feature)=
 
@@ -983,7 +983,7 @@ DynData value equals:
 - 1 (Loop Target) or 
 - 2 (User Temp Target)
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
 
 (cwf-reference-new-reservoir-level-feature)=
 
@@ -1005,7 +1005,7 @@ The DynData Keys associated with Reservoir Level are:
   - 1 (Warning Level, Yellow color by default)
   - 2 (Urgent Level, Red color by default)
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
 
 (cwf-reference-new-formating-feature)=
 
@@ -1161,7 +1161,7 @@ To use this feature, you need to:
 
 - have at least 2 of the 3 following apps installed in phone (AAPS, AAPSCLIENT, AAPSCLIENT2)
 - enable Broadcast data in AAPSCLIENT and/or AAPSCLIENT2 to broadcast data to the main app used to sync with CustomWatchface (AAPS or AAPSCLIENT)
-- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](cwf-reference-key-and-keyvalue-reference) below)
+- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](#cwf-reference-key-and-keyvalue-reference) below)
 
 Note that if main app in phone is AAPSCLIENT and secondary app which broadcast data is AAPSCLIENT2, you will have to enable `Switch external data in watchface` parameter within Custom Watchface dedicated parameter if you use a watchface which use standard views and Ext1 additional views (Ext1 is linked to AAPSCLIENT and Ext2 is linked to AAPSCLIENT2)
 

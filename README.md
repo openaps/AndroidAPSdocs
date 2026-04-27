@@ -15,3 +15,12 @@ The current build logs of the documentation can be found in [Github Actions](htt
 ### Broken links
 
 Detail of broken links in the doc can be found in the build logs. Select a build in Github Action "Deploy", then "Usage". Click on "build" and expand again the "Build line". Search for "WARNING".
+
+## Local Compile Checks
+
+Use the local validation/build helper before or during local compile (from AndroidAPS root):
+
+```console
+python utils/qualitycheck.py --lang EN
+```
+

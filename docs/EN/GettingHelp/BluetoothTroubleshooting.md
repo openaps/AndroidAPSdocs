@@ -21,7 +21,7 @@ Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medt
 
 Newer versions of Android have enable Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard) and followed the configuration settings in the [Bluetooth Battery Optimisation](setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide its possible you have not changed this setting.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide its possible you have not changed this setting.
 
 Verify this is correctly configured if you have pump an CGM disconnections.
 

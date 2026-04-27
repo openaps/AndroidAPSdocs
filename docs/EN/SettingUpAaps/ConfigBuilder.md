@@ -128,6 +128,8 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
   * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   * for pump which doesn't have any driver yet
 
+(config-builder-sensitivity-detection)=
+
 ## Sensitivity Detection
 Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).  
 

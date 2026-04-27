@@ -63,4 +63,4 @@ Available from 3.3.2.1.dev
     - This commit only exists when the PR has no conflicts and is mergeable.
 
   - variant:
-    - Please refer to [variant](variant)
+    - Please refer to [variant](#browserbuildcis-variant)

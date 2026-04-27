@@ -142,7 +142,7 @@ One of the most important things when installing Android Studio is **be patient!
 
 ```{admonition} Different UI
 :class: warning
-Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](NewUI).
+Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computer-build-new-ui).
 ```
 
 The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
@@ -261,7 +261,7 @@ Only for Windows users: If your firewall asks for permission, grant access:
 
 After the repository is cloned successfully, Android Studio will open the cloned project. 
 
-(NewUI)=
+(computer-build-new-ui)=
 ```{admonition} New UI
 :class: information
 Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!

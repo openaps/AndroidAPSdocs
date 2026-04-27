@@ -10,7 +10,9 @@
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Select the branch you want to deploy (master), the [variant](variant) (fullRelease) and tap Run Workflow.
+(browserbuildcis-variant)=
+
+5. Select the branch you want to deploy (master), the variant (fullRelease) and tap Run Workflow.
 
 
 
