@@ -712,7 +712,7 @@ Usage of `dynPref`keys will be very close to `dynData`keys explained in previous
 
 Now we will take a look at the end of the json file, after `dynData` block:
 
-```json
+```text
 "dynData": {
     ...
 },
@@ -800,7 +800,7 @@ The difference between this dynPref block and the other standard dynPref blocks 
 
 Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view:
 
-```json
+```text
 "basalRate": {
     "width": 90,
     "height": 32,
@@ -844,7 +844,7 @@ Note that here you are within a "dynData" block, then to define a color or a fon
 
 Then we will see a third example with iob views (`iob1` and `iob2`), where we will use smaller text for detailed iob and bigger text for total iob:
 
-```json
+```text
 "iob1": {
     "width": 125,
     "height": 33,
