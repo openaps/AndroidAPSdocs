@@ -330,27 +330,27 @@ Principala utilizare a acestei funcții este atunci când dispozitivul dumneavoa
 
    > ![RileyLink_Bluetooth_Reset_5](../images/omnipod/RileyLink_Bluetooth_Reset_5.png)
 
-#### Pod Communication Device and Active Pod Settings
+#### Setări ale dispozitivului de comunicare cu pompă și ale pompei active
 
-This screen will provide information, status, and settings configuration information for both the currently configured pod communication device and the currently active Omnipod Eros pod.
+Acest ecran va furniza informații, stare și setări de configurare pentru dispozitivul de comunicare cu pompa configurat în prezent și pompa Omnipod Eros activă.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
+1. Mergeți la fila **Omnipod (pompă)** și apăsați butonul **Gestionare pompă (1)** pentru a accesa meniul **Gestionare pompă**, apoi apăsați butonul **Statistici RileyLink (2)** pentru a vedea setările dispozitivului **RileyLink (3)** configurat și setările **pompei active (4)**.
 
    > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png)
    > 
    > ![RileyLink_Statistics_Settings_3](../images/omnipod/RileyLink_Statistics_Settings_3.png)
 
-##### RileyLink (3) fields
+##### câmpuri RileyLink (3)
 
-> - **Address:** MAC address of the selected pod communication device defined in the Omnipod Settings.
-> - **Name:** Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
-> - **Battery Level:** Displays the current battery level of the connected pod communication device
-> - **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
-> - **Connection Status**: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
-> - **Connection Error:** If there is an error with the pod communication device Bluetooth connection details will be displayed here.
-> - **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
+> - **Adresă:** Adresa MAC a dispozitivului selectat de comunicare cu pompa definit în Setările Omnipod.
+> - **Nume:** numele de identificare Bluetooth al dispozitivului selectat de comunicare cu pompa definit în setările Bluetooth ale telefonului.
+> - **Nivelul bateriei:** Afișați nivelul bateriei curente a dispozitivului de comunicare cu pompa care este conectat
+> - **Dispozitiv conectat:** Modelul pompei Omnipod ce comunică în prezent cu dispozitivul de comunicare cu pompa
+> - **Stare conexiune**: Starea curentă a legăturii Bluetooth între dispozitivul de comunicare cu pompa și telefonul pe care rulează AAPS.
+> - **Eroare de conexiune:** Dacă există vreo eroare în legătura Bluetooth a dispozitivului de comunicare cu pompa detaliile vor fi afișate aici.
+> - **Versiunea de firmware:** Versiunea curentă de firmware instalată pe dispozitivul de comunicare cu pompa conectat în prezent.
 
-##### Device (4) fields - With an Active Pod
+##### Câmpuri dispozitiv (4) - Cu o pompă activă
 
 > - **Device Type:** The type of device communicating with the pod communication device (Omnipod pod pump)
 > - **Device Model:** The model of the active device connected to the pod communication device (the current model name of the Omnipod pod, which is Eros)
@@ -361,9 +361,9 @@ This screen will provide information, status, and settings configuration informa
 > - **Refresh button** manually refresh the settings on this page.
 
 (omnipod-eros-rileylink-and-active-pod-history)=
-#### RileyLink and Active Pod History
+#### RileyLink și istoricul pompei active
 
-This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
+Acest ecran furnizează informații în ordinea cronologică inversă a fiecărei stări sau acțiuni pe care RileyLink sau pompa conectată în prezent se află sau pe care a întreprins-o. Întregul istoric este disponibil doar pentru pompa activă, după o schimbare de pompă acest istoric va fi șters și doar evenimentele din noua pompă activată vor fi înregistrate și afișate.
 
 1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
 
@@ -379,11 +379,11 @@ This screen provides information in reverse chronological order of each state or
 
 (OmnipodEros-omnipod-pod-tab)=
 
-## Omnipod (POD) Tab
+## fila Omnipod (POD)
 
 Below is an explanation of the layout and meaning of the icons and status fields on the **Omnipod (POD)** tab in the main AAPS interface.
 
-*NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.*
+*NOTĂ: Dacă vreun mesaj din câmpurile de stare ale filei Omnipod (POD) raportează (incert), atunci va trebui să apăsați butonul Reîmprospătați pentru a șterge mesajul și a actualiza starea pompei.*
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
@@ -422,24 +422,24 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 - **Rata bazalei temporare:** Afișați rata bazală temporară care rulează în prezent în următorul format
 
-- Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
+- Unități / oră @ ora la care a fost emisă RBT (minute rulate / total minute pentru care RBT va fi rulată)
 - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
 
-- **Rezervor:** Afișați peste 50+U rămase atunci când mai mult de 50 de unități au rămas în rezervor. Below this value the exact units are displayed in yellow text.
+- **Rezervor:** Afișați peste 50+U rămase atunci când mai mult de 50 de unități au rămas în rezervor. Sub această valoare, unitățile exacte sunt afișate în text galben.
 
 - **Total livrat:** Afișați numărul total de unități de insulină livrate din rezervor. *Note this is an approximation as priming and filling the pod is not an exact process.*
 
 - **Eroare:** Afișați ultima eroare întâlnită. Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
-- **Alerte active de pompă:** Rezervat pentru rularea alertelor pe pompa activă. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+- **Alerte active de pompă:** Rezervat pentru rularea alertelor pe pompa activă. Folosit în mod normal atunci când expirarea pompei a trecut de 72 de ore și sunt rulate alerte sonore native.
 
-### Icons
+### Pictograme
 
 - **REFRESH:**
 
   > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
   > 
-  > Sends a refresh command to the active pod to update communication
+  > Trimite o comandă de reîmprospătare către pompa activă pentru a actualiza comunicarea
   > 
   > Folosiți pentru a reîmprospăta starea pompei și a închide câmpurile de stare care conțin textul (incert).
   > 
@@ -449,7 +449,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
   > ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png)
   > 
-  > Navigates to the Pod management menu
+  > Navigare la meniul de administrare a pompei
 
 - **ACK ALERTS:**
 
@@ -582,10 +582,10 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 - **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
 
-- DOES NOT work with the original RileyLink.
-- May not work with RileyLink alternatives.
-- Enabled - Reports the current battery level for supported pod communication devices.
-- Disabled - Reports a value of n/a.
+- NU funcționează cu dispozitivul RileyLink original.
+- Este posibil să nu funcționeze cu dispozitivele alternative RileyLink.
+- Activat - Raportează nivelul bateriei curente pentru dispozitivele acceptate de comunicare cu pompa.
+- Dezactivat - Raportează o valoare de n/a.
 
 - **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
