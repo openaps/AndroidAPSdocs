@@ -8,7 +8,7 @@ There are different options, some Android specific, some Huawei specific:
 * Add AAPS and xdrip+ to apps list which ignore battery optimisations:
   * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
   
-    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+    ![Huawei - ignore battery optimization](../images/phone/Huawei_BatteryOptimization.png)
 
 
 * Set battery option settings:
@@ -19,19 +19,19 @@ There are different options, some Android specific, some Huawei specific:
      * Secondary launch (can be launched from other apps)
      * Background run
        
-       ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+       ![Huawei - battery options](../images/phone/Huawei_BatteryOptions.png)
   
 * Lock App
   * Go into App recent list and select the lock icon
   
-    ![Huawei - lock app](../images/Huawei_LockApp.png)
+    ![Huawei - lock app](../images/phone/Huawei_LockApp.png)
   
   
 
 For xDrip+, you must enable persistent notifications (within xDrip+ app):
 * Settings / less common settings / other misc options / Run Collector in foreground
 
-   ![xdrip+ settings - collector in foreground](../images/xDrip+/xdrip_collector_foreground.png)
+   ![xdrip+ settings - collector in foreground](../images/cgm/xDrip+/xdrip_collector_foreground.png)
 
 
 Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.

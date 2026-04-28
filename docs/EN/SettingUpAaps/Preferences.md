@@ -2,19 +2,19 @@
 
 - **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
-![Open preferences](../images/Pref2020_Open2.png)
+![Open preferences](../images/Preferences/Pref2020_Open2.png)
 
 - You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+![Open plugin preferences](../images/Preferences/Pref2020_OpenPlugin2.png)
 
 - **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
-![Open submenu](../images/Pref2020_Submenu2.png)
+![Open submenu](../images/Preferences/Pref2020_Submenu2.png)
 
 - With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
 
-![Preferences filter](../images/Pref2021_Filter.png)
+![Preferences filter](../images/Preferences/Pref2021_Filter.png)
 
 ```{contents}
 :backlinks: entry
@@ -24,7 +24,7 @@
 (Preferences-general)=
 ## General
 
-![Preferences > General](../images/Pref2020_General.png)
+![Preferences > General](../images/Preferences/Pref2020_General.png)
 
 **Units**
 
@@ -56,7 +56,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 You can choose from four types of skins:
 
-![Select skin](../images/Pref2021_SkinWExample.png)
+![Select skin](../images/Preferences/Pref2021_SkinWExample.png)
 
 'Low resolution skin' comes with shorter labels and age/level removed to have more available space on a very low resolution screen.
 
@@ -78,7 +78,7 @@ Difference between the other skins depends on the phone's display orientation:
 (Preferences-protection)=
 ## Protection
 
-![Preferences > General - Protection](../images/Pref2020_General2.png)
+![Preferences > General - Protection](../images/Preferences/Pref2020_General2.png)
 
 (Preferences-master-password)=
 ### Master password
@@ -97,7 +97,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
 
-![Protection](../images/Pref2020_Protection.png)
+![Protection](../images/Preferences/Pref2020_Protection.png)
 
 ### Application protection
 
@@ -111,7 +111,7 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 - In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
 
-![Prompt biometric protection](../images/Pref2020_PW.png)
+![Prompt biometric protection](../images/Preferences/Pref2020_PW.png)
 
 ### Password and PIN retention
 
@@ -121,7 +121,7 @@ Define how long (in seconds), the preferences or bolus functionalities remain un
 
 In the **Overview** section, you can define the preferences for the home screen.
 
-![Preferences > Overview](../images/Pref2020_OverviewII.png)
+![Preferences > Overview](../images/Preferences/Pref2020_OverviewII.png)
 
 ### Keep screen on
 
@@ -133,13 +133,13 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 - Define which buttons are visible on the bottom of your home screen. 
 - Setting hidden in [simple mode](#preferences-simple-mode).
 
-![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
+![Preferences > Buttons](../images/Preferences/Pref2020_OV_Buttons.png)
 
 - The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogues, for easy entry.
 
-![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
+![Preferences > Buttons > Insulin](../images/Preferences/Pref2020_OV_Buttons2.png)
 
-![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
+![Preferences > Buttons > Carbs](../images/Preferences/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
 ### Quick Wizard
@@ -149,13 +149,13 @@ Create customized buttons for certain standard meals or snacks which will be dis
 For each button, you define the carbs and calculation method for the bolus.
 Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
-![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
+![Preferences > Quick Wizard Button Setup](../images/Preferences/Pref2020_OV_QuickWizard.png)
 
 If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
 The proposal has to be confirmed before insulin is delivered.
 
-![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
+![Preferences > Quick Wizard Button](../images/Preferences/Pref2020_OV_QuickWizard2.png)
 
 Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
 
@@ -172,7 +172,7 @@ Here you can change the target and the duration for each predefined TT. Preset v
 * Activity: target 140 mg/dL / 7.8 mmol/l, duration 90 min
 * Hypo: target 125 mg/dL / 6.9 mmol/l, duration 45 min
 
-![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
+![Preferences > Default temp targets](../images/Preferences/Pref2020_OV_DefaultTT.png)
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
@@ -189,7 +189,7 @@ Pre-set values can be defined in this dialogue. Choose the default amounts of th
 
 Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
-![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
+![Preferences > Range for visualization](../images/Preferences/Pref2020_OV_Range2.png)
 
 ### Shorten tab titles
 
@@ -199,7 +199,7 @@ Useful to see more tab titles on screen.
 
 For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
 
-![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
+![Preferences > Tabs](../images/Preferences/Pref2020_OV_Tabs.png)
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
 ### Show notes field in treatments dialogs
@@ -208,7 +208,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
 
-![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
+![Preferences > Notes in treatment dialogs](../images/Preferences/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### Status lights
@@ -229,7 +229,7 @@ If the warning threshold is exceeded, values will be shown in yellow. If the cri
 
 The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
 
-![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
+![Preferences > Status Lights](../images/Preferences/Pref2020_OV_StatusLights2.png)
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
 ### Deliver this part of bolus wizard result
@@ -265,7 +265,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 (Preferences-advanced-settings-overview)=
 ### Advanced Settings (Overview)
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
+![Preferences > Advanced Settings](../images/Preferences/Pref2021_OV_Adv.png)
 
 #### Superbolus
 
@@ -348,7 +348,7 @@ Standard value for AMA is 5, for SMB it's 8.
 
 The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
-![COB graph](../images/Pref2020_min_5m_carbimpact.png)
+![COB graph](../images/Preferences/Pref2020_min_5m_carbimpact.png)
 
 ### Meal max absorption time
 
@@ -356,7 +356,7 @@ If you often eat high fat or protein meals you will need to increase your meal a
 
 ### Advanced settings - autosens ratio
 
-![Absorption settings](../images/Pref2020_Absorption.png)
+![Absorption settings](../images/Preferences/Pref2020_Absorption.png)
 
 - Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
@@ -378,7 +378,7 @@ More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 (Preferences-nsclient)=
 ## NSClient
 
-![NSClient](../images/Pref2020_NSClient.png)
+![NSClient](../images/Preferences/Pref2020_NSClient.png)
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -390,7 +390,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-![NSClientV3](../images/Pref2024_NSClientV3.png)
+![NSClientV3](../images/Preferences/Pref2024_NSClientV3.png)
 
 [New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
 
@@ -410,7 +410,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 (Preferences-nsclient-synchronization)=
 ### Synchronization
 
-![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
+![Synchronization options](../images/Preferences/Pref2025_NSclient_Synchronization.png)
 
 Synchronization choices will depend on the way you will want to use **AAPS**.
 
@@ -418,7 +418,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Alarm options
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+![Alarm options](../images/Preferences/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -429,7 +429,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Connection settings
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+![NSClient connection settings](../images/Configuration-Builder/ConfBuild_ConnectionSettings.png)
 
 - Connection settings define when Nightscout connection will be enabled.
 - Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
@@ -440,7 +440,7 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClient)
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
+![NS Client advanced settings](../images/Preferences/Pref2024_NSClientAdv.png)
 
 Options in advanced settings are self-explanatory.
 
@@ -458,20 +458,20 @@ Select which location service shall be used:
 
 ## Local alerts
 
-![Local alerts](../images/Pref2020_LocalAlerts.png)
+![Local alerts](../images/Preferences/Pref2020_LocalAlerts.png)
 
 Settings should be self-explanatory.
 
 (preferences-maintenance-settings)=
 ## Maintenance settings
 
-![Maintenance settings](../images/Pref2020_Maintenance.png)
+![Maintenance settings](../images/Preferences/Pref2020_Maintenance.png)
 
 **Email recipient**: Standard recipient of logs is <mailto:logs@aaps.app>.
 
 **Data Choices**
 
-![Data choices](../images/Pref2020_DataChoice.png)
+![Data choices](../images/Preferences/Pref2020_DataChoice.png)
 
 You can help develop **AAPS** further by sending crash reports to the developers.
 
@@ -497,7 +497,7 @@ If you need to send the logs to the developers, make sure you file accurately th
 
 You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
 
-![Log files options](../images/Pref2020_Maintenance_Logs.png)
+![Log files options](../images/Preferences/Pref2020_Maintenance_Logs.png)
 
 (preferences-maintenance-logdirectory)=
 
@@ -505,15 +505,15 @@ You can find AAPS logs in your phone memory -> Android -> data -> info.nightscou
 
 Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
 
-![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
+![Pref2020_Maintenance_Directory.png](../images/Preferences/Pref2020_Maintenance_Directory.png)
 
 It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
 
-![Local directory location](../images/preferences/maintenance_settings_directory.png)
+![Local directory location](../images/Preferences/maintenance_settings_directory.png)
 
 If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
 
-![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+![Local directory location](../images/Preferences/maintenance_settings_wrongdirectory.png)
 
 (preferences-maintenance-cloud)=
 
@@ -525,15 +525,15 @@ You can export your settings, logs and CSV data to a cloud service.
 2. Select your cloud service
 3. Enable cloud export
 
-![Cloud directory](../images/preferences/maintenance_settings_cloud.png)
+![Cloud directory](../images/Preferences/maintenance_settings_cloud.png)
 
 You can then define what data will be uploaded to the cloud.
 
-![Cloud directory data](../images/preferences/maintenance_settings_clouddata.png)
+![Cloud directory data](../images/Preferences/maintenance_settings_clouddata.png)
 
 You can disable cloud export.
 
-![Cloud directory disable](../images/preferences/maintenance_settings_cloudoff.png)
+![Cloud directory disable](../images/Preferences/maintenance_settings_cloudoff.png)
 
 ## Open Humans
 

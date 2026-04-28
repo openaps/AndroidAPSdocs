@@ -6,7 +6,7 @@
 * Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
 * Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys. 
 
-![Keylock](../images/combo/combo-tips-keylock.png)
+![Keylock](../images/pump/combo/combo-tips-keylock.png)
 
 ## Pump not reachable. What to do?
 
@@ -24,11 +24,11 @@
 ### Root causes and consequences of frequent communication errors
 * On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AAPS last communicated with the pump.
 
-![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
+![Pump unreachable](../images/pump/combo/combo-tips-pump-unreachable.png)
 
-![No connection to pump (as shown in the old driver's tab)](../images/combo/combo-tips-no-connection-to-pump.png)
+![No connection to pump (as shown in the old driver's tab)](../images/pump/combo/combo-tips-no-connection-to-pump.png)
 
-![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
+![No connection to pump (as shown in the new driver's tab)](../images/pump/combo/combov2-tips-no-connection-to-pump.png)
 
 * This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
 * It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 
@@ -44,7 +44,7 @@
 * Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
 * Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
 
-![Bluetooth enabled](../images/combo/combo-tips-compo.png)
+![Bluetooth enabled](../images/pump/combo/combo-tips-compo.png)
 
 * Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
 * When using the old driver, if the clock on the pump did not survive the battery change, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (The new driver automatically updates the pump's date and time.)
@@ -55,8 +55,8 @@
 ### Battery type and causes of short battery life
 * As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
 
-![Energizer](../images/combo/combo-tips-energizer.jpg)
-![OnePower](../images/combo/combo-tips-power-one.png)
+![Energizer](../images/pump/combo/combo-tips-energizer.jpg)
+![OnePower](../images/pump/combo/combo-tips-power-one.png)
 
 Ranges for typical life time of the different battery types are as follows:
 * **Energizer Ultimate Lithium**: 4 to 7 weeks
@@ -76,14 +76,14 @@ The OpenAPS algorithm does not support a parallel extended bolus or multiwave bo
 
 * If you are tempted to just use the extended or multiwave bolus directly on the pump, AAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
-![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
+![Disabled loop after multiwave bolus](../images/pump/combo/combo-tips-multiwave-bolus.png)
 
 ## Alarms at bolus delivery
 * If AAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If your really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Here indistinguishable entries must be prevented.
 
-![Double bolus](../images/combo/combo-tips-doppelbolus.png)
+![Double bolus](../images/pump/combo/combo-tips-doppelbolus.png)
 
 * This mechanism is also responsible for a second cause of the error: If during the use of the bolus calculator another bolus is delivered via the pump and thereby the bolus history changes, the basis of the bolus calculation is wrong and the bolus is aborted. 
 
-![Canceled bolus](../images/combo/combo-tips-history-changed.png)
+![Canceled bolus](../images/pump/combo/combo-tips-history-changed.png)

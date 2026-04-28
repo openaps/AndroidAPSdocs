@@ -91,7 +91,7 @@ Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
 
 - Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
 
-![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+![Preferences > Use default temp targets](../images/Preferences/Pref2020_OV_DefaultTT2.png)
 
 ## Where can I change the default Temp-Target and override with my own preferences?
 

@@ -30,7 +30,7 @@ To avoid this there are two possibilities:
    * Select '**Profile Switch**'
    * Set 'Time shift' according to your destination.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Profile switch with time shift](../images/Profile/ProfileSwitchTimeShift2.png)
 
    * i.e. Vienna -> New York: **Profile Switch** +6 hours
    * i.e. Vienna -> Sydney: **Profile Switch** -8 hours

@@ -5,7 +5,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * In the pump go to Main Menu > Setting > User Option
 * Turn on "8. Extended Bolus"
 
-![DanaR pump](../images/danar1.png)
+![DanaR pump](../images/pump/dana/danar1.png)
 
 * Go to Main Menu > Setting > Discovery
 * In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is  0000).  If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.

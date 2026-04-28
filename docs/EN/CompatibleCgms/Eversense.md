@@ -14,7 +14,7 @@ Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/ap
 - **Disable** "Send to Nightscout"
 - As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
 
-![ESEL Broadcast](../images/ESEL.png)
+![ESEL Broadcast](../images/cgm/eversense/ESEL.png)
 
 ### Companion Mode
 
@@ -45,7 +45,7 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 
    
 
-![ESEL Broadcast](../images/ESELpatch.png)
+![ESEL Broadcast](../images/cgm/eversense/ESELpatch.png)
 
 ​		If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
 

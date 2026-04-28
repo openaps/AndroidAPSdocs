@@ -57,7 +57,7 @@ If you are installing AAPS for the first time, the **Setup Wizard** will guide y
 
 If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
 
-![Setup Wizard](../images/medtrum/SetupWizard.png)
+![Setup Wizard](../images/pump/medtrum/SetupWizard.png)
 
 #### Option 2: The Config Builder
 
@@ -67,13 +67,13 @@ On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ *
 
 Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
 
-![Config Builder](../images/medtrum/ConfigBuilder.png)
+![Config Builder](../images/pump/medtrum/ConfigBuilder.png)
 
 ### Step 2: Change Medtrum settings
 
 Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
 
-![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
+![Medtrum Settings](../images/pump/medtrum/MedtrumSettings.png)
 
 #### Serial Number:
 
@@ -153,7 +153,7 @@ Go to preferences
 
 Go to preferences and select **Pump**:
 
-![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
+![BT Watchdog](../images/pump/medtrum/BTWatchdogSetting.png)
 
 ##### BT Watchdog
 
@@ -165,7 +165,7 @@ Enable this setting if you experience frequent connection issues with your pump.
 
 Go to preferences and select **Local Alerts**:
 
-![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
+![Local Alerts](../images/pump/medtrum/LocalAlertsSettings.png)
 
 ##### Alert if pump is unreachable
 
@@ -200,7 +200,7 @@ Follow the prompts to fill and activate a new patch. Please note - it is importa
 
 ##### Start Activation
 
-![Start Activation](../images/medtrum/activation/StartActivation.png)
+![Start Activation](../images/pump/medtrum/activation/StartActivation.png)
 
 At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
 
@@ -208,27 +208,27 @@ Press **Next** to continue.
 
 ##### Fill the patch
 
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
+![Fill the patch](../images/pump/medtrum/activation/FillPatch.png)
 
 Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
 
 ##### Prime the patch
 
-![Half press](../images/medtrum/activation/HalfPress.png)
+![Half press](../images/pump/medtrum/activation/HalfPress.png)
 
 Do not remove the safety lock and press the needle button on the patch.
 
 Press **Next** to start prime
 
-![Prime progress](../images/medtrum/activation/PrimeProgress.png)
+![Prime progress](../images/pump/medtrum/activation/PrimeProgress.png)
 
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
+![Prime complete](../images/pump/medtrum/activation/PrimeComplete.png)
 
 Once the prime is complete, press **Next** to continue.
 
 ##### Attach Patch
 
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
+![Attach patch](../images/pump/medtrum/activation/AttachPatch.png)
 
 Clean the skin, remove stickers and attach the patch to your body. 
 Remove safety lock and press the needle button on the patch to insert the cannula.
@@ -238,11 +238,11 @@ Press **Next** to activate the patch.
 (medtrum-activate-patch)=
 ##### Activate Patch
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+![Activate patch](../images/pump/medtrum/activation/ActivatePatch.png)
 
 When activation is complete, the following screen will appear
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+![Activation complete](../images/pump/medtrum/activation/ActivationComplete.png)
 
 Press **OK** to return to main screen.
 
@@ -252,15 +252,15 @@ Press **OK** to return to main screen.
 
 To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Deactivate patch](../images/pump/medtrum/activation/DeactivatePatch.png)
 
 You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Deactivate progress](../images/pump/medtrum/activation/DeactivateProgress.png)
 
 If Android APS in unable to deactivate the patch (For instance because the pumpbase has already been removed from the reservoir patch), you may press **Discard** to forget the current patch session and make it possible to activate a new patch.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Deactivate complete](../images/pump/medtrum/activation/DeactivateComplete.png)
 
 Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
 
@@ -270,11 +270,11 @@ Once deactivation is complete, press **OK** to return to main screen or press **
 
 If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Resume interrupted activation](../images/pump/medtrum/activation/ActivationInProgress.png)
 
 Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Reading activation status](../images/pump/medtrum/activation/ReadingActivationStatus.png)
 
 The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
 
@@ -284,7 +284,7 @@ The driver will try to determine the current status of the patch activation. If 
 
 The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
 
-![Medtrum Overview](../images/medtrum/Overview.png)
+![Medtrum Overview](../images/pump/medtrum/Overview.png)
 
 ### BLE Status:
 
@@ -359,7 +359,7 @@ This button will start the process to change the patch. See [Activate patch](#me
 
 The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
 
-![Reset alarms](../images/medtrum/ResetAlarms.png)
+![Reset alarms](../images/pump/medtrum/ResetAlarms.png)
 
 Press the **Reset Alarms** button to reset the alarms and resume normal operation.
 
@@ -374,7 +374,7 @@ The imported settings file has to be of the same patch session that you are curr
 After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
 
 From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen:
-![Sync progress](../images/medtrum/SyncProgress.png)
+![Sync progress](../images/pump/medtrum/SyncProgress.png)
 
 ## Troubleshooting
 

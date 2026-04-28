@@ -103,7 +103,7 @@ When using **Dynamic ISF**, the **ISF** used here is the average of past 24h Dyn
 
 Check **Enable dynamic sensitivity** in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. New settings become available once selected.
 
-![Dynamic ISF settings](../images/Pref2020_DynISF.png)
+![Dynamic ISF settings](../images/Preferences/Pref2020_DynISF.png)
 
 (dyn-isf-adjustment-factor)=
 ### Dynamic ISF Adjustment Factor

@@ -14,14 +14,14 @@ Starting with AAPS 3.2, you shouldn't let any other app upload data (blood gluco
 
 → Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
 
-![xDrip+ Basic Settings 1](../images/xDrip+/xDrip_Basic1.png)
+![xDrip+ Basic Settings 1](../images/cgm/xDrip+/xDrip_Basic1.png)
 
 #### Disable automatic calibration and treatments
 
 If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7)
 If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
 
-![xDrip+ Basic Settings 2](../images/xDrip+/xDrip_Basic2.png)
+![xDrip+ Basic Settings 2](../images/cgm/xDrip+/xDrip_Basic2.png)
 
 Tap `Extra Options`(8)
 
@@ -34,7 +34,7 @@ Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill 
 
 Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
 
-![xDrip+ Basic Settings 3](../images/xDrip+/xDrip_Basic3.png)
+![xDrip+ Basic Settings 3](../images/cgm/xDrip+/xDrip_Basic3.png)
 
 ### **Inter-app Settings** (Broadcast)
 
@@ -46,7 +46,7 @@ In order for the values to be identical in AAPS with respect to xDrip+, you shou
 
 Enable Compatible Broadcast (6).
 
-![xDrip+ Basic Settings 4](../images/xDrip+/xDrip_Basic4.png)
+![xDrip+ Basic Settings 4](../images/cgm/xDrip+/xDrip_Basic4.png)
 
 If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
 
@@ -54,7 +54,7 @@ If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS.
 
 Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
 
-![xDrip+ Basic Settings 5](../images/xDrip+/xDrip_Basic5.png)
+![xDrip+ Basic Settings 5](../images/cgm/xDrip+/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
@@ -63,7 +63,7 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 * If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
 * Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
 
-   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip+/xDrip_InterApp_NS.png)
+   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/cgm/xDrip+/xDrip_InterApp_NS.png)
 
 ## Use AAPS to calibrate in xDrip+
 
@@ -93,7 +93,7 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 
 The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip+/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/cgm/xDrip+/xDrip_Dexcom_PreemptiveJump.png)
 
 To use it safely, there are a few points to be aware of: 
 
@@ -120,7 +120,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 * Battery status can be controlled in system status  
   → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen.
 
-![xDrip+ System status](../images/xDrip+/xDrip_Dexcom_Battery.png)
+![xDrip+ System status](../images/cgm/xDrip+/xDrip_Dexcom_Battery.png)
 
 * See [here](https://navid200.github.io/xDrip/docs/Battery-condition.html) for more information.
 
@@ -143,7 +143,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 * Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)  
   → Hamburger Menu (1) → System Status (2) → If you are not on the Classic Status Page (3) swipe the screen (4) to reach it → then tap Forget Device (5).
 
-![xDrip+ System status](../images/xDrip+/xDrip_Dexcom_StopSensor.png)
+![xDrip+ System status](../images/cgm/xDrip+/xDrip_Dexcom_StopSensor.png)
 
 
 * Remove transmitter (and sensor if replacing sensor). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video [https://youtu.be/AAhBVsc6NZo](https://youtu.be/AAhBVsc6NZo).
@@ -166,7 +166,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 
 → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Calibration Code.
 
-![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip+/xDrip_Dexcom_SensorCode2.png)
+![xDrip+ Retrieve Dexcom Sensor Code2](../images/cgm/xDrip+/xDrip_Dexcom_SensorCode2.png)
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
@@ -190,7 +190,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
   - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
 
-  ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip+/xDrip_Libre_BTSettings1.png)
+  ![xDrip+ Libre Bluetooth Settings 1](../images/cgm/xDrip+/xDrip_Libre_BTSettings1.png)
 
 * You can try to enable the following settings (7)
 
@@ -200,11 +200,11 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
 * If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
 
-  ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip+/xDrip_Libre_BTSettings2.png)
+  ![xDrip+ Libre Bluetooth Settings 2](../images/cgm/xDrip+/xDrip_Libre_BTSettings2.png)
 
 - Leave all other options disabled unless you know why you want to enable them.
 
-  ![xDrip+ Libre Bluetooth Settings 3](../images/xDrip+/xDrip_Libre_BTSettings3.png)
+  ![xDrip+ Libre Bluetooth Settings 3](../images/cgm/xDrip+/xDrip_Libre_BTSettings3.png)
 
 ### Libre smart reader battery level
 
@@ -221,7 +221,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
   → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
 
-  ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip+/xDrip_Libre_Transmitter01.png)
+  ![xDrip+ Start Libre Transmitter & Sensor 1](../images/cgm/xDrip+/xDrip_Libre_Transmitter01.png)
 
 - Scan Bluetooth and connect the bridge.
 
@@ -229,7 +229,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
   - If xDrip+ can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
 
-  ![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip+/xDrip_Libre_Transmitter02.png)
+  ![xDrip+ Start Libre Transmitter & Sensor 2](../images/cgm/xDrip+/xDrip_Libre_Transmitter02.png)
 
 - Start the sensor in xDrip+.
 
@@ -240,7 +240,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
   → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip+/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/cgm/xDrip+/xDrip_Libre_Transmitter03.png)
 
 
 (xdrip-libre2-patched-app)=
@@ -250,13 +250,13 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
   → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
 
-  ![xDrip+ Libre Patched app 1](../images/xDrip+/xDrip_Libre_Patched01.png)
+  ![xDrip+ Libre Patched app 1](../images/cgm/xDrip+/xDrip_Libre_Patched01.png)
 
 -   You can add `BgReading:d,xdrip libre_receiver:v` under Less
     Common Settings->Extra Logging Settings->Extra tags for logging.
     This will log additional error messages for trouble shooting.
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+![xDrip+ LibreLink logging](../images/cgm/xDrip+/Libre2_Tags.png)
 
 
 

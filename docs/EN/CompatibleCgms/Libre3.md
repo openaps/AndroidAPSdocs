@@ -34,13 +34,13 @@ The blood glucose values are received by the xDrip+ app on the smartphone.
 - In xDrip+ select "Libre2 (patched app)" as data source.
 - If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. This will log additional error messages for troubleshooting.
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+![xDrip+ LibreLink logging](../images/cgm/xDrip+/Libre2_Tags.png)
 
 - Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
 
   → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip+/xDrip_Libre3_Smooth.png)
+  ![xDrip+ advanced settings Libre 2 & raw values](../images/cgm/xDrip+/xDrip_Libre3_Smooth.png)
 
   
 
@@ -63,13 +63,13 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 
 1. Open Juggluco and note the serial number of the existing sensor
 
-![Libre serial number](../images/libre3/step_13.jpg)
+![Libre serial number](../images/cgm/libre3/step_13.jpg)
 
 2. Now simply scan your new sensor with your phone’s NFC reader. Juggluco will display a notice if the process had been started successfully.
 3. When you are ready to deactivate the old sensor, then open the Juggluco menu by clicking anywhere in the empty space in the upper left hand corner of the screen.
 4. Select the expired sensor and tap "Terminate"
 
-![Terminate sensor](../images/libre3/step_14.jpg)
+![Terminate sensor](../images/cgm/libre3/step_14.jpg)
 
 Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip+. If the sensors are not calibrated and reading BG similarly, this may result in jumpy BG values being reported to xDrip+. If you terminate the wrong sensor, you can reactivate it by simply scanning the sensor.
 

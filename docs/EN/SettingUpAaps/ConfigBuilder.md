@@ -2,13 +2,13 @@
 
 Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
 
-![Open config builder](../images/ConfBuild_Open_AAPS30.png)
+![Open config builder](../images/Configuration-Builder/ConfBuild_Open_AAPS30.png)
 
 The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated. By default, when opening the Config Builder, sections are collapsed to only show the active plugins. Click on the arrow (G) to show all available options. The boxes on the right-hand side (C) allow you to view the active modules as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
 
 When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
+![Config Builder boxes and cog wheel](../images/Configuration-Builder/ConfBuild_ConfigBuilder.png)
 
 
 (Config-Builder-tab-or-hamburger-menu)=
@@ -16,7 +16,7 @@ When there are additional settings available within the module, you can click on
 
 With the checkbox under the eye symbol you can decide how to open the corresponding program section.
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
+![Tab or hamburger menu](../images/Configuration-Builder/ConfBuild_TabOrHH.png)
 
 ```{contents}
 :backlinks: entry
@@ -34,7 +34,7 @@ See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic underst
 (Config-Builder-insulin)=
 ## Insulin
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![Insulin type](../images/Configuration-Builder/ConfBuild_Insulin_AAPS30.png)
 
 Select the type of insulin you are using.
 
@@ -49,7 +49,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 #### Rapid-Acting Oref
 
-![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![Insulin type Rapid-Acting Oref](../images/Configuration-Builder/ConfBuild_Insulin_RAO.png)
 
 * recommended for Humalog, Novolog and Novorapid
 * DIA = at least 5.0h
@@ -57,7 +57,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 #### Ultra-Rapid Oref
 
-![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+![Insulin type Ultra-Rapid Oref](../images/Configuration-Builder/ConfBuild_Insulin_URO.png)
 
 * recommended for FIASP
 * DIA = at least 5.0h
@@ -66,7 +66,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 (Config-Builder-lyumjev)=
 #### Lyumjev
 
-![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Insulin type Lyumjev](../images/Configuration-Builder/ConfBuild_Insulin_L.png)
 
 * special insulin profile for Lyumjev
 * DIA = at least 5.0h
@@ -74,7 +74,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 #### Free Peak Oref
 
-![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+![Insulin type Free Peak Oref](../images/Configuration-Builder/ConfBuild_Insulin_FPO.png)
 
 * With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
@@ -84,7 +84,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 ## BG Source
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
-![Config Builder BG source](../images/ConfBuild_BG.png)
+![Config Builder BG source](../images/Configuration-Builder/ConfBuild_BG.png)
 
 * [xDrip+](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
@@ -100,7 +100,7 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 
 ## Smoothing
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Smoothing](../images/Configuration-Builder/ConfBuild_Smoothing.png)
 
 See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
@@ -108,8 +108,8 @@ See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.m
 ## Pump
 Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
 
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33.png)
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33-2.png)
+![Config Builder Pump selection](../images/Configuration-Builder/ConfBuild_Pump_AAPS33.png)
+![Config Builder Pump selection](../images/Configuration-Builder/ConfBuild_Pump_AAPS33-2.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean (for domestic DanaR pump)
@@ -242,7 +242,7 @@ Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](..
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Wear settings](../images/Configuration-Builder/ConfBuild_Wear.png)
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 * Resend all data.

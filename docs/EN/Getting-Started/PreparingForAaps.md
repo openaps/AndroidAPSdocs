@@ -128,7 +128,7 @@ This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToA
 
 This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
 
-![preparing_overview](../images/preparing_images/AAPS_preparing_overview_01.png)
+![preparing_overview](../images/Preparing/AAPS_preparing_overview_01.png)
 
 
 In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 
@@ -149,9 +149,9 @@ Attempting to analyse your diabetes performance by looking at CGM data separatel
 
 Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
 
-![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png)
-![libre_options](../images/preparing_images/AAPSconnectivity_libre.png)
-![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
+![dexcom_options](../images/Preparing/AAPS_connectivity_Dex_02.png)
+![libre_options](../images/Preparing/AAPSconnectivity_libre.png)
+![eversense_options](../images/Preparing/AAPS_connectivity_eversense.png)
 
 ### Maintenance of the **AAPS** system
 

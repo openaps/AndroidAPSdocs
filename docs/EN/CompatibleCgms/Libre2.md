@@ -17,7 +17,7 @@ There are some good reasons to use a Bluetooth transmitter:
     
     → Hamburger Menu → Settings → Less common settings → Other misc. options
 
-![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
+![OOP2 Calibration](../images/cgm/xDrip+/Libre2_OOP2Calibration.png)
 
 -   The Libre 2 sensor can be used 14.5 days as the Libre 1
 -   8 hours backfilling is fully supported
@@ -28,7 +28,7 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 
 - → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip+/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/cgm/xDrip+/xDrip_Libre_Transmitter03.png)
 
 This will not physically start any Libre2 sensor or interact
 with them in any case. This is simply to indicate xDrip+ that a new
@@ -46,7 +46,7 @@ activation and make a new initial calibration.
 
 -   In AAPS go to Config Builder > BG Source and check 'xDrip+'
 
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+![xDrip+ BG Source](../images/Configuration-Builder/ConfBuild_BG_xDrip.png)
 
 -   If AAPS does not receive BG values when phone is in airplane
     mode, use 'Identify receiver' as describe on [xDrip+ settings page](#xdrip-identify-receiver).
@@ -72,7 +72,7 @@ Technically, the current blood sugar value is transmitted to xDrip+ every minute
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip+/xDrip_Libre3_Smooth.png)
+![xDrip+ advanced settings Libre 2 & raw values](../images/cgm/xDrip+/xDrip_Libre3_Smooth.png)
 
 This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the
 alarms are based jitter a little more, but correspond to the values that
@@ -89,7 +89,7 @@ as using the smoothed line to make proper therapy decisions.
 
 → Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
+![xDrip+ advanced settings Libre 2 & raw values](../images/cgm/xDrip+/Libre2_RawValues.png)
 
 
 

@@ -63,6 +63,9 @@ class LinkOccurrence:
     raw_target: str
 
 
+GITHUB_ASSETS_PREFIX = "https://github.com/user-attachments/assets/"
+
+
 @dataclass
 class ValidationResult:
     broken_anchors_and_calls: list[str]
@@ -70,6 +73,7 @@ class ValidationResult:
     broken_links: list[str]
     missing_pictures: list[str]
     remote_picture_errors: list[str]
+    remote_picture_warnings: list[str]
     remote_pictures_seen: list[str]
     unused_pictures: list[str]
 
@@ -348,6 +352,7 @@ def run_validation(
     broken_links: list[str] = []
     missing_pictures: list[str] = []
     remote_picture_errors: list[str] = []
+    remote_picture_warnings: list[str] = []
     remote_pictures_seen: set[str] = set()
 
     all_used_local_pictures: set[Path] = set()
@@ -368,6 +373,10 @@ def run_validation(
 
             if target.startswith("#"):
                 # Same-page links are accepted as valid in this docs project.
+                continue
+
+            if target.startswith("../_static/"):
+                # Static assets are served by Sphinx and are not validated here.
                 continue
 
             if is_remote_url(target):
@@ -499,7 +508,10 @@ def run_validation(
                 url = future_map[future]
                 ok, status = future.result()
                 if not ok:
-                    remote_picture_errors.append(f"{url} -> {status}")
+                    if url.startswith(GITHUB_ASSETS_PREFIX):
+                        remote_picture_errors.append(f"{url} -> {status}")
+                    else:
+                        remote_picture_warnings.append(f"{url} -> {status}")
 
     if check_remote_links and remote_non_image_links:
         with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
@@ -532,6 +544,7 @@ def run_validation(
         broken_links=sorted(broken_links),
         missing_pictures=sorted(missing_pictures),
         remote_picture_errors=sorted(remote_picture_errors),
+        remote_picture_warnings=sorted(remote_picture_warnings),
         remote_pictures_seen=sorted(remote_pictures_seen),
         unused_pictures=unused_pictures,
     )
@@ -606,7 +619,8 @@ def main() -> int:
     print_section("Broken links", result.broken_links)
     print_section("Missing pictures", result.missing_pictures)
     print_section("Remote pictures", result.remote_pictures_seen)
-    print_section("Remote picture errors", result.remote_picture_errors)
+    print_section("Remote picture errors (failures)", result.remote_picture_errors)
+    print_section("Remote picture warnings (non-failing)", result.remote_picture_warnings)
     print_section("Unused pictures", result.unused_pictures)
 
     if result.has_failures(args.fail_on_unused):

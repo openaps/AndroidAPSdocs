@@ -15,7 +15,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * In pump section select 'Dana-i/RS'.
 * Click on gear wheel to get directly to the pump settings or return to homescreen.
 
-  ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+  ![AAPS config builder Dana-i/RS](../images/pump/dana/DanaRS_i_ConfigB.png)
 
 * Go to 'DANA-i/RS' tab.
 * Select preferences menu by tapping the 3 dots in the top right. 
@@ -23,11 +23,11 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Click on "Selected pump".
 * In the pairing window click on the entry for your pump.
 
-  ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
+  ![AAPS pair Dana-i/RS](../images/pump/dana/DanaRS_i_Pairing.png)
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
 
-  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+  ![Dana RS confirmation pairing](../images/pump/dana/DanaRS_Pairing.png)
 
 * Follow the pairing process based on the type and firmware of your pump:
 
@@ -57,35 +57,35 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Press OK button on pump
 * In main menu select "OPTION" (move right by pressing arrow button several times)
 
-  ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+  ![DanaRS Main Menu](../images/pump/dana/DanaRSPW_01_MainMenu.png)
 
 * In options menu select "USER OPTION"
 
-  ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+  ![DanaRS Option Menu](../images/pump/dana/DanaRSPW_02_OptionMenu.png)
   
 * Use arrow button to scroll down to "11. password"
 
-  ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+  ![DanaRS 11. Password](../images/pump/dana/DanaRSPW_03_11PW.png)
   
 * Press OK to enter old password.
 
 * Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
 
-  ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+  ![DanaRS Enter old password](../images/pump/dana/DanaRSPW_04_11PWenter.png)
 
 * If wrong password is entered here there will be no message indicating failure!
 * Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
 
-  ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+  ![DanaRS New password](../images/pump/dana/DanaRSPW_05_PWnew.png)
   
 * Confirm with OK button.
 * Press OK to save setting.
 
-  ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+  ![DanaRS Save new password](../images/pump/dana/DanaRSPW_06_PWnewSave.png)
   
 * Move down to "14. EXIT" and press OK to exit.
 
-  ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+  ![DanaRS Exit](../images/pump/dana/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 ## Dana RS specific errors
@@ -93,7 +93,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 ### Error during insulin delivery
 In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/pump/dana/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.

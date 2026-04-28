@@ -68,19 +68,19 @@ The screenshots and instructions in this guide are from a Vanilla Android 16 ins
 
 1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
 
-    ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)  
+    ![android_settings_sec_priv](../images/phone/android_16/android_settings_sec_priv.png)  
 
 2. Scroll down and press on **Privacy controls (1)**.
 
-   ![android_sec_priv](../images/android_16/android_sec_priv.png)  
+   ![android_sec_priv](../images/phone/android_16/android_sec_priv.png)  
 
 3. Press on **Permission manager (1)**.
 
-   ![android_priv_control](../images/android_16/android_priv_control.png)  
+   ![android_priv_control](../images/phone/android_16/android_priv_control.png)  
 
 3. Scroll down and press on **Nearby devices (1)**.
 
-   ![android_perm_man_nearby_dev](../images/android_16/android_perm_man_nearby_dev.png)  
+   ![android_perm_man_nearby_dev](../images/phone/android_16/android_perm_man_nearby_dev.png)  
 
 4. Browse the list of apps and press on the app you wish to revoke **Nearby devices** permissions for.  
    
@@ -93,11 +93,11 @@ The screenshots and instructions in this guide are from a Vanilla Android 16 ins
 If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.
 ```
 
-   ![android_nearby_dev](../images/android_16/android_nearby_dev.png)  
+   ![android_nearby_dev](../images/phone/android_16/android_nearby_dev.png)  
 
 5. To revoke the permission Press on **Don't allow (1)**, then Press on **Don't allow anyway (2)**. If done correctly you should see **Don't allow (3)** as the selected Toggle option. You can now go back to the **Nearby device** menu by pressing the **Back arrow (4)** and change this setting on other apps if required.
 
-   ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow.png)
+   ![android_auto_nearby_dev](../images/phone/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/phone/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/phone/android_16/android_auto_nearby_dont_allow.png)
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
@@ -111,7 +111,7 @@ If you are unsure which app is causing you an issue, disable them all (remember 
 
    You will notice that **Android Auto (1)** is missing in the app list after the permission is revoked. This is because the **Android Auto** app is a **System app** and by default system apps are hidden.
 
-   ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)  
+   ![android_auto_nearby_dev_missing](../images/phone/android_16/android_auto_nearby_dev_missing.png)  
 
 3. To show hidden system apps Press on the **Three Dotted Lines (Hamburger) (1)**, then Press on **"Show System (1)"**. You should now be able to see the hidden system app in the list **Android Auto (3)**.  
 
@@ -120,7 +120,7 @@ If you are unsure which app is causing you an issue, disable them all (remember 
 If an app is revoked you will need to scroll down until you see the list of revoked apps lower down in the list.
 ```
 
-   ![android_auto_nearby_dev_missing_hamburger](../images/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/android_16/android_nearby_dev_system.png) 
+   ![android_auto_nearby_dev_missing_hamburger](../images/phone/android_16/android_auto_nearby_dev_missing_hamburger.png) ![android_auto_nearby_show_system](../images/phone/android_16/android_auto_nearby_show_system.png) ![android_nearby_dev_system](../images/phone/android_16/android_nearby_dev_system.png) 
 
 5. Follow the guidance in **"How to revoke "Nearby device" permissions for other apps"** in reverse to re-enable permissions for each app.
 
@@ -139,7 +139,7 @@ Only enable the **Bond BT device on Android 15+** option on Android 15, and only
 
 1) **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
-   ![Open preferences](../images/Pref2020_Open2.png)
+   ![Open preferences](../images/Preferences/Pref2020_Open2.png)
 
 2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
 

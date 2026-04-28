@@ -8,7 +8,7 @@
 (AapsScreens-the-homescreen)=
 ## The Homescreen
 
-![Homescreen V2.7](../images/Home_Homescreen.png)
+![Homescreen V2.7](../images/Home-Screen/Home_Homescreen.png)
 
 This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
 
@@ -28,7 +28,7 @@ The current profile is displayed in the left bar.
 
 Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Profile switch remaining duration](../images/Home-Screen/Home2020_ProfileSwitch.png)
 
 1. Regular display with a standard profile activation.
 2. Profile switch with a remaining duration of 59mn.
@@ -39,7 +39,7 @@ Short press profile bar to view profile details. Long press profile bar to [swit
 
 #### Target
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Temp target remaining duration](../images/Home-Screen/Home2020_TT.png)
 
 Current target blood glucose level is displayed in the right bar.
 
@@ -50,7 +50,7 @@ If a temp target is set, the bar turns yellow and the remaining time in minutes 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 #### Visualization of Dynamic target adjustment
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Visualization of dynamic target adjustment](../images/Home-Screen/Home2020_DynamicTargetAdjustment.png)
 
 When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity. 
 
@@ -71,7 +71,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
    * red = below range
    * yellow = above range 
 
-![Deltas](../images/Home_Delta.png)
+![Deltas](../images/Home-Screen/Home_Delta.png)
 
 The blocks in the middle shows:
 
@@ -82,7 +82,7 @@ The blocks in the middle shows:
 (AapsScreens-loop-status)=
 #### Loop status
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Loop status](../images/Home-Screen/Home2020_LoopStatus.png)
 
 On the right side, an icon shows the loop status:
 1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
@@ -97,7 +97,7 @@ Short press or Long press the icon to open the Loop dialog to switch loop mode (
 
    * If short press on Loop icon, a validation is required after selection in Loop Dialog
 
-   ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+   ![Loop status menu](../images/Home-Screen/Home2020_Loop_Dialog.png)
 
 (aaps-screens-bg-warning-sign)=
 #### BG warning sign
@@ -151,11 +151,11 @@ Up to 30h hours are taken into accord for **AAPS** calculations. So even after y
 
 An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
 
-![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
+![Home2020_SimpleMode.png](../images/Home-Screen/Home2020_SimpleMode.png)
 
 ### Section D - IOB, COB, BR and AS
 
-![Section D](../images/Home2020_TBR.png)
+![Section D](../images/Home-Screen/Home2020_TBR.png)
 
 1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body<br/>
 The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
@@ -173,7 +173,7 @@ The insulin on board figure would be zero if just your standard basal was runnin
 (aaps-screens-carbs-required)=
 #### Carbs required
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Carbs required](../images/Home-Screen/Home2020_CarbsRequired.png)
 
 Carbs suggestions are given when the reference design detects that it requires carbs.
 
@@ -185,7 +185,7 @@ Carb required notifications can be pushed to Nightscout if wished, in which case
 
 ### Section E - Status lights
 
-![Section E](../images/Home2020_StatusLights.png)
+![Section E](../images/Home-Screen/Home2020_StatusLights.png)
 
 Status lights give a visual warning for
 * Cannula age
@@ -205,7 +205,7 @@ Depending on the pump you use, you may not have all of these icons.
 (aaps-screens-main-graph)=
 ### Section F - Main graph
 
-![Section F](../images/Home2020_MainGraph.png)
+![Section F](../images/Home-Screen/Home2020_MainGraph.png)
 
 The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
 
@@ -234,7 +234,7 @@ Using the top right arrow, you can switch on these optional information:
 
 To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph   1 2 3 4" are available.
 
-   ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+   ![Main graph setting](../images/Home-Screen/Home2020_MainGraphSetting.png)
 
 (aaps-screens-prediction-lines)=
 #### Prediction lines
@@ -286,7 +286,7 @@ You can activate up to four additional graphs below the main graph. When in [Sim
 
 To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/Home-Screen/Home2020_AdditionalGraphSetting.png)
 
 To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
@@ -351,7 +351,7 @@ It is a good combination to display this line along with the Deviation bars. The
 
 ### Section H - Buttons
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Homescreen buttons](../images/Home-Screen/Home2020_Buttons.png)
 
 Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
 
@@ -362,7 +362,7 @@ About using the Insulin, Carbs and Calculator buttons : If enabled in the [Prefe
 (aaps-screens-buttons-insulin)=
 #### Insulin
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![Insulin button](../images/Home-Screen/Home2020_ButtonInsulin.png)
 
 To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
 
@@ -374,11 +374,11 @@ You can use the buttons to quickly increase the insulin quantity. The increment 
 
 The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
 
-![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
+![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home-Screen/Home2020_ButtonInsulin_PumpSuspended.png)
 
 #### Carbs
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Carbs button](../images/Home-Screen/Home2020_ButtonCarbs.png)
 
 To record carbs without bolusing.
 
@@ -415,7 +415,7 @@ Details are set up in [Preferences > Overview > QuickWizard settings](#Preferenc
 (aaps-screens-bolus-wizard)=
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Bolus wizard](../images/Home-Screen/Home2020_BolusWizard_v2.png)
 
 When you want to make a meal bolus, this is where you will normally make it from. 
 
@@ -438,7 +438,7 @@ The **Carb time** field is for pre-bolusing so you can tell the system that ther
 
 **Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
 
-![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+![BolusWizard with Eating Reminder](../images/Home-Screen/Home2021_BolusWizard_EatingReminder.png)
 
 ### Section K
 
@@ -462,7 +462,7 @@ For safety reasons the **TT box must be ticked manually**, if you want the bolus
 * If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 * If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
-![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
+![BolusWizard with Details](../images/Home-Screen/Home2021_BolusWizard_Details.png)
 
 The box near the eye allows you to choose between the detailed view, with the numbers entering the calculation for each item, or the simple view with icons. Pressing on an icon will enable / disable this entry from the calculation.
 
@@ -478,7 +478,7 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 (screens-action-tab)=
 ## Action tab
 
-![Actions tab](../images/Home_Action.png)
+![Actions tab](../images/Home-Screen/Home_Action.png)
 
 ### Actions - section M
 

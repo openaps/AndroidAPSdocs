@@ -83,46 +83,46 @@ It is very important to make sure that battery optimizations are turned off. AAP
      * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
      * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
-  ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+  ![Screenshot of user menu settings](../images/pump/combo/combo-menu-settings.png)
 
-  ![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+  ![Screenshot of TBR settings](../images/pump/combo/combo-tbr-settings.png)
 
-  ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+  ![Screenshot of bolus settings](../images/pump/combo/combo-bolus-settings.png)
 
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![Screenshot of insulin cartridge settings](../images/pump/combo/combo-insulin-settings.png)
 
 ## Activating the driver and pairing it with the Combo
 
 * Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
 
-  ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
+  ![Screenshot of Config Builder Combo](../images/pump/combo/combov2-config-builder.png)
 
 * Tap the cog-wheel to open the driver settings.
 
 * In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.
 
-  ![Screenshot of Combo Pairing UI 1](../images/combo/combov2-pairing-screen-1.png)
+  ![Screenshot of Combo Pairing UI 1](../images/pump/combo/combov2-pairing-screen-1.png)
 
-  ![Screenshot of Combo Pairing UI 2](../images/combo/combov2-pairing-screen-2.png)
+  ![Screenshot of Combo Pairing UI 2](../images/pump/combo/combov2-pairing-screen-2.png)
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
+  ![Screenshot of Combo Pairing UI 3](../images/pump/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Screenshot of Combo Pairing UI 4](../images/pump/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Screenshot of Combo Pairing UI 4](../images/pump/combo/combov2-pairing-screen-5.png)
 
 * When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown:
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+  ![Screenshot of Combo Pairing UI 3](../images/pump/combo/combov2-pairing-screen-incorrect-pin.png)
 
 * Once pairing is done, the pairing user interface is closed by pressing the OK button in the screen that states that pairing succeeded. After it is closed, you return to the driver settings user interface. The 'Pair with pump' button should now be greyed out and disabled.
 
   The Accu-Chek Combo tab looks like this after successfully pairing:
 
-  ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
+  ![Screenshot of Accu-Chek Combo tab with pairing](../images/pump/combo/combov2-tab-with-pairing.png)
 
   if however there is no pairing with the Combo, the tab looks like this instead:
 
-  ![Screenshot of Accu-Chek Combo tab without pairing](../images/combo/combov2-tab-without-pairing.png)
+  ![Screenshot of Accu-Chek Combo tab without pairing](../images/pump/combo/combov2-tab-without-pairing.png)
 
 * To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
@@ -139,7 +139,7 @@ The consequence of this is that pairing will never be 100% without problems, tho
 
 The tab shows the following information when a pump was paired (items are listed from top to bottom):
 
-![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
+![Screenshot of Accu-Chek Combo tab with pairing](../images/pump/combo/combov2-tab-with-pairing.png)
 
 1. _Driver state_: The driver can be in one of the following states:
    - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
@@ -169,7 +169,7 @@ At the very bottom, there is the "Refresh" button. This triggers an immediate pu
 
 These preferences are available for the combo driver (items are listed from top to bottom):
 
-![Screenshot of Accu-Chek Combo preferences](../images/combo/combov2-preferences.png)
+![Screenshot of Accu-Chek Combo preferences](../images/pump/combo/combov2-preferences.png)
 
 1. _Pair with pump_: This is a button that can be pressed to pair with a Combo. It is disabled if a pump is already paired.
 2. _Unpair pump_: Unpairs a paired Combo; the polar opposite of item no. 1. It is disabled if no pump is paired.

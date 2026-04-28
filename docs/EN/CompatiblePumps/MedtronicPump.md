@@ -43,7 +43,7 @@ The following settings should be configured on the pump in order for AAPS to rem
 
 When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump).  Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.  
 
-![Medtronic Settings](../images/Medtronic01a.png)
+![Medtronic Settings](../images/pump/medtronic/Medtronic01a.png)
 
 While setting up AAPS to work with your medtronic pump you need to set following items: (see picture above)
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
@@ -70,7 +70,7 @@ While setting up AAPS to work with your medtronic pump you need to set following
 - **Set neutral temp basals** By default Medtronic pumps beep on the hour when a temporary basal rate is active.  Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
 
 ## MEDTRONIC (MDT) Tab
-![MDT Tab](../images/Medtronic02.png)
+![MDT Tab](../images/pump/medtronic/Medtronic02.png)
 When AAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen.  This tab displays the current pump status information along with some Medtronic specific actions.
 - **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device.  This should show as Connected at all times. Any other status may require user intervention. 
 - **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device.  Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
@@ -90,14 +90,14 @@ At the bottom of the screen there are three buttons:
 
 (MedtronicPump-pump-history)=
 ## Pump History
-![Pump History Dialog](../images/Medtronic03.png)
+![Pump History Dialog](../images/pump/medtronic/Medtronic03.png)
 
 Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored.  The allows for a convenient way to see pump behaviour should that be required.  The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
 
 (MedtronicPump-rl-status-rileylink-status)=
 ## RL Status (RileyLink Status)
-![RileyLink Status - Settings](../images/Medtronic04.png)
-![RileyLink Status - History](../images/Medtronic05.png)
+![RileyLink Status - Settings](../images/pump/medtronic/Medtronic04.png)
+![RileyLink Status - History](../images/pump/medtronic/Medtronic05.png)
 
 
 The RL Status dialog has two tabs:
@@ -157,7 +157,7 @@ There are a number of options to try and resolve connectivity issues.
 
 
 ### How to determine what Frequency my pump uses
-![Pump Model](../images/Medtronic06.png)
+![Pump Model](../images/pump/medtronic/Medtronic06.png)
 
 On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
 - NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")

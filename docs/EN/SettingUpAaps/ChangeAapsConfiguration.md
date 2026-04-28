@@ -14,7 +14,7 @@ Here we explain which option is most convenient for each situation:
 
 ## Config builder
 
-![Open Config Builder](../images/ConfBuild_Open_AAPS30.png)
+![Open Config Builder](../images/Configuration-Builder/ConfBuild_Open_AAPS30.png)
 
 The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. Once enabled, the **plugins** will always run, and you can decide if you want to be able to see them in the top menu or not. Disabled plugins can not be made visible.
 
@@ -24,7 +24,7 @@ The documentation relating to the config builder is available [here](../SettingU
 
 ## Preferences
 
-![Open preferences](../images/Pref2020_Open2.png)
+![Open preferences](../images/Preferences/Pref2020_Open2.png)
 
 The **preferences** dialogue can be reached via the top right _three dots_ menu on any tab of **AAPS**. This allows to change the configuration of **all enabled plugins in a single place**.
 
@@ -34,7 +34,7 @@ The documentation of the preferences is available [here](../SettingUpAaps/Prefer
 
 ## Plugin preferences
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+![Open plugin preferences](../images/Preferences/Pref2020_OpenPlugin2.png)
 
 The **plugin preferences** dialogue can be reached via the top right _three dots_ menu on the home screen of **AAPS**. It allows to change the configuration of the **plugin currently on screen**.
 

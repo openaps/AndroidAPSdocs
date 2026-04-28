@@ -102,7 +102,7 @@ Many people have asked if this method can be used with an already active sensor 
 
 **Install and configure OOP2** and see that it works by just opening the app.
 
-![OOP2 app](../images/minimal00per/OOP2app.png)
+![OOP2 app](../images/cgm/minimal00per/OOP2app.png)
 
 **Settings**
 
@@ -116,7 +116,7 @@ Many people have asked if this method can be used with an already active sensor 
 
 **Version 2: 93e5cac-2020.12.08 (latest version)**
 
-![OOP2 settings](../images/minimal00per/OOP2settings.png)
+![OOP2 settings](../images/cgm/minimal00per/OOP2settings.png)
 
 **Install xDrip+** minimum version: latest release. Further documentation on xDrip+ installation and setup can be found [*here*](https://androidaps.readthedocs.io/en/latest/Configuration/xdrip.html).
 
@@ -126,7 +126,7 @@ Many people have asked if this method can be used with an already active sensor 
 
 **Hardware Data Source**: Libre Bluetooth
 
-![xDrip+ NFC settings](../images/minimal00per/xdripDS.png)
+![xDrip+ NFC settings](../images/cgm/minimal00per/xdripDS.png)
 
 **NFC Scan features**: *settings not mentioned are assumed to be turned off.*
 
@@ -135,15 +135,15 @@ Many people have asked if this method can be used with an already active sensor 
 - *Scan when not in xDrip+*: **on**
 - *Use Any-tag optimized reading method*: **off** but try **on** in case of difficulties to scan
 
-![xDrip+ NFC settings](../images/minimal00per/xdripNFC.png)
+![xDrip+ NFC settings](../images/cgm/minimal00per/xdripNFC.png)
 
 - *Starting Bluetooth connection with FSL2 sensor*: **Always connect to libre2 sensors**
 
-![xDrip+ L2 connect settings](../images/minimal00per/xdripNFCBT.png)
+![xDrip+ L2 connect settings](../images/cgm/minimal00per/xdripNFCBT.png)
 
 - *Smooth libre 3 data when using xxx method*: leave default. Increase the value for noisy sensors, decrease when stable.
 
-![xDrip+ smooth settings](../images/minimal00per/xdripNFCsmooth.png)
+![xDrip+ smooth settings](../images/cgm/minimal00per/xdripNFCsmooth.png)
 
 **Less Common Settings -\> Bluetooth Settings** (*these are important and can vary with your phone/setup*)
 
@@ -157,12 +157,12 @@ You can setup xDrip+ using the QR code below. You need to scan it (or load the p
 ```{admonition} QR Code
 :class: dropdown
 
-![Setup Bluetooth](../images/minimal00per/qr_libre2direct-nocalib.png)
+![Setup Bluetooth](../images/cgm/minimal00per/qr_libre2direct-nocalib.png)
 ```
 
-![xDrip+ BT settings](../images/minimal00per/xdripBT1.png)
+![xDrip+ BT settings](../images/cgm/minimal00per/xdripBT1.png)
 
-![xDrip+ NFC settings](../images/minimal00per/xdripBT2.png)
+![xDrip+ NFC settings](../images/cgm/minimal00per/xdripBT2.png)
 
 Once scanned the QR code above, if you have a Samsung phone (but this is also useful for many Chinese brands), scan the other QR code below to change the settings for a more reliable connection:
 
@@ -172,10 +172,10 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 ```{admonition} QR Code
 :class: dropdown
 
-![Setup Bluetooth](../images/minimal00per/qr_libre2direct_samsung.png)
+![Setup Bluetooth](../images/cgm/minimal00per/qr_libre2direct_samsung.png)
 ```
 
-![xDrip+ BT settings](../images/minimal00per/xdripBT3.png)
+![xDrip+ BT settings](../images/cgm/minimal00per/xdripBT3.png)
 
 **Advanced settings for FSL2** (*optional but helpful*)
 
@@ -183,7 +183,7 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 - *show Sensor info in Status*: **on**
 
-![xDrip+ BT settings](../images/minimal00per/xdripAS.png)
+![xDrip+ BT settings](../images/cgm/minimal00per/xdripAS.png)
 
 **Extra Logging Settings** (*needed to debug if not working correctly*)
 
@@ -191,7 +191,7 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 `BgReading:d,jamorham librereceiver:v,LibreOOPAlgorithm:v,jamorham nsemulator:v,DexCollectionService:v`
 
-![xDrip+ debug settings](../images/minimal00per/xdripDBG.png)
+![xDrip+ debug settings](../images/cgm/minimal00per/xdripDBG.png)
 
 (minimallooper-OOPsettings)=
 
@@ -203,7 +203,7 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 (*MAKE SURE THIS IS **OFF** FOR OOP2 OTHERWISE YOU WILL NOT GET READINGS!*)
 
-![xDrip+ OOP2 settings](../images/minimal00per/xdripOOP.png)
+![xDrip+ OOP2 settings](../images/cgm/minimal00per/xdripOOP.png)
 
 (minimallooper-step3)=
 
@@ -233,7 +233,7 @@ If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ 
 
 **NFC SCAN** the FSL2 sensor with xDrip+. This sends a signal to the sensor to turn on Bluetooth pairing in order to start the bonding process. A small notification will appear briefly on the bottom of the xDrip+ Overview screen with the text **Scanning** followed by the notification **Scanned OK!** upon a successful NFC scan of the FSL 2 sensor.
 
-![xDrip+ scan](../images/minimal00per/xdripscan1.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripscan1.png)
 
 (minimallooper-step6)=
 
@@ -243,9 +243,9 @@ In the **xDrip+ Overview screen** press the **hamburger menu** in the upper left
 
 On the **Start New Sensor** screen press **Start Sensor**. A prompt will ask **Did you insert it today?** Respond by pressing **NOT TODAY**.
 
-![xDrip+ scan](../images/minimal00per/xdripstart.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripstart.png)
 
-![xDrip+ scan](../images/minimal00per/xdripstart2.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripstart2.png)
 
 *NOTE: If you accidentally clicked "YES, TODAY" then you will need to "stop sensor" from the xDrip+ main menu followed by "start sensor" by proceeding with Step 5 again.*
 
@@ -255,15 +255,15 @@ On the **Start New Sensor** screen press **Start Sensor**. A prompt will ask **D
 
 A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device from which xDrip+ will use to retrieve the readings. Once complete you will see a notification stating **NEW SENSOR STARTED**.
 
-![xDrip+ scan](../images/minimal00per/xdripscan2.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripscan2.png)
 
 A 60 second waiting period is enforced because the sensor can’t be scanned during this process more than once per minute. If the sensor is scanned too early the warning **Not so quickly, wait 60 seconds** is displayed in the xDrip Overview screen.
 
-![xDrip+ scan](../images/minimal00per/xdripscan3.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripscan3.png)
 
 Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
 
-![xDrip+ scan](../images/minimal00per/xdripstream.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripstream.png)
 
 (minimallooper-step8)=
 
@@ -276,7 +276,7 @@ If you use a Samsung (or many Chinese brand phones) and have issues receiving da
 ```{admonition} QR Code
 :class: dropdown
 
-![Setup Bluetooth](../images/minimal00per/qr_libre2direct_samsung.png)
+![Setup Bluetooth](../images/cgm/minimal00per/qr_libre2direct_samsung.png)
 ```
 
 It will change xDrip+ Bluetooth settings to:
@@ -290,13 +290,13 @@ It will change xDrip+ Bluetooth settings to:
 
 Press the Hamburger menu in the upper left of the xDrip+ Overview screen and select **System Status**. On the System Status screen the active **Bluetooth Device:** field displays the FSL2 Bluetooth naming convention of **ABB___XXXXXXXXXXX**, where the XXX’s represent the sensor serial number. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displayed the time the sensor was started.
 
-![xDrip+ scan](../images/minimal00per/xdripSSlog.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripSSlog.png)
 
 On the **BT Device** (swipe left) screen you can verify further connection details of the sensor as well as use this screen for troubleshooting connections. Below is a list of fields and their purposes to assist in connection troubleshooting.
 
 *NOTE: **<u>DO NOT TOUCH</u> AND CHANGE Bluetooth Pairing from <u>Disabled</u>** in this window. Doing so will attempt a direct pair, it will fail (Not bonded) and you will have to start the process from Step 5 all over again.*
 
-![xDrip+ scan](../images/minimal00per/xdripSSbond.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripSSbond.png)
 
 - **Phone Service State:** The last time the phone made a BT connection to the sensor (it should be less than 5 minutes ago)
 - **Bluetooth Device:** Displays current status of the connection (either **Connected** or **Disconnected**)
@@ -305,7 +305,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 - **Slowest wake up**: You can ignore this. xDrip+ doesn't spend its time waiting for readings: it will start expecting them at after a certain time (traditionally 5 minutes). If no data arrives at that time, you'll see "Woke up early" meaning xDrip+ was expecting data to be ready but there's none. Slowest wake up is the highest delay encountered before receiving data normally.
 - **Next Wake up**: Should say 5 minutes
 
-![xDrip+ scan](../images/minimal00per/xdripSStat.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripSStat.png)
 
 (minimallooper-notes)=
 
@@ -438,11 +438,11 @@ Set [OOP2 calibration](#minimallooper-OOPsettings) strategy to "No calibration" 
 
 Then you can decide to calibrate or not.
 
-![xDrip+ scan](../images/minimal00per/xdripinitial.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripinitial.png)
 
 #### Sensor is reported as FSL1
 
-![xDrip+ scan](../images/minimal00per/xdripL1.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripL1.png)
 
 Make sure you are running the latest versions of xDrip+ and OOP2.
 
@@ -450,23 +450,23 @@ Make sure you are running the latest versions of xDrip+ and OOP2.
 
 - Verify OOP1 is disabled (see [here](#minimallooper-OOPsettings))
 
-![xDrip+ scan](../images/minimal00per/xdripstreamfail.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripstreamfail.png)
 
 - Verify OOP2 is not put to sleep by the phone battery savings apps and settings
 - Verify Google Play protect is disabled as it will kill OOP2
 - Did you change Bluetooth Pairing in System Status? Touch it back to bring it back to **<u>Disabled</u>**
 
-![xDrip+ scan](../images/minimal00per/xdripSSbond.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripSSbond.png)
 
 #### Missed readings
 
 Make sure OOP2 shows values that are not 0 or -1, it might be a sign your sensor is failing (example below in mmol/l).
 
-![xDrip+ scan](../images/minimal00per/OOP2values.png)
+![xDrip+ scan](../images/cgm/minimal00per/OOP2values.png)
 
 Sensor age has not advanced might also be a sign your sensor has issues. This means xDrip+ received a value, but discarded it as it was not acceptable (sensor error).
 
-![xDrip+ scan](../images/minimal00per/xdripnotadvanced.png)
+![xDrip+ scan](../images/cgm/minimal00per/xdripnotadvanced.png)
 
 #### Restart from scratch sensor pairing
 

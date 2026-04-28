@@ -59,7 +59,7 @@ Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correc
 
 The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
 
-![DIA](../images/Profile_DIA.png)
+![DIA](../images/Profile/Profile_DIA.png)
 
 The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works good for them. See the additional reading mentioned above.
 
@@ -85,7 +85,7 @@ If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl 
 
 The **figure below** shows an example of how the target can be set in an **AAPS** profile.
 
-![Target](../images/Profile_Target.png)
+![Target](../images/Profile/Profile_Target.png)
 
 **BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
@@ -120,7 +120,7 @@ Conversely, a basal rate too low can lead to high BGs, and a failure to bring le
 
 The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Basal rates](../images/Profile/Profile_BasalRates.png)
 
 Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
 
@@ -172,7 +172,7 @@ Conversely, an **ISF** set too high can result in under-corrections, meaning you
 
 See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
 
-![Profile ISF](../images/Profile_ISF.png)
+![Profile ISF](../images/Profile/Profile_ISF.png)
 
 A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
@@ -231,7 +231,7 @@ A **higher / weaker ICR** = more food per unit, i.e. you are getting less insuli
 
 The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
-![Profile ICR](../images/Profile_ICR.png)
+![Profile ICR](../images/Profile/Profile_ICR.png)
 
 If after a meal has been digested and the **IOB** has returned to zero, your **BG** remains higher than before food, chances are your **ICR** is too weak (_i.e._ the number is too high and should be gradually lowered). Conversely, if your **BG** is lower than before food, **ICR** is too strong (_i.e._ the number is too small and should be gradually increased).
 
@@ -306,7 +306,7 @@ The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a 
 
 Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Profile Helper Kids 1](../images/Profile/ProfileHelperKids1.png)
 
 1. Make sure you are in **Profile 1**.
 2. In **Profile type**, make sure you have "Default profile" selected.
@@ -317,7 +317,7 @@ Profile helper offers data sets from two different hospitals for children to fin
 7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
 8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** ou **Profile 2**.
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Profile Helper Kids 2](../images/Profile/ProfileHelperKids2.png)
 
 ### Switch Profile
 
@@ -359,7 +359,7 @@ To do this, however, it is important to clone the whole **database record** cons
 
 You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![Profile Helper 1](../images/Profile/ProfileHelper1.png)
 
 1. Make sure you are in **Profile 1**.
 2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
@@ -369,4 +369,4 @@ You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compa
 6. Choose the **Profile Switch** you want to compare to.
 7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![Profile Helper 2](../images/Profile/ProfileHelper2.png)

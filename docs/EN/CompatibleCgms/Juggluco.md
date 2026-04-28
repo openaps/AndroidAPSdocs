@@ -12,7 +12,7 @@ Starting with AAPS 3.2, you shouldn't let any other app upload data (blood gluco
 
 Disable any active uploader to Nightscout in Juggluco.
 
-![Disable Nightscout Upload](../images/juggluco/DisableNightscoutUpload.png)
+![Disable Nightscout Upload](../images/cgm/juggluco/DisableNightscoutUpload.png)
 
 (juggluco-to-aaps)=
 
@@ -26,7 +26,7 @@ Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and sa
 
 Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
 
-![Juggluco to AAPS](../images/juggluco/Juggluco-AAPS.png)
+![Juggluco to AAPS](../images/cgm/juggluco/Juggluco-AAPS.png)
 
 (juggluco-to-xdrip)=
 
@@ -38,4 +38,4 @@ Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and sa
 
 Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary, when using a Libre 2/2+/3/3+ sensor, xDrip+ will average the minute-by-minute to 5 minutes readings and [also smoothen](#libre2-value-smoothing-raw-values) them.
 
-![Juggluco to xDrip+](../images/juggluco/Juggluco-xDrip+.png)
+![Juggluco to xDrip+](../images/cgm/juggluco/Juggluco-xDrip+.png)

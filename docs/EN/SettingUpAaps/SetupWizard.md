@@ -24,7 +24,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 This is just the welcome message which you can skip with the "NEXT" button:
 
-![Welcome](../images/setup-wizard/Wizard01.png)
+![Welcome](../images/Setup-Wizard/Wizard01.png)
 
 ## License agreement
 
@@ -34,7 +34,7 @@ If you don't understand, or can't agree to the end user license agreement please
 
 If you understand and agree, please click the "I UNDERSTAND AND AGREE" button and follow the Setup Wizard:
 
-![EULA](../images/setup-wizard/Wizard02.png)
+![EULA](../images/Setup-Wizard/Wizard02.png)
 
 ## Required permissions
 
@@ -44,7 +44,7 @@ In the following screen you are asked several questions you have to agree to, to
 
 In this screen, we aim to give some more background information, translate more technical speak into common language or explain the reason. Continue reading below to see each permission request.
 
-![Permissions](../images/setup-wizard/Wizard03.png)
+![Permissions](../images/Setup-Wizard/Wizard03.png)
 
 ### Notifications
 
@@ -54,19 +54,19 @@ While it is a good feature to disable notifications _e.g._ from  social media ap
 
 Please click the first "ASK FOR PERMISSION" button:
 
-![Notifications](../images/setup-wizard/Wizard04.png)
+![Notifications](../images/Setup-Wizard/Wizard04.png)
 
 Select the "AAPS" app:
 
-![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
+![AAPS over other apps](../images/Setup-Wizard/Wizard04-AndroidSettings1.png)
 
 Enable "Allow display over other apps" by sliding the slider to the right:
 
-![image](../images/setup-wizard/Wizard04-AndroidSettings2.png)
+![image](../images/Setup-Wizard/Wizard04-AndroidSettings2.png)
 
 The slider should look this way if it is enabled:
 
-![image](../images/setup-wizard/Wizard04-AndroidSettings3.png)
+![image](../images/Setup-Wizard/Wizard04-AndroidSettings3.png)
 
 ### Battery optimization
 
@@ -78,11 +78,11 @@ You do this by confirming the setting.
 
 Click the second "ASK FOR PERMISSION" button. 
 
-![Allow Background](../images/setup-wizard/Wizard05.png)
+![Allow Background](../images/Setup-Wizard/Wizard05.png)
 
 Please select "Allow":
 
-![Allow Background](../images/setup-wizard/Wizard05-Background.png)
+![Allow Background](../images/Setup-Wizard/Wizard05-Background.png)
 
 (setup-wizard-bluetooth-battery-optimisation)=
 ### Bluetooth battery optimisation
@@ -97,33 +97,33 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
 1. Open Android settings and search for **Apps**, and open the Apps settings.
 
-   ![settings_apps](../images/setup-wizard/settings_apps.png)
+   ![settings_apps](../images/Setup-Wizard/settings_apps.png)
 
 2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
 
-   ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
+   ![settings_apps](../images/Setup-Wizard/apps_not_expanded.png)
 
 3. As the Bluetooth app is a system app its hidden by default, we need to show system apps. Click on the **three dots (hamburger)** on the top left (1). Then click on **Show System** (2).
 
-   ![settings_apps](../images/setup-wizard/show_system.png)
+   ![settings_apps](../images/Setup-Wizard/show_system.png)
 
 4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.  
    
    ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
    
-   ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)   
+   ![settings_apps_1](../images/Setup-Wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/Setup-Wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/Setup-Wizard/apps_search_blue_15.png)   
 
    1. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/Setup-Wizard/app_bluetooth.png))   ![settings_apps_12](../images/Setup-Wizard/app_bluetooth_12.png)
 
 5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
 
-   ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
+   ![bluetooth_settings_apps_12](../images/Setup-Wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/Setup-Wizard/app_bluetooth_allow_background.png)
 
 6. On Android 16 Select ``Unrestricted``
 
-   ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
+   ![settings_apps](../images/Setup-Wizard/app_bluetooth_allow_background_unrestrict.png)
 
 (SetupWizard-StoragePermission)=
 
@@ -133,15 +133,15 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
 Click the first "ASK FOR PERMISSION" button:
 
-![Allow Background](../images/setup-wizard/Wizard06.png)
+![Allow Background](../images/Setup-Wizard/Wizard06.png)
 
 Click "Allow":
 
-![image](../images/setup-wizard/Wizard06-Memory.png)
+![image](../images/Setup-Wizard/Wizard06-Memory.png)
 
 Click "AAPS Directory". This opens the filesystem on your phone and allows you to choose where you want AAPS to store its information.
 
-![AAPS Directory](../images/setup-wizard/Wizard07.png)
+![AAPS Directory](../images/Setup-Wizard/Wizard07.png)
 
 ```{tip}
 Choosing the default AAPS directory is recommended.</br>
@@ -150,15 +150,15 @@ Do **not** select a subdirectory of AAPS.
 
 The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, and choose "Use this folder": 
 
-![Select folder](../images/setup-wizard/Wizard07-Folder.png)
+![Select folder](../images/Setup-Wizard/Wizard07-Folder.png)
 
 Confirm that you wish to grant access to **AAPS** to the selected directory:
 
-![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
+![Select folder](../images/Setup-Wizard/Wizard07-Confirm.png)
 
 Click the "NEXT" button:
 
-![Finish Permissions](../images/setup-wizard/Wizard08.png)
+![Finish Permissions](../images/Setup-Wizard/Wizard08.png)
 
 ### Location
 
@@ -168,27 +168,27 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 Click the first "ASK FOR PERMISSION" button:
 
-![Allow Location](../images/setup-wizard/Wizard09.png)
+![Allow Location](../images/Setup-Wizard/Wizard09.png)
 
 This is important. Otherwise **AAPS** can not work properly at all.
 
 Click "While using the app":
 
-![Location](../images/setup-wizard/Wizard09-location.png)
+![Location](../images/Setup-Wizard/Wizard09-location.png)
 
 Click the second "ASK FOR PERMISSION" button:
 
-![Location 2](../images/setup-wizard/Wizard10.png)
+![Location 2](../images/Setup-Wizard/Wizard10.png)
 
 Select "Allow all the time".
 
-![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
+![Location all the time](../images/Setup-Wizard/Wizard10-allthetime.png)
 
 
 
 Click the "NEXT" button:
 
-![Location 2](../images/setup-wizard/Wizard11.png)
+![Location 2](../images/Setup-Wizard/Wizard11.png)
 
 ## Master password
 
@@ -198,7 +198,7 @@ The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD
 
 After filling in the password twice, please click the "NEXT" button:
 
-![Password](../images/setup-wizard/Wizard12.png)
+![Password](../images/Setup-Wizard/Wizard12.png)
 
 ### Import settings
 
@@ -216,13 +216,13 @@ Tap NEXT if you don't want to restore them now.
 
 Tap RESTORE SETTINGS to select which file to restore, then NEXT.
 
-![Settings](../images/setup-wizard/Wizard12b.png)
+![Settings](../images/Setup-Wizard/Wizard12b.png)
 
 ## Units (mg/dL <-> mmol/L)
 
 Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
 
-![Units](../images/setup-wizard/Wizard13.png)
+![Units](../images/Setup-Wizard/Wizard13.png)
 
 ## Display settings
 
@@ -236,7 +236,7 @@ Your range to analyze TIR (time in range) is configured separately in your repor
 
 Please press the "NEXT" button:
 
-![Range](../images/setup-wizard/Wizard14.png)
+![Range](../images/Setup-Wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## Synchronization with the reporting server and more
@@ -260,19 +260,19 @@ For Tidepool it is even simpler, as you only need your personal login informatio
 
 After making your selection, please press the cogwheel button next to the item you selected :
 
-![Synchronization](../images/setup-wizard/Wizard15.png)
+![Synchronization](../images/Setup-Wizard/Wizard15.png)
 
 Here you are configuring the Nightscout reporting server.
 
 Please click on "Nightscout URL":
 
-![NSClient](../images/setup-wizard/Wizard16.png)
+![NSClient](../images/Setup-Wizard/Wizard16.png)
 
 Enter you Nightscout URL which is your personal Nightscout server. It's just an URL you setup yourself, or you were given from your service provider for Nightscout.
 
 Please click the "OK" button:
 
-![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
+![NSClient ULR](../images/Setup-Wizard/Wizard16-URL.png)
 
 Enter your Nightscout access token. This is the access token for your Nightscout server you configured. Without this token, access will not work.
 
@@ -280,18 +280,18 @@ If you don't have it at the moment please check the documentation for setting up
 
 After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
 
-![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
+![NSClient Token](../images/Setup-Wizard/Wizard16-Token.png)
 
 Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
 
 If you have stored profiles on Nightscout and want to download them to **AAPS**, enable "Receive profile store":
 
-![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
+![Syncronization](../images/Setup-Wizard/Wizard16-Sync.png)
 
 
 Go back to the previous screen and select "Alarm option":
 
-![Alarms](../images/setup-wizard/Wizard16-Alarm.png)
+![Alarms](../images/Setup-Wizard/Wizard16-Alarm.png)
 
 For now, leave the switches disabled. We only walked to the screen to make you familiar with possible options you might configure in the future. At the moment there is no need to do it.
 
@@ -307,7 +307,7 @@ If in doubt, just leave all enabled.
 
 Go back to the screen before and select "Advanced Settings".
 
-![Connection](../images/setup-wizard/Wizard16-Connect.png)
+![Connection](../images/Setup-Wizard/Wizard16-Connect.png)
 
 Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver. 
 
@@ -319,7 +319,7 @@ Leave "Slow down uploads" disabled. You would only use it in unusual circumstanc
 
 Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
-![image](../images/setup-wizard/Wizard16-App.png)
+![image](../images/Setup-Wizard/Wizard16-App.png)
 
 ## Patient name
 
@@ -331,7 +331,7 @@ To keep it simple just enter first name and last name.
 
 Press "NEXT" to go to the next screen.
 
-![Name](../images/setup-wizard/Wizard17.png)
+![Name](../images/Setup-Wizard/Wizard17.png)
 
 ## Patient type
 
@@ -343,7 +343,7 @@ The second limit is similar in concept, but relates to the max carbohydrate inta
 
 After setting these values, press "NEXT" to go to the next screen:
 
-![Patient](../images/setup-wizard/Wizard18.png)
+![Patient](../images/Setup-Wizard/Wizard18.png)
 
 ## Used insulin
 
@@ -358,7 +358,7 @@ For advanced users or medical studies there is the possibility to define with "F
 
 Press "NEXT" to go to the next screen:
 
-![Insulin](../images/setup-wizard/Wizard19.png)
+![Insulin](../images/Setup-Wizard/Wizard19.png)
 
 
 ## Blood sugar source
@@ -368,14 +368,14 @@ Select the BG source you are using. Please read the documentation for your [BG s
 As there are several options available, we don't explain the configuration for all of them here. We are using xDrip+ in our example here:
 
 
-![BG Source](../images/setup-wizard/Wizard20.png)
+![BG Source](../images/Setup-Wizard/Wizard20.png)
 
 
 Enable the visibility in the top level menu by clicking the check box on the right side.
 
 After making your selection, press "NEXT" to go to the next screen:
 
-![Select BG](../images/setup-wizard/Wizard20-Set.png)
+![Select BG](../images/Setup-Wizard/Wizard20-Set.png)
 
 
 Click on the cogwheel button to access the settings.
@@ -384,7 +384,7 @@ Enable the "Upload BG data to NS" and "Log sensor change to NS".
 
 Go back and press "NEXT" to go to the next screen:
 
-![Upload](../images/setup-wizard/Wizard20-Upload.png)
+![Upload](../images/Setup-Wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
 ## Profile
@@ -404,7 +404,7 @@ If a robot has an incorrect input it will fail - consistently. **AAPS** can only
 
 Press "NEXT" to go to the next screen. Enter a "profile name":
 
-![image](../images/setup-wizard/Wizard21.png)
+![image](../images/Setup-Wizard/Wizard21.png)
 
 
 You can have several profiles in the long-term if needed. We only create one here.
@@ -420,20 +420,20 @@ Don't use it for actually looping!
 
 Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Then press "IC":
 
-![DIA](../images/setup-wizard/Wizard21-Name.png)
+![DIA](../images/Setup-Wizard/Wizard21-Name.png)
 
 Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
-![IC](../images/setup-wizard/Wizard21-IC.png)
+![IC](../images/Setup-Wizard/Wizard21-IC.png)
 
 Press "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
-![ISF](../images/setup-wizard/Wizard21-ISF.png)
+![ISF](../images/Setup-Wizard/Wizard21-ISF.png)
 
 
 Press "BAS". Enter your [basal values](#your-aaps-profile-basal-rates):
 
-![image](../images/setup-wizard/Wizard21-Basal.png)
+![image](../images/Setup-Wizard/Wizard21-Basal.png)
 
 
 Press "TARG". Enter your blood sugar target values.
@@ -444,11 +444,11 @@ Later, for closed looping, you will generally have only one value for top and bo
 
 Enter/confirm the target values: 
 
-![Target](../images/setup-wizard/Wizard22.png)
+![Target](../images/Setup-Wizard/Wizard22.png)
 
 Save the profile by clicking on "SAVE":
 
-![Save](../images/setup-wizard/Wizard22-Save.png)
+![Save](../images/Setup-Wizard/Wizard22-Save.png)
 
 
 After saving, a new button "Activate Profile" appears.
@@ -460,7 +460,7 @@ You can have several profiles defined, but only one activated profile running at
 
 Press "Activate Profile":
 
-![image](../images/setup-wizard/Wizard22-Activate.png)
+![image](../images/Setup-Wizard/Wizard22-Activate.png)
 
 
 
@@ -477,7 +477,7 @@ You will learn later how to use this general dialog to handle situations like il
 Press "OK":
 
 
-![Switch](../images/setup-wizard/Wizard22-Switch.png)
+![Switch](../images/Setup-Wizard/Wizard22-Switch.png)
 
 
 
@@ -485,11 +485,11 @@ A confirmation dialog for the profile switch appears.
 
 You can confirm it with pressing "OK". Press "NEXT" to go to the next screen:
 
-![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
+![Ok](../images/Setup-Wizard/Wizard22-SwitchOk.png)
 
 Your profile has now been set:
 
-![Info](../images/setup-wizard/Wizard22-Info.png)
+![Info](../images/Setup-Wizard/Wizard22-Info.png)
 
 
 ## Insulin pump
@@ -508,16 +508,16 @@ Please read the documentation for your [insulin pump](../Getting-Started/Compati
 
 Press "NEXT" to go to the next screen.
 
-![Pump Warning](../images/setup-wizard/Wizard23.png)
+![Pump Warning](../images/Setup-Wizard/Wizard23.png)
 
 Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: AAPS requires Bluetooth permission. This will be addressed after you complete the Wizard.
 
-![Bluetooth Warning](../images/setup-wizard/Wizard23b.png)
+![Bluetooth Warning](../images/Setup-Wizard/Wizard23b.png)
 
 
 In this case we select "Virtual Pump".
 
-![Pump](../images/setup-wizard/Wizard23-Pump.png)
+![Pump](../images/Setup-Wizard/Wizard23-Pump.png)
 
 ## APS algorithm
 
@@ -532,7 +532,7 @@ OpenAPS AMA is the most basic algorithm which does not support micro boluses to 
 
 Press the cogwheel to see the details:
 
-![APS](../images/setup-wizard/Wizard24.png)
+![APS](../images/Setup-Wizard/Wizard24.png)
 
 
 Only read the text and change nothing here.
@@ -541,7 +541,7 @@ Due to the limitations which are imposed by the **Objectives** you can't use eit
 
 Go back and press "NEXT" to go to the next screen:
 
-![Settings](../images/setup-wizard/Wizard24-Settings.png)
+![Settings](../images/Setup-Wizard/Wizard24-Settings.png)
 
 ## Sensitivity detection
 
@@ -549,7 +549,7 @@ Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 Press "NEXT" to go to the next screen:
 
-![Sensitivity](../images/setup-wizard/Wizard25.png)
+![Sensitivity](../images/Setup-Wizard/Wizard25.png)
 
 ## Start Objective 1
 
@@ -561,13 +561,13 @@ But this is the start.
 
 Press the green "START" to to start objective 1:
 
-![Objectives](../images/setup-wizard/Wizard26.png)
+![Objectives](../images/Setup-Wizard/Wizard26.png)
 
 You see that you already made some progress, but other areas are to be done.
 
 Press "FINISH" to go to the next screen.
 
-![Done](../images/setup-wizard/Wizard26-Started.png)
+![Done](../images/Setup-Wizard/Wizard26-Started.png)
 
 You are coming to the home screen of **AAPS**.
 
@@ -577,7 +577,7 @@ This was done when we switched to our new profile.
 
 You can click "SNOOZE" and it will disappear.
 
-![image](../images/setup-wizard/Wizard26-Done.png)
+![image](../images/Setup-Wizard/Wizard26-Done.png)
 
 If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually. 
 
@@ -585,14 +585,14 @@ If you accidentally leave the Setup Wizard at any point, you can either simply r
 
 From the top right menu, select Exit to force AAPS to restart.
 
-![Restart](../images/setup-wizard/Wizard27.png)
+![Restart](../images/Setup-Wizard/Wizard27.png)
 
 If you selected a Bluetooth connected pump, you will now see the permission request:
 
-![Bluetooth Request](../images/setup-wizard/Wizard28.png)
+![Bluetooth Request](../images/Setup-Wizard/Wizard28.png)
 
 Allow AAPS to connect to nearby devices.
 
-![Bluetooth Request](../images/setup-wizard/Wizard28b.png)
+![Bluetooth Request](../images/Setup-Wizard/Wizard28b.png)
 
 If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).

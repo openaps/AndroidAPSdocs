@@ -55,7 +55,7 @@ These Authenticator apps produce a time-limited, one-time 6-digit password, simi
 
 On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phone** are allowed.
 
-![image](../images/remote-control-08.png)
+![image](../images/remote_control_and_following/remote-control-08.png)
 
 ### Date and time syncing
 
@@ -75,7 +75,7 @@ Go to the Preferences for SMS Communicator.
 
 Enable “allow remote commands via SMS”:
 
-![image](../images/remote-control-11.png)
+![image](../images/remote_control_and_following/remote-control-11.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Allowed phone numbers
@@ -90,7 +90,7 @@ Note that the “+” in front of the number may or may not be required based on
 
 If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select “OK”:
 
-![image](../images/remote-control-12.png)
+![image](../images/remote_control_and_following/remote-control-12.png)
 
 #### Minutes between bolus commands
 
@@ -107,7 +107,7 @@ PIN requirements are:
 * not the same digits (_i.e._ 1111 or 1224)
 * not sequential numbers (_i.e._ 1234)
 
-![image](../images/remote-control-13.png)
+![image](../images/remote_control_and_following/remote-control-13.png)
 
 #### Authenticator setup
 
@@ -123,7 +123,7 @@ Example:
 
 If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
 
-![image](../images/remote-control-14.png)
+![image](../images/remote_control_and_following/remote-control-14.png)
 
 You should now be set up with SMS commands.
 
@@ -135,7 +135,7 @@ Use button "Authenticator setup > Reset Authenticators" if you want to remove pr
 
 1)	To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
 
-![image](../images/remote-control-15.png)
+![image](../images/remote_control_and_following/remote-control-15.png)
 
 If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
 
@@ -143,7 +143,7 @@ If you don't receive any response, check the [Troubleshooting](#SMSCommands-trou
 
 When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
 
-![image](../images/remote-control-16.png)
+![image](../images/remote_control_and_following/remote-control-16.png)
 
 The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully. 
 
@@ -181,11 +181,11 @@ The **SMS Commands Tables** below show all the possible SMS commands. _Example v
 
 Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
 
-![image](../images/remote-control-06.png)
+![image](../images/remote_control_and_following/remote-control-06.png)
 
 Commands which need more security require a code to be entered, for example:
 
-![SMS authenticated for markdown-smaller](../images/remote-control-07.png)
+![SMS authenticated for markdown-smaller](../images/remote_control_and_following/remote-control-07.png)
 
 The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
 
@@ -325,7 +325,7 @@ There are several possible reasons the command may not be successful:
 
 Common errors are shown in the examples below:
 
-![image](../images/remote-control-17.png)
+![image](../images/remote_control_and_following/remote-control-17.png)
 
 ### How can I stop a command once it has been authenticated?
 

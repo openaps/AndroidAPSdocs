@@ -47,8 +47,8 @@ If no additional communication device is mentioned, the communication between in
 
 For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
-- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
-- ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![OrangeLink](../images/pump/eros/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+- ![RileyLink](../images/pump/eros/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
+- ![EmaLink](../images/pump/eros/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/pump/eros/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/pump/eros/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested

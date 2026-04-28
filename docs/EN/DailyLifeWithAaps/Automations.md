@@ -34,11 +34,11 @@ The example below illustrates how an **Automation** can enable steps to be elimi
 
 User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
 
-![Alt text](../images/automation_2024-02-12_20-54-50.png)
+![Alt text](../images/Automations/automation_2024-02-12_20-54-50.png)
 
 The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
-![Alt text](../images/automation_2024-02-12_20-54-49.png)
+![Alt text](../images/Automations/automation_2024-02-12_20-54-49.png)
 
 ## Key considerations before starting with Automations
 
@@ -66,31 +66,31 @@ Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) 
 
 To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
 
-![Automation create](../images/automation_create.png)
+![Automation create](../images/Automations/automation_create.png)
 
 * give your ‘rule’ a title;
 * select at least one ‘Condition’;
 
-![Automation condition](../images/automation_condition.png)
+![Automation condition](../images/Automations/automation_condition.png)
 
 * select one ‘Action’;
 
-![Automation action](../images/automation_action.png)
+![Automation action](../images/Automations/automation_action.png)
 
 * check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
 
-![Automation](../images/automation_2024-10-26_17-48-05.png)
+![Automation](../images/Automations/automation_2024-10-26_17-48-05.png)
 
 
 
 To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
 
-![Alt text](../images/automation_2024-02-12_20-56-08.png)
+![Alt text](../images/Automations/automation_2024-02-12_20-56-08.png)
 
 
 When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
 
-![Alt text](../images/automation_2024-02-12_20-55-05.png)
+![Alt text](../images/Automations/automation_2024-02-12_20-55-05.png)
 
 ```{admonition} Important note
 :class: note
@@ -117,7 +117,7 @@ Please be careful when selecting a negative value in **Automation**
 
 Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
 
-![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_20-56-25.png-500x.png)
 
 **Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
 
@@ -132,7 +132,7 @@ It is important to carefully consider the exact intention of your **Automation**
 (automations-automation-triggers)=
 ## Automation Triggers
 
-![Automation Triggers](../images/automation_triggers.png)
+![Automation Triggers](../images/Automations/automation_triggers.png)
 
 There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
 
@@ -182,7 +182,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 (automations-automation-action)=
 ## Action
 
-![Automation Actions](../images/automation_actions.png)
+![Automation Actions](../images/Automations/automation_actions.png)
 
 **Actions:** start **Temp Target**
 
@@ -206,24 +206,24 @@ none
 
 Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
 
-![Alt text](../images/automation_2024-02-12_20-57-07.png)
+![Alt text](../images/Automations/automation_2024-02-12_20-57-07.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters 
  **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_20-57-48.png-500x.png)
 
 To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
 
-![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_20-58-00.png-500x.png)
 
 ## How to delete Automation rules
 
 To delete an **Automation** rule click on the trash icon.
 
-![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_20-58-26.png-500x.png)
 
 ## Examples of Automations
 
@@ -233,11 +233,11 @@ Below are examples of **Automations**. Further discussion on **Automations** and
 
 This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG** is at a certain threshold. 
 
-![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_21-04-01.png-500x.png)
 
 ### Lunch Time Temp Target (with ‘Location’)
 
-![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_21-04-25.png-500x.png)
 
 This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will be activated.
 
@@ -245,7 +245,7 @@ This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to dri
 
 The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
 
-![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_21-04-40.png-500x.png)
 
 Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location. 
 
@@ -265,7 +265,7 @@ and while being connected to a home wifi network (3).
 It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). 
 One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance. 
 
-![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_21-05-02.png-500x.png)
 
 Here is the screenshot detailing the **Automation** triggers:
 
@@ -273,7 +273,7 @@ Here is the screenshot detailing the **Automation** triggers:
 1) Recurring time = M,T,W,T,F At 5:30am  
 1) WIFI SSID = My_Home_WiFi_Name
 
-![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_21-05-16.png-500x.png)
 
 (automating-preference-settings-export)=
 
@@ -326,7 +326,7 @@ The **Automation** will:
 * change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
 * stop **Temp Target** (if any)
 
-![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_21-05-56.png-500x.png)
 
 ## Troubleshooting
 
@@ -336,7 +336,7 @@ Check the box to the right of **Automation** event is ‘ticked’ to ensure the
 
 ## Troubleshooting
 
-![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
+![Alt text](../images/Automations/automation_2024-02-12_21-06-12.png-500x.png)
 
 * Problem: __My automations are being triggered in the wrong order.__
 

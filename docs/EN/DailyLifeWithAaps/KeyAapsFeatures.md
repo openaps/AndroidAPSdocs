@@ -8,7 +8,7 @@ The loop status is shown on the main screen with one of the icons below.
 
 See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Loop status](../images/Home-Screen/Home2020_LoopStatus.png)
 
 (KeyAapsFeatures-OpenLoop)=
 ### Open Loop
@@ -148,7 +148,7 @@ If this option is enabled, the sensitivity detection (autosens) can raise the ta
 
 If the target is modified due to sensitivity detection, it will be displayed with a green background on your home screen.
 
-![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
+![Target modified by autosens](../images/Home-Screen/Home2020_DynamicTargetAdjustment.png)
 
 This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
 
@@ -237,7 +237,7 @@ Carb required notifications can be pushed to Nightscout if wished, in which case
 
 In any case, the required carbs will be displayed in the COB section on your home screen.
 
-![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
+![Display carbs required on home screen](../images/Preferences/Pref2020_CarbsRequired.png)
 
 ### Advanced Settings
 
