@@ -68,6 +68,7 @@ pre code {
 .rst-content .hint .admonition-title,
 .rst-content .seealso .admonition-title {
   margin: -1px -1px 0 -1px;
+  margin-bottom: 0.5em;
   padding: 0.6rem 0.9rem;
   border-bottom: 1px solid #e5e7eb;
   background: #64748b;
