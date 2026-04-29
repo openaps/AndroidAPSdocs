@@ -122,9 +122,9 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ![Preferințe > Vedere de ansamblu](../images/Pref2020_OverviewII.png)
 
-### Keep screen on
+### Mențineți ecranul aprins
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Opțiunea „Păstrați ecranul aprins” va forța Android să mențină ecranul aprins în orice moment. Acest lucru este folositor pentru prezentări șamd. Dar consumă repede bateria. Therefore, it is recommended to connect the smartphone to a charger cable.
 
 (Preferences-buttons)=
 ### Butoane
