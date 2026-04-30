@@ -41,66 +41,66 @@ Această aplicație face parte dintr-o soluție DIY (do-it-yourself/ o aplicați
 
 ## Instalare
 
-CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. e.g. active PDM and Medtrum app. Make sure you have your pumpbase and pumpbase SN ready for activation of a new patch.
+CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. spre exemplu telecomandă activă și aplicație Medtrum. Asigurați-vă că aveți baza pompei dumneavoastră și numărul de serie al bazei pompei pregătit pentru activarea unui nou plasture.
 
-### Step 1: Select Medtrum pump
+### Pasul 1: Selectați pompa Medtrum
 
 #### Opțiunea 1: Instalări noi
 
-If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
+Dacă instalați AAPS pentru prima dată, **Asistentul de configurare** vă va ghida în instalarea AAPS. Selectați "Medtrum" când ajungeți la selecția pompei.
 
-If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+Dacă aveți dubii puteți selecta "Pompa virtuală" și selecta "Medtrum" mai târziu, după ce ați configurat AAPS (vedeți opțiunea 2).
 
-![Setup Wizard](../images/medtrum/SetupWizard.png)
+![Asistent de configurare](../images/medtrum/SetupWizard.png)
 
 #### Opțiunea 2: Configurator
 
-On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
+Pe o instalare existentă, puteți selecta pompa **Medtrum** în [Configurator > Pompa](#Config-Builder-pump):
 
-On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
+În colțul din stânga sus **meniu hamburger** selectați **Configurator**\ ➜\ **Pompă**\ ➜ \ **Medtrum**\ prin selectarea butonului **Activare** intitulat **Medtrum**.
 
-Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+Selectarea **casetei de selectare** lângă **Roata Zimțată de Setări** va permite privirii de ansamblu asupra Medtrum să fie afișată ca o filă în interfața AAPS intitulată **Medtrum**. Bifarea acestei casete vă va facilita accesul la comenzile Medtrum atunci când folosiți AAPS și este recomandată în mod special.
 
 ![Configurarea Sistemului (Config Builder)](../images/medtrum/ConfigBuilder.png)
 
-### Step 2: Change Medtrum settings
+### Pasul 2: Modificați setările Medtrum
 
-Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
+Introduceți setările Medtrum prin atingerea **Rotiței zimțate a Setărilor** din modulul Medtrum în Configurator.
 
-![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
+![Setări Medtrum](../images/medtrum/MedtrumSettings.png)
 
-#### Serial Number:
+#### Număr de serie:
 
-Enter the serial number of your pumpbase here as noted on the pumpbase. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase).
+Introduceți aici numărul de serie al bazei pompei dumneavoastră așa cum este înscris pe baza pompei. Asigurați-vă că numărul de serie este corect și că nu există spații adăugate (puteți folosi litere mari sau mici).
 
-NOTE: This setting can only be changed when there is no patch active.
+NOTĂ: Această setare poate fi schimbată doar când nu există un plasture activ.
 
-#### Alarm settings
+#### Setări alarmă
 
-***Default: Beep.***
+***Implicit: semnal sonor.***
 
-This setting changes the way that the pump will alert you when there is a warning or error.
+Această setare schimbă modul în care pompa vă va alerta atunci când există un avertisment sau o eroare.
 
-- Beep > The patch will beep on alarms and warnings
-- Silent > The patch will not alert you on alarms and warnings
+- Semnal sonor > Plasturele va suna la alarme și avertismente
+- Silențios > Plasturele nu vă va alerta prin alarme și avertismente
 
-Note: In silent mode AAPS will still sound the alarm depending on your phone's volume settings. If you do not respond to the alarm, the patch will eventually beep.
+Notă: În modul silențios, AAPS încă va suna alarma în funcție de setările de volum ale telefonului. Dacă nu răspundeți la alarmă, în cele din urmă plasturele va emite un semnal sonor.
 
-#### Notification on pump warning
+#### Notificare la avertizarea pompei
 
-***Default: Enabled.***
+***Implicit: Activat.***
 
-This settings changes the way AAPS will show notification on non critical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
-    - Low battery
-    - Low reservoir (20 Units)
-    - Patch expiration warning
+Aceste setări schimbă modul în care AAPS va afișa notificarea în cazul avertismentelor non-critice ale pompei. Când este activată, o notificare va fi afișată pe telefon atunci când apare un avertisment al pompei, inclusiv:
+    - Baterie slabă
+    - Rezervor redus (20 de unități)
+    - Avertizare de expirare a plasturelui
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
+În orice caz, aceste avertismente sunt afișate și în ecranul privire de ansamblu al Medtrum sub [Alarme active](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
-#### Patch Expiration
+#### Expirare plasture
 
-***Default: Enabled.***
+***Implicit: Activat.***
 
 This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
 
@@ -162,7 +162,7 @@ Go to preferences and select **Local Alerts**:
 
 ##### Alert if pump is unreachable
 
-***Default: Enabled.***
+***Implicit: Activat.***
 
 This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
 
