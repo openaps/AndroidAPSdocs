@@ -341,7 +341,7 @@ There are times when it might be appropriate to use a passive.
 
 A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
 
-For example:
+Spre exemplu:
 
 | Verb      | Nominalization |
 | --------- | -------------- |
