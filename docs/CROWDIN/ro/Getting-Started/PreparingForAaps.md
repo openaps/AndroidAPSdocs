@@ -1,6 +1,6 @@
 # Preparing to start with AAPS
 
-Welcome. This documentation aims to guide users who are preparing to setup and start using the Android Artificial Pancreas System (**AAPS**).
+Bine ați venit. This documentation aims to guide users who are preparing to setup and start using the Android Artificial Pancreas System (**AAPS**).
 
 ## Finding your way around the documentation
 
@@ -97,49 +97,49 @@ A “keystore” (.jks file) is a password encrypted file unique to your own cop
 
 1.  Save the your keystore file (.jks file used to sign your app) in a safe place;
 
-2.  Keep a note of your password for your keystore file.
+2.  Păstrați o copie cu privire la parola dumneavoastră pentru fișierul cheie.
 
 
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
+Acest lucru va asigura că puteți utiliza exact același fișier cheie de fiecare dată când este creată o versiune actualizată de **AAPS**. În medie, vor fi 2 actualizări **AAPS** necesare în fiecare an.
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+În plus, <0>AAPS</0> oferă posibilitatea de a <1>exporta toate setările de configurare</1>. Acest lucru vă asigură că puteți recupera în siguranță sistemul în timp ce schimbați telefoanele, actualizați/reinstalați aplicația cu întrerupere minimă. 
 
 #### Depanare
 
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
+Vă rugăm să nu ezitați să contactați comunitatea AAPS dacă există ceva de care vă simțiți nesigur - nu există nicio întrebare prostească! Toți utilizatorii cu diferite niveluri de experiență sunt încurajați să pună întrebări. Timpul de răspuns la întrebări este de obicei rapid, datorită numărului de utilizatori <0>AAPS</0>.
 
-##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
+##### [întrebați pe grupul de Facebook AAPS](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
-
-
+##### [întrebați pe canalul Discord AAPS](https://discord.gg/4fQUWHZ4Mw)
 
 
 
-#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
-
-This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
-
-#### [Section For Clinicians](../UsefulLinks/ClinicianGuideToAaps.md)
-
-This is a [section specifically for clinicians](../UsefulLinks/ClinicianGuideToAaps.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
-
-## What are we going to build and install?
-
-This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
-
-![preparing_overview](../images/preparing_images/AAPS_preparing_overview_01.png)
 
 
-In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 1) The **AAPS** app 2) A reporting server and 3) A continuous glucose monitor (CGM) app
+#### [Unde să mergeți pentru ajutor](../UsefulLinks/BackgroundReading.md)?
 
-### 1) An Android Phone Application: **AAPS**
+Scopul acestei secțiuni este de a oferi noilor utilizatori legături în ceea ce privește resursele pentru a obține ajutor, inclusiv accesul la asistență comunitară, alcătuită atât din utilizatori noi, cât și din utilizatori experimentați, care pot clarifica întrebările, și să rezolvați capcanele obișnuite care vin cu AAPS.
 
-**AAPS** is an app that runs on android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. You will then transfer the **AAPS** app across to your smartphone (by email, USB cable _etc._) and install it.
+#### [Secțiune pentru medici](../UsefulLinks/ClinicianGuideToAaps.md)
 
-### 2) A reporting server: NightScout (Tidepool*)
+Aceasta este o secțiune [specifică pentru medici](../UsefulLinks/ClinicianGuideToAaps.md) care vor să afle mai multe despre AAPS și tehnologia de pancreas artificial cu sursă deschisă. Există, de asemenea, instrucțiuni despre [cum să vorbiți cu echipa dumneavoastră clinică](#introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) în Introducere.
 
-In order to fully take advantage of **AAPS**, you need to setup a Nightscout server. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyse your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene.  Tidepool is also available as an alternative to Nightscout, for AAPS versions 3.2 and later.
+## Ce urmează să construim și să instalăm?
+
+Această diagramă oferă o imagine de ansamblu a componentelor cheie (atât hardware cât și software) ale sistemului <0>AAPS</0>:
+
+![prezentare_generală](../images/preparing_images/AAPS_preparing_overview_01.png)
+
+
+Pe lângă cele trei componente hardware de bază (telefon, pompă, senzor de glicemie), mai avem nevoie de: 1) Aplicația **AAPS** 2) Un server de raportare și 3) Aplicația senzorului de monitorizare continuă a glicemiei (CGM)
+
+### 1) O aplicație pentru telefonul Android: **AAPS**
+
+**AAPS** este o aplicație care rulează pe telefoane inteligente & dispozitive. Veți construi chiar dumneavoastră aplicația **AAPS** (un fișier apk), prin folosirea unui ghid pas cu pas, descărcarea codului sursă **AAPS** din GitHub, instalarea programelor necesare (Android Studio, GitHub desktop) pe calculator și construirea propriei dumneavoastră copii de **AAPS**. Apoi veți transfera aplicația **AAPS** direct pe telefonul inteligent (prin e-mail, cablu USB _șamd_) și veți instala-o.
+
+### 2) Un server de raportare: NightScout (Tidepool*)
+
+Pentru a profita pe deplin de **AAPS**, trebuie să setați un server Nightscout. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyse your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene.  Tidepool is also available as an alternative to Nightscout, for AAPS versions 3.2 and later.
 
 ### 3) CGM sensor app
 
@@ -164,15 +164,15 @@ Here is an approximate timeframe:
 | ------------------------------------------------------------- |:--------------------------------:|
 | Initial reading of the documentation                          |             1-2 days             |
 | Installing/configuring PC to allow the build                  |            2-8 hours             |
-| Setting up a reporting server                                 |              1 hour              |
-| Installing a CGM app (xDrip+, BYODA, …)                       |              1 hour              |
-| Configuring CGM → xDrip+ → APPS initially                     |              1 hour              |
-| Configuring AAPS → pump initially                             |              1 hour              |
-| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
-| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |              1 hour              |
-| Objective 1: Setting up visualization and monitoring          |              1 hour              |
-| Objective 2: Learn how to control AAPS                        |              2 hour              |
-| Objective 3: Prove your knowledge                             |          Up to 14 days           |
+| Setting up a reporting server                                 |              1 oră               |
+| Installing a CGM app (xDrip+, BYODA, …)                       |              1 oră               |
+| Configuring CGM → xDrip+ → APPS initially                     |              1 oră               |
+| Configuring AAPS → pump initially                             |              1 oră               |
+| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 oră               |
+| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |              1 oră               |
+| Objective 1: Setting up visualization and monitoring          |              1 oră               |
+| Objective 2: Learn how to control AAPS                        |              2 ore               |
+| Obiectivul 3: Dovediți-vă cunoștințele                        |          Up to 14 days           |
 | Objective 4: Starting on an open loop                         |        Minimum of 7 days         |
 | Objective 5: Understanding your open loop                     |              7 days              |
 | Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
