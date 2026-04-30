@@ -331,7 +331,7 @@ To keep it simple just enter first name and last name.
 
 Press "NEXT" to go to the next screen.
 
-![Name](../images/setup-wizard/Wizard17.png)
+![Nume](../images/setup-wizard/Wizard17.png)
 
 ## Tip de pacient
 
