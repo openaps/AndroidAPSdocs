@@ -22,7 +22,7 @@ Acestea sunt specificațiile modelului **Omnipod DASH** ("DASH") și ce îl dife
 - Actualizările prea frecvente ale bazalelor pot cauza [probleme](https://github.com/nightscout/AndroidAPS/issues/4158) în administrarea insulinei bazale cu Omnipod Dash. Când se utilizează **SMB**, limitează intervalul la minim 5 minute pentru a evita această problemă.
 - Dash acceptă doar rata bazale în pași de 0,05 U/h. Dacă încercați să setați bazala cu pași de 0,01 în profilul **AAPS**, AAPS nu vă va da un avertisment, chiar dacă pompa va rotunji rata bazală în pași de 0,05. Dacă afișați Gestionare Pompă/Istoric Pompă vă va arată că s-a setat o bazală de 0,05. Acest lucru înseamnă, de asemenea, cea mai mică rată bazală permisă de DASH din **AAPS** este de 0,05U/h.
 - Starea de activare a unei pompe este stocată în fișierul de setări, dacă exportați un fișier de setări cu o pompă activă. Apoi schimbați la o nouă pompă, restabiliți setările din exportul anterior și veți fi restabilit activarea pompei vechi și veți fi eliminat activarea pompei noi. De aceea, vă recomandăm să exportați setările după fiecare activare de pompă pentru a permite o restaurare a stării de activare a pompei, dacă ceva se întâmplă cu dispozitivul dumneavoastră.
-- La setarea unui profil bazal nou, DASH va suspenda livrarea înainte de a seta noul **Profil** bazal. Dacă există o întrerupere sau o eroare de comunicare, profilul bazalei nu va reporni automat. Vedeți secțiunea [Reluarea Administrării de insulină](#omnipod-dash-resuming-insulin-delivery) pentru detalii.
+- La setarea unui profil bazal nou, DASH va suspenda administrarea înainte de a seta noul **Profil** bazal. Dacă există o întrerupere sau o eroare de comunicare, profilul bazalei nu va reporni automat. Vedeți secțiunea [Reluarea Administrării de insulină](#omnipod-dash-resuming-insulin-delivery) pentru detalii.
 - În cazul în care alertele sunt configurate, iar pompa este pe cale să expire, pompa va continua să piuie până când alertele sunt reduse la tăcere, Vedeți [Suprimarea alertelor pompei](#omnipod-dash-silencing-pod-alerts) pentru detalii.
 - Există o serie de probleme cunoscute cu Bluetooth, care pot cauza probleme de activare a pompei. Vedeți [Depanarea Bluetooth](../GettingHelp/BluetoothTroubleshooting.md) pentru problema cunoscută și soluțiile la aceste probleme.
 
@@ -128,7 +128,7 @@ Pentru a verifica dacă ați selectat DASH în **AAPS**, dacă aveți **caseta b
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. Ecranul **Umplere Pompă** este afișat. Umpleți un nouă pompă cu **cel puțin 80 unități** de insulină și ascultați două semnale sonore care indică faptul că pompa este gata de amorsare.
+2. Ecranul **Umplere Pompă** este afișat. Umpleți un nouă pompă cu **cel puțin 80 de unități** de insulină și ascultați cele două semnale sonore care indică faptul că pompa este gata de amorsare.
 
    ***NOTĂ:** La calcularea cantității totale de insulină de care aveți nevoie pentru 3 zile, vă rugăm să luați în considerare faptul că amorsarea pompei va utiliza aproximativ 3-10 unități.*
 
@@ -181,7 +181,7 @@ Pentru a verifica dacă ați selectat DASH în **AAPS**, dacă aveți **caseta b
 
 2. Meniul **Gestionare pompă** de pe ecran ar trebui să afișeze acum butonul **Activare pompă (1)** ca dezactivat și butonul ** Dezactivare pompă (2)** ca *activat*. Acest lucru se datorează faptului că o pompă este acum activă și nu puteți activa o pompă suplimentară fără a dezactiva mai întâi pompa activă.
 
-    Apăsați pe butonul înapoi de pe telefonul dumneavoastră pentru a reveni la fila **DASH**, care va afișa acum informații despre pompă pentru sesiunea activă de pompă, inclusiv rata bazală curentă, nivelul rezervorului, insulina livrată, erorile pompei și alertele.
+    Apăsați pe butonul înapoi de pe telefonul dumneavoastră pentru a reveni la fila **DASH**, care va afișa acum informații despre pompă pentru sesiunea activă de pompă, inclusiv rata bazală curentă, nivelul rezervorului, insulina administrată, erorile pompei și alertele.
 
     ***NOTĂ:** Pentru mai multe detalii despre informațiile afișate, accesați [**Fila DASH**](#omnipod-dash-tab) a acestui document.*
 
@@ -241,7 +241,7 @@ Pentru a dezactiva o pompă (fie de la expirare, fie de la o defecțiune de pomp
 
 Când administrarea insulinei este suspendată, va trebui să dați o comandă pentru a instrui pompa activă, suspendată în prezent, să reia administrarea de insulină. După procesarea cu succes a comenzii, insulina va relua administrarea normală folosind rata bazală curentă în funcție de timpul curent în baza **profilului** activ de bazală. Pompa va accepta din nou comenzi pentru bolus, **RBT**și **SMB**.
 
-1. Mergeți la fila **DASH** și asigurați-vă că câmpul **Stare pompă (1)** afișează **SUSPENDAT**, apoi apăsați butonul **RELUAȚI LIVRAREA(2)** pentru a începe procesul de instruire a pompei curente pentru reluarea administrării normale de insulină. Un mesaj **RELUAȚI LIVRAREA** va fi afișat în câmpul **Stare pompă (3)**.
+1. Mergeți la fila **DASH** și asigurați-vă că câmpul **Stare pompă (1)** afișează **SUSPENDAT**, apoi apăsați butonul **RELUAȚI administrarea(2)** pentru a începe procesul de instruire a pompei curente pentru reluarea administrării normale de insulină. Un mesaj **RELUAȚI administrarea** va fi afișat în câmpul **Stare pompă (3)**.
 
    ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH_images/Resume/Resume_2.jpg)
 
@@ -343,7 +343,7 @@ Mai jos este o explicație a aspectului și semnificației pictogramelor și a c
 
 - **Rezervor:** Afișați peste 50+U rămase atunci când mai mult de 50 de unități au rămas în rezervor. Sub 50 U, unitățile exacte sunt afișate.
 
-- **Total livrat:** Afișați numărul total de unități de insulină livrate din rezervor. Acestea includ insulina utilizată pentru activare și amorsare.
+- **Total administrat:** Afișați numărul total de unități de insulină administrate din rezervor. Acestea includ insulina utilizată pentru activare și amorsare.
 
 - **Eroare:** Afișați ultima eroare întâlnită. Revizuiți [Istoricul de pompă](#omnipod-dash-view-pod-history) și fișierele de jurnal pentru erorile anterioare și informații mai detaliate.
 
@@ -366,7 +366,7 @@ Mai jos este o explicație a aspectului și semnificației pictogramelor și a c
   - *Butonul este afișat numai atunci când timpul pompei e trecut de timpul de avertizare al expirării.*
   -  *După închiderea cu succes, această pictogramă nu va mai apărea.*
 
-![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png)    Reluați livrarea administrării curente de insulină în pompa activă.
+![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png)    Reluați administrarea administrării curente de insulină în pompa activă.
 
 
 
@@ -619,7 +619,7 @@ Un rezumat al principalelor alerte pe care este posibil să le întâlniți este
 
 - No active Pod session detected. Această alertă poate fi dezactivată temporar prin apăsarea **AMÂNAȚI** dar va continua să se declanșeze atâta timp cât o nouă pompă nu a fost activată. Once activated this alert is automatically silenced.
 - Pompă suspendată Alertă informațională că pompa a fost suspendată.
-- Setarea bazalei în **Profil** a eșuat: Administrarea ar putea fi suspendată! Reîmprospătați manual starea pompei din fila Omnipod și reluați livrarea, dacă este necesar. Alertă informativă că setarea bazalei din pompă în **Profil** a eșuat și va trebui să apăsați *Reîmprospătați* pe fila Omnipod.
+- Setarea bazalei în **Profil** a eșuat: Administrarea ar putea fi suspendată! Reîmprospătați manual starea pompei din fila Omnipod și reluați administrarea, dacă este necesar. Alertă informativă că setarea bazalei din pompă în **Profil** a eșuat și va trebui să apăsați *Reîmprospătați* pe fila Omnipod.
 - Nu s-a putut verifica dacă bolusul **SMB** a avut loc cu succes. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments. Alertă că comanda **SMB** nu a putut fi verificată cu succes, va trebui să verificați câmpul *Ultimul bolus* din fila DASH pentru a vedea dacă bolusul **SMB** a reușit și dacă nu eliminați intrarea din fila Tratamente.
 - Nu este sigur dacă "sarcina bolus/RBT/SMB" s-a finalizat; vă rugăm verificați manual dacă a avut succes.
 
@@ -631,7 +631,7 @@ Toată activitatea de dezvoltare pentru DASH este făcută de comunitate pe o ba
 
 -  **Nivelul 0:** Citiți secțiunea relevantă a acestei documentații pentru a vă asigura că înțelegeți cum ar trebui să meargă funcționalitatea cu care aveți dificultăți.
 -  **Nivelul 1:** Dacă încă întâmpinați probleme pe care nu le puteți rezolva prin intermediul acestui document, apoi vă rugăm să mergeți la canalul *#AAPS* pe **Discord** folosind [acest link de invitație](https://discord.gg/4fQUWHZ4Mw). Există, de asemenea, numeroase grupuri de Facebook și alte grupuri pe care le puteți întreba de asemenea (vedeți [**Obținerea Ajutorului**](../GettingHelp/WhereCanIGetHelp.md))
--  **Nivelul 2:** Căutați problemele existente pentru a vedea dacă problema a fost deja raportată la [Probleme](https://github.com/nightscout/AndroidAPS/issues) dacă există, vă rugăm să confirmați/comentați/adăugați informații despre problema dumneavoastră. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Nivelul 2:** Căutați problemele existente pentru a vedea dacă problema a fost deja raportată la [Probleme](https://github.com/nightscout/AndroidAPS/issues) dacă există, vă rugăm să confirmați/comentați/adăugați informații despre problema dumneavoastră. Dacă nu, vă rugăm să creați o nouă problemă [](https://github.com/nightscout/AndroidAPS/issues) și să atașați [fișierele de jurnal](../GettingHelp/AccessingLogFiles.md).
 -  **Fiți răbdători - majoritatea membrilor comunității noastre sunt voluntari bine-voitori, și rezolvarea problemelor necesită adesea timp și răbdare atât din partea utilizatorilor cât și din partea dezvoltatorilor.**
 
 Atunci când solicitați ajutor veniți pregătit cu următoarele informații pentru a-i ajuta pe cei din comunitate cu întrebările și problemele dumneavoastră specifice:
