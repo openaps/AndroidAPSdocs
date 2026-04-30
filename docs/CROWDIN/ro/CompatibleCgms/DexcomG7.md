@@ -1,46 +1,46 @@
-# Dexcom G7 and ONE+
+# Dexcom G7 și ONE+
 
 
-## Fundamental in advance
+## Elemente fundamentale în avans
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Trebuie remarcat faptul că sistemele G7 și ONE+, în comparație cu G6, nu filtrează valorile, nici în aplicație, nici în cititor. Mai multe detalii despre acest lucru [aici](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+Citiți [metoda de filtrare](../CompatibleCgms/SmoothingBloodGlucoseData.md) sugestiile pentru Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip+ (direct connection to G7 or ONE+)
+## 1. xDrip+ (conectare directă la G7 sau ONE+)
 
-- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Urmați instrucțiunile de aici: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Selectați xDrip+ în [Configurator, Sursă de glicemie](#Config-Builder-bg-source).
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+- Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+  [Setări xDrip+ ](../CompatibleCgms/xDrip.md)
 
-## 2.  Patched Dexcom G7 App (DiaKEM)
+## 2.  Aplicația Dexcom G7 modificată (DiaKEM)
 
 ```{admonition} No new users
-:class: warning
-Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
-Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
-New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+:class: avertizare
+Cele mai recente actualizări de pe servere Dexcom au stricat DiaKEM pentru instalări noi: aplicația nu mai poate trece prin procesul de autentificare și înregistrare care se întâmplă la o instalare nouă a aplicației. 
+Utilizatorii existenți nu se confruntă deocamdată cu probleme: nu deconectați, nu ștergeți datele, sau reinstalați aplicația G7 deoarece aceasta vă va împiedica să faceți aplicația să ruleze din nou. Dacă rulează deja, nu ar trebui să fiți afectat.
+Utilizatorii noi sunt recomandați să folosească [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) ca sursă de date glicemice în **AAPS** până când această problemă a fost rezolvată.
 ```
 
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
+**Notă: AAPS 3.2.0.0 sau mai mare este necesar! Nu este disponibil pentru ONE+.**
 
-### Install a new patched (!) G7 app and start the sensor
+### Instalați o nouă aplicație G7 modificată (!) și porniți senzorul
 
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+O aplicație Dexcom G7 (DiaKEM) modificată permite accesul la datele Dexcom G7. Aceasta nu este aplicația BYODA deoarece această aplicație nu poate primi date G7 în acest moment.
 
 - Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+- Descărcați și instalați patched.apk [aici](https://github.com/authorgambel/g7/releases).
 
-- Enter sensor code in the patched app.
+- Introduceți codul senzorului în aplicația modificată.
 
-- Follow the general recommendations for CGM hygiene and sensor placement found [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+- Urmați recomandările generale pentru igiena și plasarea senzorilor de glicemie găsite [aici](../CompatibleCgms/GeneralCGMRecommendation.md).
 
-- After the warm-up phase, the values are displayed as usual in the G7 app.
+- După faza de încălzire, valorile sunt afișate ca de obicei în aplicația G7.
 
 ### Configurarea în AAPS
 
@@ -54,7 +54,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 - Ca sursă de date în xDrip+ "Companion App" trebuie selectată și în Setări Avansate > Setări Bluetooth > "Companion Bluetooth" trebuie activat.
 -   Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+-   Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+  [Setări xDrip+ ](../CompatibleCgms/xDrip.md)
 
 ## 4. Juggluco
 
