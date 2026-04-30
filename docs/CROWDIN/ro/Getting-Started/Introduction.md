@@ -194,9 +194,9 @@ A rapid reduction in HbA1c and improved blood glucose control sounds appealing. 
 
 #### Medical safety around devices, consumable supplies and other medications
 
-Use a tested, fully functioning FDA or CE approved insulin pump and CGM for an artificial pancreas loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, do not use these for creating an AAPS system.
+Use a tested, fully functioning FDA or CE approved insulin pump and CGM for an artificial pancreas loop. Modificările hardware sau software ale acestor componente pot cauza dozări neașteptate de insulină, ce provoacă riscuri semnificative pentru utilizator. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, do not use these for creating an AAPS system.
 
-Use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer of your pump and CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking your supplies.
+Use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer of your pump and CGM. Utilizarea unor materiale netestate sau modificate poate cauza inexactitate CGM și erori de dozare a insulinei. Insulin is highly dangerous when misdosed - please do not play with your life by hacking your supplies.
 
 Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
