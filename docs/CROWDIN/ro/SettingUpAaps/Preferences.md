@@ -124,12 +124,12 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ### Mențineți ecranul aprins
 
-Opțiunea „Păstrați ecranul aprins” va forța Android să mențină ecranul aprins în orice moment. Acest lucru este folositor pentru prezentări șamd. Dar consumă repede bateria. Therefore, it is recommended to connect the smartphone to a charger cable.
+Opțiunea „Păstrați ecranul aprins” va forța Android să mențină ecranul aprins în orice moment. Acest lucru este folositor pentru prezentări șamd. Dar consumă repede bateria. Ca urmare e recomandabil sa conectați telefonul inteligent la un încărcător.
 
 (Preferences-buttons)=
 ### Butoane
 
-- Define which buttons are visible on the bottom of your home screen.
+- Definiți ce butoane să fie vizibile în partea de jos a ecranului principal.
 - Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![Preferințe > Butoane](../images/Pref2020_OV_Buttons.png)
