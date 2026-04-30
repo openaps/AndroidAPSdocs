@@ -69,34 +69,34 @@ După schimbarea senzorului, xDrip+ va detecta automat senzorul nou și va șter
 
 ![Opriți senzorul](../images/libre3/step_14.jpg)
 
-Notă: Când doi senzori sunt activi Juggluco va trimite cea mai recentă valoare de la senzor la xDrip+. Dacă senzorii nu sunt calibrați și citesc glicemia în mod similar, acest lucru poate duce la raportarea unor valori săltărețe ale glicemiei către xDrip+. If you terminate the wrong sensor, you can reactivate it by simply scanning the sensor.
+Notă: Când doi senzori sunt activi Juggluco va trimite cea mai recentă valoare de la senzor la xDrip+. Dacă senzorii nu sunt calibrați și citesc glicemia în mod similar, acest lucru poate duce la raportarea unor valori săltărețe ale glicemiei către xDrip+. Dacă închideți senzorul greșit, îl puteți reactiva prin simpla scanare a senzorului.
 
-## Switch sensor between Libre 3 and Juggluco app
+## Comutați senzorul între aplicațiile Libre 3 și Juggluco
 
-Dacă senzorul a fost pornit cu un cont Libreview conectat, este de asemenea posibilă comutarea între Juggluco și aplicația Libre 3 ca destinatar. This requires the following steps:
+Dacă senzorul a fost pornit cu un cont Libreview conectat, este de asemenea posibilă comutarea între Juggluco și aplicația Libre 3 ca destinatar. Acest lucru necesită următorii pași:
 
-1. Install the Libre 3 app from Google Playstore
-2. Set up the Libre 3 app with the Libreview account with which the sensor was activated.
-3. Force stop the Juggluco app in the Android settings.
-4. In the Libre 3 menu, click "Start Sensor", select "Yes", "Next" and scan your sensor.
-5. After some minutes, the BG-Values should be visible within Libre 3 App.
+1. Instalați aplicația Libre 3 din Google Playstore
+2. Configurați aplicația Libre 3 cu contul Libreview cu care a fost activat senzorul.
+3. Opriți forțat aplicația Juggluco în setările Android.
+4. În meniul Libre 3, faceți clic pe "Start Senzor", selectați "Da", "Următorul" și scanați senzorul dumneavoastră.
+5. După câteva minute, valorile glicemiei trebuie să fie vizibile în aplicația Libre 3.
 
-In order to switch from the Libre 3 app to Juggluco, you need to force-stop Libre 3 app via Android settings and proceed with Step 1 & 2.
+Pentru a trece de la aplicația Libre 3 la Juggluco, trebuie să opriți forțat aplicația Libre 3 din setările Android și să treceți la Pasul 1 & 2.
 
 (libre3-experiences-and-troubleshooting)=
-## Experiences and Troubleshooting
+## Experiențe și depanări
 
-### Troubleshooting Libre3 -> Juggluco Connection
+### Depanarea Libre3 -> Conexiune Juggluco
 
-- Make sure you are using a current version of the Juggluco app
-- Check your settings according to this guide
-- You may sometimes have to force stop the Libre 3 app and Juggluco and restart it.
-- Disable Bluetooth and enable it again
-- Wait some time or try to close Juggluco
-- Older versions of Juggluco (below 2.9.6) do not send subsequent data from the Libre3 sensor to connected devices (e.g. Juggluco on WearOS). You may need to click "Resend data" in the patched Libre3 app (Juggluco menu).
+- Asigurați-vă că folosiți o versiune curentă a aplicației Juggluco
+- Verificați setările în conformitate cu acest ghid
+- Uneori ar trebui să forțați oprirea aplicației Libre 3 și Juggluco și repornirea acesteia.
+- Dezactivați Bluetooth și activați-l din nou
+- Așteptați ceva timp sau încercați să închideți Juggluco
+- Versiunile mai vechi de Juggluco (sub 2.9.6) nu trimit date ulterioare de la senzorul Libre3 la dispozitive conectate (spre exemplu Juggluco pe WearOS). Este posibil să fie nevoie să apăsați pe "Retrimiteți datele" în aplicația Libre3 modificată (meniul Juggluco).
 
-### Further help
+### Asistență suplimentară
 
-Original instructions: [jkaltes website](https://www.juggluco.nl/Juggluco/libre3/)
+Instrucțiuni originale: [jkaltes website](https://www.juggluco.nl/Juggluco/libre3/)
 
-Additional Github repo: [Github link](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Depozitul suplimentar Github: [Link Github](https://github.com/maheini/FreeStyle-Libre-3-patch)
