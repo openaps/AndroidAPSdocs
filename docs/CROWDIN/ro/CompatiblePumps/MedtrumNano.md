@@ -102,31 +102,31 @@ Aceste setări schimbă modul în care AAPS va afișa notificarea în cazul aver
 
 ***Implicit: Activat.***
 
-This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
+Această setare schimbă comportamentul plasturelui. Când este activat, plasturele va expira după 3 zile și va emite un avertisment sonor dacă aveți sunetul activat. După 3 zile și 8 ore, plasturele va înceta să funcționeze.
 
-If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
+Dacă această setare este dezactivată, plasturele nu vă va avertiza și va continua să ruleze până când bateria plasturelui sau rezervorul se vor termina.
 
-#### Pump expiry warning
+#### Avertizare de expirare pompă
 
-***Default: 72 hours.***
+***Implicit: 72 de ore.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Această setare schimbă ora de expirare când [Expirare plasture](#medtrum-patch-expiration) este activată, AAPS va notifica la o oră după activare.
 
-#### Hourly Maximum Insulin
+#### Insulină maximă pe oră
 
-***Default: 25U.***
+***Implicit: 25U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+Această setare modifică cantitatea maximă de insulină care poate fi administrată într-o oră. Dacă această limită este depășită, plasturele se va suspenda și va da o alarmă. Alarma poate fi resetată prin apăsarea butonului de resetare din meniul general vedeți [Resetați alarmele](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Stabiliți aceasta la o valoare rezonabilă pentru necesarul dumneavoastră de insulină.
 
-#### Daily Maximum Insulin
+#### Insulină maximă zilnică
 
-***Default: 80U.***
+***Implicit: 80U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+This setting changes the maximum amount of insulin that can be delivered in one day. Dacă această limită este depășită, plasturele se va suspenda și va da o alarmă. Alarma poate fi resetată prin apăsarea butonului de resetare din meniul general vedeți [Resetați alarmele](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Stabiliți aceasta la o valoare rezonabilă pentru necesarul dumneavoastră de insulină.
 
 #### Scan on Connection error
 
@@ -215,94 +215,94 @@ Press **Next** to start prime
 
 ![Prime progress](../images/medtrum/activation/PrimeProgress.png)
 
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
+![Amorsare finalizată](../images/medtrum/activation/PrimeComplete.png)
 
-Once the prime is complete, press **Next** to continue.
+Odată ce amorsarea este finalizată, apăsați **Următorul** pentru a continua.
 
-##### Attach Patch
+##### Atașați plasturele
 
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
+![Atașați plasturele](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin, remove stickers and attach the patch to your body. Remove safety lock and press the needle button on the patch to insert the cannula.
+Curățați pielea, îndepărtați autocolantele și atașați plasturele pe corpul dumneavoastră. Îndepărtați piedica de siguranță și apăsați pe butonul acului de pe plasture pentru a introduce canula.
 
-Press **Next** to activate the patch.
+Apăsați **Următorul** pentru a activa plasturele.
 
 (medtrum-activate-patch)=
-##### Activate Patch
+##### Activați plasturele
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+![Activați plasturele](../images/medtrum/activation/ActivatePatch.png)
 
-When activation is complete, the following screen will appear
+Când activarea este finalizată, va apărea următorul ecran
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+![Activare completă](../images/medtrum/activation/ActivationComplete.png)
 
-Press **OK** to return to main screen.
+**OK** pentru a reveni la ecranul principal.
 
 (nano-deactivate-patch)=
 
-### Deactivate patch
+### Dezactivați plasturele
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+Pentru a dezactiva un plasture activ, accesați [fila Medtrum](#nano-overview) din interfața AAPS și apăsați butonul **Schimbați plasture**.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Dezactivați plasturele](../images/medtrum/activation/DeactivatePatch.png)
 
-You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+Vi se va cere să confirmați că doriți să dezactivați plasturele curent. **Vă rugăm să rețineți că această acțiune nu este reversibilă.** Când dezactivarea este finalizată, puteți apăsa **Următorul** pentru a continua procesul de activare a unui nou plasture. Dacă nu sunteți gata să activați un nou plasture, apăsați **Anulați** pentru a reveni la ecranul principal.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Dezactivați progres](../images/medtrum/activation/DeactivateProgress.png)
 
-If Android APS in unable to deactivate the patch (For instance because the pumpbase has already been removed from the reservoir patch), you may press **Discard** to forget the current patch session and make it possible to activate a new patch.
+Dacă Android APS nu poate dezactiva plasturele (de exemplu, pentru că baza pompei a fost deja scoasă din plasturele rezervor), puteți apăsa **Renunțați** pentru a uita sesiunea curentă a plasturelui și pentru a face posibilă activarea unui nou plasture.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Dezactivare finalizată](../images/medtrum/activation/DeactivateComplete.png)
 
-Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
+Odată ce dezactivarea este finalizată, apăsați **OK** pentru a reveni la ecranul principal sau apăsați **Următorul** pentru a continua procesul de activare a unui nou plasture.
 
 (nano-resume-interrupted-activation)=
 
-### Resume interrupted activation
+### Reluați activarea întreruptă
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+Dacă activarea unui plasture este întreruptă, de exemplu pentru că bateria telefonului se oprește, poți relua procesul de activare prin [fila Medtrum](#nano-overview) în interfața AAPS și apăsați butonul **Schimbați plasturele**.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Reluați activarea întreruptă](../images/medtrum/activation/ActivationInProgress.png)
 
-Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
+Apăsați **Următorul** pentru a continua procesul de activare. Apăsați **Aruncați** pentru a renunța la sesiunea curentă a plasturelui și pentru a face posibilă activarea unui nou plasture.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Se citește starea activării](../images/medtrum/activation/ReadingActivationStatus.png)
 
-The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+Driverul va încerca să determine starea actuală a activării plasturelui. Dacă operațiunea a reușit, procesul de activare va continua de la pasul curent.
 
 (nano-overview)=
 
 ## Privire de ansamblu
 
-The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
+Vederea de ansamblu conține starea curentă a plasturelui Medtrum. Conține de asemenea butoane pentru a schimba plasturele, pentru a reseta alarme și a actualiza starea.
 
-![Medtrum Overview](../images/medtrum/Overview.png)
+![Vederea de ansamblu Medtrum](../images/medtrum/Overview.png)
 
-### BLE Status:
+### Stare BLE:
 
-This shows the current status of the Bluetooth connection to the pumpbase.
+Aceasta afișează starea curentă a conexiunii Bluetooth cu baza de pompă.
 
-### Last connected:
+### Ultima conexiune:
 
-This shows the last time the pump was connected to AAPS.
+Aceasta arată ultima dată când pompa a fost conectată la AAPS.
 
-### Pump state:
+### Stare pompă:
 
-This shows the current state of the pump. For example:
-    - ACTIVE : The pump is activated and running normally
-    - STOPPED: The patch is not activated
+Aceasta arată starea curentă a pompei. Spre exemplu:
+    - ACTIV: Pompa este activată și rulează normal
+    - OPRIT: Plasturele nu este activat
 
-### Basal type:
+### Tip bazală:
 
-This shows the current basal type.
+Aceasta arată tipul bazalei curente.
 
-### Basal rate:
+### Rată bazală:
 
-This shows the current basal rate.
+Acesta arată rata bazală curentă.
 
-### Last bolus:
+### Ultimul bolus:
 
-This shows the last bolus that was delivered.
+Acest lucru arată ultimul bolus care a fost administrat.
 
 ### Active bolus:
 
@@ -389,9 +389,9 @@ The patch can give a variety of errors. To prevent frequent errors:
 
 ## Where to get help
 
-All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+Toată munca de dezvoltare pentru driverul Medtrum este realizată de comunitate pe bază **voluntară**; vă cerem să vă amintiți acest lucru și să utilizați următoarele recomandări înainte de a solicita asistență:
 
 -  **Nivelul 0:** Citiți secțiunea relevantă a acestei documentații pentru a vă asigura că înțelegeți cum ar trebui să meargă funcționalitatea cu care aveți dificultăți.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **Nivelul 1:** Dacă încă întâmpinați probleme pe care nu le puteți rezolva folosind acest document, apoi vă rugăm să mergeți la canalul *#Medtrum* pe **Discord** folosind [această legătură de invitație](https://discord.gg/4fQUWHZ4Mw).
+-  **Nivelul 2:** Căutați problemele existente pentru a vedea dacă problema dumneavoastră a fost deja raportată la [Probleme](https://github.com/nightscout/AAPS/issues) dacă există, vă rugăm să confirmați/comentați/adăugați informații despre problema dumneavoastră. Dacă nu, vă rugăm să creați o nouă problemă [](https://github.com/nightscout/AndroidAPS/issues) și să atașați [fișierele de jurnal](../GettingHelp/AccessingLogFiles.md).
 -  **Fiți răbdători - majoritatea membrilor comunității noastre sunt voluntari bine-voitori, și rezolvarea problemelor necesită adesea timp și răbdare atât din partea utilizatorilor cât și din partea dezvoltatorilor.**
