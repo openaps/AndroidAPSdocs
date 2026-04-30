@@ -1,5 +1,5 @@
 
-# Release notes
+# Note de lansare
 
 Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
 
@@ -56,22 +56,22 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 (version3422)=
 
-## Version 3.4.2.2
+## Versiunea 3.4.2.2
 
 - Fixing issues with Equil and Medtronic
 - Improve safety of Medtrum
 
 (version3421)=
 
-## Version 3.4.2.1
+## Versiunea 3.4.2.1
 
 - Equil: fix Pairing and progress dialog @MilosKozak
 
 (version3420)=
 
-## Version 3.4.2.0
+## Versiunea 3.4.2.0
 
-Release date: 04-02-2026
+Data lansării: 04-02-2026
 
 - Equil: Fix resistance for different models @hhfcvmars
 - Tidepool: Fix session @MilosKozak
@@ -80,9 +80,9 @@ Release date: 04-02-2026
 
 (version3410)=
 
-## Version 3.4.1.0
+## Versiunea 3.4.1.0
 
-Release date: 03-08-2026
+Data lansării: 03-08-2026
 
 ### Core
 - Fix DST handling @MilosKozak
@@ -129,9 +129,9 @@ Release date: 03-08-2026
 
 (version3400)=
 
-## Version 3.4.0.0
+## Versiunea 3.4.0.0
 
-Release date: 31-12-2025
+Data lansării: 31-12-2025
 
 ### Before upgrading:
 * This version requires Google Android 12.0 or above. Check your phone version before attempting to update.
@@ -182,9 +182,9 @@ Release date: 31-12-2025
 
 (version3321)=
 
-## Version 3.3.2.1
+## Versiunea 3.3.2.1
 
-Release date: 13-08-2025
+Data lansării: 13-08-2025
 
 - Fixed Omnipod Bluetooth connection on Android 16
 - CI process (Browser build)
@@ -197,9 +197,9 @@ Release date: 13-08-2025
 
 (version3300)=
 
-## Version 3.3.2.0
+## Versiunea 3.3.2.0
 
-Release date: 27-03-2025
+Data lansării: 27-03-2025
 
 ### How to upgrade
 
@@ -240,9 +240,9 @@ Release date: 27-03-2025
 * Fixed rendering of emulated TBRs @MilosKozak
 * Fixed bypassing security @tdrkDev
 
-## Version 3.3.1.3
+## Versiunea 3.3.1.3
 
-Release date: 21-01-2025
+Data lansării: 21-01-02025
 
 ### Bug fixes
 
@@ -255,9 +255,9 @@ Release date: 21-01-2025
 
 *  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
 
-## Version 3.3.1.2
+## Versiunea 3.3.1.2
 
-Release date: 15-01-2025
+Data lansării: 15-01-02025
 
 ### How to upgrade
 
@@ -275,9 +275,9 @@ Release date: 15-01-2025
 * Fix reset of master password with virtual pump.
 * Fixed import of large settings backup files.
 
-## Version 3.3.1.0
+## Versiunea 3.3.1.0
 
-Release date: 06-01-2025
+Data lansării: 06-01-02025
 
 ### UI changes
 
@@ -300,9 +300,9 @@ Release date: 06-01-2025
 * Resolved misplaced DynISF notification @MilosKozak
 * Fixed bug in watchfaces @philoul
 
-## Version 3.3.0.0
+## Versiunea 3.3.0.0
 
-Release date: 29-12-2024
+Data lansării: 29-12-2024
 
 ### Main features
 
@@ -927,11 +927,11 @@ Data lansării: 03-03-2019
 
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
 - Luminile de stare pe ecranul principal (Nico Schmitz)
-- Daylight saving time helper (Roumen Georgiev)
+- Ajutor pentru ora de vară (Roumen Georgiev)
 - Fix processing profile names coming from NS (Johannes Mockenhaupt)
-- Fix UI blocking (Johannes Mockenhaupt)
-- Support for updated G5 app (Tebbe Ubben and Milos Kozak)
-- G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
+- Reparație blocarea interfeței (Johannes Mockenhaupt)
+- Suport pentru aplicația G5 actualizată (Tebbe Ubben și Milos Kozak)
+- suport pentru sursa de glicemie din G6, Poctech, Tomato, Eversense  (Tebbe Ubben și Milos Kozak)
 - Fixed disabling SMB from preferences (Johannes Mockenhaupt)
 
 ### Misc
