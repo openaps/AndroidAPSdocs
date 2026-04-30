@@ -932,9 +932,9 @@ Data lansării: 03-03-2019
 - Reparație blocarea interfeței (Johannes Mockenhaupt)
 - Suport pentru aplicația G5 actualizată (Tebbe Ubben și Milos Kozak)
 - suport pentru sursa de glicemie din G6, Poctech, Tomato, Eversense  (Tebbe Ubben și Milos Kozak)
-- Fixed disabling SMB from preferences (Johannes Mockenhaupt)
+- S-a reparat dezactivarea SMB din preferințe (Johannes Mockenhaupt)
 
-### Misc
+### Diverse
 
 - If you are using non default `smbmaxminutes` value you have to setup this value again
 
@@ -967,13 +967,13 @@ Data lansării: 03-11-2018
 (Releasenotes-overview-tab)=
 ### Fila privire de ansamblu
 
-- Panglica de sus oferă acces la suspendare/dezactivare buclei, vizualizare/ajustare profil și pentru a porni/opri țintele temporare (TT). Țintele temporare folosesc valori implicite setate în preferințe. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.
-- Treatment buttons: old treatment button still available, but hidden by default. Visibility of buttons can now be configured. New insulin button, new carbs button (including [eCarbs/extended carbs](../DailyLifeWithAaps/ExtendedCarbs.md))
+- Panglica de sus oferă acces la suspendare/dezactivare buclei, vizualizare/ajustare profil și pentru a porni/opri țintele temporare (TT). Țintele temporare folosesc valori implicite setate în preferințe. Noua opțiune țintă temporară de hipoglicemie este o țintă temporară ridicată pentru a împiedica bucla să corecteze prea agresiv carbohidrații de corecție.
+- Butoanele de tratament: încă este disponibil vechiul buton de tratament, dar ascuns în mod implicit. Vizibilitatea butoanelor poate fi acum configurată. New insulin button, new carbs button (including [eCarbs/extended carbs](../DailyLifeWithAaps/ExtendedCarbs.md))
 - [Colored prediction lines](#aaps-screens-prediction-lines)
-- Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
-- Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
+- Opțiunea de a afișa un câmp pentru note în dialogurile cu insulină/carbohidrați/calculator/amorsare + umplere care sunt încărcate în NS
+- Dialogul actualizat pentru amorsare/umplere permite amorsarea și crearea de înregistrări în CarePortal pentru schimbarea locului de inserție și schimbarea cartușului
 
-### Watch
+### Ceas
 
 - S-a renunțat la varianta de construcție separată, fiind acum integrată în construcția completă. Pentru a utiliza controalele de bolus din ceas, activați această setare pe telefon
 - Asistentul solicită acum doar carbohidrați (și procentaj, dacă este activat în setările de ceas). Ce parametri sunt incluși în calcul pot fi configurați în setările de pe telefon
@@ -982,22 +982,22 @@ Data lansării: 03-11-2018
 
 ### Module noi
 
-- PocTech app as BG source
-- Dexcom patched app as BG source
-- oref1 sensitivity plugin
+- Aplicația PocTech ca sursă de glicemie
+- Aplicația Dexcom modificată ca sursă de glicemie
+- Modul sensibilitate oref1
 
-### Misc
+### Diverse
 
-- App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
-- Overhaul for config builder and objectives tabs, adding descriptions
-- New app icon
-- Lots of improvements and bugfixes
+- Aplicația folosește acum sertarul pentru a afișa toate modulele; modulele selectate ca vizibile în configurarea constructorului sunt afișate ca file în partea de sus (favorite)
+- Revizuire pentru constructor și fila cu obiective, s-au adăugat descrieri
+- Icoană nouă aplicație
+- Multe îmbunătățiri și erori rezolvate
 - Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
-- Option to keep screen on
-- Option to show notification as Android notification
-- Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+- Opțiune de a menține ecranul aprins
+- Opțiunea de a afișa notificarea ca notificare Android
+- Filtrare avansată (cu permisiunea de a activa întotdeauna SMB și 6h după mese) suportată cu aplicația Dexcom modificată sau xDrip cu modul G5 nativ ca sursă de glicemie.
 
-## Version 1.0
+## Versiunea 1.0
 
 ```{admonition} First version of **AAPS**
 :class: note
