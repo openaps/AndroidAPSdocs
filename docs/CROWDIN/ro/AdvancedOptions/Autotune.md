@@ -31,38 +31,38 @@ Autotune va fi afișat în Constructorul de Configurare după ce reporniți AAPS
 - Ultima Rulare reprezintă o legătură care recuperează ultimul calcul valid. Dacă nu ați lansat Autotune în ziua curentă sau dacă rezultatele anterioare au fost șterse cu o modificare a parametrului de calcul de mai sus, atunci puteți recupera parametrii și rezultatele ultimei rulări reușite.
 - Atenționare vă arată, de exemplu, unele informații despre profilul selectat (dacă aveți mai multe valori ICI sau mai multe valori ISF)
   - Notă: Calcularea automată funcționează cu o singură valoare IC și o singură valoare ISF. În prezent nu există niciun algoritm Autotune care să regleze un IC circadian sau un ISF circadian. Dacă profilul tău de intrare are mai multe valori, poți vedea în secțiunea de avertizări valoarea medie luată în considerare pentru a-ți regla profilul.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DIA, IC, ISF, basal and target)
-  - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units, DIA and target will remain unchanged in output profile.
+- Verificați butonul pentru Profilul de Intrare deschideți Vizualizatorul de Profil pentru a vă permite o verificare rapidă a profilului dumneavoastră (unități, DIA, IC, ISF, bazală și intervalul țintă)
+  - Notă: Autotune va regla doar IC (o valoare unică), ISF (o valoare unică) și bazala (cu variația circadiană). Unitățile, DIA și intervalul țintă vor rămâne neschimbate în profilul de ieșire.
 
-- "Run Autotune" will launch Autotune calculation with selected profile and the number of Tune days
-  - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+- "Rulați Autotune" va lansa calculul Autotune cu profilul selectat și numărul de zile luate în calcul pentru execuție
+  - Notă: Calculația Autotune poate dura destul de mult. Odată lansat, puteți comuta la altă parte a interfeței (vederea de ansamblu, șamd) și să reveniți mai târziu în modulul Autotune pentru a vedea rezultatele
 
-  ![Autotune Run start](../images/Autotune/Autotune_2b.png)
+  ![Porniți rulare Autotune](../images/Autotune/Autotune_2b.png)
 
-- Then during the run you will see intermediate results below
+- Apoi în timpul rulării veți vedea rezultatele intermediare mai jos
 
-  - Note: During run, settings are locked, so you cannot change anymore selected input profile or the number of day. You will have to wait the end of current calculation if you want to launch another run with other parameters.
+  - Notă: În timpul rulării, setările sunt blocate, astfel încât să nu mai poți modifica profilul de intrare sau numărul de zile. Va trebui să așteptați sfârșitul calcului curent dacă doriți să porniți o altă execuție cu alți parametri.
 
-  ![Autotune during run](../images/Autotune/Autotune_3b.png)
+  ![Autotune în timpul rulării](../images/Autotune/Autotune_3b.png)
 
-- When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
+- Când calculul Autotune este finalizat, veți vedea rezultatul (profilul reglat) și patru butoane mai jos.
 
-  ![Autotune Result](../images/Autotune/Autotune_4b.png)
+  ![Rezultat Autotune](../images/Autotune/Autotune_4b.png)
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- Este important să se compare întotdeauna profilul de intrare (coloana "Profil"), profilul de ieșire (coloana "Reglat") și procentajul variației pentru fiecare valoare (coloana "%").
 
-- For basal rates, you also have the number of "missing days". You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+- Pentru ratele bazale, aveți și numărul de "zile lipsă". Aveți zile lipsă atunci când Autotune nu are suficiente date clasificate ca "Bazală" pentru a regla rata bazală pentru această perioadă (spre exemplu după fiecare masă când ai absorbție de carbohidrați). Acest număr ar trebui să fie cât mai scăzut posibil, în special atunci când bazala este importantă (spre exemplu, în timpul nopții sau la sfârșitul după-amiezii)
 
-- The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
+- Butonul "Comparați profilele" deschide interfața de comparare a profilelor. Profilul de intrare este în albastru, și profilul de ieșire (denumit "Reglat") este în roșu.
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+  - Notă: în exemplul de mai jos, profilul de intrare are variații circadiene pentru IC și ISF, dar profilul de ieșire calculat are o singură valoare. Dacă este important pentru dumneavoastră să obțineți un profil de ieșire circadian vedeți [Profilul Circadian ICR sau ISF](#autotune-circadian-ic-or-isf-profile) mai jos.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Autotune compararea profilelor](../images/Autotune/Autotune_5.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- Dacă aveți încredere în rezultate (un procentaj scăzut de variație între profilul de intrare și profilul de ieșire), atunci puteți apăsa pe butonul "Activați profil" și apoi dați pe OK pentru a valida.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your Local profile plugin.
-  - If you already have a profile named "Tuned" in your local profile plugin, then this profile will be updated with calculated Autotune profile before the activation
+  - Activarea profilului Reglat va crea automat un nou profil "Reglat" în modulul de profil local.
+  - Dacă aveți deja un profil numit "Reglat" în modulul de profil local, atunci acest profil va fi actualizat cu profilul calculat de Autotune înainte de activare
 
   ![Autotune activarea profilului](../images/Autotune/Autotune_6.png)
 
