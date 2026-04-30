@@ -21,7 +21,7 @@ In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
 
 ![settings.png](../images/Equil/settings.png)
 
-### Activate patch
+### Activați plasturele
 
 Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
 
