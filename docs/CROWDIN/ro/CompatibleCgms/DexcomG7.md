@@ -32,7 +32,7 @@ Utilizatorii noi sunt recomandați să folosească [xDrip+](https://androidaps.r
 
 O aplicație Dexcom G7 (DiaKEM) modificată permite accesul la datele Dexcom G7. Aceasta nu este aplicația BYODA deoarece această aplicație nu poate primi date G7 în acest moment.
 
-- Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+- Dezinstalați aplicația Dexcom originală dacă o utilizați înainte (sesiunea senzorului curent poate fi continuată - țineți cont de codul senzorului înainte de a elimina aplicația!)
 
 - Descărcați și instalați patched.apk [aici](https://github.com/authorgambel/g7/releases).
 
