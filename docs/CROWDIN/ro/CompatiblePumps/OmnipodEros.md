@@ -275,7 +275,7 @@ Procesul de mai jos vă va arăta cum să recunoașteți și să respingeți sem
 
    > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png)
    > 
-   > Dacă dispozitivul RileyLink nu este în raza de acțiune a pompei, în timp ce comanda de confirmare a alertelor este procesată, un mesaj de avertizare va afișa 2 opțiuni. **Amuțește (1)** va sista această avertizare curentă. **OK (2)** va confirma acest avertisment și va permite utilizatorului să încerce din nou să confirme alertele.
+   > Dacă dispozitivul RileyLink nu este în raza de acțiune a pompei, în timp ce comanda de confirmare a alertelor este procesată, un mesaj de avertizare va afișa 2 opțiuni. **Amuțește (1)** va sista această avertizare curentă. **OK (2)** va confirma acest avertisment și va permite utilizatorului să încerce din nou să confirme alertele. 
    > 
    > ![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
 
@@ -427,7 +427,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 - **Rezervor:** Afișați peste 50+U rămase atunci când mai mult de 50 de unități au rămas în rezervor. Sub această valoare, unitățile exacte sunt afișate în text galben.
 
-- **Total livrat:** Afișați numărul total de unități de insulină livrate din rezervor. *Note this is an approximation as priming and filling the pod is not an exact process.*
+- **Total administrat:** Afișați numărul total de unități de insulină administrate din rezervor. *Note this is an approximation as priming and filling the pod is not an exact process.*
 
 - **Eroare:** Afișați ultima eroare întâlnită. Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
@@ -617,8 +617,8 @@ Oferă notificări AAPS și alerte sonore de telefon atunci când nu este sigur 
 *NOTĂ: Acestea sunt doar notificări, nu sunt emise alerte sonore.*
 
 - **Sunet pentru notificări RBT incerte activat:** Activează sau dezactivează această setare pentru a declanșa o alertă sonoră și o notificare vizuală atunci când AAPS nu este sigur dacă un RBT a fost setat cu succes.
-- **Sunet pentru notificări SMB incerte activat:** Activează sau dezactivează această setare pentru a declanșa o alertă sonoră și o notificare vizuală atunci când AAPS nu este sigur dacă un SMB a fost livrat cu succes.
-- **Sunet pentru notificări de bolus incert activat:** Activați sau dezactivați această setare pentru a declanșa o alertă sonoră și o notificare vizuală atunci când AAPS nu este sigur dacă un bolus a fost livrat cu succes.
+- **Sunet pentru notificări SMB incerte activat:** Activează sau dezactivează această setare pentru a declanșa o alertă sonoră și o notificare vizuală atunci când AAPS nu este sigur dacă un SMB a fost administrat cu succes.
+- **Sunet pentru notificări de bolus incert activat:** Activați sau dezactivați această setare pentru a declanșa o alertă sonoră și o notificare vizuală atunci când AAPS nu este sigur dacă un bolus a fost administrat cu succes.
 
 ### Altele
 
@@ -745,7 +745,7 @@ No active Pod session detected. Această alertă poate fi dezactivată temporar 
 
 Informational alert that Pod has been suspended.
 
-#### Setting basal profile failed. Delivery might be suspended! Reîmprospătați manual starea pompei din fila Omnipod și reluați livrarea, dacă este necesar.
+#### Setting basal profile failed. Delivery might be suspended! Reîmprospătați manual starea pompei din fila Omnipod și reluați administrarea, dacă este necesar.
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 
