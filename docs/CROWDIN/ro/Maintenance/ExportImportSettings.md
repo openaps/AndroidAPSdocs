@@ -78,7 +78,7 @@ You can also change the **AAPS Directory** in Preferences > [Maintenance Setting
 
 It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
 
-**Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
+**Nota**: _Setările exportate vor fi criptate cu parola principală AAPS: fără parola principală utilizată pentru exportul nu veți putea importa fișierul de setări!_
 
 ### Exporting or Importing Settings
 To export or import settings, use the **import or export buttons** in the AAPS **maintenance menu**
@@ -146,7 +146,7 @@ Importing a **Preferences** file will deactivate your current pod if those **Pre
 
 **Troubleshooting:** if you are unable to get an active profile set from the **AAPS** home screen, select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
 
-### Note for Dana RS users
+### Notă pentru utilizatorii Dana RS
 
 - As pump connection settings are also imported **AAPS** on your new phone will already "know" the pump and therefore not start a bluetooth scan.
-- Please pair new phone and pump manually.
+- Vă rugăm să conectați manual noul telefon și pompa.
