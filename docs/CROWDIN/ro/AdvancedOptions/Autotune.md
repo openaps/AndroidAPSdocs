@@ -6,31 +6,31 @@ Modulul Autotune este o implementare a algoritmului autotune OpenAPS în AAPS.
 
 Modulul Autotune este disponibil în versiunile AAPS de la [3.4](#version3400), dar este ascuns în mod implicit.
 
-## Show the Autotune plugin
+## Arătați modulul Autotune
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+Creați un fișier gol numit `enable_autotune` în subdosarul `extra` din [dosarul AAPS](#preferences-maintenance-settings) al telefonului dumneavoastră.
 
-***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+***NOTĂ: Asigurați-vă că verificați în setările **AAPS** unde este dosarul AAPS, și că ați plasat fișierul în cel corect, un număr de mai multe persoane au fost depistate punând fișierul în dosarul greșit.***
 
-![Enable Autotune](../images/Autotune/Autotune_0.png)
+![Activați Autotune](../images/Autotune/Autotune_0.png)
 
-Autotune will then display in Config Builder after you restart AAPS.
+Autotune va fi afișat în Constructorul de Configurare după ce reporniți AAPS.
 
-![Autotune plugin](../images/Autotune/Autotune_1.png)
+![Modul Autotune](../images/Autotune/Autotune_1.png)
 
-***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
+***NOTĂ: Dacă nu puteți vedea opțiunea `Autotune`, va trebui să apăsați pe săgeata evidențiată (caseta roșie) pentru a extinde și a afișa toate setările în secțiunea `General`.***
 
-## Autotune user interface
+## Interfața utilizatorului pentru Autotune
 
-![Autotune default screen](../images/Autotune/Autotune_1b.png)
+![Autotune ecran implicit](../images/Autotune/Autotune_1b.png)
 
-- You can select in the Profile dropdown menu the input profile you want to tune (by default your current active profile is selected)
-  - Note: each time you select a new profile, previous results will be removed and Tune days parameter will be set to default value
-- Then Tune days is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
-  - Note: each time you change Tune days parameter, previous results will be removed
-- Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successful run.
-- Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
-  - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
+- Puteți selecta în meniul derulant profilul de intrare pe care doriți să-l ajustați (în mod implicit profilul dvs. activ în prezent va fi selectat)
+  - Notă: De fiecare dată când selectați un profil nou, rezultatele anterioare vor fi șterse și parametrii ce țin de reglarea zilnică vor fi setați la valoarea implicită
+- Apoi Zile reglare este pentru selecția de zile care vor fi folosite în calculele pentru reglajul profilului tău. Valoarea minimă este de 1 zi, iar valoarea maximă este de 30 de zile. Acest număr nu ar trebui să fie prea mic astfel încât să se obțină rezultate iterative și omogene (peste 7 zile pentru fiecare calcul)
+  - Notă: de fiecare dată când modificați parametrul Zile de reglare, rezultatele anterioare vor fi eliminate
+- Ultima Rulare reprezintă o legătură care recuperează ultimul calcul valid. Dacă nu ați lansat Autotune în ziua curentă sau dacă rezultatele anterioare au fost șterse cu o modificare a parametrului de calcul de mai sus, atunci puteți recupera parametrii și rezultatele ultimei rulări reușite.
+- Atenționare vă arată, de exemplu, unele informații despre profilul selectat (dacă aveți mai multe valori ICI sau mai multe valori ISF)
+  - Notă: Calcularea automată funcționează cu o singură valoare IC și o singură valoare ISF. În prezent nu există niciun algoritm Autotune care să regleze un IC circadian sau un ISF circadian. Dacă profilul tău de intrare are mai multe valori, poți vedea în secțiunea de avertizări valoarea medie luată în considerare pentru a-ți regla profilul.
 - Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DIA, IC, ISF, basal and target)
   - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units, DIA and target will remain unchanged in output profile.
 
@@ -96,7 +96,7 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ### Setări modul Autotune
 
-  ![Autotune default screen](../images/Autotune/Autotune_11.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
 :class: info
@@ -115,7 +115,7 @@ Funcția de Comutare automată a profilului este disponibilă doar în modul Dev
 
 - Autotune folosește și raportul Max autosens și raportul Min autosens pentru a limita variația. Puteți vedea și ajusta aceste valori în Configurator > Modul detectare sensibilitate > Setări > Setări avansate
 
-  ![Autotune default screen](../images/Autotune/Autotune_12.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_12.png)
 
 
 
@@ -131,7 +131,7 @@ Funcția de Comutare automată a profilului este disponibilă doar în modul Dev
 
 - Vedeți în captura de ecran de mai jos profilul ajustat cu Aplică variația medie, oprită (pe partea stângă) și pornită (pe partea dreaptă)
 
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_13.png)
 
 
 
@@ -141,11 +141,11 @@ Funcția de Comutare automată a profilului este disponibilă doar în modul Dev
   - Dacă numărul de zile incluse în calculul Autotune este mai mic decât numărul Zile ajustate, atunci veți vedea câte zile vor fi incluse în selectorul din dreapta Zile ajustate (10 zile în exemplul de mai jos)
   - Această setare oferă rezultate bune doar dacă numărul de zile rămase nu este prea mic (spre exemplu dacă ajustezi un anumit profil pentru zilele de sfârșit de săptămână cu doar duminica și sâmbăta selectate, trebuie să selectați un minimum de 21 sau 28 de Zile de reglare pentru a avea 6 sau 8 zile incluse în calculul Autotune)
 
-  ![Autotune default screen](../images/Autotune/Autotune_14b.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_14b.png)
 
 - În timpul calculului Autotune, puteți vedea progresul calculelor ("Rezultat parțial ziua 3 / 10 ajustată" în exemplul de mai jos)
 
-  ![Autotune default screen](../images/Autotune/Autotune_15b.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_15b.png)
 
 
 
@@ -164,19 +164,19 @@ Notă: pentru mai multe informații despre cum să setați o condiție de automa
 
 - Ar trebui să selectați declanșatorul pentru execuții programate: executați Autotune doar o dată pe zi, Autotune este proiectat să fie executat zilnic (pentru fiecare nouă execuție schimbați ziua și modificarea profilului ar trebui să fie minusculă)
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_16.png)
 
 - Este mai bine la început să executați Autotune în timpul zilei pentru a putea verifica rezultatele. Dacă doriți să rulați Autotune în timpul nopții, trebuie să selectați în declanșator ora 4 dimineața sau mai târziu pentru a include ziua curentă în următorul calcul Autotune.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_17.png)
 
 - Apoi puteți selecta acțiunea "Executați Autotune" din listă
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_18.png)
 
 - Apoi puteți selecta Acțiune Autotune pentru a ajusta parametrii pentru rularea dumneavoastră. Parametrii impliciți sunt "Profil activ", numărul implicit de zile pentru ajustare așa cum au fost definite în preferințele modulului Autotune, și Toate zilele sunt selectate.
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_19b.png)
 
 - După câteva zile, dacă aveți încredere deplină în rezultatele Autotune și procentajul modificării este scăzut, puteți modifica [setările Autotune](#autotune-plugin-settings) "Comutarea automată a profilului" pe modul activat astfel profilul ajustat după calcul să fie actualizat și activat în mod automat.
 
@@ -184,7 +184,7 @@ Notă: dacă doriți să reglați automat profiluri pentru anumite zile ale săp
 
 - Vedeți mai jos un exemplu de regulă pentru a regla "profilul meu" în toate "Zilele lucrătoare" cu 14 zile de reglaj selectate (deci doar 10 zile incluse în calculul Autotune).
 
-  ![Autotune default screen](../images/Autotune/Autotune_20b.png)
+  ![Autotune ecran implicit](../images/Autotune/Autotune_20b.png)
 
 
 
