@@ -86,7 +86,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
-![Set master password](../images/MasterPW.png)
+![Setați parola principală](../images/MasterPW.png)
 
 ### Protecție setări
 
