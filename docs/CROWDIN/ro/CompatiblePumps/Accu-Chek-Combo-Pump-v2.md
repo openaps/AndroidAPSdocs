@@ -92,9 +92,9 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 ## Activating the driver and pairing it with the Combo
 
-* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* Selectați driverul "Accu-Chek Combo" în [Configurator > Pompă](../SettingUpAaps/ConfigBuilder.md). **Important**: Există vechiul driver, numit "Accu-Chek Combo (Ruffy)", în acea listă. _Nu-l_ selectați pe acela.
 
-  ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
+  ![Captură de ecran pentru Configurator Combo](../images/combo/combov2-config-builder.png)
 
 * Atingeți rotița pentru a deschide setările driverului.
 
@@ -153,50 +153,50 @@ Fila afișează următoarele informații atunci când o pompă a fost asociată 
 5. _Rezervor_: Câte unități sunt în prezent în rezervorul pompei Combo
 6. _Ultimul bolus_: Cu câte minute în urmă a fost administrat ultimul bolus; dacă niciunul nu a fost administrat încă după ce AAPS a fost pornit, acesta este gol
 7. _Bazală temporară_: Detalii despre bazala temporară activată în prezent; dacă niciuna nu este activă, acesta este gol
-8. _Base basal rate_: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-9. _Serial number_: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-10. _Bluetooth address_: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+8. _Rată bazală de bază_: Rata bazală de bază activă în prezent ("bază" înseamnă rata bazală fără nicio RBT activă care să influențeze factorul de rată bazală)
+9. _Numărul de serie_: numărul de serie Combo indicat de pompă (acesta corespunde numărului de serie afișat pe spatele Combo)
+10. _Adresă Bluetooth_: Adresa Bluetooth de 6 biți a Combo-ului, afișată în formatul `XX:XX:XX:XX:XX:XX:XX`
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing at the bottom. When the driver switches to the command mode however, that field is left blank.
+Combo poate fi operat prin Bluetooth în modul _terminal de la distanță_ sau în modul de _comandă _. Modul terminal de la distanță corespunde modului de comandă de la distanță, de pe contorul Combo, care imită LCD și patru butoane ale pompei. Unele comenzi trebuie să fie efectuate în acest mod de către driver, deoarece nu au niciun fel de omolog în modul de comandă. Acest din urmă mod este mult mai rapid, dar, după cum s-a afirmat, limitat ca domeniu de aplicare. Când modul terminal de la distanță este activ, ecranul curent al terminalului de la distanță este afișat în câmpul care este situat imediat deasupra desenului Combo din partea de jos. Când driverul schimbă în modul de comandă totuși, acel câmp este lăsat necompletat.
 
-(The user does not influence this; the driver fully decides on its own what mode to use. This is merely a note for users to know why sometimes they can see Combo frames in that field.)
+(Utilizatorul nu influențează acest lucru; driverul decide pe deplin ce mod să utilizeze. Aceasta este doar o notă pentru ca utilizatorii să știe de ce uneori pot vedea cadrele Combo în acel câmp.)
 
-At the very bottom, there is the "Refresh" button. This triggers an immediate pump status update. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)).
+În partea de jos este butonul "Reîmprospătați". Acesta declanșează o actualizare imediată a stării pompei. Este de asemenea folosit pentru a permite AAPS să știe că o eroare descoperită anterior este acum rezolvată și că AAPS poate verifica din nou dacă totul este în regulă (mai mult [la secțiunea despre alerte](#combov2-alerts)).
 
 ## Preferințe
 
-These preferences are available for the combo driver (items are listed from top to bottom):
+Aceste preferințe sunt disponibile pentru driverul combo (articolele sunt listate de sus în jos):
 
-![Screenshot of Accu-Chek Combo preferences](../images/combo/combov2-preferences.png)
+![Captura de ecran a preferințelor pentru Accu-Chek Combo](../images/combo/combov2-preferences.png)
 
-1. _Asociază pompa_: Acesta este un buton care poate fi apăsat pentru a se asocia cu un Combo. It is disabled if a pump is already paired.
-2. _Unpair pump_: Unpairs a paired Combo; the polar opposite of item no. 1. It is disabled if no pump is paired.
-3. _Discovery duration (in seconds)_: When pairing, the drivers makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
-4. _Autodetect and automatically enter insulin reservoir change_: If enabled, the "reservoir change" action that is normally done by the user through the "prime/fill" button in the Action tab. This is explained [in further detail below](#combov2-autodetections).
-5. _Autodetect and automatically enter battery change_: If enabled, the "battery change" action that is normally done by the user through the "pump battery change" button in the Action tab. This is explained [in further detail below](#combov2-autodetections).
-6. _Enable verbose Combo logging_: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to AndroidAPS logs and lessen their usefulness.
+1. _Asociază pompa_: Acesta este un buton care poate fi apăsat pentru a se asocia cu un Combo. Este dezactivată dacă o pompă este deja asociată.
+2. _Dezasociați pompa_: Dezasociați o pompă Combo asociată; opusul punctului 1. Este dezactivat dacă nu este asociată nicio pompă.
+3. _Durata de descoperire (în secunde)_: La asociere, driverele fac telefonul să poată fi descoperit de pompă. Aceasta controlează cât timp durează această descoperire. În mod implicit, se selectează maximul (300 secunde = 5 minute). Android nu permite ca descoperirea să dureze la nesfârșit, așa că trebuie aleasă o durată.
+4. _Autodetectează și introdu automat schimbarea rezervorului de insulină_: Dacă este activată, acțiunea de "modificare a rezervorului", care se realizează în mod normal de către utilizator prin intermediul butonului "prime/umple" din fila de acțiune. Acest lucru este explicat [în detaliu, mai jos](#combov2-autodetections).
+5. _Autodetectează și introduce automat modificarea bateriei_: Dacă este activată, acțiunea "modificare a bateriei", care se realizează în mod normal de către utilizator prin intermediul butonului "schimbare a bateriei" din fila de acțiune. Acest lucru este explicat [în detaliu, mai jos](#combov2-autodetections).
+6. _Activează jurnalizarea detaliată Combo_: Acest lucru mărește cantitatea de jurnale făcute de către driver. **ATENȚIE**: Nu activați decât dacă vi se cere de către un dezvoltator. Altfel, acest lucru poate adăuga multă zgomot jurnalelor AndroidAPS și le poate diminua utilitatea.
 
-Most users only ever use the top two items, the _Pair with pump_ and _Unpair pump_ buttons.
+Cei mai mulți utilizatori folosesc doar primele două elemente, butoanele _Asociați pompa_ și _Dezasociați pompa_.
 
 (combov2-autodetections)=
-## Autodetecting and automatically entering battery and reservoir changes
+## Autodetectare și introducerea automată a modificărilor de baterie și ale rezervorului
 
-The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
+Driverul este capabil să detecteze modificările bateriei și ale rezervorului prin ținerea evidenței nivelurilor bateriei și rezervorului. Dacă nivelul bateriei a fost raportat de Combo ca fiind scăzut ultima dată când starea pompei a fost actualizată, și acum, în timpul actualizării noii stări a pompei, nivelul bateriei apare ca normal, apoi driverul concluzionează că utilizatorul trebuie să fi înlocuit bateria. Aceeași logică este utilizată și pentru nivelul rezervorului: Dacă acum este mai mare decât înainte, aceasta este interpretată ca o schimbare a rezervorului.
 
-This only works if the battery and reservoir are replaced when these levels are reported as low _and_ the battery and reservoir are sufficiently filled.
+Acest lucru funcționează numai dacă bateria și rezervorul sunt înlocuite atunci când aceste niveluri sunt raportate ca fiind de nivel jos _și_ bateria și rezervorul sunt umplute suficient.
 
-These autodetections can be turned off in the Preferences UI.
+Aceste autodetecții pot fi dezactivate în interfața Preferințe.
 
 (combov2-alerts)=
-## Alerts (warnings and errors) and how they are handled
+## Alerte (avertismente și erori) și modul în care acestea sunt tratate
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with by a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
+Combo afișează alerte ca ecrane de la terminalul de la distanță. Avertismentele sunt afișate cu codul "Wx" (x este o cifră), împreună cu o descriere scurtă. Un exemplu este "W7", "TBR OVER". Erorile sunt similare, dar apare în schimb codul "Ex".
 
-Certain warnings are automatically dismissed by the driver. These are:
+Anumite avertismente sunt respinse automat de către driver. Acestea sunt:
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main tab
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main tab
-- W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
+- W1 "rezervor scăzut": driverul îl transformă într-un avertisment de "rezervor scăzut" care este afișat în fila principală AAPS
+- W2 "baterie scăzută": driverul îl transformă într-o avertizare de tip "baterie consumată" care este afișată în fila principală AAPS
+- W3, W6, W7, W8 : toate acestea sunt pur informative pentru utilizator, astfel încât driverul poate să le respingă automat
 
 Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#combov2-tab-contents)). Această stare nu permite executarea comenzilor. Utilizatorul trebuie să gestioneze eroarea de pe pompă; de exemplu, o eroare de ocluzie poate necesita înlocuirea canulei. Odată ce utilizatorul s-a ocupat de eroare, operația normală poate fi reluată prin apăsarea butonului "Reîmprospătare" de pe fila Accu-Chek Combo. Driverul se conectează apoi la pompa Combo și îi actualizează starea, verifică dacă vreo eroare mai este încă afișată pe ecran șamd. De asemenea, driverul reîmprospătează automat starea pompei după un timp, așa că apăsarea manuală a butonului nu este obligatorie.
 
