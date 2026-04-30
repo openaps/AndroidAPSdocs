@@ -390,7 +390,7 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 ##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
 
-- naratorul vorbește direct cititorului: În acest tutorial **vei** (noi) ar putea fi folosit pentru a transmite ideea de „suntem împreună în asta” în unele cazuri rare
+- naratorul vorbește direct cititorului: În acest tutorial **vei** (noi) ar putea fi folosit pentru a transmite ideea de "suntem împreună în asta" în unele cazuri rare
 
 - Future Tense -> to show the final target
 
