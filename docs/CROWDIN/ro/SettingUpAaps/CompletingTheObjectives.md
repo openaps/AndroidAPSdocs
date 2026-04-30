@@ -68,7 +68,7 @@ Tasks to complete **Objective 2** are:
 
 
 (objectives-objective3)=
-## Objective 3: Prove your knowledge
+## Obiectivul 3: Dovediți-vă cunoștințele
 
 **Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
 
