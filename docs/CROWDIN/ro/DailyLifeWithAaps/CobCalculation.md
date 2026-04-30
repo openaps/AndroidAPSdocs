@@ -65,11 +65,11 @@ In the screenshot above, 58% of time the carb absorption was calculated by the m
 This could be because:
 - Potentially the user overestimated carbs when entering them.
 - Activity / exercise after your previous meal.
-- I:C needs adjustment.
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+- Raportul carbohidrați insulină necesită ajustare.
+- Valoarea pentru min_5m_carbimpact este greșită (recomandată este de 8 cu SMB, 3 cu AMA).
 
 
-## Manual correction of carbs entered
+## Corecție manuală a carbohidraților introduși
 
 If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](#screens-bolus-carbs).
 
