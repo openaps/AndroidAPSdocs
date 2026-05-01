@@ -173,13 +173,13 @@ Here is an approximate timeframe:
 | Objective 1: Setting up visualization and monitoring          |              1 oră               |
 | Objective 2: Learn how to control AAPS                        |              2 ore               |
 | Obiectivul 3: Dovediți-vă cunoștințele                        |          Up to 14 days           |
-| Objective 4: Starting on an open loop                         |        Minimum of 7 days         |
-| Objective 5: Understanding your open loop                     |              7 days              |
+| Obiectivul 4: Pornirea cu o buclă deschisă                    |        Minimum of 7 days         |
+| Objective 5: Understanding your open loop                     |              7 zile              |
 | Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
 | Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
 | Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
 | Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
-| Objective 10: Automation                                      |        Minimum of 28 days        |
+| Obiectivul 10: Automatizare                                   |        Minimum of 28 days        |
 | Objective 11: Dynamic ISF                                     |        Minimum of 28 days        |
 
 Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
