@@ -90,21 +90,21 @@ Cons (as reported by users)
 
 ### xDrip+ (Android)
 
-You can use xDrip+ as a follower.
+Puteți utiliza xDrip+ ca urmăritor.
 
-#### With Nightscout
+#### Cu Nightscout
 
-Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
+Setați xDrip+ ca urmăritor Nightscout. Veți primi glicemia și tratamentele, dar nu bazala.
 
 ![imagine](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip+ BG data source
+#### Fără Nightscout - sursa datelor de glicemie în xDrip+
 
-If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+Dacă sursa de date **AAPS** este xDrip+ (sau dacă xDrip+ poate primi glicemia și de la o altă aplicație precum BYODA, Juggluco) îl poți folosi de la telefonul principal pentru a împărtăși date cu urmăritorii xDrip+, afișând glicemia, tratamente și ratele bazale.
 
 ![imagine](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip+ BG companion app
+#### Fără Nightscout - xDrip+ aplicație companion pentru glicemii
 
 În cazul în care sursa de date **AAPS** nu este xDrip+, dar puteți afișa date glicemice din sursa de date a aplicației companion, îl poți folosi de la telefonul principal pentru a partaja date cu adepții xDrip+, afișând glice, tratamente și tarife bazale.
 
@@ -118,7 +118,7 @@ xDripSwift was created from porting the original xDrip app to iOS and evolved to
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
+[grupul de Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) este principala comunitate de suport pentru xDrip4iOS și Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
 
 "How can I get **xDrip4iOS** on my iPhone?"
 There are two options:
@@ -134,9 +134,9 @@ If you want, you can then become a "releaser" and [share a Personal Testflight x
 
 ![imagine](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-"What is **Shuggah**?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account. The Shuggah release is in no way managed by the xDrip4iOS developers.
+"Ce este **Shuggah**?" Un grup de dezvoltatori ucraineni au copiat codul proiectului pentru xDrip4iOS (care este partajat public pe GitHub) și l-a lansat pe App Store sub un cont de afaceri. Versiunea de Shuggah nu este gestionată în niciun fel de dezvoltatorii xDrip4iOS.
 
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, and the matching Apple Watch apps.
+Grupul de Facebook [xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) sprijină xDrip4iOS și aplicațiile Apple Watch compatibile.
 
 ### [Sugarmate](https://apps.apple.com/fr/app/sugarmate/id1111093108) (iOS)
 
@@ -145,21 +145,21 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 ![imagine](../images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/) is available to download onto iPhones from the App store. Sugarmate is compatible with:
-* Apple iPhone (Requires software version 13.0 or later)
-* Apple iPad (Requires software version 13.0 or later)
-* Google Android (Save web app to your homescreen)
+[Sugarmate](https://sugarmate.io/) poate fi descărcat pe iPhone din magazinul de aplicații. Sugarmate este compatibil cu:
+* Apple iPhone (Necesită software versiunea 13.0 sau mai târziu)
+* Apple iPad (Necesită software versiunea 13.0 sau mai târziu)
+* Google Android (salvați aplicația web pe ecranul de pornire)
 
-It has been reported by users of Sugarmate that it can be used with Apple CarPlay in the USA to display glucose readings when driving. It is not yet established if this is possible in countries outside the USA. If you know more about this, please add details in here to the documentation by completing a pull-request (link) which is quick and easy to do.
+S-a raportat de către utilizatorii Sugarmate că poate fi folosit cu Apple CarPlay în SUA pentru a afișa citirile de glucoză în timpul conducerii. Încă nu s-a stabilit dacă acest lucru este posibil în țările din afara SUA. Dacă știți mai multe despre asta, vă rugăm să adăugați aici detalii la documentație completând o cerere de tragere (link) care este rapidă și ușor de făcut.
 
 
 ### [Spike](https://spike-app.com/) (iOS)
 
 ![imagine](../images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more.
+Spike poate fi folosit ca receptor primar sau ca aplicație urmăritor, furnizând glicemii, alarme și IOB și multe altele.
 
-The website and app are no longer developed. Support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and [Gitter](https://gitter.im/SpikeiOS/Lobby).
+Website-ul și aplicația nu mai sunt dezvoltate. Sprijin poate fi găsit pe [Facebook](https://www.facebook.com/groups/1973791946274873) și [Gitter](https://gitter.im/SpikeiOS/Lobby).
 
 ## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
