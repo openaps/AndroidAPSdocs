@@ -286,14 +286,14 @@ Use with caution and do not enable it until you learn what it really does. Pract
 ### Max allowed bolus
 
 - Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
+- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni administrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
 - Este recomandat să stabiliți această valoare la o cantitate de bun simț, care corespunde în linii mari cu maximul de bolus de insulină pe care l-ați putea face la o masă sau ca pe o corecție în mod obișnuit.
 - Restricția este, de asemenea, aplicată și rezultatele calculatorului de bolus.
 
 ### Max allowed carbs
 
 - Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
+- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni administrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
 - Se recomandă să stabiliți această setare la o valoare de bun simț, care să corespundă, în linii mari, cantității maxime de carbohidrați pe care ați putea-o ingera la o masă.
 
 ## Buclă
