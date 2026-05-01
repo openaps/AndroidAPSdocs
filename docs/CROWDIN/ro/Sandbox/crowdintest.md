@@ -1,10 +1,10 @@
-# Small Crowdin Test
+# Test Crowdin mic
 
-This is a small set for testing the translation with Crowdin.
+Acesta este un mic set pentru a testa traducerea cu Crowdin.
 
-We want to see how changes to a sentence affect the existing translation of the entire page.
+Vrem să vedem cum schimbările la o propoziție afectează traducerea existentă a întregii pagini.
 
-Normally, only one sentence should need to be retranslated and not everything.
+În mod normal, o singură frază ar trebui să fie retradusă și nu totul.
 
 <span style="color:red">some RED text</span>
 
