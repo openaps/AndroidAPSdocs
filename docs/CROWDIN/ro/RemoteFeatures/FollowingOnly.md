@@ -161,45 +161,45 @@ Spike poate fi folosit ca receptor primar sau ca aplicație urmăritor, furnizâ
 
 Website-ul și aplicația nu mai sunt dezvoltate. Sprijin poate fi găsit pe [Facebook](https://www.facebook.com/groups/1973791946274873) și [Gitter](https://gitter.im/SpikeiOS/Lobby).
 
-## Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
+## Ceas inteligent pentru **Monitorizarea AAPS** (date complete de profil sau numai glicemie) unde **AAPS** rulează pe un telefon.
 
-See [here](../Getting-Started/Watches.md).
+Vedeți [aici](../Getting-Started/Watches.md).
 
 
-## Devices for following AAPS
+## Dispozitive pentru urmărirea AAPS
 
 ```{contents} Devices include:
 :depth: 1
 :local: true
 ```
 
-### M5 stack
+### Stivă M5
 
 ![imagine](../images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
-The M5Stack is a small box which can be programmed for many applications, Martin's project [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) is displaying sensor glucose values and trends, IOB and COB. It is in a plastic box, equipped with a colour display, micro SD card slot, 3 buttons, speaker and internal battery. It is a great blood sugar monitor and is relatively easy to set up if you have a Nightscout account. Users typically run it on their home Wi-Fi, but some users report using it as a display when motorbiking, by running it off a phone Wi-Fi hotspot.
+M5Stack este o cutie mică care poate fi programată pentru multe aplicații. Proiectul lui Martin [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) afișează valori și tendințe ale glicemiei senzorilor, IOB și COB. Este într-o cutie de plastic, dotată cu un ecran de culoare, slotul cardului microSD, 3 butoane, difuzor și baterie internă. Este un foarte bun monitor pentru glicemia și este relativ ușor de stabilit dacă ai un cont Nightscout. Utilizatorii îl rulează de obicei pe Wi-Fi-ul lor, dar unii utilizatori raportează că îl utilizează ca afișaj la motocicletă, printr-un hotspot Wi-Fi al telefonului.
 
 ### Sugarpixel
 
-SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
+SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișarea glicemiei pentru monitorizarea continuă a glucozei, care se conectează cu aplicația Dexcom sau cu aplicația Nightscout pe telefonul inteligent al utilizatorului. Dispozitivul afișează valorile glicemiei în timp real. Acest monitor CGM hardware beneficiază de alerte audio cu tonuri aleatorii (care sunt incredibil de zgomotoase), alerte de vibrație pentru tulburările de auz, opțiuni de afișare personalizabile și urmărire nativă pentru mai mulți utilizatori.
 
 ![imagine](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![imagine](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values.
-* The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading.
-* SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
-* SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool.
-* The Big BG face is useful for nightstand users who wear glasses or contact lenses.
+* SugarPixel are multiple opțiuni de afișare, în mg/dL și mmol/L, pentru a se potrivi nevoilor utilizatorului, cu valori ale glucozei codate prin culori.
+* Fața standard afișează glicemia, săgeata de tendință și delta. Delta este schimbarea cu + sau - de la ultima citire.
+* SugarPixel poate fi personalizat pentru a fi utilizat la luminozitate redusă, folosind interfața Glicemie și Oră pentru a vizualiza valoarea glicemiei utilizatorului și ora curentă pe noptiera acestuia.
+* Interfața Culoare a SugarPixel utilizează întregul ecran pentru a afișa o singură culoare ce reprezintă valoarea glicemiei (BG). Acest lucru permite utilizatorului să vadă citirile glicemiei la distanță prin fereastră în timp ce se joacă în curtea din spate, terasă sau piscină.
+* Fața mare a glicemiei este utilă pentru utilizatorii nocturni care poartă ochelari sau lentile de contact.
 
-### Nightscout Clock on Ulanzi TC001
+### Ceas Nightscout pe Ulanzi TC001
 
-**Nightscout Clock** is an open source software running on the **Ulanzi TC001** device. It connects with Dexcom servers or Nightscout and displays real time blood sugar readings.
+**Nightscout Clock** este un software open source care rulează pe dispozitivul **Ulanzi TC001**. Se conectează cu serverele Dexcom sau Nightscout și afișează valorile glicemiei în timp real.
 
-![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
+![Urmărirea ceasului Nightscout](../images/FollowingNightscoutClock.png)
 
-* The clock supports both mmol/L and mg/dL units, and includes audible alarms.
+* Ceasul acceptă atât unități mmol/l, cât și mg/dl și include alarme sonore.
 * Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
 * Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
 * The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
