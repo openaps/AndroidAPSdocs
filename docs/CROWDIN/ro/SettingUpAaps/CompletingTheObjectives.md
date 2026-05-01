@@ -87,7 +87,7 @@ For each question, there may be more than one answer that is correct! If an inco
 From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
 ```
 
-## Objective 4: Starting on an open loop
+## Obiectivul 4: Pornirea cu o buclă deschisă
 
 The purpose of **Objective 4** is to recognise how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, please refer to the [**Actions** tab](#screens-action-tab).
 
@@ -210,7 +210,7 @@ Minimal time to complete this objective: **28 days**. This is a mandatory wait t
 - Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Preferences > Absorption settings > min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
 
 (objectives-objective10)=
-## Objective 10: Automation
+## Obiectivul 10: Automatizare
 
 **Automations** become available when **Objective 10** is started.
 
