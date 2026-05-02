@@ -86,7 +86,7 @@ Cons (as reported by users)
 
 * It requires Android 5.0 and up.
 
-* It has a dark Ul, large readings and buttons, designed for usage at night.
+* Acesta are o interfață de utilizator de culoare închisă, afișaje și butoane mari, fiind conceput pentru a fi utilizat pe timpul nopții.
 
 ### xDrip+ (Android)
 
@@ -200,11 +200,11 @@ SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișa
 ![Urmărirea ceasului Nightscout](../images/FollowingNightscoutClock.png)
 
 * Ceasul acceptă atât unități mmol/l, cât și mg/dl și include alarme sonore.
-* Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
-* Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
-* The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
-* The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
-* It is developed and maintained by Artiom Kenibasov, offering support on the [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
+* Mai multe afișaje disponibile, vedeți [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) pentru o prezentare generală.
+* Setarea și configurarea dispozitivului implică doar câțiva pași simpli. Odată configurat, are nevoie doar de pornire și Wi-Fi pentru a funcționa.
+* Dispozitivul Ulanzi TC001 este semnificativ mai ieftin decât SugarPixel.
+* Programul și instrucțiunile de instalare pot fi găsite pe [Github Nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
+* Acesta este dezvoltat și întreținut de Artiom Kenibasov, oferind suport pe grupul [Facebook AAPS Users group](https://www.facebook.com/groups/cgminthecloud/posts/8776932509094594/).
 
 ### PC (TeamViewer)
-Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+Unii utilizatori consideră că un instrument complet de acces la distanță, precum [Teamviewer](https://www.teamviewer.com/), este util pentru depanarea avansată de la distanță.
