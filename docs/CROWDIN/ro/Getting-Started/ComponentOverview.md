@@ -27,13 +27,13 @@ Chiar dacă acest lucru nu este ceva de creat sau cumpărat, acesta este "modulu
 - CR (raportul carbohidraților): câte grame de carbohidrați sunt acoperite de o unitate de insulină;
 - DAI (durata acțiunii insulinei).
 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Majoritatea utilizatorilor de buclă utilizează setări circadiene, rate bazale, ISF și CR, care adaptează sensibilitatea hormonală a insulinei în timpul zilei.
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+Mai multe informații despre **profilul**dumneavoastră pe [pagina dedicată](../SettingUpAaps/YourAapsProfile.md).
 
-### Phone
+### Telefon
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+Consultați pagina dedicată [telefoanelor](../Getting-Started/Phones.md).
 
 ### Pompa de insulină
 
