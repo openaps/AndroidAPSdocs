@@ -391,7 +391,7 @@ Note down these passwords! You will need them when you build the next AAPS updat
 * Click "OK" (8) to continue:
 
 
-On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
+On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Apăsați pe "Următorul" (4):
 
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
