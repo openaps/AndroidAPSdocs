@@ -1,19 +1,19 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Aceste instrucțiuni sunt pentru configurarea pompei de insulină Equil.
 
 ## Capacități pompă cu AAPS
 
 §todo
 
 ## Cerințe hardware și software
-* **Compatible Equil hardware**
+* **Echipament compatibil Equil**
 
-  Currently Equil 5.3 and 5.4 is supported
+  În prezent Equil 5.3 și 5.4 sunt acceptate
 
-* [Version 3.3.0.0](#version3300) or newer of AAPS
+* [Versiunea 3.3.0.0](#version3300) sau mai nouă de AAPS
 
-### Select Equil pump
+### Selectați pompa Equil
 
 În [Configurator > Pompa](#Config-Builder-pump), treceți la **Equil 5.3**.
 
