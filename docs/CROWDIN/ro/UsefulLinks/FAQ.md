@@ -4,7 +4,7 @@ How to add questions to the FAQ: Follow the these [instructions](../SupportingAa
 
 ## General
 
-### Can I just download the AAPS installation file?
+### Pot descărca direct fișierul de instalare AAPS?
 
 Nu. There is no downloadable apk file for AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Iată de ce:
 
