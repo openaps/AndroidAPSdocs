@@ -108,7 +108,7 @@ To reduce the number of proposed basal rate changes while in Open Loop, you can 
 You don't need to action each and every system recommendation!
 ```
 (objectives-objective5)=
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## Obiectivul 5: Înțelegerea buclei deschise, inclusiv a recomandărilor privind bazala temporară
 
 As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
 
@@ -130,7 +130,7 @@ If you are open looping with a virtual pump **stop here**. Only click verify at 
 ![blank](../images/blank.png)
 
 (objectives-objective6)=
-## Objective 6: Starting to close the loop with Low Glucose Suspend
+## Obiectivul 6: Începerea închiderii buclei cu Suspendare la Hipoglicemie
 
 ![Warning sign](../images/sign_warning.png)
 ```{admonition}  Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
