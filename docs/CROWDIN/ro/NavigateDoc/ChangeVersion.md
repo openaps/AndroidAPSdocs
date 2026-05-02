@@ -1,8 +1,8 @@
-# Change version
+# Schimbați versiunea
 
-The documentation you are currently reading is specific to a given version of **AAPS**.
+Documentația pe care o citiți în prezent este specifică pentru o anumită versiune de **AAPS**.
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version.
+Versiunea curentă este afișată în dreapta jos a ecranului. Pentru a comuta la o versiune diferită, apăsați pe versiunea curentă.
 
 ![Deschideți meniul de limbă](../images/documentation_language_menu.png)
 
