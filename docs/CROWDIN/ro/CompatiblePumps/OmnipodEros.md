@@ -761,29 +761,29 @@ Iată câteva exemple de situații în care poate apărea o notificare de incert
 
 - **Boluses** - Uncertain boluses cannot be automatically verified. Notificarea va rămâne până la următorul bolus, dar o reîmprospătare manuală a pompei va șterge mesajul. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
 - **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. În mod implicit, alertele semnal sonor sunt dezactivate pentru acest tip de notificare.
-- **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
+- **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. Dacă deviația de timp dintre pompă și telefon este mai mare de 5 minute, AAPS va raporta că pompa este într-o stare suspendată în starea pompei cu un mesaj GESTIONARE SCHIMBARE ORĂ. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Dacă apăsați pe setare timp veți sincroniza ora de pe pompă cu cea de pe telefon și apoi puteți să apăsați pe butonul RELUAȚI ADMINISTRAREA pentru a continua operațiunile normale ale pompei.
 
-## Best Practices
+## Cele mai bune practici
 
 (OmnipodEros-optimal-omnipod-and-rileylink-positioning)=
 
-### Optimal Omnipod and RileyLink Positioning
+### Poziționarea optimă a pompei Omnipod și a dispozitivului RileyLink
 
-The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna. Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna. This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
+Antena utilizată pe RileyLink pentru a comunica cu o pompă Omnipod este o antenă spirală helică de 433 MHz. Datorită proprietăților sale de construcție, radiază un semnal omnidirecțional ca o gogoașă tridimensională cu axa Z reprezentând antena verticală în picioare. Aceasta înseamnă că există poziții optime pentru amplasarea dispozitivului RileyLink, în special în timpul activării pompei și a rutinelor de dezactivare.
 
 ![Toroid_w_CS](../images/omnipod/Toroid_w_CS.png)
 
 > *(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern*)
 
-Because of both safety and security concerns, pod *activation* has to be done at a range *closer (~30 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of or right next to the RileyLink.
+Because of both safety and security concerns, pod *activation* has to be done at a range *closer (~30 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Datorită naturii transmiterii semnalului de la antena RileyLink, este recomandat să NU se plaseze pompa direct pe sau lângă RileyLink.
 
-The image below shows the optimal way to position the RileyLink during pod activation and deactivation procedures. The pod may activate in other positions but you will have the most success using the position in the image below.
+Imaginea de mai jos arată modul optim de poziționare a dispozitivului RileyLink în timpul procedurilor de dezactivare și activare. Pompa se poate activa în alte poziții, dar veți avea cel mai mare succes folosind poziția din imaginea de mai jos.
 
-*Note: If after optimally positioning the pod and RileyLink communication fails, this may be due to a low battery which decreases the transmission range of the RileyLink antenna. To avoid this issue make sure the RileyLink is properly charged or connected directly to a charging cable during this process.*
+*Notă: Dacă după poziționarea optimă comunicarea cu pompa și RileyLink eșuează, aceasta se poate datora unei baterii scăzute care scade intervalul de transmitere al antenei RileyLink. Pentru a evita această problemă, asigurați-vă că RileyLink este încărcat corespunzător sau conectat direct la un cablu de încărcare în timpul acestui proces.*
 
 ![Omnipod_pod_and_RileyLink_Position](../images/omnipod/Omnipod_pod_and_RileyLink_Position.png)
 
-## Where to get help for Omnipod driver
+## Unde să obțineți ajutor pentru driverul Omnipod
 
 All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
 
