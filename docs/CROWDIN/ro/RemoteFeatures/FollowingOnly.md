@@ -55,36 +55,36 @@ Pros (as reported by users):
 
 * Swipe button or shake phone to snooze alarms at different intervals ranging from 5 min to 24 hours
 
-* Customize alarms (high, low alerts, missed readings when no data for 15-45 minutes).
+* Personalizați alarmele (alerte mari, mici, citiri ratate atunci când nu există date de 15-45 de minute).
 
-* Fast rise/drop over 2-5 consecutive readings (you choose). Can also choose the delta between two individual readings
+* Creștere/cădere rapidă timp de 2-5 citiri consecutive (alegerea dumneavoastră). De asemenea, puteți alege delta dintre două citiri distincte
 
-* Smart snooze so doesn't alert if levels are moving in right direction
+* Amânare inteligentă așa că nu alertează dacă nivelurile se îndreaptă în direcția corectă
 
-* There is a Care tab which appears to enable you to set a new temp target for a certain duration, delete the temp target or enter carbs.
+* Există o filă Îngrijire care pare să vă permită setarea unei noi ținte temporare pentru o anumită durată, să ștergeți ținta temporară sau să introduceți carbohidrați.
 
-Cons (as reported by users)
+Dezavantaje (așa cum au fost raportate de utilizatori)
 
-* Only available for iOS
+* Disponibil doar pentru iOS
 
-* The TT shows as 5 mmol regardless of which TT level is set
+* Ținta temporară se prezintă ca 5 mmol indiferent de nivelul țintei temporare stabilite
 
-* Never shows Temp Basal rate even though it shows TB
+* Nu arată niciodată rata bazalei temporare, chiar dacă arată bazală temporară
 
 ### [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) (Android)
 
 ![imagine](../images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
-* Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
+* Nightwatch se comercializează în calitate de client Nightscout și monitorizează nivelurile de glicemie ale utilizatorului Nightscout fie pe telefonul Android, fie pe tabletă.
 
-* The app can be downloaded from [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) and displays BG data in real time.
+* Aplicația poate fi descărcată de pe [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) și afișează date glicemice în timp real.
 
-* The user can be alerted with customised noisy low and high alarms set.
+* Utilizatorul poate fi alertat cu setul de alarme de zgomot redus și ridicat.
 
-* BG data can be viewed in either mmol/L or mg/dL.
+* Datele privind glicemia pot fi vizualizate fie în mmol/l, fie în mg/dl.
 
-* It requires Android 5.0 and up.
+* Necesită Android 5.0 și mai mare.
 
 * Acesta are o interfață de utilizator de culoare închisă, afișaje și butoane mari, fiind conceput pentru a fi utilizat pe timpul nopții.
 
