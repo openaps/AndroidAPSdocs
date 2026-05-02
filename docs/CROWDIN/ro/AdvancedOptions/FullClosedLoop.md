@@ -111,9 +111,9 @@ Nivelurile neobișnuite sau neregulate ale activității fizice prezintă dificu
 **FCL** poate prezenta provocări suplimentare pentru copii, iar acestea includ:
 
 - Este posibil ca Lyumjev sau Fiasp să nu fie disponibile sau bine tolerate.
-- Rata bazală pe oră poate fi foarte scăzută, oferind o bază slabă pentru **SMBs** mari.
+- Rata bazală pe oră poate fi foarte scăzută, oferind o bază slabă pentru <0>SMB</0> mari.
 - Dieta poate fi bogată în componente dulci. Cu volumul sangvin tipic scăzut al unui corp mic, tendință puternică către vârfuri ale **glicemiei**.
-- Hormonii de creștere și modificările substanțiale ale sensibilității la insulină fac dificilă menținerea cu precizie a unui **FCL** ajustat.
+- Hormonii de creștere și modificările substanțiale ale sensibilității la insulină fac dificilă menținerea cu precizie a unui <0>FCL</0> ajustat
 
 
 ## Activarea SMB amplificate: siguranță
@@ -220,18 +220,17 @@ Automatizarea(#3),"iobTH atins => **SMB** off", este definită pentru a termina 
 
 Automatizarea #3
 
-It tells the loop that above your set **iob threshold** it's better not to use any more **SMBs**
+Aceasta îi spune algoritmului că peste **pragul IOB** stabilit este mai bine să nu mai utilizeze nici un alt **SMB**
 
-- The given example does that by setting TT=111 (which is kind of arbitrary; pick a number>100 that you easy recognise as your automated **SMB** shut-off)
-- In **AAPS' Preferences/ SMB** Settings generally do not allow **SMB** at elevated target).                                                                                                                   
-  The insulin required will then have to be delivered with much more caution through the bottleneck of **TBRs**
+- Exemplul dat face acest lucru prin stabilirea țintei temporare=111 (care este oarecum arbitrar; alege un număr >100 pe care îl recunoașteți cu ușurință ca oprirea automată a **SMB**)
+- În general **Preferințele AAPS/setările SMB** nu permit **SMB** la ținta ridicată. Insulina necesară va trebui atunci să fie administrată cu mult mai multă prudența prin strâmtoarea generată de **RBT**
 
-**Caution: Automation #3 only works when there is no active TT.** So, in case you worked with EatingSoonTT, it must be ended by that time, which usually should be 30-40 minutes after meal start.
+**Atenție: Automatizarea #3 funcționează numai atunci când nu există o țintă temporară activă.** Deci, în cazul în care ați lucrat cu ținta temporară mănânc în curând, trebuie să se încheie până atunci, care de obicei ar trebui să se întâmple în jur de 30-40 de minute după începerea mesei.
 
-One way to do this is to set up an **Automation** Condition that ends an eventually running EatingSoonTT under the Condition **iob**>65% * iobTH.
-> Ways to work with EatingSoonTT Some loopers set (by pressing the TT button, or automated via a lowered **Profile** **BG** target if eating time slots are fairly fixed) an EatingSoonTT roughly an hour or more before meal start, just to guarantee a low starting **BG** and slightly increased  **iob**. But, assuming the **FCL** is always en route towards target, this might not yield much and you may prefere to define an **Automation** that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). A low **TT** is important in this stage because any **SMB** is calculated by your loop using (predicted glucose minus TT)/sens, so a small TT makes the resulting insulinReq bigger.
+O modalitate de a face acest lucru este de a crea o condiție **Automatizare** care încheie în cele din urmă o țintă temporară mănânc în curând în baza Condiției **iob**>65% * iobTH.
+> Modalități de a lucra cu o țintă temporară mănânc în curând Utilizatori de buclă setează (apăsând butonul țintă temporară, sau automatizat prin intermediul unei ținte scăzute în **profilul** **glicemic** în cazul în care intervalele orare sunt relativ fixate), o țintă temporară mănânc în curând cu aproximativ o oră sau mai mult înainte de începerea mesei, doar pentru a garanta o valoare mai scăzută a **glicemiei** și o ușoară creștere a **IOB**. Dar, să presupunem că **FCL** este întotdeauna pe drum spre țintă, s-ar putea ca aceasta să nu facă mare lucru și puteți prefera definirea unei **Automatizări** care stabilește o țintă temporară mănânc în curând la momentul recunoașterii mesei (delta glicemiei; sau accelerația = delta > delta medie). O țintă temporară **scăzută** este importantă în această etapă, deoarece orice **SMB** este calculat de bucla dumneavoastră folosind (glicemie minus TT)/sens, astfel încât o TT mică face ca insulinaReq rezultată să fie mai mare.
 
-After the first boosted **SMB**s were given, your set iobTH and *Automation** #3 should strike a good balance of limiting the glucose peak, but also not leading to a hypo after the meal.
+După ce primele **SMB** amplificate au fost date, iobTH setată de dumneavoastră și *Automatizarea** #3 ar trebui să ajungă la un echilibru bun în limitarea a vârfului de glicemie, dar care nu duce la hipoglicemie după masă.
 
 Dacă micul dejun deviază substanțial în conținutul de carbohidrați de cina obișnuită, poți beneficia de definirea **Automatizărilor** care se aplică în orele respective, și să aveți un profil **iobTH** diferit (posibil și delte diferite și diferite **Procentaje de Profil** setate). Amândoi, dumneavoastră cu definiția spectrului de masă și cu setările (în special, **iobTH**), și bucla care gestionează curba **glicemică** în desfășurare, trebuie să acceptați anumite înălțimi ale vârfurilor astfel încât să reduceți pericolul de hipoglicemie către sfârșitul **duratei de acțiune a insulinei DIA** de la **SMB**.
 
