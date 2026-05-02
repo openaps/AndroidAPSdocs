@@ -54,7 +54,7 @@ Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/wat
 
 ## Basic smartwatch familiarity
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+După configurarea de bază a ceasului conform videoclipului de mai sus, mergeți la Playstore de pe telefon și descărcați următoarele aplicații: "Galaxy Wearable" "Samsung" și "instrumente Easy Fire" sau "Wear Installer 2".
 
 There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
 
@@ -169,7 +169,7 @@ You will see a Wi-Fi paring code and IP address and port appearing: ![imagine](.
 - Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
 - Make sure to be near your main router, then restart both phone and watch.
 
-**Pairing :**
+**Asociere:**
 
 - Watch: Wireless Debugging: note the IP address.
 - Wear Installer: Enter the IP on the in Wear Installer app.
@@ -242,13 +242,13 @@ There are a number of watchfaces available in the standard build of the AAPS Wea
 
 5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
 
-## AAPSv2 watchface - Legend
+## Fețe de ceas AAPSv2 - Legendă
 
 ![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - timp de la ultima activare a buclei
 
-B - CGM reading
+B - Citire CGM
 
 C - minute de la ultima citire CGM
 
