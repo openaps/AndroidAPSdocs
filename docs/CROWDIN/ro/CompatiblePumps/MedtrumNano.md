@@ -185,33 +185,33 @@ Această setare poate fi schimbată când se utilizează pompa Medtrum, dar se r
 
 #### Activați plasturele din fila vedere de ansamblu Medtrum
 
-Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
+Navigați spre [fila Medtrum](#nano-overview) în interfața AAPS și apăsați butonul **Schimbați plasturele** din colțul din dreapta jos.
 
-If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#nano-deactivate-patch).
+Dacă un plasture este deja activ, vi se va cere să dezactivați mai întâi acest plasture. vedeți [Dezactivați plasturele](#nano-deactivate-patch).
 
-Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pumpbase to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
+Urmați instrucțiunile pentru a umple și a activa un nou plasture. Vă rugăm să rețineți - este important să conectați baza pompei la plasturele rezervor doar în etapa în care vi se cere să faceți acest lucru. **Trebuie să puneți pompa pe corpul dumneavoastră și să introduceți canula numai când vi se cere în timpul procesului de activare (după ce amorsarea este completă).**
 
-##### Start Activation
+##### Pornire activare
 
 ![Porniți activarea](../images/medtrum/activation/StartActivation.png)
 
-At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
+În această etapă, verificați numărul de serie și asigurați-vă că baza pompei nu este încă conectată la plasture.
 
-Press **Next** to continue.
+Apăsați **Înainte** pentru a continua.
 
-##### Fill the patch
+##### Umpleți plasturele transdermic
 
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
+![Umpleți plasturele transdermic](../images/medtrum/activation/FillPatch.png)
 
-Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
+Odată ce plasturele este detectat și umplut cu minim 70 de unități de insulină, va apărea **Următorul**.
 
-##### Prime the patch
+##### Amorsați plasturele transdermic
 
-![Half press](../images/medtrum/activation/HalfPress.png)
+![Jumătate de apăsare](../images/medtrum/activation/HalfPress.png)
 
-Do not remove the safety lock and press the needle button on the patch.
+Nu îndepărtați piedica de siguranță și apăsați butonul acului de pe plasture.
 
-Press **Next** to start prime
+Apăsați **Următorul** pentru a începe să amorsați
 
 ![Progresul amorsării](../images/medtrum/activation/PrimeProgress.png)
 
@@ -387,7 +387,7 @@ Plasturele poate produce o varietate de erori. Pentru a preveni erorile frecvent
 - Asigurați-vă că baza pompei este așezată corespunzător în plasture și că nu sunt vizibile goluri.
 - La umplerea plasturelui nu aplicați o forță excesivă pistonului. Nu încercați să umpleți plasturele peste limita maximă care se aplică modelului dumneavoastră.
 
-## Where to get help
+## Unde să obțineți ajutor
 
 Toată munca de dezvoltare pentru driverul Medtrum este realizată de comunitate pe bază **voluntară**; vă cerem să vă amintiți acest lucru și să utilizați următoarele recomandări înainte de a solicita asistență:
 
