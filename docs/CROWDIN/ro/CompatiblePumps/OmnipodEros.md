@@ -574,7 +574,7 @@ Grupurile de setări sunt listate mai jos; puteți activa sau dezactiva printr-u
 
 ![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
 
-*NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
+*NOTĂ: Un asterisc (\*) indică valoarea implicită pentru o setare activată.*
 
 ### RileyLink
 
@@ -697,7 +697,7 @@ Raportarea cantității de insulină din pompa Omnipod Eros nu este exactă.  Ac
 
 **Nivelul bateriei**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  Dispozitivul RileyLink nu poate raporta nivelul său al bateriei.  Nivelul bateriei este raportat după fiecare comunicare cu pompa, astfel încât nu se poate observa o creștere liniară atunci când se încarcă.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  Dispozitivul RileyLink nu poate raporta nivelul său al bateriei.  Nivelul bateriei este raportat după fiecare comunicare cu pompa, astfel încât nu se poate observa o creștere liniară atunci când se încarcă.  O reîmprospătare manuală va actualiza nivelul bateriei curente.  When a supported Pod communication device is disconnected a value of 0% will be reported.
 
 > - **RileyLink hardware is NOT capable of reporting battery level**
 > - **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
