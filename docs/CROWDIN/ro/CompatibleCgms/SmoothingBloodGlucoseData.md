@@ -33,6 +33,6 @@ Senzorii Libre sunt zgomotoși și pot necesita omogenizare. Când se utilizeaz�
 
 | Senzor / sursă de date | Juggluco | direct xDrip+ | punte xDrip+ | aplicație xDrip+ modificată |
 | ---------------------- |:--------:|:-------------:|:------------:|:---------------------------:|
-| Libre 1/14 days/Pro    |   N.A.   |     N.A.      |    Medie     |            N.A.             |
+| Libre 1/14 zile/Pro    |   N.A.   |     N.A.      |    Medie     |            N.A.             |
 | Libre 2/2+ (EU)        |  Medie   |     Nimic     |    Medie     |            Nimic            |
 | Libre 2/2+/3/3+        |  Medie   |     N.A.      |     N.A.     |            Nimic            |
