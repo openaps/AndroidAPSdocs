@@ -257,11 +257,11 @@ O a doua scanare NFC este necesară pentru a **ADĂUGA** senzorul ca dispozitiv 
 
 ![scanare xDrip+](../images/minimal00per/xdripscan2.png)
 
-O perioadă de așteptare de 60 de secunde este impusă deoarece senzorul nu poate fi scanat în timpul acestui proces de mai mult de o dată pe minut. If the sensor is scanned too early the warning **Not so quickly, wait 60 seconds** is displayed in the xDrip Overview screen.
+O perioadă de așteptare de 60 de secunde este impusă deoarece senzorul nu poate fi scanat în timpul acestui proces de mai mult de o dată pe minut. Dacă senzorul este scanat prea devreme avertizarea **Nu atât de repede, așteptați 60 secunde** este afișat în ecranul privire de ansamblu al xDrip.
 
 ![scanare xDrip+](../images/minimal00per/xdripscan3.png)
 
-Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
+Deschideți jurnalele evenimentelor xDrip+ și verificați senzorul asociat corect cu xDrip+.
 
 ![scanare xDrip+](../images/minimal00per/xdripstream.png)
 
@@ -269,9 +269,9 @@ Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
 
 ### **Pasul 8: Colectarea datelor între 3 și 15 minute**
 
-Between 3 and 15 minutes enough data is collected to display the first values. *If you are still not receiving readings at this time, sometimes it helps to reboot the phone.*
+Între 3 și 15 minute suficiente date sunt colectate pentru a afișa primele valori. *Dacă încă nu primiți citiri în acest moment, uneori ajută repornirea telefonului.*
 
-If you use a Samsung (or many Chinese brand phones) and have issues receiving data, scan the QR code below, in xDrip+ -> Auto Configure.
+Dacă folosiți un Samsung (sau multe telefoane de marcă chinezească) și aveți probleme cu primirea datelor, scanați codul QR de mai jos, în xDrip+ -> Configurare automată.
 
 ```{admonition} QR Code
 :class: dropdown
@@ -279,7 +279,7 @@ If you use a Samsung (or many Chinese brand phones) and have issues receiving da
 ![Setup Bluetooth](../images/minimal00per/qr_libre2direct_samsung.png)
 ```
 
-It will change xDrip+ Bluetooth settings to:
+Va schimba setările Bluetooth xDrip+ în:
 
 - *Acordați încredere Auto-Connect*: **oprit**
 - *Folosiți scanările de fundal*: **oprit**
@@ -288,13 +288,13 @@ It will change xDrip+ Bluetooth settings to:
 
 ### **Pasul 9: Verificați că senzorul e conectat și transmite date**
 
-Press the Hamburger menu in the upper left of the xDrip+ Overview screen and select **System Status**. On the System Status screen the active **Bluetooth Device:** field displays the FSL2 Bluetooth naming convention of **ABB___XXXXXXXXXXX**, where the XXX’s represent the sensor serial number. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displayed the time the sensor was started.
+Apăsați meniul hamburger din stânga sus a ecranului privire de ansamblu xDrip+ și selectați **Stare sistem**. Pe ecranul de Stare al Sistemului, **Dispozitivele Bluetooth** active: afișează convenția de denumire Bluetooth FSL2 de la **ABB___XXXXXXXXX**, unde XXX reprezintă numărul de serie al senzorului. Câmpul **Starea Conexiunii** afișează **Conectat** și secțiunea **Startul senzorului:** a afișat data la care senzorul a fost pornit.
 
 ![scanare xDrip+](../images/minimal00per/xdripSSlog.png)
 
-On the **BT Device** (swipe left) screen you can verify further connection details of the sensor as well as use this screen for troubleshooting connections. Below is a list of fields and their purposes to assist in connection troubleshooting.
+Pe ecranul **Dispozitiv Bluetooth** (glisare la stânga) puteți verifica detaliile legate de conexiune ale senzorului și puteți utiliza acest ecran pentru conexiunile de depanare. Mai jos este o listă de câmpuri și scopurile lor pentru a ajuta la depanarea conexiunii.
 
-*NOTE: **<u>DO NOT TOUCH</u> AND CHANGE Bluetooth Pairing from <u>Disabled</u>** in this window. Doing so will attempt a direct pair, it will fail (Not bonded) and you will have to start the process from Step 5 all over again.*
+*NOTĂ: **<u>NU ATINGEȚI</u> ȘI SCHIMBAȚI Asocierea Bluetooth de la <u>Dezactivat</u>** în această fereastră. Acest lucru va încerca o conectare directă, va eșua (nu este legată) și va trebui să începeți din nou procesul de la Pasul 5.*
 
 ![scanare xDrip+](../images/minimal00per/xdripSSbond.png)
 
