@@ -11,7 +11,7 @@
 
 Activați transmisiunea în aplicația Syai:
 
-1. Select Profile
+1. Selectați profilul
 2. Syai Health Ecosystem
 3. Atingeți Conectați-vă acum cu AAPS, acceptați acordul de transfer terț al datelor
 4. Activați partajarea datelor cu AAPS
