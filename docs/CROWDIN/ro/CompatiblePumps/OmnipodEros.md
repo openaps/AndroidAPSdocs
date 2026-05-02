@@ -71,7 +71,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 ### Opțiunea 2: Configurator
 
-Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜**Pump**➜**Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜**Pump**➜**Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. Acest lucru este menționat în această documentație ca fila **Omnipod (POD)**.
 
 > **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
 > 
@@ -89,17 +89,17 @@ To verify that you have enabled the Omnipod driver in AAPS **swipe to the left**
 
 Please **swipe left** to the **Omnipod (POD)** tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
 
-> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Refresh Pod connectivity and status
+> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Reîmprospătați conectivitatea și starea pompei
 > 
-> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Administrare pompă (activare, dezactivare, redare semnal sonor de test și istoric pompă)
 
 (OmnipodEros-rileylink-setup)=
 
-### RileyLink Setup
+### Setare RileyLink
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](#OmnipodEros-activating-a-pod) below.
+Dacă ați asociat deja cu succes un dispozitiv RileyLink în Asistentul de Configurare sau în pașii de dinainte, atunci puteți continua cu [secțiunea Activarea unei pompe](#OmnipodEros-activating-a-pod) mai jos.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. Aceasta va apărea, de asemenea, aproximativ în primele 30 de secunde după începerea AAPS, deoarece se conectează activ la RileyLink.*
+*Notă: Un bun indicator vizual că RileyLink nu este conectat ar fi că butoanele de insulină și calculator din fila Acasă lipsesc. Aceasta va apărea, de asemenea, aproximativ în primele 30 de secunde după începerea AAPS, deoarece se conectează activ la RileyLink.*
 
 1. Asigurați-vă că dispozitivul RileyLink este încărcat și pornit.
 
@@ -562,7 +562,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 ## Setări Omnipod
 
-Setările driverului Omnipod sunt configurabile din colțul stânga-sus **meniul hamburger** sub **Constructorul de Configurație**➜**Pompă**➜**Omnipod**➜**Rotița de setări (2)** prin selectarea **butonului radio (1)** denumit **Omnipod**. Selectarea **casetei (3)** de lângă **Rotița zimțată de setări (2)** va permite afișarea meniului Omnipod ca o filă în interfața AAPS intitulată **OMNIPOD** sau **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+Setările driverului Omnipod sunt configurabile din colțul stânga-sus **meniul hamburger** sub **Constructorul de Configurație**➜**Pompă**➜**Omnipod**➜**Rotița de setări (2)** prin selectarea **butonului radio (1)** denumit **Omnipod**. Selectarea **casetei (3)** de lângă **Rotița zimțată de setări (2)** va permite afișarea meniului Omnipod ca o filă în interfața AAPS intitulată **OMNIPOD** sau **POD**. Acest lucru este menționat în această documentație ca fila **Omnipod (POD)**.
 
 ![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
 
@@ -684,7 +684,7 @@ Această filă este bine documentată în documentația principală AAPS, dar ex
 
 > ![Actions_Tab](../images/omnipod/Actions_Tab.png)
 
-### Levels
+### Niveluri
 
 **Nivelul insulinei**
 
@@ -723,44 +723,44 @@ Acest eșec este legat de o stare incorectă a pompei pentru o comandă sau o er
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
-### Import Settings from previous AAPS
+### Importați setările din AAPS anterior
 
-Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
+Vă rugăm să rețineți că importarea setărilor are posibilitatea de a importa o stare a unei pompe învechite. Drept urmare, este posibil să pierdeți o pompă activă. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
 
-1. Deactivate your pod session. Verify that you do not have an active pod session.
-2. Export your settings and store a copy in a safe place.
-3. Uninstall the previous version of AAPS and restart your phone.
-4. Install the new version of AAPS and verify that you do not have an active pod session.
-5. Import your settings and activate your new pod.
+1. Dezactivați sesiunea activă de pompă. Verificați dacă nu aveți o sesiune activă de pompă.
+2. Exportați-vă setările și stocați o copie într-un loc sigur.
+3. Dezinstalați versiunea anterioară a AAPS și reporniți telefonul.
+4. Instalați noua versiune de AAPS și verificați dacă nu aveți o sesiune activă de pompă.
+5. Importați setările și activați noua pompă.
 
 ### Alerte driver Omnipod
 
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. Un rezumat al principalelor alerte pe care este posibil să le întâlniți este prezentat mai jos:
 
-#### No active Pod
+#### Nicio pompă activă
 
-No active Pod session detected. Această alertă poate fi dezactivată temporar prin apăsarea **AMÂNAȚI** dar va continua să se declanșeze atâta timp cât o nouă pompă nu a fost activată. Once activated this alert is automatically silenced.
+Nicio sesiune activă de pompă detectată. Această alertă poate fi dezactivată temporar prin apăsarea **AMÂNAȚI** dar va continua să se declanșeze atâta timp cât o nouă pompă nu a fost activată. Odată activată, această alertă este pusă în mod silențios automat.
 
-#### Pod suspended
+#### Pompă suspendată
 
-Informational alert that Pod has been suspended.
+Alertă informațională că pompa a fost suspendată.
 
-#### Setting basal profile failed. Delivery might be suspended! Reîmprospătați manual starea pompei din fila Omnipod și reluați administrarea, dacă este necesar.
+#### Setarea profilului bazalei a eșuat. Administrarea insulinei poate fi suspendată! Reîmprospătați manual starea pompei din fila Omnipod și reluați administrarea, dacă este necesar.
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 
-#### Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
+#### Nu s-a putut verifica dacă bolusul SMB a avut loc cu succes. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
 
 Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 
 #### Nu este sigur dacă "sarcina bolus/RBT/SMB" s-a finalizat; vă rugăm verificați manual dacă a avut succes.
 
-Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
+Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. Necesitatea informării utilizatorului cu privire la această incertitudine era necesară.
 
-Below are a few examples of when an uncertain notification can occur.
+Iată câteva exemple de situații în care poate apărea o notificare de incertitudine.
 
-- **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
-- **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. By default alert beeps are disabled for this notification type.
+- **Boluses** - Uncertain boluses cannot be automatically verified. Notificarea va rămâne până la următorul bolus, dar o reîmprospătare manuală a pompei va șterge mesajul. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
+- **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. În mod implicit, alertele semnal sonor sunt dezactivate pentru acest tip de notificare.
 - **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
 
 ## Best Practices
