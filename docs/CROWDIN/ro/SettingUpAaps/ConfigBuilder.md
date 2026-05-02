@@ -102,9 +102,9 @@ Selectați sursa de monitorizare a glicemiei din sânge pe care o folosiți. Ved
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * Glicemie aleatorie: generează valori aleatorii ale glicemiei (doar în modul DEMO)
 
-## Smoothing
+## Omogenizare
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Omogenizare](../images/ConfBuild_Smoothing.png)
 
 Vedeți [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
