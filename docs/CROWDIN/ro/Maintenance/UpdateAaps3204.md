@@ -12,7 +12,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 * A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk.
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
+| Versiune AAPS           | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
 | ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
 | [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
 
