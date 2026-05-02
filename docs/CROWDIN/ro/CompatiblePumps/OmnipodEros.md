@@ -39,55 +39,55 @@ Aceste instrucțiuni vor presupune că porniți o nouă sesiune de pompă; în c
 
 **SIGURANȚA MAI ÎNTÂI** - nu încercați acest proces într-un mediu în care nu vă puteți reveni după o eroare (pompe suplimentare, insulină, RileyLink încărcat și dispozitive de telefonie mobilă sunt obligatorii).
 
-**Telecomanda dumneavoastră Omnipod nu va mai funcționa după ce driverul AAPS pentru Omnipod activează pompa**. Anterior, ați folosit telecomanda Omnipod pentru a trimite comenzi la pompa Omnipod Eros. O pompă Omnipod Eros permite unui singur dispozitiv să comunice cu ea. Dispozitivul care activează cu succes pompa este singurul dispozitiv care are permisiunea de a comunica cu ea de atunci încolo. Aceasta înseamnă că odată ce activați o pompă Omnipod Eros cu RileyLink prin intermediul driverului AAPS pentru Omnipod, **nu veți mai putea folosi telecomanda cu pompa**. Driverul AAPS Omnipod cu RileyLink este acum telecomanda dumneavoastră în vigoare. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.*
+**Telecomanda dumneavoastră Omnipod nu va mai funcționa după ce driverul AAPS pentru Omnipod activează pompa**. Anterior, ați folosit telecomanda Omnipod pentru a trimite comenzi la pompa Omnipod Eros. O pompă Omnipod Eros permite unui singur dispozitiv să comunice cu ea. Dispozitivul care activează cu succes pompa este singurul dispozitiv care are permisiunea de a comunica cu ea de atunci încolo. Aceasta înseamnă că odată ce activați o pompă Omnipod Eros cu RileyLink prin intermediul driverului AAPS pentru Omnipod, **nu veți mai putea folosi telecomanda cu pompa**. Driverul AAPS Omnipod cu RileyLink este acum telecomanda dumneavoastră în vigoare. *Acest lucru nu înseamnă că ar trebui să aruncați telecomanda, este recomandat să o păstrați în caz de rezervă, și pentru urgențele când AAPS nu funcționează corect.*
 
-**You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.** The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
+**Puteți configura mai multe dispozitive RileyLink, dar numai un RileyLink selectat pe rând poate comunica cu o pompă.** Driverul AAPS pentru Omnipod suportă abilitatea de a adăuga mai multe dispozitive RileyLink în configurația RileyLink, cu toate acestea, numai câte un RileyLink poate fi selectat pentru a fi utilizat în vederea trimiterii și primirii comunicării.
 
-**Your pod will not shut off when the RileyLink is out of range.** When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod. Should you lose contact with the pod, it will revert to this basal profile. You will not be able to issue new commands until the RileyLink comes back in range and re-establishes the connection.
+**Pompa dumneavoastră nu se va închide atunci când dispozitivul RileyLink nu este în preajmă.** Când RileyLink este în afara razei de acțiune sau semnalul este blocat de la comunicarea cu pompa activă, pompa dumneavoastră va continua să administreze insulină bazală. La activarea unei pompe, profilul bazal definit în AAPS va fi programat în noua pompă. În cazul în care pierdeți contactul cu pompa, aceasta va reveni la acest profil bazal. Nu veți putea emite noi comenzi până când dispozitivul RileyLink nu va reveni în aria de acoperire și nu va putea restabili conexiunea.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** If you are new to AAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work.  You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AAPS is not able to take them into account with its algorithms currently.
+**Profile cu rate bazale pe durate de 30 de minute nu sunt acceptate în AAPS.** Dacă sunteți la început în AAPS și configurați pentru prima dată profilul de rată a bazalei vă rugăm să rețineți că ratele bazale care încep de la jumătatea orei nu sunt acceptate și va trebui să vă ajustați profilul de rată bazală pentru a începe la fix. Spre exemplu, dacă aveți o rată bazală de 1,1 unități care începe la ora 09:30 și are o durată de 2 ore cu terminare la ora 11:30, aceasta nu va funcționa.  Va trebui să actualizați această rată bazală de 1,1 unități la un interval de timp de 9:00-11:00 sau 10:00-12:00.  Chiar dacă incrementele de 30 de minute ale profilului ratei bazale sunt acceptate de pompa Omnipod, AAPS nu le poate lua în considerare cu algoritmii săi în prezent.
 
-## Enabling the Omnipod Driver in AAPS
+## Activarea driverului Omnipod în AAPS
 
-You can enable the Omnipod driver in AAPS in **two ways**:
+Puteți activa driverul Omnipod în AAPS în **două feluri**:
 
-### Option 1: The Setup Wizard
+### Opțiunea 1: Asistentul de instalare
 
-After installing a new version of AAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
+După instalarea unei noi versiuni de AAPS, **Asistentul de configurare** va porni automat.  Acest lucru se va întâmpla și în timpul actualizărilor.  Dacă ați exportat deja setările dintr-o instalare anterioară, puteți să ieșiți din Asistentul de configurare și să importați setările vechi.  Pentru instalările noi, continuați mai jos.
 
-Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** .
+Prin **Asistentul de configurare AAPS (2)** situat în colțul din dreapta sus **meniul cu trei puncte (1)** și treceți prin meniul asistentului până ajungeți la ecranul **Pompa**. Apoi selectați **butonul radio Omnipod (3)**.
 
 > ![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
 
-On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed, under the **RileyLink Configuration** add your RileyLink device by pressing the **Not Set** text.
+Pe același ecran, sub selecția pompei, sunt afișate **setările driverului Omnipod**, sub **configurația dispozitivului RileyLink** adăugați dispozitivul dumneavoastră RileyLink prin apăsarea textului **Nesetat**.
 
-On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed.
+Pe ecranul **Selecție RileyLink** apăsați butonul **Scanați** și selectați dispozitivul dumneavoastră RileyLink prin scanarea tuturor dispozitivelor Bluetooth disponibile și selectarea dispozitivului dumneavoastră RileyLink din listă. Când este selectată corect, vă veți întoarce la ecranul de selecție a driverului pompei care afișează setările driverului Omnipod ce arată dispozitivul RileyLink selectat cu adresa MAC prezentată.
 
-Press the **Next** button to proceed with the rest of the **Setup Wizard.**  It can take up to one minute for the selected RileyLink to initialize and the **Next** button to become active.
+Apăsați butonul **Următorul** pentru a continua cu restul din **Asistentul de configurare.**  Poate dura până la un minut pentru ca dispozitivul RileyLink selectat să se inițializeze și butonul **Următorul** să devină activ.
 
-Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](#OmnipodEros-rileylink-setup).
+Pași detaliați despre cum să configurați dispozitivul de comunicare cu pompa sunt enumerați mai jos în [secțiunea de configurare RileyLink](#OmnipodEros-rileylink-setup).
 
-**OR**
+**SAU**
 
 ### Opțiunea 2: Configurator
 
-Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜**Pump**➜**Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. Acest lucru este menționat în această documentație ca fila **Omnipod (POD)**.
+Prin **meniul de tip hamburger** din colțul stânga-sus sub **Constructorul de configurare (1)**➜**Pompă**➜**Omnipod** prin selectarea **butonului radio (2)** denumit **Omnipod**. Alegerea **casetei de selecție (4)** de lângă **Roata zimțată de setări (3)** va afișa meniul Omnipod ca o filă în interfața AAPS intitulată **POD**. Acest lucru este menționat în această documentație ca fila **Omnipod (POD)**.
 
-> **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
+> **NOTĂ:** O modalitate mai rapidă de a accesa **Setările Omnipod** poate fi găsită mai jos în [secțiunea Setări Omnipod](#OmnipodEros-omnipod-settings) a acestui document.
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
 ### Verificarea Selecției Driverului Omnipod
 
-*Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
+*Notă: Dacă ați ieșit din modul de configurare mai devreme fără a vă selecta dispozitivul RileyLink, driverul Omnipod este activat, dar tot va trebui să selectați dispozitivul RileyLink.  Puteți vedea fila Omnipod (POD) așa cum apare mai jos*
 
-To verify that you have enabled the Omnipod driver in AAPS **swipe to the left** from the **Overview** tab, where you will now see an **Omnipod** or **POD** tab.
+Pentru a verifica dacă ați activat driverul Omnipod în AAPS **glisați spre stânga** din fila **Vedere de ansamblu**, unde veți vedea acum fila **Omnipod** sau **POD**.
 
 ![Enable_Omnipod_Driver_5](../images/omnipod/Enable_Omnipod_Driver_5.png)
 
-## Omnipod Configuration
+## Configurare Omnipod
 
-Please **swipe left** to the **Omnipod (POD)** tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
+Vă rugăm să **glisați la stânga** în fila **Omnipod (POD)** unde veți putea gestiona toate funcțiile pompei și ale dispozitivului RileyLink (unele dintre aceste funcții nu sunt activate sau vizibile fără o sesiune activă de pompă):
 
 > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Reîmprospătați conectivitatea și starea pompei
 > 
@@ -688,21 +688,21 @@ Această filă este bine documentată în documentația principală AAPS, dar ex
 
 **Nivelul insulinei**
 
-Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.
+Raportarea cantității de insulină din pompa Omnipod Eros nu este exactă.  Acest lucru se datorează faptului că nu se cunoaște exact câtă insulină a fost introdusă în pompă, numai faptul că atunci când se declanșează cele 2 semnale sonore în timp ce se umple pompa au fost introduse cel puțin 85 de unități. O pompă poate ține maximum 200 de unități. Armarea poate introduce, de asemenea, variații, deoarece nu este un proces exact și precis.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.
 
 > - **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
 > - **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir.
 > - **SMS** - Returnează valoarea sau 50+U pentru răspunsuri SMS
 > - **Nightscout** - Încarcă în Nightscout valoarea de 50 atunci când sunt peste 50 de unități (versiunea 14.07 și mai vechi).  Versiunile mai noi vor raporta o valoare de 50+ atunci când depășesc 50 de unități.
 
-**Battery Level**
+**Nivelul bateriei**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  Dispozitivul RileyLink nu poate raporta nivelul său al bateriei.  Nivelul bateriei este raportat după fiecare comunicare cu pompa, astfel încât nu se poate observa o creștere liniară atunci când se încarcă.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
 
 > - **RileyLink hardware is NOT capable of reporting battery level**
 > - **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
 > - **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
-> - **Battery Level reporting MAY work for other devices (excluding RileyLink)**
+> - **Raportarea nivelului de baterie POATE funcționa pentru alte dispozitive (cu excepția RileyLink)**
 > - **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
 > - **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
 
@@ -712,7 +712,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 ### Eșecuri pompă
 
-Ocazional, apare un eșec din cauza unei varietăți de probleme, inclusiv a problemelor de hardware cu pompa în sine. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Ocazional, apare un eșec din cauza unei varietăți de probleme, inclusiv a problemelor de hardware cu pompa în sine. Cel mai bine este să nu se recurgă la Insulet, deoarece AAPS nu este un caz de utilizare aprobat. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
 ### Prevenirea erorii 49 de pompă
 
