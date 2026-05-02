@@ -3,17 +3,17 @@
 
 ## Using M8 with Ottai app
 
--   Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>. For the Chinese version of Ottai use <https://ottai.com.cn/70ICjxAI4i>
+-   Descărcați și instalați fișierul apk de la <https://play.google.com/store/apps/details?id=com.ottai.seas>. Pentru versiunea chineză Ottai folosiți <https://ottai.com.cn/70ICjxAI4i>
 
 -   Porniți senzorul
 
-- Select Ottai in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Selectați Ottai în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
-Enable broadcast in the Ottai app:
+Activați transmisiunea în aplicația Ottai:
 
-1. Select Profile
+1. Selectați profilul
 2. Ottai hub
-3. Tap Share with AAPS, accept the third party data transfer agreement
-4. Enable Share glucose data with AAPS
+3. Atingeți Distribuiți cu AAPS, acceptați acordul de transfer terț de date
+4. Activați partajarea datelor de glicemie cu AAPS
 
 ![Ottai](../images/Ottai.png)
