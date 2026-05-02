@@ -40,57 +40,57 @@ Acest nou driver este scris în prezent pentru a sprijini următoarele limbi pe 
 * Turcă
 * Poloneză
 * Cehă
-* Hungarian
-* Slovak
-* Romanian
-* Croatian
-* Dutch
-* Greek
-* Finnish
-* Norwegian
-* Portuguese
-* Swedish
-* Danish
-* German
-* Slovenian
-* Lithuanian
+* Maghiară
+* Slovacă
+* Română
+* Croată
+* Olandeză
+* Greacă
+* Finlandeză
+* Norvegiană
+* Portugheză
+* Suedeză
+* Daneză
+* Germană
+* Slovenă
+* Lituaniană
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**Important**: Dacă pompa este setată într-o limbă care nu face parte din această listă, vă rugăm să contactați dezvoltatorii și să setați limba pompei într-una din listă. În caz contrar, driverul nu va funcționa corect.
 
-## Phone setup
+## Configurare telefon
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+Este foarte important să vă asigurați că optimizările bateriei sunt oprite. AAPS deja detectează automat când este supus acestor optimizări și solicită ca acestea să fie dezactivate. Dar, pe telefoanele Android moderne, Bluetooth _în sine_ este o aplicație (o aplicație de sistem). Și, de obicei, "Aplicația Bluetooth" rulează _cu optimizările bateriei în mod implicit_. Ca rezultat, Bluetooth poate refuza să răspundă atunci când telefonul are ca scop să economisească energie deoarece oprește aplicația Bluetooth. Aceasta înseamnă că în setările aplicației de sistem Bluetooth, optimizările bateriei trebuie de asemenea dezactivate. Din păcate, cum se poate găsi aplicația de sistem Bluetooth diferă între telefoane. În modul implicit Android, accesați Setări -> Aplicații -> Vedeți toate aplicațiile N (N = numărul de aplicații de pe telefon). Apoi, deschideți meniul în colțul din dreapta sus, apăsați pe "Afișați sistem" sau "Afișați aplicațiile de sistem" sau "Toate aplicațiile". Acum, în noua listă extinsă de aplicații, căutați o aplicație "Bluetooth". Selectați, și pe informațiile sale despre aplicație, apăsați pe "Baterie". Acolo, dezactivați optimizările bateriei (uneori numite "utilizarea bateriei").
 
-## Combo setup
+## Configurare Combo
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. Dacă nu aveți acest software, contactați linia telefonică de suport Accu-Chek. De obicei, aceștia vor trimite către utilizatorii înregistrați un CD conținând software-ul "360° Pump Configuration Software" și un dispozitiv de conectare USB-infraroșu SmartPix (de asemenea, se poate folosi și dispozitivul Realtyme).
+* Configurați pompa folosind programul de configurare Accu-Chek 360. Dacă nu aveți acest software, contactați linia telefonică de suport Accu-Chek. De obicei, aceștia vor trimite către utilizatorii înregistrați un CD conținând software-ul "360° Pump Configuration Software" și un dispozitiv de conectare USB-infraroșu SmartPix (de asemenea, se poate folosi și dispozitivul Realtyme).
 
-  - **Required settings** (marked green in screenshots):
+  - **Setări recomandate** (marcat cu verde în poze):
 
-     * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
+     * Setați/lăsați configurația de meniu ca "Standard", aceasta va afișa doar meniurile/acțiunile suportate pe pompă și le va ascunde pe cele care nu sunt acceptate (bolus extins/multival, rate bazale multiple), ceea ce determină restricționarea funcționalității buclei pentru că nu este posibil să rulați bucla într-o manieră sigură când este folosită.
+     * Verificați că _Quick Info Text_ este denumit exact "QUICK INFO" (fără ghilimele; se găsește la _Opțiuni pompă de insulină_).
+     * Setați RBT _Ajustare maximă_ la 500%
+     * Dezactivați _Semnalizați terminarea Ratei Bazale Temporare_
+     * Setați RBT _Incrementarea duratei_ la 15 minute
      * Activați Bluetooth-ul
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Setări recomandate** (marcat cu albastru în poze)
 
      * Stabiliți alarma de cartuș pe terminate așa cum considerați necesar
      * Configurați un bolus maxim potrivit indicațiilor dumneavoastră terapeutice pentru a vă proteja de o eventuală eroare posibilă în software
-     * În mod similar, configurați o durată maximă a RBT ca un mijloc de protecție. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-     * Stabiliți un interval minim de 5.5, respectiv 5 pentru timpul după care ecranul să se stingă automat sau meniurile să se stingă automat. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+     * În mod similar, configurați o durată maximă a RBT ca un mijloc de protecție. Permiteți cel puțin 3 ore, deoarece opțiunea de a deconecta pompa timp de 3 ore stabilește un 0% pentru 3 ore.
+     * Activați blocarea tastelor de pe pompă pentru a preveni bolusarea din pompă, mai ales când pompa a fost utilizată înainte și bolusarea rapidă era un obicei.
+     * Stabiliți un interval minim de 5.5, respectiv 5 pentru timpul după care ecranul să se stingă automat sau meniurile să se stingă automat. Aceasta permite AAPS să își revină mult mai rapid din situații de eroare și reduce numărul de vibrații ce pot apărea în cazul unor astfel de erori
 
-  ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+  ![Captură de ecran al meniului setărilor de utilizator](../images/combo/combo-menu-settings.png)
 
-  ![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+  ![Captură de ecran a setărilor RBT](../images/combo/combo-tbr-settings.png)
 
-  ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+  ![Captură de ecran al setărilor de bolus](../images/combo/combo-bolus-settings.png)
 
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![Captură de ecran al setărilor cartușului de insulină](../images/combo/combo-insulin-settings.png)
 
-## Activating the driver and pairing it with the Combo
+## Activarea driverului și asocierea cu Combo
 
 * Selectați driverul "Accu-Chek Combo" în [Configurator > Pompă](../SettingUpAaps/ConfigBuilder.md). **Important**: Există vechiul driver, numit "Accu-Chek Combo (Ruffy)", în acea listă. _Nu-l_ selectați pe acela.
 
