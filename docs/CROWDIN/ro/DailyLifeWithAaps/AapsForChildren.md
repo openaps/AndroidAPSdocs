@@ -1,12 +1,12 @@
-# AAPS for children
+# AAPS pentru copii
 
-**AAPS** can be used successfully with type 1 kids as well. Anyway, there are things to consider.
+**AAPS** poate fi folosit cu succes și de către copiii cu diabet zaharat de tip 1. Totuși, sunt câteva aspecte de luat în considerare.
 
 ## Lucrurile de luat în considerare
 
-### Initial Profile
+### Profilul inițial
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, DIA, ISF...) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, DIA and ISF. Test them in real life with your kid next to you before starting remote monitoring and remote treatment. Weekends or school holidays might be a good time for that.<br/>
+Setarea corectă a [**Profilului**](../SettingUpAaps/YourAapsProfile.md) (rate bazale, DIA, ISF șamd) se poate dovedi dificilă în ceea ce-i privește pe copiii cu diabet zaharat de tip 1, în special atunci când sunt implicați și hormonii de creștere. Luați-vă timp să testați și asigurați-vă că sunteți mulțumit/ă cu ratele bazele, raportul carbohidrați-insulină IC și factorul de sensibilitate la insulină ISF ale copilului dumnevoastră. Testați-le în viața de zi cu zi împreună cu copilul dumneavoastră înainte de a începe monitorizarea și tratamentul de la distanță. Weekends or school holidays might be a good time for that.<br/>
 
 ### Monitor and adjust your child’s Profile where necessary
 
