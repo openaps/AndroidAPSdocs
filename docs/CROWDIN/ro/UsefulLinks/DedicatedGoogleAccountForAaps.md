@@ -75,27 +75,27 @@ Set a password
 
 ### Enter a phone number which can receive the SMS verification
 
-Gmail will now send you a unique code to enter for validation.
+Gmail vă va trimite acum un cod unic de introdus pentru validare.
 
 ### Enter the recovery email address
 
 In this case it will be your existing “_everyday_” email…
 
-### Finish setting up the account
+### Finalizați configurarea contului
 
-Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail va afișa numele contului. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
 
-### Customize the new profile display
+### Personalizați afișarea noului profil
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
+At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. Imaginea de profil va fi setată în mod implicit la prima literă a numelui dumneavoastră. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Deschideți site-ul Gmail pe ambele ferestre pentru a configura noul cont
 
 So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
+This part can be a bit confusing, since you will have to switch back and forth between both accounts. Pentru a ușura demersul, deschideți 2 ferestre separate ale browserului unul peste celălalt:
 
 1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
 2. Right click on your Browser logo in your taskbar
