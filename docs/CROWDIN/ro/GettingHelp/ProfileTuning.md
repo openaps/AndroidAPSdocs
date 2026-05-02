@@ -1,9 +1,9 @@
-# **Tweaking the AAPS' Profile**
+# **Îmbunătățirea profilului AAPS**
 
 ```{admonition} This is NOT a medical advice
-:class: warning
-Please work with your care team for support and advice on your diabetes management.</br>
-Use this guide only once you have [set up your **Profile** correctly](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), following all **AAPS** objectives.
+:class: avertizare
+Vă rugăm să lucrați cu echipa dumneavoastră de îngrijire pentru a primi sprijin și sfaturi cu privire la managementul diabetului dumneavoastră.</br>
+Utilizați acest ghid numai după ce [ați configurat corect **profilul**](https://androidaps.readthedocs.io/en/latest/SettingUpAaps/YourAapsProfile.md), urmând toate obiectivele **AAPS**.
 ```
 
 Acest ghid explică logica rezultatelor algoritmului OpenAPS cu un anumit __ profil __, și furnizează informații cu privire la valorile care trebuie ajustate atunci când se observă anumite situații. The suggestions about basal testing below may diverge from what your care team  advises
@@ -17,7 +17,7 @@ Using **closed loop** may make basal  testing easier and may significantly reduc
 3. Keep an eye out for patterns that happen around the same time (almost) everyday.
 4. It's important to do this over several days. Poor results tend to be yielded from using data observed on a single day to make __Profile’s__ adjustment decisions.
 5. After you have observed a repeatable pattern of behavior, e.g. at 1PM you see a spike in __BG__ or a negative __IOB__ value, only then start to make small changes to your __Profile__.
-6. It's important to limit the changes you make to one thing at a time. E.g. increase your basal by 10% around 1PM.
+6. It's important to limit the changes you make to one thing at a time. Spre exemplu increase your basal by 10% around 1PM.
 7. After every change, it's important to monitor the impact on your __BG__ and __IOB__ for the next few days.
 8. Repeat this pattern, observe, decide, tweak again if needed
 
@@ -32,8 +32,8 @@ Don't rush, go slow!
 - For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board, Carbs On Board (and Sensitivity change). On graph 2, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
 - COB=0[*](#profiletuning-cob-zero)
 - No physical activities.
-- No stress.
-- No illness.
+- Fără stres.
+- Fără boală.
 - No extreme weather like high or low temperatures.
 - If your [basal rate profile](#your-aaps-profile-basal-rates) is correct, when you are on target with COB=0[*](#profiletuning-cob-zero) and IOB=0, you will remain constantly on target whatever your ISF (ISF is only used when you are higher than your target).
 - You need to check the actual IOB but also, the IOB chart to see how the IOB was during the past few hours.
