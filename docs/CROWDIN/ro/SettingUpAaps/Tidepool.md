@@ -4,38 +4,38 @@ Tidepool este un instrument terț care colectează date privind glicemia, insuli
 
 Este important de înțeles că Tidepool este destinat doar raportării. NU este o aplicație de urmărire în timp real. Dacă aveți nevoie de urmăritori în afară de telefonul principal AAPS, trebuie să configurați Nightscout, de asemenea.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
+Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. Acest efort nu are nimic de-a face cu platforma lor de raportare a datelor sau cu AAPS.
 
 
-## Step 1 - Setup a tidepool account
+## Pasul 1 - Configurarea unui cont Tidepool
 
 -Navigate to [tidepool.org](https://www.tidepool.org/)
 
--Select “Personal Sign Up” or “Sign Up”
+- Selectați "Personal Sign Up" sau "Sign Up"
 
--Create and document an email and password
+-Creați și înregistrați un e-mail și o parolă
 
--Select “Personal Account” and click “Continue”
+-Selectați "Personal Account" și apăsați pe "Continue"
 
--Complete the patient information section and accept the terms of use
+-Completați secțiunea de informații a pacientului și acceptați termenii de utilizare
 
--Verify your email address via the instructions received to your email
+-Verificați-vă adresa de e-mail prin intermediul instrucțiunilor primite pe adresa dumneavoastră de e-mail
 
 
-## Step 2 - Enter credentials into AAPS
+## Pasul 2 - Introduceți credențialele în AAPS
 
--Select the three-line “hamburger” menu in the top left and the select “Config Builder” (if “Config Builder is not located there it will instead be one of the tabs along the top)
+-Selectați meniul cu 3 linii de tip "hamburger" din stânga sus și selectați "Constructor de configurare" (dacă "Constructor de configurare" nu se află acolo, acesta va fi în schimb într-una dintre filele din partea de sus)
 
--Scroll down to the “Synchronization” section and select the check mark to the left of “Tidepool”
+-Derulați în jos la secțiunea "Sincronizare" și selectați bifa de verificare în stânga lui "Tidepool"
 
--Click the gear icon to the right of “Tidepool”
+-Apăsați pe pictograma rotiței zimțate în dreapta lui "Tidepool"
 
--Enter the username and password you created in Step 1 above
+-Introduceți numele de utilizator și parola create la Pasul 1 de mai sus
 
--Click “Test Tidepool Login”
+-Apăsați pe "Testați Autentificare Tidepool"
 
--If you get the “Successfully logged into Tidepool” message you have successfully connected. If not, confirm your credentials are correct and that you have verified your email address with Tidepool.
+-Dacă primiți mesajul "Conectat cu succes în Tidepool" v-ați conectat cu succes. Dacă nu, confirmați că datele de autentificare sunt corecte și că ați verificat adresa de e-mail cu Tidepool.
 
--Click on “Connection settings” and set based on your personal preferences
+-Apăsați pe "Setările conexiunii" și setați în funcție de preferințele dumneavoastră personale
 
 For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
