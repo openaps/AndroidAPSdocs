@@ -210,7 +210,7 @@ This documentation aims to reduce the technical expertise required to an absolut
 
 #### AAPS and Android Versions
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+Versiunea actuală a **AAPS** (3.4) necesită un telefon inteligent Android cu Google **Android 12.0 sau o versiune ulterioară**. If you are considering buying a new phone, (as of January 2026), Android 16 is preferred.<br/> Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. Totuși, pentru utilizatorii care nu pot folosi un dispozitiv cu Android 12.0 sau o versiune mai nouă, versiunile anterioare de **AAPS** compatibile cu versiunile mai vechi de Android rămân disponibile; consultați: [Note de lansare](#maintenance-android-version-aaps-version).
 
 #### Smartphone model choice
 The exact model you buy depends on the desired function(s). You can find on the [Phones page](../Getting-Started/Phones.md) recommendations and user feedback about working setups.
