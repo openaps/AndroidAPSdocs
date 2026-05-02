@@ -250,18 +250,18 @@ A - time since last loop run
 
 B - CGM reading
 
-C - minutes since last CGM reading
+C - minute de la ultima citire CGM
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - modificare în comparație cu ultima citire a CGM (în mmol sau mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - variația medie a citirilor CGM din ultimele 15 minute
 
-F - phone battery
+F - bateria telefonului
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - rata bazală (indicată în U/h în timpul ratei standard și în % în timpul RBT)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H-BGI (interacțiunea glicemiei) -> nivelul la care glicemia "ar trebui" să fie în creștere sau scădere în funcție doar de activitatea insulinei.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - carbohidrați (carbohidrați la bord | carbohidrați extinși din viitor)
 
-J - insulin on board (from bolus | from basal)
+J - insulină la bord (de la bolus | de la bazală)
