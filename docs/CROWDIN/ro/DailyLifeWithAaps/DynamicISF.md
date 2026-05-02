@@ -1,7 +1,7 @@
 (Open-APS-features-DynamicISF)=
-# Dynamic ISF (DynISF)
+# ISF dinamic (DynISF)
 
-Up until now, with **AMA** and **SMB**, **ISF** was defined in the **Profile** and was static for each defined period in the day. Dar în realitate, valoarea **ISF** a unei persoane nu este atât de statică și variază în funcție de nivelul **glicemiei**: la un nivel ridicat de glicemie, utilizatorul va avea nevoie de mai multă insulină pentru a reduce valoarea **glicemiei** cu 50mg/dl / 3mmol/l comparativ cu o **glicemie** mai mică. [Autosens](#Open-APS-features-autosens) a fost primul algoritm care a încercat să rezolve această problemă, prin ajustarea **ISF** între mese.
+Până acum, cu **AMA** și **SMB**, **ISF** a fost definit în **Profil** și a fost static pentru fiecare perioadă definită din zi. Dar în realitate, valoarea **ISF** a unei persoane nu este atât de statică și variază în funcție de nivelul **glicemiei**: la un nivel ridicat de glicemie, utilizatorul va avea nevoie de mai multă insulină pentru a reduce valoarea **glicemiei** cu 50mg/dl / 3mmol/l comparativ cu o **glicemie** mai mică. [Autosens](#Open-APS-features-autosens) a fost primul algoritm care a încercat să rezolve această problemă, prin ajustarea **ISF** între mese.
 
 **ISF dinamic** (numit și **DynISF**) servește aceluiași scop, dar este mai avansat, deoarece poate fi utilizat în orice moment. Este recomandat doar pentru utilizatorii avansați care au stăpânire bună pe controalele și monitorizarea **AAPS**. Citiți mai jos [Lucruri de luat în considerare la activarea ISF dinamic](#dyn-isf-things-to-consider-when-activating-dynamicisf) înainte de a-l încerca.
 
