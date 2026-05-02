@@ -1,4 +1,4 @@
-# Smoothing blood glucose data
+# Omogenizarea datelor de glicemie
 
 If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
 
@@ -8,11 +8,11 @@ As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within
 
 ![Smoothing](../images/ConfBuild_Smoothing.png)
 
-### Exponential smoothing
+### Omogenizare exponențială
 
 In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
 
-### Average smoothing
+### Omogenizare medie
 
 This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
 
@@ -24,7 +24,7 @@ Use this option only if your CGM data is being properly smoothed by your collect
 
 ## Suggestions to use smoothing
 
-|               | Exponential |  Average  |    None     |
+|               | Exponential |   Medie   |    Nimic    |
 | ------------- |:-----------:|:---------:|:-----------:|
 | G5/G6/ONE     |  If noisy   |           | Recommended |
 | G7/ONE+/Stelo |  If noisy   | If stable |             |
@@ -33,6 +33,6 @@ Libre sensors are noisy and can require smoothing. When using xDrip+ direct conn
 
 | Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
 | -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |    Average    |        N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None      |    Average    |        None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.      |     N.A.      |        None        |
+| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |     Medie     |        N.A.        |
+| Libre 2/2+ (EU)      |  Medie   |     Nimic     |     Medie     |       Nimic        |
+| Libre 2/2+/3/3+      |  Medie   |     N.A.      |     N.A.      |       Nimic        |
