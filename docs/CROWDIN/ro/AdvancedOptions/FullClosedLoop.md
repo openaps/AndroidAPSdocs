@@ -338,4 +338,4 @@ Discuție buclă complet închisă prin utilizarea automatizări:
 
 - Engleză:   [Discord Channel](https://discord.gg/ChXj8BaKwA)
 
-- German:  [German Looper Community](https://de.loopercommunity.org/t/ueber-die-kategorie-full-loop/10107)
+- Germană:  [Comunitatea germană Looper](https://de.loopercommunity.org/t/ueber-die-kategorie-full-loop/10107)
