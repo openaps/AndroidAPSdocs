@@ -94,7 +94,7 @@ Mulți oameni au întrebat dacă această metodă poate fi folosită cu un senzo
 
 ## Cum să porniți un senzor FSL2 în modul Bluetooth nativ folosind LibreLink și xDrip+
 
-*NOTE: If there are settings in the screenshots that are not called out with a BOX specifically and are UNCHECKED (IE, disabled) then PLEASE KEEP THEM DISABLED. Capturile de ecran reflectă o configurație funcțională pentru TOATE setările afișate. Dacă doriți să experimentați pornind sau oprind alte funcții după ce aveți un senzor de lucru, sunteți liber să faceți acest lucru pe propriul risc.*
+*NOTĂ: Dacă există setări în capturile de ecran care nu sunt afișate cu o CĂSUȚĂ în mod specific și sunt DEBIFATE (adică dezactivate) apoi PĂSTRAȚI-LE DEZACTIVATE. Capturile de ecran reflectă o configurație funcțională pentru TOATE setările afișate. Dacă doriți să experimentați pornind sau oprind alte funcții după ce aveți un senzor de lucru, sunteți liber să faceți acest lucru pe propriul risc.*
 
 (minimallooper-step1)=
 
@@ -201,9 +201,9 @@ Odată scanat codul QR de mai sus, dacă aveți un telefon Samsung (dar acest lu
 
 - *Algoritmul Libre în afara procesului*: **OPRIT**
 
-(*MAKE SURE THIS IS **OFF** FOR OOP2 OTHERWISE YOU WILL NOT GET READINGS!*)
+(*ASIGURAȚI-VĂ CĂ ACEST LUCRU ESTE **OPRIT** PENTRU OOP2, ALTFEL NU VEȚI OBȚINE CITIRI!*)
 
-![xDrip+ OOP2 settings](../images/minimal00per/xdripOOP.png)
+![Setări OOP2 xDrip+](../images/minimal00per/xdripOOP.png)
 
 (minimallooper-step3)=
 
@@ -213,57 +213,57 @@ Odată scanat codul QR de mai sus, dacă aveți un telefon Samsung (dar acest lu
 
 ### **Pasul 4: Porniți aplicația LibreLink și porniți senzorul cu prima scanarea NFC**
 
-Start the LL app, then scan the newly inserted sensor, then close and disable or uninstall the LL app. **You still need to wait for the sensor to warm-up the full 60 minutes before proceeding and starting the sensor in xDrip+**. Do not rely on the readings before as the sensor is still internally calibrating and the values vary wildly.
+Porniți aplicația LibreLink, apoi scanați senzorul nou introdus, apoi închideți și dezactivați sau dezinstalați aplicația LibreLink. **Încă trebuie să așteptați ca senzorul să se încălzească complet în cele 60 de minute înainte de a continua și de a porni senzorul în xDrip+**. Nu vă bazați pe citiri de dinainte deoarece senzorul este încă se calibrează intern, iar valorile variază în mod dramatic.
 
-#### **Step 4a (OPTIONAL, Use FSLReader):**
+#### **Pasul 4a (OPȚIONAL, Utilizați FSLReader):**
 
-**Start the FSL2 (not 2+) sensor by scanning it with the FSLReader with very first NFC Scan**
+**Porniți senzorul FSL2 (nu 2+) prin scanarea acestuia cu FSLReader cu chiar întâia scanare NFC**
 
-If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ to read values from the FSL2 sensor, then **you will need to scan the newly inserted FSL2 sensor with the FSL Reader FIRST.** After the sensor warmup is complete you can then use the LL app or xDrip+ to scan readings.
+Dacă doriți să puteți utiliza **FSLReader** precum și LibreLink app sau xDrip+ pentru a citi valorile de la senzorul FSL2, apoi **va trebui să scanați senzorul FSL2 introdus recent cu FSL Reader FIRST.** După ce încălzirea senzorilor este completă, puteți utiliza aplicația LibreLink sau xDrip+ pentru a scana citirile.
 
-*NOTE: The LL app is only needed for the VERY FIRST NFC scan after sensor insertion. It serves to send the warmup initialization signal, afterwards the app MUST be disabled (app settings-\>force close) or uninstalled. You can use the Patched 2.3 app or Official versions, it does not matter. The main thing is to prevent the LL app from running when xDrip+ is trying to start the BT bonding process with the sensor as the LL app interferes with the Bluetooth reconnection process by disrupting communication.*
+*NOTĂ: Aplicația LibreLink este necesară doar pentru PRIMA scanare NFC după inserarea senzorului. Acesta servește la trimiterea semnalului de inițializare a încălzirii, după aceea aplicația TREBUIE dezactivată (setările aplicației>închidere forțată) sau dezinstalată. Puteți folosi aplicația modificată 2.3 sau versiunile oficiale, nu contează. Principalul lucru este să împiedicăm aplicația LibreLink să ruleze când xDrip+ încearcă să pornească procesul de legare Bluetooth cu senzorul deoarece aplicația LibreLink interferează în procesul de reconectare Bluetooth prin întreruperea comunicării.*
 
-*It has been reported that simply turning off the **location permission** in the LL app Android system settings is enough to prevent it from interfering with the connection. This has been reported by a few users to be successful. Again **I recommend disabling or uninstalling the app** but you can try this if you want to experiment.*
+*A fost raportat că simpla oprire a **permisiunilor de localizare** în setările Android ale aplicației LibreLink este suficient pentru a preveni interferarea cu conexiunea. Acest lucru a fost raportat de câțiva utilizatori ca fiind de succes. Din nou **recomand dezactivarea sau dezinstalarea aplicației**, dar puteți încerca acest lucru dacă doriți să experimentați.*
 
 (minimallooper-step5)=
 
 ### **Pasul 5: Deschideți xDrip+ și scanați NFC senzorul FSL2**
 
-(*Reminder! Ensure LL is disabled (location turned off) or uninstalled AND you have waited the entire 60 minutes for the sensor to warmup and internally calibrate.*)
+(*Memento! Asigurați-vă că LibreLink este dezactivat (locația este oprită) sau dezinstalat și că ați așteptat toate cele 60 de minute pentru ca senzorul să se încălzească și să fie calibrat.*)
 
-**NFC SCAN** the FSL2 sensor with xDrip+. This sends a signal to the sensor to turn on Bluetooth pairing in order to start the bonding process. A small notification will appear briefly on the bottom of the xDrip+ Overview screen with the text **Scanning** followed by the notification **Scanned OK!** upon a successful NFC scan of the FSL 2 sensor.
+**SCANARE NFC** senzorul FSL2 cu xDrip+. Aceasta trimite un semnal către senzor pentru a activa asocierea Bluetooth pentru a începe procesul de legare. O notificare mică va apărea pe scurt în partea de jos a ecranului de ansamblu xDrip+ cu textul **Scanare** urmat de notificarea **scanat OK!** la o scanare NFC reușită a senzorului FSL 2.
 
-![xDrip+ scan](../images/minimal00per/xdripscan1.png)
+![scanare xDrip+](../images/minimal00per/xdripscan1.png)
 
 (minimallooper-step6)=
 
 ### **Pasul 6: Porniți noul senzor în xDrip+**
 
-In the **xDrip+ Overview screen** press the **hamburger menu** in the upper left corner. Then choose **Start Sensor**.
+În ecranul **Privire de ansamblu xDrip+ ** apăsați pe meniul **hamburger** din colțul din stânga sus. Apoi alegeți **Start Senzor**.
 
-On the **Start New Sensor** screen press **Start Sensor**. A prompt will ask **Did you insert it today?** Respond by pressing **NOT TODAY**.
+Pe ecranul **Porniți noul senzor** apăsați **Start Senzor**. Un anunț va întreba **L-ați inserat astăzi?** Răspundeți apăsând **NU ASTĂZI**.
 
-![xDrip+ scan](../images/minimal00per/xdripstart.png)
+![scanare xDrip+](../images/minimal00per/xdripstart.png)
 
-![xDrip+ scan](../images/minimal00per/xdripstart2.png)
+![scanare xDrip+](../images/minimal00per/xdripstart2.png)
 
-*NOTE: If you accidentally clicked "YES, TODAY" then you will need to "stop sensor" from the xDrip+ main menu followed by "start sensor" by proceeding with Step 5 again.*
+*NOTĂ: Dacă ați apăsat din greșeală "DA, ASTĂZI" atunci va trebui să "opriți senzorul" din meniul principal xDrip+, urmat de "start senzor" trecând din nou la Pasul 5.*
 
 (minimallooper-step7)=
 
 ### **Pasul 7: Așteptați 60 de secunde și scanați NFC senzorul din nou**
 
-A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device from which xDrip+ will use to retrieve the readings. Once complete you will see a notification stating **NEW SENSOR STARTED**.
+O a doua scanare NFC este necesară pentru a **ADĂUGA** senzorul ca dispozitiv Bluetooth de pe care xDrip+ îl va folosi pentru a prelua citirile. Odată finalizat, veți vedea o notificare care va spune **NOUL SENZOR PORNIT**.
 
-![xDrip+ scan](../images/minimal00per/xdripscan2.png)
+![scanare xDrip+](../images/minimal00per/xdripscan2.png)
 
-A 60 second waiting period is enforced because the sensor can’t be scanned during this process more than once per minute. If the sensor is scanned too early the warning **Not so quickly, wait 60 seconds** is displayed in the xDrip Overview screen.
+O perioadă de așteptare de 60 de secunde este impusă deoarece senzorul nu poate fi scanat în timpul acestui proces de mai mult de o dată pe minut. If the sensor is scanned too early the warning **Not so quickly, wait 60 seconds** is displayed in the xDrip Overview screen.
 
-![xDrip+ scan](../images/minimal00per/xdripscan3.png)
+![scanare xDrip+](../images/minimal00per/xdripscan3.png)
 
 Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
 
-![xDrip+ scan](../images/minimal00per/xdripstream.png)
+![scanare xDrip+](../images/minimal00per/xdripstream.png)
 
 (minimallooper-step8)=
 
@@ -296,7 +296,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 *NOTE: **<u>DO NOT TOUCH</u> AND CHANGE Bluetooth Pairing from <u>Disabled</u>** in this window. Doing so will attempt a direct pair, it will fail (Not bonded) and you will have to start the process from Step 5 all over again.*
 
-![xDrip+ scan](../images/minimal00per/xdripSSbond.png)
+![scanare xDrip+](../images/minimal00per/xdripSSbond.png)
 
 - **Stare serviciului telefonic:** Ultima dată când telefonul a făcut o conexiune Bluetooth la senzor (ar trebui să fie mai mică de 5 minute în urmă)
 - **Dispozitiv Bluetooth:** Afișați starea curentă a conexiunii (fie **conectat** sau **deconectat**)
