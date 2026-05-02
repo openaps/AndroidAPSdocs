@@ -1,6 +1,6 @@
 Use a computer (supports Windows/Mac/Linux)
 
-Open the webpage [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
+Deschideți pagina web [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
 Install Simple HTTP Server</br> If you are a Windows/Mac user, you can install it from the store.</br> After clicking the link, you will be asked whether to allow opening it. Please choose Open Link.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br>
 
