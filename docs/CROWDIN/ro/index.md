@@ -55,13 +55,13 @@ Nu utilizați **AAPS** dacă iei inhibitori SGLT-2 (glifozine), deoarece acești
 
 - Toate informațiile și codul descrise aici sunt destinate exclusiv scopurilor informative și educaționale. Folosiți [Nightscout](https://nightscout.github.io/) și **AAPS** pe propriul risc, și nu utilizați informațiile sau codul pentru a lua decizii medicale. În prezent, Nightscout nu face nicio încercare de respectare a confidențialității HIPAA. 
 - Folosirea codului de pe github.com este fără garanție sau suport formal de orice fel. Vă rugăm să examinați fișierul LICENSE al acestui depozit pentru mai multe detalii.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+- Toate numele produselor și firmelor, mărcile comerciale, mărcile de serviciu, mărcile înregistrate și mărcile de serviciu înregistrate sunt proprietatea titularilor lor. Utilizarea lor este în scop informativ și nu implică nicio afiliere sau aprobare din partea acestora.
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+**AAPS** nu are nicio asociere cu, și nu este aprobat de: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) sau [Medtronic](https://www.medtronic.com/).
 
 ```
 
-(index-aaps-documentation-index)=
+(index-aaps-documentation)=
 
 ## Indexul documentației AAPS
 
