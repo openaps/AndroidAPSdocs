@@ -777,7 +777,7 @@ This view can be accessed by pressing the 3 dots on the right of the menu, then 
 
 Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
 
-## Statistics
+## Statistici
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Statistics. It is not possible to put in the main menu through the Config Builder.
 
