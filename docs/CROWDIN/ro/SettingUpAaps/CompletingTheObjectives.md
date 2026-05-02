@@ -100,7 +100,7 @@ The minimal time to complete this objective: **7 days**. This is a mandatory wai
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge). Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![Cerere de schimbare minimală în bucla deschisă](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: Note
@@ -177,7 +177,7 @@ The default recommendation for this setting is “**average meal bolus + 3x max 
 
 ![max daily basal](../images/MaxDailyBasal2.png)
 
-This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
+Această recomandare ar trebui considerată ca un punct de plecare. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
 * lower the "Maximum total IOB OpenAPS can’t go over" value;
 * review your **Profile** settings, only making one adjustment at a time.
 
@@ -199,7 +199,7 @@ This is a good time to review your settings for [Sensitivity Detection](../Setti
 Additionally, you can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
 
 (objectives-objective9)=
-## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+## Obiectivul 9: Facilitarea unor elemente suplimentare de oref1 pentru utilizarea în timpul zilei, cum ar fi super micro bolusul (SMB)
 
 In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
 
@@ -237,8 +237,8 @@ You can then experiment with setting up a more useful **Automation**. The docume
 For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Go back in objectives
+## Mergeți înapoi la obiective
 
 If you wish to go back in the **Objectives** for whatever reason you can do so by clicking at "clear finished".
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![Mergeți înapoi la obiective](../images/Objective_ClearFinished.png)
