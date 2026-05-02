@@ -1,16 +1,16 @@
 # Omogenizarea datelor de glicemie
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Dacă datele **glicemice** sunt săltărețe/zgomotoase, **AAPS** poate doza incorect insulina ceea ce duce la valori mari sau mici ale glicemiei. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. În funcție de CGM, astfel de probleme se pot datora configurației CGM din **AAPS** (după cum se explică mai jos); sau o problemă a locului de inserare al senzorului CGM (care poate necesita înlocuirea senzorului CGM).
 
 ## Smoothing data within AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+De la **AAPS** versiunea 3.2, **AAPS** oferă opțiunea de a omogeniza datele în **AAPS** mai degrabă decât în aplicația CGM. Există trei opțiuni disponibile în [Constructor > Omogenizare](../SettingUpAaps/ConfigBuilder.md).
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Omogenizare](../images/ConfBuild_Smoothing.png)
 
 ### Omogenizare exponențială
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+În general, aceasta este opțiunea recomandată pentru început, deoarece este cea mai agresivă opțiune pentru rezolvarea zgomotului și rescrie cea mai recentă valoare. Cu toate acestea, vedeți tabelul de mai jos pentru alte recomandări specifice.
 
 ### Omogenizare medie
 
@@ -18,21 +18,21 @@ This option works similar to back smoothing that was previously implemented on c
 
 ### No Smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Utilizați această opțiune numai dacă datele CGM sunt uniformizate corespunzător de aplicația colector înainte de a fi transmise la **AAPS**.
 
 (smoothing-xdrip-dexcom-g6)=
 
 ## Suggestions to use smoothing
 
-|               | Exponential |   Medie   |    Nimic    |
-| ------------- |:-----------:|:---------:|:-----------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended |
-| G7/ONE+/Stelo |  If noisy   | If stable |             |
+|               | Exponential |       Medie       |    Nimic    |
+| ------------- |:-----------:|:-----------------:|:-----------:|
+| G5/G6/ONE     |  If noisy   |                   | Recommended |
+| G7/ONE+/Stelo |  If noisy   | Dacă este stabilă |             |
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Senzorii Libre sunt zgomotoși și pot necesita omogenizare. Când se utilizează conexiunea directă xDrip+, sau sursa de date a aplicației modificată (se primește de la o altă aplicație, Juggluco inclus), [omogenizarea este deja făcută în cadrul aplicației](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |     Medie     |        N.A.        |
-| Libre 2/2+ (EU)      |  Medie   |     Nimic     |     Medie     |       Nimic        |
-| Libre 2/2+/3/3+      |  Medie   |     N.A.      |     N.A.      |       Nimic        |
+| Senzor / sursă de date | Juggluco | direct xDrip+ | punte xDrip+ | aplicație xDrip+ modificată |
+| ---------------------- |:--------:|:-------------:|:------------:|:---------------------------:|
+| Libre 1/14 days/Pro    |   N.A.   |     N.A.      |    Medie     |            N.A.             |
+| Libre 2/2+ (EU)        |  Medie   |     Nimic     |    Medie     |            Nimic            |
+| Libre 2/2+/3/3+        |  Medie   |     N.A.      |     N.A.     |            Nimic            |
