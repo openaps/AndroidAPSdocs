@@ -39,7 +39,7 @@ In order for **AAPS** to correctly identify them, the app sending **BG** reading
 
 Trusted data sources allow **SMB** delivery, all the time.
 
-| Sensor                |                                                        CGM app                                                         |
+| Senzor                |                                                        CGM app                                                         |
 | --------------------- |:----------------------------------------------------------------------------------------------------------------------:|
 | Dexcom G5/G6          |                                              xDrip+ (**Direct, Native**)                                               |
 | Dexcom G7             |                    xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                     |
