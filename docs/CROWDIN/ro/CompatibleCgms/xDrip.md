@@ -134,7 +134,7 @@ Urmăriți [aceste instrucțiuni](https://navid200.github.io/xDrip/docs/Starting
 - Dezactivează receptorul Dexcom original (dacă este utilizat).
 - [Stop senzor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (doar dacă se înlocuiește senzorul).
 
-- Scoate dispozitivul de la starea sistemului xDrip+ ȘI DIN setările de bluetooth ale smartphone-ului (va fi afișat ca Dexcom?? unde ?? sunt ultimele două cifre ale numărului de serie al transmițătorului.  
+- Scoate dispozitivul de la starea sistemului xDrip+ ȘI DIN setările de bluetooth ale telefonului inteligent (va fi afișat ca Dexcom?? unde ?? sunt ultimele două cifre ale numărului de serie al transmițătorului.  
     → Hamburger Meniu (1) → Stare Sistem (2) → Dacă nu sunteți pe pagina de stare clasică (3) glisați ecranul (4) pentru a ajunge la ea → apoi atingeți Uită Dispozitivul (5).
 
 ![Starea sistemului xDrip+](../images/xDrip_Dexcom_StopSensor.png)
