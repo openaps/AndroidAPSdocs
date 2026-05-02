@@ -6,22 +6,22 @@
 
 ### Profilul inițial
 
-Setarea corectă a [**Profilului**](../SettingUpAaps/YourAapsProfile.md) (rate bazale, DIA, ISF șamd) se poate dovedi dificilă în ceea ce-i privește pe copiii cu diabet zaharat de tip 1, în special atunci când sunt implicați și hormonii de creștere. Luați-vă timp să testați și asigurați-vă că sunteți mulțumit/ă cu ratele bazele, raportul carbohidrați-insulină IC și factorul de sensibilitate la insulină ISF ale copilului dumnevoastră. Testați-le în viața de zi cu zi împreună cu copilul dumneavoastră înainte de a începe monitorizarea și tratamentul de la distanță. Weekends or school holidays might be a good time for that.<br/>
+Setarea corectă a [**Profilului**](../SettingUpAaps/YourAapsProfile.md) (rate bazale, DIA, ISF șamd) se poate dovedi dificilă în ceea ce-i privește pe copiii cu diabet zaharat de tip 1, în special atunci când sunt implicați și hormonii de creștere. Luați-vă timp să testați și asigurați-vă că sunteți mulțumit/ă cu ratele bazele, raportul carbohidrați-insulină IC și factorul de sensibilitate la insulină ISF ale copilului dumnevoastră. Testați-le în viața de zi cu zi împreună cu copilul dumneavoastră înainte de a începe monitorizarea și tratamentul de la distanță. În weekend sau vacanțele școlare ar putea fi o perioadă prielnică pentru asta.<br/>
 
-### Monitor and adjust your child’s Profile where necessary
+### Monitorizați și ajustați Profilul copilului dumneavoastră acolo unde este necesar
 
-As the child grows, **Profile** adjustments will be necessary in order to account for your child’s body’s demands and needs. However this issue exists for all type 1 children including those who are on other pumps or injections.
+Pe măsură ce copilul crește, ajustările **Profilului** vor fi necesare astfel încât să țină cont de cerințele și nevoile corpulului copilului dumneavoastră. Totuși acest aspect există pentru toți copiii cu diabet zaharat de tip 1, inclusiv pentru cei care folosesc alte tipuri de pompe sau care fac injecții.
 
-### Keeping the phone in range
+### Păstrarea telefonului în apropiere
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. This can be challenging with children who are too young to be responsible for a phone. An **AAPS** phone with a good bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+Gândiți-vă la modalitățile în care veți ține telefonul copilului în preajma pompei și a **senzorului CGM**. Acest lucru poate fi o provocare pentru copiii care sunt prea mici ca să poarte responsabilitatea unui telefon. Trebuie ales un telefon cu rază de acțiune bună a conexiunii Bluetooth pentru **AAPS** și de asemenea găsită o modalitate confortabilă pentru copil de a-și căra pompa și telefonul. Sunt multe soluții, cum ar fi centuri pentru pompele de insulină care au de asemenea un compartiment pentru telefon, sau o borsetă care se poate purta ca un rucsac.
 
-### How to protect your child’s AAPS from being misused?
+### Cum să preveniți utilizarea neadecvată a AAPS pentru copilul dumneavoastră?
 
-There are several protection settings available with **AAPS** to avoid the child or a stranger misuse of **AAPS**. See [Preferences > General > Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+Sunt disponibile mai multe setări de protecție în **AAPS** pentru a preveni utilizarea abuzivă a **AAPS** din partea altui copil sau a unui străin. Vedeți [Preferințe > General> Protecție](#Preferences-protection) pentru a adăuga o parolă sau o protecție biometrică pentru bolusuri, modificări de setări sau chiar pentru **AAPS**.
 
-## Remote monitoring and remote control
+## Monitorizarea la distanță și controlul la distanță
 
-Remote monitoring is an essential functionality when using **AAPS** for children. See the dedicated section [Remote Monitoring](../RemoteFeatures/RemoteMonitoring.md) to explore possible options.
+Monitorizarea la distanță este o funcționalitate esențială atunci când utilizați **AAPS** pentru copii. Vedeți secțiunea [Monitorizarea la distanță](../RemoteFeatures/RemoteMonitoring.md) pentru a explora posibile opțiuni.
 
-Remote monitoring and treatment can be hugely beneficial for parents of a type 1 child and this is particularly so when the child attends kindergarten and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan.<br/> Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.<br/> Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+Monitorizarea și tratamentul de la distanță pot fi extrem de benefice pentru părinții unui copil cu diabet zaharat de tip 1, iar acest lucru se întâmplă mai ales atunci când copilul merge la grădiniță și la școala elementară. Dar asigurați-vă că învățătorii și educatorii sunt informați de planul de tratament al copilului dumneavoastră.<br/> Gândiți-vă cum adăugarea controlului la distanță va funcționa cu sau va îmbunătăți planul deja existent. Mulți părinții consideră util să aibă un canal separat de comunicare cu persoanele responsabile de îngrijirea copiilor, spre exemplu un telefon mai ieftin "de urmărire" pentru învățători/educatori.<br/> Exemple de planuri de îngrijire pentru școală se pot găsi în [secțiunea de fișierea a grupului AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) pe Facebook. 
