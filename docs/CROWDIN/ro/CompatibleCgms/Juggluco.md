@@ -1,8 +1,8 @@
-# Juggluco settings
+# Setări Juggluco
 
-If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
+Dacă nu este deja configurat, atunci descărcați [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
 
-Follow the [instructions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) to connect your sensor.
+Urmați instrucțiunile [](https://www.juggluco.nl/Jugglucohelp/introhelp.html) pentru a conecta senzorul.
 
 ## Basic settings for all CGM systems
 
