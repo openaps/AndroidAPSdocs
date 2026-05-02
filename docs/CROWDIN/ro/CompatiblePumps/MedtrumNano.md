@@ -41,7 +41,7 @@ Această aplicație face parte dintr-o soluție DIY (do-it-yourself/ o aplicați
 
 ## Instalare
 
-CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. spre exemplu telecomandă activă și aplicație Medtrum. Asigurați-vă că aveți baza pompei dumneavoastră și numărul de serie al bazei pompei pregătit pentru activarea unui nou plasture.
+ATENȚIE: Când activați un plasture cu AAPS, **TREBUIE** dezactivate toate celelalte dispozitive care pot vorbi cu baza pompei Medtrum. spre exemplu telecomandă activă și aplicație Medtrum. Asigurați-vă că aveți baza pompei dumneavoastră și numărul de serie al bazei pompei pregătit pentru activarea unui nou plasture.
 
 ### Pasul 1: Selectați pompa Medtrum
 
@@ -124,66 +124,66 @@ Stabiliți aceasta la o valoare rezonabilă pentru necesarul dumneavoastră de i
 
 ***Implicit: 80U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. Dacă această limită este depășită, plasturele se va suspenda și va da o alarmă. Alarma poate fi resetată prin apăsarea butonului de resetare din meniul general vedeți [Resetați alarmele](#nano-reset-alarms).
+Această setare schimbă cantitatea maximă de insulină care poate fi administrată într-o zi. Dacă această limită este depășită, plasturele se va suspenda și va da o alarmă. Alarma poate fi resetată prin apăsarea butonului de resetare din meniul general vedeți [Resetați alarmele](#nano-reset-alarms).
 
 Stabiliți aceasta la o valoare rezonabilă pentru necesarul dumneavoastră de insulină.
 
-#### Scan on Connection error
+#### Eroare Scanare la conexiune
 
-***Default: Off.***
+***Implicit: oprit.***
 
-Located under **Advanced Settings**.
+Localizat sub **Setări avansate**.
 
-Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
+Activați numai dacă aveți probleme de conexiune. Dacă este activată, driverul scanează după pompa din nou înainte de a încerca reconectarea la pompă. Asigurați-vă că aveți permisiunea de locație setată la "Întotdeauna permiteți".
 
-### Step 2b: AAPS Alerts settings
+### Pasul 2b: Setările alertelor AAPS
 
-Go to preferences
+Mergeți la preferințe
 
-#### Pump:
+#### Pompă:
 
 ##### BT Watchdog
 
-Go to preferences and select **Pump**:
+Mergeți la preferințe și selectați **Pompa**:
 
 ![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
 
 ##### BT Watchdog
 
-This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
+Această setare va încerca să remedieze orice probleme legate de BLE. Va încerca să se reconecteze la pompă atunci când conexiunea este pierdută. De asemenea, va încerca să se reconecteze la pompă atunci când pompa nu mai este accesibilă pentru o anumită perioadă de timp.
 
-Enable this setting if you experience frequent connection issues with your pump.
+Activați această setare dacă întâmpinați probleme frecvente de conectare cu pompa.
 
-#### Local Alerts:
+#### Alerte locale:
 
-Go to preferences and select **Local Alerts**:
+Mergeți la preferințe și selectați **Alerte locale**:
 
-![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
+![Alerte locale](../images/medtrum/LocalAlertsSettings.png)
 
-##### Alert if pump is unreachable
+##### Alertați dacă pompa este indisponibilă
 
 ***Implicit: Activat.***
 
-This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. Acest lucru se poate întâmpla atunci când pompa nu este în preajmă sau când pompa nu răspunde din cauza unui plasture sau a unei baze de pompă defecte, spre exemplu, când apa se scurge între baza pompei și plasture.
+Această setare este forțată să fie activată atunci când driverul Medtrum este activ. Vă va alerta când pompa nu este accesibilă. Acest lucru se poate întâmpla atunci când pompa nu este în preajmă sau când pompa nu răspunde din cauza unui plasture sau a unei baze de pompă defecte, spre exemplu, când apa se scurge între baza pompei și plasture.
 
-For safety reasons this setting cannot be disabled.
+Din motive de siguranță, această setare nu poate fi dezactivată.
 
-##### Pump unreachable threshold [min]
+##### Prag pompă indisponibilă [min]
 
-***Default: 30 min.***
+***Implicit: 30 de minute.***
 
-This setting changes the time after which AAPS will alert you when the pump is unreachable. Acest lucru se poate întâmpla atunci când pompa nu este în preajmă sau când pompa nu răspunde din cauza unui plasture sau a unei baze de pompă defecte, spre exemplu, când apa se scurge între baza pompei și plasture.
+Această setare schimbă timpul după care AAPS vă va alerta atunci când pompa nu este accesibilă. Acest lucru se poate întâmpla atunci când pompa nu este în preajmă sau când pompa nu răspunde din cauza unui plasture sau a unei baze de pompă defecte, spre exemplu, când apa se scurge între baza pompei și plasture.
 
-This setting can be changed when using Medtrum pump but it is recommended to set it at 30 minutes for safety reasons.
+Această setare poate fi schimbată când se utilizează pompa Medtrum, dar se recomandă setarea acesteia la 30 de minute, din motive de siguranță.
 
-### Step 3: Activate patch
+### Pasul 3: Activați plasturele
 
-**Before you continue:**
-- Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-- Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
+**Înainte să continuați:**
+- Să aveți baza pompei Medtrum Nano și un plasture cu rezervor pregătite.
+- Asigurați-vă că AAPS este configurat în mod corespunzător și că [este activat un profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+- Alte dispozitive care pot vorbi cu pompa Medtrum sunt dezactivate (telecomanda sau aplicația Medtrum)
 
-#### Activate patch from the Medtrum overview Tab
+#### Activați plasturele din fila vedere de ansamblu Medtrum
 
 Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
 
