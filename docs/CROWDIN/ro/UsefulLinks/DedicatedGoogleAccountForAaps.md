@@ -1,4 +1,4 @@
-# A dedicated Google account for AAPS (optional)
+# Un cont Google special pentru AAPS (opțional)
 
 Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
 
@@ -15,15 +15,15 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 - Gmail allows you to register up to 4 accounts under the same phone number.
 ```
 
-## How to set up a dedicated Google account for AAPS
+## Cum se configurează un cont Google dedicat AAPS
 
-(⌛About 10 minutes)
+(⌛Aproximativ 10 minute)
 
 ![](../images/Building-the-App/building_0001.png)
 
-Requirements:
+Cerințe:
 
-* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
+* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. Ambele au toate cele mai recente actualizări de securitate, acces la internet și privilegii de administrator, deoarece unii pași necesită descărcarea și instalarea de programe.
 * The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
 
 ```{admonition} Things to consider when setting up your new account
@@ -42,7 +42,7 @@ Requirements:
 Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
 ```
 
- These are the steps outlined in the video:
+ Aceștia sunt pașii evidențiați în videoclip:
 
 In this example: 
 - Your existing “_Everyday_” Google account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
@@ -59,14 +59,14 @@ In this example: 
 ### Enter your NEW dedicated account details: 
 
 - Enter the new account: 
-- Create Account
+- Creați cont
 - for my personal use. 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Introduceți persoana dumneavoastră:
+ - Introduceți prenumele
+ - nume
+ - Data nașterii (trebuie să fie o vârstă de adult)
 
 ### Choose your NEW email address & password
 
