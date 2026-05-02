@@ -205,7 +205,7 @@ Pentru a dezactiva o pompă (fie de la expirare, fie de la o defecțiune de pomp
    > 
    > > ![Deactivate_Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Deactivate_Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
-4. O bifă verde va apărea după dezactivarea cu succes. Faceți clic pe butonul **Următorul** pentru a afișa ecranul de pompă dezactivată. Acum puteți să dați jos pompa deoarece sesiunea activă a fost dezactivată.
+4. O bifă verde va apărea după dezactivarea cu succes. Apăsați pe butonul **Următorul** pentru a afișa ecranul de pompă dezactivată. Acum puteți să dați jos pompa deoarece sesiunea activă a fost dezactivată.
 
    > ![Deactivate_Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
@@ -295,7 +295,7 @@ Această caracteristică este utilă pentru verificarea bolusurilor, a RBT, a mo
 
    > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png)
 
-2. On the **Pod history** screen, the default category of **All (1)** is displayed showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **Omnipod (POD)** tab in the main AAPS interface.
+2. Pe ecranul **Istoric Pompă**, categoria implicită **Toate (1)** este afișată și arată **Data și ora (2)** ale tuturor **Acțiunilor (3)** și **Rezultatelor(4)** pompei în ordine cronologică inversă. Folosiți **butonul de înapoi telefonului dumneavoastră de 2 ori** pentru a reveni la fila **Omnipod (pompă)** din interfața principală AAPS.
 
    > ![Pod_History_3](../images/omnipod/Pod_History_3.png) ![Pod_History_4](../images/omnipod/Pod_History_4.png)
 
@@ -455,27 +455,27 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
   > ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
   > 
-  > When pressed this will disable the pod expiration beeps and notifications.
+  > Când apăsați acest lucru va dezactiva semnalele sonore și notificările de expirare.
   > 
-  > Button is displayed only when pod time is past expiration warning time Upon successful dismissal, this icon will no longer appear.
+  > Butonul este afișat numai atunci când timpul pompei a trecut de avertizarea de expirare După o demitere reușită, această pictogramă nu va mai apărea.
 
 - **SET TIME:**
 
   > ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
   > 
-  > When pressed this will update the time on the pod with the current time on your phone.
+  > Când apăsați se va actualiza ora pompei cu ora curentă pe telefon.
 
-- **SUSPEND:**
+- **SUSPENDAȚI:**
 
-  > ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
+  > ![suspendați](../images/omnipod/ICONS/omnipod_overview_suspend.png)
   > 
-  > Suspends the active pod
+  > Suspendați pompa activă
 
 - **RESUME DELIVERY:**
 
-  > ![resume](../images/omnipod/ICONS/omnipod_overview_resume.png)
+  > ![restabiliți](../images/omnipod/ICONS/omnipod_overview_resume.png)
   > 
-  > > Resumes the currently suspended, active pod
+  > > Reluați activitatea pompei curente suspendate
 
 ### Meniu Gestionare Pompă
 
@@ -487,86 +487,86 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
-  > Primes and activates a new pod
+  > Amorsați și activați o nouă pompă
 
 - **Dezactivare pompă**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
-  > Deactivates the currently active pod.
+  > Dezactivați pompa activă curentă.
   > 
-  > A partially paired pod ignores this command.
+  > O pompă parțial asociată va ignora această comandă.
   > 
-  > Use this command to deactivate a screaming pod (error 49).
+  > Utilizați această comandă pentru a dezactiva o pompă ce emite un semnal sonor încontinuu (eroare 49).
   > 
-  > If the button is disabled (greyed out) use the Discard Pod button.
+  > Dacă butonul este dezactivat (gri) utilizați butonul renunțați la pompă.
 
-- **Play test beep**
+- **Redați semnale sonore de test**
 
   > ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
   > 
-  > Plays a single test beep on the pod when pressed.
+  > Redă un singur semnal sonor de test pe pompă atunci când este apăsat.
 
 - **Discard pod**
 
   > ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
   > 
-  > Deactivates and discards the pod state of an unresponsive pod when pressed.
+  > Dezactivați și eliminați starea pompei pentru o pompă care nu răspunde, atunci când este apăsat.
   > 
-  > Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+  > Butonul este afișat doar în cazuri foarte specifice atunci când dezactivare corectă nu mai este posibilă:
   > 
   > > - A **pod is not fully paired** and thus ignores deactivate commands.
   > > - A **pod is stuck** during the pairing process between steps
   > > - A **pod simply does not pair at all.**
 
-- **Pod history**
+- **Istoric pompă**
 
   > ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
   > 
-  > Displays the active pod activity history
+  > Afișați istoricul de activitate al pompei active
 
-- **RileyLink stats:**
+- **Stare RileyLink:**
 
   > ![rileylink_stats](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
   > 
-  > Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+  > Navigare la ecranul de statistică RileyLink care afișează setările curente și istoricul conexiunii RileyLink
   > 
-  > > - **Settings** - displays RileyLink and active pod settings information
-  > > - **History** - displays RileyLink and Pod communication history
+  > > - **Setări** - afișați informații despre setările dispozitivului RileyLink și ale pompei active
+  > > - **Istoric** - afișați istoricul de comunicare ale dispozitivului RileyLink și ale pompei
 
-- **Reset RileyLink Config**
+- **Resetați configurația RileyLink**
 
   > ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
   > 
-  > When pressed this button resets the currently connected pod communication device configuration.
+  > Când este apăsat acest buton va reseta configurația dispozitivului conectat de comunicare cu pompa.
   > 
   > > - When communication is started, specific data is sent to and set in the RileyLink > - Memory Registers are set > - Communication Protocols are set > - Tuned Radio Frequency is set 
-  > > - See [additional notes](#OmnipodEros-reset-rileylink-config-notes) at the end of this table
+  > > - Vedeți [notele adiționale](#OmnipodEros-reset-rileylink-config-notes) la sfârșitul acestui tabel
 
-- **Read pulse log:**
+- **Citește Jurnal Puls:**
 
   > ![pulse_log](../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png)
   > 
-  > > Sends the active pod pulse log to the clipboard
+  > > Trimiteți jurnalul activ ale pulsurilor de pompă în clipboard
 
 (OmnipodEros-reset-rileylink-config-notes)=
 
-#### *Reset RileyLink Config Notes*
+#### *Resetați notele de configurare RileyLink*
 
-- The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
-- If the pod communication device is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
-- If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
-- This button **DOES NOT** need to be pressed when switching between different pod communication devices
+- Utilizarea primară a acestei funcții este atunci când dispozitivul activ de comunicare cu pompa nu răspunde și comunicarea este într-o stare blocată.
+- Dacă dispozitivul de comunicare cu pompa este oprit și apoi înapoi pornit, butonul **Resetați configurație RileyLink** trebuie apăsat, astfel încât să seteze acești parametri de comunicare în configurația dispozitivului de comunicare cu pompa.
+- Dacă acest lucru nu este făcut, atunci AAPS va trebui să fie repornit după ce dispozitivul de comunicare cu pompa este repornit.
+- Acest buton **NU** trebuie să fie apăsat când comutați între diferite dispozitive de comunicare cu pompa
 
 (OmnipodEros-omnipod-settings)=
 
-## Omnipod Settings
+## Setări Omnipod
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**➜**Pump**➜**Omnipod**➜**Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+Setările driverului Omnipod sunt configurabile din colțul stânga-sus **meniul hamburger** sub **Constructorul de Configurație**➜**Pompă**➜**Omnipod**➜**Rotița de setări (2)** prin selectarea **butonului radio (1)** denumit **Omnipod**. Selectarea **casetei (3)** de lângă **Rotița zimțată de setări (2)** va permite afișarea meniului Omnipod ca o filă în interfața AAPS intitulată **OMNIPOD** sau **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
 
 ![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
 
-**NOTE:** A faster way to access the **Omnipod settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu.
+**NOTĂ:** O modalitate mai rapidă de a accesa setările **Omnipod** este prin accesarea meniului **3 puncte (1)** în colțul din dreapta sus al filei **Omnipod (POD)** și selectarea **Preferințe Omnipod (2)** din meniul derulant.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
