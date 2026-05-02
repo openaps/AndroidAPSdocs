@@ -1,59 +1,59 @@
-# Following AAPS (no interaction with the AAPS system)
+# Urmărirea AAPS (fără interacțiune cu sistemul AAPS)
 
-In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](../RemoteFeatures/RemoteControl.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with **AAPS**.
+În plus față de gama de posibilități disponibile pentru controlul de la distanță _și_ urmărire a **AAPS** care sunt descrise în [control la distanță](../RemoteFeatures/RemoteControl.md), există mai multe aplicații și dispozitive suplimentare pe care comunitatea le-a dezvoltat, să urmărească pur și simplu numerele (nivelul de glicemie și alte informații), fără a interacționa cu **AAPS**.
 
-A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage.
+O bună imagine de ansamblu a opțiunilor vaste disponibile pentru a urmări **AAPS** este pe pagina web [Nightscout](https://nightscout.github.io/nightscout/downloaders/#).
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-The most common strategies used in combination with **AAPS** are explained in more detail below.
+Cele mai frecvente strategii utilizate în combinație cu **AAPS** sunt explicate mai detaliat în partea de jos.
 
-## Smartphone apps
+## Aplicații telefon inteligent
 
 ```{contents} These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”: 
 :depth: 1
 :local: true
 ```
 
-### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) and [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
+### Dexcom Follow ([Android](https://play.google.com/store/apps/details?id=com.dexcom.follow.region2.mgdl) și [iOS](https://apps.apple.com/fr/app/dexcom-follow-mg-dl-dxcm2/id1032203080))
 
 ![imagine](../images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
-* Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data.
+* Dexcom Follow este compatibil cu o gamă largă de dispozitive mobile (atât Android cât și iPhone). Dexcom Follow poate fi utilizat chiar dacă nu utilizați aplicația oficială Dexcom pentru a primi datele de la senzori.
 
-* Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated.
+* Mulți îngrijitori sunt familiarizați cu Dexcom Follow, preferând interfața sa clară față de ceva mai complicat.
 
-* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc.). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.
+* Dexcom Follow este foarte bun pentru profesori/bunici și pentru cei care știu foarte puțin despre diabet și nivelul glicemiei. It has customisable alerts (BG level, what sound to play etc.). Alarmele pot fi oprite complet, dacă este necesar, ceea ce este foarte util dacă aveți un senzor care încă se obișnuiește cu corpul și creează multe hipoglicemii false.
 
-#### Setting up Dexcom Follow: how-to-guide
+#### Configurarea Dexcom Follow: ghid
 
-If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app.
+Dacă folosiți aplicația Dexcom neoficială BYODA pentru a primi datele senzorului, ai putea trimite invitații urmăritorilor din aplicația BYODA.
 
-You cannot send invite emails to Dexcom followers anymore from third-party apps. In xDrip+ the invite request will just result in the message “invite not sent”.
+Nu mai puteți trimite e-mailuri de invitație către urmăritorii Dexcom, din aplicații terțe. În xDrip+, cererea de invitație va avea ca rezultat mesajul "invitația nu a fost trimisă".
 
-You must install the official Dexcom app, send the invite, and then uninstall the official app.
+Trebuie să instalați aplicația oficială Dexcom, să trimiteți invitația și apoi să dezinstalați aplicația oficială.
 
-The steps to do this are as follows:
+Pașii în acest sens sunt următorii:
 
-1)  Install the official “Dexcom” app on _any_ smartphone (Android/iPhone), this can be the Follower phone, if it is more convenient. 2)  Log in with your Dexcom username and password, this is the same login details you would use for Dexcom Clarity, if you are already a current Dexcom/Clarity customer. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
-3)  Swipe through the introduction menus. 4)  Add “no code” for the sensor code. 5)  Under Transmitter SN select “enter manually” and enter any valid transmitter code (use one of your expired transmitter codes, if you know one, so it doesn’t interfere with the running of your current transmitter, they follow a specific format of certain numbers and letters: “NLNNNL” and only use certain combinations, so it’s easiest to use one you already know is valid). 6)  Once the app is trying to find the transmitter and sensor, you will be able to invite followers: select the small three dots in the top left of the app, and add new follower. You can also use this if one of your followers has changed their handset and needs a fresh invite, here you can delete them from the follower list and resend a new invite email for them to use on their new handset. 7)  On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
-8)  You can now delete the official Dexcom G6 app.
+1) Instalați aplicația oficială "Dexcom" pe _orice telefon inteligent_ (Android/iPhone), acesta poate fi telefonul urmăritor dacă este mai convenabil. 2) Autentificați-vă cu numele de utilizator și parola Dexcom, acestea sunt aceleași detalii de autentificare pe care le-ați folosi pentru Dexcom Clarity, dacă sunteți deja un client Dexcom/Clarity. Dacă nu ai un cont Dexcom, există opțiunea de a crea o nouă autentificare în acest moment.   
+3) Glisați prin meniurile introductive. 4) Adăugați "niciun cod" pentru codul senzorului. 5) Sub Transmitter SN selectați "enter manually" și introduceți orice cod valid pentru transmițători (utilizați unul dintre codurile dumneavoastră pentru transmițătorii expirați. dacă știți unul, astfel încât nu interferează cu rularea transmițătorului curent, să aibă un format specific de anumite numere și litere: "NLNNL" și să utilizeze numai anumite combinații, deci este cel mai ușor să folosiți unul pe care deja îl știți valid). 6) Odată ce aplicația încearcă să găsească transmițătorul și senzorul, veți putea invita urmăritori: selectați cele trei puncte mici din stânga sus a aplicației și adăugați un nou urmăritor. De asemenea, poți folosi acest lucru dacă unul dintre urmăritorii tăi și-a schimbat dispozitivul manual și are nevoie de o invitație nouă, aici le puteți șterge din lista de urmăritori și retrimiteți un nou e-mail de invitație pe care îl puteți utiliza la noul lor dispozitiv mobil. 7) Pe telefonul urmăritorului, instalați Dexcom Follow prin descărcarea acesteia din App Store (iPhone) sau Play (Android). Configurați aplicația Dexcom Follow, și vi se va solicita să vă deschideți e-mailul pentru a găsi invitația pentru a fi urmăritor.    
+8) Acum puteți șterge aplicația oficială Dexcom G6.
 
-For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip+, depending on which app you are using.
+Pentru Dexcom Follow, datele de la senzori sunt apoi exportate din telefonul **AAPS** fie direct din BYODA, sau din xDrip+, în funcție de aplicația pe care o folosiți.
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
 
 ![imagine](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
-Pros (as reported by users):
+Avantaje (așa cum au fost raportate de utilizatori):
 
-* Available in the [app store](https://apps.apple.com/us/app/nightguard/id1116430352), simple, user-friendly interface.
+* Disponibil în [magazinul de aplicații](https://apps.apple.com/us/app/nightguard/id1116430352), simplă, ușor de utilizat.
 
-* Swipe button or shake phone to snooze alarms at different intervals ranging from 5 min to 24 hours
+* Glisați butonul sau scuturați telefonul pentru a amâna alarmele la diferite intervale între 5 minute și 24 de ore
 
 * Personalizați alarmele (alerte mari, mici, citiri ratate atunci când nu există date de 15-45 de minute).
 
