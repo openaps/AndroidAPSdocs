@@ -24,7 +24,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 This is just the welcome message which you can skip with the "NEXT" button:
 
-![Welcome](../images/setup-wizard/Wizard01.png)
+![Bine ați venit](../images/setup-wizard/Wizard01.png)
 
 ## License agreement
 
@@ -160,7 +160,7 @@ Click the "NEXT" button:
 
 ![Finish Permissions](../images/setup-wizard/Wizard08.png)
 
-### Location
+### Localizare
 
 Android links the use of Bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access Bluetooth.
 
@@ -174,7 +174,7 @@ This is important. Otherwise **AAPS** can not work properly at all.
 
 Click "While using the app":
 
-![Location](../images/setup-wizard/Wizard09-location.png)
+![Localizare](../images/setup-wizard/Wizard09-location.png)
 
 Click the second "ASK FOR PERMISSION" button:
 
@@ -236,7 +236,7 @@ Your range to analyze TIR (time in range) is configured separately in your repor
 
 Please press the "NEXT" button:
 
-![Range](../images/setup-wizard/Wizard14.png)
+![Interval](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## Synchronization with the reporting server and more
@@ -448,7 +448,7 @@ Enter/confirm the target values:
 
 Save the profile by clicking on "SAVE":
 
-![Save](../images/setup-wizard/Wizard22-Save.png)
+![Salvați](../images/setup-wizard/Wizard22-Save.png)
 
 
 After saving, a new button "Activate Profile" appears.
@@ -549,7 +549,7 @@ Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
 Press "NEXT" to go to the next screen:
 
-![Sensitivity](../images/setup-wizard/Wizard25.png)
+![Sensibilitate](../images/setup-wizard/Wizard25.png)
 
 ## Start Objective 1
 
