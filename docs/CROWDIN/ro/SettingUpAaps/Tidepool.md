@@ -9,7 +9,7 @@ Note: the Tidepool organization has brought the iOS Loop product to market with 
 
 ## Pasul 1 - Configurarea unui cont Tidepool
 
--Navigate to [tidepool.org](https://www.tidepool.org/)
+-Navigați la [tidepool.org](https://www.tidepool.org/)
 
 - Selectați "Personal Sign Up" sau "Sign Up"
 
@@ -38,4 +38,4 @@ Note: the Tidepool organization has brought the iOS Loop product to market with 
 
 -Apăsați pe "Setările conexiunii" și setați în funcție de preferințele dumneavoastră personale
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+Pentru mai multă asistență despre cum să folosiți datele dumneavoastră odată ce sunt încărcate în Tidepool vă rugăm să vizitați: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
