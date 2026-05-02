@@ -1,7 +1,7 @@
-# Full Closed Loop
+# Buclă închisă complet
 
 
-The main attraction of Full Closed Looping **FCL** is that it has the potential to mimic an artificial pancreas and make daily management easier without having the need to bolus for meals.
+Principala atracție a buclei complet închise **FCL** este aceea că are potențialul de a imita un pancreas artificial și de a facilita gestionarea de zi cu zi fără a fi nevoie de bolus pentru mese.
 
 În timp ce **buclă închisă hibrid** ('HCL') se bazează pe algoritm, acesta necesită totuși ca utilizatorul să livreze bolusuri manual înainte de mese. Drept rezultat, bucla poate intra într-o oprire temporară (bazală temporară zero) pentru a preveni administrarea în exces a insulinei.
 
@@ -124,7 +124,7 @@ Utilizatorii **FCL** nu mai trebuie să dea un bolus considerabil în jurul înc
 
 Dacă operați cu **AAPS** în versiunea principală, este sugerat că preferințele din**AAPS** să fie setate cu dimensiunea maximă admisă **SMB**, astfel încât **FCL** să poată oferi (maxUAMSMBBasalMinutes=120, adică 2 ore de bazală în acel moment al zilei).
 
-Dacă rata bazală este foarte mică, limitele **SMB** rezultate ar putea fi prea mici pentru a permite un control suficient pentru a contracara creșterile de după masă **ale glicemiei**. O posibilă soluție este să evităm dieta care cauzează vârfuri puternice ale **glicemiei** și să schimbăm ulterior la o variantă **AAPS** dev care oferă un nou parametru în setările de livrare **SMB**: smb_max_range_extension. Acest lucru va extinde valoarea bazală maximă de 2 ore cu un factor >1. (Additionally, the default 50% **SMB** delivery ratio might be elevated in dev. variante).
+Dacă rata bazală este foarte mică, limitele **SMB** rezultate ar putea fi prea mici pentru a permite un control suficient pentru a contracara creșterile de după masă **ale glicemiei**. O posibilă soluție este să evităm dieta care cauzează vârfuri puternice ale **glicemiei** și să schimbăm ulterior la o variantă **AAPS** dev care oferă un nou parametru în setările de livrare **SMB**: smb_max_range_extension. Acest lucru va extinde valoarea bazală maximă de 2 ore cu un factor >1. (Suplimentar, raportul implicit de livrare 50% **SMB** poate fi crescut în variantele dev). variante).
 
 **Urmează instrucțiunile pentru a activa AAPS să imite bolusarea ta prin intermediul a două SMB**.
 
@@ -191,34 +191,34 @@ Automatizarea #1
 
 Dacă condițiile sunt îndeplinite, **AAPS** ar da 1 sau 2 **SMB** în următoarele 12 minute, utilizând un **ISF** amplificat conform **Procentajului de profil**ridicat setat (în exemplu, o amplificare de 30% a insulinReq). Atâta timp cât se întrunesc aceste condiții, regula de **Automatizare** se extinde cu alte 12 minute. O masă cu carbohidrați puțini poate avea caracteristici de creștere mai lentă a **glicemiei**. Ar putea beneficia de o altă automatizare (#2) care s-ar declanșa la o delta inferioară și ar oferi o amplificare mai mică în ceea ce privește insulina.
 
-![>=5mg jump 115%, iob<5.5](../images/fullClosedLoop03.png)
+![>=5mg salt 115%, iob<5.5](../images/fullClosedLoop03.png)
 
-The same **Automation** probably will kick in also in higher carb meals, once the steep rise as defined in Automation#1 is over.
+Aceeași **Automatizare** probabil va apărea, de asemenea, în mesele mai bogate în carbohidrați, odată ce creșterea abruptă, așa cum a fost definită în Automatizrea#1 s-a terminat.
 
-You need to “stage” these two (+ maybe a third) **Automations** to fit with what you see in your meal (variety) => Setting appropriate jump sizes, **iob** criteria, and amplifications will be an iterative tuning process.  Also, if you include appropriate time slots in the Conditions, you can easy do different Automations for your different daily meals times (breakfast, lunch, dinner).
+Trebuie să "le pui în scenă" acestea două (+ poate o a treia) **Automatizare** pentru a se potrivi cu ceea ce vedeți la masă (varietate) => Stabilirea dimensiunilor corespunzătoare de salt, criteriile **iob** și amplificările vor fi un proces iterativ de ajustare.  De asemenea, dacă includeți intervale orare adecvate în Condiții, puteți face cu ușurință diferite Automatizări pentru diferitele ore ale meselor de zi cu zi (mic dejun, prânz, cină).
 
-Note that, still in the rise phase (!), the "overflow" of **iob** must be blocked so that the late effects of the **insulin** (the "**tail**" after 3-5 hours) will not exceed the braking capacity of the loop through zero-temping (“taking away” basal, to reduce hypo risk).
+Țineți cont de asta, încă din faza de creștere (!), "abundența" de **IOB** trebuie blocată astfel încât efectele tardive ale **insulinei** (**coada** de după 3-5 ore) să nu depășească capacitatea de frânare a buclei prin bazala temporară zero ("tăierea" bazalei, pentru a reduce riscul hipoglicemiei).
 
-With large meals there is **sometimes a second increase**. By then, usually also the iob has dropped a bit, and the more aggressive Automations take effect again. (Check that your iob condition in Automation #2 is not set too low to for this to happen).
+Cu mese mari există uneori o **a doua creștere**. Până atunci, de obicei, și IOB a scăzut puțin, iar Automatizările mai agresive intră din nou în vigoare. (Verifică dacă condiția pentru IOB în automatizarea #2 nu este setată prea jos pentru ca acest lucru să se întâmple).
 
-Soon after a few initial **SMBs** are given comes a **balanced phase** where moderate delivery of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a**BG** rise, and go into zero-temping right away already now).
+La scurt timp după ce câteva **SMB** inițiale sunt date vine o **perioadă echilibrată** unde administrarea moderată de insulină trebuie să acopere carbohidrații suplimentari ce sunt absorbiți. (Cu excepția meselor sărace în carbohidrați, unde bucla poate vedea o creștere prea slabă a **glicemiei**, și trece la bazală temporară zero chiar imediat).
 
-The **AAPS** main screen (where you see cob=0 in **UAM** full loop) might in this phase ask for more carbs required. In **UAM** mode that simply means, you could make a very rough plausibility check: Is that amount of carbs likely in your body, un-absorbed from your meal just about an hour ago (about which you gave your loop no info)?
+Ecranul principal **AAPS** (unde vedeți COB=0 în **UAM** bucla completă) s-ar putea ca în această fază să ceară mai mulți carbohidrați necesari. În modul **UAM** asta pur și simplu înseamnă, ai putea face o verificare estimativă a plauzibilității: Este acea cantitate de carbohidrați probabil în corpul tău, neabsorbită de la masa dumneavoastră de acum aproximativ o oră (în legătură cu care nu v-ați furnizat bucla cu informații)?
 
 
-### iob threshold
+### Prag IOB
 
-Often, **Automations** #1 and/or #2 make iob rise to heights that typically are enough for **your** meals. For personalised tuning, look in your **HCL** data at the max iob values that occur with well-managed meals (often: your meal bolus), and above which magnitude a hypo (or requirement for extra carbs) occurred at the end.
+Deseori, **Automatizările** #1 și/sau #2 fac IOB să crească la înălțimi care de obicei sunt suficiente pentru mesele **dumneavoastră**. Pentru reglarea personalizată, uitați-vă în datele **HCL** la valorile maxime de IOB care apar în timpul meselor bine gestionate (de cele mai multe ori: bolusul mesei introdus), și peste ce valoare a survenit la sfârșit o hipoglicemie (sau o cerință pentru carbohidrați suplimentari).
 
-Sensible **iob thresholds** at which you should reduce aggressiveness of your loop, might not be the same for every meal. But especially in the first hour after the start of a meal, which is very crucial in the **UAM** mode. It will defer to for each user. For some users just about 30g/hour get absorbed, and to define a meaningful **iob** independent of the exact meal can be possible.
+Praguri IOB de bun-simț la care ați reduce agresivitatea buclei dumneavoastră, s-ar putea să nu fie la fel pentru fiecare masă. Dar mai ales în prima oră de la începerea mesei, ceea ce este crucial în modul **UAM**. Se va amâna pentru fiecare utilizator. Pentru unii utilizatori, în jur de 30g/oră se absoarbe și pentru a defini un **IOB** semnificativ independent de masa exactă poate fi posibil.
 
-For exceptional meals, or to lower it if sports follow, the **iob** threshold can rapidly be set differently in your **Automation**.
+Pentru mese excepționale, sau pentru o diminuare a acesteia în cazul în care urmează sportul, pragul **IOB** poate fi stabilit rapid în mod diferit în **Automatizare**.
 
-Automation(#3),”iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
+Automatizarea(#3),"iobTH atins => **SMB** off", este definită pentru a termina (sau pauza, până când un alt val de creșteri cauzate de carbohidrați va lovi), o amplificarea agresivă a **SMB**.
 
-![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop04.png)
+![iob >5,5...111 TT = SMB off 16m](../images/fullClosedLoop04.png)
 
-Automation #3
+Automatizarea #3
 
 It tells the loop that above your set **iob threshold** it's better not to use any more **SMBs**
 
@@ -239,11 +239,11 @@ Dacă micul dejun deviază substanțial în conținutul de carbohidrați de cina
 
 În caz că, după o masă "bogată", se observă o stagnare de lungă durată cu o valoare a **glicemiei ridicată**, **Automatizarea** #6 (mai jos, stânga), "Hiperglicemie post-masă", ajută la combaterea rezistenței acizilor grași: după mesele cu mai multe feluri, pizza mare și onctuoasă, seară cu brânză topită la racletă, curba de glicemie poate forma două cocoașe sau, foarte des, un platou înalt alungit.
 
-![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop05.png)
+![iob >5,5...111 TT = SMB off 16m](../images/fullClosedLoop05.png)
 
 Automatizarea #4
 
-![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop06.png)
+![iob >5,5...111 TT = SMB off 16m](../images/fullClosedLoop06.png)
 
 Automatizarea #5
 
