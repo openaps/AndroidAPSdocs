@@ -2,7 +2,7 @@
 
 These instructions are for configuring the Equil insulin pump.
 
-## Pump capabilities with AAPS
+## Capacități pompă cu AAPS
 
 §todo
 
@@ -15,7 +15,7 @@ These instructions are for configuring the Equil insulin pump.
 
 ### Select Equil pump
 
-In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
+În [Configurator > Pompa](#Config-Builder-pump), treceți la **Equil 5.3**.
 
 ### Setări
 
