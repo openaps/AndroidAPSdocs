@@ -32,7 +32,7 @@ This is a good route if you are not really sure where to look for a configuratio
 
 The documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
 
-## Plugin preferences
+## Preferințe modul
 
 ![Deschideți preferințele modulului](../images/Pref2020_OpenPlugin2.png)
 
