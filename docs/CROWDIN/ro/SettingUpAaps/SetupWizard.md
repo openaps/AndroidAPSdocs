@@ -335,37 +335,37 @@ Apăsați "URMĂTORUL" pentru a merge la următorul ecran.
 
 ## Tip de pacient
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. Acest lucru este important din motive de securitate și siguranță.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
+Here is where you also configure the **maximum allowed bolus** for a meal. Adică, cel mai mare bolus pe care trebuie să-l dați pentru a acoperi mesele obișnuite. Este o caracteristică de securitate care ajută la evitarea unei supradozări accidentale atunci când bolusați pentru masă.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+A doua limită este similară din punct de vedere al conceptului, dar se referă la cantitatea maximă de carbohidrați pe care o așteptați.
 
-After setting these values, press "NEXT" to go to the next screen:
+După setarea acestor valori, apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Patient](../images/setup-wizard/Wizard18.png)
 
-## Used insulin
+## Insulină utilizată
 
-Select the type of insulin being used in the pump.
+Selectați tipul de insulină care este utilizată în pompă.
 
-The insulin names should be self-explanatory.
+Denumirile tipurilor de insulină ar trebui să fie de la sine înțelese.
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
 For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
 ```
 
-Press "NEXT" to go to the next screen:
+Apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Insulină](../images/setup-wizard/Wizard19.png)
 
 
-## Blood sugar source
+## Sursa glicemiei
 
-Select the BG source you are using. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Selectați sursa de glicemie pe care o folosiți. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
-As there are several options available, we don't explain the configuration for all of them here. We are using xDrip+ in our example here:
+Deoarece sunt disponibile mai multe opțiuni, nu explicăm configurația pentru toate aceste opțiuni. We are using xDrip+ in our example here:
 
 
 ![Sursă valoare glicemie](../images/setup-wizard/Wizard20.png)
@@ -373,7 +373,7 @@ As there are several options available, we don't explain the configuration for a
 
 Enable the visibility in the top level menu by clicking the check box on the right side.
 
-After making your selection, press "NEXT" to go to the next screen:
+După ce faceți selecția, apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Select BG](../images/setup-wizard/Wizard20-Set.png)
 
@@ -483,7 +483,7 @@ Press "OK":
 
 A confirmation dialog for the profile switch appears.
 
-You can confirm it with pressing "OK". Press "NEXT" to go to the next screen:
+You can confirm it with pressing "OK". Apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
 
@@ -500,9 +500,9 @@ Now you are selecting your insulin pump.
 
 You get an important warning dialog. Please read it, and press "OK".
 
-If your have already setup your profile in the steps before and you know how to connect your pump, feel free to connect it now.
+Dacă v-ați configurat deja profilul în pașii de dinainte și știți cum să conectați pompa, nu ezitați s-o conectați acum.
 
-Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. You can come back anytime or use one of the direct configuration options (not using the Wizard).
+Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. Puteți reveni oricând sau să folosiți una dintre opțiunile de configurare directă (nu prin folosirea Asistentului).
 
 Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
@@ -547,7 +547,7 @@ Go back and press "NEXT" to go to the next screen:
 
 Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
-Press "NEXT" to go to the next screen:
+Apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Sensibilitate](../images/setup-wizard/Wizard25.png)
 
