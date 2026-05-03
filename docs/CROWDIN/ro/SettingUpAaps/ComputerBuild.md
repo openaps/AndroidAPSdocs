@@ -341,16 +341,16 @@ Selectați "APK" în loc de "Android Bundle" și apăsați pe "Următorul":
 
 ![APK in loc de pachet](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AAPS.app" (1).
+În ecranul următor, asigurați-vă că "Module" este setat pe "AAPS.app" (1).
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
-:class: information
-If you want to create the apk for your watch, you now need to select AAPS.wear!
+:class: informații
+Dacă doriți să creați fișierul apk pentru ceas, acum trebuie să selectați AAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Apăsați pe "Creați nou..." (2) pentru a începe să creați propriul fișier keystore.
 
 ```{admonition} INFORMATION!
 :class: information
@@ -358,11 +358,11 @@ You will only need to create the keystore once.
 If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Note:_** The key store is a file in which the information for signing the app is stored. Este criptat și informația este securizată cu parole.
 
 ![Creați cheia privată (key store)](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Apăsați pe simbolul "dosar" (1) pentru a selecta o cale pe calculator pentru fișierul dumneavoastră keystore.
 
   Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
 
@@ -371,13 +371,13 @@ If you have build AAPS before, do NOT create a new keystore but select your exis
 Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Acum alegeți o parolă simplă (și notați-o), introduceți-o în caseta cu parolă (2), și confirmați (2).
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
+  Parolele pentru fișierul keystore și cheia nu trebuie să fie sofisticate. If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* Aliasul implicit (3) pentru cheia dumneavoastră este "key0", lăsați acest lucru neschimbat.
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Acum aveți nevoie de o parolă pentru cheia dumneavoastră. Pentru a-l păstra simplu, dacă doriți, puteți utiliza aceeași parolă pe care ați folosit-o mai sus pentru fișierul keystore. Introduceți o parolă (4) și confirmați-o.
 
 ```{admonition} WARNING!
 :class: warning
