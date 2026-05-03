@@ -515,27 +515,27 @@ Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: A
 ![Bluetooth Warning](../images/setup-wizard/Wizard23b.png)
 
 
-In this case we select "Virtual Pump".
+În acest caz alegem "Pompa Virtuală".
 
 ![Pompă](../images/setup-wizard/Wizard23-Pump.png)
 
 ## Algoritm APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
+Utilizați algoritmul OpenAPS SMB ca algoritm APS. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB este oricum mai nou și mai bun în comparație cu OpenAPS AMA.
 
-The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
+Motivul pentru care SMB este dezactivat la început este că opțiunea SMB permite o reacție mai rapidă la creșterea zahărului din sânge prin Super Micro Bolus în loc să crească procentul ratei bazale. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
 OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
 ```
 
-Press the cogwheel to see the details:
+Apăsați roata pentru a vedea detaliile:
 
 ![APS](../images/setup-wizard/Wizard24.png)
 
 
-Only read the text and change nothing here.
+Doar citiți textul și nu schimbați nimic aici.
 
 Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
 
@@ -551,21 +551,21 @@ Apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Sensibilitate](../images/setup-wizard/Wizard25.png)
 
-## Start Objective 1
+## Începeți Obiectivul 1
 
-You are entering now the Objectives. The qualification for access to further **AAPS** features.
+Vă aflați acum la secțiunea „Obiective”. The qualification for access to further **AAPS** features.
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective.
+Aici începem Obiectivul 1, chiar dacă deocamdată configurația noastră nu este complet pregătită să finalizeze cu succes acest obiectiv.
 
-But this is the start.
+Dar acesta este începutul.
 
-Press the green "START" to to start objective 1:
+Apăsați „START” verde pentru a începe obiectivul 1:
 
 ![Obiective](../images/setup-wizard/Wizard26.png)
 
-You see that you already made some progress, but other areas are to be done.
+Vedeți că ați făcut deja unele progrese, dar trebuie făcute și în alte domenii.
 
-Press "FINISH" to go to the next screen.
+Apăsați "FINALIZAȚI" pentru a merge la următorul ecran.
 
 ![Done](../images/setup-wizard/Wizard26-Started.png)
 
@@ -573,9 +573,9 @@ You are coming to the home screen of **AAPS**.
 
 Here you find the information message in **AAPS** that you set your profile.
 
-This was done when we switched to our new profile.
+Acest lucru a fost realizat când am trecut la noul nostru profil.
 
-You can click "SNOOZE" and it will disappear.
+Puteți apăsa pe "AMÂNAȚI" și va dispărea.
 
 ![imagine](../images/setup-wizard/Wizard26-Done.png)
 
