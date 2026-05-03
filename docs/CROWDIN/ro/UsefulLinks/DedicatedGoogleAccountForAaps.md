@@ -101,7 +101,7 @@ This part can be a bit confusing, since you will have to switch back and forth b
 2. Right click on your Browser logo in your taskbar
 3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (dacă este necesar, puteți schimba întotdeauna conturile prin apăsarea pe imaginea de profil și selectarea celui corect.
 
 ![](../images/Building-the-App/building_0009.png)
 
@@ -115,33 +115,33 @@ Your Gmail homepages screen should look like this:\
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Setați redirecționarea…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
+- Apăsați pe fila de configurare "Redirecționare și POP/IMAP"
+- Apăsați pe “adăugați o adresă de redirecționare”
+- Adăugați adresa dumneavoastră de e-mail "de zi cu zi"
 - Gmail will send a verification code to your “everyday” email address.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Veți trece înapoi la profilul dumneavoastră zilnic și veți apăsa pe link pentru a verifica dacă acceptați redirecționarea (sau veți primi codul de la e-mailul de verificare Gmail în fereastra Gmail "de zi cu zi" și veți copia și lipi codul în fereastra Gmail "dedicată AAPS").
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Există un destul de mare dute-vino între ferestre, însă acest lucru va asigura faptul că, atunci când vă verificați e-mailurile din contul „de zi cu zi”, veți vedea și e-mailurile redirecționate de pe contul dedicat AAPS, cum ar fi alertele Gmail.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Verificați adresa de e-mail redirecționată
 
 - In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
-- Open it and “click the link to confirm the request”
+- Deschideți-l și “apăsați pe link pentru a confirma cererea”
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Arhivați e-mailurile redirecționate în noul cont dedicat Gmail (fereastra de jos)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
+1. Reîmprospătați fereastra de jos
+2. Bifați "redirecționați mailurile care vin"
+3. Și arhivați copia Gmail (pentru a păstra noua cutie poștală dedicată curată)
 4. Scroll all the way to the bottom to save your changes\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Felicitări! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Felicitări! Acum ați creat un cont Google dedicat AAPS. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
