@@ -298,10 +298,10 @@ Deoarece nu putem face compromisuri în comunicare (avem nevoie de date actualiz
 
 ## De asemenea, sunt disponibile și alte fețe de ceas personalizate AAPS
 
-[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+[Aici](../ExchangeSiteCustomWatchfaces/index.md) puteți descărca fișierele Zip cu fețe de ceas personalizate făcute de către alți utilizatori.
 
-## Build your own watchface
+## Construiți-vă propria față de ceas
 
-If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+Dacă doriți să vă construiți propria față de ceas, urmați [ ghidul de aici](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
 
-Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+Odată ce ați construit o față de ceas personalizată, puteți partaja propria dumneavoastră față de ceas **AAPS** personalizată cu alții, fișierul zip poate fi încărcat în dosarul "ExchangeSiteCustomWatchfaces" printr-o comandă Pull Request în Github. În timpul îmbinării cererii de tragere, echipa de documentare va extrage fișierul CustomWatchface.png și îl va prefixa cu numele fișierului Zip.
