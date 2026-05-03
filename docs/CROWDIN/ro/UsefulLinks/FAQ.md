@@ -8,9 +8,9 @@ Cum să adăugați întrebări la FAQ: Urmărește aceste [instrucțiuni](../Sup
 
 Nu. Nu există niciun fișier apk descărcabil pentru AAPS. Trebuie să-l [construiți](../SettingUpAaps/BuildingAaps.md) chiar voi. Iată de ce:
 
-AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distribuirea unui dispozitiv nereglementat este ilegală. Reglementări similare există și în alte părți ale lumii.
+AAPS este utilizat pentru a vă controla pompa și a administra insulină. În conformitate cu reglementările actuale, în Europa, toate sistemele din clasa IIa sau IIb sunt dispozitive medicale care necesită aprobare din partea regulatorilor (un marcaj CE), și care trebuie să aibă diferite studii și semnalizări ale calității. Distribuirea unui dispozitiv nereglementat este ilegală. Reglementări similare există și în alte părți ale lumii.
 
-This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
+Acest regulament nu se limitează doar la vânzări (în sensul obținerii de bani pentru ceva), ci se aplică oricărui mod de distribuire (chiar și acordarea gratuită). Construirea unui dispozitiv medical pentru propriul uz este singura modalitate de a nu fi afectat de aceste reglementări.
 
 De aceea fișierele apk nu sunt disponibile.
 
@@ -20,13 +20,13 @@ De aceea fișierele apk nu sunt disponibile.
 
 În primul rând, trebuie să **aveți componentele fizice compatibile pentru buclă**:
 
-- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-- an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+- O pompă de insulină [acceptată](../Getting-Started/CompatiblePumps.md), 
+- un telefon inteligent [Android](../Getting-Started/Phones.md) (Apple iOS nu este acceptat de AAPS - puteți verifica [iOS Loop](https://loopkit.github.io/loopdocs/)) și
+- un [sistem de monitorizare continuă a glicemiei](../Getting-Started/CompatiblesCgms.md). 
 
-Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+În al doilea rând, trebuie **să vă pregătiți componentele software**: [AAPS](../SettingUpAaps/BuildingAaps.md), [sursa CGM/FGM](../Getting-Started/CompatiblesCgms.md) și [un server de raportare](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. Toate recomandările presupun că nevoile dumneavoastră bazale sunt îndeplinite și orice creșteri sau scăderi bruște pe care le vedeți sunt un rezultat al altor factori care necesită, prin urmare, unele ajustări punctuale (exercițiu, stres șamd). Ajustările pe care le poate face bucla sunt limitate pentru siguranță (a se vedea bazala temporară maximă permisă în [designul de referință al OpenAPS](https://openaps.org/reference-design/)), ceea ce înseamnă că nu veți dori să pierdeți doza permisă pe corecții necesare pentru a repara greșelile bazalei. Dacă, de exemplu, ajungeți în mod frecvent la rate bazale temporare joase atunci când se apropie o masă, atunci este foarte probabil că sunt necesare ajustări ale bazalei. You can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+În al treilea rând, trebuie să învățați și **să înțelegeți designul de referință OpenAPS pentru a vă verifica factorii de tratament**. Principiul fundamental al buclei închise este că [rata bazală și raportul insulină carbohidrați](../SettingUpAaps/YourAapsProfile.md), ale dumneavoastră, sunt exacte. Toate recomandările presupun că nevoile dumneavoastră bazale sunt îndeplinite și orice creșteri sau scăderi bruște pe care le vedeți sunt un rezultat al altor factori care necesită, prin urmare, unele ajustări punctuale (exercițiu, stres șamd). Ajustările pe care le poate face bucla sunt limitate pentru siguranță (a se vedea bazala temporară maximă permisă în [designul de referință al OpenAPS](https://openaps.org/reference-design/)), ceea ce înseamnă că nu veți dori să pierdeți doza permisă pe corecții necesare pentru a repara greșelile bazalei. Dacă, de exemplu, ajungeți în mod frecvent la rate bazale temporare joase atunci când se apropie o masă, atunci este foarte probabil că sunt necesare ajustări ale bazalei. Puteți utiliza [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) pentru a lua în considerare un număr mare de date pentru a sugera dacă și cum trebuie ajustate bazalele și/sau ISF; și dacă este necesară modificarea raportului carbohidrați insulină. Sau puteți testa și stabili ratele bazale [folosind metoda tradițională](https://integrateddiabetes.com/basal-testing/).
 
 ### Care sunt aspectele practice ale utilizării unui sistem de tip buclă?
 
@@ -44,11 +44,11 @@ Dacă intenționați să folosiți aplicația de ceas Wear pentru a bolusa sau p
 
 Dacă vă scoateți pompa pentru duș, băi, înot, sporturi sau alte activități, trebuie să aduceți la cunoștință programului AAPS că nu s-a administrat insulină, pentru a menține IOB corect.
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](#AapsScreens-loop-status).
+Pompa poate fi deconectată folosind pictograma de stare a buclei de pe [ecranul acasă al AAPS](#AapsScreens-loop-status).
 
 #### Recomandări care se bazează nu doar pe o singură citire CGM
 
-Pentru siguranță, recomandările se bazează nu doar pe o singură citire a CGM, ci pe variația medie. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
+Pentru siguranță, recomandările se bazează nu doar pe o singură citire a CGM, ci pe variația medie. Prin urmare, dacă pierdeți unele citiri, ar putea dura ceva timp după ce începeți să primiți din nou date înainte ca AAPS să facă din nou bucla.
 
 #### Referințe suplimentare
 
@@ -61,17 +61,17 @@ Există mai multe bloguri cu sfaturi bune pentru a vă ajuta să înțelegeți c
 
 ### Ce echipamente pentru situații de urgență se recomandă să aveți la dumneavoastră întotdeauna?
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
+Trebuie să aveți cu dumneavoastră același echipament de urgență ca oricare altă persoană cu DZ1 ce folosește tratamentul cu pompă de insulină. Când folosiți bucla în AAPS, este recomandat cu tărie să aveți următorul echipament suplimentar cu sau în apropierea dumneavoastră:
 
-- Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
+- Un pachet de baterii și cabluri pentru a încărca telefonul inteligent, ceasul și (dacă este necesar) cititorul Bluetooth sau dispozitivul de tip RileyLink
 - Baterii pentru pompă
-- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Maintenance/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Actualele fișiere [apk](../SettingUpAaps/BuildingAaps.md) și [preferințele](../Maintenance/ExportImportSettings.md) pentru AAPS și orice alte aplicații pe care le utilizați (spre exemplu xDrip+, Dexcom construit de dumneavoastră) atât la nivel local, cât și în cloud (Dropbox, Google Drive).
 
-### How can I safely and securely attach the CGM/FGM?
+### Cum pot atașa în siguranță și în mod securizat dispozitivul CGM/FGM?
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Unii utilizatori de bucle folosesc banda simplă kinesiologică sau rocktape.
+Puteți să-l lipiți cu o bandă. Există mai mulți plasturi de fixare pre-perforați, disponibili pentru sistemele CGM obișnuite (căutați pe Google, eBay sau Amazon). Unii utilizatori de bucle folosesc banda simplă kinesiologică sau rocktape.
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+Îl puteți repara. Puteți, de asemenea, să achiziționați benzi pentru braț care fixează senzorul CGM/FGM cu o bandă elastică (căutați pe Google, eBay sau Amazon).
 
 ## Algoritm APS
 
@@ -79,21 +79,21 @@ You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM w
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-În AMA, DIA nu înseamnă de fapt "durata de acțiune a insulinei". Este un parametru care era anterior conectat la DIA. Acum, înseamnă "în care timp ar trebui să se termine corecția". Nu are nicio legătură cu calcularea IOB. In OpenAPS SMB, there is no need for this parameter any longer.
+În AMA, DIA nu înseamnă de fapt "durata de acțiune a insulinei". Este un parametru care era anterior conectat la DIA. Acum, înseamnă "în care timp ar trebui să se termine corecția". Nu are nicio legătură cu calcularea IOB. În OpenAPS SMB, acest parametru nu mai este necesar.
 
 ## Alte setări
 
 ### Setări Nightscout
 
-#### AAPSClient says 'not allowed' and does not upload data. Ce pot face?
+#### AAPSClient spune „nu este permis” și nu încarcă date. Ce pot face?
 
-In AAPSClient check 'Connection settings'. Poate că de fapt nu sunteți într-o rețea WLAN permisă sau ați activat 'Doar dacă se încarcă' iar cablul de încărcare nu este atașat.
+În AAPSClient verificați "Setări conexiune". Poate că de fapt nu sunteți într-o rețea WLAN permisă sau ați activat 'Doar dacă se încarcă' iar cablul de încărcare nu este atașat.
 
 ### Setări CGM
 
-#### Why does AAPS say 'BG source doesn't support advanced filtering'?
+#### De ce AAPS spune că 'sursa de glicemie nu suportă filtrarea avansată'?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md) for more details.
+Dacă folosiți alt CGM/FGM decât Dexcom G5 sau G6 în modul nativ xDrip, veți primi această alertă în fila OpenAPS din AAPS. Vedeți [Omogenizarea datelor glicemiei](../CompatibleCgms/SmoothingBloodGlucoseData.md) pentru mai multe detalii.
 
 ### Pompă
 
@@ -108,36 +108,36 @@ Folosirea buclei poate duce la reducerea timpului de utilizare a bateriilor, deo
 - reduceți perioada de timp cât ecranul pompei stă aprins (din setările pompei)
 - reduceți perioada de timp cât iluminarea ecranului pompei este pornită (din setările pompei)
 - selectați notificarea să fie prin intermediul unui sunet mai degrabă decât prin vibrație (în setările pompei)
-- only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-- AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. Acest lucru consumă baterie. Pentru a vedea dacă se întâmplă astfel, mergeți la Preferințe > NSClient și activați 'Înregistrează pornirea aplicației pe NS'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
+- apăsați butoanele pompei doar pentru revenirea pistonului, folosiți AAPS pentru a verifica istoricul, nivelul bateriilor și volumul rezervorului.
+- Aplicația AAPS poate fi adesea închisă pentru a economisi energie sau pentru a elibera memoria RAM pe unele telefoane. Când AAPS este reinițializat la fiecare pornire, se stabilește o conexiune Bluetooth cu pompa și apoi sunt recitite rata bazală curentă și istoricul de bolusuri. Acest lucru consumă baterie. Pentru a vedea dacă se întâmplă astfel, mergeți la Preferințe > NSClient și activați 'Înregistrează pornirea aplicației pe NS'. Nightscout va înregistra un eveniment la fiecare restartare a AAPS, ceea ce va ușura identificarea problemei. Pentru a reduce apariția acestui fenomen, adaugă aplicația AAPS în „lista albă” (whitelist) la setările bateriei telefonului, pentru a împiedica monitorizarea consumului de energie să închidă aplicația.
     
     De exemplu, pentru a acorda toate permisiunile pe un telefon Samsung care rulează cu Android Pie:
     
     - Mergeți la Setări-> Îngrijire dispozitiv-> Baterie 
-    - Scroll until you find AAPS and select it
+    - Derulați până când găsiți AAPS și selectați-l
     - Dezactivați "Pune aplicația în repaus"
     - DE ASEMENEA mergeți la Setări -> Aplicații -> (Simbolul format din trei cercuri în dreapta sus a ecranului) selectați "acces special" -> Optimizare utilizare baterie
-    - Scroll to AAPS and make sure it is de-selected.
+    - Derulați la AAPS și asigurați-vă că este deselectat.
 
 - curățați bornele bateriei cu tampon cu alcool, pentru a vă asigura că nu a rămas ceară/unsoare.
 
 - pentru [pompele Dana R/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) procedura de pornire trage un curent mare prin baterie pentru a rupe în mod intenționat filmul de pasivizare (care previne pierderea de energie în timp ce este în stocare), dar nu funcționează întotdeauna pentru a-l rupe 100%. Fie scoateți și reintroduceți bateria de 2-3 ori până când se afișează 100% pe ecran, fie utilizați cheia bateriei pentru o scurtcircuitare rapidă înainte de a fi introdusă, prin aplicarea sa la ambele borne pentru o fracțiune de secundă.
-- see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+- vedeți de asemenea mai multe sfaturi pentru [tipuri speciale de baterie](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
 #### Schimbarea rezervoarelor și a canulelor
 
-The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
+Schimbarea cartușului nu poate fi făcută prin intermediul AAPS, ci trebuie efectuată ca înainte direct prin pompă.
 
-- Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
-- Now nnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](#screens-action-tab) in the actions tab just to record the change.
-- Odată reconectat la pompă continuați bucla prin apăsare lungă pe 'Suspendat (X m)'.
+- Apăsați lung pe "Buclă deschisă"/"Buclă închisă" pe pagina principală a AAPS și selectați 'Suspendați bucla pentru 1h'
+- Acum deconectați pompa și schimbați rezervorul conform instrucțiunilor pompei.
+- De asemenea, amorsarea și umplerea tubului și a canulei se pot face direct din pompă. În acest caz utilizați butonul [AMORSARE/UMPLERE](#screens-action-tab) din pagina de acțiuni doar pentru a înregistra modificarea.
+- Odată reconectat la pompă reporniți bucla prin apăsare lungă pe 'Suspendat (X m)'.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Aceasta înseamnă că nu întrerupe o rată bazală temporară care rulează în prezent. În pagina Acțiuni (Act), utilizați butonul de [AMORSARE/UMPLERE](#screens-action-tab) pentru a seta cantitatea de insulină necesară pentru a umple setul de infuzie și a începe amorsarea. Dacă cantitatea nu este suficientă, repetați umplerea. Puteți seta butoanele pentru cantitatea standard în Preferințe > Altele > Cantități standard de insulină umplere/amorsare. Vedeți instrucțiunile cuprinse în prezentarea aflată în cutia canulei pentru a vedea de câte unități este nevoie pentru a face amorsarea pompei, în funcție de lungimea acului și a tubului.
+Schimbarea unei canule nu utilizează însă funcția „ amorsare set de perfuzie” a pompei, ci umple setul de perfuzie și/sau canula folosind un bolus care nu apare în istoricul de bolusuri. Aceasta înseamnă că nu întrerupe o rată bazală temporară care rulează în prezent. În pagina Acțiuni (Act), utilizați butonul de [AMORSARE/UMPLERE](#screens-action-tab) pentru a seta cantitatea de insulină necesară pentru a umple setul de infuzie și a începe amorsarea. Dacă cantitatea nu este suficientă, repetați umplerea. Puteți seta butoanele pentru cantitatea standard în Preferințe > Altele > Cantități standard de insulină umplere/amorsare. Vedeți instrucțiunile cuprinse în prezentarea aflată în cutia canulei pentru a vedea de câte unități este nevoie pentru a face amorsarea pompei, în funcție de lungimea acului și a tubului.
 
 ### Fundal
 
-You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
+Puteți găsi imaginea de fundal AAPS pentru telefonul dumneavoastră pe [pagina de telefoane](#Phones-phone-wallpaper).
 
 ### Utilizare zilnică
 
@@ -145,11 +145,11 @@ You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phon
 
 ##### Ce trebuie făcut când se face duș sau baie?
 
-Puteți îndepărta pompa în timp ce faceți duș sau baie. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+Puteți îndepărta pompa în timp ce faceți duș sau baie. Pentru această perioadă scurtă de timp s-ar putea să nu aveți nevoie de ea, dar ar trebui să anunțați AAPS că v-ați deconectat astfel încât calculele IOB să fie corecte. Vedeți [descrierea de mai sus](#FAQ-disconnect-pump).
 
 #### Serviciu
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+În funcție de tipul locului de muncă, veți putea alege să folosiți diferiți factori de tratament în zilele lucrătoare. Ca persoană care folosește o buclă, ar trebui să luați în considerare o [schimbare de profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) pentru ziua tipică de muncă. De exemplu, puteți trece la un profil mai mare de 100% dacă aveți o activitate mai puțin solicitantă (spre exemplu statul la un birou), sau mai puțin de 100% dacă sunteți activ și în picioare toată ziua. Ați putea de asemenea să luați în considerare o țintă temporară mare sau mică, sau o schimbare de timp [a profilului dumneavoastră](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) atunci când lucrați mult mai devreme sau mai târziu decât este obișnuit, sau dacă lucrezi în schimburi diferite. Puteți crea, de asemenea, un al doilea profil (de exemplu, "acasă" și "zi lucrătoare") și puteți face o modificare de profil zilnic pentru profilul de care aveți nevoie.
 
 ### Activități de agrement
 
@@ -163,11 +163,11 @@ Deci, ați avea mai mulți carbohidrați la bord, dar în același timp bucla ar
 
 Când folosiți bucla ar trebui să încercați acești pași:
 
-- Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
-- Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+- Faceți o [schimbare profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
+- Setați o [țintă temporară de activitate](#TempTargets-activity-temp-target) peste ținta standard.
+- Dacă utilizați SMB, asigurați-vă că ["Activați SMB cu ținte temporare mari"](#Open-APS-features-enable-smb-with-high-temp-targets) și ["Activați SMB întotdeauna"](#Open-APS-features-enable-smb-always) sunt dezactivate.
 
-Pre- and post-processing of these settings is important. Faceți schimbările la timp, înainte de sport si luați în considerare efectul de umplere cu glucoză a mușchilor.
+Pre- și post-procesarea acestor setări sunt importante. Faceți schimbările la timp, înainte de sport si luați în considerare efectul de umplere cu glucoză a mușchilor.
 
 Dacă faceți sport în mod regulat în aceeași perioadă a zilei (spre exemplu o oră de sport în sală) puteți lua în considerare utilizarea unei [automatizări](../DailyLifeWithAaps/Automations.md) pentru schimbarea de profil și o țintă temporară. Automatizarea bazată pe locație ar putea fi de asemenea o idee, dar face preprocesarea mai dificilă.
 
@@ -175,11 +175,11 @@ Procentul de schimbare a profilului, valoarea pentru ținta temporară a activit
 
 #### Sex
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+Puteți îndepărta pompa pentru a fi „liber”, dar trebuie să anunțați AAPS astfel încât calculele IOB să fie corecte. Vedeți [descrierea de mai sus](#FAQ-disconnect-pump).
 
 #### Consumul de alcool
 
-Consumul de alcool este riscant în modul de buclă închisă deoarece algoritmul nu poate prezice corect dacă alcoolul a influențat glicemia. You have to check out your own method for treating this using the following functions in AAPS:
+Consumul de alcool este riscant în modul de buclă închisă deoarece algoritmul nu poate prezice corect dacă alcoolul a influențat glicemia. Trebuie să vă verificați propria metodă de tratare în acest caz, prin folosirea următoarelor funcții în AAPS:
 
 - Dezactivarea modului de buclă închisă și tratarea manuală a diabetului sau
 - stabilirea unor ținte temporare ridicate și dezactivarea UAM pentru a evita ca bucla să crească IOB din cauza unei mese inexistente sau
@@ -191,7 +191,7 @@ Atunci când consumați alcool, trebuie să fiți întotdeauna atent la CGM pent
 
 ##### Cum pot repeta în timpul nopții fără radiații mobile și WiFi?
 
-Mulți utilizatori activează modul avion pe timp de noapte. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Mulți utilizatori activează modul avion pe timp de noapte. Dacă doriți ca bucla să vă ajute atunci când dormiți, procedați după cum urmează (aceasta va funcționa doar cu o sursă locală de glicemie, cum ar fi xDrip+ sau aplicația [Dexcom modificată](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), NU va funcționa dacă obțineți citirile de glicemie prin Nightscout):
 
 1. Activați modul avion în telefon.
 2. Așteptați până când modul avion este activ.
@@ -207,13 +207,13 @@ Unele persoane au descoperit probleme cu transmiterea locală (AAPS nu primește
 
 ##### Cum să facem față schimbărilor de fus orar?
 
-Cu Dana R și Dana R Korean nu trebuie să faci nimic. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+Cu Dana R și Dana R Korean nu trebuie să faci nimic. Pentru alte pompe, vedeți pagina [călătoritul prin diferite fusuri orare](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) pentru mai multe detalii.
 
 ### Subiecte medicale
 
 #### Spitalizare
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+Dacă doriți să partajați unele informații despre AAPS și bucla artizanală cu medicii dumneavoastră, puteți să tipăriți [ghidul AAPS pentru medici](../UsefulLinks/ClinicianGuideToAaps.md).
 
 #### Programare medicală la endocrinologul dumneavoastră
 
@@ -221,50 +221,50 @@ If you want to share some information about AAPS and DIY looping with your clini
 
 Puteți afișa rapoartele Nightscout (https://YOUR-NS-SITE.com/report) sau să verificați [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
-## Frequent questions on Discord and their answers...
+## Întrebări frecvente pe Discord și răspunsurile lor...
 
-### My problem is not listed here.
+### Problema mea nu este enumerată aici.
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+[Informații pentru a primi ajutor.](../GettingHelp/WhereCanIGetHelp.md)
 
-### My problem is not listed here but I found the solution
+### Problema mea nu este enumerată aici, dar am găsit soluția
 
-[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
+[Informații pentru a primi ajutor.](../GettingHelp/WhereCanIGetHelp.md)
 
-**Remind us to add your solution to this list!**
+**Reamintiți-ne să adăugăm soluția dumneavoastră la această listă!**
 
-### AAPS stops everyday around the same time.
+### AAPS se oprește zilnic cam la același timp.
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+Opriți Google Play Protect. Verificați de aplicațiile de "curățare" (spre exemplu CCleaner șamd) și dezinstalați-le. Meniul AAPS / 3 puncte / Despre / urmați linkul "Păstrați aplicația rulând în fundal" pentru a opri toate optimizările bateriei.
 
-### How to organize my backups ?
+### Cum să-mi organizez copiile de rezervă?
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+Exportați setările în mod regulat: după fiecare schimbare de pompă, după modificarea profilului, atunci când ați validat un obiectiv, dacă schimbați pompa… Chiar dacă nimic nu se schimbă, exportați o dată pe lună. Păstrați câteva fișiere vechi de export.
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+Copiați pe un disc de internet (Dropbox, Google șamd): toate fișierele apk pe care le-ați folosit pentru a instala aplicații pe telefon (AAPS, xDrip, BYODA, LibreLink modificat șamd), precum și fișierele de setare exportate din toate aplicațiile dumneavoastră.
 
-### I have problems, errors building the app.
+### Am probleme, erori în construirea aplicației.
 
-Please
+Vă rog
 
-- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) for typical errors and
-- the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+- verificați [Depanare Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) pentru erori tipice și
+- sfaturile pentru [o parcurgere pas cu pas](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
-### I'm stuck on an objective and need help.
+### Sunt blocat la un obiectiv și au nevoie de ajutor.
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+Faceți o captură de ecran întrebărilor și răspunsurilor. Publicați-le pe canalul Discord al AAPS. Nu uitați să spuneți care sunt opțiunile pe care le alegeți (sau nu) și de ce. Veți primi sugestii și ajutor, dar va trebui să găsiți răspunsurile.
 
-### How to reset the password in AAPS v2.8.x ?
+### Cum să resetați parola în AAPS v2.8.x?
 
-Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+Deschideți meniul hamburger, porniți asistentul de configurare și introduceți o nouă parolă atunci când vi se cere. Puteți renunța la asistent după etapa de parolă.
 
-### How to reset the password in AAPS v3.x
+### Cum să resetați parola în AAPS v3.x
 
-You find the documentation [here](#Update3_0-reset-master-password).
+Găsiți documentația [aici](#Update3_0-reset-master-password).
 
-### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+### Dispozitivul de tip RileyLink/pompa nu răspund (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+Cu unele telefoane, există deconectări Bluetooth de la dispozitivul de legătură (RL/OL/EmaL...).
 
 Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
 
