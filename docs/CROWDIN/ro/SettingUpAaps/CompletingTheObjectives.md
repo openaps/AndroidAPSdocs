@@ -1,4 +1,4 @@
-# Completing the Objectives
+# Îndeplinirea obiectivelor
 
 **AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
 
@@ -8,7 +8,7 @@
 
 When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
 
-**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 to 11** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
+**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. Este nevoie de aproximativ 6 săptămâni pentru a fi finalizat. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 to 11** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
 
 As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
 
@@ -74,13 +74,13 @@ Tasks to complete **Objective 2** are:
 
 Some users find **Objective 3** to be the most difficult objective to complete. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
 
-In the meantime :
+Între timp:
 - To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+- S-ar putea să doriți să setați o limită superioară mai mare sau chiar să dezactivați bucla deschisă, noaptea.
 
-To proceed with **Objective 3**, click on the orange text “**Not completed yet**” to access the relevant question. Please read each question carefully and select your answer(s).
+To proceed with **Objective 3**, click on the orange text “**Not completed yet**” to access the relevant question. Vă rugăm să citiți cu atenție fiecare întrebare și să selectați răspunsul (răspunsurile).
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+Pentru fiecare întrebare, poate fi mai mult de un răspuns corect! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
 
 ```{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
