@@ -1,4 +1,4 @@
-# Setting up the Reporting Server
+# Configurarea serverului de raportare
 
 Momentan există două servere de raportare disponibile pentru a fi utilizate cu **AAPS**:
 
