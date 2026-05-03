@@ -288,14 +288,14 @@ Only on windows computers: You might get a notification about windows defender r
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Puteți lăsa sincronizarea Gradle să ruleze și să urmați deja pașii următori.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Setați calea Git în preferințele Android Studio
 
 Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). Dacă nu, reporniți acum și redeschideți Android Studio
 
 In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git**
 
@@ -319,7 +319,7 @@ If you find that **git.exe** is not found automatically, or that clicking "Test"
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### Construiți APK "semnat" AAPS
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
@@ -333,11 +333,11 @@ For our purposes, this just means that we generate a signing or "keystore" file 
 **Important: Make sure the gradle sync is finished successfully before proceeding!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
+Apăsați pe meniul hamburger din stânga sus pentru a deschide bara de meniu. Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
 
 ![Construiți apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" instead of "Android App Bundle" and click "Next":
+Selectați "APK" în loc de "Android Bundle" și apăsați pe "Următorul":
 
 ![APK in loc de pachet](../images/Building-the-App/041_APK.png)
 
