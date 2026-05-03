@@ -1,12 +1,12 @@
 # FAQ pentru cei care folosesc bucla
 
-How to add questions to the FAQ: Follow the these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+Cum să adăugați întrebări la FAQ: Urmărește aceste [instrucțiuni](../SupportingAaps/HowToEditTheDocs.md)
 
 ## General
 
 ### Pot descărca direct fișierul de instalare AAPS?
 
-Nu. There is no downloadable apk file for AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Iată de ce:
+Nu. Nu există niciun fișier apk descărcabil pentru AAPS. Trebuie să-l [construiți](../SettingUpAaps/BuildingAaps.md) chiar voi. Iată de ce:
 
 AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distribuirea unui dispozitiv nereglementat este ilegală. Reglementări similare există și în alte părți ale lumii.
 
