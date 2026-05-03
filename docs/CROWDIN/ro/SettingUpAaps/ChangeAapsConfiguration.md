@@ -4,15 +4,15 @@ After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**
 
 There are three routes to change AAPS’ configuration. As to which route you take, it is simply a matter of convenience or personal preference as each route leads to the same configuration settings.
 
-These are as follows:
+Acestea sunt următoarele:
 
-1. Config builder,
+1. Configurator,
 1. Three dot menu on the right and select "Preferences" or
 1. Three dot menu on the right and select "Plugin preferences".
 
-Here we explain which option is most convenient for each situation:
+Aici se explică care opțiune este cea mai convenabilă pentru fiecare situație:
 
-## Config builder
+## Configurator
 
 ![Open Config Builder](../images/ConfBuild_Open_AAPS30.png)
 
