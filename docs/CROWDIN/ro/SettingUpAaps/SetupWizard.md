@@ -20,9 +20,9 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 :class: note
 If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Mesaj de întâmpinare
 
-This is just the welcome message which you can skip with the "NEXT" button:
+Acesta este doar mesajul de bun venit pe care îl puteți sări cu butonul "URMĂTORUL":
 
 ![Bine ați venit](../images/setup-wizard/Wizard01.png)
 
