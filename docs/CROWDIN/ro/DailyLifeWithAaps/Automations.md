@@ -114,7 +114,7 @@ There are safety limits set for **Automations**:
 Please be careful when selecting a negative value in **Automation**
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. Spre exemplu:
 
 ![Text alternativ](../images/automation_2024-02-12_20-56-25.png-500x.png)
 

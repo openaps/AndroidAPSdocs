@@ -341,7 +341,7 @@ There are times when it might be appropriate to use a passive.
 
 A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
 
-For example:
+Spre exemplu:
 
 | Verb      | Nominalization |
 | --------- | -------------- |
@@ -390,7 +390,7 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 ##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
 
-- naratorul vorbește direct cititorului: În acest tutorial **vei** (noi) ar putea fi folosit pentru a transmite ideea de „suntem împreună în asta” în unele cazuri rare
+- naratorul vorbește direct cititorului: În acest tutorial **vei** (noi) ar putea fi folosit pentru a transmite ideea de "suntem împreună în asta" în unele cazuri rare
 
 - Future Tense -> to show the final target
 

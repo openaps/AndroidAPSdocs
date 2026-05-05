@@ -1,8 +1,8 @@
 # Remote control of AAPS
 There are four highly effective tools for remotely managing **AAPS**:
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device).  
-4) [Smartwatches](#RemoteControl_smartwatches) (Android)
+1) [comenzi SMS](#RemoteControl_SMS-Commands) (numărul de urmărire poate fi Android sau iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (telefonul de urmărire este Android) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS sau alt calculator/dispozitiv).  
+4) [Ceasuri inteligente](#RemoteControl_smartwatches) (Android)
 
 The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
 
@@ -47,7 +47,7 @@ Once downloaded, click _show in folder_ to locate the file.
 
 The **AAPSClient** apk can now be either:
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+Transferat printr-un cablu USB pe telefonul de tip urmăritor; sau a fost adăugat în folderul Google, apoi adăugat pe telefonul urmăritorului, prin apăsarea pe fișierul "app-AAPSClient-releasse".
 
 Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
 
@@ -153,7 +153,7 @@ After pressing “save” the app will return to your main Nightscout screen whi
 6. "**+**" menu for entering treatments to send to AAPS.
 7. Select different time period to display
 8. Basal insulin profile
-9. Green line = historical glucose Blue lines = predicted glucose
+9. Linia verde = valoarea istorică a glicemiei Linii albastre = glicemia prognozată
 
 ![imagine](../images/remote-control-28.png)
 
@@ -206,7 +206,7 @@ Some of the most useful **Nightscout** commands are described in the table below
 | Most commonly used treatments                             | Function, example of when command is useful                                                                                                                                                                                                               |
 | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Correction bolus**                                      | Allows you to announce **but <u>not</u> bolus** insulin.<br>Very useful for cancelling negative insulin to prevent a hypo,<br>for example in the middle of the night, if the profile has been too strong.                                     |
-| **Carb correction**                                       | Announce carbs now                                                                                                                                                                                                                                        |
+| **Corecție de carbohidrați**                              | Announce carbs now                                                                                                                                                                                                                                        |
 | **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled.<br>Note that cancelling does not always work,<br>in this instance you can set a new target for a short time period (2 min)<br>which will then revert back to the normal target afterwards. |
 | **Schimbare de profil**                                   | Allows you to check the current profile which is running,<br>and switch to another profile, either permanently,<br>or for a defined length of time (mins).                                                                                    |
 
@@ -214,7 +214,7 @@ Some of the most useful **Nightscout** commands are described in the table below
 
 | Less widely used commands                                                                                                           | Function, example of when command is useful                                                                                                                              |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **BG check**                                                                                                                        | Send a BG check to AAPS.                                                                                                                                                 |
+| **Verificare glicemie**                                                                                                             | Send a BG check to AAPS.                                                                                                                                                 |
 | **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**                                                                    | Can announce carbs (plus proteins and fat)<br> from 60 min in the past to 60 min in the future.<br>Combo bolus allows insulin announcement at the same time. |
 | **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).                                                                                                                         |
 | **Pump site change**<br>**Battery change**<br>**Insulin cartridge change**                                              | Announces these pump changes.                                                                                                                                            |
@@ -248,25 +248,25 @@ Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), e
 
 As a brief overview, the following functions can be triggered from the smartwatch:
 
-* set a temporary target
+* setarea unei ținte temporare
 
 * use the bolus calculator (calculation variables can be defined in settings on the phone)
 
-* administer eCarbs
+* administrare carbohidrați extinși
 
-* administer a bolus (insulin + carbs)
+* administrarea unui bolus (insulină + carbohidrați)
 
-* watch settings
+* setări ceas
 
-* status
+* stare
 
-* check pump status
+* verificați starea pompei pe ecranul acesteia
 
-* check loop status
+* verificare starea buclă
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* verificare și modificare profil, CPP (Profil Circadian procentual = decalaj timp + procentaj)
 
-* show TDD (Total daily dose = bolus + basal per day)
+* afișați DZT (Doza zilnică totală = bolus + bazală pe zi)
 
 * Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
 

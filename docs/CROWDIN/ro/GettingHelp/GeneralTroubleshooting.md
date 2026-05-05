@@ -2,7 +2,7 @@
 
 # **Depanare**
 
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
+Puteți găsi informații de depanare pe multe pagini în wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
 
 Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
 
@@ -28,7 +28,7 @@ Ignore it: More details, Install anyway.
 ### **Setări**
 * Profil
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
+  ![Eroare: Bazala nu este aliniată la ore](../images/Screen_DifferentPump.png)
 
 * [Pump - data from different pump](#update30-failure-message-data-from-different-pump)
 
@@ -109,7 +109,7 @@ Depending on your phone model and make there may be more than one location and s
 
 * Select "battery".
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Baterie](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
 * Set it to "Not optimized"
 
@@ -137,7 +137,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 (generaltroubleshooting-pumps)=
 
-## **Pumps**
+## **Pompe**
 
 Useful links to known issues and steps to resolve for Pumps
 

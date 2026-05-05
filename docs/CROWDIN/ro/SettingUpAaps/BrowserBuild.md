@@ -116,7 +116,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 <!--crowdin:enable-->
 ````
-AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
+Construirea AndroidAPS necesită chei private, care sunt stocate într-un fișier Java KeyStore (JKS):
 - If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
 </br>
 
@@ -126,8 +126,8 @@ You will need to:
 1. [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
 2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service…).
 3. Generate a new version of the signed apk as described in Option 1 and transfer it to your phone.
-4. Uninstall previous AAPS version on your phone.
-5. Install new AAPS version on your phone.
+4. Dezinstalați versiunea AAPS anterioară de pe telefon.
+5. Instalați o nouă versiune AAPS pe telefon.
 6. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
 7. Restore your data from Nightscout.
 ```

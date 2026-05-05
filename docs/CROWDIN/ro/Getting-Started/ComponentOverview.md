@@ -1,39 +1,39 @@
-# Component Overview
+# Prezentare generală componentă
 
-**AAPS** is not just a (self-built) application, it is but one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the component documentation.
+**AAPS** nu este doar o aplicație (auto-construită), ci doar unul dintre modulele sistemului dumneavoastră cu buclă închisă. Înainte de a vă decide asupra componentelor, ar fi o idee bună să aruncați o privire către documentația componentelor.
 
-![Components overview](../images/modules.png)
+![Prezentare generală a componentelor](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+Fundamentul caracteristicilor de siguranță **AAPS** discutate în această documentație se bazează pe caracteristicile de siguranță ale hardware-ului utilizat pentru a construi sistemul dumneavoastră. Pentru a închide o buclă automată de dozare a insulinei, este extrem de important să utilizați doar o pompă de insulină și un CGM testate, complet funcționale și aprobate de instanțele oficiale din țara dumneavoastră. Modificările hardware sau software ale acestor componente pot cauza dozări neașteptate de insulină, ce provoacă riscuri semnificative pentru utilizator. Dacă găsiți sau vi se oferă pompe de insulină sau receptoare CGM defecte, modificate sau fabricate de dumneavoastră, **nu le utilizați** pentru a crea un sistem **AAPS**.
 
-Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+În plus, este la fel de important să se utilizeze numai materiale originale, cum ar fi inseratoarele, canule și recipiente de insulină aprobate de fabricant pentru a fi utilizate cu pompa sau CGM. Utilizarea unor materiale netestate sau modificate poate cauza inexactitate CGM și erori de dozare a insulinei. Insulina este foarte periculoasă atunci când este administrată greșit - vă rugăm să nu vă jucați cu viața prin modificarea consumabilelor.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+Nu în ultimul rând, nu trebuie să luați inhibitori ai SGLT-2 (gliflozine), deoarece aceștia scad incalculabil nivelul zahărului din sânge. Asocierea cu un sistem care scade ratele bazale în scopul creșterii glicemiei este deosebit de periculoasă deoarece, datorită administrării glifozinelor, această creștere a valorii glicemiei poate să nu apară și o stare periculoasă de lipsă de insulină poate avea loc. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
-## Necessary Modules
+## Module necesare
 
-### Good individual dosage algorithm for your diabetes therapy
+### Algoritm de dozaj individual bun pentru tratamentul diabetului dumneavoastră
 
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+Chiar dacă acest lucru nu este ceva de creat sau cumpărat, acesta este "modulul”, care este probabil cel mai subestimat, dar esențial. Când permiteți unui algoritm să ajute la gestionarea diabetului, trebuie să cunoască setările corecte pentru a nu face greșeli grave. Chiar dacă încă vă lipsesc alte module, puteți deja să vă verificați și să vă adaptați **Profilul** în colaborare cu echipa dumneavoastră medicală de diabet.
 
-The **Profile** includes:
+**Profilul** include:
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin;
-- DIA (duration of insulin action).
+- RB (Rate bazale): furnizează insulină de fond;
+- ISF (factorul de sensibilitate la insulină): cât de mult va fi redus nivelul glicemiei cu 1 unitate de insulină;
+- CR (raportul carbohidraților): câte grame de carbohidrați sunt acoperite de o unitate de insulină;
+- DAI (durata acțiunii insulinei).
 
-Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Majoritatea utilizatorilor de buclă utilizează setări circadiene, rate bazale, ISF și CR, care adaptează sensibilitatea hormonală a insulinei în timpul zilei.
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+Mai multe informații despre **profilul**dumneavoastră pe [pagina dedicată](../SettingUpAaps/YourAapsProfile.md).
 
-### Phone
+### Telefon
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+Consultați pagina dedicată [telefoanelor](../Getting-Started/Phones.md).
 
 ### Pompa de insulină
 

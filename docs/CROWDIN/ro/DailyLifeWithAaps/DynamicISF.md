@@ -1,22 +1,22 @@
 (Open-APS-features-DynamicISF)=
-# Dynamic ISF (DynISF)
+# ISF dinamic (DynISF)
 
-Up until now, with **AMA** and **SMB**, **ISF** was defined in the **Profile** and was static for each defined period in the day. But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50mg/dL / 3mmol/L than compared to a lower  **BG**. [Autosens](#Open-APS-features-autosens) was the first algorithm to try and address this issue, by adjusting **ISF** outside of mealtimes.
+Până acum, cu **AMA** și **SMB**, **ISF** a fost definit în **Profil** și a fost static pentru fiecare perioadă definită din zi. Dar în realitate, valoarea **ISF** a unei persoane nu este atât de statică și variază în funcție de nivelul **glicemiei**: la un nivel ridicat de glicemie, utilizatorul va avea nevoie de mai multă insulină pentru a reduce valoarea **glicemiei** cu 50mg/dl / 3mmol/l comparativ cu o **glicemie** mai mică. [Autosens](#Open-APS-features-autosens) a fost primul algoritm care a încercat să rezolve această problemă, prin ajustarea **ISF** între mese.
 
-**Dynamic ISF** (also called **DynISF**) serves the same purpose but is more advanced as it can be used at all times. It is recommended only for advanced users that have a good handle on their **AAPS**’ controls and monitoring. Read the [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf) below before trying it out.
+**ISF dinamic** (numit și **DynISF**) servește aceluiași scop, dar este mai avansat, deoarece poate fi utilizat în orice moment. Este recomandat doar pentru utilizatorii avansați care au stăpânire bună pe controalele și monitorizarea **AAPS**. Citiți mai jos [Lucruri de luat în considerare la activarea ISF dinamic](#dyn-isf-things-to-consider-when-activating-dynamicisf) înainte de a-l încerca.
 
 ```{admonition} CAUTION - Automations or Profile Percentage change
-:class: warning
+:class: avertizare
 
-**Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
+**Automatizările** ar trebui folosite întotdeauna cu grijă. Mai ales cu **ISF dinamic**.
 
-When using **Dynamic ISF**, disable any temporary **Profile** change as an **Automation** rule, because it would cause **Dynamic ISF** to be overly aggressive in correction bolusing and result in hypoglycemia. This is the exact purpose of **Dynamic ISF** and so there is no need for **AAPS** to be told to provide additional insulin by way of Automation in the event of high **BGs**.
+Când folosiți **ISF dinamic**, dezactivați orice modificare temporară a **Profilului** ca regulă de **Automatizare****, deoarece acest lucru ar determina ca **ISF dinamic** să fie excesiv de agresiv în bolusurile de corecție și ar duce la hipoglicemie. Acesta este scopul exact al **ISF dinamic** și de aceea nu este necesar ca **AAPS** să fie informat să furnizeze insulină suplimentară prin automatizare în cazul în care sunt **glicemii** mari.
 
 ```
 
-To use **Dynamic ISF**, **AAPS'** database requires a minimum of 7 days of the user's **AAPS** data.
+Pentru a **ISF dinamic**, baza de date a **AAPS** necesită minimum 7 zile de date **AAPS** ale utilizatorului.
 
-## What does Dynamic ISF do ?
+## Ce face ISF dinamic?
 
 **Dynamic ISF** adapts the insulin sensitivity factor (**ISF**) dynamically based on the user's:
 
@@ -43,7 +43,7 @@ The **DynISF** value can also be shown in an additional graph, enabling “Varia
 
 The **Dynamic ISF** equation implemented is: `ISF = 1800 / ((TDD * DynISF Adjust Factor) * Ln (( current BG / insulin divisor) + 1 ))`
 
-The variables used in this equation are detailed below.<br/> Note : `Ln` stands for natural logarithm, a mathematical function.
+Variabilele folosite în această ecuație sunt detaliate mai jos.<br/> Notă: `Ln` reprezintă logaritm natural, o funcție matematică.
 
 The implementation uses the above equation to calculate current **ISF** and in the oref1 [predictions for **IOB**, **ZT** (zero-temping) and **UAM**](#aaps-screens-prediction-lines). It is also used for **COB** and in the bolus wizard (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
 
@@ -116,11 +116,11 @@ For example, if your **Adjustment Factor** is 80%, and **Profile Switch** to 80%
 
 This means that, when using **DynISF**, you can use **Profile Percentage** to temporarily fine tune your sensitivity manually. This can be useful for physical activity (lower percentage), illness (higher percentage), etc.
 
-### BG level below which low glucose suspend occurs
+### Nivel glicemic sub care survine suspendarea de hipoglicemie
 
 **BG** value below which insulin is suspended. Default value uses the standard target model. A user can set this value between 60mg/dl (3.3mmol/l) and 100mg/dl(5.5mmol/l). Values below 65/3.6 result in use of the default model.
 
-### Enable TDD based sensitivity ratio for basal and glucose target modification
+### Activează raportul de sensibilitate bazat pe DZt pentru modificarea bazalei și a țintei glicemice
 
 This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust **ISF** values.
 

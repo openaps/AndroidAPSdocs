@@ -199,7 +199,7 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 | Command              | Auth | Function & *Response*                                                                                 |
 | -------------------- | ---- | ----------------------------------------------------------------------------------------------------- |
-| PUMP                 | Nu   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
+| POMPĂ                | Nu   | Last conn: 1 min ago<br/>Temp: 0.00U/h @11:38 5/30min<br/>IOB: 0.5U Reserv: 34U Batt: 100 |
 | PUMP DISCONNECT *30* | Da   | To disconnect pump for *30* minutes                                                                   |
 | PUMP CONNECT         | Da   | Pompă reconectată                                                                                     |
 
@@ -228,7 +228,7 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+Bolusul de la distanță nu este permis în decurs de 15 minute (această valoare este modificabilă doar dacă se adaugă 2 numere de telefon) după ultimul bolus sau ultima comandă de la distanță! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
 
 | Command              | Auth | Function & *Response*                                                                                                        |
 | -------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -248,7 +248,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | PROFILE 1      | Da   | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
 | PROFILE 2 30   | Da   | To switch profile to Profile2 30%                                                                                                                            |
 
-### Temporary Targets
+### Ținte temporare
 
 | Command                   | Auth | Function & *Response*                     |
 | ------------------------- | ---- | ----------------------------------------- |
@@ -259,14 +259,14 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 (SMSCommands-other)=
 ### Altele
 
-| Command            | Auth | Function & *Response*                                                                                                                                                                                     |
-| ------------------ | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TREATMENTS REFRESH | Nu   | Refresh treatments from NS                                                                                                                                                                                |
-| AAPSCLIENT RESTART | Nu   | Useful if you notice a communication problem<br/>with Nightscout or **AAPSClient**                                                                                                                  |
-| RESTART            | Nu   | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                         |
-| SMS DISABLE/STOP   | Nu   | To disable the SMS Remote Service reply with code Any.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                              |
-| HELP               | Nu   | Returns all functions available for interrogation:<br/>BG, LOOP, TREATMENTS, ....<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
-| HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                      |
+| Command            | Auth | Function & *Response*                                                                                                                                                                                                                        |
+| ------------------ | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| TREATMENTS REFRESH | Nu   | Reîncărcați tratamentele din NS                                                                                                                                                                                                              |
+| AAPSCLIENT RESTART | Nu   | Useful if you notice a communication problem<br/>with Nightscout or **AAPSClient**                                                                                                                                                     |
+| RESTART            | Nu   | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                            |
+| SMS DISABLE/STOP   | Nu   | To disable the SMS Remote Service reply with code Any.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                 |
+| HELP               | Nu   | Întoarce toate funcțiile disponibile pentru interogare:<br/>BG, LOOP, TREATMENTS, ....<br/>Trimiteți mai departe comanda ***HELP ***FUNCTION****** pentru a prezenta <br/>toate opțiunile disponibile în această secțiune. |
+| HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                         |
 
 (SMSCommands-troubleshooting)=
 ## Troubleshooting and FAQ
@@ -299,12 +299,12 @@ It could be for one of these reasons:
 ### No response whatsoever for SMS commands
 
 On the caregiver phone and/or **AAPS** phone, try disabling the following options :
-* **Send as chat message** ![Disable SMS as chat message](../images/SMSdisableChat.png)
+* **Send as chat message** ![Dezactivați SMS ca mesaj de chat](../images/SMSdisableChat.png)
 * If using Android Messages App or Google Messages App, disable RCS messaging:
   - open the specific SMS conversation in Messages
   - Select the options ellipsis in the top right corner
   - select "Details"
-  - Activate "Only send SMS and MMS messages" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
+  - Activați "Trimiteți doar mesaje SMS și MMS" ![Disable RCS as chat message](../images/SMSdisableRCS.png)
 
 ### Errors carrying out commands
 
@@ -327,11 +327,11 @@ You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone its
 
 For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
 
-### Multiple SMS
+### SMS-uri multiple
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip+, for example. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
+If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. Aceasta ar putea fi xDrip+, de exemplu. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+În cazul în care cealaltă aplicație este instalată pe mai multe telefoane, asigurați-vă că dezactivați încărcarea pe toate.
 
 (sms-commands-too-many-messages)=
 ### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?

@@ -1,41 +1,41 @@
-# Juggluco settings
+# Setări Juggluco
 
-If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
+Dacă nu este deja configurat, atunci descărcați [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
 
-Follow the [instructions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) to connect your sensor.
+Urmați instrucțiunile [](https://www.juggluco.nl/Jugglucohelp/introhelp.html) pentru a conecta senzorul.
 
-## Basic settings for all CGM systems
+## Setări de bază pentru toate sistemele CGM
 
-### Disable Nightscout uploader
+### Dezactivați încărcarea în Nightscout
 
 Începând cu AAPS 3.2, nu ar trebui să lăsați nicio altă aplicație să încarce date (glicemia din sânge și tratamente) în Nightscout.
 
-Disable any active uploader to Nightscout in Juggluco.
+Dezactivați orice încărcător activ în Nightscout din Juggluco.
 
-![Disable Nightscout Upload](../images/juggluco/DisableNightscoutUpload.png)
+![Dezactivați încărcarea în Nightscout](../images/juggluco/DisableNightscoutUpload.png)
 
 (juggluco-to-aaps)=
 
-## Juggluco to AAPS
+## Juggluco în AAPS
 
-Juggluco can send blood glucose directly to AAPS, enabling SMBs always if you are using a [trusted sensor](#GettingStarted-TrustedBGSource).
+Juggluco poate trimite glicemia direct la AAPS, activând SMB întotdeauna dacă folosiți un senzor [de încredere](#GettingStarted-TrustedBGSource).
 
-When using a Libre 2/2+/3/3+ sensor, minute-by-minute readings will be sent to AAPS but will not trigger minute-by-minute calculations in AAPS.
+Atunci când se utilizează un senzor Libre 2/2+/3/3+, citirile de minut cu minut vor fi trimise la AAPS, dar nu vor declanșa calcule de la minut la minut în AAPS.
 
-Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and save the AAPS package information. Select the xDrip+ BG data source in AAPS.
+Activați transmisia xDrip în Juggluco (nu activați aplicație Libre modificată) confirmați și salvați informațiile pachetului AAPS. Selectați ca sursa de date a glicemiei xDrip+ în AAPS.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
+Aplicați suficientă [omogenizare](./SmoothingBloodGlucoseData.md) în AAPS.
 
-![Juggluco to AAPS](../images/juggluco/Juggluco-AAPS.png)
+![Juggluco în AAPS](../images/juggluco/Juggluco-AAPS.png)
 
-(juggluco-to-xdrip)=
+(juggluco-to-xdrip) =
 
-## Juggluco to xDrip+
+## Juggluco în xDrip+
 
-Juggluco can send blood glucose to xDrip+ which will then send them to AAPS.
+Juggluco poate trimite glicemia către xDrip+, care le va trimite apoi către AAPS.
 
-Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. Select the xDrip+ BG data source in AAPS.
+Activați aplicație Libre modificată în Juggluco (nu activați transmisia xDrip), confirmați și salvați informațiile pachetului dexdrip. Selectați ca sursa de date a glicemiei xDrip+ în AAPS.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary, when using a Libre 2/2+/3/3+ sensor, xDrip+ will average the minute-by-minute to 5 minutes readings and [also smoothen](#libre2-value-smoothing-raw-values) them.
+Aplicați suficientă [omogenizare](./SmoothingBloodGlucoseData.md) în AAPS, dacă este necesar, atunci când se folosește un senzor Libre 2/2+/3/3+, xDrip+ va face media citirilor din minut în minut sau a citirilor la 5 minute și [ le va omogeniza, de asemenea](#libre2-value-smoothing-raw-values).
 
-![Juggluco to xDrip+](../images/juggluco/Juggluco-xDrip+.png)
+![Juggluco în xDrip+](../images/juggluco/Juggluco-xDrip+.png)

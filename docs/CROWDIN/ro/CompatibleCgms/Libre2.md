@@ -24,7 +24,7 @@ Există motive întemeiate pentru a utiliza un transmițător Bluetooth:
 
 Observație: Transmițătorul poate fi utilizat în paralel cu aplicația LibreLink fără a interfera cu ea.
 
-### Start sensor
+### Porniți senzorul
 
 - → Meniu Hamburger (1) → Porniți senzorul (2) → Start senzor (3) → Răspuns "Nu astăzi (4)".
 

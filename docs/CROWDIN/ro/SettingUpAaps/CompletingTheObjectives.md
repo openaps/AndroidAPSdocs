@@ -1,4 +1,4 @@
-# Completing the Objectives
+# Îndeplinirea obiectivelor
 
 **AAPS** has a series of **Objectives** required to be completed to help the user progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **Objectives** aims to ensure you have:
 
@@ -8,7 +8,7 @@
 
 When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
 
-**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 to 11** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
+**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. Este nevoie de aproximativ 6 săptămâni pentru a fi finalizat. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 to 11** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
 
 As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
 
@@ -68,47 +68,47 @@ Tasks to complete **Objective 2** are:
 
 
 (objectives-objective3)=
-## Objective 3: Prove your knowledge
+## Obiectivul 3: Dovediți-vă cunoștințele
 
 **Objective 3** requires the user to pass a multiple-choice exam which is designed to test your **AAPS** knowledge.
 
 Some users find **Objective 3** to be the most difficult objective to complete. Please read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group for "Objective 3" (because it is likely that your question has been asked before - and answered by the group). These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
 
-In the meantime :
+Între timp:
 - To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+- S-ar putea să doriți să setați o limită superioară mai mare sau chiar să dezactivați bucla deschisă, noaptea.
 
-To proceed with **Objective 3**, click on the orange text “**Not completed yet**” to access the relevant question. Please read each question carefully and select your answer(s).
+To proceed with **Objective 3**, click on the orange text “**Not completed yet**” to access the relevant question. Vă rugăm să citiți cu atenție fiecare întrebare și să selectați răspunsul (răspunsurile).
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+Pentru fiecare întrebare, poate fi mai mult de un răspuns corect! Dacă este selectat un răspuns incorect, întrebarea va fi blocată timp de o oră înainte de a putea reveni și răspunde din nou la întrebare. Fiți conștient de faptul că ordinea răspunsurilor s-a schimbat când veți încerca să răspundeți, acest lucru este necesar pentru a se asigura că le-ați citit cu atenție și că înțelegeți cu adevărat validitatea (sau nu) fiecărui răspuns.
 
 ```{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
 From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other **Objectives** remain completed.
 ```
 
-## Objective 4: Starting on an open loop
+## Obiectivul 4: Pornirea cu o buclă deschisă
 
 The purpose of **Objective 4** is to recognise how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, please refer to the [**Actions** tab](#screens-action-tab).
 
-The minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
+The minimal time to complete this objective: **7 days**. Acesta este un timp de așteptare obligatoriu. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
 
 - Select Open Loop either by pressing and holding the [Loop icon](#AapsScreens-loop-status) on the top right of the **Overview** screen.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
-- Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
+- Implementați manual cel puțin 20 de sugestii de rată bazală temporară pe o perioadă de 7 zile; introduceți-le în pompa dumneavoastră (fizică) și confirmați în AAPS că le-ați acceptat. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
+- Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. După tratarea unei hipoglicemii, utilizați "ținta temporară de hipoglicemie" predefinită pentru a preveni supracorectarea sistemului la saltul înapoi al glicemiei.
 - If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
 
-To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge). Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
+To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge). Adițional, puteți modifica procentajul minim pentru modificările recomandate ale ratei bazale. Cu cât valoarea este mai mare, cu atât veți primi mai puține notificări de schimbare.
 
-![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
+![Cerere de schimbare minimală în bucla deschisă](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
-:class: Note
+:class: Nota
 
-You don't need to action each and every system recommendation!
+Nu trebuie să acționați la fiecare recomandare de sistem!
 ```
 (objectives-objective5)=
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## Obiectivul 5: Înțelegerea buclei deschise, inclusiv a recomandărilor privind bazala temporară
 
 As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
 
@@ -130,7 +130,7 @@ If you are open looping with a virtual pump **stop here**. Only click verify at 
 ![blank](../images/blank.png)
 
 (objectives-objective6)=
-## Objective 6: Starting to close the loop with Low Glucose Suspend
+## Obiectivul 6: Începerea închiderii buclei cu Suspendare la Hipoglicemie
 
 ![Warning sign](../images/sign_warning.png)
 ```{admonition}  Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
@@ -140,7 +140,7 @@ You will still need to correct high BG values by yourself (manually with correct
 
 As part of **Objective 6** you will close the loop and activate its **Low Glucose Suspend** (LGS) mode while [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero. You have to remain in LGS mode for 5 days to complete this **objective**. You should use this time to check if your **Profile** settings are accurate and LGS events are not triggered too often.
 
-Minimal time to complete this objective: **5 days**. This is a mandatory wait time. You cannot proceed to the next **Objective** before this time is up.
+Minimal time to complete this objective: **5 days**. Acesta este un timp de așteptare obligatoriu. You cannot proceed to the next **Objective** before this time is up.
 
 It is crucial that your current **Profile** (basal, ISF, IC) have been well tested before you close your loop in **LGS** mode. Incorrect **Profile** settings might force you into hypo situations which have to be treated manually. An accurate **Profile** will help reduce the need for low glucose treatments during the 5 days period.
 
@@ -167,7 +167,7 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 
 To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
 
-Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Minimal time to complete this objective: **1 day**. Acesta este un timp de așteptare obligatoriu. It is not possible to proceed to the next **Objective** until this period of time has expired.
 
 - Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen. Stay in **Closed Loop** over a period of 1 day.
 
@@ -177,7 +177,7 @@ The default recommendation for this setting is “**average meal bolus + 3x max 
 
 ![max daily basal](../images/MaxDailyBasal2.png)
 
-This recommendation should be seen as a starting point. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
+Această recomandare ar trebui considerată ca un punct de plecare. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
 * lower the "Maximum total IOB OpenAPS can’t go over" value;
 * review your **Profile** settings, only making one adjustment at a time.
 
@@ -190,7 +190,7 @@ Once confident on how much **maxIOB** suits your looping patterns, lower your **
 
 As part of this **objective**, you will revisit your **Profile**'s performance and will use [Autosens](#Open-APS-features-autosens) functionality as an indicator for wrong settings.
 
-Minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
+Minimal time to complete this objective: **7 days**. Acesta este un timp de așteptare obligatoriu. It is not possible to proceed to the next **Objective** until this period of time has expired.
 
 Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
 
@@ -199,22 +199,22 @@ This is a good time to review your settings for [Sensitivity Detection](../Setti
 Additionally, you can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
 
 (objectives-objective9)=
-## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+## Obiectivul 9: Facilitarea unor elemente suplimentare de oref1 pentru utilizarea în timpul zilei, cum ar fi super micro bolusul (SMB)
 
 In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Minimal time to complete this objective: **28 days**. Acesta este un timp de așteptare obligatoriu. You can’t proceed to the next Objective before this time is up.
 
 - The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
 - Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference.
 - Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Preferences > Absorption settings > min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
 
 (objectives-objective10)=
-## Objective 10: Automation
+## Obiectivul 10: Automatizare
 
 **Automations** become available when **Objective 10** is started.
 
-Minimal time to complete this objective: **28 days**. This is a mandatory wait time. You can’t proceed to the next Objective before this time is up.
+Minimal time to complete this objective: **28 days**. Acesta este un timp de așteptare obligatoriu. You can’t proceed to the next Objective before this time is up.
 
 Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
 
@@ -237,8 +237,8 @@ You can then experiment with setting up a more useful **Automation**. The docume
 For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
 
 (CompletingTheObjectives-go-back-in-objectives)=
-## Go back in objectives
+## Mergeți înapoi la obiective
 
 If you wish to go back in the **Objectives** for whatever reason you can do so by clicking at "clear finished".
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+![Mergeți înapoi la obiective](../images/Objective_ClearFinished.png)

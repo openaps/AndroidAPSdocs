@@ -1,4 +1,4 @@
-# Building AAPS
+# Construire AAPS
 
 ## Construiți-vă în loc să descărcați
 
@@ -12,17 +12,17 @@ Three methods are available to build the AAPS app:
 
 ### Build with a browser (recommended)
 
-You can build the app with your smartphone using GitHub actions, and save it in your Google Drive.
+Poți construi aplicația cu telefonul dumneavoastră inteligent folosind acțiuni GitHub și să o salvați în Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
+**[Urmați aceste instrucțiuni.](./BrowserBuild.md)**
 
 ----
 
 ### Build with Android Studio
 
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
+Puteți construi aplicația cu calculatorul dumneavoastră folosind Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
 
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Urmați aceste instrucțiuni.](./ComputerBuild.md)**
 
 ----
 
@@ -30,4 +30,4 @@ You can build the app with your computer using Android Studio. This used to be t
 
 This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Urmați aceste instrucțiuni.](./CLIBuild.md)**

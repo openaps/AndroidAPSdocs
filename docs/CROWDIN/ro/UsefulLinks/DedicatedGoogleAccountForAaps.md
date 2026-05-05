@@ -1,4 +1,4 @@
-# A dedicated Google account for AAPS (optional)
+# Un cont Google special pentru AAPS (opțional)
 
 Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
 
@@ -15,15 +15,15 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 - Gmail allows you to register up to 4 accounts under the same phone number.
 ```
 
-## How to set up a dedicated Google account for AAPS
+## Cum se configurează un cont Google dedicat AAPS
 
-(⌛About 10 minutes)
+(⌛Aproximativ 10 minute)
 
 ![](../images/Building-the-App/building_0001.png)
 
-Requirements:
+Cerințe:
 
-* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
+* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. Ambele au toate cele mai recente actualizări de securitate, acces la internet și privilegii de administrator, deoarece unii pași necesită descărcarea și instalarea de programe.
 * The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
 
 ```{admonition} Things to consider when setting up your new account
@@ -42,7 +42,7 @@ Requirements:
 Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
 ```
 
- These are the steps outlined in the video:
+ Aceștia sunt pașii evidențiați în videoclip:
 
 In this example: 
 - Your existing “_Everyday_” Google account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
@@ -59,14 +59,14 @@ In this example: 
 ### Enter your NEW dedicated account details: 
 
 - Enter the new account: 
-- Create Account
+- Creați cont
 - for my personal use. 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Introduceți persoana dumneavoastră:
+ - Introduceți prenumele
+ - nume
+ - Data nașterii (trebuie să fie o vârstă de adult)
 
 ### Choose your NEW email address & password
 
@@ -75,33 +75,33 @@ Set a password
 
 ### Enter a phone number which can receive the SMS verification
 
-Gmail will now send you a unique code to enter for validation.
+Gmail vă va trimite acum un cod unic de introdus pentru validare.
 
 ### Enter the recovery email address
 
 In this case it will be your existing “_everyday_” email…
 
-### Finish setting up the account
+### Finalizați configurarea contului
 
-Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail va afișa numele contului. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
 
-### Customize the new profile display
+### Personalizați afișarea noului profil
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
+At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. Imaginea de profil va fi setată în mod implicit la prima literă a numelui dumneavoastră. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Deschideți site-ul Gmail pe ambele ferestre pentru a configura noul cont
 
 So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account\
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
+This part can be a bit confusing, since you will have to switch back and forth between both accounts. Pentru a ușura demersul, deschideți 2 ferestre separate ale browserului unul peste celălalt:
 
 1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen…
 2. Right click on your Browser logo in your taskbar
 3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
 
-Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Open <https://gmail.com> in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (dacă este necesar, puteți schimba întotdeauna conturile prin apăsarea pe imaginea de profil și selectarea celui corect.
 
 ![](../images/Building-the-App/building_0009.png)
 
@@ -115,33 +115,33 @@ Your Gmail homepages screen should look like this:\
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Setați redirecționarea…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
+- Apăsați pe fila de configurare "Redirecționare și POP/IMAP"
+- Apăsați pe “adăugați o adresă de redirecționare”
+- Adăugați adresa dumneavoastră de e-mail "de zi cu zi"
 - Gmail will send a verification code to your “everyday” email address.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Veți trece înapoi la profilul dumneavoastră zilnic și veți apăsa pe link pentru a verifica dacă acceptați redirecționarea (sau veți primi codul de la e-mailul de verificare Gmail în fereastra Gmail "de zi cu zi" și veți copia și lipi codul în fereastra Gmail "dedicată AAPS").
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Există un destul de mare dute-vino între ferestre, însă acest lucru va asigura faptul că, atunci când vă verificați e-mailurile din contul „de zi cu zi”, veți vedea și e-mailurile redirecționate de pe contul dedicat AAPS, cum ar fi alertele Gmail.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Verificați adresa de e-mail redirecționată
 
 - In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email.
-- Open it and “click the link to confirm the request”
+- Deschideți-l și “apăsați pe link pentru a confirma cererea”
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Arhivați e-mailurile redirecționate în noul cont dedicat Gmail (fereastra de jos)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
+1. Reîmprospătați fereastra de jos
+2. Bifați "redirecționați mailurile care vin"
+3. Și arhivați copia Gmail (pentru a păstra noua cutie poștală dedicată curată)
 4. Scroll all the way to the bottom to save your changes\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Felicitări! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
+Felicitări! Acum ați creat un cont Google dedicat AAPS. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).

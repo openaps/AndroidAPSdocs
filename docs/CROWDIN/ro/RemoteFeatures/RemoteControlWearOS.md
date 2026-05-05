@@ -234,15 +234,15 @@ Panoul AsistentRapid poate ține 1 până la 4 butoane de acțiune rapide, defin
 
 ## Întotdeauna pornit
 
-Durata lungă de viață a bateriei pentru ceasurile inteligente Android Wear OS reprezintă o provocare. Unele ceasuri inteligente pot ajunge până la 30 de ore înainte de reîncărcare. Afișajul ar trebui să fie oprit pentru o economisire optimă a energiei atunci când nu este utilizat. Cele mai multe ceasuri inteligente acceptă afișajul „Întotdeauna pornit".
+Durata lungă de viață a bateriei pentru ceasurile inteligente Android Wear OS reprezintă o provocare. Unele ceasuri inteligente pot ajunge până la 30 de ore înainte de reîncărcare. Afișajul ar trebui să fie oprit pentru o economisire optimă a energiei atunci când nu este utilizat. Cele mai multe ceasuri inteligente acceptă afișajul "Întotdeauna pornit".
 
-De la versiunea 3 AAPS, putem folosi o "Interfață Simplificată" în modul „Întotdeauna pornit". Această interfață conține numai glicemia, direcția și timpul. Această interfață este optimizată din punctul de vedere al bateriei prin actualizări mai puțin frecvente, afișarea a mai puțină informație și iluminarea a mai puțini pixeli pentru a economisi energie pe ecranele OLED.
+De la versiunea 3 AAPS, putem folosi o "Interfață Simplificată" în modul "Întotdeauna pornit". Această interfață conține numai glicemia, direcția și timpul. Această interfață este optimizată din punctul de vedere al bateriei prin actualizări mai puțin frecvente, afișarea a mai puțină informație și iluminarea a mai puțini pixeli pentru a economisi energie pe ecranele OLED.
 
 Modul de interfață simplificat este disponibil pentru fețele de ceas: AAPS, AAPS V2, Home Big, Digital Style, Steampunk și Cockpit. Interfața simplificată este opțională și este configurată prin intermediul setărilor feței ceasului. (apăsați prelung fața ceasului și apăsați pe butonul "editare" sau pe icoana roata dințată) Selectați configurația "Interfață simplificată" și setați la "Mereu pornit" sau "Întotdeauna pornit și la încărcare".
 
 ### Modul de noapte
 
-În timpul încărcării, ar fi util ca afișajul să rămână „permanent pornit" și să arate glicemia în timpul nopții. Cu toate acestea, fețele standard de ceas sunt prea luminoase și au prea multe informații, iar detaliile sunt greu de citit cu ochii somnolenți. Prin urmare, am adăugat o opțiune pentru ca interfața de ceas să simplifice interfața doar în timpul încărcării atunci când este stabilită în configurație.
+În timpul încărcării, ar fi util ca afișajul să rămână "permanent pornit" și să arate glicemia în timpul nopții. Cu toate acestea, fețele standard de ceas sunt prea luminoase și au prea multe informații, iar detaliile sunt greu de citit cu ochii somnolenți. Prin urmare, am adăugat o opțiune pentru ca interfața de ceas să simplifice interfața doar în timpul încărcării atunci când este stabilită în configurație.
 
 Modul de interfață simplificat este disponibil pentru fețele de ceas: AAPS, AAPS V2, Home Big, Digital Style, Steampunk și Cockpit. Interfața simplificată este opțională și este configurată prin intermediul setărilor feței ceasului. (apăsați prelung fața ceasului și apăsați pe butonul "editare" sau pe icoana roata dințată) Selectați configurația "Interfață simplificată" și setați la "În timpul încărcării" sau "Întotdeauna pornit și la încărcare"
 
@@ -286,7 +286,7 @@ Deoarece nu putem face compromisuri în comunicare (avem nevoie de date actualiz
 * Verificați ce funcționează mai bine pe ceas: fața standard de ceas sau alte fețe cu complicații AAPS.
 * Observați timp de câteva zile, cu diferite profiluri de activitate. Cele mai multe ceasuri activează afișarea la ridicarea încheieturii, mișcare și alți declanșatori legați de utilizare.
 * Verificați setările globale ale sistemului care afectează performanța: notificările, luminozitatea/timpul de expirare al ecranului activ, când este activat GPS-ul.
-* Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
+* Verificați [lista de telefoane și ceasuri testate](#Phones-list-of-tested-phones) și [cereți comunității](../GettingHelp/WhereCanIGetHelp.md) exemple de experiențe ale utilizatorilor și durata de viață semnalată a bateriei.
 * **Nu putem garanta că datele afișate pe fața de ceas sau pe complicații sunt actuale**. În cele din urmă, depinde de Wear OS să decidă când actualizează fața de ceas sau complicațiile. Chiar și atunci când aplicația AAPS solicită actualizarea, Sistemul poate decide să amâne sau să ignore actualizările pentru a economisi bateria. Când aveți dubii și bateria ceasului este scăzută - verificați întotdeauna cu aplicația principală AAPS de pe telefon.
 
 (Watchfaces-troubleshooting-the-wear-app)=
@@ -296,12 +296,12 @@ Deoarece nu putem face compromisuri în comunicare (avem nevoie de date actualiz
 * Activați ADB debugging în Opțiuni Dezvoltator (de pe ceas), conectați ceasul prin intermediul unui USB și porniți aplicația de ceas cel puțin o dată în Android Studio.
 * Dacă complicațiile nu actualizează datele - verificați mai întâi dacă fețele de ceas AAPS funcționează.
 
-## Additional AAPS custom watchfaces are also available
+## De asemenea, sunt disponibile și alte fețe de ceas personalizate AAPS
 
-[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+[Aici](../ExchangeSiteCustomWatchfaces/index.md) puteți descărca fișierele Zip cu fețe de ceas personalizate făcute de către alți utilizatori.
 
-## Build your own watchface
+## Construiți-vă propria față de ceas
 
-If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+Dacă doriți să vă construiți propria față de ceas, urmați [ ghidul de aici](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
 
-Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+Odată ce ați construit o față de ceas personalizată, puteți partaja propria dumneavoastră față de ceas **AAPS** personalizată cu alții, fișierul zip poate fi încărcat în dosarul "ExchangeSiteCustomWatchfaces" printr-o comandă Pull Request în Github. În timpul îmbinării cererii de tragere, echipa de documentare va extrage fișierul CustomWatchface.png și îl va prefixa cu numele fișierului Zip.

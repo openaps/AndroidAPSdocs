@@ -86,7 +86,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
-![Set master password](../images/MasterPW.png)
+![Setați parola principală](../images/MasterPW.png)
 
 ### Protecție setări
 
@@ -124,12 +124,12 @@ In the **Overview** section, you can define the preferences for the home screen.
 
 ### Mențineți ecranul aprins
 
-Opțiunea „Păstrați ecranul aprins” va forța Android să mențină ecranul aprins în orice moment. Acest lucru este folositor pentru prezentări șamd. Dar consumă repede bateria. Therefore, it is recommended to connect the smartphone to a charger cable.
+Opțiunea „Păstrați ecranul aprins” va forța Android să mențină ecranul aprins în orice moment. Acest lucru este folositor pentru prezentări șamd. Dar consumă repede bateria. Ca urmare e recomandabil sa conectați telefonul inteligent la un încărcător.
 
 (Preferences-buttons)=
 ### Butoane
 
-- Define which buttons are visible on the bottom of your home screen.
+- Definiți ce butoane să fie vizibile în partea de jos a ecranului principal.
 - Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![Preferințe > Butoane](../images/Pref2020_OV_Buttons.png)
@@ -286,14 +286,14 @@ Use with caution and do not enable it until you learn what it really does. Pract
 ### Max allowed bolus
 
 - Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
+- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni administrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
 - Este recomandat să stabiliți această valoare la o cantitate de bun simț, care corespunde în linii mari cu maximul de bolus de insulină pe care l-ați putea face la o masă sau ca pe o corecție în mod obișnuit.
 - Restricția este, de asemenea, aplicată și rezultatele calculatorului de bolus.
 
 ### Max allowed carbs
 
 - Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
+- Această setare are rațiunea de a fi o limită de siguranță pentru a preveni administrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului.
 - Se recomandă să stabiliți această setare la o valoare de bun simț, care să corespundă, în linii mari, cantității maxime de carbohidrați pe care ați putea-o ingera la o masă.
 
 ## Buclă

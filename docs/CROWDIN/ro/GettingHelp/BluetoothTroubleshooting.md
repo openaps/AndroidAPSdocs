@@ -148,4 +148,4 @@ Only enable the **Bond BT device on Android 15+** option on Android 15, and only
 
 3. If the pump asks for a pairing request, accept it.
 
-4. Restart your phone.
+4. Reporniți telefonul.

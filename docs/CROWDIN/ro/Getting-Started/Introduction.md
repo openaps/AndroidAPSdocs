@@ -1,20 +1,20 @@
-# Introduction to APS and AAPS
+# Introducere în APS și AAPS
 
-## What is an “Artificial Pancreas System”?
+## Ce este un sistem de pancreas artificial?
 
-A human pancreas does a lot of things besides regulating blood sugar. However, the term **“Artificial Pancreas System” (APS)** usually refers to a system which works to automatically keep blood sugar levels within healthy limits.
+Un pancreas uman face multe alte lucruri în afară de reglarea glicemiei. Cu toate acestea, termenul **"Sistem artificial de pancreas" (APS)** se referă de obicei la un sistem care acționează pentru a menține automat nivelul zahărului din sânge în limite sănătoase.
 
-The most basic way to do this is by detecting **glucose levels**, using these values to do **calculations**, and then delivering the (predicted) right amount of **insulin** to the body. It repeats the calculation, every few minutes, 24/7. It uses **alarms** and **alerts** to inform the user if intervention or attention is needed. This system is typically made up of a **glucose sensor**, an **insulin pump** and an **app** on a phone.
+Cea mai simplă metodă de a face asta este prin detectarea **nivelurilor glicemiei**, folosirea acestor valori pentru **calcule**, și apoi administrarea cantității corecte (prezise) de **insulină** corpului. Calculul se repetă, la fiecare câteva minute, timp de 24/7. Folosiți **alarme** și **alerte** pentru a informa utilizatorul dacă este nevoie de intervenție sau atenție. Sistemul este compus de obicei dintr-un **senzor de glicemie**, o **pompă de insulină** și de către o **aplicație** pe un telefon.
 
-You can read more about the different artificial pancreas systems currently in use and in development in this 2022 review article:
+Puteți citi mai multe despre diferitele sisteme de pancreas artificial utilizate în prezent și care se află în dezvoltare în acest articol de recenzare din 2022:
 
-![Frontiers](../images/FRONTIERS_Logo_Grey_RGB.png) [Future Directions in Closed-Loop Technology](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses).
+![Frontiers](../images/FRONTIERS_Logo_Grey_RGB.png) [Direcții viitoare în tehnologia buclă-închisă](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses).
 
-In the near future, some so-called "dual-hormone" systems will also have the ability to infuse glucagon alongside insulin, with the aim of preventing severe hypos and allowing even tighter blood glucose control.
+În viitorul apropiat, unele dintre așa-numitele sisteme "hormonale duale" vor avea, de asemenea, capacitatea de a administra glucagon împreună cu insulină, cu scopul de a preveni hipoglicemii severe și de a permite un control și mai strict al glicemiei.
 
-An artificial pancreas can be thought of as an [“autopilot for your diabetes”](https://www.artificialpancreasbook.com/). What does that mean?
+Putem să ne gândim la un pancreas artificial ca la un ["autopilot pentru diabetul dumneavoastră"](https://www.artificialpancreasbook.com/). Ce înseamnă acest lucru?
 
-In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of permanently monitoring the aircraft, allowing the pilot to concentrate on wider monitoring from time to time. Autopilotul primește semnale de la diferiți senzori The pilot no longer has to worry about constantly making decisions.
+Într-o aeronavă, autopilotul nu poate face treaba completă a pilotului uman, pilotul nu poate dormi pe durata întregului zbor. Autopilotul ajută în munca pilotului. Îi scutește de povara monitorizării permanente a aeronavei, îi permite pilotului să se concentreze asupra unei monitorizări mai ample din când în când. Autopilotul primește semnale de la diferiți senzori The pilot no longer has to worry about constantly making decisions.
 
 ![imagine](../images/autopilot.png)
 
@@ -121,24 +121,24 @@ Multiple daily injections (MDI, (a) in **Figure 2** below) usually involve givin
 As of June 25 2023, there are four major open source closed loop systems available: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [Trio](https://triodocs.org), (formerly FreeAPS X). The features of the different systems are shown in the table below:
 
 
-| Devicestype | Name                                                                | [AAPS](https://wiki.aaps.app)             | [Buclă](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [Trio](https://triodocs.org)              |
+| Devicestype | Nume                                                                | [AAPS](https://wiki.aaps.app)             | [Buclă](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [Trio](https://triodocs.org)              |
 | ----------- | ------------------------------------------------------------------- | ----------------------------------------- | -------------------------------------------- | ----------------------------------------------------- | ----------------------------------------- |
-| Phone       | Android                                                             | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| Phone       | iPhone                                                              | ![unavailable](../images/unavailable.png) | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
+| Telefon     | Android                                                             | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
+| Telefon     | iPhone                                                              | ![unavailable](../images/unavailable.png) | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
 | Rig         | tiny computer (1)                                                   | ![unavailable](../images/unavailable.png) | ![unavailable](../images/unavailable.png)    | ![available](../images/available.png)                 | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Dana I](../CompatiblePumps/DanaRS-Insulin-Pump.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)                | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)                  | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Medtrum TouchCare Nano](../CompatiblePumps/MedtrumNano.md)         | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Medtrum TouchCare 300U](../CompatiblePumps/MedtrumNano.md)         | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
-| PUMP        | [Roche Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)        | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Roche Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
-| PUMP        | [Older Medtronic](../CompatiblePumps/MedtronicPump.md)              | ![available](../images/available.png)     | ![available](../images/available.png)        | ![available](../images/available.png)                 | ![available](../images/available.png)     |
-| PUMP        | [Equil 5.3](../CompatiblePumps/Equil5.3.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
+| POMPĂ       | [Dana I](../CompatiblePumps/DanaRS-Insulin-Pump.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
+| POMPĂ       | [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)                | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
+| POMPĂ       | [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)                  | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
+| POMPĂ       | [Omnipod (Dash)](../CompatiblePumps/OmnipodDASH.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
+| POMPĂ       | [Omnipod (Eros)](../CompatiblePumps/OmnipodEros.md)                 | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
+| POMPĂ       | [Diaconn G8](../CompatiblePumps/DiaconnG8.md)                       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
+| POMPĂ       | [EOPatch 2](../CompatiblePumps/EOPatch2.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
+| POMPĂ       | [Medtrum TouchCare Nano](../CompatiblePumps/MedtrumNano.md)         | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
+| POMPĂ       | [Medtrum TouchCare 300U](../CompatiblePumps/MedtrumNano.md)         | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
+| POMPĂ       | [Roche Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)        | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
+| POMPĂ       | [Roche Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)       | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
+| POMPĂ       | [Older Medtronic](../CompatiblePumps/MedtronicPump.md)              | ![available](../images/available.png)     | ![available](../images/available.png)        | ![available](../images/available.png)                 | ![available](../images/available.png)     |
+| POMPĂ       | [Equil 5.3](../CompatiblePumps/Equil5.3.md)                         | ![available](../images/available.png)     | ![unavailable](../images/unavailable.png)    | ![unavailable](../images/unavailable.png)             | ![unavailable](../images/unavailable.png) |
 | CGM         | [Dexcom G7/One+/Stelo](../CompatibleCgms/DexcomG7.md)               | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
 | CGM         | [Dexcom One](../CompatibleCgms/DexcomG6.md)                         | ![available](../images/available.png)     | ![available](../images/available.png)        | ![unavailable](../images/unavailable.png)             | ![available](../images/available.png)     |
 | CGM         | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                          | ![available](../images/available.png)     | ![available](../images/available.png)        | ![available](../images/available.png)                 | ![available](../images/available.png)     |
@@ -194,9 +194,9 @@ A rapid reduction in HbA1c and improved blood glucose control sounds appealing. 
 
 #### Medical safety around devices, consumable supplies and other medications
 
-Use a tested, fully functioning FDA or CE approved insulin pump and CGM for an artificial pancreas loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, do not use these for creating an AAPS system.
+Use a tested, fully functioning FDA or CE approved insulin pump and CGM for an artificial pancreas loop. Modificările hardware sau software ale acestor componente pot cauza dozări neașteptate de insulină, ce provoacă riscuri semnificative pentru utilizator. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, do not use these for creating an AAPS system.
 
-Use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer of your pump and CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking your supplies.
+Use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer of your pump and CGM. Utilizarea unor materiale netestate sau modificate poate cauza inexactitate CGM și erori de dozare a insulinei. Insulin is highly dangerous when misdosed - please do not play with your life by hacking your supplies.
 
 Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](#preparing-safety-first).
 
@@ -285,7 +285,7 @@ The developers of **AAPS** take safety incredibly seriously, and want others to 
 
 - updates to newer master versions as and when they become available; and
 
-- maintains and monitors the system to ensure it is working properly.
+- să mențină și monitorizeze sistemul pentru a se asigura că funcționează corect.
 
 ## What is the connectivity of the AAPS system?
 
@@ -343,7 +343,7 @@ Then open “Use computer without a display” with Enter.
 
 Under hear text read aloud select "turn on narrator" and "turn on audio display", and click "apply"
 
-or:
+sau:
 
 2) Press Windows key and enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
 

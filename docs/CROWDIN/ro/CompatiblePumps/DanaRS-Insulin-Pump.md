@@ -37,7 +37,7 @@
     * Pentru DanaRS v3 trebuie să tastați 2 secvențe de numere și litere afișate pe pompă în dialogul de asociere AAPS.
     * Pentru Dana-i dialogul de asociere Android standard apare și trebuie să introduceți un număr format din 6 cifre afișat în pompă.
 
-* Selectați Viteză Bolus pentru a schimba valoarea implicită de livrare a unui bolus (12 secunde per unitate, 30 secunde per unitate sau 60 de secunde pentru livrarea unei unități de insulină).
+* Selectați Viteză Bolus pentru a schimba valoarea implicită de livrare a unui bolus (12 secunde per unitate, 30 secunde per unitate sau 60 de secunde pentru administrarea unei unități de insulină).
 
 * Stabiliți pasul bazalei în pompă la 0,01 U/h prin intermediul meniului de doctor (vedeți manualul de utilizare al pompei).
 * Stabiliți pasul bazalei în pompă la 0,05 U/oră prin intermediul meniului de doctor (vedeți manualul de utilizare al pompei).
@@ -47,7 +47,7 @@
 
 ### Parola implicită
 
-* Pentru DanaRS cu firmware v1 şi v2 parola implicită este 1234.
+* Pentru DanaRS cu firmware v1 și v2 parola implicită este 1234.
 * Pentru DanaRS cu firmware v3 sau Dana-i parola implicită este derivată din data de fabricație și se calculează ca LLZZ unde LL este luna și ZZ este ziua, pompa a fost produsă (ex "0124" reprezentând luna 01 și ziua 24).
     
     * Din MENU PRINCIPAL selectați REVIZUIRE și deschideți INFORMAȚII DE LIVRARE din sub-meniu
@@ -58,7 +58,7 @@
 
 ## Schimbă parola pe pompă
 
-* Apăsaţi butonul OK pe pompă
+* Apăsați butonul OK pe pompă
 * În meniul principal selectați "OPȚIUNE" (mută spre dreapta prin apăsarea butonului săgeată de mai multe ori)
     
     ![Meniu principal DanaRS](../images/DanaRSPW_01_MainMenu.png)
@@ -71,19 +71,19 @@
     
     ![DanaRS 11. Parolă](../images/DanaRSPW_03_11PW.png)
 
-* Apăsaţi OK pentru a introduce parola veche.
+* Apăsați OK pentru a introduce parola veche.
 
 * Introduceți **parola veche** (Parolă implicită vedeți [mai sus](#DanaRS-Insulin-Pump-default-password)) și apăsați OK
     
-    ![DanaRS Introduceţi parola veche](../images/DanaRSPW_04_11PWenter.png)
+    ![DanaRS Introduceți parola veche](../images/DanaRSPW_04_11PWenter.png)
 
-* Dacă este introdusă o parolă greşită aici nu va exista nici un mesaj care să indice greșeala!
+* Dacă este introdusă o parolă greșită aici nu va exista nici un mesaj care să indice greșeala!
 
 * Setează **noua parolă** (Schimbă numerele cu + & - butoane / Mută la dreapta cu butonul săgeată).
     
     ![Parola nouă DanaRS](../images/DanaRSPW_05_PWnew.png)
 
-* Confirmaţi cu butonul OK.
+* Confirmați cu butonul OK.
 
 * Apăsați OK pentru a salva setările.
     
@@ -118,7 +118,7 @@ Când treceți la un telefon nou, sunt necesari următorii pași:
 ### DanaRS v1
 
 * **Asociați manual** Dana RS cu noul telefon
-* Deoarece setările pompei sunt, de asemenea, importate AAPS de pe noul telefon deja va „știi” pompa și, prin urmare, nu va începe o scanare Bluetooth. Prin urmare, telefonul nou și pompa trebuie asociate manual.
+* Deoarece setările pompei sunt, de asemenea, importate AAPS de pe noul telefon deja va "știi" pompa și, prin urmare, nu va începe o scanare Bluetooth. Prin urmare, telefonul nou și pompa trebuie asociate manual.
 * Instalați AAPS pe noul telefon.
 * [Importați setările](../Maintenance/ExportImportSettings.md) pe telefonul dumneavoastră nou
 

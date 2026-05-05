@@ -4,15 +4,15 @@ After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**
 
 There are three routes to change AAPS’ configuration. As to which route you take, it is simply a matter of convenience or personal preference as each route leads to the same configuration settings.
 
-These are as follows:
+Acestea sunt următoarele:
 
-1. Config builder,
+1. Configurator,
 1. Three dot menu on the right and select "Preferences" or
 1. Three dot menu on the right and select "Plugin preferences".
 
-Here we explain which option is most convenient for each situation:
+Aici se explică care opțiune este cea mai convenabilă pentru fiecare situație:
 
-## Config builder
+## Configurator
 
 ![Open Config Builder](../images/ConfBuild_Open_AAPS30.png)
 
@@ -32,12 +32,12 @@ This is a good route if you are not really sure where to look for a configuratio
 
 The documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
 
-## Plugin preferences
+## Preferințe modul
 
 ![Deschideți preferințele modulului](../images/Pref2020_OpenPlugin2.png)
 
 The **plugin preferences** dialogue can be reached via the top right _three dots_ menu on the home screen of **AAPS**. It allows to change the configuration of the **plugin currently on screen**.
 
-For example, this is a good route if you know that you want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the _three dots_ menu and then the "plugin preferences" entry. You are taken directly to the preferences dialogue specifically for the BYODA plugin.
+For example, this is a good route if you know that you want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the _three dots_ menu and then the "plugin preferences" entry. Sunteți dus direct la dialogul de preferințe în mod specific pentru modulul BYODA.
 
 This is a "shortcut" to the general preferences dialogue, the documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).

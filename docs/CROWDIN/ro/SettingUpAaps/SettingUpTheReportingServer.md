@@ -1,6 +1,6 @@
-# Setting up the Reporting Server
+# Configurarea serverului de raportare
 
-There are currently two reporting servers available for use with **AAPS**:
+Momentan există două servere de raportare disponibile pentru a fi utilizate cu **AAPS**:
 
 - [Nightscout](https://nightscout.github.io/)
 - [Tidepool](https://www.tidepool.org/)
@@ -12,17 +12,17 @@ We recommend using Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout is a web application that can log and display your CGM data and **AAPS** data and creates reports. It is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
+Nightscout este o aplicație web care vă poate înregistra și afișa datele CGM și **AAPS** și creează rapoarte. Este o platformă puternică care este integrată în **AAPS** de mulți ani. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). De asemenea, permite aparținătorilor să trimită comenzi de la distanță la **AAPS**.
 
 Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
 
-You can find more information on the [website of the Nightscout project](http://nightscout.github.io/).
+Mai multe informații sunt disponibile pe site-ul [proiectului Nightscout](http://nightscout.github.io/).
 
 ### Option 1 - Set up your Nightscout server yourself
 
 Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+O descriere a modului în care puteți configura Nightscout cu avantajele și dezavantajele diferitelor opțiuni de operare, inclusiv o estimare a costurilor, se poate găsi [aici](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
 ### Option 2 - Pay for a hosted Nightscout service
 
@@ -31,7 +31,7 @@ There are also options from different service providers who host Nightscout for 
 
 Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Unele servicii de găzduire de Nightscout sunt prezentate [aici](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
 ### Further configuration of Nightscout
 

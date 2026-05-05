@@ -292,7 +292,7 @@ De obicei, curba reală a glicemiei ajunge în mijlocul acestor linii, sau aproa
 
 #### Bazale
 
-Linia **albastru solid** afișează livrarea bazală a pompei și reflectă livrarea efectivă de-a lungul timpului.
+Linia **albastru solid** afișează administrarea bazală a pompei și reflectă administrarea efectivă de-a lungul timpului.
 
 Linia **albastră punctată** afișează cum ar fi rata bazală dacă nu ar exista ajustări temporare ale bazalei (RBT).
 
@@ -349,7 +349,7 @@ Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
 
 Sensibilitatea este un calcul al sensibilității la insulină ca rezultat al exercițiilor fizice, hormonilor șamd.
 
-Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină livrată. Before reaching that objective, the line in your graph is displayed for information only.
+Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină administrată. Before reaching that objective, the line in your graph is displayed for information only.
 
 ### Sensibilitate variabilă
 
@@ -777,7 +777,7 @@ This view can be accessed by pressing the 3 dots on the right of the menu, then 
 
 Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
 
-## Statistics
+## Statistici
 
 This view can be accessed by pressing the 3 dots on the right of the menu, then Statistics. It is not possible to put in the main menu through the Config Builder.
 
@@ -790,4 +790,4 @@ Gives you statistics about your Time In Range and Total Daily Dose. See the dedi
 This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The Profile Helper can help you:
 
 * [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
-* [compare two profiles](#your-aaps-profile-compare-profiles)
+* [comparați două profiluri](#your-aaps-profile-compare-profiles)

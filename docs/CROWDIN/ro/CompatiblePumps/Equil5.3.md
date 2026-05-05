@@ -1,29 +1,29 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Aceste instrucțiuni sunt pentru configurarea pompei de insulină Equil.
 
-## Pump capabilities with AAPS
+## Capacități pompă cu AAPS
 
 §todo
 
 ## Cerințe hardware și software
-* **Compatible Equil hardware**
+* **Echipament compatibil Equil**
 
-  Currently Equil 5.3 and 5.4 is supported
+  În prezent Equil 5.3 și 5.4 sunt acceptate
 
-* [Version 3.3.0.0](#version3300) or newer of AAPS
+* [Versiunea 3.3.0.0](#version3300) sau mai nouă de AAPS
 
-### Select Equil pump
+### Selectați pompa Equil
 
-In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
+În [Configurator > Pompa](#Config-Builder-pump), treceți la **Equil 5.3**.
 
 ### Setări
 
 ![settings.png](../images/Equil/settings.png)
 
-### Activate patch
+### Activați plasturele
 
-Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
+Navigați spre fila Equil și apăsați **Asociați plasturele Equil **.
 
 ![overview.png](../images/Equil/overview.png)
 
@@ -33,4 +33,4 @@ Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
 
 ![activate3.png](../images/Equil/activate3.png)
 
-If you set different password than default 0000 (recommended for your safety), do not forget to store this password on a safe place. This password is stored to the pump. Then this password is asked on every next pairing attempt until you do proper unpairing in AAPS. This makes the pump also unusable with original PDA until you unpair pump from AAPS.
+Dacă setați o parolă diferită de cea implicită 0000 (recomandat pentru siguranța dumneavoastră), nu uitați să păstrați această parolă într-un loc sigur. Această parolă este stocată în pompă. Apoi această parolă va fi cerută la fiecare următoare încercare de asociere până când veți face o deconectare corespunzătoare în AAPS. Acest lucru face ca pompa să fie de asemenea inutilizabilă cu telecomanda originală, până când anulați asocierea pompei din AAPS.

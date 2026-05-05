@@ -20,35 +20,35 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 :class: note
 If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Mesaj de întâmpinare
 
-This is just the welcome message which you can skip with the "NEXT" button:
+Acesta este doar mesajul de bun venit pe care îl puteți sări cu butonul "URMĂTORUL":
 
-![Welcome](../images/setup-wizard/Wizard01.png)
+![Bine ați venit](../images/setup-wizard/Wizard01.png)
 
-## License agreement
+## Acord de licențiere
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+In the end user license agreement there is important information about the legal aspects of using **AAPS**. Vă rugăm să o citiți cu atenție.
 
 If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
 
-If you understand and agree, please click the "I UNDERSTAND AND AGREE" button and follow the Setup Wizard:
+Dacă înțelegeți și sunteți de acord, vă rugăm să apăsați pe butonul "ÎNȚELEG ȘI SUNT DE ACORD" și să urmați ghidul de configurare:
 
 ![EULA](../images/setup-wizard/Wizard02.png)
 
-## Required permissions
+## Permisiunile necesare
 
 **AAPS** needs some requirements to operate correctly.
 
-In the following screen you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
+In the following screen you are asked several questions you have to agree to, to get **AAPS** working. Asistentul în sine explică de ce solicită setările relevante.
 
-In this screen, we aim to give some more background information, translate more technical speak into common language or explain the reason. Continue reading below to see each permission request.
+În acest ecran, dorim să oferim mai multe informații de fond, să traducem mai multe informații tehnice în limba comună sau să explicăm motivul. Continue reading below to see each permission request.
 
 ![Permissions](../images/setup-wizard/Wizard03.png)
 
 ### Notificări
 
-Android requires special permission for apps if they want to send you notifications.
+Android necesită permisiuni speciale pentru aplicații dacă acestea doresc să vă trimită notificări.
 
 While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
 
@@ -56,15 +56,15 @@ Please click the first "ASK FOR PERMISSION" button:
 
 ![Notificări](../images/setup-wizard/Wizard04.png)
 
-Select the "AAPS" app:
+Selectați aplicația "AAPS":
 
 ![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
 
-Enable "Allow display over other apps" by sliding the slider to the right:
+Activați "Permiteți afișare deasupra altor aplicați" prin glisarea comutatorului spre dreapta:
 
 ![imagine](../images/setup-wizard/Wizard04-AndroidSettings2.png)
 
-The slider should look this way if it is enabled:
+Comutatorul trebuie să arate în acest fel dacă este activat:
 
 ![imagine](../images/setup-wizard/Wizard04-AndroidSettings3.png)
 
@@ -72,15 +72,15 @@ The slider should look this way if it is enabled:
 
 Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
+However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Prin urmare, trebuie să i se permită să facă asta de către Android.
 
-You do this by confirming the setting.
+Faceți acest lucru prin confirmarea setării.
 
 Click the second "ASK FOR PERMISSION" button.
 
 ![Allow Background](../images/setup-wizard/Wizard05.png)
 
-Please select "Allow":
+Vă rugăm să selectați "Permiteți":
 
 ![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
@@ -129,13 +129,13 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
 ### Storage permission
 
-**AAPS** needs to log information to the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** needs to log information to the permanent storage of your smartphone. Stocarea permanentă înseamnă că va fi disponibilă chiar și după repornirea telefonului dumneavoastră inteligent. Alte informații se pierd, deoarece nu sunt salvate în spațiul de stocare permanent.
 
 Click the first "ASK FOR PERMISSION" button:
 
 ![Allow Background](../images/setup-wizard/Wizard06.png)
 
-Click "Allow":
+Apăsați pe "Permiteți":
 
 ![imagine](../images/setup-wizard/Wizard06-Memory.png)
 
@@ -156,25 +156,25 @@ Confirm that you wish to grant access to **AAPS** to the selected directory:
 
 ![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
 
-Click the "NEXT" button:
+Apăsați pe butonul "URMĂTORUL":
 
 ![Finish Permissions](../images/setup-wizard/Wizard08.png)
 
-### Location
+### Localizare
 
-Android links the use of Bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access Bluetooth.
+Android links the use of Bluetooth communication to the ability to use location services. Poate că l-ați văzut și cu alte aplicații. It's common to need location permission if you want to access Bluetooth.
 
-**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Details may differ from setup to setup.
+**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Detaliile pot diferi de la configurare la configurare.
 
 Click the first "ASK FOR PERMISSION" button:
 
 ![Allow Location](../images/setup-wizard/Wizard09.png)
 
-This is important. Otherwise **AAPS** can not work properly at all.
+Acest lucru este important. Otherwise **AAPS** can not work properly at all.
 
-Click "While using the app":
+Apăsați pe "În timp ce utilizați aplicația":
 
-![Location](../images/setup-wizard/Wizard09-location.png)
+![Localizare](../images/setup-wizard/Wizard09-location.png)
 
 Click the second "ASK FOR PERMISSION" button:
 
@@ -186,7 +186,7 @@ Select "Allow all the time".
 
 
 
-Click the "NEXT" button:
+Apăsați pe butonul "URMĂTORUL":
 
 ![Location 2](../images/setup-wizard/Wizard11.png)
 
@@ -236,7 +236,7 @@ Your range to analyze TIR (time in range) is configured separately in your repor
 
 Please press the "NEXT" button:
 
-![Range](../images/setup-wizard/Wizard14.png)
+![Interval](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
 ## Synchronization with the reporting server and more
@@ -256,25 +256,25 @@ In this example we select Nightscout as reporting server, and will configure it.
 
 Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
 ```
-For Tidepool it is even simpler, as you only need your personal login information.
+Pentru Tidepool este chiar mai simplu, deoarece aveți nevoie doar de informațiile dumneavoastră personale de autentificare.
 
-After making your selection, please press the cogwheel button next to the item you selected :
+După ce ați făcut selecția, apăsați butonul rotiță zimțată lângă elementul pe care l-ați selectat:
 
 ![Sincronizare](../images/setup-wizard/Wizard15.png)
 
-Here you are configuring the Nightscout reporting server.
+Aici configurați serverul de raportare Nightscout.
 
-Please click on "Nightscout URL":
+Vă rugăm să apăsați pe "Nightscout URL":
 
 ![Client NS](../images/setup-wizard/Wizard16.png)
 
-Enter you Nightscout URL which is your personal Nightscout server. It's just an URL you setup yourself, or you were given from your service provider for Nightscout.
+Introduceți adresa de Nightscout care este serverul dumneavoastră personal Nightscout. Este doar o adresă URL pe care ați configurat-o, sau care v-a fost dată de furnizorul de servicii pentru Nightscout.
 
-Please click the "OK" button:
+Vă rugăm să apăsați pe butonul "OK":
 
 ![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-Enter your Nightscout access token. This is the access token for your Nightscout server you configured. Without this token, access will not work.
+Enter your Nightscout access token. Acesta este jetonul de acces pentru serverul Nightscout pe care l-ați configurat. Fără acest jeton, accesul nu va funcționa.
 
 If you don't have it at the moment please check the documentation for setting up the reporting server in the **AAPS** documentation.
 
@@ -289,35 +289,35 @@ If you have stored profiles on Nightscout and want to download them to **AAPS**,
 ![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
 
 
-Go back to the previous screen and select "Alarm option":
+Mergeți înapoi la ecranul anterior și selectați "Opțiunea Alarmă":
 
 ![Alarme](../images/setup-wizard/Wizard16-Alarm.png)
 
-For now, leave the switches disabled. We only walked to the screen to make you familiar with possible options you might configure in the future. At the moment there is no need to do it.
+Deocamdată, lăsați comutatoarele dezactivate. We only walked to the screen to make you familiar with possible options you might configure in the future. În acest moment nu este nevoie să facem acest lucru.
 
-Go back to the previous screen before and select "Connection settings".
+Înapoi la ecranul anterior și selectați "Setări conexiune".
 
-Here you can configure how to transfer your data to the reporting server.
+Aici puteți configura cum să transferați datele dumneavoastră pe serverul de raportare.
 
 Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
 
 Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 
-If in doubt, just leave all enabled.
+Dacă aveți dubii, lăsați totul activat.
 
-Go back to the screen before and select "Advanced Settings".
+Mergeți înapoi la ecranul de dinainte și selectați "Setări avansate".
 
 ![Connection](../images/setup-wizard/Wizard16-Connect.png)
 
-Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver.
+Activați "Înregistrați pornirea aplicației în NS" dacă doriți să obțineți aceste informații pe serverul de raportare. Vă poate ajuta să aflați de la distanță dacă și când aplicația a fost repornită, în special ca îngrijitor.
 
 It might be interesting to see if **AAPS** is correctly configured now, but later it is usually not that important to be able to see **AAPS** stopping or starting in Nightscout.
 
-Enable "Create announcements from errors" and "Create announcements from carbs required alerts".
+Activați "Creați anunțuri pe baza erorilor" și "Creați anunțuri cu carbohidrații necesari".
 
-Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
+Lăsați "Încetiniți încărcările" dezactivat. You would only use it in unusual circumstances if for example a lot of information is to be transferred to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
-Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
+Mergeți înapoi de două ori, la lista de module și selectați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![imagine](../images/setup-wizard/Wizard16-App.png)
 
@@ -325,47 +325,47 @@ Go back twice, to the list of plugins and select "NEXT" to go to the next screen
 
 Here you can setup your name in **AAPS**.
 
-It can be anything. It's just for differentiating users.
+Poate fi orice. Este doar pentru diferențierea utilizatorilor.
 
-To keep it simple just enter first name and last name.
+Pentru a păstra lucrurile simple trebuie doar să introduceți prenumele și numele.
 
-Press "NEXT" to go to the next screen.
+Apăsați "URMĂTORUL" pentru a merge la următorul ecran.
 
-![Name](../images/setup-wizard/Wizard17.png)
+![Nume](../images/setup-wizard/Wizard17.png)
 
 ## Tip de pacient
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. Acest lucru este important din motive de securitate și siguranță.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
+Here is where you also configure the **maximum allowed bolus** for a meal. Adică, cel mai mare bolus pe care trebuie să-l dați pentru a acoperi mesele obișnuite. Este o caracteristică de securitate care ajută la evitarea unei supradozări accidentale atunci când bolusați pentru masă.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+A doua limită este similară din punct de vedere al conceptului, dar se referă la cantitatea maximă de carbohidrați pe care o așteptați.
 
-After setting these values, press "NEXT" to go to the next screen:
+După setarea acestor valori, apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Patient](../images/setup-wizard/Wizard18.png)
 
-## Used insulin
+## Insulină utilizată
 
-Select the type of insulin being used in the pump.
+Selectați tipul de insulină care este utilizată în pompă.
 
-The insulin names should be self-explanatory.
+Denumirile tipurilor de insulină ar trebui să fie de la sine înțelese.
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
 For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
 ```
 
-Press "NEXT" to go to the next screen:
+Apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Insulină](../images/setup-wizard/Wizard19.png)
 
 
-## Blood sugar source
+## Sursa glicemiei
 
-Select the BG source you are using. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Selectați sursa de glicemie pe care o folosiți. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
-As there are several options available, we don't explain the configuration for all of them here. We are using xDrip+ in our example here:
+Deoarece sunt disponibile mai multe opțiuni, nu explicăm configurația pentru toate aceste opțiuni. We are using xDrip+ in our example here:
 
 
 ![Sursă valoare glicemie](../images/setup-wizard/Wizard20.png)
@@ -373,7 +373,7 @@ As there are several options available, we don't explain the configuration for a
 
 Enable the visibility in the top level menu by clicking the check box on the right side.
 
-After making your selection, press "NEXT" to go to the next screen:
+După ce faceți selecția, apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Select BG](../images/setup-wizard/Wizard20-Set.png)
 
@@ -402,7 +402,7 @@ It's required that you have determined and discussed your profile with your doct
 If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
 ```
 
-Press "NEXT" to go to the next screen. Enter a "profile name":
+Apăsați "URMĂTORUL" pentru a merge la următorul ecran. Enter a "profile name":
 
 ![imagine](../images/setup-wizard/Wizard21.png)
 
@@ -448,7 +448,7 @@ Enter/confirm the target values:
 
 Save the profile by clicking on "SAVE":
 
-![Save](../images/setup-wizard/Wizard22-Save.png)
+![Salvați](../images/setup-wizard/Wizard22-Save.png)
 
 
 After saving, a new button "Activate Profile" appears.
@@ -483,7 +483,7 @@ Press "OK":
 
 A confirmation dialog for the profile switch appears.
 
-You can confirm it with pressing "OK". Press "NEXT" to go to the next screen:
+You can confirm it with pressing "OK". Apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
 
@@ -500,13 +500,13 @@ Now you are selecting your insulin pump.
 
 You get an important warning dialog. Please read it, and press "OK".
 
-If your have already setup your profile in the steps before and you know how to connect your pump, feel free to connect it now.
+Dacă v-ați configurat deja profilul în pașii de dinainte și știți cum să conectați pompa, nu ezitați s-o conectați acum.
 
-Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. You can come back anytime or use one of the direct configuration options (not using the Wizard).
+Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. Puteți reveni oricând sau să folosiți una dintre opțiunile de configurare directă (nu prin folosirea Asistentului).
 
 Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
-Press "NEXT" to go to the next screen.
+Apăsați "URMĂTORUL" pentru a merge la următorul ecran.
 
 ![Pump Warning](../images/setup-wizard/Wizard23.png)
 
@@ -515,27 +515,27 @@ Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: A
 ![Bluetooth Warning](../images/setup-wizard/Wizard23b.png)
 
 
-In this case we select "Virtual Pump".
+În acest caz alegem "Pompa Virtuală".
 
 ![Pompă](../images/setup-wizard/Wizard23-Pump.png)
 
 ## Algoritm APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
+Utilizați algoritmul OpenAPS SMB ca algoritm APS. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB este oricum mai nou și mai bun în comparație cu OpenAPS AMA.
 
-The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
+Motivul pentru care SMB este dezactivat la început este că opțiunea SMB permite o reacție mai rapidă la creșterea zahărului din sânge prin Super Micro Bolus în loc să crească procentul ratei bazale. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
 OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
 ```
 
-Press the cogwheel to see the details:
+Apăsați roata pentru a vedea detaliile:
 
 ![APS](../images/setup-wizard/Wizard24.png)
 
 
-Only read the text and change nothing here.
+Doar citiți textul și nu schimbați nimic aici.
 
 Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
 
@@ -547,25 +547,25 @@ Go back and press "NEXT" to go to the next screen:
 
 Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
 
-Press "NEXT" to go to the next screen:
+Apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
-![Sensitivity](../images/setup-wizard/Wizard25.png)
+![Sensibilitate](../images/setup-wizard/Wizard25.png)
 
-## Start Objective 1
+## Începeți Obiectivul 1
 
-You are entering now the Objectives. The qualification for access to further **AAPS** features.
+Vă aflați acum la secțiunea „Obiective”. The qualification for access to further **AAPS** features.
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective.
+Aici începem Obiectivul 1, chiar dacă deocamdată configurația noastră nu este complet pregătită să finalizeze cu succes acest obiectiv.
 
-But this is the start.
+Dar acesta este începutul.
 
-Press the green "START" to to start objective 1:
+Apăsați „START” verde pentru a începe obiectivul 1:
 
 ![Obiective](../images/setup-wizard/Wizard26.png)
 
-You see that you already made some progress, but other areas are to be done.
+Vedeți că ați făcut deja unele progrese, dar trebuie făcute și în alte domenii.
 
-Press "FINISH" to go to the next screen.
+Apăsați "FINALIZAȚI" pentru a merge la următorul ecran.
 
 ![Done](../images/setup-wizard/Wizard26-Started.png)
 
@@ -573,9 +573,9 @@ You are coming to the home screen of **AAPS**.
 
 Here you find the information message in **AAPS** that you set your profile.
 
-This was done when we switched to our new profile.
+Acest lucru a fost realizat când am trecut la noul nostru profil.
 
-You can click "SNOOZE" and it will disappear.
+Puteți apăsa pe "AMÂNAȚI" și va dispărea.
 
 ![imagine](../images/setup-wizard/Wizard26-Done.png)
 

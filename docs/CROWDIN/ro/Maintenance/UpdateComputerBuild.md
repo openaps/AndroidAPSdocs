@@ -28,7 +28,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Actualizați-vă copia locală
 
 ```{admonition} WARNING
 :class: warning

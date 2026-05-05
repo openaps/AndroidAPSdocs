@@ -1,21 +1,21 @@
-# Smartwatches and AAPS
+# Ceasurile inteligente și AAPS
 
-Various smartwatches can be used to display some of the information available in **AAPS** or perform remote actions.
+Diverse ceasuri inteligente pot fi utilizate pentru a afișa unele dintre informațiile disponibile în **AAPS** sau pentru a efectua acțiuni la distanță.
 
-Having a smartwatch directly control **AAPS** (pump and sensor) is achieved using full Android watches (that are considered like small [smartphones](./Phones.md)).
+Utilizare unui ceas inteligent care controlează direct **AAPS** (pompă și senzor) se realizează folosind ceasuri cu Android complet (care sunt considerate a fi mici [telefoane inteligente](./Phones.md)).
 
-Some smartwatches can allow you to enter treatments, or more, but with the phone itself still managing **AAPS**.
+Unele ceasuri inteligente vă pot permite să introduceți tratamente, sau chiar mai multe, dar cu telefonul în continuare care gestionează **AAPS**.
 
-Smartwatches are becoming increasingly used with **AAPS** _both_ for adults with diabetes and carers/parents of children with diabetes.
+Ceasurile inteligente devin din ce în ce mai utilizate cu **AAPS** _ambele_ pentru adulții cu diabet și îngrijitorii/părinții copiilor cu diabet.
 
-## General advantages of using smartwatches with **AAPS**
+## Avantajele generale ale utilizării ceasurilor inteligente cu **AAPS**
 
 
-Smartwatches - depending on the model - can be used in many different ways with **AAPS**. They can be used to fully or partly control **AAPS**, or simply to remotely check glucose levels, insulin-on-board, and other parameters.
+Ceasurile inteligente - în funcție de model - pot fi utilizate în multe moduri diferite cu **AAPS**. Acestea pot fi folosite pentru a controla total sau parțial **AAPS** sau pur și simplu pentru a verifica nivelurile de glicemie, insulina la bord și alți parametri.
 
 Integrating a smartwatch with **AAPS** can be useful in many situations, including driving a car or (motor) bike and during exercise. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discrete than looking on a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling user to have their **AAPS** phone stored out of sight (like inside a bag), but with the aid of the smartwatch for remote control use.
 
-## Specific advantages for parents/carers using **AAPS**
+## Avantajele specifice pentru părinți/îngrijitori ce folosesc **AAPS**
 
 For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS**  phone. This can be useful, for example, if the **AAPS** phone is hidden away in a pump belt.
 
@@ -33,7 +33,7 @@ There are currently five main ways in which smartwatches are used in conjunction
 | Full remote control | Most AAPS functions                 | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease**                                                                                                                                                                        |
 | Remote control      | AAPSClient functions                | Android **Wear OS** watch (check Android/API)</br>Running **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                             |
 | Remote control      | Some AAPSClient functions           | Some Samsung, Fitbit and Garmin watches</br>See below.                                                                                                                                                                                                |
-| Display             | Display some AAPSClient indications | Many smartwatches (see [here](https://bigdigital.home.blog/))</br>[xDrip+](https://github.com/nightscoutfoundation/xdrip/releases) and [WatchDrip+](https://bigdigital.home.blog/2022/06/16/watchdrip-a-new-application-for-xdrip-watch-integration/) |
+| Afișaj              | Display some AAPSClient indications | Many smartwatches (see [here](https://bigdigital.home.blog/))</br>[xDrip+](https://github.com/nightscoutfoundation/xdrip/releases) and [WatchDrip+](https://bigdigital.home.blog/2022/06/16/watchdrip-a-new-application-for-xdrip-watch-integration/) |
 
 ## Before you buy a smartwatch…
 
