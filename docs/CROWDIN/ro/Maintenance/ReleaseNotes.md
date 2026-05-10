@@ -824,7 +824,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Noua linie de stare pentru Combo
 
-- Îmbunătăţirea GlucoseStatus
+- Îmbunătățirea GlucoseStatus
 
 - Repararea sincronizării în NS a țintei temporare
 
@@ -916,7 +916,7 @@ Data lansării: 29-03-2019
 - [DST fix](#time-adjustment-daylight-savings-time-dst)
 - Actualizare Wear
 - [SMS plugin](../RemoteFeatures/SMSCommands.md) update
-- Megeți înapoi la obiective.
+- Mergeți înapoi la obiective.
 - Opriți bucla dacă spațiul de stocare al telefonului este plin
 
 ## Versiunea 2.1
