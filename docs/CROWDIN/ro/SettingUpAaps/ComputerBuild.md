@@ -140,7 +140,7 @@ Unul dintre cele mai importante lucruri la instalarea Android Studio este **să 
 
 ```{admonition} Different UI
 :class: avertizare
-Notă de import: Studio Android și-a schimbat interfața în timpul ultimelor versiuni. Acest ghid vă va arăta pașii cu *noua interfață* în "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](NewUI).
+Notă de import: Studio Android și-a schimbat interfața în timpul ultimelor versiuni. Acest ghid vă va arăta pașii cu *noua interfață* în "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 Versiunea de Android Studio este foarte importantă. Vedeți instrucțiunile [de mai sus](#Building-APK-recommended-specification-of-computer-for-building-apk-file) pentru a alege versiunea corectă a Android Studio.
@@ -258,7 +258,7 @@ Doar pentru utilizatorii de Windows: Dacă firewall-ul solicită permisiune, per
 
 După ce depozitul este clonat cu succes, Android Studio va deschide proiectul clonat.
 
-(NewUI)=
+(computerbuild-NewUI)=
 ```{admonition} New UI
 :class: information
 Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
