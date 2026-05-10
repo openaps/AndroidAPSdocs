@@ -18,9 +18,7 @@ Automations rules are created and modified from the Automations tab. Each rule i
 
 
 There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section.
-You can also search the AAPS user groups on 
-![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and
-![**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users. 
+You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users. 
 
 ## How Automation can help
 

@@ -72,6 +72,7 @@ class ValidationResult:
     disallowed_header_doc_links: list[str]
     broken_links: list[str]
     missing_pictures: list[str]
+    potential_orphan_markdown: list[str]
     remote_picture_errors: list[str]
     remote_picture_warnings: list[str]
     remote_pictures_seen: list[str]
@@ -340,6 +341,7 @@ def format_issue(path: Path, line: int, message: str) -> str:
 
 def run_validation(
     lang_dir: Path,
+    en_dir: Path,
     check_remote_links: bool,
     timeout_seconds: int,
     workers: int,
@@ -351,6 +353,7 @@ def run_validation(
     disallowed_header_doc_links: list[str] = []
     broken_links: list[str] = []
     missing_pictures: list[str] = []
+    potential_orphan_markdown: list[str] = []
     remote_picture_errors: list[str] = []
     remote_picture_warnings: list[str] = []
     remote_pictures_seen: set[str] = set()
@@ -499,6 +502,18 @@ def run_validation(
                     format_issue(markdown_file, 1, f"Undefined markdown reference call '[...][{used}]'.")
                 )
 
+    # In translation folders, markdown files absent in EN are potential orphans.
+    if lang_dir.resolve() != en_dir.resolve() and en_dir.exists():
+        en_markdown_rel = {
+            p.relative_to(en_dir).as_posix().lower()
+            for p in en_dir.rglob("*.md")
+            if not any(part in IGNORED_DIR_NAMES for part in p.parts)
+        }
+        for p in markdown_files:
+            rel = p.relative_to(lang_dir).as_posix()
+            if rel.lower() not in en_markdown_rel:
+                potential_orphan_markdown.append(p.as_posix())
+
     if remote_pictures_seen:
         with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as executor:
             future_map = {
@@ -543,6 +558,7 @@ def run_validation(
         disallowed_header_doc_links=sorted(disallowed_header_doc_links),
         broken_links=sorted(broken_links),
         missing_pictures=sorted(missing_pictures),
+        potential_orphan_markdown=sorted(potential_orphan_markdown),
         remote_picture_errors=sorted(remote_picture_errors),
         remote_picture_warnings=sorted(remote_picture_warnings),
         remote_pictures_seen=sorted(remote_pictures_seen),
@@ -633,6 +649,7 @@ def resolve_lang_dirs(repo_root: Path, docs_root: str, lang_selector: str) -> li
 def main() -> int:
     args = parse_args()
     repo_root = Path(__file__).resolve().parent.parent
+    en_dir = (repo_root / args.docs_root / "EN").resolve()
     lang_dirs = resolve_lang_dirs(repo_root, args.docs_root, args.lang)
 
     if not lang_dirs:
@@ -651,6 +668,7 @@ def main() -> int:
         print(f"\n--- Validating: {lang_dir.relative_to(repo_root).as_posix()} ---")
         result = run_validation(
             lang_dir=lang_dir,
+            en_dir=en_dir,
             check_remote_links=args.check_remote_links,
             timeout_seconds=args.timeout,
             workers=args.workers,
@@ -660,6 +678,7 @@ def main() -> int:
         print_section("Disallowed header-based doc links", result.disallowed_header_doc_links)
         print_section("Broken links", result.broken_links)
         print_section("Missing pictures", result.missing_pictures)
+        print_section("Potential orphan markdown (non-failing)", result.potential_orphan_markdown)
         print_section("Remote pictures", result.remote_pictures_seen)
         print_section("Remote picture errors (failures)", result.remote_picture_errors)
         print_section("Remote picture warnings (non-failing)", result.remote_picture_warnings)

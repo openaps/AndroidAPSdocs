@@ -1,7 +1,8 @@
 # Development branch 
 
-<font color="#FF0000">**Attention:**</font>
+```{warning}
 Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+```
 
 The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master).  It is advised to stay on the Master branch for actual looping.
 
@@ -63,4 +64,4 @@ Available from 3.3.2.1.dev
     - This commit only exists when the PR has no conflicts and is mergeable.
 
   - variant:
-    - Please refer to [variant](variant)
+    - Please refer to [variant](#browserbuild-variant)
