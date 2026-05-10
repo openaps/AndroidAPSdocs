@@ -41,7 +41,7 @@ This block is the first block included into the json file and is mandatory. It c
 
 See below an example of metadata block:
 
-```json
+```text
 "metadata": {
     "name": "Default Watchface",
     "author": "myName",
@@ -60,11 +60,11 @@ You can see in some json file an additional key `"filename"`, this key will be a
 
 ### General parameter settings
 
-După primul bloc cu metadate, veți seta câțiva parametri generali (vezi [Lista parametrilor generali](#cwf-reference-list-of-general-parameters) de mai jos), aceasta vă permite să setați culori grafice (carbohidrați, bolus, valorile glicemiei șamd), dar şi culorile implicite pentru valoarea în interval, hiperglicemie sau hipoglicemie (culori implicite ale valorii glicemiei şi săgeți)
+După primul bloc cu metadate, veți seta câțiva parametri generali (vezi [Lista parametrilor generali](#cwf-reference-list-of-general-parameters) de mai jos), aceasta vă permite să setați culori grafice (carbohidrați, bolus, valorile glicemiei șamd), dar și culorile implicite pentru valoarea în interval, hiperglicemie sau hipoglicemie (culori implicite ale valorii glicemiei și săgeți)
 
 See below an example of general parameters
 
-```json
+```text
 "highColor": "#FFFF00",
 "midColor": "#00FF00",
 "lowColor": "#FF0000",
@@ -84,7 +84,7 @@ Custom image can be tuned using correct filename associated to each ImageView in
 
 See below an example of an Image block for second_hand, (in this case there are no image included into zip file so default second hand image will be used, but tuned with a custom color.
 
-```json
+```text
 "second_hand": {
     "width": 400,
     "height": 400,
@@ -106,7 +106,7 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 TexView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
 
-```json
+```text
 "basalRate": {
     "width": 91,
     "height": 32,
@@ -123,7 +123,7 @@ TexView have more available parameters compare to ImageView: you can tune rotati
 ```
 Țineți cont că dacă nu doriți să gestionați o singură vizualizare de pe ceas, apoi puneți tasta `"vizibilitate"` pentru `"dus"` dar, de asemenea, setați dimensiunea și poziția în afara zonei vizibile astfel:
 
-```json
+```text
 "second": {
     "width": 0,
     "height": 0,
@@ -156,7 +156,7 @@ Chart view is a very specific view that can share some parameters with ImageView
 
 Standard settings for this view is very simple:
 
-```json
+```text
 "chart": {
     "width": 400,
     "height": 170,
@@ -320,7 +320,7 @@ But this feature should be used with care. Preferences are common with all other
 
 If you still need some very specific settings to have a correct display (in example below, if there is not enough space for detailed iob, you can "force" this parameter to `false` of your watch, you can include within metadata block some settings constraint like that
 
-```json
+```text
 "metadata": {
     "name": "Default Watchface",
     "author": "myName",
@@ -360,7 +360,7 @@ To calculate this number, you can see that the difference between the leftMargin
 
 If the twin views are positioned vertically, in this case you must use the key `"topOffsetTwinHidden":`
 
-```json
+```text
 "uploader_battery": {
     "width": 49,
     "height": 30,
@@ -422,7 +422,7 @@ First, concerning BG value image, no choice here, it can only be in the backgrou
 
 Within `"background"` block, we will include 2 dedicated keys to make this rotation:
 
-```json
+```text
 "background": {
     "width": 400,
     "height": 400,
@@ -439,7 +439,7 @@ Within `"background"` block, we will include 2 dedicated keys to make this rotat
 
 Now we will go at the end of the file, after the last view:
 
-```json
+```text
 "second_hand": {
     "width": 120,
     "height": 120,
@@ -476,7 +476,7 @@ Of course, the sizing and positioning of the view must be done to the pixel!
 
 
 
-```json
+```text
 "chart": {
     "width": 216,
     "height": 107,
@@ -504,7 +504,7 @@ Note that the removed bottom part of these images has been used as background of
 
 
 
-```json
+```text
 "freetext1": {
     "width": 400,
     "height": 400,
@@ -521,7 +521,7 @@ For this view we include the link to another `"dynData"`block named `avgDeltaBac
 
 
 
-```json
+```text
 "avgDeltaBackground": {
     "valueKey": "avg_delta",
     "minData": -20,
@@ -560,7 +560,7 @@ For these views will will combine dynamic images and rotation feature explained 
 
 
 
-```json
+```text
 "freetext2": {
     "width": 276,
     "height": 276,
@@ -598,7 +598,7 @@ Here each view is dedicated to a specific scale (so is linked to a dedicated dyn
 
 
 
-```json
+```text
 "avgDelta5": {
     "valueKey": "avg_delta",
     "minData": -20,
@@ -638,7 +638,7 @@ in Steampunk watchface loop green and red arrows (for status) are disabled, this
 
 
 
-```json
+```text
     "loopArrows": {
         "invalidImage": "greyArrows",
         "image1": "greenArrows",
@@ -661,7 +661,7 @@ To finish the overview of dynData feature, we will take a look on battery manage
 
 
 
-```json
+```text
 "uploader_battery": {
     "width": 60,
     "height": 28,
@@ -705,7 +705,7 @@ Now lets take a look on dynData block:
 
 
 
-```json
+```text
 "batteryIcons": {
     "invalidFontColor": "#00000000",
     "fontColor1": "#A00000",
@@ -745,7 +745,7 @@ To do that we will replace `dynData` key by a `dynPref`key within view block:
 
 
 
-```json
+```text
  "background": {
     "width": 400,
     "height": 400,
@@ -764,7 +764,7 @@ Now we will take a look at the end of the json file, after `dynData` block:
 
 
 
-```json
+```text
 "dynData": {
     ...
 },
@@ -812,7 +812,7 @@ First lets see the beginning of json file:
 
 
 
-```json
+```text
 "dynPrefColor": "prefColorDark",
 "pointSize": 2,
 "enableSecond": false,
@@ -833,7 +833,7 @@ And at the end, within the `dynPref` block, you will have a specific dynPref blo
 
 
 
-```json
+```text
 "prefColorDark": {
     "prefKey": "key_dark",
     "true": {
@@ -866,7 +866,7 @@ Să aruncăm o privire la elementele incluse în "panoul divizor" (în exemplu d
 
 
 
-```json
+```text
 "basalRate": {
     "width": 90,
     "height": 32,
@@ -884,7 +884,7 @@ Then within dynPref block, you can see that Match divider parameter (`key_match_
 
 
 
-```json
+```text
 "matchDivider": {
     "prefKey": "key_match_divider",
     "true": {
@@ -916,7 +916,7 @@ Then we will see a third example with iob views (`iob1` and `iob2`), where we wi
 
 
 
-```json
+```text
 "iob1": {
     "width": 125,
     "height": 33,
@@ -947,7 +947,7 @@ You will see within default view settings the text size (19 on `iob1` and 24 on 
 
 
 
-```json
+```text
 "prefIob1": {
     "prefKey": "key_show_detailed_iob",
     "true": {
@@ -979,7 +979,7 @@ In this example the dynData block that will be used for iob1 view will be if det
 
 
 
-```
+```text
 {
     "color1": "#000000",
     "fontColor1": "#FFFFFF",
@@ -994,7 +994,7 @@ The dynData block that will be used for the same view iob1 if detailed IOB is di
 
 
 
-```
+```text
 {
     "color1": "#FFFFFF",
     "fontColor1": "#000000"
@@ -1025,11 +1025,11 @@ If you use a zip "v2" with a watch that includes CustomWachface V1, you will hav
 
 CustomWatchface V2 includes these new features:
 
-- [New Status view](cwf-reference-new-status-feature)
-- [New TempTarget view](cwf-reference-new-temp-target-feature)
-- [New Reservoir Level view](cwf-reference-new-reservoir-level-feature)
-- [New Formatting Feature](cwf-reference-new-formating-feature)
-- [Show External data for Follower](cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
+- [New Status view](#cwf-reference-new-status-feature)
+- [New TempTarget view](#cwf-reference-new-temp-target-feature)
+- [New Reservoir Level view](#cwf-reference-new-reservoir-level-feature)
+- [New Formatting Feature](#cwf-reference-new-formating-feature)
+- [Show External data for Follower](#cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
 
 (cwf-reference-new-status-feature)=
 
@@ -1075,7 +1075,7 @@ DynData value equals:
 - 1 (Loop Target) or
 - 2 (User Temp Target)
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
 
 (cwf-reference-new-reservoir-level-feature)=
 
@@ -1099,7 +1099,7 @@ The DynData Keys associated with Reservoir Level are:
   - 1 (Warning Level, Yellow color by default)
   - 2 (Urgent Level, Red color by default)
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
 
 (cwf-reference-new-formating-feature)=
 
@@ -1127,7 +1127,7 @@ First lets start by the views:
 
 
 
-```json
+```text
 "uploader_battery": {
     "width": 200,
     "height": 50,
@@ -1173,7 +1173,7 @@ Now we will take a look on `"uploader"` block defined within `"dynPref"`:
 
 
 
-```json
+```text
 "uploader": {
     "prefKey": "key_show_loop_status",
     "true": {
@@ -1215,7 +1215,7 @@ Let's now take a look on timestamp dynPref block to manage plural:
 
 
 
-```json
+```text
 "timestamp": {
     "prefKey": "key_show_loop_status",
     "true": {
@@ -1263,7 +1263,7 @@ To use this feature, you need to:
 
 - have at least 2 of the 3 following apps installed in phone (AAPS, AAPSCLIENT, AAPSCLIENT2)
 - enable Broadcast data in AAPSCLIENT and/or AAPSCLIENT2 to broadcast data to the main app used to sync with CustomWatchface (AAPS or AAPSCLIENT)
-- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](cwf-reference-key-and-keyvalue-reference) below)
+- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](#cwf-reference-key-and-keyvalue-reference) below)
 
 Note that if main app in phone is AAPSCLIENT and secondary app which broadcast data is AAPSCLIENT2, you will have to enable `Switch external data in watchface` parameter within Custom Watchface dedicated parameter if you use a watchface which use standard views and Ext1 additional views (Ext1 is linked to AAPSCLIENT and Ext2 is linked to AAPSCLIENT2)
 
@@ -1562,7 +1562,7 @@ From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a f
 | `"maxData"`               | int              | specify the maximum value to take into account for AAPS data : for example if value is sgv (unit mgdl internally), if maxData is set to 330, all bg values above 330mgdl will be set to 330.                                                                                                                                                                                                                                                                                                                                          |
 | `"leftOffset"`            | block            | Specificați modificarea orizontală a vederii în funcție de valorile min și max în pixeli.<br />- Acesta include minValue key, maxValueKey și invalidValue key (opțional)<br />- Dacă datele sunt sub sau egale cu minData, apoi vizualizarea va fi deplasată la minValue pixeli, și dacă datele sunt deasupra sau egale cu maxData, atunci vizualizarea va fi transferată la maxValue pixels<br />Rețineți că pentru a aplica această schimbare, `leftOffset` trebuie setat la adevărat în vizualizare              |
 | `"topOffset"`             | block            | Specify the vertical shift of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift topOffset should be set to true within the view                                                                            |
-| `"rotationOffset"`        | block            | Specificați unghiul de rotație în grade de vizualizare în funcție de valorile min și max în pixeli.<br />- include cheia `minValue`, cheia `maxValue` și cheia `invalidValue` (opțional)<br />- Dacă datele sunt mai mici sau egale cu `minData`, apoi vizualizarea se va roti cu `minValue` grade, şi dacă datele sunt mai mari sau egale cu `maxData`, apoi vizualizarea se va roti cu `maxValue` grade<br />Notă că pentru a aplica această rotație, `rotationOffset` ar trebui setat la adevărat în vizualizare |
+| `"rotationOffset"`        | block            | Specificați unghiul de rotație în grade de vizualizare în funcție de valorile min și max în pixeli.<br />- include cheia `minValue`, cheia `maxValue` și cheia `invalidValue` (opțional)<br />- Dacă datele sunt mai mici sau egale cu `minData`, apoi vizualizarea se va roti cu `minValue` grade, și dacă datele sunt mai mari sau egale cu `maxData`, apoi vizualizarea se va roti cu `maxValue` grade<br />Notă că pentru a aplica această rotație, `rotationOffset` ar trebui setat la adevărat în vizualizare |
 | `"dynValue"`*             | block            | Specify the dynValue conversion from min and max range to min and max values in pixels.<br />- It includes `minValue` key, `maxValue` Key and `invalidValue` key (optional)<br />- If data is below or equal `minData`, then the dynValue sent will be minValue (converted to double) , and if data is above or equal to `maxData`, then the dynValue calculated will be maxValue (converted to double)<br />Note that to apply this conversion, `dynValue` key should be set to true within the view               |
 | `"minValue"`              | int              | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | `"maxValue"`              | int              | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                                                                                        |
