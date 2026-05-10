@@ -16,7 +16,7 @@
 * Alegeți dispozitivul bluetooth DanaR și dați click pe numărul serial al pompei dumneavoastră DanaR.
 * Selectați parola pompei și introduceți parola dumneavoastră. (Parola implicită este 1234)
 * Dacă doriți ca AAPS să permită rate bazale mai mari de 200%, activați Folosește bolus extins for >200%. Notă: aceasta înseamnă că nu veți putea folosi bucla cu RBT mărite în timp ce utilizați bolusuri extinse pentru mâncare.
-* În Preferences, sub setările pompei DanaR, puteți schimba viteza implicită folosită pentru livrarea bolusurilor (12 secunde per unitate, 30 secunde per unitate sau 60 de secunde per unitate de insulină livrată).
+* În Preferences, sub setările pompei DanaR, puteți schimba viteza implicită folosită pentru administrarea bolusurilor (12 secunde per unitate, 30 secunde per unitate sau 60 de secunde per unitate de insulină administrată).
 * Stabiliți pasul ratei bazale din pompă la 0.01 U/o
 * Setați pasul de bolus pe pompă la 0,1 U/h
 * Activați bolusurile extinse în pompă
