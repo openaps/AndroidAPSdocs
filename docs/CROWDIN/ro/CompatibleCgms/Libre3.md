@@ -78,7 +78,7 @@ Dacă senzorul a fost pornit cu un cont Libreview conectat, este de asemenea pos
 1. Instalați aplicația Libre 3 din Google Playstore
 2. Configurați aplicația Libre 3 cu contul Libreview cu care a fost activat senzorul.
 3. Opriți forțat aplicația Juggluco în setările Android.
-4. În meniul Libre 3, faceți clic pe "Start Senzor", selectați "Da", "Următorul" și scanați senzorul dumneavoastră.
+4. În meniul Libre 3, apăsați pe "Start Senzor", selectați "Da", "Următorul" și scanați senzorul dumneavoastră.
 5. După câteva minute, valorile glicemiei trebuie să fie vizibile în aplicația Libre 3.
 
 Pentru a trece de la aplicația Libre 3 la Juggluco, trebuie să opriți forțat aplicația Libre 3 din setările Android și să treceți la Pasul 1 & 2.
