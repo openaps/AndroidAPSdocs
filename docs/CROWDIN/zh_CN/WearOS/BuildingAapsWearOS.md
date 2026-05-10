@@ -9,8 +9,8 @@
 AAPS至少需要Wear OS API级别28（Android 9）。
 
 ```{warning}
-AAPS表盘适用于API级别28至33的Wear OS智能手表。 <br>
-Wear OS 5有[限制](BuildingAapsWearOs-WearOS5)。
+AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.<br>
+Wear OS 5 has [limitations](#BuildingAapsWearOs-WearOS5).
 ```
 
 ## 构建**AAPS** Wear apk文件
