@@ -1,17 +1,18 @@
 # Версия разработчиков
 
-<font color="#FF0000"><strong> Внимание: </strong></font>
-Версия разработчиков -только для дальнейшего развития AndroidAPS. Она должна использоваться на отдельном телефоне для тестирования <font color="#FF0000"><strong> а не для реального цикла!</strong></font>
+```{warning}
+Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+```
 
-Самая стабильная версия AndroidAPS для обычного пользователя - [ Master branch ](https://github.com/nightscout/AndroidAPS/tree/master) (мастер-ветка). Рекомендуется оставаться на версии Master для реального использования.
+The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
 
-Версия dev AndroidAPS - только для разработчиков и тестировщиков, которые умеют работать с stacktraces, просматривать файлы журналов, запускать отладчик для создания отчетов об ошибках, которые помогают разработчикам (короче говоря: для людей, которые знают, что делают без посторонней помощи!). Поэтому многие незавершенные функции отключены. Чтобы включить эти функции, войдите в ** режим разработчика**, создав файл ` engineering_mode ` в каталоге /AAPS/extra . Включение инженерного режима может полностью нарушить работу цикла.
+The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
 
-Тем не менее, версия разработчиков-хорошее место для того, чтобы понять, какие функции тестируются, помочь исправлению ошибок и дать отзыв о том, как работают новые функции. Часто люди тестируют версию Dev на старом телефоне и помпе до тех пор, пока они не уверены, что версия стабильна -любое ее использование на их собственный риск. При тестировании новых функций помните, что они по-прежнему в процессе разработки. Делайте это на свой страх и риск & с должной осмотрительностью, чтобы сохранить себя в безопасности.
+However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
 
-Если вы нашли ошибку или думаете, что что-то пошло не так в версии dev, просмотрите [вкладку проблемы](https://github.com/nightscout/AndroidAPS/issues) и проверьте, не столкнулся ли с проблемой кто-либо еще, и, если нет, добавьте ее сами. Чем больше информации вы можете здесь разместить, тем лучше (не забывайте, что от вас могут понадобиться [лог-файлы](../GettingHelp/AccessingLogFiles.md). Новые функции можно также обсудить в [ discord ](https://discord.gg/4fQUWHZ4Mw).
+If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
 
-Версия Dev имеет дату окончания срока действия. Это кажется неудобным при удовлетворительной работе, но служит определенной цели. Когда в цикле единичная версия dev, легче отслеживать ошибки, о которых сообщают люди. Разработчики не хотят, чтобы существовало три версии dev, где в одной ошибки исправлены, а в другой нет. и люди продолжают сообщать об уже исправленных.
+A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
 
 (branch-ci-test)=
 
@@ -65,4 +66,4 @@ Available from 3.3.2.1.dev
     
     - variant:
     
-    - Please refer to <variant>
+    - Please refer to [variant](#browserbuild-variant)
