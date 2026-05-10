@@ -140,7 +140,7 @@ Einer der wichtigsten Punkte bei der Installation von Android Studio ist: **Gedu
 
 ```{admonition} Different UI
 :class: warning
-Wichtige Anmerkung: Android Studio hat seine Benutzeroberfläche (UI) seit den letzten Versionen geändert. Diese Anleitung zeigt Dir die Schritte in dem *neuen UI* „Ladybug“. Nutzt Du noch eine ältere Version der Benutzeroberfläche, dann solltest Du Android Studio als Erstes auf das neue Design umstellen. Wie das funktioniert ist [hier beschrieben](NewUI).
+Wichtige Anmerkung: Android Studio hat seine Benutzeroberfläche (UI) seit den letzten Versionen geändert. Diese Anleitung zeigt Dir die Schritte in dem *neuen UI* „Ladybug“. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 Die Android-Studio-Version ist sehr wichtig. Schaue Dir die [Anleitung oben](#Building-APK-recommended-specification-of-computer-for-building-apk-file) an, um die richtige Android Studio Version auszuwählen.
@@ -258,7 +258,7 @@ Nur für Windows-Benutzer: Wenn Deine Firewall um Erlaubnis bittet, lasse den Zu
 
 Nachdem das Projektarchiv erfolgreich geklont wurde, wird Android Studio das geklonte Projekt öffnen.
 
-(NewUI)=
+(computerbuild-NewUI)=
 ```{admonition} New UI
 :class: Informationen
 Android Studios Benutzeroberfläche wurde kürzlich geändert. Neue Installationen des Android Studio verwenden standardmäßig die neue Benutzeroberfläche!
