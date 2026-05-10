@@ -10,6 +10,9 @@ on:
       - master
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
@@ -37,10 +40,11 @@ jobs:
           LANG_DIR: ./docs/EN
         run: sphinx-build -M html $LANG_DIR _build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _build/
+      # GitHub Pages deployment removed - using ReadTheDocs instead
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: _build/
 
       - uses: afc163/surge-preview@v1
         if: github.event_name == 'pull_request'
@@ -51,19 +55,20 @@ jobs:
           dist: _build/
           build: echo "dummy"
 
-  deploy:
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
-    runs-on: ubuntu-latest
-    needs: build
-     # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-    steps:
-      - name: Deploy to GitHub Pages 🚀
-        uses: actions/deploy-pages@v4
-        id: deployment
+  # GitHub Pages deployment removed - using ReadTheDocs for production docs instead
+  # deploy:
+  #   if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #    # Deploy to the github-pages environment
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+  #   permissions:
+  #     pages: write      # to deploy to Pages
+  #     id-token: write   # to verify the deployment originates from an appropriate source
+  #   steps:
+  #     - name: Deploy to GitHub Pages 🚀
+  #       uses: actions/deploy-pages@v4
+  #       id: deployment
