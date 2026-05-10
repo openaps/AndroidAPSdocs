@@ -17,7 +17,7 @@ Regulile de automatizare sunt create și modificare din fila Automatizări. Fiec
     Cum ar fi o alarmă sau setarea unui procentaj de profil sau exportul setărilor AAPS la schimbarea pompei (Omnipod).
 
 
-Există o gamă largă de opțiuni de automatizare, iar utilizatorii sunt încurajați să le studieze în cadrul aplicației AAPS, în secțiunea Automatizare. De asemenea, puteți căuta grupurile de utilizatori AAPS pe ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) și ![**Discord**](https://discord.gg/4fQUWHZ4Mw) pentru exemple de automatizare de la alți utilizatori.
+Există o gamă largă de opțiuni de automatizare, iar utilizatorii sunt încurajați să le studieze în cadrul aplicației AAPS, în secțiunea Automatizare. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
 
 ## Cum poate ajuta automatizarea
 
