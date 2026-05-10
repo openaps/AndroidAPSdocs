@@ -41,7 +41,7 @@ Dieser Block ist der erste und verpflichtende Block, der in der JSON-Datei entha
 
 Ein Beispiel des Metadatenblocks:
 
-```json
+```text
 "metadata": {
     "name": "Default Watchface",
     "author": "myName",
@@ -64,7 +64,7 @@ Nach dem ersten Block mit Metadaten, werden einige allgemeine Parameter gesetzt 
 
 Ein Beispiel für allgemeine Parameter:
 
-```json
+```text
 "highColor": "#FFFF00",
 "midColor": "#00FF00",
 "lowColor": "#FF0000",
@@ -84,7 +84,7 @@ Ein benutzerdefiniertes Bild kannmit dem richtigen Dateinamen, der jedem ImageVi
 
 Hier ist ein Beispiel eines Image-Blocks für second_hand, (in diesem Fall ist keine Bilddatei in der ZIP-Datei enthalten, sodass das Default second hand Bild genutzt (jedoch farblich angepasst) wird.
 
-```json
+```text
 "second_hand": {
     "width": 400,
     "height": 400,
@@ -106,7 +106,7 @@ Um das „second_hand“ Bild mit einer Standardfarbe einzufärben (lowRange, mi
 
 TexView hat mehr Parameter ImageView: Du kannst die Rotation (ganze Zahl in Grad) verändern, Textgröße (textsize: ganze Zahl in Pixel), Gravity (um festzulegen, ob der Textwert zentriert wird (Standardwert) oder links oder rechts ausgerichtet ist), die Schriftart, FontStyle und FontColor, sowie die Hintergrundfarbe der Textansicht festlegen
 
-```json
+```text
 "basalRate": {
     "width": 91,
     "height": 32,
@@ -123,7 +123,7 @@ TexView hat mehr Parameter ImageView: Du kannst die Rotation (ganze Zahl in Grad
 ```
 Beachte bitte, dass wenn Du nicht möchtest, dass eine Ansicht innerhalb Deines Zifferblatts verwaltet wird, Du den Key `"visibility"` auf `"gone"` und auch die Größe und Position außerhalb des sichtbaren Bereichs setzt, so wie es hier gezeigt wird:
 
-```json
+```text
 "second": {
     "width": 0,
     "height": 0,
@@ -156,7 +156,7 @@ ChartView ist eine sehr spezifische Ansicht, die sich einige Parameter mit Image
 
 Die Standardeinstellungen für diese Ansicht sind sehr einfach:
 
-```json
+```text
 "chart": {
     "width": 400,
     "height": 170,
@@ -320,7 +320,7 @@ Diese Funktion sollte aber mit Vorsicht verwendet werden. Voreinstellungen werde
 
 Wenn Du immer noch einige sehr spezifische Einstellungen für eine korrekte Anzeige zu erreichen benötigen solltest (im Beispiel unten, wenn nicht genügend Platz für detaillierte IOB vorhanden ist), kannst Du diesen Parameter auf Deiner Uhr auf `false` "zwingen". Einige Einstellungen kannst Du als Beschränkung in den Metadaten-Block wie folgt aufnehmen
 
-```json
+```text
 
 ```
 
@@ -352,7 +352,7 @@ Um diese Zahl zu ermitteln: Die Differenz zwischen der leftMargin jeder der beid
 
 Wenn die Zwillings-Ansichten vertikal positioniert sind, musst Du den Schlüssel `"topOffsetTwinHidden":` verwenden.
 
-```json
+```text
 "uploader_battery": {
     "width": 49,
     "height": 30,
@@ -414,7 +414,7 @@ Zunächst, was das Glukosewert-Bild betrifft: Hier gibt es keine Wahl. Es kann n
 
 Innerhalb des `"background"`-Blocks werden wir 2 dedizierte Schlüssel einfügen, um diese Rotation durchzuführen:
 
-```json
+```text
 "background": {
     "width": 400,
     "height": 400,
@@ -431,7 +431,7 @@ Der `"dynData":`-Schlüssel wird definieren, welcher Block verwendet werden soll
 
 Jetzt gehen wir ans Ende der Datei, unter die letzte Ansicht:
 
-```json
+```text
 "second_hand": {
     "width": 120,
     "height": 120,
@@ -462,7 +462,7 @@ Der Standardhintergrund des Diagramms ist transparent. Um die Glukosewert-Skala,
 
 Natürlich muss die Größenanpassung und Positionierung der Ansicht pixelgenau erfolgen!
 
-```json
+```text
 "chart": {
     "width": 216,
     "height": 107,
@@ -484,7 +484,7 @@ Wie bereits erklärt, sind Freitextansichten vor dem Diagramm und vor dem Hinter
 
 Beachte, dass der entfernte untere Teil dieser Bilder als Hintergrunddiagramm verwendet wurde, um eine perfekte Integration zu erreichen.
 
-```json
+```text
 "freetext1": {
     "width": 400,
     "height": 400,
@@ -497,7 +497,7 @@ Beachte, dass der entfernte untere Teil dieser Bilder als Hintergrunddiagramm ve
 ```
 Für diese Ansicht fügen wir den Link zu einem anderen `"dynData"`-Block mit dem Namen `avgDeltaBackground` hinzu. Dieser Block wird die avgDelta-Skala entsprechend dem Durchschnitts-Delta-Wert (avgDelta) anpassen.
 
-```json
+```text
 "avgDeltaBackground": {
     "valueKey": "avg_delta",
     "minData": -20,
@@ -532,7 +532,7 @@ Dann werden wir eine Reihe von Bildern verwenden, beginnend mit `"image1":` bis 
 
 Für diese Ansichten werden wir dynamische Bilder und die zuvor erklärte Rotationsfunktion kombinieren:
 
-```json
+```text
 "freetext2": {
     "width": 276,
     "height": 276,
@@ -566,7 +566,7 @@ Für diese Ansichten werden wir dynamische Bilder und die zuvor erklärte Rotati
 ```
 Hier ist jede Ansicht einer bestimmten Skala zugeordnet (sie ist mit einem dedizierten dynData-Block verknüpft); Du kannst erkennen, dass der Schlüssel `"rotationOffset":` für diese 3 Ansichten aktiv ist. Schau Dir jetzt den ersten dynData.Block an:
 
-```json
+```text
 
 ```
 Auch wenn der Dynamikbereich für Daten nur zwischen -5 und +5 avg_delta verwendet wird, ist es wichtig, den Gesamtbereich von -20, +20 mg/dl zu behalten, um sicherzustellen, dass der Zeiger während der Skalenumstellungen mit dem Hintergrund synchronisiert wird. Aus diesem Grund behalten wir den gleichen Gesamtbereich wie bei `avgDeltaBackground`  und die gleichen Zahlenschritte (8 Bilder) bei.
@@ -583,7 +583,7 @@ Die anderen dynData-Blöcke werden auf die gleiche Weise definiert, um `"avgDelt
 
 Im Steampunk-Ziffernblatt sind grüne und rote Pfeile (für den Status) des Loops deaktiviert. Das wird auch mit einem dedizierten dynData-Block gesteuert, der mit der Loop-Ansicht verknüpft ist.
 
-```json
+```text
     "loopArrows": {
         "invalidImage": "greyArrows",
         "image1": "greenArrows",
@@ -600,7 +600,7 @@ In diesem Beispiel `greyArrows`, `greenArrows` und `redArrows` sind nicht in der
 
 Um den Überblick über das dynData-Feature abzuschließen, werfen wir einen Blick auf das Batteriemanagement. Die Idee hier ist, die Textfarbe entsprechend dem Batteriestand anzupassen (von 0 bis 100%)
 
-```json
+```text
 
 ```
 Beide Ansichten teilen sich den gleichen `Dyndaten`-Block mit dem Namen `batteryIcons`. Das ist möglich, da standardmäßig zugeordneten Daten die eine der Ansicht sind (ohne die Angabe eines `"valueKey":`-Schlüssels innerhalb des `batteryIcons`-Blocks wird sie mit den Daten von `uploader_battery` oder `rig_battery` gemäß der Ansicht befüllt).
@@ -609,7 +609,7 @@ Auch diese beiden Ansichten nutzen die TwinView-Funktion, die [hier](#cwf-refere
 
 Jetzt werfen wir einen Blick auf den dynData-Block:
 
-```json
+```text
 "batteryIcons": {
     "invalidFontColor": "#00000000",
     "fontColor1": "#A00000",
@@ -641,7 +641,7 @@ Innerhalb von Steampunk müssen wir das passende Bild für die jeweiligen Einhei
 
 Um dies zu tun, ersetzen wir im View-Block den `dynData`-Schlüssel durch einen `DynPref`-Schlüssel:
 
-```json
+```text
  "background": {
     "width": 400,
     "height": 400,
@@ -656,7 +656,7 @@ Die Verwendung des `dynPref`-Schlüssels wird sehr ähnlich dem des `dynData`-Sc
 
 Nun werden wir uns das Ende der JSON-Datei ansehen, nach dem `dynData`-Block:
 
-```json
+```text
 "dynData": {
     ...
 },
@@ -698,7 +698,7 @@ In den meisten Fällen, in denen Du Einstellungen definierst, geht es nicht daru
 
 Lass und zuerst auf den Anfang der JSON-Datei schauen:
 
-```json
+```text
 "dynPrefColor": "prefColorDark",
 "pointSize": 2,
 "enableSecond": false,
@@ -715,7 +715,7 @@ Lass und zuerst auf den Anfang der JSON-Datei schauen:
 
 Und am Ende, innerhalb des `dynPref`-Blocks, hast Du einen spezifischen dynPref-Block für Standardfarben:
 
-```json
+```text
 "prefColorDark": {
     "prefKey": "key_dark",
     "true": {
@@ -744,7 +744,7 @@ Der Unterschied zwischen diesem dynPref-Block und den anderen Standard-dynPref-B
 
 Lass uns nun einen Blick auf die in den "Trennstreifen" aufgenommenen Elemente werfen (im folgenden Beispiel ist die Ansicht `"basalRate"` mit der Ansicht `"matchDivider"` dynPref verknüpft:
 
-```json
+```text
 "basalRate": {
     "width": 90,
     "height": 32,
@@ -758,7 +758,7 @@ Lass uns nun einen Blick auf die in den "Trennstreifen" aufgenommenen Elemente w
 ```
 Innerhalb des dynPref-Blocks kannst Du erkennen, dass der Match-Divider-Parameter (`key_match_divider`-Schlüssel) die 2 Blöcke "true" und "false" enthält. Diese beiden Blöcke werden aber nur verwendet, um festzulegen, die Ansicht entweder den "dunklen" dyn-Block (also genau die gleiche Hintergrund- und Textfarbe wie die anderen Ansichten außerhalb des Banners) oder den "weißen" dyn-Block nutzt, der gegenteiligen Farben für den Hintergrund und den Text einstellt...
 
-```json
+```text
 "matchDivider": {
     "prefKey": "key_match_divider",
     "true": {
@@ -788,7 +788,7 @@ Beachte, dass Du Dich hier innerhalb eines "dynData"-Blocks befindest. Um eine F
 
 Dann werden wir ein drittes Beispiel mit iob-Ansichten (`iob1` und `iob2`) ansehen, bei dem wir kleinen Text für detailliertes iob und größeren Text für Gesamt-iob verwenden werden:
 
-```json
+```text
 "iob1": {
     "width": 125,
     "height": 33,
@@ -815,7 +815,7 @@ Dann werden wir ein drittes Beispiel mit iob-Ansichten (`iob1` und `iob2`) anseh
 ```
 Innerhalb der Standardansichtseinstellungen und den zwei verschiedenen `dynPref`-Blöcken, die die Textgröße (gemäß des detaillierten iob-Parameters) und die Farben (gemäß des dunklen Parameters) anpassen sollen, ist die Textgröße (19 für `iob1` und 24 für `iob2`)
 
-```json
+```text
 "prefIob1": {
     "prefKey": "key_show_detailed_iob",
     "true": {
@@ -843,7 +843,7 @@ Dann wird der "dark" dynPref-Block verwendet, um Farbe und Schriftfarbe festzule
 
 In diesem Beispiel wird der dynData-Block dann für die Ansicht iob1 verwendet, wenn detailliertes IOB aktiviert ist und "dark" aktiviert ist:
 
-```
+```text
 {
     "color1": "#000000",
     "fontColor1": "#FFFFFF",
@@ -855,7 +855,7 @@ Damit wird der Text weiß auf schwarzem Hintergrund sein und die 24er-Größe di
 
 Der dynData-Block, der für die gleiche iob1-Ansicht verwendet wird, wenn das detaillierte IOB deaktiviert ist und "dark" deaktiviert ist, sieht wird folgt aus:
 
-```
+```text
 {
     "color1": "#FFFFFF",
     "fontColor1": "#000000"
@@ -881,11 +881,11 @@ Wenn Du ein Zip-Datei „v2“ mit einer Smartwatch nutzt, die CustomWachface V1
 
 Das CustomWatchface V2 enthält folgende Funktionen:
 
-- [Neue Status-View](cwf-reference-new-status-feature)
-- [Neue View für temporäre Ziele](cwf-reference-new-temp-target-feature)
-- [Neue Reservoir-Stand-View](cwf-reference-new-reservoir-level-feature)
-- [Neue Formatierungs-Möglichkeiten](cwf-reference-new-formating-feature)
-- [Anzeigen von externen Daten für Follower](cwf-reference-show-external-datas) (bis zu 3 Datensätze in einem Zifferblatt für AAPS, AAPSCLIENT und AAPSCLIENT2)
+- [Neue Status-View](#cwf-reference-new-status-feature)
+- [Neue View für temporäre Ziele](#cwf-reference-new-temp-target-feature)
+- [Neue Reservoir-Stand-View](#cwf-reference-new-reservoir-level-feature)
+- [Neue Formatierungs-Möglichkeiten](#cwf-reference-new-formating-feature)
+- [Show External data for Follower](#cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
 
 (cwf-reference-new-status-feature)=
 
@@ -927,7 +927,7 @@ Der DynData-Wert ist gleich:
 - 1 (Loop-Ziel) oder
 - 2 (Benutzerdefiniertes temporäres Ziel)
 
-Beachte, dass diese Ansicht auch für externe Daten verfügbar ist (siehe [unten](cwf-reference-show-external-datas)) mit `"tempTarget_Ext1"` und  `"tempTarget_Ext2"`-Schlüsseln (Ansicht und DynData)
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
 
 (cwf-reference-new-reservoir-level-feature)=
 
@@ -949,7 +949,7 @@ Die DynData-Schlüssel, die mit dem Reservoir-Stand verknüpft sind:
   - 1 (Warnstufe, gelbe Farbe voreingestellt)
   - 2 (Dringend, rote Farbe voreingestellt)
 
-Beachte, dass diese Ansicht auch für externe Daten verfügbar ist (siehe [unten](cwf-reference-show-external-datas)) mit `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` und  `"reservoirLevel_Ext2"`-Schlüsseln (Ansicht und DynData).
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
 
 (cwf-reference-new-formating-feature)=
 
@@ -975,7 +975,7 @@ Ich werde unten nicht weiter erläutern, wie die gesamten Ansichten innerhalb de
 
 Lass uns mit den Ansichten beginnen:
 
-```json
+```text
 "uploader_battery": {
     "width": 200,
     "height": 50,
@@ -1019,7 +1019,7 @@ Für dieses Zifferblatt werden die Rohwerte nicht konvertiert. Für beide Ansich
 
 Jetzt schauen wir uns den `"uploader"`-Block an, der in `„dynPref“` definiert ist:
 
-```json
+```text
 "uploader": {
     "prefKey": "key_show_loop_status",
     "true": {
@@ -1059,7 +1059,7 @@ Im obigen Beispiel wird `%.0f` den „Double“ Wert als Ganzzahl anzeigen
 
 Lass uns jetzt einen Blick auf den Timestamp dynPref-Block werfen, um mehrere zu verwalten:
 
-```json
+```text
 "timestamp": {
     "prefKey": "key_show_loop_status",
     "true": {
@@ -1105,7 +1105,7 @@ Um dieses Feature nutzen zu können, muss Folgendes erfüllt sein:
 
 - es müssen 2 der 3 folgenden Apps auf dem Smartphone installiert sein (AAPS, AAPSCLIENT, AAPSCLIENT2)
 - Aktiviere Broadcast-Daten in AAPSCLIENT und/oder AAPSCLIENT2, um Daten an die Hauptanwendung zu übermitteln, die zur Synchronisierung mit CustomWatchface verwendet wird (AAPS oder AAPSCLIENT)
-- Benutze ein CustomWatchface, das Ansichten mit einem Schlüssel implementiert, einschließlich `_Ext1` oder `_Ext2` (siehe [Schlüssel und KeyValue Referenz](cwf-reference-key-and-keyvalue-reference) unten)
+- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](#cwf-reference-key-and-keyvalue-reference) below)
 
 Wenn die Hauptanwendung auf dem Smartphone der AAPSCLIENT ist und die sekundäre App zur Übertragung der Daten der AAPSCLIENT2 ist: Du musst den dedizierten „`Switch external datas in watchface`“-Parameter im Custom Watchface aktivieren, wenn Du ein Zifferblatt nutzt, das die Standardansichten und Ext1 Zusatzansichten nutzt (Ext1 ist mit AAPSCLIENT verknüpft und Ext2 mit AAPSCLIENT2)
 
