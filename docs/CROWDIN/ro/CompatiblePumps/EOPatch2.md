@@ -5,7 +5,7 @@ Plasturele necesită utilizarea insulinei de tip U-100 cu acțiune rapidă, cum 
 Cea mai mică doză de insulină injectabilă atunci când se utilizează plasturele este de 0,05 U. Prin urmare, profilul bazal trebuie setat la o valoare minimă de 0,05 U/oră sau mai mult și un interval de 0,05 U/oră, în caz contrar, poate exista o eroare între cantitatea totală estimată din profil și cantitatea reală perfuzată din plasture. De asemenea, bolusul trebuie reglat și perfuzat cu un volum de perfuzie minim de 0,05 U.
 
 ## Configurare pompă
-1. Pe ecranul de pornire AAPS, faceți clic pe meniul hamburger din colțul din stânga sus și mergeți la Configurator.
+1. Pe ecranul de pornire AAPS, apăsați pe meniul hamburger din colțul din stânga sus și mergeți la Configurator.
 1. Selectați 'EOPatch2' din secțiunea Pompe.
 1. Apăsați tasta Înapoi pentru a reveni la ecranul de pornire.
 
@@ -34,7 +34,7 @@ Aceasta este o funcție de reamintire pentru alte injecții decât injecția baz
 
 ### Mutați-vă în ecranul de conectare al plasturelui
 
-Selectați EOPATCH2 în partea de sus a ecranului de pornire și faceți clic pe butonul ACTIVARE din stânga jos.
+Selectați EOPATCH2 în partea de sus a ecranului de pornire și apăsați pe butonul ACTIVARE din stânga jos.
 
 ![Image4](../images/EOPatch/Bild4.png)
 
@@ -97,7 +97,7 @@ Acul este introdus prin ținerea plasturelui și rotirea manetei de acționare a
 Plasturii trebuie înlocuiți în cazul unor valori mici ale cantității de insulină, al expirării duratei de utilizare și al defectelor. Perioada recomandată de utilizare pentru fiecare plasture este de 84 de ore după pornirea plasturelui.
 
 ### Eliminarea plasturelui
-Selectați EOPATCH2 în partea de sus a ecranului principal și faceți clic pe butonul ELIMINARE/SCHIMBARE PLASTURE din partea de jos. Pe ecranul următor, apăsați pe butonul ELIMINAȚI PLASTURE. Apare o casetă de dialog pentru a confirma încă o dată, iar dacă selectați butonul ELIMINAȚI PLASTURE, eliminarea este finalizată.
+Selectați EOPATCH2 în partea de sus a ecranului principal și apăsați pe butonul ELIMINARE/SCHIMBARE PLASTURE din partea de jos. Pe ecranul următor, apăsați pe butonul ELIMINAȚI PLASTURE. Apare o casetă de dialog pentru a confirma încă o dată, iar dacă selectați butonul ELIMINAȚI PLASTURE, eliminarea este finalizată.
 
 ![Image13](../images/EOPatch/Bild13.png) ![Image14](../images/EOPatch/Bild14.png) ![Image15](../images/EOPatch/Bild15.png) ![Image16](../images/EOPatch/Bild16.png)
 
@@ -105,13 +105,13 @@ Selectați EOPATCH2 în partea de sus a ecranului principal și faceți clic pe 
 Suspendarea administrării insulinei anulează, de asemenea, atât bolusul extins, cât și bazala temporală. La reluarea administrării insulinei, nu se va mai relua administrarea bolusului extins și a bazalei temporare anulate. Iar atunci când administrarea insulinei este suspendată, plasturele va emite un sunet la fiecare 15 minute.
 
 ### Suspendarea administrării insulinei
-Selectați EOPATCH2 în partea de sus a ecranului de pornire și faceți clic pe butonul SUSPENDARE din dreapta jos. Atunci când selectați CONFIRMARE în caseta de confirmare, apare o casetă de selectare a timpului. Dacă selectați butonul de CONFIRMARE după selectarea orei, administrarea insulinei va fi suspendată pentru perioada de timp setată.
+Selectați EOPATCH2 în partea de sus a ecranului de pornire și apăsați pe butonul SUSPENDARE din dreapta jos. Atunci când selectați CONFIRMARE în caseta de confirmare, apare o casetă de selectare a timpului. Dacă selectați butonul de CONFIRMARE după selectarea orei, administrarea insulinei va fi suspendată pentru perioada de timp setată.
 
 ![Image17](../images/EOPatch/Bild17.png) ![Image18](../images/EOPatch/Bild18.png) ![Image19](../images/EOPatch/Bild19.png)
 
 
 ### Reluarea administrării insulinei
-Selectați EOPATCH2 în partea de sus a ecranului de pornire și faceți clic pe butonul RELUAȚI din dreapta jos. Administrarea insulinei va fi reluată selectând CONFIRMAȚI în caseta de dialog de confirmare.
+Selectați EOPATCH2 în partea de sus a ecranului de pornire și apăsați pe butonul RELUAȚI din dreapta jos. Administrarea insulinei va fi reluată selectând CONFIRMAȚI în caseta de dialog de confirmare.
 
 ![Image20](../images/EOPatch/Bild20.png) ![Image21](../images/EOPatch/Bild21.png)
 
