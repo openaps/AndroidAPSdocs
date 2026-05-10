@@ -38,7 +38,7 @@ https://docs.readthedocs.io/en/stable/api/v3.html#token
 $ python importRedirects.py <APIKEY>
 ```
 
-### Import Redirects
+### Delete All Redirects
 
 This script removes all redirect from the project. The script could be used for testing or maintenance.
 **NOTE: this script will remove all redirects, including the ones that are manual added trough the GUI.
@@ -46,3 +46,16 @@ This script removes all redirect from the project. The script could be used for 
 ``` console
 $ python deleteAllRedirects.py <APIKEY>
 ```
+
+## Building Documentation Locally
+
+You can build the documentation locally on your computer to preview changes before committing them.
+
+### Prerequisites
+
+First, ensure Python 3.8+ is installed on your system. Then install the required dependencies from the root of the repository.
+
+### Python Environment
+
+1. **Create a virtual environment** (recommended):
+
