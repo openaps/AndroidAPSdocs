@@ -84,7 +84,7 @@ Când configurați pompa Medtronic cu ajutorul asistentului de configurare, este
 - **Starea pompei**: Starea curentă a conexiunii pompei. Deoarece pompa nu va fi conectată în mod constant, aceasta va arăta în general pictograma de somn. Există o serie de posibile alte stări, inclusiv "Trezire" când AAPS încearcă să emită o comandă sau alte posibile comenzi de pompă cum ar fi "Obțineți timpul", "Setați o rată bazală temporară", șamd.
 - **Baterie**: Afișați starea bateriei pe baza valorii alese pentru Tipul bateriei (Vizualizare Energie) în meniul de configurare al pompei Medtronic. 
 - **Ultima conexiune**: Cu cât timp în urmă a avut loc ultima conexiune reușită la pompă.
-- **Ultimul Bolus**: În urmă cu cât timp a fost livrat ultimul bolus cu succes.
+- **Ultimul Bolus**: În urmă cu cât timp a fost administrat ultimul bolus cu succes.
 - **Rata bazală de bază**: Aceasta este rata bazală de bază care rulează în pompă la această oră în profilul activ.
 - **Bazală Temporară**: Bazala temporară care se livrează în prezent, care poate fi 0 unități pe oră.
 - **Rezervor**: Cât insulină este în rezervor (actualizată cel puțin o dată pe oră).
@@ -130,7 +130,7 @@ AAPS utilizează un număr de serie pentru sincronizare și numărul de serie es
 
 ### OpenAPS users
 
-Utilizatorii OpenAPS ar trebui să ia aminte că AAPS cu Medtronic utilizează o abordare complet diferită față cea de la OpenAPS. Prin folosirea AAPS, principala metodă de a interacționa cu pompa este prin telefonul dumneavoastră. În cazuri normale de utilizare, este posibil ca singura dată când este necesară utilizarea meniului pompei să fie atunci când se schimbă rezervoarele. Acest lucru este foarte diferit atunci când se utilizează OpenAPS, unde cel puțin o parte din bolus este livrată, de obicei, prin intermediul butoanelor rapide pentru bolus. În cazul în care pompa este folosită pentru a livra manual un bolus, pot apărea probleme dacă AAPS încearcă să livreze unul în același timp. În astfel de cazuri există controale care încearcă să prevină problemele, dar acest lucru trebuie evitat pe cât posibil.
+Utilizatorii OpenAPS ar trebui să ia aminte că AAPS cu Medtronic utilizează o abordare complet diferită față cea de la OpenAPS. Prin folosirea AAPS, principala metodă de a interacționa cu pompa este prin telefonul dumneavoastră. În cazuri normale de utilizare, este posibil ca singura dată când este necesară utilizarea meniului pompei să fie atunci când se schimbă rezervoarele. Acest lucru este foarte diferit atunci când se utilizează OpenAPS, unde cel puțin o parte din bolus este administrată, de obicei, prin intermediul butoanelor rapide pentru bolus. În cazul în care pompa este folosită pentru a livra manual un bolus, pot apărea probleme dacă AAPS încearcă să livreze unul în același timp. În astfel de cazuri există controale care încearcă să prevină problemele, dar acest lucru trebuie evitat pe cât posibil.
 
 ### Jurnalizare
 
