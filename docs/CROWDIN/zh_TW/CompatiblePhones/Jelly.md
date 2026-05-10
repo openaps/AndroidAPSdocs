@@ -56,4 +56,4 @@ Jelly 2 配有強大的最佳化功能，**必須**停用這些功能以便 AAPS
 
 對於某些智慧手錶，例如 Samsung Galaxy，若要透過 Wi-Fi 遠端使用 **Jelly 2**、**Wear.apk** 與 **AAPS**，必須在 Samsung Galaxy 的「進階功能」中將 <0>遠端連線</0> 設為 <0>開啟</0>。
 
-![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)
+![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
