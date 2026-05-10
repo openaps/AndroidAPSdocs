@@ -21,7 +21,7 @@
 
 較新的 Android 版本已對系統的藍牙應用程式啟用電池優化。 這已知會對藍牙幫浦與 CGM 造成一些問題。
 
-如果你依照 [設定嚮導](../SettingUpAaps/SetupWizard)，並完成 [藍牙 電池優化](setup-wizard-bluetooth-battery-optimisation) 區段中的設定，這個設定應該是正確的。不過，如果你依循較舊版本的指南，則可能尚未變更此設定。
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide its possible you have not changed this setting.
 
 如果你遇到幫浦與 CGM 斷線，請檢查此設定是否正確。
 
