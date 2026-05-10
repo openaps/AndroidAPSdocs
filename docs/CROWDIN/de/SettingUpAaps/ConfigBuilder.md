@@ -133,6 +133,8 @@ Wähle die von dir genutzte Pumpe. Weiterführende Information zur Konfiguration
   * während Deiner ersten Schritte mit **AAPS** in den ersten [Zielen](../SettingUpAaps/CompletingTheObjectives.md)
   * für Pumpen, die noch nicht kompatibel sind
 
+(Config-Builder-sensitivity-detection)=
+
 ## Sensitivitätserkennung
 
 Hier kannst du auswählen, nach welchem Algorythmus AAPS die Insulinempfindlichkeit berechnen soll. Mehr zu den einzelnen Designs kannst Du [hier nachlesen](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Bei der Empfindlichkeitserkennung werden historische Daten "on the go" analysiert und Anpassungen vorgenommen, falls der Algorithmus feststellt, dass du sensibler oder weniger empfindlich auf das Insulin reagierst als üblich. Weitere Details zum Algorithmus findest Du in den [OpenAPS Docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
