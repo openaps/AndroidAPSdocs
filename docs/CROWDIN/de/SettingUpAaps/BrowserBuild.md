@@ -117,7 +117,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 <!--crowdin:enable-->
 ````
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): -
-- Solltest Du AAPS das allererste Mal erstellen (oder Du kein Android Studio JKS haben), nutze den in [AAPS-CI Option 1 – JKS erzeugen](aaps-ci-option1) beschriebenen Weg, um das Setup abzuschließen.
+- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 </br>
 
 ```{warning}
@@ -132,7 +132,7 @@ Du musst:
 7. Stelle die Daten aus Nightscout wieder her.
 ```
 
-- Falls Du Deinen eigenen JKS, den Du bei einem früheren AAPS-Build mit einem in Android Studio genutzt hast, nutzen möchtest und Du das Passwort und den Alias (key0) kennst, wähle bitte [AAPS-CI Option 2 – Hochladen eines vorhandenen JKS](aaps-ci-option2).
+- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](#aaps-ci-option2).
 
 </br>
 
@@ -295,7 +295,7 @@ GitHub wird ab jetzt in der Lage sein, die AAPS-APK-Datei in Deinem Google Drive
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
-(variant)=
+(browserbuild-variant)=
 
 ### Auswahl der zu erstellenden Variante („Build Variants“)
 
@@ -359,7 +359,7 @@ Anpassungen sind in der Regel nicht notwendig. Das dient lediglich der Informati
   - Use workflow from Branch: Bitte gib den Branch-Namen ein, aus dem Du die Funktionalität auswählen/hinzufügen möchtest.
   - Upstream Repository: Bitte gib den Repository-Namen ein, aus dem Du die Funktionalität auswählen/hinzufügen möchtest.
   - Commit SHA: Bitte gib den Commit SHA (Secure Hash Algorithmus) ein, den Du auswählen möchtest. (wie ein Git-Commit Hash)
-  - Wähle die Build-Variante aus: [variant](variant)
+  - Select Build Variant: [variant](#browserbuild-variant)
 
 (ci-keystore-export)=
 ## CI KeyStore Export
