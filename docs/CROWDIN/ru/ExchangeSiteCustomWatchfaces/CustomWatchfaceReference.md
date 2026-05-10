@@ -41,7 +41,7 @@ JSON files can be edited in Notepad (or notepad++) text editor (prefer notepad++
 
 Ниже приведен пример блока метаданных:
 
-```json
+```text
 "метаданные": {
 ""имя": "Циферблат часов по умолчанию",
 "автор": "myName",
@@ -64,7 +64,7 @@ After the first block with metadata, you will set some general parameters (see [
 
 Ниже представлен пример общих параметров
 
-```json
+```text
 ""цвет высоких": "#FFFF00",
 ""цвет средних": "#00FF00",
 ""цвет низких": "#FF0000",
@@ -84,7 +84,7 @@ After the first block with metadata, you will set some general parameters (see [
 
 См. ниже пример блока изображения для секундной стрелки (в данном случае изображение не включено в zip-файл, поэтому будет использовано стандартное изображение, но настроенное с пользовательским цветом.
 
-```json
+```text
 "second_hand": {
     "width": 400,
     "height": 400,
@@ -106,7 +106,7 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 TexView имеет больше доступных параметров по сравнению с ImageView: можно настроить поворот (целое значение в градусах), размер текста (целое значение в пикселях), гравитацию (чтобы определить, будет ли текстовое значение центрировано (значение по умолчанию) или выровнено влево или вправо), установить шрифт, FontStyle и fontColor, а также цвет фона текстового представления
 
-```json
+```text
 "basalRate": {
     "width": 91,
     "height": 32,
@@ -123,7 +123,7 @@ TexView имеет больше доступных параметров по с�
 ```
 Note that if you don't want to manage one view within your watchface, then put the `"visibility"` key to `"gone"` but also set size and position outside visible area like that:
 
-```json
+```text
 "second": {
     "width": 0,
     "height": 0,
@@ -156,7 +156,7 @@ Chart view is a very specific view that can share some parameters with ImageView
 
 Standard settings for this view is very simple:
 
-```json
+```text
 "chart": {
     "width": 400,
     "height": 170,
@@ -320,7 +320,7 @@ But this feature should be used with care. Preferences are common with all other
 
 If you still need some very specific settings to have a correct display (in example below, if there is not enough space for detailed iob, you can "force" this parameter to `false` of your watch, you can include within metadata block some settings constraint like that
 
-```json
+```text
 "metadata": {
     "name": "Default Watchface",
     "author": "myName",
@@ -360,7 +360,7 @@ To calculate this number, you can see that the difference between the leftMargin
 
 If the twin views are positioned vertically, in this case you must use the key `"topOffsetTwinHidden":`
 
-```json
+```text
 "uploader_battery": {
     "width": 49,
     "height": 30,
@@ -422,7 +422,7 @@ First, concerning BG value image, no choice here, it can only be in the backgrou
 
 Within `"background"` block, we will include 2 dedicated keys to make this rotation:
 
-```json
+```text
 "background": {
     "width": 400,
     "height": 400,
@@ -439,7 +439,7 @@ Within `"background"` block, we will include 2 dedicated keys to make this rotat
 
 Now we will go at the end of the file, after the last view:
 
-```json
+```text
 "second_hand": {
     "width": 120,
     "height": 120,
@@ -470,7 +470,7 @@ Default background of chart is transparent, so to hide BG scale included into ba
 
 Of course, the sizing and positioning of the view must be done to the pixel!
 
-```json
+```text
 "chart": {
     "width": 216,
     "height": 107,
@@ -492,7 +492,7 @@ As explain before, freetext views are in front of chart and in front of backgrou
 
 Note that the removed bottom part of these images has been used as background of chart to have a perfect integration.
 
-```json
+```text
 "freetext1": {
     "width": 400,
     "height": 400,
@@ -505,7 +505,7 @@ Note that the removed bottom part of these images has been used as background of
 ```
 For this view we include the link to another `"dynData"`block named `avgDeltaBackground`. This block will manage avgDelta scale according to avgDelta value.
 
-```json
+```text
 "avgDeltaBackground": {
     "valueKey": "avg_delta",
     "minData": -20,
@@ -540,7 +540,7 @@ Then we will use a series of images, starting from `"image1":` to `"image8":`. T
 
 For these views will will combine dynamic images and rotation feature explained before:
 
-```json
+```text
 "freetext2": {
     "width": 276,
     "height": 276,
@@ -574,7 +574,7 @@ For these views will will combine dynamic images and rotation feature explained 
 ```
 Here each view is dedicated to a specific scale (so is linked to a dedicated dynData block), you can also notice that `"rotationOffset":` key is enabled for these 3 views.Now take a look on the first dynData block:
 
-```json
+```text
 "avgDelta5": {
     "valueKey": "avg_delta",
     "minData": -20,
@@ -608,7 +608,7 @@ The other dynData blocks are defined the same way to tune `"avgDelt10"`and `"avg
 
 in Steampunk watchface loop green and red arrows (for status) are disabled, this is also managed with a dedicated dynData block associated to loop view.
 
-```json
+```text
     "loopArrows": {
         "invalidImage": "greyArrows",
         "image1": "greenArrows",
@@ -625,7 +625,7 @@ In this example, `greyArrows`, `greenArrows` and `redArrows` files are not inclu
 
 To finish the overview of dynData feature, we will take a look on battery management. The idea here is to customize text color according to battery level (from 0 to 100%)
 
-```json
+```text
 "uploader_battery": {
     "width": 60,
     "height": 28,
@@ -665,7 +665,7 @@ Note these two views also use TwinView feature explain [here](#cwf-reference-twi
 
 Now lets take a look on dynData block:
 
-```json
+```text
 "batteryIcons": {
     "invalidFontColor": "#00000000",
     "fontColor1": "#A00000",
@@ -697,7 +697,7 @@ Within Steampunk, we have to set of images according to units: `background` imag
 
 To do that we will replace `dynData` key by a `dynPref`key within view block:
 
-```json
+```text
  "background": {
     "width": 400,
     "height": 400,
@@ -712,7 +712,7 @@ Usage of `dynPref`keys will be very close to `dynData`keys explained in previous
 
 Now we will take a look at the end of the json file, after `dynData` block:
 
-```json
+```text
 "dynData": {
     ...
 },
@@ -754,7 +754,7 @@ Most of the time, when you set a preference, it's not to get "dynamic behaviour"
 
 First lets see the beginning of json file:
 
-```json
+```text
 "dynPrefColor": "prefColorDark",
 "pointSize": 2,
 "enableSecond": false,
@@ -771,7 +771,7 @@ First lets see the beginning of json file:
 
 And at the end, within the `dynPref` block, you will have a specific dynPref block for default colors:
 
-```json
+```text
 "prefColorDark": {
     "prefKey": "key_dark",
     "true": {
@@ -800,7 +800,7 @@ The difference between this dynPref block and the other standard dynPref blocks 
 
 Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view:
 
-```json
+```text
 "basalRate": {
     "width": 90,
     "height": 32,
@@ -814,7 +814,7 @@ Lets now take a look on items included into the "divider banner" (in example bel
 ```
 Then within dynPref block, you can see that Match divider parameter (`key_match_divider` key), include the 2 blocks "true" and "false", but these two blocks are only used to define that view will use either "dark" dynBlock (so exactly the same background and text color than the otherviews outside the banner), or "white" dynBLock that will set opposite colors for background and text...
 
-```json
+```text
 "matchDivider": {
     "prefKey": "key_match_divider",
     "true": {
@@ -844,7 +844,7 @@ Note that here you are within a "dynData" block, then to define a color or a fon
 
 Then we will see a third example with iob views (`iob1` and `iob2`), where we will use smaller text for detailed iob and bigger text for total iob:
 
-```json
+```text
 "iob1": {
     "width": 125,
     "height": 33,
@@ -871,7 +871,7 @@ Then we will see a third example with iob views (`iob1` and `iob2`), where we wi
 ```
 You will see within default view settings the text size (19 on `iob1` and 24 on `iob2`) and the two different `dynPref` block that should tune textsize (according to detailed iob parameter), and colors (according to dark parameter)
 
-```json
+```text
 "prefIob1": {
     "prefKey": "key_show_detailed_iob",
     "true": {
@@ -899,7 +899,7 @@ Then "dark" dynPref block will be used to set colorand fontColor
 
 In this example the dynData block that will be used for iob1 view will be if detailed IOB is enabled and dark enabled:
 
-```
+```text
 {
     "color1": "#000000",
     "fontColor1": "#FFFFFF",
@@ -911,7 +911,7 @@ So the text will be inwhite on black background and the size 24 will replace def
 
 The dynData block that will be used for the same view iob1 if detailed IOB is disabled and dark disabled will be:
 
-```
+```text
 {
     "color1": "#FFFFFF",
     "fontColor1": "#000000"
@@ -937,11 +937,11 @@ If you use a zip "v2" with a watch that includes CustomWachface V1, you will hav
 
 CustomWatchface V2 includes these new features:
 
-- [New Status view](cwf-reference-new-status-feature)
-- [New TempTarget view](cwf-reference-new-temp-target-feature)
-- [New Reservoir Level view](cwf-reference-new-reservoir-level-feature)
-- [New Formatting Feature](cwf-reference-new-formating-feature)
-- [Show External data for Follower](cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
+- [New Status view](#cwf-reference-new-status-feature)
+- [New TempTarget view](#cwf-reference-new-temp-target-feature)
+- [New Reservoir Level view](#cwf-reference-new-reservoir-level-feature)
+- [New Formatting Feature](#cwf-reference-new-formating-feature)
+- [Show External data for Follower](#cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
 
 (cwf-reference-new-status-feature)=
 
@@ -983,7 +983,7 @@ DynData value equals:
 - 1 (Loop Target) or
 - 2 (User Temp Target)
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
 
 (cwf-reference-new-reservoir-level-feature)=
 
@@ -1005,7 +1005,7 @@ The DynData Keys associated with Reservoir Level are:
   - 1 (Warning Level, Yellow color by default)
   - 2 (Urgent Level, Red color by default)
 
-Note that this view is also available for external data (see [below](cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
+Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
 
 (cwf-reference-new-formating-feature)=
 
@@ -1031,7 +1031,7 @@ I will not explain below how the whole views are managed within zip file (positi
 
 First lets start by the views:
 
-```json
+```text
 "uploader_battery": {
     "width": 200,
     "height": 50,
@@ -1075,7 +1075,7 @@ For this watchface, raw values are used without any conversion, so for both view
 
 Now we will take a look on `"uploader"` block defined within `"dynPref"`:
 
-```json
+```text
 "uploader": {
     "prefKey": "key_show_loop_status",
     "true": {
@@ -1115,7 +1115,7 @@ So in the above example `%.0f` will show Double value as an integer
 
 Let's now take a look on timestamp dynPref block to manage plural:
 
-```json
+```text
 "timestamp": {
     "prefKey": "key_show_loop_status",
     "true": {
@@ -1161,7 +1161,7 @@ To use this feature, you need to:
 
 - have at least 2 of the 3 following apps installed in phone (AAPS, AAPSCLIENT, AAPSCLIENT2)
 - enable Broadcast data in AAPSCLIENT and/or AAPSCLIENT2 to broadcast data to the main app used to sync with CustomWatchface (AAPS or AAPSCLIENT)
-- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](cwf-reference-key-and-keyvalue-reference) below)
+- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](#cwf-reference-key-and-keyvalue-reference) below)
 
 Note that if main app in phone is AAPSCLIENT and secondary app which broadcast data is AAPSCLIENT2, you will have to enable `Switch external data in watchface` parameter within Custom Watchface dedicated parameter if you use a watchface which use standard views and Ext1 additional views (Ext1 is linked to AAPSCLIENT and Ext2 is linked to AAPSCLIENT2)
 
