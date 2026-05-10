@@ -3,11 +3,13 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - master
+      - dev
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
       - master
+      - dev
   workflow_dispatch:
 
 env:
