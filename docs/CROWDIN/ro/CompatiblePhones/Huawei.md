@@ -12,7 +12,7 @@ Există diferite opțiuni, unele specifice Android, altele specifice Huawei:
   
   * Setări / Aplicație / Selectați AndroidAPS/xdrip+ / Sub baterie / Lansarea aplicației
     
-    * Asigurați-vă că eliminați „gestionarea automată”
+    * Asigurați-vă că eliminați "gestionarea automată"
     * Permiteți:
       
       * Lansare automată
