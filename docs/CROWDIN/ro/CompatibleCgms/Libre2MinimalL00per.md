@@ -143,7 +143,7 @@ Mulți oameni au întrebat dacă această metodă poate fi folosită cu un senzo
 
 - *Omogenizați datele Libre 3 când se folosește metoda xxx*: lasă implicit. Creșteți valoarea pentru senzorii zgomotoși, scădeți când este stabilă.
 
-![xDrip+ setări de omogenizare](../images/minimal00per/xdripNFCsmooth.png)
+![xDrip+ setări de netezire](../images/minimal00per/xdripNFCsmooth.png)
 
 **Setări mai puțin obișnuite -\> Setări Bluetooth** (*sunt importante și pot varia în funcție de telefon/configurare*)
 

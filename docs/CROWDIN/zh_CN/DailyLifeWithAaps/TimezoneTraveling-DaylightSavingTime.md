@@ -109,14 +109,14 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
    * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF).
    * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. 现在你必须将其关闭。
 
-<img width="576" height="1289" alt="Screenshot_20260329-110315 (1)" src="https://github.com/user-attachments/assets/ca40c1c6-1697-4832-ae10-5cf6a1dc0bce" />
+![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
 2. Find a timezone that has the same time as your current location but doesn't use DST.
    
    * 可以在[https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)找到这些国家的列表。
    * 对于中欧时间（CET），可以是“布拉柴维尔”（刚果）。 将手机的时区更改为刚果。
 
-<img width="576" height="1289" alt="Screenshot_20260329-111830" src="https://github.com/user-attachments/assets/b7b7f738-f91e-40df-ad79-f404fbfb9ae6" />
+![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
 3. **AAPS** refresh your pump and switch to your desired **Profile**.
 

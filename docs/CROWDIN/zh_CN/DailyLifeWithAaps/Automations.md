@@ -17,7 +17,7 @@
     例如：触发警报；调整基础率百分比；Pod更换时导出AAPS设置。
 
 
-有多种自动化选项可供选择，建议用户在AAPS应用的自动化部分中详细研究这些选项。 您可访问 ![**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) 与 ![**Discord**](https://discord.gg/4fQUWHZ4Mw) 搜索AAPS用户群组，参考其他用户的自动化设置案例。
+有多种自动化选项可供选择，建议用户在AAPS应用的自动化部分中详细研究这些选项。 You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
 
 ## 自动操作如何帮助我们
 

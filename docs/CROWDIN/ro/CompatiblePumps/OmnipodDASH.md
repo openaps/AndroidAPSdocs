@@ -122,7 +122,7 @@ Pentru a verifica dacă ați selectat DASH în **AAPS**, dacă aveți **caseta b
 
 ### Activează pompă
 
-1. Navigați la fila **DASH** și faceți clic pe butonul **Gestionare pompă (1)** și apoi apăsați pe **Activați pompă (2)**.
+1. Navigați la fila **DASH** și apăsați pe butonul **Gestionare pompă (1)** și apoi apăsați pe **Activați pompă (2)**.
 
    ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
 
@@ -200,13 +200,13 @@ Pentru a verifica dacă ați selectat DASH în **AAPS**, dacă aveți **caseta b
 
 Pentru a dezactiva o pompă (fie de la expirare, fie de la o defecțiune de pompă):
 
-1. Mergeți la fila **DASH**, faceți clic pe butonul **Gestionare pompă (1)**, iar pe ecranul **Gestionare pompă** click pe butonul **Dezactivează pompă (2)**.
+1. Mergeți la fila **DASH**, apăsați pe butonul **Gestionare pompă (1)**, iar pe ecranul **Gestionare pompă** click pe butonul **Dezactivează pompă (2)**.
 
    ![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
 
    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
-2. Pe ecranul **Dezactivați pompă**, faceți clic pe butonul **Următorul** pentru a începe procesul de dezactivare a pompei.
+2. Pe ecranul **Dezactivați pompă**, apăsați pe butonul **Următorul** pentru a începe procesul de dezactivare a pompei.
 
    Veți primi un semnal sonor de confirmare de la pompă că dezactivarea a reușit.
 
@@ -214,13 +214,13 @@ Pentru a dezactiva o pompă (fie de la expirare, fie de la o defecțiune de pomp
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
-3. O bifă verde va fi afișată la dezactivarea cu succes. Faceți clic pe butonul **Următorul** pentru a afișa ecranul de pompă dezactivată.
+3. O bifă verde va fi afișată la dezactivarea cu succes. Apăsați pe butonul **Următorul** pentru a afișa ecranul de pompă dezactivată.
 
    Acum puteți să dați jos pompa deoarece sesiunea activă a fost dezactivată.
 
    ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-4. Faceți clic pe butonul verde pentru a reveni la ecranul **Gestionare pompă**.
+4. Apăsați pe butonul verde pentru a reveni la ecranul **Gestionare pompă**.
 
    ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
@@ -617,7 +617,7 @@ Driverul Omnipod Dash prezintă o varietate de alerte unice în **fila Vedere de
 
 Un rezumat al principalelor alerte pe care este posibil să le întâlniți este prezentat mai jos:
 
-- No active Pod session detected. Această alertă poate fi dezactivată temporar prin apăsarea **AMÂNAȚI** dar va continua să se declanșeze atâta timp cât o nouă pompă nu a fost activată. Once activated this alert is automatically silenced.
+- Nicio sesiune activă de pompă detectată. Această alertă poate fi dezactivată temporar prin apăsarea **AMÂNAȚI** dar va continua să se declanșeze atâta timp cât o nouă pompă nu a fost activată. Odată activată, această alertă este pusă în mod silențios automat.
 - Pompă suspendată Alertă informațională că pompa a fost suspendată.
 - Setarea bazalei în **Profil** a eșuat: Administrarea ar putea fi suspendată! Reîmprospătați manual starea pompei din fila Omnipod și reluați administrarea, dacă este necesar. Alertă informativă că setarea bazalei din pompă în **Profil** a eșuat și va trebui să apăsați *Reîmprospătați* pe fila Omnipod.
 - Nu s-a putut verifica dacă bolusul **SMB** a avut loc cu succes. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments. Alertă că comanda **SMB** nu a putut fi verificată cu succes, va trebui să verificați câmpul *Ultimul bolus* din fila DASH pentru a vedea dacă bolusul **SMB** a reușit și dacă nu eliminați intrarea din fila Tratamente.

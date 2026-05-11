@@ -89,7 +89,7 @@ Algoritmul OpenAPS nu suportă un bolus paralel extins sau bolusuri multiple. Da
 
 ## Alarme la administrarea bolusului
 
-* Dacă AAPS detectează că un bolus identic a fost livrat cu succes în același minut, administrarea bolusului va fi prevenită cu un număr identic de unități de insulină. Dacă doriți să bolusați aceeași cantitate de insulină de două ori în succesiune rapidă, așteptați încă două minute și apoi administrați din nou bolusul. În cazul în care primul bolus a fost întrerupt sau nu a fost livrat din alte motive, puteți retrimite imediat bolusul de la AAPS 2.0 încoace.
+* Dacă AAPS detectează că un bolus identic a fost administrat cu succes în același minut, administrarea bolusului va fi prevenită cu un număr identic de unități de insulină. Dacă doriți să bolusați aceeași cantitate de insulină de două ori în succesiune rapidă, așteptați încă două minute și apoi administrați din nou bolusul. În cazul în care primul bolus a fost întrerupt sau nu a fost administrat din alte motive, puteți retrimite imediat bolusul de la AAPS 2.0 încoace.
 * Alarma este un mecanism de siguranță care citește istoricul bolusurilor din pompă înainte de a trimite un nou bolus pentru a calcula corect insulina la bord (IOB), chiar și atunci când un bolus este administrat direct din pompă. În acest caz, trebuie prevenite înregistrările care nu pot fi distinse.
 
 ![Bolus dublu](../images/combo/combo-tips-doppelbolus.png)

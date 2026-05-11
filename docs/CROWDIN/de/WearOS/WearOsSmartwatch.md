@@ -205,7 +205,7 @@ Wenn das Sideloading der **AAPS** Wear.apk auf die Smartwatch erfolgreich war, s
 
 Für bestimmte Smartwatches wie z. B. die Samsung Galaxy, „Remote Verbindung“ unter Samsung Galaxys erweiterten Funktionen muss auf **an** geändert werden, um **Wear.apk** & **AAPS** remote über WLAN nutzen zu können.
 
-![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)
+![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
 
 ### Verbindungsprobleme zwischen **AAPS** Smartwatch und **AAPS** Smartphone beheben
 

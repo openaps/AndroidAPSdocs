@@ -133,6 +133,8 @@ Vyberte inzulínovú pumpu ktorú používate. Viac informácií nájdete na str
   * Keď začínate s **AAPS**, počas prvých [cieľov](../SettingUpAaps/CompletingTheObjectives.md)
   * Pre pumpu, ktorá ešte nieje priamo podporovaná AAPS
 
+(Config-Builder-sensitivity-detection)=
+
 ## Detekcia citlivosti
 
 Vyberte akým spôsobom má byť zisťovaná vaša citlivosť na inzulín. Viac informácií o jednotlivých možnostiach nájdete [tu](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Táto funkcia priebežne analyzuje vaše dáta a upravuje parametre ak rozpozná, že reagujete na inzulín citlivejšie (alebo naopak, odolnejšie) ako obvykle. Viac podrobností o algoritme citlivosti nájdete v [dokumentácii OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).

@@ -56,4 +56,4 @@ Nu uitați să dezactivați Google Play Protect.
 
 Pentru anumite ceasuri inteligente, cum ar fi Galaxy Samsung, 'Conexiune la distanță' sub funcțiile avansate ale Galaxy Samsung trebuie să fie trecute cu **pornit** pentru a utiliza Jelly 2, **Wear.apk** & **AAPS** de la distanță prin wifi.
 
-![MURCIMG-20251007-WA0000](https://github.com/user-attachments/assets/5db08a08-f256-49a0-8843-46bdd01b33d6)
+![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)

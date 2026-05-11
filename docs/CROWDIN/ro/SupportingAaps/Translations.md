@@ -3,14 +3,14 @@
 * Pentru frazele utilizate în aplicație mergeți la <https://crowdin.com/project/androidaps> și autentificați-vă folosind contul GitHub
 * Pentru documentație vă rugăm să vizitați <https://crowdin.com/project/androidapsdocs> și să vă autentificați folosind contul GitHub
 
-* Trimiteți o cerere de aderare echipei ce se ocupă de documente. Pentru a face acest lucru, faceți clic pe steagul limbii dorite și apoi pe butonul "Alăturare" din colțul din dreapta sus al paginii următoare. Vă rugăm să menționați limba, oferiți câteva informații despre dumneavoastră și experiența AAPS și dacă dorești să fii traducător sau corector (numai persoane competente în traducere + utilizatori avansați AAPS).
+* Trimiteți o cerere de aderare echipei ce se ocupă de documente. Pentru a face acest lucru, apăsați pe steagul limbii dorite și apoi pe butonul "Alăturare" din colțul din dreapta sus al paginii următoare. Vă rugăm să menționați limba, oferiți câteva informații despre dumneavoastră și experiența AAPS și dacă dorești să fii traducător sau corector (numai persoane competente în traducere + utilizatori avansați AAPS).
 
 ```{admonition} Time for Approval :class: note
 
 Aprobarea este un pas manual. Ca organizație non-profit, nu oferim SLA dar, în general, aprobarea va fi făcută în < 1 zi. Dacă nu, vă rugăm să contactați echipa Doc prin Facebook sau Discord.
 
-    <br />* Când vă aprobăm, faceți clic pe steagul
-       ! Când vă aprobăm, faceți clic pe steagul](../images/translation_flags.png)
+    <br />* Când vă aprobăm, apăsați pe steagul
+       ! Când vă aprobăm, apăsați pe steagul](../images/translation_flags.png)
     
     ## Traducerea aplicației
     
@@ -19,9 +19,9 @@ Aprobarea este un pas manual. Ca organizație non-profit, nu oferim SLA dar, în
     
     * Dacă nu aveți preferințe pentru frazele pe care le traduceți doar selectați butonul "Traducere Toate" pentru a începe. Vă va arăta frazele care necesită traducere.
     
-       ![Faceți clic pe toate](../images/translations-click-translate-all.png)
+       ![Apăsați pe toate](../images/translations-click-translate-all.png)
     
-    * Dacă doriți să traduceți un fișier individual, vă rugăm să căutați fișierul prin bara de căutare sau prin structura arborescentă și faceți clic pe numele fișierului pentru a începe activitatea de traducere pentru frazele din acel fișier.
+    * Dacă doriți să traduceți un fișier individual, vă rugăm să căutați fișierul prin bara de căutare sau prin structura arborescentă și apăsați pe numele fișierului pentru a începe activitatea de traducere pentru frazele din acel fișier.
     
        ![Apăsați pe fraze. ml](../images/translations-click-strings.png)
     

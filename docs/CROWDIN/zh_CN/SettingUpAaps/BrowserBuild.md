@@ -118,7 +118,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 <!--crowdin:enable-->
 ````
 AndroidAPS 的构建需要私钥（Private keys），这些私钥存储在一个 Java 密钥库（Java KeyStore，简称 JKS）中：
-- 如果你是第一次构建 AAPS（或者你没有 Android Studio 生成的 JKS 文件），请按照 [AAPS-CI 选项 1 – 生成 JKS (Generate JKS)](aaps-ci-option1) 的步骤来完成设置。
+- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 </br>
 
 ```{warning}
@@ -132,7 +132,7 @@ AndroidAPS 的构建需要私钥（Private keys），这些私钥存储在一个
 7. 从 Nightscout 恢复你的数据。
 ```
 
-- 如果你想使用自己的 JKS 文件（即你之前在电脑上使用 Android Studio 构建 AAPS 时所用的密钥文件），并且你知道该文件的密码和别名（通常为 key0），请选择 [AAPS-CI 选项 2 – 上传现有 JKS (Upload Existing JKS)](aaps-ci-option2)。
+- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](#aaps-ci-option2).
 
 </br>
 
@@ -295,7 +295,7 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
-(variant)=
+(browserbuild-variant)=
 
 ### Build Variants selection
 
@@ -359,7 +359,7 @@ Customizations are usually not necessary. This is for your information ony.
   - Use workflow from Branch: Please enter the branch name you want to cherry-pick to.
   - Upstream Repository: Please enter the repository name you want to cherry-pick from.
   - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
-  - Select Build Variant: [variant](variant)
+  - Select Build Variant: [variant](#browserbuild-variant)
 
 (ci-keystore-export)=
 ## CI KeyStore Export

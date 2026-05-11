@@ -117,7 +117,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 <!--crowdin:enable-->
 ````
 Construirea AndroidAPS necesită chei private, care sunt stocate într-un fișier Java KeyStore (JKS):
-- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](aaps-ci-option1) to complete the setup.
+- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
 </br>
 
 ```{warning}
@@ -132,7 +132,7 @@ You will need to:
 7. Restore your data from Nightscout.
 ```
 
-- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](aaps-ci-option2).
+- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](#aaps-ci-option2).
 
 </br>
 
@@ -295,7 +295,7 @@ GitHub will now be able to store the AAPS apk file in your Google Drive, once bu
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
-(variant)=
+(browserbuild-variant)=
 
 ### Build Variants selection
 
@@ -359,7 +359,7 @@ Customizations are usually not necessary. This is for your information ony.
   - Use workflow from Branch: Please enter the branch name you want to cherry-pick to.
   - Upstream Repository: Please enter the repository name you want to cherry-pick from.
   - Commit SHA: Please enter the commit SHA you want to cherry-pick.(like git commit hash)
-  - Select Build Variant: [variant](variant)
+  - Select Build Variant: [variant](#browserbuild-variant)
 
 (ci-keystore-export)=
 ## CI KeyStore Export

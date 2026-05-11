@@ -1,23 +1,24 @@
 # Entwickler-Version (dev branch)
 
-<font color="#FF0000"><strong>Achtung:</strong></font>
-Der 'Dev Branch' dient ausschließlich der Weiterentwicklung von AAPS. Er darf nur auf einem separaten Smartphone zu Testzwecken, <font color="#FF0000"><strong>nicht für das tatsächliche Loopen</strong></font> verwendet werden.
+```{warning}
+Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+```
 
-Die aktuelle, getestete und stabile AAPS-Version ist im [Master Branch](https://github.com/nightscout/AndroidAPS/tree/master). Es wird dringend empfohlen, nur den Master branch für das tatsächliche Loopen zu verwenden.
+The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
 
-Achtung: Die Entwicklungsversion (Dev Branch) von AAPS ist für Entwickler sowie Tester bestimmt, die mit Stacktraces, Log-Dateien und dem Debugger umgehen können, um Fehlerberichte erstellen zu können, die Entwicklern beim Beheben der Fehler helfen (kurzum: Personen, die wissen, was sie tun und eigentverantwortlich arbeiten können). Aus diesem Grunde sind unfertige Features deaktiviert. Um dieses Feature zu enablen, aktiviere den **Engineering Mode** indem Du einen leeren File mit dem Namen `engineering_mode` im Verzeichnis /AAPS/extra auf dem Smartphone anlegst. Das Aktivieren dieser Features kann dazu führen, dass der Loop überhaupt nicht mehr funktioniert.
+The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
 
-Im Dev branch sieht man, welche Funktionen gerade getestet werden. Damit können Fehler ausgebügelt und Feedback darüber gegeben werden, wie die neuen Funktionen in der Praxis funktionieren. Meist wird die Entwickler-Version auf einem alten Telefon mit einer separaten Pumpe getestet bis es stabil läuft. Jede Benutzung des dev branch erfolgt auf eigene Gefahr! Wenn Du neue Funktionen ausprobierst mache Dir immer bewusst, dass Du Funktionen verwendest, die sich noch in Entwicklung befinden und nicht final freigegeben sind. Tue dies auf eigene Gefahr und mit der gebotenen Sorgfalt, um Deine eigene Sicherheit zu gewährleisten.
+However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
 
-Wenn Du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wurde, dann sehe im [issues tab](https://github.com/nightscout/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler bemerkt hat, falls nicht, kannst Du einen neuen Issue öffnen. Je mehr Informationen Du dabei mitlieferst, desto besser/schneller kann der Fehler reproduziert und behoben werden. Vergiss nicht, die [Protokolldateien](../GettingHelp/AccessingLogFiles.md) anzufügen. Die neuen Funktionen können auch auf [discord](https://discord.gg/4fQUWHZ4Mw) diskutiert werden.
+If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
 
-Eine Entwickler-Version hat ein Ablaufdatum. Das scheint unpraktisch, wenn es zufriedenstellend genutzt wird, aber es dient einem Zweck. Wenn eine einzelne Dev-Version die Runden macht, ist es einfacher, Fehler zu verfolgen, die Leute melden. Die Entwickler wollen nicht in einer Position sein, in der es drei Versionen von dev im Umlauf sind, in denen Fehler behoben werden müssen und Testuser Fehler, die schon behoben wurden in der aktuellsten Dev-Version, in guter Absicht nochmals melden.
+A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
 
 (branch-ci-test)=
 
 ## Einen bestimmten Zweig testen (branch-ci)
 
-Um einen Testzweig zu erstellen, wähle branch-ci aus. Das ermöglicht Dir einen bestimmten Zweig für die APK-Erstellung auszuwählen. Diese Methode eignet sich, wenn Du den Dev-Branch testen musst.
+To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -27,7 +28,7 @@ Um einen Testzweig zu erstellen, wähle branch-ci aus. Das ermöglicht Dir einen
 
 ## Testelemente in einem Pull-Request (GitHub CI-Aktionen bereitstellen)
 
-Verfügbar ab 3.3.2.1. Dev
+Available from 3.3.2.1.dev
 
 - Geeignet für Tester oder für diejenigen, die beim Testen helfen.
 
@@ -65,4 +66,4 @@ Verfügbar ab 3.3.2.1. Dev
     
     - variant:
     
-    - Bitte beachte hierzu den Abschnitt [Variante](variant)
+    - Please refer to [variant](#browserbuild-variant)

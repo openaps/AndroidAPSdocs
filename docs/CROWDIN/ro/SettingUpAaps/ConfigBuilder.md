@@ -133,6 +133,8 @@ Alegeți tipul de pompă pe care îl folosiți. Vedeți pagina [Pompe Compatibil
   * pe măsură ce faceți primii pași cu **AAPS**, în timpul primelor [obiective](../SettingUpAaps/CompletingTheObjectives.md)
   * pentru pompa care încă nu are driver
 
+(Config-Builder-sensitivity-detection)=
+
 ## Detectare Sensibilitate
 
 Alegeți tipul de detecție a sensibilității. Pentru mai multe detalii despre diferite designuri, vă rugăm să [citiți aici](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Această funcție analizează în timp real datele istorice și face ajustări dacă consideră că reacționați mai sensibil (sau invers, sunteți mai rezistent) la insulină decât de obicei. Mai multe detalii despre Algoritmul de Sensibilitate pot fi citite în [Documentația OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).

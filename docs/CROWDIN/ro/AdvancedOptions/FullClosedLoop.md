@@ -67,7 +67,7 @@ Cu toate acestea, Fiasp sau Lyumjev poate duce la ocluzii frecvente ale pompei, 
 Valori **glicemice** și conectivitate Bluetooth stabilă sunt necesare pentru a asigura că **AAPS** poate funcționa în mod optim fără a pierde timp important. **FCL** necesită un sistem stabil din punct de vedere tehnic 24/7:
 
 - **performanța CGM. Senzorul CGM nu ar trebui să producă valori săltărețe **ale glicemiei** care ar putea fi interpretate greșit de **FCL** ca un semn al unui început de masă. Similar, calibrările **CGM** pot produce rezultate săltărețe.
-- cum și unde se face orice omogenizarea valorilor de la **CGM** și ce poate implica acest lucru pentru ajustările dumneavoastră. În special, modul în care se definește delta, și AAPS recunoaște acest lucru ca fiind semnul unui început de masă.
+- cum și unde se face orice netezirea valorilor de la **CGM** și ce poate implica acest lucru pentru ajustările dumneavoastră. În special, modul în care se definește delta, și AAPS recunoaște acest lucru ca fiind semnul unui început de masă.
 - stabilitatea Bluetooth a pompei și a senzorului;
 - evitarea (sau cel puțin recunoașterea precoce) a ocluziei pompei;
 - fluxul de date și aplicațiile utilizate ale telefonului dumneavoastră și diferența între zilele de utilizare a senzorului;

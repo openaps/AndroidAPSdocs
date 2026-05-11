@@ -255,7 +255,7 @@ Your apk was built successfully and can be transferred to your phone!
 
 ![aplicație telefon neinstalată](../images/Update_AppNotInstalled.png)
 
-* Asigurați-vă că ați transferat fișierul “app-release.apk” pe telefon.
+* Asigurați-vă că ați transferat fișierul "app-release.apk" pe telefon.
 * Dacă "Aplicația nu este instalată" este afișată pe telefon, urmați acești pași:
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)

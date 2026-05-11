@@ -12,7 +12,7 @@ Citiți [metoda de filtrare](../CompatibleCgms/SmoothingBloodGlucoseData.md) sug
 ## 1. xDrip+ (conectare directă la G7 sau ONE+)
 
 - Urmați instrucțiunile de aici: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Selectați xDrip+ în [Configurator, Sursă de glicemie](#Config-Builder-bg-source).
+- Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
 - Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+  [Setări xDrip+ ](../CompatibleCgms/xDrip.md)
 

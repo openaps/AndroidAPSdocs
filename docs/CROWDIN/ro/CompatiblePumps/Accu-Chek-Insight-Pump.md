@@ -48,13 +48,13 @@ Atentie: AAPS va scrie întotdeauna date în **primul profil al ratei bazale din
     
     ![Captura de ecran Informații de Împerechere Insight](../images/Insight_PairingInformation.png)
 
-Atentie: Nu va exista o conexiune permanentă între pompă și telefon. O conexiune va fi stabilită numai dacă este necesar (de ex la stabilirea ratei bazale temporare, livrarea de bolus, citirea istoricului pompei...). În caz contrar, bateriile de la telefon și de la pompa s-ar consuma mult prea repede.
+Atentie: Nu va exista o conexiune permanentă între pompă și telefon. O conexiune va fi stabilită numai dacă este necesar (de ex la stabilirea ratei bazale temporare, administrarea de bolus, citirea istoricului pompei...). În caz contrar, bateriile de la telefon și de la pompa s-ar consuma mult prea repede.
 
 (Accu-Chek-Insight-Pump-settings-in-aaps)=
 
 ## Setări în AAPS
 
-**Notă: Este acum posibil (numai cu AAPS v2.7.0sau mai mare) să utilizați „Folosiți întotdeauna valorile bazale absolute” dacă doriți să utilizați Autotune cu pompa Insight chiar dacă 'sincronizarea este activată' cu Nightscout.** (În AAPS mergeți la [Preferințe > NSClient > Setări avansate](#Preferences-advanced-settings-nsclient)).
+**Notă: Este acum posibil (numai cu AAPS v2.7.0sau mai mare) să utilizați "Folosiți întotdeauna valorile bazale absolute" dacă doriți să utilizați Autotune cu pompa Insight chiar dacă 'sincronizarea este activată' cu Nightscout.** (În AAPS mergeți la [Preferințe > NSClient > Setări avansate](#Preferences-advanced-settings-nsclient)).
 
 ![Captura de ecran Setări Insight](../images/Insight_settings.png)
 
@@ -62,13 +62,13 @@ Atentie: Nu va exista o conexiune permanentă între pompă și telefon. O conex
 
 * "Înregistrează schimbarea rezervorului": Se va înregistra automat schimbarea rezervorului de insulină daca rulezi pe pompa "umple canula".
 
-* "Înregistrează schimbările de tub": Aceasta adaugă o notă în baza de date AAPS când rulați programul de „umplere tub” pe pompă.
+* "Înregistrează schimbările de tub": Aceasta adaugă o notă în baza de date AAPS când rulați programul de "umplere tub" pe pompă.
 
 * "Înregistrează schimbările locului de inserție": Se va adăuga o notiță în baza de date AndroidAPS dacă rulați programul de "umplere canula" pe pompă. **Atentie: O modificare a locului de insertie resetează deasemenea si Autosens.**
 
 * "Înregistrează schimbarea bateriei": Se înregistrează schimbarea bateriei atunci când pui baterii noi în pompă.
 
-* „Înregistrează schimbările modului de operare”: Se va adăuga o notiță în baza de date AndroidAPS ori de câte ori porniți, opriți sau întrerupeți pompa.
+* "Înregistrează schimbările modului de operare": Se va adăuga o notiță în baza de date AndroidAPS ori de câte ori porniți, opriți sau întrerupeți pompa.
 
 * "Înregistrați alerte": Aceasta înregistrează o notă în baza de date AAPS ori de câte ori pompa emite o alertă (cu excepția mementourilor, anulării bolusului și a RBT - acestea nu sunt înregistrate).
 
@@ -78,7 +78,7 @@ Atentie: Nu va exista o conexiune permanentă între pompă și telefon. O conex
 
 * "Dezactivare vibrații la livrare manuala de bolus": Se dezactivează vibrațiile pompei Insight atunci când livrează un bolus manual (sau bolus extins). Această setare este disponibilă doar cu cea mai recentă versiune de firmware Insight (3.x).
 
-* "Dezactivare vibrații la livrarea automată de bolus": Se dezactivează vibrațiile pompei Insight atunci când livrează un bolus automat (SMB (super micro bolus) sau bazala temporara cu emulare RBT). Această setare este disponibilă doar cu cea mai recentă versiune de firmware Insight (3.x).
+* "Dezactivare vibrații la administrarea automată de bolus": Se dezactivează vibrațiile pompei Insight atunci când livrează un bolus automat (SMB (super micro bolus) sau bazala temporara cu emulare RBT). Această setare este disponibilă doar cu cea mai recentă versiune de firmware Insight (3.x).
 
 * "Durata de restabilire a conexiunii": Aceasta definește cât va aștepta AndroidAPS înainte de a încerca din nou reconectarea după o încercare de conectare eșuată. Poți alege de la 0 la 20 de secunde. Dacă întâmpini probleme cu conexiunea, alege o durata de așteptare mai lung.   
       
@@ -116,7 +116,7 @@ Aceasta va reduce la tăcere toate alarmele din pompă, permițând AAPS să dec
 
 ### Vibrare
 
-În funcție de versiunea de firmware a pompei dumneavoastră, Insight va vibra scurt de fiecare dată când un bolus este livrat (de exemplu, când AndroidAPS inițiază un SMB sau emularea prin TBR livrează un bolus extins).
+În funcție de versiunea de firmware a pompei dumneavoastră, Insight va vibra scurt de fiecare dată când un bolus este administrat (de exemplu, când AndroidAPS inițiază un SMB sau emularea prin TBR livrează un bolus extins).
 
 * Firmware 1.x: Fără vibrații din proiectare.
 * Firmware 2.x: Vibrațiile nu pot fi dezactivate.

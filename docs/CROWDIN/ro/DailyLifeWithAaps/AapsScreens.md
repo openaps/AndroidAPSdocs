@@ -58,7 +58,7 @@ When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-fea
 
 Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
 
-     * "sensibilitatea ridică ținta" şi/sau 
+     * "sensibilitatea ridică ținta" și/sau 
      * "rezistența scade ținta" 
     
 
