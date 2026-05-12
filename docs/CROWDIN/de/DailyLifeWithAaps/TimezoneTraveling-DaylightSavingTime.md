@@ -2,18 +2,18 @@
 
 ## Mit der Pumpe über Zeitzonen hinweg reisen
 
-## Timezone change for Omnipod Dash
+## Zeitzonenwechsel mit Omnipod-Dash
 
 * Refresh the Dash tab
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* Wähle temporär ein anderes **Profil** aus und wechsel danach wieder zurück auf Dein Ausgangs- oder Dein gewünschtes **Profil**
 
-## Timezone change for DanaR, Korean DanaR
+## Zeitzonenwechsel mit DanaR, koreanische DanaR
 
 Es gibt keine Probleme beim Zeitzonenwechsel im Smartphone, da die Pumpe keine Historie verwendet
 
-## Timezone change for DanaRv2, DanaRS
+## Zeitzonenwechsel mit DanaRv2, DanaRS
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Da **AAPS** die Pumpenhistorie nutzt, die Einträge in der Pumpe aber keine Zeitangaben enthalten, benötigen diese Pumpen besondere Aufmerksamkeit. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
 
 Um dies zu vermeiden, gibt es zwei Möglichkeiten:
 
