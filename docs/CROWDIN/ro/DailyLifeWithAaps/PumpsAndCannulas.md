@@ -1,11 +1,11 @@
-# Daily Life - Pumps
-## Changing infusion sets: insulin reservoirs and cannulas
+# Viața de zi cu zi - Pompele
+## Schimbarea seturilor de infuzie: rezervoare de insulină și canule
 
-The procedure described below is for tubed pumps only and does not apply to patch pumps like Omnipod, Medtrum Nano, Accu-Chek Solo etc. This procedure is sometimes referred to as a “set change”, with a “full” set change including the insulin reservoir and cannula, and a “partial” set change referring to a change of cannula only.
+Procedura descrisă mai jos este numai pentru pompe cu fir și nu se aplică pentru pompe plasture cum ar fi Omnipod, Medtrum Nano, Accu-Chek Solo șamd. Această procedură este uneori denumită "schimbare de set", cu o schimbare "completă" a setului, care include rezervorul de insulină și canula, și o schimbare "parțială" a setului care se referă numai la o schimbare a canulei.
 
 Modificările cartușului fizic/rezervorului nu pot fi efectuate prin intermediul **AAPS** și trebuie efectuate direct prin intermediul pompei. Acestea trebuie să fie înregistrate manual în **AAPS**, odată terminate.
 
-### Guide for changing both the pump reservoir and cannula
+### Ghid pentru schimbarea atât a rezervorului pompei cât și a canulei
 
 1) În **AAPS**, deconectare pompă: Apăsați lung pe pictograma "Buclă deschisă"/"Buclă închisă" pe **AAPS** Ecranul de pornire și selectați "Deconectare pompă - 1 oră". The pump icon will change to a grey icon, indicating that the pump is disconnected.
 
