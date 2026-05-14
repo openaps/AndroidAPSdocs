@@ -21,30 +21,30 @@ On the right upper side select the Drive app in the Google menu.
 
 ![Porniți aplicația Drive](../images/GoogleDriveInWebbrowser.png)
 
-Right click in the free area below the files and folders in the Google Drive app and select "Upload File".
+Apăsați dreapta în zona liberă de sub fișierele și dosarele din aplicația Google Drive și selectați "Urcare fișier".
 
 ![Încărcați fișierul apk cu aplicația Google Drive](../images/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+Fișierul apk ar trebui să fie acum încărcat pe Google Drive.
 
 
-### Use the Google Drive app to execute the apk file for installation
+### Utilizați aplicația Google Drive pentru a executa fișierul apk pentru instalare
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Comutați la mobil și porniți aplicația Google Drive. Este o aplicație preinstalată și poate fi găsită în locul în care celelalte aplicații Google sunt localizate sau prin căutarea numelui aplicației.
 
 ![porniți aplicația Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by double click on the filename in the Google Drive App on the mobile.
+Lansați instalarea fișierului apk printr-o dublă atingere pe numele fișierului în aplicația Google Drive de pe mobil.
 
 ![lansați instalarea apk](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Driver at the moment please allow it for that short moment and disallow it afterwards as it is a security risk when you let it enable all the time.
+În cazul în care primiți o notificare de securitate că nu vi se permite să instalați aplicații de pe Google Driver în acest moment, vă rugăm să le permiteți pentru acel scurt moment și să nu îl permiteți ulterior, deoarece reprezintă un risc de securitate atunci când îl activați tot timpul.
 
 ![Notificare de securitate Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
 ![Notificare de securitate Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finished your are done with this step.
+După ce instalarea s-a terminat, ați terminat cu acest pas.
 
 ar trebui să vedeți pictograma **AAPS** și să puteți deschide aplicația.
 
@@ -55,13 +55,13 @@ V-ați amintit să nu permiteți instalarea de pe Google Drive?
 
 Vă rugăm să continuați cu [Configurare buclă AAPS](../SettingUpAaps/SetupWizard.md).
 
-## Option 2. Use a USB cable to transfer files
+## Opțiunea 2. Utilizați un cablu USB pentru a transfera fișiere
 Cea de-a doua modalitate de a transfera fișierul apk AAPS este cu un cablu [USB](https://support.google.com/android/answer/9064445?hl=en).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Transferați fișierul din locul său de pe calculator în dosarul "Descărcări" de pe telefon.
 
-On your phone, you will have to allow installation from unknown sources. Explicații despre cum să faceți acest lucru pot fi găsite pe internet (_spre exemplu_ [aici](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) sau [aici](https://www.androidcentral.com/unknown-sources)).
+Pe telefon, va trebui să permiteți instalarea din surse necunoscute. Explicații despre cum să faceți acest lucru pot fi găsite pe internet (_spre exemplu_ [aici](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) sau [aici](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, to install it, open the "downloads" folder on the phone, press the AAPS apk and select "install". Poți trece apoi la pasul următor, [Instalarea](../SettingUpAaps/SetupWizard.md), care vă va ajuta să configurați aplicația **AAPS** și să închideți bucla pe telefonul dumneavoastră inteligent.
+Odată ce ați transferat fișierul prin mutarea lui, pentru a-l instala, deschideți dosarul "Descărcări" de pe telefon, apăsați pe fișierul apk AAPS și selectați "Instalați". Poți trece apoi la pasul următor, [Instalarea](../SettingUpAaps/SetupWizard.md), care vă va ajuta să configurați aplicația **AAPS** și să închideți bucla pe telefonul dumneavoastră inteligent.
 
 Vă rugăm să continuați cu [Configurare buclă AAPS](../SettingUpAaps/SetupWizard.md).

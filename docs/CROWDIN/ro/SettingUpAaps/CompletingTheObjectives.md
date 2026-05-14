@@ -157,13 +157,13 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 
 ![Example negative IOB](../images/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon in the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- Stabiliți intervalul țintă puțin mai mare decât de obicei ați intenționa, doar pentru a fi în siguranță și pentru a adăuga un tampon de siguranță.
+- Activați modul "Suspendare la glicemie scăzută" prin apăsarea și ținerea apăsată a pictogramei buclă în colțul din dreapta sus al Vederii de ansamblu și prin selectarea pictogramei bucla - mod LGS.
+- Urmăriți bazalele active temporare uitându-vă la textul bazal turcoaz pe ecranul VEDERE DE ANSAMBLU sau la randarea turcoaz a bazalei ca parte a graficului VEDERE DE ANSAMBLU.
+- Este posibil să aveți parte temporar de valori crescute în urma tratării hipoglicemiilor fără a fi în măsură să creșteți bazalele la revenire.
 
 (objectives-objective7)=
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## Obiectivul 7: reglarea buclei închise, creșterea valorii maxIOB peste 0 și scăderea treptată a țintelor de glicemie
 
 To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
 
@@ -171,14 +171,14 @@ Minimal time to complete this objective: **1 day**. Acesta este un timp de aște
 
 - Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen. Stay in **Closed Loop** over a period of 1 day.
 
-- Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Creșteți lent 'Maximum IOB peste care OpenAPS nu poate trece' (în OpenAPS numit 'max-iob') peste 0, până când găsiți cele mai bune setări pentru dumneavoastră.
 
 The default recommendation for this setting is “**average meal bolus + 3x max daily basal**”, where “max daily basal” is the maximum hourly value in any time segment of the day.
 
 ![max daily basal](../images/MaxDailyBasal2.png)
 
-Această recomandare ar trebui considerată ca un punct de plecare. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
-* lower the "Maximum total IOB OpenAPS can’t go over" value;
+Această recomandare ar trebui considerată ca un punct de plecare. Dacă utilizați această regulă, dar vi se întâmplă ca AAPS să livreze prea multă insulină pe măsură ce valorile glicemiei cresc, poate fi nevoie să:
+* reduceți valoarea "IOB maxim peste care OpenAPS nu poate trece";
 * review your **Profile** settings, only making one adjustment at a time.
 
 Alternatively, if you are very insulin resistant, raise the **maxIOB** value very cautiously.
@@ -186,7 +186,7 @@ Alternatively, if you are very insulin resistant, raise the **maxIOB** value ver
 Once confident on how much **maxIOB** suits your looping patterns, lower your **BG targets** to your desired level.
 
 (objectives-objective8)=
-## Objective 8: Adjust basals and ratios if needed, and then enable Autosens
+## Obiectivul 8: Ajustarea bazalelor și a rapoartelor dacă este necesar și apoi activarea Autosens
 
 As part of this **objective**, you will revisit your **Profile**'s performance and will use [Autosens](#Open-APS-features-autosens) functionality as an indicator for wrong settings.
 
@@ -201,9 +201,9 @@ Additionally, you can use [Autotune](https://openaps.readthedocs.io/en/latest/do
 (objectives-objective9)=
 ## Obiectivul 9: Facilitarea unor elemente suplimentare de oref1 pentru utilizarea în timpul zilei, cum ar fi super micro bolusul (SMB)
 
-In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, and why basal is set to zero temporarily after SMBs are given (zero-temping).
+In **Objective 9**, you will tackle and use **"Super Micro Bolus (SMB)"** as one core functionality. După ce ați realizat citirile obligatorii, veți înțelege bine ce reprezintă SMB, cum funcționează și de ce bazala este setată temporar la zero după ce au fost date SMB (temporară zero).
 
-Minimal time to complete this objective: **28 days**. Acesta este un timp de așteptare obligatoriu. You can’t proceed to the next Objective before this time is up.
+Minimal time to complete this objective: **28 days**. Acesta este un timp de așteptare obligatoriu. Nu puteți trece la următorul obiectiv înainte ca acest timp să se încheie.
 
 - The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
 - Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U). A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference.
@@ -214,7 +214,7 @@ Minimal time to complete this objective: **28 days**. Acesta este un timp de aș
 
 **Automations** become available when **Objective 10** is started.
 
-Minimal time to complete this objective: **28 days**. Acesta este un timp de așteptare obligatoriu. You can’t proceed to the next Objective before this time is up.
+Minimal time to complete this objective: **28 days**. Acesta este un timp de așteptare obligatoriu. Nu puteți trece la următorul obiectiv înainte ca acest timp să se încheie.
 
 Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
 

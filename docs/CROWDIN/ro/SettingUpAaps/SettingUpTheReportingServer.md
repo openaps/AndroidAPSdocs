@@ -7,33 +7,33 @@ Momentan există două servere de raportare disponibile pentru a fi utilizate cu
 
 ![Reporting Servers](../images/Building-the-App/ReportingServer.png)
 
-We recommend using Nightscout.
+Vă recomandăm să folosiți Nightscout.
 
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout este o aplicație web care vă poate înregistra și afișa datele CGM și **AAPS** și creează rapoarte. Este o platformă puternică care este integrată în **AAPS** de mulți ani. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). De asemenea, permite aparținătorilor să trimită comenzi de la distanță la **AAPS**.
+Nightscout este o aplicație web care vă poate înregistra și afișa datele CGM și **AAPS** și creează rapoarte. Este o platformă puternică care este integrată în **AAPS** de mulți ani. Acesta permite utilizatorilor și persoanelor care îi îngrijesc să urmărească datele referitoare la diabet în timp aproape real (numai câteva secunde pot trece între primirea datelor și furnizarea de date în cazul în care există o conexiune suficientă la internet între toate componentele implicate). De asemenea, permite aparținătorilor să trimită comenzi de la distanță la **AAPS**.
 
-Nightscout is provided as open-source software. Anyone can create and operate a Nightscout server, using either free or paid-for services.
+Nightscout este pus la dispoziție ca software cu sursă liberă. Oricine poate crea și opera un server Nightscout, folosind servicii gratuite sau plătite.
 
 Mai multe informații sunt disponibile pe site-ul [proiectului Nightscout](http://nightscout.github.io/).
 
-### Option 1 - Set up your Nightscout server yourself
+### Opțiunea 1 - Configurați chiar dumneavoastră serverul Nightscout
 
-Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a completely free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
+Crearea serverului dumneavoastră de raportare Nightscout poate necesita una sau mai multe aplicații web, care vor necesita întreținere. Pentru a avea un serviciu complet gratuit, poate fi necesar să migrați siteul Nightscout și datele, dacă și când furnizorii elimină nivelul gratuit.
 
 O descriere a modului în care puteți configura Nightscout cu avantajele și dezavantajele diferitelor opțiuni de operare, inclusiv o estimare a costurilor, se poate găsi [aici](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
-### Option 2 - Pay for a hosted Nightscout service
+### Opțiunea 2 – Plătește pentru un serviciu găzduit de Nightscout
 
-There are also options from different service providers who host Nightscout for you, with a monthly fee. The costs are manageable, and the advantage of a hosted option is that you do not need to be IT-literate, or have any operating infrastructure.
+Există, de asemenea, opțiuni de la diferiți furnizori de servicii care găzduiesc Nightscout, cu o taxă lunară. Costurile sunt ușor de gestionat și avantajul unei opțiuni găzduite este că nu este necesar să fiți instruiți în domeniul informatic sau să aveți vreo infrastructură de operare.
 
 
-Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
+Utilizatorii de Nightscout existenți pot reconsidera unde și cum este găzduit serverul lor Nightscout din când în când, și să se treacă la o altă opțiune în cazul în care aceasta devine mai adecvată.
 
 Unele servicii de găzduire de Nightscout sunt prezentate [aici](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
-### Further configuration of Nightscout
+### Configurația ulterioară a Nightscout
 
 Once you have your Nightscout instance up and running, see [Nightscout configuration page](../SettingUpAaps/Nightscout.md) for additional considerations.
 
@@ -48,7 +48,7 @@ As there is a delay of three hours between data income and data reporting when u
 On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
 ```
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
+Tidepool is an [open source](https://github.com/tidepool-org) project. Oferă un cont gratuit pe serverele Tidepool.
 
 More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tidepool.md).
 
@@ -57,6 +57,6 @@ More information about setting up Tidepool with AAPS [here](../SettingUpAaps/Tid
 You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
 ```
 
-## Next step
+## Următorul pas
 
 Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](../UsefulLinks/DedicatedGoogleAccountForAaps.md), or go straight to [building the AAPS app](../SettingUpAaps/BuildingAaps.md). 

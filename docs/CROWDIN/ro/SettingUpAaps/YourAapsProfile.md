@@ -28,7 +28,7 @@ The four last parameters (glucose targets, basal rates, insulin sensitivity fact
 Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
 (your-aaps-profile-duration-of-insulin-action)=
-## Duration of insulin action (DIA)
+## Durata acțiunii insulinei (DIA)
 
 ### Descriere
 
@@ -64,7 +64,7 @@ The **figure below** shows an example of how the **DIA** is set in an **AAPS** p
 The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works good for them. See the additional reading mentioned above.
 
 (profile-glucose-targets)=
-## Glucose targets
+## Ținte de glicemie
 
 ### Descriere
 

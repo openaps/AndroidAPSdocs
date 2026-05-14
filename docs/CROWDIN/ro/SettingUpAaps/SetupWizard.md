@@ -1,8 +1,8 @@
-# AAPS Setup Wizard
+# Asistent de configurare AAPS
 
 When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. Acestea vor fi explicate în următoarea secțiune. Așa că este în regulă dacă săriți peste câteva puncte în asistentul de configurare, le puteți configura mai târziu.
 
 During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
 
@@ -17,8 +17,8 @@ From previous experience, we are aware that new starters often put themselves un
 So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
 
 ```{admonition} Ask for Help
-:class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+:class: nota
+Dacă există o eroare în documentație sau aveți o idee mai bună despre cum se poate explica ceva, puteți cere ajutor din partea comunității așa cum este explicat la [Conectați-vă cu alți utilizatori](../GettingHelp/WhereCanIGetHelp.md).
 ```
 ## Mesaj de întâmpinare
 
@@ -380,16 +380,16 @@ După ce faceți selecția, apăsați "URMĂTORUL" pentru a merge la următorul 
 
 Click on the cogwheel button to access the settings.
 
-Enable the "Upload BG data to NS" and "Log sensor change to NS".
+Activați "Încărcați datele de glicemie în Nightscout" și "Înregistrați schimbările de senzor în Nightscout".
 
-Go back and press "NEXT" to go to the next screen:
+Mergeți înapoi și apăsați "Următorul" pentru a merge la următorul ecran:
 
 ![Upload](../images/setup-wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
 ## Profil
 
-Now we are entering a very important part of the Setup Wizard.
+Acum intrăm într-o parte foarte importantă a asistentului de configurare.
 
 Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
 
@@ -402,12 +402,12 @@ It's required that you have determined and discussed your profile with your doct
 If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
 ```
 
-Apăsați "URMĂTORUL" pentru a merge la următorul ecran. Enter a "profile name":
+Apăsați "URMĂTORUL" pentru a merge la următorul ecran. Introduceți un "nume de profil":
 
 ![imagine](../images/setup-wizard/Wizard21.png)
 
 
-You can have several profiles in the long-term if needed. We only create one here.
+Puteți avea mai multe profiluri pe termen lung, dacă este necesar. Noi creăm doar unul aici.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: information
@@ -418,7 +418,7 @@ It is not intended to be an accurate profile or something very well optimised, b
 Don't use it for actually looping!
 ```
 
-Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Then press "IC":
+Enter your [Duration of insulin Action (DIA)](#your-aaps-profile-duration-of-insulin-action) in hours. Apoi apăsați "IC":
 
 ![DIA](../images/setup-wizard/Wizard21-Name.png)
 
@@ -426,27 +426,27 @@ Enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values:
 
 ![IC](../images/setup-wizard/Wizard21-IC.png)
 
-Press "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+Apăsați "ISF". Enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![ISF](../images/setup-wizard/Wizard21-ISF.png)
 
 
-Press "BAS". Enter your [basal values](#your-aaps-profile-basal-rates):
+Apăsați "BAZALĂ". Enter your [basal values](#your-aaps-profile-basal-rates):
 
 ![imagine](../images/setup-wizard/Wizard21-Basal.png)
 
 
-Press "TARG". Enter your blood sugar target values.
+Apăsați „ȚINTĂ”. Introduceți valorile țintă ale glicemiei.
 
 For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Mai târziu, pentru bucla închisă, veți avea, în general, o singură valoare pentru partea de sus și de jos. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
 
-Enter/confirm the target values:
+Introduceți/confirmați valorile țintă:
 
 ![Țintă](../images/setup-wizard/Wizard22.png)
 
-Save the profile by clicking on "SAVE":
+Salvați profilul prin apăsarea pe "SALVAȚI":
 
 ![Salvați](../images/setup-wizard/Wizard22-Save.png)
 
@@ -454,11 +454,11 @@ Save the profile by clicking on "SAVE":
 After saving, a new button "Activate Profile" appears.
 
 ```{admonition} Several defined but only one active profile
-:class: information
-You can have several profiles defined, but only one activated profile running at any given time.
+:class: informații
+Puteți avea mai multe profiluri definite, dar doar un profil activat funcționează la un moment dat.
 ```
 
-Press "Activate Profile":
+Apăsați "Activați profil":
 
 ![imagine](../images/setup-wizard/Wizard22-Activate.png)
 
@@ -466,28 +466,28 @@ Press "Activate Profile":
 
 
 
-The profile switch dialogue appears. In this case let it stay as preset.
+Apare dialogul de schimbare a profilului. În acest caz, lăsați-l să rămână așa cum este presetat.
 
 ```{admonition} Several defined but only one active profile
-:class: information
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile suitable for the circumstances.
+:class: informații
+Veți învăța mai târziu cum să utilizați acest dialog general pentru a trata situații precum boala sau sportul, în cazul în care trebuie să vă schimbați profilul potrivit circumstanțelor.
 ```
 
 
-Press "OK":
+Apăsați "OK":
 
 
 ![Switch](../images/setup-wizard/Wizard22-Switch.png)
 
 
 
-A confirmation dialog for the profile switch appears.
+Apare un dialog de confirmare pentru schimbarea profilului.
 
-You can confirm it with pressing "OK". Apăsați "URMĂTORUL" pentru a merge la următorul ecran:
+Îl puteți confirma prin apăsarea "OK". Apăsați "URMĂTORUL" pentru a merge la următorul ecran:
 
 ![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
 
-Your profile has now been set:
+Profilul dumneavoastră a fost acum stabilit:
 
 ![Info](../images/setup-wizard/Wizard22-Info.png)
 
@@ -496,9 +496,9 @@ Your profile has now been set:
 
 
 
-Now you are selecting your insulin pump.
+Acum vă selectați pompa de insulină.
 
-You get an important warning dialog. Please read it, and press "OK".
+Veți primi un dialog important de avertizare. Vă rog să o citiți și apăsați "OK".
 
 Dacă v-ați configurat deja profilul în pașii de dinainte și știți cum să conectați pompa, nu ezitați s-o conectați acum.
 
@@ -539,7 +539,7 @@ Doar citiți textul și nu schimbați nimic aici.
 
 Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
 
-Go back and press "NEXT" to go to the next screen:
+Mergeți înapoi și apăsați "Următorul" pentru a merge la următorul ecran:
 
 ![Setări](../images/setup-wizard/Wizard24-Settings.png)
 
