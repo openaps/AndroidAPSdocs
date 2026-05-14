@@ -157,13 +157,13 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 
 ![Example negative IOB](../images/Objective6_negIOB.png)
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon in the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- Stabiliți intervalul țintă puțin mai mare decât de obicei ați intenționa, doar pentru a fi în siguranță și pentru a adăuga un tampon de siguranță.
+- Activați modul "Suspendare la glicemie scăzută" prin apăsarea și ținerea apăsată a pictogramei buclă în colțul din dreapta sus al Vederii de ansamblu și prin selectarea pictogramei bucla - mod LGS.
+- Urmăriți bazalele active temporare uitându-vă la textul bazal turcoaz pe ecranul VEDERE DE ANSAMBLU sau la randarea turcoaz a bazalei ca parte a graficului VEDERE DE ANSAMBLU.
+- Este posibil să aveți parte temporar de valori crescute în urma tratării hipoglicemiilor fără a fi în măsură să creșteți bazalele la revenire.
 
 (objectives-objective7)=
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## Obiectivul 7: reglarea buclei închise, creșterea valorii maxIOB peste 0 și scăderea treptată a țintelor de glicemie
 
 To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
 
@@ -171,13 +171,13 @@ Minimal time to complete this objective: **1 day**. Acesta este un timp de aște
 
 - Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen. Stay in **Closed Loop** over a period of 1 day.
 
-- Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
+- Creșteți lent 'Maximum IOB peste care OpenAPS nu poate trece' (în OpenAPS numit 'max-iob') peste 0, până când găsiți cele mai bune setări pentru dumneavoastră.
 
 The default recommendation for this setting is “**average meal bolus + 3x max daily basal**”, where “max daily basal” is the maximum hourly value in any time segment of the day.
 
 ![max daily basal](../images/MaxDailyBasal2.png)
 
-Această recomandare ar trebui considerată ca un punct de plecare. If you use this rule but are experiencing AAPS delivering too much insulin as glucose levels rise, you may need to :
+Această recomandare ar trebui considerată ca un punct de plecare. Dacă utilizați această regulă, dar vi se întâmplă ca AAPS să livreze prea multă insulină pe măsură ce valorile glicemiei cresc, poate fi nevoie să:
 * lower the "Maximum total IOB OpenAPS can’t go over" value;
 * review your **Profile** settings, only making one adjustment at a time.
 
