@@ -8,11 +8,11 @@ The most stable version of AAPS to use is that in the [Master branch](https://gi
 
 Versiunea dev a AAPS este doar pentru dezvoltatori și cei care testează care sunt confortabili cu urmărirea stivei, cu căutarea în fișierele de jurnal și poate cu pornirea depanatorului pentru a produce rapoarte de erori care sunt de ajutor pentru dezvoltatori (pe scurt: oameni care știu ce fac fără a fi ajutați!). Prin urmare, multe caracteristici nefinalizate sunt dezactivate. Pentru a activa aceste caracteristici, intrați în **Modul inginerie** prin crearea unui fișier numit `engineering_mode` în dosarul /AAPS/extra. Activarea modului de inginerie poate strica complet bucla.
 
-Cu toate acestea, versiunea dev este un loc bun pentru a vedea care sunt funcțiile testate și pentru a ajuta la remedierea erorilor și a oferi sugestii cu privire la funcționarea practică a noilor caracteristici. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Cu toate acestea, versiunea dev este un loc bun pentru a vedea care sunt funcțiile testate și pentru a ajuta la remedierea erorilor și a oferi sugestii cu privire la funcționarea practică a noilor caracteristici. Adesea, oamenii vor testa ramura dev pe un telefon vechi și pe o pompă până când vor avea încredere că este stabilă - orice utilizare a acesteia este pe propriul risc. Când testați orice caracteristici noi, țineți minte că alegeți să testați o caracteristică încă în dezvoltare. Faceți acest lucru pe propriul risc & cu grija cuvenită pentru a vă menține în siguranță.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. Cu cât puteți partaja mai multe informații aici cu atât mai bine (nu uitați că poate fi nevoie să partajați [fișierele de jurnal](../GettingHelp/AccessingLogFiles.md)). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+O versiune dev are o dată de expirare. Acest lucru pare deranjant atunci când o folosiți în mod satisfăcător, dar servește unui scop. Când o singură versiune de dezvoltator circulă, este mai ușor să urmărești erorile pe care oamenii le raportează. Dezvoltatorii nu doresc să se afle într-o poziție în care circulă trei versiuni de dev unde erorile sunt reparate în unele și în altele nu, iar oamenii continuă să le raporteze pe cele corectate.
 
 (branch-ci-test)=
 
@@ -28,7 +28,7 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 ## Elemente de test într-o propunere de modificare (GitHub CI actions deploy)
 
-Available from 3.3.2.1.dev
+Disponibil de la 3.3.2.1.dev
 
 - Este adecvat pentru testatori sau pentru cei care contribuie la testare.
 
@@ -66,4 +66,4 @@ Available from 3.3.2.1.dev
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Vă rugăm să consultați [varianta](#browserbuild-variant)
