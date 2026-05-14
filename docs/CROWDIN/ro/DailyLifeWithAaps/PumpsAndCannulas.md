@@ -7,21 +7,21 @@ Modificările cartușului fizic/rezervorului nu pot fi efectuate prin intermediu
 
 ### Ghid pentru schimbarea atât a rezervorului pompei cât și a canulei
 
-1) În **AAPS**, deconectare pompă: Apăsați lung pe pictograma "Buclă deschisă"/"Buclă închisă" pe **AAPS** Ecranul de pornire și selectați "Deconectare pompă - 1 oră". The pump icon will change to a grey icon, indicating that the pump is disconnected.
+1) În **AAPS**, deconectare pompă: Apăsați lung pe pictograma "Buclă deschisă"/"Buclă închisă" pe **AAPS** Ecranul de pornire și selectați "Deconectare pompă - 1 oră". Pictograma pompei se va schimba într-o pictogramă gri, indicând faptul că pompa este deconectată.
 
 2) Schimbați fizic rezervorul de insulină: deconectați fizic pompa de corp și schimbați rezervorul/cartușul și canula conform instrucțiunilor fabricantului.
 
-3) Amorsați/umpleți canula: aceasta se poate face direct prin pompă. Be sure to eliminate any bubbles in the tubing.
+3) Amorsați/umpleți canula: aceasta se poate face direct prin pompă. Asigurați-vă că eliminați bulele de aer din tub.
 
-4)  Attach the new cannula to the body. Once the cannula is inserted and the needle is removed, the attached cannula now has a small air gap which also needs to be primed. To announce this in **AAPS** and prime the site: select the PRIME/FILL button in the **AAPS** actions tab and tick “Pump site change” and/or “Insulin Cartridge Change” as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select “OK”. Read the summary message, and confirm to execute the priming by tapping “OK”.
+4)  Attach the new cannula to the body. Odată ce canula este introdusă și acul este îndepărtat, canula atașată are acum un mic spațiu de aer care trebuie, de asemenea, să fie amorsat. To announce this in **AAPS** and prime the site: select the PRIME/FILL button in the **AAPS** actions tab and tick “Pump site change” and/or “Insulin Cartridge Change” as appropriate to record the change. Acum apăsați pe cantitatea implicită de insulină pentru amorsare (este de obicei în jur de 0,3 U, dar verificați că această valoare este corectă pentru canula dumneavoastră) și selectați "OK". Citiți mesajul rezumat, și confirmați pentru a executa amorsarea prin apăsarea "OK".
 
 5)  Reconnect the pump in **AAPS**: Press the grey disconnected pump symbol and select ‘Reconnect pump’ to continue looping.
 
-### Useful information concerning insulin/cannula changes
+### Informații utile privind modificările de insulină/canulă
 
 ●   Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** Home screen.
 
-●   You can set/adjust the default prime amount in Preferences > Overview > Fill/Prime standard insulin amounts. See your instruction booklet in your cannula box for how many units (depending on needle length and tubing length) should be primed for your cannula.
+●   You can set/adjust the default prime amount in Preferences > Overview > Fill/Prime standard insulin amounts. Vedeți instrucțiunile din cutia canulei pentru câte unități (în funcție de lungimea acului și lungimea tubului) ar trebui să fie amorsate pentru canulă.
 
 ●   Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the **AAPS** treatments menu as “Prime”.
 
