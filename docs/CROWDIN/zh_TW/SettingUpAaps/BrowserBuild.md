@@ -117,7 +117,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 <!--crowdin:enable-->
 ````
 AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS）：
-- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
+- 如果這是你第一次建立 AAPS（或你沒有 Android Studio 的 JKS），請參考 [AAPS-CI 選項 1 – 產生 JKS](#aaps-ci-option1) 來完成設定。
 </br>
 
 ```{warning}
@@ -132,7 +132,7 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 7. 從 Nightscout 恢復您的資料。
 ```
 
-- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](#aaps-ci-option2).
+- 如果你想使用自己的 JKS（你在先前的 AAPS 建置中使用的那個 JKS），並且你知道它的密碼和別名（key0），請選擇 [AAPS-CI 選項 2 – 上傳現有的 JKS](#aaps-ci-option2)。
 
 </br>
 
@@ -359,7 +359,7 @@ Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的
   - Use workflow from Branch：請輸入你想要 cherry-pick 到的分支名稱。
   - Upstream Repository：請輸入你想要 cherry-pick 的庫名稱。
   - Commit SHA：請輸入你想要 cherry-pick 的提交 SHA（像 git commit hash）。
-  - Select Build Variant: [variant](#browserbuild-variant)
+  - Select Build Variant： [變體](#browserbuild-variant)
 
 (ci-keystore-export)=
 ## CI KeyStore 匯出

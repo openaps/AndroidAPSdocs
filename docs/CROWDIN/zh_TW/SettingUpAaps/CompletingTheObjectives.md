@@ -194,7 +194,7 @@
 
 在7天內啟用[自動敏感度調整](../DailyLifeWithAaps/KeyAapsFeatures.md)，並關注[**總覽**圖表中的白線](#AapsScreens-section-g-additional-graphs)，以顯示你的胰島素敏感度因運動或荷爾蒙等因素而上升或下降。 注意查看OpenAPS報告標籤，其中顯示**AAPS**根據需要調整敏感度、基礎和目標。
 
-This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). 你可以在主畫面上查看你的敏感性，顯示在[額外圖表](#AapsScreens-section-g-additional-graphs)中。
+現在是檢視你對[敏感度檢測](#Config-Builder-sensitivity-detection)設定的好時機。 你可以在主畫面上查看你的敏感性，顯示在[額外圖表](#AapsScreens-section-g-additional-graphs)中。
 
 此外，你可以使用[自動調整](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)來檢查你的基礎是否準確，或進行傳統的基礎測試。
 

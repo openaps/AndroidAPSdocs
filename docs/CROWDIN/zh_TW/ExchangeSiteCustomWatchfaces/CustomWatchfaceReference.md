@@ -941,7 +941,7 @@ CustomWatchface V2 包含這些新功能：
 - [新的臨時目標視圖](#cwf-reference-new-temp-target-feature)
 - [新的儲存槽水位視圖](#cwf-reference-new-reservoir-level-feature)
 - [新的排版功能](#cwf-reference-new-formating-feature)
-- [Show External data for Follower](#cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
+- [顯示跟隨者的外部資料](#cwf-reference-show-external-datas)（在單一錶盤中最多3組資料，適用於 AAPS、AAPSCLIENT 和 AAPSCLIENT2）
 
 (cwf-reference-new-status-feature)=
 
@@ -983,7 +983,7 @@ DynData 值等於:
 - 1（循環目標）或
 - 2（使用者臨時目標）
 
-Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
+請注意，這個視圖也可以顯示外部資料（請參閱 [下方](#cwf-reference-show-external-datas)），使用 `"tempTarget_Ext1"` 和 `"tempTarget_Ext2"` 鍵（視圖和 DynData）
 
 (cwf-reference-new-reservoir-level-feature)=
 
@@ -1005,7 +1005,7 @@ Note that this view is also available for external data (see [below](#cwf-refere
   - 1（警告水準，預設為黃色）
   - 2（緊急水準，預設為紅色）
 
-Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
+請注意，這個視圖也可以顯示外部資料（請參閱 [下方](#cwf-reference-show-external-datas)），使用 `"reservoir_Ext1"`、`"reservoir_Ext2"`、`"reservoirLevel_Ext1"` 和 `"reservoirLevel_Ext2"` 鍵（視圖和 DynData）。
 
 (cwf-reference-new-formating-feature)=
 
@@ -1161,7 +1161,7 @@ Note that this view is also available for external data (see [below](#cwf-refere
 
 - 需在手機上安裝至少以下三個應用中的兩個（AAPS、AAPSCLIENT、AAPSCLIENT2）
 - 在 AAPSCLIENT 和/或 AAPSCLIENT2 中啟用廣播資料，以廣播資料到主要應用程式，該應用程式用於與自訂錶盤同步（AAPS 或 AAPSCLIENT）
-- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](#cwf-reference-key-and-keyvalue-reference) below)
+- 使用實現包含 `_Ext1` 或 `_Ext2` 鍵的視圖的自訂錶盤（請參閱 [鍵和鍵值參考](#cwf-reference-key-and-keyvalue-reference)）
 
 請注意，如果手機上的主要應用是 AAPSCLIENT，而廣播數據的次要應用是 AAPSCLIENT2，則在使用帶有標準視圖和 Ext1 額外視圖的自訂錶盤時，你必須在自訂錶盤專用設定中啟用 `切換錶盤中的外部資料` 參數（Ext1 連結到 AAPSCLIENT，Ext2 連結到 AAPSCLIENT2）。
 
