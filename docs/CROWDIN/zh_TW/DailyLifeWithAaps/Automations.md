@@ -17,7 +17,7 @@
     例如鬧鐘、設定設定檔百分比或在 Pod 變更時匯出 AAPS 設定。
 
 
-有各種各樣的自動化選項，鼓勵用戶在 AAPS 應用中的自動化進行研究。 You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
+有各種各樣的自動化選項，鼓勵用戶在 AAPS 應用中的自動化進行研究。 你也可以在 [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) 與 [**Discord**](https://discord.gg/4fQUWHZ4Mw) 上的 AAPS 用戶社團搜尋其他使用者的自動化範例。
 
 ## 自動化如何幫助你
 
