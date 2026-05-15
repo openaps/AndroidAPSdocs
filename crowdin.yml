@@ -1,13 +1,8 @@
-languages:
-  - el
-preserve_hierarchy: true
 files:
   - source: /docs/EN/**/*.md
     translation: /docs/CROWDIN/%two_letters_code%/**/%original_file_name%
     type: md35
-    skip_untranslated_strings: false
-    export_only_approved: false
+  - source: /docs/EN/**/*.rst
+    translation: /docs/CROWDIN/%two_letters_code%/**/%original_file_name%
   - source: /docs/EN/images/**/*
     translation: /docs/CROWDIN/%two_letters_code%/images/**/%original_file_name%
-    skip_untranslated_strings: false
-    export_only_approved: false
