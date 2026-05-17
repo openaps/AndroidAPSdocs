@@ -1,4 +1,4 @@
-# How to setup FSL 2 and OOP2 to use a native Bluetooth connection in xDrip+
+# Как настроить FreeStyleLibre2 (FSL2) и OOP2 для нативного Bluetooth соединения с xDrip+
 
 Transferred from [MinimalL00per](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to markdown and **revised/updated**: Aug 25, 2025 psonnera
 
