@@ -3,8 +3,8 @@
 # Чтение лог-файлов
 
 * Подключите телефон к компьютеру в режиме передачи файлов
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
+* Найдите файлы журнала в папке AAPS, в `Android\data\info.nightscout.androidaps\files`.  
+    Имя корневой папки может немного отличаться в зависимости от телефона.
 * The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
 * Note : log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
 
