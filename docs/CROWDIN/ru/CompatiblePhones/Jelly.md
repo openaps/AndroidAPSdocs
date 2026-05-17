@@ -2,7 +2,7 @@
 
 ## Jelly 2
 
-Do not confuse with Jelly Star (below).
+Не путайте с Jelly Star (о нем ниже).
 
 **Преимущества**
 
@@ -34,7 +34,7 @@ Do not confuse with Jelly Star (below).
 **Features**
 
 * Android 13
-* 8 GB RAM
+* 8 ГБ ОЗУ
 
 ### Оптимизация срока службы батареи
 
