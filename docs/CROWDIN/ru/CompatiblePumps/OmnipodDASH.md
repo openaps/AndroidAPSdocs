@@ -16,9 +16,9 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 (omnipod-dash-constraints)=
 
-## Omnipod DASH known AAPS constraints/issues
-- Android 16 requires **AAPS** version 3.3.2.1 or later.
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
+## Известные ограничения и проблемы с Omnipod DASH в AAPS
+- Android 16 требует **AAPS** версии 3.3.2.1 или выше.
+- Общий совет — использовать **AAPS** на Android 14 или 16. Пользователи сообщают о большом количестве [проблем](https://github.com/nightscout/AndroidAPS/issues/3471) при использовании с Android 15. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
 - Too frequent basal updates may cause basal insulin delivery [problems](https://github.com/nightscout/AndroidAPS/issues/4158) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig.
@@ -82,7 +82,7 @@ Instead a temporary zero basal rate can be achieved through the "Disconnect pump
 
 There are **two** available options to configure Omnipod in **AAPS**:
 
-### Option 1: New installations
+### Вариант 1: При начальной установке
 
 When installing **AAPS** for the first time, the **Setup Wizard** will guide new users through key features and installation requirements for **AAPS**.  
 Select “DASH” when you reach Pump selection.
