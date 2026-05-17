@@ -1,4 +1,4 @@
-# Juggluco settings
+# Настройки Juggluco
 
 If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
 
