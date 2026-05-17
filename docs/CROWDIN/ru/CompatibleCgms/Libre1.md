@@ -1,4 +1,4 @@
-# Работа с Freestyle Libre 1
+# Freestyle Libre 1
 
 Чтобы использовать Libre в качестве мониторинга, который получает новые значения гликемии каждые 5 минут без необходимости сканирования сенсора, нужно сначала приобрести адаптер NFC - Bluetooth (коммерчески доступные устройства, основанные на устаревшем проекте [LimiTTer](https://github.com/JoernL/LimiTTer)).
 
@@ -7,10 +7,10 @@
 Убедитесь, что мост и приложение, которое вы хотите использовать, совместимо с сенсором.  
 ```
 
-Some bridges are still available on the market:
+Некоторые адаптеры все еще доступны на рынке:
 
--   [MiaoMiao Reader](https://www.miaomiao.cool/) (версия 1, 2 или 3) также доступны на AliExpress.
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) from European vendors ([BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Также доступны на AliExpress.
+-   [MiaoMiao Reader](https://www.miaomiao.cool/) (версия 1, 2 или 3), также доступны на AliExpress.
+-   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) от европейских поставщиков ([BubbleShop](https://bubbleshop.eu/)), для пользователей из России [тут](https://vk.com/saharmonitor/). Также доступны на AliExpress.
 -   Atom для российских пользователей.
 
 ## 1. Использование xDrip+
@@ -18,7 +18,7 @@ Some bridges are still available on the market:
 -   xDrip+ поддерживает Miaomiao, Bubble, Blucon, Atom и LibreAlarm.
 -   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Следуйте инструкциям по установке на странице настроек [xDrip+](../CompatibleCgms/xDrip.md).
--    You also need OOP2 for Libre 1 US (and Libre 2 EU).
+-    Вам также нужен OOP2 для Libre 1 США (и Libre 2 EU).
 -   В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
 
 ## 2. Использование Diabox
