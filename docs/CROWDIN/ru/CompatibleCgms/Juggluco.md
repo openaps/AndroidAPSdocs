@@ -1,41 +1,41 @@
 # Настройки Juggluco
 
-If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
+Загрузите [Juggluco](https://www.juggluco.nl/Juggluco/download.html), если он еще не настроен.
 
-Follow the [instructions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) to connect your sensor.
+Для подключения датчика следуйте [инструкциям](https://www.juggluco.nl/Jugglucohelp/introhelp.html).
 
-## Basic settings for all CGM systems
+## Основные настройки для всех НМГ систем
 
-### Disable Nightscout uploader
+### Отключите выгрузку в Nightscout
 
 Начиная с AAPS 3.2, не позволяйте никаким другим приложениям загружать данные (уровень глюкозы в крови и терапию) в Nightscout.
 
-Disable any active uploader to Nightscout in Juggluco.
+Отключите в Juggluco любой активный загрузчик в Nightscout.
 
-![Disable Nightscout Upload](../images/juggluco/DisableNightscoutUpload.png)
+![Отключение выгрузки в Nightscout](../images/juggluco/DisableNightscoutUpload.png)
 
 (juggluco-to-aaps)=
 
-## Juggluco to AAPS
+## Из Juggluco в AAPS
 
-Juggluco can send blood glucose directly to AAPS, enabling SMBs always if you are using a [trusted sensor](#GettingStarted-TrustedBGSource).
+Juggluco может передавать гликемию непосредственно в AAPS, что позволяет использовать СМБ всегда, когда вы используете [доверенный датчик](#GettingStarted-TrustedBGSource).
 
-When using a Libre 2/2+/3/3+ sensor, minute-by-minute readings will be sent to AAPS but will not trigger minute-by-minute calculations in AAPS.
+При использовании датчика Libre 2/2+/3/3+ гликемия будет отправляться в AAPS ежеминутно, однако это не приведет к ежеминутным же расчетам.
 
-Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and save the AAPS package information. Select the xDrip+ BG data source in AAPS.
+В Juggluco поставьте галочку у xDrip broadcast (не ставьте у Patched Libre), проставьте галочку у пакета androidaps и сохраните выбор. В AAPS выберите источник данных ГК xDrip+.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
+Применить подходящее [сглаживание](./SmoothingBloodGlucoseData.md) в AAPS.
 
-![Juggluco to AAPS](../images/juggluco/Juggluco-AAPS.png)
+![Из Juggluco в AAPS](../images/juggluco/Juggluco-AAPS.png)
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip+
+## Из Juggluco в xDrip+
 
-Juggluco can send blood glucose to xDrip+ which will then send them to AAPS.
+Juggluco может отправлять гликемию в xDrip+, который в свою очередь передаст ее в AAPS.
 
-Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. Select the xDrip+ BG data source in AAPS.
+В Juggluco поставьте галочку у Patched Libre (не ставьте у xDrip broadcast), проставьте галочку у пакета dexdrip и сохраните выбор. В AAPS выберите источник данных ГК xDrip+.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary, when using a Libre 2/2+/3/3+ sensor, xDrip+ will average the minute-by-minute to 5 minutes readings and [also smoothen](#libre2-value-smoothing-raw-values) them.
+Примените подходящее [сглаживание](./SmoothingBloodGlucoseData.md) в AAPS, при использовании датчиков Libre 2/2+/3/3+, xDrip+ приведет ежеминутные показания к среднему за 5 минут и [также сгладит](#libre2-value-smoothing-raw-values) их.
 
-![Juggluco to xDrip+](../images/juggluco/Juggluco-xDrip+.png)
+![Из Juggluco в xDrip+](../images/juggluco/Juggluco-xDrip+.png)
