@@ -224,32 +224,32 @@ Please select if your glucose values are in mg/dL or mmol/L and then please clic
 
 ![Unități](../images/setup-wizard/Wizard13.png)
 
-## Display settings
+## Setări de afișare
 
- Here you select the range for the sensor glucose display, which will be shown as "in range" between the values you set. You can leave it as the default values for now, and edit it later.
+ Aici alegeți intervalul pentru afișarea glicemiei din senzor, care va fi afișat ca "în interval" între valorile pe care le-ați setat. Îl puteți lăsa pe valorile implicite pentru moment și să-l editați mai târziu.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Valorile pe care le alegeți afectează doar prezentarea grafică a diagramei și nimic altceva.
 
 Your glucose target _e.g._ is configured separately in your profile.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+Intervalul dumneavoastră de analizare a TIR (timpul în interval) este configurat separat în serverul dumneavoastră de raportare.
 
-Please press the "NEXT" button:
+Vă rog să apăsați butonul "URMĂTORUL":
 
 ![Interval](../images/setup-wizard/Wizard14.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Synchronization with the reporting server and more
+## Sincronizare cu serverul de raportare și altele
 
-Here you are configuring the data upload to your reporting server.
+Aici configurați încărcarea de date pe serverul dumneavoastră de raportare.
 
-You could do other configurations here too, but for the first run we will just focus on the reporting server.
+Puteți face și alte configurări aici, dar pentru prima execuție ne vom concentra doar pe serverul de raportare.
 
-If you are not able to set it up at the moment, skip it for now. You can configure it later.
+Dacă nu puteți să îl configurați în acest moment, săriți peste el pentru acum. Îl puteți configura mai târziu.
 
-If you select an item here on the left tick box, on the right you can then ticking the visibility (eye) box, which will place this plugin in the upper menu on the **AAPS** home screen. Please select the visibility too if you configure your reporting server at this point.
+If you select an item here on the left tick box, on the right you can then ticking the visibility (eye) box, which will place this plugin in the upper menu on the **AAPS** home screen. Vă rugăm să selectați și vizibilitatea dacă vă configurați serverul de raportare în acest moment.
 
-In this example we select Nightscout as reporting server, and will configure it.
+În acest exemplu selectăm Nightscout ca server de raportare și îl vom configura.
 
 ```{admonition}  **NSClient** version
 :class: Note
