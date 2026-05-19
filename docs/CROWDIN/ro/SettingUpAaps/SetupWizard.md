@@ -194,9 +194,9 @@ Apăsați pe butonul "URMĂTORUL":
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
-The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive este un loc bun pentru că Google face copii de rezervă pentru dumneavoastră. Calculatorul sau telefonul dumneavoastră inteligent se pot defecta și este posibil să nu aveți nicio copie. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 
-After filling in the password twice, please click the "NEXT" button:
+După completarea parolei de două ori, vă rugăm să apăsați pe butonul "URMĂTORUL":
 
 ![Parolă](../images/setup-wizard/Wizard12.png)
 
