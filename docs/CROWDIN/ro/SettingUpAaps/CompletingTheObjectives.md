@@ -134,8 +134,8 @@ If you are open looping with a virtual pump **stop here**. Only click verify at 
 
 ![Warning sign](../images/sign_warning.png)
 ```{admonition}  Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
-:class: Note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+:class: Notă
+Va trebui să corectați singur valorile mari ale glicemiei (manual cu corecții cu pompa sau cu stiloul)!
 ```
 
 As part of **Objective 6** you will close the loop and activate its **Low Glucose Suspend** (LGS) mode while [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) is set to zero. You have to remain in LGS mode for 5 days to complete this **objective**. You should use this time to check if your **Profile** settings are accurate and LGS events are not triggered too often.
@@ -218,23 +218,23 @@ Minimal time to complete this objective: **28 days**. Acesta este un timp de aș
 
 Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
 
-Set-up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Select the notification tab
-- From the top right 3 dots menu, select add rule
-- Give a task name "My first automation notification"
-- "edit"  "condition"
-  - click the "+" symbol to add the first trigger
+Configurați cea mai de bază regulă de automatizare; de exemplu, declanșați o notificare Android în câteva minute:
+- Selectați fila de notificare
+- Din meniul din dreapta sus 3 puncte, selectați adăugarea unei reguli
+- Dați un nume de sarcină "Prima mea notificare automată"
+- "editați" "condiție"
+  - apăsați pe simbolul "+" pentru a adăuga primul declanșator
   - select "Time"  & "OK", it will create a default entry AT TODAY HOUR:MINUTE
-  - click the MINUTE portion to edit the time such that it triggers in a few minutes. Then click ok to close
-  - click "ok"  to close the Triggers screen
-- "ADD" an "Action"
-  - select "Notification", "OK"
-  - click "Notification" to edit the message, enter something like "My first automation"
-- Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
+  - apăsați pe porțiunea MINUTE pentru a edita timpul astfel încât să se declanșeze în câteva minute. Apoi apăsați ok pentru a închide
+  - apăsați "ok" pentru a închide ecranul de declanșatori
+- "ADĂUGAȚI" o "Acțiune"
+  - selectați "Notificare", "OK"
+  - apăsați "Notificare" pentru a edita mesajul, introduceți ceva de genul "Prima mea automatizare"
+- Așteptați până când ora declanșează notificarea (rețineți că, în funcție de telefon, poate dura câteva minute)
 
 You can then experiment with setting up a more useful **Automation**. The documentation page gives a few examples, and you can search for "Automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. There is also a dedicated channel in the [Discord](https://discord.gg/4fQUWHZ4Mw) community.
 
-For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
+For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. În acest caz, starea dumneavoastră poate include "ora recurentă", care constă în selectarea anumitor zile ale săptămânii (Luni, Marți, Miercuri, Joi, Vineri) și o anumită oră (06:30 dimineața). Acțiunea va consta din „Start țintă temporară” cu o valoare țintă mai mică decât de obicei și o durată de 30 de minute.
 
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Mergeți înapoi la obiective
