@@ -27,18 +27,18 @@ Modificările cartușului fizic/rezervorului nu pot fi efectuate prin intermediu
 
 ●   Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) under the “insulin” tab (see link to below ”to announce delivered insulin without actually bolusing” for more details).
 
-### Cannula, infusion site, tubing and/or pump issues
+### Canula, locul de perfuzare, tubulatura şi/sau problemele pompei
 
 If you are confident that you haven’t received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
 
 ```{admonition} Caution - Risk of Hypoglycemia
-:class: danger
-Only delete insulin delivery from **AAPS** with EXTREME caution, in case insulin _has_ actually been delivered, and monitor BG closely for the next 24 h.
+:class: pericol
+Ștergeți administrarea insulinei din **AAPS** numai cu precauție MAXIMĂ, în cazul în care insulina _a_ fost de fapt administrată și monitorizați-vă îndeaproape glicemia pentru următoarele 24 de ore.
 ```
 
 To remove boluses and SMBs which you know have not been delivered, open the Treatments tab and conservatively delete the logged bolus information from > carbs and bolus starting from the point the incident happened. This will correct the “insulin on board” (IOB) value which is key for **AAPS**’ calculations, if you now return to the homescreen you will see that the IOB has now reduced. Be aware that you cannot delete basal insulin which **AAPS** calculates to have been delivered, so that will still be taken into account by **AAPS**.
 
-In less obvious cases of insulin delivery problems  _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by “smelling” the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs be deducted from the current “insulin on board” (IOB) value. One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
+In less obvious cases of insulin delivery problems  _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. Puteți detecta aceste probleme fie prin "mirosirea" insulinei, prin observarea adezivului umed, sau prin întâlnirea unor valori ridicate ale glicemiei sau prin primirea de alarme. Deoarece nu veți ști niciodată câtă insulină a intrat în piele (care ar putea începe să acționeze după un timp), va fi greu de determinat cantitatea corectă de insulină care trebuie dedusă din valoarea curentă a "insulinei la bord" (IOB). One strategy is to pause looping for 5 hours (or your specific duration of insulin action) after you resolved the insulin delivery problem, and resume looping afterwards. This will ensure that IOB is correct once you restart looping.
 
 ## Disconnecting the pump for showering or activity
 

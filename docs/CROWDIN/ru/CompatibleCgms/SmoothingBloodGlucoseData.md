@@ -10,7 +10,7 @@
 
 ### Простое экспоненциальное сглаживание
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Рекомендуется начинать с этой опции, так как она наиболее агрессивна в устранении шумов и перезаписывает самое последнее значение. Тем не менее, изучите таблицу ниже для дополнительных рекомендации.
 
 ### Среднее сглаживание
 
@@ -24,15 +24,15 @@ In general, this is the recommended option to start with, as it is most aggressi
 
 ## Предложения использовать сглаживание
 
-|               |   Экспоненциальное    |  Среднее  |  Отсутствует  |
-| ------------- |:---------------------:|:---------:|:-------------:|
-| G5/G6/ONE     | При зашумлении данных |           | Рекомендуемое |
-| G7/ONE+/Stelo | При зашумлении данных | If stable |               |
+|               |   Экспоненциальное    |    Среднее     |  Отсутствует  |
+| ------------- |:---------------------:|:--------------:|:-------------:|
+| G5/G6/ONE     | При зашумлении данных |                | Рекомендуемое |
+| G7/ONE+/Stelo | При зашумлении данных | Если стабильно |               |
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Датчики Libre часто шумят и могут потребовать сглаживания. Когда используется прямое подключение xDrip+ или при использовании патченного приложения (получение данных от других приложений, включая Juggluco), [сглаживание уже сделано внутри такого приложения](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |    Среднее    |        N.A.        |
-| Libre 2/2+ (EU)      | Среднее  |  Отсутствует  |    Среднее    |    Отсутствует     |
-| Libre 2/2+/3/3+      | Среднее  |     N.A.      |     N.A.      |    Отсутствует     |
+| Датчик/ Источник данных |  Juggluco  | xDrip+ напрямую | xDrip+ bridge | xDrip+ patched app |
+| ----------------------- |:----------:|:---------------:|:-------------:|:------------------:|
+| Libre 1/14 дней/Pro     | недоступно |   недоступно    |    Среднее    |     недоступно     |
+| Libre 2/2+ (EU)         |  Среднее   |   Отсутствует   |    Среднее    |    Отсутствует     |
+| Libre 2/2+/3/3+         |  Среднее   |   недоступно    |  недоступно   |    Отсутствует     |

@@ -6,7 +6,7 @@
 Следует отметить, что системы G7 и ONE+, в отличие от G6, не сглаживают значения ГК ни в самом приложении, ни в считывателе. Подробнее об этом [здесь](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+Изучите, какие [Способы сглаживания](../CompatibleCgms/SmoothingBloodGlucoseData.md) рекомендуется использовать для Dexcom G7/ONE+/Stelo
 ```
 
 ## 1. xDrip+ (прямое соединение с G7 или ONE+)
@@ -20,17 +20,17 @@ Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggesti
 
 ```{admonition} No new users
 :class: warning
-Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
-Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
-New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
+Последнее обновление серверов Dexcom сломало DiaKEM для новых установок: приложение G7 больше не может получить доступ к процессу входа и регистрации при новой установке приложения. 
+Сейчас у существующих пользователей нет проблем: не выходите, не стирайте данные, не переустанавливайте приложение G7, иначе вы не сможете снова загрузить его и запустить. Если приложение уже запущено, вам ничего не угрожает.
+Новым пользователям рекомендуется использовать [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) как источник данных ГК в **AAPS'** до тех пор, пока эта проблема не будет решена.
 ```
 
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
+**Примечание: Требуется AAPS 3.2.0.0 или выше! Недоступно для ONE+.**
 
 ### Установите новое модифицированное (!) приложение G7 и запустите сенсор
 
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+Модифицированное приложение Dexcom G7 (DiAKEM) обеспечивает доступ к данным Dexcom G7. Это приложение отличается от самостоятельно собранного приложения Dexcom BYODA; BYODA не может получать данные G7.
 
 - Удалите оригинальное приложение Dexcom, если вы его использовали прежде (Рабочая сессия сенсора может продолжаться - запишите код сенсора перед удалением приложения!)
 
@@ -58,7 +58,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 ## 4. Juggluco
 
-Version 9.0+ required
+Требуется версия 9.0 и выше
 
 - Отключите приложение, ранее подключенное к датчику: удалите приложение или выполните «Остановить принудительно» Отключите разрешение для"Устройств поблизости" в настройках приложения. Ограничьте использование батареи в приложении.
 

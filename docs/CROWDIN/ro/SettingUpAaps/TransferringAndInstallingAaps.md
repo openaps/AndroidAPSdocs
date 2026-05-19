@@ -1,4 +1,4 @@
-# Transferring and Installing AAPS on your smartphone
+# Transferul și instalarea AAPS pe telefonul dumneavoastră inteligent
 
 În secțiunea anterioară, [Construirea **AAPS**](../SettingUpAaps/BuildingAaps.md), ați construit aplicația AAPS</strong> **(care este un fișier apk) pe un computer. </p>
 
@@ -6,14 +6,14 @@ Următorii pași sunt pentru **transferul** fișierului APK al **AAPS** (și al 
 
 După instalarea **AAPS** pe telefonul inteligent, veți putea trece la [**Configurarea buclei AAPS**](../SettingUpAaps/SetupWizard.md).
 
-Există mai multe modalități de a transfera fișierul APK **AAPS** de pe computer pe telefonul inteligent. Here we explain two different ways:
+Există mai multe modalități de a transfera fișierul APK **AAPS** de pe computer pe telefonul inteligent. Aici explicăm două căi diferite:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Opțiunea 1 - Folosiți Google drive (Gdrive)
+* Opțiunea 2 – Utilizarea unui cablu USB
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+Vă rugăm să rețineți că transferul prin e-mail poate provoca dificultăți și este descurajat.
 
-## Option 1. Use Google drive to transfer files
+## Opțiunea 1. Utilizați Google Drive pentru a transfera fișiere
 
 Deschideți [Google.com](https://www.google.com/) în navigatorul de internet și autentificați-vă în contul dumneavoastră Google.
 

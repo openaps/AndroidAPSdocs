@@ -16,9 +16,9 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 (omnipod-dash-constraints)=
 
-## Omnipod DASH known AAPS constraints/issues
-- Android 16 requires **AAPS** version 3.3.2.1 or later.
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
+## Известные ограничения и проблемы с Omnipod DASH в AAPS
+- Android 16 требует **AAPS** версии 3.3.2.1 или выше.
+- Общий совет — использовать **AAPS** на Android 14 или 16. Пользователи сообщают о большом количестве [проблем](https://github.com/nightscout/AndroidAPS/issues/3471) при использовании с Android 15. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
 - Too frequent basal updates may cause basal insulin delivery [problems](https://github.com/nightscout/AndroidAPS/issues/4158) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig.
@@ -33,7 +33,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 - Omnipod DASH is identified by the blue needle cap.
 
-![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
+![Под Omnipod](../images/DASH_images/Omnipod_Pod.png)
 
 - **A Compatible Android phone** with a Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info), additionally the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
     -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
@@ -82,12 +82,12 @@ Instead a temporary zero basal rate can be achieved through the "Disconnect pump
 
 There are **two** available options to configure Omnipod in **AAPS**:
 
-### Option 1: New installations
+### Вариант 1: При начальной установке
 
 When installing **AAPS** for the first time, the **Setup Wizard** will guide new users through key features and installation requirements for **AAPS**.  
 Select “DASH” when you reach Pump selection.
 
-![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
+![Включить Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (See Option 2).
 
@@ -102,19 +102,19 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 
 **NOTE:** A faster way to access the [**Dash settings**](#omnipod-dash-settings) can be found below in the DASH settings section of this document.
 
-![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
+![Включить Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
 ### Verification of Omnipod Driver Selection
 
 To verify that you have selected the DASH in **AAPS**, if you have **checked the box (4)**, **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab on **AAPS**. If this box is left unchecked, you’ll find the DASH tab in the hamburger menu upper left.
 
-![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
+![Включить Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 ## Настройка помпы Omnipod Dash
 
 **Swipe left** to the [**DASH tab**](#omnipod-dash-tab) where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) 'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
+![Обновить Лого](../images/DASH_images/Refresh_LOGO.png) 'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png)   'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
 
@@ -255,7 +255,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 (omnipod-dash-silencing-pod-alerts)=
 
-### Silencing Pod Alerts
+### Отключение звуковых оповещений пода
 
 The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
 

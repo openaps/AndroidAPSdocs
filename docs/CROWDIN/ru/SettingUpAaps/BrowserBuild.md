@@ -1,10 +1,10 @@
 (browser-build)=
 
-# Browser build
+# Сборка через браузер
 
-Building AAPS with GitHub Actions.
+Сборка AAPS с использованием инструментов GitHub.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**Минимальная поддерживаемая версия AAPS - 3.3.2.1.**
 
 ## Постройте сами вместо скачивания
 
@@ -14,75 +14,75 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 (Building-APK-without-a-computer)=
 
-## Device and software specifications for building AAPS
+## Технические характеристики устройства и программного обеспечения для построения AAPS
 
-We recommend using an Android device. You can also use a computer or an iOS device.
+Рекомендуется использовать устройства на базе Android. Компьютер или устройство на базе iOS тоже можно использовать.
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+Вам будет необходимо использовать несколько вкладок браузера и переключаться между ними. Например, в Chrome:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
-You also need a Google account so that the app can be saved in your Google Drive.
+Также необходима учетная запись Google, чтобы сохранить свою сборку на гугл-диске.
 
 ```{note}
-This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Эта документация предполагает, что вы используете свой смартфон и браузер Chrome.  
+Вам придется переходить между вкладками: перед началом сборки закройте все открытые вкладки, чтобы не потеряться в процессе.
 ```
 
 (github-fork)=
 
-## 1. AAPS personal fork
+## 1. Своя ветка с AAPS
 
-You will need to secretly store your personal Android Java Key and Google Drive information in GitHub (later in the process, we will explain how).
+В GitHub вам необходимо держать в тайне свои личные ключи Android Java Key и Google Drive (позже мы объясним, как).
 
-Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
+Так как это не может быть сделано внутри публичного репозитория AndroidAPS, вам нужно сделать вашу личную копию исходного кода (называемого веткой или форком).
 
-### GitHub account
+### Учетная запись GitHub
 
-You need to [create a GitHub account](https://github.com/signup) if you don't have one yet.  
-You can sign up with your email, or you can sign up with Google. Follow the registration and verification process.
+Вам необходимо [создать учетную запись GitHub](https://github.com/signup), если у вас ее еще нет.   
+Вы можете авторизоваться с помощью вашего e-mail'a или с попощью Google-акканута. Следуйте подсказкам при регистрации и верификации.
 
-When you have an account, [sign in to GitHub](https://github.com/login).
+После того, как вы создадите учетную запись, [авторизуйтесь в GitHub](https://github.com/login).
 
-### Fork AndroidAPS
+### Ветка AndroidAPS
 
-Open the official AndroidAPS repository following [this link](https://github.com/nightscout/AndroidAPS).
+Откройте официальный репозиторий AndroidAPS с помощью [этой ссылки](https://github.com/nightscout/AndroidAPS).
 
-Tap on the fork icon. This will create a copy inside your own account.
+Нажмите на иконку ветки. Это создаст копию репозитория в вашем аккаунте.
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-Scroll down the next screen and tap **Create Fork**.
+Прокрутите вниз до следующего экрана и нажмите **Создать Ветку (Create Fork)**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the main branch only" if you will want to build developers versions or customizations.*
+*Примечание: вы можете **снять галку** "Copy the main branch only" (Копировать только основную ветку), если вы хотите собрать версию, находящуюся в разработке, или кастомизированную версию.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?</br></br>
+Вы не можете создать ветку и видите это?</br></br>
 **`Create a new fork`**</br>
 `A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. View existing forks.`</br>
 *`Required fields are marked with an asterisk (*).`*</br>
 **`No available destinations to fork this repository.`**</br></br>
-This means you already have an existing fork of AndroidAPS.</br>
-Make sure it's up to date and continue to Preparation Steps.
+Это означает, что у вас уже есть ветка AndroidAPS.</br>
+Убедитесь, что она актуальная и переходите к Подготовительным шагам.
 ```
 
 ```{warning}
-**Never delete your fork without having done a backup of your secrets!**
+**Никогда не удаляйте свою ветку без резервного копирования ваших паролей и секретов!**
 ```
 
-GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
+Теперь GitHub отображает вашу персональную копию AndroidAPS. Оставить эту вкладку браузера открытой.
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
 (aaps-ci-preparation)=
 
-## 2. Preparation Steps
+## 2. Подготовительные шаги
 
-- If you are building from an Android device, install [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) from the Google Play store.
+- Если вы используете устройство на базе Android, установите [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) из магазина Google Play.
 
 ```{admonition} File Manager Plus
 :class: dropdown
@@ -90,23 +90,23 @@ GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab
 :::{include} BrowserBuildFileManagerPlus.md
 ```
 
-- Download the preparation file from here: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
+- Загрузите файл подготовки отсюда: [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
-```text
-https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
+1. Если вы открываете эту страницу из приложения (через веб-просмотр), файл HTML может не загрузиться. Скопируйте URL и откройте его в вашем браузере:
+``text
+https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+Или перейдите к странице со свежим релизом:
 ```text
-https://github.com/nightscout/aaps-ci-preparation/releases/latest
+https://github. om/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.Backup copy hosted on this site:
+2. Резервный файл, размещенный на этом сайте:
 
- - If the external link is also unavailable, you can use this backup file to download.
+ - Если внешняя ссылка также недоступна, вы можете использовать этот резервный файл для загрузки.
 <!--crowdin:disable-->
 
 ```{eval-rst}
@@ -116,33 +116,33 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 <!--crowdin:enable-->
 ````
-AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS):
-- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
+Для сборки AndroidAPS требуются закрытые ключи, которые хранятся в хранилище ключей Java (Java KeyStore, JKS):
+- Если вы собираете AAPS впервые (или у вас нет Android Studio JKS) - следуйте инструкциям по ссылке [AAPS-CI Вариант 1 – Генерация JKS](#aaps-ci-option1) для завершения установки.
 </br>
 
 ```{warning}
-Building AAPS with **Option 1** will not allow you to upgrade your existing AAPS.
-You will need to:
-1. [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service…).
-3. Generate a new version of the signed apk as described in Option 1 and transfer it to your phone.
-4. Uninstall previous AAPS version on your phone.
-5. Install new AAPS version on your phone.
-6. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
-7. Restore your data from Nightscout.
+Сборка AAPS с помощью **Варианта 1** не позволит обновить уже имеющийся у вас AAPS.
+Вам будет необходимо:
+1. [Экспортировать настройки](#ExportImportSettings-Automating-Settings-Export) на ваш телефон.
+2. Скопировать или загрузить файл настроек из телефона во внешнее хранилище (например: компьютер, облачный сервис хранения данных).
+3. Создать новую версию подписанного apk, как описано во Варианте 1, и перенести ее на ваш телефон.
+4. Удалить предыдущую версию AAPS.
+5. Установить новую версию AAPS на телефон.
+6. [Импортировать настройки](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) для восстановления ваших целей и конфигурации.
+7. Восстановить ваши данные из Nightscout'a.
 ```
 
-- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](#aaps-ci-option2).
+- Если вы хотите использовать свой собственный JKS (тот, который вы использовали для сборки предыдущей версии AAPS на компьютере в Android Studio), вы знаете его пароль и псевдоним (key0) - выберите [AAPS-CI Вариант 2 – Загрузить Имеющийся JKS](#aaps-ci-option2).
 
 </br>
 
-The AAPS app will be saved in your Google Cloud drive once built.
+После сборки приложение AAPS будет сохранено на вашем Google диске.
 
 (aaps-ci-option1)=
-### AAPS-CI Option 1 – Generate JKS
- - Suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
-- Here are examples using multiple platforms below.
-- Select your platform in the list below, between Android (preferred choice), iOS or Computer.
+### AAPS-CI Вариант 1 – Генерация JKS
+ - Подходит тех, кто собирает приложение впервые, или не имеет JKS, или забыл пароль и/или псевдоним.
+- Ниже приведены примеры для разных платформ.
+- Выберите ниже вашу платформу: Android (предпочтительный вариант), iOS или компьютер.
 
 ```{tab-set}
 
@@ -156,21 +156,21 @@ The AAPS app will be saved in your Google Cloud drive once built.
 :::{include} BrowserBuildO1I.md
 :::  
 
-:::{tab-item} Computer
+:::{tab-item} Компьютер
 (aaps-ci-option1-computer)=
 :::{include} BrowserBuildO1C.md
 :::  
 
 ```
 
-Skip the next section and continue [here](#aaps-ci-google-drive-auth).
+Пропустите следующий раздел и продолжайте [здесь](#aaps-ci-google-drive-auth).
 
 ---
 
 (aaps-ci-option2)=
 
-### AAPS-CI Option 2 – Upload Existing JKS
- - Suitable for users who already have a JKS and know the JKS password and alias  (For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub - those from Android Studio, see below where you used them.)
+### AAPS-CI Вариант 2 – Загрузить имеющийся JKS
+ - Подходит для пользователей, у которых уже есть JKS и они знают его пароль и псевдоним (Для `KEYSTORE_PASSWORD`, `KEY_ALIAS`, и `KEY_PASSWORD` введите ваши фактические пароль и псевдоним в GitHub - используйте те, что были в Android Studio, ниже показано, где вы их использовали.)
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
@@ -178,8 +178,8 @@ Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 ```
 
- - Here are examples using multiple platforms below.
- - Select your platform in the list below, between Android (preferred choice) or Computer.
+ - Ниже приведены примеры для разных платформ.
+ - Выберите ниже вашу платформу: Android (предпочтительный вариант) или компьютер.
 
 
 ```{tab-set}
@@ -189,7 +189,7 @@ Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 :::{include} BrowserBuildO2A.md
 :::  
 
-:::{tab-item} Computer
+:::{tab-item} Компьютер
 (aaps-ci-option2-computer)=
 :::{include} BrowserBuildO2C.md
 :::  
@@ -200,10 +200,10 @@ Skip the next section and continue [here](#aaps-ci-google-drive-auth).
 
 (aaps-ci-google-drive-auth)=
 
-### AAPS-CI Google Drive Auth
+### AAPS-CI Авторизация Google Drive
 
 ```{warning}
-No matter which of the prior sets of instructions you followed (option 1 or option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+Независимо от того, какому из предыдущих вариантов инструкций вы следовали (вариант 1 или вариант 2), вы ДОЛЖНЫ добавить авторизацию Google Drive, чтобы успешно использовать сборку через браузер.
 ```
 
 Note: If you already followed this part in the video, you can now skip to [here](#github-build-apk).

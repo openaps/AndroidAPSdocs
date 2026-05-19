@@ -75,7 +75,7 @@
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
 - Все трансмиттеры G6, изготовленные после осени/конца 2018 называют "Firefly" (светлячок). Они не позволяют перезапустить сенсор без [ извлечения трансмиттера](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), они не отправляют необработанные данные. Рекомендуется использовать самые свежие [Ночные сборки](https://github.com/NightscoutFoundation/xDrip/releases) xDrip+.
-- Old rebatteried transmitters and modified transmitters allow sensor life extension and restarts, they also send raw data. В этом случае можно пользоваться [свежей стабильной версией APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+- Старые трансмиттеры с замененной батареей и модифицированные трансмиттеры позволяют увеличить срок работы датчика и перезапустить его, также они отправляют необработанные данные. В этом случае можно пользоваться [свежей стабильной версией APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 ### Настройки для работы с Dexcom
 
@@ -202,7 +202,7 @@
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
+- Если сенсор нуждается в этом (Libre 2 EU и Libre 1 US), установите новейший алгоритм out-of-process .
 
 - Сенсор должен быть уже запущен с помощью приложения поставщика или при помощи ридера (xDrip+ не может запускать или останавливать сенсоры Libre).
 
