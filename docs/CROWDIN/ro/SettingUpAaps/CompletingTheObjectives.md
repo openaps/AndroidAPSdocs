@@ -12,12 +12,12 @@ When **AAPS** is installed for the first time, each objective must be completed 
 
 As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
 
-## Backup your settings
+## Faceți o copie de rezervă a setărilor
 
 ```{admonition} Note
-:class: note
+:class: nota
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+Se recomandă exportul setărilor **AAPS** după completarea fiecărui **Obiectiv**!
 ```
 
 It is strongly recommended that you [export your settings](../Maintenance/ExportImportSettings.md) after completing each objective to avoid losing any progress made in **AAPS**. This exporting process creates a **settings file** (.json) which should be backed-up in one or more safe places (e.g. Google Drive, hard disk, email attachment _etc._). This ensures that any progress made in **AAPS** is saved. If your phone is lost or if you accidentally delete your progress, the json file can be re-loaded to **AAPS** by importing a recent settings file. Having a backup **settings file** is also required if a new **AAPS** smartphone is required for any reason (upgrading/lost/broken phone _etc._)
