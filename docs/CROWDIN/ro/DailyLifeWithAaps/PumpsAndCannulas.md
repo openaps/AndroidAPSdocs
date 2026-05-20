@@ -60,7 +60,7 @@ a) Just reconnect the pump in **AAPS** (grey-to-green, for closed loop) and leav
 
 _sau_
 
-b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can navigate to the calculator and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+b) Dacă doriți să fiți mai agresiv (de exemplu, vă îndreptați spre hiperglicemie), puteți naviga la calculator și bolusa pentru zero carbohidrați, pentru a administra imediat insulina calculată lipsă sub formă de bolus.
 
 
-Which strategy you prefer is highly personal, and is best determined by trial and error.    
+Ce strategie preferați este foarte personal, și se determină cel mai bine prin încercări și erori.    
