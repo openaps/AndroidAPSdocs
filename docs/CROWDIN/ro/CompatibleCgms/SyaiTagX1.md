@@ -1,11 +1,11 @@
 # Syai X1
 
 
-## Using X1 And Syai Tag app
+## Utilizarea X1 și a aplicației Syai Tag
 
 -   Instalați aplicația de la <https://play.google.com/store/apps/details?id=com.syai.tag>.
 
--   Start X1 sensor
+-   Porniți senzorul X1
 
 - Selectați Syai Tag în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
 
