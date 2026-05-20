@@ -17,7 +17,7 @@ We maintain a list of the [tested hardware setups](https://docs.google.com/sprea
 
 Această listă oferă feedback utilizatorilor cu privire la utilizarea unui telefon, împreună cu **AAPS** și o anumită pompă și CGM. Vă poate ajuta să verificați dacă telefonul / pompa / senzorul dumneavoastră a fost utilizat cu succes de alți utilizatori.
 
-The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
+Documentul este doar pentru citire. Cu CRTL-F, puteți căuta în textul foii de calcul Google.
 
 Pentru a vă înregistra testul unei configurații hardware, vă rugăm să completați acest [formular](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). După ce completați datele formularului, foaia se actualizează automat la fiecare 5 minute.
 
