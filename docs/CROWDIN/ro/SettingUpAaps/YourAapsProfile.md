@@ -99,7 +99,7 @@ When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing thro
 
 Rata dumneavoastră bazală de insulină (unități/oră) furnizează insulina de fond, menție nivelurile glicemiei stabile în absența alimentelor sau a exercițiului fizic.
 
-Pompa de insulină eliberează cantități mici de insulină cu acțiune rapidă la fiecare câteva minute, pentru a împiedica ficatul să elibereze prea mult glucoză și pentru a deplasa glucoza în celulele organismului. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+Pompa de insulină eliberează cantități mici de insulină cu acțiune rapidă la fiecare câteva minute, pentru a împiedica ficatul să elibereze prea mult glucoză și pentru a deplasa glucoza în celulele organismului. Insulina bazală constituie, de obicei, între 40-50% din doza dumneavoastră zilnică totală (DZT), în funcție de dietă, și de obicei urmează un ritm circadian, cu un vârf si o vale în ceea ce privește necesarul de insulină pe parcursul a 24 de ore. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
 
 Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
 
@@ -133,11 +133,11 @@ When taking action on the result of your basal testing, changes in the **Profile
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Factor de sensibilitate la insulină (FSI)
 
 ### Descriere
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+Factorul de sensibilitate la insulină (uneori numit factor de corecție) este un indicator al cantității de glucoză din sânge care va fi redusă cu 1 unitate de insulină.
 
 **In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
 
@@ -169,7 +169,7 @@ See the **figure below** for an example of how ISF values could be set in an **A
 
 ![Profile ISF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+Un punct de plecare de bază pentru determinarea FSI pe timpul zilei este să-l bazați pe doza dumneavoastră zilnică totală (DZT), prin utilizarea regulii 1700 (94). More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
 | 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -183,7 +183,7 @@ Aveți grijă deoarece acest lucru este adesea stabilit prea jos. Prea mic înse
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Raport insulină carbohidrați (ICR)
 
 ### Descriere
 
@@ -191,9 +191,9 @@ The **ICR** is a measure of how many grams of carbohydrate are covered by one un
 
 Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Spre exemplu, un raport insulină-carbohidrați 1-10 (1:10) înseamnă că faceți 1U insulină la fiecare 10 grame de carbohidrați. O masă de 25 g de carbohidrați ar necesita 2,5 U de insulină.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. O masă de 25 g de carbohidrați ar necesita 25/20 = 1,25U de insulină.
 
 It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
 
@@ -238,7 +238,7 @@ Assuming your basal rates are correct, you can test by checking if **IOB** is ze
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Despre importanța corectitudinii profilului dumneavoastră
 
 **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
 
