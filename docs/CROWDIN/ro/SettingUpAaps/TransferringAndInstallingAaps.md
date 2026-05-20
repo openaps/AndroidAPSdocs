@@ -17,7 +17,7 @@ Vă rugăm să rețineți că transferul prin e-mail poate provoca dificultăți
 
 Deschideți [Google.com](https://www.google.com/) în navigatorul de internet și autentificați-vă în contul dumneavoastră Google.
 
-On the right upper side select the Drive app in the Google menu.
+În partea dreaptă sus selectați aplicația Drive din meniul Google.
 
 ![Porniți aplicația Drive](../images/GoogleDriveInWebbrowser.png)
 
