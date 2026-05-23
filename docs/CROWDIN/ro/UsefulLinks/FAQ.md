@@ -280,17 +280,17 @@ Din Android Studio: Asigurați-vă că "Gradle" a terminat de sincronizat și in
 
 AAPS nu rulează în "modul dezvoltator". AAPS afișează următorul mesaj: "versiunea dev rulează. Bucla închisă este dezactivată".
 
-Asigurați-vă că AAPS rulează în "modul dezvoltator": Plasați un fișier numit "engineering_mode" în locația "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
+Asigurați-vă că AAPS rulează în "modul dezvoltator": Plasați un fișier numit "engineering_mode" în locația "AAPS/extra". Orice fișier este potrivit atâta timp cât este corect denumit. Asigurați-vă că reporniți AAPS pentru ca acesta să găsească fișierul și pentru a intra în "modul dezvoltator".
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+Sugestie: Faceți o copie a unui fișier de jurnal existent și redenumiți-l în "engineering_mode" (notă: fără extensia de fișier!).
 
-### Where can I find settings files?
+### Unde pot găsi fișierele de setări?
 
-Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+Fișierele de setări vor fi stocate pe memoria internă a telefonului în directorul "/AAPS/preferinţe". AVERTISMENT: Asigurați-vă că nu vă pierdeți parola, deoarece fără ea nu veți putea importa un fișier de setări criptat!
 
-### How to configure battery savings?
+### Cum să configurați economisirea bateriei?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+Configurarea corectă a managementului de alimentare este importantă pentru a preveni ca sistemul de operare al telefonului să suspende AAPS și serviciile aferente atunci când telefonul nu este utilizat. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
 
 ### Pump unreachable alerts several times a day or at night.
 
