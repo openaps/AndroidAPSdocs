@@ -12,12 +12,12 @@ When **AAPS** is installed for the first time, each objective must be completed 
 
 As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
 
-## Backup your settings
+## Faceți o copie de rezervă a setărilor
 
 ```{admonition} Note
-:class: note
+:class: nota
 
-Exporting your **AAPS** settings is recommended after completing each **Objective**!
+Se recomandă exportul setărilor **AAPS** după completarea fiecărui **Obiectiv**!
 ```
 
 It is strongly recommended that you [export your settings](../Maintenance/ExportImportSettings.md) after completing each objective to avoid losing any progress made in **AAPS**. This exporting process creates a **settings file** (.json) which should be backed-up in one or more safe places (e.g. Google Drive, hard disk, email attachment _etc._). This ensures that any progress made in **AAPS** is saved. If your phone is lost or if you accidentally delete your progress, the json file can be re-loaded to **AAPS** by importing a recent settings file. Having a backup **settings file** is also required if a new **AAPS** smartphone is required for any reason (upgrading/lost/broken phone _etc._)
@@ -27,16 +27,16 @@ The **settings** file will save not only your progress through the **Objectives*
 The **Objectives** will need to be restarted from the beginning should you fail to have a backup of your settings and anything happens to your **AAPS** smartphone. Progressing through the **Objectives** takes time, and having to re-complete them again because for example you lost your smartphone, is a situation to be best avoided.
 
 (objectives-objective1)=
-## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
+## Obiectivul 1: Configurarea vizualizării și a monitorizării, analizarea bazalelor și a raporturilor
 
-**Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
+**Objective 1** requires the user to set up their basic technical setup in **AAPS**. Nu se poate face niciun progres până când acest pas nu este finalizat.
 
 - Select the correct CGM/FGM in [Config Builder > BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
 - Select the correct Pump in [Config Builder > Pump](../SettingUpAaps/ConfigBuilder.md) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
-- If using Nightscout:
+- Dacă utilizați Nightscout:
   - Follow instructions in [Nightscout](../SettingUpAaps/Nightscout.md) page to ensure **Nightscout** can receive and display **AAPS** data.
   - Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [Preferences > NSClient](#Preferences-nsclient).
-- If using Tidepool:
+- Dacă utilizați Tidepool:
   - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
 
 Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it.*
@@ -44,7 +44,7 @@ Note - *You may need to wait for the next sensor glucose reading to arrive befor
 (objectives-objective2)=
 ## Objective 2: Learn how to control AAPS
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below Click on the orange text "Not completed yet" to access the to-dos. Links will be provided to guide you, in case you are not familiar with a specific action yet.
+**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below Click on the orange text "Not completed yet" to access the to-dos. Legături pentru a vă ghida vor fi furnizate, în cazul în care nu sunteți familiarizat cu o acțiune specifică.
 
 ![Screenshot objective 2](../images/Objective2_V2_5.png)
 
@@ -54,7 +54,7 @@ Tasks to complete **Objective 2** are:
   - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.06U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
 - Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-section-c-bg-loop-status) in **AAPS** for a duration of 1h.
   - _Hint_: press the loop icon on the OVERVIEW screen to open the Loop dialogue.
-- End "taking a shower" by reconnecting your pump.
+- Încheiați "efectuarea dușului" prin reconectarea pompei dumneavoastră.
   - _Hint_: press the "disconnected"-icon to open the loop dialog.
 - Set a custom [**Temporary Target**](../DailyLifeWithAaps/TempTargets.md) with a duration of 10 min.
   - _Hint_: press the target bar on the OVERVIEW screen to bring up the temporary target dialog.

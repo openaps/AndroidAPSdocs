@@ -70,12 +70,12 @@ The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is 
 
 Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
 
-The targets can be defined within those boundaries :
+Țintele pot fi definite în limitele respective:
 
-|         | _Low_ target           | _High_ target          |
-| ------- | ---------------------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   | 5 mmol/l or 90 mg/dL   |
-| Maximum | 10 mmol/l or 180 mg/dL | 15 mmol/l or 225 mg/dL |
+|         | _Low_ target            | _High_ target          |
+| ------- | ----------------------- | ---------------------- |
+| Minimum | 4 mmol/l or 72 mg/dL    | 5 mmol/l sau 90 mg/dl  |
+| Maximum | 10 mmol/l sau 180 mg/dl | 15 mmol/l or 225 mg/dL |
 
 ### Impact
 
@@ -87,25 +87,25 @@ The **figure below** shows an example of how the target can be set in an **AAPS*
 
 ![Țintă](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. Dacă doriți să vă asigurați că aveți o cantitate suficientă de insulină la bord (IOB) dimineața, înainte de bolusul pentru micul dejun, este posibil să stabiliți o țintă mai mică de 81 mg/dl (4,5 mmol/l) de la 7 la 8 dimineața.
 
 When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Rate bazale
 
 ### Descriere
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Rata dumneavoastră bazală de insulină (unități/oră) furnizează insulina de fond, menție nivelurile glicemiei stabile în absența alimentelor sau a exercițiului fizic.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+Pompa de insulină eliberează cantități mici de insulină cu acțiune rapidă la fiecare câteva minute, pentru a împiedica ficatul să elibereze prea mult glucoză și pentru a deplasa glucoza în celulele organismului. Insulina bazală constituie, de obicei, între 40-50% din doza dumneavoastră zilnică totală (DZT), în funcție de dietă, și de obicei urmează un ritm circadian, cu un vârf si o vale în ceea ce privește necesarul de insulină pe parcursul a 24 de ore. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
 
 Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
 
 ### Impact
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Ratele bazale exacte vă permit să vă treziți în interval, și să săriți peste mese - sau să mâncați - mai devreme sau mai târziu în cursul zilei, fără să aveți hiperglicemii sau hipoglicemii.
 
 O rată bazală prea mare poate duce la valori mici ale glicemiei. And vice versa.
 
@@ -119,7 +119,7 @@ Conversely, a basal rate too low can lead to high BGs, and a failure to bring le
 
 The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Rate bazale](../images/Profile_BasalRates.png)
 
 Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
 
@@ -133,11 +133,11 @@ When taking action on the result of your basal testing, changes in the **Profile
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Factor de sensibilitate la insulină (FSI)
 
 ### Descriere
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+Factorul de sensibilitate la insulină (uneori numit factor de corecție) este un indicator al cantității de glucoză din sânge care va fi redusă cu 1 unitate de insulină.
 
 **In mg/dL units:** If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
 
@@ -169,7 +169,7 @@ See the **figure below** for an example of how ISF values could be set in an **A
 
 ![Profile ISF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+Un punct de plecare de bază pentru determinarea FSI pe timpul zilei este să-l bazați pe doza dumneavoastră zilnică totală (DZT), prin utilizarea regulii 1700 (94). More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
 | 1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dl) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -183,7 +183,7 @@ Aveți grijă deoarece acest lucru este adesea stabilit prea jos. Prea mic înse
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Raport insulină carbohidrați (ICR)
 
 ### Descriere
 
@@ -191,9 +191,9 @@ The **ICR** is a measure of how many grams of carbohydrate are covered by one un
 
 Some people also use **I:C** as an abbreviation instead of **ICR**, or talk about carb ratio : **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Spre exemplu, un raport insulină-carbohidrați 1-10 (1:10) înseamnă că faceți 1U insulină la fiecare 10 grame de carbohidrați. O masă de 25 g de carbohidrați ar necesita 2,5 U de insulină.
 
-If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+If your **ICR** is weaker (higher value), perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. O masă de 25 g de carbohidrați ar necesita 25/20 = 1,25U de insulină.
 
 It is common to have different **ICR** at different times of day due to hormone levels and physical activity. Many people find they have their lowest/strongest **ICR** around breakfast time because they tend to be more insulin resistant. So, for example, one adult user's **ICR** could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller **ICR** then.
 
@@ -238,11 +238,11 @@ Assuming your basal rates are correct, you can test by checking if **IOB** is ze
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Despre importanța corectitudinii profilului dumneavoastră
 
 **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. Poate face acest lucru, spre exemplu, prin întreruperea administrării insulinei dacă urmează să faceți hipoglicemie. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
 
 If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
 

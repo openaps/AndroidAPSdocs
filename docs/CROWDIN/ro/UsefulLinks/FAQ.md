@@ -268,29 +268,29 @@ Cu unele telefoane, există deconectări Bluetooth de la dispozitivul de legătu
 
 Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
 
-The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+Cel mai simplu mod de a face ca toate aceste componente să funcționeze împreună este: 1/ Ștergeți Link din AAPS 2/ Deconectați Link 3/ meniul în 3 pucnte AAPS , ieșiți din AAPS 4/ Apăsați lung pictograma AAPS, meniul Android, informații despre aplicația AAPS, Oprire forțată AAPS și apoi ștergeți memoria cache (nu șterge memoria principală!) 4bis/ Rareori unele telefoane pot avea nevoie de o repornire aici. Puteți încerca fără repornire. 5/Porniți Link 6/Porniți AAPS 7/Fila capsulă, meniu 3 puncte, căutați și conectați Link
 
-### Build error: file name too long
+### Eroare de construcție: numele fișierului este prea lung
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+În timp ce încerc să construiesc, primesc o eroare care spune că numele fișierului este prea lung. Soluții posibile: Mută sursele într-un director mai aproape de directorul rădăcină al unității (de ex. "c:\src\AndroidAPS-EROS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+Din Android Studio: Asigurați-vă că "Gradle" a terminat de sincronizat și indexat după deschiderea proiectului și extragerea din GitHub. Executați o comandă Construiți->Curățați proiectul înainte de a face Reconstruiți proiectul. Executați fișier->Invalidați cache și Reporniți Android Studio.
 
-### Alert: Running dev version. Closed loop is disabled
+### Alertă: Rularea versiunii dev. Bucla închisă este dezactivată
 
-AAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+AAPS nu rulează în "modul dezvoltator". AAPS afișează următorul mesaj: "versiunea dev rulează. Bucla închisă este dezactivată".
 
-Make sure AAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
+Asigurați-vă că AAPS rulează în "modul dezvoltator": Plasați un fișier numit "engineering_mode" în locația "AAPS/extra". Orice fișier este potrivit atâta timp cât este corect denumit. Asigurați-vă că reporniți AAPS pentru ca acesta să găsească fișierul și pentru a intra în "modul dezvoltator".
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+Sugestie: Faceți o copie a unui fișier de jurnal existent și redenumiți-l în "engineering_mode" (notă: fără extensia de fișier!).
 
-### Where can I find settings files?
+### Unde pot găsi fișierele de setări?
 
-Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+Fișierele de setări vor fi stocate pe memoria internă a telefonului în directorul "/AAPS/preferinţe". AVERTISMENT: Asigurați-vă că nu vă pierdeți parola, deoarece fără ea nu veți putea importa un fișier de setări criptat!
 
-### How to configure battery savings?
+### Cum să configurați economisirea bateriei?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+Configurarea corectă a managementului de alimentare este importantă pentru a preveni ca sistemul de operare al telefonului să suspende AAPS și serviciile aferente atunci când telefonul nu este utilizat. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
 
 ### Pump unreachable alerts several times a day or at night.
 
