@@ -268,19 +268,19 @@ Cu unele telefoane, există deconectări Bluetooth de la dispozitivul de legătu
 
 Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
 
-The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+Cel mai simplu mod de a face ca toate aceste componente să funcționeze împreună este: 1/ Ștergeți Link din AAPS 2/ Deconectați Link 3/ meniul în 3 pucnte AAPS , ieșiți din AAPS 4/ Apăsați lung pictograma AAPS, meniul Android, informații despre aplicația AAPS, Oprire forțată AAPS și apoi ștergeți memoria cache (nu șterge memoria principală!) 4bis/ Rareori unele telefoane pot avea nevoie de o repornire aici. Puteți încerca fără repornire. 5/Porniți Link 6/Porniți AAPS 7/Fila capsulă, meniu 3 puncte, căutați și conectați Link
 
-### Build error: file name too long
+### Eroare de construcție: numele fișierului este prea lung
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+În timp ce încerc să construiesc, primesc o eroare care spune că numele fișierului este prea lung. Soluții posibile: Mută sursele într-un director mai aproape de directorul rădăcină al unității (de ex. "c:\src\AndroidAPS-EROS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+Din Android Studio: Asigurați-vă că "Gradle" a terminat de sincronizat și indexat după deschiderea proiectului și extragerea din GitHub. Executați o comandă Construiți->Curățați proiectul înainte de a face Reconstruiți proiectul. Executați fișier->Invalidați cache și Reporniți Android Studio.
 
-### Alert: Running dev version. Closed loop is disabled
+### Alertă: Rularea versiunii dev. Bucla închisă este dezactivată
 
-AAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+AAPS nu rulează în "modul dezvoltator". AAPS afișează următorul mesaj: "versiunea dev rulează. Bucla închisă este dezactivată".
 
-Make sure AAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
+Asigurați-vă că AAPS rulează în "modul dezvoltator": Plasați un fișier numit "engineering_mode" în locația "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
 
 Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
 
