@@ -1,64 +1,64 @@
 # Глоссарий
 
-**AAPS** = AndroidAPS is the name of the Android app.
+**AAPS** = AndroidAPS название приложения на Андроиде. 
 
-**AAPSClient** (or **NSClient**) = a remote control feature that can be used by caregivers via a follower phone to follow a user’s **AAPS** by connecting to the user’s **Nightscout's** site. Further info → Wiki - 'NS Client'. Objectives learning program within **AAPS** provides step by step guidance. Further info → Wiki - 'objectives'.
+**AAPSClient** (или **NSClient**) = функция дистанционного управления, которая может быть использована наблюдателями на своем телефоне, чтобы следить за состоянием **AAPS** мастера с помощью соединения к серверу **Nightscout**. Подробная информация → Wiki - 'NS Клиент'. Цели в **AAPS** обеспечивают пошаговое ознакомление с приложением. Подробная информация → Wiki - 'Цели'.
 
-**APS** = Artificial Pancreas System.
+**APS** = Artificial Pancreas System, ИПЖ = система Искусственной Поджелудочной Железы.
 
-**AMA** = Advanced Meal Assist. An algorithm which allows **AAPS** to increase the user’s basal more aggressively after a meal bolus. Further info → Wiki - 'AMA'.
+**AMA** = Advanced Meal Assist, продвинутый помощник приема пищи. Алгоритм, который позволяет **AAPS** увеличивать базал после приема пищи более агрессивно. Подробная информация → Wiki - 'AMA'.
 
-**Adjustment Factor** = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value.
+**Adjustment Factor** = используется в **DynamicISF**, устанавливается в **Настройках** пользователя, значения между 1% и 300%. Он действует как множитель суточной дозы **TDD**.
 
 - increasing the **Adjustment Factor** value above 100 % makes **DynamicISF** more aggressive: the **ISF** values become smaller (i.e. more insulin required to decrease **BG** levels a small amount)
 - lowering the **Adjustment Factor** value under 100% makes **DynamicISF** less aggressive: the **ISF** values become larger (i.e. less insulin required to decrease **BG** levels a small amount).
 
 **Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → Wiki - 'android auto'.
 
-**APK** = Android application Package. A software installation file. Further info → Wiki - 'Building APK'.
+**APK, апк** = Android application Package. Установочный файл приложения для андроида. Подробная информация → Wiki - 'Сборка AAPS'.
 
-**Autosens** = calculation of sensitivity to insulin between a period of a 24 and 8 hour window etc. Further info → DIABETTECH - **Autosens**.
+**Autosens, Автосенс** = расчет чувствительности к инсулину в период от 24 до 8 часов и т.п. Подробная информация → DIABETTECH - **Autosens**.
 
-**Azure** = cloud computing platform to host **Nightscout** web app Azure → see also **Nightscout**.
+**Azure** = облачная платформа для размещения сервера **Nightscout** → см. также **Nightscout**.
 
 **BAT** = status light low battery on **AAPS’** home screen **Preferences**, Screenshots → see also **CAN** / **RES** / **SEN**.
 
-**BG** = blood glucose.
+**BG, ГК, СК** = глюкоза крови, гликемия.
 
-**BGI** = blood glucose impact. The degree to which **BG** 'should' rise or fall based on insulin activity alone.
+**BGI** = воздействие на глюкозу в крови. Показывает, в какой степени ГК "должна" подниматься или падать, только на основании активности инсулина.
 
-**BG source** = the source of the user’s **BG** values derived from either **CGM** or **FGM** through a system integration software like **BYODA**, **xDrip+** etc. Further info → Wiki - 'BG source'
+**Источник ГК** = источник значений **ГК** пользователя, приложение, которое передает показания используемого **НМГ** или **ФМГ**, например, **BYODA**, **xDrip+** и другие. Подробная информация → Wiki - 'Источник ГК'
 
-**Bridge** = an additional device transforming **FGM** to **CGM**.
+**Bridge, Трансмиттер** = дополнительное устройство, превращающее **ФНМГ** в **НМГ**.
 
-**BR** = Basal Rate. The amount of insulin in a given time block to maintain **BG** at a stable level. → see also **IC** / **ISF**.
+**BR, БС** = Базальная скорость. Количество инсулина в заданном отрезке времени, которое позволяет **ГК** оставаться стабильной, ровной. → см. так же **IC** / **ISF**.
 
-**BYODA** = Build Your Own Dexcom App. A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
+**BYODA** = Самостоятельно собранное приложение Dexcom. Способ собрать собственное приложение для чтения датчиков Dexcom G6.
 
-**CAGE** = Cannula AGE. Displayed on **AAPS’** homescreen and Nightscout providing the user’s information entered in the Actions tab / menu → see also **Nightscout**.
+**CAGE** = Возраст канюли. Не имеет аналога в русском переводе. Displayed on **AAPS’** homescreen and Nightscout providing the user’s information entered in the Actions tab / menu → see also **Nightscout**.
 
 **CAN** = status light overdue cannula change on the **AAPS’** homescreen **Preferences'** → see also **BAT** / **RES** / **SEN**.
 
-**CGM** = Continuous Glucose Monitor → see also **FGM**.
+**CGM, НМГ** = Непрерывный монитор глюкозы → см. также **FGM, ФМГ**.
 
-**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s-approval. Further info → Wiki - 'closed loop'.
+**Замкнутый Цикл** = система замкнутой петли, автоматически изменяющая подачу инсулина базируясь на алгоритмах **AAPS'а** и настройках **Профиля** и не требуя подтверждения от пользователя. Further info → Wiki - 'closed loop'.
 
-**COB** = Carbs On Board. This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
+**COB** = Активные углеводы. Количество углеводов, которое еще не было усвоено организмом пользователя → см. также IOB.
 
-**CSF** =Carbs Sensitivity Factor. i.e. how much does the user’s **BG** increase for 1g of carbs absorbed.
+**CSF** = Фактор чувствительности к углеводам. Т.е. на сколько возрастает **ГК** от 1 грамма усвоенного углевода.
 
-**DIA** = Duration of Insulin Action. Further info → Wiki - 'insulin types' and see also → DIABETTECH - 'DIA'.
+**DIA** = Длительность активности инсулина. Further info → Wiki - 'insulin types' and see also → DIABETTECH - 'DIA'.
 
 **DST** = Daylight Savings Time Wiki DST.
 
-**Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s:
+**Динамический ISF (или DynISF, или динамик)** = функция внутри **AAPS**, которая адаптирует коэффициент чувствительности инсулина (**ISF, ФЧИ**) динамически основываясь на данных пользователя:
 
-- Total Daily Dose of insulin (**TDD**); and
-- current and predicted **BG** values.
+- Суммарная дневная доза инсулина (**TDD**); и
+- текущее и прогнозируемое значение **ГК**.
 
-**eCarbs** = extended Carbs. Carbs split up over several hours to accommodate/protein and permits **AAPS** to deliver extended boluses. Further info → Wiki - 'eCarbs', 'eCarbs use'.
+**eCarbs** = растянутые углеводы. Углеводы, растянутые на несколько часов, чтобы скомпенсировать медленные углеводы и/или белки и позволяющие **AAPS** делать дополнительные болюсы. Further info → Wiki - 'eCarbs', 'eCarbs use'.
 
-**FGM** = Flash Glucose Monitor manufactured by Freestyle Libre. Further info → Wiki - 'BG source' and see also 'CGM'.
+**FGM, ФМГ** = Флеш монитор глюкозы, а именно Freestyle Libre 1 поколения. Further info → Wiki - 'BG source' and see also 'CGM'.
 
 **git** = a tool used store and download the **AAPS’** source code.
 
@@ -66,23 +66,23 @@
 
 **Glimp** = an app to collect values from Freestyle Libre Glimp.
 
-**IC (or I:C)** = Insulin to Carb ratio. (i.e. how many carbs are covered by one unit of insulin?).
+**IC (или I:C), УК** = углеводный коэффициент, коэффициент отношения инсулина к углеводам. (сколько грамм углеводов может скомпенсировать одна единица инсулина?).
 
-**IOB** = Insulin On Board. Insulin active in the user’s body.
+**IOB** = Активный инсулин (~ инсулин на борту). Активный инсулин, находящийся в организме.
 
-**ISF** = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin.
+**ISF, ФЧИ** = Фактор или коэффициент чувствительности к инсулину. На сколько ожидается снижение ГК от 1 единицы инсулина.
 
 **Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuid).
 
-**LGS** = Low Glucose Suspend. **AAPS** will reduce basal if **BG** is dropping and if **BG** is rising, then it will only increase basal if **IOB** is negative (from a previous **LGS**), otherwise basal rates will remain the same as the user’s selected **Profile**. The user may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound. → see also objective 6.
+**LGS, ЛГС** = Приостановка на низкой ГК. **AAPS** уменьшит базал, если **ГК** падает, а если **ГК** растет, то базал будет увеличен только в том случае, когда **IOB** (АктИнс) будет отрицательным (из-за предшествующей остановки подачи инсулина по **LGS**), иначе значение базальной скорости будет соответствовать значению из **Профиля**. После купирования гипогликемии возможны пики ГК, которые нельзя будет погасить повышением базала на откате в этом режиме. → см. также Цель 6.
 
 **LineageOS** = free and open-source operating system for smartphones etc. (When using Accu-Chek Combo see Wiki - Combo pump).
 
-**Log files** = **AAPS’** records of the user's actions (useful for troubleshooting and debugging). Further info → Wiki - 'log files'.
+**Логи** = записи действий пользователя, которые делает **AAPS** (полезны для поиска и разбора ошибок и дефектов приложения). Подробная информация → Wiki - 'Логи'.
 
-**maxIOB** = maximum total IOB. This is a safety feature and prevents **AAPS** delivering insulin over the user’s settings. Further info → Wiki - 'SMB'.
+**maxIOB** = максимальное значение IOB. Это функция безопасности, которая не дает **AAPS** подать больше инсулина, чем указано в настройках пользователя. Further info → Wiki - 'SMB'.
 
-**min_5m_carbimpact** = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. This is a safety feature. Further info → Wiki - 'config builder'.
+**min_5m_carbimpact** = функция безопасности, которая указывает скорость списания углеводов для случая, когда эта скорость не может быть высчитана на основании изменения показаний ГК. Это функция безопасности. Further info → Wiki - 'config builder'.
 
 **Nightscout** = open source project to access and report **CGM** data. The central data hub for the user’ **AAPS** data and can generate reports to view the user’s historical **NIghtscout** data expected HbA1c, time in range) or search for patterns in the data via percentile chart etc.
 

@@ -58,8 +58,8 @@
 
 Включите один или оба параметра в [Настройки > настройки OpenAPS SMB](#Preferences-openaps-smb-settings):
 
-     * "sensitivity raises target" and/or 
-     * "resistance lowers target" 
+     * "Чувствительность повышает цель" и/или
+     * "Резистентность понижает цель" 
     
 
 Если **AAPS** обнаружит повышенную сопротивляемость или чувствительность - цель, заданная в профиле, будет изменена. При таком изменении панель окрашивается в зеленый цвет.
@@ -74,18 +74,18 @@
 
 Цвет показаний ГК соответствует настроенному [даипазону](#Preferences-range-for-visualization).
 
-     * green = in range
-     * red = below range
-     * yellow = above range 
+     * зеленый = в диапазоне
+     * красный = ниже цели
+     * желтый = выше цели 
     
 
 ![Дельта](../images/Home_Delta.png)
 
 Блоки в середине показывают:
 
-1. минуты с предыдущего показания **мониторинга**
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
+1. минуты с предыдущего замера **мониторинга**
+2. отличие от предыдущего замера: Δ, и от 15 и 40 минутного среднего (Δ15 и Δ40).  
+  Большие дельты рассчитаны как среднее значение предыдущих изменений, и показывают, какое было среднее изменение в те периоды.
 
 (AapsScreens-loop-status)=
 
@@ -95,17 +95,17 @@
 
 Пиктограмма справа показывает состояние цикла:
 
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
+1. Зеленый круг = [замкнутый цикл](#KeyAapsFeatures-ClosedLoop), цикл работает
+2. Фиолетовый круг с пунктирной линией = [приостановка на низкой ГК (LGS, ЛГС)](#KeyAapsFeatures-LGS)
 3. Красный круг = цикл деактивирован (постоянно отключен)
 4. Красный круг = Цикл приостановлен (временно, но выдается базальный инсулин) - оставшееся время показано ниже значка
 5. Серый круг = помпа отключена (временно отключена любая подача инсулина) - оставшееся время остановки отображается под пиктограммой
 6. Оранжевый круг = запущен суперболюс - оставшееся время отображаешься под пиктограммой
-7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
+7. Голубой круг с пунктирной линией = [открытый цикл](#KeyAapsFeatures-OpenLoop)
 
 Короткое или длинное нажатие на пиктограмму откроет диалоговое окно для переключения между режимами контура (Закрытый, Приостановка на низкой ГК, Открытый или Отключен), для отключения / возобновления цикла или отключения / подключения помпы обратно.
 
-     * If short press on Loop icon, a validation is required after selection in Loop Dialog
+     * Если кратко тапнуть на иконку цикла - необходимо будет подтверить выбранный режим работы цикла
     
      ![Loop status menu](../images/Home2020_Loop_Dialog.png)
     
@@ -177,7 +177,7 @@
   * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
   * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
 
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
+2. **Колосок**: [активные углеводы (COB)](../DailyLifeWithAaps/CobCalculation.md) - неусвоенные углеводы из тех, что были заведены ранее. Иконка пульсирует красным, если требуется съесть еще углеводов (смотри [ниже](#aaps-screens-carbs-required))
 
 3. **Фиолетовая линия**: текущая скорость базала. Пиктограмма меняется, отражая временные изменения в базальной скорости (плоская при 100%) 
   * Кратко нажмите на иконку, чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
@@ -231,29 +231,29 @@
 
 Зеленая область отражает ваш целевой диапазон.
 
-This information is also shown on this graph :
+На этом графике также отображается:
 
-* Boluses: blue triangle on the BG curve and insulin amount
-* Carbs entries: orange triangle on the BG curve and carb amount
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star at the top of the graph
-* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
-* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
+* Болюсы: синие треугольники на кривой ГК и количество введенного инсулина
+* Приемы углеводов: оранжевые треугольники на кривой ГК и количество углеводов
+* Целевая ГК из профиля или временная цель: зеленая линия
+* Переключение профиля: звезда сверху графика
+* Статус цикла: цветная линия сверху графика, когда выбран любой режим кроме закрытого цикла - цветовая дифференциация описана в [Статус цикла](#AapsScreens-loop-status)
+* [СМБ](#Open-APS-features-super-micro-bolus-smb), если включены в [Конфигуратор > OpenAPS SMB](#Preferences-openaps-smb-settings): синие треугольники внизу графика
 
 (AapsScreens-activate-optional-information)=
 
 #### Активация дополнительной информации
 
-Using the top right arrow, you can switch on these optional information:
+Можно дополнительно отобразить следующую информацию, нажав на треугольничек сверху справа:
 
-* Predictions (see below)
-* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
+* Прогнозы (см. ниже)
+* Терапия: заметки, введенные на вкладке Действий: серые, оранжевые или красные точки в зависимости от важности действия, в том числе показания с глюкометра: красная точка
 * Базал 
-  * As defined in the profile: blue dotted line at the bottom of the graph
-  * Actually delivered basal: blue plain line with blue background
-* Activity - insulin activity curve: yellow line
+  * Указанный в профиле: голубая пунктирная линия внизу графика
+  * Реально подающийся: сплошная синяя линия с синим же заполнением
+* Активность, кривая активности инсулина: желтая линия
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
+Нажмите на треугольничек справа от основного графика, чтобы эта информация отобразилась. Для основного графика доступны только эти четыре варианта, написанные над блоком "График 1 2 3 4".
 
      ![Main graph setting](../images/Home2020_MainGraphSetting.png)
     
@@ -276,7 +276,7 @@ To show this information, click the triangle on the right side of the main graph
   
   *Эта линия появляется только при использовании алгоритма [SMB](#Config-Builder-aps).*
 
-* <**Темно-желтая** линия: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (незаявленное питание)
+* **Темно-желтая** линия: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (незаявленное питание)
   
   Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Линия прогнозирования аналогична **оранжевой линии активных углеводов COB**, но предполагает, что отклонения будут понижаться с постоянной скоростью (за счет продления текущей скорости понижения).
   
@@ -310,7 +310,7 @@ To show this information, click the triangle on the right side of the main graph
 
 Можно активировать до четырех дополнительных графиков ниже главного графика. В [Простом режиме](#preferences-simple-mode)дополнительные графики предустановлены и не могут быть изменены. Выключите **Простой режим**, если хотите установить собственную конфигурацию дополнительных графиков.
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
+Чтобы настроить дополнительные графики - щелкните по треугольничку справа от [главного](#aaps-screens-main-graph) и прокрутите вниз.
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -318,7 +318,7 @@ To open settings for additional graphs click the triangle on the right side of t
 
 Большинство пользователей считают достаточной следующую конфигурацию дополнительных графиков:
 
-* Graph 1 with IOB, COB, Sensitivity change
+* График 1 с Активным инсулином (IOB, АктИнс), Активными углеводами (COB, АктУг), Изменением чувствительности
 * Диаграмма 2 с отклонениями и влиянием ГК
 
 #### Абсолютный инсулин
@@ -381,7 +381,7 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 ![Кнопки главного экрана](../images/Home2020_Buttons.png)
 
-Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
+Кнопки инсулина, углеводов и калькулятора отображаются почти всегда. При потере связи с помпой кнопка калькулятора не отображается.
 
 Другие кнопки можно установить в [Настройках > Обзор > Кнопки](#Preferences-buttons).
 
@@ -393,7 +393,7 @@ Buttons for Insulin and Carbs are almost always visible. If the connection to th
 
 ![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+Чтобы ввести нужное количество инсулина без использования [калькулятора болюса](#aaps-screens-bolus-wizard).
 
 Можно автоматически начать временную цель TT **Ожидаемый прием пищи**, поставив флажок рядом с опцией [Начать ВЦ ожидаемый прием пищи](#TempTargets-eating-soon-temp-target).
 
@@ -401,7 +401,7 @@ To give a certain amount of insulin without using the [bolus calculator](#aaps-s
 
 Можно использовать кнопки для быстрого приращения количества инсулина. Величину приращения можно изменить в [Настройках > Общие > Кнопки](#Preferences-buttons).
 
-The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+Кнопка инсулин может быть использована, когда помпа не подключена, чтобы указать инсулин, введенный ручкой. В этом случае заголовок окна ввода будет желтым, а галочка "Не вводить болюс, только ввести запись" будет проставлена и её нельзя будет снять.
 
 ![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
@@ -421,7 +421,7 @@ The insulin button can be used when the pump is suspended as well, i.e. to recor
 
 #### Калькулятор
 
-See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
+Смотрите раздел Мастер болюса [ниже](#aaps-screens-bolus-wizard).
 
 #### Калибровки
 
@@ -518,15 +518,15 @@ See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 ### Действия-раздел M
 
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
+Кнопка **[Смена профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** является альтернативой нажатию на [текущий профиль](#aaps-screens-profile--target) на главном экране.
 
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
+Кнопка **[Временная цель](../DailyLifeWithAaps/TempTargets.md)** - альтернатива нажатию на [текущую цель](#aaps-screens-profile--target) на главном экране.
 
 Кнопка начала или отмены временного базала. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после начала действия.
 
-Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+Несмотря на то, что [растянутые болюсы](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) не работают в замкнутом цикле, некоторые всё равно просили оставить эту опцию.
 
-* Эта опция доступна только для помпDana RS и Insight. 
+* Эта опция доступна только для помп Dana RS и Insight. 
   * Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
   * Убедитесь, что ознакомились с [подробностями](../DailyLifeWithAaps/ExtendedCarbs.md) перед использованием этой опции.
 
@@ -536,10 +536,10 @@ Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-
 
 Отображает информацию о:
 
-     * sensor age & level (battery percentage)
-     * insulin age & level (units)
-     * cannula age
-     * pump battery age & level (percentage
+     * возраст датчика & заряд (% заряда батареи)
+     * возраст картриджа & его заполненость (единицы)
+     * возраст канюли
+     * возраст батареи помпы & заряд (% заряда)
     
 
 Будет показано меньше информация, если применена э**тема экрана с низким разрешением ** ([Настройки > Общее > тема оформления](#Preferences-skin)).
@@ -554,7 +554,7 @@ Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-
 
 ### Портал терапии-раздел О
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
+Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основные данные в [разделе N](#aaps-screens-careportal).
 
 Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
 
@@ -564,28 +564,28 @@ BG check, prime/fill, sensor insert and pump battery change are the base for the
 
 (Aapsscreens-site-rotation)=
 
-#### Site Rotation
+#### Смена мест установки
 
-Site Rotation button opens the Site Rotation Dialog in View mode:
+Кнопка "Места установки" открывает диалоговое окно "Смена мест установки" в режиме просмотра:
 
-* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
-* All Cannula change and Sensor change event since the past 45 days are available.
-* Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+* Можно выбрать, отображать только места установки канюли, или только места установки сенсора, или и те и другие, поставив обе галочки.
+* Доступны все записи мест установки канюли и датчика за последние 45 дней.
+* Тапните на определенную зону или на одну из записей из списка ниже, чтобы отфильтровать записи только в выбранной зоне. Выбранная зона будет подсвечена светлозеленым цветом.
+* Вы можете открыть режим редактирования, чтобы изменить Зону, Направление или Комментарий, связанные с записью
 
 ![View Mode](../images/SiteRotation/ViewMode.png)
 
-* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+* В Настройках модуля (верхний правый угол) можно настроить тип пациента (мужчина, женщина или ребенок), и выбрать, какие данные вы хотите отслеживать - только помпу, только датчик, или оба.
 
 ![Настройки](../images/SiteRotation/Settings.png)
 
 ![Settings type](../images/SiteRotation/Type.png)
 
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+*Примечание: эти настройки будут использованы, чтобы автоматически открывать или не открывать диалоговое окно указания мест установки всякий раз, когда вы будете выбирать в действиях "Промывка/заполнение" или "Установка НМГ"*
 
-* For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+* Чтобы указать место уставки в ситуации, когда вы заполняете канюлю или устанавливаете резервуар непосредственно с помпы, вам придется вручную открывать этот диалог и указывать Зону и Направление
 
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+Режим редактирования позволяет вам указать Зону, Направление и Примечания, связанные с каждой записью:
 
 * Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
 * You have to select Front or Back tab and then the Area
