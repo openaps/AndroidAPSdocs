@@ -298,7 +298,7 @@ Telefonul dumneavoastră ar putea suspenda serviciile AAPS sau chiar Bluetooth, 
 
 ### Unde se pot șterge tratamentele din AAPS v3?
 
-3 dots menu, select treatments, then 3 dots menu again and you have different options available.
+Meniul 3 puncte, selectați tratamentele, apoi meniul 3 puncte din nou și veți avea diferite opțiuni disponibile.
 
 ### Configuring and Using the AAPSClient remote app
 
