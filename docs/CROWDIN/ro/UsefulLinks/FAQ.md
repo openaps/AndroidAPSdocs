@@ -290,15 +290,15 @@ Fișierele de setări vor fi stocate pe memoria internă a telefonului în direc
 
 ### Cum să configurați economisirea bateriei?
 
-Configurarea corectă a managementului de alimentare este importantă pentru a preveni ca sistemul de operare al telefonului să suspende AAPS și serviciile aferente atunci când telefonul nu este utilizat. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+Configurarea corectă a managementului de alimentare este importantă pentru a preveni ca sistemul de operare al telefonului să suspende AAPS și serviciile aferente atunci când telefonul nu este utilizat. Drept urmare, AAPS nu își poate face activitatea și/sau conexiunile Bluetooth pentru senzori și Rileylink (RL) pot fi oprite ceea ce cauzează alerte „pompă deconectată” și erori de comunicare. Pe telefon, mergeți la setări->Aplicații și dezactivați economiile de baterie pentru: AAPS xDrip sau aplicația BYODA/Dexcom Aplicația de sistem Bluetooth (este posibil să fie nevoie să alegi mai întâi pentru vizualizarea aplicațiile sistemului) Alternativ, dezactivați complet toate economiile de baterie de pe telefon. Drept urmare, bateria s-ar putea consuma mai repede, dar este o modalitate bună de a afla dacă economisirea bateriei cauzează problema dumneavoastră. Modul în care este implementată economisirea bateriei depinde în mare măsură de marca telefonului și/sau de versiunea OS. Din această cauză, este aproape imposibil de a oferi instrucțiuni pentru a seta corect economisirea bateriei pentru configurarea dumneavoastră. Experimentați ce setări funcționează cel mai bine pentru dumneavoastră. Pentru informații suplimentare, vedeți de asemenea Nu omorâți aplicația mea
 
-### Pump unreachable alerts several times a day or at night.
+### Alerte ale pompei inaccesibile de mai multe ori pe zi sau noapte.
 
 Telefonul dumneavoastră ar putea suspenda serviciile AAPS sau chiar Bluetooth, ceea ce determină pierderea conexiunii la RL (a se vedea economisirea bateriei) Luați în considerare configurarea alertelor de inaccesibilitate la 120 de minute prin accesarea meniului cu trei puncte din partea dreaptă sus, și selectați Preferințe->Alerte Locale->Pompă prag inaccesibil [min].
 
-### Where can I delete treatments in AAPS v3 ?
+### Unde se pot șterge tratamentele din AAPS v3?
 
-3 dots menu, select treatments, then 3 dots menu again and you have different options available.
+Meniul 3 puncte, selectați tratamentele, apoi meniul 3 puncte din nou și veți avea diferite opțiuni disponibile.
 
 ### Configuring and Using the AAPSClient remote app
 
