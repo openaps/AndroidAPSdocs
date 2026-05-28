@@ -300,9 +300,9 @@ Telefonul dumneavoastră ar putea suspenda serviciile AAPS sau chiar Bluetooth, 
 
 Meniul 3 puncte, selectați tratamentele, apoi meniul 3 puncte din nou și veți avea diferite opțiuni disponibile.
 
-### Configuring and Using the AAPSClient remote app
+### Configurarea și utilizarea aplicației la distanță AAPSClient
 
-AAPS can be monitored and controlled remotely via the AAPSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
+AAPS poate fi monitorizat și controlat de la distanță prin intermediul aplicației AAPSClient și, opțional, prin intermediul aplicației asociate Wear care rulează pe ceasurile Android Wear. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
 
 To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) To activate the profile:
 
