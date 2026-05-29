@@ -144,8 +144,8 @@ Klicke auf "AAPS Verzeichnis". Dadurch wird das Dateisystem auf Deinem Smartphon
 ![AAPS Directory](../images/setup-wizard/Wizard07.png)
 
 ```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
+Es wird empfohlen das AAPS-Standardverzeichnis zu nutzen.</br>
+Wähle **kein** AAPS-Unterverzeichnis aus.
 ```
 
 Das Standardverzeichnis ist **AAPS**, aber Du kannst jedes beliebige Verzeichnis nutzen. Erstelle das Verzeichnis, falls erforderlich, rufe es auf und wähle "Diesen Ordner verwenden":
@@ -208,7 +208,7 @@ You can also do this after completing the wizard.</br>
 If you already have them ready, importing now will be faster than recreating you profile.
 ```
 
-If your current AAPS directory contains settings, you will be asked if you want to import them.
+Wenn Dein aktuelles AAPS-Verzeichnis bereits Einstellungen enthält, wirst Du gefragt, ob Du diese importieren möchtest.
 
 This will happen only if you uninstalled and reinstalled AAPS on the same phone.
 
