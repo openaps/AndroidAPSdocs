@@ -275,7 +275,7 @@ APK 已成功生成，可传输至手机安装。
 
 1. [导出设置](../Maintenance/ExportImportSettings.md)（在已安装的 AAPS 中）
 
-2. 准备好密钥密码和密钥库密码。 若忘记密码，可尝试在项目文件中查找（参考[这里](https://youtu.be/nS3wxnLgZOo)）
+2. Have your key password and key store password ready.
 
     或创建新密钥库
 
