@@ -70,7 +70,7 @@ Deine eigene Kopie ist jetzt synchronisiert (aktualisiert) und enthält die neue
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Keep the branch set to master, select the AAPS Version you want to build — either the latest version or a specific required version — choose the [variant](#browserbuild-variant) (fullRelease), and then tap Run workflow.
+5. Lasse den „Branch“ unverändert auf „Master“, wähle die AAPS-Version aus, die Du erstellen möchtest – entweder die neueste Version oder eine bestimmte benötigte Version – wähle die [Variante](#browserbuild-variant) (Vollversion), und tippe dann auf Workflow ausführen.
 
 
 

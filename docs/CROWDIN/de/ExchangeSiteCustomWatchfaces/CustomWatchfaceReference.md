@@ -885,7 +885,7 @@ Das CustomWatchface V2 enthält folgende Funktionen:
 - [Neue View für temporäre Ziele](#cwf-reference-new-temp-target-feature)
 - [Neue Reservoir-Stand-View](#cwf-reference-new-reservoir-level-feature)
 - [Neue Formatierungs-Möglichkeiten](#cwf-reference-new-formating-feature)
-- [Show External data for Follower](#cwf-reference-show-external-datas) (up to 3 set of data within one single Watchface, for AAPS, AAPSCLIENT and AAPSCLIENT2)
+- [Anzeigen von externen Daten für Follower](#cwf-reference-show-external-datas) (bis zu 3 Datensätze in einem Zifferblatt für AAPS, AAPSCLIENT und AAPSCLIENT2)
 
 (cwf-reference-new-status-feature)=
 
@@ -927,7 +927,7 @@ Der DynData-Wert ist gleich:
 - 1 (Loop-Ziel) oder
 - 2 (Benutzerdefiniertes temporäres Ziel)
 
-Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"tempTarget_Ext1"` and  `"tempTarget_Ext2"` keys (View and DynData)
+Beachte, dass diese Ansicht auch für externe Daten verfügbar ist (siehe [unten](#cwf-reference-show-external-datas)) mit `„tempTarget_Ext1“` und `„tempTarget_Ext2“`-Schlüsseln (Ansicht und DynData)
 
 (cwf-reference-new-reservoir-level-feature)=
 
@@ -949,7 +949,7 @@ Die DynData-Schlüssel, die mit dem Reservoir-Stand verknüpft sind:
   - 1 (Warnstufe, gelbe Farbe voreingestellt)
   - 2 (Dringend, rote Farbe voreingestellt)
 
-Note that this view is also available for external data (see [below](#cwf-reference-show-external-datas)) with `"reservoir_Ext1"`, `"reservoir_Ext2"`, `"reservoirLevel_Ext1"` and  `"reservoirLevel_Ext2"` keys (View and DynData).
+Beachte, dass diese Ansicht auch für externe Daten verfügbar ist (siehe [unten](#cwf-reference-show-external-datas)) mit `„reservoir_Ext1“`, `„reservoir_Ext2“`, `„reservoirLevel_Ext1„` und  `„reservoirLevel_Ext2“`-Schlüsseln (Ansicht und DynData).
 
 (cwf-reference-new-formating-feature)=
 
@@ -1105,7 +1105,7 @@ Um dieses Feature nutzen zu können, muss Folgendes erfüllt sein:
 
 - es müssen 2 der 3 folgenden Apps auf dem Smartphone installiert sein (AAPS, AAPSCLIENT, AAPSCLIENT2)
 - Aktiviere Broadcast-Daten in AAPSCLIENT und/oder AAPSCLIENT2, um Daten an die Hauptanwendung zu übermitteln, die zur Synchronisierung mit CustomWatchface verwendet wird (AAPS oder AAPSCLIENT)
-- Use a CustomWatchface that implement Views with Key including `_Ext1` or `_Ext2` (see [Key and KeyValue reference](#cwf-reference-key-and-keyvalue-reference) below)
+- Benutze ein CustomWatchface, das Ansichten mit einem Schlüssel implementiert, einschließlich `_Ext1` oder `_Ext2` (siehe [Schlüssel- und KeyValue-Referenz](#cwf-reference-key-and-keyvalue-reference) unten)
 
 Wenn die Hauptanwendung auf dem Smartphone der AAPSCLIENT ist und die sekundäre App zur Übertragung der Daten der AAPSCLIENT2 ist: Du musst den dedizierten „`Switch external datas in watchface`“-Parameter im Custom Watchface aktivieren, wenn Du ein Zifferblatt nutzt, das die Standardansichten und Ext1 Zusatzansichten nutzt (Ext1 ist mit AAPSCLIENT verknüpft und Ext2 mit AAPSCLIENT2)
 
