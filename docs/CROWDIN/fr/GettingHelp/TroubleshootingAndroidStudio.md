@@ -275,7 +275,7 @@ If none of the above tips helped you might consider building the apk from scratc
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
 
-2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit [ici](https://youtu.be/nS3wxnLgZOo).
+2. Have your key password and key store password ready.
 
     Ou vous pouvez recréer un nouveau fichier de clés.
 
