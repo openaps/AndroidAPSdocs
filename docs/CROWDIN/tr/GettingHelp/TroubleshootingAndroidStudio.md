@@ -275,7 +275,7 @@ If none of the above tips helped you might consider building the apk from scratc
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
 
-2. Anahtar parolanızı ve anahtar deposu parolanızı hazır bulundurun. Parolalarınızı unuttuysanız, bunları [burada](https://youtu.be/nS3wxnLgZOo) açıklandığı gibi proje dosyalarında bulmaya çalışabilirsiniz.
+2. Have your key password and key store password ready.
 
     Veya yeni bir anahtar deposu kullanabilirsiniz.
 

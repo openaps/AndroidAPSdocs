@@ -275,7 +275,7 @@ git config --global user.email 你的email@xxx.com
 
 1. [匯出設定](../Maintenance/ExportImportSettings.md)（在已安裝於你手機上的 AAPS 版本中）
 
-2. 準備好你的密鑰密碼和密鑰庫密碼。 如果你忘記了密碼，可以嘗試在項目文件中找到他們，具體方法如[此處](https://youtu.be/nS3wxnLgZOo)所述。
+2. Have your key password and key store password ready.
 
     或者你可以使用新的密鑰庫。
 
