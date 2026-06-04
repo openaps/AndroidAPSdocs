@@ -477,13 +477,13 @@ Nach dem Aktivieren dieser Option exportiere die Einstellungen manuell, sodass D
 
 ### Log-Dateien / Protokolldateien
 
-AAPS will save logs for troubleshooting.
+AAPS speichert zur Fehlerbehebung Protokolldateien.
 
 Deaktiviere die Funktion nicht: Sie hilft im Fehlerfall nachzuvollziehen was und warum etwas schiefgelaufen ist.
 
 Wenn Du die Protokolle an die Entwickler schicken sollst, stelle sicher, dass Du alles so genau wie möglich einreichst, und der Mailinhalt das Problem möglichst genau beschreibt. Schicke die Protokolldatei idealerweise nur nach Aufforderung und nachdem Du einen [Issue Report in GitHub](https://github.com/nightscout/AndroidAPS/issues) eröffnet hast.
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+Die AAPS-Logs sind in Deinem Smartphonespeicher unter -> Android -> Daten -> info.nightscout.androidaps -> Dateien zu finden.
 
 ![Log files options](../images/Pref2020_Maintenance_Logs.png)
 
