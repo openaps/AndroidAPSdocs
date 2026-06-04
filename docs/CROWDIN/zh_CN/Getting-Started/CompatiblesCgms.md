@@ -11,7 +11,7 @@
 
 | CGM                                                                         | 可用的[血糖数据源](#Config-Builder-bg-source)                                                                        |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| [德康 G7](../CompatibleCgms/DexcomG7.md)                                      | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                            |
+| [德康 G7](../CompatibleCgms/DexcomG7.md)                                      | BYODA, [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                     |
 | [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md)                      | [xDrip+](../CompatibleCgms/xDrip.md)                                                                         |
 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                  | BYODA or [xDrip+](../CompatibleCgms/xDrip.md)                                                                |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md)                                                                         |
@@ -41,8 +41,8 @@
 
 | 传感器                   |                                            CGM 应用                                             |
 | --------------------- |:---------------------------------------------------------------------------------------------:|
-| Dexcom G5/G6          |                                    xDrip+ (**直接连接, 原生驱动**)                                    |
-| 德康 G7                 |              xDrip+ (**直接连接，原生驱动**), </br>Juggluco (**xDrip 广播模式**，无需安装 xDrip+)               |
+| Dexcom G6             |                              BYODA, xDrip+ (**Direct, Native**)                               |
+| 德康 G7                 |    BYODA, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)     |
 | Dexcom ONE/ONE+/Stelo |                                    xDrip+ (**直接连接, 原生驱动**)                                    |
 | Libre 2/2+ (EU)       | xDrip+ (OOP2 **免校准**), </br>Juggluco (**xDrip 广播模式**，无需安装 xDrip+；或使用 **修补版 Libre** 配合 xDrip+) |
 | Libre 2/2+/3/3+       |               Juggluco (**xDrip 广播模式**，无需安装 xDrip+；或使用 **修补版 Libre** 配合 xDrip+)               |
