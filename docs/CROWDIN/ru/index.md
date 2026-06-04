@@ -3,8 +3,9 @@
 ![изображение](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
-:class:note
-10 апреля 2026: вышла версия 3.4.2.2. Прочитайте [Release Notes](#latestrelease), чтобы узнать, что изменилось, для обновления воспользуйтесь [инструкцией](./Maintenance/UpdateToNewVersion.md).
+:class: note
+
+ 4 June 2026 : Version 3.4.2.3 is out. Прочитайте [Release Notes](#latestrelease), чтобы узнать, что изменилось, для обновления воспользуйтесь [инструкцией](./Maintenance/UpdateToNewVersion.md).
 
 ```
 

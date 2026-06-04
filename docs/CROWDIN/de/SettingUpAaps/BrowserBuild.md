@@ -132,7 +132,7 @@ Du musst:
 7. Stelle die Daten aus Nightscout wieder her.
 ```
 
-- If you want to use your own JKS (the one you used on a previous build of AAPS from a computer in Android Studio), you know its password and alias (key0), please choose [AAPS-CI Option 2 – Upload Existing JKS](#aaps-ci-option2).
+- Falls Du Deinen eigenen JKS, den Du bei einem früheren AAPS-Build mit einem PC in Android Studio genutzt hast, nutzen möchtest und Du das Passwort und den Alias (key0) kennst, wähle bitte [AAPS-CI Option 2 – Hochladen eines vorhandenen JKS](#aaps-ci-option2).
 
 </br>
 
@@ -203,7 +203,7 @@ Sobald die AAPS-App erstellt wurde, wird sie in Deinem Google Cloud-Laufwerk ges
 ### AAPS-CI Google Drive Auth
 
 ```{warning}
-No matter which of the prior sets of instructions you followed (option 1 or option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+Um den Browser Build erfolgreich zu nutzen, MUSST Du unabhängig von der oben gewählten Anleitung (Option 1 oder Option 2), die Google Drive Autorisierung ergänzen.
 ```
 
 Hinweis: Solltest Du die Schritte aus dem Video bereits durchgeführt haben, kannst Du direkt [hierhin](#github-build-apk) springen.
@@ -359,7 +359,7 @@ Anpassungen sind in der Regel nicht notwendig. Das dient lediglich der Informati
   - Use workflow from Branch: Bitte gib den Branch-Namen ein, aus dem Du die Funktionalität auswählen/hinzufügen möchtest.
   - Upstream Repository: Bitte gib den Repository-Namen ein, aus dem Du die Funktionalität auswählen/hinzufügen möchtest.
   - Commit SHA: Bitte gib den Commit SHA (Secure Hash Algorithmus) ein, den Du auswählen möchtest. (wie ein Git-Commit Hash)
-  - Select Build Variant: [variant](#browserbuild-variant)
+  - Wähle die Build-Variante aus: [variant](#browserbuild-variant)
 
 (ci-keystore-export)=
 ## CI KeyStore Export

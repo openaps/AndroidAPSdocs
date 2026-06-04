@@ -9,8 +9,8 @@ Wenn Du **AAPS** bereits auf Deinem Smartphone nutzt und bei der Erstellung in d
 AAPS benötigt mindestens Wear OS API Level 28 (Android 9).
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.<br>
-Wear OS 5 has [limitations](#BuildingAapsWearOs-WearOS5).
+AAPS Zifferblätter sind für Wear OS Smartwatches mit API Level 28 bis 33 verfügbar.<br>
+Wear OS 5 hat [Beschränkungen](#BuildingAapsWearOs-WearOS5).
 ```
 
 ## Erstellen der **AAPS** Wear APK

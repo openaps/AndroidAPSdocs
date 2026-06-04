@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 10 April 2026 : Version 3.4.2.2 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+ 4 June 2026 : Version 3.4.2.3 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
 
 ```
 

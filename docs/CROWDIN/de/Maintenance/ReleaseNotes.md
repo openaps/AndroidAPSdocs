@@ -54,6 +54,19 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 
 (latestrelease)=
 
+(version3423)=
+
+## Version 3.4.2.3
+- Dash: Drift-Problem behoben @nl-ruud
+- NSClientV3: Lücke nach Re-Connect behoben @MilosKozak
+- Automatisierung: Deserialisierungsproblem behoben @MilosKozak
+- Equil: Batterie-Report korrigiert @MilosKozak
+- Workflow bereinigt @vanelsberg
+- Equil: Verhalten nach Fehler verbessert @MilosKozak
+- DanaRS: Interne Pumpenkommunikation korrigiert @MilosKozak
+- Insight: TBR-Synchronisation korrigiert @MilosKozak
+- Dash: Aktivierungsproblem behoben @nl-ruud
+
 (version3422)=
 
 ## Version 3.4.2.2

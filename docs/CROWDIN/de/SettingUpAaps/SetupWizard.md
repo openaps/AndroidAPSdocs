@@ -580,13 +580,13 @@ Du kannst auf "SCHLUMMERN" tippen und sie wird veschwinden.
 
 Solltest Du versehentlich den Einrichtungsassistenten verlassen haben, kannst Du ihn entweder einfach neu starten oder die [Konfiguration des AAPS Loop](../SettingUpAaps/ChangeAapsConfiguration.md) manuell vornehmen.
 
-## Restart AAPS to validate settings
+## AAPS neustarten, um die Einstellungen zu überprüfen
 
 From the top right menu, select Exit to force AAPS to restart.
 
 ![Neustart](../images/setup-wizard/Wizard27.png)
 
-If you selected a Bluetooth connected pump, you will now see the permission request:
+Solltest Du eine über Bluetooth-verbundene Pumpe ausgewählt haben, wirst Du jetzt die Berechtigungsanfrage sehen:
 
 ![Bluetooth Request](../images/setup-wizard/Wizard28.png)
 

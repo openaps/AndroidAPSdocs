@@ -471,55 +471,55 @@ Du kannst bei der Weiterentwicklung von **AAPS** unterstützen, indem Du Absturz
 
 **Automatischer Export der Einstellungen**<br/> Durch Aktivieren dieser Funktion lässt Du zu, dass **AAPS** Deine Einstellungen ohne manuellen Eingriff exportiert. Dazu wird das Master-Passwort beim nächsten manuellen Export sicher auf Deinem Smartphone (und nur dort) gespeichert. Das gespeicherte Passwort wird für bis zu 4 Wochen verwendet. Nach 4 Wochen erhältst Du eine Information, dass das Passwort bald ablaufen wird. Während einer einwöchigen Übergangsfrist kann das Passwort dann aktualisiert werden, indem die Einstellungen manuell über das Wartungsmenü exportiert werden.
 
-Nach Ablauf der einwöchigen Übergangsfrist, läuft das gespeicherte Passwort ab und alle automatisierten Exporte der Einstellungen werden gestoppt. Du wirst darüber informiert und aufgefordert das Passwort erneut einzugeben.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+Nach Ablauf der einwöchigen Übergangsfrist, läuft das gespeicherte Passwort ab und alle automatisierten Exporte der Einstellungen werden gestoppt. Du wirst darüber informiert und aufgefordert das Passwort erneut einzugeben.  [(**Einstellungen automatisiert exportiert**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) wird in **AAPS** unter 'Behandlungen' und 'Benutzereingabe' geloggt.
 
 Nach dem Aktivieren dieser Option exportiere die Einstellungen manuell, sodass Du zur Passworteingabe aufgefordert wirst und **AAPS** es dann speichern kann.
 
-### Log files
+### Log-Dateien / Protokolldateien
 
-AAPS will save logs for troubleshooting.
+AAPS speichert zur Fehlerbehebung Protokolldateien.
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+Deaktiviere die Funktion nicht: Sie hilft im Fehlerfall nachzuvollziehen was und warum etwas schiefgelaufen ist.
 
-If you need to send the logs to the developers, make sure you file accurately the mail contents to describe the issue. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+Wenn Du die Protokolle an die Entwickler schicken sollst, stelle sicher, dass Du alles so genau wie möglich einreichst, und der Mailinhalt das Problem möglichst genau beschreibt. Schicke die Protokolldatei idealerweise nur nach Aufforderung und nachdem Du einen [Issue Report in GitHub](https://github.com/nightscout/AndroidAPS/issues) eröffnet hast.
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+Die AAPS-Logs sind in Deinem Smartphonespeicher unter -> Android -> Daten -> info.nightscout.androidaps -> Dateien zu finden.
 
 ![Log files options](../images/Pref2020_Maintenance_Logs.png)
 
 (preferences-maintenance-logdirectory)=
 
-### Setting the local AAPS directory
+### Lokales AAPS-Verzeichnis festlegen
 
-Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. Diese Einstellung erlaubt es Dir, ein Verzeichnis auf Deinem Smartphone auszuwählen, in dem **AAPS** Einstellungen, Logs und andere Dateien speichert.
+Die Wartungseinstellungen beinhalten auch das **AAPS**-Verzeichnis, das direkt auf der Registerkarte Wartung zu finden ist. Diese Einstellung erlaubt es Dir, ein Verzeichnis auf Deinem Smartphone auszuwählen, in dem **AAPS** Einstellungen, Logs und andere Dateien speichert.
 
 ![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+Es wird dringend empfohlen, ein Verzeichnis direkt im Hauptverzeichnis des Smartphonespeichers zu nutzen. Standard ist AAPS.
 
 ![Local directory location](../images/preferences/maintenance_settings_directory.png)
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+Wenn Du ein Unterverzeichnis von AAPS auswählst, wirst Du eine Fehlermeldung bekommen. Tippe auf "OK" und versuche es erneut, wähle das richtige Verzeichnis (eins höher). Wähle nicht "VERWERFEN", es sei denn, Du weißt sehr genau, was Du tust.
 
 ![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
 
 (preferences-maintenance-cloud)=
 
-### Setting a cloud directory
+### Cloud-Verzeichnis festlegen
 
-You can export your settings, logs and CSV data to a cloud service.
+Du kannst Deine Einstellungen, Protokolldateien und CSV-Daten in einen Cloud-Dienst exportieren.
 
-1.  Select Cloud directory
-2. Select your cloud service
-3. Enable cloud export
+1.  Cloud-Verzeichnis auswählen
+2. Wähle Deinen Cloud-Dienst aus
+3. Cloud-Export aktivieren
 
 ![Cloud directory](../images/preferences/maintenance_settings_cloud.png)
 
-You can then define what data will be uploaded to the cloud.
+Du kannst dann festlegen, welche Daten in die Cloud hochgeladen werden sollen.
 
 ![Cloud directory data](../images/preferences/maintenance_settings_clouddata.png)
 
-You can disable cloud export.
+Du kannst den Cloud-Export deaktivieren.
 
 ![Cloud directory disable](../images/preferences/maintenance_settings_cloudoff.png)
 
