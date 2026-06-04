@@ -33,10 +33,10 @@
 
 ```{admonition} Old app version
 :class: warning
-Собственное приложение Dexcom G6 на текущий момент слишком старое и не может быть обновлено. 
+Dexcom BYODA is now a very old version of the app and cannot be updated.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (Собери свое собственное приложение Dexcom, BYODA) поддерживает локальную передачу данный в AAPS и/или xDrip+ (**но не для** **сенсоров G5/ONE/G7!**)
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
 
 ![Настройки трансляции от самостоятельно собранного приложения BYODA](../images/BYODA.png)
 
