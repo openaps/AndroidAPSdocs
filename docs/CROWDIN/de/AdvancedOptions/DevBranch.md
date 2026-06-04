@@ -1,24 +1,24 @@
 # Entwickler-Version (dev branch)
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+Der Dev Branch ist ausschließlich für die Weiterentwicklung von AAPS gedacht. Er darf nur auf einem separaten Smartphone zu Testzwecken, <font color="#FF0000">**nicht für das tatsächliche Loopen**</font> verwendet werden.
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Die stabilste AAPS-Version ist die im [Master Branch](https://github.com/nightscout/AndroidAPS/tree/master). Es wird dringend empfohlen, nur den Master Branch für das tatsächliche Loopen zu verwenden.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
+Achtung: Die AAPS-Entwicklungsversion (Dev Branch) ist für Entwickler sowie Tester bestimmt, die mit Stacktraces, Log-Dateien und dem Debugger umgehen können, um Fehlerberichte erstellen zu können, die Entwicklern beim Beheben der Fehler helfen (kurzum: Personen, die wissen, was sie tun und eigentverantwortlich arbeiten können). Aus diesem Grunde sind unfertige Features deaktiviert. Um dieses Feature zu aktivieren, aktiviere den **Engineering Mode** indem Du eine leere Datei mit dem Namen `engineering_mode` im Verzeichnis /AAPS/extra auf dem Smartphone anlegst. Das Aktivieren dieser Features kann dazu führen, dass der Loop überhaupt nicht mehr funktioniert.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Im Dev Branch sieht man, welche Funktionen gerade getestet werden. Damit können Fehler ausgebügelt und Feedback dazu gegeben werden, wie die neuen Funktionen in der Praxis funktionieren. Meist wird die Entwicklerversion auf einem alten Smartphone mit einer separaten Pumpe so lange getestet bis sie stabil läuft. Jede Benutzung des Dev Branch erfolgt auf eigene Gefahr! Sei Dir beim Ausprobieren neuer Funktionen im Klaren, dass Du Funktionen verwendest, die sich noch in Entwicklung befinden und nicht final freigegeben sind. Um Deine eigene Sicherheit zu gewährleisten, tue dies auf eigene Gefahr und mit der gebotenen Sorgfalt.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Wenn Du einen Fehler gefunden hast oder glaubst, dass etwas nicht richtig funktioniert, sieh im [Issues Tab](https://github.com/nightscout/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler gefunden hat. Falls nicht, kannst Du ein neues Issue eröffnen. Je mehr Informationen Du dabei mitlieferst, desto besser/schneller kann der Fehler reproduziert und behoben werden. Vergiss nicht, die [Protokolldateien](../GettingHelp/AccessingLogFiles.md) anzufügen. Die neuen Funktionen können auch auf [Discord](https://discord.gg/4fQUWHZ4Mw) diskutiert werden.
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Eine Entwicklerversion hat ein Ablaufdatum. Das scheint unpraktisch, wenn es zufriedenstellend genutzt wird, aber es dient einem Zweck. Wenn nur eine Entwicklerversion im Umlauf, ist es einfacher, die gemeldet Fehler nachzuverfolgen. Die Entwickler wollen nicht in die Lage geraten, dass drei verschiedene Entwicklerversionen m Umlauf sind, in denen parallel Fehler behoben werden müssen und Testuser Fehler, die schon behoben wurden, in der neuesten Entwicklerversion, (in guter Absicht) noch einmal melden.
 
 (branch-ci-test)=
 
 ## Einen bestimmten Zweig testen (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Um einen Test Branch zu erstellen, wähle branch-ci aus. Das ermöglicht Dir einen bestimmten Zweig für die APK-Erstellung auszuwählen. Diese Methode ist insbesondere für das Testen des Dev Branch zu empfehlen.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -28,7 +28,7 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 ## Testelemente in einem Pull-Request (GitHub CI-Aktionen bereitstellen)
 
-Available from 3.3.2.1.dev
+Verfügbar ab 3.3.2.1. Dev
 
 - Geeignet für Tester oder für diejenigen, die beim Testen helfen.
 
@@ -66,4 +66,4 @@ Available from 3.3.2.1.dev
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Bitte beachte hierzu den Abschnitt [Variante](#browserbuild-variant) (variant)
