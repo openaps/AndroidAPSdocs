@@ -20,18 +20,18 @@ Im Abschnitt [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBlood
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Dexcom BYODA ist mittlerweile eine sehr alte App-Version und kann nicht mehr aktualisiert werden.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) unterstützt sowohl den lokalen Broadcast zu AAPS als auch parallel zu xDrip+
 
 !\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
 
--   This app lets you use your Dexcom G7 with any Android smartphone.
--   Uninstall the original Dexcom app
+-   Mit dieser App kannst Du den Dexcom G7 mit jedem Android Smartphone verwenden.
+-   Deinstalliere die originale Dexcom-App
 -   Installiere die heruntergeladene APK
--   Enter sensor code in patched app
--   After short time BYODA should pick-up transmitter signal
+-   Gib den Sensorcode (Kopplungscode) in der gepatchten App ein
+-   BYODA sollte das Transmitter-Signal danach sehr bald erkennen
 
 ## 3. Gepatchte Dexcom G7 App (DiaKEM)
 
