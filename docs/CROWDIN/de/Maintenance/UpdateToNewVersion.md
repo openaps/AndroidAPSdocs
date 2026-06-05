@@ -22,7 +22,7 @@ Nutze [diese Anleitung](./UpdateComputerBuild.md).
 
 ## AAPS über die Befehlszeile aktualisieren
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Durchlaufe die [gleichen Schritte](../SettingUpAaps/CLIBuild.md) wie Du es zuvor für das Erstellen AAPS getan hast, aber „pulle“ neue Änderungen über Git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
