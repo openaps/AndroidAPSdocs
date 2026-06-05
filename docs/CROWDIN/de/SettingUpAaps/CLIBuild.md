@@ -1,24 +1,24 @@
-# Build instructions for the command-line
+# Über die Kommandozeile erstellen
 
 ```{admonition} For users familiar with the command-line and git
 :class: information
 
-The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
+Die einfachste Art AAPS zu erstellen ist, der sog. [Browser Build](./BrowserBuild.md).
 ```
 
-Tested with Fedora and Debian Linux, other systems should work with minimal adjustments.
+Mit Fedora und Debian Linux getestet. Andere Systeme sollten mit geringen Anpassungen ebenfalls funktionieren.
 
 ## Voraussetzungen
 
-Consult the minimum required Java version from [this table](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Install the appropriate OpenJDK package using the system package manager. For example in Debian, the packages are named like `openjdk-21-jdk`. It should include `javac` and `keytool` binaries.
+Schaue in [dieser Tabelle](#Building-APK-recommended-specification-of-computer-for-building-apk-file) nach der Mindestanforderungen an die Java-Version. Installiere das passende OpenJDK-Paket über den Systempaket-Manager. Für Debian ist beispielsweise das Paket `openjdk-21-jdk` genannt. Es sollte die `javac` und `keytool` Binärdateien enthalten.
 
-Download the *Android Command line tools* package from the [Android Studio page](https://developer.android.com/studio#command-line-tools-only). Android Studio itself is not required. More information about installing this package is found in [sdkmanager docs](https://developer.android.com/tools/sdkmanager). After the package is installed, you should manually set two [environment variables](https://developer.android.com/tools/variables): `ANDROID_HOME` and `PATH`. Finally, run `sdkmanager --licenses` to finish the installation.
+Lade das *Android Kommandozeilenwerkzeug*-Paket (Android Command Line Tools) von der [Android Studio Seite](https://developer.android.com/studio#command-line-tools-only) herunter. Android Studio selbst ist nicht erforderlich. Weitere Informationen zur Installation dieses Pakets findest Du in den [sdkmanager docs](https://developer.android.com/tools/sdkmanager). Nachdem das Paket installiert ist, solltest Du die zwei [Umgebungsvariablen](https://developer.android.com/tools/variables) `ANDROID_HOME` und `PATH` manuell setzen. Führe zum Abschluss der Installation den Befehl `sdkmanager --licenses` aus.
 
-## Building AAPS with Gradle wrapper
+## AAPS mit Gradle-Wrapper erstellen
 
-### 1. Generate a Java keystore file for signing AAPS
+### 1. Erstelle eine Java-Keystore-Datei zum Signieren von AAPS
 
-If you already have a keystore file for signing AAPS, reuse that.
+Wenn Du bereits eine Keystore-Datei zum Signieren von AAPS hast, nutze diese.
 
 ```sh
 keytool -genkeypair -v \
@@ -29,19 +29,19 @@ keytool -genkeypair -v \
   -validity 20000
 ```
 
-You will need the keystore file and passphrase every time you update AAPS.
+Du benötigst die Keystore-Datei und den Passphrase jedes Mal, wenn Du AAPS aktualisierst.
 
-### 2. Compile the AAPS APK file
+### 2. Kompiliere die AAPS-APK-Datei
 
-Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned. AAPS uses master branch for the latest stable version, ensure you are on the branch/tag you want to build.
+Klone das [git repo](https://github.com/nightscout/AndroidAPS), wenn nicht bereits geschehen. AAPS verwendet den Master-Branch für die neueste stabile Version. Stelle sicher, dass Du auf dem Branch/Tag bist, den Du auch erstellen möchtest.
 
-Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code. When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. It should have also installed an `apksigner` binary to `$ANDROID_HOME`. Update your `PATH` again.
+Führe `./gradlew :app:assembleFullRelease` im Repo aus. Es lädt Gradle und die Abhängigkeiten automatisch herunter und kompiliert dann den Code. Wenn der Build erfolgreich durchgelaufen ist, solltest Du eine unsignierte APK unter `app/build/outputs/apk/full/release/app-full-release-unsigned.apk` haben. Es sollte auch eine `apksigner` Binärdatei im Verzeichnis `$ANDROID_HOME` installiert haben. Aktualisiere Deinen `PATH` erneut.
 
-### 3. Create a signed APK file from the unsigned one
+### 3. Erstelle eine signierte APK-Datei aus der nicht signierten Datei
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Change to your home directory and create a signed APK file:
+Wechsel in Dein Stammverzeichnis (Home) und erstelle eine signierte APK-Datei:
 
 ```sh
 apksigner sign \
@@ -51,4 +51,4 @@ apksigner sign \
   ./AndroidAPS/app/build/outputs/apk/full/release/app-full-release-unsigned.apk
 ```
 
-Now you have `app-full-release-signed.apk` ready for installation or upgrade.
+Jetzt hast Du eine `app-full-release-signed.apk` für die Installation oder zum Upgrade.
