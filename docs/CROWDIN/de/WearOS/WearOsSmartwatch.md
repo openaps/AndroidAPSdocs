@@ -77,9 +77,9 @@ a) Mit einem USB-Kabel, um die **AAPS** wear apk Datei auf das Smartphone zu bri
 b) Schneide die Wear.apk aus Android Studio aus und füge sie in Dein Google Drive Laufwerk ein.
 
 
-Um AAPS über „sideloading“ auf die Smartwatch zu bekommen, kannst Du eines der folgenden Tools nutzen: 1) Wear-Installer 2 2) Easy Fire Tools 3) Android Debug Bridge (ADB) Wir empfehlen den Wear Installer 2, weil die einzelnen Schritte und Prozesse im Video klar und gut erklärt werden. If Wear Installer 2 does not work for you try via
+Um AAPS über „sideloading“ auf die Smartwatch zu bekommen, kannst Du eines der folgenden Tools nutzen: 1) Wear-Installer 2 2) Easy Fire Tools 3) Android Debug Bridge (ADB) Wir empfehlen den Wear Installer 2, weil die einzelnen Schritte und Prozesse im Video klar und gut erklärt werden. Falls es mit dem Wear-Installer 2 nicht funktioniert, probiere es mit
 
-### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+### Wear Installer 2 zum „Sideloading“ von **AAPS** Wear vom Smartphone auf die Smartwatch nutzen
 
  ![grafik](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
@@ -104,7 +104,7 @@ Alternativ, allerdings nicht für Wear OS 5, kannst Du:
 
 2) Bringe die Smartwatch (sobald die Einrichtung abgeschlossen ist und sie mit dem Smartphone verbunden ist) in den Entwicklermodus:
 
-Go to settings >about watch (bottom option) -> software info -> software version.
+Gehe in die Einstellungen > Info zur Uhr (unterste Option) > Software-Informationen > Softwareversion.
 
 ![grafik](../images/wearos/easyfire02.png)
 
