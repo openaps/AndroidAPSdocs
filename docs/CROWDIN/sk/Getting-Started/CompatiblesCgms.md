@@ -11,7 +11,7 @@ Táto časť poskytuje stručný prehľad všetkých kompatibilných **CGM/FGM**
 
 | CGM                                                                         | Dostupné [zdroje glykémie](#Config-Builder-bg-source)                                                                       |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                           |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | BYODA, [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                    |
 | [Dexcom ONE+ a Stelo](../CompatibleCgms/DexcomG7.md)                        | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                        |
 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                  | BYODA or [xDrip+](../CompatibleCgms/xDrip.md)                                                                               |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                        |
@@ -41,8 +41,8 @@ Dôveryhodné zdroje údajov umožňujú nepretržité podávanie **SMB**.
 
 | Senzor                |                                                      CGM app                                                       |
 | --------------------- |:------------------------------------------------------------------------------------------------------------------:|
-| Dexcom G5/G6          |                                            xDrip+ (**Priamy, Natívny**)                                            |
-| Dexcom G7             |                  xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                   |
+| Dexcom G6             |                                         BYODA, xDrip+ (**Direct, Native**)                                         |
+| Dexcom G7             |               BYODA, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)               |
 | Dexcom ONE/ONE+/Stelo |                                            xDrip+ (**Priamy, Natívny**)                                            |
 | Libre 2/2+ (EU)       | xDrip+ (OOP2 **bez kalibrácie**), </br>Juggluco (**xDrip vysielanie** bez xDrip+ alebo **Patched Libre** s xDrip+) |
 | Libre 2/2+/3/3+       |                    Juggluco (**xDrip vysielanie** bez xDrip+ alebo **Patched Libre** s xDrip+)                     |

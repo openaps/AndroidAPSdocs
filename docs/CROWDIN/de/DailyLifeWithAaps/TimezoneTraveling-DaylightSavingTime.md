@@ -1,4 +1,4 @@
-# Timezone Change and Daylight Saving
+# Zeitzonenänderung und Zeitumstellung (Sommer-/ Winterzeit)
 
 ## Mit der Pumpe über Zeitzonen hinweg reisen
 
@@ -118,7 +118,7 @@ Wenn Du den **AAPS**-Bolus-Rechner zum Bolen verwendest, schließe **COB** und *
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. **AAPS** refresh your pump and switch to your desired **Profile**.
+3. **AAPS** verbinde Dich mit Deiner Pumpe (refresh) und wechsel auf das gewünschte **Profil**.
 
 4. Prüfe die **IOB**- und **COB**-Werte in **AAPS**. Deaktiviere den Closed Loop für mindestens die Insulinwirkdauer (DIA) oder „Max-Carb-Time“ (je nachdem welcher Zeitraum länger ist), sofern die Werte falsch sein sollten.
 
@@ -144,7 +144,7 @@ Dieser Abschnitt ist nur für den alten, auf Ruffy basierenden, Treiber gültig.
    * Eine Liste dieser Länder findest Du z.B. auf [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/).
    * Für die Mitteleuropäische Zeit (MEZ) könnte dies z.B. "Brazzaville" (Kongo) sein. Stelle die Zeitzone deines Smartphones manuell auf Kongo.
 
-3. In **AAPS** refresh your pump.
+3. Verbinde Dich in **AAPS** mit Deiner Pumpe (refresh).
 
 4. Prüfe den Tab "Behandlungen". Falls Du doppelte Einträge entdeckst:
    

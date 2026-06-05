@@ -26,17 +26,17 @@ Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](h
 -   Wenn es nicht bereits installiert ist, dann lade [xDrip+ ](https://github.com/NightscoutFoundation/xDrip) herunter und folge den Anweisungen in den [xDrip+ Einstellungen](../CompatibleCgms/xDrip.md).
 -   Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](#Config-Builder-bg-source) aus.
 
-- Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der Seite[xDrip+ Einstellungen](../CompatibleCgms/xDrip.md) an
+- Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der Seite [xDrip+ Einstellungen](../CompatibleCgms/xDrip.md) an
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## G6 mit Build Your Own Dexcom App
 
 ```{admonition} Old app version
 :class: warning
-Dexcom G6 BYODA ist mittlerweile eine sehr alte App-Version und kann nicht mehr aktualisiert werden.
+Dexcom BYODA ist mittlerweile eine sehr alte App-Version und kann nicht mehr aktualisiert werden.
 ```
 
--   Die [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) unterstützt auch lokale Broadcasts an AAPS und/oder xDrip+ (**gilt nicht für** **G5/ONE/G7 Sensoren!**)
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) unterstützt sowohl den lokalen Broadcast zu AAPS als auch parallel zu xDrip+
 
 ![BYODA broadcast options](../images/BYODA.png)
 

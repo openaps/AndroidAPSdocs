@@ -11,7 +11,7 @@ Dieser Abschnitt gibt einen kurzen Überblick über alle mit **AAPS** kompatible
 
 | CGM                                                                         | Verfügbare [BZ-Quellen](#Config-Builder-bg-source)                                                                  |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | [xDrip+](../CompatibleCgms/xDrip.md) oder [Juggluco](../CompatibleCgms/Juggluco.md)                                 |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | BYODA, [xDrip+](../CompatibleCgms/xDrip.md) oder [Juggluco](../CompatibleCgms/Juggluco.md)                          |
 | [Dexcom ONE+ und Stelo](../CompatibleCgms/DexcomG7.md)                      | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                |
 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                  | BYODA oder [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                |
@@ -41,8 +41,8 @@ Mit einer vertrauenswürdigen Datenquelle ist es durchgehend möglich **SMB**s a
 
 | Sensor                |                                                          CGM-App                                                          |
 | --------------------- |:-------------------------------------------------------------------------------------------------------------------------:|
-| Dexcom G5/G6          |                                                xDrip+ (**Direkt, Nativ**)                                                 |
-| Dexcom G7             |                        xDrip+ (**Direkt, Nativ**), </br>Juggluco (**xDrip Broadcast** ohne xDrip+)                        |
+| Dexcom G6             |                                             BYODA, xDrip+ (**Direkt, Nativ**)                                             |
+| Dexcom G7             |                    BYODA, xDrip+ (**Direkt, Nativ**), </br>Juggluco (**xDrip Broadcast** ohne xDrip+)                     |
 | Dexcom ONE/ONE+/Stelo |                                                xDrip+ (**Direkt, Nativ**)                                                 |
 | Libre 2/2+ (EU)       | xDrip+ (OOP2 **keine Kalibrierung**), </br>Juggluco (**xDrip+ Broadcast** ohne xDrip+, oder **Patched Libre** mit xDrip+) |
 | Libre 2/2+/3/3+       |                      Juggluco (**xDrip+ Broadcast** ohne xDrip+, oder **Patched Libre** mit xDrip+)                       |

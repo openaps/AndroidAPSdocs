@@ -11,7 +11,7 @@
 
 | CGM                                                                     | 可用的[血糖資料來源](#Config-Builder-bg-source)                                                                   |
 | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                              | [xDrip+](../CompatibleCgms/xDrip.md) 或 [Juggluco](../CompatibleCgms/Juggluco.md)                         |
+| [Dexcom G7](../CompatibleCgms/DexcomG7.md)                              | BYODA, [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                 |
 | [Dexcom ONE+ 和 Stelo](../CompatibleCgms/DexcomG7.md)                    | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                              | BYODA 或 [xDrip+](../CompatibleCgms/xDrip.md)                                                             |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                             | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
@@ -41,8 +41,8 @@
 
 | 傳感器                   |                                        CGM 應用程式                                        |
 | --------------------- |:--------------------------------------------------------------------------------------:|
-| Dexcom G5/G6          |                                   xDrip+ （**直連，原生**）                                   |
-| Dexcom G7             |              xDrip+（**直連、原生**），</br>Juggluco（**透過 xDrip 廣播**，不需安裝 xDrip+）              |
+| Dexcom G6             |                           BYODA, xDrip+ (**Direct, Native**)                           |
+| Dexcom G7             | BYODA, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+) |
 | Dexcom ONE/ONE+/Stelo |                                   xDrip+ （**直連，原生**）                                   |
 | Libre 2/2+ (歐盟)       | xDrip+ （OOP2 **無需校正**），</br>Juggluco （**xDrip 廣播** 不帶 xDrip+，或 **修補版 Libre** 與 xDrip+） |
 | Libre 2/2+/3/3+       |               Juggluco （**xDrip 廣播** 不帶 xDrip+，或 **修補版 Libre** 與 xDrip+）               |

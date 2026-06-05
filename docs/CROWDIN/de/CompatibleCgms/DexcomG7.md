@@ -16,13 +16,29 @@ Im Abschnitt [Glättung der Blut-Glukose-Daten](../CompatibleCgms/SmoothingBlood
 
 - Passe die Einstellungen in xDrip+ so an, wie es unter  [xDrip+ Einstellungen](../CompatibleCgms/xDrip.md) beschrieben ist
 
-## 2.  Gepatchte Dexcom G7 App (DiaKEM)
+## 2. Build Your Own Dexcom App (G7)
+
+```{admonition} Old app version
+:class: warning
+Dexcom BYODA ist mittlerweile eine sehr alte App-Version und kann nicht mehr aktualisiert werden.
+```
+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) unterstützt sowohl den lokalen Broadcast zu AAPS als auch parallel zu xDrip+
+
+!\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+
+-   Mit dieser App kannst Du den Dexcom G7 mit jedem Android Smartphone verwenden.
+-   Deinstalliere die originale Dexcom-App
+-   Installiere die heruntergeladene APK
+-   Gib den Sensorcode (Kopplungscode) in der gepatchten App ein
+-   BYODA sollte das Transmitter-Signal danach sehr bald erkennen
+
+## 3. Gepatchte Dexcom G7 App (DiaKEM)
 
 ```{admonition} No new users
 :class: warning
 Das letzte Update der Dexcom-Server hat DiaKEM für neue Installationen beschädigt: Der Anmelde- und Onboarding-Prozess im Rahmen einer Neuinstallation kann in der G7-App nicht mehr durchlaufen werden. 
 Bestehende Benutzer haben momentan keine Probleme: Logge Dich nicht aus, lösche keine Daten und installiere die G7-App nicht neu, da Du sonst die App nicht wieder ans Laufen bekommst. Wenn sie bereits läuft, solltest Du davon nicht betroffen sein.
-Neuen Benutzern wird bis zur Lösung des Problems empfohlen, [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) als **AAPS** BZ-Datenquelle zu nutzen.
 ```
 
 **Hinweis: AAPS 3.2.0.0 oder höher ist erforderlich! Nicht für ONE+ verfügbar.**
@@ -48,7 +64,7 @@ Eine gepatchte Dexcom G7 App (DiAKEM) ermöglicht den Zugriff auf die Dexcom G7 
 
 - Sollte AAPS keine Werte empfangen, wechsel auf eine andere BZ-Quelle und dann wieder zurück auf 'BYODA'. Damit löst Du Berechtigungsabfrage zum Datenaustausch zwischen AAPS und BYODA aus.
 
-## 3. xDrip+ (Companion Mode)
+## 4. xDrip+ (Companion Mode)
 
 -   Lade xDrip+ herunter und installiere es: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - Wähle in xDrip+ "Companion App" als Datenquelle aus. Zusätzlich muss in den Bluetootheinstellungen (Einstellungen > Erweiterte Einstellungen > Bluetootheinstellungen) "Companion Bluetooth" aktiviert werden.
@@ -56,7 +72,7 @@ Eine gepatchte Dexcom G7 App (DiAKEM) ermöglicht den Zugriff auf die Dexcom G7 
 
 -   Passe die Einstellungen in xDrip+ so an, wie es unter  [xDrip+ Einstellungen](../CompatibleCgms/xDrip.md) beschrieben ist
 
-## 4. Juggluco
+## 5. Juggluco
 
 Version 9.0+ ist erforderlich
 

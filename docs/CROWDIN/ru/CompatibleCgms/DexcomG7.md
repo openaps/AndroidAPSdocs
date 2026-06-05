@@ -16,13 +16,29 @@
 
 - Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../CompatibleCgms/xDrip.md)
 
-## 2.  Модифицированное приложение Dexcom G7 (DiAKEM)
+## 2. Build Your Own Dexcom App (G7)
+
+```{admonition} Old app version
+:class: warning
+Dexcom BYODA is now a very old version of the app and cannot be updated.
+```
+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+
+!\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+
+-   This app lets you use your Dexcom G7 with any Android smartphone.
+-   Uninstall the original Dexcom app
+-   Установите загруженное приложение
+-   Enter sensor code in patched app
+-   After short time BYODA should pick-up transmitter signal
+
+## 3. Модифицированное приложение Dexcom G7 (DiAKEM)
 
 ```{admonition} No new users
 :class: warning
 Последнее обновление серверов Dexcom сломало DiaKEM для новых установок: приложение G7 больше не может получить доступ к процессу входа и регистрации при новой установке приложения. 
 Сейчас у существующих пользователей нет проблем: не выходите, не стирайте данные, не переустанавливайте приложение G7, иначе вы не сможете снова загрузить его и запустить. Если приложение уже запущено, вам ничего не угрожает.
-Новым пользователям рекомендуется использовать [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) как источник данных ГК в **AAPS'** до тех пор, пока эта проблема не будет решена.
 ```
 
 **Примечание: Требуется AAPS 3.2.0.0 или выше! Недоступно для ONE+.**
@@ -48,7 +64,7 @@
 
 - Если AAPS не получает данных ГК, переключитесь на другой источник ГК, а затем снова на 'BYODA'.
 
-## 3. xdrip+ (режим спутника)
+## 4. xdrip+ (режим спутника)
 
 -   Скачайте и установите xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - В качестве источника данных в Xdrip должен быть выбран "Companion App" в разделе Менее распространенные настройки > Настройки Bluetooth > поставьте галочку рядом с "Companion Bluetooth".
@@ -56,7 +72,7 @@
 
 -   Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../CompatibleCgms/xDrip.md)
 
-## 4. Juggluco
+## 5. Juggluco
 
 Требуется версия 9.0 и выше
 

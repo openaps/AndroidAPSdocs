@@ -21,7 +21,7 @@ Einige dieser Probleme betreffen wahrscheinlich auch andere Bluetooth Insulinpum
 
 Neuere Android-Versionen haben standardmäßig die Akku-Optimierung für die Bluetooth-App des Systems eingeschaltet. Dies führt erwiesenerrmaßen zu einigen Problemen bei Pumpen und CGMs, die Bluetooth nutzen.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide its possible you have not changed this setting.
+Wenn Du den [Einrichtungsassistenten](../SettingUpAaps/SetupWizard) genutzt hast, und den Konfigurationsvorschlägen im Abschnitt [Bluetooth Akku-Optimierung](#setup-wizard-bluetooth-battery-optimisation) gefolgt bist, sollte die Einstellung bereits korrekt sein. Bist Du allerdings durch eine ältere Version der Anleitung gegangen, wurde die Einstellung nicht auf den richtigen Wert geändert.
 
 Solltest Du Verbindungsabbrüche zwischen dem CGM und Deiner Pumpe haben, überprüfe, ob die Einstellung richtig gesetzt ist.
 

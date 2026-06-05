@@ -16,13 +16,29 @@
 
 - 请根据[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的说明调整xDrip+设置
 
-## 2.  修补版 Dexcom G7 应用程序 (DiaKEM)
+## 2. Build Your Own Dexcom App (G7)
+
+```{admonition} Old app version
+:class: warning
+Dexcom BYODA is now a very old version of the app and cannot be updated.
+```
+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+
+!\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+
+-   This app lets you use your Dexcom G7 with any Android smartphone.
+-   Uninstall the original Dexcom app
+-   安装下载的 apk
+-   Enter sensor code in patched app
+-   After short time BYODA should pick-up transmitter signal
+
+## 3. 修补版 Dexcom G7 应用程序 (DiaKEM)
 
 ```{admonition} No new users
 :class: warning
 Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
 Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
-New users are recommended to use [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) as **AAPS'** BG data source until this issue has been resolved.
 ```
 
 **注意：需要 AAPS 3.2.0.0 或更高版本！ 不适用于 ONE+。**
@@ -48,7 +64,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 - 若AAPS未接收到任何数值，请先切换至其他血糖数据源，然后重新选择「BYODA」以触发AAPS与BYODA之间的数据交换授权请求。
 
-## 3. xDrip+（伴侣模式）
+## 4. xDrip+（伴侣模式）
 
 -   下载并安装 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
 - 在xDrip+中必须选择"伴侣应用"作为数据源，并在高级设置 > 蓝牙设置中启用"伴侣蓝牙"功能。
@@ -56,7 +72,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 -   请根据[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的说明调整xDrip+设置
 
-## 4. Juggluco
+## 5. Juggluco
 
 Version 9.0+ required
 

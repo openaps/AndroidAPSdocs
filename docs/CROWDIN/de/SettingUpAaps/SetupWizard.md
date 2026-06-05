@@ -203,18 +203,18 @@ Nachdem Du das Passwort zweimal eingegeben hast, klicke bitte auf "WEITER":
 ### Importiere die Einstellungen
 
 ```{tip}
-Import your last settings file if present.</br>
-You can also do this after completing the wizard.</br>
-If you already have them ready, importing now will be faster than recreating you profile.
+Wenn vorhanden, importiere Deine letzte Konfigurationsdatei.</br>
+Das kannst Du auch nach Beendigung des Assistenten tun.</br>
+Der Import ist schneller als Dein Profil neu zu erstellen.
 ```
 
 Wenn Dein aktuelles AAPS-Verzeichnis bereits Einstellungen enthält, wirst Du gefragt, ob Du diese importieren möchtest.
 
-This will happen only if you uninstalled and reinstalled AAPS on the same phone.
+Dies wird nur dann passieren, wenn Du auf demselben Smartphone AAPS zunächst deinstalliert und dann wieder installiert hast.
 
-Tap NEXT if you don't want to restore them now.
+Tippe auf WEITER, wenn Du die Einstellungen jetzt nicht wiederherstellen möchtest.
 
-Tap RESTORE SETTINGS to select which file to restore, then NEXT.
+Tippe auf RESTORE SETTINGS, um die Datei für die Wiederherstellung auszuwählen, dann auf OK/WEITER.
 
 ![Einstellungen](../images/setup-wizard/Wizard12b.png)
 
@@ -509,7 +509,7 @@ Drücke auf "WEITER", um zur nächsten Seite zu kommen.
 
 ![Pump Warning](../images/setup-wizard/Wizard23.png)
 
-Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: AAPS requires Bluetooth permission. This will be addressed after you complete the Wizard.
+Sobald eine Pumpe ausgewählt ist, die sich über Bluetooth mit AAPS verbindet, erscheint eine Warnung: AAPS benötigt eine Bluetooth-Berechtigung. Darum kümmern wir uns, nachdem Du den Einrichtungsassistenten durchlaufen hast.
 
 ![Bluetooth Warning](../images/setup-wizard/Wizard23b.png)
 
@@ -582,7 +582,7 @@ Solltest Du versehentlich den Einrichtungsassistenten verlassen haben, kannst Du
 
 ## AAPS neustarten, um die Einstellungen zu überprüfen
 
-From the top right menu, select Exit to force AAPS to restart.
+Wähle aus dem oberen rechten Menü den Befehl „Schließen“, um AAPS zum Neustart zu zwingen.
 
 ![Neustart](../images/setup-wizard/Wizard27.png)
 
@@ -590,7 +590,7 @@ Solltest Du eine über Bluetooth-verbundene Pumpe ausgewählt haben, wirst Du je
 
 ![Bluetooth Request](../images/setup-wizard/Wizard28.png)
 
-Allow AAPS to connect to nearby devices.
+Berechtige AAPS, sich mit Geräten in der Nähe verbinden zu dürfen.
 
 ![Bluetooth Request](../images/setup-wizard/Wizard28b.png)
 

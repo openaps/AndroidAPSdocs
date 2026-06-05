@@ -16,13 +16,29 @@ Citiți [metoda de filtrare](../CompatibleCgms/SmoothingBloodGlucoseData.md) sug
 
 - Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+  [Setări xDrip+ ](../CompatibleCgms/xDrip.md)
 
-## 2.  Aplicația Dexcom G7 modificată (DiaKEM)
+## 2. Build Your Own Dexcom App (G7)
+
+```{admonition} Old app version
+:class: warning
+Dexcom BYODA is now a very old version of the app and cannot be updated.
+```
+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+
+!\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+
+-   This app lets you use your Dexcom G7 with any Android smartphone.
+-   Uninstall the original Dexcom app
+-   Instalați apk-ul descărcat
+-   Enter sensor code in patched app
+-   After short time BYODA should pick-up transmitter signal
+
+## 3. Aplicația Dexcom G7 modificată (DiaKEM)
 
 ```{admonition} No new users
 :class: avertizare
 Cele mai recente actualizări de pe servere Dexcom au stricat DiaKEM pentru instalări noi: aplicația nu mai poate trece prin procesul de autentificare și înregistrare care se întâmplă la o instalare nouă a aplicației. 
 Utilizatorii existenți nu se confruntă deocamdată cu probleme: nu deconectați, nu ștergeți datele, sau reinstalați aplicația G7 deoarece aceasta vă va împiedica să faceți aplicația să ruleze din nou. Dacă rulează deja, nu ar trebui să fiți afectat.
-Utilizatorii noi sunt recomandați să folosească [xDrip+](https://androidaps.readthedocs.io/en/latest/CompatibleCgms/xDrip.html) ca sursă de date glicemice în **AAPS** până când această problemă a fost rezolvată.
 ```
 
 **Notă: AAPS 3.2.0.0 sau mai mare este necesar! Nu este disponibil pentru ONE+.**
@@ -48,7 +64,7 @@ O aplicație Dexcom G7 (DiaKEM) modificată permite accesul la datele Dexcom G7.
 
 - Dacă AAPS nu primește valori, comută la o altă sursă de glicemie și apoi înapoi la "BYODA" pentru a apela interogarea pentru aprobarea schimbului de date între AAPS și BYODA.
 
-## 3. xDrip+ (mod companion)
+## 4. xDrip+ (mod companion)
 
 -   Descărcați și instalați xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
 - Ca sursă de date în xDrip+ "Companion App" trebuie selectată și în Setări Avansate > Setări Bluetooth > "Companion Bluetooth" trebuie activat.
@@ -56,7 +72,7 @@ O aplicație Dexcom G7 (DiaKEM) modificată permite accesul la datele Dexcom G7.
 
 -   Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+  [Setări xDrip+ ](../CompatibleCgms/xDrip.md)
 
-## 4. Juggluco
+## 5. Juggluco
 
 Versiunea 9.0+ necesară
 
