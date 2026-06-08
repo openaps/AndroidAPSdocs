@@ -16,22 +16,22 @@
 
 - 根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../CompatibleCgms/xDrip.md)
 
-## 2. Build Your Own Dexcom App (G7)
+## 2. 自行建立 Dexcom 應用程式（G7）
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Dexcom BYODA 現在是非常舊的應用程式版本，且無法更新。
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+-   [自行建立 Dexcom 應用程式](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)（BYODA）支援本地廣播到 AAPS 和／或 xDrip+
 
-!\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+!\[BYODA 廣播選項\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
 
--   This app lets you use your Dexcom G7 with any Android smartphone.
--   Uninstall the original Dexcom app
+-   此應用程式可讓你在任何 Android 智慧型手機上使用 Dexcom G7。
+-   解除安裝原版 Dexcom 應用程式
 -   安裝下載的 apk
--   Enter sensor code in patched app
--   After short time BYODA should pick-up transmitter signal
+-   在修改版應用程式中輸入感測器代碼
+-   短時間後 BYODA 應會接收到發射器訊號
 
 ## 3. 修補版 Dexcom G7 應用程式 (DiaKEM)
 

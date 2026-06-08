@@ -56,16 +56,16 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 (version3423)=
 
-## Version for 3.4.2.3
-- Dash: Drift resolution @nl-ruud
-- NSClientV3: Fix gap after reconnection @MilosKozak
-- Automation: Fix deserialization @MilosKozak
-- Equil: Fix battery report @MilosKozak
-- Cleanup worflow @vanelsberg
-- Equil: improve error recovery @MilosKozak
-- DanaRS: fix domestic pump communication @MilosKozak
-- Insight: Fix TBR sync @MilosKozak
-- Dash: Fix activation bug @nl-ruud
+## 適用於 3.4.2.3 的版本
+- Dash：解決漂移問題 @nl-ruud
+- NSClientV3：修正重新連線後的資料缺口 @MilosKozak
+- Automation：修正反序列化問題 @MilosKozak
+- Equil：修正電池報告 @MilosKozak
+- 清理工作流程 @vanelsberg
+- Equil：改善錯誤復原 @MilosKozak
+- DanaRS：修正國內版幫浦通訊 @MilosKozak
+- Insight：修正臨時基礎率同步 @MilosKozak
+- Dash：修正註冊錯誤 @nl-ruud
 
 (version3422)=
 
