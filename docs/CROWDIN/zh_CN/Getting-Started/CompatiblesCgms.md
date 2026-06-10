@@ -12,7 +12,8 @@
 | CGM                                                                         | 可用的[血糖数据源](#Config-Builder-bg-source)                                                                        |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | [德康 G7](../CompatibleCgms/DexcomG7.md)                                      | BYODA, [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                     |
-| [Dexcom ONE+ and Stelo](../CompatibleCgms/DexcomG7.md)                      | [xDrip+](../CompatibleCgms/xDrip.md)                                                                         |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                            |
+| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                               | [xDrip+](../CompatibleCgms/xDrip.md)                                                                         |
 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                  | BYODA or [xDrip+](../CompatibleCgms/xDrip.md)                                                                |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md)                                                                         |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                                   | [Juggluco](../CompatibleCgms/Juggluco.md) (搭配/不搭配xDrip+)                                                     |
@@ -27,7 +28,7 @@
 | [Syai](../CompatibleCgms/SyaiTagX1.md)                                      | Syai Tag App                                                                                                 |
 | 硅基 CGM                                                                      | [Juggluco](../CompatibleCgms/Juggluco.md) 或 修补版 硅基应用 (Patched SI App)                                        |
 | 三诺 (Sinocare)                                                               | 修补版三诺应用 (Patched Sino App)                                                                                   |
-| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ 伴侣应用模式 (xDrip+ Companion App)                                                                         |
+| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App or [Juggluco](../CompatibleCgms/Juggluco.md)                                            |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -39,13 +40,14 @@
 
 可信数据源支持**SMB**全天候输注。
 
-| 传感器                   |                                            CGM 应用                                             |
-| --------------------- |:---------------------------------------------------------------------------------------------:|
-| Dexcom G6             |                              BYODA, xDrip+ (**Direct, Native**)                               |
-| 德康 G7                 |    BYODA, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)     |
-| Dexcom ONE/ONE+/Stelo |                                    xDrip+ (**直接连接, 原生驱动**)                                    |
-| Libre 2/2+ (EU)       | xDrip+ (OOP2 **免校准**), </br>Juggluco (**xDrip 广播模式**，无需安装 xDrip+；或使用 **修补版 Libre** 配合 xDrip+) |
-| Libre 2/2+/3/3+       |               Juggluco (**xDrip 广播模式**，无需安装 xDrip+；或使用 **修补版 Libre** 配合 xDrip+)               |
-| Syai                  |                                           Syai App                                            |
+| 传感器              |                                            CGM 应用                                             |
+| ---------------- |:---------------------------------------------------------------------------------------------:|
+| Dexcom G6        |                              BYODA, xDrip+ (**Direct, Native**)                               |
+| 德康 G7            |    BYODA, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)     |
+| Dexcom ONE+      |        xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)        |
+| Dexcom ONE/Stelo |                                    xDrip+ (**直接连接, 原生驱动**)                                    |
+| Libre 2/2+ (EU)  | xDrip+ (OOP2 **免校准**), </br>Juggluco (**xDrip 广播模式**，无需安装 xDrip+；或使用 **修补版 Libre** 配合 xDrip+) |
+| Libre 2/2+/3/3+  |               Juggluco (**xDrip 广播模式**，无需安装 xDrip+；或使用 **修补版 Libre** 配合 xDrip+)               |
+| Syai             |                                           Syai App                                            |
 
 **注意：xDrip+ 伴侣应用（Companion apps）和跟随者模式（Follower modes，包括 640G/Eversense）不被视为受信任的数据源。**
