@@ -507,12 +507,13 @@ You must be running AAPS Version 3.4.2.3 or later for this feature.
 
 The Basal Drift Fix is not enabled by default on AAPS.
 
-To enable it:
+**To enable it:**  
+
 1. Create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).  
 
-  ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
+   ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)  
 
-***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
+   ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*  
 
 2. Restart **AAPS**. This must be done for it to recognise the file is present and enable the drift compensation feature.
 
