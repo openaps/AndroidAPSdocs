@@ -486,13 +486,13 @@ Additional note:
 
 ## Known Issues Workarounds
 
-This section will cover common workarounds or settings that need to be changed to enable a feature to work around a community reported issue that has a fix. E.g. the Basil drift enable process is documented here.
+This section covers common workarounds and settings that need to be changed to enable a feature to work around a community reported issue that has a fix. E.g. the Basil drift enable process is documented here.
 
 (#omnipod-dash-basil-drift-fix)=
 
 ### Basil Drift Fix Instructions
 
-The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than AAPS expects see [Issue #4158](https://github.com/nightscout/AndroidAPS/issues/4158).
+The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than **AAPS** expects, see [Issue #4158](https://github.com/nightscout/AndroidAPS/issues/4158) for more technical details.
 
 The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new basil rate (and possibly also when a bolus or SMB is delivered).
 
@@ -506,7 +506,9 @@ The issue is most apparent during the night. During daytime operation, SMBs ofte
 
 The Basil Drift Fix is not enabled by default on AAPS.
 
-To enable it, create an empty file named `omnipod_drift_compensation` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+To enable it, create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).  
+
+  ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
 
 ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
 
