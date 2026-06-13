@@ -19,6 +19,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 requires **AAPS** version 3.3.2.1 or later.
 - General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
+- Temporary basal rate changes (which occur frequently when the loop is active, especially overnight) result in under-delivery of insulin. This is effectively a hardware limitation of the Omnipod DASH. The issue has been addressed in AAPS 3.4.2.3, but the functionality is currently opt-in. Follow the [Basil Drift Fix Instructions ](#omnipod-dash-basil-drift-fix)instructions to enable it. For more information regarding the fix see [Github Issue - 4499](https://github.com/nightscout/AndroidAPS/pull/4499) for more info.
 - Too frequent basal updates may cause basal insulin delivery [problems](https://github.com/nightscout/AndroidAPS/issues/4158) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
 - Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
@@ -482,6 +483,49 @@ Additional note:
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
 
 (omnipod-dash-troubleshooting)=
+
+## Known Issues Workarounds
+
+(#omnipod-dash-basil-drift-fix)=
+
+This section will cover common workarounds or settings that need to be changed to enable a feature to work around a community reported issue that has a fix. E.g. the Basil drift enable process is documented here.
+
+### Basil Drift Fix Instructions
+
+The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than AAPS expects see [Issue #4158](https://github.com/nightscout/AndroidAPS/issues/4158).
+
+The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new basil rate (and possibly also when a bolus or SMB is delivered).
+
+When used in combination with looping, this leads to under-delivery of basal insulin, as the algorithm updates the basal rate on the pump frequently.
+
+The issue is most apparent during the night. During daytime operation, SMBs often result in a basal rate of 0, which masks the effect. In observed usage, this results in approximately 10% of the expected Total Daily Dose (TDD) not being delivered over a 24-hour period. Additionally, glucose targets are often not reached overnight, particularly after meals with prolonged glucose impact (e.g. pasta).
+
+***NOTE:** This issue is especially important to understand for people on very small dosages of insulin, Children for example.*
+
+#### Enable Basil Drift Fix in AAPS
+
+The Basil Drift Fix is not enabled by default on AAPS.
+
+To enable it, create an empty file named `omnipod_drift_compensation` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+
+***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
+
+
+#### Verification It's enabled and working
+
+1. Click on the DASH tab (1), then click on on Pod History (2)  
+  ![dash_drift_tab_pod_mgmt](../images/DASH_images/DASH_Drift/dash_drift_tab_pod_mgmt.png)  
+2. Note down the "Total insulin delivered" at two points in time for a specific day: At the value nearest to 00:00h (3) and 24:00h (4); the difference is what the Pod reports as insulin delivered for that day period. 
+  ![dash_drift_pod_stats_start](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_start.png)  ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_end.png)
+   1. In this example Start value is 38.15 (3), end value is 73.40 (4).
+   2. Take the end value of 73.40 and minus the start value of 38.15 which comes to a total of 35.25 total units of insulin delivered for the day.
+3. Check AAPS [Total Daily Dose (TDD) statistics](https://androidaps.readthedocs.io/en/latest/Maintenance/Reviewing.html#reviewing-statistics), Find the TDD for the same day you click on the 
+For that same day (5), check on what is reported as the sum of insulin (first column at the right of the date).
+    ![dash_drift_dash_drift_tdd](../images/DASH_images/DASH_Drift/dash_drift_dash_drift_tdd.png)
+
+Compare the "Total insulin delivered" from (5) with the DASH stats calculated value. Expect a difference no more than 0.05U.
+
+*In the example you can see that the TDD from AAPS was 35.3 and the DASH stats calculated value was 35.25. Showing that the setting is enabled and working as expected.* 
 
 ## Troubleshooting
 
