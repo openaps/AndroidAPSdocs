@@ -482,13 +482,13 @@ Additional note:
   * **SMS** - Returns value or 50+U for SMS responses
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
 
-(omnipod-dash-troubleshooting)=
+(omnipod-dash-known-issues-workarounds)=
 
 ## Known Issues Workarounds
 
-(#omnipod-dash-basil-drift-fix)=
-
 This section will cover common workarounds or settings that need to be changed to enable a feature to work around a community reported issue that has a fix. E.g. the Basil drift enable process is documented here.
+
+(#omnipod-dash-basil-drift-fix)=
 
 ### Basil Drift Fix Instructions
 
@@ -510,7 +510,6 @@ To enable it, create an empty file named `omnipod_drift_compensation` in the `ex
 
 ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
 
-
 #### Verification It's enabled and working
 
 1. Click on the DASH tab (1), then click on on Pod History (2)  
@@ -529,7 +528,7 @@ Compare the "Total insulin delivered" from (5) with the DASH stats calculated va
 
 ## Troubleshooting
 
-(omnipod-dash-delivery-suspended)=
+(omnipod-dash-troubleshooting)=
 
 This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
 
@@ -542,6 +541,9 @@ This section covers common known issues and solutions for Omnipod DASH use with 
 For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
+
+(omnipod-dash-delivery-suspended)=
+
 ### Delivery suspended
 
   - There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes. 
