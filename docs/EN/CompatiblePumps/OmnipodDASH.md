@@ -517,13 +517,20 @@ To enable it, create an empty file named `omnipod_drift_compensation` (2) in the
 #### Verification It's enabled and working
 
 1. Click on the DASH tab (1), then click on on Pod History (2)  
+   
    ![dash_drift_tab_pod_mgmt](../images/DASH_images/DASH_Drift/dash_drift_tab_pod_mgmt.png)  
+   
 2. Note down the "Total insulin delivered" at two points in time for a specific day: At the value nearest to 00:00h (3) and 24:00h (4); the difference is what the Pod reports as insulin delivered for that day period.  
+
    ![dash_drift_pod_stats_start](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_start.png)   ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_end.png)
+
    1. In this example Start value is 38.15 (3), end value is 73.40 (4).
    2. Take the end value of 73.40 and minus the start value of 38.15 which comes to a total of 35.25 total units of insulin delivered for the day.
+   
 3. Check AAPS [Total Daily Dose (TDD) statistics](https://androidaps.readthedocs.io/en/latest/Maintenance/Reviewing.html#reviewing-statistics), Find the TDD for the same day you click on the For that same day (5), check on what is reported as the sum of insulin (first column at the right of the date).  
+
    ![dash_drift_dash_drift_tdd](../images/DASH_images/DASH_Drift/dash_drift_dash_drift_tdd.png)
+
 4. Compare the "Total insulin delivered" from (5) with the DASH stats calculated value. Expect a difference no more than 0.05U.
 
 *In the example you can see that the TDD from AAPS was 35.3 and the DASH stats calculated value was 35.25. Showing that the setting is enabled and working as expected.* 
