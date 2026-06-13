@@ -504,6 +504,8 @@ The issue is most apparent during the night. During daytime operation, SMBs ofte
 
 #### Enable Basil Drift Fix in AAPS
 
+You must be running AAPS Version 3.4.2.3 or later for this feature.
+
 The Basil Drift Fix is not enabled by default on AAPS.
 
 To enable it, create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).  
