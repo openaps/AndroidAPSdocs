@@ -510,7 +510,7 @@ The Basil Drift Fix is not enabled by default on AAPS.
 
 To enable it, create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).  
 
-  ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
+  ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
 
 ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
 
