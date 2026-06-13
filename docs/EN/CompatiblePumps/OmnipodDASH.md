@@ -19,9 +19,8 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 requires **AAPS** version 3.3.2.1 or later.
 - General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- Temporary basal rate changes (which occur frequently when the loop is active, especially overnight) result in under-delivery of insulin. This is effectively a hardware limitation of the Omnipod DASH. The issue has been addressed in AAPS 3.4.2.3, but the functionality is currently opt-in. Follow the [Basil Drift Fix Instructions ](#omnipod-dash-basil-drift-fix)instructions to enable it. For more information regarding the fix see [Github Issue - 4499](https://github.com/nightscout/AndroidAPS/pull/4499) for more info.
-- Too frequent basal updates may cause basal insulin delivery [problems](https://github.com/nightscout/AndroidAPS/issues/4158) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
+- Temporary Basal rate changes (which occur frequently when the loop is active, especially overnight) result in under-delivery of insulin. This is effectively a hardware limitation of the Omnipod DASH. The issue has been addressed in AAPS 3.4.2.3, but the functionality is currently opt-in. Follow the [Basal Drift Fix Instructions ](#omnipod-dash-Basal-drift-fix)instructions to enable it. For more information regarding the fix see [Github Issue - 4499](https://github.com/nightscout/AndroidAPS/pull/4499) for more info.
+- Dash only supports basal rate in 0.05 U/h steps. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig. 
 - When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
@@ -72,7 +71,7 @@ When for some reason the pod does not receive any new commands (for instance bec
 
 ### **AAPS Profile(s) do not support 30 minute basal rate time frames**
 If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported.
-For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact basil **Profile** in **AAPS**.  
+For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
 You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
 
 ### **0U/h Profile basal rates are NOT supported in AAPS**  
@@ -486,15 +485,15 @@ Additional note:
 
 ## Known Issues Workarounds
 
-This section covers common workarounds and settings that need to be changed to enable a feature to work around a community reported issue that has a fix. E.g. the Basil drift enable process is documented here.
+This section covers common workarounds and settings that need to be changed to enable a feature to work around a community reported issue that has a fix. E.g. the Basal drift enable process is documented here.
 
-(#omnipod-dash-basil-drift-fix)=
+(#omnipod-dash-Basal-drift-fix)=
 
-### Basil Drift Fix Instructions
+### Basal Drift Fix Instructions
 
 The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than **AAPS** expects, see [Issue #4158](https://github.com/nightscout/AndroidAPS/issues/4158) for more technical details.
 
-The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new basil rate (and possibly also when a bolus or SMB is delivered).
+The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new Basal rate (and possibly also when a bolus or SMB is delivered).
 
 When used in combination with looping, this leads to under-delivery of basal insulin, as the algorithm updates the basal rate on the pump frequently.
 
@@ -502,11 +501,11 @@ The issue is most apparent during the night. During daytime operation, SMBs ofte
 
 ***NOTE:** This issue is especially important to understand for people on very small dosages of insulin, Children for example.*
 
-#### Enable Basil Drift Fix in AAPS
+#### Enable Basal Drift Fix in AAPS
 
 You must be running AAPS Version 3.4.2.3 or later for this feature.
 
-The Basil Drift Fix is not enabled by default on AAPS.
+The Basal Drift Fix is not enabled by default on AAPS.
 
 To enable it, create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).  
 
