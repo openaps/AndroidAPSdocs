@@ -12,7 +12,8 @@
 | CGM                                                                     | 可用的[血糖資料來源](#Config-Builder-bg-source)                                                                   |
 | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)                              | BYODA、[xDrip+](../CompatibleCgms/xDrip.md) 或 [Juggluco](../CompatibleCgms/Juggluco.md)                   |
-| [Dexcom ONE+ 和 Stelo](../CompatibleCgms/DexcomG7.md)                    | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                            | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                        |
+| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                           | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                              | BYODA 或 [xDrip+](../CompatibleCgms/xDrip.md)                                                             |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                             | [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                               | [Juggluco](../CompatibleCgms/Juggluco.md)（可搭配或不搭配 xDrip+ 使用）                                             |
@@ -27,7 +28,7 @@
 | [Syai](../CompatibleCgms/SyaiTagX1.md)                                  | Syai Tag App                                                                                             |
 | Sibionics CGM                                                           | [Juggluco](../CompatibleCgms/Juggluco.md) 或 Patched SI App                                               |
 | Sinocare                                                                | Patched Sino App                                                                                         |
-| [Caresens](../CompatibleCgms/Caresens.md)，Simplera，iCan，LinX，SmartGuide | xDrip+ Companion App                                                                                     |
+| [Caresens](../CompatibleCgms/Caresens.md)，Simplera，iCan，LinX，SmartGuide | xDrip+ Companion App or [Juggluco](../CompatibleCgms/Juggluco.md)                                        |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -39,13 +40,14 @@
 
 可信任的資料來源，允許**SMB**可以啟動。
 
-| 傳感器                   |                                        CGM 應用程式                                        |
-| --------------------- |:--------------------------------------------------------------------------------------:|
-| Dexcom G6             |                                BYODA、xDrip+ （**直連，原生**）                                |
-| Dexcom G7             |             BYODA、xDrip+（**直接、原生**），</br>Juggluco（**xDrip 廣播**，不需 xDrip+）              |
-| Dexcom ONE/ONE+/Stelo |                                   xDrip+ （**直連，原生**）                                   |
-| Libre 2/2+ (歐盟)       | xDrip+ （OOP2 **無需校正**），</br>Juggluco （**xDrip 廣播** 不帶 xDrip+，或 **修補版 Libre** 與 xDrip+） |
-| Libre 2/2+/3/3+       |               Juggluco （**xDrip 廣播** 不帶 xDrip+，或 **修補版 Libre** 與 xDrip+）               |
-| Syai                  |                                        Syai App                                        |
+| 傳感器              |                                        CGM 應用程式                                        |
+| ---------------- |:--------------------------------------------------------------------------------------:|
+| Dexcom G6        |                                BYODA、xDrip+ （**直連，原生**）                                |
+| Dexcom G7        |             BYODA、xDrip+（**直接、原生**），</br>Juggluco（**xDrip 廣播**，不需 xDrip+）              |
+| Dexcom ONE+      |    xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)     |
+| Dexcom ONE/Stelo |                                   xDrip+ （**直連，原生**）                                   |
+| Libre 2/2+ (歐盟)  | xDrip+ （OOP2 **無需校正**），</br>Juggluco （**xDrip 廣播** 不帶 xDrip+，或 **修補版 Libre** 與 xDrip+） |
+| Libre 2/2+/3/3+  |               Juggluco （**xDrip 廣播** 不帶 xDrip+，或 **修補版 Libre** 與 xDrip+）               |
+| Syai             |                                        Syai App                                        |
 
 **注意：xDrip+ 伴隨應用程式和追蹤模式（包括 640G/Eversense）不被視為可靠的資料來源。**

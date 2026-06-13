@@ -12,7 +12,8 @@ Táto časť poskytuje stručný prehľad všetkých kompatibilných **CGM/FGM**
 | CGM                                                                         | Dostupné [zdroje glykémie](#Config-Builder-bg-source)                                                                       |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | BYODA, [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                    |
-| [Dexcom ONE+ a Stelo](../CompatibleCgms/DexcomG7.md)                        | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                        |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                           |
+| [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                               | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                        |
 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                  | BYODA or [xDrip+](../CompatibleCgms/xDrip.md)                                                                               |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                        |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                                   | [Juggluco](../CompatibleCgms/Juggluco.md) (s alebo bez xDrip+)                                                              |
@@ -27,7 +28,7 @@ Táto časť poskytuje stručný prehľad všetkých kompatibilných **CGM/FGM**
 | [Syai](../CompatibleCgms/SyaiTagX1.md)                                      | Syai Tag App                                                                                                                |
 | Sibionics CGM                                                               | [Juggluco](../CompatibleCgms/Juggluco.md) or Patched SI App                                                                 |
 | Sinocare                                                                    | Patched Sino App                                                                                                            |
-| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App                                                                                                        |
+| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App or [Juggluco](../CompatibleCgms/Juggluco.md)                                                           |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -39,13 +40,14 @@ Aby ich **AAPS** mohol správne identifikovať, aplikácia odosielajúca hodnoty
 
 Dôveryhodné zdroje údajov umožňujú nepretržité podávanie **SMB**.
 
-| Senzor                |                                                      CGM app                                                       |
-| --------------------- |:------------------------------------------------------------------------------------------------------------------:|
-| Dexcom G6             |                                         BYODA, xDrip+ (**Direct, Native**)                                         |
-| Dexcom G7             |               BYODA, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)               |
-| Dexcom ONE/ONE+/Stelo |                                            xDrip+ (**Priamy, Natívny**)                                            |
-| Libre 2/2+ (EU)       | xDrip+ (OOP2 **bez kalibrácie**), </br>Juggluco (**xDrip vysielanie** bez xDrip+ alebo **Patched Libre** s xDrip+) |
-| Libre 2/2+/3/3+       |                    Juggluco (**xDrip vysielanie** bez xDrip+ alebo **Patched Libre** s xDrip+)                     |
-| Syai                  |                                                      Syai App                                                      |
+| Senzor           |                                                      CGM app                                                       |
+| ---------------- |:------------------------------------------------------------------------------------------------------------------:|
+| Dexcom G6        |                                         BYODA, xDrip+ (**Direct, Native**)                                         |
+| Dexcom G7        |               BYODA, xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)               |
+| Dexcom ONE+      |                  xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                   |
+| Dexcom ONE/Stelo |                                            xDrip+ (**Priamy, Natívny**)                                            |
+| Libre 2/2+ (EU)  | xDrip+ (OOP2 **bez kalibrácie**), </br>Juggluco (**xDrip vysielanie** bez xDrip+ alebo **Patched Libre** s xDrip+) |
+| Libre 2/2+/3/3+  |                    Juggluco (**xDrip vysielanie** bez xDrip+ alebo **Patched Libre** s xDrip+)                     |
+| Syai             |                                                      Syai App                                                      |
 
 **Poznámka: Aplikácie xDrip+ Companion a režimy Follower (vrátane 640G/Eversense) nie sú dôveryhodnými zdrojmi údajov.**
