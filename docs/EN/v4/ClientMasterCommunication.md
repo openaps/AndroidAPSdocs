@@ -160,6 +160,35 @@ A watch paired to a **client** phone relays its actions through the client to th
 
 ---
 
+## Changing configuration and preferences
+
+Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+
+### Configuration (which plugins are active)
+
+The active **plugins** (CGM, pump, APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are **read-only** and marked with a small **mobile icon** in the [Configuration](Configuration.md#configuration_sync_icon) screen — change them on the master and the clients follow automatically.
+
+In the example below the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication* or *General*:
+
+![Configuration list on a client — the mobile icon marks plugins synced from the master](../images/v4/Configuration/configuration_plugins.png)
+
+Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced and are set on each phone individually.
+
+### Preferences
+
+A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronised to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**.
+
+Inside a plugin's settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Use dynamic sensitivity* and *DynamicISF adjustment factor* are synced (mobile icon), while device-local settings such as *Maximum basal rate* and *Max IOB for SMB* are not:
+
+![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+
+```{admonition} The master must be online to change synced settings from a client
+:class: note
+Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#when-the-master-is-offline)).
+```
+
+---
+
 ## Security notes
 
 ```{admonition} How the channel is protected
