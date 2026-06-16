@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="ExchangeSiteCustomWatchfaces">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/AIMICO-V1_1.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/Digital_G-Watch.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/Gota_v2.4.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/Analog_G-Watch.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/Gears.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/LuckyLoopKoeln.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/SteamPunk.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/AAPS_Large.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/DigitalBigGraph_v1.5.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/pzero_v1.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/Robby_watchface.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/AAPS_BigChart.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/Cockpit.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/Blue_Ring.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/AAPS_NoChart.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/PinkFloydTheWall.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/AAPS_V2.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/AAPSV2_TT_DarkOnly.zip!/" />
+      <root url="jar://$PROJECT_DIR$/docs/_static/ExchangeSiteCustomWatchfaces/AAPS.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
