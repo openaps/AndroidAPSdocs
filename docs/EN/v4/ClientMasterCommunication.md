@@ -166,7 +166,7 @@ Pairing does more than relay one-off actions — it also keeps the **configurati
 
 ### Configuration (which plugins are active)
 
-The active **plugins** (CGM, pump, APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are **read-only** and marked with a small **mobile icon** in the [Configuration](Configuration.md#configuration_sync_icon) screen — change them on the master and the clients follow automatically.
+The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are **read-only** and marked with a small **mobile icon** in the [Configuration](Configuration.md#configuration_sync_icon) screen — change them on the master and the clients follow automatically.
 
 In the example below the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication* or *General*:
 
