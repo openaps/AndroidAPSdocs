@@ -112,7 +112,7 @@ This lets you keep several buttons for the **same** profile at different strengt
 
 ### Plugins
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Sensitivity**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
 
 ![The dynamic categories — Quick Wizard, Scenes, Automation and Temp Target Presets](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
@@ -120,7 +120,13 @@ Finally, any **enabled plugin** that has its own screen can be added as a shortc
 
 ## QuickLaunch and Master/Client
 
-The toolbar configuration is part of the **synced configuration**, so it is shared across your master and paired clients. Action buttons whose target no longer exists (a deleted QuickWizard, scene or preset) are skipped automatically, and **master-only** actions — **Automation** and **Scenes** — are only offered and only run where they belong. A button you tap on a client is carried out by the **master**, which authors the confirmation. See [Master ↔ Client control](ClientMasterCommunication.md).
+Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+
+What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+
+- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
+- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
+- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](ClientMasterCommunication.md).
 
 ---
 

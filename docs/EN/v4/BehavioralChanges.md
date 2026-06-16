@@ -40,7 +40,7 @@ In **AAPS** v4 the tabs are gone. The main screen is the **Overview**, and a **b
 
 ### Treatments — enter and deliver
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, and your **[QuickWizards](QuickWizards.md)**.
+The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](QuickWizards.md)**.
 
 ![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
 

@@ -54,6 +54,10 @@ So the rule of thumb is:
 - **Activate** → use the numbers **once** (preset unchanged).
 - **Save** → make the numbers the preset's **new defaults**.
 
+### Reverting a built-in preset
+
+The built-in presets (*Eating Soon*, *Activity*, *Hypo*) can have their values changed and saved like the others. To put one back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+
 ---
 
 ## Adding and removing presets

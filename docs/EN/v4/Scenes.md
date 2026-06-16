@@ -44,7 +44,7 @@ Tap the **+** button to create a new scene.
 
 ### Start from a template
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, … Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
 
 ![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
 
@@ -58,7 +58,7 @@ The rest of the editor is a short **step-by-step** wizard. Each step is one acti
 
 ![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
 
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the scene's **name/icon**, **duration** and **end action**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
+Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
 
 ---
 

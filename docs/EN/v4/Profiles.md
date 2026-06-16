@@ -50,7 +50,7 @@ Select a profile and tap **▶ Activate**. A **profile switch** dialog lets you 
 
 ![The profile switch dialog — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal, bolus calculations and carb absorption by 30 %.
+- **Percentage** (30–250 %) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption.
 - **Duration** — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
 - **Time shift** — move the schedule forward/back in time (useful for shift work or travel).
 - **Time** — when the switch takes effect (normally *Now*).
