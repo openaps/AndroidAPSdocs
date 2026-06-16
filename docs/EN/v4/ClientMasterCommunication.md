@@ -20,7 +20,7 @@ This page explains how remote control worked in **AAPS** v3, what changed in v4,
 
 ## How it worked before (AAPS v3)
 
-In v3, remote control from **AAPSClient** (or from the Nightscout web/app) was done by writing **careportal treatments** to Nightscout. The master's **NSClient** then picked those entries up during synchronisation and applied them, provided the *“accept commands”* options were enabled in the NSClient preferences (see [Remote control](../RemoteFeatures/RemoteControl.md)).
+In v3, remote control from **AAPSClient** (or from the Nightscout web/app) was done by writing **care-portal treatments** to Nightscout. The master's **NSClient** then picked those entries up during synchronisation and applied them, provided the *“accept commands”* options were enabled in the NSClient preferences (see [Remote control](../RemoteFeatures/RemoteControl.md)).
 
 This worked, but had important limitations:
 
@@ -56,7 +56,7 @@ Headline changes versus v3:
 | Live bolus progress on the client | ❌ | ✅ Mirrored from the master |
 | Revoke a follower | Change NS secret | One tap (per client) or a master kill-switch |
 
-Actions that can be triggered from a client in v4: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **scenes**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Actions that can be triggered from a client in v4: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
 
 ---
 

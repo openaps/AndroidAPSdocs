@@ -45,7 +45,7 @@ Tapping **Settings** opens that plugin's preference list; settings may be groupe
 (configuration_sync_icon)=
 A small **mobile (phone) icon** next to a category or setting means that item is **synchronised from the master** — its value/selection is delivered to this device over the NSClient (Nightscout) channel.
 
-On a **client** (**AAPSClient**) these items are decided **on the master** and shown here **read-only**: in the screenshot above the icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*, because the master dictates which algorithm/plugin is active. Change them on the master and the client follows.
+On a **client** (**AAPSClient**) these items are **kept in sync with the master**: in the screenshot above the icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](ClientMasterCommunication.md#changing-configuration-and-preferences).
 
 The same icon also appears **inside a plugin's settings**, next to the individual preferences that are synced. In the example below *Use dynamic sensitivity* and *DynamicISF adjustment factor* carry the icon, while device-local settings such as *Maximum basal rate* and *Max IOB for SMB* do not:
 
