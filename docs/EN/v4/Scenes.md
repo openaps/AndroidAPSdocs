@@ -98,7 +98,7 @@ Automation can also **react to** a scene: the trigger list includes a **Scene** 
 
 ## Scenes with Master/Client and a watch
 
-The **currently active scene is synchronised** across all of your paired devices — activate it on one phone and the others show it too.
+The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
 
 A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](ClientMasterCommunication.md) for how that works.
 

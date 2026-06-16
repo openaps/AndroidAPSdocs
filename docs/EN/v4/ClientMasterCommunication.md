@@ -20,7 +20,7 @@ This page explains how remote control worked in **AAPS** v3, what changed in v4,
 
 ## How it worked before (AAPS v3)
 
-In v3, remote control from **AAPSClient** (or from the Nightscout web/app) was done by writing **care-portal treatments** to Nightscout. The master's **NSClient** then picked those entries up during synchronisation and applied them, provided the *“accept commands”* options were enabled in the NSClient preferences (see [Remote control](../RemoteFeatures/RemoteControl.md)).
+In v3, remote control from **AAPSClient** (or from the Nightscout web/app) was done by writing **care-portal treatments** to Nightscout. The master's **NSClient** then picked those entries up during synchronization and applied them, provided the *“accept commands”* options were enabled in the NSClient preferences (see [Remote control](../RemoteFeatures/RemoteControl.md)).
 
 This worked, but had important limitations:
 
@@ -69,9 +69,9 @@ Actions that can be triggered from a client in v4: **bolus**, **carbs / eCarbs**
 - **Both** phones use **NSClientV3** pointed at the **same** Nightscout, and are showing *connected*. Enabling **websockets** on **both** is strongly recommended for fast, near-instant round-trips.
 ```
 
-Pairing and synchronisation are two different things:
+Pairing and synchronization are two different things:
 
-- **Synchronisation** (data: BG, treatments, profile) is set up exactly as before — see [Synchronisation](../RemoteFeatures/RemoteControl.md#2-aapsclient).
+- **Synchronization** (data: BG, treatments, profile) is set up exactly as before — see [Synchronization](../RemoteFeatures/RemoteControl.md#2-aapsclient).
 - **Pairing** (control: the signed command channel described here) is the new step below.
 
 ---
@@ -87,7 +87,7 @@ Turn on **Allow client control**. This is the master kill-switch: with it off, n
 
 ![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button to add a client. Enter a **device name** (so you can recognise it in the list); the master then displays a short **pairing PIN**. This PIN is **one-time** and **expires after about two minutes**.
+Tap the **+** button to add a client. Enter a **device name** (so you can recognize it in the list); the master then displays a short **pairing PIN**. This PIN is **one-time** and **expires after about two minutes**.
 
 <!-- 📷 SCREENSHOT NEEDED: master pairing screen showing the PIN.
      Use a DEMO/expired PIN only — it protects the pairing secret and must not be a live one. -->
@@ -124,7 +124,7 @@ From the master's **Authorized clients** screen you can, at any time:
 
 Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colours the master would show on its own screen. Review them and tap **OK** to go ahead.
+When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
 
 ![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
 
@@ -176,7 +176,7 @@ Connection details that are unique to each device — most importantly the **NSC
 
 ### Preferences
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronised to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**.
+A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**.
 
 Inside a plugin's settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Use dynamic sensitivity* and *DynamicISF adjustment factor* are synced (mobile icon), while device-local settings such as *Maximum basal rate* and *Max IOB for SMB* are not:
 
@@ -216,7 +216,7 @@ If a client is restored from a backup that rolls its command counter backwards, 
 | Commands work but are **slow** | Enable **websockets** on both phones (otherwise the apps fall back to slower polling). |
 | Nothing happens after pairing | Make sure **Allow client control** is ON on the master. |
 
-For Nightscout / synchronisation problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ---
 

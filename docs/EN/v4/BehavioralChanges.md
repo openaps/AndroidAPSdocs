@@ -1,6 +1,6 @@
-# AAPS v4 — behavioural changes
+# AAPS v4 — behavioral changes
 
-This page collects the notable **changes in behaviour** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update.
+This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update.
 
 ```{contents} Table of contents
 :depth: 2
@@ -11,16 +11,16 @@ This page collects the notable **changes in behaviour** between **AAPS** v3 and 
 
 ## NSClient v1 has been removed
 
-**AAPS** v3 shipped **two** Nightscout synchronisation plugins:
+**AAPS** v3 shipped **two** Nightscout synchronization plugins:
 
 - **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
 - **NSClientV3** — the client for the newer Nightscout **API v3**.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronising with Nightscout.
+In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronising with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
 
 - Open **[Configuration](Configuration.md) → Communication → NSClientV3**.
 - Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
@@ -63,7 +63,7 @@ All of your existing automation rules and food entries are kept; only the way yo
 ---
 
 <!-- =====================================================================
-     This page is a growing list of v4 behavioural changes.
+     This page is a growing list of v4 behavioral changes.
      Add new changes as their own "## " section, newest grouping as agreed.
      Maintainers: relocate page + images and fix cross-links as needed.
      ===================================================================== -->

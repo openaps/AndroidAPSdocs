@@ -63,8 +63,14 @@ The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown 
 
 The **Device Selection** toggles decide where each QuickWizard appears:
 
-- **Show on Phone** — it appears in the **[Treatments](BehavioralChanges.md) sheet** and as a **quick-action button on the overview** (and in *QuickLaunch*).
+- **Show on Phone** — it appears in the **[Treatments](BehavioralChanges.md) sheet** and as a **quick-action button on the overview** (the [QuickLaunch](QuickLaunch.md) toolbar).
 - **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](Scenes.md#from-a-wear-os-watch)).
+
+On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+
+![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+
+…and as a quick-action button on the overview:
 
 ![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
 

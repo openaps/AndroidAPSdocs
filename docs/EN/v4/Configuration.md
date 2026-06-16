@@ -43,7 +43,7 @@ Tapping **Settings** opens that plugin's preference list; settings may be groupe
 ## The mobile icon — “synced from the master”
 
 (configuration_sync_icon)=
-A small **mobile (phone) icon** next to a category or setting means that item is **synchronised from the master** — its value/selection is delivered to this device over the NSClient (Nightscout) channel.
+A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClient (Nightscout) channel.
 
 On a **client** (**AAPSClient**) these items are **kept in sync with the master**: in the screenshot above the icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](ClientMasterCommunication.md#changing-configuration-and-preferences).
 

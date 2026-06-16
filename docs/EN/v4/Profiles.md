@@ -80,6 +80,6 @@ A profile switch is not limited to this screen. The same switch can be triggered
        - profile_manage.png   (Manage → Profile: carousel, details, action bar)
        - profile_editor.png   (profile editor: IC / ISF / BAS / TARG tabs)
        - profile_activate.png (profile switch dialog: percentage/duration/time shift/time)
-     No profile switch was actually applied (the dialog was cancelled).
+     No profile switch was actually applied (the dialog was canceled).
      Maintainers: relocate page + images and fix cross-links as needed.
      ===================================================================== -->
