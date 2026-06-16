@@ -3,7 +3,7 @@
 This page collects the notable **changes in behaviour** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update.
 
 ```{contents} Table of contents
-:depth: 1
+:depth: 2
 :local: true
 ```
 
@@ -32,17 +32,31 @@ This affects only how the app talks to Nightscout; your data on Nightscout is un
 
 ---
 
-## Actions, Automation and Food are no longer plugins — they moved to *Manage*
+## The bottom navigation: Treatments, Scenes and Manage
 
-In **AAPS** v3, **Actions**, **Automation** and **Food** were **plugins**: you enabled them in the Config Builder and opened them from their own tab or the hamburger menu. The **Actions** tab in particular held the quick buttons for temp target, profile switch, eCarbs, extended bolus, temp basal, prime/fill, and the various site/CGM/battery changes.
+In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
 
-In **AAPS** v4 they are **no longer plugins** — there is nothing to enable in [Configuration](Configuration.md) (the renamed Config Builder) anymore. Everything has moved into the **Manage** bottom sheet, opened from the bottom navigation:
+In **AAPS** v4 the tabs are gone. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](Configuration.md) (the renamed Config Builder); their functions now live in these sheets.
 
-- The **action** items that used to live on the *Actions* tab — Temp Target, Profile, Extended Bolus, cancel temp basal, Prime/Fill, Sensor Insert, Pump Battery Change, etc. — are now entries in **Manage**.
-- **Manage → Automation** — *“Create rules that run actions automatically based on triggers.”*
-- **Manage → Food** — *“Manage food database entries.”*
+### Treatments — enter and deliver
 
-![The Manage bottom sheet, which replaces the Actions, Automation and Food plugins](../images/v4/BehavioralChanges/manage_sheet.png)
+The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, and your **[QuickWizards](QuickWizards.md)**.
+
+![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+
+On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+
+![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+
+### Scenes
+
+Your situation presets — see [Scenes](Scenes.md).
+
+### Manage — manage and activate
+
+The **Manage** sheet is where you manage and activate everything else: **[Profile](Profiles.md)**, **Insulin** configurations, **[Temp Target](TempTargets.md)**, **[QuickWizard](QuickWizards.md)** presets, **[Scenes](Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](ClientMasterCommunication.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+
+![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
 
 All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
 

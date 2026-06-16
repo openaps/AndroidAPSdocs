@@ -63,10 +63,12 @@ The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown 
 
 The **Device Selection** toggles decide where each QuickWizard appears:
 
-- **Show on Phone** — it appears as a **quick-action button on the overview** (and is also offered in *QuickLaunch*).
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile**.
+- **Show on Phone** — it appears in the **[Treatments](BehavioralChanges.md) sheet** and as a **quick-action button on the overview** (and in *QuickLaunch*).
+- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](Scenes.md#from-a-wear-os-watch)).
 
 ![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+
+![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
 A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](ClientMasterCommunication.md)).
 
@@ -89,7 +91,7 @@ QuickWizards are part of the synced configuration, so they are shared across you
        - quickwizard_editor.png   (Manage → QuickWizard: carousel, mode, carbs, carb time, valid time range)
        - quickwizard_options.png  (Calculator Options, Bolus percentage, Device Selection)
        - quickwizard_overview.png (the QuickWizard quick-action button on the overview)
-     Optional to add later: the Wear OS QuickWizard tile.
+       - quickwizard_watch_tile.png (the Wear OS QuickWizard tile)
      No QuickWizard was actually run (no bolus delivered).
      Maintainers: relocate page + images and fix cross-links as needed.
      ===================================================================== -->
