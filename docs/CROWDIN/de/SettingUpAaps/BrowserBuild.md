@@ -117,7 +117,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 <!--crowdin:enable-->
 ````
 AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): -
-- If this is your first time building AAPS (or you don't have a an Android Studio JKS), follow [AAPS-CI Option 1 – Generate JKS](#aaps-ci-option1) to complete the setup.
+- Solltest Du AAPS das allererste Mal erstellen (oder Du kein Android Studio JKS haben), nutze den in [AAPS-CI Option 1 – JKS erzeugen](#aaps-ci-option1) beschriebenen Weg, um das Setup abzuschließen.
 </br>
 
 ```{warning}
