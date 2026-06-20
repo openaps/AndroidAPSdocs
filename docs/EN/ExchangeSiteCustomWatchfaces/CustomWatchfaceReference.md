@@ -416,7 +416,7 @@ Note: to be able to see the transparency, all these images are on a yellow backg
 
 (cwf-reference-background-management)=
 
-#### **Background management**
+#### Background management
 
 First, concerning BG value image, no choice here, it can only be in the background layer (otherwise it will be in front of the chart view and chart will not be visible!). So we will have to map BG value to the background, and then rotate background image according to BG value.
 
@@ -464,7 +464,7 @@ Concerning BG value, default min data is set to 39mgdl and max  data is set to 4
 
 Within `"rotateSgv"` block the two additional keys (`"minData":` and `"maxData":`) will be used to tune min and max data to 30 and 330. With these min and max values, we will be able to directly use data value (without any conversion) to rotate background in degrees. In this situation all BG values above 330mgdl will be limited to 330, upper limit of the image. 
 
-#### **Chart management**
+#### Chart management
 
 Default background of chart is transparent, so to hide BG scale included into background image, we will need to include a dedicated background image (this image will include the overall shadows of Steampunk watchface). The link to charBackground.jpg file is done with `"background":` key
 
@@ -482,7 +482,7 @@ Of course, the sizing and positioning of the view must be done to the pixel!
 ```
 (cwf-reference-avg-delta-management)=
 
-#### **Avg delta management**
+#### Avg delta management
 
 To be able to manage dynamic range of avg delta, we will use the four freetext views. freetext1 will be used to manage the image scale, and freetext2 to freetext4 will be used to manage pointer rotation according to scale.
 

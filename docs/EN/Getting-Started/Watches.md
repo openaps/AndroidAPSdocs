@@ -149,7 +149,7 @@ There are a wide range of affordable smartwatches which can provide display only
 
 Here below some of the follow-only watch options popular with **AAPS** users: 
 
-### **Xiaomi and Amazfit watches** 
+### Xiaomi and Amazfit watches
 
 [Artem](https://github.com/bigdigital) has created an xDrip+ integration app WatchDrip+ for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
 

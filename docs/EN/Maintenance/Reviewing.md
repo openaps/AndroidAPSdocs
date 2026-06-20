@@ -1,6 +1,6 @@
-# **Reviewing your data**
+# Reviewing your data
 
-## **AAPS History Browser**
+## AAPS History Browser
 
 **AAPS** stores all the user’s history (__**BG**__, treatments, basal, targets, **Profile Switch**,…) in its own database, that cannot be exported or copied and might require clean up after a while. In order to clean up, a review of 'older history’ is required in **AAPS**. This can be done by uploading to Nightscout.
 
@@ -29,7 +29,7 @@ To return to real time select this button:
 ![History Browser](../images/Maintenance/historybrowser6.png)
 
 (reviewing-statistics)=
-## **AAPS Statistics**
+## AAPS Statistics
 
 **AAPS** provides basic monitoring statistics.
 
@@ -81,7 +81,7 @@ Activity monitor captures the time spent on each **AAPS** activity.
 
 ------
 
-## **What is the difference between Nightscout vs Tidepool?** 
+## What is the difference between Nightscout vs Tidepool?
 
 Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
 

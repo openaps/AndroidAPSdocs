@@ -311,7 +311,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 
 
-- **Bluetooth Address:** Displays the current bluetooth address of the connected Pod.
+- **Bluetooth Address:** Displays the current Bluetooth address of the connected Pod.
 
 - **Bluetooth Status:**  Displays the current connection status.
 

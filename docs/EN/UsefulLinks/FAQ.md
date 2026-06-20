@@ -88,7 +88,7 @@ If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll 
 There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
 
 #### Batteries
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does.  It is best to change battery at 25% as communication becomes challenging then.  You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site.  Tricks to increase battery life include:
+Looping can reduce the pump battery faster than normal use because the system interacts through Bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site.  Tricks to increase battery life include:
 * reduce the length of time the LCD stays on (within pump settings menu)
 * reduce the length of time the backlight stays on (within pump settings menu)
 * select notification settings to a beep rather than vibrate (within pump settings menu)

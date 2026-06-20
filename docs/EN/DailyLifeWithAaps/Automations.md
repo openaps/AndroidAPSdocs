@@ -271,7 +271,7 @@ Here is the screenshot detailing the **Automation** triggers:
 
 1) Under the main “AND” (both conditions need to be met to trigger)
 1) Recurring time = M,T,W,T,F At 5:30am  
-1) WIFI SSID = My_Home_WiFi_Name
+1) Wi-Fi SSID = My_Home_WiFi_Name
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
