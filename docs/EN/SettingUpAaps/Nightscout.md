@@ -3,7 +3,7 @@
 (Nightscout-security-considerations)=
 ## Security considerations
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Besides reporting, Nightscout can also be used to control AAPS. For example, you can set temp targets or add future carbs. This information will be picked up by AAPS, and it will act accordingly. It is therefore worth thinking about securing your Nightscout website.
 
 Exercise maximum caution if using Nightscout as your AAPS data source.
 
@@ -16,7 +16,7 @@ Nightscout `API_SECRET` is your site main password: don't share it publicly.
 (Nightscout-aaps-settings)=
 ### AAPS settings
 
-You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.  
+You can set up AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
 
 * Access the NSClient or NSClientV3 plugin settings with either
   1) Main view -> Config Builder -> Synchronization -> NSClient Cog icon
@@ -49,7 +49,7 @@ Keep your phone up to date as described in [safety first](#preparing-safety-firs
 (Nightscout-manual-nightscout-setup)=
 ## Manual Nightscout setup
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site.  Your Nightscout site needs to be at least version 15 for AAPS 3.2, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15 for AAPS 3.2, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
 
 * [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 

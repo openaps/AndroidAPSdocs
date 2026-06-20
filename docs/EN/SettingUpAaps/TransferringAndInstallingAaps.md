@@ -38,15 +38,15 @@ Launch the apk installation by double click on the filename in the Google Drive 
 
 ![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Driver at the moment please allow it for that short moment and disallow it afterwards as it is a security risk when you let it enable all the time.
+In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, please allow it for that short moment and disallow it afterwards, as it is a security risk to leave it enabled all the time.
 
 ![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
 ![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finished your are done with this step.
+After the installation finishes, you are done with this step.
 
-you should see the **AAPS** icon and be able to open the app.
+You should see the **AAPS** icon and be able to open the app.
 
 ```{warning}
 **IMPORTANT SAFETY NOTICE**
@@ -62,6 +62,6 @@ Transfer the file from its location on your computer to the "downloads" folder o
 
 On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, to install it, open the "downloads" folder on the phone, press the AAPS apk and select "install". You can then proceed to the next step, [Setup Wizard](../SettingUpAaps/SetupWizard.md), which will help you setup the **AAPS** app and loop on your smartphone.    
+Once you have transferred the file by dragging it across, to install it, open the "downloads" folder on the phone, press the AAPS apk and select "install". You can then proceed to the next step, [Setup Wizard](../SettingUpAaps/SetupWizard.md), which will help you set up the **AAPS** app and loop on your smartphone.
 
 Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
