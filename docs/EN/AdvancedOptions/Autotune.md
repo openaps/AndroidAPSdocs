@@ -99,7 +99,7 @@ Autotune will then display in Config Builder after you restart AAPS.
   ![Autotune default screen](../images/Autotune/Autotune_11.png)
 
 ```{admonition} Only DEV
-:class: info
+:class: note
 Automation Switch Profile feature is only available in Dev/Engineering mode.
 ```
 
@@ -154,7 +154,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
 ## Run Autotune with an automation rule
 
 ```{admonition} Only DEV
-:class: info
+:class: note
 Automation Switch Profile feature is only available in Dev/Engineering mode.
 ```
 
@@ -198,7 +198,7 @@ Always use Autotune several days manually to check results before applying them.
 
 - Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
 
-It's also important to analyse Autotune results to understand (or try to understand) why Autotune propose these modifications
+It's also important to analyze Autotune results to understand (or try to understand) why Autotune proposes these modifications
 
 - you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
 - Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)

@@ -26,7 +26,7 @@ Success for **FCL** requires the user to:
 
 **FCL** is not for everyone:
 
-- Some **FCL** users achieve TIR (70-180) around 90% and HbA1c under 6%, however other users prefer tighter control. Notably, minimising values over 140 mg/dl at diets with rapid carbs probably requires pre-bolusing.
+- Some **FCL** users achieve TIR (70-180) around 90% and HbA1c under 6%, however other users prefer tighter control. Notably, minimizing values over 140 mg/dL at diets with rapid carbs probably requires pre-bolusing.
 - **AAPS** tuning can be challenging. It is not for those users who feel overwhelmed AAPS.  You will need to dedicate a few weeks in order to adjust and fine tune your **FCL**. Investing such time can yield better results and **BG** control.
 - Meal management may become easier, however exercise can still be challenging in **FCL**. Most of us like to limit sports snacks in an attempt to control body weight.
 - Difficulties still remain to establish a **FCL** for kids (discussed below).
@@ -38,11 +38,11 @@ It is advisable to first establish a well-tuned **HC**L before considering the t
 
 **FCL** requires the user to set up and tune their **Automations**. However the user must have a confident understanding of their insulin management needs before embarking on **FCL**. Errors can be masked with counter-errors. This can create an unstable **FCL** system, and make it hard to later correct. You should expect to reach a comparable %TIR with your FCL as you see today in your **HCL**. 
 
-**FCL is a DIY set up of Automations determined by the user by analysing their data from both their successful HCL and  initial FCL experience when tuning your settings.** 
+**FCL is a DIY set up of Automations determined by the user by analyzing their data from both their successful HCL and  initial FCL experience when tuning your settings.** 
 
 ## Fast insulin (Lyumjev, Fiasp)
 
-**FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dl (10 mmol/l)).
+**FCL** requires fast insulin.  This is so that at the start of meal-related **BG** rise, **FCL** is able to keep **BG** in range (by common definition, under 180 mg/dL (10 mmol/L)).
 
 A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
 
@@ -56,19 +56,19 @@ IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Co
 
 - will result in significantly lower *BG** peaks than slower insulins;
 - tolerate a couple of minutes delayed first meal bolus while not incurring unacceptable height of peaks; and
-- minimise the effect on **BG** peak from different carb loads (meal sizes).
+- minimize the effect on **BG** peak from different carb loads (meal sizes).
 
 **FCL** is unlikely to be effective with insulin other than Lyumjev or Fiasp, unless the user is on a very moderate to low carb diet.
 
-However, Fiasp or Lyumjev can result in frequent pump occlusions, even after optimising things like needle length. It is important to have an eye on the cannula or pod time. Many users find 48 hours to be the efficacy insulin limit before resulting in cannula/pod failure.
+However, Fiasp or Lyumjev can result in frequent pump occlusions, even after optimizing things like needle length. It is important to have an eye on the cannula or pod time. Many users find 48 hours to be the efficacy insulin limit before resulting in cannula/pod failure.
 
 ## Prerequisites
 
-**BG** values and stable bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** requires a 24/7 technically stable system:
+**BG** values and stable Bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** requires a 24/7 technically stable system:
 
 - your **CGM’s performance. Your CGM should not produce jumpy **BG** values that could be misinterpreted by **FCL** as a sign of a starting meal. Similarly, **CGM** calibrations can produce jumpy results.
-- how and where any **CGM** smoothing is done, and what this might imply for your tuning. Notably how delta is defined, and AAPS recognising this as being sign of a starting meal.
-- bluetooth stability for the pump and CGM  pump;
+- how and where any **CGM** smoothing is done, and what this might imply for your tuning. Notably how delta is defined, and AAPS recognizing this as being sign of a starting meal.
+- Bluetooth stability for the pump and CGM  pump;
 - avoiding (or at least early recognition of) pump occlusion;
 - data flow and your phone's apps used and difference between days of sensor usage;
 - keeping all **AAPS** components well charged and in spare parts close proximity; and
@@ -108,7 +108,7 @@ When exercising or being active, with a pump or hybrid closed loop it is recomme
 
 With **FCL**, the algorithm is tuned to detect **UAM** and automatically deliver insulin to counter **BG** rises.  A high **Temp Target** and lower **Profile Percentage** (effective already around meal start) should be set well in advance of any activity.
 
-Unusual or erratic exercise activity levels present difficulties for **FCL**. Planning ahead is required for exercise (especially if you want to reduce the need for rescue carbs/snacks during sports low). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dl) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS*** preferences.
+Unusual or erratic exercise activity levels present difficulties for **FCL**. Planning ahead is required for exercise (especially if you want to reduce the need for rescue carbs/snacks during sports low). After an active day it is recommended that a lower  **Percentage Profile** is set for overnight after the evening meal is fully digested: set in **Automations** an elevated (>100 mg/dL) **BG**  target, with “no **SMBs** at elevated target” selected in **AAPS*** preferences.
 
 ## Hurdles for kids
 
@@ -140,7 +140,7 @@ If not, your tuning efforts will sometimes come to nothing!
 ```{admonition} Boosting **ISF** can become dangerous
 :class: danger
 
-Carefully observe/analyse the **SMB** sizes shortly after your meal commences. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
+Carefully observe/analyze the **SMB** sizes shortly after your meal commences. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
 
 Your **AAPS'** setting must be sufficiently set up to cope with your (!) variety of meals.
 ```
@@ -171,10 +171,10 @@ The section below provides guidance how to bundle **Automation’s** Conditions 
 
 The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBS must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in h**HCL**!)
 
-To achieve this, data from your **HCL** should be analysed to determine which **deltas** might be not meal –related and those delta 
+To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might be not meal –related and those delta 
  which might be.
 
-- As you can define the **Automation** within a pre-defined time-window, you need only to analyse there. 
+- As you can define the **Automation** within a pre-defined time-window, you need only to analyze there. 
 - If you do very different kinds of meals (e.g. a rather high carb breakfast, but low carb lunch) you can choose to do two different (sets of) **Automations** for each of the time slots. 
 - Exclude the nights if you see occasional jumps from a compression lows 
 - Usually, just using the delta of the past 5 minutes suffices.
@@ -228,7 +228,7 @@ Automation #3
 
 It tells the loop that above your set **iob threshold** it's better not to use any more **SMBs** 
 
-- The given example does that by setting TT=111 (which is kind of arbitrary; pick a number>100 that you easy recognise as your automated **SMB** shut-off)
+- The given example does that by setting TT=111 (which is kind of arbitrary; pick a number>100 that you easy recognize as your automated **SMB** shut-off)
 - In **AAPS' Preferences/ SMB** Settings generally do not allow **SMB** at elevated target).                                                                                                                   
 The insulin required will then have to be delivered with much more caution through the bottleneck of **TBRs**
 
@@ -269,7 +269,7 @@ Using boosted **SMBs**, the **FCL** “caught up” with what we formerly did wi
 
 In preparation for **FCL**, the user must take a closer look at the **time course of iob** for typical meals, and judge **when it becomes too much, and how you can catch that by tuning your Automations**. That is possible because we have several adjusting screws. It can be a challenge to get this right 
 
-Generally, it makes no sense to keep optimising settings for one kind of meal. Once you have a good-enough setting e.g. for one kind of lunch you frequently have, test how this works with other kinds, and how you would “compromise”. 
+Generally, it makes no sense to keep optimizing settings for one kind of meal. Once you have a good-enough setting e.g. for one kind of lunch you frequently have, test how this works with other kinds, and how you would “compromise”. 
 
 In order to prevent hypo in post-meal hours 3 – 5, reduce the aggressiveness before too much iob comes together. Specific approaches: 
 

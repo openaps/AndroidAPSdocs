@@ -37,8 +37,8 @@ Requirements:
 ```
 
 
-```{admonition}  Video Walkthrough! 
-:class: Note
+```{admonition} Video Walkthrough!
+:class: note
 Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
 ```
 

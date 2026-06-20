@@ -103,7 +103,7 @@ Looping can reduce the pump battery faster than normal use because the system in
    * Scroll to AAPS and make sure it is de-selected.
    
 * clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
-* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%.  Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
+* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy while in storage) but it doesn't always work to break it 100%.  Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
 * see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
 #### Changing reservoirs and cannulas
@@ -162,7 +162,7 @@ When drinking alcohol, you always have to have an eye on your CGM to manually av
 
 #### Sleeping
 
-##### How can I loop during the night without mobile and WIFI radiation?
+##### How can I loop during the night without mobile and Wi-Fi radiation?
 Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Turn on airplane mode in your mobile.
@@ -176,10 +176,10 @@ Some people have discovered problems with local broadcast (AAPS not receiving BG
 ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
 
-#### Travelling
+#### Traveling
 
 ##### How to deal with time zone changes?
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
 
 ### Medical topics
 
@@ -279,7 +279,7 @@ WARNING: Make sure not to lose your password as without it you will not be able 
 
 ### How to configure battery savings?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors.
+Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS cannot do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors.
 On the phone, go to settings->Apps and disable battery savings for:
 AAPS
 xDrip or BYODA/Dexcom app
@@ -333,8 +333,8 @@ Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH
 ### Procedure I follow in this:
 
 1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection
-2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data).
-   This way it is guaranteed AAPS and DASH can not communicate.
+2) Put the phone into airplane mode to disable BT (as well as Wi-Fi and Mobile data).
+   This way it is guaranteed AAPS and DASH cannot communicate.
 3) Export settings (which includes the DASH state)
 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable)
 5) Copy the settings file to the alternate phone.

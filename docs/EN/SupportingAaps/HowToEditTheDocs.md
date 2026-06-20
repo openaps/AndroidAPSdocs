@@ -577,7 +577,7 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 #### General AAPS points
 
-- For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible). 
+- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible). 
   
 - For consistency, use “AAPS” rather than “Android APS”.
   
