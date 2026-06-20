@@ -69,7 +69,7 @@ Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or 
 
 The effect of a **Profile** Percentage is summarized in the table below:
 
-| Profile Switch<br>Percentage |    Effect    |    I:C<br>g/UI     | example<br>15g |         ISF<br>mmol/l/UI<br/>mg/dl/UI          | UI to lower<br/>2mmol/l<br/>40mg/dl |
+| Profile Switch<br>Percentage |    Effect    |    I:C<br>g/UI     | example<br>15g |         ISF<br>mmol/L/UI<br/>mg/dL/UI          | UI to lower<br/>2mmol/L<br/>40mg/dL |
 | :--------------------------: | :----------: | :----------------: | :------------: | :--------------------------------------------: | :---------------------------------: |
 |             90%              |    Weaker    | 5/0.9<br>=**5.55** |     2.7 UI     | 2.2/0.9<br>=**2.4**<br><br>40/0.9<br>=**44.4** |               0.8 UI                |
 |           **100%**           | **Standard** |       **5**        |    **3 UI**    |                 **2.2<br>40**                  |             **0.9** UI              |

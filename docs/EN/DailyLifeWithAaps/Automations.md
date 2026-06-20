@@ -2,9 +2,9 @@
 
 ## What is an Automation?
 
-"**Automation**" is a feature which can automate task for AAPS.
+"**Automation**" is a feature which can automate tasks in AAPS.
 
-Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+Automation performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a Wi-Fi SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
 
 Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
 
@@ -22,13 +22,13 @@ You can also search the AAPS user groups on [**Facebook**](https://www.facebook.
 
 ## How Automation can help
 
-1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
+1. **Automate recurring tasks:** Automatically executing programmed actions without user interaction.
 
 1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
 
 1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**. 
 
-1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong. 
+1. **Enabling AAPS to be highly customized** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong. 
 
 The example below illustrates how an **Automation** can enable steps to be eliminated.
 
@@ -46,13 +46,13 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed. 
 
-1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need a Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
 
 1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect. 
 
 1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens. 
 
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.  
+1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/L for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/L for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.  
 
 ## When can I start using Automation?
 
@@ -103,7 +103,7 @@ When setting up an **Automation**, you can first test it by activating the ‘no
 
 There are safety limits set for **Automations**:
 
-* The **glucose** value has to be between 72 and 270 mg/dl (or 4 and 15 mmol/l).
+* The **glucose** value has to be between 72 and 270 mg/dL (or 4 and 15 mmol/L).
 * The **Profile Percentage** has to be between 70% and 130%.
 * There is a 5 minute time limit between executions of  **Automation** (and first execution).
 
@@ -119,13 +119,13 @@ Caution must be taken when selecting a ‘negative value’ within the ‘Condit
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
+**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl). 
+Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/L (-2 mg/dL)" _would_ include -0.1 mmol/L or -2 mg/dL). 
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
+**Example 2:** Creating a Condition "is greater than" -0.1mmol/L (-2mg/dL) will:
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
+Trigger an **Automation** for any number which is **greater than** -0.1mmol/L (-2mg/dL). This includes numbers like 0, 0.2, 0.4mmol/L, (0, 4, 8mg/dL) and any other positive number.
 
 It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.  
 
@@ -188,7 +188,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 **Options:** 
 
-* **BG** must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+* **BG** must be between 72 mg/dL and 270 mg/dL (4 mmol/L and 15 mmol/L)
 * **TT** works only if there is no previous Temp Target
 
 **Actions:** stop **Temp Target**
@@ -241,7 +241,7 @@ This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG*
 
 This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will be activated.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive ‘BG, to 90mg (or 5 mmol/l) in preparation for lunch. 
+This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive BG to 90 mg/dL (or 5 mmol/L) in preparation for lunch.
 
 The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
 
@@ -251,19 +251,19 @@ Because of the ‘And’ connection, the **Automation** only happens during the 
 
 The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
 
-### WIFI SSID Location Automation
+### Wi-Fi SSID Location Automation
 
-Using WIFI SSID is a good option to trigger an **Automation** while within range of a specific wifi network (than compared with GPS), it is fairly precise, uses less battery and works in enclosed spaces where GPS and other location services might not be available.   
+Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
 
 Here is another example of setting up a **Temp Target** for work days only before breakfast(1). 
 
 
 The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
-and while being connected to a home wifi network (3).
+and while being connected to a home Wi-Fi network (3).
 
 
-It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). 
-One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance. 
+It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4).
+One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
 
 ![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
@@ -310,17 +310,17 @@ Note : Automation will not trigger **at all** if you have not done a manual sett
 In the example below the logs indicate:
 
 (1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated 
-* glucose value is less than 75mg/dl;
+* glucose value is less than 75mg/dL;
 * delta is negative (ie: the BG is going down);
 * time is within 01:00 am and 06:00 am.
 
 The **Automation** will:
-* set a **Temp Target** to 110mg/dl for 40 minutes;
+* set a **Temp Target** to 110mg/dL for 40 minutes;
 * start a temporary **Profile** at 50% for 40 minutes.
 
 (2) at 03:38 am,  the “High carb after low at night” is triggered
 * time is between 01:05 am and 06:00 am;
-* glucose value is greater than 110mg/dl.
+* glucose value is greater than 110mg/dL.
 
 The **Automation** will:
 * change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
@@ -340,7 +340,7 @@ Check the box to the right of **Automation** event is ‘ticked’ to ensure the
 
 * Problem: __My automations are being triggered in the wrong order.__
 
-Check your rule prioritisation order as discussed above here.
+Check your rule prioritization order as discussed above here.
 
 ## Alternatives to Automations
 

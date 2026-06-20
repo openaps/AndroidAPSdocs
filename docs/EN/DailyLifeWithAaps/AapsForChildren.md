@@ -1,6 +1,6 @@
 # AAPS for children
 
-**AAPS** can be used successfully with type 1 kids as well. Anyway, there are things to consider.
+**AAPS** can be used successfully with type 1 kids as well. However, there are some things to consider.
 
 ## Things to consider
 
@@ -14,7 +14,7 @@ As the child grows, **Profile** adjustments will be necessary in order to accoun
 
 ### Keeping the phone in range
 
-Think about how you will keep the child’s phone in range of their pump and **CGM**. This can be challenging with children who are too young to be responsible for a phone. An **AAPS** phone with a good bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
+Think about how you will keep the child’s phone in range of their pump and **CGM**. This can be challenging with children who are too young to be responsible for a phone. An **AAPS** phone with a good Bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Many solutions exist, like insulin pump belts that also have space for a phone, or a harness to carry like a backpack.
 
 ### How to protect your child’s AAPS from being misused?
 

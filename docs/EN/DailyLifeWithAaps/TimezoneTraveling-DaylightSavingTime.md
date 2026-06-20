@@ -30,8 +30,8 @@ To avoid this there are two possibilities:
    
    ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
 
-   * i.e. Vienna -> New York: **Profile Switch** +6 hours
-   * i.e. Vienna -> Sydney: **Profile Switch** -8 hours
+   * e.g. Vienna -> New York: **Profile Switch** +6 hours
+   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
 
 ### Option 2: Delete pump history
 
@@ -118,7 +118,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 2. Find a timezone that has the same time as your current location but doesn't use DST. 
 
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
    
 
 
@@ -149,7 +149,7 @@ This section is only valid for the old, Ruffy-based driver. The new driver adjus
 2. Find a timezone that has the same time as your current location but doesn't use DST. 
 
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
 
 3. In **AAPS** refresh your pump.
 

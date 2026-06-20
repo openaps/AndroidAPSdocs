@@ -179,7 +179,7 @@ Carbs suggestions are given when the reference design detects that it requires c
 
 This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
 
-The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+The carb notifications are much more sophisticated than the bolus calculator ones. You might see a carbs suggestion while the bolus calculator does not show missing carbs.
 
 Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
@@ -258,7 +258,7 @@ To show this information, click the triangle on the right side of the main graph
 
 * **Dark orange** line: aCOB (accelerated carbohydrate absorption)
 
-   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/L/5m) carb absorption rate. Deprecated and of limited usefulness.
 
    *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
 
@@ -282,7 +282,7 @@ It is based on the expected drop in BG of the insulin in your system if no other
 (AapsScreens-section-g-additional-graphs)=
 ### Section G - Additional graphs
 
-You can activate up to four additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+You can activate up to four additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and cannot be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
 To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
 
@@ -372,7 +372,7 @@ If you do not want to bolus through the pump but record an insulin amount (i.e. 
 
 You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
 
-The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+The insulin button can be used when the pump is suspended as well, e.g. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” cannot be unchecked.
 
 ![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
@@ -395,7 +395,7 @@ You can use the buttons to quickly increase the carb amount. The increment value
 See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 #### Calibrations
-Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+Sends a calibration to xDrip+ or opens Dexcom calibration dialog.
 
 Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
 

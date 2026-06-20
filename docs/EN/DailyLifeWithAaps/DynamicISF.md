@@ -1,7 +1,7 @@
 (Open-APS-features-DynamicISF)=
 # Dynamic ISF (DynISF)
 
-Up until now, with **AMA** and **SMB**, **ISF** was defined in the **Profile** and was static for each defined period in the day. But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50mg/dL / 3mmol/L than compared to a lower  **BG**. [Autosens](#Open-APS-features-autosens) was the first algorithm to try and address this issue, by adjusting **ISF** outside of mealtimes. 
+Up until now, with **AMA** and **SMB**, **ISF** was defined in the **Profile** and was static for each defined period in the day. But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50 mg/dL / 3 mmol/L than they would at a lower **BG**. [Autosens](#Open-APS-features-autosens) was the first algorithm to try and address this issue, by adjusting **ISF** outside of mealtimes. 
 
 **Dynamic ISF** (also called **DynISF**) serves the same purpose but is more advanced as it can be used at all times. It is recommended only for advanced users that have a good handle on their **AAPS**’ controls and monitoring. Read the [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf) below before trying it out.
 
@@ -122,7 +122,7 @@ This means that, when using **DynISF**, you can use **Profile Percentage** to te
 
 ### BG level below which low glucose suspend occurs
 
-**BG** value below which insulin is suspended. Default value uses the standard target model. A user can set this value between 60mg/dl (3.3mmol/l) and 100mg/dl(5.5mmol/l). Values below 65/3.6 result in use of the default model.
+**BG** value below which insulin is suspended. Default value uses the standard target model. A user can set this value between 60 mg/dL (3.3 mmol/L) and 100 mg/dL (5.5 mmol/L). Values below 65/3.6 result in use of the default model.
 
 ### Enable TDD based sensitivity ratio for basal and glucose target modification
 

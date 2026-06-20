@@ -2,7 +2,7 @@
 
 ## How does AAPS calculate the COB value?
 
-When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
+When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
 
 ## Carb Sensitivity Factor
 
@@ -18,7 +18,7 @@ The effect on the user’s **Profile** will:
 
 - _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
 
-For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dl the user’ **BG** goes up and 1g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS**  predicts the user’s **BG** to go down by 20 mg/dl because of **IOB** and it instead stayed flat, **AAPS**  would also calculate 1g of carbs as absorbed.
+For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
 
 Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
 

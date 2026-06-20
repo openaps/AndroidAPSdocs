@@ -137,7 +137,7 @@ This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabl
 
 ### Use Autosens feature
 
-This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens can not be used, since they are two different algorithms altering the same variable (sensitivity).
+This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens cannot be used, since they are two different algorithms altering the same variable (sensitivity).
 
 Autosens looks at blood glucose deviations (positive/negative/neutral). It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 
@@ -165,13 +165,13 @@ When enabled, new settings become available.
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 #### Enable SMB with high temp targets
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100mg/dL or 5.6mmol/l,  regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100mg/dL or 5.6mmol/l. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
+If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100 mg/dL or 5.6 mmol/L, regardless of **Profile** target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100 mg/dL or 5.6 mmol/L. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB.
 
 If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled. 
 
 (Open-APS-features-enable-smb-always)=
 #### Enable SMB always
-If this setting is enabled, SMB is enabled always enabled(independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled. 
+If this setting is enabled, SMB is always enabled (independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if **Enable SMB with high temp targets** is disabled and a high temp target is set, SMBs will be disabled. 
 
 This setting is only available if **AAPS** detects that you are using a [reliable BG source](#GettingStarted-TrustedBGSource), with advanced filtering. FreeStyle Libre 1 is not considered a reliable source due to the risk of infinitely repeating old BG data in case of sensor failure.
 
@@ -183,7 +183,7 @@ If this setting is enabled, SMB is enabled when the COB is greater than 0.
 This setting is not visible if "Enable SMB always" is switched on.
 
 #### Enable SMB with temp targets
-If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100mg/dL or 5.6mmol/l) but disabled when a high temp target is set.
+If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100 mg/dL or 5.6 mmol/L) but disabled when a high temp target is set.
 
 This setting is not visible if "Enable SMB always" is switched on.
 
@@ -216,7 +216,7 @@ Default value: 30 min.
 
 #### Max minutes of basal to limit SMB to for UAM
 
-This setting allows to adjust the strength of SMB during UAM, when there are no more carbs.
+This setting allows you to adjust the strength of SMB during UAM, when there are no more carbs.
 
 Default value : the same as **Max minutes of basal to limit SMB to**.
 
@@ -297,7 +297,7 @@ If you have this option enabled, autosens can adjust targets (next to basal and 
 
 ### Advanced Settings
 
-- Normally you do not have to change the settings in this dialogue!
+- Normally you do not have to change the settings in this dialog!
 - If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
 
 **Always use short average delta instead of simple data** If you enable this feature, **AAPS** uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps **AAPS** to work more steady with noisy data sources like xDrip+ and Libre.
