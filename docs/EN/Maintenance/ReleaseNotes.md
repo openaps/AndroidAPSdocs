@@ -1,6 +1,14 @@
 
 # Release notes
 
+```{toctree}
+:hidden:
+
+Update2_7.md
+Update3_0.md
+UpdateAaps3204.md
+```
+
 Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. The troubleshooting section also addresses the most common difficulties encountered when updating **AAPS** on the update manual page.
 
 You will receive a notification like this when a new update is available:

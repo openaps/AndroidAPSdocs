@@ -4,6 +4,30 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 
 *Tip*: If you can display your glucose data in xDrip+ app, you can choose xDrip+ as **BG** source in **AAPS**.
 
+<!-- List of hidden pages to avoid overcrowding the table of contents -->
+
+```{toctree}
+:hidden:
+
+../CompatibleCgms/GeneralCGMRecommendation.md
+../CompatibleCgms/SmoothingBloodGlucoseData.md
+../CompatibleCgms/xDrip.md
+../CompatibleCgms/CgmNightscoutUpload.md
+../CompatibleCgms/DexcomG6.md
+../CompatibleCgms/DexcomG7.md
+../CompatibleCgms/Juggluco.md
+../CompatibleCgms/Libre1.md
+../CompatibleCgms/Libre2.md
+../CompatibleCgms/Libre2MinimalL00per.md
+../CompatibleCgms/Libre3.md
+../CompatibleCgms/Eversense.md
+../CompatibleCgms/MM640g.md
+../CompatibleCgms/PocTech.md
+../CompatibleCgms/OttaiM8.md
+../CompatibleCgms/SyaiTagX1.md
+../CompatibleCgms/Caresens.md
+```
+
 * [General recommendations](../CompatibleCgms/GeneralCGMRecommendation.md)
 * [Data Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 * [xDrip+Settings](../CompatibleCgms/xDrip.md)

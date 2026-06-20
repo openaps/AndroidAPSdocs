@@ -2,6 +2,26 @@
 
 AAPS works with a number of insulin pumps. The following list shows the currently supported devices. It indicates, in brackets, whether AAPS communicates with the pump using your phone's native Bluetooth function or whether it requires a RileyLink compatible device.
 
+<!-- List of hidden pages to avoid overcrowding the menu -->
+
+```{toctree}
+:hidden:
+
+../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md
+../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md
+../CompatiblePumps/Accu-Chek-Insight-Pump.md
+../CompatiblePumps/DanaR-Insulin-Pump.md
+../CompatiblePumps/DanaRS-Insulin-Pump.md
+../CompatiblePumps/DiaconnG8.md
+../CompatiblePumps/EOPatch2.md
+../CompatiblePumps/Equil5.3.md
+../CompatiblePumps/MedtronicPump.md
+../CompatiblePumps/MedtrumNano.md
+../CompatiblePumps/OmnipodDASH.md
+../CompatiblePumps/OmnipodEros.md
+../CompatiblePumps/Future-possible-Pump-Drivers.md
+```
+
 - [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Accu-Chek Combo Tips for Basic usage](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
