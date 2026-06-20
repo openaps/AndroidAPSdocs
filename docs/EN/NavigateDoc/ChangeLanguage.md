@@ -1,7 +1,7 @@
 # Change language
 
 ```{note}
-The language selection can be found bottom right of the screen. Please click on the bottom bar to open language selection menu.
+The language selection can be found at the bottom right of the screen. Click on the bottom bar to open the language selection menu.
 ```
 
 ![Open language menu](../images/documentation_language_menu.png)
