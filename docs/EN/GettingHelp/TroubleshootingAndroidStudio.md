@@ -265,10 +265,10 @@ Your apk was built successfully and can be transferred to your phone!
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
 2. Uninstall **AAPS** on your phone.
-3. Enable airplane mode & turn off bluetooth.
+3. Enable airplane mode & turn off Bluetooth.
 4. Install new version (“app-full-release.apk”)
 5. [Import settings](../Maintenance/ExportImportSettings.md)
-6. Turn bluetooth back on and disable airplane mode
+6. Turn Bluetooth back on and disable airplane mode
 
 ## Apk installed but old version
 

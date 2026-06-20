@@ -1,6 +1,6 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# **Bluetooth related issues**
+# Bluetooth related issues
 
 Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues. 
 
@@ -37,7 +37,7 @@ Android allows you to control what each app is able to do or access on your phon
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### **Apps that use "Nearby device" permissions and are known to have caused problems:**
+### Apps that use "Nearby device" permissions and are known to have caused problems:
 
 Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices and in some cases Medtrum Nano too.
 
@@ -56,7 +56,7 @@ Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to t
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### **How to revoke "Nearby device" permissions for other apps:**
+### How to revoke "Nearby device" permissions for other apps:
 If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
 
 Follow this procedure to revoked the "Nearby device" permission for all apps except **AAPS**:
@@ -101,7 +101,7 @@ If you are unsure which app is causing you an issue, disable them all (remember 
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### **How to re-enable "Nearby device" permissions for system apps and other apps:**
+### How to re-enable "Nearby device" permissions for system apps and other apps:
 
 1. If required Reference the **"How to revoke "Nearby device" permissions for other apps"** section on how to get to the app privacy settings, then once in the **Nearby device** configuration proceed to 2.
 

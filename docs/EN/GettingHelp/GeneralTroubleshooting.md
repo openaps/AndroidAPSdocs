@@ -1,6 +1,6 @@
 (generaltroubleshooting)=
 
-# **Troubleshooting**
+# Troubleshooting
 
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
 
@@ -10,14 +10,14 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 (generaltroubleshooting-aaps-app)=
 
-## **AAPS app**
+## AAPS app
 
-### **Building & updating**
+### Building & updating
 
 * [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
 
-### **Installing**
+### Installing
 
 You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
 
@@ -25,7 +25,7 @@ Ignore it: More details, Install anyway.
 
 ![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
 
-### **Settings**
+### Settings
 * Profile
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
@@ -36,7 +36,7 @@ Ignore it: More details, Install anyway.
 
 * [Nightscout Client](../GettingHelp/TroubleshootingNsClient.md)
 
-### **Usage**
+### Usage
 * [Wrong carb values](#CobCalculation-detection-of-wrong-cob-values)
 
    ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
@@ -48,7 +48,7 @@ Ignore it: More details, Install anyway.
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## **Bluetooth related issues**
+## Bluetooth related issues
 
 For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
@@ -56,9 +56,9 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 
 (generaltroubleshooting-android-related-issues)=
 
-## **Android Related Issues**
+## Android Related Issues
 
-### **Battery optimization**
+### Battery optimization
 
 Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
 
@@ -70,7 +70,7 @@ Depending on your phone model and make there may be more than one location and s
 
 ***NOTE:** Follow the steps below to Disable Battery Optimization for the Bluetooth service if your phone has this option, the same steps can be used to disable for **AAPS** and other apps, however the screenshots will only show how to do this for the Bluetooth service.*
 
-#### **Pixel phones (stock Android)**
+#### Pixel phones (stock Android)
 
 * Go to the Android settings, select "Apps".
   
@@ -93,7 +93,7 @@ Depending on your phone model and make there may be more than one location and s
   ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
-#### **Samsung phones**
+#### Samsung phones
 
 * Go to the android settings, select "Apps"
 
@@ -103,7 +103,7 @@ Depending on your phone model and make there may be more than one location and s
   
   ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
   
-* Now search the bluetooth app and select it to see its settings.
+* Now search the Bluetooth app and select it to see its settings.
   
   ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
   
@@ -115,15 +115,15 @@ Depending on your phone model and make there may be more than one location and s
   
   ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
-#### **Huawei phones**
+#### Huawei phones
 
-See this guide for [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
   
 ---
 
 (generaltroubleshooting-cgm)=
 
-## **Continious Glucose Monitor (CGM)**
+## Continuous Glucose Monitor (CGM)
 
 Useful links to known issues and steps to resolve for CGMs.
 
@@ -137,7 +137,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 (generaltroubleshooting-pumps)=
 
-## **Pumps**
+## Pumps
 
 Useful links to known issues and steps to resolve for Pumps
 
@@ -150,13 +150,13 @@ Useful links to known issues and steps to resolve for Pumps
 
 (generaltroubleshooting-phones)=
 
-## **Phones**
+## Phones
 
 Useful links to known issues and steps to resolve for Phones
 
 * [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
 
 (generaltroubleshooting-smartwatches)=
 
