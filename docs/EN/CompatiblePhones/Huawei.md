@@ -1,5 +1,11 @@
 # How to configure a Huawei phone
 
+```{admonition} Obsolete page
+:class: warning
+
+This page may be obsolete — consider revising or removing it.
+```
+
 There are different options, some Android specific, some Huawei specific:
 
 * Add AAPS and xDrip+ to the apps list which ignore battery optimizations:
