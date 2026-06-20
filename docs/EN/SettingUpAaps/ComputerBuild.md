@@ -242,7 +242,7 @@ We will now tell Android Studio where to get the code from:
 * Now click the button "Clone" (5).
 
 ```{admonition} INFORMATION
-:class: information
+:class: note
 Make a note of the directory. It is where your sourcecode is stored!
 ```
 
@@ -263,12 +263,12 @@ After the repository is cloned successfully, Android Studio will open the cloned
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
-:class: information
+:class: note
 Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
 
 Only if your Android Studio looks different, you might need to switch to the new UI:
 Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behaviour**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
 
 If you don't find the option **New UI** don't worry: you are already using it!
 ```
@@ -350,7 +350,7 @@ In the next screen, make sure that "Module" is set to "AAPS.app" (1).
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
-:class: information
+:class: note
 If you want to create the apk for your watch, you now need to select AAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
@@ -358,7 +358,7 @@ If you want to create the apk for your watch, you now need to select AAPS.wear!
 Click "Create new..." (2) to start creating your key store.
 
 ```{admonition} INFORMATION!
-:class: information
+:class: note
 You will only need to create the keystore once.
 If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
