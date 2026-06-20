@@ -7,7 +7,7 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 * [General recommendations](../CompatibleCgms/GeneralCGMRecommendation.md)
 * [Data Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 * [xDrip+Settings](../CompatibleCgms/xDrip.md)
-* [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md): While it's possible to use Nightscout as a BG source for closed-loop insulin delivery, **this method is not recommended** due to its reliance on stable mobile data or Wi-Fi connectivity. This means your **CGM** data would only be received by **AAPS** when you have an online connection to your Nightscout site. For a more reliable set up, using a CGM with local broadcast from the receiver (as listed below) to **AAPS**, is a much better option.
+* [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md): While it's possible to use Nightscout as a BG source for closed-loop insulin delivery, **this method is not recommended** due to its reliance on stable mobile data or Wi-Fi connectivity. This means your **CGM** data would only be received by **AAPS** when you have an online connection to your Nightscout site. For a more reliable setup, using a CGM with local broadcast from the receiver (as listed below) to **AAPS** is a much better option.
 
 | CGM                                                          | Available [BG Sources](#Config-Builder-bg-source)            |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
