@@ -58,7 +58,7 @@ Ensure you have read and understand this whole guide, have read and understand t
 4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
 5. Correct version of AAPS built and installed
 
-### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**  
+### Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.
 - Before using **AAPS** you or your care giver would have had to manage the Pod using the Omnipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).  
 - The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.  
 - The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.  
@@ -69,12 +69,12 @@ Default basal rates are programmed on the pod on activation as defined in the cu
 As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
 When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
 
-### **AAPS Profile(s) do not support 30 minute basal rate time frames**
+### AAPS Profile(s) do not support 30 minute basal rate time frames
 If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported.
 For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact basil **Profile** in **AAPS**.  
 You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
 
-### **0U/h Profile basal rates are NOT supported in AAPS**  
+### 0U/h Profile basal rates are NOT supported in AAPS
 While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
 Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
 **NOTE:** The lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
@@ -493,7 +493,7 @@ This section covers common known issues and solutions for Omnipod DASH use with 
 
 (omnipod-dash-bluetooth-related-issues)=
 
-## **Bluetooth related issues**
+## Bluetooth related issues
 
 For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
@@ -566,7 +566,7 @@ As a result, there is a **risk of losing the active Pod!** (see **Exporting Sett
 ---
 ### Importing settings that contain Pod state from an inactive Pod
 
-When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
+When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You cannot activate a new Pod in this situation.
 
 To remove the old pod session:
 1. “try” to de-activate the Pod. The de-activation will likely fail. 
@@ -650,6 +650,6 @@ When requesting help come prepared with the following information to help those 
    - Was it working before now?
    - When did it work or not work? 
    - Did you make any changes to configuration or profile settings?
-   - Did you pair a new bluetooth device?
+   - Did you pair a new Bluetooth device?
    - Did you upgrade or install a new app?
    - How long was it working before it stopped working?

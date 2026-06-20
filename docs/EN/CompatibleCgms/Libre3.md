@@ -9,7 +9,7 @@ New sensors can be started either with the Libre 3 App or directly in Juggluco. 
 
 Juggluco can also pass data to LibreView for sharing with health care providers when the sensor is started with the Libre 3 app.
 
-Within xDrip+ the sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l to +1.1 mmol/l) to compensate for differences between a manual meter reading and the sensor readings.
+Within xDrip+ the sensor can be calibrated in the range of -40 mg/dL to +20 mg/dL (-2.2 mmol/L to +1.1 mmol/L) to compensate for differences between a manual meter reading and the sensor readings.
 
 ## Method 1: use 1-minute readings directly
 AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations. 

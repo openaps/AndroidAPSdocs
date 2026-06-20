@@ -109,7 +109,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
    >
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a Bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
 
    > ![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
 

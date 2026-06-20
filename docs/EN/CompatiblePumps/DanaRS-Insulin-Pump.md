@@ -25,7 +25,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
   ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other Bluetooth pairings (i.e. smartphone and car audio).
 
   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
@@ -108,7 +108,7 @@ When switching to a new phone the following steps are necessary:
 
 ### DanaRS v1
 * **Manually pair** Dana RS with the new phone
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
+* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Therefore new phone and pump must be paired manually.
 * Install AAPS on the new phone.
 * [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 

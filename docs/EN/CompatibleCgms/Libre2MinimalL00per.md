@@ -1,6 +1,6 @@
 # How to setup FSL 2 and OOP2 to use a native Bluetooth connection in xDrip+ 
 
-Transferred from [MinimalL00per](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to markdown and **revised/updated**: Aug 25, 2025 psonnera
+Transferred from [MinimalL00per](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-Bluetooth-connection-in-xdrip) to markdown and **revised/updated**: Aug 25, 2025 psonnera
 
 A list of definitions exists at the bottom of this document. If you are unfamiliar with any terms or abbreviations feel free to *[jump below](#minimallooper-definitions)* for clarification.
 
@@ -98,7 +98,7 @@ Many people have asked if this method can be used with an already active sensor 
 
 (minimallooper-step1)=
 
-### **Step 1: Application Installation and Configuration**
+### Step 1: Application Installation and Configuration
 
 **Install and configure OOP2** and see that it works by just opening the app.
 
@@ -122,7 +122,7 @@ Many people have asked if this method can be used with an already active sensor 
 
 (minimallooper-step2)=
 
-### **Step 2: xDrip+ Settings Configuration**
+### Step 2: xDrip+ Settings Configuration
 
 **Hardware Data Source**: Libre Bluetooth
 
@@ -207,15 +207,15 @@ Once scanned the QR code above, if you have a Samsung phone (but this is also us
 
 (minimallooper-step3)=
 
-### **Step 3: Physically insert the sensor**
+### Step 3: Physically insert the sensor
 
 (minimallooper-step4)=
 
-### **Step 4: Start the LL App and start sensor with very first NFC Scan**
+### Step 4: Start the LL App and start sensor with very first NFC Scan
 
 Start the LL app, then scan the newly inserted sensor, then close and disable or uninstall the LL app. **You still need to wait for the sensor to warm-up the full 60 minutes before proceeding and starting the sensor in xDrip+**. Do not rely on the readings before as the sensor is still internally calibrating and the values vary wildly.
 
-#### **Step 4a (OPTIONAL, Use FSLReader):**
+#### Step 4a (OPTIONAL, Use FSLReader):
 
 **Start the FSL2 (not 2+) sensor by scanning it with the FSLReader with very first NFC Scan**
 
@@ -227,7 +227,7 @@ If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ 
 
 (minimallooper-step5)=
 
-### **Step 5: Open xDrip+ and NFC SCAN the FSL2 sensor**
+### Step 5: Open xDrip+ and NFC SCAN the FSL2 sensor
 
 (*Reminder! Ensure LL is disabled (location turned off) or uninstalled AND you have waited the entire 60 minutes for the sensor to warmup and internally calibrate.*) 
 
@@ -237,7 +237,7 @@ If you want to be able to use the **FSLReader** as well as the LL app or xDrip+ 
 
 (minimallooper-step6)=
 
-### **Step 6: Start the new sensor in xDrip+**
+### Step 6: Start the new sensor in xDrip+
 
 In the **xDrip+ Overview screen** press the **hamburger menu** in the upper left corner. Then choose **Start Sensor**.
 
@@ -251,7 +251,7 @@ On the **Start New Sensor** screen press **Start Sensor**. A prompt will ask **D
 
 (minimallooper-step7)=
 
-### **Step 7: Wait 60 seconds and NFC Scan the sensor again**
+### Step 7: Wait 60 seconds and NFC Scan the sensor again
 
 A second NFC scan is needed in order to **ADD** the sensor as the Bluetooth device from which xDrip+ will use to retrieve the readings. Once complete you will see a notification stating **NEW SENSOR STARTED**.
 
@@ -267,7 +267,7 @@ Open xDrip+ event logs and check the sensor paired correctly with xDrip+.
 
 (minimallooper-step8)=
 
-### **Step 8: Data Collection between 3 and 15 Minutes**
+### Step 8: Data Collection between 3 and 15 Minutes
 
 Between 3 and 15 minutes enough data is collected to display the first values. *If you are still not receiving readings at this time, sometimes it helps to reboot the phone.*
 
@@ -286,7 +286,7 @@ It will change xDrip+ Bluetooth settings to:
 
 (minimallooper-step9)=
 
-### **Step 9: Verify Sensor is connected and delivering data**
+### Step 9: Verify Sensor is connected and delivering data
 
 Press the Hamburger menu in the upper left of the xDrip+ Overview screen and select **System Status**. On the System Status screen the active **Bluetooth Device:** field displays the FSL2 Bluetooth naming convention of **ABB___XXXXXXXXXXX**, where the XXX’s represent the sensor serial number. The **Connection Status** field displays **Connected** and the **Sensor Start:** field displayed the time the sensor was started.
 
@@ -309,7 +309,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 (minimallooper-notes)=
 
-### **Notes**
+### Notes
 
 - **Using LL NFC Scans AFTER bonding/pairing in xDrip+ is completed**: You can conduct NFC scans but the bonding/pairing process with xDrip+ needs to be completed first. Always look at xDrip+ and see if it is close to the 5 minute reading (i.e. 4 minutes ago), if it is near 5 min, wait for the new BT reading to come in and then conduct the NFC scan. If you catch it at the wrong time it will disturb the BT process in xDrip+ and not receive BT readings, which can take a while to re-bond and transmit again and sometimes a sensor BT connection can be “stolen” by LL. However between these BT readings I have not had any problems executing an NFC scan followed by immediately disabling the app. I am not sure if LL needs to be disabled each time but I disable it to be on the safe side.
 
@@ -341,7 +341,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 (minimallooper-advantages)=
 
-### **Advantages**
+### Advantages
 
 - **LL patched app no longer required** You no longer need a patched version of the LL app to retrieve values from the FSL2 sensor. While you can use the LL patched app, the official versions of the LL app can start the first NFC initialization scan in the same manner as the patched app. There is no difference as far as NFC initialization scanning to start the sensor is concerned.
 
@@ -368,7 +368,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 (minimallooper-disadvantages)=
 
-### **Disadvantages**
+### Disadvantages
 
 - **Phone Reboot:** Because the Bluetooth process has to start again when your phone reboots, you have to first ensure that you manually disable the LL app (if you did not uninstall it) and be patient for the first readings to come in (3 to 15 min). This means timing phone reboots so they do not occur during critical times like correction boluses or meal and snack times.
 
@@ -390,7 +390,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
 (minimallooper-definitions)=
 
-### **Definitions**
+### Definitions
 
 - **BT** - Bluetooth
 
@@ -460,7 +460,7 @@ Make sure you are running the latest versions of xDrip+ and OOP2.
 
 #### Missed readings
 
-Make sure OOP2 shows values that are not 0 or -1, it might be a sign your sensor is failing (example below in mmol/l).
+Make sure OOP2 shows values that are not 0 or -1, it might be a sign your sensor is failing (example below in mmol/L).
 
 ![xDrip+ scan](../images/minimal00per/OOP2values.png)
 

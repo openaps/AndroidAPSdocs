@@ -95,8 +95,8 @@ as using the smoothed line to make proper therapy decisions.
 
 #### Calibration
 
-You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL
-\[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check
+You can calibrate the Libre2 **with an offset of -40 mg/dL to +20 mg/dL
+\[-2,2 mmol/L to +1,1 mmol/L\]** (intercept). The slope isn't changeable. Please check
 by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If
 the sensor is completely off after a few days, it should
 then be replaced.

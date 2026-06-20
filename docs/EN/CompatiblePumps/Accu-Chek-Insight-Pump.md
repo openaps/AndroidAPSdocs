@@ -32,12 +32,12 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Tap the cog-wheel to open Insight settings.
-* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
+* In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby Bluetooth devices (below left).
 * On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.
 
    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
-* Going back to your phone, tap on the pump serial number in the list of bluetooth devices. Then tap on Pair to confirm. 
+* Going back to your phone, tap on the pump serial number in the list of Bluetooth devices. Then tap on Pair to confirm. 
 
    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
 
@@ -138,11 +138,11 @@ Just use one extended bolus at a time as multiple extended boluses at the same t
 
 ### Time out
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset Bluetooth".
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+In this case turn off Bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
 
 ## Crossing time zones with Insight pump
 

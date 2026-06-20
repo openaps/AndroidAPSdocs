@@ -54,7 +54,7 @@ Remember to disable Google Play Protect.
 
 ### Remote Connection for Weak apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via wifi.
+For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly 2, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
 

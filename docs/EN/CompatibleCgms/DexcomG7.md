@@ -46,7 +46,7 @@ Existing users do not experience issues for now: do not logout, wipe data, or re
 ### Install a new patched (!) G7 app and start the sensor
 
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app, as this app cannot receive G7 data at the moment.
 
 - Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
