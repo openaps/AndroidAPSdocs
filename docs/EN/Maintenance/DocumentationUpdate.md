@@ -53,7 +53,7 @@
   - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organisation...) @psonnerat & @emilise
+- Technical work (deployment process for the documentation, files organization...) @psonnerat & @emilise
 
 ***
 
@@ -144,8 +144,8 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## June 2020
 
-- Libre 2 - more details patched Libre Link app & use of bluetooth transmitters
-- [Time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
+- Libre 2 - more details patched Libre Link app & use of Bluetooth transmitters
+- [Time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
 
 ## May 2020
 

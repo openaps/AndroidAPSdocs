@@ -319,7 +319,7 @@ Release date: 29-12-2024
 
 ### Main features
 
-* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behaviour: 
+* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behavior: 
   * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
   * The average **ISF** of the last 24h is calculated and this value is used for bolus wizard and **COB** calculation. **Profile ISF** value is not used at all (except fallback when history data is not available)
   * DynamicISF documentation page has been rewritten. Please read the important section [Things to consider when activating Dynamic ISF](#dyn-isf-things-to-consider-when-activating-dynamicisf).
@@ -787,7 +787,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Fixed LocalProfile -> NS sync
 - Insight alerts improvements
 - Improved detection of boluses from pump history
-- Fixed NSClient connection settings (wifi, charging)
+- Fixed NSClient connection settings (Wi-Fi, charging)
 - Fixed sending of calibrations to xDrip
 
 (Releasenotes-version-2-6-0)=

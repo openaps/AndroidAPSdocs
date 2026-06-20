@@ -153,5 +153,5 @@ Importing a **Preferences** file will deactivate your current pod if those **Pre
 
 ### Note for Dana RS users
 
-- As pump connection settings are also imported **AAPS** on your new phone will already "know" the pump and therefore not start a bluetooth scan.
+- As pump connection settings are also imported, **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.
 - Please pair new phone and pump manually.

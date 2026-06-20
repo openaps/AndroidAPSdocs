@@ -53,11 +53,11 @@ TDD section is calculated on the go when you display the page, and takes a few s
 
 ### Time in Range
 
-Time In Range (**TIR**): 70-180 mg/dl or 3.9-10 mmol/l.
+Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
 
 **TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
 
-Time In Tight Range (TITR) 70-140 mg/dl or 3.9-7.8 mmol/l statistics are available below.
+Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below.
 
 **Discuss targets with your endo**
 
