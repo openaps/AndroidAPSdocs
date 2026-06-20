@@ -298,7 +298,7 @@ It could be for one of these reasons:
 
 1)	The message has not got through to the phone (network issues).
 2)	**AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate).
-3)	The **AAPS** phone does not have good bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
+3)	The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
 
 ### No response whatsoever for SMS commands
 

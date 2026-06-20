@@ -53,7 +53,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 ### AAPS companion parameters
 
 * **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Units for Actions** (default `mg/dL`): if **On** units for actions is `mg/dL`, if **Off** unit is `mmol/L`. Used when setting a TT from watch.
 
 (Watchfaces-watchface-settings)=
 

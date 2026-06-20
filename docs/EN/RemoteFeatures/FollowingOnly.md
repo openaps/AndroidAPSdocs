@@ -26,7 +26,7 @@ The most common strategies used in combination with **AAPS** are explained in mo
 
 * Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated. 
 
-* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc.). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.  
+* Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customizable alerts (BG level, what sound to play etc.). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.  
 
 #### Setting up Dexcom Follow: how-to-guide
 
@@ -85,7 +85,7 @@ Cons (as reported by users)
 
 * The app can be downloaded from [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) and displays BG data in real time. 
 
-* The user can be alerted with customised noisy low and high alarms set. 
+* The user can be alerted with customized noisy low and high alarms set.
 
 * BG data can be viewed in either mmol/L or mg/dL.
 
@@ -189,16 +189,16 @@ The M5Stack is a small box which can be programmed for many applications, Martin
 ### Sugarpixel 
 
 SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings.
-This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
+This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
 
 ![image](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![image](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values.
+* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
 * The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading.
-* SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
-* SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool.
+* SugarPixel can be customized for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
+* SugarPixel’s color face uses the entire display to show a single color representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool.
 * The Big BG face is useful for nightstand users who wear glasses or contact lenses.
 
 ### Nightscout Clock on Ulanzi TC001

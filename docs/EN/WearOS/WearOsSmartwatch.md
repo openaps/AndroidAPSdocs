@@ -1,4 +1,4 @@
-# Setup AAPS on your Wear OS watch
+# Set up AAPS on your Wear OS watch
 
 The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
 
@@ -95,7 +95,7 @@ For Wear OS 5 watches follow [this video](https://www.youtube.com/watch?v=yef_qG
 See troubleshooting tips [below](#BuildingAapsWearOs-WearOS5-TShoot).
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone). 
+This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
 
 As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
 
@@ -225,7 +225,7 @@ If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, 
 ![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via wifi.
+For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
 
@@ -278,7 +278,7 @@ B - CGM reading
 
 C - minutes since last CGM reading
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - change compared to last CGM reading (in mmol or mg/dL)
 
 E - average change CGM reading last 15 minutes
 
