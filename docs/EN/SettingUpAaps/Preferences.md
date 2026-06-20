@@ -28,7 +28,7 @@
 
 **Units**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- Set units to mmol/L or mg/dL depending on your preferences.
 
 **Language**
 
@@ -109,7 +109,7 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter thr master password.
+- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter the master password.
 
 ![Prompt biometric protection](../images/Pref2020_PW.png)
 
@@ -135,7 +135,7 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 
 ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
-- The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogues, for easy entry.
+- The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogs, for easy entry.
 
 ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
 
@@ -168,9 +168,9 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 Here you can change the target and the duration for each predefined TT. Preset values are:
 
-* Eating soon: target 72 mg/dL / 4.0 mmol/l, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/l, duration 90 min
-* Hypo: target 125 mg/dL / 6.9 mmol/l, duration 45 min
+* Eating soon: target 72 mg/dL / 4.0 mmol/L, duration 45 min
+* Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
+* Hypo: target 125 mg/dL / 6.9 mmol/L, duration 45 min
 
 ![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
 
@@ -182,12 +182,12 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
 
-Pre-set values can be defined in this dialogue. Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+Pre-set values can be defined in this dialog. Choose the default amounts of the three buttons in fill/prime dialog, depending on the length of your catheter.
 
 (Preferences-range-for-visualization)=
 ### Range for visualization
 
-Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
 
 ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
@@ -254,7 +254,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![Bolus Advisor](../images/BolusAdvisor.png)
 
-When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pe-bolus and eat later, when your **BG** gets back in range.
+When enabled, if you use the bolus wizard while you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
 
 ### Enabled bolus reminder
 
@@ -340,7 +340,7 @@ The algorithm uses BGI (blood glucose impact) to determine when [carbs are absor
 
 At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
+To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behavior, some carbs are absorbed/decayed. Big change=many carbs etc.
 
 The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
@@ -365,11 +365,11 @@ If you often eat high fat or protein meals you will need to increase your meal a
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off Bluetooth for one second if no connection to the pump is possible. This may help on some phones where the Bluetooth stack freezes.
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump).  Pair and set your pump up according to the [pump related instructions](../Getting-Started/CompatiblePumps.md).
+The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
 
 ## Tidepool
 
@@ -422,7 +422,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
+- They will only work while you have a connection to Nightscout and are intended for parent/caregivers.
 - If you have the **CGM** source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
 - Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
@@ -482,7 +482,7 @@ After 4 weeks you will be notified the password is about to expire. During a gra
 manually exporting settings from the maintenance menu.
 
 After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking
-to reenter the password.  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged
+to reenter the password. [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged
 to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
 
 After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
@@ -493,7 +493,7 @@ AAPS will save logs for troubleshooting.
 
 Do not disable this feature: it will help understanding the reasons if something goes wrong.
 
-If you need to send the logs to the developers, make sure you file accurately the mail contents to describe the issue. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+If you need to send the logs to the developers, make sure you accurately describe the issue in the email. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
 
 You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
 

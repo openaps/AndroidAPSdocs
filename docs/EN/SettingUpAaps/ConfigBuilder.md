@@ -27,7 +27,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ## Profile
 
-This module can not be disabled as it is a core part of **AAPS**.
+This module cannot be disabled as it is a core part of **AAPS**.
 
 See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
 
@@ -131,7 +131,7 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
 (Config-Builder-sensitivity-detection)=
 
 ## Sensitivity Detection
-Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).  
+Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).  
 
 You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs).
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line.  Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
@@ -199,13 +199,13 @@ Broadcast data to Samsung's G-Watch Wear App (Tizen OS).
 
 Connection to Garmin device (Fenix, Edge...)
 ## Treatments
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](#screens-bolus-carbs).
 
 ## General
 
 ### Overview
 
-This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and can not be disabled.
+This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and cannot be disabled.
 
 #### Show notes field in treatment dialogs
 Choose if you want to have a notes field when entering treatments or not.
@@ -238,7 +238,7 @@ Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
 (Config-Builder-wear)=
 ### Wear
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating a bolus given through your watch (e.g. 15min trend, COB...).
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 

@@ -2,7 +2,7 @@
 
 When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
 
 During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
 
@@ -85,15 +85,15 @@ Please select "Allow":
 ![Allow Background](../images/setup-wizard/Wizard05-Background.png)
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimisation
+### Bluetooth battery optimization
 
-Newer versions of Android have added battery optimisation to the system Bluetooth application too. 
+Newer versions of Android have added battery optimization to the system Bluetooth application too.
 
-As well as Disabling battery optimisation for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
 
 ***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Follow these steps on Android 16, other versions will varies slightly from the provided screenshots:
+Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
 
 1. Open Android settings and search for **Apps**, and open the Apps settings.
 
@@ -103,7 +103,7 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app its hidden by default, we need to show system apps. Click on the **three dots (hamburger)** on the top left (1). Then click on **Show System** (2).
+3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots (hamburger)** on the top left (1). Then click on **Show System** (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
@@ -170,7 +170,7 @@ Click the first "ASK FOR PERMISSION" button:
 
 ![Allow Location](../images/setup-wizard/Wizard09.png)
 
-This is important. Otherwise **AAPS** can not work properly at all.
+This is important. Otherwise **AAPS** cannot work properly at all.
 
 Click "While using the app":
 
@@ -194,7 +194,7 @@ Click the "NEXT" button:
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
-The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+This is very important: please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 
 After filling in the password twice, please click the "NEXT" button:
 
@@ -205,7 +205,7 @@ After filling in the password twice, please click the "NEXT" button:
 ```{tip}
 Import your last settings file if present.</br>
 You can also do this after completing the wizard.</br>
-If you already have them ready, importing now will be faster than recreating you profile.
+If you already have them ready, importing now will be faster than recreating your profile.
 ```
 
 If your current AAPS directory contains settings, you will be asked if you want to import them.
@@ -251,10 +251,10 @@ If you select an item here on the left tick box, on the right you can then ticki
 
 In this example we select Nightscout as reporting server, and will configure it.
 
-```{admonition}  **NSClient** version
-:class: Note
+```{admonition} **NSClient** version
+:class: note
 
-Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**.
+Click [here](#version3200) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labeled) and the second option, **NSClient v3**.
 ```
 For Tidepool it is even simpler, as you only need your personal login information.
 
@@ -268,7 +268,7 @@ Please click on "Nightscout URL":
 
 ![NSClient](../images/setup-wizard/Wizard16.png)
 
-Enter you Nightscout URL which is your personal Nightscout server. It's just an URL you setup yourself, or you were given from your service provider for Nightscout.
+Enter your Nightscout URL, which is your personal Nightscout server. It's just a URL you set up yourself, or were given by your service provider for Nightscout.
 
 Please click the "OK" button:
 
@@ -299,7 +299,7 @@ Go back to the previous screen before and select "Connection settings".
 
 Here you can configure how to transfer your data to the reporting server.
 
-Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
+Caregivers must enable "use cellular connection", as otherwise the smartphone which serves the dependent/child cannot upload data outside of Wi-Fi range, _e.g._ on the way to school.
 
 Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 
@@ -309,7 +309,7 @@ Go back to the screen before and select "Advanced Settings".
 
 ![Connection](../images/setup-wizard/Wizard16-Connect.png)
 
-Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver. 
+Enable "Log app start to NS" if you want to get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver. 
 
 It might be interesting to see if **AAPS** is correctly configured now, but later it is usually not that important to be able to see **AAPS** stopping or starting in Nightscout.
 
@@ -323,7 +323,7 @@ Go back twice, to the list of plugins and select "NEXT" to go to the next screen
 
 ## Patient name
 
-Here you can setup your name in **AAPS**.
+Here you can set up your name in **AAPS**.
 
 It can be anything. It's just for differentiating users.
 
@@ -337,7 +337,7 @@ Press "NEXT" to go to the next screen.
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
+Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
 
 The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
 
@@ -353,7 +353,7 @@ The insulin names should be self-explanatory.
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
-For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customized profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
 ```
 
 Press "NEXT" to go to the next screen:
@@ -410,10 +410,10 @@ Press "NEXT" to go to the next screen. Enter a "profile name":
 You can have several profiles in the long-term if needed. We only create one here.
 
 ```{admonition} Profile only for tutorial - not for your usage
-:class: information
+:class: note
 The example profile here is only to show you how to enter data.
 
-It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
+It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
 
 Don't use it for actually looping!
 ```
@@ -454,7 +454,7 @@ Save the profile by clicking on "SAVE":
 After saving, a new button "Activate Profile" appears.
 
 ```{admonition} Several defined but only one active profile
-:class: information
+:class: note
 You can have several profiles defined, but only one activated profile running at any given time.
 ```
 
@@ -466,10 +466,10 @@ Press "Activate Profile":
 
 
 
-The profile switch dialogue appears. In this case let it stay as preset.
+The profile switch dialog appears. In this case let it stay as preset.
 
 ```{admonition} Several defined but only one active profile
-:class: information
+:class: note
 You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile suitable for the circumstances.
 ```
 
@@ -500,7 +500,7 @@ Now you are selecting your insulin pump.
 
 You get an important warning dialog. Please read it, and press "OK".
 
-If your have already setup your profile in the steps before and you know how to connect your pump, feel free to connect it now. 
+If you have already set up your profile in the steps before and you know how to connect your pump, feel free to connect it now.
 
 Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. You can come back anytime or use one of the direct configuration options (not using the Wizard).
 
@@ -510,7 +510,7 @@ Press "NEXT" to go to the next screen.
 
 ![Pump Warning](../images/setup-wizard/Wizard23.png)
 
-Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: AAPS requires Bluetooth permission. This will be addressed after you complete the Wizard.
+Once a pump requiring AAPS to use Bluetooth is selected, you will see a warning: AAPS requires Bluetooth permission. This will be addressed after you complete the Wizard.
 
 ![Bluetooth Warning](../images/setup-wizard/Wizard23b.png)
 
@@ -521,12 +521,12 @@ In this case we select "Virtual Pump".
 
 ## APS algorithm
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familiar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
+Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name, the SMB feature of the algorithm is disabled until you are familiar with AAPS and have worked through the first objectives. OpenAPS SMB is newer and generally better than OpenAPS AMA anyway.
 
-The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the beginning your profile is in general not as good as after some time of experience the feature is disabled in the beginning.
+SMB is disabled at the start because the SMB feature reacts faster to a blood sugar increase, using a Super Micro Bolus instead of increasing the basal rate percentage. Because your profile is generally not as good in the beginning as it is after some experience, the feature is disabled at first.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
-:class: information
+:class: note
 OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
 ```
 
@@ -545,7 +545,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ## Sensitivity detection
 
-Let "Sensitivity Oref1" the standard for the sensitivity plugins selected.
+Leave "Sensitivity Oref1" selected as the standard sensitivity plugin.
 
 Press "NEXT" to go to the next screen:
 
@@ -553,13 +553,13 @@ Press "NEXT" to go to the next screen:
 
 ## Start Objective 1
 
-You are entering now the Objectives. The qualification for access to further **AAPS** features.
+You are now entering the Objectives — the qualification for access to further **AAPS** features.
 
 Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective.
 
 But this is the start.
 
-Press the green "START" to to start objective 1:
+Press the green "START" to start objective 1:
 
 ![Objectives](../images/setup-wizard/Wizard26.png)
 
