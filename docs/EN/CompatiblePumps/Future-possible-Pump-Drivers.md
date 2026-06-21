@@ -15,21 +15,39 @@ This is list of some Pumps floating around there, and status of support for them
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Omnipod 5 ([Homepage](https://www.omnipod.com/))
 
-**Loop status:** Not yet loopable.
+**Loop status:** Loop candidate, being worked on. A community [reverse-engineering effort](https://nightscout.github.io/omnipod-five/) for the Omnipod 5 is underway.
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+### Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+**Loop status:** Loop candidate, driver in development. The Tandem Bluetooth protocol has been reverse-engineered and a t:Mobi driver is being developed for AAPS in phases. An early phase (pairing, communication, reading status, switching the pump out of Control-IQ mode, getting/setting the basal profile and temporary basal rates, oref0 with TBRs only) is working, while later work on bolus delivery, cartridge changes, pump-history parsing and alerts is still in progress. Work on Trio and Loop is happening in parallel.
 
-**Loop status:** All 3 pumps will be Loop candidates. 
+**Hardware requirement for AAPS:** None. It is Bluetooth enabled. Initial pairing currently also needs Tandem's companion app.
 
-Awaiting release of t:mobi in Europe (other two are not yet released anywhere). Development of AAPS t:mobi support has already started and should be available by end of 2025 (see more info on Discord).
+```{admonition} Not safe for real use yet
+:class: warning
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+The t:Mobi driver is **experimental and for development testing only**. Important safety checks (such as reconciling treatments against the pump's own history) are not yet implemented. It must **not** be used to deliver insulin to a person or animal. Wait for an official, released AAPS version that lists t:Mobi as supported before relying on it.
+```
+
+**Comments:** t:Mobi has no screen, but it has an Easy Bolus button so you can still dose insulin when away from your phone, and two multicolor lights for simplified alerts. Note that while you are away from your phone AAPS is not looping (you are in full manual mode) unless you switch the pump back to Control-IQ first. Availability is still expanding: rumours suggest the UK around the end of 2026 and the EU in 2027.
+
+### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+
+**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+
+**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+
+**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+
+### Twiist ([Homepage](https://www.twiist.com/))
+
+**Loop status:** Loop candidate.
+
+**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
 
 ### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
 
@@ -38,6 +56,14 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+
+### Ypsopump ([Homepage](https://www.ypsomed.com/))
+
+**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+
+**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+
+**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
 
 ## Pumps no longer sold (companies no longer operating)
 
@@ -57,13 +83,13 @@ Awaiting release of t:mobi in Europe (other two are not yet released anywhere). 
 
 **Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
+### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+
+**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+
 ### Accu-Chek Solo
 
 **Comments:** No community success in communicating with the Solo pump.
-
-### Ypsomed Pump
-
-**Comments:** Ypso added very heavy 3rd party encryption.
 
 ## Requirements for pumps being loopable
 
