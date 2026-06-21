@@ -82,13 +82,15 @@ In the preliminary stages of getting started with **AAPS**, you may experience d
 
 The time to build the **AAPS** app  depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
 
-To aid the build process there are dedicated sections:
+Several parts of this documentation are dedicated to helping you through the build process:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs](../UsefulLinks/FAQ.md) (Section 11);
-  
-- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section 3) and [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) (Section 8).
+- [Building AAPS](../SettingUpAaps/BuildingAaps.md) takes you step-by-step through building the app and installing it on your phone;
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#preparing-how-long-will-it-take))
+- the [FAQ](../UsefulLinks/FAQ.md) answers common questions and explains the errors most likely to occur; and
+
+- the [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) hub collects solutions to the most frequent problems, organised by topic.
+
+How long it takes to get to closed looping depends on the individual; an approximate timeline for reaching full looping with **AAPS** is given [below](#preparing-how-long-will-it-take).
     
 
 #### Keystore & configuration settings export file
@@ -96,11 +98,15 @@ How long it takes to get to closed looping depends on the individual, but an app
 A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
 
 1.  Save your keystore file (.jks file used to sign your app) in a safe place;
-    
-2.  Keep a note of your password for your keystore file.
-    
 
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year. 
+2.  Keep a note of your password for your keystore file.
+
+How you save the keystore depends on your build method:
+
+- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](../SettingUpAaps/ComputerBuild.md#Building-APK-generate-signed-apk) for instructions on where to save it.
+- **Browser build**: use the dedicated [Export keystore](../SettingUpAaps/BrowserBuild.md#ci-keystore-export) workflow to download a copy to your Google Drive.
+
+This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
 
 In addition, **AAPS** provides the ability to [export all your configuration settings](../Maintenance/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
 
@@ -210,7 +216,13 @@ For Experimental/Advanced users only:
 
 ### Technical
 
-This documentation aims to reduce the technical expertise required to an absolute minimum. You will need to use your computer to build the **AAPS** application in Android Studio (step-by-step instructions). You also need to set up a server over the internet in a public cloud, configure several android phone apps and develop expertise in diabetes management. This can be  achieved by moving step-by-step, being patient, and help from the **AAPS** community. If you are already able to navigate the internet, manage your own Gmail emails, and keep your computer up-to-date, then it is a feasible task to build the **AAPS**. Just take your time.
+This documentation aims to reduce the technical expertise required to an absolute minimum. To build the **AAPS** app, you have several options — see [Building AAPS](../SettingUpAaps/BuildingAaps.md) for an overview:
+
+- **Browser build** (recommended): build the app directly from your smartphone using GitHub Actions, with no computer or Android Studio required. You will need a GitHub account and a Google account to store the resulting app in your Google Drive.
+- **Android Studio build**: build the app on your computer using Android Studio. This is mostly used by developers who intend to make code changes.
+- **Command-line build**: for users who prefer to build locally without installing Android Studio.
+
+Beyond building the app, you also need to set up a reporting server, configure several Android phone apps and develop expertise in diabetes management. This can be achieved by moving step-by-step, being patient, and with help from the **AAPS** community. If you are already able to navigate the internet and manage your own Gmail emails, building **AAPS** is a feasible task. Just take your time.
 
 ### Smartphones
 
