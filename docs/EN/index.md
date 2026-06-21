@@ -34,7 +34,7 @@ Section **6) Wear OS smartwatches** gives information and procedures to use an A
 
 Section **7) Maintenance of AAPS** covers how to export and back up your settings (which is very important in case you lose/break your phone), gives the latest version notes and details how to update **AAPS**. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries. 
 
-Section **8) [Getting Help](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at. 
+Section **8) [Help & Troubleshooting](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. It is the single place to go when something is not working: the [Troubleshooting](GettingHelp/GeneralTroubleshooting.md) hub collects, by topic, the solutions to the most common problems, and the [FAQ](UsefulLinks/FAQ.md) answers frequent questions. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at. 
 
 Section **9)** covers **Advanced AAPS options** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup. 
 
@@ -157,15 +157,16 @@ Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 ```
 
 ```{toctree}
-:caption: 8) Getting Help
+:caption: 8) Help & Troubleshooting
 
 Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+Troubleshooting (start here) <./GettingHelp/GeneralTroubleshooting.md>
 - Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+- Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
+- Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+- Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+FAQ <./UsefulLinks/FAQ.md>
 Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
@@ -196,7 +197,6 @@ Sandbox/sandbox1.md
 :caption: 11) Resources
 
 Glossary <./UsefulLinks/Glossary.md>
-FAQ <./UsefulLinks/FAQ.md>
 General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
 Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
 For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>

@@ -2,9 +2,17 @@
 
 # Troubleshooting
 
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem for various known issues.
+**Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
 
-Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
+If you do not find your answer below, also check:
+
+* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
+* the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
+
+```{admonition} Still stuck?
+:class: tip
+If none of the links solve your problem, see [Where can I get help](WhereCanIGetHelp.md) to ask the community (Facebook, Discord), or send your [log files](AccessingLogFiles.md) to the developers.
+```
 
 ---
 
