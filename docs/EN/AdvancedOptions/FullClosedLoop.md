@@ -1,5 +1,9 @@
 # Full Closed Loop
 
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
 
 The main attraction of Full Closed Looping **FCL** is that it has the potential to mimic an artificial pancreas and make daily management easier without having the need to bolus for meals.
 

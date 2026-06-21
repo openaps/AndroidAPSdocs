@@ -1,5 +1,10 @@
 # Automation
 
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
+
 ## What is an Automation?
 
 "**Automation**" is a feature which can automate tasks in AAPS.

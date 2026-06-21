@@ -1,5 +1,10 @@
 # Omnipod DASH
 
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
+
 These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available in **AAPS** from version 3.0.
 
 ## Omnipod DASH specifications

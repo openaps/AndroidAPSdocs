@@ -1,4 +1,10 @@
 # Remote control of AAPS
+
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
+
 There are four highly effective tools for remotely managing **AAPS**:
 
 1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 
