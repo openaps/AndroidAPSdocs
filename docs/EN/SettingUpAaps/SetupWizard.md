@@ -304,7 +304,7 @@ Go back to the previous screen before and select "Connection settings".
 
 Here you can configure how to transfer your data to the reporting server.
 
-Caregivers must enable "use cellular connection", as otherwise the smartphone which serves the dependent/child cannot upload data outside of Wi-Fi range, _e.g._ on the way to school.
+Caregivers must enable "use cellular connection", as otherwise the smartphone which serves the person they are caring for (e.g. a child) cannot upload data outside of Wi-Fi range, _e.g._ on the way to school.
 
 Other **AAPS** users can disable the transfer via cellular connection if they want to save data or battery.
 

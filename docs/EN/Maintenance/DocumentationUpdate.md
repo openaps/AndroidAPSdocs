@@ -1,5 +1,9 @@
 # Docs updates & changes
 
+## June 2026
+
+- [Introduction](../Getting-Started/Introduction.md): terminology switched from *DIY* to *OS-AID* (Open-Source Automated Insulin Dosing), added Trio and Stelo, updated pump/CGM compatibility table @tmhastings
+
 ## March 2026
 
 - [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
