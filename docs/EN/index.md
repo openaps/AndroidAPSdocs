@@ -199,5 +199,5 @@ Sandbox/sandbox1.md
 Glossary <./UsefulLinks/Glossary.md>
 General diabetes and looping resources <./UsefulLinks/BackgroundReading.md>
 Dedicated Google account for AAPS (optional)<./UsefulLinks/DedicatedGoogleAccountForAaps.md>
-For Clinicians (outdated) <./UsefulLinks/ClinicianGuideToAaps.md>
+For Clinicians <./UsefulLinks/ClinicianGuideToAaps.md>
 ```
