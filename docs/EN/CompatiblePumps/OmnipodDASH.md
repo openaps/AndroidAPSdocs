@@ -1,11 +1,11 @@
 # Omnipod DASH
 
-```{contents} In this page
-:backlinks: entry
-:depth: 2
-```
-
 These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available in **AAPS** from version 3.0.
+
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
 ## Omnipod DASH specifications
 
@@ -34,7 +34,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 (hardware-software-requirements)=
 
 (omnipod-dash-hardware-software-requirements)=
-## Hardware/Software Requirements
+## Hardware and software requirements
 
 - Omnipod DASH is identified by the blue needle cap.
 
@@ -52,7 +52,7 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 
 The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
 
-## Before You Begin
+## Before you begin
 
 Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
 
@@ -635,7 +635,7 @@ Alert that the **SMB** bolus command success could not be verified, you will nee
 
 (omnipod-dash-where-to-get-help-for-dash)=
 
-## Where to get help for DASH
+## Where to get help
 
 All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
 

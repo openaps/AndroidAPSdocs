@@ -1,4 +1,4 @@
-# Accu-Chek Insight Pump
+# Accu-Chek Insight
 
 **This software is part of a DIY artificial pancreas solution and is not a product, but
 requires YOU to read, learn and understand the system including how to use it.
@@ -12,6 +12,10 @@ you do with it.**
 ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
 ---
 
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
 ## Hardware and software requirements
 
@@ -147,4 +151,14 @@ In this case turn off Bluetooth on pump AND smartphone for about 10 seconds and 
 ## Crossing time zones with Insight pump
 
 For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+
+## Where to get help
+
+Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
 

@@ -1,6 +1,8 @@
-# DanaR Pump
+# DanaR
 
 _These instructions are for configuring the app and your pump if you have a DanaR.  Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead._
+
+## Setup
 
 * In the pump go to Main Menu > Setting > User Option
 * Turn on "8. Extended Bolus"
@@ -23,3 +25,13 @@ _These instructions are for configuring the app and your pump if you have a Dana
 ## Timezone traveling with Dana R pump
 
 For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+
+## Where to get help
+
+Development of the DanaR driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).

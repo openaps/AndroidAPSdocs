@@ -1,8 +1,13 @@
-# EOPatch2 Instruction Manual
+# EOPatch2
 
 The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
 
 The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
 ## Pump Setup
 1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
@@ -165,4 +170,14 @@ The different types of warnings are explained below.
 | Patch will expire soon	| Occurs 1 hour before the patch must be discarded. |
 | Incomplete Patch activation	 | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed.|
 | Patch battery low	| Occurs when the patch's battery is low.|
+
+## Where to get help
+
+Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
 

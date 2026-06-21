@@ -13,6 +13,11 @@ The following model and firmware combinations are compatible:
 
 You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
+
 ## Hardware and software requirements
 - **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary.  For example, some phones will handle enabling/disabling Bluetooth differently.  This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
 - **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection.  The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
@@ -163,4 +168,14 @@ On the back of the pump you will find a line detailing your model number along w
 - NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
 - CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
 - WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+
+## Where to get help
+
+Development of the Medtronic driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
 

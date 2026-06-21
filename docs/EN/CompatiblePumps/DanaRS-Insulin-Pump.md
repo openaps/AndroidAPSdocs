@@ -1,4 +1,4 @@
-# DanaRS and Dana-i Pump
+# DanaRS and Dana-i
 
 _These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead._
 
@@ -7,6 +7,11 @@ _These instructions are for configuring the app and your pump if you have a Dana
 **New Dana-i can be used from AAPS version 3.0 onwards.**
 
 * In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
+
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 ## Pairing pump
@@ -119,3 +124,13 @@ When switching to a new phone the following steps are necessary:
 ## Timezone traveling with Dana RS pump
 
 For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+
+## Where to get help
+
+Development of the DanaRS/Dana-i driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).

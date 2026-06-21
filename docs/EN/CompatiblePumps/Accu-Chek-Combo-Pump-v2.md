@@ -1,6 +1,11 @@
-# Accu Chek Combo Pump
+# Accu-Chek Combo
 
 **This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
 ## Hardware and software requirements
 
@@ -224,3 +229,13 @@ The driver does its best to connect to the Combo, and uses a couple of tricks to
 2. Restart the phone. This may be needed if there is an issue with the phone's Bluetooth stack itself.
 3. If the Combo's battery cap is old, consider replacing it. Old battery caps can cause issues with the Combo's power supply, which affect Bluetooth.
 4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.
+
+## Where to get help
+
+Development of the Combo driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).

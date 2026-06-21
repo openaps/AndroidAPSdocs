@@ -1,5 +1,10 @@
 # Accu-Chek Combo Tips for basic usage
 
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
+
 ## How to ensure smooth operations
 
 * Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.

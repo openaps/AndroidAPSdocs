@@ -14,7 +14,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
 * Automatic DST and timezone handling
 * Extended bolus is not supported by AAPS driver
 
-## Hardware and Software Requirements
+## Hardware and software requirements
 * **Compatible Medtrum pumpbase and reservoir patches**
     - Currently supported:
         - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
