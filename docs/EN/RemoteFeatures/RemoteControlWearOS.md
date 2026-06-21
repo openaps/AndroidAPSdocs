@@ -5,7 +5,7 @@
 ## AAPS Watchfaces
 
 ```{warning}
-AAPS Watchfaces are available for Wear OS smartwatches with API level 28 to 33.
+AAPS Watchfaces are available for Wear OS smartwatches with API level 31 to 33.
 Wear OS 5 changes locked the watchfaces: only complications can be used.
 ```
 

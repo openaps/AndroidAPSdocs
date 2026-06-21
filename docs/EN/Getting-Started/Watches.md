@@ -79,7 +79,7 @@ Verify your smartwatch satisfies **AAPS** [prerequisites](#maintenance-android-v
 The first three smartwatch options require the smartwatch to have **Wear OS** installed. 
 
 **Wear OS** is the operating system which runs on some modern Android smartwatches. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. 
-To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and be Android 11 or newer. As a guide, as of October 2024, the latest release of **Wear OS** is version 5.0 (based on Android 13).
+To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch must be running **Wear OS** with at least Android 12 (Wear OS API level 31). To check whether a watch qualifies, note that each Wear OS release follows the Android version it is based on — for example **Wear OS 4** is Android 13 (API level 33) and **Wear OS 5** is Android 14 (API level 34).
 
 If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which can be selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watchface in addition to the time.
 

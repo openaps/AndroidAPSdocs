@@ -54,7 +54,7 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 ## WearOS version
 
-- AAPS requires at least WearOS API level 30 (Android 11)
+- AAPS requires at least WearOS API level 31 (Android 12)
 
 ```{tip}
 WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
