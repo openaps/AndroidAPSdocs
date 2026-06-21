@@ -39,6 +39,8 @@
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
+(diaconn-g8-bluetooth-troubleshooting)=
+
 ## Bluetooth Troubleshooting
 
 **What to do in the case of an unstable Bluetooth connection with the pump.**

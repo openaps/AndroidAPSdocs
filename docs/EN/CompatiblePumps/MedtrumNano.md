@@ -376,6 +376,8 @@ After a settings import the driver will sync history with the pump, this can tak
 From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen:
 ![Sync progress](../images/medtrum/SyncProgress.png)
 
+(medtrum-nano-troubleshooting)=
+
 ## Troubleshooting
 
 ### Connection issues

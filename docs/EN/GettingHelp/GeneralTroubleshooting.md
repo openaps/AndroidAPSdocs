@@ -153,6 +153,10 @@ Useful links to known issues and steps to resolve for Pumps
 * [Accu-Chek Combo general](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [Medtrum Nano](#medtrum-nano-troubleshooting)
+* [Diaconn G8](#diaconn-g8-bluetooth-troubleshooting)
+* [Omnipod DASH](#omnipod-dash-troubleshooting)
+* [Omnipod Eros](#OmnipodEros-troubleshooting)
 
 ---
 
