@@ -7,6 +7,11 @@
 :local: true
 ```
 
+## Pump capabilities with AAPS
+
+* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* Automatic DST and timezone handling.
+
 ## Hardware and software requirements
 
 * A Roche Accu-Chek Combo (any firmware, they all work).

@@ -9,6 +9,11 @@ The smallest injectable dose of insulin when using the patch is 0.05 U. The Prof
 :local: true
 ```
 
+## Pump capabilities with AAPS
+
+* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* DST and timezone changes must be handled manually.
+
 ## Pump Setup
 1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
 1. Select 'EOPatch2' in the Pump section.

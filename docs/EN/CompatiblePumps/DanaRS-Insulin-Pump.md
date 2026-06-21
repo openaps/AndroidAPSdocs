@@ -13,6 +13,11 @@ _These instructions are for configuring the app and your pump if you have a Dana
 :local: true
 ```
 
+## Pump capabilities with AAPS
+
+* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* DST and timezone changes must be handled manually (see [Timezone traveling](#timezone-traveling-danarv2-danars)).
+
 (DanaRS-Insulin-Pump-pairing-pump)=
 ## Pairing pump
 

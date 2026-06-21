@@ -2,6 +2,11 @@
 
 _These instructions are for configuring the app and your pump if you have a DanaR.  Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead._
 
+## Pump capabilities with AAPS
+
+* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* Timezone and DST changes need no special action, as the pump does not use its own history.
+
 ## Setup
 
 * In the pump go to Main Menu > Setting > User Option

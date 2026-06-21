@@ -9,11 +9,8 @@ These instructions are for configuring the Equil insulin pump.
 
 ## Pump capabilities with AAPS
 
-The Equil is a tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-
-```{note}
-A full list of supported loop features (SMB, TBR, extended bolus, automatic DST handling, etc.) still needs to be confirmed and documented here.
-```
+* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* DST and timezone changes must be handled manually.
 
 ## Hardware and software requirements
 * **Compatible Equil hardware**

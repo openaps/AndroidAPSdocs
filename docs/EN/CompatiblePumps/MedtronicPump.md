@@ -18,6 +18,11 @@ You can find out how to check the firmware on the pumps at [OpenAPS docs](https:
 :local: true
 ```
 
+## Pump capabilities with AAPS
+
+* Requires a RileyLink-compatible device to communicate with **AAPS**.
+* Automatic DST and timezone handling.
+
 ## Hardware and software requirements
 - **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary.  For example, some phones will handle enabling/disabling Bluetooth differently.  This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
 - **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a separate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection.  The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.

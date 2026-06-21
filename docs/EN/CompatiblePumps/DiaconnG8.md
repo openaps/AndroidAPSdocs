@@ -5,6 +5,11 @@
 :local: true
 ```
 
+## Pump capabilities with AAPS
+
+* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* DST and timezone changes must be handled manually.
+
 ## Insulin Pump Bluetooth Pairing
 
 - Click on the hamburger menu in the top left corner.
