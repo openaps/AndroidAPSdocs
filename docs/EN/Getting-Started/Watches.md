@@ -106,6 +106,10 @@ Further details about the watchfaces, and day-to-day use, including how to make 
 
 **AAPS** supports sending data to the [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch).
 
+```{warning}
+The **G-Watch app** (by Juraj Antal) for Samsung **Tizen** watches is no longer maintained, and neither is its later **Wear OS** port. Samsung has also moved its smartwatches from Tizen to Wear OS. This option is therefore only relevant for existing, older Samsung Tizen setups and is not recommended for a new installation.
+```
+
 Please check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for latest news.
 
 ![G-Watch](../images/G-Watch.png)
