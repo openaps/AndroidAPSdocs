@@ -6,6 +6,28 @@ You can also use some of the information for the **AAPSClient** and **PumpContro
 
 ## Wear OS Versions and compatibility
 
+(wearos-watchface-changes)=
+
+### Wear OS watch face changes (impact on AAPS watchfaces)
+
+```{admonition} Why newer Wear OS watches break AAPS watchfaces
+:class: warning
+
+In June 2025 Google [announced changes](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) that phase out the legacy watch face engine (the AndroidX / Wearable Support Library, or "WSL", engine) in favour of the newer declarative **Watch Face Format**. The **AAPS** custom watchfaces are built on the legacy engine, so the newer the Wear OS version, the more likely an AAPS watchface is to misbehave or stop working.
+
+This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
+```
+
+The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
+
+| Wear OS version | Base Android | API level | Impact on AAPS (legacy) watchfaces |
+| --- | --- | --- | --- |
+| Wear OS 5 | Android 14 | 34 | **Severe** — active (interactive) mode often fails, complications freeze, animations stop |
+| Wear OS 4 | Android 13 | 33 | **Moderate** — throttling, missed updates, partial failures |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 12 / 12L | 31–32 | **Low** — legacy engine still supported |
+
+If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
+
 ### Wear OS 3
 
 Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  

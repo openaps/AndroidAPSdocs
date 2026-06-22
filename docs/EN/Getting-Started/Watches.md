@@ -49,7 +49,7 @@ The best way to choose a smartwatch is to search for "watch" posts on either Dis
 
 ## Full Android
 
-It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk. 
+It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk. 
 
 While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
 
@@ -82,6 +82,10 @@ The first three smartwatch options require the smartwatch to have **Wear OS** in
 To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch must be running **Wear OS** with at least Android 12 (Wear OS API level 31). To check whether a watch qualifies, note that each Wear OS release follows the Android version it is based on — for example **Wear OS 4** is Android 13 (API level 33) and **Wear OS 5** is Android 14 (API level 34).
 
 If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which can be selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watchface in addition to the time.
+
+```{note}
+Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (the higher the Wear OS version, the more severe), although **complications** keep working. Before buying or updating a watch, read [Wear OS watch face changes](../WearOS/WearOsSmartwatch.md#wearos-watchface-changes).
+```
 
 
 ### What could my smartwatch look like? 
