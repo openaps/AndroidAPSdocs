@@ -187,6 +187,7 @@ Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
 Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
 Dev branch <./AdvancedOptions/DevBranch.md>
 Autotune <./AdvancedOptions/Autotune.md>
+Insulin concentration <./AdvancedOptions/InsulinConcentration.md>
 
 ```
 ```{toctree}
