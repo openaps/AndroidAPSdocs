@@ -45,7 +45,7 @@ While insulin pumps are designed for U100 insulin, certain specific medical situ
 Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
 ```
 
-### Use Case 2: concentrated insulin for high needs or sensitivity
+### Use Case 2: concentrated insulin for high insulin needs or significant insulin resistance
 
 - **Scenario:** Managing adults or adolescents with significant insulin resistance, or individuals who experience localized pain from the additives in standard insulin.
 - **Problem:**
@@ -135,9 +135,9 @@ To provide clarity, the user interface shows both real and concentrated units wh
 **Display Examples:**
 
 - **Bolus Progress Dialog:**
-  - The Bolus Progress dialog is within the core AAPS application, so only the information in IU is presented (consistent with the user selection): **`2.50 U / 10.00 U delivered`**
+  - The Bolus Progress dialog is within the core AAPS application, so only the information in IU is shown (consistent with the user selection): **`2.50 U / 10.00 U delivered`**
 - **Pump Driver Interface (Current Status):**
-  - Within Pump overview, the delivered amount is presented with both units: **`Last Bolus: 10 U (5 CU) (10')`**
+  - Within the Pump overview, the delivered amount is shown in both units; for example, if `U200` is selected: **`Last Bolus: 10 U (5 CU) (10')`**
 
 **Please Note:** Both units (U and CU) are only visible in the main Pump overview. Depending on your specific pump, you can have other screens where only the Concentrated Units are shown. Historical data within pump drivers will typically remain in "Concentrated Units".
 
