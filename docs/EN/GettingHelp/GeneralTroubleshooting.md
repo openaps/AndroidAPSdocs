@@ -150,7 +150,7 @@ Useful links to known issues and steps to resolve for CGMs.
 Useful links to known issues and steps to resolve for Pumps
 
 * [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo general](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md#combov2-tips-for-basic-usage)
+* [Accu-Chek Combo general](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 * [Medtrum Nano](#medtrum-nano-troubleshooting)

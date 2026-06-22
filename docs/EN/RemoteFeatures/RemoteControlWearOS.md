@@ -6,7 +6,7 @@
 
 ```{warning}
 AAPS Watchfaces are available for Wear OS smartwatches with API level 31 to 33.
-Wear OS 5 changes locked the watchfaces: only complications can be used. See [Wear OS watch face changes](../WearOS/WearOsSmartwatch.md#wearos-watchface-changes) for what breaks on each Wear OS version and why.
+Wear OS 5 changes locked the watchfaces: only complications can be used. See [Wear OS watch face changes](#wearos-watchface-changes) for what breaks on each Wear OS version and why.
 ```
 
 There are several watchfaces to choose from that are included in the base build of the AAPS Wear APK. These watchfaces include average delta, IOB, currently active temp basal rate and basal profiles and a CGM readings graph.
