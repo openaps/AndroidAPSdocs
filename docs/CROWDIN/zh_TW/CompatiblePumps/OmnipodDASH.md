@@ -19,8 +19,8 @@
 ## Omnipod DASH 已知的 AAPS 限制／問題
 - Android 16 需要 AAPS 版本 3.3.2.1 或更新版本。
 - 一般建議在 Android 14 或 16 上執行 AAPS。 Android 15 有許多社群回報的 [問題](https://github.com/nightscout/AndroidAPS/issues/3471)。 不過，若你在 Android 15 上執行，可能需要啟用藍牙配對（Bonding）才能成功註冊並使用 Pod；關於配對設定的更多資訊，請參閱 [一般疑難排解](../GettingHelp/GeneralTroubleshooting.md)。
-- 過於頻繁的基礎率更新，可能在 Omnipod Dash 上導致基礎胰島素輸注的問題。 使用微量注射時，請將間隔至少設為 5 分鐘以避免此問題。
-- Dash 僅支援以 0.05 U/h 步階設定的基礎率。 如果你在 AAPS 設定檔中嘗試以 0.01 的步階設定基礎率，即使 Pod 會將速率進位到 0.05 的步階，AAPS 也不會發出警示。 若你查看 POD MGMT/Pod History，會顯示已設定 0.05 的基礎率。 這也表示在 AAPS 中，DASH 允許的最低基礎率為 0.05 U/h。
+- Temporary Basal rate changes (which occur frequently when the loop is active, especially overnight) result in under-delivery of insulin. This is effectively a hardware limitation of the Omnipod DASH. The issue has been addressed in AAPS 3.4.2.3, but the functionality is currently opt-in. Follow the [Basal Drift Fix Instructions ](#omnipod-dash-Basal-drift-fix) instructions to enable it. For more information regarding the fix see [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more info.
+- Dash 僅支援以 0.05 U/h 步階設定的基礎率。 If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. 若你查看 POD MGMT/Pod History，會顯示已設定 0.05 的基礎率。 這也表示在 AAPS 中，DASH 允許的最低基礎率為 0.05 U/h。
 - Pod 的註冊狀態會儲存在設定檔案中，如果你在 Pod 已註冊的狀態下匯出設定檔案。 接著更換為新的 Pod，然後再從先前匯出的設定還原，這會還原舊 Pod 的註冊狀態，並移除新 Pod 的註冊狀態。 因此建議每次註冊 Pod 後都匯出設定，以便在你的裝置出狀況時，能還原該 Pod 的註冊狀態。
 - 當設定新的基礎率設定檔時，DASH 會先暫停輸注，然後再設定新的基礎率設定檔。 若通訊中斷或發生錯誤，基礎率設定檔不會自動重新開始。 詳細內容請參閱 [恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery) 章節。
 - 如果已設定警示，且 Pod 即將到期，Pod 會持續發出嗶聲，直到將警示靜音為止；詳情請參閱 [靜音 Pod 警示](#omnipod-dash-silencing-pod-alerts)。
@@ -70,8 +70,8 @@
 若因任何原因 Pod 未收到新指令（例如 Pod 與 手機 距離過遠導致通訊中斷），Pod 會自動回復到您[**設定檔**](../SettingUpAaps/YourAapsProfile.md)中定義的預設基礎率。
 
 ### **AAPS 的設定檔不支援 30 分鐘為單位的基礎率時間區段**
-若您是 AAPS 新手並首次建立基礎率[**設定檔**](../SettingUpAaps/YourAapsProfile.md)，請注意：不支援以半小時為起點的基礎率。 例如：在您的 Omnipod PDM 上，若您有 1.1 單位、於 09:30 開始並持續 2 小時至 11:30 結束的基礎率，則無法在 **AAPS** 中完全複製相同的基礎**設定檔**。  
-您需要將這個 1.1 單位的基礎率調整為 9:00–11:00 或 10:00–12:00 的時間範圍。 即使 DASH 硬體本身支援 30 分鐘增量的基礎率**設定檔**，**AAPS** 仍不支援此功能。
+若您是 AAPS 新手並首次建立基礎率[**設定檔**](../SettingUpAaps/YourAapsProfile.md)，請注意：不支援以半小時為起點的基礎率。 For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
+You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. 即使 DASH 硬體本身支援 30 分鐘增量的基礎率**設定檔**，**AAPS** 仍不支援此功能。
 
 ### **AAPS 不支援 0 U/h 的設定檔基礎率**
 雖然 DASH 支援零基礎率，**AAPS** 會以使用者**設定檔**的基礎率倍數來決定自動治療；因此無法在零基礎率下運作。  
@@ -480,11 +480,46 @@ DASH 概覽標籤將顯示如下所述：
   * **SMS** - 短訊回報數值為 50+ 單位。
   * **Nightscout** - 當超過 50 單位時，向 Nightscout 上傳數值為 50（版本 14.07 及更早版本）。  更新版本將在超過 50 單位時報告數值為 50+。
 
-(omnipod-dash-troubleshooting)=
+(omnipod-dash-known-issues-workarounds)=
+
+## Known Issues Workarounds
+
+This section covers common workarounds and settings that need to be changed to enable a feature to work around a community reported issue that has a fix. 例如： the Basal drift enable process is documented here.
+
+(#omnipod-dash-Basal-drift-fix)=
+
+### Basal Drift Fix Instructions
+
+The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than **AAPS** expects, see [Issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more technical details.
+
+The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new Basal rate.
+
+When used in combination with looping, this leads to under-delivery of basal insulin, as the algorithm updates the basal rate on the pump frequently.
+
+The issue is most apparent during the night. During daytime operation, SMBs often result in a basal rate of 0, which masks the effect. In observed usage, this results in approximately 10% of the expected Total Daily Dose (TDD) not being delivered over a 24-hour period. Additionally, glucose targets are often not reached overnight, particularly after meals with prolonged glucose impact (e.g. pasta).
+
+***NOTE:** This issue is especially important to understand for people on very small dosages of insulin, Children for example.*
+
+#### Enable Basal Drift Fix in AAPS
+
+You must be running AAPS Version 3.4.2.3 or later for this feature.
+
+The Basal Drift Fix is not enabled by default on AAPS.
+
+**To enable it:**
+
+1. Create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+
+   ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
+
+   ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
+
+2. Restart **AAPS**. This must be done for it to recognise the file is present and enable the drift compensation feature.
+3. Please visit this [Github issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) and thumbs up the first post indicating you are using this feature, we need this data to help demonstrate the feature is widely used. Once there is significant community adoption the removal of the enable file will be possible, we appreciate your support here.
 
 ## 問題排除
 
-(omnipod-dash-delivery-suspended)=
+(omnipod-dash-troubleshooting)=
 
 本節涵蓋使用 **AAPS** 搭配 Omnipod DASH 的常見已知問題與解決方案。 文件中也有 [一般疑難排解](../GettingHelp/GeneralTroubleshooting.md) 章節，請參閱，因為其中的相關主題也適用於部分 Pod 問題。
 
@@ -497,6 +532,9 @@ DASH 概覽標籤將顯示如下所述：
 若遇到藍牙連線、幫浦 / Pods 中斷，或註冊與連線等已知問題，請參閱 [藍牙疑難排解](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
+
+(omnipod-dash-delivery-suspended)=
+
 ### 暫停輸送
 
   - 現在已無暫停按鈕。 如果你想要「暫停」藥量，你可以將臨時基礎率設置為零，持續 x 分鐘。
