@@ -25,7 +25,7 @@ Dexcom BYODA 現在是非常舊的應用程式版本，且無法更新。
 
 -   [自行建立 Dexcom 應用程式](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)（BYODA）支援本地廣播到 AAPS 和／或 xDrip+
 
-!\[BYODA 廣播選項\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+![BYODA 廣播選項](../images/BYODA.png)
 
 -   此應用程式可讓你在任何 Android 智慧型手機上使用 Dexcom G7。
 -   解除安裝原版 Dexcom 應用程式
