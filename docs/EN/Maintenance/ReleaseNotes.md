@@ -52,9 +52,15 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 (latestrelease)=
 
+(version4000)=
+
+## Version 4.0.0.0
+
+In progress. See changes [here](#v4-changes).
+
 (version3423)=
 
-## Version for 3.4.2.3
+## Version 3.4.2.3
 - Dash: Drift resolution @nl-ruud
 - NSClientV3: Fix gap after reconnection @MilosKozak  
 - Automation: Fix deserialization @MilosKozak
@@ -67,20 +73,20 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 (version3422)=
 
-## Version 3.4.2.2
+### Version 3.4.2.2
 
 - Fixing issues with Equil and Medtronic
 - Improve safety of Medtrum
 
 (version3421)=
 
-## Version 3.4.2.1
+### Version 3.4.2.1
 
 - Equil: fix Pairing and progress dialog @MilosKozak
 
 (version3420)=
 
-## Version 3.4.2.0
+### Version 3.4.2.0
 
 Release date: 04-02-2026
 
@@ -91,17 +97,17 @@ Release date: 04-02-2026
 
 (version3410)=
 
-## Version 3.4.1.0
+### Version 3.4.1.0
 
 Release date: 03-08-2026
 
-### Core
+#### Core
 - Fix DST handling @MilosKozak
 - Improve and unify normal target identification (mgdl > 99, mmol > 5.5) @MilosKozak
 - SMS: protect RESTART by PIN @MilosKozak
 - Maintenance: warn if wrong directory selected @MilosKozak
 
-### Pump Driver Improvements
+#### Pump Driver Improvements
 - **Omnipod Dash**: refactor BLE driver code to omnipod/common module @jwoglom
 - **Omnipod Dash**: try to fix connection state @MilosKozak
 - **Omnipod**: validate profile before pod activation to prevent wasting pods (#4534) @brianV
@@ -115,40 +121,40 @@ Release date: 03-08-2026
 - **Diaconn**: use commandQueue.loadEvents() for history sync @miyeongkim
 - Allow insulin delivery while loop is suspended but pump is available @cschuijt
 
-### Cloud / Backup
+#### Cloud / Backup
 - Add backup to Google Drive @Angus-repo
 - Notify UI on cloud storage error state change @Angus-repo
 - Allow both local and cloud storage at the same time @Angus-repo
 
-### Tidepool
+#### Tidepool
 - Improve Tidepool OAuth2 migration @MilosKozak
 - Fix indefinite Tidepool BLOCKED state, fix rejecting empty SSIDs @michaeln-synapse
 
-### NSClient
+#### NSClient
 - NSCv3: improve reconnection @MilosKozak
 
-### Wear OS
+#### Wear OS
 - Display New IOB in Wizard Result if IOB is used in calculations @olorinmaia
 - Fix Wear BolusProgress with Total Amount @Philoul
 
-### UI
+#### UI
 - Improve ic_none icon for Site Rotation @Philoul
 - Fix site rotation manage pump setting not being used @samfundev
 
-### Contributors
+#### Contributors
 @MilosKozak @Philoul @olorinmaia @jwoglom @mifi100 @andy-rozman @Angus-repo @brianV @cschuijt @hhfcvmars @miyeongkim @samfundev @michaeln-synapse
 
 (version3400)=
 
-## Version 3.4.0.0
+### Version 3.4.0.0
 
 Release date: 31-12-2025
 
-### Before upgrading:
+#### Before upgrading:
 * This version requires Google Android 12.0 or above. Check your phone version before attempting to update.
 * Update to latest Android Studio or better setup using browser build.
 
-### New features
+#### New features
 * Running mode @MilosKozak
   * Show [loop status history](#AapsScreens-running-mode) in treatment tabs
   * Show and allow changing [loop status from AAPSClient](#RemoteControl_aapsclient).<br>NB : needs the setting [NSClient > Synchronization > Receive Running mode events](#Preferences-nsclient-synchronization)
@@ -157,38 +163,38 @@ Release date: 31-12-2025
 * New [automation action](#automations-automation-action) : enable or disable SMBs @MilosKozak
 * Syai CGM is [trusted source](#GettingStarted-TrustedBGSource) and supports advanced filtering @MilosKozak
 
-### Wear OS Improvements
+#### Wear OS Improvements
 * dramatically reduced battery usage @MilosKozak 
 * UI improvements and fixes @olorinmaia
 * almost complete rewritten code to match current level of libs (WearOS 2 previously) @MilosKozak
 * 2 new complications for extended data @Philoul
 * Migrated to modern complication provider with DataStore @MilosKozak
 
-### Memory Leak Fixes
+#### Memory Leak Fixes
 * Fixed memory leaks in code @MilosKozak
 * Added LeakCanary memory leak reporting to Firebase Crashlytics @MilosKozak
 
-### Pump Driver Improvements
+#### Pump Driver Improvements
 * **DanaI**: fixed disconnection issues @MilosKozak
 * **RileyLink**: Speedup communication by minimizing delays @mifi100
 * **Medtrum**: Added patch activation time and age display @vanelsberg, password uppercase fix @MilosKozak
 * **Combo**: Fixed Test race conditions @MilosKozak @dv1
 * **Equil**: Optimized connectivity, reduced battery usage @MilosKozak
 
-### Nightscout Sync
+#### Nightscout Sync
 * Improved deduplication on NS failure @MilosKozak
 
-### UI/UX Improvements
+#### UI/UX Improvements
 * various improvemnts @MilosKozak @Philoul @olorinmaia
 
-### Automation
+#### Automation
 * New SMB control action - enable/disable SMB via automation @MilosKozak
 
-### Testing
+#### Testing
 * Added comprehensive unit tests for Equil, Eopatch, Dana, and Medtronic pumps @MilosKozak
 * Improved test stability and coverage across multiple modules @MilosKozak
 
-### Tidepool
+#### Tidepool
 * Tidepool OAUTH2 (Support for new Tidepool authentication) @MilosKozak
 
 (version3321)=
@@ -208,15 +214,15 @@ Release date: 13-08-2025
 
 (version3300)=
 
-## Version 3.3.2.0
+### Version 3.3.2.0
 
 Release date: 27-03-2025
 
-### How to upgrade
+#### How to upgrade
 
 * [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
 
-### Starting this version, notification and version enforcement has been simplified and softed and works following way:
+#### Starting this version, notification and version enforcement has been simplified and softed and works following way:
 *  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
 *  After expiration LGS mode is enforced
 *  You'll receive warning/notifications less often:
@@ -228,7 +234,7 @@ Release date: 27-03-2025
    - New version available (has no effect on AAPS)
    - Application is expiring on some date in the future (still no effect on AAPS) / has expired (AAPS will turn into LGS mode)
 
-### News
+#### News
 
 * SMS RESTART command @MilosKozak
 * Watch Profile switch parameters @olorinmaia
@@ -242,7 +248,7 @@ Release date: 27-03-2025
 * Show version on main screen @MilosKozak
 * Tidepool upload improvements @ConstantinMatheis
 
-### Bug fixes
+#### Bug fixes
 
 * Dash unbonding fix @Andreas
 * Garmin fixes @robertbuessow @suside
@@ -251,11 +257,11 @@ Release date: 27-03-2025
 * Fixed rendering of emulated TBRs @MilosKozak
 * Fixed bypassing security @tdrkDev
 
-## Version 3.3.1.3
+### Version 3.3.1.3
 
 Release date: 21-01-2025
 
-### Bug fixes
+#### Bug fixes
 
 * Dash: bonding is optional (default off) @MilosKozak
 * Equil: fixed bolud 10+U, alarm improvements @EquilHack
@@ -266,15 +272,15 @@ Release date: 21-01-2025
 
 *  **New [setup of Authenticator](#sms-commands-authenticator-setup) may be needed.**
 
-## Version 3.3.1.2
+### Version 3.3.1.2
 
 Release date: 15-01-2025
 
-### How to upgrade
+#### How to upgrade
 
 * [Android Studio version called "Ladybug Feature Drop"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. **This is not the same as plain "Ladybug".** If you already built a 3.3.x version, you need to upgrade Android Studio again.
 
-### Bug fixes
+#### Bug fixes
 
 * Dash: use bonding on Android 15+
 * Restored Dexcom button on Overview
@@ -286,22 +292,22 @@ Release date: 15-01-2025
 * Fix reset of master password with virtual pump.
 * Fixed import of large settings backup files.
 
-## Version 3.3.1.0
+### Version 3.3.1.0
 
 Release date: 06-01-2025
 
-### UI changes
+#### UI changes
 
 * [Added colors to differentiate between AAPSClient and AAPSClient2](#RemoteControl_aapsclient) @MilosKozak
 * Improved Users actions layout and icons
 
-### Other functionalities
+#### Other functionalities
 
 * New automation trigger : [steps count](#screen-heart-rate-steps) @Roman Rihter
 * Allow to receive everything on NSCv3 full sync (including data previously not synced such as TBR) @MilosKozak
 * NSClient v3 : make Announcement work (_i.e._ from AAPSClient to AAPS) @MilosKozak
 
-### Technical changes & bug fixes
+#### Technical changes & bug fixes
 
 * Fix Insight crash @philoul
 * Fix creation of extra-numerous deviceStatus entries in Nightscout @MilosKozak
@@ -311,11 +317,11 @@ Release date: 06-01-2025
 * Resolved misplaced DynISF notification @MilosKozak
 * Fixed bug in watchfaces @philoul
 
-## Version 3.3.0.0
+### Version 3.3.0.0
 
 Release date: 29-12-2024
 
-### Main features
+#### Main features
 
 * **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behavior: 
   * **Profile Switch** and **Profile Percentage** is now taken into account for **Dynamic ISF** in respect of dynamic sensitivity strengthness
@@ -326,7 +332,7 @@ Release date: 29-12-2024
 * New **Automation** triggers
 * Unattended settings exports
 
-### How to upgrade
+#### How to upgrade
 
 * Before upgrading: 
   * **<span style="color:red">This version requires Google Android 11.0 or above</span>**. Check your phone version before attempting to update.
@@ -340,9 +346,9 @@ Release date: 29-12-2024
 * After upgrading:
   * Set the new [“AAPS directory” setting](#preferences-maintenance-logdirectory), in the Maintenance tab.
 
-### Detailed changes
+#### Detailed changes
 
-#### CGMs and Pumps
+##### CGMs and Pumps
 
 * [Enable “SMB always” and “SMB after carbs”](#Open-APS-features-enable-smb-always) for FreeStyle Libre 2 and Libre 3 users @MilosKozak
 * [Medtrum driver](../CompatiblePumps/MedtrumNano.md) improvements @jbr77rr
@@ -355,7 +361,7 @@ Release date: 29-12-2024
 * Insight driver rewritten to kotlin @Philoul
 * Removed old ruffy dependent Combo driver
 
-#### UI changes
+##### UI changes
 
 * [Simple mode](#preferences-simple-mode) activated by default on fresh install @MilosKozak
 * New [QuickWizard](#Preferences-quick-wizard) options @radicalb
@@ -367,7 +373,7 @@ Release date: 29-12-2024
 * BolusWizard UI improvements @kenzo44
 * Fix text display in pump tabs when using light theme @jbr77rr
 
-#### Other functionalities
+##### Other functionalities
 
 * [Unattended settings exports](#ExportImportSettings-Automating-Settings-Export) @vanelsberg
 * New [Automation trigger](#automations-automation-triggers) @vanelsberg
@@ -383,14 +389,14 @@ Release date: 29-12-2024
 * Fixed bug in TDD calculation @MilosKozak
 * SMS Commands : allow to [**not** send SMS for profile change](#sms-commands-too-many-messages) coming from NS @MilosKozak
 
-#### Smartwatches
+##### Smartwatches
 
 * wear and watchfaces improvement @Philoul @MilosKozak @olorinmaia
 * Watch tiles from Automation actions @Philoul
 * Combined watchfaces from AAPS, AAPSClient and AAPSClient2 to monitor more patients @Philoul @MilosKozak
 * EXTRA: show\_user\_actions\_on\_watch\_only @MilosKozak
 
-#### Technical changes
+##### Technical changes
 
 * [log files location change](#Accessing-logfiles-accessing-logfiles)
 * new internal modules structure @MilosKozak
@@ -421,11 +427,11 @@ This version is the last one supporting Android 10. If you cannot upgrade to And
 
 (version3200)=
 
-## Version 3.2.0.0 dedicated to @Philoul
+### Version 3.2.0.0 dedicated to @Philoul
 
 Release date: 23-10-2023
 
-### Important hints
+#### Important hints
 
 - NS 15 is required
 - While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internally. The same is valid for AAPS and AAPSClient itself.
@@ -437,7 +443,7 @@ Release date: 23-10-2023
 - In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
 
-### Changes
+#### Changes
 
 - EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
 - ComboV2 pump driver (no need of Ruffy) @dv1
@@ -469,7 +475,7 @@ Release date: 23-10-2023
 - new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
-### Important comments on using v3 versus v1 API for Nightscout with AAPS
+#### Important comments on using v3 versus v1 API for Nightscout with AAPS
 
 v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
 - v1 sends only 2 days of data
@@ -629,19 +635,19 @@ Release date: 23-01-2021
 
 (version-2811)=
 
-## Version 2.8.1.1
+### Version 2.8.1.1
 
 Release date: 12-01-2021
 
 (important-hints-2-8-1-1)=
-### Important hints
+#### Important hints
 
 - Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
 - If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
 - ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
 - NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
 
-### Major changes
+#### Major changes
 
 - RileyLink, Omnipod and MDT pump improvements and fixes
 - forced NS_UPLOAD_ONLY
@@ -656,18 +662,18 @@ Release date: 12-01-2021
 - new translations
 
 (Releasenotes-version-2-8-0)=
-## Version 2.8.0
+### Version 2.8.0
 
 Release date: 01-01-2021
 
-### Important hints
+#### Important hints
 
 - **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 - [Objectives have changed.](#objectives-objective3) **Finish not completed objectives before update.**
 - Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../SettingUpAaps/BuildingAaps.md).
 - Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+#### Major new features
 
 - [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
 - [bolus advisor](#Preferences-quick-wizard) & [eating reminder](#AapsScreens-section-j) @MilosKozak
@@ -736,46 +742,46 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Insight: Disable vibration on bolus for firmware version 3 - second attempt
 - Otherwise is equal to 2.6.1.3. Update is optional.
 
-## Version 2.6.1.3
+### Version 2.6.1.3
 
 Release date: 03-05-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+#### Major new features
 
 - Insight: Disable vibration on bolus for firmware version 3
 - Otherwise is equal to 2.6.1.2. Update is optional.
 
-## Version 2.6.1.2
+### Version 2.6.1.2
 
 Release date: 19-04-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+#### Major new features
 
 - Fix crashing in Insight service
 - Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
-## Version 2.6.1.1
+### Version 2.6.1.1
 
 Release date: 06-04-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+#### Major new features
 
 - Resolves SMS CARBS command issue while using Combo pump
 - Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
-## Version 2.6.1
+### Version 2.6.1
 
 Release date: 21-03-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+#### Major new features
 
 - Allow to enter only `https://` in NSClient settings
 - Fixed [BGI](../UsefulLinks/Glossary.md) displaying bug on watches
@@ -789,13 +795,13 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Fixed sending of calibrations to xDrip
 
 (Releasenotes-version-2-6-0)=
-## Version 2.6.0
+### Version 2.6.0
 
 Release date: 29-02-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
-### Major new features
+#### Major new features
 
 - Small design changes (startpage...)
 
@@ -856,13 +862,13 @@ Please note the [important notes](#Releasenotes-version-2-5-0) and [limitations]
 \* New versioning that will allow to do minor updates without triggering the update-notification.
 
 (Releasenotes-version-2-5-0)=
-## Version 2.5.0
+### Version 2.5.0
 
 Release date: 26-10-2019
 
 (Releasenotes-important-notes-2-5-0)=
 
-### Important notes
+#### Important notes
 
 - Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](UpdateToNewVersion).
 - If you are using xDrip [identify receiver](#xdrip-identify-receiver) must be set.
@@ -870,14 +876,14 @@ Release date: 26-10-2019
 - Glimp is supported from version 4.15.57 and newer.
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
-### Is this update for me? Currently is NOT supported
+#### Is this update for me? Currently is NOT supported
 
 - Android 5 and lower
 - Poctech
 - 600SeriesUploader
 - Patched Dexcom from 2.3 directory
 
-### Major new features
+#### Major new features
 
 - Internal change of targetSDK to 28 (Android 9), jetpack support
 - RxJava2, Okhttp3, Retrofit support
@@ -921,11 +927,11 @@ Release date: 07-04-2019
 - Insight driver fixes
 - SMS plugin fix
 
-## Version 2.2
+### Version 2.2
 
 Release date: 29-03-2019
 
-### Major new features
+#### Major new features
 
 - [DST fix](#time-adjustment-daylight-savings-time-dst)
 - Wear Update
