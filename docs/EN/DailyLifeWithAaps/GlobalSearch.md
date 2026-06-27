@@ -1,3 +1,4 @@
+(global-search)=
 # Global search
 
 **AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
@@ -35,7 +36,7 @@ This means a guide or forum post written in English still leads you to the right
 
 Results are grouped into these categories:
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](Configuration.md)).
+- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)).
 - **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
 - **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
 - **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
@@ -71,7 +72,7 @@ Tap a result to go straight to it:
 - **Preference** → opens the setting **in place** (jumps to it within its screen).
 - **Documentation** → opens the page in your browser.
 
-Opening settings and protected actions still respects your **[protection](Configuration.md)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+Opening settings and protected actions still respects your **[protection](../SettingUpAaps/ConfigBuilder.md)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
 
 ---
 

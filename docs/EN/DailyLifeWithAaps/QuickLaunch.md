@@ -1,3 +1,4 @@
+(quicklaunch)=
 # QuickLaunch (overview quick-action toolbar)
 
 **QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
@@ -31,7 +32,7 @@ The last button is always **Configure QuickLaunch** (the **⚙️** gear). It ca
 
 ## Configuring QuickLaunch
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](Configuration.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
 
 ![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
 
@@ -75,7 +76,7 @@ The care-portal events and device-maintenance records:
 - **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
 - **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
 
-These are the same entries you would otherwise reach through the **[Treatments](BehavioralChanges.md#treatments-enter-and-deliver)** and **[Manage](BehavioralChanges.md#manage-manage-and-activate)** sheets — QuickLaunch just puts the ones you use on the overview.
+These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
 
 ### Quick Wizard
 
@@ -91,7 +92,7 @@ Your **user-action** automation rules (the ones you trigger by hand) can be adde
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](ClientMasterCommunication.md)**.
+Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
 ```
 
 ### Temp Target Presets
@@ -101,7 +102,7 @@ Each of your **[Temp Target](TempTargets.md)** presets can be added as a button 
 (profile-shortcuts)=
 ### Profile
 
-Every **[profile](Profiles.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
 
 - **Percentage** (50–200 %) — scale the profile when it is applied. 100 % uses it as-is.
 - **Duration** (0–600 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
@@ -126,7 +127,7 @@ What each device can put on its toolbar still depends on what it has: QuickWizar
 
 - Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
 - **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](ClientMasterCommunication.md).
+- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 

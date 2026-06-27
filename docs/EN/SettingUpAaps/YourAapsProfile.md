@@ -27,6 +27,8 @@ The four last parameters (glucose targets, basal rates, insulin sensitivity fact
 
 Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
+![Example active profile](../images/Profile-Example-Active.png)
+
 (your-aaps-profile-duration-of-insulin-action)=
 ## Duration of insulin action (DIA)
 
@@ -283,15 +285,29 @@ Here are some reasons why you may have negative IOB, and what action to take:
 (your-aaps-profile-create-and-edit-profiles)=
 ### Create and edit Profiles
 
-The **Profile** tab can be found from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md).
+In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4).
+
+Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
+
+- **IC** — insulin-to-carb ratio (g/U)
+- **ISF** — insulin sensitivity factor
+- **BAS** — basal rates
+- **TARG** — target range
+
+![The profile editor — IC / ISF / BAS / TARG tabs](../images/v4/Profiles/profile_editor.png)
+
+Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
+
+```{admonition} Earlier AAPS versions
+:class: note
+In **AAPS** v3 the **Profile** tab was reached from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md), with the same add / delete / duplicate buttons:
 
 ![Local Profile buttons](../images/LocalProfile_Settings.png)
-
-Buttons:
 
 - green plus: add
 - red X: delete
 - blue arrow: duplicate
+```
 
 If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
 

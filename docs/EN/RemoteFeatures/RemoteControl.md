@@ -29,6 +29,7 @@ See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 
 ![NSCLIENT_ 2024-05-17 134512](../images/remote_control_and_following/AAPSClient_main_view.png)
 
+(remotecontrol-aapsclient-versions)=
 ### About AAPSClient and AAPSClient2
 
 There are 2 versions of the apk that can be installed, **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.

@@ -1,3 +1,4 @@
+(client-master-control)=
 # Master ↔ Client control (signed remote control)
 
 From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
@@ -20,7 +21,7 @@ This page explains how remote control worked in **AAPS** v3, what changed in v4,
 
 ## How it worked before (AAPS v3)
 
-In v3, remote control from **AAPSClient** (or from the Nightscout web/app) was done by writing **care-portal treatments** to Nightscout. The master's **NSClient** then picked those entries up during synchronization and applied them, provided the *“accept commands”* options were enabled in the NSClient preferences (see [Remote control](../RemoteFeatures/RemoteControl.md)).
+In v3, remote control from **AAPSClient** (or from the Nightscout web/app) was done by writing **care-portal treatments** to Nightscout. The master's **NSClient** then picked those entries up during synchronization and applied them, provided the *“accept commands”* options were enabled in the NSClient preferences (see [Remote control](RemoteControl.md)).
 
 This worked, but had important limitations:
 
@@ -56,7 +57,7 @@ Headline changes versus v3:
 | Live bolus progress on the client | ❌ | ✅ Mirrored from the master |
 | Revoke a follower | Change NS secret | One tap (per client) or a master kill-switch |
 
-Actions that can be triggered from a client in v4: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Actions that can be triggered from a client in v4: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
 
 ---
 
@@ -65,13 +66,13 @@ Actions that can be triggered from a client in v4: **bolus**, **carbs / eCarbs**
 ```{admonition} Before you start
 :class: important
 - The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **client** runs **AAPSClient** (or **AAPSClient2** for a second patient — see [AAPSClient vs AAPSClient2](../RemoteFeatures/RemoteControl.md#about-aapsclient-and-aapsclient2)).
+- The **client** runs **AAPSClient** (or **AAPSClient2** for a second patient — see [AAPSClient vs AAPSClient2](#remotecontrol-aapsclient-versions)).
 - **Both** phones use **NSClientV3** pointed at the **same** Nightscout, and are showing *connected*. Enabling **websockets** on **both** is strongly recommended for fast, near-instant round-trips.
 ```
 
 Pairing and synchronization are two different things:
 
-- **Synchronization** (data: BG, treatments, profile) is set up exactly as before — see [Synchronization](../RemoteFeatures/RemoteControl.md#2-aapsclient).
+- **Synchronization** (data: BG, treatments, profile) is set up exactly as before — see [Synchronization](#RemoteControl_aapsclient).
 - **Pairing** (control: the signed command channel described here) is the new step below.
 
 ---
@@ -160,13 +161,14 @@ A watch paired to a **client** phone relays its actions through the client to th
 
 ---
 
+(client-master-config-prefs)=
 ## Changing configuration and preferences
 
 Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
 
 ### Configuration (which plugins are active)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](Configuration.md#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
 
 In the example below the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication* or *General*:
 

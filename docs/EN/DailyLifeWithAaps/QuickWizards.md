@@ -1,3 +1,4 @@
+(quickwizards)=
 # QuickWizards (one-tap boluses)
 
 A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
@@ -25,7 +26,7 @@ The editor's main fields are:
 
 - **Button text** — the label shown on the button.
 - **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#validity-when-the-button-appears).
+- **Valid Time Range** — see [Validity](#quickwizard_validity).
 - **Calculator Options** and **Device Selection** — see below.
 
 ---
@@ -63,8 +64,8 @@ The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown 
 
 The **Device Selection** toggles decide where each QuickWizard appears:
 
-- **Show on Phone** — it appears in the **[Treatments](BehavioralChanges.md) sheet** and as a **quick-action button on the overview** (the [QuickLaunch](QuickLaunch.md) toolbar).
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](Scenes.md#from-a-wear-os-watch)).
+- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** and as a **quick-action button on the overview** (the [QuickLaunch](QuickLaunch.md) toolbar).
+- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
 
 On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
 
@@ -76,7 +77,7 @@ On the phone the QuickWizards appear at the top of the **Treatments** bottom she
 
 ![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](ClientMasterCommunication.md)).
+A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
 
 Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
 

@@ -76,6 +76,64 @@ In closed loop mode, **SMB**:
 - *may be* deactivated (discussed further below); and/or
 - basal may be activated if **AAPS** is in negative **IOB** or <0.
 
+(TempTargets-manage-v4)=
+## Setting and managing temporary targets (Manage → Temp Target)
+
+In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+
+![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+
+The screen has three parts:
+
+1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
+2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
+3. **Action bar** (bottom) — **➕ add**, **🗑️ delete** and the **▶ activate** button.
+
+Selecting a preset card loads its **target** and **duration** into the editor.
+
+```{admonition} Built-in vs custom presets
+:class: note
+The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```
+
+### Activating a temporary target
+
+Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. The temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+
+```{admonition} Editing the numbers is a one-off — it does not change the preset
+:class: important
+The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+```
+
+### Saving changes to a preset
+
+If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset.
+
+So the rule of thumb is:
+
+- **Activate** → use the numbers **once** (preset unchanged).
+- **Save** → make the numbers the preset's **new defaults**.
+
+To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+
+### Adding and removing presets
+
+- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
+- **🗑️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+
+Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+
+### Other ways to set a temporary target
+
+A temporary target can also be set without opening this screen:
+
+- from a **Wear OS watch** (the **Temp Target** menu item / tile),
+- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
+- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
+- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+
+---
+
 (TempTargets-where-can-i-select-a-temp-target)=
 ## Where can I select a Temp-Target?
 In the **Actions** tab in **AAPS**.

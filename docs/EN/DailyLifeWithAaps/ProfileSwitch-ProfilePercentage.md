@@ -12,6 +12,39 @@ When first embarking on your **AAPS** journey, you will need to create a **Profi
 
 Why use a  **Profile Percentage** rather than a temporary basal adjustment?  To be more effective in its application a  **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
 
+(ProfileSwitch-manage-v4)=
+## Managing and activating profiles (Manage → Profile)
+
+In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+
+The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 33.54 U*). Below the selected card you see that profile's details — **Units**, **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+
+![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+
+The action bar at the bottom acts on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete** and **▶ Activate**. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+
+### Activating a profile
+
+Select a profile and tap **▶ Activate**. A **profile switch** dialog lets you tailor how it is applied:
+
+![The profile switch dialog — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+
+- **Percentage** (30–250 %) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
+- **Duration** — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
+- **Time shift** — move the schedule forward/back in time (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
+- **Time** — when the switch takes effect (normally *Now*).
+
+Tap **Activate**. The running profile then carries the **ACTIVE** badge on its card.
+
+```{admonition} Percentage and time shift make one profile go a long way
+:class: note
+Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+```
+
+A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+
+---
+
 ## How to activate a Profile Switch?
 
 Each **Profile** once selected by the user will require a “Profile Switch”. To do this, the user should edit their **Profile** or set up a new **Profile** within the “Local Profile” tab. Once the desired settings have been applied, the user should save their changes and activate the **Profile** by selecting ‘Activate Profile’ as shown below:

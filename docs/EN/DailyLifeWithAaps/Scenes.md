@@ -1,3 +1,4 @@
+(scenes)=
 # Scenes (situation presets)
 
 A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
@@ -100,8 +101,9 @@ Automation can also **react to** a scene: the trigger list includes a **Scene** 
 
 The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](ClientMasterCommunication.md) for how that works.
+A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
 
+(scenes-from-watch)=
 ### From a Wear OS watch
 
 Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:

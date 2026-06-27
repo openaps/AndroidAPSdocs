@@ -111,7 +111,7 @@ Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
 Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
 - Preferences <./SettingUpAaps/Preferences.md>
 Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
@@ -125,6 +125,11 @@ COB calculation <./DailyLifeWithAaps/CobCalculation.md>
 Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
 Profile Switch & Profile Percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
 Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
+Scenes <./DailyLifeWithAaps/Scenes.md>
+QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
+QuickLaunch toolbar <./DailyLifeWithAaps/QuickLaunch.md>
+Food database <./DailyLifeWithAaps/Food.md>
+Global search <./DailyLifeWithAaps/GlobalSearch.md>
 Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
 Automations <./DailyLifeWithAaps/Automations.md>
 Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
@@ -139,6 +144,7 @@ Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling
 
 Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
 Remote control <./RemoteFeatures/RemoteControl.md>
+Master ↔ Client control <./RemoteFeatures/ClientMasterControl.md>
 SMS Commands <./RemoteFeatures/SMSCommands.md>
 Following Only <./RemoteFeatures/FollowingOnly.md>
 Android Auto <./RemoteFeatures/AndroidAuto.md>
@@ -161,6 +167,7 @@ Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 Export/Import Settings <./Maintenance/ExportImportSettings.md>
 Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+What changed in AAPS v4 <./Maintenance/V4Changes.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 - Browser Update <./Maintenance/UpdateBrowserBuild.md>
