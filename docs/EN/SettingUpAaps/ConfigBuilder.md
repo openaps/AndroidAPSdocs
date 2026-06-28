@@ -75,39 +75,47 @@ See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic underst
 
 Select the type of insulin you are using.
 
+Once a type is selected, the insulin profile editor lets you:
+
+* give the profile an **Insulin nickname** so it is easy to recognise,
+* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Activity, in hours), either by typing the value or using the **–** / **+** buttons,
+* tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+
+The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
+
 More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
 
 ### Insulin type differences
 
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape.
-* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
+* The options 'Rapid-Acting Oref', 'Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape.
+* You can adjust both the DIA and the time to peak. The **Load peak from** presets set the peak to the value recommended for Novorapid, Fiasp or Lyumjev, and the peak values listed below are these recommended defaults.
+* Only change the peak away from its recommended value if you understand the effect of doing so. 'Free-Peak Oref' is intended for advanced users entering a custom peak.
 * The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
 
 #### Rapid-Acting Oref
 
-![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![Insulin type Rapid-Acting Oref](../images/Profile/ConfBuild_Insulin_RAO.png)
 
 * recommended for Humalog, Novolog and Novorapid
 * DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* Peak = 75 minutes after injection (recommended default; loaded by the **Novorapid** preset)
 
 #### Ultra-Rapid Oref
 
-![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+![Insulin type Ultra-Rapid Oref](../images/Profile/ConfBuild_Insulin_URO.png)
 
 * recommended for FIASP
 * DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* Peak = 55 minutes after injection (recommended default; loaded by the **Fiasp** preset)
 
 (Config-Builder-lyumjev)=
 #### Lyumjev
 
-![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Insulin type Lyumjev](../images/Profile/ConfBuild_Insulin_L.png)
 
 * special insulin profile for Lyumjev
 * DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* Peak = 45 minutes after injection (recommended default; loaded by the **Lyumjev** preset)
 
 #### Free Peak Oref
 
