@@ -8,11 +8,15 @@ This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step
 
 AndroidAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
 
+```{note}
+In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
+```
+
 ## Choose your keystore strategy
 
 Read both options and pick the one that matches your situation.
 
-### Option 1 – Generate a new keystore
+### Option 1 – Generate a new keystore (new users)
 
 Choose this if **any** of these is true:
 
@@ -33,7 +37,7 @@ Building AAPS with **Option 1** creates a brand-new keystore, so it **will not a
 
 **→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**
 
-### Option 2 – Upload your existing keystore
+### Option 2 – Upload your existing keystore (existing / past users)
 
 Choose this if you **already have** the `.jks` keystore you used on a previous build of AAPS from a computer in Android Studio, **and** you know its password and alias (usually `key0`).
 
