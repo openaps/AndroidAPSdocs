@@ -1,3 +1,18 @@
+(aaps-ci-option1-computer)=
+
+# Option 1 · Computer – Generate a new keystore
+
+```{note}
+[Option 1](BrowserBuildO1.md) (generate a new keystore) on a **computer** (Windows / Mac / Linux).
+```
+
+## 1. Download the preparation file
+
+:::{include} BrowserBuildDownloadPrep.md
+:::
+
+## 2. Start a local server and generate the keystore
+
 Use a computer (supports Windows/Mac/Linux)
 
 Open the webpage
@@ -34,7 +49,8 @@ Example on Mac:
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
       <iframe
-        src="https://www.dailymotion.com/embed/video/x9rdrpy?start=97"
+        src="https://www.dailymotion.com/embed/video/x9rdrpy?start=97&autoplay=0&queue-enable=false&loop=1&mute=1"
+        loading="lazy"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
         frameborder="0"
         allowfullscreen>
@@ -42,3 +58,6 @@ Example on Mac:
     </div>
   </div>
 
+----
+
+**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**

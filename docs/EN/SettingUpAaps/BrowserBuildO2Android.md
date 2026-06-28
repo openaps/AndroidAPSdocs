@@ -1,3 +1,32 @@
+(aaps-ci-option2-android)=
+
+# Option 2 · Android – Upload your existing keystore
+
+```{note}
+[Option 2](BrowserBuildO2.md) (upload an existing keystore) on **Android** – the recommended choice.
+```
+
+## 1. Install File Manager Plus
+
+```{warning}
+**This step is essential – do not skip it, and do not use Chrome to open the preparation file.**
+
+You must open `aaps-ci-preparation.html` **from inside File Manager Plus**. File Manager Plus starts a small local web server on your phone so the page can work, and it is also used to reach your keystore on Google Drive. If you instead open the `.html` directly in Chrome, the page cannot start its server and the build will fail. This is the most common mistake.
+```
+
+:::{include} BrowserBuildFileManagerPlus.md
+:::
+
+## 2. Download the preparation file
+
+:::{include} BrowserBuildDownloadPrep.md
+:::
+
+## 3. Upload the keystore and create the secrets
+
+````{tab-set}
+
+```{tab-item} Wiki
 ### Copy your Android Studio key in your Google Cloud drive.
 
 On your computer, search for the keystore file you used to build AAPS. It is named with the extension `.jks`.
@@ -190,3 +219,26 @@ Switch back to the GitHub tab.
 ![](../images/Building-the-App/CI/BrowserBuildStep43.png)
 
 Check the secret has been added, scroll down to verify.
+```
+
+```{tab-item} Video
+(aaps-ci-option2-android-video)=
+<!--crowdin: exclude-->
+<div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+  <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+    <iframe
+      src="https://www.dailymotion.com/embed/video/x9rdvt0?autoplay=0&queue-enable=false&loop=1&mute=1"
+      loading="lazy"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+```
+
+````
+
+----
+
+**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**

@@ -1,5 +1,9 @@
 # Docs updates & changes
 
+## June 2026
+
+- [Browser Build](#browser-build): restructured into a decision-first, multi-page flow (Fork → keystore Option 1/Option 2 with a dedicated page per device → Google Drive → Build → Troubleshooting); removed nested tabs and made installing File Manager Plus a prominent step @psonnera
+
 ## March 2026
 
 - [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
