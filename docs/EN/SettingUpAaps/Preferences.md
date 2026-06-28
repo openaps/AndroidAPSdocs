@@ -378,26 +378,14 @@ More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 (Preferences-nsclient)=
 ## NSClient
 
-![NSClient](../images/Pref2020_NSClient.png)
+![NSClient](../images/Pref2024_NSClientV3.png)
 
-Original communication protocol, can be used with older Nightscout versions.
+The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. [Introduced with AAPS 3.2,](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) it uses the Nightscout API v3.
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-
-## NSClientV3
-
-![NSClientV3](../images/Pref2024_NSClientV3.png)
-
-[New protocol introduced with AAPS 3.2.](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) Safer and more efficient.
-
-```{admonition} V3 data uploaders
+```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+When using NSClient, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
 ```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
@@ -440,7 +428,7 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClient)
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
+![NSClient advanced settings](../images/Pref2024_NSClientAdv.png)
 
 Options in advanced settings are self-explanatory.
 

@@ -18,7 +18,7 @@ Nightscout `API_SECRET` is your site main password: don't share it publicly.
 
 You can set up AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
 
-* Access the NSClient or NSClientV3 plugin settings with either
+* Access the NSClientV3 plugin settings with either
   1) Main view -> Config Builder -> Synchronization -> NSClient Cog icon
   2) NSCLIENT tab -> Three dots menu -> Plugin preferences
 * Enable all data upload to Nightscout (3) as this is now the standard method unless your BG data source is Nightscout.  

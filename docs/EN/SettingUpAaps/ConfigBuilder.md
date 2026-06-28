@@ -205,11 +205,11 @@ See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more info
 
 In this section, you can choose if/where you want **AAPS** to send your data to.
 
-### NSClient or NSClientV3
+### NSClientV3
 
 Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md). 
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to help you choose between NSClient (v1) and NSClientV3.
+See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClient synchronization.
 
 ### Tidepool
 

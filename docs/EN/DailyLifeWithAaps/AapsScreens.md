@@ -357,7 +357,7 @@ Buttons for Insulin and Carbs are almost always visible. If the connection to th
 
 Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
 
-About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
+About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NSClient.
 
 (aaps-screens-buttons-insulin)=
 #### Insulin
@@ -623,7 +623,7 @@ See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
 
 This page displays the status of the connection with your Nightscout site.
 
-Settings can be changed in [Preferences > NS Client](#Preferences-nsclient).
+Settings can be changed in [Preferences > NSClient](#Preferences-nsclient).
 
 For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
 
