@@ -94,6 +94,11 @@ Component Overview <./Getting-Started/ComponentOverview.md>
 
 Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Browser Build <./SettingUpAaps/BrowserBuild.md>
+-- Step 1: Create your fork <./SettingUpAaps/BrowserBuildFork.md>
+-- Step 2: Create your keystore <./SettingUpAaps/BrowserBuildKeystore.md>
+-- Step 3: Authorize Google Drive <./SettingUpAaps/BrowserBuildGoogleDrive.md>
+-- Step 4: Build the APK <./SettingUpAaps/BrowserBuildAPK.md>
+-- Troubleshooting & advanced <./SettingUpAaps/BrowserBuildTroubleshooting.md>
 - Android Studio Build <./SettingUpAaps/ComputerBuild.md>
 - CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>

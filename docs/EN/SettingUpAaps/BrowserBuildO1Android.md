@@ -1,3 +1,32 @@
+(aaps-ci-option1-android)=
+
+# Option 1 · Android – Generate a new keystore
+
+```{note}
+[Option 1](BrowserBuildO1.md) (generate a new keystore) on **Android** – the simplest, recommended choice.
+```
+
+## 1. Install File Manager Plus
+
+```{warning}
+**This step is essential – do not skip it, and do not use Chrome to open the preparation file.**
+
+You must open `aaps-ci-preparation.html` **from inside File Manager Plus**. File Manager Plus starts a small local web server on your phone so the page can work. If you instead open the `.html` directly in Chrome, the page cannot start its server and the build will fail. This is the most common mistake.
+```
+
+:::{include} BrowserBuildFileManagerPlus.md
+:::
+
+## 2. Download the preparation file
+
+:::{include} BrowserBuildDownloadPrep.md
+:::
+
+## 3. Generate the keystore and create the secret
+
+````{tab-set}
+
+```{tab-item} Wiki
 ### Open the CI preparation help file
 
 With File Manager+, open the file `aaps-ci-preparation-html` you downloaded above.
@@ -76,3 +105,26 @@ Switch back to the GitHub tab.
 Check the secret has been added, scroll down to verify.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep19.png)
+```
+
+```{tab-item} Video
+(aaps-ci-option1-android-video)=
+<!--crowdin: exclude-->
+<div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
+  <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
+    <iframe
+      src="https://www.dailymotion.com/embed/video/x9rdrpy?autoplay=0&queue-enable=false&loop=1&mute=1"
+      loading="lazy"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+```
+
+````
+
+----
+
+**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**

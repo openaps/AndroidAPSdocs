@@ -2,6 +2,7 @@
 
 ## June 2026
 
+- [Browser Build](#browser-build): restructured into a decision-first, multi-page flow (Fork → keystore Option 1/Option 2 with a dedicated page per device → Google Drive → Build → Troubleshooting); removed nested tabs and made installing File Manager Plus a prominent step @psonnera
 - [Introduction](../Getting-Started/Introduction.md): terminology switched from *DIY* to *OS-AID* (Open-Source Automated Insulin Dosing), added Trio and Stelo, updated pump/CGM compatibility table @tmhastings
 
 ## March 2026

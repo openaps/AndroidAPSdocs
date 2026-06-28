@@ -1,9 +1,26 @@
+(aaps-ci-option2-computer)=
+
+# Option 2 · Computer – Upload your existing keystore
+
+```{note}
+[Option 2](BrowserBuildO2.md) (upload an existing keystore) on a **computer** (Windows / Mac / Linux).
+```
+
+## 1. Download the preparation file
+
+:::{include} BrowserBuildDownloadPrep.md
+:::
+
+## 2. Start a local server and upload the keystore
+
 Use a computer (supports Windows/Mac/Linux)
 
+<!--crowdin: exclude-->
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
-      src="https://www.dailymotion.com/embed/video/x9rdyc6?autoplay=0&queue-enable=false&loop=1"
+      src="https://www.dailymotion.com/embed/video/x9rdyc6?autoplay=0&queue-enable=false&loop=1&mute=1"
+      loading="lazy"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       frameborder="0"
       allowfullscreen>
@@ -41,7 +58,8 @@ Example on Mac:
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
       <iframe
-        src="https://www.dailymotion.com/embed/video/x9rdvt0?start=138&autoplay=0&queue-enable=false&loop=1"
+        src="https://www.dailymotion.com/embed/video/x9rdvt0?start=138&autoplay=0&queue-enable=false&loop=1&mute=1"
+        loading="lazy"
         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
         frameborder="0"
         allowfullscreen>
@@ -49,3 +67,6 @@ Example on Mac:
     </div>
   </div>
 
+----
+
+**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
