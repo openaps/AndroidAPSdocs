@@ -85,4 +85,4 @@ Variants ending with “Debug” indicates that the APK will be built in debug m
 
 Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
 
-If anything goes wrong, see [Browser build: troubleshooting & advanced](BrowserBuildTroubleshooting.md).
+If anything goes wrong, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
