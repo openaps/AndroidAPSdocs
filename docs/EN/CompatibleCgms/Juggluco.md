@@ -22,7 +22,7 @@ Juggluco can send blood glucose directly to AAPS, enabling SMBs always if you ar
 
 When using a Libre 2/2+/3/3+ sensor, minute-by-minute readings will be sent to AAPS but will not trigger minute-by-minute calculations in AAPS.
 
-Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and save the AAPS package information. Select the xDrip+ BG data source in AAPS.
+Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and save the AAPS package information. Select the xDrip BG data source in AAPS.
 
 Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
 
@@ -30,12 +30,12 @@ Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip+
+## Juggluco to xDrip
 
-Juggluco can send blood glucose to xDrip+ which will then send them to AAPS.
+Juggluco can send blood glucose to xDrip which will then send them to AAPS.
 
-Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. Select the xDrip+ BG data source in AAPS.
+Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. Select the xDrip BG data source in AAPS.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary, when using a Libre 2/2+/3/3+ sensor, xDrip+ will average the minute-by-minute to 5 minutes readings and [also smoothen](#libre2-value-smoothing-raw-values) them.
+Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary, when using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute to 5 minutes readings and [also smoothen](#libre2-value-smoothing-raw-values) them.
 
-![Juggluco to xDrip+](../images/juggluco/Juggluco-xDrip+.png)
+![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)

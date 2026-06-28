@@ -8,7 +8,7 @@ __AAPS__ offers several features for remote monitoring of type 1 diabetic childr
 
 - Kid's pump is controlled by kid's phone using __AAPS__.
 - Caregivers can remotely follow viewing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **AAPSClient apk** on their phone which must be an Android phone. Settings amended in __AAPS__ will synchronize with __AAPSClient__ and vice versa.
-- Caregivers can be alarmed by using **xDrip+ app in follower mode** on their Android phone if xdrip companion mode is set up.
+- Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xdrip companion mode is set up.
 - Remote control of __AAPS__ using [SMS Commands](../RemoteFeatures/SMSCommands.md) is secured by two-factor authentication.
 - Remote control through __AAPSClient__ is only recommended if your synchronization is working well (i.e. you don’t see unwanted data changes like self modification of TT, TBR etc). See [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details. However, synchronization is less likely to be an issue if the user is using the latest version of __AAPS__ and __AAPSClient__ with NSClientv3/Nightscout 15.
 
@@ -17,7 +17,7 @@ __AAPS__ offers several features for remote monitoring of type 1 diabetic childr
 - [Nightscout](https://nightscout.github.io/) in web browser (mainly data display)
 - __AAPSClient__ apk is a stripped down version of __AAPS__ capable of following somebody, making __Profile Switches__, setting __TTs__ and entering carbs. There are 2 apps:  [AAPSClient & AAPSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). AAPSClient should be used if the caregiver wishes to install the apk twice on the same phone to follow 2 different persons (e.g. two children with type 1, each with their own Nightscout account).
 - Dexcom follow if you are using original Dexcom app (BG values only)
-- [xDrip+](../CompatibleCgms/xDrip.md) in follower mode (mainly BG values and **alarms**)
+- [xDrip](../CompatibleCgms/xDrip.md) in follower mode (mainly BG values and **alarms**)
 - [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**)
 - Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting 
 

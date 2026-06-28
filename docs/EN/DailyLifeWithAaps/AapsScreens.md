@@ -117,11 +117,11 @@ Your loop is not running until you solve this issue !
 
 You need to find out why you get duplicate BGs:
 * Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
+* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
 * Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
 * Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
 
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip tab.
 
 However, when there are a lot of duplicates, it might be easier to
 * [backup your settings](../Maintenance/ExportImportSettings.md),
@@ -395,12 +395,12 @@ You can use the buttons to quickly increase the carb amount. The increment value
 See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
 
 #### Calibrations
-Sends a calibration to xDrip+ or opens Dexcom calibration dialog.
+Sends a calibration to xDrip or opens Dexcom calibration dialog.
 
 Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
 
 #### CGM
-Opens xDrip+.
+Opens xDrip.
 
 Back button returns to **AAPS**.
 
@@ -510,7 +510,7 @@ Less information will be shown if **low resolution skin** is used ([Preferences 
 (screens-sensor-level-battery)=
 #### Sensor level (battery)
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level  information to xDrip+.)
+Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level  information to xDrip.)
 
 Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-status-lights).
 
@@ -627,7 +627,7 @@ Settings can be changed in [Preferences > NSClient](#Preferences-nsclient).
 
 For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
 
-## BG Source - xDrip+, BYODA...
+## BG Source - xDrip, BYODA...
 ![BG Source tab - here Nightscout](../images/Screenshots_BGSource.png)
 
 Depending on your BG source settings, this tab is named differently.

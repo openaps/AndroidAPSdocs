@@ -335,7 +335,7 @@ For errors in bolusing and carb announcements, you can still take action. For ex
 
 ### Multiple SMS
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip+, for example. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
+If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 

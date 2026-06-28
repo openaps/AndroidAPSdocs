@@ -181,7 +181,7 @@ The "**Communication**" screen lists the plugins used to upload, synchronize and
 - **SMS Communicator** – remote control of **AAPS** using SMS commands
 - **NSClientV3** – synchronizes your data with Nightscout using the v3 API
 - **Tidepool** – uploads data to Tidepool
-- **xDrip+** – sends data to xDrip+
+- **xDrip** – sends data to xDrip
 - **Open Humans** – upload and donate your diabetes data to scientific projects
 - **Wear** – monitor and control **AAPS** from a WearOS watch
 - **External Companion Apps** – data broadcasting to various external apps

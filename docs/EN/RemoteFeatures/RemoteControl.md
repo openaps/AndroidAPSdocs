@@ -66,7 +66,7 @@ To build **AAPSClient** yourself, follow the same process as [regular AAPS build
 
 ### Synchronization- AAPSClient and AAPS set up (for Version 3.2.0.0 above)
 
-Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](../Maintenance/UpdateToNewVersion)). The example below provides Synchronization guidance for NSClientV3 using Nightscout15 but there are other options available with __AAPS__ (e.g xDrip+). 
+Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](../Maintenance/UpdateToNewVersion)). The example below provides Synchronization guidance for NSClientV3 using Nightscout15 but there are other options available with __AAPS__ (e.g xDrip). 
 
 Within the ‘Synchronization’ located under ‘Config Builder’, the user synchronizes their data with Nightscout through __NSClientV3__ (using the v3 API), set up the same way for both __AAPS__ and the follower phone.
 

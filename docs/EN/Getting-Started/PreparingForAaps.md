@@ -177,8 +177,8 @@ Here is an approximate timeframe:
 | Initial reading of the documentation                                                 | 1-2 days        |
 | Installing/configuring PC to allow the build                                         | 2-8 hours       |
 | Setting up a reporting server                                                        | 1 hour          |
-| Installing a CGM app (xDrip+, BYODA, …)                                              | 1 hour          |
-| Configuring CGM → xDrip+ → APPS initially                                            | 1 hour          |
+| Installing a CGM app (xDrip, BYODA, …)                                              | 1 hour          |
+| Configuring CGM → xDrip → APPS initially                                            | 1 hour          |
 | Configuring AAPS → pump initially                                                    | 1 hour          |
 | Configuring AAPS → Nightscout/Tidepool (reporting only)                              | 1 hour          |
 | Optional : Configuring NightScout ↔ **AAPS** & NSFollowers                           | 1 hour          |

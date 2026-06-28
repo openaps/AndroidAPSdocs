@@ -123,7 +123,7 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 
 ![Config Builder BG source](../images/ConfBuild_BG.png)
 
-* [xDrip+](../CompatibleCgms/xDrip.md)
+* [xDrip](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
 * Glimp - only version 4.15.57 and newer are supported
@@ -219,7 +219,7 @@ See [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as treatments to xDrip+.
+Used to **send** data such as treatments to xDrip.
 
 ### Open Humans
 

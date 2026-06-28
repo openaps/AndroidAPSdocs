@@ -253,7 +253,7 @@ Your apk was built successfully and can be transferred to your phone!
 
 * If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* If you are using xDrip+: identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
+* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
 
 
 ## Apk not installed

@@ -14,7 +14,7 @@ To be able to restore, having the following items at hand is important:
 - A recent copy of the **AAPS installer .APK**
 - A recent **settings export** file: For restoring important settings (which includes your objectives!).
 - Your **AAPS master password**
-- Backups of additional utilities: Such as BYODA and/or xDrip+.
+- Backups of additional utilities: Such as BYODA and/or xDrip.
 - Personal notes on your setup.
 
 Below are the items that are recommended for keeping back-ups.

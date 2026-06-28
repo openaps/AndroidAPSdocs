@@ -29,7 +29,7 @@ __BG__ =  blood glucose.
 __BGI__ = blood glucose impact.
 The degree to which __BG__ 'should' rise or fall based on insulin activity alone.
 
-__BG source__ = the source of the user’s __BG__ values derived from either __CGM__ or __FGM__ through a system integration software like __BYODA__, __xDrip+__ etc. Further info → Wiki - 'BG source'
+__BG source__ = the source of the user’s __BG__ values derived from either __CGM__ or __FGM__ through a system integration software like __BYODA__, __xDrip__ etc. Further info → Wiki - 'BG source'
 
 __Bridge__ = an additional device transforming __FGM__ to __CGM__.  
 
@@ -163,7 +163,7 @@ __Virtual pump__ = an __AAPS__ feature which allows the user to try __AAPS’__ 
 
 __Wallpaper__ = __AAPS__ background image see phones page.
 
-__xDrip+__ = open source software to read __CGM__ systems xDrip+.
+__xDrip__ = open source software to read __CGM__ systems.
 
 __Zero-temp__ = temporary basal rate with 0% (no basal insulin delivery).
 

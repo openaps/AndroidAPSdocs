@@ -29,9 +29,9 @@ Use this option only if your CGM data is being properly smoothed by your collect
 | G5/G6/ONE     |  If noisy   |           | Recommended |
 | G7/ONE+/Stelo |  If noisy   | If stable |             |
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
+| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
 | -------------------- | :------: | :-----------: | :-----------: | :----------------: |
 | Libre 1/14 days/Pro  |   N.A.   |     N.A.      |    Average    |        N.A.        |
 | Libre 2/2+ (EU)      | Average  |     None      |    Average    |        None        |

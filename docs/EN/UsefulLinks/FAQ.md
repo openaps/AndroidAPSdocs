@@ -56,7 +56,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 * Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 * Pump batteries
-* Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Maintenance/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+* Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Maintenance/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ### How can I safely and securely attach the CGM/FGM?
 You can tape it.  There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
@@ -163,7 +163,7 @@ When drinking alcohol, you always have to have an eye on your CGM to manually av
 #### Sleeping
 
 ##### How can I loop during the night without mobile and Wi-Fi radiation?
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip or ['Build your own Dexcom App'](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Turn on airplane mode in your mobile.
 2. Wait until the airplane mode is active.
@@ -171,9 +171,9 @@ Many users turn the phone into airplane mode at night. If you want the loop to s
 
 You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
 
-![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
 
 #### Traveling

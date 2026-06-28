@@ -71,7 +71,7 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 
 Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip+**.
+When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
 
 It's important to ensure that you have disabled Battery Optimization to ensure **AAPS** and other supporting apps remain active all the time.
 

@@ -32,7 +32,7 @@ The most common strategies used in combination with **AAPS** are explained in mo
 
 If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app. 
 
-You cannot send invite emails to Dexcom followers anymore from third-party apps. In xDrip+ the invite request will just result in the message “invite not sent”. 
+You cannot send invite emails to Dexcom followers anymore from third-party apps. In xDrip the invite request will just result in the message “invite not sent”. 
 
 You must install the official Dexcom app, send the invite, and then uninstall the official app. 
 
@@ -47,7 +47,7 @@ The steps to do this are as follows:
 7)	On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
 8)	You can now delete the official Dexcom G6 app.
 
-For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip+, depending on which app you are using. 
+For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip, depending on which app you are using. 
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
@@ -93,25 +93,25 @@ Cons (as reported by users)
 
 * It has a dark Ul, large readings and buttons, designed for usage at night. 
 
-### xDrip+ (Android)
+### xDrip (Android)
 
-You can use xDrip+ as a follower.
+You can use xDrip as a follower.
 
 #### With Nightscout
 
-Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
+Set xDrip as a Nightscout Follower. You will receive BG and treatments, not basal.
 
 ![image](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Without Nightscout - xDrip+ BG data source
+#### Without Nightscout - xDrip BG data source
 
-If your **AAPS** data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+If your **AAPS** data source is xDrip (or if xDrip can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
 
 ![image](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Without Nightscout - xDrip+ BG companion app
+#### Without Nightscout - xDrip BG companion app
 
-If your **AAPS** data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+If your **AAPS** data source is not xDrip but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
 
 ![image](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 

@@ -9,12 +9,12 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip+ (direct connection to G7 or ONE+)
+## 1. xDrip (direct connection to G7 or ONE+)
 
-- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Follow the instructions here: [xDrip G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Select  xDrip in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+- Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
 
 ## 2. Build Your Own Dexcom App (G7)
 
@@ -62,13 +62,13 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 - If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
-## 4. xDrip+ (companion mode) 
+## 4. xDrip (companion mode) 
 
--   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip) 
-- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
--   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip) 
+- As data source in xDrip "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
+-   Select  xDrip in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+-   Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
 
 ## 5. Juggluco
 

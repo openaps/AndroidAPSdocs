@@ -4,7 +4,7 @@ There are three different methods to access the readings from Eversense:
 
 - ESEL companion mode
 - ESEL patched mode
-- xDrip+ companion app
+- xDrip companion app
 
 ## ESEL
 
@@ -51,14 +51,14 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 
 4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
-## xDrip+
+## xDrip
 
-xDrip+ can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip can read notifications from the vendor app, like ESEL does. No backfilling available.
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
+- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip “Companion App” must be selected.
+- Select xDrip in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 - Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
 
 ```{warning}
