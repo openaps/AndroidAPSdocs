@@ -24,6 +24,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 * [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
+* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
 
 ### Installing
 

@@ -38,8 +38,17 @@ The browser build is a series of choices. Follow these steps in order:
 3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
 4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
 
-If you run into trouble, or want optional operations such as cherry-picking a commit or exporting your keystore, see **[Troubleshooting & advanced](BrowserBuildTroubleshooting.md)**.
+If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
 
 ----
 
 **Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+
+```{toctree}
+:hidden:
+
+Step 1: Create your fork <BrowserBuildFork.md>
+Step 2: Create your keystore <BrowserBuildKeystore.md>
+Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
+Step 4: Build the APK <BrowserBuildAPK.md>
+```

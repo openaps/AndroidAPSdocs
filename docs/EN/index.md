@@ -94,11 +94,6 @@ Component Overview <./Getting-Started/ComponentOverview.md>
 
 Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Browser Build <./SettingUpAaps/BrowserBuild.md>
--- Step 1: Create your fork <./SettingUpAaps/BrowserBuildFork.md>
--- Step 2: Create your keystore <./SettingUpAaps/BrowserBuildKeystore.md>
--- Step 3: Authorize Google Drive <./SettingUpAaps/BrowserBuildGoogleDrive.md>
--- Step 4: Build the APK <./SettingUpAaps/BrowserBuildAPK.md>
--- Troubleshooting & advanced <./SettingUpAaps/BrowserBuildTroubleshooting.md>
 - Android Studio Build <./SettingUpAaps/ComputerBuild.md>
 - CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
@@ -188,6 +183,7 @@ Troubleshooting (start here) <./GettingHelp/GeneralTroubleshooting.md>
 - Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
 - Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
 - Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
 - Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 FAQ <./UsefulLinks/FAQ.md>
 Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
@@ -198,6 +194,7 @@ Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
 
 Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
 Dev branch <./AdvancedOptions/DevBranch.md>
+Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
 Autotune <./AdvancedOptions/Autotune.md>
 Insulin concentration <./AdvancedOptions/InsulinConcentration.md>
 
