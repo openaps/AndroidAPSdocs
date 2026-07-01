@@ -82,7 +82,7 @@ GitHub zeigt jetzt Deine persönliche Kopie von AndroidAPS an. Lasse diesen Tab 
 
 ## 2. Vorbereitende Schritte
 
-- Solltest Du die Erstellung auf einem Android-Gerät durchführen, installiere den [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) aus dem Google Play Store.
+- Solltest Du die Erstellung auf einem Android-Gerät durchführen, installiere den [Dateimanager +](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) aus dem Google Play Store.
 
 ```{admonition} File Manager Plus
 :class: dropdown
