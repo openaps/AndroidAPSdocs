@@ -117,7 +117,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 <!--crowdin:enable-->
 ````
 Zum Erstellen Deiner AAPS-Version benötigst Du sog. private Schlüssel, die in einem „Java Key Store“ (JKS) gespeichert sind:
-- Solltest Du AAPS das allererste Mal erstellen (oder Du kein Android Studio JKS haben), nutze den in [AAPS-CI Option 1 – JKS erzeugen](#aaps-ci-option1) beschriebenen Weg, um das Setup abzuschließen.
+- Solltest Du AAPS das allererste Mal erstellen (oder Du kein Android Studio JKS haben), nutze den in [AAPS-CI Option 1 – JKS generieren](#aaps-ci-option1) beschriebenen Weg, um das Setup abzuschließen.
 </br>
 
 ```{warning}
@@ -132,14 +132,14 @@ Du musst:
 7. Stelle die Daten aus Nightscout wieder her.
 ```
 
-- Falls Du Deinen eigenen JKS, den Du bei einem früheren AAPS-Build mit einem PC in Android Studio genutzt hast, nutzen möchtest und Du das Passwort und den Alias (key0) kennst, wähle bitte [AAPS-CI Option 2 – Hochladen eines vorhandenen JKS](#aaps-ci-option2).
+- Falls Du Deinen eigenen JKS, den Du bei einem früheren AAPS-Build mit einem PC in Android Studio genutzt hast, nutzen möchtest und Du das Passwort und den Alias (key0) kennst, wähle bitte [AAPS-CI Option 2 – Vorhandenen JKS hochladen](#aaps-ci-option2).
 
 </br>
 
 Sobald die AAPS-App erstellt wurde, wird sie in Deinem Google Cloud-Laufwerk gespeichert.
 
 (aaps-ci-option2)=
-### AAPS-CI Option 1 – JKS erzeugen
+### AAPS-CI Option 1 – JKS generieren
  - Diese Option ist für diejenigen ohne eine JKS-Datei, oder die, die das Passwort oder den Alias vergessen haben.
 - Unten sind einige Beispiele von verschiedenen Plattformen verlinkt.
 - Wähle in der Liste unten die Plattform aus, die Du nutzt. Du kannst zwischen Android (bevorzugte Wahl), iOS oder PC/Computer wählen.
@@ -169,7 +169,7 @@ Sobald die AAPS-App erstellt wurde, wird sie in Deinem Google Cloud-Laufwerk ges
 
 (aaps-ci-option2)=
 
-### AAPS-CI Option 2 – Hochladen eines bestehenden JKS
+### AAPS-CI Option 2 – Vorhandenen JKS hochladen
  - Diese Option ist für Nutzende, die bereits einen JKS haben und dass zugehörige Passwort und den Alias kennen. Als `KEYSTORE_PASSWORD`, `KEY_ALIAS`, und `KEY_PASSWORD`, gib Dein aktuelles Password und Alias aus GitHub ein. Diejenigen, die Android Studio nutzen, schauen unten nach, wo diese genutzt wurden.
 
 ```{admonition} KEY + PASSWORDS
@@ -200,7 +200,7 @@ Sobald die AAPS-App erstellt wurde, wird sie in Deinem Google Cloud-Laufwerk ges
 
 (aaps-ci-google-drive-auth)=
 
-### AAPS-CI Google Drive Auth
+### AAPS-CI Google Drive Autorisierung
 
 ```{warning}
 Um den Browser Build erfolgreich zu nutzen, MUSST Du unabhängig von der oben gewählten Anleitung (Option 1 oder Option 2), die Google Drive Autorisierung ergänzen.
@@ -208,9 +208,9 @@ Um den Browser Build erfolgreich zu nutzen, MUSST Du unabhängig von der oben ge
 
 Hinweis: Solltest Du die Schritte aus dem Video bereits durchgeführt haben, kannst Du direkt [hierhin](#github-build-apk) springen.
 
-Gehe zurück zum „File Explorer Plus“-Tab.
+Gehe zurück zum „Dateimanager +“-Tab.
 
-Scrolle bis zum „Google Drive Auth“-Abschnitt herunter und tippe auf "Start Auth".
+Scrolle bis zum „Google Drive Autorisierung“-Abschnitt herunter und tippe auf „Autorisierung starten“.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
@@ -220,11 +220,11 @@ Wähle Dein Google-Konto aus.
 
 Scrolle herunter und erlaube den Zugriff. Die Webseite benötigt ihn, um den Google Drive Authentifizierungsschlüssel zu bekommen.
 
-Tippe auf „Continue“.
+Tippe auf „Weiter“.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-Das Feld `GDRIVE_OAUTH2` wird ausgefüllt. Tippe auf die oberste „Copy“-Schaltfläche.
+Das Feld `GDRIVE_OAUTH2` wird ausgefüllt. Tippe auf die oberste „Kopieren“-Schaltfläche.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
@@ -258,7 +258,7 @@ Wechsle zurück auf den GitHub-Tab.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 
-You should have either two (option 1) or five (option 2) secrets entries now.
+Du solltest nun entweder zwei (Option 1) oder fünf (Option 2) Repository-Secrets-Einträge haben.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
@@ -325,12 +325,12 @@ Varianten mit der Endung „Debug“ signalisieren, dass die APK im Debug-Modus 
 
 (aaps-ci-google-token-expired)=
 ### Google Refresh Token Expired
-  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
-  - You will see an error indicating that the access token is invalid, as shown below:
+  - Google OAuth2 Refresh Token laufen nach 6 Monaten Inaktivität ab und können auch aus anderen Gründen ungültig werden (z. B. Password des Google-Kontos wurde geändert oder der Zugriff wurde manuell entzogen). Weitere Details dazu findest Du in der [Google OAuth2 Dokumentation](https://developers.google.com/identity/protocols/oauth2).
+  - Du wirst in diesem Fall die Fehlermeldung sehen, dass das Access Token ungültig ist:
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.jpg)
 
-  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token and update the secret in your GitHub repository, then re-run the build workflow.
+  - Wenn Dein „Build“ wegen eines abgelaufenen oder widerrufenen Google-Refresh-Tokens fehlgeschlagen ist, musst Du die Schritte zur [Google Drive Autorisierung](#aaps-ci-google-drive-auth) wiederholen, damit ein neues `GDRIVE_OAUTH2`-Token generiert wird. Das „Secret“ musst Du in Deinem GitHub Repository aktualisieren und dann den Build-Workflow erneut starten.
 
 (aaps-ci-disable-software)=
 ### Software, die bei der OAUTH-Verifizierung stören könnte, deaktivieren
