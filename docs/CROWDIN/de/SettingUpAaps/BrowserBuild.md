@@ -61,9 +61,9 @@ Scrolle auf dem nächsten Bildschirm nach unten und tippe auf **Create Fork**.
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-Forking a repository allows you to freely experiment with changes without affecting the original project. You cannot fork and you see this?</br></br>
+Du kannst keinen Fork erstellen und siehst das hier?</br></br>
 **`Create a new fork`**</br>
-`A fork is a copy of a repository. View existing forks.`</br>
+`A fork is a copy of a repository.  Durch das Forken eines Repositories kannst Du Änderungen uneingeschränkt testen, ohne Auswirkungen auf das Originalprojekt zu haben. View existing forks.`</br>
 *`Required fields are marked with an asterisk (*).`*</br>
 **`No available destinations to fork this repository.`**</br></br>
 Dies bedeutet, dass Du bereits einen existierenden Fork von AndroidAPS hast.</br>
@@ -116,7 +116,7 @@ https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 <!--crowdin:enable-->
 ````
-AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS): -
+Zum Erstellen Deiner AAPS-Version benötigst Du sog. private Schlüssel, die in einem „Java Key Store“ (JKS) gespeichert sind:
 - Solltest Du AAPS das allererste Mal erstellen (oder Du kein Android Studio JKS haben), nutze den in [AAPS-CI Option 1 – JKS erzeugen](#aaps-ci-option1) beschriebenen Weg, um das Setup abzuschließen.
 </br>
 
@@ -140,7 +140,7 @@ Sobald die AAPS-App erstellt wurde, wird sie in Deinem Google Cloud-Laufwerk ges
 
 (aaps-ci-option2)=
 ### AAPS-CI Option 1 – JKS erzeugen
- - Diese Option ist für Nutzende ohne JKS, oder die das Passwort oder den Alias vergessen haben.
+ - Diese Option ist für diejenigen ohne eine JKS-Datei, oder die, die das Passwort oder den Alias vergessen haben.
 - Unten sind einige Beispiele von verschiedenen Plattformen verlinkt.
 - Wähle in der Liste unten die Plattform aus, die Du nutzt. Du kannst zwischen Android (bevorzugte Wahl), iOS oder PC/Computer wählen.
 
