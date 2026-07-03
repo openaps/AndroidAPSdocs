@@ -82,7 +82,7 @@ GitHub zeigt jetzt Deine persönliche Kopie von AndroidAPS an. Lasse diesen Tab 
 
 ## 2. Vorbereitende Schritte
 
-- Solltest Du die Erstellung auf einem Android-Gerät durchführen, installiere den [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) aus dem Google Play Store.
+- Solltest Du die Erstellung auf einem Android-Gerät durchführen, installiere den [Dateimanager +](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) aus dem Google Play Store.
 
 ```{admonition} File Manager Plus
 :class: dropdown
@@ -121,7 +121,7 @@ AndroidAPS build requires private keys, that are stored in a Java KeyStore (JKS)
 </br>
 
 ```{warning}
-Wenn Du AAPS mit der **Option 1** baust, kannst Du Deine bestehenden AAPS-Version nicht aktualisieren.
+Wenn Du AAPS mit der **Option 1** baust, kannst Du Deine bestehende AAPS-Version nicht aktualisieren.
 Du musst:
 1. [Einstellungen auf Deinem Smartphone exportieren](#ExportImportSettings-Automating-Settings-Export).
 2. Kopiere die Datei mit den Einstellungen von Deinem Smartphone auf ein externes Gerät (d. h. Deinen Computer, externe Festplatte) oder lade sie in Deinen Cloudspeicher hoch.
@@ -170,7 +170,7 @@ Sobald die AAPS-App erstellt wurde, wird sie in Deinem Google Cloud-Laufwerk ges
 (aaps-ci-option2)=
 
 ### AAPS-CI Option 2 – Hochladen eines bestehenden JKS
- - Diese Option ist für Nutzende, die bereits einen JKS haben und dass zugehörige Passwort und den Alias kennen. Als `KEYSTORE_PASSWORD`, `KEY_ALIAS`, und `KEY_PASSWORD`, gib Dein aktuelles Password und Alias aus GitHub ein. Diejenigenen, die Android Studio nutzen, schauen unten nach, wo diese genutzt wurden.
+ - Diese Option ist für Nutzende, die bereits einen JKS haben und dass zugehörige Passwort und den Alias kennen. Als `KEYSTORE_PASSWORD`, `KEY_ALIAS`, und `KEY_PASSWORD`, gib Dein aktuelles Password und Alias aus GitHub ein. Diejenigen, die Android Studio nutzen, schauen unten nach, wo diese genutzt wurden.
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown

@@ -12,7 +12,7 @@ Dieser Abschnitt gibt einen kurzen Überblick über alle mit **AAPS** kompatible
 | CGM                                                                         | Verfügbare [BZ-Quellen](#Config-Builder-bg-source)                                                                  |
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | [Dexcom G7](../CompatibleCgms/DexcomG7.md)                                  | BYODA, [xDrip+](../CompatibleCgms/xDrip.md) oder [Juggluco](../CompatibleCgms/Juggluco.md)                          |
-| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                | [xDrip+](../CompatibleCgms/xDrip.md) or [Juggluco](../CompatibleCgms/Juggluco.md)                                   |
+| [Dexcom ONE+](../CompatibleCgms/DexcomG7.md)                                | [xDrip+](../CompatibleCgms/xDrip.md) oder [Juggluco](../CompatibleCgms/Juggluco.md)                                 |
 | [Dexcom Stelo](../CompatibleCgms/DexcomG7.md)                               | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                |
 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                  | BYODA oder [xDrip+](../CompatibleCgms/xDrip.md)                                                                     |
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                                 | [xDrip+](../CompatibleCgms/xDrip.md)                                                                                |
@@ -28,7 +28,7 @@ Dieser Abschnitt gibt einen kurzen Überblick über alle mit **AAPS** kompatible
 | [Syai](../CompatibleCgms/SyaiTagX1.md)                                      | Syai Tag-App                                                                                                        |
 | Sibionics CGM                                                               | [Juggluco](../CompatibleCgms/Juggluco.md) oder gepatchte SI-App                                                     |
 | Sinocare                                                                    | Gepatchte Sino-App                                                                                                  |
-| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App or [Juggluco](../CompatibleCgms/Juggluco.md)                                                   |
+| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip+ Companion App oder [Juggluco](../CompatibleCgms/Juggluco.md)                                                 |
 
 (GettingStarted-TrustedBGSource)=
 
@@ -44,7 +44,7 @@ Mit einer vertrauenswürdigen Datenquelle ist es durchgehend möglich **SMB**s a
 | ---------------- |:-------------------------------------------------------------------------------------------------------------------------:|
 | Dexcom G6        |                                             BYODA, xDrip+ (**Direkt, Nativ**)                                             |
 | Dexcom G7        |                    BYODA, xDrip+ (**Direkt, Nativ**), </br>Juggluco (**xDrip Broadcast** ohne xDrip+)                     |
-| Dexcom ONE+      |                      xDrip+ (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip+)                      |
+| Dexcom ONE+      |                        xDrip+ (**Direkt, Nativ**), </br>Juggluco (**xDrip Broadcast** ohne xDrip+)                        |
 | Dexcom ONE/Stelo |                                                xDrip+ (**Direkt, Nativ**)                                                 |
 | Libre 2/2+ (EU)  | xDrip+ (OOP2 **keine Kalibrierung**), </br>Juggluco (**xDrip+ Broadcast** ohne xDrip+, oder **Patched Libre** mit xDrip+) |
 | Libre 2/2+/3/3+  |                      Juggluco (**xDrip+ Broadcast** ohne xDrip+, oder **Patched Libre** mit xDrip+)                       |

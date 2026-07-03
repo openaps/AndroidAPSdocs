@@ -1,4 +1,4 @@
-Installiere [File Manager Plus](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) aus dem Google Play Store.
+Installiere den [Dateimanager +](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) (File Manager Plus) aus dem Google Play Store.
 
 Die App wird für die Vorbereitungsphase benötigt. Du kannst sie, nach dem AAPS erfolgreich erstellt und installiert wurde, ohne Probleme wieder von Deinem Smartphone löschen.
 

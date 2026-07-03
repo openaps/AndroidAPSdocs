@@ -19,8 +19,8 @@
 ## Omnipod DASH 已知的 AAPS 限制／問題
 - Android 16 需要 AAPS 版本 3.3.2.1 或更新版本。
 - 一般建議在 Android 14 或 16 上執行 AAPS。 Android 15 有許多社群回報的 [問題](https://github.com/nightscout/AndroidAPS/issues/3471)。 不過，若你在 Android 15 上執行，可能需要啟用藍牙配對（Bonding）才能成功註冊並使用 Pod；關於配對設定的更多資訊，請參閱 [一般疑難排解](../GettingHelp/GeneralTroubleshooting.md)。
-- Temporary Basal rate changes (which occur frequently when the loop is active, especially overnight) result in under-delivery of insulin. This is effectively a hardware limitation of the Omnipod DASH. The issue has been addressed in AAPS 3.4.2.3, but the functionality is currently opt-in. Follow the [Basal Drift Fix Instructions ](#omnipod-dash-Basal-drift-fix) instructions to enable it. For more information regarding the fix see [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more info.
-- Dash 僅支援以 0.05 U/h 步階設定的基礎率。 If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. 若你查看 POD MGMT/Pod History，會顯示已設定 0.05 的基礎率。 這也表示在 AAPS 中，DASH 允許的最低基礎率為 0.05 U/h。
+- 臨時基礎率變更（在循環啟動時很常發生，特別是夜間）會導致胰島素輸注不足。 這實際上是 Omnipod DASH 的硬體限制。 此問題已在 AAPS 3.4.2.3 中處理，但目前此功能需自行啟用。 請依照 [基礎率漂移修正 說明](#omnipod-dash-Basal-drift-fix) 的指示來啟用它。 如需更多關於此修正的資訊，請參閱 [Github 議題 - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) 以取得更多資訊。
+- Dash 僅支援以 0.05 U/h 步階設定的基礎率。 如果你嘗試在 **AAPS 設定檔** 中以 0.01 的步階設定基礎率，AAPS 不會提出警告，儘管 Pod 會將該速率進位到 0.05 的步階。 若你查看 POD MGMT/Pod History，會顯示已設定 0.05 的基礎率。 這也表示在 AAPS 中，DASH 允許的最低基礎率為 0.05 U/h。
 - Pod 的註冊狀態會儲存在設定檔案中，如果你在 Pod 已註冊的狀態下匯出設定檔案。 接著更換為新的 Pod，然後再從先前匯出的設定還原，這會還原舊 Pod 的註冊狀態，並移除新 Pod 的註冊狀態。 因此建議每次註冊 Pod 後都匯出設定，以便在你的裝置出狀況時，能還原該 Pod 的註冊狀態。
 - 當設定新的基礎率設定檔時，DASH 會先暫停輸注，然後再設定新的基礎率設定檔。 若通訊中斷或發生錯誤，基礎率設定檔不會自動重新開始。 詳細內容請參閱 [恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery) 章節。
 - 如果已設定警示，且 Pod 即將到期，Pod 會持續發出嗶聲，直到將警示靜音為止；詳情請參閱 [靜音 Pod 警示](#omnipod-dash-silencing-pod-alerts)。
@@ -70,8 +70,8 @@
 若因任何原因 Pod 未收到新指令（例如 Pod 與 手機 距離過遠導致通訊中斷），Pod 會自動回復到您[**設定檔**](../SettingUpAaps/YourAapsProfile.md)中定義的預設基礎率。
 
 ### **AAPS 的設定檔不支援 30 分鐘為單位的基礎率時間區段**
-若您是 AAPS 新手並首次建立基礎率[**設定檔**](../SettingUpAaps/YourAapsProfile.md)，請注意：不支援以半小時為起點的基礎率。 For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
-You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. 即使 DASH 硬體本身支援 30 分鐘增量的基礎率**設定檔**，**AAPS** 仍不支援此功能。
+若您是 AAPS 新手並首次建立基礎率[**設定檔**](../SettingUpAaps/YourAapsProfile.md)，請注意：不支援以半小時為起點的基礎率。 例如，在你的 Omnipod PDM 上，若你有一個基礎率為 1.1 單位、於 09:30 開始、持續 2 小時並於 11:30 結束，則無法在 **AAPS** 中重現這個完全相同的基礎率 **設定檔**。  
+你需要將這個 1.1 單位的基礎率改成 9:00-11:00 或 10:00-12:00 的時間範圍。 即使 DASH 硬體本身支援 30 分鐘增量的基礎率**設定檔**，**AAPS** 仍不支援此功能。
 
 ### **AAPS 不支援 0 U/h 的設定檔基礎率**
 雖然 DASH 支援零基礎率，**AAPS** 會以使用者**設定檔**的基礎率倍數來決定自動治療；因此無法在零基礎率下運作。  
@@ -482,40 +482,40 @@ DASH 概覽標籤將顯示如下所述：
 
 (omnipod-dash-known-issues-workarounds)=
 
-## Known Issues Workarounds
+## 已知問題與替代作法
 
-This section covers common workarounds and settings that need to be changed to enable a feature to work around a community reported issue that has a fix. 例如： the Basal drift enable process is documented here.
+本節涵蓋針對社群回報且已有修正的問題之常見替代作法，以及為使功能運作所需調整的設定。 例如： 啟用基礎率漂移的流程記載於此。
 
 (#omnipod-dash-Basal-drift-fix)=
 
-### Basal Drift Fix Instructions
+### 基礎率漂移修正 說明
 
-The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than **AAPS** expects, see [Issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more technical details.
+Omnipod Dash 幫浦有一項限制，可能導致實際輸注的基礎胰島素少於 **AAPS** 預期，技術細節請參閱 [Issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783)。
 
-The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new Basal rate.
+Dash 透過內部計時器決定何時送出 0.05 U 的基礎脈衝。 計時區間一到，就會送出該脈衝。 但只要發生基礎率變更（例如 **AAPS** 傳送新的基礎率）時，這個計時器就會重新啟動。
 
-When used in combination with looping, this leads to under-delivery of basal insulin, as the algorithm updates the basal rate on the pump frequently.
+與循環搭配使用時，因演算法會頻繁在幫浦上更新基礎率，這會導致基礎胰島素輸注不足。
 
-The issue is most apparent during the night. During daytime operation, SMBs often result in a basal rate of 0, which masks the effect. In observed usage, this results in approximately 10% of the expected Total Daily Dose (TDD) not being delivered over a 24-hour period. Additionally, glucose targets are often not reached overnight, particularly after meals with prolonged glucose impact (e.g. pasta).
+此問題在夜間最為明顯。 白天運作時，微量注射常使基礎率為 0，因此掩蓋了此效應。 依觀察使用情況，24 小時內大約有 10% 的預期每日總劑量（TDD）未被輸注。 此外，夜間經常無法達成血糖目標，特別是在食用對血糖影響較長的餐點（例如義大利麵）之後。
 
-***NOTE:** This issue is especially important to understand for people on very small dosages of insulin, Children for example.*
+***注意：**對於使用胰島素劑量非常小的人（例如兒童），理解此問題尤其重要。*
 
-#### Enable Basal Drift Fix in AAPS
+#### 在 AAPS 中啟用基礎率漂移修正
 
-You must be running AAPS Version 3.4.2.3 or later for this feature.
+你必須執行 AAPS 版本 3.4.2.3 或更新版本，才能使用此功能。
 
-The Basal Drift Fix is not enabled by default on AAPS.
+基礎率漂移修正在 AAPS 中並非預設啟用。
 
-**To enable it:**
+**啟用方式：**
 
-1. Create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+1. 在你手機的 [AAPS 目錄](#preferences-maintenance-settings) 中的 `extra` (1) 子資料夾內，建立一個名為 `omnipod_drift_compensation` (2) 的空白檔案。
 
    ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
 
-   ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
+   ***注意：**請先在 AAPS 設定中確認你的 AAPS 目錄位置，並確保你把檔案放在正確的目錄。已有不少人因把檔案放到錯誤的資料夾而受影響。*
 
-2. Restart **AAPS**. This must be done for it to recognise the file is present and enable the drift compensation feature.
-3. Please visit this [Github issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) and thumbs up the first post indicating you are using this feature, we need this data to help demonstrate the feature is widely used. Once there is significant community adoption the removal of the enable file will be possible, we appreciate your support here.
+2. 重新啟動 **AAPS**。 必須執行此步驟，AAPS 才能偵測到該檔案並啟用漂移補償功能。
+3. 請造訪此 [Github 議題 #4783](https://github.com/nightscout/AndroidAPS/issues/4783)，並替第一則貼文按讚以表示你正在使用此功能；我們需要這些資料來協助證明此功能被廣泛使用。 一旦社群的採用程度足夠高，就可以移除這個啟用檔案；感謝你的支持。
 
 ## 問題排除
 
