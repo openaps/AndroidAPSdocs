@@ -1,6 +1,6 @@
 # Docs Updates & Änderungen
 
-## March 2026
+## März 2026
 
 - [CLI Build Option](../SettingUpAaps/CLIBuild.md) (Command Line Interface) @je-l hinzugefügt
 - *Computer Build* zu *Android Studio Build* umbenannt. Dateinamen für URLs unverändert.
