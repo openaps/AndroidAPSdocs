@@ -194,7 +194,7 @@ Das Ziel kann frühestens nach **7 Tagen** abgeschlossen werden. Das ist eine Pf
 
 Aktiviere [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) für einen Zeitraum von 7 Tagen und schaue in der [**ÜBERSICHT** auf die weiße Linie](#AapsScreens-section-g-additional-graphs) im Graphen, die Deine Insulinempfindlichkeit, die durch Aktivität, Hormone o.ä. beeinflusst wird, anzeigt. Behalte den OpenAPS-Reiter im Blick. Dieser zeigt die entsprechenden **AAPS**-Anpassungen an Empfindlichkeit, Basal und Zielwerten.
 
-This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). Die Sensitivität (Empfindlichkeit) kannst Du auf der Übersicht in einem [zusätzlichen Graphen](#AapsScreens-section-g-additional-graphs) erkennen.
+Dies ist ein guter Zeitpunkt, um Deine Einstellungen zur [Sensitivitätserkennung](#Config-Builder-sensitivity-detection) zu überprüfen. Die Sensitivität (Empfindlichkeit) kannst Du auf der Übersicht in einem [zusätzlichen Graphen](#AapsScreens-section-g-additional-graphs) erkennen.
 
 Darüber hinaus kannst Du entweder [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) nutzen, um einmalig zu prüfen, ob Deine Basalrate noch passend ist oder Du machst einen herkömmlichen Basalratentest.
 
