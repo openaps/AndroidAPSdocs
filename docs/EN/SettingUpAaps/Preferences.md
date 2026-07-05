@@ -168,9 +168,9 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 Here you can change the target and the duration for each predefined TT. Preset values are:
 
-* Eating soon: target 72 mg/dL / 4.0 mmol/L, duration 45 min
+* Eating soon: target 90 mg/dL / 5.0 mmol/L, duration 45 min
 * Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
-* Hypo: target 125 mg/dL / 6.9 mmol/L, duration 45 min
+* Hypo: target 160 mg/dL / 8.9 mmol/L, duration 60 min
 
 ![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
 
@@ -302,7 +302,7 @@ Use with caution and do not enable it until you learn what it really does. Basic
 
 ## Loop
 
-As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop mode here. See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
 ### Minimal request change
@@ -344,7 +344,7 @@ To put it simply: The algorithm "knows" how your BGs *should* behave when affect
 
 The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 5, for SMB it's 8.
+Standard value for AMA is 3, for SMB it's 8.
 
 The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
