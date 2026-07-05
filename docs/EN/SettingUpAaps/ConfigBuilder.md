@@ -141,6 +141,10 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 * [Glunovo App](https://infinovo.com/) for Glunovo CGM system
 * [Ottai](../CompatibleCgms/OttaiM8.md)
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
+* MicroTech CGM App - for the Aidex CGM
+* Intelligo App
+* SI App - patched app for Sibionics CGM
+* Sino App - patched app for Sinocare CGM
 * Random BG: Generates random BG data (Demo mode only)
 
 ## Smoothing

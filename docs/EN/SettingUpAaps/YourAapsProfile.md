@@ -76,8 +76,8 @@ The targets can be defined within those boundaries :
 
 |         | _Low_ target           | _High_ target          |
 |---------|------------------------|------------------------|
-| Minimum | 4 mmol/L or 72 mg/dL   | 5 mmol/L or 90 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL | 15 mmol/L or 225 mg/dL |
+| Minimum | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL    |
+| Maximum | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
 
 ### Impact
 

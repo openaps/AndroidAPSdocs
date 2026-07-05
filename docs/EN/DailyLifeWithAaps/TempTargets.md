@@ -10,8 +10,8 @@ Temporary targets can be defined within those boundaries :
 
 |         | Temporary target       |
 |---------|------------------------|
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 15 mmol/L or 225 mg/dL |
+| Minimum | 4 mmol/L or 72 mg/dL     |
+| Maximum | 11.1 mmol/L or 200 mg/dL |
 
 **AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
 

@@ -4,7 +4,7 @@ If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting i
 
 ## Smoothing data within AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are four options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
 
 ![Smoothing](../images/ConfBuild_Smoothing.png)
 
@@ -19,6 +19,10 @@ This option works similar to back smoothing that was previously implemented on c
 ### No Smoothing
 
 Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+
+### Unscented Kalman Filter (UKF)
+
+This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
 
 (smoothing-xdrip-dexcom-g6)=
 

@@ -119,11 +119,11 @@ Be careful and patient when adjusting your **max-IOB**. It is different for ever
 
 **AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
 
-* Child: 3
-* Teenager: 7
-* Adult: 12
-* Insulin resistant adult: 25
-* Pregnant: 40
+* Child: 7
+* Teenager: 13
+* Adult: 22
+* Insulin resistant adult: 30
+* Pregnant: 70
 
 *See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 

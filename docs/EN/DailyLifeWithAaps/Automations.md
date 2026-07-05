@@ -109,7 +109,7 @@ When setting up an **Automation**, you can first test it by activating the ‘no
 There are safety limits set for **Automations**:
 
 * The **glucose** value has to be between 72 and 270 mg/dL (or 4 and 15 mmol/L).
-* The **Profile Percentage** has to be between 70% and 130%.
+* The **Profile Percentage** has to be between 50% and 130%.
 * There is a 5 minute time limit between executions of  **Automation** (and first execution).
 
 ## Correct use of negative values
@@ -206,7 +206,7 @@ none
 
 **Options:**
 
-* **Profile** must be between 70% and 130%
+* **Profile** must be between 50% and 130%
 * works only if the previous Percentage is 100%
 
 Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
