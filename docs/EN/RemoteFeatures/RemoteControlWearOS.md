@@ -42,6 +42,23 @@ To access main menu of AAPS you can use on of following options:
 * select AAPS icon in watch applications menu
 * tap on AAPS complication (if configured for menu)
 
+(WearOsSmartwatch-wizard-result)=
+
+## Adjusting the bolus on the wizard result page
+
+When you use the bolus wizard (calculator) on the watch, the result page shows the bolus **AAPS** proposes, together with a **−** and a **+** button. Use them to adjust the dose before you confirm it, without going back to the phone.
+
+* Each press changes the bolus by **one step of your pump**, so the amounts offered always match what your pump can actually deliver.
+* **Press and hold** a button to keep changing the value. The longer you hold, the faster it goes.
+* You cannot go below **0 U**, nor above your **max bolus** setting.
+
+The running total is shown on the result page, so you always see the amount you are about to confirm.
+
+```{admonition} This is not the same as Wizard Percentage
+:class: note
+The **Wizard Percentage** setting (see [Commands settings](#WearOsSmartwatch-commands-settings)) lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
+```
+
 ## Settings (in wear watch)
 
 To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
@@ -96,6 +113,8 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 * **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
 * **Light Ring History** (default `On`): Ring history more discrete with a darker gray
 * **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+
+(WearOsSmartwatch-commands-settings)=
 
 ### Commands settings
 

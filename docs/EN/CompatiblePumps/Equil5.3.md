@@ -29,6 +29,13 @@ In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
 
 ![settings.png](../images/Equil/settings.png)
 
+```{admonition} Max basal on the patch
+:class: note
+The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [preference](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for.
+
+If you raise your **max basal**, the new value is sent to the patch the next time you do a profile switch or reconnect the pump. There is nothing to set on the patch itself.
+```
+
 ### Activate patch
 
 Navigate to the Equil Tab and press **Pair Equil Patch Pump**.

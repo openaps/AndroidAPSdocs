@@ -27,6 +27,8 @@ This means that if blood glucose is dropping, **AAPS** can reduce the basal for 
 
 This mode is available starting at **[Objective 6](#objectives-objective6)**.
 
+Besides selecting it yourself, **AAPS** can also switch to this mode on its own: while you are working on **[Objective 6](#objectives-objective6)**, and whenever it detects duplicate BG readings (see [BG warning sign](#aaps-screens-bg-warning-sign)).
+
 (KeyAapsFeatures-ClosedLoop)=
 ### Closed Loop
 

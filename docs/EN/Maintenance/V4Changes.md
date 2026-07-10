@@ -65,6 +65,23 @@ All of your existing automation rules and food entries are kept; only the way yo
 
 ---
 
+## Duplicate BG data now switches the loop to Low Glucose Suspend
+
+When **AAPS** receives the same BG reading twice (the **red warning sign** under your BG value), it cannot calculate your trend reliably, so it stops giving correction insulin.
+
+In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+
+In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+
+```{admonition} What you need to do
+:class: important
+Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+
+Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+```
+
+---
+
 <!-- =====================================================================
      This page is a growing list of v4 behavioral changes.
      Add new changes as their own "## " section, newest grouping as agreed.

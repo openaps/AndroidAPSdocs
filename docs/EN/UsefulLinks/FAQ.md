@@ -316,9 +316,11 @@ If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll
 
 ### I have a red triangle / AAPS won't enable closed loop / Loops stays in LGS / I have a yellow triangle
 
-The red and yellow triangles are a security feature in AAPS v3. 
+The red and yellow triangles are a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
 
-Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. You can't close the loop. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+
+Once the red triangle is gone, AAPS does not go back to **Closed Loop** by itself. Press and hold the loop icon and select **Closed Loop** again.
 
 Possible origin of the problem: xDrip and/or NS backfilling BGs.
 

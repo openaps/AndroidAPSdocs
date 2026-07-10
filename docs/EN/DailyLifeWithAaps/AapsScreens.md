@@ -106,11 +106,13 @@ If for any reason, there are issues in the BG readings **AAPS** receives, you wi
 
 ##### Red warning sign: Duplicate BG data
 
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
+The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which prevents the loop from doing its work right. **AAPS** cannot calculate your BG trend reliably from duplicated readings, so it stops correcting.
 
-```{admonition} Your loop is not running
+If your loop was closed, **AAPS** switches it to [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) mode. When you press the sign, the message indicates "LGS mode due to doubled values in BG source".
+
+```{admonition} Your loop is running in Low Glucose Suspend
 :class: note
-Your loop is not running until you solve this issue !
+Your loop keeps running, but only to protect you against lows: **AAPS** can still reduce or suspend your basal, and it will not give any correction insulin until you solve this issue !
 ```
 
   ![Red BG warning](../images/bg_warn_red.png)
@@ -121,12 +123,17 @@ You need to find out why you get duplicate BGs:
 * Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
 * Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
 
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip tab.
+To remove the warning immediately and get your loop correcting again, you need to manually delete a couple of entries from the Dexcom/xDrip tab.
 
 However, when there are a lot of duplicates, it might be easier to
 * [backup your settings](../Maintenance/ExportImportSettings.md),
 * reset your database in the maintenance menu and
 * [import your settings](../Maintenance/ExportImportSettings.md) again
+
+```{admonition} Switch back to Closed Loop yourself
+:class: important
+**AAPS** does not return to **Closed Loop** on its own once the duplicates are gone. Press and hold the loop icon in the top right corner of the main screen and select **Closed Loop** again.
+```
 
 ##### Yellow warning sign
 
@@ -437,6 +444,8 @@ The **Corr** field is if you want to modify the end dosage for some reason.
 The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
 **Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
+
+The reminder rings as an **AAPS** alarm. It does not create a timer in your phone's clock app, and it also works when the bolus was entered from **AAPSClient** while **AAPS** was running in the background.
 
 ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
