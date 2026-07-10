@@ -122,8 +122,43 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 ![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
 * With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
-* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* The DIA is automatically set to 5 hours if a higher value is not entered.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+
+(Config-Builder-insulin-dia)=
+### Duration of insulin action (DIA)
+
+#### Description
+
+The length of time that insulin takes to decay to zero.
+
+The duration of insulin action is set to a single value per insulin type in **AAPS**, because your pump will continually infuse the same type of insulin.
+
+![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
+
+This, together with the insulin type's peak time, results in the [insulin profile](#AapsScreens-insulin-profile), as shown in the image above. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over a much shorter period i.e. about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses a minimum of 5h as **DIA**.
+
+Additional reading on the topic of duration of insulin action, and why it matters : 
+* [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) on OpenAPS documentation.
+* [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
+* [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
+* [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+
+#### Impact
+
+Too short **DIA** can lead to low BGs. And vice versa.
+
+If **DIA** is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
+
+Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correcting and giving a **low BG**.
+
+#### How to set it
+
+The **figure below** shows an example of a DIA setting.
+
+![DIA](../images/Profile_DIA.png)
+
+The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works well for them. See the additional reading mentioned above.
 
 (Config-Builder-bg-source)=
 ## BG Source

@@ -306,7 +306,7 @@ If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses an
 
 IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
 
-Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md). 
+Decaying depends on your [DIA and insulin type settings](#Config-Builder-insulin-dia). 
 
 #### Carbs On Board
 
@@ -588,11 +588,11 @@ Like most of these rules-of-thumb it is of limited real validity. Note: Your dia
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). The curves will vary based on the [DIA](#Config-Builder-insulin-dia) and the time to peak.
 
 The **purple**  line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is. 
 
-See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration-of-insulin-action) to learn more about what it is and how to set it.
+See [Config Builder > Insulin > Duration of insulin action](#Config-Builder-insulin-dia) to learn more about what it is and how to set it.
 
 ## Pump Status
 ![Pump Status](../images/Screenshot_PumpStatus.png)

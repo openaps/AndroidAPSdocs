@@ -25,10 +25,11 @@ The **Profile** includes:
 
 - BR (Basal rates): provides background insulin;
 - ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin;
-- DIA (duration of insulin action).
+- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin.
 
 Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+
+Alongside your **Profile**, you also need to configure your **insulin type**, including its DIA (duration of insulin action) — see [Config Builder > Insulin](#Config-Builder-insulin-dia).
 
 More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
 

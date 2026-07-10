@@ -1,11 +1,15 @@
 # Your AAPS profile
 
-Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates: 
-* [duration of insulin action](#your-aaps-profile-duration-of-insulin-action) (DIA),
+Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates: 
 * [glucose targets](#profile-glucose-targets),
 * [basal rates](#your-aaps-profile-basal-rates) (BR),
 * [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
 * [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR). 
+
+```{admonition} Where did DIA go?
+:class: note
+The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin type instead — see [Config Builder > Insulin](#Config-Builder-insulin-dia).
+```
 
 As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
 
@@ -28,42 +32,6 @@ The four last parameters (glucose targets, basal rates, insulin sensitivity fact
 Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
 
 ![Example active profile](../images/Profile-Example-Active.png)
-
-(your-aaps-profile-duration-of-insulin-action)=
-## Duration of insulin action (DIA)
-
-### Description
-
-The length of time that insulin takes to decay to zero.
-
-The duration of insulin action is set to a single value in **AAPS**, because your pump will continually infuse the same type of insulin. 
-
-![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
-
-In combination with the [insulin type](#Config-Builder-insulin), this will result in the [insulin profile](#AapsScreens-insulin-profile), as shown in the image above. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over a much shorter period i.e. about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses minimum 5h as **DIA**.
-
-Additional reading on the topic of duration of insulin action, and why it matters : 
-* [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) on OpenAPS documentation.
-* [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-* [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-* [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
-
-
-### Impact
-
-Too short **DIA** can lead to low BGs. And vice versa.
-
-If **DIA** is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
-
-Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correcting and giving a **low BG**.
-
-### How to set it
-
-The **figure below** shows an example of how the **DIA** is set in an **AAPS** profile.
-
-![DIA](../images/Profile_DIA.png)
-
-The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works well for them. See the additional reading mentioned above.
 
 (profile-glucose-targets)=
 ## Glucose targets
@@ -273,7 +241,7 @@ Negative **IOB** means the amount of absolute insulin (basal + bolus) in your bo
 Here are some reasons why you may have negative IOB, and what action to take:
 * a too strong basal: tweak your **Profile**
 * too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA too short, resulting in insulin stacking: tweak your **Profile**
+* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Config Builder > Insulin](#Config-Builder-insulin-dia)
 * physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
 
 ## Manage your Profiles
