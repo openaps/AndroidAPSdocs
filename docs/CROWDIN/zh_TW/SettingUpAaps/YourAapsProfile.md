@@ -350,7 +350,7 @@
 (your-aaps-profile-compare-profiles)=
 ### 比較兩個設定檔
 
-你也可以使用 [設定檔助手](#aaps-screens-profile-helper) 分頁來比較不同的設定檔或設定檔切換（在以前的 [設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 中使用的其中一個設定檔的百分比）。
+You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
 ![設定檔助手 1](../images/ProfileHelper1.png)
 

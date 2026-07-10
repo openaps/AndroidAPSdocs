@@ -350,7 +350,7 @@ When taking action on the result of your basal testing, changes in the **Profile
 (your-aaps-profile-compare-profiles)=
 ### 比较两个Profile
 
-您还可以使用[配置文件助手（Profile Helper）](#aaps-screens-profile-helper)选项卡来比较不同的配置文件或配置文件切换（在之前的[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)中使用的某个配置文件的百分比）。
+You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 
