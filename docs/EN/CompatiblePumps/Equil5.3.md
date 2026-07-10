@@ -23,7 +23,7 @@ These instructions are for configuring the Equil insulin pump.
 
 ### Select Equil pump
 
-In [Config Builder > Pump](#Config-Builder-pump), switch to **Equil 5.3**.
+Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** switch to **Equil 5.3**.
 
 ### Settings
 
