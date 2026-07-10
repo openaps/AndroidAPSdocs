@@ -350,7 +350,7 @@ Es ist dabei wichtig, den gesamten **-Datenbank-Datensatz**, der aus mehreren Pr
 (your-aaps-profile-compare-profiles)=
 ### Vergleiche zwei Profile
 
-Du kannst den [Profil-Helfer](#aaps-screens-profile-helper) auch verwenden, um Profile oder [Profilwechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) (um einen Prozentsatz geändertes Profil) miteinander zu vergleichen.
+You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 
