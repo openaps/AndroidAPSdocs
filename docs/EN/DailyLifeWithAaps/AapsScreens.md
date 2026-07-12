@@ -384,7 +384,7 @@ To record carbs without bolusing.
 
 Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) can be set directly by checking the box.
 
-**Time offset**: When will you / have you been eaten carbs (in minutes).
+**Time offset**: When will you / did you eat carbs (in minutes).
 
 **Duration**: To be used for ["extended carbs"](ExtendedCarbs)
 
