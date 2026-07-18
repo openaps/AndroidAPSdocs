@@ -18,6 +18,8 @@ In June 2025 Google [announced changes](https://android-developers.googleblog.co
 This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
 ```
 
+When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles now carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+
 The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
 
 | Wear OS version | Base Android | API level | Impact on AAPS (legacy) watchfaces |
