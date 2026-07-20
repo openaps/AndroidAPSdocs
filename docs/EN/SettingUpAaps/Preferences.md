@@ -243,11 +243,6 @@ When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of 
 * to leave more room to **AAPS** to deal by itself with **BG rise**.
 In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
 
-### Old glycemia time threshold
-
-If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above.
-The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
-
 ### Enabled bolus advisor
 
 Setting hidden in [simple mode](#preferences-simple-mode).
