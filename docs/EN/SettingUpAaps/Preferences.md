@@ -254,7 +254,7 @@ Setting hidden in [simple mode](#preferences-simple-mode).
 
 ![Bolus Advisor](../images/BolusAdvisor.png)
 
-When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pe-bolus and eat later, when your **BG** gets back in range.
+When enabled, when you use the bolus wizard as you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
 
 ### Enabled bolus reminder
 
