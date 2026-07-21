@@ -71,7 +71,7 @@ Dynamic sensitivity is computed with the **current BG** value, and displayed as 
 
 This is done to prevent dosing too much insulin when **BG** is low or predicted to go low.
 
-**Future ISF** uses the same formula as described above, except that it may use **minimum predicted BG** instead of **current BG**. **Minimum predicted BG**, [as calculated in oref1](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), is the minimum value your BG is predicted to go during all the course of the predictions.
+**Future ISF** uses the same formula as described above, except that it may use **minimum predicted BG** instead of **current BG**. **Minimum predicted BG**, [as calculated in oref1](#aaps-screens-how-predictions-become-a-dosing-decision), is the minimum value your BG is predicted to go during all the course of the predictions.
 
 * If the current **BG** is above target  <br/> 
   **and** if **BG** levels are flat, within +/- 3 mg/dL:<br/>BG is used in the formula as follows: `average(minimum predicted BG, current BG)`.

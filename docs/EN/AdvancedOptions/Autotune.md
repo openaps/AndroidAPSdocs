@@ -1,10 +1,27 @@
 # How to use Autotune plugin
 
-Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
-
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
+Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
 
 Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+
+(autotune-how-autotune-calculates-adjustments)=
+## How Autotune calculates adjustments
+
+Autotune looks back over your recent AAPS history — CGM readings, boluses, carbs and temporary basal rates — and works out where your **Profile** (basal rates, ISF, carb ratio) doesn't quite match what actually happened to your BG.
+
+For each 5-minute data point, it compares your **actual BG change** to the change your Profile predicted, and sorts the resulting deviation into one of three buckets:
+
+* deviations that happened with no carbs on board and no insulin activity (used to tune **basal rates**, hour by hour),
+* deviations that happened after a bolus/correction with no carbs (used to tune **ISF**), or
+* deviations that happened while carbs were absorbing (used to tune **carb ratio**).
+
+It then looks at the pattern of deviations in each bucket (using percentiles rather than a simple average, so a few noisy data points don't skew the result) and proposes a new value for that hour/parameter.
+
+To keep any single run from overcorrecting, each Autotune run only ever moves a value a fraction of the way towards what the data suggests: up to 10% for ISF and carb ratio, and up to 20% for each basal segment. Overall drift is further capped by the **Max autosens ratio** / **Min autosens ratio** settings (see [Other settings](#autotune-other-settings) below) — the same bounds that limit Autosens. This is why Autotune is meant to be run repeatedly (day after day, or nightly) rather than trusted after a single run: results should converge gradually, and a big jump on one run is a sign to double check your data (missed carbs, a bad sensor day, _etc._) rather than to trust it blindly.
+
+Autotune can be run three ways: manually as a one-off from within the plugin (as described below), automatically every night via an [automation rule](#autotune-run-autotune-with-an-automation-rule), or — outside of AAPS entirely — as a standalone command-line tool against exported data, which is how some community guides describe using it without a phone actively running AAPS.
+
+*For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
 ## Show the Autotune plugin
 
@@ -111,6 +128,7 @@ Automation Switch Profile feature is only available in Dev/Engineering mode.
 - Number of days of data (default 5): You can define default value with this setting. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
 - Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below. 
 
+(autotune-other-settings)=
 ### Other settings
 
 - Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings

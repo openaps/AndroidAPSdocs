@@ -414,6 +414,8 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 - **Pod expires:** Displays the date and time when the active pod will expire.
 
+- **Pod Hard End:** Displays the end of the pod's grace period (about 8 hours after **Pod expires**, for a maximum pod life of 80 hours). The text turns yellow in the last 4 hours before this time, and red once it has passed. The pod stops delivering insulin at the hard end and must be changed.
+
 - **Pod status:** Displays the status of the active pod.
 
 - **Last connection:** Displays the last time communication with the active pod was achieved.

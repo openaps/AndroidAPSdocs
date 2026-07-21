@@ -74,7 +74,13 @@ While it is a good feature to disable notifications _e.g._ from social media app
 
 Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt.
 
-Once all three permissions show a tick, the "**Permissions Required**" panel is complete and you can press "**NEXT**" on the welcome screen to continue:
+### Full screen alarms
+
+On **Android 14 and newer**, a separate "special access" permission is needed so **AAPS** alarms can wake the screen and show full screen while the phone is locked — essential so you do not miss a critical alarm (for example one raised by an **Automation**).
+
+Press "**Grant**" next to "**Full screen alarms**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+
+Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel is complete and you can press "**NEXT**" on the welcome screen to continue:
 
 ![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
@@ -459,7 +465,7 @@ If you select a pump that connects over Bluetooth (for example **Dash**), a bann
 
 ![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** home screen shows a "**Permissions Required**" panel. The first three permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+Once the Setup Wizard is finished, the **AAPS** home screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
 
 ![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 

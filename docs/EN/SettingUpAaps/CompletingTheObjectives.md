@@ -113,7 +113,7 @@ You don't need to action each and every system recommendation!
 (objectives-objective5)=
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
+As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](#aaps-screens-how-predictions-become-a-dosing-decision), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
 
 Estimated time to complete this objective: **7 days**.
 
@@ -200,7 +200,7 @@ Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 da
 
 This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs).
 
-Additionally, you can use [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
+Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustments) as a one off to check your basals remain accurate or do a traditional basal test.
 
 (objectives-objective9)=
 ## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
