@@ -1,26 +1,27 @@
-# Dexcom G7 and ONE+
+# Dexcom G7, ONE+ and Stelo
 
 
 ##   Fundamental in advance
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Noteworthy is the fact that the G7, ONE+ and Stelo systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
 Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip (direct connection to G7 or ONE+)
+## 1. xDrip (direct connection to G7, ONE+ or Stelo)
 
-- Follow the instructions here: [xDrip G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- This is the only supported setup for the Stelo.
+- Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
 - Select  xDrip in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
 - Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
 
-## 2. Build Your Own Dexcom App (G7)
+## 2. Build Your Own Dexcom App (G7 only)
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Dexcom BYODA is now a very old version of the app and cannot be updated. Not available for ONE+ or Stelo.
 ```
 
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS
@@ -39,7 +40,7 @@ Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer
 Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
 ```
 
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
+**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+ or Stelo.**
 
 ### Install a new patched (!) G7 app and start the sensor
 
@@ -70,7 +71,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 -   Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
 
-## 5. Juggluco
+## 5. Juggluco (G7 and ONE+)
 
 Version 9.0+ required
 
