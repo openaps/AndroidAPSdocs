@@ -265,14 +265,16 @@ In the editor you can give the insulin a **nickname** and set its **Peak** (in m
 
 ![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
-```{admonition} Don't change the peak unless you know what you are doing
-:class: danger
-For advanced users or medical studies it is possible to define a customized insulin activity profile. Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
-```
-
 Pick the preset that matches your insulin, for example **Fiasp**:
 
 ![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
+
+```{admonition} Tap your insulin brand and use the given preset for peak.
+:class: danger
+Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
+```
+
+If you are a new AAPS user, set DIA to 9 hours. More details at [the DIA section of the docs](#Config-Builder-insulin-dia).
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note
