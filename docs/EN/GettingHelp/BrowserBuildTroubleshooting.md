@@ -11,8 +11,8 @@ This page collects troubleshooting tips for the [Browser build](../SettingUpAaps
 (aaps-ci-preparation-web)=
 ### aaps-ci-preparation web page
   - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
-  - If you see the screen below, it means you have been inactive for a while, and the file manager has already shut down the local server.
-  - Please reopen aaps-ci-preparation.html using the file manager app and complete the remaining steps.
+  - This local server times out after about 10 minutes. If you see the screen below, the file manager has already shut down the local server.
+  - Close **both** the preparation page and the file manager app, then reopen aaps-ci-preparation.html from the file manager and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 

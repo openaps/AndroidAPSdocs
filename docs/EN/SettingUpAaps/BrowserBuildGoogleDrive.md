@@ -12,6 +12,10 @@ No matter which of the prior sets of instructions you followed (Option 1 or Opti
 
 Note: If you already followed this part in the video, you can now skip to [Step 4 – Build the APK](BrowserBuildAPK.md).
 
+```{warning}
+The preparation page relies on a local server started by File Manager Plus, which **times out after about 10 minutes**. If the Google authorization does not start or the page fails, close **both** the preparation page and File Manager Plus, reopen `aaps-ci-preparation.html` from File Manager Plus, and start this step again. See [troubleshooting](#aaps-ci-preparation-web).
+```
+
 Return to the File Explorer Plus tab.
 
 Scroll down to the Google Drive Auth section and tap Start Auth.
