@@ -37,3 +37,18 @@ This page collects troubleshooting tips for the [Browser build](../SettingUpAaps
 
 `actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`.
  Actions in this workflow must be: within a repository owned by `xxxxx`
+
+(aaps-ci-workflow-permissions)=
+### Check GitHub Workflow Permissions Settings
+  - If the build fails immediately with an "Invalid workflow file" error similar to the one below, the default workflow permissions of your repository are too restrictive:
+
+```
+Invalid workflow file
+The workflow is not valid. .github/workflows/aaps-ci.yml (Line: 361, Col: 3):
+Error calling workflow 'xxxxx/AndroidAPS/.github/workflows/cleanup-workflow-runs.yml@...'.
+The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'actions: none'.
+```
+
+  - Make sure Workflow permissions are set to “Read and write permissions” (Settings → Actions → General → Workflow permissions), then save and re-run the build workflow.
+
+  ![aaps_ci_workflow_permissions](../images/Building-the-App/CI/aaps-ci-workflow-permissions.jpg)
