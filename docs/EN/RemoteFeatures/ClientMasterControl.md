@@ -66,7 +66,7 @@ Actions that can be triggered from a client in v4: **bolus**, **carbs / eCarbs**
 ```{admonition} Before you start
 :class: important
 - The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **client** runs **AAPSClient** (or **AAPSClient2** for a second patient — see [AAPSClient vs AAPSClient2](#remotecontrol-aapsclient-versions)).
+- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [AAPSClient vs AAPSClient2](#remotecontrol-aapsclient-versions)).
 - **Both** phones use **NSClientV3** pointed at the **same** Nightscout, and are showing *connected*. Enabling **websockets** on **both** is strongly recommended for fast, near-instant round-trips.
 ```
 
@@ -102,8 +102,7 @@ The PIN protects the pairing secret that is exchanged through Nightscout. Share 
 
 On the client, open **Manage → Pair with master**, then **enter the PIN** shown on the master. The client uses the PIN to securely retrieve the pairing offer through Nightscout and complete pairing.
 
-<!-- 📷 SCREENSHOT NEEDED: client "Pair with master" screen in the UNPAIRED state,
-     showing the enter-PIN entry. (The screenshot below shows the already-paired state.) -->
+![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
 Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
 
@@ -222,11 +221,11 @@ For Nightscout / synchronization problems first see [Troubleshooting NSClient](.
 ---
 
 <!-- =====================================================================
-     SCREENSHOTS STILL TO ADD (placeholders marked inline above):
-       1. Client "Pair with master" in the UNPAIRED state (enter PIN)
-       2. (optional) Wear OS confirmation relayed from the master
+     SCREENSHOTS STILL TO ADD:
+       1. (optional) Wear OS confirmation relayed from the master
      Already included:
-       - authorized_clients_master.png       (master: Authorized clients list)
+       - authorized_clients_master.png       (master: Authorized clients list, Active client)
+       - pair_with_master_unpaired.png       (client: pairing screen, unpaired PIN entry)
        - pairing_pin_master.png              (master: one-time pairing PIN — expired demo PIN)
        - pair_with_master_client.png         (client: pairing screen, paired state)
        - confirmation_master_authored.png    (client: master-authored scene confirmation)

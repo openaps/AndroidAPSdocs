@@ -143,6 +143,7 @@ Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling
 :caption: 6) Remote AAPS features
 
 Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
+The AAPSClient app <./RemoteFeatures/AapsClient.md>
 Remote control <./RemoteFeatures/RemoteControl.md>
 Master ↔ Client control <./RemoteFeatures/ClientMasterControl.md>
 SMS Commands <./RemoteFeatures/SMSCommands.md>
