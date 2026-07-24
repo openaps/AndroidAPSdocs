@@ -90,8 +90,7 @@ Turn on **Allow client control**. This is the master kill-switch: with it off, n
 
 Tap the **+** button to add a client. Enter a **device name** (so you can recognize it in the list); the master then displays a short **pairing PIN**. This PIN is **one-time** and **expires after about two minutes**.
 
-<!-- 📷 SCREENSHOT NEEDED: master pairing screen showing the PIN.
-     Use a DEMO/expired PIN only — it protects the pairing secret and must not be a live one. -->
+![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
@@ -224,11 +223,11 @@ For Nightscout / synchronization problems first see [Troubleshooting NSClient](.
 
 <!-- =====================================================================
      SCREENSHOTS STILL TO ADD (placeholders marked inline above):
-       1. Master pairing screen: PIN  (use a demo/expired PIN!)
-       2. Client "Pair with master" in the UNPAIRED state (enter PIN)
-       3. (optional) Wear OS confirmation relayed from the master
-     Already included (captured from real master + client devices):
+       1. Client "Pair with master" in the UNPAIRED state (enter PIN)
+       2. (optional) Wear OS confirmation relayed from the master
+     Already included:
        - authorized_clients_master.png       (master: Authorized clients list)
+       - pairing_pin_master.png              (master: one-time pairing PIN — expired demo PIN)
        - pair_with_master_client.png         (client: pairing screen, paired state)
        - confirmation_master_authored.png    (client: master-authored scene confirmation)
        - carbs_confirmation_client.png       (client: master-authored carbs confirmation)

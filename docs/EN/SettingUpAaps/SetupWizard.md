@@ -231,6 +231,19 @@ The remaining sections can be left at their defaults for now. They are described
 
 Go back to the list of plugins and press "**NEXT**" to go to the next screen.
 
+## Client control
+
+From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
+
+There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**.
+
+- "**Authorized clients**" — manage the paired client devices allowed to control this master.
+- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+
+![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+
+Press "**NEXT**" to go to the next screen.
+
 ## Name
 
 Here you set a name to identify this **AAPS** instance. It is shown in reports and when synchronizing.
