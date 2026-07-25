@@ -168,7 +168,7 @@ Pairing does more than relay one-off actions — it also keeps the **configurati
 
 The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
 
-In the example below the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication* or *General*:
+In the example below the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
 
 ![Configuration list on a client — the mobile icon marks plugins synced from the master](../images/v4/Configuration/configuration_plugins.png)
 
@@ -178,7 +178,7 @@ Connection details that are unique to each device — most importantly the **NSC
 
 A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**.
 
-Inside a plugin's settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Use dynamic sensitivity* and *DynamicISF adjustment factor* are synced (mobile icon), while device-local settings such as *Maximum basal rate* and *Max IOB for SMB* are not:
+Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
 
 ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
 

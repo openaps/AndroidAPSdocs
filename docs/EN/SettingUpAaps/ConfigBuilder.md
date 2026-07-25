@@ -40,9 +40,9 @@ A small **mobile (phone) icon** next to a category or setting means that item is
 
 On a **client** (**AAPSClient**) these items are **kept in sync with the master**: in the screenshot above the icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
 
-The same icon also appears **inside a plugin's settings**, next to the individual preferences that are synced. In the example below *Use dynamic sensitivity* and *DynamicISF adjustment factor* carry the icon, while device-local settings such as *Maximum basal rate* and *Max IOB for SMB* do not:
+The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below *Absorption cutoff* carries the icon; settings without the icon are configured per device:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/Configuration/setting_synced_icon.png)
+![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 Items **without** the icon are configured **per device**. The most important example is the **NSClient (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
 

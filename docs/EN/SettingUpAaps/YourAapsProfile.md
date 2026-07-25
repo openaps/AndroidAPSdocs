@@ -262,7 +262,7 @@ Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**
 - **BAS** — basal rates
 - **TARG** — target range
 
-![The profile editor — IC / ISF / BAS / TARG tabs](../images/v4/Profiles/profile_editor.png)
+![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
 
 Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
 
@@ -322,15 +322,12 @@ You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles)
 Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
 
 * Your **Profiles** are stored in the **AAPS** database.
-* If enabled, **Profiles** are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
-
-![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
-
+* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
 * They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
 ### Editing Profiles from Nightscout
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
+If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen.
 
 This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
 
