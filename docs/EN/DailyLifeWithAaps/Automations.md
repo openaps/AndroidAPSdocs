@@ -11,7 +11,7 @@
 
 Automation performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a Wi-Fi SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
 
-Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+Automation rules are created and modified from the **Automation** screen (**Manage → Automation**). Each rule is defined by two properties:
 
 - One or more conditions or 'triggers' that start an action.
 
@@ -65,30 +65,28 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 ## Where are Automations located in AAPS?
 
-Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+Open **Manage** in the bottom navigation of the main screen and select **Automation**.
 
 ## How can I set up an Automation?
 
-To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
+To set up an **Automation**, press the **+** button on the Automation screen to create a ‘rule’:
 
 ![Automation create](../images/automation_create.png)
 
-* give your ‘rule’ a title;
-* select at least one ‘Condition’;
+* give your ‘rule’ a title (Task name);
+* press "**EDIT**" under **Condition** and add at least one trigger:
 
-![Automation condition](../images/automation_condition.png)
+![Automation triggers](../images/automation_triggers.png)
 
-* select one ‘Action’;
+* press "**ADD**" under **Action** and select one action:
 
-![Automation action](../images/automation_action.png)
+![Automation actions](../images/automation_actions.png)
 
-* check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
+* save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
 
-![Automation](../images/automation_2024-10-26_17-48-05.png)
+![Automation activated](../images/automation_2024-10-26_17-48-05.png)
 
-
-
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
+To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
 
 ![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
@@ -161,7 +159,7 @@ Several conditions can be linked with
 
 **Options:**
 
-* in the **config builder** (Automation), the user can select their required location service.
+* in [Settings > Automation](#preferences-maintenance-settings), the user can select their required location service.
 
 **Trigger:** location service
 
@@ -194,7 +192,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 **Options:** 
 
 * **BG** must be between 72 mg/dL and 270 mg/dL (4 mmol/L and 15 mmol/L)
-* **TT** works only if there is no previous Temp Target
+* **TT** works only if there is no previous Temp Target — **AAPS** adds this automatically as a "**Preconditions: Temp target not exists**" line to the rule
 
 **Actions:** stop **Temp Target**
 
@@ -236,7 +234,7 @@ Below are examples of **Automations**. Further discussion on **Automations** and
 
 ### Low Glucose Temp Target
 
-This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG** is at a certain threshold. 
+This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
 ![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
 
@@ -310,7 +308,7 @@ Note : Automation will not trigger **at all** if you have not done a manual sett
 
 ## Automation Logs
 
-**AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab. 
+**AAPS** shows a log of the most recent **Automation** events at the bottom of the **Automation** screen, below the rules. Use it to verify that your rules triggered when you expected them to.
 
 In the example below the logs indicate:
 
@@ -333,15 +331,18 @@ The **Automation** will:
 
 ![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
+```{admonition} Note
+:class: note
+The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the log looks slightly different, but it carries the same information.
+```
+
 ## Troubleshooting
 
 * Problem: __My automations are not being triggered by AAPS?__
 
-Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
+Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
 
-## Troubleshooting
-
-![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
+![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
 * Problem: __My automations are being triggered in the wrong order.__
 
