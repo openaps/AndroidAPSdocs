@@ -121,7 +121,7 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
 **Swipe left** to the [**DASH tab**](#omnipod-dash-tab) where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png)	'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
+![Refresh_LOGO](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)	'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png)	'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
 
@@ -364,7 +364,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ### Buttons
 
-![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png)	Sends a refresh command to the active pod to update communication.
+![Refresh_Icon](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)	Sends a refresh command to the active pod to update communication.
 
   - *Use to refresh the pod status and dismiss status fields that contain the text (uncertain).*
 
@@ -377,7 +377,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
   - *Button is displayed only when pod time is past expiration warning time.*
   -  *Upon successful dismissal, this icon will no longer appear.*
 
-![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png)	Resumes the currently suspended insulin delivery in the active pod.
+![RESUME_Icon](../images/omnipod/ICONS/omnipod_overview_resume.png)	Resumes the currently suspended insulin delivery in the active pod.
 
 
 

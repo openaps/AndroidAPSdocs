@@ -135,7 +135,7 @@ Use button "Authenticator setup > Reset Authenticators" if you want to remove pr
 
 1)	To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
 
-![image](../images/remote-control-15.png)
+![image](../images/remote-control-06.png)
 
 If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
 
