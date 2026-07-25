@@ -117,7 +117,7 @@ Up to 30h hours are taken into accord for **AAPS** calculations. So even after y
 
 The current profile is displayed next to the star icon.
 
-Short press the profile name to view profile details. Long press the profile name to open the [Profile screen](#aaps-screens-profile), where you can [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Tap the profile name to open the [Profile screen](#aaps-screens-profile), where you can view the profile details and [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Profile with an active profile switch](../images/Home2020_ProfileSwitch.png)
 

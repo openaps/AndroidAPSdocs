@@ -51,7 +51,7 @@ Each task shows its status (**1**): the orange "**Not completed yet**" turns int
 
 Tasks to complete **Objective 2** are:
 - Set your **Profile** to 90% for a duration of 10 min.
-  - _Hint_: Long-press your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+  - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
   - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.06U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
 - Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-section-c-bg-loop-status) in **AAPS** for a duration of 1h.
   - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
