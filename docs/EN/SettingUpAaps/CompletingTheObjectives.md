@@ -45,7 +45,7 @@ Note - *You may need to wait for the next sensor glucose reading to arrive befor
 ## Objective 2: Learn how to control AAPS
 
 **Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below.
-Each task shows its status: the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
+Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
 
 ![Screenshot objective 2](../images/Objective2_V2_5.png)
 
