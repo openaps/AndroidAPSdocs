@@ -292,14 +292,14 @@ Profile helper offers data sets from two different hospitals for children to fin
 
 ![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are in **Profile 1**.
+1. Make sure you are on the **Profile 1** tab.
 2. In **Profile type**, make sure you have "Default profile" selected.
 3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change screen by clicking on **Profile 2** on the right.
+4. Change to the **Profile 2** tab.
 5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** or **Profile 2**.
+6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
+7. Open the **Comparation** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
 
@@ -342,12 +342,12 @@ You can also use the [Profile Helper](#aaps-screens-profile-helper) tab to compa
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 
-1. Make sure you are in **Profile 1**.
+1. Make sure you are on the **Profile 1** tab.
 2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
 3. Choose the **Profile** you want to compare from.
-4. Change screen by clicking on **Profile 2** on the right.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
+4. Change to the **Profile 2** tab.
+5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
 6. Choose the **Profile Switch** you want to compare to.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+7. Open the **Comparation** tab. Comparison of the two profiles will be displayed (see screenshot below).
 
 ![Profile Helper 2](../images/ProfileHelper2.png)
