@@ -34,11 +34,11 @@ Switch to your mobile and start the Google Drive app. It is a preinstalled app a
 
 ![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by double click on the filename in the Google Drive App on the mobile.
+Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
 
 ![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, please allow it for that short moment and disallow it afterwards, as it is a security risk to leave it enabled all the time.
+In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
 
 ![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
