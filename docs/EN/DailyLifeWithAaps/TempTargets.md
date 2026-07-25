@@ -11,23 +11,23 @@ Temporary targets can be defined within those boundaries :
 |         | Temporary target       |
 |---------|------------------------|
 | Minimum | 4 mmol/L or 72 mg/dL     |
-| Maximum | 11.1 mmol/L or 200 mg/dL |
+| Maximum | 10 mmol/L or 180 mg/dL |
 
-**AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
+**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
 
 Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth. 
 
 A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**. 
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**,  and **Temp-Target-Hypo**.
+The sections below summarize the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**,  and **Temp-Target-Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
 
 ### TT - Activity
 
 ![TT Activity](../images/TempTarget2.png)
 
-**BG Target (depending on users' settings)**
+**BG Target (default preset, adjustable)**
 
-AAPS will aim to reach 8 mmol/L or 144 mg/dL for 40 minutes
+AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
 
 **Other considerations users may wish to factor in when selecting**:
 
@@ -46,11 +46,11 @@ Users may also wish to consider:
 
 ### TT - Eating soon
 
-![TT Activity](../images/TempTarget1.png)
+![TT Eating soon](../images/TempTarget1.png)
 
-**BG Target (depending on users' settings)**
+**BG Target (default preset, adjustable)**
 
-AAPS will aim to reach 5 mmol/L or 90 mg/dL for 30 minutes
+AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
 
 **Other considerations users may wish to factor in when selecting**:
 
@@ -63,11 +63,11 @@ Depending on **BG** level, **AAPS** will "increase" insulin usage within the use
 
 ### TT - Hypo
 
-![TT Activity](../images/TempTarget3.png)
+![TT Hypo](../images/TempTarget3.png)
 
-**BG Target (depending on users' settings)**
+**BG Target (default preset, adjustable)**
 
-AAPS will aim to reach 7 mmol/L or 126 mg/dL for 30 minutes
+AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
 
 **Other considerations users may wish to factor in when selecting**:
 
@@ -98,7 +98,11 @@ The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always e
 
 ### Activating a temporary target
 
-Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. The temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+
+![Activation confirmation](../images/TempTarget8.png)
+
+After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
 
 ```{admonition} Editing the numbers is a one-off — it does not change the preset
 :class: important
@@ -127,6 +131,8 @@ Your presets are part of the synced configuration, so they are shared across you
 
 A temporary target can also be set without opening this screen:
 
+- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
+- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
 - from a **Wear OS watch** (the **Temp Target** menu item / tile),
 - from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
 - as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
@@ -136,64 +142,44 @@ A temporary target can also be set without opening this screen:
 
 (TempTargets-where-can-i-select-a-temp-target)=
 ## Where can I select a Temp-Target?
-In the **Actions** tab in **AAPS**.
 
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
+The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
 
-![Carbs TT](../images/TempTarget4a.png)
+![Target chip on the main screen](../images/TempTarget6.png)
 
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
 
-![Carbs TT](../images/TempTarget6.png)
+(TempTargets-carbs-dialog)=
+When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+![TT toggles in the Carbs dialog](../images/TempTarget5.png)
 
-![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+```{admonition} Automatic Hypo TT
+:class: note
+If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+```
 
+(TempTargets-change-preset-defaults)=
 ## Where can I change the default Temp-Target and override with my own preferences?
 
-To reconfigure the ‘BG target range’ and ‘duration’ allocated to the user’s default **Temp-Target** settings, go to the menu in **AAPS** on the top right hand corner and
-1. select **Preferences** 
-2. scroll down to 'Overview’ 
-3. select ‘Default Temp-Targets’
-4. step 4 indicates (below) where to change **TT- Eating soon** time period
-5. step 5  indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
+Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
 
-![Custom TT](../images/TempTarget7.png)
+1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
+2. Swipe to the preset you want to change.
+3. Adjust **Temporary target** and/or **Duration** in the editor.
+4. Tap the **Save** icon that appears in the top toolbar.
 
+![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+
+While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
 
 ## How do I cancel a Temp-Target?
 
-To cancel a **Temp-Target** running:
+While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears. Tap it and confirm:
 
-Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+![Cancelling a running temp target](../images/TempTarget9.png)
 
-![Custom TT](../images/TempTarget8.png)
-
-Or short-click on the ‘BG Target’ in the yellow/green box located in the top right corner of **AAPS**, and select ‘cancel’ as shown below:
-
-![Actions TT](../images/TempTarget9.png)
-
-
-## How do I select a “Default-Temp-Targets”
-
-In the **Actions** tab in **AAPS**.
-
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
-
-![Actions TT](../images/TempTarget4.png)
-
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
-
-![BG TT](../images/TempTarget6.png)
-
-Or in the **Carbs** button
-
-1. selecting the desired **Temp-Target** in the shortcuts
-
-![Carbs TT](../images/TempTarget5.png)
+A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
 
 (TempTargets-hypo-temp-target)=
 ## Hypo Temp-Target
@@ -202,13 +188,13 @@ Or in the **Carbs** button
 
 Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**. 
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating _'Enable SMB with high Temp-Target'_ in **Preferences** (see further below):
+Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating _'Enable SMB with high temp target'_ in **Settings** → **OpenAPS SMB** (see further below):
 
-- In (Advanced, objective 9): the user can enable _“High Temp-Targets raises sensitivity”_ for **Temp-Targets** of 100 mg/dL or 5.5 mmol/L or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- In (Advanced, objective 9): the user can enable _“High temp target raises sensitivity”_ for **Temp-Targets** of 100 mg/dL or 5.5 mmol/L or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
-- In (Advanced, objective 9): the user can deactivate _“SMB with high temp target”_, so that even if **AAPS** has COB > 0, “SMB with Temp-Target” or “SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- In (Advanced, objective 9): the user can deactivate _“Enable SMB with high temp target”_, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
-Note: if the user enters carbs with the carb button and your blood glucose is less than 72 mg/dL or 4 mmol/L, **Temp-Target Hypo** is automatically enabled by **AAPS**.
+Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
 
 (TempTargets-activity-temp-target)=
 ## Activity Temp-Target
@@ -221,9 +207,9 @@ New users to **AAPS** may need to experiment and personalize their **Temp-Target
 
 Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduced insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. 
 
-Advanced, objective 9: users can enable _'High Temp-Targets raises sensitivity'_ for **Temp-Targets** higher than or equal to 100 mg/dL or 5.5 mmol/L in OpenAPS **SMB**. Then **AAPS** is more sensitive. 
+Advanced, objective 9: users can enable _'High temp target raises sensitivity'_ for **Temp-Targets** higher than or equal to 100 mg/dL or 5.5 mmol/L in OpenAPS **SMB**. Then **AAPS** is more sensitive. 
 
-Additionally, if _'SMB with high Temp-Target'_ is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, _'SMB with Temp-Target-_ or _'SMB always'_ enabled and OpenAPS **SMB** active.
+Additionally, if _'Enable SMB with high temp target'_ is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, _'Enable SMB with low temp target'_ or _'Enable SMB always'_ enabled and OpenAPS **SMB** active.
 
 (TempTargets-eating-soon-temp-target)=
 ## Eating soon Temp-Target
@@ -238,8 +224,8 @@ Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have
 
 ## How do I turn off SMB during Temp-Targets?
 
-To action this select in **Preferences** > and deactivate _'Enable SMB with high Temp-Target'_. 
+To action this open **Settings** → **OpenAPS SMB** and deactivate _'Enable SMB with high temp target'_.
 
-![Carbs TT](../images/TempTargetSMB.png)
+![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, _'SMB with Temp-Target'_ or _'SMB always'_ enabled and OpenAPS SMB active.
+This will ensure **AAPS** will not give **SMBs**, even with COB > 0, _'Enable SMB with low temp target'_ or _'Enable SMB always'_ enabled and OpenAPS SMB active.
