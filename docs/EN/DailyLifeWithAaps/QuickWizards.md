@@ -94,6 +94,8 @@ Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** 
 - **⧉ Clone** — duplicate one as a starting point.
 - **🗑️ Delete** — remove one.
 
+With two or more QuickWizards you can also change their order in the carousel: tap the **⋮** menu in the top bar and choose **Reorder**, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+
 QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
 
 ---

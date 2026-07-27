@@ -23,6 +23,12 @@ The Profile screen shows your profiles as a **swipeable card carousel**. The car
 
 The action bar at the bottom acts on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete** and **▶ Activate**. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
 
+### Reordering profiles
+
+If you have more than one profile you can choose their order in the carousel: tap the **⋮** menu in the top bar and choose **Reorder**. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+
+![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+
 ### Activating a profile
 
 Select a profile and tap **▶ Activate**. A **profile switch** dialog lets you tailor how it is applied:

@@ -125,6 +125,8 @@ To put a built-in preset back the way it shipped, select it and tap the **↺ Re
 - **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
 - **🗑️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
 
+Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **⋮** menu in the top bar and choose **Reorder**, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+
 Your presets are part of the synced configuration, so they are shared across your master and paired clients.
 
 ### Other ways to set a temporary target
