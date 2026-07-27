@@ -4,7 +4,7 @@
 
 The loop status is shown on the main screen with one of the icons below. 
 
-**AAPS** offers several loop modes, such as Open Loop (7), Closed Loop (1) and Low Glucose Suspend (LGS - 2).
+**AAPS** offers several loop modes, such as Closed Loop (1), Low Glucose Suspend (LGS - 2) and Open Loop (3).
 
 See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
 
@@ -63,7 +63,7 @@ Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to in
 
 ![SMBs on main graph](../images/SMBs.png)
 
-SMBs are shown on the main graph with blue triangles. Tap on the triangle to see how much insulin was delivered, or use the [Treatments tab](#aaps-screens-treatments).
+SMBs are shown on the main graph with blue triangles. Tap on the triangle to see how much insulin was delivered, or use the [Treatments history](#aaps-screens-treatments).
 
 **SMB's** features contain some safety mechanisms:
 
@@ -100,7 +100,7 @@ A good recommendation for setting this parameter is:
 
 For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 
-**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
+**AAPS** limits this value as a 'hard limit' according to [Settings > Safety > Patient age](#preferences-patient-type). The hard limits are as follows:
 
 * Child: 2
 * Teenager: 5
@@ -123,7 +123,7 @@ A good start for setting this parameter is:
 
 Be careful and patient when adjusting your **max-IOB**. It is different for everyone and can also depend on the average total daily dose (TDD). 
 
-**AAPS** limits this value as a 'hard limit' according to [Preferences > Treatments safety > Patient Type](#preferences-patient-type). The hard limits are as follows:
+**AAPS** limits this value as a 'hard limit' according to [Settings > Safety > Patient age](#preferences-patient-type). The hard limits are as follows:
 
 * Child: 7
 * Teenager: 13
@@ -135,11 +135,11 @@ Be careful and patient when adjusting your **max-IOB**. It is different for ever
 
 Note : When using **SMB**, the **max-IOB** is calculated differently than in AMA. In **AMA**, maxIOB is a safety-parameter for basal **IOB**, while in SMB-mode, it also includes bolus IOB.
 
-### Enable dynamic sensitivity
+### Use dynamic sensitivity
 
 This is the [DynamicISF](../DailyLifeWithAaps/DynamicISF.md) feature. When enabled, new settings become available. Settings are explained on the [DynamicISF](#dyn-isf-preferences) page.
 
-### Use Autosens feature
+### Use Autosens
 
 This is the [Autosens](#Open-APS-features-autosens) feature. When using DynamicISF, Autosens cannot be used, since they are two different algorithms altering the same variable (sensitivity).
 
@@ -154,12 +154,12 @@ If the target is modified due to sensitivity detection, it will be displayed wit
 
 ![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
-This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+This setting is available when one of "Use dynamic sensitivity" or "Use Autosens" are enabled.
 
 #### Resistance lowers target
 If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
 
-This setting is available when one of "Enable dynamic sensitivity" or "Enable Autosens feature" are enabled.
+This setting is available when one of "Use dynamic sensitivity" or "Use Autosens" are enabled.
 
 ### Enable SMB
 Enable this to use SMB functionality. If disabled, no **SMBs** will be given. 
@@ -167,13 +167,13 @@ Enable this to use SMB functionality. If disabled, no **SMBs** will be given.
 When enabled, new settings become available.
 
 (Open-APS-features-enable-smb-with-high-temp-targets)=
-#### Enable SMB with high temp targets
+#### Enable SMB with high temp target
 
 If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100 mg/dL or 5.6 mmol/L, regardless of **Profile** target). Use caution when enabling it: **SMBs** can become overly aggressive if your settings are not well tuned or if your **Profile** is subject to frequent variation (for example, with children).
 
 This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100 mg/dL or 5.6 mmol/L. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB — apart from a low **Temp Target** such as **Eating Soon** (or any **Temp Target** below 100 mg/dL or 5.6 mmol/L), which may still deliver **SMBs** to drive **BG** towards the target.
 
-If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with temp targets** is also enabled. 
+If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with low temp target** is also enabled. 
 
 (Open-APS-features-enable-smb-always)=
 #### Enable SMB always
@@ -188,8 +188,8 @@ If this setting is enabled, SMB is enabled when the COB is greater than 0.
 
 This setting is not visible if "Enable SMB always" is switched on.
 
-#### Enable SMB with temp targets
-If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp targets** is disabled, SMB will be enabled when a low temp target is set (below 100 mg/dL or 5.6 mmol/L) but disabled when a high temp target is set.
+#### Enable SMB with low temp target
+If this setting is enabled, SMB is enabled when a temp target is set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp target** is disabled, SMB will be enabled when a low temp target is set (below 100 mg/dL or 5.6 mmol/L) but disabled when a high temp target is set.
 
 This setting is not visible if "Enable SMB always" is switched on.
 
@@ -204,14 +204,14 @@ This setting is only available if **AAPS** detects that you are using a [reliabl
 Noisy data could cause **AAPS** to believe BG is rising really fast, resulting in the administration of unnecessary SMBs. For more information about noise and data smoothing, see [here](../CompatibleCgms/SmoothingBloodGlucoseData.md).<br/>
 This setting is not visible if "Enable SMB always" is switched on.
 
-#### How frequently SMBs will be given in min
+#### SMB interval
 This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. 
 Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g. if you want SMB to be given every loop run, set this to 3 minutes.
 
 Default value: 3 min.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
-#### Max minutes of basal to limit SMB to
+#### Max minutes of basal to limit SMB
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
@@ -220,11 +220,11 @@ It is recommended not to set the value higher than 90 minutes, as this would lea
 
 Default value: 30 min.
 
-#### Max minutes of basal to limit SMB to for UAM
+#### UAM max minutes of basal to limit SMB
 
 This setting allows you to adjust the strength of SMB during UAM, when there are no more carbs.
 
-Default value : the same as **Max minutes of basal to limit SMB to**.
+Default value : the same as **Max minutes of basal to limit SMB**.
 
 This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
 
@@ -234,7 +234,7 @@ With this option enabled, the SMB algorithm can recognize unannounced meals. Thi
 **Therefore, UAM should always be activated when using SMB.**  
 
 (key-aaps-features-minimal-carbs-required-for-suggestion)=
-### Minimal carbs required for suggestion
+### Carbs required threshold
 
 Minimum grams of carbs to display a carbs suggestion alert. 
 Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes. 
@@ -295,10 +295,10 @@ The default value is 2, but you should rise this parameter slowly to see how muc
 
 *See also [overview of hard-coded limits](#Open-APS-features-overview-of-hard-coded-limits).*
 
-### Enable AMA Autosens
+### Use Autosens (AMA)
 Here, you can choose, if you want to use the [sensitivity detection](../DailyLifeWithAaps/SensitivityDetectionAndCob.md) autosens or not.
 
-### Autosens adjust temp targets too
+### Autosens adjust targets
 If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets **AAPS** work more 'aggressive' or not. The actual target might be reached faster with this.
 
 ### Advanced Settings
