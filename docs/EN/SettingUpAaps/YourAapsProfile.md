@@ -277,7 +277,7 @@ In **AAPS** v3 the **Profile** tab was reached from the top menu or hamburger me
 - blue arrow: duplicate
 ```
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
+If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** screen may not always show the actual profile being used - e.g. if you made a profile switch from the main screen, it may differ from the profile actually shown in the **Profile** screen as there is no connection between these.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
 ### Build a Profile from scratch for a kid

@@ -39,7 +39,7 @@ If you plan to use the android wear app to bolus or change settings then you nee
 #### Disconnect pump
 If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](#AapsScreens-loop-status).
+The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the AAPS main screen: press it and select **Disconnect pump** with the duration you need.
 
 #### Recommendations not only based on one single CGM reading
 For safety, recommendations made are based on not one CGM reading but the average delta.  Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
@@ -108,12 +108,12 @@ Looping can reduce the pump battery faster than normal use because the system in
 
 #### Changing reservoirs and cannulas
 The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
-* Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
-* Now nnect the pump and change the reservoir as per pump instructions.
-* Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](#screens-action-tab) in the actions tab just to record the change.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+* Press the [loop icon](#AapsScreens-loop-status) on the main screen of AAPS and select **Suspend loop** for 1 hour.
+* Now disconnect the pump and change the reservoir as per pump instructions.
+* Also priming and filling tube and cannula can be done directly on the pump. In this case use [Prime/Fill](#aaps-screens-careportal) (in the expanded status panel on the main screen, in the **Manage** sheet, or as a QuickLaunch button) just to record the change.
+* Once reconnected to the pump continue the loop by pressing the loop icon and selecting **Resume**.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate.  On the Actions (Act) tab, use the [PRIME/FILL button](#screens-action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling.  You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts.  See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate.  Use the [Prime/Fill button](#aaps-screens-careportal) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set the default amount buttons in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them.  See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ### Wallpaper
 
@@ -318,9 +318,9 @@ If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll
 
 The red and yellow triangles are a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
 
-Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the red triangle. Open your [BG source screen](#aaps-screens-bg-source) (**Configuration** → **BG Source** → **Open plugin**), long press one line you want to delete, check one of each lines that are doubled. You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
 
-Once the red triangle is gone, AAPS does not go back to **Closed Loop** by itself. Press and hold the loop icon and select **Closed Loop** again.
+Once the red triangle is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
 
 Possible origin of the problem: xDrip and/or NS backfilling BGs.
 

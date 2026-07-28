@@ -168,10 +168,10 @@ Define which action buttons are visible on the main screen: tap the small **gear
 (Preferences-quick-wizard)=
 ### Quick Wizard
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten.
+Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. Useful for standard meals frequently eaten.
 
 For each button, you define the carbs and calculation method for the bolus.
-Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Then, you define during which time period the button will be visible on your main screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the main screen, depending on the time of day.
 
 To manage your Quick Wizard presets, type "QuickWizard" in the main screen search bar and open **QuickWizard - Manage quick wizard presets**.
 
@@ -249,7 +249,7 @@ The Superbolus option of **AAPS** 3.x is not available as a setting in **AAPS** 
 
 ## Loop
 
-See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
 ### Open mode minimum change
@@ -297,7 +297,7 @@ The min_5m_carbimpact does define the default carb absorption impact per 5 minut
 
 Standard value for AMA is 3, for SMB it's 8.
 
-The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+The COB graph on the main screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
 ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
 

@@ -466,7 +466,7 @@ Go back, then press "**FINISH**" to complete the Setup Wizard:
 
 ![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the home screen of **AAPS**. You may see an information message confirming the profile switch you just made — tap "**SNOOZE**" to dismiss it.
+After pressing "**FINISH**" you arrive at the main screen of **AAPS**. You may see an information message confirming the profile switch you just made — tap "**SNOOZE**" to dismiss it.
 
 If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually. 
 
@@ -476,7 +476,7 @@ If you select a pump that connects over Bluetooth (for example **Dash**), a bann
 
 ![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** home screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
 
 ![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 

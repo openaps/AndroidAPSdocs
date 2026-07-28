@@ -22,7 +22,7 @@ __Autosens__ = calculation of sensitivity to insulin between a period of a 24 an
 
 __Azure__ = cloud computing platform to host __Nightscout__ web app Azure → see also __Nightscout__.
 
-__BAT__ = status light low battery on __AAPS’__ home screen __Preferences__, Screenshots → see also __CAN__ / __RES__ / __SEN__.
+__BAT__ = status light for low pump battery, shown in the status row of __AAPS'__ main screen → see also __CAN__ / __RES__ / __SEN__.
 
 __BG__ =  blood glucose.
 
@@ -40,9 +40,9 @@ __BYODA__ = Build Your Own Dexcom App.
 A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
 
 __CAGE__ = Cannula AGE.
-Displayed on __AAPS’__ homescreen and Nightscout providing the user’s information entered in the Actions tab / menu → see also __Nightscout__.
+Displayed on __AAPS'__ main screen and in Nightscout, based on the user's __Prime/Fill__ careportal entries → see also __Nightscout__.
 
-__CAN__ = status light overdue cannula change on the __AAPS’__ homescreen __Preferences'__ → see also __BAT__ / __RES__ / __SEN__.
+__CAN__ = status light for overdue cannula change, shown in the status row of __AAPS'__ main screen → see also __BAT__ / __RES__ / __SEN__.
 
 __CGM__ = Continuous Glucose Monitor → see also __FGM__.
 
@@ -130,14 +130,14 @@ __Profile switch__ = (temporary) switch  of the user’ __Profile__ to a differe
 
 __Profile Percentage__ = a (temporary_ percentage increase or decrease applied to a user’s __Profile__ for a selected time period.
 
-__RES__ = status light overdue reservoir change on the __AAPS’__ homescreen Preferences, Screenshots → see also __BAT__ / __CAN__ / __SEN__.
+__RES__ = status light for overdue reservoir change, shown in the status row of __AAPS'__ main screen → see also __BAT__ / __CAN__ / __SEN__.
 
 __RileyLink__ = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication RileyLink.
 
 __SAGE__ = sensor age. 
-This is displayed on the homescreen of __AAPS__ and in __Nightscout__ if information was entered in the Actions tab / menu → see also __Nightscout__.
+This is displayed on the main screen of __AAPS__ and in __Nightscout__, based on the user's __Sensor Insert__ careportal entries → see also __Nightscout__.
 
-__SEN__ = status light sensor change on home screen Preferences, Screenshots → see also __BAT__ / __CAN__ / __RES__.
+__SEN__ = status light for overdue sensor change, shown in the status row of __AAPS'__ main screen → see also __BAT__ / __CAN__ / __RES__.
 
 __Sensivity detection__ = calculation of sensitivity to insulin as a result of exercise, hormones etc.  see also → DIABETTECH - 'Autosens'.
 

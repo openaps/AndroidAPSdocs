@@ -26,7 +26,7 @@ That means that:
 
 ## Use system notifications in AAPS for alerts and notifications
 
-Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
+Press the **Settings** (gear) icon on the top right of the **AAPS** main screen to open the settings
 
 ![Use system notifications for alerts and notifications](../images/android_auto_02.png)
 

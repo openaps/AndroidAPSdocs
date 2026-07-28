@@ -6,7 +6,7 @@ The loop status is shown on the main screen with one of the icons below.
 
 **AAPS** offers several loop modes, such as Closed Loop (1), Low Glucose Suspend (LGS - 2) and Open Loop (3).
 
-See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
+See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
 
 ![Loop status](../images/Home2020_LoopStatus.png)
 
@@ -150,7 +150,7 @@ When enabled, new settings become available.
 #### Sensitivity raises target
 If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
 
-If the target is modified due to sensitivity detection, it will be displayed with a green background on your home screen.
+If the target is modified due to sensitivity detection, it will be displayed with a green background on your main screen.
 
 ![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
@@ -241,9 +241,9 @@ Eating of additional carbs will be suggested when the reference design detects t
 
 Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
-In any case, the required carbs will be displayed in the COB section on your home screen.
+In any case, the required carbs will be displayed in the COB section on your main screen.
 
-![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
+![Display carbs required on main screen](../images/Pref2020_CarbsRequired.png)
 
 ### Advanced Settings
 
