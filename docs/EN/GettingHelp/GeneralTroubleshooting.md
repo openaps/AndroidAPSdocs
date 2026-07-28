@@ -34,6 +34,8 @@ Ignore it: More details, Install anyway.
 
 ![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
 
+If the installation is **blocked** with a message about an unverified developer (rather than just a warning), see [Android developer verification](#android-developer-verification) for the free installation methods.
+
 ### Settings
 * Profile
 

@@ -13,6 +13,11 @@ There are several ways to transfer the **AAPS** APK file from your computer to t
 
 Please note that transfer by email might cause difficulties, and is discouraged.
 
+```{admonition} Android developer verification
+:class: warning
+Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, install with [ADB](#android-developer-verification-adb) or one of the other free methods explained on that page.
+```
+
 ## Option 1. Use Google drive to transfer files
 
 Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.

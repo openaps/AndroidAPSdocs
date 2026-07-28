@@ -90,6 +90,9 @@ AndroidAPS [here](https://github.com/nightscout/AndroidAPS/releases)
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 
+```{note}
+From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+```
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
 
