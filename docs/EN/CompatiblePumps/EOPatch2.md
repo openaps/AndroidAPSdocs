@@ -15,16 +15,16 @@ The smallest injectable dose of insulin when using the patch is 0.05 U. The Prof
 * DST and timezone changes must be handled manually.
 
 ## Pump Setup
-1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
+1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
 1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
+1. Press the Back key to return to the main screen.
 
 
 ![Image1](../images/EOPatch/Bild1.png)
 ![Image2](../images/EOPatch/Bild2.png)
 
 ## Settings
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
+Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
 
 Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
 
@@ -45,7 +45,7 @@ This is a reminder function for injections other than basal injection. If you ar
 
 ### Move to patch connection screen
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+Open the pump screen (**Manage → Pump**) and click the ACTIVATE PATCH button at the bottom left.
 
 ![Image4](../images/EOPatch/Bild4.png)
 
@@ -112,7 +112,7 @@ The needle is inserted by holding around the patch and turning the needle action
 Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
 
 ### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+Open the pump screen (**Manage → Pump**) and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
 
 ![Image13](../images/EOPatch/Bild13.png)
 ![Image14](../images/EOPatch/Bild14.png)
@@ -123,7 +123,7 @@ Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH
 Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
 
 ### Suspending insulin delivery
-Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
+Open the pump screen (**Manage → Pump**) and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
 
 ![Image17](../images/EOPatch/Bild17.png)
 ![Image18](../images/EOPatch/Bild18.png)
@@ -131,7 +131,7 @@ Select EOPATCH2 at the top of the home screen and click the SUSPEND button at th
 
 
 ### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box. 
+Open the pump screen (**Manage → Pump**) and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box. 
 
 ![Image20](../images/EOPatch/Bild20.png)
 ![Image21](../images/EOPatch/Bild21.png)

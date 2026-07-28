@@ -99,13 +99,13 @@ Select “DASH” when you reach Pump selection.
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (See Option 2).
 
 (omnipod-dash-option-2-config-builder)=
-### Option 2: The Config Builder
+### Option 2: The Configuration screen
 
-On an existing installation you can select the **DASH** pump from the Config builder:
+On an existing installation you can select the **DASH** pump from the **Configuration** screen:
 
-On the top-left hand corner **hamburger menu** select **Config Builder (1)** ➜ **Pump** ➜ **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. 
+On the top-left hand corner **menu** (☰) select **Configuration (1)** ➜ **Pump** ➜ **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. 
 
-Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the DASH menu to be displayed as a tab in the **AAPS** interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using **AAPS**. 
+You can then open the DASH pump screen at any time with **Open plugin** (or **Manage → Pump**) to access the DASH commands when using **AAPS**. 
 
 **NOTE:** A faster way to access the [**Dash settings**](#omnipod-dash-settings) can be found below in the DASH settings section of this document.
 
@@ -113,7 +113,7 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 
 ### Verification of Omnipod Driver Selection
 
-To verify that you have selected the DASH in **AAPS**, if you have **checked the box (4)**, **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab on **AAPS**. If this box is left unchecked, you’ll find the DASH tab in the hamburger menu upper left. 
+To verify that you have selected the DASH in **AAPS**, open **Manage → Pump**: you should see the DASH pump screen. 
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
@@ -404,7 +404,7 @@ Below is describes the purpose of each icon on the **Pod Management** menu, acce
 
 ## Dash Settings
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜ **Pump**  **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the **AAPS** interface titled **DASH**.
+The Dash driver settings are configurable from the top-left hand corner **menu** (☰) under **Configuration (1)** ➜ **Pump** ➜ **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. You can open the DASH pump screen at any time with **Open plugin** (or **Manage → Pump**).
 
 ![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -482,7 +482,7 @@ This tab is well documented in the main **AAPS** documentation but there are a f
 
 Insulin level displayed is the amount reported by DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left.  
 
-The DASH overview tab will display as described the below:
+The DASH pump screen will display as described below:
 
   * **Above 50 Units** - The pod reports more than 50 units currently in the reservoir.
   * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod. 
@@ -577,7 +577,7 @@ The exact origin of a “49 pod failure” often is hard to trace. In situations
 
 ### Pump Unreachable Alerts
 
-When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences** ➜ **Local Alerts** ➜ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
+When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by pressing the **Settings** (gear) icon on the top right of the main screen, then selecting **Local Alerts** ➜ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
 
 ---
 ### Export  Settings
@@ -663,7 +663,7 @@ In most cases there is no need to uninstall. You can do an “in-place” instal
 ---
 ### Omnipod driver alerts
 
-The Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.  
+The Omnipod Dash driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.  
 
 A summary of the main alerts that you may encounter is listed below:
 

@@ -12,11 +12,11 @@
 
 ## Insulin Pump Bluetooth Pairing
 
-- Click on the hamburger menu in the top left corner.
+- Click on the **menu** (☰) in the top left corner.
 
 ![image](../images/DiaconnG8/DiaconnG8_01.jpg)
 
-- Click on Config Builder.
+- Click on **Configuration**.
 
 ![image](../images/DiaconnG8/DiaconnG8_02.jpg)
 
