@@ -103,19 +103,19 @@ When in doubt you can also select “Virtual Pump” and select “DASH” later
 
 On an existing installation you can select the **DASH** pump from the **Configuration** screen:
 
-On the top-left hand corner **menu** (☰) select **Configuration (1)** ➜ **Pump** ➜ **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. 
+On the top-left hand corner **menu** (☰) select **Configuration** ➜ **Pump** ➜ **Dash** by selecting the **radio button** titled **Dash**. 
 
-You can then open the DASH pump screen at any time with **Open plugin** (or **Manage → Pump**) to access the DASH commands when using **AAPS**. 
+![The Dash plugin enabled in Configuration > Pump](../images/v4/Pumps/dash_enabled.png)
+
+You can then open the DASH pump screen at any time with **Open plugin** (or **Manage → Pump**) to access the DASH commands when using **AAPS**:
+
+![The DASH pump screen without an active pod](../images/v4/Pumps/dash_pump_screen.png)
 
 **NOTE:** A faster way to access the [**Dash settings**](#omnipod-dash-settings) can be found below in the DASH settings section of this document.
 
-![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
-
 ### Verification of Omnipod Driver Selection
 
-To verify that you have selected the DASH in **AAPS**, open **Manage → Pump**: you should see the DASH pump screen. 
-
-![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
+To verify that you have selected the DASH in **AAPS**, open **Manage → Pump**: you should see the DASH pump screen shown above.
 
 ## Dash Configuration
 
@@ -404,11 +404,11 @@ Below is describes the purpose of each icon on the **Pod Management** menu, acce
 
 ## Dash Settings
 
-The Dash driver settings are configurable from the top-left hand corner **menu** (☰) under **Configuration (1)** ➜ **Pump** ➜ **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. You can open the DASH pump screen at any time with **Open plugin** (or **Manage → Pump**).
+The Dash driver settings are configurable from the top-left hand corner **menu** (☰) under **Configuration** ➜ **Pump** ➜ **Dash** ➜ **Settings**. The settings are grouped into expandable sections:
 
-![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
+![The Dash settings](../images/v4/Pumps/dash_settings.png)
 
-***NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.*
+***NOTE:** A faster way to access the **Dash settings** is by pressing the **Settings** (gear) icon in the upper right hand corner of the DASH pump screen.*
 
 ![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 

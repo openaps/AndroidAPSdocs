@@ -67,7 +67,7 @@ On the top-left hand corner **menu** (☰) select **Configuration**\ ➜\ **Pump
 
 You can then open the Medtrum overview (pump screen) at any time with **Open plugin** (or **Manage → Pump**) to access the Medtrum commands when using AAPS.
 
-![Config Builder](../images/medtrum/ConfigBuilder.png)
+![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_2.png)
 
 ### Step 2: Change Medtrum settings
 
@@ -250,7 +250,7 @@ Press **OK** to return to main screen.
 
 ### Deactivate patch
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+To deactivate a currently active patch, go to the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and press the **Change Patch** button.
 
 ![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -268,7 +268,7 @@ Once deactivation is complete, press **OK** to return to main screen or press **
 
 ### Resume interrupted activation
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and press the **Change Patch** button.
 
 ![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
 

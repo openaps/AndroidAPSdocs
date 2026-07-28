@@ -14,11 +14,11 @@
 
 - Click on the **menu** (☰) in the top left corner.
 
-![image](../images/DiaconnG8/DiaconnG8_01.jpg)
+![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
 
 - Click on **Configuration**.
 
-![image](../images/DiaconnG8/DiaconnG8_02.jpg)
+![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_2.png)
 
 - After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
 

@@ -20,13 +20,13 @@ The smallest injectable dose of insulin when using the patch is 0.05 U. The Prof
 1. Press the Back key to return to the main screen.
 
 
-![Image1](../images/EOPatch/Bild1.png)
-![Image2](../images/EOPatch/Bild2.png)
+![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_2.png)
 
 ## Settings
 Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
 
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
+Open the EOPatch2 preferences by pressing the **Settings** (gear) icon in the upper right corner.
 
 The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
 
@@ -39,19 +39,19 @@ This is a reminder to notify you of the time remaining before the current patch 
 ### Patch buzzer Reminder
 This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
 
-![Image3](../images/EOPatch/Bild3.png)
+![EOPatch2 preferences](../images/v4/Pumps/eopatch_settings.png)
 
 ## Connecting the Patch 
 
 ### Move to patch connection screen
 
-Open the pump screen (**Manage → Pump**) and click the ACTIVATE PATCH button at the bottom left.
+Open the pump screen (**Manage → Pump**) and press the **Activate Patch** button at the bottom left.
 
-![Image4](../images/EOPatch/Bild4.png)
+![The EOPatch2 pump screen with the Activate Patch button](../images/v4/Pumps/eopatch_pump_screen.png)
 
 ### Connecting the patch
 Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots.
-After confirming the buzzer sound, click the START PAIRING button on the screen.
+After confirming the buzzer sound, click the **Start pairing** button on the screen.
 
 [Warning]
 
@@ -59,7 +59,7 @@ After confirming the buzzer sound, click the START PAIRING button on the screen.
 - The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
 - Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
 
-![Image5](../images/EOPatch/Bild5.png)
+![The Filling Insulin step with the Start pairing button](../images/v4/Pumps/eopatch_activate_filling.png)
 
 ### patch pairing
 The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.

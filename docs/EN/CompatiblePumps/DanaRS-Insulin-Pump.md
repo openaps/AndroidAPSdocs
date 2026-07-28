@@ -25,7 +25,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * In the pump section select 'Dana-i/RS'.
 * Click on the gear wheel to get directly to the pump settings or return to the main screen.
 
-  ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+  ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_1.png)
 
 * Open the pump screen (**Manage → Pump**).
 * Select preferences menu by tapping the 3 dots in the top right. 

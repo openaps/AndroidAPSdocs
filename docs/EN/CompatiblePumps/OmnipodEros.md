@@ -77,11 +77,11 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 ### Option 2: The Configuration screen
 
-Via the top-left hand corner **menu** (☰) under **Configuration (1)** ➜**Pump**➜**Omnipod** by selecting the **radio button (2)** titled **Omnipod**. You can then open the Omnipod pump screen at any time with **Open plugin** (or **Manage → Pump**). This is referred to in this documentation as the **Omnipod (POD)** tab.
+Via the top-left hand corner **menu** (☰) under **Configuration** ➜**Pump**➜**Omnipod** by selecting the **radio button** titled **Omnipod**. You can then open the Omnipod pump screen at any time with **Open plugin** (or **Manage → Pump**). This is referred to in this documentation as the **Omnipod (POD)** tab.
 
 > **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
 >
-> ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
+> ![Configuration > Pump with the Omnipod plugin](../images/v4/Configuration/configuration_pump_list_1.png)
 
 ### Verification of Omnipod Driver Selection
 
