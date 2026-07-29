@@ -4,7 +4,10 @@
 
 __AAPSClient__ (or __NSClient__) = a remote control feature that can be used by caregivers via a follower phone to follow a user’s __AAPS__ by connecting to the user’s __Nightscout's__ site. Further info → Wiki - 'NS Client'. Objectives learning program within __AAPS__ provides step by step guidance. Further info → Wiki - 'objectives'.
 
-__APS__ = Artificial Pancreas System.
+__AID__ = Automated Insulin Delivery.
+The term generally used in clinical practice and research for a system which automatically adjusts insulin delivery using __CGM__ data. __APS__ and __closed loop__ mean the same thing → see also __OS-AID__.
+
+__APS__ = Artificial Pancreas System → see also __AID__.
 
 __AMA__ = Advanced Meal Assist.
 An algorithm which allows __AAPS__ to increase the user’s basal more aggressively after a meal bolus. Further info → Wiki - 'AMA'.
@@ -46,7 +49,7 @@ __CAN__ = status light for overdue cannula change, shown in the status row of __
 
 __CGM__ = Continuous Glucose Monitor → see also __FGM__.
 
-__Closed Loop__ = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an __AAPS’s__ algorithm and the user’s __Profile__ settings without requiring the user’s-approval. Further info → Wiki - 'closed loop'.
+__Closed Loop__ = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an __AAPS’s__ algorithm and the user’s __Profile__ settings without requiring the user’s-approval. Further info → Wiki - 'closed loop' and see also __HCL__ / __FCL__.
 
 __COB__ = Carbs On Board. 
 This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
@@ -66,6 +69,9 @@ __Dynamic ISF (or DynISF)__ =  a feature within **AAPS** that adapts the insulin
 __eCarbs__ = extended Carbs.
 Carbs split up over several hours to accommodate/protein and permits __AAPS__ to deliver extended boluses.  Further info →  Wiki - 'eCarbs', 'eCarbs use'.
 
+__FCL__ = Full Closed Loop.
+A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → Wiki - 'full closed loop' and see also __HCL__.
+
 __FGM__ = Flash Glucose Monitor manufactured by Freestyle Libre.
  Further info →  Wiki - 'BG source' and see also 'CGM'.
 
@@ -75,6 +81,8 @@ __GitHub__ = a web-based hosting service and build process for the __AAPS’__ s
 It is also necessary for __APK__ updates.  Further info →  Wiki - 'update APK'.
 
 __Glimp__ = an app to collect values from Freestyle Libre Glimp.
+
+__HCL (or Hybrid Closed Loop)__ = a loop which automates insulin delivery between meals, but still requires the user to bolus for meals. Nearly every system in everyday use, including __AAPS__, is a hybrid closed loop → see also __FCL__ / __Closed Loop__.
 
 __IC (or I:C)__ = Insulin to Carb ratio. 
 (i.e. how many carbs are covered by one unit of insulin?).
@@ -115,6 +123,9 @@ __OpenAPS__ = Open Artificial Pancreas System.
 __Open Loop system__ = an __AAPS__ feature that will recommend adjustments and which must be performed manually by the user on __AAPS__.  Further info →  Wiki - 'config builder'.
 
 __Oref0 / Oref1__ = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS Wiki - sensitivity detection.
+
+__OS-AID__ = Open-Source Automated Insulin Delivery.
+An __AID__ system built from open-source software, such as __AAPS__, __OpenAPS__, Loop or Trio. These systems are not formally approved by health bodies (FDA, NHS etc.) → see also __AID__.
 
 __Peak time__ = time of maximum effect of insulin given. Further info → Wiki - 'config builder'.
 
