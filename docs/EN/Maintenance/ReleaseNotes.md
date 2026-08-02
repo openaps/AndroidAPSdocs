@@ -54,9 +54,24 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 (latestrelease)=
 
-(version3423)=
+## Version 3.4.2.6
 
-## Version for 3.4.2.3
+- Equil: improve stability @MilosKozak
+
+(version3425)=
+
+## Version 3.4.2.5
+
+- Equil fix race condition @MilosKozak
+
+(version3424)=
+
+## Version 3.4.2.4
+
+- Equil fixes @MilosKozak
+- NS profile sync fix @MilosKozak
+
+## Version 3.4.2.3
 - Dash: Drift resolution @nl-ruud
 - NSClientV3: Fix gap after reconnection @MilosKozak  
 - Automation: Fix deserialization @MilosKozak
