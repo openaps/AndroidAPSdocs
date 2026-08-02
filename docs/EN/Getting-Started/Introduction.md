@@ -14,14 +14,14 @@ In the near future, some so-called "dual-hormone" systems will also have the abi
 
 An artificial pancreas can be thought of as an [“autopilot for your diabetes”](https://www.artificialpancreasbook.com/). What does that mean?
 
-In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of permanently managing the aircraft, allowing the pilot to concentrate on wider monitoring. The autopilot receives signals from various sensors, a computer evaluates the data together with the pilot’s specifications and then makes the necessary adjustments, alerting the pilot to any concerns. The pilot no longer has to worry about constantly making decisions and this analogy can be applied to **AAPS**.
+**AAPS** can be thought of as a form of ‘autopilot’. In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of constantly having to manage the aircraft, allowing the pilot to concentrate on wider monitoring. The autopilot receives signals from various sensors, a computer evaluates the data together with the pilot’s specifications and then makes the necessary adjustments, alerting the pilot to any concerns. The pilot no longer has to worry about continually making decisions and this analogy can be applied to **AAPS**.
 
 ![image](../images/autopilot.png)
 
-(Introduction-what-does-hybrid-closed-loop-mean)=
+
 ## What does hybrid closed loop mean?
 
-The best solution for type 1 diabetes would be a “functional cure” (probably an implant of pancreatic cells which are protected from the immune system). While the type 1 diabetic (T1D) community waits for that, a “full closed loop” artificial pancreas is probably the next best thing. This is a tech system that requires a reduced need for user input (like suspending insulin for predicted lows or providing additional insulin for fast rise in **BG**), with good regulation of blood glucose levels. At the moment, there are no widely available systems which are “full” closed loop, they all need some user input. The currently available systems are called “hybrid” closed loop, because they use a combination of automated technology and user input. 
+While the type 1 diabetic (T1D) community waits for a cure a “full closed loop” artificial pancreas is probably the next best thing. This is a tech system that requires a reduced need for user input (like suspending insulin for predicted lows or providing additional insulin for fast rise in **BG**), with good regulation of blood glucose levels. At the moment, there are no widely available systems which are “full” closed loop, they require some degree of user input. The current available systems on the market are called “hybrid” closed loop, because they use a combination of automated technology and user input. 
 
 ## How and why did looping start?
 
@@ -91,7 +91,7 @@ To read about the safety features of the algorithms, known as oref0 and oref1, [
 
 Users can easily add or remove modules or functionality, and **AAPS** can be used in both open and closed loop mode. Here are some examples of the possibilities with the **AAPS** system:
 
- a) The ability to set a lower glucose target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
+ a) The ability to set a lower **BG** target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
 
  b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **Automation** rule to activate when **BG** rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% **Profile** (resulting in an 20% increase in basal and strengthening of other factors too, compared to your normal **Profile** setting). The **Automation** will last according to the scheduled time you set. Such an **Automation** could be set to only be active on certain days of the week, at certain times of day, and even at certain locations.
 
