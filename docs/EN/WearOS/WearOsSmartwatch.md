@@ -24,11 +24,24 @@ The table below summarises how Google's change affects the AAPS (legacy-engine) 
 
 | Wear OS version | Base Android | API level | Impact on AAPS (legacy) watchfaces |
 | --- | --- | --- | --- |
+| Wear OS 6 | Android 16 | 36 | **Legacy watchfaces no longer available** — AAPS installs its own [AAPS V4 watchface](#wearos-aaps-v4-watchface) instead |
 | Wear OS 5 | Android 14 | 34 | **Severe** — active (interactive) mode often fails, complications freeze, animations stop |
 | Wear OS 4 | Android 13 | 33 | **Moderate** — throttling, missed updates, partial failures |
 | Wear OS 3.0 / 3.2 / 3.5 | Android 12 / 12L | 31–32 | **Low** — legacy engine still supported |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
+If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication. On **Wear OS 6 and newer**, AAPS brings its own replacement watchface — see below.
+
+(wearos-aaps-v4-watchface)=
+
+### Wear OS 6 and newer — the AAPS V4 watchface
+
+Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces at all. For these watches the AAPS watch app includes its own watchface, **AAPS V4**, built in Google's new **Watch Face Format**:
+
+- It is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
+- Its complication slots come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), and basal rate / temp target.
+- If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
+
+On watches running Wear OS 5 or older this watchface is not available (the mechanism it relies on requires Wear OS 6); use the classic watchfaces or complications there.
 
 ### Wear OS 3
 
@@ -62,6 +75,11 @@ Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is n
 ```
 
 Consider alternatively [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
+
+```{admonition} Samsung watches: watchface settings open the system editor
+:class: note
+On Samsung watches, opening the settings of one of the AAPS watchfaces (in the watch's AAPS app, under **Settings**) now hands over to Samsung's own **watch face editor**. This also **activates** the selected watchface, and settings that need a live editing session — such as the Custom watchface's complication slots — work correctly from there. On other brands the normal AAPS settings screen is shown as before.
+```
 
 ### Pixel watch with Wear OS 5
 

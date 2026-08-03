@@ -110,6 +110,8 @@ Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **
 
 ![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
 
+The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+
 The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
 
 ![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)

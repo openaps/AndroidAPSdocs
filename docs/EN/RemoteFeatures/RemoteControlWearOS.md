@@ -159,9 +159,10 @@ AAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
+* **BG Graph** (`SMALL IMAGE` / `PHOTO IMAGE`, opens _BG graph_): Displays the BG history graph as an image. Useful on watchfaces with an image slot — most notably the newer **Watch Face Format** watchfaces on watches that no longer support the classic AAPS watchfaces.
 * **BR, CoB & IoB** (`SHORT TEXT`, opens _Menu_): Displays _Basal Rate_ on the first line and _Carbs on Board_ and _Insulin on Board_ on the second line.
-* **Blood Glucose** (`SHORT TEXT`, opens _Menu_): Displays _Blood Glucose_ value and _trend_ arrow on the first line and _measurement age_ and _BG delta_ on the second line.
-* **CoB & IoB** (`SHORT TEXT`, opens _Menu_): Displays _Carbs on Board_ on the first line and _Insulin on Board_ on the second line.
+* **Blood Glucose** (`SHORT TEXT`, opens _Loop Status_): Displays _Blood Glucose_ value and _trend_ arrow on the first line and _measurement age_ and _BG delta_ on the second line.
+* **CoB & IoB** (`SHORT TEXT`, opens _Wizard_): Displays _Carbs on Board_ on the first line and _Insulin on Board_ on the second line.
 * **CoB Detailed** (`SHORT TEXT`, opens _Wizard_): Displays current active _Carbs on Board_ on the first line and planned (future, eCarbs) Carbs on the second line.
 * **CoB Icon** (`SHORT TEXT`, opens _Wizard_): Displays _Carbs on Board_ value with a static icon.
 * **Full Status** (`LONG TEXT`, opens _Menu_): Shows most of the data at once: _Blood Glucose_ value and _trend_ arrow, _BG delta_ and _measurement age_ on the first line. On the second line _Carbs on Board_, _Insulin on Board_ and _Basal Rate_.
@@ -227,7 +228,7 @@ Actions supported in the Action tile can request the AAPS phone app for:
 * **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
 * **Insulin**; request insulin delivery by entering the unit of insulin
 * **Treatment**; request both insulin delivery and add carbs
-* **Carbs**; add (extended) carbs
+* **Carbs**; add (extended) carbs. A **negative** amount is also accepted, down to your current COB, to correct carbs you over-entered earlier. Carb removals are shown on the watch's BG graph.
 * **TempT**; set a custom temporary target and duration
 
 ![Wear action tile, sample calculator](../images/wear_actions.png)
