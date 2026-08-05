@@ -66,8 +66,9 @@ Actions that can be triggered from a client in v4: **bolus**, **carbs / eCarbs**
 ```{admonition} Before you start
 :class: important
 - The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **client** runs **AAPSClient** (or **AAPSClient2** for a second patient — see [AAPSClient vs AAPSClient2](#remotecontrol-aapsclient-versions)).
-- **Both** phones use **NSClientV3** pointed at the **same** Nightscout, and are showing *connected*. Enabling **websockets** on **both** is strongly recommended for fast, near-instant round-trips.
+- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [AAPSClient vs AAPSClient2](#remotecontrol-aapsclient-versions)).
+- **Both** phones use **NSClientV3** pointed at the **same** Nightscout, and are showing *connected*.
+- **Websockets** must be enabled on the **master** — without them the master cannot receive client commands at all, and your clients will see it as *not accepting commands*. Enable websockets on the client too for fast, near-instant round-trips.
 ```
 
 Pairing and synchronization are two different things:
@@ -86,12 +87,16 @@ On the master, open the **Manage** screen and choose **Authorized clients**.
 
 Turn on **Allow client control**. This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later.
 
+```{admonition} Websockets are required on the master
+:class: important
+Client commands only reach the master through the **websockets** connection of **NSClientV3**. If websockets are turned off, the **Authorized clients** screen shows a warning: *"Websockets are turned off, so commands from clients cannot be received. Clients see this master as not accepting commands until you turn websockets on."* Turn websockets on in the NSClientV3 settings to make client control work.
+```
+
 ![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
 
 Tap the **+** button to add a client. Enter a **device name** (so you can recognize it in the list); the master then displays a short **pairing PIN**. This PIN is **one-time** and **expires after about two minutes**.
 
-<!-- 📷 SCREENSHOT NEEDED: master pairing screen showing the PIN.
-     Use a DEMO/expired PIN only — it protects the pairing secret and must not be a live one. -->
+![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
@@ -103,8 +108,7 @@ The PIN protects the pairing secret that is exchanged through Nightscout. Share 
 
 On the client, open **Manage → Pair with master**, then **enter the PIN** shown on the master. The client uses the PIN to securely retrieve the pairing offer through Nightscout and complete pairing.
 
-<!-- 📷 SCREENSHOT NEEDED: client "Pair with master" screen in the UNPAIRED state,
-     showing the enter-PIN entry. (The screenshot below shows the already-paired state.) -->
+![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
 Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
 
@@ -170,17 +174,23 @@ Pairing does more than relay one-off actions — it also keeps the **configurati
 
 The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
 
-In the example below the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication* or *General*:
+In the example below the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
 
 ![Configuration list on a client — the mobile icon marks plugins synced from the master](../images/v4/Configuration/configuration_plugins.png)
 
 Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced and are set on each phone individually.
 
+### Profiles
+
+Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+
+On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+
 ### Preferences
 
 A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**.
 
-Inside a plugin's settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Use dynamic sensitivity* and *DynamicISF adjustment factor* are synced (mobile icon), while device-local settings such as *Maximum basal rate* and *Max IOB for SMB* are not:
+Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
 
 ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
 
@@ -216,19 +226,19 @@ If a client is restored from a backup that rolls its command counter backwards, 
 | Client says it is **not paired** | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list. |
 | Command **rejected** by the master | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master. |
 | Commands work but are **slow** | Enable **websockets** on both phones (otherwise the apps fall back to slower polling). |
-| Nothing happens after pairing | Make sure **Allow client control** is ON on the master. |
+| Nothing happens after pairing | Make sure **Allow client control** is ON on the master, and that **websockets** are enabled on the master — without them the master cannot receive commands (the master's **Authorized clients** screen shows a warning). |
 
 For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ---
 
 <!-- =====================================================================
-     SCREENSHOTS STILL TO ADD (placeholders marked inline above):
-       1. Master pairing screen: PIN  (use a demo/expired PIN!)
-       2. Client "Pair with master" in the UNPAIRED state (enter PIN)
-       3. (optional) Wear OS confirmation relayed from the master
-     Already included (captured from real master + client devices):
-       - authorized_clients_master.png       (master: Authorized clients list)
+     SCREENSHOTS STILL TO ADD:
+       1. (optional) Wear OS confirmation relayed from the master
+     Already included:
+       - authorized_clients_master.png       (master: Authorized clients list, Active client)
+       - pair_with_master_unpaired.png       (client: pairing screen, unpaired PIN entry)
+       - pairing_pin_master.png              (master: one-time pairing PIN — expired demo PIN)
        - pair_with_master_client.png         (client: pairing screen, paired state)
        - confirmation_master_authored.png    (client: master-authored scene confirmation)
        - carbs_confirmation_client.png       (client: master-authored carbs confirmation)

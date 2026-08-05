@@ -59,19 +59,19 @@ If in doubt you can also select “Virtual Pump” and select “Medtrum” late
 
 ![Setup Wizard](../images/medtrum/SetupWizard.png)
 
-#### Option 2: The Config Builder
+#### Option 2: The Configuration screen
 
-On an existing installation you can select the **Medtrum** pump in [Config Builder > Pump](#Config-Builder-pump):
+On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
 
-On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**. 
+On the top-left hand corner **menu** (☰) select **Configuration**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**. 
 
-Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+You can then open the Medtrum overview (pump screen) at any time with **Open plugin** (or **Manage → Pump**) to access the Medtrum commands when using AAPS.
 
-![Config Builder](../images/medtrum/ConfigBuilder.png)
+![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_2.png)
 
 ### Step 2: Change Medtrum settings
 
-Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
+Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the **Configuration** screen.
 
 ![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
 
@@ -190,9 +190,9 @@ This setting can be changed when using Medtrum pump but it is recommended to set
 - Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
 
-#### Activate patch from the Medtrum overview Tab
+#### Activate patch from the Medtrum pump screen
 
-Navigate to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
+Navigate to the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and press the **Change Patch** button in the bottom right corner.
 
 If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#nano-deactivate-patch).
 
@@ -250,7 +250,7 @@ Press **OK** to return to main screen.
 
 ### Deactivate patch
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+To deactivate a currently active patch, go to the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and press the **Change Patch** button.
 
 ![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
 
@@ -268,7 +268,7 @@ Once deactivation is complete, press **OK** to return to main screen or press **
 
 ### Resume interrupted activation
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#nano-overview) in the AAPS interface and press the **Change Patch** button.
+If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and press the **Change Patch** button.
 
 ![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
 
@@ -373,7 +373,7 @@ The imported settings file has to be of the same patch session that you are curr
 
 After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
 
-From AAPS version 3.3.0.0 onwards, the sync progress is shown in the the home screen:
+From AAPS version 3.3.0.0 onwards, the sync progress is shown on the main screen:
 ![Sync progress](../images/medtrum/SyncProgress.png)
 
 (medtrum-nano-troubleshooting)=

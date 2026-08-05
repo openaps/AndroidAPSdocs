@@ -49,7 +49,7 @@ The following settings should be configured on the pump in order for AAPS to rem
 - Disable automatic screen rotation on your phone.  On certain devices automatic screen rotation causes Bluetooth sessions to restart which would cause issues for your Medtronic pump. 
 - There are two ways to configure your Medtronic pump in AAPS:
 1. Using the setup wizard as part of a fresh install
-2. By selecting the cog icon beside the Medtronic selection in the pump selection option in Config Builder
+2. By selecting the cog icon beside the Medtronic selection in the pump selection option in **Configuration**
 
 When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump).  Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.  
 
@@ -115,7 +115,7 @@ The RL Status dialog has two tabs:
 - **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
 
 ## Actions
-When the Medtronic driver is used, two additional actions are added to Actions Tab:
+When the Medtronic driver is used, two additional actions are available on the pump screen (**Manage → Pump**):
 - **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a successful connection is made the successful frequency will be set as the default.
 - **Reset RileyLink Config** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
 

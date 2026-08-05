@@ -13,13 +13,18 @@ eCarbs are carbs that are split up over several hours. For standard meals with m
 
 ## Mechanics of using eCarbs
 
-To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
 
 ![Enter carbs](../images/eCarbs_Dialog.png)
 
-The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
+The eCarbs on the main screen, note the carbs in brackets at the COB field, which shows the carbs in the future:
 
 ![eCarbs in graph](../images/eCarbs_Graph.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the main screen looks different, but the COB display and the future-carb markers on the graph carry the same information.
+```
 
 ______________________________________________________________________
 
@@ -31,7 +36,7 @@ ______________________________________________________________________
 
 The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
 With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
@@ -49,7 +54,7 @@ Some people were asking for an option to use extended bolus in AAPS anyway as th
 That's why as of version 2.6 there is an option for an extended bolus for users of Dana and Insight pumps.
 
 - Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-- Bolus units, remaining and total time will be shown on homescreen.
+- Bolus units, remaining and total time will be shown on the main screen.
 - On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)

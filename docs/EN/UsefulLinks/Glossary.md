@@ -4,7 +4,10 @@
 
 __AAPSClient__ (or __NSClient__) = a remote control feature that can be used by caregivers via a follower phone to follow a user’s __AAPS__ by connecting to the user’s __Nightscout's__ site. Further info → Wiki - 'NS Client'. Objectives learning program within __AAPS__ provides step by step guidance. Further info → Wiki - 'objectives'.
 
-__APS__ = Artificial Pancreas System.
+__AID__ = Automated Insulin Delivery.
+The term generally used in clinical practice and research for a system which automatically adjusts insulin delivery using __CGM__ data. __APS__ and __closed loop__ mean the same thing → see also __OS-AID__.
+
+__APS__ = Artificial Pancreas System → see also __AID__.
 
 __AMA__ = Advanced Meal Assist.
 An algorithm which allows __AAPS__ to increase the user’s basal more aggressively after a meal bolus. Further info → Wiki - 'AMA'.
@@ -22,7 +25,7 @@ __Autosens__ = calculation of sensitivity to insulin between a period of a 24 an
 
 __Azure__ = cloud computing platform to host __Nightscout__ web app Azure → see also __Nightscout__.
 
-__BAT__ = status light low battery on __AAPS’__ home screen __Preferences__, Screenshots → see also __CAN__ / __RES__ / __SEN__.
+__BAT__ = status light for low pump battery, shown in the status row of __AAPS'__ main screen → see also __CAN__ / __RES__ / __SEN__.
 
 __BG__ =  blood glucose.
 
@@ -40,13 +43,13 @@ __BYODA__ = Build Your Own Dexcom App.
 A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
 
 __CAGE__ = Cannula AGE.
-Displayed on __AAPS’__ homescreen and Nightscout providing the user’s information entered in the Actions tab / menu → see also __Nightscout__.
+Displayed on __AAPS'__ main screen and in Nightscout, based on the user's __Prime/Fill__ careportal entries → see also __Nightscout__.
 
-__CAN__ = status light overdue cannula change on the __AAPS’__ homescreen __Preferences'__ → see also __BAT__ / __RES__ / __SEN__.
+__CAN__ = status light for overdue cannula change, shown in the status row of __AAPS'__ main screen → see also __BAT__ / __RES__ / __SEN__.
 
 __CGM__ = Continuous Glucose Monitor → see also __FGM__.
 
-__Closed Loop__ = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an __AAPS’s__ algorithm and the user’s __Profile__ settings without requiring the user’s-approval. Further info → Wiki - 'closed loop'.
+__Closed Loop__ = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an __AAPS’s__ algorithm and the user’s __Profile__ settings without requiring the user’s-approval. Further info → Wiki - 'closed loop' and see also __HCL__ / __FCL__.
 
 __COB__ = Carbs On Board. 
 This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
@@ -66,6 +69,9 @@ __Dynamic ISF (or DynISF)__ =  a feature within **AAPS** that adapts the insulin
 __eCarbs__ = extended Carbs.
 Carbs split up over several hours to accommodate/protein and permits __AAPS__ to deliver extended boluses.  Further info →  Wiki - 'eCarbs', 'eCarbs use'.
 
+__FCL__ = Full Closed Loop.
+A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → Wiki - 'full closed loop' and see also __HCL__.
+
 __FGM__ = Flash Glucose Monitor manufactured by Freestyle Libre.
  Further info →  Wiki - 'BG source' and see also 'CGM'.
 
@@ -75,6 +81,8 @@ __GitHub__ = a web-based hosting service and build process for the __AAPS’__ s
 It is also necessary for __APK__ updates.  Further info →  Wiki - 'update APK'.
 
 __Glimp__ = an app to collect values from Freestyle Libre Glimp.
+
+__HCL (or Hybrid Closed Loop)__ = a loop which automates insulin delivery between meals, but still requires the user to bolus for meals. Nearly every system in everyday use, including __AAPS__, is a hybrid closed loop → see also __FCL__ / __Closed Loop__.
 
 __IC (or I:C)__ = Insulin to Carb ratio. 
 (i.e. how many carbs are covered by one unit of insulin?).
@@ -116,6 +124,9 @@ __Open Loop system__ = an __AAPS__ feature that will recommend adjustments and w
 
 __Oref0 / Oref1__ = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS Wiki - sensitivity detection.
 
+__OS-AID__ = Open-Source Automated Insulin Delivery.
+An __AID__ system built from open-source software, such as __AAPS__, __OpenAPS__, Loop or Trio. These systems are not formally approved by health bodies (FDA, NHS etc.) → see also __AID__.
+
 __Peak time__ = time of maximum effect of insulin given. Further info → Wiki - 'config builder'.
 
 __PH__ = Pump History. 
@@ -130,14 +141,14 @@ __Profile switch__ = (temporary) switch  of the user’ __Profile__ to a differe
 
 __Profile Percentage__ = a (temporary_ percentage increase or decrease applied to a user’s __Profile__ for a selected time period.
 
-__RES__ = status light overdue reservoir change on the __AAPS’__ homescreen Preferences, Screenshots → see also __BAT__ / __CAN__ / __SEN__.
+__RES__ = status light for overdue reservoir change, shown in the status row of __AAPS'__ main screen → see also __BAT__ / __CAN__ / __SEN__.
 
 __RileyLink__ = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication RileyLink.
 
 __SAGE__ = sensor age. 
-This is displayed on the homescreen of __AAPS__ and in __Nightscout__ if information was entered in the Actions tab / menu → see also __Nightscout__.
+This is displayed on the main screen of __AAPS__ and in __Nightscout__, based on the user's __Sensor Insert__ careportal entries → see also __Nightscout__.
 
-__SEN__ = status light sensor change on home screen Preferences, Screenshots → see also __BAT__ / __CAN__ / __RES__.
+__SEN__ = status light for overdue sensor change, shown in the status row of __AAPS'__ main screen → see also __BAT__ / __CAN__ / __RES__.
 
 __Sensivity detection__ = calculation of sensitivity to insulin as a result of exercise, hormones etc.  see also → DIABETTECH - 'Autosens'.
 

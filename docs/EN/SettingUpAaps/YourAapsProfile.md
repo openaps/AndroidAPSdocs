@@ -262,7 +262,7 @@ Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**
 - **BAS** — basal rates
 - **TARG** — target range
 
-![The profile editor — IC / ISF / BAS / TARG tabs](../images/v4/Profiles/profile_editor.png)
+![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
 
 Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
 
@@ -277,7 +277,7 @@ In **AAPS** v3 the **Profile** tab was reached from the top menu or hamburger me
 - blue arrow: duplicate
 ```
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
+If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** screen may not always show the actual profile being used - e.g. if you made a profile switch from the main screen, it may differ from the profile actually shown in the **Profile** screen as there is no connection between these.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
 ### Build a Profile from scratch for a kid
@@ -292,14 +292,14 @@ Profile helper offers data sets from two different hospitals for children to fin
 
 ![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
-1. Make sure you are in **Profile 1**.
+1. Make sure you are on the **Profile 1** tab.
 2. In **Profile type**, make sure you have "Default profile" selected.
 3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-4. Change screen by clicking on **Profile 2** on the right.
+4. Change to the **Profile 2** tab.
 5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** or **Profile 2**.
+6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, TDD Total and percentage of basal. Note that the DPV data set provides **basal rates** only, so IC and ISF are shown as zero for this profile.
+7. Open the **Comparation** tab. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button at the bottom of the comparison.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
 
@@ -312,7 +312,7 @@ See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-Pro
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
-The [Treatments](#aaps-screens-treatments) tab shows all past **Profile Switches**. When going to the **Profile Switch** sub-tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **1**.
+The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **2**.
 
 You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles) to edit the newly created Profile.
 
@@ -322,15 +322,12 @@ You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles)
 Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
 
 * Your **Profiles** are stored in the **AAPS** database.
-* If enabled, **Profiles** are also uploaded to Nightscout. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Upload data to NS](#Preferences-nsclient).
-
-![Backup Profile Nightscout](../images/LocalProfile_UploadNS_AASP30.png)
-
+* When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
 * They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
 ### Editing Profiles from Nightscout
 
-If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
+If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen.
 
 This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
 
@@ -345,12 +342,12 @@ You can also use the [Profile Helper](#aaps-screens-profile-helper) tab to compa
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 
-1. Make sure you are in **Profile 1**.
+1. Make sure you are on the **Profile 1** tab.
 2. In **Profile type**, select "Available profile" to choose between all stored **Profiles**.
 3. Choose the **Profile** you want to compare from.
-4. Change screen by clicking on **Profile 2** on the right.
-5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
+4. Change to the **Profile 2** tab.
+5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profile Switches**.
 6. Choose the **Profile Switch** you want to compare to.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+7. Open the **Comparation** tab. Comparison of the two profiles will be displayed (see screenshot below).
 
 ![Profile Helper 2](../images/ProfileHelper2.png)

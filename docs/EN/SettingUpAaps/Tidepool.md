@@ -22,20 +22,24 @@ Note: the Tidepool organization has brought the iOS Loop product to market with 
 - Verify your email address via the instructions received to your email
 
 
-## Step 2 - Enter credentials into AAPS
+## Step 2 - Connect AAPS to Tidepool
 
-- Select the three-line “hamburger” menu in the top left and then select “Config Builder” (if “Config Builder” is not located there, it will instead be one of the tabs along the top)
+- Open the **menu** (☰) in the top-left corner of the main screen and select "**Configuration**"
 
-- Scroll down to the “Synchronization” section and select the check mark to the left of “Tidepool”
+- Open the "**Communication**" category and enable "**Tidepool**":
 
-- Click the gear icon to the right of “Tidepool”
+![Enable Tidepool](../images/v4/Tidepool/tidepool_enable.png)
 
-- Enter the username and password you created in Step 1 above
+- Tap "**Open plugin**" underneath Tidepool, then open the **⋮ menu** in the top-right corner and select "**Login**"
 
-- Click “Test Tidepool Login”
+- A browser window opens on the Tidepool login page. Log in with the email address and password you created in Step 1 above:
 
-- If you get the “Successfully logged into Tidepool” message, you have successfully connected. If not, confirm your credentials are correct and that you have verified your email address with Tidepool.
+![Tidepool login page](../images/v4/Tidepool/tidepool_login.png)
 
-- Click on “Connection settings” and set based on your personal preferences
+- After a successful login the browser closes and the Tidepool screen shows the status "**SESSION_ESTABLISHED**"; the log below documents the data uploads. If the login fails, confirm your credentials are correct and that you have verified your email address with Tidepool.
+
+![Tidepool connected](../images/v4/Tidepool/tidepool_status.png)
+
+- In the "**Settings**" of the Tidepool plugin, open "**Connection settings**" and set based on your personal preferences (Wi-Fi only, while charging, ...)
 
 For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 

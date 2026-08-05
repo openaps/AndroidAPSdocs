@@ -44,29 +44,24 @@ Note - *You may need to wait for the next sensor glucose reading to arrive befor
 (objectives-objective2)=
 ## Objective 2: Learn how to control AAPS
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below
-Click on the orange text "Not completed yet" to access the to-dos.
-Links will be provided to guide you, in case you are not familiar with a specific action yet.
+**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below.
+Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
 
 ![Screenshot objective 2](../images/Objective2_V2_5.png)
 
 Tasks to complete **Objective 2** are:
 - Set your **Profile** to 90% for a duration of 10 min.
-  - _Hint_: Long press your Profile name on the OVERVIEW screen. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+  - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. More information in [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
   - _Note_: **AAPS** does not accept basal rates below 0.05U/hr. If your **Profile** includes rates 0.06U/hr or lower you will need to create a temporary **Profile** with higher basal rates before completing this task. Switch back to your normal **Profile** after completing this task.
-- Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-section-c-bg-loop-status) in **AAPS** for a duration of 1h.
-  - _Hint_: press the loop icon on the OVERVIEW screen to open the Loop dialog.
+- Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
+  - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
 - End "taking a shower" by reconnecting your pump.
-  - _Hint_: press the "disconnected"-icon to open the loop dialog.
+  - _Hint_: press the "disconnected"-icon to open the loop dialog again and choose **Reconnect Pump**.
 - Set a custom [**Temporary Target**](../DailyLifeWithAaps/TempTargets.md) with a duration of 10 min.
-  - _Hint_: press the target bar on the OVERVIEW screen to bring up the temporary target dialog.
-- Activate the **Actions** plugin in [**Config Builder**](../SettingUpAaps/ConfigBuilder.md) to make it appear on the top scrollable menu bar.
-  - _Hint_: Go to **Config Builder** and scroll down to General.
+  - _Hint_: press the target range on the main screen to bring up the temporary target screen.
 - Display the **Loop** plugin's content.
-- [Scale the BG-Chart](#aaps-screens-main-graph) to be able to look at larger or smaller time frames: toggling between 6h, 12h, 18h 24h of past data.
-  - _Hint_: Long press on the chart or use the arrow at the top right.
-- Check that AAPS master password is set and known 
-  - Hint : see [Preferences > Protection](#Preferences-protection).
+  - _Hint_: open **Configuration → Loop** and tap "**Open plugin**".
+- Use scroll or zoom on the BG chart to look at larger or smaller time frames.
 
 
 (objectives-objective3)=
@@ -80,7 +75,7 @@ In the meantime :
 - To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dL or 5.0 - 8.5 mmol/L.
 - You might want to set a wider upper limit, or even disable Open Loop, at night.
 
-To proceed with **Objective 3**, click on the orange text “**Not completed yet**” to access the relevant question. Please read each question carefully and select your answer(s).
+To proceed with **Objective 3**, tap a question row to open it. Please read each question carefully and select your answer(s).
 
 For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for 1 hour before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
 
@@ -95,13 +90,13 @@ The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate 
 
 The minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
 
-- Select Open Loop either by pressing and holding the [Loop icon](#AapsScreens-loop-status) on the top right of the **Overview** screen.
+- Select Open Loop by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Open Loop** as running mode.
 - Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in **AAPS** and **Nightscout**.
 - Use [**Temp Targets**](../DailyLifeWithAaps/TempTargets.md) when necessary. After treating a hypo, use the predefined "hypo temp target" to prevent the system from overcorrecting upon the bounce back.
 - If you are still in [Simple Mode](#preferences-simple-mode) at this point, now is probably a good time to switch it off.
 
 To reduce the number of proposed basal rate changes while in Open Loop, you can still use the tips described in [**Objective 3**](#objective-3-prove-your-knowledge).
-Additionally, you can change the minimum percentage for recommended basal rate changes. The higher the value, the fewer change notifications you will receive.
+Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. The higher the value, the fewer change notifications you will receive.
 
 ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
@@ -162,7 +157,7 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 ![Example negative IOB](../images/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon in the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
+- Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
 - Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
 - You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
 
@@ -173,7 +168,7 @@ To complete **Objective 7** you have to close your loop and raise your [maxIOB](
 
 Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
 
-- Select **Closed Loop** by pressing and holding the [Loop icon](#AapsScreens-loop-status) in the top right corner of the **Overview** screen. Stay in **Closed Loop** over a period of 1 day.
+- Select **Closed Loop** by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Closed Loop** as running mode. Stay in **Closed Loop** over a period of 1 day.
 
 - Slowly raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0, until you find the settings that work best for you.
 
@@ -198,7 +193,7 @@ Minimal time to complete this objective: **7 days**. This is a mandatory wait ti
 
 Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
 
-This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the homescreen in an [additional graph](#AapsScreens-section-g-additional-graphs).
+This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs).
 
 Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustments) as a one off to check your basals remain accurate or do a traditional basal test.
 
@@ -245,6 +240,8 @@ For example, if you eat the same thing for breakfast at the same time every morn
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Go back in objectives
 
-If you wish to go back in the **Objectives** for whatever reason you can do so by clicking at "clear finished".
+If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
 
 ![Go back in objectives](../images/Objective_ClearFinished.png)
+
+In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".

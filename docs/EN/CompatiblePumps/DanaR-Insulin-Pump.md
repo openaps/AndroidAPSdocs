@@ -17,8 +17,8 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Go to Main Menu > Setting > Discovery
 * In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is  0000).  If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
 
-* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* In AAPS open the **menu** (☰) in the top-left corner, go to **Configuration** and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
+* Open the pump settings via **Configuration** ➜ **Pump** ➜ **DanaR** ➜ **Settings**.
 * Select DanaR Bluetooth device, and click your DanaR serial number.
 * Select Pump password, and input your password. (Default password is 1234)
 * If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Note this means you cannot loop with high TBRs while using extended boluses for food.

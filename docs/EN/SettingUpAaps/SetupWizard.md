@@ -231,6 +231,19 @@ The remaining sections can be left at their defaults for now. They are described
 
 Go back to the list of plugins and press "**NEXT**" to go to the next screen.
 
+## Client control
+
+From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
+
+There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**.
+
+- "**Authorized clients**" — manage the paired client devices allowed to control this master.
+- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+
+![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+
+Press "**NEXT**" to go to the next screen.
+
 ## Name
 
 Here you set a name to identify this **AAPS** instance. It is shown in reports and when synchronizing.
@@ -455,7 +468,7 @@ Go back, then press "**FINISH**" to complete the Setup Wizard:
 
 ![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the home screen of **AAPS**. You may see an information message confirming the profile switch you just made — tap "**SNOOZE**" to dismiss it.
+After pressing "**FINISH**" you arrive at the main screen of **AAPS**. You may see an information message confirming the profile switch you just made — tap "**SNOOZE**" to dismiss it.
 
 If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually. 
 
@@ -465,7 +478,7 @@ If you select a pump that connects over Bluetooth (for example **Dash**), a bann
 
 ![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** home screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
 
 ![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 

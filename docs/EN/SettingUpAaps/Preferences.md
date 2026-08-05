@@ -1,20 +1,16 @@
-# Preferences
+# Settings (Preferences)
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
 
-![Open preferences](../images/Pref2020_Open2.png)
+1. Tap the **Settings** (gear) icon in the top-right corner of the main screen: all settings, grouped into expandable sections.
+2. In **Configuration**, tap "**Settings**" underneath an active plugin: only that plugin's settings.
+3. Use the **search bar** on top of the main screen: just start typing part of the text you are looking for. This finds individual settings (even those not visible in the Settings screen), dialogs and documentation.
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+![Search results for "target"](../images/preferences/settings_search.png)
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+- **Sections** are opened and closed by tapping them. The sections you see depend on the plugins you have enabled and on [Simple mode](#preferences-simple-mode).
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
-
-![Open submenu](../images/Pref2020_Submenu2.png)
-
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
-
-![Preferences filter](../images/Pref2021_Filter.png)
+![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
 
 ```{contents}
 :backlinks: entry
@@ -24,7 +20,7 @@
 (Preferences-general)=
 ## General
 
-![Preferences > General](../images/Pref2020_General.png)
+![Settings > General](../images/preferences/settings_general.png)
 
 **Units**
 
@@ -42,9 +38,18 @@
 (preferences-simple-mode)=
 **Simple mode**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. [Additional graphs](#AapsScreens-section-g-additional-graphs) on the HomePage are also predefined for you. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
 
-**Patient name**
+**Insulin concentration support**
+
+- Enables support for different insulin concentrations (U50, U200, ...). Only enable this if you really use a concentration other than U100, and read the warnings carefully.
+- Setting hidden in [simple mode](#preferences-simple-mode).
+
+**Keep screen on**
+
+- Forces Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+
+**Name**
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
@@ -52,33 +57,33 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 (Preferences-skin)=
 ### Skin
 
+The skin selection from **AAPS** 3.x (Original, Low resolution, Large display...) no longer exists in **AAPS** 4. The new interface adapts to your screen automatically, and the color scheme can be changed in [Appearance](#preferences-appearance).
+
+(preferences-appearance)=
+## Appearance
+
+![Settings > Appearance](../images/preferences/settings_appearance.png)
+
+(Preferences-range-for-visualization)=
+### Range for visualization
+
+Choose the high and low marks for the BG-graph on **AAPS** main screen and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
+
+(Preferences-show-notes-field-in-treatments-dialogs)=
+### Show notes in dialogs
+
+Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+
 Setting hidden in [simple mode](#preferences-simple-mode).
 
-You can choose from four types of skins:
+### App Color Scheme
 
-![Select skin](../images/Pref2021_SkinWExample.png)
-
-'Low resolution skin' comes with shorter labels and age/level removed to have more available space on a very low resolution screen.
-
-Difference between the other skins depends on the phone's display orientation:
-
-#### Portrait orientation
-
-- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-- **Large Display** has an increased height for all graphs compared to other skins
-
-#### Landscape orientation
-
-- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-
-- **Large Display** has an increased height for all graphs compared to other skins
-
-![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
+Choose between the light theme, the dark theme, or following the phone's system setting.
 
 (Preferences-protection)=
 ## Protection
 
-![Preferences > General - Protection](../images/Pref2020_General2.png)
+![Settings > Protection](../images/preferences/settings_protection.png)
 
 (Preferences-master-password)=
 ### Master password
@@ -87,17 +92,15 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
-![Set master password](../images/MasterPW.png)
+![Set master password](../images/preferences/master_password_dialog.png)
 
 ### Settings protection
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Preferences related view.
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Settings related view.
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the preferences.
+- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the settings.
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
-
-![Protection](../images/Pref2020_Protection.png)
 
 ### Application protection
 
@@ -115,110 +118,96 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 ### Password and PIN retention
 
-Define how long (in seconds), the preferences or bolus functionalities remain unlocked after you successfully enter the password.
+**Protection timeout** defines how long (in seconds) the settings or bolus functionalities remain unlocked after you successfully enter the password.
 
-## Overview
+## Treatment safety
 
-In the **Overview** section, you can define the preferences for the home screen.
+![Settings > Safety](../images/preferences/settings_safety.png)
 
-![Preferences > Overview](../images/Pref2020_OverviewII.png)
+(preferences-patient-type)=
+### Patient age
 
-### Keep screen on
+- Safety limits are set based on the age you select in this setting.
+- If you start hitting these hard limits (like max bolus) it's time to move one step up.
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
+- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+### Maximum bolus
+
+- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
+- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
+- This restriction is also applied to the results of the bolus calculator.
+
+### Maximum carbs allowed
+
+- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
+- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+
+## BG source
+
+The settings of your selected [BG source](#Config-Builder-bg-source) appear as their own section. For example with **xDrip+ BG**:
+
+![Settings > xDrip+ BG](../images/preferences/settings_xdrip.png)
+
+- **Upload BG data to NS**: let **AAPS** upload the received BG values to Nightscout. Only enable this if the CGM app itself is not already uploading them.
+- **Log sensor change**: create a sensor change therapy event automatically when the sensor is inserted.
+
+## The main screen
+
+In **AAPS** 3.x these settings were grouped in an "Overview" section. In **AAPS** 4 they are configured directly from the main screen elements they belong to.
 
 (Preferences-buttons)=
-### Buttons
+### QuickLaunch buttons
 
-- Define which buttons are visible on the bottom of your home screen. 
-- Setting hidden in [simple mode](#preferences-simple-mode).
+Define which action buttons are visible on the main screen: tap the small **gear** at the bottom center of the main screen ("Configure QuickLaunch") and **Add** the actions you want quick access to (treatments, CGM actions, careportal entries...).
 
-![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
-
-- The **Increment** options allow you to define the amount for the three buttons in the carb and insulin dialogs, for easy entry.
-
-![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
-
-![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
+![Configure QuickLaunch](../images/preferences/quicklaunch_config.png)
 
 (Preferences-quick-wizard)=
 ### Quick Wizard
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the home screen. Useful for standard meals frequently eaten. 
+Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. Useful for standard meals frequently eaten.
 
 For each button, you define the carbs and calculation method for the bolus.
-Then, you define during which time period the button will be visible on your home screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Then, you define during which time period the button will be visible on your main screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the main screen, depending on the time of day.
 
-![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
+To manage your Quick Wizard presets, type "QuickWizard" in the main screen search bar and open **QuickWizard - Manage quick wizard presets**.
 
 If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
 The proposal has to be confirmed before insulin is delivered.
 
-![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
-
-Only one QuickWizard button can show up at the same time. If you want to execute a different one : long press on the Quick Wizard button currently showing. It will take you to the list of all Quick Wizard options. To execute one, long press on it. You will have to confirm before execution.
-
 (Preferences-default-temp-targets)=
 ### Default temp targets
 
-Setting hidden in [simple mode](#preferences-simple-mode).
-
 [Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
 
-Here you can change the target and the duration for each predefined TT. Preset values are:
+Tap the **target range** on the main screen to open the **Temp Target** screen. Swipe through the preset cards (Eating Soon, Activity, Hypo) and change the target and the duration of each preset under **Preset Settings**. Preset values are:
 
 * Eating soon: target 90 mg/dL / 5.0 mmol/L, duration 45 min
 * Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
 * Hypo: target 160 mg/dL / 8.9 mmol/L, duration 60 min
 
-![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
+![Temp Target presets](../images/preferences/temp_target_presets.png)
 
 Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
 
 ### Fill/Prime standard insulin amounts
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+If you want to fill the tube or prime the cannula through **AAPS** you can do this with the **Prime/Fill** buttons in the expanded status panel of the main screen.
 
-If you want to fill the tube or prime cannula through **AAPS** you can do this through the [**Actions** tab](#screens-action-tab).
+The default amounts of the three fill buttons can be defined in the **Prime/Fill** settings, depending on the length of your catheter. Type "prime" in the main screen search bar to open them.
 
-Pre-set values can be defined in this dialog. Choose the default amounts of the three buttons in fill/prime dialog, depending on the length of your catheter.
-
-(Preferences-range-for-visualization)=
-### Range for visualization
-
-Choose the high and low marks for the BG-graph on **AAPS** overview and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
-
-![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
-
-### Shorten tab titles
-
-Setting hidden in [simple mode](#preferences-simple-mode).
-
-Useful to see more tab titles on screen.
-
-For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
-
-![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
-
-(Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes field in treatments dialogs
-
-Setting hidden in [simple mode](#preferences-simple-mode).
-
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
-
-![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
+![Prime/Fill standard amounts](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
 ### Status lights
 
-Setting hidden in [simple mode](#preferences-simple-mode).
-
 Status lights give a visual warning for:
 
 - Sensor age
-- Sensor battery level for certain smart readers (see [screenshots page](#screens-sensor-level-battery) for details).
 - Insulin age (days reservoir is used)
 - Reservoir level (units)
 - Cannula age
@@ -227,14 +216,20 @@ Status lights give a visual warning for:
 
 If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
 
+To change the thresholds, expand the status panel on the main screen (chevron on the right of the status row) and tap the small **Settings** icon next to "Status":
+
+![Status lights](../images/preferences/status_lights.png)
+
 The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
 
-![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
-
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Deliver this part of bolus wizard result
+### Bolus wizard settings
 
-Set the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+Type "bolus" in the main screen search bar to open the **Bolus wizard** settings:
+
+![Bolus wizard settings](../images/preferences/settings_bolus_wizard.png)
+
+**Bolus percentage** sets the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
 
 Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
 
@@ -243,77 +238,31 @@ When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of 
 * to leave more room to **AAPS** to deal by itself with **BG rise**.
 In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
 
-### Old glycemia time threshold
-
-If the last **BG** received is older than this threshold, then the bolus wizard will by default offer a 100% dose instead of the **Deliver this part of bolus wizard result** setting above.
-The reason for this is that when **BG** is missing, **AAPS** will not be able to send the remaining part of the bolus afterward (the loop is not running), which would result in high **BG**.
-
-### Enabled bolus advisor
-
-Setting hidden in [simple mode](#preferences-simple-mode).
-
-![Bolus Advisor](../images/BolusAdvisor.png)
+**Use bolus advisor**
 
 When enabled, if you use the bolus wizard while you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
 
-### Enabled bolus reminder
-
-Setting hidden in [simple mode](#preferences-simple-mode).
-
-% todo
-
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### Superbolus
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
-
-#### Superbolus
-
-Setting hidden in [simple mode](#preferences-simple-mode).
-
-Option to enable superbolus in bolus wizard. 
-
-[Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes. It is different from *super micro bolus*!
-
-Use with caution and do not enable it until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB **AAPS** looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
-
-## Treatment safety
-
-(preferences-patient-type)=
-### Patient type
-
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
-
-### Max allowed bolus
-
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
-
-### Max allowed carbs
-
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+The Superbolus option of **AAPS** 3.x is not available as a setting in **AAPS** 4.
 
 ## Loop
 
-See [AAPS Screens > The Homescreen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) to change loop mode now.
 
 (Preferences-minimal-request-change)=
-### Minimal request change
+### Open mode minimum change
 
 When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate.
-To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the minimal request rate. 
+To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the "**Open mode minimum change**" setting.
 This defines the relative change required to trigger a notification.
+
+![Open mode minimum change](../images/OpenLoop_MinimalRequestChange2.png)
 
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
-Depending on your settings in [Config builder > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
@@ -331,8 +280,10 @@ All the settings for OpenAPS SMB are described in the dedicated section in [Key 
 
 ## Absorption settings
 
+![Settings > Absorption settings](../images/preferences/settings_absorption.png)
+
 (Preferences-min_5m_carbimpact)=
-### min_5m_carbimpact
+### SMB min 5m carbs impact (min_5m_carbimpact)
 
 Setting hidden in [simple mode](#preferences-simple-mode).
 
@@ -346,22 +297,24 @@ The min_5m_carbimpact does define the default carb absorption impact per 5 minut
 
 Standard value for AMA is 3, for SMB it's 8.
 
-The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+The COB graph on the main screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
 ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
 
-### Meal max absorption time
+### Absorption cutoff
 
-If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Time at which any meal is considered absorbed; remaining carbs will be cut off. If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
 ### Advanced settings - autosens ratio
 
-![Absorption settings](../images/Pref2020_Absorption.png)
+![Absorption advanced settings](../images/preferences/settings_absorption_advanced.png)
 
 - Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
 ## Pump
+
+![Settings > Pump](../images/preferences/settings_pump.png)
 
 ### BT Watchdog
 
@@ -369,7 +322,7 @@ Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off Bluetoo
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in [Config Builder > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
+The options here will vary depending on which pump driver you have selected in [Configuration > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
 
 ## Tidepool
 
@@ -378,7 +331,7 @@ More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 (Preferences-nsclient)=
 ## NSClient
 
-![NSClient](../images/Pref2024_NSClientV3.png)
+![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
 
 The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. [Introduced with AAPS 3.2,](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) it uses the Nightscout API v3.
 
@@ -390,34 +343,38 @@ When using NSClient, all uploaders must be using the API V3. Since most are not 
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **NS access token** (not your API Secret!).
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!).
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
 - Double check for typos here if you are stuck in Objective 1.
-- Leave Connect to websockets enabled (recommended).
+- Leave "Use websockets" enabled (recommended).
 
 (Preferences-nsclient-synchronization)=
 ### Synchronization
 
-![Synchronization options](../images/Pref2025_NSclient_Synchronization.png)
+![Synchronization options](../images/preferences/settings_nsclient_sync.png)
 
 Synchronization choices will depend on the way you will want to use **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings). 
+You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
 
 ### Alarm options
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+![Alarm options](../images/preferences/settings_nsclient_alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
 - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
 - They will only work while you have a connection to Nightscout and are intended for parent/caregivers.
 - If you have the **CGM** source on your phone (i.e. xDrip or BYODA) then use those alarms instead of Nightscout Alarms.
-- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the **AAPS** notifications bar.
+- NS announcements will echo Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) in the **AAPS** notifications.
 - You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+
+### Remote control
+
+The **Remote control** subsection ("Allow client control") is part of the master ↔ client control feature. It is described on the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page.
 
 ### Connection settings
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+![NSClient connection settings](../images/preferences/settings_nsclient_connection.png)
 
 - Connection settings define when Nightscout connection will be enabled.
 - Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
@@ -428,7 +385,7 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClient)
 
-![NSClient advanced settings](../images/Pref2024_NSClientAdv.png)
+![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
 
 Options in advanced settings are self-explanatory.
 
@@ -438,6 +395,8 @@ More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.m
 
 ## Automation
 
+![Settings > Automation](../images/preferences/settings_automation.png)
+
 Select which location service shall be used:
 
 - Use passive location: **AAPS** only takes locations if other apps are requesting it
@@ -446,20 +405,20 @@ Select which location service shall be used:
 
 ## Local alerts
 
-![Local alerts](../images/Pref2020_LocalAlerts.png)
+![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
 
 Settings should be self-explanatory.
 
 (preferences-maintenance-settings)=
 ## Maintenance settings
 
-![Maintenance settings](../images/Pref2020_Maintenance.png)
+![Settings > Maintenance](../images/preferences/settings_maintenance.png)
 
 **Email recipient**: Standard recipient of logs is <mailto:logs@aaps.app>.
 
 **Data Choices**
 
-![Data choices](../images/Pref2020_DataChoice.png)
+![Data choices](../images/preferences/settings_data_choices.png)
 
 You can help develop **AAPS** further by sending crash reports to the developers.
 
@@ -485,15 +444,15 @@ If you need to send the logs to the developers, make sure you accurately describ
 
 You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
 
-![Log files options](../images/Pref2020_Maintenance_Logs.png)
+Log handling (log settings, sending and deleting logs) and file management are found on the **Maintenance** screen, opened from the **menu** (☰) in the top-left corner of the main screen:
+
+![Maintenance screen](../images/preferences/maintenance_file_management.png)
 
 (preferences-maintenance-logdirectory)=
 
 ### Setting the local AAPS directory
 
-Maintenance settings also include the **AAPS** directory, which can be found directly under the Maintenance tab. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
-
-![Pref2020_Maintenance_Directory.png](../images/Pref2020_Maintenance_Directory.png)
+The **Maintenance** screen also includes the **AAPS directory**. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
 
 It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
 

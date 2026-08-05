@@ -250,3 +250,8 @@ Samsung has an unfortunate track record of forcing updates on their phones, whic
 There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens, you will have to go to the Google Play options and disable **Google Play Protect**. Not all phone models or all Android versions are affected.
 ```
 
+```{admonition} Android developer verification
+:class: note
+From September 2026, Google is gradually introducing [Android developer verification](#android-developer-verification), which changes how a self-built app is installed on the phone. Building **AAPS** is not affected, and free installation methods remain available — see the linked page for details.
+```
+

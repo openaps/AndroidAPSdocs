@@ -61,7 +61,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 After installing a new version of AAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
 
-Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** .
+Via the **AAPS Setup Wizard (2)** located in the top-left **menu** (☰) **(1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** .
 
 > ![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
 
@@ -75,13 +75,13 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 **OR**
 
-### Option 2: The Config Builder
+### Option 2: The Configuration screen
 
-Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜**Pump**➜**Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+Via the top-left hand corner **menu** (☰) under **Configuration** ➜**Pump**➜**Omnipod** by selecting the **radio button** titled **Omnipod**. You can then open the Omnipod pump screen at any time with **Open plugin** (or **Manage → Pump**). This is referred to in this documentation as the **Omnipod (POD)** tab.
 
 > **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
 >
-> ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
+> ![Configuration > Pump with the Omnipod plugin](../images/v4/Configuration/configuration_pump_list_1.png)
 
 ### Verification of Omnipod Driver Selection
 
@@ -105,11 +105,11 @@ Please **swipe left** to the **Omnipod (POD)** tab where you will be able to man
 
 If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](#OmnipodEros-activating-a-pod) below.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
+*Note: A good visual indicator that the RileyLink is not connected is that the treatment buttons (QuickLaunch toolbar) on the main screen will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
 
 1. Ensure that your RileyLink is fully charged and powered on.
 
-2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜**Pump**➜**Omnipod**➜**Gear Icon (Settings) (2)** ➜**RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.
+2. After selecting the Omnipod driver, identify and select your RileyLink from **Configuration (1)** ➜**Pump**➜**Omnipod**➜**Gear Icon (Settings) (2)** ➜**RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.
 
    > Ensure your RileyLink battery is charged and it is [positioned in close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
    >
@@ -577,7 +577,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 ## Omnipod Settings
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**➜**Pump**➜**Omnipod**➜**Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+The Omnipod driver settings are configurable from the top-left hand corner **menu** (☰) under **Configuration**➜**Pump**➜**Omnipod**➜**Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. You can open the Omnipod pump screen at any time with **Open plugin** (or **Manage → Pump**). This is referred to in this documentation as the **Omnipod (POD)** tab.
 
 ![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
 
@@ -731,11 +731,11 @@ Pods fail occasionally due to a variety of issues, including hardware issues wit
 
 ### Preventing error 49 pod failures
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**➜**General**➜**NSClient**➜**cog wheel**➜**Advanced Settings** to prevent possible failures.
+This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under **Configuration**➜**Communication**➜**NSClient**➜**Settings**➜**Advanced Settings** to prevent possible failures.
 
 ### Pump Unreachable Alerts
 
-It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
+It is recommended that pump unreachable alerts be configured to **120 minutes** by pressing the **Settings** (gear) icon on the top right of the main screen, selecting **Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
 ### Import Settings from previous AAPS
@@ -750,7 +750,7 @@ Please note that importing settings has the possibility to import an outdated Po
 
 ### Omnipod driver alerts
 
-please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+Please note that the Omnipod driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
 #### No active Pod
 

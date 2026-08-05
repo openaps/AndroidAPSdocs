@@ -26,9 +26,9 @@ To avoid this there are two possibilities:
 * Your phone must keep your standard time as at home for the whole travel period.
 
 * Time-shift your **Profile** according to time difference between home time and destination time.
-   * Long-press **Profile** name (middle of top section on home screen)
-   * Select '**Profile Switch**'
-   * Set 'Time shift' according to your destination.
+   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
+   * Select your **Profile** and tap **▶ Activate**
+   * Set '**Time shift**' according to your destination and tap **Activate**.
    
    ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
 
@@ -131,11 +131,11 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. **AAPS** refresh your pump and switch to your desired **Profile**.
+3. In **AAPS** refresh your pump and switch to your desired **Profile**.
 
-3. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
 
-4. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
 
    
 ### DST for Accu-Chek Combo
@@ -150,7 +150,7 @@ This section is only valid for the old, Ruffy-based driver. The new driver adjus
    * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
    * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
 
-   Screenshot_20260329-110315 (1)
+   ![Android date and time settings](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
 2. Find a timezone that has the same time as your current location but doesn't use DST. 
 
@@ -159,10 +159,9 @@ This section is only valid for the old, Ruffy-based driver. The new driver adjus
 
 3. In **AAPS** refresh your pump.
 
-4. Check the Treatments tab... If you see any duplicate treatments:
+4. Check the **Treatments history** (drawer menu → *Treatments history*)... If you see any duplicate treatments:
 
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * **Long-press** a faulty entry to enter selection mode, tick all future and duplicate entries, then tap the **🗑 Delete** icon and confirm. This invalidates the treatments rather than removing them, so they will not be considered for IOB anymore.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
@@ -172,10 +171,9 @@ A good time to make this switch would be with low **IOB**. E.g. an hour before a
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
 2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
 3. On the **AAPS** “Combo” screen, press Refresh.
-4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
+4. Then go to the **Treatments history**, and look for any events in the future. There shouldn’t be many.
 
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * **Long-press** an entry to enter selection mode, tick all future and duplicate entries, then tap the **🗑 Delete** icon and confirm. This invalidates the treatments rather than removing them, so they will not be considered for IOB anymore.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 6. Continue as normal.

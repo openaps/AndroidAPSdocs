@@ -18,27 +18,25 @@ Nightscout `API_SECRET` is your site main password: don't share it publicly.
 
 You can set up AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
 
-* Access the NSClientV3 plugin settings with either
-  1) Main view -> Config Builder -> Synchronization -> NSClient Cog icon
-  2) NSCLIENT tab -> Three dots menu -> Plugin preferences
-* Enable all data upload to Nightscout (3) as this is now the standard method unless your BG data source is Nightscout.  
-  If your AAPS BG data source is Nightscout **do not** enable Upload BG data to NS (3).
-* Do not enable Receive/backfill data (4) unless Nightscout is your BG data source.
-
-![Nightscout upload only](../images/NSsafety.png)
+* Access the **Synchronization** settings of the NSClientV3 plugin with either
+  1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or
+  2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
+* Enable "Upload data to NS" and "Upload BG data to NS" as this is now the standard method unless your BG data source is Nightscout.  
+  If your AAPS BG data source is Nightscout **do not** enable Upload BG data to NS.
+* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
 
 #### Do not sync from Nightscout
 
-Disabling these options makes sure no Nightscout change will be used by AAPS.
+Keeping all the "Receive ... from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
-![Nightscout upload only](../images/NSsafety2.png)
+![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
 
 #### Accept changes from Nightscout
 
 Enabling these options allow you to remotely change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS.  
 Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
 
-![Nightscout upload only](../images/NSsafety3.png)
+![Nightscout receive options enabled](../images/NSsafety3.png)
 
 
 

@@ -21,13 +21,13 @@ _These instructions are for configuring the app and your pump if you have a Dana
 (DanaRS-Insulin-Pump-pairing-pump)=
 ## Pairing pump
 
-* On AAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
-* In pump section select 'Dana-i/RS'.
-* Click on gear wheel to get directly to the pump settings or return to homescreen.
+* Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
+* In the pump section select 'Dana-i/RS'.
+* Click on the gear wheel to get directly to the pump settings or return to the main screen.
 
-  ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+  ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_1.png)
 
-* Go to 'DANA-i/RS' tab.
+* Open the pump screen (**Manage → Pump**).
 * Select preferences menu by tapping the 3 dots in the top right. 
 * Select 'Dana-i/RS Preferences'.
 * Click on "Selected pump".

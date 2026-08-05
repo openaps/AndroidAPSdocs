@@ -56,7 +56,7 @@ For a **Wizard**-mode button you choose which inputs the calculation uses:
 ## Validity — when the button appears
 
 (quickwizard_validity)=
-The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden.
+The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet (a shortcut you [pinned manually to the QuickLaunch toolbar](QuickLaunch.md) stays visible regardless, though).
 
 ---
 
@@ -64,8 +64,13 @@ The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown 
 
 The **Device Selection** toggles decide where each QuickWizard appears:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** and as a **quick-action button on the overview** (the [QuickLaunch](QuickLaunch.md) toolbar).
+- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). Independently of this, every QuickWizard can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
 - **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+
+```{admonition} Don't see Device Selection?
+:class: note
+The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+```
 
 On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
 
@@ -88,6 +93,8 @@ Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** 
 - **➕ Add** — create a new QuickWizard.
 - **⧉ Clone** — duplicate one as a starting point.
 - **🗑️ Delete** — remove one.
+
+With two or more QuickWizards you can also change their order in the carousel: tap the **⋮** menu in the top bar and choose **Reorder**, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
 
 QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
 

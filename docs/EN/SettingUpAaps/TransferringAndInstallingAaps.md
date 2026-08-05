@@ -13,6 +13,11 @@ There are several ways to transfer the **AAPS** APK file from your computer to t
 
 Please note that transfer by email might cause difficulties, and is discouraged.
 
+```{admonition} Android developer verification
+:class: warning
+Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, install with [ADB](#android-developer-verification-adb) or one of the other free methods explained on that page.
+```
+
 ## Option 1. Use Google drive to transfer files
 
 Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
@@ -34,11 +39,11 @@ Switch to your mobile and start the Google Drive app. It is a preinstalled app a
 
 ![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by double click on the filename in the Google Drive App on the mobile.
+Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
 
 ![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, please allow it for that short moment and disallow it afterwards, as it is a security risk to leave it enabled all the time.
+In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
 
 ![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 

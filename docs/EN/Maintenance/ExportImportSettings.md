@@ -62,7 +62,7 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 
 1. If this your first time importing or exporting **Settings** you will need to set a master password in [Preferences > General > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
 
-2. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok
+2. From the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok
 
 ![AAPS export settings 1](../images/Maintenance/AAPS_ExportSettings1.png)
 ![AAPS export settings 2](../images/Maintenance/AAPS_ExportSettings2.png)
@@ -128,19 +128,19 @@ Importing a **Preferences** file will deactivate your current pod if those **Pre
 
 3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Preferences**
 
-4. From the **AAPS** home screen select Request and allow on all permissions listed in red on the top
+4. From the **AAPS** main screen select Request and allow on all permissions listed in red on the top
 
-5. From the **AAPS** home screen, set the master password in [Preferences > General > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+5. From the **AAPS** main screen, set the master password in [Preferences > General > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
 
-6. If you haven't done it yet, [set the **AAPS Directory**](#preferences-maintenance-settings): from the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > AAPS DIRECTORY.
+6. If you haven't done it yet, [set the **AAPS Directory**](#preferences-maintenance-settings): from the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > AAPS DIRECTORY.
 
-7. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok. This will create the preferences folder if it does not already exist on your phone.
+7. From the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok. This will create the preferences folder if it does not already exist on your phone.
 
 8. Download the back-up of your **Preferences** file from your cloud platform. 
 
 9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
 
-10. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to back-up from > Ok > type in Master password set above > Ok. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
+10. From the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to back-up from > Ok > type in Master password set above > Ok. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
 
 ![AAPS import settings 1](../images/Maintenance/AAPS_ImportSettings1.png)
 ![AAPS import settings 2](../images/Maintenance/AAPS_ImportSettings2.png)
@@ -149,7 +149,7 @@ Importing a **Preferences** file will deactivate your current pod if those **Pre
 
 11. Tubeless pumps (Omnipod and Medtrum) users only - if your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** home screen, select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
+**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
 
 ### Note for Dana RS users
 

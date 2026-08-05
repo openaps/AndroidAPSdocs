@@ -21,7 +21,7 @@ Section **1) Getting Started**, the [Introduction](Getting-Started/Introduction.
 
 Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
 
-Section **2) Build the app** explains why you need to build the **AAPS** app yourself rather than just downloading it, and takes you step-by-step through [building it](./SettingUpAaps/BuildingAaps.md) (using a browser, Android Studio, or the command line) and then transferring and installing it on your phone.
+Section **2) Build the app** explains why you need to build the **AAPS** app yourself rather than just downloading it, and takes you step-by-step through [building it](./SettingUpAaps/BuildingAaps.md) (using a browser, Android Studio, or the command line) and then transferring and installing it on your phone. It also explains [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed.
 
 Section **3) Setting up the reporting server** covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data.
 
@@ -97,6 +97,7 @@ Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Android Studio Build <./SettingUpAaps/ComputerBuild.md>
 - CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
 ```
 ```{toctree}
 :caption: 3) Setting up the reporting server
@@ -143,6 +144,7 @@ Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling
 :caption: 6) Remote AAPS features
 
 Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
+The AAPSClient app <./RemoteFeatures/AapsClient.md>
 Remote control <./RemoteFeatures/RemoteControl.md>
 Master ↔ Client control <./RemoteFeatures/ClientMasterControl.md>
 SMS Commands <./RemoteFeatures/SMSCommands.md>
