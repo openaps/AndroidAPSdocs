@@ -1,7 +1,13 @@
 (aapsclient-app)=
 # The AAPSClient app
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person looping with **AAPS** and, from **AAPS** version 4, can also **control** their loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+
+```{admonition} Wording used on this page
+:class: note
+- **Client** = a phone running **AAPSClient**.
+- **Master** = the main **AAPS** phone that owns the pump and runs the loop.
+```
 
 ```{contents} Table of contents
 :depth: 2
@@ -16,7 +22,7 @@
 - The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
 - What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands.
 
-Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). How that works — pairing, master-authored confirmations, bolusing from the client, what happens when the master is offline — is described on the dedicated [Master ↔ Client control](ClientMasterControl.md) page.
+Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
 
 ## Versions: AAPSClient, AAPSClient2 and AAPSClient3
 
