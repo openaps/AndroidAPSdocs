@@ -147,6 +147,7 @@ Enable either one or both of the following options in [OpenAPS SMB settings](#Pr
 
 If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile, and the displayed target changes color to indicate the adjustment.
 
+(aaps-screens-iob-cob-basal-sens)=
 #### IOB, COB, basal and sensitivity
 
 ![IOB, COB, basal and sensitivity](../images/Home2020_TBR.png)

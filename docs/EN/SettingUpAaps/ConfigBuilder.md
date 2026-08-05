@@ -129,24 +129,28 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 ### Duration of insulin action (DIA) and peak
 
 ```{warning}
-Decreasing DIA or peak will always increase administered insulin. DIA has different logic to it in AAPS compared to commercial AID systems. Uninformed changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
 ```
 
-AAPS models insulin action with a mathematical function, configured using **DIA** and the closely related  **peak** settings. DIA represents a theoretical duration until IOB reaches zero and peak represents timepoint after insulin activity is strongest. Insulin activity and rate of IOB decay is one and the same.
+AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related  **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the timepoint when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
 
-![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
+Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
 
-In the above chart, in theory, half the IOB is decayed after ~110 minutes. The blue activity curve shows that at 120 minutes, IOB is decaying at a rate of 0.5 percentage points per minute.
+To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin**. AAPS displays the active insulin configuration like this:
 
-Recall that as AAPS applies TBR below profile basal rate, IOB is subtracted. Therefore, in the typical hybrid closed-loop AAPS use, positive IOB from meal bolus will in practice reach zero many hours earlier than the configured DIA. For the same reason, positive IOB from a small SMB will decay to zero very quickly after zero-temping.
+![Sample insulin configuration](../images/Screenshot_insulin_profile.png)
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin**. Due to the influence of TBR explained above and the mathematical formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to determine a personalized DIA and peak configuration with the information presented in the next section.
+In this example, peak setting is 75 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
 
-#### Additional details on the impact of DIA and peak configuration
+Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
+
+
+````{admonition} Details on the impact of DIA and peak configuration
+:class: dropdown
 
 Since the basal rate has an indirect influence to IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact in sense that the effect of DIA depends on peak, and vice versa.
 
-The following charts show the exact impact of DIA and peak to the IOB curves.
+These charts show the exact impact of DIA and peak to the IOB curves, across hard limits.
 
 Adjusting DIA:
 
@@ -167,6 +171,8 @@ Finally, a comparison adjusting DIA and peak in parallel. The logic here is that
 ```
 
 Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+
+````
 
 #### Further reading on DIA and peak configuration
 
