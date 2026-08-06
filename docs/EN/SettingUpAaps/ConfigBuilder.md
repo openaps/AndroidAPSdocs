@@ -126,39 +126,60 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 (Config-Builder-insulin-dia)=
-### Duration of insulin action (DIA)
+### Duration of insulin action (DIA) and peak
 
-#### Description
+```{warning}
+In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+```
 
-The length of time that insulin takes to decay to zero.
+AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related  **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the timepoint when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
 
-The duration of insulin action is set to a single value per insulin type in **AAPS**, because your pump will continually infuse the same type of insulin.
+Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
 
-![Sample insulin Profile](../images/Screenshot_insulin_profile.png)
+To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin**. AAPS displays the active insulin configuration like this:
 
-This, together with the insulin type's peak time, results in the [insulin profile](#AapsScreens-insulin-profile), as shown in the image above. The important thing to note is that the decay has a **long tail**. If you have been used to manual pumping, you have probably been used to assuming that insulin decays over a much shorter period i.e. about 3.5 hours. However, when you are looping, the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the **AAPS** algorithm. Therefore, **AAPS** uses a minimum of 5h as **DIA**.
+![Sample insulin configuration](../images/Screenshot_insulin_profile.png)
 
-Additional reading on the topic of duration of insulin action, and why it matters : 
-* [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) on OpenAPS documentation.
+In this example, peak setting is 75 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
+
+Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
+
+
+````{admonition} Details on the impact of DIA and peak configuration
+:class: dropdown
+
+Since the basal rate has an indirect influence to IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact in sense that the effect of DIA depends on peak, and vice versa.
+
+These charts show the exact impact of DIA and peak to the IOB curves, across hard limits.
+
+Adjusting DIA:
+
+```{image} ../images/iob_remaining_static_peak.png
+:width: 400px
+```
+
+Adjusting peak:
+
+```{image} ../images/iob_remaining_static_dia.png
+:width: 400px
+```
+
+Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is same for both.
+
+```{image} ../images/iob_remaining_uniform.png
+:width: 400px
+```
+
+Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+
+````
+
+#### Further reading on DIA and peak configuration
+
+* [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
 * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
 * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
 * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
-
-#### Impact
-
-Too short **DIA** can lead to low BGs. And vice versa.
-
-If **DIA** is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
-
-Example of a too-short **DIA** is a **high BG** followed by **AAPS** over-correcting and giving a **low BG**.
-
-#### How to set it
-
-The **figure below** shows an example of a DIA setting.
-
-![DIA](../images/Profile_DIA.png)
-
-The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is probably a good place to start. A growing number of people find that a **DIA** of 8 to 9 hours works well for them. See the additional reading mentioned above.
 
 (Config-Builder-bg-source)=
 ## BG Source
