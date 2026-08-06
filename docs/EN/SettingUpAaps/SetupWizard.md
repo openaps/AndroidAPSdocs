@@ -268,7 +268,7 @@ After setting these values, press "**NEXT**" to go to the next screen:
 
 ## Insulin
 
-Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h** (a DIA of 5–6 h on a new profile is equivalent to a DIA of 3 h on the old insulin profiles).
+Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
 
 Press the "**Insulin**" button to open the insulin editor:
 
@@ -282,12 +282,12 @@ Pick the preset that matches your insulin, for example **Fiasp**:
 
 ![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
-```{admonition} Tap your insulin brand and use the given preset for peak.
+```{admonition} Use your insulin brand's preset peak
 :class: danger
 Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
 ```
 
-If you are a new AAPS user, set DIA to 9 hours. More details at [the DIA section of the docs](#Config-Builder-insulin-dia).
+If you are a new **AAPS** user, set **DIA** to 9 hours — see [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to understand why.
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note

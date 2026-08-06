@@ -53,6 +53,8 @@ MYST_TARGET_RE = re.compile(r"^\s*\(([A-Za-z0-9_.:-]+)\)=\s*$")
 HTML_SRC_RE = re.compile(r"<img\s+[^>]*src\s*=\s*[\"']([^\"']+)[\"']", re.IGNORECASE)
 HTML_HREF_RE = re.compile(r"<a\s+[^>]*href\s*=\s*[\"']([^\"']+)[\"']", re.IGNORECASE)
 INLINE_CODE_RE = re.compile(r"`[^`]*`")
+MYST_DIRECTIVE_OPEN_RE = re.compile(r"^(`{3,})\{")
+MYST_IMAGE_DIRECTIVE_RE = re.compile(r"^`{3,}\{(?:image|figure)\}\s+(\S+)")
 DOCS_HOSTS = {"androidaps.readthedocs.io", "wiki.aaps.app"}
 
 
@@ -219,19 +221,25 @@ def parse_markdown_links(markdown_file: Path) -> tuple[list[LinkOccurrence], lis
 
     lines = markdown_file.read_text(encoding="utf-8", errors="ignore").splitlines()
     in_fenced_code_block = False
-    in_myst_directive_fence = False
+    # Stack of opening markers for MyST directive fences, so nested directives
+    # (e.g. a 3-backtick {image} inside a 4-backtick {admonition}) close correctly.
+    directive_fence_stack: list[str] = []
     fence_marker = ""
 
     for line_number, line in enumerate(lines, start=1):
         stripped = line.strip()
 
-        if in_myst_directive_fence:
-            if stripped == "```":
-                in_myst_directive_fence = False
-                continue
+        if directive_fence_stack and stripped == directive_fence_stack[-1]:
+            directive_fence_stack.pop()
+            continue
 
-        if stripped.startswith("```{") and not in_fenced_code_block:
-            in_myst_directive_fence = True
+        directive_open = MYST_DIRECTIVE_OPEN_RE.match(stripped)
+        if directive_open and not in_fenced_code_block:
+            # {image}/{figure} directives carry their target on the opening line.
+            image_directive = MYST_IMAGE_DIRECTIVE_RE.match(stripped)
+            if image_directive:
+                images.append(LinkOccurrence(markdown_file, line_number, clean_link_target(image_directive.group(1))))
+            directive_fence_stack.append(directive_open.group(1))
             continue
 
         # Handle fenced code blocks while keeping MyST directive fences parseable.
