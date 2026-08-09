@@ -82,6 +82,8 @@ The scene's actions stay in effect until:
 
 Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
 
+When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+
 ---
 
 ## Triggering scenes from Automation
@@ -117,6 +119,8 @@ The watch then shows a confirmation — tap **✓** to activate, or swipe back t
 ![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
 
 Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+
+While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile also shows a **stop** button. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
 
 ---
 
