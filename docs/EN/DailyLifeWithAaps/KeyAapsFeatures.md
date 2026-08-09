@@ -228,6 +228,7 @@ Default value : the same as **Max minutes of basal to limit SMB**.
 
 This setting is only visible if "Enable SMB" and "Enable UAM " are switched on.
 
+(enable-uam)=
 ### Enable UAM
 With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell **AAPS** about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increase caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
 

@@ -305,6 +305,7 @@ Most users find the following configuration of additional graphs to be adequate 
 
 Active insulin including boluses **and basal**.
 
+(aaps-screens-iob)=
 #### Insulin on board (IOB)
 
 Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
