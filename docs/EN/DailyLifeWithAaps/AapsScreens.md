@@ -432,6 +432,8 @@ When you want to make a meal bolus, this is where you will normally make it from
 
 The **Calculation** header shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
+The bolus calculator can be used whatever your current **BG**, including when it is too high or too low. If **BG** is above target, a correction is added to the meal bolus. If **BG** is below target, the bolus is reduced and, if the insulin already on board is more than needed, the calculator tells you how many carbs are still required instead of proposing insulin.
+
 The icon row below the header shows which inputs enter the calculation (BG, trend, IOB, temporary target, COB). Pressing an icon enables / disables this entry from the calculation; the **(i)** icon shows the detailed numbers behind the calculation.
 
 #### Combinations of COB and IOB and what they mean
@@ -444,7 +446,7 @@ The icon row below the header shows which inputs enter the calculation (BG, tren
 (AapsScreens-section-j)=
 ### Section J - Entry fields
 
-In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for; the meal-type buttons (bread, cake, pizza) pre-fill typical amounts.
+In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for; the meal-type buttons (bread, cake, pizza) pre-fill typical amounts. **AAPS** only works with grams: if you count in bread units or exchanges (_e.g._ DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
 
 The **Correction** field is if you want to modify the end dosage for some reason.
 
