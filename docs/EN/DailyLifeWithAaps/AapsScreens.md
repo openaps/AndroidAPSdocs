@@ -425,12 +425,14 @@ Shows the calculated bolus.
 
 If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 
+The bolus calculator can be used whatever your current **BG**, including when it is too high or too low. If **BG** is above target, a correction is added to the meal bolus. If **BG** is below target, the bolus is reduced and, if the insulin already on board is more than needed, the calculator tells you how many carbs are still required instead of proposing insulin.
+
 (AapsScreens-section-j)=
 ### Section J
 
 BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank.
 
-In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for.
+In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for. **AAPS** only works with grams: if you count in bread units or exchanges (_e.g._ DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
 
 The **Corr** field is if you want to modify the end dosage for some reason.
 
