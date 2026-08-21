@@ -21,7 +21,7 @@ Section **2) Getting Started**, the [Introduction](Getting-Started/Introduction.
 
 Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
 
-Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. 
+Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone, including [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. 
 You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. 
 These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
 
@@ -96,6 +96,7 @@ Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Android Studio Build <./SettingUpAaps/ComputerBuild.md>
 - CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
 Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
