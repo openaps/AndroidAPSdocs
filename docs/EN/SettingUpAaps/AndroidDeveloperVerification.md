@@ -21,9 +21,9 @@ Google is rolling this out gradually:
 
 | When | What happens |
 |------|--------------|
-| August 2026 | Free "limited distribution" developer accounts open worldwide |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand** |
-| 2027 | Enforcement expands to the **rest of the world** |
+| August 2026 | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones |
+| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
+| 2027 | Enforcement expands to the **rest of the world** and to **all installations**, including APK files |
 
 Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
 
@@ -31,8 +31,9 @@ Details are published by Google on the [Android developer verification](https://
 
 - **Building AAPS is not affected at all.** The [browser build](#browser-build), the [Android Studio build](ComputerBuild.md) and the [CLI build](CLIBuild.md) work exactly as before, and your keystore does not change.
 - **Your current AAPS keeps running.** Verification is only checked when installing or updating an app.
-- **If you live in Brazil, Indonesia, Singapore or Thailand:** installing or updating **AAPS** by tapping the APK file will be blocked from September 30, 2026. Use one of the [free installation methods](#android-developer-verification-free-methods) below.
-- **If you live anywhere else:** nothing changes for you before 2027. You have time, but it is worth reading this page so the change does not surprise you when you update **AAPS**.
+- **If you live in Brazil, Indonesia, Singapore or Thailand:** from September 30, 2026, verification is enforced for apps installed from Google Play and a few other app stores. Google states that installing an APK file directly is not covered by this first step, so **AAPS** should still install as usual. Nevertheless, prepare one of the [free installation methods](#android-developer-verification-free-methods) below now, so that you are not caught out if this changes.
+- **If you live anywhere else:** nothing changes for you before 2027. You have time, but it is worth reading this page so the change does not surprise you when you update **AAPS**. The [advanced flow](#android-developer-verification-advanced-flow) can already be enabled on most phones, and it is a one-time setup.
+- **Old phones:** verification applies to phones running Android 7 or higher, which means every phone able to run **AAPS**.
 
 (android-developer-verification-free-methods)=
 
@@ -44,7 +45,7 @@ You do **not** need to pay Google anything to keep using **AAPS**. There are thr
 :class: tip
 - You built **AAPS** with **Android Studio or the command line** (so you have a computer): use [ADB](#android-developer-verification-adb). It is exempt from verification, has no limits, and needs no Google account.
 - You built **AAPS** with the **browser build** and have no computer available: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
-- You prefer to register with Google so the normal "tap the APK" installation keeps working: use a [free limited distribution account](#android-developer-verification-limited-account) (available from August 2026).
+- You prefer to register with Google so the normal "tap the APK" installation keeps working: use a [free limited distribution account](#android-developer-verification-limited-account).
 ```
 
 (android-developer-verification-adb)=
@@ -81,33 +82,43 @@ The same command is used for every future update. The [Wear OS pages](../WearOS/
 
 ### Option 2: The "advanced flow" on your phone (no computer needed)
 
-Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. It is a one-time setup on the phone itself:
+Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
 
-1. Enable **Developer Mode** in the phone settings (see step 1 of the ADB method above).
-1. Confirm on the phone that you want to allow installing apps from unverified developers, and that nobody is pressuring or guiding you to do this (this is a protection against scammers).
-1. The phone imposes a **one-day waiting period**, after which you confirm again with your fingerprint, face unlock or PIN.
-1. You can allow unverified installations for 7 days or indefinitely.
+1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
+1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
+1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
+1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
+1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
+1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
 
-After this setup, installing the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — choose **Install anyway**.
+After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
+
+Good to know:
+
+- You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
+- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
+- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
+- If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store.
 
 ```{note}
-The advanced flow becomes available on phones when verification is enforced in your region. Google may still change the exact screens and steps; this section will be updated with screenshots once the final version is available.
+Google describes this as a first version and may still change the screens and steps; this section will be updated with screenshots once the final version is available.
 ```
 
 (android-developer-verification-limited-account)=
 
 ### Option 3: Register with Google (free limited distribution account)
 
-Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**:
+Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
 
-- You only need an email address — **no government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use).
-- You register your app and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and Google's Android Developer Console.
-- Once registered, the normal installation (tapping the APK file) works again on the authorized phones.
+- **No government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use). You do need a Google account with 2-step verification, a Google payments profile holding your legal name and address, and a contact email address.
+- You register your app's package name in Google's Android Developer Console, and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and the console.
+- Once registered, the normal installation (tapping the APK file) works again on the authorized phones, without ADB and without the advanced flow.
+- A limited distribution account can later be upgraded to a full account, but not the other way round.
 
 ```{warning}
-Limited distribution accounts open worldwide in **August 2026** (early access is currently closed). Google has also not yet explained how registration will work when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others may require additional review.
+Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review.
 
-For these reasons, step-by-step instructions cannot be written yet. This section will be completed when the registration is open and has been tested with **AAPS**. In the meantime, ADB and the advanced flow above are reliable alternatives.
+For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB and the advanced flow above are reliable alternatives.
 ```
 
 ## What does not change
