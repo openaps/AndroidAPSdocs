@@ -306,6 +306,15 @@ def target_exists(candidate: Path) -> bool:
     if candidate.exists():
         return True
 
+    # Files under <lang_dir>/_html/ are copied verbatim to the site root by
+    # Sphinx (html_extra_path in conf.py), so a relative link that lands on
+    # <lang_dir>/<name> is valid on the built site if <lang_dir>/_html/<name>
+    # exists (e.g. '../install-aaps.html' -> _html/install-aaps.html).
+    for parent in candidate.parents:
+        extra_candidate = parent / "_html" / candidate.relative_to(parent)
+        if extra_candidate.exists():
+            return True
+
     if candidate.suffix == "":
         md_candidate = candidate.with_suffix(".md")
         if md_candidate.exists():

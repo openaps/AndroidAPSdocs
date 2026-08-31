@@ -162,7 +162,7 @@ If the command line is not for you, a web page can do exactly what ADB does, dir
 This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
 
 1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **[AAPS web installer](https://androidaps.readthedocs.io/en/latest/install-aaps.html)** in your browser.
+1. Open the **<a href="../install-aaps.html">AAPS web installer</a>** in your browser.
 1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
 
 Three things to know:
