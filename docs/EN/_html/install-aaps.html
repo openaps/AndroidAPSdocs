@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <meta name="robots" content="noindex">
+  <title>AAPS Web Installer</title>
+  <!--
+    AAPS Web Installer — installs an APK onto an Android phone over USB,
+    from the browser, using the ADB protocol (WebUSB). ADB installations are
+    exempt from Google's Android developer verification.
+
+    This page makes NO network requests (enforced by the Content-Security-Policy
+    above): the APK file and the phone's data never leave this computer.
+
+    Application logic: install-aaps.app.js (readable, unminified).
+    Vendor bundle:     install-aaps.bundle.js — built from the MIT-licensed
+                       Tango (ya-webadb) libraries, https://github.com/yume-chan/ya-webadb
+                       Pinned versions and the reproducible build procedure are in
+                       /installer/README.md of the AndroidAPSdocs repository:
+                       https://github.com/openaps/AndroidAPSdocs
+  -->
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fafafa; --fg: #1a1a1a; --muted: #555;
+      --card: #ffffff; --border: #d0d0d0;
+      --accent: #0a6cbd; --ok-bg: #e6f4e6; --ok-border: #2e7d32;
+      --warn-bg: #fff8e1; --warn-border: #b8860b;
+      --err-bg: #fdecea; --err-border: #c62828;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1b1b1d; --fg: #e8e8e8; --muted: #aaa;
+        --card: #242426; --border: #46464a;
+        --accent: #4da3e0; --ok-bg: #1d2f1d; --ok-border: #66bb6a;
+        --warn-bg: #33290f; --warn-border: #d4a53a;
+        --err-bg: #391f1d; --err-border: #ef5350;
+      }
+    }
+    body {
+      margin: 0; background: var(--bg); color: var(--fg);
+      font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 46rem; margin: 0 auto; padding: 1rem 1rem 4rem; }
+    h1 { font-size: 1.6rem; margin: 1rem 0 0.2rem; }
+    h2 { font-size: 1.15rem; margin: 0 0 0.6rem; }
+    .subtitle { color: var(--muted); margin-top: 0; }
+    section.step {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1rem 1.2rem; margin: 1rem 0;
+    }
+    section.step[data-disabled="true"] { opacity: 0.55; }
+    .badge {
+      display: inline-block; min-width: 1.5em; text-align: center;
+      background: var(--accent); color: #fff; border-radius: 50%;
+      font-size: 0.9rem; margin-right: 0.4em;
+    }
+    button {
+      font: inherit; padding: 0.55rem 1.3rem; border-radius: 8px;
+      border: 1px solid var(--accent); background: var(--accent); color: #fff;
+      cursor: pointer;
+    }
+    button:disabled { opacity: 0.5; cursor: default; }
+    button.secondary { background: transparent; color: var(--accent); }
+    input[type="file"] { font: inherit; max-width: 100%; }
+    progress { width: 100%; height: 1.1rem; accent-color: var(--accent); }
+    .box { border-radius: 8px; padding: 0.7rem 1rem; margin: 0.8rem 0; border: 1px solid; }
+    .box.trust { background: var(--ok-bg); border-color: var(--ok-border); }
+    .box.warn { background: var(--warn-bg); border-color: var(--warn-border); }
+    .box.error { background: var(--err-bg); border-color: var(--err-border); }
+    .box.success { background: var(--ok-bg); border-color: var(--ok-border); }
+    .status { margin: 0.6rem 0 0; font-weight: 600; }
+    .hint { color: var(--muted); font-size: 0.95rem; }
+    ul { padding-left: 1.3rem; }
+    li { margin: 0.35rem 0; }
+    details { margin: 0.5rem 0; }
+    summary { cursor: pointer; color: var(--accent); }
+    pre {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+      padding: 0.6rem; overflow-x: auto; font-size: 0.85rem; white-space: pre-wrap;
+    }
+    a { color: var(--accent); }
+    footer { margin-top: 2rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); padding-top: 1rem; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>AAPS Web Installer</h1>
+  <p class="subtitle">Install the <strong>AAPS</strong> APK you built onto your Android phone — straight from this browser, over a USB cable. No command line, nothing to download. Installed this way (the ADB way), apps are <strong>exempt from Google's Android developer verification</strong>.</p>
+
+  <div class="box trust">
+    <strong>This page runs entirely in your browser.</strong> Your APK file and your phone's data never leave this computer — the page makes no network requests at all (enforced by its <em>Content-Security-Policy</em>; you can verify this in the browser's developer tools, Network tab). Only ever use this page at its official address, linked from the
+    <a href="https://androidaps.readthedocs.io/en/latest/SettingUpAaps/TransferringAndInstallingAaps.html">AAPS documentation</a>.
+  </div>
+
+  <noscript>
+    <div class="box error"><strong>JavaScript is disabled.</strong> This page needs JavaScript to talk to your phone.</div>
+  </noscript>
+
+  <div id="unsupported" class="box error" hidden>
+    <strong>This browser cannot talk to USB devices.</strong>
+    Please open this page in <strong>Google Chrome</strong>, <strong>Microsoft Edge</strong> or <strong>Opera</strong>, on a computer or an Android device. Firefox, Safari and all iPhone browsers do not support WebUSB.
+  </div>
+
+  <section class="step" id="step-prepare">
+    <h2><span class="badge">1</span> Before you start</h2>
+    <ul>
+      <li><strong>Enable USB debugging</strong> on the phone (one-time setup):
+        <ul>
+          <li>Go to <strong>Settings</strong> &gt; <strong>About phone</strong> and tap <strong>Build number</strong> seven times, until the phone confirms you are a developer.</li>
+          <li>Back in the main <strong>Settings</strong>, open <strong>Developer options</strong> and switch on <strong>USB debugging</strong>.</li>
+        </ul>
+      </li>
+      <li>Connect the phone with a <strong>data-capable USB cable</strong> (some charging cables cannot transfer data — if the phone is never detected, try another cable).</li>
+      <li><strong>Close Android Studio</strong> and any other program that uses ADB — only one program can talk to the phone at a time.</li>
+      <li>Have your <strong>AAPS APK file</strong> ready on this computer (for the browser build, download it from your Google Drive first).</li>
+    </ul>
+    <p class="hint">No computer? This page also works from Chrome on <em>another Android phone</em>, connected with a USB-C to USB-C cable.</p>
+  </section>
+
+  <section class="step" id="step-connect">
+    <h2><span class="badge">2</span> Connect your phone</h2>
+    <p>Click the button, then pick your phone in the list the browser shows.</p>
+    <button id="connect-btn" type="button">Connect phone</button>
+    <button id="disconnect-btn" type="button" class="secondary" hidden>Disconnect</button>
+    <p class="status" id="connect-status"></p>
+    <div class="box warn" id="authorize-hint" hidden>
+      <strong>Look at your phone now:</strong> tap <strong>Allow</strong> on the “Allow USB debugging?” message, and tick <em>“Always allow from this computer”</em>. Don't see it? Unlock the phone's screen, or unplug and replug the cable.
+    </div>
+    <details id="connect-help" hidden>
+      <summary>The phone doesn't show up, or connecting fails?</summary>
+      <ul>
+        <li>Check that <strong>USB debugging</strong> is on (step 1) and the cable is a data cable.</li>
+        <li>Close <strong>Android Studio</strong>, or run <code>adb kill-server</code> if you have ADB installed, then unplug and replug the phone.</li>
+        <li>On Windows, an OEM USB driver installed for your phone can also hold the connection — unplug other Android tools and try again.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="step" id="step-file" data-disabled="true">
+    <h2><span class="badge">3</span> Choose your AAPS APK file</h2>
+    <input type="file" id="apk-input" accept=".apk" disabled>
+    <p class="status" id="file-status"></p>
+  </section>
+
+  <section class="step" id="step-install" data-disabled="true">
+    <h2><span class="badge">4</span> Install</h2>
+    <p class="hint">Updating an existing <strong>AAPS</strong>? All its settings and history are kept, exactly like <code>adb install -r</code>.</p>
+    <button id="install-btn" type="button" disabled>Install on phone</button>
+    <div id="progress-wrap" hidden>
+      <p class="status" id="install-status"></p>
+      <progress id="install-progress" max="100" value="0"></progress>
+    </div>
+    <div class="box success" id="result-success" hidden>
+      <strong>AAPS is installed.</strong> You can unplug the phone. If this was your first installation, continue with the
+      <a href="https://androidaps.readthedocs.io/en/latest/SettingUpAaps/SetupWizard.html">Setup Wizard</a>.
+    </div>
+    <div class="box error" id="result-error" hidden>
+      <p id="error-message" style="margin:0"></p>
+      <details><summary>Technical details</summary><pre id="error-details"></pre></details>
+    </div>
+  </section>
+
+  <footer>
+    <p>Part of the <a href="https://androidaps.readthedocs.io/en/latest/SettingUpAaps/TransferringAndInstallingAaps.html">AAPS documentation</a>. Built on the open-source <a href="https://github.com/yume-chan/ya-webadb">Tango (ya-webadb)</a> libraries (MIT license). Page source and build instructions: <a href="https://github.com/openaps/AndroidAPSdocs">openaps/AndroidAPSdocs</a>.</p>
+    <p><strong>AAPS</strong> is a DIY system, not a commercial product: you build it, you install it, you are responsible for it. This page is provided by the community without any warranty.</p>
+  </footer>
+</main>
+<script type="module" src="install-aaps.app.js"></script>
+</body>
+</html>

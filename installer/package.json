@@ -1,0 +1,20 @@
+{
+  "name": "aaps-web-installer",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Builds the vendor bundle for the AAPS web installer page (docs/EN/_html/install-aaps.bundle.js)",
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/vendor.js --bundle --minify --format=esm --target=es2022 --legal-comments=external --outfile=../docs/EN/_html/install-aaps.bundle.js"
+  },
+  "dependencies": {
+    "@yume-chan/adb": "2.6.3",
+    "@yume-chan/adb-credential-web": "2.1.0",
+    "@yume-chan/adb-daemon-webusb": "2.3.2",
+    "@yume-chan/android-bin": "2.1.0",
+    "@yume-chan/stream-extra": "2.6.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.9"
+  }
+}
