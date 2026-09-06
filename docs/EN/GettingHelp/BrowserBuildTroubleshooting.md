@@ -24,6 +24,26 @@ This page collects troubleshooting tips for the [Browser build](../SettingUpAaps
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.jpg)
 
   - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token and update the secret in your GitHub repository, then re-run the build workflow.
+  - If the authorization fails again, or Google does not ask for your consent anymore, remove the existing AAPS access from your Google Account first, see [below](#aaps-ci-google-remove-access).
+
+(aaps-ci-google-remove-access)=
+### Remove AAPS Access From Your Google Account And Restart The Authorization
+  - If the Google Drive authorization keeps failing, or you want to start again from a clean state, first remove the access you previously gave to AAPS, then redo the authorization.
+  - On your phone, open [https://myaccount.google.com](https://myaccount.google.com), tap **Security**, scroll down to **Your connections to third-party apps & services** and open the list of linked apps. You can also go directly to [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
+  - Tap **AAPS** in the list.
+
+  ![aaps_ci_google_access_1](../images/Building-the-App/CI/aaps_ci_google_access_1.png)
+
+  - The page shows the access you gave to AAPS (the Google Drive files used with the app). Tap **Delete all** to remove the connection, or tap **See details** to review it first.
+
+  ![aaps_ci_google_access_2](../images/Building-the-App/CI/aaps_ci_google_access_2.png)
+
+  - On the details page, tap **Remove all access** and confirm. AAPS no longer appears in the list of linked apps.
+
+  ![aaps_ci_google_access_3](../images/Building-the-App/CI/aaps_ci_google_access_3.png)
+
+  - Now restart the authorization cleanly: close **both** the preparation page and the file manager app, reopen aaps-ci-preparation.html from the file manager and redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps. Google will ask you to grant access again and the page will provide a new `GDRIVE_OAUTH2` token.
+  - Update the `GDRIVE_OAUTH2` secret in your GitHub repository with the new token, then re-run the build workflow.
 
 (aaps-ci-disable-software)=
 ### Disable Software That May Interfere With OAUTH Verification
