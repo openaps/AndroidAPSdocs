@@ -54,6 +54,8 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 (latestrelease)=
 
+(version3426)=
+
 ## Version 3.4.2.6
 
 - Equil: improve stability @MilosKozak
