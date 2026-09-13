@@ -104,7 +104,7 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ### Application protection
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**.
+If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention).
 
 **AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
 
@@ -116,6 +116,7 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 ![Prompt biometric protection](../images/Pref2020_PW.png)
 
+(Preferences-password-and-pin-retention)=
 ### Password and PIN retention
 
 **Protection timeout** defines how long (in seconds) the settings or bolus functionalities remain unlocked after you successfully enter the password.

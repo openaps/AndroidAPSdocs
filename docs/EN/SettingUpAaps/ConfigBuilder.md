@@ -198,7 +198,7 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 * [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
 * MicroTech CGM App - for the Aidex CGM
 * Intelligo App
-* SI App - patched app for Sibionics CGM
+* SI App - patched SI App or Sibionics App for Sibionics CGM
 * Sino App - patched app for Sinocare CGM
 * Random BG: Generates random BG data (Demo mode only)
 

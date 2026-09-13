@@ -38,7 +38,7 @@ If your watch runs a version where AAPS watchfaces are unreliable, you can inste
 Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces at all. For these watches the AAPS watch app includes its own watchface, **AAPS V4**, built in Google's new **Watch Face Format**:
 
 - It is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- Its complication slots come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), and basal rate / temp target.
+- Its complication slots come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch).
 - If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
 
 On watches running Wear OS 5 or older this watchface is not available (the mechanism it relies on requires Wear OS 6); use the classic watchfaces or complications there.

@@ -145,9 +145,9 @@ Importing a **Preferences** file will deactivate your current pod if those **Pre
 ![AAPS import settings 1](../images/Maintenance/AAPS_ImportSettings1.png)
 ![AAPS import settings 2](../images/Maintenance/AAPS_ImportSettings2.png)
 
-10. **AAPS** will automatically restart and should then have all of your preferences imported.
+11. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. If the pump is busy, **AAPS** shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use.
 
-11. Tubeless pumps (Omnipod and Medtrum) users only - if your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+12. Tubeless pumps (Omnipod and Medtrum) users only - if your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
 
 **Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
 

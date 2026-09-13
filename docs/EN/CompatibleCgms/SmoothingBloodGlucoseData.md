@@ -28,6 +28,8 @@ This option uses a statistical model to continuously estimate your true glucose 
 
 ## Suggestions to use smoothing
 
+You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+
 |               | Exponential |  Average  |    None     |
 | ------------- | :---------: | :-------: | :---------: |
 | G5/G6/ONE     |  If noisy   |           | Recommended |

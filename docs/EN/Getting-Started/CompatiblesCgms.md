@@ -50,7 +50,7 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 | Intelligo                                                    | Intelligo App                                                |
 | [Ottai](../CompatibleCgms/OttaiM8.md)                        | Ottai App                                                    |
 | [Syai](../CompatibleCgms/SyaiTagX1.md)                       | Syai Tag App                                                 |
-| Sibionics CGM                                                | [Juggluco](../CompatibleCgms/Juggluco.md) or Patched SI App  |
+| Sibionics CGM                                                | [Juggluco](../CompatibleCgms/Juggluco.md), Patched SI App or Sibionics App |
 | Sinocare                                                     | Patched Sino App                                             |
 | [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip Companion App or [Juggluco](../CompatibleCgms/Juggluco.md) |
 

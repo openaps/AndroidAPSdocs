@@ -4,29 +4,14 @@
 
 **AAPS** stores all the user’s history (__**BG**__, treatments, basal, targets, **Profile Switch**,…) in its own database, that cannot be exported or copied and might require clean up after a while. In order to clean up, a review of 'older history’ is required in **AAPS**. This can be done by uploading to Nightscout.
 
-**AAPS** history can be reviewed using the ‘History’ browser, from the Overview menu.
+**AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
 
-![History Browser](../images/Maintenance/historybrowser.png)
+![History browser](../images/v4/Screens/history_browser.png)
 
-Select the date you want to review.
-
-![History Browser](../images/Maintenance/historybrowser2.png)
-
-Display options are available like in the Overview main graph.
-
-![History Browser](../images/Maintenance/historybrowser3.png)
-
-The ‘history browser’ menu allows the selection of the time periods to be displayed in the following intervals: 6, 12, 18 or 24 hours.
-
-![History Browser](../images/Maintenance/historybrowser4.png)
-
-The ‘history browser’ can be shifted forward and backwards by selecting the arrows display as per the desired time intervals (as indicated below). 
-
-![History Browser](../images/Maintenance/historybrowser5.png)
-
-To return to real time select this button:
-
-![History Browser](../images/Maintenance/historybrowser6.png)
+- Tap the **date card** to pick the day you want to review.
+- The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
+- Use the **<** and **>** arrows to move one day back or forward, and **Now** to return to the current day.
+- The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
 
 (reviewing-statistics)=
 ## AAPS Statistics

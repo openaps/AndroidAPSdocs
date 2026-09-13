@@ -207,6 +207,14 @@ none
 * **Profile** must be between 50% and 130%
 * works only if the previous Percentage is 100%
 
+**Actions:** **Change smoothing**
+
+**Options:**
+
+* select the [smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) to switch to
+* runs only if that smoothing method is not already active — **AAPS** adds this automatically as a "**Preconditions: Smoothing … is not active**" line to the rule. Once the selected smoothing is active, the rule is skipped silently.
+* Example: combined with the **Sensor age** trigger, switch to **Average smoothing** during the first day of a new sensor and back to **No smoothing** afterwards.
+
 Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
 
 ![Alt text](../images/automation_2024-02-12_20-57-07.png)

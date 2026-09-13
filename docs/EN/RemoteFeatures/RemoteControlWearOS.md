@@ -146,6 +146,7 @@ AAPS Wear OS app provides only raw data, according to predefined formats. It is 
 * `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
 * `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
 * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
+* `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - A small icon. In a `SMALL IMAGE` slot AAPS draws it in its own colour; in a `MONOCHROMATIC IMAGE` slot the watchface tints it.
 
 ### Complication Setup
 
@@ -169,6 +170,7 @@ AAPS provides following complications:
 * **Full Status (flipped)** (`LONG TEXT`, opens _Menu_): Same data as for standard _Full Status_, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
 * **IoB Detailed** (`SHORT TEXT`, opens _Bolus_): Displays total _Insulin on Board_ on the first line and split of _IoB_ for _Bolus_ and _Basal_ part on the second line.
 * **IoB Icon** (`SHORT TEXT`, opens _Bolus_): Displays _Insulin on Board_ value with a static icon.
+* **Running Mode** (`SMALL IMAGE` / `MONOCHROMATIC IMAGE`, opens _Running mode picker_): Shows the current loop mode as an icon (closed loop, open loop, low glucose suspend, suspended, disconnected, disabled). Tapping it opens a small picker with the mode changes currently allowed, for example **Suspend loop**, **Disconnect pump**, **Resume loop** or **Reconnect pump**. The same picker is available from the watch's AAPS main menu under **Running mode**.
 * **Uploader/Phone Battery** (`RANGED VALUE`, opens _Status_): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new _Blood Glucose_ measurement).
 
 Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.

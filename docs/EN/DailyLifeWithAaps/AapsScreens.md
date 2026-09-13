@@ -565,7 +565,7 @@ See [Config Builder > Insulin > Duration of insulin action](#Config-Builder-insu
 
 ## Loop, AMA / SMB
 
-**Configuration → Loop → Open plugin** (and **Configuration → APS → Open plugin**) show details about the algorithm's calculations and why **AAPS** acts the way it does: last run, the resulting request, and the active constraints.
+**Configuration → Loop → Open plugin** (and **Configuration → APS → Open plugin**) show details about the algorithm's calculations and why **AAPS** acts the way it does: last run, the resulting request, and the constraints. The **Loop** screen lists only the constraints that actually limited the delivered temp basal rate or SMB (and why closed loop is not allowed, if that is the case); the **APS** screen lists every constraint that went into the calculation.
 
 Calculations are run each time the system gets a fresh reading from the CGM.
 
