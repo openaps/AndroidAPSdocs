@@ -10,6 +10,14 @@ Option 2 reuses the JKS you already created on a previous build of AAPS from a c
 
 For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
 
+```{warning}
+**Passwords with special characters.** If your keystore or key password contains `$`, a backtick, `"` or `\`, the build fails at the signing step even though the password is correct. When you enter the secret in GitHub, put a backslash `\` in front of each of these four characters only.
+
+Example: if your password is `abc$def"ghi`, enter `abc\$def\"ghi`.
+
+Every other character, including `%`, `*`, `#` and `!`, must be entered exactly as it is. Adding a backslash in front of them would become part of the password. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+```
+
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
