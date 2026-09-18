@@ -380,6 +380,10 @@ Make sure to note down for yourself where your keystore is stored. You will need
 
   The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
 
+```{warning}
+**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+```
+
 * The default alias (3) for your key is "key0", leave this unchanged.
 
 * You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
