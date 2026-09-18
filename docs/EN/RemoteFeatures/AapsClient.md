@@ -9,6 +9,11 @@
 - **Master** = the main **AAPS** phone that owns the pump and runs the loop.
 ```
 
+```{admonition} iPhone version in development
+:class: note
+**AAPSClient** currently runs on Android phones. An iPhone version of **AAPSClient** is being developed and is in early testing. It is not released yet: there is no App Store listing and nothing to download. This page will be updated when it becomes available.
+```
+
 ```{contents} Table of contents
 :depth: 2
 :local: true

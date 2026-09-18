@@ -4,7 +4,7 @@
 :depth: 2
 ```
 
-Most of the adjustments of temp targets, following **AAPS** etc. can be done on [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection. Boluses, however, can't be given through **AAPSClient**, but you can use SMS commands. If you use an iPhone as a follower and therefore cannot use **AAPSClient** app, there are additional SMS commands available.
+Most of the adjustments of temp targets, following **AAPS** etc. can be done on [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). Boluses, however, can't be given through **AAPSClient**, but you can use SMS commands. If you use an iPhone as a follower and do not have **AAPSClient** yet, there are additional SMS commands available.
 
 **SMS commands are really useful:**
 1. For routine remote control

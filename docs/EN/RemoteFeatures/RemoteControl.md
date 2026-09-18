@@ -8,7 +8,7 @@
 There are four highly effective tools for remotely managing **AAPS**:
 
 1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 
-2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android)
+2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android; an iPhone version is in development)
 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device).  
 4) [Smartwatches](#RemoteControl_smartwatches) (Android) 
 
