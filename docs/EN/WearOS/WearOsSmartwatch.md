@@ -24,24 +24,28 @@ The table below summarises how Google's change affects the AAPS (legacy-engine) 
 
 | Wear OS version | Base Android | API level | Impact on AAPS (legacy) watchfaces |
 | --- | --- | --- | --- |
-| Wear OS 6 | Android 16 | 36 | **Legacy watchfaces no longer available** — AAPS installs its own [AAPS V4 watchface](#wearos-aaps-v4-watchface) instead |
+| Wear OS 6 | Android 16 | 36 | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
 | Wear OS 5 | Android 14 | 34 | **Severe** — active (interactive) mode often fails, complications freeze, animations stop |
 | Wear OS 4 | Android 13 | 33 | **Moderate** — throttling, missed updates, partial failures |
 | Wear OS 3.0 / 3.2 / 3.5 | Android 12 / 12L | 31–32 | **Low** — legacy engine still supported |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication. On **Wear OS 6 and newer**, AAPS brings its own replacement watchface — see below.
+If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
 
 (wearos-aaps-v4-watchface)=
 
-### Wear OS 6 and newer — the AAPS V4 watchface
+### Wear OS 6 and newer — the watchface AAPS installs
 
-Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces at all. For these watches the AAPS watch app includes its own watchface, **AAPS V4**, built in Google's new **Watch Face Format**:
+Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
 
-- It is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- Its complication slots come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch).
+- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so it looks the same as on older watches. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
+- **Complications watchface** (the **AAPS V4** watchface): its complication slots come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch).
+
+You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. **AAPS** asks you to confirm, because the watch replaces its face immediately and any choices made in the watch face editor are reset. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
+
+- The selected watchface is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
 - If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
 
-On watches running Wear OS 5 or older this watchface is not available (the mechanism it relies on requires Wear OS 6); use the classic watchfaces or complications there.
+On watches running Wear OS 5 or older this setting is ignored (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
 
 ### Wear OS 3
 
@@ -309,6 +313,13 @@ There are a number of watchfaces available in the standard build of the AAPS Wea
 ![Screenshot_20231123_130410_AAPS](../images/adde2eca-1df7-4382-b9ab-346819c35d9d.png)
 
 5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+
+```{admonition} Complications on a custom watchface
+:class: note
+Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, open the AAPS app, go to **Settings** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+
+On **Wear OS 6 and newer**, steps 1 and 2 are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
+```
 
 ## AAPSv2 watchface - Legend
 

@@ -9,6 +9,7 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 
 ../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md
 ../CompatiblePumps/Accu-Chek-Insight-Pump.md
+../CompatiblePumps/CareLevo.md
 ../CompatiblePumps/DanaR-Insulin-Pump.md
 ../CompatiblePumps/DanaRS-Insulin-Pump.md
 ../CompatiblePumps/DiaconnG8.md
@@ -23,6 +24,7 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 
 - [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Tips for basic usage](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
+- [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)

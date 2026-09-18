@@ -74,11 +74,11 @@ While it is a good feature to disable notifications _e.g._ from social media app
 
 Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt.
 
-### Full screen alarms
+### Alarms and reminders
 
-On **Android 14 and newer**, a separate "special access" permission is needed so **AAPS** alarms can wake the screen and show full screen while the phone is locked — essential so you do not miss a critical alarm (for example one raised by an **Automation**).
+On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
 
-Press "**Grant**" next to "**Full screen alarms**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
 
 Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel is complete and you can press "**NEXT**" on the welcome screen to continue:
 

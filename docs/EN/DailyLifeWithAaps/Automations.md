@@ -102,6 +102,10 @@ When setting up an **Automation**, you can first test it by activating the ‘no
 ```
 
 
+## When rules are checked
+
+**AAPS** checks all **Automation** rules each time a new glucose reading has been processed, so rules are evaluated at the pace of your CGM, also while the phone screen is off. Rules are also checked when the phone starts charging, when the network or location changes, and when a Bluetooth device connects. Only one check runs at a time, so a rule whose actions take a while (for example a pump command) cannot be executed twice.
+
 ## Safety limits
 
 There are safety limits set for **Automations**:

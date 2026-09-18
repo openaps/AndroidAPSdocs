@@ -351,6 +351,7 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 * Resend all data.
 Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
+* Choose which watchface **AAPS** installs on a **Wear OS 6** or newer watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
 
 ### Autotune
 
