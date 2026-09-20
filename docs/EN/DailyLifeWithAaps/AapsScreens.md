@@ -24,18 +24,18 @@ This is the first screen you will come across when you open **AAPS**, and it con
 
 #### Current Profile
 
-The current profile is displayed in the left bar. 
+The current __Profile__ is displayed in the left bar. 
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Short press profile bar to view __Profile__ details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+1. Regular display with a standard __Profile__ activation.
+2. __Profile Switch__ with a remaining duration of 59mn.
+3. __Profile Switch__ with a specific percentage of 120%.
+4. __Profile Switch__ with a specific percentage of 80% and a remaining duration of 59 mn.
+5. __Profile Switch__ with a time shift of -1 hour.
+6. __Profile Switch__ with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
 
 #### Target
 
@@ -45,7 +45,7 @@ Current target blood glucose level is displayed in the right bar.
 
 Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
 
-If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
+If a __Temp Target__ is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 #### Visualization of Dynamic target adjustment
@@ -58,7 +58,7 @@ Enable either one or both of the following options in [Preferences > OpenAPS SMB
    * "sensitivity raises target" and/or 
    * "resistance lowers target" 
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
+If **AAPS** detects resistance or sensitivity, the target will change from what is set from __Profile__. When it alters the target glucose, the background will change to green.
 
 (AapsScreens-section-c-bg-loop-status)=
 ### Section C - BG & loop status
@@ -66,7 +66,7 @@ If **AAPS** detects resistance or sensitivity, the target will change from what 
 #### Current blood glucose
 The latest blood glucose reading from your CGM is shown on the left side.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+The color of the __BG__ value reflects the status to the defined [range](#Preferences-range-for-visualization).
    * green = in range
    * red = below range
    * yellow = above range 
@@ -102,7 +102,7 @@ Short press or Long press the icon to open the Loop dialog to switch loop mode (
 (aaps-screens-bg-warning-sign)=
 #### BG warning sign
 
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath yourBG number on the main screen.
 
 ##### Red warning sign: Duplicate BG data
 
@@ -136,11 +136,11 @@ The yellow warning signal is indicating that your BG arrived in irregular time i
 
 Usually you do not have to take any action. The closed loop will continue to work!
 
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
+As a sensor change is interrupting the constant flow of __BG__ data, a yellow warning sign after sensor change is normal and nothing to worry about.
 
 Special note for Libre users:
 
-* Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
+* Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular __BG__ intervals.
 * Also, jumpy readings interrupt the continuous flow.
 * Therefore, the yellow warning sign will be 'always on' for Libre users.
 
@@ -167,8 +167,8 @@ The insulin on board figure would be zero if just your standard basal was runnin
 3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%)
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
 4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section:
-  - AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-  - Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+  - AS: __Autosens__ value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
+  - Alg: __DynamicISF__ value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
 
 (aaps-screens-carbs-required)=
 #### Carbs required
@@ -214,10 +214,10 @@ Use the menu on top left of the graph or long press anywhere on the graph to cha
 The green area reflects your target range.
 
 This information is also shown on this graph : 
-* Boluses: blue triangle on the BG curve and insulin amount
-* Carbs entries: orange triangle on the BG curve and carb amount
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star at the top of the graph
+* Boluses: blue triangle on the __BG__ curve and insulin amount
+* Carbs entries: orange triangle on the __BG__ curve and carb amount
+* Target as defined in the __Profile__ or modified by __Temporary Target__: green line
+* __Profile Switches__: star at the top of the graph
 * Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
 * [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
 
@@ -228,7 +228,7 @@ Using the top right arrow, you can switch on these optional information:
 * Predictions (see below)
 * Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
 * Basals
-  * As defined in the profile: blue dotted line at the bottom of the graph
+  * As defined in the __Profile__: blue dotted line at the bottom of the graph
   * Actually delivered basal: blue plain line with blue background
 * Activity - insulin activity curve: yellow line
 
@@ -241,13 +241,13 @@ To show this information, click the triangle on the right side of the main graph
 
 * **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
 
-  This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
-* **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
+  This prediction line shows where your __BG__ (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known __COB__.
+* **Dark blue** line: IOB (color is used generally to represent __IOB__ and insulin)
 
   This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **Light blue** line: zero-temp (predicted __BG__ if temporary basal rate at 0% would be set)
 
-  This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+  This prediction line shows how the __BG__ trajectory line would change if the pump stopped all insulin delivery (0% TBR).
 
    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
 * **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
@@ -291,7 +291,7 @@ To open settings for additional graphs click the triangle on the right side of t
 To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
 
 Most users find the following configuration of additional graphs to be adequate :
-* Graph 1 with IOB, COB, Sensitivity change
+* Graph 1 with __IOB__, __COB__, Sensitivity change
 * Graph 2 with Deviations and BGI.
 
 #### Absolute insulin
@@ -300,11 +300,11 @@ Active insulin including boluses **and basal**.
 
 #### Insulin on board
 
-Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your Profile**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during __DIA__ time this would be zero.
 
-IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+__IOB__ can be negative if you have no remaining bolus and zero/low temp for a longer time.
 
 Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md). 
 
@@ -314,7 +314,7 @@ Shows the carbs you have on board (= active, not yet decayed carbs in your body)
 
 Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
 
-If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings).
+If it detects a higher carb absorption than expected, insulin would be given and this will increase __IOB__ (more or less, depending on your safety settings).
 
 #### Sensitivity change
 
@@ -343,11 +343,11 @@ Enable them on **AAPS** Wear app and give permission for health data.
 
 #### Blood Glucose Impact
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+This line shows the degree to which __BG__ ‘should’ rise or fall based on insulin activity alone.
 
 ![Homescreen buttons](../images/Screenshots_DEV_BGI.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is  a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that __BG__ is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
 
 ### Section H - Buttons
 
@@ -417,7 +417,7 @@ Details are set up in [Preferences > Overview > QuickWizard settings](#Preferenc
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from. 
+When you want to make a meal bolus, this is a feature where you can bolus from. 
 
 ### Section I
 
@@ -444,7 +444,7 @@ The **Carb time** field is for pre-bolusing so you can tell the system that ther
 
 ### Section K
 
-**Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
+**Profile** allows you to select a different __Profile__ than the current one, to make the calculation for the insulin required. This __Profile__ selection applies only for the current bolus, it is not a __Profile__ change.
 
 **Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). The idea is to deliver the insulin sooner and hopefully reduce spikes.
 
