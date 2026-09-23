@@ -13,7 +13,7 @@ There is no issue with changing timezone in phone because pump doesn't use histo
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS
+## Timezone change for DanaRv2, DanaRS, Dana-i
 
 These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
 

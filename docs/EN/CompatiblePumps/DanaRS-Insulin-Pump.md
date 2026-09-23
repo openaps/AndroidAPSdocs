@@ -126,7 +126,7 @@ When switching to a new phone the following steps are necessary:
 * Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
 
-## Timezone traveling with Dana RS pump
+## Timezone traveling with DanaRS and Dana-i pumps
 
 For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
 
