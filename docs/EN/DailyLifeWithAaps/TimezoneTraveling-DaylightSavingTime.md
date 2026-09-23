@@ -11,7 +11,9 @@
 
 There is no issue with changing timezone in phone because pump doesn't use history
 
-## Timezone change for DanaRv2, DanaRS
+(timezone-traveling-danarv2-danars)=
+
+## Timezone change for DanaRv2, DanaRS, Dana-i
 
 These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
 
@@ -48,6 +50,8 @@ When get out of plane:
 * let phone connect to the pump and fine-tune time
 
 
+(timezone-traveling-insight)=
+
 ## Timezone Change for Insight
 
 The driver automatically adjusts the time of the pump to the time of the phone.
@@ -74,6 +78,8 @@ Time zone changes keep the history intact, only TDD may be affected. Manually ch
 
 When the time zone or time changes running **TBR's** are stopped. 
 
+
+(time-adjustment-daylight-savings-time-dst)=
 
 ## DAYLIGHT SAVING (DST)
 Time adjustment daylight savings time 
