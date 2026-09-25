@@ -65,7 +65,7 @@ The everyday treatment and CGM dialogs:
 - **Carbs** — record carbs without insulin.
 - **Bolus wizard** — open the bolus calculator.
 - **Treatment** — record insulin and carbs together.
-- **Insulin** *(management)* — manage and activate insulin configurations.
+- **Insulin settings** — manage and activate insulin configurations (named differently from **Insulin** on purpose, because that button delivers a bolus).
 - **CGM** — open your CGM app (e.g. xDrip).
 - **Calibration** — calibrate the CGM sensor.
 

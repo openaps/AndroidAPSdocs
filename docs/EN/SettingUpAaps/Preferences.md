@@ -463,6 +463,8 @@ If you select a subdirectory of AAPS, you will see an error message. Tap "OK" an
 
 ![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
 
+Android can silently take the directory permission away, for example after you reinstall **AAPS** or clear its storage. When that happens, **AAPS** shows a persistent **Access to the AAPS directory was lost** notification and local settings export stops working until you come back here and select the directory again. Do this promptly, otherwise your backups on the phone are no longer refreshed.
+
 (preferences-maintenance-cloud)=
 
 ### Setting a cloud directory

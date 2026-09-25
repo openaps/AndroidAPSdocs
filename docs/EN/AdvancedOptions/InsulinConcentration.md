@@ -175,7 +175,7 @@ When you start from U100 insulin, all your profile, historical data and reports 
 1. Then select the right insulin below.
 1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
    - This step is mandatory for all Patch/Pod pumps.
-   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within Profile Manager or Insulin Manager.
+   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within Profile Manager or **Insulin settings**.
 
 That's all!
 
@@ -192,7 +192,7 @@ Keep in mind that the most difficult part will probably not be how to manage the
   - Go to Profile Manager and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
 - If you use the Dynamic ISF (DynISF) feature, you have to disable it for at least one week:
   - All your history recorded within AAPS or Nightscout is in the wrong units (CU), half the real value in International Units. Wait at least one week with the U200 insulin running before re-enabling it.
-- You are now ready to switch insulin (with a new U200 defined within Insulin Manager) on the following Insulin Change or Pod Change.
+- You are now ready to switch insulin (with a new U200 defined within **Insulin settings**) on the following Insulin Change or Pod Change.
 - Once the new U200 insulin is correctly applied, don't forget to apply the new standard profile defined in the first step.
 
 ## How to manage external boluses with different pens?

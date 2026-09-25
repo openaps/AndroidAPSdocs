@@ -108,7 +108,7 @@ In the Insight settings in AAPS you can enable the following options:
       <br>retry -> no connection -> wait <b>20</b> sec.
       <br>...
     
-* "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
+* "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. You can choose from 0 to 15 seconds. Default value is 5 seconds.
 
 For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 

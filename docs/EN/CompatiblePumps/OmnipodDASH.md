@@ -593,10 +593,11 @@ Regularly (after each export preferably) copy your exported settings to a safe p
 ---
 ### Import Settings
 
-**WARNING**: Please note that importing settings will possibly import an outdated Pod status (depending when you made the last export/backup).  
-As a result, there is a **risk of losing the active Pod!** (see **Exporting Settings**). 
+**WARNING**: Please note that importing settings with **Also replace pump settings** ticked will possibly import an outdated Pod status (depending when you made the last export/backup).
+As a result, there is a **risk of losing the active Pod!** (see **Exporting Settings**).
 1. Only try an import when no other options are available.
-2. When importing settings with an active Pod, make sure the export was done with the currently active pod. 
+2. When importing settings with an active Pod, make sure the export was done with the currently active pod.
+3. When importing on the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session on the phone is then kept and only the other settings are imported. See [Export/Import settings](../Maintenance/ExportImportSettings.md).
 
 **Importing while on an active Pod:** (you risk losing the Pod!)
 

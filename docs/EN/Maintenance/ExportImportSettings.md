@@ -106,7 +106,8 @@ _**Note:** On importing settings to user always needs to enter the AAPS password
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
 You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).</br>
+If **AAPS** loses access to that directory (this can happen after a reinstall or after clearing the app's storage), it shows an **Access to the AAPS directory was lost** notification and stops saving settings to the phone until you [select the directory again](#preferences-maintenance-logdirectory).
 ```
 
 Use these instructions if you have a back-up of your APK and **Preferences** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
@@ -119,7 +120,12 @@ If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCg
 
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-Importing a **Preferences** file will deactivate your current pod if those **Preferences** were exported during a different active pod session. 
+Importing a **Preferences** file with **Also replace pump settings** ticked will deactivate your current pod if those **Preferences** were exported during a different active pod session. Leave the box unticked to keep the pod you are using.
+```
+
+```{admonition} Pump settings are kept unless you say otherwise
+:class: note
+By default, an import leaves your pump settings alone: the pump selected in **Configuration**, its pairing and all its other settings stay as they are on this phone. Tick **Also replace pump settings** on the import screen only when you restore onto a new phone that should take over the same pump. Settings that are not in the file are never deleted by an import.
 ```
 
 1. Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md) 
@@ -140,18 +146,24 @@ Importing a **Preferences** file will deactivate your current pod if those **Pre
 
 9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
 
-10. From the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to back-up from > Ok > type in Master password set above > Ok. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
+10. From the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to restore from > type in the Master password set above > **Decrypt & Review**. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
 
 ![AAPS import settings 1](../images/Maintenance/AAPS_ImportSettings1.png)
 ![AAPS import settings 2](../images/Maintenance/AAPS_ImportSettings2.png)
 
-11. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. If the pump is busy, **AAPS** shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use.
+11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Then tap **Import**.
 
-12. Tubeless pumps (Omnipod and Medtrum) users only - if your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
+
+13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
+
+If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Select your pump again in **Configuration** and check its settings.
+
+14. Tubeless pumps (Omnipod and Medtrum) users only - if you ticked **Also replace pump settings** and your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
 
 **Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
 
 ### Note for Dana RS users
 
-- As pump connection settings are also imported, **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.
+- If you ticked **Also replace pump settings**, the pump connection settings are imported too: **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.
 - Please pair new phone and pump manually.

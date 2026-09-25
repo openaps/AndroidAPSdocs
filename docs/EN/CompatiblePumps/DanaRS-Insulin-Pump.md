@@ -118,7 +118,7 @@ When switching to a new phone the following steps are necessary:
 
 ### DanaRS v1
 * **Manually pair** Dana RS with the new phone
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Therefore new phone and pump must be paired manually.
+* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Therefore new phone and pump must be paired manually.
 * Install AAPS on the new phone.
 * [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 

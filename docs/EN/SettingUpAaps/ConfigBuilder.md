@@ -136,7 +136,7 @@ AAPS models the timeline of insulin action with a mathematical formula, configur
 
 Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin**. AAPS displays the active insulin configuration like this:
+To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
 
 ![Sample insulin configuration](../images/Screenshot_insulin_profile.png)
 
