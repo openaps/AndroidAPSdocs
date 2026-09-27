@@ -1,17 +1,19 @@
 # Your AAPS profile
 
-Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates: 
+Your **AAPS Profile** is a set of five key parameters which define how **AAPS** should deliver insulin in response to your __BG__ levels: 
 * [duration of insulin action](#your-aaps-profile-duration-of-insulin-action) (DIA),
 * [glucose targets](#profile-glucose-targets),
 * [basal rates](#your-aaps-profile-basal-rates) (BR),
 * [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
 * [insulin-to-carb ratios](#your-aaps-profile-insulin-to-carbs-ratio) (IC or ICR). 
 
-As part of **AAPS**’ management, users should continually assess and scrutinise the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [backup your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
+These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like __SMB__ settings), but the performance of these features rely on your underlying **Profile** being correct. 
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+As part of **AAPS**’ management, users should continually assess and scrutinise the accuracy of their **Profile’s** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new __Profile__ after tweaking your __Profile setting__ otherwise the changes will activate. Users should [backup your **Profile**](#YourAapsProfile_Profile-backup)  regularly export their settings under  Preferences to ensure their __Profile’s__ settings are backed up.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together by testing in a variety of circumstances.
+
+You can use [Autotune](https://autotuneweb.azurewebsites.net/) as a guide, although it should not be followed blindly: it may not work well for you or in all circumstances.
 
 ```{admonition} Your diabetes may vary
 :class: information
@@ -25,7 +27,7 @@ The four last parameters (glucose targets, basal rates, insulin sensitivity fact
 
 ![Hourly change of basal](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample __Profile__ below shows a large number of timepoints. When you start out with **AAPS**, your __Profile__ is likely to be much simpler.
 
 (your-aaps-profile-duration-of-insulin-action)=
 ## Duration of insulin action (DIA)
@@ -49,7 +51,7 @@ Additional reading on the topic of duration of insulin action, and why it matter
 
 ### Impact
 
-Too short **DIA** can lead to low BGs. And vice versa.
+Too short **DIA** can lead to low __BGs__. And vice versa.
 
 If **DIA** is too short, **AAPS** will calculate too early that your previous bolus is all consumed, and if your **BG** is still high, it will over-deliver in insulin. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that **AAPS** is unaware of. This is especially noticeable at night, if you see negative IOB with no other explanation than the queue of the last bolus.
 
@@ -68,7 +70,7 @@ The **DIA** setting is often set too short by new users. A **DIA** of 6 or 7 is 
 
 ### Description
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the __BG__ target range, then it will take action to bring the user back into range.
 
 The targets can be defined within those boundaries :
 
@@ -83,14 +85,14 @@ If the target in your **Profile** is very wide (say, 3 or more mmol/l [50 mg/dl 
 
 ### How to set it
 
-The **figure below** shows an example of how the target can be set in an **AAPS** profile.
+The **figure below** shows an example of how the target can be set in an **AAPS** __Profile__.
 
 ![Target](../images/Profile_Target.png)
 
 **BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
 When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/>
-When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
+When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the __BG__ range until you have a single __BG__ target for your desired times of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
 (your-aaps-profile-basal-rates)=
 
@@ -98,11 +100,11 @@ When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](
 
 ### Description
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise. 
+Your basal rate of insulin (Units/hour) provides background insulin should keep your __BG__ levels stable in the absence of food or exercise. 
 
 The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 6 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful. 
 
-Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR. 
+Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your __ISF__ and __ICR__. 
 
 ### Impact
 
@@ -114,23 +116,25 @@ Too high basal rate can lead to low BGs. And vice versa.
 
 So, a basal rate too high will create low **BGs** both with the default rate, but also some hours hence as **AAPS** corrects to target.
 
-Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+Conversely, a too low basal rate set within __AAPS__ can lead to high BGs, and a failure to bring levels down to target.
 
 ### How to set it
 
-The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
+The **figure below** shows an example of how the basal rates can be set in an **AAPS** __Profile__.
 
 ![Basal rates](../images/Profile_BasalRates.png)
 
 Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
+There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, a 24 fast is not recommended. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
 
 The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/>
-An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/>
-Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
 
-See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
+An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/>
+
+Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight __BG__ lines in order to optimize your child’s basal rates.
+
+See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal __Profile__ and analyse patterns in closed loop.
 
 When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
 
@@ -140,15 +144,15 @@ When taking action on the result of your basal testing, changes in the **Profile
 
 ### Description
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin. 
+The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your __BG__ level will be reduced by 1 unit of insulin. 
 
 **In mg/dL units:** 
-If you have an **ISF** of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL). 
+If you have an **ISF** of 40, each unit of insulin will reduce your __BG__ by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL). 
 
 **In mmol/L units:** 
-If you have an **ISF** of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L). 
+If you have an **ISF** of 1.5, each unit of insulin will reduce your __BG__ by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L). 
 
-From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your **ISF**. 
+From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your __ISF__ from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your **ISF**. 
 
 ### Impact
 
@@ -162,7 +166,7 @@ A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG*
 * If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
 * If `ISF = 45` -> `90 / 45 = 2` or `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 units of insulin
 
-An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ BG levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
+An **ISF** that is too low (and therefore more aggressive, not uncommon) can result in ‘over corrections’, because **AAPS** calculates that the user needs more insulin to correct a high **BG** than actually required. This can lead to ‘roller coaster’ __BG__ levels (esp. when fasting), as shown on the image below. In this circumstance, the **ISF** value should be increased in order to make **AAPS** less aggressive. This will ensure **AAPS** delivers smaller correction doses, and avoid over-correcting a high **BG** resulting in a low **BG**.
 
 ![ISF too low](../images/isf.jpg)
 
@@ -229,7 +233,7 @@ A **higher / weaker ICR** = more food per unit, i.e. you are getting less insuli
 
 ### How to set it
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
 ![Profile ICR](../images/Profile_ICR.png)
 
@@ -248,7 +252,7 @@ Assuming your basal rates are correct, you can test by checking if **IOB** is ze
 
 **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your __AAPS__ settings right for these situations.
 
 If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
 
@@ -261,7 +265,7 @@ If your **BG** is too high after the meal and still too high after carbs are ful
 ### I'm stuck high and the loop does not bring me down
 The possible reasons for **AAPS** not giving enough insulin are:
 * **ISF** is not strong enough
-* Basal might not be strong enough
+* Basal rate might not be strong enough
 * A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
 * Automation has been set up and has overridden **AAPS**.
 
@@ -271,7 +275,7 @@ Negative **IOB** means the amount of absolute insulin (basal + bolus) in your bo
 Here are some reasons why you may have negative IOB, and what action to take:
 * a too strong basal: tweak your **Profile**
 * too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA too short, resulting in insulin stacking: tweak your **Profile**
+* a too short __DIA__ will resulting in insulin stacking: tweak your **Profile**
 * physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
 
 ## Manage your Profiles
@@ -293,29 +297,29 @@ Buttons:
 - red X: delete
 - blue arrow: duplicate
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen, it may differ from the profile actually shown in profile tab as there is no connection between these.
+If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** tab may not always show the actual __Profile__ being used - e.g. if you made a __Profile Switch__ by using the __Profile__ tab on __AAPS__ homescreen, it may differ from the __Profile__ actually shown in __Profile__ tab as there is no connection between these.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
 ### Build a Profile from scratch for a kid
 
-The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a profile for a child (up to 18 years).
+The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a __Profile__ for a child (up to 18 years).
 
 **Important note:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+__AAPS‘ Profile helper__ is intended to starting point to aid an initial __Profile__ set up for your child. However, this is a suggestive __Profile__ based on data sets of two different hospitals and may not be correct for your child as diabetes may vary from person to person. Always discuss with your medical team before activating a new __Profile__.
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+Profile helper offers data sets from two different hospitals for children to find initial __Profile__ for your kid up to 18 years.
 
 ![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
 1. Make sure you are in **Profile 1**.
 2. In **Profile type**, make sure you have "Default profile" selected.
-3. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
+3. Adjust Default __Profile__ (based on hospital data set) by entering kids age and either TDD Total **or** weight.
 4. Change screen by clicking on **Profile 2** on the right.
 5. Press **Profile type** and select "DPV Default profile".
-6. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
-8. If you want to start tweaking your profile based on one of these suggestions, use the **Clone** button either from **Profile 1** ou **Profile 2**.
+6. Adjust DPV Default __Profile__ (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
+7. Press the button **Compare Profiles** at the bottom of the screen. Comparison of the two adjusted __Profiles__ will be displayed (see screenshot below).
+8. If you want to start tweaking your __Profile__ based on one of these suggestions, use the **Clone** button either from **Profile 1** or **Profile 2**.
 
 ![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
 
@@ -346,18 +350,18 @@ Being a core setting of your looping system, your **Profiles** are highly sensit
 
 ### Editing Profiles from Nightscout
 
-If enabled, **Profile** changes made directly in Nightscout can  be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
+If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The settings can be found in [NSClient Preferences > NSClient > Synchronization > Receive profile store](#Preferences-nsclient).
 
 This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+To do this, however, it is important to clone the whole **database record** consisting of several __Profiles__ in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Compare two Profiles
 
-You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare two different __Profiles__ or __Profile Switches__ (percentage of one of your __Profiles__ used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 
@@ -367,6 +371,6 @@ You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compa
 4. Change screen by clicking on **Profile 2** on the right.
 5. In **Profile type**, select "Profile switch" to choose in the history of all your **Profiles Switched**.
 6. Choose the **Profile Switch** you want to compare to.
-7. Press the button **Compare profiles** at the bottom of the screen. Comparison of the two adjusted profiles will be displayed (see screenshot below).
+7. Press the button **Compare Profiles** at the bottom of the screen. Comparison of the two adjusted __Profiles__ will be displayed (see screenshot below).
 
 ![Profile Helper 2](../images/ProfileHelper2.png)
