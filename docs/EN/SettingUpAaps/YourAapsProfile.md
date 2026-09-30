@@ -199,7 +199,7 @@ A **higher / weaker ICR** = more food per unit, i.e. you are getting less insuli
 
 ### How to set it
 
-The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
+The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
 ![Profile ICR](../images/Profile_ICR.png)
 
@@ -231,7 +231,7 @@ If your **BG** is too high after the meal and still too high after carbs are ful
 ### I'm stuck high and the loop does not bring me down
 The possible reasons for **AAPS** not giving enough insulin are:
 * **ISF** is not strong enough
-* Basal might not be strong enough
+* Basal rate might not be strong enough
 * A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
 * Automation has been set up and has overridden **AAPS**.
 
