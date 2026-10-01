@@ -113,7 +113,7 @@ Check the secret has been added, scroll down to verify.
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
-      src="https://www.dailymotion.com/embed/video/x9rdrpy?autoplay=0&queue-enable=false&loop=1&mute=1"
+      src="https://geo.dailymotion.com/player/x9rdrpy.html?video=x9rdrpy"
       loading="lazy"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       frameborder="0"
