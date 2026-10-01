@@ -46,7 +46,7 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
-      src="https://geo.dailymotion.com/player/x9rdwms.html?video=x9rdwms"
+      src="https://geo.dailymotion.com/player/x9rdwms.html?video=x9rdwms&loop=true&mute=true"
       loading="lazy"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       frameborder="0"
