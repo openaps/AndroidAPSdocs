@@ -128,6 +128,7 @@ Temp-Targets <./DailyLifeWithAaps/TempTargets.md>
 Scenes <./DailyLifeWithAaps/Scenes.md>
 QuickWizards <./DailyLifeWithAaps/QuickWizards.md>
 QuickLaunch toolbar <./DailyLifeWithAaps/QuickLaunch.md>
+Home screen widgets <./DailyLifeWithAaps/Widgets.md>
 Food database <./DailyLifeWithAaps/Food.md>
 Global search <./DailyLifeWithAaps/GlobalSearch.md>
 Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>

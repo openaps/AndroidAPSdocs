@@ -16,6 +16,10 @@ See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for
 
 The suggestions will not be executed automatically (as in closed loop). The suggestions have to be enacted by the user manually into the pump (if using virtual pump) or by using a button if **AAPS** is connected to a real pump.
 
+When **AAPS** has a suggestion, a **Loop** entry with a badge appears in the bottom navigation of the main screen. Press it to read the suggestion ("Accept new temp basal") with its rate, duration and reason, then press **Perform** to carry it out:
+
+![Open loop suggestion with the Perform button](../images/screens/loop_tab.png)
+
 This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
 
 (KeyAapsFeatures-LGS)=
@@ -261,6 +265,31 @@ Default value: 3 (shouldn’t be changed unless you really need to and know what
 Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing) 
 
 ***
+
+(Open-APS-features-auto-isf)=
+## Auto ISF
+
+**Auto ISF** is an **experimental** algorithm for advanced users. It is built on OpenAPS SMB and adds rules that make the insulin sensitivity factor (ISF) stronger or weaker depending on how your glucose behaves.
+
+It is only listed in **Configuration → APS** once you have completed all the [Objectives](../SettingUpAaps/CompletingTheObjectives.md).
+
+After selecting it, its **Settings** contain the OpenAPS SMB settings plus an **AutoISF settings** group:
+
+- **Enable AutoISF**: turns the ISF adjustments on. Without it, the algorithm behaves like OpenAPS SMB.
+- **AutoISF min** and **AutoISF max**: how weak and how strong the ISF is allowed to become, in the same way as the Autosens limits. With the default value 1.0 the effect is switched off.
+- **Weights**: each one drives one rule, and the default value 0.0 switches the rule off.
+  - while glucose **accelerates**, ISF is strengthened (more insulin);
+  - while glucose **decelerates**, ISF is weakened (less insulin);
+  - while glucose is **below target**, ISF is weakened;
+  - while glucose is **above target**, ISF is strengthened;
+  - a **post-prandial** weight and a **duration** weight act after meals and when glucose stays high for a long time.
+- **SMB delivery ratio** (with a minimum, a maximum and a BG range): what share of the insulin required can be delivered as SMB.
+- **IOB threshold percent**: the percentage of max IOB above which SMBs are disabled.
+
+```{admonition} Only for experienced users
+:class: danger
+With its default values Auto ISF changes nothing. Every value you raise makes **AAPS** more aggressive. Change one value at a time, in small steps, and watch the result for several days. Be extremely careful with an **AutoISF max** above 2.5.
+```
 
 (Open-APS-features-advanced-meal-assist-ama)=
 ## Advanced Meal Assist (AMA)

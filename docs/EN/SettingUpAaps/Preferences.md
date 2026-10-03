@@ -425,11 +425,17 @@ This section is shown when the **Wear** plugin is enabled in [Configuration > Co
 
 - **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data.
 
-**Wear Wizard Settings** defines what the bolus wizard on the watch takes into account (BG, temp target, trend, COB, IOB):
+**Wear Wizard Settings** defines which calculations are included in the result of the bolus wizard on the watch. On the watch you only enter the carbs; these switches replace the choices you would make in the bolus wizard on the phone:
+
+- **Include BG in wizard**: add a correction for the difference between your current glucose and your target.
+- **Include temp target in wizard**: use the running temp target instead of the profile target for this correction.
+- **Include trend in wizard**: take the current glucose trend into account.
+- **Include COB in wizard**: add insulin for the carbs that are still on board.
+- **Include IOB in wizard**: subtract the insulin that is still on board.
 
 ![Settings > Wear > Wear Wizard Settings](../images/preferences/settings_wear_wear_wizard.png)
 
-**Custom Watchface Settings** lets you authorize custom watchfaces to change some watch settings:
+**Custom Watchface Settings** contains **Authorize custom watchfaces**. A custom watchface file can include values for some watch settings. When this switch is on, loading such a watchface is allowed to change those settings on the watch; when it is off, the watchface is loaded but the settings stay as they are:
 
 ![Settings > Wear > Custom Watchface Settings](../images/preferences/settings_wear_custom_watchface.png)
 

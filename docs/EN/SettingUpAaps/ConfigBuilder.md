@@ -209,7 +209,22 @@ See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.m
 
 ## Calibration
 
-Choose between **No calibration** and **Linear calibration**.
+Choose how **AAPS** treats the values it receives from your sensor:
+
+- **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
+- **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+
+How **Linear calibration** works:
+
+- It needs a **sensor change** to be logged, so that it knows when the sensor session started. The first 2 hours of a session are skipped as warm-up.
+- It needs at least **2 fingerstick entries**. Recent entries count more than old ones.
+- The correction is only applied when the result is in a safe range. If your entries are too close together, only the offset is corrected.
+- **Open plugin** shows the status of the calibration, the slope and correction in use, and the list of fingerstick entries. You can add an entry with **Add calibration** and remove a wrong one.
+
+```{admonition} Calibrate with care
+:class: warning
+A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+```
 
 ![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
 
@@ -275,7 +290,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
   * Super Micro Bolus: most recent algorithm recommended for all users.
   * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
   * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
-* Auto ISF
+* [Auto ISF](#Open-APS-features-auto-isf)
   * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
 
 If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manually to **8** (default value for SMB) in [Preferences > Sensitivity detection > Sensitivity Oref1 settings](../SettingUpAaps/Preferences.md).
@@ -305,8 +320,6 @@ In this section, you can choose if/where you want **AAPS** to send your data to.
 Scroll down to see the rest of the list:
 
 ![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
-
-![Configuration > Communication, end of the list](../images/v4/Configuration/configuration_communication_3.png)
 
 ### NSClientV3
 

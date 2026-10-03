@@ -145,6 +145,10 @@ It is important to carefully consider the exact intention of your **Automation**
 
 ![Automation Triggers](../images/automation_triggers.png)
 
+Scroll down to see the rest of the list:
+
+![Automation Triggers, continued](../images/automation/automation_trigger_picker_2.png)
+
 There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
 
 **Trigger:** connect conditions
@@ -194,6 +198,10 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 ## Action
 
 ![Automation Actions](../images/automation_actions.png)
+
+Scroll down to see the rest of the list:
+
+![Automation Actions, continued](../images/automation/automation_action_picker_2.png)
 
 **Actions:** start **Temp Target**
 

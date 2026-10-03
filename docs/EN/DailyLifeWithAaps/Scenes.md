@@ -103,6 +103,10 @@ Before anything is applied you get a **confirmation** that lists exactly what th
 
 If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
 
+When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+
+![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+
 After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button:
 
 ![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
@@ -112,7 +116,15 @@ The scene's actions stay in effect until:
 - its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
 - you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
 
+A scene without follow-up only asks you to confirm:
+
+![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+
 Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+
+While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+
+![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
 
 When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
 

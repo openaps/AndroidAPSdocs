@@ -68,6 +68,36 @@ The dialog while the pump is disconnected, with **Reconnect Pump** and the durat
 
 ![Loop dialog while the pump is disconnected](../images/loop/loop_dialog_disconnected.png)
 
+The dialog in Low Glucose Suspend, in open loop and while the loop is disabled only differs in the running modes it offers:
+
+![Loop dialog in Low Glucose Suspend](../images/loop/loop_dialog_lgs.png)
+
+![Loop dialog in open loop](../images/loop/loop_dialog_open_loop.png)
+
+![Loop dialog while the loop is disabled](../images/loop/loop_dialog_disabled.png)
+
+This is how the main screen looks in each mode. The color band at the top of the graph changes at the time of the switch.
+
+Low Glucose Suspend:
+
+![Main screen in Low Glucose Suspend](../images/main/main_screen_loop_lgs.png)
+
+Open loop:
+
+![Main screen in open loop](../images/main/main_screen_loop_open.png)
+
+Loop disabled:
+
+![Main screen with the loop disabled](../images/main/main_screen_loop_disabled.png)
+
+Loop suspended — the remaining time is shown next to the icon:
+
+![Main screen with the loop suspended](../images/main/main_screen_loop_suspended.png)
+
+Pump disconnected — the remaining time is shown next to the icon, and the treatment buttons disappear from the QuickLaunch toolbar:
+
+![Main screen with the pump disconnected](../images/main/main_screen_pump_disconnected.png)
+
 A validation is required after each selection.
 
 ```{admonition} Alarm: the pump did not accept the zero temp basal
@@ -178,6 +208,14 @@ The insulin on board figure would be zero if just your standard basal was runnin
 2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
 3. The teal button on the right reflects the **current basal delivery**: a flat line when the profile basal is running, a changed icon while a temporary basal rate is active
 4. The **percentage row** shows the current sensitivity ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)): press it to see the Autosens value and the effective ISF (second dialog in the picture)
+
+The IOB dialog, opened by pressing the IOB chip:
+
+![IOB dialog with bolus IOB and basal IOB](../images/main/main_chip_iob.png)
+
+Press the teal button to see the temporary basal rate that is running, when it started and how long it has been running:
+
+![Temp basal dialog](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-required)=
 #### Carbs required
@@ -322,6 +360,10 @@ To create one more graph, press **Add graph** below the last graph and select it
 
 ![Add graph](../images/main/graph_add.png)
 
+The new graph is added below the others — here a second additional graph with **SENS%** and **DEV**:
+
+![Main screen with a second additional graph](../images/main/main_screen_additional_graph.png)
+
 Most users find the following configuration of additional graphs to be adequate :
 * Graph 1 with IOB, COB, Sensitivity change
 * Graph 2 with Deviations and BGI.
@@ -444,7 +486,16 @@ The bottom navigation bar gives access to:
 
 * **Objectives** — your progress through the [Objectives](../SettingUpAaps/CompletingTheObjectives.md); a badge shows how many are completed. This item disappears once all objectives are finished, and is not present on **AAPSClient**.
 
-The red **notification bubble** that may appear above the bottom bar collects active notifications; tap it to read and dismiss them.
+(aaps-screens-notifications)=
+#### Notifications
+
+A **notification bubble** may appear above the bottom bar, on the right. It collects the active notifications of **AAPS**; the small number shows how many there are. Its color follows the most important one: red for an urgent message, green for a simple information.
+
+![Main screen with the notification bubble](../images/main/main_screen_profile_switch_temp_target.png)
+
+Tap the bubble to open the **Notification** panel. Each message shows the time it was raised. Press **Dismiss** below a message to remove it; some messages have another button instead, to take you to the setting that needs your attention.
+
+![Notification panel](../images/main/main_notification_panel.png)
 
 (aaps-screens-bolus-wizard)=
 ## Bolus Wizard
@@ -520,6 +571,8 @@ You can record them from the expanded status panel on the main screen, from the 
 **Sensor Insert** and **Pump Battery Change** only ask for the time of the event:
 
 ![Sensor Insert dialog](../images/dialogs/sensor_insert.png)
+
+![Pump Battery Change dialog](../images/dialogs/pump_battery_change.png)
  Exercise, announcement, question and note entries reflect the Nightscout careportal and are special forms of notes.
 
 In the **Manage** sheet, scroll down and press **Careportal** to show these entries: **BG Check**, **Note**, **Exercise**, **Question** and **Announcement**.
@@ -775,14 +828,6 @@ The Profile helper lets you compare profiles and generate starting profiles for 
 (aaps-screens-widgets)=
 ## Home screen widgets
 
-**AAPS** provides widgets that you can add to your phone's home screen, to see your data without opening the app. Add them the same way as any other Android widget (usually a long press on an empty area of the home screen, then **Widgets**). The following widgets are available:
+**AAPS** provides five widgets that you can add to your phone's home screen, to see your data without opening the app. See the dedicated page [Home screen widgets](../DailyLifeWithAaps/Widgets.md).
 
-* **AAPS widget**
-* **AAPS BG graph**
-* **AAPS glucose circle** — the BG circle of the [main screen](#AapsScreens-the-homescreen): a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading. It can be resized to any size.
-* **AAPS BG + IOB + COB (compact)**
-* **AAPS Small**
-
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
-
-When you add a widget, the **Widget configuration** screen lets you set its background and transparency.
+![AAPS widgets on the home screen](../images/widgets/home_widgets_full_circle_small.png)
