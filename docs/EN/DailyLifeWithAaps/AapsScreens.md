@@ -56,6 +56,18 @@ Press the icon to open the Loop dialog. The dialog's content depends on the curr
 
 When you extend a suspension or a disconnection, the new duration **starts from now**: it replaces the remaining time, it is not added to it. You do not have to resume or reconnect first.
 
+The dialog while the loop is running in closed loop:
+
+![Loop dialog in closed loop](../images/loop/loop_dialog_closed_loop.png)
+
+The dialog while the loop is suspended, with **Resume** and the durations to extend the suspension:
+
+![Loop dialog while the loop is suspended](../images/loop/loop_dialog_suspended.png)
+
+The dialog while the pump is disconnected, with **Reconnect Pump** and the durations to extend the disconnection:
+
+![Loop dialog while the pump is disconnected](../images/loop/loop_dialog_disconnected.png)
+
 A validation is required after each selection.
 
 ```{admonition} Alarm: the pump did not accept the zero temp basal
@@ -198,6 +210,8 @@ Thresholds can be changed via the small **Settings** icon shown when the status 
 
 The expanded status panel also offers the **Prime/Fill** and **Sensor Insert** buttons to record a pump site change, an insulin cartridge change, a sensor insertion or a pump battery change — these entries reset the corresponding ages.
 
+![Expanded status panel](../images/main/main_status_row_expanded.png)
+
 Depending on the pump you use, you may not have all of these icons.
 
 (screens-sensor-level-battery)=
@@ -303,6 +317,10 @@ To configure an additional graph, press the **pencil** icon in its top-right cor
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
 Select the chips corresponding to the data you want to see on this graph; the **Remove** button deletes the graph.
+
+To create one more graph, press **Add graph** below the last graph and select its chips in the same way:
+
+![Add graph](../images/main/graph_add.png)
 
 Most users find the following configuration of additional graphs to be adequate :
 * Graph 1 with IOB, COB, Sensitivity change
@@ -493,7 +511,28 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 
 The ages and levels shown in the [status row](#screens-sensor-level-battery) (sensor, insulin, cannula, pump battery) are based on careportal entries: **Prime/Fill** (records pump site and insulin cartridge changes), **Sensor Insert** and **Pump Battery Change**.
 
-You can record them from the expanded status panel on the main screen, from the **Manage** sheet, or with [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons. Exercise, announcement, question and note entries reflect the Nightscout careportal and are special forms of notes.
+You can record them from the expanded status panel on the main screen, from the **Manage** sheet, or with [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
+
+**Prime/Fill** records a pump site change and/or an insulin cartridge change, and can deliver a prime amount:
+
+![Prime/Fill dialog](../images/dialogs/prime_fill.png)
+
+**Sensor Insert** and **Pump Battery Change** only ask for the time of the event:
+
+![Sensor Insert dialog](../images/dialogs/sensor_insert.png)
+ Exercise, announcement, question and note entries reflect the Nightscout careportal and are special forms of notes.
+
+In the **Manage** sheet, scroll down and press **Careportal** to show these entries: **BG Check**, **Note**, **Exercise**, **Question** and **Announcement**.
+
+![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
+
+**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event:
+
+![BG Check dialog](../images/dialogs/careportal_bg_check.png)
+
+**Note** and **Exercise** let you enter a duration, a note and the time of the event:
+
+![Exercise dialog](../images/dialogs/careportal_exercise.png)
 
 ### Tools
 
@@ -699,6 +738,12 @@ This tab shows all notes and careportal entries recorded in Nightscout.
 
 This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, LGS, suspend, disconnect.
 
+### User entry
+
+![User entry](../images/screens/treatments_user_entry.png)
+
+This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+
 (aaps-screens-running-mode)=
 
 ## History Browser
@@ -723,6 +768,8 @@ Gives you statistics about your Total Daily Dose and Time In Range. See the dedi
 
 Open the **menu** (☰) and select **Profile helper**.
 
+![Profile helper](../images/screens/profile_helper.png)
+
 The Profile helper lets you compare profiles and generate starting profiles for children. See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) — sections [Build a Profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid) and [Compare two Profiles](#your-aaps-profile-compare-profiles).
 
 (aaps-screens-widgets)=
@@ -735,5 +782,7 @@ The Profile helper lets you compare profiles and generate starting profiles for 
 * **AAPS glucose circle** — the BG circle of the [main screen](#AapsScreens-the-homescreen): a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading. It can be resized to any size.
 * **AAPS BG + IOB + COB (compact)**
 * **AAPS Small**
+
+![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
 
 When you add a widget, the **Widget configuration** screen lets you set its background and transparency.

@@ -5,16 +5,6 @@
 In **AAPS** v4 the **Config Builder** has been renamed **Configuration** and moved into the **top-left menu** (☰). It is still the place where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [v4 walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
 ```
 
-Depending on your settings you can open Config Builder through a tab at the top of **AAPS**' screen or through the hamburger menu.
-
-![Open config builder](../images/ConfBuild_Open_AAPS30.png)
-
-The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated. By default, when opening the Config Builder, sections are collapsed to only show the active plugins. Click on the arrow (G) to show all available options. The boxes on the right-hand side (C) allow you to view the active modules as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
-
-When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
-
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
-
 (configuration-v4)=
 ## Configuration in AAPS v4
 
@@ -51,9 +41,12 @@ Items **without** the icon are configured **per device**. The most important exa
 (Config-Builder-tab-or-hamburger-menu)=
 ## Tab or hamburger menu
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+**AAPS** 4 no longer has tabs at the top of the screen, and the checkbox under the eye symbol of **AAPS** 3.x is gone. Each plugin screen is opened in one of these ways:
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
+- **Configuration** → the plugin's category → **Open plugin**,
+- the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
+- a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
+- the **search bar** on the main screen.
 
 ```{contents}
 :backlinks: entry
@@ -71,11 +64,11 @@ See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic underst
 (Config-Builder-insulin)=
 ## Insulin
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![Insulin settings](../images/manage/insulin_settings.png)
 
-Select the type of insulin you are using.
+In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
 
-Once a type is selected, the insulin profile editor lets you:
+The insulin editor lets you:
 
 * give the profile an **Insulin nickname** so it is easy to recognise,
 * set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Activity, in hours), either by typing the value or using the **–** / **+** buttons,
@@ -184,7 +177,13 @@ Note that when DIA and peak are adjusted in this fashion, every point in the cur
 ## BG Source
 Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
-![Config Builder BG source](../images/ConfBuild_BG.png)
+![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+
+Scroll down to see the other sources:
+
+![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+
+![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
 
 * [xDrip](../CompatibleCgms/xDrip.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
@@ -204,16 +203,33 @@ Select the blood glucose source you are using. See [BG Source](../Getting-Starte
 
 ## Smoothing
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
 
 See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+
+## Calibration
+
+Choose between **No calibration** and **Linear calibration**.
+
+![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 ## Pump
 Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
 
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33.png)
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS33-2.png)
+![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+
+Scroll down to see all the pump drivers:
+
+![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+
+![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+
+![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+
+When you select another pump, **AAPS** asks you to confirm the change:
+
+![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Korean (for domestic DanaR pump)
@@ -228,6 +244,7 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
+* [Carelevo](../CompatiblePumps/CareLevo.md)
 * Virtual pump: open loop - **AAPS** suggestions only
   * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   * for pump which doesn't have any driver yet
@@ -235,6 +252,9 @@ Select the pump you are using. See [Compatible pumps](../Getting-Started/Compati
 (Config-Builder-sensitivity-detection)=
 
 ## Sensitivity Detection
+
+![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
+
 Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
 
 You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SEN and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
@@ -244,7 +264,10 @@ If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The va
 
 (Config-Builder-aps)=
 ## APS
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+
+![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+
+Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm with **Open plugin**.
 * OpenAPS AMA
   * Advanced Meal Assist: older algorithm not recommended anymore.
   * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
@@ -252,6 +275,8 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
   * Super Micro Bolus: most recent algorithm recommended for all users.
   * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
   * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
+* Auto ISF
+  * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
 
 If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manually to **8** (default value for SMB) in [Preferences > Sensitivity detection > Sensitivity Oref1 settings](../SettingUpAaps/Preferences.md).
 
@@ -259,7 +284,11 @@ If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manu
 
 This module should not be disabled as it is a core part of **AAPS**.
 
+![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
+
 ## Constraints
+
+![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
 
 ### Objectives
 
@@ -269,7 +298,15 @@ See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more info
 
 ## Synchronization
 
-In this section, you can choose if/where you want **AAPS** to send your data to.
+In this section, you can choose if/where you want **AAPS** to send your data to. In **AAPS** 4 this category is called **Communication**.
+
+![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+
+Scroll down to see the rest of the list:
+
+![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+
+![Configuration > Communication, end of the list](../images/v4/Configuration/configuration_communication_3.png)
 
 ### NSClientV3
 
@@ -302,9 +339,13 @@ Broadcast data to Samsung's G-Watch Wear App (Tizen OS).
 
 Connection to Garmin device (Fenix, Edge...)
 ## Treatments
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the main screen](#screens-bolus-carbs).
+Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the main screen](#screens-bolus-carbs).
 
 ## General
+
+In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+
+![Configuration > General](../images/v4/Configuration/configuration_general.png)
 
 ### Overview
 
@@ -324,43 +365,56 @@ Choose if you want to have [status lights](#Preferences-status-lights) on overvi
 (Config-Builder-actions)=
 ### Actions
 
-A tab offering multiple buttons to take [actions](#screens-action-tab) in **AAPS**.
+The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
 
 ### Automation
 
-A tab for managing your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 ### SMS Communicator
 Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Food
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
 Note: Entries cannot be used in the **AAPS** calculator. (View only)
 
 (Config-Builder-wear)=
 ### Wear
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Use settings (cog wheel) to define which variables should be considered when calculating a bolus given through your watch (e.g. 15min trend, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Enable **Wear** in **Configuration → Communication**:
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
 
-![Wear settings](../images/ConfBuild_Wear.png)
+Use **Settings** to define which variables should be considered when calculating a bolus given through your watch (e.g. trend, COB...). If you want to bolus etc. from the watch, you need to enable "**Wear control**". See [Settings > Wear](#preferences-wear).
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+![Wear settings](../images/preferences/settings_wear.png)
+
+**Open plugin** shows the Wear screen:
+
+![Wear plugin screen](../images/screens/wear_plugin.png)
+
+From this screen you can
 * Resend all data.
 Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 * Choose which watchface **AAPS** installs on a **Wear OS 6** or newer watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
 
+(Config-Builder-autotune)=
 ### Autotune
 
 You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
 
 ### Maintenance
 
-Access this tab to export / import settings.
+Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+
+![Maintenance screen, log files](../images/screens/maintenance.png)
+
+![Maintenance screen, file management](../images/screens/maintenance_2.png)
+
+![Maintenance screen, database management](../images/screens/maintenance_3.png)
 
 ### Config Builder
 
-This current tab.
+Now called **Configuration**: this current page.

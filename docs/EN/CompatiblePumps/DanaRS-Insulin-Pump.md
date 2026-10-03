@@ -27,6 +27,18 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
   ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_1.png)
 
+  Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
+
+  ![The Dana-i/RS plugin selected in Configuration > Pump](../images/v4/Pumps/dana_i_rs_enabled.png)
+
+  **Settings** opens the settings of the Dana-i/RS driver:
+
+  ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
+
+  **Open plugin** (or **Manage → Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+
+  ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
+
 * Open the pump screen (**Manage → Pump**).
 * Select preferences menu by tapping the 3 dots in the top right. 
 * Select 'Dana-i/RS Preferences'.

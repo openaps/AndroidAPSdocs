@@ -23,6 +23,10 @@ The smallest injectable dose of insulin when using the patch is 0.05 U. The Prof
 ![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
 ![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_2.png)
 
+Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and **Open plugin**:
+
+![The EOPatch2 plugin selected in Configuration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
+
 ## Settings
 Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
 

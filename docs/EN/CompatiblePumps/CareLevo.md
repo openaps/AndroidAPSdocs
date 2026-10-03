@@ -29,11 +29,15 @@ The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the *
 1. Select **Carelevo** in the Pump section.
 1. Press the Back key to return to the main screen.
 
+![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+
 ## Settings
 
 Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
 
 Open the CareLevo preferences by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+
+![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
 
 ### Low Insulin Notification Setting
 
@@ -48,6 +52,8 @@ The patch notifies you when it has been worn for the chosen number of hours, so 
 When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
 
 ## The pump screen
+
+![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
 
 The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
 

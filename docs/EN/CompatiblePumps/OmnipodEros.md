@@ -83,6 +83,18 @@ Via the top-left hand corner **menu** (☰) under **Configuration** ➜**Pump**�
 >
 > ![Configuration > Pump with the Omnipod plugin](../images/v4/Configuration/configuration_pump_list_1.png)
 
+Once it is selected, the **Omnipod** card shows two buttons, **Settings** and **Open plugin**:
+
+![The Omnipod plugin selected in Configuration > Pump](../images/v4/Pumps/omnipod_enabled.png)
+
+**Settings** opens the settings of the Omnipod driver:
+
+![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
+
+**Open plugin** (or **Manage → Pump**) opens the Omnipod pump screen. Before a pump is paired it looks like this:
+
+![Omnipod pump screen before pairing](../images/v4/Pumps/omnipod_pump_screen.png)
+
 ### Verification of Omnipod Driver Selection
 
 *Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*

@@ -29,7 +29,7 @@ If there is an error in the documentation or you have a better idea for how some
 
 When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
 
-Once you have granted the permissions, the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
+Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
 
 ![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
@@ -62,9 +62,13 @@ Choosing the default AAPS directory is recommended.</br>
 Do **not** select a subdirectory of AAPS.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it, choose "**USE THIS FOLDER**" and confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
 
 ![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+
+Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+
+![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
 ### Notifications
 
@@ -72,7 +76,9 @@ Android requires special permission for apps if they want to send you notificati
 
 While it is a good feature to disable notifications _e.g._ from social media apps, it is essential that you allow **AAPS** to send you notifications.
 
-Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt.
+Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
+
+![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
 ### Alarms and reminders
 
@@ -80,9 +86,7 @@ On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permi
 
 This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
 
-Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel is complete and you can press "**NEXT**" on the welcome screen to continue:
-
-![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
 
 (setup-wizard-bluetooth-battery-optimisation)=
 ### Bluetooth battery optimization
@@ -140,11 +144,21 @@ If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" butto
 
 ![EULA](../images/setup-wizard/Wizard-EULA.png)
 
+A "**Next**" button appears once you have agreed. Press "**NEXT**".
+
+The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
+
+![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+
 ## Master password
 
 As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you set here.
 
-The Wizard opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
+The Wizard shows "**Password not set**". Press "**Set**":
+
+![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+
+This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
 
 ![Protection](../images/setup-wizard/Wizard-Protection.png)
 
@@ -152,12 +166,25 @@ Enter the same password in both fields and press "**OK**":
 
 ![Password](../images/setup-wizard/Wizard-Password.png)
 
+Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+
+![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+
 ```{admonition} Do not lose your Master Password
 :class: danger
 Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 ```
 
 When you are done, press "**NEXT**" to go to the next screen.
+
+## Import settings
+
+This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
+
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
+- To start with a new configuration, press "**NEXT**" and continue with the Wizard.
+
+![Import settings](../images/setup-wizard/Wizard-ImportSettings.png)
 
 ## Units (mg/dL <-> mmol/L)
 
@@ -167,7 +194,7 @@ Please select if your glucose values are in mg/dL or mmol/L, then press the "**N
 
 ## Display Settings
 
-Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (70 and 180 mg/dL) for now, and edit them later.
+Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
 
 The values you choose only affect the graphical presentation of the diagram, and nothing else.
 
@@ -242,6 +269,10 @@ There is nothing you have to configure on this screen now; you can pair clients 
 
 ![Client control](../images/setup-wizard/Wizard-ClientControl.png)
 
+"**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
+
+![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
+
 Press "**NEXT**" to go to the next screen.
 
 ## Name
@@ -306,7 +337,7 @@ Many sources are available — scroll through the list and select the one you us
 
 ![BG Source](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, a "**Settings**" button appears below it (when the source has settings to configure). Open it if you need to adjust how the data is received, _e.g._ to upload your glucose values to your reporting server:
+Once you select a source, a "**Settings**" button appears below it. Open it if you need to adjust how the data is received. Some sources have nothing to configure at this stage and show an empty settings screen:
 
 ![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
@@ -347,7 +378,9 @@ It is not intended to be an accurate profile or something very well optimized, b
 Don't use it for actually looping!
 ```
 
-The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a red error message is shown until a tab contains valid values.
+The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
+
+![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
 Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
 
@@ -369,7 +402,11 @@ Later, for closed looping, you will generally have only one value for top and bo
 
 ![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-Save the profile with the **save icon** (top right). The profile summary then shows its name, units and the IC/ISF graphs:
+When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
+
+![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
+
+Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, units and the IC/ISF graphs:
 
 ![Save](../images/setup-wizard/Wizard-Profile-Save.png)
 
@@ -378,7 +415,11 @@ Save the profile with the **save icon** (top right). The profile summary then sh
 You can have several profiles defined, but only one activated profile running at any given time.
 ```
 
-Press the "**▶**" (activate) button at the bottom right. On the "**Activate**" screen, leave the percentage at 100 % and press "**Activate**":
+Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
+
+![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
+
+Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
 
 ![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
 
@@ -404,6 +445,10 @@ Scroll the list and select your pump. In this example we use the "**Virtual Pump
 Many pumps are supported — scroll down to find yours:
 
 ![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
+
+When you select a real pump, **AAPS** asks for a confirmation, because it will copy the basal rates of your profile to the pump and overwrite the basal rates stored there. Press "**OK**" only if the basal rates in your **AAPS** profile are correct; otherwise press "**Cancel**" and switch to the pump later:
+
+![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
 If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#bluetooth-permission)).
 
@@ -468,7 +513,7 @@ Go back, then press "**FINISH**" to complete the Setup Wizard:
 
 ![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the main screen of **AAPS**. You may see an information message confirming the profile switch you just made — tap "**SNOOZE**" to dismiss it.
+After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
 
 If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually. 
 

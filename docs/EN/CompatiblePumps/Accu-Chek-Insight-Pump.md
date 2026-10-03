@@ -46,6 +46,18 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 
    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
+   Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+
+   ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
+
+   **Settings** opens the settings of the Accu-Chek Insight driver:
+
+   ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+
+   **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+
+   ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
+
 * Tap the cog-wheel to open Insight settings.
 * In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby Bluetooth devices (below left).
 * On the Insight pump, go to Menu > Settings > Communication > Add Device. The pump will display the following screen (below right) showing the serial number of the pump.

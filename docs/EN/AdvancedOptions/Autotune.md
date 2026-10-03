@@ -37,6 +37,14 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 ***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
 
+In **AAPS** 4, open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
+
+![Autotune in Configuration > General](../images/v4/Configuration/configuration_general.png)
+
+**Open plugin** shows the Autotune screen:
+
+![Autotune screen in AAPS 4](../images/screens/autotune_plugin.png)
+
 ## Autotune user interface
 
 ![Autotune default screen](../images/Autotune/Autotune_1b.png)
@@ -114,6 +122,10 @@ Autotune will then display in Config Builder after you restart AAPS.
 ### Autotune plugin settings
 
   ![Autotune default screen](../images/Autotune/Autotune_11.png)
+
+In **AAPS** 4 the same settings look like this:
+
+  ![Autotune settings in AAPS 4](../images/preferences/settings_autotune.png)
 
 ```{admonition} Only DEV
 :class: note

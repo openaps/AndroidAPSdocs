@@ -51,6 +51,18 @@ The following settings should be configured on the pump in order for AAPS to rem
 1. Using the setup wizard as part of a fresh install
 2. By selecting the cog icon beside the Medtronic selection in the pump selection option in **Configuration**
 
+  Once it is selected, the **Medtronic** card shows two buttons, **Settings** and **Open plugin**:
+
+  ![The Medtronic plugin selected in Configuration > Pump](../images/v4/Pumps/medtronic_enabled.png)
+
+  **Settings** opens the settings of the Medtronic driver:
+
+  ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
+
+  **Open plugin** (or **Manage → Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
+
+  ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
+
 When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump).  Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.  
 
 ![Medtronic Settings](../images/Medtronic01a.png)

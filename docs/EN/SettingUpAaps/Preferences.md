@@ -221,6 +221,10 @@ To change the thresholds, expand the status panel on the main screen (chevron on
 
 ![Status lights](../images/preferences/status_lights.png)
 
+Tap an item (**Cannula**, **Insulin**, **Sensor** or **Pump battery**) to open its warning and critical thresholds:
+
+![Status lights thresholds for the cannula](../images/preferences/status_lights_cannula.png)
+
 The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
@@ -259,7 +263,7 @@ When using **Open loop**, you will receive notifications every time **AAPS** rec
 To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the "**Open mode minimum change**" setting.
 This defines the relative change required to trigger a notification.
 
-![Open mode minimum change](../images/OpenLoop_MinimalRequestChange2.png)
+![Settings > Loop](../images/preferences/settings_loop.png)
 
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
@@ -278,6 +282,20 @@ All the settings for OpenAPS AMA are described in the dedicated section in [Key 
 ### OpenAPS SMB
 
 All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+
+The list of settings you see depends on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) and on [Simple mode](#preferences-simple-mode). On a new installation only **Use dynamic sensitivity** is shown. Once the objectives are completed, the section looks like this:
+
+![Settings > OpenAPS SMB, first part](../images/preferences/settings_openaps_smb_1.png)
+
+![Settings > OpenAPS SMB, SMB options](../images/preferences/settings_openaps_smb_2.png)
+
+![Settings > OpenAPS SMB, UAM and carbs required](../images/preferences/settings_openaps_smb_3.png)
+
+**Advanced Settings** at the bottom of the section holds values that you normally do not have to change:
+
+![Settings > OpenAPS SMB > Advanced Settings](../images/preferences/settings_openaps_smb_advanced.png)
+
+![Settings > OpenAPS SMB > Advanced Settings, continued](../images/preferences/settings_openaps_smb_advanced_2.png)
 
 ## Absorption settings
 
@@ -324,6 +342,10 @@ Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off Bluetoo
 ## Pump settings
 
 The options here will vary depending on which pump driver you have selected in [Configuration > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
+
+For example with the **Virtual Pump**, the section is called **Virtual pump settings**. You choose the **Pump type** the virtual pump imitates, and whether its status is uploaded to Nightscout:
+
+![Settings > Virtual pump settings](../images/preferences/settings_virtual_pump.png)
 
 ## Tidepool
 
@@ -394,6 +416,33 @@ Options in advanced settings are self-explanatory.
 
 More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 
+(preferences-wear)=
+## Wear
+
+This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) page.
+
+![Settings > Wear](../images/preferences/settings_wear.png)
+
+- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data.
+
+**Wear Wizard Settings** defines what the bolus wizard on the watch takes into account (BG, temp target, trend, COB, IOB):
+
+![Settings > Wear > Wear Wizard Settings](../images/preferences/settings_wear_wear_wizard.png)
+
+**Custom Watchface Settings** lets you authorize custom watchfaces to change some watch settings:
+
+![Settings > Wear > Custom Watchface Settings](../images/preferences/settings_wear_custom_watchface.png)
+
+**General Settings** contains **Notify on SMB**, to get a notification on the watch each time an SMB is delivered:
+
+![Settings > Wear > General Settings](../images/preferences/settings_wear_general.png)
+
+## Autotune
+
+This section is shown when the **Autotune** plugin is enabled in [Configuration > General](#Config-Builder-autotune). The settings are described on the dedicated [Autotune](../AdvancedOptions/Autotune.md) page.
+
+![Settings > Autotune](../images/preferences/settings_autotune.png)
+
 ## Automation
 
 ![Settings > Automation](../images/preferences/settings_automation.png)
@@ -415,7 +464,9 @@ Settings should be self-explanatory.
 
 ![Settings > Maintenance](../images/preferences/settings_maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <mailto:logs@aaps.app>.
+**Email recipient**: Standard recipient of logs is <mailto:logs@androidaps.org>.
+
+**Number of logs to send**: how many of the most recent log files are attached when you send logs.
 
 **Data Choices**
 

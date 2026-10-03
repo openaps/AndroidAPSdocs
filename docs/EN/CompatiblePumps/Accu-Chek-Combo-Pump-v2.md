@@ -113,6 +113,18 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 
+  Once it is selected, the **Accu-Chek Combo** card shows two buttons, **Settings** and **Open plugin**:
+
+  ![The Accu-Chek Combo plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_combo_enabled.png)
+
+  **Settings** opens the settings of the Accu-Chek Combo driver:
+
+  ![Accu-Chek Combo driver settings](../images/v4/Pumps/accu_chek_combo_settings.png)
+
+  **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Combo pump screen. Before a pump is paired it looks like this:
+
+  ![Accu-Chek Combo pump screen before pairing](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
+
 * Tap the cog-wheel to open the driver settings.
 
 * In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.

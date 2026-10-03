@@ -20,6 +20,18 @@
 
 ![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_2.png)
 
+Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and **Open plugin**:
+
+![The Diaconn G8 plugin selected in Configuration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
+
+**Settings** opens the settings of the Diaconn G8 driver:
+
+![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
+
+**Open plugin** (or **Manage → Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+
+![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
+
 - After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
 
 ![image](../images/DiaconnG8/DiaconnG8_03.jpg)

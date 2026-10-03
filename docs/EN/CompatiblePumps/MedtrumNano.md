@@ -69,6 +69,18 @@ You can then open the Medtrum overview (pump screen) at any time with **Open plu
 
 ![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_2.png)
 
+Once it is selected, the **Medtrum** card shows two buttons, **Settings** and **Open plugin**:
+
+![The Medtrum plugin selected in Configuration > Pump](../images/v4/Pumps/medtrum_enabled.png)
+
+**Settings** opens the settings of the Medtrum driver:
+
+![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
+
+**Open plugin** (or **Manage → Pump**) opens the Medtrum pump screen. Before a pump is paired it looks like this:
+
+![Medtrum pump screen before pairing](../images/v4/Pumps/medtrum_pump_screen.png)
+
 ### Step 2: Change Medtrum settings
 
 Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the **Configuration** screen.

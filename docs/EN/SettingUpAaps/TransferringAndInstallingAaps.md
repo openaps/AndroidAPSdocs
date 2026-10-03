@@ -74,7 +74,30 @@ Transfer the file from its location on your computer to the "downloads" folder o
 
 On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, to install it, open the "downloads" folder on the phone, press the AAPS apk and select "install".
+Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+
+![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
+
+The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
+
+![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+
+Enable "**Allow from this source**", then go back:
+
+![Allow from this source enabled](../images/install/install_04_unknown_apps_allowed.png)
+
+Press the apk file again and select "**Install**":
+
+![Install prompt](../images/install/install_05_install_prompt.png)
+
+When the installation is finished, press "**Open**" to start **AAPS**, or "**Done**" to open it later:
+
+![App installed](../images/install/install_07_app_installed.png)
+
+```{warning}
+**IMPORTANT SAFETY NOTICE**
+Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
+```
 
 Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
 

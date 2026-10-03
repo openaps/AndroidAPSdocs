@@ -61,6 +61,36 @@ The rest of the editor is a short **step-by-step** wizard. Each step is one acti
 
 Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
 
+Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
+
+**Temporary target** — pick one of your temp target presets:
+
+![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
+
+**SMB** — enable or disable SMB while the scene is active:
+
+![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
+
+**Running mode** — optionally change the loop mode:
+
+![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
+
+**Careportal** — the event type and note to log:
+
+![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
+
+**Duration** — how long the scene stays active; 0 means until you end it yourself:
+
+![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
+
+**Follow-up scene** — optionally the scene that starts when this one ends:
+
+![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
+
+**Scene** — the name and the icon. Press **Finish** to save:
+
+![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+
 ---
 
 ## Activating a scene

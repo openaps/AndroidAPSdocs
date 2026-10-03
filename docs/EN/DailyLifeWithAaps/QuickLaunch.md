@@ -76,6 +76,8 @@ The care-portal events and device-maintenance records:
 - **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
 - **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
 
+![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+
 These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
 
 ### Quick Wizard
@@ -114,6 +116,8 @@ Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shor
 This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
 
 ### Plugins
+
+![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
 Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
 

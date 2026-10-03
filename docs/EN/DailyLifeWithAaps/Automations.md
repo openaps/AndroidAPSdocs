@@ -74,7 +74,11 @@ To set up an **Automation**, press the **+** button on the Automation screen to 
 ![Automation create](../images/automation_create.png)
 
 * give your ‘rule’ a title (Task name);
-* press "**EDIT**" under **Condition** and add at least one trigger:
+* press "**EDIT**" under **Condition**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
+
+![Automation condition](../images/automation/automation_trigger_editor.png)
+
+* add at least one trigger:
 
 ![Automation triggers](../images/automation_triggers.png)
 

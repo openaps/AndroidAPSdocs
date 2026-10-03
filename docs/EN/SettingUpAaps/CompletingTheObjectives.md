@@ -237,6 +237,16 @@ The documentation page gives a few examples, and you can search for "Automation"
 
 For example, if you eat the same thing for breakfast at the same time every morning before school/work, you can create an **Automation** such as "before-breakfast-target" to set a slightly lower **Temporary Target** 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consist of "Start temp target" with a lower than usual target value and a 30 minutes duration.
 
+## When all objectives are completed
+
+Once you have accomplished all the **Objectives**, the list shows each of them with a tick and the date it was accomplished. The **Objectives** item disappears from the bottom navigation; you can still open the list with **Configuration → Constraints → Objectives → Open plugin**.
+
+![All objectives accomplished](../images/objectives/objectives_completed.png)
+
+Press "**More**" under an objective to see its tasks again:
+
+![Details of an accomplished objective](../images/objectives/objective_1_details.png)
+
 (CompletingTheObjectives-go-back-in-objectives)=
 ## Go back in objectives
 

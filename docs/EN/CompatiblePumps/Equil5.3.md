@@ -25,6 +25,18 @@ These instructions are for configuring the Equil insulin pump.
 
 Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** switch to **Equil 5.3**.
 
+Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+
+![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+
+**Settings** opens the settings of the Equil driver:
+
+![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+
+**Open plugin** (or **Manage → Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+
+![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+
 ### Settings
 
 ![settings.png](../images/Equil/settings.png)
