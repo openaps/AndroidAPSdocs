@@ -51,10 +51,17 @@ Press the icon to open the Loop dialog. The dialog's content depends on the curr
 
 * While the loop is **running** (closed, open or LGS), you can switch the running mode (Closed Loop, Low Glucose Suspend, Open Loop or Disable loop), **suspend** the loop or **disconnect** the pump for a chosen duration.
 * While the loop is **disabled**, you can re-enable it by selecting a running mode, or disconnect the pump.
-* While the loop is **suspended**, you can **resume** it or disconnect the pump.
-* While the pump is **disconnected**, the only option is to **reconnect** the pump.
+* While the loop is **suspended**, you can **resume** it, disconnect the pump, or pick a new duration under **Suspend loop** to extend the suspension.
+* While the pump is **disconnected**, you can **reconnect** the pump, or pick a new duration under **Disconnect pump** to extend the disconnection.
+
+When you extend a suspension or a disconnection, the new duration **starts from now**: it replaces the remaining time, it is not added to it. You do not have to resume or reconnect first.
 
 A validation is required after each selection.
+
+```{admonition} Alarm: the pump did not accept the zero temp basal
+:class: warning
+While the pump is disconnected, **AAPS** keeps a zero temporary basal on the pump and sets it again if it is missing. If this still fails after 10 minutes, **AAPS** raises an urgent alarm: *"The pump did not accept the zero temp basal. It may still be giving basal insulin. Check the pump."* The alarm repeats every 15 minutes until the zero temporary basal is set or the disconnection ends. If you see it, check your pump: it may be delivering basal insulin although **AAPS** shows it as disconnected.
+```
 
 Note: the modes offered depend on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) — Closed Loop and LGS only become available as you complete them.
 
@@ -717,3 +724,16 @@ Gives you statistics about your Total Daily Dose and Time In Range. See the dedi
 Open the **menu** (☰) and select **Profile helper**.
 
 The Profile helper lets you compare profiles and generate starting profiles for children. See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) — sections [Build a Profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid) and [Compare two Profiles](#your-aaps-profile-compare-profiles).
+
+(aaps-screens-widgets)=
+## Home screen widgets
+
+**AAPS** provides widgets that you can add to your phone's home screen, to see your data without opening the app. Add them the same way as any other Android widget (usually a long press on an empty area of the home screen, then **Widgets**). The following widgets are available:
+
+* **AAPS widget**
+* **AAPS BG graph**
+* **AAPS glucose circle** — the BG circle of the [main screen](#AapsScreens-the-homescreen): a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading. It can be resized to any size.
+* **AAPS BG + IOB + COB (compact)**
+* **AAPS Small**
+
+When you add a widget, the **Widget configuration** screen lets you set its background and transparency.

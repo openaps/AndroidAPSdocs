@@ -43,6 +43,23 @@ To access main menu of AAPS you can use on of following options:
 * select AAPS icon in watch applications menu
 * tap on AAPS complication (if configured for menu)
 
+(WearOsSmartwatch-loop-status)=
+
+## Loop Status screen
+
+The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication.
+
+The screen is a list of cards. Scroll down to see them all:
+
+* **Running mode** — the current mode (closed loop, open loop, LGS, suspended, disconnected…) and, for a temporary mode, how long it still runs.
+* **Loop result** — when the loop last ran, and the temporary basal or SMB it requested.
+* **Scene** — only while a [scene](#scenes-from-watch) is active: its name, the time left (or **Until ended** for a scene without end time) and the **Follow-up** scene that starts when it ends.
+* **Targets** — your target, and the temporary target if one is running.
+* **Profile** — the name of the active profile, with its **Percentage** and **Timeshift** when they are not the default values. A temporary profile switch is highlighted and shows how long it still runs and the profile it **Returns to** when it ends.
+* **Sensitivity** — the same lines as the sensitivity chip on the phone's main screen: the autosens value and the profile, variable and effective ISF.
+
+A small scene icon next to a running mode, a temporary target or a profile switch means it was **set by the active scene**. The same icon is shown in the **Running mode** picker.
+
 (WearOsSmartwatch-wizard-result)=
 
 ## Adjusting the bolus on the wizard result page

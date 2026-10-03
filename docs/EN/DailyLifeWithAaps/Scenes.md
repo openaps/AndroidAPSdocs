@@ -71,6 +71,8 @@ Before anything is applied you get a **confirmation** that lists exactly what th
 
 ![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
 
+If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+
 After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button:
 
 ![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
@@ -78,7 +80,7 @@ After you confirm, the actions are applied and the **active scene** is shown at 
 The scene's actions stay in effect until:
 
 - its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually.
+- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
 
 Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
 
@@ -120,7 +122,14 @@ The watch then shows a confirmation — tap **✓** to activate, or swipe back t
 
 Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile also shows a **stop** button. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+
+If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+
+- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
+- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+
+The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
 
 ---
 
