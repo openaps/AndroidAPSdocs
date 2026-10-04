@@ -42,11 +42,7 @@ Be aware of the following limitations:
 * There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
 * Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB.
 
-If you have been using the old Combo driver that depends on the separate Ruffy app, and want to move to this new one, note that the pairing has to be done again - Ruffy and the new Combo driver are not able to share pairing information. Also, make sure that Ruffy is _not_ running. If in doubt, long-press the Ruffy app icon to bring up a context menu. In that menu, press on "App Info". In the UI that just opened up, press "Force stop". That way, it is ensured that an active Ruffy instance cannot interfere with the new driver.
-
-Also, if you are migrating from the old driver, be aware that the new driver communicates a bolus command in an entirely different way to the Combo that is much faster, so don't be surprised when a bolus starts immediately regardless of the dosage. Furthermore, the general suggestions, tips and tricks etc. about dealing with Ruffy pairing and connection problems do not apply here, since this is an entirely new driver that shares no code with the old one.
-
-This new driver is currently written to support the following languages on the Combo.
+The driver is currently written to support the following languages on the Combo.
 (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
 
 * English
@@ -109,9 +105,7 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 ## Activating the driver and pairing it with the Combo
 
-* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
-
-  ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
+* Select the "Accu-Chek Combo" driver in [Config builder > Pump](../SettingUpAaps/ConfigBuilder.md).
 
   Once it is selected, the **Accu-Chek Combo** card shows two buttons, **Settings** and **Open plugin**:
 
@@ -160,7 +154,7 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
 
-The consequence of this is that pairing will never be 100% without problems, though it is greatly improved in this new driver. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+The consequence of this is that pairing will never be 100% without problems. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
 
 (combov2-tab-contents)=
 ## Accu-Chek Combo tab contents
@@ -273,7 +267,7 @@ The driver does its best to connect to the Combo, and uses a couple of tricks to
 #### Restore reachability of the pump
 
 * When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AAPS. Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
+* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump.
 
 * The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones. 
 
@@ -282,9 +276,7 @@ The driver does its best to connect to the Combo, and uses a couple of tricks to
 
 ![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
 
-![No connection to pump (as shown in the old driver's tab)](../images/combo/combo-tips-no-connection-to-pump.png)
-
-![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
+![No connection to pump](../images/combo/combov2-tips-no-connection-to-pump.png)
 
 * This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
 * It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 
@@ -303,7 +295,7 @@ The driver does its best to connect to the Combo, and uses a couple of tricks to
 ![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
 * Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* When using the old driver, if the clock on the pump did not survive the battery change, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (The new driver automatically updates the pump's date and time.)
+* You don't need to re-set the pump's clock after the battery change: AAPS automatically updates the pump's date and time.
 * Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
 

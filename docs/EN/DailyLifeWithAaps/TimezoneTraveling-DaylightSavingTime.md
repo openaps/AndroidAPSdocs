@@ -64,11 +64,9 @@ So the Insight user doesn't have to worry about timezone changes and time change
 
 ## Timezone Change for Accu-Chek Combo
 
-The [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
 
 Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
-
-The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
 
 ## Timezone Change for Medtrum
 
@@ -140,43 +138,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
    
 ### DST for Accu-Chek Combo
 
-This section is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
-
-**AAPS** will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
-
-#### Actions to take before the clock change
-1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
-
-   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
-   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
-
-   ![Android date and time settings](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
-
-2. Find a timezone that has the same time as your current location but doesn't use DST. 
-
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
-
-3. In **AAPS** refresh your pump.
-
-4. Check the **Treatments history** (drawer menu → *Treatments history*)... If you see any duplicate treatments:
-
-   * **Long-press** a faulty entry to enter selection mode, tick all future and duplicate entries, then tap the **🗑 Delete** icon and confirm. This invalidates the treatments rather than removing them, so they will not be considered for IOB anymore.
-
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
-
-#### Actions to take after the clock change
-A good time to make this switch would be with low **IOB**. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your **COB** and **IOB** should both be close to zero.)
-
-1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
-3. On the **AAPS** “Combo” screen, press Refresh.
-4. Then go to the **Treatments history**, and look for any events in the future. There shouldn’t be many.
-
-   * **Long-press** an entry to enter selection mode, tick all future and duplicate entries, then tap the **🗑 Delete** icon and confirm. This invalidates the treatments rather than removing them, so they will not be considered for IOB anymore.
-
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
-6. Continue as normal.
+* Change to DST is done automatically. No action required.
 
 
 
