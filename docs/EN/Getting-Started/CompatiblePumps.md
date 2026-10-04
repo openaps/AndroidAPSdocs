@@ -28,14 +28,14 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
-- [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)  (Bluetooth)
+- [Diaconn G8](../CompatiblePumps/DiaconnG8.md) (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
-- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (Bluetooth)
-- [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
-- [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
 - Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- [Medtrum Nano](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
+- [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
 
 ## My pump is not listed
 
@@ -46,7 +46,12 @@ Details of the status of other pumps that may have the potential to work with AA
 
 If no additional communication device is mentioned, the communication between the insulin pump and **AAPS** is based on the integrated Bluetooth stack of Android, without the need for an additional communication device to translate the communication protocol.
 
-For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from the pump to Bluetooth. Make sure to choose the correct version depending on your pump.
+For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from the pump to Bluetooth. The device must use the same radio frequency as your pump:
+
+- **Omnipod Eros**: 433 MHz.
+- **Medtronic**: 916 MHz for pumps sold in the US and Canada, 868 MHz for pumps sold elsewhere. See [How to determine what frequency my pump uses](#MedtronicPump-faq).
+
+Available communication devices:
 
 - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)

@@ -175,7 +175,7 @@ Here is an approximate timeframe:
 | Tasks                                                                                |  Approx time    |
 |--------------------------------------------------------------------------------------|:---------------:|
 | Initial reading of the documentation                                                 | 1-2 days        |
-| Installing/configuring PC to allow the build                                         | 2-8 hours       |
+| Configuring GitHub to allow the browser build                            | 1-4 hours       |
 | Setting up a reporting server                                                        | 1 hour          |
 | Installing a CGM app (xDrip, BYODA, …)                                              | 1 hour          |
 | Configuring CGM → xDrip → APPS initially                                            | 1 hour          |
