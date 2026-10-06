@@ -1,6 +1,7 @@
 _build/
 docs/_build/
 docs/EN/_build/
+docs/EN/images/_capture
 docs/CROWDIN/fr/_build/
 docs/CROWDIN/de/_build/
 docs/CROWDIN/nl/_build/
