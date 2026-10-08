@@ -10,9 +10,12 @@ Option 1 generates a brand-new signing keystore for you. It is suitable for firs
 
 ## Choose your device
 
+```{tip}
+Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+```
+
 Follow the page that matches the device you are building from:
 
-- **[Android](BrowserBuildO1Android.md)** – the simplest, recommended first choice.
 - **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
@@ -23,7 +26,6 @@ You can switch device at any time – just open the matching page.
 ```{toctree}
 :hidden:
 
-Android <BrowserBuildO1Android.md>
 Computer <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```

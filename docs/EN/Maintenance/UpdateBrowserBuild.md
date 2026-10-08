@@ -1,5 +1,9 @@
 # Update with a browser
 
+```{tip}
+You built AAPS with **AAPS Builder**? You don't need this page: new AAPS versions are built automatically every week. See [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+```
+
 ## Build yourself instead of download
 
 **AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.

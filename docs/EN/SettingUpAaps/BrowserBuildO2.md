@@ -24,9 +24,12 @@ If the build still fails at the signing step and your password contains `$`, a b
 
 ## Choose your device
 
+```{tip}
+Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+```
+
 Follow the page that matches the device you are building from:
 
-- **[Android](BrowserBuildO2Android.md)** – the recommended choice.
 - **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
 
 ```{tip}
@@ -36,6 +39,5 @@ You can switch device at any time – just open the matching page.
 ```{toctree}
 :hidden:
 
-Android <BrowserBuildO2Android.md>
 Computer <BrowserBuildO2Computer.md>
 ```

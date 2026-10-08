@@ -4,15 +4,17 @@
 
 ```{note}
 This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+
+Using **AAPS Builder**? Start with its own [troubleshooting section](#aaps-builder-troubleshooting). The Google Drive sections below also apply to it.
 ```
 
 ## AAPS-CI Troubleshooting
 
 (aaps-ci-preparation-web)=
 ### aaps-ci-preparation web page
-  - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
-  - This local server times out after about 10 minutes. If you see the screen below, the file manager has already shut down the local server.
-  - Close **both** the preparation page and the file manager app, then reopen aaps-ci-preparation.html from the file manager and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
+  - The preparation page is displayed by a temporary local server (for example Simple Web Server on a computer), which also receives the Google refresh token.
+  - If you see the screen below, the local server has stopped or is not reachable.
+  - Close the preparation page, check that the local server is running, then reopen aaps-ci-preparation.html the same way as in Step 2 and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
