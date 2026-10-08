@@ -130,22 +130,21 @@ If an app is revoked you will need to scroll down until you see the list of revo
 
 ## Android 15 Frequent Bluetooth connection problems
 
-After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If the phone runs Android 15. Enabling the **Bond BT device on Android 15+** setting within **AAPS** settings may help improve stability of Bluetooth connections, follow guide below to enable this:
+After upgrading Android or moving to a recent phone, **AAPS** frequently loses Bluetooth connection to the pump. The problem disappears temporarily when restarting the phone. If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
 
 ```{admonition} Android 16
 :class: warning
-Only enable the **Bond BT device on Android 15+** option on Android 15, and only if you experience connectivity issues. DO NOT enable bonding option on Android 16.
+Only turn on **Bluetooth bonding** on Android 15, and only if you experience connectivity issues. DO NOT turn on bonding on Android 16.
 ```
 
-1) **Open preferences** by pressing the **Settings** (gear) icon on the top right side of the main screen.
+1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
 
-   ![Open preferences](../images/Pref2020_Open2.png)
+   ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Scroll down and open the **Confirmation beeps** / **Advanced** submenu. Enable **Bond BT device on Android 15+**.
+2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
 
-   ![BondBT](../images/troubleshooting/BondBT.png)
+   ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
 
-
-3. If the pump asks for a pairing request, accept it.
+3. If the phone shows a pairing request, accept it.
 
 4. Restart your phone.
