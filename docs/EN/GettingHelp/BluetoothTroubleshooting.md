@@ -113,7 +113,7 @@ If you are unsure which app is causing you an issue, disable them all (remember 
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)  
 
-3. To show hidden system apps Press on the **Three Dotted Lines (Hamburger) (1)**, then Press on **"Show System (1)"**. You should now be able to see the hidden system app in the list **Android Auto (3)**.  
+3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. You should now be able to see the hidden system app in the list **Android Auto (3)**.  
 
 ```{admonition} Find your app
 :class: tip
