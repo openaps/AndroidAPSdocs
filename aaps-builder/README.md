@@ -1,100 +1,122 @@
-# AAPS Builder setup page — vendored copy
+# AAPS Builder — maintained in the AAPS documentation
 
-The docs serve a copy of the **AAPS Builder** setup page:
+AAPS Builder lets users build AAPS in their own private GitHub repository. All of
+its code lives in this repository (openaps/AndroidAPSdocs) and is served by the
+docs site via `html_extra_path = ["_html"]` in `docs/EN/conf.py` (Sphinx copies
+the files verbatim, no build step on ReadTheDocs):
 
-- Page (readable HTML): `docs/EN/_html/aaps-builder.html`
-- Application logic (readable JS): `docs/EN/_html/aaps-builder.app.js`
-- Vendor library (minified): `docs/EN/_html/aaps-builder.forge.min.js`
+| File (in `docs/EN/_html/`) | What it is |
+|---|---|
+| `aaps-builder.html` | Setup page (readable HTML, English) |
+| `aaps-builder.app.js` | Setup page logic (readable, unminified) |
+| `aaps-builder.forge.min.js` | node-forge 1.3.1, vendored (keystore creation in the browser) |
+| `aaps-builder-build.yml` | The build workflow users copy into `.github/workflows/build.yml` of their repository |
 
-The page creates the `KEYSTORE_SET` secret for a private GitHub repository made
-from the aaps-builder template. That repository then builds AAPS from
-nightscout/AndroidAPS with GitHub Actions. It is served by ReadTheDocs at the
-site root (`https://androidaps.readthedocs.io/en/latest/aaps-builder.html`) via
-`html_extra_path = ["_html"]` in `docs/EN/conf.py` — Sphinx copies the files
-verbatim, no build step happens on ReadTheDocs.
+User documentation: `docs/EN/SettingUpAaps/BrowserBuildAapsBuilder.md` (label
+`aaps-builder`). It describes every step of the setup page and what the
+workflow does, so it must change together with these files.
 
-User documentation: `docs/EN/SettingUpAaps/BrowserBuildAapsBuilder.md`
-(label `aaps-builder`). It describes every step of the page and what the
-template's build workflow does, so it must follow upstream changes.
+## Trust boundary: approved sources only
 
-## Upstream and licence
+The signing key ends up in the user's repository, next to the workflow, so
+everything that can run there must come from an approved AAPS source:
 
-- Repository: https://github.com/dio99/aaps-builder
-- Pinned commit: `1115eea6c10a28b91486ccdee85a37e26ef75f41` (builder `VERSION` 1)
-- Upstream `index.html` SHA-256: `f5e26d4dd1e61d16745be482db7c09aa86083b781bf43a460a637b571912eaeb`
-- Licence: **GNU AGPL-3.0** (upstream `LICENSE`, added in commit `e829936`),
-  the same licence as this repository. The modified copy keeps the copyright
-  and licence notice, states the changes and their source (the comment block
-  in `aaps-builder.html` and the header of `aaps-builder.app.js`), and its
-  complete source is this folder plus the readable files in `docs/EN/_html/`.
+- **Setup page**: every file comes from the docs site. The Content-Security-Policy
+  is `default-src 'none'; script-src 'self'; connect-src 'self'; ...`: no CDN, no
+  third-party request. The only request is reading `aaps-builder-build.yml` from
+  the same site (step "Add the build workflow").
+- **Repository creation**: an **empty** private repository (`github.com/new` with
+  `name`, `visibility=private`, `owner=@me`). **No template repository** is used.
+- **Workflow**: copied by the user from this repository. At run time it only
+  - clones the AAPS source from `github.com/nightscout/AndroidAPS` (release tags),
+  - uses GitHub's own actions `actions/setup-java@v5` and `actions/upload-artifact@v7`
+    (tags, like nightscout's own `aaps-ci.yml`),
+  - talks to `api.github.com` (its own repository: visibility check, `built/…` tags)
+    and, only with the optional `GDRIVE_OAUTH2` secret, to Google
+    (`oauth2.googleapis.com`, `www.googleapis.com`) — the same endpoints as
+    nightscout's `aaps-ci.yml`.
+  - The Gradle build downloads AAPS's own dependencies, exactly as every other
+    AAPS build method.
+- **No update channel**: the workflow does not check anything outside the user's
+  repository for updates. Workflow changes are announced in the docs
+  (Docs updates page and the AAPS Builder page); users replace the file
+  themselves with the newer version from the setup page.
 
-The GitHub template the page points users to stays `dio99/aaps-builder`
-(the page's own fallback when it is not served from `*.github.io`). The build
-workflow (`.github/workflows/build.yml`) is not copied: users get it from the
-template.
-
-## Local changes to the upstream page
-
-The page handles the user's signing key, so its code is pinned and reviewable
-in this repository rather than loaded from a CDN at runtime. `sync.py` applies
-exactly these changes and nothing else:
-
-1. The forge library is served locally (`aaps-builder.forge.min.js`) instead
-   of from cdnjs. Its checksum is verified against the pinned value.
-2. The inline `<script>` is moved unchanged to `aaps-builder.app.js`, with a
-   four-line licence and provenance header.
-3. A Content-Security-Policy (`default-src 'none'; script-src 'self'; ...`)
-   blocks all network requests. Also added: `<meta name="robots" content="noindex">`
-   and a licence, provenance and changes comment.
-4. The three links to the AAPS documentation are made relative, so they
-   follow the version and language being read. The Google Drive link points
-   to the AAPS Builder docs page (`#aaps-builder-google-drive`) instead of the
-   browser build overview.
-
-## Checksums
+Review check before every change:
 
 ```
-SHA-256(aaps-builder.html)         = eeb82d72ebf0a31263aea5fb5a8a05bd803ebc2f68d5fa38ed9268a0a352a969
-SHA-256(aaps-builder.app.js)       = f30227a89a3c39ce9bd62f8668b5c2c7efe186d7e91b41def3b826bcf0346bb9
+grep -nE "uses:|https?://|curl|wget|git clone|ls-remote" docs/EN/_html/aaps-builder-build.yml
+grep -noE "https?://[^\"' )]+" docs/EN/_html/aaps-builder.html docs/EN/_html/aaps-builder.app.js
+```
+
+Every host must be in the list above. `github.com/dio99/...` may appear only
+in the attribution comments.
+
+## Origin and licence
+
+Based on **AAPS Builder** by the AAPS Builder authors,
+https://github.com/dio99/aaps-builder, **GNU AGPL-3.0** (the same licence as this
+repository). Imported once, after a full review, from upstream commit
+`1115eea6c10a28b91486ccdee85a37e26ef75f41` (2026-10-08):
+
+- upstream `index.html` SHA-256 `f5e26d4dd1e61d16745be482db7c09aa86083b781bf43a460a637b571912eaeb`
+- upstream `.github/workflows/build.yml` SHA-256 `2d53ce9bc38c7c96578cb3e2b51c9ca76ef0a70064135c1e79fff1253b003b29`
+
+Since then the files are maintained **here**. Nothing is fetched from the
+upstream repository, neither by the page, the workflow, nor any script in this
+repository. Upstream improvements may be adopted only by reading the upstream
+diff, re-implementing the change here, and reviewing it against the trust
+boundary above.
+
+Changes made for the AAPS documentation (AGPL-3.0 section 5: modified version,
+notices kept in the files):
+
+1. No template repository: the user creates an empty private repository and
+   adds the workflow from the docs (new step 2 on the setup page).
+2. Workflow: removed the `builder-update` job (it read a version file from the
+   upstream repository and asked users to copy a new workflow from there),
+   removed the template check and the `BUILDER_REPO` / `BUILDER_VERSION`
+   variables, English-only texts, error messages point to the docs page.
+3. Setup page: English only (no language switch), seven steps, texts in the
+   HTML, forge served locally, Content-Security-Policy, links to the docs
+   relative so they follow the version and language being read, "Desktop site"
+   hint for GitHub's mobile build page.
+
+## Checksums (of the committed files, LF line endings)
+
+```
+SHA-256(aaps-builder.html)         = bd508a5c3418a4283d55818df2b43273673bc5d3493f6a70e49c97d12c2a981b
+SHA-256(aaps-builder.app.js)       = 000b7fbfc31e0c4ecdacafb4059e164f1ba33f41371de4ec832a720c4bb2a55f
+SHA-256(aaps-builder-build.yml)    = d910dc80934e18d819b4541f449eaf7bf0342c5b73f1b5f568063aaae6c1f7f8
 SHA-256(aaps-builder.forge.min.js) = dc67fd132427ad96c9666c844b39565413c40ddb1f2d063c53512fbf6d387dfd
 ```
 
 `aaps-builder.forge.min.js` is node-forge 1.3.1 (BSD-3-Clause or GPL-2.0,
-https://github.com/digitalbazaar/forge). It is byte-identical to both
-`https://cdnjs.cloudflare.com/ajax/libs/forge/1.3.1/forge.min.js` and the npm
-package file `node-forge@1.3.1/dist/forge.min.js`.
+https://github.com/digitalbazaar/forge), byte-identical to the npm package file
+`node-forge@1.3.1/dist/forge.min.js`.
 
-Verify with `sha256sum docs/EN/_html/aaps-builder.*` (or
-`certutil -hashfile <file> SHA256` on Windows). The sync is reproducible: the
-same upstream commit gives byte-identical files. **Update these lines on every
-resync**, in the same commit as the files.
+On Windows with `core.autocrlf=true` the checked-out files have CRLF line
+endings and a different hash. Check the committed content instead:
+`git show HEAD:docs/EN/_html/aaps-builder.forge.min.js | sha256sum`.
+**Update these lines in the same commit as any change to the files.**
 
-## Resyncing with upstream
+## Changing the workflow
 
-Requires Python 3.9+, standard library only.
+1. Edit `docs/EN/_html/aaps-builder-build.yml` and raise the version in its first
+   line (`# AAPS Builder build workflow, version N`). The setup page shows this
+   number when the user copies the workflow.
+2. Run the review check above.
+3. Update the docs page if steps, timings, artifacts, variants, variables
+   (`AUTO_BUILD`, `AUTO_VARIANT`) or error messages changed, and add an entry to
+   `docs/EN/Maintenance/DocumentationUpdate.md` telling users to replace their
+   workflow file.
+4. Test with a private test repository: copy the workflow from a local build of
+   the docs, run a build, check the summary and the artifacts.
 
-1. **Review the upstream changes** since the pinned commit:
-   `https://github.com/dio99/aaps-builder/compare/<pinned>...main`.
-   Read every change to `index.html` (anything that sends data anywhere is a
-   blocker) and to `.github/workflows/build.yml`.
-2. **Sync**, from the repository root, with the full commit SHA:
-   ```
-   python aaps-builder/sync.py <commit-sha>
-   ```
-   The script stops with a message instead of guessing when upstream changed
-   something it relies on: the forge version or checksum, the number of inline
-   scripts, a docs link, or an inline event handler the CSP would block.
-   Adapt the script, never hand-edit the generated files.
-3. **Update this README**: pinned commit, upstream `index.html` checksum and
-   the three checksums the script prints.
-4. **Update the docs page** `docs/EN/SettingUpAaps/BrowserBuildAapsBuilder.md`
-   if the steps, button labels, build time, artifact retention, variants,
-   repository variables (`AUTO_BUILD`, `AUTO_VARIANT`) or error messages
-   changed.
-5. **Check**:
-   - `python utils/qualitycheck.py`
-   - a Sphinx build of `docs/EN` into a folder outside the repository
-   - serve the build folder (`python -m http.server`), open `aaps-builder.html`:
-     no errors in the browser console, EN/SV switch works, **Create a new key**
-     with a test password unlocks step 3, and **Create my private repository**
-     points to `github.com/new?template_owner=dio99&template_name=aaps-builder…&visibility=private`.
+## Testing the setup page
+
+Build the docs, serve the output folder (`python -m http.server`), open
+`aaps-builder.html`: no errors in the browser console, **Copy workflow** shows
+the version, **Create a new key** with a test password unlocks step 4, and
+**Create my private repository** points to
+`github.com/new?owner=%40me&name=my-aaps&visibility=private` (no `template_` parameters).
