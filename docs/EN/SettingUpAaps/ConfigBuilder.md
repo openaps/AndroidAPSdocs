@@ -28,7 +28,7 @@ Inside a category you see the plugins available for it. For single-choice catego
 
 A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClient (Nightscout) channel.
 
-On a **client** (**AAPSClient**) these items are **kept in sync with the master**: in the screenshot above the icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
+On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
 
 The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below *Absorption cutoff* carries the icon; settings without the icon are configured per device:
 
@@ -185,21 +185,22 @@ Scroll down to see the other sources:
 
 ![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
 
-* [xDrip](../CompatibleCgms/xDrip.md)
+* [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
 * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
 * [MM640g](../CompatibleCgms/MM640g.md)
 * Glimp - only version 4.15.57 and newer are supported
-* [Build Your Own Dexcom App (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+* [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+* MicroTech CGM App - for the Aidex / LinX CGM
 * [Poctech](../CompatibleCgms/PocTech.md)
-* Tomato App for MiaoMiao device
-* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
-* [Ottai](../CompatibleCgms/OttaiM8.md)
-* [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
-* MicroTech CGM App - for the Aidex CGM
-* Intelligo App
+* Tomato (MiaoMiao) - Tomato App for MiaoMiao device
+* [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
+* Intelligo - Intelligo App
+* Syai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
 * SI App - patched SI App or Sibionics App for Sibionics CGM
 * Sino App - patched app for Sinocare CGM
-* Random BG: Generates random BG data (Demo mode only)
+* Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
+* Instara - Instara App
+* Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
 
 ## Smoothing
 
@@ -344,9 +345,11 @@ See [Open Humans](../SupportingAaps/OpenHumans.md).
 ### Wear
 Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)).
 
-### Samsung Tizen
+### External Companion Apps
 
-Broadcast data to Samsung's G-Watch Wear App (Tizen OS).
+Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
+
+In earlier versions this plugin was called **Samsung Tizen**, after the [Samsung Tizen watch app](#Watchfaces-tizen) it was first made for.
 
 ### Garmin
 

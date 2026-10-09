@@ -155,17 +155,17 @@ Alternatively, but not for Wear OS 5, you can:
 
 2) 	Make yourself a developer in the watch (once set up and connected to phone): 
 
-Go to settings >about watch (bottom option) -> software info -> software version.
+Go to **Settings** > **System** > **About** > **Versions** (the menu names vary between watch brands — on some watches it is **About watch** > **Software info** > **Software version**).
 
 ![image](../images/wearos/easyfire02.png)
 
-Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode".
+Rapidly tap on **Build number** (or **Software version**) several times until a message tells you that you are now a developer.
 
 ![image](../images/wearos/easyfire03.png)
 
-Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”. 
+Go back to **Settings** > **System**: a new **Developer options** menu is now shown. 
 
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.  
+In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, and confirm the prompts. Wireless debugging then shows the watch's **IP address & Port**, something like: **192.168.1.214** : 5555. You only need the IP address (here **192.168.1.214**), not the port number after the colon. Note that the IP address can change, for example every time you change to a new phone handset for AAPS.  
 
 ![image](../images/wearos/easyfire04.png)
 

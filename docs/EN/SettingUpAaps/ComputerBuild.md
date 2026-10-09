@@ -405,7 +405,7 @@ On the **Generate signed App Bundle or APK** page, the path to your keystore wil
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
 
-On the next screen, select build variant "fullRelease" (2) and click "Create" (3). You should remember the directory displayed at (1), as later you will find your built apk file there!
+On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
 
    ![Select build variant](../images/Building-the-App/045_BuildPath.png)
 

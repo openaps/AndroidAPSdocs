@@ -480,7 +480,9 @@ The bottom navigation bar gives access to:
 
   ![Treatments sheet](../images/v4/Screens/treatments_sheet.png)
 
-* **Manage** — the hub for everything you manage in **AAPS**: Profile, Insulin, Temp Target, QuickWizard, Scenes, Automation, Food, Site Rotation, Pump, Authorized clients, Sensor Insert and Prime/Fill:
+* **Scenes** — shown only when you have at least one [scene](../DailyLifeWithAaps/Scenes.md) or an **Automation** rule marked as **User action**. It opens a sheet from which you can start them; a badge shows how many you can start right now.
+
+* **Manage** — the hub for everything you manage in **AAPS**: Profile, Insulin settings, Temp Target, QuickWizard, Scenes, Automation, Food, Site Rotation, Pump and Authorized clients. Below them are device and basal actions such as Sensor Insert and Temp Basal. Some items only appear when they apply to your setup — for example Prime/Fill and battery change depend on your pump, and Temp Basal, Extended Bolus and the Careportal entries are hidden in [Simple Mode](#preferences-simple-mode):
 
   ![Manage sheet](../images/v4/Screens/manage_sheet.png)
 
@@ -717,9 +719,10 @@ In this view, you can view and alter the history of the following treatments, ea
 * Running mode : history of loop status
 * User entry: other notes that are not sent to Nightscout
 
-In the last column, the data source for each line is displayed:
-* NS for Nightscout : the data comes from or has been recorded to Nightscout
-* PH for Pump History : the data has been processed by the pump
+At the end of each line, small icons show where the data comes from or has been sent to:
+* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
+* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
+* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
 
 (screens-bolus-carbs)=
 ### Carbs and bolus

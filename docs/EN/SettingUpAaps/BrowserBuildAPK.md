@@ -24,7 +24,7 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Select the branch you want to deploy (master), the [variant](#browserbuild-variant) (fullRelease) and tap Run Workflow.
+5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
 
 
 

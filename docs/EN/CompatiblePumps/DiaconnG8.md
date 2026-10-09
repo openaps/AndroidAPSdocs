@@ -12,35 +12,40 @@
 
 ## Insulin Pump Bluetooth Pairing
 
-- Click on the **menu** (☰) in the top left corner.
+- Tap the **menu** (☰) in the top-left corner.
 
 ![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
 
-- Click on **Configuration**.
+- Tap **Configuration** > **Pump** and select **Diaconn G8**.
 
-![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
 
 Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and **Open plugin**:
 
 ![The Diaconn G8 plugin selected in Configuration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-**Settings** opens the settings of the Diaconn G8 driver:
+![image](../images/DiaconnG8/DiaconnG8_03.jpg)
 
-![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the driver settings open from the **Settings** button on the **Diaconn G8** card instead of a cog wheel next to the plugin.
+```
 
-**Open plugin** (or **Manage → Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+**Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
+
+**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
 
 ![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
-
-![image](../images/DiaconnG8/DiaconnG8_03.jpg)
-
-- Choose Selected pump.
-
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Select your insulin pump’s model number once it appears in the list.
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing starts from the **Pair** button on the pump screen; there is no **Selected pump** setting.
+```
+
+- On the pump screen, tap **Pair**. The **Diaconn Pump Pairing** screen opens and **AAPS** scans for nearby pumps.
+- Tap your insulin pump's model number once it appears in the list.
 
 ![image](../images/DiaconnG8/DiaconnG8_05.jpg)
 
@@ -51,15 +56,24 @@ Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+- Once you select your pump, a window appears asking for a PIN code. Enter the PIN number displayed on your pump to complete the connection.
 
  ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
+- When **Pairing successful!** is shown, tap **OK** to go back to the pump screen.
+
 ## Pump status check and log synchronization
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- Once your pump is connected, open the pump screen (**Manage** > **Pump**). It shows the pump status (battery, reservoir, last connection, last bolus, basal rate and more).
+- Tap **Refresh** to connect to the pump, update the status and synchronize the logs.
+- Tap **Pump history** to see the history read from the pump.
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump status is shown on the pump screen (**Manage** > **Pump**) and synchronized with the **Refresh** button.
+```
 
 (diaconn-g8-bluetooth-troubleshooting)=
 
@@ -67,17 +81,25 @@ Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and
 
 **What to do in the case of an unstable Bluetooth connection with the pump.**
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+### Method 1) Restart AAPS, then check the pump again
 
-- Click on the 3 dots button on the top right.
+- Tap the **menu** (☰) in the top-left corner.
+- Tap **Exit** at the bottom of the menu.
+
+![The menu with the Exit entry at the bottom](../images/v4/Configuration/configuration_menu.png)
 
 ![image](../images/DiaconnG8/DiaconnG8_09.jpg)
 
-- Click on Exit.
-
 ![image](../images/DiaconnG8/DiaconnG8_10.jpg)
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+```{admonition} Older screenshot
+:class: note
+The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Exit** is at the bottom of the main menu (☰) instead of the 3-dot menu.
+```
+
+- Start **AAPS** again and check the connection to the pump.
+
+### Method 2) If the first method doesn't work, disconnect Bluetooth and then reconnect.
 
 - Press and hold the Bluetooth button at the top for about 3 seconds.
 
@@ -91,23 +113,40 @@ Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
+- In **AAPS**, open the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**.
 - Repeat the Bluetooth pairing process for the pump (see above).
 
 ## Further Information
 
+(diaconn-g8-insulin-pump-option-setting)=
+
 ### Diaconn G8 Insulin pump option setting
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- **Configuration** > **Pump** > **Diaconn G8** > **Settings**
+- Or, on the pump screen (**Manage** > **Pump**), tap the settings icon (cog wheel) in the top-right corner.
+
+![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
 
 ![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the settings open from **Configuration** > **Pump** > **Diaconn G8** > **Settings** or from the cog wheel on the pump screen.
+```
+
+- **Bolus speed** sets how fast the pump delivers a bolus.
+- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an "Insulin Change" event occurs.
+- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a "Site Change" event occurs.
+- If the **Log tube change** option is activated, the relevant details are automatically added as a note when a "Tube Change" event occurs.
+- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a "Battery Change" event occurs. You can also record a battery change yourself with **Manage** > **Pump Battery Change**. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- **Diaconn Cloud Sync** sends the pump logs to the Diaconn Cloud.
 
 ![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 a battery change is recorded with **Manage** > **Pump Battery Change**; there is no **Actions** tab.
+```
 
 ### Extended Bolus function
 

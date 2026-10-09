@@ -44,7 +44,7 @@ You will need to jump from tab to tab: start with all tabs closed to avoid losin
 - A **GitHub account** (free) – you create this in Step 1.
 - A **web browser** that can keep several tabs open at once (Chrome is assumed below).
 - A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Computer (Windows / Mac / Linux):** Simple HTTP Server.
+  - **Computer (Windows / Mac / Linux):** Simple Web Server.
   - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
 
 #### The steps

@@ -39,11 +39,11 @@ If the installation is **blocked** with a message about an unverified developer 
 ### Settings
 * Profile
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
+  ![Error: Basal not aligned to hours](../images/BasalNotAlignedToHours2.png)
 
 * [Pump - data from different pump](#update30-failure-message-data-from-different-pump)
 
-  ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
+  ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
 
 * [Nightscout Client](../GettingHelp/TroubleshootingNsClient.md)
 
@@ -99,7 +99,7 @@ Depending on your phone model and make there may be more than one location and s
   
   ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
   
-* Click the "App battery usage" and select "Not optimized".
+* Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
   
   ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
 
@@ -122,9 +122,9 @@ Depending on your phone model and make there may be more than one location and s
   
   ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
   
-* Set it to "Not optimized"
+* Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
   
-  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
 #### Huawei phones
 

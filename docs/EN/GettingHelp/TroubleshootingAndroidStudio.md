@@ -94,11 +94,11 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * In Android Studio, open the 'Commit' tab (1) on the left-hand side.
     ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
 
-    * For "Default changeset", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
 
-    * Right click on "Default Changeset" and select "Rollback"
+    * Right click on "Changes" and select "Rollback…" (1)
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 

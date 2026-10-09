@@ -112,7 +112,7 @@ Follow these steps on Android 16; other versions will vary slightly from the pro
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots (hamburger)** on the top left (1). Then click on **Show System** (2).
+3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots** (⋮) on the top right (1). Then click on **Show system** (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
@@ -337,7 +337,7 @@ Many sources are available — scroll through the list and select the one you us
 
 ![BG Source](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, a "**Settings**" button appears below it. Open it if you need to adjust how the data is received. Some sources have nothing to configure at this stage and show an empty settings screen:
+Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
 
 ![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
 

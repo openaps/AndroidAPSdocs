@@ -47,345 +47,359 @@ While the Medtrum pump does support a zero basal rate, AAPS uses multiples of th
 
 ## Setup
 
-CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. e.g. active PDM and Medtrum app. Make sure you have your pumpbase and pumpbase SN ready for activation of a new patch.
+```{caution}
+When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app. Have your pump base and a new reservoir patch ready.
+```
 
 ### Step 1: Select Medtrum pump
 
 #### Option 1: New installations
 
-If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
+If you are installing **AAPS** for the first time, the **Setup Wizard** guides you through the setup. Select **Medtrum** when you reach the **Pump** step.
 
-If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+If in doubt, you can also select **Virtual Pump** and select **Medtrum** later, after setting up **AAPS** (see option 2).
+
+![Setup Wizard pump step](../images/setup-wizard/Wizard-Pump.png)
 
 ![Setup Wizard](../images/medtrum/SetupWizard.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Setup Wizard** pump step looks different, but you still select **Medtrum** there.
+```
 
 #### Option 2: The Configuration screen
 
 On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
 
-On the top-left hand corner **menu** (☰) select **Configuration**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**. 
+Open the top-left **menu** (☰), tap **Configuration** > **Pump**, and select the **Medtrum** card. Only one pump can be active at a time.
 
-You can then open the Medtrum overview (pump screen) at any time with **Open plugin** (or **Manage → Pump**) to access the Medtrum commands when using AAPS.
-
-![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_4.png)
 
 Once it is selected, the **Medtrum** card shows two buttons, **Settings** and **Open plugin**:
 
 ![The Medtrum plugin selected in Configuration > Pump](../images/v4/Pumps/medtrum_enabled.png)
 
-**Settings** opens the settings of the Medtrum driver:
-
-![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
-
-**Open plugin** (or **Manage → Pump**) opens the Medtrum pump screen. Before a pump is paired it looks like this:
+**Open plugin** (or **Manage → Pump**) opens the Medtrum pump screen. You use it to change patches and to see the pump status. Before a patch is activated it looks like this:
 
 ![Medtrum pump screen before pairing](../images/v4/Pumps/medtrum_pump_screen.png)
 
+(medtrum-step-2)=
 ### Step 2: Change Medtrum settings
 
-Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the **Configuration** screen.
+Tap **Settings** on the **Medtrum** card in **Configuration** > **Pump**. You can also tap the gear icon in the top-right corner of the Medtrum pump screen. This opens the **Medtrum pump settings**:
+
+![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
 
 ![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
 
-#### Serial Number:
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is no **Serial Number** setting any more: **AAPS** finds your pump base with a Bluetooth scan when you activate a patch.
+```
 
-Enter the serial number of your pumpbase here as noted on the pumpbase. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase). 
+```{note}
+There is no **Serial Number** setting any more. **AAPS** finds your pump base with a Bluetooth scan the first time you activate a patch (see [Step 3](#medtrum-activate-patch)), and remembers its serial number. To use a different pump base, see [Unpair](#medtrum-unpair).
+```
 
-NOTE: This setting can only be changed when there is no patch active.
-
-#### Alarm settings
+#### Alarm Settings
 
 ***Default: Beep.***
 
-This setting changes the way that the pump will alert you when there is a warning or error.
+This setting changes the way that the pump alerts you when there is a warning or error.
 
-- Beep > The patch will beep on alarms and warnings
-- Silent > The patch will not alert you on alarms and warnings
+- **Beep**: the patch beeps on alarms and warnings.
+- **Silent**: the patch does not alert you on alarms and warnings.
 
-Note: In silent mode AAPS will still sound the alarm depending on your phone's volume settings. If you do not respond to the alarm, the patch will eventually beep.
+Note: In silent mode **AAPS** still sounds the alarm, depending on your phone's volume settings. If you do not respond to the alarm, the patch eventually beeps.
 
 #### Notification on pump warning
 
 ***Default: Enabled.***
 
-This settings changes the way AAPS will show notification on non critical pump warnings.
-When enabled a Notification will be shown on the phone when a pump warning occurs, including:
-    - Low battery
-    - Low reservoir (20 Units)
-    - Patch expiration warning
+This setting changes the way **AAPS** shows notifications for non-critical pump warnings.
+When enabled, a notification is shown on the phone when a pump warning occurs, including:
+- Low battery
+- Low reservoir (20 units)
+- Patch expires soon
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#medtrum-active-alarms).
+We recommend leaving this enabled when the pump alarms are set to **Silent**. In either case these warnings are also shown on the Medtrum pump screen under [Active alarms](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
 #### Patch Expiration
 
 ***Default: Enabled.***
 
-This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
+This setting changes the behavior of the patch. When enabled, the patch expires after 3 days and gives an audible warning if you have sound enabled. After 3 days and 8 hours the patch stops working.
 
-If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
+If this setting is disabled, the patch does not warn you and continues running until the patch battery or reservoir runs out.
 
-#### Pump expiry warning
+#### Pump expiry warning [hours]
 
 ***Default: 72 hours.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#medtrum-patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+This setting changes the time of the expiration warning. When [Patch Expiration](#medtrum-patch-expiration) is enabled, **AAPS** shows a notification this many hours after activation.
 
-#### Hourly Maximum Insulin
+#### Hourly Maximum Insulin [Units]
 
 ***Default: 25U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
-
-Set this to a sensible value for your insulin requirements. 
-
-#### Daily Maximum Insulin
-
-***Default: 80U.***
-
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#nano-reset-alarms).
+This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
 
 Set this to a sensible value for your insulin requirements.
 
-#### Scan on Connection error
+#### Daily Maximum Insulin [Units]
+
+***Default: 80U.***
+
+This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
+
+Set this to a sensible value for your insulin requirements.
+
+#### Scan on connection error
 
 ***Default: Off.***
 
 Located under **Advanced Settings**.
 
-Only enable if you have connection problems. If enabled the driver scans for the pump again before trying to reconnect to the pump. Make sure you have Location permission set to "Always allow".
+Only enable this if you have connection problems. When enabled, the driver scans for the pump again before trying to reconnect to it. Make sure the Location permission for **AAPS** is set to "Allow all the time".
 
-### Step 2b: AAPS Alerts settings
+### Step 2b: AAPS alert settings
 
-Go to preferences
+These settings are not part of the Medtrum driver. Open them from the **Settings** (gear) icon in the top-right corner of the main screen. See [Settings (Preferences)](../SettingUpAaps/Preferences.md) for more.
 
-#### Pump:
+#### BT Watchdog
 
-##### BT Watchdog
+Open **Settings** > **Pump**:
 
-Go to preferences and select **Pump**:
+![Settings > Pump](../images/preferences/settings_pump.png)
 
 ![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
 
-##### BT Watchdog
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Settings** screens look different, but **BT Watchdog** is still under **Settings** > **Pump**.
+```
 
-This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
+**BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
 
-Enable this setting if you experience frequent connection issues with your pump.
+Enable this setting if you often have connection problems with your pump.
 
-#### Local Alerts:
+#### Local alerts
 
-Go to preferences and select **Local Alerts**:
+Open **Settings** > **Local alerts**:
+
+![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
 
 ![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Settings** screens look different, but the pump unreachable alerts are still under **Settings** > **Local alerts**.
+```
 
 ##### Alert if pump is unreachable
 
 ***Default: Enabled.***
 
-This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch. 
+This setting is forced on when the Medtrum driver is enabled. It alerts you when the pump is unreachable. This can happen when the pump is out of range, or when it is not responding because of a faulty patch or pump base, for example when water leaks between the pump base and the patch.
 
 For safety reasons this setting cannot be disabled.
 
-##### Pump unreachable threshold [min]
+##### Pump unreachable threshold
 
 ***Default: 30 min.***
 
-This setting changes the time after which AAPS will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
+This setting changes how long **AAPS** waits before alerting you that the pump is unreachable.
 
-This setting can be changed when using Medtrum pump but it is recommended to set it at 30 minutes for safety reasons.
+You can change this setting when using the Medtrum pump, but we recommend keeping it at 30 minutes for safety reasons.
 
+(medtrum-activate-patch)=
 ### Step 3: Activate patch
 
 **Before you continue:**
-- Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
-- Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
+- Have your Medtrum pump base and a new reservoir patch ready.
+- Turn off other devices that can talk to the Medtrum pump (PDM and Medtrum app).
+- Ideally, make sure **AAPS** is set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). If no profile is active, the activation starts with a **Profile required** step where you choose the profile to activate.
 
-#### Activate patch from the Medtrum pump screen
+#### Start the activation
 
-Navigate to the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and press the **Change Patch** button in the bottom right corner.
+Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**. If you have set up [settings protection](#Preferences-protection), you must enter your password or PIN first.
 
-If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#nano-deactivate-patch).
+If a patch is already active, you are asked to deactivate it first, see [Deactivate patch](#nano-deactivate-patch).
 
-Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pumpbase to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
+The activation is a step-by-step wizard. Follow the prompts to fill and activate a new patch. Tap **Cancel** at any step to stop.
 
-##### Start Activation
+```{important}
+Only put the patch on your body and insert the cannula when the wizard tells you to (after priming is complete).
+```
+
+The first steps you see depend on your setup:
+
+1. **Profile required**: only if no profile is active. Select the profile to apply, then continue.
+2. **Find Pump**: only the first time, or after you used [Unpair](#medtrum-unpair). Connect the pump base to a fresh patch to power it on. **AAPS** scans for nearby Medtrum pump bases (their names start with `MT`). Tap yours in the list. **AAPS** saves its serial number, then goes straight to filling the patch.
+3. **Activate Patch**: only when **AAPS** already knows your pump base. The screen says "No active patch. Press **Next** to begin the activation process." Make sure the pump base is **not** connected to the patch yet, then tap **Next**.
 
 ![Start Activation](../images/medtrum/activation/StartActivation.png)
 
-At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
-
-Press **Next** to continue.
-
-##### Fill the patch
+#### Connect and fill the patch
 
 ![Fill the patch](../images/medtrum/activation/FillPatch.png)
 
-Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
+Connect the pump base to the patch, remove the residual air and fill the patch with insulin. A minimum of 70 units is needed for activation. The screen shows the reservoir level. Do not attach the patch to your body yet.
 
-##### Prime the patch
+When the patch is detected and filled, the **Next** button appears. Tap it.
+
+#### Select insulin
+
+This step only appears if you have more than one insulin set up in **AAPS**. Select the insulin you are filling the patch with. **AAPS** applies a profile switch with this insulin after activation.
+
+#### Prime the patch
 
 ![Half press](../images/medtrum/activation/HalfPress.png)
 
-Do not remove the safety lock and press the needle button on the patch.
-
-Press **Next** to start prime
+Do **not** remove the safety lock. Half-press the needle button on the patch, then tap **Next** to start priming.
 
 ![Prime progress](../images/medtrum/activation/PrimeProgress.png)
 
+Wait for priming to complete.
+
 ![Prime complete](../images/medtrum/activation/PrimeComplete.png)
 
-Once the prime is complete, press **Next** to continue.
+When priming is complete, tap **Next** to continue.
 
-##### Attach Patch
+#### Site Rotation
+
+This step only appears if you manage pump sites with [Site Rotation](#Aapsscreens-site-rotation) (setting **Manage pump site rotation**). Choose where you place the patch on your body, or skip this step.
+
+#### Attach patch
 
 ![Attach patch](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin, remove stickers and attach the patch to your body. 
-Remove safety lock and press the needle button on the patch to insert the cannula.
+Clean the skin and remove the stickers. Remove the safety lock, attach the patch to your body, and press the needle button to insert the cannula.
 
-Press **Next** to activate the patch.
+Tap **Next** to activate the patch.
 
-(medtrum-activate-patch)=
-##### Activate Patch
+#### Activate patch
 
 ![Activate patch](../images/medtrum/activation/ActivatePatch.png)
 
-When activation is complete, the following screen will appear
+**AAPS** activates the pump and sets the initial basal rate. Please wait. When activation is complete, the following screen appears:
 
 ![Activation complete](../images/medtrum/activation/ActivationComplete.png)
 
-Press **OK** to return to main screen.
+It shows how many units are left in the patch. Tap **OK** to return to the pump screen.
+
+```{tip}
+After a new activation, [export your settings](../Maintenance/ExportImportSettings.md). This lets you recover this patch session later, for example on a new phone.
+```
 
 (nano-deactivate-patch)=
 
 ### Deactivate patch
 
-To deactivate a currently active patch, go to the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and press the **Change Patch** button.
+To deactivate the active patch, open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
 
 ![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
 
-You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversible.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+You are asked to confirm that you want to deactivate the current patch. **This cannot be undone.** Tap **Next** to deactivate, or **Cancel** to return to the pump screen.
 
 ![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
 
-If Android APS in unable to deactivate the patch (For instance because the pumpbase has already been removed from the reservoir patch), you may press **Discard** to forget the current patch session and make it possible to activate a new patch.
+If **AAPS** cannot deactivate the patch (for example because the pump base has already been removed from the patch), tap **Discard** to forget the current patch session. You can then activate a new patch.
 
 ![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
 
-Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
+When deactivation is complete, retract the needle and remove the patch from your body. Remove the pump base and dispose of the used patch. Tap **OK** to return to the pump screen, or **Next** to start activating a new patch.
 
 (nano-resume-interrupted-activation)=
 
 ### Resume interrupted activation
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and press the **Change Patch** button.
+If a patch activation is interrupted, for example because the phone battery runs out, you can resume it. Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
 
 ![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
 
-Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
+Tap **Next** to resume the activation. Tap **Discard** to reset the activation status, so you can activate a new patch.
 
 ![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
 
-The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+The driver reads the activation status from the pump. If this works, the wizard continues at the step where it stopped.
 
 (nano-overview)=
 
-## Overview
+## Pump screen
 
-The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
+The Medtrum pump screen (**Manage → Pump**) shows the current status of the Medtrum patch. It also has buttons to change the patch, reset alarms and refresh the status. A banner at the top shows important states, for example **Patch not activated** or **Pump is suspended**.
+
+![Medtrum pump screen](../images/v4/Pumps/medtrum_pump_screen.png)
 
 ![Medtrum Overview](../images/medtrum/Overview.png)
 
-### BLE Status:
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen shows a status banner at the top and the rows listed below, some of which are new or renamed.
+```
 
-This shows the current status of the Bluetooth connection to the pumpbase.
+The screen can show these rows. Some rows only appear when they have a value.
 
-### Last connected:
-
-This shows the last time the pump was connected to AAPS.
-
-### Pump state:
-
-This shows the current state of the pump. For example:
-    - ACTIVE : The pump is activated and running normally
-    - STOPPED: The patch is not activated
-
-### Basal type:
-
-This shows the current basal type.
-
-### Basal rate:
-
-This shows the current basal rate.
-
-### Last bolus:
-
-This shows the last bolus that was delivered.
-
-### Active bolus:
-
-This shows the active bolus that is currently being delivered.
+- **Last connection**: how long ago **AAPS** last connected to the pump.
+- **Last bolus**: the last bolus that was delivered.
+- **Battery**: the current battery voltage of the patch.
+- **Reservoir**: the current reservoir level.
+- **Serial number**: the serial number of your pump base.
+- **Pump state**: the current state of the pump. For example **Active** (the patch is activated and running normally) or **Stopped** (the patch is not activated).
+- **Base basal rate**: the basal rate from your profile that is running now.
+- **Temp basal**: the temporary basal rate, if one is running.
+- **Active bolus**: the bolus that is being delivered right now.
+- **Active alarms**: see [below](#medtrum-active-alarms).
+- **Pump type**: the model of your pump base.
+- **FW version**: the firmware version of the pump base.
+- **Patch no**: the sequence number of the activated patch. It goes up by one every time you activate a new patch.
+- **Activation**: the date and time the patch was activated, and how long ago that was.
+- **Patch expires**: the date and time when the patch expires. Shows **Not enabled** if [Patch Expiration](#medtrum-patch-expiration) is off.
 
 (medtrum-active-alarms)=
-### Active alarms:
+### Active alarms
 
-This shows any active alarms that are currently active.
+This row shows any alarms that are active right now, for example a low reservoir or an expiring patch.
 
-### Reservoir:
+### Refresh
 
-This shows the current reservoir level.
+This button refreshes the status of the patch. It is only available when a patch is active and **AAPS** is not connected to the pump at that moment.
 
-### Battery:
+### Change Patch
 
-This shows the current battery voltage of the patch.
+This button starts the wizard to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
 
-### Pump type:
+(medtrum-unpair)=
+### Unpair
 
-This shows the current pump type number.
-
-### FW version:
-
-This shows the current firmware version of the patch.
-
-### Patch no:
-
-This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
-
-### Patch expires:
-
-This shows the date and time when the patch will expire.
-
-### Refresh:
-
-This button will refresh the status of the patch.
-
-### Change patch:
-
-This button will start the process to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
+This button only appears when **AAPS** knows a pump base. It clears the stored pump base serial number and disconnects. The next time you activate a patch, **AAPS** scans for a pump base again (the **Find Pump** step). Use this if you switch to a different pump base. Only do this when no patch is active.
 
 (nano-reset-alarms)=
 
 ### Reset alarms
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
+The **Reset alarms** button only appears on the pump screen when the patch has suspended itself, for example after a maximum daily insulin alarm. Tap it to reset the alarms and resume insulin delivery.
 
 ![Reset alarms](../images/medtrum/ResetAlarms.png)
 
-Press the **Reset Alarms** button to reset the alarms and resume normal operation.
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different, but the **Reset alarms** button works the same way.
+```
 
 ## Switching phone, export/import settings
 
-When switching to a new phone the following steps are necessary:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone, and import them into AAPS. Tick **Also replace pump settings** on the import screen, otherwise the patch session is not transferred to the new phone.
+When you switch to a new phone, do the following:
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone.
+* Transfer the settings file from the old phone to the new phone, and import it into **AAPS**. Tick **Also replace pump settings** on the import screen, otherwise the patch session is not transferred to the new phone.
 
-The imported settings file has to be of the same patch session that you are currently using, otherwise the patch will not connect.
+The imported settings file must be from the patch session you are using now, otherwise the patch will not connect.
 
-After a settings import the driver will sync history with the pump, this can take a while depending on the age of the settings file.
+After a settings import, the driver syncs the history with the pump. This can take a while, depending on the age of the settings file. The progress ("Syncing records, ... left") is shown on the main screen:
 
-From AAPS version 3.3.0.0 onwards, the sync progress is shown on the main screen:
 ![Sync progress](../images/medtrum/SyncProgress.png)
 
 (medtrum-nano-troubleshooting)=
@@ -394,15 +408,16 @@ From AAPS version 3.3.0.0 onwards, the sync progress is shown on the main screen
 
 ### Connection issues
 
-If you are experiencing connection timeouts or other connection issues:
-- In Android application settings for AAPS: Set location permission to "Allow all the time".
+If you have connection timeouts or other connection problems:
+- In the Android app settings for **AAPS**, set the Location permission to "Allow all the time".
+- Try enabling **Scan on connection error** (Medtrum settings > **Advanced Settings**) and **BT Watchdog** (**Settings** > **Pump**), see [Step 2](#medtrum-step-2).
 
 ### Bluetooth issues
 For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
 ### Activation interrupted
 
-If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#nano-resume-interrupted-activation)
+If the activation is interrupted, for example by an empty phone battery or a phone crash, you can resume it. Tap **Change Patch** on the pump screen and follow the steps in [Resume interrupted activation](#nano-resume-interrupted-activation).
 
 ### Preventing patch faults
 

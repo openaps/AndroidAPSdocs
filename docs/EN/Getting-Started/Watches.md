@@ -32,14 +32,14 @@ There are currently five main ways in which smartwatches are used in conjunction
 | Standalone          | AAPS without a phone                | Full Android smartwatch (check min Android)</br> Running **app-fullRelease** |
 | Full remote control | Most AAPS functions                 | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease** |
 | Remote control      | AAPSClient functions                | Android **Wear OS** watch (check Android/API)</br>Running **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)** |
-| Remote control      | Some AAPSClient functions           | Some Samsung, Fitbit and Garmin watches</br>See below.       |
+| Remote control      | Some AAPSClient functions           | Garmin watches</br>(older Samsung Tizen and Fitbit setups only, not recommended)</br>See below. |
 | Display             | Display some AAPSClient indications | Many smartwatches (see [here](https://bigdigital.home.blog/))</br>[xDrip](https://github.com/nightscoutfoundation/xdrip/releases) and [WatchDrip+](https://bigdigital.home.blog/2022/06/16/watchdrip-a-new-application-for-xdrip-watch-integration/) |
 
 ## Before you buy a smartwatch…
 
 The exact model of smartwatch you buy depends on the desired function(s). You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list of tested phones that also contains some smartwatches.
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil, Mi band and Fitbit. The different options summarized in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
+Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. The different options summarized in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
 
 If you are integrating a smartwatch with **AAPS** on a phone with the intention to remotely interact with **AAPS**, you also need to consider if the two devices are compatible with each other, particularly if you have an older, or an unusual phone. 
 
@@ -107,7 +107,7 @@ Further details about the watchfaces, and day-to-day use, including how to make 
 **AAPS** supports sending data to the [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch).
 
 ```{warning}
-The **G-Watch app** (by Juraj Antal) for Samsung **Tizen** watches is no longer maintained, and neither is its later **Wear OS** port. Samsung has also moved its smartwatches from Tizen to Wear OS. This option is therefore only relevant for existing, older Samsung Tizen setups and is not recommended for a new installation.
+The **G-Watch app** for Samsung **Tizen** watches is no longer maintained, and neither is its later **Wear OS** port. Samsung has also moved its smartwatches from Tizen to Wear OS. This option is therefore only relevant for existing, older Samsung Tizen setups and is not recommended for a new installation.
 ```
 
 Please check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for latest news.
@@ -130,24 +130,10 @@ There are some watch faces for Garmin that integrate with [AAPS](https://apps.ga
 ## Fitbit
 
 ```{warning}
-Google is phasing out Fitbit products. Custom watchfaces are not available in Europe anymore (you need to use a VPN). Purchasing a Fitbit now is not recommended.
+Google is moving Fitbit into Google Health and is removing third-party apps and watch faces from Fitbit watches in the EU. Fitbit watchfaces are therefore **no longer a recommended option**, and buying a Fitbit for use with **AAPS** is not recommended.
 ```
 
-**AAPS** supports sending data to the [Sentinel](http://ryanwchen.com/sentinel.html) watchface.
-
-![image](../images/98620770-2fb3-47af-a13e-28af7db69096.png)
-
-
-
-**"Sentinel"** is a clockface developed by [Ryan Chen](http://ryanwchen.com/sentinel.html) for his family and shared for free for the Fitbit smart watches: Sense1/2, Versa 2/3/4. It is not compatible with the Fitbit Luxe, since this is only a fitness tracker. Sentinel can be downloaded from the [Fitbit mobile app](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c).
-
-It allows the monitoring of 1, 2, or 3 individual's blood glucose numbers using either Dexcom Share, Nightscout, or a combination of the two as data sources. 
-
-You can also use xDrip or SpikeApp if used with local web server mode. Users can set custom alarms and submit events using Nightscout's careportal functionality directly from the watch to help track insulin-on-board (IOB), carbs-on-board (COB), enter meal information (carb count and bolus amount), and BG check values. 
-
-All will appear on the Nightscout timeline-graph, and as updated values in the IOB and COB fields. Community support can be found at the dedicated [Facebook group, Sentinel.](https://www.facebook.com/groups/3185325128159614)
-
-There are additional options for FitBit watches which appear to be for monitoring only. This includes [Glance](https://glancewatchface.com/). These additional options are described in the [Nightscout webpages.](https://nightscout.github.io/nightscout/wearable/#fitbit)
+For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github.io/nightscout/wearable/#fitbit) list some monitoring-only options, such as [Glance](https://glancewatchface.com/). These are third-party watchfaces too, so the same EU restriction applies.
 
 ## Following only
 
@@ -159,12 +145,12 @@ Here below some of the follow-only watch options popular with **AAPS** users:
 
 ### Xiaomi and Amazfit watches
 
-[Artem](https://github.com/bigdigital) has created an xDrip integration app WatchDrip+ for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
+**WatchDrip+** is a community-developed xDrip integration app for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
 
 ![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 
-You can read more about them, including how to set up at his website [here](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable. They are a popular option especially for kids and those with smaller wrists to wear.
+You can read more about them, including how to set them up, on the [WatchDrip+ website](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable. They are a popular option especially for kids and those with smaller wrists to wear.
 
 ### Pebble watch
 

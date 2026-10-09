@@ -1,6 +1,6 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump. 
+These instructions are for configuring the Equil insulin pump.
 
 ```{contents} Table of contents
 :depth: 1
@@ -15,7 +15,7 @@ These instructions are for configuring the Equil insulin pump.
 ## Hardware and software requirements
 * **Compatible Equil hardware**
 
-  Currently Equil 5.3 and 5.4 is supported
+  Currently Equil 5.3 and 5.4 are supported.
 
 * [Version 3.3.0.0](#version3300) or newer of AAPS
 
@@ -23,45 +23,86 @@ These instructions are for configuring the Equil insulin pump.
 
 ### Select Equil pump
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** switch to **Equil 5.3**.
+Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
 
 Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
 
 ![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
 
-**Settings** opens the settings of the Equil driver:
-
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
-
-**Open plugin** (or **Manage → Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
 
 ![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
 
 ### Settings
 
-![settings.png](../images/Equil/settings.png)
+Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
 
-```{admonition} Max basal on the patch
+![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+
+* **Low battery alarm**: warns you when the pump battery is low.
+* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
+* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
+
+![Equil settings in an earlier AAPS version](../images/Equil/settings.png)
+
+```{admonition} Older screenshot
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [preference](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for.
-
-If you raise your **max basal**, the new value is sent to the patch the next time you do a profile switch or reconnect the pump. There is nothing to set on the patch itself.
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the Equil settings no longer include **Max allowed bolus [U]**: **AAPS** sends your maximum allowed bolus to the patch automatically.
 ```
 
-### Activate patch
+```{admonition} Max basal and max bolus on the patch
+:class: note
+The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [preference](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
 
-Navigate to the Equil Tab and press **Pair Equil Patch Pump**.
+When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+```
 
-![overview.png](../images/Equil/overview.png)
+### Pair the pump
 
-![activate1.png](../images/Equil/activate1.png)
+On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
 
-![activate2.png](../images/Equil/activate2.png)
+![Equil pump screen with the PAIR EQUIL PATCH PUMP button](../images/Equil/overview.png)
 
-![activate3.png](../images/Equil/activate3.png)
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Pair**.
+```
 
-If you set different password than default 0000 (recommended for your safety), do not forget to store this password on a safe place. This password is stored to the pump. Then this password is asked 
-on every next pairing attempt until you do proper unpairing in AAPS. This makes the pump also unusable with original PDA until you unpair pump from AAPS.
+If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+
+![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+
+The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+
+1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
+1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+
+   ![Assemble pump step](../images/Equil/activate2.png)
+
+1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+
+   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+
+1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
+1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
+1. **Attach pump**: attach the pump to its base plate.
+1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+1. **Confirm**: put the pump on your body and press **Finish**.
+
+```{warning}
+If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+```
+
+### Pump screen after pairing
+
+Once the pump is paired, the pump screen shows these buttons:
+
+* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
+* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir, priming and attaching it again.
+* **History**: shows the events recorded by the pump.
+* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
 
 ## Where to get help
 

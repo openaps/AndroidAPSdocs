@@ -356,7 +356,7 @@ More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 
 ![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
 
-The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. [Introduced with AAPS 3.2,](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) it uses the Nightscout API v3.
+The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. Introduced with AAPS 3.2, it uses the Nightscout API v3.
 
 ```{admonition} Data uploaders
 :class: warning
@@ -470,7 +470,7 @@ Settings should be self-explanatory.
 
 ![Settings > Maintenance](../images/preferences/settings_maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <mailto:logs@androidaps.org>.
+**Email recipient**: Standard recipient of logs is <mailto:logs@aaps.app>.
 
 **Number of logs to send**: how many of the most recent log files are attached when you send logs.
 

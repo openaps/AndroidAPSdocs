@@ -22,10 +22,9 @@ _These instructions are for configuring the app and your pump if you have a Dana
 ## Pairing pump
 
 * Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-* In the pump section select 'Dana-i/RS'.
-* Click on the gear wheel to get directly to the pump settings or return to the main screen.
+* Tap **Pump** and select **Dana-i/RS**.
 
-  ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
 
   Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
 
@@ -35,29 +34,31 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
   ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
 
-  **Open plugin** (or **Manage → Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+  **Open plugin** (or **Manage** > **Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
 
   ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* Open the pump screen (**Manage → Pump**).
-* Select preferences menu by tapping the 3 dots in the top right. 
-* Select 'Dana-i/RS Preferences'.
-* Click on "Selected pump".
-* In the pairing window click on the entry for your pump.
+* On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
+* Tap the entry for your pump in the list.
 
   ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other Bluetooth pairings (i.e. smartphone and car audio).
+  ```{note}
+  This picture shows the pairing list from an older AAPS version. The list on the pairing screen looks similar.
+  ```
+
+* **You have to confirm the pairing on the pump!** This works the same way as other Bluetooth pairings you may know (for example, smartphone and car audio).
 
   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
 * Follow the pairing process based on the type and firmware of your pump:
 
-   * For DanaRS v1 select pump password in preferences and set your password.
-   * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AAPS pairing dialog.
-   * For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump.
+   * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
+   * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
+   * For Dana-i, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* When **Pairing successful!** is shown, you are back on the pump screen, which now shows your pump's status.
+* In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Enable extended boluses on pump
@@ -118,9 +119,9 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in [treatments tab](#screens-bolus-carbs) if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* Check in the pump history that the correct bolus was given. You can do this on the pump itself, or in **AAPS** on the pump screen (**Manage** > **Pump**) > **Pump history** > **Boluses**.
+* Delete the error entry in [treatments](#screens-bolus-carbs) if you wish.
+* The real amount is read and recorded at the next connection. To force this, tap **Refresh** on the pump screen, or just wait for the next connection.
 
 ## Special note when switching phone
 
@@ -136,7 +137,7 @@ When switching to a new phone the following steps are necessary:
 
 ### DanaRS v3, Dana-i
 * Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
+* Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
 
 ## Timezone traveling with DanaRS and Dana-i pumps
 

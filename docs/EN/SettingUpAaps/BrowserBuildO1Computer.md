@@ -18,9 +18,9 @@ Use a computer (supports Windows/Mac/Linux)
 Open the webpage
 [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Install Simple HTTP Server</br>
-If you are a Windows/Mac user, you can install it from the store.</br>
-After clicking the link, you will be asked whether to allow opening it. Please choose Open Link.</br></br>
+Install Simple Web Server</br>
+If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.</br>
+If your browser asks whether to open the store app, allow it.</br></br>
 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br>
 
 Example on Mac:
@@ -31,7 +31,7 @@ Example on Mac:
 - Click Get Started</br></br>
 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
 
-- Click Get Server</br></br>
+- Click New Server</br></br>
 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
 
 - In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.</br></br>
@@ -40,7 +40,7 @@ Example on Mac:
 - Seeing this screen means the server has been started.</br></br>
 ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
 
-- Do not close Simple HTTP Server. Please switch to your browser and open</br>
+- Do not close Simple Web Server. Please switch to your browser and open</br>
 [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
 
 - For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.

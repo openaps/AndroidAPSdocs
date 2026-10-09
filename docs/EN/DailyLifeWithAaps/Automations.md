@@ -114,7 +114,7 @@ When setting up an **Automation**, you can first test it by activating the ‘no
 
 There are safety limits set for **Automations**:
 
-* The **glucose** value has to be between 72 and 270 mg/dL (or 4 and 15 mmol/L).
+* A **Temp Target** set by an **Automation** has to be between 72 and 180 mg/dL (or 4 and 10 mmol/L).
 * The **Profile Percentage** has to be between 50% and 130%.
 * There is a 5 minute time limit between executions of  **Automation** (and first execution).
 
@@ -207,7 +207,7 @@ Scroll down to see the rest of the list:
 
 **Options:** 
 
-* **BG** must be between 72 mg/dL and 270 mg/dL (4 mmol/L and 15 mmol/L)
+* **BG** must be between 72 mg/dL and 180 mg/dL (4 mmol/L and 10 mmol/L)
 * **TT** works only if there is no previous Temp Target — **AAPS** adds this automatically as a "**Preconditions: Temp target not exists**" line to the rule
 
 **Actions:** stop **Temp Target**
