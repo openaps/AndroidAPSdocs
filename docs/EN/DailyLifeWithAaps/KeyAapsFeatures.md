@@ -248,7 +248,7 @@ Carb required notifications can be pushed to Nightscout if wished, in which case
 
 In any case, the required carbs will be displayed in the COB section on your main screen.
 
-![Display carbs required on main screen](../images/Pref2020_CarbsRequired.png)
+![Display carbs required on main screen](../images/main/main_screen_carbs_required.png)
 
 ### Advanced Settings
 

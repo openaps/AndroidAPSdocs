@@ -320,7 +320,7 @@ Standard value for AMA is 3, for SMB it's 8.
 
 The COB graph on the main screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
-![COB graph](../images/Pref2020_min_5m_carbimpact.png)
+![COB graph](../images/main/cob_graph_min_5m_carbimpact.png)
 
 ### Absorption cutoff
 
