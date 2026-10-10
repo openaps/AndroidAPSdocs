@@ -64,9 +64,11 @@ You can tape it.  There are several pre-perforated 'overpatches' for common CGM 
 You can fix it.  You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
 ## APS algorithm
-### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+### Why does OpenAPS AMA show "dia: 3" even though I have a different DIA in my profile?
 
-![AMA 3h](../images/Screenshot_AMA3h.png) 
+With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** shows the data sent to the algorithm. In its **Profile** section, `dia` is always 3.0 or less:
+
+![OpenAPS AMA plugin screen with dia 3.0 in the profile data](../images/screens/openaps_ama_plugin.png) 
 
 In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer. 
 

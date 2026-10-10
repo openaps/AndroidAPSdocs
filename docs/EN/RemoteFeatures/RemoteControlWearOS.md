@@ -111,19 +111,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 * **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
 * **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
 
-### User Interface setting
-
-* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
-
-![Input design options](../images/Watchface_InputDesign.png)
-
 ### Specific watchface parameters
-
-#### Steampunk watchface
-
-* **Delta Granularity** (default `Medium`)
-
-![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Circle WF
 

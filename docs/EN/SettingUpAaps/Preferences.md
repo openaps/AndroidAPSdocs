@@ -532,19 +532,27 @@ You can export your settings, logs and CSV data to a cloud service.
 
    ![Cloud Directory in the Maintenance menu](../images/preferences/maintenance_settings_cloud.png)
 
-2. In **Select Storage Type**, choose your cloud service (**Google Drive**) and sign in to your account.
+2. In **Select Storage Type**, select **Google Drive**.
 
    ![Select Storage Type dialog](../images/preferences/maintenance_cloud_select_storage.png)
 
-3. The **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** in the **Maintenance** menu then become available.
+3. A Google sign-in page opens. Choose the Google account that will hold your backups (you can use a [dedicated Google account](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
 
-You can then define what data will be uploaded to the cloud.
+   ![Google sign-in page: choose an account](../images/preferences/maintenance_cloud_google_account.png)
 
-![Cloud directory data](../images/preferences/maintenance_settings_clouddata.png)
+4. Check that the account is the right one and tap **Continue** to give **AAPS** access. If you set up the cloud directory before, the page says that **AAPS** already has some access.
 
-You can disable cloud export.
+   ![Google page asking to give AAPS access, with the Continue button](../images/preferences/maintenance_cloud_google_access.png)
 
-![Cloud directory disable](../images/preferences/maintenance_settings_cloudoff.png)
+5. Back in **AAPS**, the message **Cloud storage authentication successful** appears at the bottom of the main screen:
+
+   ![Cloud storage authentication successful message](../images/preferences/maintenance_cloud_auth_success.png)
+
+   In the **Maintenance** menu, **Cloud Directory** now has a green dot, and the **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** are available.
+
+   ![Maintenance menu with cloud storage set up: Cloud buttons available and the clear icon on Cloud Directory](../images/preferences/maintenance_settings_cloud_ready.png)
+
+To stop exporting to the cloud, tap the **✕** (**Clear Settings**) icon at the end of the **Cloud Directory** row in the **Maintenance** menu (it is shown once a cloud service is set up) and confirm **Clear Cloud Settings**. This switches back to local storage and clears the authorization.
 
 ## Open Humans
 

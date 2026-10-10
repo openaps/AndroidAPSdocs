@@ -62,10 +62,21 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 
 1. If this your first time importing or exporting **Settings** you will need to set a master password in [Preferences > General > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
 
-2. From the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok
+2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
 
-![AAPS export settings 1](../images/Maintenance/AAPS_ExportSettings1.png)
-![AAPS export settings 2](../images/Maintenance/AAPS_ExportSettings2.png)
+   ![Export settings to a local file](../images/Maintenance/export_settings_confirm_local.png)
+
+   ![Export settings to Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
+
+   Type the master password set above and tap **OK**.
+
+   ![Master password for the export](../images/Maintenance/export_settings_password.png)
+
+   **Settings exported** (local) or **Cloud export successful** (cloud) confirms the export.
+
+   ![Settings exported message](../images/Maintenance/export_settings_done_local.png)
+
+   ![Cloud export successful message](../images/Maintenance/export_settings_done_cloud.png)
 
 3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
 
@@ -85,7 +96,7 @@ It is recommended to do regular settings exports, especially before and after ma
 you will be unable to import the settings file!_
 
 ### Exporting or Importing Settings ###
-To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, use **Export settings** or **Import settings** and choose **Local** (the AAPS directory on your phone) or **Cloud** (once a **Cloud Directory** is set up).
+To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
 
 ![Maintenance menu with the Export settings and Import settings rows](../images/Maintenance/maintenance_export_import.png)
 
@@ -146,16 +157,23 @@ By default, an import leaves your pump settings alone: the pump selected in **Co
 
 9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
 
-10. From the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to restore from > type in the Master password set above > **Decrypt & Review**. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
+10. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** and tap **Import settings**. Select the preferences file you want to restore from (the newest is at the top). Make sure you select the correct preferences file, all .json files from the preferences folder (or from the cloud directory, with **Cloud**) will be shown.
 
-![AAPS import settings 1](../images/Maintenance/AAPS_ImportSettings1.png)
-![AAPS import settings 2](../images/Maintenance/AAPS_ImportSettings2.png)
+    ![List of settings files to import](../images/Maintenance/import_settings_files.png)
+
+    **AAPS** shows the details of the file. Type the master password set above and tap **Decrypt & Review**.
 
 11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Then tap **Import**.
 
+    ![Decrypted settings file with the Also replace pump settings box and the Import button](../images/Maintenance/import_settings_review.png)
+
 12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
 
+    ![Apply imported settings? dialog](../images/Maintenance/import_settings_apply.png)
+
 13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
+
+    ![Settings applied message](../images/Maintenance/import_settings_applied.png)
 
 If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Select your pump again in **Configuration** and check its settings.
 
