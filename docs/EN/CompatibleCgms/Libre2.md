@@ -46,7 +46,7 @@ activation and make a new initial calibration.
 
 -   In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **BG Source** and select **xDrip+**
 
-![xDrip BG Source](../images/ConfBuild_BG_xDrip.png)
+![Configuration > BG Source with xDrip+ BG selected](../images/v4/Configuration/configuration_bg_source.png)
 
 -   If AAPS does not receive BG values when phone is in airplane
     mode, use 'Identify receiver' as describe on [xDrip settings page](#xdrip-identify-receiver).

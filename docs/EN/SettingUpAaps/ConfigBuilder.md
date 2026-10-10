@@ -112,11 +112,9 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 #### Free Peak Oref
 
-![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
-
-* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
-* The DIA is automatically set to 5 hours if a higher value is not entered.
-* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+* In **AAPS** 4 there is no separate "Free-Peak Oref" insulin type: you can enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a **Load peak from** preset.
+* The DIA can be set between 5 and 9 hours.
+* A custom peak is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 (Config-Builder-insulin-dia)=
 ### Duration of insulin action (DIA) and peak

@@ -493,9 +493,11 @@ The bottom navigation bar gives access to:
 
 A **notification bubble** may appear above the bottom bar, on the right. It collects the active notifications of **AAPS**; the small number shows how many there are. Its color follows the most important one: red for an urgent message, green for a simple information.
 
-![Main screen with the notification bubble](../images/main/main_screen_profile_switch_temp_target.png)
+![Main screen with the notification bubble](../images/main/main_screen_notification_bubble.png)
 
 Tap the bubble to open the **Notification** panel. Each message shows the time it was raised. Press **Dismiss** below a message to remove it; some messages have another button instead, to take you to the setting that needs your attention.
+
+![Notification panel with one message and its Dismiss button](../images/main/notification_panel.png)
 
 ![Notification panel](../images/main/main_notification_panel.png)
 
@@ -679,7 +681,7 @@ See [Config Builder > Insulin > Duration of insulin action](#Config-Builder-insu
 
 ## Pump Status
 
-![Pump Status](../images/Screenshot_PumpStatus.png)
+![Virtual Pump status screen](../images/v4/Pumps/virtual_pump_screen.png)
 
 **Manage → Pump** (or **Configuration → Pump → Open plugin**) shows the status of your pump: last connection, base basal rate, battery, reservoir...
 

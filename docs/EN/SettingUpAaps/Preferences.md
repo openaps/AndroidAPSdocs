@@ -112,9 +112,11 @@ If the app is protected, you must enter the password or use the phone's biometri
 
 - Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
-- In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter the master password.
+- **Bolus protection** can only be selected once **Settings protection** (Level 2) is set.
 
-![Prompt biometric protection](../images/Pref2020_PW.png)
+- In the example below, bolus protection uses the **Master password**: **AAPS** asks for it before opening a treatment dialog such as **Insulin**. With **Biometric**, if biometric authentication does not work, you can enter the master password instead.
+
+![Authentication required prompt asking for the master password](../images/preferences/bolus_protection_prompt.png)
 
 (Preferences-password-and-pin-retention)=
 ### Password and PIN retention

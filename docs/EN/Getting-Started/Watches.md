@@ -112,7 +112,7 @@ The **G-Watch app** for Samsung **Tizen** watches is no longer maintained, and n
 
 Please check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for latest news.
 
-![G-Watch](../images/G-Watch.png)
+![Configuration > Communication: the External Companion Apps card](../images/v4/Configuration/configuration_external_companion_apps.png)
 
 (Watchfaces-garmin)=
 
@@ -120,7 +120,7 @@ Please check the dedicated [Facebook group](https://www.facebook.com/groups/gwat
 
 There are some watch faces for Garmin that integrate with [AAPS](https://apps.garmin.com/search?keywords=androidaps), on the Garmin ConnectIQ store.
 
-![Garmin](../images/Garmin.png)
+![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
 
 [AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. It is available in the ConnectIQ store, the necessary **AAPS** plugin is only available from **AAPS** 3.2.
 ![Screenshot](../images/Garmin_WF-annotated.png)
