@@ -46,13 +46,6 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 
    ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_2.png)
 
-   ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
-
-   ```{admonition} Older screenshot
-   :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 each pump is shown as a card in **Configuration** > **Pump**, with **Settings** and **Open plugin** buttons.
-   ```
-
    Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
 
    ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
@@ -97,13 +90,6 @@ Note: There is no permanent connection between the pump and the phone. **AAPS** 
 Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
 
 ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
-
-![Screenshot of Insight Settings](../images/Insight_settings.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Insight pairing** is no longer in the settings: it is a button on the pump screen (see [Pairing](#accu-chek-insight-pairing)).
-```
 
 In the Insight settings in **AAPS** you can enable the following options:
 * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.

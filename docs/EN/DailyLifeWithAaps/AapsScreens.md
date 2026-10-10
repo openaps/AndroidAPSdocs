@@ -45,9 +45,7 @@ Next to the BG circle, an icon shows the running mode of the loop (from top to b
 5. Red pause icon = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown next to the icon
 6. Grey circle with plug = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown next to the icon
 
-Press the icon to open the Loop dialog. The dialog's content depends on the current state, as shown below (each icon opens the dialog underneath it):
-
-   ![Loop dialog per state](../images/Home2020_Loop_Dialog.png)
+Press the icon to open the Loop dialog. The dialog's content depends on the current state:
 
 * While the loop is **running** (closed, open or LGS), you can switch the running mode (Closed Loop, Low Glucose Suspend, Open Loop or Disable loop), **suspend** the loop or **disconnect** the pump for a chosen duration.
 * While the loop is **disabled**, you can re-enable it by selecting a running mode, or disconnect the pump.

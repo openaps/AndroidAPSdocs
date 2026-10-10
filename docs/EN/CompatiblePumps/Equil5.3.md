@@ -43,13 +43,6 @@ Open the Equil settings with **Settings** on the **Equil** card, or with the gea
 * **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
 * **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
 
-![Equil settings in an earlier AAPS version](../images/Equil/settings.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the Equil settings no longer include **Max allowed bolus [U]**: **AAPS** sends your maximum allowed bolus to the patch automatically.
-```
-
 ```{admonition} Max basal and max bolus on the patch
 :class: note
 The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [preference](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
@@ -60,13 +53,6 @@ When you change your **max basal** or **max bolus**, **AAPS** sends the new valu
 ### Pair the pump
 
 On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
-
-![Equil pump screen with the PAIR EQUIL PATCH PUMP button](../images/Equil/overview.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Pair**.
-```
 
 If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
 

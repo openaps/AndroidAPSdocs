@@ -98,13 +98,6 @@ Once it is selected, the **Omnipod** card shows two buttons, **Settings** and **
 
 To verify that you have enabled the Omnipod driver, open **Manage** > **Pump** from the main screen. You should see the **Omnipod** pump screen shown above. If you have not paired a RileyLink yet, **RileyLink Status** shows **Not Started** and **Pod Status** shows **No Active Pod**.
 
-![Enable_Omnipod_Driver_5](../images/omnipod/Enable_Omnipod_Driver_5.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is no **Omnipod (POD)** tab to swipe to: open the Omnipod pump screen with **Manage** > **Pump**.
-```
-
 ## Omnipod Configuration
 
 All pod and RileyLink functions are buttons on the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) (**Manage** > **Pump**). Some buttons only appear in certain situations, for example when a pod is active.
@@ -715,25 +708,16 @@ To open the Omnipod driver settings, either:
 - press the gear icon at the top right of the Omnipod pump screen (**Manage** > **Pump**), or
 - open the top-left **menu** (☰) > **Configuration** > **Pump** and press **Settings** on the **Omnipod** card.
 
-![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
-
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the settings with **Settings** on the **Omnipod** card or the gear icon on the Omnipod pump screen, instead of the settings gear in **Configuration** or the 3-dot menu.
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 you open the settings with **Settings** on the **Omnipod** card or the gear icon on the Omnipod pump screen, instead of the settings gear in **Configuration** or the 3-dot menu.
 ```
 
 The settings are grouped as listed below. Tap a group to expand it. Most entries are switches you can enable or disable:
 
 ![Omnipod driver settings](../images/v4/Pumps/omnipod_settings.png)
-
-![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the settings groups are expanded by tapping them, and the RileyLink is paired with the **Pair RileyLink** button on the pump screen instead of in the settings.
-```
 
 *NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
 
@@ -789,13 +773,6 @@ Provides advanced settings to assist debugging.
 
 - **Show Suspend Delivery button in Omnipod tab:** Hide or display the **Suspend** button on the Omnipod pump screen.
 - **Show Pulse Log button in Pod Management menu:** This setting is still listed, but the current version of the pump screen has no **Pulse Log** button.
-
-  ![pulse_log](../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png)
-
-  ```{admonition} Older screenshot
-  :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen has no **Read pulse log** button.
-  ```
 
 - **Show RileyLink Stats button in Pod Management menu:** Hide or display the **RileyLink Stats** button on the Omnipod pump screen.
 - **\*DST/Time zone detection enabled:** Allows time zone changes to be automatically detected if the phone is used in an area where DST is observed.

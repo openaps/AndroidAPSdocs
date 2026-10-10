@@ -61,13 +61,6 @@ The following settings should be configured on the pump in order for AAPS to rem
 
   ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
 
-  ![Medtronic Settings](../images/Medtronic01a.png)
-
-  ```{admonition} Older screenshot
-  :class: note
-  The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the settings open from the **Settings** button on the **Medtronic** card and look different.
-  ```
-
   **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
 
   ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
@@ -125,13 +118,6 @@ At the bottom of the screen there are these buttons:
 - **RL Stats**: Shows RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status)).
 - **Wake and Tune Up** and **Reset RileyLink**: See [Actions](#medtronic-actions) below.
 - **Clear Bolus Block**: Only shown for a short time after a bolus, while **AAPS** waits for the pump to finish delivering it. Tapping it ends this wait.
-
-![MDT Tab](../images/Medtronic02.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen is opened from **Manage** > **Pump** instead of an **MDT** tab, and its buttons are at the bottom of the screen.
-```
 
 (MedtronicPump-pump-history)=
 ## Pump History

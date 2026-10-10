@@ -4,9 +4,9 @@ If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting i
 
 ## Smoothing data within AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are four options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponential smoothing
 

@@ -95,13 +95,6 @@ When you reach the **Pump** step, select **Dash**.
 
 ![The Pump step of the setup wizard](../images/setup-wizard/Wizard-Pump.png)
 
-![Selecting DASH in the setup wizard](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Pump** step of the **Setup Wizard** looks like the first screenshot, and the pump is listed as **Dash**.
-```
-
 If you are not sure yet, you can select **Virtual Pump** for now and select **Dash** later, after setting up **AAPS** (see Option 2).
 
 (omnipod-dash-option-2-config-builder)=
@@ -214,21 +207,11 @@ The buttons at the bottom of the pump screen change with the state of the pod. O
 
 - **Discard Pod:** Removes an unfinished pod from **AAPS**. Shown only when a pod activation stopped part-way. **AAPS** asks you to confirm. After discarding, **AAPS** can no longer communicate with that pod: remove it from your body.
 
-![Refresh button icon](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)	'Refresh' pod connectivity and status
-
-![Silence alerts button icon](../images/DASH_images/ack_alert_logo.png)	'Silence alerts'
-
-![Resume delivery button icon](../images/omnipod/ICONS/omnipod_overview_resume.png)	'Resume delivery'
-
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png)	'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
-
-![The POD MGMT button on the DASH tab](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
-
 ![The Pod Management menu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version, which used icon buttons and a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
+The screenshot above is from an earlier **AAPS** version, which had a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
 ```
 
 (omnipod-dash-activate-pod)=
@@ -237,13 +220,11 @@ The screenshots above are from an earlier **AAPS** version, which used icon butt
 
 1. Open the DASH pump screen (**Manage** > **Pump**) and press **Activate Pod**. The activation wizard opens.
 
-   ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
-
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
    ```
 
    If you have never activated a **Profile** in **AAPS** before, the wizard first shows the **Profile required** step: select the profile to apply on activation and continue.
@@ -454,12 +435,11 @@ It is useful to check the boluses, TBRs and basal commands that were sent to the
 
 1. Open the DASH pump screen and press **Pod History**.
 
-   ![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
    ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
    ```
 
 2. The **Pod History** screen opens with the **All** filter selected. It lists every command with its time and result, newest first, grouped by day. Use the filter buttons at the top (for example **Boluses** or **Basals**) to show only one type of command. Press the back arrow to return to the DASH pump screen.
@@ -492,13 +472,6 @@ There are two ways to open the Dash driver settings:
 The settings are grouped into four expandable sections: **Confirmation Beeps**, **Alerts**, **Notifications** and **Advanced Settings**. Tap a section to open it:
 
 ![The Dash settings](../images/v4/Pumps/dash_settings.png)
-
-![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Settings** (gear) icon is on the DASH pump screen, which you open with **Manage** > **Pump**.
-```
 
 Most settings are on/off switches.
 

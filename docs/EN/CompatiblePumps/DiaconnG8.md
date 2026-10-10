@@ -24,13 +24,6 @@ Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and
 
 ![The Diaconn G8 plugin selected in Configuration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-![image](../images/DiaconnG8/DiaconnG8_03.jpg)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the driver settings open from the **Settings** button on the **Diaconn G8** card instead of a cog wheel next to the plugin.
-```
-
 **Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
 
 **Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
@@ -88,15 +81,6 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 ![The menu with the Exit entry at the bottom](../images/v4/Configuration/configuration_menu.png)
 
-![image](../images/DiaconnG8/DiaconnG8_09.jpg)
-
-![image](../images/DiaconnG8/DiaconnG8_10.jpg)
-
-```{admonition} Older screenshot
-:class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Exit** is at the bottom of the main menu (☰) instead of the 3-dot menu.
-```
-
 - Start **AAPS** again and check the connection to the pump.
 
 ### Method 2) If the first method doesn't work, disconnect Bluetooth and then reconnect.
@@ -126,13 +110,6 @@ The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Exit
 - Or, on the pump screen (**Manage** > **Pump**), tap the settings icon (cog wheel) in the top-right corner.
 
 ![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
-
-![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the settings open from **Configuration** > **Pump** > **Diaconn G8** > **Settings** or from the cog wheel on the pump screen.
-```
 
 - **Bolus speed** sets how fast the pump delivers a bolus.
 - If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an "Insulin Change" event occurs.

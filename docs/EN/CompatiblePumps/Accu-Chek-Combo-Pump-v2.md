@@ -186,13 +186,6 @@ At the bottom, there are these buttons:
 - **Refresh**: Triggers an immediate pump status update. It is also used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)). You can only tap it when the driver is disconnected, suspended or in the error state.
 - **Unpair**: Unpairs the paired Combo from **AAPS** and Android, after you confirm **Do you really want to unpair the pump?**. When no pump is paired, this button is replaced by **Pairing**.
 
-![Screenshot of Accu-Chek Combo tab without pairing](../images/combo/combov2-tab-without-pairing.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen without a paired pump looks different and offers a **Pairing** button at the bottom.
-```
-
 (combov2-preferences)=
 ## Settings
 
@@ -204,13 +197,6 @@ These settings are available for the Combo driver (**Configuration** > **Pump** 
 4. **Enable verbose Combo logging**: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to **AAPS** logs and lessen their usefulness.
 
 Pairing and unpairing are done on the pump screen, not in the settings (see above).
-
-![Screenshot of Accu-Chek Combo preferences](../images/combo/combov2-preferences.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pair** and **Unpair** are no longer in the settings; use the pump screen.
-```
 
 (combov2-autodetections)=
 ## Autodetecting and automatically entering battery and reservoir changes

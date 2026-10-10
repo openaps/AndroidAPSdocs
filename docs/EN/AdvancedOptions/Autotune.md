@@ -31,13 +31,7 @@ Create an empty file named `enable_autotune` in the `extra` subfolder of your ph
 
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
-Autotune will then display in Config Builder after you restart AAPS.
-
-![Autotune plugin](../images/Autotune/Autotune_1.png)
-
-***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
-
-In **AAPS** 4, open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
+Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
 
 ![Autotune in Configuration > General](../images/v4/Configuration/configuration_general.png)
 
@@ -120,10 +114,6 @@ In **AAPS** 4, open the **menu** (☰), select **Configuration**, then the **Gen
 (autotune-plugin-settings)=
 
 ### Autotune plugin settings
-
-  ![Autotune default screen](../images/Autotune/Autotune_11.png)
-
-In **AAPS** 4 the same settings look like this:
 
   ![Autotune settings in AAPS 4](../images/preferences/settings_autotune.png)
 

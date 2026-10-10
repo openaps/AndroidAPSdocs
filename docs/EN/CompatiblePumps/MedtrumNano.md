@@ -61,13 +61,6 @@ If in doubt, you can also select **Virtual Pump** and select **Medtrum** later, 
 
 ![Setup Wizard pump step](../images/setup-wizard/Wizard-Pump.png)
 
-![Setup Wizard](../images/medtrum/SetupWizard.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Setup Wizard** pump step looks different, but you still select **Medtrum** there.
-```
-
 #### Option 2: The Configuration screen
 
 On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
@@ -90,13 +83,6 @@ Once it is selected, the **Medtrum** card shows two buttons, **Settings** and **
 Tap **Settings** on the **Medtrum** card in **Configuration** > **Pump**. You can also tap the gear icon in the top-right corner of the Medtrum pump screen. This opens the **Medtrum pump settings**:
 
 ![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
-
-![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is no **Serial Number** setting any more: **AAPS** finds your pump base with a Bluetooth scan when you activate a patch.
-```
 
 ```{note}
 There is no **Serial Number** setting any more. **AAPS** finds your pump base with a Bluetooth scan the first time you activate a patch (see [Step 3](#medtrum-activate-patch)), and remembers its serial number. To use a different pump base, see [Unpair](#medtrum-unpair).
@@ -174,13 +160,6 @@ Open **Settings** > **Pump**:
 
 ![Settings > Pump](../images/preferences/settings_pump.png)
 
-![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Settings** screens look different, but **BT Watchdog** is still under **Settings** > **Pump**.
-```
-
 **BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
 
 Enable this setting if you often have connection problems with your pump.
@@ -190,13 +169,6 @@ Enable this setting if you often have connection problems with your pump.
 Open **Settings** > **Local alerts**:
 
 ![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
-
-![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the **Settings** screens look different, but the pump unreachable alerts are still under **Settings** > **Local alerts**.
-```
 
 ##### Alert if pump is unreachable
 
@@ -333,13 +305,6 @@ The driver reads the activation status from the pump. If this works, the wizard 
 The Medtrum pump screen (**Manage → Pump**) shows the current status of the Medtrum patch. It also has buttons to change the patch, reset alarms and refresh the status. A banner at the top shows important states, for example **Patch not activated** or **Pump is suspended**.
 
 ![Medtrum pump screen](../images/v4/Pumps/medtrum_pump_screen.png)
-
-![Medtrum Overview](../images/medtrum/Overview.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen shows a status banner at the top and the rows listed below, some of which are new or renamed.
-```
 
 The screen can show these rows. Some rows only appear when they have a value.
 
