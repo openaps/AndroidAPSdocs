@@ -263,6 +263,11 @@ Tap **Next** to activate the patch.
 
 ![Activation complete](../images/medtrum/activation/ActivationComplete.png)
 
+```{admonition} Older screenshot
+:class: note
+Apart from **Find Pump**, the activation screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+```
+
 It shows how many units are left in the patch. Tap **OK** to return to the pump screen.
 
 ```{tip}
@@ -298,6 +303,11 @@ If a patch activation is interrupted, for example because the phone battery runs
 Tap **Next** to resume the activation. Tap **Discard** to reset the activation status, so you can activate a new patch.
 
 ![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshots in **Deactivate patch** and **Resume interrupted activation** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+```
 
 The driver reads the activation status from the pump. If this works, the wizard continues at the step where it stopped.
 

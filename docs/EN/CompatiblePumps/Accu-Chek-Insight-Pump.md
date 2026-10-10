@@ -80,6 +80,11 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 
    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
+   ```{admonition} Older screenshot
+   :class: note
+   Apart from the phone half of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+   ```
+
 * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
 
 Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.

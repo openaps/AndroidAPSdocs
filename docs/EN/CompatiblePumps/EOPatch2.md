@@ -94,6 +94,11 @@ When you hear the beep, press **Start pairing**.
 ![First Bluetooth pairing request](../images/EOPatch/Bild7.png)
 ![Second Bluetooth pairing request with the passkey](../images/EOPatch/Bild8.png)
 
+```{admonition} Older screenshot
+:class: note
+The two Bluetooth pairing screenshots are from an earlier **AAPS** version: the **AAPS** screen behind the Android pairing request looks different in **AAPS** 4.
+```
+
 ### Select insulin
 
 Select the insulin you filled the patch with and press **Next**. **AAPS** applies a profile switch with this insulin after activation.
@@ -133,6 +138,11 @@ For safe use, do not turn the needle action lever until the safety check is comp
 
 ![Attaching the Patch step with the Start safety check button](../images/EOPatch/Bild11.png)
 ![Safety check in progress](../images/EOPatch/Bild12.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshots from **Prepare for attaching the Patch** to **Safety check** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+```
 
 ### Inserting the needle
 
@@ -223,6 +233,11 @@ When you press **Confirm** on the notification, **AAPS** handles the alarm. For 
 ![EOPatch2 alarm](../images/EOPatch/Bild22.png)
 ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/Bild23.png)
 
+```{admonition} Older screenshot
+:class: note
+The alarm screenshots are from an earlier **AAPS** version and may look different in **AAPS** 4.
+```
+
 The different alarms are explained below.
 
 | Alarm | Explanation |
@@ -242,6 +257,11 @@ The different alarms are explained below.
 Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
 
 ![EOPatch2 warning shown on the Overview screen](../images/EOPatch/Bild24.png)
+
+```{admonition} Older screenshot
+:class: note
+This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning appears on the main screen, which looks different.
+```
 
 The different warnings are explained below.
 

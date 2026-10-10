@@ -110,9 +110,9 @@ Many people have asked if this method can be used with an already active sensor 
 
 - *Use foreground service* **on**
 
-- *Timer Duration* **5 min**
+- *Timer Duration* **5 minutes**
 
-  - Change to 1 sec if you are not getting results fast enough.
+  - Change to **1 sec** if you are not getting results fast enough (the screenshot below shows this setting).
 
 **Version 2: 93e5cac-2020.12.08 (latest version)**
 

@@ -143,7 +143,7 @@ One of the most important things when installing Android Studio is **be patient!
 
 ```{admonition} Different UI
 :class: warning
-Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Import note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
@@ -302,7 +302,7 @@ Now we will tell Android studio where to find Git, which you installed [earlier]
 * Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
 
 In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). 
-This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** 
+This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2) 
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
@@ -316,7 +316,7 @@ If the automatic setting is successful, your current version of **Git** will be 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either 
+If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either 
 * manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or 
 * click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Verify your settings with the **Test** button!
@@ -343,16 +343,16 @@ Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
 
 ![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Select "APK" instead of "Android App Bundle" and click "Next":
+Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
 
 ![APK instead of bundle](../images/Building-the-App/041_APK.png)
 
-In the next screen, make sure that "Module" is set to "AAPS.app" (1).
+In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
 :class: note
-If you want to create the apk for your watch, you now need to select AAPS.wear!
+If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
@@ -418,7 +418,7 @@ Now you can watch the building progress:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) and then on **locate** (2) at the very bottom of the screen to bring up the Notifications:
+Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 

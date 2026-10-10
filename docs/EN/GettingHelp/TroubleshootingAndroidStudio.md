@@ -55,7 +55,7 @@ Clone sources again as described in wiki and do not allow gradle update
 ```
 
 #### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
     ```
     git --version
     ```
@@ -166,12 +166,12 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select 'Download JDK'.
+3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select **Download JDK** (2).
 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change.
+4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change. Click **Download** (4).
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -217,7 +217,7 @@ If you experience the above error message, you need to download a correct JVM ve
 (gradle-resync)=
 ### Gradle Resync
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again".
+  If you can still see the message that the gradle sync failed, now select the link **Try again** (1).
   ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 

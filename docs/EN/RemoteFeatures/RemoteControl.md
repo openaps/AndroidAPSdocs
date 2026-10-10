@@ -25,7 +25,7 @@ See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-**AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
+**AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver the same screens and buttons to send commands remotely to **AAPS**:
 
 ![NSCLIENT_ 2024-05-17 134512](../images/remote_control_and_following/AAPSClient_main_view.png)
 
@@ -74,11 +74,11 @@ In **Configuration** > **Communication**, the user synchronizes their data with 
 
 The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by setting up NSClientV3 on each:
 
-- Enter your Nightscout URL under the NSClientV3 tab
+- Enter your **Nightscout URL** in the NSClientV3 **Settings**
 
-- Enter your NS access token under the ‘Config Build’ tab. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token)
+- Enter your **Nightscout access token** in the same settings. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token)
 
-If selecting Websockets (which is optional) ensure this is activated or deactivated for both __AAPS’__ and __AAPSClient’s__ phone. Activating Websockets in __AAPS__ and not within __AAPSClient__ (and vice versa) will only cause __AAPS__ to malfunction. By enabling websockets will allow for faster synchronization with Nightscout but may lead to more phone battery consumption.
+If you enable **Use websockets** (optional), ensure this is activated or deactivated for both __AAPS’__ and __AAPSClient’s__ phone. Activating Websockets in __AAPS__ and not within __AAPSClient__ (and vice versa) will only cause __AAPS__ to malfunction. By enabling websockets will allow for faster synchronization with Nightscout but may lead to more phone battery consumption.
 
 ![WB2_Screenshot 2024-05-17 140548](../images/d9a7dc5-b3ea-4bf3-9286-313f329b1966.png)
 
@@ -87,11 +87,11 @@ The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘con
 
 The user should also ensure that when carbs are entered in either __AAPS__ or __AAPSClient__ that the data is automatically logged in both ‘Treatments’ for both __AAPSClient__ and __AAPS__. Otherwise, this could indicate a malfunction within either the user’s __AAPS__ or __AAPSClient__ set up.
 
-### Troubleshooting 'NS access token' configuration issues
+### Troubleshooting 'Nightscout access token' configuration issues
 
-The precise 'NS access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not. 
+The precise 'Nightscout access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not. 
 
-If you are struggling with **AAPS** v3 to accept the 'NS access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'NS access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+If you are struggling with **AAPS** v3 to accept the 'Nightscout access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'Nightscout access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
 
 ### Features of AAPSClient include:
 

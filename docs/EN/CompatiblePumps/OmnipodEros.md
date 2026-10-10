@@ -63,13 +63,13 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 After installing a new version of AAPS, the **Setup Wizard** starts automatically. If you have already exported your settings from a previous installation, you can import them in the wizard. For new installations, continue below.
 
-Go through the [Setup Wizard](../SettingUpAaps/SetupWizard.md) until you reach the **Insulin pump** step, then select **Omnipod** (the description reads "Pump integration for Omnipod Eros").
+Go through the [Setup Wizard](../SettingUpAaps/SetupWizard.md) until you reach the **Pump** step, then select **Omnipod** (the description reads "Pump integration for Omnipod Eros").
 
 ![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 the pump is chosen in the **Insulin pump** step of the wizard, and the RileyLink is not paired in the wizard.
+The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 the pump is chosen in the **Pump** step of the wizard, and the RileyLink is not paired in the wizard.
 ```
 
 The Setup Wizard does not pair your RileyLink. After finishing the wizard, open the Omnipod pump screen and pair it as described in the [RileyLink Setup section](#OmnipodEros-rileylink-setup).
@@ -215,6 +215,11 @@ Before you can activate a pod, make sure your RileyLink is paired and **RileyLin
 
     > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png)
 
+    ```{admonition} Older screenshot
+    :class: note
+    The screenshots in steps 2 to 11 are from an earlier **AAPS** version and may look different in **AAPS** 4. The **Select Insulin** and **Site location** steps are not pictured.
+    ```
+
 12. You are returned to the Omnipod pump screen. The **Activate Pod** button is replaced by **Deactivate Pod**, because you cannot activate another pod without deactivating the active one first.
 
     The pump screen now shows information about your active pod, including the current basal rate, reservoir level, insulin delivered, pod errors and alerts. For more details, see the [Omnipod pump screen](#OmnipodEros-omnipod-pod-tab) section.
@@ -264,6 +269,11 @@ To deactivate a pod (either from expiration or from a pod failure):
 5. Press **Finish** to return to the Omnipod pump screen.
 
    > ![Deactivate_Pod_8](../images/omnipod/Deactivate_Pod_8.png)
+
+   ```{admonition} Older screenshot
+   :class: note
+   The screenshots in steps 2 to 5 are from an earlier **AAPS** version and may look different in **AAPS** 4.
+   ```
 
 6. On the Omnipod pump screen, check that **RileyLink Status** shows **Connected** and **Pod Status** shows **No Active Pod**.
 

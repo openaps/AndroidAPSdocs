@@ -44,7 +44,7 @@ activation and make a new initial calibration.
 
 ### Configure AAPS (for looping only)
 
--   In AAPS go to Config Builder > BG Source and check 'xDrip'
+-   In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **BG Source** and select **xDrip+**
 
 ![xDrip BG Source](../images/ConfBuild_BG_xDrip.png)
 
@@ -62,7 +62,7 @@ Only Libre 2 and 2+ **EU** models.
 - Follow [these instructions](./Libre2MinimalL00per.md) to setup xDrip as the original documentation links to an obsolete OOP2  version.
 - Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
 
--   Select xDrip in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Select xDrip+ in [Configuration > BG Source](#Config-Builder-bg-source).
 
 (libre2-value-smoothing-raw-values)=
 
@@ -107,7 +107,7 @@ then be replaced.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Select xDrip+ in [Configuration > BG Source](#Config-Builder-bg-source).
 
 ## 4. Use Juggluco
 

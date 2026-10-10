@@ -131,9 +131,9 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 (autotune-other-settings)=
 ### Other settings
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
+- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in [**Settings** > **Absorption settings** > **Advanced Settings**](../SettingUpAaps/Preferences.md) (**Autosens max** and **Autosens min**).
 
-  ![Autotune default screen](../images/Autotune/Autotune_12.png)
+  ![Autosens max and Autosens min in the advanced absorption settings](../images/preferences/settings_absorption_advanced.png)
 
 
 

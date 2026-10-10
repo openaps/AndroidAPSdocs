@@ -174,9 +174,9 @@ Pairing does more than relay one-off actions — it also keeps the **configurati
 
 The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
 
-In the example below the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*. The screenshot below was taken on the master, so it shows no mobile icons:
 
-![Configuration list on a client — the mobile icon marks plugins synced from the master](../images/v4/Configuration/configuration_plugins.png)
+![Configuration list on the master phone](../images/v4/Configuration/configuration_plugins.png)
 
 Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced and are set on each phone individually.
 

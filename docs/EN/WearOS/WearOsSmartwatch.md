@@ -252,15 +252,15 @@ Once paired you should be able to install the AAPS wear apk:
 
 ## Setting up the connection between the watch and the phone from **AAPS** 
 
-The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin in Config Builder:
+The final step is to configure **AAPS** on the phone to interact with **Wear.apk** on the watch. To do this, enable the Wear plugin:
 
 * Go to the **AAPS** app on the phone
 
-* Select > Config Builder in the left-hand Hamburger tab
+* Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
 
-* Tick for Wear selection under Synchronization
+* Tick the **Wear** box
 
-![Wear OS](../images/WearOS.png)
+![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
 
 To change to a different **AAPS**  watchface, press on the home screen of the 
 watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces. 
@@ -304,7 +304,7 @@ There are a number of watchfaces available in the standard build of the AAPS Wea
 
 ![Screenshot_20231123_124619_sysui](../images/036dc7c4-6672-46c8-b604-8810a16a2eb3.png)
 
-3. Now open AAPS on your phone and go to the Wear plugin (enable it in Config Builder (under Synchronization) if you don't see it in your current plugins along the top).
+3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
 
 ![Screenshot_20231123_090941_AAPS](../images/5df23fa3-791b-4c9a-999a-251391a82835.png)
 

@@ -18,15 +18,15 @@ Some available actions on the watchfaces are:
 
 ## Configuration
 
-Enable the Wear module in the [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
+Enable **Wear** in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
 
 Use the Wear Preferences to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+If you want to bolus etc. from the watch, open the Wear **Settings** and enable **Wear control**.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Wear settings with Wear control enabled](../images/preferences/settings_wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+With **Open plugin** on the **Wear** card you can
 
 * Resend all data.
   Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
@@ -220,9 +220,9 @@ Please note; that the tiles do not hold the actual state of the AAPS phone app a
 
 ## How to add Tiles
 
-Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
+Before using the tiles, you have to switch on **Wear control** in the Wear settings of **AAPS**.
 
-![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
+![Wear settings with Wear control enabled](../images/preferences/settings_wear.png)
 
 Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
 

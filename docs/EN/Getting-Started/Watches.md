@@ -70,7 +70,7 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 **AAPS** code contains an app extension that can be installed on [**Wear OS** smartwatches](https://wearos.google.com/#oem-carousel).
 
-![Wear OS](../images/WearOS.png)
+![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
 
 Verify your smartwatch satisfies **AAPS** [prerequisites](#maintenance-android-version-aaps-version).
 
@@ -104,7 +104,7 @@ Further details about the watchfaces, and day-to-day use, including how to make 
 
 ## Samsung Tizen
 
-**AAPS** supports sending data to the [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch).
+**AAPS** supports sending data to the [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch). To send data, enable **External Companion Apps** in **Configuration** > **Communication**.
 
 ```{warning}
 The **G-Watch app** for Samsung **Tizen** watches is no longer maintained, and neither is its later **Wear OS** port. Samsung has also moved its smartwatches from Tizen to Wear OS. This option is therefore only relevant for existing, older Samsung Tizen setups and is not recommended for a new installation.

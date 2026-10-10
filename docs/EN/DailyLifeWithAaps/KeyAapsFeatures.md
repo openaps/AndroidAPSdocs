@@ -6,7 +6,7 @@ The loop status is shown on the main screen with one of the icons below.
 
 **AAPS** offers several loop modes, such as Closed Loop (1), Low Glucose Suspend (LGS - 2) and Open Loop (3).
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode.
+See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode and on the other icons in the picture (4 to 6).
 
 ![Loop status](../images/Home2020_LoopStatus.png)
 
