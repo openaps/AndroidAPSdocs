@@ -63,6 +63,11 @@ The **Manage** sheet is where you manage and activate everything else: **[Profil
 
 All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
 
+```{admonition} Profile switch and profile percentage
+:class: note
+In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+```
+
 ---
 
 ## Duplicate BG data now switches the loop to Low Glucose Suspend

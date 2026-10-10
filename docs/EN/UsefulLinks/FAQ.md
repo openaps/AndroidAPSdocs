@@ -138,8 +138,8 @@ You have to rework your old sports habits from pre-loop times. If you simply con
 So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
 
 When looping you should try these steps:
-* Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
-* Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target.
+* Make a [profile switch](#ProfileSwitch-change-percentage) < 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
+* Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
 * If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
 
 Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
@@ -156,7 +156,7 @@ Drinking alcohol is risky in closed loop mode as the algorithm cannot predict th
 
 * Deactivating closed loop mode and treating the diabetes manually or
 * setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+* do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
 
 When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 

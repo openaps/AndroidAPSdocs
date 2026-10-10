@@ -166,6 +166,8 @@ The current profile is displayed next to the star icon.
 
 Tap the profile name to open the [Profile screen](#aaps-screens-profile), where you can view the profile details and [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
+To **change the profile percentage** (and its duration), tap the profile name, then tap the round **▶** (Activate) button at the bottom right of the Profile screen. In **AAPS** 3.x this screen opened with a long press on the profile name; in **AAPS** 4 a long press does nothing. Step by step: [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+
 ![Profile with an active profile switch](../images/Home2020_ProfileSwitch.png)
 
 1. Regular display with a standard profile activation.
@@ -574,7 +576,7 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 
 **AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
 
-* **Profile switch**: long-press the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**.
+* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
 * **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
 * **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
 * **History browser**, **Statistics** (TDD): in the **menu** (☰).
@@ -697,7 +699,7 @@ For more details see [APS section on config builder page](#Config-Builder-aps).
 
 ![Profile](../images/Screenshots_Profile.png)
 
-**Manage → Profile** (or a long press on the profile name on the main screen) opens the Profile screen: your profiles as a swipeable card carousel, with buttons to add, edit, clone, delete and **activate** a profile.
+**Manage → Profile** (or a tap on the profile name on the main screen) opens the Profile screen: your profiles as a swipeable card carousel, with buttons to add, edit, clone, delete and **activate** a profile.
 
 Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
 

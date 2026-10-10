@@ -91,7 +91,7 @@ For instance with the Combo pump, the pump history is read twice leading to dupl
 * This adjustment feature is available for **AAPS** version 2.2 onwards.
 * However, the fully closed Loop will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. 
   This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable fully closed Loop.
+* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable fully closed Loop: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
 * You will also receive a notification on **AAPS** main screen prior to DST change that the Fully Closed Loop has been disabled temporarily. This message will appear without beep, vibration or anything.**
 
 

@@ -108,8 +108,8 @@ Each of your **[Temp Target](TempTargets.md)** presets can be added as a button 
 
 Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
 
-- **Percentage** (50–200 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–600 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
+- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
 
 ![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
