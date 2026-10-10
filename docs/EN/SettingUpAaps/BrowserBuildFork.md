@@ -29,7 +29,7 @@ Scroll down the next screen and tap **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the main branch only" if you will want to build developers versions or customizations.*
+*Note: you can **unselect** "Copy the master branch only" if you will want to build developers versions or customizations.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 

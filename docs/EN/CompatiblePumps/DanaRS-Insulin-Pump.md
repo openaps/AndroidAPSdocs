@@ -41,11 +41,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
 * Tap the entry for your pump in the list.
 
-  ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
-
-  ```{note}
-  This picture shows the pairing list from an older AAPS version. The list on the pairing screen looks similar.
-  ```
+  ![The Pairing screen listing a Dana pump found by the scan](../images/DanaRS_i_Pairing.png)
 
 * **You have to confirm the pairing on the pump!** This works the same way as other Bluetooth pairings you may know (for example, smartphone and car audio).
 
@@ -57,7 +53,13 @@ _These instructions are for configuring the app and your pump if you have a Dana
    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
    * For Dana-i, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
 
-* When **Pairing successful!** is shown, you are back on the pump screen, which now shows your pump's status.
+* When **Pairing successful!** is shown, tap **Done**.
+
+  ![Pairing successful!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+
+  You are back on the pump screen, which now shows your pump's status.
+
+  ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 * In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).

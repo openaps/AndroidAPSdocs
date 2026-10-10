@@ -210,6 +210,9 @@ The first steps you see depend on your setup:
 
 1. **Profile required**: only if no profile is active. Select the profile to apply, then continue.
 2. **Find Pump**: only the first time, or after you used [Unpair](#medtrum-unpair). Connect the pump base to a fresh patch to power it on. **AAPS** scans for nearby Medtrum pump bases (their names start with `MT`). Tap yours in the list. **AAPS** saves its serial number, then goes straight to filling the patch.
+
+   ![Find Pump step scanning for a Medtrum pump base](../images/medtrum/activation/FindPump.png)
+
 3. **Activate Patch**: only when **AAPS** already knows your pump base. The screen says "No active patch. Press **Next** to begin the activation process." Make sure the pump base is **not** connected to the patch yet, then tap **Next**.
 
 ![Start Activation](../images/medtrum/activation/StartActivation.png)

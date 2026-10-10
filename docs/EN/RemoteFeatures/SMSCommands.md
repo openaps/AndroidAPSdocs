@@ -57,6 +57,13 @@ On your phone, go to **Apps > AAPS > Permissions**. Make sure **SMS** and **Phon
 
 ![image](../images/remote-control-08.png)
 
+```{admonition} "App was denied access to SMS"
+:class: tip
+Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
+```
+
+![App was denied access to SMS](../images/sms_permission_restricted.png)
+
 ### Date and time syncing
 
 The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
@@ -71,11 +78,11 @@ Some options may be greyed out, due to needing admin via a family account if the
 
 Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
 
-Go to the Preferences for SMS Communicator.
+Open the **SMS Communicator** settings.
 
-Enable “allow remote commands via SMS”:
+Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
 
-![image](../images/remote-control-11.png)
+![SMS Communicator settings](../images/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### Allowed phone numbers
@@ -88,13 +95,13 @@ Enter the caregiver phone number(s). Include the country code and exclude the fi
 
 Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
 
-If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select “OK”:
+If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
 
-![image](../images/remote-control-12.png)
+![Allowed phone numbers](../images/sms_allowed_numbers.png)
 
-#### Minutes between bolus commands
+#### Remote bolus min distance
 
-- You can define the minimum delay between two boluses issued via SMS.
+- You can define the minimum delay (in minutes) between two boluses issued via SMS.
 - For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
 #### Additional mandatory PIN at token end
@@ -107,14 +114,17 @@ PIN requirements are:
 * not the same digits (_i.e._ 1111 or 1224)
 * not sequential numbers (_i.e._ 1234)
 
-![image](../images/remote-control-13.png)
+![Additional mandatory PIN at token end](../images/sms_pin.png)
 
 #### Authenticator setup
 
-* Follow the step-by-step instructions on the screen.
+* Tap **Authenticator setup** and follow the step-by-step instructions on the screen.
 * Open your installed authenticator app on the _caregiver’s phone_, set up a new connection and
-* Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
-* Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
+* Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
+
+![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+
+* Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
 
 Example:
 * The token from the authenticator app is 457051
@@ -123,11 +133,11 @@ Example:
 
 If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
 
-![image](../images/remote-control-14.png)
+![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
 
 You should now be set up with SMS commands.
 
-Use button "Authenticator setup > Reset Authenticators" if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
+Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
 
 ## SMS commands usage
 

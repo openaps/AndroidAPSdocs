@@ -38,9 +38,9 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing 
 ```
 
 - On the pump screen, tap **Pair**. The **Diaconn Pump Pairing** screen opens and **AAPS** scans for nearby pumps.
-- Tap your insulin pump's model number once it appears in the list.
+- Tap your insulin pump's model number once it appears in the list (for example **DIACONN-65010**).
 
-![image](../images/DiaconnG8/DiaconnG8_05.jpg)
+![Diaconn Pump Pairing screen scanning for pumps](../images/DiaconnG8/DiaconnG8_05.png)
 
 - There are two options to check your model number:
 

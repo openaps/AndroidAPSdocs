@@ -20,21 +20,22 @@
 
 Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
 
-![Statistics](../images/Maintenance/statistics.png)
+To open them, open the **menu** (☰) and select **Statistics**.
+
+![Menu with Statistics](../images/Maintenance/statistics.png)
 
 ### Total Daily Dose
 
-**TDD** displays one week information on:
+The **Total Daily Dose** card shows one line per day for the previous days (up to one week) for which **AAPS** has insulin data, then their **Average**, then **Today** so far. Right after installing **AAPS**, only **Today** is shown. The columns are:
 
-- Σ: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- Bolus: the sum of bolus treatments and SMBs.
-- Basal: only basal.
-- Basal%: the proportion of basal insulin in the sum (**TDD**).
-- Carbs: declared carbs and eCarbs treatments.
+- **Basal**: only basal.
+- **Bolus**: the sum of bolus treatments and SMBs.
+- **TDD Total**: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
+- **Carbs**: declared carbs and eCarbs treatments.
 
-TDD section is calculated on the go when you display the page, and takes a few seconds to compute.
+The **TDD** section is calculated when you open the page and takes a few seconds to compute. Tap **Recalculate** to compute it again.
 
-![Statistics](../images/Maintenance/statistics2.png)
+![Statistics: Total Daily Dose and Time in Range](../images/Maintenance/statistics2.png)
 
 ### Time in Range
 
@@ -42,7 +43,7 @@ Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
 
 **TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
 
-Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below.
+Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
 
 **Discuss targets with your endo**
 
@@ -63,6 +64,15 @@ HbA1c: the estimate of the resulting glycated hemoglobin, based on the average o
 Activity monitor captures the time spent on each **AAPS** activity.
 
 ![Statistics](../images/Maintenance/statistics5.png)
+
+### TDD Cycle Pattern
+
+**TDD Cycle Pattern** overlays your daily insulin totals in 28-day cycles, to help you spot recurring patterns. Each cycle is drawn as a line (**Individual cycles**), together with their average.
+
+- **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
+- **Cycle offset**: moves the start of the cycle (0 to 27 days).
+
+At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**.
 
 ------
 

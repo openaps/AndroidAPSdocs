@@ -123,11 +123,13 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 * On the pump screen, tap **Pairing**. The **Pair with pump** screen opens. Follow the steps shown on screen, then tap **Start pairing**. When Android asks for permission to make the phone visible to other Bluetooth devices, tap **Allow**. Eventually, the Combo shows a 10-digit pairing PIN on its screen, and **AAPS** asks for it. Enter that PIN in the **10-digit PIN** field.
 
-  The pictures below are from an older **AAPS** version. The steps and texts are the same, but the screens look slightly different.
+  ![The Pair with pump screen with the Start pairing button](../images/combo/combov2-pairing-screen-1.png)
 
-  ![Screenshot of Combo Pairing UI 1](../images/combo/combov2-pairing-screen-1.png)
+  ![Android asking to make the phone visible to other Bluetooth devices](../images/combo/combov2-pairing-bt-visible-prompt.png)
 
-  ![Screenshot of Combo Pairing UI 2](../images/combo/combov2-pairing-screen-2.png)
+  ![Combo pairing in progress, scanning for the pump](../images/combo/combov2-pairing-screen-2.png)
+
+  The next pictures are from an older **AAPS** version. The steps and texts are the same, but the screens look slightly different.
 
   ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
 

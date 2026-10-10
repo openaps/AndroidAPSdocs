@@ -62,7 +62,9 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 **Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
 
-![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+
+![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 

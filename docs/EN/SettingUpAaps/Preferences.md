@@ -528,11 +528,15 @@ Android can silently take the directory permission away, for example after you r
 
 You can export your settings, logs and CSV data to a cloud service.
 
-1.  Select Cloud directory
-2. Select your cloud service
-3. Enable cloud export
+1. Open the **menu** (☰), select **Maintenance** and tap **Cloud Directory** (under **File management**).
 
-![Cloud directory](../images/preferences/maintenance_settings_cloud.png)
+   ![Cloud Directory in the Maintenance menu](../images/preferences/maintenance_settings_cloud.png)
+
+2. In **Select Storage Type**, choose your cloud service (**Google Drive**) and sign in to your account.
+
+   ![Select Storage Type dialog](../images/preferences/maintenance_cloud_select_storage.png)
+
+3. The **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** in the **Maintenance** menu then become available.
 
 You can then define what data will be uploaded to the cloud.
 

@@ -36,7 +36,7 @@ You might try to change settings for noise blocking in xDrip (Settings - Inter-A
 
 ### Negative Sensor Age
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
 
-This occurs if there is either a double "CGM Sensor Insert" [careportal entry](#aaps-screens-careportal) or a
+The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "CGM Sensor Insert" [careportal entry](#aaps-screens-careportal) or a
 sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.

@@ -17,14 +17,9 @@ To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter
 
 ![Enter carbs](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen, note the carbs in brackets at the COB field, which shows the carbs in the future:
+The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs in graph](../images/eCarbs_Graph.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the main screen looks different, but the COB display and the future-carb markers on the graph carry the same information.
-```
+![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
 
 ______________________________________________________________________
 
@@ -51,13 +46,25 @@ As mentioned above extended or multiwave boluses do not really work in a closed 
 
 Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
 
-That's why as of version 2.6 there is an option for an extended bolus for users of Dana and Insight pumps.
+That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
 
-- Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-- Bolus units, remaining and total time will be shown on the main screen.
-- On Insight pump extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
 
-![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
+![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+
+Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+
+![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+
+On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+
+While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+
+![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+
+The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+
+![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Why extended boluses won't work in a closed loop environment

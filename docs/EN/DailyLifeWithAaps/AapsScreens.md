@@ -92,7 +92,7 @@ Loop suspended — the remaining time is shown next to the icon:
 
 ![Main screen with the loop suspended](../images/main/main_screen_loop_suspended.png)
 
-Pump disconnected — the remaining time is shown next to the icon, and the treatment buttons disappear from the QuickLaunch toolbar:
+Pump disconnected — the remaining time is shown next to the icon. The treatment buttons stay in the QuickLaunch toolbar, so you can still record insulin given with a pen or carbs:
 
 ![Main screen with the pump disconnected](../images/main/main_screen_pump_disconnected.png)
 
@@ -244,9 +244,9 @@ If threshold critical is exceeded, values will be shown in red.
 
 Thresholds can be changed via the small **Settings** icon shown when the status row is **expanded** (chevron on the right) — see [Status lights](#Preferences-status-lights).
 
-The expanded status panel also offers the **Prime/Fill** and **Sensor Insert** buttons to record a pump site change, an insulin cartridge change, a sensor insertion or a pump battery change — these entries reset the corresponding ages.
+The expanded status panel also has a button at the end of some rows to record a change, which resets the corresponding age: **Add** on the **Sensor** row records a sensor insertion. If your pump supports it, **Prime/Fill** appears on the **Cannula** (or **Patch pump**) and **Insulin** rows, and **Add** on the **Pump battery** row.
 
-![Expanded status panel](../images/main/main_status_row_expanded.png)
+![Expanded status panel with Prime/Fill on the Cannula and Insulin rows and Add on the Sensor and Pump battery rows](../images/main/main_status_row_expanded.png)
 
 Depending on the pump you use, you may not have all of these icons.
 
@@ -418,9 +418,9 @@ Enable them on **AAPS** Wear app and give permission for health data.
 
 This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
 
-![Deviations and BGI](../images/Screenshots_DEV_BGI.png)
+![Deviations and BGI](../images/main/graph_dev_bgi.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is  a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is  a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are well above the BGI line: BG rises more than insulin activity alone explains (for example after carbs). At the time marked **2**, the Deviation bars are below zero (red): BG is lower than the algorithm expected.
 
 ### Section F - QuickLaunch toolbar
 
@@ -430,7 +430,7 @@ The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../D
 
 A typical configuration is shown above: **Insulin**, **Carbs** and the **Bolus wizard**.
 
-While the pump is **disconnected**, the treatment buttons are hidden from the toolbar; the same actions remain available in the [Treatments sheet](#aaps-screens-treatments-sheet) of the bottom navigation.
+While the pump is **disconnected**, the treatment buttons stay in the toolbar, for example to record insulin given with a pen (see [Insulin](#aaps-screens-buttons-insulin) below). The same actions are also available in the [Treatments sheet](#aaps-screens-treatments-sheet) of the bottom navigation.
 
 (aaps-screens-buttons-insulin)=
 #### Insulin
@@ -447,7 +447,7 @@ You can use the **+0.5 / +1.0 / +2.0** buttons to quickly increase the insulin q
 
 The insulin dialog can be used when the pump is suspended or disconnected as well, e.g. to record insulin injected with a pen. In this case, "**Bolus will be recorded only**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
 
-![Insulin dialog with pump disconnected](../images/Home2020_ButtonInsulin_PumpSuspended.png)
+![Insulin dialog with pump disconnected](../images/main/insulin_dialog_pump_disconnected.png)
 
 #### Carbs
 
@@ -595,18 +595,18 @@ In the **Manage** sheet, scroll down and press **Careportal** to show these entr
 
 **Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
 
-- You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
+- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
 - All Cannula change and Sensor change event since the past 45 days are available.
 - Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
 
 ![View Mode](../images/SiteRotation/ViewMode.png)
 
-- The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
 
 ![Settings](../images/SiteRotation/Settings.png)
 
-![Settings type](../images/SiteRotation/Type.png)
+![User profile for site rotation dialog](../images/SiteRotation/Type.png)
 
 *Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
 
@@ -614,18 +614,18 @@ In the **Manage** sheet, scroll down and press **Careportal** to show these entr
 
 Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
 
-- Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
-- You have to select Front or Back tab and then the Area
+- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
+- Front and back views are shown side by side: tap the area where you placed it
 - Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
 
 ![Edit Mode](../images/SiteRotation/EditMode.png)
 
-- You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
+- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
 
 ![Position](../images/SiteRotation/EditModeSub.png)
 
-- You can also adjust comments concerning selected site
-- After confirmation, the site is recorded
+- You can also add a **Note** about the selected site
+- Tap the **save** icon (upper right) to record the site
 
 Filtering can be done graphically on the image, or clicking a therapy event in the list
 To remove filtering, just click on the image outside any sites
@@ -647,7 +647,7 @@ Like most of these rules-of-thumb it is of limited real validity. Note: Your dia
 (AapsScreens-insulin-profile)=
 ## Insulin
 
-![Insulin screen](../images/Screenshot_insulin_profile.png)
+![Insulin screen](../images/manage/insulin_profile.png)
 
 **Manage → Insulin settings** shows and manages your insulin configurations. The active configuration with its **peak time** and **[DIA](#Config-Builder-insulin-dia)** is shown on a card; below it you can edit the nickname, peak and DIA, and see the activity curve.
 

@@ -195,13 +195,13 @@ A **CGM** with patchy data puts the user in a bad spot because, to be on the saf
 Furthermore, first rises after a meal are characterized by **low iob** present.
 With that in mind, an Automation(#1) for a dinner might look like this: 
 
-![8mg jump 130% ioby4](../images/fullClosedLoop02.png)
+![Automation #1: delta of 8 or more and IOB below 4 in the evening starts profile 130% for 12 min](../images/fullClosedLoop02.png)
 
 Automation #1
 
 If Conditions apply, **AAPS** would give 1 or 2 **SMBs** in the next 12 minutes, using a boosted **ISF** according to the set elevated **Profile Percentage** (in the example, a 30% boost of insulinReq). As long as these Conditions apply, the **Automation**  rule extends by another 12 minutes. A low carb meal might have slower **BG** rise characteristics. It would benefit from another Automation (#2) that kicks in at lower delta, and gives a weaker insulin boost.
 
-![>=5mg jump 115%, iob<5.5](../images/fullClosedLoop03.png)
+![Automation #2: delta of 5 or more and IOB below 5.5 starts profile 115% for 12 min](../images/fullClosedLoop03.png)
 
 The same **Automation** probably will kick in also in higher carb meals, once the steep rise as defined in Automation#1 is over.
 
@@ -226,7 +226,7 @@ For exceptional meals, or to lower it if sports follow, the **iob** threshold ca
 
 Automation(#3),”iobTH reached => **SMBs** off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive **SMB** boosting.
 
-![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop04.png)
+![Automation #3: IOB of 5.5 or more with no temp target running starts a temp target of 111 mg/dL](../images/fullClosedLoop04.png)
 
 Automation #3
 
@@ -253,11 +253,11 @@ If your breakfast substantially deviates in carb content from your average dinne
 
 In case, after a “rich” meal, a long-lasting stagnation with **high BG** value is seen, **Automation** #4 (below), “post-meal High”, helps deal with fatty acid resistance: After multi-course meals, large greasy pizza, raclette evening, the glucose curve can form two humps or, very often, an elongated high plateau.
 
-![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop05.png)
+![Automation #4: glucose above 160 mg/dL and Autosens below 120% starts profile 120% for 15 min](../images/fullClosedLoop05.png)
 
 Automation #4
 
-![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop06.png)
+![Automation #5: profile at 120% and glucose below 150 mg/dL switches back to the normal profile](../images/fullClosedLoop06.png)
 
 Automation #5
 

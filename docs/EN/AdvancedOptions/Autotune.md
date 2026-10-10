@@ -33,15 +33,13 @@ Create an empty file named `enable_autotune` in the `extra` subfolder of your ph
 
 Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
 
-![Autotune in Configuration > General](../images/v4/Configuration/configuration_general.png)
-
-**Open plugin** shows the Autotune screen:
-
-![Autotune screen in AAPS 4](../images/screens/autotune_plugin.png)
+![Autotune ticked in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
 
 ## Autotune user interface
 
-![Autotune default screen](../images/Autotune/Autotune_1b.png)
+Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
+
+![Autotune screen with the profile, the number of days of data and a warning about the selected profile](../images/Autotune/Autotune_1b.png)
 
 - You can select in the Profile dropdown menu the input profile you want to tune (by default your current active profile is selected)
   - Note: each time you select a new profile, previous results will be removed and the **Number of days of data** will be set to its default value
@@ -159,7 +157,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
 - If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
   - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
+  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
 
   ![Autotune default screen](../images/Autotune/Autotune_14b.png)
 
@@ -190,11 +188,11 @@ Note: for more information on how to set an automation rule, see [here](../Daily
 
   ![Autotune default screen](../images/Autotune/Autotune_17.png)
 
-- Then you can select "Run Autotune" Action in the list
+- Then you can select the **Autotune profile** action (in the **Loop & insulin** group)
 
   ![Autotune default screen](../images/Autotune/Autotune_18.png)
 
-- You can then select Autotune Action to adjust parameters for your run. Default parameters are "Active Profile", default Tune days value defined in Autotune Plugin preferences, and All days are selected.
+- You can then adjust the parameters of the action for your run. In a new action, **Select profile to tune** shows the first profile of your local profile list, the **Tune days** field is empty and all days are selected. Choose the profile to tune and enter the number of **Tune days** (1 to 30).
 
   ![Autotune default screen](../images/Autotune/Autotune_19b.png)
 
@@ -202,7 +200,7 @@ Note: for more information on how to set an automation rule, see [here](../Daily
 
 Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
 
-- See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
+- See below an example of rule that runs every working day (Monday to Friday) at 04:00 and tunes the profile "Normal" with 14 **Tune days**, working days only (so only 10 days are included in the Autotune calculation).
 
   ![Autotune default screen](../images/Autotune/Autotune_20b.png)
 

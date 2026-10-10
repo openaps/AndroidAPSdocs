@@ -66,16 +66,27 @@ The wizard has these steps. Press **Next** to move on, or **Cancel** to leave th
    ![Assemble pump step](../images/Equil/activate2.png)
 
 1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+
+   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
 1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
 
    ![Pair device step with the pairing password](../images/Equil/activate3.png)
 
 1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
 1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+
+   ![Prime / Fill step](../images/Equil/prime_fill.png)
 1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
 1. **Attach pump**: attach the pump to its base plate.
+
+   ![Attach pump step](../images/Equil/attach_pump.png)
 1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+
+   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+
 1. **Confirm**: put the pump on your body and press **Finish**.
+
+   ![Confirm step with the Finish button](../images/Equil/confirm.png)
 
 ```{warning}
 If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).

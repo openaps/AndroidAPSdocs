@@ -27,7 +27,7 @@ When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are no
 
 **SMB/AMA** - an example of a user's **Profile** with static **ISF** as set by the user and utilised by **SMB** and **AMA**.
 
-![Static ISF](../images/DynamicISF/DynISF1.png)
+![Static ISF](../images/DynamicISF/profile_viewer_isf.png)
 
 **Dynamic ISF** - an example of a user's **ISF** subject to change as determined by **Dynamic ISF**.
 
