@@ -32,38 +32,7 @@ Dexcom BYODA is now a very old version of the app and cannot be updated. Not ava
 -   Enter sensor code in patched app
 -   After short time BYODA should pick-up transmitter signal
 
-## 3. Patched Dexcom G7 App (DiaKEM)
-
-```{admonition} No new users
-:class: warning
-Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
-Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
-```
-
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+ or Stelo.**
-
-### Install a new patched (!) G7 app and start the sensor
-
-
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app, as this app cannot receive G7 data at the moment.
-
-- Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
-
-- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
-
-- Enter sensor code in the patched app.
-
-- Follow the general recommendations for CGM hygiene and sensor placement found [here](../CompatibleCgms/GeneralCGMRecommendation.md).
-
-- After the warm-up phase, the values are displayed as usual in the G7 app.
-
-### Configuration in AAPS
-
-- Select 'BYODA' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source) - even if it is not the BYODA app!
-
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
-
-## 4. xDrip (companion mode) 
+## 3. xDrip (companion mode) 
 
 -   Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip) 
 - As data source in xDrip "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
@@ -71,7 +40,7 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 -   Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
 
-## 5. Juggluco (G7 and ONE+)
+## 4. Juggluco (G7 and ONE+)
 
 Version 9.0+ required
 
