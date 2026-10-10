@@ -71,20 +71,20 @@ Open **Manage** in the bottom navigation of the main screen and select **Automat
 
 To set up an **Automation**, press the **+** button on the Automation screen to create a ‘rule’:
 
-![Automation create](../images/automation_create.png)
+![Automation create](../images/Automations/automation_create.png)
 
 * give your ‘rule’ a title (Task name);
 * press "**EDIT**" under **Condition**. On the **Condition** screen, choose how the triggers are combined (**And**, **Or**, **Exclusive or**) and press "**Add trigger**":
 
-![Automation condition](../images/automation/automation_trigger_editor.png)
+![Automation condition](../images/Automations/automation_trigger_editor.png)
 
 * add at least one trigger:
 
-![Automation triggers](../images/automation_triggers.png)
+![Automation triggers](../images/Automations/automation_triggers.png)
 
 * press "**ADD**" under **Action** and select one action:
 
-![Automation actions](../images/automation_actions.png)
+![Automation actions](../images/Automations/automation_actions.png)
 
 * save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
 
@@ -143,11 +143,11 @@ It is important to carefully consider the exact intention of your **Automation**
 (automations-automation-triggers)=
 ## Automation Triggers
 
-![Automation Triggers](../images/automation_triggers.png)
+![Automation Triggers](../images/Automations/automation_triggers.png)
 
 Scroll down to see the rest of the list:
 
-![Automation Triggers, continued](../images/automation/automation_trigger_picker_2.png)
+![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
 
 There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
 
@@ -197,11 +197,11 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 (automations-automation-action)=
 ## Action
 
-![Automation Actions](../images/automation_actions.png)
+![Automation Actions](../images/Automations/automation_actions.png)
 
 Scroll down to see the rest of the list:
 
-![Automation Actions, continued](../images/automation/automation_action_picker_2.png)
+![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
 
 **Actions:** start **Temp Target**
 
