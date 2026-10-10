@@ -39,11 +39,11 @@ The example below illustrates how an **Automation** can enable steps to be elimi
 
 User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
 
-![Alt text](../images/automation_2024-02-12_20-54-50.png)
+![Alt text](../images/Automations/automation_concept_manual.png)
 
 The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
-![Alt text](../images/automation_2024-02-12_20-54-49.png)
+![Alt text](../images/Automations/automation_concept_automated.png)
 
 ## Key considerations before starting with Automations
 
@@ -88,16 +88,16 @@ To set up an **Automation**, press the **+** button on the Automation screen to 
 
 * save the rule with the **Save** button, and make sure the checkbox left of the rule name is ‘ticked’ to activate the **Automation**:
 
-![Automation activated](../images/automation_2024-10-26_17-48-05.png)
+![Automation activated](../images/Automations/automation_rule_activated.png)
 
 To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** as either activated (‘ticked') or deactivated (‘unticked’):
 
-![Alt text](../images/automation_2024-02-12_20-56-08.png)
+![Alt text](../images/Automations/automation_rule_activated_deactivated.png)
 
 
 When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
 
-![Alt text](../images/automation_2024-02-12_20-55-05.png)
+![Alt text](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
@@ -128,7 +128,7 @@ Please be careful when selecting a negative value in **Automation**
 
 Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
 
-![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
+![Alt text](../images/Automations/automation_comparison_operators.png)
 
 **Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/L" (or "-2mg/dL") will:
 
@@ -233,24 +233,24 @@ none
 
 Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
 
-![Alt text](../images/automation_2024-02-12_20-57-07.png)
+![Alt text](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
 ## The order of the **Automations** in the list matters 
  **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
-![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
+![Alt text](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
+To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Reorder the  **Automations** by moving the rules up or down.
 
-![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
+![Alt text](../images/Automations/automation_rule_reorder.png)
 
 ## How to delete Automation rules
 
 To delete an **Automation** rule click on the trash icon.
 
-![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
+![Alt text](../images/Automations/automation_rule_delete.png)
 
 ## Examples of Automations
 
@@ -260,23 +260,23 @@ Below are examples of **Automations**. Further discussion on **Automations** and
 
 This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
 
-![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
+![Alt text](../images/Automations/automation_example_low_glucose_rule.png)
 
 ### Lunch Time Temp Target (with ‘Location’)
 
-![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
+![Alt text](../images/Automations/automation_example_lunch_rule.png)
 
 This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will not activate.
 
 This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive BG to 90 mg/dL (or 5 mmol/L) in preparation for lunch.
 
-The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
+The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
 
-![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
+![Alt text](../images/Automations/automation_example_lunch_location_condition.png)
 
 Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location. 
 
-The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
+The **Automation** will not be triggered on any other time at this location or at this time outside the 50-metre radius around the chosen position.
 
 ### Wi-Fi SSID Location Automation
 
@@ -292,7 +292,11 @@ and while being connected to a home Wi-Fi network (3).
 It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4).
 One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
 
-![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
+![Alt text](../images/Automations/automation_example_wifi_rule.png)
+
+Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
+
+![Wi-Fi rule action](../images/Automations/automation_example_wifi_action.png)
 
 Here is the screenshot detailing the **Automation** triggers:
 
@@ -300,7 +304,7 @@ Here is the screenshot detailing the **Automation** triggers:
 1) Recurring time = M,T,W,T,F At 5:30am  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
-![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
+![Alt text](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
@@ -313,7 +317,7 @@ Screenshots detailing the Automation triggers:
 1) Condition: Recurring time = M,T,W,T,F At 8:00am
 1) Action: Settings Export (For "Text in treatments" enter "Daily")
 
-![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
+![Scheduled exports](../images/Automations/automation_settings_export_daily.png)
 
 Note: Export execution will be logged on Careportal
 
@@ -324,7 +328,7 @@ Screenshots detailing the Automation triggers:
 1) Condition: Pod Activation
 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
 
-![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
+![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
 
 Note: Export execution will be logged on Careportal.
 Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
@@ -353,7 +357,7 @@ The **Automation** will:
 * change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
 * stop **Temp Target** (if any)
 
-![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
+![Alt text](../images/Automations/automation_example_log.png)
 
 ```{admonition} Note
 :class: note
@@ -366,7 +370,7 @@ The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the l
 
 Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
 
-![Alt text](../images/automation_2024-02-12_20-56-08.png)
+![Alt text](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Problem: __My automations are being triggered in the wrong order.__
 
