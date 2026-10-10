@@ -1,4 +1,4 @@
-# AAPS Builder build workflow, version 1
+# AAPS Builder build workflow, version 2
 #
 # Builds the AAPS app from the official AndroidAPS source (github.com/nightscout/AndroidAPS) in your
 # own private repository, signed with your own key (secret KEYSTORE_SET).
@@ -11,13 +11,11 @@
 # Based on AAPS Builder by the AAPS Builder authors (github.com/dio99/aaps-builder), AGPL-3.0.
 # Modified for the AAPS documentation: see aaps-builder/README.md in github.com/openaps/AndroidAPSdocs.
 #
-# Once a week (Monday night) it checks whether a new AAPS version was released and builds it.
-# To turn that off: Settings -> Secrets and variables -> Actions -> Variables ->
-# New repository variable: AUTO_BUILD = false
-# To auto-build another variant than fullRelease, add a variable AUTO_VARIANT (e.g. aapsclientRelease).
+# A build runs only when you start it yourself (Actions -> Build AAPS -> Run workflow) and choose the
+# version and variant. There are no scheduled or automatic builds.
 
 name: Build AAPS
-run-name: ${{ github.event_name == 'schedule' && 'Weekly check for a new AAPS version' || format('Build AAPS {0} ({1})', inputs.version, inputs.variant) }}
+run-name: ${{ format('Build AAPS {0} ({1})', inputs.version, inputs.variant) }}
 
 on:
   workflow_dispatch:
@@ -38,27 +36,22 @@ on:
           - aapsclient2Release
           - pumpcontrolRelease
           - fullDebug
-  schedule:
-    - cron: '23 3 * * 1'   # Mondays 03:23 UTC
 
 permissions:
   contents: read
 
 env:
   DOCS_PAGE: https://androidaps.readthedocs.io/en/latest/SettingUpAaps/BrowserBuildAapsBuilder.html
-  IN_VERSION: ${{ inputs.version || 'latest' }}
-  IN_VARIANT: ${{ inputs.variant || vars.AUTO_VARIANT || 'fullRelease' }}
-  AUTO: ${{ github.event_name == 'schedule' }}
+  IN_VERSION: ${{ inputs.version }}
+  IN_VARIANT: ${{ inputs.variant }}
 
 jobs:
   check:
     name: Check
-    if: ${{ github.event_name != 'schedule' || vars.AUTO_BUILD != 'false' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
     outputs:
-      build: ${{ steps.check.outputs.build }}
       version: ${{ steps.check.outputs.version }}
       private: ${{ steps.check.outputs.private }}
     env:
@@ -70,11 +63,7 @@ jobs:
       - name: Check repository, version and keystore
         id: check
         run: |
-          # On a scheduled run, problems are not errors: just skip quietly.
-          stop() {
-            if [ "$AUTO" = true ]; then echo "ℹ️ $1 Skipping."; echo "build=false" >> "$GITHUB_OUTPUT"; exit 0; fi
-            echo "::error::$1"; exit 1
-          }
+          stop() { echo "::error::$1"; exit 1; }
           api() { curl -s -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" -w '\n%{http_code}' "https://api.github.com/repos/$GITHUB_REPOSITORY$1"; }
 
           REPO_JSON=$(api "" | head -n -1)
@@ -97,25 +86,13 @@ jobs:
             || stop "Version $VERSION does not exist in nightscout/AndroidAPS."
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
-          if [ "$AUTO" = true ]; then
-            CODE=$(api "/git/ref/tags/built/$VERSION-$IN_VARIANT" | tail -1)
-            if [ "$CODE" = 200 ]; then
-              echo "✅ AAPS $VERSION ($IN_VARIANT) is already built. Nothing to do."
-              echo "build=false" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-            echo "🆕 New AAPS version $VERSION found, building."
-          fi
-          echo "build=true" >> "$GITHUB_OUTPUT"
-
   build:
     name: Build AAPS ${{ needs.check.outputs.version }}
     needs: check
-    if: ${{ needs.check.outputs.build == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 150
     permissions:
-      contents: write   # to remember which version was built (tag built/<version>-<variant>)
+      contents: read
     env:
       UPSTREAM: https://github.com/nightscout/AndroidAPS.git
       HAS_GDRIVE: ${{ secrets.GDRIVE_OAUTH2 != '' }}
@@ -314,18 +291,3 @@ jobs:
             echo "✅ $NAME → Google Drive: AAPS/$VERSION"
           done
           echo "📁 APKs uploaded to Google Drive folder **AAPS/$VERSION**" >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Remember that this version is built
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          TAG="built/$VERSION-$VARIANT"
-          CODE=$(curl -s -o /dev/null -w '%{http_code}' -X POST \
-            -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
-            "https://api.github.com/repos/$GITHUB_REPOSITORY/git/refs" \
-            -d "{\"ref\":\"refs/tags/$TAG\",\"sha\":\"$GITHUB_SHA\"}")
-          case "$CODE" in
-            201) echo "🏷️ Marked $TAG" ;;
-            422) echo "🏷️ $TAG already marked" ;;
-            *) echo "::warning::Could not mark $TAG ($CODE). The weekly check may build this version again." ;;
-          esac

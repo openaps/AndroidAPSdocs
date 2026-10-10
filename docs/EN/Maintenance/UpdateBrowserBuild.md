@@ -1,7 +1,7 @@
 # Update with a browser
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: new AAPS versions are built automatically every week. See [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
 ```
 
 ## Build yourself instead of download

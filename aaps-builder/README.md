@@ -31,7 +31,7 @@ everything that can run there must come from an approved AAPS source:
   - clones the AAPS source from `github.com/nightscout/AndroidAPS` (release tags),
   - uses GitHub's own actions `actions/setup-java@v5` and `actions/upload-artifact@v7`
     (tags, like nightscout's own `aaps-ci.yml`),
-  - talks to `api.github.com` (its own repository: visibility check, `built/…` tags)
+  - talks to `api.github.com` (read-only: its own repository's visibility check)
     and, only with the optional `GDRIVE_OAUTH2` secret, to Google
     (`oauth2.googleapis.com`, `www.googleapis.com`) — the same endpoints as
     nightscout's `aaps-ci.yml`.
@@ -41,6 +41,14 @@ everything that can run there must come from an approved AAPS source:
   repository for updates. Workflow changes are announced in the docs
   (Docs updates page and the AAPS Builder page); users replace the file
   themselves with the newer version from the setup page.
+- **No automatic builds** (regulatory requirement): the only trigger is
+  `workflow_dispatch`. Every build is started by the user, with the version and
+  variant they choose. No `schedule`, no repository variables that change what
+  is built, and the workflow token is read-only (`contents: read` everywhere):
+  the build cannot write anything to the user's repository.
+
+Review check before every change, in addition to the host list: the `on:`
+block contains only `workflow_dispatch`, and no `permissions:` line says `write`.
 
 Review check before every change:
 
@@ -79,15 +87,19 @@ notices kept in the files):
    variables, English-only texts, error messages point to the docs page.
 3. Setup page: English only (no language switch), seven steps, texts in the
    HTML, forge served locally, Content-Security-Policy, links to the docs
-   relative so they follow the version and language being read, "Desktop site"
-   hint for GitHub's mobile build page.
+   relative so they follow the version and language being read, a scrolling
+   hint for GitHub's mobile build page (swipe on the text, not on the job diagram).
+4. Workflow version 2: removed the weekly `schedule` trigger, the `AUTO_BUILD`
+   and `AUTO_VARIANT` repository variables, the quiet skipping of scheduled runs
+   and the `built/<version>-<variant>` tags that remembered scheduled builds.
+   Permissions reduced to `contents: read`.
 
 ## Checksums (of the committed files, LF line endings)
 
 ```
-SHA-256(aaps-builder.html)         = bd508a5c3418a4283d55818df2b43273673bc5d3493f6a70e49c97d12c2a981b
+SHA-256(aaps-builder.html)         = 016a4d6231168e1ce69f15ec5558171371f8474510601feb4db7768aa579e9fa
 SHA-256(aaps-builder.app.js)       = 000b7fbfc31e0c4ecdacafb4059e164f1ba33f41371de4ec832a720c4bb2a55f
-SHA-256(aaps-builder-build.yml)    = d910dc80934e18d819b4541f449eaf7bf0342c5b73f1b5f568063aaae6c1f7f8
+SHA-256(aaps-builder-build.yml)    = 3d96ef0b329b4d08c20bea62c9b5a38d7920259628bddf5ed0d8b18226b1c83e
 SHA-256(aaps-builder.forge.min.js) = dc67fd132427ad96c9666c844b39565413c40ddb1f2d063c53512fbf6d387dfd
 ```
 
@@ -106,8 +118,8 @@ endings and a different hash. Check the committed content instead:
    line (`# AAPS Builder build workflow, version N`). The setup page shows this
    number when the user copies the workflow.
 2. Run the review check above.
-3. Update the docs page if steps, timings, artifacts, variants, variables
-   (`AUTO_BUILD`, `AUTO_VARIANT`) or error messages changed, and add an entry to
+3. Update the docs page if steps, timings, artifacts, variants or error
+   messages changed, and add an entry to
    `docs/EN/Maintenance/DocumentationUpdate.md` telling users to replace their
    workflow file.
 4. Test with a private test repository: copy the workflow from a local build of

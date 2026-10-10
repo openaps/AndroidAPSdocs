@@ -20,7 +20,7 @@ Pick the method that matches the device you build from:
 
 ### On an Android phone: AAPS Builder (recommended)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and new AAPS versions are built automatically every week. You download the app directly from GitHub. Google Drive is optional.
+A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
 
 This also works from a computer browser.
 
