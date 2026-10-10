@@ -398,7 +398,14 @@ This feature is useful for verifying boluses, TBRs, basal changes that were give
 
 2. The **Pod History** screen lists all pod actions and their results, newest first, grouped by day. By default **All** is selected. Tap one of the filter buttons at the top to show only one category. Use the back arrow at the top left to return to the Omnipod pump screen.
 
-   > ![Pod_History_3](../images/omnipod/Pod_History_3.png) ![Pod_History_4](../images/omnipod/Pod_History_4.png)
+   > ![Pod History screen with the filter buttons](../images/omnipod/Pod_History_3.png)
+
+   > ![Pod_History_4](../images/omnipod/Pod_History_4.png)
+
+   ```{admonition} Older screenshot
+   :class: note
+   The second screenshot is from an earlier **AAPS** version and may look different in **AAPS** 4.
+   ```
 
 ### View RileyLink Settings and History
 

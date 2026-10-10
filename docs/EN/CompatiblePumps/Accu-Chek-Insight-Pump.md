@@ -59,8 +59,8 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 (accu-chek-insight-pairing)=
 ### Pairing
 
-* On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (below left).
-* On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (below right) with the serial number of the pump.
+* On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
+* On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
 
    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
 
@@ -82,7 +82,7 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 
    ```{admonition} Older screenshot
    :class: note
-   Apart from the phone half of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+   Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
    ```
 
 * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.

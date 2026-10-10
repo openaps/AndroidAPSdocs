@@ -292,11 +292,11 @@ and while being connected to a home Wi-Fi network (3).
 It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4).
 One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
 
-![Alt text](../images/Automations/automation_example_wifi_rule.png)
+![Wi-Fi rule: task name (1), weekday time condition (2) and Wi-Fi SSID condition (3)](../images/Automations/automation_example_wifi_rule.png)
 
 Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
 
-![Wi-Fi rule action](../images/Automations/automation_example_wifi_action.png)
+![Wi-Fi rule action: Start temp target of 75 mg/dL for 30 minutes (4)](../images/Automations/automation_example_wifi_action.png)
 
 Here is the screenshot detailing the **Automation** triggers:
 
