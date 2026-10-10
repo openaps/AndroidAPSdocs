@@ -522,7 +522,29 @@ The icon row below the header shows which inputs enter the calculation (BG, tren
 (AapsScreens-section-j)=
 ### Section J - Entry fields
 
-In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for; the meal-type buttons (bread, cake, pizza) pre-fill typical amounts. **AAPS** only works with grams: if you count in bread units or exchanges (_e.g._ DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
+In the **Carbs** field, you add your estimate of the amount of carbs, **in grams**, that you want to bolus for; the **+** buttons below it add carbs quickly. **AAPS** only works with grams: if you count in bread units or exchanges (_e.g._ DAFNE "CHO" exchanges), convert them to grams before entering them. See the [note about bread units](#your-aaps-profile-insulin-to-carbs-ratio) on the profile page.
+
+(AapsScreens-carbs-type)=
+#### Carbs type: bread, cake or pizza
+
+Below the **Carbs** field, three buttons let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+
+| Type | Typical foods (as listed in the app) | Carbs now, used for the bolus | eCarbs added |
+|---|---|---|---|
+| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables | 100 % | None |
+| **Cake** | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 % | 20 %, starting 60 minutes later, spread over 2 hours |
+| **Pizza** | Lasagna, pizza, hamburgers, fries, baked potatoes, chips | 80 % | 35 %, starting 60 minutes later, spread over 3 hours |
+
+**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+
+Good to know:
+* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
+* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
+* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
+* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
+* Grams are rounded down to whole numbers.
+* The percentages, delays and durations are fixed; they can't be changed in the settings.
+* The choice is not remembered: the wizard opens on **Bread** every time.
 
 The **Correction** field is if you want to modify the end dosage for some reason.
 
