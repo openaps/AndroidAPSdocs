@@ -75,7 +75,7 @@ The client's home screen mirrors the followed loop:
 - **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
 - The **loop status** shown is the **master's** (a client has no loop of its own).
 - The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar only offers **Treatments** and **Manage** — there are no pump or objectives tabs.
+- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
 
 ## Treatments and actions
 

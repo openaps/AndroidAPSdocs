@@ -85,7 +85,7 @@ Pairing and synchronization are two different things:
 
 On the master, open the **Manage** screen and choose **Authorized clients**.
 
-Turn on **Allow client control**. This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later.
+Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. The same switch is also available in the master's **NSClientV3** settings, under **Remote control**.
 
 ```{admonition} Websockets are required on the master
 :class: important
@@ -94,7 +94,11 @@ Client commands only reach the master through the **websockets** connection of *
 
 ![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button to add a client. Enter a **device name** (so you can recognize it in the list); the master then displays a short **pairing PIN**. This PIN is **one-time** and **expires after about two minutes**.
+Tap the **+** button (bottom right) to add a client and enter a **device name**, so you can recognize it in the list:
+
+![New client dialog on the master: enter a name for the client device](../images/v4/ClientMaster/new_client_master.png)
+
+Tap **OK**: the master then displays a short **pairing PIN**. This PIN is **one-time** and **expires after about two minutes**.
 
 ![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
 
@@ -106,7 +110,7 @@ The PIN protects the pairing secret that is exchanged through Nightscout. Share 
 (client_master_client_setup)=
 ### 2. On the client — pair with the master
 
-On the client, open **Manage → Pair with master**, then **enter the PIN** shown on the master. The client uses the PIN to securely retrieve the pairing offer through Nightscout and complete pairing.
+On the client, open **Manage → Pair with master**, **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](AapsClient.md#pairing-with-the-master) for a screenshot).
 
 ![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
@@ -174,15 +178,17 @@ Pairing does more than relay one-off actions — it also keeps the **configurati
 
 The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*. The screenshot below was taken on the master, so it shows no mobile icons:
+On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
 
-![Configuration list on the master phone](../images/v4/Configuration/configuration_plugins.png)
+![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
 
 Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced and are set on each phone individually.
 
 ### Profiles
 
 Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+
+The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
 
 On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
 
@@ -238,6 +244,7 @@ For Nightscout / synchronization problems first see [Troubleshooting NSClient](.
      Already included:
        - authorized_clients_master.png       (master: Authorized clients list, Active client)
        - pair_with_master_unpaired.png       (client: pairing screen, unpaired PIN entry)
+       - new_client_master.png               (master: New client name dialog)
        - pairing_pin_master.png              (master: one-time pairing PIN — expired demo PIN)
        - pair_with_master_client.png         (client: pairing screen, paired state)
        - confirmation_master_authored.png    (client: master-authored scene confirmation)
