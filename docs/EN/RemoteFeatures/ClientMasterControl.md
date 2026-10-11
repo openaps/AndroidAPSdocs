@@ -52,7 +52,7 @@ Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **te
 ```{admonition} Before you start
 :class: important
 - The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [AAPSClient vs AAPSClient2](#remotecontrol-aapsclient-versions)).
+- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
 - **Both** phones use **NSClientV3** pointed at the **same** Nightscout, and are showing *connected*.
 - **Websockets** must be enabled on the **master** — without them the master cannot receive client commands at all, and your clients will see it as *not accepting commands*. Enable websockets on the client too for fast, near-instant round-trips.
 ```

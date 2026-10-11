@@ -30,16 +30,16 @@ See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
 ![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
 
 (remotecontrol-aapsclient-versions)=
-### About AAPSClient and AAPSClient2
+### About AAPSClient, AAPSClient2 and AAPSClient3
 
-There are 2 versions of the apk that can be installed, **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+There are 3 versions of the client app: **AAPSClient**, **AAPSClient2** and **AAPSClient3**. They work the same way. The only difference is that they can be installed side by side on the same follower phone.
 
-Should a caregiver require a second copy of **AAPSClient** to remote control an additional patient with a Nightscout account, they should install **AAPSClient2** in addition to **AAPSClient**. **AAPSClient 2** allows a single caregiver to install the **AAPSClient** apk twice on the same follower phone in order to be given simultaneous access and remote control to two different patients.
+A caregiver who follows one person needs only **AAPSClient**. To follow and remote control a second person (with their own **Nightscout** site and their own **AAPS** phone), install **AAPSClient2** as well, and **AAPSClient3** for a third person. Each app is set up and [paired](#aapsclient-pairing-with-the-master) on its own, with the **Nightscout** site and the **AAPS** phone of the person it follows.
 
-To differentiate between the two apps, some elements have a different background color: yellow for **AAPSClient**, blue for **AAPSClient2**. Those elements are the app icon, the widget, and the **AAPS** status section in the app itself. <br/>
-Note : opacity of the widget background is customizable.
+To tell the apps apart, some elements have a different color: yellow for **AAPSClient**, blue for **AAPSClient2** and green for **AAPSClient3**. Those elements are the app icon, the widget background, and the **AAPS** status section on the home screen of the app. <br/>
+Note: the opacity of the widget background can be set in the widget configuration. At a low opacity the color is hard to see.
 
-![AAPSClient_and_AAPSClient2.png](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+![Widget and status section colors of AAPSClient, AAPSClient2 and AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
 ### Download and installation
 
@@ -317,7 +317,7 @@ Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Wa
 
 The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
 
-To download the software, click on the required app (**wear-aapsclient-release_**_version_ or **wear-aapsclient2-release_**_version_ both work, there are two versions in case you need a copy for a second caregiver watch):
+To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
 
 ![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 

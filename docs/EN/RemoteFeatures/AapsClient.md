@@ -31,7 +31,7 @@ Everything you trigger from **AAPSClient** is checked, capped, confirmed and **e
 
 ## Versions: AAPSClient, AAPSClient2 and AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical; only the name and icon color differ so you can tell them apart. See [About AAPSClient and AAPSClient2](#remotecontrol-aapsclient-versions) for details.
+Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
 
 ## Getting the app
 

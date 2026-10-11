@@ -76,4 +76,4 @@ Each widget has its own configuration.
 
 - A widget only **displays** data. You cannot bolus or change anything from a widget.
 - The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, the widget has a different background colour so that you can tell the apps apart — see [About AAPSClient and AAPSClient2](#remotecontrol-aapsclient-versions).
+- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
