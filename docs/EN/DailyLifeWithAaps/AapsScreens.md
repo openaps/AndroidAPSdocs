@@ -5,6 +5,7 @@
 :depth: 2
 ```
 
+(the-homescreen)=
 (AapsScreens-the-homescreen)=
 ## The main screen
 
@@ -32,6 +33,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
 
 ![BG circle with delta](../images/Home_Delta.png)
 
+(loop-status)=
 (AapsScreens-loop-status)=
 #### Loop status
 
@@ -496,6 +498,7 @@ Tap the bubble to open the **Notification** panel. Each message shows the time i
 
 ![Notification panel](../images/main/main_notification_panel.png)
 
+(bolus-wizard)=
 (aaps-screens-bolus-wizard)=
 ## Bolus Wizard
 

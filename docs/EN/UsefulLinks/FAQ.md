@@ -51,6 +51,7 @@ There are several blogs with good tips to help you understand the practicalities
   * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
   * [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
+(what-emergency-equipment-is-recommended-to-take-with-me)=
 ### What emergency equipment is recommended to take with me?
 You have to have the same emergency equipment with you like every other T1D with insulin pump therapy.  When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
 
@@ -125,6 +126,7 @@ You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phon
 
 #### Hygiene
 
+(what-to-do-when-taking-a-shower-or-bath)=
 ##### What to do when taking a shower or bath?
 You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
 

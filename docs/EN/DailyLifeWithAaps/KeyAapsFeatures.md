@@ -42,6 +42,7 @@ The Closed Loop works within numerous safety limits, which can be set individual
 
 Closed Loop is only possible if you are in **[Objective 7](#objectives-objective7)** or higher and use a supported pump.
 
+(autosens)=
 (Open-APS-features-autosens)=
 ## Autosens
 * Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).

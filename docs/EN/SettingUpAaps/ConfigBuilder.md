@@ -61,6 +61,7 @@ This module cannot be disabled as it is a core part of **AAPS**.
 
 See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
 
+(insulin)=
 (Config-Builder-insulin)=
 ## Insulin
 
