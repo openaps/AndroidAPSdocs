@@ -406,7 +406,7 @@ When all four tabs are valid, the **save icon** (top right) becomes active. Pres
 
 ![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, units, insulin and the IC and ISF values:
+Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
 
 ![Save](../images/setup-wizard/Wizard-Profile-Save.png)
 

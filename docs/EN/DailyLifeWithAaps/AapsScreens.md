@@ -108,20 +108,24 @@ Note: the modes offered depend on your progress in the [Objectives](../SettingUp
 (aaps-screens-bg-warning-sign)=
 #### BG warning sign
 
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+If **AAPS** detects a problem with the BG readings it receives, a shortcut to your BG source (named after it, for example **xDrip+ BG**) appears in the bottom bar of the main screen, with a red warning badge. Tap it to open the [BG source screen](#aaps-screens-bg-source).
 
-##### Red warning sign: Duplicate BG data
+##### Duplicate BG data
 
 The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which prevents the loop from doing its work right. **AAPS** cannot calculate your BG trend reliably from duplicated readings, so it stops correcting.
 
-If your loop was closed, **AAPS** switches it to [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) mode. When you press the sign, the message indicates "LGS mode due to doubled values in BG source".
+If your loop was closed, **AAPS** switches it to [Low Glucose Suspend (LGS)](#KeyAapsFeatures-LGS) mode: the loop icon turns purple.
+
+  ![Duplicate BG data: LGS loop icon and the BG source shortcut with a red warning badge](../images/bg_warn_red.png)
+
+Press the loop icon: the **Constraints** card at the top tells you why: "BgQualityCheck: LGS mode due to doubled values in BG source".
+
+  ![Running mode dialog: LGS due to doubled values](../images/main/bg_doubled_constraint.png)
 
 ```{admonition} Your loop is running in Low Glucose Suspend
 :class: note
 Your loop keeps running, but only to protect you against lows: **AAPS** can still reduce or suspend your basal, and it will not give any correction insulin until you solve this issue !
 ```
-
-  ![Red BG warning](../images/bg_warn_red.png)
 
 You need to find out why you get duplicate BGs:
 * Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
@@ -129,7 +133,9 @@ You need to find out why you get duplicate BGs:
 * Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
 * Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
 
-To remove the warning immediately and get your loop correcting again, you need to manually delete a couple of entries from the [BG source screen](#aaps-screens-bg-source).
+To remove the warning immediately and get your loop correcting again, delete the duplicate entries from the BG source screen: tap the shortcut in the bottom bar. The duplicate reading is highlighted in red. Long press a reading to start selecting, tick the duplicates and tap the trash icon at the top right.
+
+  ![BG source screen: duplicates selected for deletion](../images/main/bg_source_delete_duplicates.png)
 
 However, when there are a lot of duplicates, it might be easier to
 * [backup your settings](../Maintenance/ExportImportSettings.md),
@@ -141,24 +147,13 @@ However, when there are a lot of duplicates, it might be easier to
 **AAPS** does not return to **Closed Loop** on its own once the duplicates are gone. Press the loop icon on the main screen and select **Closed Loop** again.
 ```
 
-##### Yellow warning sign
+##### Flat BG data
 
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or that some BGs are missing. When pressing the sign, the message indicates “Recalculated data used”.
+With some BG sources (Libre 1, AiDEX, Glutec, Medtronic and sources that do not report their sensor type), **AAPS** also checks for readings that do not change: if your BG has changed by less than 2 mg/dL (0.1 mmol/L) for 45 minutes, the data is considered wrong. The BG source shortcut then shows a red flat-trend badge, and the loop stops any high temporary basal and gives no correction insulin until the readings change again. Check your sensor and the app that sends the readings.
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+##### Irregular BG data
 
-Usually you do not have to take any action. The closed loop will continue to work!
-
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
-
-Special note for Libre users:
-
-* Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-* Also, jumpy readings interrupt the continuous flow.
-* Therefore, the yellow warning sign will be 'always on' for Libre users.
-
-*Note*:
-Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+When readings arrive at irregular intervals or some are missing, **AAPS** recalculates 5-minute values from the readings it has. This happens for example after a sensor change, or with Libre sensors, whose timing slips a minute or two every few hours. The loop keeps working and you do not have to take any action. **AAPS** 4 no longer shows a yellow warning sign for this.
 
 #### Current Profile
 
@@ -220,7 +215,7 @@ Press the teal button to see the temporary basal rate that is running, when it s
 (aaps-screens-carbs-required)=
 #### Carbs required
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Carbs required shown in the COB chip](../images/main/main_screen_carbs_required.png)
 
 Carbs suggestions are given when the reference design detects that it requires carbs.
 

@@ -56,6 +56,8 @@ On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAP
 
 5. **Name** — a name identifying this instance in reports and synchronization.
 
+(aapsclient-pairing-with-the-master)=
+
 ## Pairing with the master
 
 Pairing is started from the wizard step above (or later from **Manage → Pair with master**): on the **master**, open **Manage → Authorized clients**, add a client and read the one-time PIN; on the **client**, type the PIN and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":

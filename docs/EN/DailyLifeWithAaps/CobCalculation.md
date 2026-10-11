@@ -55,7 +55,7 @@ Ordinarily __AAPS__ detects carb absorption through **BG** deviations. In case t
 
 ![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above (from an earlier **AAPS** version — the confirmation dialog looks slightly different in **AAPS** 4, but shows the same warning), 58% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
+In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
 
 ### How to deal with this warning?
 

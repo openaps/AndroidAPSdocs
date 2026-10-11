@@ -83,7 +83,7 @@ When the time zone or time changes running **TBR's** are stopped.
 Time adjustment daylight savings time 
 
 Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. 
-For instance with the Combo pump, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake and not during the night.
+For some pumps it is better to make time zone adjustments while awake and not during the night.
 
 
 ### DST automatic adjustment for most pumps
@@ -98,6 +98,10 @@ For instance with the Combo pump, the pump history is read twice leading to dupl
 If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
 
 ### DST for Accu-Chek Insight
+
+* Change to DST is done automatically. No action required.
+
+### DST for Accu-Chek Combo
 
 * Change to DST is done automatically. No action required.
 

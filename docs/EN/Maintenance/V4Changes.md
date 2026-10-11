@@ -72,7 +72,7 @@ In **AAPS** v3, a long press on the profile name opened the profile switch dialo
 
 ## Duplicate BG data now switches the loop to Low Glucose Suspend
 
-When **AAPS** receives the same BG reading twice (the **red warning sign** under your BG value), it cannot calculate your trend reliably, so it stops giving correction insulin.
+When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
 
 In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
 

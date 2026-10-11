@@ -106,9 +106,9 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 * **Show BG** (default `On`): Display or not last BG value
 * **Show Direction Arrow** (default `On`): Display or not BG trend arrow
 * **Show Ago** (default `On`): show how many minutes since last reading.
-* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
+* **Dark** (default `On`): You can switch from black background to white background. Available on the Circle watchface, and on the Custom watchface when the loaded design supports it
 * **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
+* **Matching divider** (default `Off`): Custom watchface only, when the loaded design has dividers: show contrast background for divider (**Off**) or match divider with the background color (**On**)
 * **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
 
 ### Specific watchface parameters
@@ -272,13 +272,13 @@ Long battery life for Android Wear OS smartwatches is a challenge. Some smartwat
 
 Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
 
-The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
+The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “Always On Mode” or “Always On and Charging”.
 
 ### Night-time mode
 
 While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
 
-The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
+The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
 
 The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options”.
 

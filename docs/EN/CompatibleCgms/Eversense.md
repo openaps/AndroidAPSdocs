@@ -10,9 +10,10 @@ There are three different methods to access the readings from Eversense:
 
 Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
+  - Enable "Send to AAPS and xDrip"
+  - **Disable** "Send to Nightscout"
+  - As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
 
 ![ESEL Broadcast](../images/ESEL.png)
 

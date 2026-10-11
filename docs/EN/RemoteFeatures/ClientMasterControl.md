@@ -110,7 +110,7 @@ The PIN protects the pairing secret that is exchanged through Nightscout. Share 
 (client_master_client_setup)=
 ### 2. On the client — pair with the master
 
-On the client, open **Manage → Pair with master**, **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](AapsClient.md#pairing-with-the-master) for a screenshot).
+On the client, open **Manage → Pair with master**, **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
 
 ![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
@@ -159,6 +159,8 @@ If the master is not reachable (its phone is off/asleep, not connected to Nights
 ![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
 
 The client re-checks reachability automatically and re-enables control once the master is back online.
+
+(clientmastercontrol-wear-os-on-a-client)=
 
 ### Wear OS (watch) on a client
 

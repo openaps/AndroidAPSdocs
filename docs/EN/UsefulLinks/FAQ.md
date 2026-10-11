@@ -316,17 +316,17 @@ After doing so, the profile will be set, and AAPSClient remote should display al
 
 If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. To compile the AAPSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the AAPSClient variant.
 
-### I have a red triangle / AAPS won't enable closed loop / Loops stays in LGS / I have a yellow triangle
+### I have a red warning badge (red triangle) / AAPS won't enable closed loop / Loop stays in LGS / I had a yellow triangle
 
-The red and yellow triangles are a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
+The red warning badge on the BG source shortcut is a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
 
-Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the red triangle. Open your [BG source screen](#aaps-screens-bg-source) (**Configuration** → **BG Source** → **Open plugin**), long press one line you want to delete, check one of each lines that are doubled. You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
 
-Once the red triangle is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
+Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
 
 Possible origin of the problem: xDrip and/or NS backfilling BGs.
 
-The yellow triangle means unstable delay between each BG reading. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly. 
+The yellow triangle of older versions meant unstable delay between each BG reading (BGs not received every 5 min regularly, or missing BGs), which often happens with Libre or after a G6 transmitter change. **AAPS** 4 no longer shows it: it recalculates the values in the background and the loop works correctly.
 
 
 ### Can I move an active DASH Pod to other hardware?
@@ -359,11 +359,13 @@ _Wait!_ You still have the main phone thinking it can reconnect to the same DASH
 When Discarded, verify AAPS is reporting "No Active Pod".
 You can now safely disable airplane mode again.
 
-### How do I import settings from earlier versions of AAPS into AAPS v3 ?
+(FAQ-import-settings-earlier-versions)=
 
-You can only import settings (in AAPS v3) that were exported using AAPS v2.8x or v3.x. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install AAPS v3 and import v2.8 settings in v3.
+### How do I import settings from earlier versions of AAPS into AAPS v3 or v4 ?
 
-If you use the same key to build v2.8 and v3, you won't even have to import settings. You can install v3 over v2.8.
+You can only import settings (in AAPS v3 or v4) that were exported using AAPS v2.8x or later. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install the current AAPS version and import v2.8 settings in it.
+
+If you use the same key to build the old and the new version, you won't even have to import settings. You can install the new version over the old one.
 
 There were some new objectives added. You'll need to validate them. 
 

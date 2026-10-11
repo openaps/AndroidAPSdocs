@@ -256,6 +256,7 @@ To delete an **Automation** rule click on the trash icon.
 
 Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
 
+(automations-low-glucose-temp-target)=
 ### Low Glucose Temp Target
 
 This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
@@ -338,31 +339,11 @@ Note : Automation will not trigger **at all** if you have not done a manual sett
 
 **AAPS** shows a log of the most recent **Automation** events at the bottom of the **Automation** screen, below the rules. Use it to verify that your rules triggered when you expected them to.
 
-In the example below the logs indicate:
+In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose Temp Target](#automations-low-glucose-temp-target) above) is enabled. The log (2) shows that at 03:09 PM, glucose fell below 70 mg/dL and the rule triggered:
+* the action was "Start temp target: 110mg/dL@30 min": a **Temp Target** of 110 mg/dL for 30 minutes;
+* **OK** at the end means that the action was carried out successfully.
 
-(1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated 
-* glucose value is less than 75mg/dL;
-* delta is negative (ie: the BG is going down);
-* time is within 01:00 am and 06:00 am.
-
-The **Automation** will:
-* set a **Temp Target** to 110mg/dL for 40 minutes;
-* start a temporary **Profile** at 50% for 40 minutes.
-
-(2) at 03:38 am,  the “High carb after low at night” is triggered
-* time is between 01:05 am and 06:00 am;
-* glucose value is greater than 110mg/dL.
-
-The **Automation** will:
-* change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
-* stop **Temp Target** (if any)
-
-![Alt text](../images/Automations/automation_example_log.png)
-
-```{admonition} Note
-:class: note
-The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the log looks slightly different, but it carries the same information.
-```
+![Automation screen: an enabled rule (1) and its log entry (2)](../images/Automations/automation_example_log.png)
 
 ## Troubleshooting
 

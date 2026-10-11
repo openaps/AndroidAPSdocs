@@ -318,7 +318,7 @@ The min_5m_carbimpact does define the default carb absorption impact per 5 minut
 
 Standard value for AMA is 3, for SMB it's 8.
 
-The COB graph on the main screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
 
 ![COB graph](../images/main/cob_graph_min_5m_carbimpact.png)
 

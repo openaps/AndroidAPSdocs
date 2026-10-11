@@ -29,7 +29,7 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 | [3.3.2](#version3300)   | Meerkat (2024.3.1)                       | tested up to Quail 4                       | 8.11.1 | 21   |
 | [3.3.2.1](#version3321) | Narwhal (2025.1.2)                       | tested up to Quail 4                       | 8.13   | 21   |
 | [3.4.2.6](#version3426) | Panda 2 (2025.3.2)                       | tested up to Quail 4                       | 9      | 21   |
-| 4.0.0.beta1             | Rabbit 1                                 | up to latest Rabbit 1                      | 9.8    | 21   |
+| [4.0.0-beta1](#version4000) | Rabbit 1                           | up to latest Rabbit 1                      | 9.8    | 21   |
 
 The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues.
 If your current Android Studio version is not listed in the table, you must update it first.
