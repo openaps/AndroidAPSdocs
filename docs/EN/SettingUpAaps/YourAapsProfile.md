@@ -104,6 +104,24 @@ See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, ana
 
 When taking action on the result of your basal testing, changes in the **Profile** should be done 1 to 2 hours (depends on your insulin type) before the rise/drop. Repeat the test as necessary until you are comfortable with your **basal rates** settings.
 
+(your-aaps-profile-basal-not-compatible)=
+#### Message: "Basal rate is not compatible with the current pump"
+
+Each pump has limits: a lowest and a highest basal rate it can deliver and, for some pumps (for example Dana, Accu-Chek Combo, Medtronic and Diaconn G8), basal rates that can only change on the full hour. **AAPS** checks your profile against the pump you use, **after** applying the percentage you choose.
+
+If a basal rate is outside these limits, the **Activate** screen shows this message and the **Activate** button stays grey:
+
+![Activate screen with the message "Basal rate is not compatible with the current pump"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+
+For example, with a basal rate of 0.10 U/h in the night and a profile percentage of 35 %, **AAPS** would have to deliver 0.035 U/h. This is less than a Dana pump can deliver (0.04 U/h).
+
+To solve it, either:
+
+* choose another percentage: a **higher** one if a basal rate becomes too low, a **lower** one if a basal rate becomes too high, or
+* [edit the profile](#your-aaps-profile-create-and-edit-profiles) and change the basal rate.
+
+The profile editor only lets you start basal rates on a full hour. A basal rate starting at e.g. 06:30 can only come from an older profile, for example after you change to a pump that does not support it.
+
 (your-aaps-profile-insulin-sensitivity-factor)=
 
 ## Insulin sensitivity factor (ISF)
@@ -253,7 +271,7 @@ Here are some reasons why you may have negative IOB, and what action to take:
 (your-aaps-profile-create-and-edit-profiles)=
 ### Create and edit Profiles
 
-In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4).
+In **AAPS** v4 your profiles live on the **Manage** screen (bottom navigation) → **Profile**, shown as a swipeable card carousel with an action bar (**➕ Add**, **✏️ Edit**, **⧉ Clone**, **🗑️ Delete**, **▶ Activate**). For managing and activating a profile, see [Managing and activating profiles](#ProfileSwitch-manage-v4). Coming from **AAPS** v3, where profiles had their own tab? See [What changed in AAPS v4](#v4changes-manage).
 
 Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**, then fill in the four schedules using the tabs:
 
@@ -265,17 +283,6 @@ Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**
 ![The profile editor — IC / ISF / BAS / TARG tabs](../images/setup-wizard/Wizard-Profile-IC.png)
 
 Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
-
-```{admonition} Earlier AAPS versions
-:class: note
-In **AAPS** v3 the **Profile** tab was reached from the top menu or hamburger menu, depending on your [Config Builder settings](../SettingUpAaps/ConfigBuilder.md), with the same add / delete / duplicate buttons:
-
-![Local Profile buttons](../images/LocalProfile_Settings.png)
-
-- green plus: add
-- red X: delete
-- blue arrow: duplicate
-```
 
 If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** screen may not always show the actual profile being used - e.g. if you made a profile switch from the main screen, it may differ from the profile actually shown in the **Profile** screen as there is no connection between these.
 

@@ -22,37 +22,29 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 ### Building & updating
 
+* If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
+  * [AAPS Builder](#aaps-builder-troubleshooting)
+  * [Browser build](#aaps-ci-troubleshooting)
+  * [Android Studio](TroubleshootingAndroidStudio.md)
 * [Lost keystore](#troubleshooting_androidstudio-lost-keystore)
-* [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
-* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
+* Updating **AAPS**: [with a browser build](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
 
 ### Installing
 
-You may see a Google Play Protect warning that the app is unsafe, was built for older Android versions and doesn't include latest privacy protections.
-
-Ignore it: More details, Install anyway.
-
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
-
-If the installation is **blocked** with a message about an unverified developer (rather than just a warning), see [Android developer verification](#android-developer-verification) for the free installation methods.
+* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
+* Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
 
 ### Settings
-* Profile
 
-  ![Error: Basal not aligned to hours](../images/BasalNotAlignedToHours2.png)
-
-* [Pump - data from different pump](#update30-failure-message-data-from-different-pump)
-
-  ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
-
-* [Nightscout Client](../GettingHelp/TroubleshootingNsClient.md)
+* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
+* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
+* [Nightscout Client](TroubleshootingNsClient.md)
 
 ### Usage
-* [Wrong carb values](#CobCalculation-detection-of-wrong-cob-values)
 
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
-
-* [SMS commands](#SMSCommands-troubleshooting)
+* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
+* [Automations](#automations-troubleshooting)
+* [Full closed loop](#full-closed-loop-troubleshooting)
 
 ---
 
@@ -70,6 +62,8 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 ## Android Related Issues
 
 ### Battery optimization
+
+**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
 
 Android has implemented battery saving setting that are enabled by default. These settings automatically suspend/pause applications that are not required for the system to function to help conserve the amount of battery energy used by apps that don't always need to be running.
 
@@ -140,6 +134,7 @@ Useful links to known issues and steps to resolve for CGMs.
 
 * [General](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
+* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [xDrip - no CGM data](#xdrip-identify-receiver)
 * [xDrip - Dexcom troubleshooting](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
@@ -152,12 +147,14 @@ Useful links to known issues and steps to resolve for CGMs.
 
 Useful links to known issues and steps to resolve for Pumps
 
-* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo general](#combov2-tips-for-basic-usage)
+* [Accu-Chek Combo](#combov2-tips-for-basic-usage)
 * [Accu-Chek Insight](#Accu-Chek-Insight-Pump-insight-specific-errors)
+* [CareLevo](#carelevo-alarms-and-notifications)
+* [DanaRS](#DanaRS-Insulin-Pump-dana-rs-specific-errors)
+* [Diaconn G8](#diaconn-g8-bluetooth-troubleshooting)
+* [EOPatch2](#eopatch2-alarms-and-warnings)
 * [Medtronic + RileyLink](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 * [Medtrum Nano](#medtrum-nano-troubleshooting)
-* [Diaconn G8](#diaconn-g8-bluetooth-troubleshooting)
 * [Omnipod DASH](#omnipod-dash-troubleshooting)
 * [Omnipod Eros](#OmnipodEros-troubleshooting)
 
@@ -169,9 +166,22 @@ Useful links to known issues and steps to resolve for Pumps
 
 Useful links to known issues and steps to resolve for Phones
 
-* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&amp;single=true)
+* [List of tested phone and device setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
 * [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+
+---
+
+(generaltroubleshooting-remote-control)=
+
+## Remote control
+
+* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
+* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
+* [SMS commands](#SMSCommands-troubleshooting)
+* [Android Auto](#android-auto-troubleshooting)
+
+---
 
 (generaltroubleshooting-smartwatches)=
 
@@ -180,3 +190,6 @@ Useful links to known issues and steps to resolve for Phones
 Useful links to known issues and steps to resolve for Smartwatches
 
 * [Troubleshooting Wear app](#Watchfaces-troubleshooting-the-wear-app)
+* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [Wear OS 5](#wear-os-5-troubleshooting)
+* [Building the Wear app](#building-aaps-wear-os-troubleshooting)

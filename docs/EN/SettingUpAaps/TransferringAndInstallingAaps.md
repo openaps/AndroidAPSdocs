@@ -101,6 +101,17 @@ Remember to disable "Allow from this source" again after the installation, as it
 
 Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
 
+(transferring-installing-play-protect-warning)=
+## Google Play Protect warning
+
+When you install **AAPS**, Google Play Protect may warn you that the app is unsafe, was built for an older version of Android and doesn't include the latest privacy protections.
+
+![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+
+This is expected for an app you built yourself. Tap **More details**, then **Install anyway**.
+
+If the installation is **blocked** with a message about an unverified developer (not just a warning), see [Android developer verification](#android-developer-verification) below.
+
 (android-developer-verification)=
 
 ## Android developer verification

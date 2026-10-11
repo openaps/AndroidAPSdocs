@@ -89,5 +89,7 @@ Your CGM data will be shown as follows:
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
+(android-auto-troubleshooting)=
+
 ## Troubleshooting:
 * If you don't see the notification, check if you [allowed AAPS to show notifications](#check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).

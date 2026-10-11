@@ -1,9 +1,11 @@
 # Configuration (Config Builder)
 
-```{admonition} Renamed in AAPS v4
+```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v4 the **Config Builder** has been renamed **Configuration** and moved into the **top-left menu** (☰). It is still the place where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [v4 walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
 ```
+
+**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
 
 (configuration-v4)=
 ## Configuration in AAPS v4
@@ -39,9 +41,9 @@ Items **without** the icon are configured **per device**. The most important exa
 ---
 
 (Config-Builder-tab-or-hamburger-menu)=
-## Tab or hamburger menu
+## Opening a plugin screen
 
-**AAPS** 4 no longer has tabs at the top of the screen, and the checkbox under the eye symbol of **AAPS** 3.x is gone. Each plugin screen is opened in one of these ways:
+Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
 
 - **Configuration** → the plugin's category → **Open plugin**,
 - the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
@@ -263,6 +265,15 @@ When you select another pump, **AAPS** asks you to confirm the change:
 * Virtual pump: open loop - **AAPS** suggestions only
   * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
   * for pump which doesn't have any driver yet
+
+(config-builder-wrong-pump-data)=
+### Message: "Data is coming from different pump"
+
+**AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
+
+![Data is coming from different pump](../images/Screen_DifferentPump.png)
+
+To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
 
 (Config-Builder-sensitivity-detection)=
 

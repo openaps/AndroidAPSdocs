@@ -15,7 +15,7 @@ In case you want to build **AAPS** on a new computer : copy your back-up keystor
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 ### Export your settings
 
@@ -29,11 +29,6 @@ The minimal version required is described in the [Building Instructions](#Buildi
 
 (Update-to-new-version-update-your-local-copy)=
 ### Update your local copy
-
-```{admonition} WARNING
-:class: warning
-If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
-```
 
 * Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
 
@@ -93,12 +88,14 @@ See the instructions for [transferring and installing AAPS](../SettingUpAaps/Tra
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
 
+(update-computer-build-troubleshooting)=
+
 ## Troubleshooting
 
 If anything goes wrong, don't panic.
 
 Take a breath!
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) if your problem is already documented!
+Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) if your problem is already documented!
 
 If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).

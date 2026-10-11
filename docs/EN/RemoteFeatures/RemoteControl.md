@@ -99,11 +99,13 @@ The follower phone then appears as **Active** in the **Authorized clients** list
 
 Check that the set-up works: enter carbs on **AAPSClient**, confirm the amount shown, and check that the entry appears in **Treatments** on both phones.
 
+(remotecontrol-nightscout-access-token)=
+
 ### Troubleshooting 'Nightscout access token' configuration issues
 
 The precise 'Nightscout access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not. 
 
-If you are struggling with **AAPS** v3 to accept the 'Nightscout access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'Nightscout access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+If you are struggling with **AAPS** to accept the 'Nightscout access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'Nightscout access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
 
 ### What AAPSClient offers
 
@@ -120,7 +122,7 @@ There is no pump and no objectives on **AAPSClient**. See [The AAPSClient app](A
 
 Treatments entered in Nightscout by other means (for example the Nightscout website) are still applied by **AAPS** only if the matching **Receive** options are enabled in the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](#important-hints-2-8-1-1) for further details.
+Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc).
 
 ### AAPSClient with smartwatch options
 
@@ -315,7 +317,7 @@ Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Wa
 
 The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
 
-To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
+To download the software, click on the required app (**wear-aapsclient-release_**_version_ or **wear-aapsclient2-release_**_version_ both work, there are two versions in case you need a copy for a second caregiver watch):
 
 ![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 

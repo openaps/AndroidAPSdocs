@@ -345,6 +345,8 @@ In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose
 
 ![Automation screen: an enabled rule (1) and its log entry (2)](../images/Automations/automation_example_log.png)
 
+(automations-troubleshooting)=
+
 ## Troubleshooting
 
 * Problem: __My automations are not being triggered by AAPS?__

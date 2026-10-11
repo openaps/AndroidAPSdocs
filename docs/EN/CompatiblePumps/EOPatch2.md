@@ -222,6 +222,8 @@ The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you op
 When the suspend time ends, **AAPS** shows an **End of insulin suspend** warning. Insulin delivery does **not** restart until you confirm it. If you do not, you could develop hyperglycemia.
 ```
 
+(eopatch2-alarms-and-warnings)=
+
 ## Alarms and warnings
 
 ### Alarms

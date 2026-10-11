@@ -115,6 +115,8 @@ Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops a
 
 When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
 
+(carelevo-alarms-and-notifications)=
+
 ## Alarms and notifications
 
 The patch reports three levels of events. All of them are shown as **AAPS** notifications.

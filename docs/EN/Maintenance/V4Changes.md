@@ -37,7 +37,7 @@ This affects only how the app talks to Nightscout; your data on Nightscout is un
 
 In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
 
-In **AAPS** v4 the tabs are gone. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
 
 (v4changes-treatments)=
 ### Treatments — enter and deliver
@@ -66,6 +66,20 @@ All of your existing automation rules and food entries are kept; only the way yo
 ```{admonition} Profile switch and profile percentage
 :class: note
 In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+```
+
+---
+
+(v4changes-remote-control)=
+## AAPSClient remote control needs pairing
+
+In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+
+In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+
+```{admonition} What you need to do
+:class: important
+Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control).
 ```
 
 ---

@@ -3,7 +3,7 @@
 
 From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
 
-This page explains how remote control worked in **AAPS** v3, what changed in v4, and how to set it up and use it.
+This page explains how it works, and how to set it up and use it.
 
 ```{contents} Table of contents
 :depth: 2
@@ -19,22 +19,14 @@ This page explains how remote control worked in **AAPS** v3, what changed in v4,
 
 ---
 
-## How it worked before (AAPS v3)
+## How it works
 
-In v3, remote control from **AAPSClient** (or from the Nightscout web/app) was done by writing **care-portal treatments** to Nightscout. The master's **NSClient** then picked those entries up during synchronization and applied them, provided the *“accept commands”* options were enabled in the NSClient preferences (see [Remote control](RemoteControl.md)).
+```{admonition} Coming from AAPS v3?
+:class: note
+In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+```
 
-This worked, but had important limitations:
-
-- **No insulin.** You could *announce* a “correction bolus” (which only changed IOB) but you could **not actually deliver a bolus** from a client.
-- **Limited set of actions** — temporary target, profile switch, carbs, BG check, and the various care-portal *notes/announcements*.
-- **Unsigned and unconfirmed.** Anything able to write to your Nightscout could inject a treatment; there was no cryptographic proof that the command came from *your* client, no preview of what the master would actually do, and no confirmation step on the master.
-- **Fire-and-hope.** The client did not know whether the master was online, whether the command had been applied, or whether it had failed.
-
----
-
-## What's new in AAPS v4
-
-v4 introduces a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that is exchanged once, during **pairing**, and never leaves the devices in clear text.
+**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that is exchanged once, during **pairing**, and never leaves the devices in clear text.
 
 The guiding principle is **the master is in charge**:
 
@@ -43,21 +35,15 @@ The guiding principle is **the master is in charge**:
 3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
 4. On confirmation the master **executes once** and reports the result back to the client.
 
-Headline changes versus v3:
+What this means for you:
 
-| | AAPS v3 (Nightscout care-portal) | AAPS v4 (signed Client-Control) |
-|---|---|---|
-| Channel | Care-portal treatments on Nightscout | Signed commands on Nightscout `settings` |
-| Authentication | None (anyone who can write to NS) | Per-client pairing secret + HMAC signature |
-| Replay/expiry protection | None | Monotonic counter + command time-to-live |
-| Insulin bolus from a client | ❌ Not possible | ✅ Master delivers it on its pump |
-| Confirmation | None / client-side only | **Master-authored** lines shown on the client |
-| Capping / safety | Client or none | Always done on the **master** |
-| Knows if the master is online | ❌ | ✅ Actions blocked with a clear message when offline |
-| Live bolus progress on the client | ❌ | ✅ Mirrored from the master |
-| Revoke a follower | Change NS secret | One tap (per client) or a master kill-switch |
+- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
+- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
+- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
+- **Master offline**: actions are blocked with a clear message.
+- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
 
-Actions that can be triggered from a client in v4: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
 
 ---
 
@@ -225,6 +211,8 @@ If a client is restored from a backup that rolls its command counter backwards, 
 ```
 
 ---
+
+(client-master-control-troubleshooting)=
 
 ## Troubleshooting
 

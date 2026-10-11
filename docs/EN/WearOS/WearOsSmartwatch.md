@@ -227,6 +227,8 @@ E.g.
 `Performing Streamed Install`<br> `Success`
 
 
+(wear-os-5-troubleshooting)=
+
 ### General troubleshooting recommendations for Wear OS 5
 
 - Do not use Wi-Fi Tethering. That won't work.
@@ -276,6 +278,8 @@ If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, 
 For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
 ![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
+
+(wear-os-watch-phone-communication)=
 
 ### Troubleshooting the **AAPS** watch- **AAPS** phone communication
 
