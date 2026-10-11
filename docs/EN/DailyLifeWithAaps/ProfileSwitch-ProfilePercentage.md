@@ -61,6 +61,8 @@ The Profile screen shows your profiles as a **swipeable card carousel**. The car
 
 The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **🗑️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
 
+**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it).
+
 (ProfileSwitch-read-only-mode)=
 ```{admonition} Only the Activate button? The screen is read-only
 :class: note
