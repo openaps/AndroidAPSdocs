@@ -56,7 +56,54 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 ## Version 4.0.0.0
 
-In progress. See changes [here](#v4-changes).
+Beta 1 release date: 08-10-2026
+
+```{admonition} Beta version
+:class: warning
+4.0.0-beta1 is a test version, not the final release. If you are upgrading from **AAPS** v3, read [What changed in AAPS v4](#v4-changes) first.
+```
+
+### New features
+- New user interface: phone app rebuilt in Jetpack Compose @MilosKozak
+- [Global search](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
+- Kotlin Multiplatform migration, client for Windows, Mac, Linux desktop and iOS @MilosKozak
+- [Scenes](../DailyLifeWithAaps/Scenes.md): save a set of actions and run them together @MilosKozak
+- [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md): send commands from a client phone to the master @MilosKozak
+- [Insulin concentration](../AdvancedOptions/InsulinConcentration.md) support (U200, U500) across pumps, wizard and profiles @Philoul @MilosKozak
+- Insulin management: insulin catalogue, nicknames, selection in profile and wizard @Philoul
+- Calibration plugin @MilosKozak
+- [Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
+- [Site rotation](#Aapsscreens-site-rotation): track and rotate infusion sites @Philoul @MilosKozak
+- [Autotune](../AdvancedOptions/Autotune.md) rework @Philoul
+- New [widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
+- Accessibility: the phone app works with a screen reader - named controls, spoken status, graph descriptions and headings to skim @MilosKozak
+- [Settings import](../Maintenance/ExportImportSettings.md): can keep the pump settings @MilosKozak
+- Persistent notification uses Android live updates, with Samsung Now bar support and the delta @premnirmal
+- Performance improvements @MilosKozak
+
+### New devices
+- **CareLevo**: new [pump driver](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
+- **Dana-i2**: support @MilosKozak
+- **Instara**: new CGM source @leohunt
+
+### Pump Driver Improvements
+- Pump overview screens rebuilt for Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn and Equil @MilosKozak
+- **Omnipod Dash**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
+- **Omnipod**: hard-end date for Dash & Eros @mcnelson
+- **DanaR, RS**: pump emulator for testing @MilosKozak
+- **Equil**: pump emulator for testing @MilosKozak
+- Many pump and loop fixes @MilosKozak and others
+
+### Wear OS
+- [Watch app](../WearOS/WearOsSmartwatch.md) rebuilt in Compose, new tiles and complications, automatic watch face install (Watch Face Push) on Wear OS 6+ @olorinmaia @Philoul
+
+### Build
+- CI workflows for tag/branch builds, JDK version mapping @Angus-repo
+
+### Contributors
+@MilosKozak @Philoul @olorinmaia @Kisu-Choi @leohunt @piecycle @Angus-repo @mcnelson @t1dude @premnirmal @nl-ruud
+
+Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0-beta1>
 
 (version3426)=
 
