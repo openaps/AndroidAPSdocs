@@ -89,7 +89,7 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
   ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
 
-- You can then select local profile to edit the Tuned profile (it will be selected by default when you open Local profile plugin)
+- You can then edit the Tuned profile: open **Manage** > **Profile**, swipe to the card named "Tuned" with the date and time of the run, and tap the **Edit** (pencil) button
 
   - the values in local profile will but rounded in the user interface to your pump capabilities
 
@@ -161,7 +161,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
   ![Autotune default screen](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
+- During Autotune calculation, you can see the progress of the calculations ("Partial result day 1 / 4 tuned" in the example below, with Saturday and Sunday excluded)
 
   ![Autotune default screen](../images/Autotune/Autotune_15b.png)
 

@@ -36,7 +36,7 @@ When using **Dynamic ISF**, the **ISF** values entered in the **Profile** are no
 The section circled in red shows: `profile ISF` -> `ISF as calculated by DynISF`. <br/>
 Taping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
 
-The **DynISF** value can also be shown in an additional graph, enabling “Variable sensitivity” data. It shows as a white line (see red arrow on the image above).
+The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
 
 ## How is Dynamic ISF calculated ?
 
