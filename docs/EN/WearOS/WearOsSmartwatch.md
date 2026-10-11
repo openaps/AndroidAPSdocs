@@ -262,6 +262,8 @@ The final step is to configure **AAPS** on the phone to interact with **Wear.apk
 
 ![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
 
+To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
+
 To change to a different **AAPS**  watchface, press on the home screen of the 
 watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces. 
 

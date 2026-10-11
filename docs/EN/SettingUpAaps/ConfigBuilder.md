@@ -341,8 +341,9 @@ Used to **send** data such as treatments to xDrip.
 
 See [Open Humans](../SupportingAaps/OpenHumans.md).
 
+(Config-Builder-wear)=
 ### Wear
-Monitor and control **AAPS** using your Android WearOS watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)).
+Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
 
 ### External Companion Apps
 
@@ -394,26 +395,6 @@ Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Com
 **Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
 Note: Entries cannot be used in the **AAPS** calculator. (View only)
-
-(Config-Builder-wear)=
-### Wear
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../WearOS/WearOsSmartwatch.md)). Enable **Wear** in **Configuration → Communication**:
-
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
-
-Use **Settings** to define which variables should be considered when calculating a bolus given through your watch (e.g. trend, COB...). If you want to bolus etc. from the watch, you need to enable "**Wear control**". See [Settings > Wear](#preferences-wear).
-
-![Wear settings](../images/preferences/settings_wear.png)
-
-**Open plugin** shows the Wear screen:
-
-![Wear plugin screen](../images/screens/wear_plugin.png)
-
-From this screen you can
-* Resend all data.
-Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
-* Choose which watchface **AAPS** installs on a **Wear OS 6** or newer watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
 
 (Config-Builder-autotune)=
 ### Autotune

@@ -424,7 +424,7 @@ More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.m
 (preferences-wear)=
 ## Wear
 
-This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) page.
+This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) and [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md) pages.
 
 ![Settings > Wear](../images/preferences/settings_wear.png)
 
