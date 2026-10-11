@@ -99,7 +99,7 @@ notices kept in the files):
 ```
 SHA-256(aaps-builder.html)         = 016a4d6231168e1ce69f15ec5558171371f8474510601feb4db7768aa579e9fa
 SHA-256(aaps-builder.app.js)       = 000b7fbfc31e0c4ecdacafb4059e164f1ba33f41371de4ec832a720c4bb2a55f
-SHA-256(aaps-builder-build.yml)    = 3d96ef0b329b4d08c20bea62c9b5a38d7920259628bddf5ed0d8b18226b1c83e
+SHA-256(aaps-builder-build.yml)    = ef259ea7f2458152266f5fbb597986bcaa3a68615503709474b1cb91483dafdc
 SHA-256(aaps-builder.forge.min.js) = dc67fd132427ad96c9666c844b39565413c40ddb1f2d063c53512fbf6d387dfd
 ```
 

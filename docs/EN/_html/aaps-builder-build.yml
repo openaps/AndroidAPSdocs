@@ -1,4 +1,4 @@
-# AAPS Builder build workflow, version 2
+# AAPS Builder build workflow, version 3
 #
 # Builds the AAPS app from the official AndroidAPS source (github.com/nightscout/AndroidAPS) in your
 # own private repository, signed with your own key (secret KEYSTORE_SET).
@@ -34,6 +34,7 @@ on:
           - fullRelease
           - aapsclientRelease
           - aapsclient2Release
+          - aapsclient3Release
           - pumpcontrolRelease
           - fullDebug
 
@@ -84,6 +85,9 @@ jobs:
           fi
           git ls-remote --exit-code --tags "$UPSTREAM" "refs/tags/$VERSION" > /dev/null \
             || stop "Version $VERSION does not exist in nightscout/AndroidAPS."
+          case "$IN_VARIANT:$VERSION" in
+            aapsclient3*:[0-3].*) stop "AAPSClient3 exists only from AAPS 4.0. Choose version 4.0 or later, or another variant." ;;
+          esac
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
   build:
