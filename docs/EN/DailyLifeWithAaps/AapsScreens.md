@@ -283,30 +283,42 @@ Press the **pencil** icon in the top-right corner of the graph to open the graph
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
 * **Graph height** adjusts how tall the graph is drawn.
-* **ACT** overlays the insulin activity curve: yellow line
+* **ACT** overlays the insulin activity curve: a solid yellow-green line <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (not to be confused with the dotted yellow UAM prediction)
 * **PRED** overlays the [prediction lines](#aaps-screens-prediction-lines) (see below)
 
 (aaps-screens-prediction-lines)=
 #### Prediction lines
 
-* **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
+When **PRED** is on, AAPS draws its predictions as **dotted lines** to the right of the "now" line. Each prediction has its own color. The dark theme uses lighter shades of the same colors, and a line inside the green target range can look slightly greener.
+
+| Line | Light theme | Dark theme | What it predicts |
+|---|---|---|---|
+| **IOB** (blue) | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | insulin only |
+| **COB** (orange) | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | carbs on board |
+| **UAM** (yellow) | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | unannounced meal |
+| **ZT** (cyan) | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | zero-temp (insulin stopped) |
+| **aCOB** (pale orange) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | older AMA algorithm only |
+
+When two predictions give the same values, their dots overlap and you only see one of the colors (for example, UAM on top of IOB when BG is flat).
+
+* **COB** line (orange): [carbs on board](CobCalculation) (orange is used throughout AAPS for COB and carbs)
 
   This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. This line only appears if there are known COB.
-* **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
+* **IOB** line (blue): insulin on board (blue is used throughout AAPS for IOB and insulin)
 
   This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **ZT** line (cyan): zero-temp (predicted BG if temporary basal rate at 0% would be set)
 
-  This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+  This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR). The line stops once it rises above your target.
 
    *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
-* **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
+* **UAM** line (yellow): [unannounced meals](#SensitivityDetectionAndCob-sensitivity-oref1)
 
   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
 
-   *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+   *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used, **Enable UAM** is on in the OpenAPS SMB settings, and BG is rising more than insulin alone explains.*
 
-* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+* **aCOB** line (pale, see-through orange): accelerated carbohydrate absorption
 
    Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/L/5m) carb absorption rate. Deprecated and of limited usefulness.
 

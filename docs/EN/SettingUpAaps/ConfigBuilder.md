@@ -308,7 +308,7 @@ If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manu
 
 ## Loop
 
-This module should not be disabled as it is a core part of **AAPS**.
+This module cannot be disabled as it is a core part of **AAPS**.
 
 ![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
 
