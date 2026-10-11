@@ -374,7 +374,7 @@ When you switch to a new phone, do the following:
 * [Export settings](../Maintenance/ExportImportSettings.md) on your old phone.
 * Transfer the settings file from the old phone to the new phone, and import it into **AAPS**. Tick **Also replace pump settings** on the import screen, otherwise the patch session is not transferred to the new phone.
 
-The imported settings file must be from the patch session you are using now, otherwise the patch will not connect.
+The imported settings file must be from the patch session you are using now, otherwise the patch will not connect (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
 
 After a settings import, the driver syncs the history with the pump. This can take a while, depending on the age of the settings file. The progress ("Syncing records, ... left") is shown on the main screen:
 

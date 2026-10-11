@@ -884,7 +884,12 @@ We recommend setting pump unreachable alerts to **120 minutes**. Press the **Set
 (OmnipodEros-import-settings-from-previous-aaps)=
 ### Import Settings from previous AAPS
 
-Please note that importing settings with **Also replace pump settings** ticked has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**. When you import on the phone that already runs the Pod, leave **Also replace pump settings** unticked so the Pod session is kept (see [Export/Import settings](../Maintenance/ExportImportSettings.md)).
+```{admonition} Importing settings can end your active Pod
+:class: warning
+On the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session is kept and only the other settings are imported. Tick it only with a file exported during the Pod you are wearing now. See [Tubeless pumps](#ExportImportSettings-tubeless-pumps).
+```
+
+The safest way to reinstall **AAPS** is between two Pods:
 
 1. Deactivate your pod session. Verify that you do not have an active pod session.
 2. Export your settings and store a copy in a safe place.

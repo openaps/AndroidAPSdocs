@@ -129,9 +129,14 @@ If you are updating **AAPS** after you lost or replaced your original keystore (
 
 If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below 
 
+(ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-Importing a **Preferences** file with **Also replace pump settings** ticked will deactivate your current pod if those **Preferences** were exported during a different active pod session. Leave the box unticked to keep the pod you are using.
+The **Preferences** file contains the session of the pod or patch that was active when you exported it.
+- **Export right after every pod or patch activation** and copy the file off your phone.
+- **Same phone, pod still running:** leave **Also replace pump settings** unticked. Your current pod is kept and only the other settings are imported.
+- **New phone taking over the pod:** tick **Also replace pump settings**, and only use a file exported during the pod you are wearing now. A file from an earlier pod replaces your current pod session, and you will need to start a new pod.
+- **An old pod session was imported by mistake:** **AAPS** keeps trying to reach that pod and you cannot activate a new one. Deactivate it; if that fails, discard it (see for example [Discarding a pod](#omnipod-dash-discard-pod) for Omnipod DASH).
 ```
 
 ```{admonition} Pump settings are kept unless you say otherwise
