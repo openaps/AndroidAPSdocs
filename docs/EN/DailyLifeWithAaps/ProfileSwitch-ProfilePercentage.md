@@ -61,6 +61,16 @@ The Profile screen shows your profiles as a **swipeable card carousel**. The car
 
 The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **🗑️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
 
+(ProfileSwitch-read-only-mode)=
+```{admonition} Only the Activate button? The screen is read-only
+:class: note
+If you use [Settings protection](#Preferences-settings-protection), the Profile screen opens **read-only** unless your settings are already unlocked. You can browse profiles and **▶ Activate** them, but the **Add / Edit / Clone / Delete** bar is hidden. Tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics) to show it.
+
+![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+
+This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+```
+
 ### Reordering profiles
 
 If you have more than one profile you can choose their order in the carousel: tap the **⋮** menu in the top bar and choose **Reorder**. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
@@ -138,6 +148,7 @@ It is always a question of which hour’s **Profile’s** settings should replac
 
 This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile**  changes.
 
+(ProfileSwitch-keep-for-later)=
 ## Keep a profile switch for later use
 
 Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.

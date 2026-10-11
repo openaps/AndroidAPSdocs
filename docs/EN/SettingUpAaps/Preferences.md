@@ -94,9 +94,12 @@ Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md
 
 ![Set master password](../images/preferences/master_password_dialog.png)
 
+(Preferences-settings-protection)=
 ### Settings protection
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Settings related view.
+
+- The management screens (**Profile**, **Temporary targets**, **QuickWizard**) then open **read-only**. You can still activate or use an entry, but adding, editing, cloning and deleting are hidden until you tap the **✏️ pencil** in the top bar and unlock your settings. See [the read-only Profile screen](#ProfileSwitch-read-only-mode).
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the settings.
 
