@@ -77,6 +77,11 @@ The insulin editor lets you:
 * set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Activity, in hours), either by typing the value or using the **–** / **+** buttons,
 * tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
 
+The allowed ranges are the same whatever insulin you use:
+
+* **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
+* **Peak**: 35 to 120 minutes.
+
 The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
 
 More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
@@ -93,7 +98,6 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 ![Insulin type Rapid-Acting Oref](../images/Profile/ConfBuild_Insulin_RAO.png)
 
 * recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
 * Peak = 75 minutes after injection (recommended default; loaded by the **Novorapid** preset)
 
 #### Ultra-Rapid Oref
@@ -101,7 +105,6 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 ![Insulin type Ultra-Rapid Oref](../images/Profile/ConfBuild_Insulin_URO.png)
 
 * recommended for FIASP
-* DIA = at least 5.0h
 * Peak = 55 minutes after injection (recommended default; loaded by the **Fiasp** preset)
 
 (Config-Builder-lyumjev)=
@@ -110,13 +113,11 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 ![Insulin type Lyumjev](../images/Profile/ConfBuild_Insulin_L.png)
 
 * special insulin profile for Lyumjev
-* DIA = at least 5.0h
 * Peak = 45 minutes after injection (recommended default; loaded by the **Lyumjev** preset)
 
 #### Free Peak Oref
 
 * In **AAPS** 4 there is no separate "Free-Peak Oref" insulin type: you can enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a **Load peak from** preset.
-* The DIA can be set between 5 and 9 hours.
 * A custom peak is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 (Config-Builder-insulin-dia)=
