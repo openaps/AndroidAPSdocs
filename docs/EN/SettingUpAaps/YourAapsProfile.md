@@ -94,7 +94,7 @@ The **figure below** shows an example of how the basal rates can be set in an **
 
 Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
 
-There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast 3 times for 8 hours.
+There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast over 3 different days for a period of 8 hours.
 
 The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/>
 An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/>
@@ -252,6 +252,8 @@ The possible reasons for **AAPS** not giving enough insulin are:
 * Basal rate might not be strong enough
 * A security setting might kick in, such as **maxIOB**. Or **SMB** is disabled at this time, depending on your settings.
 * Automation has been set up and has overridden **AAPS**.
+
+See also [Tweaking the AAPS Profile](../GettingHelp/ProfileTuning.md).
 
 ### I have negative IOB, is this an issue ?
 Negative **IOB** means the amount of absolute insulin (basal + bolus) in your body is less than the basal. It will cause **AAPS** to send more insulin as soon as the **BG** starts to rise, because it considers that insulin is missing, which can result in low **BG** later.
