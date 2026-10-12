@@ -319,7 +319,7 @@ This module cannot be disabled as it is a core part of **AAPS**.
 
 ### Objectives
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
