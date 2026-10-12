@@ -99,7 +99,6 @@ Pump history is retrieved every 5 minutes and stored locally. Only the previous 
 ![RileyLink Status - Settings](../images/Medtronic04.png)
 ![RileyLink Status - History](../images/Medtronic05.png)
 
-
 The RL Status dialog has two tabs:
 - **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
 - **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
@@ -108,7 +107,6 @@ The RL Status dialog has two tabs:
 When the Medtronic driver is used, two additional actions are added to Actions Tab:
 - **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a successful connection is made the successful frequency will be set as the default.
 - **Reset RileyLink Config** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-
 
 ## Important notes
 
@@ -155,7 +153,6 @@ There are a number of options to try and resolve connectivity issues.
     2. *While* the phone is restarting restart the Rileylink device
     3. Open AAPS and allow the connection to restore
 
-
 ### How to determine what Frequency my pump uses
 ![Pump Model](../images/Medtronic06.png)
 
@@ -164,3 +161,10 @@ On the back of the pump you will find a line detailing your model number along w
 - CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
 - WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
 
+### How to fix "pump unreachable" error?
+
+After updating to version 3.4.x.x a "pump unreachable error appears for some Medtronic pumps. Fix is to change pump encoding type under Medtronic preferences in AAPS:
+
+1. Open menu in upper right corner (⁝)
+2. Open "Medtronic Preferences" 
+3. Under "Medtronic Encoding" change to "Hardware Encoding"
