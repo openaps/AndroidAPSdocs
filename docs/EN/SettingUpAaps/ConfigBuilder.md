@@ -6,7 +6,7 @@ Depending on your settings you can open Config Builder through a tab at the top 
 
 The **Config Builder** is the tab where you turn the modular features on and off. In the picture below, the boxes on the left-hand side (A) allow you to select which modules you want activated. By default, when opening the Config Builder, sections are collapsed to only show the active plugins. Click on the arrow (G) to show all available options. The boxes on the right-hand side (C) allow you to view the active modules as a tab (E) in **AAPS**. In case the right box is not activated, you can reach the function by using the hamburger menu (D) on the top left of the screen. See [Tab or hamburger menu](#tab-or-hamburger-menu) below.
 
-When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+When there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within __Preferences__.
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
 
@@ -43,8 +43,8 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 ### Insulin type differences
 
 * The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape.
-* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
+* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the __DIA__ is the only variable that can be adjusted, the time to peak is fixed. 
+* Free-Peak allows you to adjust both the __DIA__ and the time to peak, and must only be used by advanced users who know the effects of these settings. 
 * The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
 
 #### Rapid-Acting Oref
@@ -52,7 +52,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 ![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
 
 * recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
+* __DIA__ = at least 5.0h
 * Max. peak = 75 minutes after injection (fixed, not adjustable)
 
 #### Ultra-Rapid Oref
@@ -60,7 +60,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 ![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
 * recommended for FIASP
-* DIA = at least 5.0h
+* __DIA__ = at least 5.0h
 * Max. peak = 55 minutes after injection (fixed, not adjustable)
 
 (Config-Builder-lyumjev)=
@@ -76,8 +76,8 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 ![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
-* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* With the "Free Peak 0ref" profile you can manually enter the peak time. To do so click to cogwheel to enter advanced settings.
+* The __DIA__ is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 (Config-Builder-bg-source)=
@@ -160,7 +160,7 @@ This module should not be disabled as it is a core part of **AAPS**.
 
 ### Objectives
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
