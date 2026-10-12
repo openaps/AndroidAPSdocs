@@ -189,7 +189,6 @@ There are a number of options to try and resolve connectivity issues.
     2. *While* the phone is restarting restart the Rileylink device
     3. Open AAPS and allow the connection to restore
 
-
 ### How to determine what Frequency my pump uses
 ![Pump Model](../images/Medtronic06.png)
 
@@ -197,6 +196,14 @@ On the back of the pump you will find a line detailing your model number along w
 - NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
 - CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
 - WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+
+(MedtronicPump-pump-unreachable)=
+### How to fix the "pump unreachable" error
+
+After updating to **AAPS** 3.4, some Medtronic pumps report a "pump unreachable" error. To fix it, change the encoding type:
+
+1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
+2. Set **Medtronic Encoding** to **Hardware Encoding**.
 
 ## Where to get help
 
