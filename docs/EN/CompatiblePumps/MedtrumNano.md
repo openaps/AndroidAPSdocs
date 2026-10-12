@@ -1,8 +1,7 @@
-# Medtrum Nano / 300U
+(medtrum-nano-300u)=
+# Medtrum Nano 200U / 300U
 
 These instructions are for configuring the Medtrum insulin pump. 
-
-This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
 
 ```{contents} Table of contents
 :depth: 1
@@ -17,13 +16,12 @@ This software is part of a DIY artificial pancreas solution and is not a product
 ## Hardware and software requirements
 * **Compatible Medtrum pumpbase and reservoir patches**
     - Currently supported:
-        - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
+        - Medtrum TouchCare Nano 200U with pumpbase refs: **MD0201** and **MD8201**.
         - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
         - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **Compatible Android phone** with a BLE Bluetooth connection 
     - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
-* [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 ## Before you begin
 
@@ -38,17 +36,18 @@ Previously you may have used your PDM or Medtrum app to send commands to your pu
 Default basal rates are programmed on the pump as defined in the current active profile.
 As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.**
 **The AAPS Profile does not support a 30 minute basal rate time frame**
 If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
 
 **0U/h profile basal rates are NOT supported in AAPS**
-While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate. 
+While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. The minimum profile basal rate is 0.05 U/h.
+
+A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate. 
 
 ## Setup
 
 ```{caution}
-When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app. Have your pump base and a new reservoir patch ready.
+When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app.
 ```
 
 ### Step 1: Select Medtrum pump
@@ -118,7 +117,7 @@ We recommend leaving this enabled when the pump alarms are set to **Silent**. In
 
 This setting changes the behavior of the patch. When enabled, the patch expires after 3 days and gives an audible warning if you have sound enabled. After 3 days and 8 hours the patch stops working.
 
-If this setting is disabled, the patch does not warn you and continues running until the patch battery or reservoir runs out.
+If this setting is disabled, the patch does not warn you before it stops. With recent pump base firmware, a patch runs for 5 days at most.
 
 #### Pump expiry warning [hours]
 
@@ -317,7 +316,7 @@ The driver reads the activation status from the pump. If this works, the wizard 
 
 The Medtrum pump screen (**Manage → Pump**) shows the current status of the Medtrum patch. It also has buttons to change the patch, reset alarms and refresh the status. A banner at the top shows important states, for example **Patch not activated** or **Pump is suspended**.
 
-![Medtrum pump screen](../images/v4/Pumps/medtrum_pump_screen.png)
+![Medtrum pump screen with an active patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
 The screen can show these rows. Some rows only appear when they have a value.
 
