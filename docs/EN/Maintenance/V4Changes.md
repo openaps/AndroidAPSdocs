@@ -70,6 +70,27 @@ In **AAPS** v3, a long press on the profile name opened the profile switch dialo
 
 ---
 
+(v4changes-read-only-management)=
+## Settings protection now also locks the management screens
+
+In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+
+In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+
+- You can browse the entries and **▶ Activate** or use them.
+- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+
+![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+
+```{admonition} What you need to do
+:class: important
+To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+
+If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+```
+
+---
+
 (v4changes-remote-control)=
 ## AAPSClient remote control needs pairing
 

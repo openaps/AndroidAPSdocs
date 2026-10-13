@@ -7,6 +7,14 @@ This is list of some Pumps floating around there, and status of support for them
 :local: true
 ```
 
+## Pumps in AAPS integration phase
+
+**Coming soon:**
+
+Omnipod 5 ([Homepage](https://www.omnipod.com/))
+
+Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+
 ## Pumps that are Loopable
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/)) 
@@ -14,26 +22,6 @@ This is list of some Pumps floating around there, and status of support for them
 **Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-### Omnipod 5 ([Homepage](https://www.omnipod.com/))
-
-**Loop status:** Loop candidate, being worked on. A community [reverse-engineering effort](https://nightscout.github.io/omnipod-five/) for the Omnipod 5 is underway.
-
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
-
-### Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
-
-**Loop status:** Loop candidate, driver in development. The Tandem Bluetooth protocol has been reverse-engineered and a t:Mobi driver is being developed for AAPS in phases. An early phase (pairing, communication, reading status, switching the pump out of Control-IQ mode, getting/setting the basal profile and temporary basal rates, oref0 with TBRs only) is working, while later work on bolus delivery, cartridge changes, pump-history parsing and alerts is still in progress. Work on Trio and Loop is happening in parallel.
-
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled. Initial pairing currently also needs Tandem's companion app.
-
-```{admonition} Not safe for real use yet
-:class: warning
-
-The t:Mobi driver is **experimental and for development testing only**. Important safety checks (such as reconciling treatments against the pump's own history) are not yet implemented. It must **not** be used to deliver insulin to a person or animal. Wait for an official, released AAPS version that lists t:Mobi as supported before relying on it.
-```
-
-**Comments:** t:Mobi has no screen, but it has an Easy Bolus button so you can still dose insulin when away from your phone, and two multicolor lights for simplified alerts. Note that while you are away from your phone AAPS is not looping (you are in full manual mode) unless you switch the pump back to Control-IQ first. Availability is still expanding: rumours suggest the UK around the end of 2026 and the EU in 2027.
 
 ### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
