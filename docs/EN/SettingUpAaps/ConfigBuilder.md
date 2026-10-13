@@ -88,7 +88,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 ### Insulin type differences
 
-* The options 'Rapid-Acting Oref', 'Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape.
+* The options 'Rapid-Acting Oref', 'Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential curve.
 * You can adjust both the DIA and the time to peak. The **Load peak from** presets set the peak to the value recommended for Novorapid, Fiasp or Lyumjev, and the peak values listed below are these recommended defaults.
 * Only change the peak away from its recommended value if you understand the effect of doing so. 'Free-Peak Oref' is intended for advanced users entering a custom peak.
 * The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
