@@ -50,7 +50,7 @@ A private repository gets 2000 free GitHub Actions minutes per month, which is e
 **New key or existing key: this decides whether you can update AAPS.**
 
 - **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place.
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must [export your settings](#ExportImportSettings-Automating-Settings-Export), copy the file off your phone, uninstall the old AAPS, install the new one, then [import your settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps).
+- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password somewhere safe, off your phone.
 ```

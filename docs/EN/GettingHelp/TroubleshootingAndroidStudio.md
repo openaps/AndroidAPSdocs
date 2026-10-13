@@ -9,23 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Lost keystore
-If you use the same keystore when updating **AAPS** you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a safe place.
-
-If you try to install the apk, signed with a different keystore than before, you will get an error message explaining that the installation failed!
-
-In the event that you cannot trace your old keystore or password, proceed as follows:
-
-1. [Export settings](../Maintenance/ExportImportSettings.md) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate a new version of the signed apk as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
-5. Uninstall previous **AAPS** version on your phone.
-6. Install new **AAPS** version on your phone.
-7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
-
-   If you can't find these on your phone, copy them from the external storage to your phone.
-   
-8. Check your battery optimization options and disable them again.
-9. Keep on looping.
+If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 ## Gradle Sync failed
 Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
@@ -261,6 +245,7 @@ Your apk was built successfully and can be transferred to your phone!
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Make sure you have transferred the “app-full-release.apk” file to your phone.
+* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 * If "App not installed" is displayed on your phone follow these steps:
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)

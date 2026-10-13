@@ -25,14 +25,7 @@ Choose this if **any** of these is true:
 - You have forgotten your keystore password or alias.
 
 ```{warning}
-Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you will need to:
-1. [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service…).
-3. Generate a new version of the signed apk as described in Option 1 and transfer it to your phone.
-4. Uninstall previous AAPS version on your phone.
-5. Install new AAPS version on your phone.
-6. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
-7. Restore your data from Nightscout.
+Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Follow the steps in [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 ```
 
 **→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**

@@ -186,6 +186,7 @@ Troubleshooting (start here) <./GettingHelp/GeneralTroubleshooting.md>
 - Troubleshooting NSClient <./GettingHelp/TroubleshootingNsClient.md>
 - Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
 - Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
+- Reinstalling AAPS (new keystore) <./GettingHelp/ReinstallAaps.md>
 - Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 FAQ <./UsefulLinks/FAQ.md>
 Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
