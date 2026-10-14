@@ -96,6 +96,11 @@ Beta 1 release date: 08-10-2026
 
 ### Wear OS
 - [Watch app](../WearOS/WearOsSmartwatch.md) rebuilt in Compose, new tiles and complications, automatic watch face install (Watch Face Push) on Wear OS 6+ @olorinmaia @Philoul
+- CustomWatchface available for WearOS 6.0 (GW7, GW8, GW9...) with a WFF dedicated watchface @Philoul @olorinmaia
+- CustomWatchface can now include 5 Complication slots you can customized (new feature only available for older watches) @Philoul
+- New WFF watchface based on AAPS complications @olorinmaia
+- Corrections in Bolus wizard and Quick wizard result @olorinmaia
+- New BG graph and Running mode activity in main menu @olorinmaia
 
 ### Build
 - CI workflows for tag/branch builds, JDK version mapping @Angus-repo
