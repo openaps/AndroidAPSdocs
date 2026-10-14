@@ -177,6 +177,7 @@ Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google 
 
 When you are done, press "**NEXT**" to go to the next screen.
 
+(setup-wizard-import-settings)=
 ## Import settings
 
 This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
