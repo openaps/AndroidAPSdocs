@@ -28,6 +28,7 @@ html_favicon = '../favicon.ico'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['../_static']
+html_js_files = ['end-of-life.js']
 
 # A list of paths that contain extra templates (or templates that overwrite builtin/theme-specific templates). Relative paths
 # are taken as relative to the configuration directory.
