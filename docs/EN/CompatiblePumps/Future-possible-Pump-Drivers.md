@@ -9,11 +9,15 @@ This is list of some Pumps floating around there, and status of support for them
 
 ## Pumps in AAPS integration phase
 
-**Coming soon:**
+**Coming soon:** drivers for these pumps are in development and already running in test builds.
 
 Omnipod 5 ([Homepage](https://www.omnipod.com/))
 
+![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+
 Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+
+![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
 
 ## Pumps that are Loopable
 
