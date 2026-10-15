@@ -9,7 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## 遺失的密鑰庫
-如果在更新**AAPS**時使用相同的金鑰存檔，你就不必在智慧型手機上卸載先前的版本。 因此建議將金鑰存檔儲存在安全的地方。
+如果在更新**AAPS**時使用相同的金鑰存檔，你就不必在智慧型手機上卸載先前的版本。因此建議將金鑰存檔儲存在安全的地方。
 
 如果你嘗試安裝用與之前不同的金鑰存檔簽署的 apk，你將收到錯誤訊息，解釋安裝失敗！
 
@@ -28,7 +28,7 @@
 9. 繼續循環。
 
 ## Gradle 同步失敗
-Gradle 同步可能因多種原因失敗。 當你收到“gradle 同步失敗”的訊息時，請打開 Android Studio 底部的“建置”選項卡 (1)，檢查顯示的錯誤訊息 (2)。
+Gradle 同步可能因多種原因失敗。當你收到“gradle 同步失敗”的訊息時，請打開 Android Studio 底部的“建置”選項卡 (1)，檢查顯示的錯誤訊息 (2)。
 
 ![Gradle 失敗](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
@@ -49,8 +49,7 @@ Gradle 同步可能因多種原因失敗。 當你收到“gradle 同步失敗�
 ```
 建立檔案 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' 行: 243
 
-存在未提交的變更。
-請重新複製來源，如wiki中所述，並且不要允許 Gradle 更新。
+存在未提交的變更。請重新複製來源，如wiki中所述，並且不要允許 Gradle 更新。
 ```
 
 #### 步驟 1 - 檢查 git 安裝
@@ -63,7 +62,7 @@ Gradle 同步可能因多種原因失敗。 當你收到“gradle 同步失敗�
 
     注意：Git 和版本之間有一個空格和兩個連字符！
 
-  * 你必須收到一條訊息，告訴你安裝了什麼 Git 版本，如上圖所示。 在這種情況下，請轉到 [第 2 步](#troubleshooting-android-studio-check-for-uncommitted-changes)。
+  * 你必須收到一條訊息，告訴你安裝了什麼 Git 版本，如上圖所示。在這種情況下，請轉到 [第 2 步](#troubleshooting-android-studio-check-for-uncommitted-changes)。
 
   * 如果你收到訊息提示
     ```
@@ -81,7 +80,7 @@ Gradle 同步可能因多種原因失敗。 當你收到“gradle 同步失敗�
 
     請記下它存儲在哪個目錄。
 
-  * 轉到 Windows 中的環境變數，選擇變數“PATH”，然後點擊編輯。 請添加你找到 Git 安裝的目錄。
+  * 轉到 Windows 中的環境變數，選擇變數“PATH”，然後點擊編輯。請添加你找到 Git 安裝的目錄。
 
   * 儲存並關閉。
 
@@ -99,9 +98,9 @@ Gradle 同步可能因多種原因失敗。 當你收到“gradle 同步失敗�
 
       ![提交標籤：回滾變更](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * 文件將再次從 Git 服務器中獲取。 如果在提交標籤中沒有其他更改，請轉到[第3步](#gradle-resync)。
+    * 文件將再次從 Git 服務器中獲取。如果在提交標籤中沒有其他更改，請轉到[第3步](#gradle-resync)。
 
-  * 如果你能看到“未版本控制的文件”，則可能不小心將文件儲存在源代碼目錄中。 也許它們是重要的文件：例如你的金鑰存儲文件，應移動到其他地方。 如果你不知道那些文件是什麼，且你沒有自己創建它們，你可以刪除它們。
+  * 如果你能看到“未版本控制的文件”，則可能不小心將文件儲存在源代碼目錄中。也許它們是重要的文件：例如你的金鑰存儲文件，應移動到其他地方。如果你不知道那些文件是什麼，且你沒有自己創建它們，你可以刪除它們。
 
     * 使用你電腦上的常規文件管理器將該文件移動或剪切並粘貼到安全的地方。
 
@@ -139,8 +138,7 @@ git config --global user.email 你的email@xxx.com
 ![不相容的 Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
 ```
-你的建置目前配置為使用不相容的 Java 21.0.3 和 Gradle 8.2。
-無法同步專案。
+你的建置目前配置為使用不相容的 Java 21.0.3 和 Gradle 8.2。無法同步專案。
 
 我們建議升級到 Gradle 版本 8.9。
 
@@ -163,28 +161,28 @@ git config --global user.email 你的email@xxx.com
 
 ![開啟Gradle設定](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  在 **Gradle JDK** 欄位中，檢查是否選擇了適當的版本（1）如果沒有，請點選該欄位，並查看它是否已經在列表中可用。 下面的範例顯示 JVM 21 標示為“jbr-21”。 如果你找到了，請選擇它，就完成了。 如果不可用，則選擇“下載 JDK”。
+3.  在 **Gradle JDK** 欄位中，檢查是否選擇了適當的版本（1）如果沒有，請點選該欄位，並查看它是否已經在列表中可用。下面的範例顯示 JVM 21 標示為“jbr-21”。如果你找到了，請選擇它，就完成了。如果不可用，則選擇“下載 JDK”。
 
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. 在版本 (1) 中，選擇你的 **AAPS** 版本所需的 JDK（當你檢查需求表時做的註記）。 在廠商（2）中選擇任何廠商。 位置 (3)：請勿更改。
+4. 在版本 (1) 中，選擇你的 **AAPS** 版本所需的 JDK（當你檢查需求表時做的註記）。在廠商（2）中選擇任何廠商。位置 (3)：請勿更改。
 
 ![選擇JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
 5.  用**OK**關閉**設定**對話框。
-6. 你現在需要重新啟動Gradle同步。 請按照[Gradle Resync](#gradle-resync)上的指示進行操作。
+6. 你現在需要重新啟動Gradle同步。請按照[Gradle Resync](#gradle-resync)上的指示進行操作。
 
 (incompatible-version-of-android-gradle-plugin)=
 ### 不相容的 Android Gradle 外掛版本
 
   如果你遇到以下錯誤訊息
 
-`專案使用了不相容版本 (AGP x.x.x) 的 Android Gradle 外掛。 最新支援的版本為 AGP x.x.x`
+`專案使用了不相容版本 (AGP x.x.x) 的 Android Gradle 外掛。最新支援的版本為 AGP x.x.x`
 
   ![不相容的 Android Gradle 外掛版本](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  你使用的是過期版本的 Android Studio。 在選單中，轉到幫助 > 檢查更新，並安裝找到的所有 Android Studio 及其外掛的更新。
+  你使用的是過期版本的 Android Studio。在選單中，轉到幫助 > 檢查更新，並安裝找到的所有 Android Studio 及其外掛的更新。
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 ### 無法解析/無緩存版本
@@ -204,7 +202,7 @@ git config --global user.email 你的email@xxx.com
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### 無法啟動守護程序進程
 
-  如果你看到如下所示的錯誤訊息，你可能使用的是 Windows 10 32 位系統。 這在 Android Studio 3.5.1 及以上版本中不受支援，很遺憾 **AAPS** 開發者無法對此做出任何改變！
+  如果你看到如下所示的錯誤訊息，你可能使用的是 Windows 10 32 位系統。這在 Android Studio 3.5.1 及以上版本中不受支援，很遺憾 **AAPS** 開發者無法對此做出任何改變！
 
   網路上有關於如何判斷您是否擁有 32 位或 64 位作業系統的資訊 - 例如 [這個](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)。
 
@@ -232,7 +230,7 @@ git config --global user.email 你的email@xxx.com
 
 ![生成了 0 個建置變體的 APK](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-這是一個錯誤警告。 檢查你選擇的“目的地資料夾”以進行生成（步驟 [生成簽名 APK](#Building-APK-generate-signed-apk)），你會在那裡找到生成的 apk！
+這是一個錯誤警告。檢查你選擇的“目的地資料夾”以進行生成（步驟 [生成簽名 APK](#Building-APK-generate-signed-apk)），你會在那裡找到生成的 apk！
 
 
 ## 應用程序是用編譯器/Kotlin 警告建立的
@@ -246,7 +244,7 @@ git config --global user.email 你的email@xxx.com
 
 ## AAPS 未接收 CGM 資料
 
-* 如果你正在使用修補過的 Dexcom G6 應用程式：此應用程式已過時。 請改用[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)應用程序。
+* 如果你正在使用修補過的 Dexcom G6 應用程式：此應用程式已過時。請改用[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)應用程序。
 
 * 如果你正在使用 xDrip+：請按照 [xDrip+ 設定頁面](#xdrip-identify-receiver) 上的描述來識別接收器。
 
@@ -287,7 +285,7 @@ git config --global user.email 你的email@xxx.com
 
 ## 最壞的情況
 
-如果上述方法無法解決你的構建問題，你可能希望嘗試完全卸載 Android Studio，然後從頭開始構建。  一些用戶發現這可以解決他們的構建問題。  在刪除 Android Studio 時，請勿刪除 Android 使用者設定，並**確保卸載與 Android Studio 相關的所有文件。** 如果你不完全移除 Android Studio 及所有隱藏文件，卸載可能會導致新的問題，而不是解決你當前存在的問題。 可以在網際網路上找到完整卸載指南，例如
+如果上述方法無法解決你的構建問題，你可能希望嘗試完全卸載 Android Studio，然後從頭開始構建。一些用戶發現這可以解決他們的構建問題。在刪除 Android Studio 時，請勿刪除 Android 使用者設定，並**確保卸載與 Android Studio 相關的所有文件。** 如果你不完全移除 Android Studio 及所有隱藏文件，卸載可能會導致新的問題，而不是解決你當前存在的問題。可以在網際網路上找到完整卸載指南，例如
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10)。
 
