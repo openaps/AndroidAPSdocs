@@ -1,8 +1,8 @@
 # 在你的 Wear OS 手錶上設置 AAPS
 
-以下說明適用於您需要自行建置的 **AAPS Wear** APK。 如果您尚未建置，請參閱 [此處](../WearOS/BuildingAapsWearOS.md)連結的指南 在建置時，請確保使用與手機版 **AAPS** APK 相同的金鑰庫（keystore）檔案。
+以下說明適用於您需要自行建置的 **AAPS Wear** APK。如果您尚未建置，請參閱 [此處](../WearOS/BuildingAapsWearOS.md)連結的指南在建置時，請確保使用與手機版 **AAPS** APK 相同的金鑰庫（keystore）檔案。
 
-您也可以將其中部分資訊應用於 **AAPSClient** 與 **PumpControl** 的 **Wear** APK。 每個 **Wear** 應用程式都會與其對應的手機應用程式進行通訊。 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。
+您也可以將其中部分資訊應用於 **AAPSClient** 與 **PumpControl** 的 **Wear** APK。每個 **Wear** 應用程式都會與其對應的手機應用程式進行通訊。例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。
 
 ## Wear OS 版本和相容性
 
@@ -59,11 +59,11 @@ _本指南假設你正在設置運作 Wear OS 3 或更低版本的 Samsung Galax
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-“Galaxy Wearable”應用程式內也有一個使用手冊部分。 在手機上打開 Galaxy Wearable，搜尋手錶，嘗試將手錶與手機配對。 根據你的版本，這可能會提示你從 Play 商店安裝第三個應用程式“Galaxy Watch 4 外掛”（下載需要一些時間）。 在手機上安裝此應用程式，然後再次在 Galaxy Wearable 應用程式中嘗試將手錶與手機配對。 透過一系列選單並勾選各種偏好設定。
+“Galaxy Wearable”應用程式內也有一個使用手冊部分。在手機上打開 Galaxy Wearable，搜尋手錶，嘗試將手錶與手機配對。根據你的版本，這可能會提示你從 Play 商店安裝第三個應用程式“Galaxy Watch 4 外掛”（下載需要一些時間）。在手機上安裝此應用程式，然後再次在 Galaxy Wearable 應用程式中嘗試將手錶與手機配對。透過一系列選單並勾選各種偏好設定。
 
 ## 設置 Samsung 帳號
 
-你需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。 如果你已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，你無法簡單地將其更改為成人帳戶。 解決此問題的一種方法是將目前的出生日期修改為使目前年齡為 12 歲零 363 天。 第二天，該帳戶將被轉換為成人帳戶，然後你可以繼續設置 Samsung 帳戶。
+你需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。如果你已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，你無法簡單地將其更改為成人帳戶。解決此問題的一種方法是將目前的出生日期修改為使目前年齡為 12 歲零 363 天。第二天，該帳戶將被轉換為成人帳戶，然後你可以繼續設置 Samsung 帳戶。
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -71,22 +71,21 @@ _本指南假設你正在設置運作 Wear OS 3 或更低版本的 Samsung Galax
 
 從 Android Studio 將 Wear.apk 載入到你的手機，可以透過以下方式進行：
 
-a) 使用 USB 傳輸線將 **AAPS** wear apk 檔案放入手機，然後將其“側載”到手錶上。 透過 USB 將 Wear.apk 傳輸到手機的下載資料夾；或
+a) 使用 USB 傳輸線將 **AAPS** wear apk 檔案放入手機，然後將其“側載”到手錶上。透過 USB 將 Wear.apk 傳輸到手機的下載資料夾；或
 
 b) 從 Android Studio 將 Wear.apk 剪切並粘貼到你的 Gdrive 中。
 
 
-要將 AAPS 側載到智慧型手錶，你可以使用： 1) Wear Installer 2 2) Easy Fire Tools 3) Android 偵錯橋接（ADB） 我們建議使用 Wear Installer 2，因為影片中的說明與流程非常清楚、易於理解。 若 Wear Installer 2 無法使用，請改用
+要將 AAPS 側載到智慧型手錶，你可以使用： 1) Wear Installer 2 2) Easy Fire Tools 3) Android 偵錯橋接（ADB） 我們建議使用 Wear Installer 2，因為影片中的說明與流程非常清楚、易於理解。若 Wear Installer 2 無法使用，請改用
 
 ### 使用 Wear Installer 2 將 **AAPS** Wear 從手機側載到手錶上
 
  ![圖像](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
-Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發，你可以從 Google Play 將其下載到手機上，並用來將 AAPS wear 應用程式側載到手錶上。 該應用程式包含一個便捷的“如何側載”[影片](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
+Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發，你可以從 Google Play 將其下載到手機上，並用來將 AAPS wear 應用程式側載到手錶上。該應用程式包含一個便捷的“如何側載”[影片](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
 
 ```{tip}
-對於 Wear OS 5 智慧型手錶，請參閱[此影片](https://www.youtube.com/watch?v=yef_qGvcCnk)。
-參見故障排除提示[如下](#BuildingAapsWearOs-WearOS5-TShoot)。
+對於 Wear OS 5 智慧型手錶，請參閱[此影片](https://www.youtube.com/watch?v=yef_qGvcCnk)。參見故障排除提示[如下](#BuildingAapsWearOs-WearOS5-TShoot)。
 ```
 
 該視頻提供了所有必要的細節（最好在單獨的設備上打開影片，以便在設置手機時觀看）。
@@ -113,7 +112,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 回到設定選單頂端，捲動至底部，在「關於手錶」下方可看到「開發人員選項」。
 
-在“開發者選項”中，打開“ADB 偵錯”和“無線偵錯”。 後者將顯示手錶的 IP 地址，其最後兩位數字每次與新手機配對時都會改變。 大致會是：**192.168.1.214**.5555（忽略最後 4 位數）。 請注意，每次將 AAPS 切換到新手機時，這個地址的最後兩位數字（這裡為“20”）將發生變化。
+在“開發者選項”中，打開“ADB 偵錯”和“無線偵錯”。後者將顯示手錶的 IP 地址，其最後兩位數字每次與新手機配對時都會改變。大致會是：**192.168.1.214**.5555（忽略最後 4 位數）。請注意，每次將 AAPS 切換到新手機時，這個地址的最後兩位數字（這裡為“20”）將發生變化。
 
 ![圖像](../images/wearos/easyfire04.png)
 
@@ -121,7 +120,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ![圖像](../images/wearos/easyfire05.png)
 
-然後點擊右上角的插頭圖示。 連線後會變成綠色。
+然後點擊右上角的插頭圖示。連線後會變成綠色。
 
 ![圖像](../images/wearos/easyfire06.png)
 
@@ -139,19 +138,19 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 - 若要安裝 ADB，請從以下位置下載： https://developer.android.com/tools/releases/platform-tools
 - 開啟終端機。
-- 在 Windows 中，於磁碟機 `C:` 底下建立名為 `adb` 的新資料夾。 開啟你在上方下載的 `platform-tools-latest-windows.zip` 檔案。 將 `platform-tools` 內的所有檔案複製到 `C:\adb`，並以命令提示字元開啟此資料夾（在資料夾按右鍵並選擇 Open in Terminal）。 輸入下列指令，將路徑指向 ADB 所在的資料夾： `setx PATH "%PATH%;C:\adb"`
+- 在 Windows 中，於磁碟機 `C:` 底下建立名為 `adb` 的新資料夾。開啟你在上方下載的 `platform-tools-latest-windows.zip` 檔案。將 `platform-tools` 內的所有檔案複製到 `C:\adb`，並以命令提示字元開啟此資料夾（在資料夾按右鍵並選擇 Open in Terminal）。輸入下列指令，將路徑指向 ADB 所在的資料夾： `setx PATH "%PATH%;C:\adb"`
 - 在 Mac 上，你可以改用 Homebrew，而非手動安裝： `brew install android-platform-tools`
 
 在手錶上：
 - 前往 設定 → 關於手錶 → **軟體資訊**
 - 連點 軟體版本 7 次，直到看到已啟用開發人員模式。
-- 前往 設定 → 開發人員選項。 啟用 **ADB 偵錯**
+- 前往 設定 → 開發人員選項。啟用 **ADB 偵錯**
 - 前往 設定 → 開發人員選項 → 無線偵錯 → **配對新裝置**
 
 你會看到顯示 Wi‑Fi 配對代碼以及 IP 位址與連接埠： ![圖像](../images/wearos/ADB03.png)
 
 - 在終端機中： `adb pair ipaddress:port` 例如 `adb pair 10.10.1.125:36299`
-- 系統會要求輸入配對代碼。 輸入該代碼。
+- 系統會要求輸入配對代碼。輸入該代碼。
 - 你會看到以下回應：<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - 在終端機中輸入： <br>`adb devices`。<br> 你應該會看到類似以下的內容：<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
@@ -161,11 +160,11 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ### Wear OS 5的一般故障排除建議
 
-- 請勿使用 Wi-Fi 分享。 這樣做是行不通的。
-- 不需要在手機上啟用 ADB 偵錯（僅在手錶上）。 在手機上停用 ADB 偵錯。
+- 請勿使用 Wi-Fi 分享。這樣做是行不通的。
+- 不需要在手機上啟用 ADB 偵錯（僅在手錶上）。在手機上停用 ADB 偵錯。
 - 確保你連接到手機和手錶可以彼此看到的本地網路（不要使用 Wi-Fi 客用網路連接）。
 - 對於 GW7，你需要使用 Wear Installer 2 安裝，因為它在安裝時會提供選擇 AAPS（自訂）錶盤的選項。
-- 確保手錶和手機在同一網路和 Wi-Fi 設備上。 特別是 Wi-Fi 重複器或接取點可能會產生問題。
+- 確保手錶和手機在同一網路和 Wi-Fi 設備上。特別是 Wi-Fi 重複器或接取點可能會產生問題。
 - 確保靠近你的主要路由器，然後重啟手機和手錶。
 
 **配對中 :**
@@ -174,7 +173,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 - Wear Installer：在 Wear Installer 應用程式中輸入 IP 地址。
 - 選擇配對新設備，記下顯示的配對碼和埠號。
 - Wear Installer：輸入配對碼 + 空格 + 埠號。
-- Wear Installer 應該報告配對成功。 如果沒有，請退出 Wear Installer，然後重試。
+- Wear Installer 應該報告配對成功。如果沒有，請退出 Wear Installer，然後重試。
 
 一旦配對成功，你應該能安裝 AAPS Wear apk：
 
@@ -184,7 +183,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ## 設置 **AAPS** 手機與手錶的連線
 
-最後一步是在手機上設定 **AAPS**，使其能與手錶上的 **Wear.apk** 進行互動。 為此，在 組態建置工具 中啟用 Wear 外掛：
+最後一步是在手機上設定 **AAPS**，使其能與手錶上的 **Wear.apk** 進行互動。為此，在 組態建置工具 中啟用 Wear 外掛：
 
 * 前往手機上的 **AAPS** 應用程式
 
@@ -194,7 +193,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ![Wear OS](../images/WearOS.png)
 
-要更改 **AAPS** 手錶錶盤，請按下手錶的主畫面，他將進入“自訂”模式。 然後向右滑動，直到看到所有 **AAPS** 錶盤。
+要更改 **AAPS** 手錶錶盤，請按下手錶的主畫面，他將進入“自訂”模式。然後向右滑動，直到看到所有 **AAPS** 錶盤。
 
 如果 **AAPS** Wear.apk 已成功側載到智慧型手錶上，他將顯示如下：
 
@@ -212,7 +211,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 2.  檢查智慧型手錶是否已連線到網際網路（而不僅僅是透過藍牙與手機連線）。
 3.  檢查 **AAPS** 手機和智慧型手錶是否已在 Samsung 應用程式中配對或連線。
 4.  也可能需要對手機和智慧型手錶進行硬重啟（即關閉並重新啟動手機）。
-5.  假設你已經成功下載 Wear.apk 到手機，但未收到任何血糖資料，_請檢查_ 你是否已將正確的 **AAPS** apk 版本側載到手錶上。 如果你的 AAPS wear.apk 版本列為以下任一項： a) “wear-AAPSClient-release”； b) ‘wear-full-release.aab’; 或 c) 標題中出現“debug”字樣， 則表明你在建置過程中未選擇正確的 Wear OS apk 版本。
+5.  假設你已經成功下載 Wear.apk 到手機，但未收到任何血糖資料，_請檢查_ 你是否已將正確的 **AAPS** apk 版本側載到手錶上。如果你的 AAPS wear.apk 版本列為以下任一項： a) “wear-AAPSClient-release”； b) ‘wear-full-release.aab’; 或 c) 標題中出現“debug”字樣， 則表明你在建置過程中未選擇正確的 Wear OS apk 版本。
 6.  檢查路由器是否未將設備相互隔離。
 
 更多問題排除提示請參閱[這裡](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
@@ -221,13 +220,13 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ## 在 WearOS 手錶上切換到 AAPS 手錶外觀
 
-AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。 當你在手錶上安裝 AAPS Wear APK 後，他們將可供使用。 以下是選擇其中一個手錶外觀的步驟：
+AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。當你在手錶上安裝 AAPS Wear APK 後，他們將可供使用。以下是選擇其中一個手錶外觀的步驟：
 
 1. 在手錶上（假設使用 WearOS），長按目前手錶外觀以打開手錶外觀選擇畫面，然後向右捲動直到看到「新增手錶外觀」按鈕並選擇他
 
 ![Screenshot_20231123_124657_sysui](../images/efd4268f-0536-4a31-9ba1-f98108f32483.png)
 
-2. 向下捲動到列表底部，直到看到「已下載」部分，找到「AAPS（自訂）」並點擊圖像中央將其新增至你目前的手錶外觀清單。 不用擔心目前「AAPS（自訂）」手錶外觀的外觀，我們將在下一步選擇你喜歡的外觀。
+2. 向下捲動到列表底部，直到看到「已下載」部分，找到「AAPS（自訂）」並點擊圖像中央將其新增至你目前的手錶外觀清單。不用擔心目前「AAPS（自訂）」手錶外觀的外觀，我們將在下一步選擇你喜歡的外觀。
 
 ![Screenshot_20231123_124619_sysui](../images/036dc7c4-6672-46c8-b604-8810a16a2eb3.png)
 
@@ -239,7 +238,7 @@ AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。 當你在手�
 
 ![Screenshot_20231123_130410_AAPS](../images/adde2eca-1df7-4382-b9ab-346819c35d9d.png)
 
-5. 查看你的手錶，現在應該顯示你選擇的「AAPS（自訂）」手錶外觀。 等待幾秒鐘讓他重新整理。 你現在可以透過長按錶面，然後在錶面圖像上按“自訂”按鈕來自訂錶面等項目。
+5. 查看你的手錶，現在應該顯示你選擇的「AAPS（自訂）」手錶外觀。等待幾秒鐘讓他重新整理。你現在可以透過長按錶面，然後在錶面圖像上按“自訂”按鈕來自訂錶面等項目。
 
 ## AAPSv2 手錶外觀 - 圖例
 
