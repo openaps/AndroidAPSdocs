@@ -19,8 +19,8 @@ Acestea sunt specificațiile modelului **Omnipod DASH** ("DASH") și ce îl dife
 ## Constrângeri/probleme AAPS cunoscute pentru Omnipod DASH
 - Android 16 necesită **AAPS** versiunea 3.3.2.1 sau mai târziu.
 - Recomandare generală este de a rula **AAPS** pe Android 14 sau 16. Android 15 are multe probleme [raportate ](https://github.com/nightscout/AndroidAPS/issues/3471) de către comunitate. Cu toate acestea, dacă rulați pe Android 15, este posibil să fie nevoie să activați și să utilizați Bluetooth Bonding cu succes pompele, vedeți [Depanare](../GettingHelp/GeneralTroubleshooting.md) pentru mai multe informații despre setările de asociere.
-- Temporary Basal rate changes (which occur frequently when the loop is active, especially overnight) result in under-delivery of insulin. This is effectively a hardware limitation of the Omnipod DASH. The issue has been addressed in AAPS 3.4.2.3, but the functionality is currently opt-in. Follow the [Basal Drift Fix Instructions ](#omnipod-dash-Basal-drift-fix) instructions to enable it. For more information regarding the fix see [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more info.
-- Dash acceptă doar rata bazale în pași de 0,05 U/h. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. Dacă afișați Gestionare Pompă/Istoric Pompă vă va arată că s-a setat o bazală de 0,05. Acest lucru înseamnă, de asemenea, cea mai mică rată bazală permisă de DASH din **AAPS** este de 0,05U/h.
+- Modificările ratei bazale temporare (care apar frecvent atunci când bucla este activă, în special peste noapte) duc la subdozarea insulinei. Aceasta este efectiv o limitare fizică a pompei Omnipod Dash. Problema a fost abordată în cadrul AAPS 3.4.2.3, dar în prezent funcționalitatea este opțională. Urmați [instrucțiunile pentru reparația derivei de bazală](#omnipod-dash-Basal-drift-fix) pentru a le activa. Pentru mai multe informații despre reparație, vedeți [Problema Github - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) pentru mai multe informații.
+- Dash acceptă doar rata bazale în pași de 0,05 U/h. Dacă încercați să setați bazala cu pași de 0,01 în profilul **AAPS**, AAPS nu vă va da un avertisment, chiar dacă pompa va rotunji rata bazală în pași de 0,05. Dacă afișați Gestionare Pompă/Istoric Pompă vă va arată că s-a setat o bazală de 0,05. Acest lucru înseamnă, de asemenea, cea mai mică rată bazală permisă de DASH din **AAPS** este de 0,05U/h.
 - Starea de activare a unei pompe este stocată în fișierul de setări, dacă exportați un fișier de setări cu o pompă activă. Apoi schimbați la o nouă pompă, restabiliți setările din exportul anterior și veți fi restabilit activarea pompei vechi și veți fi eliminat activarea pompei noi. De aceea, vă recomandăm să exportați setările după fiecare activare de pompă pentru a permite o restaurare a stării de activare a pompei, dacă ceva se întâmplă cu dispozitivul dumneavoastră.
 - La setarea unui profil bazal nou, DASH va suspenda administrarea înainte de a seta noul **Profil** bazal. Dacă există o întrerupere sau o eroare de comunicare, profilul bazalei nu va reporni automat. Vedeți secțiunea [Reluarea Administrării de insulină](#omnipod-dash-resuming-insulin-delivery) pentru detalii.
 - În cazul în care alertele sunt configurate, iar pompa este pe cale să expire, pompa va continua să piuie până când alertele sunt reduse la tăcere, Vedeți [Suprimarea alertelor pompei](#omnipod-dash-silencing-pod-alerts) pentru detalii.
@@ -70,8 +70,8 @@ Atâta timp cât **AAPS** este operațional va trimite comenzi de ajustare ale r
 Când pentru vreun motiv anume pompa nu primește comenzi noi (de exemplu pentru că comunicarea a fost pierdută din cauza distanței pompă ➜ telefon) pompa va reveni la rata bazală implicită așa cum a fost setată în [**profilul**](../SettingUpAaps/YourAapsProfile.md) dumneavoastră.
 
 ### **Profilul(urile) AAPS nu acceptă intervale de 30 minute pentru ratele bazale**
-Dacă sunteți la început cu **AAPS** și configurați [**profilul**](../SettingUpAaps/YourAapsProfile.md) ratei bazale pentru prima dată, vă rugăm să rețineți că ratele bazale la intervale de o jumătate de oră nu sunt acceptate. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
-You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Chiar dacă hardware-ul DASH însuși suportă incrementele de 30 de minute ale **profilulului** ratei bazale, **AAPS** NU acceptă această caracteristică.
+Dacă sunteți la început cu **AAPS** și configurați [**profilul**](../SettingUpAaps/YourAapsProfile.md) ratei bazale pentru prima dată, vă rugăm să rețineți că ratele bazale la intervale de o jumătate de oră nu sunt acceptate. De exemplu, pe telecomanda Omnipod, dacă aveţi o rată bazală de 1,1 unități care începe la ora 09:30 și cu o durată de 2 ore care se termină la ora 11:30, nu este posibilă reproducerea exactă acestui **Profil** de bazale în **AAPS**.  
+Va trebui să schimbați această rată bazală de 1,1 unități într-un interval de timp de fie 9:00-11:00, sau 10:00-12:00. Chiar dacă hardware-ul DASH însuși suportă incrementele de 30 de minute ale **profilulului** ratei bazale, **AAPS** NU acceptă această caracteristică.
 
 ### **Valori bazale de 0U/h ale profilului NU sunt acceptate în AAPS**
 Deși DASH acceptă o rată bazală de zero, **AAPS** folosește multiplii ai ratelor bazale din **Profil** pentru a determina tratamentul automat; nu poate funcționa cu rată bazală de zero.  
@@ -480,42 +480,42 @@ Notă suplimentară:
   * **SMS** - Returnează valoarea sau 50+U pentru răspunsuri SMS
   * **Nightscout** - Încarcă în Nightscout valoarea de 50 atunci când sunt peste 50 de unități (versiunea 14.07 și mai vechi).  Versiunile mai noi vor raporta o valoare de 50+ atunci când depășesc 50 de unități.
 
-(omnipod-dash-known-issues-workarounds)=
+(omnipod-dash-issues-workarounds)=
 
-## Known Issues Workarounds
+## Soluții provizorii pentru probleme cunoscute
 
-This section covers common workarounds and settings that need to be changed to enable a feature to work around a community reported issue that has a fix. Spre exemplu the Basal drift enable process is documented here.
+Această secțiune acoperă soluțiile provizorii și setările comune ce trebuie modificate pentru a activa o funcționalitate, ca alternativă la o problemă raportată de comunitate pentru care există o rezolvare. Spre exemplu procesul de derivă al bazalei este documentat aici.
 
 (#omnipod-dash-Basal-drift-fix)=
 
-### Basal Drift Fix Instructions
+### Instrucțiuni pentru repararea derapajului de bazală
 
-The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than **AAPS** expects, see [Issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more technical details.
+Pompa Omnipod Dash are o limitare care o poate face să livreze mai puțină insulină bazală decât **AAPS** așteptă, Vezi [Problema #4783](https://github.com/nightscout/AndroidAPS/issues/4783) pentru mai multe detalii tehnice.
 
-The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new Basal rate.
+Dash folosește un cronometru intern pentru a determina când este livrat un puls bazal de 0,05 U. Odată ce intervalul de cronometru a expirat, se administrează pulsul. Cu toate acestea, acest cronometru este repornit ori de câte ori are loc o modificare a ratei bazale, de exemplu când **AAPS** trimite o nouă rată bazală.
 
-When used in combination with looping, this leads to under-delivery of basal insulin, as the algorithm updates the basal rate on the pump frequently.
+Când este utilizat în combinație cu bucla, acest lucru duce la subdozarea insulinei bazale, deoarece algoritmul actualizează rata bazală din pompă în mod frecvent.
 
-The issue is most apparent during the night. During daytime operation, SMBs often result in a basal rate of 0, which masks the effect. In observed usage, this results in approximately 10% of the expected Total Daily Dose (TDD) not being delivered over a 24-hour period. Additionally, glucose targets are often not reached overnight, particularly after meals with prolonged glucose impact (e.g. pasta).
+Problema se prezintă cel mai evident noaptea. În timpul operațiunii de zi cu zi, administrările de SMB duc adesea la o rată bazală de 0, ceea ce maschează efectul. În ceea ce privește utilizarea observată, aceasta determină ca aproximativ 10% din doza zilnică totală (DZT) așteptată să nu fie administrată pe o perioadă de 24 ore. În plus, adesea obiectivele privind glicemia nu sunt atinse peste noapte, în special după mesele cu impact prelungit asupra glicemiei (spre exemplu, paste făinoase).
 
-***NOTE:** This issue is especially important to understand for people on very small dosages of insulin, Children for example.*
+***NOTĂ:** Această problemă este deosebit de importantă pentru persoanele care au doze foarte mici de insulină, spre exemplu, copiii.*
 
-#### Enable Basal Drift Fix in AAPS
+#### Activează rezolvarea deviației de bazală în AAPS
 
-You must be running AAPS Version 3.4.2.3 or later for this feature.
+Trebuie să rulați versiunea 3.4.2.3 sau mai nouă de AAPS pentru această funcție.
 
-The Basal Drift Fix is not enabled by default on AAPS.
+Rezolvarea deviației de bazală nu este activată în mod implicit în AAPS.
 
-**To enable it:**
+**Pentru a o activa:**
 
-1. Create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+1. Creați un fișier gol numit `omnipod_drift_compensation` (2) în subdosarul `extra` (1) al [directorului AAPS](#preferences-maintenance-settings) de pe telefonul dumneavoastră.
 
    ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
 
-   ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
+   ***NOTĂ:** Asigurați-vă că verificați în setările AAPS unde este dosarul AAPS, și că ați plasat fișierul în cel corect, un număr de mai multe persoane au fost depistate punând fișierul în dosarul greșit.*
 
-2. Restart **AAPS**. This must be done for it to recognise the file is present and enable the drift compensation feature.
-3. Please visit this [Github issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) and thumbs up the first post indicating you are using this feature, we need this data to help demonstrate the feature is widely used. Once there is significant community adoption the removal of the enable file will be possible, we appreciate your support here.
+2. Reporniți **AAPS**. Acest lucru trebuie făcut pentru a recunoaște că fișierul este prezent și pentru a activa funcția de compensare a derivei.
+3. Vă rugăm să vizitați această [ problemă Github #4783](https://github.com/nightscout/AndroidAPS/issues/4783) și să aprobați prima postare care indică faptul că utilizați această caracteristică, avem nevoie de aceste date pentru a putea demonstra că această caracteristică este utilizată pe scară largă. Odată ce va exista o adopție comunitară semnificativă, va fi posibilă eliminarea fișierului activat, apreciem sprijinul dumneavoastră aici.
 
 ## Depanare
 
