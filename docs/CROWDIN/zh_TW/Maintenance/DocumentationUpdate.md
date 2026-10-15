@@ -3,12 +3,12 @@
 ## 2026年3月
 
 - [新增 CLI 建置選項](../SettingUpAaps/CLIBuild.md) @je-l
-- 將 *Computer Build* 重新命名為 *Android Studio Build*。 保留檔案名稱以用於 URL。
+- 將 *Computer Build* 重新命名為 *Android Studio Build*。保留檔案名稱以用於 URL。
 
 ## 2025年1月
 
 - [3.4](#version3400) 版發佈與文件更新彙總（嚮導、電腦建置版本、組態建置工具）
-- CGM 清單更新。 已移除 Dexcom G5、Tomato、Glimp。
+- CGM 清單更新。已移除 Dexcom G5、Tomato、Glimp。
 - [部位輪替介面](#Aapsscreens-site-rotation)
 - [運行模式](#AapsScreens-running-mode)
 - [自動調整](../AdvancedOptions/Autotune.md)
@@ -59,7 +59,7 @@
 
 2022年3月到2024年9月的歷史紀錄遺失
 
-隨著 3.2 的重製，一些過時的信息已被移除。 你可以在之前的文件版本中找到它：
+隨著 3.2 的重製，一些過時的信息已被移除。你可以在之前的文件版本中找到它：
 
 AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.html) 獲得。
 
