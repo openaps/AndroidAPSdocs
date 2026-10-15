@@ -24,7 +24,7 @@ Some bridges are still available on the market:
 ## 2. 使用 Diabox
 
 - Diabox 是 Bubble 的官方配套应用。
-- 安装 [Diabox](https://t.me/s/DiaboxApp)。 在“设置”、“集成”中，启用“与其他应用程序共享数据”。
+- 安装 [Diabox](https://t.me/s/DiaboxApp)。在“设置”、“集成”中，启用“与其他应用程序共享数据”。
 
 ![Diabox](../images/Diabox.png)
 
