@@ -59,6 +59,8 @@ Există mai multe bloguri cu sfaturi bune pentru a vă ajuta să înțelegeți c
 - [Cum să limităm vârfurile de după masă](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DiYPS
 - [Hormonii și autosens](https://seemycgm.com/2017/06/06/hormones-2/) Vedeți CGM
 
+(FAQ-emergency-equipment)=
+
 ### Ce echipamente pentru situații de urgență se recomandă să aveți la dumneavoastră întotdeauna?
 
 Trebuie să aveți cu dumneavoastră același echipament de urgență ca oricare altă persoană cu DZ1 ce folosește tratamentul cu pompă de insulină. Când folosiți bucla în AAPS, este recomandat cu tărie să aveți următorul echipament suplimentar cu sau în apropierea dumneavoastră:
