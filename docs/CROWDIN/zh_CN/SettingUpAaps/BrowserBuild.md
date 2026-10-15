@@ -8,7 +8,7 @@ GitHub Actions 构建流程
 
 ## 自行构建而非下载
 
-**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。 构建该应用供自己使用是合法的，但不得将副本提供给他人**
+**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。构建该应用供自己使用是合法的，但不得将副本提供给他人**
 
 详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
 
@@ -16,9 +16,9 @@ GitHub Actions 构建流程
 
 ## 构建 AAPS 的设备与软件规范
 
-我们推荐使用 Android 设备。 你也可以使用电脑或 iOS 设备。
+我们推荐使用 Android 设备。你也可以使用电脑或 iOS 设备。
 
-你需要在浏览器中打开多个标签页，并频繁地在它们之间切换。 例如使用 Chrome 浏览器：
+你需要在浏览器中打开多个标签页，并频繁地在它们之间切换。例如使用 Chrome 浏览器：
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
@@ -39,7 +39,7 @@ GitHub Actions 构建流程
 
 ### GitHub 账号
 
-如果你还没有 GitHub 账号，你需要创建一个 GitHub 账号。 你可以使用电子邮件注册，也可以通过 Google 账号进行关联注册。 请按照注册和验证流程进行操作。
+如果你还没有 GitHub 账号，你需要创建一个 GitHub 账号。 你可以使用电子邮件注册，也可以通过 Google 账号进行关联注册。请按照注册和验证流程进行操作。
 
 完成账号注册后，登录 GitHub。
 
@@ -47,7 +47,7 @@ GitHub Actions 构建流程
 
 点击[此链接](https://github.com/nightscout/AndroidAPS)打开 AndroidAPS 官方仓库。
 
-点击“Fork”图标。 这将在你自己的账户中创建一份副本。
+点击“Fork”图标。这将在你自己的账户中创建一份副本。
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
@@ -66,7 +66,7 @@ GitHub Actions 构建流程
 
 创建新的分叉 (Create a new fork)
 
-分叉 (Fork) 是仓库的一份副本。 分叉（Forking）一个仓库可以让你自由地实验各种更改，而不会影响到原始项目。 查看现有的分叉（View existing forks）。</br>
+分叉 (Fork) 是仓库的一份副本。分叉（Forking）一个仓库可以让你自由地实验各种更改，而不会影响到原始项目。查看现有的分叉（View existing forks）。</br>
  “必填项均标有星号 ()”</br>
 * “没有可用于分叉此仓库的目标。”</br></br>
 这意味着你已经拥有一个现有的 AndroidAPS 分叉（Fork）</br>。
@@ -77,7 +77,7 @@ GitHub Actions 构建流程
 绝不要在未备份 Secret（私密变量）的情况下删除你的分叉（Fork）！
 ```
 
-以下是该段内容的原文翻译： GitHub 现在显示的是你个人的 AndroidAPS 副本。 请保持此浏览器标签页处于打开状态。
+以下是该段内容的原文翻译： GitHub 现在显示的是你个人的 AndroidAPS 副本。请保持此浏览器标签页处于打开状态。
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
@@ -98,7 +98,7 @@ GitHub Actions 构建流程
 ````{admonition} Note
 :class: note
 
-1. 如果你是从某个 App 内部（通过内置网页视图 Web View）打开此页面，HTML 文件可能无法正常下载。 请复制该 URL 并在浏览器（如 Chrome）中打开：
+1. 如果你是从某个 App 内部（通过内置网页视图 Web View）打开此页面，HTML 文件可能无法正常下载。请复制该 URL 并在浏览器（如 Chrome）中打开：
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
@@ -122,8 +122,7 @@ AndroidAPS 的构建需要私钥（Private keys），这些私钥存储在一个
 </br>
 
 ```{warning}
-使用 选项 1 (Option 1) 构建 AAPS 将无法直接升级你现有的 AAPS。
-你需要： [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
+使用 选项 1 (Option 1) 构建 AAPS 将无法直接升级你现有的 AAPS。你需要： [Export settings](#ExportImportSettings-Automating-Settings-Export) on your phone.
 2. 将设置文件从手机复制或上传到外部位置（例如：你的电脑、云存储服务等）。
 3. 按照“选项 1”所述的方法，生成一个新版本的已签名 APK，并将其传输到你的手机上。
 4. 在您的手机上卸载之前的 AAPS 版本。
