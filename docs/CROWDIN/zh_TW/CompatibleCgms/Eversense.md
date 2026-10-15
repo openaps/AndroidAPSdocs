@@ -53,7 +53,7 @@
 
 ## xDrip+
 
-xDrip+ 可以像 ESEL 一樣從供應商應用程式的通知中讀取資料。 無法使用回填功能。
+xDrip+ 可以像 ESEL 一樣從供應商應用程式的通知中讀取資料。無法使用回填功能。
 
 - 下載並安裝 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
 - 在 xDrip+ 中必須選擇「配套應用程式」作為資料來源。
