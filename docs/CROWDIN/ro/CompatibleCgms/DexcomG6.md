@@ -32,11 +32,11 @@ Citiți mai multe in [articolul](https://www.diabettech.com/artificial-pancreas/
 ## Dacă utilizați G6 cu construită cu Build Your Own Dexcom App
 
 ```{admonition} Old app version
-:class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+:class: avertisment
+Dexcom BYODA este acum o versiune foarte veche a aplicației și nu poate fi actualizată.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+-   [Construiește-ți propria aplicație Dexcom](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) suportă transmisiuni locale către AAPS și/sau xDrip+
 
 ![Opțiuni de transmisie BYODA](../images/BYODA.png)
 
