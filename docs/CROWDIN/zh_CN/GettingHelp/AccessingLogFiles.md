@@ -6,7 +6,7 @@
 * 在AAPS数据目录中定位日志文件，路径为 `Android\data\info.nightscout.androidaps\files`。  
     根存储文件夹的命名可能因手机型号略有不同
 * 对于 [AAPSClient](#RemoteControl_aapsclient)，路径为 `Android\data\info.nightscout.aapsclient\files`
-* 注意：​**AAPS 3.3**​ 版本已变更日志存储位置。 如需旧版信息请查阅先前版本的文档
+* 注意：​**AAPS 3.3**​ 版本已变更日志存储位置。如需旧版信息请查阅先前版本的文档
 
 ![日志](../images/aapslog.png)
 
