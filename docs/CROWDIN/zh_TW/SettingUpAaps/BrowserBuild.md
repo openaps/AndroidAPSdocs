@@ -8,7 +8,7 @@
 
 ## 自行建置，而不是下載
 
-**AAPS 應用程式（apk檔案）因醫療設備相關法規而無法下載。 自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！**
+**AAPS 應用程式（apk檔案）因醫療設備相關法規而無法下載。自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！**
 
 詳細資訊請參閱 [FAQ 頁面](../UsefulLinks/FAQ.md)。
 
@@ -16,9 +16,9 @@
 
 ## 建置 AAPS 的裝置和軟體規格
 
-我們建議使用 Android 裝置。 你也可以使用電腦或 iOS 裝置。
+我們建議使用 Android 裝置。你也可以使用電腦或 iOS 裝置。
 
-您需要在瀏覽器中使用多個選項卡，並在它們之間切換。 範例 Chrome：
+您需要在瀏覽器中使用多個選項卡，並在它們之間切換。範例 Chrome：
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
@@ -40,7 +40,7 @@
 ### GitHub 帳號
 
 如果你尚未擁有帳號，你需要[創建一個 GitHub 帳號](https://github.com/signup)。  
-你可以使用電子郵件註冊，也可以透過 Google 註冊。 遵循註冊和驗證過程。
+你可以使用電子郵件註冊，也可以透過 Google 註冊。遵循註冊和驗證過程。
 
 當你擁有帳號後，請[登入 GitHub](https://github.com/login)。
 
@@ -48,7 +48,7 @@
 
 按照[這個連結](https://github.com/nightscout/AndroidAPS)打開官方 AndroidAPS 倉庫。
 
-點選分支圖示。 這將在你的帳號內創建一個副本。
+點選分支圖示。這將在你的帳號內創建一個副本。
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
@@ -63,7 +63,7 @@
 ```{note}
 You cannot fork and you see this?</br></br>
 **`建立新的 fork`**</br>
-`fork 是儲存庫的副本。 Fork 一個資料庫讓你可以自由嘗試修改，而不會影響原始專案。 檢視現有的 fork。`</br>
+`fork 是儲存庫的副本。 Fork 一個資料庫讓你可以自由嘗試修改，而不會影響原始專案。檢視現有的 fork。`</br>
 *`必填欄位以星號（*）標示。`*</br>
 **`沒有可用的目標可用來 fork 此儲存庫。`**</br></br>
 這代表你已經有 AndroidAPS 的現有 fork。</br>
@@ -74,7 +74,7 @@ You cannot fork and you see this?</br></br>
 在沒有備份你的 secrets 前，絕對不要刪除你的 fork！
 ```
 
-GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁籤開啟。
+GitHub 現在顯示你個人的 AndroidAPS 副本。請保持這個瀏覽器頁籤開啟。
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
@@ -95,7 +95,7 @@ GitHub 現在顯示你個人的 AndroidAPS 副本。 請保持這個瀏覽器頁
 ````{admonition} Note
 :class: 注意
 
-1. 如果你是從應用程式內開啟此頁面（透過 Web View），HTML 檔案可能無法下載。 請複製下方 URL 並在瀏覽器中開啟下載：
+1. 如果你是從應用程式內開啟此頁面（透過 Web View），HTML 檔案可能無法下載。請複製下方 URL 並在瀏覽器中開啟下載：
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
@@ -121,8 +121,7 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 </br>
 
 ```{warning}
-使用 **選項 1** 建立 AAPS 將不允許您升級現有的 AAPS。
-您需要:
+使用 **選項 1** 建立 AAPS 將不允許您升級現有的 AAPS。您需要:
 1. 在您的手機上[匯出設定](#ExportImportSettings-Automating-Settings-Export)。
 2. 將設定檔案從您的手機複製或上傳到外部位置 (例如您的電腦、雲端儲存服務…)。
 3. 根據選項 1 的說明生成簽名 apk 的新版本並傳輸至您的手機。
@@ -218,7 +217,7 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-向下滾動並接受存取權限。 該網頁需要此存取權以獲取 Google Drive 認證金鑰。
+向下滾動並接受存取權限。該網頁需要此存取權以獲取 Google Drive 認證金鑰。
 
 點擊繼續。
 
@@ -240,7 +239,7 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
-在名稱欄位中，貼上您剛才複製的文字。 在文字框上長按以顯示「貼上」選單。
+在名稱欄位中，貼上您剛才複製的文字。在文字框上長按以顯示「貼上」選單。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
@@ -252,7 +251,7 @@ AndroidAPS 建置需要私有金鑰，這些金鑰儲存於 Java 金鑰庫（JKS
 
 切換回 GitHub 頁籤。
 
-1. 在「secret」」欄位中，貼上您剛才複製的文字。 在文字框上長按以顯示「貼上」選單。
+1. 在「secret」」欄位中，貼上您剛才複製的文字。在文字框上長按以顯示「貼上」選單。
 
 2. 點擊「Add secret」。
 
@@ -325,7 +324,7 @@ GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一�
 
 (aaps-ci-google-token-expired)=
 ### Google 重新整理權杖已過期
-  - 如果 Google OAuth2 重新整理權杖連續 6 個月未使用就會過期，並且在其他情況下也可能失效（例如：您變更了 Google 帳號密碼，或手動撤銷了存取權）。 如需更多詳細資訊，請參閱 [Google OAuth2 說明文件](https://developers.google.com/identity/protocols/oauth2)。
+  - 如果 Google OAuth2 重新整理權杖連續 6 個月未使用就會過期，並且在其他情況下也可能失效（例如：您變更了 Google 帳號密碼，或手動撤銷了存取權）。如需更多詳細資訊，請參閱 [Google OAuth2 說明文件](https://developers.google.com/identity/protocols/oauth2)。
   - 您會看到一則錯誤，指出存取權杖無效，如下所示：
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.jpg)
@@ -342,12 +341,12 @@ GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一�
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
-`actions/checkout@v4` 和 `actions/setup-java@v4` 不允許在 `xxxxx/AndroidAPS` 中使用。 此工作流程中的操作必須位於 `xxxxx` 擁有的儲存庫內
+`actions/checkout@v4` 和 `actions/setup-java@v4` 不允許在 `xxxxx/AndroidAPS` 中使用。此工作流程中的操作必須位於 `xxxxx` 擁有的儲存庫內
 
 --------
 
 ```{warning}
-Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的人，並且想要使用自已的ClientID時使用。 僅供你參考。
+Google 雲端硬碟授權中的「自訂」欄位，適合熟悉Google Oauth2的人，並且想要使用自已的ClientID時使用。僅供你參考。
 ```
 
 (github-cherry-pick)=
