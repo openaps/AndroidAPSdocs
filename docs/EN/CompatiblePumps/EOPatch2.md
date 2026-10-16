@@ -2,7 +2,7 @@
 
 The patch needs rapid-acting U-100 insulin, such as NovoRapid or Humalog. Use the rapid-acting insulin your doctor has prescribed for you.
 
-The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your **Profile** to at least 0.05 U/hr, in steps of 0.05 U/hr. Otherwise the total insulin your **Profile** expects and the insulin the patch actually delivers may not match. In the same way, boluses must be at least 0.05 U.
+The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your **Profile** to at least 0.05 U/hr, in steps of 0.05 U/hr. Otherwise **AAPS** rounds each rate to the nearest 0.05 U/hr (never down to 0) and uses the rates the patch really gives, so the total insulin per day differs slightly from your **Profile**. In the same way, boluses must be at least 0.05 U.
 
 ```{contents} Table of contents
 :depth: 1
@@ -166,6 +166,8 @@ Replace the patch when it is low on insulin, when it expires, or if it is faulty
 1. When the patch has been deactivated, the wizard shows **Discarding the patch is completed.** Remove the patch from your body and press **Confirm**.
 
 After that, the wizard continues straight on to activating a new patch (see above). Press the back arrow if you want to stop here.
+
+While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
 
 ![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/Bild13.png)
 ![Discard Patch page](../images/EOPatch/Bild14.png)

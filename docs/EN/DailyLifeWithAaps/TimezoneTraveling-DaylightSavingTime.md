@@ -1,5 +1,7 @@
 # Timezone Change and Daylight Saving 
 
+When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+
 (timezone-traveling-with-pumps)=
 
 ## Timezone change for Omnipod Dash

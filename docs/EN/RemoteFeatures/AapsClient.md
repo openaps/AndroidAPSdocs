@@ -42,10 +42,7 @@ Up to three client apps can be installed side by side on the same follower phone
 On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
 
 1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. **Units** and **display settings** — also identical. Note the small **phone icon** next to the low/high marks: on a client these values are [synchronized with the main phone](#client-master-config-prefs) and can only be edited while the master is reachable.
-
-   ![Display settings on the client — the phone icon marks values synced with the master](../images/v4/AapsClient/aapsclient_wizard_display_synced.png)
-
+2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
 3. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). Enable **NSClientV3** and enter the **same Nightscout URL and access token** as on the main phone, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient).
 
    ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
@@ -54,7 +51,7 @@ On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAP
 
    ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-5. **Name** — a name identifying this instance in reports and synchronization.
+5. **Who is using this phone?** — the name of the person using this phone. It tells this instance apart in reports and synchronization.
 
 (aapsclient-pairing-with-the-master)=
 
@@ -75,7 +72,7 @@ The client's home screen mirrors the followed loop:
 ![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
 
 - **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own).
+- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
 - The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
 - The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
 

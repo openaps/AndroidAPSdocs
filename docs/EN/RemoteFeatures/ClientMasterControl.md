@@ -182,7 +182,7 @@ On a client that is **not paired**, the Profile screen is still available but **
 
 ### Preferences
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**.
+A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
 
 Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
 
@@ -222,6 +222,7 @@ If a client is restored from a backup that rolls its command counter backwards, 
 | Client says it is **not paired** | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list. |
 | Command **rejected** by the master | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master. |
 | Commands work but are **slow** | Enable **websockets** on both phones (otherwise the apps fall back to slower polling). |
+| Pairing is cancelled with *"The pairing secret could not be stored"* | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more. |
 | Nothing happens after pairing | Make sure **Allow client control** is ON on the master, and that **websockets** are enabled on the master — without them the master cannot receive commands (the master's **Authorized clients** screen shows a warning). |
 
 For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).

@@ -204,7 +204,7 @@ The insulin on board figure would be zero if just your standard basal was runnin
    - Press the chip to see the split of bolus and basal insulin (first dialog in the picture — here with a negative IOB after a period of reduced basal)
 2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before
 3. The teal button on the right reflects the **current basal delivery**: a flat line when the profile basal is running, a changed icon while a temporary basal rate is active
-4. The **percentage row** shows the current sensitivity ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)): press it to see the Autosens value and the effective ISF (second dialog in the picture)
+4. The **percentage row** shows the current sensitivity ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). When the loop changes your ISF, the row also shows the profile ISF, an arrow and the ISF the loop uses now, for example "80% 2.0 ↗ 2.5". Press it to see the Autosens value and the effective ISF (second dialog in the picture). If the loop works with a different value than the last Autosens result (for example because a temp target changes your sensitivity), the dialog also shows that value as **Autosens in algorithm**. When Autosens is off, the loop keeps your profile ISF and no effective ISF is shown.
 
 The IOB dialog, opened by pressing the IOB chip:
 
@@ -274,6 +274,18 @@ This information is also shown on this graph :
 * Profile switches: pencil icons at the top of the graph
 * Loop status: color band at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors (in the screenshot: purple = LGS, grey = suspended/disconnected). The history of these changes is listed in [Running mode](#AapsScreens-running-mode)
 * [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [OpenAPS SMB settings](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
+
+Tap a **BG check** in the graph to see its value, and its note if you wrote one.
+
+(aaps-screens-graph-press-and-hold)=
+#### See the values at a given time
+
+**Press and hold** the BG graph for a moment to see the values at one reading. A dot marks the nearest reading, a dashed line is drawn at that time in all the graphs, and a pop-up at the top of the graph shows:
+* the time and the BG value
+* IOB, COB (only when it is above 0 g) and the basal rate at that time — the basal icon shows whether a temporary basal rate was running, as on the main screen
+* any bolus, SMB or carbs at that time, with the same triangles as in the graphs
+
+Keep your finger on the screen and move it left or right to go from one reading to the next. You feel a light tick at each reading, and the graph does not scroll while you do this. The pop-up stays for 2 seconds after you lift your finger.
 
 (AapsScreens-activate-optional-information)=
 #### Activate optional information
@@ -359,6 +371,8 @@ It is based on the expected drop in BG of the insulin in your system if no other
 
 You can activate additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and cannot be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
+The additional graphs follow the main graph: when you scroll or zoom the BG graph, they move with it. They have no time labels of their own — read the time on the BG graph.
+
 To configure an additional graph, press the **pencil** icon in its top-right corner:
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
@@ -437,7 +451,7 @@ It is a good combination to display this line along with the Deviation bars. The
 
 ![QuickLaunch toolbar](../images/Home2020_Buttons.png)
 
-The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
+The floating toolbar at the bottom of the screen holds your **[QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)** actions. The small **gear** opens the QuickLaunch configuration where you choose which buttons are shown (treatments, careportal entries, CGM actions, the screens of the **Manage** sheet, [Quick Wizard](../DailyLifeWithAaps/QuickWizards.md) buttons, [Scenes](../DailyLifeWithAaps/Scenes.md) and more).
 
 A typical configuration is shown above: **Insulin**, **Carbs** and the **Bolus wizard**.
 
@@ -452,7 +466,7 @@ To give a certain amount of insulin without using the [bolus calculator](#aaps-s
 
 By enabling **Start Eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only**". An additional field “Time offset” lets you record an insulin injection made in the past.
+If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only**". An additional **Time** row, set to **Now**, lets you record an insulin injection made in the past: use **-** / **+** to change it, or tap the chevron to type the minutes or pick a date and time.
 
 You can use the **+0.5 / +1.0 / +2.0** buttons to quickly increase the insulin quantity. The increment values can be changed in the [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
@@ -470,7 +484,7 @@ Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) (Hypo, Eating
 
 **Carb time**: When will you / have you been eating carbs.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs)
+**Duration**: To be used for ["extended carbs"](ExtendedCarbs). This row is folded, so that you do not type the grams into it by mistake: use **-** / **+** to change it, or tap the chevron to open it and type a value.
 
 You can use the **+5 / +10 / +20** buttons to quickly increase the carb amount.
 
@@ -489,7 +503,7 @@ The bottom navigation bar gives access to:
 
   ![Treatments sheet](../images/v4/Screens/treatments_sheet.png)
 
-* **Scenes** — shown only when you have at least one [scene](../DailyLifeWithAaps/Scenes.md) or an **Automation** rule marked as **User action**. It opens a sheet from which you can start them; a badge shows how many you can start right now.
+* **Scenes** — shown only when you have at least one [scene](../DailyLifeWithAaps/Scenes.md) or an **Automation** rule marked as **User action**. It opens a sheet from which you can start them; a badge shows how many you can start right now. The **pencil** at the top of the sheet opens **Manage → Scenes**.
 
 * **Manage** — the hub for everything you manage in **AAPS**: Profile, Insulin settings, Temp Target, QuickWizard, Scenes, Automation, Food, Site Rotation, Pump and Authorized clients. Below them are device and basal actions such as Sensor Insert and Temp Basal. Some items only appear when they apply to your setup — for example Prime/Fill and battery change depend on your pump, and Temp Basal, Extended Bolus and the Careportal entries are hidden in [Simple Mode](#preferences-simple-mode):
 
@@ -560,7 +574,11 @@ Good to know:
 * The percentages, delays and durations are fixed; they can't be changed in the settings.
 * The choice is not remembered: the wizard opens on **Bread** every time.
 
-The **Correction** field is if you want to modify the end dosage for some reason.
+The **Correction** row is if you want to modify the end dosage for some reason.
+
+Only the **Carbs** field is always open. The other rows (**Correction**, **Carb time**, **BG** and **Use percentage**) are folded: they show their value with **-** / **+** buttons, so you can change it in small steps. Tap the chevron to open a row and type a value, and tap it again to close the row. This avoids typing grams into the **Correction** field by mistake.
+
+Tap anywhere on the **Profile** row to open the list of your profiles, then tap a name to use that profile for this calculation.
 
 The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
@@ -570,9 +588,14 @@ The **Carb time** field is for pre-bolusing so you can tell the system that ther
 
 The reminder rings as an **AAPS** alarm. It does not create a timer in your phone's clock app, and it also works when the bolus was entered from **AAPSClient** while **AAPS** was running in the background.
 
-The **BG** field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank.
+The **BG** field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. When the reading is recent, the **BG** row stays folded.
 
 The result button at the bottom shows the proposed bolus; pressing it asks for confirmation before any insulin is delivered.
+
+Good to know:
+* If the calculated bolus is above your **[Maximum bolus](#Preferences-maximum-bolus)**, it is reduced to the max bolus, and the confirmation shows the warning "Bolus constraint applied". A [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) is refused instead.
+* When the bolus is only recorded (for example while the pump is disconnected), the "**Bolus will be recorded only**" warning stays at the top of the dialog, also when you scroll.
+* A bolus you give by hand has priority over an [SMB](#Open-APS-features-super-micro-bolus-smb) that is waiting to be delivered: the SMB is dropped and the loop calculates again. If an SMB is being delivered right now, your bolus is refused with the message "An SMB is being delivered right now. Try again when it has finished." No insulin is given, and carbs entered with that bolus are not saved: wait a moment and enter them again.
 
 (AapsScreens-wrong-cob-detection)=
 #### Wrong COB detection
@@ -615,11 +638,11 @@ In the **Manage** sheet, scroll down and press **Careportal** to show these entr
 
 ![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
 
-**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event:
+**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Finger**.
 
 ![BG Check dialog](../images/dialogs/careportal_bg_check.png)
 
-**Note** and **Exercise** let you enter a duration, a note and the time of the event:
+**Note** and **Exercise** let you enter a duration (a folded row: use **-** / **+**, or tap the chevron to type it), a note and the time of the event:
 
 ![Exercise dialog](../images/dialogs/careportal_exercise.png)
 

@@ -122,6 +122,22 @@ Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go ba
 
 ---
 
+(v4changes-tidepool)=
+## Tidepool: data now shows under the device name AAPS
+
+In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+
+In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+
+```{admonition} What you need to do
+:class: important
+Usually nothing: new data simply appears under **AAPS**.
+
+Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use "**Purge all data**" from the [Tidepool menu](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+```
+
+---
+
 <!-- =====================================================================
      This page is a growing list of v4 behavioral changes.
      Add new changes as their own "## " section, newest grouping as agreed.

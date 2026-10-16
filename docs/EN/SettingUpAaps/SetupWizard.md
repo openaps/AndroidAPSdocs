@@ -276,11 +276,12 @@ There is nothing you have to configure on this screen now; you can pair clients 
 
 Press "**NEXT**" to go to the next screen.
 
-## Name
+(setup-wizard-instance-name)=
+## Who is using this phone?
 
-Here you set a name to identify this **AAPS** instance. It is shown in reports and when synchronizing.
+Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
 
-It can be anything. It's just for differentiating users.
+It can be anything. You can change it later in **Settings → General → Instance name**.
 
 Press "**NEXT**" to go to the next screen.
 
@@ -520,7 +521,7 @@ If you accidentally leave the Setup Wizard at any point, you can either simply r
 
 ## Bluetooth permission
 
-If you select a pump that connects over Bluetooth (for example **Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
+If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
 
 ![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 

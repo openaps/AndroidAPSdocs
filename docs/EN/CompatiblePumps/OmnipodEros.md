@@ -63,7 +63,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 After installing a new version of AAPS, the **Setup Wizard** starts automatically. If you have already exported your settings from a previous installation, you can import them in the wizard. For new installations, continue below.
 
-Go through the [Setup Wizard](../SettingUpAaps/SetupWizard.md) until you reach the **Pump** step, then select **Omnipod** (the description reads "Pump integration for Omnipod Eros").
+Go through the [Setup Wizard](../SettingUpAaps/SetupWizard.md) until you reach the **Pump** step, then select **Omnipod Eros** (the description reads "Pump integration for Omnipod Eros").
 
 ![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
 
@@ -78,13 +78,13 @@ The Setup Wizard does not pair your RileyLink. After finishing the wizard, open 
 
 ### Option 2: The Configuration screen
 
-Open the top-left **menu** (☰) > **Configuration** > **Pump** and select the **radio button** of **Omnipod**.
+Open the top-left **menu** (☰) > **Configuration** > **Pump** and select the **radio button** of **Omnipod Eros**.
 
-![Configuration > Pump with the Omnipod plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Configuration > Pump with the Omnipod Eros plugin](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **Omnipod** card shows two buttons, **Settings** and **Open plugin**:
+Once it is selected, the **Omnipod Eros** card shows two buttons, **Settings** and **Open plugin**:
 
-![The Omnipod plugin selected in Configuration > Pump](../images/v4/Pumps/omnipod_enabled.png)
+![The Omnipod Eros plugin selected in Configuration > Pump](../images/v4/Pumps/omnipod_enabled.png)
 
 **Settings** opens the settings of the Omnipod driver (see [Omnipod Settings](#OmnipodEros-omnipod-settings)):
 
@@ -96,7 +96,7 @@ Once it is selected, the **Omnipod** card shows two buttons, **Settings** and **
 
 ### Verification of Omnipod Driver Selection
 
-To verify that you have enabled the Omnipod driver, open **Manage** > **Pump** from the main screen. You should see the **Omnipod** pump screen shown above. If you have not paired a RileyLink yet, **RileyLink Status** shows **Not Started** and **Pod Status** shows **No Active Pod**.
+To verify that you have enabled the Omnipod driver, open **Manage** > **Pump** from the main screen. You should see the **Omnipod Eros** pump screen shown above. If you have not paired a RileyLink yet, **RileyLink Status** shows **Not Started** and **Pod Status** shows **No Active Pod**.
 
 ## Omnipod Configuration
 
@@ -250,7 +250,7 @@ To deactivate a pod (either from expiration or from a pod failure):
    The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 **Deactivate Pod** is a button on the Omnipod pump screen instead of in the **POD MGMT** menu.
    ```
 
-2. On the **Deactivate Pod** screen, first make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod. Then press **Next** to start deactivating the pod. This suspends all insulin delivery.
+2. On the **Deactivate Pod** screen, first make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod. Then press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
 
    > ![Deactivate_Pod_3](../images/omnipod/Deactivate_Pod_3.png)
 
@@ -635,7 +635,7 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is
   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button on the Omnipod pump screen instead of in the Pod Management menu.
   ```
 
-- **Deactivate Pod:** Deactivates the currently active pod. Shown instead of **Activate Pod** while a pod is active.
+- **Deactivate Pod:** Deactivates the currently active pod. Shown as soon as a pod is paired, also when an activation stopped part-way (for example because the pod failed during activation). It is enabled only when the RileyLink is connected. **AAPS** asks you to confirm before it deactivates the pod.
 
   > - Use this command to deactivate a screaming pod (error 49).
   > - If deactivation fails, the deactivation wizard offers a **Discard Pod** option.
@@ -725,13 +725,13 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 there is
 To open the Omnipod driver settings, either:
 
 - press the gear icon at the top right of the Omnipod pump screen (**Manage** > **Pump**), or
-- open the top-left **menu** (☰) > **Configuration** > **Pump** and press **Settings** on the **Omnipod** card.
+- open the top-left **menu** (☰) > **Configuration** > **Pump** and press **Settings** on the **Omnipod Eros** card.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 you open the settings with **Settings** on the **Omnipod** card or the gear icon on the Omnipod pump screen, instead of the settings gear in **Configuration** or the 3-dot menu.
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 you open the settings with **Settings** on the **Omnipod Eros** card or the gear icon on the Omnipod pump screen, instead of the settings gear in **Configuration** or the 3-dot menu.
 ```
 
 The settings are grouped as listed below. Tap a group to expand it. Most entries are switches you can enable or disable:

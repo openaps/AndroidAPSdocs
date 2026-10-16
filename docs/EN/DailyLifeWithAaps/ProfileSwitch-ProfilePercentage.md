@@ -86,12 +86,19 @@ Select a profile and tap **▶ Activate**. The **Activate** screen lets you tail
 
   ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — leave it at *Now*.
+- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
 - **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
 
 If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
 
 Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+
+```{admonition} Your pump may round the basal rates
+:class: note
+Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+
+If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+```
 
 ```{admonition} Percentage and time shift make one profile go a long way
 :class: note

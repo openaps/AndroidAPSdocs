@@ -91,37 +91,37 @@ There are **two** ways to select the Omnipod DASH driver in **AAPS**:
 ### Option 1: New installations
 
 When you install **AAPS** for the first time, the **Setup Wizard** guides you through the key features and installation requirements of **AAPS**.
-When you reach the **Pump** step, select **Dash**.
+When you reach the **Pump** step, select **Omnipod Dash**.
 
 ![The Pump step of the setup wizard](../images/setup-wizard/Wizard-Pump.png)
 
-If you are not sure yet, you can select **Virtual Pump** for now and select **Dash** later, after setting up **AAPS** (see Option 2).
+If you are not sure yet, you can select **Virtual Pump** for now and select **Omnipod Dash** later, after setting up **AAPS** (see Option 2).
 
 (omnipod-dash-option-2-config-builder)=
 ### Option 2: The Configuration screen
 
-On an existing installation you can select the **Dash** pump from the **Configuration** screen:
+On an existing installation you can select the **Omnipod Dash** pump from the **Configuration** screen:
 
 1. Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration**.
-2. Tap **Pump** and select the radio button of **Dash** (*"Pump integration for Omnipod Dash (the new, Bluetooth-enabled model with a blue needle cap)"*).
+2. Tap **Pump** and select the radio button of **Omnipod Dash** (*"Pump integration for Omnipod Dash (the new, Bluetooth-enabled model with a blue needle cap)"*).
 
-   ![Configuration > Pump with the Dash plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+   ![Configuration > Pump with the Omnipod Dash plugin](../images/v4/Configuration/configuration_pump_list_3.png)
 
-3. Once it is selected, the **Dash** card shows two buttons:
+3. Once it is selected, the **Omnipod Dash** card shows two buttons:
    - **Settings** opens the [Dash settings](#omnipod-dash-settings).
    - **Open plugin** opens the [DASH pump screen](#omnipod-dash-tab).
 
-   ![The Dash plugin enabled in Configuration > Pump](../images/v4/Pumps/dash_enabled.png)
+   ![The Omnipod Dash plugin enabled in Configuration > Pump](../images/v4/Pumps/dash_enabled.png)
 
 ### Verification of Omnipod Driver Selection
 
-To check that **Dash** is selected, open **Manage** (bottom navigation of the main screen) and tap **Pump**. The DASH pump screen opens, as shown in the next section.
+To check that **Omnipod Dash** is selected, open **Manage** (bottom navigation of the main screen) and tap **Pump**. The DASH pump screen opens, as shown in the next section.
 
 (omnipod-dash-tab)=
 
 ## The DASH pump screen
 
-The DASH pump screen is where you manage your pods: activate and deactivate them, refresh the pod status, silence alerts and look at the pod history. Open it with **Manage** > **Pump**, or with **Open plugin** on the **Dash** card in **Configuration** > **Pump**.
+The DASH pump screen is where you manage your pods: activate and deactivate them, refresh the pod status, silence alerts and look at the pod history. Open it with **Manage** > **Pump**, or with **Open plugin** on the **Omnipod Dash** card in **Configuration** > **Pump**.
 
 This is the screen without an active pod:
 
@@ -199,7 +199,7 @@ The buttons at the bottom of the pump screen change with the state of the pod. O
 
 - [**Activate Pod**](#omnipod-dash-activate-pod): Primes and activates a new pod. Shown when no pod is active.
 
-- [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the active pod. Shown instead of **Activate Pod** while a pod is active.
+- [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the active pod. Shown as soon as a pod is paired with **AAPS**, also when an activation stopped part-way (for example because the pod failed during activation). **AAPS** asks you to confirm before it deactivates the pod.
 
 - **Play Test Beep:** Makes the pod play a single test beep.
 
@@ -315,7 +315,7 @@ To deactivate a pod (either because it expired or because it failed):
 
    ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-2. On the **Deactivate Pod** step, press **Next** to start deactivating the pod. This suspends all insulin delivery and deactivates the pod.
+2. On the **Deactivate Pod** step, press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
@@ -467,7 +467,7 @@ It is useful to check the boluses, TBRs and basal commands that were sent to the
 There are two ways to open the Dash driver settings:
 
 - Press the **Settings** (gear) icon in the top-right corner of the [DASH pump screen](#omnipod-dash-tab).
-- Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration** > **Pump**. On the **Dash** card, press **Settings**.
+- Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration** > **Pump**. On the **Omnipod Dash** card, press **Settings**.
 
 The settings are grouped into four expandable sections: **Confirmation Beeps**, **Alerts**, **Notifications** and **Advanced Settings**. Tap a section to open it:
 

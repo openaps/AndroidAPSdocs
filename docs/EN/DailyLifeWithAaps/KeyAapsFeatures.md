@@ -20,6 +20,8 @@ When **AAPS** has a suggestion, a **Loop** entry with a badge appears in the bot
 
 ![Open loop suggestion with the Perform button](../images/screens/loop_tab.png)
 
+A suggestion is only valid for a few minutes. If it is older than about 9 minutes, or if the loop has been suspended or the pump disconnected in the meantime, **AAPS** refuses it and nothing is sent to the pump (*"This suggestion is too old. Nothing was sent to the pump. Wait for the next one."*). Wait for the next suggestion.
+
 This option is for getting to know how **AAPS** works or if you are using an unsupported pump. You will be in Open Loop, no matter what choice you make here, until the end of **[Objective 5](#objectives-objective5)**.
 
 (KeyAapsFeatures-LGS)=

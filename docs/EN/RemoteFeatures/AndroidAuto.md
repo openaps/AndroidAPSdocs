@@ -32,9 +32,9 @@ On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and m
 
 ![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
 
-Scroll down to the **Other** group and make sure **AndroidAPS-Ongoing** is on: this is the channel of the status notification.
+Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
 
-![AndroidAPS-Ongoing notification channel switched on](../images/android_auto_ongoing_channel.png)
+![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
 
 Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
 

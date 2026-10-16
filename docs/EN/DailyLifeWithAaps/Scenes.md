@@ -95,7 +95,7 @@ Each step starts with a short explanation of what the action does. The steps loo
 
 ## Activating a scene
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation.
+Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
 
 Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
 
@@ -107,7 +107,7 @@ When you start the scene from the **Scenes** entry of the bottom navigation, the
 
 ![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button:
+After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
 
 ![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
 

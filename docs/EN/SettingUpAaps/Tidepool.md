@@ -1,6 +1,6 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool is a third party tool that collects data regarding BG, insulin and carbs (and the notes you add to your treatments) and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
 
 It is important to understand that Tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone, you must set up Nightscout as well.
 
@@ -40,6 +40,19 @@ Note: the Tidepool organization has brought the iOS Loop product to market with 
 
 ![Tidepool connected](../images/v4/Tidepool/tidepool_status.png)
 
-- In the "**Settings**" of the Tidepool plugin, open "**Connection settings**" and set based on your personal preferences (Wi-Fi only, while charging, ...)
+- In the "**Settings**" of the Tidepool plugin, open "**Connection settings**". By default "**Use Nightscout connection settings**" is on, so Tidepool uploads under the same conditions you set for Nightscout. Turn it off if you want separate conditions for Tidepool, for example to upload to Tidepool only on Wi-Fi and while charging, while Nightscout also uses mobile data.
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+
+(tidepool-menu)=
+## The Tidepool menu
+
+The **⋮ menu** in the top-right corner of the Tidepool screen offers:
+
+- "**Login**" and "**Logout**" — connect to or disconnect from your Tidepool account.
+- "**Upload now**" — upload new data straight away instead of waiting for the next automatic upload.
+- "**Full synchronization**" — upload all data stored in **AAPS** again.
+- "**Purge all data**" — delete **all** data that **AAPS** has uploaded to your Tidepool account. This cannot be undone. Use it only to remove wrong or duplicate data, then run "**Full synchronization**" to upload your data again.
+- "**Clear log**" — empty the log shown on the Tidepool screen.
+
+In Tidepool, the data uploaded by **AAPS** 4 is shown under the device name **AAPS**. See [What changed in AAPS v4](#v4changes-tidepool) if you used Tidepool with an older version. 

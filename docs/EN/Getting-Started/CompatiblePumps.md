@@ -28,6 +28,7 @@ AAPS works with a number of insulin pumps. The following list shows the currentl
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
+- [Dana-i2](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Diaconn G8](../CompatiblePumps/DiaconnG8.md) (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)

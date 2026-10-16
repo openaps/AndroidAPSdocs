@@ -65,7 +65,6 @@ The everyday treatment and CGM dialogs:
 - **Carbs** — record carbs without insulin.
 - **Bolus wizard** — open the bolus calculator.
 - **Treatment** — record insulin and carbs together.
-- **Insulin settings** — manage and activate insulin configurations (named differently from **Insulin** on purpose, because that button delivers a bolus).
 - **CGM** — open your CGM app (e.g. xDrip).
 - **Calibration** — calibrate the CGM sensor.
 
@@ -76,17 +75,33 @@ The care-portal events and device-maintenance records:
 - **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
 - **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
 
+**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+
 ![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
 These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+
+### Manage
+
+The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+
+- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
+- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
+- **Authorized clients** — only on a master or a paired client.
+
+These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
 
 ### Quick Wizard
 
 Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
 
+QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+
 ### Scenes
 
 Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+
+The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
 
 ### Automation
 
@@ -99,7 +114,7 @@ Automation executes on the **master**, so automation shortcuts are offered and r
 
 ### Temp Target Presets
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name and duration are shown). Tapping it asks for confirmation, then starts that temp target.
+Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
 
 ![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 

@@ -20,7 +20,7 @@ Some available actions on the watchfaces are:
 
 Enable **Wear** in [**Configuration** > **Communication**](#Config-Builder-wear).
 
-To bolus or take other actions from the watch, turn on **Wear control**. The bolus wizard options for the watch are set in the same place: see [Settings > Wear](#preferences-wear).
+To bolus or take other actions from the watch, turn on **Wear control**. The bolus wizard options for the watch are set in the same place: see [Settings > Wear](#preferences-wear). While **Wear control** is off, the phone refuses every treatment or mode change sent from the watch, and the watch shows *"Wear control is turned off in the Wear settings on the phone."*
 
 With **Open plugin** on the **Wear** card you open the Wear screen:
 
@@ -71,6 +71,8 @@ When you use the bolus wizard (calculator) on the watch, the result page shows t
 * You cannot go below **0 U**, nor above your **max bolus** setting.
 
 The running total is shown on the result page, so you always see the amount you are about to confirm.
+
+If **AAPS** had to limit the dose, for example because the calculated bolus is above your **max bolus** setting, a warning line in amber below the total says so (for example *"Bolus constraint applied"*). The same applies to a limited carbs amount.
 
 ```{admonition} This is not the same as Wizard Percentage
 :class: note

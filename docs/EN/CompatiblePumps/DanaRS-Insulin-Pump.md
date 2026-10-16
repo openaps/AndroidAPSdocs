@@ -1,12 +1,14 @@
-# DanaRS and Dana-i
+# DanaRS, Dana-i and Dana-i2
 
-_These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead._
+_These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead._
 
 **New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
 
 **New Dana-i can be used from AAPS version 3.0 onwards.**
 
-* In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
+**Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
+
+* In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.
 
 ```{contents} Table of contents
 :depth: 1
@@ -51,7 +53,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
    * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
-   * For Dana-i, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
+   * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
 
 * When **Pairing successful!** is shown, tap **Done**.
 
@@ -62,8 +64,14 @@ _These instructions are for configuring the app and your pump if you have a Dana
   ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 * In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
+* Set bolus step on pump to 0.05 U using Doctors menu (see pump user guide). **AAPS** reads the basal and bolus steps from the pump and uses them for every bolus, so a bolus always matches the step set on the pump. The pump screen shows them in the **Basal/Bolus step** row.
 * Enable extended boluses on pump
+
+### Options shown only for some models
+
+* **Auto lock**: on a Dana-i2, the **User options** screen (on the pump screen, **Manage** > **Pump**) has an **Auto lock** switch for the pump's auto lock setting. Press **Save options to pump** after changing it.
+* **Easy mode**: on pump models that have an easy menu mode, the pump screen shows an **Easy mode** row with **On** or **Off**.
+* If a Dana-i2 refuses a bolus, **AAPS** shows the reason, for example *Pump is not primed*, *Not enough insulin in the reservoir* or *Easy sleep mode is on in the pump*.
 
 (DanaRS-Insulin-Pump-default-password)=
 
@@ -137,17 +145,17 @@ When switching to a new phone the following steps are necessary:
 * Install AAPS on the new phone.
 * [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 
-### DanaRS v3, Dana-i
+### DanaRS v3, Dana-i, Dana-i2
 * Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
 * Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
 
-## Timezone traveling with DanaRS and Dana-i pumps
+## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
 
 For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
 
 ## Where to get help
 
-Development of the DanaRS/Dana-i driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
 
 1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
 2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).

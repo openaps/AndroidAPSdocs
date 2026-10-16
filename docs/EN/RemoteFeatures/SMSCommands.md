@@ -224,6 +224,8 @@ The *Auth* column in the tables below, indicates whether such a strong authentic
 | BASAL 30% 50      | Yes  | To start basal 30% for 50 min    |
 | BASAL STOP/CANCEL | Yes  | To stop temp basal               |
 
+Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+
 
 ### Loop
 
@@ -257,6 +259,8 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | PROFILE LIST   | No   | The current list of profiles in **AAPS**, e.g.:<br/>1. Profile1<br/> 2. Profile2                                                                 |
 | PROFILE 1      | Yes  | To switch profile to profile 1 in the list.<br/>Use the numbers as returned by the **PROFILE LIST**,<br/>not the profile names as you saved them |
 | PROFILE 2 30   | Yes  | To switch profile to Profile2 30%                                                                                                                |
+
+The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
 
 ### Temporary Targets
 

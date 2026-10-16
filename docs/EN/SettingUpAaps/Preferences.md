@@ -32,7 +32,7 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 
 - In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
 
-- If you use different languages, you might sometimes see a language mix. This is due to an android issue where overriding the default android language sometimes doesn't work.
+- When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
 - Setting hidden in [simple mode](#preferences-simple-mode).
 
 (preferences-simple-mode)=
@@ -49,9 +49,10 @@ The **simple mode** is activated by default when you first install **AAPS**. In 
 
 - Forces Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
-**Name**
+**Instance name**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- The name of the person using this phone. It tells this **AAPS** instance apart in reports and synchronization, for example if two children with type 1 diabetes in your family use **AAPS**.
+- Used in the names of exported settings files.
 - Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
@@ -138,6 +139,7 @@ If the app is protected, you must enter the password or use the phone's biometri
 - It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
 - If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
+(Preferences-maximum-bolus)=
 ### Maximum bolus
 
 - Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
@@ -428,7 +430,7 @@ This section is shown when the **Wear** plugin is enabled in [Configuration > Co
 
 ![Settings > Wear](../images/preferences/settings_wear.png)
 
-- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data.
+- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data: the phone refuses any command from the watch, and tapping a complication that would open a control screen opens the **AAPS** menu on the watch instead.
 
 **Wear Wizard Settings** defines which calculations are included in the result of the bolus wizard on the watch. On the watch you only enter the carbs; these switches replace the choices you would make in the bolus wizard on the phone:
 
@@ -515,7 +517,7 @@ Log handling (log settings, sending and deleting logs) and file management are f
 
 ### Setting the local AAPS directory
 
-The **Maintenance** screen also includes the **AAPS directory**. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files.
+The **Maintenance** screen also includes the **AAPS directory**. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files. Once a directory is chosen, its path (for example `Documents/AAPS`) is shown below **AAPS directory**, so you can always see where your files are saved.
 
 It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
 

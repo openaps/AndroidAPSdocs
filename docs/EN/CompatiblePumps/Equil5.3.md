@@ -10,6 +10,8 @@ These instructions are for configuring the Equil insulin pump.
 ## Pump capabilities with AAPS
 
 * Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
+* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
 * DST and timezone changes must be handled manually.
 
 ## Hardware and software requirements
@@ -42,6 +44,7 @@ Open the Equil settings with **Settings** on the **Equil** card, or with the gea
 * **Low battery alarm**: warns you when the pump battery is low.
 * **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
 * **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
+* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
@@ -96,10 +99,21 @@ If you set your own pairing password (recommended for your safety), store it som
 
 Once the pump is paired, the pump screen shows these buttons:
 
+* **Refresh**: reads the state and the history of the pump now.
 * **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir, priming and attaching it again.
+* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
+  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
+  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+
+  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
 * **History**: shows the events recorded by the pump.
 * **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+
+### Alarms
+
+* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
+* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
+* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
 
 ## Where to get help
 

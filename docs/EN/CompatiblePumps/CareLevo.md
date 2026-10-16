@@ -7,7 +7,7 @@ The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 3
 The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly.
+The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
 
 ```{contents} Table of contents
 :depth: 1
@@ -104,6 +104,12 @@ Once the patch is connected, press **Safety Check**. The patch tests itself and 
 If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
 
 Insulin delivery starts as soon as the insertion is confirmed.
+
+## Bolus messages
+
+If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+
+If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
 
 ## Suspending and resuming insulin delivery
 

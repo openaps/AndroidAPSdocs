@@ -184,7 +184,7 @@ If the file selected a pump that this version of **AAPS** does not have, **AAPS*
 
 14. Tubeless pumps (Omnipod and Medtrum) users only - if you ticked **Also replace pump settings** and your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
+**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, open the **menu** (☰) in the top left > **Configuration** > **Pump** > switch to **Virtual Pump** > then switch back to your pump type
 
 ### Note for Dana RS users
 
