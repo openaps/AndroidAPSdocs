@@ -109,7 +109,7 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 * Open the **menu** (☰) in the top-left corner, go to [**Configuration** > **Pump**](../SettingUpAaps/ConfigBuilder.md) and select **Accu-Chek Combo**.
 
-  ![Configuration > Pump with the Accu-Chek Combo plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+  ![Configuration > Pump with the Accu-Chek Combo plugin](../images/v4/Configuration/configuration_pump_list_1.png)
 
   Once it is selected, the **Accu-Chek Combo** card shows two buttons, **Settings** and **Open plugin**:
 

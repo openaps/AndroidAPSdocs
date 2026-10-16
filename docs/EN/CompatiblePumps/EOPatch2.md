@@ -21,7 +21,7 @@ The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your 
 1. Press the Back key to return to the main screen.
 
 ![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
-![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_4.png)
+![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
 
 Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and **Open plugin**:
 

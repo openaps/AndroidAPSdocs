@@ -154,7 +154,7 @@ What each device can put on its toolbar still depends on what it has: QuickWizar
      Screenshots captured from a real master device:
        - quicklaunch_toolbar.png    (cropped close-up of the overview toolbar pill)
        - quicklaunch_overview.png   (full overview showing the toolbar in place)
-       - quicklaunch_config.png     (Configure QuickLaunch: Selected actions + Treatment + Care Portal)
+       - quicklaunch_config.png     (Configure QuickLaunch: Selected actions + Treatment + start of Manage)
        - quicklaunch_dynamic.png    (catalog: Quick Wizard / Scenes / Automation / Temp Target Presets)
        - quicklaunch_categories.png (catalog: Profile shortcuts + plugin categories)
      No QuickLaunch action was actually run (nothing delivered; only scrolled).

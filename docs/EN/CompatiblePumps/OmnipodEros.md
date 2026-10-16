@@ -80,7 +80,7 @@ The Setup Wizard does not pair your RileyLink. After finishing the wizard, open 
 
 Open the top-left **menu** (☰) > **Configuration** > **Pump** and select the **radio button** of **Omnipod Eros**.
 
-![Configuration > Pump with the Omnipod Eros plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Configuration > Pump with the Omnipod Eros plugin](../images/v4/Configuration/configuration_pump_list_4.png)
 
 Once it is selected, the **Omnipod Eros** card shows two buttons, **Settings** and **Open plugin**:
 

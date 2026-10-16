@@ -44,7 +44,7 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 
 * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
 
-   ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+   ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
 
    Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
 

@@ -638,7 +638,7 @@ In the **Manage** sheet, scroll down and press **Careportal** to show these entr
 
 ![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
 
-**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Finger**.
+**BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Meter**.
 
 ![BG Check dialog](../images/dialogs/careportal_bg_check.png)
 

@@ -105,7 +105,7 @@ On an existing installation you can select the **Omnipod Dash** pump from the **
 1. Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration**.
 2. Tap **Pump** and select the radio button of **Omnipod Dash** (*"Pump integration for Omnipod Dash (the new, Bluetooth-enabled model with a blue needle cap)"*).
 
-   ![Configuration > Pump with the Omnipod Dash plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+   ![Configuration > Pump with the Omnipod Dash plugin](../images/v4/Configuration/configuration_pump_list_4.png)
 
 3. Once it is selected, the **Omnipod Dash** card shows two buttons:
    - **Settings** opens the [Dash settings](#omnipod-dash-settings).
