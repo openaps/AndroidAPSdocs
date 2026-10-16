@@ -1,29 +1,29 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+Există diferite moduri de a utiliza datele CareSens cu **AAPS**:
 
 - xDrip+
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**Notă:** Nu aveți nevoie de aplicația de urmărire Sens365 pentru a vă conecta la AAPS.
 
 ## 1. xDrip+
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If prefered, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others" .
+1. Instalați și configurați aplicația oficială CareSens.
+2. În aplicația CareSen, accesați setările -> Gestionați Datele și Conexiunile -> activați comutatorul xDrip. Dacă se dorește, dezactivați conexiunile de date către CareLevo, DIA:CONN, CloudLoop etc. din secțiunea "Altele".
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![Conexiunile de date ale aplicației CareSens](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip+, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+2. Instalați xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. În xDrip+, mergeți la Setări -> Sursă de date hardware, selectați `Companion App` ca sursă de date.
+4. În **AAPS**, selectați xDrip+ în [Configurator, Sursă de glicemie](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+1. Instalați aplicația Juggluco.
+2. În Juggluco, deschideți meniul din stânga și selectați `Fotografia`
+3. Scanați codul QR de pe pachetul senzorului.
+4. În meniul din stânga> Setări > schimb de date, asigurați-vă că este activată transmisiunea xDrip.
+5. În **AAPS**, selectați xDrip+ în [Configurator, Sursă de glicemie](#Config-Builder-bg-source).
