@@ -9,6 +9,8 @@ You will receive a notification like this when a new update is available:
 
 If you do not update until expiration date **AAPS** will switch to Open Loop.
 
+See [End of life](EndOfLife.md) for AAPS version end dates.
+
 **Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
 
 (maintenance-android-version-aaps-version)=
