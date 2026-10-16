@@ -1,6 +1,9 @@
 # End of life
 
-Each AAPS version can have an end date. After this date, AAPS may limit the loop. AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot.
+Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+
+Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#starting-this-version-notification-and-version-enforcement-has-been-simplified-and-softed-and-works-following-way). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
 
 ## How to use this page
 
