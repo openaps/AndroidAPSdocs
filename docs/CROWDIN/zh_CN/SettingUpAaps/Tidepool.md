@@ -1,8 +1,8 @@
 # Tidepool
 
-Tidepool是一个第三方工具，用于收集血糖、胰岛素和碳水化合物相关数据，并可用于分析和与您的临床团队共享这些数据。 Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. 它还可以与Nightscout结合使用，作为一个与临床环境良好集成的替代报告平台。 对与使用AAPS的糖宝来说，Tidepool有Nightscout的远程监控和控制功能，也是一个让他们的临床团队感觉更舒适的报告平台，所以可能是个不错的选择。
+Tidepool是一个第三方工具，用于收集血糖、胰岛素和碳水化合物相关数据，并可用于分析和与您的临床团队共享这些数据。 Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. 它还可以与Nightscout结合使用，作为一个与临床环境良好集成的替代报告平台。对与使用AAPS的糖宝来说，Tidepool有Nightscout的远程监控和控制功能，也是一个让他们的临床团队感觉更舒适的报告平台，所以可能是个不错的选择。
 
-重要的是要了解，Tidepool仅用于报告。 它不是一个实时跟踪应用程序。 如果您除了主要使用AAPS的手机外还需要其他关注者，则还必须设置Nightscout。
+重要的是要了解，Tidepool仅用于报告。它不是一个实时跟踪应用程序。如果您除了主要使用AAPS的手机外还需要其他关注者，则还必须设置Nightscout。
 
 Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. 这项努力与他们的数据报告平台或AAPS无关。
 
@@ -34,7 +34,7 @@ Note: the Tidepool organization has brought the iOS Loop product to market with 
 
 点击“测试Tidepool登录”
 
--如果您收到“成功登录到Tidepool”的消息，则表示您已成功连接。 如果没有，请确认您的凭据是否正确，并且您已经在Tidepool中验证了您的电子邮件地址。
+-如果您收到“成功登录到Tidepool”的消息，则表示您已成功连接。如果没有，请确认您的凭据是否正确，并且您已经在Tidepool中验证了您的电子邮件地址。
 
 -点击“连接设置”，并根据您的个人偏好进行设置
 

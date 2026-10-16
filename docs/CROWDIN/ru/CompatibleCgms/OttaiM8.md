@@ -1,7 +1,7 @@
 # Ottai M8
 
 
-## Using M8 with Ottai app
+## Использование сенсора М8 с приложением Ottai
 
 -   Скачайте и установите приложение с <https://play.google.com/store/apps/details?id=com.ottai.seas>. Для китайской версии используйте <https://ottai.com.cn/70ICjxAI4i>
 

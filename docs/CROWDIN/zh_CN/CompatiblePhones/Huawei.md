@@ -33,4 +33,4 @@
   
   ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
 
-根据Android版本不同，这些设置的位置会有所变化。 这些说明适用于Android 8.1系统。
+根据Android版本不同，这些设置的位置会有所变化。这些说明适用于Android 8.1系统。

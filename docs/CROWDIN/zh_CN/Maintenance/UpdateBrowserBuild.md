@@ -2,7 +2,7 @@
 
 ## 自行构建而非下载
 
-**AAPS** is not available to download, due to regulations concerning medical devices. 构建该应用供自己使用是合法的，但不得将副本提供给他人 详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
+**AAPS** is not available to download, due to regulations concerning medical devices. 构建该应用供自己使用是合法的，但不得将副本提供给他人详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
 
 ```{note}
 In case you want to upgrade **AAPS** with a browser for the first time : copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
@@ -20,7 +20,7 @@ In case you experience problems, see separate page for [troubleshooting Android 
 
 ### Export your settings
 
-从手机现有**AAPS**版本导出设置。 您可能用不到它，但以防万一最好保存。
+从手机现有**AAPS**版本导出设置。您可能用不到它，但以防万一最好保存。
 
 若忘记操作方法，请参阅[导出与导入设置](ExportImportSettings.md)。
 

@@ -10,7 +10,7 @@
 市面上仍有一些橋接器可購買：
 
 -   [MiaoMiao 讀取器](https://www.miaomiao.cool/)（版本 1、2 或 3），也可在 AliExpress 上購買。
--   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) 來自歐洲供應商（[BubbleShop](https://bubbleshop.eu/)），或俄羅斯用戶請見 [此處](https://vk.com/saharmonitor/)。 也可在 AliExpress 上購買。
+-   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) 來自歐洲供應商（[BubbleShop](https://bubbleshop.eu/)），或俄羅斯用戶請見 [此處](https://vk.com/saharmonitor/)。也可在 AliExpress 上購買。
 -   適用於俄羅斯用戶的 Atom。
 
 ## 1. 使用 xDrip+
@@ -24,7 +24,7 @@
 ## 2. 使用 Diabox
 
 - Diabox 是 Bubble 的官方應用程式。
-- 安裝 [Diabox](https://t.me/s/DiaboxApp)。 在設定中，進入「整合」，啟用「與其他應用程式共享資料」。
+- 安裝 [Diabox](https://t.me/s/DiaboxApp)。在設定中，進入「整合」，啟用「與其他應用程式共享資料」。
 
 ![Diabox](../images/Diabox.png)
 

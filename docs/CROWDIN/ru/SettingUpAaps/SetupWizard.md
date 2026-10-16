@@ -387,7 +387,7 @@ Go back and press "NEXT" to go to the next screen:
 ![Upload](../images/setup-wizard/Wizard20-Upload.png)
 
 (setup-wizard-profile)=
-## Profile
+## Профиль
 
 Теперь мы переходим к очень важной части мастера установки.
 

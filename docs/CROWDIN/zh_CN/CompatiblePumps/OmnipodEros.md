@@ -1,8 +1,8 @@
 # AAPS Omnipod胰岛素泵驱动文档
 
-本指南适用于配置Omnipod Eros系列胰岛素泵（**不包含Omnipod Dash**）。 自AAPS 2.8版本起已集成Omnipod驱动功能。
+本指南适用于配置Omnipod Eros系列胰岛素泵（**不包含Omnipod Dash**）。自AAPS 2.8版本起已集成Omnipod驱动功能。
 
-**本软件属于人工胰腺系统的DIY解决方案，并非商业产品，需要用户自行研习并全面掌握系统操作原理。 使用后果由您自行承担。**
+**本软件属于人工胰腺系统的DIY解决方案，并非商业产品，需要用户自行研习并全面掌握系统操作原理。使用后果由您自行承担。**
 
 ```{contents}
 :backlinks: entry
@@ -39,13 +39,13 @@
 
 **安全第一** - 请勿在无法处理突发故障的环境中操作（必须备有备用储药器、胰岛素、电量充足的RileyLink及手机设备）。
 
-**AAPS Omnipod驱动激活储药器后，您的Omnipod PDM将无法继续使用**。 此前您通过Omnipod PDM向Eros储药器发送指令。 Eros储药器仅允许单一设备与其建立通信连接。 成功激活储药器的设备将成为此后唯一获准与其通信的设备。 这意味着当您通过AAPS Omnipod驱动使用RileyLink激活Eros储药器后，**PDM将无法再控制该储药器**。 配备RileyLink的AAPS Omnipod驱动现已成为您的实际控制设备。 *这并不意味着您应该丢弃PDM，建议将其保留作为备用设备，以防AAPS运行异常时应急使用。*
+**AAPS Omnipod驱动激活储药器后，您的Omnipod PDM将无法继续使用**。此前您通过Omnipod PDM向Eros储药器发送指令。 Eros储药器仅允许单一设备与其建立通信连接。成功激活储药器的设备将成为此后唯一获准与其通信的设备。这意味着当您通过AAPS Omnipod驱动使用RileyLink激活Eros储药器后，**PDM将无法再控制该储药器**。配备RileyLink的AAPS Omnipod驱动现已成为您的实际控制设备。*这并不意味着您应该丢弃PDM，建议将其保留作为备用设备，以防AAPS运行异常时应急使用。*
 
 **可配置多个RileyLink设备，但同一时间仅能选择一个RileyLink与储药器通信。** AAPS Omnipod驱动支持在RileyLink配置中添加多个设备，但每次仅能启用一个RileyLink进行收发通信。
 
-**当RileyLink超出通信范围时，储药器不会停止工作。**若RileyLink超出有效距离或信号受阻无法与当前储药器通信，储药器仍将持续输注基础胰岛素。 激活储药器时，AAPS中设定的基础率配置文件将被写入新储药器。 若与储药器通信中断，设备将自动切换至此预设基础率方案运行。 在RileyLink重新进入通信范围并恢复连接前，您将无法发送新指令。
+**当RileyLink超出通信范围时，储药器不会停止工作。**若RileyLink超出有效距离或信号受阻无法与当前储药器通信，储药器仍将持续输注基础胰岛素。激活储药器时，AAPS中设定的基础率配置文件将被写入新储药器。若与储药器通信中断，设备将自动切换至此预设基础率方案运行。在RileyLink重新进入通信范围并恢复连接前，您将无法发送新指令。
 
-**AAPS不支持30分钟间隔的基础率配置。** 若您初次使用AAPS并设置基础率，请注意系统不支持半点起始的基础率方案，需调整为整点起始的配置模式。 例如：若您设有1.1单位的基础率方案，起始时间为09:30并持续2小时至11:30结束，此配置将无法生效。  您需将该1.1单位基础率的时间范围调整为9:00-11:00或10:00-12:00。  虽然Omnipod硬件本身支持30分钟间隔的基础率配置，但AAPS算法目前无法兼容此类设置。
+**AAPS不支持30分钟间隔的基础率配置。** 若您初次使用AAPS并设置基础率，请注意系统不支持半点起始的基础率方案，需调整为整点起始的配置模式。例如：若您设有1.1单位的基础率方案，起始时间为09:30并持续2小时至11:30结束，此配置将无法生效。您需将该1.1单位基础率的时间范围调整为9:00-11:00或10:00-12:00。虽然Omnipod硬件本身支持30分钟间隔的基础率配置，但AAPS算法目前无法兼容此类设置。
 
 ## 在AAPS中启用Omnipod驱动
 
@@ -53,15 +53,15 @@
 
 ### 选项一：通过设置向导启用
 
-安装新版AAPS后，**设置向导**将自动启动。  原地升级时也会触发此向导。  若您已从旧版本导出设置，可退出设置向导并导入原有配置。  新安装用户请继续以下步骤。
+安装新版AAPS后，**设置向导**将自动启动。原地升级时也会触发此向导。若您已从旧版本导出设置，可退出设置向导并导入原有配置。新安装用户请继续以下步骤。
 
-通过右上角**三点菜单(1)**中的**AAPS设置向导(2)**进入，逐步操作直至进入**泵**设置界面。 然后选择**Omnipod单选按钮(3)**。
+通过右上角**三点菜单(1)**中的**AAPS设置向导(2)**进入，逐步操作直至进入**泵**设置界面。然后选择**Omnipod单选按钮(3)**。
 
 > ![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
 
 在同一界面的泵选择区域下方，**Omnipod驱动设置**中显示**RileyLink配置**，点击**未设置**文字添加您的RileyLink设备。
 
-在**RileyLink选择**界面点击**扫描**按钮，通过搜索所有可用蓝牙设备并从列表中选择您的RileyLink进行配对。 成功选择后，系统将返回泵驱动选择界面，此时Omnipod驱动设置中会显示已选RileyLink及其MAC地址。
+在**RileyLink选择**界面点击**扫描**按钮，通过搜索所有可用蓝牙设备并从列表中选择您的RileyLink进行配对。成功选择后，系统将返回泵驱动选择界面，此时Omnipod驱动设置中会显示已选RileyLink及其MAC地址。
 
 点击**下一步**按钮继续完成**设置向导**其余步骤。所选RileyLink初始化可能需要长达一分钟，之后**下一步**按钮才会激活。
 
@@ -71,7 +71,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 ### Option 2: The Config Builder
 
-通过左上角**汉堡菜单**进入**配置构建器(1)**➜**泵**➜**Omnipod**，选择标有**Omnipod**的**单选按钮(2)**。 勾选**设置齿轮图标(3)**旁的**复选框(4)**后，Omnipod菜单将作为**POD**标签页显示在AAPS界面中。 本文档中将其称为**Omnipod(POD)**标签页。
+通过左上角**汉堡菜单**进入**配置构建器(1)**➜**泵**➜**Omnipod**，选择标有**Omnipod**的**单选按钮(2)**。勾选**设置齿轮图标(3)**旁的**复选框(4)**后，Omnipod菜单将作为**POD**标签页显示在AAPS界面中。本文档中将其称为**Omnipod(POD)**标签页。
 
 > **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](#OmnipodEros-omnipod-settings) of this document.
 > 
@@ -79,7 +79,7 @@ Detailed steps on how to setup your pod communication device are listed below in
 
 ### Verification of Omnipod Driver Selection
 
-*注：若您未选择RileyLink便提前退出设置向导，虽已启用Omnipod驱动，但仍需完成RileyLink设备选择。  您可能会看到Omnipod（POD）标签页如下所示*
+*注：若您未选择RileyLink便提前退出设置向导，虽已启用Omnipod驱动，但仍需完成RileyLink设备选择。您可能会看到Omnipod（POD）标签页如下所示*
 
 要确认您已在AAPS中启用Omnipod驱动，请从**概览**标签页**向左滑动**，此时您将看到**Omnipod**或**POD**标签页。
 
@@ -105,11 +105,11 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 2. 选择Omnipod驱动后，通过**配置构建器(1)**➜**泵**➜**Omnipod**➜**齿轮图标(设置)(2)**➜**RileyLink配置(3)**路径，点击**未设置**或**MAC地址(如有显示)**文字来识别并选择您的RileyLink设备。
 
-   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. 选择完成后，即可开始激活首个储药器使用会话。 使用手机返回键回到AAPS主界面。
+   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. 选择完成后，即可开始激活首个储药器使用会话。使用手机返回键回到AAPS主界面。
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-3. 在**RileyLink选择**界面，点击**扫描(4)**按钮启动蓝牙搜索。 从可用蓝牙设备列表中**选择您的RileyLink(5)**。
+3. 在**RileyLink选择**界面，点击**扫描(4)**按钮启动蓝牙搜索。从可用蓝牙设备列表中**选择您的RileyLink(5)**。
 
    > ![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
 
@@ -127,55 +127,55 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 激活储药器前，请确保您已在Omnipod设置中正确配置并连接RileyLink设备。
 
-*重要提示：出于安全防护机制，储药器激活配对时的通信距离存在严格限制。 配对前储药器射频信号较弱，但成功配对后将恢复全功率信号传输。 During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+*重要提示：出于安全防护机制，储药器激活配对时的通信距离存在严格限制。配对前储药器射频信号较弱，但成功配对后将恢复全功率信号传输。 During these procedures, make sure that your pod is* [within close proximity](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
 
 01. 请进入**Omnipod(POD)**标签页，点击**储药器管理(1)**按钮，然后选择**激活储药器(2)**。
 
     > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png)
 
-02. 此时将显示**填充储药器**界面。 请在新储药器中装入至少80单位胰岛素，听到两声提示音后表明储药器已准备好进行初始化。 计算3天所需胰岛素总量时，请注意储药器初始化将消耗12至15单位胰岛素。
+02. 此时将显示**填充储药器**界面。请在新储药器中装入至少80单位胰岛素，听到两声提示音后表明储药器已准备好进行初始化。计算3天所需胰岛素总量时，请注意储药器初始化将消耗12至15单位胰岛素。
 
     > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
     > 请确保新储药器与RileyLink设备保持近距离（30厘米以内），然后点击**下一步**按钮。
 
-03. 在**初始化储药器**界面，储药器将开始自检（您会听到"咔嗒"一声，随后是一连串滴答声，表明储药器正在进行自检程序）。 若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。 If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+03. 在**初始化储药器**界面，储药器将开始自检（您会听到"咔嗒"一声，随后是一连串滴答声，表明储药器正在进行自检程序）。若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。 If this occurs, [move the RileyLink closer](#OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-04. 初始化成功后，系统将显示绿色勾选标记，并激活**下一步**按钮。 点击**下一步**按钮完成储药器初始化，随后将显示**佩戴储药器**界面。
+04. 初始化成功后，系统将显示绿色勾选标记，并激活**下一步**按钮。点击**下一步**按钮完成储药器初始化，随后将显示**佩戴储药器**界面。
 
     > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-05. 接下来，请准备好新储药器的输注部位。 撕除储药器塑料针帽及粘合衬底的白纸后，将其敷贴至您惯常选择的注射部位。 操作完成后，点击**下一步**按钮。
+05. 接下来，请准备好新储药器的输注部位。撕除储药器塑料针帽及粘合衬底的白纸后，将其敷贴至您惯常选择的注射部位。操作完成后，点击**下一步**按钮。
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-06. 此时将弹出**佩戴储药器**对话框。 **仅在准备部署软管时点击确认按钮**。
+06. 此时将弹出**佩戴储药器**对话框。**仅在准备部署软管时点击确认按钮**。
 
     > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
 
 07. 点击**确认**后，Omnipod可能需要一些时间响应并插入软管（最长1-2分钟），请耐心等待。
 
-    > 若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。 若出现此情况，请将RileyLink移近储药器（保持30厘米以内距离，但勿直接叠放或紧贴），然后点击**重试**按钮。
+    > 若RileyLink超出待激活储药器的有效范围，您将收到**储药器无响应**的错误提示。若出现此情况，请将RileyLink移近储药器（保持30厘米以内距离，但勿直接叠放或紧贴），然后点击**重试**按钮。
     > 
-    > 若RileyLink超出蓝牙范围或未与手机保持有效连接，您将收到**RileyLink无响应**的错误提示。 遇到此情况时，请将RileyLink移近手机后点击**重试**按钮。
+    > 若RileyLink超出蓝牙范围或未与手机保持有效连接，您将收到**RileyLink无响应**的错误提示。遇到此情况时，请将RileyLink移近手机后点击**重试**按钮。
     > 
-    > *注意：在插入导管前，建议捏起导管插入点附近的皮肤。 这能确保针头顺利插入，并降低导管堵塞的发生概率。*
+    > *注意：在插入导管前，建议捏起导管插入点附近的皮肤。这能确保针头顺利插入，并降低导管堵塞的发生概率。*
     > 
     > ![Activate_Pod_9](../images/omnipod/Activate_Pod_9.png)
     > 
     > ![Activate_Pod_10](../images/omnipod/Activate_Pod_10.png) ![Activate_Pod_11](../images/omnipod/Activate_Pod_11.png)
 
-08. 导管成功插入后会出现绿色勾选标记，**下一步**按钮将变为可点击状态。 点击**下一步**按钮。
+08. 导管成功插入后会出现绿色勾选标记，**下一步**按钮将变为可点击状态。点击**下一步**按钮。
 
     > ![Activate_Pod_12](../images/omnipod/Activate_Pod_12.png)
 
-09. 此时将显示**储药器已激活**界面。 点击绿色**完成**按钮。 恭喜！ 您已成功开启新的储药器使用会话。
+09. 此时将显示**储药器已激活**界面。点击绿色**完成**按钮。恭喜！您已成功开启新的储药器使用会话。
 
     > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png)
 
-10. 此时**储药器管理**界面应显示为：**激活储药器(1)**按钮*已禁用*，而**停用储药器(2)**按钮*已启用*。 这是因为当前已有储药器处于激活状态，必须首先停用当前储药器才能激活新储药器。
+10. 此时**储药器管理**界面应显示为：**激活储药器(1)**按钮*已禁用*，而**停用储药器(2)**按钮*已启用*。这是因为当前已有储药器处于激活状态，必须首先停用当前储药器才能激活新储药器。
 
     点击手机返回键回到**Omnipod(POD)**标签页，此时界面将显示当前储药器会话信息，包括基础率、储药器余量、已输注胰岛素量、设备报错及提醒等数据。
 
@@ -201,11 +201,11 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
    > ![Deactivate_Pod_4](../images/omnipod/Deactivate_Pod_4.png)
    > 
-   > **如果停用失败**且未收到确认提示音，您可能会收到**未收到RileyLink响应**或**未收到Pod响应**的提示信息。 请点击**重试(1)**按钮以再次尝试停用。 如果停用持续失败，请点击**废弃Pod(2)**按钮以废弃Pod。 当前使用周期已终止，您现在可以移除储药器。 如果您的Pod发出警报声，您可能需要手动静音（使用别针或回形针），因为**废弃Pod(2)**按钮不会使其静音。
+   > **如果停用失败**且未收到确认提示音，您可能会收到**未收到RileyLink响应**或**未收到Pod响应**的提示信息。请点击**重试(1)**按钮以再次尝试停用。如果停用持续失败，请点击**废弃Pod(2)**按钮以废弃Pod。当前使用周期已终止，您现在可以移除储药器。如果您的Pod发出警报声，您可能需要手动静音（使用别针或回形针），因为**废弃Pod(2)**按钮不会使其静音。
    > 
    > > ![Deactivate_Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Deactivate_Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
-4. 成功停用后将显示绿色勾选标记。 点击**下一步**按钮显示储药器已停用界面。 当前使用周期已终止，您现在可以移除储药器。
+4. 成功停用后将显示绿色勾选标记。点击**下一步**按钮显示储药器已停用界面。当前使用周期已终止，您现在可以移除储药器。
 
    > ![Deactivate_Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
@@ -213,7 +213,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
    > ![Deactivate_Pod_8](../images/omnipod/Deactivate_Pod_8.png)
 
-6. 您现已返回**Pod管理**菜单，请按手机返回键回到**Omnipod(POD)**标签页。 请确认**RileyLink状态：**字段显示为**已连接**，且**Pod状态：**字段显示**无活动Pod**信息。
+6. 您现已返回**Pod管理**菜单，请按手机返回键回到**Omnipod(POD)**标签页。请确认**RileyLink状态：**字段显示为**已连接**，且**Pod状态：**字段显示**无活动Pod**信息。
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
 
@@ -225,29 +225,29 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 #### 暂停胰岛素输注
 
-使用此命令将活动中的pod置于暂停状态。 在此暂停状态下，pod将停止输送任何胰岛素。 此命令模拟原装Omnipod PDM对活动pod发出的暂停功能。
+使用此命令将活动中的pod置于暂停状态。在此暂停状态下，pod将停止输送任何胰岛素。此命令模拟原装Omnipod PDM对活动pod发出的暂停功能。
 
-1. 请前往**Omnipod(POD)**标签页，点击**暂停(1)**按钮。 暂停指令已从RileyLink发送至活动pod，**暂停(3)**按钮将变为灰色不可用状态。 **Pod状态(2)**将显示**暂停输注**。
+1. 请前往**Omnipod(POD)**标签页，点击**暂停(1)**按钮。暂停指令已从RileyLink发送至活动pod，**暂停(3)**按钮将变为灰色不可用状态。 **Pod状态(2)**将显示**暂停输注**。
 
    > ![Suspend_Insulin_Delivery_1](../images/omnipod/Suspend_Insulin_Delivery_1.png) ![Suspend_Insulin_Delivery_2](../images/omnipod/Suspend_Insulin_Delivery_2.png)
 
-2. 当RileyLink成功确认暂停指令后，将显示确认对话框，内容为**所有胰岛素输注已暂停**。 点击**确定**进行确认并继续操作。
+2. 当RileyLink成功确认暂停指令后，将显示确认对话框，内容为**所有胰岛素输注已暂停**。点击**确定**进行确认并继续操作。
 
    > ![Suspend_Insulin_Delivery_3](../images/omnipod/Suspend_Insulin_Delivery_3.png)
 
-3. 您当前使用的pod现已暂停所有胰岛素输注。 **Omnipod(POD)**标签页将更新**Pod状态(1)**为**已暂停**。 **暂停**按钮将变为新的**恢复输注(2)**按钮
+3. 您当前使用的pod现已暂停所有胰岛素输注。 **Omnipod(POD)**标签页将更新**Pod状态(1)**为**已暂停**。**暂停**按钮将变为新的**恢复输注(2)**按钮
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
 #### Resuming Insulin Delivery
 
-此指令用于命令当前暂停中的储药器恢复胰岛素输注。 命令成功处理后，胰岛素将根据当前时间从活动基础配置文件中恢复使用当前基础率进行正常输注。 Pod将重新接受大剂量、临时基础率和超微大剂量的指令。
+此指令用于命令当前暂停中的储药器恢复胰岛素输注。命令成功处理后，胰岛素将根据当前时间从活动基础配置文件中恢复使用当前基础率进行正常输注。 Pod将重新接受大剂量、临时基础率和超微大剂量的指令。
 
 1. 请前往**Omnipod(POD)**标签页，确认**Pod状态(1)**字段显示为**已暂停**，然后点击**恢复输注(2)**按钮启动流程，指示当前pod恢复正常胰岛素输注。 **Pod状态(3)**字段将显示**恢复输注**信息，表明RileyLink正在向暂停中的pod发送该指令。
 
    > ![Resume_Insulin_Delivery_1](../images/omnipod/Resume_Insulin_Delivery_1.png) ![Resume_Insulin_Delivery_2](../images/omnipod/Resume_Insulin_Delivery_2.png)
 
-2. 当RileyLink成功确认恢复输注指令后，将显示确认对话框，内容为**胰岛素输注已恢复**。 点击**确定**进行确认并继续操作。
+2. 当RileyLink成功确认恢复输注指令后，将显示确认对话框，内容为**胰岛素输注已恢复**。点击**确定**进行确认并继续操作。
 
    > ![Resume_Insulin_Delivery_3](../images/omnipod/Resume_Insulin_Delivery_3.png)
 
@@ -259,11 +259,11 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 *注意 - 若未显示"确认警报"按钮，是因为该按钮仅在触发pod过期或储药器低量警报时，才会在Omnipod(POD)标签页中条件性显示。*
 
-以下流程将指导您如何确认并消除活动pod在72小时(3天)有效期临近时发出的警报提示音。 此警告时限由Omnipod警报设置中的**关机前小时数**定义。 Pod最长使用寿命为80小时(3天8小时)，但Insulet建议不要超过72小时(3天)的限制。
+以下流程将指导您如何确认并消除活动pod在72小时(3天)有效期临近时发出的警报提示音。此警告时限由Omnipod警报设置中的**关机前小时数**定义。 Pod最长使用寿命为80小时(3天8小时)，但Insulet建议不要超过72小时(3天)的限制。
 
 *注意 - 若您已在Omnipod警报设置中启用"自动确认Pod警报"功能，该警报将在首次触发后自动处理，您无需手动消除警报。*
 
-1. 当达到设定的**关机前小时数**警告时限时，pod将发出提示音，告知您其即将到期，需要尽快更换pod。 您可在**Omnipod(POD)**标签页核实：**Pod到期时间：(1)**字段会显示pod失效的具体时间（激活后72小时），超时后文字将变为**红色**；同时在**活动Pod警报(2)**字段下会显示状态信息**Pod即将到期**。 此时将显示**确认警报(3)**按钮。 系统通知(4)也会提醒您pod即将到期
+1. 当达到设定的**关机前小时数**警告时限时，pod将发出提示音，告知您其即将到期，需要尽快更换pod。您可在**Omnipod(POD)**标签页核实：**Pod到期时间：(1)**字段会显示pod失效的具体时间（激活后72小时），超时后文字将变为**红色**；同时在**活动Pod警报(2)**字段下会显示状态信息**Pod即将到期**。此时将显示**确认警报(3)**按钮。系统通知(4)也会提醒您pod即将到期
 
    > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png)
 
@@ -271,11 +271,11 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
    > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png)
 
-3. 当警报**成功停用**后，活动pod会发出**2声提示音**，并显示确认对话框，内容为**活动警报已确认**。 点击**确定**按钮确认并关闭对话框。
+3. 当警报**成功停用**后，活动pod会发出**2声提示音**，并显示确认对话框，内容为**活动警报已确认**。点击**确定**按钮确认并关闭对话框。
 
    > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png)
    > 
-   > 当确认警报指令处理期间RileyLink超出pod通信范围时，系统将显示包含2个选项的警告信息。 **静音(1)**将消除当前警告提示音。 **确定(2)**将确认此警告，并允许用户再次尝试确认警报。
+   > 当确认警报指令处理期间RileyLink超出pod通信范围时，系统将显示包含2个选项的警告信息。**静音(1)**将消除当前警告提示音。**确定(2)**将确认此警告，并允许用户再次尝试确认警报。
    > 
    > ![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
 
@@ -287,7 +287,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 本部分将向您展示如何查看活动pod的历史记录，并按不同操作类别进行筛选。 Pod历史记录工具可让您查看当前活动pod在其3天(72-80小时)生命周期内执行的操作及结果。
 
-此功能可用于验证已执行但您不确定是否完成的大剂量、临时基础率和基础率变更。 其余类别通常有助于故障排查，并确定导致故障的事件发生顺序。
+此功能可用于验证已执行但您不确定是否完成的大剂量、临时基础率和基础率变更。其余类别通常有助于故障排查，并确定导致故障的事件发生顺序。
 
 *注意：* **不确定**指令会显示在pod历史记录中，但由于其特性，您无法确保其准确性。
 
@@ -295,25 +295,25 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
    > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png)
 
-2. 在**Pod历史记录**界面中，默认显示**全部(1)**类别，按时间倒序列出所有pod**操作(3)**及其**结果(4)**的**日期和时间(2)**。 按手机**返回键2次**可返回主AAPS界面的**Omnipod(POD)**标签页。
+2. 在**Pod历史记录**界面中，默认显示**全部(1)**类别，按时间倒序列出所有pod**操作(3)**及其**结果(4)**的**日期和时间(2)**。按手机**返回键2次**可返回主AAPS界面的**Omnipod(POD)**标签页。
 
    > ![Pod_History_3](../images/omnipod/Pod_History_3.png) ![Pod_History_4](../images/omnipod/Pod_History_4.png)
 
 ### 查看RileyLink设置与历史记录
 
-本部分将向您展示如何查看活动pod和RileyLink的设置参数，以及各自的通信历史记录。 此功能包含两个部分：**设置**和**历史记录**。
+本部分将向您展示如何查看活动pod和RileyLink的设置参数，以及各自的通信历史记录。此功能包含两个部分：**设置**和**历史记录**。
 
-该功能主要用于当您的pod通信设备超出手机蓝牙范围一段时间后，**RileyLink状态**显示**RileyLink无法连接**的情况。 主界面**Omnipod(POD)**标签页上的**刷新**按钮会手动尝试与Omnipod设置中当前配置的RileyLink重新建立蓝牙连接。
+该功能主要用于当您的pod通信设备超出手机蓝牙范围一段时间后，**RileyLink状态**显示**RileyLink无法连接**的情况。主界面**Omnipod(POD)**标签页上的**刷新**按钮会手动尝试与Omnipod设置中当前配置的RileyLink重新建立蓝牙连接。
 
 若主界面**Omnipod(POD)**标签页的**刷新**按钮未能恢复与pod通信设备的连接，请按照以下步骤进行手动重连。
 
 #### 手动重建Pod通信设备蓝牙连接
 
-1. 当**Omnipod(POD)**标签页的**RileyLink状态：(1)**显示**RileyLink无法连接**时，请点击**POD管理(2)**按钮进入**Pod管理**菜单。 在**Pod管理**菜单中，您将看到系统正在主动搜索RileyLink连接的通知，此时请点击**RileyLink统计(3)**按钮进入**RileyLink设置**界面。
+1. 当**Omnipod(POD)**标签页的**RileyLink状态：(1)**显示**RileyLink无法连接**时，请点击**POD管理(2)**按钮进入**Pod管理**菜单。在**Pod管理**菜单中，您将看到系统正在主动搜索RileyLink连接的通知，此时请点击**RileyLink统计(3)**按钮进入**RileyLink设置**界面。
 
    > ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
-2. 在**RileyLink设置(1)**界面的**RileyLink(2)**区域，您可通过**连接状态与错误：(3)**字段确认蓝牙连接状态及错误信息。 此时应显示*蓝牙错误*和*RileyLink无法连接*状态。 请点击右下角的**刷新(4)**按钮，开始手动重新建立蓝牙连接。
+2. 在**RileyLink设置(1)**界面的**RileyLink(2)**区域，您可通过**连接状态与错误：(3)**字段确认蓝牙连接状态及错误信息。此时应显示*蓝牙错误*和*RileyLink无法连接*状态。请点击右下角的**刷新(4)**按钮，开始手动重新建立蓝牙连接。
 
    > ![RileyLink_Bluetooth_Reset_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
    > 
@@ -326,7 +326,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 3. 若**蓝牙连接**未能恢复，请尝试手动关闭手机蓝牙功能后再重新开启。
 
-4. RileyLink蓝牙成功重新连接后，**连接状态：(1)**字段应显示**RileyLink就绪**。 恭喜！您已成功将配置的pod通信设备重新连接至AAPS系统！
+4. RileyLink蓝牙成功重新连接后，**连接状态：(1)**字段应显示**RileyLink就绪**。恭喜！您已成功将配置的pod通信设备重新连接至AAPS系统！
 
    > ![RileyLink_Bluetooth_Reset_5](../images/omnipod/RileyLink_Bluetooth_Reset_5.png)
 
@@ -363,9 +363,9 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 (omnipod-eros-rileylink-and-active-pod-history)=
 #### RileyLink与活动Pod历史记录
 
-本界面按时间倒序显示RileyLink或当前连接pod所处的状态或执行的操作信息。 完整历史记录仅适用于当前活动pod，更换pod后该历史将被清空，系统仅记录并显示新激活pod的事件。
+本界面按时间倒序显示RileyLink或当前连接pod所处的状态或执行的操作信息。完整历史记录仅适用于当前活动pod，更换pod后该历史将被清空，系统仅记录并显示新激活pod的事件。
 
-1. 请进入**Omnipod(POD)**标签页，点击**POD管理(1)**按钮进入**Pod管理**菜单，再点击**Pod历史(2)**按钮即可查看**设置**与**历史记录**界面。 点击**历史记录(3)**文字可查看RileyLink及当前活动pod会话的完整历史。
+1. 请进入**Omnipod(POD)**标签页，点击**POD管理(1)**按钮进入**Pod管理**菜单，再点击**Pod历史(2)**按钮即可查看**设置**与**历史记录**界面。点击**历史记录(3)**文字可查看RileyLink及当前活动pod会话的完整历史。
 
    > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png)
    > 
@@ -425,13 +425,13 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 - 单位/小时 @ 临时基础率设定时间（已运行分钟数/临时基础率总运行分钟数）
 - *示例：* 0.00U/h @18:25 (90/120分钟)
 
-- **储药量：**当储药器剩余药量超过50单位时，显示"50+单位剩余"。 低于此值时，将以黄色文字显示精确单位值。
+- **储药量：**当储药器剩余药量超过50单位时，显示"50+单位剩余"。低于此值时，将以黄色文字显示精确单位值。
 
-- **总输注量：**显示储药器已输送的胰岛素总量（单位）。 *请注意这是近似值，因为pod的灌注和填充并非精确过程。*
+- **总输注量：**显示储药器已输送的胰岛素总量（单位）。*请注意这是近似值，因为pod的灌注和填充并非精确过程。*
 
 - **错误信息：**显示最近发生的错误。 Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
-- **活动储药器警报：** 保留用于当前活动储药器上正在运行的警报。 通常用于当pod超过72小时有效期且设备原生蜂鸣警报正在运行时。
+- **活动储药器警报：** 保留用于当前活动储药器上正在运行的警报。通常用于当pod超过72小时有效期且设备原生蜂鸣警报正在运行时。
 
 ### 图标
 
@@ -562,7 +562,7 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
 ## Omnipod设置
 
-Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**➜**泵**➜**Omnipod**➜**设置齿轮图标(2)**进行配置，选择标有**Omnipod**的**单选按钮(1)**即可。 勾选**设置齿轮图标(2)**旁边的**复选框(3)**，将使Omnipod菜单以**OMNIPOD**或**POD**标签页形式显示在AAPS界面中。 本文档中将其称为**Omnipod(POD)**标签页。
+Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**➜**泵**➜**Omnipod**➜**设置齿轮图标(2)**进行配置，选择标有**Omnipod**的**单选按钮(1)**即可。勾选**设置齿轮图标(2)**旁边的**复选框(3)**，将使Omnipod菜单以**OMNIPOD**或**POD**标签页形式显示在AAPS界面中。本文档中将其称为**Omnipod(POD)**标签页。
 
 ![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
 
@@ -580,14 +580,14 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 允许扫描pod通信设备。 Omnipod驱动一次只能选择一个pod通信设备。
 
-- **显示OrangeLink/EmaLink/DiaLink报告的电池电量：** 报告OrangeLink/EmaLink/DiaLink的实际电池电量。 **强烈建议**所有OrangeLink/EmaLink/DiaLink用户启用此设置。
+- **显示OrangeLink/EmaLink/DiaLink报告的电池电量：** 报告OrangeLink/EmaLink/DiaLink的实际电池电量。**强烈建议**所有OrangeLink/EmaLink/DiaLink用户启用此设置。
 
 - 不适用于原始RileyLink。
 - 可能不适用于RileyLink替代设备。
 - 启用 - 报告支持的pod通信设备的当前电池电量。
 - 禁用 - 报告值为"不适用"。
 
-- **在操作菜单中启用电池更换记录：** 若您已启用此设置及上述电池报告设置，则操作菜单中的电池更换按钮将被激活。  某些pod通信设备现在可以使用可更换的普通电池。  此选项可让您记录更换时间并重置电池使用计时器。
+- **在操作菜单中启用电池更换记录：** 若您已启用此设置及上述电池报告设置，则操作菜单中的电池更换按钮将被激活。某些pod通信设备现在可以使用可更换的普通电池。此选项可让您记录更换时间并重置电池使用计时器。
 
 ### Confirmation beeps
 
@@ -602,7 +602,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 当pod到期、关机或根据设定的阈值单位检测到储药器药量不足时，提供AAPS警报和Nightscout通知。
 
-*请注意：自警报触发后与储药器首次通信时，AAPS将始终针对任何警报发出通知。 除非启用"自动确认储药器警报"功能，否则仅消除通知并不会消除警报状态。 要手动消除警报，必须访问Omnipod(POD)标签页并按下"确认警报"按钮。*
+*请注意：自警报触发后与储药器首次通信时，AAPS将始终针对任何警报发出通知。除非启用"自动确认储药器警报"功能，否则仅消除通知并不会消除警报状态。要手动消除警报，必须访问Omnipod(POD)标签页并按下"确认警报"按钮。*
 
 - ***启用到期提醒：** 设置是否在达到关机前设定小时数时触发pod到期提醒。
 - **关机前小时数：** 设定活动储药器关机前触发过期提醒警报的小时数。
@@ -633,9 +633,9 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 随着原始RileyLink的多种替代型号(如OrangeLink或EmaLink)的出现，或需要拥有相同Pod通讯设备(RileyLink)的多个/备用版本，从Omnipod设置配置中切换或移除选定的Pod通讯设备(RileyLink)变得必要。
 
-以下步骤将展示如何**移除**现有Pod通讯设备(RileyLink)以及**添加**新的Pod通讯设备。  执行**移除**和**添加**两个步骤将切换您的设备。
+以下步骤将展示如何**移除**现有Pod通讯设备(RileyLink)以及**添加**新的Pod通讯设备。执行**移除**和**添加**两个步骤将切换您的设备。
 
-1. 进入**RileyLink选择**菜单：点击**Omnipod(POD)**标签页右上角的**三点菜单(1)**，然后从下拉菜单中选择**Omnipod偏好设置(2)**。 在**Omnipod设置**菜单的**RileyLink配置(3)**下，点击**未设置**(若未选择设备)或**MAC地址**(若已选择设备)文字，打开**RileyLink选择**菜单。
+1. 进入**RileyLink选择**菜单：点击**Omnipod(POD)**标签页右上角的**三点菜单(1)**，然后从下拉菜单中选择**Omnipod偏好设置(2)**。在**Omnipod设置**菜单的**RileyLink配置(3)**下，点击**未设置**(若未选择设备)或**MAC地址**(若已选择设备)文字，打开**RileyLink选择**菜单。
 
    > ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
@@ -655,7 +655,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
    > ![RileyLink_Setup_Remove_3](../images/omnipod/RileyLink_Setup_Remove_3.png)
 
-4. 您已返回**Omnipod设置**菜单，在**RileyLink配置**下现在会看到设备状态为**未设置(5)**。  恭喜，您已成功移除选定的Pod通讯设备。
+4. 您已返回**Omnipod设置**菜单，在**RileyLink配置**下现在会看到设备状态为**未设置(5)**。恭喜，您已成功移除选定的Pod通讯设备。
 
    > ![RileyLink_Setup_Remove_4](../images/omnipod/RileyLink_Setup_Remove_4.png)
 
@@ -671,7 +671,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
    > ![RileyLink_Setup_Add_2](../images/omnipod/RileyLink_Setup_Add_2.png)
 
-3. 从可用设备列表中选择**您的RileyLink(3)**，您将返回**Omnipod设置**菜单，此时会显示新选择设备的**MAC地址(4)**。  恭喜，您已成功选择Pod通讯设备。
+3. 从可用设备列表中选择**您的RileyLink(3)**，您将返回**Omnipod设置**菜单，此时会显示新选择设备的**MAC地址(4)**。恭喜，您已成功选择Pod通讯设备。
 
    > ![RileyLink_Setup_Add_3](../images/omnipod/RileyLink_Setup_Add_3.png) ![RileyLink_Setup_Add_4](../images/omnipod/RileyLink_Setup_Add_4.png)
 
@@ -680,7 +680,7 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 此标签页在主AAPS文档中有详细说明，但有几个项目专门说明Omnipod pod与管式泵的区别，特别是在完成新pod应用流程后的注意事项。
 
 1. 前往主AAPS界面中的**操作(ACT)**标签页。
-2. 在**Careportal(1)**部分，以下3个字段将在**每次更换pod后**将其**使用时长重置**为0天0小时：**胰岛素**和**套管**。 这是由于Omnipod胰岛素泵的构造和工作原理决定的。 **泵电池**和**胰岛素储药器**均内置于每个储药器单元内部。 由于储药器在敷贴时会直接将输注套管插入皮肤，Omnipod泵不使用传统导管。 *因此更换储药器后，这些数值的使用时长会自动归零。* **泵电池使用时长**不显示报告，因为储药器内置电池的寿命始终超过储药器使用期限（最长80小时）。
+2. 在**Careportal(1)**部分，以下3个字段将在**每次更换pod后**将其**使用时长重置**为0天0小时：**胰岛素**和**套管**。这是由于Omnipod胰岛素泵的构造和工作原理决定的。**泵电池**和**胰岛素储药器**均内置于每个储药器单元内部。由于储药器在敷贴时会直接将输注套管插入皮肤，Omnipod泵不使用传统导管。*因此更换储药器后，这些数值的使用时长会自动归零。* **泵电池使用时长**不显示报告，因为储药器内置电池的寿命始终超过储药器使用期限（最长80小时）。
 
 > ![Actions_Tab](../images/omnipod/Actions_Tab.png)
 
@@ -688,16 +688,16 @@ Omnipod驱动设置可通过左上角**汉堡菜单**中的**配置构建器**�
 
 **胰岛素储药量**
 
-Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确知道Pod中注入了多少胰岛素，只能通过填充Pod时触发的2声提示音来判断已注入超过85单位。 单个Pod最多可容纳200单位胰岛素。 初始化过程也可能引入误差，因为这不是一个精确的操作流程。  基于这两个因素，Omnipod驱动程序的编写旨在提供储药器中剩余胰岛素的最佳估算值。
+Omnipod Eros Pod中的胰岛素量报告不精确。这是因为无法精确知道Pod中注入了多少胰岛素，只能通过填充Pod时触发的2声提示音来判断已注入超过85单位。单个Pod最多可容纳200单位胰岛素。初始化过程也可能引入误差，因为这不是一个精确的操作流程。基于这两个因素，Omnipod驱动程序的编写旨在提供储药器中剩余胰岛素的最佳估算值。
 
 > - **超过50单位** - 当储药器中当前胰岛素量超过50单位时，显示为50+U。
 > - **低于50单位** - 显示储药器中剩余胰岛素的估算值。
 > - **短信查询** - 短信回复将返回实际数值或"50+单位"
-> - **Nightscout** - 当药量超过50单位时，会向Nightscout上传50的数值（14.07及更早版本）。  较新版本在药量超过50单位时将报告"50+"的数值。
+> - **Nightscout** - 当药量超过50单位时，会向Nightscout上传50的数值（14.07及更早版本）。较新版本在药量超过50单位时将报告"50+"的数值。
 
 **电池电量**
 
-电池电量报告是一项可启用的设置，用于返回Pod通讯设备（如OrangeLink、EmaLink或DiaLink）的当前电池电量。  RileyLink硬件无法报告其电池电量。  电池电量会在每次与Pod通讯后更新，因此充电时可能不会观察到线性增长。  手动刷新将更新当前电池电量。  当支持的Pod通讯设备断开连接时，将报告0%电量值。
+电池电量报告是一项可启用的设置，用于返回Pod通讯设备（如OrangeLink、EmaLink或DiaLink）的当前电池电量。  RileyLink硬件无法报告其电池电量。电池电量会在每次与Pod通讯后更新，因此充电时可能不会观察到线性增长。手动刷新将更新当前电池电量。当支持的Pod通讯设备断开连接时，将报告0%电量值。
 
 > - **RileyLink硬件无法报告电池电量**
 > - **必须在Omnipod设置中启用"显示OrangeLink/EmaLink/DiaLink报告的电池电量"选项才能获取电池电量数值**
@@ -712,11 +712,11 @@ Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确�
 
 ### Pod Failures
 
-储药器偶尔会因各种问题发生故障，包括储药器自身的硬件问题。 最佳做法是不要向Insulet公司报修，因为AAPS并非官方认可的使用方案。 故障代码列表可[在此处](https://github.com/openaps/openomni/wiki/Fault-event-codes)查看，以帮助确定原因。
+储药器偶尔会因各种问题发生故障，包括储药器自身的硬件问题。最佳做法是不要向Insulet公司报修，因为AAPS并非官方认可的使用方案。故障代码列表可[在此处](https://github.com/openaps/openomni/wiki/Fault-event-codes)查看，以帮助确定原因。
 
 ### Preventing error 49 pod failures
 
-该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。 我们建议用户在**配置构建器**➜**通用**➜**NS客户端**➜**齿轮图标**➜**高级设置**下切换为仅上传模式(禁用同步)，以防止可能出现的问题。
+该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。我们建议用户在**配置构建器**➜**通用**➜**NS客户端**➜**齿轮图标**➜**高级设置**下切换为仅上传模式(禁用同步)，以防止可能出现的问题。
 
 ### Pump Unreachable Alerts
 
@@ -725,9 +725,9 @@ Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确�
 (OmnipodEros-import-settings-from-previous-aaps)=
 ### 从之前的AAPS导入设置
 
-请注意：导入设置可能会带入过期的Pod状态信息。 这可能导致您丢失正在使用的Pod。 因此强烈建议**在Pod使用期间不要导入设置**。
+请注意：导入设置可能会带入过期的Pod状态信息。这可能导致您丢失正在使用的Pod。因此强烈建议**在Pod使用期间不要导入设置**。
 
-1. 停用您当前的Pod会话。 确认您没有正在使用的Pod会话。
+1. 停用您当前的Pod会话。确认您没有正在使用的Pod会话。
 2. 请导出您的设置文件并妥善保存副本。
 3. 卸载旧版AAPS并重启手机。
 4. 安装新版AAPS并确认没有正在使用的Pod会话。
@@ -735,33 +735,33 @@ Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确�
 
 ### Omnipod driver alerts
 
-请注意：Omnipod驱动程序在**概览标签页**会显示多种独特警报，其中大部分为信息类警报可忽略，但部分警报会提示用户需采取相应操作来解决触发警报的原因。 以下是您可能会遇到的主要警报摘要：
+请注意：Omnipod驱动程序在**概览标签页**会显示多种独特警报，其中大部分为信息类警报可忽略，但部分警报会提示用户需采取相应操作来解决触发警报的原因。以下是您可能会遇到的主要警报摘要：
 
 #### 无活动Pod
 
-未检测到活动的Pod会话。 该警报可通过点击**暂缓**临时关闭，但在新储药器激活前将持续触发。 该警报激活后将自动静音。
+未检测到活动的Pod会话。该警报可通过点击**暂缓**临时关闭，但在新储药器激活前将持续触发。该警报激活后将自动静音。
 
 #### Pod已暂停
 
 提示性警报：Pod已暂停。
 
-#### 基础率配置文件设置失败。 输注可能已暂停！ 请从Omnipod标签页手动刷新储药器状态，必要时恢复输注。
+#### 基础率配置文件设置失败。输注可能已暂停！请从Omnipod标签页手动刷新储药器状态，必要时恢复输注。
 
 提示性警报：Pod基础率配置文件设置失败，您需要在Omnipod标签页点击*刷新*。
 
-#### 无法确认超微大剂量是否成功输注。 若确认大剂量未成功输注，请手动从治疗记录中删除该条超微大剂量记录。
+#### 无法确认超微大剂量是否成功输注。若确认大剂量未成功输注，请手动从治疗记录中删除该条超微大剂量记录。
 
 警报：无法确认超微大剂量是否成功输注，您需要检查Omnipod标签页的*最后大剂量*字段确认输注状态，若失败需在治疗记录页删除该条目。
 
 #### 无法确认"任务大剂量/临时基础率/超微大剂量"是否完成，请人工核验操作结果。
 
-由于RileyLink与Omnipod的通讯特性，可能出现*无法确定*指令是否成功执行的情况。 必须告知用户存在这种不确定性。
+由于RileyLink与Omnipod的通讯特性，可能出现*无法确定*指令是否成功执行的情况。必须告知用户存在这种不确定性。
 
 以下是可能触发不确定通知的几种情况示例。
 
-- **大剂量** - 无法自动验证不确定的大剂量输注。 该通知将持续到下次大剂量输注，但手动刷新Pod可清除该消息。 *默认情况下，此类通知会启用警报提示音，因为需要用户手动进行确认。*
-- **临时基础率、Pod状态、配置文件切换、时间变更** - 手动刷新Pod可清除该消息。 默认情况下，此类通知类型禁用警报提示音。
-- **Pod时间偏差 -** 当Pod时间与手机时间偏差过大时，AAPS循环系统将难以正常运行并做出准确的预测和剂量建议。 若Pod与手机时间偏差超过5分钟，AAPS将在Pod状态中报告Pod处于暂停状态，并显示"处理时间变更"提示信息。 Omnipod（POD）标签页底部将额外显示**设置时间**图标。 点击"设置时间"将使Pod时间与手机同步，之后可点击"恢复输注"按钮继续正常Pod操作。
+- **大剂量** - 无法自动验证不确定的大剂量输注。该通知将持续到下次大剂量输注，但手动刷新Pod可清除该消息。*默认情况下，此类通知会启用警报提示音，因为需要用户手动进行确认。*
+- **临时基础率、Pod状态、配置文件切换、时间变更** - 手动刷新Pod可清除该消息。默认情况下，此类通知类型禁用警报提示音。
+- **Pod时间偏差 -** 当Pod时间与手机时间偏差过大时，AAPS循环系统将难以正常运行并做出准确的预测和剂量建议。若Pod与手机时间偏差超过5分钟，AAPS将在Pod状态中报告Pod处于暂停状态，并显示"处理时间变更"提示信息。 Omnipod（POD）标签页底部将额外显示**设置时间**图标。点击"设置时间"将使Pod时间与手机同步，之后可点击"恢复输注"按钮继续正常Pod操作。
 
 ## 最佳实践
 
@@ -769,17 +769,17 @@ Omnipod Eros Pod中的胰岛素量报告不精确。  这是因为无法精确�
 
 ### Omnipod与RileyLink的最佳摆放位置
 
-RileyLink用于与Omnipod Pod通信的天线是433 MHz螺旋天线。 由于其结构特性，它辐射出全向信号，就像一个三维环形，z轴代表垂直立式天线。 这意味着RileyLink存在最佳摆放位置，特别是在Pod激活和停用过程中。
+RileyLink用于与Omnipod Pod通信的天线是433 MHz螺旋天线。由于其结构特性，它辐射出全向信号，就像一个三维环形，z轴代表垂直立式天线。这意味着RileyLink存在最佳摆放位置，特别是在Pod激活和停用过程中。
 
 ![Toroid_w_CS](../images/omnipod/Toroid_w_CS.png)
 
 > *（图1. 螺旋天线全向辐射模式图示*）
 
-出于安全和保密考虑，Pod*激活*操作需在*较近距离（约30厘米以内）*完成，该距离要求比其他操作（如输注大剂量、设置临时基础率或单纯刷新Pod状态）更为严格。 由于RileyLink天线的信号传输特性，不建议将Pod直接放置在RileyLink正上方或紧贴其旁边。
+出于安全和保密考虑，Pod*激活*操作需在*较近距离（约30厘米以内）*完成，该距离要求比其他操作（如输注大剂量、设置临时基础率或单纯刷新Pod状态）更为严格。由于RileyLink天线的信号传输特性，不建议将Pod直接放置在RileyLink正上方或紧贴其旁边。
 
 下图展示了Pod激活和停用过程中RileyLink的最佳摆放方式。 Pod在其他位置也可能激活，但采用下图所示位置的成功率最高。
 
-*注：若在最佳摆放位置下仍出现Pod与RileyLink通信失败，可能是电池电量不足导致天线传输范围缩小。 为避免此问题，请确保RileyLink在此过程中电量充足或直接连接充电线。*
+*注：若在最佳摆放位置下仍出现Pod与RileyLink通信失败，可能是电池电量不足导致天线传输范围缩小。为避免此问题，请确保RileyLink在此过程中电量充足或直接连接充电线。*
 
 ![Omnipod_pod_and_RileyLink_Position](../images/omnipod/Omnipod_pod_and_RileyLink_Position.png)
 

@@ -2,34 +2,34 @@
 
 # **Bluetooth related issues**
 
-Some users have been running into issues with Omnipod DASH activation failures, Medtrum Nano connectivity problems, and other pod errors related to Bluetooth. Many of these issues can be traced to one of the following issues.
+Некоторые пользователи сталкиваются с проблемами при активации Omnipod DASH, запуском Medtrum Nano и другими ошибками патч-помп, которые связаны с работой Bluetooth. Большинство этих проблем связаны с причинами, описанными ниже.
 
-Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medtrum Nano has known issues with nearby device permission as well as the Omnipod DASH.
+Некоторые из этих проблем, вероятно, могут возникнуть и у других помп, использующих Bluetooth. Например, и у Medtrum Nano и у Omnipod DASH наблюдается проблема, связанная с разрешениями для устройств поблизости.
 
 ---
 
 (bluetoothtroubleshooting-cannot-start-omnipod-with-android-16)=
 
-## Cannot start Omnipod with Android 16
-- Android 16 needs at a minimum **AAPS** version 3.3.2.1 for the Omnipod DASH to work correctly, as this versions has fixes added to specifically address known problems introduced in Android 16 for Omnipod.
+## Невозможно запустить Omnipod на Android 16
+- Минимальная версия **AAPS**, требующаяся для корректной работы Omnipod DASH на Android 16 - 3.3.2.1, так как в ней устранены специфичные проблемы Omnipod, появившиеся в Android 16.
 
 ---
 
 (bluetoothtroubleshooting-bluetooth-battery-optimisation)=
 
-## Bluetooth Battery Optimisation
+## Оптимизация энергопотребления Bluetooth-устройств
 
-Newer versions of Android have enable Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
+В новых версиях Android для системных Bluetooth-приложений включена оптимизация энергопотребления. Известно, что это может вызывать проблемы с Bluetooth помпами и НМГ.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide its possible you have not changed this setting.
+Если вы следовали инструкциям [Мастера установки](../SettingUpAaps/SetupWizard) и выполнили настройки из раздела [Оптимизация энергопотребления Bluetooth](#setup-wizard-bluetooth-battery-optimisation), то этот параметр должен быть установлен правильно. Однако если вы следовали более ранней версии этого руководства, возможно, вы не меняли этот параметр.
 
-Verify this is correctly configured if you have pump an CGM disconnections.
+Убедитесь в правильности этой настройки если ваша помпа или НМГ регулярно отключается.
 
 ---
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission)=
 
-## Apps that use the "Nearby devices" Android permission can cause connection drops and Pod activation problems
+## Приложения, использующие разрешение "Устройства поблизости", могут вызывать потерю соединения или проблемы активации подов
 
 Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to bluetooth, scan for nearby devices etc.
 
@@ -37,13 +37,13 @@ Android allows you to control what each app is able to do or access on your phon
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### **Apps that use "Nearby device" permissions and are known to have caused problems:**
+### **Приложения, выдача разрешения "Устройство поблизости" которым может вызывать проблемы:**
 
-Apps in this list have been discussed in one or more places in the community as causing problems for Omnipod DASH devices and in some cases Medtrum Nano too.
+Приложения из этого списка неоднократно обсуждались в сообществе как вызывающие проблемы в работе Omnipod DASH, а в некоторых случаях и Medtrum Nano.
 
 ```{admonition} Updating the list
 :class: note
-Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to this list.
+Обратитесь к @XiTatiON на канале #omnipod-dash в Discord, чтобы обсудить добавление новых приложений в этот список.
 ```
 
 - **myBMW** MyBMW interrupted Medtrum Nano and Omnipod DASH. The MyBMW app prompts regarding permission for "find nearby devices" only once, if you don't grant it, it still works absolutely OK
@@ -56,46 +56,46 @@ Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to t
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### **How to revoke "Nearby device" permissions for other apps:**
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
+### **Как отозвать разрешения "Устройства поблизости" для других приложений:**
+Если у вас возникли проблемы с активацией нового пода и вы используете правильную, поддерживаемую версию **AAPS**, совместимую с вашей версией Android. На время активации нового пода может потребоваться отозвать разрешения у других приложений.
 
-Follow this procedure to revoked the "Nearby device" permission for all apps except **AAPS**:
+Выполните следующую инструкцию для отзыва разрешения "Устройства поблизости" для всех приложений кроме **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
-The screenshots and instructions in this guide are from a Vanilla Android 16 install on Google Pixel 8 Pro. Other manufactures and devices will likely not exactly match these menus and settings descriptions, adjust the steps to suit the device you have and if you are stuck see [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) section on how to reach out to the community for support.
+Скриншоты и инструкции в этом руководстве даны для ванильного Android 16 на смартфоне Google Pixel 8 Pro. Перевод на русский сделан в соответствии с локалью Samsung S25. Другие производители и устройства могут выглядеть несколько иначе, адаптируйте инструкцию под свое устройство, а если возникнут непреодолимые сложности обратитесь к разделу [Где получить помощь с дешем](#omnipod-dash-where-to-get-help-for-dash), чтобы понять, как обратиться к сообществу для помощи.
 ```
 
-1. Open Android settings on your phone, scroll down and press on **Security and privacy (1)**.
+1. Откройте настройки Android на телефоне, прокрутите вниз и выберите раздела **Безопасность и конфиденциальность (1)**.
 
     ![android_settings_sec_priv](../images/android_16/android_settings_sec_priv.png)
 
-2. Scroll down and press on **Privacy controls (1)**.
+2. Прокрутите вниз и выберите **Другие настройки конфиденциальности (1)**.
 
    ![android_sec_priv](../images/android_16/android_sec_priv.png)
 
-3. Press on **Permission manager (1)**.
+3. Выберите **Диспетчер разрешений (1)**.
 
    ![android_priv_control](../images/android_16/android_priv_control.png)
 
-3. Scroll down and press on **Nearby devices (1)**.
+3. Прокрутите вниз и выберите **Устройства поблизости (1)**.
 
    ![android_perm_man_nearby_dev](../images/android_16/android_perm_man_nearby_dev.png)
 
-4. Browse the list of apps and press on the app you wish to revoke **Nearby devices** permissions for.
+4. Посмотрите список приложений и выберите те, для которых хотите отозвать разрешение **Устройства поблизости**.
 
-   In this guide **Android Auto (1)** is the app we will revoke the permission on.
+   В этой инструкции мы отзовем разрешение у приложения **Android Auto (1)**.
 
-   To avoid bricking more pods we advise everyone initially to revoke the permission on all apps except **AAPS**.
+   Чтобы избежать "окирпичивания" подов мы рекомендуем отозвать разрешение у всех приложений, кроме **AAPS**.
 
 ```{admonition} Which app to select?
 :class: tip
-If you are unsure which app is causing you an issue, disable them all (remember to check the list of known problem apps too and start with those) and if you can spare a few bricked pods on the way, enable the permission on one new app before every new Pod activation, until you can narrow down which app specifically causes your Pod issues. If you do identify new problematic apps please let us know on the #omnipod-dash Discord channel.
+Если вы не уверены, какое именно приложение вызывает проблему, отзовите разрешение у всех (сперва отзовите разрешение у известных проблемных приложений) и если вы можете позволить себе загубить несколько подов - возвращайте разрешение по одному перед каждой новой активацией пода до тех пор, пока не выясните какое именно приложение вызывает проблему с подами у вас. Если вы обнаружили новые проблемные приложения, пожалуйста, дайте нам знать о них на канале #omnipod-dash в Discord.
 ```
 
    ![android_nearby_dev](../images/android_16/android_nearby_dev.png)
 
-5. To revoke the permission Press on **Don't allow (1)**, then Press on **Don't allow anyway (2)**. If done correctly you should see **Don't allow (3)** as the selected Toggle option. You can now go back to the **Nearby device** menu by pressing the **Back arrow (4)** and change this setting on other apps if required.
+5. Чтобы отозвать разрешение, нажмите на **Запретить (1)**, затем нажмите **Все равно запретить (2)**. Если все сделано правильно, будет выбрана опция **Запретить (3)**. Теперь вы можете вернуться в меню **Устройства поблизости**, нажав **стрелку "Назад" (4)** и изменив это разрешение в других приложениях.
 
    ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dev.png) ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow_anyway.png)  ![android_auto_nearby_dev](../images/android_16/android_auto_nearby_dont_allow.png)
 

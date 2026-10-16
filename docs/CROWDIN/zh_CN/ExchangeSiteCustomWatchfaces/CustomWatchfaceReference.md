@@ -1,6 +1,6 @@
 # 自定义表盘参考文档
 
-本页面向新表盘设计师提供参考。 本文将列出创建或制作动态表盘时可用的所有关键词和功能。
+本页面向新表盘设计师提供参考。本文将列出创建或制作动态表盘时可用的所有关键词和功能。
 
 - 自定义表盘V2版本（Wear apk 3.3.0及以上）的新功能和按键详见[此处](#cwf-reference-new-v2-features)
 
@@ -10,14 +10,14 @@
 
 表盘文件为简易zip压缩包，但需包含以下文件才能被识别为表盘文件：
 
-- 一个名为CustomWatchface的图像文件（可为位图`CustomWatchface.jpg`、`CustomWatchface.png`或矢量图`CustomWatchface.svg`）。 该文件是点击"加载表盘"按钮时用于选择表盘的小图标，同时也是AAPS Wear插件中显示的图像。
-- 一个名为`CustomWatchface.json`的文件（参见下文[JSON结构](#cwf-reference-json-structure)）。 该核心文件包含设计表盘所需的全部信息。 该json文件必须格式正确（在文本编辑器中手动编辑时最易出错，缺失或多一个逗号都会破坏json格式）。 该JSON文件必须包含带非空`"name"`键的`"metadata"`区块。 这将作为自定义表盘的名称（参见下文[元数据设置](#cwf-reference-metadata-settings)）
-- 该zip文件应尽可能小（建议小于500KB）。 文件过大将被拦截，无法传输至手表。
+- 一个名为CustomWatchface的图像文件（可为位图`CustomWatchface.jpg`、`CustomWatchface.png`或矢量图`CustomWatchface.svg`）。该文件是点击"加载表盘"按钮时用于选择表盘的小图标，同时也是AAPS Wear插件中显示的图像。
+- 一个名为`CustomWatchface.json`的文件（参见下文[JSON结构](#cwf-reference-json-structure)）。该核心文件包含设计表盘所需的全部信息。该json文件必须格式正确（在文本编辑器中手动编辑时最易出错，缺失或多一个逗号都会破坏json格式）。该JSON文件必须包含带非空`"name"`键的`"metadata"`区块。这将作为自定义表盘的名称（参见下文[元数据设置](#cwf-reference-metadata-settings)）
+- 该zip文件应尽可能小（建议小于500KB）。文件过大将被拦截，无法传输至手表。
 
 zip文件还可包含额外资源文件：
 
-- 表盘标准视图使用的硬编码图像文件名（如`Background`、`CoverChart`...参见下文[硬编码资源文件列表](#cwf-reference-list-of-hardcoded-resource-files)）。 所有文件均可采用`jpg`、`png`或`svg`格式。 但多数情况下需使用支持透明度的`png`或`svg`格式（jpg体积虽小于png但不支持透明）。 请注意，svg文件（矢量格式）通常能实现最佳画质与最小体积的结合。
-- 可自由命名的附加资源文件。 这些附加文件可为图像文件或字体文件（字体支持`ttf`和`otf`格式）。 请注意，这些附加文件的`文件名`（不含扩展名）将作为JSON文件中的keyValue，用于指定其使用位置或时机。
+- 表盘标准视图使用的硬编码图像文件名（如`Background`、`CoverChart`...参见下文[硬编码资源文件列表](#cwf-reference-list-of-hardcoded-resource-files)）。所有文件均可采用`jpg`、`png`或`svg`格式。但多数情况下需使用支持透明度的`png`或`svg`格式（jpg体积虽小于png但不支持透明）。请注意，svg文件（矢量格式）通常能实现最佳画质与最小体积的结合。
+- 可自由命名的附加资源文件。这些附加文件可为图像文件或字体文件（字体支持`ttf`和`otf`格式）。请注意，这些附加文件的`文件名`（不含扩展名）将作为JSON文件中的keyValue，用于指定其使用位置或时机。
   - 图像文件常用作文本视图背景或动态动画素材（如电量从0%到100%的变化效果）
   - 字体文件支持在表盘中使用定制字体
 
@@ -37,7 +37,7 @@ JSON文件可通过记事本（或notepad++）文本编辑器编辑（推荐能�
 
 ### 元数据设置
 
-该区块是json文件中首个且必须包含的区块。 该区块包含与此表盘相关的所有信息，如名称、作者、创建或更新日期、作者版本或插件版本。
+该区块是json文件中首个且必须包含的区块。该区块包含与此表盘相关的所有信息，如名称、作者、创建或更新日期、作者版本或插件版本。
 
 以下是元数据区块示例：
 
@@ -173,7 +173,7 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 ### 所需工具
 
-- 文本编辑器：建议使用NotePad++（或同类工具），作为简易文本编辑器，其优势在于可显示带颜色标记的格式化文本，便于错误排查。 任何简易文本编辑器均可胜任。 因需调整json信息。
+- 文本编辑器：建议使用NotePad++（或同类工具），作为简易文本编辑器，其优势在于可显示带颜色标记的格式化文本，便于错误排查。任何简易文本编辑器均可胜任。因需调整json信息。
 - 图像编辑器（位图/矢量图）
   - 如果您使用位图
     - 图像编辑器需支持透明通道处理（背景上层图像均需此功能），若使用位图则需兼容png格式。
@@ -223,7 +223,7 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 您还可先初步调整顶部、左侧边距及宽高数值来布局表盘（这些数值后续将通过图像编辑器精确校准）。
 
-注：所有设计均在**400px×400px矩形框**内完成。 因此所有元素均需在此尺寸范围内采用绝对坐标定位。
+注：所有设计均在**400px×400px矩形框**内完成。因此所有元素均需在此尺寸范围内采用绝对坐标定位。
 
 设计首个表盘时需注意：所有元素按从底层到顶层的顺序堆叠排列，因此每个视图（ImageView或TextView）都可能遮挡后方内容...
 
@@ -260,18 +260,18 @@ json文件中包含多个颜色设定键：视图的`"color"`、`"fontColor"`，
 
 调整表盘最便捷的方式是在zip文件中包含特定命名的图像（参见[硬编码资源文件列表](#cwf-reference-list-of-hardcoded-resource-files)）
 
-- 图像需采用`.jpg`、`.png`或`.svg`格式。 但需注意：jpg格式不支持透明度，因此仅适用于背景图层。 所有中间图层（如cover_chart、cover_plate、表针）请使用`.png`或`.svg`格式图像
+- 图像需采用`.jpg`、`.png`或`.svg`格式。但需注意：jpg格式不支持透明度，因此仅适用于背景图层。所有中间图层（如cover_chart、cover_plate、表针）请使用`.png`或`.svg`格式图像
 
 - 若您使用矢量图像编辑器（如Illustrator），建议优先选择`.svg`格式，该格式能生成体积小巧的文本文件且画质最佳。
 - 务必确保使用精确的文件名（含大小写敏感）。
 
-若需定制背景图，只需在zip文件中添加名为`Background.jpg`的文件（无需修改其他内容）。 将zip文件发送至手表并查看效果！
+若需定制背景图，只需在zip文件中添加名为`Background.jpg`的文件（无需修改其他内容）。将zip文件发送至手表并查看效果！
 
 若需定制模拟表盘的时针、分针或秒针，只需添加`HourHand.png`（或`HourHand.svg`）、`MinuteHand.png`及`SecondHand.png`文件。
 
 - 这些图像将自动绕其中心点旋转，因此图像需设置为00:00:00状态（若设计"全屏"模拟表盘，请使用400×400像素尺寸并定位在top 0 left 0位置）。
 
-您还可在[硬编码资源文件列表](#cwf-reference-list-of-hardcoded-resource-files)中注意到：每个图像视图均对应两个附加的硬编码文件名`High`和`Low`（例如可在zip文件中添加名为`BackgroundHigh.jpg`和`BackgroundLow.jpg`的其他图像）。 图像将根据您的血糖水平（正常范围、高血糖或低血糖）自动切换。 参见AIMICO表盘示例。
+您还可在[硬编码资源文件列表](#cwf-reference-list-of-hardcoded-resource-files)中注意到：每个图像视图均对应两个附加的硬编码文件名`High`和`Low`（例如可在zip文件中添加名为`BackgroundHigh.jpg`和`BackgroundLow.jpg`的其他图像）。图像将根据您的血糖水平（正常范围、高血糖或低血糖）自动切换。参见AIMICO表盘示例。
 
 (cwf-reference-tune-image-color)=
 
@@ -282,13 +282,13 @@ json文件中包含多个颜色设定键：视图的`"color"`、`"fontColor"`，
 - 应用于背景视图时将设定背景色（默认为黑色）
 - 应用于cover_plate（简易表盘）或表针时，将用指定颜色（含`"bgColor"`）替换默认图像（白色）
 
-当您在位图图像（`.jpg`或`.png`）上应用`"color"`键时，颜色将对色彩饱和度产生独特效果。 因此您仍可识别位图原貌。
+当您在位图图像（`.jpg`或`.png`）上应用`"color"`键时，颜色将对色彩饱和度产生独特效果。因此您仍可识别位图原貌。
 
-最后，在`.svg`图像文件上，`"color"`键将不起作用，矢量文件的颜色被视为硬编码在图像中。 若需更改颜色，需包含多个`svg`文件，并使用高级[dynData](#cwf-reference-dyndata-feature)功能进行切换
+最后，在`.svg`图像文件上，`"color"`键将不起作用，矢量文件的颜色被视为硬编码在图像中。若需更改颜色，需包含多个`svg`文件，并使用高级[dynData](#cwf-reference-dyndata-feature)功能进行切换
 
 ### 为TextView使用附加字体
 
-穿戴应用已内置多种默认字体（参见[键值](#cwf-reference-key-values)章节中的字体键）。 但若需使用非默认的附加字体，可在zip文件中添加字体文件：
+穿戴应用已内置多种默认字体（参见[键值](#cwf-reference-key-values)章节中的字体键）。但若需使用非默认的附加字体，可在zip文件中添加字体文件：
 
 - 支持的两种字体格式为`.ttf`和`.otf`文件
 - 若在zip文件中添加自定义字体（例如名为`myCustomFont.ttf`的文件），则需在json文件中通过文件名指定TextView使用的字体：
@@ -297,7 +297,7 @@ json文件中包含多个颜色设定键：视图的`"color"`、`"fontColor"`，
 "font": "myCustomFont",
 ```
 
-请注意：部分字体文件体积较大（且zip文件存在大小限制）。 因此若仅使用极少量字符（数字、`.`、`,`），可用免费工具剔除未用字符（例如[此处](https://products.aspose.app/font/generator/ttf-to-ttf)），从而缩减字体体积。
+请注意：部分字体文件体积较大（且zip文件存在大小限制）。因此若仅使用极少量字符（数字、`.`、`,`），可用免费工具剔除未用字符（例如[此处](https://products.aspose.app/font/generator/ttf-to-ttf)），从而缩减字体体积。
 
 (cwf-reference-advanced-features)=
 
@@ -309,7 +309,7 @@ json文件中包含多个颜色设定键：视图的`"color"`、`"fontColor"`，
 
 CustomWatchface可自动调整部分手表偏好设置，以确保表盘正确显示（前提是用户已在Wear偏好设置中授予权限）。
 
-但此功能需谨慎使用。 偏好设置与所有其他表盘共用。 使用此功能需遵循以下规则：
+但此功能需谨慎使用。偏好设置与所有其他表盘共用。使用此功能需遵循以下规则：
 
 - 切勿设置与隐藏视图相关的偏好设置
 - 尽量最大化可见视图
@@ -336,7 +336,7 @@ CustomWatchface可自动调整部分手表偏好设置，以确保表盘正确�
 
 - 请注意：用户选择表盘时，可在选择界面查看"必要参数"的数量
 
-下例中Gota表盘需配置1个必要参数。 未获授权时该参数显示为白色；获授权后，参数将被设定并锁定（此时数字显示为橙色）
+下例中Gota表盘需配置1个必要参数。未获授权时该参数显示为白色；获授权后，参数将被设定并锁定（此时数字显示为橙色）
 
 ![Required parameters ](../images/CustomWatchface_2.jpg)
 
@@ -346,7 +346,7 @@ CustomWatchface可自动调整部分手表偏好设置，以确保表盘正确�
 
 ### 双视图功能
 
-双视图功能可根据可见视图轻松调整视图位置。 虽不具备完全由LinearLayout构建的布局功能，但能处理多数常见情况。
+双视图功能可根据可见视图轻松调整视图位置。虽不具备完全由LinearLayout构建的布局功能，但能处理多数常见情况。
 
 下例展示AAPS（驾驶舱）表盘：设置中所有视图均可见，以及关闭"显示设备电量"和"显示平均差值"后的同一表盘效果
 
@@ -354,7 +354,7 @@ CustomWatchface可自动调整部分手表偏好设置，以确保表盘正确�
 
 可见当双视图之一隐藏时，另一视图会自动居中显示
 
-本例中，`"uploader_battery"`区块通过`"twinView":`键指定`"rig_battery"`视图为配对对象，而`"rig_battery"`区块的`"twinView":`键则反向指定`"uploader_battery"`为配对视图。 此外，`"leftOffsetTwinHidden":`键用于设定配对视图隐藏时本视图的像素左移量。
+本例中，`"uploader_battery"`区块通过`"twinView":`键指定`"rig_battery"`视图为配对对象，而`"rig_battery"`区块的`"twinView":`键则反向指定`"uploader_battery"`为配对视图。此外，`"leftOffsetTwinHidden":`键用于设定配对视图隐藏时本视图的像素左移量。
 
 计算该数值时，可见双视图的leftMargin差值为50像素，故居中偏移量需按单方向差值的一半设定。
 
@@ -418,7 +418,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 #### **背景管理**
 
-首先，关于血糖值图像，此处别无选择——必须置于背景层（否则会遮挡图表视图导致不可见！） 因此需将血糖值映射至背景层，再根据血糖值旋转背景图像。
+首先，关于血糖值图像，此处别无选择——必须置于背景层（否则会遮挡图表视图导致不可见！）因此需将血糖值映射至背景层，再根据血糖值旋转背景图像。
 
 在`"background"`区块中，我们将加入2个专用键实现旋转：
 
@@ -435,7 +435,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 ```
 `"dynData":`键指定定义动画的区块（数值、范围、转换等），本例使用名为"rotateSgv"的区块（使用此功能时请选用明确名称）
 
-`"rotationOffset": true,`声明该数值动画应为旋转效果。 （若需创建滑动效果，还可使用`"leftOffset"`和`"topOffset"`键）
+`"rotationOffset": true,`声明该数值动画应为旋转效果。（若需创建滑动效果，还可使用`"leftOffset"`和`"topOffset"`键）
 
 现在我们将跳转至文件末尾，最后一个视图之后：
 
@@ -458,15 +458,15 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 `"background"`视图内定义的区块命名为`"rotateSgv"`，这正是`"dynData"`中的首个配置区块！
 
-该区块配置简明：首先通过`"valueKey":`键指定关联的数值来源。 此处`"sgv"`作为"keyValue"表示血糖值（注意多数情况下keyValue与显示该信息的视图同名）。
+该区块配置简明：首先通过`"valueKey":`键指定关联的数值来源。此处`"sgv"`作为"keyValue"表示血糖值（注意多数情况下keyValue与显示该信息的视图同名）。
 
 血糖值的默认最小数据设为39mgdl，最大数据设为400mgdl（所有可用keyValue及对应最小/最大数据值详见下方[动态数据参考键值](#cwf-reference-dyndata-key-values)）。
 
-在`"rotateSgv"`区块中，另两个键(`"minData":`和`"maxData":`)用于将数据范围调整为30至330。 通过这些最小和最大值，我们可以直接使用数据值（无需转换）来旋转背景（以度为单位）。 在此设置下，所有高于330mgdl的血糖值都将被限制在图像上限330度。
+在`"rotateSgv"`区块中，另两个键(`"minData":`和`"maxData":`)用于将数据范围调整为30至330。通过这些最小和最大值，我们可以直接使用数据值（无需转换）来旋转背景（以度为单位）。在此设置下，所有高于330mgdl的血糖值都将被限制在图像上限330度。
 
 #### **图表管理**
 
-图表默认背景为透明，为遮盖背景图像中的血糖刻度，需添加专用背景图（该图含蒸汽朋克表盘的整体阴影效果）。 通过`"background":`键关联charBackground.jpg文件
+图表默认背景为透明，为遮盖背景图像中的血糖刻度，需添加专用背景图（该图含蒸汽朋克表盘的整体阴影效果）。通过`"background":`键关联charBackground.jpg文件
 
 当然，视图的尺寸和定位必须精确到像素！
 
@@ -503,7 +503,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
     "dynData": "avgDeltaBackground"
 },
 ```
-该视图关联至另一个名为`avgDeltaBackground`的`"dynData"`区块。 此区块将根据avgDelta值调控avgDelta刻度。
+该视图关联至另一个名为`avgDeltaBackground`的`"dynData"`区块。此区块将根据avgDelta值调控avgDelta刻度。
 
 ```text
 "avgDeltaBackground": {
@@ -522,13 +522,13 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 },
 ```
 - `"valueKey":`将关联`"avg_delta"`数值
-- minData和maxData同时会将范围限制在该表盘支持的最大值区间（-20mgdl至20mgdl）。 使用mmol单位的用户请注意：AAPS内部数值始终以mgdl为单位存储。
+- minData和maxData同时会将范围限制在该表盘支持的最大值区间（-20mgdl至20mgdl）。使用mmol单位的用户请注意：AAPS内部数值始终以mgdl为单位存储。
 
 随后我们将在此说明如何根据数值动态管理背景图像。
 
-`"invalidImage":`键用于管理数据无效（或缺失）时显示的图像。 此处关联压缩包内含有5mgdl刻度的附加资源图像
+`"invalidImage":`键用于管理数据无效（或缺失）时显示的图像。此处关联压缩包内含有5mgdl刻度的附加资源图像
 
-随后我们将使用从`"image1":`到`"image8":`的系列图像。 提供的图像数量将决定`minData`与`maxData`之间的分段阶数。
+随后我们将使用从`"image1":`到`"image8":`的系列图像。提供的图像数量将决定`minData`与`maxData`之间的分段阶数。
 
 - `image1`设定avg_delta等于或接近`minData`时显示的图像，编号最大的图像（此处为`image8`）则设定avg_delta等于或接近`maxData`时的显示图像
 - 在-20mgdl至20mgdl范围内，总跨度为40mgdl，除以8（提供的图像数量）即得到8个5mgdl的递进步阶
@@ -594,13 +594,13 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
     "image8": "null"
 },
 ```
-此处尽管动态范围仅使用-5至+5的avg_delta数据，但必须保持-20至+20mgdl的整体范围，以确保指针在刻度切换时与背景同步。 因此我们保持与`avgDeltaBackground`相同的整体范围和分段数量（8张图像）。
+此处尽管动态范围仅使用-5至+5的avg_delta数据，但必须保持-20至+20mgdl的整体范围，以确保指针在刻度切换时与背景同步。因此我们保持与`avgDeltaBackground`相同的整体范围和分段数量（8张图像）。
 
-请注意：`"invalidImage"`及部分`"imagexx"`使用了`"null"`键值（该值可为压缩包内不存在的任意字符串文件名）。 当文件名未找到时，视图背景图像将显示为透明。 该设置确保指针仅在阶数4和5（avg delta介于-5mgdl至+5mgdl）时显示，超出此范围则隐藏。
+请注意：`"invalidImage"`及部分`"imagexx"`使用了`"null"`键值（该值可为压缩包内不存在的任意字符串文件名）。当文件名未找到时，视图背景图像将显示为透明。该设置确保指针仅在阶数4和5（avg delta介于-5mgdl至+5mgdl）时显示，超出此范围则隐藏。
 
-现在可见新增的`"rotationOffset":`区块，内含`"minValue":`和`"maxValue":`两个键。 这些数值用于将内部数据（mgdl单位）转换为所需的指针旋转角度。
+现在可见新增的`"rotationOffset":`区块，内含`"minValue":`和`"maxValue":`两个键。这些数值用于将内部数据（mgdl单位）转换为所需的指针旋转角度。
 
-- 蒸汽朋克表盘设计为指针提供-30度至30度的最大旋转范围。 因此根据当前刻度（此处为-5mgdl至5mgdl），这些数值将对应30度的旋转角度。 由于`minData`与`maxData`范围扩大4倍，对应的minValue和maxValue也需乘以4倍，即-120度至+120度。 但当旋转角度超出±30度范围时指针将隐藏（无图像显示），仅当数值处于-5至+5mgdl区间时指针可见。 这完全符合此处设计预期。
+- 蒸汽朋克表盘设计为指针提供-30度至30度的最大旋转范围。因此根据当前刻度（此处为-5mgdl至5mgdl），这些数值将对应30度的旋转角度。由于`minData`与`maxData`范围扩大4倍，对应的minValue和maxValue也需乘以4倍，即-120度至+120度。但当旋转角度超出±30度范围时指针将隐藏（无图像显示），仅当数值处于-5至+5mgdl区间时指针可见。这完全符合此处设计预期。
 
 其他dynData区块以相同方式定义，用于调整`"avgDelt10"`和`"avgDelta20"`。
 
@@ -623,7 +623,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 #### rig电池与uploader电池视图
 
-为完成dynData功能的概览，我们将查看电池管理部分。 此处设计理念是根据电池电量（0%至100%）自定义文本颜色。
+为完成dynData功能的概览，我们将查看电池管理部分。此处设计理念是根据电池电量（0%至100%）自定义文本颜色。
 
 ```text
 "uploader_battery": {
@@ -659,7 +659,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
     "topOffsetTwinHidden": 13
 },
 ```
-可见这两个视图共享名为`batteryIcons`的同一`dynData`区块。 实现原理在于：默认关联视图自身数据（当`batteryIcons`区块未指定`"valueKey":`键时，将自动应用`uploader_battery`或`rig_battery`数据，具体取决于当前视图）。
+可见这两个视图共享名为`batteryIcons`的同一`dynData`区块。实现原理在于：默认关联视图自身数据（当`batteryIcons`区块未指定`"valueKey":`键时，将自动应用`uploader_battery`或`rig_battery`数据，具体取决于当前视图）。
 
 请注意这两个视图还使用了[此处](#cwf-reference-twinview-feature)说明的TwinView功能。
 
@@ -693,7 +693,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 #### 蒸汽朋克表盘中dynPref的简易应用
 
-在蒸汽朋克表盘中，我们根据单位设置了两组图像：包含血糖刻度的`background`图像将随血糖值旋转。 以及根据avgDelta值动态调整刻度的`freeText1`。为实现表盘自动显示正确单位，需根据所选单位切换对应图像。
+在蒸汽朋克表盘中，我们根据单位设置了两组图像：包含血糖刻度的`background`图像将随血糖值旋转。以及根据avgDelta值动态调整刻度的`freeText1`。为实现表盘自动显示正确单位，需根据所选单位切换对应图像。
 
 为此，我们将在视图区块中用`dynPref`键替换`dynData`键：
 
@@ -739,7 +739,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 ```
 可见定义于`background`视图区块的dynpref键（`"dynPref": "rotateSgv"`）已存在于json文件末尾的`dynPref`区块中：
 
-该区块必须包含`"prefKey"`键，用于指定需调用的偏好设置项。 本示例中，键`"key_units"`关联手机端AAPS选择的单位，其值为`"true"`表示选择mgdl单位，`"false"`表示选择mmol单位。
+该区块必须包含`"prefKey"`键，用于指定需调用的偏好设置项。本示例中，键`"key_units"`关联手机端AAPS选择的单位，其值为`"true"`表示选择mgdl单位，`"false"`表示选择mmol单位。
 
 随后您将看到两个采用"dynData"格式的json区块，系统将根据所选偏好设置调用对应区块。
 
@@ -767,7 +767,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
     "dynPref": "dark"
 },
 ```
-`"dynPrefColor": "prefColorDark"`将指定视图外所有默认颜色的dynPref区块。 这些颜色将根据`"prefColorDark"`中的dark参数进行调整：
+`"dynPrefColor": "prefColorDark"`将指定视图外所有默认颜色的dynPref区块。这些颜色将根据`"prefColorDark"`中的dark参数进行调整：
 
 最终在`dynPref`区块内，您会看到针对默认颜色的专属dynPref区块：
 
@@ -923,7 +923,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 #### dynPref使用技巧
 
 - 您可以组合任意数量的偏好设置，但需注意描述区块数量会呈指数级增长：若串联3个参数且需定义所有情形（假设每个参数仅有2种取值），则需描述8个区块...
-- 注意避免构建"无限循环"（例如当dynpref1区块需由dynpref2区块补充，而dynpref2区块又需由dynpref1区块补充时...）。 此时这些dynpref区块将被视为无效...
+- 注意避免构建"无限循环"（例如当dynpref1区块需由dynpref2区块补充，而dynpref2区块又需由dynpref1区块补充时...）。此时这些dynpref区块将被视为无效...
 - 使用视图中的`"textsize"`键时，必须在dynPref值区块中使用`"textsize1"`（因其采用"dynData"格式，本例中仅关联单一步骤的值），切勿忘记在键名后添加数字索引。
 - 每个视图仅应设置一个`"valueKey"`键，因此若最终`dynData`区块由多个`dynPref`区块构建时，切勿包含多个`"valueKey"`（及其关联的`"minData"`、`"maxData"`等参数）。
 
@@ -1019,7 +1019,7 @@ Note that this view is also available for external data (see [below](#cwf-refere
 
 - 左侧首张截图中status视图可见（含IOB、详细IOB及BGI），故仅1/3行空间显示时间戳（极简格式如`1'`，上传器电量显示为`U:55%`）
 - 右侧截图中`status`视图已通过手表参数隐藏，因此有充足空间完整显示时间戳及上传器电量信息（`1分钟前`和`上传器：55%`）
-- 最右侧截图中手表设置完全相同，但时间戳数值已超过"1"。 此时自定义表盘可显示经复数处理的更新标签（`2分钟前`）
+- 最右侧截图中手表设置完全相同，但时间戳数值已超过"1"。此时自定义表盘可显示经复数处理的更新标签（`2分钟前`）
 
 下文将不赘述zip文件中视图的整体管理逻辑（不同设置下各视图的定位方式），仅重点解析AAPS（大号）表盘中格式化功能与关联动态值的实现方法。
 
@@ -1064,7 +1064,7 @@ Note that this view is also available for external data (see [below](#cwf-refere
     "fontColor": "#FFFFFF"
 },
 ```
-此处最关键的是`"dynValue"`键：通过该键信息可实现原始值的动态管理。 后方布尔值（true/false）决定是否对数值进行"转换"
+此处最关键的是`"dynValue"`键：通过该键信息可实现原始值的动态管理。后方布尔值（true/false）决定是否对数值进行"转换"
 
 - `false`：直接使用原始值，不做任何限制或转换
 - `true`：原始值将根据dynData区块中的`minData`和`maxData`键，以及dynData中定义的`minValue`和`maxValue`进行转换
@@ -1145,7 +1145,7 @@ Note that this view is also available for external data (see [below](#cwf-refere
 **关于格式化功能的补充说明**
 
 - 请谨记：唯一可用的动态值仅为[此处](#cwf-reference-dyndata-key-values)列出的参数
-- 所有`血糖`值均以mg/dL为单位，若需通过格式化功能显示mmol/L单位，必须自行处理mg/dL与mmol/L的换算。 在`dynData`或`dynPref`区块中，用于定义包含数值转换`"minValue"`和`"maxValue"`的子区块必须命名为`"dynValue": { ... }`。 （参见[动态数据键](#cwf-reference-dyndata-keys)）
+- 所有`血糖`值均以mg/dL为单位，若需通过格式化功能显示mmol/L单位，必须自行处理mg/dL与mmol/L的换算。在`dynData`或`dynPref`区块中，用于定义包含数值转换`"minValue"`和`"maxValue"`的子区块必须命名为`"dynValue": { ... }`。（参见[动态数据键](#cwf-reference-dyndata-keys)）
 - 若需在视图中使用静态格式化字符串（通过`"textvalue"`键定义格式，`"dynValue"`键启用动态值），则必须同时声明`"dynData"`或`"dynPref"`区块（即使留空）以激活格式化功能。
 - `"textvalue1"`、`"textvalue2"`至textvalue*n*可不启用格式化功能，用于将数值分段替换为特定文本标签（例如配合`"day_name"`键值，通过七个分段定义星期几的自定义名称等）。
 
@@ -1194,26 +1194,26 @@ Note that this view is also available for external data (see [below](#cwf-refere
 
 #### 偏好设置键
 
-| 键                             | 默认值与注释                                                                                                                          |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| `"key_show_detailed_iob"`     | true将锁定视图`iob2`上的详细IOB数据，此时`iob1`（若可见且未被图标替换）将显示IOB总量。<br />false则会在`iob2`视图上锁定IOB总量显示。 当`iob2`视图宽度过小无法正确显示详细IOB数据时可启用此选项 |
-| `"key_show_detailed_delta"`   | false（仅当设计不兼容`delta`与`avg_delta`视图的详细差值宽度时使用）                                                                                   |
-| `"key_show_bgi"`              | 若设计需要显示`bgi`信息则设为true                                                                                                           |
-| `"key_show_iob"`              | 若设计需要显示`iob1`或`iob2`视图则设为true                                                                                                   |
-| `"key_show_cob"`              | 若设计需要显示`cob1`或`cob2`视图则设为true                                                                                                   |
-| `"key_show_delta"`            | 若设计需要显示`delta`信息则设为true                                                                                                         |
-| `"key_show_avg_delta"`        | 若设计需要显示`avg_delta`信息则设为true                                                                                                     |
-| `"key_show_temp_target"`      | 若设计需要显示`tempTarget`信息则设为true                                                                                                    |
-| `"key_show_reservoir_level"`  | 若设计需要显示`reservoir`信息则设为true                                                                                                     |
-| `"key_show_uploader_battery"` | 若设计需要显示`uploader_battery`（手机电量）信息则设为true                                                                                        |
-| `"key_show_rig_battery"`      | 若设计需要显示`rig_battery`信息则设为true                                                                                                   |
-| `"key_show_temp_basal"`       | 若设计需要显示`basalRate`信息则设为true                                                                                                     |
-| `"key_show_direction"`        | 若设计需要显示`direction`信息（血糖变化箭头）则设为true                                                                                             |
-| `"key_show_ago"`              | 若设计需要显示`timestamp`信息（最近血糖数据接收时间/分钟前）则设为true                                                                                     |
-| `"key_show_bg"`               | 若设计需要显示`sgv`信息（血糖值）则设为true                                                                                                      |
-| `"key_show_loop_status"`      | 若设计需要显示`loop`信息（闭环状态及时间间隔）则设为true                                                                                               |
-| `"key_show_week_number"`      | 若设计需要显示`week_number`信息（周数）则设为true                                                                                               |
-| `"key_show_date"`             | 若设计需要显示`Date`、`Month`或`Day of the week`信息则设为true                                                                                |
+| 键                             | 默认值与注释                                                                                                                         |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `"key_show_detailed_iob"`     | true将锁定视图`iob2`上的详细IOB数据，此时`iob1`（若可见且未被图标替换）将显示IOB总量。<br />false则会在`iob2`视图上锁定IOB总量显示。当`iob2`视图宽度过小无法正确显示详细IOB数据时可启用此选项 |
+| `"key_show_detailed_delta"`   | false（仅当设计不兼容`delta`与`avg_delta`视图的详细差值宽度时使用）                                                                                  |
+| `"key_show_bgi"`              | 若设计需要显示`bgi`信息则设为true                                                                                                          |
+| `"key_show_iob"`              | 若设计需要显示`iob1`或`iob2`视图则设为true                                                                                                  |
+| `"key_show_cob"`              | 若设计需要显示`cob1`或`cob2`视图则设为true                                                                                                  |
+| `"key_show_delta"`            | 若设计需要显示`delta`信息则设为true                                                                                                        |
+| `"key_show_avg_delta"`        | 若设计需要显示`avg_delta`信息则设为true                                                                                                    |
+| `"key_show_temp_target"`      | 若设计需要显示`tempTarget`信息则设为true                                                                                                   |
+| `"key_show_reservoir_level"`  | 若设计需要显示`reservoir`信息则设为true                                                                                                    |
+| `"key_show_uploader_battery"` | 若设计需要显示`uploader_battery`（手机电量）信息则设为true                                                                                       |
+| `"key_show_rig_battery"`      | 若设计需要显示`rig_battery`信息则设为true                                                                                                  |
+| `"key_show_temp_basal"`       | 若设计需要显示`basalRate`信息则设为true                                                                                                    |
+| `"key_show_direction"`        | 若设计需要显示`direction`信息（血糖变化箭头）则设为true                                                                                            |
+| `"key_show_ago"`              | 若设计需要显示`timestamp`信息（最近血糖数据接收时间/分钟前）则设为true                                                                                    |
+| `"key_show_bg"`               | 若设计需要显示`sgv`信息（血糖值）则设为true                                                                                                     |
+| `"key_show_loop_status"`      | 若设计需要显示`loop`信息（闭环状态及时间间隔）则设为true                                                                                              |
+| `"key_show_week_number"`      | 若设计需要显示`week_number`信息（周数）则设为true                                                                                              |
+| `"key_show_date"`             | 若设计需要显示`Date`、`Month`或`Day of the week`信息则设为true                                                                               |
 
 #### 内部键
 
@@ -1226,20 +1226,20 @@ Note that this view is also available for external data (see [below](#cwf-refere
 
 ### 通用参数列表
 
-| 键                        | 备注                                                                                         |
-| ------------------------ | ------------------------------------------------------------------------------------------ |
-| `"highColor"`            | `"#FFFF00"`（默认黄色）：当血糖值超过上限（高血糖）时，血糖值、趋势箭头及图表中血糖值的显示颜色                                      |
-| `"midColor"`             | `"#00FF00"`（默认绿色）：当血糖值在范围内时，血糖值、趋势箭头及图表中血糖值的显示颜色                                           |
-| `"lowColor"`             | `"#FF0000"`（默认红色）：当血糖值低于下限（低血糖）时，血糖值、趋势箭头及图表中血糖值的显示颜色                                      |
-| `"lowBatColor"`          | `"#E53935"`（默认深红色）：当`uploader_battery`值过低（低于20%，待确认）时的显示颜色                                 |
-| `"carbColor"`            | `"#FB8C00"`（默认橙色）：图表中碳水化合物数据点的显示颜色                                                         |
-| `"basalBackgroundColor"` | `"#0000FF"`（默认深蓝色）：图表中TBR曲线的显示颜色                                                           |
-| `"basalCenterColor"`     | `"#64B5F6"`（默认浅蓝色）：图表中大剂量或超微大剂量数据点的显示颜色                                                    |
-| `"gridColor"`            | `"#FFFFFF"`（默认白色）：图表中线条和文本刻度的显示颜色                                                          |
-| `"pointSize"`            | 2（默认值）：图表中数据点的大小（1为小点，2为大点）                                                                |
-| `"enableSecond"`         | false（默认值）：指定表盘是否在`time`、`second`或`second_hand`视图中处理秒数。 必须确保视图可见性与该全局设置保持一致，该设置将允许每秒更新时间信息 |
-| `"dayNameFormat"`        | "E"（默认值）：从"E"到"EEEE"指定星期名称格式（数字、简称、全称），待确认                                                 |
-| `"monthFormat"`          | "MMM"（默认值）：从"M"到"MMMM"指定月份格式（数字、简称、全称）                                                     |
+| 键                        | 备注                                                                                        |
+| ------------------------ | ----------------------------------------------------------------------------------------- |
+| `"highColor"`            | `"#FFFF00"`（默认黄色）：当血糖值超过上限（高血糖）时，血糖值、趋势箭头及图表中血糖值的显示颜色                                     |
+| `"midColor"`             | `"#00FF00"`（默认绿色）：当血糖值在范围内时，血糖值、趋势箭头及图表中血糖值的显示颜色                                          |
+| `"lowColor"`             | `"#FF0000"`（默认红色）：当血糖值低于下限（低血糖）时，血糖值、趋势箭头及图表中血糖值的显示颜色                                     |
+| `"lowBatColor"`          | `"#E53935"`（默认深红色）：当`uploader_battery`值过低（低于20%，待确认）时的显示颜色                                |
+| `"carbColor"`            | `"#FB8C00"`（默认橙色）：图表中碳水化合物数据点的显示颜色                                                        |
+| `"basalBackgroundColor"` | `"#0000FF"`（默认深蓝色）：图表中TBR曲线的显示颜色                                                          |
+| `"basalCenterColor"`     | `"#64B5F6"`（默认浅蓝色）：图表中大剂量或超微大剂量数据点的显示颜色                                                   |
+| `"gridColor"`            | `"#FFFFFF"`（默认白色）：图表中线条和文本刻度的显示颜色                                                         |
+| `"pointSize"`            | 2（默认值）：图表中数据点的大小（1为小点，2为大点）                                                               |
+| `"enableSecond"`         | false（默认值）：指定表盘是否在`time`、`second`或`second_hand`视图中处理秒数。必须确保视图可见性与该全局设置保持一致，该设置将允许每秒更新时间信息 |
+| `"dayNameFormat"`        | "E"（默认值）：从"E"到"EEEE"指定星期名称格式（数字、简称、全称），待确认                                                |
+| `"monthFormat"`          | "MMM"（默认值）：从"M"到"MMMM"指定月份格式（数字、简称、全称）                                                    |
 
 (cwf-reference-list-of-hardcoded-resource-files)=
 
@@ -1247,25 +1247,25 @@ Note that this view is also available for external data (see [below](#cwf-refere
 
 对于大多数图像，High和Low后缀允许根据血糖水平（在范围内、高血糖或低血糖）调整图像
 
-| 文件名                                                             | 备注                                                          |
-| --------------------------------------------------------------- | ----------------------------------------------------------- |
-| CustomWatchface                                                 | 用于表盘选择和在Wear插件中显示的图像                                        |
-| Background,<br />BackgroundHigh,<br />BackgroundLow | 无（默认黑色）：背景图像。 若无背景图像，则始终显示默认黑色背景。 可修改颜色以适应表盘设计              |
-| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | 无（默认值）：图表前景图像（需保持透明度以确保底层图表可见），可用于限定图表边界                    |
-| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | 简易表盘（默认值）：所有文本值前方的图像。 必须保持透明度以确保后方所有数值可见                    |
-| 时针、<br />高血糖时针、<br />低血糖时针                          | hour_hand（默认值）：时针图像。 提供默认图像，可调整颜色以匹配模拟表盘设计。 注意：旋转轴心为图像中心点   |
-| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand（默认值）：分针图像。 提供默认图像，可调整颜色以匹配模拟表盘设计。 注意：旋转轴心为图像中心点 |
-| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand（默认值）：秒针图像。 提供默认图像，可调整颜色以匹配模拟表盘设计。 注意：旋转轴心为图像中心点 |
-| ArrowNone                                                       | ?? （默认值）：无有效箭头时显示的图像。                                       |
-| ArrowDoubleUp                                                   | ↑↑（默认值）：双上箭头图像                                              |
-| ArrowSingleUp                                                   | ↑（默认值）：单上箭头图像                                               |
-| Arrow45Up                                                       | ↗（默认值）：45度上箭头图像                                             |
-| ArrowFlat                                                       | →（默认值）：水平箭头图像                                               |
-| Arrow45Down                                                     | ↘（默认值）：45度下箭头图像                                             |
-| ArrowSingleDown                                                 | ↓（默认值）：单下箭头图像                                               |
-| ArrowDoubleDown                                                 | ↓↓（默认值）：双下箭头图像                                              |
+| 文件名                                                             | 备注                                                        |
+| --------------------------------------------------------------- | --------------------------------------------------------- |
+| CustomWatchface                                                 | 用于表盘选择和在Wear插件中显示的图像                                      |
+| Background,<br />BackgroundHigh,<br />BackgroundLow | 无（默认黑色）：背景图像。若无背景图像，则始终显示默认黑色背景。可修改颜色以适应表盘设计              |
+| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | 无（默认值）：图表前景图像（需保持透明度以确保底层图表可见），可用于限定图表边界                  |
+| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | 简易表盘（默认值）：所有文本值前方的图像。必须保持透明度以确保后方所有数值可见                   |
+| 时针、<br />高血糖时针、<br />低血糖时针                          | hour_hand（默认值）：时针图像。提供默认图像，可调整颜色以匹配模拟表盘设计。注意：旋转轴心为图像中心点   |
+| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand（默认值）：分针图像。提供默认图像，可调整颜色以匹配模拟表盘设计。注意：旋转轴心为图像中心点 |
+| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand（默认值）：秒针图像。提供默认图像，可调整颜色以匹配模拟表盘设计。注意：旋转轴心为图像中心点 |
+| ArrowNone                                                       | ?? （默认值）：无有效箭头时显示的图像。                                     |
+| ArrowDoubleUp                                                   | ↑↑（默认值）：双上箭头图像                                            |
+| ArrowSingleUp                                                   | ↑（默认值）：单上箭头图像                                             |
+| Arrow45Up                                                       | ↗（默认值）：45度上箭头图像                                           |
+| ArrowFlat                                                       | →（默认值）：水平箭头图像                                             |
+| Arrow45Down                                                     | ↘（默认值）：45度下箭头图像                                           |
+| ArrowSingleDown                                                 | ↓（默认值）：单下箭头图像                                             |
+| ArrowDoubleDown                                                 | ↓↓（默认值）：双下箭头图像                                            |
 
-上述每个文件名可使用`.jpg`、`.png`或`.svg`扩展名。 但需注意，`.jpg`格式不支持透明度（因此多数文件应使用.png或.svg格式，避免遮挡后方视图...）
+上述每个文件名可使用`.jpg`、`.png`或`.svg`扩展名。但需注意，`.jpg`格式不支持透明度（因此多数文件应使用.png或.svg格式，避免遮挡后方视图...）
 
 (cwf-reference-list-of-view-keys)=
 
@@ -1352,16 +1352,16 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 | 键              | 类型      | 备注                                                                                                                                                                                                                                                                                                                              |
 | -------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"textsize"`   | int     | 字体大小（像素）（请注意字体可能包含上下边距，因此实际文本大小通常小于设定的像素值）。 注意：字体大小应小于视图高度以避免被截断                                                                                                                                                                                                                                                                |
+| `"textsize"`   | int     | 字体大小（像素）（请注意字体可能包含上下边距，因此实际文本大小通常小于设定的像素值）。注意：字体大小应小于视图高度以避免被截断                                                                                                                                                                                                                                                                 |
 | `"gravity"`    | string  | 参见键值表                                                                                                                                                                                                                                                                                                                           |
 | `"font"`       | string  | 可用字体参见键值表。<br />也可使用zip包内字体文件名（不含扩展名）                                                                                                                                                                                                                                                                                     |
 | `"fontStyle"`  | string  | 参见键值表                                                                                                                                                                                                                                                                                                                           |
 | `"fontColor"`  | string  | 管理字体颜色<br />`"#RRVVBB"`：RVB格式色码（十六进制值，#FF0000为红色）<br />`"#AARRVVBB"`：AA含透明度（00全透明，FF不透明）<br />`"bgColor"`：键值bgColor可根据BG值自动选用highColor/midColor/lowColor                                                                                                                                                      |
 | `"allCaps"`    | boolean | 若需文本大写（主要用于星期或月份名称）则设为true                                                                                                                                                                                                                                                                                                      |
-| `"background"` | string  | `resource_filename` 可将资源图片设为文本视图背景（资源文件将按比例缩放以适应文本视图尺寸）。 文本将显示在背景图前方。<br />- 注意：该键也可用于`图表`视图，为图表设置自定义背景（显示在背景图前方）                                                                                                                                                                                                         |
+| `"background"` | string  | `resource_filename` 可将资源图片设为文本视图背景（资源文件将按比例缩放以适应文本视图尺寸）。文本将显示在背景图前方。<br />- 注意：该键也可用于`图表`视图，为图表设置自定义背景（显示在背景图前方）                                                                                                                                                                                                          |
 | `"color"`      | string  | 管理视图背景色或调整图像色彩（仅限位图）<br />`"#RRVVBB"`：RVB格式色码（十六进制值，#FF0000为红色）<br />`"#AARRVVBB"`：AA含透明度（00全透明，FF不透明）<br />`"bgColor"`：键值bgColor可根据BG值自动选用highColor/midColor/lowColor<br />- 默认嵌入图像（指针/表盘）将直接应用该色彩，位图（jpg/png）会叠加饱和度渐变滤镜<br />- 对svg文件无效（svg色彩不可修改）<br />- 注意：该键也可用于`图表`视图，在背景图前方设置自定义图表背景 |
 | `"textvalue"`  | string  | 布局中4个自由文本视图（从freetext1到freetext4）的专用键，用于设置要包含的文本（可以是标签，或仅`:`若需在小时视图和分钟视图间添加分隔符...）  
-自Custom Watchface插件v2（AAPS 3.3）起，textvalue可包含其他文本视图的格式字符串（需配合`dynValue`键及`dynData`或`dynPref`使用）。 例如                                                                                                                                        |
+自Custom Watchface插件v2（AAPS 3.3）起，textvalue可包含其他文本视图的格式字符串（需配合`dynValue`键及`dynData`或`dynPref`使用）。例如                                                                                                                                         |
 | `"dynValue"`*  | boolean | 若需包含原始数值（双精度型）则设为true 若需用特定格式显示数值，与`texvalue`键配合使用                                                                                                                                                                                                                                                                              |
 
 **在自定义表盘V2.0或更高版本中添加了按键（适用于AAPS 3.3.0 wear apk或更高版本）*
@@ -1381,7 +1381,7 @@ delta_Ext1<br/>delta_Ext2                                                       
 | 键              | 类型     | 备注                                                                                                                                                                                                                                                                                                                              |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `"color"`      | string | 管理视图背景色或调整图像色彩（仅限位图）<br />`"#RRVVBB"`：RVB格式色码（十六进制值，#FF0000为红色）<br />`"#AARRVVBB"`：AA含透明度（00全透明，FF不透明）<br />`"bgColor"`：键值bgColor可根据BG值自动选用highColor/midColor/lowColor<br />- 默认嵌入图像（指针/表盘）将直接应用该色彩，位图（jpg/png）会叠加饱和度渐变滤镜<br />- 对svg文件无效（svg色彩不可修改）<br />- 注意：该键也可用于`图表`视图，在背景图前方设置自定义图表背景 |
-| `"background"` | string | `resource_filename` 可将资源图片设为文本视图背景（资源文件将按比例缩放以适应文本视图尺寸）。 文本将显示在背景图前方。<br />- 注意：该键也可用于`图表`视图，为图表设置自定义背景（显示在背景图前方）                                                                                                                                                                                                         |
+| `"background"` | string | `resource_filename` 可将资源图片设为文本视图背景（资源文件将按比例缩放以适应文本视图尺寸）。文本将显示在背景图前方。<br />- 注意：该键也可用于`图表`视图，为图表设置自定义背景（显示在背景图前方）                                                                                                                                                                                                          |
 
 (cwf-reference-key-values)=
 
@@ -1414,8 +1414,8 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 | 键                         | 类型     | 备注                                                                                                                                                                                                       |
 | ------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"dynData"`               | 区块     | 定义视图将使用的所有动态数据区块 通常在末视图后<br />定义。本区块内所有键将作为视图区块的键值使用：<br />`"dynData": { 动态数据区块 }`<br />每个区块通过自定义名称及内部多个键定义：<br />`"customName": { 单个动态数据区块 }`                                   |
-| `"valueKey"`              | string | 使用的动态数据名称（通常与关联视图键同名）<br />若不存在，则默认采用调用本区块的视图数值。 <br />例如可定义区块自定义电池百分比而不指定valueKey，随后复用该区块自定义上传器电池与设备电池                                                                                      |
+| `"dynData"`               | 区块     | 定义视图将使用的所有动态数据区块通常在末视图后<br />定义。本区块内所有键将作为视图区块的键值使用：<br />`"dynData": { 动态数据区块 }`<br />每个区块通过自定义名称及内部多个键定义：<br />`"customName": { 单个动态数据区块 }`                                    |
+| `"valueKey"`              | string | 使用的动态数据名称（通常与关联视图键同名）<br />若不存在，则默认采用调用本区块的视图数值。<br />例如可定义区块自定义电池百分比而不指定valueKey，随后复用该区块自定义上传器电池与设备电池                                                                                       |
 | `"minData"`               | int    | 设定AAPS数据的最小有效值：例如若数值为sgv（内部单位mgdl），当minData设为50时，所有低于50mgdl的血糖值将强制设为50<br />- 注意minData与maxData将用于计算动态值（像素或角度）                                                                                     |
 | `"maxData"`               | int    | 设定AAPS数据的最大有效值：例如若数值为sgv（内部单位mgdl），当maxData设为330时，所有高于330mgdl的血糖值将强制设为330。                                                                                                                               |
 | `"leftOffset"`            | 区块     | 根据最小/最大值设定视图水平位移像素值<br />- 包含minValue键、maxValue键及invalidValue键（可选）<br />- 若数据≤minData则视图位移至minValue像素，若数据≥maxData则位移至maxValue像素<br />注意：需在视图中将`leftOffset`设为true方可生效                   |
@@ -1473,15 +1473,15 @@ delta_Ext1<br/>delta_Ext2                                                       
 
 ### 动态偏好键
 
-| 键                | 类型     | 备注                                                                                                                                                                                                                                                                |
-| ---------------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `"dynPref"`      | 区块     | 定义视图将使用的所有动态偏好设置块。 通常放置在最后一个视图或dynData块之后。<br />本块内定义的所有键都将作为视图块中的键值使用：<br />`"dynPref": { 动态偏好设置块 }`<br />每个块由自定义名称和若干内部键组成：<br />`"自定义名称": { 单个动态偏好设置块 }`                                                                               |
-| `"dynPref"`      | string | *在视图块内*<br />指定使用的动态dynPref块名称（通常与关联视图键或关联偏好设置同名）。                                                                                                                                                                                                          |
-| `"dynPref"`      | string | *在包含于dynPref块的部分dynData块内*<br />指定用于补全dynData块的动态dynPref块名称。 这允许您根据多项偏好设置来调整dynData块                                                                                                                                                                        |
-| `"dynPrefColor"` | string | 此键专用于包含所有主颜色（高值颜色、中值颜色、低值颜色、图表颜色等）的主配置块。 若需根据偏好设置调整主颜色时使用此键                                                                                                                                                                                                       |
-| `"prefKey"`      | string | 指定用于获取用户偏好的键值（参见下方[PrefKey取值](#cwf-reference-prefkey-values)）。 此键应在`dynPref`块中使用。<br />根据偏好键的不同，`dynPref`块应包含与prefKey取值数量相同的键。<br />注意多数情况下偏好为"布尔型"，因此dynPref块中通常包含这两个dynData块：<br />`"true": { dynData块 },`<br />`"false": { dynData块 }` |
-| `"true"`         | 区块     | 大多数偏好设置将使用布尔值`"true"`或`"false"`。 指定用户选择偏好为true时使用的dynData块。<br />注意：若该块同时包含`"dynPref":`键，此dynData块将与其他块合并。 这允许您根据一项偏好调整颜色，同时根据另一项偏好调整文本大小                                                                                                                   |
-| `"false"`        | 区块     | 大多数偏好设置将使用布尔值`"true"`或`"false"`。 指定用户选择偏好为false时使用的dynData块。<br />注意：若该块同时包含`"dynPref":`键，此dynData块将与其他块合并。 这允许您根据一项偏好调整颜色，同时根据另一项偏好调整文本大小                                                                                                                  |
+| 键                | 类型     | 备注                                                                                                                                                                                                                                                               |
+| ---------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `"dynPref"`      | 区块     | 定义视图将使用的所有动态偏好设置块。通常放置在最后一个视图或dynData块之后。<br />本块内定义的所有键都将作为视图块中的键值使用：<br />`"dynPref": { 动态偏好设置块 }`<br />每个块由自定义名称和若干内部键组成：<br />`"自定义名称": { 单个动态偏好设置块 }`                                                                               |
+| `"dynPref"`      | string | *在视图块内*<br />指定使用的动态dynPref块名称（通常与关联视图键或关联偏好设置同名）。                                                                                                                                                                                                         |
+| `"dynPref"`      | string | *在包含于dynPref块的部分dynData块内*<br />指定用于补全dynData块的动态dynPref块名称。这允许您根据多项偏好设置来调整dynData块                                                                                                                                                                        |
+| `"dynPrefColor"` | string | 此键专用于包含所有主颜色（高值颜色、中值颜色、低值颜色、图表颜色等）的主配置块。若需根据偏好设置调整主颜色时使用此键                                                                                                                                                                                                       |
+| `"prefKey"`      | string | 指定用于获取用户偏好的键值（参见下方[PrefKey取值](#cwf-reference-prefkey-values)）。此键应在`dynPref`块中使用。<br />根据偏好键的不同，`dynPref`块应包含与prefKey取值数量相同的键。<br />注意多数情况下偏好为"布尔型"，因此dynPref块中通常包含这两个dynData块：<br />`"true": { dynData块 },`<br />`"false": { dynData块 }` |
+| `"true"`         | 区块     | 大多数偏好设置将使用布尔值`"true"`或`"false"`。指定用户选择偏好为true时使用的dynData块。<br />注意：若该块同时包含`"dynPref":`键，此dynData块将与其他块合并。这允许您根据一项偏好调整颜色，同时根据另一项偏好调整文本大小                                                                                                                    |
+| `"false"`        | 区块     | 大多数偏好设置将使用布尔值`"true"`或`"false"`。指定用户选择偏好为false时使用的dynData块。<br />注意：若该块同时包含`"dynPref":`键，此dynData块将与其他块合并。这允许您根据一项偏好调整颜色，同时根据另一项偏好调整文本大小                                                                                                                   |
 
 (cwf-reference-prefkey-values)=
 

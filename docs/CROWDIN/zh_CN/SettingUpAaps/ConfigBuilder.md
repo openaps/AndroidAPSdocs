@@ -4,7 +4,7 @@
 
 ![打开 配置生成器](../images/ConfBuild_Open_AAPS30.png)
 
-**Config Builder** 是您打开和关闭模块化功能的选项卡。 在下图中，左侧 (A) 的方框允许您选择要激活的模块。 默认情况下，打开配置生成器时，各部分会折叠，只显示激活的插件。 单击箭头 (G) 显示所有可用选项。 通过右侧的方框（C），您可以在 <0>AAPS</0> 中以选项卡（E）的形式查看活动模块。 如果右侧复选框未激活，您可以通过屏幕左上角的汉堡菜单（D）访问该功能。 查看下方的[标签或汉堡菜单](#tab-or-hamburger-menu)。
+**Config Builder** 是您打开和关闭模块化功能的选项卡。在下图中，左侧 (A) 的方框允许您选择要激活的模块。默认情况下，打开配置生成器时，各部分会折叠，只显示激活的插件。单击箭头 (G) 显示所有可用选项。通过右侧的方框（C），您可以在 <0>AAPS</0> 中以选项卡（E）的形式查看活动模块。如果右侧复选框未激活，您可以通过屏幕左上角的汉堡菜单（D）访问该功能。查看下方的[标签或汉堡菜单](#tab-or-hamburger-menu)。
 
 当模块内有其他可用设置时，您可以点击齿轮图标（B），这将带您进入首选项中的具体设置。
 
@@ -54,7 +54,7 @@
 
 * 推荐用于优泌乐（Humalog）、诺和锐（Novolog）和诺和灵（Novorapid）。
 * DIA = 至少5.0小时
-* 最大 最大达峰时间 = 注射后75分钟（固定，不可调整）
+* 最大最大达峰时间 = 注射后75分钟（固定，不可调整）
 
 #### 超速效 Oref
 
@@ -62,7 +62,7 @@
 
 * 推荐用于FIASP
 * DIA = 至少5.0小时
-* 最大 达峰时间 = 注射后55分钟（固定，不可调整）
+* 最大达峰时间 = 注射后55分钟（固定，不可调整）
 
 (Config-Builder-lyumjev)=
 
@@ -72,13 +72,13 @@
 
 * Lyumjev的专用胰岛素配置文件
 * DIA = 至少5.0小时
-* 最大 达峰时间 = 注射后45分钟（固定，不可调整）
+* 最大达峰时间 = 注射后45分钟（固定，不可调整）
 
 #### Free Peak Oref
 
 ![胰岛素类型：Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
-* 使用“Free Peak Oref”配置文件，您可以单独输入达峰时间。 要执行此操作，请点击齿轮图标以进入高级设置。
+* 使用“Free Peak Oref”配置文件，您可以单独输入达峰时间。要执行此操作，请点击齿轮图标以进入高级设置。
 * 如果在配置文件中未指定更高的DIA，则DIA将自动设置为5小时。
 * 如果使用未经支持的胰岛素或不同胰岛素的混合物，建议使用此配置文件。
 
@@ -86,7 +86,7 @@
 
 ## 血糖数据源
 
-选择您正在使用的血糖数据来源。 有关更多设置信息，请参见[血糖数据来源](../Getting-Started/CompatiblesCgms.md)页面。
+选择您正在使用的血糖数据来源。有关更多设置信息，请参见[血糖数据来源](../Getting-Started/CompatiblesCgms.md)页面。
 
 ![Config Builder 血糖数据源](../images/ConfBuild_BG.png)
 
@@ -112,7 +112,7 @@
 
 ## 胰岛素泵
 
-选择您正在使用的泵。 有关更多设置信息，请参阅[兼容泵](../Getting-Started/CompatiblePumps.md)页面。
+选择您正在使用的泵。有关更多设置信息，请参阅[兼容泵](../Getting-Started/CompatiblePumps.md)页面。
 
 ![Config Builder 泵选择](../images/ConfBuild_Pump_AAPS33.png) ![Config Builder 泵选择](../images/ConfBuild_Pump_AAPS33-2.png)
 
@@ -137,19 +137,19 @@
 
 ## 灵敏度检测
 
-选择灵敏度检测的类型。 有关不同设计的更多详细信息，请参阅[此处](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)。 这将实时分析历史数据，并且如果它识别到您对胰岛素的反应比平时更敏感（或者相反，更抵抗），就会进行相应的调整。 有关灵敏度算法的更多详细信息，请参阅[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
+选择灵敏度检测的类型。有关不同设计的更多详细信息，请参阅[此处](../DailyLifeWithAaps/SensitivityDetectionAndCob.md)。这将实时分析历史数据，并且如果它识别到您对胰岛素的反应比平时更敏感（或者相反，更抵抗），就会进行相应的调整。有关灵敏度算法的更多详细信息，请参阅[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
 
-您可以在主屏幕上通过[附加图表](#AapsScreens-section-g-additional-graphs)查看您的敏感度。 您可以在主屏幕上通过选择SEN并查看白线来查看灵敏度。 请注意，您需要在[目标8](#objectives-objective8)中才能允许灵敏度检测/[Autosens](#Open-APS-features-autosens)自动调整胰岛素的输送量。 在达到该目标之前，Autosens百分比/图表中的线条仅供信息参考。
+您可以在主屏幕上通过[附加图表](#AapsScreens-section-g-additional-graphs)查看您的敏感度。您可以在主屏幕上通过选择SEN并查看白线来查看灵敏度。请注意，您需要在[目标8](#objectives-objective8)中才能允许灵敏度检测/[Autosens](#Open-APS-features-autosens)自动调整胰岛素的输送量。在达到该目标之前，Autosens百分比/图表中的线条仅供信息参考。
 
 ### 碳水吸收率设置
 
-如果您将Oref1与**SMB**一起使用，必须将**min_5m_carbimpact**更改为8。 该值仅在**动态CGM**读数出现间隔或身体活动“消耗掉”所有血糖（否则会导致**AAPS**衰减COB）时使用。 当无法根据您血液的反应动态计算出[碳水化合物吸收率](../DailyLifeWithAaps/CobCalculation.md)时，它会为您的碳水化合物插入一个默认的衰减率。 基本上，它是一个故障保护机制。
+如果您将Oref1与**SMB**一起使用，必须将**min_5m_carbimpact**更改为8。该值仅在**动态CGM**读数出现间隔或身体活动“消耗掉”所有血糖（否则会导致**AAPS**衰减COB）时使用。当无法根据您血液的反应动态计算出[碳水化合物吸收率](../DailyLifeWithAaps/CobCalculation.md)时，它会为您的碳水化合物插入一个默认的衰减率。基本上，它是一个故障保护机制。
 
 (Config-Builder-aps)=
 
 ## APS算法
 
-选择所需的APS算法以进行治疗调整。 您可以在OpenAPS（OAPS）选项卡中查看所选算法的活动详细信息。
+选择所需的APS算法以进行治疗调整。您可以在OpenAPS（OAPS）选项卡中查看所选算法的活动详细信息。
 
 * OpenAPS AMA（高级膳食助手） 
   * 高级膳食助手：旧算法，不再推荐。
@@ -169,7 +169,7 @@
 
 ### 目标
 
-**AAPS** 有一个学习程序（一系列目标），您必须逐步完成。 这将引导您安全地设置闭环系统。 它确保您已正确设置所有内容并了解系统的确切作用。 只有这样，您才能信任该系统。
+**AAPS** 有一个学习程序（一系列目标），您必须逐步完成。这将引导您安全地设置闭环系统。它确保您已正确设置所有内容并了解系统的确切作用。只有这样，您才能信任该系统。
 
 有关更多信息，请参阅[目标](../SettingUpAaps/CompletingTheObjectives.md)页面。
 
@@ -211,7 +211,7 @@
 
 ## 治疗动作（Treatments）
 
-如果您查看“治疗（Treat）”选项卡，您可以看到已上传到nightscout的治疗动作数据。 如果您希望编辑或删除条目（例如，您摄入的碳水比预期少），请选择“删除”并通过[主页屏幕上的碳水按钮](#screens-bolus-carbs)输入新值（必要时更改时间）。
+如果您查看“治疗（Treat）”选项卡，您可以看到已上传到nightscout的治疗动作数据。如果您希望编辑或删除条目（例如，您摄入的碳水比预期少），请选择“删除”并通过[主页屏幕上的碳水按钮](#screens-bolus-carbs)输入新值（必要时更改时间）。
 
 ## 常规
 
@@ -225,13 +225,13 @@
 
 #### 状态指示灯
 
-选择是否要在概览中显示[状态指示灯](#Preferences-status-lights)，以指示管路使用时长、胰岛素使用时长、传感器使用时长、电池使用时长、储药器剩余量或电池电量。 当达到警告级别时，状态指示灯的颜色将变为黄色。 达到临界使用时长时，将以红色显示。
+选择是否要在概览中显示[状态指示灯](#Preferences-status-lights)，以指示管路使用时长、胰岛素使用时长、传感器使用时长、电池使用时长、储药器剩余量或电池电量。当达到警告级别时，状态指示灯的颜色将变为黄色。达到临界使用时长时，将以红色显示。
 
 #### 高级设置
 
-**餐时大剂量计算结果的实际输注比例（Deliver this part of bolus wizard result）**：在使用SMB时，许多人不会完全按照所需的胰岛素量进行餐时大剂量注射，而是只注射一部分（例如75%），然后让带有UAM（无人值守用餐检测）功能的SMB来完成剩余的工作。 在此设置中，您可以选择大剂量向导应计算出的百分比的默认值。 如果此设置为75%，并且您需要注射10单位的大剂量，那么大剂量向导将仅建议注射7.5单位的大剂量。
+**餐时大剂量计算结果的实际输注比例（Deliver this part of bolus wizard result）**：在使用SMB时，许多人不会完全按照所需的胰岛素量进行餐时大剂量注射，而是只注射一部分（例如75%），然后让带有UAM（无人值守用餐检测）功能的SMB来完成剩余的工作。在此设置中，您可以选择大剂量向导应计算出的百分比的默认值。如果此设置为75%，并且您需要注射10单位的大剂量，那么大剂量向导将仅建议注射7.5单位的大剂量。
 
-**在计算器中启用超级大剂量（super bolus）功能**（与*超级微量大剂量（super micro bolus）*不同！）：请谨慎使用，在了解其具体功能前请勿启用。 基本上，接下来两小时的基础率会被添加到大剂量中，并激活两小时的零临时基础率。 **AAPS循环功能将被禁用 - 因此请谨慎使用！ 如果您使用SMB，则根据您在[“SMB基础率分钟数上限”](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)中的设置，AAPS的闭环功能将被禁用；如果您不使用SMB，闭环功能将被禁用两个小时。**有关超级大剂量（super bolus）的详细信息，请[点击此处](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)查看。
+**在计算器中启用超级大剂量（super bolus）功能**（与*超级微量大剂量（super micro bolus）*不同！）：请谨慎使用，在了解其具体功能前请勿启用。基本上，接下来两小时的基础率会被添加到大剂量中，并激活两小时的零临时基础率。 **AAPS循环功能将被禁用 - 因此请谨慎使用！如果您使用SMB，则根据您在[“SMB基础率分钟数上限”](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)中的设置，AAPS的闭环功能将被禁用；如果您不使用SMB，闭环功能将被禁用两个小时。**有关超级大剂量（super bolus）的详细信息，请[点击此处](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)查看。
 
 (Config-Builder-actions)=
 
@@ -253,21 +253,21 @@
 
 显示Nightscout食品数据库中预定义的食物，请参阅[Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)以获取更多设置信息。
 
-注意：条目（Entries）不能在**AAPS**计算器中使用。 （仅供查看）
+注意：条目（Entries）不能在**AAPS**计算器中使用。（仅供查看）
 
 (Config-Builder-wear)=
 
 ### 手表
 
-使用您的Android Wear手表监控和控制AAPS（请参阅[手表界面页面](../WearOS/WearOsSmartwatch.md)）。 使用设置（齿轮图标）来定义在计算通过手表给予的餐时大剂量时应考虑哪些变量（例如，15分钟趋势、 活性碳水...）。
+使用您的Android Wear手表监控和控制AAPS（请参阅[手表界面页面](../WearOS/WearOsSmartwatch.md)）。使用设置（齿轮图标）来定义在计算通过手表给予的餐时大剂量时应考虑哪些变量（例如，15分钟趋势、 活性碳水...）。
 
-如果您想通过手表进行大剂量等操作， 那么在“手表设置”中，您需要启用“从手表控制”。
+如果您想通过手表进行大剂量等操作，那么在“手表设置”中，您需要启用“从手表控制”。
 
 ![手表设置](../images/ConfBuild_Wear.png)
 
 通过手表选项卡或汉堡菜单（如果未显示选项卡，则在屏幕左上角），您可以：
 
-* 重新发送所有数据。 如果手表在一段时间内未连接，并且您希望将信息推送到手表，这可能会很有帮助。
+* 重新发送所有数据。如果手表在一段时间内未连接，并且您希望将信息推送到手表，这可能会很有帮助。
 * 直接从手机打开手表上的设置。
 
 ### Autotune

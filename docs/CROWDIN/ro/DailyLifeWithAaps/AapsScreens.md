@@ -1,4 +1,4 @@
-# AAPS screens
+# Ecranele AAPS
 
 ```{contents}
 :backlinks: entry
@@ -11,13 +11,13 @@
 
 ![Homescreen V2.7](../images/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Acesta este primul ecran peste care veți da când deschideți **AAPS**, și conține majoritatea informațiilor de care veți avea nevoie zi de zi.
 
 ### Secțiunea A - Pagini
 
-* Navigate between the various **AAPS** modules.
+* Navigați între diferitele module **AAPS**.
 * Alternativ, puteți schimba ecranele prin glisare în stânga sau în dreapta.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* Filele afișate pot fi selectate în [Configurator](#Config-Builder-tab-or-hamburger-menu).
 
 (aaps-screens-profile--target)=
 
@@ -25,18 +25,18 @@ This is the first screen you will come across when you open **AAPS**, and it con
 
 #### Profil curent
 
-The current profile is displayed in the left bar.
+Profilul curent este afișat în bara din stânga.
 
-Apăsați scurt pe bara de profil pentru a vizualiza detaliile profilului. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Apăsați scurt pe bara de profil pentru a vizualiza detaliile profilului. Apăsați lung bara de profil pentru [comutați între diferite profiluri](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
 ![Durata rămasă pentru schimbarea profilului](../images/Home2020_ProfileSwitch.png)
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+1. Afișaj normal cu activare standard a profilului.
+2. Schimbare de profil cu o durată rămasă de 59 de minute.
+3. Schimbare de profil cu un procent specific de 120%.
+4. Schimbarea profilului cu un procent specific de 80% și o durată rămasă de 59 de minute.
+5. Schimbare a profilului cu un decalaj temporal de -1 o oră.
+6. Schimbarea profilului cu un procent specific de 120%, un decalaj temporal de 1 oră și o durată rămasă de 59 de minute.
 
 #### Țintă
 
@@ -44,9 +44,9 @@ Apăsați scurt pe bara de profil pentru a vizualiza detaliile profilului. Long 
 
 Valoarea țintă curentă a glicemiei este afișată în bara dreaptă.
 
-Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+Apăsați scurt pe bara țintă pentru a seta o **[Țintă temporară](../DailyLifeWithAaps/TempTargets.md)**.
 
-If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
+Dacă este stabilită o țintă temporară, bara devine galbenă și timpul rămas în minute este afișat în paranteze.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
@@ -54,15 +54,15 @@ If a temp target is set, the bar turns yellow and the remaining time in minutes 
 
 ![Vizualizarea ajustare dinamică a țintei](../images/Home2020_DynamicTargetAdjustment.png)
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+Când se utilizează funcționalitatea [SMB](#Config-Builder-aps) și [Autosens](#Open-APS-features-autosens), **AAPS** vă poate ajusta dinamic ținta în funcție de sensibilitate.
 
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+Activați una sau ambele dintre următoarele opțiuni în [Preferințe > Setări OpenAPS SMB](#Preferences-openaps-smb-settings):
 
      * "sensibilitatea ridică ținta" și/sau 
      * "rezistența scade ținta" 
     
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
+Dacă **AAPS** detectează rezistență sau sensibilitate, ținta se va schimba față de ceea ce este setat din profil. Când modifică glicemia țintă, fundalul se va schimba în verde.
 
 (AapsScreens-section-c-bg-loop-status)=
 
@@ -70,20 +70,20 @@ If **AAPS** detects resistance or sensitivity, the target will change from what 
 
 #### Valoarea actuală a glicemiei
 
-The latest blood glucose reading from your CGM is shown on the left side.
+Cea mai recentă valoare a glicemiei din sânge de la senzorul de monitorizare continuă a glicemiei (CGM) este indicată în partea stângă.
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+Culoarea valorii glicemiei indică starea curentă în raport cu [intervalul](#Preferences-range-for-visualization) definit.
 
      * verde = în interval
      * roșu = sub interval
      * galben = deasupra intervalului 
     
 
-![Deltas](../images/Home_Delta.png)
+![Diferențe](../images/Home_Delta.png)
 
-The blocks in the middle shows:
+Secțiunile din mijloc arată:
 
-1. how many minutes since last **CGM** reading
+1. câte minute de la ultima citire **a senzorului de monitorizare continuă a glicemiei (CGM)**
 2. diferențe față de ultima citire: Δ, și cu media pe ultimele 15 și 40 de minute (Δ15 și Δ40).  
   Diferențele lungi sunt calculate ca o valoare medie a diferențelor din trecut, indicând care a fost schimbarea medie.
 
@@ -93,15 +93,15 @@ The blocks in the middle shows:
 
 ![Stare buclă](../images/Home2020_LoopStatus.png)
 
-On the right side, an icon shows the loop status:
+În partea dreaptă, o pictogramă arată starea buclei:
 
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
-3. Red circle = loop disabled (not working permanently)
-4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
+1. Cerc verde = [buclă închisă](#KeyAapsFeatures-ClosedLoop), bucla funcționează
+2. Cerc violet cu linie punctată = [suspendare la hipoglicemie (LGS)](#KeyAapsFeatures-LGS)
+3. Cerc roșu = buclă dezactivată (nu funcționează permanent)
+4. Cerc roșu = buclă suspendată (temporar întreruptă, dar insulina bazală va fi administrată) - timpul rămas este afișat mai jos
+5. Cerc cenușiu = pompă deconectată (nu există temporar nicio administrare de insulină) - timpul rămas este indicat mai jos de pictogramă
 6. cerc portocaliu = rulează super bolus - timpul rămas este afișat sub iconiță
-7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
+7. Cerc albastru cu linie punctată = [buclă deschisă](#KeyAapsFeatures-OpenLoop)
 
 Apăsați scurt sau apăsați lung pe pictogramă pentru a deschide dialogul de buclă pentru a schimba modul buclei (Închisă, Suspendare hipoglicemie, Deschisă sau Dezactivată), suspendare / reactivare buclă sau deconectare / reconectare pompă.
 
@@ -112,58 +112,58 @@ Apăsați scurt sau apăsați lung pe pictogramă pentru a deschide dialogul de 
 
 (aaps-screens-bg-warning-sign)=
 
-#### BG warning sign
+#### Semn de avertizare glicemie
 
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
+Dacă din orice motiv există probleme în citirea glicemiei **AAPS**, veți primi un semnal de avertizare sub valoarea dumneavoastră de glicemie pe ecranul principal.
 
-##### Red warning sign: Duplicate BG data
+##### Semn roșu de avertizare: Date duplicate ale glicemiei
 
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
+Semnalul de avertizare roșu vă semnalizează pentru a vă face activ imediat: Primiți **date duplicat ale glicemiei**, care împiedică bucla să își facă treaba. Prin urmare, bucla dumneavoastră va fi dezactivată până când este rezolvată problema.
 
-    {admonition} Your loop is not running
-    :class: note
-    Your loop is not running until you solve this issue !
+    {admonition} Bucla dumneavoastră nu rulează
+    Notă:class:
+    Bucla dumneavoastră nu rulează până când nu rezolvați această problemă!
 
-    ![Red BG warning](../images/bg_warn_red.png)
+    ![Avertizare roșie glicemie](../images/bg_warn_red.png)
     
 
-You need to find out why you get duplicate BGs:
+Trebuie să aflați de ce primiți glicemii duplicat:
 
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
+* Este activată puntea Dexcom pe site-ul Nightscout? Dezactivați puntea în panoul de administrare al instanței Nightscout, editați variabila "enable" și eliminați partea "bridge" de acolo. (Pentru heroku [detaliile pot fi găsite aici](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Sunt multiple surse care încarcă glicemia în Nightscout? Dacă utilizați aplicația BYODA, activați încărcarea în **AAPS** dar nu o activați în xDrip+, dacă îl utilizați.
+* Aveți vreo persoană care ar putea primi glicemia, dar care o încarcă din nou pe site-ul dumneavoastră Nightscout?
+* În ultimă instanță: În **AAPS**, accesați [Preferințe > NSClient](#Preferences-nsclient), selectați setările de sincronizare și dezactivați opțiunea "Acceptați CGM date din NS".
 
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Pentru a elimina imediat avertismentul și a face bucla funcțională din nou, trebuie să ștergeți manual câteva intrări din fila Dexcom/xDrip+.
 
-However, when there are a lot of duplicates, it might be easier to
+Cu toate acestea, atunci când există multe duplicate, ar putea fi mai ușor să
 
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Maintenance/ExportImportSettings.md) again
+* [faceți copii de rezervă setărilor](../Maintenance/ExportImportSettings.md),
+* resetați baza de date în meniul de întreținere și
+* [importați setările](../Maintenance/ExportImportSettings.md) din nou
 
-##### Yellow warning sign
+##### Semnal galben de avertizare
 
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or that some BGs are missing. When pressing the sign, the message indicates “Recalculated data used”.
+Semnalul de avertizare galben indică faptul că glicemia dumneavoastră a ajuns în intervale neregulate de timp sau că unele glicemii lipsesc. La apăsarea semnului, mesajul indică „Date recalculate utilizate”.
 
-    ![Yellow BG warning](../images/bg_warn_yellow.png)
+    ![Avertisment Galben de glicemie](../images/bg_warn_yellow.png)
     
 
-Usually you do not have to take any action. The closed loop will continue to work!
+De obicei, nu trebuie să luați nicio măsură. Bucla închisă va continua să funcționeze!
 
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
+Deoarece schimbarea senzorului întrerupe fluxul constant al datelor glicemiei, un semnal de avertizare galben după schimbarea senzorului este normal și nu este nimic de care să vă faceți griji.
 
-Special note for Libre users:
+Nota specială pentru utilizatorii Libre:
 
-* Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-* Also, jumpy readings interrupt the continuous flow.
-* Therefore, the yellow warning sign will be 'always on' for Libre users.
+* Fiecare senzor Libre întârzie un minut sau două la fiecare câteva ore, ceea ce înseamnă că nu primiți niciodată un flux perfect de date glicemice.
+* De asemenea, citirile cu sărituri întrerup fluxul continuu.
+* Prin urmare, semnalul de avertizare galben va fi 'întotdeauna pornit' pentru utilizatorii Libre.
 
-*Note*: Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*Notă*: Până la 30 de ore sunt considerate pentru calculele **AAPS**. Deci chiar și după ce ați rezolvat problema originii, poate dura aproximativ 30 de ore până la dispariția triunghiului galben după ultimul interval neregulat.
 
 #### Mod simplu
 
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
+O pictogramă cu fața unui copil în dreapta sus a acestei secțiuni indică faptul că sunteți în [Modul simplu](#preferences-simple-mode).
 
 ![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
 
@@ -179,11 +179,11 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 2. **Spic**: [carbohidrați la bord (COB)](../DailyLifeWithAaps/CobCalculation.md) - carbohidrați neabsorbiți pe care i-ați mâncat deja Pictograma pulsează roșu dacă sunt necesari carbohidrați (vedeți [mai jos](#aaps-screens-carbs-required))
 
-3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
+3. **Linie mov**: rată bazală curentă. Pictograma se schimbă pentru a reflecta schimbările temporare ale ratei bazale (la nivel la 100%) 
   * Apăsați pictograma pentru a vedea rata bazalei și detaliile oricărei bazale temporare (inclusiv durata rămasă)
-4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-  * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-  * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+4. **Săgețile sus & jos**: indică starea caracteristicilor de sensibilitate dinamică ([Autosens](#Open-APS-features-autosens) sau [DynamicISF](#Open-APS-features-DynamicISF)): activat sau dezactivat. Mai multe valori pot fi indicate în această secțiune: 
+  * AS: Valoare Autosens. Afișat chiar dacă Autosens este dezactivat (doar informativ). De asemenea este afișat când DynISF este activat, deși nu are niciun efect.
+  * Alg: Valoarea dinamică FSI (pe baza DZT). Mai multe informații pe ultima linie din pagina [DynamicISF](#Open-APS-features-DynamicISF).
 
 (aaps-screens-carbs-required)=
 
@@ -193,7 +193,7 @@ An icon with a kid's face at the top right of this section indicates that you ar
 
 Sunt oferite sugestii pentru carbohidrați atunci când designul de referință detectează că este nevoie de carbohidrați.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+Acesta este momentul în care algoritmul oref crede că nu te poate salva cu o bazală temporară zero și vei avea nevoie de carbohidrați pentru ca soluție.
 
 Notificările pentru carbohidrați sunt mult mai sofisticate decât cele ale calculatorului pentru bolus. S-ar putea să vedeți sugestii pentru carbohidrați în timp ce calculatorul de bolus nu arată carbohidrați lipsă.
 
@@ -215,9 +215,9 @@ Starea luminilor oferă un avertisment vizual pentru
 
 Dacă pragul critic este depășit, valorile vor fi evidențiate cu roșu.
 
-Settings can be changed in [Preferences > Overview > Status lights](#Preferences-status-lights).
+Setările pot fi modificate în [Preferințe > Prezentare > Lumini stare](#Preferences-status-lights).
 
-Depending on the pump you use, you may not have all of these icons.
+În funcție de pompa pe care o utilizați, este posibil să nu aveți toate aceste pictograme.
 
 (aaps-screens-main-graph)=
 
@@ -225,68 +225,68 @@ Depending on the pump you use, you may not have all of these icons.
 
 ![Secțiunea F](../images/Home2020_MainGraph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+Graficul indică glicemia dumneavoastră așa cum este citită de la senzorul dumneavoastră de monitorizare continuă a glicemiei (CGM).
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
+Utilizați meniul din stânga sus a graficului sau apăsați lung oriunde pe grafic pentru a schimba scara de timp. Puteți alege între 6, 12, 18 sau 24 de ore.
 
 Zona verde reflectă intervalul dumneavoastră țintă.
 
-This information is also shown on this graph :
+Aceste informații sunt, de asemenea, prezentate în acest grafic:
 
-* Boluses: blue triangle on the BG curve and insulin amount
-* Carbs entries: orange triangle on the BG curve and carb amount
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star at the top of the graph
-* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
-* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
+* Bolusuri: triunghi albastru pe curba de glicemie și cantitatea de insulină
+* Intrări de carbohidrați: triunghi portocaliu pe curba de glicemie și cantitatea de carbohidrați
+* Ținta așa cum este definită în profil sau modificată de ținta temporară: linie verde
+* Schimbări de profil: stea în partea de sus a graficului
+* Starea buclei: linie de culoare în partea de sus a graficului atunci când starea este orice altceva decât bucla închisă - vezi [Starea buclei](#AapsScreens-loop-status) pentru culori
+* [SMB](#Open-APS-features-super-micro-bolus-smb) - dacă este activat în [Preferințe > OpenAPS SMB](#Preferences-openaps-smb-settings): triunghiuri albastre în partea de jos a graficului
 
 (AapsScreens-activate-optional-information)=
 
 #### Activați informații opționale
 
-Using the top right arrow, you can switch on these optional information:
+Prin folosirea săgeții din dreapta sus, puteți activa aceste informații opționale:
 
-* Predictions (see below)
-* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
+* Predicții (vedeți mai jos)
+* Tratamente: note introduse în fila de acțiune: puncte gri, portocalii sau roșii, în funcție de gravitate, precum și calibrări capilare ale glicemiei: punct roșu
 * Bazale 
-  * As defined in the profile: blue dotted line at the bottom of the graph
-  * Actually delivered basal: blue plain line with blue background
-* Activity - insulin activity curve: yellow line
+  * Așa cum este definit în profil: linia albastră punctată în partea de jos a graficului
+  * Bazala administrată de fapt: linie albastră cu fundal albastru
+* Activitate - curba activității insulinei: linie galbenă
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
+Pentru a afișa această informație, apăsați pe triunghiul din partea dreaptă a graficului principal. Pentru graficul principal sunt disponibile doar cele patru opțiuni de deasupra liniei "Graficul 1 2 3 4".
 
-     ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+     ![Setare grafic principal](../images/Home2020_MainGraphSetting.png)
     
 
 (aaps-screens-prediction-lines)=
 
 #### Linii de predicție
 
-* **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
+* Linia **portocalie**: [COB](CobCalculation) (culoarea este folosită în general pentru a reprezenta COB și carbohidrați)
   
-  This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. Această linie apare numai dacă există COB cunoscuți.
+  Această linie de predicție arată unde glicemia dumneavoastră (nu unde se află COB!) va evolua în baza setărilor curente de**Profil**, presupunând că abaterile datorate absorbției carbohidraților rămân constante. Această linie apare numai dacă există COB cunoscuți.
 
-* **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
+* Linia **albastru închis**: IOB (culoarea este folosită în general pentru a reprezenta IOB și insulină)
   
-  This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+  Această linie de predicție arată ce s-ar întâmpla doar sub influența insulinei. De exemplu, dacă ați administrat insulină și apoi nu ați mâncat niciun carbohidrat.
 
 * Linia **albastru deschis**: temporară zero (glicemia prezisă dacă se va stabili rata bazală temporară la 0%)
   
-  This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+  Această linie de predicție arată cum se va schimba linia de traiectorie a glicemiei dacă pompa ar opri administrarea insulinei (RBT 0%).
   
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+  *Această linie apare numai când se folosește algoritmul [SMB](#Config-Builder-aps).*
 
-* **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
+* Linia **galben închis**: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (mese neanunțate)
   
-  Mesele inopinate (neanunțate) înseamnă că se detectează o creștere semnificativă a nivelului glicemiei din cauza meselor, a adrenalinei sau a altor influențe. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+  Mesele inopinate (neanunțate) înseamnă că se detectează o creștere semnificativă a nivelului glicemiei din cauza meselor, a adrenalinei sau a altor influențe. Linia de predicție este similară cu linia **portocalie COB**, dar presupune că devierile vor scădea în ritm constant (prin extinderea ratei actuale de reducere).
   
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+  *Această linie apare numai când se folosește algoritmul [SMB](#Config-Builder-aps).*
 
-* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+* Linia **portocaliu închis**: aCOB (absorbție accelerată a carbohidraților)
   
-  Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+  Similar cu COB, dar în ipoteza unei rate statice de 10 mg/dL/5m (-0,555 mmol/l/5m) de absorbție a carbohidraților. Învechită și de utilitate limitată.
   
-  *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+  *Această linie apare doar când este folosit algoritmul [AMA](#Config-Builder-aps).*
 
 De obicei, curba reală a glicemiei ajunge în mijlocul acestor linii, sau aproape de cea care face presupuneri care se apropie cel mai mult de situația dumneavoastră.
 
@@ -296,7 +296,7 @@ Linia **albastru solid** afișează administrarea bazală a pompei și reflectă
 
 Linia **albastră punctată** afișează cum ar fi rata bazală dacă nu ar exista ajustări temporare ale bazalei (RBT).
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+Când este dată rata bazală standard, zona de sub curbă este afișată cu albastru închis. Când rata bazală este ajustată temporar (mărită sau scăzută), aria de sub curbă este afișată cu albastru deschis.
 
 #### Exercițiu fizic
 
@@ -306,20 +306,20 @@ Aceasta se bazează pe scăderea preconizată a concentrației insulinei în sis
 
 (AapsScreens-section-g-additional-graphs)=
 
-### Section G - Additional graphs
+### Secțiunea G - Grafice adiționale
 
-Puteți activa până la patru grafice suplimentare sub graficul principal. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+Puteți activa până la patru grafice suplimentare sub graficul principal. Când sunteți în [Mod simplu](#preferences-simple-mode), graficele adiționale sunt presetate și nu pot fi modificate. Dezactivați **Modul simplu** dacă doriți să setați propria configurație de grafice suplimentare.
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
+Pentru a deschide setările pentru graficele suplimentare, faceți clic pe triunghiul din partea dreaptă a [graficului principal](#aaps-screens-main-graph) și derulați în jos.
 
 ![Setări grafice suplimentare](../images/Home2020_AdditionalGraphSetting.png)
 
-To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
+Pentru a configura grafice suplimentare, bifați casetele care corespund datelor pe care doriți să le vedeți pe fiecare grafic.
 
-Most users find the following configuration of additional graphs to be adequate :
+Majoritatea utilizatorilor găsesc următoarea configurație a graficelor suplimentare ca adecvată:
 
-* Graph 1 with IOB, COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+* Graficul 1 cu IOB, COB, modificarea sensibilității
+* Graficul 2 cu abateri și impactul glicemiei.
 
 #### Insulină absolută
 
@@ -329,63 +329,63 @@ Insulina activă, inclusiv bolusuri **și bazală**.
 
 Arată insulina pe care o aveți la bord (= insulină activă în corpul dumneavoastră). Include insulina din bolus și bazala temporară (**dar exclude ratele bazale stabilite în profilul dumneavoastră**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Dacă nu ar exista [SMB](#Open-APS-features-super-micro-bolus-smb), fără bolusuri și fără RBT în timpul DIA acesta ar fi zero.
 
 IOB poate fi negativ dacă nu mai aveți insulină din bolusuri și bazală temporară zero sau scăzută de o perioadă mai lungă de timp.
 
-Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md).
+Descompunerea depinde de [setările dumneavoastră pentru DIA și profilul de insulină](../SettingUpAaps/YourAapsProfile.md).
 
 #### Carbohidrați la bord
 
 Arată carbohidrații pe care îi aveți la bord (= activi, nu sunt încă dezintegrați în corpul dumneavoastră).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Descompunerea depinde de deviațiile [pe care algoritmul le detectează](../DailyLifeWithAaps/CobCalculation.md).
 
 Dacă algoritmul detectează o absorbție de carbohidrați mai mare decât cea așteptată, se administrează insulină, iar aceasta crește cantitatea de IOB (mai mult sau mai puțin, în funcție de condițiile dumneavoastră de siguranță).
 
 #### Modificare sensibilitate
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+Arată sensibilitatea detectată de [Autosens](#Open-APS-features-autosens).
 
 Sensibilitatea este un calcul al sensibilității la insulină ca rezultat al exercițiilor fizice, hormonilor șamd.
 
-Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină administrată. Before reaching that objective, the line in your graph is displayed for information only.
+Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină administrată. Înainte de a atinge acel obiectiv, linia din grafic este afișată doar pentru informații.
 
 ### Sensibilitate variabilă
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Afișează sensibilitatea calculată de [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Populat numai dacă folosiți această caracteristică.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate & Steps
+#### Ritm cardiac & Pași
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Aceste date pot fi disponibile atunci când utilizați un [ceas inteligent Wear](../WearOS/WearOsSmartwatch.md). Activați-le în aplicația Wear **AAPS** și acordați permisiunea pentru date de sănătate.
 
 #### Deviații
 
-* **Grey** bars show a deviation due to carbs. 
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* Barele **gri** afișează o abatere datorată carbohidraților. 
+* Barele **verzi** arată că glicemia este mai mare decât era așteptat de către algoritm să fie. Barele verzi sunt folosite pentru a crește rezistența în [Autosens](#Open-APS-features-autosens).
+* Barele **roșii** arată că glicemia este mai mică decât se aștepta algoritmul să fie. Barele roșii sunt folosite pentru a crește sensibilitatea în [Autosens](#Open-APS-features-autosens).
+* Barele **galbene** afișează o abatere cauzată de UAM.
+* Barele **negre** arată mici abateri care nu sunt luate în considerare pentru sensibilitate
 
 #### Impactul glicemiei
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Această linie arată nivelul până la care glicemia "ar trebui" să crească sau să scadă, numai în funcție de activitatea insulinei.
 
 ![Butoane ecran principal](../images/Screenshots_DEV_BGI.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+Este o combinație bună să afișezi această linie împreună cu barele de deviere. Ele împart aceeași scară, dar este una diferită de celelalte date opționale, deci este o idee bună să le afișăm pe un grafic separat, așa cum se arată mai sus. Compararea liniei de impact al glicemiei cu barele de deviație este o altă modalitate de a înțelege cum fluctuează **glicemia**. Aici, la momentul marcat cu **1**, barele de deviație sunt mai mari decât linia impactului glicemiei, ceea ce indică că glicemia este în creștere. Mai târziu, în timpul orelor marcate cu **2**, impactul glicemiei și deviațiile sunt destul de aliniate, indicând că glicemia este stabilă.
 
 ### Secțiunea H - Butoane
 
 ![Butoane ecran principal](../images/Home2020_Buttons.png)
 
-Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
+Butoanele pentru insulină și carbohidrați sunt aproape întotdeauna vizibile. Dacă conexiunea la pompă este pierdută, butonul Calculator nu va fi vizibil.
 
-Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
+Alte butoane pot fi setate în [Preferințe > Vedere de ansamblu > Butoane](#Preferences-buttons).
 
-About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
+Despre folosirea butoanelor Insulină, Carbohidrați și Calculator: Dacă este activată în [Preferințe > Vedere de ansamblu](#Preferences-show-notes-field-in-treatments-dialogs), câmpul **Note** vă permite să introduceți un text care va fi afișat pe graficul principal, și poate fi încărcat în Nightscout - în funcție de setările pentru NS.
 
 (aaps-screens-buttons-insulin)=
 
@@ -393,15 +393,15 @@ About using the Insulin, Carbs and Calculator buttons : If enabled in the [Prefe
 
 ![Buton insulină](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+Pentru a administra o anumită cantitate de insulină fără a utiliza [ calculatorul de bolus](#aaps-screens-bolus-wizard).
 
-By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Prin bifarea casetei **Țintă temporară mănânc în curând**, poți porni automat [Țintă temporară mănânc în curând](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
+Dacă nu doriți să administrați un bolus prin pompă, dar să înregistrați o cantitate de insulină (spre exemplu insulină administrată cu stiloul injector) bifați căsuța corespunzătoare. Când bifați această cutie, obțineți un câmp suplimentar "Decalaj de timp", pe care îl puteți utiliza pentru a înregistra o injecție de insulină efectuată în trecut.
 
-You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Puteți utiliza butoanele pentru a crește rapid cantitatea de insulină. Valorile incrementului pot fi modificate în [Preferințe > Vedere de ansamblu > Butoane](#Preferences-buttons).
 
-The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+Butonul de insulină poate fi utilizat și atunci când pompa este suspendată, de exemplu pentru a înregistra insulina injectată cu un stilou injector. În acest caz, antetul va fi afișat în galben, iar căsuța de selectare „Nu bolusați, doar înregistrare” nu poate fi debifată.
 
 ![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
 
@@ -411,17 +411,17 @@ The insulin button can be used when the pump is suspended as well, i.e. to recor
 
 Pentru a înregistra carbohidrați fără bolusare.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) can be set directly by checking the box.
+Anumite [ținte prestabilite temporare](#TempTargets-hypo-temp-target) pot fi stabilite direct prin bifarea casetei.
 
-**Time offset**: When will you / have you been eaten carbs (in minutes).
+**Decalaj de timp**: Când veți / ați mâncat carbohidrați (în minute).
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs)
+**Durată**: A fi folosită pentru ["carbohidrații extinși"](ExtendedCarbs)
 
-You can use the buttons to quickly increase the carb amount. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Puteți folosi butoanele pentru a crește rapid cantitatea de carbohidrați. Valorile incrementului pot fi modificate în [Preferințe > Vedere de ansamblu > Butoane](#Preferences-buttons).
 
 #### Calculator
 
-See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
+Vedeți [ secțiunea de mai jos](#aaps-screens-bolus-wizard) asistent de bolusare.
 
 #### Calibrări
 
@@ -449,7 +449,7 @@ Details are set up in [Preferences > Overview > QuickWizard settings](#Preferenc
 
 ![Asistent bolusare](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Când doriți să faceți un bolus pentru o masă, în mod normal de aici veți face asta.
 
 ### Secțiunea I
 
@@ -463,40 +463,40 @@ Afișați bolusul calculat.
 
 Câmpul glicemie este deja completat cu ultima citire din CGM. Dacă nu aveți un CGM funcțional, atunci acesta va fi gol.
 
-In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for.
+În câmpul **Carbohidrați** adăugați cantitatea de carbohidrați - sau echivalent - pentru care doriți să bolusați.
 
-The **Corr** field is if you want to modify the end dosage for some reason.
+Câmpul **Corecție** există dacă doriți să modificați dozajul final dintr-un anumit motiv.
 
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Puteți să puneți un număr negativ în acest câmp dacă bolusați pentru carbohidrați anteriori.
+Câmpul **Timp carbohidrați** este pentru pre-bolusare astfel încât să puteți spune sistemului că va exista o întârziere înainte ca carbohidrații să fie așteptați. Puteți să puneți un număr negativ în acest câmp dacă bolusați pentru carbohidrați anteriori.
 
-**Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
+**Memento masă** : Pentru carbohidrații din viitor, caseta de selectare a alarmei poate fi selectată (și este implicită atunci când este introdusă o oră în viitor), astfel încât să vă poată fi reamintit la un moment dat, când să mâncați carbohidrații introduși în **AAPS**.
 
 ![Asistent bolusare cu memento pentru mâncat](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Secțiunea K
 
-**Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
+**Profilul** vă permite să selectați un profil diferit de cel curent, pentru a realiza calculul necesar pentru insulină. Această selecție de profil se aplică numai pentru bolusul curent, nu este o schimbare de profil.
 
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). Ideea este de a administra insulina mai devreme în speranța de a reduce vârfurile.
+**Super bolus** este locul unde insulina bazală pentru următoarele două ore este adăugată la bolusul de-acum, iar pentru următoarele două ore este emisă o RBT zero pentru a lua înapoi insulina în plus. Opțiunea este prezentă numai când "Activați Superbolus în asistent" este setată în [Preferințe > Vedere de ansamblu > Setări avansate](#Preferences-advanced-settings-overview). Ideea este de a administra insulina mai devreme în speranța de a reduce vârfurile.
 
 Pentru detalii vizitați [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Secțiunea L
 
-Details of the wizard's bolus calculation.
+Detalii despre asistentul de calculul al bolusului.
 
-You can deselect any that you do not want to include, but you normally wouldn't want to.
+Puteți deselecta orice lucru pe care nu doriți să îl includeți, dar în mod normal nu ați dori să faceți.
 
-For safety reasons the **TT box must be ticked manually**, if you want the bolus wizard to calculate based on an existing temporary target.
+Din motive de siguranță, căsuța **Țintă temporară trebuie bifată manual**, dacă doriți ca asistentul de bolus să calculeze pe baza unei ținte temporare existente.
 
 #### Combinații de COB și IOB și ce înseamnă acestea
 
-* For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Acest lucru conduce la o notiță "carbohidrați lipsă".
+* Din motive de securitate, căsuța IOB nu poate fi debifată când este bifată căsuța COB, deoarece există riscul să acumulați prea multă insulină fiindcă **AAPS** nu ține cont de ceea ce a fost deja dat.
+* Dacă bifați COB și IOB, carbohidrații neabsorbiți care nu sunt deja acoperiți de insulină + toată insulina care a fost eliberată sub formă de RBT sau SMB vor fi luați în considerare.
+* Dacă bifați IOB fără COB, **AAPS** ia în considerare insulina deja administrată, dar nu o va acoperi în raport cu niciun carbohidrat care nu a fost încă absorbit. Acest lucru conduce la o notiță "carbohidrați lipsă".
 * Dacă bolusați pentru **mâncare suplimentară** la scurt timp după o masă (spre exemplu desert suplimentar) poate fi util să **debifați toate căsuțele**. În acest fel, doar noii carbohidrați sunt adăugați deoarece masa principală nu va fi absorbită astfel încât IOB nu se potrivește cu precizie cu COB la scurt timp după un bolus de masă.
 
-![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
+![Asistent de bolusare cu detalii](../images/Home2021_BolusWizard_Details.png)
 
 The box near the eye allows you to choose between the detailed view, with the numbers entering the calculation for each item, or the simple view with icons. Pressing on an icon will enable / disable this entry from the calculation.
 
@@ -518,11 +518,11 @@ For details, see the hints on [COB calculation page](#CobCalculation-detection-o
 
 ### Acțiuni - secțiunea M
 
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
+Butonul **[Schimbați profilul](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** ca alternativă la apăsarea [profilului curent](#aaps-screens-profile--target) de pe ecranul principal.
 
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
+Butonul **[Țintă temporară](../DailyLifeWithAaps/TempTargets.md)** ca alternativă la apăsarea [țintei curente](#aaps-screens-profile--target) de pe ecranul principal.
 
-Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
+Buton pentru a porni sau anula o rată bazală temporară. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
 
 Chiar dacă [bolusurile extinse](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) nu funcționează cu adevărat într-un sistem de buclă închisă, unii oameni au cerut opțiunea de a utiliza oricum bolusul extins.
 
@@ -532,7 +532,7 @@ Chiar dacă [bolusurile extinse](#extended-bolus-and-why-they-wont-work-in-close
 
 (aaps-screens-careportal)=
 
-### Careportal - section N
+### Careportal - secțiunea N
 
 Afișați informații la:
 
@@ -542,23 +542,23 @@ Afișați informații la:
      * vechime & nivel baterie pompă (procentaj)
     
 
-Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
+Mai puține informații vor fi afișate dacă este folosită **interfața cu rezoluție joasă** ([Preferințe > General > Interfață](#Preferences-skin)).
 
 (screens-sensor-level-battery)=
 
 #### Nivel senzor (baterie)
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+Funcționează pentru senzorul de monitorizare continuă a glicemiei (CGM) cu un transmițător suplimentar, cum ar fi MiaoMiao 2. (Tehnic senzorul trebuie să trimită informații despre nivelul cat către xDrip+.)
 
-Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-status-lights).
+Pragurile pot fi setate în [Preferințe > Vedere de ansamblu > Lumini de stare](#Preferences-status-lights).
 
-### Careportal - section O
+### Careportal - secțiunea O
 
 Verificare glicemie (BG), amorsare/umplere (prime/fill), inserție senzor și schimbare baterie pompă sunt baza pentru datele afișate în [secțiunea N](#aaps-screens-careportal).
 
 Amorsarea/Umplerea (Prime/Fill) vă permite să înregistrați schimbarea locului de inserție al pompei și a cartușului de insulină.
 
-Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+Secțiunea O reflectă portalul de îngrijire Nightscout. Așa că exercițiile, anunțurile și întrebările sunt forme speciale de note.
 
 ### Instrumente - secțiunea P
 
@@ -568,22 +568,22 @@ Section O reflects the Nightscout careportal. So exercise, announcement and ques
 
 Site Rotation button opens the Site Rotation Dialog in View mode:
 
-* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
-* All Cannula change and Sensor change event since the past 45 days are available.
-* Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+* Puteți selecta dacă doriți să vedeți doar locurile de canulă, doar cele de senzor, sau ambele prin bifarea casetelor de selectare de sus
+* Toate evenimentele de schimbare de canulă și de schimbare a senzorului din ultimele 45 de zile sunt disponibile.
+* Apăsați pe o zonă a corpului sau pe o singură intrare din lista de mai jos pentru a filtra lista cu intrările doar din zona selectată. Zona selectată va fi evidențiată cu o culoare verde deschis.
+* Puteți deschide vederea de editare pentru a actualiza locul de pe corp, săgeata sau comentariul asociat fiecărei intrări
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+![Mod de vizualizare](../images/SiteRotation/ViewMode.png)
 
-* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
+* Fila setare (rotița dințată dreapta sus) vă permite să ajustați vizualizarea pacientului (bărbat, femeie sau copil), și să selectați dacă doriți să gestionați doar siturile de pompă, doar siturile de senzor sau pe ambele.
 
 ![Setări](../images/SiteRotation/Settings.png)
 
-![Settings type](../images/SiteRotation/Type.png)
+![Tipul setărilor](../images/SiteRotation/Type.png)
 
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+*Notă: această setare va fi utilizată pentru a deschide automat sau nu dialogul de rotație a sitului (modul editare) atunci când o nouă intrare este făcută din butonul "Amorsați / Umpleți" sau "Butonul de inserare a senzorului"*
 
-* For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+* Pentru schimbarea locului efectuată direct din pompă, trebuie să deschideți Modul de vizualizare și să editați noua intrare pentru a selecta locul și săgeata
 
 Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
 
@@ -681,15 +681,15 @@ Shows history of CGM readings and offers option to remove reading in case of fai
 
 ## Tratamente
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
+This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. În acest mod de vizualizare, puteți vedea și modifica istoricul următoarelor tratamente:
 
-* Bolus & carbs
+* Bolus & carbohidrați
 * [Bolus extins](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Rată bazală temporară
 * [Țintă temporară](../DailyLifeWithAaps/TempTargets.md)
 * [Schimbare de profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes entered through action tab and notes in dialogues
-* Running mode : history of loop status
+* Careportal: note introduse prin fila de acțiune și note în dialoguri
+* Mod de funcționare: istoric stare buclă
 * User entry: other notes that are not sent to Nightscout
 
 In the last column, the data source for each line is displayed in blue. It can be :
@@ -699,7 +699,7 @@ In the last column, the data source for each line is displayed in blue. It can b
 
 (screens-bolus-carbs)=
 
-### Bolus & carbs
+### Bolus & carbohidrați
 
 ![Carbs & bolus](../images/TreatmentsView1.png)
 

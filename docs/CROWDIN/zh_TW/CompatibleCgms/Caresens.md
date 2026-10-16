@@ -10,7 +10,7 @@
 ## 1. xDrip+
 
 1. 安裝並設定官方的 CareSens App。
-2. 在 CareSens App 中，前往 設定 -> 管理資料與連線 -> 開啟 xDrip 開關。 如有需要，可在「其他」中關閉到 CareLevo、DIA:CONN、CloudLoop 等的資料連線。
+2. 在 CareSens App 中，前往 設定 -> 管理資料與連線 -> 開啟 xDrip 開關。如有需要，可在「其他」中關閉到 CareLevo、DIA:CONN、CloudLoop 等的資料連線。
 
 ![CareSens App 資料連線](../images/eversenseapp-dataconnections.png)
 

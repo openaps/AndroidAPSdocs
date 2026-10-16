@@ -59,6 +59,8 @@ Hier sind einige Blogs mit guten Tipps, um den Alltag mit deinem Loop zu meister
 - [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 - [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
+(FAQ-emergency-equipment)=
+
 ### Was sollte ich für den Notfall immer dabei haben?
 
 Zunächst musst du natürlich dieselbe Notfall-Ausrüstung mitnehmen wie jeder andere Typ1-Diabetiker mit Insulinpumpentherapie. Beim Loopen mit AAPS wird dringend empfohlen, das folgende zusätzliche Notfall-Equipment jederzeit dabei oder in der Nähe zu haben:

@@ -31,4 +31,4 @@ A smartwatch can be a very useful tool in helping manage __AAPS__ with T1D kids.
 ## 需要考虑的事项
 
 - Consider time gap between master and follower due to time for up- and download as well as the fact that __AAPS__ master phone will only upload after loop run.
-- 如果远程控制不起作用（_即_，出现网络问题或蓝牙连接丢失）时，您的应急计划是什么？  始终考虑如果您突然无法发送新指令，**AAPS**会发生什么。 **AAPS**会用当前配置值覆盖泵的基础率、胰岛素敏感因子（ISF）和碳水化合物比率（ICR）。 如果切换到更强的胰岛素配置，则只使用临时配置切换（_即_，设置持续时间），以防远程连接中断。 然后，当时间到期时，泵将恢复为原始配置。
+- 如果远程控制不起作用（_即_，出现网络问题或蓝牙连接丢失）时，您的应急计划是什么？始终考虑如果您突然无法发送新指令，**AAPS**会发生什么。 **AAPS**会用当前配置值覆盖泵的基础率、胰岛素敏感因子（ISF）和碳水化合物比率（ICR）。如果切换到更强的胰岛素配置，则只使用临时配置切换（_即_，设置持续时间），以防远程连接中断。然后，当时间到期时，泵将恢复为原始配置。

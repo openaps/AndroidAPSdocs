@@ -53,7 +53,7 @@
 
 ## xDrip+
 
-xDrip+ 可以像 ESEL 一样读取厂商应用的通知。 没有回填功能。
+xDrip+ 可以像 ESEL 一样读取厂商应用的通知。没有回填功能。
 
 - 下载并安装 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
 - 在xDrip+中必须选择"伴侣应用"作为数据源。

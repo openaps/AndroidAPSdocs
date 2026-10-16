@@ -570,12 +570,12 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 * Можно выбрать, отображать только места установки канюли, или только места установки сенсора, или и те и другие, поставив обе галочки.
 * Доступны все записи мест установки канюли и датчика за последние 45 дней.
-* Тапните на определенную зону или на одну из записей из списка ниже, чтобы отфильтровать записи только в выбранной зоне. Выбранная зона будет подсвечена светлозеленым цветом.
+* Тапните на определенную зону или на одну из записей из списка под картинкой, чтобы отфильтровать записи только в выбранном месте. Выбранная зона будет подсвечена светлозеленым цветом.
 * Вы можете открыть режим редактирования, чтобы изменить Зону, Направление или Комментарий, связанные с записью
 
 ![View Mode](../images/SiteRotation/ViewMode.png)
 
-* В Настройках модуля (верхний правый угол) можно настроить тип пациента (мужчина, женщина или ребенок), и выбрать, какие данные вы хотите отслеживать - только помпу, только датчик, или оба.
+* В Настройках модуля (верхний правый угол) можно настроить вид пациента (мужчина, женщина или ребенок), и выбрать, какие данные вы хотите отслеживать - только помпу, только датчик, или оба.
 
 ![Настройки](../images/SiteRotation/Settings.png)
 
@@ -585,26 +585,26 @@ Note, you need to be in [Objective 8](#objectives-objective8) in order to let Se
 
 * Чтобы указать место уставки в ситуации, когда вы заполняете канюлю или устанавливаете резервуар непосредственно с помпы, вам придется вручную открывать этот диалог и указывать Зону и Направление
 
-Режим редактирования позволяет вам указать Зону, Направление и Примечания, связанные с каждой записью:
+Режим редактирования позволяет вам указать Место, Направление (зону) и Заметку, связанные с каждой записью:
 
-* Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
-* You have to select Front or Back tab and then the Area
-* Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+* Тип записи отображается в заголовке в режиме редактирования (иконка канюли или датчика)
+* Перейдите на вкладку Спереди или Сзади и выберите место
+* После выбора места установки (подсвечивается зеленым) внизу экрана отобразится список всех установок на этом месте за последние 45 дней
 
 ![Edit Mode](../images/SiteRotation/EditMode.png)
 
-* You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
+* Вы можете дополнительно указать направление (зону) установки, если кликните на иконку со стрелочками сверху (эта стрелка позволит вам уточнить зону установки в выбранном месте, от 2 до 9, или положение пода)
 
 ![Position](../images/SiteRotation/EditModeSub.png)
 
-* You can also adjust comments concerning selected site
-* After confirmation, the site is recorded
+* Так же можно оставить заметку к этому месту установки
+* После подтверждение запись будет сохранена
 
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+Можно отфильтровать записи установок нажав на соответствующее место на изображении пациента или на записи из списка ниже Чтобы сбросить фильтрацию - просто нажмите на свободное место на изображении
 
 ![Filtering](../images/SiteRotation/Filtering.png)
 
-#### Просмотр журнала
+#### Просмотр истории
 
 Позволяет перемещаться по **журналу** [AAPS](../Maintenance/Reviewing.md).
 
@@ -626,7 +626,7 @@ Filtering can be done graphically on the image, or clicking a therapy event in t
 
 ![Профиль инсулина](../images/Screenshot_insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени до пика.
+Отображает профиль инсулина, который вы выбрали в [Конфигураторе](#Config-Builder-insulin). Кривые зависят от продолжительности действия инсулина [DIA](#your-aaps-profile-duration-of-insulin-action) и времени пика.
 
 **Фиолетовая** линия показывает, сколько инсулина остается после его введения по мере усваивания, а **синяя** линия показывает его активность.
 
@@ -649,9 +649,9 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 (aaps-screens-profile)=
 
-## Profile
+## Профиль
 
-![Profile](../images/Screenshots_Profile.png)
+![Профиль](../images/Screenshots_Profile.png)
 
 Профиль содержит информацию о ваших индивидуальных параметрах диабета, дополнительную информацию см на стр **[профиль](../SettingUpAaps/YourAapsProfile.md)**.
 
@@ -683,23 +683,23 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Терапия. Его невозможно показать в главном меню через Конфигуратор. Здесь можно просматривать и изменять историю следующих видов терапии:
 
-* Болюсы & углеводы
+* Углеводы и болюсы
 * [Пролонгированный болюс](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Временная базальная скорость
 * [Временная цель](../DailyLifeWithAaps/TempTargets.md)
 * [Смена профиля](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Портал терапии - примечания, введенные через вкладку действий и примечания в диалогах
-* Running mode : history of loop status
+* Запись терапии - примечания, введенные через вкладку действий и примечания в диалогах
+* Режим работы: история состояния цикла
 * Записи пользователя: другие заметки, которые не отправляются в Nightscout
 
-В последнем столбце источник данных для каждой строки отображается синим. Это может быть :
+В последнем столбце источник данных для каждой строки, отображается синим. Это может быть :
 
-* NS или Nightscout : данные поступают или были записаны в Nightscout
-* PH или журнал помпы: данные, обработанные помпой
+* NS или Nightscout: данные переданы в Nightscout или поступили из него
+* PH или журнал помпы: данные были обработанные помпой
 
 (screens-bolus-carbs) =
 
-### Болюсы & углеводы
+### Углеводы и болюсы
 
 ![Углеводы & болюс](../images/TreatmentsView1.png)
 
@@ -708,7 +708,7 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 * Прием пищи (вручную введенный кнопками Insulin, Quick Wizard или Bolus Wizard)
 * Микроболюсы SMB, при включенной опции подачи микроболюсов
 
-Углеводы (строка **2**) хранятся только в Nightscout. If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
+Углеводы (строка **2**) хранятся только в Nightscout. Если вы пользовались [Помощником болюса](#aaps-screens-bolus-wizard) для расчета дозы инсулина, то можете нажать на текст «Кальк» (строка **3**) и увидеть детали расчета.
 
 В зависимости от используемой помпы инсулин и углеводов могут быть показаны на одной строке или на нескольких - для углеводов и для собственно болюса.
 
@@ -757,11 +757,11 @@ This shows the activity profile of the insulin you have chosen in [Config builde
 
 (AapsScreens-running-mode)=
 
-### Running mode
+### Режим работы
 
-![Running mode](../images/TreatmentsView6.png)
+![Режим работы](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
+Эта вкладка показывает историю изменения [состояния цикла](#AapsScreens-loop-status): открыт, закрыт, приостановлен.
 
 ### Портал терапии
 
@@ -771,13 +771,13 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 
 (aaps-screens-running-mode)=
 
-## Просмотр журнала
+## Просмотр истории
 
-Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. Его невозможно показать в главном меню через Конфигуратор. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
+Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Просмотр журнала. Его невозможно показать в главном меню через Конфигуратор. Доступ к нему также можно получить через кнопку в нижней части вкладки [Действия](#screens-action-tab).
 
 Позволяет перемещаться по журналу **AAPS**. См соответствующую страницу - [ Просмотр данных > Журнал истории](../Maintenance/Reviewing.md).
 
-## Statistics
+## Статистика
 
 Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Статистика. Его невозможно показать в главном меню через Конфигуратор.
 
@@ -790,4 +790,4 @@ This tab shows the history of [loop status](#AapsScreens-loop-status) changes : 
 Доступ к этому экрану можно получить нажатием трех точек справа от меню, затем - Помощник профиля. Его невозможно показать в главном меню через Конфигуратор. Помощник профиля поможет:
 
 * [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
-* [compare two profiles](#your-aaps-profile-compare-profiles)
+* [сравнение двух профилей](#your-aaps-profile-compare-profiles)

@@ -130,7 +130,7 @@ If an app is revoked you will need to scroll down until you see the list of revo
 
 ## Android 15 Frequent Bluetooth connection problems
 
-升级安卓系统或更换新手机后，**AAPS**经常丢失与泵的蓝牙连接。 重启手机后问题会暂时消失。 If the phone runs Android 15. Enabling the **Bond BT device on Android 15+** setting within **AAPS** settings may help improve stability of Bluetooth connections, follow guide below to enable this:
+升级安卓系统或更换新手机后，**AAPS**经常丢失与泵的蓝牙连接。重启手机后问题会暂时消失。 If the phone runs Android 15. Enabling the **Bond BT device on Android 15+** setting within **AAPS** settings may help improve stability of Bluetooth connections, follow guide below to enable this:
 
 ```{admonition} Android 16
 :class: warning
@@ -141,7 +141,7 @@ Only enable the **Bond BT device on Android 15+** option on Android 15, and only
 
    ![打开参数设置](../images/Pref2020_Open2.png)
 
-2. 向下滚动并打开**确认提示音** / **高级**子菜单。 启用**在安卓15+上绑定蓝牙设备**。
+2. 向下滚动并打开**确认提示音** / **高级**子菜单。启用**在安卓15+上绑定蓝牙设备**。
 
    ![BondBT](../images/troubleshooting/BondBT.png)
 

@@ -1,88 +1,89 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Android Studio Build
+# Zostavenie v Android Studiu
 
-This is the traditional method to build your AAPS app.
+Toto je klasická metóda na vytvorenie vašej aplikácie AAPS.
 
-You can build the app without a computer using the [Browser Build](./BrowserBuild.md) method.
+Aplikáciu môžete zostaviť aj bez počítača metódou [Browser Build](./BrowserBuild.md).
 
-## Build yourself instead of download
+## Zostavte si ju sami namiesto sťahovania
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplikácia AAPS (súbor APK) nie je k dispozícii na stiahnutie z dôvodu predpisov týkajúcich sa zdravotníckych pomôcok. Je legálne vytvoriť si aplikáciu pre vlastné použitie ale nesmiete jej kópiu poskytnúť iným osobám!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Podrobnosti nájdete na [stránke s častými otázkami](../UsefulLinks/FAQ.md).
 
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## Špecifikácie počítača a softvéru na zostavenie AAPS
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
+* Na zostavenie súboru APK môže byť potrebná konkrétna verzia **[Android Studia](https://developer.android.com/studio/)**. Pozrite si tabuľku nižšie:
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | up to Quail 1                                          | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Quail 1                                          | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | up to Quail 1                                          | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | up to Quail 1                                          | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | up to Quail 1                                          | 8.13   | 21  |
-| [3.4.2.2](#version3422) | Panda 2 (2025.32)                                    | up to Quail 1                                          | 9      | 21  |
+| Verzia AAPS             | Preferovaná <br/>Android Studio<br/> Verzia | Alternatívna<br/>Android Studio<br/>Verzia | Gradle | JVM |
+| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
+| 2.6.2                   | 3.6.1                                                   |                                                        | 5.6.4  | 11  |
+| 2.8.2.1                 | 4.1.1                                                   |                                                        | 6.1.1  | 13  |
+| [3.1.0.3](#version3100) | 2020.3.1                                                | up to Quail 1                                          | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | up to Quail 1                                          | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | up to Quail 1                                          | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | up to Quail 1                                          | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | up to Quail 1                                          | 8.13   | 21  |
+| [3.4.2.2](#version3422) | Panda 2 (2025.32)                                       | up to Quail 1                                          | 9      | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+„Požadovaná verzia“ je dodávaná s príslušnou verziou JVM. Táto verzia je zároveň minimálnou verziou, ktorú možno použiť na zostavenie **AAPS**. **Nebudete** môcť zostavovať na verzii staršej, než je tá „požadovaná“. Ak používate inú verziu, môžete naraziť na problémy súvisiace s verziou JVM. V prípade problému si pozrite stránku [Riešenie problémov v Android Studiu](#troubleshooting_androidstudio-uncommitted-changes), ktorá vám pomôže tieto problémy vyriešiť. Ak vaša aktuálna verzia Android Studia nie je uvedená v tabuľke, musíte ju najprv aktualizovať.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Verzia Gradle je naviazaná na zdrojový kód a pri sťahovaní alebo aktualizácii zdrojového kódu tak vždy získate správnu verziu Gradle. Uvádza sa to tu len pre informáciu a v tejto súvislosti nemusíte nič podniknúť.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* Android Studio nepodporuje [32-bitové systémy Windows](#troubleshooting_androidstudio-unable-to-start-daemon-process). Nezabúdajte, že **64-bitový procesor aj 64-bitový operačný systém sú nevyhnutnou podmienkou**. Ak váš systém túto podmienku nespĺňa, musíte vymeniť príslušný hardvér či softvér alebo celý systém.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">OS (iba 64-bitový)</th>
+    <td class="tg-baqh">Windows 8 alebo novší</td>
+    <td class="tg-baqh">Mac OS 10.14 alebo novší</td>
+    <td class="tg-baqh">Akákoľvek verzia Linuxu podporujúca prostredia GNOME, KDE alebo Unity DE&nbsp;&nbsp; GNU C Library 2.31 alebo novšia</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (iba 64-bitový)</th>
+    <td class="tg-baqh">Architektúra procesora x86_64; procesor Intel Core 2. generácie alebo novší, prípadne procesor AMD s podporou <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Čipy založené na architektúre ARM alebo procesory Intel Core 2. generácie či novšie s podporou <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">Architektúra procesora x86_64; procesor Intel Core 2. generácie alebo novší, prípadne procesor AMD s podporou technológií AMD Virtualization (AMD-V) a SSSE3</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB alebo viacej</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Najmenej 30 GB voľného miesta. Odporúča sa použiť SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <th class="tg-baqh"><p align="center">Rozlíšenie</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Minimálne 1280 x 800 <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Širokopásmové pripojenie</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Dôrazne sa odporúča (hoci to nie je povinné) použiť SSD namiesto HDD, pretože to skráti čas potrebný na zostavenie súboru APK aplikácie AAPS.** Pri zostavovaní súboru aplikácie **AAPS** však stále môžete používať aj HDD. Ak tak urobíte, proces zostavovania aplikácie môže trvať dlho, no po jeho spustení ho môžete nechať bežať bez dozoru.
 
-## Help and support during the building process
+## Pomoc a podpora počas procesu zostavovania
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md) section, please consult that first.
+Ak budete mať pri vytváraní aplikácie **AAPS** problémy, k dispozícii je špeciálna sekcia [**Riešenie problémov s Android Studiom**](../GettingHelp/TroubleshootingAndroidStudio.md), najskôr si ju prečítajte.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Ak si myslíte, že niečo v návode na zostavenie je nesprávne, chýba alebo je mätúce, prípadne ak máte stále problémy, obráťte sa na ostatných používateľov **AAPS** v skupinách na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) alebo [Discorde](https://discord.gg/4fQUWHZ4Mw). Ak chcete sami niečo zmeniť (aktualizácia snímok obrazovky _a pod._), odošlite prosím žiadosť o [(pull request – PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Step-by-step guide to building the AAPS app
+## Podrobný návod krok za krokom pre zostavenie aplikácie AAPS
 
 ```{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
+Ak ste už vytvorili AAPS, nemusíte znova opakovať všetky nasledujúce kroky.
+Prejdite priamo na [pomoc s aktualizáciou]
+(../Maintenance/UpdateToNewVersion.md)!
 ```
 
 ```{contents} The overall steps for building the **AAPS** apk file
@@ -90,9 +91,9 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 :local: true
 ```
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+V tomto návode nájdete _príklady_ snímky obrazovky zostavovania súboru apk **AAPS**. Pretože **Android Studio** – softvér, ktorý používame na zostavenie súboru **AAPS** apk – sa pravidelne aktualizuje, tieto snímky obrazovky nemusia byť identické s vašou inštaláciou, no malo by byť možné ich použiť.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
+Keďže **Android Studio** beží na platformách Windows, Mac OS X a Linux, môžu existovať menšie rozdiely v krokoch pre rôzne platformy.
 
 (install-git-if-you-dont-have-it)=
 ### Install Git

@@ -26,7 +26,7 @@ Ignore it: More details, Install anyway.
 ![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
 
 ### **Настройки**
-* Profile
+* Профиль
 
   ![Ошибка: Базал не выровнен по часам](../images/Screen_DifferentPump.png)
 

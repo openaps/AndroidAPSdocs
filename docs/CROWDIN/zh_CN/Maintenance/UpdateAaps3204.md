@@ -4,7 +4,7 @@
 
 ## 自行构建而非下载
 
-**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。 构建该应用供自己使用是合法的，但不得将副本提供给他人**
+**由于医疗器械相关法规的限制，AAPS应用（一个apk文件）无法提供下载。构建该应用供自己使用是合法的，但不得将副本提供给他人**
 
 详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
 
@@ -16,11 +16,11 @@
 | ----------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
 | [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                      | 最高支持至Meerkat版本                           | 8.2    | 17  |
 
-推荐版本是已内置适配的JVM版本。 推荐版本同时也是构建**AAPS**的最低可用版本。 若使用低于"推荐"的版本将**无法**完成构建。 若选用其他版本，可能遭遇与JVM版本相关的兼容性问题。 请参考[Android Studio问题排查指南](#troubleshooting_androidstudio-uncommitted-changes)解决。 若您当前的Android Studio版本未在下表中列出，则需先升级至支持版本。
+推荐版本是已内置适配的JVM版本。推荐版本同时也是构建**AAPS**的最低可用版本。若使用低于"推荐"的版本将**无法**完成构建。若选用其他版本，可能遭遇与JVM版本相关的兼容性问题。请参考[Android Studio问题排查指南](#troubleshooting_androidstudio-uncommitted-changes)解决。若您当前的Android Studio版本未在下表中列出，则需先升级至支持版本。
 
-Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取正确版本。 此处列出仅作参考，无需手动干预。
+Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取正确版本。此处列出仅作参考，无需手动干预。
 
-* Android Studio 不支持 [Windows 32位系统](#troubleshooting_androidstudio-unable-to-start-daemon-process)。 请牢记，**64位CPU和64位操作系统是必要条件**。 如果您的系统不满足这一条件，您需要更换相应的硬件、软件或整个系统。
+* Android Studio 不支持 [Windows 32位系统](#troubleshooting_androidstudio-unable-to-start-daemon-process)。请牢记，**64位CPU和64位操作系统是必要条件**。 如果您的系统不满足这一条件，您需要更换相应的硬件、软件或整个系统。
 
 <table class="tg">
 <tbody>
@@ -42,7 +42,7 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">硬盘</th>
-    <td class="tg-baqh" colspan="3"><p align="center">至少30GB的可用空间。 建议使用SSD（固态硬盘）。</td>
+    <td class="tg-baqh" colspan="3"><p align="center">至少30GB的可用空间。建议使用SSD（固态硬盘）。</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">分辨率</th>
@@ -55,13 +55,13 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 </tbody>
 </table>
 
-**强烈建议（非强制）使用固态硬盘（SSD）而非机械硬盘（HDD），因为这将减少你构建AAPS apk文件所需的时间。**不过，在构建**AAPS** apk文件时，你仍然可以使用机械硬盘。 如果使用机械硬盘，构建过程可能会需要很长时间才能完成，但是一旦开始，你就可以让它无人值守地运行。
+**强烈建议（非强制）使用固态硬盘（SSD）而非机械硬盘（HDD），因为这将减少你构建AAPS apk文件所需的时间。**不过，在构建**AAPS** apk文件时，你仍然可以使用机械硬盘。如果使用机械硬盘，构建过程可能会需要很长时间才能完成，但是一旦开始，你就可以让它无人值守地运行。
 
 ## 3.2.0.4构建过程中的帮助与支持
 
 若在构建**AAPS**应用时遇到困难，请先查阅专用[Android Studio故障排除](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html)章节。
 
-如果你认为构建说明中有错误、遗漏或令人困惑的地方，或者你仍然在努力解决问题，请联系[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)上的其他**AAPS**用户组。 如果你想自己更改某些内容（如更新截图_等_），请提交一个[拉取请求（PR）](../SupportingAaps/HowToEditTheDocs.md)。
+如果你认为构建说明中有错误、遗漏或令人困惑的地方，或者你仍然在努力解决问题，请联系[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)上的其他**AAPS**用户组。如果你想自己更改某些内容（如更新截图_等_），请提交一个[拉取请求（PR）](../SupportingAaps/HowToEditTheDocs.md)。
 
 ```{note}
 本页面同时展示了新版和经典版Android Studio用户界面的示例图片。
@@ -76,13 +76,13 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 
 ### 导出当前设置
 
-从手机现有**AAPS**版本导出设置。 您可能用不到它，但以防万一最好保存。
+从手机现有**AAPS**版本导出设置。您可能用不到它，但以防万一最好保存。
 
 若忘记操作方法，请参阅[导出与导入设置](ExportImportSettings.md)。
 
 ### 更新本地AAPS副本
 
-* 在 Android Studio 中打开现有的 AAPS 项目。 可能需要选择您的项目。 （双击）AAPS项目。
+* 在 Android Studio 中打开现有的 AAPS 项目。可能需要选择您的项目。（双击）AAPS项目。
 
 ![Android Studio - 选择项目](../images/update/01_ProjectSelection.png)
 
@@ -122,10 +122,10 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 
 ![Android Studio - Git - Pull 对话框](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
 
-* 等待下载完成，底部状态栏会显示进度。 完成后，会显示成功消息。
+* 等待下载完成，底部状态栏会显示进度。完成后，会显示成功消息。
 
   ```{note}
-  更新的文件可能不同！ 这并不意味着有问题。
+  更新的文件可能不同！这并不意味着有问题。
   ```
 
 
@@ -135,7 +135,7 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 
 ![Android Studio - Pull 成功](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
-* Gradle Sync 会自动运行以下载依赖项。 请等待它完成。
+* Gradle Sync 会自动运行以下载依赖项。请等待它完成。
 
 ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -159,7 +159,7 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 
 
 
-- 在版本（1）中选择**17**， 供应商（2）选择JetBrains Runtime或其他供应商。 位置(3)保持默认。
+- 在版本（1）中选择**17**，供应商（2）选择JetBrains Runtime或其他供应商。位置(3)保持默认。
 
 ![Select JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
 
@@ -192,20 +192,19 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 
 ### 构建签名版3.2.0.4 APK
 
-您的源代码现在是当前发布的版本，并且已检查所有前提条件。 请按 [构建签名 APK 章节](#Building-APK-generate-signed-apk) 的描述构建签名 APK。
+您的源代码现在是当前发布的版本，并且已检查所有前提条件。请按 [构建签名 APK 章节](#Building-APK-generate-signed-apk) 的描述构建签名 APK。
 
 ### 传输并安装3.2.0.4 APK
 
 需将 APK 传输至手机后进行安装。
 
 ```{note}
-若您使用 Android Studio 中已有的密钥库完成构建，则无需删除手机上的现有应用。 安装APK时，按照提示安装更新。
-对于其他场景，例如在Android Studio中为您的签名APK建立新的密钥库，您需要在安装APK之前删除旧的应用程序。 **确保导出您的设置！**
+若您使用 Android Studio 中已有的密钥库完成构建，则无需删除手机上的现有应用。安装APK时，按照提示安装更新。对于其他场景，例如在Android Studio中为您的签名APK建立新的密钥库，您需要在安装APK之前删除旧的应用程序。**确保导出您的设置！**
 ```
 
 具体操作请参考 [传输与安装 AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md) 说明。
 
 ### 验证手机上的AAPS 3.2.0.4版本
 
-安装新的APK后，您可以通过点击右上角的三个点菜单，然后点击“关于”来检查手机上的AAPS版本。 您应该看到当前版本。
+安装新的APK后，您可以通过点击右上角的三个点菜单，然后点击“关于”来检查手机上的AAPS版本。您应该看到当前版本。
 

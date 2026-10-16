@@ -98,7 +98,7 @@ When in doubt you can also select “Virtual Pump” and select “DASH” later
 
 On the top-left hand corner **hamburger menu** select **Config Builder (1)** ➜ **Pump** ➜ **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**.
 
-勾选**设置齿轮图标(3)**旁的**复选框(4)**后，DASH菜单将作为标签页显示在**AAPS**界面中，标题为**DASH**。 勾选此选项后，您在使用**AAPS**时将能更便捷地调用DASH指令功能。
+勾选**设置齿轮图标(3)**旁的**复选框(4)**后，DASH菜单将作为标签页显示在**AAPS**界面中，标题为**DASH**。勾选此选项后，您在使用**AAPS**时将能更便捷地调用DASH指令功能。
 
 **NOTE:** A faster way to access the [**Dash settings**](#omnipod-dash-settings) can be found below in the DASH settings section of this document.
 
@@ -138,7 +138,7 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
    确保新储药器与运行**AAPS**的手机保持近距离，然后点击**下一步**按钮。
 
-   ***注意**：若弹出错误提示_"未找到可用的待激活储药器"_（这种情况可能发生），请勿惊慌。 点击**重试**按钮。 在大多数情况下，激活程序将能继续顺利完成。*
+   ***注意**：若弹出错误提示_"未找到可用的待激活储药器"_（这种情况可能发生），请勿惊慌。点击**重试**按钮。在大多数情况下，激活程序将能继续顺利完成。*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
@@ -147,7 +147,7 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. 接下来，请准备好输注部位以佩戴新储药器。 洗手消毒以避免感染风险。 Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding.   
+4. 接下来，请准备好输注部位以佩戴新储药器。洗手消毒以避免感染风险。 Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding.   
    If you get skin irritation from the adhesive consider using a Barrier Wipe or Barrier Spray.
 
    移除储药器的蓝色塑料针头保护帽。 If you see something that sticks out of the pod or it looks unusual, **STOP** the process and start with a new pod. If everything looks **OK**, proceed to take off the white paper backing from the adhesive and stick the pod to the selected site on your body.
@@ -175,11 +175,11 @@ To verify that you have selected the DASH in **AAPS**, if you have **checked the
 
    点击绿色**完成**按钮。
 
-   恭喜！ 您已成功开启新储药器使用周期。
+   恭喜！您已成功开启新储药器使用周期。
 
    ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-2. 此时**储药器管理**菜单界面应显示：**激活储药器(1)**按钮*不可用*，而**停用储药器(2)**按钮*可用*。 这是因为当前已有储药器处于激活状态，必须首先停用当前储药器才能激活新储药器。
+2. 此时**储药器管理**菜单界面应显示：**激活储药器(1)**按钮*不可用*，而**停用储药器(2)**按钮*可用*。这是因为当前已有储药器处于激活状态，必须首先停用当前储药器才能激活新储药器。
 
     点击手机返回键回到**DASH**标签页，该界面现在将显示当前使用中储药器的信息，包括基础率设定值、储药器剩余量、已输注胰岛素量、储药器报错及警报等内容。
 
@@ -239,13 +239,13 @@ Under normal circumstances, the expected lifetime of a pod is three days (72 hou
 
 **NOTE**: During **Profile Switches**, like when using the PDM, AAPS must suspend delivery on the Pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, then delivery can stay suspended, Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
 
-When insulin delivery is suspended you will need to issue a command to instruct the active, currently suspended pod to resume insulin delivery. 指令成功执行后，系统将根据当前激活的基础**配置文件**，按当前时间对应的基础率恢复胰岛素正常输注。 储药器将重新接受大剂量注射、**临时基础率**和**超微大剂量**指令。
+When insulin delivery is suspended you will need to issue a command to instruct the active, currently suspended pod to resume insulin delivery. 指令成功执行后，系统将根据当前激活的基础**配置文件**，按当前时间对应的基础率恢复胰岛素正常输注。储药器将重新接受大剂量注射、**临时基础率**和**超微大剂量**指令。
 
-1. 请进入**DASH**标签页，确认**储药器状态(1)**字段显示为**已暂停**，然后点击**恢复输注(2)**按钮启动流程，指示当前储药器恢复正常胰岛素输注。 **恢复输注**信息将显示在**储药器状态(3)**字段中。
+1. 请进入**DASH**标签页，确认**储药器状态(1)**字段显示为**已暂停**，然后点击**恢复输注(2)**按钮启动流程，指示当前储药器恢复正常胰岛素输注。**恢复输注**信息将显示在**储药器状态(3)**字段中。
 
    ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH_images/Resume/Resume_2.jpg)
 
-2. 当恢复输注指令执行成功时，确认对话框将显示**胰岛素输注已恢复**的信息。 点击**确定**进行确认并继续操作。
+2. 当恢复输注指令执行成功时，确认对话框将显示**胰岛素输注已恢复**的信息。点击**确定**进行确认并继续操作。
 
    ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
@@ -257,7 +257,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
 ### Silencing Pod Alerts
 
-以下流程将说明当储药器使用时间接近72小时（3天）有效期前的警告时限时，如何确认并消除储药器提示音。 该警告时限由**关机前小时数**的Dash警报设置定义。 储药器最长使用时限为80小时（3天8小时），但Insulet建议不要超过72小时（3天）的标准周期。
+以下流程将说明当储药器使用时间接近72小时（3天）有效期前的警告时限时，如何确认并消除储药器提示音。该警告时限由**关机前小时数**的Dash警报设置定义。储药器最长使用时限为80小时（3天8小时），但Insulet建议不要超过72小时（3天）的标准周期。
 
 ***NOTE**: The **SILENCE ALERTS (3)** button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the **SILENCE ALERTS** button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
 
@@ -271,19 +271,19 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
    ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
-3. 当警报**成功停用**后，使用中的储药器会发出**2声提示音**，同时确认对话框将显示**警报已静音**的信息。 点击**确定**按钮确认并关闭对话框。
+3. 当警报**成功停用**后，使用中的储药器会发出**2声提示音**，同时确认对话框将显示**警报已静音**的信息。点击**确定**按钮确认并关闭对话框。
 
    ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
-4. 请进入**DASH**标签页。 在**使用中储药器警报**字段下，警告信息不再显示，且使用中的储药器将不再发出到期警告提示音。
+4. 请进入**DASH**标签页。在**使用中储药器警报**字段下，警告信息不再显示，且使用中的储药器将不再发出到期警告提示音。
 
 (omnipod-dash-view-pod-history)=
 
 ### View Pod History
 
-本节说明如何查看使用中储药器的历史记录，并按不同操作类别进行筛选。 储药器历史工具可让您查看当前使用中储药器在其3天（72-80小时）使用周期内执行的操作及结果记录。
+本节说明如何查看使用中储药器的历史记录，并按不同操作类别进行筛选。储药器历史工具可让您查看当前使用中储药器在其3天（72-80小时）使用周期内执行的操作及结果记录。
 
-此功能有助于核验已发送至储药器的大剂量注射、临时基础率和基础率指令。 其余分类有助于故障排除，并确定导致故障发生的事件顺序。
+此功能有助于核验已发送至储药器的大剂量注射、临时基础率和基础率指令。其余分类有助于故障排除，并确定导致故障发生的事件顺序。
 
 ***NOTE:** **Only the last command can be uncertain**. New commands *will not be sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. The way to 'fix' uncertain commands is to **'refresh pod status'**.*
 
@@ -292,7 +292,7 @@ When insulin delivery is suspended you will need to issue a command to instruct 
    ![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)  
    ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
-2. 在**储药器历史**界面，默认显示**全部(1)**类别，按时间倒序排列所有储药器**操作(3)**及其**结果(4)**的**日期和时间(2)**。 按手机**返回键2次**可返回主**AAPS**界面的**DASH**标签页。
+2. 在**储药器历史**界面，默认显示**全部(1)**类别，按时间倒序排列所有储药器**操作(3)**及其**结果(4)**的**日期和时间(2)**。按手机**返回键2次**可返回主**AAPS**界面的**DASH**标签页。
 
    ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
@@ -341,9 +341,9 @@ When insulin delivery is suspended you will need to issue a command to instruct 
 
   - Example:* 0.00U/h @18:25 ( 90/120 minutes)
 
-- **储药量：**当储药器剩余药量超过50单位时，显示"50+单位剩余"。 低于50单位时，将显示精确剩余药量。
+- **储药量：**当储药器剩余药量超过50单位时，显示"50+单位剩余"。低于50单位时，将显示精确剩余药量。
 
-- **总输注量：**显示储药器已输送的胰岛素总量（单位）。 该数值包含激活储药器和管路填充所消耗的胰岛素。
+- **总输注量：**显示储药器已输送的胰岛素总量（单位）。该数值包含激活储药器和管路填充所消耗的胰岛素。
 
 - **错误信息：**显示最近发生的错误。 Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information.
 
@@ -427,7 +427,7 @@ The Dash driver settings are configurable from the top-left hand corner **hambur
 
 当储药器达到过期、关机或根据设定阈值单位检测到低药量时，提供**AAPS**警报提示。
 
-***NOTE:** an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. 除非启用"自动确认储药器警报"功能，否则仅消除通知并不会消除警报状态。 要手动消除警报，必须访问**DASH**标签页并点击**静音警报按钮**。*
+***NOTE:** an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. 除非启用"自动确认储药器警报"功能，否则仅消除通知并不会消除警报状态。要手动消除警报，必须访问**DASH**标签页并点击**静音警报按钮**。*
 
 **Expiration reminder enabled:**    Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 
@@ -461,7 +461,7 @@ This tab is well documented in the main **AAPS** documentation but there are a f
 
 1. Go to the **Actions (ACT)** tab in the main **AAPS** interface.
 
-2. 在**Careportal(1)**部分，**胰岛素**和**输注套管**字段的**使用时长**会在**每次更换储药器后**重置为0天0小时。 这是由于Omnipod胰岛素泵的构造和工作原理决定的。 由于储药器在敷贴时会直接将输注套管插入皮肤，Omnipod泵不使用传统导管。 *因此更换储药器后，这些数值的使用时长会自动归零。* **泵电池使用时长**不显示报告，因为储药器内置电池的寿命始终超过储药器使用期限（最长80小时）。 **泵电池**和**胰岛素储药器**均内置于每个储药器单元内部。
+2. 在**Careportal(1)**部分，**胰岛素**和**输注套管**字段的**使用时长**会在**每次更换储药器后**重置为0天0小时。这是由于Omnipod胰岛素泵的构造和工作原理决定的。由于储药器在敷贴时会直接将输注套管插入皮肤，Omnipod泵不使用传统导管。*因此更换储药器后，这些数值的使用时长会自动归零。* **泵电池使用时长**不显示报告，因为储药器内置电池的寿命始终超过储药器使用期限（最长80小时）。**泵电池**和**胰岛素储药器**均内置于每个储药器单元内部。
 
    ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
@@ -469,7 +469,7 @@ This tab is well documented in the main **AAPS** documentation but there are a f
 
 **胰岛素储药量**
 
-显示的胰岛素储药量为DASH报告的药量。 但储药器仅在剩余药量低于50单位时才会报告实际胰岛素储药量。 在此之前将始终显示"高于50单位"。 报告数值并不精确：当储药器显示"空"时，多数情况下储药器内仍会残留若干单位的胰岛素。
+显示的胰岛素储药量为DASH报告的药量。但储药器仅在剩余药量低于50单位时才会报告实际胰岛素储药量。在此之前将始终显示"高于50单位"。报告数值并不精确：当储药器显示"空"时，多数情况下储药器内仍会残留若干单位的胰岛素。
 
 DASH概览标签页将显示如下内容：
 
@@ -478,7 +478,7 @@ DASH概览标签页将显示如下内容：
 
 补充说明：
   * **短信查询** - 短信回复将返回实际数值或"50+单位"
-  * **Nightscout** - 当药量超过50单位时，会向Nightscout上传50的数值（14.07及更早版本）。  较新版本在药量超过50单位时将报告"50+"的数值。
+  * **Nightscout** - 当药量超过50单位时，会向Nightscout上传50的数值（14.07及更早版本）。较新版本在药量超过50单位时将报告"50+"的数值。
 
 (omnipod-dash-known-issues-workarounds)=
 
@@ -537,8 +537,8 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 
 ### Delivery suspended
 
-  - 不再设有暂停按钮。 如需"暂停"储药器，可设置持续时间为X分钟的零值**临时基础率(TBR)**。
-  - 在执行**配置文件切换**时，DASH必须在设置新的基础率**配置文件**前暂停胰岛素输注。 若两条指令间通信失败，输注可能保持暂停状态。 当发生此情况时：
+  - 不再设有暂停按钮。如需"暂停"储药器，可设置持续时间为X分钟的零值**临时基础率(TBR)**。
+  - 在执行**配置文件切换**时，DASH必须在设置新的基础率**配置文件**前暂停胰岛素输注。若两条指令间通信失败，输注可能保持暂停状态。当发生此情况时：
      - 胰岛素输注将完全停止，包括基础率、超微大剂量(SMB)、手动大剂量等所有输注功能。
      - 系统可能显示某条指令未确认的通知（具体取决于通信失败发生的时机）。
      - **AAPS**将每15分钟尝试设置新的基础率配置文件。
@@ -559,7 +559,7 @@ For known issues with Bluetooth connections, dropouts of pump/pods, or activatio
 ---
 ### Preventing error 49 pod failures
 
-该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。 此时驱动程序和储药器对实际状态的判断出现分歧。 出于内置安全机制，储药器会触发不可恢复的49号错误代码(0x31)，导致俗称"尖叫器"的状态——这种持续恼人的蜂鸣声只能通过在储药器背面指定位置打孔来停止。 "49号储药器故障"的具体成因通常难以追溯。 在怀疑可能发生此类故障的情况下（例如应用程序崩溃、运行开发版本或重新安装时）。
+该故障与指令对应的储药器状态错误或胰岛素输注指令执行出错有关。此时驱动程序和储药器对实际状态的判断出现分歧。出于内置安全机制，储药器会触发不可恢复的49号错误代码(0x31)，导致俗称"尖叫器"的状态——这种持续恼人的蜂鸣声只能通过在储药器背面指定位置打孔来停止。 "49号储药器故障"的具体成因通常难以追溯。在怀疑可能发生此类故障的情况下（例如应用程序崩溃、运行开发版本或重新安装时）。
 
 ---
 
@@ -570,11 +570,11 @@ When no communication can be established with the pod for a pre-configured time 
 ---
 ### Export  Settings
 
-导出**AAPS**设置可让您恢复所有配置参数，更重要的是能完整保留所有目标进度状态。 当需要恢复到"最后已知的正常状态"、或卸载重装**AAPS**后、以及手机丢失需在新设备上重新安装时，均可通过该功能还原设置。
+导出**AAPS**设置可让您恢复所有配置参数，更重要的是能完整保留所有目标进度状态。当需要恢复到"最后已知的正常状态"、或卸载重装**AAPS**后、以及手机丢失需在新设备上重新安装时，均可通过该功能还原设置。
 
-***NOTE:** The active pod information is included in the exported settings. 若导入"旧版"导出文件，您当前使用的储药器将"失效"。 别无他法。 在某些情况下（例如_计划性_更换手机时），您可能需要使用导出文件来恢复**AAPS**设置，**同时保留当前正在使用的储药器**。 在这种情况下，必须使用最近导出的、包含当前使用中储药器信息的设置文件。*
+***NOTE:** The active pod information is included in the exported settings. 若导入"旧版"导出文件，您当前使用的储药器将"失效"。别无他法。在某些情况下（例如_计划性_更换手机时），您可能需要使用导出文件来恢复**AAPS**设置，**同时保留当前正在使用的储药器**。在这种情况下，必须使用最近导出的、包含当前使用中储药器信息的设置文件。*
 
-**最佳做法是在激活储药器后立即进行设置导出**。 如此可在出现问题时随时恢复当前使用中的储药器状态。 例如在切换到备用手机时。
+**最佳做法是在激活储药器后立即进行设置导出**。如此可在出现问题时随时恢复当前使用中的储药器状态。例如在切换到备用手机时。
 
 Regularly (after each export preferably) copy your exported settings to a safe place (a cloud drive e.g. Google Drive) that is accessible by any phone when needed. This allows you to restore to a phone from anywhere in case of a phone loss or factory reset of your phone while you are not at home.
 
@@ -602,7 +602,7 @@ As a result, there is a **risk of losing the active Pod!** (see **Exporting Sett
 ---
 ### Importing settings that contain Pod state from an inactive Pod
 
-当导入包含已停用储药器数据的设置时，AAPS将尝试与其建立连接，这显然会导致失败。 在此情况下您将无法激活新储药器。
+当导入包含已停用储药器数据的设置时，AAPS将尝试与其建立连接，这显然会导致失败。在此情况下您将无法激活新储药器。
 
 To remove the old pod session:
 1. “try” to de-activate the Pod. The de-activation will likely fail.
@@ -640,7 +640,7 @@ When uninstalling **AAPS** you will lose all your settings, objectives and the c
 ---
 ### Updating AAPS to a newer version
 
-多数情况下无需卸载旧版本。 您可直接安装新版本进行"就地升级"。 This is also possible when on an active Pod session.
+多数情况下无需卸载旧版本。您可直接安装新版本进行"就地升级"。 This is also possible when on an active Pod session.
 
 1. 请导出您的设置文件。
 2. 安装新版**AAPS**。
@@ -655,10 +655,10 @@ The Omnipod Dash driver presents a variety of unique alerts on the **Overview ta
 
 以下是您可能会遇到的主要警报摘要：
 
-- 未检测到活动的Pod会话。 该警报可通过点击**暂缓**临时关闭，但在新储药器激活前将持续触发。 该警报激活后将自动静音。
+- 未检测到活动的Pod会话。该警报可通过点击**暂缓**临时关闭，但在新储药器激活前将持续触发。该警报激活后将自动静音。
 - 储药器已暂停 提示性警报，表明储药器处于暂停状态。
-- 设置基础**配置文件**失败：输注可能已暂停！ 请从Omnipod标签页手动刷新储药器状态，必要时恢复输注。 提示性警报：储药器基础**配置文件**设置失败，需点击Omnipod标签页的*刷新*按钮。
-- 无法确认**超微大剂量**输注是否成功。 若确认大剂量未成功输注，请手动从治疗记录中删除该条超微大剂量记录。 警报提示：**超微大剂量**输注命令的成功状态无法验证，您需要检查DASH标签页的*最后大剂量*字段确认输注是否成功，若失败则需从治疗记录页删除该条目。
+- 设置基础**配置文件**失败：输注可能已暂停！请从Omnipod标签页手动刷新储药器状态，必要时恢复输注。提示性警报：储药器基础**配置文件**设置失败，需点击Omnipod标签页的*刷新*按钮。
+- 无法确认**超微大剂量**输注是否成功。若确认大剂量未成功输注，请手动从治疗记录中删除该条超微大剂量记录。警报提示：**超微大剂量**输注命令的成功状态无法验证，您需要检查DASH标签页的*最后大剂量*字段确认输注是否成功，若失败则需从治疗记录页删除该条目。
 - 无法确认"任务大剂量/临时基础率/超微大剂量"是否完成，请人工核验操作结果。
 
 (omnipod-dash-where-to-get-help-for-dash)=
@@ -669,7 +669,7 @@ DASH系统的所有开发工作均由社区**志愿者**无偿完成；在请求
 
 -  **第0级：**查阅本文档相关章节，确保您已理解遇到问题的功能模块的正确运作方式。
 -  **第1级：**若参照本文档仍无法解决问题，请通过[此邀请链接](https://discord.gg/4fQUWHZ4Mw)加入**Discord**平台的*#AAPS*频道寻求帮助。 There are also numerous Facebook and other groups you can ask in too (see [**Getting Help**](../GettingHelp/WhereCanIGetHelp.md))
--  **第2级：**在[问题追踪](https://github.com/nightscout/AndroidAPS/issues)页面搜索现有问题报告，确认您的问题是否已被记录。若存在相关报告，请补充说明您的情况。 如果没有，请创建一个[新问题](https://github.com/nightscout/AndroidAPS/issues)并附上[您的日志文件](../GettingHelp/AccessingLogFiles.md)。
+-  **第2级：**在[问题追踪](https://github.com/nightscout/AndroidAPS/issues)页面搜索现有问题报告，确认您的问题是否已被记录。若存在相关报告，请补充说明您的情况。如果没有，请创建一个[新问题](https://github.com/nightscout/AndroidAPS/issues)并附上[您的日志文件](../GettingHelp/AccessingLogFiles.md)。
 -  **请保持耐心——我们社区成员多为热心志愿者，问题的解决往往需要用户和开发者双方投入时间与耐心。**
 
 When requesting help come prepared with the following information to help those in the community with your specific questions and problems:
