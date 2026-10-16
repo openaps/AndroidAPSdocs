@@ -3,9 +3,9 @@
 ![grafik](./images/basic-outline-of-AAPS.png)
 
 ```{admonition} Latest Release
-:class: Anmerkung
+:class: note
 
- 4. Juni 2026: Version 3.4.2.3 ist veröffentlicht. Schau in die [Release Notes](#latestrelease), um zu sehen was es Neues gibt, und führe die Schritte wie sie in der [Aktualisierungsanleitung](./Maintenance/UpdateToNewVersion.md) beschrieben sind, um entsprechend auf die neueste Version zu aktualisieren.
+ 2 August 2026 : Version 3.4.2.6 is out. Schau in die [Release Notes](#latestrelease), um zu sehen was es Neues gibt, und führe die Schritte wie sie in der [Aktualisierungsanleitung](./Maintenance/UpdateToNewVersion.md) beschrieben sind, um entsprechend auf die neueste Version zu aktualisieren.
 
 ```
 
@@ -21,7 +21,7 @@ Abschnitt **2) „Erste Schritte“** - Die [Einführung](Getting-Started/Introd
 
 Jetzt, da Du ein solides Grundverständnis des Prozesses hast, kannst Du damit beginnen, Deinen **AAPS**-Loop zu erstellen.
 
-Abschnitt **3) AAPS einrichten** enthält Schritt-für-Schritt Anleitungen, um dies zu tun. Er beschreibt die Auswahl und [Einrichtung Deines Servers für Berichte](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout oder Tidepool), damit Du Deine relevanten Daten auswerten und teilen kannst, die Vorbereitung für die Erstellung, das eigentliche Erstellen (sog. Build) der AAPS-App und die Übertragung der AAPS-App auf Dein Smartphone. Es umfasst auch das Einrichten der **AAPS**-App mithilfe des Einrichtungsassistenten, das Verknüpfen mit Deiner CGM-App und entweder einer echten oder einer virtuellen Insulinpumpe sowie das Verknüpfen von **AAPS** mit Deinem Berichtsserver. Du wirst danach durch einen kleinschrittigen und sehr fein justierten Prozess sehr behutsam an die vollständige **AAPS**-Nutzung herangeführt. Damit soll sichergestellt werden, dass Du oder Dein Kind, sicher durch die verschiedenen Funktionen und Menü-Konfigurationen navigieren lernst, bevor Du zur folgenden Phase (auch "nächstes Ziel" bzw. "Objective" genannt) übergehst und schließlich genug Erfahrung gesammelt hast, um die weitreichensten Funktionalitäten der App nutzen zu können. Diese Objectives (Ziele) sind so aufgebaut, dass nach und nach weitere **AAPS**-Funktionen freigeschaltet werden und so am Ende vom 'Open Loop' auf 'Closed Loop' umgestellt werden kann.
+Abschnitt **3) AAPS einrichten** enthält Schritt-für-Schritt Anleitungen, um dies zu tun. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone, including [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed. Es umfasst auch das Einrichten der **AAPS**-App mithilfe des Einrichtungsassistenten, das Verknüpfen mit Deiner CGM-App und entweder einer echten oder einer virtuellen Insulinpumpe sowie das Verknüpfen von **AAPS** mit Deinem Berichtsserver. Du wirst danach durch einen kleinschrittigen und sehr fein justierten Prozess sehr behutsam an die vollständige **AAPS**-Nutzung herangeführt. Damit soll sichergestellt werden, dass Du oder Dein Kind, sicher durch die verschiedenen Funktionen und Menü-Konfigurationen navigieren lernst, bevor Du zur folgenden Phase (auch "nächstes Ziel" bzw. "Objective" genannt) übergehst und schließlich genug Erfahrung gesammelt hast, um die weitreichensten Funktionalitäten der App nutzen zu können. Diese Objectives (Ziele) sind so aufgebaut, dass nach und nach weitere **AAPS**-Funktionen freigeschaltet werden und so am Ende vom 'Open Loop' auf 'Closed Loop' umgestellt werden kann.
 
 Abschnitt **4) AAPS im Alltag** behandelt wichtige **AAPS**-Funktionen, um Dir beim Umgang (und der Anpassung) von **AAPS** zu helfen. Dies beinhaltet insbesondere das Verständnis der Bildschirme, Kohlenhydrate an Bord (CoB), Sensitivität, Profilwechsel, temporäre Ziele, verzögerte Kohlenhydrate (oder eCarbs), Automatisierungen und dynamischer ISF (DynamicISF). Es behandelt auch häufige Themen wie den Umgang mit verschiedenen Mahlzeitenarten den Umgang mit Kanülen- und Sensorwechseln, Smartphone-Updates, Zeitumstellungen, [Reisen mit AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) und Sport. Häufig gestellte Fragen und Antworten dazu findest Du im Abschnitt zur Fehlerbehebung.
 
@@ -84,22 +84,23 @@ Komponentenübersicht <./Getting-Started/ComponentOverview.md>
 ```
 
 ```{toctree}
-:caption: 3) AAPS einrichten
+:caption: 3) Setting up AAPS
 
-Einrichten des Berichtsservers <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-AAPS erstellen <./SettingUpAaps/BuildingAaps.md>
-- Im Browser (Browser Build) <./SettingUpAaps/BrowserBuild.md>
-- Mit Android Studio (PC) <./SettingUpAaps/ComputerBuild.md>
-- Mit Kommandozeile (CLI Build) <./SettingUpAaps/CLIBuild.md>
-AAPS übertragen und installieren <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Einrichtungsassistent <./SettingUpAaps/SetupWizard.md>
-Dein AAPS-Profil <. SettingUpAaps/YourAapsProfile.md>
-Ändern der AAPS-Konfiguration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Konfiguation <./SettingUpAaps/ConfigBuilder.md>
-- Einstellungen <./SettingUpAaps/Preferences.md>
-Abschluss der Ziele <./SettingUpAaps/CompletingTheObjectives.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
+- CLI Build <./SettingUpAaps/CLIBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -142,34 +143,37 @@ Austausch-Plattform für eigene Zifferblätter <./ExchangeSiteCustomWatchfaces/i
 ```
 
 ```{toctree}
-:caption: 7) AAPS pflegen
+:caption: 7) Maintenance of AAPS
 
-Export/Import der Einstellungen <./Maintenance/ExportImporteinstellungen. d>
-Deine Daten prüfen <./Maintenance/Reviewing.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Dokumentation aktualisieren <. Maintenance/DocumentationUpdate.md>
-Update auf eine neue AAPS-Version <./Maintenance/UpdateToNewVersion. d>
-- Browser-Update <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio-Update <./Maintenance/UpdateComputerBuild.md>
+End of life <./Maintenance/EndOfLife.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Hilfe
+:caption: 8) Getting Help
 
-Wo kann ich Hilfe mit AAPS <./GettingHelp/WhereCanIGetHelp bekommen. d>
-Allgemeine Fehlerbehebung <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth Fehlerbehebung <. GettingHelp/BluetoothTroubleshooting.md>
-Anleitung zum Profil-Tuning <./GettingHelp/ProfileTuning.md>
-Fehlersuche Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Zugriff auf Logdateien <./GettingHelp/AccessingLogFiles.md>
+Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
+General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
+Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
+Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
-:caption: 9) Erweiterte AAPS-Optionen
+:caption: 9) Advanced AAPS options
 
 Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Entwicklerversion (Dev-Branch) <./AdvancedOptions/DevBranch.md>
+Dev branch <./AdvancedOptions/DevBranch.md>
+Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
 Autotune <./AdvancedOptions/Autotune.md>
 
 ```
