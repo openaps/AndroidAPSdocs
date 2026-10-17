@@ -14,7 +14,6 @@ Key characteristics of the **Omnipod DASH** ('DASH'):
 - The DASH pods are identified by a **blue needle cap** (the older EROS pod has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
 - DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
 - The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
-- It does not produce the "no connection to link device / pod" errors associated with link devices.
 - **AAPS** will wait for pod's accessibility to send commands.
 - On pod activation, **AAPS** will find and connect to a new DASH pod.
 - Expected range from phone: 5-10 meters (YMMV).
@@ -104,8 +103,6 @@ On an existing installation you can select the **Omnipod Dash** pump from the **
 
 1. Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration**.
 2. Tap **Pump** and select the radio button of **Omnipod Dash** (*"Pump integration for Omnipod Dash (the new, Bluetooth-enabled model with a blue needle cap)"*).
-
-   ![Configuration > Pump with the Omnipod Dash plugin](../images/v4/Configuration/configuration_pump_list_4.png)
 
 3. Once it is selected, the **Omnipod Dash** card shows two buttons:
    - **Settings** opens the [Dash settings](#omnipod-dash-settings).
@@ -456,7 +453,7 @@ It is useful to check the boluses, TBRs and basal commands that were sent to the
    ```{admonition} Why basal corrections happen
    :class: note
    The pod delivers basal insulin in pulses of 0.05 U, timed by an internal clock. Each time the basal rate changes (for example when the loop sets a new **TBR**), the pod restarts this clock, and the pulse it was counting towards is lost. Because the loop changes the basal rate often, especially overnight, the pod can end up delivering less basal insulin than expected.
-
+   
    **AAPS** compares the basal insulin the pod reports as delivered with what it should have delivered. When the shortfall reaches half a pulse or more, the driver delivers one extra pulse as a basal correction, so you still get the basal insulin your profile and the loop asked for. No correction is sent while the pod is suspended, or while a zero **TBR** is running.
    ```
 
