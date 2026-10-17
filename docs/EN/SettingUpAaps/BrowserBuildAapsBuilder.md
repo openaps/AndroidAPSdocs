@@ -27,7 +27,7 @@ You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from 
 ```{admonition} Where the code comes from
 :class: note
 
-The setup page and the build workflow are part of this documentation: they are maintained and reviewed together with it. The <a href="../aaps-builder-build.yml">workflow</a> you add to your repository is short: it runs the [build steps](https://github.com/openaps/AndroidAPSdocs/blob/master/.github/workflows/aaps-builder.yml) kept in the documentation repository, pinned to one reviewed version. You can read both before you use them. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+The setup page and the build workflow are part of this documentation: they are maintained and reviewed together with it. The <a href="../aaps-builder-build.yml">workflow</a> you add to your repository is short: it runs the [build steps](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml) kept in the documentation repository, pinned to one reviewed version. You can read both before you use them. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
 ```
 
 (aaps-builder-before-you-start)=

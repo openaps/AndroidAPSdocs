@@ -118,9 +118,9 @@ notices kept in the files):
 ```
 SHA-256(aaps-builder.html)         = 169e624b397de88413251b2c47fe388af96c26e782e336717ff58b1a0b74b15a
 SHA-256(aaps-builder.app.js)       = 3f50a913902ebb3999b55a3aad7ef1432d5562e066f3b09cced7644c0cb41d76
-SHA-256(aaps-builder-build.yml)    = 343139a57d25cce20bdeddc494bf4c756486f3d9c96034ae8211d92cfc65632e
+SHA-256(aaps-builder-build.yml)    = f294d2c515f846abf4cb786545d4628051e5d245465af0edea0d1631d7614a9a
 SHA-256(aaps-builder.forge.min.js) = dc67fd132427ad96c9666c844b39565413c40ddb1f2d063c53512fbf6d387dfd
-SHA-256(.github/workflows/aaps-builder.yml) = f00f647990950f6f0295cd3fd6d66c3a05162b948ebb821eaa8d9972f11f0382
+SHA-256(.github/workflows/aaps-builder.yml) = 84f52b9a7e4db9447f56a6e7bec058b82bd1a26fcea9cd15d76d118015a30115
 ```
 
 `aaps-builder.forge.min.js` is node-forge 1.3.1 (BSD-3-Clause or GPL-2.0,

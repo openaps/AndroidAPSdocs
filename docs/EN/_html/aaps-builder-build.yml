@@ -1,10 +1,10 @@
-# AAPS Builder build workflow, version 4
+# AAPS Builder build workflow, version 5
 #
 # Builds AAPS from the official source (github.com/nightscout/AndroidAPS), signed with your key
 # (secret KEYSTORE_SET). The build steps are in the AAPS documentation repository, file
 # .github/workflows/aaps-builder.yml, pinned below to one reviewed commit: they never change
 # unless you replace this file with a newer version from the AAPS Builder setup page.
-# Docs: https://androidaps.readthedocs.io/en/latest/SettingUpAaps/BrowserBuildAapsBuilder.html
+# Docs: https://androidaps.readthedocs.io/en/dev/SettingUpAaps/BrowserBuildAapsBuilder.html
 #
 # A build runs only when you start it (Actions -> Build AAPS -> Run workflow).
 
@@ -38,7 +38,7 @@ permissions:
 jobs:
   aaps:
     name: AAPS
-    uses: openaps/AndroidAPSdocs/.github/workflows/aaps-builder.yml@bc9f347a1fa13a5b514a6a9e742e615f2b716844
+    uses: openaps/AndroidAPSdocs/.github/workflows/aaps-builder.yml@b43971dd9095baf215679aee1828c3cf169dbc82
     with:
       version: ${{ inputs.version }}
       variant: ${{ inputs.variant }}
