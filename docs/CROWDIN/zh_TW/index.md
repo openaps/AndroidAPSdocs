@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 2 August 2026 : Version 3.4.2.6 is out. 請參閱 [版本公告](#latestrelease) 以瞭解最新變更，並依照 [更新手冊](./Maintenance/UpdateToNewVersion.md) 的指示進行更新。
+ 2026 年 8 月 2 日： 版本 3.4.2.6 已發布。請參閱 [版本公告](#latestrelease) 以瞭解最新變更，並依照 [更新手冊](./Maintenance/UpdateToNewVersion.md) 的指示進行更新。
 
 ```
 
@@ -21,7 +21,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 現在你已經對過程有了深入的了解，可以開始建置你的**AAPS** 循環系統了。
 
-本章節 **三) 設置 AAPS** 包含逐步指導來進行此操作。 It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone, including [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed. 他還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。你將透過一個安全且經過精心設計的逐步流程，慢慢了解**AAPS**所提供的全部功能。此流程主要在確保你或你的孩子能夠充分熟悉，並能操作所有不同的層級和選單配置，然後再進入下一階段，通常稱為下一個「目標」，直到你累積足夠的經驗，再開始使用應用程式內更進階的選項。這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
+本章節 **三) 設置 AAPS** 包含逐步指導來進行此操作。內容涵蓋選擇並 [設定你的報表伺服器](./SettingUpAaps/SettingUpTheReportingServer.md)（Nightscout 或 Tidepool），以便檢視與分享你的資料；準備開始建置 AAPS 應用程式、建置 AAPS 應用程式並將 AAPS 應用程式傳輸到你的手機；同時包含 [Android 開發者驗證](./SettingUpAaps/AndroidDeveloperVerification.md)，這是 Google 將自 2026 年 9 月起推行的變更，會影響自製應用程式的安裝方式。他還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。你將透過一個安全且經過精心設計的逐步流程，慢慢了解**AAPS**所提供的全部功能。此流程主要在確保你或你的孩子能夠充分熟悉，並能操作所有不同的層級和選單配置，然後再進入下一階段，通常稱為下一個「目標」，直到你累積足夠的經驗，再開始使用應用程式內更進階的選項。這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
 
 第**4)**節使用**AAPS**的日常生活涵蓋關鍵的**AAPS**功能，以協助你使用（並自訂）**AAPS**。包括暸解各個畫面、碳水化合物計算、敏感度、設定檔切換、臨時目標、延展碳水化合物（或 eCarbs）、自動化和 動態ISF。此外，還涵蓋了如何處理不同類型的餐食、更換套管和傳感器、手機更新、夏令時間更改、[與 AAPS 一起旅行](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) 和運動等常見問題與解答。常見問題和答案位於問題排除部分。
 
@@ -84,23 +84,23 @@ AAPS 簡介 <./Getting-Started/Introduction.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) 設定 AAPS
 
-Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+設定報表伺服器 <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Building AAPS <./SettingUpAaps/BuildingAaps.md>
-- Browser Build <./SettingUpAaps/BrowserBuild.md>
-- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
-- CLI Build <./SettingUpAaps/CLIBuild.md>
-Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
-Setup Wizard <./SettingUpAaps/SetupWizard.md>
-Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
-Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Config Builder <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
-Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
+建置 AAPS <./SettingUpAaps/BuildingAaps.md>
+- 瀏覽器建置 <./SettingUpAaps/BrowserBuild.md>
+- Android Studio 建置 <./SettingUpAaps/ComputerBuild.md>
+- CLI 建置 <./SettingUpAaps/CLIBuild.md>
+傳輸與安裝 AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Android 開發者驗證 <./SettingUpAaps/AndroidDeveloperVerification.md>
+設定嚮導 <./SettingUpAaps/SetupWizard.md>
+你的 AAPS 設定檔 <./SettingUpAaps/YourAapsProfile.md>
+變更 AAPS 組態 <./SettingUpAaps/ChangeAapsConfiguration.md>
+- 組態建置工具 <./SettingUpAaps/ConfigBuilder.md>
+- 偏好設定 <./SettingUpAaps/Preferences.md>
+完成目標 <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -143,38 +143,38 @@ AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
 ```
 
 ```{toctree}
-:caption: 7) Maintenance of AAPS
+:caption: 7) AAPS 維護
 
-Export/Import Settings <./Maintenance/ExportImportSettings.md>
-Reviewing your data <./Maintenance/Reviewing.md>
-AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-End of life <./Maintenance/EndOfLife.md>
-Documentation updates <./Maintenance/DocumentationUpdate.md>
-Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+匯出/匯入 設定 <./Maintenance/ExportImportSettings.md>
+檢視你的資料 <./Maintenance/Reviewing.md>
+AAPS 發行說明 <./Maintenance/ReleaseNotes.md>
+生命週期終止 <./Maintenance/EndOfLife.md>
+文件更新 <./Maintenance/DocumentationUpdate.md>
+更新至新版本的 AAPS <./Maintenance/UpdateToNewVersion.md>
+- 瀏覽器建置更新 <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio 建置更新 <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Getting Help
+:caption: 8) 取得協助
 
-Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
-General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
-- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
-- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
-Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
-Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
+哪裡可以取得 AAPS 協助 <./GettingHelp/WhereCanIGetHelp.md>
+一般疑難排解 <./GettingHelp/GeneralTroubleshooting.md>
+- 藍牙疑難排解 <./GettingHelp/BluetoothTroubleshooting.md>
+- 瀏覽器建置疑難排解 <./GettingHelp/BrowserBuildTroubleshooting.md>
+設定檔調校指南 <./GettingHelp/ProfileTuning.md>
+Android Studio 疑難排解 <./GettingHelp/TroubleshootingAndroidStudio.md>
+存取日誌檔 <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
-:caption: 9) Advanced AAPS options
+:caption: 9) AAPS 進階選項
 
-Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
-Dev branch <./AdvancedOptions/DevBranch.md>
-Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
-Autotune <./AdvancedOptions/Autotune.md>
+完全閉環 <./AdvancedOptions/FullClosedLoop.md>
+開發分支 <./AdvancedOptions/DevBranch.md>
+瀏覽器建置：擇取提交 <./AdvancedOptions/BrowserBuildCherryPick.md>
+自動調校 <./AdvancedOptions/Autotune.md>
 
 ```
 ```{toctree}
