@@ -97,8 +97,8 @@
   .box { background: var(--soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
   .secret-row { display: flex; gap: 8px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
   code { background: var(--code); padding: 2px 6px; border-radius: 4px; font-size: .92em; word-break: break-all; }
-  ol.small { padding-left: 20px; margin: 8px 0; }
-  ol.small li { margin: 4px 0; }
+  ol.small, ul.small { padding-left: 20px; margin: 8px 0; }
+  ol.small li, ul.small li { margin: 4px 0; }
   .check { display: flex; gap: 8px; align-items: center; font-weight: 400; margin-top: 10px; }
   [hidden] { display: none !important; }
   footer { color: var(--muted); font-size: .85rem; margin-top: 24px; }
@@ -187,7 +187,13 @@
       <div class="msg" id="newMsg"></div>
       <div class="box" id="backupBox" hidden>
         <p><b>Save a backup of your key!</b></p>
-        <p>Download the file and keep it somewhere safe (e.g. your own cloud storage) together with the password. You will need it if you ever build AAPS another way.</p>
+        <p>Download the file. Keep these three together, somewhere safe off your phone (e.g. your own cloud storage):</p>
+        <ul class="small">
+          <li>the file <code>aaps-keystore.jks</code></li>
+          <li>your password</li>
+          <li>the alias of the key: <b><code>aaps</code></b></li>
+        </ul>
+        <p>You will need all three if you ever build AAPS another way, e.g. with Android Studio.</p>
         <button class="btn" id="downloadKs">Download backup (aaps-keystore.jks)</button>
       </div>
     </div>
@@ -217,7 +223,8 @@
     <h2><span class="num">5</span><span>Build the app</span></h2>
     <ol class="small">
       <li><a class="btn" id="openActions" target="_blank" rel="noopener">Open the build page</a>
-        <p class="muted">Opens: <code class="repoUrl"></code></p></li>
+        <p class="muted">Opens: <code class="repoUrl"></code></p>
+        <p class="muted">The GitHub app opened instead? Tap "RUN WORKFLOW", check the version and variant, and tap "RUN WORKFLOW" again.</p></li>
       <li>If asked, click the green button to enable workflows.</li>
       <li>Click "Run workflow", then the green "Run workflow" button. "latest" builds the newest AAPS version.</li>
       <li>Wait about 15–30 minutes. A green check means it is done.</li>
@@ -244,8 +251,9 @@
       <p class="muted" style="margin-bottom:0"><a href="Maintenance/ExportImportSettings.html" target="_blank" rel="noopener">How to export settings</a> · <a href="UsefulLinks/FAQ.html#how-to-organize-my-backups" target="_blank" rel="noopener">AAPS FAQ: how to organize backups</a></p>
     </div>
     <ol class="small">
-      <li>Open this page on your phone, in the web browser (Chrome). Not in the GitHub app: it cannot download builds. Log in to github.com if asked.</li>
-      <li><a class="btn secondary" id="openRuns" target="_blank" rel="noopener">Open my builds</a></li>
+      <li>Open this page on your phone, in the web browser (Chrome). Log in to github.com if asked.</li>
+      <li><a class="btn secondary" id="openRuns" target="_blank" rel="noopener">Open my builds</a>
+        <p class="muted">The GitHub app opened instead? It cannot download builds. In the app, open the newest build and tap "Artifacts ↗", or tap the share icon and choose Chrome. Continue in Chrome.</p></li>
       <li>Tap the newest build with a green check ✅.</li>
       <li>Scroll down to the build summary and tap the big link "📱 Download AAPS …" (or scroll further down to "Artifacts" and tap aaps-….apk). Scroll with your finger on the text, not on the diagram of the build steps.</li>
       <li>When the download is done, tap the file and choose Install. If asked, allow installing apps from this source.</li>
