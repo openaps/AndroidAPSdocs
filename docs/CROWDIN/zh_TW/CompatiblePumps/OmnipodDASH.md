@@ -19,7 +19,7 @@
 ## Omnipod DASH 已知的 AAPS 限制／問題
 - Android 16 需要 AAPS 版本 3.3.2.1 或更新版本。
 - 一般建議在 Android 14 或 16 上執行 AAPS。 Android 15 有許多社群回報的 [問題](https://github.com/nightscout/AndroidAPS/issues/3471)。不過，若你在 Android 15 上執行，可能需要啟用藍牙配對（Bonding）才能成功註冊並使用 Pod；關於配對設定的更多資訊，請參閱 [一般疑難排解](../GettingHelp/GeneralTroubleshooting.md)。
-- 臨時基礎率變更（在循環啟動時很常發生，特別是夜間）會導致胰島素輸注不足。這實際上是 Omnipod DASH 的硬體限制。此問題已在 AAPS 3.4.2.3 中處理，但目前此功能需自行啟用。請依照 [基礎率漂移修正 說明](#omnipod-dash-Basal-drift-fix) 的指示來啟用它。如需更多關於此修正的資訊，請參閱 [Github 議題 - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) 以取得更多資訊。
+- 臨時基礎率變更（在循環啟動時很常發生，特別是夜間）會導致胰島素輸注不足。這實際上是 Omnipod DASH 的硬體限制。此問題已在 AAPS 3.4.2.3 中處理，但目前此功能需自行啟用。 Follow the [Basal Drift Fix Instructions](#omnipod-dash-basal-drift-fix) to enable it. 如需更多關於此修正的資訊，請參閱 [Github 議題 - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) 以取得更多資訊。
 - Dash 僅支援以 0.05 U/h 步階設定的基礎率。如果你嘗試在 **AAPS 設定檔** 中以 0.01 的步階設定基礎率，AAPS 不會提出警告，儘管 Pod 會將該速率進位到 0.05 的步階。若你查看 POD MGMT/Pod History，會顯示已設定 0.05 的基礎率。這也表示在 AAPS 中，DASH 允許的最低基礎率為 0.05 U/h。
 - Pod 的註冊狀態會儲存在設定檔案中，如果你在 Pod 已註冊的狀態下匯出設定檔案。接著更換為新的 Pod，然後再從先前匯出的設定還原，這會還原舊 Pod 的註冊狀態，並移除新 Pod 的註冊狀態。因此建議每次註冊 Pod 後都匯出設定，以便在你的裝置出狀況時，能還原該 Pod 的註冊狀態。
 - 當設定新的基礎率設定檔時，DASH 會先暫停輸注，然後再設定新的基礎率設定檔。若通訊中斷或發生錯誤，基礎率設定檔不會自動重新開始。詳細內容請參閱 [恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery) 章節。
@@ -486,7 +486,7 @@ DASH 概覽標籤將顯示如下所述：
 
 本節涵蓋針對社群回報且已有修正的問題之常見替代作法，以及為使功能運作所需調整的設定。例如：啟用基礎率漂移的流程記載於此。
 
-(#omnipod-dash-Basal-drift-fix)=
+(omnipod-dash-basal-drift-fix)=
 
 ### 基礎率漂移修正 說明
 
@@ -499,6 +499,30 @@ Dash 透過內部計時器決定何時送出 0.05 U 的基礎脈衝。計時區�
 此問題在夜間最為明顯。白天運作時，微量注射常使基礎率為 0，因此掩蓋了此效應。依觀察使用情況，24 小時內大約有 10% 的預期每日總劑量（TDD）未被輸注。此外，夜間經常無法達成血糖目標，特別是在食用對血糖影響較長的餐點（例如義大利麵）之後。
 
 ***注意：**對於使用胰島素劑量非常小的人（例如兒童），理解此問題尤其重要。*
+
+(omnipod-dash-drift-compensation-how-it-works)=
+
+#### How the drift compensation works
+
+The pod delivers insulin in pulses of 0.05 U. When the drift compensation is enabled, **AAPS** checks that the pod has really delivered the basal insulin it was asked to deliver, and adds the missing pulses.
+
+1. **AAPS** keeps a running total of the basal insulin the pod _should_ have delivered since activation. This total follows your profile basal rates and every temporary basal rate the loop sets.
+2. Each time the pod reports its status, **AAPS** compares this total with the basal insulin the pod _actually_ delivered: the pod's total pulse count, minus the pulses delivered as boluses and SMBs.
+3. Each time **AAPS** sets or cancels a temporary basal rate, it looks at the difference. If the pod is behind by half a pulse (0.025 U) or more, **AAPS** sends one extra pulse of 0.05 U. The pod delivers it silently, without beeps.
+
+**Safety limits:**
+
+- **AAPS** only adds insulin that the pod owes. It never removes insulin, and it does nothing when the pod is ahead.
+- One pulse at a time, at most one every 2 minutes.
+- No pulse while the loop runs a zero temporary basal rate, because the loop asked for no insulin. The exception is the 5 minutes after a bolus, when a zero temporary basal rate is usually just the loop compensating for an SMB.
+- No pulse while a pod is being activated, while delivery is suspended, after a pod fault, while a bolus is running, or if the reservoir is empty.
+- If the difference ever reaches 2 pulses (0.10 U), in either direction, **AAPS** does not try to catch up. It resets its running total to what the pod has really delivered.
+
+**What you will see:**
+
+- On the **DASH** tab, **Last Bolus** can show **0.05 U** even if you did not give a bolus.
+- In the [Pod history](#omnipod-dash-view-pod-history), the extra pulses appear as **Set Bolus 0.05 U**, usually right after a **Set Temporary Basal** line. See the example in [Check that the drift compensation is working](#omnipod-dash-drift-compensation-check) below.
+- The extra pulses are **not** recorded as boluses or SMBs in **AAPS** treatments, and they do not change your IOB. This is expected: **AAPS** already counted this insulin as basal. The extra pulses only make the pod deliver what **AAPS** thinks was delivered.
 
 #### 在 AAPS 中啟用基礎率漂移修正
 
@@ -516,6 +540,32 @@ Dash 透過內部計時器決定何時送出 0.05 U 的基礎脈衝。計時區�
 
 2. 重新啟動 **AAPS**。必須執行此步驟，AAPS 才能偵測到該檔案並啟用漂移補償功能。
 3. 請造訪此 [Github 議題 #4783](https://github.com/nightscout/AndroidAPS/issues/4783)，並替第一則貼文按讚以表示你正在使用此功能；我們需要這些資料來協助證明此功能被廣泛使用。一旦社群的採用程度足夠高，就可以移除這個啟用檔案；感謝你的支持。
+
+(omnipod-dash-drift-compensation-check)=
+
+#### Check that the drift compensation is working
+
+Compare what the pod delivered over a full day with what **AAPS** counted for the same day. Pick a day that is over: the check needs the full 24 hours.
+
+1. Go to the **DASH** tab (1) and press **POD MGMT** (2), then press **Pod history**. See [View Pod History](#omnipod-dash-view-pod-history).
+
+   ![dash_drift_tab_pod_mgmt](../images/DASH_images/DASH_Drift/dash_drift_tab_pod_mgmt.png)
+
+2. Note the **Total delivered** value of the entry closest to 00:00 at the start of the day (3), and of the entry closest to 24:00 at the end of the day (4). The difference is the insulin the pod delivered that day.
+
+   ![dash_drift_pod_stats_start](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_start.png)   ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_end.png)
+
+   In this example: 73.40 U (4) − 38.15 U (3) = 35.25 U delivered by the pod.
+
+3. Open the [AAPS statistics](#reviewing-statistics) and find the same day in the **TDD** table. Note the total in the **∑** column (5).
+
+   ![dash_drift_tdd](../images/DASH_images/DASH_Drift/dash_drift_tdd.png)
+
+4. Compare the two values. With the drift compensation working, they should differ by no more than 0.05 U. Without it, the pod total is usually clearly lower than the **AAPS** TDD.
+
+   In this example, the **AAPS** TDD is 35.3 U and the pod delivered 35.25 U: the drift compensation is working.
+
+***NOTE:** The **Pod history** only covers the active pod. If you changed pods during the day, choose another day.*
 
 ## 問題排除
 
