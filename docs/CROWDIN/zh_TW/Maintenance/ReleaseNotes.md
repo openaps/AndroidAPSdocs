@@ -9,7 +9,7 @@
 
 如果您未在到期日之前更新，**AAPS** 將切換至開環模式。
 
-See [End of life](EndOfLife.md) for AAPS version end dates.
+請參閱 [End of life](EndOfLife.md) 以了解 AAPS 版本的支援終止日期。
 
 **請勿忽略該通知。** **AAPS** 的新版本提供重要的安全性修正。因此，每位 **AAPS** 使用者都必須盡快更新到最新版本。這麼做是為了提升每位 **AAPS** 使用者與 DIY 社群的安全性。感謝你的諒解。
 
@@ -58,24 +58,24 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 (version3426)=
 
-## Version 3.4.2.6
+## 版本 3.4.2.6
 
-- Equil: improve stability @MilosKozak
+- Equil： 提升穩定性 @MilosKozak
 
 (version3425)=
 
-## Version 3.4.2.5
+## 版本 3.4.2.5
 
-- Equil fix race condition @MilosKozak
+- Equil 修正競態條件 @MilosKozak
 
 (version3424)=
 
-## Version 3.4.2.4
+## 版本 3.4.2.4
 
-- Equil fixes @MilosKozak
-- NS profile sync fix @MilosKozak
+- Equil 多項修正 @MilosKozak
+- NS 設定檔同步修正 @MilosKozak
 
-## Version 3.4.2.3
+## 版本 3.4.2.3
 - Dash：解決漂移問題 @nl-ruud
 - NSClientV3：修正重新連線後的資料缺口 @MilosKozak
 - Automation：修正反序列化問題 @MilosKozak
