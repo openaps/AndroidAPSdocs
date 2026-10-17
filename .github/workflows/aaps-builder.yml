@@ -1,11 +1,11 @@
-# AAPS Builder build steps (reusable workflow), version 4
+# AAPS Builder build steps (reusable workflow), version 5
 #
 # Builds the AAPS app from the official AndroidAPS source (github.com/nightscout/AndroidAPS),
 # signed with the user's own key (secret KEYSTORE_SET). It is not run in this repository: the
 # short build.yml in each user's private repository calls it, pinned to one commit of this file.
 # The user's build.yml is served by the setup page: docs/EN/_html/aaps-builder-build.yml.
 #
-# Docs: https://androidaps.readthedocs.io/en/latest/SettingUpAaps/BrowserBuildAapsBuilder.html
+# Docs: https://androidaps.readthedocs.io/en/dev/SettingUpAaps/BrowserBuildAapsBuilder.html
 # The only code this file downloads is the AAPS source from nightscout/AndroidAPS and GitHub's own
 # actions (actions/setup-java, actions/upload-artifact). Review rules: aaps-builder/README.md.
 #
@@ -38,7 +38,7 @@ permissions:
   contents: read
 
 env:
-  DOCS_PAGE: https://androidaps.readthedocs.io/en/latest/SettingUpAaps/BrowserBuildAapsBuilder.html
+  DOCS_PAGE: https://androidaps.readthedocs.io/en/dev/SettingUpAaps/BrowserBuildAapsBuilder.html
   IN_VERSION: ${{ inputs.version }}
   IN_VARIANT: ${{ inputs.variant }}
 
