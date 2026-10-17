@@ -91,6 +91,20 @@ If you don't need to protect your settings, you can turn Settings protection off
 
 ---
 
+(v4changes-active-insulin)=
+## The insulin in use can't be edited
+
+In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+
+In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+
+```{admonition} What you need to do
+:class: important
+To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+```
+
+---
+
 (v4changes-remote-control)=
 ## AAPSClient remote control needs pairing
 

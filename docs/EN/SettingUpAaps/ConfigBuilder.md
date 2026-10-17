@@ -86,6 +86,25 @@ The **IOB** (insulin on board) and **Activity** curves shown at the bottom of th
 
 More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
 
+(Config-Builder-insulin-change-active)=
+### Changing the insulin in use (DIA or peak)
+
+The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
+
+To change the DIA or peak you are using:
+
+1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
+2. Tap **+** (_Add new insulin_). **AAPS** creates a copy of the insulin shown on screen.
+3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
+4. Tap **▶** (_Activate insulin_) and confirm. The new insulin becomes **ACTIVE**.
+
+```{admonition} The name includes peak and DIA
+:class: note
+**AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example _Fiasp 55m 8h U100_), so you can tell your configurations apart at a glance.
+```
+
+You can delete the old insulin once it is no longer active.
+
 ### Insulin type differences
 
 * The options 'Rapid-Acting Oref', 'Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential curve.
