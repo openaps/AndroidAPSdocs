@@ -169,6 +169,7 @@ Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 Export/Import Settings <./Maintenance/ExportImportSettings.md>
 Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+End of life <./Maintenance/EndOfLife.md>
 What changed in AAPS v4 <./Maintenance/V4Changes.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
