@@ -237,6 +237,8 @@ Release date: 27-03-2025
 
 * [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
 
+(version-enforcement)=
+
 ### Starting this version, notification and version enforcement has been simplified and softed and works following way:
 *  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.
 *  After expiration LGS mode is enforced
