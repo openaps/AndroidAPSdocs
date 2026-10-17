@@ -38,6 +38,7 @@ You will need:
 
 - A **GitHub account** (free). If you don't have one, create it on [github.com](https://github.com/signup) first.
 - A **web browser**: Chrome on your phone, or any browser on a computer. Log in to github.com in that browser before you start.
+- **GitHub app on your phone?** You can keep it. Some buttons of the setup page then open the app instead of Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 6](#aaps-builder-step6) shows how to switch to Chrome for the download.
 - Your **existing keystore** (`.jks` file), its password and its alias, if you built AAPS before and want to update it without reinstalling.
 
 ```{warning}
@@ -52,7 +53,7 @@ A private repository gets 2000 free GitHub Actions minutes per month, which is e
 - **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place.
 - **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Lost keystore](#troubleshooting_androidstudio-lost-keystore).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password somewhere safe, off your phone.
+Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`aaps`) somewhere safe, off your phone.
 ```
 
 ## Open the setup page
@@ -160,7 +161,13 @@ The page checks the password and the alias on your device. **Keystore OK! Contin
 
    ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)** and store the file, together with its password, somewhere safe off your phone (for example your own cloud storage). You need it if you ever build AAPS another way. The alias of this key is `aaps`.
+4. Tap **Download backup (aaps-keystore.jks)**. Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+
+   - the file `aaps-keystore.jks`,
+   - your password,
+   - the alias of the key: **`aaps`**.
+
+   You need all three if you ever build AAPS another way, for example with Android Studio.
 
    ![Key created and the backup box](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 
@@ -200,6 +207,8 @@ GitHub shows **Page not found** (404)? The username or repository name in step 1
 
    ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
+   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. Then continue with step 4 below.
+
 2. If GitHub asks, tap the green button to enable workflows.
 3. Tap **Run workflow**. A small form opens:
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `3.3.2.1`.
@@ -229,8 +238,14 @@ If there is no **Build AAPS** or **Run workflow** button:
 **Before every update**, [export your settings](#ExportImportSettings-Automating-Settings-Export) in AAPS and copy the file **off the phone** (Google Drive, Dropbox…). Keep several older exports and the APK files there too, so you can always go back.
 ```
 
-1. On your phone, open the setup page in **Chrome**, not in the GitHub app: the GitHub app cannot download builds. Log in to github.com if asked.
+1. On your phone, open the setup page in **Chrome**. Log in to github.com if asked.
 2. Tap **Open my builds**, then the newest build with a green check.
+
+   ```{admonition} The GitHub app opened instead of Chrome?
+   :class: note
+
+   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome**. The build opens in Chrome: continue with the next step there.
+   ```
 
    ![Finished build: status Success and 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
 
@@ -312,6 +327,7 @@ To see why a build failed, open it from **Open my builds** on the setup page: th
 - **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 3 and 4 of the setup page.
 - **"Version … does not exist"**: the version you typed is not an AAPS release. Use `latest`, or check the release number.
 - **"Page not found" (404) when the setup page opens GitHub**: the repository name in step 1 of the setup page does not match your repository. Type the exact name.
+- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 6](#aaps-builder-step6).
 - **"Could not read the workflow file"** on the setup page: reload the page and tap the button again. The setup page must be opened from this documentation site.
 - **GitHub says the file already exists** when you commit the workflow: your repository already has a workflow. Update it instead, as explained in [Updating AAPS](#aaps-builder-updates).
 - **"Google Drive access has expired or was revoked"**: redo [step 7](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
