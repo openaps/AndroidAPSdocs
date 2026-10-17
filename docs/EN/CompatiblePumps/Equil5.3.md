@@ -46,6 +46,8 @@ Open the Equil settings with **Settings** on the **Equil** card, or with the gea
 * **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
 * **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
 
+![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+
 ```{admonition} Max basal and max bolus on the patch
 :class: note
 The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [preference](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
@@ -106,6 +108,9 @@ Once the pump is paired, the pump screen shows these buttons:
   * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
 
   After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+
+  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+
 * **History**: shows the events recorded by the pump.
 * **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
 

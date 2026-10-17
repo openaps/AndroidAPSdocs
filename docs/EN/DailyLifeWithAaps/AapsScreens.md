@@ -287,6 +287,8 @@ Tap a **BG check** in the graph to see its value, and its note if you wrote one.
 
 Keep your finger on the screen and move it left or right to go from one reading to the next. You feel a light tick at each reading, and the graph does not scroll while you do this. The pop-up stays for 2 seconds after you lift your finger.
 
+![Press and hold the BG graph: the pop-up shows time, BG, IOB and basal](../images/main/graph_press_and_hold.png)
+
 (AapsScreens-activate-optional-information)=
 #### Activate optional information
 
@@ -468,6 +470,8 @@ By enabling **Start Eating soon TT**, you can automatically start your [eating s
 
 If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) enable "**Bolus will be recorded only**". An additional **Time** row, set to **Now**, lets you record an insulin injection made in the past: use **-** / **+** to change it, or tap the chevron to type the minutes or pick a date and time.
 
+![The Time row, folded](../images/v4/Screens/insulin_dialog_record_only_time.png) ![The Time row, opened with the chevron](../images/v4/Screens/insulin_dialog_time_open.png)
+
 You can use the **+0.5 / +1.0 / +2.0** buttons to quickly increase the insulin quantity. The increment values can be changed in the [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
 The insulin dialog can be used when the pump is suspended or disconnected as well, e.g. to record insulin injected with a pen. In this case, "**Bolus will be recorded only**" is forced on (shown in red) and additional fields appear to select the insulin type and a **Time** offset for an injection made in the past:
@@ -578,7 +582,11 @@ The **Correction** row is if you want to modify the end dosage for some reason.
 
 Only the **Carbs** field is always open. The other rows (**Correction**, **Carb time**, **BG** and **Use percentage**) are folded: they show their value with **-** / **+** buttons, so you can change it in small steps. Tap the chevron to open a row and type a value, and tap it again to close the row. This avoids typing grams into the **Correction** field by mistake.
 
+![Folded rows in the bolus wizard](../images/v4/Screens/bolus_wizard_bottom.png)
+
 Tap anywhere on the **Profile** row to open the list of your profiles, then tap a name to use that profile for this calculation.
+
+![The list of profiles in the bolus wizard](../images/v4/Screens/bolus_wizard_profile_list.png)
 
 The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
@@ -639,6 +647,8 @@ In the **Manage** sheet, scroll down and press **Careportal** to show these entr
 ![Careportal section of the Manage sheet](../images/v4/Screens/manage_sheet_careportal.png)
 
 **BG Check**, **Question** and **Announcement** let you enter a glucose value (from a meter, the sensor or another source), a note and the time of the event. In **Question** and **Announcement**, the glucose row is folded and shows the meter type next to the value: if you change the value, the type changes from **Sensor** to **Meter**.
+
+![Question with the folded glucose row](../images/dialogs/careportal_question.png)
 
 ![BG Check dialog](../images/dialogs/careportal_bg_check.png)
 

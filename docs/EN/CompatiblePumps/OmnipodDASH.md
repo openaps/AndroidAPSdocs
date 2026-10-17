@@ -93,7 +93,7 @@ There are **two** ways to select the Omnipod DASH driver in **AAPS**:
 When you install **AAPS** for the first time, the **Setup Wizard** guides you through the key features and installation requirements of **AAPS**.
 When you reach the **Pump** step, select **Omnipod Dash**.
 
-![The Pump step of the setup wizard](../images/setup-wizard/Wizard-Pump.png)
+![The Pump step of the setup wizard with Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
 If you are not sure yet, you can select **Virtual Pump** for now and select **Omnipod Dash** later, after setting up **AAPS** (see Option 2).
 

@@ -65,12 +65,7 @@ After installing a new version of AAPS, the **Setup Wizard** starts automaticall
 
 Go through the [Setup Wizard](../SettingUpAaps/SetupWizard.md) until you reach the **Pump** step, then select **Omnipod Eros** (the description reads "Pump integration for Omnipod Eros").
 
-![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
-
-```{admonition} Older screenshot
-:class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 the pump is chosen in the **Pump** step of the wizard, and the RileyLink is not paired in the wizard.
-```
+![The Pump step of the setup wizard with Omnipod Eros](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
 The Setup Wizard does not pair your RileyLink. After finishing the wizard, open the Omnipod pump screen and pair it as described in the [RileyLink Setup section](#OmnipodEros-rileylink-setup).
 

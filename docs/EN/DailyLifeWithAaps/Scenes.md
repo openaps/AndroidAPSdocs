@@ -97,6 +97,8 @@ Each step starts with a short explanation of what the action does. The steps loo
 
 Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
 
+![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+
 Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
 
 ![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)

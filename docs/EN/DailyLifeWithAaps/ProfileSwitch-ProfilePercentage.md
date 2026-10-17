@@ -87,6 +87,9 @@ Select a profile and tap **▶ Activate**. The **Activate** screen lets you tail
   ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
 
 - **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+
+  ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+
 - **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
 
 If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.

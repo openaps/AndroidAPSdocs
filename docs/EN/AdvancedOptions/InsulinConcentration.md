@@ -154,6 +154,9 @@ To create an insulin with another concentration, first open Insulin Manager.
 - Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
   - diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
   - U200 is more for adults with high insulin needs.
+
+  ![The concentration dropdown in Insulin settings](../images/v4/Insulin/insulin_concentration_dropdown.png)
+
 - Adjust peak time, Duration of Insulin Action (DIA), and customize the Insulin Nickname (optional).
 - Use the save button at the top right of the screen.
 
@@ -173,6 +176,9 @@ When you start from U100 insulin, all your profile, historical data and reports 
 
 1. Select the target concentration in the dropdown menu (e.g. `U200`).
 1. Then select the right insulin below. Until you confirm, the caption above its name says **Will be activated** (instead of **Currently active**).
+
+   ![An insulin picked but not confirmed yet: Will be activated](../images/v4/Insulin/insulin_will_be_activated.png)
+
 1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
    - This step is mandatory for all Patch/Pod pumps.
    - For tube pumps, wait for the Profile Switch to be applied to the pump, or within Profile Manager or **Insulin settings**.
