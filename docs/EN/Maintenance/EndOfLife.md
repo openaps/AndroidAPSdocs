@@ -29,7 +29,7 @@ The table does not show an end date for every AAPS version. If your version is m
 
 Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](ReleaseNotes.md#android-version-and-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
+To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
