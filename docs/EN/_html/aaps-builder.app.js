@@ -1,7 +1,8 @@
 // AAPS Builder setup page logic (AAPS documentation).
 // Based on AAPS Builder by the AAPS Builder authors (github.com/dio99/aaps-builder), AGPL-3.0.
-// Modified: no template repository (the build workflow is served next to this page as
-// aaps-builder-build.yml), English only. Details: aaps-builder/README.md in openaps/AndroidAPSdocs.
+// Modified: no template repository (the short build workflow is served next to this page as
+// aaps-builder-build.yml and prefilled into GitHub's new-file page), English only.
+// Details: aaps-builder/README.md in openaps/AndroidAPSdocs.
 (() => {
   const REPO_NAME = 'my-aaps';
   const WORKFLOW_FILE = 'aaps-builder-build.yml';            // same folder as this page
@@ -11,7 +12,8 @@
     copied: 'Copied! Now paste it in GitHub.',
     copiedShort: 'Copied ✓',
     needUser: 'Enter your GitHub username in step 1 first.',
-    workflowCopied: 'Workflow copied (version {v}). Now open the new file page and paste it.',
+    workflowCopied: 'Workflow copied (version {v}). Paste it in GitHub.',
+    workflowReady: 'Workflow version {v} is ready.',
     workflowErr: 'Could not read the workflow file. Reload this page and try again.',
     errPipe: 'Passwords and alias cannot contain the character |',
     errNoFile: 'Choose your keystore file.',
@@ -43,8 +45,15 @@
   repoInput.value = store.get('ghRepo') || REPO_NAME;
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
+  // Step 2: GitHub's new-file page, prefilled with the file name and the workflow text (value=).
+  // The workflow is short (it calls the reviewed build steps in the AAPS documentation repository).
+  let workflowText = null;
+  const newFilePath = () => '/new/main?filename=' + encodeURIComponent(WORKFLOW_PATH) +
+    (workflowText ? '&value=' + encodeURIComponent(workflowText) : '');
+
   const LINKS = [
-    ['openNewFile', '/new/main?filename=' + encodeURIComponent(WORKFLOW_PATH)],
+    ['addWorkflow', newFilePath],
+    ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
     ['openActions', '/actions/workflows/build.yml'],
@@ -60,7 +69,7 @@
     $('createRepo').href = 'https://github.com/new?' + p;
     document.querySelectorAll('.repoUrl').forEach(el => { el.textContent = `github.com/${u || '…'}/${repo()}`; });
     const base = `https://github.com/${encodeURIComponent(u)}/${encodeURIComponent(repo())}`;
-    for (const [id, path] of LINKS) $(id).href = u ? base + path : '#s1';
+    for (const [id, path] of LINKS) $(id).href = u ? base + (typeof path === 'function' ? path() : path) : '#s1';
   }
   userInput.addEventListener('input', updateLinks);
   repoInput.addEventListener('input', updateLinks);
@@ -95,19 +104,31 @@
   function msg(id, text, cls) { const el = $(id); el.className = 'msg ' + cls; el.textContent = text; }
 
   // ---------- step 2: build workflow (read from the AAPS documentation site only) ----------
+  async function loadWorkflow() {
+    const r = await fetch(WORKFLOW_FILE, { cache: 'no-store' });
+    if (!r.ok) throw new Error(r.status);
+    const text = (await r.text()).replace(/\r\n/g, '\n');
+    const v = (text.match(/^# AAPS Builder build workflow, version (\S+)/m) || [])[1];
+    if (!v) throw new Error('not the workflow');
+    return { text, v };
+  }
+  loadWorkflow().then(({ text, v }) => {
+    workflowText = text;
+    msg('workflowMsg', M.workflowReady.replace('{v}', v), 'ok');
+    updateLinks();
+  }).catch(e => { console.error(e); msg('workflowMsg', M.workflowErr, 'err'); });
+  $('addWorkflow').addEventListener('click', e => {
+    if (!workflowText) { e.preventDefault(); msg('workflowMsg', M.workflowErr, 'err'); return; }
+    if (user()) $('s2').classList.add('done');
+  });
   $('copyWorkflow').addEventListener('click', async () => {
     try {
-      const r = await fetch(WORKFLOW_FILE, { cache: 'no-store' });
-      if (!r.ok) throw new Error(r.status);
-      const text = await r.text();
-      const v = (text.match(/^# AAPS Builder build workflow, version (\S+)/m) || [])[1];
-      if (!v) throw new Error('not the workflow');
+      const { text, v } = await loadWorkflow();
       await copyText(text);
-      msg('workflowMsg', M.workflowCopied.replace('{v}', v), 'ok');
-      $('s2').classList.add('done');
+      msg('copyWorkflowMsg', M.workflowCopied.replace('{v}', v), 'ok');
     } catch (e) {
       console.error(e);
-      msg('workflowMsg', M.workflowErr, 'err');
+      msg('copyWorkflowMsg', M.workflowErr, 'err');
     }
   });
 

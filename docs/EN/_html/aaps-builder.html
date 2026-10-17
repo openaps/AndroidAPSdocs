@@ -133,14 +133,22 @@
     <h2><span class="num">2</span><span>Add the build workflow</span></h2>
     <p>The build workflow is the file that tells GitHub how to build AAPS. It comes from the AAPS documentation: <a href="aaps-builder-build.yml" target="_blank" rel="noopener">view the workflow</a>.</p>
     <ol class="small">
-      <li><button class="btn" style="margin:0" id="copyWorkflow">Copy workflow</button>
-        <div class="msg" id="workflowMsg"></div></li>
-      <li><a class="btn secondary" style="margin:0" id="openNewFile" target="_blank" rel="noopener">Open the new file page</a>
-        <p class="muted">Opens: <code class="repoUrl"></code>, new file <code>.github/workflows/build.yml</code></p></li>
-      <li>Check that the file name at the top is <code>.github/workflows/build.yml</code>.</li>
-      <li>Paste the workflow into the big text area (long press on a phone).</li>
+      <li><a class="btn" style="margin:0" id="addWorkflow" target="_blank" rel="noopener">Add the workflow to my repository</a>
+        <div class="msg" id="workflowMsg"></div>
+        <p class="muted">Opens: <code class="repoUrl"></code>, new file <code>.github/workflows/build.yml</code>, already filled in.</p></li>
+      <li>Check that the file name at the top is <code>.github/workflows/build.yml</code>. Do not change the text.</li>
       <li>Click <b>Commit changes…</b>, then <b>Commit changes</b> again in the window that opens.</li>
     </ol>
+    <details>
+      <summary>Updating the workflow, or the text area is empty</summary>
+      <ol class="small">
+        <li><button class="btn secondary" style="margin:0" id="copyWorkflow">Copy workflow</button>
+          <div class="msg" id="copyWorkflowMsg"></div></li>
+        <li><a class="btn secondary" style="margin:0" id="openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
+          <p class="muted">To add the workflow for the first time instead, use the button above.</p></li>
+        <li>Replace the whole text with the copied workflow (long press on a phone), then click <b>Commit changes…</b> twice.</li>
+      </ol>
+    </details>
   </section>
 
   <!-- Step 3: keystore -->

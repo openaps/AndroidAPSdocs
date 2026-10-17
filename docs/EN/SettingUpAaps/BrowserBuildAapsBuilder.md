@@ -27,7 +27,7 @@ You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from 
 ```{admonition} Where the code comes from
 :class: note
 
-The setup page and the build workflow are part of this documentation: they are maintained and reviewed together with it, and you can <a href="../aaps-builder-build.yml">read the workflow</a> before you use it. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+The setup page and the build workflow are part of this documentation: they are maintained and reviewed together with it. The <a href="../aaps-builder-build.yml">workflow</a> you add to your repository is short: it runs the [build steps](https://github.com/openaps/AndroidAPSdocs/blob/master/.github/workflows/aaps-builder.yml) kept in the documentation repository, pinned to one reviewed version. You can read both before you use them. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
 ```
 
 (aaps-builder-before-you-start)=
@@ -101,21 +101,19 @@ Go back to the setup page tab.
 
 ## Step 2 – Add the build workflow
 
-The build workflow is a text file that tells GitHub how to build AAPS. You copy it from the setup page into your repository, once.
+The build workflow is a short text file that tells GitHub how to build AAPS. The setup page adds it to your repository, once: you only confirm it.
 
-1. Tap **Copy workflow**. The page confirms **Workflow copied** and shows its version number.
+1. Check that the page shows **Workflow version … is ready**, then tap **Add the workflow to my repository**.
 
-   ![Workflow copied, version 1](../images/Building-the-App/CI/AapsBuilder35_Step2.png)
+   ![Step 2 of the setup page](../images/Building-the-App/CI/AapsBuilder35_Step2.png)
 
-2. Tap **Open the new file page**. GitHub opens a new, empty file in your repository, already named `.github/workflows/build.yml`.
-3. Check the file name at the top: it must be exactly `.github/workflows/build.yml`.
-4. Paste the workflow into the big text area (long press on a phone).
+2. GitHub opens a new file in your repository, already named `.github/workflows/build.yml` and already filled in. Check the file name at the top: it must be exactly `.github/workflows/build.yml`. Don't change the text.
 
-5. Tap **Commit changes…**
+3. Tap **Commit changes…**
 
-   ![Workflow pasted into the new file](../images/Building-the-App/CI/AapsBuilder37_NewFilePasted.png)
+   ![The workflow, filled in by the setup page](../images/Building-the-App/CI/AapsBuilder37_NewFilePasted.png)
 
-6. then **Commit changes** again in the window that opens.
+4. then **Commit changes** again in the window that opens.
 
    ![Commit changes window](../images/Building-the-App/CI/AapsBuilder38_CommitDialog.png)
 
@@ -124,8 +122,10 @@ The build workflow is a text file that tells GitHub how to build AAPS. You copy 
    ![The workflow file in your repository](../images/Building-the-App/CI/AapsBuilder39_WorkflowAdded.png)
 
 ```{warning}
-Don't press your phone's **Back** button while the file editor is open: GitHub reloads the page and the pasted text disappears. If that happens, tap **Restore** in the blue banner.
+Don't press your phone's **Back** button or pull the page down while the file editor is open: GitHub reloads the page and the text disappears. If that happens, tap **Restore** in the blue banner, or go back to the setup page and tap the button again.
 ```
+
+If the text area is empty, open **Updating the workflow, or the text area is empty** at the bottom of step 2 on the setup page: tap **Copy workflow** and paste it into the text area (long press on a phone).
 
 ```{warning}
 Only use the workflow from this setup page. Don't copy a build workflow from another website or repository: the workflow runs next to your signing key.
@@ -208,7 +208,7 @@ GitHub shows **Page not found** (404)? The username or repository name in step 1
    
    ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
    
-4. The build starts and shows **In progress**, with two parts: **Check**, then **Build AAPS**.
+4. The build starts and shows **In progress**, with two parts: **AAPS / Check**, then **AAPS / Build AAPS**.
 
    ![Build in progress](../images/Building-the-App/CI/AapsBuilder45_BuildRunning.png)
 
@@ -290,7 +290,13 @@ Your repository never builds anything by itself: you decide when to build, which
 2. Build the new version as in [step 5](#aaps-builder-step5). Keep `latest`, or type the release number.
 3. Download and install it as in [step 6](#aaps-builder-step6).
 
-**Updates of the build workflow:** your repository never downloads a new workflow by itself. When the workflow changes, the [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. To update, open `.github/workflows/build.yml` in your repository, tap the pencil (**Edit**), replace the whole text with a fresh copy from the setup page (**Copy workflow** in step 2), and tap **Commit changes**. The first line of the file shows its version.
+**Updates of the build workflow:** your repository never downloads a new workflow by itself, and the build steps it runs are pinned to one reviewed version. When the workflow changes, the [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. To update, open step 2 of the setup page, then **Updating the workflow, or the text area is empty**:
+
+1. Tap **Copy workflow**, then **Open my workflow file**.
+2. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
+3. Tap **Commit changes…**, then **Commit changes**.
+
+The first line of the file shows its version.
 
 (aaps-builder-troubleshooting)=
 
@@ -303,7 +309,8 @@ To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the ste
 - **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 3 and 4 of the setup page.
 - **"Version … does not exist"**: the version you typed is not an AAPS release. Use `latest`, or check the release number.
 - **"Page not found" (404) when the setup page opens GitHub**: the repository name in step 1 of the setup page does not match your repository. Type the exact name.
-- **"Could not read the workflow file"** on the setup page: reload the page and tap **Copy workflow** again. The setup page must be opened from this documentation site.
+- **"Could not read the workflow file"** on the setup page: reload the page and tap the button again. The setup page must be opened from this documentation site.
+- **GitHub says the file already exists** when you commit the workflow: your repository already has a workflow. Update it instead, as explained in [Updating AAPS](#aaps-builder-updates).
 - **"Google Drive access has expired or was revoked"**: redo [step 7](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
 
 For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).

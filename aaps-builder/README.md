@@ -10,7 +10,11 @@ the files verbatim, no build step on ReadTheDocs):
 | `aaps-builder.html` | Setup page (readable HTML, English) |
 | `aaps-builder.app.js` | Setup page logic (readable, unminified) |
 | `aaps-builder.forge.min.js` | node-forge 1.3.1, vendored (keystore creation in the browser) |
-| `aaps-builder-build.yml` | The build workflow users copy into `.github/workflows/build.yml` of their repository |
+| `aaps-builder-build.yml` | The short build workflow (stub) the setup page adds as `.github/workflows/build.yml` of the user's repository |
+
+| File (in `.github/workflows/`) | What it is |
+|---|---|
+| `aaps-builder.yml` | The build steps: a reusable workflow (`on: workflow_call` only, never runs in this repository). Every user's stub calls it, pinned to one commit SHA |
 
 User documentation: `docs/EN/SettingUpAaps/BrowserBuildAapsBuilder.md` (label
 `aaps-builder`). It describes every step of the setup page and what the
@@ -24,10 +28,17 @@ everything that can run there must come from an approved AAPS source:
 - **Setup page**: every file comes from the docs site. The Content-Security-Policy
   is `default-src 'none'; script-src 'self'; connect-src 'self'; ...`: no CDN, no
   third-party request. The only request is reading `aaps-builder-build.yml` from
-  the same site (step "Add the build workflow").
+  the same site (step "Add the build workflow"). The page puts its text into the
+  link to GitHub's new-file page (`/new/main?filename=...&value=...`), so the
+  user only confirms the commit.
 - **Repository creation**: an **empty** private repository (`github.com/new` with
   `name`, `visibility=private`, `owner=@me`). **No template repository** is used.
-- **Workflow**: copied by the user from this repository. At run time it only
+- **Workflow**: the stub in the user's repository only declares the
+  **Run workflow** form and calls
+  `openaps/AndroidAPSdocs/.github/workflows/aaps-builder.yml@<commit SHA>`, passing
+  the two secrets by name (`secrets: inherit` does not work across accounts).
+  A full commit SHA cannot be moved: the user's repository runs exactly the
+  reviewed build steps until the user replaces the stub. At run time the build steps only
   - clones the AAPS source from `github.com/nightscout/AndroidAPS` (release tags),
   - uses GitHub's own actions `actions/setup-java@v5` and `actions/upload-artifact@v7`
     (tags, like nightscout's own `aaps-ci.yml`),
@@ -38,7 +49,7 @@ everything that can run there must come from an approved AAPS source:
   - The Gradle build downloads AAPS's own dependencies, exactly as every other
     AAPS build method.
 - **No update channel**: the workflow does not check anything outside the user's
-  repository for updates. Workflow changes are announced in the docs
+  repository for updates, and the pinned SHA never follows a branch. Workflow changes are announced in the docs
   (Docs updates page and the AAPS Builder page); users replace the file
   themselves with the newer version from the setup page.
 - **No automatic builds** (regulatory requirement): the only trigger is
@@ -47,13 +58,15 @@ everything that can run there must come from an approved AAPS source:
   is built, and the workflow token is read-only (`contents: read` everywhere):
   the build cannot write anything to the user's repository.
 
-Review check before every change, in addition to the host list: the `on:`
-block contains only `workflow_dispatch`, and no `permissions:` line says `write`.
+Review check before every change, in addition to the host list: the stub's
+`on:` block contains only `workflow_dispatch`, the build steps' `on:` block only
+`workflow_call`, no `permissions:` line says `write`, and the stub's `uses:` ends
+with a full 40-character commit SHA (never a branch or tag).
 
 Review check before every change:
 
 ```
-grep -nE "uses:|https?://|curl|wget|git clone|ls-remote" docs/EN/_html/aaps-builder-build.yml
+grep -nE "uses:|https?://|curl|wget|git clone|ls-remote" docs/EN/_html/aaps-builder-build.yml .github/workflows/aaps-builder.yml
 grep -noE "https?://[^\"' )]+" docs/EN/_html/aaps-builder.html docs/EN/_html/aaps-builder.app.js
 ```
 
@@ -93,14 +106,21 @@ notices kept in the files):
    and `AUTO_VARIANT` repository variables, the quiet skipping of scheduled runs
    and the `built/<version>-<variant>` tags that remembered scheduled builds.
    Permissions reduced to `contents: read`.
+5. Workflow version 4: the build steps moved to the reusable workflow
+   `.github/workflows/aaps-builder.yml` in this repository; users get a short
+   stub that calls it at a pinned commit SHA. The setup page prefills the stub
+   into GitHub's new-file page instead of asking the user to copy and paste it
+   (**Copy workflow** stays for updates). The build steps also reject unknown
+   variants.
 
 ## Checksums (of the committed files, LF line endings)
 
 ```
-SHA-256(aaps-builder.html)         = 016a4d6231168e1ce69f15ec5558171371f8474510601feb4db7768aa579e9fa
-SHA-256(aaps-builder.app.js)       = 000b7fbfc31e0c4ecdacafb4059e164f1ba33f41371de4ec832a720c4bb2a55f
-SHA-256(aaps-builder-build.yml)    = ef259ea7f2458152266f5fbb597986bcaa3a68615503709474b1cb91483dafdc
+SHA-256(aaps-builder.html)         = 169e624b397de88413251b2c47fe388af96c26e782e336717ff58b1a0b74b15a
+SHA-256(aaps-builder.app.js)       = 3f50a913902ebb3999b55a3aad7ef1432d5562e066f3b09cced7644c0cb41d76
+SHA-256(aaps-builder-build.yml)    = 343139a57d25cce20bdeddc494bf4c756486f3d9c96034ae8211d92cfc65632e
 SHA-256(aaps-builder.forge.min.js) = dc67fd132427ad96c9666c844b39565413c40ddb1f2d063c53512fbf6d387dfd
+SHA-256(.github/workflows/aaps-builder.yml) = f00f647990950f6f0295cd3fd6d66c3a05162b948ebb821eaa8d9972f11f0382
 ```
 
 `aaps-builder.forge.min.js` is node-forge 1.3.1 (BSD-3-Clause or GPL-2.0,
@@ -114,21 +134,34 @@ endings and a different hash. Check the committed content instead:
 
 ## Changing the workflow
 
-1. Edit `docs/EN/_html/aaps-builder-build.yml` and raise the version in its first
-   line (`# AAPS Builder build workflow, version N`). The setup page shows this
-   number when the user copies the workflow.
-2. Run the review check above.
+A change always takes **two commits**, because the stub must name the commit
+that contains the reviewed build steps:
+
+1. Edit `.github/workflows/aaps-builder.yml` (raise the version in its first
+   line), run the review check, commit and push it.
+2. Copy that commit's full SHA (`git rev-parse HEAD`) into the `uses:` line of
+   `docs/EN/_html/aaps-builder-build.yml`, raise the version in its first line
+   (`# AAPS Builder build workflow, version N`: the setup page shows it), commit
+   and push. Never point it at a branch or a tag.
 3. Update the docs page if steps, timings, artifacts, variants or error
    messages changed, and add an entry to
    `docs/EN/Maintenance/DocumentationUpdate.md` telling users to replace their
    workflow file.
-4. Test with a private test repository: copy the workflow from a local build of
-   the docs, run a build, check the summary and the artifacts.
+4. Test before publishing: put the build steps in a **public** test repository
+   (it stands in for openaps/AndroidAPSdocs), point a local copy of the stub at
+   that commit, serve the setup page locally, add the stub to a **private** test
+   repository with **Add the workflow to my repository**, run a build, check the
+   summary and the artifacts.
+
+Only a commit that stays reachable in openaps/AndroidAPSdocs may be pinned:
+don't squash or rebase it away (a merge from `dev` to `master` keeps it).
 
 ## Testing the setup page
 
 Build the docs, serve the output folder (`python -m http.server`), open
-`aaps-builder.html`: no errors in the browser console, **Copy workflow** shows
-the version, **Create a new key** with a test password unlocks step 4, and
+`aaps-builder.html`: no errors in the browser console, step 2 shows
+**Workflow version N is ready**, **Add the workflow to my repository** opens
+`github.com/<user>/my-aaps/new/main?filename=.github%2Fworkflows%2Fbuild.yml&value=...`,
+**Copy workflow** shows the version, **Create a new key** with a test password unlocks step 4, and
 **Create my private repository** points to
 `github.com/new?owner=%40me&name=my-aaps&visibility=private` (no `template_` parameters).
