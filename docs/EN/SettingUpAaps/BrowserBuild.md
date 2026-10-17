@@ -14,9 +14,23 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 (Building-APK-without-a-computer)=
 
-## Device and software specifications for building AAPS
+## Choose how to build
 
-We recommend using an Android device. You can also use a computer or an iOS device.
+Pick the method that matches the device you build from:
+
+### On an Android phone: AAPS Builder (recommended)
+
+A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+
+This also works from a computer browser.
+
+**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+
+### On any device: fork and preparation file
+
+You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. This works from an Android device, a computer or an iPhone / iPad. Follow the four steps below.
+
+## Device and software specifications for the fork method
 
 You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
 
@@ -61,6 +75,7 @@ If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/Br
 ```{toctree}
 :hidden:
 
+AAPS Builder <BrowserBuildAapsBuilder.md>
 Step 1: Create your fork <BrowserBuildFork.md>
 Step 2: Create your keystore <BrowserBuildKeystore.md>
 Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
