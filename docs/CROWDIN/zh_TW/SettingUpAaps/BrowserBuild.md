@@ -14,23 +14,23 @@
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## 選擇建置方式
 
-Pick the method that matches the device you build from:
+選擇與你用來建置的裝置相符的方法：
 
-### On an Android phone: AAPS Builder (recommended)
+### 在 Android 手機上：AAPS Builder（建議）
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+設定頁面會引導你在 GitHub 建立自己的私有建置儲存庫。無需安裝任何東西、也不需準備檔案，每次建置都由你自行啟動。你會直接從 GitHub 下載應用程式。 Google 雲端硬碟為可選用項目。
 
-This also works from a computer browser.
+也可透過電腦的瀏覽器進行。
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [使用 AAPS Builder 建置](BrowserBuildAapsBuilder.md)**
 
-### On any device: fork and preparation file
+### 於任何裝置：fork 與準備檔案
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. This works from an Android device, a computer or an iPhone / iPad. Follow the four steps below.
+你會在 GitHub 將 AAPS 原始碼建立一個副本（fork），使用準備檔案建立你的 keystore，建置完成的應用程式會儲存到你的 Google 雲端硬碟。可在 Android 裝置、電腦或 iPhone / iPad 上進行。請依下列四個步驟進行。
 
-## Device and software specifications for the fork method
+## 使用 fork 方法的裝置與軟體規格
 
 您需要在瀏覽器中使用多個選項卡，並在它們之間切換。範例 Chrome：
 
@@ -43,41 +43,41 @@ You make a copy (fork) of the AAPS source code in GitHub, create your keystore w
 你會需要在不同的頁籤之間切換，所以在開始之前，你可以先關閉其它頁籤，避免在切換時找不到頁面。
 ```
 
-## What you'll need
+## 你需要準備
 
-- A **Google account**, so the built app can be saved to your Google Drive (needed on every device).
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Android:** File Manager Plus (from the Play Store).
-  - **Computer (Windows / Mac / Linux):** Simple HTTP Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- Google 帳號，以便將建置完成的應用程式儲存到你的 Google 雲端硬碟（每個裝置都需要）。
+- GitHub 帳號（免費）— 你會在步驟 1 建立。
+- 可同時開啟多個分頁的網頁瀏覽器（以下以 Chrome 為例）。
+- 用於執行準備檔案的小型輔助工具。所需工具取決於你用來建置的裝置—現在無需安裝任何東西，步驟 2 會針對你的裝置逐步引導：
+  - **Android：**File Manager Plus（來自 Play 商店）。
+  - **電腦（Windows / Mac / Linux）：**Simple HTTP Server。
+  - **iPhone / iPad：**不需額外 App—使用內建的「檔案」App 與瀏覽器。
 
 ```{note}
-On Android, also make sure the **Google Drive app is up to date** (via the Play Store) so you can download the finished app afterwards.
+在 Android 上，也請確認 **Google 雲端硬碟 App 為最新版本**（透過 Play 商店），以便之後下載完成的應用程式。
 ```
 
-## The steps
+## 步驟
 
-The browser build is a series of choices. Follow these steps in order:
+瀏覽器建置是一連串選擇。請依序完成以下步驟：
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
+1. **[建立你的 GitHub fork](BrowserBuildFork.md)** — 建立 AAPS 原始碼的個人副本。
+2. **[建立你的簽署 keystore](BrowserBuildKeystore.md)** — 關鍵選擇：產生新的 keystore（選項 1），或上傳你現有的 keystore（選項 2），接著依照你的裝置所對應的頁面操作。
+3. **[授權 Google 雲端硬碟](BrowserBuildGoogleDrive.md)** — 讓 GitHub 將建置完成的應用程式儲存到你的 Google 雲端硬碟。
+4. **[建置 APK](BrowserBuildAPK.md)** — 執行 GitHub Actions 工作流程，並選擇你的版本與變體。
 
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+若遇到問題，請參閱 **[瀏覽器建置疑難排解](../GettingHelp/BrowserBuildTroubleshooting.md)**。如需可選的操作，請參閱 [匯出你的 keystore](#ci-keystore-export) 或 [擇取指定提交（cherry-pick）](#github-cherry-pick)。
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**從 [步驟 1 — 建立你的 GitHub fork](BrowserBuildFork.md) 開始 →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Step 1: 建立你的派生儲存庫 <BrowserBuildFork.md>
+Step 2: 建立你的金鑰庫 <BrowserBuildKeystore.md>
+Step 3: 授權 Google Drive <BrowserBuildGoogleDrive.md>
+Step 4: 建置 APK <BrowserBuildAPK.md>
 ```
