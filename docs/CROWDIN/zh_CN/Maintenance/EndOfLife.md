@@ -2,7 +2,7 @@
 
 Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#starting-this-version-notification-and-version-enforcement-has-been-simplified-and-softed-and-works-following-way). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
 
 ## How to use this page
 
@@ -30,7 +30,7 @@ The table does not show an end date for every AAPS version. If your version is m
 
 Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](ReleaseNotes.md#android-version-and-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
+To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>

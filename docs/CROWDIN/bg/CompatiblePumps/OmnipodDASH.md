@@ -19,7 +19,7 @@
 ## Известни ограничения/проблеми на AAPS с Omnipod DASH
 - Android 16 изисква версия 3.3.2.1 или по-нова на **AAPS**.
 - Общият съвет е да работите с **AAPS** на Android 14 или 16. Android 15 има много докладвани [проблеми](https://github.com/nightscout/AndroidAPS/issues/3471)  за повече информация относно настройките за Свързване.
-- ромените на временния базален темп (Temporary Basal rate) (които се случват често, когато цикълът е активен, особено през нощта) водят до недостатъчна доставка на инсулин. Това на практика е хардуерно ограничение на Omnipod DASH. Проблемът е адресиран в AAPS 3.4.2.3, но функционалността в момента изисква ръчно активиране (opt-in). Следвайте инструкциите [Basal Drift Fix Instructions](#omnipod-dash-Basal-drift-fix), за да я активирате. За повече информация относно фикса вижте [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783).
+- ромените на временния базален темп (Temporary Basal rate) (които се случват често, когато цикълът е активен, особено през нощта) водят до недостатъчна доставка на инсулин. Това на практика е хардуерно ограничение на Omnipod DASH. Проблемът е адресиран в AAPS 3.4.2.3, но функционалността в момента изисква ръчно активиране (opt-in). Follow the [Basal Drift Fix Instructions](#omnipod-dash-basal-drift-fix) to enable it. За повече информация относно фикса вижте [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783).
 - Dash поддържа базален темп само със стъпки от 0.05 U/h. Ако се опитате да зададете базал със стъпки от 0.01 във вашия **AAPS профил**, AAPS няма да покаже предупреждение, въпреки че пачът ще закръгли темпа до стъпки от 0.05. Ако прегледате POD MGMT/Pod History, ще видите, че е зададен базал от 0.05. Това също означава, че най-ниският базален темп, позволен от DASH в **AAPS**, е 0.05U/h.
 - Статусът на активиране на пач се съхранява във файла с настройки. Ако експортирате файл с настройки с активен пач, след което смените на нов пач и после възстановите настройките от предишния си export, ще сте възстановили активирането на стария пач и премахнали активирането на новия. Затова препоръчваме да експортирате настройките след всяко активиране на пач, за да можете да възстановите състоянието на активиране на този пач, ако нещо се случи с вашата система.
 - При задаване на нов профил на базалния темп, DASH ще спре доставката, преди да зададе новия базален **Профил**. Ако възникне прекъсване или грешка в комуникацията, базалният профил няма автоматично да се рестартира. Вижте раздел [Възобновяване на доставката на инсулин](#omnipod-dash-resuming-insulin-delivery) за подробности.
@@ -481,7 +481,7 @@
 
 Този раздел обхваща често срещани заобиколни решения и настройки, които трябва да бъдат променени, за да заработи дадена функция в отговор на докладван от общността проблем, за който има решение. Напр. Например, процесът за активиране на Basal drift fix е документиран тук.
 
-(#omnipod-dash-Basal-drift-fix)=
+(omnipod-dash-basal-drift-fix)=
 
 ### Инструкции за поправка на Basal Drift (Basal Drift Fix)
 
@@ -494,6 +494,30 @@ Dash използва вътрешен таймер, за да определи 
 Проблемът е най-забележим през нощта. През деня SMB често водят до базален темп от 0, което маскира ефекта. При наблюдавана употреба това води до недоставяне на приблизително 10% от очакваната обща дневна доза (Total Daily Dose, TDD) за период от 24 часа. Освен това целите за глюкоза често не се постигат през нощта, особено след хранения с продължителен ефект върху глюкозата (напр. паста).
 
 ***ЗАБЕЛЕЖКА:** Важно е този проблем да бъде разбран особено от хора с много малки дози инсулин, например деца.*
+
+(omnipod-dash-drift-compensation-how-it-works)=
+
+#### How the drift compensation works
+
+The pod delivers insulin in pulses of 0.05 U. When the drift compensation is enabled, **AAPS** checks that the pod has really delivered the basal insulin it was asked to deliver, and adds the missing pulses.
+
+1. **AAPS** keeps a running total of the basal insulin the pod _should_ have delivered since activation. This total follows your profile basal rates and every temporary basal rate the loop sets.
+2. Each time the pod reports its status, **AAPS** compares this total with the basal insulin the pod _actually_ delivered: the pod's total pulse count, minus the pulses delivered as boluses and SMBs.
+3. Each time **AAPS** sets or cancels a temporary basal rate, it looks at the difference. If the pod is behind by half a pulse (0.025 U) or more, **AAPS** sends one extra pulse of 0.05 U. The pod delivers it silently, without beeps.
+
+**Safety limits:**
+
+- **AAPS** only adds insulin that the pod owes. It never removes insulin, and it does nothing when the pod is ahead.
+- One pulse at a time, at most one every 2 minutes.
+- No pulse while the loop runs a zero temporary basal rate, because the loop asked for no insulin. The exception is the 5 minutes after a bolus, when a zero temporary basal rate is usually just the loop compensating for an SMB.
+- No pulse while a pod is being activated, while delivery is suspended, after a pod fault, while a bolus is running, or if the reservoir is empty.
+- If the difference ever reaches 2 pulses (0.10 U), in either direction, **AAPS** does not try to catch up. It resets its running total to what the pod has really delivered.
+
+**What you will see:**
+
+- On the **DASH** tab, **Last Bolus** can show **0.05 U** even if you did not give a bolus.
+- In the [Pod history](#omnipod-dash-view-pod-history), the extra pulses appear as **Set Bolus 0.05 U**, usually right after a **Set Temporary Basal** line. See the example in [Check that the drift compensation is working](#omnipod-dash-drift-compensation-check) below.
+- The extra pulses are **not** recorded as boluses or SMBs in **AAPS** treatments, and they do not change your IOB. This is expected: **AAPS** already counted this insulin as basal. The extra pulses only make the pod deliver what **AAPS** thinks was delivered.
 
 #### Активиране на Basal Drift Fix в AAPS
 
@@ -511,6 +535,32 @@ Basal Drift Fix не е активирана по подразбиране в AA
 
 2. Рестартирайте **AAPS**. Това трябва да бъде направено, за да разпознае, че файлът присъства, и да активира функцията за компенсация на дрейфа.
 3. Моля, посетете [Github issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) на първия пост, за да покажете, че използвате тази функция – нуждаем се от тези данни, за да покажем, че функцията е широко използвана. След като има значително възприемане от общността, ще бъде възможно премахването на файла за активиране – ще ви бъдем благодарни за подкрепата тук.
+
+(omnipod-dash-drift-compensation-check)=
+
+#### Check that the drift compensation is working
+
+Compare what the pod delivered over a full day with what **AAPS** counted for the same day. Pick a day that is over: the check needs the full 24 hours.
+
+1. Go to the **DASH** tab (1) and press **POD MGMT** (2), then press **Pod history**. See [View Pod History](#omnipod-dash-view-pod-history).
+
+   ![dash_drift_tab_pod_mgmt](../images/DASH_images/DASH_Drift/dash_drift_tab_pod_mgmt.png)
+
+2. Note the **Total delivered** value of the entry closest to 00:00 at the start of the day (3), and of the entry closest to 24:00 at the end of the day (4). The difference is the insulin the pod delivered that day.
+
+   ![dash_drift_pod_stats_start](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_start.png)   ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_end.png)
+
+   In this example: 73.40 U (4) − 38.15 U (3) = 35.25 U delivered by the pod.
+
+3. Open the [AAPS statistics](#reviewing-statistics) and find the same day in the **TDD** table. Note the total in the **∑** column (5).
+
+   ![dash_drift_tdd](../images/DASH_images/DASH_Drift/dash_drift_tdd.png)
+
+4. Compare the two values. With the drift compensation working, they should differ by no more than 0.05 U. Without it, the pod total is usually clearly lower than the **AAPS** TDD.
+
+   In this example, the **AAPS** TDD is 35.3 U and the pod delivered 35.25 U: the drift compensation is working.
+
+***NOTE:** The **Pod history** only covers the active pod. If you changed pods during the day, choose another day.*
 
 ## Отстраняване на проблеми
 

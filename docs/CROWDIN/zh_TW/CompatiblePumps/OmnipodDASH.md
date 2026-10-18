@@ -19,7 +19,7 @@
 ## Omnipod DASH 已知的 AAPS 限制／問題
 - Android 16 需要 AAPS 版本 3.3.2.1 或更新版本。
 - 一般建議在 Android 14 或 16 上執行 AAPS。 Android 15 有許多社群回報的 [問題](https://github.com/nightscout/AndroidAPS/issues/3471)。不過，若你在 Android 15 上執行，可能需要啟用藍牙配對（Bonding）才能成功註冊並使用 Pod；關於配對設定的更多資訊，請參閱 [一般疑難排解](../GettingHelp/GeneralTroubleshooting.md)。
-- 臨時基礎率變更（在循環啟動時很常發生，特別是夜間）會導致胰島素輸注不足。這實際上是 Omnipod DASH 的硬體限制。此問題已在 AAPS 3.4.2.3 中處理，但目前此功能需自行啟用。請依照 [基礎率漂移修正 說明](#omnipod-dash-Basal-drift-fix) 的指示來啟用它。如需更多關於此修正的資訊，請參閱 [Github 議題 - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) 以取得更多資訊。
+- 臨時基礎率變更（在循環啟動時很常發生，特別是夜間）會導致胰島素輸注不足。這實際上是 Omnipod DASH 的硬體限制。此問題已在 AAPS 3.4.2.3 中處理，但目前此功能需自行啟用。請依照 [基礎漂移修正指引](#omnipod-dash-basal-drift-fix) 來啟用它。如需更多關於此修正的資訊，請參閱 [Github 議題 - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) 以取得更多資訊。
 - Dash 僅支援以 0.05 U/h 步階設定的基礎率。如果你嘗試在 **AAPS 設定檔** 中以 0.01 的步階設定基礎率，AAPS 不會提出警告，儘管 Pod 會將該速率進位到 0.05 的步階。若你查看 POD MGMT/Pod History，會顯示已設定 0.05 的基礎率。這也表示在 AAPS 中，DASH 允許的最低基礎率為 0.05 U/h。
 - Pod 的註冊狀態會儲存在設定檔案中，如果你在 Pod 已註冊的狀態下匯出設定檔案。接著更換為新的 Pod，然後再從先前匯出的設定還原，這會還原舊 Pod 的註冊狀態，並移除新 Pod 的註冊狀態。因此建議每次註冊 Pod 後都匯出設定，以便在你的裝置出狀況時，能還原該 Pod 的註冊狀態。
 - 當設定新的基礎率設定檔時，DASH 會先暫停輸注，然後再設定新的基礎率設定檔。若通訊中斷或發生錯誤，基礎率設定檔不會自動重新開始。詳細內容請參閱 [恢復胰島素輸注](#omnipod-dash-resuming-insulin-delivery) 章節。
@@ -486,7 +486,7 @@ DASH 概覽標籤將顯示如下所述：
 
 本節涵蓋針對社群回報且已有修正的問題之常見替代作法，以及為使功能運作所需調整的設定。例如：啟用基礎率漂移的流程記載於此。
 
-(#omnipod-dash-Basal-drift-fix)=
+(omnipod-dash-basal-drift-fix)=
 
 ### 基礎率漂移修正 說明
 
@@ -499,6 +499,30 @@ Dash 透過內部計時器決定何時送出 0.05 U 的基礎脈衝。計時區�
 此問題在夜間最為明顯。白天運作時，微量注射常使基礎率為 0，因此掩蓋了此效應。依觀察使用情況，24 小時內大約有 10% 的預期每日總劑量（TDD）未被輸注。此外，夜間經常無法達成血糖目標，特別是在食用對血糖影響較長的餐點（例如義大利麵）之後。
 
 ***注意：**對於使用胰島素劑量非常小的人（例如兒童），理解此問題尤其重要。*
+
+(omnipod-dash-drift-compensation-how-it-works)=
+
+#### 漂移補償如何運作
+
+Pod 以 0.05 U 的脈衝方式輸送胰島素。啟用漂移補償後，**AAPS** 會檢查 Pod 是否確實輸送了要求的基礎胰島素，並補上遺漏的脈衝。
+
+1. 自啟用以來，**AAPS** 會持續累計 Pod 應該已輸送的基礎胰島素總量。此總量會依據您的設定檔基礎率，以及循環設定的每一次臨時基礎率。
+2. 每當 Pod 回報其狀態時，**AAPS** 都會將此總量與 Pod 實際輸送的基礎胰島素相比：亦即 Pod 的脈衝總數，減去作為注射與 SMB（微量注射）所輸送的脈衝。
+3. 每次 **AAPS** 設定或取消臨時基礎率時，都會檢視這個差異。如果 Pod 落後達半個脈衝（0.025 U）或以上，**AAPS** 會多發送一個 0.05 U 的脈衝。Pod 會靜音輸送，不會發出嗶聲。
+
+**安全限制:**
+
+- **AAPS** 只會補上 Pod 應該輸送而尚未輸送的胰島素。不會減少胰島素；當 Pod 領先時也不會做任何動作。
+- 一次只補 1 個脈衝，且最多每 2 分鐘 1 個。
+- 當循環執行 0 的臨時基礎率時不會補脈衝，因為循環要求不輸送胰島素。例外是注射後的 5 分鐘，此時 0 的臨時基礎率通常只是循環在為 SMB（微量注射）進行補償。
+- 在 Pod 正在啟用、輸送已暫停、發生 Pod 故障、正在執行注射，或藥量已用盡時，不會補脈衝。
+- 若差異達到 2 個脈衝（0.10 U），無論方向為何，**AAPS** 都不會嘗試追趕。它會將持續累計重設為 Pod 實際輸送的數量。
+
+**您會看到：**
+
+- 在 **DASH** 分頁上，即使您沒有進行注射，**Last Bolus** 也可能顯示 **0.05 U**。
+- 在 [Pod history](#omnipod-dash-view-pod-history) 中，額外的脈衝會顯示為 **Set Bolus 0.05 U**，通常緊接在一行 **Set Temporary Basal** 之後。請參閱下方的 [檢查漂移補償是否在運作](#omnipod-dash-drift-compensation-check) 範例。
+- 這些額外的脈衝不會在 **AAPS** 的治療紀錄中被記為注射或 SMB（微量注射），也不會改變您的 IOB（活性胰島素）。這是預期的：**AAPS** 已將這部分胰島素計為基礎。額外的脈衝只是讓 Pod 輸送 **AAPS** 認為已經輸送的量。
 
 #### 在 AAPS 中啟用基礎率漂移修正
 
@@ -516,6 +540,32 @@ Dash 透過內部計時器決定何時送出 0.05 U 的基礎脈衝。計時區�
 
 2. 重新啟動 **AAPS**。必須執行此步驟，AAPS 才能偵測到該檔案並啟用漂移補償功能。
 3. 請造訪此 [Github 議題 #4783](https://github.com/nightscout/AndroidAPS/issues/4783)，並替第一則貼文按讚以表示你正在使用此功能；我們需要這些資料來協助證明此功能被廣泛使用。一旦社群的採用程度足夠高，就可以移除這個啟用檔案；感謝你的支持。
+
+(omnipod-dash-drift-compensation-check)=
+
+#### 檢查漂移補償是否在運作
+
+比較 Pod 在整整一天內實際輸送的量，與 **AAPS** 對同一天所計算的量。請選擇已經結束的一天：此檢查需要完整的 24 小時。
+
+1. 前往 **DASH** 分頁 (1)，按下 **POD MGMT** (2)，然後按下 **Pod history**。請參閱 [檢視 Pod 歷史記錄](#omnipod-dash-view-pod-history)。
+
+   ![dash_drift_tab_pod_mgmt](../images/DASH_images/DASH_Drift/dash_drift_tab_pod_mgmt.png)
+
+2. 請記下當天開始時最接近 00:00 的紀錄（3）和當天結束時最接近 24:00 的紀錄（4）的 **總輸注量**數值。兩者的差值即為該日由 Pod 輸注的胰島素量。
+
+   ![dash_drift_pod_stats_start](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_start.png)   ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_end.png)
+
+   例如：73.40 U（4）− 38.15 U（3）= Pod 輸注 35.25 U。
+
+3. 開啟 [AAPS 統計資料](#reviewing-statistics)，並在 **TDD** 表格中找到同一天。請注意 ∑ 欄（5）中的總計。
+
+   ![dash_drift_tdd](../images/DASH_images/DASH_Drift/dash_drift_tdd.png)
+
+4. 比較這兩個數值。在漂移補償運作時，兩者差異不應超過 0.05 U。若未啟用，Pod 的總量通常明顯低於 **AAPS** 的 TDD。
+
+   在此範例中，**AAPS** 的 TDD 為 35.3 U，而 Pod 輸注了 35.25 U：代表漂移補償運作正常。
+
+***注意：****Pod 歷史記錄** 只涵蓋目前使用中的 Pod。如果你在當天更換過 Pod，請改選其他日期。*
 
 ## 問題排除
 
