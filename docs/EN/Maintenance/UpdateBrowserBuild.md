@@ -13,6 +13,10 @@ In case you want to upgrade **AAPS** with a browser for the first time : copy yo
 This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
 ```
 
+```{tip}
+**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+```
+
 ## Overview for updating to a new version of AAPS with a browser
 
 ```{contents} Steps for updating to a new version of AAPS
