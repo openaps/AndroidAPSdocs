@@ -53,7 +53,7 @@
 - **你的手機上已安裝 AAPS，且你仍保有當時使用的金鑰庫**：在設定頁面選擇 **I already have a keystore（我已經有金鑰庫）**，並上傳它。你下一次的建置會就地更新 AAPS。
 - **你是第一次建置 AAPS，或你已遺失金鑰庫或其密碼**：請選擇 **Create a new key（建立新金鑰）**。以新金鑰簽署的應用程式，**無法更新**以其他金鑰簽署的 AAPS。你必須先匯出你的設定，將檔案複製到手機以外的位置，解除安裝舊版 AAPS，安裝新版後再匯入你的設定；請參閱 [遺失金鑰庫](#troubleshooting_androidstudio-lost-keystore)。
 
-此後請務必持續使用同一把金鑰。當你建立新金鑰時，請下載頁面提供的備份，並將它連同其密碼與其別名（`aaps`）一併儲存在手機以外且安全的地方。
+此後請務必持續使用同一把金鑰。 When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
 ```
 
 ## 開啟設定頁面
@@ -165,9 +165,9 @@
 
    - 檔案 `aaps-keystore.jks`，
    - 你的密碼，
-   - 金鑰的別名：**`aaps`**。
+   - the alias of the key: **`key0`**.
 
-   未來若以其他方式建置 AAPS，例如使用 Android Studio，以上三項都需要用到。
+   You need all three if you ever build AAPS another way, for example with Android Studio. Keys created with an earlier version of the setup page have the alias `aaps`.
 
    ![已建立金鑰與備份區塊](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 
