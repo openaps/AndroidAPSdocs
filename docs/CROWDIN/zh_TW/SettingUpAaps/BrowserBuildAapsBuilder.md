@@ -15,7 +15,7 @@
 
 本網站的設定頁面會一步一步帶你完成。第一次大約需要 10 分鐘：
 
-1. 在你的 GitHub 帳號中建立一個空白的 **私有** 儲存庫。
+1. Create an empty **private** repository in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm.
 2. 加入 **建置工作流程**（告訴 GitHub 如何建置 AAPS 的檔案）。
 3. 建立或上傳你的 **簽章金鑰**（金鑰庫）。
 4. 將此金鑰以 GitHub 的 **機密（secret）** 形式提供給你的儲存庫。
@@ -115,7 +115,11 @@ Your fork's Google Drive access can't be copied either. To also save the builds 
 
 2. 在 **Your GitHub username** 欄位中，輸入你的 GitHub 使用者名稱。
 
-3. 在 **Name of your repository** 中，保留建議的 `my-aaps`。如果你先前以其他名稱建立過儲存庫，請輸入該名稱的完整拼寫。
+3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+
+   ```{tip}
+   **Already created an empty private repository yourself?** Type its exact name here, don't tap **Create my private repository**, and go to [step 2](#aaps-builder-step2).
+   ```
 
 4. 檢查 **Your repository:** 這一行：它應顯示 `github.com/<your username>/my-aaps`。
 
@@ -165,7 +169,7 @@ Your fork's Google Drive access can't be copied either. To also save the builds 
 當檔案編輯器開啟時，請勿按手機的 **Back** 按鈕或下拉頁面：GitHub 會重新載入頁面，文字將會消失。若發生此情況，請點選藍色橫幅中的 **Restore**，或返回設定頁面再次點選該按鈕。
 ```
 
-若文字區域為空，請在設定頁面步驟 2 的底部展開 **Updating the workflow, or the text area is empty**：點選 **Copy workflow**，並將其貼到文字區域中（手機上可長按貼上）。
+If the text area is empty, tap **Updating the workflow, or the text area is empty?** at the bottom of step 2 on the setup page: tap **Copy workflow** and paste it into the text area (long press on a phone).
 
 ```{warning}
 只使用此設定頁面的工作流程。不要從其他網站或儲存庫複製建置工作流程：該工作流程會在你的簽章金鑰旁執行。
@@ -184,7 +188,7 @@ Your fork's Google Drive access can't be copied either. To also save the builds 
 1. 點選 **I already have a keystore**。
 2. 在 **Keystore file** 中，選擇你的 `.jks` 檔案（或 `.keystore`、`.p12`、`.pfx`）。在手機上，先將檔案複製到你的手機或 Google 雲端硬碟。
 3. 在 **金鑰庫密碼** 欄位中，輸入金鑰庫密碼。
-4. 在 **金鑰別名** 中，從清單選擇你的別名。若是使用 Android Studio 建立的金鑰庫，通常為 `key0`。
+4. In **Key alias**, pick your alias from the list, or type it if there is no list. 若是使用 Android Studio 建立的金鑰庫，通常為 `key0`。
 5. 若你的金鑰密碼與金鑰庫密碼不同，請取消勾選 **金鑰密碼與金鑰庫密碼相同**，並輸入金鑰密碼。
 6. 點選 **檢查並繼續**。
 
@@ -224,9 +228,9 @@ Your fork's Google Drive access can't be copied either. To also save the builds 
 
 ![GitHub 新增機密表單](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. 在 **Name** 欄位中，輸入 `KEYSTORE_SET`。你也可以在設定頁面使用其旁邊的 **複製** 按鈕。
+3. On the setup page, tap **Copy name**, then paste it into the **Name** field on GitHub. The name is `KEYSTORE_SET`.
 
-4. 在設定頁面點選 **複製機密**。在 GitHub 的 **Secret** 欄位貼上該內容（在手機上長按貼上）。
+4. On the setup page, tap **Copy secret**, then paste it into the **Secret** field on GitHub (long press on a phone).
 
 5. 點選 **Add secret**。 `KEYSTORE_SET` 會顯示在 **Repository secrets** 底下。
 
@@ -328,7 +332,7 @@ GitHub 顯示 **找不到頁面**（404）？第 1 步中的使用者名稱或�
 
    ![設定頁面步驟 7](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
 
-   建立名為 `GDRIVE_OAUTH2` 的機密（按下 **Copy** 按鈕會複製名稱），貼上數值，然後點選 **Add secret**。
+   Tap **Copy name**, then paste it into the **Name** field (the name is `GDRIVE_OAUTH2`). Paste your `GDRIVE_OAUTH2` value into the **Secret** field and tap **Add secret**.
 
 從下一次建置開始，APK 也會儲存在 Google Drive。
 
@@ -344,7 +348,7 @@ GitHub 顯示 **找不到頁面**（404）？第 1 步中的使用者名稱或�
 2. 依照 [步驟 5](#aaps-builder-step5) 建置新版本。保持 `latest`，或輸入發佈版本號。
 3. 依照 [步驟 6](#aaps-builder-step6) 下載並安裝。
 
-**建置工作流程的更新：**你的儲存庫不會自動下載新的工作流程，而且它執行的建置步驟會鎖定在經審查的某個版本上。當工作流程有變更時，會在[文件更新與變更](../Maintenance/DocumentationUpdate.md)頁面公告。若要更新，開啟設定頁面的步驟 2，然後前往**更新工作流程，或文字區域為空白**：
+**建置工作流程的更新：**你的儲存庫不會自動下載新的工作流程，而且它執行的建置步驟會鎖定在經審查的某個版本上。當工作流程有變更時，會在[文件更新與變更](../Maintenance/DocumentationUpdate.md)頁面公告。 To update, open step 2 of the setup page, then tap **Updating the workflow, or the text area is empty?**:
 
 1. 點選 **Copy workflow**，接著點選 **Open my workflow file**。
 2. 以複製的工作流程取代全部文字（在手機上長按：**Select all**，然後 **Paste**）。
