@@ -196,7 +196,7 @@ If the command line is not for you, a web page can do exactly what ADB does, dir
 This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
 
 1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **<a href="../install-aaps.html">AAPS web installer</a>** in your browser.
+1. Open the **[AAPS web installer](#web-installer)** in your browser.
 1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
 
 Three things to know:
@@ -266,3 +266,9 @@ For this reason, step-by-step instructions cannot be written yet. This section w
 1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
 2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
 3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
+
+```{toctree}
+:hidden:
+
+AAPS web installer <WebInstaller.md>
+```

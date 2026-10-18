@@ -416,7 +416,28 @@ if on_rtd:
 
   hosted_root = 'https://%s.readthedocs.org/%s/%s/' % (rtd_sub, rtd_lang, rtd_version)
 
+# Interactive tool pages: a Content-Security-Policy so the page can't send the user's keystore,
+# passwords or APK to another site, and no search-engine indexing (users must open them from
+# the documentation). The AAPS Builder setup page reads its workflow file from this site and
+# checks the typed GitHub username with GitHub's public API (connect-src 'self' api.github.com);
+# the web installer makes no requests at all (connect-src 'none').
+# 'unsafe-inline' scripts: the page logic is embedded in the page, as are some theme scripts.
+tool_page_csp = ("default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; "
+                 "img-src 'self' data:; font-src 'self' data:; connect-src %s; "
+                 "object-src 'none'; base-uri 'none'; form-action 'self'")
+tool_pages = {
+    'SettingUpAaps/BrowserBuildAapsBuilderSetup': tool_page_csp % "'self' https://api.github.com",
+    'SettingUpAaps/WebInstaller': tool_page_csp % "'none'",
+}
+
+def add_tool_page_meta(app, pagename, templatename, context, doctree):
+    if pagename in tool_pages:
+        context['metatags'] = ('<meta http-equiv="Content-Security-Policy" content="%s">\n'
+                               '<meta name="robots" content="noindex">\n'
+                               % tool_pages[pagename]) + context.get('metatags', '')
+
 def setup(app):
+    app.connect('html-page-context', add_tool_page_meta)
     app.add_config_value('recommonmark_config', {
             # 'url_resolver': lambda url: github_doc_root + url,
             'url_resolver': lambda url: hosted_root + url + '.html',

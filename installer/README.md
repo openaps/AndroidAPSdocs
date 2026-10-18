@@ -2,16 +2,18 @@
 
 This folder builds the **vendor bundle** for the AAPS web installer page:
 
-- Page (readable HTML): `docs/EN/_html/install-aaps.html`
-- Application logic (readable JS): `docs/EN/_html/install-aaps.app.js`
-- Vendor bundle (minified, built here): `docs/EN/_html/install-aaps.bundle.js`
+- Page and application logic (readable Markdown and embedded JS, translated with
+  the rest of the documentation): `docs/EN/SettingUpAaps/WebInstaller.md`
+- Vendor bundle (minified, built here): `docs/_static/install-aaps/install-aaps.bundle.js`
 
 The page installs an APK onto an Android phone over USB from the browser
 (WebUSB + the ADB protocol), which is exempt from Google's Android developer
-verification. It is served by ReadTheDocs at the site root
-(`https://androidaps.readthedocs.io/en/latest/install-aaps.html`) via
-`html_extra_path = ["_html"]` in `docs/EN/conf.py` — Sphinx copies the files
-verbatim, no build happens on ReadTheDocs.
+verification. It is a normal documentation page
+(`https://androidaps.readthedocs.io/en/latest/SettingUpAaps/WebInstaller.html`,
+and the same path in every language). Sphinx copies the bundle verbatim from
+`docs/_static`, so it is served next to every language build; no JavaScript
+build happens on ReadTheDocs. The old address `install-aaps.html` is a redirect
+stub in `docs/EN/_html`.
 
 ## What is in the bundle
 
@@ -24,8 +26,10 @@ same release line when upgrading. If esbuild finds license banners it emits them
 
 The bundle is **checked into git** on purpose: the page has full ADB control of
 a user's phone, so its code must be pinned and reviewable in the repository
-rather than loaded from a CDN at runtime. The page's Content-Security-Policy
-(`default-src 'none'`) blocks all network requests.
+rather than loaded from a CDN at runtime. The page's Content-Security-Policy,
+set for this page only in `docs/shared.conf.py` (`connect-src 'none'`), blocks
+every request the page's scripts could make: only the documentation site's own
+pages, styles and scripts load.
 
 ## Current bundle checksum
 
@@ -33,7 +37,7 @@ rather than loaded from a CDN at runtime. The page's Content-Security-Policy
 SHA-256(install-aaps.bundle.js) = 029b36943ac58f962d42a02427d0fd711a5127863708a79e08dd630db5db02fd
 ```
 
-Verify with `sha256sum docs/EN/_html/install-aaps.bundle.js` (or
+Verify with `sha256sum docs/_static/install-aaps/install-aaps.bundle.js` (or
 `certutil -hashfile ... SHA256` on Windows). The build is reproducible, so
 rebuilding from the committed `package-lock.json` must produce this exact
 hash. **Update this line on every rebuild**, in the same commit as the bundle.
@@ -74,14 +78,15 @@ moment of upgrading is the supply-chain exposure window. Policy:
 
 ## Testing
 
-1. Serve the page locally (localhost is a secure context, so WebUSB works):
+1. Build the English docs with the pinned Sphinx version, then serve the
+   result locally (localhost is a secure context, so WebUSB works):
 
    ```
-   cd docs/EN/_html
+   cd docs/EN/_build/html
    python -m http.server 8000
    ```
 
-   Open `http://localhost:8000/install-aaps.html` in Chrome or Edge.
+   Open `http://localhost:8000/SettingUpAaps/WebInstaller.html` in Chrome or Edge.
 
 2. With a real phone (USB debugging enabled, Android Studio closed):
    - Connect → accept "Allow USB debugging?" on the phone → install a
@@ -95,5 +100,4 @@ moment of upgrading is the supply-chain exposure window. Policy:
      open the page in Firefox (must show the unsupported-browser message).
 
 3. Run the docs checks as usual (`python utils/qualitycheck.py` and the pinned
-   Sphinx build) — the `_html` files are copied, not parsed, but the docs pages
-   linking here are checked.
+   Sphinx build).
