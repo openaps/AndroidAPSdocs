@@ -16,6 +16,8 @@
 
 * [Потеряно хранилище ключей](#troubleshooting_androidstudio-lost-keystore)
 * [Устранение неполадок Android Studio](TroubleshootingAndroidStudio)
+* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
+* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
 
 ### **Installing**
 
