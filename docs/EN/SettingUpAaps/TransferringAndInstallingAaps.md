@@ -257,7 +257,7 @@ For this reason, step-by-step instructions cannot be written yet. This section w
 ## What does not change
 
 - Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
-- Your GitHub account, your fork and your keystore.
+- Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
 - Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
 - Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
 

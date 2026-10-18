@@ -27,7 +27,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
   * [Browser build](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
 * Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
-* Updating **AAPS**: [with a browser build](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
+* Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
 
 ### Installing
 

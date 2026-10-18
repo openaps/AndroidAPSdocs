@@ -173,7 +173,7 @@ End of life <./Maintenance/EndOfLife.md>
 What changed in AAPS v4 <./Maintenance/V4Changes.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
 - Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```

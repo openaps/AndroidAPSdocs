@@ -13,7 +13,10 @@
 
 ## Update AAPS with browser build
 
-If you already built your AAPS app with the Browser Build method, follow [these instructions](./UpdateBrowserBuild.md).
+You already built your AAPS app with a browser? Follow the instructions for the method you used:
+
+- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
+- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
 
 ## Update AAPS with Android Studio
 

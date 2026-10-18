@@ -120,7 +120,7 @@ notices kept in the files):
 ## Checksums (of the committed files, LF line endings)
 
 ```
-SHA-256(aaps-builder.html)         = bec07ba20314a60342086332a5da00c82028039cbdc99f8ae2542109e87a8c8c
+SHA-256(aaps-builder.html)         = 51ccdd20745a40fd23eb19317776447f5a8c37203beac0faae4664d45393a673
 SHA-256(aaps-builder.app.js)       = 7979eefa196b6549fb99296b211b761c1ff01e21aed3fb6a2200ed8399c02d93
 SHA-256(aaps-builder-build.yml)    = f294d2c515f846abf4cb786545d4628051e5d245465af0edea0d1631d7614a9a
 SHA-256(aaps-builder.forge.min.js) = dc67fd132427ad96c9666c844b39565413c40ddb1f2d063c53512fbf6d387dfd
