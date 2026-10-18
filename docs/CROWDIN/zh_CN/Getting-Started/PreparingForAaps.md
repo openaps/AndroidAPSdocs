@@ -100,6 +100,12 @@ SGLT-2抑制剂的常见商品名包括：Invokana、Farxiga、Jardiance、Glyxa
 2.  记下你密钥库文件的密码。
 
 
+How you save the keystore depends on your build method:
+
+- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
+- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
+- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
+
 这将确保你每次创建**AAPS**的更新版本时，都能使用完全相同的密钥库文件。平均每年需要进行2次**AAPS**更新。
 
 此外，**AAPS**提供了[导出所有配置设置](../Maintenance/ExportImportSettings.md)的功能。这确保了你可以在更换手机、升级/重新安装应用程序时，以最小的干扰安全地恢复你的系统。 
