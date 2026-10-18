@@ -8,6 +8,10 @@
 如果你想第一次使用瀏覽器升級 **AAPS** : 請將你的備份金鑰檔案複製到你的 Google 雲端硬碟。然後請遵循 [瀏覽器版本 **AAPS** 程序](../SettingUpAaps/BrowserBuild.md) 而不是本指南。與其建立新的金鑰庫，更好的方法，是選擇你電腦中現有的。這個操作僅在第一次時才需要，之後的升級可以遵循這個指南。
 ```
 
+```{tip}
+**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+```
+
 ## 更新 AAPS 新版本的總覽
 
 ```{contents} Steps for updating to a new version of AAPS
