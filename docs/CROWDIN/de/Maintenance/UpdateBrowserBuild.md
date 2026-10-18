@@ -1,4 +1,8 @@
-# Mit einem Browser aktualisieren
+# Update with a browser (fork)
+
+```{tip}
+You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+```
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
