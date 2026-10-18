@@ -53,7 +53,7 @@ A private repository gets 2000 free GitHub Actions minutes per month, which is e
 - **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place.
 - **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`aaps`) somewhere safe, off your phone.
+Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
 ```
 
 ## Open the setup page
@@ -165,9 +165,9 @@ The page checks the password and the alias on your device. **Keystore OK! Contin
 
    - the file `aaps-keystore.jks`,
    - your password,
-   - the alias of the key: **`aaps`**.
+   - the alias of the key: **`key0`**.
 
-   You need all three if you ever build AAPS another way, for example with Android Studio.
+   You need all three if you ever build AAPS another way, for example with Android Studio. Keys created with an earlier version of the setup page have the alias `aaps`.
 
    ![Key created and the backup box](../images/Building-the-App/CI/AapsBuilder42_KeyCreated.png)
 

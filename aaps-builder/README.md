@@ -112,12 +112,16 @@ notices kept in the files):
    into GitHub's new-file page instead of asking the user to copy and paste it
    (**Copy workflow** stays for updates). The build steps also reject unknown
    variants.
+6. New keys created on the setup page use the alias `key0` (upstream: `aaps`),
+   the same as the preparation page of the older browser build and Android
+   Studio's default. Keys created before this change keep the alias `aaps`; the
+   alias travels inside `KEYSTORE_SET`, so builds work with either.
 
 ## Checksums (of the committed files, LF line endings)
 
 ```
-SHA-256(aaps-builder.html)         = fdf26d687b4d980f04b3e27cf9eca20a159a7434eba7906cc1fb70a4a694db11
-SHA-256(aaps-builder.app.js)       = 3f50a913902ebb3999b55a3aad7ef1432d5562e066f3b09cced7644c0cb41d76
+SHA-256(aaps-builder.html)         = bec07ba20314a60342086332a5da00c82028039cbdc99f8ae2542109e87a8c8c
+SHA-256(aaps-builder.app.js)       = 7979eefa196b6549fb99296b211b761c1ff01e21aed3fb6a2200ed8399c02d93
 SHA-256(aaps-builder-build.yml)    = f294d2c515f846abf4cb786545d4628051e5d245465af0edea0d1631d7614a9a
 SHA-256(aaps-builder.forge.min.js) = dc67fd132427ad96c9666c844b39565413c40ddb1f2d063c53512fbf6d387dfd
 SHA-256(.github/workflows/aaps-builder.yml) = 84f52b9a7e4db9447f56a6e7bec058b82bd1a26fcea9cd15d76d118015a30115
