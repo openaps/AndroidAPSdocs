@@ -16,6 +16,8 @@ D'autres informations utiles peuvent également être disponibles dans la [FAQ](
 
 * [Fichier de clés perdu](#troubleshooting_androidstudio-lost-keystore)
 * [Dépannage AndroidStudio](TroubleshootingAndroidStudio)
+* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
+* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
 
 ### **Installing**
 
