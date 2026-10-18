@@ -271,9 +271,9 @@
       const subject = [{ name: 'commonName', value: 'AAPS' }];
       cert.setSubject(subject); cert.setIssuer(subject);
       cert.sign(key, forge.md.sha256.create());
-      const asn = forge.pkcs12.toPkcs12Asn1(key, [cert], p1, { algorithm: '3des', friendlyName: 'aaps', generateLocalKeyId: true });
+      const asn = forge.pkcs12.toPkcs12Asn1(key, [cert], p1, { algorithm: '3des', friendlyName: 'key0', generateLocalKeyId: true });
       newKsBytes = binStrToBytes(forge.asn1.toDer(asn).getBytes());
-      setSecret(newKsBytes, p1, 'aaps', p1);
+      setSecret(newKsBytes, p1, 'key0', p1);
       $('backupBox').hidden = false;
       msg('newMsg', M.okNew, 'ok');
     } catch (e) {
