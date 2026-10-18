@@ -100,6 +100,12 @@ A “keystore” (.jks file) is a password encrypted file unique to your own cop
 2.  Păstrați o copie cu privire la parola dumneavoastră pentru fișierul cheie.
 
 
+How you save the keystore depends on your build method:
+
+- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
+- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
+- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
+
 Acest lucru va asigura că puteți utiliza exact același fișier cheie de fiecare dată când este creată o versiune actualizată de **AAPS**. În medie, vor fi 2 actualizări **AAPS** necesare în fiecare an.
 
 În plus, <0>AAPS</0> oferă posibilitatea de a <1>exporta toate setările de configurare</1>. Acest lucru vă asigură că puteți recupera în siguranță sistemul în timp ce schimbați telefoanele, actualizați/reinstalați aplicația cu întrerupere minimă. 
