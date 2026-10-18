@@ -50,11 +50,50 @@
 ```{warning}
 **新金鑰或既有金鑰：這將決定你是否能更新 AAPS。**
 
-- **你的手機上已安裝 AAPS，且你仍保有當時使用的金鑰庫**：在設定頁面選擇 **I already have a keystore（我已經有金鑰庫）**，並上傳它。你下一次的建置會就地更新 AAPS。
+- **你的手機上已安裝 AAPS，且你仍保有當時使用的金鑰庫**：在設定頁面選擇 **I already have a keystore（我已經有金鑰庫）**，並上傳它。你下一次的建置會就地更新 AAPS。 Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
 - **你是第一次建置 AAPS，或你已遺失金鑰庫或其密碼**：請選擇 **Create a new key（建立新金鑰）**。以新金鑰簽署的應用程式，**無法更新**以其他金鑰簽署的 AAPS。你必須先匯出你的設定，將檔案複製到手機以外的位置，解除安裝舊版 AAPS，安裝新版後再匯入你的設定；請參閱 [遺失金鑰庫](#troubleshooting_androidstudio-lost-keystore)。
 
 此後請務必持續使用同一把金鑰。 When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
 ```
+
+(aaps-builder-from-fork)=
+
+## Coming from the previous browser build (fork)
+
+Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+
+Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 3](#aaps-builder-step3) with **I already have a keystore**.
+
+```{warning}
+Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+```
+
+Which case is yours?
+
+- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 3.
+- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+
+To export your keystore from your fork:
+
+1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
+2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
+3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
+4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
+   - `keystore.jks`: your keystore,
+   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
+5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+
+In [step 3](#aaps-builder-step3) of the setup page:
+
+1. 點選 **I already have a keystore**。
+2. In **Keystore file**, choose `keystore.jks`.
+3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
+4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
+5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+
+Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+
+Your fork's Google Drive access can't be copied either. To also save the builds of AAPS Builder in Google Drive, do [step 7](#aaps-builder-google-drive). You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
 
 ## 開啟設定頁面
 
