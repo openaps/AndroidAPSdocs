@@ -99,7 +99,9 @@ Your fork's Google Drive access can't be copied either. To also save the builds 
 
 **→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
 
-Keep this documentation page open in another tab: the steps below explain each part of the setup page in more detail.
+Keep this documentation page open: long-press the link above and choose **Open in new tab**. The steps below explain each part of the setup page in more detail.
+
+The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
 
 The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
 
@@ -137,7 +139,7 @@ This step creates an empty private repository in your GitHub account. Only you c
 
    ![Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new, empty repository. **Go back to the setup page tab** for step 2.
+   GitHub shows your new, empty repository. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
 
 (aaps-builder-step2)=
 
@@ -202,7 +204,9 @@ The page checks the password and the alias on your device. **Keystore OK! Contin
 
    ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)**. Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+4. Tap **Download backup (aaps-keystore.jks)**. If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+
+   Keep these three together, somewhere safe off your phone (for example your own cloud storage):
 
    - the file `aaps-keystore.jks`,
    - your password,
@@ -226,9 +230,9 @@ Step 4 unlocks when step 3 is done. Your key, its passwords and its alias are pa
 
 ![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. On the setup page, tap **Copy name**, then paste it into the small **Name** field on GitHub. The name is `KEYSTORE_SET`.
+3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
 
-4. On the setup page, tap **Copy secret**, then paste it into the big **Secret** box on GitHub (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
+4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
 
 5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
 
@@ -248,7 +252,7 @@ GitHub shows **Page not found** (404)? First check that you are logged in to git
 
    ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. Then continue with step 4 below.
+   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. Then continue with step 4 below.
 
 2. If GitHub asks, tap the green button to enable workflows.
 3. Tap **Run workflow**. A small form opens:
