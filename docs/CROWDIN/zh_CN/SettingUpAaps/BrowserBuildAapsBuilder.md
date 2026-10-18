@@ -15,7 +15,7 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 
 A setup page on this site walks you through it. It takes about 10 minutes the first time:
 
-1. Create an empty **private** repository in your GitHub account.
+1. Create an empty **private** repository in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm.
 2. Add the **build workflow**, the file that tells GitHub how to build AAPS.
 3. Create or upload your **signing key** (the keystore).
 4. Give the key to your repository as a GitHub **secret**.
@@ -117,6 +117,10 @@ This step creates an empty private repository in your GitHub account. Only you c
 
 3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
 
+   ```{tip}
+   **Already created an empty private repository yourself?** Type its exact name here, don't tap **Create my private repository**, and go to [step 2](#aaps-builder-step2).
+   ```
+
 4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`.
 
 5. Tap **Create my private repository**.
@@ -165,7 +169,7 @@ The build workflow is a short text file that tells GitHub how to build AAPS. The
 Don't press your phone's **Back** button or pull the page down while the file editor is open: GitHub reloads the page and the text disappears. If that happens, tap **Restore** in the blue banner, or go back to the setup page and tap the button again.
 ```
 
-If the text area is empty, open **Updating the workflow, or the text area is empty** at the bottom of step 2 on the setup page: tap **Copy workflow** and paste it into the text area (long press on a phone).
+If the text area is empty, tap **Updating the workflow, or the text area is empty?** at the bottom of step 2 on the setup page: tap **Copy workflow** and paste it into the text area (long press on a phone).
 
 ```{warning}
 Only use the workflow from this setup page. Don't copy a build workflow from another website or repository: the workflow runs next to your signing key.
@@ -184,7 +188,7 @@ The app must be signed with your own key. Choose one of the two tabs. Read the [
 1. Tap **I already have a keystore**.
 2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
 3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list. For keystores made with Android Studio it is usually `key0`.
+4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
 5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
 6. Tap **Check and continue**.
 
@@ -224,9 +228,9 @@ Step 4 unlocks when step 3 is done. Your key, its passwords and its alias are pa
 
 ![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. In the **Name** field, type `KEYSTORE_SET`. You can use the **Copy** button next to it on the setup page.
+3. On the setup page, tap **Copy name**, then paste it into the **Name** field on GitHub. The name is `KEYSTORE_SET`.
 
-4. On the setup page, tap **Copy secret**. In the **Secret** field on GitHub, paste it (long press on a phone).
+4. On the setup page, tap **Copy secret**, then paste it into the **Secret** field on GitHub (long press on a phone).
 
 5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
 
@@ -328,7 +332,7 @@ It needs one more secret, `GDRIVE_OAUTH2`. You get its value with the preparatio
 
    ![Setup page step 7](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
 
-   Create a secret named `GDRIVE_OAUTH2` (the **Copy** button copies the name), paste the value, and tap **Add secret**.
+   Tap **Copy name**, then paste it into the **Name** field (the name is `GDRIVE_OAUTH2`). Paste your `GDRIVE_OAUTH2` value into the **Secret** field and tap **Add secret**.
 
 From the next build, the APKs are also saved in Google Drive.
 
@@ -344,7 +348,7 @@ Your repository never builds anything by itself: you decide when to build, which
 2. Build the new version as in [step 5](#aaps-builder-step5). Keep `latest`, or type the release number.
 3. Download and install it as in [step 6](#aaps-builder-step6).
 
-**Updates of the build workflow:** your repository never downloads a new workflow by itself, and the build steps it runs are pinned to one reviewed version. When the workflow changes, the [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. To update, open step 2 of the setup page, then **Updating the workflow, or the text area is empty**:
+**Updates of the build workflow:** your repository never downloads a new workflow by itself, and the build steps it runs are pinned to one reviewed version. When the workflow changes, the [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. To update, open step 2 of the setup page, then tap **Updating the workflow, or the text area is empty?**:
 
 1. Tap **Copy workflow**, then **Open my workflow file**.
 2. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
