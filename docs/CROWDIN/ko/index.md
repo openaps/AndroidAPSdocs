@@ -151,7 +151,7 @@ AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 End of life <./Maintenance/EndOfLife.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
 - Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
