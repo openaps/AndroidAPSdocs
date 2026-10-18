@@ -237,6 +237,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 * [需要 Android Studio 版本為 "Meerkat" 或以上版本才能建置此版本。](#Building-APK-recommended-specification-of-computer-for-building-apk-file)如果你已經建置了 3.3.x 版本，你需要再次升級 Android Studio。
 
+(version-enforcement)=
+
 ### 從這個版本開始，通知和版本強制執行變得簡化並放寬，並以以下方式運作：
 *  當設備離線時不會過期（如果沒有網路連線）。這意味著不再有 60 天和 90 天的寬限期。
 *  過期後將強制進入 LGS 模式
