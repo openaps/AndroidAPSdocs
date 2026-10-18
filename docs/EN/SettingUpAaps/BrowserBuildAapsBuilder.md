@@ -133,13 +133,11 @@ This step creates an empty private repository in your GitHub account. Only you c
 
    Scroll down: **Private**, **No template** and **Add README: Off** are already selected. Don't change anything, and don't add a README or other files.
 
-   ![Private, no template, no README](../images/Building-the-App/CI/AapsBuilder33_GitHubConfig.png)
-
 7. Scroll down and tap the green **Create repository** button.
 
    ![Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-Go back to the setup page tab.
+   GitHub shows your new, empty repository. **Go back to the setup page tab** for step 2.
 
 (aaps-builder-step2)=
 
