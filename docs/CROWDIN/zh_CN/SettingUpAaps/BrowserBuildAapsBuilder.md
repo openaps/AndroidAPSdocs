@@ -50,11 +50,50 @@ A private repository gets 2000 free GitHub Actions minutes per month, which is e
 ```{warning}
 **New key or existing key: this decides whether you can update AAPS.**
 
-- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place.
+- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
 - **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Lost keystore](#troubleshooting_androidstudio-lost-keystore).
 
 Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
 ```
+
+(aaps-builder-from-fork)=
+
+## Coming from the previous browser build (fork)
+
+Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+
+Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 3](#aaps-builder-step3) with **I already have a keystore**.
+
+```{warning}
+Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+```
+
+Which case is yours?
+
+- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 3.
+- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+
+To export your keystore from your fork:
+
+1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
+2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
+3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
+4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
+   - `keystore.jks`: your keystore,
+   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
+5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+
+In [step 3](#aaps-builder-step3) of the setup page:
+
+1. Tap **I already have a keystore**.
+2. In **Keystore file**, choose `keystore.jks`.
+3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
+4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
+5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+
+Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+
+Your fork's Google Drive access can't be copied either. To also save the builds of AAPS Builder in Google Drive, do [step 7](#aaps-builder-google-drive). You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
 
 ## Open the setup page
 
