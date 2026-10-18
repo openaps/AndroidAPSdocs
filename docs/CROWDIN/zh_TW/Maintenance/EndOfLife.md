@@ -2,7 +2,7 @@
 
 即使你目前的 AAPS 系統完全符合你的使用方式，仍然值得更新，因為新版本會帶來你可能不會注意到、直到關鍵時刻才會發現的重要安全修正與錯誤修正；保持與新手機作業系統版本、CGM 應用程式、幫浦韌體與 Nightscout 變更的相容性；新增經由更廣大社群測試的演算法改進與功能；並確保你停留在仍受支援、他人實際能協助你進行疑難排解的版本。部分舊版 AAPS 為了能在較舊的 Android 版本上繼續運作，刻意不設定到期日；因此沒有出現到期警告，並不代表你的版本仍是最新或仍受支援。
 
-每個 AAPS 版本都可能有終止日期。 After this date, AAPS may [limit the loop](#version-enforcement). 在版本到期前，AAPS 會先提醒你。請規劃在終止日期前更新，並依照[更新指南](UpdateToNewVersion.md)。
+每個 AAPS 版本都可能有終止日期。在此日期之後，AAPS 可能會[限制循環](#version-enforcement)。在版本到期前，AAPS 會先提醒你。請規劃在終止日期前更新，並依照[更新指南](UpdateToNewVersion.md)。
 
 ## 如何使用本頁
 
@@ -30,7 +30,7 @@
 
 Android 會為每個系統版本指定一個 **API 等級**，這是應用程式使用的數字。例如，API 等級 30 對應 Android 11。下列表格使用來自 AAPS 版本資料的 API 等級。每一列中的 AAPS 版本，是該列所示 API 等級所對應的數值。這不是你可安裝版本的完整清單。
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version). 若某個 API 等級未列出 AAPS 版本，表格會顯示「未列出」。
+要為你的手機選擇 AAPS 版本，請參考[發行說明中的 Android 版本指引](#maintenance-android-version-aaps-version)。若某個 API 等級未列出 AAPS 版本，表格會顯示「未列出」。
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
