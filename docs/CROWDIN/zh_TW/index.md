@@ -143,16 +143,16 @@ AAPS for Wear OS <./WearOS/BuildingAapsWearOS.md>
 ```
 
 ```{toctree}
-:caption: 7) AAPS 維護
+:caption: 7) Maintenance of AAPS
 
-匯出/匯入 設定 <./Maintenance/ExportImportSettings.md>
-檢視你的資料 <./Maintenance/Reviewing.md>
-AAPS 發行說明 <./Maintenance/ReleaseNotes.md>
-生命週期終止 <./Maintenance/EndOfLife.md>
-文件更新 <./Maintenance/DocumentationUpdate.md>
-更新至新版本的 AAPS <./Maintenance/UpdateToNewVersion.md>
-- 瀏覽器建置更新 <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio 建置更新 <./Maintenance/UpdateComputerBuild.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+End of life <./Maintenance/EndOfLife.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
