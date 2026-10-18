@@ -4,6 +4,8 @@
 
 ```{note}
 This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+
+Using **AAPS Builder**? Start with its own [troubleshooting section](#aaps-builder-troubleshooting). The Google Drive sections below also apply to it.
 ```
 
 ## AAPS-CI Troubleshooting

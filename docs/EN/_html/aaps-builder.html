@@ -96,6 +96,12 @@
   .msg.ok { color: var(--ok); } .msg.err { color: var(--err); } .msg.warn { color: var(--warn); }
   .box { background: var(--soft); border-radius: 8px; padding: 12px 14px; margin-top: 12px; }
   .secret-row { display: flex; gap: 8px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+  details { margin-top: 12px; }
+  summary { list-style: none; cursor: pointer; display: inline-block; color: var(--accent); border: 1px solid var(--accent); border-radius: 8px; padding: 8px 12px; font-weight: 600; }
+  summary::-webkit-details-marker { display: none; }
+  summary::before { content: "▸ "; }
+  details[open] summary::before { content: "▾ "; }
+  summary .muted { font-weight: 400; }
   code { background: var(--code); padding: 2px 6px; border-radius: 4px; font-size: .92em; word-break: break-all; }
   ol.small, ul.small { padding-left: 20px; margin: 8px 0; }
   ol.small li, ul.small li { margin: 4px 0; }
@@ -120,6 +126,7 @@
     <input type="text" id="repo" spellcheck="false" placeholder="my-aaps">
     <p class="muted">Keep the suggestion. Already created your repository with another name? Type that exact name here.</p>
     <div class="box">Your repository: <code class="repoUrl"></code></div>
+    <p class="muted">Already created an empty private repository yourself? Do not tap the button below: type its exact name above and go to step 2.</p>
     <a class="btn" id="createRepo" target="_blank" rel="noopener">Create my private repository</a>
     <p>On the GitHub page that opens, the name is filled in and <b>Private</b> is selected. Do not change anything, do not add a README or other files.</p>
     <ol class="small">
@@ -140,7 +147,7 @@
       <li>Click <b>Commit changes…</b>, then <b>Commit changes</b> again in the window that opens.</li>
     </ol>
     <details>
-      <summary>Updating the workflow, or the text area is empty</summary>
+      <summary>Updating the workflow, or the text area is empty? <span class="muted">Tap to show the steps</span></summary>
       <ol class="small">
         <li><button class="btn secondary" style="margin:0" id="copyWorkflow">Copy workflow</button>
           <div class="msg" id="copyWorkflowMsg"></div></li>
@@ -208,11 +215,11 @@
         <li><a class="btn secondary" id="openSecrets" target="_blank" rel="noopener">Open the secrets page</a>
           <p class="muted">Opens: <code class="repoUrl"></code></p>
           <p class="muted">Getting "Page not found" (404)? Then the name in step 1 does not match your repository. Check the name on github.com and type it in step 1.</p></li>
-        <li>In "Name", enter:
-          <div class="secret-row"><code>KEYSTORE_SET</code> <button class="btn secondary" style="margin:0" data-copy="name">Copy</button></div></li>
-        <li>In "Secret", paste:
+        <li>Tap "Copy name", then paste it into the "Name" field:
+          <div class="secret-row"><code>KEYSTORE_SET</code> <button class="btn secondary" style="margin:0" data-copy="name">Copy name</button></div></li>
+        <li>Tap "Copy secret", then paste it into the "Secret" field:
           <div class="secret-row"><button class="btn" style="margin:0" data-copy="secret">Copy secret</button></div></li>
-        <li>Click "Add secret". Done, you never need to do this again.</li>
+        <li>Tap "Add secret". Done, you never need to do this again.</li>
       </ol>
       <div class="msg" id="copyMsg"></div>
     </div>
@@ -272,9 +279,9 @@
         <br><a class="btn secondary" href="SettingUpAaps/BrowserBuildAapsBuilder.html#aaps-builder-google-drive" target="_blank" rel="noopener">Open the AAPS guide</a></li>
       <li><a class="btn secondary" id="openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
         <p class="muted">Opens: <code class="repoUrl"></code></p></li>
-      <li>In "Name", enter:
-        <div class="secret-row"><code>GDRIVE_OAUTH2</code> <button class="btn secondary" style="margin:0" data-copy="gdrive">Copy</button></div></li>
-      <li>In "Secret", paste the GDRIVE_OAUTH2 value and click "Add secret".</li>
+      <li>Tap "Copy name", then paste it into the "Name" field:
+        <div class="secret-row"><code>GDRIVE_OAUTH2</code> <button class="btn secondary" style="margin:0" data-copy="gdrive">Copy name</button></div></li>
+      <li>Paste your GDRIVE_OAUTH2 value into the "Secret" field, then tap "Add secret".</li>
     </ol>
     <p>Next build, the APKs are also saved in Google Drive in the folder AAPS/&lt;version&gt;.</p>
     <p class="muted">If you do not build for 6 months, or change your Google password, Google stops the access. The build then says so: redo this step.</p>
