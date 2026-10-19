@@ -239,6 +239,8 @@ Vous pouvez montrer vos rapports Nightscout (https://YOUR-NS-SITE.com/report) ou
 
 Arrêter la protection Google Play. Vérifiez que les applications "nettoyant" (par ex. CCleaner, etc.) et désinstallez-les. AAPS / Menu 3 points / À propos / Suivre le lien "Garder l'application en cours d'exécution en arrière-plan" pour arrêter toutes les optimisations de batterie.
 
+(FAQ-organize-backups)=
+
 ### How to organize my backups ?
 
 Exporter les paramètres très régulièrement : après chaque changement de pod, après modification de votre profil, lorsque vous avez terminé et validé un objectif, si vous changez votre pompe… Même si rien ne change, exportez une fois par mois. Conserver plusieurs anciens fichiers d'exportation.
