@@ -237,6 +237,8 @@ Release date: 13-08-2025
 
 * 需使用[Android Studio "Meerkat"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高。若已构建过3.3.x版本，需升级Android Studio。
 
+(version-enforcement)=
+
 ### 从此版本起，通知和版本强制机制已简化并调整如下：
 *  设备离线时（无网络连接）不会过期，即取消60天和90天的宽限期。
 *  过期后强制进入LGS模式
