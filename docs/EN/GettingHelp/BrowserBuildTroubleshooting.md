@@ -112,7 +112,7 @@ Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usu
 
 (aaps-ci-actions-permission)=
 ### Check GitHub Actions Permission Settings
-  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General).
+  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General). If you change it, press **Save** below the options.
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 

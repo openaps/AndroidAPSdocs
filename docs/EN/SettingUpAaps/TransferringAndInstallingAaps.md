@@ -33,7 +33,7 @@ On the right upper side select the Drive app in the Google menu.
 
 ![Start Drive App](../images/GoogleDriveInWebbrowser.png)
 
-Right click in the free area below the files and folders in the Google Drive app and select "Upload File".
+Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
 
 ![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
 
