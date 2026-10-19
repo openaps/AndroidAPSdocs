@@ -239,6 +239,8 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 
 Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
 
+(FAQ-organize-backups)=
+
 ### How to organize my backups ?
 
 Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
