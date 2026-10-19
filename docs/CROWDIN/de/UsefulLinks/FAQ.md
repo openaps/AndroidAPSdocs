@@ -239,6 +239,8 @@ Du kannst entweder Deine Nightscout Berichte zeigen (https://DEINE-NS-SITE.com/r
 
 Google Play Protect anhalten. Schaue, ob Du "Cleaner" oder "Reinigungs" Apps hast und deinstalliere diese. In AAPS gehe auf das 3-Punkte-Menü / Über / "Don't Kill My App?".
 
+(FAQ-organize-backups)=
+
 ### Wie kann ich meine Backups organisieren?
 
 Einstellungen regelmäßig exportieren: Nach jedem Podwechsel, nach der Änderung deines Profils, wenn Du ein Ziel validiert hast, wenn Du eine neue Pumpe hast… Auch wenn sich nichts ändert, exportiere einmal im Monat. Behalte mehrere alte Exportdateien.
