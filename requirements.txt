@@ -1,6 +1,7 @@
 sphinx==7.0
 sphinx_rtd_theme==3.0.0
-sphinx-togglebutton
+sphinx-togglebutton==0.4.5
+sphinxcontrib-jquery==4.1
 myst_parser==3.0.1
 urllib3==2.6.3
 sphinx-notfound-page==1.0.4

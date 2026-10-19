@@ -1,4 +1,4 @@
-# AAPS Builder build workflow, version 5
+# AAPS Builder build workflow, version 6
 #
 # Builds AAPS from the official source (github.com/nightscout/AndroidAPS), signed with your key
 # (secret KEYSTORE_SET). The build steps are in the AAPS documentation repository, file
@@ -38,7 +38,7 @@ permissions:
 jobs:
   aaps:
     name: AAPS
-    uses: openaps/AndroidAPSdocs/.github/workflows/aaps-builder.yml@b43971dd9095baf215679aee1828c3cf169dbc82
+    uses: openaps/AndroidAPSdocs/.github/workflows/aaps-builder.yml@63fa9c597ab0573db7e52048df23ad3e03f69212
     with:
       version: ${{ inputs.version }}
       variant: ${{ inputs.variant }}
