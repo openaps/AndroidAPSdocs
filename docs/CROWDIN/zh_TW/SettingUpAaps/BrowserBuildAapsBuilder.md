@@ -27,7 +27,7 @@
 ```{admonition} Where the code comes from
 :class: note
 
-設定頁面與建置工作流程是本文件的一部分：它們會與本文件一同維護與審查。你新增到儲存庫的<a href="../aaps-builder-build.yml">工作流程</a>很精簡：它會執行文件儲存庫中維護的 [建置步驟](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml)，並固定在一個經過審查的版本。在使用前，你可以先閱讀這兩者的內容。在建置時，該工作流程只會下載官方的 AAPS 原始碼與 GitHub 自家的建置工具。你的金鑰庫不會離開你的瀏覽器與你的私有儲存庫。
+設定頁面與建置工作流程是本文件的一部分：它們會與本文件一同維護與審查。 The <a href="../_static/aaps-builder/aaps-builder-build.yml">workflow</a> you add to your repository is short: it runs the [build steps](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml) kept in the documentation repository, pinned to one reviewed version. 在使用前，你可以先閱讀這兩者的內容。在建置時，該工作流程只會下載官方的 AAPS 原始碼與 GitHub 自家的建置工具。你的金鑰庫不會離開你的瀏覽器與你的私有儲存庫。
 ```
 
 (aaps-builder-before-you-start)=
@@ -97,11 +97,13 @@ Your fork's Google Drive access can't be copied either. To also save the builds 
 
 ## 開啟設定頁面
 
-**→ <a href="../aaps-builder.html">開啟 AAPS Builder 設定頁面</a>**
+**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
 
-請在另一個分頁中保留本說明頁面開啟；下方步驟會更詳細說明設定頁面的各個部分。
+Keep this documentation page open: long-press the link above and choose **Open in new tab**. The steps below explain each part of the setup page in more detail.
 
-設定頁面完全在你的瀏覽器中執行：你的金鑰與密碼不會被傳送到任何地方，唯獨在你自行貼上至 GitHub 機密（secret）時除外。它會記住你的 GitHub 使用者名稱與儲存庫名稱，因此你可以隨時回來重新開啟你的 Secrets 頁面或建置。
+The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+
+設定頁面完全在你的瀏覽器中執行：你的金鑰與密碼不會被傳送到任何地方，唯獨在你自行貼上至 GitHub 機密（secret）時除外。 Only your GitHub username is sent to GitHub, to check that it exists. 它會記住你的 GitHub 使用者名稱與儲存庫名稱，因此你可以隨時回來重新開啟你的 Secrets 頁面或建置。
 
 ![AAPS Builder 設定頁面](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
@@ -113,7 +115,7 @@ Your fork's Google Drive access can't be copied either. To also save the builds 
 
 1. 請確保你已在此瀏覽器登入 github.com。
 
-2. 在 **Your GitHub username** 欄位中，輸入你的 GitHub 使用者名稱。
+2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
 
 3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
 
@@ -133,13 +135,11 @@ Your fork's Google Drive access can't be copied either. To also save the builds 
 
    向下捲動：**Private**、**No template** 與 **Add README: Off** 已預先選取。不要變更任何設定，也不要新增 README 或其他檔案。
 
-   ![Private、No template、未加入 README](../images/Building-the-App/CI/AapsBuilder33_GitHubConfig.png)
-
 7. 向下捲動並點選綠色的 **Create repository** 按鈕。
 
    ![Create repository 按鈕](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-返回設定頁面的分頁。
+   GitHub shows your new, empty repository. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
 
 (aaps-builder-step2)=
 
@@ -204,7 +204,9 @@ If the text area is empty, tap **Updating the workflow, or the text area is empt
 
    ![新金鑰表單（密碼輸入兩次）](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. 點選 **下載備份（aaps-keystore.jks）**。請將以下三項一併妥善儲存於手機以外的安全位置（例如你自己的雲端儲存空間）：
+4. 點選 **下載備份（aaps-keystore.jks）**。 If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+
+   請將以下三項一併妥善儲存於手機以外的安全位置（例如你自己的雲端儲存空間）：
 
    - 檔案 `aaps-keystore.jks`，
    - 你的密碼，
@@ -228,9 +230,9 @@ If the text area is empty, tap **Updating the workflow, or the text area is empt
 
 ![GitHub 新增機密表單](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. On the setup page, tap **Copy name**, then paste it into the **Name** field on GitHub. The name is `KEYSTORE_SET`.
+3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
 
-4. On the setup page, tap **Copy secret**, then paste it into the **Secret** field on GitHub (long press on a phone).
+4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
 
 5. 點選 **Add secret**。 `KEYSTORE_SET` 會顯示在 **Repository secrets** 底下。
 
@@ -239,7 +241,7 @@ If the text area is empty, tap **Updating the workflow, or the text area is empt
 這個步驟只需要做一次。
 
 ```{tip}
-GitHub 顯示 **找不到頁面**（404）？第 1 步中的使用者名稱或儲存庫名稱與你的儲存庫不相符。請在 github.com 檢查名稱，在第 1 步更正後，再次點選按鈕。
+GitHub 顯示 **找不到頁面**（404）？ First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. 請在 github.com 檢查名稱，在第 1 步更正後，再次點選按鈕。
 ```
 
 (aaps-builder-step5)=
@@ -250,7 +252,7 @@ GitHub 顯示 **找不到頁面**（404）？第 1 步中的使用者名稱或�
 
    ![GitHub 的 Build AAPS 頁面，含有 Run workflow 按鈕](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   如果改為開啟 **GitHub app**：點選 **RUN WORKFLOW**，確認版本與變體，然後再次點選 **RUN WORKFLOW**。然後繼續進行下方的步驟 4。
+   如果改為開啟 **GitHub app**：點選 **RUN WORKFLOW**，確認版本與變體，然後再次點選 **RUN WORKFLOW**。 The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. 然後繼續進行下方的步驟 4。
 
 2. 若 GitHub 要求，請點選綠色按鈕以啟用工作流程。
 3. 點選 **Run workflow**。會開啟一個小型表單：
@@ -267,6 +269,10 @@ GitHub 顯示 **找不到頁面**（404）？第 1 步中的使用者名稱或�
 5. 請等待 15 至 30 分鐘。綠色勾號表示建置已完成。紅色叉號表示失敗：開啟該建置以閱讀訊息，然後請參閱 [疑難排解](#aaps-builder-troubleshooting)。
 
    ![完成的建置，顯示綠色勾號](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
+
+   ```{tip}
+   **E-mail when a build is done:** GitHub only e-mails you when a build fails. To also get an e-mail when it succeeds: on github.com, open your profile picture → **Settings** → **Notifications** → **System** → **Actions**, and untick **Only notify for failed workflows**.
+   ```
 
 如果沒有 **Build AAPS** 或 **Run workflow** 按鈕：
 
@@ -287,7 +293,9 @@ GitHub 顯示 **找不到頁面**（404）？第 1 步中的使用者名稱或�
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
 
-   GitHub App 無法下載建置。在 App 中開啟最新的建置，然後點選 **Artifacts ↗**，或點選頂端的分享圖示並選擇 **Chrome**。該建置會在 Chrome 中開啟：請在那裡繼續下一步。
+   GitHub App 無法下載建置。 In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome** (or **Copy link**, then paste the link in Chrome's address bar). 該建置會在 Chrome 中開啟：請在那裡繼續下一步。
+
+   To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
    ```
 
    ![完成的建置：狀態為 Success，且有 2 個 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
@@ -332,7 +340,7 @@ GitHub 顯示 **找不到頁面**（404）？第 1 步中的使用者名稱或�
 
    ![設定頁面步驟 7](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
 
-   Tap **Copy name**, then paste it into the **Name** field (the name is `GDRIVE_OAUTH2`). Paste your `GDRIVE_OAUTH2` value into the **Secret** field and tap **Add secret**.
+   Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Paste your `GDRIVE_OAUTH2` value into the big **Secret** box and tap **Add secret**.
 
 從下一次建置開始，APK 也會儲存在 Google Drive。
 
@@ -366,13 +374,21 @@ GitHub 顯示 **找不到頁面**（404）？第 1 步中的使用者名稱或�
 - **在修正後要再次執行建置**：開啟失敗的建置，點選頂端的 **⋯**，然後 **Re-run all jobs**；或依照 [步驟 5](#aaps-builder-step5) 開始新的建置。
 
 - **建置停止並顯示 "This repository is PUBLIC"**：在你的儲存庫中，開啟 **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**，然後再建置一次。
-- **"Secret KEYSTORE_SET is missing"** 或 **"KEYSTORE_SET is not valid"**：重新執行設定頁面的步驟 3 與 4，並再次複製該機密。
+- **"Secret KEYSTORE_SET is missing"**: do step 4 of the setup page.
+- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 3 of the setup page first if you closed it).
 - **"Keystore, password or alias is wrong"**：請檢查你的金鑰庫密碼與別名，然後重新執行設定頁面的步驟 3 與 4。
 - **"Version … does not exist"**：你輸入的版本不是 AAPS 的發佈版本。請使用 `latest`，或檢查發佈版本號。
-- **設定頁面開啟 GitHub 時出現 "Page not found"（404）**：設定頁面步驟 1 中的儲存庫名稱與你的儲存庫不相符。請輸入完全相同的名稱。
-- **沒有 Download 連結，或開啟的是 GitHub 應用程式**：GitHub 應用程式無法下載建置產物。依照 [步驟 6](#aaps-builder-step6) 的說明，改用 Chrome 開啟該建置。
+- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
+- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
+- **沒有 Download 連結，或開啟的是 GitHub 應用程式**：GitHub 應用程式無法下載建置產物。依照 [步驟 6](#aaps-builder-step6) 的說明，改用 Chrome 開啟該建置。 To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
 - **設定頁面出現 "Could not read the workflow file"**：請重新載入頁面，然後再按一次該按鈕。必須從本文件網站開啟設定頁面。
 - **提交工作流程時 GitHub 顯示檔案已存在**：你的儲存庫已經有一個工作流程。請改為更新它，詳見 [更新 AAPS](#aaps-builder-updates)。
 - **"Google Drive access has expired or was revoked"**：請重新執行 [步驟 7](#aaps-builder-google-drive)，並更新 `GDRIVE_OAUTH2` 機密。
 
 關於其他 GitHub 與 Google Drive 問題，請參閱[瀏覽器建置疑難排解](../GettingHelp/BrowserBuildTroubleshooting.md)。
+
+```{toctree}
+:hidden:
+
+AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+```
