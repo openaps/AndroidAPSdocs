@@ -239,6 +239,8 @@ Nightscout raporlarınızı (https://YOUR-NS-SITE.com/report) gösterebilir veya
 
 Google Play Protect'i durdurun. "Temizleme" uygulamalarını (yani CCleaner vb.) kontrol edin ve bunları kaldırın. AAPS / 3 nokta menüsü / Hakkında / tüm pil optimizasyonlarını durdurmak için "Uygulamayı arka planda çalışmaya devam et" bağlantısını izleyin.
 
+(FAQ-organize-backups)=
+
 ### How to organize my backups ?
 
 Ayarları çok düzenli olarak dışa aktarın: her pod değişikliğinden sonra, profilinizi değiştirdikten sonra, bir görevi doğruladığınızda, pompanızı değiştirirseniz… Hiçbir şey değişmese bile ayda bir dışa aktarın. Birkaç eski dışa aktarma dosyasını saklayın.
