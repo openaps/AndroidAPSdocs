@@ -239,6 +239,8 @@ Puteți afișa rapoartele Nightscout (https://YOUR-NS-SITE.com/report) sau să v
 
 Opriți Google Play Protect. Verificați de aplicațiile de "curățare" (spre exemplu CCleaner șamd) și dezinstalați-le. Meniul AAPS / 3 puncte / Despre / urmați linkul "Păstrați aplicația rulând în fundal" pentru a opri toate optimizările bateriei.
 
+(FAQ-organize-backups)=
+
 ### Cum să-mi organizez copiile de rezervă?
 
 Exportați setările în mod regulat: după fiecare schimbare de pompă, după modificarea profilului, atunci când ați validat un obiectiv, dacă schimbați pompa… Chiar dacă nimic nu se schimbă, exportați o dată pe lună. Păstrați câteva fișiere vechi de export.

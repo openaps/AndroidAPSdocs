@@ -1,0 +1,83 @@
+(aaps-ci-troubleshooting)=
+
+# Browser build: troubleshooting
+
+```{note}
+This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+
+Using **AAPS Builder**? Start with its own [troubleshooting section](#aaps-builder-troubleshooting). The Google Drive sections below also apply to it.
+```
+
+## AAPS-CI Troubleshooting
+
+(aaps-ci-preparation-web)=
+### aaps-ci-preparation web page
+  - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
+  - This local server times out after about 10 minutes. If you see the screen below, the file manager has already shut down the local server.
+  - Close **both** the preparation page and the file manager app, then reopen aaps-ci-preparation.html from the file manager and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
+
+  ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
+
+(aaps-ci-google-token-expired)=
+### Google Refresh Token Expired
+  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
+  - You will see an error indicating that the access token is invalid, as shown below:
+
+  ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.jpg)
+
+  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token and update the secret in your GitHub repository, then re-run the build workflow.
+  - If the authorization fails again, or Google does not ask for your consent anymore, remove the existing AAPS access from your Google Account first, see [below](#aaps-ci-google-remove-access).
+
+(aaps-ci-google-remove-access)=
+### Remove AAPS Access From Your Google Account And Restart The Authorization
+  - If the Google Drive authorization keeps failing, or you want to start again from a clean state, first remove the access you previously gave to AAPS, then redo the authorization.
+  - On your phone, open [https://myaccount.google.com](https://myaccount.google.com), tap **Security**, scroll down to **Your connections to third-party apps & services** and open the list of linked apps. You can also go directly to [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
+  - Tap **AAPS** in the list.
+
+  ![aaps_ci_google_access_1](../images/Building-the-App/CI/aaps_ci_google_access_1.png)
+
+  - The page shows the access you gave to AAPS (the Google Drive files used with the app). Tap **Delete all** to remove the connection, or tap **See details** to review it first.
+
+  ![aaps_ci_google_access_2](../images/Building-the-App/CI/aaps_ci_google_access_2.png)
+
+  - On the details page, tap **Remove all access** and confirm. AAPS no longer appears in the list of linked apps.
+
+  ![aaps_ci_google_access_3](../images/Building-the-App/CI/aaps_ci_google_access_3.png)
+
+  - Now restart the authorization cleanly: close **both** the preparation page and the file manager app, reopen aaps-ci-preparation.html from the file manager and redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps. Google will ask you to grant access again and the page will provide a new `GDRIVE_OAUTH2` token.
+  - Update the `GDRIVE_OAUTH2` secret in your GitHub repository with the new token, then re-run the build workflow.
+
+(aaps-ci-disable-software)=
+### Disable Software That May Interfere With OAUTH Verification
+  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAUTH key.
+
+(aaps-ci-actions-permission)=
+### Check GitHub Actions Permission Settings
+  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General).
+
+  ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
+
+`actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
+
+(aaps-ci-workflow-permissions)=
+### Check GitHub Workflow Permissions Settings
+  - If the build fails immediately with an "Invalid workflow file" error similar to the one below, the default workflow permissions of your repository are too restrictive:
+
+```
+Invalid workflow file
+The workflow is not valid. .github/workflows/aaps-ci.yml (Line: 361, Col: 3):
+Error calling workflow 'xxxxx/AndroidAPS/.github/workflows/cleanup-workflow-runs.yml@...'.
+The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'actions: none'.
+```
+
+  - Make sure Workflow permissions are set to “Read and write permissions” (Settings → Actions → General → Workflow permissions), then save and re-run the build workflow.
+
+  ![aaps_ci_workflow_permissions](../images/Building-the-App/CI/aaps-ci-workflow-permissions.jpg)
+
+(aaps-ci-password-special-characters)=
+### Build Fails At The Signing Step With A Password Containing Special Characters
+  - If the build fails when signing the APK although your password is correct, check whether your `KEYSTORE_PASSWORD` or `KEY_PASSWORD` contains `$`, a backtick, `"` or `\`. The build workflow parses these four characters and changes or truncates the password.
+  - Edit the secret in GitHub and put a backslash `\` in front of each of these four characters only. For example, for the password `abc$def"ghi`, enter `abc\$def\"ghi`.
+  - Every other character, including `%`, `*`, `#` and `!`, must stay exactly as it is. A backslash in front of them would become part of the password.
+  - Re-run the build workflow.
+  - The vertical bar `|` is a special case. The preparation page of [Option 1](#aaps-ci-option1) combines the keystore, passwords and alias into one `KEYSTORE_SET` secret separated by `|`, and the workflow splits it on that character. The password generated by the preparation page contains only letters and digits, so this cannot happen with Option 1. It can only happen if you assembled a `KEYSTORE_SET` secret yourself from a password containing `|`. In that case, delete `KEYSTORE_SET` and enter the separate secrets of [Option 2](#aaps-ci-option2) instead.

@@ -16,6 +16,8 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 * [Kayıp keystore](#troubleshooting_androidstudio-lost-keystore)
 * [Android Studio'da Sorun Giderme](TroubleshootingAndroidStudio)
+* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
+* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
 
 ### **Installing**
 

@@ -239,6 +239,8 @@ Můžete ukázat své výkazy z Nightscoutu (https://ADRESA-VAŠEHO-NS.com/repor
 
 Vypněte Google Play Protect. Zkontrolujte zda nemáte aktivní "čistící" aplikace (např. CCleaner atd.), a odinstalujte je. AAPS / 3 tečky menu / O / klikněte na odkaz "Ponechat aplikaci běžet na pozadí", abyste zrušili všechny optimalizace baterie.
 
+(FAQ-organize-backups)=
+
 ### How to organize my backups ?
 
 Nastavení exportujte pravidelně: po každé změně podu, po úpravě profilu, pokud jste splnili cíl, když změníte pumpu… A i když nedojde k žádným změnám, exportujte jednou měsíčně. Vždycky si ponechávejte několik starších exportů.

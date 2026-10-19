@@ -15,7 +15,7 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 
 A setup page on this site walks you through it. It takes about 10 minutes the first time:
 
-1. Create an empty **private** repository in your GitHub account.
+1. Create an empty **private** repository in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm.
 2. Add the **build workflow**, the file that tells GitHub how to build AAPS.
 3. Create or upload your **signing key** (the keystore).
 4. Give the key to your repository as a GitHub **secret**.
@@ -27,7 +27,7 @@ You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from 
 ```{admonition} Where the code comes from
 :class: note
 
-The setup page and the build workflow are part of this documentation: they are maintained and reviewed together with it. The <a href="../aaps-builder-build.yml">workflow</a> you add to your repository is short: it runs the [build steps](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml) kept in the documentation repository, pinned to one reviewed version. You can read both before you use them. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+The setup page and the build workflow are part of this documentation: they are maintained and reviewed together with it. The <a href="../_static/aaps-builder/aaps-builder-build.yml">workflow</a> you add to your repository is short: it runs the [build steps](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml) kept in the documentation repository, pinned to one reviewed version. You can read both before you use them. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
 ```
 
 (aaps-builder-before-you-start)=
@@ -97,11 +97,13 @@ Your fork's Google Drive access can't be copied either. To also save the builds 
 
 ## Open the setup page
 
-**→ <a href="../aaps-builder.html">Open the AAPS Builder setup page</a>**
+**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
 
-Keep this documentation page open in another tab: the steps below explain each part of the setup page in more detail.
+Keep this documentation page open: long-press the link above and choose **Open in new tab**. The steps below explain each part of the setup page in more detail.
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+
+The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
 
 ![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
@@ -113,9 +115,13 @@ This step creates an empty private repository in your GitHub account. Only you c
 
 1. Make sure you are logged in to github.com in this browser.
 
-2. In **Your GitHub username**, type your GitHub username.
+2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
 
 3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+
+   ```{tip}
+   **Already created an empty private repository yourself?** Type its exact name here, don't tap **Create my private repository**, and go to [step 2](#aaps-builder-step2).
+   ```
 
 4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`.
 
@@ -129,13 +135,11 @@ This step creates an empty private repository in your GitHub account. Only you c
 
    Scroll down: **Private**, **No template** and **Add README: Off** are already selected. Don't change anything, and don't add a README or other files.
 
-   ![Private, no template, no README](../images/Building-the-App/CI/AapsBuilder33_GitHubConfig.png)
-
 7. Scroll down and tap the green **Create repository** button.
 
    ![Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-Go back to the setup page tab.
+   GitHub shows your new, empty repository. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
 
 (aaps-builder-step2)=
 
@@ -165,7 +169,7 @@ The build workflow is a short text file that tells GitHub how to build AAPS. The
 Don't press your phone's **Back** button or pull the page down while the file editor is open: GitHub reloads the page and the text disappears. If that happens, tap **Restore** in the blue banner, or go back to the setup page and tap the button again.
 ```
 
-If the text area is empty, open **Updating the workflow, or the text area is empty** at the bottom of step 2 on the setup page: tap **Copy workflow** and paste it into the text area (long press on a phone).
+If the text area is empty, tap **Updating the workflow, or the text area is empty?** at the bottom of step 2 on the setup page: tap **Copy workflow** and paste it into the text area (long press on a phone).
 
 ```{warning}
 Only use the workflow from this setup page. Don't copy a build workflow from another website or repository: the workflow runs next to your signing key.
@@ -184,7 +188,7 @@ The app must be signed with your own key. Choose one of the two tabs. Read the [
 1. Tap **I already have a keystore**.
 2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
 3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list. For keystores made with Android Studio it is usually `key0`.
+4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
 5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
 6. Tap **Check and continue**.
 
@@ -200,7 +204,9 @@ The page checks the password and the alias on your device. **Keystore OK! Contin
 
    ![New key form with the password typed twice](../images/Building-the-App/CI/AapsBuilder41_NewKey.png)
 
-4. Tap **Download backup (aaps-keystore.jks)**. Keep these three together, somewhere safe off your phone (for example your own cloud storage):
+4. Tap **Download backup (aaps-keystore.jks)**. If Chrome asks **Download file again?**, an older backup with the same name is already on your phone: tap **Download again**. Chrome then saves the new key as `aaps-keystore (1).jks`: that is the file that goes with this key, keep it and don't mix it up with the older one.
+
+   Keep these three together, somewhere safe off your phone (for example your own cloud storage):
 
    - the file `aaps-keystore.jks`,
    - your password,
@@ -224,9 +230,9 @@ Step 4 unlocks when step 3 is done. Your key, its passwords and its alias are pa
 
 ![GitHub New secret form](../images/Building-the-App/CI/AapsBuilder11_NewSecret.png)
 
-3. In the **Name** field, type `KEYSTORE_SET`. You can use the **Copy** button next to it on the setup page.
+3. Switch to the setup page tab and tap **Copy name**. Switch back to the GitHub tab and paste it into the small **Name** field. The name is `KEYSTORE_SET`.
 
-4. On the setup page, tap **Copy secret**. In the **Secret** field on GitHub, paste it (long press on a phone).
+4. Switch to the setup page tab and tap **Copy secret**. Switch back to the GitHub tab and paste it into the big **Secret** box (long press on a phone). The secret is a very long code, thousands of characters: the setup page shows its first characters next to the button. Don't paste the word `KEYSTORE_SET` there.
 
 5. Tap **Add secret**. `KEYSTORE_SET` now shows under **Repository secrets**.
 
@@ -235,7 +241,7 @@ Step 4 unlocks when step 3 is done. Your key, its passwords and its alias are pa
 You only need to do this once.
 
 ```{tip}
-GitHub shows **Page not found** (404)? The username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
+GitHub shows **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
 ```
 
 (aaps-builder-step5)=
@@ -246,7 +252,7 @@ GitHub shows **Page not found** (404)? The username or repository name in step 1
 
    ![GitHub Build AAPS page with the Run workflow button](../images/Building-the-App/CI/AapsBuilder15_BuildPage.png)
 
-   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. Then continue with step 4 below.
+   If the **GitHub app** opens instead: tap **RUN WORKFLOW**, check the version and the variant, and tap **RUN WORKFLOW** again. The app may still show **Nothing to see here**: pull the list down to refresh it and see your build. Then continue with step 4 below.
 
 2. If GitHub asks, tap the green button to enable workflows.
 3. Tap **Run workflow**. A small form opens:
@@ -263,6 +269,10 @@ GitHub shows **Page not found** (404)? The username or repository name in step 1
 5. Wait 15 to 30 minutes. A green check means the build is done. A red cross means it failed: open the build to read the message, then see [troubleshooting](#aaps-builder-troubleshooting).
 
    ![Finished build with a green check](../images/Building-the-App/CI/AapsBuilder22_BuildDone.png)
+
+   ```{tip}
+   **E-mail when a build is done:** GitHub only e-mails you when a build fails. To also get an e-mail when it succeeds: on github.com, open your profile picture → **Settings** → **Notifications** → **System** → **Actions**, and untick **Only notify for failed workflows**.
+   ```
 
 If there is no **Build AAPS** or **Run workflow** button:
 
@@ -283,7 +293,9 @@ If there is no **Build AAPS** or **Run workflow** button:
    ```{admonition} The GitHub app opened instead of Chrome?
    :class: note
 
-   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome**. The build opens in Chrome: continue with the next step there.
+   The GitHub app cannot download builds. In the app, open the newest build, then tap **Artifacts ↗**, or tap the share icon at the top and choose **Chrome** (or **Copy link**, then paste the link in Chrome's address bar). The build opens in Chrome: continue with the next step there.
+
+   To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
    ```
 
    ![Finished build: status Success and 2 artifacts](../images/Building-the-App/CI/AapsBuilder50_RunSummary.png)
@@ -328,7 +340,7 @@ It needs one more secret, `GDRIVE_OAUTH2`. You get its value with the preparatio
 
    ![Setup page step 7](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
 
-   Create a secret named `GDRIVE_OAUTH2` (the **Copy** button copies the name), paste the value, and tap **Add secret**.
+   Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Paste your `GDRIVE_OAUTH2` value into the big **Secret** box and tap **Add secret**.
 
 From the next build, the APKs are also saved in Google Drive.
 
@@ -344,7 +356,7 @@ Your repository never builds anything by itself: you decide when to build, which
 2. Build the new version as in [step 5](#aaps-builder-step5). Keep `latest`, or type the release number.
 3. Download and install it as in [step 6](#aaps-builder-step6).
 
-**Updates of the build workflow:** your repository never downloads a new workflow by itself, and the build steps it runs are pinned to one reviewed version. When the workflow changes, the [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. To update, open step 2 of the setup page, then **Updating the workflow, or the text area is empty**:
+**Updates of the build workflow:** your repository never downloads a new workflow by itself, and the build steps it runs are pinned to one reviewed version. When the workflow changes, the [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. To update, open step 2 of the setup page, then tap **Updating the workflow, or the text area is empty?**:
 
 1. Tap **Copy workflow**, then **Open my workflow file**.
 2. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
@@ -362,13 +374,21 @@ To see why a build failed, open it from **Open my builds** on the setup page: th
 - **To run the build again** after a fix: open the failed build, tap **⋯** at the top, then **Re-run all jobs**, or start a new build as in [step 5](#aaps-builder-step5).
 
 - **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Secret KEYSTORE_SET is missing"** or **"KEYSTORE_SET is not valid"**: redo steps 3 and 4 of the setup page, and copy the secret again.
+- **"Secret KEYSTORE_SET is missing"**: do step 4 of the setup page.
+- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 3 of the setup page first if you closed it).
 - **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 3 and 4 of the setup page.
 - **"Version … does not exist"**: the version you typed is not an AAPS release. Use `latest`, or check the release number.
-- **"Page not found" (404) when the setup page opens GitHub**: the repository name in step 1 of the setup page does not match your repository. Type the exact name.
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 6](#aaps-builder-step6).
+- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
+- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
+- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 6](#aaps-builder-step6). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
 - **"Could not read the workflow file"** on the setup page: reload the page and tap the button again. The setup page must be opened from this documentation site.
 - **GitHub says the file already exists** when you commit the workflow: your repository already has a workflow. Update it instead, as explained in [Updating AAPS](#aaps-builder-updates).
 - **"Google Drive access has expired or was revoked"**: redo [step 7](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
 
 For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+
+```{toctree}
+:hidden:
+
+AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+```

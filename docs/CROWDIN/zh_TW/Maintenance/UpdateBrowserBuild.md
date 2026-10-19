@@ -1,4 +1,8 @@
-# 使用瀏覽器更新
+# Update with a browser (fork)
+
+```{tip}
+You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+```
 
 ## 自行建置，而不是下載
 

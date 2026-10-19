@@ -1,4 +1,8 @@
-# Update with a browser
+# Update with a browser (fork)
+
+```{tip}
+You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+```
 
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
