@@ -373,7 +373,7 @@ When using NSClient, all uploaders must be using the API V3. Since most are not 
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!).
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
 - This enables data to be read and written between both the Nightscout website and **AAPS**.
 - Double check for typos here if you are stuck in Objective 1.
 - Leave "Use websockets" enabled (recommended).
@@ -386,6 +386,8 @@ When using NSClient, all uploaders must be using the API V3. Since most are not 
 Synchronization choices will depend on the way you will want to use **AAPS**.
 
 You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+
+While client control is on (always in Simple Mode), these settings are hidden: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode), takes no changes made directly in Nightscout and uploads all its data.
 
 ### Alarm options
 
@@ -400,7 +402,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Remote control
 
-The **Remote control** subsection ("Allow client control") is part of the master ↔ client control feature. It is described on the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page.
+The switch "**Allow client control**" is no longer in these settings: it is at the top of **Manage → Authorized clients**, where the paired clients are managed. See the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page, including [hardened mode](#client-master-control-hardened-mode), which this switch turns on.
 
 ### Connection settings
 
