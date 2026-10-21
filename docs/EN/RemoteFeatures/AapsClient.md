@@ -43,7 +43,7 @@ On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAP
 
 1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
 2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone: the next two steps are then already done. Without a QR code, skip this step. (Android only: the scanner is not available on iOS yet.)
+3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Android only: the scanner is not available on iOS yet.)
 
    <!-- 📷 SCREENSHOT NEEDED: the "Set up from the master" step on the client. -->
 
@@ -51,11 +51,11 @@ On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAP
 
    ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel. You can do it now or at any time later from **Manage → Pair with master**.
+5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
 
    ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
 
 (aapsclient-pairing-with-the-master)=
 
@@ -68,9 +68,12 @@ On the **master**, open **Manage → Authorized clients** and add a client. Ther
 
 ![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-The wizard step changes to "*Paired with a master*", and on the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list:
+From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Paired from **Manage → Pair with master**, the screen shows "*Paired with a master*" and the phone's role:
 
-![The client wizard after successful pairing](../images/v4/AapsClient/aapsclient_wizard_paired.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+<!-- 📷 SCREENSHOT NEEDED: Manage → Pair with master after pairing. The image below is the wizard step, which the wizard
+     no longer shows after a pairing (it closes). -->
+
+![The client after successful pairing](../images/v4/AapsClient/aapsclient_wizard_paired.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
 
 After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. See [The client's own Nightscout token](#client-master-control-own-token).
 
