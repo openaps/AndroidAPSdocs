@@ -351,6 +351,11 @@ First try the **Reset RileyLink** button on the pump screen (see your pump's pag
 * [Master ↔ Client control](#client-master-control): what can be controlled and how pairing works,
 * [AAPSClient on a smartwatch](#remotecontrol-smartwatches).
 
+(FAQ-hardened-mode)=
+#### Treatments I enter on the Nightscout website are not applied
+
+That is [hardened mode](#client-master-control-hardened-mode). While client control is on — always in Simple Mode — **AAPS** takes changes only from paired clients, not from the Nightscout website or other apps. Enter them on a paired **AAPSClient** instead.
+
 ### Alerts and warnings
 
 #### I have a red warning badge (red triangle) / AAPS won't enable closed loop / Loop stays in LGS / I had a yellow triangle

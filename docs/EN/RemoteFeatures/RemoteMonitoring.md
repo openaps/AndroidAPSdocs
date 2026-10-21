@@ -10,7 +10,7 @@ __AAPS__ offers several features for remote monitoring of type 1 diabetic childr
 - Caregivers can remotely follow viewing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **AAPSClient apk** on their Android phone (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). Settings amended in __AAPS__ will synchronize with __AAPSClient__ and vice versa.
 - Caregivers can be alarmed by using **xDrip app in follower mode** on their Android phone if xdrip companion mode is set up.
 - Remote control of __AAPS__ using [SMS Commands](../RemoteFeatures/SMSCommands.md) is secured by two-factor authentication.
-- Remote control through __AAPSClient__ uses the signed command channel introduced in **AAPS** 4: the client must first be **paired** with the master, and every command is confirmed and executed by the master — see [Master ↔ Client control](#client-master-control).
+- Remote control through __AAPSClient__ uses the signed command channel introduced in **AAPS** 4: the client must first be **paired** with the master (with a QR code or a PIN), and every command is confirmed and executed by the master. Each caregiver's phone can get its own [role](#client-master-control-roles), from read-only to full control — see [Master ↔ Client control](#client-master-control).
 
 ## Tools and apps for remote monitoring
 

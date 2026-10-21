@@ -112,9 +112,13 @@ In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatm
 
 In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
 
+- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
+- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
+- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control).
+Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
 ```
 
 ---

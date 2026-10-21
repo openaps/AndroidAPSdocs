@@ -71,6 +71,10 @@ Beta 1 release date: 08-10-2026
 - Kotlin Multiplatform migration, client for Windows, Mac, Linux desktop and iOS @MilosKozak
 - [Scenes](../DailyLifeWithAaps/Scenes.md): save a set of actions and run them together @MilosKozak
 - [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md): send commands from a client phone to the master @MilosKozak
+  - [Client roles](#client-master-control-roles): Read-only, Meals, Caregiver or Admin for each client @MilosKozak
+  - [Hardened mode](#client-master-control-hardened-mode): with client control on, the master takes changes only from paired clients @MilosKozak
+  - Pairing with a QR code that also sets up Nightscout on the client, or with a PIN; the pairing secret is replaced right after pairing @MilosKozak
+  - [Own Nightscout token](#client-master-control-own-token) for each client, with only the rights a client needs @MilosKozak
 - [Insulin concentration](../AdvancedOptions/InsulinConcentration.md) support (U200, U500) across pumps, wizard and profiles @Philoul @MilosKozak
 - Insulin management: insulin catalogue, nicknames, selection in profile and wizard @Philoul
 - Calibration plugin @MilosKozak
