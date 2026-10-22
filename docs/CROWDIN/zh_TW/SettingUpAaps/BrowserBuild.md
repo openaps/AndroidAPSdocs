@@ -31,7 +31,7 @@
 你會在 GitHub 將 AAPS 原始碼建立一個副本（fork），使用準備檔案建立你的 keystore，建置完成的應用程式會儲存到你的 Google 雲端硬碟。可在 Android 裝置、電腦或 iPhone / iPad 上進行。請依下列四個步驟進行。
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+已經使用 fork 建置了嗎？請依照《<a href="../Maintenance/UpdateBrowserBuild.md">使用瀏覽器更新</a>》持續更新，或改用 AAPS Builder。若要切換，請先依照《<a href="#aaps-builder-from-fork">從先前的瀏覽器建置移轉</a>》，自你的 fork 取得金鑰庫的副本。
 ```
 
 ## 使用 fork 方法的裝置與軟體規格
