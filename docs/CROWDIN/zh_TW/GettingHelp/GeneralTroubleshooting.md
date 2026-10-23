@@ -16,8 +16,8 @@
 
 * [遺失的密鑰庫](#troubleshooting_androidstudio-lost-keystore)
 * [問題排除 AndroidStudio](TroubleshootingAndroidStudio)
-* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
-* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
+* [AAPS Builder 疑難排解](#aaps-builder-troubleshooting)與[使用 AAPS Builder 更新](#aaps-builder-updates)
+* [瀏覽器建置（CI）疑難排解](#aaps-ci-troubleshooting)
 
 ### **安裝中**
 

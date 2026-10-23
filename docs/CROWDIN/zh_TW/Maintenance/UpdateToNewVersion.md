@@ -14,10 +14,10 @@
 
 ## 使用瀏覽器版本更新 AAPS
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+你已經使用瀏覽器建置你的 AAPS 應用程式了嗎？請依你使用的方法，按照以下指示：
 
-- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder**（你的私人儲存庫，通常命名為 `my-aaps`）：[使用 AAPS Builder 更新 AAPS](#aaps-builder-updates)。無需同步 fork。
+- **Fork 與準備檔**（你自己的 AndroidAPS 副本）：[使用瀏覽器更新（fork）](./UpdateBrowserBuild.md)。
 
 ## 使用 Android Studio 更新 AAPS
 

@@ -1,7 +1,7 @@
-# Update with a browser (fork)
+# 使用瀏覽器更新（fork）
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+你是用 <strong>AAPS Builder</strong> 建置 AAPS 嗎？你不需要本頁內容：請參閱《<a href="#aaps-builder-updates">使用 AAPS Builder 更新 AAPS</a>》。
 ```
 
 ## 自行建置，而不是下載
@@ -13,7 +13,7 @@ You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AA
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+要切換到 AAPS Builder 嗎？<a href="../SettingUpAaps/BrowserBuildAapsBuilder.md">AAPS Builder</a> 是更簡單的瀏覽器建置：沒有需要同步的 fork，且你會直接從 GitHub 下載應用程式。你不必切換：本指南仍可使用。如果你要切換，請先依《<a href="#aaps-builder-from-fork">從先前的瀏覽器建置移轉</a>》中的說明，從你的 fork 取得金鑰庫的副本。否則新的建置將無法更新你手機上的 AAPS。
 ```
 
 ## 更新 AAPS 新版本的總覽

@@ -100,11 +100,11 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 2.  記下你的 keystore 文件密碼。
 
 
-How you save the keystore depends on your build method:
+如何儲存金鑰庫取決於你的建置方法：
 
-- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
-- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
-- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
+- **Android Studio（電腦）建置**：金鑰庫會在建置過程中建立——請參閱 [產生已簽署的 APK](#Building-APK-generate-signed-apk) 以了解儲存位置。
+- **AAPS Builder**：保留在你建立金鑰時，設定頁面提供的備份檔 `aaps-keystore.jks`，以及其密碼與別名。如果你上傳了自己的金鑰庫，請妥善保留該檔案。
+- **使用含 fork 的瀏覽器建置**：請使用專用的 [匯出金鑰庫](#ci-keystore-export) 工作流程，將副本下載到你的 Google Drive。
 
 這將確保每次建立**AAPS**的更新版本時，你都可以使用相同的 keystore 文件。平均而言，每年需要更新**AAPS**兩次。
 
