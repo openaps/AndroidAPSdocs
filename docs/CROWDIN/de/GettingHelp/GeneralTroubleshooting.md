@@ -16,8 +16,8 @@ Weitere nützliche Informationen können auch im [FAQ](../UsefulLinks/FAQ.md) st
 
 * [Verlorener Keystore](#troubleshooting_androidstudio-lost-keystore)
 * [Fehlerbehebung Android Studio](TroubleshootingAndroidStudio)
-* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
-* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
+* [Fehlerbehebung AAPS Builder](#aaps-builder-troubleshooting) und [Aktualisieren mit dem AAPS Builder](#aaps-builder-updates)
+* [Fehlerbehebung Browser-Build (CI)](#aaps-ci-troubleshooting)
 
 ### **Installation**
 
