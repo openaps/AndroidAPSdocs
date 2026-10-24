@@ -1,32 +1,32 @@
 (aaps-ci-troubleshooting)=
 
-# Browser build: troubleshooting
+# Browser-Build: Fehlerbehebung
 
 ```{note}
-This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+Diese Seite sammelt Tipps zur Fehlerbehebung beim [Browser-Build](../SettingUpAaps/BrowserBuild.md).
 
-Using **AAPS Builder**? Start with its own [troubleshooting section](#aaps-builder-troubleshooting). The Google Drive sections below also apply to it.
+Du nutzt den **AAPS-Builder**? Fang mit dessen eigenem [Abschnitt zur Fehlerbehebung](#aaps-builder-troubleshooting) an. The Google Drive sections below also apply to it.
 ```
 
-## AAPS-CI Troubleshooting
+## AAPS-CI Fehlerbehebung
 
 (aaps-ci-preparation-web)=
-### aaps-ci-preparation web page
-  - When you open aaps-ci-preparation.html using a file manager, it will start a temporary local server on your phone to display the webpage and receive the Google refresh token.
-  - This local server times out after about 10 minutes. If you see the screen below, the file manager has already shut down the local server.
-  - Close **both** the preparation page and the file manager app, then reopen aaps-ci-preparation.html from the file manager and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
+### aaps-ci-preparation Webseite
+  - Wenn Du die Seite „aaps-ci-preparation.html“ mit einem Dateimanager öffnest, wird ein temporärer lokaler Server auf Deinem Smartphone gestartet, um so die Webseite anzuzeigen und das Google Refresh Token zu erhalten.
+  - Dieser lokale Server schaltet sich nach etwa 10 Minuten ab. Siehst Du den Bildschirm unten, hat der Dateimanager den lokalen Server bereits beendet.
+  - Schließe **sowohl** die Vorbereitungsseite <0>als auch</0> die Dateimanager-App. Öffne dann aaps-ci-preparation.html erneut über den Dateimanager und schließe die restlichen Schritte ab. Das ist vor allem nötig, wenn Du bei der Einrichtung die erste Verbindung zu Google herstellst.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-google-token-expired)=
 ### Google Refresh Token Expired
-  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
-  - You will see an error indicating that the access token is invalid, as shown below:
+  - Google OAuth2 Refresh Token laufen nach 6 Monaten Inaktivität ab und können auch aus anderen Gründen ungültig werden (z. B. Password des Google-Kontos wurde geändert oder der Zugriff wurde manuell entzogen). Weitere Details dazu findest Du in der [Google OAuth2 Dokumentation](https://developers.google.com/identity/protocols/oauth2).
+  - Du wirst in diesem Fall die Fehlermeldung sehen, dass das Access Token ungültig ist:
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.jpg)
 
-  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token and update the secret in your GitHub repository, then re-run the build workflow.
-  - If the authorization fails again, or Google does not ask for your consent anymore, remove the existing AAPS access from your Google Account first, see [below](#aaps-ci-google-remove-access).
+  - Wenn Dein „Build“ wegen eines abgelaufenen oder widerrufenen Google-Refresh-Tokens fehlgeschlagen ist, musst Du die Schritte zur [Google Drive Autorisierung](#aaps-ci-google-drive-auth) wiederholen, damit ein neues `GDRIVE_OAUTH2`-Token generiert wird. Das „Secret“ musst Du in Deinem GitHub Repository aktualisieren und dann den Build-Workflow erneut starten.
+  - Schlägt die Autorisierung erneut fehl oder fragt Google nicht mehr nach Deiner Zustimmung, entferne zuerst den bestehenden AAPS-Zugriff aus Deinem Google-Konto, siehe unten.
 
 (aaps-ci-google-remove-access)=
 ### Remove AAPS Access From Your Google Account And Restart The Authorization
