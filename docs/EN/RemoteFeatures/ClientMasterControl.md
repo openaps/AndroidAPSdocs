@@ -84,10 +84,7 @@ Tap the **+** button (bottom right) to add a client. In the **New client** dialo
 2. Choose **how the phone is set up** (see the table below).
 3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
 
-<!-- 📷 SCREENSHOT NEEDED: the New client dialog on the master with the three ways
-     (QR code: Nightscout and pairing / QR code: Nightscout only / PIN) and the role row.
-     Replaces new_client_master.png, which shows the older dialog with the name only. -->
-![New client dialog on the master: enter a name for the client device](../images/v4/ClientMaster/new_client_master.png)
+![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
 
 | Way | What the new phone gets | Use it when |
 |---|---|---|
@@ -106,8 +103,7 @@ Tap **OK**: the master makes the client's Nightscout token and shows a **QR code
 Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
 ```
 
-<!-- 📷 SCREENSHOT NEEDED (optional): cannot be taken from the phone, because AAPS blocks
-     screenshots of the QR code. A photo of the screen with a blurred code would do. -->
+![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
 
 #### With a PIN
 
@@ -134,8 +130,7 @@ The first time, **AAPSClient** asks for the **camera** permission. If you refuse
 
 Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
 
-<!-- 📷 SCREENSHOT NEEDED: the client's "Set up from the master" wizard step, and the
-     "Use this code?" confirmation on the client. -->
+![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
@@ -165,8 +160,7 @@ From the master's **Authorized clients** screen you can, at any time:
 
 Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
 
-<!-- 📷 SCREENSHOT NEEDED: the Authorized clients list with a client card showing its role
-     buttons and "Own Nightscout token", and the "Read Nightscout only" section below it. -->
+![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
@@ -365,14 +359,13 @@ For Nightscout / synchronization problems first see [Troubleshooting NSClient](.
 <!-- =====================================================================
      SCREENSHOTS STILL TO ADD:
        1. (optional) Wear OS confirmation relayed from the master
-       2. master: New client dialog with the three ways and the role row (replaces new_client_master.png)
-       3. master: Authorized clients list with role buttons, "Own Nightscout token" and "Read Nightscout only"
-       4. client: "Set up from the master" wizard step and the "Use this code?" confirmation
-       (The QR code screen itself cannot be captured: AAPS blocks screenshots there.)
      Already included:
-       - authorized_clients_master.png       (master: Authorized clients list, Active client)
+       - authorized_clients_master.png       (master: Allow client control, hardened mode, client card, + button)
+       - authorized_clients_roles.png        (master: client card with roles, Read Nightscout only section)
+       - new_client_master.png               (master: New client dialog, three ways and role row)
+       - qr_code_master.png                  (master: pairing QR code with countdown, code blurred; console screenshot)
+       - aapsclient_wizard_from_master.png   (client: Set up from the master wizard step)
        - pair_with_master_unpaired.png       (client: pairing screen, unpaired PIN entry)
-       - new_client_master.png               (master: New client name dialog)
        - pairing_pin_master.png              (master: one-time pairing PIN — expired demo PIN)
        - pair_with_master_client.png         (client: pairing screen, paired state)
        - confirmation_master_authored.png    (client: master-authored scene confirmation)
