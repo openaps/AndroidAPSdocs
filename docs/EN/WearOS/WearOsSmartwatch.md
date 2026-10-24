@@ -47,6 +47,37 @@ You choose on the phone: open the **Wear** plugin and, under **Watchface install
 
 On watches running Wear OS 5 or older this setting is ignored (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
 
+(wearos-complications-watchface-setup)=
+
+### Complications watchface — recommended setup
+
+The **Complications watchface** has seven complication slots. Long-press the watchface, tap **Customize**, and pick a data source for each slot. The slots are numbered as in the watch face editor: **1** left, **2** centre, **3** right, **4** the graph, **5** bottom, **6** top-left and **7** top-right.
+
+| Default setup | Alternative setup |
+| --- | --- |
+| ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
+
+| Slot | Position | Default | Alternative |
+| --- | --- | --- | --- |
+| 1 | Left | IoB Icon | CoB & IoB |
+| 2 | Centre | Blood Glucose | Blood Glucose |
+| 3 | Right | CoB Icon | BR & Target |
+| 4 | Graph | BG Graph | BG Graph |
+| 5 | Bottom | BR & Target | Uploader/Phone Battery |
+| 6 | Top-left | Running mode | Running mode |
+| 7 | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+
+The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+
+```{tip}
+Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+```
+
+```{admonition} No complication data while the watch is locked
+:class: note
+If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+```
+
 ### Wear OS 3
 
 Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV), Easy Fire Tools (described below) or ADB.  
