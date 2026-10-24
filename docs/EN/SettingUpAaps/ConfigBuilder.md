@@ -216,7 +216,7 @@ Scroll down to see the other sources:
 * Tomato (MiaoMiao) - Tomato App for MiaoMiao device
 * [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
 * Intelligo - Intelligo App
-* Syai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
+* Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
 * SI App - patched SI App or Sibionics App for Sibionics CGM
 * Sino App - patched app for Sinocare CGM
 * Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)

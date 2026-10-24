@@ -127,7 +127,7 @@ To put a built-in preset back the way it shipped, select it and tap the **↺ Re
 - **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
 - **🗑️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **⋮** menu in the top bar and choose **Reorder**, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
 
 Your presets are part of the synced configuration, so they are shared across your master and paired clients.
 
@@ -179,7 +179,7 @@ While the editor differs from a built-in preset's factory values, a **↺ Revert
 
 ## How do I cancel a Temp-Target?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears. Tap it and confirm:
+While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
 
 ![Cancelling a running temp target](../images/TempTarget9.png)
 
@@ -194,7 +194,7 @@ Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise,
 
 Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating _'Enable SMB with high temp target'_ in **Settings** → **OpenAPS SMB** (see further below):
 
-- In (Advanced, objective 9): the user can enable _“High temp target raises sensitivity”_ for **Temp-Targets** of 100 mg/dL or 5.5 mmol/L or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- In (Advanced, objective 9): the user can enable _“High temp target raises sensitivity”_ for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
 
 - In (Advanced, objective 9): the user can deactivate _“Enable SMB with high temp target”_, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
 
@@ -211,7 +211,7 @@ New users to **AAPS** may need to experiment and personalize their **Temp-Target
 
 Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduced insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable _'High temp target raises sensitivity'_ for **Temp-Targets** higher than or equal to 100 mg/dL or 5.5 mmol/L in OpenAPS **SMB**. Then **AAPS** is more sensitive. 
+Advanced, objective 9: users can enable _'High temp target raises sensitivity'_ for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive. 
 
 Additionally, if _'Enable SMB with high temp target'_ is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, _'Enable SMB with low temp target'_ or _'Enable SMB always'_ enabled and OpenAPS **SMB** active.
 
@@ -224,7 +224,7 @@ This can be an important tool for those users who do not pre bolus, however the 
 
 You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have _'Low temp target lowers sensitivity'_, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be less than 100 mg/dL or 5.5 mmol/L.
+Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have _'Low temp target lowers sensitivity'_, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
 
 ## How do I turn off SMB during Temp-Targets?
 

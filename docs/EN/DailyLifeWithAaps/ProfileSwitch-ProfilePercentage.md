@@ -68,7 +68,7 @@ The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️
 
 ### Reordering profiles
 
-If you have more than one profile you can choose their order in the carousel: tap the **⋮** menu in the top bar and choose **Reorder**. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
 
 ![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
 

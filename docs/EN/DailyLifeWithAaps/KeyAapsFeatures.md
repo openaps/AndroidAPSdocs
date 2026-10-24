@@ -70,7 +70,7 @@ Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to in
 
 ![SMBs on main graph](../images/SMBs.png)
 
-SMBs are shown on the main graph with blue triangles. Tap on the triangle to see how much insulin was delivered, or use the [Treatments history](#aaps-screens-treatments).
+SMBs are shown on the [IOB graph](#aaps-screens-iob) with blue triangles. [Press and hold](#aaps-screens-graph-press-and-hold) the graph at a triangle to see how much insulin was delivered, or use the [Treatments history](#aaps-screens-treatments).
 
 **SMB's** features contain some safety mechanisms:
 
@@ -176,9 +176,9 @@ When enabled, new settings become available.
 (Open-APS-features-enable-smb-with-high-temp-targets)=
 #### Enable SMB with high temp target
 
-If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as anything above 100 mg/dL or 5.6 mmol/L, regardless of **Profile** target). Use caution when enabling it: **SMBs** can become overly aggressive if your settings are not well tuned or if your **Profile** is subject to frequent variation (for example, with children).
+If this setting is enabled, **SMBs** will still be delivered even if the user has selected a high **Temp Target** (defined as 100 mg/dL or 5.6 mmol/L and above, regardless of **Profile** target). Use caution when enabling it: **SMBs** can become overly aggressive if your settings are not well tuned or if your **Profile** is subject to frequent variation (for example, with children).
 
-This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** above 100 mg/dL or 5.6 mmol/L. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB — apart from a low **Temp Target** such as **Eating Soon** (or any **Temp Target** below 100 mg/dL or 5.6 mmol/L), which may still deliver **SMBs** to drive **BG** towards the target.
+This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, **SMBs** can be disabled by setting a **Temp Target** of 100 mg/dL or 5.6 mmol/L and above. This option will also disable **SMBs** regardless of what other condition is trying to enable SMB — apart from a low **Temp Target** such as **Eating Soon** (or any **Temp Target** of 98 mg/dL or 5.4 mmol/L and below), which may still deliver **SMBs** to drive **BG** towards the target.
 
 If this setting is enabled, **SMB** will only be enabled with a high temp target if **Enable SMB with low temp target** is also enabled. 
 
@@ -196,7 +196,7 @@ If this setting is enabled, SMB is enabled when the COB is greater than 0.
 This setting is not visible if "Enable SMB always" is switched on.
 
 #### Enable SMB with low temp target
-If this setting is enabled, SMB is enabled when a temp target is set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp target** is disabled, SMB will be enabled when a low temp target is set (below 100 mg/dL or 5.6 mmol/L) but disabled when a high temp target is set.
+If this setting is enabled, SMB is enabled when a temp target is set (eating soon, activity, hypo, custom). If this setting is enabled but **Enable SMB with high temp target** is disabled, SMB will be enabled when a low temp target is set (98 mg/dL or 5.4 mmol/L and below) but disabled when a high temp target is set.
 
 This setting is not visible if "Enable SMB always" is switched on.
 

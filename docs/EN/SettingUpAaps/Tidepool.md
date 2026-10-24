@@ -30,13 +30,13 @@ Note: the Tidepool organization has brought the iOS Loop product to market with 
 
 ![Enable Tidepool](../images/v4/Tidepool/tidepool_enable.png)
 
-- Tap "**Open plugin**" underneath Tidepool, then open the **⋮ menu** in the top-right corner and select "**Login**"
+- Tap "**Open plugin**" underneath Tidepool, then tap the **Login** icon (an arrow going into a door) in the top-right corner
 
 - A browser window opens on the Tidepool login page. Log in with the email address and password you created in Step 1 above:
 
 ![Tidepool login page](../images/v4/Tidepool/tidepool_login.png)
 
-- After a successful login the browser closes and the Tidepool screen shows the status "**SESSION_ESTABLISHED**"; the log below documents the data uploads. If the login fails, confirm your credentials are correct and that you have verified your email address with Tidepool.
+- After a successful login the browser closes and the Tidepool screen shows the status "**Connected**"; the log below documents the data uploads. If the login fails, confirm your credentials are correct and that you have verified your email address with Tidepool.
 
 ![Tidepool connected](../images/v4/Tidepool/tidepool_status.png)
 
@@ -47,16 +47,20 @@ Note: the Tidepool organization has brought the iOS Loop product to market with 
 For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
 
 (tidepool-menu)=
-## The Tidepool menu
+## The Tidepool buttons
 
-The **⋮ menu** in the top-right corner of the Tidepool screen offers:
+In the top-right corner of the Tidepool screen:
 
-- "**Login**" and "**Logout**" — connect to or disconnect from your Tidepool account.
+- The **Login** or **Logout** icon — connect to or disconnect from your Tidepool account. Only one of them is shown: **Login** while you are logged out, **Logout** while you are logged in. **AAPS** asks you to confirm before it logs you out.
+- The gear icon — the Tidepool settings.
+
+The buttons at the bottom of the Tidepool screen:
+
 - "**Upload now**" — upload new data straight away instead of waiting for the next automatic upload.
 - "**Full synchronization**" — upload all data stored in **AAPS** again.
 - "**Purge all data**" — delete **all** data that **AAPS** has uploaded to your Tidepool account. This cannot be undone. Use it only to remove wrong or duplicate data, then run "**Full synchronization**" to upload your data again.
 - "**Clear log**" — empty the log shown on the Tidepool screen.
 
-![The Tidepool menu](../images/v4/Tidepool/tidepool_menu.png)
+![The Tidepool screen and its buttons](../images/v4/Tidepool/tidepool_menu.png)
 
 In Tidepool, the data uploaded by **AAPS** 4 is shown under the device name **AAPS**. See [What changed in AAPS v4](#v4changes-tidepool) if you used Tidepool with an older version. 

@@ -54,6 +54,7 @@ There are several blogs with good tips to help you understand the practicalities
   * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (archived copy)
 
 (what-emergency-equipment-is-recommended-to-take-with-me)=
+(FAQ-emergency-equipment)=
 ### What emergency equipment is recommended to take with me?
 You have to have the same emergency equipment with you like every other T1D with insulin pump therapy.  When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
 

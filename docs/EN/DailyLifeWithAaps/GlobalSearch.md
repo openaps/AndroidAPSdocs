@@ -57,6 +57,7 @@ While the local search runs, **AAPS** also queries the official **AndroidAPS doc
 
 ![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
 
+- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
 - Tapping a documentation result opens that page in your **browser**.
 - Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
 

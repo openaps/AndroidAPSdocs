@@ -74,10 +74,20 @@ The running total is shown on the result page, so you always see the amount you 
 
 If **AAPS** had to limit the dose, for example because the calculated bolus is above your **max bolus** setting, a warning line in amber below the total says so (for example *"Bolus constraint applied"*). The same applies to a limited carbs amount.
 
-```{admonition} This is not the same as Wizard Percentage
+```{admonition} This is not the same as Calculator Percentage
 :class: note
-The **Wizard Percentage** setting (see [Commands settings](#WearOsSmartwatch-commands-settings)) lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
+The **Calculator Percentage** setting (see [Commands settings](#WearOsSmartwatch-commands-settings)) lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
 ```
+
+(WearOsSmartwatch-wizard-meal-type)=
+
+## Choosing the meal type in the watch wizard
+
+The watch wizard can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch settings (see [Commands settings](#WearOsSmartwatch-commands-settings)).
+
+* After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Each icon shows the carbs it gives, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
+* The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
+* The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
 
 ## Settings (in wear watch)
 
@@ -126,13 +136,14 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 ### Commands settings
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
+* **Calculator Meal Type** (default `Off`): show the [Meal type page](#WearOsSmartwatch-wizard-meal-type) (bread, cake, pizza) in the watch wizard
+* **Calculator in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
 * **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
 * **Single Target** (default `On`):
   * `On`: you set a single value for TT
   * `Off`: you set Low target and high target for TT
 
-* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+* **Calculator Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
 (Watchfaces-complications)=
 
@@ -252,14 +263,14 @@ The Temp Target Tile can request a temporary target based on AAPS phone presets.
 * **Hypo**; to raise the target during hypo treatment
 * **Eating soon**; to lower the target to raise the insulin on board
 * **Manual**; set a custom temporary target and duration
-* **Cancel**; to stop the current temporary target
+* **Cancel**; to stop the current temporary target. The **Cancel** button is shown on the tile only while a temporary target is running.
 
 ![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
 
 
 ### AAPS(QuickWizard)Tile
 
-The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](#Preferences-quick-wizard). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
+The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](#Preferences-quick-wizard). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. If more than four QuickWizards are valid at the same time, the tile shows the first four, in the order set on the phone. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
 
 ![Wear actions tile and phone configuration](../images/quickwizard_watch_phone.png)
 

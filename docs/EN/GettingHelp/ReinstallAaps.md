@@ -63,9 +63,9 @@ This step is not mandatory but recommended if you use [DynISF](#Open-APS-feature
 
 Make sure Nightscout has all your data before you uninstall.
 
-Open **NSClient**, tap the menu (⋮) and **Full synchronization**, then **OK**.
+Open **NSClient**, tap the **Full synchronization** button at the bottom of the screen, then **OK**.
 
-![NSClient menu with Full synchronization](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
+![NSClient screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
 
 *Note: the time necessary depends on your Nightscout hosting service.*
 
@@ -134,9 +134,9 @@ Open the menu (☰) > [**Configuration**](../SettingUpAaps/ChangeAapsConfigurati
 
 ![Communication with the NSClientV3 Open plugin button](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
 
-Tap the menu (⋮) > **Full synchronization** and **OK**. The database is new, so you can answer the cleanup question either way.
+Tap the **Full synchronization** button at the bottom of the screen and **OK**. The database is new, so you can answer the cleanup question either way.
 
-![NSClientV3 menu with Full synchronization](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
+![NSClientV3 screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
 
 **AAPS** loads your data from Nightscout. The log shows **Full sync finished** when it is done.
 

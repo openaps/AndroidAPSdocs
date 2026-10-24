@@ -259,7 +259,7 @@ Thresholds can be set in [Status lights](#Preferences-status-lights).
 (aaps-screens-main-graph)=
 ### Section D - Main graph
 
-![Main graph](../images/Home2020_MainGraph.png)
+![Main graph](../images/main/main_graph.png)
 
 The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
 
@@ -268,12 +268,14 @@ Use scroll and pinch-zoom gestures on the graph to change the visible time frame
 The green area reflects your target range.
 
 This information is also shown on this graph :
-* Boluses: blue triangle on the BG curve and insulin amount
-* Carbs entries: orange triangle on the BG curve and carb amount
+* Manual boluses: blue triangle just above the BG curve, pointing down at the reading of that moment, with the insulin amount
+* Carbs entries: orange triangle just below the BG curve, pointing up at the reading, with the carb amount. A meal entered with its bolus looks like one marker, split by the reading.
+* The triangles come in three sizes (small, medium, large), following the amount compared with the largest of the day. If there is no BG reading at that time (sensor gap), the triangle is drawn at the bottom of the graph.
+* BG checks and calibrations: drawn at their own measured value, so you can compare them with the sensor curve
 * Target as defined in the profile or modified by temporary target: green line
-* Profile switches: pencil icons at the top of the graph
-* Loop status: color band at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors (in the screenshot: purple = LGS, grey = suspended/disconnected). The history of these changes is listed in [Running mode](#AapsScreens-running-mode)
-* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [OpenAPS SMB settings](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
+* Profile switches: star icons at the top of the graph
+* Loop status: color band at the top of the graph when the [running mode](#AapsScreens-loop-status) is anything else than closed loop: blue = open loop, purple = LGS, red = loop disabled, yellow = loop suspended, grey = pump disconnected, orange = superbolus (in the screenshot: purple, then yellow). The history of these changes is listed in [Running mode](#AapsScreens-running-mode)
+* [SMBs](#Open-APS-features-super-micro-bolus-smb) are not drawn on the BG graph (there would be one every few minutes): they are shown on the [IOB graph](#aaps-screens-iob).
 
 Tap a **BG check** in the graph to see its value, and its note if you wrote one.
 
@@ -286,6 +288,8 @@ Tap a **BG check** in the graph to see its value, and its note if you wrote one.
 * any bolus, SMB or carbs at that time, with the same triangles as in the graphs
 
 Keep your finger on the screen and move it left or right to go from one reading to the next. You feel a light tick at each reading, and the graph does not scroll while you do this. The pop-up stays for 2 seconds after you lift your finger.
+
+This works the same way on the [additional graphs](#aaps-screens-additional-graphs) below the BG graph (IOB, COB...): press and hold any of them.
 
 ![Press and hold the BG graph: the pop-up shows time, BG, IOB and basal](../images/main/graph_press_and_hold.png)
 
@@ -369,11 +373,12 @@ The **thin yellow** line shows the activity of Insulin.
 It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
 
 (AapsScreens-section-g-additional-graphs)=
+(aaps-screens-additional-graphs)=
 ### Section E - Additional graphs
 
 You can activate additional graphs below the main graph. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and cannot be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
 
-The additional graphs follow the main graph: when you scroll or zoom the BG graph, they move with it. They have no time labels of their own — read the time on the BG graph.
+The additional graphs follow the main graph: when you scroll or zoom the BG graph, they move with it. A sideways drag on an additional graph also scrolls all the graphs. They have no time labels of their own — read the time on the BG graph.
 
 To configure an additional graph, press the **pencil** icon in its top-right corner:
 
@@ -403,6 +408,8 @@ Active insulin including boluses **and basal**.
 Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
 
 If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+
+SMBs are shown on this graph as blue triangles, in three sizes following the amount compared with the largest SMB of the day.
 
 IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
 
@@ -656,6 +663,8 @@ In the **Manage** sheet, scroll down and press **Careportal** to show these entr
 
 ![Exercise dialog](../images/dialogs/careportal_exercise.png)
 
+In all these dialogs (**Prime/Fill**, **Sensor Insert**, **Pump Battery Change** and the careportal entries), the time of the event uses the same **Time** row as the [insulin dialog](#aaps-screens-buttons-insulin) and the bolus wizard: use **-** / **+** to move the time in 5-minute steps (up to one week back and 12 hours ahead), or tap the chevron to pick any date and time.
+
 ### Tools
 
 (Aapsscreens-site-rotation)=
@@ -884,7 +893,7 @@ Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing y
 
 Open the **menu** (☰) and select **Statistics**.
 
-Gives you statistics about your Total Daily Dose and Time In Range. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Gives you statistics about your Total Daily Dose, Time In Range, your glucose profile over the day (AGP) and your insulin cycle pattern, on four tabs. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 ## Profile Helper

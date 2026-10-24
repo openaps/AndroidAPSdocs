@@ -25,7 +25,7 @@
 
 - It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
 - The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
-- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands.
+- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands. A **Garmin** watch connected to a client can show the data, but carbs it sends are not entered and it cannot connect or disconnect the pump: the client shows a message, and you enter them in **AAPS** instead.
 
 Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
 

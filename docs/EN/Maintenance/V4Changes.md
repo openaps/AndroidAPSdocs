@@ -98,6 +98,8 @@ In **AAPS** v3, you could change the DIA of the insulin you were using at any ti
 
 In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
 
+When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+
 ```{admonition} What you need to do
 :class: important
 To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
@@ -151,7 +153,7 @@ In **AAPS** v4, the data is shown under the device name **AAPS**. After the upda
 :class: important
 Usually nothing: new data simply appears under **AAPS**.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use "**Purge all data**" from the [Tidepool menu](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
 ```
 
 ---
