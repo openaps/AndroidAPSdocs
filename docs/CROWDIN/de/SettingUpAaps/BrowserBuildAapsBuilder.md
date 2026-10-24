@@ -103,7 +103,7 @@ Keep this documentation page open: long-press the link above and choose **Open i
 
 The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Only your GitHub username is sent to GitHub, to check that it exists. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Nur Dein GitHub-Benutzername geht an GitHub, um zu prüfen, ob es ihn gibt. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
 
 ![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
@@ -241,7 +241,7 @@ Step 4 unlocks when step 3 is done. Your key, its passwords and its alias are pa
 You only need to do this once.
 
 ```{tip}
-GitHub shows **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
+GitHub shows **Page not found** (404)? Prüfe zuerst, ob Du in diesem Browser bei github.com angemeldet bist: Bei privaten Repositorys zeigt GitHub 404 an, wenn Du nicht angemeldet bist. Otherwise the username or repository name in step 1 doesn't match your repository. Check the name on github.com, correct it in step 1, and tap the button again.
 ```
 
 (aaps-builder-step5)=
