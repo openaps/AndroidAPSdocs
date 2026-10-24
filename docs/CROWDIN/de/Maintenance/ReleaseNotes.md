@@ -9,9 +9,9 @@ Wenn eine neue Version verfügbar wird, wirst Du mit einer Meldung, wie dieser, 
 
 Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
 
-See [End of life](EndOfLife.md) for AAPS version end dates.
+Die Enddaten der AAPS-Versionen findest Du unter [Supportende](EndOfLife.md).
 
-**ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. Dies ist eine Chance die Sicherheit für jeden **AAPS**-Nutzenden und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
+**Ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. Dies ist eine Chance die Sicherheit für jeden **AAPS**-Nutzenden und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
 
 (maintenance-android-version-aaps-version)=
 
@@ -60,20 +60,20 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 
 ## Version 3.4.2.6
 
-- Equil: improve stability @MilosKozak
+- Equil: Verbesserung der Stabilität @MilosKozak
 
 (version3425)=
 
 ## Version 3.4.2.5
 
-- Equil fix race condition @MilosKozak
+- Equil: Race Condition behoben @MilosKozak
 
 (version3424)=
 
 ## Version 3.4.2.4
 
-- Equil fixes @MilosKozak
-- NS profile sync fix @MilosKozak
+- Equil: Fehlerbehebungen @MilosKozak
+- NS: Profilsynchronisation korrigiert @MilosKozak
 
 ## Version 3.4.2.3
 - Dash: Drift-Problem behoben @nl-ruud
