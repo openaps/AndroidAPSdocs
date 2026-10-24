@@ -1,7 +1,7 @@
-# Update with a browser (fork)
+# Browser-Update (Fork)
 
 ```{tip}
-You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+Du hast AAPS mit dem **AAPS Builder** erstellt? Dann brauchst Du diese Seite nicht. Siehe [Aktualisieren mit dem AAPS Builder](#aaps-builder-updates).
 ```
 
 ## Kein Download möglich - APK muss selbst erstellt werden
@@ -14,7 +14,7 @@ Das musst Du nur beim ersten Mal machen. Für die danach folgenden Updates, kann
 ```
 
 ```{tip}
-**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
+**Umstieg auf den AAPS Builder?** Der [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) ist der einfachere Browser-Build: Es gibt keinen Fork, der synchronisiert werden muss, und Du lädst die App direkt von GitHub herunter. Umsteigen musst Du nicht, diese Anleitung funktioniert weiterhin. Wenn Du umsteigst, besorge Dir zuerst eine Kopie Deines Keystores aus Deinem Fork, wie unter [Umstieg vom bisherigen Browser-Build](#aaps-builder-from-fork) beschrieben. Sonst kann der neue Build das AAPS auf Deinem Smartphone nicht aktualisieren.
 ```
 
 ## Übersicht zum Aktualisieren auf eine neue AAPS-Version mit einem Browser
