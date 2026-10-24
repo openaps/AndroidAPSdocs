@@ -21,7 +21,7 @@ Die Tabelle zeigt nicht für jede AAPS-Version ein Enddatum. Fehlt Deine Version
 
 <div id="aaps-eol-versions" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">AAPS version</th><th scope="col">End date</th></tr></thead>
+    <thead><tr><th scope="col">AAPS-Version</th><th scope="col">Enddatum</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
@@ -34,7 +34,7 @@ Um eine AAPS-Version für Dein Smartphone auszuwählen, nutze die [Hinweise zur 
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
-    <thead><tr><th scope="col">Android API level</th><th scope="col">AAPS version listed</th></tr></thead>
+    <thead><tr><th scope="col">Android-API-Level</th><th scope="col">Aufgeführte AAPS-Version</th></tr></thead>
     <tbody></tbody>
   </table>
 </div>
