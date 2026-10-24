@@ -19,7 +19,7 @@ Hier finden sich die besonderen Merkmale des **Omnipod DASH** („DASH“) und d
 ## Bekannte Omnipod DASH AAPS-Einschränkungen/Probleme
 - Android 16 benötigt eine **AAPS**-Version 3.3.2.1 oder höher.
 - Generell wird empfohlen, **AAPS** auf Android 14 oder 16 auszuführen. Die Community hat im Zusammenhang mit Android 15 viele [Probleme](https://github.com/nightscout/AndroidAPS/issues/3471) gemeldet. Wenn Du Android 15 nutzt, wirst Du sehr wahrscheinlich das „Bluetooth Bonding“ aktivieren müssen, um Pods erfolgreich aktivieren und nutzen zu können. Schaue im Abschnitt [Allgemeine Problembehandlung](../GettingHelp/GeneralTroubleshooting.md) nach, wenn Du mehr über die „Bonding Einstellungen“ erfahren möchtest.
-- Temporäre Änderungen der Basalrate (die häufig im Closed Loop in der Nacht auftreten) führen zu einer Insulin-Unterversorgung. Dies ist praktisch eine hardwareseitige Beschränkung des Omnipod DASH. Das Problem wurde in AAPS 3.4.2.3 adressiert, allerdings muss die Funktionalität aktiv freigeschaltet werden (Opt-In). Follow the [Basal Drift Fix Instructions](#omnipod-dash-basal-drift-fix) to enable it. Weitergehende Informationen zur Problemlösung findest Du im [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783).
+- Temporäre Änderungen der Basalrate (die häufig im Closed Loop in der Nacht auftreten) führen zu einer Insulin-Unterversorgung. Dies ist praktisch eine hardwareseitige Beschränkung des Omnipod DASH. Das Problem wurde in AAPS 3.4.2.3 adressiert, allerdings muss die Funktionalität aktiv freigeschaltet werden (Opt-In). Um sie zu aktivieren, befolge die Anleitung zum [Beheben des Basal-Drifts](#omnipod-dash-basal-drift-fix). Weitergehende Informationen zur Problemlösung findest Du im [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783).
 - Dash unterstützt nur Basalraten in 0,05 IE/h Schritten. Solltest Du versuchen in Deinem **AAPS-Profil** Basalraten mit 0,01 Schritten zu hinterlegen, wirst Du keine Warnmeldung von AAPS erhalten. Der Pod wird die Basalrate auf 0,05 Schritte aufrunden. Wenn Du Dir „POD MGMT/Pod History“ anschaust, wirst Du sehen, dass ein 0,05 Basal gesetzt wurde. Dies bedeutet auch, dass die kleinst mögliche Basalrate des DASH in **AAPS** 0,05 IE/h beträgt.
 - Wenn Du die Einstellungen mit einem aktiven Pod exportierst, enthält die Datei den Pod-Aktivierungsstatus. Wechsel dann auf einen neuen Pod und stelle die Einstellungen mit der Exportdatei wieder her. Damit hast Du sowohl die alte Pod-Aktivierung wieder hergestellt, als auch die neue Aktivierung gelöscht. Aus diesem Grund empfehlen wir die Einstellungen nach jeder Pod-Aktivierung zu exportieren, um eine Wiederherstellung des Pod-Aktivierungsstatus zu ermöglichen, falls etwas mit Deinem Rigg passiert.
 - Beim Setzen eines neuen Basalprofils unterbricht der DASH die Insulinabgabe, bevor das neue Basalprofil **Profil** gesetzt wird. Wenn es eine Kommunikationsstörung oder einen Fehler gibt, wird das Basalprofil nicht automatisch neu gestartet. Mehr Details hierzu findest Du im Abschnitt [Insulinabgabe fortsetzen](#omnipod-dash-resuming-insulin-delivery).
@@ -485,7 +485,7 @@ Dieser Abschnitt behandelt häufige Workarounds und zu ändernde Einstellungen, 
 
 (omnipod-dash-basal-drift-fix)=
 
-### Anleitung zum Beheben des „Basal-Drift“
+### Anleitung zum Beheben des „Basal-Drifts“
 
 Die Omnipod DASH hat eine Einschränkung, die dazu führen kann, dass er weniger Basalinsulin abgibt, als **AAPS** es erwartet. Technische Details hierzu findest Du im [Issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783).
 
@@ -499,27 +499,27 @@ Das Problem tritt am deutlichsten in der Nacht auf. Am Tag führen SMBs oft zu e
 
 (omnipod-dash-drift-compensation-how-it-works)=
 
-#### How the drift compensation works
+#### So funktioniert die Drift-Kompensation
 
-The pod delivers insulin in pulses of 0.05 U. When the drift compensation is enabled, **AAPS** checks that the pod has really delivered the basal insulin it was asked to deliver, and adds the missing pulses.
+Der Pod gibt Insulin in Impulsen von 0,05 IE ab. Ist die Drift-Kompensation aktiviert, prüft **AAPS**, ob der Pod das angeforderte Basalinsulin tatsächlich abgegeben hat, und ergänzt fehlende Impulse.
 
-1. **AAPS** keeps a running total of the basal insulin the pod _should_ have delivered since activation. This total follows your profile basal rates and every temporary basal rate the loop sets.
-2. Each time the pod reports its status, **AAPS** compares this total with the basal insulin the pod _actually_ delivered: the pod's total pulse count, minus the pulses delivered as boluses and SMBs.
-3. Each time **AAPS** sets or cancels a temporary basal rate, it looks at the difference. If the pod is behind by half a pulse (0.025 U) or more, **AAPS** sends one extra pulse of 0.05 U. The pod delivers it silently, without beeps.
+1. **AAPS** führt eine laufende Summe des Basalinsulins, das der Pod seit der Aktivierung _hätte abgeben sollen_. Diese Summe folgt den Basalraten Deines Profils und jeder temporären Basalrate, die der Loop setzt.
+2. Jedes Mal, wenn der Pod seinen Status meldet, vergleicht **AAPS** diese Summe mit dem Basalinsulin, das der Pod _tatsächlich abgegeben hat_. Das ist die Gesamtzahl der Impulse des Pods abzüglich der Impulse, die als Bolus oder SMB abgegeben wurden.
+3. Jedes Mal, wenn **AAPS** eine temporäre Basalrate setzt oder abbricht, prüft es die Differenz. Liegt der Pod einen halben Impuls (0,025 IE) oder mehr zurück, sendet **AAPS** einen zusätzlichen Impuls von 0,05 IE. Der Pod gibt ihn ohne Signalton ab.
 
-**Safety limits:**
+**Sicherheitsbeschränkungen:**
 
-- **AAPS** only adds insulin that the pod owes. It never removes insulin, and it does nothing when the pod is ahead.
-- One pulse at a time, at most one every 2 minutes.
-- No pulse while the loop runs a zero temporary basal rate, because the loop asked for no insulin. The exception is the 5 minutes after a bolus, when a zero temporary basal rate is usually just the loop compensating for an SMB.
-- No pulse while a pod is being activated, while delivery is suspended, after a pod fault, while a bolus is running, or if the reservoir is empty.
-- If the difference ever reaches 2 pulses (0.10 U), in either direction, **AAPS** does not try to catch up. It resets its running total to what the pod has really delivered.
+- **AAPS** ergänzt nur Insulin, das der Pod noch schuldig ist. Es zieht nie Insulin ab und macht nichts, wenn der Pod voraus ist.
+- Immer nur ein Impuls, höchstens einer alle 2 Minuten.
+- Kein Impuls, solange der Loop eine temporäre Null-Basalrate laufen lässt, denn dann hat der Loop kein Insulin angefordert. Ausnahme sind die 5 Minuten nach einem Bolus: Eine temporäre Null-Basalrate ist dann meist nur der Ausgleich des Loops für einen SMB.
+- Kein Impuls während der Aktivierung eines Pods, bei unterbrochener Abgabe, nach einem Pod-Fehler, während ein Bolus läuft oder bei leerem Reservoir.
+- Erreicht die Differenz einmal 2 Impulse (0,10 IE), egal in welche Richtung, versucht **AAPS** nicht diese aufzuholen. Es setzt seine laufende Summe auf den Wert zurück, den der Pod tatsächlich abgegeben hat.
 
-**What you will see:**
+**Was Du sehen wirst:**
 
-- On the **DASH** tab, **Last Bolus** can show **0.05 U** even if you did not give a bolus.
-- In the [Pod history](#omnipod-dash-view-pod-history), the extra pulses appear as **Set Bolus 0.05 U**, usually right after a **Set Temporary Basal** line. See the example in [Check that the drift compensation is working](#omnipod-dash-drift-compensation-check) below.
-- The extra pulses are **not** recorded as boluses or SMBs in **AAPS** treatments, and they do not change your IOB. This is expected: **AAPS** already counted this insulin as basal. The extra pulses only make the pod deliver what **AAPS** thinks was delivered.
+- Auch wenn Du keinen Bolus abgegeben hast, kann auf der Registerkarte **DASH** **Letzter Bolus** **0,05 IE** anzeigt werden.
+- In der [Pod-Historie](#omnipod-dash-view-pod-history) erscheinen die zusätzlichen Impulse als **Set Bolus 0.05 U**, meist direkt nach einer Zeile **Set Temporary Basal**. Schau Dir das Beispiel [Prüfen, ob die Drift-Kompensation funktioniert](#omnipod-dash-drift-compensation-check) weiter unten an.
+- Die zusätzlichen Impulse werden in den **AAPS**-Behandlungen **nicht** als Bolus oder SMB erfasst und verändern Dein IOB nicht. Das ist so gewollt. **AAPS** hat dieses Insulin bereits als Basal gezählt. Die zusätzlichen Impulse sorgen nur dafür, dass der Pod auch abgibt, was **AAPS** als abgegeben annimmt.
 
 #### „Basal-Drift-Fix“ in AAPS aktivieren
 
@@ -540,29 +540,29 @@ Der „Basal-Drift-Fix“ ist standardmäßig in AAPS nicht aktiviert.
 
 (omnipod-dash-drift-compensation-check)=
 
-#### Check that the drift compensation is working
+#### Prüfen, ob die Drift-Kompensation funktioniert
 
-Compare what the pod delivered over a full day with what **AAPS** counted for the same day. Pick a day that is over: the check needs the full 24 hours.
+Vergleiche, was der Pod über einen ganzen Tag abgegeben hat, mit dem, was **AAPS** für denselben Tag gezählt hat. Wähle einen vergangenen Tag, denn für die Prüfung werden die vollen 24 Stunden gebraucht.
 
-1. Go to the **DASH** tab (1) and press **POD MGMT** (2), then press **Pod history**. See [View Pod History](#omnipod-dash-view-pod-history).
+1. Gehe zur Registerkarte **DASH** (1), drücke **POD MGMT** (2) und dann **Pod-Historie**. Siehe [Anzeige Pod-Historie](#omnipod-dash-view-pod-history).
 
    ![dash_drift_tab_pod_mgmt](../images/DASH_images/DASH_Drift/dash_drift_tab_pod_mgmt.png)
 
-2. Note the **Total delivered** value of the entry closest to 00:00 at the start of the day (3), and of the entry closest to 24:00 at the end of the day (4). The difference is the insulin the pod delivered that day.
+2. Notiere den Wert **Insgesamt abgegeben** des Eintrags, der am Tagesbeginn am nächsten an 00:00 liegt (3), und des Eintrags, der am Tagesende am nächsten an 24:00 liegt (4). Die Differenz ist das Insulin, das der Pod an diesem Tag abgegeben hat.
 
    ![dash_drift_pod_stats_start](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_start.png)   ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_end.png)
 
-   In this example: 73.40 U (4) − 38.15 U (3) = 35.25 U delivered by the pod.
+   In diesem Beispiel: 73,40 IE (4) − 38,15 IE (3) = 35,25 IE vom Pod abgegeben.
 
-3. Open the [AAPS statistics](#reviewing-statistics) and find the same day in the **TDD** table. Note the total in the **∑** column (5).
+3. Öffne die [AAPS-Statistik](#reviewing-statistics) und suche denselben Tag in der **TDD**-Tabelle. Notiere die Summe in der Spalte **∑** (5).
 
    ![dash_drift_tdd](../images/DASH_images/DASH_Drift/dash_drift_tdd.png)
 
-4. Compare the two values. With the drift compensation working, they should differ by no more than 0.05 U. Without it, the pod total is usually clearly lower than the **AAPS** TDD.
+4. Vergleiche die beiden Werte. Funktioniert die Drift-Kompensation, sollten sie höchstens 0,05 IE voneinander abweichen. Ohne sie liegt die Summe des Pods meist deutlich unter der TDD in **AAPS**.
 
-   In this example, the **AAPS** TDD is 35.3 U and the pod delivered 35.25 U: the drift compensation is working.
+   In diesem Beispiel beträgt die TDD in **AAPS** 35,3 IE, der Pod hat 35,25 IE abgegeben: Die Drift-Kompensation funktioniert.
 
-***NOTE:** The **Pod history** only covers the active pod. If you changed pods during the day, choose another day.*
+***HINWEIS:** Die **Pod-Historie** umfasst nur den aktiven Pod. Hast Du an diesem Tag den Pod gewechselt, wähle einen anderen Tag.*
 
 ## Problembehandlung
 
