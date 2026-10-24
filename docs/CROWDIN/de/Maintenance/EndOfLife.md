@@ -1,20 +1,20 @@
-# End of life
+# Supportende
 
-Even if your current AAPS system works exactly the way you like, upgrading is still worth it because newer releases bring safety fixes and bug corrections you may never notice until they matter, keep compatibility with new phone OS versions, CGM apps, pump firmware and Nightscout changes, add algorithm improvements and features that have been tested by the wider community, and ensure you stay on a version that is still supported and that others can actually help you troubleshoot. Some previous AAPS versions deliberately have no expiration date so they can keep working on older Android versions, so the lack of an expiration warning is not a sign that your version is still up to date or supported.
+Auch wenn Dein aktuelles AAPS genau so läuft, wie Du es möchtest, lohnt sich ein Update trotzdem. Neuere Versionen bringen Sicherheits- und Fehlerkorrekturen, die Dir vielleicht erst auffallen, wenn es darauf ankommt. Sie halten AAPS kompatibel mit neuen Android-Versionen, CGM-Apps, Pumpen-Firmware und Änderungen an Nightscout. Außerdem enthalten sie Verbesserungen am Algorithmus und neue Funktionen, die bereits von vielen in der Community getestet wurden. Und Du bleibst auf einer Version, die noch unterstützt wird und bei der Dir andere bei Problemen tatsächlich helfen können. Einige ältere AAPS-Versionen haben bewusst kein Ablaufdatum, damit sie auf älteren Android-Versionen weiter funktionieren. Fehlt eine Ablaufwarnung, heißt das also nicht, dass Deine Version aktuell ist oder noch unterstützt wird.
 
-Each AAPS version can have an end date. After this date, AAPS may [limit the loop](#version-enforcement). AAPS warns you before a version expires. Plan to update before the end date, and follow the [update guide](UpdateToNewVersion.md).
+Jede AAPS-Version kann ein Enddatum haben. Nach diesem Datum kann AAPS den [Loop einschränken](#version-enforcement). AAPS warnt Dich, bevor eine Version abläuft. Plane das Update vor dem Enddatum ein und folge der Aktualisierungsanleitung.
 
-## How to use this page
+## So nutzt Du diese Seite
 
-1. In AAPS, tap the three dots at the top right and choose **About**. You will see your AAPS version there.
-2. Find the same version in the first table below. Read the end date next to it. Dates are written as **year-month-day**. For example, `2026-10-30` means 30 October 2026.
-3. Check the [Release Notes](ReleaseNotes.md) and the [update guide](UpdateToNewVersion.md) before you update. The version you can use also depends on your phone's Android version.
+1. Tippe in AAPS oben rechts auf die drei Punkte und wähle **Über**. Dort siehst Du Deine AAPS-Version.
+2. Suche dieselbe Version in der ersten Tabelle unten. Daneben steht das Enddatum. Daten werden im Format **Jahr-Monat-Tag** angegeben. 2026-10-30 bedeutet zum Beispiel 30. Oktober 2026.
+3. Lies vor dem Update die [Release Notes](ReleaseNotes.md) und die [Aktualisierungsanleitung](UpdateToNewVersion.md). Welche Version Du nutzen kannst, hängt auch von der Android-Version Deines Smartphones ab.
 
-The table does not show an end date for every AAPS version. If your version is missing, its end date may not have been set yet. This does not mean it will be supported forever.
+Die Tabelle zeigt nicht für jede AAPS-Version ein Enddatum. Fehlt Deine Version, wurde ihr Enddatum möglicherweise noch nicht festgelegt. Das heißt nicht, dass sie für immer unterstützt wird.
 
-## AAPS version end dates
+## Enddaten der AAPS-Versionen
 
-<div id="aaps-eol-status" role="status" aria-live="polite">Loading AAPS version data…</div>
+<div id="aaps-eol-status" role="status" aria-live="polite">AAPS-Versionsdaten werden geladen …</div>
 <noscript>
   Turn on JavaScript to see the tables.
 </noscript>
@@ -26,11 +26,11 @@ The table does not show an end date for every AAPS version. If your version is m
   </table>
 </div>
 
-## Android API levels
+## Android-API-Level
 
-Android gives each system version an **API level**, which is a number used by apps. For example, API level 30 is Android 11. The table below uses API levels from AAPS version data. The AAPS version in each row is the value listed for the API level shown. This is not a full list of versions you can install.
+Android gibt jeder Systemversion ein **API-Level**. Das ist eine Nummer, die von Apps genutzt wird. API-Level 30 entspricht zum Beispiel Android 11. Die Tabelle unten nutzt die API-Level aus den AAPS-Versionsdaten. Die AAPS-Version in jeder Zeile ist der Wert, der für das jeweilige API-Level hinterlegt ist. Das ist keine vollständige Liste der Versionen, die Du installieren kannst.
 
-To choose an AAPS version for your phone, use the [Android version guidance in the Release Notes](#maintenance-android-version-aaps-version). If no AAPS version is listed for an API level, the table says “None listed”.
+Um eine AAPS-Version für Dein Smartphone auszuwählen, nutze die [Hinweise zur Android-Version in den Release Notes](#maintenance-android-version-aaps-version). Ist für ein API-Level keine AAPS-Version hinterlegt, steht in der Tabelle „Keine angegeben“.
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
