@@ -2,7 +2,7 @@
 
 The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data.
+You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
 
 ## Wear OS Versions and compatibility
 
@@ -17,8 +17,6 @@ In June 2025 Google [announced changes](https://android-developers.googleblog.co
 
 This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
 ```
-
-When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles now carry a small header in that flavor's accent colour so you can tell them apart while swiping.
 
 The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
 
@@ -85,47 +83,32 @@ No limitation in **AAPS Wear** operations.
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Galaxy watch updated to Wear OS 5
+### Wear OS 4 and Wear OS 5
 
-Example: GW4, GW5, GW6
+Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV).  
-No limitation in **AAPS Wear** operations.
+Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
 
-```{admonition} Android Wear OS 5
+```{admonition} Wear OS 5
 :class: warning
-**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
+On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Watchdivider, etc.) may not be possible.
+
+If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
 ```
 
-### Galaxy watch with factory installed Wear OS 5
+If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead.
 
- Example: GW7, GW Ultra
+### Wear OS 6 and newer
 
-```{admonition} Android Wear OS 5
-:class: warning
-Installing the AAPS Watch Face has to be done with [Wear Installer 2](https://www.youtube.com/watch?v=yef_qGvcCnk) after installing the Wear app.<br>
-Accidental change of the Watch Face to another one requires the procedure above to be repeated.<br>
-Changing the dedicated Watch Face parameters like: Dark, Watchdivider, etc. is not possible.<br><br>
-**FIRMWARE UPDATES WILL MOST PROBABLY BREAK AAPS WATCHFACES: DISABLE WATCH UPDATES**.
-```
+Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
 
-Consider alternatively [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
-
-```{admonition} Samsung watches: watchface settings open the system editor
-:class: note
-On Samsung watches, opening the settings of one of the AAPS watchfaces (in the watch's AAPS app, under **Settings**) now hands over to Samsung's own **watch face editor**. This also **activates** the selected watchface, and settings that need a live editing session — such as the Custom watchface's complication slots — work correctly from there. On other brands the normal AAPS settings screen is shown as before.
-```
-
-### Pixel watch with Wear OS 5
-
-Not compatible with the AAPS watchface.  
-Consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication.
+Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
 
 ## How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
 
 This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch. 
 
-_This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course.
+_This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
 
 Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0) 
 
@@ -159,11 +142,11 @@ To side-load AAPS onto the watch You can use either:
 1) Wear Installer 2
 2) Easy Fire tools
 3) Android Debug Bridge (ADB)
-Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you try via   
+Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained. If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
 
 ### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
 
- ![image](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
+ ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
 
 Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
@@ -237,8 +220,9 @@ On the watch:
 - Go to Settings → Developer options. Enable **ADB debugging**
 - Go to Settings → Developer options → Wireless debugging → **Pair new device** 
 
-You will see a Wi-Fi paring code and IP address and port appearing:
-![image](../images/wearos/ADB03.png)
+You will see a Wi-Fi pairing code and IP address and port appearing:
+
+![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
 
 - In the terminal:
 `adb pair ipaddress:port`
@@ -265,7 +249,6 @@ E.g.
 - Do not use Wi-Fi Tethering. That won't work.
 - You do not need to enable adb debugging on the phone (only on the watch). Disable adb debugging on the Phone.
 - Make sure you are connecting to your local network where phone and watch can see each other (do not use your Wi-Fi guest network to connect).
-- For GW7 you need to install using Wear Installer 2 as it gives you the option to select the AAPS (Custom) watchface on installation.
 - Make sure both watch and phone are on the same network and Wi-Fi device. Especially Wi-Fi repeaters or access points may create problems.
 - Make sure to be near your main router, then restart both phone and watch.
 
@@ -274,7 +257,7 @@ E.g.
 - Watch: Wireless Debugging: note the IP address.
 - Wear Installer: Enter the IP on the in Wear Installer app.
 - Select Pair new, note the pairing code and port number displayed.
-- Wear Installer: enter the paring code + space + port number.
+- Wear Installer: enter the pairing code + space + port number.
 - Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
 
 Once paired you should be able to install the AAPS wear apk:
@@ -303,12 +286,12 @@ watch and it will come to “customise”. Then swipe right until you get to all
 If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this: 
 
 
-![24-10-23, successful galaxy watch photo](../images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
+![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
 
 
 For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
-![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
+![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
 
 (wear-os-watch-phone-communication)=
 
@@ -335,25 +318,25 @@ There are a number of watchfaces available in the standard build of the AAPS Wea
 
 1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
 
-![Screenshot_20231123_124657_sysui](../images/efd4268f-0536-4a31-9ba1-f98108f32483.png)
+![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
 
 2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
 
-![Screenshot_20231123_124619_sysui](../images/036dc7c4-6672-46c8-b604-8810a16a2eb3.png)
+![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
 
 3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
 
-![Screenshot_20231123_090941_AAPS](../images/5df23fa3-791b-4c9a-999a-251391a82835.png)
+![Wear plugin with the Custom Watchface buttons](../images/wearos/wear_plugin_custom_watchface.png)
 
 4. Click on the "Load Watchface" button and select the watchface that you like
 
-![Screenshot_20231123_130410_AAPS](../images/adde2eca-1df7-4382-b9ab-346819c35d9d.png)
+![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
 
 5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, open the AAPS app, go to **Settings** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, long-press the watchface, tap **Customize** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. The same rows are listed in the watch's AAPS app under **Settings**; tapping one there opens the same picker. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
 
 These slots only work on watches running **Wear OS 5 or older**, where the custom watchface runs as a real watchface. On **Wear OS 6 and newer**, the custom watchface is shown as a picture without its complication slots, and steps 1 and 2 above are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
 ```

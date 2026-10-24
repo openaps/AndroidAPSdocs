@@ -45,7 +45,7 @@ Remember to disable Google Play Protect.
 
 For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
-![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
+![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
 
 
 

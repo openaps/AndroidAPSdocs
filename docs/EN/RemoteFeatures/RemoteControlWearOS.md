@@ -25,7 +25,7 @@ With **Open plugin** on the **Wear** card you open the Wear screen:
 
 ![Wear plugin screen](../images/screens/wear_plugin.png)
 
-From this screen you can
+The top line shows the name of the connected watch, or **(No Watch Connected)**. From this screen you can
 
 * Resend all data.
   Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
@@ -108,7 +108,7 @@ The **Calculator Percentage** setting lets you enter a *percentage* of the calcu
 
 The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch settings. The setting is off by default, and then the **Meal type** page is skipped.
 
-* After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Each icon shows the carbs it gives, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
+* After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
 * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
 * The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
 
@@ -258,7 +258,7 @@ Temporary targets from the phone's presets. Set the duration and the target of e
 
 ![Quick Wizard tile](../images/wearos/tiles/tile_quick_wizard.png)
 
-The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile.
+The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile. Outside the valid hours of all your entries, the tile shows **No config available**.
 
 ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/quickwizard_watch_phone.png)
 

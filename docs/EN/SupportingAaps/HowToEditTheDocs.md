@@ -164,6 +164,7 @@ Use a reasonable size for the images which must be readable on PC, tablet and mo
 * Screenshots from web pages images should be up to **1050 pixels wide**.
 * Diagrams of process flows should be up to **1050 pixels wide**.
 * Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+* Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
 
 ### Links
 
