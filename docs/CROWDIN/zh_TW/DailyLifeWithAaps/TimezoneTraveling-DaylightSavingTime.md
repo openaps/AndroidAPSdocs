@@ -11,7 +11,9 @@
 
 更改手機時區沒有問題，因為幫浦不使用歷史紀錄。
 
-## DanaRv2、DanaRS 的時區變更
+(timezone-traveling-danarv2-danars)=
+
+## Timezone change for DanaRv2, DanaRS, Dana-i
 
 這些幫浦需要特別注意，因為 **AAPS** 會使用幫浦的歷史紀錄，但幫浦中的紀錄沒有時區標記。**這代表如果你在手機更改時區，紀錄會以不同時區被讀取，並可能出現成雙倍紀錄。**
 
@@ -48,6 +50,8 @@
 * 打開手機。
 * 讓手機連線到幫浦並微調時間。
 
+(timezone-traveling-insight)=
+
 ## Insight 的時區變更
 
 驅動程式會自動將幫浦的時間調整為手機的時間。
@@ -74,18 +78,24 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 當時區或時間變更時，正在執行的 **臨時基礎率** 會被停止。
 
+(time-adjustment-daylight-savings-time-dst)=
+
 ## 夏令時間（DST）
 
-夏令時間的時間調整
+Time adjustment for daylight savings time.
 
-根據你的幫浦與 CGM 設定，時間跳動可能導致 **AAPS** 無法正常運作。例如使用 Combo 幫浦時，幫浦歷史會被讀取兩次，導致紀錄重複。對某些幫浦來說，最好在清醒時進行時區調整，而不要在夜間。
+Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For instance with the Combo pump & DST, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
 
 ### 多數幫浦的 DST 自動調整
 
 * 此項調整功能在 **AAPS** 2.2 版之後可用。
-* 然而，DST 切換（通常從凌晨 1 點開始）發生後的 3 小時內，將停用完全閉環循環，**AAPS** 會改以你在 **設定檔** 中所選的背景基礎率為預設。這是基於安全考量—在 DST 變更前重複注射可能導致 **IOB** 偏高。
-* 在 DST 完成後，選擇 **Profile Switch**，切換到使用者想要的 **設定檔** 以啟用完全閉環循環。
-* 在 DST 變更前，你也會在 **AAPS** 主畫面收到一則通知，說明完全閉環循環已暫時停用。此訊息將在沒有嗶聲、震動或任何提示的情況下顯示。**
+* Howeever, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**.
+   
+   這是基於安全考量—在 DST 變更前重複注射可能導致 **IOB** 偏高。
+
+* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable the **Loop**.
+
+* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.**
 
 若你使用 **AAPS** 的計算機進行注射，除非你確定這些資料完全正確，否則請不要使用 **COB** 與 **IOB** 資料。請小心，且在 DST 切換完成後的數小時內不要使用此功能。
 
@@ -104,7 +114,7 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 #### 更改時鐘前的操作
 
-1. 關閉手機中任何會自動設定時區的選項，讓使用者可以改成不使用 DST 的時區。如何操作取決於你的智慧型手機與 Android 版本。
+1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. 如何操作取決於你的智慧型手機與 Android 版本。
    
    * 有些手機有兩個設定：一個是自動設定時間（理想情況下應保持開啟），另一個是自動設定時區（你必須將其關閉）。
    * 不幸的是，有些 Android 版本只有一個開關，同時控制時間與時區的自動設定。你現在必須關閉這個開關。
@@ -120,7 +130,7 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 3. **AAPS** 會重新整理你的幫浦，並切換到你想要的 **設定檔**。
 
-4. 檢查 **AAPS** 的 **IOB** 與 **COB**，若不準確，請停用完全閉環循環，時間至少為一個 DIA 與 Max-Carb-Time 兩者中較長者。
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
 
 5. 更改時鐘後的操作. 在 IOB 較低時，是切回當地時區的好時機。例如，在早餐等餐點前一小時。理想情況下，你的 **COB** 與 **IOB** 都應接近 0。
 
@@ -132,7 +142,7 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 #### 更改時鐘前的操作
 
-1. 關閉任何自動設置時區的設置，以便你可以在需要時強制更改時間。如何操作將取決於你的智慧型手機和 Android 版本。
+1. 關閉任何自動設置時區的設置，以便你可以在需要時強制更改時間。 How this is done will depend on your smartphone and Android version.
    
    * 某些設備有兩個設置，一個是自動設置時間（理想情況下應保持開啟），另一個是自動設置時區（必須關閉）。
    * 不幸的是，一些 Android 版本只有一個開關，可以自動設置時間和時區。你現在必須關閉這個開關。
@@ -151,20 +161,20 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
    * 請勿按「刪除未來治療」
    * 請按「移除」所有未來的治療和重複的治療。這樣可以使治療無效，而不是將其移除，因此他們將不再被計入 IOB。
 
-5. 如果 IOB/COB 的情況不清楚——為了安全起見，請停用循環至少一個 DIA 和最大碳水化合物時間，以較大的為準。
+5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
-#### 更改時鐘後的操作
+#### Actions to take after the clock change / DST
 
 在 IOB 較低時進行此切換較為合適。例如，在用餐前一小時，例如早餐，（幫浦歷史紀錄中的任何近期注射將是小的 SMB 校正）。你的 **COB** 與 **IOB** 都應接近 0。)
 
 1. 將 Android 時區更改回你的目前位置，並重新啟用自動時區。
 2. **AAPS** 很快會開始提醒你，Combo 的時鐘不相符。因此，請透過幫浦螢幕和按鈕手動更新幫浦的時鐘。
 3. 在 **AAPS** 的「Combo」畫面，按下「重新整理」。
-4. 然後轉到治療畫面，查看是否有任何未來事件。應該不會有太多。
+4. GO Treatments screen, and look for any future events. 應該不會有太多。
    
-   * 請勿按「刪除未來治療」
-   * 請按「移除」所有未來的治療和重複的治療。這樣可以使治療無效，而不是將其移除，因此他們將不再被計入 IOB。
+   * DON'T press "delete Treatments in the future"
+   * Hit "remove" on all future Treatments and duplicate ones. This should invalidate the Treatments rather than removing them so they will not be considered for **IOB**.
 
-5. 如果 IOB/COB 的情況不清楚——為了安全起見，請停用循環至少一個 DIA 和最大碳水化合物時間，以較大的為準。
+5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one **DIA** and Max-Carb-Time - whatever is bigger.*
 
 6. 正常繼續。
