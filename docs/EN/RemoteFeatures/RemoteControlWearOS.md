@@ -30,7 +30,8 @@ The top line shows the name of the connected watch, or **(No Watch Connected)**.
 * Resend all data.
   Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
-* Choose which watchface **AAPS** installs on a **Wear OS 6** or newer watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+* Choose which watchface **AAPS** installs on the watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). This card is only shown while a **Wear OS 6** or newer watch is connected. See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+* Manage the **Custom Watchface** (the card is shown while a watch is connected): **Load Watchface** sends a custom watchface to the watch, **Infos Watchface** lists the details of the loaded watchface and the fields it contains, **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) in your browser, and **Export template** saves a template you can edit. A preview of the loaded watchface is shown below the buttons. See [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
 
 Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
 
@@ -49,7 +50,9 @@ To open the main menu of **AAPS**, use one of these:
 
 ## Loop Status screen
 
-The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication.
+The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication. The **Status** menu also has a **Pump** page and a **TDD** page with the total daily doses.
+
+![Status menu: Pump, Loop and TDD](../images/wearos/status_menu.png)
 
 ![Loop Status screen](../images/wearos/loop_status.png)
 
@@ -106,7 +109,7 @@ The **Calculator Percentage** setting lets you enter a *percentage* of the calcu
 
 ### Choosing the meal type
 
-The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch settings. The setting is off by default, and then the **Meal type** page is skipped.
+The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch's **Settings** > **Interface**. The setting is off by default, and then the **Meal type** page is skipped.
 
 * After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
 * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
@@ -173,11 +176,17 @@ AAPS provides the complications below. "Opens" is what a tap does with **Complic
 * **Running mode** (`SMALL IMAGE` / `ICON`, opens _Running mode picker_): the current loop mode as an icon: closed loop, open loop, low glucose suspend, suspended, disconnected or disabled. A tap opens a picker with the mode changes allowed right now, for example **Suspend loop**, **Disconnect pump**, **Resume loop** or **Reconnect pump**. The same picker is in the **AAPS** main menu under **Running mode**.
 * **Uploader/Phone Battery** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, opens _Status_): the battery of the **AAPS** phone, as a gauge with a battery icon, as a number, or as the icon alone. It updates together with the other **AAPS** data, usually every 5 minutes with a new reading.
 
+The **Running mode** picker, as opened from the complication, the main menu or the Running mode tile:
+
+![Running mode picker with the modes you can switch to](../images/wearos/running_mode_picker.png)
+
 (WearOsSmartwatch-complication-settings)=
 
 ### Complication related settings
 
 In the **AAPS** main menu on the watch, open **Settings** > **Complication**:
+
+![Settings > Complication on the watch](../images/wearos/settings_complication.png)
 
 * **Complication Tap Action** (default `Default`): what a tap on an **AAPS** complication opens, for all complications at once:
   * _Default_: what the complication itself opens, see the list above
@@ -238,9 +247,17 @@ Shortcuts to the dialogs of the **AAPS** watch app. Pick up to four of these in 
 * **TempT**: a temporary target with a custom target and duration
 * **Profile switch**: a profile switch with percentage, time shift and duration
 
-[1] In the watch's **Settings**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Preferences** > **Wizard Settings**.
+![Actions tile settings: one entry per place](../images/wearos/tiles/tile_settings_actions.png)
 
-[2] In the watch's **Settings**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+The dialogs the buttons open. Swipe from right to left to reach the next page of a dialog, and tap the check mark on the last page to send the request to the phone:
+
+| Treat | Insulin | Carbs | eCarbs | TempT | Profile switch |
+| --- | --- | --- | --- | --- | --- |
+| ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
+
+[1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Preferences** > **Wizard Settings**.
+
+[2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
 
 ### Temp Target tile
 
@@ -268,6 +285,8 @@ The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch*
 
 The [Scenes](#scenes-from-watch) of the phone. Each of the four places is set to **Automatic**, **None** or one scene in the tile settings. An **Automatic** place takes the next scene from the phone's list that no other place has claimed. A place set to a scene that no longer exists on the phone shows **Unavailable**.
 
+![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
+
 ### Running mode tile
 
 ![Running mode tile](../images/wearos/tiles/tile_running_mode.png)
@@ -285,6 +304,10 @@ One button for each [automation](#automations-automation-triggers) on the phone 
 ![BG Graph tile](../images/wearos/tiles/tile_bg_graph.png)
 
 The glucose value with arrow, delta and age, below it IOB, COB, basal rate and target, and the BG graph with predictions, boluses, carbs and SMBs. Two settings on the watch: **Time range** (1, 3 or 6 hours) and **Tap action**, which opens the full **BG Graph**, the **Main Menu** or the **Loop Status** screen.
+
+![The BG Graph screen](../images/wearos/bg_graph.png)
+
+![BG Graph tile settings: Time range and Tap action](../images/wearos/tiles/tile_settings_bg_graph.png)
 
 ## Always on
 
