@@ -125,7 +125,7 @@ You will need all three if you ever build AAPS another way, e.g. with Android St
 <span id="aapsb-s4wait">Schließe zuerst Schritt 3 ab.</span>
 
 <div id="aapsb-s4ready" hidden>
-  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? Prüfe zuerst, ob Du in diesem Browser bei github.com angemeldet bist: Bei privaten Repositorys zeigt GitHub 404 an, wenn Du nicht angemeldet bist. Andernfalls passen Benutzername oder Repository-Name aus Schritt 1 nicht zu Deinem Repository. Prüfe sie auf github.com und gib sie in Schritt 1 richtig ein. 2. Tippe auf "Copy name", dann füge ihn in das kleine "Name"-Feld ein: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy Namer</button> 3. Tap "Copy secret", then paste the long code into the big "Secret" box: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> The secret is a very long code (thousands of characters), NOT the word KEYSTORE_SET. Copy and paste the name first, then the long code. 4. Tap "Add secret". Done, you never need to do this again.
+  1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">Open the secrets page</a> Opens: <code class="aapsb-repoUrl"></code> Getting "Page not found" (404)? Prüfe zuerst, ob Du in diesem Browser bei github.com angemeldet bist: Bei privaten Repositorys zeigt GitHub 404 an, wenn Du nicht angemeldet bist. Andernfalls passen Benutzername oder Repository-Name aus Schritt 1 nicht zu Deinem Repository. Prüfe sie auf github.com und gib sie in Schritt 1 richtig ein. 2. Tippe auf "Copy name", dann füge ihn in das kleine "Name"-Feld ein: `KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">Copy Namer</button> 3. Tippe auf "Copy secret" und füge dann den langen Code in das große "Secret"-Feld ein: <code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">Copy secret</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> Das Secret ist ein sehr langer Code (tausende Buchstaben), und NICHT das Wort KEYSTORE_SET. Kopiere und füge zuerst den Namen ein, dann den langen Code. 4. Tippe auf „Add secret“. Fertig, das musst Du nie wieder machen.
 </div>
 (aaps-builder-setup-step5)=
 ## Schritt 5 – App erstellen
@@ -209,7 +209,7 @@ Alles auf dieser Seite läuft in Deinem Browser. Dein Schlüssel und Deine Passw
 - <span data-aapsb-msg="userBad">✗ No GitHub user with this name. Use your username (shown in your GitHub profile), not your e-mail.</span>
 - <span data-aapsb-msg="copiedShort">Copied ✓</span>
 - <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
-- <span data-aapsb-msg="workflowCopied">Workflow copied (version {v}). Paste it in GitHub.</span>
+- <span data-aapsb-msg="workflowCopied">Workflow copied (version {v}). Füge in GitHub ein.</span>
 - <span data-aapsb-msg="workflowReady">Workflow version {v} is ready.</span>
 - <span data-aapsb-msg="workflowErr">Could not read the workflow file. Reload this page and try again.</span>
 - <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
