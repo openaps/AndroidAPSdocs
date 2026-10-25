@@ -21,6 +21,28 @@ The eCarbs on the main screen: the number in brackets in the **COB** field shows
 
 ![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
 
+(AapsScreens-carbs-type)=
+## Carbs type in the Bolus wizard: bread, cake or pizza
+
+In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+
+| Type | Typical foods (as listed in the app) | Carbs now, used for the bolus | eCarbs added |
+|---|---|---|---|
+| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables | 100 % | None |
+| **Cake** | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 % | 20 %, starting 60 minutes later, spread over 2 hours |
+| **Pizza** | Lasagna, pizza, hamburgers, fries, baked potatoes, chips | 80 % | 35 %, starting 60 minutes later, spread over 3 hours |
+
+**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+
+Good to know:
+* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
+* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
+* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
+* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
+* Grams are rounded down to whole numbers.
+* The percentages, delays and durations are fixed; they can't be changed in the settings.
+* The choice is not remembered: the wizard opens on **Bread** every time.
+
 ______________________________________________________________________
 
 A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
@@ -33,7 +55,7 @@ The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as
 
 A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field. The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
 With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
