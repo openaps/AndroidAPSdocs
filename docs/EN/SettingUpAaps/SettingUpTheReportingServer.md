@@ -59,4 +59,4 @@ You do **not** need to use the uploader app to Tidepool: **AAPS** will upload bl
 
 ## Next step
 
-Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](../UsefulLinks/DedicatedGoogleAccountForAaps.md), or go straight to [building the AAPS app](../SettingUpAaps/BuildingAaps.md). 
+Once you have set up your reporting server, you can configure **AAPS** on your phone with the [Setup Wizard](./SetupWizard.md), which will also link **AAPS** to your reporting server.
