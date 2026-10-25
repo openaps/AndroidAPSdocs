@@ -100,11 +100,11 @@ Ein "keystore" ist eine mit einem Passwort verschlüsselte Datei, die ausschlie�
 2.  Notiere das Passwort für Deine Keystore-Datei.
 
 
-How you save the keystore depends on your build method:
+Wie Du den Keystore sicherst, hängt davon ab, wie Du AAPS erstellst:
 
-- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
-- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
-- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
+- **Android Studio Build (Computer)**: Der Keystore wird beim Erstellen angelegt. Wo Du ihn speichern solltest, steht unter [Signierte APK erstellen](#Building-APK-generate-signed-apk).
+- **AAPS Builder**: Bewahre die Sicherungsdatei `aaps-keystore.jks` auf, die Dir die Einrichtungsseite beim Anlegen Deines Schlüssels angeboten hat, zusammen mit Passwort und Alias. Hast Du Deinen eigenen Keystore hochgeladen, bewahre diese Datei auf.
+- **Browser-Build mit Fork**: Nutze den dafür vorgesehenen Workflow [Export keystore](#ci-keystore-export), um eine Kopie in Deinem Google Drive abzulegen.
 
 Damit kannst Du die Keystore-Datei für jedes Update auf eine neue **AAPS**-Version nutzen. Im Durchschnitt werden zwei AAPS-Updates pro Jahr nötig.
 
