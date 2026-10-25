@@ -11,7 +11,9 @@
 
 Pompa geçmişi kullanmadığı için telefonda saat dilimini değiştirmekle ilgili bir sorun yok
 
-## Timezone change for DanaRv2, DanaRS
+(timezone-traveling-danarv2-danars)=
+
+## Timezone change for DanaRv2, DanaRS, Dana-i
 
 These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
 
@@ -48,6 +50,8 @@ Uçaktan inerken:
 * telefonu açın
 * telefonun pompaya bağlanmasına ve zaman ince ayarının yapmasına izin verin
 
+(timezone-traveling-insight)=
+
 ## Timezone Change for Insight
 
 Sürücü, pompanın saatini telefonun saatine göre otomatik olarak ayarlar.
@@ -74,18 +78,24 @@ Time zone changes keep the history intact, only TDD may be affected. Manually ch
 
 When the time zone or time changes running **TBR's** are stopped.
 
+(time-adjustment-daylight-savings-time-dst)=
+
 ## DAYLIGHT SAVING (DST)
 
-Time adjustment daylight savings time
+Time adjustment for daylight savings time.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctlyy. For instance with the Combo pump, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake and not during the night.
+Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For instance with the Combo pump & DST, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
 
 ### DST automatic adjustment for most pumps
 
 * This adjustment feature is available for **AAPS** version 2.2 onwards.
-* Howeever, the fully closed Loop will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable fully closed Loop.
-* You will also receive a notification on **AAPS** main screen prior to DST change that the Fully Closed Loop has been disabled temporarily. This message will appear without beep, vibration or anything.**
+* Howeever, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**.
+   
+   This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
+
+* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable the **Loop**.
+
+* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.**
 
 If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
 
@@ -104,7 +114,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 #### Saat değişmeden önce yapılması gerekenler
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
    
    * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF).
    * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. Bunu şimdilik kapatmanız gerekecek.
@@ -120,7 +130,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 3. **AAPS** refresh your pump and switch to your desired **Profile**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
 
 5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
 
@@ -132,7 +142,7 @@ This section is only valid for the old, Ruffy-based driver. The new driver adjus
 
 #### Saat değişmeden önce yapılması gerekenler
 
-1. Saat dilimini otomatik olarak ayarlayan herhangi bir ayarı KAPATIN, böylece istediğiniz zaman saat değişikliğini zorlayabilirsiniz. Bunu nasıl yapabileceğiniz, akıllı telefonunuza ve Android sürümünüze bağlı olacaktır.
+1. Saat dilimini otomatik olarak ayarlayan herhangi bir ayarı KAPATIN, böylece istediğiniz zaman saat değişikliğini zorlayabilirsiniz. How this is done will depend on your smartphone and Android version.
    
    * Bazılarının iki ayarı vardır, biri saatin otomatik ayarlanması (ideal olarak açık kalması gerekir) ve diğeri saat diliminin otomatik ayarlanması için (KAPALI konuma getirmeniz gerekir).
    * Ne yazık ki bazı Android sürümlerinde hem saatin hem de saat diliminin otomatik olarak ayarlanmasını sağlayan tek bir anahtar bulunur. Bunu şimdilik kapatmanız gerekecek.
@@ -151,20 +161,20 @@ This section is only valid for the old, Ruffy-based driver. The new driver adjus
    * "İleriki tedavileri sil" düğmesine basmayın
    * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık AİNS için dikkate alınmayacaktır.
 
-5. Ne kadar AİNS/AKRB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
+5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
-#### Saat değişikliğinden sonra yapılacak işlemler
+#### Actions to take after the clock change / DST
 
 A good time to make this switch would be with low **IOB**. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your **COB** and **IOB** should both be close to zero.)
 
 1. Android saat dilimini tekrar geçerli konumunuza değiştirin ve otomatik saat dilimini yeniden etkinleştirin.
 2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. Bu nedenle, pompanın ekranı ve düğmeleri aracılığıyla pompanın saatini manuel olarak güncelleyin.
 3. On the **AAPS** “Combo” screen, press Refresh.
-4. Ardından Tedaviler ekranına gidin ve gelecekte olabilecek olayları arayın. Çok fazla olmamalı.
+4. GO Treatments screen, and look for any future events. Çok fazla olmamalı.
    
-   * "İleriki tedavileri sil" düğmesine basmayın
-   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık AİNS için dikkate alınmayacaktır.
+   * DON'T press "delete Treatments in the future"
+   * Hit "remove" on all future Treatments and duplicate ones. This should invalidate the Treatments rather than removing them so they will not be considered for **IOB**.
 
-5. Ne kadar AİNS/AKRB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
+5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one **DIA** and Max-Carb-Time - whatever is bigger.*
 
 6. Normal şekilde devam edin.
