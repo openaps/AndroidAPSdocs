@@ -11,7 +11,9 @@
 
 手机更改时区没有问题，因为泵不使用历史记录。
 
-## Timezone change for DanaRv2, DanaRS
+(timezone-traveling-danarv2-danars)=
+
+## Timezone change for DanaRv2, DanaRS, Dana-i
 
 These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
 
@@ -48,6 +50,8 @@ These pumps require special care because **AAPS** uses history from the pump but
 * 打开手机。
 * 让手机连接到泵并微调时间。
 
+(timezone-traveling-insight)=
+
 ## Timezone Change for Insight
 
 驱动程序会自动将泵的时间调整为手机的时间。
@@ -74,18 +78,24 @@ Time zone changes keep the history intact, only TDD may be affected. Manually ch
 
 When the time zone or time changes running **TBR's** are stopped.
 
+(time-adjustment-daylight-savings-time-dst)=
+
 ## DAYLIGHT SAVING (DST)
 
-Time adjustment daylight savings time
+Time adjustment for daylight savings time.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctlyy. For instance with the Combo pump, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake and not during the night.
+Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For instance with the Combo pump & DST, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
 
 ### DST automatic adjustment for most pumps
 
 * This adjustment feature is available for **AAPS** version 2.2 onwards.
-* Howeever, the fully closed Loop will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable fully closed Loop.
-* You will also receive a notification on **AAPS** main screen prior to DST change that the Fully Closed Loop has been disabled temporarily. This message will appear without beep, vibration or anything.**
+* Howeever, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**.
+   
+   This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
+
+* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable the **Loop**.
+
+* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.**
 
 If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
 
@@ -104,7 +114,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 #### 夏令时更改前的操作
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
    
    * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF).
    * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. 现在你必须将其关闭。
@@ -120,7 +130,7 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 3. **AAPS** refresh your pump and switch to your desired **Profile**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the Fully Closed Loop for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
 
 5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
 
@@ -132,7 +142,7 @@ This section is only valid for the old, Ruffy-based driver. 新版驱动程序�
 
 #### 夏令时更改前的操作
 
-1. 关闭任何自动设置时区的设置，以便你可以按需强制更改时间。具体操作取决于你的智能手机和Android版本。
+1. 关闭任何自动设置时区的设置，以便你可以按需强制更改时间。 How this is done will depend on your smartphone and Android version.
    
    * 有些手机有两个设置，一个用于自动设置时间（最好保持开启），另一个用于自动设置时区（必须关闭）。
    * 不幸的是，一些Android版本只有一个开关来启用时间和时区的自动设置。现在你必须将其关闭。
@@ -151,20 +161,20 @@ This section is only valid for the old, Ruffy-based driver. 新版驱动程序�
    * 不要按“删除未来的治疗”，
    * 而是点击所有未来治疗和重复治疗上的“删除”。这应该会使治疗无效，而不是删除它们，因此它们将不再用于计算IOB。
 
-5. 如果IOB/COB的情况不清楚，为了安全起见，请至少禁用闭环一个胰岛素分布时间（DIA）和最大碳水时间（Max-Carb-Time），以时间较长者为准。
+5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
-#### 夏令时更改后的操作
+#### Actions to take after the clock change / DST
 
 A good time to make this switch would be with low **IOB**. 例如，在早餐等餐前一小时（泵历史记录中的任何最近一次大剂量注射都应该是小的SMB校正。 Your **COB** and **IOB** should both be close to zero.)
 
 1. 将Android时区改回当前位置，并重新启用自动时区。
 2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. 因此，通过泵的屏幕和按钮手动更新泵的时钟。
 3. On the **AAPS** “Combo” screen, press Refresh.
-4. 然后转到“治疗”屏幕，查找任何未来的事件。不应该有很多。
+4. GO Treatments screen, and look for any future events. 不应该有很多。
    
-   * 不要按“删除未来的治疗”，
-   * 而是点击所有未来治疗和重复治疗上的“删除”。这应该会使治疗无效，而不是删除它们，因此它们将不再用于计算IOB。
+   * DON'T press "delete Treatments in the future"
+   * Hit "remove" on all future Treatments and duplicate ones. This should invalidate the Treatments rather than removing them so they will not be considered for **IOB**.
 
-5. 如果IOB/COB的情况不清楚，为了安全起见，请至少禁用闭环一个胰岛素分布时间（DIA）和最大碳水时间（Max-Carb-Time），以时间较长者为准。
+5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one **DIA** and Max-Carb-Time - whatever is bigger.*
 
 6. 继续正常操作。
