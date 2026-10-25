@@ -25,7 +25,7 @@ The table below summarises how Google's change affects the AAPS (legacy-engine) 
 | Wear OS 6 | Android 16 | 36 | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
 | Wear OS 5 | Android 14 | 34 | **Severe** — active (interactive) mode often fails, complications freeze, animations stop |
 | Wear OS 4 | Android 13 | 33 | **Moderate** — throttling, missed updates, partial failures |
-| Wear OS 3.0 / 3.2 / 3.5 | Android 12 / 12L | 31–32 | **Low** — legacy engine still supported |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11 | 30 | **Low** — legacy engine still supported |
 
 If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
 

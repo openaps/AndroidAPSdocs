@@ -46,7 +46,7 @@ Find your Android version in the table below and use the matching **AAPS** versi
 
 ## WearOS version
 
-- AAPS requires at least WearOS API level 31 (Android 12)
+- AAPS requires WearOS 3.0, 3.2 or 3.5 (Android 11, API level 30) or newer. WearOS 2 watches are not supported.
 
 ```{tip}
 WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS5).
