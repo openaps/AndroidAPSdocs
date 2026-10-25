@@ -1,9 +1,9 @@
 (aaps-builder)=
 
-# Browser build with AAPS Builder
+# Browser-Build mit dem AAPS Builder
 
 ```{note}
-This is the recommended way to build AAPS from an **Android phone**. It also works from any computer browser. For the other ways to build from a computer or an iPhone, see the [Browser build](BrowserBuild.md) overview.
+Das ist der empfohlene Weg, AAPS auf einem **Android-Smartphone** zu erstellen. Er funktioniert auch im Browser jedes Computers. Die anderen Wege für einen Computer oder ein iPhone findest Du in der Übersicht zum [Browser-Build](BrowserBuild.md).
 ```
 
 ```{contents} In this page
@@ -11,190 +11,190 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 :depth: 2
 ```
 
-**AAPS Builder** builds the AAPS app for you in GitHub, the free code-hosting website. There is nothing to install on your phone, and no preparation file to open.
+Der **AAPS Builder** erstellt die AAPS-App für Dich in GitHub, der kostenlosen Website zum Hosten von Code. Du musst nichts auf Deinem Smartphone installieren und keine Vorbereitungsdatei öffnen.
 
-A setup page on this site walks you through it. It takes about 10 minutes the first time:
+Eine Einrichtungsseite auf dieser Website führt Dich durch alles. Beim ersten Mal dauert es etwa 10 Minuten:
 
-1. Create an empty **private** repository in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm.
-2. Add the **build workflow**, the file that tells GitHub how to build AAPS.
-3. Create or upload your **signing key** (the keystore).
-4. Give the key to your repository as a GitHub **secret**.
-5. **Build** the app. One build takes 15 to 30 minutes.
-6. **Download and install** the app on your phone.
+1. Lege ein leeres **privates** Repository in Deinem GitHub-Konto an: Die Einrichtungsseite öffnet GitHub mit allen Angaben schon ausgefüllt, Du bestätigst nur noch.
+2. Füge den **Build-Workflow**, die Datei, die GitHub sagt, wie AAPS erstellt wird, hinzu.
+3. Erstelle Deinen **Signaturschlüssel** (den Keystore) oder lade ihn hoch.
+4. Übergib den Schlüssel als GitHub-**Secret** an Dein Repository.
+5. **Erstelle** die App. Ein Build (Erstellprozess) dauert 15 bis 30 Minuten.
+6. **Lade die App herunter und installiere** sie auf Deinem Smartphone.
 
-You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from the official AndroidAPS repository at every build. You also do **not** need Google Drive: you download the app directly from GitHub.
+Du musst AndroidAPS **nicht** „forken“: Der AAPS-Quellcode wird bei jedem Build aus dem offiziellen AndroidAPS-Repository heruntergeladen. Google Drive brauchst Du **auch nicht**: Du lädst die App direkt von GitHub herunter.
 
 ```{admonition} Where the code comes from
 :class: note
 
-The setup page and the build workflow are part of this documentation: they are maintained and reviewed together with it. The <a href="../_static/aaps-builder/aaps-builder-build.yml">workflow</a> you add to your repository is short: it runs the [build steps](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml) kept in the documentation repository, pinned to one reviewed version. You can read both before you use them. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+Die Einrichtungsseite und der Build-Workflow sind Teil dieser Dokumentation: Sie werden zusammen mit ihr gepflegt und geprüft. Der <a href="../_static/aaps-builder/aaps-builder-build.yml">Workflow</a>, den Du zu Deinem Repository hinzufügst, ist kurz: Er führt die [Build-Schritte](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml) aus, die im Repository der Dokumentation liegen, festgelegt auf eine geprüfte Version. Du kannst beide lesen, bevor Du sie nutzt. Beim Erstellen lädt der Workflow nur den offiziellen AAPS-Quellcode und GitHubs eigene Build-Werkzeuge herunter. Dein Keystore verlässt nie Deinen Browser und Dein privates Repository.
 ```
 
 (aaps-builder-before-you-start)=
 
-## Before you start
+## Bevor Du anfängst
 
-You will need:
+Du brauchst:
 
-- A **GitHub account** (free). If you don't have one, create it on [github.com](https://github.com/signup) first.
-- A **web browser**: Chrome on your phone, or any browser on a computer. Log in to github.com in that browser before you start.
-- **GitHub app on your phone?** You can keep it. Some buttons of the setup page then open the app instead of Chrome. Building works in the app, but the app **cannot download** the finished AAPS: [step 6](#aaps-builder-step6) shows how to switch to Chrome for the download.
-- Your **existing keystore** (`.jks` file), its password and its alias, if you built AAPS before and want to update it without reinstalling.
+- Ein **GitHub-Konto** (kostenlos). Falls Du noch keins hast, leg es zuerst auf [github.com](https://github.com/signup) an.
+- Einen **Webbrowser**: Chrome auf Deinem Smartphone oder einen beliebigen Browser auf einem Computer. Melde Dich vor dem Start in diesem Browser bei github.com an.
+- **Die GitHub-App auf Deinem Smartphone?** Die kannst Du behalten. Einige Schaltflächen der Einrichtungsseite öffnen dann die App statt Chrome. Erstellen funktioniert in der App, aber die App **kann** das fertige AAPS <0>nicht herunterladen:</0> [Schritt 6](#aaps-builder-step6) zeigt, wie Du für den Download zu Chrome wechselst.
+- Deinen **bestehenden Keystore** `(.jks`-Datei), sein Passwort und seinen Alias, falls Du AAPS schon einmal erstellt hast und es ohne Neuinstallation aktualisieren willst.
 
 ```{warning}
-**Your build repository must stay private.** Everything a build produces is visible to anyone who can see the repository. The setup page creates a private repository for you. Never change it to public.
+**Dein Build-Repository muss privat bleiben.** Alles, was ein Build erzeugt, ist für jeden sichtbar, der das Repository sehen kann. Die Einrichtungsseite legt für Dich ein privates Repository an. Stelle es niemals auf „öffentlich“ um.
 
-A private repository gets 2000 free GitHub Actions minutes per month, which is enough for several builds.
+Ein privates Repository bekommt 2000 kostenlose GitHub-Actions-Minuten pro Monat. Das reicht für mehrere Builds.
 ```
 
 ```{warning}
-**New key or existing key: this decides whether you can update AAPS.**
+**Neuer oder vorhandener Schlüssel: Davon hängt ab, ob Du AAPS aktualisieren kannst.**
 
-- **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Lost keystore](#troubleshooting_androidstudio-lost-keystore).
+- **Du hast AAPS schon auf Deinem Smartphone, erstellt mit einem Keystore, den Du noch hast**: Wähle auf der Einrichtungsseite **I already have a keystore** und lade ihn hoch. Dein nächster Build aktualisiert AAPS dann direkt. Du hast AAPS mit dem bisherigen Browser-Build erstellt (Dein eigener Fork)? Dann liegt Dein Keystore in Deinem Fork: [Besorge Dir zuerst eine Kopie](#aaps-builder-from-fork) davon.
+- **Du erstellst AAPS zum ersten Mal, oder Du hast Deinen Keystore oder sein Passwort verloren**: Wähle **Create a new key**. Eine App, die mit einem neuen Schlüssel signiert ist, kann kein AAPS aktualisieren, das mit einem anderen Schlüssel signiert wurde. Du musst Deine Einstellungen exportieren, die Datei vom Smartphone weg kopieren, das alte AAPS deinstallieren, das neue installieren und dann Deine Einstellungen importieren: siehe [Verlorener Keystore](#troubleshooting_androidstudio-lost-keystore).
 
-Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
+Nutze danach immer denselben Schlüssel. Wenn Du einen neuen Schlüssel erstellst, lade die Sicherung herunter, die die Seite anbietet, und bewahre sie zusammen mit Passwort und Alias (`key0`) an einem sicheren Ort außerhalb Deines Smartphones auf.
 ```
 
 (aaps-builder-from-fork)=
 
-## Coming from the previous browser build (fork)
+## Umstieg vom bisherigen Browser-Build (Fork)
 
-Skip this section if you never built AAPS with the previous browser build method (your own copy, or fork, of AndroidAPS in GitHub, with the preparation file and Google Drive).
+Überspringe diesen Abschnitt, wenn Du AAPS nie mit dem bisherigen Browser-Build erstellt hast (Deine eigene Kopie bzw. Dein Fork von AndroidAPS in GitHub, mit Vorbereitungsdatei und Google Drive).
 
-Your keystore is stored as secrets in your fork. GitHub never shows a secret again, so you can't copy it to your new repository. Get a copy of your keystore first, then use it in [step 3](#aaps-builder-step3) with **I already have a keystore**.
+Dein Keystore ist als Secrets in Deinem Fork gespeichert. GitHub zeigt ein Secret nie wieder an, deshalb kannst Du es nicht in Dein neues Repository kopieren. Besorge Dir zuerst eine Kopie Deines Keystores und nutze sie dann in [Schritt 3](#aaps-builder-step3) mit **„Ich habe schon einen Keystore“**.
 
 ```{warning}
-Don't choose **Create a new key**. AAPS built with a new key cannot update the AAPS on your phone.
+Wähle nicht **Create a new key**. Ein AAPS, das mit einem neuen Schlüssel erstellt wurde, kann das AAPS auf Deinem Smartphone nicht aktualisieren.
 ```
 
-Which case is yours?
+Welcher Fall trifft auf Dich zu?
 
-- **You used Option 2** (you uploaded your own keystore from Android Studio), and you still have the `.jks` file, its passwords and its alias: nothing to do here. Use that file in step 3.
-- **You used Option 1** (the preparation file created your key), or you no longer have your keystore file: export it from your fork as below.
+- **Du hast Option 2 genutzt** (Du hast Deinen eigenen Keystore aus Android Studio hochgeladen), und Du hast die `.jks`-Datei, ihre Passwörter und ihren Alias noch: Dann musst Du hier nichts tun. Nutze diese Datei in Schritt 3.
+- **Du hast Option 1 genutzt** (die Vorbereitungsdatei hat Deinen Schlüssel erzeugt), oder Du hast Deine Keystore-Datei nicht mehr: Exportiere sie wie unten beschrieben aus Deinem Fork.
 
-To export your keystore from your fork:
+So exportierst Du Deinen Keystore aus Deinem Fork:
 
-1. In your fork, open **Settings** → **Secrets and variables** → **Actions** and add a secret named `ZIP_PASSWORD`. Choose a password with only English letters and numbers. It protects the file you are about to create.
-2. Open the **Actions** tab of your fork, tap **CI Keystore Export**, then **Run workflow**. More details: [Export your keystore](#ci-keystore-export).
-3. When the run has a green check, open your Google Drive: the file `keystore.zip` is in the folder **AAPS** → **KeyStore**. If the run fails at the Google Drive step, your fork's Google Drive access has expired: see [Google refresh token expired](#aaps-ci-google-token-expired).
-4. Download `keystore.zip` and open it with your `ZIP_PASSWORD`: on a computer, or on your phone with a file manager app that can open password-protected ZIP files. It contains:
-   - `keystore.jks`: your keystore,
-   - `keyStoreInfo.txt`: your `KEYSTORE_PASSWORD`, `KEY_PASSWORD` and `ALIAS` (usually `key0`).
-5. Copy `keystore.jks` to your phone (or to Google Drive, so you can pick it from there).
+1. Öffne in Deinem Fork **Settings** → **Secrets and variables** → **Actions** und lege ein Secret mit dem Namen `ZIP_PASSWORD` an. Wähle ein Passwort nur aus englischen Buchstaben und Ziffern. Es schützt die Datei, die Du gleich erzeugst.
+2. Öffne den Tab **„Actions“** Deines Forks, tippe auf **„CI Keystore Export“** und dann auf **„Run workflow“**. Mehr dazu: [Keystore exportieren](#ci-keystore-export).
+3. Sobald der Durchlauf ein grünes Häkchen hat, öffne Dein Google Drive: Die Datei `keystore.zip` liegt im Ordner **AAPS** → **KeyStore**. Schlägt der Durchlauf beim Google-Drive-Schritt fehl, ist der Google-Drive-Zugriff Deines Forks abgelaufen: siehe [Google refresh token expired](#aaps-ci-google-token-expired).
+4. Lade `keystore.zip` herunter und öffne sie mit Deinem `ZIP_PASSWORD`: am Computer oder auf dem Smartphone mit einer Dateimanager-App, die passwortgeschützte ZIP-Dateien öffnen kann. Sie enthält:
+   - `keystore.jks`: Deinen Keystore,
+   - `keyStoreInfo.txt`: Dein `KEYSTORE_PASSWORD`, `KEY_PASSWORD` und `ALIAS` (meist `key0`).
+5. Kopiere `keystore.jks` auf Dein Smartphone (oder in Dein Google Drive, damit Du sie dort auswählen kannst).
 
-In [step 3](#aaps-builder-step3) of the setup page:
+In [Schritt 3](#aaps-builder-step3) der Einrichtungsseite:
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose `keystore.jks`.
-3. In **Keystore password**, type the `KEYSTORE_PASSWORD` from `keyStoreInfo.txt`.
-4. In **Key alias**, pick or type the `ALIAS` from `keyStoreInfo.txt`.
-5. If `KEY_PASSWORD` is different from `KEYSTORE_PASSWORD`, untick **Key password is the same as the keystore password** and type the `KEY_PASSWORD`.
+1. Tippe auf **I already have a keystore**.
+2. Wähle unter **Keystore-Datei**, die Datei `keystore.jks`.
+3. Gib unter **Keystore-Password** das `KEYSTORE_PASSWORD` aus `keyStoreInfo.txt` ein.
+4. Wähle unter **Key Alias** den `ALIAS` aus `keyStoreInfo.txt` aus.
+5. Unterscheiden sich `KEY_PASSWORD` und `KEYSTORE_PASSWORD`, entferne das Häkchen bei **Key password is the same as the keystore password** und gib das `KEY_PASSWORD` ein.
 
-Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
+Bewahre `keystore.zip` und das `ZIP_PASSWORD` an einem sicheren Ort außerhalb Deines Smartphones auf: Das ist die Sicherung Deines Schlüssels.
 
-Your fork's Google Drive access can't be copied either. To also save the builds of AAPS Builder in Google Drive, do [step 7](#aaps-builder-google-drive). You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+Den Google-Drive-Zugriff Deines Forks kannst Du auch nicht kopieren. Wenn Du auch die Builds des AAPS Builders in Google Drive speichern willst, führe [Schritt 7](#aaps-builder-google-drive) aus. Deinen Fork kannst Du behalten, bis das mit dem AAPS Builder erstellte AAPS auf Deinem Smartphone installiert ist.
 
-## Open the setup page
+## Einrichtungsseite öffnen
 
-**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
+**→ [AAPS-Builder-Einrichtungsseite öffnen](#aaps-builder-setup)**
 
-Keep this documentation page open: long-press the link above and choose **Open in new tab**. The steps below explain each part of the setup page in more detail.
+Lass diese Dokumentationsseite geöffnet: Drücke lange auf den Link oben und wähle **In neuem Tab öffnen**. Die Schritte unten erklären jeden Teil der Einrichtungsseite ausführlicher.
 
-The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
+Die Einrichtungsseite öffnet jede GitHub-Seite in einem neuen Chrome-Tab. Um zur Einrichtungsseite zurückzukehren, tippe auf die Tab-Schaltfläche neben der Adressleiste von Chrome (das Quadrat mit einer Zahl) und wähle die AAPS-Builder-Einrichtungsseite.
 
-The setup page runs entirely in your browser: your key and passwords are never sent anywhere, except into the GitHub secret you paste them into yourself. Nur Dein GitHub-Benutzername geht an GitHub, um zu prüfen, ob es ihn gibt. It remembers your GitHub username and repository name, so you can come back to it at any time to reopen your secrets page or your builds.
+Die Einrichtungsseite läuft komplett in Deinem Browser: Dein Schlüssel und Deine Passwörter werden nirgendwohin gesendet, außer in das GitHub-Secret, in das Du sie selbst einfügst. Nur Dein GitHub-Benutzername geht an GitHub, um zu prüfen, ob es ihn gibt. Sie merkt sich Deinen GitHub-Benutzernamen und den Namen Deines Repositorys, sodass Du jederzeit zurückkommen kannst, um Deine Secrets-Seite oder Deine Builds wieder zu öffnen.
 
 ![The AAPS Builder setup page](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
 (aaps-builder-step1)=
 
-## Step 1 – Create your private build repository
+## Schritt 1 – Dein privates Build-Repository anlegen
 
-This step creates an empty private repository in your GitHub account. Only you can see it and the apps it builds.
+Dieser Schritt legt ein leeres privates Repository in Deinem GitHub-Konto an. Nur Du kannst es und die damit erstellten Apps sehen.
 
-1. Make sure you are logged in to github.com in this browser.
+1. Stelle sicher, dass Du in diesem Browser bei github.com angemeldet bist.
 
-2. In **Your GitHub username**, type your GitHub username, not your e-mail. The page checks it with GitHub: **✓ GitHub user found** means it is right.
+2. Gib unter **Dein GitHub-Benutzername** Deinen GitHub-Benutzernamen ein, nicht Deine E-Mail-Adresse. Die Seite prüft ihn bei GitHub: **✓ GitHub user found** bedeutet, dass er stimmt.
 
-3. In **Name of your repository**, keep the suggestion `my-aaps`. If you already created your repository with another name, type that exact name.
+3. Übernimm unter **Name Deines Repositorys** den Vorschlag `my-aaps`. Hast Du Dein Repository schon unter einem anderen Namen angelegt, gib genau diesen Namen ein.
 
    ```{tip}
-   **Already created an empty private repository yourself?** Type its exact name here, don't tap **Create my private repository**, and go to [step 2](#aaps-builder-step2).
+   **Du hast schon selbst ein leeres privates Repository angelegt?** Gib hier seinen genauen Namen ein, tippe nicht auf **Create my private repository** und mach mit [Schritt 2](#aaps-builder-step2) weiter.
    ```
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`.
+4. Prüfe die Zeile **Your repository:**. Dort steht `github.com/<your username>/my-aaps`.
 
-5. Tap **Create my private repository**.
+5. Tippe auf **Create my private repository**.
 
    ![Setup page step 1 filled in](../images/Building-the-App/CI/AapsBuilder31_Step1Filled.png)
 
-6. GitHub opens in a new tab with your account as **Owner** and the name you chose.
+6. GitHub öffnet sich in einem neuen Tab, mit Deinem Konto als **Owner** und dem Namen, den Du gewählt hast.
 
    ![GitHub Create a new repository page](../images/Building-the-App/CI/AapsBuilder32_GitHubNewRepo.png)
 
-   Scroll down: **Private**, **No template** and **Add README: Off** are already selected. Don't change anything, and don't add a README or other files.
+   Scrolle nach unten: **Private**, **No template** und **Add README: Off** sind schon ausgewählt. Ändere nichts und füge keine README oder andere Dateien hinzu.
 
-7. Scroll down and tap the green **Create repository** button.
+7. Scrolle nach unten und tippe auf die grüne Schaltfläche **Create repository**.
 
    ![Create repository button](../images/Building-the-App/CI/AapsBuilder34_GitHubCreate.png)
 
-   GitHub shows your new, empty repository. **Go back to the setup page tab** for step 2: tap the tab button next to Chrome's address bar and choose the setup page.
+   GitHub zeigt Dein neues, leeres Repository an. Wechsle für Schritt 2 **zurück in den Tab der Einrichtungsseite**: Tippe auf die Tab-Schaltfläche neben der Adressleiste von Chrome und wähle die Einrichtungsseite.
 
 (aaps-builder-step2)=
 
-## Step 2 – Add the build workflow
+## Schritt 2 – Build-Workflow hinzufügen
 
-The build workflow is a short text file that tells GitHub how to build AAPS. The setup page adds it to your repository, once: you only confirm it.
+Der Build-Workflow ist eine kurze Textdatei, die GitHub sagt, wie AAPS erstellt wird. Die Einrichtungsseite fügt sie einmalig zu Deinem Repository hinzu, Du bestätigst nur.
 
-1. Check that the page shows **Workflow version … is ready**, then tap **Add the workflow to my repository**.
+1. Prüfe, dass die Seite **Workflow version … is ready** anzeigt, und tippe dann auf **Add the workflow to my repository**.
 
    ![Step 2 of the setup page](../images/Building-the-App/CI/AapsBuilder35_Step2.png)
 
-2. GitHub opens a new file in your repository, already named `.github/workflows/build.yml` and already filled in. Check the file name at the top: it must be exactly `.github/workflows/build.yml`. Don't change the text.
+2. GitHub öffnet in Deinem Repository eine neue Datei, die schon `.github/workflows/build.yml` heißt und bereits ausgefüllt ist. Prüfe oben den Dateinamen: Er muss genau `.github/workflows/build.yml` lauten. Ändere nicht den Text.
 
-3. Tap **Commit changes…**
+3. Tippe auf **Commit changes…**
 
    ![The workflow, filled in by the setup page](../images/Building-the-App/CI/AapsBuilder37_NewFilePasted.png)
 
-4. then **Commit changes** again in the window that opens.
+4. und im Fenster, das sich öffnet, noch einmal auf **Commit changes**.
 
    ![Commit changes window](../images/Building-the-App/CI/AapsBuilder38_CommitDialog.png)
 
-   GitHub shows the new file `build.yml` in the `.github/workflows` folder of your repository.
+   GitHub zeigt die neue Datei `build.yml` im Ordner `.github/workflows` Deines Repositorys an.
 
    ![The workflow file in your repository](../images/Building-the-App/CI/AapsBuilder39_WorkflowAdded.png)
 
 ```{warning}
-Don't press your phone's **Back** button or pull the page down while the file editor is open: GitHub reloads the page and the text disappears. If that happens, tap **Restore** in the blue banner, or go back to the setup page and tap the button again.
+Drücke nicht die **Zurück**-Taste Deines Smartphones und ziehe die Seite nicht nach unten, solange der Datei-Editor geöffnet ist: GitHub lädt die Seite dann neu, und der Text verschwindet. Passiert das doch, tippe im blauen Banner auf **Restore**, oder geh zurück zur Einrichtungsseite und tippe noch einmal auf die Schaltfläche.
 ```
 
-If the text area is empty, tap **Updating the workflow, or the text area is empty?** at the bottom of step 2 on the setup page: tap **Copy workflow** and paste it into the text area (long press on a phone).
+Ist das Textfeld leer, tippe in Schritt 2 der Einrichtungsseite unten auf **Workflow aktualisieren oder Textfeld leer?**: Tippe auf **Copy workflow** und füge ihn in das Textfeld ein (auf dem Smartphone lange drücken).
 
 ```{warning}
-Only use the workflow from this setup page. Don't copy a build workflow from another website or repository: the workflow runs next to your signing key.
+Nutze nur den Workflow von dieser Einrichtungsseite. Kopiere keinen Build-Workflow von einer anderen Website oder aus einem anderen Repository: Der Workflow läuft direkt neben Deinem Signaturschlüssel.
 ```
 
 (aaps-builder-step3)=
 
-## Step 3 – Your signing key
+## Schritt 3 – Dein Signaturschlüssel
 
-The app must be signed with your own key. Choose one of the two tabs. Read the [new key or existing key warning](#aaps-builder-before-you-start) first.
+Die App muss mit Deinem eigenen Schlüssel signiert werden. Wähle einen der beiden Tabs. Lies vorher den [Hinweis zu neuem oder vorhandenem Schlüssel](#aaps-builder-before-you-start).
 
 ![Setup page step 3: the two key options](../images/Building-the-App/CI/AapsBuilder40_Step3.png)
 
-### I already have a keystore
+### Ich habe schon einen Keystore
 
-1. Tap **I already have a keystore**.
-2. In **Keystore file**, choose your `.jks` file (or `.keystore`, `.p12`, `.pfx`). On a phone, copy the file to your phone or to Google Drive first.
-3. In **Keystore password**, type the keystore password.
-4. In **Key alias**, pick your alias from the list, or type it if there is no list. For keystores made with Android Studio it is usually `key0`.
-5. If your key password is different from the keystore password, untick **Key password is the same as the keystore password** and type the key password.
-6. Tap **Check and continue**.
+1. Tippe auf **I already have a keystore**.
+2. Wähle unter **Keystore-Datei** Deine `.jks`-Datei (oder `.keystore`, `.p12`, `.pfx`). Auf dem Smartphone kopiere die Datei vorher auf das Smartphone oder in Dein Google Drive.
+3. Gib unter **Keystore password** das Keystore-Passwort ein.
+4. Wähle unter **Key Alias** Deinen Alias aus der Liste, oder tippe ihn ein, falls es keine Liste gibt. Bei Keystores aus Android Studio ist das meist `key0`.
+5. Unterscheiden sich Dein Key-Passwort und Dein Keystore-Passwort, entferne das Häkchen bei **Key password is the same as the keystore password** und gib das Key-Passwort ein.
+6. Tippe auf **Check and continue**.
 
-The page checks the password and the alias on your device. **Keystore OK! Continue with step 4.** means everything is right. If it says the password will be checked when you build, continue anyway: the build tells you if something is wrong.
+Die Seite prüft Passwort und Alias auf Deinem Gerät. **Keystore OK! Continue with step 4.** bedeutet, dass alles stimmt. Steht dort, dass das Passwort erst beim Build geprüft wird, mach trotzdem weiter: Der Build meldet sich, falls etwas nicht stimmt.
 
-### Create a new key
+### Neuen Schlüssel erstellen
 
 1. Tap **Create a new key**.
 
@@ -218,7 +218,7 @@ The page checks the password and the alias on your device. **Keystore OK! Contin
 
 (aaps-builder-step4)=
 
-## Step 4 – Give the key to your repository
+## Schritt 4 – Den Schlüssel an Dein Repository übergeben
 
 Step 4 unlocks when step 3 is done. Your key, its passwords and its alias are packed into one value, the `KEYSTORE_SET` secret.
 
@@ -246,7 +246,7 @@ GitHub shows **Page not found** (404)? Prüfe zuerst, ob Du in diesem Browser be
 
 (aaps-builder-step5)=
 
-## Step 5 – Build the app
+## Schritt 5 – App erstellen
 
 1. On the setup page, tap **Open the build page**. GitHub opens the **Build AAPS** page of your repository.
 
@@ -281,7 +281,7 @@ If there is no **Build AAPS** or **Run workflow** button:
 
 (aaps-builder-step6)=
 
-## Step 6 – Install the app on your phone
+## Schritt 6 – App auf dem Smartphone installieren
 
 ```{warning}
 **Before every update**, [export your settings](#ExportImportSettings-Automating-Settings-Export) in AAPS and copy the file **off the phone** (Google Drive, Dropbox…). Keep several older exports and the APK files there too, so you can always go back.
@@ -328,7 +328,7 @@ From September 2026, Google's [Android developer verification](#android-develope
 
 (aaps-builder-google-drive)=
 
-## Step 7 (optional) – Also save the app in Google Drive
+## Schritt 7 (optional) – App zusätzlich in Google Drive speichern
 
 You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
 
