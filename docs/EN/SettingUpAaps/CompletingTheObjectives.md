@@ -8,7 +8,7 @@
 
 When **AAPS** is installed for the first time, each objective must be completed before moving on to the next one. New features will gradually be unlocked as progress is made through each **Objective**.
 
-**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 to 11** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
+**Objectives 1 to 8** will guide you from configuring **AAPS** on your smartphone to “basic” hybrid closed looping. This will take about 6 weeks to complete. You can proceed up to **Objective 5** using a virtual pump (and using some other method of insulin delivery in the meantime). **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. Further details on an estimated breakdown of time can be obtained here: [How long will it take?](#preparing-how-long-will-it-take)
 
 As well as progressing through the **Objectives**, if required, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
 
@@ -31,11 +31,11 @@ The **Objectives** will need to be restarted from the beginning should you fail 
 
 **Objective 1** requires the user to set up their basic technical setup in **AAPS**. No progress can be made until this step has been completed.
 
-- Select the correct CGM/FGM in [Config Builder > BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
-- Select the correct Pump in [Config Builder > Pump](../SettingUpAaps/ConfigBuilder.md) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
+- Select the correct CGM/FGM in [Configuration → BG Source](#Config-Builder-bg-source). See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
+- Select the correct Pump in [Configuration → Pump](#Config-Builder-pump) to ensure your pump can communicate with **AAPS**. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **Objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
 - If using Nightscout:
   - Follow instructions in [Nightscout](../SettingUpAaps/Nightscout.md) page to ensure **Nightscout** can receive and display **AAPS** data.
-  - Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [Preferences > NSClient](#Preferences-nsclient).
+  - Note that the URL in **NSClientV3** must be **_without_ "/api/v1/"** at the end - see [Settings → NSClientV3](#Preferences-nsclient).
 - If using Tidepool:
   - Follow instructions in [Tidepool](../SettingUpAaps/Tidepool.md) page to ensure **Tidepool** can receive and display **AAPS** data.
 
@@ -86,7 +86,7 @@ From time to time, new features are added to **AAPS** which may require a new qu
 
 ## Objective 4: Starting on an open loop
 
-The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, please refer to the [**Actions** tab](#screens-action-tab).
+The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. As part of this **Objective**, you will activate open looping for the first time, and will accept 20 proposed temporary basal rate changes, and if required, apply these manually on your pump. You will also observe the impact of [**Temporary Targets**](../DailyLifeWithAaps/TempTargets.md). If you are not familiar with setting a temporary basal rate change in **AAPS** yet, see the pump actions in the **Manage** sheet ([Where did the Actions tab go?](#screens-action-tab)).
 
 The minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective**, even if all basal rate changes were enacted already.
 
@@ -108,11 +108,11 @@ You don't need to action each and every system recommendation!
 (objectives-objective5)=
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](#aaps-screens-how-predictions-become-a-dosing-decision), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at detailed calculations shown on your **OpenAPS** tab.
+As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](#aaps-screens-how-predictions-become-a-dosing-decision), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at the detailed calculations shown on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**).
 
 Estimated time to complete this objective: **7 days**.
 
-This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings).
+This **Objective** requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Settings → OpenAPS SMB](#Preferences-openaps-smb-settings). In [simple mode](#preferences-simple-mode), **AAPS** sets this value automatically and you don't need to change it.
 If you are still using a virtual pump, make sure this safety setting is set in both **AAPS** and your insulin pump.
 
 You might wish to set your [**Profile** BG target](#profile-glucose-targets) higher than usual until you are comfortable with **AAPS**' calculations and settings. You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/L [20 mg/dL or less] wide) and observe the resulting behavior.
@@ -164,7 +164,7 @@ This means that when you are on **Objective 6**, if sensor glucose levels are dr
 (objectives-objective7)=
 ## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
+To complete **Objective 7** you have to close your loop and raise your [maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over). **maxIOB** was zeroed out automatically in **Objective 6**, due to the Low Glucose Suspend mode. This is no longer the case. **AAPS** will start to use your defined maxIOB value to correct high glucose values. In [simple mode](#preferences-simple-mode), **AAPS** sets maxIOB automatically and you don't need to change it.
 
 Minimal time to complete this objective: **1 day**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
 
@@ -191,7 +191,7 @@ As part of this **objective**, you will revisit your **Profile**'s performance a
 
 Minimal time to complete this objective: **7 days**. This is a mandatory wait time. It is not possible to proceed to the next **Objective** until this period of time has expired.
 
-Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days (in [simple mode](#preferences-simple-mode) it is enabled by default) and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**) which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
 
 This is a good time to review your settings for [Sensitivity Detection](#Config-Builder-sensitivity-detection). You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs).
 
@@ -207,7 +207,7 @@ Minimal time to complete this objective: **28 days**. This is a mandatory wait t
 - The [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand **SMB** and the concept of **zero-temping**.
 - Once done, you can [raise maxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over) to get **SMBs** working more effectively. maxIOB now includes all **IOB**, not just accumulated basal. This threshold pauses **SMBs** until IOB drops below this value (_e.g._ **maxIOB** is set to 7U and a bolus of 8U is given to cover a meal: SMBs will be paused and not given unless **IOB** drops below 7U).
   A good start is setting **maxIOB** = **average meal bolus + 3x max daily basal** where "max daily basal" is the maximum hourly value in any time segment of the day. See [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference.
-- Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Preferences > Absorption settings > min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
+- Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
 
 (objectives-objective10)=
 ## Objective 10: Automation
@@ -219,17 +219,15 @@ Minimal time to complete this objective: **28 days**. This is a mandatory wait t
 Read the documentation page [Automation](../DailyLifeWithAaps/Automations.md) first.
 
 Set up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Select the notification tab
-- From the top right 3 dots menu, select add rule
-- Give a task name "My first automation notification"
-- "edit"  "condition"
-  - click the "+" symbol to add the first trigger
-  - select "Time"  & "OK", it will create a default entry AT TODAY HOUR:MINUTE
-  - click the MINUTE portion to edit the time such that it triggers in a few minutes. Then click ok to close
-  - click "ok"  to close the Triggers screen
-- "ADD" an "Action"
-  - select "Notification", "OK"
-  - click "Notification" to edit the message, enter something like "My first automation"
+- Open **Manage → Automation** and tap the **+** button (**Add rule**).
+- Enter a **Task name**, for example "My first automation notification".
+- Under **Condition**, tap "**EDIT**".
+  - Tap "**Add trigger**" and select "**Time**". **AAPS** creates an entry for today at the current time.
+  - Change the time so that it triggers in a few minutes.
+  - Tap the **Save** icon (top right) to go back to the rule.
+- Under **Action**, tap "**ADD**" and select "**Notification**".
+  - Enter a message in the action card, for example "My first automation".
+- Tap the **Save** icon (top right) and make sure the rule is **Enabled**.
 - Wait until the time triggers the notification (note that depending on your phone, it can be a few minutes late)
 
 You can then experiment with setting up a more useful **Automation**.

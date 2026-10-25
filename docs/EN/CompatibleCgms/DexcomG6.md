@@ -17,7 +17,7 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 ## If using G6 or ONE with xDrip
 
 - If not already set up, download [xDrip](https://github.com/NightscoutFoundation/xDrip) and adjust its settings following the [xDrip settings page](../CompatibleCgms/xDrip.md).
-- Select xDrip in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 - The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 - When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and Dexcom app with the transmitter at the same time!**
 - If you need Clarity and want to profit from xDrip alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip.
@@ -44,9 +44,9 @@ Dexcom BYODA is now a very old version of the app and cannot be updated.
 
 ### Settings for AAPS
 
--   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Select **BYODA** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
--   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for
+-   If you don't receive any values select any other data source, then re-select **BYODA** to trigger the demand for
     permissions to establish the connection between AAPS and BYODA-broadcast.
 
 ### Settings for xDrip

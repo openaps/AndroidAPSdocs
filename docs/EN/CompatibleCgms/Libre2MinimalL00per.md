@@ -118,7 +118,7 @@ Many people have asked if this method can be used with an already active sensor 
 
 ![OOP2 settings](../images/minimal00per/OOP2settings.png)
 
-**Install xDrip** minimum version: latest release. Further documentation on xDrip installation and setup can be found [*here*](https://androidaps.readthedocs.io/en/latest/Configuration/xdrip.html).
+**Install xDrip** minimum version: latest release. Further documentation on xDrip installation and setup can be found [*here*](../CompatibleCgms/xDrip.md).
 
 (minimallooper-step2)=
 
@@ -331,7 +331,7 @@ On the **BT Device** (swipe left) screen you can verify further connection detai
 
   - LL
 
-  - AndroidAPS
+  - AAPS
 
 &nbsp;
 

@@ -42,12 +42,12 @@ In case your main **AAPS** phone is lost or damaged, having a copy of the APK av
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
 You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
 ```
 
 With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
 
-The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your **Configuration** settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
 
 Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
 
@@ -60,7 +60,7 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 
 **How to back-up manually:**
 
-1. If this your first time importing or exporting **Settings** you will need to set a master password in [Preferences > General > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
+1. If this your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
 
 2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
 
@@ -87,7 +87,7 @@ Exporting the AAPS settings to file enables you to restore its configuration to 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
 You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
 ```
 
 It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
@@ -117,11 +117,11 @@ _**Note:** On importing settings to user always needs to enter the AAPS password
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
 You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).</br>
+You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).</br>
 If **AAPS** loses access to that directory (this can happen after a reinstall or after clearing the app's storage), it shows an **Access to the AAPS directory was lost** notification and stops saving settings to the phone until you [select the directory again](#preferences-maintenance-logdirectory).
 ```
 
-Use these instructions if you have a back-up of your APK and **Preferences** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+Use these instructions if you have a back-up of your APK and **Settings** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
 
 _If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
 
@@ -148,15 +148,15 @@ By default, an import leaves your pump settings alone: the pump selected in **Co
 
 2. Launch **AAPS** and allow any requested permissions
 
-3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Preferences**
+3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Settings**
 
 4. From the **AAPS** main screen select Request and allow on all permissions listed in red on the top
 
-5. From the **AAPS** main screen, set the master password in [Preferences > General > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
 
-6. If you haven't done it yet, [set the **AAPS Directory**](#preferences-maintenance-settings): from the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > AAPS DIRECTORY.
+6. If you haven't done it yet, [set the **AAPS directory**](#preferences-maintenance-logdirectory): from the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **AAPS directory**.
 
-7. From the **AAPS** main screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok. This will create the preferences folder if it does not already exist on your phone.
+7. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **Export settings** > type in the master password set above > **OK**. This will create the preferences folder if it does not already exist on your phone.
 
 8. Download the back-up of your **Preferences** file from your cloud platform. 
 

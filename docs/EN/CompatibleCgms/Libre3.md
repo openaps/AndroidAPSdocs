@@ -12,7 +12,7 @@ Juggluco can also pass data to LibreView for sharing with health care providers 
 Within xDrip the sensor can be calibrated in the range of -40 mg/dL to +20 mg/dL (-2.2 mmol/L to +1.1 mmol/L) to compensate for differences between a manual meter reading and the sensor readings.
 
 ## Method 1: use 1-minute readings directly
-AndroidAPS is taylored for 5-minute readings. Therefore processing 1-minute values has occasional limitations. 
+**AAPS** is tailored for 5-minute readings. Therefore processing 1-minute values has occasional limitations. 
 
 See [here](#juggluco-to-aaps).
 
@@ -52,11 +52,11 @@ Wait at least 15-20 minutes if there is still no data.
 
 After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
 
-### Step 4: Configure AndroidAPS
+### Step 4: Configure AAPS
 
 - See [here](#juggluco-to-xdrip) and come back.
 
-- If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
+- If **AAPS** does not receive BG values when phone is in airplane mode, use "Identify receiver"
 - Turn off Smoothing (done in xDrip already)
 
 ## Subsequent sensor changes

@@ -20,7 +20,7 @@ Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, 
 
 Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
 
-- **Open plugin** — opens the plugin's own screen (its tab/content).
+- **Open plugin** — opens the plugin's own screen.
 - **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
 
 ![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
@@ -28,7 +28,7 @@ Inside a category you see the plugins available for it. For single-choice catego
 (configuration_sync_icon)=
 ### The mobile icon — “synced from the master”
 
-A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClient (Nightscout) channel.
+A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
 
 On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
 
@@ -36,7 +36,7 @@ The same icon also appears **inside the settings**, next to the individual prefe
 
 ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
 
-Items **without** the icon are configured **per device**. The most important example is the **NSClient (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
+Items **without** the icon are configured **per device**. The most important example is the **NSClientV3 (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
 
 ---
 
@@ -105,39 +105,38 @@ To change the DIA or peak you are using:
 
 You can delete the old insulin once it is no longer active.
 
-### Insulin type differences
+### The "Load peak from" presets
 
-* The options 'Rapid-Acting Oref', 'Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential curve.
-* You can adjust both the DIA and the time to peak. The **Load peak from** presets set the peak to the value recommended for Novorapid, Fiasp or Lyumjev, and the peak values listed below are these recommended defaults.
-* Only change the peak away from its recommended value if you understand the effect of doing so. 'Free-Peak Oref' is intended for advanced users entering a custom peak.
-* The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
+In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
 
-#### Rapid-Acting Oref
+Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
 
-![Insulin type Rapid-Acting Oref](../images/Profile/ConfBuild_Insulin_RAO.png)
+#### Novorapid
 
-* recommended for Humalog, Novolog and Novorapid
-* Peak = 75 minutes after injection (recommended default; loaded by the **Novorapid** preset)
+![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
 
-#### Ultra-Rapid Oref
+* recommended for Humalog, Novolog and Novorapid (called *Rapid-Acting Oref* in **AAPS** v3)
+* Peak = 75 minutes after injection
 
-![Insulin type Ultra-Rapid Oref](../images/Profile/ConfBuild_Insulin_URO.png)
+#### Fiasp
 
-* recommended for FIASP
-* Peak = 55 minutes after injection (recommended default; loaded by the **Fiasp** preset)
+![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+
+* recommended for Fiasp (called *Ultra-Rapid Oref* in **AAPS** v3)
+* Peak = 55 minutes after injection
 
 (Config-Builder-lyumjev)=
 #### Lyumjev
 
-![Insulin type Lyumjev](../images/Profile/ConfBuild_Insulin_L.png)
+![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
 
-* special insulin profile for Lyumjev
-* Peak = 45 minutes after injection (recommended default; loaded by the **Lyumjev** preset)
+* recommended for Lyumjev
+* Peak = 45 minutes after injection
 
-#### Free Peak Oref
+#### Custom peak
 
-* In **AAPS** 4 there is no separate "Free-Peak Oref" insulin type: you can enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a **Load peak from** preset.
-* A custom peak is recommended if an unbacked insulin or a mixture of different insulins is used.
+* There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
+* A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
 
 (Config-Builder-insulin-dia)=
 ### Duration of insulin action (DIA) and peak
@@ -324,7 +323,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * [Auto ISF](#Open-APS-features-auto-isf)
   * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
 
-If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manually to **8** (default value for SMB) in [Preferences > Sensitivity detection > Sensitivity Oref1 settings](../SettingUpAaps/Preferences.md).
+If switching from AMA to SMB algorithm, _min_5m_carbimpact_ must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
 
 ## Loop
 
@@ -342,9 +341,9 @@ This module cannot be disabled as it is a core part of **AAPS**.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 
-## Synchronization
+## Communication
 
-In this section, you can choose if/where you want **AAPS** to send your data to. In **AAPS** 4 this category is called **Communication**.
+In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
 
 ![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
 
@@ -356,7 +355,7 @@ Scroll down to see the rest of the list:
 
 Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md). 
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClient synchronization.
+See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
 
 ### Tidepool
 
@@ -389,7 +388,7 @@ In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch
 
 Connection to Garmin device (Fenix, Edge...)
 ## Treatments
-Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the main screen](#screens-bolus-carbs).
+Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
 
 ## General
 
@@ -399,18 +398,7 @@ In **AAPS** 4 the **General** category of **Configuration** only lists **Autotun
 
 ### Overview
 
-This is the [main screen](#AapsScreens-the-homescreen) of **AAPS** and cannot be disabled.
-
-#### Show notes field in treatment dialogs
-Choose if you want to have a notes field when entering treatments or not.
-
-#### Status lights
-Choose if you want to have [status lights](#Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
-
-#### Advanced settings
-**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percentage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units. 
-
-**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
 
 (Config-Builder-actions)=
 ### Actions

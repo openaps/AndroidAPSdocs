@@ -6,7 +6,7 @@ When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and
 
 ## Timezone change for Omnipod Dash
 
-* Refresh the Dash tab
+* Refresh the pump status in **Manage → Pump**
 * Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
 
 ## Timezone change for DanaR, Korean DanaR
@@ -90,7 +90,6 @@ For some pumps it is better to make time zone adjustments while awake and not du
 
 ### DST automatic adjustment for most pumps
 
-* This adjustment feature is available for **AAPS** version 2.2 onwards.
 * However, the fully closed Loop will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. 
   This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
 * After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable fully closed Loop: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
@@ -141,10 +140,6 @@ If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** dat
 
 5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
 
-   
-### DST for Accu-Chek Combo
-
-* Change to DST is done automatically. No action required.
 
 
 

@@ -35,7 +35,7 @@ The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the *
 
 Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
 
-Open the CareLevo preferences by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
 
 ![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
 

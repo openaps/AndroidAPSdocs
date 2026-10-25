@@ -78,20 +78,20 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 - If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your Local profile plugin. 
-  - If you already have a profile named "Tuned" in your local profile plugin, then this profile will be updated with calculated Autotune profile before the activation
+  - Activate Tuned profile will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
+  - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
 
   ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
 
 - If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
   
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in local profile plugin
+  - A new profile with the prefix "Tuned" and the date and time of the run will be created in **Manage → Profile**
 
   ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
 
 - You can then edit the Tuned profile: open **Manage** > **Profile**, swipe to the card named "Tuned" with the date and time of the run, and tap the **Edit** (pencil) button
 
-  - the values in local profile will but rounded in the user interface to your pump capabilities
+  - the values in the profile will be rounded in the user interface to your pump capabilities
 
   ![Autotune local profile update](../images/Autotune/Autotune_8.png)
 
@@ -101,7 +101,7 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
   ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
 
-- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediately see if your current input profile in Local profile plugin already include the result of last run or not. You also have the possibility to recover you input profile without autotune result with this button
+- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. You also have the possibility to recover you input profile without autotune result with this button
 
   ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
 

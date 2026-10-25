@@ -148,7 +148,7 @@ Due to the inherent safety risks, this parameter is not enabled by default. To a
 
 ### Create a new insulin with another concentration
 
-To create an insulin with another concentration, first open Insulin Manager.
+To create an insulin with another concentration, first open **Manage → Insulin settings**.
 
 - Click the "+" icon at the bottom of the screen.
 - Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
@@ -160,7 +160,7 @@ To create an insulin with another concentration, first open Insulin Manager.
 - Adjust peak time, Duration of Insulin Action (DIA), and customize the Insulin Nickname (optional).
 - Use the save button at the top right of the screen.
 
-At this step the insulin has been created, but cannot be selected directly from Insulin Manager.
+At this step the insulin has been created, but cannot be selected directly from **Insulin settings**.
 
 ### Switch concentration from U100 to Uxxx (AAPS 4)
 
@@ -181,7 +181,7 @@ When you start from U100 insulin, all your profile, historical data and reports 
 
 1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
    - This step is mandatory for all Patch/Pod pumps.
-   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within Profile Manager or **Insulin settings**.
+   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within **Manage → Profile** or **Insulin settings**.
 
 That's all!
 
@@ -195,9 +195,9 @@ Keep in mind that the most difficult part will probably not be how to manage the
 
 - First, prepare a new profile with all values consistent with International Units:
   - Do a temporary Profile Switch 200% of your standard running profile.
-  - Go to Treatments > Profile and clone the new 200% profile.
+  - Open the menu (☰) → **Treatments**, go to the **Profile switch** tab and clone the new 200% profile (see [Clone a Profile switch](#your-aaps-profile-clone-profile-switch)).
   - Switch back to your standard profile until the next Reservoir or Patch change.
-  - Go to Profile Manager and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
+  - Go to **Manage → Profile** and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
 - If you use the Dynamic ISF (DynISF) feature, you have to disable it for at least one week:
   - All your history recorded within AAPS or Nightscout is in the wrong units (CU), half the real value in International Units. Wait at least one week with the U200 insulin running before re-enabling it.
 - You are now ready to switch insulin (with a new U200 defined within **Insulin settings**) on the following Insulin Change or Pod Change.
@@ -216,4 +216,4 @@ Keep in mind that all pen graduations are in International Units, so whatever th
 
 Things are much simpler with the internal management of concentration within AAPS: just select the expected amount on the pen (whatever the pen and corresponding insulin used), and record it within AAPS.
 
-- Within the Insulin button, if you select an external bolus, you can select any type of insulin defined within Insulin Manager (mainly U100, U200 for pens). That way you get a very precise calculated IOB, even if the peak/DIA of the insulin used with the pen is very different from the peak/DIA used in the pump.
+- Within the Insulin button, if you select an external bolus, you can select any type of insulin defined within **Insulin settings** (mainly U100, U200 for pens). That way you get a very precise calculated IOB, even if the peak/DIA of the insulin used with the pen is very different from the peak/DIA used in the pump.

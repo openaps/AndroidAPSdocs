@@ -22,8 +22,8 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 
 * A Roche Accu-Chek Combo (any firmware, they all work).
 * A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
-* A compatible phone. Android 9 (Pie) or newer is a must. If using LineageOS, the minimum supported version is 16.1. See [release notes](#maintenance-android-version-aaps-version) for details.
-* The AndroidAPS app installed on your phone.
+* A compatible phone running Android 12 or newer. See [release notes](#maintenance-android-version-aaps-version) for details.
+* The **AAPS** app installed on your phone.
 
 Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
 

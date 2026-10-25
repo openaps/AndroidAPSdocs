@@ -127,7 +127,7 @@ There are some watch faces for Garmin that integrate with [AAPS](https://apps.ga
 
 ![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. It is available in the ConnectIQ store, the necessary **AAPS** plugin is only available from **AAPS** 3.2.
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**.
 ![AAPS Glucose Watch watchface with numbered fields](../images/Garmin_WF-annotated.png)
 
 1. Highest and lowest glucose values on the graph

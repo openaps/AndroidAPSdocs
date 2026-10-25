@@ -4,16 +4,16 @@
 :depth: 2
 ```
 
-Most of the adjustments of temp targets, following **AAPS** etc. can be done on [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). Boluses, however, can't be given through **AAPSClient**, but you can use SMS commands. If you use an iPhone as a follower and do not have **AAPSClient** yet, there are additional SMS commands available.
+Most remote adjustments (temp targets, carbs, profile switches and, once the client is paired, boluses) can be made with the [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection, see [Master ↔ Client control](#client-master-control) (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). SMS commands remain an alternative that works without internet, and the only remote option if you use an iPhone as a follower and do not have **AAPSClient** yet.
 
 **SMS commands are really useful:**
 1. For routine remote control
 
-2. If you want to remotely bolus insulin
+2. If you want to remotely bolus insulin without a paired **AAPSClient**
 
 3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
 
-4. If your other methods of remote control (Nightscout/AAPSClient) are temporarily not working
+4. If your other method of remote control (**AAPSClient**) is temporarily not working
 
 ## Safety First
 
@@ -25,7 +25,7 @@ The default minimum time delay between bolus commands is 15 minutes. For safety 
 
 AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient, Nightscout...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**If you bolus through SMS Commands, you must enter carbs separately (second SMS, **AAPSClient**...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
 
 For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
 
@@ -76,7 +76,7 @@ Some options may be greyed out, due to needing admin via a family account if the
 
 ### AAPS settings
 
-Now that the phone settings have been checked, in the **AAPS** app itself, go to [Config Builder > General](../SettingUpAaps/ConfigBuilder.md) to enable the **SMS Communicator** module.
+Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
 
 Open the **SMS Communicator** settings.
 
@@ -93,7 +93,7 @@ Enter the caregiver phone number(s). Include the country code and exclude the fi
 * FR phone number:  +33612344567
 * _etc._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
+Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format on the **SMS Communicator** plugin screen (**Configuration** → **Communication** → **SMS Communicator** → **Open plugin**).
 
 If you have more than one phone number to add, separate them by semicolons, with **NO space between numbers** (this is critical!). Select **OK**:
 
@@ -163,14 +163,14 @@ If your command is successful, you will receive a reply to confirm this. If ther
 
 ### Delivering mealtime boluses through SMS commands
 
-Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or AAPSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
 
-1)	Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**.
-2)	Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
+1)	Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**.
+2)	Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
 
 To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or **AAPSClient** with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions subsection below) , and are therefore quicker than SMS commands.
+**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
 ## Commands
@@ -248,7 +248,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 | BOLUS 0.60 MEAL      | Yes  | Delivers the specified 0.60U bolus<br/>**and** sets the [Eating Soon TempTarget](#TempTargets-eating-soon-temp-target) |
 | CARBS 5              | Yes  | To enter 5g, without a bolus                                                                                           |
 | CARBS 5 17:35/5:35PM | Yes  | To enter 5g at 17:35.<br/>The acceptable time format depends<br/> on the time setting (12h/24h) on the phone.          |
-| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#screens-action-tab).                          |
+| EXTENDED 2 120       | Yes  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only).                          |
 | EXTENDED STOP/CANCEL | Yes  | To stop extended bolus                                                                                                 |
 
 ### Profile
@@ -275,11 +275,9 @@ The percentage must be between 30 and 250 %, as in the app. A value outside this
 
 | Command            | Auth | Function & *Response*                                                                                                                                                             |
 |--------------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TREATMENTS REFRESH | No   | Refresh treatments from NS                                                                                                                                                        |
-| AAPSCLIENT RESTART | No   | Useful if you notice a communication problem<br/>with Nightscout or **AAPSClient**                                                                                                |
-| RESTART            | No   | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                 |
-| SMS DISABLE/STOP   | No   | To disable the SMS Remote Service reply with code Any.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                  |
-| HELP               | No   | Returns all functions available for interrogation:<br/>BG, LOOP, TREATMENTS, ....<br/>Send further **HELP *FUNCTION*** command to list<br/>all options available in this section. |
+| RESTART            | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                 |
+| SMS DISABLE/STOP   | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                  |
+| HELP               | No   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further **HELP *FUNCTION*** command to list<br/>all options available in this section. |
 | HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                    |
 
 (SMSCommands-troubleshooting)=
@@ -292,14 +290,14 @@ The percentage must be between 30 and 250 %, as in the app. A value outside this
 
 ### What _can’t_ we do with SMS commands?
 
-1)	**You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profiles switches can instead be set through Nightscout or AAPSClient.
+1)	**You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
 
 2)	**You cannot cancel automations** or **set user-defined targets** but there are approximate solutions:
       As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
 
 **If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** or Nightscout to do this.
+**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
 
 ### What happens if I change my mind about a command I have just sent?
 

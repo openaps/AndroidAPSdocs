@@ -8,7 +8,7 @@ Disable battery optimization and allow background activity for the xDrip app.
 
 ### Disable Nightscout upload
 
-Starting with AAPS 3.2, you shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
 
 → Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
 
@@ -16,7 +16,7 @@ Starting with AAPS 3.2, you shouldn't let any other app upload data (blood gluco
 
 #### Disable automatic calibration and treatments
 
-If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7)
+Make sure `Automatic Calibration` (7) is deactivated.
 If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
 
 ![xDrip Basic Settings 2](../images/xDrip_Basic2.png)

@@ -29,7 +29,7 @@ The **Profile** includes:
 
 Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
 
-Alongside your **Profile**, you also need to configure your **insulin type**, including its DIA (duration of insulin action) — see [Config Builder > Insulin](#Config-Builder-insulin-dia).
+Alongside your **Profile**, you also need to configure your **insulin** in **Manage → Insulin settings**, including its DIA (duration of insulin action) — see [Insulin settings](#Config-Builder-insulin-dia).
 
 More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
 
@@ -74,7 +74,7 @@ Additional information on how to set up your reporting server can be found [here
 
 ### Smartwatch
 
-You can choose any smartwatch with Android WearOS 2.x up to 4.x. **Beware, WearOS 5.x is not always compatible!**
+You can choose any smartwatch running **Wear OS 3** or newer. See [Watches](../Getting-Started/Watches.md) for details.
 
 Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
 

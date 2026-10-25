@@ -41,7 +41,7 @@ To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be di
 
 Remember to disable Google Play Protect.
 
-### Remote Connection for Weak apk
+### Remote Connection for Wear apk
 
 For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 

@@ -363,12 +363,12 @@ More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 
 ![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
 
-The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. Introduced with AAPS 3.2, it uses the Nightscout API v3.
+The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. It uses the Nightscout API v3.
 
 ```{admonition} Data uploaders
 :class: warning
 
-When using NSClient, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
 ```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
@@ -567,6 +567,6 @@ To stop exporting to the cloud, tap the **✕** (**Clear Settings**) icon at the
 
 You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
 
-In Preferences, you can define when data shall be uploaded
+In **Settings → Open Humans**, you can define when data shall be uploaded
 - only if connected to Wi-Fi
 - only if charging

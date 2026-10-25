@@ -17,7 +17,7 @@ There are different ways to use CareSens data with **AAPS**:
 
 2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
 3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
@@ -26,4 +26,4 @@ There are different ways to use CareSens data with **AAPS**:
 2. In Juggluco, open the left menu and select `Photo`
 3. Scan the QR code on the package of the sensor.
 4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).

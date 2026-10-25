@@ -62,7 +62,7 @@ Beta 1 release date: 08-10-2026
 
 ```{admonition} Beta version
 :class: warning
-4.0.0-beta1 is a test version, not the final release. If you are upgrading from **AAPS** v3, read [What changed in AAPS v4](#v4-changes) first.
+Version 4.0.0.0 is currently available as **4.0.0-beta1**, a test version, not the final release. If you are upgrading from **AAPS** v3, read [What changed in AAPS v4](#v4-changes) first.
 ```
 
 ### New features

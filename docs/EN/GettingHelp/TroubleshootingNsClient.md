@@ -33,7 +33,7 @@ A workaround to connection issues in Azure is to set in Application settings HTT
 
 * No BG reading from Nightscout
 
-If AAPS connects to Nightscout correctly but does BG displays as N/A. In [NSClient settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**.
+If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
 
 * If you still get an error...
 

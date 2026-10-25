@@ -13,7 +13,7 @@ Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggesti
 
 - xDrip connects to the sensor itself: uninstall the Dexcom app, as only one app can connect to the sensor. To keep the Dexcom app, use [xDrip Companion App](#DexcomG7-xdrip-companion-app) instead.
 - Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
-- Select  xDrip in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Select  xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 - Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
 
@@ -83,7 +83,7 @@ With **Companion Bluetooth**, xDrip gets the exact time and trend of each readin
 
 ### Configuration in AAPS
 
-- Select xDrip in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 - Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 
 ## 4. Juggluco (G7 and ONE+)

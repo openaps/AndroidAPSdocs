@@ -9,7 +9,7 @@ There are four highly effective tools for remotely managing **AAPS**:
 
 1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 
 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android; an iPhone version is in development)
-3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device).  
+3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
 4) [Smartwatches](#RemoteControl_smartwatches) (Android) 
 
 The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves. 
@@ -68,7 +68,7 @@ The same rule applies when you install several client apps (**AAPSClient**, **AA
 
 ### Synchronization: AAPSClient and AAPS set up
 
-Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](../Maintenance/UpdateToNewVersion)). The example below provides Synchronization guidance for NSClientV3 using Nightscout15 but there are other options available with __AAPS__ (e.g xDrip). 
+Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion)). The example below shows the synchronization set-up with NSClientV3 and Nightscout 15; other data sources are available in __AAPS__ (e.g. xDrip). 
 
 In **Configuration** > **Communication**, the user synchronizes their data with Nightscout through __NSClientV3__ (using the v3 API), set up the same way for both __AAPS__ and the follower phone.
 
@@ -169,7 +169,7 @@ After pressing “save” the app will return to your main Nightscout screen whi
 3. Recent glucose trace with treatments (carbs, boluses) displayed
 4. Longer-term glucose trace
 5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
-6. "**+**" menu for entering treatments to send to AAPS.
+6. "**+**" menu for entering treatments (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies them).
 7. Select different time period to display
 8. Basal insulin profile
 9. Green line = historical glucose
@@ -182,7 +182,7 @@ Looking in more detail at the top left menu of the Nightscout app:
 1. Careportal retrospective edit
 2. Turn on/off alarms
 3. Hamburger - for setting preferences
-4. Careportal - Log treatment - to send changes to AAPS
+4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
 
 ![nightscout top bar](../images/remote-control-29.png)
 
@@ -206,40 +206,15 @@ There is a huge amount of information on the status of the **AAPS** system in th
 
 Press "refresh" at the bottom of the page to close the popup.
 
+(RemoteControl_nightscout-treatments)=
 ### Sending treatments through the Nightscout app to AAPS
 
-To set-up sending treatments from the **Nightscout** app to **AAPS**, on the main AAPS phone, go into the **AAPSClient** tab in the **AAPS** app. Open the right-hand dot menu, and open AAPSClientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the AAPSClient tab and select “full synchronisation” and wait a few minutes.
+In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed, checked and confirmed by the **AAPS** phone. While client control is on, the **AAPS** phone is in [hardened mode](#client-master-control-hardened-mode): treatments, temporary targets and profile switches entered on the Nightscout website or in the Nightscout app are **not** applied. The Nightscout app is then a tool for following only.
 
-Nightscout on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to **AAPS**, but it does not allow you to send insulin boluses.
-
-### Cancelling negative insulin to avoid repeat hypos
-
-Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs. 
-
-![24-10-23, cancel negative insulin NS](../images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
-
-
-Some of the most useful **Nightscout** commands are described in the table below. 
-
-#### Nightscout command table 
-
-| Most commonly used treatments                       | Function, example of when command is useful                  |
-| --------------------------------------------------- | ------------------------------------------------------------ |
-| **Correction bolus**                                | Allows you to announce **but <u>not</u> bolus** insulin.<br>Very useful for cancelling negative insulin to prevent a hypo,<br>for example in the middle of the night, if the profile has been too strong. |
-| **Carb correction**                                 | Announce carbs now                                           |
-| **Temporary Target**<br>**Temporary Target cancel** | Allows temp targets to be set and cancelled.<br>Note that cancelling does not always work,<br>in this instance you can set a new target for a short time period (2 min)<br>which will then revert back to the normal target afterwards. |
-| **Profile switch**                                  | Allows you to check the current profile which is running,<br>and switch to another profile, either permanently,<br>or for a defined length of time (mins). |
-
-
-
-| Less widely used commands                                    | Function, example of when command is useful                  |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **BG check**                                                 | Send a BG check to AAPS.                                     |
-| **Snack bolus**<br>**Meal bolus**<br>**Combo bolus**         | Can announce carbs (plus proteins and fat)<br> from 60 min in the past to 60 min in the future.<br>Combo bolus allows insulin announcement at the same time. |
-| **Announcement**<br>**Note**<br>**Question**<br>**Exercise**<br>**Open APS offline**<br>**DAD alert** | Add these info notes (DAD = diabetic dog alert).             |
-| **Pump site change**<br>**Battery change**<br>**Insulin cartridge change** | Announces these pump changes.                                |
-| **CGM sensor start**<br>**CGM sensor insert**<br>**CGM sensor stop** | Announces these CGM changes.                                 |
-| **Temp basal start**<br>**Temp basal end**                   | Most useful in open looping.                                 |
+```{admonition} Only when client control is off
+:class: warning
+If **Allow client control** is off in **Manage → Authorized clients** (and Simple Mode is off), **AAPS** applies careportal entries from Nightscout only for the data types you turned on under **Receive** in the [Synchronization section of the NSClientV3 settings](#Preferences-nsclient-synchronization): carbs, temporary targets, profile switches and the other careportal entries. Insulin is never delivered this way: a "Correction bolus" entered in Nightscout is only *announced*, and **AAPS** counts it as insulin on board without delivering it. This set-up is not recommended for remote control; use a paired **AAPSClient** instead.
+```
 
 Read more about **Nightscout** options [here](https://nightscout.github.io/)
 
@@ -302,15 +277,15 @@ Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and
 
 ### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
 
-Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via Bluetooth and does not require an authenticator code. As a side-note, if both smartwatch and **AAPS** phone linked by Bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations, which can be useful in circumstances where the T1D child is in school.
+Similarly to using a follower phone with **AAPSClient** or SMS commands (see the sections above), a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via Bluetooth and needs neither Nightscout nor an authentication code. As a side-note, if both smartwatch and **AAPS** phone linked by Bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations, which can be useful in circumstances where the T1D child is in school.
 
 A remote control smartwatch is therefore often useful in any situation where:
 
-a)	**AAPSClient**/Nightscout/**SMS** commands cannot work; or
+a)	**AAPSClient** or **SMS** commands cannot work; or
 
-b)	The user wishes to avoid the need for authenticator code (as required for the follower phone with inputting data, selecting TT or entering carbs).
+b)	The user wishes to avoid typing an authentication code (as required for SMS commands).
 
-A smartwatch needs to have **Android wear** software (ideally 10 or higher) to be able to control **AAPS**. Please check the technical specifications of the watch, and check the [Phones page](../Getting-Started/Phones.md). Search, or ask in the **AAPS**  Facebook/Discord groups if unsure. 
+A smartwatch needs **Wear OS 3 or newer** to be able to control **AAPS**. Please check the technical specifications of the watch, and see the [Smartwatches page](../Getting-Started/Watches.md). Search, or ask in the **AAPS**  Facebook/Discord groups if unsure. 
 
 Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Watch 4 (40mm) is given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community. 
 

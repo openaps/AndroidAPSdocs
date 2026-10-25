@@ -2,10 +2,6 @@
 
 _These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead._
 
-**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
-
-**New Dana-i can be used from AAPS version 3.0 onwards.**
-
 **Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
 
 * In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.

@@ -50,8 +50,6 @@ Closed Loop is only possible if you are in **[Objective 7](#objectives-objective
 * Autosens is an algorithm which looks at blood glucose deviations (positive/negative/neutral).
 * It will try and figure out how sensitive/resistant you are based on these deviations.
 * The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
-* In versions prior to **AAPS 2.7**, the user had to choose between 8 or 24 hours manually.
-* From **AAPS 2.7** on Autosens in **AAPS** will switch between a 24 and 8 hours window for calculating sensitivity. It will pick whichever one is more sensitive. 
 * If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
 * Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
 * Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
@@ -274,7 +272,7 @@ Default value: 4 (shouldn’t be changed unless you really need to and know what
 
 **Auto ISF** is an **experimental** algorithm for advanced users. It is built on OpenAPS SMB and adds rules that make the insulin sensitivity factor (ISF) stronger or weaker depending on how your glucose behaves.
 
-It is only listed in **Configuration → APS** once you have completed all the [Objectives](../SettingUpAaps/CompletingTheObjectives.md).
+It is a development feature: it can only be switched on in a [dev build](../AdvancedOptions/DevBranch.md) with **Engineering Mode** enabled. In a regular release build it stays forced off and is therefore not shown in **Configuration → APS**. Completing the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) does not unlock it.
 
 After selecting it, its **Settings** contain the OpenAPS SMB settings plus an **AutoISF settings** group:
 
@@ -287,6 +285,7 @@ After selecting it, its **Settings** contain the OpenAPS SMB settings plus an **
   - while glucose is **above target**, ISF is strengthened;
   - a **post-prandial** weight and a **duration** weight act after meals and when glucose stays high for a long time.
 - **SMB delivery ratio** (with a minimum, a maximum and a BG range): what share of the insulin required can be delivered as SMB.
+- **SMB max range extension**: by what factor the usual SMB size limit ([max minutes of basal](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), normally 120 minutes) may be exceeded. The default value 1 changes nothing; up to 5 is possible. Increase this experimental value slowly and with caution.
 - **IOB threshold percent**: the percentage of max IOB above which SMBs are disabled.
 
 ```{admonition} Only for experienced users

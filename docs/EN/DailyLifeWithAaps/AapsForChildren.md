@@ -18,7 +18,7 @@ Think about how you will keep the child’s phone in range of their pump and **C
 
 ### How to protect your child’s AAPS from being misused?
 
-There are several protection settings available in **AAPS** to prevent the child or a stranger from misusing **AAPS**. See [Preferences > General > Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+There are several protection settings available in **AAPS** to prevent the child or a stranger from misusing **AAPS**. See [Settings → Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
 
 ## Remote monitoring and remote control
 

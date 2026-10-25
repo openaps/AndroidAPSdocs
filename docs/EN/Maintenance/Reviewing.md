@@ -2,7 +2,7 @@
 
 ## AAPS History Browser
 
-**AAPS** stores all the user’s history (__**BG**__, treatments, basal, targets, **Profile Switch**,…) in its own database, that cannot be exported or copied and might require clean up after a while. In order to clean up, a review of 'older history’ is required in **AAPS**. This can be done by uploading to Nightscout.
+**AAPS** keeps all your history (**BG**, treatments, basal, targets, **Profile Switch**, …) in a local database on the phone. This database is not part of the [settings export](../Maintenance/ExportImportSettings.md). You can review it in **AAPS** itself with the **History browser** and the **Statistics** screen described below. For long-term reviews and reports, upload your data to [Nightscout](../SettingUpAaps/Nightscout.md) or [Tidepool](../SettingUpAaps/Tidepool.md).
 
 **AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
 

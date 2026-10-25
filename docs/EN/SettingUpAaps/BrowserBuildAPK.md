@@ -74,7 +74,7 @@ Tap **Select AAPS Version** and pick the version to build. The newest version is
 
   - Select the variant you need:
     - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
+    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
     - pumpcontrolRelease: To replace your pump app/controller
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)

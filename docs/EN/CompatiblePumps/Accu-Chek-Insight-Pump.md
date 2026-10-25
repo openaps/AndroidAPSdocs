@@ -33,7 +33,7 @@ Before **AAPS** had a native Insight driver, the Insight was controlled through 
 * A Roche Accu-Chek Insight pump (any firmware, they all work)
 
 Note: AAPS will write data always in **first basal rate profile in the pump**.
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
+* An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
 * The AAPS app installed on your phone
 
 ## Setup
@@ -162,7 +162,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 * Firmware 1.x: No vibration by design.
 * Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](#Releasenotes-version-2-6-1-4))
+* Firmware 3.x: AAPS delivers bolus silently.
 
 Firmware version can be found in the menu.
 

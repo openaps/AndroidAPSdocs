@@ -729,7 +729,7 @@ Like most of these rules-of-thumb it is of limited real validity. Note: Your dia
 
 **Manage → Insulin settings** shows and manages your insulin configurations. Each configuration is shown on a card with its **peak time** and **[DIA](#Config-Builder-insulin-dia)**; the one in use is marked **ACTIVE**. Below the card you see the activity curve. You can edit the nickname, peak and DIA of any configuration except the active one: to change the insulin you are using, [add a new configuration and activate it](#Config-Builder-insulin-change-active).
 
-See [Config Builder > Insulin > Duration of insulin action](#Config-Builder-insulin-dia) to learn more about what it is and how to set it.
+See [Duration of insulin action](#Config-Builder-insulin-dia) to learn more about what it is and how to set it.
 
 ## Pump Status
 
@@ -746,7 +746,7 @@ See [Config Builder > Insulin > Duration of insulin action](#Config-Builder-insu
 
 Calculations are run each time the system gets a fresh reading from the CGM.
 
-For more details see [APS section on config builder page](#Config-Builder-aps).
+For more details see the [APS section of the Configuration page](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 ## Profile

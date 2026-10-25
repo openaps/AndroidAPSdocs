@@ -42,17 +42,19 @@ This section provides a brief overview of all compatible **CGMs/FGMs** with **AA
 | [Dexcom ONE](../CompatibleCgms/DexcomG6.md)                  | [xDrip](../CompatibleCgms/xDrip.md)                         |
 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                    | [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip) |
 | [Libre 2/2+](../CompatibleCgms/Libre2.md)                    | [xDrip](../CompatibleCgms/xDrip.md) (EU only) or [Juggluco](../CompatibleCgms/Juggluco.md) (with or without xDrip) |
-| [Libre 1](../CompatibleCgms/Libre1.md)                       | [xDrip](../CompatibleCgms/xDrip.md) or Diabox. Need a transmitter |
-| [Eversense](../CompatibleCgms/Eversense.md)                  | [xDrip](../CompatibleCgms/xDrip.md) or ESEL/Eversense patched App |
+| [Libre 1](../CompatibleCgms/Libre1.md)                       | [xDrip](../CompatibleCgms/xDrip.md) (Diabox sends its readings through the xDrip source), Glimp or Tomato (MiaoMiao). Need a transmitter |
+| [Eversense](../CompatibleCgms/Eversense.md)                  | [xDrip](../CompatibleCgms/xDrip.md), ESEL/Eversense patched App or Notification Reader |
 | [Enlite (MM640G/MM630G)](../CompatibleCgms/MM640g.md)        | [xDrip](../CompatibleCgms/xDrip.md) or MM640g + 600SeriesAndroidUploader App |
 | [PocTech](../CompatibleCgms/PocTech.md)                      | PocTech app                                                  |
 | Glunovo                                                      | Glunovo App                                                  |
 | Intelligo                                                    | Intelligo App                                                |
-| [Ottai](../CompatibleCgms/OttaiM8.md)                        | Ottai App                                                    |
-| [Syai](../CompatibleCgms/SyaiTagX1.md)                       | Syai Tag App                                                 |
-| Sibionics CGM                                                | [Juggluco](../CompatibleCgms/Juggluco.md), Patched SI App or Sibionics App |
-| Sinocare                                                     | Patched Sino App                                             |
+| [Ottai](../CompatibleCgms/OttaiM8.md), [Syai](../CompatibleCgms/SyaiTagX1.md) | Syai/Ottai (with the Ottai or Syai Tag app)                 |
+| Sibionics CGM                                                | [Juggluco](../CompatibleCgms/Juggluco.md) or SI App (with the patched SI App or the Sibionics App) |
+| Sinocare                                                     | Sino App (with the patched Sino App)                        |
+| MicroTech (Aidex, LinX, LinX Vista, Equil G. Smart 2, Diaexpert 2) | MicroTech CGM App                                      |
+| Instara                                                      | Instara (with the Instara App)                               |
 | [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide | xDrip Companion App or [Juggluco](../CompatibleCgms/Juggluco.md) |
+| Any CGM whose official app shows the glucose value in a notification (Dexcom, Medtronic, Eversense, …) | Notification Reader |
 
 (GettingStarted-TrustedBGSource)=
 

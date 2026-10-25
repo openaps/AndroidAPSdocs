@@ -255,7 +255,7 @@ The dialogs the buttons open. Swipe from right to left to reach the next page of
 | --- | --- | --- | --- | --- | --- |
 | ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
 
-[1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Preferences** > **Wizard Settings**.
+[1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
 
 [2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
 
@@ -263,7 +263,7 @@ The dialogs the buttons open. Swipe from right to left to reach the next page of
 
 ![Temp Target tile](../images/wearos/tiles/tile_temp_target.png)
 
-Temporary targets from the phone's presets. Set the duration and the target of each preset on the phone under **Preferences** > **Overview** > [Default Temp-Targets](#Preferences-default-temp-targets). Pick up to four of these in the tile settings:
+Temporary targets from the phone's presets. Set the duration and the target of each preset on the phone under **Settings** > [Default temp targets](#Preferences-default-temp-targets). Pick up to four of these in the tile settings:
 
 * **Activity**: for sport
 * **Eating**: eating soon, a lower target so there is more insulin on board at the meal

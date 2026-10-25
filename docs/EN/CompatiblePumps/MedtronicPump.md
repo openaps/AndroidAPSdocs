@@ -200,7 +200,7 @@ On the back of the pump you will find a line detailing your model number along w
 (MedtronicPump-pump-unreachable)=
 ### How to fix the "pump unreachable" error
 
-After updating to **AAPS** 3.4, some Medtronic pumps report a "pump unreachable" error. To fix it, change the encoding type:
+Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
 
 1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
 2. Set **Medtronic Encoding** to **Hardware Encoding**.

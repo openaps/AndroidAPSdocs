@@ -152,7 +152,7 @@ The next screen, "**Permissions**", lists the permissions again. They should all
 
 ## Master password
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you set here.
+As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
 
 The Wizard shows "**Password not set**". Press "**Set**":
 

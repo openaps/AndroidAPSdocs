@@ -2,7 +2,7 @@
 
  __AAPS__ =  AndroidAPS is the name of the Android app.
 
-__AAPSClient__ (or __NSClient__) = a remote control feature that can be used by caregivers via a follower phone to follow a user’s __AAPS__ by connecting to the user’s __Nightscout's__ site. Further info → [Wiki - 'The AAPSClient app'](../RemoteFeatures/AapsClient.md). Objectives learning program within __AAPS__ provides step by step guidance. Further info → [Wiki - 'objectives'](../SettingUpAaps/CompletingTheObjectives.md).
+__AAPSClient__ = the follower app for caregivers. On a follower phone it follows a user’s __AAPS__ through the user’s __Nightscout__ site and, once paired with the __AAPS__ phone, controls it remotely. Not to be confused with __NSClient__. Further info → [Wiki - 'The AAPSClient app'](../RemoteFeatures/AapsClient.md) and [Master ↔ Client control](#client-master-control).
 
 __Activity__ = Insulin activity, representing the speed of decay of IOB. See [Wiki - 'DIA'](#Config-Builder-insulin-dia) and the related __BGI__.
 
@@ -14,7 +14,7 @@ __APS__ = Artificial Pancreas System → see also __AID__.
 __AMA__ = Advanced Meal Assist.
 An algorithm which allows __AAPS__ to increase the user’s basal more aggressively after a meal bolus. Further info → [Wiki - 'Advanced Meal Assist (AMA)'](#Open-APS-features-advanced-meal-assist-ama).
 
-__Adjustment Factor__ = used within **DynamicISF** and is a value set within a user's **Preferences** between 1% and 300%. This acts as a multiplier on the **TDD** value. See [Wiki - DynamicISF adjustment factor](#dyn-isf-adjustment-factor)
+__Adjustment Factor__ = used within **DynamicISF** and is a value set within a user's **Settings** between 1% and 300%. This acts as a multiplier on the **TDD** value. See [Wiki - DynamicISF adjustment factor](#dyn-isf-adjustment-factor)
 
 __Android Auto__ = a system used to host certain functions of an Android smartphone’s features, including __AAPS__, within a car's display. Further info → [Wiki - 'android auto'](../RemoteFeatures/AndroidAuto.md).
 
@@ -109,7 +109,7 @@ __Nightscout__ → see also __Nightscout Reporter__. This is particularly useful
 
 __Nightscout Reporter Tool__ = a tool which generates PDFs reports from Nightscout web app data. See 'Nightscout Reporter', 'NS Reporter' @ Facebook.
 
-__NSClient__ ( or __‘AAPSClient’)__ = see __AAPSClient__.
+__NSClient__ (__NSClientV3__) = the __AAPS__ plugin that synchronizes data with __Nightscout__ (**Configuration** → **Communication**). It is not the same as __AAPSClient__, the follower app. Further info → [Wiki - 'NSClient'](#Preferences-nsclient).
 
 __OpenAPS__ = Open Artificial Pancreas System, the predecessor project and basis of AAPS.
 
@@ -123,12 +123,12 @@ An __AID__ system built from open-source software, such as __AAPS__, __OpenAPS__
 __Peak time__ = time of maximum effect of insulin given. Further info → [Wiki - 'Duration of insulin action (DIA) and peak'](#Config-Builder-insulin-dia).
 
 __PH__ = Pump History. 
-This can be accessed in __AAPS’__ treatments which are located on the 3 dot menu on the right side of __AAPS__ main screen Screenshots.
+This can be accessed in __AAPS’__ treatments history: open the **menu** (☰) at the top left of the main screen and select **Treatments**.
 
 __Predictions__ = predictions for __BG__ in the future based on different calculations. Further info → [Wiki - 'prediction lines'](#aaps-screens-prediction-lines).
 
 __Profile__ = the user’s basic treatment settings (basal rate, __DIA__, __IC__, __ISF__, __BG__ target).
-AAPSv3 only supports local profiles created within __AAPS__ but __Nightscout__ __Profiles__ can be copied (synchronised) to __AAPS__. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
+__AAPS__ only uses profiles created within __AAPS__ (**Manage** → **Profile**), but __Nightscout__ __Profiles__ can be copied (synchronised) to __AAPS__. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
 
 __Profile switch__ = (temporary) switch  of the user’ __Profile__ to a different __Profile__ saved within __AAPS__.
 

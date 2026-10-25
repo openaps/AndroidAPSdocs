@@ -8,10 +8,10 @@ Your **AAPS Profile** is a set of four key parameters which define how **AAPS** 
 
 ```{admonition} Where did DIA go?
 :class: note
-The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin type instead — see [Config Builder > Insulin](#Config-Builder-insulin-dia).
+The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your Preferences.
+As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
 
 Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
 
@@ -261,7 +261,7 @@ Negative **IOB** means the amount of absolute insulin (basal + bolus) in your bo
 Here are some reasons why you may have negative IOB, and what action to take:
 * a too strong basal: tweak your **Profile**
 * too much bolus at the previous meal: tweak your **Profile** or check if you are bolusing at the right time.
-* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Config Builder > Insulin](#Config-Builder-insulin-dia)
+* DIA set too short on your insulin type, resulting in insulin stacking: tweak it in [Manage → Insulin settings](#Config-Builder-insulin-dia)
 * physical activity: next time, consider using a lower [Profile percentage](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) during activity to account for increased sensitivity.
 
 ## Manage your Profiles
@@ -286,12 +286,12 @@ Tapping **✏️ Edit** opens the editor. Set the profile **name** and **units**
 
 Each schedule is a list of **time blocks**: add a block, set its start time and value, then **Save**.
 
-If you make any changes to your **Profile**, make sure you are editing the correct **Profile**. The **Profile** screen may not always show the actual profile being used - e.g. if you made a profile switch from the main screen, it may differ from the profile actually shown in the **Profile** screen as there is no connection between these.
+If you make any changes to your **Profile**, make sure you are editing the correct **Profile**: the card of the profile in use is marked **ACTIVE**, but the card selected on screen may be another one.
 
 (your-aaps-profile-profile-from-scratch-for-a-kid)=
 ### Build a Profile from scratch for a kid
 
-The [Profile Helper](#aaps-screens-profile-helper) tab may help you to create a profile for a child (up to 18 years).
+The [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) may help you to create a profile for a child (up to 18 years).
 
 **Important note:**
 
@@ -323,7 +323,7 @@ See [Profile switch & Profile Percentage](../DailyLifeWithAaps/ProfileSwitch-Pro
 
 The [Treatments history](#aaps-screens-treatments) shows all past **Profile Switches**. When going to the **Profile switch** tab, you can use a past **Profile Switch** as a base to create a new **Profile**. In this case, timeshift and percentage will be applied to the new local profile. Use the **Clone** button shown on line **2**.
 
-You can now go to the [Profile tab](#your-aaps-profile-create-and-edit-profiles) to edit the newly created Profile.
+You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
 
 (YourAapsProfile_Profile-backup)=
 ### Profile backup
@@ -347,7 +347,7 @@ To do this, however, it is important to clone the whole **database record** cons
 (your-aaps-profile-compare-profiles)=
 ### Compare two Profiles
 
-You can also use the [Profile Helper](#aaps-screens-profile-helper) tab to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+You can also use the [Profile Helper](#aaps-screens-profile-helper) (menu ☰ → **Profile helper**) to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 

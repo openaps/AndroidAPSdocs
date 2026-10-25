@@ -23,7 +23,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 
 Requirements:
 
-* You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
+* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
 * The Android phone is already set-up with your personal ”everyday” email address, such as a Gmail account.
 
 ```{admonition} Things to consider when setting up your new account

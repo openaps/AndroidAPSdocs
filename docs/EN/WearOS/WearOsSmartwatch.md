@@ -301,11 +301,11 @@ For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Sa
 2.	Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
 3.	Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
 4.	It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.	Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** apk version onto the watch. If your AAPS wear.apk version is listed as any of the following:
-   a) “wear-AAPSClient-release’;
-   b) ‘wear-full-release.aab’; or
-   c) the word ‘debug’ appears in the title,
-    you have not selected the correct Wear OS apk version during the build.
+5.	Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following:
+   a) an **AAPSClient** Wear apk (while the phone runs **AAPS**);
+   b) a `.aab` file; or
+   c) a file with the word ‘debug’ in its name,
+    you have not selected the correct Wear OS apk during the build.
 6.	Check that your router is not isolating the devices from one another.
 
 More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)

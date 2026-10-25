@@ -27,7 +27,7 @@ Don't rush, go slow!
 
 - Do all testing with [closed loop enabled](#AapsScreens-loop-status).
 - **Turn <u>OFF</u> all [automations](../DailyLifeWithAaps/Automations.md)**
-- **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](../AdvancedOptions/DevBranch.md), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
+- **Turn <u>OFF</u> [DynISF](#Open-APS-features-DynamicISF), [AutoISF](#Open-APS-features-auto-isf), [AutoSens](#Open-APS-features-autosens)** so that they will not try to adapt your profile.
 - Do not make manual user actions (manual bolus, temp targets etc…) while testing: let the system use the **Profile** settings only.
 - For the [additional graphs](#AapsScreens-section-g-additional-graphs): on graph 1, use Insulin On Board, Carbs On Board (and Sensitivity change). On graph 2, use Deviations and Blood Glucose Impact. When asking for advice, always include those on your screenshots.
 - COB=0[*](#profiletuning-cob-zero)
@@ -92,7 +92,7 @@ If you observe the following patterns after a few days, consider the following c
 ![Stuck High](../images/troubleshooting/profiletuning/StuckHigh.png)
 
 - __Profile__ basal might not be strong enough (**SMBs** do not have enough "basal stock" to use)
-- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the [SMB](#Open-APS-features-super-micro-bolus-smb) tab.
+- A security ([MaxIOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)?) might have kicked in and is limiting insulin injection. Verify in the **APS** plugin screen (**Configuration → APS → Open plugin**); see [SMB](#Open-APS-features-super-micro-bolus-smb).
 - Technical issue: site absorption, infusion set, ...
 
 ### Stuck Low
@@ -127,7 +127,7 @@ If you observe the following patterns after a few days, consider the following c
 
 1. First, you need the correct default basal settings in your **Profile**.
 2. Start on target, better without negative IOB.
-3. Record the total insulin given in the pump tab (or pump history) and call it Start insulin C4. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured CI). Don't forget to eat the carbs ;)
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin C4. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured CI). Don't forget to eat the carbs ;)
 4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin.
    *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
 5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your **Profile's** settings.

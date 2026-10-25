@@ -66,7 +66,7 @@ Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, G
 
 The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there! 
 
-The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and set up **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 8 of **AAPS** you are closed looping, the later objectives add in additional features like **SMS commands** and **automations** which are useful to some users, but not essential to the core function of **AAPS**. 
+The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and set up **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 7 of **AAPS** you are closed looping, the later objectives add in additional features like **SMB** and **automations** which are useful to some users, but not essential to the core function of **AAPS**. 
 
 Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
 
@@ -150,7 +150,7 @@ In addition to the three basic hardware components (phone, pump, glucose sensor)
 ### 2) A reporting server: Nightscout (Tidepool*)
 
 In order to fully take advantage of **AAPS**, you need to set up a Nightscout server. You can [do this yourself](https://nightscout.github.io/nightscout/new_user/#free-diy) or alternatively, pay a small fee for a [managed Nightscout service](https://nightscout.github.io/#nightscout-as-a-service) to be set up for you. Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. 
-Attempting to analyze your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene. Tidepool is also available as an alternative to Nightscout, for AAPS versions 3.2 and later.
+Attempting to analyze your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene. Tidepool is also available as an alternative to Nightscout.
 
 ### 3) CGM sensor app
 
@@ -193,7 +193,6 @@ Here is an approximate timeframe:
 | Objective 8: Adjust basals and ratios, enable Autosens                               | Minimum of 7 days, up to 14 days |
 | Objective 9: Enabling Super Micro Bolus (SMB)                                        | Minimum of 28 days   |
 | Objective 10: Automation                                                             | Minimum of 28 days   |
-| Objective 11: Dynamic ISF                                                            | Minimum of 28 days   |
 
 Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
 
@@ -205,14 +204,13 @@ In addition to the medical warnings in the [safety section](#preparing-safety-fi
 
 #### Insulin choice
 
-**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). The following types of insulin profile presets are supported:
+**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). You configure your insulin in **Manage → Insulin settings**: set its **Peak** and **DIA**, or use **Load peak from** to fill in the standard peak time of one of the presets:
 
-- Rapid-Acting Oref: Humalog/NovoRapid/NovoLog
-- Ultra-Rapid ORef:  Fiasp
-- Lyumjev: 
+- **Novorapid** (also for Humalog and NovoLog)
+- **Fiasp**
+- **Lyumjev**
 
-For Experimental/Advanced users only:
-- Free-Peak Oref: Allows you to define peak of the insulin activity
+Advanced users can enter any peak time (35 to 120 minutes) directly, for example for a mixture of insulins. See [Insulin settings](#Config-Builder-insulin).
 
 
 ### Technical

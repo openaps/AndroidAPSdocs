@@ -241,6 +241,42 @@ none
 
 ![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
 
+**Actions:** **Send SMS** (in the **Alerts** group)
+
+**Options:**
+
+* enter the text of the message. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
+
+**Actions:** **Change profile to** (in the **Profile** group)
+
+**Options:**
+
+* select the **Profile** to activate. It is activated at 100%, without timeshift. If this profile is already active, the action does nothing.
+
+**Actions:** **Enable/disable SMB** (in the **Loop & insulin** group)
+
+**Options:**
+
+* choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
+
+**Actions:** **Autotune profile** (in the **Loop & insulin** group)
+
+**Options:**
+
+* select the profile to tune and the number of days: see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule).
+
+**Actions:** **Stop processing** (in the **Loop & insulin** group)
+
+**Options:**
+
+* none. When a rule with this action runs, **AAPS** does not check the rules below it in the list during that run. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
+
+**Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
+
+**Options:**
+
+* select the [scene](Scenes.md) to run, enable or disable.
+
 Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
 
 ![Alt text](../images/Automations/automation_action_temp_target_values.png)
@@ -342,7 +378,7 @@ Screenshots detailing the Automation triggers:
 ![Export on Pod activation](../images/Automations/automation_settings_export_pod_activation.png)
 
 Note: Export execution will be logged on Careportal.
-Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
 
 
 ## Automation Logs

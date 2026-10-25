@@ -19,7 +19,7 @@ These instructions are for configuring the Equil insulin pump.
 
   Currently Equil 5.3 and 5.4 are supported.
 
-* [Version 3.3.0.0](#version3300) or newer of AAPS
+* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
 
 ## Setup
 
@@ -50,7 +50,7 @@ Open the Equil settings with **Settings** on the **Equil** card, or with the gea
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [preference](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
 
 When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
 ```
