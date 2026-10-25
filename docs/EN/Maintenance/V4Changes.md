@@ -63,6 +63,16 @@ The **Manage** sheet is where you manage and activate everything else: **[Profil
 
 All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
 
+(screens-action-tab)=
+#### Where did the Actions tab go?
+
+**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+
+* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
+* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
+* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+
 ```{admonition} Profile switch and profile percentage
 :class: note
 In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).

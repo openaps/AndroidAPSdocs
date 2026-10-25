@@ -621,18 +621,10 @@ If you see the warning above after using bolus wizard, **AAPS** has detected tha
 
 For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
 
-(screens-action-tab)=
-## Where did the Actions tab go?
-
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
-
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+Looking for the **Actions** tab of **AAPS** 3.x? Its functions moved to the main screen, the **Manage** sheet and the QuickLaunch toolbar: see [Where did the Actions tab go?](#screens-action-tab).
 
 (aaps-screens-careportal)=
-### Careportal entries
+## Careportal entries
 
 The ages and levels shown in the [status row](#screens-sensor-level-battery) (sensor, insulin, cannula, pump battery) are based on careportal entries: **Prime/Fill** (records pump site and insulin cartridge changes), **Sensor Insert** and **Pump Battery Change**.
 
@@ -665,62 +657,11 @@ In the **Manage** sheet, scroll down and press **Careportal** to show these entr
 
 In all these dialogs (**Prime/Fill**, **Sensor Insert**, **Pump Battery Change** and the careportal entries), the time of the event uses the same **Time** row as the [insulin dialog](#aaps-screens-buttons-insulin) and the bolus wizard: use **-** / **+** to move the time in 5-minute steps (up to one week back and 12 hours ahead), or tap the chevron to pick any date and time.
 
-### Tools
+## Site Rotation
 
-(Aapsscreens-site-rotation)=
+**Manage → Site Rotation** records where each cannula and sensor was placed on a body map, so you can rotate your sites: see [Site Rotation](#Aapsscreens-site-rotation) on the Pumps and cannulas page.
 
-#### Site Rotation
-
-**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
-
-- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change event since the past 45 days are available.
-- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
-
-![View Mode](../images/SiteRotation/ViewMode.png)
-
-- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
-
-![Settings](../images/SiteRotation/Settings.png)
-
-![User profile for site rotation dialog](../images/SiteRotation/Type.png)
-
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
-
-- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
-
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
-
-- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
-- Front and back views are shown side by side: tap the area where you placed it
-- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
-
-![Edit Mode](../images/SiteRotation/EditMode.png)
-
-- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
-
-![Position](../images/SiteRotation/EditModeSub.png)
-
-- You can also add a **Note** about the selected site
-- Tap the **save** icon (upper right) to record the site
-
-Filtering can be done graphically on the image, or clicking a therapy event in the list
-To remove filtering, just click on the image outside any sites
-
-![Filtering](../images/SiteRotation/Filtering.png)
-
-#### TDD
-
-Total daily dose = bolus + basal per day, shown in [Statistics](#aaps-screens-statistics).
-
-Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50.
-
-Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours).
-
-Others prefer range of 32% to 37% of TDD for TBB.
-
-Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+**TDD** (total daily dose) and the basal/bolus ratio rule of thumb are explained with the [Statistics Insulin tab](#reviewing-tdd).
 
 (AapsScreens-insulin-profile)=
 ## Insulin
@@ -780,103 +721,9 @@ For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
 
 **Configuration → BG Source → Open plugin** shows the history of CGM readings and offers the option to remove readings in case of failure (i.e. compression low) or duplicate readings.
 
-(aaps-screens-treatments)=
 ## Treatments history
 
-Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**.
-In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
-
-* Carbs and bolus
-* [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temp basal
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
-* [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes and careportal entries
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
-
-At the end of each line, small icons show where the data comes from or has been sent to:
-* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
-* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
-* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
-
-(screens-bolus-carbs)=
-### Carbs and bolus
-
-![Carbs & bolus](../images/TreatmentsView1.png)
-
-On this tab you can view the bolus and carbs log.
-Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
-
-The carbs entries (line **2**) are shown with their amount in grams.
-
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
-
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
-
-The Treatments history can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
-
-1. Check and remember actual COB and IOB on the main screen.
-2. Depending on pump, carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount: press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.
-4. Make sure carbs are removed successfully by checking COB on the main screen again.
-5. Do the same for IOB if there is just one line including carbs and insulin.
-
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
-
-6. Enter correct carb amount through the carbs button on the main screen and make sure to set the correct event time.
-7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
-
-### Temp basal
-
-![Temp Basal](../images/TreatmentsView2.png)
-
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
-* Positive IOB if the temp basal was higher than the one set in the Profile
-* Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
-
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
-
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
-
-### Temporary target
-
-![Temporary target](../images/TreatmentsView3.png)
-
-The history of temporary targets can be seen here.
-
-### Profile switch
-
-![Profile Switch](../images/TreatmentsView4.png)
-
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
-
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
-
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
-
-### Careportal
-
-![Care portal](../images/TreatmentsView5.png)
-
-This tab shows all notes and careportal entries recorded in Nightscout.
-
-(AapsScreens-running-mode)=
-### Running mode
-
-![Running mode](../images/TreatmentsView6.png)
-
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, LGS, suspend, disconnect.
-
-### User entry
-
-![User entry](../images/screens/treatments_user_entry.png)
-
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
-
-(aaps-screens-running-mode)=
+Open the **menu** (☰) and select **Treatments history** to view, check and correct everything **AAPS** has recorded: carbs and boluses, temp basals, temporary targets, profile switches, careportal entries, loop mode changes and user entries. See [Treatments history](#aaps-screens-treatments) on the Reviewing your data page.
 
 ## History Browser
 

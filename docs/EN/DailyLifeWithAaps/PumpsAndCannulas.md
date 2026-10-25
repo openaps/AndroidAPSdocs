@@ -72,3 +72,46 @@ _or_
 b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
 
 Which strategy you prefer is highly personal, and is best determined by trial and error.
+
+
+(Aapsscreens-site-rotation)=
+## Site Rotation
+
+**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+
+- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
+- All Cannula change and Sensor change event since the past 45 days are available.
+- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
+- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+
+![View Mode](../images/SiteRotation/ViewMode.png)
+
+- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+
+![Settings](../images/SiteRotation/Settings.png)
+
+![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+
+*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+
+- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+
+Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+
+- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
+- Front and back views are shown side by side: tap the area where you placed it
+- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+
+![Edit Mode](../images/SiteRotation/EditMode.png)
+
+- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+
+![Position](../images/SiteRotation/EditModeSub.png)
+
+- You can also add a **Note** about the selected site
+- Tap the **save** icon (upper right) to record the site
+
+Filtering can be done graphically on the image, or clicking a therapy event in the list
+To remove filtering, just click on the image outside any sites
+
+![Filtering](../images/SiteRotation/Filtering.png)
