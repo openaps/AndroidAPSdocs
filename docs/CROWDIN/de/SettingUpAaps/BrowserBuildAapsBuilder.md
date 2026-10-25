@@ -323,19 +323,19 @@ Die App bleibt **14 Tage** auf der Build-Seite. Sie erscheint nicht in Deinem Re
 Weitere Wege, die App zu installieren, findest Du unter [AAPS übertragen und installieren](TransferringAndInstallingAaps.md).
 
 ```{note}
-Seit September 2026 kann Googles [Android-Entwicklerverifizierung](#android-developer-verification) je nach Land verhindern, dass sich die APK durch Antippen der Datei installieren lässt. Free workarounds are explained on that page.
+Seit September 2026 kann Googles [Android-Entwicklerverifizierung](#android-developer-verification) je nach Land verhindern, dass sich die APK durch Antippen der Datei installieren lässt. Kostenlose Möglichkeiten das zu umgehen, werden auf dieser Seite erklärt.
 ```
 
 (aaps-builder-google-drive)=
 
 ## Schritt 7 (optional) – App zusätzlich in Google Drive speichern
 
-You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
+Du kannst jeden Build auch in Deinem Google Drive speichern im Ordner `AAPS/<version>` speichern lassen. Das ist optional: Die App ist immer auf der Build-Seite verfügbar.
 
-It needs one more secret, `GDRIVE_OAUTH2`. You get its value with the preparation file used by the other browser build methods:
+Dafür brauchst Du ein weiteres Secret, `GDRIVE_OAUTH2`. Den Wert bekommst Du mit der Vorbereitungsdatei, die auch die anderen Browser-Build-Methoden nutzen:
 
-1. On a **computer**, download the preparation file and open it as described in [Option 1 – Computer](BrowserBuildO1Computer.md). Skip the keystore part: you already have your key.
-2. Follow [Step 3 – Authorize Google Drive](#aaps-ci-google-drive-auth) to get the `GDRIVE_OAUTH2` value.
+1. Lade am **Computer** die Vorbereitungsdatei herunter und öffne sie wie unter [Option 1 – Computer beschrieben](BrowserBuildO1Computer.md). Überspringe den Keystore-Teil: Deinen Schlüssel hast Du schon.
+2. Folge [Schritt 3 – Google Drive autorisieren](#aaps-ci-google-drive-auth), um den `GDRIVE_OAUTH2`-Wert zu bekommen.
 3. On the setup page, step 7 opens your secrets page.
 
    ![Setup page step 7](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
