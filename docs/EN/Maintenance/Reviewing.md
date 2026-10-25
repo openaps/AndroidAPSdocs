@@ -138,7 +138,7 @@ The Treatments history can be used to correct faulty carb entries (_i.e._ you ov
 
    → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
-6. Enter correct carb amount through the carbs button on the main screen and make sure to set the correct event time.
+6. Enter the correct carb amount again (**Treatments → Carbs** in the bottom navigation, or a [QuickLaunch](#quicklaunch) **Carbs** button) and make sure to set the correct event time.
 7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
 
 ### Temp basal

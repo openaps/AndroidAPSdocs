@@ -31,7 +31,7 @@ The color of the BG value reflects the status to the defined [range](#Preference
    * red = below range
    * yellow = above range
 
-![BG circle with delta](../images/Home_Delta.png)
+![BG circle in range, green](../images/Home_Delta.png) ![BG circle above range, yellow](../images/Home_Delta_high.png) ![BG circle below range, red](../images/Home_Delta_low.png)
 
 (loop-status)=
 (AapsScreens-loop-status)=
