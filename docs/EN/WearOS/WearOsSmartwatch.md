@@ -27,7 +27,7 @@ The table below summarises how Google's change affects the AAPS (legacy-engine) 
 | Wear OS 4 | Android 13 | 33 | **Moderate** — throttling, missed updates, partial failures |
 | Wear OS 3.0 / 3.2 / 3.5 | Android 12 / 12L | 31–32 | **Low** — legacy engine still supported |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
+If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
 
 (wearos-aaps-v4-watchface)=
 
@@ -96,7 +96,7 @@ On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right a
 If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead.
+If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
 
 ### Wear OS 6 and newer
 

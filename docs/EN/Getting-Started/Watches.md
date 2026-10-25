@@ -33,7 +33,7 @@ There are currently five main ways in which smartwatches are used in conjunction
 | Full remote control | Most AAPS functions                 | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease** |
 | Remote control      | AAPSClient functions                | Android **Wear OS** watch (check Android/API)</br>Running **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)** |
 | Remote control      | Some AAPSClient functions           | Garmin watches</br>(older Samsung Tizen and Fitbit setups only, not recommended)</br>See below. |
-| Display             | Display some AAPSClient indications | Many smartwatches (see [here](https://bigdigital.home.blog/))</br>[xDrip](https://github.com/nightscoutfoundation/xdrip/releases) and [WatchDrip+](https://bigdigital.home.blog/2022/06/16/watchdrip-a-new-application-for-xdrip-watch-integration/) |
+| Display             | Glucose, trend, IOB, COB, loop and pump status | Many smartwatches, through a companion app on the **AAPS** phone fed by the [External Companion Apps](#watches-external-companion-apps) broadcast: [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>See below. |
 
 ## Before you buy a smartwatch…
 
@@ -101,18 +101,23 @@ These are the basic screens embedded in **AAPS**, there are [more watchfaces](#W
 Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customized watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
 
 (Watchfaces-tizen)=
+(watches-external-companion-apps)=
 
-## Samsung Tizen
+## External Companion Apps
 
-**AAPS** supports sending data to the [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch). To send data, enable **External Companion Apps** in **Configuration** > **Communication**.
-
-```{warning}
-The **G-Watch app** for Samsung **Tizen** watches is no longer maintained, and neither is its later **Wear OS** port. Samsung has also moved its smartwatches from Tizen to Wear OS. This option is therefore only relevant for existing, older Samsung Tizen setups and is not recommended for a new installation.
-```
-
-Please check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for latest news.
+**AAPS** can broadcast its status to other apps installed on the same phone: glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Several watch companion apps read this broadcast and display the data on watches that **AAPS** does not support directly. To send the data, enable **External Companion Apps** in **Configuration** > **Communication** (see [External Companion Apps](#external-companion-apps) on the Configuration page). The broadcast is sent with each new reading and cannot be requested: a refresh button in the companion app has no effect on **AAPS**.
 
 ![Configuration > Communication: the External Companion Apps card](../images/v4/Configuration/configuration_external_companion_apps.png)
+
+Companion apps known to use this broadcast:
+
+- [WatchDrip+](https://bigdigital.home.blog/) for Xiaomi and Amazfit watches, see [Xiaomi and Amazfit watches](#watches-xiaomi-amazfit) below.
+- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) for Wear OS watches, as a complication or a widget. It is a useful fallback on Wear OS versions where the **AAPS** watchfaces are unreliable, see [Set up AAPS on your Wear OS watch](../WearOS/WearOsSmartwatch.md). Its companion app GlucoDataAuto shows the same data in a car with Android Auto.
+- [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) for Samsung Tizen watches, and its later Wear OS port. In earlier **AAPS** versions the plugin was named **Samsung Tizen** after this app.
+
+```{warning}
+The **G-Watch app** and its **Wear OS** port are no longer maintained, and Samsung has moved its smartwatches from Tizen to Wear OS. G-Watch is only relevant for existing, older setups and is not recommended for a new installation. Check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for the latest news.
+```
 
 (Watchfaces-garmin)=
 
@@ -151,11 +156,20 @@ There are a wide range of affordable smartwatches which can provide display only
 
 Here below some of the follow-only watch options popular with **AAPS** users: 
 
+(watches-xiaomi-amazfit)=
 ### Xiaomi and Amazfit watches
 
-**WatchDrip+** is a community-developed xDrip integration app for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
+**WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
 
 ![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+
+Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
+
+1. Enable **External Companion Apps** in **Configuration** > **Communication**, see [above](#watches-external-companion-apps). It provides the current glucose, delta, trend arrow, IOB and pump status.
+2. Enable the **xDrip** plugin in **Configuration** > **Communication** and turn on **Send status to xDrip+** in its settings. It provides the IOB/COB status line, and the glucose graph on the watch fills in after a few readings.
+3. If xDrip+ is installed on the phone, disable its **Broadcast Service API** (xDrip+ > Settings > Inter-app settings) so that the watch does not receive the data twice. If xDrip+ was only relaying data to the watch, you can uninstall it.
+
+The refresh button of WatchDrip+ has no effect with **AAPS**: the data arrives with each new reading.
 
 
 You can read more about them, including how to set them up, on the [WatchDrip+ website](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable. They are a popular option especially for kids and those with smaller wrists to wear.
