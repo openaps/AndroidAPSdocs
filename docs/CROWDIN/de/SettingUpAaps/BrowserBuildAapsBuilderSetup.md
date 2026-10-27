@@ -171,7 +171,7 @@ Du möchtest eine E-Mail, wenn der Build fertig ist? GitHub schickt Dir nur dann
    Damit GitHub-Links nicht mehr in der App geöffnet werden: Android-Einstellungen → Apps → GitHub → Standardmäßig öffnen → „Unterstützte Links öffnen“ ausschalten.
 3. Tippe auf den neuesten Build mit grünem Häkchen ✅.
 4. Scolle nach unten zur Build-Zusammenfassung und tippe auf den großen Link „📱 Download AAPS …" (oder scrolle weiter nach unten zu „Artifacts“ und tippe auf aaps-….apk). Scrolle mit dem Finger auf dem Text, nicht auf dem Diagramm der Build-Schritte.
-5. Wenn der Download fertig ist, tippe auf die Datei und wähle „Installieren“. Falls Du gefragt wirst, erlauben Sie die Installation von Apps von dieser Quelle.
+5. Wenn der Download fertig ist, tippe auf die Datei und wähle „Installieren“. Falls Du gefragt wirst, erlaube die Installation von Apps von dieser Quelle.
 6. aaps-wear-….apk ist für eine Smartwatch. Nutzt Du keine, überspringe diese Datei.
 
 Die APK erscheint nicht unter „Code“ in Deinem Repository, sondern nur auf der Build-Seite. Sie wird 14 Tage lang aufbewahrt.
