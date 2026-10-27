@@ -76,9 +76,9 @@ Hinweis: Wenn zwei Sensoren aktiv sind, sendet Juggluco den zuletzt empfangenen 
 Wenn der Sensor mit einem eingeloggten Libreview-Konto gestartet wurde, ist es auch möglich, zwischen Juggluco und der Libre 3 App als Empfänger zu wechseln. Dies erfordert folgende Schritte:
 
 1. Installiere die Libre 3 App aus dem Google Play Store
-2. Richten Sie die Libre 3 App mit dem Libreview-Konto ein, mit dem der Sensor aktiviert wurde.
+2. Richte die Libre 3 App mit dem Libreview-Konto ein, mit dem der Sensor aktiviert wurde.
 3. Beende die Juggluco App in den Android-Einstellungen (Stopp erzwingen).
-4. Klicken Sie im Menü Libre 3 auf "Start Sensor", wählen Sie "Ja", "Weiter" und scannen Ihren Sensor.
+4. Klicke im Menü Libre 3 auf „Start Sensor“, wähle „Ja“, „Weiter“ und scanne Deinen Sensor.
 5. Nach einigen Minuten sollten die Glukosewerte in der Libre 3 App angezeigt werden.
 
 Um von der Libre 3 App zu Juggluco zu wechseln, musst Du die Libre 3 App über Android-Einstellungen erzwingen und mit Schritt 1 & 2 fortfahren.
