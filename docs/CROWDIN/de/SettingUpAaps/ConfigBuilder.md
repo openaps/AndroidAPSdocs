@@ -45,7 +45,7 @@ Weitergehende Informationen zum Verständnis des Insulin-Profils, wie es in **AA
 
 * Die Oref Optionen 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' und 'Free-Peak Oref' haben einen exponentiellen Verlauf.
 * Bei den Profilen 'Rapid-Acting', 'Ultra-Rapid' und 'Lyumjev' kannst du nur die Insulinwirkdauer (DIA) anpassen. Der Zeitpunkt der maximalen Insulinwirkung ist fest vorgegeben. 
-* Free-Peak erlaubt es Ihnen, sowohl die DIA als auch die Zeit auf den Höhepunkt anzupassen und darf nur von fortgeschrittenen Benutzern verwendet werden, die die Auswirkungen dieser Einstellungen kennen. 
+* Free-Peak erlaubt es Dir, sowohl die DIA als auch die Zeit auf den Höhepunkt anzupassen und darf nur von fortgeschrittenen Benutzern verwendet werden, die die Auswirkungen dieser Einstellungen kennen. 
 * Die [Darstellung der Insulinkurven](#AapsScreens-insulin-profile) hilft, die verschiedenen Kurven zu verstehen.
 
 #### Rapid-Acting Oref
