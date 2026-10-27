@@ -162,7 +162,7 @@ Mehrere Auslöser können mit den folgenden Bedingungen miteinander verknüpft w
 **Optionen:**
 
 * Passiven Standort verwenden: **AAPS** nutzt nur die Standorte, wenn sie von anderen Apps angefordert werden.
-* Netzwerkstandort: Standort Ihres Wi-Fi.
+* Netzwerkstandort: Standort Deines WLAN.
 * GPS-Standort (Achtung! Kann zu übermäßigem Akkuverbrauch führen!)
 
 **Bedingung**: Pumpen- und Sensordaten
