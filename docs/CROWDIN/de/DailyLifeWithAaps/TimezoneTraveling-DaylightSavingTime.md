@@ -82,7 +82,7 @@ Wenn sich die Zeitzone oder die Uhrzeit ändert, wird eine laufende **TBR** gest
 
 ## Zeitumstellung (Sommer-/Winterzeit)
 
-Time adjustment for daylight savings time.
+Zeitumstellungen für Sommer- und Winterzeit.
 
 Abhängig von Deiner Pumpe und dem CGM-Setup können Zeitsprünge zu **AAPS**-Problemen führen. Beispielsweise wird bei der Umstellung auf Sommerzeit der Combo-Pumpe die Pumpenhistorie doppelt ausgelesen, sodass dadurch doppelte Einträge entstehen. Für einige Pumpen ist es deswegen besser, die Zeitumstellung nicht in der Nacht vorzunehmen, sondern diese auf den späten Abend, wenn Du noch wach bist, vorzuziehen.
 
@@ -114,7 +114,7 @@ Wenn Du den **AAPS**-Bolus-Rechner zum Bolen verwendest, schließe **COB** und *
 
 #### Vor der Zeitumstellung notwendige Maßnahmen
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. Wie Du das machst, hängt von Deinem Smartphone und der Android-Version ab.
+1. Schalte alle Einstellungen Deines Smartphones, die die Zeitzone des Smartphones automatisch anpassen, AUS. Damit kannst Du dann manuell auf eine Zeitzone wechseln, die keine Sommerzeit-Umstellung hat. Wie Du das machst, hängt von Deinem Smartphone und der Android-Version ab.
    
    * Manche Smartphones haben zwei Einstellungen, eine für die automatische Zeiteinstellung (die idealerweise AN bleiben sollte) und eine für den automatischen Zeitzonenwechsel (die Du AUSSCHALTEN musst).
    * Unglücklicherweise haben manche Android-Versionen nur eine Einstellmöglichkeit für beides zusammen. In diesem Fall musst Du eben beide ausschalten.
@@ -130,7 +130,7 @@ Wenn Du den **AAPS**-Bolus-Rechner zum Bolen verwendest, schließe **COB** und *
 
 3. **AAPS** verbinde Dich mit Deiner Pumpe (refresh) und wechsel auf das gewünschte **Profil**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Prüfe die **IOB**- und **COB**-Werte in **AAPS**. Sollten die Werte falsch ein, deaktiviere den **Loop** für mindestens die Insulinwirkdauer (DIA) oder „Max-Carb-Time“ (je nachdem welcher Zeitraum länger ist).
 
 5. Nach der Zeitumstellung notwendige Maßnahmen. Der Zeitpunkt zum Zurückkehren in die lokale Zeitzone ist ideal, wenn der **IOB** niedrig ist. Z. B. eine Stunde vor einer Mahlzeit wie dem Frühstück. Sowohl Dein **COB**, als auch Dein **IOB** sollten idealerweise dabei nahe Null sein.
 
@@ -142,7 +142,7 @@ Dieser Abschnitt ist nur für den alten, auf Ruffy basierenden, Treiber gültig.
 
 #### Vor der Zeitumstellung notwendige Maßnahmen
 
-1. Schalten alle Einstellungen AUS, die die Zeitzone automatisch festlegen, so dass Du die Zeitumstellung durchführen kannst, wann Du es möchtest. How this is done will depend on your smartphone and Android version.
+1. Schalte alle Einstellungen Deines Smartphones, die die Zeitzone des Smartphones automatisch anpassen, AUS. Damit kannst Du die Umstellung dann durchführen, wenn es für Dich am besten passt. Wie Du das konkret machst, hängt von Deinem Smartphone und der Android-Version ab.
    
    * Manche haben zwei Einstellungen, eine für die automatische Zeiteinstellung (die idealerweise AN bleiben sollte) und eine für den automatischen Zeitzonenwechsel (die Du AUSSCHALTEN musst).
    * Unglücklicherweise haben manche Android-Versionen nur eine Einstellmöglichkeit für beides zusammen. In diesem Fall musst Du eben beide ausschalten.
@@ -161,20 +161,20 @@ Dieser Abschnitt ist nur für den alten, auf Ruffy basierenden, Treiber gültig.
    * Klicke NICHT auf "lösche alle Behandlungen in der Zukunft". 
    * Drücke "Löschen" bei allen künftigen und doppelten Behandlungen. Dadurch werden die Behandlungen außer Kraft gesetzt statt nur gelöscht und somit nicht mehr beim IOB berücksichtigt.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Wenn die Situation von COB und/oder IOB unklar ist, pausiere den **Loop** zu Deiner eigenen Sicherheit bitte mindestens für den Zeitraum des DIA oder die Max-Carb-Time - und wähle den größeren der beiden.*
 
-#### Actions to take after the clock change / DST
+#### Nach der Zeitumstellung notwendige Maßnahmen
 
 Ein guter Zeitpunkt für diese Umstellung ist bei niedrigem **IOB** Z.B. eine Stunde vor einer Mahlzeit wie dem Frühstück, denn dann werden alle kürzlich abgegebenen Boli in Deiner Pumpenhistorie kleine SMB Korrekturen sein. Sowohl Dein **COB**, als auch Dein **IOB** sollten dabei nahe Null sein.
 
 1. Wechsle die Zeitzone in Deinem Smartphone zurück auf Deine eigene Zeitzone und aktiviere die oben deaktivierte Automatik zur Zeitzoneneinstellung wieder.
 2. **AAPS** wird Dich kurz danach alarmieren, dass die Uhrzeit in der Combo nicht passt. Passe die Uhrzeit manuell auf der Pumpe an.
 3. Klicke im COMBO-Tab von **AAPS** auf „Aktualisieren“.
-4. GO Treatments screen, and look for any future events. Es sollte eigentlich keine geben. Falls doch:
+4. Gehe auf den Behandlungsbildschirm und suche nach zukünftigen Ereignissen. Es sollte eigentlich keine geben. Falls doch:
    
-   * DON'T press "delete Treatments in the future"
-   * Hit "remove" on all future Treatments and duplicate ones. This should invalidate the Treatments rather than removing them so they will not be considered for **IOB**.
+   * Klicke NICHT auf "lösche alle Behandlungen in der Zukunft". 
+   * Tippe „Löschen“ bei allen künftigen und doppelten Behandlungen. Dadurch werden die Behandlungen außer Kraft gesetzt statt nur gelöscht und somit nicht mehr beim **IOB** berücksichtigt.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one **DIA** and Max-Carb-Time - whatever is bigger.*
+5. Wenn die Situation von COB und/oder IOB unklar ist, pausiere den **Loop** zu Deiner eigenen Sicherheit bitte mindestens für den Zeitraum des **DIA** oder die Max-Carb-Time - und wähle den größeren der beiden.*
 
 6. Mache weiter wie gewohnt.
