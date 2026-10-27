@@ -13,7 +13,7 @@ Es gibt keine Probleme beim Zeitzonenwechsel im Smartphone, da die Pumpe keine H
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## Zeitzonenwechsel mit DanaRv2, DanaRS, Dana-i
 
 Da **AAPS** die Pumpenhistorie nutzt, die Einträge in der Pumpe aber keine Zeitangaben enthalten, benötigen diese Pumpen besondere Aufmerksamkeit. **Wenn Du die Zeitzone auf Deinem Smartphone änderst, bedeutet das, dass die Datensätze mit einer anderen Zeitzone ausgelesen und gedoppelt werden.**
 
@@ -84,18 +84,18 @@ Wenn sich die Zeitzone oder die Uhrzeit ändert, wird eine laufende **TBR** gest
 
 Time adjustment for daylight savings time.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For instance with the Combo pump & DST, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+Abhängig von Deiner Pumpe und dem CGM-Setup können Zeitsprünge zu **AAPS**-Problemen führen. Beispielsweise wird bei der Umstellung auf Sommerzeit der Combo-Pumpe die Pumpenhistorie doppelt ausgelesen, sodass dadurch doppelte Einträge entstehen. Für einige Pumpen ist es deswegen besser, die Zeitumstellung nicht in der Nacht vorzunehmen, sondern diese auf den späten Abend, wenn Du noch wach bist, vorzuziehen.
 
 ### Automatische Sommer-/Winterzeitumstellung für die meisten Pumpen
 
 * Diese Umstellungsfunktion ist seit **AAPS**-Version 2.2 verfügbar.
-* Howeever, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**.
+* Der **Loop** wird für 3 Stunden NACH der Zeitumstellung (normalerweise 1 Uhr) deaktiviert und **AAPS** wird es für diese Zeit standardmäßig das Basal, wie es in Deinem **Profil** hinterlegt ist, abgeben.
    
    Dies geschieht aus Sicherheitsgründen - **IOB** kann wegen doppelter Boli vor der Zeitumstellung zu hoch sein.
 
-* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable the **Loop**.
+* Führe nch der Zeitumstellung einen **Profilwechsel** auf Dein gewünschtes **Profil** aus, um den **Loop** zu aktivieren.
 
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.**
+* Vor der Zeitumstellung wirst Du auf der **AAPS**-Übersicht eine Benachrichtigung erhalten, dass der **Loop** vorübergehend deaktiviert wurde. Das wird eine stille Benachrichtigung (ohne Töne, Vibrationen o. ä) sein.**
 
 Wenn Du den **AAPS**-Bolus-Rechner zum Bolen verwendest, schließe **COB** und **IOB**-Daten aus, es sei denn, Du bist Dir absolut sicher, dass die Daten korrekt sind. Sei vorsichtig und nutze den Bolus-Rechner in den ersten Stunden nach der Zeitumstellung nicht zum Bolen.
 
