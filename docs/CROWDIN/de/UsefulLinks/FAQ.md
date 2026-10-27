@@ -130,7 +130,7 @@ Beim Loopen kann die Batterien schneller entladen als gewohnt, weil das System v
 
 Der Wechsel des Insulin-Reservoirs kann nicht über AAPS erfolgen, sondern muss ganz normal direkt über die Pumpe durchgeführt werden.
 
-- Dazu durch langes Drücken auf das Closed-Loop-Symbol auf dem ÜBERSICHT-Tab von AAPS 'Pausiere Loop für 1h' auswählen
+- Dazu durch langes Drücken auf das Closed-Loop-Symbol auf dem ÜBERSICHT-Tab von AAPS „Pausiere Loop für 1h“ auswählen
 - Koppele nun die Pumpe ab und wechsel das Reservoir wie es im Pumpenhandbuch beschrieben ist.
 - Auch das Füllen des Schlauchs und der Kanüle kann direkt an der Pumpe erfolgen. Verwende in diesem Fall den [Button KATHETERWECHSEL](#screens-action-tab) im Reiter AKTIONEN für die Dokumentation.
 - Anschließend durch langes Drücken auf Pausiert wieder Forsetzen wählen.
@@ -151,7 +151,7 @@ Du kannst die Pumpe zum Duschen oder Baden ablegen. Für diesen kurzen Zeitraum 
 
 #### Arbeit
 
-Je nach Job können Sie verschiedene Behandlungsfaktoren an Werktagen anwenden. Als Looper solltest Du über einen [Profil-Wechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) für Deinen typischen Arbeitstag nachdenken. Zum Beispiel könntest Du zu einem Profil über 100% wechseln, wenn Du einen weniger anspruchsvollen Job hast (z. B. an einem Schreibtisch) oder weniger als 100%, wenn Du kontinuierlich körperlich während der Arbeit aktiv bist. Du kannst Dir auch überlegen ein höheres oder niedrigeres temporäres Ziel oder eine [Zeit-Verschiebung des Profils](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) zu wählen, wenn Du viel früher oder später als üblich arbeitest oder Schichtdienst hast. Du kannst auch ein zweites Profil erstellen (z.B. 'zu Hause' und 'Werktag') und einen täglichen Profilwechsel machen, auf das Profil, das du gerade brauchst.
+Je nach Job kannst Du verschiedene Behandlungsfaktoren an Werktagen anwenden. Als Looper solltest Du über einen [Profil-Wechsel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) für Deinen typischen Arbeitstag nachdenken. Zum Beispiel könntest Du zu einem Profil über 100% wechseln, wenn Du einen weniger anspruchsvollen Job hast (z. B. an einem Schreibtisch) oder weniger als 100%, wenn Du kontinuierlich körperlich während der Arbeit aktiv bist. Du kannst Dir auch überlegen ein höheres oder niedrigeres temporäres Ziel oder eine [Zeit-Verschiebung des Profils](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) zu wählen, wenn Du viel früher oder später als üblich arbeitest oder Schichtdienst hast. Du kannst auch ein zweites Profil erstellen (z.B. 'zu Hause' und 'Werktag') und einen täglichen Profilwechsel machen, auf das Profil, das du gerade brauchst.
 
 ### Freizeitaktivitäten
 
@@ -270,7 +270,7 @@ Die Dokumentation findest Du [hier](#Update3_0-reset-master-password).
 
 Bei manchen Smartphones treten Bluetooth-Verbindungsprobleme mit den Kommunikationsgeräten (RL/OL/EmaLink...) auf.
 
-Einige haben auch nicht reagierende Verbindugnen zu Ihren Geräten (AAPS sagt, dass sie verbunden sind, aber die Geräte können die Pumpe nicht erreichen oder Kommandos senden.)
+Einige haben auch nicht reagierende Verbindugnen zu ihren Geräten (AAPS sagt, dass sie verbunden sind, aber die Geräte können die Pumpe nicht erreichen oder Kommandos senden.)
 
 Der einfachste Lösungsweg ist: 1/ Lösche das Gerät aus AAPS 2/ Schalte das Gerät (RileyLink etc.) aus 3/ Schließe AAPS über das 3-Punkte-Menü oben rechts 4/ Drücke lange auf das AAPS Icon, öffne die Info zur App, Wähle 'Stopp erzwingen' , wähle 'Speicher' und dann 'Cache leeren' (nicht: 'Daten löschen' wählen!) 4+/ In selten Fällen muss das Smartphonen nun neugestartet werden. Du kannst es ohne Neustart versuchen. 5/ Schalte den Link ein 6/ Starte AAPS 7/ Gehe auf den Reiter POD, 3-Punkt-Menü, Suche und Verbindung Link
 
@@ -290,7 +290,7 @@ Tipp: Mache eine Kopie einer existierenden Logdatei und benenne sie in "engineer
 
 ### Wo finde ich die Einstellungsdateien?
 
-Einstellungsdateien werden auf dem internen Speicher Ihres Telefons im Verzeichnis "/AAPS/preferences" gespeichert. WARNUNG: Stelle sicher, dass Du Dein Passwort nicht verlierst, da Du ohne Passwort keine verschlüsselte Einstellungsdatei importieren kannst!
+Einstellungsdateien werden auf dem internen Speicher Deines Smartphones im Verzeichnis „/AAPS/preferences“ gespeichert. WARNUNG: Stelle sicher, dass Du Dein Passwort nicht verlierst, da Du ohne Passwort keine verschlüsselte Einstellungsdatei importieren kannst!
 
 ### Wie konfiguriere ich die Akkuoptimierung?
 
