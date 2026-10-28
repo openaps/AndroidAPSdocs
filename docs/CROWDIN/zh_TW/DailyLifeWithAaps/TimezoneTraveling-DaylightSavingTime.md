@@ -82,20 +82,20 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 ## 夏令時間（DST）
 
-Time adjustment for daylight savings time.
+夏令時間調整。
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For instance with the Combo pump & DST, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+視您的幫浦和 CGM 設定而定，時間跳動可能導致 **AAPS** 無法正常運作。例如，使用 Combo 幫浦並遇上夏令時間調整時，幫浦歷史記錄會被讀取兩次，造成重複項目。對某些幫浦來說，最好在夏令時間調整前、清醒時調整時區，而不要在夜間進行。
 
 ### 多數幫浦的 DST 自動調整
 
 * 此項調整功能在 **AAPS** 2.2 版之後可用。
-* Howeever, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**.
+* 不過，夏令時間切換後（通常從凌晨 1 點開始），**循環**會停用 3 小時，而 **AAPS** 會改用您在 **設定檔**中選取的背景基礎率。
    
    這是基於安全考量—在 DST 變更前重複注射可能導致 **IOB** 偏高。
 
 * After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable the **Loop**.
 
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.**
+* 夏令時間調整前，您也會在 **AAPS** 主畫面收到通知，告知**循環**已暫時停用。此訊息不會以嗶聲、震動或類似的聲音提示。**
 
 若你使用 **AAPS** 的計算機進行注射，除非你確定這些資料完全正確，否則請不要使用 **COB** 與 **IOB** 資料。請小心，且在 DST 切換完成後的數小時內不要使用此功能。
 
@@ -114,7 +114,7 @@ Depending on your pump and CGM setup, jumps in time can lead to problems with **
 
 #### 更改時鐘前的操作
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. 如何操作取決於你的智慧型手機與 Android 版本。
+1. 關閉手機中會自動設定時區的設定，這樣使用者就能切換到不採用夏令時間的時區。如何操作取決於你的智慧型手機與 Android 版本。
    
    * 有些手機有兩個設定：一個是自動設定時間（理想情況下應保持開啟），另一個是自動設定時區（你必須將其關閉）。
    * 不幸的是，有些 Android 版本只有一個開關，同時控制時間與時區的自動設定。你現在必須關閉這個開關。
@@ -130,7 +130,7 @@ Depending on your pump and CGM setup, jumps in time can lead to problems with **
 
 3. **AAPS** 會重新整理你的幫浦，並切換到你想要的 **設定檔**。
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. 請檢查 **AAPS** 的 **IOB** 和 **COB**；如果數值不準確，請停用**循環**至少一個 DIA 和 Max-Carb-Time 的時間，以較長者為準。
 
 5. 更改時鐘後的操作. 在 IOB 較低時，是切回當地時區的好時機。例如，在早餐等餐點前一小時。理想情況下，你的 **COB** 與 **IOB** 都應接近 0。
 
@@ -142,7 +142,7 @@ Depending on your pump and CGM setup, jumps in time can lead to problems with **
 
 #### 更改時鐘前的操作
 
-1. 關閉任何自動設置時區的設置，以便你可以在需要時強制更改時間。 How this is done will depend on your smartphone and Android version.
+1. 關閉任何自動設置時區的設置，以便你可以在需要時強制更改時間。操作方式取決於您的智慧型手機和 Android 版本。
    
    * 某些設備有兩個設置，一個是自動設置時間（理想情況下應保持開啟），另一個是自動設置時區（必須關閉）。
    * 不幸的是，一些 Android 版本只有一個開關，可以自動設置時間和時區。你現在必須關閉這個開關。
@@ -161,20 +161,20 @@ Depending on your pump and CGM setup, jumps in time can lead to problems with **
    * 請勿按「刪除未來治療」
    * 請按「移除」所有未來的治療和重複的治療。這樣可以使治療無效，而不是將其移除，因此他們將不再被計入 IOB。
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. 如果不確定 IOB/COB 的狀況，為了安全起見，請停用**循環**至少一個 DIA 和 Max-Carb-Time 的時間，以較長者為準。*
 
-#### Actions to take after the clock change / DST
+#### 時鐘調整／夏令時間切換後的處理事項
 
 在 IOB 較低時進行此切換較為合適。例如，在用餐前一小時，例如早餐，（幫浦歷史紀錄中的任何近期注射將是小的 SMB 校正）。你的 **COB** 與 **IOB** 都應接近 0。)
 
 1. 將 Android 時區更改回你的目前位置，並重新啟用自動時區。
 2. **AAPS** 很快會開始提醒你，Combo 的時鐘不相符。因此，請透過幫浦螢幕和按鈕手動更新幫浦的時鐘。
 3. 在 **AAPS** 的「Combo」畫面，按下「重新整理」。
-4. GO Treatments screen, and look for any future events. 應該不會有太多。
+4. 前往「治療」畫面，並查看是否有未來的事件。應該不會有太多。
    
-   * DON'T press "delete Treatments in the future"
-   * Hit "remove" on all future Treatments and duplicate ones. This should invalidate the Treatments rather than removing them so they will not be considered for **IOB**.
+   * 請勿按下「刪除未來的治療」
+   * 點選所有未來治療和重複項目旁的「移除」。這會使治療失效，而非將其移除，因此不會將其納入 **IOB** 計算。
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one **DIA** and Max-Carb-Time - whatever is bigger.*
+5. 如果不確定 IOB/COB 的狀況，為了安全起見，請停用**循環**至少一個 **DIA** 和 Max-Carb-Time 的時間，以較長者為準。*
 
 6. 正常繼續。
