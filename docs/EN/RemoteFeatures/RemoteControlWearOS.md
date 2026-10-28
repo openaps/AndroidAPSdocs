@@ -75,16 +75,28 @@ A small scene icon next to a running mode, a temporary target or a profile switc
 
 Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOsSmartwatch-wear-os-tiles) or from a complication set to open the wizard. It walks through a few pages, swipe from right to left to go on:
 
-| Carbs | Meal type | Request | Result | Calculation | Confirm |
-| --- | --- | --- | --- | --- | --- |
-| ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
+| Carbs | Request | Result | Calculation | Confirm |
+| --- | --- | --- | --- | --- |
+| ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
 
 1. **Carbs**: enter the carbs with the **+10**, **+5**, **−** and **+** buttons.
-2. **Meal type**: only with **Calculator Meal Type** turned on in the watch settings, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
-3. **Percentage**: only with **Calculator Percentage** turned on, see the note below.
-4. **Request**: the last page shows what you entered, the carbs and the percentage. Tap the check mark to send it to the phone, which runs the calculation.
-5. **Result**: the bolus **AAPS** proposes, with the carbs now and the eCarbs later under it. Adjust the dose with **−** and **+**, see below. Scroll down for the **Calculation** card: tap it to see every line of the calculation, the same as on the phone.
-6. **Confirm**: swipe to the second page and tap the check mark. The phone delivers the bolus and records the carbs.
+2. **Request**: the last page before the phone takes over. It shows what you entered: the carbs, and the meal type, carb time and percentage when you use them, see [Optional pages](#WearOsSmartwatch-calculator-optional-pages). Tap the check mark to send it to the phone, which runs the calculation.
+3. **Result**: the bolus **AAPS** proposes, with the carbs under it: the carbs now and the eCarbs later, the carb time and the bell of the eat reminder. Adjust the dose with **−** and **+**, see below. Scroll down for the **Calculation** card: tap it to see every line of the calculation, the same as on the phone.
+4. **Confirm**: swipe to the second page and tap the check mark. The phone delivers the bolus and records the carbs.
+
+(WearOsSmartwatch-calculator-optional-pages)=
+
+### Optional pages
+
+Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
+
+| Settings | Meal type | Carb time |
+| --- | --- | --- |
+| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) |
+
+* **Calculator Meal Type**: **Bread**, **Cake** or **Pizza**, which splits the carbs of a slow meal into carbs now and eCarbs later, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+* **Calculator Carb Time**: the minutes until you eat, with a **Set alarm** bell for the eat reminder, see [Carb time and the eat reminder](#WearOsSmartwatch-wizard-carb-time).
+* **Calculator Percentage**: a percentage of the calculated bolus, for example 70 % when you want a smaller dose. It starts at the percentage set on the phone under **Settings > Wear**, 100 % unless you changed it. See also the note under [Adjusting the bolus on the result page](#WearOsSmartwatch-wizard-result).
 
 (WearOsSmartwatch-wizard-result)=
 
@@ -114,6 +126,26 @@ The watch calculator can split the carbs of a slow meal into carbs now and eCarb
 * After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
 * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
 * The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
+
+(WearOsSmartwatch-wizard-carb-time)=
+
+### Carb time and the eat reminder
+
+With **Calculator Carb Time** turned on in the watch's **Settings** > **Interface**, a **Carb time** page follows the carbs: the minutes until you eat, like the [carb time](#aaps-screens-bolus-wizard) of the phone wizard. **Now** is the default. **−** and **+** move it in steps of 5 minutes, up to an hour before or after now. A time in the past is for carbs you have eaten already.
+
+With a time in the future, a **Set alarm** bell appears under the value. It is on by default, tap it to turn it off. The request and result pages show the carb time, for example *+30 min*, and the bell. The phone records the carbs at that time, moves the eCarbs of the meal type with it, and starts its **time to eat** reminder.
+
+| Result | BG graph | Running | Time to eat |
+| --- | --- | --- | --- |
+| ![Result page with a carb time](../images/wearos/calculator/calculator_result_carb_time.png) | ![The reminder in the BG graph](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![The running reminder](../images/wearos/eat_reminder/eat_reminder_running.png) | ![The reminder rings](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
+
+The reminder also lives on the watch, so it rings when the phone is out of reach too:
+
+* The **BG Graph** screen, the **BG Graph** tile and the graph of the **Complications watchface** draw a dashed orange line where the reminder rings, with the minutes left next to it.
+* While it runs, a silent **Time to eat** notification with **Stop** and **+5 min** sits in the notification stream. It comes back when you swipe it away, until the reminder is over.
+* When the time has come, the watch vibrates, and again every half minute for five minutes until you answer. The notification offers **Silence** and **+5 min**, and swiping it away silences it too.
+
+**Stop**, **Silence** and **+5 min** do the same on the watch, on the phone and on an **AAPSClient**, and all of them show the same reminder.
 
 (Watchfaces-complications)=
 
