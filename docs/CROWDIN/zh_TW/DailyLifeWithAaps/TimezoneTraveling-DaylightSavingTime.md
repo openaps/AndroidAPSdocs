@@ -13,7 +13,7 @@
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## DanaRv2、DanaRS、Dana-i 的時區變更
 
 這些幫浦需要特別注意，因為 **AAPS** 會使用幫浦的歷史紀錄，但幫浦中的紀錄沒有時區標記。**這代表如果你在手機更改時區，紀錄會以不同時區被讀取，並可能出現成雙倍紀錄。**
 
@@ -93,7 +93,7 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
    
    這是基於安全考量—在 DST 變更前重複注射可能導致 **IOB** 偏高。
 
-* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable the **Loop**.
+* 夏令時間調整完成後，選取 **設定檔切換**，然後選取使用者想要的 **設定檔**，即可啟用 **循環**。
 
 * 夏令時間調整前，您也會在 **AAPS** 主畫面收到通知，告知**循環**已暫時停用。此訊息不會以嗶聲、震動或類似的聲音提示。**
 
