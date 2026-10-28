@@ -90,9 +90,9 @@ Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOs
 
 Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
 
-| Settings | Meal type | Carb time |
-| --- | --- | --- |
-| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) |
+| Settings | Meal type | Carb time | Percentage |
+| --- | --- | --- | --- |
+| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) | ![Percentage page](../images/wearos/calculator/calculator_percentage.png) |
 
 * **Calculator Meal Type**: **Bread**, **Cake** or **Pizza**, which splits the carbs of a slow meal into carbs now and eCarbs later, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
 * **Calculator Carb Time**: the minutes until you eat, with a **Set alarm** bell for the eat reminder, see [Carb time and the eat reminder](#WearOsSmartwatch-wizard-carb-time).
