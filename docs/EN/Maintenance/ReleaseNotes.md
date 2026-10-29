@@ -54,16 +54,11 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 (latestrelease)=
 
-(version4000)=
+(version400)=
 
-## Version 4.0.0.0
+## Version 4.0.0
 
-Beta 1 release date: 08-10-2026
-
-```{admonition} Beta version
-:class: warning
-Version 4.0.0.0 is currently available as **4.0.0-beta1**, a test version, not the final release. If you are upgrading from **AAPS** v3, read [What changed in AAPS v4](#v4-changes) first.
-```
+Release date: 31-10-2026
 
 ### New features
 - New user interface: phone app rebuilt in Jetpack Compose @MilosKozak
@@ -86,6 +81,7 @@ Version 4.0.0.0 is currently available as **4.0.0-beta1**, a test version, not t
 - [Settings import](../Maintenance/ExportImportSettings.md): can keep the pump settings @MilosKozak
 - Persistent notification uses Android live updates, with Samsung Now bar support and the delta @premnirmal
 - Performance improvements @MilosKozak
+- Automatic e-carbs in Bolus wizard @MilosKozak
 
 ### New devices
 - **CareLevo**: new [pump driver](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
@@ -114,7 +110,7 @@ Version 4.0.0.0 is currently available as **4.0.0-beta1**, a test version, not t
 ### Contributors
 @MilosKozak @Philoul @olorinmaia @Kisu-Choi @leohunt @piecycle @Angus-repo @mcnelson @t1dude @premnirmal @nl-ruud
 
-Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0-beta1>
+Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0>
 
 (version3426)=
 
