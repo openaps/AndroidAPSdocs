@@ -1,108 +1,142 @@
-# Accu-Chek Insight Pumpe
+# Accu-Chek Insight
 
 **Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) einer künstlichen Bauchspeicheldrüse und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
-* * *
+```{admonition} Accu-Chek Insight is being phased out :class: note
 
-## ***WARNUNG:** Wenn Du bisher die Insight mit **SightRemote** genutzt hast, führe bitte ein **Update auf die neueste AAPS-Version ** durch und **deinstalliere SightRemote**.*
+Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
 
-## Hard- und Softwareanforderungen
-
-* Eine Roche Accu-Chek Insight (jede Firmware funktioniert)
-
-Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe**.
-
-* Ein Android-Smartphone - im Grunde funktionieren alle Android-Versionen mit der Insight, aber prüfe auf der Seite [Komponenten-Übersicht](../Getting-Started/ComponentOverview), welche Android Version für AAPS benötigt wird.
-* AAPS muss auf Deinem Smartphone installiert sein.
-
-## Einrichtung
-
-* Die Insight-Pumpe darf nur mit einem Gerät gleichzeitig verbunden sein. Wenn Du bisher die Fernbedienung mit Messgerät, die zusammen mit der Pumpe geliefert wurde, verwendet hast, musst Du diese aus der Liste der verbundenen Geräte in der Pumpe entfernen: Menü > Einstellungen > Verbindung > Gerät entfernen
+    <br />```{note}
+    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
     
-    ![Screenshot Insight-Fernbedienung entfernen](../images/Insight_RemoveMeter.png)
 
-* Wähle in der [Konfiguration > Pumpe](../SettingUpAaps/ConfigBuilder.md) die "Accu-Chek Insight" aus.
+```{contents} Table of contents :depth: 1 :local: true
+
+    <br />## Pump capabilities with AAPS
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
-
-* Tippe auf das Zahnrad, um die Insight-Einstellungen zu öffnen.
-
-* Klicke den Button 'Insight Pairing' am oberen Bildschirmrand in den erscheinenden Einstellungen. Du solltest eine Liste aller Bluetooth-Geräte in der Nähe sehen (Bild unten links).
-* Wähle auf der Insight Pumpe Menü Einstellungen Kommunikation Gerät hinzufügen (Menu > Settings > Communication > Add Device). Auf dem Display der Pumpe wird in folgender Anzeige die Seriennummer der Pumpe angezeigt (Bild unten rechts).
+    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+    * Automatic DST and timezone handling.
     
-    ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
-
-* Klicke im Smartphone auf die Seriennummer der Pumpe in der Liste der gefundenen Bluetooth-Geräte. Klicke dann zum Bestätigen auf 'Pair'.
+    ## Hardware and software requirements
     
-    ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
-
-* Sowohl die Pumpe als auch das Telefon zeigen dann einen Code. Stelle sicher, dass der Code auf beiden Geräten übereinstimmt und bestätige das sowohl auf der Pumpe als auch auf dem Smartphone.
+    * A Roche Accu-Chek Insight pump (any firmware, they all work)
     
-    ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
-
-* Fertig! Klopfe Dir selbst auf die Schulter, denn Du hast Pumpe und AAPS erfolgreich miteinander verbunden.
+    Note: AAPS will write data always in **first basal rate profile in the pump**.
     
-    ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
-
-* Klicke im Reiter KONFIGURATION in AAPS auf das Zahnrad beim Eintrag 'Insight Pumpe', um die Insight-Einstellungen aufzurufen. Tippe dann auf "Insight Pairing' und Dir werden einige Informationen zur Pumpe angezeigt.
+    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
+    * The AAPS app installed on your phone
     
-    ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
-
-Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. Eine Verbindung wird nur dann hergestellt, wenn es erforderlich ist (z.B. Setzen einer temporären Basalrate, Bolusabgabe, Auslesen der Pumpenhistorie...). Sonst würden die Akkus des Smartphones und die Batterien der Pumpe zu schnell leer.
-
-(Accu-Chek-Insight-Pump-settings-in-aaps)=
-
-## Einstellungen in AAPS
-
-**Hinweis: Es ist ab AAPS Version 2.7.0 nun wieder möglich, „Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout“ mit der Insight zu aktivieren, um Autotune nutzen zu können.** Dies gilt auch dann, wenn die Synchronisation mit Nightscout aktiviert ist. (Gehe dazu in AAPS auf [Einstellungen > Nightscout-Client > Erweiterte Einstellungen](#Preferences-advanced-settings-nsclient).)
-
-![Screenshot der Insight Einstellungen](../images/Insight_settings.png)
-
-In den Insight-Einstellungen in AAPS kannst Du die folgenden Optionen aktivieren:
-
-* “Reservoirwechsel protokollieren”: Es wird automatisch ein Eintrag Reservoirwechsel erfasst, wenn das Programm zum Füllen der Kanüle auf der Pumpe ausgeführt wird.
-
-* "Kanülenwechsel protokollieren": Es wird automatisch ein Eintrag Kanülenwechsel erfasst, wenn das Programm zum Füllen der Kanüle auf der Pumpe ausgeführt wird.
-
-* "Kanülenwechsel protokollieren": Es wird automatisch ein Eintrag Kanülenwechsel erfasst erstellt, wenn das Programm zum Füllen der Kanüle direkt auf der Pumpe ausgeführt wird. **Hinweis: Ein Kanülenwechsel setzt Autosens zurück.**
-
-* "Batteriewechsel protokollieren": Es erfolgt ein Eintrag, wenn Du in der Pumpe die Batterie wechselst.
-
-* "Wechsel des Betriebsmodus protokollieren": Es wird in der AAPS Datenbank vermerkt, wenn Du die Pumpe startest, stoppst oder pausierst.
-
-* "Alarme protokollieren": Wenn die Pumpe einen Alarm ausgibt, wird ein entsprechender Eintrag in der AndroidAPS Datenbank gemacht. Ausgenommen davon sind Erinnerungen, Bolus- und TBR-Abbrüche. Diese werden nicht aufgezeichnet.
-
-* "TBR-Emulation aktivieren": Mit der Insight Pumpe können temporäre Baslaraten (TBR) nur bis max. 250% abgegeben werden. Um diese Einschränkung zu umgehen, führt TBR Emulation dazu, dass die Pumpe einen verzögerten Bolus für das zusätzlich benötigte Insulin abgibt, wenn Du eine TBR von mehr als 250 % einstellst.
+    ## Setup
     
-    **Hinweis: Bitte verwende nicht mehrere verzögerte Boli gleichzeitig, da dies zu Fehlern führen kann.**
-
-* "Vibrationen bei der manuellen Bolusabgabe deaktivieren": Deaktiviert die Vibrationen der Insight Pumpe wenn ein manueller Bolus (oder erweiterter Bolus) abgegeben wird. Diese Einstellung ist nur mit der neuesten Insight Firmware verfügbar (3.x).
-
-* "Vibrationen bei der automatischen Bolusabgabe deaktivieren": Deaktiviert die Vibrationen der Insight Pumpe wenn ein automatischer Bolus (SMB oder Temporäre Basalrate mit TBR Emulation) abgegeben wird. Diese Einstellung ist nur mit der neuesten Insight Firmware verfügbar (3.x).
-
-* "Erholungsdauer": Dies legt fest, wie lange AAPS abwartet, bevor nach einem fehlgeschlagenen Verbindungsversuch ein neuer Versuch unternommen wird. Du kannst Werte zwischen 0 und 20 Sekunden auswählen. Falls Du Verbindungsprobleme haben solltest, wähle eine längere Wartezeit aus ("Erholungsdauer").   
-      
-    Beispiel für min. Erholungsdauer = 5 und max. Erholungsdauer = 20   
-      
-    keine Verbindung - warte **5** Sek.   
-    neuer Versuch - keine Verbindung - warte **6** Sek.   
-    neuer Versuch - keine Verbindung - warte **7** Sek.   
-    neuer Versuch - keine Verbindung - warte **8** Sek.   
-    ...   
-    neuer Versuch - keine Verbindung - warte **20** Sek.   
-    neuer Versuch - keine Verbindung - warte **20** Sek.   
-    ...
-
-* "Verbindungsabbau-Verzögerung": Legt (in Sekunden) fest, wie lange AAPS nach einer erfolgreich abgeschlossenen Aktion wartet, bis dann die Verbindung zur Pumpe getrennt wird. Der Standardwert ist 5 Sekunden.
-
-Für Zeiträume, in denen die Pumpe gestoppt war, speichert AndroidAPS eine temporäre Basalrate mit 0%.
-
-Auf dem Tab Accu-Chek Insight in AAPS, wird der aktuelle Pumpenstatus angezeigt mit zwei Buttons verfügbar:
-
-* "Aktualisieren": Pumpenstatus aktualisieren
-* "TBR-beendet-Benachrichtigung aktivieren/deaktivieren": Im Standard gibt die Insight Pumpe einen Alarm ab, wenn eine temporäre Basalrate beendet wurde. Mit diesem Button kannst Du diesen Alarm aktivieren und deaktivieren ohne auf die Konfigurationssoftware zurückgreifen zu müssen.
+    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    
+       ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+    
+    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    
+       ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+    
+       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+    
+       ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
+    
+       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+    
+       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+    
+       ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
+    
+    (accu-chek-insight-pairing)=
+    ### Pairing
+    
+    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
+    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    
+       ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+    
+    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    
+       ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+    
+    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    
+       ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+    
+    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    
+       ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+    
+    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    
+       ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+    
+       ```{admonition} Older screenshot
+       :class: note
+       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       ```
+    
+    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    
+    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    
+    (Accu-Chek-Insight-Pump-settings-in-aaps)=
+    ## Settings in AAPS
+    
+    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    
+    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    
+    In the Insight settings in **AAPS** you can enable the following options:
+    
+    * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+    
+    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    
+    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    
+    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    
+    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    
+    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    
+    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    
+      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+    
+    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    
+    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    
+    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. Du kannst Werte zwischen 0 und 20 Sekunden auswählen. If you have connection problems, choose a longer wait time.
+        <br><br>Example for min. Erholungsdauer = 5 und max. recovery duration = 20
+        <br><br>no connection -> wait <b>5</b> sec.
+          <br>  retry -> no connection -> wait <b>6</b> sec.
+          <br>  retry -> no connection -> wait <b>7</b> sec.
+          <br>  retry -> no connection -> wait <b>8</b> sec.
+          <br>...
+          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>...
+    
+    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    
+    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    
+    ### The pump screen
+    
+    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    
+    * **Refresh**: refreshes the pump status.
+    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
+    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    
+    ```{admonition} Older screenshot
+    :class: note
+    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    
 
 ## Einstellungen in der Pumpe
 
@@ -122,7 +156,7 @@ Abhängig von der Version der Pumpen-Firmware kann die Insight bei Bolusabgabe (
 
 * Firmware 1.x: Grundsätzlich keine Vibration
 * Firmware 2.x: Vibration kann nicht deaktiviert werden.
-* Firmware 3.x: AAPS Bolusabgabe ohne Vibration. (mindestens [Version 2.6.1.4](#Releasenotes-version-2-6-1-4))
+* Firmware 3.x: AAPS Bolusabgabe ohne Vibration.
 
 Die Firmware-Version kann im Menü der Pumpe nachgesehen werden.
 
@@ -142,12 +176,22 @@ Bitte verwende nicht mehrere verzögerte Boli gleichzeitig, da dies zu Fehlern f
 
 ### Timeout
 
-Manchmal kann es passieren, dass die Insight Pumpe während des Verbindungsaufbaus nicht antwortet. In diesem Fall wird AAPS die folgende Nachricht anzeigen: "Zeitüberschreitung während des Handshakes - Bluetooth zurücksetzen".
+Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-Schalte dann Bluetooth auf Pumpe und Smartphone für etwa 10 Sekunden aus und schalte es dann wieder ein.
+If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
 
 ## Mit der Insight Pumpe über Zeitzonen hinweg reisen
 
 Für allgemeine Informationen zum Reisen über Zeitzonen hinweg siehe [Mit der Pumpe über Zeitzonen hinweg reisen](#timezone-traveling-insight).
+
+## Wo ich Hilfe bekomme
+
+Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
