@@ -8,7 +8,7 @@ Wenn Du für **AAPS** kein eigenes Google Mail-Konto einrichten möchtest, kanns
 :class: dropdown
 
 - Mit einem dedizierten Google Drive-Speicherplatz läufst Du nicht in die Gefahr Dein persönliches Google Drive-Limit durch den **Export der Einstellungen** zu überschreiten.
-- Jede **AAPS**-Version (und die Hilfs-Apps wie xDrip+, BYODA, usw.) wird an einem, von Deiner Computer-Hardware unabhängigen, gemeinsamen Ort gespeichert. Wenn Dein Smartphone oder PC defekt ist, gestohlen wird oder verloren geht, hast Du weiterhin Zugriff.
+- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. Wenn Dein Smartphone oder PC defekt ist, gestohlen wird oder verloren geht, hast Du weiterhin Zugriff.
 - Durch die Vereinheitlichung des Setups wird die Online-Unterstützung für Nutzende, die eine Verzeichnisstruktur verwenden, vereinfacht.
 - Je nach Setup (siehe unten) hast Du einen Alias für die Kommunikation innerhalb der Community und kannst damit Deine Privatsphäre schützen. 
 - Kinder mit Diabetes Typ 1 können ihr eigenes "Alltags"-E-Mail-Konto [Standard-E-Mail-Konto] als Jugendliche behalten, während sie **AAPS** und die damit verbundene Funktionen, die ein Erwachsenenkonto erfordern, nutzen.
@@ -23,7 +23,7 @@ Wenn Du für **AAPS** kein eigenes Google Mail-Konto einrichten möchtest, kanns
 
 Voraussetzungen:
 
-* Du hast einen Windows-PC (Windows 10 oder neuer) und ein Android-Smartphone (Android 9 oder neuer), auf dem die **AAPS**-App installiert wird. Beide Geräte haben die neuesten Sicherheitsupdates, Internetzugang und Administrator-Rechte, da einige Schritte das Herunterladen und die Installation von Programmen erfordern.
+* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. Beide Geräte haben die neuesten Sicherheitsupdates, Internetzugang und Administrator-Rechte, da einige Schritte das Herunterladen und die Installation von Programmen erfordern.
 * Das Android-Smartphone ist bereits mit Deiner persönlichen „Alltags“-E-Mail-Adresse[Standard-E-Mail-Adresse], wie z. B. einem Gmail-Konto, eingerichtet.
 
 ```{admonition} Things to consider when setting up your new account
@@ -37,9 +37,9 @@ Voraussetzungen:
 ```
 
 
-```{admonition}  Video Walkthrough! 
-:class: Note
-Klicke [hier](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>), um einen Video Walkthrough zum Setup eines dedizierten Google-Kontos zu starten.
+```{admonition} Video Walkthrough!
+:class: note
+Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
 ```
 
  Im Video werden drei Schritte beschrieben:
