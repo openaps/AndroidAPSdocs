@@ -9,23 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Fichier de clés perdu
-If you use the same keystore when updating **AAPS** you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a safe place.
-
-If you try to install the apk, signed with a different keystore than before, you will get an error message explaining that the installation failed!
-
-In the event that you cannot trace your old keystore or password, proceed as follows:
-
-1. [Exportez les paramètres](../Maintenance/ExportImportSettings.md) sur votre ancien téléphone.
-2. Copiez le fichier de configuration de votre téléphone vers un emplacement externe (par ex. votre ordinateur, un service cloud...).
-4. Generate a new version of the signed apk as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
-5. Uninstall previous **AAPS** version on your phone.
-6. Install new **AAPS** version on your phone.
-7. [Importez les paramètres](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) pour restaurer vos objectifs et votre configuration.
-
-   If you can't find these on your phone, copy them from the external storage to your phone.
-
-8. Vérifiez vos options d'optimisation de la batterie et désactivez-les à nouveau.
-9. Continuez à boucler.
+If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 ## Gradle Sync en échec
 Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
@@ -54,7 +38,7 @@ Clone sources again as described in wiki and do not allow gradle update
 ```
 
 #### Étape 1 - Vérifiez l'installation de git
-  * Ouvrez l'onglet Terminal (1) en bas d'Android Studio, copiez le texte suivant et collez le dans le terminal.
+  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
     ```
     git --version
     ```
@@ -91,11 +75,11 @@ Clone sources again as described in wiki and do not allow gradle update
 #### Étape 2 : Vérifier les modifications non commitées.
 
   * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Onglet de commit : changements non commités](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * Vous pouvez voir "Default changeset" (2) ou "Unversioned files" (3):
+  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
 
-    * For "Default changeset", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
 
-    * Faites un clic droit sur "Default Changeset" et sélectionnez "Rollback"
+    * Right click on "Changes" and select "Rollback…" (1)
 
       ![Onglet de commit : Restaurer les modifications](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
@@ -163,12 +147,12 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select 'Download JDK'.
+3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select **Download JDK** (2).
 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change.
+4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change. Click **Download** (4).
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -213,7 +197,7 @@ If you experience the above error message, you need to download a correct JVM ve
 (gradle-resync)=
 ### Resynchronisation Gradle
 
-  Si vous pouvez toujours voir le message que la synchronisation de gradle a échoué, sélectionnez maintenant le lien "Try again".![Gradle Sync en échec](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle Sync en échec](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   If you don't see the message anymore, you can still trigger this manually:
@@ -248,7 +232,7 @@ Your apk was built successfully and can be transferred to your phone!
 
 * If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* If you are using xDrip+: identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
+* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
 
 
 ## Apk not installed
@@ -256,14 +240,15 @@ Your apk was built successfully and can be transferred to your phone!
 ![note d'application du téléphone installée](../images/Update_AppNotInstalled.png)
 
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
+* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 * Si vous avez le message "App non installé" sur votre téléphone, suivez ces étapes :
 
 1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
 2. Uninstall **AAPS** on your phone.
-3. Activer le mode avion & désactiver bluetooth.
+3. Enable airplane mode & turn off Bluetooth.
 4. Installer la nouvelle version (« app-full-release.apk »)
 5. [Importer les paramètres](../Maintenance/ExportImportSettings.md)
-6. Activer le bluetooth et désactiver le mode avion
+6. Turn Bluetooth back on and disable airplane mode
 
 ## Apk installed but old version
 
