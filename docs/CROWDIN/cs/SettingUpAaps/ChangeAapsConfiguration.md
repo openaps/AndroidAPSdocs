@@ -1,43 +1,43 @@
-# Making changes to your AAPS' configuration
+# Změny v konfiguraci AAPS
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Po dokončení **[Průvodce nastavením](../SettingUpAaps/SetupWizard.md)** nemusíte spouštět celého průvodce znovu, pokud chcete změnit jen část konfigurace **AAPS**.
 
-There are three routes to change AAPS’ configuration. As to which route you take, it is simply a matter of convenience or personal preference as each route leads to the same configuration settings.
+Konfiguraci **AAPS** můžete změnit třemi cestami. Kterou cestu zvolíte, je jen otázka pohodlí nebo osobní volby, protože všechny vedou ke stejným nastavením.
 
 Máte tyto možnosti:
 
-1. Konfigurátor,
-1. Three dot menu on the right and select "Preferences" or
-1. Three dot menu on the right and select "Plugin preferences".
+1. Obrazovka **Konfigurace**,
+2. Obrazovka **Nastavení** nebo
+3. **Nastavení** pluginu, otevřené z jeho kategorie v **Konfiguraci**.
 
 Zde vysvětlujeme, která možnost je nejvhodnější pro jakou situaci:
 
-## Konfigurátor
+## Configuration
 
-![Open Config Builder](../images/ConfBuild_Open_AAPS30.png)
+Otevřete **nabídku** (☰) v levém horním rohu hlavní obrazovky a vyberte **Konfigurace**:
 
-The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. Once enabled, the **plugins** will always run, and you can decide if you want to be able to see them in the top menu or not. Disabled plugins can not be made visible.
+![Otevření Konfigurace z nabídky vlevo nahoře](../images/v4/Configuration/configuration_menu.png)
 
-You can use the cogwheel next to each activated plugin to access its settings.
+**Konfigurace** slouží k **výběru aktivních pluginů** – vašeho CGM, pumpy, algoritmu APS, detekce citlivosti, synchronizace a dalších, seskupených podle kategorií. Je to stejná obrazovka, kterou za vás nastavil Průvodce nastavením.
 
-The documentation relating to the config builder is available [here](../SettingUpAaps/ConfigBuilder.md).
+Dokumentace k obrazovce Konfigurace je k dispozici [zde](../SettingUpAaps/ConfigBuilder.md).
 
 ## Nastavení
 
-![Open preferences](../images/Pref2020_Open2.png)
+Klepněte na ikonu **Nastavení** (ozubené kolo) v pravém horním rohu hlavní obrazovky. Otevřou se nastavení **všech zapnutých pluginů na jednom místě**, seskupená do rozbalovacích sekcí:
 
-The **preferences** dialogue can be reached via the top right _three dots_ menu on any tab of **AAPS**. This allows to change the configuration of **all enabled plugins in a single place**.
+![Obrazovka Nastavení s rozbalovacími sekcemi](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Tato cesta je vhodná, pokud si nejste jistí, kde danou možnost konfigurace hledat. Pokud ale víte, že chcete změnit konfiguraci jen jednoho konkrétního pluginu, může být trochu zdlouhavá.
 
-The documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
+Dokumentace k nastavení je k dispozici [zde](../SettingUpAaps/Preferences.md).
 
 ## Nastavení pluginu
 
-![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
+V **Konfiguraci** otevřete kategorii a klepněte na „**Nastavení**“ pod aktivním pluginem. Dostanete se přímo do nastavení **pouze tohoto pluginu**:
 
-The **plugin preferences** dialogue can be reached via the top right _three dots_ menu on the home screen of **AAPS**. It allows to change the configuration of the **plugin currently on screen**.
+![Nastavení a Otevřít modul pod aktivním pluginem](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the _three dots_ menu and then the "plugin preferences" entry. Dostanete se přímo do dialogu nastavení pouze pro plugin BYODA.
+Tato cesta je vhodná například tehdy, když víte, že chcete změnit konfiguraci své pumpy: otevřete **Konfigurace → Pumpa** a pak klepněte na „**Nastavení**“ pod vybranou pumpou.
 
-This is a "shortcut" to the general preferences dialogue, the documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
+Je to „zkratka“ ke stejným nastavením, která jsou na obecné obrazovce **Nastavení**.
