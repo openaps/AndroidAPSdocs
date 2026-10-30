@@ -109,6 +109,7 @@ Version 4.0.0.0 is currently available as **4.0.0-beta1**, a test version, not t
 - Corrections in Bolus wizard and Quick wizard result @olorinmaia
 - New BG graph and Running mode activity in main menu @olorinmaia
 - Bolus wizard: [meal type](#WearOsSmartwatch-wizard-meal-type) page that splits the carbs like the phone wizard, and [carb time](#WearOsSmartwatch-wizard-carb-time) with the *time to eat* reminder on the watch @olorinmaia
+- [Phone alarms on the watch](#WearOsSmartwatch-phone-alarms): the watch shows the alarm and offers Silence and Mute 5 min @olorinmaia
 
 ### Build
 - CI workflows for tag/branch builds, JDK version mapping @Angus-repo

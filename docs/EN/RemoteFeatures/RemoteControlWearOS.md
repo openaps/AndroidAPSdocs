@@ -369,9 +369,27 @@ Note: not all displays can handle always-on very well. It can cause screen burn-
 
 ![Simplified UI](../images/Watchface_simplified_ui.png)
 
+(WearOsSmartwatch-phone-alarms)=
+
+## Phone alarms on the watch
+
+![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+
+The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. The watch vibrates, and again every half minute for five minutes until you answer. A notification shows the title and the text of the alarm, with the same answers as the [time to eat](#WearOsSmartwatch-wizard-carb-time) reminder:
+
+* **Silence**, or a swipe: the alarm stops, and the alarm screen on the phone closes.
+* **Mute 5 min**: the alarm stops and rings again after five minutes, on the phone and on the watch.
+
+Two kinds of alarm reach the watch:
+
+* The alarm screen of the phone (pump errors, automation alarms, BG alarms): **Silence** and **Mute 5 min**.
+* Urgent notifications with a sound, like *Pump unreachable* or a Nightscout alarm: **Silence** only. The phone has only **Dismiss** for those, and they come back by themselves while their cause lasts.
+
+The *time to eat* reminder is not sent this way: the watch rings that one by itself.
+
 ## Snooze Alert shortcut
 
-It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly,  but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly,  but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
 
 To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
 
