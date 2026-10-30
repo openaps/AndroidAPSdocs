@@ -2,30 +2,33 @@
 
 # Detekce citlivosti
 
-## Sensitivity algorithm
+## Algoritmus citlivosti
 
-V současnosti máme 3 modely detekce citlivosti:
+**AAPS** v současnosti nabízí 3 modely detekce citlivosti:
 
-* Citlivost AAPS
-* Citlivost váženého průměru
-* Citlivost Oref1
+* Sensitivita AAPS
+* Sensitivita vážený průměr
+* Sensitivita Oref1
 
-### Citlivost AAPS
+### Sensitivita AAPS
 
-Citlivost se počítá stejným způsobem jako Oref1, ale můžete specifikovat čas do minulosti. Minimální vstřebávání sacharidů se počítá z maximálního času vstřebávání sacharidů z předvoleb
+Citlivost se počítá stejně jako u Oref1, ale můžete nastavit časové období, které se má zpětně vyhodnotit. Minimální vstřebávání sacharidů se počítá z maximální doby vstřebávání sacharidů nastavené v předvolbách.
 
-### Citlivost váženého průměru
+### Sensitivita vážený průměr
 
-Citlivost se počítá jako vážený průměr z odchylek. Můžete specifikovat čas do minulosti. Novější odchylky mají vyšší váhu. Minimální vstřebávání sacharidů se počítá z maximálního času vstřebávání sacharidů z předvoleb. Tento algoritmus je nejrychlejší v sledování změn citlivosti.
+Citlivost se počítá jako vážený průměr odchylek. Můžete nastavit časové období, které se má zpětně vyhodnotit. Novější odchylky mají vyšší váhu. Minimální vstřebávání sacharidů se počítá z maximální doby vstřebávání sacharidů nastavené v předvolbách. Tento algoritmus nejrychleji sleduje změny citlivosti.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
-### Citlivost Oref1
+### Sensitivita Oref1
 
-Citlivost se počítá z dat za posledních 8 hodin nebo od poslední změny místa, pokud to bylo méně než před 8 hodinami. Sacharidy (pokud nejsou absorbovány) jsou odečteny po čase uvedeném v předvolebních nastaveních. Jedině algoritmus Oref1 podporuje nenahlášené jídla (UAM). To znamená, že časy s detekovanými UAM jsou vyloučeny z výpočtu citlivosti. Pokud používáte SMB s UAM, musíte zvolit algoritmus Oref1, aby správně fungoval. Pro více informací si přečtěte [dokumentaci OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Citlivost se počítá z dat za posledních 8 hodin, nebo od poslední výměny kanyly, pokud proběhla před méně než 8 hodinami. Sacharidy (pokud se nevstřebaly) se po době nastavené v předvolbách odříznou. Neoznámená jídla (UAM) podporuje jen algoritmus Oref1. To znamená, že doby, kdy byla zjištěna UAM, se do výpočtu citlivosti nezahrnují. Pokud tedy používáte SMB s UAM, musíte zvolit algoritmus Oref1, aby vše správně fungovalo. Více informací o UAM najdete v části [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option : it is the only one that can detect UAM and work with [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 je doporučená možnost: jako jediná dokáže rozpoznat UAM a pracovat s [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), novějším algoritmem.
 
 ## Současné sacharidy
 
-Existuje významný rozdíl při používání AAPS, WeightedAverage vs Oref1. Pluginy Oref očekávají pouze jedno jídlo, které se rozpadá v jednom okamžiku. To znamená, že druhé jídlo začne decaying poté, co první jídlo je úplně rozpadlé. AAPS + Zvážený průměr začne okamžitě decaying, když zadáte sacharidy. Pokud je na palubě více než jedno jídlo, minimální rozpad sacharidů se přizpůsobí velikosti jídla a maximálnímu času vstřebání. Minimální vstřebání bude v souladu s tím vyšší ve srovnání s pluginy Oref.
+Když se několik jídel překrývá, je velký rozdíl mezi algoritmy Sensitivita AAPS a vážený průměr na jedné straně a Oref1 na druhé straně.
+
+* Oref1 počítá vždy jen s jedním vstřebávajícím se jídlem: druhé jídlo se začne vstřebávat, až když se první jídlo úplně vstřebá.
+* Sensitivita AAPS a vážený průměr začnou se vstřebáváním hned, jakmile zadáte sacharidy. Pokud je v těle více než jedno jídlo, minimální vstřebávání sacharidů se upraví podle velikosti jídla a maximální doby vstřebávání. Minimální vstřebávání proto bude ve srovnání s Oref1 vyšší.
