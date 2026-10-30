@@ -35,11 +35,6 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 (Update-to-new-version-update-your-repo)=
 ### Update your GitHub repository
 
-```{admonition} WARNING
-:class: warning
-Browser Build is available from AAPS version 3.3.2.1.
-```
-
 [Log into GitHub](https://github.com/login).
 
 1. Select Repositories.
@@ -97,8 +92,13 @@ You have now synchronized (updated) your own copy with the latest release of And
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 
+```{note}
+From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+```
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
+
+(update-browser-build-troubleshooting)=
 
 ## Depanare
 
@@ -106,6 +106,6 @@ If anything goes wrong, don't panic.
 
 Take a breath!
 
-Then see the [troubleshooting tips](#aaps-ci-preparation) if your problem is already documented!
+Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
 
 If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
