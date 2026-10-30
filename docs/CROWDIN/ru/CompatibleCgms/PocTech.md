@@ -1,4 +1,4 @@
-# Для пользователей PocTech CT-100
+# PocTech CT-100
 
 - Установите приложение [PocTech](https://play.google.com/store/apps/details?id=com.poctechcorp.pocct)
-- В [Конфигураторе, Источник СК](#Config-Builder-bg-source) выберите PocTech.
+- Select PocTech App in [**Configuration → BG Source**](#Config-Builder-bg-source).
