@@ -4,16 +4,16 @@
 :depth: 2
 ```
 
-大部分臨時目標的調整，可透過具備網路連線的 Android 手機上的 [**AAPSClient** 應用程式](../RemoteFeatures/RemoteMonitoring.md) 來完成。然而，透過 **AAPSClient** 無法進行注射，但你可以使用 SMS 指令。如果你使用 iPhone 作為追蹤設備，因此無法使用 **AAPSClient** 應用程式，還有額外的 SMS 指令可用。
+Most remote adjustments (temp targets, carbs, profile switches and, once the client is paired, boluses) can be made with the [**AAPSClient** app](../RemoteFeatures/RemoteMonitoring.md) on an Android phone with an internet connection, see [Master ↔ Client control](#client-master-control) (an iPhone version of **AAPSClient** is in development, see [AAPSClient](AapsClient.md)). SMS commands remain an alternative that works without internet, and the only remote option if you use an iPhone as a follower and do not have **AAPSClient** yet.
 
 **SMS 指令非常有用於：**
 1. 日常遠端控制
 
-2. 如果你想遠端注射胰島素
+2. If you want to remotely bolus insulin without a paired **AAPSClient**
 
 3. 在網路訊號不佳的地區，文字訊息能夠傳送，而資料/網路訊號有限。這在前往偏遠地區（例如露營、滑雪）時非常有用。
 
-4. 如果你的其他遠端控制方法（Nightscout/AAPSClient）暫時無法使用
+4. If your other method of remote control (**AAPSClient**) is temporarily not working
 
 ## 安全第一
 
@@ -25,7 +25,7 @@
 
 如果你傳送的遠端指令（如注射或更改設定檔）已執行，AAPS 也會透過簡訊通知你。建議將其設置為至少傳送到兩個不同的手機號碼，以防其中一部接收手機被盜。
 
-**如果你透過 SMS 指令進行注射，必須單獨輸入碳水化合物 (第二條 SMS, AAPSClient, Nightscout...)！** 如果不這樣做，IOB 將顯示正確但 COB 過低，可能導致未進行修正注射，因為 **AAPS** 假設你有過多的活性胰島素。
+**If you bolus through SMS Commands, you must enter carbs separately (second SMS, **AAPSClient**...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
 
 對於敏感指令，必須使用帶有基於時間的一次性密碼的身份驗證器應用程式來增加安全性。
 
@@ -57,6 +57,13 @@
 
 ![圖像](../images/remote-control-08.png)
 
+```{admonition} "App was denied access to SMS"
+:class: tip
+Android can block the **SMS** permission for apps that were not installed from an app store, like **AAPS**. If you see this message when you grant the **SMS** permission, open the phone's **Settings > Apps > AAPS**, tap the **⋮** menu (top right) and select **Allow restricted settings**. Then grant the **SMS** permission again.
+```
+
+![App was denied access to SMS](../images/sms_permission_restricted.png)
+
 ### 日期和時間同步
 
 兩部手機上的時間必須同步。最佳做法是從網路自動設置。時間差可能會導致身份驗證問題。
@@ -69,13 +76,13 @@
 
 ### AAPS 設置
 
-現在檢查完手機的設定後，在**AAPS**應用程式中，前往[組態建置工具 > 一般](../SettingUpAaps/ConfigBuilder.md)以啟用**SMS 通訊模塊**。
+Now that the phone settings have been checked, in the **AAPS** app itself, go to [**Configuration** → **Communication**](../SettingUpAaps/ConfigBuilder.md) and enable the **SMS Communicator** plugin.
 
-前往簡訊通訊的偏好設定。
+Open the **SMS Communicator** settings.
 
-啟用「允許透過 SMS 遠端指令」：
+Enable **Allow remote commands via SMS**. The **Additional mandatory PIN at token end** and **Authenticator setup** options only appear once this is enabled:
 
-![圖像](../images/remote-control-11.png)
+![SMS Communicator settings](../images/sms_communicator_settings.png)
 
 (SMSCommands-authorized-phone-numbers)=
 #### 允許的電話號碼
@@ -86,15 +93,15 @@
 * 法國電話號碼：+33612344567
 * _台灣電話號碼: 09xxxxxxxx_
 
-請注意，依據你所在的位置，電話號碼前的「+」號可能需要或不需要。為了確定這一點，你可以傳送範例簡訊，以顯示在 SMS 通訊標籤中的接收格式。
+請注意，依據你所在的位置，電話號碼前的「+」號可能需要或不需要。 To determine this, send a sample text which will show the received format on the **SMS Communicator** plugin screen (**Configuration** → **Communication** → **SMS Communicator** → **Open plugin**).
 
-如果你有多個手機號碼需要添加，請用分號分隔，並且**號碼之間不得有空格**（這點非常重要！）。選擇「確定」：
+如果你有多個手機號碼需要添加，請用分號分隔，並且**號碼之間不得有空格**（這點非常重要！）。 Select **OK**:
 
-![圖像](../images/remote-control-12.png)
+![允許的電話號碼](../images/sms_allowed_numbers.png)
 
-#### 注射指令間的分鐘數
+#### Remote bolus min distance
 
-- 你可以定義透過 SMS 發送的兩次注射之間的最小間隔時間。
+- You can define the minimum delay (in minutes) between two boluses issued via SMS.
 - 出於安全考慮，你必須添加至少兩個授權手機號碼來編輯此數值。
 
 #### 令牌末尾的額外必需PIN碼
@@ -107,14 +114,17 @@ PIN 碼要求如下：
 * 不得與相同的數字組合（_例如_ 1111 或 1224）相同
 * 不得為連續數字（_例如_ 1234）
 
-![圖像](../images/remote-control-13.png)
+![令牌末尾的額外必需PIN碼](../images/sms_pin.png)
 
 #### 身份驗證器設置
 
-* 遵循螢幕上的逐步說明。
+* Tap **Authenticator setup** and follow the step-by-step instructions on the screen.
 * 在 _照護者的手機_ 上打開你安裝的驗證器應用程式，建立新的連線，並且
-* 使用照護者手機掃描 **AAPS** 提供的 QR Code，當被要求時。
-* 測試來自照護者手機的驗證器應用程式的一次性密碼，然後輸入你的 PIN：
+* Use the caregiver phone to scan the QR code shown under **Scan code to setup AAPS OTP codes**.
+
+![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
+
+* Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
 
 範例：
 * 驗證器應用程式生成的驗證碼為 457051
@@ -123,11 +133,11 @@ PIN 碼要求如下：
 
 如果輸入正確，紅色字體「WRONG PIN」將自動變為綠色「OK」。**你無法按下任何按鈕！** 此過程已完成，輸入代碼後不需要再按「好」按鈕：
 
-![圖像](../images/remote-control-14.png)
+![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
 
 你現在已成功設定 SMS 指令。
 
-如果你想刪除已配置的驗證器，請使用按钮“驗證器設置 > 重設驗證器”。（透過重置身份驗證器，你將使所有已註冊的身份驗證器無效。你需要重新配置它們。）
+Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. （透過重置身份驗證器，你將使所有已註冊的身份驗證器無效。你需要重新配置它們。）
 
 ## 簡訊指令使用
 
@@ -135,7 +145,7 @@ PIN 碼要求如下：
 
 1) 要檢查你是否正確設置了一切，請從照護者手機以 SMS 簡訊輸入 “bg” 測試連線到 **AAPS** 手機。你應該會收到如下的回應：
 
-![圖像](../images/remote-control-15.png)
+![圖像](../images/remote-control-06.png)
 
 如果你沒有收到任何回應，請檢查下方的 [問題排除](#SMSCommands-troubleshooting) 區段。
 
@@ -153,13 +163,13 @@ PIN 碼要求如下：
 
 ### 透過 SMS 指令進行餐時注射
 
-遠端注射胰島素 _只能_ 透過 **SMS 指令** 完成，無法透過 NightScout 或 AAPSClient 執行。然而，碳水化合物可以透過這三種方法中的任何一種報告。無法在一條 SMS 訊息中同時發送碳水化合物和胰島素指令。這些指令必須分開發送，具體如下：
+Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. 這些指令必須分開發送，具體如下：
 
-1) 發送胰島素注射指令（_例如_ 「bolus 2」將指令注射 2 單位的胰島素），透過 SMS 指令相當於在 **AAPS** 中使用「注射」圖示。 2) 發送碳水化合物指令（_例如_「carbs 20」將報告 20 克的碳水化合物）。這相當於在 **AAPS** 中使用「碳水化合物」標籤。
+1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2) 發送碳水化合物指令（_例如_「carbs 20」將報告 20 克的碳水化合物）。 This is equivalent to **Treatments** → **Carbs** in **AAPS**.
 
 為了避免低血糖，最好保守起見，注射 **少於** 按照你的碳水比率所需的胰島素，因為你沒有考慮目前的血糖數值或血糖趨勢。
 
-**發送這些指令的順序很重要**。如果你透過任何方式報告大量碳水化合物，並啟用了 SMB（超小注射），**AAPS** 可能會立即透過部分胰島素注射作出回應。因此，如果你在報告碳水化合物後嘗試發送胰島素注射指令，你可能會遇到延遲並顯示「注射進行中」的訊息，你需要檢查已經執行的 SMB 注射。或者，如果你沒有意識到正在進行 SMB 注射，並且你後續的注射也成功，則可能會為這頓飯過多注射胰島素。因此，如果遠端控制餐時注射，請務必在報告碳水化合物 _之前_ 發送胰島素注射指令。如果你願意，你可以將 Nightscout 與**AAPSClient**結合使用簡訊指令。碳水化合物可從 Nightscout 傳送而無需任何驗證（請參見下方指示小節），因此比簡訊指令更迅速。
+**發送這些指令的順序很重要**。如果你透過任何方式報告大量碳水化合物，並啟用了 SMB（超小注射），**AAPS** 可能會立即透過部分胰島素注射作出回應。因此，如果你在報告碳水化合物後嘗試發送胰島素注射指令，你可能會遇到延遲並顯示「注射進行中」的訊息，你需要檢查已經執行的 SMB 注射。或者，如果你沒有意識到正在進行 SMB 注射，並且你後續的注射也成功，則可能會為這頓飯過多注射胰島素。因此，如果遠端控制餐時注射，請務必在報告碳水化合物 _之前_ 發送胰島素注射指令。 If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
 ## 指令
@@ -213,6 +223,8 @@ PIN 碼要求如下：
 | BASAL 30% 50      | 是  | 開始基礎注射 30% 持續 50 分鐘    |
 | BASAL STOP/CANCEL | 是  | 停止臨時基礎注射               |
 
+Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
+
 
 ### 循環
 
@@ -220,7 +232,6 @@ PIN 碼要求如下：
 | ----------------- | -- | ------------------------------------------------------------------------------------------------------------- |
 | LOOP STATUS       | 否  | 反應依賴於實際狀態：<br/> - *當循環關閉時，循環已停用*或 LGS<br/> - *當循環開啟或閉合時，循環已啟用*<br/> - *暫停 (10 分鐘)*當循環被中斷或暫停 |
 | LOOP STOP/DISABLE | 是  | 幫浦將恢復到預設的基礎注射速率。<br/>*循環已被停用*                                                                           |
-| LOOP START/ENABLE | 是  | *循環已啟用*                                                                                                       |
 | LOOP SUSPEND 20   | 是  | *循環暫停 20 分鐘*                                                                                                  |
 | LOOP RESUME       | 是  | *循環已恢復*                                                                                                       |
 | LOOP CLOSED       | 是  | *當前循環模式：閉合循環*                                                                                                 |
@@ -230,14 +241,14 @@ PIN 碼要求如下：
 
 在最後一次注射指令或遠端指令後 15 分鐘內（此值僅在添加兩個手機號碼時可編輯）不允許進行遠端注射！在此情況下，回應為 *遠端注射無法使用。稍後再試。* 此回應也會在幫浦當前正在進行注射時發送。
 
-| 指令                   | 驗證 | 功能 & *回應*                                                                          |
-| -------------------- | -- | ---------------------------------------------------------------------------------- |
-| BOLUS 1.2            | 是  |                                                                                    |
-| BOLUS 0.60 MEAL      | 是  | 輸送指定的 0.60U 注射<br/>**並** 設定 [即將用餐臨時目標](#TempTargets-eating-soon-temp-target) |
-| CARBS 5              | 是  | 輸入 5g，無需注射                                                                         |
-| CARBS 5 17:35/5:35PM | 是  | 在 17:35 輸入 5g。<br/>可接受的時間格式依賴於<br/>手機上的時間設定 (12 小時/24 小時)。             |
-| EXTENDED 2 120       | 是  | 開始延長注射 2U，持續 120 分鐘。<br/>僅限於 [相容的幫浦](#screens-action-tab)。                   |
-| EXTENDED STOP/CANCEL | 是  | 停止延長注射                                                                             |
+| 指令                   | 驗證 | 功能 & *回應*                                                                                                                                                         |
+| -------------------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BOLUS 1.2            | 是  |                                                                                                                                                                   |
+| BOLUS 0.60 MEAL      | 是  | 輸送指定的 0.60U 注射<br/>**並** 設定 [即將用餐臨時目標](#TempTargets-eating-soon-temp-target)                                                                                |
+| CARBS 5              | 是  | 輸入 5g，無需注射                                                                                                                                                        |
+| CARBS 5 17:35/5:35PM | 是  | 在 17:35 輸入 5g。<br/>可接受的時間格式依賴於<br/>手機上的時間設定 (12 小時/24 小時)。                                                                                            |
+| EXTENDED 2 120       | 是  | To start extended bolus 2U for 120 min.<br/>Only for [compatible pumps](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only). |
+| EXTENDED STOP/CANCEL | 是  | 停止延長注射                                                                                                                                                            |
 
 ### 設定檔
 
@@ -247,6 +258,8 @@ PIN 碼要求如下：
 | PROFILE LIST   | 否  | 當前 **AAPS** 中的個人設定列表，例如：<br/>1. 個人設定1<br/> 2. 個人設定2         |
 | PROFILE 1      | 是  | 切換到列表中的個人設定 1。<br/>使用由 **個人設定列表** 返回的數字，<br/>而不是你儲存的個人設定名稱。 |
 | PROFILE 2 30   | 是  | 切換到個人設定2 30%                                                            |
+
+The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
 
 ### Temporary Targets
 
@@ -259,14 +272,12 @@ PIN 碼要求如下：
 (SMSCommands-other)=
 ### 其他
 
-| 指令                 | 驗證 | 功能 & *回應*                                                                                       |
-| ------------------ | -- | ----------------------------------------------------------------------------------------------- |
-| TREATMENTS REFRESH | 否  | 從 NS 重新整理治療                                                                                     |
-| AAPSCLIENT 重啟      | 否  | 如果你注意到與 Nightscout 或 **AAPSClient** 的通訊問題，這將很有幫助。                                               |
-| 重啟                 | 否  | 重啟 AAPS。如果你常遇到重啟就能解決的話，這會很有幫助。                                                                  |
-| SMS DISABLE/STOP   | 否  | 要停用 SMS 遠端服務，請回覆代碼 Any。<br/>請注意，你可以直接從 **AAPS** 主智慧型手機重新啟用該服務。                            |
-| HELP               | 否  | 返回所有可查詢的功能：<br/>BG、循環、治療等。<br/>發送進一步的 ***協助 ***功能****** 命令以列出<br/>此區域內所有可用選項。 |
-| HELP BOLUS         |    | *注射 1.2<br/>注射 1.2 餐前*                                                                    |
+| 指令               | 驗證 | 功能 & *回應*                                                                                                                                                                                                                                                              |
+| ---------------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 重啟               | 是  | 重啟 AAPS。如果你常遇到重啟就能解決的話，這會很有幫助。                                                                                                                                                                                                                                         |
+| SMS DISABLE/STOP | 是  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                          |
+| HELP             | 否  | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
+| HELP BOLUS       |    | *注射 1.2<br/>注射 1.2 餐前*                                                                                                                                                                                                                                           |
 
 (SMSCommands-troubleshooting)=
 ## 疑難排解與常見問題
@@ -278,13 +289,13 @@ PIN 碼要求如下：
 
 ### 我們 _不能_ 使用 SMS 命令做什麼？
 
-1)  **你無法設置 _臨時_ 個人設定開關**（例如，設置「運動個人設定」持續 60 分鐘），雖然你可以永久切換至「運動個人設定」。臨時檔案切換可以透過 Nightscout 或 AAPSClient 進行設置。
+1)  **你無法設置 _臨時_ 個人設定開關**（例如，設置「運動個人設定」持續 60 分鐘），雖然你可以永久切換至「運動個人設定」。 Temporary profile switches can instead be set through **AAPSClient**.
 
 2)  **你無法取消自動化** 或 **設置用戶自定義目標**，但有些近似解決方案： 比如，假設正常的個人設定目標是 5.5。你在 AAPS 中設置了自動化，每天下午 2:30 至 3:30 間將目標設為 7.0，以便學校的運動課程使用，並且自動化條件是「不存在臨時目標」。這周，你收到通知說運動課程取消，改為比薩餅聚餐，但你的孩子已經在學校，身上帶著 **AAPS** 手機。如果自動化開始的高臨時目標為 7.0，而你取消它（在 **AAPS** 手機或遠端），則自動化的條件依然滿足，而 **AAPS** 將立即在一分鐘後重新設置高目標。
 
-**如果你可以查看 AAPS 手機**，你可以取消或修改自動化，或者，如果你不想這樣做，你可以在動作標籤中設置一個新的 5.6 的臨時目標 60 分鐘，或按下目標標籤來設置。這樣可以防止自動化設置 7.0 的高目標。
+**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. 這樣可以防止自動化設置 7.0 的高目標。
 
-**如果你無法查看 AAPS 手機**，可以使用 SMS 指令作為大致解決方案：例如，使用指令「target meal」設置 45 分鐘的 5.0 目標（其他預設目標為 8.0 用於運動或低血糖，見表）。然而，使用 SMS 指令無法指定 _特定_ 的目標值（例如 60 分鐘的 5.6），這需要使用 **AAPSClient** 或 Nightscout。
+**如果你無法查看 AAPS 手機**，可以使用 SMS 指令作為大致解決方案：例如，使用指令「target meal」設置 45 分鐘的 5.0 目標（其他預設目標為 8.0 用於運動或低血糖，見表）。 However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
 
 ### 如果我改變對我剛發送的命令的想法，會發生什麼？
 
@@ -294,7 +305,7 @@ PIN 碼要求如下：
 
 可能是以下原因之一：
 
-1) 訊息未到達手機（網絡問題）。 2) **AAPS** 還在處理請求（_例如_ 注射，根據注射速率，可能需要一些時間來執行）。 3)  當命令接收時， **AAPS** 手機與幫浦的藍牙連接不佳，命令執行失敗（這通常會在 **AAPS** 手機上產生警報）。
+1) 訊息未到達手機（網絡問題）。 2) **AAPS** 還在處理請求（_例如_ 注射，根據注射速率，可能需要一些時間來執行）。 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
 
 ### 短信命令完全沒有回覆
 
@@ -329,7 +340,7 @@ PIN 碼要求如下：
 
 ### 多條簡訊
 
-如果你重複收到相同的訊息（例如設定檔切換），你可能無意間與其他應用程式建立了循環狀態。例如可能是 xDrip+。如果是這樣，請確保 xDrip+（或任何其他應用程式）沒有將治療資料上傳到 NightScout。
+如果你重複收到相同的訊息（例如設定檔切換），你可能無意間與其他應用程式建立了循環狀態。 This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
 
 如果其他應用程式安裝在多部手機上，請確保在所有手機上停用上傳功能。
 
