@@ -8,7 +8,7 @@
 :class: dropdown
 
 专用的Google drive空间意味着你不会因“导出偏好设置”而占用你的个人Google drive限额。
--**AAPS**（及支持的应用，如xDrip+、BYODA等）的每个版本都将存储在一个与计算机硬件无关的独立位置。如果你的电脑或手机被盗/丢失/损坏，你仍然可以访问。
+- Each version of **AAPS** (and supporting apps like xDrip, BYODA, etc) will be stored in one single place which is independent of your computer hardware. 如果你的电脑或手机被盗/丢失/损坏，你仍然可以访问。
 -通过统一设置，它将简化具有相似文件夹结构的用户之间的在线支持。
 - 根据设置（见下文），您将在社区内拥有一个作为别名的独立身份进行通信，这可以保护您的隐私。 
 - 在使用AAPS和需要成人帐户的相关功能时，患有1型糖尿病（T1D）的儿童可以作为未成年人保留他们自己的“日常”电子邮件帐户。
@@ -23,7 +23,7 @@
 
 要求：
 
-* 你拥有一台Windows电脑（Windows 10或更高版本）和一部Android手机（Android 9或更高版本），它们将托管AAPS应用。这些设备都要安装最新的安全更新，可以访问互联网并具有管理员权限，因为某些步骤需要下载和安装程序。
+* You have a Windows’ PC (Windows 10 or newer) and an Android phone (Android 12 or newer) which will host the **AAPS** app. 这些设备都要安装最新的安全更新，可以访问互联网并具有管理员权限，因为某些步骤需要下载和安装程序。
 * Android手机已经使用你的个人“日常”电子邮件地址（如Gmail账户）进行了设置。
 
 ```{admonition} Things to consider when setting up your new account
@@ -37,9 +37,9 @@
 ```
 
 
-```{admonition}  Video Walkthrough! 
-:class: Note
-点击<a href="https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link">此处</a>观看如何设置专用谷歌账户的视频演示。
+```{admonition} Video Walkthrough!
+:class: note
+Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
 ```
 
  视频中概述的步骤如下：
