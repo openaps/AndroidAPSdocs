@@ -93,7 +93,7 @@ In [step 3](#aaps-builder-step3) of the setup page:
 
 Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
 
-Your fork's Google Drive access can't be copied either. To also save the builds of AAPS Builder in Google Drive, do [step 7](#aaps-builder-google-drive). You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+To also save the builds of AAPS Builder in Google Drive, do [step 7](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
 
 ## Open the setup page
 
@@ -123,7 +123,13 @@ This step creates an empty private repository in your GitHub account. Only you c
    **Already created an empty private repository yourself?** Type its exact name here, don't tap **Create my private repository**, and go to [step 2](#aaps-builder-step2).
    ```
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`.
+   ```{note}
+   **Already have an AAPS Builder repository** (from an earlier version of the setup page or from the old template)? Don't create a new one: type its exact name, skip **Create my private repository**, and update the workflow as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 3.
+
+   Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+   ```
+
+4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
 
 5. Tap **Create my private repository**.
 
@@ -332,17 +338,17 @@ From September 2026, Google's [Android developer verification](#android-develope
 
 You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
 
-It needs one more secret, `GDRIVE_OAUTH2`. You get its value with the preparation file used by the other browser build methods:
+It needs one more secret, `GDRIVE_OAUTH2`. Step 7 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
 
-1. On a **computer**, download the preparation file and open it as described in [Option 1 – Computer](BrowserBuildO1Computer.md). Skip the keystore part: you already have your key.
-2. Follow [Step 3 – Authorize Google Drive](#aaps-ci-google-drive-auth) to get the `GDRIVE_OAUTH2` value.
-3. On the setup page, step 7 opens your secrets page.
-
-   ![Setup page step 7](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
-
-   Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Paste your `GDRIVE_OAUTH2` value into the big **Secret** box and tap **Add secret**.
+1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
+2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
+3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, select the whole address (it starts with `http://127.0.0.1:47913/`) and copy it.
+4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
+5. Tap **Open the secrets page**. Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
 
 From the next build, the APKs are also saved in Google Drive.
+
+Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
 
 Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
 
