@@ -13,6 +13,15 @@ Următoarele modele și combinații de firmware sunt compatibile:
 
 Puteți afla cum să verificați firmware-ul de pe pompele de la [documentația OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) sau [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
+    {contents} Table of contents
+    :depth: 1
+    :local: true
+
+## Capacități pompă cu AAPS
+
+* Requires a RileyLink-compatible device to communicate with **AAPS**.
+* Automatic DST and timezone handling.
+
 ## Cerințe hardware și software
 
 - **Telefon:** Driverul Medtronic ar trebui să funcționeze cu orice telefon Android care acceptă conexiuni Bluetooth. **IMPORTANT: Implementările Bluetooth ale producătorilor de telefoane pot varia, astfel că modul în care se comportă fiecare model de telefon poate fi diferit. De exemplu, unele telefoane vor gestiona activarea/dezactivarea Bluetooth în mod diferit. Acest lucru poate avea impact asupra experienței utilizatorului când AAPS trebuie să se reconecteze la dispozitivul de tip RileyLink.**
@@ -44,13 +53,25 @@ Următoarele setări trebuie să fie configurate în pompă pentru ca AAPS să t
 - Există două modalități de a configura pompa Medtronic în AAPS:
 
 1. Utilizarea asistentului de configurare ca parte a unei noi instalări
-2. Selectând pictograma roată dințată (sau: iconița setări) de lângă selecția Medtronic, în opțiunea de selectare a pompei din Configurator
+2. In **Configuration** > **Pump**, by selecting **Medtronic**
+    
+    ![Configuration > Pump with the Medtronic plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+    
+    Once it is selected, the **Medtronic** card shows two buttons, **Settings** and **Open plugin**:
+    
+    ![The Medtronic plugin selected in Configuration > Pump](../images/v4/Pumps/medtronic_enabled.png)
+    
+    **Settings** opens the settings of the Medtronic driver:
+    
+    ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
+    
+    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
+    
+    ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
 
 Când configurați pompa Medtronic cu ajutorul asistentului de configurare, este posibil să nu puteți finaliza configurarea din cauza problemelor Bluetooth (spre exemplu nu vă puteți conecta cu succes la pompă). Dacă se întâmplă acest lucru, trebuie să selectați opțiunea pompei virtuale pentru a finaliza configurația și pentru a permite depanarea ulterioară folosind opțiunea 2.
 
-![Setări Medtronic](../images/Medtronic01a.png)
-
-În timpul configurării AAPS pentru a lucra cu pompa Medtronic trebuie să setați următoarele elemente: (vedeți imaginea de mai sus)
+While setting up AAPS to work with your medtronic pump you need to set the following items in **Settings** (see the settings picture above):
 
 - **Numărul de serie al pompei**: afișat pe spatele pompei și începe cu SN. Ar trebui să introduceți doar cele 6 numere afișate fără nici un caracter alfabetic (de exemplu 123456).
 - **Tip pompă**: Pompa model pe care o folosiți (de exemplu 522). 
@@ -68,21 +89,29 @@ Când configurați pompa Medtronic cu ajutorul asistentului de configurare, este
     - Litiu (Afișare extinsă)
     - NiZn (Afișare extinsă)
     - NiMH (Afișare extinsă)
-- **Depanare bolus/tratamente**: Selectați Pornit sau Oprit în funcție de cerințe.
+- **Use Scanning**: Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. Acest lucru ar trebui să îmbunătățească fiabilitatea conexiunii dumneavoastră la dispozitiv.
 
-- **Configurare RileyLink**: Această opțiune vă permite să găsiți și să asociați dispozitivul compatibil RileyLink. Selectarea vă va arăta orice dispozitive compatibile RileyLink din apropiere și puterea semnalului.
-- **Utilizați scanarea** Activați scanarea Bluetooth înainte de a vă conecta cu dispozitivele compatibile RileyLink. Acest lucru ar trebui să îmbunătățească fiabilitatea conexiunii dumneavoastră la dispozitiv.
-- **Afișați nivelul bateriei raportat de OrangeLink/EmaLink/DiaLink** Această funcție este disponibilă doar pe dispozitivele mai noi, cum ar fi EmaLink sau OrangeLink. Valorile vor fi afișate în fila Medtronic din AndroidAPS. 
-- **Setați bazale temporare neutre** În mod implicit pompele Medtronic luminează în timpul orei când o rată bazală temporară este activă. Activarea acestei opțiuni poate ajuta la reducerea numărului de semnale sonore auzite prin întreruperea unei bazale temporare la schimbarea orei pentru a suprima semnalul sonor.
+- **Show battery level reported by OrangeLink/EmaLink/DiaLink**: This feature is only supported on newer link devices such as the EmaLink or OrangeLink. The value is shown as **RileyLink Battery** on the Medtronic pump screen.
+- **Set neutral temp basals**: By default Medtronic pumps beep on the hour when a temporary basal rate is active. Activarea acestei opțiuni poate ajuta la reducerea numărului de semnale sonore auzite prin întreruperea unei bazale temporare la schimbarea orei pentru a suprima semnalul sonor.
 
-## FILA MEDTRONIC (MDT)
+(pairing-your-rileylink-compatible-device)=
 
-![Fila MDT](../images/Medtronic02.png) Când AAPS este configurat pentru a utiliza o pompă Medtronic o filă MDT va fi afișată în lista de file din partea de sus a ecranului. Această filă afișează informațiile curente despre starea pompei împreună cu unele acțiuni specifice Medtronic.
+### Pairing your RileyLink compatible device
+
+Your RileyLink compatible device is paired from the Medtronic pump screen, not from the Bluetooth menu of your phone:
+
+- Open the pump screen (**Manage** > **Pump**, or **Open plugin** on the Medtronic card in **Configuration** > **Pump**).
+- Tap **Pair RileyLink**. **AAPS** scans for nearby RileyLink compatible devices.
+- Tap your device in the list. When **RileyLink paired successfully** is shown, tap **OK**.
+
+## Medtronic pump screen
+
+To open the Medtronic pump screen, go to **Manage** > **Pump**. The pump screen displays the current pump status information along with some Medtronic specific actions (see the pump screen picture above).
 
 - **Starea RileyLink**: Starea curentă a conexiunii dintre telefon și dispozitivul compatibil RileyLink. Ar trebui să apară permanent drept conectat. Orice altă stare poate necesita intervenția utilizatorului. 
-- **Bateria RileyLink**: Nivelul actual al bateriei pentru dispozitivul dumneavoastră EmaLink sau OrangeLink. În funcție de selectarea "Afișați nivelul bateriei raportat de dispozitivul OrangeLink/EmaLink/DiaLink" din meniul de configurare al pompei Medtronic.
+- **Bateria RileyLink**: Nivelul actual al bateriei pentru dispozitivul dumneavoastră EmaLink sau OrangeLink. Only shown if **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled in the Medtronic settings.
 - **Starea pompei**: Starea curentă a conexiunii pompei. Deoarece pompa nu va fi conectată în mod constant, aceasta va arăta în general pictograma de somn. Există o serie de posibile alte stări, inclusiv "Trezire" când AAPS încearcă să emită o comandă sau alte posibile comenzi de pompă cum ar fi "Obțineți timpul", "Setați o rată bazală temporară", șamd.
-- **Baterie**: Afișați starea bateriei pe baza valorii alese pentru Tipul bateriei (Vizualizare Energie) în meniul de configurare al pompei Medtronic. 
+- **Battery**: Shows battery status based on the value chosen for **Battery Type (Power View)** in the Medtronic settings.
 - **Ultima conexiune**: Cu cât timp în urmă a avut loc ultima conexiune reușită la pompă.
 - **Ultimul Bolus**: În urmă cu cât timp a fost administrat ultimul bolus cu succes.
 - **Rata bazală de bază**: Aceasta este rata bazală de bază care rulează în pompă la această oră în profilul activ.
@@ -90,19 +119,24 @@ Când configurați pompa Medtronic cu ajutorul asistentului de configurare, este
 - **Rezervor**: Cât insulină este în rezervor (actualizată cel puțin o dată pe oră).
 - **Erori**: Șirul de eroare în cazul în care există probleme (în principal arată dacă există eroare în configurație).
 
-În partea de jos a ecranului sunt trei butoane:
+At the bottom of the screen there are these buttons:
 
 - **Reîmprospătați** este pentru reîmprospătarea stării curente a pompei. Acest lucru ar trebui să fie utilizat numai în cazul în care conexiunea a fost pierdută pentru o perioadă lungă de timp, deoarece este necesară o reîmprospătare completă a datelor (preluare istoric, obțineți/setați ora, obțineți profilul, obțineți starea bateriei, șamd).
-- **Istoric pompă**: Afișați istoricul pompei (vedeți [mai jos](#MedtronicPump-pump-history))
-- **Statistici RL**: Arată Statisticile RL (vedeți [mai jos](#MedtronicPump-rl-status-rileylink-status))
+- **Pair RileyLink**: Finds and pairs your RileyLink compatible device (see [above](#pairing-your-rileylink-compatible-device)).
+- **Pump history**: Shows pump history (see [below](#MedtronicPump-pump-history)).
+- **RL Stats**: Shows RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status)).
+- **Wake and Tune Up** and **Reset RileyLink**: See [Actions](#medtronic-actions) below.
+- **Clear Bolus Block**: Only shown for a short time after a bolus, while **AAPS** waits for the pump to finish delivering it. Tapping it ends this wait.
 
 (MedtronicPump-pump-history)=
 
 ## Istoric pompă
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Pump history screen with its filter buttons](../images/Medtronic03.png)
 
-Istoricul pompei este preluat la fiecare 5 minute și păstrat local. Se stochează doar istoricul ultimelor 24 de ore. Permite o modalitate convenabilă de a vedea comportamentul pompei în cazul în care acest lucru este necesar. Singurele elemente stocate sunt cele relevante pentru AAPS și nu vor include o funcție de configurare care nu are relevanță.
+Istoricul pompei este preluat la fiecare 5 minute și păstrat local. Se stochează doar istoricul ultimelor 24 de ore. This allows for a convenient way to see pump behavior should that be required. The only items stored are those relevant to AAPS and will not include a configuration function that has no relevance.
+
+Tap **Pump history** on the pump screen to open it. By default **All** is selected. Tap one of the filter buttons at the top (for example **Boluses**, **Basals** or **Alarms**) to show only one type of entry.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
@@ -115,12 +149,14 @@ Dialogul de stare RL are două file:
 - **Setări**: Afișați setări despre dispozitivul compatibil RileyLink: Adresa configurată, Dispozitiv conectat, Starea conexiunii, Eroare conexiune și firmware RileyLink. Tipul dispozitivului este întotdeauna pompa Medtronic, Modelul ar fi modelul dumneavoastră, Numărul de serie este numărul de serie configurat, Frecvența Pompei indică frecvența pe care o utilizați, Ultima Frecvență fiind ultima frecvență utilizată.
 - **Istoric**: Afișați istoricul comunicațiilor, elementele cu RileyLink arată modificările de stare pentru RileyLink și indicațiile Medtronic care comenzi au fost trimise la pompă.
 
+(medtronic-actions)=
+
 ## Acțiuni
 
-Când driverul Medtronic este utilizat, două acțiuni suplimentare sunt adăugate în lista de acțiuni:
+When the Medtronic driver is used, two additional actions are available on the pump screen (**Manage** > **Pump**):
 
-- **Treziți și reinițializați** - În cazul în care AAPS nu s-a conectat la pompă pentru o perioadă îndelungată (ar trebui să se conecteze la fiecare 5 minute), puteți forța o reinițializare. Se va încerca contactarea pompei prin căutarea pe toate frecvențele radio posibile folosite de pompă. În cazul în care o conexiune reușită are loc, frecvența care a reușit va fi setată ca implicită.
-- **Resetați configurarea RileyLink** - Dacă resetați dispozitivul compatibil RileyLink, ar putea fi necesar să folosiți această acțiune astfel încât dispozitivul să poată fi reconfigurat (setare de frecvență, tip de frecvență setată, codare configurată).
+- **Treziți și reinițializați** - În cazul în care AAPS nu s-a conectat la pompă pentru o perioadă îndelungată (ar trebui să se conecteze la fiecare 5 minute), puteți forța o reinițializare. Se va încerca contactarea pompei prin căutarea pe toate frecvențele radio posibile folosite de pompă. În cazul în care o conexiune reușită are loc, frecvența care a reușit va fi setată ca implicită. While the tune-up runs, the RileyLink status on the pump screen shows it. If a tune-up fails (for example because the pump was out of range), **AAPS** tries again by itself about every 10 minutes.
+- **Reset RileyLink** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
 
 ## Note importante
 
@@ -148,9 +184,9 @@ Trebuie să evitați bolusarea manuală sau configurarea ratelor bazale temporar
 
 AAPS va detecta automat modificările de fus orar și va actualiza pompa atunci când telefonul se schimbă la noua oră.
 
-Călătoritul spre est înseamnă că vei adăuga ore la ora curentă (spre exemplu de la GMT+0 la GMT+2) nu vor rezulta probleme deoarece nu va fi nicio suprapunere (spre exemplu nu va fi posibil să ai aceeași oră de două ori). Totuși, călătoria înspre vest poate duce la probleme, deoarece vă întoarceți de fapt în timp, ceea ce poate duce la date IOB incorecte.
+Traveling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2), which will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Traveling west, however, can result in issues as you are effectively going back in time, which can result in incorrect IOB data.
 
-Problemele observate în timpul călătoriei spre vest sunt cunoscute de dezvoltatori și lucrul la o posibilă soluție este în curs de desfășurare. Vedeți https://github.com/andyrozman/RileyLinkAAPS/issues/145 pentru mai multe detalii. Pentru moment, vă rugăm să rețineți că această problemă poate apărea și să monitorizați cu atenție atunci când se schimbă fusele orare.
+The issues seen when traveling west are known to the developers and work on a possible solution is ongoing. Vedeți https://github.com/andyrozman/RileyLinkAAPS/issues/145 pentru mai multe detalii. Pentru moment, vă rugăm să rețineți că această problemă poate apărea și să monitorizați cu atenție atunci când se schimbă fusele orare.
 
 ### Este GNARL este un dispozitiv complet compatibil Rileylink?
 
@@ -168,9 +204,9 @@ Codul GNARL acceptă pe deplin toate funcțiile folosite de driverul Medtronic �
 
 Există o serie de opțiuni pentru încercarea rezolvării problemelor de conectivitate.
 
-- Utilizați butonul "Trezire și Reinițializare" în fila ACT așa cum este detaliat mai sus.
+- Tap **Wake and Tune Up** on the pump screen (**Manage** > **Pump**) as detailed above.
 - Dezactivați Bluetooth de pe telefon, așteptați 10 secunde și apoi activați din nou. Acest lucru va forța dispozitivul RileyLink să se reconecteze la telefon.
-- Resetați dispozitivul RileyLink. Apoi trebuie să utilizați butonul "Resetare Configurare RileyLink" în fila ACT.
+- Resetați dispozitivul RileyLink. You must then tap **Reset RileyLink** on the pump screen (**Manage** > **Pump**).
 - Alți utilizatori consideră că următorii pași sunt eficienți în restabilirea conectivității atunci când alte metode nu au fost: 
     1. Reporniți telefonul
     2. *În timp ce* telefonul repornește reporniți dispozitivul RileyLink
@@ -185,3 +221,22 @@ Pe spatele pompei veți găsi o linie care detaliază numărul modelului dumneav
 - NA - America de Nord (în selecția de frecvențe trebuie să selectați "US & Canada (916 MHz)")
 - CA - Canada (în selecția de frecvențe trebuie să selectați "US & Canada (916 MHz)")
 - WW - Lume (în selectarea frecvenței trebuie să selectați "Worldwide (868 Mhz)")
+
+(MedtronicPump-pump-unreachable)=
+
+### How to fix the "pump unreachable" error
+
+Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
+
+1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
+2. Set **Medtronic Encoding** to **Hardware Encoding**.
+
+## Unde să obțineți ajutor
+
+Development of the Medtronic driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
