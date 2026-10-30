@@ -1,43 +1,42 @@
 # Aktualizace na novou verzi nebo větev (branch)
 
-## Vyrobte si místo stažení
+## Sestavte si aplikaci sami, místo stažení
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** není kvůli předpisům pro zdravotnické prostředky k dispozici ke stažení. Sestavit si aplikaci pro vlastní použití je legální, ale nesmíte dávat kopii jiným! Podrobnosti najdete na stránce [Nejčastější otázky uživatelů APS](../UsefulLinks/FAQ.md).
 
 ## Důležité poznámky
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Do not forget to export your **AAPS'** settings.
+- Jakmile vyjde nová verze **AAPS**, aktualizujte na ni prosím co nejdříve.
+- Když je k dispozici nová verze, zobrazí se přímo v aplikaci **AAPS** informační banner o nové verzi.
+- Nová verze bude v době vydání oznámena také na Facebooku.
+- Po vydání si prosím podrobně přečtěte [Poznámky k vydání](ReleaseNotes.md) a případné dotazy si vyjasněte s komunitou na Facebooku nebo Discordu, než začnete s aktualizací.
+- Nezapomeňte exportovat nastavení **AAPS**.
 
-## Update AAPS with browser build
+## Aktualizace AAPS sestavením v prohlížeči
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+Už jste aplikaci AAPS sestavili v prohlížeči? Postupujte podle návodu pro metodu, kterou jste použili:
 
-- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder** (váš soukromý repozitář, obvykle pojmenovaný `my-aaps`): [Aktualizace AAPS pomocí AAPS Builder](#aaps-builder-updates). Není třeba synchronizovat žádný fork.
+- **Fork a přípravný soubor** (vaše vlastní kopie AndroidAPS): [Aktualizace v prohlížeči (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## Aktualizace AAPS pomocí Android Studia
 
-Follow [these instructions.](./UpdateComputerBuild.md).
+Postupujte podle [tohoto návodu](./UpdateComputerBuild.md).
 
-## Update AAPS with the command-line
+## Aktualizace AAPS z příkazové řádky
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Použijte [stejný návod](../SettingUpAaps/CLIBuild.md) jako při předchozím sestavení AAPS, ale nové změny si stáhněte pomocí git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
 ### Zkontrolujte verzi AAPS na telefonu
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+V [Poznámkách k vydání](../Maintenance/ReleaseNotes.md) zkontrolujte, zda po aktualizaci neplatí nějaké zvláštní pokyny.
 
-After you installed the new apk:
+Po instalaci nového APK:
 
-- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
-- ensure import settings have been actioned;
-- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
-- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
+- verzi **AAPS** v telefonu zkontrolujete tak, že otevřete **nabídku** (☰) vlevo nahoře a potom **O aplikaci** (viz snímek obrazovky níže). Aktuální verzi **AAPS** si můžete zobrazit;
+- ujistěte se, že byl proveden import nastavení; a
+- zkontrolujte prosím nastavení **AAPS** v části **Nastavení** a ověřte, že jsou stále správná.
 
-![Nainstalovaná verze AAPS](../images/Update_VersionCheck.png)
+![Dialog O aplikaci s nainstalovanou verzí AAPS](../images/about_dialog_version.png)
