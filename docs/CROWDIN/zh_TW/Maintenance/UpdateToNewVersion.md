@@ -35,9 +35,8 @@
 
 安裝新的 apk 之後：
 
-- 你可以點選右上角的三點選單，接著按「關於」，在手機上查看 **AAPS'** 版本（如下方螢幕截圖所示）。可以看到目前的 **AAPS'** 版本； 
-- 請確認已完成匯入設定；
-- 在 **NSClient** 底下執行「完整同步」，以確保 **AAPS** 以正確且完整的資料運作；以及
-- 請在 **Preferences**（偏好設定）中檢查你的 **AAPS'** 設定，並確保其仍然正確。
+- you can check the **AAPS'** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). 可以看到目前的 **AAPS'** 版本；
+- ensure import settings have been actioned; and
+- please check your **AAPS'** settings under **Settings** and ensure these remain accurate.
 
-![已安裝的 AAPS 版本](../images/Update_VersionCheck.png)
+![About dialog with the AAPS version installed](../images/about_dialog_version.png)
