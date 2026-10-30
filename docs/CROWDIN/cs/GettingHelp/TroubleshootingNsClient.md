@@ -4,13 +4,11 @@
 
 NSClient je závislý na stabilní komunikaci s Nightscoutem. Nestabilní připojení vede k chybám synchronizace a velké spotřebě dat.
 
-Pokud nepotřebujete sledovat někoho v Nightscoutu, můžete pozastavit NSClienta, budete tak šetřit baterii telefonu. Můžete také nastavit, aby se NSClient připojoval pouze při připojení na Wi-Fi a/nebo v průběhu nabíjení.
+Pokud vás v Nightscoutu nikdo nesleduje, můžete NSClient pozastavit a šetřit tak baterii telefonu. Můžete také nastavit, aby se NSClient připojoval pouze při připojení k Wi-Fi a/nebo během nabíjení.
 
 * Jak zjistit, že je spojení nestabilní?
 
-Běžte do záložky NSClient v AAPS a pozorujte výpisy protokolu (log). Správné chování je, když obdržíte PING zhruba každých 30 sekund a v logu nejsou téměř žádné zprávy o restartu spojení. Pokud vidíte hodně restartů, je se spojením problém.
-
-Since AAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
+Otevřete obrazovku NSClient (**Konfigurace** > **Komunikace** > **NSClientV3** > **Otevřít plugin**) a sledujte **Stav** a log. Se zapnutými websockety by měl stav zůstávat „Připojeno“ a v logu by neměly být skoro žádné zprávy o opětovném připojení. Pokud vidíte hodně opětovných připojení, je se spojením problém.
 
 * Restart
 
@@ -22,7 +20,7 @@ Pokud máte Nightscout hostovaný jinde, postupujte dle dokumentace k vašemu ho
 
 * Problémy s telefonem
 
-Android může váš telefon přepínat do režimu spánku. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android může váš telefon přepínat do režimu spánku. Zkontrolujte, zda má AAPS ve vašem telefonu v nastavení napájení výjimku, aby mohla stále běžet na pozadí.
 
 Odzkoušejte NSClient znovu na místě, kde budete mít silný signál.
 
@@ -34,12 +32,12 @@ Pokud máte Nightscout hostovaný na Azure, tak spoustě lidí pomohl při probl
 
 Problémy s připojením do Azure lze také vyřešit nastavením HTTP protokolu na verzi 2.0 a zapnutím Websockets v Aplikačním nastavení
 
-* No BG reading from Nightscout
+* Žádné hodnoty glykémie z Nightscoutu
 
-If AAPS connects to Nightscout correctly but does BG displays as N/A. Go to NSCLIENT tab, press the 3 dot menu top right, Click NSClient Preferences -> Synchronization turn on "Receive/backfill CGM data".
+Pokud se **AAPS** k Nightscoutu připojuje správně, ale glykémie se zobrazuje jako N/A: v [nastavení NSClientV3](#Preferences-nsclient) otevřete **Synchronizace** a zapněte **Přijímat data CGM z NS**. Tato možnost je skrytá, když je zapnuté ovládání klienta ([zabezpečený režim](#client-master-control-hardened-mode)); v takovém případě zkontrolujte, že je v **Konfigurace** → **Zdroj glykémie** vybrána **Glykémie z NS**.
 
 * Pokud se vám stále zobrazuje chyba...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Zkontrolujte velikost své databáze v MongoDB (nebo pomocí pluginu pro velikost databáze v Nightscoutu). Pokud v MongoDB používáte bezplatnou úroveň (free tier), 496 MB znamená, že je databáze plná a je potřeba ji vyčistit. [Postupujte podle těchto pokynů Nightscoutu pro kontrolu velikosti databáze a odstranění dat](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Než data z databáze smažete, zvažte, zda (pokud jste to ještě neudělali) nedarovat svá data z AAPS projektu Open Humans (pro výzkum). Návod najdete na stránce [Open Humans Uploader](../SupportingAaps/OpenHumans.md).
