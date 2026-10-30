@@ -15,7 +15,7 @@
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 ### Export your settings
 
@@ -29,11 +29,6 @@ The minimal version required is described in the [Building Instructions](#Buildi
 
 (Update-to-new-version-update-your-local-copy)=
 ### Update your local copy
-
-```{admonition} WARNING
-:class: warning
-If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../SettingUpAaps/BuildingAaps.md), as this guide will not work for you!
-```
 
 * 在 Android Studio 中打开现有的 AAPS 项目。可能需要选择您的项目。（双击）AAPS项目。
 
@@ -87,9 +82,11 @@ Check in the [Building Instructions](#Building-APK-recommended-specification-of-
 若您使用 Android Studio 中已有的密钥库完成构建，则无需删除手机上的现有应用。安装APK时，按照提示安装更新。对于其他场景，例如在Android Studio中为您的签名APK建立新的密钥库，您需要在安装APK之前删除旧的应用程序。**确保导出您的设置！**
 ```
 
-具体操作请参考 [传输与安装 AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md) 说明。
+See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
 
 Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+
+(update-computer-build-troubleshooting)=
 
 ## 故障排除
 
@@ -97,6 +94,6 @@ Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
 
 深呼吸！
 
-若您的问题已有记录，请参考 [Android Studio 故障排除](../GettingHelp/TroubleshootingAndroidStudio) 页面！
+Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) if your problem is already documented!
 
 If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
