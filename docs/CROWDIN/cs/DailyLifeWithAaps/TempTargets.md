@@ -2,190 +2,235 @@
 
 ## Dočasné cíle a jejich nastavení
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**Dočasný cíl** (zkráceně **DC**) je funkce **AAPS**, která uživateli umožňuje změnit [cílový rozsah **glykémie**](#profile-glucose-targets) pro plánované činnosti. Toho **AAPS** dosahuje tím, že upravuje množství inzulínu, které uživatel dostává.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Cílová glykémie, zvláště když je jen krátkodobá (trvá méně než 4 hodiny), nemusí být *skutečná hodnota*, které chcete nebo očekáváte, že vaše glykémie dosáhne. Je to spíše dobrý způsob, jak říct **AAPS**, aby byl více nebo méně agresivní, a přitom udržel vaši glykémii v rozsahu.
 
-Temporary targets can be defined within those boundaries :
+Dočasné cíle lze nastavit v těchto mezích:
 
-|         | Dočasný cíl            |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/l or 72 mg/dL   |
-| Maximum | 15 mmol/l or 225 mg/dL |
+|         | Dočasný cíl              |
+| ------- | ------------------------ |
+| Minimum | 4 mmol/l nebo 72 mg/dl   |
+| Maximum | 10 mmol/l nebo 180 mg/dl |
 
-**AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
+**AAPS** má tři vestavěné předvolby **dočasného cíle**: pro cvičení (**Aktivita**), pro jídlo (**Před jídlem**) a pro předpovídanou hypoglykémii (**Hypoglykémie**). Najdete je na obrazovce **Dočasný cíl** (**Spravovat** → **Dočasný cíl**). Tuto obrazovku otevřete také jednoduše klepnutím na **štítek cíle** na hlavní obrazovce.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Uživatelé by měli mít realistická očekávání, čeho lze dosáhnout, když v **AAPS** zvolí **dočasný cíl**. Zda se podaří dosáhnout požadované cílové **glykémie**, závisí na mnoha faktorech, například: na spolehlivosti nastavení **AAPS** uživatele, celkové kontrole **glykémie**, **IOB**, citlivosti na inzulín, inzulínové rezistenci, intenzitě zátěže při cvičení a podobně.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Dosažení požadované cílové **glykémie** pomocí **dočasného cíle** může trvat přibližně 30 minut nebo déle. **AAPS** nemůže dosáhnout cílové **glykémie** okamžitě a uživatelé by na to měli myslet, když volí **dočasný cíl**.
 
-The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+Následující části shrnují vlastnosti **dočasného cíle – Aktivita**, **dočasného cíle – Před jídlem** a **dočasného cíle – Hypoglykémie**. Uvedené hodnoty jsou výchozí hodnoty z instalace – každou předvolbu si můžete [upravit](#TempTargets-change-preset-defaults) podle svých potřeb.
 
-### TT - Activity
+### DC - Aktivita
 
-![TT Activity](../images/TempTarget2.png)
+![DC Aktivita](../images/TempTarget2.png)
 
-**BG Target (depending on users' settings)**
+**Cílová glykémie (výchozí předvolba, lze upravit)**
 
-AAPS will aim to reach 8mmol/l or 144mg/dl for 40 minutes
+AAPS se bude snažit dosáhnout 140 mg/dl nebo 7,8 mmol/l po dobu 1 h 30 min
 
-**Other considerations users may wish to factor in when selecting**:
+**Další věci, které mohou uživatelé při volbě zvážit**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+Podle hodnoty **glykémie** **AAPS** „sníží“ dávkování inzulínu, aby dosáhl cílové **glykémie**. Pokud cílová **glykémie** není v rozsahu (tj. je nad cílovou **glykémií** zvolenou v **profilu** uživatele), **AAPS** může bazál ponechat zapnutý.
 
-In closed loop mode, **SMB**:
+V režimu uzavřené smyčky **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *mohou být* vypnuty (více níže); a/nebo
+- bazál může být zapnut, pokud je **AAPS** v záporném **IOB**, nebo <0.
 
-Users may also wish to consider:
+Uživatelé mohou také zvážit:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG **post exercise.
+- *zvolení* tohoto **DC** 1–2 hodiny před plánovaným cvičením, aby bylo IOB nižší (správné načasování tohoto DC se u každého liší); a
+- *zvolení* dočasného profilu (snížení) po dobu plánované aktivity, aby bylo **IOB** nižší;
+- *načasování* **DC** tak, aby se *vypnul* krátce před cvičením kvůli nižšímu **IOB**, protože u některých uživatelů po cvičení **glykémie** rychle stoupá.
 
-### TT - Eating soon
+### DC - Před jídlem
 
-![TT Activity](../images/TempTarget1.png)
+![DC Před jídlem](../images/TempTarget1.png)
 
-**BG Target (depending on users' settings)**
+**Cílová glykémie (výchozí předvolba, lze upravit)**
 
-AAPS will aim to reach 5mmol/l or 90mg/dl for 30 minutes
+AAPS se bude snažit dosáhnout 90 mg/dl nebo 5,0 mmol/l po dobu 45 minut
 
-**Other considerations users may wish to factor in when selecting**:
+**Další věci, které mohou uživatelé při volbě zvážit**:
 
-In closed loop mode, **SMB**:
+V režimu uzavřené smyčky **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- zůstanou aktivní; a/nebo
+- bazál může být také zapnut, podle nastavení **profilu** uživatele.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+Podle hodnoty **glykémie** **AAPS** „zvýší“ dávkování inzulínu v rámci parametrů nastavení **AAPS** uživatele, aby dosáhl požadované cílové **glykémie**.
 
-### TT - Hypo
+### DC - Hypoglykémie
 
-![TT Activity](../images/TempTarget3.png)
+![DC Hypoglykémie](../images/TempTarget3.png)
 
-**BG Target (depending on users' settings)**
+**Cílová glykémie (výchozí předvolba, lze upravit)**
 
-AAPS will aim to reach 7mmol/l or 126mg/dl for 30 minutes
+AAPS se bude snažit dosáhnout 160 mg/dl nebo 8,9 mmol/l po dobu 1 hodiny
 
-**Other considerations users may wish to factor in when selecting**:
+**Další věci, které mohou uživatelé při volbě zvážit**:
 
-In closed loop mode, **SMB**:
+V režimu uzavřené smyčky **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *mohou být* vypnuty (více níže); a/nebo
+- bazál může být zapnut, pokud je **AAPS** v záporném **IOB**, nebo <0.
+
+(TempTargets-manage-v4)=
+
+## Nastavení a správa dočasných cílů (Spravovat → Dočasný cíl)
+
+V **AAPS** v4 spravujete **předvolby** DC a spouštíte dočasný cíl na obrazovce **Spravovat** (spodní navigace) → **Dočasný cíl** (*„Spravovat a nastavit dočasné cíle“*).
+
+![Obrazovka Dočasný cíl – karusel předvoleb, editor a panel akcí](../images/v4/TempTarget/tt_management.png)
+
+Obrazovka má tři části:
+
+1. **Karusel předvoleb** (nahoře) – přejížděním procházíte své předvolby DC. Každá karta ukazuje **název**, **cíl** a **trvání** předvolby; právě běžící DC je zvýrazněný.
+2. **Editor** (uprostřed) – **Dočasný cíl** a **Trvání**, které se opravdu použijí, a navíc datum/čas **Aktivace**.
+3. **Panel akcí** (dole) – tlačítka **➕ přidat**, **‘️ smazat** a **▶ aktivovat**.
+
+Výběrem karty předvolby se její **cíl** a **trvání** načtou do editoru.
+
+```{admonition} Vestavěné a vlastní předvolby :class: note Vestavěné předvolby – **Před jídlem**, **Aktivita** a **Hypoglykémie** – existují vždy a **nelze je smazat** (jejich hodnoty ale můžete změnit a uložit). Všechny předvolby, které si vytvoříte sami, jsou **vlastní** a můžete je libovolně upravovat nebo mazat.
+
+    <br />### Aktivace dočasného cíle
+    
+    Přejeďte na požadovanou předvolbu (její hodnoty se načtou do editoru), případně v editoru upravte **cíl**/**trvání** a pak klepněte na **▶ Aktivovat**. Než se cokoli spustí, zobrazí se potvrzení s přesným cílem, trváním a důvodem:
+    
+    ![Potvrzení aktivace](../images/TempTarget8.png)
+    
+    Po potvrzení se dočasný cíl spustí ihned (nebo ve zvoleném čase **Aktivace**) a běží po nastavenou **dobu trvání**.
+    
+    ```{admonition} Úprava čísel je jednorázová – předvolbu nemění
+    :class: important
+    **Cíl** a **trvání** v editoru jsou hodnoty, které tlačítko **Aktivovat** použije *právě teď*. Pokud je změníte, je tato změna **dočasná**: platí jen pro tuto aktivaci a **nemění uloženou předvolbu**. Díky tomu můžete DC „upravit a aktivovat“ jen jednorázově (například dnes aktivovat *Aktivitu* s trochu jiným cílem), aniž byste předvolbu trvale změnili.
+    
+
+### Uložení změn do předvolby
+
+Pokud upravenou hodnotu *chcete* zachovat, **uložte** ji: když se hodnoty v editoru liší od vybrané předvolby, objeví se na horní liště ikona **Uložit**. Klepnutím na ni se aktuální **cíl** a **trvání** (a u vlastních předvoleb i název) uloží zpět do vybrané předvolby. U vestavěných předvoleb se na panelu akcí objeví také tlačítko **Vrátit na výchozí** (↺): vrátí výchozí hodnoty předvolby.
+
+![Obrazovka Dočasný cíl s ikonou Uložit a tlačítkem Vrátit na výchozí](../images/v4/TempTarget/tt_preset_save_revert.png)
+
+Jednoduché pravidlo tedy zní:
+
+- **Aktivovat** → čísla se použijí **jednou** (předvolba se nezmění).
+- **Uložit** → čísla se stanou **novými výchozími hodnotami** předvolby.
+
+Chcete-li vrátit vestavěnou předvolbu do původního stavu, vyberte ji a klepněte na tlačítko **↺ Vrátit**. Na panelu akcí se objeví jen u **vestavěné** předvolby, jejíž hodnoty se právě liší od továrních výchozích hodnot, a obnoví původní **cíl** a **trvání** této předvolby.
+
+### Přidání a odebrání předvoleb
+
+- **➕ Přidat** – vytvoří **novou vlastní předvolbu** z aktuálních hodnot v editoru. Nová karta se objeví v karuselu.
+- **‘️ Smazat** – odstraní vybranou **vlastní** předvolbu. Vestavěné předvolby (*Před jídlem*, *Aktivita*, *Hypoglykémie*) nelze smazat.
+
+Jakmile máte alespoň dvě **vlastní** předvolby, můžete také změnit jejich pořadí v karuselu: klepněte na ikonu **Přeřadit** (⇅) na horní liště, posouvejte kartu uprostřed **tlačítky pro posun ◀ / ▶** a pak potvrďte tlačítkem **✓**. Vestavěné předvolby zůstávají na svých místech – posouvat lze jen vlastní předvolby. (Ovládání vypadá stejně jako při [přeřazení profilů](ProfileSwitch-ProfilePercentage.md).)
+
+Vaše předvolby jsou součástí synchronizované konfigurace, takže je sdílí hlavní zařízení i spárovaní klienti.
+
+### Další způsoby, jak nastavit dočasný cíl
+
+Dočasný cíl lze nastavit i bez otevření této obrazovky:
+
+- pomocí **přepínačů DC v dialogu Sacharidy** – viz [níže](#TempTargets-carbs-dialog),
+- pomocí **tlačítka předvolby na [panelu Rychlé spuštění](QuickLaunch.md)** – kategorie *Přednastavení dočasných cílů* v *Konfigurace Rychlého spuštění* nabízí pro každou vaši předvolbu tlačítko na jedno klepnutí,
+- z **hodinek Wear OS** (položka nabídky / dlaždice **Dočasný cíl**),
+- ze spárovaného **klienta** – viz [Ovládání master ↔ klient](../RemoteFeatures/ClientMasterControl.md),
+- jako součást **[scény](Scenes.md)** (akce *Dočasný cíl*), nebo
+- pravidlem **Automatizace** (*Start dočasného cíle* / *Stop dočasného cíle*).
+
+* * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## Kde mohu zvolit dočasný cíl?
 
-In the **Actions** tab in **AAPS**.
+Nejrychlejší způsob je klepnout na **štítek cíle** na hlavní obrazovce (ukazuje váš aktuální cílový rozsah):
 
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
+![Štítek cíle na hlavní obrazovce](../images/TempTarget6.png)
 
-![Carbs TT](../images/TempTarget4a.png)
+Tím se otevře výše popsaná obrazovka **Dočasný cíl** – přejeďte na předvolbu a klepněte na **▶ Aktivovat**. Stejná obrazovka je dostupná také přes **Spravovat** → **Dočasný cíl**.
 
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
+(TempTargets-carbs-dialog)= Při zadávání sacharidů nemusíte obrazovku **Dočasný cíl** vůbec otevírat: **dialog Sacharidy** (**Ošetření** → **Sacharidy**) má nahoře přepínače **Spustit dočasný cíl Hypoglykémie**, **Spustit dočasný cíl Před jídlem** a **Spustit dočasný cíl Aktivita**. Když jeden zapnete, aktivuje se odpovídající předvolba spolu se zadáním sacharidů:
 
-![Carbs TT](../images/TempTarget6.png)
+![Přepínače DC v dialogu Sacharidy](../images/TempTarget5.png)
 
-- Dlouze stiskněte cíl v pravém horním rohu domácí obrazovky nebo použijte zaškrtávací políčka v dialogu Sacharidy po kliknutí na oranžové tlačítko Sacharidy na domovské obrazovce.
+    {admonition} Automatický DC Hypoglykémie
+    :class: note
+    Pokud otevřete **dialog Sacharidy**, když je vaše glykémie pod 72 mg/dl (4 mmol/l), **AAPS** za vás předem zapne přepínač **Spustit dočasný cíl Hypoglykémie** (pokud už neběží vyšší dočasný cíl s delší zbývající dobou trvání).
 
-![Předvolby > Použít výchozí dočasné cíle](../images/Pref2020_OV_DefaultTT2.png)
+(TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Kde mohu změnit výchozí dočasný cíl a nahradit ho vlastním nastavením?
 
-To reconfigure the ‘BG target range’ and ‘duration’ allocated to the user’s default **Temp-Target** settings, go to the menu in **AAPS** on the top right hand corner and
+**Cíl** a **trvání** každé předvolby se upravují přímo na obrazovce **Dočasný cíl** – samostatná položka v předvolbách pro to už není:
 
-1. select **Preferences** 
-2. scroll down to 'Overview’ 
-3. select ‘Default Temp-Targets’
-4. step 4 indicates (below) where to change **TT- Eating soon** time period
-5. step 5 indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
+1. Otevřete obrazovku **Dočasný cíl** (klepněte na štítek cíle nebo **Spravovat** → **Dočasný cíl**).
+2. Přejeďte na předvolbu, kterou chcete změnit.
+3. V editoru upravte **Dočasný cíl** a/nebo **Trvání**.
+4. Klepněte na ikonu **Uložit**, která se objeví na horní liště.
 
-![Custom TT](../images/TempTarget7.png)
+![Úprava předvolby – ikona Uložit na horní liště, Vrátit na panelu akcí](../images/TempTarget7.png)
 
-## How do I cancel a Temp-Target?
+Dokud se hodnoty v editoru liší od továrních hodnot vestavěné předvolby, objeví se na panelu akcí také tlačítko **↺ Vrátit** – klepnutím na něj obnovíte původní cíl a trvání předvolby.
 
-To cancel a **Temp-Target** running:
+## Jak zruším dočasný cíl?
 
-Select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+Když běží dočasný cíl, štítek cíle na hlavní obrazovce ukazuje cíl a zbývající čas. Klepněte na něj – na obrazovce **Dočasný cíl** je běžící předvolba zvýrazněna jako **AKTIVNÍ** a na konci spodní lišty, hned vlevo od tlačítka **▶ Aktivovat**, se objeví červené tlačítko **✗ Zrušit**. Klepněte na něj a potvrďte:
 
-![Custom TT](../images/TempTarget8.png)
+![Zrušení běžícího dočasného cíle](../images/TempTarget9.png)
 
-Or short-click on the ‘BG Target’ in the yellow/green box located in the top right corner of **AAPS**, and select ‘cancel’ as shown below:
-
-![Actions TT](../images/TempTarget9.png)
-
-## How do I select a “Default-Temp-Targets”
-
-In the **Actions** tab in **AAPS**.
-
-1. select **Temporary Target** button; and then
-2. select desired **Temp-Target**
-
-![Actions TT](../images/TempTarget4.png)
-
-Or clicking on the "**BG Target**" located in the top right corner of **AAPS**.
-
-![BG TT](../images/TempTarget6.png)
-
-Or in the **Carbs** button
-
-1. selecting the desired **Temp-Target** in the shortcuts
-
-![Carbs TT](../images/TempTarget5.png)
+Běžící dočasný cíl lze zastavit také z **hodinek Wear OS**, ze spárovaného **klienta** nebo pravidlem **Automatizace** (*Stop dočasného cíle*).
 
 (TempTargets-hypo-temp-target)=
 
 ## Dočasný cíl při hypoglykémii
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**Dočasný cíl Hypoglykémie** umožňuje **AAPS** chránit uživatele před nízkou glykémií tím, že sníží dávkování inzulínu. Pokud uživatel předpokládá, že jeho **glykémie** klesne: obvykle by to **AAPS** mělo zvládnout, ale hodně záleží na stabilitě nastavení **AAPS** uživatele. **Dočasný cíl Hypoglykémie** umožňuje uživateli předejít předpovídané hypoglykémii a nastavit **AAPS** tak, aby snížil dávkování inzulínu.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+Když uživatel sní sacharidy na léčbu hypoglykémie, jeho **glykémie** může někdy rychle stoupat a **AAPS** bude tento rychlý vzestup **glykémie** korigovat pomocí **SMB**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high Temp-Target'* in **Preferences** (see further below):
+Někteří uživatelé chtějí zabránit podávání **SMB** během **dočasného cíle Hypoglykémie**. Toho dosáhnete vypnutím *„Povolit SMB při vysokém dočasném cíli“* v **Nastavení** → **OpenAPS SMB** (viz dále):
 
-- In (Advanced, objective 9): the user can enable *“High Temp-Targets raises sensitivity”* for **Temp-Targets** of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- V (Pokročilé, cíl 9): uživatel může pro **dočasné cíle** 100 mg/dl (5,6 mmol/l) nebo vyšší zapnout v OpenAPS SMB *„Vysoký dočasný cíl zvyšuje citlivost“*, **AAPS** pak bude citlivější.
 
-- In (Advanced, objective 9): the user can deactivate *“SMB with high temp target”*, so that even if **AAPS** has COB > 0, “SMB with Temp-Target” or “SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- V (Pokročilé, cíl 9): uživatel může vypnout *„Povolit SMB při vysokém dočasném cíli“*. Pak **AAPS** nebude podávat SMB, dokud jsou aktivní vysoké dočasné cíle, a to ani když má **AAPS** COB > 0, je zapnuto „Povolit SMB při nízkém dočasném cíli“ nebo „Povolit SMB vždy“ a OpenAPS SMB je aktivní.
 
-Note: if the user enters carbs with the carb button and your blood glucose is less than 72mg/dl or 4mmol/l, **Temp-Target Hypo** is automatically enabled by **AAPS**.
+Poznámka: pokud otevřete **dialog Sacharidy**, když je vaše glykémie nižší než 72 mg/dl nebo 4 mmol/l, **AAPS** automaticky předem zapne přepínač **Spustit dočasný cíl Hypoglykémie**.
 
 (TempTargets-activity-temp-target)=
 
 ## Dočasný cíl při pohybové aktivitě
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Před cvičením a během něj může uživatel potřebovat vyšší cíl, aby předešel hypoglykémii během aktivity.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+Pro zjednodušení **dočasného cíle Aktivita** si uživatel může nastavit výchozí **dočasný cíl – Aktivita**, který zvýší **glykémii** snížením dávkování inzulínu, aby se zpomalil pokles **glykémie** a předešlo se hypoglykémii.
 
-New users to **AAPS** may need to experiment and personalise their **Temp-Target Activity** default settings in order to optimise this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports). in FAQ.
+Noví uživatelé **AAPS** možná budou muset zkoušet a přizpůsobit si výchozí nastavení **dočasného cíle Aktivita**, aby jim tato funkce fungovala co nejlépe. Každý člověk je jiný, pokud jde o udržení stabilní glykémie během cvičení. Viz také [sekci o sportu v Nejčastějších otázkách uživatelů APS](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduced insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on.
+Někteří uživatelé také raději aktivují **přepnutí profilu** (snížení profilu pod 100 %, aby **AAPS** podával méně inzulínu) před zapnutím **dočasného cíle Aktivita** a po dobu, kdy je zapnutý. Obojí můžete spustit najednou: klepněte na název profilu na hlavní obrazovce, klepněte na kulaté tlačítko **▶**, nastavte **Procento** pod 100 % a **Trvání** a pak zapněte **Dočasný cíl / Aktivita**. Viz [Změna procenta profilu](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High Temp-Targets raises sensitivity'* for **Temp-Targets** higher or equal 100mg/dl or 5.5mmol/L in OpenAPS **SMB**. Then **AAPS** is more sensitive.
+Pokročilé, cíl 9: uživatelé mohou pro **dočasné cíle** 100 mg/dl (5,6 mmol/l) nebo vyšší zapnout v OpenAPS **SMB** *„Vysoký dočasný cíl zvyšuje citlivost“*. Cíl 99 mg/dl (5,5 mmol/l) je normální cíl, ani vysoký, ani nízký. **AAPS** je pak citlivější.
 
-Additionally, if *'SMB with high Temp-Target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'SMB with Temp-Target-* or *'SMB always'* enabled and OpenAPS **SMB** active.
+Pokud je navíc vypnuto *„Povolit SMB při vysokém dočasném cíli“*, **AAPS** nebude podávat **SMB**, a to ani při COB > 0, při zapnutém *„Povolit SMB při nízkém dočasném cíli“* nebo *„Povolit SMB vždy“* a aktivním OpenAPS **SMB**.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Dočasný cíl pro blížící se jídlo
+## Dočasný cíl Před jídlem
 
-**Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Dočasný cíl – Před jídlem** pomáhá mírně snížit **glykémii** a zajistit dostatek **IOB** před jídlem.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyjumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon** and this is particularly so, if eating a high carb diet.
+Může to být důležitý nástroj pro uživatele, kteří nepodávají předstihový bolus. Účinnost **dočasného cíle – Před jídlem** ale závisí na řadě faktorů, například: na nastavení uživatele, zda jí stravu s nízkým obsahem sacharidů a zda používá rychle působící inzulín (např. Fiasp nebo Lyumjev), aby nemusel předstihový bolus podávat. Dokud uživatelé nemají s **AAPS** zkušenosti, měli by při použití **dočasného cíle – Před jídlem** obvykle počítat s předstihovým bolusem, a to zvláště při stravě s vysokým obsahem sacharidů.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Více o „režimu Před jídlem“ („Eating soon mode“) si můžete přečíst v článku ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (v angličtině) nebo [zde](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be less than 100mg/dl or 5.5mmol/l.
+Pokročilé, [cíl 9](#objectives-objective9): Pokud používáte OpenAPS SMB a máte zapnuto *„Nízký dočasný cíl snižuje citlivost“*, **AAPS** pracuje o něco agresivněji. Pro tuto možnost musí být **dočasný cíl** 98 mg/dl (5,4 mmol/l) nebo nižší.
 
-## How do I turn off SMB during Temp-Targets?
+## Jak vypnout SMB během dočasných cílů?
 
-To action this select in **Preferences** > and deactivate *'Enable SMB with high Temp-Target'*.
+Pro nastavení otevřete **Nastavení** → **OpenAPS SMB** a vypněte *„Povolit SMB při vysokém dočasném cíli“*.
 
-![Carbs TT](../images/TempTargetSMB.png)
+![Předvolba Povolit SMB při vysokém dočasném cíli](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with Temp-Target'* or *'SMB always'* enabled and OpenAPS SMB active.
+Tím zajistíte, že **AAPS** nebude podávat **SMB**, a to ani při COB > 0, při zapnutém *„Povolit SMB při nízkém dočasném cíli“* nebo *„Povolit SMB vždy“* a aktivním OpenAPS SMB.
