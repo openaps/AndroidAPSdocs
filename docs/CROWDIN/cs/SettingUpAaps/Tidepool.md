@@ -1,41 +1,66 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs and can be used to analyze and share this data with your clinical team. Since AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool je nástroj třetí strany, který shromažďuje data o glykémii, inzulínu a sacharidech (a poznámky, které přidáte k ošetřením). Můžete ho používat k analýze těchto dat a k jejich sdílení s vaším lékařským týmem. Od verze AAPS 3.2 ho lze použít místo Nightscoutu pro splnění části Cíle 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
 
-It is important to understand the tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone you must setup Nightscout as well.
+Je důležité vědět, že Tidepool slouží jen k reportování. It is NOT a real-time follow app. Pokud potřebujete sledující mimo hlavní telefon s AAPS, musíte nastavit také Nightscout.
 
-Note: the Tidepool organization has brought the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
-
-
-## Step 1 - Setup a tidepool account
-
--Navigate to [tidepool.org](https://www.tidepool.org/)
-
--Select “Personal Sign Up” or “Sign Up”
-
--Create and document an email and password
-
--Select “Personal Account” and click “Continue”
-
--Complete the patient information section and accept the terms of use
-
--Verify your email address via the instructions received to your email
+Poznámka: organizace Tidepool uvedla na trh produkt iOS Loop se schválením FDA. This effort has nothing to do with their data reporting platform or AAPS.
 
 
-## Step 2 - Enter credentials into AAPS
+## Krok 1 – Vytvořte si účet Tidepool
 
--Select the three-line “hamburger” menu in the top left and the select “Config Builder” (if “Config Builder is not located there it will instead be one of the tabs along the top)
+- Přejděte na [tidepool.org](https://www.tidepool.org/)
 
--Scroll down to the “Synchronization” section and select the check mark to the left of “Tidepool”
+- Zvolte „Personal Sign Up“ nebo „Sign Up“
 
--Click the gear icon to the right of “Tidepool”
+- Vytvořte si e-mail a heslo a poznamenejte si je
 
--Enter the username and password you created in Step 1 above
+- Zvolte „Personal Account“ a klikněte na „Continue“
 
--Click “Test Tidepool Login”
+- Vyplňte část s údaji o pacientovi a přijměte podmínky použití
 
--If you get the “Successfully logged into Tidepool” message you have successfully connected. If not, confirm your credentials are correct and that you have verified your email address with Tidepool.
+- Ověřte svou e-mailovou adresu podle pokynů, které vám přijdou e-mailem
 
--Click on “Connection settings” and set based on your personal preferences
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+## Krok 2 – Připojte AAPS k Tidepoolu
+
+- Otevřete **nabídku** (☰) v levém horním rohu hlavní obrazovky a zvolte „**Konfigurace**“
+
+- Otevřete kategorii „**Komunikace**“ a zapněte „**Tidepool**“:
+
+![Zapnutí Tidepoolu](../images/v4/Tidepool/tidepool_enable.png)
+
+- Klepněte na „**Otevřít modul**“ pod Tidepoolem a potom klepněte na ikonu **Přihlášení** (šipka vedoucí do dveří) v pravém horním rohu
+
+- Otevře se okno prohlížeče s přihlašovací stránkou Tidepoolu. Přihlaste se e-mailovou adresou a heslem, které jste vytvořili v kroku 1 výše:
+
+![Přihlašovací stránka Tidepoolu](../images/v4/Tidepool/tidepool_login.png)
+
+- Po úspěšném přihlášení se prohlížeč zavře a obrazovka Tidepool ukáže stav „**Připojeno**“; log pod ním zaznamenává nahrávání dat. Pokud se přihlášení nepodaří, zkontrolujte, že jsou vaše přihlašovací údaje správné a že jste u Tidepoolu ověřili svou e-mailovou adresu.
+
+![Tidepool připojen](../images/v4/Tidepool/tidepool_status.png)
+
+- V „**Nastavení**“ pluginu Tidepool otevřete „**Nastavení připojení**“. Ve výchozím stavu je volba „**Použít nastavení připojení k Nightscoutu**“ zapnutá, takže Tidepool nahrává za stejných podmínek, jaké jste nastavili pro Nightscout. Vypněte ji, pokud chcete pro Tidepool jiné podmínky, například nahrávat do Tidepoolu jen přes Wi-Fi a při nabíjení, zatímco Nightscout používá i mobilní data.
+
+![Nastavení připojení se zapnutou volbou Použít nastavení připojení k Nightscoutu](../images/v4/Tidepool/tidepool_connection_settings.png) ![Samostatné nastavení připojení pro Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+
+Více pomoci s tím, jak používat svá data po nahrání do Tidepoolu, najdete na: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+
+(tidepool-menu)=
+## Tlačítka Tidepoolu
+
+V pravém horním rohu obrazovky Tidepool:
+
+- Ikona **Přihlášení** nebo **Odhlásit** — připojení k vašemu účtu Tidepool nebo odpojení od něj. Zobrazuje se vždy jen jedna z nich: **Přihlášení**, když jste odhlášeni, a **Odhlásit**, když jste přihlášeni. **AAPS** vás před odhlášením požádá o potvrzení.
+- Ikona ozubeného kola — nastavení Tidepoolu.
+
+Tlačítka dole na obrazovce Tidepool:
+
+- „**Nahrát nyní**“ — nahraje nová data hned, místo čekání na další automatické nahrání.
+- „**Plná synchronizace**“ — znovu nahraje všechna data uložená v **AAPS**.
+- „**Smazat všechna data**“ — smaže **všechna** data, která **AAPS** nahrálo do vašeho účtu Tidepool. Tuto akci nelze vrátit zpět. Používejte ji jen k odstranění chybných nebo zdvojených dat a potom spusťte „**Plná synchronizace**“, abyste svá data nahráli znovu.
+- „**Vymazat log**“ — vyprázdní log zobrazený na obrazovce Tidepool.
+
+![Obrazovka Tidepool a její tlačítka](../images/v4/Tidepool/tidepool_menu.png)
+
+V Tidepoolu se data nahraná z **AAPS** 4 zobrazují pod názvem zařízení **AAPS**. Pokud jste Tidepool používali se starší verzí, viz [Co se změnilo v AAPS v4](#v4changes-tidepool). 
