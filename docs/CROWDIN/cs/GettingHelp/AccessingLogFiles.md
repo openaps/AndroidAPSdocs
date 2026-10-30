@@ -3,10 +3,10 @@
 # Zpřístupnění log souborů
 
 * Připojte telefon k počítači v režimu přenosu souborů
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note : log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Najděte soubory záznamů v datové složce AAPS, v `Android\data\info.nightscout.androidaps\files`.  
+    Název kořenové složky úložiště se může podle telefonu trochu lišit.
+* Pro [AAPSClient](#RemoteControl_aapsclient) je umístění `Android\data\info.nightscout.aapsclient\files`.
+* Poznámka: v **AAPS 3.3** se umístění logů změnilo. V případě potřeby se podívejte do dokumentace k předchozím verzím.
 
 ![logy](../images/aapslog.png)
 
