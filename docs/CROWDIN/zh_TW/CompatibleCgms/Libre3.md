@@ -4,58 +4,58 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。�
 
 ![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
 
-下述方法使用單獨的應用程式 Juggluco 來實現此目的。他使用 Juggluco 以接收來自傳感器的原始 1 分鐘間隔資料，然後將其傳送至 xDrip+ 或 AAPS。可以使用 Libre 3 應用程式或直接在 Juggluco 中啟動新傳感器。下方指南說明如何使用 Juggluco 應用程式啟動傳感器的過程。如果傳感器是使用已登入 Libreview 帳戶啟動的，也可以在 Juggluco 和 Libre 3 應用程式之間切換作為接收器。
+下述方法使用單獨的應用程式 Juggluco 來實現此目的。 It uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip or AAPS. 可以使用 Libre 3 應用程式或直接在 Juggluco 中啟動新傳感器。下方指南說明如何使用 Juggluco 應用程式啟動傳感器的過程。如果傳感器是使用已登入 Libreview 帳戶啟動的，也可以在 Juggluco 和 Libre 3 應用程式之間切換作為接收器。
 
 當傳感器使用 Libre 3 應用程式啟動時，Juggluco 也可以將資料傳送至 LibreView 以與醫療提供者共享。
 
-在 xDrip+ 中，傳感器可以在 -40 mg/dL 至 +20 mg/dL（-2.2 mmol/l 至 +1.1 mmol/l）範圍內進行校正，以補償手動儀表讀取值與傳感器讀取值之間的差異。
+Within xDrip the sensor can be calibrated in the range of -40 mg/dL to +20 mg/dL (-2.2 mmol/L to +1.1 mmol/L) to compensate for differences between a manual meter reading and the sensor readings.
 
 ## 方法一：直接使用每分鐘的資料值
-AndroidAPS 是專為每 5 分鐘的資料值量身打造的。因此，在某些情況下處理每分鐘的資料值時，會有些侷限。
+**AAPS** is tailored for 5-minute readings. 因此，在某些情況下處理每分鐘的資料值時，會有些侷限。
 
 請參閱 [這裡](#juggluco-to-aaps).
 
 
 ## 方法二：透過 xDrip 將每分鐘的資料值轉換為每 5 分鐘的資料值。
-此方法使用 Juggluco 接收來自傳感器的原始 1 分鐘間隔資料，然後將其傳送至 xDrip+，以平滑為 5 分鐘間隔資料，並傳送至 AAPS。
+This method uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip to be smoothed into 5-minute interval data to be passed to AAPS.
 
 ### 步驟 1：設定 Juggluco
 從[此處](https://www.juggluco.nl/Juggluco/download.html)下載並安裝 Juggluco 應用程式。按照[此處](https://www.juggluco.nl/Juggluco/libre3/)的指示操作。
 
-確保將血糖值傳送到 xDrip+：在 Juggluco 的設定中，你可以配置 Juggluco 將其血糖值傳送到其他應用程式。 Juggluco 可以發送三種類型的廣播：**修補版 Libre 廣播** 最初由修補版 Librelink 應用程式使用，並可用於將葡萄糖值傳送至 xDrip+。
+Make sure you send the glucose values to xDrip: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip
 
 ### 步驟 2：設定 xDrip
 
-血糖值會由智慧型手機上的 xDrip+ 應用程式接收。
+The blood glucose values are received by the xDrip app on the smartphone.
 
-- 如果尚未設定，請下載 [xDrip+](https://github.com/NightscoutFoundation/xDrip) 並按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的指示操作。
-- 在 xDrip+ 中選擇 "Libre2（修補版應用程式）" 作為資料來源。
+- If not already set up then download [xDrip](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
+- In xDrip select "Libre2 (patched app)" as data source.
 - 如果需要，請在「不常見的設定」→「額外日誌紀錄設定」→「日誌紀錄的額外標籤」下輸入 "BgReading:d,xdrip libre_receiver:v"。這將紀錄額外的錯誤訊息以便進行問題排除。
 
-![xDrip+ LibreLink 日誌紀錄](../images/Libre2_Tags.png)
+![xDrip LibreLink logging](../images/Libre2_Tags.png)
 
-- 技術上來說，目前的血糖值每分鐘會傳送到 xDrip+。加權平均濾波器預設會計算最近 25 分鐘內的平滑資料。你可以在 NFC 掃描功能選單中更改此時間段。
+- Technically, the current blood sugar value is transmitted to xDrip every minute. 加權平均濾波器預設會計算最近 25 分鐘內的平滑資料。你可以在 NFC 掃描功能選單中更改此時間段。
 
   → 漢堡選單 → 設定 → NFC 掃描功能 → 使用 xxx 方法時平滑 Libre 3 資料
 
-  ![xDrip+ 進階設定：Libre 2 與原始值](../images/xDrip_Libre3_Smooth.png)
+  ![xDrip advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
 
 
 
 ### 步驟 3：在 xDrip 中啟動傳感器
 
-在 xDrip+ 中使用「啟動傳感器」和「暫不」選項啟動傳感器。無需將手機靠近傳感器。事實上，「啟動傳感器」不會實際啟動任何 Libre 3 傳感器，也不會與他們進行任何互動。這僅僅是為了通知 xDrip+ 有一個新的傳感器正在提供血糖資料。如果可用，請輸入兩個指血測量值作為初始校正。現在，血糖值應該每 5 分鐘顯示在 xDrip+ 中。跳過的讀取值，例如因為你離手機太遠，將不會被回填。
+In xDrip start the sensor with "Start Sensor" and "not today". 無需將手機靠近傳感器。事實上，「啟動傳感器」不會實際啟動任何 Libre 3 傳感器，也不會與他們進行任何互動。 This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. 如果可用，請輸入兩個指血測量值作為初始校正。 Now the blood glucose values should be displayed in xDrip every 5 minutes. 跳過的讀取值，例如因為你離手機太遠，將不會被回填。
 
 如果仍然沒有資料，請等待至少 15-20 分鐘。
 
-更換傳感器後，xDrip+ 會自動偵測到新傳感器，並會刪除所有校正資料。啟動後，你可以檢查你的指血血糖並進行新的初始校正。
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. 啟動後，你可以檢查你的指血血糖並進行新的初始校正。
 
-### 步驟 4：配置 AndroidAPS
+### Step 4: Configure AAPS
 
 - 請參閱 [這裡](#juggluco-to-xdrip)然後返回。
 
-- 如果 AndroidAPS 在手機處於飛行模式時無法接收血糖值，請使用「識別接收器」。
-- 關閉平滑設定（在 xDrip+ 中已完成）
+- If **AAPS** does not receive BG values when phone is in airplane mode, use "Identify receiver"
+- Turn off Smoothing (done in xDrip already)
 
 ## 後續傳感器更換
 
@@ -69,7 +69,7 @@ AndroidAPS 是專為每 5 分鐘的資料值量身打造的。因此，在某些
 
 ![終止傳感器](../images/libre3/step_14.jpg)
 
-注意：當兩個傳感器同時運作時，Juggluco 會將最近一個傳感器的資料發送至 xDrip+。如果傳感器未經校正且讀取血糖類似，這可能會導致跳躍的血糖值被報告至 xDrip+。如果你終止了錯誤的傳感器，可以透過掃描傳感器重新啟用他。
+Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip. If the sensors are not calibrated and reading BG similarly, this may result in jumpy BG values being reported to xDrip. 如果你終止了錯誤的傳感器，可以透過掃描傳感器重新啟用他。
 
 ## 在 Libre 3 和 Juggluco 應用程式之間切換傳感器
 
