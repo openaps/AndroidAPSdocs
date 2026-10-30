@@ -13,6 +13,15 @@ The following model and firmware combinations are compatible:
 
 You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
+    {contents} Table of contents
+    :depth: 1
+    :local: true
+
+## Pump capabilities with AAPS
+
+* Requires a RileyLink-compatible device to communicate with **AAPS**.
+* Automatic DST and timezone handling.
+
 ## 하드웨어와 소프트웨어의 필요 요건
 
 - **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
@@ -44,13 +53,25 @@ The following settings should be configured on the pump in order for AAPS to rem
 - There are two ways to configure your Medtronic pump in AAPS:
 
 1. Using the setup wizard as part of a fresh install
-2. By selecting the cog icon beside the Medtronic selection in the pump selection option in Config Builder
+2. In **Configuration** > **Pump**, by selecting **Medtronic**
+    
+    ![Configuration > Pump with the Medtronic plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+    
+    Once it is selected, the **Medtronic** card shows two buttons, **Settings** and **Open plugin**:
+    
+    ![The Medtronic plugin selected in Configuration > Pump](../images/v4/Pumps/medtronic_enabled.png)
+    
+    **Settings** opens the settings of the Medtronic driver:
+    
+    ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
+    
+    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
+    
+    ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
 
 When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot successfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
 
-![Medtronic Settings](../images/Medtronic01a.png)
-
-While setting up AAPS to work with your medtronic pump you need to set following items: (see picture above)
+While setting up AAPS to work with your medtronic pump you need to set the following items in **Settings** (see the settings picture above):
 
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
@@ -68,21 +89,29 @@ While setting up AAPS to work with your medtronic pump you need to set following
     - Lithium (Extended view)
     - NiZn (Extended view)
     - NiMH (Extended view)
-- **Bolus/Treatments Debugging**: Select On or Off depending on requirements.
+- **Use Scanning**: Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
 
-- **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
-- **Use Scanning** Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink** This feature is only supported on newer link devices such as the EmaLink or OrangeLink. Values will be shown in the Medtronic tab in AnroidAPS. 
-- **Set neutral temp basals** By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
+- **Show battery level reported by OrangeLink/EmaLink/DiaLink**: This feature is only supported on newer link devices such as the EmaLink or OrangeLink. The value is shown as **RileyLink Battery** on the Medtronic pump screen.
+- **Set neutral temp basals**: By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interrupting a temporary basal at the hour change in order to suppress the beep.
 
-## MEDTRONIC (MDT) Tab
+(pairing-your-rileylink-compatible-device)=
 
-![MDT Tab](../images/Medtronic02.png) When AAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
+### Pairing your RileyLink compatible device
+
+Your RileyLink compatible device is paired from the Medtronic pump screen, not from the Bluetooth menu of your phone:
+
+- Open the pump screen (**Manage** > **Pump**, or **Open plugin** on the Medtronic card in **Configuration** > **Pump**).
+- Tap **Pair RileyLink**. **AAPS** scans for nearby RileyLink compatible devices.
+- Tap your device in the list. When **RileyLink paired successfully** is shown, tap **OK**.
+
+## Medtronic pump screen
+
+To open the Medtronic pump screen, go to **Manage** > **Pump**. The pump screen displays the current pump status information along with some Medtronic specific actions (see the pump screen picture above).
 
 - **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
-- **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
+- **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Only shown if **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled in the Medtronic settings.
 - **Pump Status**: The current status of the pump connection. As the pump will not be constantly connected this will primarily show the sleep icon. There are a number of possible other status including "Waking Up" when AAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc.
-- **Battery**: Shows battery status based on the value chosen for Battery Type (Power View) in the Medtronic Pump Configuration menu. 
+- **Battery**: Shows battery status based on the value chosen for **Battery Type (Power View)** in the Medtronic settings.
 - **Last connection**: How long ago the last successful pump connection happened.
 - **Last Bolus**: How long ago the last successful bolus was delivered.
 - **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
@@ -90,19 +119,24 @@ While setting up AAPS to work with your medtronic pump you need to set following
 - **Reservoir**: How much insulin is in reservoir (updated at least every hour).
 - **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
 
-At the bottom of the screen there are three buttons:
+At the bottom of the screen there are these buttons:
 
 - **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [below](#MedtronicPump-pump-history))
-- **RL Stats**: Show RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status))
+- **Pair RileyLink**: Finds and pairs your RileyLink compatible device (see [above](#pairing-your-rileylink-compatible-device)).
+- **Pump history**: Shows pump history (see [below](#MedtronicPump-pump-history)).
+- **RL Stats**: Shows RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status)).
+- **Wake and Tune Up** and **Reset RileyLink**: See [Actions](#medtronic-actions) below.
+- **Clear Bolus Block**: Only shown for a short time after a bolus, while **AAPS** waits for the pump to finish delivering it. Tapping it ends this wait.
 
 (MedtronicPump-pump-history)=
 
 ## Pump History
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Pump history screen with its filter buttons](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convenient way to see pump behaviour should that be required. The only items stored are those relevenant to AAPS and will not include a configuration function that has no relevance.
+Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. This allows for a convenient way to see pump behavior should that be required. The only items stored are those relevant to AAPS and will not include a configuration function that has no relevance.
+
+Tap **Pump history** on the pump screen to open it. By default **All** is selected. Tap one of the filter buttons at the top (for example **Boluses**, **Basals** or **Alarms**) to show only one type of entry.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
@@ -115,12 +149,14 @@ The RL Status dialog has two tabs:
 - **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
 - **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
 
+(medtronic-actions)=
+
 ## 실행
 
-When the Medtronic driver is used, two additional actions are added to Actions Tab:
+When the Medtronic driver is used, two additional actions are available on the pump screen (**Manage** > **Pump**):
 
-- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a successful connection is made the successful frequency will be set as the default.
-- **Reset RileyLink Config** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
+- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a successful connection is made the successful frequency will be set as the default. While the tune-up runs, the RileyLink status on the pump screen shows it. If a tune-up fails (for example because the pump was out of range), **AAPS** tries again by itself about every 10 minutes.
+- **Reset RileyLink** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
 
 ## Important notes
 
@@ -148,9 +184,9 @@ You should avoid manually bolusing or setting TBRs on your pump. All such comman
 
 AAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
 
-Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Travelling west however can result in issues as you are effectively going back in time which can result in incorrect IOB data.
+Traveling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2), which will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Traveling west, however, can result in issues as you are effectively going back in time, which can result in incorrect IOB data.
 
-The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
+The issues seen when traveling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
 
 ### Is a GNARL a fully compatible Rileylink compatible device?
 
@@ -168,9 +204,9 @@ The GNARL code fully supports all of the functions used by the Medtronic driver 
 
 There are a number of options to try and resolve connectivity issues.
 
-- Use the "Wake Up and Tune" button in the ACT tab as detailed above.
+- Tap **Wake and Tune Up** on the pump screen (**Manage** > **Pump**) as detailed above.
 - Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
-- Reset the Rileylink device. You must then use the "Reset Rileylink Config" button in the ACT tab.
+- Reset the Rileylink device. You must then tap **Reset RileyLink** on the pump screen (**Manage** > **Pump**).
 - Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
     1. Restart the phone
     2. *While* the phone is restarting restart the Rileylink device
@@ -185,3 +221,22 @@ On the back of the pump you will find a line detailing your model number along w
 - NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
 - CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
 - WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+
+(MedtronicPump-pump-unreachable)=
+
+### How to fix the "pump unreachable" error
+
+Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
+
+1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
+2. Set **Medtronic Encoding** to **Hardware Encoding**.
+
+## Where to get help
+
+Development of the Medtronic driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
