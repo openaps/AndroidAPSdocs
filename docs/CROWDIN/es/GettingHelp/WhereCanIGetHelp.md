@@ -1,27 +1,27 @@
 # Where can I get help ?
 
-## I'm getting stuck; What do I do? Who can I ask?
+## I'm stuck; What should I do? Who can I ask?
 
-This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
+This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
 
-* nivel 1: leer la Wiki - ahora tenemos una función de búsqueda para ayudarle!
+* level 1: Read the docs (i.e. this Wiki) - there is now a search function to help you!
 * nivel 2: buscar en el grupo de Facebook, si no hay una respuesta, luego plantee su pregunta en el [grupo de Facebook de los usuarios de AndroidAPS](https://www.facebook.com/groups/1900195340201874/)
-* Nivel 3: Si en facebook no obtiene resultados, pregunte en [Discord](https://discord.gg/4fQUWHZ4Mw). Los mensajes cruzados directos serán ignorados/eliminados en ambos canales para evitar respuestas duplicadas. No olvide que la mayoría de los desarrolladores están en Europa, por lo que la respuesta puede no ser 24/7; es posible que tenga que esperar durante varias horas, especialmente durante los fines de semana y las vacaciones.
+* level 3: If Facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Los mensajes cruzados directos serán ignorados/eliminados en ambos canales para evitar respuestas duplicadas. No olvide que la mayoría de los desarrolladores están en Europa, por lo que la respuesta puede no ser 24/7; es posible que tenga que esperar durante varias horas, especialmente durante los fines de semana y las vacaciones.
 * level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md)
 * level 5: email *developers@aaps.app* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
 
-For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xDrip+](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+For support on CGM sources please use the Facebook groups or Discord channels for that specific system (e.g. [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
 ## Make sure to join the AndroidAPS users group on Facebook or Discord!
 
 Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/) and/or [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
-Please note that Facebook has recently removed external links shared within the AAPS Facebook group and this includes current and historic posts which contain external links to the AAPS Notes / Read the docs. For new users who are working through the Objectives and reviewing historic AAPS Facebook posts please search key terms as discussed within the AAPS notes for further assistance.
+Please note that Facebook has recently removed external links shared within the **AAPS** Facebook group and this includes current and historic posts which contain external links to the **AAPS** Notes / Read the docs. For new users who are working through the Objectives and reviewing historic **AAPS** Facebook posts please search key terms as discussed within the **AAPS** notes for further assistance.
 
 ## Other resources in English
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): cubre todos los sistemas de lazo cerrado de DIY (OpenAPS, Loop y AndroidAPS)
-* [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
+* [xDrip - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
