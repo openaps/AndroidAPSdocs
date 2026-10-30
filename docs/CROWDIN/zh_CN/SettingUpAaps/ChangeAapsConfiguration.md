@@ -2,42 +2,42 @@
 
 在完成**[设置向导](../SettingUpAaps/SetupWizard.md)**后，如果您只想更改**AAPS**配置的某些部分，则无需再次运行整个向导。
 
-有三种途径可以更改AAPS的配置。选择哪种途径主要取决于您的便利性或个人偏好，因为每种途径都可以到达相同的配置设置。
+There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
 
 这些途径如下：
 
-1. 配置文件构建器
-1. 点击右侧的三个点菜单，选择“Preferences（偏好设置）”
-1. 点击右侧的三个点菜单，选择“Plugin preferences（插件偏好设置）”
+1. The **Configuration** screen,
+2. The **Settings** screen or
+3. A plugin's **Settings**, opened from its category in **Configuration**.
 
 在这里，我们解释一下在每种情况下哪种选择最为方便：
 
-## 配置构建器
+## 配置
 
-![打开配置构建器](../images/ConfBuild_Open_AAPS30.png)
+Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
 
-如果您想**启用插件**及其在顶层菜单中的**可见性**，请使用**配置构建器**。一旦启用，这些**插件**将始终运行，并且您可以决定是否在顶层菜单中看到它们。禁用的插件无法使其可见。
+![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
 
-您可以使用每个已激活插件旁边的齿轮图标来访问其设置。
+**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
 
-有关配置构建器的文档，请点击[此处](../SettingUpAaps/ConfigBuilder.md)查阅。
+The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
 
-## 偏好设置
+## 设置
 
-![打开参数设置](../images/Pref2020_Open2.png)
+Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
 
-**偏好设置**对话框可以通过**AAPS**中任何选项卡的右上角<0>三个点</0>菜单进入。这允许您**在一个位置更改所有已启用插件的配置**。
+![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
 
 如果您不确定在哪里查找配置选项，这是一个不错的选择，但如果您知道只想更改某个特定插件的配置，它可能会有点繁琐。
 
-有关偏好设置的文档，请[点击此处](/SettingUpAaps/Preferences.md)查阅。
+The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
 
-## 插件选项
+## A plugin's Settings
 
-![打开插件参数设置](../images/Pref2020_OpenPlugin2.png)
+Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
 
-**插件偏好设置**对话框可以通过AAPS主页屏幕的右上角**三个点**菜单进入。它允许您更改**当前屏幕上插件的配置**。
+![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
 
-例如，如果您知道想要更改BYODA的配置，那么您需要在**AAPS**顶部菜单上选择“BYODA”选项卡，然后在BYODA页面上，点击右上角的_三个点_菜单，然后选择“插件偏好设置”条目。您会被直接带到专门用于BYODA插件的偏好设置对话框。
+For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
 
-这是进入通用偏好设置对话框的“快捷方式”，有关偏好设置的文档，请[点击此处](../SettingUpAaps/Preferences.md)查阅。
+This is a "shortcut" to the same settings shown on the general **Settings** screen.
