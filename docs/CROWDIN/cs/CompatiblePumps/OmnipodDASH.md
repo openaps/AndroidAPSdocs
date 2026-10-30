@@ -1,736 +1,720 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**, available in **AAPS** from version 3.0.
+Tyto pokyny platí pro nastavení pumpy generace **Omnipod DASH** **(NE Omnipod Eros)**. Ovladač DASH je osvědčený způsob, jak používat smyčku s Omnipodem.
 
-## Omnipod DASH specifications
+```{contents} Table of contents
+:depth: 1
+:local: true
+```
 
-These are the specifications of the **Omnipod DASH** ('DASH') and what differentiates it from the **Omnipod EROS** ('EROS'):
+## Specifikace Omnipod DASH
 
-- The DASH pods are identified by a **blue needle cap** (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
-- DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-- The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
-- No more "no connection to link device / pod" errors with DASH.
-- **AAPS** will wait for pod's accessibility to send commands.
-- On pod activation, **AAPS** will find and connect to a new DASH pod.
-- Expected range from phone: 5-10 meters (YMMV).
+Hlavní vlastnosti **Omnipod DASH** („DASH“):
+
+- Pody DASH poznáte podle **modrého krytu jehly** (starší pod EROS má průhledný kryt jehly). Jinak jsou pody fyzicky stejně velké.
+- DASH nepotřebuje žádné zařízení pro propojení přes BLE (není potřeba RileyLink, OrangeLink ani EmaLink).
+- Připojení Bluetooth u DASH se používá jen při odeslání příkazu (např. bolusu) a hned po odeslání příkazu se odpojí.
+- **AAPS** počká, až bude pod dostupný, a pak odešle příkazy.
+- Při aktivaci podu **AAPS** najde nový pod DASH a připojí se k němu.
+- Očekávaný dosah od telefonu: 5–10 metrů (může se lišit).
 
 (omnipod-dash-constraints)=
 
-## Omnipod DASH known AAPS constraints/issues
-- Android 16 requires **AAPS** version 3.3.2.1 or later.
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- Temporary Basal rate changes (which occur frequently when the loop is active, especially overnight) result in under-delivery of insulin. This is effectively a hardware limitation of the Omnipod DASH. The issue has been addressed in AAPS 3.4.2.3, but the functionality is currently opt-in. Follow the [Basal Drift Fix Instructions](#omnipod-dash-basal-drift-fix) to enable it. For more information regarding the fix see [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more info.
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
-- The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig.
-- When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
-- If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
+## Známá omezení a problémy Omnipod DASH v AAPS
+- Obecně se doporučuje používat **AAPS** na Androidu 14 nebo 16. U Androidu 15 komunita nahlásila mnoho [problémů](https://github.com/nightscout/AndroidAPS/issues/3471). Pokud ale používáte Android 15, nejspíš budete muset zapnout **Bluetooth párování** (v části **Rozšířená nastavení** v [nastavení Dash](#omnipod-dash-advanced-settings)), abyste mohli pody úspěšně aktivovat a používat. Více informací o nastavení párování najdete v části [Obecné řešení problémů](../GettingHelp/GeneralTroubleshooting.md).
+- Změny letního času a časového pásma se nepoužijí automaticky. Po změně času musíte pod aktualizovat ručně: stiskněte **Obnovit** na obrazovce pumpy DASH a pak stiskněte **Nastavit čas** (zobrazí se, když se časové pásmo podu a telefonu liší), nebo proveďte **přepnutí profilu** (viz [Změna časového pásma pro Omnipod Dash](#timezone-traveling-with-pumps)).
+- Dash podporuje bazál jen v krocích po 0,05 U/h. Pokud se pokusíte nastavit v **profilu AAPS** bazál v krocích po 0,01, AAPS vás nevaruje, i když pod dávku zaokrouhlí nahoru na kroky po 0,05. Když na obrazovce pumpy DASH otevřete **Historie Podu**, zobrazí se, že byl nastaven bazál 0,05. To také znamená, že nejnižší bazál, který DASH v **AAPS** dovolí, je 0,05 U/h.
+- Soubor s nastavením obsahuje aktivní relaci podu. Po každé aktivaci podu exportujte svá nastavení a před importem nastavení si přečtěte část [Export a import nastavení](#omnipod-dash-export-import).
+- Při nastavení nového bazálního profilu DASH pozastaví výdej, než nastaví nový bazální **profil**. Pokud dojde k přerušení komunikace nebo k chybě, bazální profil se automaticky znovu nespustí. Podrobnosti najdete v části [Obnovení výdeje inzulínu](#omnipod-dash-resuming-insulin-delivery).
+- Pokud jsou nastavené výstrahy a pod se blíží konci životnosti, pod bude pípat, dokud výstrahy neztišíte. Podrobnosti najdete v části [Ztišení výstrah podu](#omnipod-dash-silencing-pod-alerts).
+- Existuje několik známých problémů s Bluetooth, které mohou způsobit potíže s aktivací podu. Známý problém a jeho řešení najdete na stránce [Problémy související s Bluetooth](../GettingHelp/BluetoothTroubleshooting.md).
 
 (hardware-software-requirements)=
 
 (omnipod-dash-hardware-software-requirements)=
-## Hardware/Software Requirements
+## Hardwarové a softwarové požadavky
 
-- Omnipod DASH is identified by the blue needle cap.
+- Omnipod DASH poznáte podle modrého krytu jehly.
 
-![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
+![Pod Omnipod](../images/DASH_images/Omnipod_Pod.png)
 
-- **A Compatible Android phone** with a Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info), additionally the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
-    -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
-      **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.
+- **Kompatibilní telefon s Androidem** s Bluetooth Low Energy (BLE) (více informací viz [Telefony](../Getting-Started/Phones.md)). Následující informace vám navíc pomohou s dalšími důležitými věcmi pro úspěšnou aktivaci a používání DASH na kompatibilním telefonu:
+    -  Ovladač Omnipod Dash v **AAPS** se s podem DASH spojuje přes Bluetooth.  
+      **AAPS** automaticky naváže nové připojení Bluetooth k podu pokaždé, když potřebuje odeslat příkaz (např. bolus). Po odeslání příkazu se připojení Bluetooth hned odpojí.
        - **POZNÁMKA:**
-         - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) list for known working configurations before committing to a new rig built around Omnipod DASH.
-         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
-    - For **Android 15** or below: You **MUST** use **Version 3.0 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, however it's advisable to run the latest released version.
-    - For **Android 16**: you **MUST** use **Version 3.3.2.1 or newer of AAPS** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions, due to Android 16 changing how its Bluetooth works. Any version earlier than 3.3.2.1 will likely cause pod failures and/or activation [issues](https://github.com/nightscout/AndroidAPS/issues/3471).
-- A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+         - Připojení Bluetooth mohou přerušit nebo rušit jiná zařízení Bluetooth spojená s telefonem, na kterém běží **AAPS**, například sluchátka atd. Taková zařízení mohou na některých modelech telefonů způsobit chyby připojení nebo problémy s aktivací podu. Při výběru telefonu pro Omnipod DASH je dobré projít seznam [otestovaných sestav hardwaru](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), kde najdete ověřené funkční konfigurace.
+         - Existuje několik známých problémů s Bluetooth, které mohou způsobit potíže s aktivací podu (rady k dalším problémům s Bluetooth najdete v části [Řešení problémů](#troubleshooting)), konkrétně v části [Problémy související s Bluetooth](#omnipod-dash-bluetooth-related-issues).
+    - Telefon musí mít **Android 12 nebo novější** a **AAPS** sestavené a nainstalované podle návodu [**Sestavení AAPS**](../SettingUpAaps/BuildingAaps.md). Vždy používejte nejnovější vydanou verzi.
+- Podporovaný [**systém kontinuálního monitorování glukózy (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
+Následující pokyny vysvětlují, jak pomocí **AAPS** aktivovat novou relaci podu. Počkejte, až se váš současný pod bude blížit konci životnosti, protože budete muset aktivovat nový pod s **AAPS**. Jakmile je pod deaktivován, nelze ho znovu použít ani znovu aktivovat. Deaktivace je konečná.
 
 ## Než začnete
 
-Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
+Ujistěte se, že jste si přečetli a pochopili celý tento návod, část **Než začnete** a také **[Omezení a problémy Omnipodu a AAPS](#omnipod-dash-constraints)**, abyste nenarazili na známý problém.
 
-### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
-1. Extra pods (3 or more spare)
-2. Spare Insulin and MDI equipment
-3. A working Omnipod PDM (In case **AAPS** fails)
-4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
-5. Correct version of AAPS built and installed
+### **BEZPEČNOST NA PRVNÍM MÍSTĚ** – **NEZKOUŠEJTE** poprvé připojit **AAPS** k podu, pokud nemáte k dispozici všechno z následujícího:
+1. Náhradní pody (3 nebo více)
+2. Náhradní inzulín a pomůcky pro léčbu inzulínovými pery (MDI)
+3. Funkční Omnipod PDM (pro případ, že **AAPS** selže)
+4. Podporovaný telefon je nutnost! (Viz [Požadavky na hardware a software](#hardware-software-requirements))
+5. Správná verze AAPS sestavená a nainstalovaná
 
-### **Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.**
-- Before using **AAPS** you or your care giver would have had to manage the Pod using the Omnipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).
-- The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.
-- The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.
-- **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.
+### Poté, co ovladač Dash v AAPS aktivuje váš pod, nebudete PDM pro Omnipod Dash potřebovat.
+- Před používáním **AAPS** jste vy nebo váš pečovatel ovládali pod pomocí Omnipod PDM (nebo v některých zemích pomocí aplikace v telefonu) a posílali příkazy do DASH (např. bolus).
+- DASH dokáže obsloužit jen jedno připojení Bluetooth zařízení (např. PDM nebo telefon) pro ovládání a posílání příkazů.
+- Zařízení, které pod úspěšně aktivuje, je od té chvíle jediné zařízení, které s tímto podem smí komunikovat. To znamená, že jakmile aktivujete DASH svým telefonem s Androidem pomocí **AAPS**, **už nebudete moci s tímto podem používat svůj PDM!** Po dobu, kdy je pod aktivní, je novým PDM pro váš pod ovladač Dash v **AAPS** ve vašem telefonu s Androidem.
+- **PDM NEVYHAZUJTE!** Doporučujeme si ho nechat jako zálohu a pro nouzové situace, například když ztratíte telefon nebo když **AAPS** nefunguje správně.
 
-### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
-Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
-As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
-When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
+### Váš pod **NEPŘESTANE** vydávat inzulín, když není připojený k AAPS.
+Výchozí bazální dávky se do podu naprogramují při aktivaci podle aktuálně aktivního [**profilu**](../SettingUpAaps/YourAapsProfile.md).  
+Dokud **AAPS** funguje, posílá příkazy k úpravě bazální dávky, které běží maximálně 120 minut.  
+Když pod z nějakého důvodu nedostane žádné nové příkazy (například protože se ztratila komunikace kvůli vzdálenosti pod ➜ telefon), pod se automaticky vrátí k výchozím bazálním dávkám podle vašeho [**profilu**](../SettingUpAaps/YourAapsProfile.md).
 
-### **AAPS Profile(s) do not support 30 minute basal rate time frames**
-If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
-You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
+### Profily AAPS nepodporují bazální dávky v 30minutových časových úsecích
+Pokud jste v **AAPS** noví a nastavujete svůj bazální [**profil**](../SettingUpAaps/YourAapsProfile.md) poprvé, mějte na paměti, že bazální dávky začínající v půlhodině nejsou podporované. Například pokud máte v Omnipod PDM bazální dávku 1,1 jednotky, která začíná v 09:30 a trvá 2 hodiny do 11:30, není možné tento přesný bazální **profil** v **AAPS** zopakovat.  
+Tuto bazální dávku 1,1 jednotky budete muset změnit na časový úsek buď 9:00–11:00, nebo 10:00–12:00. I když samotný hardware DASH podporuje 30minutové kroky v bazálním **profilu**, **AAPS** tuto funkci NEPODPORUJE.
 
-### **0U/h Profile basal rates are NOT supported in AAPS**
-While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
-Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
-**NOTE:** The lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
+### Bazální dávky 0 U/h v profilu AAPS NEPODPORUJE
+DASH sice podporuje nulovou bazální dávku, ale **AAPS** používá násobky bazální dávky z uživatelova **profilu** k určení automatické léčby; s nulovou bazální dávkou fungovat nemůže.  
+Dočasného nulového bazálu můžete místo toho dosáhnout funkcí „Odpojit pumpu“ nebo kombinací Zakázat smyčku/dočasný bazál nebo Pozastavit smyčku/dočasný bazál.  
+**POZNÁMKA:** Nejnižší bazální dávka, kterou DASH v **AAPS** dovolí, je 0,05 U/h.
 
-## Selecting Dash in AAPS
+## Výběr Dash v AAPS
 
-There are **two** available options to configure Omnipod in **AAPS**:
+Ovladač Omnipod DASH můžete v **AAPS** vybrat **dvěma** způsoby:
 
-### Option 1: New installations
+### Možnost 1: Nové instalace
 
-When installing **AAPS** for the first time, the **Setup Wizard** will guide new users through key features and installation requirements for **AAPS**.  
-Select “DASH” when you reach Pump selection.
+Když **AAPS** instalujete poprvé, **Průvodce nastavením** vás provede hlavními funkcemi a požadavky na instalaci **AAPS**. Když se dostanete ke kroku **Pumpa**, vyberte **Omnipod Dash**.
 
-![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
+![Krok Pumpa v průvodci nastavením s Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up **AAPS** (See Option 2).
+Pokud si zatím nejste jistí, můžete teď vybrat **Virtuální pumpa** a **Omnipod Dash** vybrat později, po nastavení **AAPS** (viz Možnost 2).
 
 (omnipod-dash-option-2-config-builder)=
-### Option 2: The Config Builder
+### Možnost 2: Obrazovka Konfigurace
 
-On an existing installation you can select the **DASH** pump from the Config builder:
+U stávající instalace můžete pumpu **Omnipod Dash** vybrat na obrazovce **Konfigurace**:
 
-On the top-left hand corner **hamburger menu** select **Config Builder (1)** ➜ **Pump** ➜ **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**.
+1. Otevřete **nabídku** (☰) v levém horním rohu hlavní obrazovky a vyberte **Konfigurace**.
+2. Klepněte na **Pumpa** a vyberte přepínač u **Omnipod Dash** (*„Integrace pumpy pro Omnipod Dash (nový model s funkcí Bluetooth a modrým krytem).“*).
 
-Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the DASH menu to be displayed as a tab in the **AAPS** interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using **AAPS**.
+3. Po výběru se na kartě **Omnipod Dash** zobrazí dvě tlačítka:
+   - **Nastavení** otevře [nastavení Dash](#omnipod-dash-settings).
+   - **Otevřít plugin** otevře [obrazovku pumpy DASH](#omnipod-dash-tab).
 
-**NOTE:** A faster way to access the [**Dash settings**](#omnipod-dash-settings) can be found below in the DASH settings section of this document.
+   ![Plugin Omnipod Dash povolený v Konfigurace > Pumpa](../images/v4/Pumps/dash_enabled.png)
 
-![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
+### Ověření výběru ovladače Omnipod
 
-### Verification of Omnipod Driver Selection
+Abyste ověřili, že je vybraný **Omnipod Dash**, otevřete **Spravovat** (spodní navigace na hlavní obrazovce) a klepněte na **Pumpa**. Otevře se obrazovka pumpy DASH, jak ukazuje další část.
 
-To verify that you have selected the DASH in **AAPS**, if you have **checked the box (4)**, **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab on **AAPS**. If this box is left unchecked, you’ll find the DASH tab in the hamburger menu upper left.
+(omnipod-dash-tab)=
 
-![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
+## Obrazovka pumpy DASH
 
-## Dash Configuration
+Na obrazovce pumpy DASH spravujete své pody: aktivujete je a deaktivujete, obnovujete stav podu, ztišujete výstrahy a prohlížíte historii podu. Otevřete ji přes **Spravovat** > **Pumpa** nebo tlačítkem **Otevřít plugin** na kartě **Omnipod Dash** v **Konfigurace** > **Pumpa**.
 
-**Swipe left** to the [**DASH tab**](#omnipod-dash-tab) where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
+Takto vypadá obrazovka bez aktivního podu:
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) 'Refresh' pod connectivity and status, be able to silence pod alarms when the pod beeps
+![Obrazovka pumpy DASH bez aktivního podu](../images/v4/Pumps/dash_pump_screen.png)
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png)   'Pod Management' (Activate, Deactivate, Play test beep, and Pod history)
+A takto vypadá obrazovka s aktivním podem:
+
+![Obrazovka pumpy DASH s aktivním podem](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
+
+Ikona **Nastavení** (ozubené kolo) v pravém horním rohu otevře [nastavení Dash](#omnipod-dash-settings).
+
+***POZNÁMKA:** Pokud některé pole na obrazovce pumpy ukazuje (neznámé), stiskněte **Obnovit** pro aktualizaci stavu podu.*
+
+### Pole
+
+- **Adresa Bluetooth:** Bluetooth adresa podu.
+
+- **Kvalita připojení:** Jak spolehlivě se **AAPS** připojuje k podu. Zobrazuje se jako *úspěšná připojení / všechny pokusy o připojení :: úspěšnost*, například `412/420 :: 98.10 %`. Po více než 50 úspěšných připojeních se hodnota zbarví žlutě pod 90 % a červeně pod 70 %. Nízká hodnota ukazuje na problém s Bluetooth (viz [Problémy související s Bluetooth](#omnipod-dash-bluetooth-related-issues)).
+
+- **Stav doručení:** Nezpracovaný stav výdeje, který hlásí pod. Toto pole se zobrazuje jen v sestaveních s inženýrským režimem.
+
+- **Unikátní ID:** Unikátní ID, které **AAPS** přidělilo podu při aktivaci.
+
+- **Číslo šarže:** Výrobní číslo šarže podu.
+
+- **Pořadové číslo:** Pořadové číslo podu.
+
+- **Verze firmwaru:** Verze firmwaru a Bluetooth podu.
+
+- **Čas na Podu:** Aktuální čas v podu včetně jeho časového pásma. Text se zbarví červeně, když se časové pásmo podu liší od časového pásma telefonu, a žlutě, když se čas podu liší o více než 10 minut.
+
+- **Expirace Podu:** Datum a čas, kdy pod vyprší (72 hodin po aktivaci). Text se zbarví žlutě během posledních 4 hodin před tímto časem. Nikdy se nezbarví červeně, protože pod po tomto čase dál vydává inzulín.
+
+- **Definitivní konec podu:** Konec doby tolerance podu (8 hodin po **Expirace Podu**, maximální životnost podu je tedy 80 hodin). Text se zbarví žlutě, když začne doba tolerance (v čase **Expirace Podu**), a červeně během posledních 4 hodin před definitivním koncem. Během doby tolerance ukazuje také zbývající čas, například *(zbývá 17 min)*. Při definitivním konci pod přestane vydávat inzulín a musí se vyměnit.
+
+- **Stav Podu:** Stav podu: **Žádný aktivní Pod**, **Probíhá nastavování**, **Běží**, **Pozastaveno** nebo po chybě podu **ALARM**.
+
+- **Poslední připojení:** Před jakou dobou **AAPS** naposledy komunikovalo s podem.
+
+  - *před chvílí* – před méně než 10 sekundami.
+
+  - *Před méně než minutou* – před 10 až 60 sekundami.
+
+  - *před XX minut* – před více než 1 minutou (a po hodině *před X hodin a XX minut*).
+
+- **Poslední bolus:** Množství posledního bolusu odeslaného do podu a před jakou dobou byl podán. Nepotvrzený bolus je označen (neznámé).
+
+- **Základní hodnota bazálu:** Bazální dávka naprogramovaná pro aktuální čas ve vašem bazálním **profilu**.
+
+- **Dočasná bazální dávka:** Dočasný bazál (TBR), který právě běží, s časem začátku a trváním. Toto pole se zobrazuje jen tehdy, když běží TBR.
+
+- **Zásobník:** Ukazuje *Zbývá více než 50 U*, když v zásobníku zbývá více než 50 jednotek. Pod 50 jednotek se zobrazuje přesné množství. Pod 20 jednotek se hodnota zbarví červeně.
+
+- **Celkem vydáno:** Celkové množství inzulínu vydaného ze zásobníku. To zahrnuje i inzulín použitý na plnění.
+
+- **Výstrahy aktivního Podu:** Výstrahy, které jsou na podu právě aktivní, například *Životnost Podu brzy skončí* nebo *Nízký stav zásobníku*.
+
+- **Chyby:** Chyba podu, pokud pod selhal. Zobrazuje se červeně jako *Chyba Podu:* a za tím kód a název chyby, například *Chyba Podu: 020 ALARM_OCCLUDED*. Starší chyby a podrobnější informace najdete v [historii podu](#omnipod-dash-view-pod-history) a v log souborech. Viz [Selhání podu](#omnipod-dash-pod-failures).
+
+- **Oznámení PDM:** Zobrazuje se jen po chybě podu. Ukazuje chybu tak, jak by ji zobrazil Omnipod PDM: název (například *Detekována okluze*, *Prázdný zásobník* nebo *Pod vypršel*), co se stalo (například *Doručení inzulínu bylo zastaveno. Nyní změňte Pod.*) a kód *Ref:*.
+
+### Tlačítka
+
+Tlačítka ve spodní části obrazovky pumpy se mění podle stavu podu. Zobrazují se jen tlačítka, která mají v danou chvíli smysl.
+
+- **Obnovit:** Zeptá se podu na jeho aktuální stav.
+  - *Použijte ho k aktualizaci stavu podu a k vyčištění polí, která ukazují (neznámé).*
+  - *Více informací najdete níže v části [Řešení problémů](#omnipod-dash-troubleshooting).*
+
+- **Ztišit výstrahy:** Zastaví pípání výstrah podu (například při konci životnosti podu nebo nízkém stavu zásobníku). Zobrazuje se jen tehdy, když má pod aktivní výstrahu. Viz [Ztišení výstrah podu](#omnipod-dash-silencing-pod-alerts).
+
+- **Obnovit dodávání inzulínu:** Obnoví výdej inzulínu na pozastaveném podu. Zobrazuje se jen tehdy, když je výdej pozastavený. Viz [Obnovení výdeje inzulínu](#omnipod-dash-resuming-insulin-delivery).
+
+- **Nastavit čas:** Nastaví pod na časové pásmo vašeho telefonu tak, že znovu odešle váš bazální **profil**. Zobrazuje se jen tehdy, když se časové pásmo podu liší od časového pásma vašeho telefonu.
+
+- [**Aktivovat Pod**](#omnipod-dash-activate-pod): Naplní a aktivuje nový pod. Zobrazuje se, když není aktivní žádný pod.
+
+- [**Deaktivovat Pod**](#omnipod-dash-deactivate-pod): Deaktivuje aktivní pod. Zobrazuje se, jakmile je pod spárovaný s **AAPS**, také když se aktivace zastavila v polovině (například protože pod během aktivace selhal). **AAPS** vás před deaktivací podu požádá o potvrzení.
+
+- **Přehrát testovací pípnutí:** Pod jednou testovací pípne.
+
+- [**Historie Podu**](#omnipod-dash-view-pod-history): Zobrazí historii činností aktivního podu.
+
+- **Vyřadit Pod:** Odstraní nedokončený pod z **AAPS**. Zobrazuje se jen tehdy, když se aktivace podu zastavila v polovině. **AAPS** vás požádá o potvrzení. Po vyřazení už **AAPS** s tímto podem nemůže komunikovat: sundejte ho z těla.
+
+![Nabídka Pod Management](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+
+```{admonition} Older screenshot
+:class: note
+Snímek obrazovky výše je ze starší verze **AAPS**, která měla samostatnou nabídku **Pod Management** (správa podu). V **AAPS** 4 jsou všechny tyto akce, včetně **Aktivovat Pod**, **Deaktivovat Pod**, **Přehrát testovací pípnutí** a **Historie Podu**, tlačítka s textovými popisky přímo na obrazovce pumpy.
+```
 
 (omnipod-dash-activate-pod)=
 
-### Activate Pod
+## Aktivovat Pod
 
-1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
-
-   ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)
+1. Otevřete obrazovku pumpy DASH (**Spravovat** > **Pumpa**) a stiskněte **Aktivovat Pod**. Otevře se průvodce aktivací.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with **at least 80 units** of insulin and listen for two beeps indicating that the pod is ready to be primed.
+   ```{admonition} Older screenshot
+   :class: note
+   Snímek obrazovky výše je ze starší verze **AAPS**. V **AAPS** 4 je **Aktivovat Pod** tlačítko přímo na obrazovce pumpy DASH, ne v nabídce **Pod Management**.
+   ```
 
-   ***NOTE:** When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.*
+   Pokud jste v **AAPS** ještě nikdy neaktivovali **profil**, průvodce nejdřív zobrazí krok **Vyžadován profil**: vyberte profil, který se má použít při aktivaci, a pokračujte.
+
+2. Zobrazí se krok **Naplnit Pod**. Naplňte nový pod dostatkem inzulínu na 3 dny, **alespoň 80 jednotkami**. Poslouchejte, zda pod dvakrát pípne: znamená to, že bylo naplněno minimální množství 80 jednotek. Stříkačku vyprázdněte úplně, i když už jste slyšeli dvě pípnutí. Kryt jehly podu zatím nesundávejte.
+
+   ***POZNÁMKA:** Při výpočtu množství inzulínu na 3 dny pamatujte, že plnění podu spotřebuje asi 3–10 jednotek.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)
 
    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-   Ensure that the new pod and the phone running **AAPS** are within close proximity of each other and click the **Next** button.
+   Ujistěte se, že nový pod a telefon s **AAPS** jsou blízko sebe, a stiskněte **Další**.
 
-   ***NOTE**: if the  error message below pops up _'Could not find an available pod for activation'_ (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.*
+3. Pokud v **AAPS** používáte více než jeden inzulín, zobrazí se krok **Vybrat inzulín**. Ukazuje inzulín, který je **Aktuálně aktivní**. Pokud jste pod naplnili jiným inzulínem, stiskněte **Změnit** a vyberte ho. Po dokončení aktivace **AAPS** provede **přepnutí profilu** s tímto inzulínem. Stiskněte **Další**.
 
-   ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
+   ![Krok Vybrat inzulín](../images/v4/Pumps/dash_wizard_select_insulin.png)
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  
-   A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+4. V kroku **Inicializovat Pod** se **AAPS** spáruje s novým podem a naplní ho. Uslyšíte cvaknutí a po něm sérii tikavých zvuků, jak se pod sám plní. Když to úspěšně skončí, objeví se tlačítko **Další**. Stiskněte **Další**.
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. Next, prepare the infusion site ready to receive the new pod. Wash hands to avoid any risk of infection. Clean the infusion site by either using soap and water or an alcohol wipe to disinfect and let the skin air dry completely before proceeding.   
-   If you get skin irritation from the adhesive consider using a Barrier Wipe or Barrier Spray.
+   ***POZNÁMKA**: Pokud se objeví chybová zpráva, například _Skenování se nezdařilo_ nebo _'Could not find an available pod for activation'_ (to se může stát), nepanikařte. Stiskněte **Opakovat**. Ve většině případů pak aktivace úspěšně pokračuje.*
 
-   Remove the pod's blue plastic needle cap. If you see something that sticks out of the pod or it looks unusual, **STOP** the process and start with a new pod. If everything looks **OK**, proceed to take off the white paper backing from the adhesive and stick the pod to the selected site on your body.
+   ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-   When finished, click on the **Next** button.
+   Pokud pod selhal (například protože byl překročen čas jeho aktivace), místo **Opakovat** se zobrazí **Deaktivovat Pod**. Použijte ho a začněte znovu s novým podem.
+
+   Pokud stisknete **Zrušit** před dokončením aktivace, **AAPS** vás požádá o potvrzení, že chcete průvodce ukončit. Stiskněte **OK** pro opuštění průvodce, nebo **Zrušit** pro setrvání.
+
+   ![Potvrzení ukončení](../images/v4/Pumps/dash_wizard_exit_confirm.png)
+
+5. Pokud v **AAPS** spravujete střídání míst pumpy (**Spravovat střídání míst pumpy** v nastavení [Rotace míst aplikace](#Aapsscreens-site-rotation)), zobrazí se krok **Umístění**. Na schématu těla vyberte, kam pod umístíte, a stiskněte **Další**, nebo stiskněte **Přeskočit**.
+
+   ![Krok Umístění](../images/v4/Pumps/dash_wizard_site_location.png)
+
+6. Dále připravte místo vpichu pro nový pod. Umyjte si ruce, abyste se vyhnuli riziku infekce. Očistěte místo vpichu mýdlem a vodou nebo alkoholovým tamponem a před pokračováním nechte kůži úplně oschnout na vzduchu. Pokud vám lepidlo dráždí kůži, zvažte použití ochranného ubrousku nebo ochranného spreje.
+
+   V kroku **Nasaďte Pod** sundejte z podu modrý plastový kryt jehly. Pokud z podu vyčnívá kanyla nebo cokoli jiného, nebo pokud pod vypadá neobvykle, **ZASTAVTE**: stiskněte **Zrušit** a začněte znovu s novým podem. Pokud vše vypadá **v pořádku**, sloupněte z lepicí vrstvy bílý papír a nalepte pod na zvolené místo na těle.
+
+   Až budete hotovi, stiskněte **Další**.
 
    ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-6. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula!**
+7. Zobrazí se potvrzovací dialog: *Když stisknete OK, kanyla se vloží.* **Stiskněte OK JEN tehdy, když jste připraveni kanylu vložit!**
 
    ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-7. After pressing **OK**, it may take some time before the DASH responds and inserts the cannula (1-2 minutes maximum). **Be patient!**
+8. V kroku **Vložit kanylu** **AAPS** nastaví váš bazální rozpis a pod vloží kanylu. Může to chvíli trvat (maximálně 1–2 minuty). **Buďte trpěliví!**
 
-   ***NOTE:** Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+   ***POZNÁMKA:** Je dobré stisknout kůži v okolí místa vpichu kanyly, než se kanyla vloží. Jehla pak vnikne hladce a snižuje se riziko okluze (ucpání).*
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-8. A green checkmark is shown on the screen, and the **Next** button becomes available to select upon successful cannula insertion.   
-   Click on the **Next** button.
+9. Když je kanyla úspěšně vložena, objeví se tlačítko **Další**. Stiskněte **Další**.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-1. The **Pod activated** screen is displayed.
+10. Zobrazí se krok **Pod aktivován**. Zkontrolujte, že kanyla byla vložena správně, a pokud si myslíte, že ne, pod vyměňte.
 
-   Click on the green **Finished** button.
+    Stiskněte **Dokončit**.
 
-   Congratulations! You have now started a new pod session.
+    Gratulujeme! Nyní jste zahájili novou relaci podu.
 
-   ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
+    ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-2. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+11. Jste zpět na obrazovce pumpy DASH. Nyní ukazuje informace o vašem aktivním podu, včetně aktuální bazální dávky, stavu zásobníku, vydaného inzulínu, chyb a výstrah podu. **Aktivovat Pod** je nahrazeno tlačítkem **Deaktivovat Pod**: další pod nemůžete aktivovat, dokud nedeaktivujete ten aktivní.
 
-    Click on the back button on your phone to return to the **DASH** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    ***POZNÁMKA:** Podrobnosti o zobrazených informacích najdete v části [Obrazovka pumpy DASH](#omnipod-dash-tab).*
 
-    ***NOTE:** For more details on the information displayed go to the [**DASH Tab**](#omnipod-dash-tab) section of this document.*
+    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-   ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)
+    ***POZNÁMKA:** Je dobré exportovat nastavení AŽ PO aktivaci podu. Exportujte svá nastavení po každé výměně podu a jednou za měsíc. Zkopírujte soubor s exportem nastavení do cloudového úložiště (například na Disk Google) nebo jinam mimo telefon pro případ, že telefon ztratíte (viz [**Vytváření a obnova záloh**](../Maintenance/ExportImportSettings.md)).*
 
-   ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
-
-   ***NOTE:** It is good practice to export settings AFTER activating the pod. Settings should be exported after each pod change and once a month, ensure you copy the exported settings file to a cloud storage location (e.g. Google Drive) or somewhere off your phone in case you loose your phone (see [**Export settings**](../Maintenance/ExportImportSettings.md)).*
-
+Pokud se dřívější aktivace zastavila až po naplnění podu, stisknutí **Aktivovat Pod** pokračuje od kroku **Nasaďte Pod**.
 
 (omnipod-dash-deactivate-pod)=
 
-### Deactivate Pod
+## Deaktivovat Pod
 
-Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of total pod usage.
+Za normálních okolností vydrží pod tři dny (72 hodin) plus dobu tolerance 8 hodin po varování o konci životnosti podu: celkem 80 hodin.
 
-To deactivate a pod (either from expiration or from a pod failure):
+Deaktivace podu (protože vypršel nebo protože selhal):
 
-1. Go to the **DASH** tab, click on the **POD MGMT (1)** button, on the **Pod Management** screen click on the **Deactivate Pod (2)** button.
+1. Otevřete obrazovku pumpy DASH (**Spravovat** > **Pumpa**) a stiskněte **Deaktivovat Pod**.
 
-   ![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
+   ![Tlačítko Deaktivovat Pod na obrazovce pumpy DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-   ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
-
-2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod.
-
-   You will receive a confirmation beep from the pod that deactivation was successful.
+2. V kroku **Deaktivovat Pod** stiskněte **Další**. Dialog se zeptá: *Deaktivovaný pod nelze znovu použít. Chcete nyní deaktivovat tento pod?* Stiskněte **OK** pro zahájení deaktivace podu, nebo **Zrušit**, pokud si ho chcete ponechat. Deaktivace pozastaví veškerý výdej inzulínu a nelze ji vrátit zpět.
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
+3. Během deaktivace podu v **AAPS** se zobrazí krok **Deaktivace Podu**. Pod pípne na potvrzení, že deaktivace proběhla úspěšně.
+
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
-3. A green checkmark will be displayed upon successful deactivation. Click on the **Next** button to display the pod deactivated screen.
+   ```{admonition} Older screenshot
+   :class: note
+   Snímek obrazovky výše je ze starší verze **AAPS**. V **AAPS** 4 průvodce ukazuje průběh jako řadu teček nahoře místo ukazatele průběhu.
+   ```
 
-   You may now remove your pod as the active session has been deactivated.
+   Když deaktivace úspěšně skončí, objeví se tlačítko **Další**. Stiskněte **Další**.
 
    ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-4. Click on the green button to return to the **Pod Management** screen.
+   Pokud deaktivace selže, zobrazí se chybová zpráva a tlačítko **Vyřadit Pod**. Než ho použijete, přečtěte si níže část [Vyřazení podu](#omnipod-dash-discard-pod). Můžete také stisknout **Zrušit** a zkusit **Deaktivovat Pod** znovu později.
+
+4. Zobrazí se krok **Pod deaktivován**. Sundejte pod z těla a stiskněte **Dokončit**.
 
    ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab.
+5. Jste zpět na obrazovce pumpy DASH. Zkontrolujte, že pole **Stav Podu** ukazuje **Žádný aktivní Pod** a že se znovu zobrazuje tlačítko **Aktivovat Pod**.
 
-   Verify that the **Pod status:** field displays a **No active Pod** message.
+   ![Obrazovka pumpy DASH se stavem Žádný aktivní Pod](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
-   ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+(omnipod-dash-discard-pod)=
 
-   ![Deactivate_Pod_8](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
+### Vyřazení podu
 
+Pod vyřaďte jen tehdy, když veškerá komunikace s ním opakovaně selhává. Pokud **AAPS** s podem stále dokáže komunikovat, použijte místo toho **Deaktivovat Pod**.
+
+- **AAPS** vás před vyřazením podu požádá o potvrzení.
+- Poté už **AAPS** s tímto podem nemůže komunikovat.
+- **Výdej inzulínu NEBYL pozastaven**, protože pod nebyl řádně deaktivován. **Sundejte pod z těla!**
+- Krok **Pod vyřazen** potvrzuje, že stav podu byl vyřazen. Stiskněte **Dokončit**. Nyní můžete aktivovat nový pod.
 
 (omnipod-dash-resuming-insulin-delivery)=
 
-### Resuming Insulin Delivery
+## Obnovení výdeje inzulínu
 
-**NOTE**: During **Profile Switches**, like when using the PDM, AAPS must suspend delivery on the Pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, then delivery can stay suspended, Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
+**POZNÁMKA**: Během **přepnutí profilu** musí **AAPS**, stejně jako PDM, pozastavit výdej v podu, než nastaví nový bazální **profil**. Pokud komunikace mezi příkazy pro pozastavení a obnovení selže, výdej může zůstat pozastavený. Více podrobností najdete v části [**Výdej pozastaven**](#omnipod-dash-delivery-suspended) v řešení problémů.
 
-When insulin delivery is suspended you will need to issue a command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal **Profile**. The pod will again accept commands for bolus, **TBR**, and **SMB**.
+Když je výdej inzulínu pozastavený, musíte podu říct, aby výdej inzulínu obnovil. Když je příkaz úspěšně zpracován, pod znovu vydává inzulín podle bazální dávky pro aktuální čas z vašeho aktivního bazálního **profilu**. Pod opět přijímá příkazy pro bolus, **TBR** a **SMB**.
 
-1. Go to the **DASH** tab and ensure the **Pod status (1)** field displays **SUSPENDED**, then press the **RESUME DELIVERY (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod Status (3)** field.
+1. Otevřete obrazovku pumpy DASH a zkontrolujte, že pole **Stav Podu** ukazuje **Pozastaveno**. Stiskněte **Obnovit dodávání inzulínu**, aby pod obnovil normální výdej inzulínu.
 
-   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH_images/Resume/Resume_2.jpg)
+   ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
 
-2. When the Resume delivery command is successful, a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
+2. Když byl příkaz úspěšný, pole **Stav Podu** ukazuje **Běží** a tlačítko **Obnovit dodávání inzulínu** zmizí.
 
    ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
-3. The **DASH** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will no longer be displayed
-
    ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
+
+   ```{admonition} Older screenshot
+   :class: note
+   Snímky obrazovky výše jsou ze starší verze **AAPS**, která zobrazovala potvrzovací dialog. V **AAPS** 4 výsledek ověříte na obrazovce pumpy DASH: pole **Stav Podu** ukazuje **Běží** a tlačítko **Obnovit dodávání inzulínu** zmizelo.
+   ```
+
+   Pokud příkaz selže, **AAPS** zobrazí varovný dialog, který začíná textem *Nepodařilo se obnovit výdej*. Stiskněte **Obnovit** a zkuste to znovu.
+
+   ![Varování Nepodařilo se obnovit výdej](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
-### Silencing Pod Alerts
+## Ztišení výstrah podu
 
-The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
+Tato část vysvětluje, jak zastavit pípání podu, když se pod blíží konci své životnosti. Kdy pípání začne, závisí na nastavení **Výstrahy** (viz [Nastavení Dash](#omnipod-dash-settings)):
 
-***NOTE**: The **SILENCE ALERTS (3)** button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the **SILENCE ALERTS** button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+- **Připomenutí v hodinách před vypršením platnosti (72 hodin):** kolik hodin před vypršením po 72 hodinách začne pod pípat.
+- **Upozornění v hodinách před vypnutím (80 hodin):** kolik hodin před vypnutím po 80 hodinách pod pípne znovu.
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will be required soon.  
-   You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed.  
-   Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
+Maximální životnost podu je 80 hodin (3 dny a 8 hodin). Výrobce podu ale doporučuje nepřekračovat 72 hodin (3 dny).
+
+***POZNÁMKA**: Tlačítko **Ztišit výstrahy** se na obrazovce pumpy DASH zobrazuje jen tehdy, když má pod aktivní výstrahu, například při konci životnosti podu nebo nízkém stavu zásobníku. Pokud se tlačítko **Ztišit výstrahy** nezobrazuje, ale slyšíte pípání podu, stiskněte **Obnovit**.*
+
+1. Když nastane čas připomenutí, pod pípáním oznámí, že brzy vyprší a že ho musíte vyměnit. Na obrazovce pumpy DASH ukazuje pole **Expirace Podu (1)** přesný čas, kdy pod vyprší (72 hodin po aktivaci). Text se zbarví žlutě 4 hodiny před tímto časem. Potom se **Definitivní konec podu** zbarví žlutě a ukazuje zbývající čas, než pod přestane vydávat inzulín. Pole **Výstrahy aktivního Podu (2)** ukazuje **Životnost Podu brzy skončí** a zobrazí se tlačítko **Ztišit výstrahy (3)**.
 
    ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Go to the **DASH** tab and press the **SILENCE ALERTS (2)** button. **AAPS** sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. Stiskněte **Ztišit výstrahy**. **AAPS** odešle podu příkaz, aby přestal pípat kvůli konci životnosti.
 
    ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
-3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been Silenced**. Click the **OK** button to confirm and dismiss the dialog.
+   ```{admonition} Older screenshot
+   :class: note
+   Snímek obrazovky výše je ze starší verze **AAPS**, kde tato obrazovka byla kartou **DASH**. V **AAPS** 4 je tlačítko **Ztišit výstrahy** na obrazovce pumpy DASH (**Spravovat** > **Pumpa**).
+   ```
+
+3. Když jsou výstrahy ztišeny, výstraha se už nezobrazuje v poli **Výstrahy aktivního Podu**, tlačítko **Ztišit výstrahy** zmizí a pod přestane pípat kvůli konci životnosti.
 
    ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
-4. Go to the **DASH** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
+   ```{admonition} Older screenshot
+   :class: note
+   Snímek obrazovky výše je ze starší verze **AAPS**, která zobrazovala potvrzovací dialog. V **AAPS** 4 výsledek ověříte na obrazovce pumpy DASH: výstraha zmizela z pole **Výstrahy aktivního Podu**.
+   ```
+
+   Pokud příkaz selže, **AAPS** zobrazí varovný dialog, který začíná textem *Nezdařilo se potvrdit výstrahy*. Stiskněte **Obnovit** a zkuste to znovu.
+
+Výstraha na nízký stav zásobníku funguje stejně. Když množství inzulínu v podu klesne na hodnotu **Počet jednotek** nastavenou v nastavení **Výstrahy**, pod pípne. Pole **Zásobník** ukazuje zbývající množství, pole **Výstrahy aktivního Podu** ukazuje **Nízký stav zásobníku** a zobrazí se tlačítko **Ztišit výstrahy**. Stiskněte **Ztišit výstrahy**, abyste zastavili pípání, a naplánujte si další výměnu podu.
+
+![Obrazovka pumpy DASH s výstrahou Nízký stav zásobníku](../images/v4/Pumps/dash_low_reservoir_alert.png)
 
 (omnipod-dash-view-pod-history)=
 
-### View Pod History
+## Zobrazení historie podu
 
-This section explains how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three days (72 - 80 hours) life.
+Tato část vysvětluje, jak si prohlédnout historii aktivního podu a filtrovat ji podle typu akce. Historie podu ukazuje příkazy odeslané do aktivního podu a jejich výsledky během jeho třídenní životnosti (72–80 hodin).
 
-This feature is helpful in verifying boluses, TBRs and basal commands that were sent to the pod. The remaining categories are useful for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+Hodí se ke kontrole bolusů, TBR a bazálních příkazů, které byly do podu odeslány. Ostatní kategorie pomáhají při řešení problémů a ukazují pořadí událostí, které vedly k selhání.
 
-***NOTE:** **Only the last command can be uncertain**. New commands *will not be sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. The way to 'fix' uncertain commands is to **'refresh pod status'**.*
+***POZNÁMKA:** **Nejistý může být jen poslední příkaz**. Nové příkazy *se neodesílají*, dokud se **poslední „nejistý“ příkaz nestane „potvrzeným“ nebo „zamítnutým“**. Abyste nejistý příkaz „opravili“, stiskněte **Obnovit** na obrazovce pumpy DASH.*
 
-1. Go to the **DASH** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. Otevřete obrazovku pumpy DASH a stiskněte **Historie Podu**.
 
-   ![Pod_history_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)  
    ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
-2. On the **Pod history** screen, the default category of **All (1)** is displayed, showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main **AAPS** interface.
+   ```{admonition} Older screenshot
+   :class: note
+   Snímek obrazovky výše je ze starší verze **AAPS**. V **AAPS** 4 je **Historie Podu** tlačítko přímo na obrazovce pumpy DASH, ne v nabídce **Pod Management**.
+   ```
+
+2. Otevře se obrazovka **Historie Podu** s vybraným filtrem **Vše**. Obsahuje všechny příkazy s časem a výsledkem, nejnovější nahoře, seskupené podle dnů. Pomocí tlačítek filtru nahoře (například **Bolusy** nebo **Bazály**) zobrazíte jen jeden typ příkazů. Stisknutím šipky zpět se vrátíte na obrazovku pumpy DASH.
 
    ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
-(omnipod-dash-tab)=
+   ```{admonition} Older screenshot
+   :class: note
+   Druhý snímek obrazovky výše je ze starší verze **AAPS**, kde se typ příkazu vybíral ze seznamu **Type** (typ). V **AAPS** 4 používáte tlačítka filtru, která ukazuje první snímek obrazovky.
+   ```
 
-## DASH Tab
+   U bolusů následuje za množstvím typ bolusu, pokud nejde o normální bolus, například *0,05 U (SMB)* nebo *0,05 U (Korekce bazálu)*. Korekce bazálu je velmi malý bolus (jeden pulz podu, 0,05 U), který ovladač posílá sám; vy jste o něj nežádali.
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **DASH** tab in the main AAPS interface.
+   ```{admonition} Why basal corrections happen
+   :class: note
+   Pod vydává bazální inzulín v pulzech po 0,05 U, které časuje vnitřní hodiny. Při každé změně bazální dávky (například když smyčka nastaví nový **TBR**) pod tyto hodiny restartuje a pulz, ke kterému se zrovna blížil, se ztratí. Protože smyčka mění bazální dávku často, zvlášť v noci, může pod nakonec vydat méně bazálního inzulínu, než se čekalo.
 
-***NOTE:** If any message in the **DASH** tab status fields report (uncertain), then you will need to press the Refresh button to clear it and refresh the pod status.*
-
-![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
-
-### Fields
-
-
-
-- **Bluetooth Address:** Displays the current bluetooth address of the connected Pod.
-
-- **Bluetooth Status:**  Displays the current connection status.
-
-- **Sequence Number:** Displays the sequence number of the active POD.
-
-- **Firmware Version:** Displays the firmware version for the active connection.
-
-- **Time on Pod:** Displays the current time on the Pod.
-
-- **Pod status:** Displays the Pod status.
-
-- **Last connection:** Displays time of last communication with the Pod.
-
-  - *Moments ago* - less than 20 seconds ago.
-
-  - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-
-  - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-
-  - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
-
-- **Last bolus:** Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-
-- **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-
-- **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
-  - {Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})
-
-  - Example:* 0.00U/h @18:25 ( 90/120 minutes)
-
-- **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
-
-- **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming.
-
-- **Errors:** Displays the last error encountered. Review the [Pod history](#omnipod-dash-view-pod-history) and log files for past errors and more detailed information.
-
-- **Active pod alerts:** Reserved for currently running alerts on the active pod.
-
-
-
-### Buttons
-
-![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) Sends a refresh command to the active pod to update communication.
-
-  - *Use to refresh the pod status and dismiss status fields that contain the text (uncertain).*
-
-  - *See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for additional information.*
-
-![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png)   Navigates to the Pod management menu.
-
-![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
-
-  - *Tlačítko je zobrazeno pouze v případě, že na PODu vypršel čas pro uzpozornění.*
-  -  *Upon successful dismissal, this icon will no longer appear.*
-
-![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png)    Resumes the currently suspended insulin delivery in the active pod.
-
-
-
-### Pod Management Menu
-
-Below is describes the purpose of each icon on the **Pod Management** menu, accessed by pressing **POD MGMT (1)** button from the **DASH** tab.
-
-![DASH_Tab_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)
-
-![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
-
-**The table below describes each button and it's function:**
-
-| Button | Function                                                                                      |
-| ------ | --------------------------------------------------------------------------------------------- |
-| 1      | Access the Pod Mgmt settings                                                                  |
-| 2      | [**Activate Pod**](#omnipod-dash-activate-pod): Primes and activates a new pod.               |
-| 3      | [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the currently active pod.     |
-| 4      | **Play Test Beep** : Plays a single test beep on the pod when pressed.                        |
-| 5      | [**Pod history**](#omnipod-dash-view-pod-history) : Displays the active pod activity history. |
-
+   **AAPS** porovnává bazální inzulín, který pod hlásí jako vydaný, s tím, co měl vydat. Když chybějící množství dosáhne poloviny pulzu nebo víc, ovladač vydá jeden pulz navíc jako korekci bazálu, takže stále dostanete bazální inzulín, který požadoval váš profil a smyčka. Žádná korekce se neposílá, když je pod pozastavený nebo když běží nulový **TBR**.
+   ```
 
 (omnipod-dash-settings)=
 
-## Dash Settings
+## Nastavení Dash
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜ **Pump**  **Dash** ➜ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the **AAPS** interface titled **DASH**.
+Nastavení ovladače Dash můžete otevřít dvěma způsoby:
 
-![Dash_settings_1](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
+- Stiskněte ikonu **Nastavení** (ozubené kolo) v pravém horním rohu [obrazovky pumpy DASH](#omnipod-dash-tab).
+- Otevřete **nabídku** (☰) v levém horním rohu hlavní obrazovky a vyberte **Konfigurace** > **Pumpa**. Na kartě **Omnipod Dash** stiskněte **Nastavení**.
 
-***NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.*
+Nastavení jsou rozdělená do čtyř rozbalovacích částí: **Potvrzovací pípnutí**, **Výstrahy**, **Oznámení** a **Rozšířená nastavení**. Klepnutím část otevřete:
 
-![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
+![Nastavení Dash](../images/v4/Pumps/dash_settings.png)
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+Většina nastavení jsou přepínače zap./vyp.
 
-***NOTE:** An asterisk (\*) denotes the default setting is enabled.*
-
-### Confirmation beeps
+### Potvrzovací pípnutí
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+Potvrzovací pípnutí podu při výdeji a změnách bolusu, bazálu, SMB a TBR.
 
-**Bolus beeps enabled:**    Enable or disable confirmation beeps when a bolus is delivered.
+**Pípnutí při bolusu povoleno:**    Pod pípne, když je vydán bolus. Ve výchozím stavu zapnuto.
 
-**Basal beeps enabled:**    Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+**Pípnutí při bazálu povoleno:**    Pod pípne, když je nastavena nová bazální dávka nebo když je aktivní bazální dávka zrušena nebo změněna. Ve výchozím stavu vypnuto.
 
-**SMB beeps enabled:**  Enable or disable confirmation beeps when a SMB is delivered.
+**Pípnutí při SMB povoleno:**  Pod pípne, když je vydán SMB. Ve výchozím stavu zapnuto.
 
-**TBR beeps enabled:**  Enable or disable confirmation beeps when a TBR is set or canceled.
+**Pípnutí při TBR povoleno:**  Pod pípne, když je TBR nastaven nebo zrušen. Ve výchozím stavu vypnuto.
 
-
-
-### Alerts
+### Výstrahy
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
-Provides **AAPS** alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
+```{admonition} Older screenshot
+:class: note
+Snímek obrazovky výše je ze starší verze **AAPS**. V **AAPS** 4 jsou tato nastavení v rozbalovací části **Výstrahy**.
+```
 
-***NOTE:** an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
+Výstrahy podu pro konec životnosti, vypnutí a nízký stav zásobníku. Když tato nastavení změníte při aktivním podu, **AAPS** odešle nové nastavení výstrah do podu.
 
-**Expiration reminder enabled:**    Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+***POZNÁMKA:** Oznámení **AAPS** se zobrazí VŽDY pro každou výstrahu, jakmile **AAPS** po spuštění výstrahy komunikuje s podem. Zavřením oznámení se výstraha podu NEZASTAVÍ. Abyste výstrahu zastavili, otevřete obrazovku pumpy DASH a stiskněte **Ztišit výstrahy**.*
 
-**Hours before shutdown:**  Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
+**Připomenutí vypršení platnosti povoleno:**    Když je zapnuto, pod pípne, když nastane čas připomenutí. Ve výchozím stavu zapnuto.
 
-**Low reservoir alert enabled:**    Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
+**Připomenutí v hodinách před vypršením platnosti (72 hodin):** Kolik hodin před vypršením podu po 72 hodinách začne připomenutí (1 až 24 hodin; výchozí 4).
 
-**Number of units:**    The number of units at which to trigger the pod low reservoir alert.
+**Upozornění na vypršení platnosti povoleno:**   Když je zapnuto, pod pípne, když nastane čas upozornění, a znovu 1 hodinu před vypnutím. Ve výchozím stavu zapnuto.
 
+**Upozornění v hodinách před vypnutím (80 hodin):**  Kolik hodin před vypnutím podu po 80 hodinách začne upozornění (1 až 8 hodin; výchozí 8).
 
+**Upozornění na nízký stav zásobníku povoleno:**    Pod vás upozorní, když množství inzulínu v zásobníku klesne na hodnotu v **Počet jednotek**. Ve výchozím stavu zapnuto.
 
-### Notifications
+**Počet jednotek:**    Počet jednotek, při kterém se spustí výstraha na nízký stav zásobníku (5 až 50 jednotek; výchozí 20).
+
+### Oznámení
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
-The Notification section allows the user to select their preferred notifications and audible phone alerts when AAPS is uncertain about the status of TBR, SMB, or bolus, and when delivery suspended events were successful.
+Zvolte, zda má **AAPS** přehrát zvuk se svými oznámeními, když si není jisté, zda byl TBR, SMB nebo bolus vydán, a když je výdej pozastavený.
 
-***NOTE:** These are notifications only, no audible beep alerts are made.*
+***POZNÁMKA:** Jde jen o oznámení v telefonu; samotný pod nepípá.*
 
-**Sound for uncertain TBR notifications enabled:**  Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a TBR was successfully set.
+**Zvuk pro nejistý dočasný bazál povolen:**  Přehraje zvuk s oznámením, když si **AAPS** není jisté, zda byl TBR nastaven.
 
-**Sound for uncertain SMB notifications enabled:**  Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if an SMB was successfully delivered.
+**Zvuk oznámení pro nejistý SMB povolen:**  Přehraje zvuk s oznámením, když si **AAPS** není jisté, zda byl SMB vydán.
 
-**Sound for uncertain bolus notifications enabled:**    Enable or disable this setting to trigger an audible alert and visual notification when **AAPS** is uncertain if a bolus was successfully delivered.
+**Zvuk oznámení pro nejistý bolus povolen:**    Přehraje zvuk s oznámením, když si **AAPS** není jisté, zda byl bolus vydán.
 
-**Sound when delivery suspended notifications enabled:**    Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered.
+**Zvuk oznámení o pozastavení výdeje povolen:**     Přehraje zvuk s oznámením, když je výdej inzulínu pozastavený.
 
-## Actions (ACT) Tab
+(omnipod-dash-advanced-settings)=
 
-This tab is well documented in the main **AAPS** documentation but there are a few items on this tab that are specific to how the DASH differs from tube based pumps, especially after the processes of applying a new pod.
+### Rozšířená nastavení
 
-1. Go to the **Actions (ACT)** tab in the main **AAPS** interface.
+![Část Rozšířená nastavení](../images/v4/Pumps/dash_settings_advanced.png)
 
-2. Under the **Careportal (1)** section the **Insulin** and **Cannula** fields will have their **age reset** to 0 days and 0 hours **after each pod change**. This is done because of how the Omnipod pump is built and operates. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
+**Bluetooth párování:**  Spáruje pod s telefonem přes Bluetooth (bonding). Zkuste to jen tehdy, když pod nedokáže udržet stabilní připojení, například na Androidu 15 (viz [Známá omezení a problémy Omnipod DASH v AAPS](#omnipod-dash-constraints)). Když je zapnuto, telefon zobrazí žádosti o spárování, které musíte přijmout. Pokud se pod připojuje bez problémů, nechte to vypnuté. Pod Androidem 15 to nemá žádný účinek. Ve výchozím stavu vypnuto.
 
-   ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
+## Stáří inzulínu a kanyly
 
-### Level
+[Stavový řádek](#screens-sensor-level-battery) na hlavní obrazovce ukazuje stáří vašeho inzulínu a kanyly. U Omnipodu to funguje trochu jinak než u pump s hadičkou.
 
-**Insulin Level**
+**AAPS** při každé aktivaci podu automaticky zaznamená výměnu kanyly a výměnu inzulínu. Tím se stáří **Inzulín** a **Kanyla** po každé výměně podu vynuluje. Nemusíte je zaznamenávat sami pomocí **Plnění/doplňování**. Je to proto, že pod zavádí kanylu přímo do kůže v místě, kde je nalepený: Omnipod nepoužívá hadičku.
 
-Insulin level displayed is the amount reported by DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left.
+Stáří **Baterie pumpy** se nehlásí: baterie i zásobník inzulínu jsou součástí každého podu a baterie vždy vydrží déle než samotný pod (maximálně 80 hodin).
 
-The DASH overview tab will display as described the below:
+![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-  * **Above 50 Units** - The pod reports more than 50 units currently in the reservoir.
-  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
+```{admonition} Older screenshot
+:class: note
+Snímek obrazovky výše je ze starší verze **AAPS**, kde se tato stáří zobrazovala v části **Péče** na kartě **Akce**. V **AAPS** 4 se zobrazují ve stavovém řádku na hlavní obrazovce.
+```
 
-Additional note:
-  * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+### Úroveň
 
-(omnipod-dash-known-issues-workarounds)=
+**Množství inzulínu**
 
-## Known Issues Workarounds
+Zobrazené množství inzulínu je množství, které hlásí pod. Pod ale hlásí skutečný stav zásobníku, až když je pod 50 jednotek. Do té doby se zobrazuje *Zbývá více než 50 U*. Hlášené množství není přesné: když pod hlásí „prázdný“, ve většině případů v zásobníku ještě zbývá několik jednotek inzulínu.
 
-This section covers common workarounds and settings that need to be changed to enable a feature to work around a community reported issue that has a fix. E.g. the Basal drift enable process is documented here.
+Obrazovka pumpy DASH ukazuje stav takto:
 
-(omnipod-dash-basal-drift-fix)=
+  * **Zbývá více než 50 U** – Pod hlásí v zásobníku více než 50 jednotek.
+  * **Pod 50 jednotek** – Přesné množství inzulínu, které v zásobníku zbývá, jak ho hlásí pod.
 
-### Basal Drift Fix Instructions
-
-The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than **AAPS** expects, see [Issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more technical details.
-
-The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new Basal rate.
-
-When used in combination with looping, this leads to under-delivery of basal insulin, as the algorithm updates the basal rate on the pump frequently.
-
-The issue is most apparent during the night. During daytime operation, SMBs often result in a basal rate of 0, which masks the effect. In observed usage, this results in approximately 10% of the expected Total Daily Dose (TDD) not being delivered over a 24-hour period. Additionally, glucose targets are often not reached overnight, particularly after meals with prolonged glucose impact (e.g. pasta).
-
-***NOTE:** This issue is especially important to understand for people on very small dosages of insulin, Children for example.*
-
-(omnipod-dash-drift-compensation-how-it-works)=
-
-#### How the drift compensation works
-
-The pod delivers insulin in pulses of 0.05 U. When the drift compensation is enabled, **AAPS** checks that the pod has really delivered the basal insulin it was asked to deliver, and adds the missing pulses.
-
-1. **AAPS** keeps a running total of the basal insulin the pod _should_ have delivered since activation. This total follows your profile basal rates and every temporary basal rate the loop sets.
-2. Each time the pod reports its status, **AAPS** compares this total with the basal insulin the pod _actually_ delivered: the pod's total pulse count, minus the pulses delivered as boluses and SMBs.
-3. Each time **AAPS** sets or cancels a temporary basal rate, it looks at the difference. If the pod is behind by half a pulse (0.025 U) or more, **AAPS** sends one extra pulse of 0.05 U. The pod delivers it silently, without beeps.
-
-**Safety limits:**
-
-- **AAPS** only adds insulin that the pod owes. It never removes insulin, and it does nothing when the pod is ahead.
-- One pulse at a time, at most one every 2 minutes.
-- No pulse while the loop runs a zero temporary basal rate, because the loop asked for no insulin. The exception is the 5 minutes after a bolus, when a zero temporary basal rate is usually just the loop compensating for an SMB.
-- No pulse while a pod is being activated, while delivery is suspended, after a pod fault, while a bolus is running, or if the reservoir is empty.
-- If the difference ever reaches 2 pulses (0.10 U), in either direction, **AAPS** does not try to catch up. It resets its running total to what the pod has really delivered.
-
-**What you will see:**
-
-- On the **DASH** tab, **Last Bolus** can show **0.05 U** even if you did not give a bolus.
-- In the [Pod history](#omnipod-dash-view-pod-history), the extra pulses appear as **Set Bolus 0.05 U**, usually right after a **Set Temporary Basal** line. See the example in [Check that the drift compensation is working](#omnipod-dash-drift-compensation-check) below.
-- The extra pulses are **not** recorded as boluses or SMBs in **AAPS** treatments, and they do not change your IOB. This is expected: **AAPS** already counted this insulin as basal. The extra pulses only make the pod deliver what **AAPS** thinks was delivered.
-
-#### Enable Basal Drift Fix in AAPS
-
-You must be running AAPS Version 3.4.2.3 or later for this feature.
-
-The Basal Drift Fix is not enabled by default on AAPS.
-
-**To enable it:**
-
-1. Create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
-
-   ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
-
-   ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
-
-2. Restart **AAPS**. This must be done for it to recognise the file is present and enable the drift compensation feature.
-3. Please visit this [Github issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) and thumbs up the first post indicating you are using this feature, we need this data to help demonstrate the feature is widely used. Once there is significant community adoption the removal of the enable file will be possible, we appreciate your support here.
-
-(omnipod-dash-drift-compensation-check)=
-
-#### Check that the drift compensation is working
-
-Compare what the pod delivered over a full day with what **AAPS** counted for the same day. Pick a day that is over: the check needs the full 24 hours.
-
-1. Go to the **DASH** tab (1) and press **POD MGMT** (2), then press **Pod history**. See [View Pod History](#omnipod-dash-view-pod-history).
-
-   ![dash_drift_tab_pod_mgmt](../images/DASH_images/DASH_Drift/dash_drift_tab_pod_mgmt.png)
-
-2. Note the **Total delivered** value of the entry closest to 00:00 at the start of the day (3), and of the entry closest to 24:00 at the end of the day (4). The difference is the insulin the pod delivered that day.
-
-   ![dash_drift_pod_stats_start](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_start.png)   ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_end.png)
-
-   In this example: 73.40 U (4) − 38.15 U (3) = 35.25 U delivered by the pod.
-
-3. Open the [AAPS statistics](#reviewing-statistics) and find the same day in the **TDD** table. Note the total in the **∑** column (5).
-
-   ![dash_drift_tdd](../images/DASH_images/DASH_Drift/dash_drift_tdd.png)
-
-4. Compare the two values. With the drift compensation working, they should differ by no more than 0.05 U. Without it, the pod total is usually clearly lower than the **AAPS** TDD.
-
-   In this example, the **AAPS** TDD is 35.3 U and the pod delivered 35.25 U: the drift compensation is working.
-
-***NOTE:** The **Pod history** only covers the active pod. If you changed pods during the day, choose another day.*
-
-## Troubleshooting
+Další poznámka:
+  * **SMS** – V odpovědích SMS vrací hodnotu, nebo 50+U, když je to přes 50 jednotek.
+  * **Nightscout** – Když je to přes 50 jednotek, nahrává do Nightscoutu hodnotu 50 (verze 14.07 a starší). Novější verze hlásí hodnotu 50+, když je to přes 50 jednotek.
 
 (omnipod-dash-troubleshooting)=
 
-This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
+## Řešení problémů
+
+Tato část popisuje běžné známé problémy a jejich řešení při používání Omnipod DASH s AAPS. V dokumentaci je také část [Obecné řešení problémů](../GettingHelp/GeneralTroubleshooting.md), kterou byste si měli projít, protože pokrývá témata důležitá i pro některé problémy s pody.
 
 ---
 
 (omnipod-dash-bluetooth-related-issues)=
 
-## **Bluetooth related issues**
+## Problémy související s Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Známé problémy s připojením Bluetooth, výpadky pump nebo podů a problémy s aktivací a připojením najdete na stránce [Problémy související s Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (omnipod-dash-delivery-suspended)=
 
-### Delivery suspended
+### Výdej pozastaven
 
-  - There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
-  - During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
-     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
-     - **AAPS** will try to set the new basal profile every 15 minutes.
-     - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume delivery**](#omnipod-dash-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
-     - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
-  - For unconfirmed commands, "refresh pod status" should confirm/deny them.
+  - Tlačítko pro pozastavení už neexistuje. Pokud chcete pod „pozastavit“, můžete nastavit nulový **TBR** na x minut.
+  - Během **přepnutí profilu** musí DASH pozastavit výdej, než nastaví nový bazální **profil**. Pokud komunikace mezi oběma příkazy selže, výdej může zůstat pozastavený. Když se to stane:
+     - Nebude se vydávat žádný inzulín, to zahrnuje bazál, SMB, ruční bolusy atd.
+     - Může se zobrazit oznámení, že jeden z příkazů není potvrzený: záleží na tom, kdy k selhání došlo.
+     - **AAPS** se bude každých 15 minut pokoušet nastavit nový bazální profil.
+     - Pokud výdej zůstává pozastavený (obnovení výdeje selhalo), **AAPS** každých 15 minut zobrazí oznámení, že výdej je pozastavený.
+     - Pokud chcete výdej obnovit ručně, na obrazovce pumpy DASH se zobrazuje tlačítko [**Obnovit dodávání inzulínu**](#omnipod-dash-resuming-insulin-delivery).
+     - Pokud **AAPS** nedokáže obnovit výdej samo (stane se to, když je pod nedostupný, zvuk je ztlumený atd.), pod začne pípat 4krát za minutu po dobu 3 minut a pak to opakuje každých 15 minut, pokud je výdej pozastavený déle než 20 minut.
+  - U nepotvrzených příkazů stiskněte **Obnovit** na obrazovce pumpy DASH, abyste je potvrdili nebo zamítli.
 
-*****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
-
----
-### Pod Failures
-
-- Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
-- It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
-- A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+*****POZNÁMKA:** Když slyšíte pípání podu, nepředpokládejte, že výdej bude pokračovat, aniž byste zkontrolovali telefon. Výdej může zůstat pozastavený, ***takže to musíte zkontrolovat!******
 
 ---
-### Preventing error 49 pod failures
+(omnipod-dash-pod-failures)=
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
+### Selhání podu
+
+- Pody občas selžou z různých důvodů, včetně hardwarových problémů samotného podu.
+- Je dobré nezakládat u společnosti Insulet reklamace ani žádosti o výměnu, protože AAPS není schválený způsob používání podů.
+- Seznam chybových kódů, který pomůže určit příčinu, [**najdete zde**](https://github.com/openaps/openomni/wiki/Fault-event-codes).
+
+Když pod selže, přestane vydávat inzulín a nepřetržitě pípá. **AAPS** zobrazí na hlavní obrazovce oznámení s kódem a názvem chyby a kódem *Ref:*, například *Chyba Podu: 020 ALARM_OCCLUDED*. Stisknutím **Zavřít** oznámení zavřete. Pípání podu to nezastaví.
+
+![Oznámení o chybě podu](../images/v4/Pumps/dash_pod_fault_notification.png)
+
+Na obrazovce pumpy DASH ukazuje pole **Stav Podu** hodnotu **ALARM**, pole **Chyby** ukazuje chybu podu a pole **Oznámení PDM** ji vysvětluje, například *Detekována okluze. Doručení inzulínu zastaveno. Vyměňte Pod. Zkontrolujte glykémii*.
+
+![Obrazovka pumpy DASH po chybě podu](../images/v4/Pumps/dash_pump_screen_pod_fault.png)
+
+Pod, který selhal, nelze znovu použít. Zkontrolujte glykémii, pak [pod deaktivujte](#omnipod-dash-deactivate-pod) a aktivujte nový.
+
+---
+### Prevence selhání podu s chybou 49
+
+Toto selhání souvisí s nesprávným stavem podu pro daný příkaz nebo s chybou během příkazu pro výdej inzulínu. Stane se to, když se ovladač a pod neshodnou na skutečném stavu. Pod (jako vestavěné bezpečnostní opatření) pak zareaguje neopravitelným chybovým kódem 49 (0x31) a skončí jako takzvaný „screamer“: dlouhé otravné pípání, které lze zastavit jen propíchnutím otvoru na správném místě na zadní straně podu. Přesnou příčinu „selhání podu 49“ je často těžké dohledat. V situacích, kdy hrozí podezření na toto selhání (například při pádu aplikace, při používání vývojové verze nebo při přeinstalaci).
 
 ---
 
-### Pump Unreachable Alerts
+### Výstrahy „Pumpa nedostupná“
 
-When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences** ➜ **Local Alerts** ➜ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
-
----
-### Export  Settings
-
-Exporting **AAPS** settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling **AAPS** or in case of phone loss, reinstalling on the new phone.
-
-***NOTE:** The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore **AAPS'** settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.*
-
-**It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active pod in case of a problem. For instance when moving to another backup phone.
-
-Regularly (after each export preferably) copy your exported settings to a safe place (a cloud drive e.g. Google Drive) that is accessible by any phone when needed. This allows you to restore to a phone from anywhere in case of a phone loss or factory reset of your phone while you are not at home.
+Když se s podem po předem nastavenou dobu nepodaří navázat komunikaci, zobrazí se výstraha „Pumpa nedostupná“. Výstrahy „Pumpa nedostupná“ můžete nastavit tak, že stisknete ikonu **Nastavení** (ozubené kolo) vpravo nahoře na hlavní obrazovce a vyberete **Místní výstrahy** ➜ **Práh nedostupnosti pumpy**. Doporučená hodnota je výstraha po **120** minutách.
 
 ---
-### Import Settings
+(omnipod-dash-export-import)=
+### Export a import nastavení
 
-**WARNING**: Please note that importing settings will possibly import an outdated Pod status (depending when you made the last export/backup).  
-As a result, there is a **risk of losing the active Pod!** (see **Exporting Settings**).
-1. Only try an import when no other options are available.
-2. When importing settings with an active Pod, make sure the export was done with the currently active pod.
+Export nastavení **AAPS** vám umožní obnovit všechna nastavení a cíle, například po přeinstalaci **AAPS** nebo na novém telefonu. **Exportujte nastavení hned po každé aktivaci podu** a zkopírujte soubor na bezpečné místo mimo telefon (například na Disk Google), aby šlo obnovit i aktivní pod. Viz [Vytváření a obnova záloh](#ExportImportSettings-Settings-Export).
 
-**Importing while on an active Pod:** (you risk losing the Pod!)
+```{admonition} Importing settings can end your active Pod
+:class: warning
+Na telefonu, na kterém pod už běží, nechte **Nahradit také nastavení pumpy** nezaškrtnuté: relace podu se zachová a importují se jen ostatní nastavení. Zaškrtněte to jen na novém telefonu, se souborem exportovaným během podu, který právě nosíte. Viz [Pumpy bez hadičky](#ExportImportSettings-tubeless-pumps).
+```
 
-1. **Make sure you are importing settings that were recently exported with the currently active Pod!**
-2. Import your settings.
-3. Check all preferences.
-
-**Importing (no active Pod session)**
-
-1. Importing any recent export should work (see above)
-2. Import your settings.
-3. Check all preferences.
-4. You may need to **Deactivate** the "non existing" pod if the imported settings included any active pod data.
+Pokud importovaná nastavení obsahují pod, který už není aktivní, přečtěte si další část.
 
 ---
-### Importing settings that contain Pod state from an inactive Pod
+### Import nastavení, která obsahují stav neaktivního podu
 
-When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
+Když importujete nastavení s daty podu, který už není aktivní, AAPS se k němu pokusí připojit, což samozřejmě selže. V této situaci nemůžete aktivovat nový pod.
 
-To remove the old pod session:
-1. “try” to de-activate the Pod. The de-activation will likely fail.
-2. Select “Retry”.
-3. After the second or third retry you will get the option to remove the pod.
-4. Once the old pod is removed you will be able to activate a new pod.
+Odstranění staré relace podu:
+1. Na obrazovce pumpy DASH stiskněte **Deaktivovat Pod**. Deaktivace nejspíš selže.
+2. Když selže, stiskněte **Vyřadit Pod** a potvrďte (viz [Vyřazení podu](#omnipod-dash-discard-pod)).
+3. Jakmile je starý pod odstraněn, můžete aktivovat nový pod.
 
 ### Generic error: java.lan.illegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
 
-If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration.
+Pokud se tato chyba objeví při pokusu o inicializaci nového podu, **AAPS** selhává, protože má v konfiguraci stále uložená nastavení starého podu.
 
 ![omnipod_address_in_use](../images/DASH_images/Errors/omnipod_address_in_use.png)
 
-This can happen if you restore from a backup, or a pod deactivation fails.
+Může se to stát, když obnovujete ze zálohy nebo když selže deaktivace podu.
 
-To resolve keep clicking on `RETRY` until a `Discard` option is shown, then discard. This procedure should work for De-Activating a pod too.
+Abyste to vyřešili, stiskněte **Zrušit** a aktivaci opusťte. Na obrazovce pumpy DASH stiskněte **Vyřadit Pod**, pokud se zobrazuje. Jinak stiskněte **Deaktivovat Pod**, a když deaktivace selže, stiskněte **Vyřadit Pod** (viz [Vyřazení podu](#omnipod-dash-discard-pod)).
 
-You should now be able to Activate a new pod.
-
----
-### Reinstalling AAPS
-
-When uninstalling **AAPS** you will lose all your settings, objectives and the current Pod session. **To restore them make sure you have a recent exported settings file available!**
-
-When on an active Pod, make sure that you have an export for the current pod session or you will lose the currently active pod when importing older settings.
-
-1. Export your settings and store a copy in a safe place (e.g Google Drive).
-2. Uninstall **AAPS** and restart your phone.
-3. Install the new version of **AAPS**.
-4. Import your settings.
-5. Verify all preferences (optionally import settings again).
-6. Activate a new pod.
-7. When done: Export current settings.
+Nyní byste měli být schopni aktivovat nový pod.
 
 ---
-### Updating AAPS to a newer version
+### Přeinstalace AAPS
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod session.
+Když odinstalujete **AAPS**, přijdete o všechna nastavení, cíle i aktuální relaci podu. **Abyste je mohli obnovit, mějte k dispozici nedávný soubor s exportem nastavení!**
 
-1. Export your settings.
-2. Install the new **AAPS** version.
-3. Verify the installation was successful
-4. RESUME the Pod or activate a new pod.
-5. When done: Export current settings.
+Při aktivním podu použijte export vytvořený během aktuální relace podu (viz [Export a import nastavení](#omnipod-dash-export-import)).
+
+1. Exportujte svá nastavení a uložte kopii na bezpečné místo (např. Disk Google).
+2. Odinstalujte **AAPS** a restartujte telefon.
+3. Nainstalujte novou verzi **AAPS**.
+4. Importujte svá nastavení.
+5. Zkontrolujte všechny předvolby (případně znovu importujte nastavení).
+6. Aktivujte nový pod.
+7. Po dokončení: exportujte aktuální nastavení.
 
 ---
-### Omnipod driver alerts
+### Aktualizace AAPS na novější verzi
 
-The Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.
+Ve většině případů není potřeba odinstalovat. Můžete provést instalaci „na místě“ tak, že spustíte instalaci nové verze. To je možné i při aktivní relaci podu.
 
-A summary of the main alerts that you may encounter is listed below:
+1. Exportujte svá nastavení.
+2. Nainstalujte novou verzi **AAPS**.
+3. Zkontrolujte, že instalace proběhla úspěšně
+4. Obnovte výdej podu (OBNOVIT), nebo aktivujte nový pod.
+5. Po dokončení: exportujte aktuální nastavení.
 
-- No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
-- Pod suspended Informational alert that pod has been suspended.
-- Setting basal **Profile** failed : Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.. Informational alert that the Pod basal **Profile** setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
-- Unable to verify whether **SMB** bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments. Alert that the **SMB** bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if **SMB** bolus succeeded and if not remove the entry from the Treatments tab.
-- Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+---
+### Výstrahy ovladače Omnipod
+
+Ovladač Omnipod Dash zobrazuje na **hlavní obrazovce** různé jedinečné výstrahy. Většina z nich je informativní a lze je zavřít, některé ale vyžadují, abyste něco udělali a odstranili příčinu výstrahy.
+
+Níže je přehled hlavních výstrah, se kterými se můžete setkat:
+
+- *Chyba Podu: XXX NÁZEV* a za tím *Ref: ...*: pod selhal a přestal vydávat inzulín. Vyměňte pod. Viz [Selhání podu](#omnipod-dash-pod-failures).
+- *Žádný aktivní Pod*: nebyla nalezena žádná relace podu. Toto oznámení se bude stále vracet, dokud neaktivujete nový pod. Jakmile je pod aktivován, oznámení automaticky zmizí.
+- *Výdej inzulínu pozastaven*: pod pozastavil výdej inzulínu. Viz [Obnovení výdeje inzulínu](#omnipod-dash-resuming-insulin-delivery).
+- *Nastavení bazálního profilu se možná nezdařilo. Výdej může být pozastaven! Prosím ručně obnovte stav podu na záložce Omnipod a obnovte podávání pokud je to potřeba.* Nastavení bazálního **profilu** v podu se možná nezdařilo. Stiskněte **Obnovit** na obrazovce pumpy DASH (zpráva stále uvádí „záložka Omnipod“) a stiskněte **Obnovit dodávání inzulínu**, pokud se zobrazuje.
+- *Nelze ověřit, zda byl bolus SMB (X U) úspěšně vydán. Aktualizujte stav podu pro potvrzení nebo zamítnutí tohoto příkazu.* **AAPS** nemohlo potvrdit, že byl **SMB** vydán. Stiskněte **Obnovit** na obrazovce pumpy DASH a zkontrolujte pole **Poslední bolus**.
+- *Stav bolusu je nejistý. Aktualizujte stav podu pro potvrzení nebo zamítnutí.* Totéž platí pro normální bolus: stiskněte **Obnovit** na obrazovce pumpy DASH.
+- *Časové pásmo podu se liší od časového pásma v telefonu. Bazál je nesprávný. Přepněte profil pro opravu* Viz poznámku o letním čase a časovém pásmu v části [Známá omezení a problémy Omnipod DASH v AAPS](#omnipod-dash-constraints).
 
 (omnipod-dash-where-to-get-help-for-dash)=
 
-## Where to get help for DASH
+## Kde získat pomoc
 
-All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
+Veškerou vývojovou práci na DASH dělá komunita **dobrovolně**; mějte to prosím na paměti a před žádostí o pomoc postupujte podle těchto pokynů:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw). There are also numerous Facebook and other groups you can ask in too (see [**Getting Help**](../GettingHelp/WhereCanIGetHelp.md))
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Úroveň 0:** Přečtěte si příslušnou část této dokumentace, abyste pochopili, jak má fungovat funkce, se kterou máte potíže.
+-  **Úroveň 1:** Pokud máte stále problémy, které pomocí této dokumentace nevyřešíte, jděte prosím na kanál *#AAPS* na **Discordu** pomocí [tohoto odkazu s pozvánkou](https://discord.gg/4fQUWHZ4Mw). Ptát se můžete také v mnoha skupinách na Facebooku a jinde (viz [**Kde mohu získat pomoc?**](../GettingHelp/WhereCanIGetHelp.md))
+-  **Úroveň 2:** Prohledejte existující issue, zda váš problém už někdo nenahlásil, na [Issues](https://github.com/nightscout/AndroidAPS/issues) pokud existuje, potvrďte ho, okomentujte nebo doplňte informace o svém problému. Pokud ne, vytvořte prosím [nové hlášení (issue)](https://github.com/nightscout/AndroidAPS/issues) a přiložte [své log soubory](../GettingHelp/AccessingLogFiles.md).
+-  **Buďte trpěliví – většina členů naší komunity jsou ochotní dobrovolníci a řešení problémů často vyžaduje čas a trpělivost od uživatelů i vývojářů.**
 
-When requesting help come prepared with the following information to help those in the community with your specific questions and problems:
-- Android phone make and model
-- Android OS version (e.g 15 or 16)
-  - Did you recently upgrade your Android OS version?
-- The version of **AAPS** you are running
-- Plain english description of the problem you are facing considering some of the following things
-   - Was it working before now?
-   - When did it work or not work?
-   - Did you make any changes to configuration or profile settings?
-   - Did you pair a new bluetooth device?
-   - Did you upgrade or install a new app?
-   - How long was it working before it stopped working?
+Když žádáte o pomoc, připravte si následující informace, aby vám komunita mohla pomoci s vašimi konkrétními otázkami a problémy:
+- Značka a model telefonu s Androidem
+- Verze systému Android (např. 15 nebo 16)
+  - Aktualizovali jste nedávno verzi systému Android?
+- Verze **AAPS**, kterou používáte
+- Jednoduchý popis problému, který řešíte, s ohledem na některé z následujících bodů
+   - Fungovalo to dříve?
+   - Kdy to fungovalo a kdy ne?
+   - Změnili jste něco v konfiguraci nebo v nastavení profilu?
+   - Spárovali jste nové zařízení Bluetooth?
+   - Aktualizovali nebo nainstalovali jste novou aplikaci?
+   - Jak dlouho to fungovalo, než to přestalo fungovat?
