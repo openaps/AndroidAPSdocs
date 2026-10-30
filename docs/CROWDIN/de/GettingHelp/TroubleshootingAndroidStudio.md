@@ -9,23 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Verlorener Keystore
-Wenn Du beim Update von **AAPS** denselben „Keystore“ verwendest, musst Du die Vorgängerversion von AAPS auf Deinem Smartphone nicht deinstallieren. Daher wird empfohlen, den Keystore an einem sicheren Platz zu speichern.
-
-Wenn Du versuchst die APK zu installieren und sie mit einem anderen Keystore signiert wurde als bei der Vorgängerversion, wirst Du die Fehlermeldung bekommen, dass die Installation fehlgeschlagen ist!
-
-Falls Du Deinen alten Keystore oder das dazugehörige Passwort nicht mehr wiederfindest, kannst Du wie folgt vorgehen:
-
-1. [Exportiere die Einstellungen](../Maintenance/ExportImportSettings.md) von Deinem Smartphone.
-2. Kopiere die Datei mit den Einstellungen von deinem Smartphone auf ein externes Gerät (d.h. dein Computer, externe Festplatte) oder lade sie in deinen Cloudspeicher hoch.
-4. Erstelle, so wie es in der [Update-Anleitung](../Maintenance/UpdateToNewVersion) beschrieben ist, eine neue Version der signierten APK und transferiere diese auf Dein Smartphone.
-5. Deinstallieren die **AAPS**-Vorgängerversion von Deinem Smartphone.
-6. Installiere die neue **AAPS-Version** auf Deinem Smartphone.
-7. [Importiere die Einstellungen](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps), um sowohl Deinen Fortschritt bei den Zielen (Objectives), als auch Deine Konfiguration wieder herzustellen.
-
-   Falls Du die Einstellungen nicht findest, kopiere sie von Deinem externen Speicher auf Dein Smartphone.
-
-8. Prüfe deine Einstellungen und deaktiviere den Energiesparmodus.
-9. Loope weiter!
+If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 ## Gradle Sync schlägt fehl
 Der Gradle Sync kann aus verschiedenen Gründen fehlschlagen. Falls Du einen Hinweis bekommst, dass der Gradle Sync fehlgeschlagen ist („gradle sync failed“), öffne den „Build“-Reiter (1) im unteren Bereich des Android Studios und überprüfe welche Fehlermeldung (2) Du angezeigt bekommst.
@@ -54,7 +38,7 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 ```
 
 #### Schritt 1 - Überprüfe Deine Git Installation
-  * Öffne den Terminal Reiter (1) im unteren Bereich von Android Studio und kopiere den folgenden Text, oder tippe ihn ins Terminal ein.
+  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
     ```
     git --version
     ```
@@ -91,11 +75,11 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 #### Schritt 2: Prüfe, ob es uncommitted changes gibt.
 
   * In Android Studio: Öffne den „Commit“-Tab (1) auf der linken Seite. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * Dort siehst du entweder "Default changeset" (2) oder "Unversioned files" (3):
+  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
 
-    * Bei „Default changeset“, hast Du wahrscheinlich „Gradle“ upgedatet oder aus Versehen etwas an einer Datei geändert.
+    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
 
-    * Mache einen Rechtsklick auf "Default Changeset" und wähle "Rollback"
+    * Right click on "Changes" and select "Rollback…" (1)
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
@@ -163,12 +147,12 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  Prüfe im **Gradle JDK**-Feld, ob die richtige Version ausgewählt ist (1). Wenn nicht, klicke auf das Feld und schaue, ob es schon in der Liste zu sehen ist. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. Falls es nicht verfügbar ist, wähle „Download JDK“ aus.
+3.  Prüfe im **Gradle JDK**-Feld, ob die richtige Version ausgewählt ist (1). Wenn nicht, klicke auf das Feld und schaue, ob es schon in der Liste zu sehen ist. Im Beispiel unten ist JVM 21 als „jbr-21“ benannt. Wenn Du es findest, wähle es einfach aus und Du bist damit fertig. If not available, then select **Download JDK** (2).
 
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), wähle das JDK aus, das zur **AAPS**-Version passt (das ist die von Dir notierte Version aus der Anforderungstabelle). In Vendor (2) wähle einen beliebigen Anbieter aus. Location (3): Ändere nichts.
+4. In Version (1), wähle das JDK aus, das zur **AAPS**-Version passt (das ist die von Dir notierte Version aus der Anforderungstabelle). In Vendor (2) wähle einen beliebigen Anbieter aus. Location (3): Ändere nichts. Click **Download** (4).
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -213,7 +197,7 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 (gradle-resync)=
 ### Gradle Resync
 
-  Falls Du immer noch den Hinweis sehen kannst, dass der Gradle sync fehlgeschlagen ist, wähle den Link "Try again".  ![Gradle Sync fehlgeschlagen Modus](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle Sync fehlgeschlagen Modus](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   Falls Du den Hinweis nicht mehr siehst, kannst Du das auch manuell auswählen:
@@ -248,7 +232,7 @@ Deine App wurde erfolgreich gebaut und kann auf das Smartphone übertragen werde
 
 * Falls Du die gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Nutze an deren Stelle die [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)-App instead.
 
-* Falls Du xDrip+ verwendest: Identifiziere den Empfänger (engl. identify receiver) wie in den [xDrip+ Einstellungen](#xdrip-identify-receiver) beschrieben.
+* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
 
 
 ## APK not installed / Installation fehlgeschlagen
@@ -256,14 +240,15 @@ Deine App wurde erfolgreich gebaut und kann auf das Smartphone übertragen werde
 ![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
 
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
+* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 * Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor:
 
 1. [Exportiere die Einstellungen](../Maintenance/ExportImportSettings.md), der AAPS-Version, die bereits auf Deinem Smartphone installiert ist.
 2. Deinstalliere **AAPS** von Deinem Telefon.
-3. Aktiviere den Flugmodus & schalte Bluetooth aus.
+3. Enable airplane mode & turn off Bluetooth.
 4. Installiere die neue Version ("app-full-release.apk").
 5. [Importiere die Einstellungen](../Maintenance/ExportImportSettings.md)
-6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
+6. Turn Bluetooth back on and disable airplane mode
 
 ## APK installiert, aber weiter die alte Version auf dem Smartphone
 
