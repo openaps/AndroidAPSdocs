@@ -2,6 +2,22 @@
 
 Aceasta este o listă a unor pompe care circulă, stadiul suportului pentru ele în oricare dintre sistemele de buclă închisă și apoi stadiul suportului în AAPS. La final există niște informații, ce este necesar pentru ca o pompă să fie capabilă de buclă.
 
+    {contents} Table of contents
+    :depth: 1
+    :local: true
+
+## Pumps in AAPS integration phase
+
+**Coming soon:** drivers for these pumps are in development and already running in test builds.
+
+Omnipod 5 ([Homepage](https://www.omnipod.com/))
+
+![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+
+Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+
+![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+
 ## Pompe care pot fi folosită în buclă
 
 ### Kaleido ([Pagina de pornire](https://www.hellokaleido.com/))
@@ -10,21 +26,19 @@ Aceasta este o listă a unor pompe care circulă, stadiul suportului pentru ele 
 
 **Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
 
-### Tandem: t:slim X2 ([Pagina de pornire](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Stare buclă:** Încă nu se poate face bucla.
+**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
 
-În timp ce, în trecut, compania a decis să nu permită ca pompele sale să fie controlate de dispozitive externe, se pare că ultimii câțiva ani au schimbat radical situația. Compania a decis să își îmbunătățească pompa t:slim X2 pentru a putea fi controlată de la distanță (prin intermediul aplicației t:connect), ceea ce înseamnă că se deschid noi posibilități și că am putea spera să controlăm pompa prin intermediul AAPS pe viitor. Un nou firmware pentru pompă este planificat să fie lansat în curând (anul acesta sau anul viitor, înainte să apară pompa fără fir t:sport). Încă nu există detalii, ce operațiuni vor fi posibile de la t:connect (bolus cu siguranță, orice altceva este necunoscut).
+**Cerință hardware pentru AAPS:** Nici una. It is expected to be Bluetooth enabled.
 
-**Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
+**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Pagina de pornire](https://www.tandemdiabetes.com/about-us/pipeline))
+### Twiist ([Homepage](https://www.twiist.com/))
 
-**Stare buclă:** Toate cele 3 pompe vor fi candidate pentru buclă.
+**Loop status:** Loop candidate.
 
-În așteptarea lansării t:mobi în Europa (celelalte două nu sunt încă lansate nicăieri). Dezvoltarea suportului AAPS pentru t:mobi a început deja și ar trebui să fie disponibil până la sfârșitul anului 2025 (a se vedea mai multe informații pe Discord).
-
-**Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
+**Cerință hardware pentru AAPS:** Nici una. It is Bluetooth enabled.
 
 ### Pompă de insulină Willcare ([Pagina de start](http://shinmyungmedi.com/en/))
 
@@ -33,6 +47,14 @@ Aceasta este o listă a unor pompe care circulă, stadiul suportului pentru ele 
 **Cerință hardware pentru AAPS:** Nici una. Se pare că este activată prin Bluetooth.
 
 **Comentarii:** Deoarece firma este interesată de integrarea cu AAPS, ar putea face implementarea chiar ei.
+
+### Ypsopump ([Homepage](https://www.ypsomed.com/))
+
+**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+
+**Cerință hardware pentru AAPS:** Nici una. It is Bluetooth enabled.
+
+**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
 
 ## Pompele nu se mai vând (companiile nu mai funcționează)
 
@@ -52,13 +74,13 @@ Aceasta este o listă a unor pompe care circulă, stadiul suportului pentru ele 
 
 **Comentarii:** Medtronic [s-a retras](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
+### Tandem: t:slim X2 ([Pagina de pornire](https://www.tandemdiabetes.com/))
+
+**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+
 ### Accu-Chek Solo
 
 **Comentarii:** Niciun succes al comunității în comunicarea cu pompa Solo.
-
-### Ypsomed Pump
-
-**Comentarii:** Ypso a adăugat o criptare terță foarte puternică.
 
 ## Cerințe pentru pompele cu care se poate face Buclă
 
