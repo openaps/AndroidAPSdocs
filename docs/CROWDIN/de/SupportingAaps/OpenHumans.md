@@ -25,27 +25,46 @@ Vertrauliche oder private Informationen wie z. B. Deine Nightscout-URL oder das 
 ## Einrichtung
 
 1. Erstelle ein Konto bei [Open Humans](https://www.openhumans.org), falls Du dies noch nicht getan hast. Zur Anmeldung kannst Du auch Dein Google- oder Facebook-Konto verwenden, wenn Du dies möchtest.
-2. Aktiviere das “Open Humans”-Modul in [Konfiguration > Synchronisation](../SettingUpAaps/ConfigBuilder.md).
-3. Öffne dessen Einstellungen durch einen Klick auf das Zahnradsymbol. Du kannst das Hochladen auf die Zeiten beschränken, in denen Du Dich im WLAN befindest und/oder zu denen das Smartphone geladen wird.
-4. Öffne das Open-Humans-Plugin (entweder über den OH Tab oder Hamburger-Menü) und klicke auf „LOGIN“.
+2. Enable the **Open Humans** plugin in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
 
-![Open Humans Konfigurations-Generator](../images/OHUploader1.png)
+![Open Humans enabled in Configuration > Communication](../images/OHUploader1.png)
 
-5. Lies die angezeigten Informationen über den Open Humans Uploader und die Nutzungsbedingungen sorgfältig.
-6. Bestätige, indem Du das Kästchen markierst und auf 'LOGIN' klickst.
+3. Tap **Settings** on the **Open Humans** card. You can restrict uploads to times when the phone uses Wi-Fi (**WiFi only**) and/or is charging (**Charging only**).
+
+![Open Humans settings with WiFi only and Charging only](../images/OHUploader_settings.png)
+
+4. Tap **Open plugin** on the **Open Humans** card, then tap **Setup**.
+
+![Open Humans plugin screen with the Setup button](../images/OHUploader_setup.png)
+
+5. On the **Welcome to Open Humans** screen, tap **Next**. Read the **Consent** screen carefully: it shows the terms of use and which data is uploaded and not uploaded.
+6. Switch on **I understand and agree.** (1) and tap **Login to Open Humans** (2).
+
+![Open Humans Welcome and Consent screens in AAPS](../images/OHUploader2.png)
+
 7. Die Open Humans Webseite wird geöffnet. Melde Dich mit Deinen Zugangsdaten an.
-8. Entscheide, ob Du Deine AAPS Uploader-Mitgliedschaft in Deinem öffentlichen Open Humans Profil ausblenden möchtest.
-9. Klicke auf die Schaltfläche 'Authorize project'.
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile (1).
+9. Click **Authorize project** (2).
 
-![Open Humans Nutzungsbedingungen + Login](../images/OHUploader2.png)
+![Login and project authorization on the Open Humans website](../images/OHUploader_web.png)
 
-10. Danach kehrst Du zu AAPS zurück. Dort wird der erfolgreiche Login bestätigt.
-11. Das Smartphone muss eingeschaltet und das Open Humans Plugin geöffnet bleiben, um die Einrichtung abschließen zu können.
-12. Nach dem Klicken auf 'Schließen' wird Deine Mitglieds-ID angezeigt. Größe der Warteschlange> 0 bedeutet, dass noch Daten hochgeladen werden.
-13. Klicke auf 'LOGOUT', wenn Du das Hochladen von Daten zu Open Humans stoppen möchtest.
+```{admonition} Older screenshot
+:class: note
+The screenshots above show an earlier version of the Open Humans website and still use the old project name **AndroidAPS Uploader**. The steps are the same.
+```
+
+10. Back in **AAPS**, the **Final touches** screen asks whether you want to proceed. Tap **Proceed**.
+11. Wait until **We're done!** appears, then tap **Close**. From now on, your phone uploads data in the background from time to time.
+12. The **Open Humans** plugin screen now shows your **Project Member ID**. Tap **Upload now** if you want to start an upload right away.
+13. Tap **Logout** if you want to stop uploading data to Open Humans.
 14. Der laufende Upload wird in den Android-Benachrichtigungen angezeigt.
 
 ![Open Humans Einrichtung beenden](../images/OHUploader3.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+```
 
 15. Deine Daten kannst Du auf der [Open Humans Website](https://www.openhumans.org) verwalten.
 
