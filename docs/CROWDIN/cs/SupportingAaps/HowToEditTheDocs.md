@@ -2,563 +2,564 @@
 
 **Tento popis je pouze pro editaci anglické dokumentace. Všechny nové informace musí být přidány nejdřív v angličtině. Pokud chcete přeložit wiki do jiných jazyků (děkujeme), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+Rady, jak formátovat text (nadpis, tučné písmo...) a vkládat odkazy, najdete v části [„Syntaxe kódu“](#code-syntax) na této stránce.
 
-## General
+## Obecné
 
 Máte-li jakékoliv dotazy, můžete kontaktovat dokumentační tým prostřednictvím [Discordu](https://discord.gg/4fQUWHZ4Mw).
 
 V některém okamžiku bude navrženo, abyste vytvořili žádost o začlenění (pull request; PR), což je způsob, jakým jsou vaše změny v dokumentaci skutečně vloženy na webové stránky AAPS, které jsou uloženy v GitHubu. Ve skutečnosti není příliš těžké udělat PR a je to skvělý způsob, jak přispět. Tuto dokumentaci právě teď čtete z toho důvodu, že lidé jako vy udělali PR. Nebojte se, že uděláte chybu nebo nějak editujete špatné dokumenty. Vaše změny jsou přezkoumány než jsou zahrnuty do "formální" dokumentace AAPS. Žádnou náhodnou chybou v procesu tedy nemůžete poškodit originál. Obecný proces je:
 
-- Edituje a vylepšuje kód nebo dokumentaci editací stávajícího obsahu.
+- Upravte a vylepšete kód nebo dokumentaci úpravou stávajícího obsahu.
 - Zkontrolujte, že vaše úpravy vypadají dobře.
 - Udělejte několik poznámek o tom, co je změněno, aby lidé mohli porozumět editacím.
-- Vytvořte PR, která žádá správce, aby se tyto změny použily.
-- Ten provede přezkum a buď (1) sloučí vaše změny, (2) přidá komentář k vašim změnám, nebo (3) založí nový dokument s vašimi změnami.
+- Vytvořte pull request (PR), kterým požádáte správce, aby vaše změny použili.
+- Správci změny zkontrolují a buď (1) sloučí vaše změny, (2) napíšou vám ke změnám komentář, nebo (3) založí nový dokument s vašimi změnami.
 
 (Poznámka: Pokud se učíte spíše vizuálně, existuje YouTube video [zde](https://youtu.be/4b6tsL0_kzg) ukazující, jak PR funguje.)
 
 Například: chystáme se upravit AndroidAPSdocs. To lze udělat na jakémkoli Windows PC, Mac atd. (libovolném počítači s připojením k internetu).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Jděte na <https://github.com/openaps/AndroidAPSdocs> a vpravo nahoře klikněte na Fork, abyste si vytvořili vlastní kopii repozitáře.
 
-![Klonování repozitoře](../images/PR0.png)
+![Fork repozitáře](../images/PR0.png)
 
-2. Přejděte na jakoukoli stránku a přejděte na stránku, kterou chcete upravit. You can click on the "Edit in GitHub" link in the upper right corner. This is only possible for English pages. 
+2. Přejděte na jakoukoli stránku a přejděte na stránku, kterou chcete upravit. Můžete kliknout na odkaz „Edit in GitHub“ v pravém horním rohu. To jde jen u anglických stránek. 
 
-![edit doc](../images/PR1.png)
+![úprava dokumentu](../images/PR1.png)
 
-Or click the pencil icon that appears in the top bar of the page contents to be edited. Budete muset být již přihlášeni do svého účtu na Githubu (pokud ho nemáte, je snadné si ho vytvořit).
+Nebo klikněte na ikonu tužky, která se zobrazí v horní liště obsahu stránky, kterou chcete upravit. Budete muset být již přihlášeni do svého účtu na Githubu (pokud ho nemáte, je snadné si ho vytvořit).
 
 ![RTD io](../images/PR2.png)
 
 3. Libovolnou možností v kroku 2 vytvoříte nový branch ve svém repozitáři, kde budou uloženy vaše změny. Udělejte své úpravy do souboru.
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
+Pro stránky dokumentace používáme Markdown. Soubory mají příponu „.md“. Specifikace Markdownu není pevně daná a pro naše soubory Markdown v současnosti používáme myst_parser. Dbejte na správnou syntaxi, jak je [popsáno níže](#code-syntax).
 
-![režim náhledu](../images/PR3.png)
+![Úprava větve](../images/PR3.png)
 
-4. Pracujete v záložce "<>Edit file". Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typos sic.). Pokud vidíte, že je potřeba další zlepšení, vraťte se zpět na záložku editace a pokračujte. 
+4. Pracujete v záložce "<>Edit file". Vyberte záložku „Preview changes“ (náhled změn) a podívejte se na text znovu, abyste měli jistotu, že všechno, co jste změnili, vypadá tak, jak jste chtěli (včetně překlepů). Pokud vidíte, že je potřeba další zlepšení, vraťte se zpět na záložku editace a pokračujte. 
 
-![potvrdit komentáře](../images/PR5.png)
+![režim náhledu](../images/PR5.png)
 
 5. Když jste dokončili své úpravy, přesuňte se do dolní části stránky. V obdélníku dole napište komentář do textového pole "Add an optional extended description...". Výchozí název má jméno souboru. Zkuste přidat větu s vysvětlením **důvodu** změny. Pomůže to při kontrole, o jakou změnu se pokoušíte.
 
-![vytvořit žádost o přijetí změn](../images/PR4.png)
+![komentáře ke commitu](../images/PR4.png)
 
 6. Klikněte na zelené tlačítko "Propose file changes" nebo "Commit changes". Na stránce se pak objeví tlačítko "Create Pull Request" a znovu na další stránce klepněte na tlačítko "Create Pull Request".
 
-![Sledování PR](../images/PR6.png)
+![vytvoření pull requestu](../images/PR6.png)
 
-7. Tím dokončíte žádost PR. GitHub přiděluje PR číslo, které se nachází za názvem a hashovou značkou. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! Pokud chcete zkontrolovat pokrok ve zpracování PR, můžete kliknout na symbol zvonku v horním pravém rohu svého účtu na GitHub a uvidíte všechny své PR.
+7. Tím dokončíte žádost PR. GitHub přiděluje PR číslo, které se nachází za názvem a hashovou značkou. Na tuto stránku se vracejte a kontrolujte zpětnou vazbu (nebo pokud vám GitHub posílá oznámení e-mailem, budou vám chodit e-maily o každé aktivitě v PR). Úprava teď bude v seznamu PR, které tým zkontroluje a případně k nim dá zpětnou vazbu, než je začlení do hlavní dokumentace AAPS! Pokud chcete zkontrolovat pokrok ve zpracování PR, můžete kliknout na symbol zvonku v horním pravém rohu svého účtu na GitHub a uvidíte všechny své PR.
 
 ![Sledování PR](../images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. Po oznámení, že Váš PR byl sloučený, můžete odstranit branch, pokud do něj nechcete dělat další změny (V kroku 8 bude odkaz na odstranění branche, jakmile bude PR uzavřen nebo sloučen). Pro budoucí úpravy, pokud budete následovat tento postup, budou změny vždy začínat aktualizovanou verzí repozitáře AndroidAPSdocs. Pokud se rozhodnete použít jinou metodu pro vytvoření PR žádosti (např. editace začínající z vaší kopie repozitáře), budete muset zajistit, aby Váš repozitář byl aktuální, a to nejprve provedením "Compare" a sloučením všech aktualizací, které se udály od doby, kdy jste naposledy aktualizovali svůj repozitář. Protože lidé často zapomínají aktualizovat svůj repozitář, doporučujeme použít pro PR proces popsaný výše, dokud se neseznámíte s detaily fungování "Compare".
+PS: Váš fork a větev zůstanou na vašem osobním účtu GitHub. Až dostanete oznámení, že váš PR byl sloučen, můžete svou větev smazat, pokud už ji nepotřebujete (v oblasti oznámení z kroku 8 bude odkaz na smazání větve, jakmile bude PR uzavřen nebo sloučen). Pro budoucí úpravy, pokud budete následovat tento postup, budou změny vždy začínat aktualizovanou verzí repozitáře AndroidAPSdocs. Pokud se rozhodnete začít PR jiným způsobem (např. úpravou, která začíná z hlavní větve master ve vašem forku), musíte zajistit, aby byl váš repozitář aktuální. Nejprve proveďte „compare“ (porovnání) a slučte všechny aktualizace, které proběhly od poslední aktualizace vašeho forku. Protože lidé často zapomínají aktualizovat svůj repozitář, doporučujeme použít pro PR proces popsaný výše, dokud se neseznámíte s detaily fungování "Compare".
 
 (edit-the-docs-code-syntax)=
 
-## Code syntax
+## Syntaxe kódu
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+Pro stránky dokumentace používáme Markdown. Soubory mají příponu „.md“.
 
-Markdown is a very simple text formatting language which separates text content from text formatting.
+Markdown je velmi jednoduchý jazyk pro formátování textu, který odděluje obsah textu od jeho formátování.
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+Autor jen například označí nadpis jako nadpis 1. úrovně a procesor Markdownu při zpracování vytvoří potřebný kód HTML, který nadpis v HTML zobrazí.
 
-The idea behind this is that
+Cílem je, aby
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
-- you can generate several output formats from one markdown file.
+- autor nejdřív přemýšlel o textu, a ne o formátování,
+- text v Markdownu šlo přenášet mezi různými nástroji Markdown, a ne jen v uzavřených (proprietárních) nástrojích, jako je Microsoft Windows, a
+- z jednoho souboru Markdown šlo vytvořit několik výstupních formátů.
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown není 100% pevný standard a snažíme se držet co nejblíže standardu, abychom
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- jsme mohli zůstat flexibilní a měnit nástroje Markdown podle potřeby nebo když nás k tomu donutí další vývoj nástrojů Markdown a služeb SaaS pro Markdown a
+- mohli používat překladatelské služby k překladu z angličtiny do cílového jazyka, například francouzštiny nebo němčiny. Ty umí pracovat s Markdownem, ale ne se složitými formátovacími kódy, protože nedokážou oddělit obsah od rozvržení, což může být fatální.
 
-### Headlines
+### Nadpisy
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- Nadpis 1: `# headline`
+- Nadpis 2: `## headline`
+- Nadpis 3: `### headline`
+- Nadpis 4: `#### headline`
 
-We try to avoid further levels of headlines.
+Další úrovně nadpisů se snažíme nepoužívat.
 
-### Text format
+### Formát textu
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **tučně**: `**text**`
+- *kurzíva*: `*text*`
+- ***tučná kurzíva***: `***text***`
 
-### Ordered list
+### Číslovaný seznam
 
-    1. first
-    1. second
-    1. third
+    1. první
+    1. druhý
+    1. třetí
     
 
-1. Po přidání obrázků nebo provedení úprav můžete odeslat PR (Pull request) do hlavní větve AndroidAPSdocs.
-2. sekund
-3. third
+1. první
+2. druhý
+3. třetí
 
-### Unordered list
+### Nečíslovaný seznam
 
-    - one element
-    - another element
-    - and another element
+    - jeden prvek
+    - další prvek
+    - a ještě další prvek
     
 
-- one element
-- another element
-- and another element
+- jeden prvek
+- další prvek
+- a ještě další prvek
 
-### Multi level list
+### Víceúrovňový seznam
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Seznam můžete vložit do seznamu tak, že další úroveň odsadíte o 4 mezery víc doprava než předchozí.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. první
+    1. druhý
+    1. třetí
+      1. jeden prvek
+      1. další prvek
+      1. a ještě další prvek
+    1. čtvrtý
+    1. pátý
+    1. šestý
     
 
-1. Po přidání obrázků nebo provedení úprav můžete odeslat PR (Pull request) do hlavní větve AndroidAPSdocs.
-2. sekund
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six
+1. první
+2. druhý
+3. třetí 
+    1. jeden prvek
+    2. další prvek
+    3. a ještě další prvek
+4. čtvrtý
+5. pátý
+6. šestý
 
-### Images
+### Obrázky
 
-To include images you use this markdown syntax.
+Obrázky vložíte pomocí této syntaxe Markdown.
 
-- images: `![alt text](../images/file.png)`
+- obrázky: `![alt text](../images/file.png)`
 
-The type of image should be PNG or JPEG.
+Obrázky mají být ve formátu PNG nebo JPEG.
 
-Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Názvy obrázků mají odpovídat jednomu z následujících pravidel pojmenování. V příkladu používám příponu png. Pokud používáte JPEG, použijte místo toho příponu jpeg.
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+- `filename-image-xx.png`, kde xx je jedinečné dvoumístné číslo obrázku v tomto souboru.
+- `filename-image-xx.png`, kde xx je smysluplný název podle autora souboru md.
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+Obrázky jsou ve složce images pro angličtinu a do ostatních jazyků je automaticky přenese Crowdin. Nemusíte pro to nic dělat!
 
-We are not translating images at the moment: images should contain the **minimum possible text** to allow accessibility to non-English readers.
+Obrázky zatím nepřekládáme: obrázky mají obsahovat **co nejméně textu**, aby byly přístupné i čtenářům, kteří neumí anglicky.
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+(make-a-PR-image-size)= Používejte rozumnou velikost obrázků, aby byly čitelné na počítači, tabletu i mobilu.
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+- Snímky obrazovky z webových stránek mají mít šířku nejvýše **1050 pixelů**.
+- Diagramy postupů mají mít šířku nejvýše **1050 pixelů**.
+- Snímky obrazovky z aplikace mají mít šířku nejvýše **500 pixelů**. Nedávejte je vedle sebe, pokud to není nutné.
+- Snímky obrazovky z hodinek (**Wear OS**) mají mít šířku nejvýše **360 pixelů**. Menší snímek obrazovky nikdy nezvětšujte.
 
-### Links
+### Odkazy
 
-#### External links
+#### Externí odkazy
 
-External links are links to external web sites.
+Externí odkazy jsou odkazy na externí webové stránky.
 
-- external link: `[alt text](www.url.tld)`
+- externí odkaz: `[alt text](www.url.tld)`
 
-#### Internal links to the start of a md file
+#### Interní odkazy na začátek souboru md
 
-Internal links to pages are links to the start of a md file which is hosted on our own server.
+Interní odkazy na stránky jsou odkazy na začátek souboru md, který je uložen na našem vlastním serveru.
 
-- internal link to .md page: `[alt text](.../folder/file.md)`
+- interní odkaz na stránku .md: `[alt text](../folder/file.md)`
 
-#### Internal links to named inline references
+#### Interní odkazy na pojmenované odkazy v textu
 
-Internal links to named inline references are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+Interní odkazy na pojmenované odkazy v textu jsou odkazy na libovolné místo v souboru md, který je uložen na našem vlastním serveru a kde byl nastaven odkaz (reference), na který lze odkázat.
 
-Add a named reference at the location in the target md file you want to jump to.
+Na místo v cílovém souboru md, kam chcete skočit, přidejte pojmenovaný odkaz (referenci).
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+Pojmenovaný odkaz musí být jedinečný ve všech souborech md AndroidAPSDocs, nejen v souboru, ve kterém je!
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+Proto je dobré začít názvem souboru a za ním dát zvolený název odkazu.
 
-Use only lowercase letters and hyphenate words.
+Používejte jen malá písmena a slova oddělujte pomlčkou.
 
-Then link this reference in the text you are writing with the following kind of link.
+Potom na tento odkaz odkažte v textu, který píšete, tímto typem odkazu.
 
-- Internal links to named inline references: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- Interní odkazy na pojmenované odkazy v textu: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### Poznámky, varování, sbalitelné poznámky
 
-You can add notes and warning boxes to documentation.
+Do dokumentace můžete přidat rámečky s poznámkou nebo varováním.
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+Dále můžete přidat sbalitelné poznámky s podrobnými informacemi, aby uživatele, které podrobnosti nezajímají, neodradily od čtení celého textu. Používejte je prosím s rozmyslem, protože dokumentace má být co nejsnáze čitelná.
 
 #### Poznámky
 
-    ```{admonition} Note headline
+    ```{admonition} Nadpis poznámky
     :class: note
-    This is a note.
+    Toto je poznámka.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Nadpis poznámky :class: note Toto je poznámka.
 
-    <br />#### Warnings
+    <br />#### Varování
     
     ````
-    ```{admonition} Warning
+    ```{admonition} Varování
     :class: warning
-    This is a warning.
+    Toto je varování.
     
 
-    ```{admonition} Warning headline 
+    ```{admonition} Nadpis varování
     :class: warning
-    This is a warning.
+    Toto je varování.
     ```
     
-    #### Collapsing Notes
+    #### Sbalitelné poznámky
     
     
 
-    {admonition} further detailed readings for interested readers
+    {admonition} podrobnější informace pro zájemce
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Tato poznámka je sbalená,
+    takže sem můžete přidat delší obsah
+    a nezabere na stránce příliš místa.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} podrobnější informace pro zájemce :class: dropdown Tato poznámka je sbalená, takže sem můžete přidat delší obsah a nezabere na stránce příliš místa.
 
 ```
 
-## Tables
+## Tabulky
 
-Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Nepoužívejte tabulky s dlouhými texty. Obsah se v Markdownu špatně nastavuje, tabulky se obvykle nevejdou na šířku obrazovky mobilu a po překladu se pravděpodobně nezobrazí stejně.
 
-## Style Guide
+## Průvodce stylem
 
 ### Obsah
 
-1. English language writing tips
+1. Tipy pro psaní v angličtině
 
-2. AAPS-specific writing notes
+2. Poznámky k psaní specifické pro AAPS
 
-3. Useful references
+3. Užitečné odkazy
 
-### ![Image](../images/styleguide01.png) 1\. English language writing tips
+### ![Obrázek](../images/styleguide01.png) 1\. Tipy pro psaní v angličtině
 
-#### Use language that is appropriate for the reader
+#### Používejte jazyk, který odpovídá čtenáři
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+Kde je to možné, používejte jednoduchou angličtinu. Pomáhá to čtenářům, pro které angličtina není rodný jazyk, a také usnadňuje překlad dokumentů AAPS do jiných jazyků. Pište s uživatelem jako v rozhovoru. Představte si, že sedíte u stolu naproti člověku, pro kterého píšete. Pamatujte, že většina uživatelů AAPS nemá programátorské znalosti. I samotný diabetes má hodně odborných výrazů a zkratek. Myslete na to, že někdo může mít diabetes krátce, nemusí mít s diabetem tolik zkušeností jako vy nebo mohl projít jiným školením o diabetu. Pokud použijete zkratku, při prvním použití ji napište celou a zkratku dejte hned za ni do závorky, například „super micro bolus (SMB)“. Také odkažte na slovníček. Do závorky můžete přidat i odborné výrazy, které čtenář nemusí znát.
 
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
+Místo: *“What causes high postprandial BG peaks in closed loop?"*
 
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
+Použijte: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
-##### Use plain words that everyone can understand
+##### Používejte jednoduchá slova, kterým rozumí každý
 
-Find an A-Z of alternative words to make your writing easier to understand here:
+Seznam alternativních slov od A do Z, se kterými bude váš text srozumitelnější, najdete zde:
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### Ochrana soukromí a licence:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Hlavně když nahráváte video nebo děláte snímky obrazovky, dejte pozor, abyste neprozradili své soukromé údaje (klíč API, hesla). Zajistěte, aby obsah na YouTube nebyl veřejně v seznamu a dal se zobrazit jen přes odkaz z dokumentace. Neupozorňujte na materiály, které porušují autorská práva (BYODA apod.).
 
-#### Keep sentences short, get to the point
+#### Pište krátké věty a jděte k věci
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- Srozumitelný text má mít průměrnou délku věty 15 až 20 slov.
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- To neznamená, že všechny věty mají být stejně dlouhé. Buďte úderní. Střídejte krátké věty (jako tu předchozí) s delšími (jako je tato).
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- V jedné větě se držte jedné hlavní myšlenky, případně ještě jednoho souvisejícího bodu.
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- Občas i tak napíšete delší větu, hlavně když vysvětlujete složitou věc. Většinu dlouhých vět ale lze nějak rozdělit.
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- Vynechávejte slabá slova: “you can”, “there is/are/were”, “in order to”.
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- Klíčová slova dávejte blízko začátku nadpisů, vět a odstavců.
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- Buďte názorní! Kde je to možné, přidejte krátký diagram, snímek obrazovky nebo video.
 
-#### Don't be afraid to give instructions
+#### Nebojte se dávat pokyny
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+Příkazy jsou nejrychlejší způsob, jak dát pokyn, ale autoři se jich někdy bojí a píšou “you should do this” místo prostého “do this”. Možná se lidé bojí, že příkazy zní příliš tvrdě. Často to vyřešíte tak, že před ně dáte slovo „please“ (prosím). Pokud ale něco udělat musíte, je lepší „please“ nepoužít, protože to čtenáři dává možnost odmítnout.
 
-Instead of: *“You should just think of it as a complete statement."*
+Místo: *“You should just think of it as a complete statement."*
 
-Use: *“Think of it as a complete statement.”*
+Použijte: *“Think of it as a complete statement.”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### Používejte hlavně činný rod, ne trpný rod
 
-Example of an **active verb**:
+Příklad slovesa v **činném rodě**:
 
 - *“The pump (subject) delivers (verb) the insulin (object).”*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+“delivers” je zde sloveso v činném rodě. Věta nejdřív říká, kdo dodává, a teprve potom, co se dodává.
 
-Example of a **passive verb**:
+Příklad slovesa v **trpném rodě**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object)”*
 
-*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* je zde sloveso v trpném rodě. Podmět a předmět jsou proti větě v činném rodě prohozené. Větu jsme museli prodloužit o “is” a “by the”. Zvažte také, zda začít větu slovesem v činném rodě.
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+Místo: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+Použijte: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
-Passive verbs can cause problems:
+Trpný rod může způsobit problémy:
 
-- They can be confusing.
+- Může být matoucí.
 
-- They often make writing more long-winded.
+- Text s ním bývá zbytečně rozvláčný.
 
-- They make writing less lively.
+- Text s ním je méně živý.
 
-##### Good uses of passives
+##### Kdy je trpný rod vhodný
 
-There are times when it might be appropriate to use a passive.
+Někdy může být trpný rod vhodný.
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- Aby věc zněla méně nepřátelsky – 'this bill has not been paid' (trpný rod) zní mírněji než 'you have not paid this bill' (činný rod).
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- Aby nikdo nebyl obviňován – 'a mistake was made' (trpný rod) místo 'You made a mistake' (činný rod).
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- Když nevíte, kdo nebo co děj vykonává – 'the England team has been picked'.
 
-- If it simply sounds better.
+- Když to prostě zní lépe.
 
-#### Avoid nominalisations
+#### Vyhýbejte se nominalizacím
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
+Nominalizace je název něčeho, co není fyzický předmět, například procesu, techniky nebo emoce. Nominalizace vznikají ze sloves.
 
 Například:
 
-| Verb      | Nominalization |
-| --------- | -------------- |
-| dokončeno | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| Sloveso   | Nominalizace |
+| --------- | ------------ |
+| complete  | completion   |
+| introduce | introduction |
+| provide   | provision    |
+| fail      | failure      |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+Často se používají **místo** sloves, ze kterých vznikly, ale pak to může znít, jako by se vlastně nic nedělo. Když jich je moc, je text velmi nudný a těžko se čte.
 
-Instead of: *“The implementation of the method has been done by a team.”*
+Místo: *“The implementation of the method has been done by a team.”*
 
-Use: *“A team has implemented the method.”*
+Použijte: *“A team has implemented the method.”*
 
-#### Use lists where appropriate
+#### Kde je to vhodné, používejte seznamy
 
-Lists are excellent for splitting information up. There are two main types of list:
+Seznamy jsou výborné pro rozdělení informací. Existují dva hlavní typy seznamů:
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- Souvislá věta, ve které jsou jednotlivé body vyjmenované na začátku, uprostřed nebo na konci.
 
-- Separate bullet points with an introductory statement.
+- Samostatné odrážky s úvodní větou.
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+V seznamu s odrážkami výše je každý bod celá věta, proto každý začíná velkým písmenem a končí tečkou. Používejte odrážky, ne čísla nebo písmena. Odrážky upozorní na každý bod a nepřidávají další informaci, kterou musíte vnímat.
 
-#### Mythbusting
+#### Vyvracení mýtů
 
-- You can start a sentence with **and, but, because, so or however**.
+- Větu můžete začít slovy **and, but, because, so nebo however**.
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- Infinitiv můžete rozdělit (split infinitive). Takže můžete napsat **“to boldly go”**.
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- Větu můžete ukončit předložkou. Ve skutečnosti je to něco, **we should stand up for** (za čím bychom si měli stát).
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- A **vy** můžete použít stejné **slovo** ve větě dvakrát, pokud **vy** nenajdete lepší **slovo**.
 
-#### Optimizing writing style by purpose
+#### Optimalizace stylu psaní podle účelu
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+Aby byla dokumentace jasná a krátká, píšeme různé části dokumentace různým stylem.
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+Styl „vysvětlení“ (explanation) se používá pro úvod, pozadí a části, které rozšiřují znalosti.
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+Styl „návod“ (how-to guide, s minimem vysvětlování) se používá pro sestavení a konfiguraci AAPS a pro některé části řešení problémů.
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+Výukový průvodce (tutorial) pomáhá žákovi získat základní dovednosti. Uživatel se bude **učit tím, že věci dělá**.
 
-![Image](../images/styleguide02.png)
+![Obrázek](../images/styleguide02.png)
 
-##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Obrázek](../images/styleguide03.png) Výukové průvodce (např. jak naučit dítě ušlehat sníh z bílků)
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- vypravěč mluví přímo ke čtenáři: V tomto průvodci **vy** budete (my) lze v některých vzácných případech použít, aby text vyjádřil myšlenku „jsme v tom spolu“
 
-- Future Tense -> to show the final target
+- Budoucí čas -> ukazuje konečný cíl
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- Rozkazovací způsob -> pro provádění úkolů -> Konkrétní kroky - vyhněte se abstraktním pojmům
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- Minulý čas -> ukazuje dokončené úkoly -> Rychlé a hned viditelné výsledky
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- Minimum vysvětlování -> jen to, co je nutné k dokončení úkolu - **co a proč**
 
-- Ignore options/alternatives/…. No ambiguity
+- Ignorujte možnosti/alternativy/…. Žádná nejednoznačnost
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- Přechody mezi kroky: krok ukončete větou, která logicky vede k dalšímu kroku. Příklad: *Nyní máte nainstalovaného klienta Let’s Encrypt, ale před získáním certifikátů musíte zajistit, aby byly otevřené všechny potřebné porty. Uděláte to v dalším kroku úpravou nastavení firewallu.*
 
-- **Tutorial** Title (Level 1 heading)
+- Název **výukového průvodce** (nadpis 1. úrovně)
 
-- Introduction (no heading)
+- Úvod (bez nadpisu)
 
-- Prerequisites (Level 2 heading)
-
-- Kroky:
-
-- Step 1 — Doing the First Thing (Level 2 heading)
-
-- Step 2 — Doing the Next Thing (Level 2 heading)
-
-- Step n — Doing the Last Thing (Level 2 heading)
-
-- Conclusion (Level 2 heading)
-    
-    - **The Language of Tutorials**
-        
-        *In this tutorial, you will…*
-        
-        Describe what the learner will accomplish (note - not: “you will learn…”).
-        
-        *First, do x. Now, do y. Now that you have done y, do z.*
-        
-        No room for ambiguity or doubt.
-        
-        *We must always do x before we do y because… (see Explanation for more details).*
-        
-        Provide minimal explanation of actions in the most basic language possible. Link to more detailed explanation.
-        
-        *The output should look something like this…*
-        
-        Give your learner clear expectations.
-        
-        *Notice that… Remember that…*
-        
-        Give your learner plenty of clues to help confirm they are on the right track and orient themselves.
-        
-        *You have built a secure, three-layer hylomorphic stasis engine…*
-        
-        Describe (and admire, in a mild way) what your learner has accomplished (note - not: “you have learned…”)
-
-##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
-
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
-
-- HOW-to
-
-- narrator directly talks to the reader: In this tutorial **you** will
-
-- Future Tense -> to show the final target
-
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
-
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
-
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
-
-- **How-to**: Title (Level 1 heading)
-
-- Introduction paragraph
-
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- Požadavky (nadpis 2. úrovně)
 
 - Kroky:
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- Krok 1 — První úkon (nadpis 2. úrovně)
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- Krok 2 — Další úkon (nadpis 2. úrovně)
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- Krok n — Poslední úkon (nadpis 2. úrovně)
 
-- Conclusion paragraph
+- Závěr (nadpis 2. úrovně)
     
-    - **The Language of How-To Guides**
+    - **Jazyk výukových průvodců**
         
-        *This guide shows you how to…*
+        *V tomto průvodci budete…*
         
-        Describe clearly the problem or task that the guide shows the user how to solve.
+        Popište, co žák dokáže (pozor – ne: „naučíte se…“).
         
-        *If you want x, do y. To achieve w, do z.*
+        *Nejprve udělejte x. Teď udělejte y. Když jste udělali y, udělejte z.*
         
-        Use conditional imperatives.
+        Žádný prostor pro nejednoznačnost nebo pochybnosti.
         
-        *Refer to the x reference guide for a full list of options.*
+        *Vždy musíme udělat x před y, protože… (podrobnosti viz Vysvětlení).*
         
-        Don’t pollute your practical how-to guide with every possible thing the user might do related to x.
+        Akce vysvětlete co nejméně a co nejjednodušším jazykem. Odkažte na podrobnější vysvětlení.
+        
+        *Výsledek by měl vypadat přibližně takto…*
+        
+        Dejte žákovi jasná očekávání.
+        
+        *Všimněte si, že… Pamatujte, že…*
+        
+        Dejte žákovi hodně vodítek, aby si mohl ověřit, že je na správné cestě, a zorientovat se.
+        
+        *Sestavili jste bezpečný třívrstvý hylomorfní stázový motor…*
+        
+        Popište (a mírně oceňte), co žák dokázal (pozor – ne: „naučili jste se…“)
 
-##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Obrázek](../images/styleguide05.png) Návody (how-to guides, např. recept)
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+Účelem návodu je pomoci uživateli, který už věci rozumí, správně provést určitý úkol.
 
-- WHY
+- JAK na to
 
-- Start with **About**
+- vypravěč mluví přímo ke čtenáři: V tomto průvodci **vy** budete
 
-- Provide context, link ALL relevant references
+- Budoucí čas -> ukazuje konečný cíl
 
-- Discuss options/alternatives
+- Podmíněný rozkazovací způsob -> abyste získali X, udělejte Y -> Konkrétní kroky - vyhněte se abstraktním pojmům
 
-- Don’t instruct or provide reference (link to them)
+- Minimum vysvětlování -> jen to, co je nutné k dokončení úkolu -> **co a proč**
 
-- State the unknown/moving targets etc…
+- Ignorujte možnosti/alternativy/…. Žádná nejednoznačnost, ale můžete odkázat na referenční nebo vysvětlující text
 
-- **About** Title (Level 1 heading)
+- **Návod**: Název (nadpis 1. úrovně)
 
-- Introduction (no heading)
+- Úvodní odstavec
 
-- Optional Prerequisites (Level 2 heading)
+- Volitelné požadavky (odstavec, nebo nadpis 2. úrovně, pokud jich je víc než 1)
 
-- Subtopic 1 (level 2 heading)
+- Kroky:
 
-- Conclusion (Level 2 heading)
+- Krok 1 — První úkon (nadpis 2. úrovně)
+
+- Krok 2 — Další úkon (nadpis 2. úrovně)
+
+- Krok n — Poslední úkon (nadpis 2. úrovně)
+
+- Závěrečný odstavec
     
-    - **The Language of Explanation**
-    
-    *The reason for x is because historically, y…*
-    
-    Explain.
-    
-    *W is better than z, because…*
-    
-    Offer judgements and even opinions where appropriate..
-    
-    *An x in system y is analogous to a w in system z. However…*
-    
-    Provide context that helps the reader.
-    
-    *Some users prefer w (because z). This can be a good approach, but…*
-    
-    Weigh up alternatives.
-    
-    *An x interacts with a y as follows:…*
-    
-    Unfold the machinery’s internal secrets, to help understand why something does what it does.
+    - **Jazyk návodů**
+        
+        *Tento návod vám ukáže, jak…*
+        
+        Jasně popište problém nebo úkol, který návod uživateli ukáže, jak vyřešit.
+        
+        *Pokud chcete x, udělejte y. Abyste dosáhli w, udělejte z.*
+        
+        Používejte podmíněný rozkazovací způsob.
+        
+        *Úplný seznam možností najdete v referenční příručce x.*
+        
+        Nezahlcujte praktický návod vším, co by uživatel mohl s x dělat.
 
-### 2\. AAPS-specific writing/updating notes
+##### ![Obrázek](../images/styleguide07.png) Vysvětlení (např. věda o tom, proč bílky při šlehání ztuhnou)
 
-#### Author & Editor
+Vysvětlení objasňuje, prohlubuje a rozšiřuje čtenářovo porozumění tématu.
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+- PROČ
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+- Začněte slovem **O** (About)
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+- Uveďte souvislosti, odkažte na VŠECHNY související zdroje
 
-#### General AAPS points
+- Proberte možnosti/alternativy
 
-- For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible).
+- Nedávejte pokyny ani referenční informace (odkažte na ně)
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- Uveďte, co není známo nebo co se mění, atd…
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- Název **O** … (About; nadpis 1. úrovně)
 
-### 3\. Useful References
+- Úvod (bez nadpisu)
+
+- Volitelné požadavky (nadpis 2. úrovně)
+
+- Podtéma 1 (nadpis 2. úrovně)
+
+- Závěr (nadpis 2. úrovně)
+    
+    - **Jazyk vysvětlení**
+    
+    *Důvodem pro x je, že historicky y…*
+    
+    Vysvětlujte.
+    
+    *W je lepší než z, protože…*
+    
+    Kde je to vhodné, nabídněte hodnocení a i názory..
+    
+    *x v systému y je obdobou w v systému z. Ale…*
+    
+    Uveďte souvislosti, které čtenáři pomohou.
+    
+    *Někteří uživatelé dávají přednost w (protože z). Může to být dobrý přístup, ale…*
+    
+    Zvažte alternativy.
+    
+    *x spolupracuje s y takto:…*
+    
+    Odhalte vnitřní tajemství mechanismu, aby bylo jasné, proč něco dělá to, co dělá.
+
+### 2\. Poznámky k psaní a úpravám specifické pro AAPS
+
+#### Autor a editor
+
+Psaní a úpravy dokumentace AAPS berte jako proces, který má dvě fáze. Může je provést stejná osoba v různých chvílích, nebo více lidí.
+
+**Autor (např. vy!)** napíše nebo upraví část dokumentace stručným tónem jako v rozhovoru a pak ji předá editorovi.
+
+**Editor (např. jiný uživatel AAPS nebo ten, kdo dostane pull request)** zkontroluje, zda text odpovídá průvodci stylem, upraví část, aby byla jasná a přístupná, a odstraní co nejvíc slov (hlavně v částech typu výukový průvodce a návod). Může pomoci, když si text přečtete nahlas.
+
+#### Obecné body k AAPS
+
+- U hodnot glykémie uvádějte pokaždé mg/dl i mmol/l (pokud je to možné, i na snímcích obrazovky).
+
+- Kvůli jednotnosti používejte „AAPS“, ne „Android APS“.
+
+- Jasně uveďte verzi Android Studia/AAPS, pro kterou píšete nebo ze které jsou snímky obrazovky.
+
+### 3\. Užitečné odkazy
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 
