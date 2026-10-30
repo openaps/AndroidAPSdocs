@@ -2,37 +2,32 @@
 
 **AAPS** este capabil să vă trimită informații despre starea dumneavoastră curentă ca mesaj, direct în Android Auto în mașina dumneavoastră.
 
-```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
-
-versiuni utilizate pentru documentație:
-
-* AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release ```
-
 ## Cerințe
 
 **AAPS** utilizează o caracteristică a Android Auto care permite ca mesajele de la aplicațiile de pe mobil să fie direcționate către afișarea Auto Audio în mașină.
 
 Aceasta înseamnă că:
 
-* Trebuie să configurați **AAPS** pentru a utiliza notificările de sistem pentru alerte și notificări și
+* Android must allow **AAPS** to show notifications and
 * Cum **AAPS** este o aplicație neoficială, permiteți utilizarea de "surse necunoscute" cu Android Auto.
 
 ![Date CGM AAPS pe Android Auto](../images/android_auto_01.png)
 
-## Utilizați notificările de sistem în AAPS pentru alerte și notificări
+## Check that AAPS can show notifications
 
-Deschideți meniul în 3 puncte din dreapta sus în **AAPS** și selectați **Preferințe**
+**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
 
-![Utilizați notificările de sistem pentru alerte și notificări](../images/android_auto_02.png)
+On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
 
-În **Alerte locale** activați **Utilizați notificările de sistem pentru alerte și notificări**
+![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
 
-![Utilizați notificările de sistem pentru alerte și notificări](../images/android_auto_03.png)
+Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
 
-Verificați acum dacă primiți notificări de la **AAPS** pe telefon înainte de a merge la mașina dumneavoastră!
+![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
 
-![Utilizați notificările de sistem pentru alerte și notificări](../images/android_auto_04.png)
+Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+
+![AAPS notification on the phone](../images/android_auto_04.png)
 
 ## Permiteți utilizarea de "surse necunoscute" cu Android Auto.
 
@@ -80,6 +75,8 @@ Datele dumneavoastră CGM vor fi afișate după cum urmează:
 
 ![Date CGM AAPS pe Android Auto](../images/android_auto_01.png)
 
+(android-auto-troubleshooting)=
+
 ## Depanare:
 
-* Dacă nu vedeți notificarea, verificați dacă [ați permis AAPS să afișeze notificările](#use-system-notifications-in-aaps-for-alerts-and-notifications) în Android și dacă [Android Auto are drepturi de acces la notificări](#allow-the-use-of-unknown-sources-with-android-auto).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
