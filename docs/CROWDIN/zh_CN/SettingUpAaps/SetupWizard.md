@@ -1,8 +1,13 @@
 # AAPS 设置向导
 
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
+
 当您首次启动 **AAPS** 时，**设置向导** 会引导您一次性快速完成应用程序所有的基本配置。**设置向导** 的目的是为了避免遗漏关键步骤。例如，**权限设置** 对于正确设置 **AAPS** 至关重要。
 
-然而，在首次使用 **设置向导** 时，并不一定要完全配置所有内容，您可以轻松退出向导并在稍后返回。在 **设置向导** 之后，有三种方式可以进一步优化/更改配置。这些内容将在下一节中进行解释。所以，如果您在设置向导中跳过了一些步骤，也没关系，您稍后可以轻松地进行配置。
+然而，在首次使用 **设置向导** 时，并不一定要完全配置所有内容，您可以轻松退出向导并在稍后返回。 There are three routes available after the **Setup Wizard** to further optimize/change the configuration. 这些内容将在下一节中进行解释。所以，如果您在设置向导中跳过了一些步骤，也没关系，您稍后可以轻松地进行配置。
 
 在使用 **设置向导** 期间和之后，您可能发现**AAPS** 没啥明显的变化。要启用您的 **AAPS** 循环，您必须按照 **目标** 启用各个功能。您将在 设置向导 结束时开始**目标 1**。您是 **AAPS** 的主人，别搞反了。
 
@@ -22,78 +27,82 @@
 ```
 ## 欢迎信息
 
-这只是欢迎信息，您可以点击“NEXT”按钮跳过：
+When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
 
-![欢迎](../images/setup-wizard/Wizard01.png)
+Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
 
-## 许可协议
-
-在最终用户许可协议中，有关于使用 **AAPS** 的法律方面的重要信息。请仔细阅读。
-
-如果您不理解或不能同意最终用户许可协议，请不要使用 **AAPS**！
-
-如果您理解并同意，请点击“我理解并同意”按钮，并按照设置向导进行操作：
-
-![EULA](../images/setup-wizard/Wizard02.png)
+![欢迎](../images/setup-wizard/Wizard-Welcome.png)
 
 ## 所需权限
 
-**AAPS**需要满足一些要求才能正常运行。
+**AAPS** needs a few permissions to operate correctly. The Wizard groups them on a single "**Permissions Required**" panel, each with its own "**Grant**" button. Grant them one by one — the icon next to each item turns into a tick once it is done.
 
-In the following screen you are asked several questions you have to agree to, to get **AAPS** working. 向导本身会解释它为什么要请求相关设置。
+![Permissions](../images/setup-wizard/Wizard-Permissions.png)
 
-在这一屏幕中，我们旨在提供更多背景信息，将更多技术术语翻译成普通语言或解释原因。 Continue reading below to see each permission request.
+### Battery optimization
 
-![Permissions](../images/setup-wizard/Wizard03.png)
+Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+
+然而，**AAPS** 需要定期运行，例如，每几分钟接收一次血糖读数，然后根据您设定的参数来应用算法，以决定如何调整您的血糖。 Therefore it must be excluded from battery optimization.
+
+Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
+
+![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
+
+(SetupWizard-StoragePermission)=
+
+### AAPS Directory
+
+**AAPS** needs to store its settings and log information on the permanent storage of your smartphone. 永久存储意味着即使在重新启动智能手机后，信息仍然可用。（PC硬盘的概念）其他信息只是丢失了，因为它们没有被保存到永久存储中。
+
+Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
+
+```{tip}
+Choosing the default AAPS directory is recommended.</br>
+Do **not** select a subdirectory of AAPS.
+```
+
+默认目录为**AAPS**，但您可使用任意专用目录。 Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
+
+![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+
+Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+
+![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
 ### Notifications
 
 如果应用程序想要向您发送通知，Android 需要特殊权限。
 
-While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
+While it is a good feature to disable notifications _e.g._ from social media apps, it is essential that you allow **AAPS** to send you notifications.
 
-Please click the first "ASK FOR PERMISSION" button:
+Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
 
-![Notifications](../images/setup-wizard/Wizard04.png)
+![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-选择“AAPS”应用程序：
+### Alarms and reminders
 
-![AAPS over other apps](../images/setup-wizard/Wizard04-AndroidSettings1.png)
+On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
 
-通过将滑块向右滑动来启用“在其他应用上层显示”：
+This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
 
-![image](../images/setup-wizard/Wizard04-AndroidSettings2.png)
-
-如果已启用，滑块应如下所示：
-
-![image](../images/setup-wizard/Wizard04-AndroidSettings3.png)
-
-### 电池优化
-
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
-
-然而，**AAPS** 需要定期运行，例如，每几分钟接收一次血糖读数，然后根据您设定的参数来应用算法，以决定如何调整您的血糖。因此，Android 必须允许它这样做。
-
-您通过确认设置来做到这一点。
-
-请点击第二个“申请权限”按钮。
-
-![Allow Background](../images/setup-wizard/Wizard05.png)
-
-请选择“允许”：
-
-![Allow Background](../images/setup-wizard/Wizard05-Background.png)
+Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimisation
+### Bluetooth battery optimization
 
-Newer versions of Android have added battery optimisation to the system Bluetooth application too.
+```{admonition} Extra Android setting, not part of the Wizard
+:class: note
+The following is additional Android configuration done outside of the Setup Wizard. It is not one of the "Grant" buttons above, but it is important for a reliable pump connection.
+```
 
-As well as Disabling battery optimisation for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+Newer versions of Android have added battery optimization to the system Bluetooth application too.
+
+As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
 
 ***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Follow these steps on Android 16, other versions will varies slightly from the provided screenshots:
+Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
 
 1. Open Android settings and search for **Apps**, and open the Apps settings.
 
@@ -103,7 +112,7 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app its hidden by default, we need to show system apps. Click on the **three dots (hamburger)** on the top left (1). Then click on **Show System** (2).
+3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots** (⋮) on the top right (1). Then click on **Show system** (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
@@ -125,108 +134,68 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-(SetupWizard-StoragePermission)=
+## 许可协议
 
-### 存储权限
+在最终用户许可协议中，有关于使用 **AAPS** 的法律方面的重要信息。请仔细阅读。
 
-**AAPS** 需要将信息记录到智能手机的永久存储中。永久存储意味着即使在重新启动智能手机后，信息仍然可用。（PC硬盘的概念）其他信息只是丢失了，因为它们没有被保存到永久存储中。
+如果您不理解或不能同意最终用户许可协议，请不要使用 **AAPS**！
 
-请点击第一个“申请权限”按钮：
+If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" button and follow the Setup Wizard:
 
-![Allow Background](../images/setup-wizard/Wizard06.png)
+![EULA](../images/setup-wizard/Wizard-EULA.png)
 
-点击“允许”：
+A "**Next**" button appears once you have agreed. Press "**NEXT**".
 
-![image](../images/setup-wizard/Wizard06-Memory.png)
+The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
 
-点击“AAPS目录”。这将打开手机文件系统，您可选择AAPS存储数据的位置。
-
-![AAPS Directory](../images/setup-wizard/Wizard07.png)
-
-```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
-```
-
-默认目录为**AAPS**，但您可使用任意专用目录。如需可新建目录，进入后选择“使用此文件夹”：
-
-![Select folder](../images/setup-wizard/Wizard07-Folder.png)
-
-确认您要授予**AAPS**访问所选目录的权限：
-
-![Select folder](../images/setup-wizard/Wizard07-Confirm.png)
-
-点击“下一步”按钮：
-
-![Finish Permissions](../images/setup-wizard/Wizard08.png)
-
-### 位置
-
-Android links the use of Bluetooth communication to the ability to use location services. 也许您在其他应用程序中也看到过这一点。 It's common to need location permission if you want to access Bluetooth.
-
-**AAPS** uses Bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. 具体细节可能因设置而异。
-
-请点击第一个“申请权限”按钮：
-
-![Allow Location](../images/setup-wizard/Wizard09.png)
-
-这一点很重要。否则，**AAPS** 将根本无法正常工作。
-
-点击“在使用应用时”：
-
-![位置](../images/setup-wizard/Wizard09-location.png)
-
-请点击第二个“申请权限”按钮：
-
-![Location 2](../images/setup-wizard/Wizard10.png)
-
-选择“始终允许”。
-
-![Location all the time](../images/setup-wizard/Wizard10-allthetime.png)
-
-
-
-点击“下一步”按钮：
-
-![Location 2](../images/setup-wizard/Wizard11.png)
+![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
 ## 主密码
 
-由于 **AAPS** 的配置包含一些敏感数据（_例如_，访问您的 Nightscout 服务器的 API_KEY），因此它会被您在此处设置的密码加密。
+As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
 
-第二句话非常重要，请**不要丢失您的主密码**。请把它记好，_例如_放在Google Drive上。 Google Drive是一个好地方，因为它会由Google为您进行备份。您的智能手机或电脑可能会崩溃，而您可能没有实际备份。如果您忘记了主密码，以后可能很难恢复您的配置文件和 **目标**完成进度。
+The Wizard shows "**Password not set**". Press "**Set**":
 
-在两次填写密码后，请点击“下一步”按钮：
+![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
 
-![Password](../images/setup-wizard/Wizard12.png)
+This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
 
-### 导入配置
+![保护（Protection）](../images/setup-wizard/Wizard-Protection.png)
 
-```{tip}
-Import your last settings file if present.</br>
-You can also do this after completing the wizard.</br>
-If you already have them ready, importing now will be faster than recreating you profile.
+Enter the same password in both fields and press "**OK**":
+
+![Password](../images/setup-wizard/Wizard-Password.png)
+
+Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+
+![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+
+```{admonition} Do not lose your Master Password
+:class: danger
+Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. 您的智能手机或电脑可能会崩溃，而您可能没有实际备份。如果您忘记了主密码，以后可能会很难恢复您的配置文件和进度，尤其是在完成目标的过程中。
 ```
 
-If your current AAPS directory contains settings, you will be asked if you want to import them.
+When you are done, press "**NEXT**" to go to the next screen.
 
-This will happen only if you uninstalled and reinstalled AAPS on the same phone.
+(setup-wizard-import-settings)=
+## 导入配置
 
-Tap NEXT if you don't want to restore them now.
+This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
 
-Tap RESTORE SETTINGS to select which file to restore, then NEXT.
+- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
+- To start with a new configuration, press "**NEXT**" and continue with the Wizard.
 
-![设置](../images/setup-wizard/Wizard12b.png)
+![导入配置](../images/setup-wizard/Wizard-ImportSettings.png)
 
 ## 单位（mg/dL <-> mmol/L）
 
-Please select if your glucose values are in mg/dL or mmol/L and then please click the "NEXT" button:
+Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
 
-![单位](../images/setup-wizard/Wizard13.png)
+![单位](../images/setup-wizard/Wizard-Units.png)
 
-## 显示设置
+## Display Settings
 
- 在这里，您选择传感器血糖显示的范围，该范围将在您设置的值之间显示为“在范围内”。您可以暂时保留默认值，稍后再进行编辑。
+Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
 
 您选择的值仅影响图表的图形表示，而不影响其他内容。
 
@@ -234,156 +203,149 @@ Please select if your glucose values are in mg/dL or mmol/L and then please clic
 
 用于分析 TIR（入框时间）的范围在您的报告服务器上单独配置。
 
-请点击“下一步”按钮：
+Adjust the marks with the "−" / "+" buttons if needed, then press the "**NEXT**" button:
 
-![Range](../images/setup-wizard/Wizard14.png)
+![Display Settings](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## 与报告服务器的同步等
+## Communication
 
-在这里，您正在配置数据上传到报告服务器。
+The "**Communication**" screen lists the plugins used to upload, synchronize and broadcast your data:
 
-您还可以在此处进行其他配置，但对于首次运行，我们将只关注报告服务器。
+- **SMS Communicator** – remote control of **AAPS** using SMS commands
+- **NSClientV3** – synchronizes your data with Nightscout using the v3 API
+- **Tidepool** – uploads data to Tidepool
+- **xDrip** – sends data to xDrip
+- **Open Humans** – upload and donate your diabetes data to scientific projects
+- **Wear** – monitor and control **AAPS** from a WearOS watch
+- **External Companion Apps** – data broadcasting to various external apps
+- **Garmin** – connection to a Garmin device
 
-如果您目前无法设置，请暂时跳过此步骤。您可以在稍后配置它。
+![Communication](../images/setup-wizard/Wizard-Communication.png)
 
-如果您在此处左侧选择了一个项目，则可以在右侧勾选可见性（眼睛）框，这会把这个插件放置在 **AAPS** 主屏幕的顶部菜单中。如果您此时配置报告服务器，请也选择可见性。
+Scroll down to see the rest of the list:
 
-在此示例中，我们选择 Nightscout 作为报告服务器，并将对其进行配置。
+![Communication more](../images/setup-wizard/Wizard-Communication-More.png)
 
-```{admonition}  **NSClient** version
-:class: 注意
-点击 [这里](#version3200) 查看 **AAPS** 3.2.0.0 的发布说明，其中解释了顶部选项 **NSClient**（这是“v1”，尽管没有明确标记）和第二个选项 **NSClient v3** 之间的差异。
-```
-对于 Tidepool 来说更简单，因为您只需要个人登录信息。
+You could configure several of these now, but for the first run we will just focus on the reporting server. If you are not able to set it up at the moment, skip it for now — you can configure it later.
 
-做出选择后，请点击旁边的齿轮按钮：
+In this example we use Nightscout as reporting server. Tick the box on the right of "**NSClientV3**" to enable it. 对于 Tidepool 来说更简单，因为您只需要个人登录信息。
 
-![同步](../images/setup-wizard/Wizard15.png)
+Once enabled, press "**Settings**" below NSClientV3 to configure it:
 
-您正在这里配置 Nightscout 报告服务器。
+![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-请点击“Nightscout URL”：
+Here you configure the Nightscout reporting server. The NSClientV3 settings are shown as one scrollable page:
 
-![NSClient](../images/setup-wizard/Wizard16.png)
+![NSClientV3 settings](../images/setup-wizard/Wizard-NSClientV3.png)
 
-输入您的Nightscout URL，这是您的个人Nightscout服务器。这只是您自己设置的 URL，或者您的 Nightscout 服务提供商提供给您的 URL。
+Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirm with "**OK**".
 
-请点击“OK”按钮：
+Press "**Nightscout access token**" and enter the access token for your Nightscout server. 没有这个令牌，将无法访问。 If you don't have it yet, please check the documentation for setting up the reporting server.
 
-![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
+Leave "**Use websockets**" enabled for real-time communication with Nightscout.
 
-Enter your Nightscout access token. 这是您为 Nightscout 服务器配置的访问令牌。没有这个令牌，将无法访问。
+The remaining sections can be left at their defaults for now. They are described here so you know where to find them later:
 
-如果您目前看不到它，请查看 **AAPS** 文档中关于设置报告服务器的文档。
+**Alarm options** — Nightscout alarms, announcements and stale-data thresholds. Leave the switches off for now; we only open them so you are aware of the options.
 
-After filling in the "**Nightscout access token**" and clicking "OK", please click on the "Synchronization" button:
+**Connection settings** — choose how data is transferred. Caregivers must enable "**Use cellular data**", otherwise the phone of the person they care for (_e.g._ a child) cannot upload outside Wi-Fi range, _e.g._ on the way to school. Other users can disable cellular transfer to save data or battery. If in doubt, leave everything enabled.
 
-![NSClient Token](../images/setup-wizard/Wizard16-Token.png)
+![连接设置](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
 
-Please select "Upload data to NS" if you already configured Nightscout in the previous steps of the Setup Wizard.
+**Advanced Settings** — enable "**Log app start event**" if you want to see in Nightscout when the app restarts (useful for caregivers). Keep "**Create announcements from errors**" and "**Create announcements from carbs required**" enabled. Leave "**Use slow sync**" off; you would only use it if the Nightscout server is slow to process a large amount of data.
 
-如果您在 Nightscout 上存储了配置文件并希望将它们下载到 **AAPS**，请启用“Receive profile store”：
+![Advanced settings](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-![Syncronization](../images/setup-wizard/Wizard16-Sync.png)
+Go back to the list of plugins and press "**NEXT**" to go to the next screen.
 
+## Client control
 
-返回上一屏幕并选择“警报选项”：
+From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
 
-![报警](../images/setup-wizard/Wizard16-Alarm.png)
+There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**. There you add a client with a **QR code** (it sets up Nightscout on the client too) or with a **PIN**, and give it a **role**.
 
-现在，请将开关保持禁用状态。我们带您浏览此界面，是为了让您熟悉未来可能需要配置的选项。目前没有必要进行这些配置。
+- "**Authorized clients**" — manage the paired client devices allowed to control this master.
+- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
 
-返回之前的屏幕并选择“连接设置”。
+When client control is already on — always in [Simple Mode](#preferences-simple-mode) — this phone is in [hardened mode](#client-master-control-hardened-mode): it takes changes only from paired clients, so the screen explains hardened mode instead of offering the "**Nightscout data acceptance**" settings.
 
-在这里，您可以配置如何将数据传输到报告服务器。
+![Client control](../images/setup-wizard/Wizard-ClientControl.png)
 
-看护人必须启用“使用手机流量（use cellular connection）”，否则被看护人的智能手机（例如，孩子的手机）无法在 WiFi 范围外（_例如_，在上学的路上）上传数据。
+"**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
 
-其他**AAPS**用户若希望节省流量或电量，可禁用手机流量。
+![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-如果有疑问，请将所有选项保持启用状态。
+Press "**NEXT**" to go to the next screen.
 
-返回之前的屏幕并选择“高级设置”。
+(setup-wizard-instance-name)=
+## Who is using this phone?
 
-![Connection](../images/setup-wizard/Wizard16-Connect.png)
+Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
 
-如果您想在报告服务器上获取此信息，请启用“Log app start to NS”。这可以帮助您（特别是作为护理人员）远程了解应用程序是否以及何时被重新启动。
+这可能是任何原因。 You can change it later in **Settings → General → Instance name**.
 
-一开始通过 Nightscout来查看 **AAPS** 停止或启动可能挺好玩，但时间长了一般就没啥必要了。
+Press "**NEXT**" to go to the next screen.
 
-启用“从错误中创建公告”和“从所需碳水化合物警报中创建公告”。
-
-将“减慢上传速度”保持禁用状态。仅在特殊情况下使用此功能，例如需向Nightscout服务器传输大量数据，且该服务器处理速度较慢时。
-
-返回两次，在插件列表中选择“下一步”以转到下一个屏幕：
-
-![image](../images/setup-wizard/Wizard16-App.png)
-
-## 患者名称
-
-在这里，您可以在 **AAPS** 中设置您的姓名。
-
-这可能是任何原因。这只是为了区分用户。
-
-为了简单起见，请输入名字和姓氏。
-
-点击“下一步”转到下一个屏幕。
-
-![名称](../images/setup-wizard/Wizard17.png)
+![名称](../images/setup-wizard/Wizard-Name.png)
 
 ## 患者类型
 
 在这里，您选择“患者类型”，这很重要，因为 **AAPS** 根据患者的年龄有不同的限制。出于安全和保护隐私的原因，这一点非常重要。
 
-在这里，您还可以配置**餐时大剂量的最大上限**。也就是说，这是你需要用来应对日常餐食的最大剂量。这是一个安全功能，有助于避免输注餐时大剂量的时候意外过量给药。
+在这里，您还可以配置**餐时大剂量的最大上限**。也就是说，这是你需要用来应对日常餐食的最大剂量。 It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
 
 第二个限制在概念上类似，但与您预期的最大碳水化合物摄入量有关。
 
-设置这些值后，点击“下一步”转到下一个屏幕：
+After setting these values, press "**NEXT**" to go to the next screen:
 
-![Patient](../images/setup-wizard/Wizard18.png)
+![Patient](../images/setup-wizard/Wizard-PatientType.png)
 
-## 使用的胰岛素
+## 胰岛素
 
-选择泵中使用的胰岛素类型。
+Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
 
-胰岛素的名称应该是不言自明的。
+Press the "**Insulin**" button to open the insulin editor:
 
-```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
-:class: 危险
-对于高级用户或医学研究，可以使用“Free-Peak Oref”定义自定义配置文件，说明胰岛素如何起作用。除非您是专家，否则请不要使用它，通常预定义的值对每种品牌胰岛素都有效。
+![胰岛素](../images/setup-wizard/Wizard-Insulin.png)
+
+In the editor you can give the insulin a **nickname** and set its **Peak** (in minutes) and **DIA** (in hours). The quickest way is to load a preset with "**Load peak from**" — choose **Novorapid**, **Fiasp** or **Lyumjev** — and the peak is filled in for you. The graph at the bottom previews the resulting insulin activity curve.
+
+![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
+
+Pick the preset that matches your insulin, for example **Fiasp**:
+
+![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
+
+```{admonition} Use your insulin brand's preset peak
+:class: danger
+Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
 ```
 
-点击“下一步”转到下一个屏幕：
+If you are a new **AAPS** user, set **DIA** to 9 hours — see [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to understand why.
 
-![胰岛素](../images/setup-wizard/Wizard19.png)
+```{admonition} "Insulin configuration changed" dialog
+:class: note
+If a paired client (_e.g._ another phone) has changed the insulin configuration, a dialog appears. Press **OK** to load their changes, or **Cancel** to keep editing (your next save will overwrite theirs).
+```
 
+![Insulin changed](../images/setup-wizard/Wizard-Insulin-Changed.png)
+
+Press the save icon (top right), then press "**NEXT**" to go to the next screen.
 
 ## 血糖数据来源
 
-选择您正在使用的 BG 来源。请阅读您 [血糖数据源](../Getting-Started/CompatiblesCgms.md) 的文档。
+Here you select where **AAPS** gets its glucose data from. 请阅读您 [血糖数据源](../Getting-Started/CompatiblesCgms.md) 的文档。
 
-由于有多个选项可用，我们不会在这里解释所有选项的配置。 We are using xDrip+ in our example here:
+Many sources are available — scroll through the list and select the one you use:
 
+![血糖数据源](../images/setup-wizard/Wizard-BGSource.png)
 
-![血糖数据源](../images/setup-wizard/Wizard20.png)
+Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
 
+![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-Enable the visibility in the top level menu by clicking the check box on the right side.
-
-做出选择后，点击“下一步”转到下一个屏幕：
-
-![Select BG](../images/setup-wizard/Wizard20-Set.png)
-
-
-Click on the cogwheel button to access the settings.
-
-启用“将血糖数据上传到NS”和“将探头更换记录到NS”。
-
-返回并点击“下一步”转到下一个屏幕：
-
-![Upload](../images/setup-wizard/Wizard20-Upload.png)
+After making your selection, press "**NEXT**" to go to the next screen.
 
 (setup-wizard-profile)=
 ## 配置文件
@@ -401,197 +363,176 @@ Click on the cogwheel button to access the settings.
 如果机器人输入错误，它将始终无法正常工作。 **AAPS** 只能根据给定的信息工作。如果您的配置方案太猛，您可能会面临低血糖的风险；而如果方案太柔，则可能会面临高血糖的风险。 
 ```
 
-点击“下一步”转到下一个屏幕。输入一个“配置文件名称”：
+Press the "**Profile**" button to open the profile editor:
 
-![image](../images/setup-wizard/Wizard21.png)
+![配置文件](../images/setup-wizard/Wizard-Profile.png)
 
+The editor opens empty ("No records available"). Press the "**+**" button at the bottom to create a new profile:
+
+![Profile empty](../images/setup-wizard/Wizard-Profile-Empty.png)
 
 如果需要，长期来看你可以拥有多个配置文件。我们在这里只创建一个。
 
 ```{admonition} Profile only for tutorial - not for your usage
-:class: 信息
-此处的示例配置文件仅用于向您展示如何输入数据。
+:class: note
+The example profile here is only to show you how to enter data.
 
-它不打算作为准确的配置文件或优化得很好的配置文件，因为每个人的需求都大不相同。
+It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
 
 不要用它来实际配置闭环！
 ```
 
-输入您的 [胰岛素作用持续时间（DIA）](#your-aaps-profile-duration-of-insulin-action)（小时）。然后点击“IC”：
+The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
 
-![DIA](../images/setup-wizard/Wizard21-Name.png)
+![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
-输入您的 [IC](#your-aaps-profile-insulin-to-carbs-ratio) 值：
+Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
 
-![IC](../images/setup-wizard/Wizard21-IC.png)
+![IC](../images/setup-wizard/Wizard-Profile-IC.png)
 
-点击“ISF”。输入您的[胰岛素敏感系数（ISF）](#your-aaps-profile-insulin-sensitivity-factor)值：
+Press "**ISF**" and enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
 
-![ISF](../images/setup-wizard/Wizard21-ISF.png)
+![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
+Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
 
-点击"BAS". 输入您的[基础率](#your-aaps-profile-basal-rates)：
+![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-![image](../images/setup-wizard/Wizard21-Basal.png)
-
-
-点击 "TARG"。输入你的目标血糖值。
+Press "**TARG**" and enter your blood sugar target values.
 
 对于开环，这里的目标范围可以设置得宽一些，否则**AAPS**会不断提示您更改临时基础率或其他设置，有时候可能挺烦人。
 
 之后，对于闭环系统，你通常只会有一个上限值和下限值。这样，**AAPS**更容易达到目标值，并为您提供更好的糖尿病整体控制。
 
-输入/确认目标值：
+![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-![血糖控制目标值](../images/setup-wizard/Wizard22.png)
+When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
 
-通过点击“保存”来保存配置文件：
+![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-![Save](../images/setup-wizard/Wizard22-Save.png)
+Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
 
-
-保存后，新的"激活配置文件"按钮将出现。
-
-```{admonition} Several defined but only one active profile
-:class: 信息
-你可以定义多个配置文件，但在任何给定时间只有一个激活的配置文件在运行。
-```
-
-点击“激活配置文件”：
-
-![image](../images/setup-wizard/Wizard22-Activate.png)
-
-
-
-
-
-出现配置文件切换对话框。在这种情况下，让它保持为预设值。
+![Save](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
-:class: 信息
-稍后您将学习如何使用此通用对话框来处理疾病或运动等情况，在这些情况下，您需要更改适合当前情况的配置。
+:class: note
+You can have several profiles defined, but only one activated profile running at any given time.
 ```
 
+Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
 
-点击“确定”：
+![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
+Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
 
-![Switch](../images/setup-wizard/Wizard22-Switch.png)
+![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
 
+A profile switch dialog appears. In this case let it stay as preset and confirm with "**OK**":
 
+```{admonition} Profile switch dialog
+:class: note
+You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile to suit the circumstances.
+```
 
-出现配置文件切换的确认对话框。
+![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-你可以通过点击“确定”来确认。点击“下一步”转到下一个屏幕：
-
-![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
-
-你的配置文件现在已经设置好了：
-
-![Info](../images/setup-wizard/Wizard22-Info.png)
-
+Your profile is now active. Press "**NEXT**" to go to the next screen.
 
 ## 胰岛素泵
 
+Now you select your insulin pump. 请阅读您的[胰岛素泵](../Getting-Started/CompatiblePumps.md)文档。
 
+Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
 
-现在你要选择你的胰岛素泵。
+![胰岛素泵](../images/setup-wizard/Wizard-Pump.png)
 
-你会看到一个重要的警告对话框。请阅读它，然后点击“确定”。
+Many pumps are supported — scroll down to find yours:
 
-如果你已经在之前的步骤中设置好了配置文件，并且知道如何连接你的泵，那么现在可以随意连接它。
+![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
 
-否则，使用左上角的箭头退出设置向导，让**AAPS**首先显示一些血糖值。你可以随时回来，或者使用直接的配置选项（不使用向导）。
+When you select a real pump, **AAPS** asks for a confirmation, because it will copy the basal rates of your profile to the pump and overwrite the basal rates stored there. Press "**OK**" only if the basal rates in your **AAPS** profile are correct; otherwise press "**Cancel**" and switch to the pump later:
 
-请阅读您的[胰岛素泵](../Getting-Started/CompatiblePumps.md)文档。
+![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-点击“下一步”转到下一个屏幕。
+If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#bluetooth-permission)).
 
-![Pump Warning](../images/setup-wizard/Wizard23.png)
+If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
 
-Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: AAPS requires Bluetooth permission. This will be addressed after you complete the Wizard.
-
-![Bluetooth Warning](../images/setup-wizard/Wizard23b.png)
-
-
-在此，我们选择“虚拟泵”。
-
-![胰岛素泵](../images/setup-wizard/Wizard23-Pump.png)
+Press "**NEXT**" to go to the next screen.
 
 ## APS算法
 
-使用OpenAPS SMB算法作为您的APS算法。尽管功能名称包含"SMB"，但该算法功能将保持禁用状态，直至您完成以下前提条件：​熟悉AAPS操作且通过初始目标考核。与OpenAPS AMA相比，OpenAPS SMB是较新的版本，通常也更好。
+使用OpenAPS SMB算法作为您的APS算法。 Despite the name, the SMB feature of the algorithm is disabled until you are familiar with AAPS and have worked through the first objectives. OpenAPS SMB is newer and generally better than OpenAPS AMA anyway.
 
-在开始阶段禁用SMB功能的原因是，SMB功能通过超级微型大剂量来更快地应对血糖升高，而不是增加基础率百分比。在开始时，您的配置通常不如经过一段时间的使用后那么好，因此一开始禁用了此功能。
+SMB is disabled at the start because the SMB feature reacts faster to a blood sugar increase, using a Super Micro Bolus instead of increasing the basal rate percentage. Because your profile is generally not as good in the beginning as it is after some experience, the feature is disabled at first.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
-:class: 信息
-OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。在某些情况下，使用此算法可能更好，但它不是推荐选项。
+:class: note
+OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. 在某些情况下，使用此算法可能更好，但它不是推荐选项。
 ```
 
-点击齿轮图标以查看详细信息：
+Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
 
-![APS算法](../images/setup-wizard/Wizard24.png)
+![APS算法](../images/setup-wizard/Wizard-APS.png)
 
-
-只需阅读文本，不要在此处进行任何更改。
+The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
 
 由于**目标（Objectives）**所带来的限制，您目前反正无法使用“闭环”或“SMB功能”。
 
-返回并点击“下一步”转到下一个屏幕：
+Go back and press "**NEXT**" to go to the next screen:
 
-![设置](../images/setup-wizard/Wizard24-Settings.png)
+![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
 
 ## 灵敏度检测
 
-选择“Sensitivity Oref1”作为灵敏度插件的标准选项。
+Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
 
-点击“下一步”转到下一个屏幕：
+![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
 
-![Sensitivity](../images/setup-wizard/Wizard25.png)
+If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
+
+![Sensitivity settings](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
+
+Press "**NEXT**" to go to the next screen.
 
 ## 开始目标1
 
-你现在正在进入“目标”设置。这是获得进一步**AAPS**功能的资格要求。
+You are now entering the Objectives — the qualification for access to further **AAPS** features.
 
-在这里，我们开始目标1，即使目前我们的设置还没有完全准备好成功完成这个目标。
+Press "**Open Objectives**":
 
-但这是开始。
+![目标](../images/setup-wizard/Wizard-Objectives.png)
 
-点击绿色“开始”开始目标1：
+在这里，我们开始目标1，即使目前我们的设置还没有完全准备好成功完成这个目标。但这是开始。
 
-![目标](../images/setup-wizard/Wizard26.png)
+Press the "**Start**" button next to "**1. Objective**":
 
-您会看到您已经取得了一些进展，但还有其他领域需要完成。
+![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
 
-点击“完成”以进入下一个屏幕。
+The objective expands to show its individual checks. You can see that you already made some progress, while other items are still to be done:
 
-![Done](../images/setup-wizard/Wizard26-Started.png)
+![Objective started](../images/setup-wizard/Wizard-Objectives-Started.png)
 
-您来到了**AAPS**的主屏幕。
+Go back, then press "**FINISH**" to complete the Setup Wizard:
 
-在这里，您可以在**AAPS**中找到您设置配置文件时的信息消息。
+![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-这是在我们切换到新配置时完成的。
-
-你可以点击“稍后再提醒”，它就会消失。
-
-![image](../images/setup-wizard/Wizard26-Done.png)
+After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
 
 如果您在任何时候意外退出了设置向导，您可以简单地重新启动向导，或者手动更改[AAPS闭环的配置](../SettingUpAaps/ChangeAapsConfiguration.md)。
 
-## Restart AAPS to validate settings
+## Bluetooth permission
 
-From the top right menu, select Exit to force AAPS to restart.
+If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
 
-![重新启动](../images/setup-wizard/Wizard27.png)
+![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-If you selected a Bluetooth connected pump, you will now see the permission request:
+Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
 
-![Bluetooth Request](../images/setup-wizard/Wizard28.png)
+![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Allow AAPS to connect to nearby devices.
+Select "**Allow**" so **AAPS** can find and connect to your pump:
 
-![Bluetooth Request](../images/setup-wizard/Wizard28b.png)
+![Bluetooth Allow](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
 如果您的**AAPS**闭环已经全部设置完成，请继续阅读下一节[“完成目标”](../SettingUpAaps/CompletingTheObjectives.md)。
