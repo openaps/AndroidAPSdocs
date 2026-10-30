@@ -1,85 +1,82 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
-
-```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
-
-versions used for documentation:
-
-* AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release ```
+**AAPS** vám může posílat informace o vašem aktuálním stavu jako zprávu přímo do Android Auto ve vašem autě.
 
 ## Požadavky
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+**AAPS** využívá funkci Android Auto, která umožňuje přesměrovat zprávy z aplikací v mobilu na displej audiosystému v autě.
 
-That means that:
+To znamená, že:
 
-* You must configure **AAPS** to use system notifications for alerts and notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+* Android musí aplikaci **AAPS** povolit zobrazovat oznámení a
+* Protože **AAPS** není oficiální aplikace, povolte v Android Auto použití „neznámých zdrojů“.
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![Data CGM z AAPS v Android Auto](../images/android_auto_01.png)
 
-## Use system notifications in AAPS for alerts and notifications
+## Check that AAPS can show notifications
 
-Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
+**AAPS** vždy zobrazuje stavové oznámení s vaší aktuální glykémií, IOB a COB. Toto oznámení Android Auto zobrazuje v autě. V **AAPS** není potřeba nic zapínat, ale Android musí aplikaci **AAPS** povolit zobrazovat oznámení.
 
-![Používat systémové notifikace pro výstrahy a oznámení](../images/android_auto_02.png)
+V telefonu otevřete **Nastavení** > **Aplikace** > **AAPS** > **Oznámení** a ujistěte se, že je zapnuté **Všechna oznámení aplikace AAPS**.
 
-In **Local Alerts** activate **Use system notifications for alerts and notifications**
+![Všechna oznámení aplikace AAPS zapnutá](../images/android_auto_notifications_all.png)
 
-![Používat systémové notifikace pro výstrahy a oznámení](../images/android_auto_03.png)
+Sjeďte dolů a ujistěte se, že je zapnutý **Průběžný stav**: to je kanál stavového oznámení.
 
-Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
+![Kanál oznámení Průběžný stav zapnutý](../images/android_auto_ongoing_channel.png)
 
-![Používat systémové notifikace pro výstrahy a oznámení](../images/android_auto_04.png)
+Než půjdete k autu, zkontrolujte prosím, že v telefonu vidíte stavové oznámení **AAPS**!
+
+![Oznámení AAPS v telefonu](../images/android_auto_04.png)
 
 ## Allow the use of "unknown sources" with Android Auto.
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+Protože **AAPS** není oficiální aplikace pro Android Auto, musí být oznámení v Android Auto povolena pro „neznámé zdroje“. K tomu se používá režim vývojáře, který vám zde ukážeme.
 
-Go to your car and connect your mobile with the cars audio system.
+Jděte do auta a připojte mobil k audiosystému auta.
 
-You should now see a screen similar to this screen.
+Nyní byste měli vidět obrazovku podobnou této.
 
-![Enable developer mode](../images/android_auto_05.png)
+![Zapnutí režimu vývojáře](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Konfiguraci spustíte klepnutím na ikonu **nastavení**.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Sjeďte dolů na konec stránky a vyberte **see more in the phone** (zobrazit více v telefonu).
 
-![Enable developer mode](../images/android_auto_06.png)
+![Zapnutí režimu vývojáře](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Nyní na mobilu zapneme režim vývojáře.
 
-The first screen looks like this. Scroll down to the end of the page.
+První obrazovka vypadá takto. Sjeďte dolů na konec stránky.
 
-![Enable developer mode](../images/android_auto_07.png)
+![Zapnutí režimu vývojáře](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
+Tam uvidíte uvedenou verzi Android Auto. Klepněte 10krát (slovy desetkrát) na verzi Android Auto. Touto skrytou kombinací jste nyní zapnuli režim vývojáře.
 
-![Enable developer mode](../images/android_auto_08.png)
+![Zapnutí režimu vývojáře](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+V dialogu „Allow development settings?“ („Povolit nastavení pro vývojáře?“) potvrďte, že chcete zapnout režim vývojáře.
 
-![Enable developer mode](../images/android_auto_09.png)
+![Zapnutí režimu vývojáře](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+V **nastavení pro vývojáře** zapněte „Neznámé zdroje“ („Unknown sources“).
 
-![Enable developer mode](../images/android_auto_10.png)
+![Zapnutí režimu vývojáře](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Chcete-li jej opustit, klepněte na tři tečky vpravo nahoře.
+Nyní můžete režim vývojáře opustit, pokud chcete. Chcete-li jej opustit, klepněte na tři tečky vpravo nahoře.
 
-## Show notifications in car
+## Zobrazení oznámení v autě
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Klepněte na **ikonu s číslem** vpravo dole v Android Auto ve vašem autě.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![ikona s číslem – Android Auto v autě](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+Vaše data z CGM se zobrazí takto:
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![Data CGM z AAPS v Android Auto](../images/android_auto_01.png)
+
+(android-auto-troubleshooting)=
 
 ## Poradce při potížích:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+* Pokud oznámení nevidíte, zkontrolujte, zda jste v Androidu [povolili AAPS zobrazovat oznámení](#check-that-aaps-can-show-notifications) a zda má [Android Auto přístupová práva k oznámením](#allow-the-use-of-unknown-sources-with-android-auto).
