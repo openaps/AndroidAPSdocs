@@ -1,10 +1,27 @@
 # 如何使用 Autotune 外掛
 
-有關 Autotune 算法的文檔可以在 [OpenAPS 文檔](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) 中找到。
+Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。 It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
 
-Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
-Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預設為隱藏。
+(autotune-how-autotune-calculates-adjustments)=
+## How Autotune calculates adjustments
+
+Autotune looks back over your recent AAPS history — CGM readings, boluses, carbs and temporary basal rates — and works out where your **Profile** (basal rates, ISF, carb ratio) doesn't quite match what actually happened to your BG.
+
+For each 5-minute data point, it compares your **actual BG change** to the change your Profile predicted, and sorts the resulting deviation into one of three buckets:
+
+* deviations that happened with no carbs on board and no insulin activity (used to tune **basal rates**, hour by hour),
+* deviations that happened after a bolus/correction with no carbs (used to tune **ISF**), or
+* deviations that happened while carbs were absorbing (used to tune **carb ratio**).
+
+It then looks at the pattern of deviations in each bucket (using percentiles rather than a simple average, so a few noisy data points don't skew the result) and proposes a new value for that hour/parameter.
+
+To keep any single run from overcorrecting, each Autotune run only ever moves a value a fraction of the way towards what the data suggests: up to 10% for ISF and carb ratio, and up to 20% for each basal segment. Overall drift is further capped by the **Max autosens ratio** / **Min autosens ratio** settings (see [Other settings](#autotune-other-settings) below) — the same bounds that limit Autosens. This is why Autotune is meant to be run repeatedly (day after day, or nightly) rather than trusted after a single run: results should converge gradually, and a big jump on one run is a sign to double check your data (missed carbs, a bad sensor day, _etc._) rather than to trust it blindly.
+
+Autotune can be run three ways: manually as a one-off from within the plugin (as described below), automatically every night via an [automation rule](#autotune-run-autotune-with-an-automation-rule), or — outside of AAPS entirely — as a standalone command-line tool against exported data, which is how some community guides describe using it without a phone actively running AAPS.
+
+*For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
 ## 顯示 Autotune 外掛
 
@@ -14,27 +31,27 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 
 ![啟用 Autotune](../images/Autotune/Autotune_0.png)
 
-重新啟動 AAPS 後，Autotune 會顯示在組態建置工具中。
+Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
 
-![自動調整外掛](../images/Autotune/Autotune_1.png)
-
-***注意：若看不到 `Autotune` 選項，請點擊標示（紅框）的箭頭展開，以顯示 `General` 區段中的所有設定。***
+![Autotune ticked in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
 
 ## Autotune 使用者介面
 
-![Autotune 預設畫面](../images/Autotune/Autotune_1b.png)
+Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
+
+![Autotune screen with the profile, the number of days of data and a warning about the selected profile](../images/Autotune/Autotune_1b.png)
 
 - 你可以在「設定檔」下拉選單中選擇要調整的輸入設定檔（預設會選擇目前的活動設定檔）。
-  - 注意：每次選擇新的設定檔時，先前的結果將被移除，並且「調整天數」參數將重設為預設值。
-- 「調整天數」是用來選擇用於計算來調整你設定檔的天數。最小值為 1 天，最大值為 30 天。此數字不應該太小，才能獲得正確的迭代和平滑結果（每次計算需超過7天）。
-  - 注意：每次變更調整天數參數時，先前的結果將被移除。
+  - Note: each time you select a new profile, previous results will be removed and the **Number of days of data** will be set to its default value
+- Then **Number of days of data** (called **Tune days** in older versions) is to select the number of days used in calculation to tune your profile. 最小值為 1 天，最大值為 30 天。此數字不應該太小，才能獲得正確的迭代和平滑結果（每次計算需超過7天）。
+  - Note: each time you change the **Number of days of data**, previous results will be removed
 - 「最後運作」是一個鏈接，可恢復你最後一次有效的計算結果。如果你當天尚未啟動自動調整，或者如果以前的結果由於上面的計算參數修改而被刪除，則你可以恢復最新成功運行的參數和結果。
 - 警告範例顯示有關選定設定檔的一些資訊（例如你有多個 IC 值或 ISF 值）。
   - 注意：Autotune 計算僅適用於單一的 IC 和單一的 ISF 值。目前沒有現有的 Autotune 算法來調整生理週期 IC 或生理週期 ISF。如果你的輸入設定檔有多個數值，你可以在警告區看到調整設定檔時考慮的平均值。
-- 「檢查輸入設定檔」按鈕可打開設定檔檢視器，讓你快速驗證設定檔（單位、DIA、IC、ISF、基礎率和目標）。
-  - 注意：Autotune 只會調整你的 IC（單一數值）、ISF（單一數值）以及有日夜變化的基礎率。單位、DIA 和目標將在輸出設定檔中保持不變。
+- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, IC, ISF, basal and target)
+  - 注意：Autotune 只會調整你的 IC（單一數值）、ISF（單一數值）以及有日夜變化的基礎率。 Units and target will remain unchanged in output profile.
 
-- 「執行 Autotune」將以選定的設定檔和調整天數啟動 Autotune 計算。
+- "Run Autotune" will launch Autotune calculation with selected profile and the selected number of days of data
   - 注意：Autotune 計算可能需要較長時間。當啟動後，你可以切換到其他視圖（主頁等），稍後再回到 Autotune 外掛查看結果。
 
   ![Autotune 運作開始。](../images/Autotune/Autotune_2b.png)
@@ -61,20 +78,20 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 
 - 如果你信任結果（輸入和輸出設定檔之間的變異百分比很低），你可以點擊「啟用設定檔」按鈕，然後點擊 OK 進行確認。
 
-  - 啟用調整後設定檔會自動在本地設定檔外掛中建立一個名為「調整後」的新設定檔。
-  - 如果你在本地設定檔外掛中已有名為「調整後」的設定檔，則該設定檔會在啟用前更新為計算後的 Autotune 設定檔。
+  - Activate Tuned profile will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
+  - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
 
   ![Autotune 啟用設定檔。](../images/Autotune/Autotune_6.png)
 
 - 如果你認為調整後的設定檔需要修改（例如你認為某些變化太大），那麼你可以點擊「複製到本地設定檔」按鈕。
 
-  - 一個帶有「調整後」前綴並附上運作日期和時間的新設定檔會在本地設定檔外掛中建立。
+  - A new profile with the prefix "Tuned" and the date and time of the run will be created in **Manage → Profile**
 
   ![Autotune 複製到本地設定檔。](../images/Autotune/Autotune_7.png)
 
-- 然後你可以選擇本地設定檔來編輯調整後的設定檔（當你打開本地設定檔外掛時，他會被預設選中）。
+- You can then edit the Tuned profile: open **Manage** > **Profile**, swipe to the card named "Tuned" with the date and time of the run, and tap the **Edit** (pencil) button
 
-  - 本地設定檔中的數值將在使用者介面中根據你的幫浦能力進行四捨五入。
+  - the values in the profile will be rounded in the user interface to your pump capabilities
 
   ![Autotune 本地設定檔更新。](../images/Autotune/Autotune_8.png)
 
@@ -84,7 +101,7 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 
   ![Autotune 更新輸入設定檔。](../images/Autotune/Autotune_9.png)
 
-- 如果你已更新你的輸入設定檔，那麼「更新輸入設定檔」按鈕將被「還原輸入設定檔」按鈕替代（參見下圖）。這樣你可以立即查看當前本地設定檔外掛中的輸入設定是否已包含上次運行的結果。你也可以使用此按鈕恢復未包含 Autotune 結果的輸入設定檔。
+- 如果你已更新你的輸入設定檔，那麼「更新輸入設定檔」按鈕將被「還原輸入設定檔」按鈕替代（參見下圖）。 You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. 你也可以使用此按鈕恢復未包含 Autotune 結果的輸入設定檔。
 
   ![Autotune 更新輸入設定檔。](../images/Autotune/Autotune_10.png)
 
@@ -96,26 +113,27 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 
 ### Autotune 外掛設定。
 
-  ![Autotune 預設畫面](../images/Autotune/Autotune_11.png)
+  ![Autotune settings in AAPS 4](../images/preferences/settings_autotune.png)
 
 ```{admonition} Only DEV
-:class: info
-自動化的切換設定檔功能僅在開發/工程模式提供。
+:class: note
+The **Auto switch profile** feature is only available in Dev/Engineering mode.
 ```
 
-- 自動化切換檔案（預設為關閉）：請參見 [使用自動化規則運行自動調整](#autotune-run-autotune-with-an-automation-rule) 下方。如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
+- **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. 如果你將此設定更改為開啟，則輸入設定檔將自動被調整後的設定檔更新並啟用。
   - **請小心，你必須在接下來幾天內信任並驗證，在更新和啟用未修改的調整配置後，它會改善你的循環運行**
 
-- 將 UAM 分類為基礎率（預設為開啟）：此設定適用於未輸入碳水化合物的 AndroidAPS 用戶（完全 UAM）。當關閉時，他將阻止 UAM 被分類為基礎率。
+- **Categorize UAM as basal** (default Off): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). 當關閉時，他將阻止 UAM 被分類為基礎率。
   - 注意：如果當天偵測到至少一小時的碳水化合物吸收，無論此設定（開啟或關閉），所有分類為「UAM」的資料都會被分類為基礎率。
-- 資料天數（預設為5天）：你可以使用此設定定義預設值。每次你在 Autotune 外掛中選擇新設定檔時，調整天數參數將被替換為此預設值。
-- 將平均結果應用於日夜變化的 IC/ISF（預設為關閉）：請參閱[日夜變化 IC 或 ISF 設定檔](#autotune-circadian-ic-or-isf-profile)。
+- **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
+- **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
 
+(autotune-other-settings)=
 ### 其他設置
 
-- 自動調整還使用最大自動感應比和最小自動感應比來限制變化。你可以在「組態建置工具 > 敏感度偵測外掛 > 設定 > 進階設定」中查看並調整這些值。
+- 自動調整還使用最大自動感應比和最小自動感應比來限制變化。 You can see and adjust these values in [**Settings** > **Absorption settings** > **Advanced Settings**](../SettingUpAaps/Preferences.md) (**Autosens max** and **Autosens min**).
 
-  ![Autotune 預設畫面](../images/Autotune/Autotune_12.png)
+  ![Autosens max and Autosens min in the advanced absorption settings](../images/preferences/settings_absorption_advanced.png)
 
 
 
@@ -125,7 +143,7 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 
 ### 日夜變化的 IC 或 ISF 設定檔
 
-- 如果你的設定檔中 IC 和/或 ISF 的變化很重要，並且你完全信任你的生理時鐘和變化，則可以設置「在生理時鐘 IC/ISF 中應用平均值」
+- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can enable **Use circadian IC/ISF** (called "Apply average result in circadian IC/ISF" in older versions)
 
   - 注意，Autotune 計算將始終使用單一數值，Autotune 不會調整日夜變化。此設定僅適用於將計算的平均變化應用於 IC 和/或 ISF 的日夜變化數值。
 
@@ -137,13 +155,13 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 
 ### 調整特定星期幾
 
-- 如果您點擊 "調整天數" 參數右側帶眼睛的核取方塊，您將看到天數選擇。你可以指定 Autotune 計算應包含哪些星期幾（在下方截圖中可以看到「工作日」的範例，週六和週日被排除在 Autotune 計算之外）。
-  - 如果 Autotune 計算中包含的天數少於調整天數，則會在調整天數選擇器的右側顯示有多少天數被包含在內（下方範例中顯示為 10 天）。
-  - 此設定僅在剩餘天數不太少的情況下才能獲得良好的結果（例如，如果你為週末天數調整特定設定檔，只選擇週六和週日，你應該選擇至少 21 或 28 個調整天數，以確保 Autotune 計算中包含 6 或 8 天）。
+- If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. 你可以指定 Autotune 計算應包含哪些星期幾（在下方截圖中可以看到「工作日」的範例，週六和週日被排除在 Autotune 計算之外）。
+  - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
+  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_14b.png)
 
-- 在 Autotune 計算期間，你可以看到計算的進度（範例中顯示為「部分結果，第 3 / 10 天已調整」）。
+- During Autotune calculation, you can see the progress of the calculations ("Partial result day 1 / 4 tuned" in the example below, with Saturday and Sunday excluded)
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_15b.png)
 
@@ -154,8 +172,8 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 ## 使用自動化規則運作 Autotune
 
 ```{admonition} Only DEV
-:class: info
-自動化的切換設定檔功能僅在開發/工程模式提供。
+:class: note
+The **Auto switch profile** feature is only available in Dev/Engineering mode.
 ```
 
 第一步是為 Autotune 定義正確的自動化規則觸發條件：
@@ -170,19 +188,19 @@ Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預�
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_17.png)
 
-- 然後你可以在列表中選擇「運作 Autotune」動作。
+- Then you can select the **Autotune profile** action (in the **Loop & insulin** group)
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_18.png)
 
-- 你可以選擇 Autotune 動作來調整運作的參數。預設參數為「活動設定檔」、Autotune 外掛偏好設定中定義的預設調整天數值，並且選擇了所有天數。
+- You can then adjust the parameters of the action for your run. In a new action, **Select profile to tune** shows the first profile of your local profile list, the **Tune days** field is empty and all days are selected. Choose the profile to tune and enter the number of **Tune days** (1 to 30).
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_19b.png)
 
-- 經過幾天後，如果你完全信任 Autotune 結果且修改百分比很小，你可以修改[Autotune 設定](#autotune-plugin-settings)中的「自動切換設定檔」，將其設為啟用，讓計算後自動更新並啟用調整後的設定檔。
+- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "**Auto switch profile**" to enabled to automatically update and activate profile tuned after calculation.
 
 注意：如果你想為特定的星期幾自動調整設定檔（例如「週末天數」的設定檔和「工作日」的設定檔），那麼為每個設定檔建立一個規則，選擇相同的日期作為觸發條件和 Autotune 動作中的日期，調整天數必須足夠高以確保至少有 6 或 8 天包含在內，且不要忘記在觸發條件中選擇 4AM 之後的時間…
 
-- 請參閱下方範例，調整「我的設定檔」於所有「工作日」的規則，選擇了 14 個調整天數（因此 Autotune 計算中只包含 10 天）。
+- See below an example of rule that runs every working day (Monday to Friday) at 04:00 and tunes the profile "Normal" with 14 **Tune days**, working days only (so only 10 days are included in the Autotune calculation).
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_20b.png)
 
@@ -198,7 +216,7 @@ Autotune 只是輔助工具，重要的是定期檢查你是否同意計算出�
 
 - Autotune 對某些使用者非常有效，但對其他人可能不適用，因此**如果你不信任 Autotune 結果，請不要使用他**
 
-分析 Autotune 結果以暸解（或嘗試暸解）Autotune 為何提出這些修改也是很重要的。
+It's also important to analyze Autotune results to understand (or try to understand) why Autotune proposes these modifications
 
 - 你可能會發現設定檔的強度整體增加或減少（例如總基礎率增加，與 ISF 和 IC 值的減少相關聯）。這可能與隨後幾天的自動敏感度修正超過 100%（需要更激進的調整）或低於 100%（您更敏感）有關。
 - 有時，自動調整會提出基礎率和 IC/ISF 之間的不同平衡 (例如：較低基礎率和更積極的 IC/ISF)
