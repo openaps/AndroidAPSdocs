@@ -15,9 +15,9 @@ Es gibt verschiedene Möglichkeiten, die CareSens Daten mit **AAPS** zu nutzen:
 ![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
 
 
-2. Installiere xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. Gehe in xDrip+ zu den Einstellungen -> Datenquelle, wähle dort `Companion App` aus.
-4. Wähle in **AAPS** xDrip+ unter [KONFIGURATION, BG Source](#Config-Builder-bg-source).
+2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
+4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
@@ -26,4 +26,4 @@ Es gibt verschiedene Möglichkeiten, die CareSens Daten mit **AAPS** zu nutzen:
 2. Öffne in Juggluco das linke Menü und wähle dort `Foto`
 3. Scanne den QR-Code von der Sensor-Verpackung.
 4. Schalte im linken Menü -> Einstellungen -> Datenaustausch den xDrip-Broadcast ein.
-5. Wähle in **AAPS** xDrip+ unter [KONFIGURATION, BG Source](#Config-Builder-bg-source).
+5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
