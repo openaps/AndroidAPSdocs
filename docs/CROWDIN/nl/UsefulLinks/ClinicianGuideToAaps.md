@@ -1,8 +1,12 @@
 # For Clinicians – A General Introduction and Guide to AAPS
 
+```{note}
+This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+```
+
 This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
 
-This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. Als u niet actief bent op sociale media (bijv. [Twitter](https://twitter.com/kozakmilos) of Facebook), schroom dan niet om een email te sturen naar de ontwikkelaars: developers@AndroidAPS.org Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
+This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
 
 ## The steps for building a DIY Closed Loop:
 
@@ -22,7 +26,7 @@ If the device running AAPS breaks or goes out of range of the pump, once the lat
 
 ## How data is gathered:
 
-With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
 
 De Android telefoon moet zowel met de pomp als de CGM verbonden zijn:
 
@@ -48,6 +52,8 @@ AAPS uses the same core algorithm and feature set as OpenAPS. Het algoritme maak
 ### Here are examples of the purple prediction lines, and how they might differ:
 
 ![Paarse voorspellingslijn voorbeelden](../images/Prediction_lines.jpg)
+
+(clinicianguide-dosing-scenarios)=
 
 ### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
 
@@ -81,9 +87,9 @@ As a clinician who may not have experience with AAPS or DIY closed loops, you ma
 
 Voor patiënten is het belangrijk om één verandering tegelijk te maken, en gedurende 2-3 dagen het effect ervan te bekijken voordat een er andere instelling wordt aangepast (tenzij het natuurlijk overduidelijk is dat de verandering een verslechtering is, in dat geval verander je de instelling weer terug). Een hele menselijke neiging is om aan alle knoppen tegelijk te willen draaien, maar wie dat doet kan eindigen met verdere sub-optimale instellingen, en dan is het soms lastig om de eerdere goede instellingen weer terug te vinden.
 
-Eén van de krachtigste hulpmiddelen bij het aanpassen van instellingen is een geautomatiseerd rekeninstrument voor bepaalde parameters: basaalstanden, insuline gevoeligheidsfactor en koolhydraat ratio. Dit heet "[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Het is ontworpen om handmatig te worden uitgevoerd, en de resultaten ervan kunnen een leidraad zijn bij het aanpassen van de instellingen. Autotune wordt vaak gedraaid (en bekeken) voordat iemands instellingen worden aangepast. With AAPS, Autotune will be run as a "one-off", although there are ongoing efforts to incorporate it directly into AAPS as well. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+Eén van de krachtigste hulpmiddelen bij het aanpassen van instellingen is een geautomatiseerd rekeninstrument voor bepaalde parameters: basaalstanden, insuline gevoeligheidsfactor en koolhydraat ratio. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. Het is ontworpen om handmatig te worden uitgevoerd, en de resultaten ervan kunnen een leidraad zijn bij het aanpassen van de instellingen. Autotune wordt vaak gedraaid (en bekeken) voordat iemands instellingen worden aangepast. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
 
-Patiënten die een doe-het-zelf closed loop gaan gebruiken (na jaren van traditionele pen- of pomptherapie), zijn vaak nog geneigd om uit gewoonte te handelen. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). Iemand zou in zo'n geval kunnen kiezen om een stuk meer koolhydraten te eten (bijvoorbeeld de regel van 15 gram bij een hypo), met als resultaat een snellere piek doordat er relatief veel koolhydraten worden gegeten terwijl er op dat moment weinig insuline in het lichaam is. Het durven terugbrengen van de hoeveelheid koolhydraten (gedragsverandering) levert in dit geval betere waardes op.
+Patiënten die een doe-het-zelf closed loop gaan gebruiken (na jaren van traditionele pen- of pomptherapie), zijn vaak nog geneigd om uit gewoonte te handelen. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). Iemand zou in zo'n geval kunnen kiezen om een stuk meer koolhydraten te eten (bijvoorbeeld de regel van 15 gram bij een hypo), met als resultaat een snellere piek doordat er relatief veel koolhydraten worden gegeten terwijl er op dat moment weinig insuline in het lichaam is. Het durven terugbrengen van de hoeveelheid koolhydraten (gedragsverandering) levert in dit geval betere waardes op.
 
 ## OpenAPS
 
@@ -98,4 +104,4 @@ Aanvullende aanbevolen informatie:
 * The [full AAPS documentation](../index.md)
 * Het [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), hierin wordt uitgelegd hoe OpenAPS is ontworpen rondom veiligheid
 * De [volledige OpenAPS documentatie](https://openaps.readthedocs.io/en/latest/index.html) 
-  * Meer [details over OpenAPS berekeningen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
