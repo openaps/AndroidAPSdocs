@@ -8,9 +8,7 @@ If nobody is following you on Nightscout you can choose to pause NSClient to sav
 
 * How to detect an unstable connection?
 
-Go to NSClient tab in AAPS and watch the log. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. If you see many reconnections, then there is a problem.
-
-Since AAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
+Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. If you see many reconnections, then there is a problem.
 
 * Paleisti iš naujo
 
@@ -36,7 +34,7 @@ A workaround to connection issues in Azure is to set in Application settings HTT
 
 * No BG reading from Nightscout
 
-If AAPS connects to Nightscout correctly but does BG displays as N/A. Go to NSCLIENT tab, press the 3 dot menu top right, Click NSClient Preferences -> Synchronization turn on "Receive/backfill CGM data".
+If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
 
 * If you still get an error...
 
