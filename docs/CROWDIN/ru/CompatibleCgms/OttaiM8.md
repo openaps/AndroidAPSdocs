@@ -7,7 +7,7 @@
 
 -   Запустите сенсор
 
-- В [Конфигураторе в качестве источника ГК](#Config-Builder-bg-source) выберите Ottai.
+- Select **Syai/Ottai** in [Configuration, BG Source](#Config-Builder-bg-source).
 
 Включить передачу данных в приложении Ottai:
 
