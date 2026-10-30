@@ -1,341 +1,408 @@
 # Automatizace
 
-## What is an Automation?
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
 
-"**Automation**" is a feature which can automate task for AAPS.
+## Co je automatizace?
 
-Automations performs specific actions based on one or more conditions or triggers. Triggers can include irregular events like low or high blood glucose (BG) levels, or a set amount of negative insulin on board (IOB). Automations can also handle recurring events, such as meals or exercise at certain times of day, or when the user is within a specific distance of a GPS location or a WIFI SSID area. Automation can execute AAPS settings backups based on a schedule or on every Pod change.
+„**Automatizace**“ je funkce, která umí automatizovat úlohy v AAPS.
 
-Automations rules are created and modified from the Automations tab. Each rule is defined by two properties:
+Automatizace provádí určité akce na základě jedné nebo více podmínek neboli spouštěčů. Spouštěčem mohou být i nepravidelné události, jako je nízká nebo vysoká glykémie, nebo určité množství záporného aktivního inzulínu (IOB). Automatizace zvládnou i opakující se události, jako jsou jídla nebo cvičení v určitou denní dobu, nebo situace, kdy je uživatel v určité vzdálenosti od místa GPS nebo v dosahu Wi-Fi sítě (SSID). Automatizace může podle rozvrhu nebo při každé výměně Podu zálohovat nastavení AAPS.
 
-- One or more conditions or 'triggers' that start an action.
+Pravidla automatizace se vytvářejí a upravují na obrazovce **Automatizace** (**Spravovat → Automatizace**). Každé pravidlo má dvě části:
 
-    Think of a certain time schedule, an event or properties value in AAPS
+- Jednu nebo více podmínek neboli „spouštěčů“, které spustí akci.
 
-- One or more actions to perform.
+    Může to být určitý časový rozvrh, událost nebo hodnota nějaké vlastnosti v AAPS
 
-    Such as an alarm or settings a profile percentage or exporting the AAPS settings on Pod change.
+- Jednu nebo více akcí, které se mají provést.
 
-
-There are a wide range of Automation options, and users are encouraged to study these within the AAPS app, in the Automation section. You can also search the AAPS user groups on [**Facebook**](https://www.facebook.com/groups/AndroidAPSUsers) and [**Discord**](https://discord.gg/4fQUWHZ4Mw) for Automation examples from other users.
-
-## How Automation can help
-
-1. **Automate reoccurring tasks:** Automatically executing programmed actions without user interaction.
-
-1. **Decreasing decision fatigue:** The primary benefit of **Automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
-
-1. **Potentially improving glycemic control:** for example, **Automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sports scheduled at school on Tuesdays at 10am and Thursdays at 2pm and requires a high Temp Target ('TT') actioned 30 minutes before the sports activity, the **Temp Target** can be enabled by way of an **Automation**.
-
-1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to a user's preference. For example, triggering a temporary reduced **Profile** % for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing **Profile** may be too strong.
-
-The example below illustrates how an **Automation** can enable steps to be eliminated.
-
-User exercises every morning at 6 am: he needs to remember to manually set a "Temp Target-Activity" in AAPS at 5am, before exercising.
-
-![Alt text](../images/automation_2024-02-12_20-54-50.png)
-
-The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
-
-![Alt text](../images/automation_2024-02-12_20-54-49.png)
-
-## Key considerations before starting with Automations
-
-1. Before setting up certain Automations, you should have reasonable **BG** control with **AAPS**. Automations should not be used to compensate for sub-optimal basal, **ISF** or **CR** settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for **BG** rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
-
-1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
-
-1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need a Automation set up for school sports or daily exercise, or need to adjust the timings.
-
-1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
-
-1. If using Autosens, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
-
-1. Most **Automations** should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the **Automation**, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start **Profile** 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using **Automations** to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
-
-## When can I start using Automation?
-
-**Automations** can be started in **objective 10**.
-
-## Where are Automations located in AAPS?
-
-Depending on your [Config builder > General](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
-
-## How can I set up an Automation?
-
-To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
-
-![Automation create](../images/automation_create.png)
-
-* give your ‘rule’ a title;
-* select at least one ‘Condition’;
-
-![Automation condition](../images/automation_condition.png)
-
-* select one ‘Action’;
-
-![Automation action](../images/automation_action.png)
-
-* check the right box to the **Automation** event is ‘ticked’ to activate the **Automation**:
-
-![Automatizace](../images/automation_2024-10-26_17-48-05.png)
+    Například alarm, nastavení procenta profilu nebo export nastavení AAPS při výměně Podu.
 
 
+Možností automatizace je velmi mnoho. Doporučujeme je prostudovat přímo v aplikaci AAPS, v části Automatizace. Příklady automatizací od jiných uživatelů můžete hledat také ve skupinách uživatelů AAPS na [**Facebooku**](https://www.facebook.com/groups/AndroidAPSUsers) a [**Discordu**](https://discord.gg/4fQUWHZ4Mw).
 
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation** entitled ‘Low Glucose TT’ as either activated (‘ticked') or deactivated (‘unticked’).
+## Jak může automatizace pomoci
 
-![Alt text](../images/automation_2024-02-12_20-56-08.png)
+1. **Automatizace opakujících se úloh:** naprogramované akce se provádějí automaticky, bez zásahu uživatele.
+
+1. **Méně únavy z rozhodování:** Hlavní výhodou **automatizací** je, že uživatele zbaví nutnosti zasahovat do **AAPS** ručně. [Výzkum](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) odhaduje, že lidé s diabetem 1. typu musí denně udělat v průměru 180 rozhodnutí navíc. **Automatizace** mohou snížit psychickou zátěž, a uvolnit tak uživateli energii pro jiné oblasti života.
+
+1. **Možná lepší kontrola glykémie:** **automatizace** mohou například zajistit, že **dočasné cíle** budou vždy nastaveny, když jsou potřeba, i v rušných dnech nebo když na něco zapomenete. Příklad: dítě s diabetem má ve škole sport v úterý v 10:00 a ve čtvrtek ve 14:00 a 30 minut před sportem potřebuje vysoký dočasný cíl („TT“). Tento **dočasný cíl** lze zapnout pomocí **automatizace**.
+
+1. **AAPS lze velmi přizpůsobit**, aby byl v určitých situacích více nebo méně agresivní, podle přání uživatele. Příklad: dočasné snížení procenta **profilu** na určitou dobu, pokud se uprostřed noci objeví záporný **IOB**. To ukazuje, že stávající **profil** může být příliš silný.
+
+Následující příklad ukazuje, jak může **automatizace** ušetřit některé kroky.
+
+Uživatel cvičí každé ráno v 6:00: musí si pamatovat, že v 5:00, před cvičením, v AAPS ručně nastaví „Dočasný cíl – Aktivita“.
+
+![Alternativní text](../images/Automations/automation_concept_manual.png)
+
+Uživatel si nastavil **automatizaci**, která v 5:00 spustí „Dočasný cíl – Aktivita“, aby jeho **glykémie** a **IOB** byly optimální pro cvičení v 6:00:
+
+![Alternativní text](../images/Automations/automation_concept_automated.png)
+
+## Co zvážit, než začnete s automatizacemi
+
+1. Před nastavením některých automatizací byste měli mít s **AAPS** rozumně kontrolovanou **glykémii**. Automatizace nepoužívejte k vyrovnání nevhodně nastaveného bazálu, **ISF** nebo **CR** (podrobněji níže). Nenastavujte automatické **přepnutí profilu** jako náhradu za vzestup **glykémie** způsobený _např._ jídlem. Na to jsou lepší jiné postupy (SMB atd.).
+
+1. Jako každá technologie mohou i **CGM**, **pumpy** a telefony selhat: technické problémy nebo chyby senzoru mohou narušit akce **automatizace** a může být potřeba ruční zásah.
+
+1. **Požadavky na **automatizace** se pravděpodobně změní, když se změní váš denní režim**. Když přecházíte mezi obdobím práce, školy a prázdnin, nastavte si v kalendáři připomínku, abyste zkontrolovali, které **automatizace** jsou právě aktivní (dají se snadno zapnout i vypnout). Například když jedete na dovolenou a už nepotřebujete automatizaci pro školní sport nebo denní cvičení, nebo potřebujete upravit časy.
+
+1. **Automatizace** mohou být ve vzájemném konfliktu. Je dobré každé nové nastavení **automatizace** pečlivě zkontrolovat v bezpečném prostředí a pochopit, proč se **automatizace** spustila nebo nespustila tak, jak čekáte.
+
+1. Pokud používáte Autosens, snažte se místo **přepnutí profilu** používat **dočasné cíle**. **Dočasné cíle** nenastavují Autosens zpět na 0. **Přepnutí profilu** Autosens resetuje.
+
+1. Většinu **automatizací** nastavte jen na **omezenou dobu**. Potom může **AAPS** situaci znovu vyhodnotit a **automatizaci** v případě potřeby zopakovat, pokud podmínka stále platí. Například „start dočasného cíle 7,0 mmol/l na 30 min“ nebo „start **profilu** 110 % na 10 min“ _a_ „start dočasného cíle 5,0 mmol/l na 10 min“. Použití **automatizací** k trvalým změnám (např. na silnější % profilu) přináší riziko hypoglykémie.
+
+## Kdy mohu začít používat automatizaci?
+
+**Automatizace** můžete začít používat v **cíli 10**.
+
+## Kde najdu automatizace v AAPS?
+
+Ve spodní navigaci hlavní obrazovky otevřete **Spravovat** a vyberte **Automatizace**.
+
+## Jak nastavit automatizaci?
+
+**Automatizaci** nastavíte tak, že na obrazovce Automatizace stisknete tlačítko **+** a vytvoříte „pravidlo“:
+
+![Vytvoření automatizace](../images/Automations/automation_create.png)
+
+* pojmenujte své „pravidlo“ (Název úkolu);
+* v části **Podmínka** stiskněte „**EDIT**“. Na obrazovce **Podmínka** zvolte, jak se spouštěče spojí (**A**, **Nebo**, **Exkluzivní nebo**), a stiskněte „**Přidat spouštěč**“:
+
+![Podmínka automatizace](../images/Automations/automation_trigger_editor.png)
+
+* přidejte alespoň jeden spouštěč:
+
+![Spouštěče automatizace](../images/Automations/automation_triggers.png)
+
+* v části **Akce** stiskněte „**PŘIDAT**“ a vyberte jednu akci:
+
+![Akce automatizace](../images/Automations/automation_actions.png)
+
+* uložte pravidlo tlačítkem **Uložit** a ujistěte se, že políčko vlevo od názvu pravidla je „zaškrtnuté“, aby byla **automatizace** aktivní:
+
+![Aktivovaná automatizace](../images/Automations/automation_rule_activated.png)
+
+Pravidlo **automatizace** deaktivujete tak, že zrušíte zaškrtnutí políčka vlevo od názvu **automatizace**. Příklad níže ukazuje **automatizaci** aktivovanou („zaškrtnutou“) a deaktivovanou („nezaškrtnutou“):
+
+![Alternativní text](../images/Automations/automation_rule_activated_deactivated.png)
 
 
-When setting up an **Automation**, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+Při nastavování **automatizace** ji můžete nejprve vyzkoušet tak, že v části „Akce“ zvolíte možnost „Oznámení“. **AAPS** tak nejprve zobrazí oznámení, místo aby akci opravdu provedl. Když si budete jistí, že se oznámení zobrazilo ve správný čas a za správných podmínek, můžete v pravidle **automatizace** nahradit „Oznámení“ skutečnou „Akcí“.
 
-![Alt text](../images/automation_2024-02-12_20-55-05.png)
+![Alternativní text](../images/Automations/automation_alert_actions.png)
 
 ```{admonition} Important note
 :class: note
 
-**Automations** are still active when the Loop is disabled!
+**Automatizace** jsou aktivní i tehdy, když je smyčka zakázána!
 ```
 
 
-## Safety limits
+## Kdy se pravidla kontrolují
 
-There are safety limits set for **Automations**:
+**AAPS** kontroluje všechna pravidla **automatizace** pokaždé, když zpracuje novou hodnotu glykémie. Pravidla se tedy vyhodnocují v rytmu vašeho CGM, i když je obrazovka telefonu vypnutá. Pravidla se kontrolují také tehdy, když se telefon začne nabíjet, když se změní síť nebo poloha a když se připojí zařízení Bluetooth. Najednou běží vždy jen jedna kontrola, takže pravidlo, jehož akce trvají déle (například příkaz pro pumpu), se nemůže provést dvakrát.
 
-* The **glucose** value has to be between 72 and 270 mg/dl (or 4 and 15 mmol/l).
-* The **Profile Percentage** has to be between 70% and 130%.
-* There is a 5 minute time limit between executions of  **Automation** (and first execution).
+## Bezpečnostní limity
 
-## Correct use of negative values
+Pro **automatizace** platí tyto bezpečnostní limity:
+
+* **Dočasný cíl** nastavený **automatizací** musí být mezi 72 a 180 mg/dl (nebo 4 a 10 mmol/l).
+* **Procento profilu** musí být mezi 50 % a 130 %.
+* Mezi dvěma spuštěními **automatizace** (a před prvním spuštěním) je časový limit 5 minut.
+
+## Správné použití záporných hodnot
 
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in **Automation**
+Při výběru záporné hodnoty v **automatizaci** buďte opatrní
 ```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. Například:
+Při výběru „záporné hodnoty“ v „Podmínce“, např. „je menší než“, buďte v **automatizacích** opatrní. Například:
 
-![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
+![Alternativní text](../images/Automations/automation_comparison_operators.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1mmol/l" (or "-2mg/dl") will:
+**Příklad 1:** Vytvoření podmínky **„je menší než“** „-0,1 mmol/l“ (nebo „-2 mg/dl“):
 
-Trigger an **Automation** for any number which is **strictly less than** -0.1 (-2). This includes numbers like -0.2, -0.3, -0.4 (-4, -6, -8) and so on. Remember that -0.1 (-2) itself **is not** included in this condition. (The condition "is equal or lesser than -0.1mmol/l (-2 mg/dl)" _would_ include -0.1 mmol/l or -2 mg/dl).
+Spustí **automatizaci** pro každé číslo, které je **ostře menší než** -0,1 (-2). To zahrnuje čísla jako -0,2, -0,3, -0,4 (-4, -6, -8) a tak dále. Pamatujte, že samotná hodnota -0,1 (-2) v této podmínce **není** zahrnuta. (Podmínka „je rovno nebo menší než -0,1 mmol/l (-2 mg/dl)“ _by_ hodnotu -0,1 mmol/l nebo -2 mg/dl zahrnovala.)
 
-**Example 2:** Creating a Condition "is greater than" -0.1mmol/l (-2mg/dl) will:
+**Příklad 2:** Vytvoření podmínky „je větší než“ -0,1 mmol/l (-2 mg/dl):
 
-Trigger an **Automation** for any number which is **greater than** -0.1mmol/l (-2mg/dl). This includes numbers like 0, 0.2, 0.4mmol/l, (0, 4, 8mg/dl) and any other positive number.
+Spustí **automatizaci** pro každé číslo, které je **větší než** -0,1 mmol/l (-2 mg/dl). To zahrnuje čísla jako 0, 0,2, 0,4 mmol/l (0, 4, 8 mg/dl) a jakékoli jiné kladné číslo.
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
+Při výběru těchto podmínek a hodnot je důležité dobře promyslet, čeho přesně má vaše **automatizace** dosáhnout.
 
 (automations-automation-triggers)=
-## Automation Triggers
+## Spouštěče automatizace
 
-![Automation Triggers](../images/automation_triggers.png)
+![Spouštěče automatizace](../images/Automations/automation_triggers.png)
 
-There are various ‘Triggers’ that can be selected by the user. Triggers are the conditions that must be met in order for the automation to execute. The list below is non-exhaustive:
+Zbytek seznamu uvidíte, když posunete obrazovku dolů:
 
-**Trigger:** connect conditions
+![Spouštěče automatizace, pokračování](../images/Automations/automation_trigger_picker_2.png)
 
-**Options:**
+Uživatel si může vybrat z různých „spouštěčů“. Spouštěče jsou podmínky, které musí být splněny, aby se automatizace provedla. Seznam níže není úplný:
 
-Several conditions can be linked with
-* “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+**Spouštěč:** spojení podmínek
 
-**Trigger:** time vs. recurring time
+**Možnosti:**
 
-**Options:**
+Více podmínek lze spojit pomocí
+* „A“
+* „Nebo“
+* „Exkluzivní nebo“ (to znamená, že akce proběhne, pokud platí jedna – a pouze jedna – z podmínek)
 
-* time = single time event
-* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+**Spouštěč:** čas vs. opakující se čas
 
-**Trigger:** location
+**Možnosti:**
 
-**Options:**
+* čas = jednorázová událost v určitý čas
+* opakující se čas = něco, co se děje pravidelně (např. jednou týdně, každý pracovní den atd.)
 
-* in the **config builder** (Automation), the user can select their required location service.
+**Spouštěč:** poloha
 
-**Trigger:** location service
+**Možnosti:**
 
-**Options:**
+* v [Nastavení > Automatizace](#preferences-maintenance-settings) si uživatel může vybrat požadovanou službu určování polohy.
 
-* Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wi-Fi.
-* Používat GPS polohu (Pozor! This can cause excessive battery drain!)
+**Spouštěč:** služba určování polohy
 
-**Triggers** : pump and sensor data
+**Možnosti:**
 
-* Cannula age trigger: Available for all pumps
-* Insulin age trigger: Available for supported pumps
-* Battery age trigger: Available for supported pumps
-* Sensor age trigger: always available
-* Pod Activation trigger: Available for patch pumps
+* Použít pasivní polohu: **AAPS** zjišťuje polohu jen tehdy, když o ni žádají jiné aplikace.
+* Použít polohu sítě: poloha podle vaší Wi-Fi sítě.
+* Použít GPS polohu (Pozor! To může způsobit nadměrné vybíjení baterie!)
 
-Note that for all age related triggers the equal comparison is unlikely to trigger, so in that case two triggers are required to create a range
+**Spouštěče**: data z pumpy a senzoru
 
-* Reservoir level trigger: Available for all pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
-* Pump battery level trigger: Available for supported pumps, comparison "NOT\_AVAILABLE" is not working for this trigger as the value is always filled in **AAPS**
+* Spouštěč stáří kanyly: k dispozici pro všechny pumpy
+* Spouštěč stáří inzulínu: k dispozici pro podporované pumpy
+* Spouštěč stáří baterie: k dispozici pro podporované pumpy
+* Spouštěč stáří senzoru: k dispozici vždy
+* Spouštěč aktivace Podu: k dispozici pro patch pumpy
+
+U všech spouštěčů podle stáří je nepravděpodobné, že by se porovnání „je rovno“ někdy splnilo. Proto v tom případě vytvořte rozmezí pomocí dvou spouštěčů
+
+* Spouštěč stavu zásobníku: k dispozici pro všechny pumpy. Porovnání „NOT\_AVAILABLE“ (v aplikaci „není k dispozici“) u tohoto spouštěče nefunguje, protože hodnota je v **AAPS** vždy vyplněná
+* Spouštěč úrovně nabití baterie pumpy: k dispozici pro podporované pumpy. Porovnání „NOT\_AVAILABLE“ (v aplikaci „není k dispozici“) u tohoto spouštěče nefunguje, protože hodnota je v **AAPS** vždy vyplněná
 
 (automations-automation-action)=
 ## Akce
 
-![Automation Actions](../images/automation_actions.png)
+![Akce automatizace](../images/Automations/automation_actions.png)
 
-**Actions:** start **Temp Target**
+Zbytek seznamu uvidíte, když posunete obrazovku dolů:
 
-**Options:**
+![Akce automatizace, pokračování](../images/Automations/automation_action_picker_2.png)
 
-* **BG** must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-* **TT** works only if there is no previous Temp Target
+**Akce:** start **dočasného cíle**
 
-**Actions:** stop **Temp Target**
+**Možnosti:**
 
-**Options:**
+* **Glykémie** musí být mezi 72 mg/dl a 180 mg/dl (4 mmol/l a 10 mmol/l)
+* **TT** funguje jen tehdy, když neběží žádný předchozí dočasný cíl – **AAPS** to do pravidla přidá automaticky jako řádek „**Nutné podmínky: Dočasný cíl neexistuje**“
+
+**Akce:** zastavení **dočasného cíle**
+
+**Možnosti:**
 
 nic
 
-**Actions:** **Profile Percentage**
+**Akce:** **Procento profilu**
 
-**Options:**
+**Možnosti:**
 
-* **Profile** must be between 70% and 130%
-* works only if the previous Percentage is 100%
+* **Profil** musí být mezi 50 % a 130 %
+* funguje jen tehdy, když předchozí procento je 100 %
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+**Akce:** **Změnit vyhlazování**
 
-![Alt text](../images/automation_2024-02-12_20-57-07.png)
+**Možnosti:**
+
+* vyberte [metodu vyhlazování](../CompatibleCgms/SmoothingBloodGlucoseData.md), na kterou se má přepnout
+* provede se jen tehdy, když tato metoda vyhlazování ještě není aktivní – **AAPS** to do pravidla přidá automaticky jako řádek „**Nutné podmínky: Vyhlazování … není aktivní**“. Když je zvolené vyhlazování už aktivní, pravidlo se tiše přeskočí.
+* Příklad: v kombinaci se spouštěčem **Stáří senzoru** přepněte během prvního dne nového senzoru na **Průměrovací vyhlazování** a potom zpět na **Žádné vyhlazování**.
+
+**Akce:** **Poznámka** (ve skupině **Výstrahy** v seznamu)
+
+**Možnosti:**
+
+* vyberte událost, která se má zaznamenat: **Poznámka**, **Cvičení**, **Otázka**, **Oznámení** nebo **Výměna setu**, a případně poznámku. Název akce se změní na vybranou událost.
+* **Trvání**: používá se pro **Poznámku**, **Cvičení** a **Výměnu setu**. **Otázka** a **Oznámení** nemají trvání: místo toho zaznamenají vaši aktuální glykémii.
+* **Výměna setu** vynuluje stáří kanyly, jako byste výměnu setu zaznamenali ručně. Příklad: některé pumpy (např. Combo) zaznamenají výměnu zásobníku samy, ale výměnu setu ne. Pokud vždy měníte obojí najednou, může výměnu setu zaznamenat za vás pravidlo se **Stářím inzulínu** menším než 1 hodina a **Stářím kanyly** větším než 24 hodin.
+
+![Události akce Poznámka](../images/Automations/automation_action_careportal_events.png) ![Akce Poznámka nastavená na Výměnu setu](../images/Automations/automation_action_careportal_site_change.png)
+
+**Akce:** **Poslat SMS** (ve skupině **Výstrahy**)
+
+**Možnosti:**
+
+* zadejte text zprávy. Zpráva se pošle na všechna telefonní čísla povolená v nastavení [SMS komunikátoru](../RemoteFeatures/SMSCommands.md). Plugin SMS komunikátor musí být povolený.
+
+**Akce:** **Změna profilu na** (ve skupině **Profil**)
+
+**Možnosti:**
+
+* vyberte **profil**, který se má aktivovat. Aktivuje se na 100 %, bez časového posunu. Pokud je tento profil už aktivní, akce nic neudělá.
+
+**Akce:** **Povolit/zakázat SMB** (ve skupině **Smyčka a inzulín**)
+
+**Možnosti:**
+
+* zvolte **ZAP** nebo **VYP**. Tím se změní nastavení **Povolit SMB** pluginu OpenAPS SMB, přesně jako byste ho změnili v **Nastavení**, a tak zůstane, dokud ho vy nebo jiné pravidlo nezměníte zpět.
+
+**Akce:** **Profil Autotune** (ve skupině **Smyčka a inzulín**)
+
+**Možnosti:**
+
+* vyberte profil, který se má vyladit, a počet dní: viz [Spuštění Autotune pomocí pravidla automatizace](#autotune-run-autotune-with-an-automation-rule).
+
+**Akce:** **Zastavit zpracovávání** (ve skupině **Smyčka a inzulín**)
+
+**Možnosti:**
+
+* žádné. Když se provede pravidlo s touto akcí, **AAPS** při tomto běhu už nekontroluje pravidla pod ním v seznamu. Přidejte ji do pravidla, které musí mít přednost před pravidly pod ním (viz [pořadí automatizací](#Automations-the-order-of-the-automations-in-the-list-matters)).
+
+**Akce:** **Spustit scénu**, **Povolit scénu**, **Zakázat scénu** (ve skupině **Scény**)
+
+**Možnosti:**
+
+* vyberte [scénu](Scenes.md), kterou chcete spustit, povolit nebo zakázat.
+
+Po přidání „Akce“ musíte výchozí hodnoty změnit na požadované číslo: klepněte na ně a upravte je.
+
+![Alternativní text](../images/Automations/automation_action_temp_target_values.png)
 
 (Automations-the-order-of-the-automations-in-the-list-matters)=
-## The order of the **Automations** in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘Low’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+## Na pořadí **automatizací** v seznamu záleží
+ **AAPS** provádí vytvořená pravidla v pořadí podle priority, od začátku seznamu **automatizací**. Pokud je například **automatizace** „Nízká“ nejdůležitější **automatizací** ze všech pravidel, měla by tato **automatizace** být na začátku seznamu **automatizací** uživatele, jak je ukázáno níže:
 
 
-![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
+![Alternativní text](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
+Pořadí pravidel **automatizace** změníte tak, že podržíte úchyt **=** na pravé straně pravidla. Pořadí **automatizací** změníte posunutím pravidel nahoru nebo dolů.
 
-![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
+![Alternativní text](../images/Automations/automation_rule_reorder.png)
 
-## How to delete Automation rules
+## Jak smazat pravidla automatizace
 
-To delete an **Automation** rule click on the trash icon.
+Pravidlo **automatizace** smažete klepnutím na ikonu koše.
 
-![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
+![Alternativní text](../images/Automations/automation_rule_delete.png)
 
-## Examples of Automations
+## Příklady automatizací
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+Níže jsou příklady **automatizací**. Další diskuse o **automatizacích** a o tom, jak si uživatelé svou **automatizaci** přizpůsobili, najdete ve skupinách na Facebooku nebo na Discordu. Příklady níže nekopírujte, pokud dobře nerozumíte tomu, jak bude **automatizace** fungovat.
 
+(automations-low-glucose-temp-target)=
 ### Dočasný cíl při nízké glykémii
 
-This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG** is at a certain threshold.
+Tato **automatizace** automaticky spustí **dočasný cíl**, když **glykémie** klesne pod určitou mez – zde při glykémii nižší než 70 mg/dl se na 30 minut spustí cíl 110 mg/dl:
 
-![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
+![Alternativní text](../images/Automations/automation_example_low_glucose_rule.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### Dočasný cíl na oběd (s „Polohou“)
 
-![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
+![Alternativní text](../images/Automations/automation_example_lunch_rule.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this **Automation** will be activated.
+Tato **automatizace** byla vytvořena pro uživatele, který každý pracovní den obědvá v práci přibližně ve stejnou dobu. Spustí se ale jen tehdy, když je uživatel na zvoleném místě („Poloha“).  Pokud tedy uživatel jednoho dne není v práci, tato **automatizace** se nespustí.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive ‘BG, to 90mg (or 5 mmol/l) in preparation for lunch.
+Tato **automatizace** nastaví ve 13:00 nízký **dočasný cíl** (Před jídlem), který před obědem sníží glykémii na 90 mg/dl (nebo 5 mmol/l).
 
-The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
+„Spouštěč“ poloha má název, místo (klepněte na **Vybrat z mapy** nebo použijte svou současnou polohu) a poloměr v metrech. Spustí se, když jste uvnitř (nebo mimo) této oblasti:
 
-![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
+![Alternativní text](../images/Automations/automation_example_lunch_location_condition.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+Díky spojení „A“ proběhne **automatizace** jen ve „zvoleném čase“ a jen tehdy, když je uživatel na zvoleném místě.
 
-The **Automation** will not be triggered on any other time at this location or on this time outside of 50 meters set GPS coordinates.
+**Automatizace** se nespustí v žádný jiný čas na tomto místě ani v tento čas mimo okruh 50 metrů kolem zvoleného místa.
 
-### WIFI SSID Location Automation
+### Automatizace podle polohy Wi-Fi SSID
 
-Using WIFI SSID is a good option to trigger an **Automation** while within range of a specific wifi network (than compared with GPS), it is fairly precise, uses less battery and works in enclosed spaces where GPS and other location services might not be available.
+Wi-Fi SSID je dobrá možnost, jak spustit **automatizaci**, když jste v dosahu určité Wi-Fi sítě (ve srovnání s GPS): je docela přesná, méně vybíjí baterii a funguje i v uzavřených prostorách, kde GPS a jiné služby určování polohy nemusí být dostupné.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast(1).
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
-and while being connected to a home wifi network (3).
+Zde je další příklad nastavení **dočasného cíle** jen pro pracovní dny před snídaní (1).
 
 
-It will then set a **Temp Target**  of 75mg/dl for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance.
+**Automatizace** se spustí v 5:30 jen od pondělí do pátku (2)  
+a jen při připojení k domácí Wi-Fi síti (3).
 
-![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
-Here is the screenshot detailing the **Automation** triggers:
+Potom nastaví **dočasný cíl** 75 mg/dl na 30 minut (4). Jednou z výhod zahrnutí polohy je, že se automatizace nespustí například tehdy, když je uživatel na dovolené.
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
-1) WIFI SSID = My_Home_WiFi_Name
+![Pravidlo pro Wi-Fi: název úkolu (1), podmínka času ve všední dny (2) a podmínka Wi-Fi SSID (3)](../images/Automations/automation_example_wifi_rule.png)
 
-![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
+Posuňte se dolů a uvidíte akci: **dočasný cíl** 75 mg/dl na 30 minut (4).
+
+![Akce pravidla pro Wi-Fi: Start dočasného cíle 75 mg/dl na 30 minut (4)](../images/Automations/automation_example_wifi_action.png)
+
+Zde je snímek obrazovky se spouštěči **automatizace**:
+
+1) Pod hlavní podmínkou „A“ (aby se pravidlo spustilo, musí platit obě podmínky) 1) Opakující se čas = Po,Út,St,Čt,Pá v 5:30  
+1) WiFi SSID = My_Home_WiFi_Name
+
+![Alternativní text](../images/Automations/automation_example_wifi_condition.png)
 
 (automating-preference-settings-export)=
 
-## Automating Preference Settings Export
+## Automatizace exportu nastavení
 
-### Unattended Exports: scheduled (daily)
+### Automatické exporty: podle rozvrhu (denně)
 
-Screenshots detailing the Automation triggers:
+Snímky obrazovky se spouštěči automatizace:
 
-1) Condition: Recurring time = M,T,W,T,F At 8:00am 1) Action: Settings Export (For "Text in treatments" enter "Daily")
+1) Podmínka: Opakující se čas = Po,Út,St,Čt,Pá v 8:00 1) Akce: Export nastavení (do „Text v ošetřeních“ zadejte „Denně“)
 
-![Scheduled exports](../images/Automations/automation_settingsexport_scheduled_400px.png)
+![Exporty podle rozvrhu](../images/Automations/automation_settings_export_daily.png)
 
-Note: Export execution will be logged on Careportal
+Poznámka: Provedení exportu se zaznamená v Péči (Careportal)
 
-### Unattended Exports: Pod Activation (patch pump only)
+### Automatické exporty: aktivace Podu (jen patch pumpy)
 
-Screenshots detailing the Automation triggers:
+Snímky obrazovky se spouštěči automatizace:
 
-1) Condition: Pod Activation 1) Action: Settings Export (For "Text in treatments" enter "Pod Activation: settings export")
+1) Podmínka: Aktivace Podu 1) Akce: Export nastavení (do „Text v ošetřeních“ zadejte „Aktivace Podu: export nastavení“)
 
-![Export on Pod activation](../images/Automations/automation_settingsexport_podactivation_400px.png)
+![Export při aktivaci Podu](../images/Automations/automation_settings_export_pod_activation.png)
 
-Note: Export execution will be logged on Careportal. Note : Automation will not trigger **at all** if you have not done a manual settings export before. See [Preferences > Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Poznámka: Provedení exportu se zaznamená v Péči (Careportal). Poznámka: Pokud jste předtím neprovedli ruční export nastavení, automatizace se **vůbec** nespustí. Pro správné zapnutí automatického exportu nastavení viz [Nastavení → Údržba](#preferences-maintenance-settings).
 
 
-## Automation Logs
+## Záznamy automatizace
 
-**AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab.
+**AAPS** zobrazuje záznam posledních událostí **automatizace** dole na obrazovce **Automatizace**, pod pravidly. Pomocí něj ověříte, že se vaše pravidla spustila, kdy jste čekali.
 
-In the example below the logs indicate:
+V příkladu níže je povolené pravidlo **Low glucose temp target** (1) (viz [Dočasný cíl při nízké glykémii](#automations-low-glucose-temp-target) výše). Záznam (2) ukazuje, že v 15:09 klesla glykémie pod 70 mg/dl a pravidlo se spustilo:
+* akce byla „Start dočasného cíle: 110mg/dL@30 min“: **dočasný cíl** 110 mg/dl na 30 minut;
+* **OK** na konci znamená, že akce proběhla úspěšně.
 
-(1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated
-* glucose value is less than 75mg/dl;
-* delta is negative (ie: the BG is going down);
-* time is within 01:00 am and 06:00 am.
+![Obrazovka Automatizace: povolené pravidlo (1) a jeho záznam (2)](../images/Automations/automation_example_log.png)
 
-The **Automation** will:
-* set a **Temp Target** to 110mg/dl for 40 minutes;
-* start a temporary **Profile** at 50% for 40 minutes.
+(automations-troubleshooting)=
 
-(2) at 03:38 am,  the “High carb after low at night” is triggered
-* time is between 01:05 am and 06:00 am;
-* glucose value is greater than 110mg/dl.
+## Řešení problémů
 
-The **Automation** will:
-* change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
-* stop **Temp Target** (if any)
+* Problém: __AAPS nespouští moje automatizace?__
 
-![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
+Zkontrolujte, že políčko vlevo od názvu **automatizace** je „zaškrtnuté“, aby bylo pravidlo aktivní:
 
-## Troubleshooting
+![Alternativní text](../images/Automations/automation_rule_activated_deactivated.png)
 
-* Problem: __My automations are not being triggered by AAPS?__
+* Problém: __Moje automatizace se spouštějí ve špatném pořadí.__
 
-Check the box to the right of **Automation** event is ‘ticked’ to ensure the rule is activated.
+Zkontrolujte pořadí priorit svých pravidel, jak je popsáno výše.
 
-## Troubleshooting
+* Problém: __Podmínka ukazuje „Neznámý spouštěč … - nikdy neplatí“.__
 
-![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
+Pravidlo obsahuje spouštěč, který tato verze **AAPS** neumí přečíst, například když jste se vrátili ke starší verzi nebo importovali nastavení z novější verze. Takový spouštěč nikdy neplatí, takže se pravidlo neprovede. Zůstane beze změny, aby ho novější verze mohla dál používat. Upravte pravidlo a spouštěč nahraďte, nebo aktualizujte **AAPS**.
 
-* Problem: __My automations are being triggered in the wrong order.__
+## Alternativy k automatizacím
 
-Check your rule prioritisation order as discussed above here.
-
-## Alternatives to Automations
-
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+Pokročilí uživatelé mohou úlohy automatizovat i jinak, pomocí IFTTT nebo aplikace pro Android od jiného výrobce s názvem Automate. 
