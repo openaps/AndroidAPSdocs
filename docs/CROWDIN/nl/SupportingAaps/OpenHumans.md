@@ -25,27 +25,46 @@ Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal nie
 ## Pomp koppelen
 
 1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. Je kunt je bestaande Google of Facebook account gebruiken als je wilt.
-2. Enable the “Open Humans” plugin in [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
-3. Open de instellingen door op het tandwiel icoontje te tikken. Je kunt uploaden beperken tot momenten wanneer jouw telefoon gebruik maakt van Wi-Fi en/of wordt opgeladen.
-4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
+2. Enable the **Open Humans** plugin in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
 
-![Open Humans Config Builder](../images/OHUploader1.png)
+![Open Humans enabled in Configuration > Communication](../images/OHUploader1.png)
 
-5. Lees de informatie over de Open Humans Uploader en de gebruiksvoorwaarden zorgvuldig.
-6. Bevestig door het vakje te selecteren en op 'LOGIN' te klikken.
+3. Tap **Settings** on the **Open Humans** card. You can restrict uploads to times when the phone uses Wi-Fi (**WiFi only**) and/or is charging (**Charging only**).
+
+![Open Humans settings with WiFi only and Charging only](../images/OHUploader_settings.png)
+
+4. Tap **Open plugin** on the **Open Humans** card, then tap **Setup**.
+
+![Open Humans plugin screen with the Setup button](../images/OHUploader_setup.png)
+
+5. On the **Welcome to Open Humans** screen, tap **Next**. Read the **Consent** screen carefully: it shows the terms of use and which data is uploaded and not uploaded.
+6. Switch on **I understand and agree.** (1) and tap **Login to Open Humans** (2).
+
+![Open Humans Welcome and Consent screens in AAPS](../images/OHUploader2.png)
+
 7. De Open Humans website zal worden geopend. Log in met je inloggegevens.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
-9. Klik op de knop 'Authorize project'.
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile (1).
+9. Click **Authorize project** (2).
 
-![Open Humans Terms of Use + Login](../images/OHUploader2.png)
+![Login and project authorization on the Open Humans website](../images/OHUploader_web.png)
 
-10. Als je teruggaat naar AAPS ziet je een melding dat het aanmelden is gelukt.
-11. Laat de Open Humans Uploader plugin en telefoon ingeschakeld om de setup te voltooien.
-12. Nadat je op sluiten hebt geklikt, zie je jouw lidmaatschaps-ID. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Klik op 'LOGOUT' als je wilt stoppen met het uploaden van gegevens naar Open Humans.
+```{admonition} Older screenshot
+:class: note
+The screenshots above show an earlier version of the Open Humans website and still use the old project name **AndroidAPS Uploader**. The steps are the same.
+```
+
+10. Back in **AAPS**, the **Final touches** screen asks whether you want to proceed. Tap **Proceed**.
+11. Wait until **We're done!** appears, then tap **Close**. From now on, your phone uploads data in the background from time to time.
+12. The **Open Humans** plugin screen now shows your **Project Member ID**. Tap **Upload now** if you want to start an upload right away.
+13. Tap **Logout** if you want to stop uploading data to Open Humans.
 14. Je zult een Android melding zien met informatie over de voortgang van jouw upload.
 
 ![Open Humans finish setup](../images/OHUploader3.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+```
 
 15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
 
