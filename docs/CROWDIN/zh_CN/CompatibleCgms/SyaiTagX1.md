@@ -7,7 +7,7 @@
 
 -   启动X1传感器
 
-- 在[ConfigBuilder，BG源](#Config-Builder-bg-source)中选择Syai Tag。
+- Select **Syai/Ottai** in [Configuration, BG Source](#Config-Builder-bg-source).
 
 请在Syai应用中启用广播功能：
 
