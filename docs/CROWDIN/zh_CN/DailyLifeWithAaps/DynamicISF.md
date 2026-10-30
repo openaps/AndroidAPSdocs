@@ -1,7 +1,7 @@
 (Open-APS-features-DynamicISF)=
 # 动态 ISF（DynISF）
 
-迄今为止，在使用 **AMA** 和 **SMB** 时，**ISF**（胰岛素敏感系数）在 **配置文件** 中被定义为静态值，并在一天中的每个时间段固定不变。然而，实际上，用户的 **ISF** 并非静态，而是根据其 **血糖（BG）** 水平变化：当处于高血糖水平时，用户需要更多胰岛素才能将 **BG** 降低 50mg/dL / 3mmol/L，相比之下，低**血糖**时所需胰岛素更少。 [Autosens](#Open-APS-features-autosens) 是首个尝试解决此问题的算法，通过在非进餐时间调整 **ISF**。
+迄今为止，在使用 **AMA** 和 **SMB** 时，**ISF**（胰岛素敏感系数）在 **配置文件** 中被定义为静态值，并在一天中的每个时间段固定不变。 But in reality, a person’s **ISF** is not that static and varies depending on their **BG** level: when at a high BG level, the user will need more insulin to bring their **BG** down 50 mg/dL / 3 mmol/L than they would at a lower **BG**. [Autosens](#Open-APS-features-autosens) 是首个尝试解决此问题的算法，通过在非进餐时间调整 **ISF**。
 
 **动态 ISF**（也称为 **DynISF**）具有相同目的，但更为先进，可全天候使用。此功能仅建议已熟练掌握 **AAPS** 控制与监测的高级用户使用。在尝试使用前，请仔细阅读下文 [启用动态 ISF 时的注意事项](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
 
@@ -27,7 +27,7 @@
 
 **SMB/AMA 示例** - 用户**配置文件**中由用户设定并被 **SMB** 和 **AMA** 使用的静态 **ISF**。
 
-![静态ISF](../images/DynamicISF/DynISF1.png)
+![静态ISF](../images/DynamicISF/profile_viewer_isf.png)
 
 **动态 ISF 示例** - 由 **动态 ISF** 动态调整的 **ISF** 值。
 
@@ -35,7 +35,7 @@
 
 红色圆圈标注部分显示：`配置文件 ISF` -> `由 DynISF 计算的 ISF`。点击该部分可查看详细信息，例如计算器使用的 **ISF** 和碳水吸收情况（参见下文 [ISF 的其他用途](#dynisf-other-usages-of-isf)）。
 
-**DynISF** 值也可通过额外图表中的“可变敏感度”数据线（白色线条，见上图红色箭头）展示。
+The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
 
 ## 动态 ISF 的计算原理
 
@@ -57,7 +57,7 @@ TDD将使用以下值的组合：
 
 ### 动态ISF调整因子
 
-此值在用户 **偏好设置** 中设定，用于调节 **动态 ISF** 的激进程度。详见下文 [偏好设置](#dyn-isf-preferences)。
+This is set within the user’s **Settings** and is used to make **Dynamic ISF** more or less aggressive. 详见下文 [偏好设置](#dyn-isf-preferences)。
 
 ### 胰岛素除数
 胰岛素除数取决于所使用的胰岛素的峰值，并且与峰值时间成反比。对于Lyumjev，此值为75；对于Fiasp，为65；对于常规速效胰岛素，为55。
@@ -68,7 +68,7 @@ TDD将使用以下值的组合：
 
 以避免在低血糖或预测低血糖时过量注射。
 
-**未来 ISF** 使用相同公式，但可能以 **预测最低 BG** 替代**当前 BG**。**预测最低 BG**（基于 [oref1 计算](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html)）是预测周期内血糖的最低值。
+**未来 ISF** 使用相同公式，但可能以 **预测最低 BG** 替代**当前 BG**。 **Minimum predicted BG**, [as calculated in oref1](#aaps-screens-how-predictions-become-a-dosing-decision), is the minimum value your BG is predicted to go during all the course of the predictions.
 
 * 若当前 **BG** 高于目标<br/>**且**波动在 +/-3 mg/dL 内：<br/> `取平均值(预测最低 BG,当前 BG)`。
 * 若最终 ​**BG**​ 高于目标且血糖上升，<br/>  
@@ -95,14 +95,14 @@ TDD将使用以下值的组合：
 启用 ​**动态 ISF​ 时**，此处 **​ISF​** 为过去 24 小时动态 ISF 的平均值。
 
 (dyn-isf-preferences)=
-## 偏好设置
+## 设置
 
-在 [偏好设置 > OpenAPS SMB](#Preferences-openaps-smb-settings) 中勾选 **启用动态敏感度** 以激活功能。启用后将显示新设置项。
+Check **Use dynamic sensitivity** in [Settings > OpenAPS SMB](#Preferences-openaps-smb-settings) to activate. 启用后将显示新设置项。
 
-![动态 ISF 设置](../images/Pref2020_DynISF.png)
+![动态 ISF 设置](../images/preferences/settings_dynamic_isf.png)
 
 (dyn-isf-adjustment-factor)=
-### 动态ISF调整因子
+### DynamicISF adjustment factor
 **动态 ISF** 基于通用规则设计，假设相同 TDD 的用户具有相同敏感度。由于个体差异，**调整因子** 允许用户自定义胰岛素敏感度相对于“标准”值的比例。
 
 **调整因子** 范围为 1% 至 300%，作为 **TDD** 的乘数：
@@ -116,13 +116,13 @@ TDD将使用以下值的组合：
 
 这意味着使用 **DynISF** 时，可通过 **配置文件百分比** 手动临时调节敏感度，适用于运动（降低百分比）、疾病（提高百分比）等场景。
 
-### 触发暂停注射的低血糖值
+### LGS threshold
 
-触发胰岛素暂停的 **BG 值**，默认为标准目标模型。可设置为 60mg/dL (3.3mmol/L) 至 100mg/dL (5.5mmol/L)。低于 65/3.6 时将使用默认模型。
+**BG** value below which insulin is suspended (low glucose suspend). 默认为标准目标模型。 A user can set this value between 60 mg/dL (3.3 mmol/L) and 100 mg/dL (5.5 mmol/L). 低于 65/3.6 时将使用默认模型。
 
-### 启用基于TDD的敏感性比率以调整基础率和血糖目标
+### DynamicISF adjust sensitivity
 
-此设置替换了Autosens，并使用过去24小时**TDD**与7天**TDD**的比率作为基础来增加或减少基础率，这与标准Autosens的方式相同。如果启用了根据敏感性调整目标的选项，则此计算值也用于调整目标。与Autosens不同，此选项不会调整**ISF**值。
+This setting (*"Adjust sensitivity calculations when using DynamicISF"*) replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. 如果启用了根据敏感性调整目标的选项，则此计算值也用于调整目标。与Autosens不同，此选项不会调整**ISF**值。
 
 (dyn-isf-things-to-consider-when-activating-dynamicisf)=
 ## 启用动态 ISF 的注意事项
