@@ -1,112 +1,243 @@
-# Configurarea Sistemului (Config Builder)
+# Configuration (Config Builder)
 
-În funcție de setările dumneavoastră puteți deschide Configuratorul de Sistem printr-o filă din partea de sus a ecranului **AAPS** sau prin meniul hamburger.
+```{admonition} Coming from AAPS v3? :class: note The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
 
-![Deschideți Configurarea sistemului](../images/ConfBuild_Open_AAPS30.png)
-
-**Configuratorul de Sistem** este o secțiune în care puteți porni sau opri diferitele opțiuni modulare. În imaginea de mai jos, casetele din partea stângă (A) îți permit să selectați modulele pe care vreți să le acivați. În mod implicit, la deschiderea Configuratorului de Sistem, secțiunile sunt ascunse pentru a afișa doar modulele active. Apăsați pe săgeată (G) pentru a afișa toate opțiunile disponibile. Casetele din partea dreaptă (C) vă permit să vizualizați modulele active ca o filă (E) în **AAPS**. În cazul în care caseta din dreapta nu este activată, poți ajunge la funcție folosind meniul hamburger (D) din stânga sus a ecranului. Vedeți [Filă sau meniul Hamburger](#tab-or-hamburger-menu) de mai jos.
-
-Când există setări suplimentare disponibile în cadrul modulului, poți face clic pe rotița dințată (B), care te va duce la setările specifice din secțiunea de preferințe.
-
-![Casuta Configurare sistem și rotita](../images/ConfBuild_ConfigBuilder.png)
-
-(Config-Builder-tab-or-hamburger-menu)=
-
-## Fila sau meniul principal
-
-Cu bifa de sub simbol puteți stabili cum să deschideți secțiunea corespunzătoare a programului.
-
-![Fila sau meniul principal](../images/ConfBuild_TabOrHH.png)
-
-```{contents}
-:backlinks: entry
-:depth: 2
-```
+    <br />**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+    
+    (configuration-v4)=
+    ## Configuration in AAPS v4
+    
+    In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (*“Set up your configuration (CGM, pump, …) and enable features”*).
+    
+    ![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+    
+    Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, *Sensitivity detection*, *APS*, *Communication* and *General*. Each row shows the category name and the **currently active** plugin (e.g. *APS → OpenAPS SMB*). Tap a row to open a category.
+    
+    ![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+    
+    Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
+    
+    - **Open plugin** — opens the plugin's own screen.
+    - **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+    
+    ![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+    
+    (configuration_sync_icon)=
+    ### The mobile icon — “synced from the master”
+    
+    A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+    
+    On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
+    
+    The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below *Absorption cutoff* carries the icon; settings without the icon are configured per device:
+    
+    ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+    
+    Items **without** the icon are configured **per device**. The most important example is the **NSClientV3 (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
+    
+    ---
+    
+    (Config-Builder-tab-or-hamburger-menu)=
+    ## Opening a plugin screen
+    
+    Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+    
+    - **Configuration** → the plugin's category → **Open plugin**,
+    - the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
+    - a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
+    - the **search bar** on the main screen.
+    
+    ```{contents}
+    :backlinks: entry
+    :depth: 2
+    
 
 (ConfigBuilder_Profile)=
 
 ## Profil
 
-Acest modul nu poate fi dezactivat deoarece este o parte de bază a **AAPS**.
+This module cannot be disabled as it is a core part of **AAPS**.
 
 Vedeți [Profilul dumneavoastră AAPS](../SettingUpAaps/YourAapsProfile.md) pentru o înțelegere de bază a ceea ce este în interiorul **Profilului** dumneavoastră.
 
-(Config-Builder-insulin)=
+(insulin)= (Config-Builder-insulin)=
 
 ## Insulină
 
-![Tip de insulină](../images/ConfBuild_Insulin_AAPS30.png)
+![Insulin settings](../images/manage/insulin_settings.png)
 
-Selectați tipul de insulină pe care o utilizați.
+In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+
+The insulin editor lets you:
+
+* give the profile an **Insulin nickname** so it is easy to recognise,
+* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Activity, in hours), either by typing the value or using the **–** / **+** buttons,
+* tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+
+The allowed ranges are the same whatever insulin you use:
+
+* **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
+* **Peak**: 35 to 120 minutes.
+
+The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
 
 Mai multe informații pentru a înțelege Profilul Insulinei așa cum este indicat în **AAPS** [aici](#AapsScreens-insulin-profile).
 
-### Diferențe între tipurile de insulină
+(Config-Builder-insulin-change-active)=
 
-* Toate opțiunile 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' și 'Free-Peak Oref' au formă exponențială.
-* Pentru insuline cu durata de 'Acțiune-Rapidă', 'Ultra-Rapidă' și 'Lyumjev', DIA este singura variabilă pe care o poți modifica, durata până la vârf este prestabilită. 
-* Opțiunea Insulină Fără-Vârf (Free-Peak) permite să ajustați atât DIA cât și durata până la vârf; trebuie să fie folosită numai de utilizatori avansați care cunosc efectele acestor setări. 
-* [Graficul curbei de insulină](#AapsScreens-insulin-profile) vă ajută să înțelegeți diferitele curbe ale insulinei.
+### Changing the insulin in use (DIA or peak)
 
-#### Oref Acțiune-Rapidă
+The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
 
-![Tip de insulină Oref Acțiune-Rapidă](../images/ConfBuild_Insulin_RAO.png)
+To change the DIA or peak you are using:
 
-* recomandat pentru Humalog, Novolog și Novorapid
-* DIA = cel puțin 5 ore
-* Maximum vârf = 75 minute după injectare (fix, nemodificabilă)
+1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
+2. Tap **+** (*Add new insulin*). **AAPS** creates a copy of the insulin shown on screen.
+3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
+4. Tap **▶** (*Activate insulin*) and confirm. The new insulin becomes **ACTIVE**.
 
-#### Oref Insulină-UltraRapidă
+```{admonition} The name includes peak and DIA :class: note **AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example *Fiasp 55m 8h U100*), so you can tell your configurations apart at a glance.
 
-![Tip de insulină Oref cu acțiune ultra rapidă](../images/ConfBuild_Insulin_URO.png)
+    <br />You can delete the old insulin once it is no longer active.
+    
+    ### The "Load peak from" presets
+    
+    In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
+    
+    Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
+    
+    #### Novorapid
+    
+    ![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
+    
+    * recommended for Humalog, Novolog and Novorapid (called *Rapid-Acting Oref* in **AAPS** v3)
+    * Peak = 75 minutes after injection
+    
+    #### Fiasp
+    
+    ![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+    
+    * recommended for Fiasp (called *Ultra-Rapid Oref* in **AAPS** v3)
+    * Peak = 55 minutes after injection
+    
+    (Config-Builder-lyumjev)=
+    #### Lyumjev
+    
+    ![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
+    
+    * recommended for Lyumjev
+    * Peak = 45 minutes after injection
+    
+    #### Custom peak
+    
+    * There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
+    * A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+    
+    (Config-Builder-insulin-dia)=
+    ### Duration of insulin action (DIA) and peak
+    
+    ```{warning}
+    In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+    
 
-* recomandat pentru FIASP
-* DIA = cel puțin 5 ore
-* Maximum vârf = 55 minute după injecție (fix, nemodificabil)
+AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the point in time when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
 
-(Configurator-lyumjev)=
+Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
 
-#### Lyumjev
+To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
 
-![Tipul insulinei Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Sample insulin configuration](../images/manage/insulin_profile.png)
 
-* profil special de insulină pentru Lyumjev
-* DIA = cel puțin 5 ore
-* Maximum vârf = 45 minute după injectare (fix, nemodificabil)
+In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
 
-#### Oref Fără-Vârf
+Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
 
-![Tipul insulinei Oref Fără-Vârf](../images/ConfBuild_Insulin_FPO.png)
+````{admonition} Details on the impact of DIA and peak configuration :class: dropdown
 
-* Cu tipul de profil "0ref Vârf-Liber" puteți introduce individual durata până la vârf. Pentru a face acest lucru, apăsați pe rotița dințată pentru a intra în setările avansate.
-* DIA este setată automat la 5 ore dacă în profil nu se specifică o durată mai mare.
-* Acest profil este recomandat în situația în care se utilizează o insulină neacoperită în aplicație sau atunci când se utilizează un amestec de insuline.
+Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
 
-(Config-Builder-bg-source)=
+These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
 
-## Sursă valoare glicemie
+Adjusting DIA:
 
-Selectați sursa de monitorizare a glicemiei din sânge pe care o folosiți. Vedeți pagina [Sursă glicemie](../Getting-Started/CompatiblesCgms.md) pentru mai multe informații despre configurare.
+```{image} ../images/iob_remaining_static_peak.png :width: 400px
 
-![Configurați sursa glicemiilor](../images/ConfBuild_BG.png)
+    <br />Adjusting peak:
+    
+    ```{image} ../images/iob_remaining_static_dia.png
+    :width: 400px
+    
 
-* [xDrip+](../CompatibleCgms/xDrip.md)
-* [Glicemie NSClient](../CompatibleCgms/CgmNightscoutUpload.md) - doar dacă știți ce faceți, vedeți [Sursă glicemie](../Getting-Started/CompatiblesCgms.md).
-* [MM640g](../CompatibleCgms/MM640g.md)
-* Glimp - doar versiunea 4.15.57 și versiuni mai noi sunt acceptate
-* [Construiește-ți propria aplicație Dexcom (BYODA)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-* [Poctech](../CompatibleCgms/PocTech.md)
-* Aplicația Tomato pentru dispozitivul MiaoMiao
-* [Aplicația Glunovo](https://infinovo.com/) pentru sistemul de monitorizare al glicemiei Glunovo
-* [Ottai](../CompatibleCgms/OttaiM8.md)
-* [Syai Tag](../CompatibleCgms/SyaiTagX1.md)
-* Glicemie aleatorie: generează valori aleatorii ale glicemiei (doar în modul DEMO)
+Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
 
-## Omogenizare
+```{image} ../images/iob_remaining_uniform.png :width: 400px
 
-![Omogenizare](../images/ConfBuild_Smoothing.png)
+    <br />Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+    
+    ````
+    
+    #### Further reading on DIA and peak configuration
+    
+    * [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
+    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
+    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
+    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+    
+    (Config-Builder-bg-source)=
+    ## BG Source
+    Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+    
+    ![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+    
+    Scroll down to see the other sources:
+    
+    ![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+    
+    ![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+    
+    * [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
+    * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+    * [MM640g](../CompatibleCgms/MM640g.md)
+    * Glimp - only version 4.15.57 and newer are supported
+    * [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+    * MicroTech CGM App - for the Aidex / LinX CGM
+    * [Poctech](../CompatibleCgms/PocTech.md)
+    * Tomato (MiaoMiao) - Tomato App for MiaoMiao device
+    * [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
+    * Intelligo - Intelligo App
+    * Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
+    * SI App - patched SI App or Sibionics App for Sibionics CGM
+    * Sino App - patched app for Sinocare CGM
+    * Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
+    * Instara - Instara App
+    * Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
+    
+    ## Smoothing
+    
+    ![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+    
+    See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+    
+    ## Calibration
+    
+    Choose how **AAPS** treats the values it receives from your sensor:
+    
+    - **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
+    - **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+    
+    How **Linear calibration** works:
+    
+    - It needs a **sensor change** to be logged, so that it knows when the sensor session started. The first 2 hours of a session are skipped as warm-up.
+    - It needs at least **2 fingerstick entries**. Recent entries count more than old ones.
+    - The correction is only applied when the result is in a safe range. If your entries are too close together, only the offset is corrected.
+    - **Open plugin** shows the status of the calibration, the slope and correction in use, and the list of fingerstick entries. You can add an entry with **Add calibration** and remove a wrong one.
+    
+    ```{admonition} Calibrate with care
+    :class: warning
+    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+    
 
-Vedeți [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 
@@ -114,7 +245,19 @@ Vedeți [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseD
 
 Alegeți tipul de pompă pe care îl folosiți. Vedeți pagina [Pompe Compatibile](../Getting-Started/CompatiblePumps.md) pentru mai multe informații despre configurare.
 
-![Selecție pompă pentru configurare](../images/ConfBuild_Pump_AAPS33.png) ![Selecție pompă pentru configurare](../images/ConfBuild_Pump_AAPS33-2.png)
+![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+
+Scroll down to see all the pump drivers:
+
+![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+
+![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+
+![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+
+When you select another pump, **AAPS** asks you to confirm the change:
+
+![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R Coreeană (pentru pompa DanaR domestică)
@@ -129,17 +272,30 @@ Alegeți tipul de pompă pe care îl folosiți. Vedeți pagina [Pompe Compatibil
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
+* [Carelevo](../CompatiblePumps/CareLevo.md)
 * Pompă virtuală: doar sugestii pentru buclă deschisă - **AAPS** 
   * pe măsură ce faceți primii pași cu **AAPS**, în timpul primelor [obiective](../SettingUpAaps/CompletingTheObjectives.md)
   * pentru pompa care încă nu are driver
+
+(config-builder-wrong-pump-data)=
+
+### Message: "Data is coming from different pump"
+
+**AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
+
+![Data is coming from different pump](../images/Screen_DifferentPump.png)
+
+To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
 
 (Config-Builder-sensitivity-detection)=
 
 ## Detectare Sensibilitate
 
-Alegeți tipul de detecție a sensibilității. Pentru mai multe detalii despre diferite designuri, vă rugăm să [citiți aici](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Această funcție analizează în timp real datele istorice și face ajustări dacă consideră că reacționați mai sensibil (sau invers, sunteți mai rezistent) la insulină decât de obicei. Mai multe detalii despre Algoritmul de Sensibilitate pot fi citite în [Documentația OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Vă puteți vedea sensibilitatea pe ecranul principal într-un [grafic adițional](#AapsScreens-section-g-additional-graphs). Vă puteți vedea sensibilitatea la insulină pe ecranul principal prin selectarea SEN și prin urmărirea liniei albe în grafic. Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină administrată. Înainte de a ajunge la acest obiectiv, procentajul Autosens / linia din grafic este afișată doar pentru informare.
+Alegeți tipul de detecție a sensibilității. Pentru mai multe detalii despre diferite designuri, vă rugăm să [citiți aici](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Această funcție analizează în timp real datele istorice și face ajustări dacă consideră că reacționați mai sensibil (sau invers, sunteți mai rezistent) la insulină decât de obicei. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
+
+You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SEN and watching the white line. Notă, trebuie să fiți în [Obiectivul 8](#objectives-objective8) pentru a permite Detectării Sensibilității /[Autosens](#Open-APS-features-autosens) să ajusteze automat cantitatea de insulină administrată. Înainte de a ajunge la acest obiectiv, procentajul Autosens / linia din grafic este afișată doar pentru informare.
 
 ### Setări absorbție
 
@@ -149,7 +305,9 @@ Dacă utilizați Oref1 cu **SMB** trebuie să schimbați **min_5m_carbimpact** (
 
 ## APS
 
-Selectați algoritmul APS dorit pentru ajustări ale terapiei. Puteți vedea detaliile despre algoritmul ales în fila OpenAPS (OAPS).
+![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+
+Selectați algoritmul APS dorit pentru ajustări ale terapiei. You can view the active detail of the chosen algorithm with **Open plugin**.
 
 * OpenAPS AMA 
   * Asistență Avansată pentru Masă: algoritmul mai vechi nu mai este recomandat.
@@ -158,30 +316,42 @@ Selectați algoritmul APS dorit pentru ajustări ale terapiei. Puteți vedea det
   * Super Micro Bolus: cel mai recent algoritm recomandat pentru toți utilizatorii.
   * Spre deosebire de AMA, SMB nu folosește rate bazale temporare pentru a controla nivelurile glicemiei, ci în principal mici **Super Micro Bolusuri**.
   * Notă: Este recomandat să utilizați acest algoritm de la început, chiar dacă nu veți primi Super Micro Bolusuri (SMB) până la [Obiectivul 9](#objectives-objective9).
+* [Auto ISF](#Open-APS-features-auto-isf) 
+  * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
 
-Dacă treceți de la algoritmul AMA la algoritmul SMB, *min_5m_carbimpact* trebuie modificat manual în **8** (valoarea implicită pentru SMB) în [Preferințe > Detecția Sensibilității > Setări sensibilitate Oref1 ](../SettingUpAaps/Preferences.md).
+If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
 
 ## Buclă
 
-Acest modul nu poate fi dezactivat deoarece este o parte de bază a **AAPS**.
+This module cannot be disabled as it is a core part of **AAPS**.
+
+![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
 
 ## Constrângeri
 
+![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+
 ### Obiective
 
-**AAPS** are un program de învățare (o serie de obiective) pe care trebuie să îl parcurgeți pas cu pas. Acesta ar trebui să vă ghideze să configurați în siguranță un sistem de buclă închisă. Parcurgerea programului de instruire garantează că ați setat totul corect și înțelegeți exact face sistemul. Numai așa puteți avea încredere în sistem.
+**AAPS** are un program de învățare (o serie de obiective) pe care trebuie să îl parcurgeți pas cu pas. Acesta ar trebui să vă ghideze să configurați în siguranță un sistem de buclă închisă.
 
 Vedeți pagina [Obiective](../SettingUpAaps/CompletingTheObjectives.md) pentru mai multe informații.
 
-## Sincronizare
+## Communication
 
-În această secțiune, puteți alege dacă/unde doriți **AAPS** să trimită datele dumnevoastră.
+In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
 
-### NSClient sau NSClientV3
+![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+
+Scroll down to see the rest of the list:
+
+![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+
+### NSClientV3
 
 Poate fi folosit ca un [server de raportare](../SettingUpAaps/SettingUpTheReportingServer.md) și/sau pentru [monitorizare de la distanță](../RemoteFeatures/RemoteMonitoring.md), [control de la distanță](../RemoteFeatures/RemoteControl.md).
 
-Vedeți [Sincronizarea cu serverul de raportare](#SetupWizard-synchronization-with-the-reporting-server-and-more) pentru a te ajuta să alegeți între NSClient (v1) și NSClientV3.
+See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
 
 ### Tidepool
 
@@ -191,19 +361,27 @@ Vedeți [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Folosit pentru **trimite ** date, cum ar fi tratamente pentru xDrip+.
+Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
 
 ### Open Humans
 
 Vedeți [Open Humans](../SupportingAaps/OpenHumans.md).
 
+(Config-Builder-wear)=
+
 ### Ceas
 
-Monitorizează și controlează **AAPS** folosind ceasul cu Android WearOS (vedeți [pagina Afișaj Ceas](../WearOS/WearOsSmartwatch.md)).
+Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
 
-### Samsung Tizen
+(external-companion-apps)=
 
-Transmitere de date către aplicația Samsung G-Watch Wear (TizenOS).
+### External Companion Apps
+
+Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
+
+Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
+
+In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
 
 ### Garmin
 
@@ -211,37 +389,27 @@ Conexiune la dispozitivul Garmin (Fenix, Edge…)
 
 ## Tratamente
 
-În fila Tratamente (Treat) puteți vedea tratamentele care au fost încărcate în Nightscout. Dacă doriți să modificați sau să ștergeți date introduse (spre exemplu când ați mâncat mai puțini carbohidrați decât ați estimat), selectați 'Ștergeți' și scrieți noua valoare (schimbați și ora, dacă este necesar) prin butonul carbohidrați din ecranul principal<0>.</p> 
+Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
 
 ## General
 
+In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+
+![Configuration > General](../images/v4/Configuration/configuration_general.png)
+
 ### Privire de ansamblu
 
-Acesta este [ecranul principal](#AapsScreens-the-homescreen) din **AAPS** și nu poate fi dezactivat.
-
-#### Afișați câmpul pentru note în dialogurile de tratamente
-
-Alegeți dacă vreți sau nu să aveți câmpul pentru note atunci când introduceți tratamente.
-
-#### Lumini de stare
-
-Alegeți dacă doriți să aveți [lumini de stare ](#Preferences-status-lights) în privirea de ansamblu pentru vârsta canulei, vârsta insulinei, vârsta senzorului, vârsta bateriei, nivelul rezervorului sau nivelul bateriei. Când nivelul de avertizare este atins, culoarea luminii de stare va comuta la galben. La atingerea nivelului critic culoarea luminii de stare va fi roșie.
-
-#### Setări avansate
-
-**Livrează parțial bolusul calculat de Asistentul Rapid **: Când utilizează SMB (super micro bolus), multe persoane vor să nu primească 100% bolusul de insulină necesar, ci doar parțial (spre exemplu 75 %) și permit SMB prin UAM (unattended meal detection = detectarea automată a mesei) să facă restul. În această setare, puteți alege o valoare implicită pentru procentajul cu care asistentul de bolus ar trebui să calculeze. Dacă în această setare valoarea implicită este stabilită la 75% și ar trebui să bolusați 10u, Asistentul va propune un bolus de doar 7,5 unități.
-
-**Activați funcționalitatea super bolus în asistent ** (Este diferită de *super micro bolus*!): Utilizați cu precauție și nu activați până nu știți cu adevărat ce face. Practic, bazala pentru următoarele două ore este adăugată la bolus și se activează în următoarele două ore o bazală temporară zero. **Funcțiile buclei AAPS vor fi dezactivate - așa că utilizați cu grijă! Dacă utilizați SMB funcțiile de buclă AAPS vor fi dezactivate în funcție de setările dumneavoastră din ["Maximul de minute de bazală pentru a limita SMB la"](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to), dacă nu utilizați SMB funcțiile de buclă vor fi dezactivate pentru două ore.** Detalii despre super bolus pot fi găsite [aici](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
 
 (Config-Builder-actions)=
 
 ### Acțiuni
 
-O filă care oferă mai multe butoane pentru a întreprinde [acțiuni](#screens-action-tab) în **AAPS**.
+The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
 
 ### Automatizare
 
-O filă pentru gestionarea <0>Automatizărilor</0>, disponibilă de la <1>Obiectivul 10</1>.
+**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
 
 (Config-Builder-sms-communicator)=
 
@@ -251,24 +419,11 @@ Permite aparținătorilor să controleze de la distanță anumite funcții ale *
 
 ### Mâncare
 
-Afișați presetările alimentare definite în baza de date Nightscout, vedeți [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pentru mai multe informații despre configurare.
+**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
 Notă: Intrările nu pot fi utilizate în calculatorul **AAPS**. (Numai vizualizare)
 
-(Config-Builder-wear)=
-
-### Ceas
-
-Monitorizați și controlați AAPS folosind ceasul Android Wear (vedeți [pagina Afișaj Ceas](../WearOS/WearOsSmartwatch.md)). Utilizați setările (rotiță dințată) pentru a stabili variabilele care ar trebui luate în considerare la calcularea bolusului dat de ceas (spre exemplu tendința de 15 minute, COB...).
-
-Dacă doriți să bolusați șamd. de pe ceas, în "Setări Wear", trebuie să activați "Control de pe Ceas".
-
-![Setări Wear](../images/ConfBuild_Wear.png)
-
-Prin fila Ceas (Wear) sau prin meniul principal (sus stânga ecranului, dacă fila nu este afișată) puteți
-
-* Retrimiteți toate datele. Ar putea fi de ajutor dacă ceasul nu a fost conectat de ceva timp și doriți să împingeți informațiile către ceas.
-* Deschideți setările pe ceas direct de pe telefon.
+(Config-Builder-autotune)=
 
 ### Autotune
 
@@ -276,8 +431,14 @@ Puteți activa Autotune, vedeți [aici](../AdvancedOptions/Autotune.md).
 
 ### Mentenanță
 
-Accesați această filă pentru a exporta / importa setările.
+Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+
+![Maintenance screen, log files](../images/screens/maintenance.png)
+
+![Maintenance screen, file management](../images/screens/maintenance_2.png)
+
+![Maintenance screen, database management](../images/screens/maintenance_3.png)
 
 ### Configurarea Sistemului (Config Builder)
 
-Această filă curentă.
+Now called **Configuration**: this current page.
