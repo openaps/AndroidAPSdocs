@@ -1,31 +1,30 @@
-# Dexcom G7 和 ONE+
+# Dexcom G7, ONE+ and Stelo
 
 
 ## 提前做好准备至关重要
 
-值得注意的是，与G6相比，G7和ONE+系统无论在应用程序还是读取器中都不会对数值进行平滑处理。更多详情请参见[此处](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
+Noteworthy is the fact that the G7, ONE+ and Stelo systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. 更多详情请参见[此处](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
 ```{admonition} Smoothing method 
 请参阅[Dexcom G7/ONE+/Stelo适用的平滑方法建议](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 ```
 
-## 1. xDrip+（直接连接到 G7 或 ONE+）
+## 1. xDrip (direct connection to G7, ONE+ or Stelo)
 
-- 请按照此处的说明操作：[xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- 在 [ConfigBuilder, BG Source](#Config-Builder-bg-source) 中选择 xDrip+。
+- xDrip connects to the sensor itself: uninstall the Dexcom app, as only one app can connect to the sensor. To keep the Dexcom app, use [xDrip Companion App](#DexcomG7-xdrip-companion-app) instead.
+- Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
+- Select  xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
-- 请根据[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的说明调整xDrip+设置
+- Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
 
-## 2. Build Your Own Dexcom App (G7)
+## 2. Build Your Own Dexcom App (G7 only)
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Dexcom BYODA is now a very old version of the app and cannot be updated. Not available for ONE+ or Stelo.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
-
-![BYODA broadcast options](../images/BYODA.png)
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS
 
 -   This app lets you use your Dexcom G7 with any Android smartphone.
 -   Uninstall the original Dexcom app
@@ -33,46 +32,61 @@ Dexcom BYODA is now a very old version of the app and cannot be updated.
 -   Enter sensor code in patched app
 -   After short time BYODA should pick-up transmitter signal
 
-## 3. 修补版 Dexcom G7 应用程序 (DiaKEM)
+(DexcomG7-xdrip-companion-app)=
 
-```{admonition} No new users
-:class: warning
-Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer can get through the login and onboarding process that happens on a fresh install of the app. 
-Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
+## 3. xDrip Companion App (G7, ONE+ and Stelo)
+
+The official Dexcom app stays connected to the sensor. xDrip reads the glucose values from the notifications of the Dexcom app and sends them to **AAPS**.
+
+```{admonition} Not a trusted data source
+:class: note
+**AAPS** does not consider xDrip in Companion App mode a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs are not allowed all the time.
 ```
 
-**注意：需要 AAPS 3.2.0.0 或更高版本！不适用于 ONE+。**
+### Read the Dexcom app notifications
 
-### 安装新的修补版 (\!) G7 应用程序并启动传感器
+- Keep the Dexcom app installed and connected to the sensor. Its notifications must stay visible: do not silence or hide them.
+- Download and install [xDrip](https://github.com/NightscoutFoundation/xDrip). Use the same glucose units in xDrip as in the Dexcom app.
+- In xDrip, go to **Settings** > **Hardware Data Source** and select **Companion App**.
 
+  ![xDrip Hardware Data Source: Companion App](../images/xDrip_Companion_DataSource.png)
 
-A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+- xDrip asks for permission to read notifications. Tap **OK**, then select **xDrip** in the list and turn on **Allow notification access**.
 
-- 若您先前使用过原版Dexcom应用，请将其卸载（正在进行的传感器会话可继续使用——注意：卸载应用前请记录传感器代码！）
+  ![Notification access list](../images/xDrip_Companion_NotificationAccess1.png)
 
-- 在[此处](https://github.com/authorgambel/g7/releases)下载并安装 patched.apk。
+- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because xDrip was not installed from the Play Store:
 
-- 在修补的应用程序中输入传感器代码。
+  ![Notification access controlled by restricted setting](../images/xDrip_Companion_Restricted.png)
 
-- 请遵循[此处](../CompatibleCgms/GeneralCGMRecommendation.md)所列的CGM卫生与传感器放置通用建议。
+  Open the xDrip app info (long press the xDrip icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Then go back to the notification access screen and allow it.
 
-- 预热阶段结束后，数值将照常在G7应用程序中显示。
+  ![App info: Allow restricted settings](../images/xDrip_Companion_AllowRestricted.png)
+
+  ![Notification access allowed for xDrip](../images/xDrip_Companion_NotificationAccess2.png)
+
+- Readings appear in xDrip when the Dexcom app shows a new value. If nothing appears, you may need to start a sensor in xDrip: this has no effect on the real sensor. Stelo gives a reading every 15 minutes in this mode.
+
+### Companion Bluetooth (G7)
+
+When the Dexcom app is connected to a G7 sensor, xDrip can also listen to the readings the sensor sends to the Dexcom app over Bluetooth. xDrip does not pair with the sensor and you do not need to enter the sensor code: the Dexcom app stays in control.
+
+With **Companion Bluetooth**, xDrip gets the exact time and trend of each reading from the sensor, instead of the time the notification appeared, and fills gaps when the phone was out of range (backfill).
+
+- In xDrip, go to **Settings** > **Less common settings** > **Bluetooth Settings** and enable **Companion Bluetooth**.
+
+  ![xDrip Bluetooth Settings: Companion Bluetooth](../images/xDrip_Companion_Bluetooth.png)
+
+- This does not work on all phones and Android versions. Disable it if you see problems.
+- If an old Dexcom sensor is still in the phone's Bluetooth list, xDrip might listen to the wrong one: in Android **Settings** > **Connected devices**, forget sensors you no longer use.
+- Companion Bluetooth is made for the G7. With ONE+ and Stelo, rely on notifications.
 
 ### AAPS 中的配置
 
-- 在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择「BYODA」——即使您使用的并非BYODA应用！
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 
-- 若AAPS未接收到任何数值，请先切换至其他血糖数据源，然后重新选择「BYODA」以触发AAPS与BYODA之间的数据交换授权请求。
-
-## 4. xDrip+（伴侣模式）
-
--   下载并安装 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
-- 在xDrip+中必须选择"伴侣应用"作为数据源，并在高级设置 > 蓝牙设置中启用"伴侣蓝牙"功能。
--   在[ConfigBuilder的BG数据源](#Config-Builder-bg-source)中选择xDrip+。
-
--   请根据[xDrip+设置页面](../CompatibleCgms/xDrip.md)上的说明调整xDrip+设置
-
-## 5. Juggluco
+## 4. Juggluco (G7 and ONE+)
 
 Version 9.0+ required
 
