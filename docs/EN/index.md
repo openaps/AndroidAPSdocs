@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- xx xxxx 202x : Version {{ aaps_version }}.x.x is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+ 31 October 2026 : Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
 
 ```
 
