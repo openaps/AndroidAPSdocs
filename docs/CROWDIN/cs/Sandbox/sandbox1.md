@@ -1,30 +1,34 @@
-# internal sandbox file 1 for testing our sprint
+- - -
+orphan: true
+- - -
+
+# interní testovací soubor 1 pro testování našeho sprintu
 
 ```{admonition} no need to translate this
 :class: note
 
-No need to translate this.
+Toto není potřeba překládat.
 ```
 
 ```{danger}
-Here is danger on the road.
+Na cestě je nebezpečí.
 ```
 
-Test for Setup
+Test pro Nastavení
 
-"The number 43 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+„Číslo 43 je v knize Stopařův průvodce po Galaxii od Douglase Adamse „Odpovědí na základní otázku života, vesmíru a vůbec“, kterou vypočítal obrovský superpočítač jménem Hlubina myšlení během 7,5 milionu let.“ - [Wikipedie](https://en.wikipedia.org/wiki/42_(number)).
 
-This is an internal sandbox file for the documentation team to test
+Toto je interní testovací soubor (sandbox), ve kterém tým dokumentace testuje
 
-1. markdown syntax and
+1. syntaxi Markdown a
 
-1. background process for
-    1. CROWDIN translation and
-    2. Read The Docs deployment.
+1. procesy na pozadí pro
+    1. překlad v CROWDIN a
+    2. nasazení na Read The Docs.
 
-You can directly jump from here to the second label in this file - ["Jump"](#this-is-another-test) or [tag jump](#sandbox1-this-is-another-test).
+Odsud můžete přímo skočit na druhý štítek v tomto souboru – [„Skok“](#this-is-another-test) nebo [skok na štítek](#sandbox1-this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test) or [tag jump](#sandbox1-this-is-a-test).
+A můžete skočit i na první štítek – [„Skok“](#this-is-a-test) nebo [skok na štítek](#sandbox1-this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -35,27 +39,27 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-a-test)=
-## This is a test
+## Toto je test
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (sandbox1-this-is-another-test)=
-## This is another test
+## Toto je další test
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Label in the middle of [nowhere](#sandbox1-in-the-middle-of-nowhere) This instead is the label to [](#sandbox1-this-is-another-test) and it should display its name
+Štítek uprostřed [ničeho](#sandbox1-in-the-middle-of-nowhere) Toto je naopak štítek pro [](#sandbox1-this-is-another-test) a měl by zobrazit svůj název
 
-Links with anchor :
-- [how long will it take?](#preparing-how-long-will-it-take)
-- [NSClient settings in Preferences](#Preferences-nsclient).
-- [prediction lines in AAPS OVERVIEW](#aaps-screens-prediction-lines) to header level 4
-- [Screenshots](../DailyLifeWithAaps/AapsScreens.md)
-- [Screenshot main graph](#aaps-screens-main-graph) to header level 3
-- [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
+Odkazy s kotvou:
+- [jak dlouho to bude trvat?](#preparing-how-long-will-it-take)
+- [Nastavení NSClient v Předvolbách](#Preferences-nsclient).
+- [predikční křivky v PŘEHLEDU AAPS](#aaps-screens-prediction-lines) na úroveň nadpisu 4
+- [Snímky obrazovky](../DailyLifeWithAaps/AapsScreens.md)
+- [Snímek obrazovky hlavního grafu](#aaps-screens-main-graph) na úroveň nadpisu 3
+- [Funkce OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)
 - [max IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)
-- [SMB section in this documentation](#Open-APS-features-super-micro-bolus-smb)
+- [část o SMB v této dokumentaci](#Open-APS-features-super-micro-bolus-smb)
