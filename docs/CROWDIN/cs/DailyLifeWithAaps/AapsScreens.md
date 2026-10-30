@@ -1,294 +1,378 @@
-# AAPS screens
+# Obrazovky AAPS
 
 ```{contents}
 :backlinks: entry
 :depth: 2
 ```
 
-(AapsScreens-the-homescreen)=
+(the-homescreen)= (AapsScreens-the-homescreen)=
 
-## The Homescreen
+## Hlavní obrazovka
 
-![Homescreen V2.7](../images/Home_Homescreen.png)
+![Hlavní obrazovka](../images/Home_Homescreen.png)
 
-This is the first screen you will come across when you open **AAPS**, and it contains most of the information that you will need day to day.
+Toto je první obrazovka, kterou uvidíte po otevření **AAPS**, a obsahuje většinu informací, které budete denně potřebovat.
 
-### Section A - Tabs
+### Část A – Horní lišta
 
-* Navigate between the various **AAPS** modules.
-* Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in the [config builder](#Config-Builder-tab-or-hamburger-menu).
+* **Nabídka** (☰) vlevo otevře navigační panel s položkami **Historie ošetření**, **Prohlížeč historie**, **Statistiky**, **Pomocník s profilem**, **Údržba**, **Průvodce nastavením**, **Konfigurace** a dalšími.
+* **Vyhledávací pole** najde nastavení, dialogy i dokumentaci – stačí začít psát (viz [Globální vyhledávání](../DailyLifeWithAaps/GlobalSearch.md)).
+* Ikona **Nastavení** (ozubené kolo) vpravo otevře všechna [nastavení](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
 
-### Section B - Profile & target
+### Část B – Stavový blok
 
-#### Current Profile
+#### Aktuální hodnota glykémie
 
-The current profile is displayed in the left bar.
+Poslední hodnota glykémie z vašeho CGM je zobrazena ve velkém kruhu vlevo, spolu s rozdílem oproti předchozí hodnotě (delta) a stářím hodnoty.
 
-Short press profile bar to view profile details. Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+Barva hodnoty glykémie ukazuje, jak se hodnota má k nastavenému [rozsahu](#Preferences-range-for-visualization).
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+* zelená = v rozsahu
+* červená = pod rozsahem
+* žlutá = nad rozsahem
 
-1. Regular display with a standard profile activation.
-2. Profile switch with a remaining duration of 59mn.
-3. Profile switch with a specific percentage of 120%.
-4. Profile switch with a specific percentage of 80% and a remaining duration of 59 mn.
-5. Profile switch with a time shift of -1 hour.
-6. Profile switch with a specific percentage of 120%, time shift of 1 hour, and a remaining duration of 59mn.
+![Kruh glykémie v rozsahu, zelený](../images/Home_Delta.png) ![Kruh glykémie nad rozsahem, žlutý](../images/Home_Delta_high.png) ![Kruh glykémie pod rozsahem, červený](../images/Home_Delta_low.png)
 
-#### Target
+(loop-status)= (AapsScreens-loop-status)=
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+#### Stav smyčky
 
-Current target blood glucose level is displayed in the right bar.
+![Stav smyčky](../images/Home2020_LoopStatus.png)
 
-Short press target bar to set a **[Temporary Target](../DailyLifeWithAaps/TempTargets.md)**.
+Vedle kruhu glykémie ukazuje ikona režim smyčky (na obrázku shora dolů):
 
-If a temp target is set, the bar turns yellow and the remaining time in minutes is shown in brackets.
+1. Zelený kruh = [uzavřená smyčka](#KeyAapsFeatures-ClosedLoop), smyčka běží
+2. Fialový kruh s tečkovanou čarou = [ochrana před nízkou glykémií (LGS)](#KeyAapsFeatures-LGS)
+3. Modrý kruh s tečkovanou čarou = [otevřená smyčka](#KeyAapsFeatures-OpenLoop)
+4. Červený kruh s křížkem = smyčka zakázána (trvale nefunguje)
+5. Červená ikona pauzy = smyčka pozastavena (dočasně zastavena, ale bazální inzulín se podává) – vedle ikony je zobrazen zbývající čas
+6. Šedý kruh se zástrčkou = pumpa odpojena (dočasně se nepodává vůbec žádný inzulín) – vedle ikony je zobrazen zbývající čas
+
+Stisknutím ikony otevřete dialog Smyčka. Obsah dialogu závisí na aktuálním stavu:
+
+* Když smyčka **běží** (uzavřená, otevřená nebo LGS), můžete přepnout režim smyčky (Uzavřená smyčka, Ochrana před nízkou glykémií, Otevřená smyčka nebo Zakázat smyčku), **pozastavit** smyčku nebo **odpojit** pumpu na zvolenou dobu.
+* Když je smyčka **zakázána**, můžete ji znovu povolit výběrem režimu smyčky, nebo odpojit pumpu.
+* Když je smyčka **pozastavena**, můžete ji **obnovit**, odpojit pumpu nebo vybrat novou dobu v části **Pozastavit smyčku** a pozastavení tak prodloužit.
+* Když je pumpa **odpojena**, můžete pumpu **znovu připojit** nebo vybrat novou dobu v části **Odpojit pumpu** a odpojení tak prodloužit.
+
+Když prodloužíte pozastavení nebo odpojení, nová doba **začíná od teď**: nahradí zbývající čas, nepřičte se k němu. Nemusíte smyčku nejdřív obnovit ani pumpu znovu připojit.
+
+Dialog, když smyčka běží jako uzavřená smyčka:
+
+![Dialog smyčky při uzavřené smyčce](../images/loop/loop_dialog_closed_loop.png)
+
+Dialog, když je smyčka pozastavena, s tlačítkem **Obnovit** a dobami pro prodloužení pozastavení:
+
+![Dialog smyčky při pozastavené smyčce](../images/loop/loop_dialog_suspended.png)
+
+Dialog, když je pumpa odpojena, s tlačítkem **Znovu připojit pumpu** a dobami pro prodloužení odpojení:
+
+![Dialog smyčky při odpojené pumpě](../images/loop/loop_dialog_disconnected.png)
+
+Dialog v režimu Ochrana před nízkou glykémií, při otevřené smyčce a při zakázané smyčce se liší jen nabízenými režimy smyčky:
+
+![Dialog smyčky v režimu Ochrana před nízkou glykémií](../images/loop/loop_dialog_lgs.png)
+
+![Dialog smyčky při otevřené smyčce](../images/loop/loop_dialog_open_loop.png)
+
+![Dialog smyčky při zakázané smyčce](../images/loop/loop_dialog_disabled.png)
+
+Takto vypadá hlavní obrazovka v jednotlivých režimech. Barevný pruh v horní části grafu se změní v okamžiku přepnutí.
+
+Ochrana před nízkou glykémií:
+
+![Hlavní obrazovka v režimu Ochrana před nízkou glykémií](../images/main/main_screen_loop_lgs.png)
+
+Otevřená smyčka:
+
+![Hlavní obrazovka při otevřené smyčce](../images/main/main_screen_loop_open.png)
+
+Smyčka zakázána:
+
+![Hlavní obrazovka se zakázanou smyčkou](../images/main/main_screen_loop_disabled.png)
+
+Smyčka pozastavena – vedle ikony je zobrazen zbývající čas:
+
+![Hlavní obrazovka s pozastavenou smyčkou](../images/main/main_screen_loop_suspended.png)
+
+Pumpa odpojena – vedle ikony je zobrazen zbývající čas. Tlačítka ošetření zůstávají v panelu nástrojů QuickLaunch, takže můžete dál zaznamenávat inzulín podaný perem nebo sacharidy:
+
+![Hlavní obrazovka s odpojenou pumpou](../images/main/main_screen_pump_disconnected.png)
+
+Po každém výběru je potřeba potvrzení.
+
+```{admonition} Alarm: pumpa nepřijala nulový dočasný bazál :class: warning Když je pumpa odpojená, udržuje **AAPS** na pumpě nulový dočasný bazál a nastaví ho znovu, pokud chybí. Pokud se to nepodaří ani po 10 minutách, spustí **AAPS** naléhavý alarm: *„Pumpa nepřijala nulový dočasný bazál. Může stále dávat bazální inzulín. Zkontrolujte pumpu.“* Alarm se opakuje každých 15 minut, dokud není nulový dočasný bazál nastaven nebo dokud odpojení neskončí. Pokud ho uvidíte, zkontrolujte pumpu: může dávat bazální inzulín, i když ji **AAPS** ukazuje jako odpojenou.
+
+    <br />Poznámka: nabízené režimy závisí na tom, jak daleko jste v [Cílech](../SettingUpAaps/CompletingTheObjectives.md) – Uzavřená smyčka a LGS jsou dostupné až po splnění příslušných cílů.
+    
+    (aaps-screens-bg-warning-sign)=
+    #### Varovná značka glykémie
+    
+    Pokud **AAPS** zjistí problém s hodnotami glykémie, které dostává, objeví se ve spodní liště hlavní obrazovky zkratka k vašemu zdroji glykémie (pojmenovaná podle něj, například **xDrip+ glykémie**) s červeným varovným odznakem. Klepnutím na ni otevřete [obrazovku zdroje glykémie](#aaps-screens-bg-source).
+    
+    ##### Duplicitní data glykémie
+    
+    Červená varovná značka vás vyzývá, abyste hned jednali: dostáváte **duplicitní data glykémie**, která brání smyčce správně pracovat. **AAPS** nedokáže z duplicitních hodnot spolehlivě vypočítat trend glykémie, a proto přestane provádět korekce.
+    
+    Pokud byla smyčka uzavřená, přepne ji **AAPS** do režimu [Ochrana před nízkou glykémií (LGS)](#KeyAapsFeatures-LGS): ikona smyčky zfialoví.
+    
+      ![Duplicitní data glykémie: ikona smyčky LGS a zkratka zdroje glykémie s červeným varovným odznakem](../images/bg_warn_red.png)
+    
+    Stiskněte ikonu smyčky: karta **Omezení** nahoře vám řekne proč: „BgQualityCheck: Režim LGS v důsledku duplicitních hodnot ve zdroji glykémie“.
+    
+      ![Dialog režimu smyčky: LGS kvůli duplicitním hodnotám](../images/main/bg_doubled_constraint.png)
+    
+    ```{admonition} Vaše smyčka běží v režimu Ochrana před nízkou glykémií
+    :class: note
+    Smyčka dál běží, ale jen aby vás chránila před hypoglykémií: **AAPS** může stále snížit nebo pozastavit bazál, ale nepodá žádný korekční inzulín, dokud tento problém nevyřešíte!
+    
+
+Musíte zjistit, proč dostáváte duplicitní hodnoty glykémie:
+
+* Máte na svém webu Nightscout zapnutý Dexcom bridge? Vypněte bridge v administraci své instance Nightscout: upravte proměnnou "enable" a odstraňte z ní část "bridge". (Pro heroku [najdete podrobnosti zde](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Nahrává vaši glykémii do Nightscoutu více zdrojů? Pokud používáte aplikaci BYODA, povolte nahrávání v **AAPS**, ale nepovolujte ho v xDripu, pokud ho používáte.
+* Máte sledující, kteří vaši glykémii přijímají, ale zároveň ji znovu nahrávají do vašeho Nightscoutu?
+* Poslední možnost: v [nastavení NSClient](#Preferences-nsclient) vyberte nastavení Synchronizace a vypněte volbu „Přijímat data CGM z NS“.
+
+Chcete-li varování hned odstranit a znovu umožnit smyčce provádět korekce, smažte duplicitní záznamy na obrazovce zdroje glykémie: klepněte na zkratku ve spodní liště. Duplicitní hodnota je zvýrazněna červeně. Dlouhým stiskem hodnoty začnete výběr, označte duplicity a klepněte na ikonu koše vpravo nahoře.
+
+![Obrazovka zdroje glykémie: duplicity vybrané ke smazání](../images/main/bg_source_delete_duplicates.png)
+
+Pokud je ale duplicit hodně, může být jednodušší
+
+* [zálohovat nastavení](../Maintenance/ExportImportSettings.md),
+* resetovat databázi v nabídce Údržba a
+* [znovu importovat nastavení](../Maintenance/ExportImportSettings.md)
+
+    {admonition} Přepněte zpět na uzavřenou smyčku sami
+    :class: important
+    **AAPS** se po odstranění duplicit nevrátí do režimu **Uzavřená smyčka** samo. Stiskněte ikonu smyčky na hlavní obrazovce a znovu vyberte **Uzavřená smyčka**.
+
+##### Neměnná data glykémie
+
+U některých zdrojů glykémie (Libre 1, AiDEX, Glutec, Medtronic a zdroje, které neuvádějí typ senzoru) **AAPS** kontroluje také hodnoty, které se nemění: pokud se vaše glykémie po dobu 45 minut změnila o méně než 2 mg/dl (0,1 mmol/l), považují se data za chybná. Zkratka zdroje glykémie pak ukazuje červený odznak plochého trendu a smyčka zruší každý vysoký dočasný bazál a nepodá žádný korekční inzulín, dokud se hodnoty znovu nezačnou měnit. Zkontrolujte senzor a aplikaci, která hodnoty odesílá.
+
+##### Nepravidelná data glykémie
+
+Když hodnoty přicházejí v nepravidelných intervalech nebo některé chybí, **AAPS** přepočítá z dostupných hodnot 5minutové hodnoty. To se stává například po výměně senzoru nebo u senzorů Libre, jejichž časování se každých několik hodin posune o minutu nebo dvě. Smyčka dál funguje a nemusíte nic dělat. **AAPS** 4 už kvůli tomu nezobrazuje žlutou varovnou značku.
+
+#### Aktuální profil
+
+Aktuální profil je zobrazen vedle ikony hvězdičky.
+
+Klepnutím na název profilu otevřete [obrazovku Profil](#aaps-screens-profile), kde si můžete prohlédnout podrobnosti profilu a [přepínat mezi různými profily](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+
+Chcete-li **změnit procento profilu** (a jeho trvání), klepněte na název profilu a pak na kulaté tlačítko **▶** (Aktivovat) vpravo dole na obrazovce Profil. V **AAPS** 3.x se tato obrazovka otevírala dlouhým stiskem názvu profilu; v **AAPS** 4 dlouhý stisk nic nedělá. Postup krok za krokem: [Změna procenta profilu](#ProfileSwitch-change-percentage).
+
+![Profil s aktivním přepnutím profilu](../images/Home2020_ProfileSwitch.png)
+
+1. Běžné zobrazení při aktivaci standardního profilu.
+2. Přepnutí profilu s procentem 90 % a zbývající dobou 9 minut – během dočasného přepnutí profilu je název profilu žlutý.
+3. Přepnutí profilu s časovým posunem 1 hodina a zbývající dobou 9 minut.
+
+#### Cíl
+
+![Zbývající doba dočasného cíle](../images/Home2020_TT.png)
+
+Pod názvem profilu je zobrazena aktuální cílová glykémie.
+
+Krátkým stiskem cíle otevřete obrazovku **[Dočasný cíl](../DailyLifeWithAaps/TempTargets.md)**.
+
+1. Běžné zobrazení: cílový rozsah nastavený ve vašem profilu.
+2. Pokud je nastaven dočasný cíl, cíl zežloutne/zoranžoví, zobrazí se ikona použité předvolby a v závorce zbývající čas v minutách.
 
 (AapsScreens-visualization-of-dynamic-target-adjustment)=
 
-#### Visualization of Dynamic target adjustment
+#### Vizualizace dynamické úpravy cíle
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+Když používáte [algoritmus SMB](#Config-Builder-aps) a funkci [Autosens](#Open-APS-features-autosens), může **AAPS** dynamicky upravovat váš cíl podle citlivosti.
 
-When using the [SMB algorithm](#Config-Builder-aps) and [Autosens](#Open-APS-features-autosens) functionality, **AAPS** can dynamically adjust your target based on sensitivity.
+V [nastavení OpenAPS SMB](#Preferences-openaps-smb-settings) povolte jednu nebo obě tyto volby:
 
-Enable either one or both of the following options in [Preferences > OpenAPS SMB settings](#Preferences-openaps-smb-settings):
+* „Citlivost zvyšuje cíl“ a/nebo
+* „Rezistence snižuje cíl“
 
-     * "sensitivity raises target" and/or 
-     * "resistance lowers target" 
-    
+Pokud **AAPS** zjistí rezistenci nebo citlivost, cíl se změní oproti hodnotě z profilu a zobrazený cíl změní barvu, aby úpravu ukázal.
 
-If **AAPS** detects resistance or sensitivity, the target will change from what is set from profile. When it alters the target glucose, the background will change to green.
+(aaps-screens-iob-cob-basal-sens)=
 
-(AapsScreens-section-c-bg-loop-status)=
+#### IOB, COB, bazál a citlivost
 
-### Section C - BG & loop status
+![IOB, COB, bazál a citlivost](../images/Home2020_TBR.png)
 
-#### Current blood glucose
+1. **Injekční stříkačka**: aktivní inzulín (IOB) – množství aktivního inzulínu ve vašem těle  
+    Pokud by běžel jen váš standardní bazál a nezbýval žádný inzulín z předchozích bolusů, byla by hodnota aktivního inzulínu nulová. 
+    * IOB může být i záporný, pokud byl dříve aktivován snížený bazál.
+    * Stiskem této položky zobrazíte rozdělení na bolusový a bazální inzulín (první dialog na obrázku – zde se záporným IOB po období sníženého bazálu)
+2. **Klas**: [zbývající sacharidy (COB)](../DailyLifeWithAaps/CobCalculation.md) – dosud nevstřebané sacharidy, které jste snědli dříve
+3. Tyrkysové tlačítko vpravo ukazuje **aktuální podávání bazálu**: rovnou čáru, když běží bazál z profilu, a změněnou ikonu, když je aktivní dočasný bazál
+4. **Řádek s procentem** ukazuje aktuální citlivost ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). Když smyčka mění vaši citlivost (ISF), ukazuje řádek také ISF z profilu, šipku a ISF, kterou smyčka používá teď, například „80% 2.0 ↗ 2.5“. Stiskem zobrazíte hodnotu Autosens a účinnou ISF (druhý dialog na obrázku). Pokud smyčka pracuje s jinou hodnotou než s posledním výsledkem Autosens (například protože dočasný cíl mění vaši citlivost), dialog tuto hodnotu ukáže také jako **Autosens v algoritmu**. Když je Autosens vypnutý, smyčka používá ISF z profilu a účinná ISF se nezobrazuje.
 
-The latest blood glucose reading from your CGM is shown on the left side.
+Dialog IOB, otevřený stiskem položky IOB:
 
-The color of the BG value reflects the status to the defined [range](#Preferences-range-for-visualization).
+![Dialog IOB s bolusovým IOB a bazálním IOB](../images/main/main_chip_iob.png)
 
-     * green = in range
-     * red = below range
-     * yellow = above range 
-    
+Stiskem tyrkysového tlačítka zobrazíte běžící dočasný bazál, kdy začal a jak dlouho už běží:
 
-![Deltas](../images/Home_Delta.png)
-
-The blocks in the middle shows:
-
-1. how many minutes since last **CGM** reading
-2. differences with the last reading: Δ, and with the last 15 and 40 minutes average (Δ15 and Δ40).  
-  Long deltas are calculated as an average value of deltas in the past, indicating what was the average change.
-
-(AapsScreens-loop-status)=
-
-#### Loop status
-
-![Loop status](../images/Home2020_LoopStatus.png)
-
-On the right side, an icon shows the loop status:
-
-1. Green circle = [closed loop](#KeyAapsFeatures-ClosedLoop), loop running
-2. Purple circle with dotted line = [low glucose suspend (LGS)](#KeyAapsFeatures-LGS)
-3. Red circle = loop disabled (not working permanently)
-4. Red circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-5. Grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-6. Orange circle = super bolus running - remaining time is shown below icon
-7. Blue circle with dotted line = [open loop](#KeyAapsFeatures-OpenLoop)
-
-Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
-
-     * If short press on Loop icon, a validation is required after selection in Loop Dialog
-    
-     ![Loop status menu](../images/Home2020_Loop_Dialog.png)
-    
-
-(aaps-screens-bg-warning-sign)=
-
-#### BG warning sign
-
-If for any reason, there are issues in the BG readings **AAPS** receives, you will get a warning signal beneath your BG number on the main screen.
-
-##### Red warning sign: Duplicate BG data
-
-The red warning sign is signaling you to get active immediately: You are receiving **duplicate BG data**, which does avoid the loop to do its work right. Therefore, your loop will be disabled until it is resolved.
-
-    {admonition} Your loop is not running
-    :class: note
-    Your loop is not running until you solve this issue !
-
-    ![Red BG warning](../images/bg_warn_red.png)
-    
-
-You need to find out why you get duplicate BGs:
-
-* Is Dexcom bridge enabled on your Nightscout site? Disable the bridge by going to the administration panel of your Nightscout instance, edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to Nightscout? If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your Nightscout site?
-* Last resort: In **AAPS**, go to [Preferences > NSClient](#Preferences-nsclient), select the sync settings and disable the "Accept CGM data from NS" option.
-
-To remove the warning immediately and get to loop running again, you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
-
-However, when there are a lot of duplicates, it might be easier to
-
-* [backup your settings](../Maintenance/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Maintenance/ExportImportSettings.md) again
-
-##### Yellow warning sign
-
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or that some BGs are missing. When pressing the sign, the message indicates “Recalculated data used”.
-
-    ![Yellow BG warning](../images/bg_warn_yellow.png)
-    
-
-Usually you do not have to take any action. The closed loop will continue to work!
-
-As a sensor change is interrupting the constant flow of BG data, a yellow warning sign after sensor change is normal and nothing to worry about.
-
-Special note for Libre users:
-
-* Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-* Also, jumpy readings interrupt the continuous flow.
-* Therefore, the yellow warning sign will be 'always on' for Libre users.
-
-*Note*: Up to 30h hours are taken into accord for **AAPS** calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
-
-#### Simple mode
-
-An icon with a kid's face at the top right of this section indicates that you are in [Simple mode](#preferences-simple-mode).
-
-![Home2020_SimpleMode.png](../images/Home2020_SimpleMode.png)
-
-### Sekce D – IOB, COB, BR a AS
-
-![Sekce D](../images/Home2020_TBR.png)
-
-1. **Syringe**: insulin on board (IOB) - amount of active insulin inside your body  
-  The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses.
-  
-  * IOB může být i záporný, pokud byl dříve aktivován snížený bazál.
-  * Stisknutím ikony zobrazíte rozdělení bolusové a bazální dávky
-
-2. **Grain**: [carbs on board (COB)](../DailyLifeWithAaps/CobCalculation.md) - yet unabsorbed carbs you have eaten before The icon pulses red if carbs are required (see [below](#aaps-screens-carbs-required))
-
-3. **Purple line**: current basal rate. The icon changes to reflect temporary changes in basal rate (flat at 100%) 
-  * Stisknutím ikony zobrazíte základní bazální dávku a podrobnosti o jakémkoli dočasném bazálu (včetně zbývající doby trvání)
-4. **Arrows up & down**: indicates dynamic sensitivity features status ([Autosens](#Open-APS-features-autosens) or [DynamicISF](#Open-APS-features-DynamicISF)): enabled or disabled. Several values may be shown in this section: 
-  * AS: Autosens value. Shown even if Autosens is disabled (for information only). Also shown when DynISF is activated, although it has no effect.
-  * Alg: DynamicISF value (based on TDD). More information on the last line on [DynamicISF](#Open-APS-features-DynamicISF) page.
+![Dialog dočasného bazálu](../images/main/main_chip_temp_basal.png)
 
 (aaps-screens-carbs-required)=
 
 #### Požadavek sacharidů
 
-![Požadavek sacharidů](../images/Home2020_CarbsRequired.png)
+![Požadované sacharidy zobrazené v položce COB](../images/main/main_screen_carbs_required.png)
 
 Návrhy sacharidů jsou uvedeny v případě, že algoritmus detekuje potřebu sacharidů.
 
-This is when the oref algorithm thinks it can't rescue you by zero-temping, and you will need carbs to fix.
+To je situace, kdy si algoritmus oref myslí, že vás nemůže zachránit nulovým dočasným bazálem, a k nápravě budete potřebovat sacharidy.
 
-Oznámení jsou mnohem sofistikovanější než ta z bolusového kalkulátoru. Můžete vidět návrh sacharidů, zatímco bolusová kalkulačka neobsahuje chybějící sacharidy.
+Oznámení o sacharidech jsou mnohem propracovanější než oznámení z bolusové kalkulačky. Návrh sacharidů můžete vidět i tehdy, když bolusová kalkulačka chybějící sacharidy neukazuje.
 
 V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
-### Sekce E – Stavové indikátory
+### Část C – Stavový řádek
 
-![Sekce E](../images/Home2020_StatusLights.png)
+![Stavový řádek](../images/Home2020_StatusLights.png)
 
-Stavové indikátory zobrazují vizuální varování pro
+Stavový řádek vizuálně upozorňuje na
 
 * Stáří kanyly
-* Stáří inzulínu (doba použití aktuálního zásobníku)
-* Stav zásobníku (jednotky)
+* Stáří inzulínu (kolik dní se používá zásobník) a množství v zásobníku (jednotky)
 * Stáří senzoru
-* Stáří a úroveň (%) baterie
+* Stáří a úroveň baterie pumpy (%)
 
 Pokud dojde k dosažení prahové hodnoty, zobrazí se hodnoty žlutě.
 
 Pokud dojde k dosažení kritické prahové hodnoty, hodnoty se zobrazí červeně.
 
-Settings can be changed in [Preferences > Overview > Status lights](#Preferences-status-lights).
+Meze můžete změnit malou ikonou **Nastavení**, která se zobrazí, když je stavový řádek **rozbalený** (šipka vpravo) – viz [Stavové indikátory](#Preferences-status-lights).
 
-Depending on the pump you use, you may not have all of these icons.
+Rozbalený stavový panel má na konci některých řádků také tlačítko pro záznam výměny, které vynuluje příslušné stáří: **Přidat** na řádku **Senzor** zaznamená zavedení senzoru. Pokud to vaše pumpa podporuje, zobrazí se **Plnění/doplňování** na řádcích **Kanyla** (nebo **Patch pumpa**) a **Inzulín** a **Přidat** na řádku **Baterie pumpy**.
+
+![Rozbalený stavový panel s tlačítkem Plnění/doplňování na řádcích Kanyla a Inzulín a tlačítkem Přidat na řádcích Senzor a Baterie pumpy](../images/main/main_status_row_expanded.png)
+
+Podle toho, jakou pumpu používáte, nemusíte mít všechny tyto ikony.
+
+(screens-sensor-level-battery)=
+
+#### Úroveň senzoru (baterie)
+
+Funguje u CGM s přídavným vysílačem, například MiaoMiao 2. (Technicky musí senzor posílat informaci o stavu baterie do xDripu.)
+
+Meze můžete nastavit ve [Stavových indikátorech](#Preferences-status-lights).
 
 (aaps-screens-main-graph)=
 
-### Sekce F – Hlavní graf
+### Část D – Hlavní graf
 
-![Sekce F](../images/Home2020_MainGraph.png)
+![Hlavní graf](../images/main/main_graph.png)
 
-The graph shows your blood glucose (BG) as read from your glucose monitor (CGM).
+Graf ukazuje vaši glykémii (BG) tak, jak ji načetl váš glukózový monitor (CGM).
 
-Use the menu on top left of the graph or long press anywhere on the graph to change the timescale. You can choose between 6, 12, 18 or 24 hours.
+Posouváním a roztažením dvěma prsty v grafu změníte zobrazený časový úsek.
 
 Zelená plocha zobrazuje váš cílový rozsah.
 
-This information is also shown on this graph :
+Tento graf ukazuje také tyto informace:
 
-* Boluses: blue triangle on the BG curve and insulin amount
-* Carbs entries: orange triangle on the BG curve and carb amount
-* Target as defined in the profile or modified by temporary target: green line
-* Profile switches: star at the top of the graph
-* Loop status: color line at the top of the graph when the status is anything else than closed loop - see [Loop status](#AapsScreens-loop-status) for the colors
-* [SMB](#Open-APS-features-super-micro-bolus-smb) - if enabled in [Preferences > OpenAPS SMB](#Preferences-openaps-smb-settings): blue triangles at the bottom of the graph
+* Ruční bolusy: modrý trojúhelník těsně nad křivkou glykémie, který ukazuje dolů na hodnotu v daném okamžiku, s množstvím inzulínu
+* Záznamy sacharidů: oranžový trojúhelník těsně pod křivkou glykémie, který ukazuje nahoru na hodnotu, s množstvím sacharidů. Jídlo zadané spolu s bolusem vypadá jako jedna značka, kterou hodnota rozdělí.
+* Trojúhelníky mají tři velikosti (malá, střední, velká) podle množství ve srovnání s největším množstvím daného dne. Pokud v daném čase není žádná hodnota glykémie (výpadek senzoru), trojúhelník se vykreslí ve spodní části grafu.
+* Kontroly glykémie a kalibrace: vykreslí se na své naměřené hodnotě, takže je můžete porovnat s křivkou senzoru
+* Cíl podle profilu nebo upravený dočasným cílem: zelená čára
+* Přepnutí profilu: ikony hvězdičky v horní části grafu
+* Stav smyčky: barevný pruh v horní části grafu, když je [režim smyčky](#AapsScreens-loop-status) jiný než uzavřená smyčka: modrá = otevřená smyčka, fialová = LGS, červená = smyčka zakázána, žlutá = smyčka pozastavena, šedá = pumpa odpojena, oranžová = superbolus (na snímku obrazovky: fialová, pak žlutá). Historie těchto změn je uvedena v části [Režim smyčky](#AapsScreens-running-mode)
+* [SMB](#Open-APS-features-super-micro-bolus-smb) se v grafu glykémie nevykreslují (byly by tam každých pár minut): jsou zobrazeny v [grafu IOB](#aaps-screens-iob).
+
+Klepnutím na **kontrolu glykémie** v grafu zobrazíte její hodnotu a poznámku, pokud jste ji napsali.
+
+(aaps-screens-graph-press-and-hold)=
+
+#### Zobrazení hodnot v určitém čase
+
+**Stiskněte a podržte** chvíli graf glykémie, abyste viděli hodnoty u jedné hodnoty glykémie. Tečka označí nejbližší hodnotu, ve všech grafech se v tomto čase vykreslí přerušovaná čára a vyskakovací okno v horní části grafu ukáže:
+
+* čas a hodnotu glykémie
+* IOB, COB (jen když je vyšší než 0 g) a bazální dávku v daném čase – ikona bazálu ukazuje, zda běžel dočasný bazál, stejně jako na hlavní obrazovce
+* každý bolus, SMB nebo sacharidy v daném čase, se stejnými trojúhelníky jako v grafech
+
+Držte prst na obrazovce a posouvejte ho doleva nebo doprava, abyste přešli z jedné hodnoty na další. U každé hodnoty ucítíte lehké zavibrování a graf se při tom neposouvá. Vyskakovací okno zůstane zobrazené 2 sekundy po zvednutí prstu.
+
+Stejně to funguje i v [doplňkových grafech](#aaps-screens-additional-graphs) pod grafem glykémie (IOB, COB...): stiskněte a podržte kterýkoli z nich.
+
+![Stisknutí a podržení grafu glykémie: vyskakovací okno ukazuje čas, glykémii, IOB a bazál](../images/main/graph_press_and_hold.png)
 
 (AapsScreens-activate-optional-information)=
 
 #### Aktivovat volitelné informace
 
-Using the top right arrow, you can switch on these optional information:
+Stiskem ikony **tužky** v pravém horním rohu grafu otevřete nastavení grafu:
 
-* Predictions (see below)
-* Treatments : notes entered in action tab: grey, orange or red dot depending on the severity, as well as fingerstick calibrations: red dot
-* Bazály 
-  * As defined in the profile: blue dotted line at the bottom of the graph
-  * Actually delivered basal: blue plain line with blue background
-* Activity - insulin activity curve: yellow line
+![Nastavení hlavního grafu](../images/Home2020_MainGraphSetting.png)
 
-To show this information, click the triangle on the right side of the main graph. For the main graph just the four options above the line "Graph 1 2 3 4" are available.
-
-     ![Main graph setting](../images/Home2020_MainGraphSetting.png)
-    
+* **Výška grafu** mění výšku vykresleného grafu.
+* **AKT** přidá křivku aktivity inzulínu: plná žlutozelená čára <span style="background:#141218;color:#D3F166;padding:0 0.3em;border:1px solid #141218;border-radius:4px">━━━━</span> (nezaměňujte s tečkovanou žlutou predikcí UAM)
+* **PRED** přidá [predikční křivky](#aaps-screens-prediction-lines) (viz níže)
 
 (aaps-screens-prediction-lines)=
 
-#### Linky predikce
+#### Predikční křivky
 
-* **Orange** line: [COB](CobCalculation) (color is used generally to represent COB and carbs)
-  
-  This prediction line shows where your BG (not where COB itself!) will go based on the current **Profile** settings, assuming that the deviations due to carb absorption remain constant. Tato linka se zobrazí pouze v případě, že je známý COB.
+Když je **PRED** zapnuté, kreslí AAPS své predikce jako **tečkované čáry** vpravo od čáry „teď“. Každá predikce má svou barvu. Tmavý motiv používá světlejší odstíny stejných barev a čára uvnitř zeleného cílového rozsahu může vypadat trochu zelenější.
 
-* **Dark blue** line: IOB (color is used generally to represent IOB and insulin)
-  
-  This prediction line shows what would happen under the influence of insulin only. For example if you dialed in some insulin and then didn’t eat any carbs.
+| Křivka                     | Světlý motiv                                                                                                                      | Tmavý motiv                                                                                                                        | Co předpovídá                           |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| **IOB** (modrá)            | <span style="background:#FFFFFF;color:#1E88E5;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#64B5F6;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | jen inzulín                             |
+| **COB** (oranžová)         | <span style="background:#FFFFFF;color:#FB8C00;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#FFB74D;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | zbývající sacharidy                     |
+| **UAM** (žlutá)            | <span style="background:#FFFFFF;color:#C9BD60;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#E6D39A;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | neoznámené jídlo                        |
+| **ZT** (azurová)           | <span style="background:#FFFFFF;color:#00D2D2;padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span>             | <span style="background:#141218;color:#4DD4D4;padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span>              | nulový dočasný bazál (inzulín zastaven) |
+| **aCOB** (světle oranžová) | <span style="background:#FFFFFF;color:rgba(251,140,0,0.5);padding:0 0.3em;border:1px solid #CCCCCC;border-radius:4px">●●●●</span> | <span style="background:#141218;color:rgba(255,183,77,0.5);padding:0 0.3em;border:1px solid #141218;border-radius:4px">●●●●</span> | jen starší algoritmus AMA               |
 
-* **Světle modrá** linka: nulový dočasný bazál (předpověď glykémie, pokud by byl dočasný bazál nastaven na 0 %)
-  
-  This prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
-  
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+Když dvě predikce dávají stejné hodnoty, jejich tečky se překrývají a vidíte jen jednu z barev (například UAM přes IOB, když je glykémie stabilní).
 
-* **Dark yellow** line: [UAM](#SensitivityDetectionAndCob-sensitivity-oref1) (un-announced meals)
-  
-  Neohlášená jídla znamenají, že je zjištěn výrazný nárůst glykemie v důsledku jídla, adrenalinu nebo jiných vlivů. Prediction line is similar to the **orange COB line**, but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
-  
-  *This line appears only when the [SMB](#Config-Builder-aps) algorithm is used.*
+* Křivka **COB** (oranžová): [zbývající sacharidy](CobCalculation) (oranžová se v celém AAPS používá pro COB a sacharidy)
+    
+    Tato predikční křivka ukazuje, kam se bude ubírat vaše glykémie (ne samotný COB!) podle aktuálního nastavení **profilu**, za předpokladu, že odchylky způsobené vstřebáváním sacharidů zůstanou stejné. Tato linka se zobrazí pouze v případě, že je známý COB.
 
-* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
-  
-  Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
-  
-  *This line appears only when the older [AMA](#Config-Builder-aps) algorithm is used.*
+* Křivka **IOB** (modrá): aktivní inzulín (modrá se v celém AAPS používá pro IOB a inzulín)
+    
+    Tato predikční křivka ukazuje, co by se stalo jen pod vlivem inzulínu. Například pokud jste si podali inzulín a pak nesnědli žádné sacharidy.
+
+* Křivka **ZT** (azurová): nulový dočasný bazál (předpokládaná glykémie, kdyby byl nastaven dočasný bazál 0 %)
+    
+    Tato predikční křivka ukazuje, jak by se změnil průběh glykémie, kdyby pumpa zastavila veškerý výdej inzulínu (dočasný bazál 0 %). Křivka končí, jakmile vystoupá nad váš cíl.
+    
+    *Tato křivka se zobrazí jen tehdy, když používáte algoritmus [SMB](#Config-Builder-aps).*
+
+* Křivka **UAM** (žlutá): [neoznámená jídla](#SensitivityDetectionAndCob-sensitivity-oref1)
+    
+    Neoznámená jídla znamenají, že je zjištěn výrazný nárůst glykémie v důsledku jídla, adrenalinu nebo jiných vlivů. Tato predikční křivka je podobná **oranžové křivce COB**, ale předpokládá, že odchylky budou klesat stálou rychlostí (prodloužením současné rychlosti poklesu).
+    
+    *Tato křivka se zobrazí jen tehdy, když používáte algoritmus [SMB](#Config-Builder-aps), v nastavení OpenAPS SMB je zapnuté **Povolit UAM** a glykémie stoupá víc, než vysvětluje samotný inzulín.*
+
+* Křivka **aCOB** (bledá, průhledná oranžová): zrychlené vstřebávání sacharidů
+    
+    Podobná COB, ale předpokládá stálou rychlost vstřebávání sacharidů 10 mg/dl/5 min (-0,555 mmol/l/5 min). Zastaralé a jen málo užitečné.
+    
+    *Tato křivka se zobrazí jen tehdy, když používáte starší algoritmus [AMA](#Config-Builder-aps).*
 
 Obvykle vaše skutečná křivka glykémie končí uprostřed těchto linek nebo blízko k té, jejíž předpoklady se nejvíce podobají vaší situaci.
+
+(aaps-screens-how-predictions-become-a-dosing-decision)=
+
+#### Jak AAPS mění predikce v rozhodnutí o dávce
+
+AAPS nedávkuje inzulín jen podle vaší aktuální glykémie – v každém cyklu smyčky (zhruba každých 5 minut) se podívá na všechny výše uvedené predikční křivky najednou a určí nejbezpečnější postup.
+
+Základní pravidlo je **bezpečnost především**: pokud *kterákoli* predikční křivka v jakémkoli časovém úseku klesne pod vaši dolní bezpečnostní mez, nastaví AAPS nulový dočasný bazál (dočasný bazál 0 %) a další inzulín nepodá, i když je vaše aktuální glykémie vysoká. AAPS zváží podání dalšího inzulínu, až když všechny predikční křivky zůstávají nad touto mezí.
+
+Když je bezpečné podat další inzulín, podívá se AAPS, kde má glykémie podle spojených predikcí nakonec skončit (**konečná glykémie**), a vypočítá, jak velká korekce je potřeba, aby se tato konečná glykémie vrátila k cíli – podá ji buď jako zvýšený dočasný bazál, nebo (pokud je zapnutý algoritmus oref1/[SMB](#Open-APS-features-super-micro-bolus-smb)) jako malý okamžitý bolus. Pokud je glykémie teď vysoká, ale už sama dostatečně klesá, AAPS počká, nebo dokonce může bazál snížit, místo aby přidal inzulín, který by pozdější hypoglykémii jen prohloubil.
+
+Příklady této rozhodovací logiky se skutečnými snímky obrazovky najdete ve [scénářích dávkování v Průvodci pro lékaře](#clinicianguide-dosing-scenarios) – byly napsány pro lékaře, ale platí pro každého uživatele AAPS.
+
+*Úplný technický popis toho, jak se tyto predikce a výsledné rozhodnutí o dávce počítají, najdete v [dokumentaci OpenAPS k determine-basal](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html).*
 
 #### Bazály
 
@@ -296,209 +380,244 @@ Obvykle vaše skutečná křivka glykémie končí uprostřed těchto linek nebo
 
 **Tečkovaná modrá** linka ukazuje, jaký bazál by se vydával, pokud by nedocházelo k žádné úpravě dočasného bazálu (TBR).
 
-When the standard basal rate is given, the area under the curve is shown in dark blue. When the basal rate is temporarily adjusted (increased or decreased), the area under the curve is shown in light blue.
+Když se podává standardní bazální dávka, je plocha pod křivkou zobrazena tmavě modře. Když je bazální dávka dočasně upravena (zvýšena nebo snížena), je plocha pod křivkou zobrazena světle modře.
 
 #### Aktivita
 
-**Tenká žlutá** linka ukazuje aktivitu Inzulínu.
+**Tenká žlutá** linka ukazuje aktivitu inzulínu.
 
 Je založena na očekávaném poklesu glykémie odpovídajícímu množství inzulínu, pokud nebyly přítomny žádné jiné faktory (jako např. sacharidy).
 
-(AapsScreens-section-g-additional-graphs)=
+(AapsScreens-section-g-additional-graphs)= (aaps-screens-additional-graphs)=
 
-### Section G - Additional graphs
+### Část E – Doplňkové grafy
 
-Můžete aktivovat až čtyři další grafy pod hlavním grafem. When in [Simple Mode](#preferences-simple-mode), additional graphs are preset and can not be changed. Switch off **Simple Mode** if you wish to set your own configuration of additional graphs.
+Pod hlavním grafem můžete zapnout doplňkové grafy. V [Zjednodušeném režimu](#preferences-simple-mode) jsou doplňkové grafy přednastavené a nelze je změnit. Pokud chcete doplňkové grafy nastavit sami, vypněte **Zjednodušený režim**.
 
-To open settings for additional graphs click the triangle on the right side of the [main graph](#aaps-screens-main-graph) and scroll down.
+Doplňkové grafy sledují hlavní graf: když posouváte nebo zvětšujete graf glykémie, pohybují se s ním. Posunutí do strany v doplňkovém grafu posune také všechny grafy. Nemají vlastní časové popisky – čas čtěte v grafu glykémie.
 
-![Nastavení dalšího grafu](../images/Home2020_AdditionalGraphSetting.png)
+Chcete-li doplňkový graf nastavit, stiskněte ikonu **tužky** v jeho pravém horním rohu:
 
-To configure additional graphs, check the boxes corresponding to the data you want to see on each graph.
+![Nastavení doplňkových grafů](../images/Home2020_AdditionalGraphSetting.png)
 
-Most users find the following configuration of additional graphs to be adequate :
+Vyberte položky odpovídající datům, která chcete v tomto grafu vidět; tlačítko **Odebrat** graf smaže.
 
-* Graph 1 with IOB, COB, Sensitivity change
-* Graph 2 with Deviations and BGI.
+Chcete-li vytvořit další graf, stiskněte **Přidat graf** pod posledním grafem a stejným způsobem vyberte jeho položky:
 
-#### Absolutní inzulin
+![Přidat graf](../images/main/graph_add.png)
 
-Aktivní inzulin včetně bolusů **a bazálu**.
+Nový graf se přidá pod ostatní – zde druhý doplňkový graf se **SENZ%** a **ODCH**:
 
-#### Aktivní inzulín
+![Hlavní obrazovka s druhým doplňkovým grafem](../images/main/main_screen_additional_graph.png)
+
+Většině uživatelů vyhovuje toto nastavení doplňkových grafů:
+
+* Graf 1 s IOB, COB a změnou citlivosti
+* Graf 2 s odchylkami a BGI.
+
+#### Absolutní inzulín (ABS)
+
+Aktivní inzulín včetně bolusů **a bazálu**.
+
+(aaps-screens-iob)=
+
+#### Aktivní inzulín (IOB)
 
 Zobrazuje vydaný inzulín, který je aktivní (= aktivní inzulín v těle). Zahrnuje inzulín z bolusu a dočasného bazálu (**ale nezahrnuje bazální dávky nastavené ve vašem profilu**).
 
-If there were no [SMBs](#Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+Pokud by během doby DIA nebyly žádné [SMB](#Open-APS-features-super-micro-bolus-smb), žádné bolusy a žádný dočasný bazál, byla by hodnota nulová.
+
+SMB jsou v tomto grafu zobrazeny jako modré trojúhelníky ve třech velikostech podle množství ve srovnání s největším SMB daného dne.
 
 IOB může být záporný, pokud již není aktivní žádný bolus a po delší dobu byl nastaven nulový/nízký dočasný bazál.
 
-Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/YourAapsProfile.md).
+Odbourávání závisí na vašem [nastavení DIA a typu inzulínu](#Config-Builder-insulin-dia).
 
-#### Zbývající sacharidy
+#### Zbývající sacharidy (COB)
 
 Zobrazuje zkonzumované sacharidy (= aktivní, dosud nevstřebané sacharidy v těle).
 
-Decaying depends on the [deviations the algorithm detects](../DailyLifeWithAaps/CobCalculation.md).
+Odbourávání závisí na [odchylkách, které algoritmus zjistí](../DailyLifeWithAaps/CobCalculation.md).
 
-Pokud se zjistí vyšší absorpce, než se očekávalo, může dojít k vydání inzulinu. To bude mít za následek zvýšení IOB (zda více či méně závisí na vašich bezpečnostních nastaveních).
+Pokud se zjistí vyšší absorpce, než se očekávalo, může dojít k vydání inzulínu. To bude mít za následek zvýšení IOB (zda více či méně závisí na vašich bezpečnostních nastaveních).
 
-#### Sensitivity change
+#### Změna citlivosti (SENZ%)
 
-Shows the sensitivity that [Autosens](#Open-APS-features-autosens) has detected.
+Ukazuje citlivost, kterou zjistil [Autosens](#Open-APS-features-autosens).
 
 Citlivost je výpočet citlivosti na inzulín v důsledku pohybu, hormonů atd.
 
-Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the line in your graph is displayed for information only.
+Pozor: aby detekce citlivosti/[Autosens](#Open-APS-features-autosens) mohla automaticky upravovat množství podaného inzulínu, musíte být v [Cíli 8](#objectives-objective8). Než tohoto cíle dosáhnete, slouží čára v grafu jen pro informaci.
 
-### Variable sensitivity
+### Proměnná citlivost (VSEN)
 
-Shows the sensitivity as calculated by [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Only populated if you use this feature.
+Ukazuje citlivost vypočtenou funkcí [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Vyplní se jen tehdy, když tuto funkci používáte.
 
 (screen-heart-rate-steps)=
 
-#### Heart rate & Steps
+#### Tepová frekvence (TF) a kroky
 
-This data may be available when using a [Wear smartwatch](../WearOS/WearOsSmartwatch.md). Enable them on **AAPS** Wear app and give permission for health data.
+Tato data mohou být k dispozici, když používáte [chytré hodinky s Wear OS](../WearOS/WearOsSmartwatch.md). Povolte je v aplikaci **AAPS** Wear a udělte oprávnění k údajům o zdraví.
 
-#### Odchylky
+#### Odchylky (ODCH)
 
-* **Grey** bars show a deviation due to carbs. 
-* **Green** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](#Open-APS-features-autosens).
-* **Red** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](#Open-APS-features-autosens).
-* **Yellow** bars show a deviation due to UAM.
-* **Black** bars show small deviations not taken into account for sensitivity
+* **Šedé** sloupce ukazují odchylku způsobenou sacharidy.
+* **Zelené** sloupce ukazují, že glykémie je vyšší, než algoritmus očekával. Zelené sloupce se v [Autosens](#Open-APS-features-autosens) používají ke zvýšení rezistence.
+* **Červené** sloupce ukazují, že glykémie je nižší, než algoritmus očekával. Červené sloupce se v [Autosens](#Open-APS-features-autosens) používají ke zvýšení citlivosti.
+* **Žluté** sloupce ukazují odchylku způsobenou UAM.
+* **Černé** sloupce ukazují malé odchylky, které se pro citlivost neberou v úvahu
 
-#### Blood Glucose Impact
+#### Vliv na hladinu glukózy (-BGI)
 
-This line shows the degree to which BG ‘should’ rise or fall based on insulin activity alone.
+Tato čára ukazuje, jak moc by glykémie „měla“ stoupat nebo klesat jen podle aktivity inzulínu.
 
-![Tlačítka domovské obrazovky](../images/Screenshots_DEV_BGI.png)
+![Odchylky a BGI](../images/main/graph_dev_bgi.png)
 
-It is a good combination to display this line along with the Deviation bars. They share the same scale, but it is a different one than the other optional data, so it is a good idea to display them on a separate graph, as shown above. Comparing the BGI line and the Deviation bars is another way to understand how **BG** fluctuates. Here, at the time marked **1**, the Deviation bars are greater than the BGI line, indicating that BG is rising. Later, during the hours marked **2**, BGI and DEV are pretty much in line, indicating that BG is stable.
+Je dobré zobrazit tuto čáru spolu se sloupci odchylek. Mají stejné měřítko, ale jiné než ostatní volitelná data, proto je dobré zobrazit je v samostatném grafu, jak je ukázáno výše. Porovnání čáry BGI a sloupců odchylek je další způsob, jak pochopit, jak **glykémie** kolísá. Zde v čase označeném **1** jsou sloupce odchylek vysoko nad čarou BGI: glykémie stoupá víc, než vysvětluje samotná aktivita inzulínu (například po sacharidech). V čase označeném **2** jsou sloupce odchylek pod nulou (červené): glykémie je nižší, než algoritmus očekával.
 
-### Section H - Buttons
+### Část F – Panel nástrojů QuickLaunch
 
-![Tlačítka domovské obrazovky](../images/Home2020_Buttons.png)
+![Panel nástrojů QuickLaunch](../images/Home2020_Buttons.png)
 
-Buttons for Insulin and Carbs are almost always visible. If the connection to the pump is lost, the Calculator button will not be visible.
+Plovoucí panel nástrojů ve spodní části obrazovky obsahuje vaše akce **[Rychlého spuštění](../DailyLifeWithAaps/QuickLaunch.md)**. Malé **ozubené kolo** otevře nastavení QuickLaunch, kde vyberete, která tlačítka se zobrazí (ošetření, záznamy péče, akce CGM, obrazovky z panelu **Spravovat**, tlačítka [Rychlý bolus](../DailyLifeWithAaps/QuickWizards.md), [Scény](../DailyLifeWithAaps/Scenes.md) a další).
 
-Other Buttons can be setup in [Preferences > Overview > Buttons](#Preferences-buttons).
+Výše je ukázáno běžné nastavení: **Inzulín**, **Sacharidy** a **Bolusová kalkulačka**.
 
-About using the Insulin, Carbs and Calculator buttons : If enabled in the [Preferences > Overview](#Preferences-show-notes-field-in-treatments-dialogs), the **Notes** field allows you to enter text that will show on the main graph, and may be uploaded to Nightscout - depending on your settings for NS client.
+Když je pumpa **odpojena**, tlačítka ošetření zůstávají v panelu nástrojů, například abyste mohli zaznamenat inzulín podaný perem (viz [Inzulín](#aaps-screens-buttons-insulin) níže). Stejné akce jsou dostupné také v [panelu Ošetření](#aaps-screens-treatments-sheet) spodní navigace.
 
 (aaps-screens-buttons-insulin)=
 
 #### Inzulín
 
-![Tlačítko inzulín](../images/Home2020_ButtonInsulin.png)
+![Dialog Inzulín](../images/Home2020_ButtonInsulin.png)
 
-To give a certain amount of insulin without using the [bolus calculator](#aaps-screens-bolus-wizard).
+Pro podání určitého množství inzulínu bez použití [bolusové kalkulačky](#aaps-screens-bolus-wizard).
 
-By checking the box **Start eating soon TT**, you can automatically start your [eating soon temp target](#TempTargets-eating-soon-temp-target).
+Zapnutím volby **Spustit dočasný cíl Před jídlem** můžete automaticky spustit [dočasný cíl „Před jídlem“](#TempTargets-eating-soon-temp-target).
 
-If you do not want to bolus through the pump but record an insulin amount (i.e. insulin given by pen) check the corresponding box. When checking this box, you get an additional field “Time offset”, that you can use to record an insulin injection made in the past.
+Pokud nechcete podat bolus pumpou, ale jen zaznamenat množství inzulínu (např. inzulín podaný perem), zapněte „**Bolus nebude pumpou vydán, pouze zaznamenán**“. Další řádek **Čas**, nastavený na **Nyní**, umožňuje zaznamenat injekci inzulínu podanou v minulosti: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku a zadejte minuty nebo vyberte datum a čas.
 
-You can use the buttons to quickly increase the insulin quantity. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+![Řádek Čas, sbalený](../images/v4/Screens/insulin_dialog_record_only_time.png) ![Řádek Čas, otevřený šipkou](../images/v4/Screens/insulin_dialog_time_open.png)
 
-The insulin button can be used when the pump is suspended as well, i.e. to record insulin injected with a pen. In this case, the header will show in yellow, and the checkbox “Do not bolus, record only” can not be unchecked.
+Tlačítky **+0.5 / +1.0 / +2.0** můžete rychle zvýšit množství inzulínu. Hodnoty přírůstků můžete změnit v [nastavení bolusové kalkulačky](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
-![Home2020_ButtonInsulin_PumpSuspended.png](../images/Home2020_ButtonInsulin_PumpSuspended.png)
+Dialog Inzulín můžete použít i tehdy, když je pumpa pozastavená nebo odpojená, např. pro záznam inzulínu podaného perem. V takovém případě je volba „**Bolus nebude pumpou vydán, pouze zaznamenán**“ vynuceně zapnutá (zobrazená červeně) a objeví se další pole pro výběr typu inzulínu a posunu **Čas** pro injekci podanou v minulosti:
+
+![Dialog Inzulín s odpojenou pumpou](../images/main/insulin_dialog_pump_disconnected.png)
 
 #### Sacharidy
 
-![Tlačítko sacharidy](../images/Home2020_ButtonCarbs.png)
+![Dialog Sacharidy](../images/Home2020_ButtonCarbs.png)
 
 Zadání sacharidů bez podání bolusu.
 
-Certain [pre-set temporary targets](#TempTargets-hypo-temp-target) can be set directly by checking the box.
+Některé [přednastavené dočasné cíle](#TempTargets-hypo-temp-target) (Hypoglykémie, Před jídlem, Aktivita) můžete spustit přímo přepínači nahoře.
 
-**Time offset**: When will you / have you been eaten carbs (in minutes).
+**Čas sacharidů**: Kdy budete jíst / kdy jste jedli sacharidy.
 
-**Duration**: To be used for ["extended carbs"](ExtendedCarbs)
+**Trvání**: Používá se pro [„rozložené sacharidy“](ExtendedCarbs). Tento řádek je sbalený, abyste do něj omylem nezadali gramy: změňte ho tlačítky **-** / **+**, nebo klepněte na šipku, řádek otevřete a zadejte hodnotu.
 
-You can use the buttons to quickly increase the carb amount. The increment values can be changed in the [Preferences > Overview > Buttons](#Preferences-buttons).
+Tlačítky **+5 / +10 / +20** můžete rychle zvýšit množství sacharidů.
 
-#### Kalkulačka
+#### Rychlý bolus
 
-See Bolus Wizard [section below](#aaps-screens-bolus-wizard).
+Snadno zadáte množství sacharidů a nastavíte základ výpočtu jedním předem nastaveným tlačítkem.
 
-#### Kalibrace
+Podrobnosti se nastavují v části [Rychlý bolus](../DailyLifeWithAaps/QuickWizards.md).
 
-Odeslání kalibrace do xDrip+ nebo otevře dialogové okno pro kalibraci Dexcom.
+(aaps-screens-treatments-sheet)=
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+### Část G – Spodní navigace
 
-#### CGM
+Spodní navigační lišta nabízí:
 
-Opens xDrip+.
+* **Ošetření** – panel rychlých akcí s vašimi akcemi ošetření:
+    
+    ![Panel Ošetření](../images/v4/Screens/treatments_sheet.png)
 
-Back button returns to **AAPS**.
+* **Scény** – zobrazí se, jen když máte aspoň jednu [scénu](../DailyLifeWithAaps/Scenes.md) nebo pravidlo **Automatizace** označené jako **Uživatelská akce**. Otevře panel, ze kterého je můžete spustit; odznak ukazuje, kolik jich můžete spustit právě teď. **Tužka** v horní části panelu otevře **Spravovat → Scény**.
 
-Must be activated in [Preferences > Overview > Buttons](#Preferences-buttons).
+* **Spravovat** – centrum pro vše, co v **AAPS** spravujete: Profil, Nastavení inzulínu, Dočasný cíl, Rychlý bolus, Scény, Automatizace, Potraviny, Rotace míst aplikace, Pumpa a Autorizovaní klienti. Pod nimi jsou akce pro zařízení a bazál, například Výměna senzoru a Dočasný bazál. Některé položky se zobrazí, jen když se týkají vašeho nastavení – například Plnění/doplňování a výměna baterie závisí na vaší pumpě a Dočasný bazál, Prodloužený bolus a záznamy Péče jsou v [Zjednodušeném režimu](#preferences-simple-mode) skryté:
+    
+    ![Panel Spravovat](../images/v4/Screens/manage_sheet.png)
 
-#### Průvodce rychlým bolusem
+* **Cíle** – váš postup v [Cílech](../SettingUpAaps/CompletingTheObjectives.md); odznak ukazuje, kolik jich je splněno. Tato položka zmizí, jakmile jsou splněny všechny cíle, a v **AAPSClient** není.
 
-Easily enter amount of carbs and set calculation basics.
+(aaps-screens-notifications)=
 
-Details are set up in [Preferences > Overview > QuickWizard settings](#Preferences-quick-wizard).
+#### Oznámení
 
-(aaps-screens-bolus-wizard)=
+Nad spodní lištou vpravo se může objevit **bublina oznámení**. Shromažďuje aktivní oznámení **AAPS**; malé číslo ukazuje, kolik jich je. Její barva odpovídá nejdůležitějšímu z nich: červená pro naléhavou zprávu, zelená pro běžnou informaci.
 
-## Bolus Wizard
+![Hlavní obrazovka s bublinou oznámení](../images/main/main_screen_notification_bubble.png)
+
+Klepnutím na bublinu otevřete panel **Oznámení**. U každé zprávy je uveden čas, kdy vznikla. Stiskem **Zavřít** pod zprávou ji odstraníte; některé zprávy mají místo toho jiné tlačítko, které vás přenese k nastavení, jež vyžaduje vaši pozornost.
+
+![Panel Oznámení s jednou zprávou a tlačítkem Zavřít](../images/main/notification_panel.png)
+
+![Panel Oznámení](../images/main/main_notification_panel.png)
+
+(bolus-wizard)= (aaps-screens-bolus-wizard)=
+
+## Bolusová kalkulačka
 
 ![Bolusová kalkulačka](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus, this is where you will normally make it from.
+Když chcete podat bolus na jídlo, obvykle ho podáte odsud.
 
-### Section I
+### Část I
 
-Zobrazuje vypočtený bolus.
+Záhlaví **Výpočet** ukazuje vypočtený bolus. Pokud množství již aktivního inzulínu v krvi převyšuje vypočtený bolus, pak se jen zobrazí doporučené množství sacharidů k jeho pokrytí.
 
-Pokud množství již aktivního inzulínu v krvi převyšuje vypočtený bolus, pak se jen zobrazí doporučené množství sacharidů k jeho pokrytí.
+Bolusovou kalkulačku můžete použít při jakékoli aktuální **glykémii**, i když je příliš vysoká nebo příliš nízká. Pokud je **glykémie** nad cílem, přidá se k bolusu na jídlo korekce. Pokud je **glykémie** pod cílem, bolus se sníží, a pokud je aktivního inzulínu už víc, než je potřeba, kalkulačka místo návrhu inzulínu ukáže, kolik sacharidů je ještě potřeba.
 
-(AapsScreens-section-j)=
-
-### Section J
-
-BG field is normally already populated with the latest reading from your CGM. Pokud právě nemáte senzor v provozu, pak bude pole prázdné.
-
-In the **Carbs** field, you add your estimate of the amount of carbs - or equivalent - that you want to bolus for.
-
-The **Corr** field is if you want to modify the end dosage for some reason.
-
-The **Carb time** field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Můžete zde zadat i záporné číslo, pokud později dopichujete bolus k dříve zkonzumovaným sacharidům.
-
-**Eating reminder** : For carbs in the future, the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at the given time, when to eat the carbs you have input into **AAPS**.
-
-![Poradce s bolusem s připomenutím jídla](../images/Home2021_BolusWizard_EatingReminder.png)
-
-### Section K
-
-**Profile** allows you to select a different profile than the current one, to make the calculation for the insulin required. This profile selection applies only for the current bolus, it is not a profile change.
-
-**Super Bolus** is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable Superbolus in wizard" is set in the [Preferences > Overview > Advanced Settings](#Preferences-advanced-settings-overview). Cílem je dodat inzulín dřív, aby se snížil kopec, který na grafu glykémie obvykle následuje.
-
-For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
-
-### Section L
-
-Details of the wizard's bolus calculation.
-
-You can deselect any that you do not want to include, but you normally wouldn't want to.
-
-For safety reasons the **TT box must be ticked manually**, if you want the bolus wizard to calculate based on an existing temporary target.
+Řada ikon pod záhlavím ukazuje, které vstupy se do výpočtu započítávají (glykémie, trend, IOB, dočasný cíl, COB). Stiskem ikony tento vstup do výpočtu zahrnete / vyřadíte; ikona **(i)** ukazuje podrobná čísla, ze kterých výpočet vychází.
 
 #### Kombinace COB a IOB a jejich význam
 
-* For safety reasons, the IOB box cannot be unticked when COB box is ticked as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
-* If you tick COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. To vede k oznámení o 'chybějících sacharidech'.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. Tak lze přidat pouze nově zkonzumované sacharidy, jelikož hlavní jídlo dosud nemusí být stráveno, takže IOB krátce po bolusu k jídlu nebude přesně odpovídat množství COB.
+* Z bezpečnostních důvodů nelze vstup IOB vypnout, když je zapnutý COB, protože byste riskovali příliš mnoho inzulínu – **AAPS** by nepočítal s tím, co už bylo podáno.
+* Když zapnete COB i IOB, započítají se nevstřebané sacharidy, které ještě nejsou pokryty inzulínem, a veškerý inzulín podaný jako dočasný bazál (TBR) nebo SMB.
+* Když zapnete IOB bez COB, **AAPS** započítá už podaný inzulín, ale neodečte ho proti sacharidům, které se ještě budou vstřebávat. To vede k oznámení o 'chybějících sacharidech'.
+* Pokud podáváte bolus na **další jídlo** krátce po bolusu na jídlo (např. dezert navíc), může být užitečné **vypnout všechny vstupy**. Tak lze přidat pouze nově zkonzumované sacharidy, jelikož hlavní jídlo dosud nemusí být stráveno, takže IOB krátce po bolusu k jídlu nebude přesně odpovídat množství COB.
+* Z bezpečnostních důvodů se **dočasný cíl** započítá do výpočtu, jen když jeho vstup zapnete ručně.
 
-![BolusWizard with Details](../images/Home2021_BolusWizard_Details.png)
+(AapsScreens-section-j)=
 
-The box near the eye allows you to choose between the detailed view, with the numbers entering the calculation for each item, or the simple view with icons. Pressing on an icon will enable / disable this entry from the calculation.
+### Část J – Vstupní pole
+
+Do pole **Sacharidy** zadáte odhad množství sacharidů **v gramech**, na které chcete podat bolus; tlačítka **+** pod ním sacharidy rychle přidávají. **AAPS** pracuje jen s gramy: pokud počítáte ve výměnných jednotkách (*např.* výměnné jednotky DAFNE „CHO“), převeďte je před zadáním na gramy. Viz [poznámku o výměnných jednotkách](#your-aaps-profile-insulin-to-carbs-ratio) na stránce o profilu.
+
+#### Typ sacharidů: chléb, koláč nebo pizza
+
+Tlačítka **Chléb**, **Koláč** a **Pizza** pod polem **Sacharidy** říkají **AAPS**, jak rychle se jídlo vstřebává. U volby **Koláč** a **Pizza** pokryje bolus teď jen část sacharidů a zbytek se přidá později jako eSacharidy. Procenta a časování najdete v části [Typ sacharidů: chléb, koláč nebo pizza](#AapsScreens-carbs-type) na stránce Rozložené sacharidy.
+
+Řádek **Korekce** slouží k úpravě výsledné dávky, pokud ji z nějakého důvodu chcete změnit.
+
+Vždy otevřené je jen pole **Sacharidy**. Ostatní řádky (**Korekce**, **Čas sacharidů**, **Glykémie** a **Použít procenta**) jsou sbalené: ukazují svou hodnotu s tlačítky **-** / **+**, takže ji můžete měnit po malých krocích. Klepnutím na šipku řádek otevřete a zadáte hodnotu, dalším klepnutím ho zavřete. Tak omylem nezadáte gramy do pole **Korekce**.
+
+![Sbalené řádky v bolusové kalkulačce](../images/v4/Screens/bolus_wizard_bottom.png)
+
+Klepnutím kamkoli na řádek **Profil** otevřete seznam svých profilů; klepnutím na název pak použijete daný profil pro tento výpočet.
+
+![Seznam profilů v bolusové kalkulačce](../images/v4/Screens/bolus_wizard_profile_list.png)
+
+Pole **Čas sacharidů** slouží pro předstihový bolus: můžete systému říct, že sacharidy přijdou až za nějakou dobu. Můžete zde zadat i záporné číslo, pokud později dopichujete bolus k dříve zkonzumovaným sacharidům.
+
+**Nastavit alarm** (připomínka jídla): když zadáte čas sacharidů v budoucnosti, objeví se přepínač „**Nastavit alarm**“, aby vám v zadaný čas připomněl, že máte sníst sacharidy, které jste zadali do **AAPS**:
+
+![Nastavení alarmu pro budoucí sacharidy](../images/Home2021_BolusWizard_EatingReminder.png)
+
+Připomínka zazní jako alarm **AAPS**. Nevytváří časovač v aplikaci hodin v telefonu a funguje také tehdy, když byl bolus zadán z **AAPSClient** a **AAPS** běžel na pozadí.
+
+Pole **Glykémie** je obvykle už vyplněné poslední hodnotou z vašeho CGM. Pokud právě nemáte senzor v provozu, pak bude pole prázdné. Když je hodnota čerstvá, zůstává řádek **Glykémie** sbalený.
+
+Tlačítko s výsledkem dole ukazuje navržený bolus; po jeho stisknutí se před podáním inzulínu zobrazí žádost o potvrzení.
+
+Dobré vědět:
+
+* Pokud je vypočtený bolus vyšší než váš **[Maximální bolus](#Preferences-maximum-bolus)**, sníží se na maximální bolus a v potvrzení se zobrazí varování „Použito omezení bolusu“. [Rychlý bolus](../DailyLifeWithAaps/QuickWizards.md) se v takovém případě odmítne.
+* Když se bolus jen zaznamenává (například když je pumpa odpojená), zůstává varování „**Bolus nebude pumpou vydán, pouze zaznamenán**“ v horní části dialogu, i když posouváte.
+* Bolus, který podáte ručně, má přednost před [SMB](#Open-APS-features-super-micro-bolus-smb), který čeká na podání: SMB se zruší a smyčka počítá znovu. Pokud se SMB právě podává, váš bolus se odmítne se zprávou „Právě nyní se vydává SMB. Zkuste to znovu po dokončení výdeje.“ Nepodá se žádný inzulín a sacharidy zadané s tímto bolusem se neuloží: chvíli počkejte a zadejte je znovu.
 
 (AapsScreens-wrong-cob-detection)=
 
@@ -506,288 +625,149 @@ The box near the eye allows you to choose between the detailed view, with the nu
 
 ![Pomalá absorpce sacharidů](../images/Calculator_SlowCarbAbsorption.png)
 
-If you see the warning above after using bolus wizard, **AAPS** has detected that the calculated COB value may be wrong. So, if you want to bolus again after a previous meal with COB, you should be aware of overdosing!
+Pokud po použití bolusové kalkulačky uvidíte výše uvedené varování, **AAPS** zjistil, že vypočtená hodnota COB může být chybná. Pokud tedy chcete znovu podat bolus po předchozím jídle s COB, dejte si pozor na předávkování!
 
-For details, see the hints on [COB calculation page](#CobCalculation-detection-of-wrong-cob-values).
+Podrobnosti najdete v radách na stránce [Kalkulace COB](#CobCalculation-detection-of-wrong-cob-values).
 
-(screens-action-tab)=
-
-## Action tab
-
-![Záložka Akce](../images/Home_Action.png)
-
-### Actions - section M
-
-Button **[Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)** as an alternative to pressing the [current profile](#aaps-screens-profile--target) on homescreen.
-
-Button **[Temporary target](../DailyLifeWithAaps/TempTargets.md)** as an alternative to pressing the [current target](#aaps-screens-profile--target) on homescreen.
-
-Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-
-Even though [extended boluses](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
-
-* This option is only available for Dana RS and Insight pumps. 
-  * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-  * Make sure to read the [details](../DailyLifeWithAaps/ExtendedCarbs.md) before using this option.
+Hledáte kartu **Akce** z **AAPS** 3.x? Její funkce se přesunuly na hlavní obrazovku, do panelu **Spravovat** a do panelu nástrojů QuickLaunch: viz [Kam zmizela karta Akce?](#screens-action-tab).
 
 (aaps-screens-careportal)=
 
-### Careportal - section N
+## Záznamy péče
 
-Displays information on:
+Stáří a úrovně zobrazené ve [stavovém řádku](#screens-sensor-level-battery) (senzor, inzulín, kanyla, baterie pumpy) vycházejí ze záznamů péče: **Plnění/doplňování** (zaznamenává výměnu místa aplikace a zásobníku inzulínu), **Výměna senzoru** a **Výměna baterie pumpy**.
 
-     * sensor age & level (battery percentage)
-     * insulin age & level (units)
-     * cannula age
-     * pump battery age & level (percentage
-    
+Můžete je zaznamenat z rozbaleného stavového panelu na hlavní obrazovce, z panelu **Spravovat** nebo tlačítky [Rychlého spuštění](../DailyLifeWithAaps/QuickLaunch.md).
 
-Less information will be shown if **low resolution skin** is used ([Preferences > General > Skin](#Preferences-skin)).
+**Plnění/doplňování** zaznamená výměnu místa aplikace pumpy a/nebo výměnu zásobníku inzulínu a může podat dávku pro naplnění:
 
-(screens-sensor-level-battery)=
+![Dialog Plnění/doplňování](../images/dialogs/prime_fill.png)
 
-#### Sensor level (battery)
+**Výměna senzoru** a **Výměna baterie pumpy** se ptají jen na čas události:
 
-Works for CGM with an additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+![Dialog Výměna senzoru](../images/dialogs/sensor_insert.png)
 
-Thresholds can be set in [Preferences > Overview > Status lights](#Preferences-status-lights).
+![Dialog Výměna baterie pumpy](../images/dialogs/pump_battery_change.png) Záznamy cvičení, oznámení, otázky a poznámky odpovídají careportalu v Nightscoutu a jsou zvláštní formou poznámek.
 
-### Careportal - section O
+V panelu **Spravovat** sjeďte dolů a stiskněte **Péče**, abyste zobrazili tyto záznamy: **Kontrola glykémie**, **Poznámka**, **Cvičení**, **Otázka** a **Oznámení**.
 
-BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#aaps-screens-careportal).
+![Sekce Péče v panelu Spravovat](../images/v4/Screens/manage_sheet_careportal.png)
 
-Prime/Fill allows you to record pump site and insulin cartridge change.
+**Kontrola glykémie**, **Otázka** a **Oznámení** vám umožní zadat hodnotu glykémie (z glukometru, senzoru nebo jiného zdroje), poznámku a čas události. V **Otázce** a **Oznámení** je řádek glykémie sbalený a vedle hodnoty ukazuje typ měření: pokud hodnotu změníte, typ se změní ze **Senzor** na **Glukoměr**.
 
-Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+![Otázka se sbaleným řádkem glykémie](../images/dialogs/careportal_question.png)
 
-### Tools - section P
+![Dialog Kontrola glykémie](../images/dialogs/careportal_bg_check.png)
 
-(Aapsscreens-site-rotation)=
+**Poznámka** a **Cvičení** vám umožní zadat dobu trvání (sbalený řádek: použijte **-** / **+**, nebo klepněte na šipku a zadejte ji), poznámku a čas události:
 
-#### Site Rotation
+![Dialog Cvičení](../images/dialogs/careportal_exercise.png)
 
-Site Rotation button opens the Site Rotation Dialog in View mode:
+Ve všech těchto dialozích (**Plnění/doplňování**, **Výměna senzoru**, **Výměna baterie pumpy** a záznamy péče) se pro čas události používá stejný řádek **Čas** jako v [dialogu Inzulín](#aaps-screens-buttons-insulin) a v bolusové kalkulačce: tlačítky **-** / **+** posunete čas po 5 minutách (až o jeden týden zpět a 12 hodin dopředu), nebo klepnutím na šipku vyberete libovolné datum a čas.
 
-* You can select if you want to see Cannula sites only, Sensor sites only, or both with upper checkboxes
-* All Cannula change and Sensor change event since the past 45 days are available.
-* Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
-* You can open the Edit view to update Site location, Arrow, or Comment associated to each entry
+## Rotace míst aplikace
 
-![View Mode](../images/SiteRotation/ViewMode.png)
+**Spravovat → Rotace míst aplikace** zaznamenává na mapě těla, kam byla umístěna každá kanyla a každý senzor, abyste mohli místa střídat: viz [Rotace míst aplikace](#Aapsscreens-site-rotation) na stránce o pumpách a kanylách.
 
-* The Setting tab (upper right cog) allows you to adjust the patient view (Man, Woman or Child), and to select if you want to manage only Pump sites, only Sensor sites or both.
-
-![Nastavení](../images/SiteRotation/Settings.png)
-
-![Settings type](../images/SiteRotation/Type.png)
-
-*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
-
-* For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
-
-Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
-
-* Entry type is visible on the to of Edit mode (Cannula Icon, or Sensor Icon)
-* You have to select Front or Back tab and then the Area
-* Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
-
-![Edit Mode](../images/SiteRotation/EditMode.png)
-
-* You can adjust an optional arrow with a click on little arrow icon on the top (Arrow allow you to precise sub-location, from 2 to 9, or Pod Orientation)
-
-![Position](../images/SiteRotation/EditModeSub.png)
-
-* You can also adjust comments concerning selected site
-* After confirmation, the site is recorded
-
-Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
-
-![Filtering](../images/SiteRotation/Filtering.png)
-
-#### History Browser
-
-Allows you to ride back in **AAPS** [history](../Maintenance/Reviewing.md).
-
-#### CDD
-
-Total daily dose = bolus + basal per day
-
-Někteří lékaři doporučují – hlavně pro nové uživatele pumpy – poměr bazál-bolus 50:50.
-
-Therefore, ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours).
-
-Jiní dávají přednost hodnotám, kdy TBB tvoří 32 % až 37 % z TDD.
-
-Stejně jako podobná pravidla má i toto v reálném životě omezenou platnost. Poznámka: Váš diabetes může být jiný!
+**CDD** (celková denní dávka) a orientační pravidlo pro poměr bazálu a bolusu jsou vysvětleny u [karty Inzulín ve Statistikách](#reviewing-tdd).
 
 (AapsScreens-insulin-profile)=
 
-## Inzulínový profil
+## Inzulín
 
-![Inzulínový profil](../images/Screenshot_insulin_profile.png)
+![Obrazovka Inzulín](../images/manage/insulin_profile.png)
 
-This shows the activity profile of the insulin you have chosen in [Config builder > Insulin](#Config-Builder-insulin). The curves will vary based on the [DIA](#your-aaps-profile-duration-of-insulin-action) and the time to peak.
+**Spravovat → Nastavení inzulínu** zobrazuje a spravuje vaše konfigurace inzulínu. Každá konfigurace je zobrazena na kartě s **časem vrcholu** a **[DIA](#Config-Builder-insulin-dia)**; ta, která se používá, je označena **AKTIVNÍ**. Pod kartou vidíte křivku aktivity. Přezdívku, vrchol a DIA můžete upravit u každé konfigurace kromě aktivní: chcete-li změnit inzulín, který používáte, [přidejte novou konfiguraci a aktivujte ji](#Config-Builder-insulin-change-active).
 
-The **purple** line shows how much insulin remains after it has been injected as it decays with time and the **blue** line shows how active it is.
-
-See [Your AAPS Profile > Duration of insulin action](#your-aaps-profile-duration-of-insulin-action) to learn more about what it is and how to set it.
+Co to je a jak ji nastavit, se dozvíte v části [Doba působnosti inzulínu](#Config-Builder-insulin-dia).
 
 ## Stav pumpy
 
-![Stav pumpy](../images/Screenshot_PumpStatus.png)
+![Obrazovka stavu virtuální pumpy](../images/v4/Pumps/virtual_pump_screen.png)
 
-* Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
+**Spravovat → Pumpa** (nebo **Konfigurace → Pumpa → Otevřít plugin**) ukazuje stav vaší pumpy: poslední spojení, základní bazální dávku, baterii, zásobník...
 
-## Loop, AMA / SMB
+* Zobrazené informace závisí na modelu vaší pumpy.
+* Podrobnosti najdete na [stránce o pumpách](../Getting-Started/CompatiblePumps.md).
 
-These tabs show details about the algorithm's calculations and why **AAPS** acts the way it does.
+## Smyčka, AMA / SMB
 
-Calculations are run each time the system gets a fresh reading from the CGM.
+**Konfigurace → Smyčka → Otevřít plugin** (a **Konfigurace → APS → Otevřít plugin**) ukazují podrobnosti o výpočtech algoritmu a o tom, proč **AAPS** jedná tak, jak jedná: poslední běh, výsledný požadavek a omezení. Obrazovka **Smyčka** uvádí jen omezení, která skutečně omezila podaný dočasný bazál nebo SMB (a proč není povolena uzavřená smyčka, pokud tomu tak je); obrazovka **APS** uvádí všechna omezení, která vstoupila do výpočtu.
 
-For more details see [APS section on config builder page](#Config-Builder-aps).
+Výpočty probíhají pokaždé, když systém dostane z CGM novou hodnotu.
+
+Další podrobnosti najdete v [části APS na stránce Konfigurace](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
-## Profile
+## Profil
 
-![Profile](../images/Screenshots_Profile.png)
+![Profil](../images/Screenshots_Profile.png)
 
-Profile contains information on your individual diabetes settings, see the detailed **[Profile](../SettingUpAaps/YourAapsProfile.md)** page for more information.
+**Spravovat → Profil** (nebo klepnutí na název profilu na hlavní obrazovce) otevře obrazovku Profil: vaše profily jako karusel karet, mezi kterými můžete přejíždět, s tlačítky pro přidání, úpravu, klonování, smazání a **aktivaci** profilu.
+
+Profil obsahuje informace o vašem individuálním nastavení pro diabetes, podrobnosti najdete na stránce **[Profil](../SettingUpAaps/YourAapsProfile.md)**.
 
 ## Automatizace
 
-See the dedicated page [here](../DailyLifeWithAaps/Automations.md).
+![Automatizace](../images/v4/Screens/automation_overview.png)
+
+**Spravovat → Automatizace** zobrazuje seznam vašich pravidel automatizace. Viz samostatnou stránku [zde](../DailyLifeWithAaps/Automations.md).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-This page displays the status of the connection with your Nightscout site.
+**Konfigurace → Komunikace → NSClientV3 → Otevřít plugin** zobrazuje stav spojení s vaším webem Nightscout: URL, stav websocketu, frontu a záznam synchronizace.
 
-Settings can be changed in [Preferences > NS Client](#Preferences-nsclient).
+Nastavení můžete změnit v [nastavení NSClient](#Preferences-nsclient).
 
-For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).
+Řešení problémů najdete na této [stránce](../GettingHelp/TroubleshootingNsClient.md).
 
-## BG Source - xDrip+, BYODA...
+(aaps-screens-bg-source)=
 
-![BG Source tab - here Nightscout](../images/Screenshots_BGSource.png)
+## Zdroj glykémie – xDrip, BYODA...
 
-Depending on your BG source settings, this tab is named differently.
+![Obrazovka Zdroj glykémie](../images/Screenshots_BGSource.png)
 
-Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low) or duplicate readings.
+**Konfigurace → Zdroj glykémie → Otevřít plugin** ukazuje historii hodnot z CGM a nabízí možnost odstranit hodnoty v případě chyby (např. falešně nízké hodnoty při stlačení senzoru) nebo duplicitní hodnoty.
 
-(aaps-screens-treatments)=
+## Historie ošetření
 
-## Ošetření
+Otevřete **nabídku** (☰) a vyberte **Historie ošetření**, kde můžete zobrazit, zkontrolovat a opravit vše, co **AAPS** zaznamenal: sacharidy a bolusy, dočasné bazály, dočasné cíle, přepnutí profilu, záznamy péče, změny režimu smyčky a uživatelské záznamy. Viz [Historie ošetření](#aaps-screens-treatments) na stránce Kontrola dat.
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Treatments. It is not possible to show it in the main menu through the Config Builder. In this view, you can view and alter the history of the following treatments:
+## Prohlížeč historie
 
-* Bolus & carbs
-* [Prodloužený bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temporary basal rate
-* [Dočasný cíl](../DailyLifeWithAaps/TempTargets.md)
-* [Přepínání profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes entered through action tab and notes in dialogues
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+![Prohlížeč historie](../images/v4/Screens/history_browser.png)
 
-In the last column, the data source for each line is displayed in blue. It can be :
+Otevřete **nabídku** (☰) a vyberte **Prohlížeč historie**.
 
-* NS for Nightscout : the data comes from or has been recorded to Nightscout
-* PH for Pump History : the data has been processed by the pump
+Umožňuje vrátit se zpět v historii **AAPS**. Viz samostatnou stránku [Kontrola dat > Prohlížeč historie](../Maintenance/Reviewing.md).
 
-(screens-bolus-carbs)=
+(aaps-screens-statistics)=
 
-### Bolus & carbs
+## Statistiky
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Statistiky](../images/v4/Screens/statistics.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1** and **4**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
+Otevřete **nabídku** (☰) a vyberte **Statistiky**.
 
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
-
-The carbs (line **2**) are only stored in Nightscout. If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text (line **3**) to show the details of how the bolus was calculated.
-
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
-
-The treatment tab can be used to correct faulty carb entries (*i.e.* you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
-
-1. Zkontrolujte a zapamatujte si aktuální COB a IOB na domovské obrazovce.
-2. V závislosti na pumpě se mohou sacharidy v záložce ošetření zobrazovat společně s inzulínem v jednom řádku nebo jako samostatný záznam (např. s Danou RS).
-3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
-4. Ujistěte se, že sacharidy byly úspěšně odstraněny kontrolou COB na domovské obrazovce.
-5. Kontrolu proveďte také pro IOB, pokud v záložce ošetření jeden řádek obsahuje sacharidy i inzulín.
-  
-  → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
-
-6. Zadejte správné množství sacharidů pomocí tlačítka na domovské obrazovce a ujistěte se, že jste nastavili správný čas události.
-
-7. Pokud je v záložce ošetření pouze jedna řádka obsahující sacharidy i inzulín, musíte také přidat množství inzulínu. Nezapomeňte nastavit správný čas události a po potvrzení nového záznamu zkontrolujte IOB na domovské obrazovce.
-
-### Temp Basal
-
-![Temp Basal](../images/TreatmentsView2.png)
-
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown in green. It can be:
-
-* Positive IOB if the temp basal was higher than the one set in the Profile (line **2**)
-* Negative IOB for a zero-temp or if the temp basal was lower than the one set in the Profile (line **1**)
-
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
-
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
-
-### Dočasný cíl
-
-![Dočasný cíl](../images/TreatmentsView3.png)
-
-The history of temporary targets can be seen here.
-
-### Profile Switch
-
-![Profile Switch](../images/TreatmentsView4.png)
-
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user. Line **2**, stored both in NS and PH, correspond to the actual switch.
-
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
-
-You can use the **Clone** button shown on line **1** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
-
-(AapsScreens-running-mode)=
-
-### Running mode
-
-![Running mode](../images/TreatmentsView6.png)
-
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, suspend loop.
-
-### Care portal
-
-![Care portal](../images/TreatmentsView5.png)
-
-This tab shows all notes and alerts recorded in Nightscout.
-
-(aaps-screens-running-mode)=
-
-## History Browser
-
-This view can be accessed by pressing the 3 dots on the right of the menu, then History. It is not possible to put in the main menu through the Config Builder. It can also be accessed through a button at the bottom of the [Action tab](#screens-action-tab).
-
-Allows you to ride back in **AAPS** history. See the dedicated page [Reviewing your data > History Browser](../Maintenance/Reviewing.md).
-
-## Statistics
-
-This view can be accessed by pressing the 3 dots on the right of the menu, then Statistics. It is not possible to put in the main menu through the Config Builder.
-
-Gives you statistics about your Time In Range and Total Daily Dose. See the dedicated page [Reviewing your data > Statistics](#reviewing-statistics).
+Na čtyřech kartách zobrazuje statistiky celkové denní dávky, času v cíli, průběhu glykémie během dne (AGP) a vzorce vašeho inzulínového cyklu. Viz samostatnou stránku [Kontrola dat > Statistiky](#reviewing-statistics).
 
 (aaps-screens-profile-helper)=
 
 ## Profile Helper
 
-This view can be accessed by pressing the 3 dots on the right of the menu, then Profile Helper. It is not possible to put in the main menu through the Config Builder. The Profile Helper can help you:
+Otevřete **nabídku** (☰) a vyberte **Pomocník s profilem**.
 
-* [build a profile from scratch for a kid](#your-aaps-profile-profile-from-scratch-for-a-kid)
-* [compare two profiles](#your-aaps-profile-compare-profiles)
+![Pomocník s profilem](../images/screens/profile_helper.png)
+
+Pomocník s profilem umožňuje porovnat profily a vytvořit výchozí profily pro děti. Viz [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md) – části [Vytvoření profilu pro dítě od začátku](#your-aaps-profile-profile-from-scratch-for-a-kid) a [Porovnání dvou profilů](#your-aaps-profile-compare-profiles).
+
+(aaps-screens-widgets)=
+
+## Widgety na domovské obrazovce
+
+**AAPS** nabízí pět widgetů, které si můžete přidat na domovskou obrazovku telefonu a vidět svá data bez otevření aplikace. Viz samostatnou stránku [Widgety na domovské obrazovce](../DailyLifeWithAaps/Widgets.md).
+
+![Widgety AAPS na domovské obrazovce](../images/widgets/home_widgets_full_circle_small.png)
