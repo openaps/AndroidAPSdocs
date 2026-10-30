@@ -1,40 +1,42 @@
-# Timezone Change and Daylight Saving
+# Změna časového pásma a letní čas
 
-## Cestování s pumpou mezi časovými pásmy
+Když se změní časové pásmo telefonu, **AAPS** asi 10 sekund po změně znovu od začátku vypočítá **IOB**, bazál a citlivost za minulé období. Během tohoto výpočtu může chvíli trvat, než se grafy a hodnoty na hlavní obrazovce aktualizují.
 
-## Timezone change for Omnipod Dash
+(timezone-traveling-with-pumps)=
 
-* Refresh the Dash tab
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+## Změna časového pásma u Omnipod Dash
 
-## Timezone change for DanaR, Korean DanaR
+* Obnovte stav pumpy v **Spravovat → Pumpa**
+* Dočasně vyberte jiný **Profil** a pak se přepněte zpět na svůj původní nebo požadovaný **Profil**
+
+## Změna časového pásma u DanaR, korejské DanaR
 
 Se změnou časového pásma v telefonu není žádný problém, protože tyto pumpy nepoužívají historii
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## Změna časového pásma u DanaRv2, DanaRS, Dana-i
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Tyto pumpy vyžadují zvláštní péči, protože **AAPS** používá historii z pumpy, ale záznamy v pumpě nemají údaj o časovém pásmu. **To znamená, že pokud v telefonu změníte časové pásmo, záznamy se načtou s jiným časovým pásmem a budou zdvojené.**
 
 Abychom se tomu vyhnuli, existují dvě možnosti:
 
 ### Možnost 1: Ponechat původní čas a posunout profil
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* V nastavení telefonu vypněte „Automatické datum a čas“ (ruční změna časového pásma).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* Telefon musí po celou dobu cesty udržovat váš standardní domácí čas.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
+* Posuňte svůj **Profil** v čase podle časového rozdílu mezi domácím časem a časem v cíli cesty.
    
-   * Long-press **Profile** name (middle of top section on homescreen)
-   * Select '**Profile Switch**'
-   * Nastavte 'Posun času' podle času ve vaší destinaci.
+   * Klepnutím na název **Profilu** na hlavní obrazovce otevřete [obrazovku Profil](#ProfileSwitch-manage-v4)
+   * Vyberte svůj **Profil** a klepněte na **▶ Aktivovat**
+   * Nastavte „**Posun času**“ podle cíle cesty a klepněte na **Aktivovat**.
    
    ![Přepnutí profilu s posunem času](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: **Profile Switch** +6 hours
-   * i.e. Vienna -> Sydney: **Profile Switch** -8 hours
+   * např. Vídeň -> New York: **Přepnutí profilu** +6 hodin
+   * např. Vídeň -> Sydney: **Přepnutí profilu** -8 hodin
 
 ### Možnost 2: Vymazat historii pumpy
 
@@ -52,129 +54,81 @@ Když vysednete z letadla:
 
 (timezone-traveling-insight)=
 
-## Timezone Change for Insight
+## Změna časového pásma u Insight
 
 Ovladač automaticky upravuje čas v pumpě podle času v telefonu.
 
-Insight také zpracovává záznamy v historii o změnách času. So the correct time can be determined in **AAPS** despite the time change.
+Insight také do historie zaznamenává, v kterém okamžiku byl čas změněn a z jakého (starého) času na jaký (nový) čas. Díky tomu lze v **AAPS** i přes změnu času určit správný čas.
 
-It may cause inaccuracies in the **TDDs**. Neměl by to však být problém.
+Může to způsobit nepřesnosti v **CDD**. Neměl by to však být problém.
 
-Uživatel pumpy Insight se tedy nemusí obávat změn časového pásma a změn času. K tomuto pravidlu existuje jedna výjimka: pumpa Insight má malou vnitřní baterii k napájení času atd. zatímco měníte "skutečnou" baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Uživatel pumpy Insight se tedy nemusí obávat změn časového pásma a změn času. K tomuto pravidlu existuje jedna výjimka: pumpa Insight má malou vnitřní baterii k napájení času atd. zatímco měníte "skutečnou" baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. V takovém případě se všechny záznamy před výměnou baterie ve výpočtech AAPS vynechají, protože správný čas nelze spolehlivě určit.
 
-## Timezone Change for Accu-Chek Combo
+## Změna časového pásma u Accu-Chek Combo
 
-The [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+[Ovladač Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automaticky upravuje čas pumpy podle času telefonu. Combo neumí ukládat časová pásma, jen místní čas, a to je přesně to, co do pumpy nastavuje ovladač. Kromě toho ukládá časové pásmo do místních předvoleb AAPS, aby mohl převést místní čas pumpy na úplné časové razítko s posunem časového pásma. Uživatel nemusí nic dělat; pokud se čas v pumpě Combo příliš liší od aktuálního času telefonu, čas pumpy se automaticky upraví.
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+Upozorňujeme však, že to chvíli trvá, protože to lze provést jen v režimu vzdáleného terminálu, který je obecně pomalý. Je to omezení pumpy Combo, které nelze obejít.
 
-The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
-
-## Timezone Change for Medtrum
+## Změna časového pásma u Medtrum
 
 Ovladač automaticky upravuje čas v pumpě podle času v telefonu.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
+Změny časového pásma ponechají historii neporušenou, ovlivněna může být jen CDD. Ruční změna času v telefonu může způsobit problémy s historií a **IOB**. Pokud měníte čas ručně, **IOB** důkladně zkontrolujte.
 
-When the time zone or time changes running **TBR's** are stopped.
+Při změně časového pásma nebo času se běžící **dočasné bazály (TBR)** ukončí.
 
 (time-adjustment-daylight-savings-time-dst)=
 
-## DAYLIGHT SAVING (DST)
+## LETNÍ ČAS (DST)
 
-Time adjustment for daylight savings time.
+Úprava času při přechodu na letní čas.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For instance with the Combo pump & DST, the pump history is read twice leading to duplicate entries. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+V závislosti na vaší pumpě a nastavení CGM mohou skoky v čase způsobit, že **AAPS** nebude správně fungovat. U některých pump je lepší upravit časové pásmo ještě před přechodem na letní čas, dokud jste vzhůru, a ne během noci.
 
-### DST automatic adjustment for most pumps
+### Automatická úprava letního času u většiny pump
 
-* This adjustment feature is available for **AAPS** version 2.2 onwards.
-* Howeever, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**.
-   
-   This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
+* **Smyčka** však bude deaktivována na 3 hodiny PO přechodu na letní čas (obvykle od 1:00) a **AAPS** se vrátí k výchozímu bazálu podle vašeho **Profilu**. Děje se tak z bezpečnostních důvodů – **IOB** může být příliš vysoké kvůli zdvojenému bolusu před změnou letního času.
+* Po přechodu na letní čas proveďte **Přepnutí profilu** na požadovaný **Profil**, aby se **Smyčka** zapnula: klepněte na název profilu na hlavní obrazovce a pak na kulaté tlačítko **▶** (viz [Aktivace profilu](#ProfileSwitch-manage-v4)).
+* Před změnou letního času také dostanete na hlavní obrazovce **AAPS** upozornění, že **Smyčka** byla dočasně zakázána. Tato zpráva se zobrazí bez pípnutí, vibrace nebo podobného zvuku.
 
-* After DST has taken place, select **Profile Switch** to user's desired **Profile** to enable the **Loop**.
+Pokud dáváte bolus pomocí kalkulačky **AAPS**, nepoužívejte prosím údaje **COB** a **IOB**, pokud si nejste jistí, že jsou naprosto správné. Buďte opatrní a tuto funkci několik hodin po přechodu na letní/zimní čas nepoužívejte.
 
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.**
-
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
-
-### DST for Accu-Chek Insight
+### Letní čas u Accu-Chek Insight
 
 * Změna letního času se provádí automaticky. Není vyžadována žádná akce.
 
-### DST for Medtrum
+### Letní čas u Accu-Chek Combo
 
 * Změna letního času se provádí automaticky. Není vyžadována žádná akce.
 
-### DST for Omnipod Dash
+### Letní čas u Medtrum
 
-* Either allow **AAPS** to temporarily default background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day prior DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* Změna letního času se provádí automaticky. Není vyžadována žádná akce.
 
-#### Actions to take before the clock change
+### Letní čas u Omnipod Dash
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+* Buď nechte **AAPS** po přechodu na letní čas dočasně přejít na výchozí bazál, jak je popsáno výše.
+* Nebo, pokud nechcete, aby **AAPS** přes noc dočasně přešel na výchozí bazál, můžete časové pásmo změnit den před přechodem na letní čas a vyhnout se tak nočnímu výpadku. POZOR, TATO MOŽNOST MŮŽE ZPŮSOBIT PŘEDČASNÉ VYPRŠENÍ PODU. POKUD ZVOLÍTE NÍŽE POPSANOU MOŽNOST, MĚJTE S SEBOU NÁHRADNÍ POMŮCKY.
+
+#### Co udělat před změnou času
+
+1. Vypněte všechna nastavení telefonu, která automaticky nastavují časové pásmo, aby mohl uživatel přepnout na požadované časové pásmo, které letní čas nepoužívá. Jak to zapnout, záleží na vašem telefonu a verzi Androidu.
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Některé telefony mají dvě nastavení, jedno pro automatické nastavení času (které by ideálně mělo zůstat zapnuté) a jedno pro automatické nastavení časového pásma (které musíte VYPNOUT: **Nastavit automaticky** v části **Časové pásmo** na snímku obrazovky níže).
+   * Některé verze Androidu bohužel mají jediný přepínač pro automatické nastavení času i časového pásma zároveň. Prozatím to budete muset vypnout.
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Najděte časové pásmo, které má stejný čas jako vaše aktuální poloha, ale nepoužívá letní čas.
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * Pro střední Evropu (CET) by to bylo "Brazzaville" (Kongo). Změňte časové pásmo telefonu na Kongo.
+   * Seznam těchto zemí je k dispozici na [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Pro středoevropský čas (SEČ) by to mohlo být „Brazzaville“ (Kongo). Změňte časové pásmo telefonu na Kongo.
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. **AAPS** refresh your pump and switch to your desired **Profile**.
+3. V **AAPS** obnovte pumpu a přepněte na požadovaný **Profil**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Zkontrolujte **IOB** a **COB** v **AAPS**, a pokud jsou nepřesné, zakažte **Smyčku** alespoň na dobu jedné DIA nebo maximální doby vstřebávání sacharidů – podle toho, která je delší.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
-
-### DST for Accu-Chek Combo
-
-This section is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
-
-**AAPS** will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
-
-#### Actions to take before the clock change
-
-1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How this is done will depend on your smartphone and Android version.
-   
-   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
-   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
-   
-   Screenshot_20260329-110315 (1)
-
-2. Find a timezone that has the same time as your current location but doesn't use DST.
-   
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * Pro střední Evropu (CET) by to bylo "Brazzaville" (Kongo). Změňte časové pásmo telefonu na Kongo.
-
-3. In **AAPS** refresh your pump.
-
-4. Zkontrolujte kartu Ošetření... If you see any duplicate treatments:
-   
-   * DON'T press "delete treatments in the future"
-   * Klepněte na "odstranit" u všech budoucích ošetření a také u těch, která jsou duplicitní. Toto by mělo ošetření zneplatnit, nikoli je odstranit, takže již nebudou využívaná k výpočtu IOB.
-
-5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.*
-
-#### Actions to take after the clock change / DST
-
-A good time to make this switch would be with low **IOB**. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your **COB** and **IOB** should both be close to zero.)
-
-1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. **AAPS** will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
-3. On the **AAPS** “Combo” screen, press Refresh.
-4. GO Treatments screen, and look for any future events. There shouldn’t be many.
-   
-   * DON'T press "delete Treatments in the future"
-   * Hit "remove" on all future Treatments and duplicate ones. This should invalidate the Treatments rather than removing them so they will not be considered for **IOB**.
-
-5. If the situation on how much IOB/COB is unclear - for safety please disable the **Loop** for at least one **DIA** and Max-Carb-Time - whatever is bigger.*
-
-6. Continue as normal.
+5. Co udělat po změně času. Vhodná chvíle pro návrat k místnímu časovému pásmu je při nízkém **IOB**. Např. hodinu před jídlem, jako je snídaně. Ideálně by **COB** i **IOB** měly být blízko nuly.
