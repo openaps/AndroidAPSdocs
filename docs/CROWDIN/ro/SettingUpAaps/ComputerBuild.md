@@ -19,16 +19,17 @@ See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 * A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. See table below :
 
-| Versiune AAPS           | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                   | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                             | up to Quail 1                                          | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                  | up to Quail 1                                          | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                      | up to Quail 1                                          | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                   | up to Quail 1                                          | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                   | up to Quail 1                                          | 8.13   | 21  |
-| [3.4.2.2](#version3422) | Panda 2 (2025.32)                                    | up to Quail 1                                          | 9      | 21  |
+| Versiune AAPS               | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
+| --------------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
+| 2.6.2                       | 3.6.1                                                |                                                        | 5.6.4  | 11  |
+| 2.8.2.1                     | 4.1.1                                                |                                                        | 6.1.1  | 13  |
+| [3.1.0.3](#version3100)     | 2020.3.1                                             | tested up to Quail 4                                   | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                  | tested up to Quail 4                                   | 8.2    | 17  |
+| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                      | tested up to Quail 4                                   | 8.10   | 21  |
+| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                   | tested up to Quail 4                                   | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                   | tested up to Quail 4                                   | 8.13   | 21  |
+| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                   | tested up to Quail 4                                   | 9      | 21  |
+| [4.0.0-beta1](#version4000) | Rabbit 1                                             | up to latest Rabbit 1                                  | 9.8    | 21  |
 
 The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
 
@@ -140,7 +141,7 @@ Unul dintre cele mai importante lucruri la instalarea Android Studio este **să 
 
 ```{admonition} Different UI
 :class: avertizare
-Notă de import: Studio Android și-a schimbat interfața în timpul ultimelor versiuni. Acest ghid vă va arăta pașii cu *noua interfață* în "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Notă de import: Studio Android și-a schimbat interfața în timpul ultimelor versiuni. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 Versiunea de Android Studio este foarte importantă. Vedeți instrucțiunile [de mai sus](#Building-APK-recommended-specification-of-computer-for-building-apk-file) pentru a alege versiunea corectă a Android Studio.
@@ -239,7 +240,7 @@ Acum îi vom spune aplicației Android Studio de unde să obțină codul:
 * Acum apăsați pe butonul "Clonați" (5).
 
 ```{admonition} INFORMATION
-:class: information
+:class: note
 Make a note of the directory. It is where your sourcecode is stored!
 ```
 
@@ -260,12 +261,12 @@ După ce depozitul este clonat cu succes, Android Studio va deschide proiectul c
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
-:class: information
+:class: note
 Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
 
 Only if your Android Studio looks different, you might need to switch to the new UI:
 Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
-In **Appearance & Behaviour**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
+In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
 
 If you don't find the option **New UI** don't worry: you are already using it!
 ```
@@ -297,7 +298,7 @@ Now we will tell Android studio where to find Git, which you installed [earlier]
 
 * Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). Dacă nu, reporniți acum și redeschideți Android Studio
 
-In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git**
+In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
@@ -311,7 +312,7 @@ If the automatic setting is successful, your current version of **Git** will be 
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either
+If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
 * manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
 * click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Verify your settings with the **Test** button!
@@ -337,23 +338,23 @@ Apăsați pe meniul hamburger din stânga sus pentru a deschide bara de meniu. S
 
 ![Construiți apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-Selectați "APK" în loc de "Android Bundle" și apăsați pe "Următorul":
+Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
 
 ![APK in loc de pachet](../images/Building-the-App/041_APK.png)
 
-În ecranul următor, asigurați-vă că "Module" este setat pe "AAPS.app" (1).
+In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
-:class: informații
-Dacă doriți să creați fișierul apk pentru ceas, acum trebuie să selectați AAPS.wear!
+:class: note
+If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
 Apăsați pe "Creați nou..." (2) pentru a începe să creați propriul fișier keystore.
 
 ```{admonition} INFORMATION!
-:class: information
+:class: note
 You will only need to create the keystore once.
 If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
@@ -373,7 +374,11 @@ Make sure to note down for yourself where your keystore is stored. You will need
 
 * Acum alegeți o parolă simplă (și notați-o), introduceți-o în caseta cu parolă (2), și confirmați (2).
 
-  Parolele pentru fișierul keystore și cheia nu trebuie să fie sofisticate. If you lose your password in the future, see [troubleshooting for lost key store](#troubleshooting_androidstudio-lost-keystore).
+  Parolele pentru fișierul keystore și cheia nu trebuie să fie sofisticate. If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+
+```{warning}
+**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+```
 
 * Aliasul implicit (3) pentru cheia dumneavoastră este "key0", lăsați acest lucru neschimbat.
 
@@ -396,7 +401,7 @@ On the **Generate signed App Bundle or APK** page, the path to your keystore wil
 ![Rețineți parolele](../images/Building-the-App/044_RememberPwd.png)
 
 
-Pe ecranul următor, selectați construirea variantei "fullRelease" (2) și apăsați pe "Creați" (3). Ar trebui să vă amintiți directorul afișat la (1) pentru că mai târziu veți găsi fișierul apk construit acolo!
+On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
 
    ![Select build variant](../images/Building-the-App/045_BuildPath.png)
 
@@ -408,7 +413,7 @@ Acum puteți urmări progresul construirii:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio va afișa informația "CONSTRUIRE REUȘITĂ" după ce construcția este finalizată. Este posibil să vedeți o notificare de tip fereastră emergentă (pop-up) pe care puteți apăsa pentru a selecta "localizați". If you miss this, click on the notification icon (1) and then on **locate** (2) at the very bottom of the screen to bring up the Notifications:
+Android Studio va afișa informația "CONSTRUIRE REUȘITĂ" după ce construcția este finalizată. Este posibil să vedeți o notificare de tip fereastră emergentă (pop-up) pe care puteți apăsa pentru a selecta "localizați". If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
