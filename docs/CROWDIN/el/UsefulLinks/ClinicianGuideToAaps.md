@@ -1,8 +1,12 @@
 # For Clinicians – A General Introduction and Guide to AAPS
 
+```{note}
+This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+```
+
 This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
 
-This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). Εάν έχετε ερωτήσεις, ρωτήστε τον ασθενή σας για περισσότερες λεπτομέρειες ή μπορείτε ελεύθερα να απευθυνθείτε στην κοινότητα με τις απορίες σας. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). Εάν έχετε ερωτήσεις, ρωτήστε τον ασθενή σας για περισσότερες λεπτομέρειες ή μπορείτε ελεύθερα να απευθυνθείτε στην κοινότητα με τις απορίες σας. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
 
 ## Τα βήματα για την δημιουργία ενός DIY κλειστού κυκλώματος:
 
@@ -22,7 +26,7 @@ If the device running AAPS breaks or goes out of range of the pump, once the lat
 
 ## How data is gathered:
 
-With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
 
 Οι συσκευές Android πρέπει:
 
@@ -48,6 +52,8 @@ AAPS uses the same core algorithm and feature set as OpenAPS. Ο αλγόριθ�
 ### Here are examples of the purple prediction lines, and how they might differ:
 
 ![Παραδείγματα μοβ γραμμών πρόβλεψης](../images/Prediction_lines.jpg)
+
+(clinicianguide-dosing-scenarios)=
 
 ### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
 
@@ -81,9 +87,9 @@ As a clinician who may not have experience with AAPS or DIY closed loops, you ma
 
 Το πιο σημαντικό πράγμα που πρέπει να κάνουν οι ασθενείς είναι να κάνουν μια αλλαγή κάθε φορά και παρατηρούν τον αντίκτυπο για 2-3 ημέρες πριν επιλέξουν να αλλάξουν ή να τροποποιήσουν τις ρυθμίσεις (εκτός αν είναι προφανώς μια κακή αλλαγή που κάνει τα πράγματα χειρότερα, οπότε θα έπρεπε επαναφέρετε αμέσως την προηγούμενη ρύθμιση). Η ανθρώπινη τάση είναι να γυρίσουμε όλα τα κουμπιά και να αλλάξουμε τα πάντα με τη μία. αλλά αν κάποιος το κάνει, τότε μπορεί να καταλήξουν σε περαιτέρω κακές ρυθμίσεις για το μέλλον και να δυσκολευτεί να επιστρέψει σε μια γνωστή καλή κατάσταση.
 
-Ένα από τα πιο ισχυρά εργαλεία για την πραγματοποίηση αλλαγών στις ρυθμίσεις είναι ένα αυτοματοποιημένο εργαλείο υπολογισμού βασικών ρυθμών, ISF και υδατανθράκων. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Είναι σχεδιασμένο να εκτελείται ανεξάρτητα / χειροκίνητα και να επιτρέπει στα δεδομένα να σας καθοδηγούν εσάς ή τον ασθενή σας για να κάνετε αυξομειώσεις στις ρυθμίσεις. Είναι η καλύτερη πρακτική στην κοινότητα να τρέχει (ή να αναθεωρεί) τις αναφορές Autotune πρώτα, προτού επιχειρήσετε να κάνει χειροκίνητες προσαρμογές στις ρυθμίσεις. With AAPS, Autotune will be run as a "one-off", although there are ongoing efforts to incorporate it directly into AAPS as well. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+Ένα από τα πιο ισχυρά εργαλεία για την πραγματοποίηση αλλαγών στις ρυθμίσεις είναι ένα αυτοματοποιημένο εργαλείο υπολογισμού βασικών ρυθμών, ISF και υδατανθράκων. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. Είναι σχεδιασμένο να εκτελείται ανεξάρτητα / χειροκίνητα και να επιτρέπει στα δεδομένα να σας καθοδηγούν εσάς ή τον ασθενή σας για να κάνετε αυξομειώσεις στις ρυθμίσεις. Είναι η καλύτερη πρακτική στην κοινότητα να τρέχει (ή να αναθεωρεί) τις αναφορές Autotune πρώτα, προτού επιχειρήσετε να κάνει χειροκίνητες προσαρμογές στις ρυθμίσεις. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
 
-Επιπρόσθετα, η ανθρώπινη συμπεριφορά (που αντλείται από τον χειρωνακτικό τρόπο αντιμετώπισης διαβήτη) επηρεάζει συχνά τα αποτελέσματα, ακόμη και με κλειστό κύκλωμα DIY. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). Ωστόσο, σε πολλές περιπτώσεις, κάποιος μπορεί να επιλέξει να θεραπεύσει με πολλούς περισσότερους υδατάνθρακες (π.χ. να κολλήσει στον κανόνα 15), γεγονός που θα προκαλέσει μια ταχύτερη ακίδα τόσο από την επιπλέον γλυκόζη όσο και επειδή η ινσουλίνη είχε μειωθεί στο χρονικό πλαίσιο που οδηγούσε στο χαμηλό.
+Επιπρόσθετα, η ανθρώπινη συμπεριφορά (που αντλείται από τον χειρωνακτικό τρόπο αντιμετώπισης διαβήτη) επηρεάζει συχνά τα αποτελέσματα, ακόμη και με κλειστό κύκλωμα DIY. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). Ωστόσο, σε πολλές περιπτώσεις, κάποιος μπορεί να επιλέξει να θεραπεύσει με πολλούς περισσότερους υδατάνθρακες (π.χ. να κολλήσει στον κανόνα 15), γεγονός που θα προκαλέσει μια ταχύτερη ακίδα τόσο από την επιπλέον γλυκόζη όσο και επειδή η ινσουλίνη είχε μειωθεί στο χρονικό πλαίσιο που οδηγούσε στο χαμηλό.
 
 ## OpenAPS
 
@@ -98,4 +104,4 @@ This is meant to be a high-level overview of how AAPS works. For more details, a
 * The [full AAPS documentation](../index.md)
 * Το [ Σχεδιασμό Αναφοράς OpenAPS ](https://OpenAPS.org/reference-design/), το οποίο εξηγεί πώς είναι σχεδιασμένο το OpenAPS για ασφάλεια: https://openaps.org/reference-design/
 * The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
