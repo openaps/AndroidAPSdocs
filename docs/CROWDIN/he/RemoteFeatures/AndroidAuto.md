@@ -2,37 +2,32 @@
 
 **AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
 
-```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
-
-versions used for documentation:
-
-* AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release ```
-
 ## Requirements
 
 **AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
 
 That means that:
 
-* You must configure **AAPS** to use system notifications for alerts and notifications and
+* Android must allow **AAPS** to show notifications and
 * As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
-## Use system notifications in AAPS for alerts and notifications
+## Check that AAPS can show notifications
 
-Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
+**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
 
-![Use system notifications for alerts and notifications](../images/android_auto_02.png)
+On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
 
-In **Local Alerts** activate **Use system notifications for alerts and notifications**
+![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_03.png)
+Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
 
-Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
+![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
 
-![Use system notifications for alerts and notifications](../images/android_auto_04.png)
+Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+
+![AAPS notification on the phone](../images/android_auto_04.png)
 
 ## Allow the use of "unknown sources" with Android Auto.
 
@@ -80,6 +75,8 @@ Your CGM data will be shown as follows:
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
+(android-auto-troubleshooting)=
+
 ## Troubleshooting:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#use-system-notifications-in-aaps-for-alerts-and-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
