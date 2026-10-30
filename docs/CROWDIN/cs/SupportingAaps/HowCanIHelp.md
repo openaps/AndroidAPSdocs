@@ -1,35 +1,35 @@
-# How to help with AAPS
+# Jak pomoci s AAPS
 
-## AAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS funguje jen díky práci dobrovolníků a nemá žádné placené zaměstnance.
 
 Vývojáři jsou rodiče, pečovatelé, blízcí a lidé s cukrovkou, kteří společně pracují na vývoji a vylepšení řešení. Vývojáři investují zdarma svůj volný čas a je tak nespravedlivé očekávat, že budou sami čelit dodatečným nákladům, když tvoří tak úžasné řešení, které je open source a zdarma pro všechny.
 
-*Pro otestování nových zařízení vývojáři potřebují testovací telefon a testovací pumpu - zařízení nelze testovat na člověku, dokud není stabilní. Novější modely se musí testovat, jakmile budou k dispozici. Jsou také zapotřebí finanční dary pro uhrazení cestovních a přepravních nákladů těchto dodávek mezi zeměmi vývojářů. Někdy je také pěkné přispět na pokrytí cestovních nákladů pro vývojáře - aby mohli opustit svoje tmavé pokoje, aby mohli uspořádat vzájemná setkání na konferencích a srazech - a aby mohli dát od všeho jejich tvůrčím a analytickým mozkům odpočinout.*
+*Pro otestování nových zařízení vývojáři potřebují testovací telefon a testovací pumpu - zařízení nelze testovat na člověku, dokud není stabilní. Novější modely se musí testovat, jakmile budou k dispozici. Část darovaných peněz je také potřeba na logistické náklady na odeslání tohoto vybavení vývojářům do různých zemí. Někdy je také pěkné přispět vývojářům na náklady, aby mohli opustit své tmavé pokoje, setkat se na konferencích a akcích a vzájemně si vyměnit tvůrčí a analytické nápady.*
 
 ## Můžu napsat kód! Jak mohu přispět?
 
-Jéje! Podívejte se na seznam problémů, zeptejte se na discord fóru, tam je vždy mnoho věcí na práci! Najděte nejprve malý úkol a proveďte první pull request! :)
+Hurá! Podívejte se na seznam problémů, zeptejte se na discord fóru, tam je vždy mnoho věcí na práci! Najděte nejprve malý úkol a proveďte první pull request! :)
 
 ## Znám systém a můžu psát dokumentaci!
 
 Skvělé, toto je velmi ceněná věc a dobrý způsob, jak své znalosti zúročit!
 
 * Kanál na discordu týkající se wiki lze nalézt zde: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* Návod, jak dělat commity do anglické wiki, najdete zde: [Jak upravovat dokumentaci](../SupportingAaps/HowToEditTheDocs.md). Ostatní jazyky se jen překládají z angličtiny a kvůli jednotnosti je nelze přímo upravovat.
 
 ## Umím víc jazyků a chci překládat aplikaci nebo dokumentaci
 
-If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
+Pokud něco překládáte poprvé, začněte prosím překladem textů pro aplikaci. Je to snazší a výsledky uvidíte rychleji.
 
-You are welcome to start as a translator for the documentation in parallel or later.
+Souběžně nebo později můžete začít překládat i dokumentaci.
 
-You can check the state of translations for the languages app and documentation [here](#StateOfTranslations).
+Stav překladu aplikace a dokumentace pro jednotlivé jazyky můžete zkontrolovat [zde](#StateOfTranslations).
 
 * Pokud chcete přeložit **aplikaci** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidaps).
 * Pokud chcete přeložit **wiki** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Prostě se přihlaště na CROWDIN, vyberte Váš jazyk, počkejte na schálení adminem a hurá do toho!
+Stačí se zaregistrovat na CROWDIN, kliknout na svůj jazyk, počkat na schválení správcem a hurá do toho!
 
 ## Jsou další možnosti, jak pomoci?
 
-Dovednosti, které potřebujeme jsou grafický design, UX design, překládání, doplňování wiki nebo i jen odpovídání na jednoduché otázky kladené na kanálu na discordu & Facebook umožňuje vývojářům využívat svůj čas pro složitější věci.
+Potřebujeme i další dovednosti: grafický design, UX design, překladatele, editory wiki, nebo stačí jen odpovídat na jednoduché otázky na Discordu & Facebooku, aby vývojáři měli čas a prostor soustředit se na složitější věci.
