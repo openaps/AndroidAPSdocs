@@ -1,6 +1,6 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# **藍牙相關問題**
+# 藍牙相關問題
 
 有些使用者遇到與藍牙相關的 Omnipod DASH 註冊失敗、Medtrum Nano 連線問題，以及其他 Pod 錯誤。其中許多問題可追溯到以下其中一項原因。
 
@@ -31,13 +31,13 @@
 
 ## 使用 Android 權限「Nearby devices」的應用程式，可能導致連線中斷與 Pod 註冊問題
 
-Android 透過權限模型讓你控制每個應用程式在手機上能做什麼、能存取什麼。你可針對每個已安裝的應用程式允許或拒絕特定權限，例如存取裝置上的檔案、存取藍牙、掃描附近裝置等。
+Android 透過權限模型讓你控制每個應用程式在手機上能做什麼、能存取什麼。 For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
 
 **AAPS** 需要多項特定權限才能運作，其中確保 Pod 正常工作的必要權限是「附近裝置」。也有許多其他應用程式需要此權限；社群發現，當某些應用被授予此權限時，可能會在部分裝置上導致新 Pod 的啟用發生問題。
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### **使用「附近裝置」權限且已知會引發問題的應用程式：**
+### Apps that use "Nearby device" permissions and are known to have caused problems:
 
 社群中多處討論過，以下清單中的應用程式會對 Omnipod DASH 裝置造成問題，有些情況下也會影響 Medtrum Nano。
 
@@ -56,7 +56,7 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### **如何撤銷其他應用程式的「附近裝置」權限：**
+### How to revoke "Nearby device" permissions for other apps:
 如果你在啟用新 Pod 時遇到問題，且你使用的 **AAPS** 版本與你的 Android 版本相容，在啟用新 Pod 的過程中，可能需要先撤銷其他應用程式的該權限。
 
 請依照以下步驟，將除了 **AAPS** 之外的所有應用程式的「附近裝置」權限撤銷：
@@ -100,7 +100,7 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### **如何為系統應用程式與其他應用程式重新啟用「Nearby device」權限：**
+### How to re-enable "Nearby device" permissions for system apps and other apps:
 
 1. 如有需要，請參閱 **「How to revoke "Nearby device" permissions for other apps」** 章節以瞭解如何前往應用程式的隱私設定，進入 **Nearby device** 設定後請繼續第 2 步。
 
@@ -112,7 +112,7 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
 
-3. 若要顯示隱藏的系統應用程式，請點選 **三條線（漢堡選單）(1)**，接著點選 **"顯示系統  (1)"**。現在您應該可以在清單中看到先前隱藏的系統應用程式 **Android Auto (3)**。
+3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. 現在您應該可以在清單中看到先前隱藏的系統應用程式 **Android Auto (3)**。
 
 ```{admonition} Find your app
 :class: tip
@@ -129,22 +129,21 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 
 ## Android 15 經常性藍牙連線問題
 
-升級 Android 或更換到近期手機後，**AAPS**經常會失去與幫浦的藍牙連線。重新啟動手機後，這個問題會暫時消失。若手機執行 Android 15。在 **AAPS** 設定中啟用 **Bond BT device on Android 15+** 設定，可能有助於提升藍牙連線穩定性；請依下列指南啟用：
+升級 Android 或更換到近期手機後，**AAPS**經常會失去與幫浦的藍牙連線。重新啟動手機後，這個問題會暫時消失。 If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
 
 ```{admonition} Android 16
 :class: warning
-僅在 Android 15，且確實遇到連線問題時，才啟用「**Bond BT device on Android 15+**」選項。請勿在 Android 16 啟用綁定（bonding）選項。
+Only turn on **Bluetooth bonding** on Android 15, and only if you experience connectivity issues. DO NOT turn on bonding on Android 16.
 ```
 
-1) 透過點擊主畫面右上角的三個點的選單來 **打開偏好設定**。
+1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
 
-   ![打開偏好設定](../images/Pref2020_Open2.png)
+   ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
 
-2. 向下滾動並打開 **確認嗶聲** / **進階** 子選單。啟用 **Android 15+ 的 Bond BT 裝置**。
+2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
 
-   ![BondBT](../images/troubleshooting/BondBT.png)
+   ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
 
-
-3. 如果幫浦要求配對請求，請允許它。
+3. If the phone shows a pairing request, accept it.
 
 4. 重新啟動您的手機。
