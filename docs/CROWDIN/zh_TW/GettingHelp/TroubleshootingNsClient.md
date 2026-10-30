@@ -8,9 +8,7 @@ NSClient 依賴於與 Nightscout 的穩定連線。不穩定的連線會導致�
 
 * 如何偵測不穩定的連線？
 
-前往 AAPS 的 NSClient 標籤，並查看日誌。預期行為是每隔約30秒接收一次 PING 並幾乎沒有重新連線訊息。如果看到很多重新連線訊息，則表示有問題。
-
-自 AAPS 版本2.0起，當偵測到此類行為時，NSClient 將會暫停15分鐘，並在首頁總覽畫面顯示「NSClient 故障」。
+Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. 如果看到很多重新連線訊息，則表示有問題。
 
 * 重新啟動
 
@@ -36,7 +34,7 @@ Azure 連線問題的解決方法是在應用程式設定中將 HTTP 協議設�
 
 * Nightscout 沒有血糖讀取值
 
-如果 AAPS 正常連線到 Nightscout 但血糖顯示為 N/A。前往 NSCLIENT 標籤，按右上角的三點選單，點擊 NSClient 偏好設定 -> 同步，打開「接收/回填 CGM 資料」。
+If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
 
 * 如果仍然出現錯誤…
 
