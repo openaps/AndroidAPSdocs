@@ -161,6 +161,7 @@ We are not translating images at the moment: images should contain the **minimum
 - Screenshots from web pages images should be up to **1050 pixels wide**.
 - Diagrams of process flows should be up to **1050 pixels wide**.
 - Screenshots from the app should be up to **500 pixels wide**. Do not place them side to side if not necessary.
+- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
 
 ### Link-uri
 
@@ -552,7 +553,7 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 
 #### General AAPS points
 
-- For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible).
+- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
 
 - For consistency, use “AAPS” rather than “Android APS”.
 
