@@ -8,9 +8,7 @@ Si nadie te está siguiendo en Nightscout, puedes optar por pausar NSClient para
 
 * ¿Cómo detectar una conexión inestable?
 
-Ve a la pestaña de NSClient en AAPS y observa el registro. El comportamiento esperado es recibir un PING cada ~30 segundos y casi ningún mensaje de reconexión. Si ves muchas reconexiones, entonces hay un problema.
-
-Desde la versión 2.0 de AAPS, cuando se detecta este comportamiento, NSClient se pausa durante 15 minutos y se muestra el mensaje "Mal funcionamiento de NSClient" en la pantalla principal de Resumen.
+Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Si ves muchas reconexiones, entonces hay un problema.
 
 * Reiniciar
 
@@ -36,7 +34,7 @@ Una solución temporal para los problemas de conexión en Azure es configurar en
 
 * No hay lectura de glucosa en sangre de Nightscout
 
-Si AAPS se conecta correctamente a Nightscout pero la lectura de glucosa en sangre se muestra como N/A. Ve a la pestaña de NSCLIENT, presiona el menú de tres puntos en la esquina superior derecha, haz clic en "Preferencias de NSClient" -> "Sincronización" y activa "Recibir/rellenar datos del MCG".
+If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
 
 * Si aún recibes un error...
 
