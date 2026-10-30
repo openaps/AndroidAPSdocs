@@ -416,7 +416,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 
 (cwf-reference-background-management)=
 
-#### **背景管理**
+#### Background management
 
 首先，關於血糖值圖像，這裡沒有選擇，它只能在背景層（否則將會蓋在圖表視圖上，圖表將不可見！）。因此，我們必須將血糖值對應到背景，然後根據血糖值旋轉背景圖像。
 
@@ -464,7 +464,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 
 在`"rotateSgv"`區塊內，將使用兩個附加的鍵（`"minData":` 和 `"maxData":`）來調整最小和最大資料至30和330。通過這些最小和最大值，我們將能夠直接使用數據值（無需任何轉換）來旋轉背景的角度。在這種情況下，所有超過330 mg/dL的血糖值將被限制在圖像的上限330。
 
-#### **圖表管理**
+#### Chart management
 
 圖表的預設背景是透明的，因此為了隱藏包含於背景圖像中的血糖刻度，我們需要加入專用的背景圖像（此圖像將包含蒸汽龐克錶盤整體的陰影效果）。連結到charBackground.jpg文件是透過`"background":`鍵完成的
 
@@ -482,7 +482,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 ```
 (cwf-reference-avg-delta-management)=
 
-#### **平均變化管理**
+#### Avg delta management
 
 為了能夠管理平均變化的動態範圍，我們將使用四個自由文字視圖。 freetext1將用來管理圖像刻度，freetext2至freetext4將根據刻度管理指針的旋轉。
 
@@ -747,7 +747,7 @@ DynData 是最強大的功能，如果您希望在錶盤中包含一些動畫，
 
 #### 在 dynPref 中結合不同的偏好設定，使用 AAPS V2
 
-大多數時候，當你設置一個偏好設定時，他只是根據你的選擇顯示結果，但在 dynPref 中，他被認為是一種動態功能...
+Most of the time, when you set a preference, it's not to get "dynamic behavior", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
 
 - 當在 `dynData` 中指定一整個參數區塊（包含圖像、字體顏色、顏色等）時，使用 `dynPref`，你將能根據特定偏好設定組合每個參數。
 - 在這裡，我們將看到如何匹配分隔符偏好設置與暗色偏好結合，以顯示何時啟用（為 true）在深色錶盤上顯示白色文本，或在淺色錶盤上顯示黑色文本（深色為 false）。
