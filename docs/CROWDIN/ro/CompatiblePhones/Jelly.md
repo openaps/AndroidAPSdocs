@@ -1,13 +1,15 @@
 # Jelly
 
-## Jelly 2
+## Jelly Star Mini
 
-A nu se confunda cu Jelly Star (mai jos).
+**Features**
+
+* Android 13
+* 8 GB RAM
 
 **Avantaje**
 
 * E foarte mic.
-* Android 11.
 * Chiar dacă le spui oamenilor, este posibil ca aceștia să nu considere că este un telefon inteligent normal și va fi acceptat mai ușor în circumstanțe în care telefoanele sunt în mod normal interzise.
 
 **Dezavantaje**
@@ -17,7 +19,7 @@ A nu se confunda cu Jelly Star (mai jos).
 
 ### Optimizarea vieții bateriei
 
-Jelly 2 vine cu caracteristici puternice de optimizare care **trebuie** dezactivate pentru AAPS (și pentru alte aplicații DIY precum BYODA, xDrip+, OOP2, Juggluco, șamd).
+The Jelly comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip, OOP2, Juggluco, etc...).
 
 ![](../images/Jelly_Settings1.png)
 
@@ -29,31 +31,18 @@ Poți activa NFC pentru senzorii Libre.
 
 ![](../images/Jelly_Settings3.png)
 
-## Jelly Star Mini
-
-**Features**
-
-* Android 13
-* 8 GB RAM
-
 ### Optimizarea vieții bateriei
 
-Pentru a evita interferența cu **AAPS**, utilizarea bateriei Jelly Star ar trebui să fie dezactivată prin selectarea "nerestricționat" (și pentru alte aplicații **DIY** cum ar fi BYODA, xDrip+, OOP2, Juggluco, șamd).
+To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
-
-### Asistență inteligentă și blocarea aplicațiilor
-
-Ca și în cazul Jelly 2 (deasupra), Jelly Star ar trebui să aibă "Asistență Inteligentă" dezactivată pentru aplicațiile **DIY**. Similar, 'App Blocker' sub 'Settings' trebuie de asemenea oprit pentru a evita perturbările privind **AAPS**:
-
-![App Blocker Screenshot 2025-08-03 213400](../images/JellyStarMini2.jpg)
 
 ### Protecție Google Play
 
 Nu uitați să dezactivați Google Play Protect.
 
-### Conexiune la distanță pentru apk Wear 
+### Remote Connection for Wear apk
 
-Pentru anumite ceasuri inteligente, cum ar fi Galaxy Samsung, 'Conexiune la distanță' sub funcțiile avansate ale Galaxy Samsung trebuie să fie trecute cu **pornit** pentru a utiliza Jelly 2, **Wear.apk** & **AAPS** de la distanță prin wifi.
+For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
 
-![MURCIMG-20251007-WA0000](../images/500234283-5db08a08-f256-49a0-8843-46bdd01b33d6.png)
+![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
