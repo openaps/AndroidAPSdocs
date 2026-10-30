@@ -7,7 +7,7 @@
 
 -   Starte den Sensor
 
-- Wähle Ottai in [Konfigurations-Generator, BZ-Quelle](#Config-Builder-bg-source) aus.
+- Select **Syai/Ottai** in [Configuration, BG Source](#Config-Builder-bg-source).
 
 Aktiviere „Broadcast“ in der Ottai-App:
 
