@@ -9,42 +9,26 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Ztráta úložiště klíčů
-If you use the same keystore when updating **AAPS** you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a safe place.
+Pokud jste ztratili úložiště klíčů nebo heslo k němu, apk podepsané novým úložištěm klíčů nemůže aktualizovat vaši současnou aplikaci **AAPS**: musíte ji odinstalovat a znovu nainstalovat. Viz [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message explaining that the installation failed!
+## Selhala synchronizace Gradle (Gradle Sync failed)
+Gradle Sync může selhat z různých důvodů. Když se zobrazí zpráva „gradle sync failed“, otevřete kartu „Build“ (1) ve spodní části Android Studia a zkontrolujte, jaká chybová zpráva (2) se zobrazuje.
 
-In the event that you cannot trace your old keystore or password, proceed as follows:
-
-1. [Export settings](../Maintenance/ExportImportSettings.md) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate a new version of the signed apk as described on the [Update guide](../Maintenance/UpdateToNewVersion) and transfer it to your phone.
-5. Uninstall previous **AAPS** version on your phone.
-6. Install new **AAPS** version on your phone.
-7. [Import settings](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps) to restore your objectives and configuration.
-
-   If you can't find these on your phone, copy them from the external storage to your phone.
-
-8. Check your battery optimization options and disable them again.
-9. Smyčku pak můžete dále používat.
-
-## Error "on demand" Configuration
-Gradle Sync can fail for various reasons. When you receive a message saying that 'gradle sync failed', open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
-
-![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+![Gradle selhal](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 ```{contents} Likely reasons for gradle sync failures are:
 :depth: 1
 :local: true
 ```
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Důležité*: Když dokončíte postup pro svůj konkrétní problém, musíte znovu spustit [synchronizaci gradle](#gradle-resync).
 
 (troubleshooting_androidstudio-uncommitted-changes)=
 ### Neprovedené změny
 
-If you receive a failure message like this one:
+Pokud se zobrazí podobná chybová zpráva:
 
-![Gradle Uncommitted Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Neprovedené změny v Gradle](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
@@ -53,90 +37,90 @@ There are uncommitted changes.
 Clone sources again as described in wiki and do not allow gradle update
 ```
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+#### Krok 1 - Zkontrolujte instalaci Gitu
+  * Otevřete kartu terminálu (1) ve spodní části Android Studia a následující text zkopírujte a vložte nebo napište do terminálu (2).
     ```
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Verze Gitu v Gradle](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between Git and version!
+    Poznámka: Mezi git a version je mezera a dvě pomlčky!
 
-  * You must receive a message saying what Git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
+  * Musí se zobrazit zpráva s nainstalovanou verzí Gitu, jak vidíte na snímku obrazovky výše. V takovém případě přejděte na [Krok 2](#troubleshooting-android-studio-check-for-uncommitted-changes).
 
-  * In case you get an message saying
+  * Pokud se zobrazí zpráva
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    není vaše instalace Gitu v pořádku.
 
-  * [Check git installation](#BuildingAaps-steps-for-installing-git)
+  * [Kontrola instalace Gitu](#BuildingAaps-steps-for-installing-git)
 
-  * if on Windows and the Git was just installed, you should restart your computer to make Git globally available after the installation
+  * Pokud používáte Windows a Git jste právě nainstalovali, restartujte po instalaci počítač, aby byl Git dostupný v celém systému
 
-  * If Git is installed, you have restarted (if on windows), and Git still couldn't found:
+  * Pokud je Git nainstalovaný, restartovali jste (ve Windows) a Git stále nelze najít:
 
-  * Search your computer for a file "git.exe".
+  * Vyhledejte v počítači soubor „git.exe“.
 
-    Note for yourself, which directory it is saved in.
+    Poznamenejte si, ve kterém adresáři je uložený.
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your Git installation.
+  * Ve Windows otevřete Proměnné prostředí (Environment variables), vyberte proměnnou „PATH“ a klikněte na Upravit (edit). Přidejte adresář, ve kterém jste našli instalaci Gitu.
 
-  * Save and close.
+  * Uložte a zavřete.
 
-  * Restart Android Studio.
+  * Restartujte Android Studio.
 
 (troubleshooting-android-studio-check-for-uncommitted-changes)=
-#### Step 2: Check for uncommitted changes.
+#### Krok 2: Zkontrolujte neprovedené změny.
 
-  * In Android Studio, open the 'Commit' tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+  * V Android Studiu otevřete kartu „Commit“ (1) na levé straně. ![Karta Commit: neprovedené změny](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Uvidíte buď „Changes“ (ve starších verzích Android Studia „Default changeset“) (2), nebo „Unversioned Files“ (3):
 
-    * For "Default changeset", you probably updated 'Gradle' or changed some of the file contents by mistake.
+    * U „Changes“ jste pravděpodobně aktualizovali Gradle nebo omylem změnili obsah některých souborů.
 
-    * Right click on "Default Changeset" and select "Rollback"
+    * Klikněte pravým tlačítkem na „Changes“ a vyberte „Rollback…“ (1)
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Karta Commit: vrácení změn](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#gradle-resync).
+    * Soubory se znovu stáhnou ze serveru Git. Pokud na kartě Commit nejsou žádné další změny, přejděte na [Krok 3](#gradle-resync).
 
-  * If you can see "Unversioned Files", you might have stored files in your source code directory by mistake. Maybe they are important files: like your keystore file, that should be moved elsewhere. If you don't know what those files are and you have not created them yourself, you can delete them.
+  * Pokud vidíte „Unversioned Files“, možná jste omylem uložili soubory do adresáře se zdrojovým kódem. Mohou to být důležité soubory, například soubor úložiště klíčů, který byste měli přesunout jinam. Pokud nevíte, co jsou tyto soubory zač, a sami jste je nevytvořili, můžete je smazat.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a safe place.
+    * Pomocí běžného správce souborů v počítači přesuňte tento soubor (nebo ho vyjměte a vložte) na bezpečné místo.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the **AAPS** directory anymore.
+    * Vraťte se do Android Studia a klikněte na tlačítko Refresh (4) na kartě Commit, abyste se ujistili, že soubor už není uložený v adresáři **AAPS**.
 
-      If there are no other changes in the Commit tab, go to [Step 3](#gradle-resync).
+      Pokud na kartě Commit nejsou žádné další změny, přejděte na [Krok 3](#gradle-resync).
 
 
-#### Step 3: Resync Gradle (again)
+#### Krok 3: Znovu synchronizujte Gradle
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Postupujte podle návodu v části [Nová synchronizace Gradle](#gradle-resync).
 
-### Git Pull Failed - Please tell me who you are
+### Git Pull selhal - Please tell me who you are
 
-If you see this message, Git needs you to identify yourself.
+Pokud vidíte tuto zprávu, Git potřebuje, abyste se identifikovali.
 
-![Git identification](../images/studioTroubleshooting/164_Git_Identify.png)
+![Identifikace v Gitu](../images/studioTroubleshooting/164_Git_Identify.png)
 
-Open the terminal and type the following two commands, one after the other.
+Otevřete terminál a zadejte následující dva příkazy, jeden po druhém.
 
 ```
 git config --global user.name "Your name here"
 git config --global user.email your.email@here.com
 ```
 
-Your name needs to be written between quotation marks.
+Vaše jméno musí být napsané v uvozovkách.
 
-![Git identification fix](../images/studioTroubleshooting/164_Git_Identify2.png)
+![Oprava identifikace v Gitu](../images/studioTroubleshooting/164_Git_Identify2.png)
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 (incompatible-gradle-jvm)=
-### Incompatible Gradle JVM
+### Nekompatibilní Gradle JVM
 
-![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+![Nekompatibilní Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
 
 ```
 Your build is currently configured to use incompatible Java 21.0.3 and Gradle 8.2.
@@ -149,146 +133,147 @@ The minimum compatible Gradle version is 8.5.
 The maximum compatible Gradle JVM version is 19.
 ```
 
-Or:
+Nebo:
 
 ```
 Cause: error: invalid source release: 21
 ```
 
-If you experience the above error message, you need to download a correct JVM version before you can try rebuild again:
+Pokud se zobrazí výše uvedená chybová zpráva, musíte před novým pokusem o sestavení stáhnout správnou verzi JVM:
 
-1.  Check in the [requirement table](#Building-APK-recommended-specification-of-computer-for-building-apk-file) which JVM version you need for the **AAPS** version you are building, and make a note of it.
+1.  V [tabulce požadavků](#Building-APK-recommended-specification-of-computer-for-building-apk-file) zjistěte, jakou verzi JVM potřebujete pro verzi **AAPS**, kterou sestavujete, a poznamenejte si ji.
 
-2. Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+2. Otevřete zobrazení Gradle kliknutím na slona (1) na pravé straně Android Studia, otevřete nastavení (2) a vyberte **Gradle Settings** (3):
 
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+![Otevření Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  In **Gradle JDK** field, check if the appropriate version is selected (1) If not, click on the field, and see if it is already available in the list. The example below shows JVM 21 is labeled as “jbr-21”. If you find it, just select it, and you are done. If not available, then select 'Download JDK'.
+3.  V poli **Gradle JDK** zkontrolujte, zda je vybraná správná verze (1). Pokud ne, klikněte na pole a podívejte se, zda už je v seznamu k dispozici. Příklad níže ukazuje, že JVM 21 je označené jako „jbr-21“. Pokud ji najdete, stačí ji vybrat a máte hotovo. Pokud není k dispozici, vyberte **Download JDK** (2).
 
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+![Výběr Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. In Version (1), select the JDK required for your **AAPS** version (the one you made a note of when you checked the requirement table). In Vendor (2) select any Vendor. Location (3): do not change.
+4. V poli Version (1) vyberte JDK, které vyžaduje vaše verze **AAPS** (tu, kterou jste si poznamenali při kontrole tabulky požadavků). V poli Vendor (2) vyberte libovolného dodavatele. Location (3): neměňte. Klikněte na **Download** (4).
 
-![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+![Výběr JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
-5.  Close the **Settings** dialog with **OK**.
-6. You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](#gradle-resync).
+5.  Zavřete dialog **Settings** tlačítkem **OK**.
+6. Nyní musíte znovu spustit Gradle Sync. Postupujte podle návodu v části [Nová synchronizace Gradle](#gradle-resync).
 
 (incompatible-version-of-android-gradle-plugin)=
-### Incompatible version of Android Gradle plugin
+### Nekompatibilní verze Android Gradle pluginu
 
-  If you experience the following error message
+  Pokud se zobrazí následující chybová zpráva
 
 `The project is using an incompatible version (AGP x.x.x) of the Android Gradle plugin. Latest supported version is AGP x.x.x`
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![Nekompatibilní verze Android Gradle pluginu](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  Používáte zastaralou verzi Android Studia. V nabídce přejděte na Help > Check for updates a nainstalujte všechny nalezené aktualizace Android Studia a jeho pluginů.
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
-### Možnost 3 – Zkuste stáhnout aktualizace
+### Could not resolve / No cached version
 
-  You might get this error message:
+  Může se zobrazit tato chybová zpráva:
 
 ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * Zkopírujte ‘git checkout --’ do schránky (bez uvozovek)
+  * Na pravé straně otevřete kartu Gradle (1).
 
-    Make sure the button shown at (2) is *NOT* selected.
+    Ujistěte se, že tlačítko označené (2) *NENÍ* zapnuté.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Offline režim Gradle](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Nyní musíte spustit [novou synchronizaci Gradle](#gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  Pokud vidíte zmíněnou chybovou zprávu, pravděpodobně používáte 32bitový systém Windows 10. This is not supported by Android Studio 3.5.1 and above and unfortunately there is nothing that the **AAPS** developers can do about this!
+  Pokud vidíte zmíněnou chybovou zprávu, pravděpodobně používáte 32bitový systém Windows 10. Android Studio 3.5.1 a novější tuto možnost nepodporuje a vývojáři **AAPS** s tím bohužel nemohou nic udělat!
 
-  There is information on the internet about how to determine whether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  Na internetu najdete informace o tom, jak zjistit, zda máte 32bitový nebo 64bitový operační systém – například [tento návod](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
 (gradle-resync)=
-### Gradle Resync
+### Nová synchronizace Gradle
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
-
-
-  If you don't see the message anymore, you can still trigger this manually:
-
-  * Open the Gradle tab (1) on the right border of Android Studio.
-
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
-
-  * Right-click on AAPS (2)
-
-  * Click on "Reload Gradle Project" (3)
-
-## Varování kompilátoru Kotlin
-
-When you generate the signed apk, you might get the notification that generation was successfully but are told that this is with '0 build variants' were generated:
-
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
-
-This is a false warning. Check the directory for your selected "Destination folder" for generation (step [Generate Signed APK](#Building-APK-generate-signed-apk)) and you will find the generated apk there!
+  Pokud stále vidíte zprávu, že gradle sync selhala, klikněte nyní na odkaz **Try again** (1). ![Režim Gradle Sync Failed](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-## Klíč byl vytvořen s chybami
+  Pokud už zprávu nevidíte, můžete synchronizaci spustit i ručně:
 
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+  * Otevřete kartu Gradle (1) na pravém okraji Android Studia.
 
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+    ![Opětovné načtení Gradle](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-Your apk was built successfully and can be transferred to your phone!
+  * Klikněte pravým tlačítkem na AAPS (2)
+
+  * Klikněte na „Reload Gradle Project“ (3)
+
+## Generate Signed APK: úspěšně vytvořeno s 0 variantami sestavení
+
+Když vytváříte podepsané apk, může se zobrazit oznámení, že vytvoření bylo úspěšné, ale s informací, že bylo vytvořeno „0 build variants“ (0 variant sestavení):
+
+![APK vytvořeno s 0 variantami sestavení](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+
+Toto je falešné varování. Zkontrolujte adresář, který jste vybrali jako „Destination folder“ (cílová složka) pro vytvoření (krok [Generate Signed APK](#Building-APK-generate-signed-apk)), a vytvořené apk tam najdete!
 
 
-## No CGM data is received by AAPS
+## Aplikace byla vytvořena s varováními kompilátoru/kotlinu
 
-* If you are using patched Dexcom G6 app: this app is outdated. Use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
+Pokud sestavení proběhlo úspěšně, ale zobrazí se varování kompilátoru nebo kotlinu (označená žlutým nebo modrým vykřičníkem), můžete tato varování jednoduše ignorovat.
 
-* If you are using xDrip+: identify receiver as described on [xDrip+ settings page](#xdrip-identify-receiver).
+ ![Gradle skončil s varováními](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+
+Vaše apk bylo úspěšně sestaveno a můžete ho přenést do telefonu!
 
 
-## Apk not installed
+## AAPS nepřijímá žádná data z CGM
 
-![poznámka o nainstalované aplikaci v telefonu](../images/Update_AppNotInstalled.png)
+* Pokud používáte upravenou aplikaci Dexcom G6: tato aplikace je zastaralá. Místo ní použijte aplikaci [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+
+* Pokud používáte xDrip: nastavte identifikaci přijímače (identify receiver) podle [stránky s nastavením xDrip](#xdrip-identify-receiver).
+
+
+## Apk není nainstalováno
+
+![aplikace v telefonu není nainstalována](../images/Update_AppNotInstalled.png)
 
 * Ujistěte se, že jste do telefonu přenesli soubor „app-full-release.apk“.
+* Tato chyba obvykle znamená, že nové apk je podepsané jiným úložištěm klíčů než vaše nainstalovaná aplikace **AAPS**. Pokud ještě máte své předchozí úložiště klíčů, vyberte ho a sestavte znovu. Jinak viz [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
 * Pokud se na telefonu zobrazí "Aplikace není nainstalována", postupujte následovně:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
-2. Uninstall **AAPS** on your phone.
-3. Změňte cílovou složku APK (jiné umístění).
+1. [Exportujte nastavení](../Maintenance/ExportImportSettings.md) (ve verzi AAPS, která je už nainstalovaná v telefonu)
+2. Odinstalujte **AAPS** z telefonu.
+3. Zapněte režim letadlo a vypněte Bluetooth.
 4. Nainstalujte novou verzi (“app-full-release.apk”)
 5. [Importujte nastavení](../Maintenance/ExportImportSettings.md)
-6. Znovu zapněte bluetooth a vypněte režim letadlo
+6. Znovu zapněte Bluetooth a vypněte režim letadlo
 
-## Apk installed but old version
+## Apk je nainstalováno, ale ve staré verzi
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](#Update-to-new-version-update-your-local-copy)
+Pokud jste aplikaci úspěšně sestavili, přenesli do telefonu a úspěšně nainstalovali, ale číslo verze zůstává stejné, pravděpodobně jste zapomněli [aktualizovat svou místní kopii](#Update-to-new-version-update-your-local-copy)
 
-## Neprovedené změny
+## Nic z výše uvedeného nepomohlo
 
-If none of the above tips helped you might consider building the apk from scratch:
+Pokud vám žádný z výše uvedených tipů nepomohl, zkuste sestavit apk úplně znovu:
 
-1. [Export settings](../Maintenance/ExportImportSettings.md) (in AAPS version already installed on your phone)
+1. [Exportujte nastavení](../Maintenance/ExportImportSettings.md) (ve verzi AAPS, která je už nainstalovaná v telefonu)
 
-2. Have your key password and key store password ready.
+2. Připravte si heslo ke klíči a heslo k úložišti klíčů.
 
     Nebo můžete vytvořit a použít nové úložiště klíčů.
 
-3. Build the apk from scratch as described [here](#Building-APK-download-AAPS-code).
+3. Sestavte apk úplně znovu, jak je popsáno [zde](#Building-APK-download-AAPS-code).
 
-4. When you have built the apk successfully delete the existing apk on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Maintenance/ExportImportSettings.md) again to restore your objectives and settings.
-6. Znovu zapněte bluetooth a vypněte režim letadlo
+4. Když apk úspěšně sestavíte, smažte stávající apk v telefonu, přeneste nové apk do telefonu a nainstalujte ho.
+5. Znovu [importujte nastavení](../Maintenance/ExportImportSettings.md), abyste obnovili své cíle a nastavení.
+6. Zkontrolujte nastavení optimalizace baterie a znovu ji vypněte.
 
-## Aplikace není nainstalována
+## Nejhorší případ
 
-If the above does not solve your build issue you may wish to try to uninstall Android Studio completely and rebuild from scratch.  Some users find that this can resolve their build problem.  When deleting Android Studio, do not delete Android user settings and **Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). manuály pro kompletní odinstalaci můžete najít na internetu, například
+Pokud výše uvedené váš problém se sestavením nevyřeší, můžete zkusit Android Studio úplně odinstalovat a sestavit vše znovu od začátku.  Někteří uživatelé zjistili, že to může jejich problém se sestavením vyřešit.  Při mazání Android Studia nemažte uživatelská nastavení Androidu a **nezapomeňte odinstalovat všechny soubory, které k Android Studiu patří.** Pokud Android Studio neodstraníte úplně, včetně všech skrytých souborů, může odinstalace místo vyřešení stávajících problémů způsobit nové. Návody na úplnou odinstalaci najdete na internetu, například
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](#Building-APK-install-android-studio).
+Nainstalujte Android Studio úplně znovu, jak je popsáno [zde](#Building-APK-install-android-studio).
