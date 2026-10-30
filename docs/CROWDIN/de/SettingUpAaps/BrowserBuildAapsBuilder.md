@@ -51,7 +51,7 @@ Ein privates Repository bekommt 2000 kostenlose GitHub-Actions-Minuten pro Monat
 **Neuer oder vorhandener Schlüssel: Davon hängt ab, ob Du AAPS aktualisieren kannst.**
 
 - **Du hast AAPS schon auf Deinem Smartphone, erstellt mit einem Keystore, den Du noch hast**: Wähle auf der Einrichtungsseite **I already have a keystore** und lade ihn hoch. Dein nächster Build aktualisiert AAPS dann direkt. Du hast AAPS mit dem bisherigen Browser-Build erstellt (Dein eigener Fork)? Dann liegt Dein Keystore in Deinem Fork: [Besorge Dir zuerst eine Kopie](#aaps-builder-from-fork) davon.
-- **Du erstellst AAPS zum ersten Mal, oder Du hast Deinen Keystore oder sein Passwort verloren**: Wähle **Create a new key**. Eine App, die mit einem neuen Schlüssel signiert ist, kann kein AAPS aktualisieren, das mit einem anderen Schlüssel signiert wurde. Du musst Deine Einstellungen exportieren, die Datei vom Smartphone weg kopieren, das alte AAPS deinstallieren, das neue installieren und dann Deine Einstellungen importieren: siehe [Verlorener Keystore](#troubleshooting_androidstudio-lost-keystore).
+- **Du erstellst AAPS zum ersten Mal, oder Du hast Deinen Keystore oder sein Passwort verloren**: Wähle **Create a new key**. Eine App, die mit einem neuen Schlüssel signiert ist, kann kein AAPS aktualisieren, das mit einem anderen Schlüssel signiert wurde. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 Nutze danach immer denselben Schlüssel. Wenn Du einen neuen Schlüssel erstellst, lade die Sicherung herunter, die die Seite anbietet, und bewahre sie zusammen mit Passwort und Alias (`key0`) an einem sicheren Ort außerhalb Deines Smartphones auf.
 ```
@@ -257,7 +257,7 @@ GitHub zeigt **Page not found** (404)? Prüfe zuerst, ob Du in diesem Browser be
 2. Falls GitHub nachfragt, tippe auf die grüne Schaltfläche, um Workflows zu aktivieren.
 3. Tippe auf **Run workflow**. Ein kleines Formular öffnet sich:
    - **Version**: Behalte `latest`, um die neueste AAPS-Version zu erstellen, oder gib eine Versionsnummer wie z. B. `3.3.2.1` ein.
-   - **Variant**: Behalte `fullRelease` für die normale Nutzung mit einer Pumpe. Die anderen Varianten werden unter [Build-Varianten](#browserbuild-variant) erklärt. Wähle nicht `aapsclient3Release`aus: **AAPSClient3** gibt es erst ab **AAPS**-Version 4.0.
+   - **Variant**: Behalte `fullRelease` für die normale Nutzung mit einer Pumpe. Die anderen Varianten werden unter [Build-Varianten](#browserbuild-variant) erklärt. `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
    - Tippe auf die grüne Schaltfläche **Run workflow**.
 
    ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
@@ -368,10 +368,7 @@ Die erste Zeile der Datei zeigt die Version.
 
 ## Problembehandlung
 
-Um zu sehen, warum ein Build fehlgeschlagen ist, öffne ihn über **Open my builds** auf der Einrichtungsseite: Im Feld **Annotations** unter dem Diagramm steht die Fehlermeldung. Für das vollständige Protokoll tippe auf den Job mit dem roten Kreuz und dann auf den Schritt mit dem roten Kreuz.
-
-- **Ein Secret ändern**: Öffne in Deinem Repository **Settings** → **Secrets and variables** → **Actions**, tippe auf den Stift neben dem Secret, füge den neuen Wert ein und tippe auf **Update secret**.
-- **Den Build nach einer Korrektur erneut starten**: Öffne den fehlgeschlagenen Build, tippe oben auf **⋯** und dann auf **Re-run all jobs**, oder starte einen neuen Build wie in [Schritt 5](#aaps-builder-step5).
+To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
 
 - **Der Build bricht mit „This repository is PUBLIC“ ab**: Öffne in Deinem Repository **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** und erstelle dann erneut.
 - **"Secret KEYSTORE_SET is missing"**: Führe Schritt 4 der Einrichtungsseite aus.
