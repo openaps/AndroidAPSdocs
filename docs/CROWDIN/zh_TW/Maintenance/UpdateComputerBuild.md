@@ -15,7 +15,7 @@
 :local: true
 ```
 
-如果您遇到問題，請參見單獨的[問題排除Android Studio](../GettingHelp/TroubleshootingAndroidStudio)頁面。
+In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 ### 匯出你的設定
 
@@ -29,11 +29,6 @@
 
 (Update-to-new-version-update-your-local-copy)=
 ### 更新本地副本
-
-```{admonition} WARNING
-:class: warning
-如果你從 2.8.x 之前的版本更新，請遵循指示進行 [新複製](../SettingUpAaps/BuildingAaps.md)，因為這個指南對你無效！
-```
 
 * 使用 Android Studio 開啟你現有的 AAPS 項目。你可能需要選擇你的項目。(雙擊) 點擊 AAPS 項目。
 
@@ -87,9 +82,11 @@ Update-to-new-version-build-the-signed-apk)=
 如果你使用相同的現有金鑰庫在 Android Studio 中完成了構建，那麼你不需要刪除手機上的現有應用。當你安裝 apk 時，按照提示安裝更新。對於其他情況，例如在 Android Studio 中為你的簽章 apk 建立新密鑰庫，你將需要刪除舊應用程式後再安裝 apk。**確保匯出你的設定！**
 ```
 
-請參閱有關[傳送和安裝 AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)的說明。
+See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
 
 繼續 [這裡](#Update-to-new-version-check-aaps-version-on-phone)。
+
+(update-computer-build-troubleshooting)=
 
 ## 問題排除
 
@@ -97,6 +94,6 @@ Update-to-new-version-build-the-signed-apk)=
 
 先深呼吸！
 
-然後查看專門頁面[問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)，看看你的問題是否已經紀錄在案！
+Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) if your problem is already documented!
 
 如果你需要進一步幫助，請聯繫其他**AAPS**使用者，透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。
