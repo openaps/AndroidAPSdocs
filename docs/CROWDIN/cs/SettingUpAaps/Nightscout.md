@@ -4,51 +4,51 @@
 
 ## Bezpečnostní pokyny
 
-Kromě sledování může být Nightscout použit také k ovládání AAPS. Tj. můžete nastavit dočasné cíle nebo přidat budoucí sacharidy. Tyto informace budou sbírány AAPS a bude to fungovat odpovídajícím způsobem. Proto stojí za to přemýšlet o zabezpečení Nightscout webové stránky.
+Nightscout je reportovací a monitorovací server pro **AAPS**: **AAPS** do něj nahrává vaše data a vy nebo vaši pečovatelé je sledujete na webu Nightscoutu nebo v aplikacích pro sledující. Obsahuje vaše zdravotní data, profily a ošetření, a proto stojí za to myslet na zabezpečení vašeho webu Nightscout.
 
-Buďte maximálně opatrní, pokud používáte Nightscout jako zdroj dat v AAPS.
+V **AAPS** 4 vzdálené ovládání neprobíhá přes web Nightscoutu. Když je zapnuté ovládání z klienta ([zabezpečený režim](#client-master-control-hardened-mode)), **AAPS** ošetření ani cíle zadané přímo v Nightscoutu **nepoužije**. Vzdálené příkazy místo toho přicházejí ze spárovaného **AAPSClient** – viz [Ovládání Master ↔ Client](#client-master-control).
 
-### Nightscout settings
+Pokud používáte Nightscout jako zdroj glykémie pro AAPS, buďte maximálně opatrní.
 
-Veřejný přístup k webu Nightscout můžete odepřít použitím [autentizačních rolí](https://nightscout.github.io/nightscout/security): ujistěte se, že sdílíte svou URL pouze pomocí `tokenu pro čtení`, nikdy s `admin` tokenem.
+### Nastavení Nightscoutu
+
+Veřejný přístup k webu Nightscout můžete odepřít použitím [autentizačních rolí](https://nightscout.github.io/nightscout/security): svou URL sdílejte pouze s tokenem `readable`, nikdy s tokenem `admin`.
 
 Nightscout `API_SECRET` je hlavní heslo vašeho webu: nesdílejte jej veřejně.
 
 (Nightscout-aaps-settings)=
 
-### AAPS settings
+### Nastavení AAPS
 
-AAPS můžete nastavit tak, aby přijímal Nightscout příkazy (změny profilu, ošetření, ...), nebo je zcela zakázat.
+Přijímání dat z Nightscoutu (změny profilu, ošetření, ...) je volitelné a ve výchozím stavu vypnuté. Níže popsané přepínače jsou skryté, když je zapnuté ovládání z klienta (zabezpečený režim) a v [zjednodušeném režimu](#preferences-simple-mode).
 
-* Přistupujte k nastavením pluginů NSClient nebo NSClientV3 pomocí 1) Hlavní zobrazení -> Konfigurace -> Synchronizace -> Ikona ozubeného kola u NSClient 2) Záložka NSCLIENT -> Třítečkové menu -> Předvolby pluginu
-* Povolte nahrání všech dat do Nightscoutu (3), protože to je nyní standardní postup, pokud není zdrojem vašich údajů o glykémii Nightscout.  
-  Pokud je v AAPS zdrojem vašich údajů o glykémii Nightscout, **nepovolujte** nahrávání údajů o glykémii do NS (3).
-* Nepovolujte přijímání/vyplňování dat (4) pokud Nightscout není vaším zdrojem dat glykémie.
-
-![Nightscout pouze nahrávání](../images/NSsafety.png)
+* Nastavení **Synchronizace** pluginu NSClientV3 otevřete buď 1) **Nastavení** (ikona ozubeného kola na hlavní obrazovce) -> **NSClientV3** -> **Synchronizace**, nebo 2) **Konfigurace** (menu ☰) -> **Komunikace** -> „**Nastavení**“ pod NSClientV3.
+* Zapněte „Nahrávat data do NS“.
+* „Nahrávat glykémie do NS“ najdete v nastavení vašeho zdroje glykémie (**Konfigurace → Zdroj glykémie → Nastavení**). Zapněte ho, pokud vaším zdrojem glykémie pro AAPS není Nightscout. V tom případě ho **nezapínejte**.
+* „Přijímat data CGM z NS“ nezapínejte, pokud Nightscout není vaším zdrojem glykémie.
 
 #### Nesynchronizujte z Nightscoutu
 
-Zakázáním těchto možností se zajistí, že žádná změna v Nightscoutu nebude použita AAPS.
+Pokud necháte všechny volby „Přijímat ... z NS“ vypnuté, AAPS nepoužije žádnou změnu z Nightscoutu:
 
-![Nightscout pouze nahrávání](../images/NSsafety2.png)
+![Nightscout pouze nahrávání](../images/preferences/settings_nsclient_sync.png)
 
 #### Přijmout změny z Nightscoutu
 
-Povolení těchto možností vám umožní vzdáleně měnit nastavení AAPS přes Nightscout, např. změny a přepínání profilů, dočasné cíle a přidávání sacharidů, které budou brány v úvahu AAPS.  
-Mějte ale na paměti, že zadané dávky inzulínu budou použity pouze pro výpočty podle pravidla "Neaplikovat inzulín, pouze zaznamenat".
+Zapnutím těchto voleb můžete měnit nastavení AAPS přes Nightscout, například úpravy a přepnutí profilu, dočasné cíle a přidání sacharidů, které AAPS vezme v úvahu. Zobrazují se, jen když je ovládání z klienta i zjednodušený režim vypnuté.  
+Inzulínová ošetření se použijí jen pro výpočty, jako by šlo o „Nebolusovat, pouze zaznamenat“.
 
-![Nightscout pouze nahrávání](../images/NSsafety3.png)
+![Zapnuté volby přijímání z Nightscoutu](../images/NSsafety3.png)
 
 ### Další nastavení zabezpečení
 
-Keep your phone up to date as described in [safety first](#preparing-safety-first).
+Udržujte svůj telefon aktualizovaný, jak je popsáno v části [bezpečnost na prvním místě](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Ruční nastavení Nightscoutu
 
-Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte stránku [Nightscout](http://nightscout.github.io/nightscout/new_user/) pro návod k založení. Následující pokyny jsou nastavení, která potřebujete provést v Nightscoutu pro správnou funkčnost AndroidAPS. Aby fungovalo správně propojení s AAPS od verze 3.2, váš Nightscout server musí být alespoň ve verzi 15. Ověřte si, že provozujete [poslední verzi](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) Nightscoutu, jinak bude AAPS reagovat chybovou zprávou.
+Předpokládá se, že už web Nightscout máte. Pokud ne, navštivte stránku [Nightscout](http://nightscout.github.io/nightscout/new_user/), kde najdete úplný návod k nastavení. Níže uvedené pokyny jsou nastavení, která budete muset přidat také na svůj web Nightscout. Váš web Nightscout musí mít alespoň verzi 15. Zkontrolujte proto, že používáte [nejnovější verzi](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version), jinak se vám v aplikaci AAPS zobrazí chybová zpráva.
 
 * [Upravte své proměnné](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
