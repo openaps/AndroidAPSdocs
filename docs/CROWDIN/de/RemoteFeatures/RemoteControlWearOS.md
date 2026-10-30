@@ -188,7 +188,7 @@ Abhängig von Deiner Wear-OS-Version, Marke und Smartphone gibt es zwei Möglich
 1. Auf Deiner Uhr von Deinem Watchface; 
   * Wische so oft von rechts nach links, bis du "+ Kacheln hinzufügen" erreichst 
   * Wähle eine der Kacheln aus.
-2. Öffne auf deinem Smartphone die Begleit-App für Ihre Uhr. 
+2. Öffne auf Deinem Smartphone die Begleit-App für Deine Smartwatch. 
   * Für Samsung öffne "Galaxy Wearable" oder für andere Marken "Wear OS"
   * Mit dem Klick auf den Abschnitt "Kacheln", gefolgt von "+ Hinzufügen" Button
   * Entscheide Dich für die Kachel, die Du hinzufügen möchtest und wähle sie aus. ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
@@ -246,7 +246,7 @@ Während des Ladens wäre es hilfreich, wenn das Display auf "always-on" bleibt 
 
 Der vereinfachte UI-Modus ist für diese Zifferblätter verfügbar: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, Cockpit. Das vereinfachte UI ist optional und wird über die Einstellungen der Ziffernblätter konfiguriert. (Halte das Ziffernblatt lange gedrückt und klicke auf "Bearbeiten" oder auf das Zahnrad-Symbol) Wähle die Konfiguration "Einfache UI" und setze sie auf "always-on" oder "always-on und aufladen"
 
-Die Android-Entwickleroptionen ermöglichen es Deiner Uhr wach zu bleiben, während sie aufgeladen wird. Um die Entwickleroptionen zur Verfügung zu stellen, lesen Sie die [offizielle Dokumentation](https://developer.android.com/training/wearables/get-started/debugging). Setze in den Entwickleroptionen das "Bleib beim Aufladen" auf "an".
+Die Android-Entwickleroptionen ermöglichen es Deiner Uhr wach zu bleiben, während sie aufgeladen wird. Um die Entwickleroptionen zur Verfügung zu stellen, lies die [offizielle Dokumentation](https://developer.android.com/training/wearables/get-started/debugging). Setze in den Entwickleroptionen das "Bleib beim Aufladen" auf "an".
 
 Hinweis: Nicht alle Displays können always-on gut handhaben. Es kann dazu führen, dass sich der Bildschirm einbrennt, insbesondere auf den älteren OLED-Displays. Die Uhren verdunkeln das Display im Allgemeinen, um das Einbrennen zu verhindern; bitte informiere Dich über das Handbuch , Angaben des Herstellers oder das Internet für Ratschläge.
 

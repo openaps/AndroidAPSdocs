@@ -6,8 +6,8 @@ Die kleinste injizierbare Dosis Insulin bei Verwendung des Patches beträgt 0,05
 
 ## Pumpen-Einrichtung
 1. Klicke auf dem AndroidAPS Startbildschirm oben links auf das Hamburger Menü und wähle den Konfigurations-Generator aus.
-1. Wählen Sie im Bereich Pumpen 'EOPatch2' aus.
-1. Drücken Sie die Zurück-Taste, um zum Startbildschirm zurückzukehren.
+1. Wähle im Bereich Pumpen „EOPatch2“ aus.
+1. Drücke die Zurück-Taste, um zum Startbildschirm zurückzukehren.
 
 
 ![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
@@ -15,7 +15,7 @@ Die kleinste injizierbare Dosis Insulin bei Verwendung des Patches beträgt 0,05
 ## Einstellungen
 Wähle EOPATCH2 oben auf dem Startbildschirm, um zum EOPATCH2-Tab zu gelangen.
 
-Wählen Sie das Menü EOPatch2 Einstellungen, indem Sie auf die drei Punkte in der oberen rechten Ecke klicken.
+Wähle das Menü EOPatch2-Einstellungen, indem Du auf die drei Punkte in der oberen rechten Ecke klickst.
 
 Das Menü EOPatch2 Einstellungen bietet ein Menü zur Einstellung von 3 Benachrichtigungstypen.
 

@@ -336,56 +336,56 @@ Dafür brauchst Du ein weiteres Secret, `GDRIVE_OAUTH2`. Den Wert bekommst Du mi
 
 1. Lade am **Computer** die Vorbereitungsdatei herunter und öffne sie wie unter [Option 1 – Computer beschrieben](BrowserBuildO1Computer.md). Überspringe den Keystore-Teil: Deinen Schlüssel hast Du schon.
 2. Folge [Schritt 3 – Google Drive autorisieren](#aaps-ci-google-drive-auth), um den `GDRIVE_OAUTH2`-Wert zu bekommen.
-3. On the setup page, step 7 opens your secrets page.
+3. Auf der Einrichtungsseite öffnet Schritt 7 Deine Secrets-Seite.
 
    ![Setup page step 7](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
 
-   Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Paste your `GDRIVE_OAUTH2` value into the big **Secret** box and tap **Add secret**.
+   Tippe auf **Copy name**, und füge ihn in das kleine Feld **Name** ein (der Name ist `GDRIVE_OAUTH2`). Füge Deinen `GDRIVE_OAUTH2`-Wert in das große Feld **Secret** ein und tippe auf **Add secret**.
 
-From the next build, the APKs are also saved in Google Drive.
+Ab dem nächsten Build werden die APKs zusätzlich in Google Drive gespeichert.
 
-Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
+Wenn Du 6 Monate lang nichts erstellst oder Dein Google-Passwort änderst, entzieht Google den Zugriff. Der Build meldet das dann: Wiederhole diese Schritte. Siehe [Google Refresh Token Expired](#aaps-ci-google-token-expired).
 
 (aaps-builder-updates)=
 
 ## Aktualisiere AAPS
 
-Your repository never builds anything by itself: you decide when to build, which version and which variant. When a new AAPS version is released:
+Dein Repository erstellt nie etwas von selbst: Du entscheidest, wann welche Version und welche Variante erstellt wird. Wenn eine neue AAPS-Version erscheint:
 
-1. [Back up your settings](#aaps-builder-step6) as explained in step 6.
-2. Build the new version as in [step 5](#aaps-builder-step5). Keep `latest`, or type the release number.
-3. Download and install it as in [step 6](#aaps-builder-step6).
+1. [Sichere Deine Einstellungen](#aaps-builder-step6) wie in Schritt 6 beschrieben.
+2. Erstelle die neue Version wie in [Schritt 5](#aaps-builder-step5). Behalte `latest` oder gib die Versionsnummer ein.
+3. Lade sie herunter und installiere sie wie in [Schritt 6](#aaps-builder-step6).
 
-**Updates of the build workflow:** your repository never downloads a new workflow by itself, and the build steps it runs are pinned to one reviewed version. When the workflow changes, the [Docs updates & changes](../Maintenance/DocumentationUpdate.md) page says so. To update, open step 2 of the setup page, then tap **Updating the workflow, or the text area is empty?**:
+**Updates des Build-Workflows:** Dein Repository lädt nie von selbst einen neuen Workflow herunter, und die Build-Schritte, die er ausführt, sind auf eine geprüfte Version festgelegt. Ändert sich der Workflow, wird das auf der Seite [Docs Updates & Änderungen](../Maintenance/DocumentationUpdate.md) vermerkt. Zum Aktualisieren öffne Schritt 2 der Einrichtungsseite und tippe auf **Updating the workflow, or the text area is empty?**:
 
-1. Tap **Copy workflow**, then **Open my workflow file**.
-2. Replace the whole text with the copied workflow (long press on a phone: **Select all**, then **Paste**).
-3. Tap **Commit changes…**, then **Commit changes**.
+1. Tippe auf **Copy workflow** und dann auf **Open my workflow file**.
+2. Ersetze den gesamten Text durch den kopierten Workflow (auf dem Smartphone lange drücken: **Alles auswählen**, dann **Einfügen**).
+3. Tippe auf **Commit changes…** und dann auf **Commit changes**.
 
-The first line of the file shows its version.
+Die erste Zeile der Datei zeigt die Version.
 
 (aaps-builder-troubleshooting)=
 
 ## Problembehandlung
 
-To see why a build failed, open it from **Open my builds** on the setup page: the **Annotations** box below the diagram shows the error message. For the full log, tap the job with the red cross, then the step with the red cross.
+Um zu sehen, warum ein Build fehlgeschlagen ist, öffne ihn über **Open my builds** auf der Einrichtungsseite: Im Feld **Annotations** unter dem Diagramm steht die Fehlermeldung. Für das vollständige Protokoll tippe auf den Job mit dem roten Kreuz und dann auf den Schritt mit dem roten Kreuz.
 
-- **To change a secret**: open your repository's **Settings** → **Secrets and variables** → **Actions**, tap the pencil next to the secret, paste the new value and tap **Update secret**.
-- **To run the build again** after a fix: open the failed build, tap **⋯** at the top, then **Re-run all jobs**, or start a new build as in [step 5](#aaps-builder-step5).
+- **Ein Secret ändern**: Öffne in Deinem Repository **Settings** → **Secrets and variables** → **Actions**, tippe auf den Stift neben dem Secret, füge den neuen Wert ein und tippe auf **Update secret**.
+- **Den Build nach einer Korrektur erneut starten**: Öffne den fehlgeschlagenen Build, tippe oben auf **⋯** und dann auf **Re-run all jobs**, oder starte einen neuen Build wie in [Schritt 5](#aaps-builder-step5).
 
-- **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
-- **"Secret KEYSTORE_SET is missing"**: do step 4 of the setup page.
-- **"The secret is too short"**, **"The secret is not a valid code"** or **"The secret does not contain a keystore"**: the wrong text was pasted into the secret, often the word `KEYSTORE_SET` itself, or only part of the code. In your repository, open **Settings** → **Secrets and variables** → **Actions**, edit `KEYSTORE_SET` and paste the long code from **Copy secret** again (redo step 3 of the setup page first if you closed it).
-- **"Keystore, password or alias is wrong"**: check your keystore's password and alias, then redo steps 3 and 4 of the setup page.
-- **"Version … does not exist"**: the version you typed is not an AAPS release. Use `latest`, or check the release number.
-- **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
-- **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
-- **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 6](#aaps-builder-step6). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
-- **"Could not read the workflow file"** on the setup page: reload the page and tap the button again. The setup page must be opened from this documentation site.
-- **GitHub says the file already exists** when you commit the workflow: your repository already has a workflow. Update it instead, as explained in [Updating AAPS](#aaps-builder-updates).
-- **"Google Drive access has expired or was revoked"**: redo [step 7](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
+- **Der Build bricht mit „This repository is PUBLIC“ ab**: Öffne in Deinem Repository **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private** und erstelle dann erneut.
+- **"Secret KEYSTORE_SET is missing"**: Führe Schritt 4 der Einrichtungsseite aus.
+- **"The secret is too short"**, **"The secret is not a valid code"** oder **"The secret does not contain a keystore"**: Im Secret steht der falsche Text, oft das Wort `KEYSTORE_SET` selbst oder nur ein Teil des Codes. Öffne in Deinem Repository **Settings** → **Secrets and variables** → **Actions**, bearbeite `KEYSTORE_SET` und füge den langen Code aus **Copy secret** noch einmal ein (wiederhole vorher Schritt 3 der Einrichtungsseite, falls Du sie geschlossen hast).
+- **"Keystore, password or alias is wrong"**: Prüfe Passwort und Alias Deines Keystores und wiederhole dann die Schritte 3 und 4 der Einrichtungsseite.
+- **"Version … does not exist"**: Die eingegebene Version ist keine AAPS-Version. Verwende `latest` oder prüfe die Versionsnummer.
+- **"Page not found" (404), wenn die Einrichtungsseite GitHub öffnet**: Melde Dich im selben Browser bei github.com an (bei privaten Repositorys zeigt GitHub 404 an, wenn Du nicht angemeldet bist). Bist Du angemeldet, passt der Benutzername oder Repository-Name aus Schritt 1 der Einrichtungsseite nicht zu Deinem Repository. Gib die exakten Namen ein.
+- **"No GitHub user with this name"** in Schritt 1: Gib Deinen GitHub-Benutzernamen so ein, wie er in Deinem GitHub-Profil steht, nicht Deine E-Mail-Adresse.
+- **Kein Download-Link, oder die GitHub-App hat sich geöffnet**: Die GitHub-App kann keine Builds herunterladen. Öffne den Build in Chrome wie in [Schritt 6](#aaps-builder-step6) beschrieben. Damit GitHub-Links nicht mehr in der App geöffnet werden: Android **Einstellungen** → **Apps** → **GitHub** → **Standardmäßig öffnen** → deaktiviere **Unterstützte Links öffnen**.
+- **"Could not read the workflow file"** auf der Einrichtungsseite: Lade die Seite neu und tippe noch einmal auf die Schaltfläche. Die Einrichtungsseite muss über diese Dokumentations-Website geöffnet werden.
+- **GitHub meldet beim Committen des Workflows, dass die Datei schon existiert**: Dein Repository hat bereits einen Workflow. Aktualisiere ihn stattdessen, wie unter [AAPS aktualisieren](#aaps-builder-updates) beschrieben.
+- **"Google Drive access has expired or was revoked"**: Wiederhole [Schritt 7](#aaps-builder-google-drive) und aktualisiere das Secret `GDRIVE_OAUTH2`.
 
-For other GitHub and Google Drive issues, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
+Bei anderen Problemen mit GitHub und Google Drive, schau unter [Browser-Build-Fehlerbehebung](../GettingHelp/BrowserBuildTroubleshooting.md) nach.
 
 ```{toctree}
 :hidden:

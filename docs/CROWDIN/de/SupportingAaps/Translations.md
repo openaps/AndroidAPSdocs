@@ -32,7 +32,7 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     ### Strings (Zeichenketten) der AAPS-App korrekturlesen
     
-    * Korrekturlesende starten das Korrekturlesen, indem Sie auf dem Startschirm des Projekts „Proofread“ aufrufen.
+    * Korrekturlesende starten das Korrekturlesen, indem sie auf dem Startschirm des Projekts „Proofread“ aufrufen.
     
        ![Proofreading mode app](../images/translations-proofreading-mode.png) 
     

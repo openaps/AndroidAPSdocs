@@ -447,7 +447,7 @@ Mehr Informationen findest Du auf der Seite [SMS-Befehle](../RemoteFeatures/SMSC
 Wähle aus, welcher Standortdienst verwendet werden soll:
 
 - Passiven Standort verwenden: **AAPS** nutzt den Standort nur dann, wenn er von anderen Apps angefordert wird
-- Netzwerkstandort: Standort Ihres Wi-Fi
+- Netzwerkstandort: Standort Deines WLAN
 - GPS-Standort (Achtung! Kann zu übermäßigen Akkuverbrauch führen!)
 
 ## Lokale Alarme

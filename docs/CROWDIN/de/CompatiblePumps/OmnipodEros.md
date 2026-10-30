@@ -109,7 +109,7 @@ Wenn Du Deinen RileyLink bereits erfolgreich im Setup-Assistenten oder wie oben 
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-3. Drücke die **Weiter** Taste, um mit dem Rest des **Einrichtungsassistenten** fortzufahren. **Wählen Sie Ihren RileyLink (5)**  aus der Liste der verfügbaren Bluetooth-Geräte aus.
+3. Drücke die **Weiter** Taste, um mit dem Rest des **Einrichtungsassistenten** fortzufahren. **WähleDeinen RileyLink (5)**  aus der Liste der verfügbaren Bluetooth-Geräte aus.
 
    > ![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
 
