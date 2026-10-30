@@ -2,7 +2,7 @@
 
 ## AAPS 如何計算 COB 值？
 
-當使用者在用餐項目或碳水化合物校正中輸入碳水化合物時，**AAPS** 會將此計算添加到目前的碳水化合物儲量中 (**COB**)。 **AAPS** 接著會根據的使用者**血糖**變化，計算出使用者的碳水化合物吸收。吸收的速度取決於碳水化合物的敏感性因子 (**’CSF**”)。這不是使用者**設定檔**中的功能，而是由**AAPS** 根據**ISF/I:C** 的設置來計算，根據1克碳水化合物會使使用者**血糖** 上升多少mg/dl來決定。
+當使用者在用餐項目或碳水化合物校正中輸入碳水化合物時，**AAPS** 會將此計算添加到目前的碳水化合物儲量中 (**COB**)。 **AAPS** 接著會根據的使用者**血糖**變化，計算出使用者的碳水化合物吸收。吸收的速度取決於碳水化合物的敏感性因子 (**’CSF**”)。 This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
 
 ## 碳水化合物敏感性因子
 
@@ -18,7 +18,7 @@
 
 - _更改_ **設定檔百分比** —將會同時增加/減少IC、ISF這兩個值，所以對碳水化合物吸收時間沒有影響。
 
-例如，如果使用者**設定檔**的**ISF** 是100，**I:C** 是5，則使用者的碳水化合物敏感性因子將為20。當使用者的**血糖** 上升20 mg/dl，**AAPS** 就會計算出1克碳水化合物被吸收。正向的**IOB** 也會影響**COB** 的計算。因此，若**AAPS** 預測使用者的**血糖** 會因**IOB** 而下降20 mg/dl，但實際上保持不變，**AAPS** 也會計算出1克碳水化合物已被吸收。
+例如，如果使用者**設定檔**的**ISF** 是100，**I:C** 是5，則使用者的碳水化合物敏感性因子將為20。 For every 20 mg/dL the user’s **BG** goes up, 1 g of carbs will be calculated as absorbed by **AAPS**. 正向的**IOB** 也會影響**COB** 的計算。 So, if **AAPS** predicts the user’s **BG** to go down by 20 mg/dL because of **IOB** and it instead stayed flat, **AAPS** would also calculate 1 g of carbs as absorbed.
 
 碳水化合物也將通過下述方法進行吸收，具體方式取決於使用者的**AAPS** 中選擇的敏感性演算法。
 
@@ -28,7 +28,12 @@
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
-![截圖 2024-10-05 161009](../images/cob_oref0_orange_I.png)
+![COB graph with Oref1 cut-off](../images/cob_oref0_orange_I.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the graphs look slightly different, but the **COB** graph carries the same information.
+```
 
 
 ## 碳水化合物敏感因子 - 加權平均
@@ -50,7 +55,7 @@
 
 ![錯誤 COB 值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
-在上面的截圖中，有 58% 的時間是用 min_5m_carbimpact 來計算碳水化合物的吸收量，而不是透過變動來偵測的數值。這表示使用者實際上的 **COB** ，可能比演算法計算出來的還要少。
+In the screenshot above, 66% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. 這表示使用者實際上的 **COB** ，可能比演算法計算出來的還要少。
 
 ### 如何處理這個警告？
 
@@ -71,22 +76,23 @@
 
 ## 手動修正輸入的碳水化合物
 
-如果碳水化合物被高估或低估，則可以通過治療選項卡和動作選項卡 / 選單進行修正，如 [這裡](#screens-bolus-carbs) 所述。
+If carbs are over or underestimated this can be corrected through the **Treatments history** screen as described [here](#screens-bolus-carbs).
 
 
 ## 碳水化合物更正—如何從「治療」中刪除碳水化合物的項目
 
 
-可以透過「治療」標籤，刪除錯誤的碳水化合物項目來進行修正。這可能是因為使用者在輸入碳水化合物時，預估過高或過低導致。
+The **Treatments history** screen can be used to correct a faulty carb entry by deleting it. 這可能是因為使用者在輸入碳水化合物時，預估過高或過低導致。
 
-![COB_Screenshot 2024-10-05 170124](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
+![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
-1. 檢查並記住 **COB** 和 **IOB** 的實際數值，可以在 **AAPS** 的主畫面上看到。
-2. 根據不同的幫浦，「治療」標籤中的碳水化合物和胰島素可能會顯示在同一行，也可能是分開的項目（例如在 Dana RS 中）。
-3. 要刪除該項目，首先在右上角點選垃圾桶圖示（參見上方圖片，第 1 步）。接著勾選錯誤的碳水化合物（參見上方圖片，第 2 步）。最後再次點選右上角的垃圾桶圖示（再次執行第 1 步）。
-4. 確保碳水化合物已成功移除，請再次檢查 **AAPS** 主畫面上的 **COB**。
-5. 如果「治療」標籤中碳水化合物和胰島素顯示在同一行，對 **IOB** 數值也應一起檢查。
-6. 如果碳水化合物未按預期移除，並且如本節所講的，增加了額外的碳水化合物，**COB** 項目會過高，這可能導致 **AAPS** 輸入過量的胰島素。
-7. 透過 **AAPS** 主畫面上的碳水化合物按鈕輸入正確的碳水化合物數量，並設定正確的事件時間。
-8. 如果「治療」標籤中碳水化合物和胰島素顯示在同一行，使用者也應該輸入正確的胰島素劑量。請確保設定正確的事件時間，並在確認新增項目後，檢查主畫面上的 **IOB**。
+1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
+2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
+3. **Long-press** the faulty carb entry — the list switches to **selection mode** with a checkbox on every line, and the entry is ticked (marked **1** above). Tick any further entries you want to remove as well.
+4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
+5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
+6. Do the same for **IOB** if there is just one line including carbs and insulin.
+7. 如果碳水化合物未按預期移除，並且如本節所講的，增加了額外的碳水化合物，**COB** 項目會過高，這可能導致 **AAPS** 輸入過量的胰島素。
+8. Enter the correct carbs amount through the **Carbs** dialog (**Treatments** → **Carbs**) and set the correct event time.
+9. If there was just one line including carbs and insulin the user should also re-add the amount of insulin. Make sure to set the correct event time and check **IOB** on the main screen after confirming the new entry.
 
