@@ -24,7 +24,7 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Select the branch you want to deploy (master), the [variant](#browserbuild-variant) (fullRelease) and tap Run Workflow.
+5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
 
 
 
@@ -46,7 +46,7 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
-      src="https://geo.dailymotion.com/player/xbzlc.html?video=x9rdwms"
+      src="https://geo.dailymotion.com/player/x9rdwms.html?video=x9rdwms&loop=true&mute=true"
       loading="lazy"
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
       frameborder="0"
@@ -62,7 +62,9 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 **Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
 
-![](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+
+![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 
@@ -72,7 +74,7 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
   - Select the variant you need:
     - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md))。
+    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
     - pumpcontrolRelease: To replace your pump app/controller
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
@@ -89,4 +91,4 @@ Once the build succeeds, the apk is saved to your Google Drive. Continue with [T
 From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
 ```
 
-If anything goes wrong, see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
+If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).

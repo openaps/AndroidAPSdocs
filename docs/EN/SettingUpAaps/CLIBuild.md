@@ -1,7 +1,7 @@
 # Build instructions for the command-line
 
 ```{admonition} For users familiar with the command-line and git
-:class: information
+:class: note
 
 The simplest option to build AAPS is the [Browser build](./BrowserBuild.md) alternative.
 ```
@@ -40,7 +40,7 @@ You will need the keystore file and passphrase every time you update AAPS.
 ### 2. Compile the AAPS APK file
 
 Clone the [git repo](https://github.com/nightscout/AndroidAPS) if not already cloned.
-AAPS uses master branch for the latest stable version, ensure you are on the branch/tag you want to build.
+AAPS uses the master branch for the latest stable version; ensure you are on the branch/tag you want to build.
 
 Run `./gradlew :app:assembleFullRelease` in the repo. It automatically downloads Gradle, dependencies, and then compiles the code.
 When the build succeeds, you should have an unsigned APK at `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`.

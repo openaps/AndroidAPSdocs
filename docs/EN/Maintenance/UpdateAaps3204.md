@@ -154,7 +154,7 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- In **Gradle JDK** field, check if the appropriate version: **jbr-17** is selected (1) If not, click on the field, and see if it is already available in the list.
+- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 

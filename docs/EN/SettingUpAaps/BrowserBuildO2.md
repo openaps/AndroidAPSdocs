@@ -11,11 +11,9 @@ Option 2 reuses the JKS you already created on a previous build of AAPS from a c
 For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
 
 ```{warning}
-**Passwords with special characters.** If your keystore or key password contains `$`, a backtick, `"` or `\`, the build fails at the signing step even though the password is correct. When you enter the secret in GitHub, put a backslash `\` in front of each of these four characters only.
+**Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
 
-Example: if your password is `abc$def"ghi`, enter `abc\$def\"ghi`.
-
-Every other character, including `%`, `*`, `#` and `!`, must be entered exactly as it is. Adding a backslash in front of them would become part of the password. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+If the build still fails at the signing step and your password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is outdated. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev and re-run the build. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
 ```
 
 ```{admonition} KEY + PASSWORDS
@@ -26,9 +24,12 @@ Every other character, including `%`, `*`, `#` and `!`, must be entered exactly 
 
 ## Choose your device
 
+```{tip}
+Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+```
+
 Follow the page that matches the device you are building from:
 
-- **[Android](BrowserBuildO2Android.md)** – the recommended choice.
 - **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
 
 ```{tip}
@@ -38,6 +39,5 @@ You can switch device at any time – just open the matching page.
 ```{toctree}
 :hidden:
 
-Android <BrowserBuildO2Android.md>
 Computer <BrowserBuildO2Computer.md>
 ```

@@ -1,8 +1,8 @@
-sphinx==7.0
+sphinx==8.2.3
 sphinx_rtd_theme==3.0.0
 sphinx-togglebutton==0.4.5
 sphinxcontrib-jquery==4.1
-myst_parser==3.0.1
+myst_parser==5.0.0
 urllib3==2.6.3
 sphinx-notfound-page==1.0.4
 sphinx_design==0.6.1
