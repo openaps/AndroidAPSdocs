@@ -153,7 +153,7 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 
 ![開啟Gradle設定](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- 在 **Gradle JDK** 欄位中，檢查是否選擇了適當的版本：**jbr-17** (1) 如果沒有，請點擊該欄位，查看是否已經在列表中可選擇。
+- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
