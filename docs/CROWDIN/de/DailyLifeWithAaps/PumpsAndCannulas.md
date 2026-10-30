@@ -1,56 +1,65 @@
-# Alltägliche Dinge - Insulinpumpen
+# Pumps and cannulas
+
 ## Wechseln des Infusions-Sets: Reservoire und Kanülen
 
-Das unten beschriebene Verfahren gilt nur für Schlauchpumpen und ist nicht ohne weiteres auf Patchpumpen wie den Omnipod, die Medtrum Nano, die Accu-Chek Solo usw. anwendbar. Dieses Verfahren wird manchmal als "Set-Wechsel" bezeichnet, wobei ein "vollständiger" Set-Wechsel das Insulinreservoir und die Kanüle umfasst und ein "teilweiser" Set-Wechsel sich auf einen Wechsel der Kanüle bezieht.
+Das unten beschriebene Verfahren gilt nur für Schlauchpumpen und ist nicht ohne weiteres auf Patchpumpen wie den Omnipod, die Medtrum Nano, die Accu-Chek Solo usw. anwendbar. This procedure is sometimes referred to as a "set change", with a "full" set change including the insulin reservoir and cannula, and a "partial" set change referring to a change of cannula only.
+
+Patch pumps fill and prime themselves in their own activation wizard, and their cannula is already in the body. **AAPS** does not offer a prime for them: **Prime/Fill** is not shown in the **Manage** sheet or in QuickLaunch. See the page of your pump in [Compatible pumps](../Getting-Started/CompatiblePumps.md).
 
 Der physische Catridge-/Reservoirwechsel kann nicht über **AAPS** durchgeführt werden und muss direkt über die Pumpe erfolgen. Der erfolgte Wechsel muss in **AAPS** manuell eingetragen werden.
 
+(pumps-cannulas-changing-reservoir-and-cannula)=
 ### Anleitung zum Wechseln sowohl des Reservoirs als auch der Kanüle
 
-1)  Trenne in **AAPS** die Pumpe: Drücke und halte das "Open Loop”/”Closed Loop”-Symbol auf der **AAPS**-ÜBERSICHT und wähle dann "Pumpe trennen - 1 STD.”. Das Pumpensymbol wird dann, als Zeichen dafür, dass die Pumpe getrennt wurde, grau dargestellt.
+1. In **AAPS**, disconnect the pump: press the [loop icon](#AapsScreens-loop-status) on the main screen and select **Disconnect pump** for 1 hour. The icon changes to a grey plug icon, indicating that the pump is disconnected.
 
-2) Wechsel das Insulinreservoir nun physisch: Koppel die Pumpe vom Körper ab und wechsel das Reservoir/Catridge und die Kanüle wie es die Anweisungen des Herstellers vorsehen.
+2. Wechsel das Insulinreservoir nun physisch: Koppel die Pumpe vom Körper ab und wechsel das Reservoir/Catridge und die Kanüle wie es die Anweisungen des Herstellers vorsehen.
 
-3)  Schlauch und Kanüle entlüften/füllen: Dies kann direkt an der Pumpe erfolgen. Achte darauf, dass keine Blasen mehr im Schlauch sind.
+3. Schlauch und Kanüle entlüften/füllen: Dies kann direkt an der Pumpe erfolgen. Achte darauf, dass keine Blasen mehr im Schlauch sind.
 
-4)  Setze die neue Kanüle. Sobald die Kanüle gesetzt ist und die Setznadel entfernt wurde, hat die neue Kanüle noch etwas Luft in der Kanülennadel, die auch entlüftet werden muss. Um dies in **AAPS** anzukündigen und die Stelle vorzubereiten: Wähle die NADELWECHSEL/FÜLLEN-Schaltfläche im Reiter **AAPS**-AKTIONEN aus und aktiviere "Pumpenkatheter-Wechsel" und/oder "Ampullen-Wechsel" entsprechend zur Dokumentation des Wechsels. Stelle jetzt die Füllmenge, die zu Deiner Kanüle passt ein (normalerweise etwa 0,3 IE) und wähle „OK“ aus. Lies die Zusammenfassung und bestätige das Ausführen des Füllens durch Tippen auf „OK“.
+4. Setze die neue Kanüle. Sobald die Kanüle gesetzt ist und die Setznadel entfernt wurde, hat die neue Kanüle noch etwas Luft in der Kanülennadel, die auch entlüftet werden muss. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Pump site change** and/or **Insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
 
-5)  Pumpe in **AAPS** wieder verbinden: Drücke auf das graue Symbol für die getrennte Pumpe und wähle 'Pumpe erneut verbinden', um das Loopen fortzusetzen.
+   ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
+
+
+5. Reconnect the pump in **AAPS**: press the grey plug icon and select **Reconnect pump** to continue looping.
 
 ### Nützliche Informationen zu Insulin/Kanülenwechsel
 
-●   Das Protokollieren eines Kanülenwechsels setzt Autosens auf 100% zurück. Es werden dabei auch die entsprechenden Kanülen/Insulin-Statusleuchten und -Alter auf der **AAPS**-ÜBERSICHT zurückgesetzt.
+* Logging a pump site change resets Autosens to 100%. It also resets the corresponding cannula/insulin status lights and ages on the **AAPS** main screen.
 
-●   Du kannst die Standard-Füllmenge in den Einstellungen > Übersicht > Füll-/Vorfüll-Standardmengen festlegen/anpassen. Schau bitte im Beipackzettel Deines Katheters nach, wie viele Einheiten (je nach Nadel- und Schlauchlänge) für Deinen Katheter zur Befüllung verwendet werden sollten.
+* You can set/adjust the default prime amounts in the **Prime/Fill** settings — type "prime" in the main screen search bar to open them (see [Preferences](../SettingUpAaps/Preferences.md)). Schau bitte im Beipackzettel Deines Katheters nach, wie viele Einheiten (je nach Nadel- und Schlauchlänge) für Deinen Katheter zur Befüllung verwendet werden sollten.
 
-●   Insulin, das mit der Füll-Funktion gegeben wird, wird von **AAPS** bei der Berechnung des noch aktiven Insulins (IOB) nicht berücksichtigt und im **AAPS**-Behandlungsmenü als "Prime" gekennzeichnet.
+* Insulin delivered using the prime function is not taken into account by **AAPS** when calculating insulin on board (IOB), and is marked in the [Treatments history](#aaps-screens-treatments) as "Prime".
 
-●   Boli, die während die Pumpe getrennt ist, abgegeben werden, werden in **AAPS** nicht berücksichtigt. Wenn Du, während **AAPS** getrennt ist, direkt über die Pumpe gebolt hast, kannst Du nach dem erneuten Verbinden, diese Insulinmenge im Register "Insulin" ankündigen (ohne es zu bolen) (siehe Link unten "Abgegebenes Insulin ankündigen, ohne es tatsächlich zu bolen" für weitere Details).
+* Any insulin bolused from the pump during a pump disconnection will also not be taken into account by **AAPS**. If you happen to bolus directly from the pump while **AAPS** is disconnected, once you reconnect the pump you can announce this insulin (without bolusing it) in the **Insulin** dialog (see [To announce delivered insulin without actually bolusing](#pumps-cannulas-announce-insulin) below).
 
 ### Probleme mir Kanüle, Infusionsstelle, Schlauch und/oder Pumpe
 
-Wenn Du sicher bist, dass Du für eine bestimmte Zeit kein Insulin bekommen hast, obwohl **AAPS** anzeigt, dass es abgegeben wurde, und Du ganz genau weißt, wann das Problem aufgetreten ist (_z.B._ beim Entfernen der Kanüle sihst Du eine abgeknickte Nadel)), kannst Du das in **AAPS** korrigieren. Dir muss alllerdings klar sein, dass das Insulin möglicherweise doch abgegeben wurde, und aus irgendeinemem Grund verzögert wirken könnte.
+If you are confident that you haven't received any insulin for a period of time, despite **AAPS** recording that you have, and you know exactly when the issue started (_e.g._ you remove the cannula and see that the cannula was kinked during the insertion process) you can correct this in **AAPS**, while being aware that the insulin may in fact have been delivered but may be slow to act for some reason.
 
 ```{admonition} Caution - Risk of Hypoglycemia
 :class: danger
 Lösche Boluseinträge in **AAPS** nur mit ÄUSSERSTER Vorsicht. Für den Fall, dass Insulin _tatsächlich abgegeben_ wurde, achte in den kommenden 24h genau auf Deine Glukosewerte.
 ```
 
-Um Bolus und SMBs zu löschen, von denen Du genau weißt, dass sie nicht abgegeben wurden, öffne den BEHANDLUNGEN-Tab und lösche mit Vorsichtig protokollierten Bolus-Informationen > Kohlenhydrate und Bolus ab dem Zeitpunkt, an dem der Vorfall passiert ist. Dies wird den für die Berechnungen von **AAPS** entscheidenden Wert "Insulin on Board" (IOB) korrigieren. Wenn Du auf die ÜBERSICHT zurückkehrst, wirst Du sehen, dass der IOB-Wert kleiner geworden ist. Bitte beachte, dass Du das von **AAPS** berechnete Basalinsulin nicht löschen kannst und es daher weiterhin von **AAPS** berücksichtigt wird.
+To remove boluses and SMBs which you know have not been delivered, open the **menu** (☰), select [Treatments history](#aaps-screens-treatments) and, on the **Carbs and bolus** tab, conservatively delete the logged boluses starting from the point the incident happened. This will correct the "insulin on board" (IOB) value which is key for **AAPS**' calculations; if you now return to the main screen you will see that the IOB has reduced. Bitte beachte, dass Du das von **AAPS** berechnete Basalinsulin nicht löschen kannst und es daher weiterhin von **AAPS** berücksichtigt wird.
 
-In weniger offensichtlichen Problemen bei der Insulinabgabe _z.B._ Undichtigkeiten, Verstopfungen oder Tunneling, bei denen Du entweder nicht sicher bist, wann das Problem aufgetreten ist, oder Du glaubst, dass nur ein Teil des Insulins abgegeben wurde, musst Du vorsichtig sein. Entweder erkennst Du das Problem durch "Riechen“ des Insulins, ein feuchtes Katheter-Pflaster, hohe Glukosewerte oder durch einen Alarm. Da Du nie wissen wirst, wie viel Insulin (das nach einer Weile zu wirken beginnen könnte) genau unter Deine Haut gelangt ist, wird es schwer sein, die richtige Menge an Insulin zu bestimmen, die vom aktuellen "Insulin on Board" (IOB)-Wert abgezogen werden muss. Eine mögliche Strategie ist, nachdem Du das Problem mit der Insulinabgabe gelöst hast, das Loopen für 5 Stunden (bzw. für die Wirkdauer Deines genutzten Insulins) zu unterbrechen und erst danach das Loopen wieder aufzunehmen. Damit wird sichergestellt, dass der IOB-Wert beim erneuten Loop-Start korrekt ist.
+In less obvious cases of insulin delivery problems _e.g._ leakages, occlusions or tunneling where either you are not sure when the issue started, or think some of the insulin was delivered, you need to be careful. You may detect these issues either by "smelling" the insulin, seeing a wet adhesive, encountering high glucose values or by getting an alarm. As you will never know how much insulin you got into your skin (which might be starting to work after a while) it will be hard to determine the correct amount of insulin which needs to be deducted from the current "insulin on board" (IOB) value. Eine mögliche Strategie ist, nachdem Du das Problem mit der Insulinabgabe gelöst hast, das Loopen für 5 Stunden (bzw. für die Wirkdauer Deines genutzten Insulins) zu unterbrechen und erst danach das Loopen wieder aufzunehmen. Damit wird sichergestellt, dass der IOB-Wert beim erneuten Loop-Start korrekt ist.
 
+(pumps-cannulas-disconnecting)=
 ## Die Pumpe zum Duschen oder für Aktivitäten trennen
 
-Wenn Du Deine Pumpe zum Duschen, Baden und Schwimmen, Kontaktsport oder anderen Aktivitäten abnimmst, musst Du **AAPS** wissen lassen, dass kein Insulin geliefert wird. Nur so kann die IOB-Berechnung korrekt erfolgen. Die Pumpe kann mit dem Loop-Status-Symbol auf dem **AAPS**-Startbildschirm getrennt werden.
+Wenn Du Deine Pumpe zum Duschen, Baden und Schwimmen, Kontaktsport oder anderen Aktivitäten abnimmst, musst Du **AAPS** wissen lassen, dass kein Insulin geliefert wird. Nur so kann die IOB-Berechnung korrekt erfolgen. The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, open the same dialog again and pick a new duration under **Disconnect pump**: the disconnection is extended and the new duration starts from now. You do not need to reconnect first.
 
-Da Du während der Pumpen-Trennung kein Insulin erhältst, solltest Du alle zwei Stunden wieder verbinden, um das fehlende Basalinsulin nachzuholen. Das kannst Du machen, indem Du Dich verbindest, die fehlenden Basalmengen (_z.B._ der letzten zwei Stunden) bolst, bevor Du Dich dann wieder trennst. Dies sollte helfen, einen schweren Insulinmangel zu vermeiden, der zu diabetischer Ketoazidose (DKA) führen könnte. Wenn es während der Aktivität unpraktisch ist, die Pumpe wieder anzukoppeln (Kanüle ist durch das Tragen eines Neoprenanzugs abgedeckt _usw._), dann kann eine Pen-Injektion auch eine Alternative sein. Diese manuelle Injektion kann in **AAPS** protokolliert werden, und muss nicht zum Zeitpunkt der Injektion eingegeben werden (notiere Dir einfach den Zeitpunkt der Injektion). Das geht, da Du beim Wiederankoppeln das Insulin nur ankündigst, und der Boluszeitpunkt "rückdatiert" werden kann.
+Da Du während der Pumpen-Trennung kein Insulin erhältst, solltest Du alle zwei Stunden wieder verbinden, um das fehlende Basalinsulin nachzuholen. Das kannst Du machen, indem Du Dich verbindest, die fehlenden Basalmengen (_z.B._ der letzten zwei Stunden) bolst, bevor Du Dich dann wieder trennst. Dies sollte helfen, einen schweren Insulinmangel zu vermeiden, der zu diabetischer Ketoazidose (DKA) führen könnte. Wenn es während der Aktivität unpraktisch ist, die Pumpe wieder anzukoppeln (Kanüle ist durch das Tragen eines Neoprenanzugs abgedeckt _usw._), dann kann eine Pen-Injektion auch eine Alternative sein. This manual injection can be logged in **AAPS**, and doesn't have to be logged at the time of injection (just make a note of the time of injection) since you can announce the insulin and backdate the time the insulin was actually given when you reconnect the pump.
 
+(pumps-cannulas-announce-insulin)=
 ## Abgegebenes Insulin ankündigen, ohne es tatsächlich zu bolen
 
-Um Insulin, das während **AAPS** von der Pumpe getrennt war oder Pen-Injektionen in **AAPS** einzutragen: Wähle den Reiter „Insulin“, gib die Menge in den Einheiten ein und wähle „Bolus nur erfassen“. Wenn Du diese Option wählst, erscheint ein „Zeitversatz“-Tab. Wenn die Injektion vor kurzem gegeben wurde, kannst Du das ignorieren. Ist der Bolus allerdings schon etwas her, kannst ein Minuszeichen vor der Zeit setzen (_z.B._ - 30 min), um die richtige Boluszeit zu erfassen. **AAPS** wird dann die Dauer der Insulinwirkung berücksichtigen und das verbleibende Insulin im System entsprechend berechnen.
+To announce insulin delivered from the pump either while **AAPS** was disconnected, or from pen injections: open the [Insulin dialog](#aaps-screens-buttons-insulin) (**Treatments** in the bottom navigation, or a QuickLaunch button), enter the amount in units and enable **Bolus will be recorded only**. A **Time** row (set to **Now**) then lets you record the actual time of the injection: you can ignore it if the injection was given recently. If the bolus was given some time ago, use **-** to move the time back (_e.g._ -30 min), or open the row with the chevron to pick the exact date and time. **AAPS** wird dann die Dauer der Insulinwirkung berücksichtigen und das verbleibende Insulin im System entsprechend berechnen.
 
-Wenn Du **AAPS** als betreuende Person verwendest, kannst Du die Pumpe durch [SMS-Befehle](../RemoteFeatures/SMSCommands.md) wie „pump disconnect 120“ und „pump connect 120“ remote trennen (und wieder verbinden). Der Zeitraum für eine Remote-Trennung der Pumpe beträgt 1 - 120 Min. (in diesem Beispiel sind es 120 Minuten). Das ist eine sehr nützliche Funktion, wenn Du das **AAPS**-Smartphone nicht in Reichweite hast, weil es z. B. in einem Pumpengürtel Deines Kindes, das auf dem Weg ins Schwimmbad, vergraben ist oder mit Argus-Augen von einem Teenager bewacht oder etwas benutzt wird.
+If you are using **AAPS** as a caregiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as "pump disconnect 120" and "pump connect 120". Der Zeitraum für eine Remote-Trennung der Pumpe beträgt 1 - 120 Min. (in diesem Beispiel sind es 120 Minuten). Das ist eine sehr nützliche Funktion, wenn Du das **AAPS**-Smartphone nicht in Reichweite hast, weil es z. B. in einem Pumpengürtel Deines Kindes, das auf dem Weg ins Schwimmbad, vergraben ist oder mit Argus-Augen von einem Teenager bewacht oder etwas benutzt wird.
 
 ## Die Pumpe nach einer Aktivität wieder verbinden
 
@@ -60,7 +69,48 @@ a) Einfach die Pumpe in **AAPS** wieder verbinden (grau nach grün, für Closed 
 
 _oder_
 
-b) Wenn Du aggressiver vorgehen möchtest (zum Beispiel, weil Du auf eine Hyperglykämie zusteuerst), kannst Du zum Taschenrechner navigieren und für Null Kohlenhydrate bolen, um das berechnete fehlende Insulin sofort als Bolus abzugeben.
+b) If you want to be more aggressive (for example, you are heading for hyperglycemia), you can open the [Bolus wizard](#aaps-screens-bolus-wizard) and bolus for zero carbs, to immediately deliver the calculated missing insulin as a bolus.
+
+Welche Strategie Du wählen solltest, ist höchst individuell und am besten durch Ausprobieren herauszufinden.
 
 
-Welche Strategie Du wählen solltest, ist höchst individuell und am besten durch Ausprobieren herauszufinden.    
+(Aapsscreens-site-rotation)=
+## Wechsel der Setzstellen (Site Rotation)
+
+**Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
+
+- With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
+- All Cannula change and Sensor change event since the past 45 days are available.
+- Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
+- Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
+
+![View Mode](../images/SiteRotation/ViewMode.png)
+
+- The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
+
+![Einstellungen](../images/SiteRotation/Settings.png)
+
+![User profile for site rotation dialog](../images/SiteRotation/Type.png)
+
+*Note: this setting will be used to automatically open or not Site Rotation Dialog (Edit mode) when a new entry is done from "Prime/Fill button" or "CGM Sensor Insert button"*
+
+- For Site change done directly from Pump, you have to open the View Mode and Edit the new entry to select Location and Arrow
+
+Edit Mode allows you to select Location, Arrow, and Note associated to selected Entry:
+
+- The entry being edited is shown below the body images, with its type icon (cannula or sensor)
+- Front and back views are shown side by side: tap the area where you placed it
+- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+
+![Edit Mode](../images/SiteRotation/EditMode.png)
+
+- You can add an optional arrow by tapping the arrow icon at the right of the entry: the **Select Arrow** dialog lets you specify a sub-location or the pod orientation
+
+![Position](../images/SiteRotation/EditModeSub.png)
+
+- You can also add a **Note** about the selected site
+- Tap the **save** icon (upper right) to record the site
+
+Filtering can be done graphically on the image, or clicking a therapy event in the list To remove filtering, just click on the image outside any sites
+
+![Filtering](../images/SiteRotation/Filtering.png)
