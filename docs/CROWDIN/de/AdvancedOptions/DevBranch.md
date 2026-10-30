@@ -39,7 +39,8 @@ Verfügbar ab 3.3.2.1. Dev
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.dailymotion.com/embed/video/x9rdx1q"
+          src="https://geo.dailymotion.com/player/x9rdx1q.html?video=x9rdx1q&loop=true&mute=true"
+          loading="lazy"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -49,6 +50,8 @@ Verfügbar ab 3.3.2.1. Dev
 ```
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
+
+- Target-Repository: das Repository, das den PR im Format Owner/Repo enthält. Lass den Standard **nightscout/AndroidAPS** unverändert, es sei denn, Dir wurde gesagt, ein anderes Repository zu verwenden (das sollten nur Entwickler tun).
 
 - PR-Nummer: Bitte gib die zu testende PR-Nummer ein.
 
