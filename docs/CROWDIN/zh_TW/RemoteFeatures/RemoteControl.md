@@ -1,8 +1,14 @@
 # 遠端控制 AAPS
+
+```{contents} In this page
+:backlinks: entry
+:depth: 2
+```
+
 有四種非常有效的工具可以遠端管理 **AAPS**：
 
-1) [簡訊指令](#RemoteControl_SMS-Commands) (關注者的手機可以是 Android 或 iOS) 2) [AAPSClient](#RemoteControl_aapsclient) (關注者的手機是 Android) 3) [Nightscout](#RemoteControl_nightscout) (Android、iOS 或其他計算機/設備)。  
-4) [智慧型手錶](#RemoteControl_smartwatches) (Android)
+1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android; an iPhone version is in development) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
+4) [Smartwatches](#RemoteControl_smartwatches) (Android)
 
 前三個主要適合於照護者/父母，但智慧型手錶對照護者/父母**和**糖尿病患者本身都非常有用。
 
@@ -17,19 +23,20 @@
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-**AAPSClient** 的外觀與 **AAPS** 本身非常相似，提供了照護者可以遠端執行 **AAPS** 指令的標籤頁：
+**AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver the same screens and buttons to send commands remotely to **AAPS**:
 
-![NSCLIENT_ 2024-05-17 134512](../images/remote_control_and_following/AAPSClient_main_view.png)
+![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
 
-### 關於AAPSClient和AAPSClient2
+(remotecontrol-aapsclient-versions)=
+### About AAPSClient, AAPSClient2 and AAPSClient3
 
-可以安裝兩個版本的apk，**AAPSClient**和**AAPSClient2**，它們有一個微妙但重要的差異，如下所述。
+There are 3 versions of the client app: **AAPSClient**, **AAPSClient2** and **AAPSClient3**. They work the same way. The only difference is that they can be installed side by side on the same follower phone.
 
-如果某位照護者需要第二個副本來遠端控制另一位患者，且該患者有 Nightscout 帳號，他們應該安裝 **AAPSClient2** 以外加 **AAPSClient**。 **AAPSClient2** 允許單一照護者在同一台追蹤者手機上安裝 **AAPSClient** apk 兩次，以便同時遠端控制兩位不同的患者。
+A caregiver who follows one person needs only **AAPSClient**. To follow and remote control a second person (with their own **Nightscout** site and their own **AAPS** phone), install **AAPSClient2** as well, and **AAPSClient3** for a third person. Each app is set up and [paired](#aapsclient-pairing-with-the-master) on its own, with the **Nightscout** site and the **AAPS** phone of the person it follows.
 
-為了區分這兩個應用程式，一些元素有不同的背景顏色：**AAPSClient**是黃色，**AAPSClient2**是藍色。這些元素包括應用程式圖示、小工具和應用程式內的**AAPS**狀態區域。 <br/> 注意：小工具背景的不透明度是可自訂的。
+To tell the apps apart, some elements have a different color: yellow for **AAPSClient**, blue for **AAPSClient2** and green for **AAPSClient3**. Those elements are the app icon, the widget background, and the **AAPS** status section on the home screen of the app. <br/> Note: the opacity of the widget background can be set in the widget configuration. At a low opacity the color is hard to see.
 
-![AAPSClient_and_AAPSClient2.png](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+![Widget and status section colors of AAPSClient, AAPSClient2 and AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
 ### 下載與安裝
 
@@ -51,66 +58,72 @@
 
 如果你需要**AAPS**供自己使用，而需要**AAPSClient**來監控他人，則需要自行建置**AAPSClient**，而不是從上述GitHub儲存庫下載。原因是你無法在同一部手機上安裝**AAPS**和**AAPSClient**，因為它們是由不同的金鑰簽署的。 <br/> 要自行建置**AAPSClient**，請遵循[常見AAPS建置](../SettingUpAaps/BuildingAaps.md)的相同步驟。在**生成簽名的App Bundle或APK**頁面上，選擇**aapsclientRelease**，而不是**fullRelease**。
 
-### 同步設置 - AAPSClient 和 AAPS 配置（適用於 3.2.0.0 版本以上）
+The same rule applies when you install several client apps (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) on one follower phone: they must all be signed with the **same key**. Otherwise Android refuses to install the second one (error `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
-當追蹤者手機上安裝了 __AAPSClient__ apk，用戶必須確保在 "組態建置工具" 中的“偏好設定”已正確設置並與 __AAPS__ 的 Nightscout 15 對齊（請參閱發佈說明 [此處](../Maintenance/UpdateToNewVersion)）。以下範例提供了使用 Nightscout 15 的 NSClient 和 NSClientV3 的同步指南，但 __AAPS__ 也有其他選項（例如 xDrip+）。
+### Synchronization: AAPSClient and AAPS set up
 
-在“組態建置工具”的“同步設置”中，用戶可以選擇 __AAPS__ 和追蹤者手機的同步選項：
+Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion)). The example below shows the synchronization set-up with NSClientV3 and Nightscout 15; other data sources are available in __AAPS__ (e.g. xDrip).
 
-- 選項 1：NSClient（也稱為‘v1’） - 將用戶的資料與 Nightscout 同步；或
+In **Configuration** > **Communication**, the user synchronizes their data with Nightscout through __NSClientV3__ (using the v3 API), set up the same way for both __AAPS__ and the follower phone.
 
-- 選項 2：NSClientV3（也稱為‘v3’） - 將用戶的資料與 Nightscout 通過 v3 API 同步。
+![Configuration > Communication with NSClientV3 selected](../images/v4/Configuration/configuration_communication.png)
 
-![AAPS1_截圖 2024-05-17 133502](../images/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98.png)
+The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by setting up NSClientV3 on each. On the follower phone this can be done by scanning a QR code shown by **AAPS** instead, see [Pairing AAPSClient with AAPS](#remotecontrol-pairing) below:
 
-用戶必須確保 __AAPS__ 和 AAPS Client 手機都透過執行 v1 或 v3 的選項同步：
+- Enter your **Nightscout URL** in the NSClientV3 **Settings**
 
-選項 1：兩部手機均使用 v1：
+- Enter your **Nightscout access token** in the same settings. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token). On the **AAPS** phone use an **admin token**: with it **AAPS** makes a token of its own for each follower phone.
 
-- 輸入你的 Nightscout 網址
+- Enable **Use websockets** on **both** phones. On the **AAPS** phone websockets are **required** for remote control: without them, **AAPS** cannot receive commands from **AAPSClient**. On both phones they also make synchronization faster, at the cost of slightly higher battery use.
 
-- 輸入你的 API 密碼
-
-選項 2：兩部手機均使用 v3：
-
-- 在 NSClientV3 標籤下輸入你的 Nightscout 網址
-
-- 在“組態建置工具”標籤下輸入你的 NS 查看權杖。請遵循[此處](https://nightscout.github.io/nightscout/security/#create-a-token)的說明
-
-如果選擇 Websockets（可選），請確保 __AAPS__ 和 __AAPSClient__ 的手機上均已啟用或停用此功能。啟用 Websockets 於 __AAPS__ 而未於 __AAPSClient__ 啟用（反之亦然），將會導致 __AAPS__ 無法正常運作。啟用 Websockets 將加快與 Nightscout 的同步速度，但可能會導致手機耗電量增加。
-
-![WB2_截圖 2024-05-17 140548](../images/d9a7dc5-b3ea-4bf3-9286-313f329b1966.png)
+![Settings > NSClientV3 with Nightscout URL, Nightscout access token and Use websockets](../images/preferences/settings_nsclient.png)
 
 
-使用者應確保兩支手機的「NSClient」分頁下，__AAPSClient__ 與 __AAPS__ 都顯示「已連線」，並且在 __AAPSClient__ 中選擇的「設定檔切換」或「臨時目標」能在 __AAPS__ 中正確啟用。
+The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ in the **NSClientV3** screen of each phone. At this point **AAPSClient** follows **AAPS** (BG, treatments, profile), but it cannot control it yet: pair the two phones as described below.
 
-使用者也應確保，無論在 __AAPS__ 或 __AAPSClient__ 輸入碳水時，資料都會自動記錄到 __AAPSClient__ 與 __AAPS__ 的「Treatments」。否則，這可能表示使用者的 __AAPS__ 或 __AAPSClient__ 設定有故障或異常。
+(remotecontrol-pairing)=
+### Pairing AAPSClient with AAPS (remote control)
 
-### 問題排除“NS 查看權杖”配置問題
+From **AAPS** version 4, **AAPSClient** controls **AAPS** through a secure, **paired** connection. Synchronization alone is not enough: until the phones are paired, **AAPSClient** only shows **Manage** with a view-only **Profile** and **Pair with master**.
 
-具體的“NS 查看權杖”配置可能會根據你的 Nightscout 提供商是否為付費託管網站而有所不同。
+1. On the **AAPS** phone, open **Manage → Authorized clients** and turn on **Allow client control** (it is off by default, and always on in Simple Mode).
+2. Tap **+**, enter a name for the follower phone, choose how it is set up and choose its **role**:
+   - **QR code: Nightscout and pairing** — **AAPS** shows a QR code that sets up Nightscout on the follower phone and pairs it, in one scan. This needs an admin token in the **AAPS** phone's NSClientV3 settings.
+   - **PIN** — for a follower phone without a camera, already connected to Nightscout: note the one-time **PIN** (valid for about two minutes).
+3. On the **AAPSClient** phone, scan the code (in the Setup Wizard, or **Manage → Pair with master → Scan QR code**), or open **Manage → Pair with master** and enter the PIN. Confirm.
 
-如果你在使用付費託管的 Nightscout 網站時，發現 **AAPS** v3 無法接受“NS 查看權杖”，建議你首先與 Nightscout 提供商聯繫，以解決“NS 查看權杖”問題。否則，請聯繫 **AAPS** 小組，但在此之前，請務必仔細檢查是否正確遵循了說明 [此處](https://nightscout.github.io/nightscout/security/#create-a-token)。
+The follower phone then appears as **Active** in the **Authorized clients** list, and **AAPSClient** shows **Treatments**, **Scenes** and **Manage**. The follower phone gets a Nightscout token of its own, with only the rights it needs. The full procedure, with screenshots and troubleshooting, is on [Master ↔ Client control](#client_master_master_setup).
 
-### AAPSClient 的功能包括：
+Check that the set-up works: enter carbs on **AAPSClient**, confirm the amount shown, and check that the entry appears in **Treatments** on both phones.
 
-| 標籤 / 漢堡選單  | 功能                                                                                                                                                         |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **功能** 標籤  | - 設定檔切換 <br>- 循環狀態變更 <br>- 臨時目標<br>- 血糖測量<br>- CGM 傳感器插入<br>- 備註<br>- 運動<br>- 公告<br>- 提問？<br>- 歷史瀏覽器 |
-| **食物** 標籤  |                                                                                                                                                            |
-| **治療** 標籤  | - 檢查已交付的治療，包括注射和輸入的碳水化合物                                                                                                                                   |
-| **維護** 標籤  | - 匯出和匯入設定                                                                                                                                                  |
-| **設定檔** 標籤 | - 建立新設定檔<br>- 設定檔切換                                                                                                                                  |
+(remotecontrol-nightscout-access-token)=
 
-**AAPSClient** 允許照護者透過行動網絡或網際網路，遠端進行許多 **AAPS** 中允許的調整（不包括胰島素注射）。 **AAPSClient** 的主要優點是照護者/父母能夠以快速、便捷的方式遠端控制 **AAPS**。 __AAPSClient__ _可能_ 比輸入 SMS 指令快得多，尤其是當執行需要身份驗證的指令時。透過 **AAPSClient** 輸入的指令將上傳到 Nightscout。要讓在 **AAPSClient** 中執行的動作實際生效，必須在 NSClient 設定中允許接收此類指令。請參閱 [NSClient 偏好設定的同步區段](#Preferences-nsclient-synchronization)。
+### Troubleshooting 'Nightscout access token' configuration issues
 
+The precise 'Nightscout access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
 
+If you are struggling with **AAPS** to accept the 'Nightscout access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'Nightscout access token' difficulties. 否則，請聯繫 **AAPS** 小組，但在此之前，請務必仔細檢查是否正確遵循了說明 [此處](https://nightscout.github.io/nightscout/security/#create-a-token)。
 
-只有當你的同步運作良好時，才建議使用 **AAPSClient** 進行遠端控制（_即_ 不會出現不必要的資料更改，如自動修改臨時目標、臨時基礎率等），詳見[版本 2.8.1.1 發佈說明](#important-hints-2-8-1-1)了解更多細節。
+### What AAPSClient offers
+
+Once paired, **AAPSClient** offers the caregiver almost the same screens as **AAPS** itself:
+
+- **Treatments**: insulin bolus, carbs and the bolus wizard.
+- **Scenes**: start and stop [scenes](../DailyLifeWithAaps/Scenes.md).
+- **Manage**: profiles, insulin settings, temporary targets, QuickWizard, automation, food, site rotation, pairing and the running temp basal.
+- **Main menu**: treatments history, history browser, statistics, maintenance, configuration.
+
+There is no pump and no objectives on **AAPSClient**. See [The AAPSClient app](AapsClient.md) for a detailed description.
+
+**AAPSClient** lets the caregiver make most of the adjustments allowed directly in **AAPS**, **including insulin boluses**, remotely over the mobile or internet network. Every command is signed and sent through Nightscout to the **AAPS** phone, which checks it against its own data, caps it, shows you its own confirmation, and only then executes it. **AAPSClient** _can_ be much faster than [SMS Commands](../RemoteFeatures/SMSCommands.md), especially for commands that would need authentication.
+
+Treatments entered in Nightscout by other means (for example the Nightscout website) are not applied while client control is on: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode) and takes changes only from paired clients. With client control off, they are applied only if the matching **Receive** options are enabled in the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+
+Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc).
 
 ### AAPSClient 與智慧型手錶的選項
 
-智慧型手錶可以是一個非常有用的工具，幫助管理兒童的 **AAPS**。有幾種不同的配置方式可供選擇。若在照護者的手機安裝了 **AAPSClient**，即可下載並安裝 [**AAPSClient WearOS** 應用程式](https://github.com/nightscout/AndroidAPS/releases/) 到與家長手機連線的相容智慧型手錶上。這將顯示目前的血糖值、循環狀態，並允許輸入碳水化合物、設定臨時目標和更換設定檔。無法從 WearOS 應用程式進行注射。你可以在[這裡](#4-smartwatches)閱讀更多關於智慧型手錶的資訊。
+智慧型手錶可以是一個非常有用的工具，幫助管理兒童的 **AAPS**。有幾種不同的配置方式可供選擇。若在照護者的手機安裝了 **AAPSClient**，即可下載並安裝 [**AAPSClient WearOS** 應用程式](https://github.com/nightscout/AndroidAPS/releases/) 到與家長手機連線的相容智慧型手錶上。 This will show current BG and loop status. Once **AAPSClient** is paired with **AAPS**, the watch actions (including boluses, carbs, temp targets and profile changes) are relayed through **AAPSClient** to **AAPS**, which confirms and executes them: see [Wear OS on a client](#clientmastercontrol-wear-os-on-a-client). You can read more about Smartwatches [here](#remotecontrol-smartwatches).
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
@@ -150,7 +163,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 3. 顯示最近的血糖趨勢以及處理（碳水化合物、注射）
 4. 長期的血糖趨勢
 5. 設定顯示選項、產生報告、編輯設定檔和 Nightscout 管理工具的「漢堡選單」
-6. 「**+**」選單用於輸入要發送到 AAPS 的處理。
+6. "**+**" menu for entering treatments (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies them).
 7. 選擇不同的時間範圍來顯示
 8. 基礎胰島素設定檔
 9. 綠線 = 歷史血糖 藍線 = 預測血糖
@@ -162,7 +175,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 1. Careportal 回溯編輯
 2. 開啟/關閉警報
 3. 漢堡選單 - 用於設定偏好設定
-4. Careportal - 紀錄處理 - 將變更發送至 AAPS
+4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
 
 ![Nightscout 頂部欄](../images/remote-control-29.png)
 
@@ -186,40 +199,15 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 按下頁面底部的「重新整理」以關閉彈出視窗。
 
+(RemoteControl_nightscout-treatments)=
 ### 透過 Nightscout 應用程式向 AAPS 發送治療資料
 
-要設置從 **Nightscout** 應用程式向 **AAPS** 發送治療資料，請在主要 AAPS 手機中進入 **AAPSClient** 標籤。打開右側的省略號選單，然後打開 AAPSClient 偏好設定 - 同步，並在此選單中選擇相關選項。將其設置為接收不同的指令（例如臨時目標等）並同步設定檔。如果似乎沒有同步，請返回 AAPSClient 標籤並選擇“完全同步”，等待幾分鐘。
+In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed, checked and confirmed by the **AAPS** phone. While client control is on, the **AAPS** phone is in [hardened mode](#client-master-control-hardened-mode): treatments, temporary targets and profile switches entered on the Nightscout website or in the Nightscout app are **not** applied. The Nightscout app is then a tool for following only.
 
-你在 iPhone 上的 Nightscout 應用程式擁有與你在電腦上使用的 Nightscout 相同的功能。他允許你向 **AAPS** 發送許多指令，但不允許你發送胰島素注射指令。
-
-### 取消負胰島素以避免重複低血糖
-
-儘管你無法實際注射胰島素，但你可以透過 Nightscout 宣佈胰島素作為“修正注射”，儘管他實際上並未注射。由於 AAPS 會考慮到這個假設的胰島素注射，因此宣佈胰島素實際上可以使 AAPS _不那麼積極_，這在取消負胰島素和防止低血糖時非常有用，特別是當你的設定檔過於強烈（例如，由於之前的運動）。你可能會希望親自查看這些設置，並在 **AAPS** 手機附近進行檢查，以防你的 **Nightscout** 設置有所不同。
-
-![24-10-23，取消負胰島素 NS](../images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
-
-
-一些最有用的 **Nightscout** 指令在下表中描述。
-
-#### Nightscout 指令表
-
-| 最常使用的治療                      | 功能，指令有用的例子                                                                                    |
-| ---------------------------- | --------------------------------------------------------------------------------------------- |
-| **修正注射**                     | 允許你發出**<u>不注射</u>**胰島素的聲明。<br>對於取消負面胰島素以防止低血糖非常有用，<br>例如在夜間，如果設定檔過於強烈。            |
-| **碳水化合物修正**                  | 現在宣告碳水化合物                                                                                     |
-| **臨時目標**<br>**取消臨時目標** | 允許設置和取消臨時目標。<br>請注意，取消不一定有效，<br>在此情況下，你可以設置一個新的臨時目標（2 分鐘），<br>然後會自動恢復至正常目標。 |
-| **設定檔切換**                    | 允許你檢查目前正在運行的設定檔，<br>並切換到另一個設定檔，可以是永久性，<br>或者定義的時間長度（分鐘）。                          |
-
-
-
-| 不常用的指令                                                                                           | 功能，指令有用的例子                                                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
-| **血糖檢查**                                                                                         | 將血糖檢查傳送至 AAPS。                                               |
-| **點心注射**<br>**餐前注射**<br>**組合注射**                                                     | 可以在過去60分鐘至未來60分鐘內發出碳水化合物（加上蛋白質和脂肪）<br>結合注射允許同時發出胰島素聲明。 |
-| **宣告**<br>**備註**<br>**問題**<br>**運動**<br>**離線開啟 APS**<br>**DAD 警報** | 新增這些資訊備註（DAD = 糖尿病守護犬警報）。                                    |
-| **幫浦位置更換**<br>**電池更換**<br>**胰島素藥囊更換**                                                | 宣告這些幫浦變更。                                                    |
-| **CGM 傳感器啟動**<br>**CGM 傳感器插入**<br>**CGM 傳感器停止**                                      | 宣告這些 CGM 變更。                                                 |
-| **臨時基礎開始**<br>**臨時基礎結束**                                                                   | 在開放式循環中最為有用。                                                 |
+```{admonition} Only when client control is off
+:class: warning
+If **Allow client control** is off in **Manage → Authorized clients** (and Simple Mode is off), **AAPS** applies careportal entries from Nightscout only for the data types you turned on under **Receive** in the [Synchronization section of the NSClientV3 settings](#Preferences-nsclient-synchronization): carbs, temporary targets, profile switches and the other careportal entries. Insulin is never delivered this way: a "Correction bolus" entered in Nightscout is only *announced*, and **AAPS** counts it as insulin on board without delivering it. This set-up is not recommended for remote control; use a paired **AAPSClient** instead.
+```
 
 閱讀更多關於 **Nightscout** 的選項[此處](https://nightscout.github.io/)
 
@@ -237,7 +225,8 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 雖然這可能對刪除已宣佈（但未實際注射）的碳水化合物有幫助，但在實際操作中，這在 **AAPS** 中並不運作良好，因此我們建議直接透過 **AAPS** 應用程式進行此類更改。
 
-(遠端控制智慧型手錶)=
+(RemoteControl_smartwatches)= (remotecontrol-smartwatches)=
+
 ## 4) 智慧型手錶
 
 ### 選項 1) 從 Wear OS 手錶控制 AAPS
@@ -280,15 +269,15 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ### 選項 2) 在手錶上運作 **AAPS**，以遠端控制手機上的 **AAPS**
 
-類似於使用追蹤者手機搭配 AAPSClient、Nightscout 或 SMS 指令（鏈接到相應部分），智慧型手錶可以用來遠端控制 **AAPS**，並提供完整的設定檔資料。與使用追蹤者手機的主要區別是，智慧型手錶與 **AAPS** 手機的連線是透過藍牙進行的，並且不需要驗證碼。此外，如果智慧型手錶與藍牙連線的 **AAPS** 手機也連接至 Wi-Fi/行動網路，那麼手錶也會與 **AAPS** 手機互動，提供更長的通訊範圍。這包括在不同位置遠端注射胰島素，例如照護者透過 **AAPS** 手錶為 T1D 孩子（持有 **AAPS** 手機）進行注射，這在孩子上學時特別有用。
+Similarly to using a follower phone with **AAPSClient** or SMS commands (see the sections above), a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via Bluetooth and needs neither Nightscout nor an authentication code. As a side-note, if both smartwatch and **AAPS** phone linked by Bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations, which can be useful in circumstances where the T1D child is in school.
 
 因此，遠端控制智慧型手錶在以下情況中特別有用：
 
-a) 當 **AAPSClient**/Nightscout/**SMS** 指令無法使用時；或
+a)  **AAPSClient** or **SMS** commands cannot work; or
 
-b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料、選擇 TT 或輸入碳水化合物時使用驗證碼）。
+b)  The user wishes to avoid typing an authentication code (as required for SMS commands).
 
-智慧型手錶需要運作 **Android wear** 軟體（最好是 10 或更新版本）才能控制 **AAPS**。請檢查手錶的技術規格，並查看 [手機頁面](../Getting-Started/Phones.md)。如果不確定，請在 **AAPS** 的 Facebook/Discord 群組中搜尋或詢問。
+A smartwatch needs **Wear OS 3 or newer** to be able to control **AAPS**. Please check the technical specifications of the watch, and see the [Smartwatches page](../Getting-Started/Watches.md). 如果不確定，請在 **AAPS** 的 Facebook/Discord 群組中搜尋或詢問。
 
 以下是設置流行型號 Samsung Galaxy Watch 4（40 毫米）的具體操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。如果你有設置其他智慧型手錶的經驗，並且認為這對其他用戶有幫助，請[編輯文件](../SupportingAaps/HowToEditTheDocs.md)，將你的發現分享給更廣泛的 **AAPS** 社群。
 
@@ -298,7 +287,7 @@ b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料�
 
 手錶軟體 **AAPSClient** Wear apk 可以直接從[Github](https://github.com/nightscout/AndroidAPS/releases/)下載。
 
-要下載軟體，請點擊所需的應用程式（在此截圖中，**wear-aapsclient-release_3.2.0.1** 或 **wear-aapsclient2-release_3.2.0.1** 均可使用，這兩個版本中有一個是為了提供給第二位照護者的手錶）。
+To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
 
 ![圖像](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
