@@ -1,27 +1,27 @@
 # 我能去哪裡尋求幫助？
 
-## 我卡住了；該怎麼辦？我可以問誰？
+## I'm stuck; What should I do? 我可以問誰？
 
-這個項目基於志願者工作，因此有一些規則需要遵守，以避免給那些慷慨捐出時間和技能的人增加額外的工作：
+This project is based on volunteer work and a few rules apply to any requests for help to avoid unnecessary time being wasted by those who kindly pay it forward:
 
-* 第一層：閱讀 Wiki - 我們現在有搜索功能可以幫助你！
+* level 1: Read the docs (i.e. this Wiki) - there is now a search function to help you!
 * 第二層：搜索 Facebook 群組，如果沒有已經回答的問題，請在 [AndroidAPS 用戶 Facebook 群組](https://www.facebook.com/groups/1900195340201874/)中提問
-* 第三層：如果 Facebook 沒有結果，請在 [Discord](https://discord.gg/4fQUWHZ4Mw) 上提問。為避免重複回答，同一個問題跨頻道貼文將會被忽略或刪除。不要忘記，大多數開發者都在歐洲，所以回覆可能不是 24 小時不間斷的；你可能需要等待幾個小時，尤其是週末和假期。
+* level 3: If Facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). 為避免重複回答，同一個問題跨頻道貼文將會被忽略或刪除。不要忘記，大多數開發者都在歐洲，所以回覆可能不是 24 小時不間斷的；你可能需要等待幾個小時，尤其是週末和假期。
 * 第4級：建立一個[問題](https://github.com/nightscout/AndroidAPS/issues)並附上你的[日誌檔案](../GettingHelp/AccessingLogFiles.md)
 * 第 5 級：寄送電子郵件至 *developers@aaps.app*（僅限涉及個人資料且不適合公開討論，並且您的問題在其他層級皆未獲解決時使用）
 
-如需有關 CGM 來源的支援，請使用 Facebook 群組或該特定系統的 Discord 聊天頻道（例如：[xDrip+](https://www.facebook.com/groups/xDripG5/)、[600 系列上傳器](https://www.facebook.com/groups/NightscoutForMedtronic/)），或對於 Nightscout 的支援請參考 [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/)，因為那裡的使用者對這些系統的專業知識會比這裡的使用者更高，這裡的使用者都使用不同的系統。
+For support on CGM sources please use the Facebook groups or Discord channels for that specific system (e.g. [xDrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGM in the Cloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
 ## 確保加入AndroidAPS使用者群組於Facebook或Discord上！
 
 加入主要的[AndroidAPS Facebook群組](https://www.facebook.com/groups/1900195340201874/)和/或[AndroidAPS在Discord上](https://discord.gg/4fQUWHZ4Mw)。你可以在這裡提問有關算法的問題、關於 Android Studio 設置和建置 APK 的問題、以及有關應用使用的任何疑問，還有如何充分利用他的提示。對於 Combo 幫浦使用者，還有一個[AAPSCombo](https://www.facebook.com/groups/127507891261169/)群組，這有著稍微更具體的設置。
 
-請注意，Facebook最近已經移除了在AAPS Facebook群組中共享的外部連結，包括目前和歷史的帖子，這些帖子包含指向AAPS說明文件/閱讀文件的外部連結。對於正在處理目標並查看歷史 AAPS Facebook 帖子的新人，請搜索 AAPS 記錄中討論的關鍵術語以獲得進一步協助。
+Please note that Facebook has recently removed external links shared within the **AAPS** Facebook group and this includes current and historic posts which contain external links to the **AAPS** Notes / Read the docs. For new users who are working through the Objectives and reviewing historic **AAPS** Facebook posts please search key terms as discussed within the **AAPS** notes for further assistance.
 
 ## 其他英文資源
 
 * [Looped Facebook 群組](https://www.facebook.com/groups/TheLoopedGroup)：涵蓋所有 DIY 閉環系統（OpenAPS、Loop 和 AndroidAPS）
-* [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
+* [xDrip - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [雲端中的 CGM](https://www.facebook.com/groups/cgminthecloud/)：關於 CGM 的一般資訊
 * [AndroidAPS 在 Discord 上](https://discord.gg/4fQUWHZ4Mw)
 
