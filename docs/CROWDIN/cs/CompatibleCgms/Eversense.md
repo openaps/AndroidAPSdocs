@@ -1,66 +1,75 @@
-# Pro uživatele Eversense
+# Eversense
 
-There are three different methods to access the readings from Eversense:
+Hodnoty z Eversense můžete získat čtyřmi různými způsoby:
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip+ companion app
+- ESEL v režimu doprovodné aplikace
+- ESEL v režimu upravené aplikace
+- xDrip jako doprovodná aplikace
+- Čtečka oznámení (součást **AAPS**)
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+Stáhněte a nainstalujte [aplikaci ESEL](https://github.com/BernhardRo/Esel/tree/master/apk) podle tohoto [návodu](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- V ESEL otevřete nabídku se třemi tečkami (⋮) vpravo nahoře a vyberte **Settings** (je dostupná také z nabídky ☰). V nastavení:
+  - Zapněte „Send to AAPS and xDrip“
+  - **Vypněte** „Send to Nightscout“
+  - Protože data glykémie z Eversense mohou být zašuměná, doporučuje se v ESEL zapnout „Smooth Data“.
 
-![ESEL Broadcast](../images/ESEL.png)
+![Vysílání ESEL](../images/ESEL.png)
 
-### Companion Mode
+### Režim doprovodné aplikace
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+Čte data z oznámení aplikace Eversense (funguje se standardní aplikací Eversense, k dispozici od verze ESEL 3.0.1).
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
-   - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+1. Použijte oficiální aplikaci Eversense z Obchodu Google Play
+   - Volitelné, ale nutné pro doplňování chybějících dat: přihlaste se ke svému účtu Eversense
+   - V části Sync zapněte Auto synchronization
+2. Konfigurace ESEL:
+   - Vypněte nastavení „Get data from patched Eversense App“
+   - Pro doplňování chybějících dat: zapněte „Fill missing data from eversensedms.com“
+   - Jako e-mailovou adresu a heslo zadejte své přihlašovací údaje k Eversense
+3. Nastavte „MM640g“ jako zdroj glykémie v [**Konfigurace → Zdroj glykémie**](#Config-Builder-bg-source).
 
-### Patched Eversense App
+### Upravená aplikace Eversense
 
- Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ Vyžaduje upravenou verzi aplikace Eversense (funguje zcela offline, včetně doplňování chybějících dat).
 
-1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
+1. Odinstalujte aplikaci Eversense (Varování: vaše místní historická data (starší než 1 týden) budou ztracena!)
 
-2. Install the [patched Eversense app](https://cr4ck3d3v3r53n53.club) and use it as described by the vendor
+2. Nainstalujte [upravenou aplikaci Eversense](https://cr4ck3d3v3r53n53.club) a používejte ji tak, jak popisuje její autor
 
-   - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
+   - Spusťte aplikaci Eversense, přihlaste se, připojte se k vysílači a používejte ji stejně jako běžnou aplikaci.
 
-3. Configuration of ESEL:
+3. Konfigurace ESEL:
 
-   - Enable the setting "Get data from patched Eversense App"
+   - Zapněte nastavení „Get data from patched Eversense App“
 
 
 
-![ESEL Broadcast](../images/ESELpatch.png)
+![Vysílání ESEL](../images/ESELpatch.png)
 
-​       If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+​       Pokud spouštíte ESEL s novou instalací Eversense poprvé, může trvat až 15 minut, než se v xDrip objeví první hodnoty!
 
-4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+4. Nastavte „MM640g“ jako zdroj glykémie v [**Konfigurace → Zdroj glykémie**](#Config-Builder-bg-source).
 
-## xDrip+
+## xDrip
 
-xDrip+ can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip umí číst oznámení aplikace výrobce, stejně jako ESEL. Doplňování chybějících dat není k dispozici.
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../CompatibleCgms/xDrip.md).
-- Enable [Exponential Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md) in AAPS.
+- Stáhněte a nainstalujte xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- Jako zdroj dat musí být v xDrip vybráno „Companion App“.
+- Vyberte xDrip v [**Konfigurace → Zdroj glykémie**](#Config-Builder-bg-source).
+- Upravte nastavení xDrip podle vysvětlení na stránce [Nastavení xDrip](../CompatibleCgms/xDrip.md).
+- Zapněte v AAPS [Exponenciální vyhlazování](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+
+## Čtečka oznámení
+
+**AAPS** umí číst hodnoty glykémie přímo z oznámení oficiální aplikace Eversense, bez jakékoli další aplikace mezi nimi. Doplňování chybějících dat není k dispozici.
+
+- Vyberte **Čtečka oznámení** v [**Konfigurace → Zdroj glykémie**](#Config-Builder-bg-source) a na vyžádání povolte **AAPS** přístup k oznámením.
+- Ujistěte se, že aplikace Eversense zobrazuje v oznámení aktuální hodnotu glykémie.
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+Hodnoty glykémie nepřicházejí vždy každých 5 minut a mohou se objevit duplicity.
 ```
