@@ -25,27 +25,46 @@ Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor 
 ## Instalare
 
 1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. Poți utiliza, dacă dorești, conturile tale de Google sau Facebook.
-2. Enable the “Open Humans” plugin in [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
-3. Deschide setarea folosind iconița roata dințată. Poți restricționa încărcarea pe durata în care telefonul utilizează Wi-Fi și/sau este conectat la un încărcător.
-4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
+2. Enable the **Open Humans** plugin in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
 
-![Constructorul de configurare al Open Humans](../images/OHUploader1.png)
+![Open Humans enabled in Configuration > Communication](../images/OHUploader1.png)
 
-5. Citește cu atenție informațiile furnizate despre funcția de Open Humans Uploader și termenii de utilizare.
-6. Confirmă prin bifarea căsuței și apasă pe "LOGIN".
+3. Tap **Settings** on the **Open Humans** card. You can restrict uploads to times when the phone uses Wi-Fi (**WiFi only**) and/or is charging (**Charging only**).
+
+![Open Humans settings with WiFi only and Charging only](../images/OHUploader_settings.png)
+
+4. Tap **Open plugin** on the **Open Humans** card, then tap **Setup**.
+
+![Open Humans plugin screen with the Setup button](../images/OHUploader_setup.png)
+
+5. On the **Welcome to Open Humans** screen, tap **Next**. Read the **Consent** screen carefully: it shows the terms of use and which data is uploaded and not uploaded.
+6. Switch on **I understand and agree.** (1) and tap **Login to Open Humans** (2).
+
+![Open Humans Welcome and Consent screens in AAPS](../images/OHUploader2.png)
+
 7. Site-ul Open Humans va fi deschis. Autentifică-te cu datele tale de autentificare.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
-9. Apăsați butonul "Autorizează proiectul".
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile (1).
+9. Click **Authorize project** (2).
 
-![Termeni de utilizare + Autentificare pentru Open Humans ](../images/OHUploader2.png)
+![Login and project authorization on the Open Humans website](../images/OHUploader_web.png)
 
-10. Când revii la AAPS vei vedea logare reușită.
-11. Pentru finalizarea configurării păstrează conectarea Open Humans Uploader pornita și telefonul deschis.
-12. După ce dai click pe închidere vei vedea ID-ul tău de membru. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Apasă pe 'LOGOUT' dacă vrei să oprești încărcarea datelor în Open Humans.
+```{admonition} Older screenshot
+:class: note
+The screenshots above show an earlier version of the Open Humans website and still use the old project name **AndroidAPS Uploader**. The steps are the same.
+```
+
+10. Back in **AAPS**, the **Final touches** screen asks whether you want to proceed. Tap **Proceed**.
+11. Wait until **We're done!** appears, then tap **Close**. From now on, your phone uploads data in the background from time to time.
+12. The **Open Humans** plugin screen now shows your **Project Member ID**. Tap **Upload now** if you want to start an upload right away.
+13. Tap **Logout** if you want to stop uploading data to Open Humans.
 14. Notificările Android te vor informa despre încărcarea în curs.
 
 ![Finalizați configurarea Open Humans](../images/OHUploader3.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+```
 
 15. Vă puteți gestiona datele prin conectarea la [pagina Open Humans](https://www.openhumans.org).
 
