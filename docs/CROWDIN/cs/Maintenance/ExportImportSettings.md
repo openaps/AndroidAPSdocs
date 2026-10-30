@@ -1,152 +1,189 @@
-# Creating and restoring back-ups
+# Vytváření a obnova záloh
 
-When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself, "What if?
+Když si AAPS nainstalujete do telefonu, stane se z něj „zdravotnický prostředek“, na který se každý den spoléháte. Velmi doporučujeme mít připravený nouzový záložní plán pro případ, že se telefon porouchá, bude ukraden nebo ho ztratíte. Proto je nutné se připravit a zeptat se sami sebe: „Co když?“
 
-To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone). Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.
+Abyste mohli obnovit své nastavení AAPS na stávajícím nebo novém telefonu, je důležité mít následující položky uložené na bezpečném místě (tedy ne v telefonu). Nejlepší je mít alespoň dvě samostatné zálohy: na místním pevném disku, USB disku a (nejlépe) v cloudovém úložišti, jako je Disk Google nebo Microsoft 365 OneDrive. Když zálohy uložíte do cloudu, budete mít vždy vše potřebné dostupné z telefonu a můžete své nastavení obnovit kdekoli a kdykoli.
 
-Consider acquiring a secondary backup phone and practicing restoring AAPS to ensure the backup phone works as expected. This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
+Zvažte pořízení druhého, záložního telefonu a vyzkoušejte si na něm obnovu AAPS, abyste si ověřili, že záložní telefon funguje podle očekávání. Díky tomuto kroku budete mít jistotu, že váš nouzový plán funguje a že můžete plynule pokračovat v používání AAPS, i když hlavní telefon nebude k dispozici.
 
-To be able to restore, having the following items at hand is important:
+Pro obnovu je důležité mít po ruce tyto položky:
 
-- Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.
-- A recent copy of the **AAPS installer .APK**
-- A recent **settings export** file: For restoring important settings (which includes your objectives!).
-- Your **AAPS master password**
-- Backups of additional utilities: Such as BYODA and/or xDrip+.
-- Personal notes on your setup.
+- Váš **soubor úložiště klíčů z Android Studia** a příslušné **heslo**: Jsou potřeba pro (opětovné) sestavení instalačního souboru AAPS .APK.
+- Aktuální kopie **instalačního souboru AAPS .APK**
+- Aktuální soubor s **exportem nastavení**: Pro obnovu důležitých nastavení (včetně vašich cílů!).
+- Vaše **hlavní heslo AAPS**
+- Zálohy dalších pomocných aplikací: například BYODA a/nebo xDrip.
+- Osobní poznámky k vašemu nastavení.
 
-Below are the items that are recommended for keeping back-ups.
+Níže jsou položky, které se doporučuje zálohovat.
 
-## Creating back-ups
+## Vytváření záloh
 
-### Keystore file from the computer you used to build the APK
-When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then reinstall and reconfigure AAPS.
+### Soubor úložiště klíčů z počítače, na kterém jste sestavili APK
+Když sestavujete instalační soubor .APK v Android Studiu, použije se **soubor úložiště klíčů a heslo k podepsání instalačního souboru .APK**. Abyste mohli aktualizovat stávající instalaci AAPS, musí být instalační soubor .APK s aktualizací podepsán stejným úložištěm klíčů, jaké bylo použito při první instalaci. Při aktualizaci zůstanou zachována všechna nastavení i databáze AAPS. Bez toho musíte nejprve stávající aplikaci odinstalovat a potom AAPS [znovu nainstalovat](#reinstall-aaps) a nastavit.
 
-Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK.
+Když si úložiště klíčů a příslušné heslo uschováte, budou budoucí aktualizace APK mnohem jednodušší, hlavně pokud budete muset aplikaci sestavit na novém počítači. Podrobnosti o použití úložiště klíčů při sestavení nového APK najdete v části [Aktualizace AAPS](../Maintenance/UpdateToNewVersion.md).
 
-**When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
+**Kdy zálohovat:** Úložiště klíčů zálohujte poté, co poprvé sestavíte instalační soubor **AAPS** .APK.
 
-**How to back-up:** Locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
+**Jak zálohovat:** Najděte cestu k úložišti klíčů. Pokud si ji nepamatujete, najdete ji v Android Studiu volbou **Build > APK > Next**. Cesta bude uvedena v poli „Key store path“. Pomocí správce souborů přejděte na tuto cestu a vytvořte si kopii souboru úložiště klíčů (s příponou `.jks`). Uložte ho na bezpečné místo v cloudu pro případ, že by váš počítač přestal být dostupný. Nezapomeňte si také poznamenat heslo k úložišti klíčů, alias klíče a heslo klíče.
 
-### Copies of the most recent APK
-In case your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone. Note: you will also need your preferences backed up as noted below.
+### Kopie nejnovějšího APK
+Když hlavní telefon s **AAPS** ztratíte nebo se poškodí, díky kopii APK budete moci rychle pokračovat v používání **AAPS** na novém telefonu. Poznámka: budete také potřebovat zálohu předvoleb, jak je popsáno níže.
 
-**When to back-up:** You should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. You may want to also maintain one earlier version in case you need to roll back to that for any reason.
+**Kdy zálohovat:** Uchovávejte si zálohu nejnovějšího APK, které jste nainstalovali do hlavního telefonu s **AAPS**. Můžete si také ponechat jednu starší verzi pro případ, že byste se k ní z nějakého důvodu potřebovali vrátit.
 
-**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
+**Jak zálohovat:** Uchovávejte si kopii na počítači, na kterém jste APK sestavili v Android Studiu. Navíc se doporučuje uložit kopii instalačního APK na cloudovou platformu. Ujistěte se, že v případě potřeby obě zálohy najdete. Zvažte vytvoření samostatných složek pro tyto zálohy.
 
-### AAPS settings file (also referred to as 'Preferences')
+### Soubor s nastavením AAPS (označovaný také jako „Předvolby“)
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+Svá nastavení najdete v **Adresáři AAPS**, který jste vybrali při [nastavení AAPS](#SetupWizard-StoragePermission).</br>
+**Adresář AAPS** můžete také změnit na obrazovce **Údržba** (**nabídka** (☰) > **Údržba**), viz [Nastavení místního adresáře AAPS](#preferences-maintenance-logdirectory).
 ```
 
-With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
+S kopií instalačního souboru APK (viz výše) a souborem **Nastavení** můžete rychle začít používat AAPS na stávajícím nebo novém telefonu.
 
-The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your config builder settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+Soubor **Nastavení** slouží k přizpůsobení aplikace AAPS vašemu konkrétnímu nastavení. Obsahují například vaše nastavení **Konfigurace**, stav cílů, nastavení komunikace se službami třetích stran (např. Nightscout, Tidepool), automatizace a profily.
 
-Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
+Export nastavení AAPS do souboru vám umožní obnovit konfiguraci k určitému okamžiku. Jak už bylo řečeno, kromě všech nastavení konfigurace obsahuje soubor s exportem také stav vašich cílů, který potřebujete obnovit při **(opětovné) instalaci** AAPS. Bez něj budete muset pro povolení uzavřené smyčky splnit všechny cíle znovu od začátku. Soubory s nastavením vám také umožní obnovit „poslední známé dobré“ nastavení a vrátit tak změny v konfiguraci.
 
-**When to back-up AAPS settings:**
-* Each time you complete an objective to prevent losing your progress. _Without a copy of your **Settings** you will have to complete all objectives again in the event you need to re-install AAPS or replace your phone._
+**Kdy zálohovat nastavení AAPS:**
+* Pokaždé, když splníte cíl, abyste nepřišli o svůj postup. _Bez kopie vašeho **Nastavení** budete muset znovu splnit všechny cíle, pokud budete muset AAPS přeinstalovat nebo vyměnit telefon._
 
-* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
+* Kdykoli plánujete větší změny v konfiguraci (změna nastavení SMB, změna typu inzulínu, změna pumpy, změny v automatizacích), zálohujte své **Nastavení** před změnami i po nich. Tak budete mít nejnovější nastavení i kopii nastavení před změnami, kdybyste se k nim potřebovali vrátit.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only : the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* Pouze pro uživatele pump bez hadičky (např. Omnipod a Medtrum): soubor **Nastavení** obsahuje údaje o spojení s vaším aktuálním podem a lze ho použít k obnovení spojení s tímto podem na novém telefonu. Pokud nemáte kopii předvoleb exportovanou po spuštění aktuálního podu, budete muset při výměně telefonu spustit nový pod.
 
-**How to back-up manually:**
+**Jak zálohovat ručně:**
 
-1. If this your first time importing or exporting **Settings** you will need to set a master password in [Preferences > General > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
+1. Pokud importujete nebo exportujete **Nastavení** poprvé, musíte nastavit hlavní heslo v [Nastavení > Ochrana](#Preferences-master-password). Nastavte heslo a uložte si ho na bezpečné místo. _Bez tohoto hesla se ke zálohám **Nastavení** nedostanete._
 
-2. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok
+2. Na hlavní obrazovce **AAPS** otevřete **nabídku** (☰) > **Údržba**. Pomocí štítků **Lokálně** a **Cloud** vedle položky **Exportovat nastavení** zvolte, kam se soubor uloží (viz **Export nebo import nastavení** níže), a potom klepněte na **Exportovat nastavení**. **AAPS** ukáže, kam se soubor uloží: u volby **Lokálně** název souboru, u volby **Cloud** text **Google Drive**. Klepněte na **OK**.
 
-![AAPS export settings 1](../images/Maintenance/AAPS_ExportSettings1.png) ![AAPS export settings 2](../images/Maintenance/AAPS_ExportSettings2.png)
+   ![Export nastavení do místního souboru](../images/Maintenance/export_settings_confirm_local.png)
 
-3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
+   ![Export nastavení na Disk Google](../images/Maintenance/export_settings_confirm_cloud.png)
+
+   Zadejte hlavní heslo nastavené výše a klepněte na **OK**.
+
+   ![Hlavní heslo pro export](../images/Maintenance/export_settings_password.png)
+
+   Export potvrdí zpráva **Nastavení exportováno** (lokálně) nebo **Export do cloudu úspěšný** (cloud).
+
+   ![Zpráva Nastavení exportováno](../images/Maintenance/export_settings_done_local.png)
+
+   ![Zpráva Export do cloudu úspěšný](../images/Maintenance/export_settings_done_cloud.png)
+
+3. Pomocí správce souborů v telefonu (obvykle se jmenuje „Soubory“ nebo „Moje soubory“) přejděte do Interní úložiště > AAPS > preferences. Zde uvidíte kopii všech exportovaných souborů s předvolbami. Název souboru by měl být `YYYY-MM-DD_Time_appname.json`. Nahrajte tento soubor na cloudovou platformu podle svého výběru. Potom si z cloudové platformy stáhněte kopii také do svého počítače.
 
 (ExportImportSettings-Settings-Export)=
 
-## Settings Export
+## Export nastavení
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+Svá nastavení najdete v **Adresáři AAPS**, který jste vybrali při [nastavení AAPS](#SetupWizard-StoragePermission).</br>
+**Adresář AAPS** můžete také změnit na obrazovce **Údržba** (**nabídka** (☰) > **Údržba**), viz [Nastavení místního adresáře AAPS](#preferences-maintenance-logdirectory).
 ```
 
-It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
+Doporučujeme exportovat nastavení pravidelně, hlavně před změnami konfigurace a po nich. Exporty můžete provádět **ručně nebo (lépe) pomocí automatizace**. Nezapomeňte si poznamenat hlavní heslo AAPS a zálohovat soubory s nastavením tak, že je zkopírujete z telefonu, například do cloudového úložiště.
 
-**Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
+**Poznámka**: _Exportovaná nastavení budou zašifrována vaším hlavním heslem AAPS: bez hlavního hesla použitého při exportu nebudete moci soubor s nastavením importovat!_
 
-### Exporting or Importing Settings
-To export or import settings, use the **import or export buttons** in the AAPS **maintenance menu**
+### Export nebo import nastavení
+Chcete-li exportovat nebo importovat nastavení, otevřete **nabídku** (☰) a vyberte **Údržba**. V části **Správa souborů** určují štítky **Lokálně** a **Cloud** vedle položek **Exportovat nastavení** a **Importovat nastavení**, kam se soubor s nastavením uloží nebo odkud se načte: **Lokálně** je adresář AAPS v telefonu, **Cloud** je k dispozici, jakmile nastavíte [Cloudový adresář](#preferences-maintenance-cloud). Klepnutím štítek zapnete nebo vypnete; alespoň jeden zůstane vždy vybraný a oba řádky sdílejí stejnou volbu. Potom klepněte přímo na **Exportovat nastavení** nebo **Importovat nastavení** a spusťte akci.
 
-![Maintenance menu export/import buttons](../images/Maintenance/maintenance_menu_import_export_400px.png)
+![Nabídka Údržba s řádky Exportovat nastavení a Importovat nastavení](../images/Maintenance/maintenance_export_import.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+### Automatizace exportu nastavení
 
-For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) enable the option "**Unattended Settings Exports**" in [Preferences > Maintenance](#preferences-maintenance-settings).
+Pro automatický export nastavení [(**viz Automatizace**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) otevřete [**Nastavení** > **Údržba**](#preferences-maintenance-settings), rozbalte **Bezobslužný export nastavení** a zapněte **Povolit automatický export nastavení**.
 
-You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
+Nyní můžete nastavit [automatizaci](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), která bude exportovat nastavení buď pravidelně (_např._ každý týden), nebo po výměně podu.
 
-_**Note:** On importing settings to user always needs to enter the AAPS password!_
+_**Poznámka:** Při importu nastavení musí uživatel vždy zadat heslo AAPS!_
 
-![Maintenance menu unattended Settings Export](../images/Maintenance/maintenance_menu_preferences_400px.png)
+![Nastavení > Údržba > Bezobslužný export nastavení s přepínačem Povolit automatický export nastavení](../images/Maintenance/settings_unattended_export.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
-## Restoring from your backups on a new phone or fresh installation of AAPS
+## Obnova ze záloh na novém telefonu nebo při nové instalaci AAPS
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS Directory** in Preferences > [Maintenance Settings](#preferences-maintenance-settings).
+Svá nastavení najdete v **Adresáři AAPS**, který jste vybrali při [nastavení AAPS](#SetupWizard-StoragePermission).</br>
+**Adresář AAPS** můžete také změnit na obrazovce **Údržba** (**nabídka** (☰) > **Údržba**), viz [Nastavení místního adresáře AAPS](#preferences-maintenance-logdirectory).</br>
+Pokud **AAPS** ztratí přístup k tomuto adresáři (může se to stát po přeinstalaci nebo po vymazání úložiště aplikace), zobrazí oznámení **Přístup do adresáře AAPS byl ztracen** a přestane ukládat nastavení do telefonu, dokud [adresář znovu nevyberete](#preferences-maintenance-logdirectory).
 ```
 
-Use these instructions if you have a back-up of your APK and **Preferences** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+Tento návod použijte, pokud máte zálohu APK a **Nastavení** a chcete je nahrát do nového telefonu, nebo pokud jste z nějakého důvodu museli APK ve stávajícím telefonu smazat a znovu nainstalovat.
 
-_If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
+_Pokud aktualizujete **AAPS** pomocí APK sestaveného se stejným úložištěm klíčů, tento postup byste neměli potřebovat. Přesto se doporučuje vytvořit si zálohu, než aktualizaci provedete._
 
-If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone.
+Pokud aktualizujete **AAPS** poté, co jste ztratili nebo nahradili původní úložiště klíčů (např. při použití nového počítače pro sestavení bez přenesení úložiště klíčů), zálohujte nejprve všechna nastavení podle popisu výše a potom stávající verzi **AAPS** v telefonu odinstalujte. Celý postup najdete v části [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
 
-If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
+V případě potřeby [nastavte přijímač zdroje CGM/glykémie](../Getting-Started/CompatiblesCgms.md) ještě před kroky uvedenými níže
 
+(ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-Importing a **Preferences** file will deactivate your current pod if those **Preferences** were exported during a different active pod session. 
+Soubor **Předvolby** obsahuje relaci podu nebo patche, který byl aktivní v době exportu.
+- **Exportujte hned po každé aktivaci podu nebo patche** a zkopírujte soubor mimo telefon.
+- **Stejný telefon, pod stále běží:** volbu **Nahradit také nastavení pumpy** nechte nezaškrtnutou. Váš aktuální pod zůstane zachován a importují se jen ostatní nastavení.
+- **Nový telefon přebírá pod:** zaškrtněte **Nahradit také nastavení pumpy** a použijte jen soubor exportovaný během podu, který máte právě nasazený. Soubor z dřívějšího podu nahradí relaci vašeho aktuálního podu a budete muset spustit nový pod.
+- **Omylem byla importována stará relace podu:** **AAPS** se stále snaží spojit s tímto podem a nový pod nemůžete aktivovat. Deaktivujte ho; pokud to nejde, zahoďte ho (viz například [Zahození podu](#omnipod-dash-discard-pod) pro Omnipod DASH).
 ```
 
-1. Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
+```{admonition} Pump settings are kept unless you say otherwise
+:class: note
+Import ve výchozím stavu nastavení pumpy nemění: pumpa vybraná v **Konfiguraci**, její spárování i všechna ostatní nastavení zůstanou v tomto telefonu tak, jak jsou. Volbu **Nahradit také nastavení pumpy** na obrazovce importu zaškrtněte jen tehdy, když obnovujete nastavení do nového telefonu, který má převzít stejnou pumpu. Nastavení, která v souboru nejsou, import nikdy nesmaže.
+```
 
-2. Launch **AAPS** and allow any requested permissions
+1. Pomocí záložní kopie APK (viz výše) postupujte podle návodu pro [novou instalaci](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Preferences**
+2. Spusťte **AAPS** a povolte všechna požadovaná oprávnění
 
-4. From the **AAPS** home screen select Request and allow on all permissions listed in red on the top
+3. Ukončete Průvodce nastavením. Všechna potřebná nastavení naimportujeme ze záložní kopie **Nastavení**
 
-5. From the **AAPS** home screen, set the master password in [Preferences > General > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+4. Na hlavní obrazovce **AAPS** vyberte Požadavek a povolte všechna oprávnění uvedená červeně nahoře
 
-6. If you haven't done it yet, [set the **AAPS Directory**](#preferences-maintenance-settings): from the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > AAPS DIRECTORY.
+5. Na hlavní obrazovce **AAPS** nastavte v [Nastavení > Ochrana](#Preferences-master-password) hlavní heslo na stejné heslo, jaké jste použili pro zálohy.
 
-7. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok. This will create the preferences folder if it does not already exist on your phone.
+6. Pokud jste to ještě neudělali, [nastavte **Adresář AAPS**](#preferences-maintenance-logdirectory): na hlavní obrazovce **AAPS** otevřete **nabídku** (☰) > **Údržba** > **Adresář AAPS**.
 
-8. Download the back-up of your **Preferences** file from your cloud platform.
+7. Na hlavní obrazovce **AAPS** otevřete **nabídku** (☰) > **Údržba** > **Exportovat nastavení** > zadejte hlavní heslo nastavené výše > **OK**. Tím se v telefonu vytvoří složka preferences, pokud ještě neexistuje.
 
-9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
+8. Stáhněte si ze své cloudové platformy zálohu souboru **Předvolby**.
 
-10. From the **AAPS** home screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to back-up from > Ok > type in Master password set above > Ok. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
+9. Pomocí správce souborů (obvykle se jmenuje „Soubory“ nebo „Moje soubory“) přesuňte soubor ze stažených souborů do `/internal storage/AAPS/preferences`, pokud je váš **Adresář AAPS** nastaven na `/internal storage/AAPS`
 
-![AAPS import settings 1](../images/Maintenance/AAPS_ImportSettings1.png) ![AAPS import settings 2](../images/Maintenance/AAPS_ImportSettings2.png)
+10. Na hlavní obrazovce **AAPS** otevřete **nabídku** (☰) > **Údržba** a klepněte na **Importovat nastavení**. Vyberte soubor s předvolbami, ze kterého chcete obnovit nastavení (nejnovější je nahoře). Dbejte na výběr správného souboru s předvolbami, zobrazí se všechny soubory .json ze složky preferences (nebo z cloudového adresáře, pokud použijete **Cloud**).
 
-10. **AAPS** will automatically restart and should then have all of your preferences imported.
+    ![Seznam souborů s nastavením k importu](../images/Maintenance/import_settings_files.png)
 
-11. Tubeless pumps (Omnipod and Medtrum) users only - if your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+    **AAPS** zobrazí podrobnosti o souboru. Zadejte hlavní heslo nastavené výše a klepněte na **Dešifrovat a zkontrolovat**.
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** home screen, select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
+11. Po dešifrování souboru se rozhodněte, co udělat s nastavením pumpy. Na novém telefonu, který přebírá stejnou pumpu, zaškrtněte **Nahradit také nastavení pumpy**, aby se spárování a nastavení pumpy převzaly ze souboru. Pokud chcete ponechat pumpu, se kterou je tento telefon už spárovaný, nechte políčko nezaškrtnuté. Potom klepněte na **Importovat**.
 
-### Note for Dana RS users
+    ![Dešifrovaný soubor s nastavením s políčkem Nahradit také nastavení pumpy a tlačítkem Importovat](../images/Maintenance/import_settings_review.png)
 
-- As pump connection settings are also imported **AAPS** on your new phone will already "know" the pump and therefore not start a bluetooth scan.
+12. **AAPS** se zeptá **Použít importovaná nastavení?** a sdělí vám, kolik nastavení se změní, a pokud jste políčko nechali nezaškrtnuté, také kolik nastavení pumpy zůstane zachováno. Zatím se nic nezapsalo, takže **Zrušit** ponechá telefon přesně v původním stavu. Klepnutím na **OK** nastavení použijete.
+
+    ![Použít importovaná nastavení? dialog](../images/Maintenance/import_settings_apply.png)
+
+13. **AAPS** použije importovaná nastavení okamžitě, bez restartu. Restartují se jen pluginy, jejichž nastavení se změnilo. Během této doby **AAPS** zobrazuje **Používání nastavení…**; pokud je pumpa zaneprázdněná, zobrazí **Čekání na pumpu…** a nastavení použije, jakmile bude pumpa volná. Pokud je pumpa zaneprázdněná i po jedné minutě, **AAPS** nabídne další pokus. Zpráva **Nastavení byla použita** potvrdí, že se importovaná nastavení používají. Každé ošetření, které jste zadali do fronty během importu, se zahodí a **AAPS** vám oznámí, že bylo zrušeno, takže se nic nepošle do pumpy dvakrát.
+
+    ![Zpráva Nastavení byla použita](../images/Maintenance/import_settings_applied.png)
+
+Pokud soubor obsahuje pumpu, kterou tato verze **AAPS** nemá, **AAPS** přepne na **Virtuální pumpu** a oznámí vám to. V **Konfiguraci** znovu vyberte svou pumpu a zkontrolujte její nastavení.
+
+14. Pouze pro uživatele pump bez hadičky (Omnipod a Medtrum) – pokud jste zaškrtli **Nahradit také nastavení pumpy** a vaše **Předvolby** nebyly zálohovány ze stejného podu, který právě používáte, budete muset pro zahájení podávání inzulínu spustit nový pod.
+
+**Řešení problémů:** pokud se vám nedaří nastavit aktivní profil, na hlavní obrazovce **AAPS** otevřete **nabídku** (☰) vlevo nahoře > **Konfigurace** > **Pumpa** > přepněte na **Virtuální pumpu** > a potom přepněte zpět na svůj typ pumpy
+
+### Poznámka pro uživatele Dana RS
+
+- Pokud jste zaškrtli **Nahradit také nastavení pumpy**, importuje se i nastavení připojení k pumpě: **AAPS** na novém telefonu už bude pumpu „znát“, a proto nespustí vyhledávání přes Bluetooth.
 - Nový telefon a pumpu prosím spárujte ručně.
