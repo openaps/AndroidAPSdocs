@@ -9,23 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## 遺失的密鑰庫
-如果在更新**AAPS**時使用相同的金鑰存檔，你就不必在智慧型手機上卸載先前的版本。因此建議將金鑰存檔儲存在安全的地方。
-
-如果你嘗試安裝用與之前不同的金鑰存檔簽署的 apk，你將收到錯誤訊息，解釋安裝失敗！
-
-如果你無法找到舊的金鑰存檔或密碼，請按以下步驟進行：
-
-1. [匯出設定](../Maintenance/ExportImportSettings.md)到你的手機。
-2. 將設置文件從手機複製或上傳到外部位置（例如你的電腦、雲端存儲服務……）。
-4. 根據 [更新指導](../Maintenance/UpdateToNewVersion) 中的描述生成簽名的 apk 新版本，並將其轉移到你的手機上。
-5. 在你的手機上卸載先前的 **AAPS** 版本。
-6. 在你的手機上安裝新的 **AAPS** 版本。
-7. [匯入設置](#ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)以恢復你的目標和配置。
-
-   如果你在手機上找不到這些檔案，請將它們從外部存儲複製到手機上。
-
-8. 檢查你的電池優化選項並再次停用他們。
-9. 繼續循環。
+If you lost your keystore or its password, an apk signed with a new keystore cannot update your current **AAPS**: you have to uninstall and reinstall it. See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 ## Gradle 同步失敗
 Gradle 同步可能因多種原因失敗。當你收到“gradle 同步失敗”的訊息時，請打開 Android Studio 底部的“建置”選項卡 (1)，檢查顯示的錯誤訊息 (2)。
@@ -53,7 +37,7 @@ Gradle 同步可能因多種原因失敗。當你收到“gradle 同步失敗”
 ```
 
 #### 步驟 1 - 檢查 git 安裝
-  * 打開 Android Studio 底部的終端選項卡 (1)，複製以下文字並粘貼或輸入到終端中。
+  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal (2).
     ```
     git --version
     ```
@@ -90,11 +74,11 @@ Gradle 同步可能因多種原因失敗。當你收到“gradle 同步失敗”
 #### 步驟 2：檢查未提交的更改。
 
   * 在 Android Studio 中，打開左側的“提交”選項卡 (1)。 ![提交標籤：未提交的更改](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * 你可以看到“預設變更集”(2) 或“未版本化文件”(3)：
+  * You can see either "Changes" (called "Default changeset" in older Android Studio versions) (2) or "Unversioned Files" (3):
 
-    * 對於“預設變更集”，你可能更新了“Gradle”或錯誤地更改了一些文件內容。
+    * For "Changes", you probably updated 'Gradle' or changed some of the file contents by mistake.
 
-    * 右鍵單擊“預設變更集”，然後選擇“回滾”
+    * Right click on "Changes" and select "Rollback…" (1)
 
       ![提交標籤：回滾變更](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
@@ -161,12 +145,12 @@ git config --global user.email 你的email@xxx.com
 
 ![開啟Gradle設定](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  在 **Gradle JDK** 欄位中，檢查是否選擇了適當的版本（1）如果沒有，請點選該欄位，並查看它是否已經在列表中可用。下面的範例顯示 JVM 21 標示為“jbr-21”。如果你找到了，請選擇它，就完成了。如果不可用，則選擇“下載 JDK”。
+3.  在 **Gradle JDK** 欄位中，檢查是否選擇了適當的版本（1）如果沒有，請點選該欄位，並查看它是否已經在列表中可用。下面的範例顯示 JVM 21 標示為“jbr-21”。如果你找到了，請選擇它，就完成了。 If not available, then select **Download JDK** (2).
 
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. 在版本 (1) 中，選擇你的 **AAPS** 版本所需的 JDK（當你檢查需求表時做的註記）。在廠商（2）中選擇任何廠商。位置 (3)：請勿更改。
+4. 在版本 (1) 中，選擇你的 **AAPS** 版本所需的 JDK（當你檢查需求表時做的註記）。在廠商（2）中選擇任何廠商。位置 (3)：請勿更改。 Click **Download** (4).
 
 ![選擇JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -211,7 +195,7 @@ git config --global user.email 你的email@xxx.com
 (gradle-resync)=
 ### Gradle 重新同步
 
-  如果你仍然看到 Gradle 同步失敗的訊息，請選擇鏈接 "再試一次"。 ![Gradle 同步失敗模式](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  If you can still see the message that the gradle sync failed, now select the link **Try again** (1). ![Gradle 同步失敗模式](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   如果你不再看到這條訊息，你仍然可以手動觸發：
@@ -246,7 +230,7 @@ git config --global user.email 你的email@xxx.com
 
 * 如果你正在使用修補過的 Dexcom G6 應用程式：此應用程式已過時。請改用[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)應用程序。
 
-* 如果你正在使用 xDrip+：請按照 [xDrip+ 設定頁面](#xdrip-identify-receiver) 上的描述來識別接收器。
+* If you are using xDrip: identify receiver as described on [xDrip settings page](#xdrip-identify-receiver).
 
 
 ## Apk 未安裝
@@ -254,14 +238,15 @@ git config --global user.email 你的email@xxx.com
 ![手機應用程序未安裝](../images/Update_AppNotInstalled.png)
 
 * 請確保你已將 "app-full-release.apk" 文件傳輸到你的手機。
+* This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 * 如果手機上顯示 "應用程序未安裝"，請按照以下步驟操作：
 
 1. [匯出設定](../Maintenance/ExportImportSettings.md)（在已安裝於你手機上的 AAPS 版本中）
 2. 在你的手機上卸載 **AAPS**。
-3. 啟用飛行模式並關閉藍牙。
+3. Enable airplane mode & turn off Bluetooth.
 4. 安裝新版本（"app-full-release.apk"）
 5. [匯入設置](../Maintenance/ExportImportSettings.md)
-6. 重新打開藍牙並關閉飛行模式
+6. Turn Bluetooth back on and disable airplane mode
 
 ## Apk 已安裝但版本舊
 
