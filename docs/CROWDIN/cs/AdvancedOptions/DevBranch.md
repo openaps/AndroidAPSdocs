@@ -1,24 +1,24 @@
-# Development branch
+# Vývojová větev
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+Vývojová větev (dev) slouží pouze k dalšímu vývoji AAPS. Měla by se používat na samostatném telefonu k testování, <font color="#FF0000">**ne pro skutečné používání smyčky!**</font>
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Nejstabilnější verze AAPS k používání je ta ve [větvi Master](https://github.com/nightscout/AndroidAPS/tree/master). Pro skutečné používání smyčky se doporučuje zůstat u větve Master.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
+Vývojová verze AAPS je pouze pro vývojáře a testery, kteří si poradí s výpisy zásobníku (stacktrace), procházením log souborů a případně spuštěním debuggeru, aby vytvořili hlášení o chybách užitečná pro vývojáře (zkrátka: pro lidi, kteří vědí, co dělají, a nepotřebují pomoc!). Proto je mnoho nedokončených funkcí vypnutých. K zapnutí těchto funkcí přejděte do **inženýrského režimu** vytvořením souboru s názvem `engineering_mode` v adresáři /AAPS/extra . Zapnutí inženýrského režimu může smyčku úplně rozbít.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Vývojová větev je však dobré místo, kde můžete vidět, jaké funkce se testují, pomoci odstranit chyby a dát zpětnou vazbu, jak nové funkce fungují v praxi. Lidé často testují vývojovou větev na starém telefonu a pumpě, dokud si nejsou jistí, že je stabilní – jakékoli použití je na vaše vlastní riziko. Při testování nových funkcí pamatujte, že se sami rozhodujete testovat funkci, která je stále ve vývoji. Dělejte to na vlastní riziko a s náležitou pečlivostí, abyste zůstali v bezpečí.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Pokud najdete chybu nebo si myslíte, že se při používání vývojové větve stalo něco špatně, podívejte se na [kartu issues](https://github.com/nightscout/AndroidAPS/issues), zda ji už někdo nenašel, a pokud ne, přidejte ji sami. Čím více informací zde uvedete, tím lépe (nezapomeňte, že možná budete muset sdílet své [log soubory](../GettingHelp/AccessingLogFiles.md). O nových funkcích se můžete bavit také na [Discordu](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Vývojová verze má datum vypršení platnosti. Když ji používáte a jste spokojení, může to působit nepohodlně, ale má to svůj účel. Když je v oběhu jen jedna vývojová verze, je snazší sledovat chyby, které lidé hlásí. Vývojáři se nechtějí dostat do situace, kdy jsou mezi lidmi tři vývojové verze, v některých jsou chyby opravené a v jiných ne, a lidé dál hlásí ty už opravené.
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Testování konkrétní větve (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Pro sestavení testovací větve zvolte branch-ci, který vám umožní vybrat konkrétní větev pro vytvoření APK. Tento postup můžete použít, když potřebujete testovat vývojovou větev.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Testování změn z pull requestu (nasazení přes GitHub CI actions)
 
-Available from 3.3.2.1.dev
+Dostupné od verze 3.3.2.1.dev
 
-- Suitable for testers or those helping with testing.
+- Vhodné pro testery nebo pro ty, kdo s testováním pomáhají.
 
 ```{eval-rst}
 .. raw:: html
@@ -39,7 +39,8 @@ Available from 3.3.2.1.dev
     <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
       <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
         <iframe
-          src="https://www.dailymotion.com/embed/video/x9rdx1q"
+          src="https://geo.dailymotion.com/player/x9rdx1q.html?video=x9rdx1q&loop=true&mute=true"
+          loading="lazy"
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
           frameborder="0"
           allowfullscreen>
@@ -50,20 +51,22 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- PR number: Please enter the PR number that you want to test.
+- Target repository: repozitář, který obsahuje PR, ve formátu owner/repo. Ponechte výchozí **nightscout/AndroidAPS**, pokud vám nebylo řečeno, abyste použili jiný repozitář (to by měli dělat jen vývojáři).
 
-- PR reference types: PR reference types include two options:
+- PR number: Zadejte číslo PR, který chcete testovat.
+
+- PR reference types: Typy odkazu na PR mají dvě možnosti:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Stáhne skutečný obsah z větve autora PR (tj. původní historii commitů bez jakéhokoli sloučení).
+    - To odpovídá původnímu stavu větve PR, jako by byla stažena přímo z forku nebo z větve s novou funkcí.
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Stáhne výsledek sloučení PR do cílové větve (např. dev), které GitHub předem nasimuloval.
+    - Jde o virtuální slučovací commit, který GitHub vytvoří automaticky.
+    - Tento commit existuje jen tehdy, když PR nemá konflikty a lze ho sloučit.
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Viz [variant](#browserbuild-variant)
