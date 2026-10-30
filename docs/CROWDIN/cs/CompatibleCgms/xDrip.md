@@ -1,247 +1,193 @@
-# xDrip+ nastavení
+# Nastavení xDrip
 
-If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+Pokud ještě nemáte xDrip nastavený, stáhněte a nainstalujte nejnovější vydání xDrip ze [stránky s vydáními xDrip](https://github.com/NightscoutFoundation/xDrip/releases).
 
-Disable battery optimization and allow background activity for the xDrip+ app.
-
-You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features or are using sensors that are being actively integrated (like G7), in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+Pro aplikaci xDrip vypněte optimalizaci baterie a povolte činnost na pozadí.
 
 ## Základní nastavení pro všechny CGM & FGM systémy
 
-### Disable Nightscout upload
+### Vypněte nahrávání do Nightscoutu
 
-Starting with AAPS 3.2, you shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Nedovolte žádné jiné aplikaci nahrávat data (glykémii a ošetření) do Nightscoutu.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
+→ Nabídka (☰) (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → přepněte `Enabled` na **OFF** (5)
 
-![xDrip+ Základní nastavení 1](../images/xDrip_Basic1.png)
+![Základní nastavení xDrip 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### Vypněte automatickou kalibraci a ošetření
 
-If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7) If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+Ujistěte se, že je `Automatic Calibration` (7) vypnutá. Pokud je políčko `Automatic Calibration` zaškrtnuté, jednou zapněte `Download treatments` (6), pak zrušte zaškrtnutí `Automatic Calibration` a `Download treatments` znovu vypněte.
 
-![xDrip+ Základní nastavení 2](../images/xDrip_Basic2.png)
+![Základní nastavení xDrip 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+Klepněte na `Extra Options`(8)
 
-    {admonition} Safety warning
+    {admonition} Bezpečnostní varování
     :class: warning
-    You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    V xDrip musíte vypnout „Upload treatments“, jinak se ošetření v AAPS mohou zdvojit a COB a IOB budou chybné.
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+Vypněte `Upload treatments`(9) a ujistěte se, že **NEBUDETE** používat `Back-fill data` (11).
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+Možnost `Alert on failures` by také měla být vypnutá (10). Jinak dostanete alarm každých 5 minut, když budou problémy s Wi-Fi/mobilní sítí nebo když server nebude dostupný.
 
-![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
+![Základní nastavení xDrip 3](../images/xDrip_Basic3.png)
 
-### **Inter-app Settings** (Broadcast)
+### **Inter-app Settings** (vysílání)
 
-If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+Pokud budete používat AAPS a data se mají předávat např. do AAPS, musíte v xDrip v Inter-App settings zapnout vysílání.
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ Nabídka (☰) (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip+, you should activate `Send the displayed glucose value` (5).
+Aby byly hodnoty v AAPS stejné jako v xDrip, zapněte `Send the displayed glucose value` (5).
 
-Enable Compatible Broadcast (6).
+Zapněte Compatible Broadcast (6).
 
-![xDrip+ Základní nastavení 4](../images/xDrip_Basic4.png)
+![Základní nastavení xDrip 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
+Pokud jste v xDrip zapnuli také `Accept treatments` a v pluginu xDrip v AAPS `Enable broadcasts to xDrip`, bude xDrip z AAPS dostávat informace o inzulínu, sacharidech a bazální dávce.
 
-If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+Pokud zapnete `Accept Calibrations`, bude xDrip používat kalibrace z AAPS. Buďte opatrní, když tuto funkci používáte se senzory Dexcom: nejdříve si přečtěte [tento návod](https://navid200.github.io/xDrip/docs/Calibrate-G6.html).
 
-Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
+Nezapomeňte vypnout Import Sounds, aby xDrip nevydával vyzváněcí tón pokaždé, když AAPS pošle změnu bazálu/profilu.
 
-![xDrip+ Základní nastavení 5](../images/xDrip_Basic5.png)
+![Základní nastavení xDrip 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
 #### Identify receiver
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-- Pozor: automatické opravy textu v androidu mají tendenci měnit velikost prvního písmene. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
+- Pokud zjistíte problémy s místním vysíláním (AAPS nedostává hodnoty glykémie z xDrip), jděte do → Nabídka (☰) (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) a zadejte `info.nightscout.androidaps` pro sestavení AAPS (pokud používáte sestavení PumpControl, zadejte místo toho `info.nightscout.aapspumpcontrol`!!).
+- Pozor: automatické opravy textu někdy mění písmeno i na velké I. Při psaní `info.nightscout.androidaps` (nebo `info.nightscout.aapspumpcontrol` pro PumpControl) **musíte použít jen malá písmena**. Velké I by zabránilo aplikaci přijímat hodnoty glykémie z xDrip.
     
-    ![xDrip+ Základní nastavení komunikace mezi aplikacemi Identify receiver](../images/xDrip_InterApp_NS.png)
+    ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip+
+## Kalibrace xDrip pomocí AAPS
 
-- If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- Pokud chcete kalibrovat pomocí AAPS, jděte v xDrip do Settings → Interapp Compatibility → Accept Calibrations a zvolte ON. 
+- Můžete také zkontrolovat možnosti v Settings → Less Common Settings → Advanced Calibration Settings.
 
-## Dexcom G6
+## Dexcom sensors
 
-- Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
-- Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
-- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
+Vše, co se týká samotného senzoru a vysílače Dexcom (spuštění, zastavení, výměna, kalibrace, řešení problémů), je popsáno a průběžně aktualizováno v [dokumentaci xDrip pro Dexcom](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Pro senzor se řiďte těmito pokyny; jediná část specifická pro AAPS je nastavení propojení xDrip s **AAPS** (popsané výše na této stránce).
 
-### Verze xDripu+ závisí na výrobním čísle vysílače G6.
+### Dexcom G6 a ONE
 
-- All G6 transmitters manufactured after fall/end 2018 are called "Firefly". They do not allow sensor restart without [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), they do not send raw data. It is recommended to use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
-- Old rebatteried transmitters and modified transmitters allow sensor life extension and restarts, they also send raw data. You can use the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+- Nastavte xDrip podle [doporučeného nastavení](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
+- Vysílače Dexcom G6 a ONE mohou být současně spojeny s přijímačem Dexcom (nebo místo něj s pumpou t:slim) a s jednou aplikací v telefonu.
+- Když používáte xDrip jako přijímač, nejdříve odinstalujte aplikaci Dexcom. **Nemůžete mít s vysílačem spojený xDrip a aplikaci Dexcom současně!**
+- Pokud potřebujete Clarity a chcete využít funkce xDrip, použijte [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) s místním vysíláním do xDrip, nebo použijte xDrip jako doprovodnou aplikaci, která čte oznámení z oficiální aplikace Dexcom (hodnoty glykémie mohou přicházet se zpožděním).
 
-### Dexcom specifická nastavení
+#### Restarty senzoru
 
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html) to setup xDrip+.
-
-### Preemptivní restarty nejsou doporučené
-
-**Only rebatteried or modified Dexcom transmitters. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) do not work with standard transmitters and will stop the sensor completely: you need to [remove the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) to restart the sensor.**
-
-Automatické prodloužení senzorů Dexcom (`preemptivní restart`) není doporučeno, protože to může způsobit „skoky“ v hodnotách glykémie 9. den po restartu.
-
-![xDrip+ Skok po preemptivním restartu](../images/xDrip_Dexcom_PreemptiveJump.png)
-
-Abyste ho mohli používat bezpečně, je třeba vědět o několika skutečnostech:
-
-- Pokud používáte nativní data s kalibračním algoritmem aplikace xDrip+ nebo Spike, nejbezpečnější postup je zakázat preemptivní restartování senzoru.
-- Pokud musíte preemptivní restarty používat, pak se ujistěte, že senzor zavádíte v takovou denní dobu, kdy můžete sledovat změny a v případě potřeby provést kalibraci. 
-- Jestliže senzory restartujete, buď použijte tovární kalibraci, aby byly výsledky v den 11 a 12 co nejbezpečnější, nebo buďte připraveni provést kalibrace a sledujte odchylku.
-- Nastřelení senzoru G6 předem v kombinaci s tovární kalibrací pravděpodobně povede k odchylkám ve výsledcích měření. Jestliže nastřelujete senzor s předstihem, pak jej pravděpodobně v zájmu co nejlepších výsledků bude nutné zkalibrovat.
-- Jestliže nechcete sledovat změny, ke kterým může docházet, možná bude lepší přepnout na režim bez továrních kalibrací a používat systém jako G5.
-
-Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si [kompletní článek](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/), který sepsal Tim Street, na adrese [www.diabettech.com](https://www.diabettech.com).
+- xDrip se současnými vysílači vždy používá [nativní algoritmus](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) vysílače; není důvod ho vypínat.
+- [Preventivní restarty](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) fungují jen se starými vysílači (firmware 1.6.5.25 nebo starší), kde jsou potřeba, aby se senzor nezastavil po 10 dnech. Novější vysílače (Firefly) je ignorují.
+- Restart senzoru s vysílačem Firefly vyžaduje [odebrání vysílače](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) a hodnoty mohou být po restartu výrazně chybné, což je při používání smyčky nebezpečné: přečtěte si celý návod [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) a [kalibrujte opatrně](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
-### První připojení vysílače G6
+#### Spuštění, zastavení a výměna senzorů
 
-**For second and following transmitters see [Extend transmitter life](#xdrip-extend-transmitter-life) below.**
+Postupujte podle návodů:
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
-
-(xdrip-transmitter-battery-status)=
-
-### Stav baterie vysílače
-
-- Battery status can be controlled in system status  
-    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen.
-
-![xDrip+ System status](../images/xDrip_Dexcom_Battery.png)
-
-- See [here](https://navid200.github.io/xDrip/docs/Battery-condition.html) for more information.
-
-(xdrip-extend-transmitter-life)=
-
-### Prodloužení životnosti vysílače
-
-- [Lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) cannot be extended for Firefly transmitters: only rebatteried or modified transmitters.
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/Hard-Reset.html) for non-Firefly transmitters.
+- [Spuštění vysílače G6 nebo ONE](https://navid200.github.io/xDrip/docs/Starting-G6.html)
+- [Zastavení a spuštění senzoru G6 nebo ONE](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)
+- [Odebrání vysílače ze senzoru](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)
+- [Životnost vysílače](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) lze prodloužit ([hard reset](https://navid200.github.io/xDrip/docs/Hard-Reset.html)) jen u vysílačů s vyměněnou baterií nebo upravených vysílačů, ne u Firefly.
 
 (xdrip-replace-transmitter)=
 
-### Výměna vysílače
+#### Výměna vysílače
 
-- Vypněte originální Dexcom přijímač (pokud ho používáte).
-- [Stop sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (only if replacing sensor).
+- Vypněte původní přijímač Dexcom (pokud ho používáte) a nezapínejte ho znovu, dokud xDrip nezobrazuje hodnoty.
+- Zapomeňte zařízení v xDrip (System Status → Forget Device) A v nastavení Bluetooth v chytrém telefonu (zobrazuje se jako Dexcom?? kde ?? jsou poslední dvě číslice sériového čísla vysílače).
+- Starý vysílač udržujte mimo dosah Bluetooth, aby se znovu nepřipojil.
+- Pak postupujte podle návodu [Spuštění vysílače G6 nebo ONE](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
-- Vymažte zařízení z xDripu+ (Stav systému -> Forget device) a ze seznamu BT v nastavení telefonu (Zobrazuje se jako Dexcom??, přičemž ?? are the last two digits of the transmitter serial no.)  
-    → Hamburger Menu (1) → System Status (2) → If you are not on the Classic Status Page (3) swipe the screen (4) to reach it → then tap Forget Device (5).
+### Dexcom G7, ONE+ a Stelo
 
-![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
-
-- Vyjměte vysílač (a také senzor – pokud ho měníte). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video <https://youtu.be/AAhBVsc6NZo>.
-- Uložte starý vysílač dostatečně daleko, aby se předešlo jeho opětovnému připojení. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% sure no one is turning the microwave on.
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
-- Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
-
-### Nový sensor
-
-- Vypněte originální Dexcom přijímač (pokud ho používáte).
-- Stop sensor following [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html).
-
-- Insert and then start a new sensor following [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
-
-(xdrip-retrieve-sensor-code)=
-
-### Získání kódu senzoru
-
-→ Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Calibration Code.
-
-![xDrip+ Získat kód senzoru Dexcom 2](../images/xDrip_Dexcom_SensorCode2.png)
+- Postupujte podle [návodu pro G7, ONE+ a Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html) (je potřeba novější vydání xDrip – viz odkazovaná stránka).
+- Podívejte se také na [stránku Dexcom G7, ONE+ a Stelo](../CompatibleCgms/DexcomG7.md), kde jsou dostupná nastavení s **AAPS**.
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
-### Odstraňování potíží s Dexcom G5/G6 a xDrip+
+### Řešení problémů s Dexcom a xDrip
 
-#### Problém s připojením k vysílači
-
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
-
-#### Problém se spuštěním nového senzoru
-
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
+- [Řešení problémů s připojením G6/ONE](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)
+- [Řešení problémů s G7/ONE+/Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7_Troubleshooting.html)
+- [Problém při spuštění nového senzoru](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)
+- Úplný seznam: viz **Troubleshooting** na [stránce xDrip pro Dexcom](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip+
+- Nastavení můstku NFC–Bluetooth v xDrip
     
-    → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
+    → Nabídka (☰) (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
 
-- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+- V Bluetooth Settings nastavte zaškrtávací políčka přesně jako na snímcích obrazovky níže (5)
     
-    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    - Vypněte watchdogy, protože resetují Bluetooth v telefonu a přeruší spojení s pumpou.
     
-    ![xDrip+ Libre nastavení bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
+    ![Nastavení Libre Bluetooth v xDrip 1](../images/xDrip_Libre_BTSettings1.png)
 
-- You can try to enable the following settings (7)
+- Můžete zkusit zapnout tato nastavení (7)
     
     - Použít vyhledávání
     - Trust Auto-Connect
     - Use Background Scans
 
-- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+- Pokud snadno ztrácíte spojení s můstkem nebo se spojení špatně obnovuje, **VYPNĚTE JE** (8).
     
-    ![xDrip+ Libre nastavení bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
+    ![Nastavení Libre Bluetooth v xDrip 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- Všechny ostatní možnosti nechte vypnuté, pokud nevíte, proč je chcete zapnout.
     
-    ![xDrip+ Libre nastavení bluetooth 3](../images/xDrip_Libre_BTSettings3.png)
+    ![Nastavení Libre Bluetooth v xDrip 3](../images/xDrip_Libre_BTSettings3.png)
 
 ### Úroveň baterie čtečky Libre
 
-- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](#screens-sensor-level-battery).
+- Úroveň baterie můstků, jako jsou MiaoMiao a Bubble, lze zobrazit v AAPS (ne u Blucon).
+- Podrobnosti najdete na [stránce se snímky obrazovky](#screens-sensor-level-battery).
 
 ### Připojte vysílač Libre a spusťte senzor
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the latest out of process algorithm.
+- Pokud to váš senzor vyžaduje (Libre 2 EU a Libre 1 US), nainstalujte nejnovější algoritmus „out of process“.
 
-- Your sensor must be already started using the vendor app or the reader (xDrip+ cannot start or stop Libre sensors).
+- Senzor už musí být spuštěný aplikací výrobce nebo čtečkou (xDrip neumí senzory Libre spouštět ani zastavovat).
 
-- Set the data source to Libre Bluetooth.
+- Nastavte zdroj dat na Libre Bluetooth.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    → Nabídka (☰) (1) → Settings (2) → v Hardware Data source vyberte Libre Bluetooth (3)
     
-    ![xDrip+ Spustit vysílač a senzor Libre 1](../images/xDrip_Libre_Transmitter01.png)
+    ![xDrip – spuštění vysílače a senzoru Libre 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- Vyhledejte Bluetooth zařízení a připojte můstek.
     
-    → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
+    → Nabídka (☰) (1) → Scan Bluetooth (2) → Scan (3)
     
-    - If xDrip+ can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    - Pokud xDrip nemůže můstek najít, ujistěte se, že není připojený k aplikaci výrobce. Dejte ho nabíjet a resetujte ho.
     
-    ![xDrip+ Spustit vysílač a senzor Libre 2](../images/xDrip_Libre_Transmitter02.png)
+    ![xDrip – spuštění vysílače a senzoru Libre 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip+.
+- Spusťte senzor v xDrip.
     
-        {admonition} Safety warning
+        {admonition} Bezpečnostní varování
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        Nepoužívejte data senzoru, dokud neskončí hodinové zahřívání: hodnoty mohou být extrémně vysoké a vést k chybným rozhodnutím v AAPS.
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → Nabídka (☰) (1) → Start sensor (2) → Start sensor (3) → Nastavte přesný čas, kdy jste senzor spustili čtečkou nebo aplikací výrobce. Pokud jste ho nespustili dnes, odpovězte „Not Today“ (4).
 
-![xDrip+ Spustit vysílač a senzor Libre 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip – spuštění vysílače Libre a senzoru 3](../images/xDrip_Libre_Transmitter03.png)
 
 (xdrip-libre2-patched-app)=
 
-## Libre 2 patched app
+## Upravená aplikace Libre 2
 
-- Set the data source to Libre patched app.
+- Nastavte zdroj dat na upravenou aplikaci Libre.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → Nabídka (☰) (1) → Settings (2) → v Hardware Data source vyberte Libre (patched App) (3)
     
-    ![xDrip+ Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+    ![Upravená aplikace Libre v xDrip 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+- Můžete přidat `BgReading:d,xdrip libre_receiver:v` v Less Common Settings->Extra Logging Settings->Extra tags for logging. Tím se budou zapisovat další chybové zprávy pro řešení problémů.
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+![Záznamy LibreLink v xDrip](../images/Libre2_Tags.png)
