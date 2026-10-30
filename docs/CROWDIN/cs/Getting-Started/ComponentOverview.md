@@ -1,88 +1,89 @@
 # Přehled komponent
 
-**AAPS** is not just a (self-built) application, it is but one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the component documentation.
+**AAPS** není jen (doma sestavená) aplikace; je to jeden z několika modulů vašeho systému uzavřené smyčky. Než se rozhodnete pro komponenty, je dobré si prohlédnout jejich dokumentaci.
 
-![Components overview](../images/modules.png)
+![Přehled komponent](../images/modules.png)
 
 ```{admonition} IMPORTANT SAFETY NOTICE
 :class: important
 
-The foundation of **AAPS** safety features discussed in this documentation is built on the safety features of the hardware used to build your system. For closing an automated insulin dosing loop, it is critically important that you only use an insulin pump and CGM that are tested, fully functioning and approved by the official instances of your country. Hardwarové nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, **do not use** these for creating an **AAPS** system.
+Základ bezpečnostních funkcí **AAPS**, které popisuje tato dokumentace, stojí na bezpečnostních funkcích hardwaru, ze kterého svůj systém sestavíte. Pro uzavřenou smyčku s automatickým dávkováním inzulínu je velmi důležité používat jen inzulínovou pumpu a CGM, které jsou otestované, plně funkční a schválené oficiálními úřady ve vaší zemi. Hardwarové nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. Pokud najdete nebo dostanete nabídku na poškozené, upravené nebo podomácku vyrobené inzulínové pumpy nebo přijímače CGM, **nepoužívejte** je pro vytvoření systému **AAPS**.
 
-Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaší pumpou nebo CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně – prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
+Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaší pumpou nebo CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesné hodnoty CGM a chyby v dávkování inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně – prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
 
-Last but not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels. Kombinace se systémem, která snižuje bazální hodnoty ke zvýšení glykémie je zvláště nebezpečná, protože v důsledku gliflozinu tento nárůst glykémie nemusí nastat a může dojít k nebezpečnému stavu nedostatku inzulínu. [More information here](#PreparingForAaps-no-sglt-2-inhibitors).
+V neposlední řadě nesmíte užívat SGLT-2 inhibitory (glifloziny), protože snižují hladinu glykémie nepředvídatelným způsobem. Kombinace se systémem, který snižuje bazální dávky, aby se zvýšila glykémie, je zvláště nebezpečná. Kvůli gliflozinu totiž glykémie nemusí stoupnout a může dojít k nebezpečnému nedostatku inzulínu. [Více informací zde](#PreparingForAaps-no-sglt-2-inhibitors).
 ```
 
 ## Nezbytné moduly
 
 ### Správný individuální algoritmus dávkování pro léčbu vašeho diabetu
 
-I když to není něco, co by bylo možné vytvořit nebo koupit, je to "modul", který je pravděpodobně nejvíce podceňován, je však nejdůležitější. Když necháte algoritmus zasahovat do léčby vašeho diabetu, musí znát správná nastavení, aby nedělal vážné chyby. Even if you are still missing other modules, you can already verify and adapt your **Profile** in collaboration with your diabetes team.
+I když to není nic, co byste vytvořili nebo koupili, je to asi nejvíce podceňovaný „modul“ – a přitom je nezbytný. Když necháte algoritmus pomáhat s léčbou diabetu, musí znát správná nastavení, aby nedělal vážné chyby. I když vám ještě chybí další moduly, můžete už ve spolupráci se svým diabetologickým týmem ověřit a upravit svůj **Profil**.
 
-The **Profile** includes:
+**Profil** obsahuje:
 
-- BR (Basal rates): provides background insulin;
-- ISF (insulin sensitivity factor): how much your blood glucose level will be reduced by 1 unit of insulin;
-- CR (carb ratio): how many grams of carbohydrate are covered by one unit of insulin;
-- DIA (duration of insulin action).
+- BR (bazální dávky): zajišťují bazální inzulín;
+- ISF (citlivost na inzulín): o kolik se sníží vaše glykémie po 1 jednotce inzulínu;
+- CR (sacharidový poměr): kolik gramů sacharidů pokryje jedna jednotka inzulínu.
 
-Většina uživatelů uzavřené smyčky používá cirkadiánní bazální dávkování, citlivost a sacharidový poměr, které se přizpůsobují hormonální aktivitě inzulinu v průběhu dne.
+Většina uživatelů smyčky používá cirkadiánní bazál, ISF a CR, které zohledňují hormonální změny citlivosti na inzulín během dne.
 
-More information about your **Profile** [on the dedicated page](../SettingUpAaps/YourAapsProfile.md).
+Kromě **Profilu** musíte také nastavit svůj **inzulín** v **Spravovat → Nastavení inzulínu**, včetně jeho DIA (doby působnosti inzulínu) – viz [Nastavení inzulínu](#Config-Builder-insulin-dia).
+
+Více informací o **Profilu** najdete [na samostatné stránce](../SettingUpAaps/YourAapsProfile.md).
 
 ### Telefon
 
-See the dedicated page [Phones](../Getting-Started/Phones.md).
+Viz samostatná stránka [Telefony](../Getting-Started/Phones.md).
 
-### Inzulinová pumpa
+### Inzulínová pumpa
 
-See the dedicated page [Compatible Pumps](../Getting-Started/CompatiblePumps.md).
+Viz samostatná stránka [Kompatibilní pumpy](../Getting-Started/CompatiblePumps.md).
 
-**Advantages and disadvantages of some pump models**
+**Výhody a nevýhody některých modelů pump**
 
-The Combo, the Insight and the older Medtronic are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard Luer-Lock. And the battery is a default one you can buy at any gas station, 24-hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Combo, Insight a starší Medtronic jsou spolehlivé pumpy a dají se použít ve smyčce. Výhodou Comba je mnohem větší výběr infuzních setů, protože má standardní Luer-Lock. A baterie je běžná, koupíte ji na každé benzínce nebo v nonstop obchodě. A když opravdu musíte, můžete si ji „půjčit“ z dálkového ovladače v hotelovém pokoji ;-).
 
-Další informace o konfiguraci Nightscoutu pro použití s AndroidAPS najdete [zde](../Installing-AndroidAPS/Nightscout.md).
+Výhody DanaR/RS a Dana-i oproti Combu jako zvolené pumpě jsou však tyto:
 
-- Initial pairing is simpler with the Dana-i/RS. Ale to obvykle děláte pouze jednou, takže to ovlivňuje pouze situace, pokud chcete testovat nové funkce s různými pumpami.
-- Combo zatím pracuje s převodem obrazu do strojově čitelné podoby. Obecně to funguje skvěle, ale je to pomalé. Pro smyčku to tolik nevadí, vše pracuje na pozadí. Still there is much more time you need to be connected so more time when the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At nighttime, you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable so that it does neither beep nor vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon as some CGM values are in.
-- All pumps **AAPS** can talk with are waterproof on delivery. Pouze pumpy Dana mají také "záruku na vodotěsnost" v důsledku uzavřeného prostoru pro baterii a prostoru pro plnicí zásobník.
+- Počáteční spárování je u Dana-i/RS jednodušší. Ale to obvykle děláte pouze jednou, takže to ovlivňuje pouze situace, pokud chcete testovat nové funkce s různými pumpami.
+- Combo zatím pracuje s převodem obrazu do strojově čitelné podoby. Obecně to funguje skvěle, ale je to pomalé. Pro smyčku to tolik nevadí, vše pracuje na pozadí. Přesto musíte být připojeni mnohem déle, a tak je i více času, kdy se může spojení Bluetooth přerušit. To není jednoduché, když od telefonu odejdete během bolusu a vaření.
+- Combo vibruje na konci dočasných bazálů (TBR), DanaR vibruje (nebo pípá) při SMB. V noci budete pravděpodobně používat více dočasné bazály (TBR) než SMB.  Dana-i/RS lze nastavit tak, aby nepípala ani nevibrovala.
+- Načtení historie z Dana-i/RS včetně sacharidů trvá jen několik sekund. Díky tomu můžete snadno vyměnit telefon i bez internetu a pokračovat ve smyčce, jakmile přijdou nějaké hodnoty z CGM.
+- Všechny pumpy, se kterými **AAPS** umí komunikovat, jsou při dodání vodotěsné. Pouze pumpy Dana jsou také „vodotěsné v rámci záruky“, protože mají utěsněný prostor pro baterii a utěsněný systém plnění zásobníku.
 
-### Zdroj glykémií
+### Zdroj glykémie
 
-See the dedicated page [Compatible CGMs](../Getting-Started/CompatiblesCgms.md).
+Viz samostatná stránka [Kompatibilní CGM](../Getting-Started/CompatiblesCgms.md).
 
-### **AAPS**-.apk file
+### Soubor **AAPS**-.apk
 
-The main component of the system. In order to install the app, you have to build the apk-file yourself first. Instructions are [here](../SettingUpAaps/BuildingAaps.md).
+Hlavní součást systému. Abyste mohli aplikaci nainstalovat, musíte si nejprve sami sestavit soubor apk. Návod najdete [zde](../SettingUpAaps/BuildingAaps.md).
 
-### Reporting server
+### Reportovací server
 
-A reporting server displays your glucose and treatment data, and creates reports for detailed analysis. There are currently two reporting servers available for use with AAPS : [Nightscout](#SettingUpTheReportingServer-nightscout) and [Tidepool](#SettingUpTheReportingServer-tidepool). They both provide ways to visualize your diabetes data over time, provide statistics about the **time in range** (TIR) and other measures.
+Reportovací server zobrazuje vaše data o glykémii a ošetřeních a vytváří přehledy pro podrobnou analýzu. S AAPS lze nyní použít dva reportovací servery: [Nightscout](#SettingUpTheReportingServer-nightscout) a [Tidepool](#SettingUpTheReportingServer-tidepool). Oba umožňují zobrazit data o vašem diabetu v čase a poskytují statistiky o **čase v rozsahu** (TIR) a další ukazatele.
 
-The Reporting server is independent of the other modules. If you don’t want to use a reporting server, you should know that it is not mandatory for running **AAPS** in the long term. But you still need to set up one as it will be required to fulfill [**Objective 1**](#objectives-objective1).
+Reportovací server je nezávislý na ostatních modulech. Pokud reportovací server používat nechcete, vězte, že pro dlouhodobý provoz **AAPS** není povinný. Přesto ho musíte nastavit, protože je potřeba ke splnění [**Cíle 1**](#objectives-objective1).
 
-Additional information on how to set up your reporting server can be found [here](../SettingUpAaps/SettingUpTheReportingServer.md).
+Další informace o nastavení reportovacího serveru najdete [zde](../SettingUpAaps/SettingUpTheReportingServer.md).
 
 ## Volitelné moduly
 
 ### Chytré hodinky
 
-You can choose any smartwatch with Android WearOS 2.x up to 4.x. **Beware, WearOS 5.x is not always compatible!**
+Můžete si vybrat jakékoli chytré hodinky se systémem **Wear OS 3** nebo novějším. Podrobnosti najdete v části [Hodinky](../Getting-Started/Watches.md).
 
-Users are creating a [list of tested phones and watches](#Phones-list-of-tested-phones). There are different watchfaces for use with **AAPS**, which you can find [here](../WearOS/WearOsSmartwatch.md).
+Uživatelé vytvářejí [seznam otestovaných telefonů a hodinek](#Phones-list-of-tested-phones). Pro **AAPS** existují různé ciferníky, najdete je [zde](../WearOS/WearOsSmartwatch.md).
 
-### xDrip+
+### xDrip
 
-Even if you don't need to have the xDrip+ App as **BG Source**, you can still use it for _i.e._ alarms or a different blood glucose display. You can have as many alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../CompatibleCgms/xDrip.md). Uvědomte si prosím, že dokumentace k této aplikaci není vždy aktuální, protože vývoj aplikace je poměrně rychlý.
+I když aplikaci xDrip nepotřebujete jako **Zdroj glykémie**, můžete ji přesto používat, například pro alarmy nebo jiné zobrazení glykémie. Můžete mít tolik alarmů, kolik chcete, určit čas, kdy má být alarm aktivní, zvolit, zda může přebít tichý režim, atd. Některé informace o xDrip najdete [zde](../CompatibleCgms/xDrip.md). Upozorňujeme, že dokumentace k této aplikaci není vždy aktuální, protože se aplikace rychle mění.
 
 ## Co dělat při čekání na moduly
 
-It sometimes takes a while to get all the modules for closing the loop. Ale žádné obavy, je mnoho věcí, které můžete při čekání udělat. It is **necessary** to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with **AAPS**. Using this mode, **AAPS** gives treatment recommendations you can manually execute.
+Získat všechny moduly pro uzavření smyčky někdy chvíli trvá. Ale žádné obavy, je mnoho věcí, které můžete při čekání udělat. Je **nutné** zkontrolovat a (kde je to vhodné) upravit bazální dávky (BR), inzulínosacharidový poměr (IC), citlivost na inzulín (ISF) atd. A otevřená smyčka může být dobrý způsob, jak systém vyzkoušet a seznámit se s **AAPS**. V tomto režimu vám **AAPS** dává doporučení k léčbě, která můžete provést ručně.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../UsefulLinks/BackgroundReading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Můžete dál číst tuto dokumentaci, spojit se s dalšími uživateli smyčky online i osobně, [číst](../UsefulLinks/BackgroundReading.md) dokumentaci nebo to, co píší jiní uživatelé smyčky (i když musíte být opatrní, ne všechno je správné nebo vhodné, abyste to opakovali).
 
-**Done?** If you have your **AAPS** components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your hardware.
+**Hotovo?** Pokud máte všechny komponenty **AAPS** pohromadě (gratulujeme!) nebo alespoň dost na to, abyste začali v režimu otevřené smyčky, měli byste si před každým novým cílem nejprve přečíst [popis cílů](../SettingUpAaps/CompletingTheObjectives.md) a nastavit svůj hardware.
