@@ -9,7 +9,7 @@ Indiferent de sistemul CGM pe care îl utilizați, dacă doriți să utilizați 
 -   Evitați calibrarea atunci când nivelurile glicemiei se mișcă în sus sau în jos.
 -   Faceți "suficiente" calibrări - în aplicațiile oficiale vi se vor cere una sau două verificări ale glicemiei pe zi. În cazul sistemelor DIY este posibil să nu fiți alertat și ar trebui să fiți prudent când continuați fără calibrări.
 -   În cazul senzorilor care nu necesită sau nu permit calibrarea, verificați cel puțin zilnic glicemia reală din sânge. AAPS va fi la fel de sigur pe cât de încredere sunt citirile senzorului dumnevoastră.
--   Dacă este posibil, calibrați cu unele valori dintr-o gamă mai mică (4-5mmol/l sau 72-90mg/dl) și unele de la un nivel ușor mai înalt (7-9mmol/l sau 126-160mg/dl), deoarece aceasta oferă o gamă mai bună pentru calibrarea punctelor/pantei.
+-   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## Inserare senzor (G6)
 
@@ -22,7 +22,7 @@ După inserarea senzorului, transmițătorul poate fi apăsat în suportul de pe
 
 ### Probleme de conectare
 
-Conexiunea Bluetooth poate fi deranjată de alte dispozitive Bluetooth din apropiere, cum ar fi glucometre, căști, tablete sau dispozitive de bucătărie cum ar fi cuptoarele cu microunde sau plitele electrice. În acest caz, xDrip nu afișează valorile glicemiei. Când conexiunea Bluetooth este restabilită, datele sunt recuperate și completate.
+Conexiunea Bluetooth poate fi deranjată de alte dispozitive Bluetooth din apropiere, cum ar fi glucometre, căști, tablete sau dispozitive de bucătărie cum ar fi cuptoarele cu microunde sau plitele electrice. In this case xDrip does not display any BG values. Când conexiunea Bluetooth este restabilită, datele sunt recuperate și completate.
 
 ### Erori senzor
 
@@ -32,10 +32,10 @@ Adesea o eroare de senzor poate fi corectată prin hidratare imediată și masar
 
 ### Valori săltărețe
 
-Ați putea încerca să modificați setările pentru blocarea zgomotului în xDrip+ (Setările între aplicații - Blocarea zgomotului), adică "Blocare zgomot foarte mare și mai rău". Vedeți de asemenea [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". Vedeți de asemenea [Netezirea datelor de glicemie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Vârstă negativă a senzorului
 
-![Vechimea negativă a senzorului](../images/Troubleshooting_SensorAge.png)
+![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
 
-Acest lucru se întâmplă dacă există fie o înregistrare dublă "Inserare senzor CGM" în [fila / meniul de acțiuni](#screens-action-tab) sau un senzor inserat cu dată greșită. Mergeți la fila de tratamente \> careportal și ștergeți intrarea greșită.
+The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "CGM Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
