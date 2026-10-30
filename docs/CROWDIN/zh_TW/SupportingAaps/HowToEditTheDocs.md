@@ -161,6 +161,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 - 來自網頁的截圖圖像寬度應達到**1050像素**。
 - 流程圖的寬度應達到**1050像素**。
 - 應用程序的截圖寬度應達到**500像素**。如果沒有必要，請不要將它們並排放置。
+- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
 
 ### 連結
 
@@ -552,7 +553,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 #### AAPS 常見要點
 
-- 對於血糖值，請在每次出現時同時標明 mg/dl 和 mmol/l（如果可能，也考慮將其應用於截圖）。
+- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
 
 - 為了保持一致性，使用 “AAPS” 而不是 “Android APS”。
 
