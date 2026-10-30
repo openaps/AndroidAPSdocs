@@ -1,31 +1,34 @@
 (Sensitivity-detection-and-COB-sensitivity-detection)=
 
-# Sensitivity detection
+# Detekcia citlivosti
 
-## Sensitivity algorithm
+## Algoritmus citlivosti
 
-Currently we have 3 sensitivity detection models:
+**AAPS** v súčasnosti ponúka 3 modely detekcie citlivosti:
 
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Citlivosť AAPS
+* Citlivosť vážený priemer
+* Citlivosť Oref1
 
-### Sensitivity AAPS
+### Citlivosť AAPS
 
-Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+Citlivosť sa počíta rovnako ako v Oref1, ale môžete nastaviť, aké dlhé obdobie sa má spätne vyhodnotiť. Minimálna absorpcia sacharidov sa počíta z maximálnej doby absorpcie sacharidov nastavenej v nastaveniach.
 
-### Sensitivity WeightedAverage
+### Citlivosť vážený priemer
 
-Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+Citlivosť sa počíta ako vážený priemer odchýlok. Môžete nastaviť, aké dlhé obdobie sa má spätne vyhodnotiť. Novšie odchýlky majú vyššiu váhu. Minimálna absorpcia sacharidov sa počíta z maximálnej doby absorpcie sacharidov nastavenej v nastaveniach. Tento algoritmus najrýchlejšie sleduje zmeny citlivosti.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
-### Sensitivity Oref1
+### Citlivosť Oref1
 
-Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Citlivosť sa počíta z údajov za posledných 8 hodín, alebo od poslednej výmeny miesta vpichu, ak bola pred menej ako 8 hodinami. Sacharidy (ak nie sú vstrebané) sa vynulujú po čase nastavenom v nastaveniach. Iba algoritmus Oref1 podporuje neohlásené jedlá (UAM). To znamená, že časy so zisteným UAM sú z výpočtu citlivosti vylúčené. Ak teda používate SMB s UAM, musíte zvoliť algoritmus Oref1, aby to fungovalo správne. Viac informácií o UAM nájdete v časti [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option : it is the only one that can detect UAM and work with [OpenAps SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 je odporúčaná možnosť: ako jediný dokáže zistiť UAM a pracovať s [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), novším algoritmom.
 
-## Simultaneous carbs
+## Súčasne prebiehajúce jedlá (sacharidy)
 
-There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparison to Oref plugins.
+Keď sa viac jedál prekrýva, je veľký rozdiel medzi algoritmami Citlivosť AAPS a WeightedAverage na jednej strane a Oref1 na druhej strane.
+
+* Oref1 počíta s tým, že sa naraz vstrebáva iba jedno jedlo: druhé jedlo sa začne vstrebávať až po úplnom vstrebaní prvého.
+* Citlivosť AAPS a WeightedAverage začnú vstrebávanie počítať hneď, ako zadáte sacharidy. Ak je aktívnych viac jedál, minimálne vstrebávanie sacharidov sa upraví podľa veľkosti jedla a maximálnej doby absorpcie. Minimálna absorpcia bude preto vyššia v porovnaní s Oref1.
