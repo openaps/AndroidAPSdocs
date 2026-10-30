@@ -408,7 +408,7 @@ Hinweis: Um Transparenz sehen zu können, sind alle diese Bilder auf einem gelbe
 
 (cwf-reference-background-management)=
 
-#### **Hintergrund-Management**
+#### Background management
 
 Zunächst, was das Glukosewert-Bild betrifft: Hier gibt es keine Wahl. Es kann nur in der Hintergrundebene sein (sonst wäre es vor der Diagrammansicht und das Diagramm wäre nicht sichtbar!). Also müssen wir den Glukosewert auf den Hintergrund abbilden und dann das Hintergrundbild entsprechend dem Glukosewert drehen.
 
@@ -456,7 +456,7 @@ In Bezug auf den Glukosewert wird 39 mg/dl als Minimalwert (min data) und 400 mg
 
 Innerhalb des `"rotateSgv"`-Blocks werden die beiden zusätzlichen Schlüssel (`"minData":` und `"maxData":`) verwendet, um die Mindest- und Höchstwerte auf 30 und 330 zu justieren. Mit diesen Min- und Max-Werten können wir den Datenwert direkt (ohne jegliche Konvertierung) verwenden, um den Hintergrund in Grad zu drehen. In dieser Situation werden alle Glukosewerte über 330 mg/dl auf 330 begrenzt, die obere Begrenzung des Bildes.
 
-#### **Chart-Management**
+#### Chart management
 
 Der Standardhintergrund des Diagramms ist transparent. Um die Glukosewert-Skala, die Teil des Hintergrundbildes ist, auszublenden, müssen wir ein dediziertes Hintergrundbild aufnehmen (dieses Bild wird die gesamten Schatten des Steampunk-Zifferblatts enthalten). Der Link zur Datei charBackground.jpg erfolgt mit dem Schlüssel `"background":`
 
@@ -474,7 +474,7 @@ Natürlich muss die Größenanpassung und Positionierung der Ansicht pixelgenau 
 ```
 (cwf-reference-avg-delta-management)=
 
-#### **Avg delta-Management**
+#### Avg delta management
 
 Um mit den dynamischen Bereichen von avg delta umgehen zu können, werden wir die vier Freetext-Ansichten verwenden. freetext1 wird verwendet, um den Bildmaßstab zu verwalten, und freetext2 bis freetext4 werden verwendet, um die Zeigerrotation entsprechend dem Maßstab zu verwalten.
 
@@ -691,7 +691,7 @@ Beachte, dass der "hartcodierte"-Dateiname für das Hintergrundbild jetzt durch 
 
 #### Kombiniere verschiedene Einstellungen innerhalb von dynPref mit AAPS V2
 
-In den meisten Fällen, in denen Du Einstellungen definierst, geht es nicht darum, "dynamisches Verhalten" zu erzeugen, sondern nur um die Ergebnisse basierend auf einer bestimmten Auswahl anzuzeigen. Innerhalb von dynPref wird das allerdings als dynamisches Merkmal behandelt ...
+Most of the time, when you set a preference, it's not to get "dynamic behavior", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
 
 - Wenn ein `dynData`-Block mit allen Parametern gefüllt ist (mit Bildern, Schriftfarbe, Farbe, ...), wirst Du mit `dynPref` jeden Parameter mit einer spezifischen Einstellung kombinieren können.
 - Hier werden uns damit beschäftigen wie die Trennlinien-Eigenschaften mit einer "dunkel"-Einstellung belegt wird, um anzuzeigen wann sie aktiviert ist (true) weißer Text auf schwarzem Hintergrund auf dunklem Zifferblatt (dark-Parameter true) oder schwarzer Text auf weißem Hintergrund auf hellem Zifferblatt (dark false)...
