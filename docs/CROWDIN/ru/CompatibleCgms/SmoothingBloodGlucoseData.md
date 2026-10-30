@@ -1,12 +1,12 @@
 # Сглаживание данных гликемии
 
-Если данные **СК** скачут/являются шумными, **AAPS** может дозировать инсулин неверно, что приведет к высокому или низкому СК. Если вы заметили ошибки в данных мониторинга НМГ, важно отключить цикл до тех пор, пока проблема не будет решена. В зависимости от НМГ, такие проблемы могут возникнуть из-за конфигурации НМГ в **AAPS** (как описано ниже); или из-за некорректной работы сенсора (что может потребовать его замену).
+Если данные **СК** скачут/являются шумными, **AAPS** может дозировать инсулин неверно, что приведет к высокому или низкому СК. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. В зависимости от НМГ, такие проблемы могут возникнуть из-за конфигурации НМГ в **AAPS** (как описано ниже); или из-за некорректной работы сенсора (что может потребовать его замену).
 
 ## Smoothing data within AAPS
 
-Начиная с версии 3.2, **AAPS** предлагает опцию сглаживания данных СК внутри самого **AAPS** вместо приложения НМГ. В [Конфигураторе > Сглаживание](../SettingUpAaps/ConfigBuilder.md) есть три опции.
+**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
 
-![Сглаживание](../images/ConfBuild_Smoothing.png)
+![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Простое экспоненциальное сглаживание
 
@@ -20,19 +20,25 @@
 
 Используйте данную опцию только в случае хорошего сглаживания данных вашим источником СК перед их отправкой в **AAPS**.
 
+### Unscented Kalman Filter (UKF)
+
+This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+
 (smoothing-xdrip-dexcom-g6)=
 
 ## Предложения использовать сглаживание
 
-|               |   Экспоненциальное    |    Среднее     |  Отсутствует  |
-| ------------- |:---------------------:|:--------------:|:-------------:|
-| G5/G6/ONE     | При зашумлении данных |                | Рекомендуемое |
-| G7/ONE+/Stelo | При зашумлении данных | Если стабильно |               |
+You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
 
-Датчики Libre часто шумят и могут потребовать сглаживания. Когда используется прямое подключение xDrip+ или при использовании патченного приложения (получение данных от других приложений, включая Juggluco), [сглаживание уже сделано внутри такого приложения](#libre2-value-smoothing-raw-values).
+|               |   Экспоненциальное    |    Среднее     | Без сглаживания |
+| ------------- |:---------------------:|:--------------:|:---------------:|
+| G5/G6/ONE     | При зашумлении данных |                |  Рекомендуемое  |
+| G7/ONE+/Stelo | При зашумлении данных | Если стабильно |                 |
 
-| Датчик/ Источник данных |  Juggluco  | xDrip+ напрямую | xDrip+ bridge | xDrip+ patched app |
-| ----------------------- |:----------:|:---------------:|:-------------:|:------------------:|
-| Libre 1/14 дней/Pro     | недоступно |   недоступно    |    Среднее    |     недоступно     |
-| Libre 2/2+ (EU)         |  Среднее   |   Отсутствует   |    Среднее    |    Отсутствует     |
-| Libre 2/2+/3/3+         |  Среднее   |   недоступно    |  недоступно   |    Отсутствует     |
+Датчики Libre часто шумят и могут потребовать сглаживания. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+
+| Датчик/ Источник данных |  Juggluco  | xDrip direct | xDrip bridge | xDrip patched app |
+| ----------------------- |:----------:|:------------:|:------------:|:-----------------:|
+| Libre 1/14 дней/Pro     | недоступно |  недоступно  |   Среднее    |    недоступно     |
+| Libre 2/2+ (EU)         |  Среднее   | Отсутствует  |   Среднее    |    Отсутствует    |
+| Libre 2/2+/3/3+         |  Среднее   |  недоступно  |  недоступно  |    Отсутствует    |
