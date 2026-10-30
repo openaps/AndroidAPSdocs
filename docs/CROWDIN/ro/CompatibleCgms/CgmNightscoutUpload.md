@@ -1,4 +1,4 @@
-# Pentru utilizatorii de alte sisteme CGM încărcate în Nightscout
+# Other CGM uploaded to Nightscout
 
 Dacă aveți orice alt CGM configurat care vă poate trimite datele de glicemie **doar** la [Nightscout](https://nightscout.github.io/).
 
@@ -6,5 +6,5 @@ Dacă aveți orice alt CGM configurat care vă poate trimite datele de glicemie 
 Această sursă de date nu va funcționa atunci când sunteți offline, când întâmpinați probleme de rețea sau când instanța de Nightscout este căzut. Utilizați cu prudență.
 ```
 
--   Configurați NSClient cu informațiile de pe site-ul Nightscout.
--   Selectați glicemie NSClient în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
+-   Set up **NSClientV3** (**Configuration → Communication**) with your Nightscout site information.
+-   Select NSClient BG in [**Configuration → BG Source**](#Config-Builder-bg-source).
