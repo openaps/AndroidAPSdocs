@@ -1,10 +1,27 @@
 # Cum să utilizați modulul Autotune
 
-Documentația despre algoritmul Autotune poate fi găsită în [documentația OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+Modulul Autotune este o implementare a algoritmului autotune OpenAPS în AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
 
-Modulul Autotune este o implementare a algoritmului autotune OpenAPS în AAPS.
+Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
 
-Modulul Autotune este disponibil în versiunile AAPS de la [3.4](#version3400), dar este ascuns în mod implicit.
+(autotune-how-autotune-calculates-adjustments)=
+## How Autotune calculates adjustments
+
+Autotune looks back over your recent AAPS history — CGM readings, boluses, carbs and temporary basal rates — and works out where your **Profile** (basal rates, ISF, carb ratio) doesn't quite match what actually happened to your BG.
+
+For each 5-minute data point, it compares your **actual BG change** to the change your Profile predicted, and sorts the resulting deviation into one of three buckets:
+
+* deviations that happened with no carbs on board and no insulin activity (used to tune **basal rates**, hour by hour),
+* deviations that happened after a bolus/correction with no carbs (used to tune **ISF**), or
+* deviations that happened while carbs were absorbing (used to tune **carb ratio**).
+
+It then looks at the pattern of deviations in each bucket (using percentiles rather than a simple average, so a few noisy data points don't skew the result) and proposes a new value for that hour/parameter.
+
+To keep any single run from overcorrecting, each Autotune run only ever moves a value a fraction of the way towards what the data suggests: up to 10% for ISF and carb ratio, and up to 20% for each basal segment. Overall drift is further capped by the **Max autosens ratio** / **Min autosens ratio** settings (see [Other settings](#autotune-other-settings) below) — the same bounds that limit Autosens. This is why Autotune is meant to be run repeatedly (day after day, or nightly) rather than trusted after a single run: results should converge gradually, and a big jump on one run is a sign to double check your data (missed carbs, a bad sensor day, _etc._) rather than to trust it blindly.
+
+Autotune can be run three ways: manually as a one-off from within the plugin (as described below), automatically every night via an [automation rule](#autotune-run-autotune-with-an-automation-rule), or — outside of AAPS entirely — as a standalone command-line tool against exported data, which is how some community guides describe using it without a phone actively running AAPS.
+
+*For the underlying oref0 algorithm in full mathematical detail, see [OpenAPS's Autotune documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
 ## Arătați modulul Autotune
 
@@ -14,27 +31,27 @@ Creați un fișier gol numit `enable_autotune` în subdosarul `extra` din [dosar
 
 ![Activați Autotune](../images/Autotune/Autotune_0.png)
 
-Autotune va fi afișat în Constructorul de Configurare după ce reporniți AAPS.
+Restart **AAPS**. Then open the **menu** (☰), select **Configuration**, then the **General** category, and tick **Autotune**. The card then shows **Settings** and **Open plugin**:
 
-![Modul Autotune](../images/Autotune/Autotune_1.png)
-
-***NOTĂ: Dacă nu puteți vedea opțiunea `Autotune`, va trebui să apăsați pe săgeata evidențiată (caseta roșie) pentru a extinde și a afișa toate setările în secțiunea `General`.***
+![Autotune ticked in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
 
 ## Interfața utilizatorului pentru Autotune
 
-![Autotune ecran implicit](../images/Autotune/Autotune_1b.png)
+Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
+
+![Autotune screen with the profile, the number of days of data and a warning about the selected profile](../images/Autotune/Autotune_1b.png)
 
 - Puteți selecta în meniul derulant profilul de intrare pe care doriți să-l ajustați (în mod implicit profilul dvs. activ în prezent va fi selectat)
-  - Notă: De fiecare dată când selectați un profil nou, rezultatele anterioare vor fi șterse și parametrii ce țin de reglarea zilnică vor fi setați la valoarea implicită
-- Apoi Zile reglare este pentru selecția de zile care vor fi folosite în calculele pentru reglajul profilului tău. Valoarea minimă este de 1 zi, iar valoarea maximă este de 30 de zile. Acest număr nu ar trebui să fie prea mic astfel încât să se obțină rezultate iterative și omogene (peste 7 zile pentru fiecare calcul)
-  - Notă: de fiecare dată când modificați parametrul Zile de reglare, rezultatele anterioare vor fi eliminate
+  - Note: each time you select a new profile, previous results will be removed and the **Number of days of data** will be set to its default value
+- Then **Number of days of data** (called **Tune days** in older versions) is to select the number of days used in calculation to tune your profile. Valoarea minimă este de 1 zi, iar valoarea maximă este de 30 de zile. Acest număr nu ar trebui să fie prea mic astfel încât să se obțină rezultate iterative și omogene (peste 7 zile pentru fiecare calcul)
+  - Note: each time you change the **Number of days of data**, previous results will be removed
 - Ultima Rulare reprezintă o legătură care recuperează ultimul calcul valid. Dacă nu ați lansat Autotune în ziua curentă sau dacă rezultatele anterioare au fost șterse cu o modificare a parametrului de calcul de mai sus, atunci puteți recupera parametrii și rezultatele ultimei rulări reușite.
 - Atenționare vă arată, de exemplu, unele informații despre profilul selectat (dacă aveți mai multe valori ICI sau mai multe valori ISF)
   - Notă: Calcularea automată funcționează cu o singură valoare IC și o singură valoare ISF. În prezent nu există niciun algoritm Autotune care să regleze un IC circadian sau un ISF circadian. Dacă profilul tău de intrare are mai multe valori, poți vedea în secțiunea de avertizări valoarea medie luată în considerare pentru a-ți regla profilul.
-- Verificați butonul pentru Profilul de Intrare deschideți Vizualizatorul de Profil pentru a vă permite o verificare rapidă a profilului dumneavoastră (unități, DIA, IC, ISF, bazală și intervalul țintă)
-  - Notă: Autotune va regla doar IC (o valoare unică), ISF (o valoare unică) și bazala (cu variația circadiană). Unitățile, DIA și intervalul țintă vor rămâne neschimbate în profilul de ieșire.
+- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, IC, ISF, basal and target)
+  - Notă: Autotune va regla doar IC (o valoare unică), ISF (o valoare unică) și bazala (cu variația circadiană). Units and target will remain unchanged in output profile.
 
-- "Rulați Autotune" va lansa calculul Autotune cu profilul selectat și numărul de zile luate în calcul pentru execuție
+- "Run Autotune" will launch Autotune calculation with selected profile and the selected number of days of data
   - Notă: Calculația Autotune poate dura destul de mult. Odată lansat, puteți comuta la altă parte a interfeței (vederea de ansamblu, șamd) și să reveniți mai târziu în modulul Autotune pentru a vedea rezultatele
 
   ![Porniți rulare Autotune](../images/Autotune/Autotune_2b.png)
@@ -61,20 +78,20 @@ Autotune va fi afișat în Constructorul de Configurare după ce reporniți AAPS
 
 - Dacă aveți încredere în rezultate (un procentaj scăzut de variație între profilul de intrare și profilul de ieșire), atunci puteți apăsa pe butonul "Activați profil" și apoi dați pe OK pentru a valida.
 
-  - Activarea profilului Reglat va crea automat un nou profil "Reglat" în modulul de profil local.
-  - Dacă aveți deja un profil numit "Reglat" în modulul de profil local, atunci acest profil va fi actualizat cu profilul calculat de Autotune înainte de activare
+  - Activate Tuned profile will automatically create a new profile "Tuned" in your profile list (**Manage → Profile**).
+  - If you already have a profile named "Tuned" in **Manage → Profile**, then this profile will be updated with calculated Autotune profile before the activation
 
   ![Autotune activarea profilului](../images/Autotune/Autotune_6.png)
 
 - Dacă credeți că profilul ajustat mai trebuie reglat (spre exemplu, dacă credeți că anumite variații sunt prea importante), atunci puteți apăsa pe butonul "Copiați la profilul local"
 
-  - Un nou profil cu prefixul "Ajustat" și data și ora executării vor fi create în modulul de profil local
+  - A new profile with the prefix "Tuned" and the date and time of the run will be created in **Manage → Profile**
 
   ![Autotune copiere în profilul local](../images/Autotune/Autotune_7.png)
 
-- Apoi puteți selecta profilul local pentru a edita profilul Ajustat (acesta va fi selectat în mod implicit atunci când deschideți modulul pentru profil local)
+- You can then edit the Tuned profile: open **Manage** > **Profile**, swipe to the card named "Tuned" with the date and time of the run, and tap the **Edit** (pencil) button
 
-  - valorile din profilul local, dar rotunjite în interfața utilizatorului în raport cu capacitățile pompei
+  - the values in the profile will be rounded in the user interface to your pump capabilities
 
   ![Autotune actualizare profil local](../images/Autotune/Autotune_8.png)
 
@@ -84,7 +101,7 @@ Autotune va fi afișat în Constructorul de Configurare după ce reporniți AAPS
 
   ![Autotune actualizare profilului de intrare](../images/Autotune/Autotune_9.png)
 
-- Dacă ați actualizat profilul de intrare, atunci butonul "Actualizați profilul de intrare" este înlocuit de butonul "Reveniți la profilul de intrare" (a se vedea captura de ecran de mai jos). Puteți vedea imediat în acest fel dacă profilul dvs. curent de intrare din modulul pentru profilul local include deja rezultatul ultimei rulări sau nu. De asemenea, aveți posibilitatea de a vă recupera profilul de intrare fără rezultatul Autotune cu acest buton
+- Dacă ați actualizat profilul de intrare, atunci butonul "Actualizați profilul de intrare" este înlocuit de butonul "Reveniți la profilul de intrare" (a se vedea captura de ecran de mai jos). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. De asemenea, aveți posibilitatea de a vă recupera profilul de intrare fără rezultatul Autotune cu acest buton
 
   ![Autotune actualizare profilului de intrare](../images/Autotune/Autotune_10.png)
 
@@ -96,26 +113,27 @@ Autotune va fi afișat în Constructorul de Configurare după ce reporniți AAPS
 
 ### Setări modul Autotune
 
-  ![Autotune ecran implicit](../images/Autotune/Autotune_11.png)
+  ![Autotune settings in AAPS 4](../images/preferences/settings_autotune.png)
 
 ```{admonition} Only DEV
-:class: info
-Funcția de Comutare automată a profilului este disponibilă doar în modul Dev/Inginerie.
+:class: note
+The **Auto switch profile** feature is only available in Dev/Engineering mode.
 ```
 
-- Schimbare automată a profilului (implicit dezactivată): vedeți [Executați Autotune cu o condiție de automatizare](#autotune-run-autotune-with-an-automation-rule) mai jos. Dacă schimbați această setare pe Pornit, profilul de intrare va fi actualizat automat de către profilul Ajustat și va fi activat.
+- **Auto switch profile** (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. Dacă schimbați această setare pe Pornit, profilul de intrare va fi actualizat automat de către profilul Ajustat și va fi activat.
   - **Fiți atenți, trebuie să aveți încredere și să verificați în următoarele zile, că după o actualizare și o activare a profilului ajustat fără modificare, se îmbunătățește sistemul de buclă**
 
-- Categorizează UAM ca bazală (implicit pornit): Această setare este pentru utilizatorii care folosesc AndroidAPS fără ca carbohidrații să fie introduși (complet UAM). Va opri (când este oprit) să catalogheze UAM ca bazală.
+- **Categorize UAM as basal** (default Off): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). Va opri (când este oprit) să catalogheze UAM ca bazală.
   - Notă: dacă aveți cel puțin o oră detectată de absorbție a carbohidraților în timpul unei zile, apoi toate datele clasificate ca "UAM" vor fi clasificate ca bazală, indiferent de această setare (pornită sau oprită)
-- Numărul de zile de date (implicit 5): Puteți defini valoarea implicită cu această setare. De fiecare dată când selectați un nou profil în modului Autotune, parametrul zile de ajustare va fi înlocuit cu această valoare implicită
-- Aplicați rezultatul mediu în IC/ISF circadian (implicit oprit): vedeți mai jos [Profilul circadian IC sau ISF](#autotune-circadian-ic-or-isf-profile).
+- **Default tune days** (default 5): You can define the default value with this setting. Each time you select a new profile in the Autotune plugin, the **Number of days of data** will be replaced by this default value
+- **Use circadian IC/ISF** (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
 
+(autotune-other-settings)=
 ### Alte setări
 
-- Autotune folosește și raportul Max autosens și raportul Min autosens pentru a limita variația. Puteți vedea și ajusta aceste valori în Configurator > Modul detectare sensibilitate > Setări > Setări avansate
+- Autotune folosește și raportul Max autosens și raportul Min autosens pentru a limita variația. You can see and adjust these values in [**Settings** > **Absorption settings** > **Advanced Settings**](../SettingUpAaps/Preferences.md) (**Autosens max** and **Autosens min**).
 
-  ![Autotune ecran implicit](../images/Autotune/Autotune_12.png)
+  ![Autosens max and Autosens min in the advanced absorption settings](../images/preferences/settings_absorption_advanced.png)
 
 
 
@@ -125,7 +143,7 @@ Funcția de Comutare automată a profilului este disponibilă doar în modul Dev
 
 ### Profil Circadian IC sau ISF
 
-- Dacă aveți o variație importantă a IC și/sau ISF în profilul dumneavoastră, și aveți încredere deplină în durata și variația dumneavoastră circadiană, apoi puteți seta "Aplicați rezultatul mediu în profilul circadian IC/ISF"
+- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can enable **Use circadian IC/ISF** (called "Apply average result in circadian IC/ISF" in older versions)
 
   - Țineți cont că calculul Autotune se va face întotdeauna cu o singură valoare, iar variația circadiană nu va fi reglată de Autotune.
 
@@ -137,13 +155,13 @@ Funcția de Comutare automată a profilului este disponibilă doar în modul Dev
 
 ### Ajustați anumite zile ale săptămânii
 
-- Dacă apăsați pe caseta de selectare cu ochiul din dreapta parametrului "Ajustează zile", veți vedea selecția zilei. Puteți specifica care zi a săptămânii ar trebui inclusă în calculul Autotune (în captura de ecran de mai jos puteți vedea un exemplu pentru "zile lucrătoare" cu sâmbătă și duminică eliminate din calculul Autotune)
-  - Dacă numărul de zile incluse în calculul Autotune este mai mic decât numărul Zile ajustate, atunci veți vedea câte zile vor fi incluse în selectorul din dreapta Zile ajustate (10 zile în exemplul de mai jos)
-  - Această setare oferă rezultate bune doar dacă numărul de zile rămase nu este prea mic (spre exemplu dacă ajustezi un anumit profil pentru zilele de sfârșit de săptămână cu doar duminica și sâmbăta selectate, trebuie să selectați un minimum de 21 sau 28 de Zile de reglare pentru a avea 6 sau 8 zile incluse în calculul Autotune)
+- If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. Puteți specifica care zi a săptămânii ar trebui inclusă în calculul Autotune (în captura de ecran de mai jos puteți vedea un exemplu pentru "zile lucrătoare" cu sâmbătă și duminică eliminate din calculul Autotune)
+  - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
+  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
 
   ![Autotune ecran implicit](../images/Autotune/Autotune_14b.png)
 
-- În timpul calculului Autotune, puteți vedea progresul calculelor ("Rezultat parțial ziua 3 / 10 ajustată" în exemplul de mai jos)
+- During Autotune calculation, you can see the progress of the calculations ("Partial result day 1 / 4 tuned" in the example below, with Saturday and Sunday excluded)
 
   ![Autotune ecran implicit](../images/Autotune/Autotune_15b.png)
 
@@ -154,8 +172,8 @@ Funcția de Comutare automată a profilului este disponibilă doar în modul Dev
 ## Execuția Autotune cu o condiție de automatizare
 
 ```{admonition} Only DEV
-:class: info
-Funcția de Comutare automată a profilului este disponibilă doar în modul Dev/Inginerie.
+:class: note
+The **Auto switch profile** feature is only available in Dev/Engineering mode.
 ```
 
 Primul pas este definirea unui declanșator corect pentru o regulă de automatizare cu Autotune:
@@ -170,19 +188,19 @@ Notă: pentru mai multe informații despre cum să setați o condiție de automa
 
   ![Autotune ecran implicit](../images/Autotune/Autotune_17.png)
 
-- Apoi puteți selecta acțiunea "Executați Autotune" din listă
+- Then you can select the **Autotune profile** action (in the **Loop & insulin** group)
 
   ![Autotune ecran implicit](../images/Autotune/Autotune_18.png)
 
-- Apoi puteți selecta Acțiune Autotune pentru a ajusta parametrii pentru rularea dumneavoastră. Parametrii impliciți sunt "Profil activ", numărul implicit de zile pentru ajustare așa cum au fost definite în preferințele modulului Autotune, și Toate zilele sunt selectate.
+- You can then adjust the parameters of the action for your run. In a new action, **Select profile to tune** shows the first profile of your local profile list, the **Tune days** field is empty and all days are selected. Choose the profile to tune and enter the number of **Tune days** (1 to 30).
 
   ![Autotune ecran implicit](../images/Autotune/Autotune_19b.png)
 
-- După câteva zile, dacă aveți încredere deplină în rezultatele Autotune și procentajul modificării este scăzut, puteți modifica [setările Autotune](#autotune-plugin-settings) "Comutarea automată a profilului" pe modul activat astfel profilul ajustat după calcul să fie actualizat și activat în mod automat.
+- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "**Auto switch profile**" to enabled to automatically update and activate profile tuned after calculation.
 
 Notă: dacă doriți să reglați automat profiluri pentru anumite zile ale săptămânii (de exemplu, un profil pentru "Zilele săptămânii" și altul pentru "Zile lucrătoare"), apoi creați o regulă pentru fiecare profil, selectează aceleași zile în declanșator și în acțiunea Autotune, zilele de reglare trebuie să fie suficient de multe pentru a fi sigur că se va face reglarea cu cel puțin 6 sau 8 zile, și nu uitați să selectați timpul după 4 dimineața în declanșator...
 
-- Vedeți mai jos un exemplu de regulă pentru a regla "profilul meu" în toate "Zilele lucrătoare" cu 14 zile de reglaj selectate (deci doar 10 zile incluse în calculul Autotune).
+- See below an example of rule that runs every working day (Monday to Friday) at 04:00 and tunes the profile "Normal" with 14 **Tune days**, working days only (so only 10 days are included in the Autotune calculation).
 
   ![Autotune ecran implicit](../images/Autotune/Autotune_20b.png)
 
@@ -198,7 +216,7 @@ Utilizați întotdeauna Autotune câteva zile manual pentru a verifica rezultate
 
 - Autotune poate funcționa foarte bine pentru unii utilizatori și pentru alții nu, așa că **Dacă nu aveți încredere în rezultatul Autotunei, nu îl folosiți**
 
-De asemenea, este important să analizăm rezultatele Autotune pentru a înțelege (sau a încerca să înțelegeți) de ce Autotune propune aceste modificări
+It's also important to analyze Autotune results to understand (or try to understand) why Autotune proposes these modifications
 
 - puteți avea o creștere sau o scădere totală a intensității profilului dumneavoastră (de exemplu o creștere a valorii bazalei totale asociată scăderii valorilor ISF și IC). ar putea urma câteva zile următoare cu corecție autosens peste 100% (este nevoie de mai mult agresivitate) sau sub 100% (sunteți mai sensibil)
 - Uneori Autotune propune un echilibru diferit între ratele bazale și IC/FSI (de exemplu bazale mai mici și IC/FSI mai agresive)
