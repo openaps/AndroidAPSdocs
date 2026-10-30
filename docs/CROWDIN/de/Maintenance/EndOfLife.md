@@ -6,7 +6,7 @@ Jede AAPS-Version kann ein Enddatum haben. Nach diesem Datum kann AAPS den [Loop
 
 ## So nutzt Du diese Seite
 
-1. Tippe in AAPS oben rechts auf die drei Punkte und wähle **Über**. Dort siehst Du Deine AAPS-Version.
+1. In AAPS, open the **menu** (☰) at the top left and choose **About**. Dort siehst Du Deine AAPS-Version.
 2. Suche dieselbe Version in der ersten Tabelle unten. Daneben steht das Enddatum. Daten werden im Format **Jahr-Monat-Tag** angegeben. 2026-10-30 bedeutet zum Beispiel 30. Oktober 2026.
 3. Lies vor dem Update die [Release Notes](ReleaseNotes.md) und die [Aktualisierungsanleitung](UpdateToNewVersion.md). Welche Version Du nutzen kannst, hängt auch von der Android-Version Deines Smartphones ab.
 
