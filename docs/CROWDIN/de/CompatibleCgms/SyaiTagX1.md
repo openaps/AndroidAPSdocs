@@ -7,7 +7,7 @@
 
 -   Starte den X1 Sensor
 
-- Wähle Syai Tag unter [Konfigurations-Generator, BZ-Quelle](#Config-Builder-bg-source) aus.
+- Select **Syai/Ottai** in [Configuration, BG Source](#Config-Builder-bg-source).
 
 Aktiviere „Broadcast“ in der Syai-App:
 
