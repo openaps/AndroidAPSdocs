@@ -15,7 +15,7 @@ Falls Du **AAPS** auf einem neuen Computer erstellen möchtest: Kopiere das Back
 :local: true
 ```
 
-Falls Du damit Probleme haben solltest, findest Du einige Lösungen auf der eigenen Seite [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 ### Exportiere Deine Einstellungen
 
@@ -29,11 +29,6 @@ Die erforderliche minimale Version ist im Abschnitt [Computer- und Software-Spez
 
 (Update-to-new-version-update-your-local-copy)=
 ### Führe ein Update Deiner lokalen Version durch
-
-```{admonition} WARNING
-:class: warning
-Wenn Du von einer älteren Version auf 2.8.x aktualisierst, befolge die Schritte zum Erstellen eines [neuen Clone](../SettingUpAaps/BuildingAaps.md), da diese Anleitung hier nicht funktionieren wird!
-```
 
 * Öffne Dein bestehendes AAPS-Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Klicke (doppelt) auf das AAPS-Projekt.
 
@@ -88,9 +83,11 @@ Wenn Du beim Erstellen Deinen bestehenden „Keystore“ im Android Studio genut
 In allen anderen Fällen (z.B. wenn ein neuer 'key store' für das Signieren der APK genutzt wurde), muss die alte App gelöscht werden, bevor die neue Version installiert werden kann. **Achte darauf, Deine Einstellungen zu exportieren!**
 ```
 
-Nutze die Anleitung [AAPS auf Dein Smartphone übertragen und installieren](../SettingUpAaps/TransferringAndInstallingAaps.md)
+See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
 
 [Hier](#Update-to-new-version-check-aaps-version-on-phone) geht's weiter.
+
+(update-computer-build-troubleshooting)=
 
 ## Problembehandlung
 
@@ -98,6 +95,6 @@ Keine Panik, wenn irgendetwas schiefläuft.
 
 Tief durchatmen!
 
-Danach schaue auf der Seite [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio) nach einer Lösung, sofern Dein Problem bereits bekannt sein sollte!
+Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) if your problem is already documented!
 
 Wenn Du weitere Hilfe brauchst, kontaktiere bitte andere **AAPS**-Nutzende auf [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw).
