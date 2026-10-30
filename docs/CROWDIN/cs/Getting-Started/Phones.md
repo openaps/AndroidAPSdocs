@@ -1,40 +1,49 @@
 # Telefony
 
-The current version of **AAPS** (3.4) requires an Android smartphone with Google **Android 12.0 or above**. If you are considering buying a new phone, (as of January 2026), **Android 16 is preferred**, Android 15 is not recommended.
+<!-- List of hidden pages to avoid overcrowding the menu -->
 
-Check [Facebook or Discord](../GettingHelp/WhereCanIGetHelp.md) for latest updates on this subject.
+```{toctree}
+:hidden:
 
-Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons. However, for users unable to use a device with Android 12.0 or newer, earlier versions of **AAPS** compatible for older Android versions, remain available, see: [Release notes](#maintenance-android-version-aaps-version).
+../CompatiblePhones/Jelly.md
+../CompatiblePhones/Huawei.md
+```
 
-- [Jelly Pro Settings](../CompatiblePhones/Jelly.md)
-- [Huawei Settings](../CompatiblePhones/Huawei.md)
+Aktuální verze **AAPS** (4.0) vyžaduje chytrý telefon se systémem Google **Android 12.0 nebo novějším**. Pokud uvažujete o koupi nového telefonu (stav k lednu 2026), **preferuje se Android 16**, Android 15 se nedoporučuje.
+
+Nejnovější informace k tomuto tématu najdete na [Facebooku nebo Discordu](../GettingHelp/WhereCanIGetHelp.md).
+
+Z bezpečnostních důvodů uživatelům důrazně doporučujeme udržovat své sestavení **AAPS** aktuální. Pro uživatele, kteří nemohou používat zařízení s Androidem 12.0 nebo novějším, jsou však stále k dispozici starší verze **AAPS** kompatibilní se staršími verzemi Androidu, viz: [Poznámky k vydání](#maintenance-android-version-aaps-version).
+
+- [Nastavení Jelly Pro](../CompatiblePhones/Jelly.md)
+- [Nastavení Huawei](../CompatiblePhones/Huawei.md)
 
 (Phones-list-of-tested-phones)=
 
-## List of tested Phones
+## Seznam testovaných telefonů
 
-We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribute by filling out the [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) and adding your setup!
+Vedeme seznam [testovaných sestav hardwaru](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), který si můžete [prohlédnout v přehledném rozhraní](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Přispějte vyplněním [formuláře Google](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) a přidejte svou sestavu!
 
-This list provides user feedback on the usage of a phone along with **AAPS** and a given pump and CGM. It can help you check if your phone / pump / CGM has been used successfully by other users.
+Tento seznam obsahuje zpětnou vazbu od uživatelů k používání telefonu s **AAPS** a s danou pumpou a CGM. Může vám pomoci ověřit, zda váš telefon / pumpu / CGM už jiní uživatelé úspěšně používali.
 
-The document is read-only. With CRTL-F, you can search in the text of the Google sheet.
+The document is read-only. Pomocí CTRL-F můžete hledat v textu tabulky Google.
 
-To record your test of a hardware setup, please fill in this [form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). After you fill in the form data, the sheet is updated automatically every 5 minutes
+Pokud chcete zaznamenat svůj test nastavení hardwaru, vyplňte prosím tento [formulář](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Po vyplnění formuláře se tabulka automaticky aktualizuje každých 5 minut.
 
-Any problems with the spreadsheet, please contact its maintainer, *@theodoor5137*, on Discord, or see the [Where can I get help? page](../GettingHelp/WhereCanIGetHelp.md).
+S jakýmikoli problémy s tabulkou se obraťte na jejího správce, *@theodoor5137*, na Discordu, nebo se podívejte na stránku [Kde mohu získat pomoc? ](../GettingHelp/WhereCanIGetHelp.md).
 
-## I didn't find my phone
+## Nenašel/a jsem svůj telefon
 
-If you have questions regarding a specific phone model, please search or ask in our [Facebook or Discord community](../GettingHelp/WhereCanIGetHelp.md).
+Pokud máte dotazy ke konkrétnímu modelu telefonu, hledejte nebo se zeptejte v naší [komunitě na Facebooku nebo Discordu](../GettingHelp/WhereCanIGetHelp.md).
 
 Pokud chcete poskytnout chytrý telefon nebo hodinky k provedení testování, napište prosím na <donations@androidaps.org>.
 
 (Phones-phone-wallpaper)=
 
-## Phone Wallpaper
+## Tapeta na telefon
 
-If you want to decorate your phone with more **AAPS**, you can download your background image [here](../images/bg_phone.jpg)!
+Pokud chcete svůj telefon ozdobit více **AAPS**, můžete si obrázek na pozadí stáhnout [zde](../images/bg_phone.jpg)!
 
-![phone background](../images/bg_phone_thump.jpg)
+![pozadí telefonu](../images/bg_phone_thump.jpg)
 
 Design: Thiago :)
