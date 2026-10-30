@@ -1,10 +1,12 @@
 # 時區變更與夏令時間
 
-## 與幫浦跨時區旅行
+When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+
+(timezone-traveling-with-pumps)=
 
 ## Omnipod Dash 的時區變更
 
-* 重新整理 Dash 分頁
+* Refresh the pump status in **Manage → Pump**
 * 先暫時選擇不同的 **設定檔**，然後再切換回原本或想要的 **設定檔**
 
 ## DanaR、Korean DanaR 的時區變更
@@ -27,14 +29,14 @@
 
 * 依照家中時間與目的地時間的時差，調整你的 **設定檔** 時間偏移。
    
-   * 長按 **設定檔** 名稱（主畫面頂端中間）
-   * 選擇「**設定檔切換**」
-   * 根據你的目的地設置「時間調整」。
+   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
+   * Select your **Profile** and tap **▶ Activate**
+   * Set '**Time shift**' according to your destination and tap **Activate**.
    
    ![設定切換與時間調整](../images/ProfileSwitchTimeShift2.png)
    
-   * 例如 Vienna -> New York：「**設定檔切換**」+6 小時
-   * 例如 Vienna -> Sydney：「**設定檔切換**」-8 小時
+   * e.g. Vienna -> New York: **Profile Switch** +6 hours
+   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
 
 ### 方案2：刪除幫浦歷史紀錄
 
@@ -64,11 +66,9 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 ## Accu-Chek Combo 的時區變更
 
-新的[Combo 驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)會自動將幫浦的時間調整為手機的時間。 Combo 幫浦無法儲存時區，只能記錄本地時間，而新驅動正是將本地時間寫入幫浦中。此外，他會將時區儲存在本地 AAPS 偏好設定中，以便將幫浦的本地時間轉換為具有時區偏移的完整時間戳記。使用者不需要做任何操作；如果 Combo 的時間與手機的目前時間相差太大，幫浦的時間會自動調整。
+The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. 此外，他會將時區儲存在本地 AAPS 偏好設定中，以便將幫浦的本地時間轉換為具有時區偏移的完整時間戳記。使用者不需要做任何操作；如果 Combo 的時間與手機的目前時間相差太大，幫浦的時間會自動調整。
 
 請注意，這需要一些時間，因為只能在遠端終端模式下完成，而該模式通常較慢。這是 Combo 無法克服的限制。
-
-舊的基於 Ruffy 的驅動程式無法自動調整時間。使用者必須手動進行調整。如果是因為時區或夏令時間變更，請參閱下方的安全操作步驟。
 
 ## Medtrum 的時區變更
 
@@ -84,18 +84,13 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 夏令時間調整。
 
-視您的幫浦和 CGM 設定而定，時間跳動可能導致 **AAPS** 無法正常運作。例如，使用 Combo 幫浦並遇上夏令時間調整時，幫浦歷史記錄會被讀取兩次，造成重複項目。對某些幫浦來說，最好在夏令時間調整前、清醒時調整時區，而不要在夜間進行。
+視您的幫浦和 CGM 設定而定，時間跳動可能導致 **AAPS** 無法正常運作。對某些幫浦來說，最好在夏令時間調整前、清醒時調整時區，而不要在夜間進行。
 
 ### 多數幫浦的 DST 自動調整
 
-* 此項調整功能在 **AAPS** 2.2 版之後可用。
-* 不過，夏令時間切換後（通常從凌晨 1 點開始），**循環**會停用 3 小時，而 **AAPS** 會改用您在 **設定檔**中選取的背景基礎率。
-   
-   這是基於安全考量—在 DST 變更前重複注射可能導致 **IOB** 偏高。
-
-* 夏令時間調整完成後，選取 **設定檔切換**，然後選取使用者想要的 **設定檔**，即可啟用 **循環**。
-
-* 夏令時間調整前，您也會在 **AAPS** 主畫面收到通知，告知**循環**已暫時停用。此訊息不會以嗶聲、震動或類似的聲音提示。**
+* However, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. 這是基於安全考量—在 DST 變更前重複注射可能導致 **IOB** 偏高。
+* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable the **Loop**: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
+* 夏令時間調整前，您也會在 **AAPS** 主畫面收到通知，告知**循環**已暫時停用。 This message will appear without beep, vibration or similar sound.
 
 若你使用 **AAPS** 的計算機進行注射，除非你確定這些資料完全正確，否則請不要使用 **COB** 與 **IOB** 資料。請小心，且在 DST 切換完成後的數小時內不要使用此功能。
 
@@ -103,20 +98,24 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 * DST 變更會自動完成。無需進行任何操作。
 
-### Medtrum 的 DST
+### Accu-Chek Combo 的 DST
 
 * DST 變更會自動完成。無需進行任何操作。
 
-### Omnipod Dash 的 DST
+### DST for Medtrum
 
-* 如上所述，可讓 **AAPS** 在 DST 完成後暫時將背景基礎率作為預設。
-* 否則，若你不想讓 **AAPS** 在夜間暫時改為背景基礎率，你可以在 DST 預定發生的前一天變更時區，以避免夜間中斷。注意：此選項可能導致你的 Pod 提早到期。若選擇下列功能，請務必隨身攜帶耗材。
+* DST 變更會自動完成。無需進行任何操作。
+
+### DST for Omnipod Dash
+
+* Either allow **AAPS** to temporarily default background basal after DST has taken place as explained above.
+* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day prior DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
 
 #### 更改時鐘前的操作
 
 1. 關閉手機中會自動設定時區的設定，這樣使用者就能切換到不採用夏令時間的時區。如何操作取決於你的智慧型手機與 Android 版本。
    
-   * 有些手機有兩個設定：一個是自動設定時間（理想情況下應保持開啟），另一個是自動設定時區（你必須將其關閉）。
+   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
    * 不幸的是，有些 Android 版本只有一個開關，同時控制時間與時區的自動設定。你現在必須關閉這個開關。
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
@@ -124,57 +123,12 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 2. 找到一個與你目前所在地時間相同、但不使用 DST 的時區。
    
    * 可在此找到這些國家的列表 [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * 對於中歐時間（CET），這可能是「布拉柴維爾」（剛果）。將你的手機時區更改為剛果。
+   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. **AAPS** 會重新整理你的幫浦，並切換到你想要的 **設定檔**。
+3. In **AAPS** refresh your pump and switch to your desired **Profile**.
 
 4. 請檢查 **AAPS** 的 **IOB** 和 **COB**；如果數值不準確，請停用**循環**至少一個 DIA 和 Max-Carb-Time 的時間，以較長者為準。
 
 5. 更改時鐘後的操作. 在 IOB 較低時，是切回當地時區的好時機。例如，在早餐等餐點前一小時。理想情況下，你的 **COB** 與 **IOB** 都應接近 0。
-
-### Accu-Chek Combo 的 DST
-
-本節僅適用於舊的、以 Ruffy 為基礎的驅動程式。新的驅動程式會自動調整日期和時間以及 DST。
-
-**AAPS** 會在幫浦與手機時間差異過大時發出警報。在 DST 時間調整的情況下，這通常會發生在夜間。為了避免這種情況，並讓你可以安穩睡覺，請遵循以下步驟，以便你能夠在方便的時間強制更改時間：
-
-#### 更改時鐘前的操作
-
-1. 關閉任何自動設置時區的設置，以便你可以在需要時強制更改時間。操作方式取決於您的智慧型手機和 Android 版本。
-   
-   * 某些設備有兩個設置，一個是自動設置時間（理想情況下應保持開啟），另一個是自動設置時區（必須關閉）。
-   * 不幸的是，一些 Android 版本只有一個開關，可以自動設置時間和時區。你現在必須關閉這個開關。
-   
-   Screenshot_20260329-110315 (1)
-
-2. 找到一個與你目前所在地時間相同、但不使用 DST 的時區。
-   
-   * 可在此找到這些國家的列表 [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * 對於中歐時間（CET），這可能是「布拉柴維爾」（剛果）。將你的手機時區更改為剛果。
-
-3. 在 **AAPS** 中重新整理你的幫浦。
-
-4. 檢查治療標籤... 如果看到任何重複的治療：
-   
-   * 請勿按「刪除未來治療」
-   * 請按「移除」所有未來的治療和重複的治療。這樣可以使治療無效，而不是將其移除，因此他們將不再被計入 IOB。
-
-5. 如果不確定 IOB/COB 的狀況，為了安全起見，請停用**循環**至少一個 DIA 和 Max-Carb-Time 的時間，以較長者為準。*
-
-#### 時鐘調整／夏令時間切換後的處理事項
-
-在 IOB 較低時進行此切換較為合適。例如，在用餐前一小時，例如早餐，（幫浦歷史紀錄中的任何近期注射將是小的 SMB 校正）。你的 **COB** 與 **IOB** 都應接近 0。)
-
-1. 將 Android 時區更改回你的目前位置，並重新啟用自動時區。
-2. **AAPS** 很快會開始提醒你，Combo 的時鐘不相符。因此，請透過幫浦螢幕和按鈕手動更新幫浦的時鐘。
-3. 在 **AAPS** 的「Combo」畫面，按下「重新整理」。
-4. 前往「治療」畫面，並查看是否有未來的事件。應該不會有太多。
-   
-   * 請勿按下「刪除未來的治療」
-   * 點選所有未來治療和重複項目旁的「移除」。這會使治療失效，而非將其移除，因此不會將其納入 **IOB** 計算。
-
-5. 如果不確定 IOB/COB 的狀況，為了安全起見，請停用**循環**至少一個 **DIA** 和 Max-Carb-Time 的時間，以較長者為準。*
-
-6. 正常繼續。
