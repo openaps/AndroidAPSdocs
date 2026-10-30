@@ -1,41 +1,66 @@
 # Tidepool
 
-Tidepool 是一個第三方工具，用於收集血糖、胰島素和碳水化合物資料，並可以用來分析和與你的臨床團隊分享這些資料。自 **AAPS** 3.2 版起，它可作為 Nightscout 的替代方案，用於完成目標 1 的部分要求。他也可以與 Nightscout 結合使用，作為一個替代的報告平台，與臨床環境緊密整合。這對於使用 AAPS 的兒童來說可能是一個理想選擇，他們希望擁有 Nightscout 的遠端監控和控制功能，但希望使用他們的臨床團隊更熟悉的報告平台。
+Tidepool is a third party tool that collects data regarding BG, insulin and carbs (and the notes you add to your treatments) and can be used to analyze and share this data with your clinical team. 自 **AAPS** 3.2 版起，它可作為 Nightscout 的替代方案，用於完成目標 1 的部分要求。他也可以與 Nightscout 結合使用，作為一個替代的報告平台，與臨床環境緊密整合。這對於使用 AAPS 的兒童來說可能是一個理想選擇，他們希望擁有 Nightscout 的遠端監控和控制功能，但希望使用他們的臨床團隊更熟悉的報告平台。
 
-重要的是要了解 Tidepool 只是用於報告。他不是一個實時的追蹤應用程式。如果你需要除了主 AAPS 手機之外的追蹤者，則必須同時設置 Nightscout。
+It is important to understand that Tidepool is for reporting only. 他不是一個實時的追蹤應用程式。 If you need to have followers apart from the main AAPS phone, you must set up Nightscout as well.
 
 注意：Tidepool 組織已獲得 FDA 核准，將 iOS Loop 產品推向市場。這與他們的資料報告平台或 AAPS 無關。
 
 
-## 步驟 1 - 設置 Tidepool 帳戶
+## Step 1 - Set up a Tidepool account
 
--瀏覽[tidepool.org](https://www.tidepool.org/)
+- Navigate to [tidepool.org](https://www.tidepool.org/)
 
--選擇「個人註冊」或「註冊」
+- Select “Personal Sign Up” or “Sign Up”
 
--建立並紀錄電子郵件和密碼
+- Create and document an email and password
 
--選擇「個人帳戶」並點擊「繼續」
+- Select “Personal Account” and click “Continue”
 
--完成患者資料部分並接受使用條款
+- Complete the patient information section and accept the terms of use
 
--透過你電子郵件中的指示來驗證你的電子郵件地址
+- Verify your email address via the instructions received to your email
 
 
-## 步驟 2 - 在 AAPS 中輸入憑據
+## Step 2 - Connect AAPS to Tidepool
 
--選擇左上角的「漢堡」選單，然後選擇「組態建置工具」（如果「組態建置工具」不在那裡，他將位於頂部的一個標籤頁中）
+- Open the **menu** (☰) in the top-left corner of the main screen and select "**Configuration**"
 
--向下滾動至「同步」部分，並選中「Tidepool」左側的勾選框
+- Open the "**Communication**" category and enable "**Tidepool**":
 
--點擊「Tidepool」右側的齒輪圖示
+![Enable Tidepool](../images/v4/Tidepool/tidepool_enable.png)
 
--輸入你在步驟 1 中建立的用戶名和密碼
+- Tap "**Open plugin**" underneath Tidepool, then tap the **Login** icon (an arrow going into a door) in the top-right corner
 
--點擊「測試 Tidepool 登錄」
+- A browser window opens on the Tidepool login page. Log in with the email address and password you created in Step 1 above:
 
--如果你收到「成功登錄 Tidepool」的訊息，則表示你已成功連線。如果沒有，請確認你的憑據正確，並且你已驗證了 Tidepool 的電子郵件地址。
+![Tidepool login page](../images/v4/Tidepool/tidepool_login.png)
 
--點擊「連線設定」，根據你的個人偏好進行設置
+- After a successful login the browser closes and the Tidepool screen shows the status "**Connected**"; the log below documents the data uploads. If the login fails, confirm your credentials are correct and that you have verified your email address with Tidepool.
 
-如需更多關於如何在 Tidepool 上傳資料後使用你的資料的協助，請進入：[https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data) 
+![Tidepool connected](../images/v4/Tidepool/tidepool_status.png)
+
+- In the "**Settings**" of the Tidepool plugin, open "**Connection settings**". By default "**Use Nightscout connection settings**" is on, so Tidepool uploads under the same conditions you set for Nightscout. Turn it off if you want separate conditions for Tidepool, for example to upload to Tidepool only on Wi-Fi and while charging, while Nightscout also uses mobile data.
+
+![Connection settings with Use Nightscout connection settings on](../images/v4/Tidepool/tidepool_connection_settings.png) ![Separate connection settings for Tidepool](../images/v4/Tidepool/tidepool_connection_settings_separate.png)
+
+如需更多關於如何在 Tidepool 上傳資料後使用你的資料的協助，請進入：[https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+
+(tidepool-menu)=
+## The Tidepool buttons
+
+In the top-right corner of the Tidepool screen:
+
+- The **Login** or **Logout** icon — connect to or disconnect from your Tidepool account. Only one of them is shown: **Login** while you are logged out, **Logout** while you are logged in. **AAPS** asks you to confirm before it logs you out.
+- The gear icon — the Tidepool settings.
+
+The buttons at the bottom of the Tidepool screen:
+
+- "**Upload now**" — upload new data straight away instead of waiting for the next automatic upload.
+- "**Full synchronization**" — upload all data stored in **AAPS** again.
+- "**Purge all data**" — delete **all** data that **AAPS** has uploaded to your Tidepool account. This cannot be undone. Use it only to remove wrong or duplicate data, then run "**Full synchronization**" to upload your data again.
+- "**Clear log**" — empty the log shown on the Tidepool screen.
+
+![The Tidepool screen and its buttons](../images/v4/Tidepool/tidepool_menu.png)
+
+In Tidepool, the data uploaded by **AAPS** 4 is shown under the device name **AAPS**. See [What changed in AAPS v4](#v4changes-tidepool) if you used Tidepool with an older version. 
