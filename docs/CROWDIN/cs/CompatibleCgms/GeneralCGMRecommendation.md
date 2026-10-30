@@ -2,40 +2,40 @@
 
 ## Opatření při používání CGM
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Ať už používáte jakýkoli systém CGM, pokud chcete kalibrovat z krve, měli byste dodržovat několik velmi jasných pravidel, a to bez ohledu na to, zda používáte DIY software CGM nebo oficiální aplikace.
 
 -   Ujistěte se, že máte čisté ruce i používaná zařízení.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
+-   Snažte se kalibrovat tehdy, když je vaše glykémie stabilní (rovná křivka po dobu 15–30 minut je obvykle dostatečná)
 -   Nekalibrujte, pokud se vaše glykémie pohybuje (stoupá nebo klesá).
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+-   Kalibrujte „dostatečně“ – oficiální aplikace vás vyzvou ke kontrole jednou nebo dvakrát denně. Pro DIY systémy to nemusí platit a měli byste být opatrní, pokud byste pokračovali v používání CGM bez kalibrací.
+-   U senzorů, které kalibraci nevyžadují nebo ji neumožňují, si alespoň jednou denně změřte skutečnou glykémii z krve. AAPS bude jen tak bezpečný, jak spolehlivé jsou hodnoty ze senzoru.
+-   Pokud je to možné, kalibrujte některými hodnotami v nižším rozsahu (4–5 mmol/l nebo 72–90 mg/dl) a některými v mírně vyšším rozsahu (7–9 mmol/l nebo 126–160 mg/dl), protože to dává lepší rozsah pro kalibraci bodu/sklonu.
 
 ## Nastavení senzoru (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor contacts should not come into contact with blood.
+Při zavádění senzoru se doporučuje netlačit na aplikátor příliš silně, aby nedošlo ke krvácení. Kontakty senzoru by se neměly dostat do kontaktu s krví.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Pozor! First click in the square side and then press down the round side.
+Po nastřelení senzoru je možno nakliknout vysílač do pouzdra senzoru. Pozor! Vysílač nejprve nasaďte na hranaté straně senzoru, a až poté na kulaté.
 
 (general-cgm-troubleshooting)=
-## Troubleshooting
+## Řešení problémů
 
 ### Problém s připojením
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xDrip+ does not display any BG values. When Bluetooth connection is re-established the data is backfilled.
+Bluetooth spojení může být rušeno jinými Bluetooth zařízeními v okolí, jako jsou glukometry, sluchátka, tablety, nebo kuchyňskými spotřebiči, jako jsou mikrovlnné trouby nebo sklokeramické desky. V tomto případě xDrip nezobrazuje žádné hodnoty glykémie. Když se Bluetooth spojení obnoví, chybějící data se doplní.
 
 ### Chyby senzorů
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
+Pokud se opakovaně objevují chyby senzoru, zkuste senzor zavést na jiné místo na těle. Kontakty senzoru by se neměly dostat do kontaktu s krví.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Chybu „Sensor Error“ často vyřeší, když se hned napijete a masírujete okolí senzoru!
 
 ### Skákající hodnoty
 
-You might try to change settings for noise blocking in xDrip+ (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Můžete zkusit změnit nastavení blokování šumu v xDrip (Settings - Inter-App Settings - Noise Blocking), např. „Block Very High noise and worse“. Viz také [Vyhlazování dat glykémie](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Záporné stáří senzoru
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+![Stáří senzoru na řádku Senzor v rozbaleném stavovém panelu](../images/main/main_status_row_expanded.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](#screens-action-tab) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+Stáří senzoru se zobrazuje na řádku **Senzor** ve stavovém panelu na hlavní obrazovce (rozbalíte ho klepnutím na šipku). Záporné stáří vznikne, pokud existuje buď dvojitý [záznam péče](#aaps-screens-careportal) „CGM Výměna senzoru“, nebo výměna senzoru se špatným datem. Otevřete obrazovku **Historie ošetření** (nabídka ☰), vyberte kartu **Péče** a smažte chybný záznam.
