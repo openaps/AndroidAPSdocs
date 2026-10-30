@@ -8,9 +8,7 @@ Wenn Dir niemand auf Nightscout folgt, kannst Du den NSClient pausieren, um die 
 
 * Wie erkenne ich eine instabile Verbindung?
 
-Wechsele zur Registerkarte NSClient in AAPS und prüfe das Protokoll. Normalerweise wird alle ~30s ein PING empfangen und es gibt kaum Hinweise auf Reconnections.. Wenn Du viele Wiederverbindungen siehst, liegt ein Problem vor.
-
-Seit AndroidAPS Version 2.0 wird, wenn ein solches Verhalten erkannt wird, der NSClient für 15 Minuten pausiert und die Meldung "NSClient Fehlfunktion" auf dem Hauptbildschirm angezeigt.
+Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Wenn Du viele Wiederverbindungen siehst, liegt ein Problem vor.
 
 * Neustart
 
@@ -36,7 +34,7 @@ Ein Workaround für Verbindungsprobleme in Azure ist, in den 'Application settin
 
 * Keine Blutzuckerwerte von Nightscout
 
-Wenn AAPS sich korrekt mit Nightscout verbindet, aber Blutzuckerwerte als N/A anzeigt. Gehe zu NSCLIENT, drücke das 3-Punkt-Menü oben rechts, klicke auf NSClient Einstellungen -> Synchronisation aktivieren "Empfangen/Backfill CGM Daten".
+If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
 
 * Wenn Du immernoch eine Fehlermeldung bekommst...
 
