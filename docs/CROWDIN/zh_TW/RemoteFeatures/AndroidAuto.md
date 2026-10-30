@@ -2,37 +2,32 @@
 
 **AAPS** 能夠將你的目前狀態以訊息形式直接發送到車內的 Android Auto。
 
-```{admonition} 版本和最後更改訊息 :class: dropdown 最後編輯日期：2023/07/05
-
-文件使用的版本：
-
-* AAPS 3.2.0-dev-i
-* Android Auto：9.3.631434-release ```
-
 ## 需求
 
 **AAPS** 使用了 Android Auto 的一個功能，允許來自手機應用的訊息傳輸到車載音響顯示。
 
 這意味著：
 
-* 你必須配置**AAPS**以使用系統通知來進行警報和通知，並且
+* Android must allow **AAPS** to show notifications and
 * 由於**AAPS** 是非官方應用，需允許 Android Auto 使用「未知來源」。
 
 ![AAPS CGM 資料在 Android Auto 上的顯示](../images/android_auto_01.png)
 
-## 在**AAPS**中使用系統通知進行警報和通知
+## Check that AAPS can show notifications
 
-打開**AAPS**主畫面右上角的三點選單並選擇**偏好設定**
+**AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
 
-![使用系統通知來進行警報和通知](../images/android_auto_02.png)
+On your phone, open **Settings** > **Apps** > **AAPS** > **Notifications** and make sure **All AAPS notifications** is on.
 
-在**本地警報**中啟用**使用系統通知來進行警報和通知**
+![All AAPS notifications switched on](../images/android_auto_notifications_all.png)
 
-![使用系統通知來進行警報和通知](../images/android_auto_03.png)
+Scroll down and make sure **Ongoing status** is on: this is the channel of the status notification.
 
-現在請確認在前往你的車輛之前，你能夠在手機上接收到來自**AAPS**的通知！
+![Ongoing status notification channel switched on](../images/android_auto_ongoing_channel.png)
 
-![使用系統通知來進行警報和通知](../images/android_auto_04.png)
+Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
+
+![AAPS notification on the phone](../images/android_auto_04.png)
 
 ## 允許 Android Auto 使用「未知來源」。
 
@@ -80,6 +75,8 @@
 
 ![AAPS CGM 資料在 Android Auto 上的顯示](../images/android_auto_01.png)
 
+(android-auto-troubleshooting)=
+
 ## 問題排除：
 
-* 如果你沒有看到通知，請檢查你是否[允許 AAPS 顯示通知](#use-system-notifications-in-aaps-for-alerts-and-notifications)，並檢查[Android Auto 是否有權限存取通知](#allow-the-use-of-unknown-sources-with-android-auto)。
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
