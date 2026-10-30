@@ -1,8 +1,12 @@
 # Pour les professionels de santé – Une introduction générale et un guide pour AAPS
 
+```{note}
+This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+```
+
 Cette page est destinée aux professionels de santé qui ont exprimé leur intérêt pour la technologie du pancréas artificiel en open source comme AAPS, ou pour les patients qui veulent partager ces informations avec leur équipe médicale.
 
-Ce guide contient des informations de haut niveau sur la boucle fermée DIY et plus précisément sur la façon dont AAPS fonctionne. Pour plus de détails sur tous ces sujets, veuillez consulter la [documentation complète AAPS en ligne](../index.md). Si vous avez des questions, demandez à votre patient pour plus de détails, ou n'hésitez pas à rejoindre la communauté. (Si vous n'êtes pas sur les réseaux sociaux (par ex. [Twitter](https://twitter.com/kozakmilos) ou Facebook), n'hésitez pas à envoyer un email à developers@AndroidAPS.org). [Vous pouvez également trouver quelques-unes des dernières études & et les données relatives aux résultats ici](https://openaps.org/outcomes/).
+Ce guide contient des informations de haut niveau sur la boucle fermée DIY et plus précisément sur la façon dont AAPS fonctionne. Pour plus de détails sur tous ces sujets, veuillez consulter la [documentation complète AAPS en ligne](../index.md). Si vous avez des questions, demandez à votre patient pour plus de détails, ou n'hésitez pas à rejoindre la communauté. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [Vous pouvez également trouver quelques-unes des dernières études & et les données relatives aux résultats ici](https://openaps.org/outcomes/).
 
 ## Les étapes pour construire une boucle fermée DIY :
 
@@ -22,7 +26,7 @@ If the device running AAPS breaks or goes out of range of the pump, once the lat
 
 ## Comment les données sont collectées :
 
-Avec AAPS, un appareil Android exécute une application spéciale pour faire le calcul, l'appareil communique en Bluetooth avec une pompe prise en charge. AAPS peut communiquer avec d'autres appareils ainsi que vers le cloud en utilisant le wifi ou les données mobiles pour recueillir des informations supplémentaires, et de faire des rapports au patient, aux soignants et à ses proches sur ce qu'il fait et pourquoi.
+Avec AAPS, un appareil Android exécute une application spéciale pour faire le calcul, l'appareil communique en Bluetooth avec une pompe prise en charge. AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
 
 Le périphérique Android doit :
 
@@ -48,6 +52,8 @@ AAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS.
 ### Voici des exemples de lignes de prédiction pourpres et de la façon dont elles peuvent varier :
 
 ![Exemples de ligne de prédiction violette](../images/Prediction_lines.jpg)
+
+(clinicianguide-dosing-scenarios)=
 
 ### Voici des exemples de différents délais qui influencent les ajustements nécessaires à l'administration d'insuline :
 
@@ -81,9 +87,9 @@ En tant que professionnel de santé qui n'a pas d'expérience avec AAPS ou les b
 
 La chose la plus importante pour les patients est de faire un seul changement à la fois, et d'observer l'impact pendant 2-3 jours avant de choisir de changer ou de modifier un autre paramètre (sauf s'il s'agit évidemment d'un mauvais changement qui aggrave les choses, auquel cas ils doivent revenir immédiatement au réglage précédent). La tendance humaine est de tourner tous les boutons et de tout changer en même temps; mais si on le fait, on peut se retrouver avec d'autres paramètres moins optimaux pour l'avenir et il peut être difficile de revenir à un bon état stable connu.
 
-L'un des outils les plus puissants pour faire des changements de paramètres est un outil de calcul automatisé pour les débits de basale, SI et ratio G/I. Cela s'appelle « [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) ». Il est conçu pour être exécuté indépendamment / manuellement et permet de vous guider, vous ou votre patient, dans la modification progressive des paramètres. Il est recommandé dans la communauté d'exécuter (ou de revoir) les rapports Autotune avant de tenter de faire des ajustements manuels des paramètres. Avec AAPS, Autotune sera exécuté comme un "outil indépendant", bien qu'il y ait des efforts continus pour l'incorporer directement dans AAPS également. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
+L'un des outils les plus puissants pour faire des changements de paramètres est un outil de calcul automatisé pour les débits de basale, SI et ratio G/I. This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. Il est conçu pour être exécuté indépendamment / manuellement et permet de vous guider, vous ou votre patient, dans la modification progressive des paramètres. Il est recommandé dans la communauté d'exécuter (ou de revoir) les rapports Autotune avant de tenter de faire des ajustements manuels des paramètres. Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adjustment of these parameters would be the natural link to the clinician.
 
-En outre, le comportement humain (tiré des enseignements d'une gestion manuelle du diabète) influence souvent les résultats, même avec une boucle fermée DIY. Par exemple, si une hypoglycémie est prévue et que AAPS réduit l'insuline pendant la baisse, seule une petite quantité de glucides (par exemple 3 à 4 g) peut être suffisante pour ramener la glycémie au dessus de 70 mg/dl (3,9 mmol). Toutefois, dans de nombreux cas, quelqu'un peut choisir de traiter avec beaucoup plus de glucides (par ex. en appliquant la règle des 15g), qui provoqueront un pic de la glycémie lié à la fois aux glucides pris en excédent et parce que l'insuline a été réduite dans la période ou la glycémie était en train de descendre.
+En outre, le comportement humain (tiré des enseignements d'une gestion manuelle du diabète) influence souvent les résultats, même avec une boucle fermée DIY. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). Toutefois, dans de nombreux cas, quelqu'un peut choisir de traiter avec beaucoup plus de glucides (par ex. en appliquant la règle des 15g), qui provoqueront un pic de la glycémie lié à la fois aux glucides pris en excédent et parce que l'insuline a été réduite dans la période ou la glycémie était en train de descendre.
 
 ## OpenAPS
 
@@ -98,4 +104,4 @@ Autres lectures recommandées :
 * The [full AAPS documentation](../index.md)
 * Le document [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), qui explique comment OpenAPS est conçu pour la sécurité : https://openaps.org/reference-design/
 * La [documentation complète OpenAPS](https://openaps.readthedocs.io/en/latest/index.html) 
-  * Plus de [détails sur les calculs d'OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
