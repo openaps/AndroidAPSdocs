@@ -13,13 +13,13 @@
 -   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) от европейских поставщиков ([BubbleShop](https://bubbleshop.eu/)), для пользователей из России [тут](https://vk.com/saharmonitor/). Также доступны на AliExpress.
 -   Atom для российских пользователей.
 
-## 1. Использование xDrip+
+## 1. Using xDrip
 
--   xDrip+ поддерживает Miaomiao, Bubble, Blucon, Atom и LibreAlarm.
+-   xDrip supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
 -   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
--   Следуйте инструкциям по установке на странице настроек [xDrip+](../CompatibleCgms/xDrip.md).
+-   Follow setup instructions on [xDrip settings page](../CompatibleCgms/xDrip.md).
 -    Вам также нужен OOP2 для Libre 1 США (и Libre 2 EU).
--   В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
+-   Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 ## 2. Использование Diabox
 
@@ -28,4 +28,4 @@
 
 ![Diabox](../images/Diabox.png)
 
-- В [Конфигураторе, Источник ГК](#Config-Builder-bg-source) выберите xDrip+.
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
