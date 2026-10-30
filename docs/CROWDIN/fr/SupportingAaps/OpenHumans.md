@@ -25,27 +25,46 @@ Les informations secrètes ou privées telles que votre URL Nightscout ou votre 
 ## Paramètres
 
 1. Créez votre compte sur [Open Humans](https://www.openhumans.org) si ce n'est pas déjà fait. Vous pouvez réutiliser vos comptes Google ou Facebook existants si vous le souhaitez.
-2. Enable the “Open Humans” plugin in [Config Builder > Synchronization](../SettingUpAaps/ConfigBuilder.md).
-3. Ouvrez son réglage en utilisant le bouton roue crantée. Vous pouvez restreindre le téléversement au périodes où le téléphone utilise le Wi-Fi et/ou est en charge.
-4. Open the Open Humans Plugin (either through OH tab or hamburger menu) and click 'LOGIN'.
+2. Enable the **Open Humans** plugin in [**Configuration** > **Communication**](../SettingUpAaps/ConfigBuilder.md).
 
-![Open Humans Config Builder](../images/OHUploader1.png)
+![Open Humans enabled in Configuration > Communication](../images/OHUploader1.png)
 
-5. Lisez attentivement les informations fournies à propos du téléversement Open Humans et les conditions d'utilisation.
-6. Confirmez en cochant la case et cliquez sur 'CONNEXION'.
+3. Tap **Settings** on the **Open Humans** card. You can restrict uploads to times when the phone uses Wi-Fi (**WiFi only**) and/or is charging (**Charging only**).
+
+![Open Humans settings with WiFi only and Charging only](../images/OHUploader_settings.png)
+
+4. Tap **Open plugin** on the **Open Humans** card, then tap **Setup**.
+
+![Open Humans plugin screen with the Setup button](../images/OHUploader_setup.png)
+
+5. On the **Welcome to Open Humans** screen, tap **Next**. Read the **Consent** screen carefully: it shows the terms of use and which data is uploaded and not uploaded.
+6. Switch on **I understand and agree.** (1) and tap **Login to Open Humans** (2).
+
+![Open Humans Welcome and Consent screens in AAPS](../images/OHUploader2.png)
+
 7. Le site web Open Humans sera ouvert. Veuillez vous connecter avec vos identifiants.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
-9. Cliquez sur le bouton 'Authorize project'.
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile (1).
+9. Click **Authorize project** (2).
 
-![Open Humans Terms of Use + Login](../images/OHUploader2.png)
+![Login and project authorization on the Open Humans website](../images/OHUploader_web.png)
 
-10. En retournant à AAPS, vous verrez un message de connexion réussie.
-11. Garder le plugin Open Humans Uploader et le téléphone activés pour que l'installation se termine.
-12. Après avoir cliqué sur fermer, vous verrez votre identifiant de membre (ID). La taille de la file d'attente > 0 montre qu'il y a encore des données à télécharger.
-13. Cliquez sur 'DECONNEXION' si vous voulez arrêter de télécharger des données vers Open Humans.
+```{admonition} Older screenshot
+:class: note
+The screenshots above show an earlier version of the Open Humans website and still use the old project name **AndroidAPS Uploader**. The steps are the same.
+```
+
+10. Back in **AAPS**, the **Final touches** screen asks whether you want to proceed. Tap **Proceed**.
+11. Wait until **We're done!** appears, then tap **Close**. From now on, your phone uploads data in the background from time to time.
+12. The **Open Humans** plugin screen now shows your **Project Member ID**. Tap **Upload now** if you want to start an upload right away.
+13. Tap **Logout** if you want to stop uploading data to Open Humans.
 14. La notification Android vous informera sur le téléversement en cours.
 
 ![Open Humans finish setup](../images/OHUploader3.png)
+
+```{admonition} Older screenshot
+:class: note
+The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+```
 
 15. Vous pouvez gérer vos données en vous connectant sur le [site web Open Humans](https://www.openhumans.org).
 
