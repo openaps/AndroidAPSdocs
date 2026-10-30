@@ -1,12 +1,12 @@
 # 혈당 데이터 평활화
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
 
 ## Smoothing data within AAPS
 
-As of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in [Config Builder > Smoothing](../SettingUpAaps/ConfigBuilder.md).
+**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponential smoothing
 
@@ -20,19 +20,25 @@ This option works similar to back smoothing that was previously implemented on c
 
 Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
 
+### Unscented Kalman Filter (UKF)
+
+This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+
 (smoothing-xdrip-dexcom-g6)=
 
 ## Suggestions to use smoothing
 
-|               | Exponential |  Average  |    None     |
-| ------------- |:-----------:|:---------:|:-----------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended |
-| G7/ONE+/Stelo |  If noisy   | If stable |             |
+You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
 
-Libre sensors are noisy and can require smoothing. When using xDrip+ direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+|               | Exponential |  Average  | No Smoothing |
+| ------------- |:-----------:|:---------:|:------------:|
+| G5/G6/ONE     |  If noisy   |           | Recommended  |
+| G7/ONE+/Stelo |  If noisy   | If stable |              |
 
-| Sensor / Data source | Juggluco | xDrip+ direct | xDrip+ bridge | xDrip+ patched app |
-| -------------------- |:--------:|:-------------:|:-------------:|:------------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.      |    Average    |        N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None      |    Average    |        None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.      |     N.A.      |        None        |
+Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+
+| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
+| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
+| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
+| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
+| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
