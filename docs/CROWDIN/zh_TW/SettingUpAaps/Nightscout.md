@@ -4,9 +4,11 @@
 
 ## 安全性考量
 
-除了報告功能外，Nightscout 還可以用來控制 AAPS。例如，你可以設定臨時目標或添加未來的碳水化合物。這些資訊將由 AAPS 接收，並會據此作出相應的操作。因此，值得考慮如何保護你的 Nightscout 網站安全。
+Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
 
-如果使用 Nightscout 作為你的 AAPS 資料來源，請極為謹慎。
+In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+
+Exercise maximum caution if using Nightscout as your AAPS BG data source.
 
 ### Nightscout 設置
 
@@ -18,27 +20,25 @@ Nightscout 的 `API_SECRET` 是你網站的主要密碼：切勿公開分享他�
 
 ### AAPS 設置
 
-你可以設置 AAPS 接收 Nightscout 指令（例如配置更改、治療等），或完全停用此功能。
+Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
 
-* 查看 NSClient 或 NSClientV3 外掛設定，透過以下路徑 1) 主視圖 -> 組態建置工具 -> 同步 -> NSClient 齒輪圖示 2) NSCLIENT 標籤 -> 三點選單 -> 外掛偏好設定
-* 啟用所有資料上傳到 Nightscout（3），這是標準方法，除非你的血糖資料來源是 Nightscout。  
-  如果你的 AAPS 血糖資料來源是 Nightscout，則**不要**啟用上傳血糖資料到 Nightscout (3)。
-* 除非 Nightscout 是你的血糖資料來源，否則請不要啟用接收/回填資料 (4)。
-
-![僅限 Nightscout 上傳](../images/NSsafety.png)
+* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
+* Enable "Upload data to NS".
+* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
+* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
 
 #### 不要從 Nightscout 同步
 
-停用這些選項可確保 AAPS 不會使用來自 Nightscout 的任何更改。
+Keeping all the "Receive ... from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
-![僅限 Nightscout 上傳](../images/NSsafety2.png)
+![僅限 Nightscout 上傳](../images/preferences/settings_nsclient_sync.png)
 
 #### 接受來自 Nightscout 的變更
 
-啟用這些選項允許你透過 Nightscout 遠端更改 AAPS 設定，例如設定檔修改和切換、臨時目標以及添加碳水化合物，這些將被 AAPS 考慮在內。  
-請注意，胰島素治療僅用於計算，例如“僅紀錄，不進行注射”。
+Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
+Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
 
-![僅限 Nightscout 上傳](../images/NSsafety3.png)
+![Nightscout receive options enabled](../images/NSsafety3.png)
 
 ### 進一步的安全設置
 
@@ -48,7 +48,7 @@ Nightscout 的 `API_SECRET` 是你網站的主要密碼：切勿公開分享他�
 
 ## 手動 Nightscout 設置
 
-假設你已經有一個 Nightscout 網站，如果還沒有，請查看 [Nightscout](http://nightscout.github.io/nightscout/new_user/) 頁面以獲取完整的設置說明，下列指示則是你需要添加到 Nightscout 網站的設置。你的 Nightscout 網站需要至少是 15 版才能支援 AAPS 3.2，因此請確認你正在運作[最新版本](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version)，否則你將在 AAPS 應用程序中收到錯誤訊息。
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
 
 * [編輯你的變數](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
