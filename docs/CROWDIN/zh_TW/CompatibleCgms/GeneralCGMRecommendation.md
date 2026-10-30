@@ -9,7 +9,7 @@
 -   避免在血糖數值上升或下降時進行校準。
 -   進行「足夠的」校準—在官方應用中，通常會提示你每天檢查一次或兩次。在 DIY 系統中，你可能不會這樣做，因此在沒有校準的情況下應該小心持續使用。
 -   對於不需要或不允許校準的傳感器，至少每天檢查一次實際的血糖值。 AAPS 的安全性取決於你的傳感器讀取值的可靠性。
--   如果可能的話，建議在較低範圍（4-5 mmol/l 或 72-90 mg/dl）和稍高範圍（7-9 mmol/l 或 126-160 mg/dl）的一些讀數下進行校準，因為這提供了更好的點/斜率校準範圍。
+-   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/L or 72-90mg/dL) and some at a slightly higher level (7-9mmol/L or 126-160mg/dL) as this provides a better range for the point/slope calibration.
 
 ## 設置傳感器（G6）
 
@@ -22,7 +22,7 @@
 
 ### 連線問題
 
-藍牙連線可能會受到其他附近的藍牙設備（如血糖機、耳機、平板電腦或廚房設備如微波爐或陶瓷爐）的干擾。在這種情況下，xDrip+ 不會顯示任何 血糖值。當藍牙連線重新建立後，資料會回填。
+藍牙連線可能會受到其他附近的藍牙設備（如血糖機、耳機、平板電腦或廚房設備如微波爐或陶瓷爐）的干擾。 In this case xDrip does not display any BG values. 當藍牙連線重新建立後，資料會回填。
 
 ### 傳感器錯誤
 
@@ -32,10 +32,10 @@
 
 ### 跳動的數值
 
-你可以嘗試更改 xDrip+ 中的干擾阻擋設置（設定 - 應用間設定 - 干擾阻擋），例如「阻擋非常高的干擾及更糟的情況」。另請參見 [平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
+You might try to change settings for noise blocking in xDrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". 另請參見 [平滑血糖資料](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
 
 ### 負傳感器時間
 
-![負傳感器時間](../images/Troubleshooting_SensorAge.png)
+![Sensor age on the Sensor row of the expanded status panel](../images/main/main_status_row_expanded.png)
 
-如果在 [操作選單](#screens-action-tab) 中存在雙重「CGM 傳感器插入」條目或日期不正確的傳感器插入，則會發生此情況。請轉到療程選項卡 -> 照護入口，並刪除錯誤條目。
+The sensor age is shown on the **Sensor** row of the status panel on the main screen (tap the chevron to expand it). A negative age occurs if there is either a double "CGM Sensor Insert" [careportal entry](#aaps-screens-careportal) or a sensor insert with wrong date. Open **Treatments history** (menu ☰), select the **Careportal** tab and delete the wrong entry.
