@@ -4,9 +4,11 @@
 
 ## Вопросы безопасности
 
-Помимо отчетов Nightscout можно также использовать для управления AAPS. Например, вы можете задать временные цели или добавить будущие углеводы. Эта информация будет подхвачена в AAPS, которая будет выполнять соответствующие действия. Поэтому стоит задуматься над тем, как обеспечить безопасность веб-сайта Nightcut.
+Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
 
-Будьте предельно осторожны при использовании Nightscout в качестве источника данных AAPS.
+In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+
+Exercise maximum caution if using Nightscout as your AAPS BG data source.
 
 ### Nightscout settings
 
@@ -18,27 +20,25 @@
 
 ### Настройки AAPS
 
-AAPS можно настроить на принятие команд Nightscout (изменения профиля, терапии, ...) или полностью отключить его.
+Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
 
-* Войдите в настройки модуля NSClient или NSClientV3 через 1) Главный вид -> Конфигуратор -> Синхронизация -> клиент NS / NSClientV3 - шестерёнка настроек 2) вкладку NSCLIENT -> Меню трех точек -> Настройки расширений
-* Включите загрузку всех данных в Nightscout (3), так как это теперь стандартный метод, если только источник ГК не Nightscout.  
-  Если источником данных гликемии AAPS является Nightscout **не** включайте выгрузку (передачу данных) ГК в Nightscout (3).
-* Не включайте Получать/заполнять данные мониторинга CGM (4) если только Nightscout не является источником данных ГК.
-
-![Только выгрузка в Nightscout](../images/NSsafety.png)
+* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
+* Enable "Upload data to NS".
+* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
+* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
 
 #### Не синхронизировать с Nightscout
 
-Отключение этих опций гарантирует, что изменения Nightscout не будут использоваться в AAPS.
+Keeping all the "Receive ... from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
-![Только выгрузка в Nightscout](../images/NSsafety2.png)
+![Только выгрузка в Nightscout](../images/preferences/settings_nsclient_sync.png)
 
 #### Принимать изменения Nightscout
 
-Включение этих опций позволяет удаленно изменять настройки AAPS через Nightscout, Например, модификация и изменение профилей, временных целей, внесение записей об углеводах, которые будут учтены в AAPS.  
-Обратите внимание, что записи об инсулине будут выполняться в виде "Не вводить болюс, только внести запись".
+Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
+Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
 
-![Только выгрузка в Nightscout](../images/NSsafety3.png)
+![Nightscout receive options enabled](../images/NSsafety3.png)
 
 ### Дополнительные параметры защиты
 
@@ -48,7 +48,7 @@ AAPS можно настроить на принятие команд Nightscout
 
 ## Установка Nightscout вручную
 
-Предполагается, что у вас уже есть сайт Nightscout, если же нет - зайдите на страницу [ Nightscout ](http://nightscout.github.io/nightscout/new_user/) для получения полных инструкций по настройке; приведенные ниже инструкции описывают параметры, которые также потребуется добавить на сайт Nightscout. Для AAPS 3.2 сайт Nightscout должен быть не ниже 15 версии, поэтому убедитесь, что у вас [новая версия](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version), иначе AAPS будет выдавать сообщение об ошибке.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
 
 * [Редактирование переменных](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
