@@ -153,7 +153,7 @@ Wenn Du nicht mehr genau weißt, wie man das macht, schaue auf der Seite [Export
 
 ![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- Prüfe im **Gradle JDK**-Feld, ob die richtige Version: **jbr-17** ausgewählt ist (1). Wenn nicht, klicke auf das Feld und schaue, ob es schon in der Liste zu sehen ist.
+- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
 
 ![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
