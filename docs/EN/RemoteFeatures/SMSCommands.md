@@ -25,7 +25,7 @@ The default minimum time delay between bolus commands is 15 minutes. For safety 
 
 AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, **AAPSClient**...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
 
 For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
 
@@ -195,7 +195,7 @@ Some SMS commands give an immediate response, and some SMS commands require stro
 
 Commands which need more security require a code to be entered, for example:
 
-![SMS authenticated for markdown-smaller](../images/remote-control-07.png)
+![SMS authenticated](../images/remote-control-07.png)
 
 The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
 
@@ -356,4 +356,4 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates.
 Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
 
-It is possible do disabled the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.

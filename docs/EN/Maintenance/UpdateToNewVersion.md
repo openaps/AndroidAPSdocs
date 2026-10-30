@@ -20,7 +20,7 @@ You already built your AAPS app with a browser? Follow the instructions for the 
 
 ## Update AAPS with Android Studio
 
-Follow [these instructions.](./UpdateComputerBuild.md).
+Follow [these instructions](./UpdateComputerBuild.md).
 
 ## Update AAPS with the command-line
 

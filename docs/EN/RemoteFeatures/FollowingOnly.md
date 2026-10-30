@@ -91,7 +91,7 @@ Cons (as reported by users)
 
 * It requires Android 5.0 and up.
 
-* It has a dark Ul, large readings and buttons, designed for usage at night. 
+* It has a dark UI, large readings and buttons, designed for usage at night. 
 
 ### xDrip (Android)
 
@@ -208,7 +208,7 @@ This CGM hardware monitor benefits from random tone generation audio alerts (whi
 ![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * The clock supports both mmol/L and mg/dL units, and includes audible alarms.
-* Several display available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
+* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
 * Setting up and configuring the device involves just a few simple steps. Once set up, it only requires power and Wi-Fi to function.
 * The Ulanzi TC001 device is significantly cheaper than the SugarPixel to buy.
 * The software along with installation instructions can be found on [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file). 

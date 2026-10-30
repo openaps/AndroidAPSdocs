@@ -52,7 +52,7 @@ Please note that Facebook has recently removed external links shared within the 
 * [Looped Norge](https://www.facebook.com/groups/loopednorge/)
 
 ### Poland
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group)
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
 
 ### Sweden
 *  [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)

@@ -60,7 +60,7 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * if on Windows and the Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * If Git is installed, you have restarted (if on windows), and Git still couldn't found:
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * Search your computer for a file "git.exe".
 
@@ -242,7 +242,7 @@ Your apk was built successfully and can be transferred to your phone!
 
 ## Apk not installed
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * Make sure you have transferred the “app-full-release.apk” file to your phone.
 * This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).

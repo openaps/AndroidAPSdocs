@@ -9,7 +9,7 @@ The need to deal with such meals still exists though. Which is why AAPS supports
 
 eCarbs are carbs that are split up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## Mechanics of using eCarbs
 
@@ -63,7 +63,7 @@ With low carb, high fat/protein meals it may be enough to only use eCarbs withou
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Extended bolus and why they won't work in closed-loop environment?
 
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Extended bolus and switch to open loop - Dana and Insight pump only

@@ -1,7 +1,7 @@
 # Creating and restoring back-ups
 
 When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an
-emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself, "What if? 
+emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself: "What if?" 
 
 To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone).
 Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.

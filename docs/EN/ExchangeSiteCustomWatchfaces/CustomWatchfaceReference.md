@@ -466,7 +466,7 @@ Within `"rotateSgv"` block the two additional keys (`"minData":` and `"maxData":
 
 #### Chart management
 
-Default background of chart is transparent, so to hide BG scale included into background image, we will need to include a dedicated background image (this image will include the overall shadows of Steampunk watchface). The link to charBackground.jpg file is done with `"background":` key
+Default background of chart is transparent, so to hide BG scale included into background image, we will need to include a dedicated background image (this image will include the overall shadows of Steampunk watchface). The link to chartBackground.jpg file is done with `"background":` key
 
 Of course, the sizing and positioning of the view must be done to the pixel!
 
@@ -602,7 +602,7 @@ Now we can see a new block `"rotationOffset":` that will have inside two keys `"
 
 - Steampunk watchface is designed to have maximum from -30 degrees to 30 degrees rotation for the pointer. So according to the scale (here from -5mgdl to 5mgdl), we will want to have 30 degrees for these values. Because `minData` and `maxData`are 4 times greater, then the corresponding minValues and maxValues are 4 * 30 degrees so -120 and +120 degrees. But for all rotation above or below +-30 degrees the pointer will be hidden (no image visible), and the pointer will only be visible for values between -5 and +5mgdl... So it's exactly what is expected here.
 
-The other dynData blocks are defined the same way to tune `"avgDelt10"`and `"avgDelta20"`
+The other dynData blocks are defined the same way to tune `"avgDelta10"`and `"avgDelta20"`
 
 #### loop view
 
@@ -798,7 +798,7 @@ And at the end, within the `dynPref` block, you will have a specific dynPref blo
 ```
 The difference between this dynPref block and the other standard dynPref blocks used for views is that here you don't have a dynData block for each value of `"key_dark"` parameter, but only the list of main colors (`highColor`, `midColor` , ...)
 
-Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view:
+Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view):
 
 ```text
 "basalRate": {
@@ -1133,7 +1133,7 @@ Let's now take a look on timestamp dynPref block to manage plural:
     }
 },
 ```
-- here if `status` view is visible (so  `"key_show_loop_satus"` key is `true`), a single format is used (`"textvalue1"`), with `'`  as "unit"
+- here if `status` view is visible (so  `"key_show_loop_status"` key is `true`), a single format is used (`"textvalue1"`), with `'`  as "unit"
 - if  `status` view is hidden, you have 2 different format used one for 0 or 1 with singular, and another format for values above 2 with plural
   - `"minData"` and `"maxData"` are used to define the range and be sure the switch from singular to plural will be done between 1 and 2 values
   - Note that `"maxData"` (integer) has been set to 3 and not 2, just because Double data managed into the system is not integer, so a value a bit above or a bit lower 1 may have singular or plural format even if after rounding to integer, the value equals 1.
@@ -1212,12 +1212,12 @@ Additionally three new views (`"patient_name"` , `"patient_name_Ext1"`  and `"pa
 | `"key_show_ago"`              | true if your design requires `timestamp` information (minutes ago for last received BG) |
 | `"key_show_bg"`               | true if your design requires `sgv` information (BG value)    |
 | `"key_show_loop_status"`      | true if your design requires `loop` information (loop status and ago) |
-| `"key_show_week_number"`      | true if your design requires `week_number` information (loop status and ago) |
+| `"key_show_week_number"`      | true if your design requires `week_number` information |
 | `"key_show_date"`             | true if your design requires `Date`, `Month` or `Day of the week` information |
 
 #### Internal keys
 
-| Key                   | Comment and                                                  |
+| Key                   | Comment                                                      |
 | --------------------- | ------------------------------------------------------------ |
 | `"filename"`          | This key will be created (or updated) automatically when the watchface is loaded and will contains local zip filename within exports folder |
 | `"cwf_authorization"` | this key will be created (when the watchface is loaded) and updated each time authorization preference is changed in Wear settings, and it will be used to synchronize authorization to watch |
@@ -1296,7 +1296,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"uploader_battery"`                                         | Text View           | phone battery level (%)                                      | uploader_battery                                             |
 | `"rig_battery"`<br/>`"rig_battery_Ext1"` *<br/>`"rig_battery_Ext2"` * | Text View           | rig battery level (%)                                        | rig_battery<br/>rig_battery_Ext1<br/>rig_battery_Ext2        |
 | `"basalRate"`<br/>`"basalRate_Ext1"` *<br/>`"basalRate_Ext2"` * | Text View           | % or absolute value                                          |                                                              |
-| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi2_Ext2"` *               | Text View           | mgdl/(5 min) or mmol/(5 min)                                 |                                                              |
+| `"bgi"`<br/>`"bgi_Ext1"` *<br/>`"bgi_Ext2"` *                | Text View           | mgdl/(5 min) or mmol/(5 min)                                 |                                                              |
 | `"status"` *<br/>`"status_Ext1"` *<br/>`"status_Ext2"` *     | Text View           | Synthesis of IOB (whatever IOB setting in watch), Detailed IOB (according to setting in watch and BGI (according to setting in watch) |                                                              |
 | `"time"`                                                     | Text View           | HH:MM or HH:MM:SS                                            |                                                              |
 | `"hour"`                                                     | Text View           | HH                                                           |                                                              |
@@ -1360,7 +1360,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"background"` | string  | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit height and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 | `"color"`      | string  | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexadecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embedded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, in front of background image |
 | `"textvalue"`  | string  | Key specific to the 4 free text views included into the layout (from freetext1 to freetext4), this allow you to set the text that should be included (can be a label, or just `:` if you want to add a separator between hour view and minute view...)<BR>From Custom Watchface plugin v2 (AAPS 3.3), textvalue can be used to include a format string for the other textViews (to use with `dynValue` key and `dynData` or `dynPref`). for example |
-| `"dynValue"`*  | boolean | true if you want to include raw value in (double). Useful with `texvalue` key if you want a dedicated format to show value |
+| `"dynValue"`*  | boolean | true if you want to include raw value in (double). Useful with `textvalue` key if you want a dedicated format to show value |
 
 **Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
@@ -1438,7 +1438,7 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 | `"invalidRotationOffset"` | int    | Manage rotationOffset steps if the data is invalid           |
 | rotationOffset*1_to_n*    | int    | Manage rotationOffset to use for each step between minData (or close to minData) with rotationOffset1 and maxData (or close to maxData) with rotationOffset*n* |
 | `"invalidTextvalue"`*     | string | Manage textvalue if the data in invalid                      |
-| textvalue*1_to_n* *       | string | Manage texvalue to use for each step between minData (or close to minData) with textvalue1 and maxData (or close to maxData) with textvalue*n*<br />Note, can include formatting string if `"dynValue"` is set to true within view |
+| textvalue*1_to_n* *       | string | Manage textvalue to use for each step between minData (or close to minData) with textvalue1 and maxData (or close to maxData) with textvalue*n*<br />Note, can include formatting string if `"dynValue"` is set to true within view |
 
 **Key added in Custom Watchface V2.0 or above (available on AAPS 3.3.0 wear apk or above)*
 
@@ -1487,10 +1487,10 @@ Note: all keys including `_Ext1` or `_Ext2` at the end are new and dedicated for
 
 All keys included into [Preference keys](#cwf-reference-preference-keys) chapter above can be used to tune view parameters 
 
-You can also you these additional key below included into AAPS (Custom) specific parameters:
+You can also use these additional keys below included into AAPS (Custom) specific parameters:
 
 | Key                   | type    | comment                                                      |
 | --------------------- | ------- | ------------------------------------------------------------ |
 | `"key_units"`         | boolean | *true*: if units selected on AAPS is mgdl<br />*false*: if units selected on AAPS is mmol |
-| `"key_dark"`          | boolean | *true*: to use a dark background<br />false: to use a light background<br />Note: this parameter is often use into previous AAPS watchfaces (AAPS, AAPS V2...) |
+| `"key_dark"`          | boolean | *true*: to use a dark background<br />*false*: to use a light background<br />Note: this parameter is often used in previous AAPS watchfaces (AAPS, AAPS V2...) |
 | `"key_match_divider"` | boolean | *true*: divider included into AAPS, AAPS v2 watchfaces will not be visible<br />*false*: divider included into AAPS, AAPS v2 watchfaces will be visible<br />Note: this setting is often combine with dark preference (using `dynPref` key into `dynData`block) to set text color (and background) on the same or opposite color than dark parameter... |

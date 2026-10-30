@@ -12,7 +12,7 @@ The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings a
 
 There are some good reasons to use a Bluetooth transmitter:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
     Make sure to leave OOP1 disabled (2).
     
     → Hamburger Menu → Settings → Less common settings → Other misc. options

@@ -50,7 +50,7 @@ In xDrip start the sensor with "Start Sensor" and "not today". It is not necessa
 
 Wait at least 15-20 minutes if there is still no data.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Step 4: Configure AAPS
 

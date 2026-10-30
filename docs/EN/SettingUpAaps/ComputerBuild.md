@@ -95,7 +95,7 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 
 In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow. 
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
 ### Install Git
@@ -143,7 +143,7 @@ One of the most important things when installing Android Studio is **be patient!
 
 ```{admonition} Different UI
 :class: warning
-Import note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 The Android studio version is very important. See the [instructions above](#Building-APK-recommended-specification-of-computer-for-building-apk-file) to pick the proper version of Android Studio.
@@ -159,7 +159,7 @@ Install Android Studio by clicking "Next", as shown in the following screenshots
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, your you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -318,7 +318,7 @@ If the automatic setting is successful, your current version of **Git** will be 
 
 If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either 
 * manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or 
-* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Verify your settings with the **Test** button!
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
@@ -361,7 +361,7 @@ Click "Create new..." (2) to start creating your key store.
 ```{admonition} INFORMATION!
 :class: note
 You will only need to create the keystore once.
-If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.

@@ -101,7 +101,7 @@ Follow the instructions:
 #### Replace a transmitter
 
 * Turn the original Dexcom receiver off (if used) and do not turn it back on before xDrip shows readings.
-* Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as Dexcom?? where ?? are the last two digits of the transmitter serial number).
+* Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
 * Keep the old transmitter out of Bluetooth range to prevent reconnection.
 * Then follow [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 

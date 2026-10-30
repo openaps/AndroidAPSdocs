@@ -26,7 +26,7 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
 
 [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
 

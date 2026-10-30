@@ -14,6 +14,8 @@ That means that:
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
+(androidauto-check-that-aaps-can-show-notifications)=
+
 ## Check that AAPS can show notifications
 
 **AAPS** always shows a status notification with your current glucose, IOB and COB. This is the notification that Android Auto displays in the car. There is nothing to switch on in **AAPS**, but Android must allow **AAPS** to show notifications.
@@ -29,6 +31,8 @@ Scroll down and make sure **Ongoing status** is on: this is the channel of the s
 Please check now that you see the **AAPS** status notification on the phone before you walk to your car!
 
 ![AAPS notification on the phone](../images/android_auto_04.png)
+
+(androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
 ## Allow the use of "unknown sources" with Android Auto.
 
@@ -82,4 +86,4 @@ Your CGM data will be shown as follows:
 (android-auto-troubleshooting)=
 
 ## Troubleshooting:
-* If you don't see the notification, check if you [allowed AAPS to show notifications](#check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#allow-the-use-of-unknown-sources-with-android-auto).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).

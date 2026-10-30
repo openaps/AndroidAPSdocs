@@ -649,7 +649,7 @@ To remove the old pod session:
 2. When it fails, press **Discard Pod** and confirm (see [Discarding a pod](#omnipod-dash-discard-pod)).
 3. Once the old pod is removed, you can activate a new pod.
 
-### Generic error: java.lan.illegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.  
+### Generic error: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.  
 
 If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration. 
 

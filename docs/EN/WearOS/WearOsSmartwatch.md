@@ -2,7 +2,7 @@
 
 The instructions below apply to the **AAPS Wear** apk that you need to build. If you haven’t built it yet, see the linked guide [here](../WearOS/BuildingAapsWearOS.md). When building, make sure to use the same keystore file that you used for the phone **AAPS** apk.
 
-You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with it's matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+You can also use some of the information for the **AAPSClient** and **PumpControl** **Wear** apk. Each **Wear** app will communicate with its matching phone app. For example: the **AAPSClient Wear** app can be used to display **AAPSClient** data and not **AAPS** data. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
 
 ## Wear OS Versions and compatibility
 
@@ -104,7 +104,7 @@ Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 202
 
 Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
 
-## How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
+## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
 
 This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch. 
 
@@ -255,7 +255,7 @@ E.g.
 **Pairing :**
 
 - Watch: Wireless Debugging: note the IP address.
-- Wear Installer: Enter the IP on the in Wear Installer app.
+- Wear Installer: Enter the IP in the Wear Installer app.
 - Select Pair new, note the pairing code and port number displayed.
 - Wear Installer: enter the pairing code + space + port number.
 - Wear installer should report pairing was successful. If it does not, exit the Wear Installer, then try again.
