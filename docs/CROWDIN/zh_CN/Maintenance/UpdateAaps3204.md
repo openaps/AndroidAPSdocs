@@ -153,7 +153,7 @@ Gradle版本由源代码仓库锁定，在拉取/更新代码时将自动获取�
 
 ![打开 Gradle 设置](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- 在**Gradle JDK**字段检查是否已选择**jbr-17**（1）。 若未选择，点击字段查看是否已存在列表中。
+- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
 
 ![选择 JDK 17](../images/studioTroubleshooting/162_DownloadJDK.png)
 
