@@ -19,16 +19,17 @@ You can build the app without a computer using the [Browser Build](./BrowserBuil
 
 * 构建APK可能需要特定版本的**[Android Studio](https://developer.android.com/studio/)**。请参考下方表格：
 
-| AAPS 版本                 | 推荐<br/>Android Studio<br/>版本 | 备选<br/>Android Studio<br/>版本 | Gradle | JVM |
-| ----------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
-| 2.6.2                   | 3.6.1                                    |                                          | 5.6.4  | 11  |
-| 2.8.2.1                 | 4.1.1                                    |                                          | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                 | up to Quail 1                            | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                      | up to Quail 1                            | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug 功能更新包 (2024.2.2)                 | up to Quail 1                            | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                       | up to Quail 1                            | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                       | up to Quail 1                            | 8.13   | 21  |
-| [3.4.2.2](#version3422) | Panda 2 (2025.32)                        | up to Quail 1                            | 9      | 21  |
+| AAPS 版本                     | 推荐<br/>Android Studio<br/>版本 | 备选<br/>Android Studio<br/>版本 | Gradle | JVM |
+| --------------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
+| 2.6.2                       | 3.6.1                                    |                                          | 5.6.4  | 11  |
+| 2.8.2.1                     | 4.1.1                                    |                                          | 6.1.1  | 13  |
+| [3.1.0.3](#version3100)     | 2020.3.1                                 | tested up to Quail 4                     | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                      | tested up to Quail 4                     | 8.2    | 17  |
+| [3.3.1.3](#version3300)     | Ladybug 功能更新包 (2024.2.2)                 | tested up to Quail 4                     | 8.10   | 21  |
+| [3.3.2](#version3300)       | Meerkat (2024.3.1)                       | tested up to Quail 4                     | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                       | tested up to Quail 4                     | 8.13   | 21  |
+| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                       | tested up to Quail 4                     | 9      | 21  |
+| [4.0.0-beta1](#version4000) | Rabbit 1                                 | up to latest Rabbit 1                    | 9.8    | 21  |
 
 推荐版本是已内置适配的JVM版本。推荐版本同时也是构建**AAPS**的最低可用版本。若使用低于"推荐"的版本将**无法**完成构建。若选用其他版本，可能遭遇与JVM版本相关的兼容性问题。请参考[Android Studio问题排查指南](#troubleshooting_androidstudio-uncommitted-changes)解决。若您当前的Android Studio版本未在下表中列出，则需先升级至支持版本。
 
@@ -138,7 +139,7 @@ Android Studio 是一个运行在计算机上的程序。 Android Studio允许�
 
 ```{admonition} Different UI
 :class:警告
-重要提示：Android Studio在最近的版本中更改了其用户界面。本指南将向您展示在“Ladybug”中的新用户界面下执行这些步骤的方法。 If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+重要提示：Android Studio在最近的版本中更改了其用户界面。 This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 Android Studio版本至关重要。请参考[前文说明](#Building-APK-recommended-specification-of-computer-for-building-apk-file)选择合适的Android Studio版本。
@@ -236,8 +237,8 @@ If you want to save hard disk space, your you can uncheck Android Virtual Device
 * 现在点击“克隆”按钮（5）。
 
 ```{admonition} INFORMATION
-:class: 信息
-记下这个目录。这是您的源代码存储的位置！
+:class: note
+Make a note of the directory. 这是您的源代码存储的位置！
 ```
 
 您现在将看到一个屏幕，告诉您存储库正在被克隆：
@@ -257,11 +258,12 @@ If you want to save hard disk space, your you can uncheck Android Virtual Device
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
-:class:信息
-Android Studio 最近更改了其用户界面。新安装的Android Studio默认使用新的用户界面！
+:class: note
+Android Studio changed its UI recently. 新安装的Android Studio默认使用新的用户界面！
 
 只有当您的Android Studio看起来与新的用户界面不同时，您才可能需要切换到新的用户界面：
-点击左上角的汉堡菜单，然后选择**设置**（在Apple计算机上可能是**偏好设置**）。在**外观&行为**中，转到**新UI**并勾选**启用新UI**。然后重启Android Studio以开始使用新UI。
+点击左上角的汉堡菜单，然后选择**设置**（在Apple计算机上可能是**偏好设置**）。
+In **Appearance & Behavior**, go to **New UI** and tick **Enable new UI**. 然后重启Android Studio以开始使用新UI。
 
 如果您找不到**新UI**选项，不用担心：您已经在使用它了！
 ```
@@ -292,7 +294,7 @@ Android Studio可能会建议更新Gradle系统。不要更新Gradle！ 这会�
 
 * 仅限Windows用户：在[安装Git](#install-git-if-you-dont-have-it)后确保你已经重启了计算机。如果之前没有重启，现在请重启并重新打开Android Studio。
 
-在**Android Studio**左上角，打开汉堡菜单，导航到**File**> **Settings**（Windows上）或**Android Studio** > **Preferences**（Mac上）。这将打开以下窗口，点击展开名为**Version Control**（1）的下拉菜单，然后选择**Git**
+在**Android Studio**左上角，打开汉堡菜单，导航到**File**> **Settings**（Windows上）或**Android Studio** > **Preferences**（Mac上）。 This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** (2)
 
 ![Version_control_Git](../images/Building-the-App/038_SettingsGit.png)
 
@@ -306,7 +308,7 @@ Android Studio可能会建议更新Gradle系统。不要更新Gradle！ 这会�
    ![Git_version_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
 
-如果你发现**git.exe**没有自动找到，或者点击“Test”导致错误（1），你可以要么
+If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
 * 手动输入你[之前](#BuildingAaps-steps-for-installing-git)保存的路径，要么
 * 点击文件夹图标（1），然后手动导航到之前[已安装](#BuildingAaps-steps-for-installing-git)**git.exe**的目录。
 * 使用Test按钮验证你的设置！
@@ -332,24 +334,25 @@ Android要求每个应用都必须被_签名_，以确保它只能在以后从�
 
 ![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-选择“APK”而不是“Android App Bundle”，然后点击“下一步”：
+Select "APK" (1) instead of "Android App Bundle" and click "Next" (2):
 
 ![APK instead of bundle](../images/Building-the-App/041_APK.png)
 
-在下一个屏幕中，确保“模块”设置为“AAPS.app”（1）。
+In the next screen, make sure that "Module" is set to "AndroidAPS.app" (1). The part before ".app" is the name of the folder you cloned the code into.
 
 (Building-APK-wearapk)=
 ```{admonition} INFORMATION!
-:class: 信息
-如果您要为手表创建APK，现在需要选择AAPS.wear！
+:class: note
+If you want to create the apk for your watch, you now need to select AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
 点击“创建新的...” （2）以开始创建您的密钥库。
 
 ```{admonition} INFORMATION!
-:class: information
-您只需要创建一次keystore。如果您之前已经构建过AAPS，请不要创建新的keystore，而是选择您现有的keystore并输入其密码！
+:class: note
+You will only need to create the keystore once.
+如果您之前已经构建过AAPS，请不要创建新的keystore，而是选择您现有的keystore并输入其密码！
 ```
 
 **_注意：_** keystore是一个文件，用于存储签名应用的信息。它是加密的，并且信息通过密码保护。
@@ -367,7 +370,11 @@ Android要求每个应用都必须被_签名_，以确保它只能在以后从�
 
 * 现在选择一个简单的密码（并记下它），在密码框（2）中输入它，并确认密码（2）。
 
-  密钥库和密钥的密码不需要非常复杂。如果您将来丢失了密码，请参阅[丢失keystore的故障排除](#troubleshooting_androidstudio-lost-keystore)。
+  密钥库和密钥的密码不需要非常复杂。 If you lose your password in the future, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+
+```{warning}
+**Avoid special characters in your passwords.** Use only letters and digits for the keystore and key passwords. In particular, do not use `$`, a backtick, `"` or `\`. If you later switch to the [Browser build](#aaps-ci-option2) and reuse this keystore, these characters can make the signing step fail, see [Browser build troubleshooting](#aaps-ci-password-special-characters).
+```
 
 * 默认的密钥别名（3）是“key0”，请保持不变。
 
@@ -390,7 +397,7 @@ Android要求每个应用都必须被_签名_，以确保它只能在以后从�
 ![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
 
-在下一个屏幕中，选择构建变量“完全版本（fullRelease）”（2），然后点击“创建”（3）。您应该记住在（1）处显示的目录，因为之后您可以在那里找到构建好的APK文件！
+On the next screen, select build variant "fullRelease" (1) and click "Create" (3). You should remember the destination folder displayed at (2), as later you will find your built apk file there!
 
    ![Select build variant](../images/Building-the-App/045_BuildPath.png)
 
@@ -402,7 +409,7 @@ Android Studio现在将构建AAPS apk。在右下角会显示“Gradle 构建运
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-构建完成后，Android Studio 将显示“构建成功”的信息。您可能会看到一个弹出通知，您可以点击它以选择“定位”。如果您错过了这个通知，请点击通知图标（1），然后在屏幕最底部点击**locate**（2）以打开通知列表：
+构建完成后，Android Studio 将显示“构建成功”的信息。您可能会看到一个弹出通知，您可以点击它以选择“定位”。 If you miss this, click on the notification icon (1) to bring up the Notifications, and then on **locate** (2):
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
