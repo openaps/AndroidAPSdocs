@@ -1,20 +1,42 @@
 # 相容幫浦
 
-AAPS 支援多種胰島素幫浦。以下列表顯示目前支援的設備，並指示**AAPS**是使用你的手機的本地藍牙功能與幫浦通訊，還是需要括號中的Rileylink相容設備。
+AAPS 支援多種胰島素幫浦。 The following list shows the currently supported devices. It indicates, in brackets, whether AAPS communicates with the pump using your phone's native Bluetooth function or whether it requires a RileyLink compatible device.
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)（藍牙；詳見 [Accu-Chek Combo 基本使用提示](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)）
+<!-- List of hidden pages to avoid overcrowding the menu -->
+
+```{toctree}
+:hidden:
+
+../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md
+../CompatiblePumps/Accu-Chek-Insight-Pump.md
+../CompatiblePumps/CareLevo.md
+../CompatiblePumps/DanaR-Insulin-Pump.md
+../CompatiblePumps/DanaRS-Insulin-Pump.md
+../CompatiblePumps/DiaconnG8.md
+../CompatiblePumps/EOPatch2.md
+../CompatiblePumps/Equil5.3.md
+../CompatiblePumps/MedtronicPump.md
+../CompatiblePumps/MedtrumNano.md
+../CompatiblePumps/OmnipodDASH.md
+../CompatiblePumps/OmnipodEros.md
+../CompatiblePumps/Future-possible-Pump-Drivers.md
+```
+
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Tips for basic usage](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (藍牙)
+- [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (藍牙)
 - [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md) (藍牙)
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) (藍牙)
-- [Diaconn G8 ](../CompatiblePumps/DiaconnG8.md)  (藍牙)
+- [Dana-i2](../CompatiblePumps/DanaRS-Insulin-Pump.md) (Bluetooth)
+- [Diaconn G8](../CompatiblePumps/DiaconnG8.md) (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (藍牙)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)  ([需要額外通訊裝置](#CompatiblePumps-additional-communication-device))
-- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)  (藍牙)
-- [Medtrum Nano](../CompatiblePumps/MedtrumNano.md)  (藍牙)
-- [Medtrum 300U](../CompatiblePumps/MedtrumNano.md)  (藍牙)
-- [Equil 5.3](../CompatiblePumps/Equil5.3.md)（藍牙）
-- 某些舊款[Medtronic](../CompatiblePumps/MedtronicPump.md) ([需要額外通訊設備](#CompatiblePumps-additional-communication-device))
+- [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
+- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
+- [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
+- [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
 
 ## 我的幫浦不在列表中
 
@@ -23,9 +45,14 @@ AAPS 支援多種胰島素幫浦。以下列表顯示目前支援的設備，並
 (CompatiblePumps-additional-communication-device)=
 ## 附加通訊設備
 
-如果沒有額外的通訊設備，則胰島素幫浦與**AAPS**之間的通訊基於 Android 的內建藍牙功能，不需要額外的通訊設備來轉換通訊協議。
+If no additional communication device is mentioned, the communication between the insulin pump and **AAPS** is based on the integrated Bluetooth stack of Android, without the need for an additional communication device to translate the communication protocol.
 
-對於舊型的美敦力幫浦和Omnipod Eros，需要額外的通訊設備（除了你的手機）來「翻譯」幫浦至藍牙的無線信號。請確保根據你的幫浦選擇正確的版本。
+For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from the pump to Bluetooth. The device must use the same radio frequency as your pump:
+
+- **Omnipod Eros**: 433 MHz.
+- **Medtronic**: 916 MHz for pumps sold in the US and Canada, 868 MHz for pumps sold elsewhere. See [How to determine what frequency my pump uses](#MedtronicPump-faq).
+
+Available communication devices:
 
 - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink 官網](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
