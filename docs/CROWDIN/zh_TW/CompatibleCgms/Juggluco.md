@@ -8,7 +8,7 @@
 
 ### 停用 Nightscout 上傳器
 
-從 AAPS 3.2 開始，你不應讓其他應用程式上傳資料（血糖和治療方案）到 Nightscout。
+You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
 
 在 Juggluco 中停用任何活動的 Nightscout 上傳器。
 
@@ -22,7 +22,7 @@ Juggluco 可以將血糖直接傳送到 AAPS，當您使用 [可信任的傳感�
 
 使用 Libre 2/2+/3/3+ 傳感器時，會將每分鐘的讀數傳送到 AAPS，但不會觸發 AAPS 中的每分鐘計算。
 
-在 Juggluco 中啟用 xDrip 廣播（不啟用 Patched Libre），確認並儲存 AAPS 套件資訊。在 AAPS 中選擇 xDrip+ 血糖資料來源。
+在 Juggluco 中啟用 xDrip 廣播（不啟用 Patched Libre），確認並儲存 AAPS 套件資訊。 Select the xDrip BG data source in AAPS.
 
 在 AAPS 中應用足夠的 [平滑處理](./SmoothingBloodGlucoseData.md)。
 
@@ -30,12 +30,12 @@ Juggluco 可以將血糖直接傳送到 AAPS，當您使用 [可信任的傳感�
 
 (juggluco-to-xdrip)=
 
-## Juggluco 到 xDrip+
+## Juggluco to xDrip
 
-Juggluco 可以將血糖傳送到 xDrip+，然後它會將資料傳送到 AAPS。
+Juggluco can send blood glucose to xDrip which will then send them to AAPS.
 
-在 Juggluco 中啟用 Patched Libre（不啟用 xDrip 廣播），確認並儲存 dexdrip 套件資訊。在 AAPS 中選擇 xDrip+ 血糖資料來源。
+在 Juggluco 中啟用 Patched Libre（不啟用 xDrip 廣播），確認並儲存 dexdrip 套件資訊。 Select the xDrip BG data source in AAPS.
 
-在使用 Libre 2/2+/3/3+ 傳感器時，如有必要，若需在 AAPS 中應用足夠的 [平滑處理](./SmoothingBloodGlucoseData.md)，xDrip+ 將每分鐘讀數平均到 5 分鐘，並且 [同樣進行平滑處理](#libre2-value-smoothing-raw-values)。
+Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary, when using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute to 5 minutes readings and [also smoothen](#libre2-value-smoothing-raw-values) them.
 
-![Juggluco 到 xDrip+](../images/juggluco/Juggluco-xDrip+.png)
+![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)
