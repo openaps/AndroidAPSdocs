@@ -1,4 +1,8 @@
-# Update with a browser
+# Update with a browser (fork)
+
+```{tip}
+You built AAPS with **AAPS Builder**? You don't need this page: see [Updating AAPS with AAPS Builder](#aaps-builder-updates).
+```
 
 ## Vyrobte si místo stažení
 
@@ -7,6 +11,10 @@
 ```{note}
 In case you want to upgrade **AAPS** with a browser for the first time : copy your back-up keystore file to your Google Drive. Then follow the [Browser Build **AAPS** procedure](../SettingUpAaps/BrowserBuild.md) instead of this guide. Instead of creating a new keystore, you must select the one you have copied from your computer.
 This operation will be mandatory only the first time, then for successive upgrades you will be able to follow this guide.
+```
+
+```{tip}
+**Switching to AAPS Builder?** [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) is the simpler browser build: no fork to sync, and you download the app directly from GitHub. You don't have to switch: this guide keeps working. If you switch, first get a copy of your keystore from your fork, as explained in [Coming from the previous browser build](#aaps-builder-from-fork). Otherwise the new build cannot update the AAPS on your phone.
 ```
 
 ## Overview for updating to a new version of AAPS with a browser

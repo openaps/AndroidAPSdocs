@@ -9,6 +9,8 @@ You will receive a notification like this when a new update is available:
 
 If you do not update until expiration date **AAPS** will switch to Open Loop.
 
+See [End of life](EndOfLife.md) for AAPS version end dates.
+
 **Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. Thank you for your understanding.
 
 (maintenance-android-version-aaps-version)=
@@ -54,9 +56,26 @@ WearOS 5, API level 34 (Android 14) has [limitations](#BuildingAapsWearOs-WearOS
 
 (latestrelease)=
 
-(version3423)=
+(version3426)=
 
-## Version for 3.4.2.3
+## Version 3.4.2.6
+
+- Equil: improve stability @MilosKozak
+
+(version3425)=
+
+## Version 3.4.2.5
+
+- Equil fix race condition @MilosKozak
+
+(version3424)=
+
+## Version 3.4.2.4
+
+- Equil fixes @MilosKozak
+- NS profile sync fix @MilosKozak
+
+## Version 3.4.2.3
 - Dash: Drift resolution @nl-ruud
 - NSClientV3: Fix gap after reconnection @MilosKozak
 - Automation: Fix deserialization @MilosKozak
@@ -217,6 +236,8 @@ Data lansării: 27-03-2025
 ### How to upgrade
 
 * [Android Studio version called "Meerkat"](#Building-APK-recommended-specification-of-computer-for-building-apk-file) or above is required to build this version. If you already built a 3.3.x version, you need to upgrade Android Studio again.
+
+(version-enforcement)=
 
 ### Starting this version, notification and version enforcement has been simplified and softed and works following way:
 *  No expiration when device is offline (if no connection to the internet). It means no 60 and 90 days grace periods anymore.

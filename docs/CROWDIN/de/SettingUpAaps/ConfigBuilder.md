@@ -45,7 +45,7 @@ Weitergehende Informationen zum Verständnis des Insulin-Profils, wie es in **AA
 
 * Die Oref Optionen 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' und 'Free-Peak Oref' haben einen exponentiellen Verlauf.
 * Bei den Profilen 'Rapid-Acting', 'Ultra-Rapid' und 'Lyumjev' kannst du nur die Insulinwirkdauer (DIA) anpassen. Der Zeitpunkt der maximalen Insulinwirkung ist fest vorgegeben. 
-* Free-Peak erlaubt es Ihnen, sowohl die DIA als auch die Zeit auf den Höhepunkt anzupassen und darf nur von fortgeschrittenen Benutzern verwendet werden, die die Auswirkungen dieser Einstellungen kennen. 
+* Free-Peak erlaubt es Dir, sowohl die DIA als auch die Zeit auf den Höhepunkt anzupassen und darf nur von fortgeschrittenen Benutzern verwendet werden, die die Auswirkungen dieser Einstellungen kennen. 
 * Die [Darstellung der Insulinkurven](#AapsScreens-insulin-profile) hilft, die verschiedenen Kurven zu verstehen.
 
 #### Rapid-Acting Oref
@@ -229,7 +229,7 @@ Aktiviere wenn gewünscht die [Statusanzeige](#Preferences-status-lights) für e
 
 #### Erweiterte Einstellungen
 
-**Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge**: Viele Anwender geben bei der Nutzung von SMB nicht mehr 100% der vom Bolus-Rechner ermittelten Insulinmenge ab. Stattdessen geben Sie nur einen Teil (z.B. 75%) ab und lassen SMB und UAM ("nicht angemeldete Mahlzeiten") den Rest erledigen. In dieser Einstellung kannst Du einen Standard-Prozentsatz festlegen, mit dem der Bolus-Rechner arbeiten soll. Wenn Du z.B. 75% einstellst und eigentlich 10 IE bolen solltest, wird der Bolus-Rechner nur einen Mahlzeitenbolus von 7,5 IE vorschlagen.
+**Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge**: Viele Anwender geben bei der Nutzung von SMB nicht mehr 100% der vom Bolus-Rechner ermittelten Insulinmenge ab. Stattdessen geben sie nur einen Teil (z.B. 75%) ab und lassen SMB und UAM ("nicht angemeldete Mahlzeiten") den Rest erledigen. In dieser Einstellung kannst Du einen Standard-Prozentsatz festlegen, mit dem der Bolus-Rechner arbeiten soll. Wenn Du z.B. 75% einstellst und eigentlich 10 IE bolen solltest, wird der Bolus-Rechner nur einen Mahlzeitenbolus von 7,5 IE vorschlagen.
 
 **Aktivierung des Superbolus im Bolus-Rechner.** (Das ist etwas anderes als ein *Super Micro Bolus*!): Verwende den Superbolus mit Vorsicht und vor allem nicht, bevor Du wirklich verstanden hast, wie er funktioniert. Im Wesentlichen wird das Basalinsulin der nächsten zwei Stunden zum Bolus hinzugefügt und die Basalrate für zwei Stunden auf null gesetzt. **AAPS Loop-Funktionen werden deaktiviert - also mit Vorsicht verwenden! Wenn Du SMB-AAPS Looping-Funktionen nutzt, werden diese, wie in der Einstellung [„SMB Basal-Limitin Minuten“](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to) hinterlegt, deaktiviert. Wenn Du keine SMB-Looping-Funktionen verwendest, werden diese für zwei Stunden deaktiviert.** Details zum Superbolus findest Du [hier](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 

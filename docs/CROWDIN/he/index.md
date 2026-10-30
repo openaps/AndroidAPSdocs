@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 4 June 2026 : Version 3.4.2.3 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+ 2 August 2026 : Version 3.4.2.6 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
 
 ```
 
@@ -21,7 +21,7 @@ Section **2) Getting Started**, the [Introduction](Getting-Started/Introduction.
 
 Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop.
 
-Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
+Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone, including [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
 
 Section **4) Daily life with AAPS** covers key **AAPS** features, to help you use (and customise)  **AAPS**. This including understanding the screens, carbs-on-board, sensitivity, profile switching, temp targets, extended carbs (or eCarbs), automations, and DynamicISF. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, and [travelling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) and sports. Common questions and answers are located within the troubleshooting section.
 
@@ -97,6 +97,7 @@ Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Android Studio Build <./SettingUpAaps/ComputerBuild.md>
 - CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
 Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
@@ -150,9 +151,10 @@ Exchange site custom watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 Export/Import Settings <./Maintenance/ExportImportSettings.md>
 Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+End of life <./Maintenance/EndOfLife.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
 - Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
@@ -163,6 +165,7 @@ Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
 General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
 - Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
 Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
 Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
 Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
@@ -173,6 +176,7 @@ Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 
 Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
 Dev branch <./AdvancedOptions/DevBranch.md>
+Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
 Autotune <./AdvancedOptions/Autotune.md>
 
 ```

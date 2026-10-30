@@ -59,6 +59,8 @@ Existuje několik blogů s dobrými tipy, které vám nabídnou další zásady 
 - [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 - [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
+(FAQ-emergency-equipment)=
+
 ### What emergency equipment is recommended to take with me?
 
 Je potřeba, abyste u sebe měli stejné nouzové vybavení, jako všichni ostatní DM1 pacienti s inzulínovou pumpou. Pokud používáte smyčku systému AAPS, je důrazně doporučeno mít u sebe, nebo v dosahu, následující vybavení:
@@ -236,6 +238,8 @@ Můžete ukázat své výkazy z Nightscoutu (https://ADRESA-VAŠEHO-NS.com/repor
 ### AAPS stops everyday around the same time.
 
 Vypněte Google Play Protect. Zkontrolujte zda nemáte aktivní "čistící" aplikace (např. CCleaner atd.), a odinstalujte je. AAPS / 3 tečky menu / O / klikněte na odkaz "Ponechat aplikaci běžet na pozadí", abyste zrušili všechny optimalizace baterie.
+
+(FAQ-organize-backups)=
 
 ### How to organize my backups ?
 

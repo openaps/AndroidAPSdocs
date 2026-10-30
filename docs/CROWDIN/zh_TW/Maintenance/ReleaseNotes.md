@@ -1,7 +1,7 @@
 
 # 版本更新說明
 
-請依照 [更新手冊](UpdateToNewVersion) 中的指示，更新至新版本。 問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
+請依照 [更新手冊](UpdateToNewVersion) 中的指示，更新至新版本。問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
 
 當有可用的更新時，你會收到如下的通知：
 
@@ -9,7 +9,9 @@
 
 如果您未在到期日之前更新，**AAPS** 將切換至開環模式。
 
-**請勿忽略該通知。** **AAPS** 的新版本提供重要的安全性修正。 因此，每位 **AAPS** 使用者都必須盡快更新到最新版本。 這麼做是為了提升每位 **AAPS** 使用者與 DIY 社群的安全性。 感謝你的諒解。
+請參閱 [End of life](EndOfLife.md) 以了解 AAPS 版本的支援終止日期。
+
+**請勿忽略該通知。** **AAPS** 的新版本提供重要的安全性修正。因此，每位 **AAPS** 使用者都必須盡快更新到最新版本。這麼做是為了提升每位 **AAPS** 使用者與 DIY 社群的安全性。感謝你的諒解。
 
 (maintenance-android-version-aaps-version)=
 
@@ -17,7 +19,7 @@
 
 如果你的智慧型手機使用的 Android 版本低於 Android 12，將無法使用 AAPS v3.4 及更新版本，因為至少需要 Android 12。
 
-為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。 這些版本不包含其他改進。
+為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。這些版本不包含其他改進。
 
 ### Android 12 及以上
 
@@ -54,9 +56,26 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 (latestrelease)=
 
-(version3423)=
+(version3426)=
 
-## 適用於 3.4.2.3 的版本
+## 版本 3.4.2.6
+
+- Equil： 提升穩定性 @MilosKozak
+
+(version3425)=
+
+## 版本 3.4.2.5
+
+- Equil 修正競態條件 @MilosKozak
+
+(version3424)=
+
+## 版本 3.4.2.4
+
+- Equil 多項修正 @MilosKozak
+- NS 設定檔同步修正 @MilosKozak
+
+## 版本 3.4.2.3
 - Dash：解決漂移問題 @nl-ruud
 - NSClientV3：修正重新連線後的資料缺口 @MilosKozak
 - Automation：修正反序列化問題 @MilosKozak
@@ -147,7 +166,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 發布日期：2025-12-31
 
 ### 在升級之前：
-* 此版本需要 Google Android 12.0 或以上。 在嘗試更新之前請檢查你的手機版本。
+* 此版本需要 Google Android 12.0 或以上。在嘗試更新之前請檢查你的手機版本。
 * 更新至最新的 Android Studio，或使用瀏覽器建置以獲得更好的設定流程。
 
 ### 新功能
@@ -216,10 +235,12 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 ### 如何升級
 
-* [需要 Android Studio 版本為 "Meerkat" 或以上版本才能建置此版本。](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 如果你已經建置了 3.3.x 版本，你需要再次升級 Android Studio。
+* [需要 Android Studio 版本為 "Meerkat" 或以上版本才能建置此版本。](#Building-APK-recommended-specification-of-computer-for-building-apk-file)如果你已經建置了 3.3.x 版本，你需要再次升級 Android Studio。
+
+(version-enforcement)=
 
 ### 從這個版本開始，通知和版本強制執行變得簡化並放寬，並以以下方式運作：
-*  當設備離線時不會過期（如果沒有網路連線）。 這意味著不再有 60 天和 90 天的寬限期。
+*  當設備離線時不會過期（如果沒有網路連線）。這意味著不再有 60 天和 90 天的寬限期。
 *  過期後將強制進入 LGS 模式
 *  你將會收到警告/通知的頻率會降低：
    - 剩餘 28+ 天：每 7 天一次
@@ -274,7 +295,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 ### 如何升級
 
-* [需要Android Studio版本叫「Ladybug功能更新」](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高版本來建立這個版本。 **這與一般的「Ladybug」不同。**如果你已經建立了3.3.x版本，你需要再次升級Android Studio。
+* [需要Android Studio版本叫「Ladybug功能更新」](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高版本來建立這個版本。**這與一般的「Ladybug」不同。**如果你已經建立了3.3.x版本，你需要再次升級Android Studio。
 
 ### 錯誤修正
 
@@ -283,7 +304,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 * Equil：允許移除無效的幫浦。
 * 當 DynISF 調整因子為零時發出警告
 * NSCv3：解決在時間略有不同的手機上的WebSocket通訊問題。
-* SMS命令：修正一次性密碼。 **可能需要新的[身份驗證器設置](#sms-commands-authenticator-setup)。**
+* SMS命令：修正一次性密碼。**可能需要新的[身份驗證器設置](#sms-commands-authenticator-setup)。**
 * 修復某些偏好設定無法再編輯的問題。
 * 修復虛擬幫浦的主密碼重設問題。
 * 修復大型設置備份文件的匯入問題。
@@ -321,8 +342,8 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 * **[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)** 功能不再是獨立的外掛，而是現在作為 [OpenAPS SMB](#Config-Builder-aps) 外掛的一個選項，並伴隨一些行為上的變更：
   * 在動態敏感度強度方面，**動態 ISF** 現在會考慮 **設定檔切換** 和 **設定檔百分比** 的影響。
-  * 將使用過去 24 小時的平均 **ISF** 計算，該數值將用於注射嚮導和 **COB** 的計算。 **設定檔中的 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
-  * DynamicISF 文件頁面已重新編寫。 請閱讀重要部分 [啟動 Dynamic ISF 時需考慮的事項](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
+  * 將使用過去 24 小時的平均 **ISF** 計算，該數值將用於注射嚮導和 **COB** 的計算。**設定檔中的 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
+  * DynamicISF 文件頁面已重新編寫。請閱讀重要部分 [啟動 Dynamic ISF 時需考慮的事項](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
 * 為使用 FreeStyle Libre 2 和 Libre 3 的用戶[啟用「始終啟用 SMB」與「碳水後啟用 SMB」](#Open-APS-features-enable-smb-always)
   * 注意：需要最新版本的 xDrip+ 或 Juggluco。
 * 新增的 **自動化**觸發條件
@@ -331,14 +352,14 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ### 如何升級
 
 * 在升級之前：
-  * **<span style="color:red">此版本需要 Google Android 11.0 或更高版本</span>**。 在嘗試更新之前請檢查你的手機版本。
+  * **<span style="color:red">此版本需要 Google Android 11.0 或更高版本</span>**。在嘗試更新之前請檢查你的手機版本。
   * 如果你使用配合ruffy設備的“舊”Combo驅動程式，請在更新之前移轉至[原生Combo驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
   * 在升級過程中，你將失去[主畫面上的附加圖表](#AapsScreens-section-g-additional-graphs)：如有需要，請手動記錄當前配置，以便在升級後重新創建。
-  * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。 在3.3.1.2中有修正可用。
-  * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。 這在3.3.1.2中已修正。
+  * 針對某些人在 Android 15 上遇到的 [藍牙連線問題](../Getting-Started/Phones.md)，本版本並未解決（這是 Android 的問題，而非 **AAPS** 的問題）。在3.3.1.2中有修正可用。
+  * 由於 Android 的限制，主畫面上的 BYODA 按鈕已不再提供。這在3.3.1.2中已修正。
 * 更新指示：遵循[更新到新版本](../Maintenance/UpdateToNewVersion.md)的指南。
-  * [需要稱為"Ladybug"的Android Studio版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高來建立此版本。 如果你已安裝舊版Android Studio，可能需要<span style="color:red">將JVM版本配置為21</span>。 請參閱[Android Studio問題排除 > 非相容的Gradle JVM](#incompatible-gradle-jvm)。
-  * 提示 - 如果你不想失去**AAPS**的歷史紀錄，請務必進行更新，不要用卸載後重新安裝。 作為預防措施，備份你目前的**AAPS**設定和舊的APK，以防在出現問題時可以恢復到舊版本。
+  * [需要稱為"Ladybug"的Android Studio版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高來建立此版本。如果你已安裝舊版Android Studio，可能需要<span style="color:red">將JVM版本配置為21</span>。請參閱[Android Studio問題排除 > 非相容的Gradle JVM](#incompatible-gradle-jvm)。
+  * 提示 - 如果你不想失去**AAPS**的歷史紀錄，請務必進行更新，不要用卸載後重新安裝。作為預防措施，備份你目前的**AAPS**設定和舊的APK，以防在出現問題時可以恢復到舊版本。
 * 升級後：
   * 在維護標籤中設置新的[“AAPS目錄”設定](#preferences-maintenance-logdirectory)。
 
@@ -361,10 +382,10 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 * [簡易模式](#preferences-simple-mode) 在全新安裝時預設啟用 @MilosKozak
 * 新的[快速嚮導](#Preferences-quick-wizard)選項 @radicalb
-  * 快速嚮導現在使用與計算機相同的邏輯來進行注射計算和顯示。 你現在可以在快速嚮導中的“碳水化合物時間”欄位預先注射。
+  * 快速嚮導現在使用與計算機相同的邏輯來進行注射計算和顯示。你現在可以在快速嚮導中的“碳水化合物時間”欄位預先注射。
 * 新的[圖表比例選單](#aaps-screens-main-graph)；[附加圖表選單](#AapsScreens-activate-optional-information)用戶介面改善 @Philoul
 * [ConfigBuilder佈局改善](../SettingUpAaps/ConfigBuilder.md) @MilosKozak
-  * 各區域現在預設為摺疊狀態。 使用箭頭展開。
+  * 各區域現在預設為摺疊狀態。使用箭頭展開。
 * 變數敏感度在 AAPSClient 中顯示
 * BolusWizard 使用者介面改善 @kenzo44
 * 修正使用淺色主題時幫浦標籤中的文字顯示 @jbr77rr
@@ -412,7 +433,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 發布日期：2024-02-27
 
-此版本為最後一個支援 Android 10 的版本。 如果您無法升級到 Android 11，[請將 AAPS 更新至 3.2.0.4](#update-aaps-3204)。
+此版本為最後一個支援 Android 10 的版本。如果您無法升級到 Android 11，[請將 AAPS 更新至 3.2.0.4](#update-aaps-3204)。
 
 ### 變更
 
@@ -430,11 +451,11 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 ### 重要提示
 
 - 需要 NS 15 版本
-- 在使用 NS v3 外掛時，透過 NS UI 輸入的治療（+ 按鈕）和使用 v1 API 的其他應用程式不會發送到 AAPS。 這將在未來的 NS 版本中修復。 在 AAPS 和 AAPSClient 中，始終使用相同的客戶端（v1 或 v3），直到 NS 完全切換到 v3 為止。 對於 AAPS 和 AAPSClient 本身也是如此。
-- v3 插件中的 Websockets 像 v1 插件一樣運作。 停用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連線。 相反地，這意味著數據交換有延遲。 在你使用之前，請先閱讀[這裡](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)的開發團隊重要意見！
+- 在使用 NS v3 外掛時，透過 NS UI 輸入的治療（+ 按鈕）和使用 v1 API 的其他應用程式不會發送到 AAPS。這將在未來的 NS 版本中修復。在 AAPS 和 AAPSClient 中，始終使用相同的客戶端（v1 或 v3），直到 NS 完全切換到 v3 為止。對於 AAPS 和 AAPSClient 本身也是如此。
+- v3 插件中的 Websockets 像 v1 插件一樣運作。停用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連線。相反地，這意味著數據交換有延遲。在你使用之前，請先閱讀[這裡](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)的開發團隊重要意見！
 - 如果你使用 xdrip 作為 CGM 資料來源，則需要在更新後重新選擇他，因為內部已進行了更改。
 - Tidepool 可作為 NS 的替代品，以透過第一個目標。
-- 如果你選擇發送到 xDrip+，則必須配置 xDrip 同步外掛。 為了從 AAPS 接收血糖資料，必須將 “xDrip+ Sync Follower” 選為資料來源。
+- 如果你選擇發送到 xDrip+，則必須配置 xDrip 同步外掛。為了從 AAPS 接收血糖資料，必須將 “xDrip+ Sync Follower” 選為資料來源。
 - 如果你希望切換到 ComboV2 驅動，必須卸載 Ruffy 並重新與 AAPS 配對幫浦。
 - 要使用 DynISF 外掛，你必須開始目標 11（所有先前目標必須處於完成狀態才能開始第 11 個目標）。
 
@@ -464,7 +485,7 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 - Diaconn 驅動修復 @miyeongkim
 - 更多資料庫維護選項 @MilosKozak
 - AAPSClient 提供主要手機是否已接入電源的訊息 @MilosKozak
-- BolusWizard 的更改。 如果 CGM 不可用，則忽略百分比（即使用 100%）
+- BolusWizard 的更改。如果 CGM 不可用，則忽略百分比（即使用 100%）
 - 遷移到 kts 建置系統 @MilosKozak
 - 改進的 CI 集成 @MilosKozak @buessow
 - 測試清理 @ryanhaining @MilosKozak
@@ -473,13 +494,13 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
 ### 使用 v3 與 v1 API 進行 Nightscout 和 AAPS 資料交換的重要說明
 
-v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。 他有許多限制
+v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。他有許多限制
 - v1 僅發送 2 天的資料
 - 每次重新連線時，v1 都會發送所有 2 天的資料
 - 使用 websockets 是必須的 = 持續連線，更多的電量消耗
 - 在頻繁中斷連線時，NS 連線會暫停 15 分鐘，以防止高資料使用量
 
-v3 是新的協議。 更加安全和高效
+v3 是新的協議。更加安全和高效
 - 使用令牌可以更好地定義查看權限
 - 協議在 AAPS 和 NS 兩端都更高效
 - 他可以從 NS 讀取長達 3 個月的資料
@@ -490,13 +511,13 @@ v3 是新的協議。 更加安全和高效
 - NS 15 必須與 AAPS 3.2 一起使用
 - v3 不會看到由 v1 協議完成的更新（可能會在未來的 NS 版本中解決）
 - 反過來，因為追蹤變更的方法效率低下，v1 能看到由 v3 完成的變更
-- 請記住，NS 迄今仍然在內部使用 v1，因此如果您使用 v3，則無法通過 NS 網頁 UI 輸入資料。 如果你想遠端輸入資料，必須使用 AAPSClient 的 SMS 功能
+- 請記住，NS 迄今仍然在內部使用 v1，因此如果您使用 v3，則無法通過 NS 網頁 UI 輸入資料。如果你想遠端輸入資料，必須使用 AAPSClient 的 SMS 功能
 
 推薦設置
-- 基於以上所有原因，你應選擇一種方法並在所有設備上使用他（記住，撰寫本文時，所有其他上傳器都在使用 v1）。 如果你決定使用 v3，請在 AAPS 和所有 AAPSClients 中選擇 v3
+- 基於以上所有原因，你應選擇一種方法並在所有設備上使用他（記住，撰寫本文時，所有其他上傳器都在使用 v1）。如果你決定使用 v3，請在 AAPS 和所有 AAPSClients 中選擇 v3
 - v3 更受推崇，因為效率更高。
 - 使用或不使用 v3 中的 websockets 取決於你的偏好
-- 強烈建議讓 AAPS 收集所有資料，然後將其作為單一上傳器上傳到 NS。 所有其他設備/應用程式應僅從 NS 讀取資料。 這樣可以防止衝突和同步錯誤。 這對於使用 Dexcom Share 連線器等將血糖資料上傳到 NS 也適用。
+- 強烈建議讓 AAPS 收集所有資料，然後將其作為單一上傳器上傳到 NS。所有其他設備/應用程式應僅從 NS 讀取資料。這樣可以防止衝突和同步錯誤。這對於使用 Dexcom Share 連線器等將血糖資料上傳到 NS 也適用。
 
 (version3100)=
 
@@ -520,7 +541,7 @@ v3 是新的協議。 更加安全和高效
 - 小工具 @MilosKozak
 - Aidex CGM 支援 @andyrozman @markvader（僅 Pumpcontrol）
 - 查看[Wear OS 小工具](#WearOsSmartwatch-wear-os-tiles)，翻譯 @Andries-Smit
-- Wear 代碼重構。 不再向後相容 @MilosKozak
+- Wear 代碼重構。不再向後相容 @MilosKozak
 - a11y 改進 @Andries-Smit
 - 新保護選項 PIN @Andries-Smit
 - 允許從選單調整圖表比例 @MilosKozak
@@ -536,7 +557,7 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - **最低 Android 版本現在為 9.0。**
-- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 你必須建立新的[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)並從零 IOB 和 COB 開始。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
+- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。因此，更新後 IOB、COB、治療等資料將被清除。你必須建立新的[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)並從零 IOB 和 COB 開始。請謹慎規劃更新！！！最好在無活動胰島素和碳水化合物的情況下進行更新。
 - 請使用相同版本的 AAPS 和 NSClient
 
 **請確保在更新至 3.0 後檢查並調整設置，如 [此處](../Maintenance/Update3_0.md) 所述。**
@@ -574,11 +595,11 @@ v3 是新的協議。 更加安全和高效
   - 無需工程模式即可使用同步設置（適用於父母）
   - 可以重新同步資料
 
-- 設定檔切換行為變更。 現在區分設定檔切換 *（使用者想要的變更）* 和設定檔變更 *（當幫浦執行變更時）* @MilosKozak @Tebbe
+- 設定檔切換行為變更。現在區分設定檔切換 *（使用者想要的變更）* 和設定檔變更 *（當幫浦執行變更時）* @MilosKozak @Tebbe
 
 - 你可以在建立設定檔切換時啟動臨時目標 @MilosKozak
 
-- NS 設定檔已消失，僅可使用本地設定檔。 本機設定可以[同步到 NS](#Update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak。
+- NS 設定檔已消失，僅可使用本地設定檔。本機設定可以[同步到 NS](#Update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak。
 
 - 忘記了[主密碼重置程序](#Update3_0-reset-master-password) @MilosKozak
 
@@ -666,7 +687,7 @@ v3 是新的協議。 更加安全和高效
 
 - **最低 Android 版本現在為 8.0。** 對於較舊的 Android 版本，你仍然可以使用舊倉庫中的 2.6.1.4 版本。
 - [目標已更改。](#objectives-objective3)**請完成尚未完成的目標後再更新。**
-- 儲存庫位置仍在 <https://github.com/nightscout/AndroidAPS> 。 如果你不熟悉 git，更新的最簡單方法是刪除包含 AAPS 的目錄，然後執行[新複製](../SettingUpAaps/BuildingAaps.md)。
+- 儲存庫位置仍在 <https://github.com/nightscout/AndroidAPS> 。如果你不熟悉 git，更新的最簡單方法是刪除包含 AAPS 的目錄，然後執行[新複製](../SettingUpAaps/BuildingAaps.md)。
 - 請使用 [Android Studio 4.1.1](https://developer.android.com/studio/) 或更新版本來建置 apk。
 
 ### 主要新功能
@@ -694,7 +715,7 @@ v3 是新的協議。 更加安全和高效
 
 **請確保在更新至 2.7 後檢查並調整設置，如 [此處](../Maintenance/Update2_7.md) 所述。**
 
-你至少需要開始 [目標 11（在後續版本中為目標 10）](#objectives-objective10) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。 例如，如果您尚未完成 [目標 3](#objectives-objective3) 的考試，則必須先完成考試才能開始目標 11。 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
+你至少需要開始 [目標 11（在後續版本中為目標 10）](#objectives-objective10) 才能繼續使用 [自動化功能](../DailyLifeWithAaps/Automations.md)（所有之前的目標必須完成，否則無法開始目標 11）。例如，如果您尚未完成 [目標 3](#objectives-objective3) 的考試，則必須先完成考試才能開始目標 11。這不會影響你已完成的其他目標。你將保留所有已完成的目標！
 
 ### 主要新功能
 
@@ -736,7 +757,7 @@ v3 是新的協議。 更加安全和高效
 ### 主要新功能
 
 - Insight：停用針對韌體版本 3 的注射震動 - 第二次嘗試
-- 除此之外，與 2.6.1.3 相同。 更新是可選的。
+- 除此之外，與 2.6.1.3 相同。更新是可選的。
 
 ## 版本 2.6.1.3
 
@@ -747,7 +768,7 @@ v3 是新的協議。 更加安全和高效
 ### 主要新功能
 
 - Insight：停用針對韌體版本 3 的注射震動
-- 除此之外，與 2.6.1.2 相同。 更新是可選的。
+- 除此之外，與 2.6.1.2 相同。更新是可選的。
 
 ## 版本 2.6.1.2
 
@@ -758,7 +779,7 @@ v3 是新的協議。 更加安全和高效
 ### 主要新功能
 
 - 修復 Insight 服務崩潰
-- 除此之外，與 2.6.1.1 相同。 如果你未受到此錯誤的影響，則不需要升級。
+- 除此之外，與 2.6.1.1 相同。如果你未受到此錯誤的影響，則不需要升級。
 
 ## 版本 2.6.1.1
 
@@ -769,7 +790,7 @@ v3 是新的協議。 更加安全和高效
 ### 主要新功能
 
 - 解決了使用 Combo 幫浦時 SMS CARBS 指令的問題
-- 除此之外，與 2.6.1 相同。 如果你未受到此錯誤的影響，則不需要升級。
+- 除此之外，與 2.6.1 相同。如果你未受到此錯誤的影響，則不需要升級。
 
 ## 版本 2.6.1
 
@@ -853,7 +874,7 @@ v3 是新的協議。 更加安全和高效
 
 發布日期：2019-10-31
 
-請注意 [重要說明](#Releasenotes-version-2-5-0) 和 [限制](#Releasenotes-is-this-update-for-me-currently-is-not-supported)，適用於[版本 2.5.0](#Releasenotes-version-2-5-0)。 修復了網絡狀態接收器中的錯誤，該錯誤會導致許多崩潰（雖然不會很嚴重，但會浪費很多能量來重新計算）。 新版本控制，允許進行小更新而不會觸發更新通知。
+請注意 [重要說明](#Releasenotes-version-2-5-0) 和 [限制](#Releasenotes-is-this-update-for-me-currently-is-not-supported)，適用於[版本 2.5.0](#Releasenotes-version-2-5-0)。修復了網絡狀態接收器中的錯誤，該錯誤會導致許多崩潰（雖然不會很嚴重，但會浪費很多能量來重新計算）。新版本控制，允許進行小更新而不會觸發更新通知。
 
 (Releasenotes-version-2-5-0)=
 ## 版本 2.5.0
@@ -870,7 +891,7 @@ v3 是新的協議。 更加安全和高效
 - Glimp 支援版本 4.15.57 及更新版本。
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
-### 這次更新適合我嗎？ 目前不支援
+### 這次更新適合我嗎？目前不支援
 
 - Android 5 及更低版本
 - Poctech
@@ -966,11 +987,11 @@ v3 是新的協議。 更加安全和高效
 
 - 必須啟動目標 10 才能啟用 SMB（SMB 標籤通常顯示適用的限制）
 
-- maxIOB 現在包括所有的 IOB，而不僅僅是增加的基礎率。 也就是說，如果為一頓飯注射了 8 U 胰島素，而 maxIOB 是 7 U，那麼在 IOB 下降到 7 U 以下之前，不會再有 SMB 被執行。
+- maxIOB 現在包括所有的 IOB，而不僅僅是增加的基礎率。也就是說，如果為一頓飯注射了 8 U 胰島素，而 maxIOB 是 7 U，那麼在 IOB 下降到 7 U 以下之前，不會再有 SMB 被執行。
 
-- min_5m_carbimpact 的預設值從 AMA 的 3 改為 8。 如果你是從 AMA 升級到 SMB，則需要手動更改此設置。
+- min_5m_carbimpact 的預設值從 AMA 的 3 改為 8。如果你是從 AMA 升級到 SMB，則需要手動更改此設置。
 
-- 建置 AAPS 2.0 apk 時注意事項：目前版本的 Android Gradle 外掛不支援按需配置！ 如果你的建置因「按需配置」的錯誤而失敗，你可以進行以下操作：
+- 建置 AAPS 2.0 apk 時注意事項：目前版本的 Android Gradle 外掛不支援按需配置！如果你的建置因「按需配置」的錯誤而失敗，你可以進行以下操作：
 
   - 透過點擊「文件」>「設置」（在 Mac 上是「Android Studio」>「偏好設定」）打開偏好設定窗口。
   - 在左側窗格中，點擊「建置、執行、部署」>「編譯器」。
@@ -980,16 +1001,16 @@ v3 是新的協議。 更加安全和高效
 (Releasenotes-overview-tab)=
 ### 總覽標籤
 
-- 頂部功能區可用於暫停/停用循環、查看/調整設定檔，並開始/停止臨時目標（TT）。 TT 使用偏好設置中設置的預設值。 新的 Hypo TT 選項是一個高臨時目標 TT，用於防止循環過度積極地糾正急救碳水化合物。
-- 治療按鈕：舊的治療按鈕仍可用，但預設情況下被隱藏。 按鈕的可見性現在可以配置。 新增胰島素按鈕，新增碳水化合物按鈕（包括[eCarbs/延長碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）
+- 頂部功能區可用於暫停/停用循環、查看/調整設定檔，並開始/停止臨時目標（TT）。 TT 使用偏好設置中設置的預設值。新的 Hypo TT 選項是一個高臨時目標 TT，用於防止循環過度積極地糾正急救碳水化合物。
+- 治療按鈕：舊的治療按鈕仍可用，但預設情況下被隱藏。按鈕的可見性現在可以配置。新增胰島素按鈕，新增碳水化合物按鈕（包括[eCarbs/延長碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）
 - [彩色預測線](#aaps-screens-prediction-lines)
 - 選項可在胰島素/碳水化合物/計算機/注射+填充對話框中顯示筆記字段，這些字段會上傳到 NS
 - 更新的注射/填充對話框允許進行注射，並建立護理入口項目以紀錄站點更換和藥筒更換
 
 ### 手錶
 
-- 單獨的建置變體已被移除，現在包含在常規完整建置中。 要從手錶使用注射控制，請在手機上啟用此設置
-- 嚮導現在只詢問碳水化合物（以及手錶設置中啟用的百分比）。 可以在手機設置中配置計算中包含的參數
+- 單獨的建置變體已被移除，現在包含在常規完整建置中。要從手錶使用注射控制，請在手機上啟用此設置
+- 嚮導現在只詢問碳水化合物（以及手錶設置中啟用的百分比）。可以在手機設置中配置計算中包含的參數
 - 確認和訊息對話框現在也適用於 Wear 2.0
 - 新增 eCarbs 選單項目
 

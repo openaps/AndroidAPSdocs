@@ -6,14 +6,14 @@
 
 在智慧型手機上安裝**AAPS**後，你將能夠進行[**AAPS 循環的配置**](../SettingUpAaps/SetupWizard.md)。
 
-有幾種方法可以將**AAPS** APK 檔案從電腦轉移到智慧型手機。 在這裡，我們介紹兩種不同的傳輸方式：
+有幾種方法可以將**AAPS** APK 檔案從電腦轉移到智慧型手機。在這裡，我們介紹兩種不同的傳輸方式：
 
 * 選項 1 - 使用 Google 雲端硬碟 (Gdrive)
 * 選項 2 - 使用 USB 傳輸線
 
 請注意，透過電子郵件進行傳輸可能會導致問題，因此不建議使用此方式。
 
-## 選項 1。 使用 Google 雲端硬碟來傳輸檔案
+## 選項 1。使用 Google 雲端硬碟來傳輸檔案
 
 在你的網頁瀏覽器中打開[Google.com](https://www.google.com/)並登錄你的 Google 帳戶。
 
@@ -30,7 +30,7 @@ APK 檔案應該已經上傳到 Google 雲端硬碟。
 
 ### 使用 Google Drive 應用程式執行 apk 檔案以進行安裝。
 
-切換到你的手機並啟動 Google 雲端硬碟應用程式。 他是預裝的應用程式，你可以在其他 Google 應用程式所在的位置找到他，或透過搜尋應用程式名稱來找到他。
+切換到你的手機並啟動 Google 雲端硬碟應用程式。他是預裝的應用程式，你可以在其他 Google 應用程式所在的位置找到他，或透過搜尋應用程式名稱來找到他。
 
 ![啟動 Google 雲端硬碟應用](../images/GoogleDriveMobileAPPLaunch.png)
 
@@ -55,13 +55,13 @@ APK 檔案應該已經上傳到 Google 雲端硬碟。
 
 請繼續[設定 AAPS 循環](../SettingUpAaps/SetupWizard.md)。
 
-## 選項 2。 使用 USB 傳輸線來傳輸檔案
+## 選項 2。使用 USB 傳輸線來傳輸檔案
 傳輸 AAPS apk 檔案的第二種方式是使用[USB 線](https://support.google.com/android/answer/9064445?hl=zh-TW)。
 
 將檔案從電腦上的位置傳輸到手機的“下載”資料夾。
 
-在手機上，你需要允許安裝來自未知來源的應用程式。 如何操作的解釋可以在網路上找到（_例如_ [這裡](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/)或[這裡](https://www.androidcentral.com/unknown-sources)）。
+在手機上，你需要允許安裝來自未知來源的應用程式。如何操作的解釋可以在網路上找到（_例如_ [這裡](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/)或[這裡](https://www.androidcentral.com/unknown-sources)）。
 
-將檔案拖入後，在手機上打開“下載”資料夾，按下 **AAPS** APK 檔案並選擇“安裝”。 然後你可以進入下一步，[嚮導](../SettingUpAaps/SetupWizard.md)，它將協助你在智慧型手機上設置**AAPS**應用程式和循環。
+將檔案拖入後，在手機上打開“下載”資料夾，按下 **AAPS** APK 檔案並選擇“安裝”。然後你可以進入下一步，[嚮導](../SettingUpAaps/SetupWizard.md)，它將協助你在智慧型手機上設置**AAPS**應用程式和循環。
 
 請繼續[設定 AAPS 循環](../SettingUpAaps/SetupWizard.md)。

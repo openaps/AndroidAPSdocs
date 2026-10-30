@@ -12,7 +12,7 @@
 
 ![打开子菜单](../images/Pref2020_Submenu2.png)
 
-- 在偏好设置屏幕的顶部有一个**筛选器**，您可以通过它快速找到并访问特定的偏好设置项。 只需开始输入您要查找的文本的一部分即可。
+- 在偏好设置屏幕的顶部有一个**筛选器**，您可以通过它快速找到并访问特定的偏好设置项。只需开始输入您要查找的文本的一部分即可。
 
 ![参数设置过滤器](../images/Pref2021_Filter.png)
 
@@ -36,12 +36,12 @@
 
 - 如果你想让**AAPS**使用与手机标准语言不同的语言，你可以从多种语言中选择。
 
-- 如果你使用不同的语言，有时可能会看到语言混合的情况。 这是由于Android系统的一个问题，即有时覆盖默认的Android语言设置并不起作用。
+- 如果你使用不同的语言，有时可能会看到语言混合的情况。这是由于Android系统的一个问题，即有时覆盖默认的Android语言设置并不起作用。
 - 该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 (preferences-simple-mode)= **简单模式**
 
-**简单模式**在首次安装**AAPS**时默认启用。 在**简单模式**下，大量设置项将被隐藏，用户偏好配置将替换为预设值。 主页的[附加图表区域](#AapsScreens-section-g-additional-graphs)也将采用预定义布局。 当您熟悉**AAPS**界面及设置后，应关闭简单模式。
+**简单模式**在首次安装**AAPS**时默认启用。在**简单模式**下，大量设置项将被隐藏，用户偏好配置将替换为预设值。主页的[附加图表区域](#AapsScreens-section-g-additional-graphs)也将采用预定义布局。当您熟悉**AAPS**界面及设置后，应关闭简单模式。
 
 **患者名称**
 
@@ -84,13 +84,13 @@
 
 必须设置主密码才能[导出设置](../Maintenance/ExportImportSettings.md)，因为从版本2.7开始，设置是加密的。
 
-**生物识别保护功能可能在一加手机上无法正常工作。 这是一些一加手机上已知的问题。**
+**生物识别保护功能可能在一加手机上无法正常工作。这是一些一加手机上已知的问题。**
 
 ![设置主密码](../images/MasterPW.png)
 
 ### 设置保护
 
-- 使用密码或手机的生物识别身份验证（例如，[孩子正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）来保护你的设置。 如果启用此功能，每次访问任何与参数设置相关的视图时，系统都会提示你进行身份验证。
+- 使用密码或手机的生物识别身份验证（例如，[孩子正在使用**AAPS**](../RemoteFeatures/RemoteMonitoring.md)）来保护你的设置。如果启用此功能，每次访问任何与参数设置相关的视图时，系统都会提示你进行身份验证。
 
 - 如果只想使用主密码来保护[导出的设置](../Maintenance/ExportImportSettings.md)，而使用不同的密码来编辑参数设置，则应使用自定义密码。
 
@@ -108,7 +108,7 @@
 
 - 如果**AAPS**由小孩使用，并且你通过[短信输注大剂量](../RemoteFeatures/SMSCommands.md)，大剂量安全验证可能很有用。
 
-- 在下面的示例中，你看到的是生物识别保护的提示。 如果生物识别身份验证不起作用，请点击白色提示上方的空白处并输入主密码。
+- 在下面的示例中，你看到的是生物识别保护的提示。如果生物识别身份验证不起作用，请点击白色提示上方的空白处并输入主密码。
 
 ![提示生物识别保护](../images/Pref2020_PW.png)
 
@@ -124,7 +124,7 @@
 
 ### 保持屏幕常亮
 
-“保持屏幕常亮”选项将强制Android始终保持屏幕开启。 这对于演示等场景很有用 但它会消耗大量电池电量。 因此，建议将手机连接到充电线。
+“保持屏幕常亮”选项将强制Android始终保持屏幕开启。这对于演示等场景很有用但它会消耗大量电池电量。因此，建议将手机连接到充电线。
 
 (Preferences-buttons)=
 ### Buttons
@@ -143,9 +143,9 @@
 (Preferences-quick-wizard)=
 ### 快速向导
 
-为某些标准餐食或零食创建自定义按钮，这些按钮将显示在主页屏幕上。 适用于经常吃的标准餐食。
+为某些标准餐食或零食创建自定义按钮，这些按钮将显示在主页屏幕上。适用于经常吃的标准餐食。
 
-对于每个按钮，你定义碳水化合物和计算大剂量的方法。 然后，你定义按钮在主页屏幕上显示的时间段——每个时间段只能显示一个按钮。 如果当前时间不在指定的时间范围内，或者你的体内活性胰岛素（IOB）足以覆盖快速向导按钮中定义的碳水化合物，则按钮将不会显示。 如果你为不同的餐食指定了不同的时间，你将始终根据一天中的时间，在主页屏幕上看到适当的标准餐食按钮。
+对于每个按钮，你定义碳水化合物和计算大剂量的方法。然后，你定义按钮在主页屏幕上显示的时间段——每个时间段只能显示一个按钮。如果当前时间不在指定的时间范围内，或者你的体内活性胰岛素（IOB）足以覆盖快速向导按钮中定义的碳水化合物，则按钮将不会显示。如果你为不同的餐食指定了不同的时间，你将始终根据一天中的时间，在主页屏幕上看到适当的标准餐食按钮。
 
 ![参数设置 > 快速向导按钮设置](../images/Pref2020_OV_QuickWizard.png)
 
@@ -155,16 +155,16 @@
 
 ![参数设置 > 快速向导按钮](../images/Pref2020_OV_QuickWizard2.png)
 
-同一时间仅显示一个快捷向导按钮。 如需执行其他操作：长按当前显示的快捷向导按钮， 将跳转至所有快捷选项列表。 选择目标项后再次长按即可执行， 操作前需二次确认。
+同一时间仅显示一个快捷向导按钮。如需执行其他操作：长按当前显示的快捷向导按钮，将跳转至所有快捷选项列表。选择目标项后再次长按即可执行，操作前需二次确认。
 
 (Preferences-default-temp-targets)=
 ### 默认临时目标
 
 该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
-[临时目标（TT）](../DailyLifeWithAaps/TempTargets.md)允许你为特定的时间段更改血糖目标。 设置默认TT时，你可以轻松地更改活动、即将进食等情况下的目标。
+[临时目标（TT）](../DailyLifeWithAaps/TempTargets.md)允许你为特定的时间段更改血糖目标。设置默认TT时，你可以轻松地更改活动、即将进食等情况下的目标。
 
-在这里，你可以更改每个预定义TT的目标和持续时间。 预设值为：
+在这里，你可以更改每个预定义TT的目标和持续时间。预设值为：
 
 * 即将进食：目标72 mg/dL / 4.0 mmol/l，持续时间45分钟
 * 活动：目标140 mg/dL / 7.8 mmol/l，持续时间90分钟
@@ -180,12 +180,12 @@
 
 如果你想通过**AAPS**填充管路，可以通过[**操作**标签页](#screens-action-tab)进行此操作。
 
-可以在此对话框中定义预设值。 根据你的管路长度，选择“填充/灌注”对话框中三个按钮的默认量。
+可以在此对话框中定义预设值。根据你的管路长度，选择“填充/灌注”对话框中三个按钮的默认量。
 
 (Preferences-range-for-visualization)=
 ### 可视化范围
 
-为**AAPS**概览和智能手表上的血糖图选择高点和低点标记。 这只是可视化，不是你的血糖目标范围。 例如：70 - 180 mg/dl 或 3.9 - 10 mmol/l。
+为**AAPS**概览和智能手表上的血糖图选择高点和低点标记。这只是可视化，不是你的血糖目标范围。例如：70 - 180 mg/dl 或 3.9 - 10 mmol/l。
 
 ![参数设置 > 可视化范围](../images/Pref2020_OV_Range2.png)
 
@@ -223,9 +223,9 @@
 - 泵电池使用时间
 - 泵电池电量（%）
 
-如果超过警告阈值，数值将以黄色显示。 如果超过临界阈值，数值将以红色显示。
+如果超过警告阈值，数值将以黄色显示。如果超过临界阈值，数值将以红色显示。
 
-最后一个选项允许您从Nightscout导入那些设置（如果在Nightscout中已定义）。 更多信息请参阅[Nightscout文档](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
+最后一个选项允许您从Nightscout导入那些设置（如果在Nightscout中已定义）。更多信息请参阅[Nightscout文档](https://nightscout.github.io/nightscout/setup_variables/#age-pills)。
 
 ![参数设置 > 状态指示灯](../images/Pref2020_OV_StatusLights2.png)
 
@@ -234,11 +234,11 @@
 
 设置使用大剂量向导计算时使用的[默认百分比](#AapsScreens-section-j)。
 
-默认值为100%：不进行校正。 即使在这里设置了不同的值，你每次使用大剂量向导时仍然可以更改它。 如果这里设置为75%，并且你需要输注10U，大剂量向导将仅建议7.5单位的餐时大剂量。
+默认值为100%：不进行校正。即使在这里设置了不同的值，你每次使用大剂量向导时仍然可以更改它。如果这里设置为75%，并且你需要输注10U，大剂量向导将仅建议7.5单位的餐时大剂量。
 
-在使用[SMB](#objectives-objective9)时，许多人不会输注所需胰岛素的100%，而只是其中的一部分（例如75%），并让SMB与UAM（无人值守用餐检测）完成其余部分。 下面这些情况使用低于100%的值可能很有用：
+在使用[SMB](#objectives-objective9)时，许多人不会输注所需胰岛素的100%，而只是其中的一部分（例如75%），并让SMB与UAM（无人值守用餐检测）完成其余部分。下面这些情况使用低于100%的值可能很有用：
 * 对于消化缓慢的人：提前输送所有大剂量可能会导致低血糖，因为胰岛素的作用比消化快。
-* 为**AAPS**自己处理**血糖升高**留下更多空间。 在这两种情况下，如果认为合适，**AAPS**将通过SMB补偿缺失的部分大剂量。
+* 为**AAPS**自己处理**血糖升高**留下更多空间。在这两种情况下，如果认为合适，**AAPS**将通过SMB补偿缺失的部分大剂量。
 
 ### Old glycemia time threshold
 
@@ -269,9 +269,9 @@ If the last **BG** received is older than this threshold, then the bolus wizard 
 
 在大剂量向导中启用超级大剂量选项。
 
-[超级大剂量](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)的概念是从未来两小时的基础率中提前“借”过来一部分胰岛素，从而防止血糖飙升。 它与*超级微小大剂量SMB*不同！
+[超级大剂量](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)的概念是从未来两小时的基础率中提前“借”过来一部分胰岛素，从而防止血糖飙升。它与*超级微小大剂量SMB*不同！
 
-请谨慎使用，并且在了解它真正的作用之前不要启用它。 基本上，接下来两小时的基础率会被添加到大剂量中，并激活两小时的零临时基础率。 **AAPS闭环功能将被禁用——因此请谨慎使用！ **如果您使用SMB，**AAPS的闭环功能将根据您在[“SMB限制基础率的时间上限（分钟）”](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)中的设置而被禁用；如果您不使用SMB，循环功能将被禁用两个小时。**有关超级大剂量的详细信息，请[点击此处](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)查看。
+请谨慎使用，并且在了解它真正的作用之前不要启用它。基本上，接下来两小时的基础率会被添加到大剂量中，并激活两小时的零临时基础率。 **AAPS闭环功能将被禁用——因此请谨慎使用！**如果您使用SMB，**AAPS的闭环功能将根据您在[“SMB限制基础率的时间上限（分钟）”](#Open-APS-features-max-minutes-of-basal-to-limit-smb-to)中的设置而被禁用；如果您不使用SMB，循环功能将被禁用两个小时。**有关超级大剂量的详细信息，请[点击此处](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)查看。
 
 ## 治疗安全
 
@@ -303,7 +303,7 @@ As of [AAPS version 3.4](#version3400), it is no longer possible to set the loop
 (Preferences-minimal-request-change)=
 ### 最小请求更改（Minimal request change）
 
-在**开环**模式下，每次**AAPS**建议调整基础率，你都会收到通知。 为了减少通知的数量，您可以要么使用[更宽的血糖目标范围](#profile-glucose-targets)，要么提高最小请求率的百分比。 这定义了触发通知所需的相对变化量（如果建议的基础率变化低于这个值，AAPS会忽略掉，也就不会通知你）。
+在**开环**模式下，每次**AAPS**建议调整基础率，你都会收到通知。为了减少通知的数量，您可以要么使用[更宽的血糖目标范围](#profile-glucose-targets)，要么提高最小请求率的百分比。这定义了触发通知所需的相对变化量（如果建议的基础率变化低于这个值，AAPS会忽略掉，也就不会通知你）。
 
 ## 高级膳食助手（AMA）或超级微小大剂量（SMB）
 
@@ -332,11 +332,11 @@ OpenAPS SMB的所有设置均在[AAPS关键功能>超级微小大剂量（SMB）
 
 该算法使用BGI（血糖影响）来确定[碳水化合物何时被吸收](../DailyLifeWithAaps/CobCalculation.md)。
 
-有时，基于血糖反应无法动态计算出碳水化合物的吸收情况，**AAPS**会为你的碳水化合物插入一个默认衰减。 基本上，它是一个故障保护机制。 这个值只在两种情况下起效，一是**CGM**读数缺失时，二是运动“消耗了”本该由**AAPS**的COB来覆盖的血糖时。
+有时，基于血糖反应无法动态计算出碳水化合物的吸收情况，**AAPS**会为你的碳水化合物插入一个默认衰减。基本上，它是一个故障保护机制。这个值只在两种情况下起效，一是**CGM**读数缺失时，二是运动“消耗了”本该由**AAPS**的COB来覆盖的血糖时。
 
-简而言之：算法“知道”在当前剂量胰岛素等的影响下，你的血糖*应该*如何变化。 每当出现与预期行为的正偏差时，就会吸收/衰减一些碳水化合物（衰减，decay，应该是说AAPS根据算法来减少数值的意思）。 数值越大=吸收越多的碳水化合物。
+简而言之：算法“知道”在当前剂量胰岛素等的影响下，你的血糖*应该*如何变化。每当出现与预期行为的正偏差时，就会吸收/衰减一些碳水化合物（衰减，decay，应该是说AAPS根据算法来减少数值的意思）。数值越大=吸收越多的碳水化合物。
 
-min_5m_carbimpact定义了每5分钟的默认碳水化合物吸收影响。 有关更多详细信息，请参阅[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact)。
+min_5m_carbimpact定义了每5分钟的默认碳水化合物吸收影响。有关更多详细信息，请参阅[OpenAPS文档](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact)。
 
 min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
@@ -359,11 +359,11 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 ### 蓝牙看门狗
 
-如有必要请激活蓝牙看门狗（例如，对于Dana泵）。 如果无法与泵建立连接，它将蓝牙关闭一秒钟。 这可能有助于解决某些手机上的蓝牙卡顿问题。
+如有必要请激活蓝牙看门狗（例如，对于Dana泵）。如果无法与泵建立连接，它将蓝牙关闭一秒钟。这可能有助于解决某些手机上的蓝牙卡顿问题。
 
 ## 泵设置
 
-在[配置构建器 > 泵](#Config-Builder-pump)中选择的泵驱动将决定此处显示的配置选项。  根据[与泵相关的说明](../Getting-Started/CompatiblePumps.md)配对并设置你的泵。
+在[配置构建器 > 泵](#Config-Builder-pump)中选择的泵驱动将决定此处显示的配置选项。根据[与泵相关的说明](../Getting-Started/CompatiblePumps.md)配对并设置你的泵。
 
 ## Tidepool
 
@@ -390,7 +390,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 ```{admonition} V3 data uploaders
 :class:警告
-当使用NSClientV3时，所有数据上传器都必须使用API V3。 由于大多数上传器目前还不兼容，这意味着**您必须让**AAPS**上传所有数据**（血糖值、治疗方案等）到Nightscout，并禁用所有其他非V3兼容的上传器。
+当使用NSClientV3时，所有数据上传器都必须使用API V3。由于大多数上传器目前还不兼容，这意味着**您必须让**AAPS**上传所有数据**（血糖值、治疗方案等）到Nightscout，并禁用所有其他非V3兼容的上传器。
 ```
 
 - 设置您的*Nightscout网址*（例如<https://yoursitename.yourplaform.dom>）。
@@ -413,7 +413,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 ![报警选项](../images/Pref2024_NSClient_Alarms.png)
 
-- “警报选项”允许您选择要通过该应用程序使用的Nightscout警报。 当Nightscout警报触发时，**AAPS**将会发出警报。
+- “警报选项”允许您选择要通过该应用程序使用的Nightscout警报。当Nightscout警报触发时，**AAPS**将会发出警报。
 - 为了使警报响起，您需要在您的[Nightscout变量](https://nightscout.github.io/nightscout/setup_variables/#alarms)中设置紧急高血糖、高血糖、低血糖和紧急低血糖警报值。
 - 它们只有在您与Nightscout保持连接时才会起作用，并且是为家长/护理人员设计的。
 - 如果您的手机上有**动态（CGM）**数据应用（如xDrip+或BYODA），则请使用这些警报而不是Nightscout警报。
@@ -447,7 +447,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 - 使用被动位置：只有当其他应用请求时，**AAPS**才会获取位置信息。
 - 使用网络位置：您的Wi-Fi位置
-- 使用GPS位置（注意！ 可能会导致电池电量飞降！）
+- 使用GPS位置（注意！可能会导致电池电量飞降！）
 
 ## 本地警报
 
@@ -468,7 +468,7 @@ min_5m_carbimpact的标准值：AMA算法为5，SMB算法为8。
 
 您可以通过向开发者发送崩溃报告来帮助**AAPS**进一步发展。
 
-**无人值守设置导出**<br/> 启用此功能后，您将允许**AAPS**自动执行设置导出操作，无需用户手动干预。 为此，主密码将在下次手动导出时安全地存储在您的手机上（仅限于此）。 存储的密码将有效期长达4周。 4周后，您将收到密码即将到期的通知。 在为期1周的宽限期内，您可以通过从维护菜单手动导出设置来刷新密码。
+**无人值守设置导出**<br/> 启用此功能后，您将允许**AAPS**自动执行设置导出操作，无需用户手动干预。为此，主密码将在下次手动导出时安全地存储在您的手机上（仅限于此）。存储的密码将有效期长达4周。 4周后，您将收到密码即将到期的通知。在为期1周的宽限期内，您可以通过从维护菜单手动导出设置来刷新密码。
 
 1周的宽限期过后，存储的密码将过期，任何自动化设置导出都将中止，并通知用户重新输入密码。  [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)  will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
 
@@ -524,7 +524,7 @@ You can disable cloud export.
 
 ## 开源人类项目（Open Humans）
 
-您可通过向研究项目捐献数据来助力科研社区！ 详细信息在[Open Humans页面](../SupportingAaps/OpenHumans.md)上有描述。
+您可通过向研究项目捐献数据来助力科研社区！详细信息在[Open Humans页面](../SupportingAaps/OpenHumans.md)上有描述。
 
 在“首选项”中，您可以定义何时上传数据。
 - 仅在连接到Wi-Fi时

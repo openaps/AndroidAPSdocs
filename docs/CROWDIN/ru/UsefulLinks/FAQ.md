@@ -59,6 +59,8 @@ The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen
 - [Как ограничить пики после питания](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 - [Гормоны и autosens](https://seemycgm.com/2017/06/06/hormones-2/) (см.мой мониторинг)
 
+(FAQ-emergency-equipment)=
+
 ### What emergency equipment is recommended to take with me?
 
 Прежде всего, вам необходимо иметь стандартный набор для больного диабетом 1го типа. При пользовании AAPS настоятельно рекомендуется также иметь:
@@ -236,6 +238,8 @@ If you want to share some information about AAPS and DIY looping with your clini
 ### AAPS stops everyday around the same time.
 
 Остановите защиту Google Play Protect. Проверьте "очистку" приложений (при помощи CCleaner и т. д.) и удалите их. AAPS / 3 точки меню / О программе / Перейдите по ссылке "Работать в фоновом режиме" и остановите все оптимизации батареи.
+
+(FAQ-organize-backups)=
 
 ### How to organize my backups ?
 

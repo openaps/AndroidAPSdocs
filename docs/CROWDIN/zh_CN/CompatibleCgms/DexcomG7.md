@@ -3,7 +3,7 @@
 
 ## 提前做好准备至关重要
 
-值得注意的是，与G6相比，G7和ONE+系统无论在应用程序还是读取器中都不会对数值进行平滑处理。 更多详情请参见[此处](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
+值得注意的是，与G6相比，G7和ONE+系统无论在应用程序还是读取器中都不会对数值进行平滑处理。更多详情请参见[此处](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
 ```{admonition} Smoothing method 
 请参阅[Dexcom G7/ONE+/Stelo适用的平滑方法建议](../CompatibleCgms/SmoothingBloodGlucoseData.md)
@@ -25,7 +25,7 @@ Dexcom BYODA is now a very old version of the app and cannot be updated.
 
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
 
-!\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+![BYODA broadcast options](../images/BYODA.png)
 
 -   This app lets you use your Dexcom G7 with any Android smartphone.
 -   Uninstall the original Dexcom app
@@ -41,7 +41,7 @@ Latest Dexcom servers update broke DiaKEM for new installs: the G7 app no longer
 Existing users do not experience issues for now: do not logout, wipe data, or reinstall the G7 app as that will prevent you from getting the app up and running again. If it is already running, you should be unaffected.
 ```
 
-**注意：需要 AAPS 3.2.0.0 或更高版本！ 不适用于 ONE+。**
+**注意：需要 AAPS 3.2.0.0 或更高版本！不适用于 ONE+。**
 
 ### 安装新的修补版 (\!) G7 应用程序并启动传感器
 
@@ -76,14 +76,14 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 
 Version 9.0+ required
 
-- 请禁用先前连接传感器的应用：卸载该应用或使用"强制停止"功能。 在应用设置中禁用"附近设备"权限。 限制应用程序的电池使用量。
+- 请禁用先前连接传感器的应用：卸载该应用或使用"强制停止"功能。在应用设置中禁用"附近设备"权限。限制应用程序的电池使用量。
 
 - 在蓝牙设置中移除传感器：进入安卓设置，在已配对设备中找到该传感器并选择"忘记"。 Dexcom G7 传感器名称以 DXCM 开头。
 
 - 避免其他传感器干扰：请将旧款Dexcom传感器移出蓝牙覆盖范围。
 
-- 将G7传感器连接至Juggluco：打开Juggluco → 左侧菜单 → 照片选项。 扫描G7传感器注射器上的二维码。 请等待最多5分钟，让Juggluco查找传感器。
+- 将G7传感器连接至Juggluco：打开Juggluco → 左侧菜单 → 照片选项。扫描G7传感器注射器上的二维码。请等待最多5分钟，让Juggluco查找传感器。
 
-- 配对要求：需同意将传感器与Juggluco进行配对。 请确保配对过程中屏幕保持解锁状态。 若配对失败，请等待5分钟后再重试。
+- 配对要求：需同意将传感器与Juggluco进行配对。请确保配对过程中屏幕保持解锁状态。若配对失败，请等待5分钟后再重试。
 
 - 例外情况：Wear OS智能手表无需点击同意按钮即可完成绑定。

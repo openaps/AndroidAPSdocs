@@ -275,7 +275,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 
 1. [Exportiere die Einstellungen](../Maintenance/ExportImportSettings.md), der AAPS-Version, die bereits auf Deinem Smartphone installiert ist.
 
-2. Have your key password and key store password ready.
+2. Halte Dein Key-Passwort und Dein Keystore-Passwort bereit.
 
     Oder verwende einfach einen neuen keystore.
 

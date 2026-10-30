@@ -6,7 +6,7 @@
 
 在智能手机上安装**AAPS**之后，您就可以继续进行[**配置AAPS闭环**](../SettingUpAaps/SetupWizard.md)了。
 
-有多种方法可以将**AAPS** APK文件从计算机传输到智能手机。 在这里，我们介绍两种不同的方法：
+有多种方法可以将**AAPS** APK文件从计算机传输到智能手机。在这里，我们介绍两种不同的方法：
 
 * 方法一 - 使用您的Google drive（Gdrive）
 * 方法二 - 使用USB数据线
@@ -30,7 +30,7 @@
 
 ### 使用Google Drive应用执行APK文件进行安装
 
-切换到您的手机并启动Google Drive应用。 它是一个预装的应用程序，可以在其他谷歌应用程序所在的位置找到，或者通过搜索应用程序的名称来找到。
+切换到您的手机并启动Google Drive应用。它是一个预装的应用程序，可以在其他谷歌应用程序所在的位置找到，或者通过搜索应用程序的名称来找到。
 
 ![启动Google Drive应用程序](../images/GoogleDriveMobileAPPLaunch.png)
 
@@ -60,8 +60,8 @@
 
 使用USB数据线将电脑上的文件传输到手机上的“下载”文件夹中。
 
-在手机上，您需要允许从未知来源安装应用。 有关如何执行此操作的说明可以在互联网上找到（_例如_[这里](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/)或[这里](https://www.androidcentral.com/unknown-sources)）。
+在手机上，您需要允许从未知来源安装应用。有关如何执行此操作的说明可以在互联网上找到（_例如_[这里](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/)或[这里](https://www.androidcentral.com/unknown-sources)）。
 
-一旦您通过拖动的方式完成了文件传输，要安装它的话，请打开手机上的“下载”文件夹，长按APK文件，然后选择“安装”。 然后，您可以继续下一步，[设置向导](../SettingUpAaps/SetupWizard.md)，它将帮助您在智能手机上设置**AAPS**应用程序和闭环。
+一旦您通过拖动的方式完成了文件传输，要安装它的话，请打开手机上的“下载”文件夹，长按APK文件，然后选择“安装”。然后，您可以继续下一步，[设置向导](../SettingUpAaps/SetupWizard.md)，它将帮助您在智能手机上设置**AAPS**应用程序和闭环。
 
 请继续[配置AAPS闭环](../SettingUpAaps/SetupWizard.md)。

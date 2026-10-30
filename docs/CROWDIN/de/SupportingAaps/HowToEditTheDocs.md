@@ -141,7 +141,7 @@ Um Listen in Listen einfügen, rückst Du die nächste Ebene mit 4 zusätzlichen
 
 ### Bilder
 
-Um Bilder einzubinden, verwenden Sie diese Markdown-Syntax.
+Um Bilder einzubinden, verwende diese Markdown-Syntax.
 
 - Bilder: `![Alternativtext](../images/file.png)`
 
@@ -333,7 +333,7 @@ Es gibt Situationen, in denen es richtig sein kann, das Passiv zu verwenden.
 
 - Um die Schuld zu vermeiden - 'ein Fehler wurde gemacht' (passiv) anstatt 'Du hast einen Fehler gemacht' (aktiv).
 
-- Wenn Sie nicht wissen, wer oder was der Handelnde ist - 'das englische Team wurde ausgewählt'.
+- Wenn Du nicht weißt, wer oder was der Handelnde ist - „das englische Team wurde ausgewählt“.
 
 - Wenn es einfach besser klingt.
 

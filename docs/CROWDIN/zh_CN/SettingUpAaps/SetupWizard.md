@@ -1,10 +1,10 @@
 # AAPS 设置向导
 
-当您首次启动 **AAPS** 时，**设置向导** 会引导您一次性快速完成应用程序所有的基本配置。 **设置向导** 的目的是为了避免遗漏关键步骤。 例如，**权限设置** 对于正确设置 **AAPS** 至关重要。
+当您首次启动 **AAPS** 时，**设置向导** 会引导您一次性快速完成应用程序所有的基本配置。**设置向导** 的目的是为了避免遗漏关键步骤。例如，**权限设置** 对于正确设置 **AAPS** 至关重要。
 
-然而，在首次使用 **设置向导** 时，并不一定要完全配置所有内容，您可以轻松退出向导并在稍后返回。 在 **设置向导** 之后，有三种方式可以进一步优化/更改配置。 这些内容将在下一节中进行解释。 所以，如果您在设置向导中跳过了一些步骤，也没关系，您稍后可以轻松地进行配置。
+然而，在首次使用 **设置向导** 时，并不一定要完全配置所有内容，您可以轻松退出向导并在稍后返回。在 **设置向导** 之后，有三种方式可以进一步优化/更改配置。这些内容将在下一节中进行解释。所以，如果您在设置向导中跳过了一些步骤，也没关系，您稍后可以轻松地进行配置。
 
-在使用 **设置向导** 期间和之后，您可能发现**AAPS** 没啥明显的变化。 要启用您的 **AAPS** 循环，您必须按照 **目标** 启用各个功能。 您将在 设置向导 结束时开始**目标 1**。 您是 **AAPS** 的主人，别搞反了。
+在使用 **设置向导** 期间和之后，您可能发现**AAPS** 没啥明显的变化。要启用您的 **AAPS** 循环，您必须按照 **目标** 启用各个功能。您将在 设置向导 结束时开始**目标 1**。您是 **AAPS** 的主人，别搞反了。
 
 ```{admonition} Preview Objectives
 :class: 注意
@@ -28,7 +28,7 @@
 
 ## 许可协议
 
-在最终用户许可协议中，有关于使用 **AAPS** 的法律方面的重要信息。 请仔细阅读。
+在最终用户许可协议中，有关于使用 **AAPS** 的法律方面的重要信息。请仔细阅读。
 
 如果您不理解或不能同意最终用户许可协议，请不要使用 **AAPS**！
 
@@ -72,7 +72,7 @@ Please click the first "ASK FOR PERMISSION" button:
 
 Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
-然而，**AAPS** 需要定期运行，例如，每几分钟接收一次血糖读数，然后根据您设定的参数来应用算法，以决定如何调整您的血糖。 因此，Android 必须允许它这样做。
+然而，**AAPS** 需要定期运行，例如，每几分钟接收一次血糖读数，然后根据您设定的参数来应用算法，以决定如何调整您的血糖。因此，Android 必须允许它这样做。
 
 您通过确认设置来做到这一点。
 
@@ -129,7 +129,7 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
 ### 存储权限
 
-**AAPS** 需要将信息记录到智能手机的永久存储中。 永久存储意味着即使在重新启动智能手机后，信息仍然可用。（PC硬盘的概念） 其他信息只是丢失了，因为它们没有被保存到永久存储中。
+**AAPS** 需要将信息记录到智能手机的永久存储中。永久存储意味着即使在重新启动智能手机后，信息仍然可用。（PC硬盘的概念）其他信息只是丢失了，因为它们没有被保存到永久存储中。
 
 请点击第一个“申请权限”按钮：
 
@@ -139,7 +139,7 @@ Follow these steps on Android 16, other versions will varies slightly from the p
 
 ![image](../images/setup-wizard/Wizard06-Memory.png)
 
-点击“AAPS目录”。 这将打开手机文件系统，您可选择AAPS存储数据的位置。
+点击“AAPS目录”。这将打开手机文件系统，您可选择AAPS存储数据的位置。
 
 ![AAPS Directory](../images/setup-wizard/Wizard07.png)
 
@@ -148,7 +148,7 @@ Choosing the default AAPS directory is recommended.</br>
 Do **not** select a subdirectory of AAPS.
 ```
 
-默认目录为**AAPS**，但您可使用任意专用目录。 如需可新建目录，进入后选择“使用此文件夹”：
+默认目录为**AAPS**，但您可使用任意专用目录。如需可新建目录，进入后选择“使用此文件夹”：
 
 ![Select folder](../images/setup-wizard/Wizard07-Folder.png)
 
@@ -170,7 +170,7 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 ![Allow Location](../images/setup-wizard/Wizard09.png)
 
-这一点很重要。 否则，**AAPS** 将根本无法正常工作。
+这一点很重要。否则，**AAPS** 将根本无法正常工作。
 
 点击“在使用应用时”：
 
@@ -194,7 +194,7 @@ Android links the use of Bluetooth communication to the ability to use location 
 
 由于 **AAPS** 的配置包含一些敏感数据（_例如_，访问您的 Nightscout 服务器的 API_KEY），因此它会被您在此处设置的密码加密。
 
-第二句话非常重要，请**不要丢失您的主密码**。 请把它记好，_例如_放在Google Drive上。 Google Drive是一个好地方，因为它会由Google为您进行备份。 您的智能手机或电脑可能会崩溃，而您可能没有实际备份。 如果您忘记了主密码，以后可能很难恢复您的配置文件和 **目标**完成进度。
+第二句话非常重要，请**不要丢失您的主密码**。请把它记好，_例如_放在Google Drive上。 Google Drive是一个好地方，因为它会由Google为您进行备份。您的智能手机或电脑可能会崩溃，而您可能没有实际备份。如果您忘记了主密码，以后可能很难恢复您的配置文件和 **目标**完成进度。
 
 在两次填写密码后，请点击“下一步”按钮：
 
@@ -226,7 +226,7 @@ Please select if your glucose values are in mg/dL or mmol/L and then please clic
 
 ## 显示设置
 
- 在这里，您选择传感器血糖显示的范围，该范围将在您设置的值之间显示为“在范围内”。 您可以暂时保留默认值，稍后再进行编辑。
+ 在这里，您选择传感器血糖显示的范围，该范围将在您设置的值之间显示为“在范围内”。您可以暂时保留默认值，稍后再进行编辑。
 
 您选择的值仅影响图表的图形表示，而不影响其他内容。
 
@@ -245,9 +245,9 @@ Please select if your glucose values are in mg/dL or mmol/L and then please clic
 
 您还可以在此处进行其他配置，但对于首次运行，我们将只关注报告服务器。
 
-如果您目前无法设置，请暂时跳过此步骤。 您可以在稍后配置它。
+如果您目前无法设置，请暂时跳过此步骤。您可以在稍后配置它。
 
-如果您在此处左侧选择了一个项目，则可以在右侧勾选可见性（眼睛）框，这会把这个插件放置在 **AAPS** 主屏幕的顶部菜单中。 如果您此时配置报告服务器，请也选择可见性。
+如果您在此处左侧选择了一个项目，则可以在右侧勾选可见性（眼睛）框，这会把这个插件放置在 **AAPS** 主屏幕的顶部菜单中。如果您此时配置报告服务器，请也选择可见性。
 
 在此示例中，我们选择 Nightscout 作为报告服务器，并将对其进行配置。
 
@@ -267,13 +267,13 @@ Please select if your glucose values are in mg/dL or mmol/L and then please clic
 
 ![NSClient](../images/setup-wizard/Wizard16.png)
 
-输入您的Nightscout URL，这是您的个人Nightscout服务器。 这只是您自己设置的 URL，或者您的 Nightscout 服务提供商提供给您的 URL。
+输入您的Nightscout URL，这是您的个人Nightscout服务器。这只是您自己设置的 URL，或者您的 Nightscout 服务提供商提供给您的 URL。
 
 请点击“OK”按钮：
 
 ![NSClient ULR](../images/setup-wizard/Wizard16-URL.png)
 
-Enter your Nightscout access token. 这是您为 Nightscout 服务器配置的访问令牌。 没有这个令牌，将无法访问。
+Enter your Nightscout access token. 这是您为 Nightscout 服务器配置的访问令牌。没有这个令牌，将无法访问。
 
 如果您目前看不到它，请查看 **AAPS** 文档中关于设置报告服务器的文档。
 
@@ -292,7 +292,7 @@ Please select "Upload data to NS" if you already configured Nightscout in the pr
 
 ![报警](../images/setup-wizard/Wizard16-Alarm.png)
 
-现在，请将开关保持禁用状态。 我们带您浏览此界面，是为了让您熟悉未来可能需要配置的选项。 目前没有必要进行这些配置。
+现在，请将开关保持禁用状态。我们带您浏览此界面，是为了让您熟悉未来可能需要配置的选项。目前没有必要进行这些配置。
 
 返回之前的屏幕并选择“连接设置”。
 
@@ -308,13 +308,13 @@ Please select "Upload data to NS" if you already configured Nightscout in the pr
 
 ![Connection](../images/setup-wizard/Wizard16-Connect.png)
 
-如果您想在报告服务器上获取此信息，请启用“Log app start to NS”。 这可以帮助您（特别是作为护理人员）远程了解应用程序是否以及何时被重新启动。
+如果您想在报告服务器上获取此信息，请启用“Log app start to NS”。这可以帮助您（特别是作为护理人员）远程了解应用程序是否以及何时被重新启动。
 
 一开始通过 Nightscout来查看 **AAPS** 停止或启动可能挺好玩，但时间长了一般就没啥必要了。
 
 启用“从错误中创建公告”和“从所需碳水化合物警报中创建公告”。
 
-将“减慢上传速度”保持禁用状态。 仅在特殊情况下使用此功能，例如需向Nightscout服务器传输大量数据，且该服务器处理速度较慢时。
+将“减慢上传速度”保持禁用状态。仅在特殊情况下使用此功能，例如需向Nightscout服务器传输大量数据，且该服务器处理速度较慢时。
 
 返回两次，在插件列表中选择“下一步”以转到下一个屏幕：
 
@@ -324,7 +324,7 @@ Please select "Upload data to NS" if you already configured Nightscout in the pr
 
 在这里，您可以在 **AAPS** 中设置您的姓名。
 
-这可能是任何原因。 这只是为了区分用户。
+这可能是任何原因。这只是为了区分用户。
 
 为了简单起见，请输入名字和姓氏。
 
@@ -334,9 +334,9 @@ Please select "Upload data to NS" if you already configured Nightscout in the pr
 
 ## 患者类型
 
-在这里，您选择“患者类型”，这很重要，因为 **AAPS** 根据患者的年龄有不同的限制。 出于安全和保护隐私的原因，这一点非常重要。
+在这里，您选择“患者类型”，这很重要，因为 **AAPS** 根据患者的年龄有不同的限制。出于安全和保护隐私的原因，这一点非常重要。
 
-在这里，您还可以配置**餐时大剂量的最大上限**。 也就是说，这是你需要用来应对日常餐食的最大剂量。 这是一个安全功能，有助于避免输注餐时大剂量的时候意外过量给药。
+在这里，您还可以配置**餐时大剂量的最大上限**。也就是说，这是你需要用来应对日常餐食的最大剂量。这是一个安全功能，有助于避免输注餐时大剂量的时候意外过量给药。
 
 第二个限制在概念上类似，但与您预期的最大碳水化合物摄入量有关。
 
@@ -352,7 +352,7 @@ Please select "Upload data to NS" if you already configured Nightscout in the pr
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: 危险
-对于高级用户或医学研究，可以使用“Free-Peak Oref”定义自定义配置文件，说明胰岛素如何起作用。 除非您是专家，否则请不要使用它，通常预定义的值对每种品牌胰岛素都有效。
+对于高级用户或医学研究，可以使用“Free-Peak Oref”定义自定义配置文件，说明胰岛素如何起作用。除非您是专家，否则请不要使用它，通常预定义的值对每种品牌胰岛素都有效。
 ```
 
 点击“下一步”转到下一个屏幕：
@@ -362,7 +362,7 @@ Please select "Upload data to NS" if you already configured Nightscout in the pr
 
 ## 血糖数据来源
 
-选择您正在使用的 BG 来源。 请阅读您 [血糖数据源](../Getting-Started/CompatiblesCgms.md) 的文档。
+选择您正在使用的 BG 来源。请阅读您 [血糖数据源](../Getting-Started/CompatiblesCgms.md) 的文档。
 
 由于有多个选项可用，我们不会在这里解释所有选项的配置。 We are using xDrip+ in our example here:
 
@@ -398,15 +398,15 @@ Click on the cogwheel button to access the settings.
 
 您必须与医生共同制定并讨论您的治疗方案，且通过基础率、胰岛素敏感系数（ISF）及碳水化合物比率（IC）测试验证其有效性！
 
-如果机器人输入错误，它将始终无法正常工作。 **AAPS** 只能根据给定的信息工作。 如果您的配置方案太猛，您可能会面临低血糖的风险；而如果方案太柔，则可能会面临高血糖的风险。 
+如果机器人输入错误，它将始终无法正常工作。 **AAPS** 只能根据给定的信息工作。如果您的配置方案太猛，您可能会面临低血糖的风险；而如果方案太柔，则可能会面临高血糖的风险。 
 ```
 
-点击“下一步”转到下一个屏幕。 输入一个“配置文件名称”：
+点击“下一步”转到下一个屏幕。输入一个“配置文件名称”：
 
 ![image](../images/setup-wizard/Wizard21.png)
 
 
-如果需要，长期来看你可以拥有多个配置文件。 我们在这里只创建一个。
+如果需要，长期来看你可以拥有多个配置文件。我们在这里只创建一个。
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: 信息
@@ -417,7 +417,7 @@ Click on the cogwheel button to access the settings.
 不要用它来实际配置闭环！
 ```
 
-输入您的 [胰岛素作用持续时间（DIA）](#your-aaps-profile-duration-of-insulin-action)（小时）。 然后点击“IC”：
+输入您的 [胰岛素作用持续时间（DIA）](#your-aaps-profile-duration-of-insulin-action)（小时）。然后点击“IC”：
 
 ![DIA](../images/setup-wizard/Wizard21-Name.png)
 
@@ -425,7 +425,7 @@ Click on the cogwheel button to access the settings.
 
 ![IC](../images/setup-wizard/Wizard21-IC.png)
 
-点击“ISF”。 输入您的[胰岛素敏感系数（ISF）](#your-aaps-profile-insulin-sensitivity-factor)值：
+点击“ISF”。输入您的[胰岛素敏感系数（ISF）](#your-aaps-profile-insulin-sensitivity-factor)值：
 
 ![ISF](../images/setup-wizard/Wizard21-ISF.png)
 
@@ -435,11 +435,11 @@ Click on the cogwheel button to access the settings.
 ![image](../images/setup-wizard/Wizard21-Basal.png)
 
 
-点击 "TARG"。 输入你的目标血糖值。
+点击 "TARG"。输入你的目标血糖值。
 
 对于开环，这里的目标范围可以设置得宽一些，否则**AAPS**会不断提示您更改临时基础率或其他设置，有时候可能挺烦人。
 
-之后，对于闭环系统，你通常只会有一个上限值和下限值。 这样，**AAPS**更容易达到目标值，并为您提供更好的糖尿病整体控制。
+之后，对于闭环系统，你通常只会有一个上限值和下限值。这样，**AAPS**更容易达到目标值，并为您提供更好的糖尿病整体控制。
 
 输入/确认目标值：
 
@@ -465,7 +465,7 @@ Click on the cogwheel button to access the settings.
 
 
 
-出现配置文件切换对话框。 在这种情况下，让它保持为预设值。
+出现配置文件切换对话框。在这种情况下，让它保持为预设值。
 
 ```{admonition} Several defined but only one active profile
 :class: 信息
@@ -482,7 +482,7 @@ Click on the cogwheel button to access the settings.
 
 出现配置文件切换的确认对话框。
 
-你可以通过点击“确定”来确认。 点击“下一步”转到下一个屏幕：
+你可以通过点击“确定”来确认。点击“下一步”转到下一个屏幕：
 
 ![Ok](../images/setup-wizard/Wizard22-SwitchOk.png)
 
@@ -497,11 +497,11 @@ Click on the cogwheel button to access the settings.
 
 现在你要选择你的胰岛素泵。
 
-你会看到一个重要的警告对话框。 请阅读它，然后点击“确定”。
+你会看到一个重要的警告对话框。请阅读它，然后点击“确定”。
 
 如果你已经在之前的步骤中设置好了配置文件，并且知道如何连接你的泵，那么现在可以随意连接它。
 
-否则，使用左上角的箭头退出设置向导，让**AAPS**首先显示一些血糖值。 你可以随时回来，或者使用直接的配置选项（不使用向导）。
+否则，使用左上角的箭头退出设置向导，让**AAPS**首先显示一些血糖值。你可以随时回来，或者使用直接的配置选项（不使用向导）。
 
 请阅读您的[胰岛素泵](../Getting-Started/CompatiblePumps.md)文档。
 
@@ -520,13 +520,13 @@ Once a pump requiring AAPS to use Bluetooth is select, you will see a warning: A
 
 ## APS算法
 
-使用OpenAPS SMB算法作为您的APS算法。 尽管功能名称包含"SMB"，但该算法功能将保持禁用状态，直至您完成以下前提条件：​熟悉AAPS操作且通过初始目标考核。 与OpenAPS AMA相比，OpenAPS SMB是较新的版本，通常也更好。
+使用OpenAPS SMB算法作为您的APS算法。尽管功能名称包含"SMB"，但该算法功能将保持禁用状态，直至您完成以下前提条件：​熟悉AAPS操作且通过初始目标考核。与OpenAPS AMA相比，OpenAPS SMB是较新的版本，通常也更好。
 
-在开始阶段禁用SMB功能的原因是，SMB功能通过超级微型大剂量来更快地应对血糖升高，而不是增加基础率百分比。 在开始时，您的配置通常不如经过一段时间的使用后那么好，因此一开始禁用了此功能。
+在开始阶段禁用SMB功能的原因是，SMB功能通过超级微型大剂量来更快地应对血糖升高，而不是增加基础率百分比。在开始时，您的配置通常不如经过一段时间的使用后那么好，因此一开始禁用了此功能。
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: 信息
-OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些情况下，使用此算法可能更好，但它不是推荐选项。
+OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。在某些情况下，使用此算法可能更好，但它不是推荐选项。
 ```
 
 点击齿轮图标以查看详细信息：
@@ -552,7 +552,7 @@ OpenAPS AMA是最基本的算法，不支持用SMB纠正高血糖。 在某些�
 
 ## 开始目标1
 
-你现在正在进入“目标”设置。 这是获得进一步**AAPS**功能的资格要求。
+你现在正在进入“目标”设置。这是获得进一步**AAPS**功能的资格要求。
 
 在这里，我们开始目标1，即使目前我们的设置还没有完全准备好成功完成这个目标。
 

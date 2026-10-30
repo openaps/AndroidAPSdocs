@@ -2,7 +2,7 @@
 
 # **問題排除**
 
-你可以在許多 wiki 頁面上找到問題排除的資訊。 本頁面彙整多個連結，協助你針對各類已知問題找到解決方式所需的資訊。
+你可以在許多 wiki 頁面上找到問題排除的資訊。本頁面彙整多個連結，協助你針對各類已知問題找到解決方式所需的資訊。
 
 額外的有用資訊也可能在[FAQ](../UsefulLinks/FAQ.md)中提供。
 
@@ -16,6 +16,8 @@
 
 * [遺失的密鑰庫](#troubleshooting_androidstudio-lost-keystore)
 * [問題排除 AndroidStudio](TroubleshootingAndroidStudio)
+* [AAPS Builder 疑難排解](#aaps-builder-troubleshooting)與[使用 AAPS Builder 更新](#aaps-builder-updates)
+* [瀏覽器建置（CI）疑難排解](#aaps-ci-troubleshooting)
 
 ### **安裝中**
 
@@ -60,7 +62,7 @@
 
 ### **電池優化**
 
-Android 已實作預設啟用的省電設定。 這些設定會自動暫停/中止對系統運作非必需的應用程式，以降低不需要隨時執行的 App 的電量消耗。
+Android 已實作預設啟用的省電設定。這些設定會自動暫停/中止對系統運作非必需的應用程式，以降低不需要隨時執行的 App 的電量消耗。
 
 啟用後，很可能會對 **AAPS** 與其他支援的應用程式（如 **xDrip+**）造成問題。
 

@@ -2,7 +2,7 @@
 
 ## 自行构建而非下载
 
-由于医疗设备相关的法规，**AAPS**无法下载。 构建该应用供自己使用是合法的，但不得将副本提供给他人 详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
+由于医疗设备相关的法规，**AAPS**无法下载。构建该应用供自己使用是合法的，但不得将副本提供给他人详情请参阅[常见问题页面](../UsefulLinks/FAQ.md)。
 
 ## 重要说明
 
@@ -14,7 +14,10 @@
 
 ## Update AAPS with browser build
 
-If you already built your AAPS app with the Browser Build method, follow [these instructions](./UpdateBrowserBuild.md).
+You already built your AAPS app with a browser? Follow the instructions for the method you used:
+
+- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
+- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
 
 ## Update AAPS with Android Studio
 

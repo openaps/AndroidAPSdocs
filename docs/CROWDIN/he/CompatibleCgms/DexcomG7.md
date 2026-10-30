@@ -3,18 +3,18 @@
 
 ## תחילה הערות
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. [לפרטים נוספים על כך](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+שימו לב שמערכות G7 ו-ONE+, לעומת G6, אינן מחליקות את הערכים, לא באפליקציה ולא בקורא. [לפרטים נוספים על כך](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
 Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip+ (direct connection to G7 or ONE+)
+## 1. xDrip+ (חיבור ישיר ל-G7 או ONE+)
 
-- Follow the instructions here: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+- פעלו לפי ההוראות כאן: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- בחרו xDrip+ ב-[ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+- התאימו את הגדרות xDrip+ לפי ההסברים בדף [הגדרות xDrip+](../CompatibleCgms/xDrip.md)
 
 ## 2. Build Your Own Dexcom App (G7)
 
@@ -25,7 +25,7 @@ Dexcom BYODA is now a very old version of the app and cannot be updated.
 
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
 
-!\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+![BYODA broadcast options](../images/BYODA.png)
 
 -   This app lets you use your Dexcom G7 with any Android smartphone.
 -   Uninstall the original Dexcom app
@@ -70,11 +70,11 @@ A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not
 - בחרו "Companion App" כמקור נתונים בxDrip+ ויש לבחור בהגדרות פחות נפוצות> הגדרות בלוטות' > יש לאפשר "Companion Bluetooth".
 -   Select  xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+-   התאימו את הגדרות xDrip+ לפי ההסברים בדף [הגדרות xDrip+](../CompatibleCgms/xDrip.md)
 
 ## 5. Juggluco
 
-Version 9.0+ required
+נדרשת גרסה 9.0+
 
 - Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
 

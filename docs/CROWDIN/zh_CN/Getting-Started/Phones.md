@@ -1,10 +1,10 @@
 # 手机
 
-当前版本的**AAPS**（3.4）需要搭载**谷歌Android 12.0或更高版本**的Android智能手机。 如果你正考虑购买一部新手机（截至 2026 年 1 月），**建议首选 Android 16 系统**，不推荐使用 Android 15。
+当前版本的**AAPS**（3.4）需要搭载**谷歌Android 12.0或更高版本**的Android智能手机。如果你正考虑购买一部新手机（截至 2026 年 1 月），**建议首选 Android 16 系统**，不推荐使用 Android 15。
 
 请在 [Facebook 或 Discord](../GettingHelp/WhereCanIGetHelp.md) 上查看关于此主题的最新更新。
 
-出于安全原因，强烈建议用户保持其 **AAPS** 构建版本处于最新状态。 但是，对于无法使用Android 12.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
+出于安全原因，强烈建议用户保持其 **AAPS** 构建版本处于最新状态。但是，对于无法使用Android 12.0或更高版本设备的用户，仍然可以使用与旧版Android兼容的**AAPS**早期版本，请参阅：[发行说明](#maintenance-android-version-aaps-version)。
 
 - [Jelly Pro 设置](../CompatiblePhones/Jelly.md)
 - [华为设置](../CompatiblePhones/Huawei.md)
@@ -15,13 +15,13 @@
 
 We maintain a list of the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) that you can [explore with a friendly interface](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/). Contribute by filling out the [Google form](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) and adding your setup!
 
-此列表提供了用户关于手机与**AAPS**以及特定泵和CGM配合使用的反馈。 它可以帮助您检查您的手机/泵/CGM是否已被其他用户成功使用。
+此列表提供了用户关于手机与**AAPS**以及特定泵和CGM配合使用的反馈。它可以帮助您检查您的手机/泵/CGM是否已被其他用户成功使用。
 
-该文档为只读文件。 使用Ctrl+F快捷键可在Google表格中进行文本搜索。
+该文档为只读文件。使用Ctrl+F快捷键可在Google表格中进行文本搜索。
 
-要记录您对硬件设置的测试，请填写此[表格](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform)。 填写完表单数据后，该表格将每5分钟自动更新一次
+要记录您对硬件设置的测试，请填写此[表格](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform)。填写完表单数据后，该表格将每5分钟自动更新一次
 
-如果遇到与该电子表格相关的问题，请在Discord上联系其维护者*@theodoor5137*，或查看[我可以在哪里获得帮助？ 页面](../GettingHelp/WhereCanIGetHelp.md).
+如果遇到与该电子表格相关的问题，请在Discord上联系其维护者*@theodoor5137*，或查看[我可以在哪里获得帮助？页面](../GettingHelp/WhereCanIGetHelp.md).
 
 ## 我没找到我的手机。
 

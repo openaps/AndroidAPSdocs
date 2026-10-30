@@ -30,7 +30,7 @@
 
 停用`上传治疗方案`功能(9)，并确保**不要**使用`数据回填`功能(11)。
 
-还应停用`故障警报`选项(10)。 否则当Wi-Fi/移动网络出现故障或服务器不可用时，您将每5分钟收到一次警报。
+还应停用`故障警报`选项(10)。否则当Wi-Fi/移动网络出现故障或服务器不可用时，您将每5分钟收到一次警报。
 
 ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 
@@ -48,7 +48,7 @@
 
 若您同时在xDrip+中启用了`接受治疗方案`功能，并在AAPS的xDrip+插件中启用了`向xDrip+广播`功能，则xDrip+将能接收来自AAPS的胰岛素、碳水化合物和基础率信息。
 
-若启用`接受校准`功能，xDrip+将采用来自AAPS的校准数据。 使用Dexcom传感器时启用此功能需谨慎：请先阅读[此说明](https://navid200.github.io/xDrip/docs/Calibrate-G6.html)。
+若启用`接受校准`功能，xDrip+将采用来自AAPS的校准数据。使用Dexcom传感器时启用此功能需谨慎：请先阅读[此说明](https://navid200.github.io/xDrip/docs/Calibrate-G6.html)。
 
 请务必禁用"导入提示音"功能，以避免AAPS每次发送基础率/配置文件变更时xDrip+发出铃声提示。
 
@@ -59,7 +59,7 @@
 #### 识别接收器
 
 - 若发现本地广播存在问题（AAPS无法接收来自xDrip+的血糖值），请前往→ 汉堡菜单 (1) → 设置 (2) → 应用间设置 (3) → 识别接收器 (7)，为AAPS版本输入`info.nightscout.androidaps`（若使用PumpControl版本，请改为输入`info.nightscout.aapspumpcontrol`！！）。
-- 注意：自动校正功能有时会将字母i改为大写。 输入`info.nightscout.androidaps`（或PumpControl版输入`info.nightscout.aapspumpcontrol`）时，**必须全部使用小写字母**。 大写字母"I"会导致应用无法接收来自xDrip+的血糖值。
+- 注意：自动校正功能有时会将字母i改为大写。输入`info.nightscout.androidaps`（或PumpControl版输入`info.nightscout.aapspumpcontrol`）时，**必须全部使用小写字母**。大写字母"I"会导致应用无法接收来自xDrip+的血糖值。
     
     ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
@@ -71,13 +71,13 @@
 ## Dexcom G6
 
 - Dexcom G6发射器可同时连接至Dexcom接收器（或t:slim泵）和您手机上的一个应用程序。
-- 使用xDrip+作为接收器时，请先卸载Dexcom应用程序。 **您无法同时将xDrip+和Dexcom应用程序连接到发射器！**
+- 使用xDrip+作为接收器时，请先卸载Dexcom应用程序。**您无法同时将xDrip+和Dexcom应用程序连接到发射器！**
 - 若您需要使用Clarity功能，同时希望保留xDrip+的特性，可选择使用[自制Dexcom应用](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)并通过本地广播将数据传输至xDrip+，或者将xDrip+作为配套应用，接收来自官方Dexcom应用的通知。
 
 ### xDrip+版本需根据G6发射器序列号选择
 
-- 所有2018年秋季/年底之后生产的G6发射器均称为"萤火虫"(Firefly)型号。 这些发射器[不拆除发射器](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)就无法重启传感器，且不会发送原始数据。 建议使用最新的[夜间快照版](https://github.com/NightscoutFoundation/xDrip/releases)。
-- 经过电池更换的旧发射器和改装版发射器支持传感器寿命延长及重启功能，同时仍可发送原始数据。 您可以使用[最新APK（稳定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)。
+- 所有2018年秋季/年底之后生产的G6发射器均称为"萤火虫"(Firefly)型号。这些发射器[不拆除发射器](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)就无法重启传感器，且不会发送原始数据。建议使用最新的[夜间快照版](https://github.com/NightscoutFoundation/xDrip/releases)。
+- 经过电池更换的旧发射器和改装版发射器支持传感器寿命延长及重启功能，同时仍可发送原始数据。您可以使用[最新APK（稳定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)。
 
 ### Dexcom专用设置
 
@@ -85,7 +85,7 @@
 
 ### 不建议进行预防性重启
 
-**仅适用于更换过电池或改装过的Dexcom发射器。 [预防性重启](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)不适用于标准发射器，会导致传感器完全停止工作：您需要[移除发射器](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)才能重启传感器。**
+**仅适用于更换过电池或改装过的Dexcom发射器。[预防性重启](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)不适用于标准发射器，会导致传感器完全停止工作：您需要[移除发射器](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)才能重启传感器。**
 
 不建议对Dexcom传感器进行自动延长（`预防性重启`），因为这可能导致重启后第9天出现血糖值"跳跃"。
 
@@ -96,7 +96,7 @@
 - 若您在xDrip+或Spike中使用原生数据及校准码，最安全的做法是不允许对传感器进行预防性重启。
 - 如必须进行预防性重启，请选择在白天时段操作，以便能够观察数值变化并在必要时进行校准。 
 - 若需重启传感器，建议采用以下两种方式之一：要么不使用出厂校准（这样在第11-12天能获得最安全的结果），要么确保做好校准准备并密切监测数值波动。
-- 使用出厂校准的G6传感器进行预热可能导致检测结果出现波动。 若进行预热操作，为获得最佳效果，您很可能需要对传感器进行校准。
+- 使用出厂校准的G6传感器进行预热可能导致检测结果出现波动。若进行预热操作，为获得最佳效果，您很可能需要对传感器进行校准。
 - 如果您未能密切留意可能发生的变化，恢复至非出厂校准模式并将系统当作G5使用可能是更稳妥的选择。
 
 要了解这些建议的具体细节和原因，请阅读Tim Street发表在[http://www.diabettech.com](https://www.diabettech.com)上的[完整文章](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/)。
@@ -139,8 +139,8 @@
 
 ![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
 
-- 移除发射器（若更换传感器则需一并移除传感器）。 若需移除发射器但保留传感器，请参阅[此方法](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)或观看视频<https://youtu.be/AAhBVsc6NZo>。
-- 请将旧发射器放置远处，防止其重新连接。 微波炉是绝佳的电磁屏蔽装置 - 但为确保万无一失，请拔掉电源线以防有人误开微波炉。
+- 移除发射器（若更换传感器则需一并移除传感器）。若需移除发射器但保留传感器，请参阅[此方法](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)或观看视频<https://youtu.be/AAhBVsc6NZo>。
+- 请将旧发射器放置远处，防止其重新连接。微波炉是绝佳的电磁屏蔽装置 - 但为确保万无一失，请拔掉电源线以防有人误开微波炉。
 - 请按照[这些说明](https://navid200.github.io/xDrip/docs/Starting-G6.html)操作。
 - 在xDrip+显示首次读数前，请勿重新开启原装Dexcom接收器（若使用）。
 
@@ -242,6 +242,6 @@
     
     ![xDrip+ Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
 
-- 您可以在"较少使用的设置"→"额外日志设置"→"日志记录附加标签"下添加`BgReading:d,xdrip libre_receiver:v`。 这将记录额外的错误信息以便故障排除。
+- 您可以在"较少使用的设置"→"额外日志设置"→"日志记录附加标签"下添加`BgReading:d,xdrip libre_receiver:v`。这将记录额外的错误信息以便故障排除。
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)

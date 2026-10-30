@@ -352,20 +352,20 @@ Acest ecran va furniza informații, stare și setări de configurare pentru disp
 
 ##### Câmpuri dispozitiv (4) - Cu o pompă activă
 
-> - **Device Type:** The type of device communicating with the pod communication device (Omnipod pod pump)
-> - **Device Model:** The model of the active device connected to the pod communication device (the current model name of the Omnipod pod, which is Eros)
-> - **Pump Serial Number:** Serial number of the currently activated pod
-> - **Pump Frequency:** Communication radio frequency the pod communication device has tuned to enable communication between itself and the pod.
-> - **Last Used frequency:** Last known radio frequency the pod used to communicate with the pod communication device.
-> - **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
-> - **Refresh button** manually refresh the settings on this page.
+> - **Tipul de dispozitiv:** Tipul de dispozitiv care comunică cu dispozitivul de comunicare cu pompa (pompă Omnipod)
+> - **Modelul dispozitivului:** Modelul dispozitivului activ conectat la dispozitivul de comunicare cu pompa (numele modelului curent al pompei Omnipod, care este Eros)
+> - **Număr de serie al pompei:** Numărul de serie al pompe activate în prezent
+> - **Frecvența pompei:** Frecvența radio de comunicații pe care dispozitivul de comunicare cu pompa a adaptat-o pentru a activa comunicarea între el și pompă.
+> - **Ultima frecvență utilizată:** Ultima frecvență radio cunoscută pe care o folosea pentru a comunica cu dispozitivul de comunicare cu pompa.
+> - **Ultimul dispozitiv de contact:** Data și ora ultimului contact făcut de pompă cu dispozitivul de comunicare cu pompa.
+> - **Butonul reîmprospătați** reîmprospătează manual setările de pe această pagină.
 
 (omnipod-eros-rileylink-and-active-pod-history)=
 #### RileyLink și istoricul pompei active
 
 Acest ecran furnizează informații în ordinea cronologică inversă a fiecărei stări sau acțiuni pe care RileyLink sau pompa conectată în prezent se află sau pe care a întreprins-o. Întregul istoric este disponibil doar pentru pompa activă, după o schimbare de pompă acest istoric va fi șters și doar evenimentele din noua pompă activată vor fi înregistrate și afișate.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
+1. Mergeți la fila **Omnipod (pompă)** și apăsați butonul **GESTIONARE POMPĂ (1)** pentru a accesa meniul **Gestionare pompă**, apoi apăsați butonul **Istoric pompă (2)** pentru a vedea ecranele de **Setări ** și **Istoricul**. Apăsați pe textul **ISTORIC (3)** pentru a afișa întreaga istorie a sesiunii RileyLink și a celei de pompă activă.
 
    > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png)
    > 
@@ -373,15 +373,15 @@ Acest ecran furnizează informații în ordinea cronologică inversă a fiecăre
 
 ##### Câmpuri
 
-> - **Date & Time**: In reverse chronological order the timestamp of each event.
-> - **Device:** The device to which the current action or state is referring.
-> - **State or Action:** The current state or action performed by the device.
+> - **Data & Timp**: În ordine cronologică inversă marcajul temporal al fiecărui eveniment.
+> - **Dispozitiv:** Dispozitivul la care acțiunea sau starea curentă se referă.
+> - **Starea sau Acțiunea:** Starea curentă sau acțiunea realizată de dispozitiv.
 
 (OmnipodEros-omnipod-pod-tab)=
 
 ## fila Omnipod (POD)
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **Omnipod (POD)** tab in the main AAPS interface.
+Mai jos este o explicație a aspectului și semnificației pictogramelor și a câmpurilor de stare din fila **Omnipod (Pompă)** din interfața principală AAPS.
 
 *NOTĂ: Dacă vreun mesaj din câmpurile de stare ale filei Omnipod (POD) raportează (incert), atunci va trebui să apăsați butonul Reîmprospătați pentru a șterge mesajul și a actualiza starea pompei.*
 
@@ -389,53 +389,53 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ### Câmpuri
 
-- **RileyLink Status:** Displays the current connection status of the RileyLink
+- **Stare RileyLink:** Afișează starea curentă a conexiunii RileyLink
 
-- *RileyLink Unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-- *RileyLink Ready* - pod communication device is powered on and actively initializing the Bluetooth connection
-- *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+- *RileyLink inaccesibil* - dispozitivul de comunicare cu pompa nu este în raza Bluetooth a telefonului, este oprită sau are o eroare ceea ce previne comunicarea Bluetooth.
+- *RileyLink pregătit* - dispozitivul de comunicare cu pompa este pornit și inițializează activ conexiunea Bluetooth
+- *Conectat* - dispozitivul de comunicare cu pompa este pornit, conectat și capabil să comunice prin Bluetooth.
 
-- **Pod address:** Displays the current address in which the active pod is referenced
+- **Adresă pompă:** Afișează adresa curentă în care se face referire la pompa activă
 
-- **LOT:** Displays the LOT number of the active pod
+- **LOT:** Afișează numărul de LOT al pompei active
 
-- **TID:** Displays the serial number of the pod.
+- **TID:** Afișează numărul de serie al pompei.
 
-- **Firmware Version:** Displays the firmware version of the active pod.
+- **Versiunea firmware:** Afișează versiunea de firmware a pompei activ.
 
-- **Time on Pod:** Displays the current time on the active pod.
+- **Timpul din pompă:** Afișează timpul actual de pe pompa activă.
 
-- **Pod expires:** Displays the date and time when the active pod will expire.
+- **Pompa expiră:** Afișează data și ora când pompa activă va expira.
 
-- **Pod status:** Displays the status of the active pod.
+- **Stare pompă:** Afișează starea pompei active.
 
-- **Last connection:** Displays the last time communication with the active pod was achieved.
+- **Ultima conexiune:** Afișează ultimul timp când comunicare cu pompa activă a fost efectuată.
 
 - *Adineauri* - mai puțin de 20 de secunde în urmă.
 - *Cu mai puțin de un minut în urmă* - mai mult de 20 de secunde, dar mai puțin de 60 de secunde în urmă.
 - *Acum 1 minut* - mai mult de 60 de secunde, dar mai puțin de 120 de secunde (2 minute)
 - *XX minute în urmă* - mai mult de 2 minute în urmă așa cum este definit de valoarea XX
 
-- **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+- **Ultimul bolus:** Afișează doza ultimului bolus trimis către pompa activă și cu cât timp în urmă a fost administrat în paranteză.
 
 - **Rată bazală de bază:** Afișați rata bazală programată pentru timpul curent din profilul ratei bazale.
 
 - **Rata bazalei temporare:** Afișați rata bazală temporară care rulează în prezent în următorul format
 
 - Unități / oră @ ora la care a fost emisă RBT (minute rulate / total minute pentru care RBT va fi rulată)
-- *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+- *Exemplu:* 0.00U/h @18:25 ( 90/120 minute)
 
 - **Rezervor:** Afișați peste 50+U rămase atunci când mai mult de 50 de unități au rămas în rezervor. Sub această valoare, unitățile exacte sunt afișate în text galben.
 
-- **Total administrat:** Afișați numărul total de unități de insulină administrate din rezervor. *Note this is an approximation as priming and filling the pod is not an exact process.*
+- **Total administrat:** Afișați numărul total de unități de insulină administrate din rezervor. *Rețineți că aceasta este o aproximare deoarece amorsarea și umplerea pompei nu este un proces exact.*
 
-- **Eroare:** Afișați ultima eroare întâlnită. Review the [Pod history](#OmnipodEros-view-pod-history), [RileyLink history](#omnipod-eros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Eroare:** Afișați ultima eroare întâlnită. Revizuiți [Istoricul de pompă](#OmnipodEros-view-pod-history), [Istoricul RileyLink](#omnipod-eros-rileylink-and-active-pod-history) și fișierele de jurnal pentru erorile din urmă și informații mai detaliate.
 
 - **Alerte active de pompă:** Rezervat pentru rularea alertelor pe pompa activă. Folosit în mod normal atunci când expirarea pompei a trecut de 72 de ore și sunt rulate alerte sonore native.
 
 ### Pictograme
 
-- **REFRESH:**
+- **REÎMPROSPĂTAȚI:**
 
   > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
   > 
@@ -443,15 +443,15 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > Folosiți pentru a reîmprospăta starea pompei și a închide câmpurile de stare care conțin textul (incert).
   > 
-  > See the [Troubleshooting section](#OmnipodEros-troubleshooting) below for additional information.
+  > Vedeți secțiunea [Depanare](#OmnipodEros-troubleshooting) de mai jos pentru informaţii suplimentare.
 
-- **POD MGMT:**
+- **GESTIONARE POMPĂ:**
 
   > ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png)
   > 
   > Navigare la meniul de administrare a pompei
 
-- **ACK ALERTS:**
+- **ACCEPTAȚI ALERTE:**
 
   > ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
   > 
@@ -459,7 +459,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > Butonul este afișat numai atunci când timpul pompei a trecut de avertizarea de expirare După o demitere reușită, această pictogramă nu va mai apărea.
 
-- **SET TIME:**
+- **SETARE TIMP:**
 
   > ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
   > 
@@ -471,7 +471,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > Suspendați pompa activă
 
-- **RESUME DELIVERY:**
+- **RELUAȚI ADMINISTRAREA:**
 
   > ![restabiliți](../images/omnipod/ICONS/omnipod_overview_resume.png)
   > 
@@ -479,19 +479,19 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ### Meniu Gestionare Pompă
 
-Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
+Mai jos este o explicație a aspectului și semnificației pictogramelor din meniul **Gestionare pompă** accesat din fila **Omnipod (Pompă)**.
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
 - **Activează pompă**
 
-  > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
+  > ![activați_pompa](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > Amorsați și activați o nouă pompă
 
 - **Dezactivare pompă**
 
-  > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
+  > ![dezactivați_pompa](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
   > Dezactivați pompa activă curentă.
   > 
@@ -503,25 +503,25 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 - **Redați semnale sonore de test**
 
-  > ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
+  > ![redare_sunet_de_test](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
   > 
   > Redă un singur semnal sonor de test pe pompă atunci când este apăsat.
 
-- **Discard pod**
+- **Renunțați la pompă**
 
-  > ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
+  > ![renunțați_la_pompă](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
   > 
   > Dezactivați și eliminați starea pompei pentru o pompă care nu răspunde, atunci când este apăsat.
   > 
   > Butonul este afișat doar în cazuri foarte specifice atunci când dezactivare corectă nu mai este posibilă:
   > 
-  > > - A **pod is not fully paired** and thus ignores deactivate commands.
-  > > - A **pod is stuck** during the pairing process between steps
-  > > - A **pod simply does not pair at all.**
+  > > - O pompă **nu este pe deplin asociată** şi astfel ignoră comenzile de dezactivare.
+  > > - O pompă **este blocată** în timpul procesului de asociere între pași
+  > > - O pompă **pur și simplu nu se asociază deloc.**
 
 - **Istoric pompă**
 
-  > ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
+  > ![istoric_pompă](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
   > 
   > Afișați istoricul de activitate al pompei active
 
@@ -540,7 +540,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
   > 
   > Când este apăsat acest buton va reseta configurația dispozitivului conectat de comunicare cu pompa.
   > 
-  > > - When communication is started, specific data is sent to and set in the RileyLink > - Memory Registers are set > - Communication Protocols are set > - Tuned Radio Frequency is set 
+  > > - Când comunicarea este inițiată, date specifice sunt trimise și setate în RileyLink: > - Sunt setați registrii de memorie > - Sunt setate protocoalele de comunicare > - Este setată frecvența radio acordată 
   > > - Vedeți [notele adiționale](#OmnipodEros-reset-rileylink-config-notes) la sfârșitul acestui tabel
 
 - **Citește Jurnal Puls:**
@@ -647,15 +647,15 @@ Acest proces va arăta cum să eliminați dispozitivul de comunicare cu pompa se
 
    > ![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
 
-2. On the **RileyLink Selection** menu the press **Remove (2)** button to remove **your currently selected RileyLink (3)**
+2. În meniul **Selecție RileyLink** apăsați **Eliminați (2)** pentru a elimina **dispozitivul RileyLink actualmente selectat (3)**
 
    > ![RileyLink_Setup_Remove_2](../images/omnipod/RileyLink_Setup_Remove_2.png)
 
-3. At the confirmation prompt press **Yes (4)** to confirm the removal of your device.
+3. La dialogul de confirmare, apăsați **Da (4)** pentru a confirma eliminarea dispozitivului dumneavoastră.
 
    > ![RileyLink_Setup_Remove_3](../images/omnipod/RileyLink_Setup_Remove_3.png)
 
-4. You are returned to the **Omnipod Setting** menu where under **RileyLink Configuration** you will now see the device is **Not Set (5)**.  Felicitări, ați eliminat cu succes dispozitivul de comunicare cu pompa selectat.
+4. Vă întoarceți la meniul **Setare Omnipod** unde sub **Configurație RileyLink** veți vedea că dispozitivul este **Nu este setat (5)**.  Felicitări, ați eliminat cu succes dispozitivul de comunicare cu pompa selectat.
 
    > ![RileyLink_Setup_Remove_4](../images/omnipod/RileyLink_Setup_Remove_4.png)
 
@@ -663,15 +663,15 @@ Acest proces va arăta cum să eliminați dispozitivul de comunicare cu pompa se
 
 Acest proces vă arată cum să eliminați dispozitivul de comunicare cu pompa selectat în prezent din setările Omnipod Driver.
 
-1. Under **RileyLink Configuration** press the **Not Set (1)** text to open the **RileyLink Selection** menu.
+1. Sub **Configurarea RileyLink** apăsați pe textul **Nu este setat (1)** pentru a deschide meniul **Selecție RileyLink**.
 
    > ![RileyLink_Setup_Add_1](../images/omnipod/RileyLink_Setup_Add_1.png)
 
-2. Press the **Scan (2)** button to start scanning for all available Bluetooth devices.
+2. Apăsați butonul **Scanare (2)** pentru a începe scanarea pentru toate dispozitivele Bluetooth disponibile.
 
    > ![RileyLink_Setup_Add_2](../images/omnipod/RileyLink_Setup_Add_2.png)
 
-3. Select **your RileyLink (3)** from the list of available devices and you will be returned to the **Omnipod Settings** menu displaying the **MAC Address (4)** of your newly selected device.  Felicitări ați selectat cu succes dispozitivul dumneavoastră de comunicare cu pompa.
+3. Selectați **dispozitivul dumneavoastră RileyLink (3)** din lista de dispozitive disponibile și vă veți întoarce în meniul **Setări Omnipod** care afișează adresa **MAC (4)** a noului dumneavoastră dispozitiv selectat.  Felicitări ați selectat cu succes dispozitivul dumneavoastră de comunicare cu pompa.
 
    > ![RileyLink_Setup_Add_3](../images/omnipod/RileyLink_Setup_Add_3.png) ![RileyLink_Setup_Add_4](../images/omnipod/RileyLink_Setup_Add_4.png)
 
@@ -679,8 +679,8 @@ Acest proces vă arată cum să eliminați dispozitivul de comunicare cu pompa s
 
 Această filă este bine documentată în documentația principală AAPS, dar există câteva elemente în această filă care sunt specifice modului în care pompa Omnipod diferă de pompele bazate pe fir, mai ales după aplicarea unei noi pompe.
 
-1. Go to the **Actions (ACT)** tab in the main AAPS interface.
-2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. Asta se face datorită modului în care pompa Omnipod este construită și funcționează. **Bateria pompei** și **rezervorul de insulină** sunt integrate înăuntrul fiecărei pompe. Deoarece pompa inserează canula direct în piele la locul aplicării pompei, un fir obișnuit nu este utilizată în pompele Omnipod. *Prin urmare, după schimbarea pompei vechimea fiecăreia dintre aceste valori se va reseta automat la zero.* **Vechimea bateriei pompei** nu este raportată deoarece bateria din pompă va fi întotdeauna mai mare decât durata de viață a pompei (maxim 80 de ore).
+1. Mergeți la fila **Acțiuni (ACT)** din interfața principală AAPS.
+2. În secțiunea **Careportal (1)** următoarele 3 câmpuri vor avea **resetarea vârstei** la 0 zile și 0 ore **după fiecare schimbare de pompă**: **Insulină** și **Canulă**. Asta se face datorită modului în care pompa Omnipod este construită și funcționează. **Bateria pompei** și **rezervorul de insulină** sunt integrate înăuntrul fiecărei pompe. Deoarece pompa inserează canula direct în piele la locul aplicării pompei, un fir obișnuit nu este utilizată în pompele Omnipod. *Prin urmare, după schimbarea pompei vechimea fiecăreia dintre aceste valori se va reseta automat la zero.* **Vechimea bateriei pompei** nu este raportată deoarece bateria din pompă va fi întotdeauna mai mare decât durata de viață a pompei (maxim 80 de ore).
 
 > ![Actions_Tab](../images/omnipod/Actions_Tab.png)
 
@@ -688,23 +688,23 @@ Această filă este bine documentată în documentația principală AAPS, dar ex
 
 **Nivelul insulinei**
 
-Raportarea cantității de insulină din pompa Omnipod Eros nu este exactă.  Acest lucru se datorează faptului că nu se cunoaște exact câtă insulină a fost introdusă în pompă, numai faptul că atunci când se declanșează cele 2 semnale sonore în timp ce se umple pompa au fost introduse cel puțin 85 de unități. O pompă poate ține maximum 200 de unități. Armarea poate introduce, de asemenea, variații, deoarece nu este un proces exact și precis.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.
+Raportarea cantității de insulină din pompa Omnipod Eros nu este exactă.  Acest lucru se datorează faptului că nu se cunoaște exact câtă insulină a fost introdusă în pompă, numai faptul că atunci când se declanșează cele 2 semnale sonore în timp ce se umple pompa au fost introduse cel puțin 85 de unități. O pompă poate ține maximum 200 de unități. Armarea poate introduce, de asemenea, variații, deoarece nu este un proces exact și precis.  Cu ambii factori, driverul Omnipod a fost scris pentru a oferi cea mai bună aproximare a insulinei rămase în rezervor.
 
-> - **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
-> - **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir.
+> - **Peste 50 de unități** - raportează o valoare de 50+U atunci când mai mult de 50 de unități se află în rezervor.
+> - **Sub 50 de unități** - raportează o valoare calculată aproximativă a insulinei rămase în rezervor.
 > - **SMS** - Returnează valoarea sau 50+U pentru răspunsuri SMS
 > - **Nightscout** - Încarcă în Nightscout valoarea de 50 atunci când sunt peste 50 de unități (versiunea 14.07 și mai vechi).  Versiunile mai noi vor raporta o valoare de 50+ atunci când depășesc 50 de unități.
 
 **Nivelul bateriei**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  Dispozitivul RileyLink nu poate raporta nivelul său al bateriei.  Nivelul bateriei este raportat după fiecare comunicare cu pompa, astfel încât nu se poate observa o creștere liniară atunci când se încarcă.  O reîmprospătare manuală va actualiza nivelul bateriei curente.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+Raportarea nivelului bateriei este o setare care poate fi activată pentru a returna nivelul de baterie curent al dispozitivelor de comunicare cu pompa, precum OrangeLink, EmaLink sau DiaLink.  Dispozitivul RileyLink nu poate raporta nivelul său al bateriei.  Nivelul bateriei este raportat după fiecare comunicare cu pompa, astfel încât nu se poate observa o creștere liniară atunci când se încarcă.  O reîmprospătare manuală va actualiza nivelul bateriei curente.  Atunci când un dispozitiv acceptat de comunicare cu pompa este deconectat, va fi raportată o valoare de 0%.
 
-> - **RileyLink hardware is NOT capable of reporting battery level**
-> - **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
-> - **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
+> - **Dispozitivul RileyLink NU poate raporta nivelul bateriei**
+> - **"Afișare nivelului de baterie raportat de OrangeLink/EmaLink/DiaLink" Setarea TREBUIE activată în setările Omnipod pentru a raporta valorile nivelului bateriei**
+> - **Raportarea nivelului bateriei funcționează numai pentru dispozitivele OrangeLink, EmaLink și DiaLink**
 > - **Raportarea nivelului de baterie POATE funcționa pentru alte dispozitive (cu excepția RileyLink)**
-> - **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
-> - **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
+> - **SMS** - Returnează nivelul bateriei curente ca răspuns atunci când există un nivel real, o valoare de n/a nu va fi returnată
+> - **Nightscout** - Nivelul bateriei este raportat atunci când există un nivel real, o valoare de n/a nu va fi raportată
 
 (OmnipodEros-troubleshooting)=
 
@@ -712,20 +712,20 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 ### Eșecuri pompă
 
-Ocazional, apare un eșec din cauza unei varietăți de probleme, inclusiv a problemelor de hardware cu pompa în sine. Cel mai bine este să nu se recurgă la Insulet, deoarece AAPS nu este un caz de utilizare aprobat. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Ocazional, apare un eșec din cauza unei varietăți de probleme, inclusiv a problemelor de hardware cu pompa în sine. Cel mai bine este să nu se recurgă la Insulet, deoarece AAPS nu este un caz de utilizare aprobat. O listă de coduri de eroare poate fi găsită [aici](https://github.com/openaps/openomni/wiki/Fault-event-codes) pentru a ajuta la determinarea cauzei.
 
 ### Prevenirea erorii 49 de pompă
 
-Acest eșec este legat de o stare incorectă a pompei pentru o comandă sau o eroare în timpul unei comenzi de administrare a insulinei. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**➜**General**➜**NSClient**➜**cog wheel**➜**Advanced Settings** to prevent possible failures.
+Acest eșec este legat de o stare incorectă a pompei pentru o comandă sau o eroare în timpul unei comenzi de administrare a insulinei. Recomandăm utilizatorilor să comute la clientul Nightscout la *Doar încărcați (Dezactivați sincronizarea)* sub **Configurator**➜**General**➜**NSClient**➜**Roată dințată**➜**Setări avansate** pentru a preveni posibile eșecuri.
 
 ### Alerte de pompă inaccesibilă
 
-It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
+Se recomandă ca alertele inaccesibile ale pompei să fie configurate la **120 de minute** prin accesarea meniului cu trei puncte din dreapta sus, selectarea **Preferințe**➜**Alerte Locale**➜**Prag pompă inaccesibilă \[min\]** și setarea acestui prag la **120**.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
 ### Importați setările din AAPS anterior
 
-Vă rugăm să rețineți că importarea setărilor are posibilitatea de a importa o stare a unei pompe învechite. Drept urmare, este posibil să pierdeți o pompă activă. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
+Vă rugăm să rețineți că importarea setărilor are posibilitatea de a importa o stare a unei pompe învechite. Drept urmare, este posibil să pierdeți o pompă activă. Prin urmare, este recomandat ca **să nu importați setări cât timp sunteți într-o sesiune activă de pompă**.
 
 1. Dezactivați sesiunea activă de pompă. Verificați dacă nu aveți o sesiune activă de pompă.
 2. Exportați-vă setările și stocați o copie într-un loc sigur.
@@ -735,7 +735,7 @@ Vă rugăm să rețineți că importarea setărilor are posibilitatea de a impor
 
 ### Alerte driver Omnipod
 
-please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. Un rezumat al principalelor alerte pe care este posibil să le întâlniți este prezentat mai jos:
+vă rugăm să rețineți că driverul Omnipod prezintă o varietate de alerte unice în secțiunea **Privire de ansamblu**, cele mai multe dintre acestea sunt informative și pot fi respinse, în timp ce altele îi furnizează utilizatorului o măsură de rezolvare a cauzei alertei declanșate. Un rezumat al principalelor alerte pe care este posibil să le întâlniți este prezentat mai jos:
 
 #### Nicio pompă activă
 
@@ -747,21 +747,21 @@ Alertă informațională că pompa a fost suspendată.
 
 #### Setarea profilului bazalei a eșuat. Administrarea insulinei poate fi suspendată! Reîmprospătați manual starea pompei din fila Omnipod și reluați administrarea, dacă este necesar.
 
-Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
+Alerta informațională că setarea profilului bazal al pompei a eșuat și va trebui să apăsați *Reîmprospătați* în fila Omnipod.
 
 #### Nu s-a putut verifica dacă bolusul SMB a avut loc cu succes. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
 
-Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+Alertă că bolusul SMB nu a putut fi verificat, va trebui să verificați câmpul *Ultimul bolus* din fila Omnipod pentru a vedea dacă bolusul SMB a reușit și dacă nu eliminați intrarea din fila Tratamente.
 
 #### Nu este sigur dacă "sarcina bolus/RBT/SMB" s-a finalizat; vă rugăm verificați manual dacă a avut succes.
 
-Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. Necesitatea informării utilizatorului cu privire la această incertitudine era necesară.
+Datorită modului în care dispozitivul RileyLink și pompa Omnipod comunică, pot apărea situații în care este *incert* dacă o comandă a fost procesată cu succes. Necesitatea informării utilizatorului cu privire la această incertitudine era necesară.
 
 Iată câteva exemple de situații în care poate apărea o notificare de incertitudine.
 
-- **Boluses** - Uncertain boluses cannot be automatically verified. Notificarea va rămâne până la următorul bolus, dar o reîmprospătare manuală a pompei va șterge mesajul. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
-- **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. În mod implicit, alertele semnal sonor sunt dezactivate pentru acest tip de notificare.
-- **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. Dacă deviația de timp dintre pompă și telefon este mai mare de 5 minute, AAPS va raporta că pompa este într-o stare suspendată în starea pompei cu un mesaj GESTIONARE SCHIMBARE ORĂ. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Dacă apăsați pe setare timp veți sincroniza ora de pe pompă cu cea de pe telefon și apoi puteți să apăsați pe butonul RELUAȚI ADMINISTRAREA pentru a continua operațiunile normale ale pompei.
+- **Bolusuri** - Bolusurile nesigure nu pot fi verificate automat. Notificarea va rămâne până la următorul bolus, dar o reîmprospătare manuală a pompei va șterge mesajul. *În mod implicit, semnalele sonore sunt activate pentru acest tip de notificare, deoarece utilizatorul va trebui să le verifice manual.*
+- **RBT, Stări pompă, Schimbări profil, Schimbări fus orar** - o reîmprospătare manuală a pompei va șterge mesajul. În mod implicit, alertele semnal sonor sunt dezactivate pentru acest tip de notificare.
+- **Deviație timp pompă** Când timpul de pe pompă și timpul telefonului deviază prea mult este dificil pentru bucla AAPS să funcționeze și să facă predicții și recomandări de dozaj exacte. Dacă deviația de timp dintre pompă și telefon este mai mare de 5 minute, AAPS va raporta că pompa este într-o stare suspendată în starea pompei cu un mesaj GESTIONARE SCHIMBARE ORĂ. O pictogramă suplimentară **Setați timpul** va apărea în partea de jos a filei Omnipod (Pompă). Dacă apăsați pe setare timp veți sincroniza ora de pe pompă cu cea de pe telefon și apoi puteți să apăsați pe butonul RELUAȚI ADMINISTRAREA pentru a continua operațiunile normale ale pompei.
 
 ## Cele mai bune practici
 
@@ -773,9 +773,9 @@ Antena utilizată pe RileyLink pentru a comunica cu o pompă Omnipod este o ante
 
 ![Toroid_w_CS](../images/omnipod/Toroid_w_CS.png)
 
-> *(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern*)
+> *(Fig 1. Reprezentarea grafică a unei antene spirale elicoidale cu diagramă de radiație omnidirecțională*)
 
-Because of both safety and security concerns, pod *activation* has to be done at a range *closer (~30 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Datorită naturii transmiterii semnalului de la antena RileyLink, este recomandat să NU se plaseze pompa direct pe sau lângă RileyLink.
+Din motive de siguranță și securitate, *activarea* pompei trebuie să fie realizată la un interval *mai apropiat (~30 cm sau mai puțin)* decât alte operațiuni, cum ar fi administrarea unui bolus, setarea unei RBT sau pur și simplu reîmprospătarea stării pompei. Datorită naturii transmiterii semnalului de la antena RileyLink, este recomandat să NU se plaseze pompa direct pe sau lângă RileyLink.
 
 Imaginea de mai jos arată modul optim de poziționare a dispozitivului RileyLink în timpul procedurilor de dezactivare și activare. Pompa se poate activa în alte poziții, dar veți avea cel mai mare succes folosind poziția din imaginea de mai jos.
 
@@ -785,9 +785,9 @@ Imaginea de mai jos arată modul optim de poziționare a dispozitivului RileyLin
 
 ## Unde să obțineți ajutor pentru driverul Omnipod
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+Toată munca de dezvoltare pentru driverul Omnipod este realizată de comunitate pe bază voluntară; vă cerem să vă amintiți acest lucru și să utilizați următoarele recomandări înainte de a solicita asistență:
 
 - **Nivelul 0:** Citiți secțiunea relevantă a acestei documentații pentru a vă asigura că înțelegeți cum ar trebui să meargă funcționalitatea cu care aveți dificultăți.
-- **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
-- **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+- **Nivelul 1:** Dacă încă întâmpinați probleme pe care nu le puteți rezolva folosind acest document, apoi vă rugăm să mergeți la canalul *#androidaps* pe **Discord** folosind [această legătură de invitație](https://discord.gg/4fQUWHZ4Mw).
+- **Nivelul 2:** Căutați problemele existente pentru a vedea dacă problema dumneavoastră a fost deja raportată; dacă nu, vă rugăm să creați un tichet nou [problemă](https://github.com/nightscout/AndroidAPS/issues) și să atașați [fișierele jurnal](../GettingHelp/AccessingLogFiles.md).
 - **Fiți răbdători - majoritatea membrilor comunității noastre sunt voluntari bine-voitori, și rezolvarea problemelor necesită adesea timp și răbdare atât din partea utilizatorilor cât și din partea dezvoltatorilor.**

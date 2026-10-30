@@ -16,22 +16,22 @@ Citiți [metoda de filtrare](../CompatibleCgms/SmoothingBloodGlucoseData.md) sug
 
 - Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+  [Setări xDrip+ ](../CompatibleCgms/xDrip.md)
 
-## 2. Build Your Own Dexcom App (G7)
+## 2. Construiește-ți propria aplicație Dexcom (G7)
 
 ```{admonition} Old app version
-:class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+:class: avertisment
+Dexcom BYODA este acum o versiune foarte veche a aplicației și nu poate fi actualizată.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+-   [Construiește-ți propria aplicație Dexcom](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) suportă transmisiuni locale către AAPS și/sau xDrip+
 
-!\[BYODA broadcast options\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+![Opțiuni de transmisie BYODA](../images/BYODA.png)
 
--   This app lets you use your Dexcom G7 with any Android smartphone.
--   Uninstall the original Dexcom app
+-   Această aplicație vă permite să utilizați Dexcom G7 cu orice smartphone Android.
+-   Dezinstalați aplicația Dexcom originală
 -   Instalați apk-ul descărcat
--   Enter sensor code in patched app
--   After short time BYODA should pick-up transmitter signal
+-   Introduceți codul senzorului în aplicația modificată
+-   După o scurtă perioadă de timp, aplicația ar trebui să recepționeze semnalul de la transmițător
 
 ## 3. Aplicația Dexcom G7 modificată (DiaKEM)
 

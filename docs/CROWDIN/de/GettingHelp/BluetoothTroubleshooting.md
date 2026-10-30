@@ -146,6 +146,6 @@ Aktiviere die Option **Koppeln des BT Geräts mit Android 15+** unter Android 15
    ![BondBT](../images/troubleshooting/BondBT.png)
 
 
-3. Wenn die Pumpe eine Koppelungsanfrage schickt, nimm Sie sie an.
+3. Wenn die Pumpe eine Koppelungsanfrage schickt, nimm sie an.
 
 4. Starte dein Smartphone neu.

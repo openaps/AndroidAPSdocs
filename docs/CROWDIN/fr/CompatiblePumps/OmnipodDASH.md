@@ -19,8 +19,8 @@ These are the specifications of the **Omnipod DASH** ('DASH') and what different
 ## Omnipod DASH known AAPS constraints/issues
 - Android 16 requires **AAPS** version 3.3.2.1 or later.
 - General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to enable Bluetooth Bonding to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- Too frequent basal updates may cause basal insulin delivery [problems](https://github.com/nightscout/AndroidAPS/issues/4158) with Omnipod Dash. When using **SMB**, limit the interval to 5 minutes minimum to avoid this issue.
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
+- Temporary Basal rate changes (which occur frequently when the loop is active, especially overnight) result in under-delivery of insulin. This is effectively a hardware limitation of the Omnipod DASH. The issue has been addressed in AAPS 3.4.2.3, but the functionality is currently opt-in. Follow the [Basal Drift Fix Instructions](#omnipod-dash-basal-drift-fix) to enable it. For more information regarding the fix see [Github Issue - 4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more info.
+- Dash only supports basal rate in 0.05 U/h steps. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you view POD MGMT/Pod History it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
 - The activation status of a Pod is stored in the settings file, if you export a settings file with an active pod. Then change to a new pod, then restore the settings from your previous export you will have now restored the old pod activation and removed the new pod activation. This is why we recommend to export settings after each pod activation to allow a restore of that pods activation state if something happens to your rig.
 - When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
 - If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
@@ -70,7 +70,7 @@ As long as **AAPS** is operational it will send basal rate adjustment commands t
 When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
 
 ### **AAPS Profile(s) do not support 30 minute basal rate time frames**
-If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact basil **Profile** in **AAPS**.  
+If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
 You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
 
 ### **0U/h Profile basal rates are NOT supported in AAPS**
@@ -480,11 +480,96 @@ Additional note:
   * **SMS** - Renvoie la valeur ou 50+U pour les réponses SMS
   * **Nightscout** - Envoie la valeur 50 vers Nightscout s'il y a plus de 50 unités (version 14,07 et plus).  Les nouvelles versions afficheront la valeur de plus de 50+ si au-dessus de 50 unités.
 
-(omnipod-dash-troubleshooting)=
+(omnipod-dash-known-issues-workarounds)=
+
+## Known Issues Workarounds
+
+This section covers common workarounds and settings that need to be changed to enable a feature to work around a community reported issue that has a fix. Par ex. the Basal drift enable process is documented here.
+
+(omnipod-dash-basal-drift-fix)=
+
+### Basal Drift Fix Instructions
+
+The Omnipod Dash pump has a limitation that can cause it to deliver less basal insulin than **AAPS** expects, see [Issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) for more technical details.
+
+The Dash uses an internal timer to determine when a basal pulse of 0.05 U is delivered. Once the timer interval elapses, the pulse is delivered. However, this timer is restarted whenever a basal rate change occurs e.g when **AAPS** sends a new Basal rate.
+
+When used in combination with looping, this leads to under-delivery of basal insulin, as the algorithm updates the basal rate on the pump frequently.
+
+The issue is most apparent during the night. During daytime operation, SMBs often result in a basal rate of 0, which masks the effect. In observed usage, this results in approximately 10% of the expected Total Daily Dose (TDD) not being delivered over a 24-hour period. Additionally, glucose targets are often not reached overnight, particularly after meals with prolonged glucose impact (e.g. pasta).
+
+***NOTE:** This issue is especially important to understand for people on very small dosages of insulin, Children for example.*
+
+(omnipod-dash-drift-compensation-how-it-works)=
+
+#### How the drift compensation works
+
+The pod delivers insulin in pulses of 0.05 U. When the drift compensation is enabled, **AAPS** checks that the pod has really delivered the basal insulin it was asked to deliver, and adds the missing pulses.
+
+1. **AAPS** keeps a running total of the basal insulin the pod _should_ have delivered since activation. This total follows your profile basal rates and every temporary basal rate the loop sets.
+2. Each time the pod reports its status, **AAPS** compares this total with the basal insulin the pod _actually_ delivered: the pod's total pulse count, minus the pulses delivered as boluses and SMBs.
+3. Each time **AAPS** sets or cancels a temporary basal rate, it looks at the difference. If the pod is behind by half a pulse (0.025 U) or more, **AAPS** sends one extra pulse of 0.05 U. The pod delivers it silently, without beeps.
+
+**Safety limits:**
+
+- **AAPS** only adds insulin that the pod owes. It never removes insulin, and it does nothing when the pod is ahead.
+- One pulse at a time, at most one every 2 minutes.
+- No pulse while the loop runs a zero temporary basal rate, because the loop asked for no insulin. The exception is the 5 minutes after a bolus, when a zero temporary basal rate is usually just the loop compensating for an SMB.
+- No pulse while a pod is being activated, while delivery is suspended, after a pod fault, while a bolus is running, or if the reservoir is empty.
+- If the difference ever reaches 2 pulses (0.10 U), in either direction, **AAPS** does not try to catch up. It resets its running total to what the pod has really delivered.
+
+**What you will see:**
+
+- On the **DASH** tab, **Last Bolus** can show **0.05 U** even if you did not give a bolus.
+- In the [Pod history](#omnipod-dash-view-pod-history), the extra pulses appear as **Set Bolus 0.05 U**, usually right after a **Set Temporary Basal** line. See the example in [Check that the drift compensation is working](#omnipod-dash-drift-compensation-check) below.
+- The extra pulses are **not** recorded as boluses or SMBs in **AAPS** treatments, and they do not change your IOB. This is expected: **AAPS** already counted this insulin as basal. The extra pulses only make the pod deliver what **AAPS** thinks was delivered.
+
+#### Enable Basal Drift Fix in AAPS
+
+You must be running AAPS Version 3.4.2.3 or later for this feature.
+
+The Basal Drift Fix is not enabled by default on AAPS.
+
+**To enable it:**
+
+1. Create an empty file named `omnipod_drift_compensation` (2) in the `extra` (1) subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+
+   ![dash_drift_enable_file](../images/DASH_images/DASH_Drift/dash_drift_enable_file.png)
+
+   ***NOTE:** Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.*
+
+2. Restart **AAPS**. This must be done for it to recognise the file is present and enable the drift compensation feature.
+3. Please visit this [Github issue #4783](https://github.com/nightscout/AndroidAPS/issues/4783) and thumbs up the first post indicating you are using this feature, we need this data to help demonstrate the feature is widely used. Once there is significant community adoption the removal of the enable file will be possible, we appreciate your support here.
+
+(omnipod-dash-drift-compensation-check)=
+
+#### Check that the drift compensation is working
+
+Compare what the pod delivered over a full day with what **AAPS** counted for the same day. Pick a day that is over: the check needs the full 24 hours.
+
+1. Go to the **DASH** tab (1) and press **POD MGMT** (2), then press **Pod history**. See [View Pod History](#omnipod-dash-view-pod-history).
+
+   ![dash_drift_tab_pod_mgmt](../images/DASH_images/DASH_Drift/dash_drift_tab_pod_mgmt.png)
+
+2. Note the **Total delivered** value of the entry closest to 00:00 at the start of the day (3), and of the entry closest to 24:00 at the end of the day (4). The difference is the insulin the pod delivered that day.
+
+   ![dash_drift_pod_stats_start](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_start.png)   ![dash_drift_pod_stats_end](../images/DASH_images/DASH_Drift/dash_drift_pod_stats_end.png)
+
+   In this example: 73.40 U (4) − 38.15 U (3) = 35.25 U delivered by the pod.
+
+3. Open the [AAPS statistics](#reviewing-statistics) and find the same day in the **TDD** table. Note the total in the **∑** column (5).
+
+   ![dash_drift_tdd](../images/DASH_images/DASH_Drift/dash_drift_tdd.png)
+
+4. Compare the two values. With the drift compensation working, they should differ by no more than 0.05 U. Without it, the pod total is usually clearly lower than the **AAPS** TDD.
+
+   In this example, the **AAPS** TDD is 35.3 U and the pod delivered 35.25 U: the drift compensation is working.
+
+***NOTE:** The **Pod history** only covers the active pod. If you changed pods during the day, choose another day.*
 
 ## Troubleshooting
 
-(omnipod-dash-delivery-suspended)=
+(omnipod-dash-troubleshooting)=
 
 This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
 
@@ -497,6 +582,9 @@ This section covers common known issues and solutions for Omnipod DASH use with 
 For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
+
+(omnipod-dash-delivery-suspended)=
+
 ### Delivery suspended
 
   - There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.

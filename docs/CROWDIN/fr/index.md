@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 4 June 2026 : Version 3.4.2.3 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+ 2 August 2026 : Version 3.4.2.6 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
 
 ```
 
@@ -21,7 +21,7 @@ Cette section vous prépare techniquement à assembler aussi rapidement et effic
 
 Maintenant que vous avez une bonne compréhension du processus, vous pouvez démarrer l'assemblage de votre boucle **AAPS**.
 
-Vous trouverez les instructions détaillées pour ce faire dans le chapitre **3) Installation d'AAPS**. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. Ce chapitre décrit également la configuration de l'application **AAPS** à l'aide de l'Assistant de configuration, pour qu'il puisse communiquer avec votre application MGC et avec une pompe à insuline réelle ou virtuelle, ainsi qu'en liant **AAPS** à votre serveur de reporting. Vous serez ensuite petit à petit guidé dans l'utilisation d'**AAPS**, via un processus progressif, sécurisé et soigneusement calibré. Ce processus est conçu pour s'assurer que vous/votre enfant connaissez bien et êtes à l'aise dans la navigation entre les différents menus et sous-menus de configuration avant de passer à la phase suivante. Ces phases sont communément appelées Objectifs, et visent à vous faire acquérir suffisamment d'expérience pour pouvoir commencer à utiliser les fonctionnalités les plus avancées de l'application. Ces objectifs sont conçus spécifiquement de manière à débloquer progressivement plus de possibilités dans **AAPS** et à passer de la boucle ouverte à la boucle fermée.
+Vous trouverez les instructions détaillées pour ce faire dans le chapitre **3) Installation d'AAPS**. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone, including [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed. Ce chapitre décrit également la configuration de l'application **AAPS** à l'aide de l'Assistant de configuration, pour qu'il puisse communiquer avec votre application MGC et avec une pompe à insuline réelle ou virtuelle, ainsi qu'en liant **AAPS** à votre serveur de reporting. Vous serez ensuite petit à petit guidé dans l'utilisation d'**AAPS**, via un processus progressif, sécurisé et soigneusement calibré. Ce processus est conçu pour s'assurer que vous/votre enfant connaissez bien et êtes à l'aise dans la navigation entre les différents menus et sous-menus de configuration avant de passer à la phase suivante. Ces phases sont communément appelées Objectifs, et visent à vous faire acquérir suffisamment d'expérience pour pouvoir commencer à utiliser les fonctionnalités les plus avancées de l'application. Ces objectifs sont conçus spécifiquement de manière à débloquer progressivement plus de possibilités dans **AAPS** et à passer de la boucle ouverte à la boucle fermée.
 
 Le chapitre **4) Utilisation d'AAPS** couvre les principales fonctionnalités d'**AAPS**, pour vous aider à utiliser (et personnaliser) **AAPS**. Vous y trouverez des explications sur les écrans de l'application, les glucides actifs, la sensibilité, le changement de profil, les cibles temporaires, les glucides étendus (ou eCarbs), les automatisations et la SI Dynamique. On y parle également de sujets tels que la gestion de différents types de repas, le changement de cathéter ou de capteur, les mises à jour du smartphone, les changements d'heure, [voyager avec AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) et faire du sport. Les questions et réponses courantes se trouvent dans la section de dépannage.
 
@@ -94,6 +94,7 @@ Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Android Studio Build <./SettingUpAaps/ComputerBuild.md>
 - CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
 Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
@@ -147,9 +148,10 @@ Site d'échange des cadrans personnalisés <./ExchangeSiteCustomWatchfaces/index
 Export/Import Settings <./Maintenance/ExportImportSettings.md>
 Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+End of life <./Maintenance/EndOfLife.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
 - Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
@@ -160,16 +162,18 @@ Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
 General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
 - Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
 Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
 Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
 Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
-:caption: 9) Options avancées d'AAPS
+:caption: 9) Advanced AAPS options
 
-Boucle fermée complète <./AdvancedOptions/FullClosedLoop.md>
-Branche de développement <./AdvancedOptions/DevBranch.md>
+Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
+Dev branch <./AdvancedOptions/DevBranch.md>
+Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
 Autotune <./AdvancedOptions/Autotune.md>
 
 ```

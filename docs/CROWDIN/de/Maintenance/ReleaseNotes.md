@@ -9,7 +9,9 @@ Wenn eine neue Version verfügbar wird, wirst Du mit einer Meldung, wie dieser, 
 
 Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird **AAPS** in den „Open Loop“ wechseln.
 
-**ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. Dies ist eine Chance die Sicherheit für jeden **AAPS**-Nutzenden und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
+Die Enddaten der AAPS-Versionen findest Du unter [Supportende](EndOfLife.md).
+
+**Ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. Dies ist eine Chance die Sicherheit für jeden **AAPS**-Nutzenden und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
 
 (maintenance-android-version-aaps-version)=
 
@@ -54,7 +56,24 @@ WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsW
 
 (latestrelease)=
 
-(version3423)=
+(version3426)=
+
+## Version 3.4.2.6
+
+- Equil: Verbesserung der Stabilität @MilosKozak
+
+(version3425)=
+
+## Version 3.4.2.5
+
+- Equil: Race Condition behoben @MilosKozak
+
+(version3424)=
+
+## Version 3.4.2.4
+
+- Equil: Fehlerbehebungen @MilosKozak
+- NS: Profilsynchronisation korrigiert @MilosKozak
 
 ## Version 3.4.2.3
 - Dash: Drift-Problem behoben @nl-ruud
@@ -217,6 +236,8 @@ Erscheinungsdatum: 27.03.2025
 ### So wird aktualisiert
 
 * Um diese Version zu erstellen, benötigst Du die [Android Studio Version „Meerkat“](#Building-APK-recommended-specification-of-computer-for-building-apk-file) oder höher. Auch wenn Du bereits eine 3.3.x-Version erstellt hast, musst Du das Android Studio erneut aktualisieren.
+
+(version-enforcement)=
 
 ### Beginnend mit dieser Version, wurde die Benachrichtigung und die Pflicht auf die neueste Version aktualisieren zu müssen vereinfacht und aufgeweicht. Das Vorgehen ist wie folgt:
 *  Frist läuft nicht ab, wenn das Gerät offline ist (wenn keine Verbindung zum Internet besteht). D. h. es gibt keine 60- und 90-Tage „Übergangsfristen“ mehr.

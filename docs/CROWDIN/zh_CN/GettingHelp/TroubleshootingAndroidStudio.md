@@ -9,7 +9,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## 丢失密钥库
-如果更新 **AAPS** 时使用相同的密钥库，则无需卸载手机上的旧版本。 因此建议将密钥库存储在安全位置。
+如果更新 **AAPS** 时使用相同的密钥库，则无需卸载手机上的旧版本。因此建议将密钥库存储在安全位置。
 
 如果尝试安装使用不同密钥库签名的 apk 文件，将出现安装失败的提示！
 
@@ -28,7 +28,7 @@
 9. 保持闭环运行
 
 ## Gradle 同步失败
-Gradle 同步可能因多种原因失败。 当提示"Gradle sync failed"时，请点击 Android Studio 底部"Build"标签(1)查看具体错误信息(2)
+Gradle 同步可能因多种原因失败。当提示"Gradle sync failed"时，请点击 Android Studio 底部"Build"标签(1)查看具体错误信息(2)
 
 ![Gradle 同步失败](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
@@ -49,8 +49,7 @@ Gradle 同步可能因多种原因失败。 当提示"Gradle sync failed"时，�
 ```
 Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
-存在未提交的更改。
-请按照 wiki 重新克隆源码并禁止 gradle 更新
+存在未提交的更改。请按照 wiki 重新克隆源码并禁止 gradle 更新
 ```
 
 #### 步骤 1 - 检查 Git 安装
@@ -63,7 +62,7 @@ Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
     注意：git 和 version 之间有一个空格和两个连字符！
 
-  * 若显示 Git 版本号（如上图）， 请继续[步骤 2](#troubleshooting-android-studio-check-for-uncommitted-changes)
+  * 若显示 Git 版本号（如上图），请继续[步骤 2](#troubleshooting-android-studio-check-for-uncommitted-changes)
 
   * 若提示：
     ```
@@ -81,7 +80,7 @@ Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
     记录所在目录路径
 
-  * 转到Windows中的环境变量，选择变量“PATH”并点击编辑。 添加 Git 所在目录
+  * 转到Windows中的环境变量，选择变量“PATH”并点击编辑。添加 Git 所在目录
 
   * 保存并关闭
 
@@ -99,9 +98,9 @@ Build file 'C:\Data\50-Android\AndroidAPS\app\build.gradle.kts' line: 243
 
       ![回滚更改](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * 文件将从 Git 服务器重新获取。 若无其他更改，继续[步骤 3](#gradle-resync)
+    * 文件将从 Git 服务器重新获取。若无其他更改，继续[步骤 3](#gradle-resync)
 
-  * 若存在"Unversioned Files"，可能是误将文件存入源码目录。 重要文件（如密钥库）应移至其他位置。 若不确定文件来源且非自行创建，可删除
+  * 若存在"Unversioned Files"，可能是误将文件存入源码目录。重要文件（如密钥库）应移至其他位置。若不确定文件来源且非自行创建，可删除
 
     * 使用文件管理器移动或剪切文件至安全位置
 
@@ -163,12 +162,12 @@ git config --global user.email 您的邮箱@example.com
 
 ![打开 Gradle 设置](../images/studioTroubleshooting/161_GradleSettings.png)
 
-3.  在“Gradle JDK”字段中，检查是否已选择正确的版本（1）。若未选择，点击该字段查看列表中是否已有目标版本。​ 下方示例显示JVM 21对应的选项标记为“jbr-21”。 若列表中已有，直接选中即可完成配置。 若未找到，点击字段选择"Download JDK"
+3.  在“Gradle JDK”字段中，检查是否已选择正确的版本（1）。若未选择，点击该字段查看列表中是否已有目标版本。​ 下方示例显示JVM 21对应的选项标记为“jbr-21”。若列表中已有，直接选中即可完成配置。若未找到，点击字段选择"Download JDK"
 
 
 ![选择 JDK 17](../images/studioTroubleshooting/162_DownloadJDK.png)
 
-4. 在版本(1)中选择 **AAPS** 要求的 JDK， 供应商(2)任选， 位置(3)保持默认。
+4. 在版本(1)中选择 **AAPS** 要求的 JDK，供应商(2)任选，位置(3)保持默认。
 
 ![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
 
@@ -180,11 +179,11 @@ git config --global user.email 您的邮箱@example.com
 
   若出现如下错误：
 
-`项目使用了不兼容的 Android Gradle 插件版本 (AGP x.x.x)。 最新支持版本为 AGP x.x.x`
+`项目使用了不兼容的 Android Gradle 插件版本 (AGP x.x.x)。最新支持版本为 AGP x.x.x`
 
   ![不兼容的 Android Gradle 插件版本](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  说明 Android Studio 版本过旧。 通过菜单 Help > Check for updates 更新 Android Studio 及其插件。
+  说明 Android Studio 版本过旧。通过菜单 Help > Check for updates 更新 Android Studio 及其插件。
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 ### 无法解析/无缓存版本
@@ -232,7 +231,7 @@ git config --global user.email 您的邮箱@example.com
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-此为假性警告。 检查输出目录即可找到生成的 apk 文件。
+此为假性警告。检查输出目录即可找到生成的 apk 文件。
 
 
 ## 应用生成时存在编译器/Kotlin 警告
@@ -246,7 +245,7 @@ APK 已成功生成，可传输至手机安装。
 
 ## AAPS 未接收 CGM 数据
 
-* 若使用修改版 Dexcom G6 应用：该版本已过时， 请改用[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
+* 若使用修改版 Dexcom G6 应用：该版本已过时，请改用[BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 
 * 若使用 xDrip+：按[xDrip+ 设置页面](#xdrip-identify-receiver)标识接收器
 
@@ -287,7 +286,7 @@ APK 已成功生成，可传输至手机安装。
 
 ## 最坏的情况
 
-若问题仍未解决，可尝试完全卸载 Android Studio 后重新安装。  部分用户发现此操作可解决其构建问题。  卸载Android Studio时，请勿删除Android用户设置，并**确保卸载所有与之相关的文件**。若未彻底移除包括隐藏文件在内的所有Android Studio文件，卸载操作可能引发新问题而非解决现有问题。 完整的卸载指南可在线查找，例如：
+若问题仍未解决，可尝试完全卸载 Android Studio 后重新安装。部分用户发现此操作可解决其构建问题。卸载Android Studio时，请勿删除Android用户设置，并**确保卸载所有与之相关的文件**。若未彻底移除包括隐藏文件在内的所有Android Studio文件，卸载操作可能引发新问题而非解决现有问题。完整的卸载指南可在线查找，例如：
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10)
 

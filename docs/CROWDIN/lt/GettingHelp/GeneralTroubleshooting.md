@@ -16,6 +16,8 @@ Additional useful information might also be available in the [FAQ](../UsefulLink
 
 * [Prarasta raktų saugykla](#troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
+* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
+* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
 
 ### **Installing**
 

@@ -25,7 +25,7 @@ When there are additional settings available within the module, you can click on
 
 (ConfigBuilder_Profile)=
 
-## Profile
+## Профиль
 
 This module can not be disabled as it is a core part of **AAPS**.
 
@@ -35,7 +35,7 @@ See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic underst
 
 ## Инсулин
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![Тип инсулина](../images/ConfBuild_Insulin_AAPS30.png)
 
 Select the type of insulin you are using.
 
@@ -43,7 +43,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 ### Различия типов инсулина
 
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape.
+* Варианты 'Быстро действующий Oref', Сверхбыстрый Oref' и 'Безпиковый Oref' имеют вид экспоненты.
 * For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
 * Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
 * The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the different curves.
@@ -72,7 +72,7 @@ More information to understand the Insulin Profile as shown in **AAPS** [here](#
 
 * special insulin profile for Lyumjev
 * DIA (длительность действия инсулина) = по крайней мере 5.0 часов
-* Макс. peak = 45 minutes after injection (fixed, not adjustable)
+* Макс. пик = 45 мин после инъекции (фиксированный, не регулируется)
 
 #### Безпиковый Oref
 

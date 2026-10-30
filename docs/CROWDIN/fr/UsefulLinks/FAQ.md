@@ -59,6 +59,8 @@ Il y a plusieurs blogs avec de bons conseils pour vous aider à comprendre les a
 - [Limiter les pics de repas](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 - [Hormones et autosens](https://seemycgm.com/2017/06/06/hormones-2/) Voir ma MGC
 
+(FAQ-emergency-equipment)=
+
 ### What emergency equipment is recommended to take with me?
 
 Vous devez avoir le même équipement d'urgence avec vous, comme tous les autres diabétique de T1 avec une pompe à insuline. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
@@ -236,6 +238,8 @@ Vous pouvez montrer vos rapports Nightscout (https://YOUR-NS-SITE.com/report) ou
 ### AAPS stops everyday around the same time.
 
 Arrêter la protection Google Play. Vérifiez que les applications "nettoyant" (par ex. CCleaner, etc.) et désinstallez-les. AAPS / Menu 3 points / À propos / Suivre le lien "Garder l'application en cours d'exécution en arrière-plan" pour arrêter toutes les optimisations de batterie.
+
+(FAQ-organize-backups)=
 
 ### How to organize my backups ?
 

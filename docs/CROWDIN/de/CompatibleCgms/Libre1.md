@@ -24,7 +24,7 @@ Einige dieser Bridges sind noch auf dem Markt verfügbar:
 ## 2. Diabox verwenden
 
 - Diabox ist die Herteller-App für den Bubble.
-- Installiere [Diabox](https://t.me/s/DiaboxApp). In den Einstellungen, Integration, aktiviere Sie Datenfreigabe für andere Apps.
+- Installiere [Diabox](https://t.me/s/DiaboxApp). In den Einstellungen, Integration, aktiviere die Datenfreigabe für andere Apps.
 
 ![Diabox](../images/Diabox.png)
 

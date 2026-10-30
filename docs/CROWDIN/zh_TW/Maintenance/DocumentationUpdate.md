@@ -1,14 +1,22 @@
 # 文件更新與變更
 
+## 2026年10月
+
+- [使用 AAPS Builder 的瀏覽器建置](#aaps-builder)：建置工作流程第 6 版。建置步驟現在使用由審核的精確版本（GitHub 的工具與建置機器），而且當錯誤的文字被貼到 `KEYSTORE_SET` 機密時，建置流程會清楚說明問題。[設定頁面](#aaps-builder-setup) 現已納入文件並提供翻譯，會檢查你的 GitHub 使用者名稱，並針對機密、「Page not found」(404)、Chrome 分頁與 GitHub 應用程式提供更清楚的說明。如果你的 `.github/workflows/build.yml` 顯示第 5 版或更早，請依 [更新 AAPS](#aaps-builder-updates) 中的說明進行替換 @psonnera
+
+## 2026年6月
+
+- [瀏覽器建置](#browser-build)：已重構為決策優先的多頁流程（Fork → 金鑰庫選項 1／選項 2，且每個裝置有專屬頁面 → Google Drive → 建置 → 疑難排解）；移除了巢狀分頁，並將安裝 File Manager Plus 設為醒目的步驟 @psonnera
+
 ## 2026年3月
 
 - [新增 CLI 建置選項](../SettingUpAaps/CLIBuild.md) @je-l
-- 將 *Computer Build* 重新命名為 *Android Studio Build*。 保留檔案名稱以用於 URL。
+- 將 *Computer Build* 重新命名為 *Android Studio Build*。保留檔案名稱以用於 URL。
 
 ## 2025年1月
 
 - [3.4](#version3400) 版發佈與文件更新彙總（嚮導、電腦建置版本、組態建置工具）
-- CGM 清單更新。 已移除 Dexcom G5、Tomato、Glimp。
+- CGM 清單更新。已移除 Dexcom G5、Tomato、Glimp。
 - [部位輪替介面](#Aapsscreens-site-rotation)
 - [運行模式](#AapsScreens-running-mode)
 - [自動調整](../AdvancedOptions/Autotune.md)
@@ -59,7 +67,7 @@
 
 2022年3月到2024年9月的歷史紀錄遺失
 
-隨著 3.2 的重製，一些過時的信息已被移除。 你可以在之前的文件版本中找到它：
+隨著 3.2 的重製，一些過時的信息已被移除。你可以在之前的文件版本中找到它：
 
 AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.html) 獲得。
 

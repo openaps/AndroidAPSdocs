@@ -1,4 +1,8 @@
-# Mit einem Browser aktualisieren
+# Browser-Update (Fork)
+
+```{tip}
+Du hast AAPS mit dem **AAPS Builder** erstellt? Dann brauchst Du diese Seite nicht. Siehe [Aktualisieren mit dem AAPS Builder](#aaps-builder-updates).
+```
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
@@ -7,6 +11,10 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 ```{note}
 Falls Du **AAPS** zum ersten Mal mit einem Browser aktualisieren möchtest: Kopiere Deine gesicherte Keystore-Datei auf Dein Google Drive. Folge dann dem [Prozess für den **AAPS**-Browser Build](../SettingUpAaps/BrowserBuild.md) und nicht dieser Anleitung. Anstatt einen neuen Keystore zu erstellen, wählst Du den Keystore aus, den Du von Deinem Computer kopiert hast.
 Das musst Du nur beim ersten Mal machen. Für die danach folgenden Updates, kannst Du dann dieser Anleitung folgen.
+```
+
+```{tip}
+**Umstieg auf den AAPS Builder?** Der [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) ist der einfachere Browser-Build: Es gibt keinen Fork, der synchronisiert werden muss, und Du lädst die App direkt von GitHub herunter. Umsteigen musst Du nicht, diese Anleitung funktioniert weiterhin. Wenn Du umsteigst, besorge Dir zuerst eine Kopie Deines Keystores aus Deinem Fork, wie unter [Umstieg vom bisherigen Browser-Build](#aaps-builder-from-fork) beschrieben. Sonst kann der neue Build das AAPS auf Deinem Smartphone nicht aktualisieren.
 ```
 
 ## Übersicht zum Aktualisieren auf eine neue AAPS-Version mit einem Browser

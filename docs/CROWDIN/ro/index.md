@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 4 June 2026 : Version 3.4.2.3 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+ 2 August 2026 : Version 3.4.2.6 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
 
 ```
 
@@ -21,7 +21,7 @@ Secțiunea **2) Noțiuni de bază**, [Introducere](Getting-Started/Introduction.
 
 Acum că aveți o înțelegere solidă a procesului, puteți începe să faceți sistemul de buclă închisă **AAPS**.
 
-Secțiunea **3) Configurarea AAPS** conține instrucțiuni pas cu pas pentru a face acest lucru. Acoperă alegerea și [configurarea serverului dumneavoastră de raportare](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout sau Tidepool) astfel încât să puteți analiza și partaja datele dumneavoastră, pregătirea pentru construirea aplicației AAPS, construirea efectivă a aplicației AAPS și transferarea aplicației AAPS pe telefonul dumneavoastră. Acoperă, de asemenea, configurarea aplicației **AAPS** prin folosirea asistentului de configurare, conectarea la aplicația CGM, și fie o pompă virtuală de insulină, fie una reală, precum și conectarea **AAPS** la serverul unde se vor strânge rapoartele. Sunteți apoi introdus treptat în utilizarea integrală a ceea ce **AAPS** are de oferit printr-un proces pas cu pas sigur și atent calibrat, conceput pentru a te asigura că dumneavoastră și copilul dumneavoastră vă familiarizați în întregime și sunteți confortabili în navigarea prin toate diferitele niveluri și configurații de meniu înainte de a trece la următoarea fază, denumită în mod obișnuit următorul "Obiectiv", până când aveți suficientă experiență pentru a începe să folosiți opțiunile mai avansate disponibile în cadrul aplicației. Aceste Obiective sunt special concepute astfel încât să deblocheze treptat mai multe posibilități din cadrul **AAPS** și să treacă de la Bucla Deschisă la Bucla Închisă.
+Secțiunea **3) Configurarea AAPS** conține instrucțiuni pas cu pas pentru a face acest lucru. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone, including [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed. Acoperă, de asemenea, configurarea aplicației **AAPS** prin folosirea asistentului de configurare, conectarea la aplicația CGM, și fie o pompă virtuală de insulină, fie una reală, precum și conectarea **AAPS** la serverul unde se vor strânge rapoartele. Sunteți apoi introdus treptat în utilizarea integrală a ceea ce **AAPS** are de oferit printr-un proces pas cu pas sigur și atent calibrat, conceput pentru a te asigura că dumneavoastră și copilul dumneavoastră vă familiarizați în întregime și sunteți confortabili în navigarea prin toate diferitele niveluri și configurații de meniu înainte de a trece la următoarea fază, denumită în mod obișnuit următorul "Obiectiv", până când aveți suficientă experiență pentru a începe să folosiți opțiunile mai avansate disponibile în cadrul aplicației. Aceste Obiective sunt special concepute astfel încât să deblocheze treptat mai multe posibilități din cadrul **AAPS** și să treacă de la Bucla Deschisă la Bucla Închisă.
 
 Secțiunea **4) Viața zilnică cu AAPS** acoperă funcțiile cheie **AAPS** pentru a te ajuta să utilizezi (și personalizezi)  **AAPS**. Acest lucru include înțelegerea ecranelor, a carbohidraților-la-bord, sensibilității, schimbarea profilelor, ținte temporare, carbohidrați extinși (sau e-carbohidrați), automatizări și DynamicISF. Acoperă de asemenea subiecte des întâlnite cum ar fi gestionarea diferitelor tipuri de mese, modul de abordare al schimbărilor de canulă și de senzor, actualizările telefoanelor inteligente, schimbările cu ora de vară, [călătoritul cu AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) și sporturile. Întrebările obișnuite și răspunsurile sunt localizate în secțiunea de depanare.
 
@@ -92,6 +92,7 @@ Building AAPS <./SettingUpAaps/BuildingAaps.md>
 - Android Studio Build <./SettingUpAaps/ComputerBuild.md>
 - CLI Build <./SettingUpAaps/CLIBuild.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
 Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
 Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
@@ -145,9 +146,10 @@ Site de schimb pentru fețele personalizate <./ExchangeSiteCustomWatchfaces/inde
 Export/Import Settings <./Maintenance/ExportImportSettings.md>
 Reviewing your data <./Maintenance/Reviewing.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+End of life <./Maintenance/EndOfLife.md>
 Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update <./Maintenance/UpdateBrowserBuild.md>
+- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
 - Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
@@ -158,16 +160,18 @@ Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
 General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
 - Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
 Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
 Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
 Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
-:caption: 9) Facilități avansate AAPS
+:caption: 9) Advanced AAPS options
 
-Buclă complet închisă <./AdvancedOptions/FullClosedLoop.md>
-Ramura dev <./AdvancedOptions/DevBranch.md>
+Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
+Dev branch <./AdvancedOptions/DevBranch.md>
+Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
 Autotune <./AdvancedOptions/Autotune.md>
 
 ```

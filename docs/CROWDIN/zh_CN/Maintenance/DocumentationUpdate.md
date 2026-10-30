@@ -1,5 +1,13 @@
 # 文档更新与变更
 
+## October 2026
+
+- [Browser build with AAPS Builder](#aaps-builder): build workflow version 6. The build steps now use exact, reviewed versions of GitHub's tools and build machine, and the build explains clearly when the wrong text was pasted into the `KEYSTORE_SET` secret. The [setup page](#aaps-builder-setup) is now part of the documentation and translated, checks your GitHub username, and has clearer help for the secret, "Page not found" (404), Chrome tabs and the GitHub app. If your `.github/workflows/build.yml` says version 5 or earlier, replace it as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
+
+## June 2026
+
+- [Browser Build](#browser-build): restructured into a decision-first, multi-page flow (Fork → keystore Option 1/Option 2 with a dedicated page per device → Google Drive → Build → Troubleshooting); removed nested tabs and made installing File Manager Plus a prominent step @psonnera
+
 ## March 2026
 
 - [Add CLI Build option](../SettingUpAaps/CLIBuild.md) @je-l
@@ -59,7 +67,7 @@
 
 （注：缺失2022年3月至2024年9月的历史记录）
 
-伴随3.2版本的重新设计，一些过时信息已被移除。 您可以在旧版文档中找到这些信息：
+伴随3.2版本的重新设计，一些过时信息已被移除。您可以在旧版文档中找到这些信息：
 
 AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html)可查阅。
 

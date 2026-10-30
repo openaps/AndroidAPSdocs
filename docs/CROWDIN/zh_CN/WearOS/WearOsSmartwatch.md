@@ -59,11 +59,11 @@ YouTube上有许多第三方视频可以帮助您熟悉新智能手表，例如�
 
 [https://www.youtube.com/watch?v=tSVkqWNmO2c](https://www.youtube.com/watch?v=tSVkqWNmO2c)
 
-“Galaxy Wearable”应用中也包含有说明手册部分。 在手机上打开Galaxy Wearable，搜索手表，尝试将手表与手机配对。 根据您的版本，这可能会提示您从Play商店安装进一步的第三方应用“galaxy watch 4 plugin”（下载需要一些时间）。 在手机上安装此应用，然后再次尝试在Wearable应用中配对手表和手机。 完成一系列菜单并勾选各种偏好设置。
+“Galaxy Wearable”应用中也包含有说明手册部分。在手机上打开Galaxy Wearable，搜索手表，尝试将手表与手机配对。根据您的版本，这可能会提示您从Play商店安装进一步的第三方应用“galaxy watch 4 plugin”（下载需要一些时间）。在手机上安装此应用，然后再次尝试在Wearable应用中配对手表和手机。完成一系列菜单并勾选各种偏好设置。
 
 ## 设置Samsung账户
 
-您需要确保用于设置Samsung账户的电子邮件账户的出生日期表明用户年满13岁，否则Samsung权限将非常难以批准。 如果您为未满13岁的孩子提供了一个Gmail账户，并且正在使用该电子邮件地址，则不能简单地将其更改为成人账户。 一种解决方法是修改当前出生日期，使其当前年龄为12岁363天。 第二天，账户将转换为成人账户，您可以继续设置Samsung账户。
+您需要确保用于设置Samsung账户的电子邮件账户的出生日期表明用户年满13岁，否则Samsung权限将非常难以批准。如果您为未满13岁的孩子提供了一个Gmail账户，并且正在使用该电子邮件地址，则不能简单地将其更改为成人账户。一种解决方法是修改当前出生日期，使其当前年龄为12岁363天。第二天，账户将转换为成人账户，您可以继续设置Samsung账户。
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -71,7 +71,7 @@ YouTube上有许多第三方视频可以帮助您熟悉新智能手表，例如�
 
 您可以通过以下方式之一将Wear.apk从Android Studio加载到手机上：
 
-a) 使用USB电缆将AAPS Wear apk文件放到手机上，然后“侧载”到手表上。 将Wear.apk通过USB传输到手机的下载文件夹中；或
+a) 使用USB电缆将AAPS Wear apk文件放到手机上，然后“侧载”到手表上。将Wear.apk通过USB传输到手机的下载文件夹中；或
 
 b) 将Wear.apk从Android Studio剪切并粘贴到您的Gdrive上。
 
@@ -82,11 +82,10 @@ To side-load AAPS onto the watch You can use either: 1) Wear Installer 2 2) Easy
 
  ![image](../images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
-Wear Installer 2由[Malcolm Bryant](https://www.youtube.com/@Freepoc)开发，可以从Google Play下载到您的手机上，并可用于将AAPS Wear应用侧载到手表上。 该应用包含一个方便的“如何侧载”的[视频](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
+Wear Installer 2由[Malcolm Bryant](https://www.youtube.com/@Freepoc)开发，可以从Google Play下载到您的手机上，并可用于将AAPS Wear应用侧载到手表上。该应用包含一个方便的“如何侧载”的[视频](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
 
 ```{tip}
-对于Wear OS 5手表，请参考[此视频](https://www.youtube.com/watch?v=yef_qGvcCnk)。
-故障排查见[下文](#BuildingAapsWearOs-WearOS5-TShoot)。
+对于Wear OS 5手表，请参考[此视频](https://www.youtube.com/watch?v=yef_qGvcCnk)。故障排查见[下文](#BuildingAapsWearOs-WearOS5-TShoot)。
 ```
 
 这提供了所有必要的详细信息（最好在单独的设备上打开视频，以便在设置手机的同时观看）。
@@ -113,7 +112,7 @@ Go to settings >about watch (bottom option) -> software info -> software version
 
 Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
 
-在“开发者选项”中，打开“ADB调试”和“无线调试”。 后者选项将显示手表的IP地址，该地址的最后两位数字每次手表与新手机配对时都会更改。 It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits). 请注意，此地址的最后两位数字（此处为“20”）在每次您为AAPS更换新手机时都会更改。
+在“开发者选项”中，打开“ADB调试”和“无线调试”。后者选项将显示手表的IP地址，该地址的最后两位数字每次手表与新手机配对时都会更改。 It will be something like: **192.168.1.214**.5555 (ignore the last 4 digits). 请注意，此地址的最后两位数字（此处为“20”）在每次您为AAPS更换新手机时都会更改。
 
 ![image](../images/wearos/easyfire04.png)
 
@@ -161,11 +160,11 @@ You will see a Wi-Fi paring code and IP address and port appearing: ![image](../
 
 ### Wear OS 5通用故障排查
 
-- 请勿使用Wi-Fi热点共享。 该方式无法使用。
-- 无需在手机上启用ADB调试（仅需在手表端开启）。 请在手机设置中关闭ADB调试功能。
+- 请勿使用Wi-Fi热点共享。该方式无法使用。
+- 无需在手机上启用ADB调试（仅需在手表端开启）。请在手机设置中关闭ADB调试功能。
 - 确保设备处于同一局域网（避免使用访客网络）
 - For GW7 you need to install using Wear Installer 2 as it gives you the option to select the AAPS (Custom) watchface on installation.
-- 请确保手表和手机处于同一Wi-Fi网络下， 特别注意使用Wi-Fi中继器或接入点可能引发连接问题。
+- 请确保手表和手机处于同一Wi-Fi网络下，特别注意使用Wi-Fi中继器或接入点可能引发连接问题。
 - 确保设备靠近主路由器，必要时重启设备。
 
 **配对流程:**
@@ -174,7 +173,7 @@ You will see a Wi-Fi paring code and IP address and port appearing: ![image](../
 - Wear Installer：输入IP地址
 - 选择"新配对"，记录配对码与端口号
 - Wear Installer：输入"配对码+空格+端口号"。
-- Wear Installer应显示"配对成功"。 若未显示，请退出Wear Installer后重新尝试。
+- Wear Installer应显示"配对成功"。若未显示，请退出Wear Installer后重新尝试。
 
 完成配对后即可安装AAPS wear apk：
 
@@ -194,7 +193,7 @@ The final step is to configure **AAPS** on the phone to interact with **Wear.apk
 
 ![Wear OS](../images/WearOS.png)
 
-要更改为不同的**AAPS**表盘，请按手表的主屏幕，它将转到“自定义”。 然后向右滑动，直到您看到所有**AAPS**表盘。
+要更改为不同的**AAPS**表盘，请按手表的主屏幕，它将转到“自定义”。然后向右滑动，直到您看到所有**AAPS**表盘。
 
 如果已成功将**AAPS** Wear.apk侧载到智能手表上，它将如下所示：
 
@@ -212,7 +211,7 @@ For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Sa
 2.  检查智能手表是否已连接到互联网（而不仅仅是通过蓝牙连接到手机）。
 3.  检查**AAPS**手机和智能手表是否已在Samsung应用中配对或链接。
 4.  重启手机和智能手表（即关闭并重新打开）也可能有所帮助。
-5.  假设您已成功将Wear.apk下载到手机上，但未收到任何BG数据，_请检查_您是否已将正确的**AAPS** apk版本侧载到手表上。 如果您的AAPS wear.apk版本列为以下任一项： a)“wear-AAPSClient-release”； b)‘wear-full-release.aab’；或 c)标题中出现“debug”， 则您在构建过程中未选择正确的Wear OS apk版本。
+5.  假设您已成功将Wear.apk下载到手机上，但未收到任何BG数据，_请检查_您是否已将正确的**AAPS** apk版本侧载到手表上。如果您的AAPS wear.apk版本列为以下任一项： a)“wear-AAPSClient-release”； b)‘wear-full-release.aab’；或 c)标题中出现“debug”， 则您在构建过程中未选择正确的Wear OS apk版本。
 6.  检查您的路由器是否将设备彼此隔离。
 
 更多故障排除提示可在此处找到[here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
@@ -221,13 +220,13 @@ For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Sa
 
 ## 在您的WearOS手表上更改为AAPS表盘
 
-在标准构建的AAPS Wear OS APK中有多个表盘可供选择。 一旦您在手表上安装了AAPS Wear APK，它们将可用。 以下是选择表盘的步骤：
+在标准构建的AAPS Wear OS APK中有多个表盘可供选择。一旦您在手表上安装了AAPS Wear APK，它们将可用。以下是选择表盘的步骤：
 
 1. 在您的手表上（假设是WearOS），长按当前表盘以调出表盘选择器屏幕，并一直向右滚动，直到您看到“添加表盘”按钮并选择它
 
 ![Screenshot_20231123_124657_sysui](../images/efd4268f-0536-4a31-9ba1-f98108f32483.png)
 
-2. 滚动到列表底部，直到您看到“已下载”部分，找到“AAPS（自定义）”并点击图像中间部分将其添加到当前表盘的短列表中。 不用担心“AAPS（自定义）”表盘的当前外观，我们将在下一步中选择您喜欢的皮肤。
+2. 滚动到列表底部，直到您看到“已下载”部分，找到“AAPS（自定义）”并点击图像中间部分将其添加到当前表盘的短列表中。不用担心“AAPS（自定义）”表盘的当前外观，我们将在下一步中选择您喜欢的皮肤。
 
 ![Screenshot_20231123_124619_sysui](../images/036dc7c4-6672-46c8-b604-8810a16a2eb3.png)
 
@@ -239,7 +238,7 @@ For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Sa
 
 ![Screenshot_20231123_130410_AAPS](../images/adde2eca-1df7-4382-b9ab-346819c35d9d.png)
 
-5. 检查您的手表，“AAPS（自定义）”表盘现在应该显示您选择的皮肤。 给它几秒钟刷新。 您现在可以通过长按表盘，然后点击表盘图像上的“自定义”按钮来自定义小部件等。
+5. 检查您的手表，“AAPS（自定义）”表盘现在应该显示您选择的皮肤。给它几秒钟刷新。您现在可以通过长按表盘，然后点击表盘图像上的“自定义”按钮来自定义小部件等。
 
 ## APSv2 watchface - Legend
 

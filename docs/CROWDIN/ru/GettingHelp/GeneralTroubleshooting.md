@@ -16,6 +16,8 @@
 
 * [Потеряно хранилище ключей](#troubleshooting_androidstudio-lost-keystore)
 * [Устранение неполадок Android Studio](TroubleshootingAndroidStudio)
+* [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) and [updating with AAPS Builder](#aaps-builder-updates)
+* [Browser build (CI) troubleshooting](#aaps-ci-troubleshooting)
 
 ### **Installing**
 
@@ -26,7 +28,7 @@ Ignore it: More details, Install anyway.
 ![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
 
 ### **Настройки**
-* Profile
+* Профиль
 
   ![Ошибка: Базал не выровнен по часам](../images/Screen_DifferentPump.png)
 

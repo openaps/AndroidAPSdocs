@@ -164,7 +164,7 @@ Du kannst xDrip+ mit Hilfe des unten gezeigten QR-Codes einrichten. Scanne den Q
 
 ![xDrip+ NFC settings](../images/minimal00per/xdripBT2.png)
 
-Sobald Du den QR-Code oben gescannt hast, scanne Sie den anderen QR-Code unten, um die Einstellungen für eine zuverlässigere Verbindung zu ändern (das gilt für Samsung Smartphones und für viele chinesische Marken):
+Sobald Du den QR-Code oben gescannt hast, scanne den anderen QR-Code unten, um die Einstellungen für eine zuverlässigere Verbindung zu ändern (das gilt für Samsung Smartphones und für viele chinesische Marken):
 
 - *Vertraue Auto-Wiederverbindung*: **Aus**
 - *Scan im Hintergrund ausführen*: **Aus**

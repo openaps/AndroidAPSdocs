@@ -1,6 +1,14 @@
 # Docs Updates & Änderungen
 
-## March 2026
+## Oktober 2026
+
+- [Browser-Build mit dem AAPS Builder](#aaps-builder): Build-Workflow Version 6. Die Build-Schritte nutzen jetzt genau festgelegte und geprüfte Versionen der GitHub-Werkzeuge und der Build-Maschine. Wurde der falsche Text in das Secret `KEYSTORE_SET` eingefügt, wird das jetzt verständlich erklärt. Die [Setup-Seite](#aaps-builder-setup) ist nun Teil der Dokumentation und übersetzt. Sie prüft Deinen GitHub-Benutzernamen und bietet bessere Hilfe zum Secret, bei „Page not found“ (404), zu Chrome-Tabs und zur GitHub-App. Hat Deine `.github/workflows/build.yml` die Version 5 oder älter, ersetze die Datei wie unter [AAPS aktualisieren](#aaps-builder-updates) beschrieben. @psonnera
+
+## Juni 2026
+
+- [Browser-Build](#browser-build): in einen mehrseitigen Ablauf umgebaut, der mit der Entscheidung beginnt (Fork → Keystore Option 1/Option 2 mit einer eigenen Seite pro Gerät → Google Drive → Build → Fehlerbehebung). Verschachtelte Tabs entfernt. Die Installation des Dateimanager + ist jetzt ein gut sichtbarer eigener Schritt. @psonnera
+
+## März 2026
 
 - [CLI Build Option](../SettingUpAaps/CLIBuild.md) (Command Line Interface) @je-l hinzugefügt
 - *Computer Build* zu *Android Studio Build* umbenannt. Dateinamen für URLs unverändert.

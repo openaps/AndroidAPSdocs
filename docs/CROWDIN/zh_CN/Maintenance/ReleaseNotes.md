@@ -9,6 +9,8 @@ You will receive a notification like this when a new update is available:
 
 如果在到期日之前未更新，**AAPS**将切换至开环模式。
 
+See [End of life](EndOfLife.md) for AAPS version end dates.
+
 **Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. 感谢您的理解。
 
 (maintenance-android-version-aaps-version)=
@@ -17,7 +19,7 @@ You will receive a notification like this when a new update is available:
 
 If your smartphone uses an Android Version older than Android 12 you will not be able to use AAPS v3.4 and up as it requires at least Android 12.
 
-为允许旧版Android用户继续使用旧版AAPS，我们推送了仅修改版本验证的新版本，不包含其他改进。 不包含其他改进。
+为允许旧版Android用户继续使用旧版AAPS，我们推送了仅修改版本验证的新版本，不包含其他改进。不包含其他改进。
 
 ### Android 12 and up
 
@@ -54,9 +56,26 @@ WearOS 5（API级别34，基于Android 14）存在[限制](#BuildingAapsWearOs-W
 
 (latestrelease)=
 
-(version3423)=
+(version3426)=
 
-## Version for 3.4.2.3
+## Version 3.4.2.6
+
+- Equil: improve stability @MilosKozak
+
+(version3425)=
+
+## Version 3.4.2.5
+
+- Equil fix race condition @MilosKozak
+
+(version3424)=
+
+## Version 3.4.2.4
+
+- Equil fixes @MilosKozak
+- NS profile sync fix @MilosKozak
+
+## Version 3.4.2.3
 - Dash: Drift resolution @nl-ruud
 - NSClientV3: Fix gap after reconnection @MilosKozak
 - Automation: Fix deserialization @MilosKozak
@@ -216,10 +235,12 @@ Release date: 13-08-2025
 
 ### 如何升级
 
-* 需使用[Android Studio "Meerkat"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高。 若已构建过3.3.x版本，需升级Android Studio。
+* 需使用[Android Studio "Meerkat"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高。若已构建过3.3.x版本，需升级Android Studio。
+
+(version-enforcement)=
 
 ### 从此版本起，通知和版本强制机制已简化并调整如下：
-*  设备离线时（无网络连接）不会过期， 即取消60天和90天的宽限期。
+*  设备离线时（无网络连接）不会过期，即取消60天和90天的宽限期。
 *  过期后强制进入LGS模式
 *  减少通知频率：
    - 剩余28天以上：每7天提醒
@@ -274,7 +295,7 @@ Release date: 13-08-2025
 
 ### 如何升级
 
-* 构建此版本需要[Android Studio "Ladybug Feature Drop"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高。 **这与普通的“Ladybug”版本不同。** 如果您已构建过3.3.x版本，需要再次升级Android Studio。
+* 构建此版本需要[Android Studio "Ladybug Feature Drop"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高。**这与普通的“Ladybug”版本不同。** 如果您已构建过3.3.x版本，需要再次升级Android Studio。
 
 ### 问题修复
 
@@ -283,7 +304,7 @@ Release date: 13-08-2025
 * Equil：允许移除故障泵
 * 当DynISF调整因子为零时提示
 * NSCv3：解决时间不同步设备的Websocket通信
-* SMS命令：修复一次性密码。 **可能需要重新设置[认证器](#sms-commands-authenticator-setup)。 **
+* SMS命令：修复一次性密码。**可能需要重新设置[认证器](#sms-commands-authenticator-setup)。 **
 * 修复部分偏好设置无法编辑的问题
 * 修复虚拟泵的主密码重置
 * 修复大设置备份文件的导入
@@ -321,8 +342,8 @@ Release date: 13-08-2025
 
 * **[动态ISF](../DailyLifeWithAaps/DynamicISF.md)**不再作为独立插件，现整合至[OpenAPS SMB](#Config-Builder-aps)插件，并调整行为：
   * **配置文件切换**和**配置文件百分比**现已被纳入**动态ISF**的计算中，用于调整动态敏感度的应用强度。
-  * 使用过去24小时的平均**ISF**值进行推注向导和**COB**计算， 不再使用**配置文件ISF**（历史数据缺失时除外）
-  * 动态ISF文档已重写， 请务必阅读[启用动态ISF的注意事项](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
+  * 使用过去24小时的平均**ISF**值进行推注向导和**COB**计算，不再使用**配置文件ISF**（历史数据缺失时除外）
+  * 动态ISF文档已重写，请务必阅读[启用动态ISF的注意事项](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
 * 为FreeStyle Libre 2/3用户启用[“始终SMB”和“碳水后SMB”](#Open-APS-features-enable-smb-always)
   * 注：需使用最新版xDrip+或Juggluco
 * 新增**自动化**触发条件
@@ -331,14 +352,14 @@ Release date: 13-08-2025
 ### 如何升级
 
 * 升级前：
-  * **<span style="color:red">要求Android 11及以上系统</span>**， 请先确认手机版本
+  * **<span style="color:red">要求Android 11及以上系统</span>**，请先确认手机版本
   * 若使用旧版Combo驱动（依赖ruffy设备），请先迁移至[原生Combo驱动](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
   * 升级后将丢失[主屏幕附加图表](#AapsScreens-section-g-additional-graphs)，建议手动记录当前配置以便恢复
-  * [Android 15的蓝牙连接问题](../Getting-Started/Phones.md)（非**AAPS**问题）， 需等待3.3.1.2修复
+  * [Android 15的蓝牙连接问题](../Getting-Started/Phones.md)（非**AAPS**问题），需等待3.3.1.2修复
   * 主屏幕BYODA按钮因Android限制暂时移除， （3.3.1.2恢复）
 * 升级步骤：遵循[更新指南](../Maintenance/UpdateToNewVersion.md)
-  * 需使用[Android Studio "Ladybug"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高， 旧版本需<span style="color:red">配置JVM 21</span> （参见[Android Studio疑难解答 > JVM不兼容](#incompatible-gradle-jvm)）
-  * 重要提示：如果不想丢失**AAPS**历史数据，升级时选择“更新”而非“卸载/重装”， 备份当前设置及旧版APK以防万一
+  * 需使用[Android Studio "Ladybug"版本](#Building-APK-recommended-specification-of-computer-for-building-apk-file)或更高，旧版本需<span style="color:red">配置JVM 21</span> （参见[Android Studio疑难解答 > JVM不兼容](#incompatible-gradle-jvm)）
+  * 重要提示：如果不想丢失**AAPS**历史数据，升级时选择“更新”而非“卸载/重装”，备份当前设置及旧版APK以防万一
 * 升级后：
   * 在维护选项卡中设置新的[“AAPS目录”](#preferences-maintenance-logdirectory)
 
@@ -361,10 +382,10 @@ Release date: 13-08-2025
 
 * 新安装默认启用[简易模式](#preferences-simple-mode) @MilosKozak
 * [快捷向导](#Preferences-quick-wizard)新增选项 @radicalb
-  * 使用与计算器相同的推注逻辑， 支持“碳水时间”预推注
+  * 使用与计算器相同的推注逻辑，支持“碳水时间”预推注
 * [图表比例菜单](#aaps-screens-main-graph)与[附加图表菜单](#AapsScreens-activate-optional-information)优化 @Philoul
 * [配置构建器布局](../SettingUpAaps/ConfigBuilder.md)改进 @MilosKozak
-  * 默认折叠区块， 点击箭头展开
+  * 默认折叠区块，点击箭头展开
 * AAPSClient中显示动态敏感度
 * 推注向导UI优化 @kenzo44
 * 浅色主题下泵选项卡文本显示修复 @jbr77rr
@@ -412,7 +433,7 @@ Release date: 13-08-2025
 
 发布日期：2024年02月27日
 
-这是最后一个支持Android 10的版本。 如果如法升级到Android 11, [请将 AAPS 升级到 3.2.0.4](#update-aaps-3204).
+这是最后一个支持Android 10的版本。如果如法升级到Android 11, [请将 AAPS 升级到 3.2.0.4](#update-aaps-3204).
 
 ### 变更内容
 
@@ -430,11 +451,11 @@ Release date: 13-08-2025
 ### 重要提示
 
 - 需要NS 15
-- 使用NS v3插件时，通过NS界面（+按钮）或其他v1 API应用输入的治疗不会同步至AAPS。 这将在NS的未来版本中得到修复。 在NS全面转用v3前，请确保AAPS与AAPSClient使用相同客户端（v1或v3） 同样适用于AAPS和AAPSClient本身。
-- v3插件的Websocket工作方式类似v1。 未启用WebSocket时，AAPS会定期从NS调度下载数据，这应该会降低功耗，因为NS不需要保持永久连接。 反之，这会导致数据交换出现延迟。 使用前请阅读[开发团队重要说明](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)！
+- 使用NS v3插件时，通过NS界面（+按钮）或其他v1 API应用输入的治疗不会同步至AAPS。这将在NS的未来版本中得到修复。在NS全面转用v3前，请确保AAPS与AAPSClient使用相同客户端（v1或v3） 同样适用于AAPS和AAPSClient本身。
+- v3插件的Websocket工作方式类似v1。未启用WebSocket时，AAPS会定期从NS调度下载数据，这应该会降低功耗，因为NS不需要保持永久连接。反之，这会导致数据交换出现延迟。使用前请阅读[开发团队重要说明](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)！
 - 使用xDrip作为CGM源需重新选择
 - Tidepool可用作NS替代完成首目标
-- 发送数据至xDrip+需配置xDrip同步插件。 为了从AAPS接收BGs，必须选择“xDrip+ Sync Follower”作为源
+- 发送数据至xDrip+需配置xDrip同步插件。为了从AAPS接收BGs，必须选择“xDrip+ Sync Follower”作为源
 - 切换至ComboV2驱动需卸载Ruffy并重新配对泵
 - 启用DynISF需完成目标11（所有前置目标需完成）
 
@@ -473,13 +494,13 @@ Release date: 13-08-2025
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
 ### 关于AAPS使用Nightscout v3与v1接口的重要注意事项
 
-v1是用于在NS网站和NS服务器之间交换数据的旧协议， 它有许多限制
+v1是用于在NS网站和NS服务器之间交换数据的旧协议，它有许多限制
 - v1仅发送2天的数据
 - 每次重新连接时都会发送所有2天的数据
 - 必须使用WebSocket = 需保持持久连接，导致更高的电池消耗。
 - 当与Nightscout频繁断连时，连接将暂停15分钟以防止数据用量过高。
 
-v3为新协议， 更加安全高效
+v3为新协议，更加安全高效
 - 在使用令牌时，您可以更好地定义访问权限
 - 协议在双方（AAPS和NS）都更高效
 - 可以从NS读取最多3个月的数据
@@ -493,10 +514,10 @@ v3为新协议， 更加安全高效
 - 请留意：目前Nightscout内部仍采用v1接口，因此若你使用v3接口，将无法通过Nightscout网页界面手动输入数据。​ 若需远程输入数据，必须通过短信使用AAPS客户端。​
 
 推荐设置：
-- 基于上述原因，你应在所有设备上统一选择并仅使用一种接口方案（请注意，目前其他数据上传工具均仍在使用v1接口）。 如果您决定使用v3，请在AAPS和所有AAPSClient中选择v3
+- 基于上述原因，你应在所有设备上统一选择并仅使用一种接口方案（请注意，目前其他数据上传工具均仍在使用v1接口）。如果您决定使用v3，请在AAPS和所有AAPSClient中选择v3
 - 优先选择v3以提高效率
 - 是否在v3中使用Websockets取决于您的偏好
-- 强烈建议仅由AAPS统一收集所有数据，并作为唯一上传者将数据推送至Nightscout。​ 其他所有设备及应用应仅从NS读取数据，禁止写入。 遵循此方案可有效避免数据冲突与同步错误。​ 这也适用于使用Dexcom Share连接器将数据获取到NS的BG数据。
+- 强烈建议仅由AAPS统一收集所有数据，并作为唯一上传者将数据推送至Nightscout。​ 其他所有设备及应用应仅从NS读取数据，禁止写入。遵循此方案可有效避免数据冲突与同步错误。​ 这也适用于使用Dexcom Share连接器将数据获取到NS的BG数据。
 
 (version3100)=
 
@@ -520,7 +541,7 @@ v3为新协议， 更加安全高效
 - 小部件 @MilosKozak
 - Aidex CGM支持 @andyrozman @markvader（仅限泵控制）
 - 手表、[Wear OS小组件](#WearOsSmartwatch-wear-os-tiles)，翻译 @Andries-Smit
-- Wear代码重构。 不再向后兼容 @MilosKozak
+- Wear代码重构。不再向后兼容 @MilosKozak
 - a11y改进 @Andries-Smit
 - 新增PIN保护 @Andries-Smit
 - 图形比例菜单设置 @MilosKozak
@@ -536,7 +557,7 @@ v3为新协议， 更加安全高效
 ### 重要提示
 
 - **最低支持Android 9.0。**
-- **数据不会迁移到新数据库。 **不要抱怨，这是一个巨大的变化，所以简单来说是不可能的。 升级后，IOB、COB、治疗记录等数据将被清空。 升级后IOB、COB等数据清零，需新建[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) 请谨慎规划升级时间！ ！ 建议在无活性胰岛素和碳水时进行升级
+- **数据不会迁移到新数据库。 **不要抱怨，这是一个巨大的变化，所以简单来说是不可能的。升级后，IOB、COB、治疗记录等数据将被清空。升级后IOB、COB等数据清零，需新建[配置文件切换](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)请谨慎规划升级时间！ ！建议在无活性胰岛素和碳水时进行升级
 - AAPS与NSClient需版本一致
 
 确保在更新到3.0后按照[此处](../Maintenance/Update3_0.md)所述检查和调整设置。
@@ -574,11 +595,11 @@ v3为新协议， 更加安全高效
   - 无需工程模式即可同步
   - 支持数据重同步
 
-- 配置文件切换行为更改。 现在区分配置文件切换*（用户想要的东西）*和配置文件更改*（由泵执行的更改）*@MilosKozak @Tebbe
+- 配置文件切换行为更改。现在区分配置文件切换*（用户想要的东西）*和配置文件更改*（由泵执行的更改）*@MilosKozak @Tebbe
 
 - 配置文件切换可启动临时目标 @MilosKozak
 
-- NSProfile已弃用，仅可使用本地配置文件。 可[同步至NS](#Update3_0-nightscout-profile-cannot-be-pushed) @MilosKozak
+- NSProfile已弃用，仅可使用本地配置文件。可[同步至NS](#Update3_0-nightscout-profile-cannot-be-pushed) @MilosKozak
 
 - [主密码重置流程](#Update3_0-reset-master-password) @MilosKozak
 
@@ -694,7 +715,7 @@ v3为新协议， 更加安全高效
 
 升级后请按[此指南](../Maintenance/Update2_7.md)检查设置。
 
-需完成[目标11](#objectives-objective10)以继续使用[自动化](../DailyLifeWithAaps/Automations.md)功能（所有前置目标需完成）。 例如，若你尚未完成[目标3](#objectives-objective3)中的考核，则必须先完成该考核才能开始目标11。 这不会影响您已经完成的其他目标。 您已完成的目标将保留！
+需完成[目标11](#objectives-objective10)以继续使用[自动化](../DailyLifeWithAaps/Automations.md)功能（所有前置目标需完成）。例如，若你尚未完成[目标3](#objectives-objective3)中的考核，则必须先完成该考核才能开始目标11。这不会影响您已经完成的其他目标。您已完成的目标将保留！
 
 ### 主要新功能
 
@@ -736,7 +757,7 @@ v3为新协议， 更加安全高效
 ### 主要新功能
 
 - Insight：针对固件版本3禁用大剂量振动（第二次尝试）
-- 其他功能与2.6.1.3相同。 更新是可选的。
+- 其他功能与2.6.1.3相同。更新是可选的。
 
 ## 版本 2.6.1.3
 
@@ -747,7 +768,7 @@ v3为新协议， 更加安全高效
 ### 主要新功能
 
 - Insight：针对固件版本3禁用大剂量振动
-- 其他功能与2.6.1.2相同。 更新是可选的。
+- 其他功能与2.6.1.2相同。更新是可选的。
 
 ## 版本 2.6.1.2
 
@@ -758,7 +779,7 @@ v3为新协议， 更加安全高效
 ### 主要新功能
 
 - 修复Insight服务中的崩溃问题
-- 其他功能与2.6.1.1相同。 如果未受此错误影响，则无需升级。
+- 其他功能与2.6.1.1相同。如果未受此错误影响，则无需升级。
 
 ## 版本 2.6.1.1
 
@@ -769,7 +790,7 @@ v3为新协议， 更加安全高效
 ### 主要新功能
 
 - 解决使用Combo泵时SMS CARBS命令的问题
-- 其他功能与2.6.1相同。 如果未受此错误影响，则无需升级。
+- 其他功能与2.6.1相同。如果未受此错误影响，则无需升级。
 
 ## 版本 2.6.1
 
@@ -870,7 +891,7 @@ v3为新协议， 更加安全高效
 - Glimp从版本4.15.57及更高版本受支持。
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
-### 这个更新适合我吗？ 目前不支持
+### 这个更新适合我吗？目前不支持
 
 - Android 5及以下版本
 - Poctech
@@ -966,11 +987,11 @@ v3为新协议， 更加安全高效
 
 - 必须启动目标10才能启用SMB（SMB标签通常会显示适用的限制）
 
-- maxIOB现在包括_所有_IOB，而不仅仅是添加的基础量。 也就是说，如果为一餐给予8U的推注，而maxIOB为7U，则在IOB降至7U以下之前，不会给予SMB。
+- maxIOB现在包括_所有_IOB，而不仅仅是添加的基础量。也就是说，如果为一餐给予8U的推注，而maxIOB为7U，则在IOB降至7U以下之前，不会给予SMB。
 
-- 从AMA切换到SMB时，min_5m_carbimpact的默认值从3更改为8。 如果您是从AMA升级到SMB，则需要手动更改它
+- 从AMA切换到SMB时，min_5m_carbimpact的默认值从3更改为8。如果您是从AMA升级到SMB，则需要手动更改它
 
-- 注意：在构建AAPS 2.0 APK时：当前版本的Android Gradle插件不支持按需配置！ 如果构建失败并出现与“按需配置”相关的错误，您可以执行以下操作：
+- 注意：在构建AAPS 2.0 APK时：当前版本的Android Gradle插件不支持按需配置！如果构建失败并出现与“按需配置”相关的错误，您可以执行以下操作：
 
   - 点击文件>设置（在Mac上，点击Android Studio>首选项）打开首选项窗口。
   - 在左侧窗格中，点击构建、执行、部署>编译器。
@@ -980,16 +1001,16 @@ v3为新协议， 更加安全高效
 (Releasenotes-overview-tab)=
 ### 概述标签
 
-- 顶部功能区提供访问暂停/禁用循环、查看/调整配置文件以及启动/停止临时目标（TT）的权限。 TT使用首选项中设置的默认值。 新的Hypo TT选项是一个高临时TT，以防止循环过于激进地纠正救援碳水化合物。
-- 治疗按钮：旧的治疗按钮仍然可用，但默认隐藏。 现在可以配置按钮的可见性。 新增胰岛素按钮、新增碳水化合物按钮（包括[eCarbs/扩展碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）
+- 顶部功能区提供访问暂停/禁用循环、查看/调整配置文件以及启动/停止临时目标（TT）的权限。 TT使用首选项中设置的默认值。新的Hypo TT选项是一个高临时TT，以防止循环过于激进地纠正救援碳水化合物。
+- 治疗按钮：旧的治疗按钮仍然可用，但默认隐藏。现在可以配置按钮的可见性。新增胰岛素按钮、新增碳水化合物按钮（包括[eCarbs/扩展碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md)）
 - [彩色预测线](#aaps-screens-prediction-lines)
 - 在胰岛素/碳水化合物/计算器/填充对话框中显示备注字段的选项，这些字段会上传到NS
 - 更新的填充对话框允许填充和创建用于更换输注部位和更换药筒的Careportal条目
 
 ### 手表
 
-- 单独的构建变体已弃用，现在包含在常规完整构建中。 要从手表使用推注控制，请在手机上启用此设置
-- 向导现在只询问碳水化合物（如果在手表设置中启用了百分比，则还会询问百分比）。 哪些参数包含在计算中可以在手机上的设置中配置
+- 单独的构建变体已弃用，现在包含在常规完整构建中。要从手表使用推注控制，请在手机上启用此设置
+- 向导现在只询问碳水化合物（如果在手表设置中启用了百分比，则还会询问百分比）。哪些参数包含在计算中可以在手机上的设置中配置
 - 确认和信息对话框现在也可以在Wear 2.0上工作
 - 添加了eCarbs菜单条目
 

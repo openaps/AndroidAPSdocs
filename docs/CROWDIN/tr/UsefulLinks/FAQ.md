@@ -59,6 +59,8 @@ Döngü yapmanın pratikliğini anlamanıza yardımcı olacak iyi ipuçları iç
 - [Öğün ani artışlarını sınırlama](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 - [Hormonlar ve Otoduyarlılık](https://seemycgm.com/2017/06/06/hormones-2/) CGM'ime bakın
 
+(FAQ-emergency-equipment)=
+
 ### What emergency equipment is recommended to take with me?
 
 İnsülin pompası tedavisi olan diğer tüm T1D'ler gibi aynı acil durum ekipmanına sahip olmalısınız. AAPS ile döngü kurarken, yanınızda veya yakınında aşağıdaki ek ekipmanın bulunması şiddetle tavsiye edilir:
@@ -236,6 +238,8 @@ Nightscout raporlarınızı (https://YOUR-NS-SITE.com/report) gösterebilir veya
 ### AAPS stops everyday around the same time.
 
 Google Play Protect'i durdurun. "Temizleme" uygulamalarını (yani CCleaner vb.) kontrol edin ve bunları kaldırın. AAPS / 3 nokta menüsü / Hakkında / tüm pil optimizasyonlarını durdurmak için "Uygulamayı arka planda çalışmaya devam et" bağlantısını izleyin.
+
+(FAQ-organize-backups)=
 
 ### How to organize my backups ?
 

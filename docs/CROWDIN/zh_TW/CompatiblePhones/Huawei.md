@@ -33,4 +33,4 @@
   
   ![xdrip+ 設定 - 在前台運作收集器](../images/xdrip_collector_foreground.png)
 
-根據 Android 版本，這些設定位於其他位置。 這些解釋適用於 Android 8.1。
+根據 Android 版本，這些設定位於其他位置。這些解釋適用於 Android 8.1。

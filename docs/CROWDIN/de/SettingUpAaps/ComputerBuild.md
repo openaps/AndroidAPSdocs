@@ -23,12 +23,12 @@ Zu den Details schaue bitte auf die [FAQ-Seite](../UsefulLinks/FAQ.md).
 | ----------------------- | ------------------------------------------------------- | -------------------------------------------------------- | ------ |:--- |
 | 2.6.2                   | 3.6.1                                                   |                                                          | 5.6.4  | 11  |
 | 2.8.2.1                 | 4.1.1                                                   |                                                          | 6.1.1  | 13  |
-| [3.1.0.3](#version3100) | 2020.3.1                                                | up to Quail 1                                            | 7.3.3  | 17  |
-| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | up to Quail 1                                            | 8.2    | 17  |
-| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | up to Quail 1                                            | 8.10   | 21  |
-| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | up to Quail 1                                            | 8.11.1 | 21  |
-| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | up to Quail 1                                            | 8.13   | 21  |
-| [3.4.2.2](#version3422) | Panda 2 (2025.32)                                       | up to Quail 1                                            | 9      | 21  |
+| [3.1.0.3](#version3100) | 2020.3.1                                                | bis Quail 1                                              | 7.3.3  | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                     | bis Quail 1                                              | 8.2    | 17  |
+| [3.3.1.3](#version3300) | Ladybug Feature Drop (2024.2.2)                         | bis Quail 1                                              | 8.10   | 21  |
+| [3.3.2](#version3300)   | Meerkat (2024.3.1)                                      | bis Quail 1                                              | 8.11.1 | 21  |
+| [3.3.2.1](#version3321) | Narwhal (2025.1.2)                                      | bis Quail 1                                              | 8.13   | 21  |
+| [3.4.2.2](#version3422) | Panda 2 (2025.32)                                       | bis Quail 1                                              | 9      | 21  |
 
 Die „empfohlene Version“ enthält im Paket bereits die entsprechende JVM-Version. Die empfohlene Version ist gleichzeitig auch die Mindestversion, die Du zum Erstellen von **AAPS** nutzen kannst. Mit einer älteren Version als der, die unter „empfohlen“ aufgeführt ist, wirst Du **NICHT** in der Lage sein, AAPS zu erstellen. Solltest Du eine andere Version verwenden, kann es aufgrund der JVM-Version zu Problemen kommen. Schaue auf den Seiten zur [Fehlerbehebung für Android Studio](#troubleshooting_androidstudio-uncommitted-changes) nach, um diese Probleme zu lösen. Wenn Deine aktuelle Android Studio Version nicht in der Tabelle aufgeführt ist, musst Du sie zuerst aktualisieren.
 
@@ -140,7 +140,7 @@ Einer der wichtigsten Punkte bei der Installation von Android Studio ist: **Gedu
 
 ```{admonition} Different UI
 :class: warning
-Wichtige Anmerkung: Android Studio hat seine Benutzeroberfläche (UI) seit den letzten Versionen geändert. Diese Anleitung zeigt Dir die Schritte in dem *neuen UI* „Ladybug“. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+Wichtige Anmerkung: Android Studio hat seine Benutzeroberfläche (UI) seit den letzten Versionen geändert. Diese Anleitung zeigt Dir die Schritte in dem *neuen UI* „Ladybug“. Nutzt Du noch eine ältere Version der Benutzeroberfläche, dann solltest Du Android Studio als Erstes auf das neue Design umstellen. Wie das funktioniert ist [hier beschrieben](#computerbuild-NewUI).
 ```
 
 Die Android-Studio-Version ist sehr wichtig. Schaue Dir die [Anleitung oben](#Building-APK-recommended-specification-of-computer-for-building-apk-file) an, um die richtige Android Studio Version auszuwählen.

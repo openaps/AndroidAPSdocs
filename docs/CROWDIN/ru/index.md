@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- 4 June 2026 : Version 3.4.2.3 is out. Прочитайте [Release Notes](#latestrelease), чтобы узнать, что изменилось, для обновления воспользуйтесь [инструкцией](./Maintenance/UpdateToNewVersion.md).
+ 2 August 2026 : Version 3.4.2.6 is out. Прочитайте [Release Notes](#latestrelease), чтобы узнать, что изменилось, для обновления воспользуйтесь [инструкцией](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -21,7 +21,7 @@ Android APS (**AAPS**) является приложением с открыты
 
 Теперь, когда у вас есть четкое понимание всего процесса, вы можете начать собирать свой цикл (петлю) на базе **AAPS**.
 
-Раздел **3) Настройка AAPS** содержит пошаговые инструкции того, как это можно сделать. Он рассказывает про выбор и [настройку вашего сервера отчетов](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout или Tidepool), чтобы вы могли наблюдать и делиться своими сахарами и терапией, содержит инструкции для подготовки к сборке приложения AAPS, саму его сборку, передачу установочного файла на ваш телефон. Так же в нем расположена информация про настройку приложения **AAPS** с помощью мастера установки, его связку с приложением вашего НМГ и либо реальной, либо виртуальной инсулиновой помпой, так же подключение **AAPS** к вашему серверу отчетов. Далее вам медленно будет представлена полная функциональность **AAPS** с помощью безопасного и хорошо отлаженного пошагового процесса, разработанного с целью убедиться в том, что вы или ваш ребенок хорошо ориентируетесь и разбираетесь во всех различных уровнях меню и настройках перед переходом к следующему этапу, часто именуемому следующей "Целью", вплоть до того момента, как у вас наберется достаточно опыта для использования более продвинутых настроек, доступных в программе. Данные цели специально разработаны таким образом, чтобы вы постепенно открывали все больше и больше возможностей **AAPS** и переключились с открытого цикла на замкнутый.
+Раздел **3) Настройка AAPS** содержит пошаговые инструкции того, как это можно сделать. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone, including [Android developer verification](./SettingUpAaps/AndroidDeveloperVerification.md), a change Google is rolling out from September 2026 that affects how self-built apps are installed. Так же в нем расположена информация про настройку приложения **AAPS** с помощью мастера установки, его связку с приложением вашего НМГ и либо реальной, либо виртуальной инсулиновой помпой, так же подключение **AAPS** к вашему серверу отчетов. Далее вам медленно будет представлена полная функциональность **AAPS** с помощью безопасного и хорошо отлаженного пошагового процесса, разработанного с целью убедиться в том, что вы или ваш ребенок хорошо ориентируетесь и разбираетесь во всех различных уровнях меню и настройках перед переходом к следующему этапу, часто именуемому следующей "Целью", вплоть до того момента, как у вас наберется достаточно опыта для использования более продвинутых настроек, доступных в программе. Данные цели специально разработаны таким образом, чтобы вы постепенно открывали все больше и больше возможностей **AAPS** и переключились с открытого цикла на замкнутый.
 
 Раздел **4) Жизнь с AAPS** покрывает основные возможности **AAPS**, помогая с использованием (и настройкой) **AAPS**. В том числе понимание всех экранов, активных углеводов (англ: COB, carbs on board), чувствительности, смены профилей, временных целей, растянутых углеводов (англ: eCarbs), автоматизаций и DynamicISF (динамического фактора чувствительности к инсулину). Так же он отвечает на часто задаваемые вопросы по типу того, что делать с различными типами еды, как отрабатывать смену канюли или сенсора НМГ, что делать с обновлениями ПО на смартфоне, переходом на летнее время, как путешествовать и заниматься спортом с [AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md). Частые вопросы и ответы на них находятся в секции "Решение проблем".
 
@@ -84,22 +84,23 @@ Android APS (**AAPS**) является приложением с открыты
 ```
 
 ```{toctree}
-:caption: 3) Настройка AAPS
+:caption: 3) Setting up AAPS
 
-Настройка сервера отчетов <./SettingUpAaps/SettingUpTheReportingServer.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Nightscout <./SettingUpAaps/Nightscout.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
-Сборка AAPS <./SettingUpAaps/BuildingAaps.md>
-- Браузер <./SettingUpAaps/BrowserBuild.md>
-- Android Studio <./SettingUpAaps/ComputerBuild.md>
-- Командная строка <./SettingUpAaps/CLIBuild.md>
-Передача и установка AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Мастер установки <./SettingUpAaps/SetupWizard.md>
-Профиль AAPS <./SettingUpAaps/YourAapsProfile.md>
-Изменение настроек AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Конфигуратор <./SettingUpAaps/ConfigBuilder.md>
-- Настройки <./SettingUpAaps/Preferences.md>
-Прохождение целей <./SettingUpAaps/CompletingTheObjectives.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+- Browser Build <./SettingUpAaps/BrowserBuild.md>
+- Android Studio Build <./SettingUpAaps/ComputerBuild.md>
+- CLI Build <./SettingUpAaps/CLIBuild.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Android Developer Verification <./SettingUpAaps/AndroidDeveloperVerification.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -142,35 +143,38 @@ AAPS для Wear OS <./WearOS/BuildingAapsWearOS.md>
 ```
 
 ```{toctree}
-:caption: 7) Обслуживание AAPS
+:caption: 7) Maintenance of AAPS
 
-Экспорт/Импорт настроек <./Maintenance/ExportImportSettings.md>
-Анализ данных <./Maintenance/Reviewing.md>
-Примечания к изменениям в версиях AAPS <./Maintenance/ReleaseNotes.md>
-Обновление документации <./Maintenance/DocumentationUpdate.md>
-Переход на новую версию AAPS <./Maintenance/UpdateToNewVersion.md>
-- Через браузер <./Maintenance/UpdateBrowserBuild.md>
-- Через Android Studio <./Maintenance/UpdateComputerBuild.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+Reviewing your data <./Maintenance/Reviewing.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+End of life <./Maintenance/EndOfLife.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 
 ```
 
 ```{toctree}
-:caption: 8) Поддержка
+:caption: 8) Getting Help
 
-Где можно получить помощь с AAPS <./GettingHelp/WhereCanIGetHelp.md>
-Решение известных проблем <./GettingHelp/GeneralTroubleshooting.md>
-- Проблемы с Bluetooth<./GettingHelp/BluetoothTroubleshooting.md>
-Инструкции по тонкой настройке <./GettingHelp/ProfileTuning.md>
-Решение проблем с Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
-Доступ к лог-файлам <./GettingHelp/AccessingLogFiles.md>
+Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
+General troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
+- Bluetooth troubleshooting <./GettingHelp/BluetoothTroubleshooting.md>
+- Browser build troubleshooting <./GettingHelp/BrowserBuildTroubleshooting.md>
+Profile Tuning Guide <./GettingHelp/ProfileTuning.md>
+Troubleshooting Android Studio <./GettingHelp/TroubleshootingAndroidStudio.md>
+Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 ```
 
 ```{toctree}
-:caption: 9) Продвинутые опции AAPS
+:caption: 9) Advanced AAPS options
 
-Автономный замкнутый цикл <./AdvancedOptions/FullClosedLoop.md>
-Ветка dev <./AdvancedOptions/DevBranch.md>
-Автотюн <./AdvancedOptions/Autotune.md>
+Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
+Dev branch <./AdvancedOptions/DevBranch.md>
+Browser build: cherry-pick a commit <./AdvancedOptions/BrowserBuildCherryPick.md>
+Autotune <./AdvancedOptions/Autotune.md>
 
 ```
 ```{toctree}

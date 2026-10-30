@@ -348,7 +348,7 @@ To do this, however, it is important to clone the whole **database record** cons
 (your-aaps-profile-compare-profiles)=
 ### Compare two Profiles
 
-You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
+You can use the [Profile Helper](#aaps-screens-profile-helper) tab also to compare two different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 

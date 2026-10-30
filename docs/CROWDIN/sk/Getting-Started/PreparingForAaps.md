@@ -100,6 +100,12 @@ Ako dlho trvá dosiahnutie uzavretej slučky, závisí od jednotlivca, ale pribl
 2.  Poznačte si heslo k tomuto keystore súboru.
 
 
+How you save the keystore depends on your build method:
+
+- **Android Studio (computer) build**: the keystore is created during the build — see [Generate signed APK](#Building-APK-generate-signed-apk) for instructions on where to save it.
+- **AAPS Builder**: keep the backup file `aaps-keystore.jks` the setup page offered when you created your key, with its password and alias. If you uploaded your own keystore, keep that file.
+- **Browser build with a fork**: use the dedicated [Export keystore](#ci-keystore-export) workflow to download a copy to your Google Drive.
+
 Vďaka tomu budete môcť použiť presne ten istý súbor vždy, keď sa vytvorí aktualizovaná verzia **AAPS**. V priemere sú potrebné 2 aktualizácie **AAPS** ročne.
 
 Okrem toho **AAPS** poskytuje možnosť [exportovať všetky vaše konfiguračné nastavenia](../Maintenance/ExportImportSettings.md). Vďaka tomu môžete bezpečne obnoviť systém pri zmene telefónu a aktualizovať/preinštalovať aplikáciu. 

@@ -1,10 +1,10 @@
 # 手機
 
-目前版本的 **AAPS**（3.4）需要使用 Google **Android 12.0 或更高版本** 的 Android 智慧型手機。 如果你正在考慮購買新智慧型手機（截至 2026 年 1 月），**建議優先選擇 Android 16**，不建議使用 Android 15。
+目前版本的 **AAPS**（3.4）需要使用 Google **Android 12.0 或更高版本** 的 Android 智慧型手機。如果你正在考慮購買新智慧型手機（截至 2026 年 1 月），**建議優先選擇 Android 16**，不建議使用 Android 15。
 
 請查看 [Facebook 或 Discord](../GettingHelp/WhereCanIGetHelp.md) 獲取有關此主題的最新更新。
 
-為安全起見，強烈建議用戶保持其 **AAPS** 的版本為最新。 然而，對於無法使用 Android 12.0 或更新版本的使用者，早期版本的 **AAPS** 仍然可與舊版 Android 相容，詳情請見： [版本說明](#maintenance-android-version-aaps-version)。
+為安全起見，強烈建議用戶保持其 **AAPS** 的版本為最新。然而，對於無法使用 Android 12.0 或更新版本的使用者，早期版本的 **AAPS** 仍然可與舊版 Android 相容，詳情請見： [版本說明](#maintenance-android-version-aaps-version)。
 
 - [Jelly Pro 設定](../CompatiblePhones/Jelly.md)
 - [華為設定](../CompatiblePhones/Huawei.md)
@@ -13,13 +13,13 @@
 
 ## 測試過的手機列表
 
-我們維護一份[已測試過的硬體設定](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)清單，你可以透過[友善的介面來瀏覽](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/)。 透過填寫 [Google 表單](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) 並新增你的設定來參與貢獻！
+我們維護一份[已測試過的硬體設定](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)清單，你可以透過[友善的介面來瀏覽](https://vnniyb.github.io/androidAPS_testedHardwareEasyBrowser/)。透過填寫 [Google 表單](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform) 並新增你的設定來參與貢獻！
 
-此列表提供用戶對於使用手機搭配**AAPS**以及指定的幫浦和 CGM 的回饋。 這可以幫助你檢查你的手機/幫浦/CGM 是否有其他用戶已成功使用。
+此列表提供用戶對於使用手機搭配**AAPS**以及指定的幫浦和 CGM 的回饋。這可以幫助你檢查你的手機/幫浦/CGM 是否有其他用戶已成功使用。
 
-該文件為唯讀。 使用CTRL-F，你可以在Google表單的文字中搜尋。
+該文件為唯讀。使用CTRL-F，你可以在Google表單的文字中搜尋。
 
-若要記錄你的硬體設置測試，請填寫這個[表單](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform)。 填寫表單資料後，該表格會自動每 5 分鐘更新一次
+若要記錄你的硬體設置測試，請填寫這個[表單](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform)。填寫表單資料後，該表格會自動每 5 分鐘更新一次
 
 對於試算表的任何問題，請聯繫其維護者*@theodoor5137*，在 Discord 聯絡，或請參閱[我可以在哪裡獲得幫助? 頁面](../GettingHelp/WhereCanIGetHelp.md)。
 

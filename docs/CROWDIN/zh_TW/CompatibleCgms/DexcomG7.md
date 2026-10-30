@@ -3,7 +3,7 @@
 
 ## 基本準備
 
-值得注意的是，與 G6 相比，G7 和 ONE+ 系統在應用程式和讀取器中都不會平滑值。 更多詳細資訊請參閱 [這裡](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
+值得注意的是，與 G6 相比，G7 和 ONE+ 系統在應用程式和讀取器中都不會平滑值。更多詳細資訊請參閱 [這裡](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
 ```{admonition} Smoothing method 
 請閱讀 [平滑方法](../CompatibleCgms/SmoothingBloodGlucoseData.md) 建議，以用於 Dexcom G7/ONE+/Stelo
@@ -25,7 +25,7 @@ Dexcom BYODA 現在是非常舊的應用程式版本，且無法更新。
 
 -   [自行建立 Dexcom 應用程式](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)（BYODA）支援本地廣播到 AAPS 和／或 xDrip+
 
-!\[BYODA 廣播選項\](C:\Data\50 - My Projects\AAPS\OpenAPS\AndroidAPSdocs\docs\EN\images\BYODA.png)
+![BYODA 廣播選項](../images/BYODA.png)
 
 -   此應用程式可讓你在任何 Android 智慧型手機上使用 Dexcom G7。
 -   解除安裝原版 Dexcom 應用程式
@@ -37,17 +37,16 @@ Dexcom BYODA 現在是非常舊的應用程式版本，且無法更新。
 
 ```{admonition} No new users
 :class: warning
-Dexcom 伺服器的最新更新導致新安裝的 DiaKEM 無法使用：G7 應用程式在全新安裝後，無法順利完成登入與設定流程。 
-現有使用者目前不會遇到問題：
-請不要登出、清除資料或重新安裝 G7 應用程式，否則將導致無法再次啟動與使用該應用程式。 如果應用程式已經在執行中，則不會受到影響。
+Dexcom 伺服器的最新更新導致新安裝的 DiaKEM 無法使用：G7 應用程式在全新安裝後，無法順利完成登入與設定流程。現有使用者目前不會遇到問題：
+請不要登出、清除資料或重新安裝 G7 應用程式，否則將導致無法再次啟動與使用該應用程式。如果應用程式已經在執行中，則不會受到影響。
 ```
 
-**注意：需要 AAPS 3.2.0.0 或更高版本！ 不適用於 ONE+。**
+**注意：需要 AAPS 3.2.0.0 或更高版本！不適用於 ONE+。**
 
 ### 安裝新的修補版 G7 應用程式並啟動傳感器
 
 
-修補版 Dexcom G7 應用程式 (DiaKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
+修補版 Dexcom G7 應用程式 (DiaKEM) 可查看 Dexcom G7 資料。這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
 
 - 如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果傳感器正在運作，可以繼續使用傳感器，請在移除應用程式前記下傳感器代碼！）
 
@@ -77,14 +76,14 @@ Dexcom 伺服器的最新更新導致新安裝的 DiaKEM 無法使用：G7 應�
 
 需要版本 9.0 以上
 
-- 停用之前連接到傳感器的應用程式：卸載應用程式或使用「強制停止」。 在應用程式設定中停用「附近設備」權限。 限制應用程式的電池使用。
+- 停用之前連接到傳感器的應用程式：卸載應用程式或使用「強制停止」。在應用程式設定中停用「附近設備」權限。限制應用程式的電池使用。
 
 - 在藍牙設定中忘記傳感器：在 Android 設定中，找到已配對設備中的傳感器並選擇「忘記」。 Dexcom G7 傳感器名稱以 DXCM 開頭。
 
 - 避免其他傳感器造成的干擾：將舊的 Dexcom 傳感器保持在藍牙範圍之外。
 
-- 將 G7 傳感器連接到 Juggluco：打開 Juggluco → 左側選單 → 照片。 掃描 G7 傳感器應用裝置上的資料矩陣。 等待最多 5 分鐘，讓 Juggluco 找到傳感器。
+- 將 G7 傳感器連接到 Juggluco：打開 Juggluco → 左側選單 → 照片。掃描 G7 傳感器應用裝置上的資料矩陣。等待最多 5 分鐘，讓 Juggluco 找到傳感器。
 
-- 配對要求：同意將傳感器與 Juggluco 配對。 確保配對期間螢幕未被鎖定。 如果配對失敗，請等待 5 分鐘再試。
+- 配對要求：同意將傳感器與 Juggluco 配對。確保配對期間螢幕未被鎖定。如果配對失敗，請等待 5 分鐘再試。
 
 - 例外：Wear OS 手錶可以在不按同意按鈕的情況下配對。

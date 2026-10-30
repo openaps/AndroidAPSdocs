@@ -14,7 +14,10 @@ Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als
 
 ## AAPS mit Browser-Build aktualisieren
 
-Wenn Du die AAPS-App bereits mit der Browser-Build-Methode erstellt hast, befolge [diesen Anweisungen](./UpdateBrowserBuild.md).
+Du hast Deine AAPS-App bereits im Browser erstellt? Folge der Anleitung für die Methode, die Du genutzt hast:
+
+- **AAPS Builder** (Dein privates Repository, meist `my-aaps`) genannt: [Aktualisieren mit dem AAPS Builder](#aaps-builder-updates). Es gibt keinen Fork, der synchronisiert werden muss.
+- **Fork und Vorbereitungsdatei** (Deine eigene Kopie von AndroidAPS): [Browser-Update (Fork)](./UpdateBrowserBuild.md).
 
 ## AAPS mit Android Studio aktualisieren
 

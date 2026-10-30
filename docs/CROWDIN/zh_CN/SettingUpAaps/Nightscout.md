@@ -4,7 +4,7 @@
 
 ## 安全考虑
 
-除了报告功能外，Nightscout还可以用于控制AAPS。 例如，您可以设置临时目标或添加未来碳水化合物摄入量。 这些信息将被AAPS接收，并据此做出相应操作。 因此，有必要考虑保护您的Nightscout网站的安全。
+除了报告功能外，Nightscout还可以用于控制AAPS。例如，您可以设置临时目标或添加未来碳水化合物摄入量。这些信息将被AAPS接收，并据此做出相应操作。因此，有必要考虑保护您的Nightscout网站的安全。
 
 如果使用Nightscout作为AAPS的数据源，请务必格外小心。
 
@@ -47,7 +47,7 @@ Nightscout的`API_SECRET`是您的站点主密码：请勿公开分享。
 
 ## 手动Nightscout设置
 
-假设您已经有一个Nightscout站点，如果没有，请访问[Nightscout](http://nightscout.github.io/nightscout/new_user/)页面，了解有关设置的完整说明，以下是需要添加到您的Nightscout站点的设置。 您的Nightscout站点至少需要是15版才能与AAPS 3.2一起使用，因此请检查您是否正在运行[最新版本](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version)，否则您的AAPS应用程序将显示错误消息。
+假设您已经有一个Nightscout站点，如果没有，请访问[Nightscout](http://nightscout.github.io/nightscout/new_user/)页面，了解有关设置的完整说明，以下是需要添加到您的Nightscout站点的设置。您的Nightscout站点至少需要是15版才能与AAPS 3.2一起使用，因此请检查您是否正在运行[最新版本](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version)，否则您的AAPS应用程序将显示错误消息。
 
 * [编辑您的变量](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
@@ -61,7 +61,7 @@ Nightscout的`API_SECRET`是您的站点主密码：请勿公开分享。
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* 保存更改。 现在，您的Nightscout站点应该允许您显示这些胶囊图标。 您可以通过在`SHOW_PLUGINS`中添加它们来强制默认显示。
+* 保存更改。现在，您的Nightscout站点应该允许您显示这些胶囊图标。您可以通过在`SHOW_PLUGINS`中添加它们来强制默认显示。
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
@@ -69,4 +69,4 @@ Nightscout的`API_SECRET`是您的站点主密码：请勿公开分享。
 
 ## Nightscout作为付费SaaS（软件即服务）
 
-使用供应商Web界面设置变量。 如有必要，请联系供应商支持服务。
+使用供应商Web界面设置变量。如有必要，请联系供应商支持服务。

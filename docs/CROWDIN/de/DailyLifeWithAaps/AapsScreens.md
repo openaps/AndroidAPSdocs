@@ -292,7 +292,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 #### Basal
 
-Die **durchgezogene blaue** Kurve zeigt die Basalabgabe Ihrer Pumpe an und spiegelt die tatsächliche Abgabe im Laufe der Zeit wider.
+Die **durchgezogene blaue** Kurve zeigt die Basalabgabe Deiner Pumpe an und spiegelt die tatsächliche Abgabe über die Zeit wider.
 
 Die **gepunktete blaue** Kurve zeigt, was die Basalrate wäre, wenn es keine temporären basalen Anpassungen (TBRs) gäbe.
 
@@ -331,13 +331,13 @@ Zeigt das Insulin, das an Bord ist (= aktives Insulin im Körper). Es enthält I
 
 Wenn es während der Insulinwirkdauer (DIA) keine [SMBs](#Open-APS-features-super-micro-bolus-smb), keine Boli und keine TBRs gäbe, wäre der Wert hier Null.
 
-Das IOB kann negativ sein, wenn Sie längere Zeit keinen verbleibenden Bolus und keine oder nur niedrige Basalrate hatten.
+Wenn Du längere Zeit keinen verbleibenden Bolus und keine oder nur eine niedrige Basalrate hattest, kann IOB kann negativ sein.
 
 Der errechnete Insulinabbau hängt davon ab, welchen [DIA Du eingestellt hast und welches Insulinprofil](../SettingUpAaps/YourAapsProfile.md) Du verwendest.
 
 #### Aktive Kohlenhydrate
 
-Zeigt die Kohlenhydrate, die Sie an Bord haben (= aktive, noch nicht resorbierte Kohlenhydrate in Ihrem Körper).
+Zeigt die Kohlenhydrate, die Du an Bord hast (= aktive, noch nicht resorbierte Kohlenhydrate in Deinem Körper).
 
 Der Abbau hängt davon ab, was der [Algorithmus anhand der Glukosewert-Abweichungen](../DailyLifeWithAaps/CobCalculation.md) erkennt.
 
