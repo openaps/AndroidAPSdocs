@@ -14,19 +14,16 @@
 
 Прочетете повече в [статията](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/), публикувана от Tim Street на [www.diabettech.com](https://www.diabettech.com).
 
-## Ако използвате G6 или ONE с xDrip+
+## If using G6 or ONE with xDrip
 
-- Ако използвате по-нов предавател (Firefly), превантивните рестартирания се **игнорират**.
-- Ако използвате модифициран предавател, **не е необходимо** да използвате превантивни рестартирания.
--   Ако използвате модифициран предавател, **не е необходимо** да използвате превантивни рестартирания. Въпреки това, в този случай ще трябва да използвате G6 в режим, различен от [native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)(което не се препоръчва, тъй като деактивира фабричното калибриране и не филтрира шумните отчитания), в противен случай сензорът ще спре след 10 дни.
--   Трансмитерите на Dexcom G6 и ONE могат едновременно да бъдат свързани с приемника на Dexcom (или алтернативно с помпата t:slim) и едно приложение на телефона ви.
--   Когато използвате xDrip+ като приемник, първо деинсталирайте приложението Dexcom. **Не можете да свържете едновременно xDrip+ и приложението Dexcom с трансмитер!**
--   Ако имате нужда от Clarity и искате да се възползвате от алармите на xDrip+, използвайте [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (само за G6) с локален broadcast към xDrip+.
--   Можете също да използвате xDrip+ като companion приложение на официалното приложение Dexcom, но може да изпитате забавяния в BG отчитанията.
--   Ако все още не е направено, изтеглете [xDrip+](https://github.com/NightscoutFoundation/xDrip) и следвайте инструкциите на [страницата с настройки на xDrip+](../CompatibleCgms/xDrip.md).
--   Изберете xDrip+ в [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-
-- Настройте параметрите в xDrip+ според [страницата с настройки на xDrip+](../CompatibleCgms/xDrip.md)
+- If not already set up, download [xDrip](https://github.com/NightscoutFoundation/xDrip) and adjust its settings following the [xDrip settings page](../CompatibleCgms/xDrip.md).
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Трансмитерите на Dexcom G6 и ONE могат едновременно да бъдат свързани с приемника на Dexcom (или алтернативно с помпата t:slim) и едно приложение на телефона ви.
+- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and Dexcom app with the transmitter at the same time!**
+- If you need Clarity and want to profit from xDrip alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip.
+- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings.
+- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days; recent (Firefly) transmitters ignore them. See [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) before attempting any restart.
+- Everything related to the sensor and transmitter themselves is documented on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## Ако използвате G6 с Build Your Own Dexcom App
@@ -36,9 +33,7 @@
 Dexcom BYODA вече е много стара версия на приложението и не може да бъде обновявана.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) поддържа локален broadcast към AAPS и/или xDrip+
-
-![BYODA broadcast опции](../images/BYODA.png)
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip
 
 -   Това приложение ви позволява да използвате вашия Dexcom G6 с всеки Android смартфон.
 -   Деинсталирайте оригиналното приложение Dexcom или пачнатото приложение Dexcom, ако сте използвали някое от тях преди (**не спирайте** текущо работещия сензор)
@@ -49,14 +44,14 @@ Dexcom BYODA вече е много стара версия на приложе�
 
 ### Настройки за AAPS
 
--   Изберете 'Dexcom App (patched)' в [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Select **BYODA** in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
--   Ако не получавате никакви стойности, изберете друг източник на данни, след което отново изберете 'Dexcom App (patched)', за да предизвикате заявката за разрешения за установяване на връзката между AAPS и BYODA-broadcast.
+-   If you don't receive any values select any other data source, then re-select **BYODA** to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
-### Настройки за xDrip+
+### Settings for xDrip
 
 -   Изберете '640G/Eversense' като източник на данни.
--   Командата 'start sensor' трябва да бъде изпълнена в xDrip+, за да получавате стойности. Това няма да засегне текущия ви сензор, управляван от Build Your Own Dexcom App.
+-   Command 'start sensor' must be performed in xDrip in order to receive values. Това няма да засегне текущия ви сензор, управляван от Build Your Own Dexcom App.
 
 
 (DexcomG6-troubleshooting-g6)=
