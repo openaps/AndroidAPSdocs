@@ -35,11 +35,6 @@ Wenn Du nicht mehr genau weißt, wie man das macht, schaue auf der Seite [Export
 (Update-to-new-version-update-your-repo)=
 ### Aktualisiere Dein GitHub Repository
 
-```{admonition} WARNING
-:class: warning
-BrowserBuild ist ab AAPS Version 3.3.2.1 verfügbar.
-```
-
 [Logge Dich bei GitHub ein](https://github.com/login).
 
 1. Wähle Repositories aus.
@@ -97,8 +92,13 @@ Deine eigene Kopie ist jetzt synchronisiert (aktualisiert) und enthält die neue
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 
+```{note}
+Seit September 2026 kann Googles [Android-Entwicklerverifizierung](#android-developer-verification) je nach Land verhindern, dass sich die APK durch Antippen der Datei installieren lässt. Kostenlose Möglichkeiten das zu umgehen, werden auf dieser Seite erklärt.
+```
 
 [Hier](#Update-to-new-version-check-aaps-version-on-phone) geht's weiter
+
+(update-browser-build-troubleshooting)=
 
 ## Problembehandlung
 
@@ -106,6 +106,6 @@ Keine Panik, wenn irgendetwas schiefläuft.
 
 Tief durchatmen!
 
-Dann schaue im Abschnitt [Tipps zur Fehlerbehebung](#aaps-ci-preparation), ob Dein Problem dort schon beschrieben wurde!
+Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
 
 Wenn Du weitere Hilfe brauchst, kontaktiere bitte andere **AAPS**-Nutzende auf [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw).
