@@ -51,7 +51,7 @@ A private repository gets 2000 free GitHub Actions minutes per month, which is e
 **New key or existing key: this decides whether you can update AAPS.**
 
 - **You already have AAPS on your phone, built with a keystore you still have**: choose **I already have a keystore** on the setup page and upload it. Your next build will update AAPS in place. Built AAPS with the previous browser build (your own fork)? Your keystore is in your fork: [get a copy of it first](#aaps-builder-from-fork).
-- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Lost keystore](#troubleshooting_androidstudio-lost-keystore).
+- **You build AAPS for the first time, or you lost your keystore or its password**: choose **Create a new key**. An app signed with a new key **cannot update** an AAPS signed with another key. You must export your settings, copy the file off your phone, uninstall the old AAPS, install the new one, then import your settings: see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
 
 Always keep using the same key afterwards. When you create a new key, download the backup the page offers and store it with its password and its alias (`key0`) somewhere safe, off your phone.
 ```
@@ -257,7 +257,7 @@ GitHub shows **Page not found** (404)? First check that you are logged in to git
 2. If GitHub asks, tap the green button to enable workflows.
 3. Tap **Run workflow**. A small form opens:
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `3.3.2.1`.
-   - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). Don't choose `aapsclient3Release`: **AAPSClient3** only exists from **AAPS** version 4.0.
+   - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
    - Tap the green **Run workflow** button.
 
    ![Run workflow form with latest and fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
@@ -368,10 +368,7 @@ The first line of the file shows its version.
 
 ## Отстраняване на проблеми
 
-To see why a build failed, open it from **Open my builds** on the setup page: the **Annotations** box below the diagram shows the error message. For the full log, tap the job with the red cross, then the step with the red cross.
-
-- **To change a secret**: open your repository's **Settings** → **Secrets and variables** → **Actions**, tap the pencil next to the secret, paste the new value and tap **Update secret**.
-- **To run the build again** after a fix: open the failed build, tap **⋯** at the top, then **Re-run all jobs**, or start a new build as in [step 5](#aaps-builder-step5).
+To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
 
 - **The build stops with "This repository is PUBLIC"**: in your repository, open **Settings** → **General** → **Danger Zone** → **Change visibility** → **Private**, then build again.
 - **"Secret KEYSTORE_SET is missing"**: do step 4 of the setup page.
