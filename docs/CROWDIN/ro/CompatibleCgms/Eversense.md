@@ -1,18 +1,20 @@
-# Pentru utilizatorii de Eversense
+# Eversense
 
-Există trei metode diferite de accesare a citirilor de la Eversense:
+There are four different methods to access the readings from Eversense:
 
 - ESEL în mod companion
 - ESEL modificat
-- Aplicația xDrip+ companion
+- xDrip companion app
+- Notification Reader (built into **AAPS**)
 
 ## ESEL
 
 Obțineți și instalați [aplicația ESEL](https://github.com/BernhardRo/Esel/tree/master/apk), urmând aceste instrucțiuni [](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
 
-- Activați "Trimiteți în AAPS și xDrip"
-- **Dezactivați** "Trimiteți la Nightscout"
-- Deoarece datele glicemice din Eversense pot fi zgomotoase, se recomandă activarea "Filtrați Datele" în ESEL.
+- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
+  - Activați "Trimiteți în AAPS și xDrip"
+  - **Dezactivați** "Trimiteți la Nightscout"
+  - Deoarece datele glicemice din Eversense pot fi zgomotoase, se recomandă activarea "Filtrați Datele" în ESEL.
 
 ![Transmitere ESEL](../images/ESEL.png)
 
@@ -27,7 +29,7 @@ Citește datele din notificările aplicației Eversense (funcționează cu aplic
    - Dezactivați setarea "Obțineți date de la aplicația Eversense modificată"
    - Pentru scriere în urmă: Activați "Umpleți datele lipsă de la eversensedms.com"
    - Furnizați ca adresă de e-mail și parolă datele de conectare Eversense
-3. Setați "MM640g" ca sursă de glicemie în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
+3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 ### Aplicația Eversense modificată
 
@@ -49,17 +51,24 @@ Citește datele din notificările aplicației Eversense (funcționează cu aplic
 
 Dacă rulați ESEL cu o instalare nouă de Eversense pentru prima dată, poate dura până la 15 minute până când primele valori apar în xDrip!
 
-4. Setați "MM640g" ca sursă de glicemie în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
+4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
-## xDrip+
+## xDrip
 
-xDrip+ poate citi notificările de la aplicația oficială, așa cum face ESEL. Nu este disponibilă scrierea înapoi a datelor lipsă.
+xDrip can read notifications from the vendor app, like ESEL does. Nu este disponibilă scrierea înapoi a datelor lipsă.
 
-- Descărcați și instalați xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- Trebuie selectat "Companion App" ca sursă de date în xDrip+.
-- Selectați xDrip+ în [Configurator, Sursă glicemie](#Config-Builder-bg-source).
-- Reglați setările xDrip+ în funcție de explicațiile de pe pagina de setări xDrip+ [Setări xDrip+ ](../CompatibleCgms/xDrip.md).
+- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip “Companion App” must be selected.
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 - Activați [Netezire exponențială](../CompatibleCgms/SmoothingBloodGlucoseData.md) în AAPS.
+
+## Notification Reader
+
+**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. Nu este disponibilă scrierea înapoi a datelor lipsă.
+
+- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
+- Make sure the Eversense app shows the current glucose value in its notification.
 
 ```{warning}
 Frecvența citirii valorilor glicemiei nu este întotdeauna de 5 minute și pot apărea duplicate.
