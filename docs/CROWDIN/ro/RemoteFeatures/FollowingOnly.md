@@ -26,13 +26,13 @@ Cele mai frecvente strategii utilizate în combinație cu **AAPS** sunt explicat
 
 * Mulți îngrijitori sunt familiarizați cu Dexcom Follow, preferând interfața sa clară față de ceva mai complicat.
 
-* Dexcom Follow este foarte bun pentru profesori/bunici și pentru cei care știu foarte puțin despre diabet și nivelul glicemiei. It has customisable alerts (BG level, what sound to play etc.). Alarmele pot fi oprite complet, dacă este necesar, ceea ce este foarte util dacă aveți un senzor care încă se obișnuiește cu corpul și creează multe hipoglicemii false.
+* Dexcom Follow este foarte bun pentru profesori/bunici și pentru cei care știu foarte puțin despre diabet și nivelul glicemiei. It has customizable alerts (BG level, what sound to play etc.). Alarmele pot fi oprite complet, dacă este necesar, ceea ce este foarte util dacă aveți un senzor care încă se obișnuiește cu corpul și creează multe hipoglicemii false.
 
 #### Configurarea Dexcom Follow: ghid
 
 Dacă folosiți aplicația Dexcom neoficială BYODA pentru a primi datele senzorului, ai putea trimite invitații urmăritorilor din aplicația BYODA.
 
-Nu mai puteți trimite e-mailuri de invitație către urmăritorii Dexcom, din aplicații terțe. În xDrip+, cererea de invitație va avea ca rezultat mesajul "invitația nu a fost trimisă".
+Nu mai puteți trimite e-mailuri de invitație către urmăritorii Dexcom, din aplicații terțe. In xDrip the invite request will just result in the message “invite not sent”.
 
 Trebuie să instalați aplicația oficială Dexcom, să trimiteți invitația și apoi să dezinstalați aplicația oficială.
 
@@ -42,7 +42,7 @@ Pașii în acest sens sunt următorii:
 3) Glisați prin meniurile introductive. 4) Adăugați "niciun cod" pentru codul senzorului. 5) Sub Transmitter SN selectați "enter manually" și introduceți orice cod valid pentru transmițători (utilizați unul dintre codurile dumneavoastră pentru transmițătorii expirați. dacă știți unul, astfel încât nu interferează cu rularea transmițătorului curent, să aibă un format specific de anumite numere și litere: "NLNNL" și să utilizeze numai anumite combinații, deci este cel mai ușor să folosiți unul pe care deja îl știți valid). 6) Odată ce aplicația încearcă să găsească transmițătorul și senzorul, veți putea invita urmăritori: selectați cele trei puncte mici din stânga sus a aplicației și adăugați un nou urmăritor. De asemenea, poți folosi acest lucru dacă unul dintre urmăritorii tăi și-a schimbat dispozitivul manual și are nevoie de o invitație nouă, aici le puteți șterge din lista de urmăritori și retrimiteți un nou e-mail de invitație pe care îl puteți utiliza la noul lor dispozitiv mobil. 7) Pe telefonul urmăritorului, instalați Dexcom Follow prin descărcarea acesteia din App Store (iPhone) sau Play (Android). Configurați aplicația Dexcom Follow, și vi se va solicita să vă deschideți e-mailul pentru a găsi invitația pentru a fi urmăritor.    
 8) Acum puteți șterge aplicația oficială Dexcom G6.
 
-Pentru Dexcom Follow, datele de la senzori sunt apoi exportate din telefonul **AAPS** fie direct din BYODA, sau din xDrip+, în funcție de aplicația pe care o folosiți.
+For Dexcom Follow, the sensor data is then exported from the **AAPS** phone either directly from BYODA, or from xDrip, depending on which app you are using.
 
 
 ### [Nightguard](https://apps.apple.com/fr/app/nightguard/id1116430352) (iOS)
@@ -80,7 +80,7 @@ Dezavantaje (așa cum au fost raportate de utilizatori)
 
 * Aplicația poate fi descărcată de pe [Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) și afișează date glicemice în timp real.
 
-* Utilizatorul poate fi alertat cu setul de alarme de zgomot redus și ridicat.
+* The user can be alerted with customized noisy low and high alarms set.
 
 * Datele privind glicemia pot fi vizualizate fie în mmol/l, fie în mg/dl.
 
@@ -88,25 +88,25 @@ Dezavantaje (așa cum au fost raportate de utilizatori)
 
 * Acesta are o interfață de utilizator de culoare închisă, afișaje și butoane mari, fiind conceput pentru a fi utilizat pe timpul nopții.
 
-### xDrip+ (Android)
+### xDrip (Android)
 
-Puteți utiliza xDrip+ ca urmăritor.
+You can use xDrip as a follower.
 
 #### Cu Nightscout
 
-Setați xDrip+ ca urmăritor Nightscout. Veți primi glicemia și tratamentele, dar nu bazala.
+Set xDrip as a Nightscout Follower. Veți primi glicemia și tratamentele, dar nu bazala.
 
 ![imagine](../images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
-#### Fără Nightscout - sursa datelor de glicemie în xDrip+
+#### Without Nightscout - xDrip BG data source
 
-Dacă sursa de date **AAPS** este xDrip+ (sau dacă xDrip+ poate primi glicemia și de la o altă aplicație precum BYODA, Juggluco) îl poți folosi de la telefonul principal pentru a împărtăși date cu urmăritorii xDrip+, afișând glicemia, tratamente și ratele bazale.
+If your **AAPS** data source is xDrip (or if xDrip can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
 
 ![imagine](../images/remote_control_and_following/xDrip+_Master_Sync.png)
 
-#### Fără Nightscout - xDrip+ aplicație companion pentru glicemii
+#### Without Nightscout - xDrip BG companion app
 
-În cazul în care sursa de date **AAPS** nu este xDrip+, dar puteți afișa date glicemice din sursa de date a aplicației companion, îl poți folosi de la telefonul principal pentru a partaja date cu adepții xDrip+, afișând glice, tratamente și tarife bazale.
+If your **AAPS** data source is not xDrip but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip followers, displaying BG, treatments and basal rates.
 
 ![imagine](../images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
@@ -181,16 +181,16 @@ M5Stack este o cutie mică care poate fi programată pentru multe aplicații. Pr
 
 ### Sugarpixel
 
-SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișarea glicemiei pentru monitorizarea continuă a glucozei, care se conectează cu aplicația Dexcom sau cu aplicația Nightscout pe telefonul inteligent al utilizatorului. Dispozitivul afișează valorile glicemiei în timp real. Acest monitor CGM hardware beneficiază de alerte audio cu tonuri aleatorii (care sunt incredibil de zgomotoase), alerte de vibrație pentru tulburările de auz, opțiuni de afișare personalizabile și urmărire nativă pentru mai mulți utilizatori.
+SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișarea glicemiei pentru monitorizarea continuă a glucozei, care se conectează cu aplicația Dexcom sau cu aplicația Nightscout pe telefonul inteligent al utilizatorului. Dispozitivul afișează valorile glicemiei în timp real. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customizable display options and native multi-user following.
 
 ![imagine](../images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![imagine](../images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-* SugarPixel are multiple opțiuni de afișare, în mg/dL și mmol/L, pentru a se potrivi nevoilor utilizatorului, cu valori ale glucozei codate prin culori.
+* SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with color-coded glucose values.
 * Fața standard afișează glicemia, săgeata de tendință și delta. Delta este schimbarea cu + sau - de la ultima citire.
-* SugarPixel poate fi personalizat pentru a fi utilizat la luminozitate redusă, folosind interfața Glicemie și Oră pentru a vizualiza valoarea glicemiei utilizatorului și ora curentă pe noptiera acestuia.
-* Interfața Culoare a SugarPixel utilizează întregul ecran pentru a afișa o singură culoare ce reprezintă valoarea glicemiei (BG). Acest lucru permite utilizatorului să vadă citirile glicemiei la distanță prin fereastră în timp ce se joacă în curtea din spate, terasă sau piscină.
+* SugarPixel can be customized for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand.
+* SugarPixel’s color face uses the entire display to show a single color representing the BG value. Acest lucru permite utilizatorului să vadă citirile glicemiei la distanță prin fereastră în timp ce se joacă în curtea din spate, terasă sau piscină.
 * Fața mare a glicemiei este utilă pentru utilizatorii nocturni care poartă ochelari sau lentile de contact.
 
 ### Ceas Nightscout pe Ulanzi TC001
