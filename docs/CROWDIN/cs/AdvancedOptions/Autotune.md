@@ -1,92 +1,109 @@
-# How to use Autotune plugin
+# Jak používat plugin Autotune
 
-Documentation about Autotune algorithm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+Plugin Autotune je implementace algoritmu OpenAPS autotune v AAPS. Analyzuje vaši nedávnou historii AAPS a navrhuje úpravy vašich bazálních dávek, ISF a sacharidového poměru.
 
-Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS.
+Plugin Autotune je v AAPS dostupný od verze [3.4](#version3400), ale ve výchozím stavu je skrytý.
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+(autotune-how-autotune-calculates-adjustments)=
+## Jak Autotune počítá úpravy
 
-## Show the Autotune plugin
+Autotune prochází vaši nedávnou historii AAPS – hodnoty z CGM, bolusy, sacharidy a dočasné bazály – a zjišťuje, kde váš **profil** (bazální dávky, ISF, sacharidový poměr) přesně neodpovídá tomu, co se ve skutečnosti dělo s vaší glykémií.
 
-Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
+Pro každý 5minutový datový bod porovná **skutečnou změnu glykémie** se změnou, kterou předpověděl váš profil, a výslednou odchylku zařadí do jedné ze tří skupin:
 
-***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+* odchylky, ke kterým došlo bez aktivních sacharidů a bez aktivity inzulínu (slouží k ladění **bazálních dávek**, hodinu po hodině),
+* odchylky, ke kterým došlo po bolusu/korekci bez sacharidů (slouží k ladění **ISF**), nebo
+* odchylky, ke kterým došlo během vstřebávání sacharidů (slouží k ladění **sacharidového poměru**).
 
-![Enable Autotune](../images/Autotune/Autotune_0.png)
+Pak se podívá na rozložení odchylek v každé skupině (pomocí percentilů místo prostého průměru, aby několik zašuměných datových bodů nezkreslilo výsledek) a navrhne novou hodnotu pro danou hodinu/parametr.
 
-Autotune will then display in Config Builder after you restart AAPS.
+Aby jeden výpočet hodnotu příliš nepřekorigoval, každý běh Autotune posune hodnotu jen o část cesty k tomu, co ukazují data: nejvýše o 10 % u ISF a sacharidového poměru a nejvýše o 20 % u každého bazálního úseku. Celkový posun je dále omezen nastaveními **Max autosens ratio** / **Min autosens ratio** (viz [Další nastavení](#autotune-other-settings) níže) – jsou to stejné meze, které omezují Autosens. Proto je Autotune určený k opakovanému spouštění (den za dnem nebo každou noc) a nemá se mu věřit po jediném spuštění: výsledky by se měly postupně ustálit. Velký skok při jednom spuštění je znamení, že máte znovu zkontrolovat svá data (chybějící sacharidy, den se špatným senzorem _apod._), a ne mu slepě věřit.
 
-![Autotune plugin](../images/Autotune/Autotune_1.png)
+Autotune lze spustit třemi způsoby: ručně jednorázově v pluginu (jak je popsáno níže), automaticky každou noc pomocí [pravidla automatizace](#autotune-run-autotune-with-an-automation-rule), nebo – úplně mimo AAPS – jako samostatný nástroj příkazové řádky nad exportovanými daty. Tak jeho použití popisují některé komunitní návody, bez telefonu, na kterém AAPS právě běží.
 
-***NOTE: If you are unable to see the `Autotune` option you will need to click the highlighted (red box) arrow to expand and show all settings in the `General` section.***
+*Podrobný matematický popis algoritmu oref0, na kterém Autotune stojí, najdete v [dokumentaci Autotune od OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
-## Autotune user interface
+## Zobrazení pluginu Autotune
 
-![Autotune default screen](../images/Autotune/Autotune_1b.png)
+Vytvořte prázdný soubor s názvem `enable_autotune` v podsložce `extra` v [adresáři AAPS](#preferences-maintenance-settings) ve vašem telefonu.
 
-- You can select in the Profile dropdown menu the input profile you want to tune (by default your current active profile is selected)
-  - Note: each time you select a new profile, previous results will be removed and Tune days parameter will be set to default value
-- Then Tune days is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
-  - Note: each time you change Tune days parameter, previous results will be removed
-- Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successful run.
-- Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
-  - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorithm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DIA, IC, ISF, basal and target)
-  - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units, DIA and target will remain unchanged in output profile.
+***POZNÁMKA: Ověřte si v nastavení **AAPS**, kde je váš adresář AAPS, a že jste soubor vložili do správné složky. Už několik uživatelů soubor omylem vložilo do špatné složky.***
 
-- "Run Autotune" will launch Autotune calculation with selected profile and the number of Tune days
-  - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+![Povolení Autotune](../images/Autotune/Autotune_0.png)
 
-  ![Autotune Run start](../images/Autotune/Autotune_2b.png)
+Restartujte **AAPS**. Potom otevřete **nabídku** (☰), vyberte **Konfigurace**, pak kategorii **Obecné** a zaškrtněte **Autotune**. Karta pak zobrazí **Nastavení** a **Otevřít plugin**:
 
-- Then during the run you will see intermediate results below
+![Autotune zaškrtnutý v Konfigurace > Obecné](../images/v4/Configuration/configuration_general_autotune.png)
 
-  - Note: During run, settings are locked, so you cannot change anymore selected input profile or the number of day. You will have to wait the end of current calculation if you want to launch another run with other parameters.
+## Uživatelské rozhraní Autotune
 
-  ![Autotune during run](../images/Autotune/Autotune_3b.png)
+Klepnutím na **Otevřít plugin** na kartě **Autotune** otevřete obrazovku Autotune:
 
-- When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
+![Obrazovka Autotune s profilem, počtem dní s daty a varováním k vybranému profilu](../images/Autotune/Autotune_1b.png)
 
-  ![Autotune Result](../images/Autotune/Autotune_4b.png)
+- V rozbalovacím menu profilu můžete vybrat vstupní profil, který chcete doladit (automaticky je vybrán váš aktivní profil).
+  - Poznámka: Při každém výběru nového profilu se předchozí výsledky smažou a **Počet dní s daty** se nastaví na výchozí hodnotu.
+- Pak pomocí **Počet dní s daty** (ve starších verzích **Ladit dní**) vyberete počet dní, které se použijí ve výpočtu pro ladění vašeho profilu. Minimální hodnota je 1 den a maximální 30 dní. Toto číslo by nemělo být příliš malé, abyste dostali správné a vyrovnané výsledky (více než 7 dní pro každý výpočet).
+  - Poznámka: Při každé změně **Počet dní s daty** se předchozí výsledky smažou.
+- Poslední spuštění je odkaz, který obnoví váš poslední platný výpočet. Pokud jste Autotune v aktuální den nespustili, nebo pokud se předchozí výsledky smazaly kvůli změně parametru výpočtu výše, můžete obnovit parametry a výsledky posledního úspěšného výpočtu.
+- Varování vám ukáže například některé informace o vybraném profilu (pokud máte několik hodnot IC nebo několik hodnot ISF).
+  - Poznámka: Výpočet Autotune pracuje jen s jednou hodnotou IC a jednou hodnotou ISF. Zatím neexistuje žádný algoritmus Autotune, který by ladil cirkadiánní IC nebo cirkadiánní ISF. Pokud má váš vstupní profil několik hodnot, v sekci varování uvidíte průměrnou hodnotu, která se použije pro ladění vašeho profilu.
+- Tlačítko Zkontrolovat vstupní profil otevře prohlížeč profilu, abyste mohli rychle ověřit svůj profil (jednotky, IC, ISF, bazál a cíl).
+  - Poznámka: Autotune ladí jen váš IC (jedna hodnota), ISF (jedna hodnota) a bazál (s cirkadiánní variací). Jednotky a cíl zůstanou ve výstupním profilu beze změny.
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- „Spustit Autotune“ spustí výpočet Autotune s vybraným profilem a vybraným počtem dní s daty.
+  - Poznámka: Výpočet Autotune může trvat dlouho. Po spuštění můžete přejít na jinou obrazovku (hlavní obrazovka, ...) a později se vrátit do pluginu Autotune a podívat se na výsledky.
 
-- For basal rates, you also have the number of "missing days". You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+  ![Spuštění Autotune](../images/Autotune/Autotune_2b.png)
 
-- The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
+- Během výpočtu pak níže uvidíte průběžné výsledky.
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+  - Poznámka: Během výpočtu jsou nastavení uzamčena, takže už nemůžete změnit vybraný vstupní profil ani počet dní. Pokud chcete spustit další výpočet s jinými parametry, musíte počkat na konec aktuálního výpočtu.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Autotune během výpočtu](../images/Autotune/Autotune_3b.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- Když výpočet Autotune skončí, uvidíte výsledek (vyladěný profil) a pod ním čtyři tlačítka.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your Local profile plugin.
-  - If you already have a profile named "Tuned" in your local profile plugin, then this profile will be updated with calculated Autotune profile before the activation
+  ![Výsledek Autotune](../images/Autotune/Autotune_4b.png)
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+- Vždy je důležité porovnat vstupní profil (sloupec „Profil“), výstupní profil (sloupec „Vyladěno“) a procento změny u každé hodnoty (sloupec „%“).
 
-- If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
+- U bazálních dávek máte také počet „chybějících dní“. Chybějící dny máte, když Autotune nemá pro dané období dost dat zařazených jako „Bazál“, aby mohl vyladit bazální dávku (například po každém jídle, kdy se vstřebávají sacharidy). Toto číslo by mělo být co nejnižší, hlavně tam, kde je bazál důležitý (například v noci nebo na konci odpoledne).
 
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in local profile plugin
+- Tlačítko „Porovnat profily“ otevře zobrazení pro porovnání profilů. Vstupní profil je modře a výstupní profil (s názvem „Vyladěno“) je červeně.
 
-  ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+  - Poznámka: V příkladu níže má vstupní profil cirkadiánní variaci IC a ISF, ale vypočítaný výstupní profil má jen jednu hodnotu. Pokud je pro vás důležité mít cirkadiánní výstupní profil, podívejte se níže na [Cirkadiánní profil IC nebo ISF](#autotune-circadian-ic-or-isf-profile).
 
-- You can then select local profile to edit the Tuned profile (it will be selected by default when you open Local profile plugin)
+  ![Autotune – Porovnat profily](../images/Autotune/Autotune_5.png)
 
-  - the values in local profile will but rounded in the user interface to your pump capabilities
+- Pokud výsledkům věříte (malé procento změny mezi vstupním a výstupním profilem), můžete klepnout na tlačítko „Aktivovat profil“ a potvrdit tlačítkem OK.
 
-  ![Autotune local profile update](../images/Autotune/Autotune_8.png)
+  - Aktivace vyladěného profilu automaticky vytvoří nový profil „Vyladěno“ ve vašem seznamu profilů (**Spravovat → Profil**).
+  - Pokud už v **Spravovat → Profil** máte profil s názvem „Vyladěno“, tento profil se před aktivací aktualizuje vypočítaným profilem Autotune.
 
-- If you want to replace your input profile with Autotune result, click on "Update input profile" button and validate the Popup with OK
+  ![Autotune – Aktivovat profil](../images/Autotune/Autotune_6.png)
 
-  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile?
+- Pokud si myslíte, že je vyladěný profil potřeba upravit (například pokud vám některé změny připadají příliš velké), můžete klepnout na tlačítko „Kopírovat do místního profilu“.
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
+  - V **Spravovat → Profil** se vytvoří nový profil s předponou „Vyladěno“ a s datem a časem výpočtu.
 
-- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediately see if your current input profile in Local profile plugin already include the result of last run or not. You also have the possibility to recover you input profile without autotune result with this button
+  ![Autotune – Kopírovat do místního profilu](../images/Autotune/Autotune_7.png)
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
+- Vyladěný profil pak můžete upravit: otevřete **Spravovat** > **Profil**, přejeďte na kartu s názvem „Vyladěno“ s datem a časem výpočtu a klepněte na tlačítko **Upravit** (tužka).
+
+  - hodnoty v profilu se v uživatelském rozhraní zaokrouhlí podle možností vaší pumpy.
+
+  ![Autotune – aktualizace místního profilu](../images/Autotune/Autotune_8.png)
+
+- Pokud chcete nahradit svůj vstupní profil výsledkem Autotune, klepněte na tlačítko „Aktualizovat vstupní profil“ a potvrďte vyskakovací okno tlačítkem OK.
+
+  - Poznámka: Pokud klepnete na „Aktivovat profil“ po „Aktualizovat vstupní profil“, aktivujete svůj aktualizovaný profil, a ne výchozí profil „Vyladěno“.
+
+  ![Autotune – Aktualizovat vstupní profil](../images/Autotune/Autotune_9.png)
+
+- Pokud jste aktualizovali svůj vstupní profil, tlačítko „Aktualizovat vstupní profil“ se nahradí tlačítkem „Vrátit vstupní profil“ (viz snímek obrazovky níže). Tak hned uvidíte, zda váš aktuální vstupní profil v **Spravovat → Profil** už obsahuje výsledek posledního výpočtu, nebo ne. Tímto tlačítkem můžete také obnovit svůj vstupní profil bez výsledku Autotune.
+
+  ![Autotune – Aktualizovat vstupní profil](../images/Autotune/Autotune_10.png)
 
 
 
@@ -94,125 +111,126 @@ Autotune will then display in Config Builder after you restart AAPS.
 
 (autotune-plugin-settings)=
 
-### Autotune plugin settings
+### Nastavení pluginu Autotune
 
-  ![Autotune default screen](../images/Autotune/Autotune_11.png)
+  ![Nastavení Autotune v AAPS 4](../images/preferences/settings_autotune.png)
 
 ```{admonition} Only DEV
-:class: info
-Automation Switch Profile feature is only available in Dev/Engineering mode.
+:class: note
+Funkce **Automatické přepnutí profilu** je dostupná jen v režimu Dev/Engineering (vývojové sestavení nebo inženýrský režim).
 ```
 
-- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
-  - **Be Careful, you must trust and verify during several following days, that after an update and activation of Tuned profile without modification, it improves your loop**
+- **Automatické přepnutí profilu** (výchozí: vypnuto): viz [Spuštění Autotune pravidlem automatizace](#autotune-run-autotune-with-an-automation-rule) níže. Pokud toto nastavení zapnete, vstupní profil se automaticky aktualizuje vyladěným profilem a ten se aktivuje.
+  - **Buďte opatrní: několik následujících dní musíte ověřovat, že aktualizace a aktivace vyladěného profilu bez úprav opravdu zlepšuje vaši smyčku.**
 
-- Categorize UAM as basal (default On): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
-- Number of days of data (default 5): You can define default value with this setting. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#autotune-circadian-ic-or-isf-profile) below.
+- **Kategorizovat UAM jako bazál** (výchozí: vypnuto): Toto nastavení je pro uživatele, kteří používají AndroidAPS bez zadávání sacharidů (plně UAM). Když je vypnuté, zabrání zařazení UAM jako bazálu.
+  - Poznámka: Pokud máte během dne alespoň jednu hodinu zjištěného vstřebávání sacharidů, všechna data zařazená jako „UAM“ se zařadí jako bazál bez ohledu na toto nastavení (zapnuto nebo vypnuto).
+- **Výchozí dny pro ladění** (výchozí: 5): Tímto nastavením určíte výchozí hodnotu. Při každém výběru nového profilu v pluginu Autotune se **Počet dní s daty** nahradí touto výchozí hodnotou.
+- **Použít cirkadiánní IC/ISF** (výchozí: vypnuto): viz [Cirkadiánní profil IC nebo ISF](#autotune-circadian-ic-or-isf-profile) níže.
 
-### Other settings
+(autotune-other-settings)=
+### Další nastavení
 
-- Autotune also uses Max autosens ratio and Min autosens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
+- Autotune také používá Max autosens ratio a Min autosens ratio k omezení změn. Tyto hodnoty můžete zobrazit a upravit v [**Nastavení** > **Nastavení absorpce sacharidů** > **Rozšířená nastavení**](../SettingUpAaps/Preferences.md) (**Autosens max** a **Autosens min**).
 
-  ![Autotune default screen](../images/Autotune/Autotune_12.png)
+  ![Autosens max a Autosens min v rozšířeném nastavení absorpce sacharidů](../images/preferences/settings_absorption_advanced.png)
 
 
 
-## Advanced feature
+## Pokročilá funkce
 
 (autotune-circadian-ic-or-isf-profile)=
 
-### Circadian IC or ISF profile
+### Cirkadiánní profil IC nebo ISF
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadian IC/ISF"
+- Pokud máte ve svém profilu velké rozdíly IC a/nebo ISF a plně věříte svému cirkadiánnímu rozložení a variaci, můžete zapnout **Použít cirkadiánní IC/ISF** (ve starších verzích „Apply average result in circadian IC/ISF“).
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
+  - Výpočet Autotune se vždy provádí s jednou hodnotou a Autotune cirkadiánní variaci neladí. Toto nastavení jen použije průměrnou vypočítanou změnu IC a/nebo ISF na vaše cirkadiánní hodnoty.
 
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
+- Na snímku obrazovky níže vidíte vyladěný profil s vypnutým (vlevo) a zapnutým (vpravo) použitím průměrné změny.
 
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Výchozí obrazovka Autotune](../images/Autotune/Autotune_13.png)
 
 
 
-### Tune specific days of the week
+### Ladění jen vybraných dní v týdnu
 
-- If you click on the checkbox with the eye on the right of "Tune days" parameter, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
-  - If the number of day included in Autotune calculation is lower than the number of Tune days, then you will see how many days will be included on the right of Tune days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
+- Když klepnete na ikonu **oka** vpravo od pole **Počet dní s daty**, uvidíte výběr dní. Můžete určit, které dny v týdnu se zahrnou do výpočtu Autotune (na snímku obrazovky níže vidíte příklad pro „pracovní dny“, kde jsou sobota a neděle z výpočtu Autotune vyřazené).
+  - Pokud je počet dní zahrnutých do výpočtu Autotune nižší než **Počet dní s daty**, uvidíte vpravo od výběru dní, kolik dní se zahrne (v příkladu níže 10 dní).
+  - Toto nastavení dává dobré výsledky, jen pokud počet zbývajících dní není příliš malý (například pokud ladíte zvláštní profil pro víkend a vyberete jen sobotu a neděli, nastavte **Počet dní s daty** alespoň na 21 nebo 28, aby se do výpočtu Autotune zahrnulo 6 nebo 8 dní).
 
-  ![Autotune default screen](../images/Autotune/Autotune_14b.png)
+  ![Výchozí obrazovka Autotune](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
+- Během výpočtu Autotune vidíte průběh výpočtu („Částečný výsledek - vyladěn den 1 / 4“ v příkladu níže, kde jsou sobota a neděle vyřazené).
 
-  ![Autotune default screen](../images/Autotune/Autotune_15b.png)
+  ![Výchozí obrazovka Autotune](../images/Autotune/Autotune_15b.png)
 
 
 
 (autotune-run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## Spuštění Autotune pravidlem automatizace
 
 ```{admonition} Only DEV
-:class: info
-Automation Switch Profile feature is only available in Dev/Engineering mode.
+:class: note
+Funkce **Automatické přepnutí profilu** je dostupná jen v režimu Dev/Engineering (vývojové sestavení nebo inženýrský režim).
 ```
 
-First step is to define correct trigger for an automation rule with Autotune:
+Prvním krokem je nastavit správný spouštěč pro pravidlo automatizace s Autotune:
 
-Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
+Poznámka: Více informací o nastavení pravidla automatizace najdete [zde](../DailyLifeWithAaps/Automations.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be run daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Vyberte spouštěč Opakující se čas: Autotune spouštějte jen jednou denně. Autotune je navržený tak, aby se spouštěl každý den (při každém novém spuštění se posunete o den dál a změny profilu by měly být rychle velmi malé).
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Výchozí obrazovka Autotune](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- Na začátku je lepší spouštět Autotune během dne, abyste mohli zkontrolovat výsledky. Pokud chcete Autotune spouštět v noci, musíte ve spouštěči nastavit 4:00 nebo později, aby se aktuální den zahrnul do dalšího výpočtu Autotune.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Výchozí obrazovka Autotune](../images/Autotune/Autotune_17.png)
 
-- Then you can select "Run Autotune" Action in the list
+- Pak můžete vybrat akci **Profil Autotune** (ve skupině **Smyčka a inzulín**).
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Výchozí obrazovka Autotune](../images/Autotune/Autotune_18.png)
 
-- You can then select Autotune Action to adjust parameters for your run. Default parameters are "Active Profile", default Tune days value defined in Autotune Plugin preferences, and All days are selected.
+- Pak můžete upravit parametry akce pro váš výpočet. V nové akci ukazuje **Vyberte profil pro ladění** první profil z vašeho seznamu místních profilů, pole **Ladit dní** je prázdné a všechny dny jsou vybrané. Vyberte profil, který chcete ladit, a zadejte počet dní v poli **Ladit dní** (1 až 30).
 
-  ![Autotune default screen](../images/Autotune/Autotune_19b.png)
+  ![Výchozí obrazovka Autotune](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- Pokud po několika dnech plně věříte výsledkům Autotune a procento změny je malé, můžete v [nastavení Autotune](#autotune-plugin-settings) zapnout „**Automatické přepnutí profilu**“, aby se vyladěný profil po výpočtu automaticky aktualizoval a aktivoval.
 
-Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+Poznámka: Pokud chcete automaticky ladit profily pro určité dny v týdnu (například jeden profil pro „víkendové dny“ a druhý pro „pracovní dny“), vytvořte pro každý profil jedno pravidlo, vyberte stejné dny ve spouštěči i v akci Autotune, počet dní pro ladění nastavte dost vysoko, aby se ladění jistě provedlo alespoň se 6 nebo 8 dny, a nezapomeňte ve spouštěči nastavit čas po 4:00...
 
-- See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
+- Níže je příklad pravidla, které se spouští každý pracovní den (pondělí až pátek) ve 4:00 a ladí profil „Normal“ s hodnotou 14 v poli **Ladit dní**, jen pracovní dny (do výpočtu Autotune se tedy zahrne jen 10 dní).
 
-  ![Autotune default screen](../images/Autotune/Autotune_20b.png)
+  ![Výchozí obrazovka Autotune](../images/Autotune/Autotune_20b.png)
 
 
 
-## Tips and trick's
+## Tipy a triky
 
-Autotune works with information existing in your database, so if you just installed AAPS on a new phone, you will have to wait several days before being able to launch Autotune with enough days to get relevant results.
+Autotune pracuje s informacemi, které jsou ve vaší databázi. Pokud jste tedy AAPS právě nainstalovali na nový telefon, musíte několik dní počkat, než budete moci Autotune spustit s dostatečným počtem dní pro smysluplné výsledky.
 
-Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
+Autotune je jen pomůcka. Je důležité pravidelně kontrolovat, zda s vypočítaným profilem souhlasíte. Pokud máte jakékoli pochybnosti, změňte nastavení Autotune (například počet dní) nebo zkopírujte výsledky do místního profilu a profil před použitím upravte.
 
-Always use Autotune several days manually to check results before applying them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile than you start to use Automation (Never before)
+Než výsledky použijete, vždy spouštějte Autotune několik dní ručně a výsledky kontrolujte. Automatizaci začněte používat teprve tehdy, když výsledkům Autotune plně věříte a rozdíl mezi předchozím a vypočítaným profilem je už velmi malý (nikdy dříve).
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Autotune může u některých uživatelů fungovat velmi dobře a u jiných ne, proto: **Pokud výsledkům Autotune nevěříte, nepoužívejte ho**
 
-It's also important to analyse Autotune results to understand (or try to understand) why Autotune propose these modifications
+Je také důležité výsledky Autotune analyzovat, abyste pochopili (nebo se pokusili pochopit), proč Autotune navrhuje právě tyto změny.
 
-- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more aggressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune proposes a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- může dojít k celkovému zvýšení nebo snížení síly vašeho profilu (například zvýšení celkového bazálu spolu se snížením hodnot ISF a IC). může to souviset s několika následujícími dny s korekcí autosens nad 100 % (je potřeba větší agresivita) nebo pod 100 % (jste citlivější).
+- Autotune někdy navrhne jiný poměr mezi bazálními dávkami a IC/ISF (například nižší bazál a agresivnější IC/ISF).
 
-We advise to not use Autotune in the following cases:
+Autotune nedoporučujeme používat v těchto případech:
 
-- You don't enter all your carbs
-  - If you don't enter carbs correction for hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs, especially correction for hypo.
-- You have a lot of periods with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs?
-  - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
+- Nezadáváte všechny své sacharidy.
+  - Pokud nezadáte sacharidy na korekci hypoglykémie, Autotune uvidí neočekávaný vzestup vaší glykémie a zvýší vaše bazální dávky o 4 hodiny dříve. To může být opak toho, co potřebujete, abyste se vyhnuli hypoglykémii, hlavně uprostřed noci. Proto je důležité zadávat všechny sacharidy, hlavně ty na korekci hypoglykémie.
+- Během dne máte hodně období se zjištěným UAM.
+  - Zadali jste všechny své sacharidy a odhadli jste je správně?
+  - Všechna období UAM (kromě případu, kdy během dne nezadáte žádné sacharidy a kategorizace UAM jako bazál je vypnutá) se zařadí jako bazál. To může váš bazál hodně zvýšit (mnohem víc, než je potřeba).
 
-- Your carbs absorption is very slow: if most of your carbs absorption are calculated with min_5m_carbimpact parameter (you can see these periods with a little orange dot in the top of COB curve), the calculation of COB could be wrong and leads to wrong results.
-  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercise, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit too high.
-- You have "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you have long periods of wrong BG values. If during the past weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
-- If the percentage of modification is too important
-  - You can try to increase the number of days to get smoother results
+- Vaše vstřebávání sacharidů je velmi pomalé: pokud se většina vstřebávání sacharidů počítá s parametrem min_5m_carbimpact (tato období poznáte podle malé oranžové tečky v horní části křivky COB), výpočet COB může být chybný a vést ke špatným výsledkům.
+  - Při sportu jste obvykle citlivější a vaše glykémie tolik nestoupá, takže během cvičení nebo po něm je běžné vidět období s pomalým vstřebáváním sacharidů. Pokud ale máte neočekávaně pomalé vstřebávání sacharidů příliš často, možná potřebujete upravit profil (vyšší hodnota IC) nebo máte min_5m_carbimpact trochu příliš vysoký.
+- Máte „velmi špatné dny“, například jste uvízli několik hodin v hyperglykémii a potřebovali obrovské množství inzulínu, abyste se dostali zpět do cílového rozmezí, nebo máte po výměně senzoru dlouhá období s chybnými hodnotami glykémie. Pokud máte za poslední týdny jen jeden nebo 2 „špatné dny“, můžete tyto dny ve výpočtu Autotune ručně vypnout, aby se z výpočtu vyřadily. A znovu **pečlivě zkontrolujte, zda můžete výsledkům věřit**.
+- Pokud je procento změny příliš velké
+  - Můžete zkusit zvýšit počet dní, abyste dostali vyrovnanější výsledky.
