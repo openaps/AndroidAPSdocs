@@ -1,87 +1,77 @@
 (browser-build)=
 
-# Browser build
+# Sestavení v prohlížeči
 
-Building AAPS with GitHub Actions.
+Sestavení AAPS pomocí GitHub Actions.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**Minimální podporovaná verze AAPS je 3.3.2.1.**
 
-## Vyrobte si místo stažení
+## Sestavte si aplikaci sami, místo stažení
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním!**
+**Aplikace AAPS (soubor apk) není k dispozici ke stažení kvůli předpisům pro zdravotnické prostředky. Sestavit si aplikaci pro vlastní použití je legální, ale nesmíte dávat kopii jiným!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Podrobnosti najdete na stránce [Nejčastější otázky uživatelů APS](../UsefulLinks/FAQ.md).
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## Zvolte způsob sestavení
 
-Pick the method that matches the device you build from:
+Vyberte způsob podle zařízení, ze kterého sestavujete:
 
-### On an Android phone: AAPS Builder (recommended)
+### Na telefonu s Androidem: AAPS Builder (doporučeno)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+Stránka nastavení vás provede vytvořením vlastního soukromého repozitáře pro sestavení na GitHubu. Nic se neinstaluje, nepotřebujete přípravný soubor a každé sestavení spouštíte sami. Aplikaci stáhnete přímo z GitHubu. Disk Google není nutný.
 
-This also works from a computer browser.
+Funguje to i z prohlížeče na počítači.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [Sestavení pomocí AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On any device: fork and preparation file
+### Na počítači nebo iPhonu / iPadu: fork a přípravný soubor
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. This works from an Android device, a computer or an iPhone / iPad. Follow the four steps below.
+Na GitHubu si vytvoříte kopii (fork) zdrojového kódu AAPS, pomocí přípravného souboru vytvoříte úložiště klíčů a sestavená aplikace se uloží na váš Disk Google. Postupujte podle čtyř kroků níže.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Už sestavujete s forkem?** Dál ho aktualizujte podle návodu [Aktualizace v prohlížeči](../Maintenance/UpdateBrowserBuild.md), nebo přejděte na AAPS Builder. Pokud chcete přejít, nejprve si z forku získejte kopii úložiště klíčů: viz [Přechod z předchozího sestavení v prohlížeči](#aaps-builder-from-fork).
 ```
 
-## Device and software specifications for the fork method
-
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+V prohlížeči budete používat více karet a přepínat mezi nimi. Příklad v Chrome:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
-You also need a Google account so that the app can be saved in your Google Drive.
-
 ```{note}
-This wiki assumes you're performing all operations with your cellular phone and the Chrome web browser.  
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Budete muset přepínat mezi kartami: začněte se všemi kartami zavřenými, abyste se při přepínání neztratili.
 ```
 
-## What you'll need
+#### Co budete potřebovat
 
-- A **Google account**, so the built app can be saved to your Google Drive (needed on every device).
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Android:** File Manager Plus (from the Play Store).
-  - **Computer (Windows / Mac / Linux):** Simple HTTP Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- **Účet Google**, aby se sestavená aplikace mohla uložit na váš Disk Google.
+- **Účet GitHub** (zdarma) – vytvoříte ho v kroku 1.
+- **Webový prohlížeč**, který umí mít otevřeno několik karet najednou (níže předpokládáme Chrome).
+- Malý **pomocný nástroj pro spuštění přípravného souboru**. Který potřebujete, záleží na zařízení, ze kterého sestavujete – teď nic neinstalujte, krok 2 vás tím provede pro vaše zařízení:
+  - **Počítač (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** žádná další aplikace – použijete vestavěnou aplikaci Soubory a prohlížeč.
 
-```{note}
-On Android, also make sure the **Google Drive app is up to date** (via the Play Store) so you can download the finished app afterwards.
-```
+#### Postup
 
-## The steps
+Sestavení v prohlížeči je řada rozhodnutí. Postupujte podle těchto kroků v uvedeném pořadí:
 
-The browser build is a series of choices. Follow these steps in order:
+1. **[Vytvořte si fork na GitHubu](BrowserBuildFork.md)** – vytvořte si osobní kopii zdrojového kódu AAPS.
+2. **[Vytvořte si podpisové úložiště klíčů](BrowserBuildKeystore.md)** – hlavní rozhodnutí: vytvořit nové úložiště klíčů (možnost 1), nebo nahrát stávající (možnost 2). Pak postupujte podle stránky pro vaše zařízení.
+3. **[Autorizujte Disk Google](BrowserBuildGoogleDrive.md)** – povolte GitHubu ukládat sestavenou aplikaci na váš Disk Google.
+4. **[Sestavte APK](BrowserBuildAPK.md)** – spusťte workflow v GitHub Actions a vyberte verzi a variantu.
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
-
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Pokud narazíte na potíže, viz **[Řešení problémů se sestavením v prohlížeči](../GettingHelp/BrowserBuildTroubleshooting.md)**. Volitelné operace s forkem najdete v částech [export úložiště klíčů](#ci-keystore-export) a [cherry-pick commitu](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**Začněte [krokem 1 – Vytvořte si fork na GitHubu](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Krok 1: Vytvořte si fork <BrowserBuildFork.md>
+Krok 2: Vytvořte si úložiště klíčů <BrowserBuildKeystore.md>
+Krok 3: Autorizujte Disk Google <BrowserBuildGoogleDrive.md>
+Krok 4: Sestavte APK <BrowserBuildAPK.md>
 ```
