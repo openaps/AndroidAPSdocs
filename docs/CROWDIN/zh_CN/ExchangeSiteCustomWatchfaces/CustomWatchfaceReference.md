@@ -416,7 +416,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 (cwf-reference-background-management)=
 
-#### **背景管理**
+#### Background management
 
 首先，关于血糖值图像，此处别无选择——必须置于背景层（否则会遮挡图表视图导致不可见！）因此需将血糖值映射至背景层，再根据血糖值旋转背景图像。
 
@@ -464,7 +464,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 在`"rotateSgv"`区块中，另两个键(`"minData":`和`"maxData":`)用于将数据范围调整为30至330。通过这些最小和最大值，我们可以直接使用数据值（无需转换）来旋转背景（以度为单位）。在此设置下，所有高于330mgdl的血糖值都将被限制在图像上限330度。
 
-#### **图表管理**
+#### Chart management
 
 图表默认背景为透明，为遮盖背景图像中的血糖刻度，需添加专用背景图（该图含蒸汽朋克表盘的整体阴影效果）。通过`"background":`键关联charBackground.jpg文件
 
@@ -482,7 +482,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 ```
 (cwf-reference-avg-delta-management)=
 
-#### **平均差值管理**
+#### Avg delta management
 
 为实现平均差值的动态范围调控，我们将使用四个自由文本视图。 freetext1用于调控刻度图像，freetext2至freetext4则根据刻度控制指针旋转。
 
@@ -747,7 +747,7 @@ DynData是最强大的功能，可根据内部数值（如血糖值、血糖水�
 
 #### 在AAPS V2中整合dynPref的多项偏好设置
 
-多数情况下，设置偏好时并非为了获得"动态行为"，而仅是呈现所选结果——但在dynPref中，这被视为动态功能特性...
+Most of the time, when you set a preference, it's not to get "dynamic behavior", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
 
 - 当`dynData`需要指定包含图像、字体颜色、颜色等参数的完整区块时，`dynPref`则能根据特定偏好设置逐项组合各参数。
 - 此处将演示如何将分隔线偏好与暗色偏好关联：当启用时（true），暗色表盘（dark参数为true）显示黑底白字，浅色表盘（dark为false）则显示白底黑字...
