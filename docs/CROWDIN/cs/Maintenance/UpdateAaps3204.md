@@ -1,26 +1,26 @@
-# Updating to AAPS 3.2.0.4
+# Aktualizace na AAPS 3.2.0.4
 
 (update-aaps-3204)=
 
-## Vyrobte si místo stažení
+## Sestavte si aplikaci sami, místo stažení
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním!**
+**Aplikace AAPS (soubor apk) není k dispozici ke stažení kvůli předpisům pro zdravotnické prostředky. Sestavit si aplikaci pro vlastní použití je legální, ale nesmíte dávat kopii jiným!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Podrobnosti najdete na stránce [Nejčastější otázky uživatelů APS](../UsefulLinks/FAQ.md).
 
-## Computer and software specifications for building AAPS 3.2.0.4
+## Specifikace počítače a softwaru pro sestavení AAPS 3.2.0.4
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk.
+* K sestavení APK může být potřeba konkrétní verze **[Android Studia](https://developer.android.com/studio/)**.
 
-| AAPS Version            | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| ----------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                  | up to Meerkat                                          | 8.2    | 17  |
+| Verze AAPS              | Doporučená<br/>verze<br/>Android Studia | Alternativní<br/>verze<br/>Android Studia | Gradle | JVM |
+| ----------------------- | --------------------------------------------------- | ----------------------------------------------------- | ------ |:--- |
+| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                 | až po Meerkat                                         | 8.2    | 17  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+„Doporučená verze“ obsahuje odpovídající verzi JVM. Doporučená verze je zároveň nejstarší verze, se kterou můžete **AAPS** sestavit. Ve verzi starší než „doporučená“ sestavení **NEPŮJDE**. Pokud použijete jinou verzi, můžete narazit na problémy s verzí JVM. Pomoc s řešením těchto problémů najdete na stránce [Řešení problémů s Android Studiem](#troubleshooting_androidstudio-uncommitted-changes). Pokud vaše současná verze Android Studia v tabulce není, musíte ho nejdříve aktualizovat.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Verze Gradle je svázaná se zdrojovým kódem. Při stažení nebo aktualizaci zdrojového kódu vždy dostanete správnou verzi Gradle. Je zde uvedená jen pro informaci, nemusíte s ní nic dělat.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* [32bitové systémy Windows](#troubleshooting_androidstudio-unable-to-start-daemon-process) Android Studio nepodporuje. Pamatujte, že **64bitový procesor i 64bitový operační systém jsou povinnou podmínkou.** Pokud váš systém tuto podmínku NESPLŇUJE, musíte vyměnit příslušný hardware nebo software, případně celý systém.
 
 <table class="tg">
 <tbody>
@@ -46,7 +46,7 @@ The Gradle version is linked to the source code, you will always get the correct
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">Minimálně 1280 × 800 <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -55,157 +55,157 @@ The Gradle version is linked to the source code, you will always get the correct
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. Pokud to uděláte, dokončení procesu sestavení může trvat dlouho, ale jakmile začnete, můžete ho nechat bez dozoru.
+**Důrazně doporučujeme (není to povinné) použít SSD (Solid State Disk) místo HDD (Hard Disk Drive), protože sestavení souboru APK AAPS pak zabere méně času.**  Soubor APK **AAPS** můžete sestavit i na HDD. Pokud to uděláte, dokončení procesu sestavení může trvat dlouho, ale jakmile začnete, můžete ho nechat bez dozoru.
 
-## Help and support during 3.2.0.4 building process
+## Pomoc a podpora při sestavování verze 3.2.0.4
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html) section, please consult that first.
+Pokud při sestavování aplikace **AAPS** narazíte na potíže, existuje samostatná část [**Řešení problémů s Android Studiem**](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html). Nejdříve si prosím přečtěte ji.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Pokud si myslíte, že je v návodu k sestavení něco špatně, chybí nebo je to nejasné, nebo pokud si stále nevíte rady, obraťte se na skupinu uživatelů **AAPS** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) nebo na [Discordu](https://discord.gg/4fQUWHZ4Mw). Pokud chcete něco změnit sami (aktualizovat snímky obrazovky _apod._), pošlete prosím [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
 ```{note}
-This page provides both example pictures for the **New** and old (**Classic**) Android Studio user interfaces.
+Tato stránka obsahuje ukázkové obrázky pro nové (**New**) i staré (**Classic**) uživatelské rozhraní Android Studia.
 ```
 
-## Overview for updating 3.2.0.x to 3.2.0.4
+## Přehled aktualizace z 3.2.0.x na 3.2.0.4
 
 ```{contents} Steps for updating to 3.2.0.4
 :depth: 1
 :local: true
 ```
 
-### Export your current settings
+### Exportujte své současné nastavení
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Exportujte nastavení ze stávající verze **AAPS** ve svém telefonu. Možná ho nebudete potřebovat, ale opatrnosti není nikdy dost.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Pokud si nepamatujete, jak to udělat, podívejte se na stránku [Export a import nastavení](ExportImportSettings.md).
 
-### Update your local AAPS copy
+### Aktualizujte svou místní kopii AAPS
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Otevřete svůj stávající projekt AAPS v Android Studiu. Možná budete muset vybrat svůj projekt. Klikněte (dvakrát) na projekt AAPS.
 
-![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
-
-<br>
-
-![Android Studio - Select Project](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
-
-* In the menu bar of Android Studio, select Git -> Fetch
-
-![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+![Android Studio – výběr projektu](../images/update/01_ProjectSelection.png)
 
 <br>
 
-![Android Studio Menu - Git - Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
+![Android Studio – výběr projektu](https://androidaps.readthedocs.io/en/3.1/_images/01_ProjectSelection.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* V nabídce Android Studia vyberte Git -> Fetch
 
-![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
-
-<br>
-
-![Android Studio Menu - Git - Fetch successful](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
-
-* In the menu bar, now select Git -> Pull
-
-![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+![Nabídka Android Studia – Git – Fetch](../images/update/02_GitFetch.png)
 
 <br>
 
-![Android Studio Menu - Git - Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+![Nabídka Android Studia – Git – Fetch](https://androidaps.readthedocs.io/en/3.1/_images/02_GitFetch.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* V pravém dolním rohu uvidíte zprávu, že Fetch proběhl úspěšně.
 
-![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+![Nabídka Android Studia – Git – Fetch úspěšný](../images/update/03_GitFetchSuccessful.png)
 
 <br>
 
-![Android Studio - Git - Pull dialog](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+![Nabídka Android Studia – Git – Fetch úspěšný](https://androidaps.readthedocs.io/en/3.1/_images/03_GitFetchSuccessful.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Nyní v nabídce vyberte Git -> Pull
+
+![Nabídka Android Studia – Git – Pull](../images/update/04_GitPull.png)
+
+<br>
+
+![Nabídka Android Studia – Git – Pull](https://androidaps.readthedocs.io/en/3.1/_images/04_GitPull.png)
+
+* Všechny možnosti nechte, jak jsou (origin/master), a vyberte Pull
+
+![Android Studio – Git – dialog Pull](../images/update/05_GitPullOptions.png)
+
+<br>
+
+![Android Studio – Git – dialog Pull](https://androidaps.readthedocs.io/en/3.1/_images/05_GitPullOptions.png)
+
+* Počkejte, než stahování skončí. Průběh uvidíte jako informaci ve spodní liště. Po dokončení uvidíte zprávu o úspěchu.
 
   ```{note}
-  The files that were updated may vary! This is not an indication
+  Aktualizované soubory se mohou lišit! Nic to neznamená
   ```
 
 
-![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+![Android Studio – Pull úspěšný](../images/update/06_GitPullSuccess.png)
 
 <br>
 
-![Android Studio - Pull successful](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
+![Android Studio – Pull úspěšný](https://androidaps.readthedocs.io/en/3.1/_images/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Spustí se synchronizace Gradle (Gradle Sync), která stáhne některé závislosti. Počkejte, až skončí.
 
-![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
-
-<br>
-
-![Android Studio - Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
-
-### Select JVM version 17
-
-- Open the Gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
-
-![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+![Android Studio – Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
 <br>
 
-![Open Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
+![Android Studio – Gradle Sync](https://androidaps.readthedocs.io/en/3.1/_images/40_BackgroundTasks.png)
 
-- In **Gradle JDK** field, check if the appropriate version: **jbr-17** is selected (1) If not, click on the field, and see if it is already available in the list.
+### Vyberte verzi JVM 17
 
-![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+- Otevřete zobrazení Gradle kliknutím na slona (1) na pravé straně Android Studia, otevřete nastavení (2) a vyberte **Gradle Settings** (3):
 
-
-
-- In Version (1), select **17**. In Vendor (2) select JetBrains Runtime or any Vendor. Location (3): do not change.
-
-![Select JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
-
-- Close the **Settings** dialog with **OK**.
-
-### Select the AAPS 3.2.0.4 branch
-
-- At the bottom left, select the Git symbol, right-click on 3.2.0.4 and Checkout.
-
-![Select Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+![Otevření Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
 <br>
 
-![Select Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+![Otevření Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-### Sync project with Gradle
+- V poli **Gradle JDK** (1) zkontrolujte, zda je vybraná odpovídající verze: **jbr-17**. Pokud ne, klikněte na pole a podívejte se, zda už je v seznamu k dispozici. Pokud v seznamu není (snímek obrazovky níže ukazuje počítač, kde je k dispozici jen **jbr-21**), vyberte **Download JDK...** (2).
+
+![Výběr Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+
+
+- V poli Version (1) vyberte **17**. V poli Vendor (2) vyberte JetBrains Runtime nebo libovolného dodavatele. Location (3): neměňte.
+
+![Výběr JDK 17](https://androidaps.readthedocs.io/en/3.2/_images/163_JDKSelection.png)
+
+- Zavřete dialog **Settings** tlačítkem **OK**.
+
+### Vyberte větev AAPS 3.2.0.4
+
+- Vlevo dole vyberte symbol Git, klikněte pravým tlačítkem na 3.2.0.4 a zvolte Checkout.
+
+![Výběr Download JDK](../images/studioTroubleshooting/17_Checkout.png)
+
+<br>
+
+![Výběr Download JDK](../images/studioTroubleshooting/17_CheckoutOld.png)
+
+### Synchronizujte projekt s Gradle
 
 ```{admonition} WARNING!
 :class: warning
-**Never update Gradle.** Always sync it with the project.
+**Nikdy Gradle neaktualizujte.** Vždy ho jen synchronizujte s projektem.
 ```
 
-Use the elephant icon and Sync Project with Gradle Files (or follow [this](#gradle-resync)) for the new UI.
+V novém rozhraní použijte ikonu slona a Sync Project with Gradle Files (nebo postupujte podle [tohoto návodu](#gradle-resync)).
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephant.png)
 
-Or ([this](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) for the classic UI.
+Nebo ([tento návod](https://androidaps.readthedocs.io/en/3.2/GettingHelp/TroubleshootingAndroidStudio.html#gradle-resync)) pro klasické rozhraní.
 
 ![Sync Project with Gradle Files](../images/studioTroubleshooting/06_GradleResyncElephantOld.png)
 
-### Build the Signed 3.2.0.4 APK
+### Sestavte podepsané APK 3.2.0.4
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Váš zdrojový kód je nyní v aktuální vydané verzi a všechny předpoklady jsou zkontrolované. Nyní je čas sestavit podepsané APK podle popisu v [části o sestavení podepsaného APK](#Building-APK-generate-signed-apk).
 
-### Transfer and install the 3.2.0.4 APK
+### Přeneste a nainstalujte APK 3.2.0.4
 
-You need to transfer the apk to your phone so you can install it.
+APK musíte přenést do telefonu, abyste ho mohli nainstalovat.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Pokud jste sestavení dokončili se stejným stávajícím úložištěm klíčů v Android Studiu, nemusíte stávající aplikaci z telefonu odstraňovat. Při instalaci APK postupujte podle výzev k instalaci aktualizace.
+V jiných případech, například když jste pro podepsané APK vytvořili v Android Studiu nové úložiště klíčů, musíte starou aplikaci před instalací APK smazat. **Nezapomeňte exportovat nastavení!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
+Viz návod [Přenos a instalace AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-### Check AAPS version 3.2.0.4 on phone
+### Kontrola verze AAPS 3.2.0.4 v telefonu
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Po instalaci nového APK můžete verzi AAPS v telefonu zkontrolovat tak, že klepnete na nabídku se třemi tečkami vpravo nahoře a potom na O aplikaci. Měli byste vidět aktuální verzi.
 
