@@ -1,12 +1,12 @@
 # 平滑血糖資料
 
-如果 **血糖** 資料不穩定/干擾，**AAPS** 可能會錯誤地注射胰島素，導致血糖過高或過低。如果你發現你的連續血糖監測（CGM）資料出錯，應在問題解決前暫停循環。根據你的 CGM，這些問題可能是由於 **AAPS** 中的 CGM 韌體設定問題（如下文進一步說明）；或是 CGM 傳感器位置問題（這可能需要更換 CGM 傳感器）。
+如果 **血糖** 資料不穩定/干擾，**AAPS** 可能會錯誤地注射胰島素，導致血糖過高或過低。 If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. 根據你的 CGM，這些問題可能是由於 **AAPS** 中的 CGM 韌體設定問題（如下文進一步說明）；或是 CGM 傳感器位置問題（這可能需要更換 CGM 傳感器）。
 
 ## 在 AAPS 中平滑資料
 
-自 **AAPS** 版本 3.2 起，**AAPS** 提供了在 **AAPS** 中平滑資料的選項，而不是在 CGM 應用程式中。在 [設定檔設置工具 > 平滑](../SettingUpAaps/ConfigBuilder.md) 中有三個選項可用。
+**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
 
-![平滑](../images/ConfBuild_Smoothing.png)
+![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
 
 ### 指數平滑
 
@@ -20,19 +20,25 @@
 
 僅在你的 CGM 資料在傳輸到 **AAPS** 之前已由收集應用程式正確平滑時使用此選項。
 
+### Unscented Kalman Filter (UKF)
+
+This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+
 (smoothing-xdrip-dexcom-g6)=
 
 ## 平滑處理建議
+
+You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
 
 |               | 指數平滑  |  平均平滑  | 無平滑處理 |
 | ------------- |:-----:|:------:|:-----:|
 | G5/G6/ONE     | 如果有干擾 |        | 建議使用  |
 | G7/ONE+/Stelo | 如果有干擾 | 如果穩定的話 |       |
 
-Libre 傳感器的干擾較大，可能需要平滑處理。在使用 xDrip+ 直接連線或修補的應用程式資料來源（接收來自其他應用程式，包括 Juggluco）時，[已在應用程式內進行平滑處理](#libre2-value-smoothing-raw-values)。
+Libre 傳感器的干擾較大，可能需要平滑處理。 When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
 
-| 傳感器 / 資料來源      | Juggluco | xDrip+ 直接 | xDrip+ 橋接 | xDrip+ 修補應用程式 |
-| --------------- |:--------:|:---------:|:---------:|:-------------:|
-| Libre 1/14天/專業版 |   N.A.   |   N.A.    |   平均平滑    |     N.A.      |
-| Libre 2/2+ (歐盟) |   平均平滑   |   無平滑處理   |   平均平滑    |     無平滑處理     |
-| Libre 2/2+/3/3+ |   平均平滑   |   N.A.    |   N.A.    |     無平滑處理     |
+| 傳感器 / 資料來源      | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
+| --------------- |:--------:|:------------:|:------------:|:-----------------:|
+| Libre 1/14天/專業版 |   N.A.   |     N.A.     |     平均平滑     |       N.A.        |
+| Libre 2/2+ (歐盟) |   平均平滑   |    無平滑處理     |     平均平滑     |       無平滑處理       |
+| Libre 2/2+/3/3+ |   平均平滑   |     N.A.     |     N.A.     |       無平滑處理       |
