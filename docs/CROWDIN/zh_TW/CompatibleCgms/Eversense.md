@@ -1,18 +1,20 @@
-# 針對 Eversense 使用者
+# Eversense
 
-有三種不同的方法來存取 Eversense 的讀取值：
+There are four different methods to access the readings from Eversense:
 
 - ESEL 配套模式
 - ESEL 修補版模式
-- xDrip+ 配套應用程式
+- xDrip companion app
+- Notification Reader (built into **AAPS**)
 
 ## ESEL
 
 按照這些[指示](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel)，取得並安裝[ESEL 應用程式](https://github.com/BernhardRo/Esel/tree/master/apk)。
 
-- 啟用「發送至 AAPS 和 xDrip」
-- **停用**「發送至 Nightscout」
-- 由於 Eversense 的血糖資料可能會產生干擾，建議在 ESEL 中啟用「平滑資料」功能。
+- In ESEL, open the three dots menu (⋮) at the top right and select **Settings** (also available from the ☰ menu). In the settings:
+  - 啟用「發送至 AAPS 和 xDrip」
+  - **停用**「發送至 Nightscout」
+  - 由於 Eversense 的血糖資料可能會產生干擾，建議在 ESEL 中啟用「平滑資料」功能。
 
 ![ESEL 廣播](../images/ESEL.png)
 
@@ -27,7 +29,7 @@
    - 停用「從修補版 Eversense 應用程式獲取資料」設置
    - 若需回填：啟用「從 eversensedms.com 填補遺漏資料」
    - 輸入你的 Eversense 登錄資料作為電子郵件地址和密碼
-3. 在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中將「MM640g」設為血糖來源。
+3. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
 ### 修補版 Eversense 應用程式
 
@@ -49,17 +51,24 @@
 
 如果你首次安裝 Eversense 並運作 ESEL，可能需要長達 15 分鐘才能在 xDrip 中顯示第一個數值！
 
-4. 在[ConfigBuilder 的血糖來源](#Config-Builder-bg-source)中將「MM640g」設為血糖來源。
+4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
-## xDrip+
+## xDrip
 
-xDrip+ 可以像 ESEL 一樣從供應商應用程式的通知中讀取資料。無法使用回填功能。
+xDrip can read notifications from the vendor app, like ESEL does. 無法使用回填功能。
 
-- 下載並安裝 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
-- 在 xDrip+ 中必須選擇「配套應用程式」作為資料來源。
-- 在[組態建置工具的血糖來源](#Config-Builder-bg-source)中選擇 xDrip+。
-- 根據 xDrip+ 設定頁面的說明[調整 xDrip+ 設定](../CompatibleCgms/xDrip.md)。
+- Download and install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip “Companion App” must be selected.
+- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
 - 在 AAPS 中啟用[指數平滑](../CompatibleCgms/SmoothingBloodGlucoseData.md)。
+
+## Notification Reader
+
+**AAPS** can read the glucose values directly from the notifications posted by the official Eversense app, without any other app in between. 無法使用回填功能。
+
+- Select **Notification Reader** in [**Configuration → BG Source**](#Config-Builder-bg-source) and grant **AAPS** access to notifications when asked.
+- Make sure the Eversense app shows the current glucose value in its notification.
 
 ```{warning}
 血糖 值的讀取頻率並不總是 5 分鐘，並且可能會出現重複數值。
