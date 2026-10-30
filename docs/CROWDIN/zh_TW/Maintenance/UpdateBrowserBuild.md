@@ -34,11 +34,6 @@
 (Update-to-new-version-update-your-repo)=
 ### 更新你的 GitHub 儲存庫
 
-```{admonition} WARNING
-:class: warning
-從 AAPS 版本 3.3.2.1 起，瀏覽器建置已釋出。
-```
-
 [登入 GitHub](https://github.com/login)。
 
 1. 選擇儲存庫。
@@ -96,8 +91,13 @@
 
 ![Google 雲端硬碟位置](../images/update/CI/GitHubActions5.png)
 
+```{note}
+自 2026 年 9 月起，Google 的 Android 開發者驗證可能會依你的國家／地區，阻擋透過點擊檔案安裝 APK。該頁面說明了免費的替代作法。
+```
 
 繼續 [這裡](#Update-to-new-version-check-aaps-version-on-phone)
+
+(update-browser-build-troubleshooting)=
 
 ## 問題排除
 
@@ -105,6 +105,6 @@
 
 先深呼吸！
 
-然後如果你的問題已經有文檔，請參閱 [問題排除](#aaps-ci-preparation)！
+Then check if your problem is already documented: see [AAPS Builder troubleshooting](#aaps-builder-troubleshooting) if you build with **AAPS Builder**, or [Browser build troubleshooting](#aaps-ci-troubleshooting) otherwise.
 
 如果你需要進一步幫助，請聯繫其他**AAPS**使用者，透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。
