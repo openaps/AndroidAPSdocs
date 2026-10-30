@@ -35,9 +35,8 @@ Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any sp
 
 After you installed the new apk:
 
-- you can check the **AAPS'** version on your phone by clicking the three dots menu on the top right and then 'About' (as per the screenshot below). The **AAPS'** current version can be viewed; 
-- ensure import settings have been actioned;
-- action a 'full synchroniation' under **NSClient** to ensure **AAPS** is working off accurate & complete data; and
-- please check your **AAPS'** settings under **Preferences** and ensure these remain accurate.
+- you can check the **AAPS'** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The **AAPS'** current version can be viewed;
+- ensure import settings have been actioned; and
+- please check your **AAPS'** settings under **Settings** and ensure these remain accurate.
 
-![Yüklü AAPS sürümü](../images/Update_VersionCheck.png)
+![About dialog with the AAPS version installed](../images/about_dialog_version.png)
