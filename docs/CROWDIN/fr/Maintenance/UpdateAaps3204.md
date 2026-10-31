@@ -4,7 +4,7 @@
 
 ## Compiler vous-même au lieu de télécharger
 
-**L'application AAPS (le fichier apk) n'est pas disponible en téléchargement, en raison de la réglementation concernant les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes !**
+**L'application AAPS (le fichier apk) n'est pas disponible en téléchargement, en raison de la réglementation concernant les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes !**
 
 Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
 
@@ -16,7 +16,7 @@ Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de dé
 | ----------------------- | --------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
 | [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                 | jusqu'à Meerkat                                        | 8.2    | 17  |
 
-La « version préférée » est fournie avec la bonne version de JVM. La version préférée est aussi la version minimale que vous pouvez utiliser pour compiler **AAPS**. Vous ne pourrez **PAS** compiler avec une version plus ancienne que la version « préférée ». Si vous utilisez une autre version, vous pouvez rencontrer des problèmes liés à la version de JVM. Consultez la page [Dépannage d'Android Studio](#incompatible-gradle-jvm) pour vous aider à résoudre ces problèmes. Si votre version actuelle d'Android Studio n'est pas dans le tableau, vous devez d'abord la mettre à jour.
+La « version préférée » est fournie avec la bonne version de JVM. La version préférée est aussi la version minimale que vous pouvez utiliser pour compiler **AAPS**. Vous ne pourrez **PAS** compiler avec une version plus ancienne que la version « préférée ». Si vous utilisez une autre version, vous pouvez rencontrer des problèmes liés à la version de JVM. Consultez la page [Dépannage d'Android Studio](#incompatible-gradle-jvm) pour vous aider à résoudre ces problèmes. Si votre version actuelle d'Android Studio n'est pas dans le tableau, vous devez d'abord la mettre à jour.
 
 La version de Gradle est liée au code source. Vous aurez toujours la bonne version de Gradle quand vous téléchargez ou mettez à jour le code source. Elle est indiquée ici seulement pour information. Vous n'avez rien à faire.
 
@@ -25,32 +25,32 @@ La version de Gradle est liée au code source. Vous aurez toujours la bonne vers
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">OS (seulement 64 bits)</th>
+    <td class="tg-baqh">Windows 8 ou supérieur</td>
+    <td class="tg-baqh">Mac OS 10.14 ou supérieur</td>
+    <td class="tg-baqh">Tout Linux avec Gnome, KDE ou Unity DE ;&nbsp;&nbsp;GNU C Library 2.31 ou plus récente</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (seulement 64 bits)</th>
+    <td class="tg-baqh">Architecture CPU x86_64 ; Intel Core de 2e génération ou plus récent, ou CPU AMD compatible avec <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Puces ARM, ou Intel Core de 2e génération ou plus récent compatible avec <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">Architecture CPU x86_64 ; Intel Core de 2e génération ou plus récent, ou processeur AMD compatible avec la virtualisation AMD (AMD-V) et SSSE3</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8 Go ou plus</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Disque</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Au moins 30 Go d'espace libre. Un SSD est recommandé.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
+    <th class="tg-baqh"><p align="center">Résolution</th>
     <td class="tg-baqh" colspan="3"><p align="center">Minimum 1280 x 800 <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Haut débit</td>
   </tr>
 </tbody>
 </table>
@@ -125,7 +125,7 @@ Consultez la page [Créer et restaurer des sauvegardes](ExportImportSettings.md)
 * Attendez pendant le téléchargement. Vous voyez l'avancement dans la barre du bas. Une fois terminé, vous verrez un message de réussite.
 
   ```{note}
-  Les fichiers mis à jour peuvent être différents ! Ce n'est pas le signe d'un problème.
+  Les fichiers mis à jour peuvent être différents ! Ce n'est pas le signe d'un problème.
   ```
 
 
@@ -153,7 +153,7 @@ Consultez la page [Créer et restaurer des sauvegardes](ExportImportSettings.md)
 
 ![Ouvrir Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- Dans le champ **Gradle JDK** (1), vérifiez que la bonne version est sélectionnée : **jbr-17**. Sinon, cliquez sur le champ et regardez si elle est déjà disponible dans la liste. Si elle n'est pas dans la liste (la capture d'écran ci-dessous montre un ordinateur où seule **jbr-21** est disponible), sélectionnez **Download JDK...** (2).
+- Dans le champ **Gradle JDK** (1), vérifiez que la bonne version est sélectionnée : **jbr-17**. Sinon, cliquez sur le champ et regardez si elle est déjà disponible dans la liste. Si elle n'est pas dans la liste (la capture d'écran ci-dessous montre un ordinateur où seule **jbr-21** est disponible), sélectionnez **Download JDK...** (2).
 
 ![Sélectionner Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
@@ -200,12 +200,12 @@ Vous devez transférer l'apk sur votre téléphone pour pouvoir l'installer.
 
 ```{note}
 Si vous avez compilé avec le même keystore existant dans Android Studio, vous n'avez pas besoin de supprimer l'application existante sur votre téléphone. Lorsque vous installez l'apk, suivez les instructions pour installer les mises à jour.
-Pour d'autres cas, comme la création d'un nouveau keystore dans Android Studio pour votre apk signé, vous devrez supprimer l'ancienne application avant d'installer l'apk. **N'oubliez pas d'exporter vos paramètres !**
+Pour d'autres cas, comme la création d'un nouveau keystore dans Android Studio pour votre apk signé, vous devrez supprimer l'ancienne application avant d'installer l'apk. **N'oubliez pas d'exporter vos paramètres !**
 ```
 
 Consultez les instructions de [Transfert et installation de AAPS sur votre smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 ### Vérifier la version 3.2.0.4 d'AAPS sur le téléphone
 
-Après avoir installé le nouvel apk, vous pouvez vérifier la version d'AAPS sur votre téléphone : appuyez sur le menu à trois points en haut à droite, puis sur À propos. Vous devriez voir la version actuelle en résultat.
+Après avoir installé le nouvel apk, vous pouvez vérifier la version d'AAPS sur votre téléphone : appuyez sur le menu à trois points en haut à droite, puis sur À propos. Vous devriez voir la version actuelle en résultat.
 
