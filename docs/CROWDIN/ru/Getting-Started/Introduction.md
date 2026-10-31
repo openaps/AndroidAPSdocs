@@ -252,7 +252,7 @@ Ask if your team has any patients under their care who already use OS-AID loopin
 
 a) Система **AAPS** разработана ПАЦИЕНТАМИ и их опекунами. Она разработана в конечном счете для обеспечения безопасности, но также и опираясь на глубокое изучение опыта пациента. There are many thousands of **AAPS** users worldwide. There is therefore likely to be other patients using OS-AID looping in your clinic's patient population (whether they know about it or not).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the OS-AID looping community.
+b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
 
 c) Начало работы с **AAPS** предполагает _постепенный_ переход с “открытых” систем с приостановкой подачи инсулина на низких сахарах к гибридному циклу путем выполнения ряда целей. Таким образом, существует структурированная программа, требующая от пользователей демонстрации уровня компетентности на каждом этапе и доработки основных настроек (база, чувствительность ISF и углеводный коэффициент ICR), прежде чем они смогут замкнуть цикл.
 
@@ -264,7 +264,7 @@ f) Если у эндокринологов есть возражения, ра�
 
 #### Support for OS-AID looping by other clinicians
 
-Статья в [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)(co led by Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, and co lead by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) содержит:
+The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
 
 a) **Assurance** for professionals that OS-AID artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
 
