@@ -1,131 +1,131 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Ці інструкції описують налаштування інсулінової помпи Equil.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Можливості помпи з AAPS
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* Безтрубкова патч-помпа, яка зв'язується з **AAPS** через вбудований Bluetooth вашого телефону, без додаткового пристрою зв'язку.
+* **AAPS** вважає Equil патч-помпою з резервуаром на 200 Од: головний екран показує індикатори статусу патч-помпи, а пункти **Підготовка/Заповнення** і **Заміна батареї помпи** не пропонуються. Заповнення, підготовку та заміну батареї виконують у майстрах помпи.
+* Поки помпу призупинено або зупинено, **AAPS** записує тимчасовий базал 0 Од/год, тому базальний інсулін не враховується в IOB.
+* Перехід на літній/зимовий час і зміну часового поясу потрібно виконувати вручну.
 
-## Hardware and software requirements
-* **Compatible Equil hardware**
+## Вимоги до обладнання та програмного забезпечення
+* **Сумісні пристрої Equil**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  Зараз підтримуються Equil 5.3 і 5.4.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* **AAPS**, зібраний і встановлений за інструкцією [Збірка APK](../SettingUpAaps/BuildingAaps.md)
 
 ## Setup
 
-### Select Equil pump
+### Виберіть помпу Equil
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+Відкрийте **меню** (☰) у верхньому лівому куті, виберіть **[Конфігурація](#Config-Builder-pump)** і в розділі **Помпа** виберіть **Equil**.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+Після вибору на картці **Equil** є дві кнопки: **Налаштування** і **Відкрити плагін**:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![Плагін Equil вибрано в «Конфігурація > Помпа»](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Відкрити плагін** (або **Керувати** → **Помпа**) відкриває екран помпи Equil. Поки помпу не спарено, він виглядає так:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![Екран помпи Equil до спарювання](../images/v4/Pumps/equil_pump_screen.png)
 
-### Settings
+### Налаштування
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+Відкрийте налаштування Equil кнопкою **Налаштування** на картці **Equil** або значком шестерні у верхньому правому куті екрана помпи.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Налаштування драйвера Equil](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **Сигнал низького заряду акумулятора**: попереджає, коли батарея помпи майже розряджена.
+* **Сигнал низького рівня інсуліну**: попереджає, коли в резервуарі мало інсуліну.
+* **Звук сигналу**: як помпа сповіщає вас: **Без звуку**, **Лише вібрація**, **Лише звук** або **Вібрація і звук**.
+* **Швидкість болюсу**: як швидко вводиться болюс: **1,5 Од/хв (стандартна)**, **3 Од/хв**, **6 Од/хв** або **12 Од/хв**. Швидший болюс може частіше викликати сигнали оклюзії.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![Варіанти швидкості болюсу в налаштуваннях Equil](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+Сам патч відхиляє будь-яку базальну швидкість, вищу за максимум, який **AAPS** у нього записує. **AAPS** бере більше з двох значень: ваше [налаштування](../SettingUpAaps/Preferences.md) **максимального базалу** або найвищу погодинну базальну швидкість у вашому **профілі**. Тому патч завжди приймає ваш профіль і тимчасові базали, які запитує петля. **AAPS** також надсилає в патч ваш максимальний дозволений болюс.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+Коли ви змінюєте **максимальний базал** або **максимальний болюс**, **AAPS** автоматично надсилає нові значення в патч. Їх також надсилають під час кожного перемикання профілю. На самому патчі нічого налаштовувати не потрібно.
 ```
 
-### Pair the pump
+### Спарювання помпи
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+На екрані помпи натисніть **Спарувати**. Майстер проведе вас через кожен крок. Ряд крапок угорі показує, на якому ви етапі.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+Якщо Android запитає, чи може **AAPS** знаходити пристрої поблизу і підключатися до них, натисніть **Дозволити**. Це потрібно **AAPS**, щоб знайти помпу.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Android запитує дозвіл на пошук пристроїв поблизу](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+Майстер має такі кроки. Натисніть **Далі**, щоб перейти далі, або **Скасувати**, щоб вийти з майстра.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **Потрібен профіль**: показується, лише якщо ви ще ніколи не активували **профіль** в **AAPS**. Виберіть профіль і натисніть **Активувати профіль**.
+1. **Зібрати помпу**: з'єднайте помпу, заповнений резервуар і заряджену батарею.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![Крок «Зібрати помпу»](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Знайти помпу**: **AAPS** шукає помпи Equil поблизу. Виберіть свою помпу зі списку.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![Крок «Знайти помпу» з помпою Equil у списку](../images/Equil/find_pump.png)
+1. **Спарувати пристрій**: ви можете ввести пароль спарювання в полі **Встановити пароль спарювання**. Він має складатися з 4 символів із набору `ABCDEF0123456789`. Натисніть **Спарувати**.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![Крок «Спарувати пристрій» з паролем спарювання](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Вибрати інсулін**: показується, лише якщо у вас налаштовано більше одного інсуліну. Виберіть інсулін, який є в резервуарі.
+1. **Підготовка / Заповнення**: помпа **не** повинна бути на своїй основі. Натисніть **Підготовка/Заповнення** і заповнюйте резервуар, доки на кінчику голки не з'явиться крапля інсуліну. Натисніть **Далі**.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![Крок «Підготовка / Заповнення»](../images/Equil/prime_fill.png)
+1. **Чергування місць введення**: показується, лише якщо в налаштуваннях чергування місць увімкнено **Керувати заміною місць введення помпи**. Торкніться місця, де ви прикріпите помпу, або натисніть **Пропустити**.
+1. **Прикріпити помпу**: прикріпіть помпу до її основи.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![Крок «Прикріпити помпу»](../images/Equil/attach_pump.png)
+1. **Заповнити канюлю**: коли помпа вже на основі, натисніть **Видалити повітря**, щоб видалити повітря з канюлі. Натисніть **Далі**.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![Крок «Заповнити канюлю» з кнопкою «Видалити повітря»](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **Підтвердити**: прикріпіть помпу до тіла і натисніть **Завершити**.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![Крок «Підтвердити» з кнопкою «Завершити»](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+Якщо ви встановили власний пароль спарювання (рекомендовано для вашої безпеки), збережіть його в надійному місці. Пароль зберігається в помпі. Помпа запитує його під час кожного нового спарювання, доки ви правильно не розпаруєте її в **AAPS**. До того часу помпу також не можна використовувати з оригінальним пультом керування (PDA).
 ```
 
-### Pump screen after pairing
+### Екран помпи після спарювання
 
-Once the pump is paired, the pump screen shows these buttons:
+Після спарювання на екрані помпи є такі кнопки:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **Оновити**: одразу читає стан та історію помпи.
+* **Призупинити** / **Відновити введення**: зупинити або знову запустити введення інсуліну.
+* **Замінити резервуар**: проводить вас через від'єднання помпи, встановлення нового резервуара (і, якщо потрібно, нової батареї), заповнення і повторне прикріплення. Перший крок запитує: *Ви також встановите новий інфузійний набір (основу і канюлю)?*
+  * **Так, новий інфузійний набір**: ви вибираєте місце, канюля заповнюється, і **AAPS** записує заміну інсуліну та заміну канюлі.
+  * **Ні, лише резервуар або акумулятор**: канюля не заповнюється, і **AAPS** записує лише заміну інсуліну.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  Після заміни резервуара рівень батареї показується як **-**, доки **AAPS** знову не прочитає його з помпи.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![Перший крок «Замінити резервуар» запитує про новий інфузійний набір](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **Історія**: показує події, записані помпою.
+* **Розпарувати пристрій**: проводить вас через від'єднання помпи і розпарування її з **AAPS**. Це зупиняє введення інсуліну, повертає поршень помпи в нижнє положення і видаляє спарювання.
 
-### Alarms
+### Сигнали тривоги
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* Сигнал низького рівня інсуліну звучить один раз на кожному рівні (10 Од, 5 Од і 2 Од) і коли резервуар порожній. Сигнал низького заряду батареї звучить один раз при 10 % і один раз при 5 %. Кожен рівень подає сигнал лише один раз до наступної заміни резервуара.
+* Сигнали тривоги і зупинки помпи також записуються як оголошення в терапії, з часом, коли помпа їх зареєструвала. Так ви згодом побачите, коли і чому помпа зупинилася.
+* Якщо резервуар спорожніє під час болюсу, **AAPS** записує лише інсулін, введений до цього моменту, і повідомляє вам обидві кількості.
 
-## Where to get help
+## Де отримати допомогу
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Драйвер Equil розробляє спільнота на **волонтерських** засадах. Перш ніж просити допомоги, будь ласка:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Прочитайте** відповідний розділ цієї документації, щоб перевірити, як має працювати функція.
+2. **Запитайте** на каналі *#AAPS* у [Discord](https://discord.gg/4fQUWHZ4Mw) або в інших [каналах спільноти](../GettingHelp/WhereCanIGetHelp.md).
+3. **Повідомте про помилку**: спершу пошукайте серед [наявних issues](https://github.com/nightscout/AndroidAPS/issues); якщо вашої проблеми там немає, створіть [нову issue](https://github.com/nightscout/AndroidAPS/issues) і додайте ваші [файли журналів](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Коли просите про допомогу, вкажіть марку і модель телефону, версію Android, версію **AAPS** і простий опис проблеми (що змінилося, коли востаннє все працювало).
