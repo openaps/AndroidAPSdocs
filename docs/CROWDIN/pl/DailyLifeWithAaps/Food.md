@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Żywność (Twoja baza produktów)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+Baza **Żywność** to Twoja osobista lista zapisanych produktów. Każdy wpis zapisuje **węglowodany** produktu (i opcjonalnie jego tłuszcz, białko, energię i kategorię). Dzięki temu produkty, które często jesz, masz w jednym miejscu i możesz zacząć bolus od zapisanego produktu z już wpisanymi węglowodanami.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Otwieranie bazy produktów
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Otwórz ekran **Zarządzaj** (dolny pasek nawigacji) i wybierz **Żywność** (*„Zarządzaj wpisami w bazie produktów spożywczych”*). W **AAPS** v4 Żywność **nie jest już wtyczką** — nie trzeba nic włączać; to osobny ekran, który otwierasz z [panelu Zarządzaj](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## Lista produktów
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Twoje produkty są pokazane jako przewijana lista. Każdy wiersz pokazuje **nazwę** produktu, jego **porcję / jednostkę / kategorię** oraz **węglowodany**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Lista bazy produktów z wyszukiwaniem i przyciskiem dodawania](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Szukaj** (na górze) — filtruje listę według **nazwy** (wielkość liter nie ma znaczenia).
+- **Filtr kategorii** — elementy pozwalają zawęzić listę do jednej **kategorii**; gdy wybierzesz kategorię, pojawiają się elementy jej **podkategorii**. (Naciśnij wybrany element jeszcze raz, aby go wyczyścić.)
+- **➕** (w prawym dolnym rogu) — dodaje nowy produkt (zobacz poniżej).
+- Naciśnij wiersz, aby **edytować** ten produkt.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Jeśli lista (lub obecny filtr) nie ma wpisów, ekran pokazuje **Brak danych**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Dodawanie i edycja produktu
+
+Naciśnij **➕**, aby dodać produkt, lub naciśnij istniejący wiersz, aby go edytować. Edytor otwiera się jako panel od dołu ekranu (**Dodaj produkt** / **Edytuj produkt**):
+
+![Edytor produktu — nazwa, kategoria, porcja, węglowodany i makroskładniki](../images/v4/Food/food_editor.png)
+
+Pola to:
+
+- **Nazwa** — wymagana (bez niej nie można zapisać).
+- **Kategoria** i **Podkategoria** — opcjonalne, służą do grupowania i filtrowania produktów.
+- **Wielkość porcji** i **Jednostka** — typowa wielkość porcji; domyślna **Jednostka** to **g**.
+- **Węglowodany (g)** — ilość węglowodanów w produkcie.
+- **Tłuszcz (g)**, **Białko (g)**, **Energia (kJ)** — opcjonalne wartości odżywcze.
+
+Naciśnij **Zachowaj**, aby zapisać, lub **Anuluj**, aby odrzucić zmiany. Gdy edytujesz istniejący produkt, edytor ma też przycisk **Usuń**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Usunięcie produktu pokazuje komunikat **„Usunięto produkt”** z akcją **Cofnij zmianę**, więc przypadkowe usunięcie łatwo cofnąć.
 ```
 
 ---
 
-## Using a food for a bolus
+## Użycie produktu do bolusa
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Każdy wiersz produktu ma przycisk **kalkulatora**. Naciśnięcie go otwiera **Kalkulator bolusa** z już wpisanymi **węglowodanami** produktu, a **nazwa** produktu zostaje dodana jako notatka do leczenia — wystarczy potwierdzić i podać bolus bez ponownego wpisywania węglowodanów.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Zapisana liczba **węglowodanów** produktu jest przekazywana do kalkulatora bez zmian — **AAPS** nie mnoży jej przez porcję ani przez to, ile zjadłeś. Jeśli masz inną ilość, popraw węglowodany w kalkulatorze przed potwierdzeniem. (Nie ma wyboru produktu *wewnątrz* kalkulatora bolusa ani okna węglowodanów; zaczynasz tutaj, od wiersza produktu.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Skąd pochodzą produkty (synchronizacja z Nightscout)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+Baza produktów jest udostępniana przez **Nightscout**, ale **tylko w jedną stronę**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Pobieranie:** **AAPS** **odczytuje** produkty z **bazy produktów** Twojej strony Nightscout i utrzymuje z nią zgodność lokalnej listy. Dzieje się to w ramach synchronizacji NSClient, więc sparowane **urządzenie opiekuna / obserwującego** też ma te same produkty.
+- **Wysyłanie:** **AAPS** **nie** wysyła produktów **do** Nightscout — NSClient nie obsługuje wysyłania wpisów produktów. Produkty, które tworzysz lub edytujesz **w AAPS**, zostają więc **na tym urządzeniu** i nie trafiają do Nightscout ani na Twoje inne urządzenia.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Ponieważ produkty są **tylko pobierane**, aby mieć jedną listę produktów na telefonie, na urządzeniu obserwującego / [urządzeniu opiekuna](../RemoteFeatures/ClientMasterControl.md) i w reszcie systemu, prowadź ją w **Nightscout** (we wbudowanym edytorze produktów). **AAPS** pobierze te wpisy. Produkt dodany tylko w **AAPS** jest lokalny dla tego urządzenia — i tam zostaje: pobieranie dopasowuje wpisy Nightscout po ich identyfikatorze Nightscout, więc dodaje je i aktualizuje, ale nigdy nie nadpisuje ani nie usuwa produktu utworzonego lokalnie (produkt jest usuwany tylko wtedy, gdy jego kopię usunięto w Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Pamiętaj, że baza produktów **nie** jest też częścią podpisanego kanału sterowania urządzenie pacjenta ↔ urządzenie opiekuna — jest przesyłana wyłącznie jako dane Nightscout.
 ```
 
 ---
 
-## Not on the watch
+## Nie na zegarku
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+Baza produktów to funkcja **telefonu** — na **zegarku z Wear OS** nie ma przeglądarki produktów, kafelka ani menu.
 
 ---
 
