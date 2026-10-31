@@ -1,6 +1,6 @@
 # Как да превеждате текстовете за приложението AAPS или документацията
 
-* За текстовете, използвани в приложението, отидете на <https://crowdin.com/project/androidaps> и влезте с профила си в GitHub
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * За документацията посетете <https://crowdin.com/project/androidapsdocs> и влезте с профила си в GitHub
 
 * Изпратете заявка за присъединяване към екипа на документацията. За целта натиснете флага на желания език и след това бутона „Join“ в горния десен ъгъл на следващата страница. Моля, посочете езика, дайте малко информация за себе си и за опита си с AAPS и дали искате да сте преводач или коректор (коректори могат да са само хора с опит в превода, които са и напреднали потребители на AAPS).
@@ -63,8 +63,8 @@
     
         1. Това е преводът, който подготвяте. Можете да копирате текста отгоре или да изберете едно от предложенията отдолу.
     
-        1. Това са предложенията за превод. Тук можете да видите доколко Crowdin оценява предложението като подходящо, или дали текстът вече е бил преведен в миналото и се появява отново само защото е бил преместен, без промяна в съдържанието.
-        1. Натиснете бутона „save“, за да запазите предложението си за превод. След това то ще бъде изпратено на коректор за окончателна проверка.
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. Натиснете бутона „save“, за да запазите предложението си за превод. It will then be passed to a proofreader for final check.
     
     ![Превод на документацията](../images/translation_WikiTranslate.png)
     
@@ -101,4 +101,4 @@
     
     ![Одобряване на текст](../images/translations-proofreading.png)
 
-* Когато коректор одобри превод, той ще бъде включен в следващата компилация на документацията. Тя няма фиксиран график и се прави при нужда, но приблизително веднъж седмично, освен по време на празници. За да ускорите процеса, можете да уведомите екипа на документацията за новите преводи.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. За да ускорите процеса, можете да уведомите екипа на документацията за новите преводи.
