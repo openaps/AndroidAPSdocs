@@ -1,153 +1,153 @@
 (reinstall-aaps)=
-# Reinstalling AAPS with a new keystore
+# Ponowna instalacja AAPS z nowym magazynem kluczy
 
-Every **AAPS** apk is signed with a **keystore**. An update only installs over your current **AAPS** if it is signed with the **same keystore**: all your settings and data are then kept. That's why it is recommended to store the keystore and its password in a safe place.
+Każdy plik apk **AAPS** jest podpisany **magazynem kluczy (keystore)**. Aktualizacja zainstaluje się na obecnym **AAPS** tylko wtedy, gdy jest podpisana **tym samym magazynem kluczy**: wtedy wszystkie ustawienia i dane zostają zachowane. Dlatego zalecamy przechowywać magazyn kluczy i jego hasło w bezpiecznym miejscu.
 
-If you try to install an apk signed with a different keystore than before, you will get an error message explaining that the installation failed!
+Jeśli spróbujesz zainstalować apk podpisany innym magazynem kluczy niż wcześniej, dostaniesz komunikat, że instalacja się nie udała!
 
 (reinstall-aaps-when)=
-## When do you need to reinstall?
+## Kiedy trzeba zainstalować ponownie?
 
-You need to uninstall and reinstall **AAPS** when your new apk is signed with a different keystore, for example:
+Musisz odinstalować i ponownie zainstalować **AAPS**, gdy nowy apk jest podpisany innym magazynem kluczy, na przykład gdy:
 
-- You cannot find your old keystore or its password.
-- You created a new keystore, for example with [Option 1 of the browser build](../SettingUpAaps/BrowserBuildKeystore.md) or **Create a new key** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
-- You build on a new computer and did not copy your keystore to it.
+- Nie możesz znaleźć starego magazynu kluczy albo jego hasła.
+- Utworzyłeś nowy magazyn kluczy, na przykład przez [Opcję 1 budowania w przeglądarce](../SettingUpAaps/BrowserBuildKeystore.md) lub **Create a new key** w [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
+- Budujesz na nowym komputerze i nie skopiowałeś na niego magazynu kluczy.
 
-If you still have your keystore, you don't need this page: reuse it and [update **AAPS**](../Maintenance/UpdateToNewVersion.md) in place.
+Jeśli wciąż masz swój magazyn kluczy, ta strona nie jest Ci potrzebna: użyj go ponownie i [zaktualizuj **AAPS**](../Maintenance/UpdateToNewVersion.md) bez odinstalowania.
 
 (reinstall-aaps-before)=
-## Before you start
+## Zanim zaczniesz
 
-- Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. You get them back by importing your **settings file**, so make sure you have a recent one.
-- The settings file does not contain your treatment and glucose history. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
-- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it.
-- **Omnipod and Medtrum users:** read [Tubeless pumps](#ExportImportSettings-tubeless-pumps) first. Your settings file must have been exported during the pod or patch you are wearing now.
-- If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) before you start.
+- Odinstalowanie **AAPS** usuwa wszystkie jego ustawienia, Twoje [zadania](../SettingUpAaps/CompletingTheObjectives.md) i obecne połączenie z pompą. Odzyskasz je, importując swój **plik ustawień**, więc upewnij się, że masz aktualny.
+- Plik ustawień nie zawiera historii leczenia ani historii glukozy. Jeśli wysyłasz dane do [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), możesz je wczytać z powrotem po ponownej instalacji (krok 8).
+- Potrzebujesz swojego [**hasła głównego**](#Preferences-master-password): plik ustawień jest nim zaszyfrowany.
+- **Użytkownicy Omnipod i Medtrum:** najpierw przeczytaj [Pompy bez drenu](#ExportImportSettings-tubeless-pumps). Twój plik ustawień musi być wyeksportowany w czasie noszenia obecnego poda lub patcha.
+- W razie potrzeby przed rozpoczęciem [skonfiguruj odbiornik źródła CGM/BG](../Getting-Started/CompatiblesCgms.md).
 
 (reinstall-aaps-steps)=
-## Steps
+## Kroki
 
-The pictures show a move from **AAPS** 3.4 (steps 1 to 3) to **AAPS** 4 (steps 6 to 8). Other versions look slightly different.
+Obrazki pokazują przejście z **AAPS** 3.4 (kroki 1 do 3) na **AAPS** 4 (kroki 6 do 8). Inne wersje wyglądają trochę inaczej.
 
 (reinstall-aaps-export)=
-### 1. Export your settings
+### 1. Wyeksportuj swoje ustawienia
 
-Export your settings with the **AAPS** currently installed on your phone. See [Settings Export](#ExportImportSettings-Settings-Export) for details.
+Wyeksportuj ustawienia w **AAPS**, który jest teraz zainstalowany na Twoim telefonie. Szczegóły znajdziesz w [Eksport ustawień](#ExportImportSettings-Settings-Export).
 
-In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User Settings**, tick **Local Storage** and tap **OK**.
+W **AAPS** 3.4: otwórz **Konserwacja** i dotknij **Export options** (opcje eksportu). W **User Settings** (ustawienia użytkownika) zaznacz **Local Storage** (pamięć lokalna) i dotknij **OK**.
 
-*Note: you can also use [Cloud Storage](#preferences-maintenance-cloud) to have a safety backup copy: that's a good idea, but keep Local Storage for recovering settings quickly.*
+*Uwaga: możesz też użyć [Cloud Storage](#preferences-maintenance-cloud) (pamięć w chmurze), aby mieć zapasową kopię: to dobry pomysł, ale zachowaj pamięć lokalną, aby szybko odzyskać ustawienia.*
 
-![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
+![Opcje eksportu z User Settings ustawionym na Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tap it.
+Przycisk ma teraz napis **Export settings (local)**. Dotknij go.
 
-![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
+![Konserwacja z przyciskiem Export settings (local)](../images/ReinstallAaps/reinstall_export_settings_local.png)
 
-**AAPS** shows the name of the file it will create. Tap **OK**, type your master password and tap **OK**.
+**AAPS** pokazuje nazwę pliku, który utworzy. Dotknij **OK**, wpisz hasło główne i dotknij **OK**.
 
-![Export settings confirmation with the file name](../images/ReinstallAaps/reinstall_export_confirm.png)
+![Potwierdzenie eksportu ustawień z nazwą pliku](../images/ReinstallAaps/reinstall_export_confirm.png)
 
-In **AAPS** 4: open **Maintenance**, select the **Local** chip next to **Export settings** and tap **Export settings**.
+W **AAPS** 4: otwórz **Konserwacja**, wybierz element **Lokalnie** obok **Eksport ustawień** i dotknij **Eksport ustawień**.
 
 (reinstall-aaps-copy)=
-### 2. Copy the settings file off your phone
+### 2. Skopiuj plik ustawień poza telefon
 
-The file is in the **preferences** folder of your [**AAPS** directory](#SetupWizard-StoragePermission), named like `2026-10-13_222735_full.json`. Copy or upload it to an external location (i.e. your computer, cloud storage service...). The file normally stays on your phone after the uninstall, but keep a copy elsewhere in case.
+Plik jest w folderze **preferences** w Twoim [katalogu **AAPS**](#SetupWizard-StoragePermission), a jego nazwa wygląda tak: `2026-10-13_222735_full.json`. Skopiuj go lub wyślij w inne miejsce (np. na komputer, do usługi przechowywania w chmurze...). Po odinstalowaniu plik zwykle zostaje na telefonie, ale na wszelki wypadek trzymaj kopię gdzie indziej.
 
 (reinstall-aaps-nightscout-before)=
-### 3. Synchronize with Nightscout
+### 3. Synchronizuj z Nightscout
 
-This step is not mandatory but recommended if you use [DynISF](#Open-APS-features-DynamicISF): it will allow you to resume directly with the current settings instead of waiting 5 days to build necessary data for the plugin. NSClient V3 needs to be [enabled and configured](../SettingUpAaps/SettingUpTheReportingServer.md).
+Ten krok nie jest obowiązkowy, ale zalecany, jeśli używasz [DynISF](#Open-APS-features-DynamicISF): pozwoli od razu kontynuować z obecnymi ustawieniami, zamiast czekać 5 dni na zebranie danych potrzebnych tej wtyczce. NSClient V3 musi być [włączony i skonfigurowany](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Make sure Nightscout has all your data before you uninstall.
+Przed odinstalowaniem upewnij się, że Nightscout ma wszystkie Twoje dane.
 
-Open **NSClient**, tap the **Full synchronization** button at the bottom of the screen, then **OK**.
+Otwórz **NSClient**, dotknij przycisku **Pełna synchronizacja** na dole ekranu, a potem **OK**.
 
-![NSClient screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
+![Ekran NSClient z przyciskiem Pełna synchronizacja](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
 
-*Note: the time necessary depends on your Nightscout hosting service.*
+*Uwaga: potrzebny czas zależy od usługi, na której działa Twój Nightscout.*
 
-![Full synchronization confirmation](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
+![Potwierdzenie pełnej synchronizacji](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
 
-**AAPS** then offers to clean up its database. **OK** removes data older than 3 months from the phone, which makes the synchronization much faster. **Cancel** synchronizes without cleaning up. The phone database is deleted when you uninstall anyway, so both are fine.
+Następnie **AAPS** proponuje wyczyszczenie swojej bazy danych. **OK** usuwa z telefonu dane starsze niż 3 miesiące, dzięki czemu synchronizacja jest dużo szybsza. **Anuluj** synchronizuje bez czyszczenia. Baza danych w telefonie i tak zostanie usunięta przy odinstalowaniu, więc obie opcje są w porządku.
 
-![Database cleanup question](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
+![Pytanie o czyszczenie bazy danych](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
 
-Leave **AAPS** running until the synchronization is finished.
+Pozostaw **AAPS** uruchomiony, aż synchronizacja się zakończy.
 
 (reinstall-aaps-build)=
-### 4. Build the new apk
+### 4. Zbuduj nowy apk
 
-[Build](../SettingUpAaps/BuildingAaps.md) a new signed apk with your new keystore and transfer it to your phone.
+[Zbuduj](../SettingUpAaps/BuildingAaps.md) nowy podpisany apk z nowym magazynem kluczy i przenieś go na telefon.
 
 (reinstall-aaps-uninstall)=
-### 5. Uninstall AAPS
+### 5. Odinstaluj AAPS
 
-In your phone's **Settings** > **Apps** > **AAPS**, tap **Uninstall** and confirm with **OK**.
+W telefonie otwórz **Ustawienia** > **Aplikacje** > **AAPS**, dotknij **Odinstaluj** i potwierdź **OK**.
 
-![App info of AAPS with the Uninstall button](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
+![Informacje o aplikacji AAPS z przyciskiem Odinstaluj](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
 
 (reinstall-aaps-install)=
-### 6. Install and start the new AAPS
+### 6. Zainstaluj i uruchom nowy AAPS
 
-[Install](../SettingUpAaps/TransferringAndInstallingAaps.md) the new apk and start **AAPS**. The [setup wizard](../SettingUpAaps/SetupWizard.md) asks for the permissions **AAPS** needs: tap **Grant** for each of them. This also turns [battery optimization](#setup-wizard-bluetooth-battery-optimisation) off again.
+[Zainstaluj](../SettingUpAaps/TransferringAndInstallingAaps.md) nowy apk i uruchom **AAPS**. [Kreator konfiguracji](../SettingUpAaps/SetupWizard.md) prosi o uprawnienia, których potrzebuje **AAPS**: dotknij **Przyznaj** przy każdym z nich. To także ponownie wyłącza [optymalizację baterii](#setup-wizard-bluetooth-battery-optimisation).
 
-![Permissions Required list of the setup wizard](../images/ReinstallAaps/reinstall_permissions.png)
+![Lista Wymagane uprawnienia w kreatorze konfiguracji](../images/ReinstallAaps/reinstall_permissions.png)
 
-For **AAPS Directory**, select the same **AAPS** folder as before (the one with the **preferences** folder in it), tap **Use this folder** and **Allow**.
+Dla **Katalog AAPS** wybierz ten sam folder **AAPS** co wcześniej (ten z folderem **preferences** w środku), dotknij **Użyj tego folderu** i **Zezwól**.
 
-![Selecting the existing AAPS folder](../images/ReinstallAaps/reinstall_aaps_directory.png)
+![Wybór istniejącego folderu AAPS](../images/ReinstallAaps/reinstall_aaps_directory.png)
 
-When **AAPS** finds your exported settings, the setup wizard shows a [Stored settings found](#setup-wizard-import-settings) screen where you can import them. You can also close the wizard and import from **Maintenance** as described below.
+Gdy **AAPS** znajdzie wyeksportowane ustawienia, kreator konfiguracji pokaże ekran [Znaleziono zapisane ustawienia](#setup-wizard-import-settings), na którym możesz je zaimportować. Możesz też zamknąć kreator i zaimportować ustawienia z **Konserwacja**, jak opisano poniżej.
 
 (reinstall-aaps-import)=
-### 7. Import your settings
+### 7. Zaimportuj ustawienia
 
-If the settings file is no longer on your phone, copy it back to the **preferences** folder of your **AAPS** directory.
+Jeśli pliku ustawień nie ma już na telefonie, skopiuj go z powrotem do folderu **preferences** w Twoim katalogu **AAPS**.
 
-Open the menu (☰) > **Maintenance**, select the **Local** chip next to **Import settings** and tap **Import settings**.
+Otwórz menu (☰) > **Konserwacja**, wybierz element **Lokalnie** obok **Importuj ustawienia** i dotknij **Importuj ustawienia**.
 
-![Maintenance with Import settings](../images/ReinstallAaps/reinstall_maintenance_import.png)
+![Konserwacja z Importuj ustawienia](../images/ReinstallAaps/reinstall_maintenance_import.png)
 
-The list shows each file with its **AAPS** version and how old it is. Choose the file you exported in step 1.
+Lista pokazuje każdy plik z jego wersją **AAPS** i wiekiem. Wybierz plik wyeksportowany w kroku 1.
 
-![List of settings files to import](../images/ReinstallAaps/reinstall_import_file_list.png)
+![Lista plików ustawień do importu](../images/ReinstallAaps/reinstall_import_file_list.png)
 
-You don't need to set a master password in the new **AAPS** first. Type the master password you used for the export in **Decryption password** and tap **Decrypt**. **File was encrypted with a different password** is expected: the new **AAPS** doesn't know your password yet. The import restores it with your other settings.
+Nie musisz najpierw ustawiać hasła głównego w nowym **AAPS**. Wpisz hasło główne użyte przy eksporcie w polu **Hasło do odszyfrowania** i dotknij **Odszyfruj**. Komunikat **Plik został zaszyfrowany innym hasłem** jest normalny: nowy **AAPS** nie zna jeszcze Twojego hasła. Import przywraca je razem z innymi ustawieniami.
 
-![Decryption password for the settings file](../images/ReinstallAaps/reinstall_import_password.png)
+![Hasło do odszyfrowania pliku ustawień](../images/ReinstallAaps/reinstall_import_password.png)
 
-Tick **Also replace pump settings**: without it, your pump and its settings are not restored. Omnipod and Medtrum users: only tick it if the file was exported during your current pod or patch (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+Zaznacz **Także zastąp ustawienia pompy**: bez tego pompa i jej ustawienia nie zostaną przywrócone. Użytkownicy Omnipod i Medtrum: zaznacz to tylko wtedy, gdy plik został wyeksportowany w czasie noszenia obecnego poda lub patcha (zobacz [Pompy bez drenu](#ExportImportSettings-tubeless-pumps)).
 
-![Also replace pump settings ticked](../images/ReinstallAaps/reinstall_import_replace_pump.png)
+![Zaznaczone Także zastąp ustawienia pompy](../images/ReinstallAaps/reinstall_import_replace_pump.png)
 
-Tap **Import**, then **OK** to apply the settings and **OK** again on **Settings applied**.
+Dotknij **Importuj**, potem **OK**, aby zastosować ustawienia, i jeszcze raz **OK** przy **Ustawienia zastosowane**.
 
-![Apply imported settings confirmation](../images/ReinstallAaps/reinstall_import_apply.png)
+![Potwierdzenie zastosowania zaimportowanych ustawień](../images/ReinstallAaps/reinstall_import_apply.png)
 
 (reinstall-aaps-nightscout-after)=
-### 8. Get your history back from Nightscout
+### 8. Odzyskaj historię z Nightscout
 
-Open the menu (☰) > [**Configuration**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Communication** and tap **Open plugin** under **NSClientV3**. Check that the status shows **Connected**. If it doesn't, see [Troubleshooting NSClient](TroubleshootingNsClient.md).
+Otwórz menu (☰) > [**Konfiguracja**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Komunikacja** i dotknij **Otwórz wtyczkę** pod **NSClientV3**. Sprawdź, czy status pokazuje **Połączono**. Jeśli nie, zobacz [Wskazówki dotyczące rozwiązywania problemów z NSClient](TroubleshootingNsClient.md).
 
-![Communication with the NSClientV3 Open plugin button](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
+![Komunikacja z przyciskiem Otwórz wtyczkę dla NSClientV3](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
 
-Tap the **Full synchronization** button at the bottom of the screen and **OK**. The database is new, so you can answer the cleanup question either way.
+Dotknij przycisku **Pełna synchronizacja** na dole ekranu i **OK**. Baza danych jest nowa, więc na pytanie o czyszczenie możesz odpowiedzieć dowolnie.
 
-![NSClientV3 screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
+![Ekran NSClientV3 z przyciskiem Pełna synchronizacja](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
 
-**AAPS** loads your data from Nightscout. The log shows **Full sync finished** when it is done.
+**AAPS** wczytuje Twoje dane z Nightscout. Gdy skończy, log pokazuje **Full sync finished**.
 
-![NSClientV3 log with Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
+![Log NSClientV3 z Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
 
 (reinstall-aaps-check)=
-### 9. Check and keep looping
+### 9. Sprawdź i dalej używaj pętli
 
-Check that your pump is connected and your CGM values arrive, then keep on looping.
+Sprawdź, czy pompa jest połączona i czy docierają wartości z CGM, a potem dalej używaj pętli.
 
 (reinstall-aaps-afterwards)=
-## Afterwards
+## Później
 
-Always keep using your new keystore from now on, and store it with its password somewhere safe, off your phone. See [Creating back-ups](../Maintenance/ExportImportSettings.md).
+Od teraz zawsze używaj nowego magazynu kluczy i przechowuj go razem z hasłem w bezpiecznym miejscu, poza telefonem. Zobacz [Tworzenie i przywracanie kopii zapasowych](../Maintenance/ExportImportSettings.md).
