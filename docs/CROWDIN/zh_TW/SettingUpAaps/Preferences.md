@@ -363,10 +363,10 @@ The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchron
 ```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
 ```
 
-- 設置你的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
 - **確保網址末尾沒有 /api/v1/。**
 - In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
 - 這使得資料能在Nightscout網站與**AAPS**之間讀取和寫入。
