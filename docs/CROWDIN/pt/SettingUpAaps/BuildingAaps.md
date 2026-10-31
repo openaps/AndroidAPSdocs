@@ -1,50 +1,50 @@
 # Building AAPS
 
-## Construa você em vez de fazer download
+## Compilar em vez de transferir
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**A app AAPS (um ficheiro apk) não está disponível para transferência, por causa das regras sobre dispositivos médicos. É legal compilar a app para uso próprio, mas não pode dar uma cópia a outras pessoas!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Veja a [página FAQ](../UsefulLinks/FAQ.md) para mais detalhes.
 
 ---
 
-Three methods are available to build the AAPS app:
+Há três métodos para compilar a app AAPS:
 
-### Build with a browser (recommended)
+### Compilar com um navegador (recomendado)
 
-You can build the app with your smartphone using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Pode compilar a app no seu smartphone com o GitHub Actions. Num telefone Android, a página de configuração do [AAPS Builder](#aaps-builder) guia-o passo a passo, e é o próprio utilizador que inicia cada compilação. Num computador ou num iPhone, também pode compilar com um fork e guardar a app no seu Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Siga estas instruções.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Compilar com o Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Pode compilar a app no seu computador com o Android Studio. Antes, esta era a única opção de compilação; hoje, o Android Studio é usado sobretudo por programadores que pensam alterar o código.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Siga estas instruções.](./ComputerBuild.md)**
+
+----
+
+### Compilar com a linha de comandos
+
+Esta opção é para quem prefere compilar o AAPS localmente na linha de comandos, sem instalar o Android Studio.
+
+**[Siga estas instruções.](./CLIBuild.md)**
 
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Se a compilação falhar
 
-Each build method has its own troubleshooting section:
+Cada método de compilação tem a sua própria secção de resolução de problemas:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Resolução de problemas do AAPS Builder](#aaps-builder-troubleshooting)
+* **Compilação no navegador** a partir de um computador ou de um iPhone: [Compilação no navegador: resolução de problemas](#aaps-ci-troubleshooting)
+* **Android Studio**: [Resolução de problemas do Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Perdeu a sua keystore ou a senha dela? Consulte [Reinstalar o AAPS com uma nova keystore](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Se a app foi compilada mas não se instala no seu telefone, veja [Transferir e instalar o AAPS](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Se o seu problema não estiver na lista, veja [Onde posso obter ajuda?](../GettingHelp/WhereCanIGetHelp.md).
