@@ -1,6 +1,6 @@
 # Ustawienia (Preferencje)
 
-W **AAPS** v4 preferencje znajdziesz na ekranie **Ustawienia**. Dostać się do nich możesz na trzy sposoby – szczegóły znajdziesz na stronie [Wprowadzanie zmian w konfiguracji AAPS](../SettingUpAaps/ChangeAapsConfiguration.md):
+W **AAPS** v4 preferencje znajdziesz na ekranie **Ustawienia**. Dostać się do nich możesz na trzy sposoby – szczegóły znajdziesz na stronie [Zmiana konfiguracji AAPS](../SettingUpAaps/ChangeAapsConfiguration.md):
 
 1. Dotknij ikony **Ustawienia** (koło zębate) w prawym górnym rogu ekranu głównego: wszystkie ustawienia, pogrupowane w rozwijane sekcje.
 2. W **Konfiguracji** dotknij „**Ustawienia**” pod aktywną wtyczką: tylko ustawienia tej wtyczki.
@@ -179,7 +179,7 @@ Utwórz własne przyciski dla wybranych standardowych posiłków lub przekąsek.
 
 Dla każdego przycisku określasz węglowodany i sposób obliczania bolusa. Następnie określasz, w jakim przedziale czasu przycisk będzie widoczny na ekranie głównym – tylko jeden przycisk na jeden przedział. Przycisk nie będzie widoczny poza ustawionym przedziałem czasu ani wtedy, gdy masz dość IOB, aby pokryć węglowodany ustawione w przycisku Szybkiego kalkulatora. Jeśli dla różnych posiłków ustawisz różne godziny, na ekranie głównym zawsze zobaczysz przycisk standardowego posiłku pasujący do pory dnia.
 
-Aby zarządzać presetami Szybkiego kalkulatora, wpisz „QuickWizard” w pasku wyszukiwania na ekranie głównym i otwórz **Szybki kalkulator - Zarządzaj presetami kalkulatora bolusa**.
+Aby zarządzać ustawieniami Szybkiego kalkulatora, wpisz „QuickWizard” w pasku wyszukiwania na ekranie głównym i otwórz **Szybki kalkulator - Zarządzaj ustawieniami szybkiego kalkulatora**.
 
 Gdy klikniesz przycisk Szybkiego kalkulatora, **AAPS** obliczy i zaproponuje bolus na te węglowodany na podstawie twoich aktualnych współczynników (z uwzględnieniem glikemii lub aktywnej insuliny, jeśli tak ustawisz).
 
@@ -363,10 +363,10 @@ Wtyczka NSClient (w menu konfiguracji widoczna jako **NSClientV3**) synchronizuj
 ```{admonition} Data uploaders
 :class: warning
 
-Gdy używasz NSClientV3, wszystkie programy wysyłające dane (uploadery) muszą używać Nightscout API v3. Jeśli inny uploader (np. twoja aplikacja CGM) nie obsługuje API v3, **pozwól **AAPS** wysyłać wszystkie dane** (glikemię, leczenie, ...) do Nightscout i wyłącz ten uploader.
+Gdy używasz NSClientV3, wszystkie programy wysyłające dane (uploadery) muszą używać Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
 ```
 
-- Ustaw *Adres URL strony Nightscout* (np. <https://yoursitename.yourplaform.dom>).
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
 - **Upewnij się, że adres URL NIE ma na końcu /api/v1/.**
 - W Nightscout utwórz *[token Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (do API V3 potrzebny jest [Nightscout 15](https://nightscout.github.io/update/update/)) i wpisz go w polu **Token dostępu do Nightscout** (nie twój API Secret!). W **AAPSClient** możesz zamiast tego zeskanować kod QR z głównego telefonu. W ten sposób klient dostaje własny token. Klient sparowany za pomocą PIN-u po sparowaniu dostaje własny token od głównego telefonu. Zobacz [Własny token Nightscout klienta](#client-master-control-own-token).
 - Dzięki temu dane mogą być odczytywane i zapisywane zarówno na stronie Nightscout, jak i w **AAPS**.
@@ -418,12 +418,12 @@ Opcje w ustawieniach zaawansowanych są zrozumiałe same przez się.
 
 ## Komunikator SMS
 
-Więcej informacji na osobnej stronie [Komendy SMS](../RemoteFeatures/SMSCommands.md).
+Więcej informacji na osobnej stronie [Polecenia SMS](../RemoteFeatures/SMSCommands.md).
 
 (preferences-wear)=
 ## Oprogramowanie Wear (Smartwatch)
 
-Ta sekcja jest widoczna, gdy wtyczka **Oprogramowanie Wear (Smartwatch)** jest włączona w [Konfiguracja > Komunikacja](#Config-Builder-wear). Więcej informacji na osobnych stronach [Smartwatch z Wear OS](../WearOS/WearOsSmartwatch.md) i [Obsługa AAPS ze smartwatcha Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
+Ta sekcja jest widoczna, gdy wtyczka **Oprogramowanie Wear (Smartwatch)** jest włączona w [Konfiguracja > Komunikacja](#Config-Builder-wear). Więcej informacji na osobnych stronach [Smartwatch z Wear OS](../WearOS/WearOsSmartwatch.md) i [Obsługa AAPS ze smartwatcha z Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 ![Ustawienia > Wear](../images/preferences/settings_wear.png)
 
