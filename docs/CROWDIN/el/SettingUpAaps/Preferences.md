@@ -1,14 +1,14 @@
-# Settings (Preferences)
+# Ρυθμίσεις (Επιλογές)
 
-In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
+Στο **AAPS** v4 οι επιλογές βρίσκονται στην οθόνη **Ρυθμίσεις**. Υπάρχουν τρεις τρόποι για να φτάσετε σε αυτές – δείτε [Αλλαγές στη διαμόρφωση του AAPS σας](../SettingUpAaps/ChangeAapsConfiguration.md) για λεπτομέρειες:
 
-1. Tap the **Settings** (gear) icon in the top-right corner of the main screen: all settings, grouped into expandable sections.
-2. In **Configuration**, tap "**Settings**" underneath an active plugin: only that plugin's settings.
-3. Use the **search bar** on top of the main screen: just start typing part of the text you are looking for. This finds individual settings (even those not visible in the Settings screen), dialogs and documentation.
+1. Πατήστε το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά στην κύρια οθόνη: όλες οι ρυθμίσεις, ομαδοποιημένες σε ενότητες που ανοίγουν.
+2. Στη **Διαμόρφωση**, πατήστε «**Ρυθμίσεις**» κάτω από ένα ενεργό πρόσθετο: μόνο οι ρυθμίσεις αυτού του πρόσθετου.
+3. Χρησιμοποιήστε τη **γραμμή αναζήτησης** στο πάνω μέρος της κύριας οθόνης: απλώς αρχίστε να γράφετε μέρος του κειμένου που ψάχνετε. Έτσι βρίσκετε μεμονωμένες ρυθμίσεις (ακόμη και αυτές που δεν φαίνονται στην οθόνη Ρυθμίσεις), διαλόγους και τεκμηρίωση.
 
-![Search results for "target"](../images/preferences/settings_search.png)
+![Αποτελέσματα αναζήτησης για "target"](../images/preferences/settings_search.png)
 
-- **Sections** are opened and closed by tapping them. The sections you see depend on the plugins you have enabled and on [Simple mode](#preferences-simple-mode).
+- Οι **ενότητες** ανοίγουν και κλείνουν όταν τις πατάτε. Οι ενότητες που βλέπετε εξαρτώνται από τα πρόσθετα που έχετε ενεργοποιήσει και από την [απλή λειτουργία](#preferences-simple-mode).
 
 ![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
 
@@ -20,542 +20,542 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 (Preferences-general)=
 ## General
 
-![Settings > General](../images/preferences/settings_general.png)
+![Ρυθμίσεις > Γενικά](../images/preferences/settings_general.png)
 
-**Units**
+**Μονάδες**
 
-- Set units to mmol/L or mg/dL depending on your preferences.
+- Ορίστε τις μονάδες σε mmol/L ή mg/dL, όπως προτιμάτε.
 
-**Language**
+**Γλώσσα**
 
-- New option to use phone's default language (recommended).
+- Νέα επιλογή για χρήση της προεπιλεγμένης γλώσσας του τηλεφώνου (συνιστάται).
 
-- In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
+- Αν θέλετε το **AAPS** σε άλλη γλώσσα από τη γλώσσα του τηλεφώνου σας, μπορείτε να επιλέξετε από πολλές γλώσσες.
 
-- When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Όταν αλλάζετε τη γλώσσα, τα κείμενα του **AAPS** αλλάζουν αμέσως στη νέα γλώσσα. Αν κάποια κείμενα εμφανίζονται ακόμη στην παλιά γλώσσα, επανεκκινήστε το **AAPS**.
+- Η ρύθμιση είναι κρυμμένη στην [απλή λειτουργία](#preferences-simple-mode).
 
-(preferences-simple-mode)= **Simple mode**
+(preferences-simple-mode)= **Απλή λειτουργία**
 
-The **simple mode** is activated by default when you first install **AAPS**. In **simple mode**, a significant amount of settings is hidden and preferences are replaced by predefined values. You should switch off Simple mode once you become familiar with **AAPS** user interface and settings.
+Η **απλή λειτουργία** είναι ενεργή από προεπιλογή όταν εγκαθιστάτε για πρώτη φορά το **AAPS**. Στην **απλή λειτουργία**, πολλές ρυθμίσεις είναι κρυμμένες και οι επιλογές αντικαθίστανται από προκαθορισμένες τιμές. Πρέπει να απενεργοποιήσετε την απλή λειτουργία μόλις εξοικειωθείτε με το περιβάλλον χρήσης και τις ρυθμίσεις του **AAPS**.
 
-**Insulin concentration support**
+**Υποστήριξη συγκέντρωσης ινσουλίνης**
 
-- Enables support for different insulin concentrations (U50, U200, ...). Only enable this if you really use a concentration other than U100, and read the warnings carefully.
-- Setting hidden in [simple mode](#preferences-simple-mode).
+- Ενεργοποιεί την υποστήριξη για διαφορετικές συγκεντρώσεις ινσουλίνης (U50, U200, ...). Ενεργοποιήστε το μόνο αν πραγματικά χρησιμοποιείτε συγκέντρωση διαφορετική από U100, και διαβάστε προσεκτικά τις προειδοποιήσεις.
+- Η ρύθμιση είναι κρυμμένη στην [απλή λειτουργία](#preferences-simple-mode).
 
-**Keep screen on**
+**Οθόνη πάντα αναμμένη**
 
-- Forces Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+- Αναγκάζει το Android να κρατά την οθόνη πάντα αναμμένη. Αυτό είναι χρήσιμο για παρουσιάσεις κ.λπ. Αλλά καταναλώνει πολύ μπαταρία. Γι' αυτό συνιστάται να συνδέσετε το τηλέφωνο σε φορτιστή.
 
-**Instance name**
+**Όνομα εγκατάστασης**
 
-- The name of the person using this phone. It tells this **AAPS** instance apart in reports and synchronization, for example if two children with type 1 diabetes in your family use **AAPS**.
-- Used in the names of exported settings files.
-- Displayed in the [Dual Watchface](../WearOS/WearOsSmartwatch.md).
+- Το όνομα του ατόμου που χρησιμοποιεί αυτό το τηλέφωνο. Ξεχωρίζει αυτή την εγκατάσταση του **AAPS** στις αναφορές και στον συγχρονισμό, για παράδειγμα αν δύο παιδιά με διαβήτη τύπου 1 στην οικογένειά σας χρησιμοποιούν το **AAPS**.
+- Χρησιμοποιείται στα ονόματα των αρχείων ρυθμίσεων που εξάγονται.
+- Εμφανίζεται στο [Dual Watchface](../WearOS/WearOsSmartwatch.md).
 
 (Preferences-skin)=
-### Skin
+### Θέμα
 
-The skin selection from **AAPS** 3.x (Original, Low resolution, Large display...) no longer exists in **AAPS** 4. The new interface adapts to your screen automatically, and the color scheme can be changed in [Appearance](#preferences-appearance).
+Η επιλογή θέματος του **AAPS** 3.x (Original, Low resolution, Large display...) δεν υπάρχει πια στο **AAPS** 4. Το νέο περιβάλλον προσαρμόζεται αυτόματα στην οθόνη σας, και τα χρώματα μπορείτε να τα αλλάξετε στην [Εμφάνιση](#preferences-appearance).
 
 (preferences-appearance)=
-## Appearance
+## Εμφάνιση
 
-![Settings > Appearance](../images/preferences/settings_appearance.png)
+![Ρυθμίσεις > Εμφάνιση](../images/preferences/settings_appearance.png)
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Εύρος εμφάνισης
 
-Choose the high and low marks for the BG-graph on **AAPS** main screen and smartwatch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dL or 3.9 - 10 mmol/L
+Επιλέξτε το πάνω και το κάτω όριο για το γράφημα γλυκόζης στην κύρια οθόνη του **AAPS** και στο έξυπνο ρολόι. Είναι μόνο η απεικόνιση, όχι το εύρος στόχου για το BG σας. Παράδειγμα: 70 – 180 mg/dL ή 3,9 – 10 mmol/L
 
 (Preferences-show-notes-field-in-treatments-dialogs)=
-### Show notes in dialogs
+### Εμφάνιση σημειώσεων στους διαλόγους
 
-Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+Σας δίνει τη δυνατότητα να προσθέτετε σύντομες σημειώσεις στις θεραπείες σας (οδηγός bolus, υδατάνθρακες, ινσουλίνη...)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Η ρύθμιση είναι κρυμμένη στην [απλή λειτουργία](#preferences-simple-mode).
 
-### App Color Scheme
+### Χρώματα εφαρμογής
 
-Choose between the light theme, the dark theme, or following the phone's system setting.
+Επιλέξτε ανάμεσα στο φωτεινό θέμα, στο σκούρο θέμα ή στη ρύθμιση συστήματος του τηλεφώνου.
 
 (Preferences-protection)=
-## Protection
+## Προστασία
 
-![Settings > Protection](../images/preferences/settings_protection.png)
+![Ρυθμίσεις > Προστασία](../images/preferences/settings_protection.png)
 
 (Preferences-master-password)=
-### Master password
+### Κύριος κωδικός
 
-Mandatory to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
+Είναι υποχρεωτικός για να μπορείτε να κάνετε [εξαγωγή ρυθμίσεων](../Maintenance/ExportImportSettings.md), γιατί από την έκδοση 2.7 αυτές κρυπτογραφούνται.
 
-**Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+**Η βιομετρική προστασία μπορεί να μη λειτουργεί σε τηλέφωνα OnePlus. Αυτό είναι γνωστό πρόβλημα της OnePlus σε ορισμένα τηλέφωνα.**
 
-![Set master password](../images/preferences/master_password_dialog.png)
+![Ορισμός κύριου κωδικού](../images/preferences/master_password_dialog.png)
 
 (Preferences-settings-protection)=
-### Settings protection
+### Προστασία ρυθμίσεων
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). If you enable this feature, you will be prompted for authentication each time you want to access any Settings related view.
+- Προστατέψτε τις ρυθμίσεις σας με κωδικό ή με τη βιομετρική πιστοποίηση του τηλεφώνου (π.χ. όταν [ένα παιδί χρησιμοποιεί το **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Αν ενεργοποιήσετε αυτή τη λειτουργία, θα σας ζητείται πιστοποίηση κάθε φορά που θέλετε να ανοίξετε οποιαδήποτε οθόνη που σχετίζεται με τις Ρυθμίσεις.
 
-- The management screens (**Profile**, **Insulin settings**, **Temp Target**, **QuickWizard**) then open **read-only**. You can still activate or use an entry, but adding, editing, cloning and deleting are hidden until you unlock your settings. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+- Οι οθόνες διαχείρισης (**Προφίλ**, **Ρυθμίσεις ινσουλίνης**, **Προσωρινός στόχος**, **Γρήγορος Οδηγός**) ανοίγουν τότε **μόνο για ανάγνωση**. Μπορείτε ακόμη να ενεργοποιήσετε ή να χρησιμοποιήσετε μια εγγραφή, αλλά η προσθήκη, η επεξεργασία, η κλωνοποίηση και η διαγραφή είναι κρυμμένες μέχρι να ξεκλειδώσετε τις ρυθμίσεις σας. Δείτε [Η προστασία ρυθμίσεων κλειδώνει πλέον και τις οθόνες διαχείρισης](#v4changes-read-only-management).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md), and use a different one for editing the settings.
+- Χρησιμοποιήστε προσαρμοσμένο κωδικό αν θέλετε ο κύριος κωδικός να προστατεύει μόνο τις [ρυθμίσεις που εξάγετε](../Maintenance/ExportImportSettings.md), και έναν άλλο κωδικό για την αλλαγή των ρυθμίσεων.
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](#Preferences-master-password).
+- Αν χρησιμοποιείτε προσαρμοσμένο κωδικό, πατήστε στη γραμμή «Κωδικός ρυθμίσεων» για να ορίσετε τον κωδικό, όπως περιγράφεται [παραπάνω](#Preferences-master-password).
 
-### Application protection
+### Προστασία εφαρμογής
 
-If the app is protected, you must enter the password or use the phone's biometric authentication to open **AAPS**, and again when you come back to it after the [protection timeout](#Preferences-password-and-pin-retention).
+Αν η εφαρμογή είναι προστατευμένη, πρέπει να δώσετε τον κωδικό ή να χρησιμοποιήσετε τη βιομετρική πιστοποίηση του τηλεφώνου για να ανοίξετε το **AAPS**, και ξανά όταν επιστρέφετε σε αυτό μετά τον [χρόνο λήξης προστασίας](#Preferences-password-and-pin-retention).
 
-**AAPS** will shut down immediately if a wrong password is entered - but will still run in background if it was previously opened successfully.
+Το **AAPS** θα κλείσει αμέσως αν δοθεί λάθος κωδικός – αλλά θα συνεχίσει να λειτουργεί στο παρασκήνιο αν είχε ανοίξει πριν με επιτυχία.
 
-### Bolus protection
+### Προστασία Bolus
 
-- Bolus protection might be useful if **AAPS** is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
+- Η προστασία bolus μπορεί να είναι χρήσιμη αν το **AAPS** χρησιμοποιείται από μικρό παιδί και εσείς [δίνετε bolus μέσω SMS](../RemoteFeatures/SMSCommands.md).
 
-- **Bolus protection** can only be selected once **Settings protection** (Level 2) is set.
+- Η **Προστασία Bolus** μπορεί να επιλεγεί μόνο όταν έχει οριστεί η **Προστασία ρυθμίσεων** (Επίπεδο 2).
 
-- In the example below, bolus protection uses the **Master password**: **AAPS** asks for it before opening a treatment dialog such as **Insulin**. With **Biometric**, if biometric authentication does not work, you can enter the master password instead.
+- Στο παρακάτω παράδειγμα, η προστασία bolus χρησιμοποιεί τον **Κύριο κωδικό**: το **AAPS** τον ζητά πριν ανοίξει έναν διάλογο θεραπείας, όπως **Ινσουλίνη**. Με τα **Βιομετρικά**, αν η βιομετρική πιστοποίηση δεν λειτουργεί, μπορείτε να δώσετε αντί γι' αυτήν τον κύριο κωδικό.
 
-![Authentication required prompt asking for the master password](../images/preferences/bolus_protection_prompt.png)
+![Παράθυρο «Απαιτείται πιστοποίηση» που ζητά τον κύριο κωδικό](../images/preferences/bolus_protection_prompt.png)
 
 (Preferences-password-and-pin-retention)=
-### Password and PIN retention
+### Διατήρηση κωδικού πρόσβασης και PIN
 
-**Protection timeout** defines how long (in seconds) the settings or bolus functionalities remain unlocked after you successfully enter the password.
+Ο **Χρόνος λήξης προστασίας** ορίζει για πόσο χρόνο (σε δευτερόλεπτα) οι ρυθμίσεις ή οι λειτουργίες bolus μένουν ξεκλείδωτες αφού δώσετε σωστά τον κωδικό.
 
-## Treatment safety
+## Ασφάλεια θεραπείας
 
-![Settings > Safety](../images/preferences/settings_safety.png)
+![Ρυθμίσεις > Ασφάλεια](../images/preferences/settings_safety.png)
 
 (preferences-patient-type)=
-### Patient age
+### Ηλικία ασθενή
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in the insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../DailyLifeWithAaps/KeyAapsFeatures.md).
+- Τα όρια ασφαλείας ορίζονται με βάση την ηλικία που επιλέγετε σε αυτή τη ρύθμιση.
+- Αν αρχίσετε να φτάνετε αυτά τα σταθερά όρια (όπως το μέγιστο bolus), είναι ώρα να ανεβείτε ένα επίπεδο.
+- Είναι κακή ιδέα να επιλέξετε μεγαλύτερη ηλικία από την πραγματική, γιατί μπορεί να οδηγήσει σε υπερδοσολογία αν δώσετε λάθος τιμή στον διάλογο ινσουλίνης (για παράδειγμα, αν ξεχάσετε την υποδιαστολή).
+- Αν θέλετε να μάθετε τις ακριβείς τιμές αυτών των σταθερών ορίων ασφαλείας, δείτε τη λειτουργία του αλγορίθμου που χρησιμοποιείτε σε [αυτή τη σελίδα](../DailyLifeWithAaps/KeyAapsFeatures.md).
 
 (Preferences-maximum-bolus)=
-### Maximum bolus
+### Μέγιστο bolus
 
-- Defines the maximum amount of bolus insulin, in insulin units, that **AAPS** is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Ορίζει τη μέγιστη ποσότητα ινσουλίνης bolus, σε μονάδες ινσουλίνης, που επιτρέπεται να χορηγήσει το **AAPS** με μία φορά.
+- Αυτή η ρύθμιση υπάρχει ως όριο ασφαλείας, για να αποτρέψει τη χορήγηση ενός πολύ μεγάλου bolus από λάθος εισαγωγή ή σφάλμα του χρήστη.
+- Συνιστάται να το ορίσετε σε μια λογική ποσότητα που αντιστοιχεί περίπου στη μέγιστη ποσότητα ινσουλίνης bolus που πιθανόν να χρειαστείτε ποτέ για ένα γεύμα ή μια δόση διόρθωσης.
+- Αυτός ο περιορισμός ισχύει και για τα αποτελέσματα του υπολογιστή bolus.
 
-### Maximum carbs allowed
+### Μέγιστοι επιτρεπόμενοι υδατάνθρακες
 
-- Defines the maximum amount of carbs, in grams, that **AAPS** bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Ορίζει τη μέγιστη ποσότητα υδατανθράκων, σε γραμμάρια, για την οποία επιτρέπεται να υπολογίσει δόση ο υπολογιστής bolus του **AAPS**.
+- Αυτή η ρύθμιση υπάρχει ως όριο ασφαλείας, για να αποτρέψει τη χορήγηση ενός πολύ μεγάλου bolus από λάθος εισαγωγή ή σφάλμα του χρήστη.
+- Συνιστάται να το ορίσετε σε ένα λογικό ποσό που αντιστοιχεί περίπου στη μέγιστη ποσότητα υδατανθράκων που πιθανόν να χρειαστείτε για ένα γεύμα.
 
 ## Πηγή BG
 
-The settings of your selected [BG source](#Config-Builder-bg-source) appear as their own section. For example with **xDrip+ BG**:
+Οι ρυθμίσεις της [πηγής BG](#Config-Builder-bg-source) που έχετε επιλέξει εμφανίζονται σε δική τους ενότητα. Για παράδειγμα με το **xDrip+ BG**:
 
-![Settings > xDrip+ BG](../images/preferences/settings_xdrip.png)
+![Ρυθμίσεις > xDrip+ BG](../images/preferences/settings_xdrip.png)
 
-- **Upload BG data to NS**: let **AAPS** upload the received BG values to Nightscout. Only enable this if the CGM app itself is not already uploading them.
-- **Log sensor change**: create a sensor change therapy event automatically when the sensor is inserted.
+- **Αποστολή δεδομένων γλυκόζης στο NS**: το **AAPS** στέλνει στο Nightscout τις τιμές γλυκόζης που λαμβάνει. Ενεργοποιήστε το μόνο αν η ίδια η εφαρμογή του CGM δεν τις στέλνει ήδη.
+- **Καταγραφή αλλαγής αισθητήρα**: δημιουργεί αυτόματα ένα συμβάν θεραπείας «αλλαγή αισθητήρα» όταν τοποθετείται ο αισθητήρας.
 
-## The main screen
+## Η κύρια οθόνη
 
-In **AAPS** 3.x these settings were grouped in an "Overview" section. In **AAPS** 4 they are configured directly from the main screen elements they belong to.
+Στο **AAPS** 3.x αυτές οι ρυθμίσεις ήταν ομαδοποιημένες σε μια ενότητα «Overview». Στο **AAPS** 4 ρυθμίζονται απευθείας από τα στοιχεία της κύριας οθόνης στα οποία ανήκουν.
 
 (Preferences-buttons)=
-### QuickLaunch buttons
+### Κουμπιά QuickLaunch
 
-Define which action buttons are visible on the main screen: tap the small **gear** at the bottom center of the main screen ("Configure QuickLaunch") and **Add** the actions you want quick access to (treatments, CGM actions, careportal entries...).
+Ορίστε ποια κουμπιά ενεργειών εμφανίζονται στην κύρια οθόνη: πατήστε το μικρό **γρανάζι** κάτω στο κέντρο της κύριας οθόνης («Ρύθμιση QuickLaunch») και προσθέστε με **Προσθήκη** τις ενέργειες που θέλετε να έχετε πρόχειρες (θεραπείες, ενέργειες CGM, εγγραφές careportal...).
 
-![Configure QuickLaunch](../images/preferences/quicklaunch_config.png)
+![Ρύθμιση QuickLaunch](../images/preferences/quicklaunch_config.png)
 
 (Preferences-quick-wizard)=
 ### Quick Wizard
 
-Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. Useful for standard meals frequently eaten.
+Δημιουργήστε δικά σας κουμπιά για ορισμένα συνηθισμένα γεύματα ή σνακ, που θα εμφανίζονται στην κύρια οθόνη. Χρήσιμο για συνηθισμένα γεύματα που τρώτε συχνά.
 
-For each button, you define the carbs and calculation method for the bolus. Then, you define during which time period the button will be visible on your main screen - just one button per period. The button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button. If different times are specified for the different meals you will always have the appropriate standard meal button on the main screen, depending on the time of day.
+Για κάθε κουμπί ορίζετε τους υδατάνθρακες και τον τρόπο υπολογισμού του bolus. Μετά ορίζετε σε ποιο χρονικό διάστημα θα εμφανίζεται το κουμπί στην κύρια οθόνη σας – μόνο ένα κουμπί ανά διάστημα. Το κουμπί δεν θα εμφανίζεται εκτός του χρονικού διαστήματος που ορίσατε ή αν έχετε ήδη αρκετό IOB για να καλύψετε τους υδατάνθρακες του κουμπιού του Γρήγορου Οδηγού. Αν ορίσετε διαφορετικές ώρες για τα διάφορα γεύματα, θα έχετε πάντα στην κύρια οθόνη το κατάλληλο κουμπί γεύματος, ανάλογα με την ώρα της ημέρας.
 
-To manage your Quick Wizard presets, type "QuickWizard" in the main screen search bar and open **QuickWizard - Manage quick wizard presets**.
+Για να διαχειριστείτε τις προεπιλογές του Γρήγορου Οδηγού, γράψτε «Γρήγορος Οδηγός» (QuickWizard) στη γραμμή αναζήτησης της κύριας οθόνης και ανοίξτε το **Γρήγορος Οδηγός - Διαχείριση προεπιλογών QuickWizard**.
 
-If you click the quick wizard button **AAPS** will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+Αν πατήσετε το κουμπί του Γρήγορου Οδηγού, το **AAPS** θα υπολογίσει και θα προτείνει ένα bolus για αυτούς τους υδατάνθρακες, με βάση τους τρέχοντες λόγους σας (λαμβάνοντας υπόψη την τιμή γλυκόζης αίματος ή την ενεργή ινσουλίνη, αν το έχετε ρυθμίσει).
 
-The proposal has to be confirmed before insulin is delivered.
+Η πρόταση πρέπει να επιβεβαιωθεί πριν χορηγηθεί ινσουλίνη.
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Προεπιλεγμένοι προσωρινοί στόχοι
 
-[Temporary targets (TT)](../DailyLifeWithAaps/TempTargets.md) allow you to change your blood glucose target for a certain time period. When setting a default TT, you can easily change your target for activity, eating soon etc.
+Οι [προσωρινοί στόχοι (TT)](../DailyLifeWithAaps/TempTargets.md) σας επιτρέπουν να αλλάξετε τον στόχο γλυκόζης αίματος για ένα ορισμένο χρονικό διάστημα. Αν ορίσετε έναν προεπιλεγμένο TT, μπορείτε εύκολα να αλλάξετε τον στόχο σας για άσκηση, για γεύμα σύντομα κ.λπ.
 
-Tap the **target range** on the main screen to open the **Temp Target** screen. Swipe through the preset cards (Eating Soon, Activity, Hypo) and change the target and the duration of each preset under **Preset Settings**. Preset values are:
+Πατήστε το **εύρος στόχου** στην κύρια οθόνη για να ανοίξετε την οθόνη **Προσωρινός στόχος**. Περάστε με σάρωση τις κάρτες προεπιλογών (Γεύμα Σύντομα, Άσκηση, Υπογλυκαιμία) και αλλάξτε τον στόχο και τη διάρκεια κάθε προεπιλογής στις **Ρυθμίσεις προεπιλογών**. Οι προκαθορισμένες τιμές είναι:
 
-* Eating soon: target 90 mg/dL / 5.0 mmol/L, duration 45 min
-* Activity: target 140 mg/dL / 7.8 mmol/L, duration 90 min
-* Hypo: target 160 mg/dL / 8.9 mmol/L, duration 60 min
+* Γεύμα Σύντομα: στόχος 90 mg/dL / 5,0 mmol/L, διάρκεια 45 λεπ.
+* Άσκηση: στόχος 140 mg/dL / 7,8 mmol/L, διάρκεια 90 λεπ.
+* Υπογλυκαιμία: στόχος 160 mg/dL / 8,9 mmol/L, διάρκεια 60 λεπ.
 
-![Temp Target presets](../images/preferences/temp_target_presets.png)
+![Προεπιλογές προσωρινού στόχου](../images/preferences/temp_target_presets.png)
 
-Learn how to [activate Temp Targets here](#TempTargets-where-can-i-select-a-temp-target).
+Δείτε πώς να [ενεργοποιήσετε προσωρινούς στόχους εδώ](#TempTargets-where-can-i-select-a-temp-target).
 
-### Fill/Prime standard insulin amounts
+### Τυπικές ποσότητες ινσουλίνης για Πλήρωση/Γέμισμα
 
-If you want to fill the tube or prime the cannula through **AAPS** you can do this with the **Prime/Fill** buttons in the expanded status panel of the main screen.
+Αν θέλετε να γεμίσετε το σωληνάκι ή να κάνετε πλήρωση του καθετήρα μέσω του **AAPS**, μπορείτε να το κάνετε με τα κουμπιά **Πλήρωση/Γέμισμα** στο ανεπτυγμένο πλαίσιο κατάστασης της κύριας οθόνης.
 
-The default amounts of the three fill buttons can be defined in the **Prime/Fill** settings, depending on the length of your catheter. Type "prime" in the main screen search bar to open them.
+Τις προεπιλεγμένες ποσότητες των τριών κουμπιών γεμίσματος μπορείτε να τις ορίσετε στις ρυθμίσεις **Πλήρωση/Γέμισμα**, ανάλογα με το μήκος του καθετήρα σας. Γράψτε «Πλήρωση» (prime) στη γραμμή αναζήτησης της κύριας οθόνης για να τις ανοίξετε.
 
-![Prime/Fill standard amounts](../images/preferences/settings_prime_fill.png)
+![Τυπικές ποσότητες Πλήρωσης/Γεμίσματος](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
-### Φώτα κατάστασης
+### Ενδείξεις κατάστασης
 
-Status lights give a visual warning for:
+Οι ενδείξεις κατάστασης δίνουν οπτική προειδοποίηση για:
 
 - Sensor age
-- Insulin age (days reservoir is used)
-- Reservoir level (units)
+- Ηλικία ινσουλίνης (ημέρες χρήσης της δεξαμενής)
+- Επίπεδο δεξαμενής (μονάδες)
 - Cannula age
-- Pump battery age
-- Pump battery level (%)
+- Ηλικία μπαταρίας αντλίας
+- Επίπεδο μπαταρίας αντλίας (%)
 
-If the warning threshold is exceeded, values will be shown in yellow. If the critical threshold is exceeded, values will be shown in red.
+Αν ξεπεραστεί το όριο προειδοποίησης, οι τιμές εμφανίζονται με κίτρινο χρώμα. Αν ξεπεραστεί το κρίσιμο όριο, οι τιμές εμφανίζονται με κόκκινο χρώμα.
 
-To change the thresholds, expand the status panel on the main screen (chevron on the right of the status row) and tap the small **Settings** icon next to "Status":
+Για να αλλάξετε τα όρια, αναπτύξτε το πλαίσιο κατάστασης στην κύρια οθόνη (το βελάκι δεξιά στη γραμμή κατάστασης) και πατήστε το μικρό εικονίδιο **Ρυθμίσεις** δίπλα στο «Κατάσταση»:
 
-![Φώτα κατάστασης](../images/preferences/status_lights.png)
+![Ενδείξεις κατάστασης](../images/preferences/status_lights.png)
 
-Tap an item (**Cannula**, **Insulin**, **Sensor** or **Pump battery**) to open its warning and critical thresholds:
+Πατήστε ένα στοιχείο (**Καθετήρας**, **Ινσουλίνη**, **Αισθητήρας** ή **Μπαταρία αντλίας**) για να ανοίξετε τα όρια προειδοποίησης και τα κρίσιμα όριά του:
 
-![Status lights thresholds for the cannula](../images/preferences/status_lights_cannula.png)
+![Όρια ενδείξεων κατάστασης για τον καθετήρα](../images/preferences/status_lights_cannula.png)
 
-The last option allows you to import those settings from Nightscout if defined there. See [Nightscout documentation](https://nightscout.github.io/nightscout/setup_variables/#age-pills) for more information.
+Η τελευταία επιλογή σας επιτρέπει να εισάγετε αυτές τις ρυθμίσεις από το Nightscout, αν έχουν οριστεί εκεί. Δείτε την [τεκμηρίωση του Nightscout](https://nightscout.github.io/nightscout/setup_variables/#age-pills) για περισσότερες πληροφορίες.
 
 (Preferences-deliver-this-part-of-bolus-wizard-result)=
-### Bolus wizard settings
+### Ρυθμίσεις οδηγού bolus
 
-Type "bolus" in the main screen search bar to open the **Bolus wizard** settings:
+Γράψτε «bolus» στη γραμμή αναζήτησης της κύριας οθόνης για να ανοίξετε τις ρυθμίσεις του **Οδηγού Bolus**:
 
-![Bolus wizard settings](../images/preferences/settings_bolus_wizard.png)
+![Ρυθμίσεις οδηγού bolus](../images/preferences/settings_bolus_wizard.png)
 
-**Bolus percentage** sets the [default percentage](#AapsScreens-section-j) of the bolus calculated when using the bolus wizard.
+Το **Ποσοστό bolus** ορίζει το [προεπιλεγμένο ποσοστό](#AapsScreens-section-j) του bolus που υπολογίζεται όταν χρησιμοποιείτε τον οδηγό bolus.
 
-Default is 100%: no correction. Even when setting a different value here, you can still change each time you use the bolus wizard. If this setting is 75 % and you had to bolus 10U, the bolus wizard will propose a meal bolus of only 7.5 units.
+Η προεπιλογή είναι 100%: καμία διόρθωση. Ακόμη κι αν ορίσετε εδώ άλλη τιμή, μπορείτε να την αλλάζετε κάθε φορά που χρησιμοποιείτε τον οδηγό bolus. Αν αυτή η ρύθμιση είναι 75% και χρειαζόσασταν bolus 10 U, ο οδηγός bolus θα προτείνει bolus γεύματος μόνο 7,5 μονάδων.
 
-When using [SMB](#objectives-objective9), many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (Unattended Meal Detection) do the rest. Using a value lower than 100% here can be useful:
-* for people with slow digestion: sending all the bolus upfront can cause hypo because the insulin action is faster than the digestion.
-* to leave more room to **AAPS** to deal by itself with **BG rise**. In both cases, **AAPS** will compensate for the missing part of the bolus with SMBs, if/when deemed adequate.
+Όταν χρησιμοποιούν [SMB](#objectives-objective9), πολλοί άνθρωποι δεν δίνουν bolus γεύματος για το 100% της ινσουλίνης που χρειάζεται, αλλά μόνο για ένα μέρος της (π.χ. 75%), και αφήνουν τα SMB με UAM (ανίχνευση μη δηλωμένων γευμάτων) να κάνουν τα υπόλοιπα. Μια τιμή κάτω από 100% εδώ μπορεί να είναι χρήσιμη:
+* για άτομα με αργή πέψη: αν δώσετε όλο το bolus από την αρχή, μπορεί να προκληθεί υπογλυκαιμία, επειδή η ινσουλίνη δρα πιο γρήγορα από την πέψη.
+* για να αφήσετε στο **AAPS** περισσότερο περιθώριο να χειριστεί μόνο του την **άνοδο της γλυκόζης**. Και στις δύο περιπτώσεις, το **AAPS** θα αντισταθμίσει το μέρος του bolus που λείπει με SMB, αν/όταν το κρίνει κατάλληλο.
 
-**Use bolus advisor**
+**Χρήση Συμβούλου Bolus**
 
-When enabled, if you use the bolus wizard while you are in hyperglycemia, you will get a warning, prompting you if you wish to pre-bolus and eat later, when your **BG** gets back in range.
+Όταν είναι ενεργό και χρησιμοποιείτε τον οδηγό bolus ενώ έχετε υπεργλυκαιμία, θα λάβετε μια προειδοποίηση που σας ρωτά αν θέλετε να κάνετε pre-bolus και να φάτε αργότερα, όταν η **BG** σας επιστρέψει εντός στόχου.
 
 (Preferences-advanced-settings-overview)=
 ### Superbolus
 
-The Superbolus option of **AAPS** 3.x is not available as a setting in **AAPS** 4.
+Η επιλογή Superbolus του **AAPS** 3.x δεν είναι διαθέσιμη ως ρύθμιση στο **AAPS** 4.
 
 ## Κύκλωμα
 
-See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) to change loop mode now.
+Δείτε [Οθόνες του AAPS > Η κύρια οθόνη > Κατάσταση κυκλώματος](#AapsScreens-loop-status) για να αλλάξετε τώρα τον τρόπο λειτουργίας του κυκλώματος.
 
 (Preferences-minimal-request-change)=
-### Open mode minimum change
+### Ελάχιστη αλλαγή σε ανοιχτό κύκλωμα
 
-When using **Open loop**, you will receive notifications every time **AAPS** recommends adjusting the basal rate. To reduce the number of notifications you can either use a [wider bg target range](#profile-glucose-targets) or increase the percentage of the "**Open mode minimum change**" setting. Αυτό καθορίζει τη σχετική αλλαγή που απαιτείται για την ενεργοποίηση μιας ειδοποίησης.
+Όταν χρησιμοποιείτε **Ανοιχτό κύκλωμα**, θα λαμβάνετε ειδοποίηση κάθε φορά που το **AAPS** προτείνει αλλαγή του βασικού ρυθμού. Για να μειώσετε τον αριθμό των ειδοποιήσεων, μπορείτε είτε να χρησιμοποιήσετε ένα [ευρύτερο εύρος στόχου γλυκόζης](#profile-glucose-targets) είτε να αυξήσετε το ποσοστό της ρύθμισης «**Ελάχιστη αλλαγή σε ανοιχτό κύκλωμα**». Αυτό καθορίζει τη σχετική αλλαγή που απαιτείται για την ενεργοποίηση μιας ειδοποίησης.
 
-![Settings > Loop](../images/preferences/settings_loop.png)
+![Ρυθμίσεις > Κύκλωμα](../images/preferences/settings_loop.png)
 
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Advanced Meal Assist (AMA) ή Super Micro Bolus (SMB)
 
-Depending on your settings in [Configuration > APS](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
+Ανάλογα με τις ρυθμίσεις σας στο [Διαμόρφωση > APS](../SettingUpAaps/ConfigBuilder.md), μπορείτε να επιλέξετε ανάμεσα σε δύο αλγορίθμους:
 
-- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – ο αλγόριθμος όπως ήταν το 2017
+- [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – ο πιο πρόσφατος αλγόριθμος, προτείνεται για αρχάριους
 
-As of [**AAPS** version 3.3](#version3300), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) feature has been moved as part of OpenAPS SMB.
+Από την [**AAPS** έκδοση 3.3](#version3300), η λειτουργία [Δυναμική ISF](../DailyLifeWithAaps/DynamicISF.md) έχει μεταφερθεί και είναι πλέον μέρος του OpenAPS SMB.
 
 ### OpenAPS AMA
 
-All the settings for OpenAPS AMA are described in the dedicated section in [Key AAPS Features > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
+Όλες οι ρυθμίσεις του OpenAPS AMA περιγράφονται στη σχετική ενότητα στο [Βασικές λειτουργίες του AAPS > Advanced Meal Assist (AMA)](#Open-APS-features-advanced-meal-assist-ama).
 
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB
 
-All the settings for OpenAPS SMB are described in the dedicated section in [Key AAPS Features > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
+Όλες οι ρυθμίσεις του OpenAPS SMB περιγράφονται στη σχετική ενότητα στο [Βασικές λειτουργίες του AAPS > Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-The list of settings you see depends on your progress in the [Objectives](../SettingUpAaps/CompletingTheObjectives.md) and on [Simple mode](#preferences-simple-mode). On a new installation only **Use dynamic sensitivity** is shown. Once the objectives are completed, the section looks like this:
+Η λίστα των ρυθμίσεων που βλέπετε εξαρτάται από την πρόοδό σας στα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md) και από την [απλή λειτουργία](#preferences-simple-mode). Σε μια νέα εγκατάσταση εμφανίζεται μόνο η ρύθμιση **Χρήση δυναμικής ευαισθησίας**. Όταν ολοκληρωθούν τα βήματα, η ενότητα μοιάζει έτσι:
 
-![Settings > OpenAPS SMB, first part](../images/preferences/settings_openaps_smb_1.png)
+![Ρυθμίσεις > OpenAPS SMB, πρώτο μέρος](../images/preferences/settings_openaps_smb_1.png)
 
-![Settings > OpenAPS SMB, SMB options](../images/preferences/settings_openaps_smb_2.png)
+![Ρυθμίσεις > OpenAPS SMB, επιλογές SMB](../images/preferences/settings_openaps_smb_2.png)
 
-![Settings > OpenAPS SMB, UAM and carbs required](../images/preferences/settings_openaps_smb_3.png)
+![Ρυθμίσεις > OpenAPS SMB, UAM και απαιτούμενοι υδατάνθρακες](../images/preferences/settings_openaps_smb_3.png)
 
-**Advanced Settings** at the bottom of the section holds values that you normally do not have to change:
+Οι **Ρυθμίσεις για Προχωρημένους** στο κάτω μέρος της ενότητας περιέχουν τιμές που κανονικά δεν χρειάζεται να αλλάξετε:
 
-![Settings > OpenAPS SMB > Advanced Settings](../images/preferences/settings_openaps_smb_advanced.png)
+![Ρυθμίσεις > OpenAPS SMB > Ρυθμίσεις για Προχωρημένους](../images/preferences/settings_openaps_smb_advanced.png)
 
-![Settings > OpenAPS SMB > Advanced Settings, continued](../images/preferences/settings_openaps_smb_advanced_2.png)
+![Ρυθμίσεις > OpenAPS SMB > Ρυθμίσεις για Προχωρημένους, συνέχεια](../images/preferences/settings_openaps_smb_advanced_2.png)
 
 ## Ρύθμιση απορρόφησης
 
-![Settings > Absorption settings](../images/preferences/settings_absorption.png)
+![Ρυθμίσεις > Ρύθμιση απορρόφησης](../images/preferences/settings_absorption.png)
 
 (Preferences-min_5m_carbimpact)=
-### SMB min 5m carbs impact (min_5m_carbimpact)
+### SMB ελάχιστη επίδραση υδατανθράκων ανά 5 λεπ. (min_5m_carbimpact)
 
-Setting hidden in [simple mode](#preferences-simple-mode).
+Η ρύθμιση είναι κρυμμένη στην [απλή λειτουργία](#preferences-simple-mode).
 
-The algorithm uses BGI (blood glucose impact) to determine when [carbs are absorbed](../DailyLifeWithAaps/CobCalculation.md).
+Ο αλγόριθμος χρησιμοποιεί το BGI (επίδραση στη γλυκόζη αίματος) για να καθορίσει πότε [απορροφώνται οι υδατάνθρακες](../DailyLifeWithAaps/CobCalculation.md).
 
-At times when carb absorption can’t be dynamically worked out based on your blood's reactions, **AAPS** inserts a default decay to your carbs. Basically, it is a failsafe. This value is only used during gaps in **CGM** readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause **AAPS** to decay COB.
+Όταν η απορρόφηση των υδατανθράκων δεν μπορεί να υπολογιστεί δυναμικά από την αντίδραση του αίματός σας, το **AAPS** εφαρμόζει μια προεπιλεγμένη μείωση στους υδατάνθρακές σας. Ουσιαστικά είναι μια βαλβίδα ασφαλείας. Αυτή η τιμή χρησιμοποιείται μόνο όταν λείπουν μετρήσεις του **CGM** ή όταν η σωματική άσκηση «καταναλώνει» όλη την άνοδο της γλυκόζης που αλλιώς θα έκανε το **AAPS** να μειώσει τους COB.
 
-To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. Whenever there is a positive deviation from the expected behavior, some carbs are absorbed/decayed. Big change=many carbs etc.
+Με απλά λόγια: ο αλγόριθμος «ξέρει» πώς *πρέπει* να συμπεριφέρεται η γλυκόζη αίματός σας υπό την επίδραση της τρέχουσας δόσης ινσουλίνης κ.λπ. Κάθε φορά που υπάρχει θετική απόκλιση από την αναμενόμενη συμπεριφορά, θεωρείται ότι κάποιοι υδατάνθρακες απορροφήθηκαν/μειώθηκαν. Μεγάλη αλλαγή = πολλοί υδατάνθρακες κ.λπ.
 
-The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For the full parameter reference see [OpenAPS's preferences and safety settings documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+Το min_5m_carbimpact ορίζει την προεπιλεγμένη επίδραση της απορρόφησης υδατανθράκων ανά 5 λεπτά. Για την πλήρη περιγραφή της παραμέτρου δείτε την [τεκμηρίωση του OpenAPS για τις επιλογές και τις ρυθμίσεις ασφαλείας](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-Standard value for AMA is 3, for SMB it's 8.
+Η τυπική τιμή για το AMA είναι 3, για το SMB είναι 8.
 
-The COB graph on the main screen indicates when min_5m_carbimpact is being used by putting orange dots along the top of the COB curve.
+Το γράφημα COB στην κύρια οθόνη δείχνει πότε χρησιμοποιείται το min_5m_carbimpact, με πορτοκαλί κουκκίδες στο πάνω μέρος της καμπύλης COB.
 
-![COB graph](../images/main/cob_graph_min_5m_carbimpact.png)
+![Γράφημα COB](../images/main/cob_graph_min_5m_carbimpact.png)
 
-### Absorption cutoff
+### Όριο απορρόφησης
 
-Time at which any meal is considered absorbed; remaining carbs will be cut off. If you often eat high fat or protein meals you will need to increase your meal absorption time.
+Ο χρόνος μετά τον οποίο κάθε γεύμα θεωρείται ότι έχει απορροφηθεί· οι υδατάνθρακες που απομένουν θα αφαιρεθούν. Εάν τρώτε συχνά γεύματα με πολλά λιπαρά ή πρωτεΐνες, θα χρειαστεί να αυξήσετε τον χρόνο απορρόφησης του γεύματος.
 
-### Advanced settings - autosens ratio
+### Ρυθμίσεις για προχωρημένους – λόγος autosens
 
-![Absorption advanced settings](../images/preferences/settings_absorption_advanced.png)
+![Ρυθμίσεις απορρόφησης για προχωρημένους](../images/preferences/settings_absorption_advanced.png)
 
-- Define min. and max. [autosens](#Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Ορίστε τον ελάχιστο και τον μέγιστο λόγο [autosens](#Open-APS-features-autosens).
+- Κανονικά οι τυπικές τιμές (μέγ. 1,2 και ελάχ. 0,7) δεν πρέπει να αλλάζουν.
 
 ## Pump
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Ρυθμίσεις > Αντλία](../images/preferences/settings_pump.png)
 
 ### BT Watchdog
 
-Activate BT watchdog if necessary (e.g. for Dana pumps). It switches off Bluetooth for one second if no connection to the pump is possible. This may help on some phones where the Bluetooth stack freezes.
+Ενεργοποιήστε το BT watchdog αν χρειάζεται (π.χ. για αντλίες Dana). Απενεργοποιεί το Bluetooth για ένα δευτερόλεπτο αν δεν είναι δυνατή η σύνδεση με την αντλία. Αυτό μπορεί να βοηθήσει σε ορισμένα τηλέφωνα όπου το Bluetooth «κολλάει».
 
-## Pump settings
+## Ρυθμίσεις αντλίας
 
-The options here will vary depending on which pump driver you have selected in [Configuration > Pump](#Config-Builder-pump). Pair and set up your pump according to the [pump-related instructions](../Getting-Started/CompatiblePumps.md).
+Οι επιλογές εδώ διαφέρουν ανάλογα με τον οδηγό αντλίας που έχετε επιλέξει στο [Διαμόρφωση > Αντλία](#Config-Builder-pump). Κάντε σύζευξη και ρύθμιση της αντλίας σας σύμφωνα με τις [οδηγίες για τις αντλίες](../Getting-Started/CompatiblePumps.md).
 
-For example with the **Virtual Pump**, the section is called **Virtual pump settings**. You choose the **Pump type** the virtual pump imitates, and whether its status is uploaded to Nightscout:
+Για παράδειγμα με την **Εικονική Αντλία**, η ενότητα λέγεται **Ρυθμίσεις Εικονικής αντλίας**. Επιλέγετε τον **Τύπο αντλίας** που μιμείται η εικονική αντλία, και αν η κατάστασή της στέλνεται στο Nightscout:
 
-![Settings > Virtual pump settings](../images/preferences/settings_virtual_pump.png)
+![Ρυθμίσεις > Ρυθμίσεις Εικονικής αντλίας](../images/preferences/settings_virtual_pump.png)
 
 ## Tidepool
 
-More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
+Περισσότερες πληροφορίες στη σχετική σελίδα [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
 ## NSClient
 
-![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
+![Ρυθμίσεις > NSClientV3](../images/preferences/settings_nsclient.png)
 
-The NSClient plugin (shown as **NSClientV3** in the configuration menu) synchronizes your data with Nightscout. It uses the Nightscout API v3.
+Το πρόσθετο NSClient (εμφανίζεται ως **NSClientV3** στο μενού διαμόρφωσης) συγχρονίζει τα δεδομένα σας με το Nightscout. Χρησιμοποιεί το Nightscout API v3.
 
 ```{admonition} Data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must use the Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let **AAPS** upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Όταν χρησιμοποιείτε το NSClientV3, όλες οι εφαρμογές που στέλνουν δεδομένα (uploaders) πρέπει να χρησιμοποιούν το Nightscout API v3. Αν μια άλλη εφαρμογή αποστολής (για παράδειγμα η εφαρμογή του CGM σας) δεν υποστηρίζει το API v3, **αφήστε το AAPS να στέλνει όλα τα δεδομένα** (BG, θεραπείες, ...) στο Nightscout και απενεργοποιήστε εκείνη την εφαρμογή αποστολής.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in the **Nightscout access token** (not your API Secret!). On **AAPSClient** you can scan the main phone's QR code instead, which sets up a token of the client's own. A client paired with the PIN gets its own token from the main phone after pairing. See [The client's own Nightscout token](#client-master-control-own-token).
-- This enables data to be read and written between both the Nightscout website and **AAPS**.
-- Double check for typos here if you are stuck in Objective 1.
-- Leave "Use websockets" enabled (recommended).
+- Ορίστε τη *Διεύθυνση Nightscout* σας (π.χ. <https://yoursitename.yourplatform.dom>).
+- **Βεβαιωθείτε ότι η διεύθυνση URL είναι ΧΩΡΙΣ /api/v1/ στο τέλος.**
+- Στο Nightscout, δημιουργήστε ένα *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (χρειάζεται [Nightscout 15](https://nightscout.github.io/update/update/) για να χρησιμοποιηθεί το V3 API) και γράψτε το στο **Διακριτικό πρόσβασης Nightscout** (όχι το API Secret σας!). Στο **AAPSClient** μπορείτε αντί γι' αυτό να σαρώσετε τον κωδικό QR του κύριου τηλεφώνου, που ρυθμίζει ένα δικό του διακριτικό (token) για τον πελάτη. Ένας πελάτης που έκανε σύζευξη με το PIN παίρνει το δικό του διακριτικό από το κύριο τηλέφωνο μετά τη σύζευξη. Δείτε [Το δικό του διακριτικό Nightscout του πελάτη](#client-master-control-own-token).
+- Αυτό επιτρέπει την ανάγνωση και την εγγραφή δεδομένων ανάμεσα στον ιστότοπο Nightscout και το **AAPS**.
+- Ελέγξτε προσεκτικά για τυπογραφικά λάθη εδώ, αν έχετε κολλήσει στο Βήμα 1.
+- Αφήστε ενεργό το «Χρήση websockets» (συνιστάται).
 
 (Preferences-nsclient-synchronization)=
-### Synchronization
+### Συγχρονισμός
 
-![Synchronization options](../images/preferences/settings_nsclient_sync.png)
+![Επιλογές συγχρονισμού](../images/preferences/settings_nsclient_sync.png)
 
-Synchronization choices will depend on the way you will want to use **AAPS**.
+Οι επιλογές συγχρονισμού εξαρτώνται από τον τρόπο που θέλετε να χρησιμοποιείτε το **AAPS**.
 
-You can select which data you want to [upload and download to or from Nightscout](#Nightscout-aaps-settings).
+Μπορείτε να επιλέξετε ποια δεδομένα θέλετε να [στέλνετε στο Nightscout και να λαμβάνετε από αυτό](#Nightscout-aaps-settings).
 
-While client control is on (always in Simple Mode), these settings are hidden: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode), takes no changes made directly in Nightscout and uploads all its data.
+Όσο είναι ενεργός ο έλεγχος από πελάτες (πάντα στην απλή λειτουργία), αυτές οι ρυθμίσεις είναι κρυμμένες: το **AAPS** είναι τότε σε [ενισχυμένη λειτουργία](#client-master-control-hardened-mode), δεν δέχεται αλλαγές που γίνονται απευθείας στο Nightscout και στέλνει όλα τα δεδομένα του.
 
-### Alarm options
+### Επιλογές συναγερμού
 
-![Alarm options](../images/preferences/settings_nsclient_alarms.png)
+![Επιλογές συναγερμού](../images/preferences/settings_nsclient_alarms.png)
 
-- Alarm options allows you to select which Nightscout alarms to use through the app. **AAPS** will alarm when a Nightscout alarm triggers.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work while you have a connection to Nightscout and are intended for parent/caregivers.
-- If you have the **CGM** source on your phone (i.e. xDrip or BYODA) then use those alarms instead of Nightscout Alarms.
-- NS announcements will echo Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) in the **AAPS** notifications.
-- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
+- Οι επιλογές συναγερμού σας επιτρέπουν να επιλέξετε ποιους συναγερμούς του Nightscout θα χρησιμοποιεί η εφαρμογή. Το **AAPS** θα ηχήσει συναγερμό όταν ενεργοποιηθεί ένας συναγερμός του Nightscout.
+- Για να ηχήσουν οι συναγερμοί, πρέπει να ορίσετε τις τιμές συναγερμού Urgent High, High, Low και Urgent Low στις [μεταβλητές του Nightscout](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Λειτουργούν μόνο όσο έχετε σύνδεση με το Nightscout και προορίζονται για γονείς/φροντιστές.
+- Αν η πηγή **CGM** είναι στο τηλέφωνό σας (π.χ. xDrip ή BYODA), τότε χρησιμοποιήστε τους συναγερμούς της αντί για τους συναγερμούς του Nightscout.
+- Οι Ανακοινώσεις NS εμφανίζουν τις [ανακοινώσεις](https://nightscout.github.io/nightscout/discover/#announcement) του Nightscout στις ειδοποιήσεις του **AAPS**.
+- Μπορείτε να αλλάξετε τα όρια των συναγερμών για παλιά δεδομένα και για επείγοντα παλιά δεδομένα, όταν δεν λαμβάνονται δεδομένα από το Nightscout για ορισμένο χρόνο.
 
 ### Remote control
 
-The switch "**Allow client control**" is no longer in these settings: it is at the top of **Manage → Authorized clients**, where the paired clients are managed. See the dedicated [Client / Master control](../RemoteFeatures/ClientMasterControl.md) page, including [hardened mode](#client-master-control-hardened-mode), which this switch turns on.
+Ο διακόπτης «**Να επιτρέπεται ο έλεγχος από πελάτες**» δεν βρίσκεται πια σε αυτές τις ρυθμίσεις: είναι στο πάνω μέρος του **Διαχείριση → Εξουσιοδοτημένοι πελάτες**, όπου διαχειρίζεστε τους συζευγμένους πελάτες. Δείτε τη σχετική σελίδα [Έλεγχος Master ↔ Client](../RemoteFeatures/ClientMasterControl.md), μαζί με την [ενισχυμένη λειτουργία](#client-master-control-hardened-mode), που ενεργοποιεί αυτός ο διακόπτης.
 
-### Connection settings
+### Ρυθμίσεις σύνδεσης
 
-![NSClient connection settings](../images/preferences/settings_nsclient_connection.png)
+![Ρυθμίσεις σύνδεσης NSClient](../images/preferences/settings_nsclient_connection.png)
 
-- Connection settings define when Nightscout connection will be enabled.
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific Wi-Fi network you can enter its Wi-Fi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Οι ρυθμίσεις σύνδεσης ορίζουν πότε θα είναι ενεργή η σύνδεση με το Nightscout.
+- Περιορίστε την αποστολή στο Nightscout μόνο σε Wi-Fi ή ακόμη και σε συγκεκριμένα Wi-Fi SSID.
+- Αν θέλετε να χρησιμοποιείτε μόνο ένα συγκεκριμένο δίκτυο Wi-Fi, μπορείτε να γράψετε το Wi-Fi SSID του.
+- Μπορείτε να χωρίσετε πολλά SSID με ερωτηματικό (;).
+- Για να διαγράψετε όλα τα SSID, γράψτε ένα κενό διάστημα στο πεδίο.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Ρυθμίσεις για προχωρημένους (NSClient)
 
-![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
+![Ρυθμίσεις για προχωρημένους του NSClient](../images/preferences/settings_nsclient_advanced.png)
 
-Options in advanced settings are self-explanatory.
+Οι επιλογές στις ρυθμίσεις για προχωρημένους εξηγούνται μόνες τους.
 
 ## Επικοινωνία με SMS
 
-More information on the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Περισσότερες πληροφορίες στη σχετική σελίδα [Εντολές SMS](../RemoteFeatures/SMSCommands.md).
 
 (preferences-wear)=
 ## Wear
 
-This section is shown when the **Wear** plugin is enabled in [Configuration > Communication](#Config-Builder-wear). More information on the dedicated [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md) and [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md) pages.
+Αυτή η ενότητα εμφανίζεται όταν το πρόσθετο **Wear** είναι ενεργό στο [Διαμόρφωση > Επικοινωνία](#Config-Builder-wear). Περισσότερες πληροφορίες στις σχετικές σελίδες [Έξυπνο ρολόι Wear OS](../WearOS/WearOsSmartwatch.md) και [Χειρισμός του AAPS από το έξυπνο ρολόι Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
-![Settings > Wear](../images/preferences/settings_wear.png)
+![Ρυθμίσεις > Wear](../images/preferences/settings_wear.png)
 
-- **Wear control**: allow treatments and other actions to be sent from the watch. Without it, the watch only displays data: the phone refuses any command from the watch, and tapping a complication that would open a control screen opens the **AAPS** menu on the watch instead.
+- **Έλεγχος από ρολόι**: επιτρέπει την αποστολή θεραπειών και άλλων ενεργειών από το ρολόι. Χωρίς αυτό, το ρολόι μόνο εμφανίζει δεδομένα: το τηλέφωνο απορρίπτει κάθε εντολή από το ρολόι, και αν πατήσετε ένα complication που θα άνοιγε μια οθόνη ελέγχου, ανοίγει αντί γι' αυτό το μενού του **AAPS** στο ρολόι.
 
-**Wear Wizard Settings** defines which calculations are included in the result of the bolus wizard on the watch. On the watch you only enter the carbs; these switches replace the choices you would make in the bolus wizard on the phone:
+Οι **Ρυθμίσεις Οδηγού Bolus στο ρολόι** ορίζουν ποιοι υπολογισμοί περιλαμβάνονται στο αποτέλεσμα του οδηγού bolus στο ρολόι. Στο ρολόι γράφετε μόνο τους υδατάνθρακες· αυτοί οι διακόπτες αντικαθιστούν τις επιλογές που θα κάνατε στον οδηγό bolus στο τηλέφωνο:
 
-- **Include BG in wizard**: add a correction for the difference between your current glucose and your target.
-- **Include temp target in wizard**: use the running temp target instead of the profile target for this correction.
-- **Include trend in wizard**: take the current glucose trend into account.
-- **Include COB in wizard**: add insulin for the carbs that are still on board.
-- **Include IOB in wizard**: subtract the insulin that is still on board.
+- **Γλυκόζη στον οδηγό**: προσθέτει διόρθωση για τη διαφορά ανάμεσα στην τρέχουσα γλυκόζη σας και τον στόχο σας.
+- **Προσωρινός στόχος στον οδηγό**: χρησιμοποιεί τον ενεργό προσωρινό στόχο αντί για τον στόχο του προφίλ για αυτή τη διόρθωση.
+- **Τάση στον οδηγό**: λαμβάνει υπόψη την τρέχουσα τάση της γλυκόζης.
+- **COB στον οδηγό**: προσθέτει ινσουλίνη για τους υδατάνθρακες που είναι ακόμη ενεργοί (COB).
+- **IOB στον οδηγό**: αφαιρεί την ινσουλίνη που είναι ακόμη ενεργή (IOB).
 
-![Settings > Wear > Wear Wizard Settings](../images/preferences/settings_wear_wear_wizard.png)
+![Ρυθμίσεις > Wear > Ρυθμίσεις Οδηγού Bolus στο ρολόι](../images/preferences/settings_wear_wear_wizard.png)
 
-**Custom Watchface Settings** contains **Authorize custom watchfaces**. A custom watchface file can include values for some watch settings. When this switch is on, loading such a watchface is allowed to change those settings on the watch; when it is off, the watchface is loaded but the settings stay as they are:
+Οι **Προσαρμοσμένες Ρυθμίσεις Watchface** περιέχουν την επιλογή **Εξουσιοδότηση προσαρμοσμένων Watchface**. Ένα αρχείο προσαρμοσμένου watchface μπορεί να περιέχει τιμές για ορισμένες ρυθμίσεις του ρολογιού. Όταν αυτός ο διακόπτης είναι ενεργός, η φόρτωση ενός τέτοιου watchface μπορεί να αλλάξει αυτές τις ρυθμίσεις στο ρολόι· όταν είναι ανενεργός, το watchface φορτώνεται αλλά οι ρυθμίσεις μένουν όπως είναι:
 
-![Settings > Wear > Custom Watchface Settings](../images/preferences/settings_wear_custom_watchface.png)
+![Ρυθμίσεις > Wear > Προσαρμοσμένες Ρυθμίσεις Watchface](../images/preferences/settings_wear_custom_watchface.png)
 
-**General Settings** contains **Notify on SMB**, to get a notification on the watch each time an SMB is delivered:
+Οι **Γενικές Ρυθμίσεις** περιέχουν την επιλογή **Ειδοποίηση για SMB**, για να λαμβάνετε ειδοποίηση στο ρολόι κάθε φορά που χορηγείται ένα SMB:
 
-![Settings > Wear > General Settings](../images/preferences/settings_wear_general.png)
+![Ρυθμίσεις > Wear > Γενικές Ρυθμίσεις](../images/preferences/settings_wear_general.png)
 
 ## Autotune
 
-This section is shown when the **Autotune** plugin is enabled in [Configuration > General](#Config-Builder-autotune). The settings are described on the dedicated [Autotune](../AdvancedOptions/Autotune.md) page.
+Αυτή η ενότητα εμφανίζεται όταν το πρόσθετο **Autotune** είναι ενεργό στο [Διαμόρφωση > Γενικά](#Config-Builder-autotune). Οι ρυθμίσεις περιγράφονται στη σχετική σελίδα [Autotune](../AdvancedOptions/Autotune.md).
 
-![Settings > Autotune](../images/preferences/settings_autotune.png)
+![Ρυθμίσεις > Autotune](../images/preferences/settings_autotune.png)
 
-## Αυτοματοποίηση
+## Αυτοματισμός
 
-![Settings > Automation](../images/preferences/settings_automation.png)
+![Ρυθμίσεις > Αυτοματισμός](../images/preferences/settings_automation.png)
 
-Select which location service shall be used:
+Επιλέξτε ποια υπηρεσία τοποθεσίας θα χρησιμοποιείται:
 
-- Use passive location: **AAPS** only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! May cause excessive battery drain!)
+- Χρήση παθητικής τοποθεσίας: το **AAPS** παίρνει την τοποθεσία μόνο όταν τη ζητούν άλλες εφαρμογές
+- Χρήση τοποθεσίας δικτύου: η τοποθεσία του Wi-Fi σας
+- Χρήση τοποθεσίας GPS (Προσοχή! Μπορεί να αδειάζει πολύ γρήγορα την μπαταρία!)
 
-## Local alerts
+## Τοπικές ειδοποιήσεις
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Ρυθμίσεις > Τοπικές ειδοποιήσεις](../images/preferences/settings_local_alerts.png)
 
-Settings should be self-explanatory.
+Οι ρυθμίσεις εξηγούνται μόνες τους.
 
 (preferences-maintenance-settings)=
-## Maintenance settings
+## Ρυθμίσεις συντήρησης
 
-![Settings > Maintenance](../images/preferences/settings_maintenance.png)
+![Ρυθμίσεις > Συντήρηση](../images/preferences/settings_maintenance.png)
 
-**Email recipient**: Standard recipient of logs is <logs@aaps.app>.
+**Παραλήπτης email**: ο τυπικός παραλήπτης των αρχείων καταγραφής είναι το <logs@aaps.app>.
 
-**Number of logs to send**: how many of the most recent log files are attached when you send logs.
+**Αριθμός αρχείων καταγραφής για αποστολή**: πόσα από τα πιο πρόσφατα αρχεία καταγραφής επισυνάπτονται όταν στέλνετε αρχεία καταγραφής.
 
-**Data Choices**
+**Επιλογές δεδομένων**
 
-![Data choices](../images/preferences/settings_data_choices.png)
+![Επιλογές δεδομένων](../images/preferences/settings_data_choices.png)
 
-You can help develop **AAPS** further by sending crash reports to the developers.
+Μπορείτε να βοηθήσετε στην ανάπτυξη του **AAPS** στέλνοντας αναφορές σφαλμάτων στους προγραμματιστές.
 
-**Unattended Settings Export**<br/> By enabling this feature, you allow **AAPS** to execute settings exports without user intervention. For this the master password is securely stored on your phone (only) at the next manually export. The stored password will be used for up to 4 weeks. After 4 weeks you will be notified the password is about to expire. During a grace period of 1 week, the password can then be refreshed by manually exporting settings from the maintenance menu.
+**Αυτοματοποιημένη εξαγωγή ρυθμίσεων**<br/> Αν ενεργοποιήσετε αυτή τη λειτουργία, επιτρέπετε στο **AAPS** να κάνει εξαγωγή ρυθμίσεων χωρίς ενέργεια του χρήστη. Για τον σκοπό αυτό ο κύριος κωδικός αποθηκεύεται με ασφάλεια στο τηλέφωνό σας (μόνο εκεί) στην επόμενη χειροκίνητη εξαγωγή. Ο αποθηκευμένος κωδικός θα χρησιμοποιείται για έως 4 εβδομάδες. Μετά από 4 εβδομάδες θα λάβετε ειδοποίηση ότι ο κωδικός πρόκειται να λήξει. Σε μια περίοδο χάριτος 1 εβδομάδας, μπορείτε να ανανεώσετε τον κωδικό κάνοντας χειροκίνητη εξαγωγή ρυθμίσεων από το μενού συντήρησης.
 
-After the grace period of 1 week has passed the stored password expires and any automated settings export will abort while notifying the user, asking to reenter the password. [(**Automated settings exports**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) will be logged to the **AAPS** 'Careportal' and 'User entry' lists under Treatments.
+Όταν περάσει η περίοδος χάριτος της 1 εβδομάδας, ο αποθηκευμένος κωδικός λήγει και κάθε αυτόματη εξαγωγή ρυθμίσεων θα διακόπτεται με ειδοποίηση προς τον χρήστη, που θα του ζητά να δώσει ξανά τον κωδικό. Οι [(**αυτόματες εξαγωγές ρυθμίσεων**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) θα καταγράφονται στις λίστες 'Careportal' και 'Καταχώρηση χρήστη' του **AAPS**, στις Θεραπείες.
 
-After enabling this option, make sure to perform a manual settings export, where you will be requested for your password, so that **AAPS** can store it.
+Αφού ενεργοποιήσετε αυτή την επιλογή, κάντε μία χειροκίνητη εξαγωγή ρυθμίσεων, όπου θα σας ζητηθεί ο κωδικός σας, ώστε το **AAPS** να μπορέσει να τον αποθηκεύσει.
 
-### Log files
+### Αρχεία καταγραφής
 
-AAPS will save logs for troubleshooting.
+Το AAPS αποθηκεύει αρχεία καταγραφής για την αντιμετώπιση προβλημάτων.
 
-Do not disable this feature: it will help understanding the reasons if something goes wrong.
+Μην απενεργοποιείτε αυτή τη λειτουργία: βοηθά να βρεθούν οι αιτίες, αν κάτι πάει στραβά.
 
-If you need to send the logs to the developers, make sure you accurately describe the issue in the email. It is preferable to send logs only after being requested to do so, following an [issue report in GitHub](https://github.com/nightscout/AndroidAPS/issues).
+Αν χρειάζεται να στείλετε τα αρχεία καταγραφής στους προγραμματιστές, περιγράψτε με ακρίβεια το πρόβλημα στο email. Είναι καλύτερο να στέλνετε αρχεία καταγραφής μόνο όταν σας ζητηθεί, μετά από μια [αναφορά προβλήματος στο GitHub](https://github.com/nightscout/AndroidAPS/issues).
 
-You can find AAPS logs in your phone memory -> Android -> data -> info.nightscout.androidaps -> files.
+Τα αρχεία καταγραφής του AAPS βρίσκονται στη μνήμη του τηλεφώνου σας -> Android -> data -> info.nightscout.androidaps -> files.
 
-Log handling (log settings, sending and deleting logs) and file management are found on the **Maintenance** screen, opened from the **menu** (☰) in the top-left corner of the main screen:
+Η διαχείριση των αρχείων καταγραφής (ρυθμίσεις, αποστολή και διαγραφή αρχείων καταγραφής) και η διαχείριση αρχείων βρίσκονται στην οθόνη **Συντήρηση**, που ανοίγει από το **μενού** (☰) πάνω αριστερά στην κύρια οθόνη:
 
-![Maintenance screen](../images/preferences/maintenance_file_management.png)
+![Οθόνη Συντήρηση](../images/preferences/maintenance_file_management.png)
 
 (preferences-maintenance-logdirectory)=
 
-### Setting the local AAPS directory
+### Ορισμός του τοπικού φακέλου AAPS
 
-The **Maintenance** screen also includes the **AAPS directory**. This setting allows the user to choose a directory on their phone where **AAPS** will store preferences, logs, and other files. Once a directory is chosen, its path (for example `Documents/AAPS`) is shown below **AAPS directory**, so you can always see where your files are saved.
+Η οθόνη **Συντήρηση** περιέχει επίσης τον **Φάκελο AAPS**. Αυτή η ρύθμιση επιτρέπει στον χρήστη να επιλέξει έναν φάκελο στο τηλέφωνό του, όπου το **AAPS** θα αποθηκεύει ρυθμίσεις, αρχεία καταγραφής και άλλα αρχεία. Όταν επιλέξετε φάκελο, η διαδρομή του (για παράδειγμα `Documents/AAPS`) εμφανίζεται κάτω από το **Φάκελος AAPS**, ώστε να βλέπετε πάντα πού αποθηκεύονται τα αρχεία σας.
 
-It is strongly recommended to use a directory directly in the main entry of your phone memory. Default is AAPS.
+Συνιστάται έντονα να χρησιμοποιείτε έναν φάκελο απευθείας στην κύρια θέση της μνήμης του τηλεφώνου σας. Η προεπιλογή είναι AAPS.
 
-![Local directory location](../images/preferences/maintenance_settings_directory.png)
+![Θέση τοπικού φακέλου](../images/preferences/maintenance_settings_directory.png)
 
-If you select a subdirectory of AAPS, you will see an error message. Tap "OK" and retry, selecting the correct directory (one above). Do not select "DISMISS" unless you clearly know what you are doing.
+Αν επιλέξετε έναν υποφάκελο του AAPS, θα δείτε ένα μήνυμα σφάλματος. Πατήστε «OK» και δοκιμάστε ξανά, επιλέγοντας τον σωστό φάκελο (ένα επίπεδο πιο πάνω). Μην επιλέξετε «DISMISS» αν δεν ξέρετε καλά τι κάνετε.
 
-![Local directory location](../images/preferences/maintenance_settings_wrongdirectory.png)
+![Θέση τοπικού φακέλου](../images/preferences/maintenance_settings_wrongdirectory.png)
 
-Android can silently take the directory permission away, for example after you reinstall **AAPS** or clear its storage. When that happens, **AAPS** shows a persistent **Access to the AAPS directory was lost** notification and local settings export stops working until you come back here and select the directory again. Do this promptly, otherwise your backups on the phone are no longer refreshed.
+Το Android μπορεί να αφαιρέσει σιωπηλά την άδεια για τον φάκελο, για παράδειγμα αφού επανεγκαταστήσετε το **AAPS** ή διαγράψετε τα δεδομένα αποθήκευσής του. Όταν συμβεί αυτό, το **AAPS** εμφανίζει μια μόνιμη ειδοποίηση **Χάθηκε η πρόσβαση στον φάκελο AAPS** και η τοπική εξαγωγή ρυθμίσεων σταματά να λειτουργεί, μέχρι να επιστρέψετε εδώ και να επιλέξετε ξανά τον φάκελο. Κάντε το γρήγορα, αλλιώς τα αντίγραφα ασφαλείας στο τηλέφωνο δεν ανανεώνονται πια.
 
 (preferences-maintenance-cloud)=
 
-### Setting a cloud directory
+### Ορισμός φακέλου cloud
 
-You can export your settings, logs and CSV data to a cloud service.
+Μπορείτε να κάνετε εξαγωγή των ρυθμίσεων, των αρχείων καταγραφής και των δεδομένων CSV σε μια υπηρεσία cloud.
 
-1. Open the **menu** (☰), select **Maintenance** and tap **Cloud Directory** (under **File management**).
+1. Ανοίξτε το **μενού** (☰), επιλέξτε **Συντήρηση** και πατήστε **Φάκελος cloud** (στη **Διαχείριση αρχείων**).
 
-   ![Cloud Directory in the Maintenance menu](../images/preferences/maintenance_settings_cloud.png)
+   ![Φάκελος cloud στο μενού Συντήρηση](../images/preferences/maintenance_settings_cloud.png)
 
-2. In **Select Storage Type**, select **Google Drive**.
+2. Στο **Επιλογή τύπου αποθήκευσης**, επιλέξτε **Google Drive**.
 
-   ![Select Storage Type dialog](../images/preferences/maintenance_cloud_select_storage.png)
+   ![Παράθυρο «Επιλογή τύπου αποθήκευσης»](../images/preferences/maintenance_cloud_select_storage.png)
 
-3. A Google sign-in page opens. Choose the Google account that will hold your backups (you can use a [dedicated Google account](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
+3. Ανοίγει μια σελίδα σύνδεσης της Google. Επιλέξτε τον λογαριασμό Google που θα κρατά τα αντίγραφα ασφαλείας σας (μπορείτε να χρησιμοποιήσετε έναν [ξεχωριστό λογαριασμό Google](../UsefulLinks/DedicatedGoogleAccountForAaps.md)).
 
-   ![Google sign-in page: choose an account](../images/preferences/maintenance_cloud_google_account.png)
+   ![Σελίδα σύνδεσης Google: επιλογή λογαριασμού](../images/preferences/maintenance_cloud_google_account.png)
 
-4. Check that the account is the right one and tap **Continue** to give **AAPS** access. If you set up the cloud directory before, the page says that **AAPS** already has some access.
+4. Ελέγξτε ότι ο λογαριασμός είναι ο σωστός και πατήστε **Συνέχεια** (Continue) για να δώσετε πρόσβαση στο **AAPS**. Αν είχατε ρυθμίσει τον φάκελο cloud και παλιότερα, η σελίδα λέει ότι το **AAPS** έχει ήδη κάποια πρόσβαση.
 
-   ![Google page asking to give AAPS access, with the Continue button](../images/preferences/maintenance_cloud_google_access.png)
+   ![Σελίδα της Google που ζητά να δώσετε πρόσβαση στο AAPS, με το κουμπί Συνέχεια](../images/preferences/maintenance_cloud_google_access.png)
 
-5. Back in **AAPS**, the message **Cloud storage authentication successful** appears at the bottom of the main screen:
+5. Πίσω στο **AAPS**, το μήνυμα **Η πιστοποίηση στην αποθήκευση cloud έγινε με επιτυχία** εμφανίζεται στο κάτω μέρος της κύριας οθόνης:
 
-   ![Cloud storage authentication successful message](../images/preferences/maintenance_cloud_auth_success.png)
+   ![Μήνυμα «Η πιστοποίηση στην αποθήκευση cloud έγινε με επιτυχία»](../images/preferences/maintenance_cloud_auth_success.png)
 
-   In the **Maintenance** menu, **Cloud Directory** now has a green dot, and the **Cloud** buttons next to **Send logs**, **Export settings**, **Import settings** and **Export User Entries to Excel (csv)** are available.
+   Στο μενού **Συντήρηση**, ο **Φάκελος cloud** έχει τώρα μια πράσινη κουκκίδα, και τα κουμπιά **Cloud** δίπλα στα **Αποστολή αρχείων καταγραφής**, **Εξαγωγή ρυθμίσεων**, **Εισαγωγή ρυθμίσεων** και **Εξαγωγή καταχωρήσεων χρήστη σε Excel (csv)** είναι διαθέσιμα.
 
-   ![Maintenance menu with cloud storage set up: Cloud buttons available and the clear icon on Cloud Directory](../images/preferences/maintenance_settings_cloud_ready.png)
+   ![Μενού Συντήρηση με ρυθμισμένη αποθήκευση cloud: διαθέσιμα κουμπιά Cloud και το εικονίδιο διαγραφής στον Φάκελο cloud](../images/preferences/maintenance_settings_cloud_ready.png)
 
-To stop exporting to the cloud, tap the **✕** (**Clear Settings**) icon at the end of the **Cloud Directory** row in the **Maintenance** menu (it is shown once a cloud service is set up) and confirm **Clear Cloud Settings**. This switches back to local storage and clears the authorization.
+Για να σταματήσετε την εξαγωγή στο cloud, πατήστε το εικονίδιο **✕** (**Διαγραφή ρυθμίσεων**) στο τέλος της γραμμής **Φάκελος cloud** στο μενού **Συντήρηση** (εμφανίζεται όταν έχει ρυθμιστεί μια υπηρεσία cloud) και επιβεβαιώστε τη **Διαγραφή ρυθμίσεων cloud**. Έτσι επιστρέφετε στην τοπική αποθήκευση και η εξουσιοδότηση διαγράφεται.
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
+You can help the community by donating your data to research projects! Λεπτομέρειες θα βρείτε στη [σελίδα του Open Humans](../SupportingAaps/OpenHumans.md).
 
-In **Settings → Open Humans**, you can define when data shall be uploaded
-- only if connected to Wi-Fi
-- only if charging
+Στις **Ρυθμίσεις → Open Humans**, μπορείτε να ορίσετε πότε θα στέλνονται τα δεδομένα
+- μόνο όταν υπάρχει σύνδεση σε Wi-Fi
+- μόνο κατά τη φόρτιση
