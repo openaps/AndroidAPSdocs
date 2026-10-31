@@ -36,7 +36,7 @@ Lost geen van de links je probleem op? Lees dan [Waar kan ik hulp krijgen?](Wher
 
 ### Instellingen
 
-* [Profiel: "Basaal stand is niet compatibel met de huidige pomp"](#your-aaps-profile-basal-not-compatible)
+* [Profiel: "Basaalstand is niet compatibel met de huidige pomp"](#your-aaps-profile-basal-not-compatible)
 * [Pomp: "Data komt van een andere pomp"](#config-builder-wrong-pump-data)
 * [Nightscout Client](TroubleshootingNsClient.md)
 
@@ -63,7 +63,7 @@ Voor bekende problemen met Bluetooth-verbindingen, het wegvallen van pomp/pods, 
 
 ### Batterij optimalisatie
 
-**AAPS** kan je helpen de juiste instellingen voor je telefoon te vinden: open het **menu** (☰) > **Over** en tik op **Sluit mijn app niet af?**. Dit opent de instructies voor het merk van je telefoon op [Don't kill my app](https://dontkillmyapp.com/). De [installatiewizard](#setup-wizard-bluetooth-battery-optimisation) vraagt je ook om de batterij optimalisatie voor **AAPS** en Bluetooth uit te zetten.
+**AAPS** kan je helpen de juiste instellingen voor je telefoon te vinden: open het **menu** (☰) > **Over** en tik op **Sluit mijn app niet af?**. Dit opent de instructies voor het merk van je telefoon op [Don't kill my app](https://dontkillmyapp.com/). De [Setup Wizard](#setup-wizard-bluetooth-battery-optimisation) vraagt je ook om de batterij optimalisatie voor **AAPS** en Bluetooth uit te zetten.
 
 Android heeft een instelling om batterij te sparen. Deze staat standaard aan. Deze instelling pauzeert automatisch apps die het systeem niet nodig heeft. Zo gebruiken apps die niet altijd hoeven te draaien minder batterij.
 
