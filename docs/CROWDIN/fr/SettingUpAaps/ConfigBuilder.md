@@ -241,7 +241,7 @@ Enfin, une comparaison où la DIA et le pic sont ajustés en même temps. L'idé
 
 (Config-Builder-pump)=
 
-## Pump
+## Pompe
 
 Sélectionnez la pompe que vous utilisez. Voir la page [Pompes compatibles](../Getting-Started/CompatiblePumps.md) pour plus d'informations sur la configuration.
 
@@ -375,7 +375,7 @@ Surveiller et contrôler **AAPS** depuis une montre Wear OS. La configuration de
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Applications compagnon externes
 
 Diffuse les données d'état d'**AAPS** sur le téléphone, pour que d'autres applications installées dessus puissent les afficher, par exemple des applications compagnon pour montres ou widgets. La diffusion contient la glycémie et sa tendance, l'IOB, les GA (COB), le débit basal et le débit basal temporaire, le nom du profil, l'état de la boucle, la batterie du téléphone et de la pompe, le niveau du réservoir et la progression du bolus. Activez-la seulement si une application compagnon que vous utilisez demande ces données.
 
@@ -391,7 +391,7 @@ Connexion à un appareil Garmin (Fenix, Edge...)
 
 Ouvrez le **menu** (☰) et sélectionnez [Historique Traitements](#aaps-screens-treatments) pour voir les traitements enregistrés. Si vous voulez modifier ou supprimer une entrée (par ex. vous avez mangé moins de glucides que prévu), sélectionnez « Supprimer », puis saisissez la nouvelle valeur (changez l'heure si nécessaire) avec **Traitements → Glucides** dans la barre de navigation du bas (voir [Glucides](#screens-bolus-carbs)).
 
-## General
+## Généralités
 
 Dans **AAPS** 4, la catégorie **Général** de **Configuration** ne contient que **Autotune**. Les autres fonctions décrites ci-dessous sont toujours disponibles et n'ont plus besoin d'être activées ici ; chaque paragraphe indique où les trouver.
 
