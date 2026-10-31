@@ -2,7 +2,7 @@
 
 This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can offer be particularly beneficial for:
+When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
 
 - the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
 
@@ -62,7 +62,7 @@ The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️
 
 **⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. Δείτε [Η προστασία ρυθμίσεων κλειδώνει πλέον και τις οθόνες διαχείρισης](#v4changes-read-only-management).
 
 ### Reordering profiles
 
@@ -122,28 +122,28 @@ Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or 
 The effect of a **Profile** Percentage is summarized in the table below:
 
 | Profile Switch  
-Percentage |    Effect    |    I:C  
-g/UI     | example  
-15g |         ISF  
-mmol/L/UI  
-mg/dL/UI         | UI to lower  
+Percentage |    Effect    |     I:C  
+g/U     | example  
+15g |          ISF  
+mmol/L/U  
+mg/dL/U          | U to lower  
 2mmol/L  
 40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:-------------------------------:|
+|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:------------------------------:|
 |             90%             |    Weaker    | 5/0.9  
-=**5.55** |    2.7 UI     | 2.2/0.9  
+=**5.55** |     2.7 U     | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
-=**44.4** |             0.8 UI              |
-|          **100%**           | **Standard** |       **5**       |   **3 UI**    |                **2.2  
-40**                |           **0.9** UI            |
+=**44.4** |             0.8 U              |
+|          **100%**           | **Standard** |       **5**       |    **3 U**    |                **2.2  
+40**                |           **0.9** U            |
 |            130%             |   Stronger   | 5/1.3  
-=**3.85** |    3.9 UI     | 2.2/1.3  
+=**3.85** |     3.9 U     | 2.2/1.3  
 =**1.7**  
   
 40/1.3  
-=**30.8** |             1.2 UI              |
+=**30.8** |             1.2 U              |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
