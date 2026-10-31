@@ -12,7 +12,7 @@
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout设置
 
-Nightscout是一个网络应用程序，可以记录和显示您的CGM数据和**AAPS**数据，并生成报告。它是一个功能强大的平台，已经与**AAPS**集成多年。它使用户和护理人员能够近乎实时地跟踪患者的糖尿病数据（如果所有相关组件之间的互联网连接足够稳定，数据接收和数据提供之间可能只相隔几秒钟）。它还允许护理人员向**AAPS**发送远程命令。
+Nightscout是一个网络应用程序，可以记录和显示您的CGM数据和**AAPS**数据，并生成报告。它是一个功能强大的平台，已经与**AAPS**集成多年。它使用户和护理人员能够近乎实时地跟踪患者的糖尿病数据（如果所有相关组件之间的互联网连接足够稳定，数据接收和数据提供之间可能只相隔几秒钟）。 It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
 
 Nightscout是开源软件。任何人都可以使用免费或付费服务来创建和运营Nightscout服务器。
 
