@@ -131,7 +131,7 @@ Po każdym wyborze trzeba potwierdzić.
 
 Musisz sprawdzić, skąd biorą się zduplikowane BG:
 
-* Czy w Twojej stronie Nightscout jest włączony Dexcom bridge? Wyłącz bridge: przejdź do panelu administracyjnego Twojej instancji Nightscout, edytuj zmienną "enable" i usuń z niej część "bridge". (Dla heroku [szczegóły znajdziesz tutaj](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Czy w Twojej stronie Nightscout jest włączony Dexcom bridge? Wyłącz bridge: przejdź do panelu administracyjnego Twojej instancji Nightscout, edytuj zmienną "enable" i usuń z niej część "bridge". (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Czy kilka źródeł wysyła Twoje BG do Nightscout? Jeśli używasz aplikacji BYODA, włącz wysyłanie w **AAPS**, ale nie włączaj go w xDrip, jeśli go używasz.
 * Czy masz obserwujących, którzy odbierają Twoje BG, ale też wysyłają je ponownie do Twojej strony Nightscout?
 * Ostatnia możliwość: w [ustawieniach NSClient](#Preferences-nsclient) wybierz ustawienia synchronizacji i wyłącz opcję "Odbieraj dane CGM z NS".
@@ -578,7 +578,7 @@ Wiersz ikon pod nagłówkiem pokazuje, które dane wchodzą do obliczenia (BG, t
 * Ze względów bezpieczeństwa nie można wyłączyć IOB, gdy włączone jest COB, bo grozi to podaniem za dużej ilości insuliny, jeśli **AAPS** nie uwzględni tego, co już zostało podane.
 * Jeśli włączysz COB i IOB, uwzględnione zostaną niewchłonięte węglowodany, które nie są jeszcze pokryte insuliną, oraz cała insulina podana jako TBR lub SMB.
 * Jeśli włączysz IOB bez COB, **AAPS** uwzględni już podaną insulinę, ale nie odejmie jej od węglowodanów, które jeszcze mają się wchłonąć. Pojawia się wtedy komunikat o „brakujących węglowodanach”.
-* Jeśli podajesz bolus na **dodatkowe jedzenie** krótko po bolusie posiłkowym (np. dodatkowy deser), pomocne może być **wyłączenie wszystkich danych**. W ten sposób dodawane są tylko nowe węglowodany, ponieważ główny posiłek niekoniecznie zostanie wchłonięty, więc IOB nie będzie dokładnie pasował do COB wkrótce po bolusie posiłkowym.
+* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. W ten sposób dodawane są tylko nowe węglowodany, ponieważ główny posiłek niekoniecznie zostanie wchłonięty, więc IOB nie będzie dokładnie pasował do COB wkrótce po bolusie posiłkowym.
 * Ze względów bezpieczeństwa **cel tymczasowy** jest uwzględniany w obliczeniu tylko wtedy, gdy sam włączysz tę pozycję.
 
 (AapsScreens-section-j)=
