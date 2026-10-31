@@ -1,4 +1,4 @@
-# Building AAPS
+# Compilar o AAPS
 
 ## Compilar em vez de transferir
 
