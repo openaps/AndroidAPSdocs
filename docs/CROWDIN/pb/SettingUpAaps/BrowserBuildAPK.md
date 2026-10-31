@@ -1,48 +1,48 @@
 (github-build-apk)=
 
-# Browser build – Step 4: Build the APK
+# Compilação no navegador – Etapa 4: Compile o APK
 
 ```{note}
-This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md).
+Esta é a **Etapa 4** da [Compilação no navegador](BrowserBuild.md). Primeiro conclua a [Etapa 3 – Autorize o Google Drive](BrowserBuildGoogleDrive.md).
 ```
 
-## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+## AAPS-CI: GitHub Actions para compilar o APK do AAPS
+ - Adequado para usuários em geral.
 
 ```{tab-set}
 
 :::{tab-item} Wiki
-### Run the Workflow to Build the Signed APK
+### Execute o workflow para compilar o APK assinado
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. Na sua cópia do AndroidAPS no GitHub, selecione Actions.
+2. Expanda All Workflows.
+3. Selecione AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Role para baixo e toque em Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
+5. Deixe **Use workflow from** na branch master. Em **Select AAPS Version**, selecione a versão do **AAPS** que você quer compilar (normalmente a mais recente). Selecione a [variante](#browserbuild-variant) (fullRelease) e toque em Run workflow.
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
+6. Você verá a mensagem Workflow run was successfully requested. Atualize a página do navegador e você poderá acompanhar o progresso da compilação. Quando a ação terminar, a ação AAPS CI mostrará um sinal verde de confirmação. Você compilou com sucesso a versão atualizada do Android APS.
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
 
-### Install the AAPS APK
+### Instale o APK do AAPS
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Abra o seu Google Drive
+2. Abra a pasta AAPS, selecione a pasta da nova versão e você encontrará as versões para o telefone e para o Android Wear.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 :::  
 
-:::{tab-item} Video
+:::{tab-item} Vídeo
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
@@ -58,37 +58,37 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ```
 
-## Build Version selection
+## Seleção da versão a compilar
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**Somente versões do AAPS a partir da 3.3.2.1 podem ser compiladas pelo método do navegador.**
 
-Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+Toque em **Select AAPS Version** e escolha a versão a compilar. A versão mais recente fica no topo da lista.
 
-![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+![Lista Select AAPS Version](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 
-## Build Variants selection
+## Seleção da variante de compilação
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*Observação: os apps para Android e para Android Wear serão compilados automaticamente.*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-    - pumpcontrolRelease: To replace your pump app/controller
+  - Selecione a variante de que você precisa:
+    - fullRelease: para uso normal com bomba, com todas as funções.
+    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): para cuidadores (requer [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` compila o **AAPSClient3**, disponível a partir da versão 4.0 do **AAPS** (veja [Sobre o AAPSClient, AAPSClient2 e AAPSClient3](#remotecontrol-aapsclient-versions)).
+    - pumpcontrolRelease: para substituir o app/controle da sua bomba
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Variantes que terminam em “Debug” indicam que o APK será compilado em modo de depuração, o que é útil para desenvolvedores na resolução de problemas.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 ----
 
-Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Quando a compilação terminar com sucesso, o apk é salvo no seu Google Drive. Continue com [Transferir e instalar o AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+A partir de setembro de 2026, a [Verificação de desenvolvedor do Android](#android-developer-verification) do Google pode bloquear a instalação do APK ao tocar no arquivo, dependendo do seu país. Soluções gratuitas são explicadas nessa página.
 ```
 
-If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
+Se a compilação falhar, primeiro [descubra o que deu errado no log da compilação](#aaps-ci-read-the-logs), depois veja [Compilação no navegador: resolução de problemas](../GettingHelp/BrowserBuildTroubleshooting.md). Para incluir um commit específico na sua compilação, veja [fazer cherry-pick de um commit](#github-cherry-pick).
