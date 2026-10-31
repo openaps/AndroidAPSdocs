@@ -1,49 +1,49 @@
 # DanaR
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*Te instrukcje opisują konfigurację aplikacji i pompy, jeśli masz pompę DanaR. Jeśli masz pompę DanaRS wprowadzoną w 2017 roku, przejdź do strony [DanaRS, Dana-i i Dana-i2](./DanaRS-Insulin-Pump.md).*
 
-## Pump capabilities with AAPS
+## Funkcje pompy w AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Timezone and DST changes need no special action, as the pump does not use its own history.
+* Komunikuje się z **AAPS** przez wbudowany Bluetooth telefonu, bez dodatkowego urządzenia komunikacyjnego.
+* Zmiana strefy czasowej i czasu letniego nie wymaga żadnych specjalnych działań, ponieważ pompa nie używa własnej historii.
 
-## Ustawienia
+## Konfiguracja
 
-* In the pump go to Main Menu > Setting > User Option
-* Turn on "8. Extended Bolus"
+* W pompie przejdź do Main Menu > Setting > User Option
+* Włącz „8. Extended Bolus” (bolus przedłużony)
 
-![DanaR pump](../images/danar1.png)
+![Pompa DanaR](../images/danar1.png)
 
-* Go to Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
+* Przejdź do Main Menu > Setting > Discovery
+* W ustawieniach telefonu przejdź do Bluetooth, wyszukaj urządzenia w pobliżu, wybierz numer seryjny swojej DanaR i wpisz hasło (hasło parowania to 0000). Jeśli DanaR nie pojawia się w wyszukiwaniu, uruchom ponownie telefon, wyjmij baterię z DanaR, włóż ją z powrotem i powtórz te dwa kroki.
 
-* In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
+* W **AAPS** otwórz **menu** (☰) w lewym górnym rogu, przejdź do **Konfiguracja** > **Pompa** i wybierz swój typ DanaR (**DanaR**, **DanaR wersja Koreańska** lub **DanaRv2**).
   
-  ![Configuration > Pump with the DanaR plugins](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![Konfiguracja > Pompa z wtyczkami DanaR](../images/v4/Configuration/configuration_pump_list_1.png)
 
-* Open the pump screen: tap **Open plugin** on the DanaR card (or go to **Manage** > **Pump**).
+* Otwórz ekran pompy: dotknij **Otwórz wtyczkę** na karcie DanaR (lub przejdź do **Zarządzaj** > **Pompa**).
 
-* Tap **Pairing**. On the pairing screen: 
-  * Enter your pump password under **Pump password** (default password is 1234).
-  * Under **Select paired device**, tap your DanaR serial number. If the list is empty, tap **Open Bluetooth settings** and pair the pump with your phone first (see the step above). When you come back to **AAPS**, the pump appears in the list. If it does not, tap the refresh icon.
-  * Tap **Pairing**. **AAPS** connects to the pump and checks the password.
-* To change the driver settings, tap **Settings** on the DanaR card in **Configuration** > **Pump**: 
-  * **Bolus speed** (DanaR and DanaRv2): change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
-  * **Use extended boluses for >200%** (DanaR and DanaR Korean): enable this if you want **AAPS** to allow a basal rate above 200%. Note this means you cannot loop with high TBRs while using extended boluses for food.
-* Set basal step on pump to 0.01 U/h
-* Set bolus step on pump to 0.1 U. **AAPS** reads the bolus step from the pump and uses it for every bolus.
-* Enable extended boluses on pump
+* Dotknij **Parowanie**. Na ekranie parowania: 
+  * Wpisz hasło pompy w polu **Hasło pompy** (domyślne hasło to 1234).
+  * W sekcji **Wybierz sparowane urządzenie** dotknij numeru seryjnego swojej DanaR. Jeśli lista jest pusta, dotknij **Otwórz ustawienia Bluetooth** i najpierw sparuj pompę z telefonem (patrz krok powyżej). Gdy wrócisz do **AAPS**, pompa pojawi się na liście. Jeśli się nie pojawi, dotknij ikony odświeżania.
+  * Dotknij **Parowanie**. **AAPS** łączy się z pompą i sprawdza hasło.
+* Aby zmienić ustawienia sterownika, dotknij **Ustawienia** na karcie DanaR w **Konfiguracja** > **Pompa**: 
+  * **Prędkość podawania bolusa** (DanaR i DanaRv2): zmień domyślną prędkość podawania bolusa (12 s/U, 30 s/U lub 60 s/U).
+  * **Używaj przedłużonych bolusów dla >200%** (DanaR i DanaR wersja Koreańska): włącz tę opcję, jeśli chcesz, aby **AAPS** pozwalał na dawkę bazową powyżej 200%. Pamiętaj, że wtedy nie możesz używać pętli z wysokimi bazami tymczasowymi (TBR), gdy używasz bolusów przedłużonych do jedzenia.
+* Ustaw w pompie krok bazy na 0,01 U/h
+* Ustaw w pompie krok bolusa na 0,1 U. **AAPS** odczytuje krok bolusa z pompy i używa go przy każdym bolusie.
+* Uaktywnij bolusy przedłużone w pompie
 
-## Timezone traveling with Dana R pump
+## Zmiana strefy czasowej z pompą Dana R
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Informacje o zmianie strefy czasowej znajdziesz w sekcji [Zmiana strefy czasowej z pompami](#timezone-traveling-danarv2-danars).
 
-## Where to get help
+## Gdzie uzyskać pomoc
 
-Development of the DanaR driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Sterownik DanaR jest rozwijany przez społeczność na zasadzie **wolontariatu**. Zanim poprosisz o pomoc:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Przeczytaj** odpowiednią część tej dokumentacji, aby sprawdzić, jak funkcja ma działać.
+2. **Zapytaj** na kanale *#AAPS* na [Discordzie](https://discord.gg/4fQUWHZ4Mw) lub na jednym z innych [kanałów społeczności](../GettingHelp/WhereCanIGetHelp.md).
+3. **Zgłoś błąd**: przeszukaj [istniejące zgłoszenia](https://github.com/nightscout/AndroidAPS/issues); jeśli Twojego problemu tam nie ma, otwórz [nowe zgłoszenie](https://github.com/nightscout/AndroidAPS/issues) i dołącz [pliki logów](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Prosząc o pomoc, podaj markę i model telefonu, wersję Androida, wersję **AAPS** i prosty opis problemu po angielsku (co się zmieniło, kiedy ostatnio działało).
