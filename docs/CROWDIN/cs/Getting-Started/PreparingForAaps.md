@@ -32,7 +32,7 @@ Tato poškození mohou zahrnovat **ztrátu zraku a trvalou neuropatii (bolesti)*
 
 #### Jak rychle můžu snížit můj HbA1c bez rizika trvalých následků?
 
-Jedna retrospektivní [studie](https://pubmed.ncbi.nlm.nih.gov/1464975/) 76 pacientů uvádí, že riziko zhoršení retinopatie se zvýšilo 1,6krát, 2,4krát a 3,8krát, pokud HbA1c kleslo o 1 %, 2 % nebo 3 % během 6 měsíců. Autoři studie navrhli, že **"snížení hodnoty HbA1c během jakéhokoli šestiměsíčního období by mělo být omezeno na méně než 2%, aby se zabránilo postupu retinopatie... Příliš rychlý úvodní pokles glykémie by mohl způsobit silné nebo dočasné zhoršení postupu retinopatie."**
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. Autoři studie navrhli, že **"snížení hodnoty HbA1c během jakéhokoli šestiměsíčního období by mělo být omezeno na méně než 2%, aby se zabránilo postupu retinopatie... Příliš rychlý úvodní pokles glykémie by mohl způsobit silné nebo dočasné zhoršení postupu retinopatie."**
 
 Poznámka: Pokud používáte jiné jednotky HbA1c (mmol/mol místo %), kalkulačku HbA1c najdete [zde](https://www.diabetes.co.uk/hba1c-units-converter.html).
 
@@ -123,7 +123,7 @@ Pokud si s něčím nejste jistí, neváhejte se obrátit na komunitu AAPS – h
 
 
 
-#### [Kde získat pomoc?](../UsefulLinks/BackgroundReading.md)
+#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
 
 Cílem této sekce je poskytnout novým uživatelům odkazy na zdroje, aby získali pomoc včetně přístupu ke komunitní podpoře složené z nových i zkušených uživatelů, kteří mohou objasnit otázky, a vyřešit obvyklé nástrahy, které přicházejí s AAPS.
 
@@ -173,12 +173,12 @@ Zde je přibližný časový rámec:
 | Nastavení GitHubu pro sestavení v prohlížeči                   |          1–4 hodiny           |
 | Nastavení reportovacího serveru                                |           1 hodina            |
 | Instalace aplikace pro CGM (xDrip, BYODA, …)                   |           1 hodina            |
-| Prvotní nastavení CGM → xDrip → AAPS                           |           1 hodina            |
+| Configuring CGM → xDrip → AAPS initially                       |           1 hodina            |
 | Prvotní nastavení AAPS → pumpa                                 |           1 hodina            |
 | Nastavení AAPS → Nightscout/Tidepool (pouze reporty)           |           1 hodina            |
-| Volitelné: nastavení NightScout ↔ **AAPS** a NSFollowers       |           1 hodina            |
+| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers      |           1 hodina            |
 | Cíl 1: Nastavit vizualizaci a monitoring                       |           1 hodina            |
-| Cíl 2: Naučte se, jak ovládat AAPS                             |           2 hodiny            |
+| Cíl 2: Naučte se, jak ovládat AAPS                             |            2 hours            |
 | Cíl 3: Prokažte své znalosti                                   |           až 14 dní           |
 | Cíl 4: Začít s otevřenou smyčkou                               |         Nejméně 7 dní         |
 | Cíl 5: Porozumět otevřené smyčce                               |             7 dnů             |
