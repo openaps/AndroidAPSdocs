@@ -1,5 +1,5 @@
 (widgets)=
-# Home screen widgets
+# Widżety na ekranie głównym
 
 **AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
 
