@@ -55,16 +55,16 @@ Będziesz przechodzić z karty na kartę: zacznij z zamkniętymi wszystkimi kart
 
 Budowanie w przeglądarce to seria wyborów. Wykonaj te kroki po kolei:
 
-1. **[Utwórz fork na GitHub](BrowserBuildFork.md)** – zrób własną kopię kodu źródłowego AAPS.
+1. **[Utwórz swój fork na GitHub](BrowserBuildFork.md)** – zrób własną kopię kodu źródłowego AAPS.
 2. **[Utwórz magazyn kluczy do podpisu](BrowserBuildKeystore.md)** – najważniejsza decyzja: wygeneruj nowy magazyn kluczy (opcja 1) albo prześlij istniejący (opcja 2), a potem postępuj według strony dla Twojego urządzenia.
 3. **[Autoryzuj Dysk Google](BrowserBuildGoogleDrive.md)** – pozwól GitHub zapisać zbudowaną aplikację na Twoim Dysku Google.
-4. **[Zbuduj APK](BrowserBuildAPK.md)** – uruchom workflow GitHub Actions i wybierz wersję oraz wariant.
+4. **[Zbuduj plik APK](BrowserBuildAPK.md)** – uruchom workflow GitHub Actions i wybierz wersję oraz wariant.
 
 Jeśli masz problemy, zobacz **[Budowanie w przeglądarce: rozwiązywanie problemów](../GettingHelp/BrowserBuildTroubleshooting.md)**. Opcjonalne operacje z forkiem: zobacz [eksport magazynu kluczy](#ci-keystore-export) lub [przeniesienie commita (cherry-pick)](#github-cherry-pick).
 
 ----
 
-**Zacznij od [Kroku 1 – Utwórz fork na GitHub](BrowserBuildFork.md) →**
+**Zacznij od [Kroku 1 – Utwórz swój fork na GitHub](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
