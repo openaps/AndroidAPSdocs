@@ -33,7 +33,7 @@ Wenn der **dynamische ISF** genutzt wird, werden die im **Profil** hinterlegten 
 
 ![Dyn ISF](../images/DynamicISF/DynISF2.png)
 
-Der rot eingekreiste Bereich zeigt: `Profil-ISF` -> `ISF wie er von DynISF` berechnet wurde. <br/> Tippen auf diesen Abschnitt zeigt Zusatzinformationen wie zum Beispiel den **ISF** für den Bolus-Rechner und die KH-Verstoffwechselung (siehe [Weitere Anwendungen des ISF](#dynisf-other-usages-of-isf) unten).
+Der rot eingekreiste Bereich zeigt: `Profil-ISF` -> `ISF wie er von DynISF` berechnet wurde. <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
 
 The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
 
@@ -134,4 +134,4 @@ This setting (*"Adjust sensitivity calculations when using DynamicISF"*) replace
   * Variabler Lebensstil (unregelmäßiges Essen oder unregelmäßige körperliche Aktivitäten)
   * Starke Unterschiede im Gesamtinsulinbedarf des Tages (TDD) oder hohe Schwankungen in der täglichen Insulin-Empfindlichkeit.
 * Es gibt keine genaue Anleitung, wie der Wert des **Anpassungsfaktors** erstmalig gesetzt werden sollte. Als Ausgangspunkt: Unter der Annahme, dass Deine **Profil**werte korrekt sind, Du im Zielbereich bist und der **Glukosewert**-Verlauf stabil ist, entspricht der **DynISF**-Wert ungefähr dem Wert, den Du vorher in Deinem **Profil** hattest.<br/>Wenn Du erkennst, dass der **dynamische ISF** zu aggressiv ist, senke den **Anpassungsfaktor** und umgekehrt.
-* Auch wenn **DynISF** nicht den **Profil-ISF** verwendet, solltest Du, sofern Du erkennst, dass sich Deine Empfindlichkeit stark von dem unterscheidet, was zuvor in Deinem **Profil** gespeichert wurde, Dein Profil mit den geänderten Werten aktualisieren und aktuell halten. Das kann dann zum Tragen kommen, wenn Du Deine **AAPS**-Daten verlierst (_z. B. _ neues Smartphone, neue **AAPS**-Version…), da der **Profil-ISF** als Fallback für 7 Tage verwendet wird.
+* Auch wenn **DynISF** nicht den **Profil-ISF** verwendet, solltest Du, sofern Du erkennst, dass sich Deine Empfindlichkeit stark von dem unterscheidet, was zuvor in Deinem **Profil** gespeichert wurde, Dein Profil mit den geänderten Werten aktualisieren und aktuell halten. This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
