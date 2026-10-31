@@ -329,7 +329,7 @@ Jeśli polecenie się nie uda, okno **Ostrzeżenie** pokaże „Nie udało się 
 
 *UWAGA - przycisk **Wycisz alarmy** jest widoczny na ekranie pompy Omnipod tylko wtedy, gdy Pod ma aktywny alarm (na przykład o utracie ważności Poda albo niskim poziomie w zbiorniczku), i tylko gdy opcja **Automatycznie wycisz alarmy Poda** jest wyłączona.*
 
-Poniżej opisujemy, jak wyciszyć sygnały dźwiękowe Poda, które zaczynają się, gdy Pod osiągnie czas ostrzeżenia przed utratą ważności. Ten czas ostrzeżenia ustawiasz opcją **Godziny alarmu przed wyłączeniem Poda (80 godzin)** w grupie **Alerty** ustawień Omnipod. Maksymalny czas życia Poda to 80 godzin (3 dni i 8 godzin), ale Insulet zaleca nie przekraczać 72 godzin (3 dni).
+Poniżej opisujemy, jak wyciszyć sygnały dźwiękowe Poda, które zaczynają się, gdy Pod osiągnie czas ostrzeżenia przed utratą ważności. Ten czas ostrzeżenia ustawiasz opcją **Alarm: godziny przed wyłączeniem Poda (80 godz.)** w grupie **Alerty** ustawień Omnipod. Maksymalny czas życia Poda to 80 godzin (3 dni i 8 godzin), ale Insulet zaleca nie przekraczać 72 godzin (3 dni).
 
 *UWAGA - jeśli włączyłeś **Automatycznie wycisz alarmy Poda** w grupie **Alerty** ustawień Omnipod, **AAPS** wyciszy alarm automatycznie przy następnej komunikacji z Podem i NIE musisz robić tego ręcznie.*
 
@@ -763,7 +763,7 @@ Pokazuje alerty AAPS i ogłoszenia w Nightscout o utracie ważności Poda, wył�
 *Uwaga: powiadomienie AAPS pojawi się ZAWSZE dla każdego alertu, przy pierwszej komunikacji z Podem po wystąpieniu alertu. Zamknięcie powiadomienia NIE wycisza alarmu, CHYBA ŻE włączona jest opcja **Automatycznie wycisz alarmy Poda**. Aby wyciszyć alarm RĘCZNIE, otwórz ekran pompy Omnipod i naciśnij **Wycisz alarmy**.*
 
 - **\*Przypomnienie o utracie ważności włączone:** gdy jest włączone, Pod wydaje sygnał dźwiękowy, gdy nadejdzie czas ustawiony poniżej.
-- **Godziny alarmu przed wyłączeniem Poda (80 godzin):** na ile godzin przed wyłączeniem Poda (80 godzin po aktywacji) włącza się przypomnienie o utracie ważności (od 1 do 8 godzin, domyślnie 8).
+- **Alarm: godziny przed wyłączeniem Poda (80 godz.):** na ile godzin przed wyłączeniem Poda (80 godzin po aktywacji) włącza się przypomnienie o utracie ważności (od 1 do 8 godzin, domyślnie 8).
 - **\*Włączony alert o niskim poziomie w zbiorniczku:** włącza lub wyłącza alert, gdy liczba jednostek pozostałych w Podzie spadnie do progu ustawionego w polu Liczba jednostek.
 - **Liczba jednostek:** liczba jednostek, przy której włącza się alert o niskim poziomie w zbiorniczku Poda (od 5 do 50, domyślnie 20).
 - **Automatycznie wycisz alarmy Poda:** gdy jest włączone, powiadomienie nadal się pojawia, ale alarm jest automatycznie wyciszany przy następnej komunikacji z Podem po jego wystąpieniu.
