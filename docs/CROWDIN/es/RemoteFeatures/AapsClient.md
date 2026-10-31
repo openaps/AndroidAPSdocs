@@ -1,17 +1,17 @@
 (aapsclient-app)=
-# The AAPSClient app
+# La app AAPSClient
 
-**AAPSClient** is the accessory app of **AAPS**: a companion app for a second phone — typically a caregiver's — that **follows** the person using **AAPS**. From **AAPS** version 4, the caregiver can also **control** the loop remotely through signed commands. Both phones communicate through your **Nightscout** site; no direct connection between the phones is needed.
+**AAPSClient** es la app complementaria de **AAPS**: una app para un segundo teléfono (normalmente el de un cuidador) que **sigue** a la persona que usa **AAPS**. Desde la versión 4 de **AAPS**, el cuidador también puede **controlar** el lazo a distancia mediante comandos firmados. Los dos teléfonos se comunican a través de tu sitio de **Nightscout**; no hace falta una conexión directa entre los teléfonos.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Client** = a phone running **AAPSClient**.
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop.
+- **Cliente** = un teléfono con **AAPSClient**.
+- **Máster** = el teléfono principal con **AAPS**, que tiene la bomba y ejecuta el lazo.
 ```
 
 ```{admonition} iPhone version in development
 :class: note
-**AAPSClient** currently runs on Android phones. An iPhone version of **AAPSClient** is being developed and is in early testing. It is not released yet: there is no App Store listing and nothing to download. This page will be updated when it becomes available.
+Por ahora, **AAPSClient** funciona en teléfonos Android. Se está desarrollando una versión de **AAPSClient** para iPhone, que está en una fase temprana de pruebas. Aún no está publicada: no está en la App Store y no hay nada que descargar. Esta página se actualizará cuando esté disponible.
 ```
 
 ```{contents} Table of contents
@@ -19,100 +19,100 @@
 :local: true
 ```
 
-## What AAPSClient is (and is not)
+## Qué es AAPSClient (y qué no es)
 
-**AAPSClient** looks and feels like **AAPS**, but it has **no loop of its own**:
+**AAPSClient** tiene el aspecto y el manejo de **AAPS**, pero **no tiene lazo propio**:
 
-- It contains **no APS algorithm**, no **Objectives**, and **no pump drivers** — it never doses on its own.
-- The plugins used only by the main app (**SMS Communicator**, **Tidepool**, **Open Humans**) are not included either.
-- What it *does* contain: **NSClientV3** synchronization, the BG-source plugins, **xDrip+** broadcasting, and the **Wear OS** / **Garmin** connectors — everything needed to follow and to relay commands. A **Garmin** watch connected to a client can show the data, but carbs it sends are not entered and it cannot connect or disconnect the pump: the client shows a message, and you enter them in **AAPS** instead.
+- No contiene **ningún algoritmo APS**, ni **Objetivos**, ni **drivers de bomba**: nunca administra insulina por sí solo.
+- Tampoco incluye los complementos que solo usa la app principal (**Comunicador por SMS**, **Tidepool**, **Open Humans**).
+- Lo que *sí* contiene: la sincronización **NSClientV3**, los complementos de fuente de glucosa, el envío a **xDrip+** y los conectores de **Wear OS** / **Garmin**; todo lo necesario para seguir y para transmitir comandos. Un reloj **Garmin** conectado a un cliente puede mostrar los datos, pero los carbohidratos que envía no se registran y no puede conectar ni desconectar la bomba: el cliente muestra un mensaje, y en su lugar los introduces en **AAPS**.
 
-Everything you trigger from **AAPSClient** is checked, capped, confirmed and **executed by the master** (the phone with the pump). The dedicated [Master ↔ Client control](ClientMasterControl.md) page explains how this works: how to pair the two phones, how the master writes the confirmation text you see, how a bolus started on the client is delivered, and what happens when the master is offline.
+Todo lo que inicias desde **AAPSClient** lo comprueba, limita, confirma y **ejecuta el máster** (el teléfono con la bomba). La página [Control máster ↔ cliente](ClientMasterControl.md) explica cómo funciona: cómo emparejar los dos teléfonos, cómo el máster escribe el texto de confirmación que ves, cómo se administra un bolo iniciado en el cliente y qué pasa cuando el máster está desconectado.
 
-## Versions: AAPSClient, AAPSClient2 and AAPSClient3
+## Versiones: AAPSClient, AAPSClient2 y AAPSClient3
 
-Up to three client apps can be installed side by side on the same follower phone, each following a **different** person: **AAPSClient** (yellow owl icon), **AAPSClient2** (blue owl) and — new in **AAPS** version 4 — **AAPSClient3** (green owl). They are functionally identical. Only the name and the color differ (app icon, widget background and the status section on the home screen), so you can tell them apart. Each app is paired with its own master. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions) for details.
+En el mismo teléfono seguidor se pueden instalar hasta tres apps cliente a la vez, cada una siguiendo a una persona **distinta**: **AAPSClient** (icono de búho amarillo), **AAPSClient2** (búho azul) y, como novedad en la versión 4 de **AAPS**, **AAPSClient3** (búho verde). Funcionan exactamente igual. Solo cambian el nombre y el color (icono de la app, fondo del widget y la sección de estado de la pantalla principal), para que puedas distinguirlas. Cada app se empareja con su propio máster. Consulta [Acerca de AAPSClient, AAPSClient2 y AAPSClient3](#remotecontrol-aapsclient-versions) para más detalles.
 
-## Getting the app
+## Obtener la app
 
-**AAPSClient** is obtained the same way as **AAPS** — see [Download and installation of AAPSClient](#RemoteControl_aapsclient), and install it like the main app ([Transferring and installing](../SettingUpAaps/TransferringAndInstallingAaps.md)).
+**AAPSClient** se obtiene de la misma forma que **AAPS** (consulta [Descarga e instalación de AAPSClient](#RemoteControl_aapsclient)) y se instala como la app principal ([Transferir e instalar AAPS en tu teléfono](../SettingUpAaps/TransferringAndInstallingAaps.md)).
 
-## First start: a shorter Setup Wizard
+## Primer inicio: un Asistente de configuración más corto
 
-On first start **AAPSClient** runs the same **Setup Wizard** you know from **AAPS**, but with far fewer steps — there is no profile, insulin, pump, APS or objectives configuration on a follower:
+En el primer inicio, **AAPSClient** ejecuta el mismo **Asistente de configuración** que conoces de **AAPS**, pero con muchos menos pasos: en un seguidor no se configura perfil, insulina, bomba, APS ni objetivos:
 
-1. **Welcome**, **license agreement**, **permissions** and **master password** — identical to the main app, see the [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. The client does **not** ask for **units** or the **low/high marks**: it takes them from the main phone as soon as it is connected to Nightscout. You can see them later in **Settings**, where a small **phone icon** shows that they are [synchronized with the main phone](#client-master-config-prefs). They can only be edited while the master is reachable.
-3. **Set up from the master** — on the master, open **Manage → Authorized clients**, add this phone with a **QR code** and tap **Scan the QR code** here. One scan sets up Nightscout with a token of this phone's own and, with a code that pairs, also pairs the phone. The phone also takes the name it was added with on the master as its instance name (letters with accents become plain letters, "Miloš" becomes "Milos"). **After the scan, the setup is finished**: the wizard closes, because the next steps would only show what the code did. Without a QR code, skip this step. (Android only: the scanner is not available on iOS yet.)
+1. **Bienvenido**, **acuerdo de licencia**, **permisos** y **contraseña maestra**: igual que en la app principal, consulta [Asistente de configuración](../SettingUpAaps/SetupWizard.md).
+2. El cliente **no** pregunta las **unidades** ni los **límites bajo/alto**: los toma del teléfono principal en cuanto se conecta a Nightscout. Puedes verlos más tarde en **Ajustes**, donde un pequeño **icono de teléfono** indica que están [sincronizados con el teléfono principal](#client-master-config-prefs). Solo se pueden editar mientras el máster está accesible.
+3. **Configurar desde el master**: en el máster, abre **Administrar → Clientes autorizados**, añade este teléfono con un **código QR** y toca aquí **Escanee el código QR**. Un solo escaneo configura Nightscout con un token propio de este teléfono y, si el código incluye el emparejamiento, también empareja el teléfono. El teléfono también toma como nombre de instancia el nombre con el que se añadió en el máster (las letras con acento pasan a letras sin acento: «Miloš» pasa a ser «Milos»). **Después del escaneo, la configuración ha terminado**: el asistente se cierra, porque los pasos siguientes solo mostrarían lo que ya hizo el código. Si no tienes un código QR, sáltate este paso. (Solo en Android: el escáner aún no está disponible en iOS).
 
-   ![The Set up from the master step with the Scan the QR code button](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+   ![El paso Configurar desde el master con el botón Escanee el código QR](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Communication** — the plugin list only offers what a follower needs (NSClientV3, xDrip+, Wear, External Companion Apps, Garmin). If you did not scan a QR code, enable **NSClientV3** and enter the **same Nightscout URL** as on the main phone and an access token, with **websockets** enabled — exactly as described in [Synchronization](#RemoteControl_aapsclient).
+4. **Comunicación**: la lista de complementos solo ofrece lo que necesita un seguidor (NSClientV3, xDrip+, Reloj, Aplicaciones complementarias externas, Garmin). Si no escaneaste un código QR, activa **NSClientV3** e introduce la **misma URL de Nightscout** que en el teléfono principal y un token de acceso, con los **websockets** activados, tal como se describe en [Sincronización](#RemoteControl_aapsclient).
 
-   ![Communication step on the client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
+   ![El paso Comunicación en el cliente](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
-5. **Pair with master** — this step exists **only** on the client. It connects this device to the master over the secure command channel, with the PIN, and takes the name the phone was added with on the master, like the QR code. **After the pairing, the setup is finished.** You can also skip it and pair at any time later from **Manage → Pair with master**.
+5. **Emparejar con el máster**: este paso existe **solo** en el cliente. Conecta este dispositivo con el máster a través del canal seguro de comandos, con el PIN, y toma el nombre con el que se añadió el teléfono en el máster, igual que con el código QR. **Después del emparejamiento, la configuración ha terminado.** También puedes saltarlo y emparejar más tarde en cualquier momento desde **Administrar → Emparejar con el máster**.
 
-   ![Pair with master step in the client wizard](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
+   ![El paso Emparejar con el máster en el asistente del cliente](../images/v4/AapsClient/aapsclient_wizard_pair_step.png)
 
-6. **Who is using this phone?** — only when you did not pair in the wizard: the name of the person using this phone. It tells this instance apart in reports and synchronization.
+6. **¿Quién usa este teléfono?**: solo si no emparejaste en el asistente; el nombre de la persona que usa este teléfono. Sirve para distinguir esta instancia en los informes y en la sincronización.
 
 (aapsclient-pairing-with-the-master)=
 
-## Pairing with the master
+## Emparejar con el máster
 
-On the **master**, open **Manage → Authorized clients** and add a client. There are two ways to pair:
+En el **máster**, abre **Administrar → Clientes autorizados** y añade un cliente. Hay dos formas de emparejar:
 
-- **With a QR code** (the quickest, if the phone has a camera): scan the code in the wizard step "**Set up from the master**" or from **Manage → Pair with master → Scan QR code**, and confirm with "**Use**". It sets up Nightscout too.
-- **With the PIN**: on the **client**, open the wizard step above (or **Manage → Pair with master**), type the one-time PIN shown on the master and press "**Pair**". The client then shows who it is about to trust — confirm with "**Pair**":
+- **Con un código QR** (la más rápida, si el teléfono tiene cámara): escanea el código en el paso del asistente «**Configurar desde el master**» o desde **Administrar → Emparejar con el máster → Escanear código QR**, y confirma con «**Usar**». También configura Nightscout.
+- **Con el PIN**: en el **cliente**, abre el paso del asistente de arriba (o **Administrar → Emparejar con el máster**), escribe el PIN de un solo uso que muestra el máster y pulsa «**Vincular**». Después, el cliente muestra en quién va a confiar; confirma con «**Vincular**»:
 
-![Confirmation on the client before completing the pairing](../images/v4/AapsClient/aapsclient_pair_confirm.png)
+![Confirmación en el cliente antes de completar el emparejamiento](../images/v4/AapsClient/aapsclient_pair_confirm.png)
 
-From the wizard, a successful pairing finishes the setup and opens the home screen. On the master the client appears as **Active** in the [Authorized clients](#client_master_master_setup) list. Afterwards, **Manage → Pair with master** shows "*Already paired*", the phone's role and whether hardened mode is on:
+Desde el asistente, un emparejamiento correcto termina la configuración y abre la pantalla principal. En el máster, el cliente aparece como **Activo** en la lista de [Clientes autorizados](#client_master_master_setup). Después, **Administrar → Emparejar con el máster** muestra «*Ya está emparejado*», el rol del teléfono y si el modo reforzado está activado:
 
-![Manage → Pair with master on a paired client: Already paired, Role: Caregiver, Hardened mode on](../images/v4/ClientMaster/pair_with_master_client.png) The full pairing procedure, security details and troubleshooting are on [Master ↔ Client control](#client_master_client_setup).
+![Administrar → Emparejar con el máster en un cliente emparejado: Ya está emparejado, Rol: Cuidador, Modo reforzado activado](../images/v4/ClientMaster/pair_with_master_client.png) El procedimiento completo de emparejamiento, los detalles de seguridad y la solución de problemas están en [Control máster ↔ cliente](#client_master_client_setup).
 
-After pairing, the client gets a Nightscout token of its own from the master (if the master has an admin token), with only the rights a client needs, and stops using the token you may have entered. **AAPSClient** never writes treatments or BG to Nightscout itself: everything it does is sent to the master, which writes it. See [The client's own Nightscout token](#client-master-control-own-token).
+Después de emparejar, el cliente recibe del máster un token de Nightscout propio (si el máster tiene un token de administrador), con solo los permisos que necesita un cliente, y deja de usar el token que hayas introducido. **AAPSClient** nunca escribe tratamientos ni glucosa en Nightscout por sí mismo: todo lo que hace se envía al máster, que es quien lo escribe. Consulta [El token de Nightscout propio del cliente](#client-master-control-own-token).
 
-The master decides what this phone may do with its **[role](#client-master-control-roles)** (Read-only, Meals, Caregiver or Admin). **Manage → Pair with master** shows the phone's role.
+El máster decide qué puede hacer este teléfono mediante su **[rol](#client-master-control-roles)** (Solo lectura, Comidas, Cuidador o Administrador). **Administrar → Emparejar con el máster** muestra el rol del teléfono.
 
-## The home screen
+## La pantalla principal
 
-The client's home screen mirrors the followed loop:
+La pantalla principal del cliente refleja el lazo seguido:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Pantalla principal de AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
-- **BG, graphs, IOB/COB and profile** come from Nightscout, just as the master uploaded them.
-- The **loop status** shown is the **master's** (a client has no loop of its own). Until the client has received the master's running mode from Nightscout, the running mode chip shows a **question mark** (unknown).
-- The **status card** shows the **followed pump's** reservoir and battery and the uploader battery, taken from the Nightscout device status — a client has no pump, so there is no local pump status and no pump management anywhere in the app.
-- The bottom bar offers **Treatments**, **Scenes** and **Manage** once the client is paired (only **Manage** before pairing) — there are no pump or objectives tabs.
+- **La glucosa, los gráficos, la IOB/COB y el perfil** vienen de Nightscout, tal como los subió el máster.
+- El **estado del lazo** que se muestra es el **del máster** (un cliente no tiene lazo propio). Hasta que el cliente recibe de Nightscout el modo de funcionamiento del máster, el chip del modo de funcionamiento muestra un **signo de interrogación** (desconocido).
+- La **tarjeta de estado** muestra el reservorio y la batería de la **bomba seguida** y la batería del teléfono que sube los datos, tomados del estado del dispositivo en Nightscout; un cliente no tiene bomba, así que en la app no hay estado local de la bomba ni gestión de la bomba.
+- La barra inferior ofrece **Tratamientos**, **Escenas** y **Administrar** cuando el cliente está emparejado (antes de emparejar, solo **Administrar**); no hay pestañas de bomba ni de objetivos.
 
-## Treatments and actions
+## Tratamientos y acciones
 
-Everything under **Manage** works like on the main app, with one important difference: on a client, actions that would change therapy (bolus, carbs, temp targets, scenes…) are **hidden until the device is paired**, and once paired they are **relayed to the master** for confirmation and execution — see [Using remote control](#client-master-control).
+Todo lo que hay en **Administrar** funciona como en la app principal, con una diferencia importante: en un cliente, las acciones que cambian el tratamiento (bolo, carbohidratos, objetivos temporales, escenas…) están **ocultas hasta que el dispositivo está emparejado**, y una vez emparejado se **envían al máster** para que las confirme y ejecute; consulta [Usar el control remoto](#client-master-control).
 
-The **Profile** entry is the exception: it is shown even on an **unpaired** client, but opens **view-only** — the client shows the profiles it receives through Nightscout (it needs them for its own calculations), without edit or activate buttons. Once the client is **paired**, the profile list is synchronized with the master and you can edit and activate profiles from the client like any other remote action.
+La excepción es la entrada **Perfil**: se muestra incluso en un cliente **no emparejado**, pero se abre **solo para ver**: el cliente muestra los perfiles que recibe a través de Nightscout (los necesita para sus propios cálculos), sin botones para editar ni activar. Cuando el cliente está **emparejado**, la lista de perfiles se sincroniza con el máster y puedes editar y activar perfiles desde el cliente como cualquier otra acción remota.
 
-On an **unpaired** client, **Manage** only offers **Profile** and **Pair with master**:
+En un cliente **no emparejado**, **Administrar** solo ofrece **Perfil** y **Emparejar con el máster**:
 
-![The Manage screen on an unpaired client: only Profile and Pair with master](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
+![La pantalla Administrar en un cliente no emparejado: solo Perfil y Emparejar con el máster](../images/v4/AapsClient/aapsclient_manage_unpaired.png)
 
-The red banner "*Master device unreachable. Editing is disabled until the connection is restored.*" also appears on an unpaired client. This is expected: there is no master to reach yet. The banner disappears once the client is paired and the master is online.
+El aviso rojo «*Dispositivo máster inaccesible. La edición está desactivada hasta que se restablezca la conexión.*» también aparece en un cliente no emparejado. Es lo esperado: todavía no hay ningún máster al que llegar. El aviso desaparece cuando el cliente está emparejado y el máster está en línea.
 
-Once the client is paired, the therapy actions appear:
+Cuando el cliente está emparejado, aparecen las acciones de tratamiento:
 
-![The Manage screen on a paired client, including the Pair with master entry](../images/v4/AapsClient/aapsclient_manage.png)
+![La pantalla Administrar en un cliente emparejado, con la entrada Emparejar con el máster](../images/v4/AapsClient/aapsclient_manage.png)
 
-There is **no Pump entry** — a client has no pump.
+**No hay entrada Bomba**: un cliente no tiene bomba.
 
-If the master is not reachable, the same banner appears on a paired client: the therapy actions are greyed out, and anything you try is blocked before it is sent. The client notices that the master is offline when you try an action, and re-enables the actions once the master is back online.
+Si el máster no está accesible, el mismo aviso aparece en un cliente emparejado: las acciones de tratamiento aparecen en gris, y todo lo que intentes se bloquea antes de enviarse. El cliente detecta que el máster está desconectado cuando intentas una acción, y vuelve a activar las acciones cuando el máster vuelve a estar en línea.
 
-![The Manage screen on a paired client while the master is offline: actions greyed out under the banner](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
+![La pantalla Administrar en un cliente emparejado con el máster desconectado: acciones en gris bajo el aviso](../images/v4/AapsClient/aapsclient_manage_master_offline.png)
 
-## Settings synchronized with the master
+## Ajustes sincronizados con el máster
 
-The active plugin **configuration** and many **preferences** are kept in sync between the master and its paired clients; synced items are marked with a small **phone icon** and are disabled (with a "*Master device unreachable*" banner) while the master cannot be reached. This is described in [Changing configuration and preferences](#client-master-config-prefs).
+La **configuración** de complementos activa y muchas **preferencias** se mantienen sincronizadas entre el máster y sus clientes emparejados; los elementos sincronizados llevan un pequeño **icono de teléfono** y están desactivados (con un aviso «*Dispositivo máster inaccesible*») mientras no se puede llegar al máster. Esto se describe en [Cambiar la configuración y las preferencias](#client-master-config-prefs).
 
-## AAPSClient on a smartwatch
+## AAPSClient en un reloj inteligente
 
-A Wear OS watch can be paired with the **client** phone; its actions are relayed through the client to the master. See [Wear OS](../WearOS/WearOsSmartwatch.md) and the [smartwatch options in Remote control](#RemoteControl_smartwatches).
+Un reloj Wear OS se puede emparejar con el teléfono **cliente**; sus acciones pasan por el cliente hasta el máster. Consulta [Reloj inteligente Wear OS](../WearOS/WearOsSmartwatch.md) y las [opciones de reloj inteligente en Control remoto](#RemoteControl_smartwatches).
