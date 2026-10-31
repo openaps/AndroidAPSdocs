@@ -129,7 +129,7 @@ La fonction **Changement de profil automatique** est disponible seulement en mod
 - **Utiliser les G/I et SI circadiens** (désactivé par défaut) : voir [Profil avec G/I ou SI Circadiens](#autotune-circadian-ic-or-isf-profile) ci-dessous.
 
 (autotune-other-settings)=
-### Other settings
+### Autres paramètres
 
 - Autotune utilise également les ratio Max et Min Autosens pour limiter la variation. Vous pouvez voir et ajuster ces valeurs dans [**Paramètres** > **Paramètres d’absorption** > **Paramètres Avancés**](../SettingUpAaps/Preferences.md) (**Autosens max** et **Autosens min**).
 
