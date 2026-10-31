@@ -1,75 +1,70 @@
-# Dexcom G6 and ONE
+# Dexcom G6 a ONE
 
-## Basics first
+## Najprv základy
 
--   Follow general CGM hygiene and setting sensor recommendation [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+-   Riaďte sa všeobecnými odporúčaniami pre hygienu CGM a zavádzanie senzora [tu](../CompatibleCgms/GeneralCGMRecommendation.md).
 
-## General hints for looping with G6 and ONE
+## Všeobecné rady pre používanie okruhu s G6 a ONE
 
-- Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
+- Novšie vysielače sa volajú Firefly. Senzory sa nedajú reštartovať bez vybratia vysielača, ktorý sám nemožno resetovať, a tieto vysielače ani neposkytujú surové (raw) dáta.
 
-- If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
+- Ak senzory reštartujete, buďte pripravení kalibrovať a sledujte odchýlky.
 
-- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+- Zavedenie G6/ONE s továrenskou kalibráciou vopred (pre-soak) pravdepodobne povedie ku kolísaniu výsledkov. Ak senzor zavádzate vopred (pre-soak), na dosiahnutie najlepších výsledkov ho pravdepodobne budete musieť kalibrovať.
 
-Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Viac sa dočítate v [článku](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/), ktorý publikoval Tim Street na [www.diabettech.com](https://www.diabettech.com).
 
-## If using G6 or ONE with xDrip+
+## Ak používate G6 alebo ONE s xDrip
 
-- If you are using a recent (Firefly) transmitter, preemptive restarts are **ignored**.
-- If you are using a modded transmitter you do **not need** to use preemptive restarts.
--   If you are using an old rebatteried transmitter, the safest thing to do is **disable** [preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Though, in this case you will have to use the G6 in non-[native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (which is unadvisable as it disables factory calibration and doesn't filter noisy readings), or else the sensor will stop after 10 days.
--   The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
--   When using xDrip+ as receiver uninstall the Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
--   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
--   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--   Select xDrip+ in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
-
-- Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
+- Ak ho ešte nemáte, stiahnite si [xDrip](https://github.com/NightscoutFoundation/xDrip) a upravte jeho nastavenia podľa stránky [Nastavenia xDrip](../CompatibleCgms/xDrip.md).
+- Vyberte xDrip v [**Konfigurácia → Zdroj glykémie**](#Config-Builder-bg-source).
+- Vysielače Dexcom G6 a ONE môžu byť súčasne pripojené k prijímaču Dexcom (alebo k pumpe t:slim) a k jednej aplikácii v telefóne.
+- Keď používate xDrip ako prijímač, najprv odinštalujte aplikáciu Dexcom. **Nemôžete naraz pripojiť xDrip aj aplikáciu Dexcom k vysielaču!**
+- Ak potrebujete Clarity a chcete využívať alarmy xDrip, použite [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (iba G6) s lokálnym vysielaním do xDrip.
+- xDrip môžete použiť aj ako sprievodnú aplikáciu (companion) k oficiálnej aplikácii Dexcom, ale hodnoty glykémie môžu prichádzať s oneskorením.
+- Pri súčasných vysielačoch xDrip vždy používa [natívny algoritmus](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) vysielača; nie je dôvod ho vypínať. [Preventívne reštarty](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) fungujú iba so starými vysielačmi (firmvér 1.6.5.25 alebo starší), kde sú potrebné, aby sa senzor nezastavil po 10 dňoch; novšie vysielače (Firefly) ich ignorujú. Pred akýmkoľvek reštartom si pozrite [Reštart senzora](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html).
+- Všetko, čo sa týka samotného senzora a vysielača, je popísané na [stránke xDrip pre Dexcom](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
-## If using G6 with Build Your Own Dexcom App
+## Ak používate G6 s aplikáciou Build Your Own Dexcom App
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+Dexcom BYODA je teraz veľmi stará verzia aplikácie a nedá sa aktualizovať.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) podporuje lokálne vysielanie do AAPS a/alebo xDrip
 
-![BYODA broadcast options](../images/BYODA.png)
+-   Táto aplikácia vám umožní používať Dexcom G6 s akýmkoľvek smartfónom s Androidom.
+-   Odinštalujte pôvodnú aplikáciu Dexcom alebo upravenú aplikáciu Dexcom, ak ste niektorú z nich predtým používali (aktuálne bežiaci senzor **nezastavujte**)
+-   Nainštalujte stiahnutý súbor apk
+-   V upravenej aplikácii zadajte kód senzora a sériové číslo vysielača.
+-   V nastaveniach telefónu choďte do aplikácie > Dexcom G6 > povolenia > ďalšie povolenia a stlačte 'Access Dexcom app'.
+-   Po krátkom čase by BYODA mala zachytiť signál vysielača.
 
--   This app lets you use your Dexcom G6 with any Android smartphone.
--   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
--   Install the downloaded apk
--   Enter sensor code and transmitter serial no. in patched app.
--   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   After short time BYODA should pick-up transmitter signal.
+### Nastavenia pre AAPS
 
-### Settings for AAPS
+-   Vyberte **BYODA** v [**Konfigurácia → Zdroj glykémie**](#Config-Builder-bg-source).
 
--   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](#Config-Builder-bg-source).
+-   Ak nedostávate žiadne hodnoty, vyberte akýkoľvek iný zdroj dát a potom znova vyberte **BYODA**, aby sa znova vyžiadali povolenia na vytvorenie spojenia medzi AAPS a vysielaním BYODA.
 
--   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+### Nastavenia pre xDrip
 
-### Settings for xDrip+
-
--   Select '640G/Eversense' as data source.
--   Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+-   Ako zdroj dát vyberte '640G/Eversense'.
+-   Aby ste dostávali hodnoty, musíte v xDrip vykonať príkaz 'start sensor'. Nebude to mať vplyv na váš aktuálny senzor, ktorý ovláda Build Your Own Dexcom App.
 
 
 (DexcomG6-troubleshooting-g6)=
-## Troubleshooting G6 and ONE
+## Riešenie problémov s G6 a ONE
 
-### Dexcom G6/ONE specific troubleshooting
+### Riešenie problémov špecifických pre Dexcom G6/ONE
 
--   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+-   Posuňte sa nadol na časť **Troubleshooting** [tu](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
-### General troubleshooting
+### Všeobecné riešenie problémov
 
-General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
+Všeobecné riešenie problémov s CGM nájdete [tu](#general-cgm-troubleshooting).
 
-### New transmitter with running sensor
+### Nový vysielač s bežiacim senzorom
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). If you opt for [this solution](https://youtu.be/tx-kTsrkNUM) instead, you must be careful to avoid [damaging sensor contacts](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) with the strip.
+Ak potrebujete vymeniť vysielač počas bežiacej relácie senzora, môžete skúsiť vysielač vybrať bez poškodenia držiaka senzora. Video nájdete [tu](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). Ak sa namiesto toho rozhodnete pre [toto riešenie](https://youtu.be/tx-kTsrkNUM), musíte dávať pozor, aby ste pásikom [nepoškodili kontakty senzora](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html).
