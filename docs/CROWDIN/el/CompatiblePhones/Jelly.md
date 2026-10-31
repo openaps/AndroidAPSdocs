@@ -45,4 +45,4 @@
 
 Σε ορισμένα έξυπνα ρολόγια, όπως το Samsung Galaxy, η ρύθμιση 'Remote Connection' στις Advanced Features του Samsung Galaxy πρέπει να είναι **ενεργή**, για να χρησιμοποιείτε το Jelly, το **Wear.apk** & το **AAPS** απομακρυσμένα μέσω Wi-Fi.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, Προηγμένες λειτουργίες, Απομακρυσμένη σύνδεση ενεργοποιημένη](../images/wearos/galaxy_wearable_remote_connection.png)
