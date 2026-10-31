@@ -1,4 +1,4 @@
-# A dedicated Google account for AAPS (optional)
+# Ξεχωριστός λογαριασμός Google για το AAPS (προαιρετικό)
 
 Μερικοί χρήστες του **AAPS** προτιμούν να χρησιμοποιούν τον κύριο λογαριασμό email τους και για το **AAPS**. Άλλοι χρήστες του **AAPS** (ή οι φροντιστές τους) δημιουργούν έναν ξεχωριστό λογαριασμό email μόνο για το **AAPS**. Αυτό είναι προαιρετικό. Παρακάτω δίνουμε ένα παράδειγμα για το πώς γίνεται.
 
@@ -15,15 +15,15 @@
 - Το Gmail σας επιτρέπει να καταχωρίσετε έως 4 λογαριασμούς με τον ίδιο αριθμό τηλεφώνου.
 ```
 
-## How to set up a dedicated Google account for AAPS
+## Πώς να δημιουργήσετε ξεχωριστό λογαριασμό Google για το AAPS
 
-(⌛About 10 minutes)
+(⌛Περίπου 10 λεπτά)
 
 ![](../images/Building-the-App/building_0001.png)
 
-Requirements:
+Τι χρειάζεστε:
 
-* Έχετε έναν υπολογιστή Windows (Windows 10 ή νεότερο) και ένα τηλέφωνο Android (Android 12 ή νεότερο) όπου θα τρέχει η εφαρμογή **AAPS**. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
+* Έχετε έναν υπολογιστή Windows (Windows 10 ή νεότερο) και ένα τηλέφωνο Android (Android 12 ή νεότερο) όπου θα τρέχει η εφαρμογή **AAPS**. Και οι δύο έχουν όλες τις τελευταίες ενημερώσεις ασφαλείας, πρόσβαση στο Internet και δικαιώματα διαχειριστή, γιατί κάποια βήματα απαιτούν λήψη και εγκατάσταση προγραμμάτων.
 * Το τηλέφωνο Android είναι ήδη ρυθμισμένο με την προσωπική, «καθημερινή» σας διεύθυνση email, για παράδειγμα έναν λογαριασμό Gmail.
 
 ```{admonition} Things to consider when setting up your new account
@@ -42,7 +42,7 @@ Requirements:
 Κάντε κλικ [εδώ](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) για ένα βίντεο που δείχνει πώς να δημιουργήσετε ξεχωριστό λογαριασμό Google.
 ```
 
- These are the steps outlined in the video:
+ Αυτά είναι τα βήματα που δείχνει το βίντεο:
 
 Σε αυτό το παράδειγμα: 
 - Ο υπάρχων «_καθημερινός_» σας λογαριασμός Google είναι ο <donald.muck42@gmail.com> · ![](../images/Building-the-App/building_0002.png)
@@ -59,14 +59,14 @@ Requirements:
 ### Εισαγάγετε τα στοιχεία του ΝΕΟΥ ξεχωριστού λογαριασμού σας: 
 
 - Εισαγάγετε τον νέο λογαριασμό: 
-- Create Account
+- Δημιουργία λογαριασμού
 - for my personal use (για προσωπική χρήση). 
 
 
-### Enter your persona:
- - Enter firstname
- - lastname
- - birthdate (needs to be an Adult age)
+### Συμπληρώστε τα στοιχεία σας:
+ - Συμπληρώστε το όνομα
+ - το επώνυμο
+ - την ημερομηνία γέννησης (πρέπει να είστε ενήλικας)
 
 ### Επιλέξτε τη ΝΕΑ σας διεύθυνση email και τον κωδικό πρόσβασης
 
@@ -75,33 +75,33 @@ Requirements:
 
 ### Εισαγάγετε έναν αριθμό τηλεφώνου που μπορεί να λάβει το SMS επαλήθευσης
 
-Gmail will now send you a unique code to enter for validation.
+Το Gmail θα σας στείλει τώρα έναν μοναδικό κωδικό για να τον πληκτρολογήσετε για επιβεβαίωση.
 
 ### Εισαγάγετε τη διεύθυνση email ανάκτησης
 
 Εδώ θα είναι η υπάρχουσα «_καθημερινή_» σας διεύθυνση email…
 
-### Finish setting up the account
+### Ολοκληρώστε τη ρύθμιση του λογαριασμού
 
-Gmail will display the account name. Θα σας ζητηθεί να αποδεχτείτε τους όρους και τις προϋποθέσεις του Gmail και να επιβεβαιώσετε τις ρυθμίσεις εξατομίκευσης.
+Το Gmail θα δείξει το όνομα του λογαριασμού. Θα σας ζητηθεί να αποδεχτείτε τους όρους και τις προϋποθέσεις του Gmail και να επιβεβαιώσετε τις ρυθμίσεις εξατομίκευσης.
 
-### Customize the new profile display
+### Προσαρμόστε την εμφάνιση του νέου προφίλ
 
-Τώρα θα πρέπει να βρίσκεστε στη σελίδα MyAccount του Gmail, όπου φαίνεται ο νέος σας λογαριασμός email για το **AAPS**. The profile picture will be set by default to the first letter of your name. Αλλάξτε την σε κάτι μοναδικό για να μην μπερδεύεστε… σε αυτό το παράδειγμα, το Donald.Muck.AAPS αντικατέστησε το ![](../images/Building-the-App/building_0002.png) με ![](../images/Building-the-App/building_0003.png)
+Τώρα θα πρέπει να βρίσκεστε στη σελίδα MyAccount του Gmail, όπου φαίνεται ο νέος σας λογαριασμός email για το **AAPS**. Η εικόνα προφίλ θα είναι από προεπιλογή το πρώτο γράμμα του ονόματός σας. Αλλάξτε την σε κάτι μοναδικό για να μην μπερδεύεστε… σε αυτό το παράδειγμα, το Donald.Muck.AAPS αντικατέστησε το ![](../images/Building-the-App/building_0002.png) με ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
 
-### Open the Gmail website on both windows to configure the new account
+### Ανοίξτε τη σελίδα του Gmail και στα δύο παράθυρα για να ρυθμίσετε τον νέο λογαριασμό
 
 Για να μη χρειάζεται να ελέγχετε ξεχωριστό λογαριασμό email, προωθήστε όλα τα email από τον νέο λογαριασμό **AAPS** στον καθημερινό σας λογαριασμό\
-Αυτό το μέρος μπορεί να μπερδέψει λίγο, γιατί θα πρέπει να αλλάζετε συνέχεια ανάμεσα στους δύο λογαριασμούς. To make it easier, open 2 separate browser windows on top of each other:
+Αυτό το μέρος μπορεί να μπερδέψει λίγο, γιατί θα πρέπει να αλλάζετε συνέχεια ανάμεσα στους δύο λογαριασμούς. Για να είναι πιο εύκολο, ανοίξτε 2 ξεχωριστά παράθυρα του browser, το ένα πάνω από το άλλο:
 
 1. Μετακινήστε το ανοιχτό παράθυρο του browser στο πάνω μέρος της οθόνης και αλλάξτε το μέγεθός του, ώστε να πιάνει περίπου το πάνω μισό της οθόνης…
 2. Κάντε δεξί κλικ στο εικονίδιο του browser στη γραμμή εργασιών
 3. Από το μενού επιλέξτε «New Window» (Νέο παράθυρο)... και ρυθμίστε το ώστε να πιάνει μόνο το κάτω μισό της οθόνης.
 
-Ανοίξτε το <https://gmail.com> σε κάθε παράθυρο του browser. Βεβαιωθείτε ότι ο προσωπικός σας λογαριασμός είναι στο πάνω παράθυρο και ο νέος λογαριασμός **AAPS** στο κάτω, και ότι τον αναγνωρίζετε εύκολα από την εικόνα προφίλ πάνω δεξιά. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Ανοίξτε το <https://gmail.com> σε κάθε παράθυρο του browser. Βεβαιωθείτε ότι ο προσωπικός σας λογαριασμός είναι στο πάνω παράθυρο και ο νέος λογαριασμός **AAPS** στο κάτω, και ότι τον αναγνωρίζετε εύκολα από την εικόνα προφίλ πάνω δεξιά. (αν χρειαστεί, μπορείτε πάντα να αλλάξετε λογαριασμό πατώντας στην εικόνα προφίλ και επιλέγοντας τον σωστό.
 
 ![](../images/Building-the-App/building_0009.png)
 
@@ -115,33 +115,33 @@ Gmail will display the account name. Θα σας ζητηθεί να αποδε�
 
 ![](../images/Building-the-App/building_0011.png)
 
-### Setup forwarding…
+### Ρύθμιση προώθησης…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
+- Πατήστε στην καρτέλα ρυθμίσεων «Forwarding and POP/IMAP» (Προώθηση και POP/IMAP)
+- Πατήστε «add a forwarding address» (προσθήκη διεύθυνσης προώθησης)
+- Προσθέστε την «καθημερινή» σας διεύθυνση email
 - Το Gmail θα στείλει έναν κωδικό επαλήθευσης στην «καθημερινή» σας διεύθυνση email.
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Θα επιστρέψετε στο καθημερινό σας προφίλ και θα πατήσετε τον σύνδεσμο για να επιβεβαιώσετε ότι δέχεστε την προώθηση (ή θα πάρετε τον κωδικό από το email επιβεβαίωσης του Gmail στο «καθημερινό» παράθυρο του Gmail και θα τον αντιγράψετε και επικολλήσετε στο παράθυρο του Gmail του «νέου ξεχωριστού λογαριασμού για το AAPS»).
 
-There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
+Θα χρειαστεί να πηγαίνετε αρκετές φορές από το ένα παράθυρο στο άλλο, αλλά έτσι, όταν ελέγχετε τα email του «καθημερινού» λογαριασμού σας, θα βλέπετε και τα email που προωθούνται από τον ξεχωριστό λογαριασμό του AAPS, όπως οι ειδοποιήσεις του Gmail.
 
 ![](../images/Building-the-App/building_0012.png)
 
-### Verify the forwarded email address
+### Επιβεβαιώστε τη διεύθυνση email προώθησης
 
 - Στο «καθημερινό» Gmail (πάνω παράθυρο) θα λάβετε το email «Gmail forwarding Confirmation» (επιβεβαίωση προώθησης).
-- Open it and “click the link to confirm the request”
+- Ανοίξτε το και πατήστε «click the link to confirm the request» (τον σύνδεσμο για επιβεβαίωση του αιτήματος)
 
-### Archive forwarded emails in the new dedicated Gmail account (bottom window)
+### Αρχειοθετήστε τα email που προωθούνται στον νέο ξεχωριστό λογαριασμό Gmail (κάτω παράθυρο)
 
 <!---->
 
-1. Refresh the bottom window
-2. Check “forward incoming email”
-3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
+1. Ανανεώστε το κάτω παράθυρο
+2. Επιλέξτε «forward incoming email» (προώθηση εισερχόμενων email)
+3. Και επιλέξτε να αρχειοθετείται το αντίγραφο του Gmail (για να μένει καθαρό το νέο ξεχωριστό γραμματοκιβώτιό σας)
 4. Κάντε κύλιση μέχρι το τέλος της σελίδας για να αποθηκεύσετε τις αλλαγές σας\
    ![](../images/Building-the-App/building_0013.png)
 
 ![](../images/Building-the-App/building_0014.png)
 
-Συγχαρητήρια! Now you have created an AAPS-dedicated Google account. Το επόμενο βήμα είναι να [δημιουργήσετε την εφαρμογή AAPS](../SettingUpAaps/BuildingAaps.md).
+Συγχαρητήρια! Τώρα έχετε δημιουργήσει έναν ξεχωριστό λογαριασμό Google για το AAPS. Το επόμενο βήμα είναι να [δημιουργήσετε την εφαρμογή AAPS](../SettingUpAaps/BuildingAaps.md).
