@@ -1,217 +1,217 @@
 (Insulin-Concentration)=
-# Insulin Concentration
+# Insulineconcentratie
 
 ```{warning}
-All commercial pumps are designed to be used with Insulin U100 **ONLY**. Using another insulin concentration in a pump can be dangerous. Although more and more users run AAPS with other concentrations, the conversion must always be managed and often leads to errors (even for very skilled users!).
+Alle commerciële pompen zijn gemaakt voor gebruik met **ALLEEN** insuline U100. Een andere insulineconcentratie in een pomp gebruiken kan gevaarlijk zijn. Steeds meer gebruikers gebruiken AAPS met andere concentraties, maar de omrekening moet altijd beheerd worden en leidt vaak tot fouten (zelfs bij zeer ervaren gebruikers!).
 ```
 
-## Reminder of the basics of insulin
+## De basis van insuline herhaald
 
-This chapter covers the essential concepts of insulin measurement and delivery.
+Dit hoofdstuk behandelt de belangrijkste begrippen over het meten en toedienen van insuline.
 
-### The insulin unit: a measure of action
+### De insuline-eenheid: een maat voor werking
 
-Insulin is measured in **International Units (IU)**, which quantify its biological activity (power to lower blood sugar), not just its physical mass.
+Insuline wordt gemeten in **internationale eenheden (IE)**. Die meten de biologische werking (de kracht om de bloedsuiker te verlagen), niet alleen de fysieke massa.
 
-- **Definition:** 1 IU corresponds to the activity of a specific amount of insulin, standardized to **approximately 0.04167 mg**.
-- **Key Point:** A "unit" means the same biological effect across all insulin types, ensuring consistent dosing.
+- **Definitie:** 1 IE komt overeen met de werking van een bepaalde hoeveelheid insuline, gestandaardiseerd op **ongeveer 0,04167 mg**.
+- **Belangrijk:** Een "eenheid" betekent hetzelfde biologische effect bij alle soorten insuline. Zo is de dosering altijd gelijk.
 
-### Insulin concentrations
+### Insulineconcentraties
 
-Insulin comes in different strengths, defined by the number of units per millilitre (ml).
+Insuline bestaat in verschillende sterktes, uitgedrukt in het aantal eenheden per milliliter (ml).
 
-- **U100:** The global standard, containing **100 IU/ml**.
-- **U200-U500:** More concentrated insulins (e.g. U200 has 200 IU/ml) for smaller injection volumes.
-- **U40/U50:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 requires U40-specific syringes.**
-- **Manual Dilution:** A clinical practice to create highly diluted insulin (e.g. U50, U10) for rare cases like neonatal use or extreme sensitivity. This requires meticulous pharmacy preparation.
+- **U100:** De wereldwijde standaard, met **100 IE/ml**.
+- **U200-U500:** Sterker geconcentreerde insulines (bijv. U200 heeft 200 IE/ml) voor kleinere injectievolumes.
+- **U40/U50:** Minder gebruikelijke, historische concentraties (40 IE/ml en 50 IE/ml). **U40 vereist speciale U40-spuiten.**
+- **Handmatig verdunnen:** Een klinische praktijk om sterk verdunde insuline te maken (bijv. U50, U10) voor zeldzame gevallen, zoals bij pasgeborenen of bij extreme gevoeligheid. Dit vraagt een zeer zorgvuldige bereiding door de apotheek.
 
 ```{admonition} Critical Warning
 :class: danger
-Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
+Een concentratie gebruiken met een apparaat dat er niet bij past is extreem gevaarlijk en kan een ernstige overdosis of onderdosis veroorzaken. **Controleer altijd drie keer of de insulineconcentratie past bij de specificaties van de spuit, pen of pomp.**
 ```
 
-## When using a non-standard concentration?
+## Wanneer gebruik je een niet-standaard concentratie?
 
-While insulin pumps are designed for U100 insulin, certain specific medical situations require non-standard concentrations. These scenarios require extreme caution and meticulous management.
+Insulinepompen zijn gemaakt voor U100-insuline, maar sommige medische situaties vragen om een niet-standaard concentratie. Deze situaties vragen extreme voorzichtigheid en een zeer zorgvuldige aanpak.
 
-### Use Case 1: diluted insulin for very low doses
+### Situatie 1: verdunde insuline voor zeer lage doses
 
-- **Scenario:** Managing type 1 diabetes in very young babies and toddlers.
-- **Problem:** Their insulin needs are so low that the pump's minimum deliverable dose (e.g. 0.05 U) may still be too large, leading to difficulty in achieving precise glycemic control and a high risk of hypoglycemia.
-- **Solution:** Use highly diluted insulin (e.g. U10, which is 10 IU/ml).
-- **Effect:** This increases the volume of fluid delivered per unit of insulin. By making the "packages" of insulin larger in volume but weaker in concentration, it allows much finer adjustments and greater dosing accuracy with the pump's existing settings.
+- **Situatie:** Behandeling van diabetes type 1 bij zeer jonge baby's en peuters.
+- **Probleem:** Ze hebben zo weinig insuline nodig dat de kleinste dosis die de pomp kan geven (bijv. 0,05 E) nog te groot kan zijn. Dan is een nauwkeurige glucoseregeling moeilijk en is het risico op hypoglykemie hoog.
+- **Oplossing:** Gebruik sterk verdunde insuline (bijv. U10, dat is 10 IE/ml).
+- **Effect:** Hierdoor wordt per eenheid insuline meer vloeistof toegediend. De "pakketjes" insuline worden groter in volume maar zwakker in concentratie. Zo zijn veel fijnere aanpassingen en een nauwkeurigere dosering mogelijk met de bestaande instellingen van de pomp.
 
 ```{admonition} Critical Safety Note on Dilution
 :class: danger
-Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
+Insuline verdunnen is een procedure met hoog risico. Doe dit nooit thuis zonder speciale training en medisch toezicht. Het moet gedaan worden door een zorgverlener of een getrainde verzorger, met een steriel verdunningsmiddel dat speciaal voor dat type insuline bedoeld is. **Gebruik nooit kraanwater, zoutoplossing of een andere vloeistof**, want dat kan de insuline onwerkzaam maken, de werking veranderen en gevaarlijke verontreinigingen toevoegen.
 ```
 
-### Use Case 2: concentrated insulin for high insulin needs or significant insulin resistance
+### Situatie 2: geconcentreerde insuline bij een hoge insulinebehoefte of sterke insulineresistentie
 
-- **Scenario:** Managing adults or adolescents with significant insulin resistance, or individuals who experience localized pain from the additives in standard insulin.
-- **Problem:**
-  1. **High Needs:** Very high daily insulin requirements can exceed the pump's maximum bolus or daily delivery limits.
-  1. **Pain:** The preservatives in insulin can cause stinging or irritation upon infusion.
-- **Solution:** Use a more concentrated insulin, such as U200 (200 IU/ml).
-- **Effect:** This delivers the required insulin dose in half the volume. For the user, the pump's internal settings must be adjusted (e.g. basal rates and boluses halved) to account for the doubled concentration, ensuring the correct number of units are delivered. This also reduces the volume of potentially irritating fluid delivered subcutaneously.
+- **Situatie:** Behandeling van volwassenen of tieners met sterke insulineresistentie, of van mensen die plaatselijk pijn hebben door de toevoegingen in standaardinsuline.
+- **Probleem:**
+  1. **Hoge behoefte:** Een zeer hoge dagelijkse insulinebehoefte kan boven de maximale bolus of de maximale dagelijkse toediening van de pomp komen.
+  1. **Pijn:** De conserveermiddelen in insuline kunnen prikken of irritatie geven bij de infusie.
+- **Oplossing:** Gebruik een sterker geconcentreerde insuline, zoals U200 (200 IE/ml).
+- **Effect:** Hiermee wordt de nodige insulinedosis in de helft van het volume toegediend. Voor de gebruiker moeten de interne instellingen van de pomp aangepast worden (bijv. basaalstanden en bolussen gehalveerd) vanwege de dubbele concentratie. Zo wordt het juiste aantal eenheden toegediend. Dit vermindert ook het volume van de mogelijk irriterende vloeistof die onder de huid wordt toegediend.
 
-## How to manage insulin concentration with AAPS (AAPS 3 and earlier)?
+## Hoe beheer je de insulineconcentratie met AAPS (AAPS 3 en ouder)?
 
-Using non-U100 insulin in an AAPS loop requires meticulous configuration to align the software's calculations with the actual insulin being delivered. One common method is "Using a Modified Profile".
+Niet-U100-insuline gebruiken in een AAPS-loop vraagt een zeer zorgvuldige configuratie, zodat de berekeningen van de software passen bij de insuline die echt wordt toegediend. Een veelgebruikte methode is "Een aangepast profiel gebruiken".
 
-### Using a modified profile
+### Een aangepast profiel gebruiken
 
-This method involves tricking AAPS into thinking the patient's insulin needs are lower than they are, to compensate for the pump delivering more concentrated insulin than it is designed for. The use case below is for U200 concentration put into the pump, designed for U100.
+Bij deze methode laat je AAPS denken dat de patiënt minder insuline nodig heeft dan in werkelijkheid. Zo compenseer je dat de pomp sterker geconcentreerde insuline toedient dan waarvoor hij gemaakt is. Het voorbeeld hieronder gaat over U200-insuline in een pomp die voor U100 gemaakt is.
 
-- **The Core Problem:** A pump designed for U100 is calibrated to deliver **10 µL** for **1 unit**. If you fill it with U200 (1 unit of U200 corresponds to **5 µL** of insulin), when you select **1 unit** on the pump it delivers **10 µL** of insulin, but that volume now contains **2 units of U200 insulin**. This leads to a 100% overdose.
-- **The "Profile Switch 50%" Solution:** To correct this, the patient's entire therapy profile is scaled to be "twice as weak" inside AAPS.
-  1. The user creates a new profile based on their standard U100 profile, using the "Profile Switch **50%**" function.
-  1. This creates a new profile where:
-     - **Basal rates** are halved.
-     - **Insulin-to-Carb Ratio (IC)** is doubled (e.g. 1:10g becomes 1:20g).
-     - **Insulin Sensitivity Factor (ISF)** is doubled (e.g. 1 unit lowers BG by 50 mg/dL (2.8 mmol/L) becomes 1 unit lowers it by 100 mg/dL (5.6 mmol/L)).
-- **The Corrected Result:** AAPS now believes the patient only needs half the insulin. When it calculates and commands a **1-unit** bolus, the pump (designed for U100 but filled with U200) delivers the **10 µL**, which contains **2 real units of U200 insulin**. Because AAPS calculated this dose based on a "half-strength" profile, this **2 real-unit** delivery is the correct, intended dose. The loop's "half-strength" math aligns with the pump's "double-strength" delivery.
+- **Het kernprobleem:** Een pomp voor U100 is gekalibreerd om **10 µL** te geven voor **1 eenheid**. Als je hem vult met U200 (1 eenheid U200 komt overeen met **5 µL** insuline) en je kiest **1 eenheid** op de pomp, dan geeft hij **10 µL** insuline. Maar dat volume bevat nu **2 eenheden U200-insuline**. Dit geeft een overdosis van 100%.
+- **De oplossing "Profiel wissel 50%":** Om dit te corrigeren wordt het hele therapieprofiel van de patiënt in AAPS "twee keer zo zwak" gemaakt.
+  1. De gebruiker maakt een nieuw profiel op basis van het standaard U100-profiel, met de functie "Profiel wissel **50%**".
+  1. Dit maakt een nieuw profiel waarin:
+     - de **basaalstanden** gehalveerd zijn.
+     - de **insuline-koolhydraatratio (IC)** verdubbeld is (bijv. 1:10 g wordt 1:20 g).
+     - de **Insulinegevoeligheidsfactor (ISF)** verdubbeld is (bijv. 1 eenheid verlaagt de BG met 50 mg/dl (2,8 mmol/l) wordt 1 eenheid verlaagt de BG met 100 mg/dl (5,6 mmol/l)).
+- **Het gecorrigeerde resultaat:** AAPS denkt nu dat de patiënt maar de helft van de insuline nodig heeft. Als AAPS een bolus van **1 eenheid** berekent en geeft, levert de pomp (gemaakt voor U100 maar gevuld met U200) de **10 µL**. Daarin zitten **2 echte eenheden U200-insuline**. Omdat AAPS deze dosis berekende met een profiel van "halve sterkte", is deze toediening van **2 echte eenheden** de juiste, bedoelde dosis. De rekensom van de loop met "halve sterkte" past bij de toediening van de pomp met "dubbele sterkte".
 
 ```{admonition} Critical Risks and Common Errors
 :class: caution
 
-This method introduces significant risks by creating a persistent disconnect between the app's data and physical reality.
+Deze methode brengt grote risico's mee, omdat de gegevens in de app blijvend niet overeenkomen met de fysieke werkelijkheid.
 
-**The Primary Error: The "External Bolus" Mismatch**
+**De belangrijkste fout: het verschil bij een "externe bolus"**
 
-The most common mistake occurs when delivering and logging insulin **outside** of the AAPS-pump system.
+De meest gemaakte fout gebeurt bij het toedienen en vastleggen van insuline **buiten** het systeem van AAPS en de pomp.
 
-- **The Scenario:** AAPS, using the modified profile, calculates a **5-unit** bolus for a meal. The user injects this with a U200 pen.
-- **The Dual Error:**
-  1. **Wrong Dose Selection:** The user thinks "AAPS calculates 5 units" and, because of the U200 pen, expects to deliver **5 real units of U200** without any conversion. However, because the profile is halved, the body actually needs **10 real units**. This is a **50% underdose**, which can lead to hyperglycemia.
-  1. **Wrong Insulin-on-Board (IOB) Calculation (Overestimated IOB):** When the user records this external bolus in AAPS, they log **5 units**. This is incorrect. Since the AAPS profile is for U200, **1 unit in AAPS equals 2 real units**. Therefore, the 5 real units delivered by the pen should be logged as **2.5 units** in the app. By logging 5 units, the user overestimates the IOB by 100%. AAPS now thinks there are 5 "concentrated units" on board (equivalent to 10 real units) when only 5 real units are active. This can cause the loop to suppress basal insulin or reduce future boluses, worsening the hyperglycemia risk from the initial underdose.
+- **De situatie:** AAPS berekent met het aangepaste profiel een bolus van **5 eenheden** voor een maaltijd. De gebruiker spuit dit met een U200-pen.
+- **De dubbele fout:**
+  1. **Verkeerde dosis gekozen:** De gebruiker denkt "AAPS berekent 5 eenheden" en verwacht, omdat het een U200-pen is, zonder omrekening **5 echte eenheden U200** te geven. Maar omdat het profiel gehalveerd is, heeft het lichaam eigenlijk **10 echte eenheden** nodig. Dit is een **onderdosis van 50%**, die tot hyperglykemie kan leiden.
+  1. **Verkeerde berekening van insuline aan boord (IOB) (IOB te hoog):** Als de gebruiker deze externe bolus in AAPS vastlegt, voert hij **5 eenheden** in. Dit is fout. Omdat het AAPS-profiel voor U200 is, geldt: **1 eenheid in AAPS is 2 echte eenheden**. De 5 echte eenheden die met de pen gegeven zijn, moeten dus als **2,5 eenheden** in de app vastgelegd worden. Door 5 eenheden vast te leggen schat de gebruiker de IOB 100% te hoog in. AAPS denkt nu dat er 5 "geconcentreerde eenheden" aan boord zijn (gelijk aan 10 echte eenheden), terwijl er maar 5 echte eenheden actief zijn. Daardoor kan de loop de basale insuline stoppen of volgende bolussen verlagen. Dat maakt het risico op hyperglykemie door de eerste onderdosis nog groter.
 
-**Other Risks:**
+**Andere risico's:**
 
-- **Misleading Data and Reports:** All data within AAPS or Nightscout - including IOB, total daily dose (TDD), and historical reports - is in "concentrated units". This gives a distorted picture to the user and their medical team. A doctor reviewing a report might see a TDD of 30 units and not realize the patient actually received 60 real units, leading to incorrect therapy assessments.
-- **Altered Mental Model:** After prolonged use, the user begins to "think" in the app's halved values. They internalize that their ISF is 100 mg/dL (5.6 mmol/L) or their basal is 0.5 U/hr, forgetting these are "concentrated". This creates a dangerous dependency on the system and a loss of touch with their actual insulin requirements, which is critical for safety during pump failures or app issues.
+- **Misleidende gegevens en rapporten:** Alle gegevens in AAPS of Nightscout - ook IOB, de totale dagdosis (TDD) en historische rapporten - zijn in "geconcentreerde eenheden". Dit geeft de gebruiker en het medisch team een vertekend beeld. Een arts die een rapport bekijkt, ziet misschien een TDD van 30 eenheden en beseft niet dat de patiënt eigenlijk 60 echte eenheden kreeg. Dat leidt tot een verkeerde beoordeling van de therapie.
+- **Veranderd denkbeeld:** Na langer gebruik gaat de gebruiker "denken" in de gehalveerde waarden van de app. Hij onthoudt dat zijn ISF 100 mg/dl (5,6 mmol/l) is of zijn basaal 0,5 E/uur, en vergeet dat dit "geconcentreerde" waarden zijn. Dit maakt de gebruiker gevaarlijk afhankelijk van het systeem, en hij verliest het gevoel voor zijn echte insulinebehoefte. Dat is juist belangrijk voor de veiligheid als de pomp uitvalt of de app problemen heeft.
 
-**Conclusion:** This method requires absolute vigilance, forcing the user to constantly convert between a "concentrated world" in the app and the physical world. Any external insulin delivery or data review breaks this mental model and poses a severe risk. It fundamentally changes the meaning of every number in the system.
+**Conclusie:** Deze methode vraagt absolute waakzaamheid. De gebruiker moet steeds omrekenen tussen een "geconcentreerde wereld" in de app en de fysieke wereld. Elke externe insulinetoediening en elke keer dat iemand de gegevens bekijkt, doorbreekt dit denkbeeld en geeft een ernstig risico. Het verandert de betekenis van elk getal in het systeem.
 ```
 
-## Using the concentration parameter (new feature in AAPS 4.0)
+## De concentratieparameter gebruiken (nieuw in AAPS 4.0)
 
-To mitigate the risks of using a modified profile, a new feature manages insulin concentration directly within AAPS. This feature handles the conversions automatically, allowing the main application to always work in **Real International Units (IU)**.
+Om de risico's van een aangepast profiel te verminderen, is er een nieuwe functie die de insulineconcentratie direct in AAPS beheert. Deze functie rekent automatisch om, zodat de hoofdapp altijd werkt in **echte internationale eenheden (IE)**.
 
-### How it works: automatic conversion
+### Hoe het werkt: automatische omrekening
 
-The core principle is a clear separation between the app's logic and the pump's communication:
+Het basisprincipe is een duidelijke scheiding tussen de logica van de app en de communicatie met de pomp:
 
-- **AAPS Uses International Units:** The main AAPS database, algorithms, reports, and logs **always use Real IU**. This means your IOB, TDD, and therapy settings (basal, ISF, IC) reflect the actual biological insulin units.
-- **Pump Driver Uses Concentrated Units:** All values sent to or received from the pump driver are automatically converted to manage "Concentrated Units" within the pump driver, based on the selected concentration.
-  - **Example with U200:** When the user requests a **1 unit bolus**, the pump driver receives **0.5 CU (Concentrated Units)** before sending it to the pump. The pump (set for U100) then delivers **5 µL**, which contains **1 IU of U200 insulin**.
+- **AAPS gebruikt internationale eenheden:** De database, algoritmes, rapporten en logs van AAPS **gebruiken altijd echte IE**. Dit betekent dat je IOB, TDD en therapie-instellingen (basaal, ISF, IC) de echte biologische insuline-eenheden weergeven.
+- **Het pompstuurprogramma gebruikt geconcentreerde eenheden:** Alle waarden die naar het pompstuurprogramma gaan of ervan komen, worden automatisch omgerekend naar "geconcentreerde eenheden" (CU) in het pompstuurprogramma, op basis van de gekozen concentratie.
+  - **Voorbeeld met U200:** Als de gebruiker een **bolus van 1 eenheid** vraagt, krijgt het pompstuurprogramma **0,5 CU (geconcentreerde eenheden)** voordat het dit naar de pomp stuurt. De pomp (ingesteld voor U100) geeft dan **5 µL**. Daarin zit **1 IE U200-insuline**.
 
-### Benefits and remaining risks
+### Voordelen en overgebleven risico's
 
-**Benefits:**
+**Voordelen:**
 
-- Eliminates the need for a modified profile and its associated mental conversion errors.
-- Users can always "think" in Real IU.
-- For an external bolus with a pen, just select the expected amount of insulin on the pen (whatever the pen and insulin concentration used). No conversion is needed, as pens U100 and U200 always use IU for unit selection.
-- All AAPS reports and data (TDD, IOB) are in Real IU, providing clarity for the user and their medical team.
-- Removes the risk of miscalculating external boluses, as they are logged in Real IU.
+- Er is geen aangepast profiel meer nodig, en dus ook geen fouten bij het omrekenen in je hoofd.
+- Gebruikers kunnen altijd "denken" in echte IE.
+- Voor een externe bolus met een pen kies je gewoon de gewenste hoeveelheid insuline op de pen (welke pen en welke insulineconcentratie je ook gebruikt). Er is geen omrekening nodig, omdat U100- en U200-pennen altijd IE gebruiken om de eenheden te kiezen.
+- Alle rapporten en gegevens van AAPS (TDD, IOB) zijn in echte IE. Dat is duidelijk voor de gebruiker en het medisch team.
+- Het risico op verkeerd berekende externe bolussen verdwijnt, omdat ze in echte IE vastgelegd worden.
 
-**Remaining Risks:**
+**Overgebleven risico's:**
 
-- **Mental Model Transition:** Users switching from the "modified profile" method must switch their profile back to the correct real profile (i.e. twice as strong if they come from U200), and need time to adjust their **mental model**. After being accustomed to "Concentrated" values in the app, they must re-learn to trust the **real, unhidden IU values** displayed everywhere. This period of adjustment carries a risk of misinterpretation.
-- **Manual Pump Bolus:** Using the pump's own bolus function (bypassing AAPS) results in a 100% overdose, as the pump delivers U200 insulin using U100 volume calculations.
-- **General Warning:** Using non-standard concentrations remains an advanced procedure with risks and is not officially recommended.
+- **Overgang in denken:** Gebruikers die overstappen van de methode met het "aangepaste profiel" moeten hun profiel terugzetten naar het juiste echte profiel (dus twee keer zo sterk als ze van U200 komen). Ze hebben ook tijd nodig om hun **denkbeeld** aan te passen. Na de gewenning aan "geconcentreerde" waarden in de app moeten ze opnieuw leren de **echte, niet-verborgen IE-waarden** te vertrouwen die overal getoond worden. In deze periode van aanpassing is er een risico op verkeerd lezen.
+- **Handmatige bolus op de pomp:** Als je de bolusfunctie van de pomp zelf gebruikt (buiten AAPS om), krijg je een overdosis van 100%, omdat de pomp U200-insuline geeft met volumeberekeningen voor U100.
+- **Algemene waarschuwing:** Niet-standaard concentraties gebruiken blijft een geavanceerde procedure met risico's en wordt officieel niet aanbevolen.
 
 ```{admonition} Never use the pump's own interface (tube pump users) to deliver a bolus manually
 :class: danger
-Stick a permanent note on your pump **"U200 Insulin"** as a reminder, to never forget it!
+Plak een blijvende notitie **"U200-insuline"** op je pomp als herinnering, zodat je het nooit vergeet!
 ```
 
-### User interface display
+### Weergave in de gebruikersinterface
 
-To provide clarity, the user interface shows both real and concentrated units where relevant. Note that the user interface remains unchanged if the current insulin is U100.
+Voor de duidelijkheid toont de gebruikersinterface waar nodig zowel echte als geconcentreerde eenheden. Let op: de gebruikersinterface blijft hetzelfde als de huidige insuline U100 is.
 
-**Display Examples:**
+**Voorbeelden van de weergave:**
 
-- **Bolus Progress Dialog:**
-  - The Bolus Progress dialog is within the core AAPS application, so only the information in IU is shown (consistent with the user selection): **`2.50 U / 10.00 U delivered`**
-- **Pump Driver Interface (Current Status):**
-  - Within the Pump overview, the delivered amount is shown in both units; for example, if `U200` is selected: **`Last Bolus: 10 U (5 CU) (10')`**
+- **Dialoog Bolus voortgang:**
+  - De dialoog Bolus voortgang hoort bij de kern van de AAPS-app. Daarom wordt alleen de informatie in IE getoond (gelijk aan de keuze van de gebruiker): **`2,50 E / 10,00 E toegediend`**
+- **Interface van het pompstuurprogramma (huidige status):**
+  - In het pompoverzicht wordt de toegediende hoeveelheid in beide eenheden getoond, bijvoorbeeld als `U200` gekozen is: **`Laatste bolus: 10 E (5 CU) (10')`**
 
-**Please Note:** Both units (U and CU) are only visible in the main Pump overview. Depending on your specific pump, you can have other screens where only the Concentrated Units are shown. Historical data within pump drivers will typically remain in "Concentrated Units".
+**Let op:** Beide eenheden (E en CU) zijn alleen zichtbaar in het hoofdoverzicht van de pomp. Afhankelijk van je pomp kunnen er andere schermen zijn waar alleen de geconcentreerde eenheden getoond worden. Historische gegevens in pompstuurprogramma's blijven meestal in "geconcentreerde eenheden".
 
-### Enabling the feature
+### De functie inschakelen
 
-Due to the inherent safety risks, this parameter is not enabled by default. To activate it, finish Objective 3 and enable **Insulin concentration support** within General Settings.
+Vanwege de veiligheidsrisico's staat deze parameter standaard niet aan. Om hem aan te zetten: rond Doel 3 af en schakel **Insuline concentratie ondersteuning** in bij Algemene instellingen.
 
-### Create a new insulin with another concentration
+### Een nieuwe insuline met een andere concentratie maken
 
-To create an insulin with another concentration, first open **Manage → Insulin settings**.
+Om een insuline met een andere concentratie te maken, open je eerst **Beheer → Insuline-instellingen**.
 
-- Click the "+" icon at the bottom of the screen.
-- Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
-  - Diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
-  - U200 is more for adults with high insulin needs.
+- Klik op het "+"-icoon onder aan het scherm.
+- Kies de nieuwe gewenste concentratie in het keuzemenu (U10, U20, U50, U100 en U200 zijn beschikbaar).
+  - Verdunde concentraties zoals U10, U20 of U50 zijn voor kinderen met zeer lage basaalstanden.
+  - U200 is vooral voor volwassenen met een hoge insulinebehoefte.
 
-  ![The concentration dropdown in Insulin settings](../images/v4/Insulin/insulin_concentration_dropdown.png)
+  ![Het keuzemenu voor de concentratie in Insuline-instellingen](../images/v4/Insulin/insulin_concentration_dropdown.png)
 
-- Adjust peak time, Duration of Insulin Action (DIA), and customize the Insulin Nickname (optional).
-- Use the save button at the top right of the screen.
+- Pas de piektijd en de Duur van insuline activiteit (DIA) aan, en geef de insuline eventueel een eigen naam (optioneel).
+- Gebruik de knop Opslaan rechtsboven in het scherm.
 
-At this step the insulin has been created, but cannot be selected directly from **Insulin settings**.
+Nu is de insuline gemaakt, maar je kunt hem niet direct kiezen in **Insuline-instellingen**.
 
-### Switch concentration from U100 to Uxxx (AAPS 4)
+### Concentratie wisselen van U100 naar Uxxx (AAPS 4)
 
 ```{admonition} Switching concentration is only allowed during a reservoir or patch/pod change
 :class: warning
-For safety reasons, AAPS only records a concentration switch during a Reservoir Change or Patch/Pod Change.
+Om veiligheidsredenen legt AAPS een concentratiewissel alleen vast bij een reservoirwissel of een patch/pod-wissel.
 ```
 
-When you start from U100 insulin, all your profile, historical data and reports are consistent with the International Units standard, so the switch is very "easy":
+Als je begint met U100-insuline, passen je profiel, historische gegevens en rapporten al bij de standaard van internationale eenheden. De wissel is dan heel "makkelijk":
 
-- For a Patch/Pod pump, you have a dedicated step when you change the pump, to select the insulin you put into it.
-- For a tube pump, click the Prime/Fill button (for Insulin Change) within the Overview (expanded status bar view), then click the "Change" button.
+- Bij een patch/pod-pomp is er een aparte stap bij het wisselen van de pomp, waarin je de insuline kiest die je erin doet.
+- Bij een slangpomp klik je in het Overzicht (uitgevouwen statusbalk) op de knop Prime/Vul (voor de insulinewissel) en daarna op de knop "Wijzigen".
 
-1. Select the target concentration in the dropdown menu (e.g. `U200`).
-1. Then select the right insulin below. Until you confirm, the caption above its name says **Will be activated** (instead of **Currently active**).
+1. Kies de gewenste concentratie in het keuzemenu (bijv. `U200`).
+1. Kies daaronder de juiste insuline. Totdat je bevestigt, staat boven de naam **Wordt geactiveerd** (in plaats van **Momenteel actief**).
 
-   ![An insulin picked but not confirmed yet: Will be activated](../images/v4/Insulin/insulin_will_be_activated.png)
+   ![Een gekozen insuline die nog niet bevestigd is: Wordt geactiveerd](../images/v4/Insulin/insulin_will_be_activated.png)
 
-1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
-   - This step is mandatory for all Patch/Pod pumps.
-   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within **Manage → Profile** or **Insulin settings**.
+1. **Belangrijk:** de concentratiewissel wordt pas in AAPS vastgelegd nadat de profiel wissel op de pomp is toegepast.
+   - Deze stap is verplicht voor alle patch/pod-pompen.
+   - Bij slangpompen wacht je tot de profiel wissel op de pomp is toegepast, of doe je dit in **Beheer → Profiel** of **Insuline-instellingen**.
 
-That's all!
+Dat is alles!
 
-If a temporary **Profile Switch** (one with a duration) is running when you change the insulin, the new insulin is also given to the profile that comes back when the temporary switch ends. The old insulin does not come back.
+Als er een tijdelijke **Profiel wissel** (een met een tijdsduur) loopt wanneer je de insuline wisselt, krijgt ook het profiel dat terugkomt na het einde van die tijdelijke wissel de nieuwe insuline. De oude insuline komt niet terug.
 
-### Switch concentration for users with U200 insulin associated with a 50% profile (AAPS 4)
+### Concentratie wisselen voor gebruikers met U200-insuline en een profiel van 50% (AAPS 4)
 
-When you start from U200 already used in your pump, but associated with a 50% profile, you have to do additional steps compared to the standard switch from U100 insulin.
+Als je begint met U200 die al in je pomp zit, maar met een profiel van 50%, moet je extra stappen doen vergeleken met de standaard wissel vanaf U100-insuline.
 
-Keep in mind that the most difficult part will probably not be how to manage the switch correctly within AAPS, but rather to train your brain again to think "IU" instead of "CU". All standard values for boluses (breakfast, lunch, dinner...) will be twice as high, the same for your TDDs, basal rates, etc. You have to be very cautious not to make errors during the first several weeks, until you "think again" in International Units.
+Onthoud: het moeilijkste is waarschijnlijk niet de wissel goed doen in AAPS, maar je hersenen opnieuw leren om in "IE" te denken in plaats van in "CU". Alle standaardwaarden voor bolussen (ontbijt, lunch, avondeten...) worden twee keer zo hoog, en dat geldt ook voor je TDD's, basaalstanden enz. Wees de eerste weken heel voorzichtig om geen fouten te maken, totdat je "weer denkt" in internationale eenheden.
 
-- First, prepare a new profile with all values consistent with International Units:
-  - Do a temporary Profile Switch 200% of your standard running profile.
-  - Open the menu (☰) → **Treatments**, go to the **Profile switch** tab and clone the new 200% profile (see [Clone a Profile switch](#your-aaps-profile-clone-profile-switch)).
-  - Switch back to your standard profile until the next Reservoir or Patch change.
-  - Go to **Manage → Profile** and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
-- If you use the Dynamic ISF (DynISF) feature, you have to disable it for at least one week:
-  - All your history recorded within AAPS or Nightscout is in the wrong units (CU), half the real value in International Units. Wait at least one week with the U200 insulin running before re-enabling it.
-- You are now ready to switch insulin (with a new U200 defined within **Insulin settings**) on the following Insulin Change or Pod Change.
-- Once the new U200 insulin is correctly applied, don't forget to apply the new standard profile defined in the first step.
+- Maak eerst een nieuw profiel met alle waarden in internationale eenheden:
+  - Doe een tijdelijke profiel wissel van 200% op je standaard lopende profiel.
+  - Open het menu (☰) → **Behandelingen**, ga naar het tabblad **Profiel wissel** en dupliceer het nieuwe profiel van 200% (zie [Een profiel wissel dupliceren](#your-aaps-profile-clone-profile-switch)).
+  - Ga terug naar je standaardprofiel tot de volgende reservoir- of patchwissel.
+  - Ga naar **Beheer → Profiel** en geef dit nieuwe profiel een duidelijke naam (dit wordt je toekomstige profiel bij de U200-insuline die in AAPS 4 is ingesteld).
+- Als je de functie Dynamische ISF (DynISF) gebruikt, moet je die minstens een week uitschakelen:
+  - Al je geschiedenis in AAPS of Nightscout staat in de verkeerde eenheden (CU): de helft van de echte waarde in internationale eenheden. Wacht minstens een week met de U200-insuline in gebruik voordat je het weer inschakelt.
+- Nu ben je klaar om bij de volgende insulinewissel of podwissel van insuline te wisselen (met een nieuwe U200 die is ingesteld in **Insuline-instellingen**).
+- Als de nieuwe U200-insuline goed is toegepast, vergeet dan niet het nieuwe standaardprofiel uit de eerste stap toe te passen.
 
-## How to manage external boluses with different pens?
+## Hoe beheer je externe bolussen met verschillende pennen?
 
-### With U200 insulin associated with a 50% profile (AAPS 3)
+### Met U200-insuline en een profiel van 50% (AAPS 3)
 
-Keep in mind that all pen graduations are in International Units, so whatever the pen used (U100, U200), if you use a pen for an external bolus you have to manage conversion in both directions:
+Onthoud dat alle schaalverdelingen op pennen in internationale eenheden zijn. Welke pen je ook gebruikt (U100, U200): als je een pen gebruikt voor een externe bolus, moet je in beide richtingen omrekenen:
 
-- From AAPS to the pen: if the Calculator proposes a bolus, or if you have a specific quantity in mind, multiply by 2 when you select the amount on the pen, compared to the same bolus applied from AAPS.
-- From the pen to AAPS: if you selected an amount on the pen to give an external bolus, divide this amount by 2 to record the right quantity within AAPS (Insulin button, external bolus), to get the correct IOB calculation in CU (Concentrated Units).
+- Van AAPS naar de pen: als de Calculator een bolus voorstelt, of als je zelf een hoeveelheid in gedachten hebt, vermenigvuldig die dan met 2 als je de hoeveelheid op de pen kiest, vergeleken met dezelfde bolus via AAPS.
+- Van de pen naar AAPS: als je een hoeveelheid op de pen hebt gekozen voor een externe bolus, deel die dan door 2 om de juiste hoeveelheid in AAPS vast te leggen (knop Insuline, externe bolus). Zo is de IOB-berekening in CU (geconcentreerde eenheden) juist.
 
-### With U200 insulin using the concentration management included in AAPS 4
+### Met U200-insuline en het concentratiebeheer van AAPS 4
 
-Things are much simpler with the internal management of concentration within AAPS: just select the expected amount on the pen (whatever the pen and corresponding insulin used), and record it within AAPS.
+Met het interne concentratiebeheer in AAPS is het veel eenvoudiger: kies gewoon de gewenste hoeveelheid op de pen (welke pen en welke insuline je ook gebruikt) en leg die vast in AAPS.
 
-- Within the Insulin button, if you select an external bolus, you can select any type of insulin defined within **Insulin settings** (mainly U100, U200 for pens). That way you get a very precise calculated IOB, even if the peak/DIA of the insulin used with the pen is very different from the peak/DIA used in the pump.
+- Als je bij de knop Insuline een externe bolus kiest, kun je elk type insuline kiezen dat in **Insuline-instellingen** is ingesteld (vooral U100 en U200 voor pennen). Zo krijg je een zeer nauwkeurig berekende IOB, ook als de piek/DIA van de insuline in de pen heel anders is dan de piek/DIA van de insuline in de pomp.
