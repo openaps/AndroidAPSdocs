@@ -387,5 +387,5 @@ Voor andere problemen met GitHub en Google Drive, zie [Bouwen in de browser: pro
 ```{toctree}
 :hidden:
 
-Instellingspagina van AAPS Builder <BrowserBuildAapsBuilderSetup.md>
+AAPS Builder-instelpagina <BrowserBuildAapsBuilderSetup.md>
 ```
