@@ -131,7 +131,7 @@ A validation is required after each selection.
 
 你需要找出為什麼會收到重複的血糖資料：
 
-* 你的 Nightscout 網站上是否啟用了 Dexcom 橋接？通過進入 Nightscout 實例的管理面板，編輯 "enable" 變數並刪除其中的 "bridge" 來停用橋接。（有關 heroku 的[詳細資訊可以在此找到](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings)。）
+* 你的 Nightscout 網站上是否啟用了 Dexcom 橋接？通過進入 Nightscout 實例的管理面板，編輯 "enable" 變數並刪除其中的 "bridge" 來停用橋接。 (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * 是否有多個來源將你的血糖上傳到 Nightscout？ If you use the BYODA app, enable the upload in **AAPS** but do not enable it in xDrip, if you use that.
 * 你是否有任何會接收你的血糖，並再次上傳到你的 Nightscout 網站的追蹤者？
 * Last resort: In [NSClient settings](#Preferences-nsclient), select the Synchronization settings and disable the "Receive CGM data from NS" option.
@@ -578,7 +578,7 @@ The icon row below the header shows which inputs enter the calculation (BG, tren
 * For safety reasons, the IOB input cannot be disabled when COB is enabled as you might run the risk of too much insulin as **AAPS** is not accounting for what’s already given.
 * If you enable COB and IOB, unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
 * If you enable IOB without COB, **AAPS** takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. 這會導致出現“缺少碳水化合物”的提示。
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **disable all inputs**. 這樣只會加入新增的碳水化合物，因為主餐不一定會立刻被吸收，所以餐後追加的 IOB 和 COB 可能會對應不太起來。
+* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. 這樣只會加入新增的碳水化合物，因為主餐不一定會立刻被吸收，所以餐後追加的 IOB 和 COB 可能會對應不太起來。
 * For safety reasons, a **temporary target** is only included in the calculation if you enable its input manually.
 
 (AapsScreens-section-j)=
