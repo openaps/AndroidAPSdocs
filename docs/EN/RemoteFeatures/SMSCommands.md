@@ -110,9 +110,10 @@ For safety reasons, the reply code must be followed by a PIN. Choose a PIN which
 
 PIN requirements are:
 
-* 3 to 6 digits
-* not the same digits (_i.e._ 1111 or 1224)
-* not sequential numbers (_i.e._ 1234)
+* at least 6 digits
+* digits only
+
+For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
 
 ![Additional mandatory PIN at token end](../images/sms_pin.png)
 
@@ -149,7 +150,7 @@ Use the **Reset Authenticators** button at the bottom of the **Authenticator set
 
 If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
 
-2)	Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
+2)	Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
 
 When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
 

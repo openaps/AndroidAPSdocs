@@ -173,7 +173,7 @@ The section below provides guidance how to bundle **Automation’s** Conditions 
 
 ### Automated big SMBs at bg rise
 
-The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBS must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
+The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
 To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might be not meal –related and those delta 
  which might be.

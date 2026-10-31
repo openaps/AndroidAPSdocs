@@ -21,7 +21,7 @@ Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medt
 
 Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide its possible you have not changed this setting.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
 Verify this is correctly configured if you have pump and CGM disconnections.
 
@@ -33,7 +33,7 @@ Verify this is correctly configured if you have pump and CGM disconnections.
 
 Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
 
-**AAPS** requires a number of specific permission to function, one which is required ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 

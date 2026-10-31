@@ -79,7 +79,7 @@ Tap **Select AAPS Version** and pick the version to build. The newest version is
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicates that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
