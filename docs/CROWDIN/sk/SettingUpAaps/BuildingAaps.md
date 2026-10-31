@@ -1,50 +1,50 @@
-# Building AAPS
+# Zostavenie AAPS
 
-## Build yourself instead of download
+## Zostavte si aplikáciu sami namiesto stiahnutia
 
-**Aplikácia AAPS (súbor APK) nie je k dispozícii na stiahnutie z dôvodu predpisov týkajúcich sa zdravotníckych pomôcok. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplikácia AAPS (súbor APK) nie je k dispozícii na stiahnutie z dôvodu predpisov týkajúcich sa zdravotníckych pomôcok. Zostaviť si aplikáciu pre vlastné použitie je legálne, ale nesmiete jej kópiu dávať iným!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Podrobnosti nájdete na stránke [Najčastejšie otázky používateľov APS](../UsefulLinks/FAQ.md).
 
 ---
 
-Three methods are available to build the AAPS app:
+Aplikáciu AAPS môžete zostaviť tromi spôsobmi:
 
-### Build with a browser (recommended)
+### Zostavenie v prehliadači (odporúčané)
 
-You can build the app with your smartphone using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Aplikáciu môžete zostaviť zo smartfónu pomocou GitHub Actions. Z telefónu s Androidom vás celým postupom prevedie stránka nastavenia [AAPS Builder](#aaps-builder) a každé zostavenie spúšťate sami. Z počítača alebo z iPhonu môžete zostavovať aj pomocou forku a aplikáciu uložiť na svoj Disk Google.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Postupujte podľa týchto pokynov.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Zostavenie v Android Studiu
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Aplikáciu môžete zostaviť v počítači pomocou Android Studia. Kedysi to bol jediný spôsob zostavenia, dnes Android Studio používajú najmä vývojári, ktorí chcú meniť kód.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Postupujte podľa týchto pokynov.](./ComputerBuild.md)**
+
+----
+
+### Zostavenie z príkazového riadku
+
+Tento spôsob je určený pre tých, ktorí chcú AAPS zostaviť lokálne z príkazového riadku bez inštalácie Android Studia.
+
+**[Postupujte podľa týchto pokynov.](./CLIBuild.md)**
 
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Ak zostavenie zlyhá
 
-Each build method has its own troubleshooting section:
+Každý spôsob zostavenia má vlastnú časť o riešení problémov:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Riešenie problémov s AAPS Builderom](#aaps-builder-troubleshooting)
+* **Zostavenie v prehliadači** z počítača alebo z iPhonu: [Zostavenie v prehliadači: riešenie problémov](#aaps-ci-troubleshooting)
+* **Android Studio**: [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Stratili ste úložisko kľúčov alebo jeho heslo? Pozrite [Preinštalovanie AAPS s novým úložiskom kľúčov](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Ak je aplikácia zostavená, ale nedá sa nainštalovať do telefónu, pozrite si stránku [Prenos a inštalácia AAPS](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Ak tu váš problém nie je, pozrite si stránku [Kde získať pomoc](../GettingHelp/WhereCanIGetHelp.md).
