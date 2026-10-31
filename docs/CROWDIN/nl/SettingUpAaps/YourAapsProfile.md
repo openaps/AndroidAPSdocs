@@ -102,13 +102,13 @@ Zie [hier](../GettingHelp/ProfileTuning.md) hoe je je basaalprofiel kunt bijstel
 Als je iets verandert op basis van je basaaltest, pas het **Profiel** dan 1 tot 2 uur (afhankelijk van je soort insuline) vóór de stijging/daling aan. Herhaal de test zo vaak als nodig, tot je tevreden bent met je instellingen voor de **basaalstanden**.
 
 (your-aaps-profile-basal-not-compatible)=
-#### Melding: "Basaal stand is niet compatibel met de huidige pomp"
+#### Melding: "Basaalstand is niet compatibel met de huidige pomp"
 
 Elke pomp heeft grenzen: een laagste en een hoogste basaalstand die hij kan geven. Bij sommige pompen (bijvoorbeeld Dana, Accu-Chek Combo, Medtronic en Diaconn G8) kan de basaalstand ook alleen op het hele uur veranderen. **AAPS** controleert je profiel tegen de pomp die je gebruikt, **nadat** het gekozen percentage is toegepast.
 
 Als een basaalstand buiten deze grenzen valt, toont het scherm **Activeer** deze melding en blijft de knop **Activeer** grijs:
 
-![Scherm Activeer met de melding "Basaal stand is niet compatibel met de huidige pomp"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
+![Scherm Activeer met de melding "Basaalstand is niet compatibel met de huidige pomp"](../images/v4/Profiles/profile_activate_pump_incompatible.png)
 
 Bijvoorbeeld: met een basaalstand van 0,10 E/u in de nacht en een profielpercentage van 35% zou **AAPS** 0,035 E/u moeten geven. Dat is minder dan een Dana-pomp kan geven (0,04 E/u).
 
