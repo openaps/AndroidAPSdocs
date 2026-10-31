@@ -92,7 +92,7 @@ Neste momento, o driver suporta os seguintes idiomas na Combo. (Isto não tem na
 
      * Defina o alarme de cartucho baixo como preferir
      * Configure um bólus máximo adequado à sua terapia, para se proteger contra erros no software
-     * Da mesma forma, configure a duração máxima da DBT para sua segurança. Permita pelo menos 3 horas, porque a opção para desligar a bomba durante 3 horas define 0 % durante 3 horas.
+     * Da mesma forma, configure a duração máxima da basal temporária para sua segurança. Permita pelo menos 3 horas, porque a opção para desligar a bomba durante 3 horas define 0 % durante 3 horas.
      * Ative o bloqueio de teclas na bomba para impedir bólus dados na bomba, sobretudo se a bomba já era usada antes e dar bólus rápidos era um hábito.
      * Defina o tempo limite do ecrã e o tempo limite do menu para os mínimos de 5,5 e 5, respetivamente. Isto permite que o AAPS recupere mais depressa de situações de erro e reduz a quantidade de vibrações que podem ocorrer durante esses erros
 
