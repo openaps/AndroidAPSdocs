@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Overal zoeken
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4 heeft bovenaan het hoofdscherm een zoekvak voor **overal zoeken**. Typ een woord en het zoekt in één keer door de hele app — plugins, dialoogvensters, instellingenschermen, losse instellingen — en, als je online bent, ook in de **AndroidAPS-documentatie**. Zo ga je het snelst naar een instelling of scherm, zonder te hoeven onthouden waar het staat.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## Zoeken openen
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+Tik op het veld **🔍 Zoeken** bovenaan het **Overzicht** (naast het menu ☰). Begin te typen; de resultaten verschijnen tijdens het typen (na een korte pauze), gegroepeerd per categorie:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![Resultaten van overal zoeken, gegroepeerd per categorie](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+Maak het vak leeg met de **✕**, of sluit het zoeken met de knop **Terug** van het toestel.
 
 ---
 
-## What search covers
+## Zoek in het Engels *of* in je eigen taal
 
-Results are grouped into these categories:
+Dit is handig om te weten: zoeken vergelijkt met **zowel** de tekst in je **gekozen taal** **als** de originele **Engelse** tekst.
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- Staat je app bijvoorbeeld in het Duits of Tsjechisch, dan kun je het **vertaalde** woord **of** het **Engelse** woord typen — met allebei vind je de instelling.
+- Een treffer in de **vertaalde** titel staat het hoogst, daarna de **Engelse** titel, daarna de vertaalde en Engelse **beschrijvingen**.
+- Bij het zoeken tellen **accenten/diakritische tekens** niet mee (dus *ů* vindt ook *u*, *é* vindt ook *e*) en **hoofdletters maken niet uit**.
+
+Een handleiding of forumbericht in het Engels brengt je dus nog steeds naar de juiste instelling, ook als je telefoon alles vertaald toont.
+
+---
+
+## Waarin zoeken werkt
+
+De resultaten zijn gegroepeerd in deze categorieën:
+
+- **Plugins** — elke plugin die in jouw versie zichtbaar is (dezelfde als in [Configuratie](../SettingUpAaps/ConfigBuilder.md)). Elke plugin-regel heeft een **schakelaar**, zodat je een plugin direct vanuit de resultaten kunt in- of uitschakelen — als je tikt op de regel van een uitgeschakelde plugin (die je kunt schakelen), wordt die ingeschakeld.
+- **Dialoogvensters** — de schermen voor behandelingen/acties en voor beheer (Bolus wizard, Insuline, Vertraagde bolus, Kalibratie, Tijdelijk streefdoel, Profiel, …). Schermen die niet bij jouw versie horen, worden weggelaten (bijvoorbeeld *Koppel met master* op een master, *Geautoriseerde clients* op een client).
+- **Instellingencategorieën** — de instellings**schermen** en subschermen, zowel ingebouwd (Algemeen, Weergave, Beveiliging, Waarschuwingen, Onderhoud, …) als van plugins, plus de kleine groepen instellingen die je via dialoogvensters bereikt (knoppen Vullen, stappen voor de knoppen Insuline/Koolhydraten, grenzen voor statuslampjes, wizard-instellingen, …).
+- **Instellingen** — elke **losse instelling** die een titel heeft. Deze zijn gefilterd op jouw versie/modus, zodat je alleen instellingen ziet die echt van toepassing zijn (APS / NSClient / pompbesturing).
+- **Documentatie** — pagina's uit de online **AndroidAPS-documentatie** (zie hieronder).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+Een instelling waarvan de plugin nu **uitgeschakeld** is, wordt toch getoond — **grijs** en niet aan te tikken — met de opmerking *“Plugin … gedeactiveerd”*. Zo zie je dat de instelling bestaat en welke plugin je moet inschakelen om erbij te komen.
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![Een grijze instelling van een uitgeschakelde plugin](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## Resultaten uit de documentatie (online)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+Terwijl er lokaal wordt gezocht, zoekt **AAPS** tegelijk ook in de officiële **AndroidAPS-documentatie** (op ReadTheDocs). Gevonden pagina's verschijnen onderaan in een groep **Documentatie**, elk met een pictogram 📖, de titel van de sectie en een kort fragment:
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![Resultaten uit de documentatie (wiki) met fragmenten](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
-
----
-
-## Opening a result
-
-Tap a result to go straight to it:
-
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](../SettingUpAaps/ConfigBuilder.md)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+- Als de documentatie in de taal van je app is vertaald, zoekt **AAPS** tegelijk in de vertaalde pagina's en in de Engelse pagina's. Pagina's in jouw taal komen eerst, daarna de Engelse pagina's die nog niet gevonden waren.
+- Als je op een resultaat uit de documentatie tikt, opent die pagina in je **browser**.
+- Zoeken in de documentatie heeft **internet** nodig — als je offline bent, krijg je in plaats daarvan de melding *“Voor zoeken in de documentatie is een internetverbinding vereist”*, en de lokale resultaten (in de app) werken gewoon.
 
 ---
 
-## Power-user shortcuts
+## Een resultaat openen
 
-Two special queries list a whole category at once:
+Tik op een resultaat om er direct naartoe te gaan:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- **Plugin** → opent die plugin.
+- **Dialoogvenster** → opent dat scherm of dialoogvenster.
+- **Instellingencategorie** → opent dat instellingenscherm.
+- **Instelling** → opent de instelling **op zijn plek** (springt ernaartoe binnen het scherm).
+- **Documentatie** → opent de pagina in je browser.
+
+Bij het openen van instellingen en beveiligde acties geldt je **[beveiliging](../SettingUpAaps/ConfigBuilder.md)** (pincode/wachtwoord) nog steeds, precies zoals wanneer je er zelf naartoe was gegaan. Nadat je iets met een resultaat hebt gedaan, kun je op **Terug** drukken om terug te gaan naar je zoekresultaten.
+
+---
+
+## Snelkoppelingen voor gevorderden
+
+Twee speciale zoekopdrachten tonen in één keer een hele categorie:
+
+- `%PLUGINS%` — toont **alle** plugins.
+- `%DIALOGS%` — toont **alle** dialoogvensters/actieschermen.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+De zoekindex wordt gemaakt als je voor het eerst zoekt en blijft daarna klaar staan. Hij wordt automatisch opnieuw gemaakt als je **een plugin in- of uitschakelt** of **de taal van de app wijzigt**, zodat de resultaten altijd bij je huidige instellingen passen.
 ```
 
 ---
