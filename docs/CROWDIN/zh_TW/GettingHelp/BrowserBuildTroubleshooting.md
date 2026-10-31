@@ -11,72 +11,72 @@
 ## AAPS-CI 問題排除
 
 (aaps-ci-read-the-logs)=
-### First: find out what went wrong
+### 首先：找出問題所在
 
-When a build fails, GitHub keeps a log of every step. The log tells you which step failed and why. Read it before you try anything else: the error message is what you look for on this page, and what helpers will ask for.
+建置失敗時，GitHub 會保留每個步驟的記錄。記錄會指出哪個步驟失敗，以及失敗的原因。在嘗試其他方法之前，請先查看記錄：你需要在本頁尋找錯誤訊息，協助你的人也會需要這些資訊。
 
-1. In your GitHub copy of AndroidAPS, open **Actions**. A failed build has a red cross. Tap its name.
+1. 在 GitHub 上的 AndroidAPS 複本中，開啟**Actions**。建置失敗時會顯示紅色叉號。點選該項目的名稱。
 
-   ![Failed run in the Actions list](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
+   ![Actions 清單中的失敗執行項目](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
 
-2. The run summary shows **Failure** and, below, the job that failed (**Build AAPS**, with a red cross).
+2. 執行摘要會顯示**失敗**，下方則會列出失敗的工作（**Build AAPS**，旁邊有紅色叉號）。
 
-   ![Run summary](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
+   ![執行摘要](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
 
-3. Scroll down to **Annotations** and tap the red **Build AAPS** line.
+3. 向下捲動至**註解**，然後點選紅色的 **Build AAPS** 項目。
 
-   ![Annotations](../images/Building-the-App/CI/aaps_ci_logs_3_annotations.png)
+   ![註解](../images/Building-the-App/CI/aaps_ci_logs_3_annotations.png)
 
-4. The job opens. Steps with a grey tick worked. The step with the red cross is the one that failed: GitHub opens it for you. The steps after it were skipped (grey circle).
+4. 工作頁面會隨即開啟。顯示灰色勾號的步驟代表執行成功。顯示紅色叉號的步驟就是失敗的步驟：GitHub 會自動為你開啟該步驟。之後的步驟會遭到略過（顯示灰色圓圈）。
 
-   ![Job steps](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
+   ![工作步驟](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
 
-5. Read the lines just above `Error: Process completed with exit code 1.`: they explain the problem. In this example, the step **Retrieving Google Drive access token** failed with `invalid_grant` and `Token has been expired or revoked.`, see [Google Refresh Token Expired](#aaps-ci-google-token-expired).
+5. 請查看 `Error: Process completed with exit code 1.` 上方的幾行內容，它們會說明問題所在。在這個範例中，**正在取得 Google Drive 存取權杖**步驟因 `invalid_grant` 和 `Token has been expired or revoked.` 錯誤而失敗，請參閱[Google 重新整理權杖已逾期](#aaps-ci-google-token-expired)。
 
-   ![Error in the log](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
+   ![記錄中的錯誤](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
 
 ```{tip}
-Asking for help? Share the name of the failed step and the error lines (a screenshot like the one above is fine). Never share the content of your secrets.
+需要協助嗎？請提供失敗步驟的名稱和錯誤內容（提供如上方範例的螢幕截圖也可以）。請勿分享機密資料的內容。
 ```
 
 (aaps-ci-update-secret)=
-#### Update a secret
+#### 更新機密資料
 
-Many fixes mean replacing the value of a secret. In your GitHub copy of AndroidAPS, go to **Settings** → **Secrets and variables** → **Actions** and tap the pencil next to the secret.
+許多問題都可以透過替換機密資料的值來修正。在 GitHub 上的 AndroidAPS 複本中，前往**Settings** → **Secrets and variables** → **Actions**，然後點選機密資料旁的鉛筆圖示。
 
-![Secrets list](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
+![機密資料清單](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
 
-Enter or paste the new value and tap **Update secret**. GitHub never shows the old value: the field is always empty.
+輸入或貼上新的值，然後點選 **更新密鑰**。 GitHub 不會顯示舊值：欄位一律為空白。
 
-![Update secret](../images/Building-the-App/CI/aaps_ci_secret_update_2.png)
+![更新密鑰](../images/Building-the-App/CI/aaps_ci_secret_update_2.png)
 
 (aaps-ci-rerun)=
-#### Run the build again after a fix
+#### 修正問題後，再次執行建置
 
-Once you have fixed the cause, you do not need to start from scratch: open the failed run, tap **...** (top right), then **Re-run failed jobs**.
+修正問題原因後，不必從頭開始：開啟失敗的執行項目，點選 **...**（右上角），接著點選 **重新執行失敗的工作**。
 
-![Re-run menu](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
+![重新執行選單](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
 
-Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usual.
+點選 **重新執行工作**。您也可以像平常一樣，透過 **執行工作流程**開始新的建置。
 
-![Re-run dialog](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
+![重新執行對話方塊](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
 
 (aaps-ci-preparation-web)=
 ### aaps-ci-preparation 網頁
-  - The preparation page is displayed by a temporary local server (for example Simple Web Server on a computer), which also receives the Google refresh token.
-  - If you see the screen below, the local server has stopped or is not reachable.
-  - Close the preparation page, check that the local server is running, then reopen aaps-ci-preparation.html the same way as in Step 2 and complete the remaining steps. 這在設定期間建立初始的 Google 連線時特別需要。
+  - 準備頁面由臨時的本機伺服器提供（例如電腦上的 Simple Web Server），該伺服器也會接收 Google 重新整理權杖。
+  - 如果您看到以下畫面，表示本機伺服器已停止執行或無法連線。
+  - 關閉準備頁面，確認本機伺服器正在執行，然後依照步驟 2 的相同步驟重新開啟 aaps-ci-preparation.html，並完成其餘步驟。這在設定期間建立初始的 Google 連線時特別需要。
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-google-token-expired)=
 ### Google 重新整理權杖已過期
   - 如果 Google OAuth2 重新整理權杖連續 6 個月未使用就會過期，並且在其他情況下也可能失效（例如：您變更了 Google 帳號密碼，或手動撤銷了存取權）。如需更多詳細資訊，請參閱 [Google OAuth2 說明文件](https://developers.google.com/identity/protocols/oauth2)。
-  - In the [build log](#aaps-ci-read-the-logs), the step **Retrieving Google Drive access token** fails with `invalid_grant` and `Token has been expired or revoked.`:
+  - 在[建置記錄](#aaps-ci-read-the-logs)中，**正在擷取 Google Drive 存取權杖**步驟因 `invalid_grant` 和 `Token has been expired or revoked.` 而失敗：
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.png)
 
-  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token, [update the secret](#aaps-ci-update-secret) in your GitHub repository, then [re-run the build](#aaps-ci-rerun).
+  - 如果建置因 Google 重新整理權杖已逾期或遭撤銷而失敗，您需要重新完成 [Google Drive 驗證](#aaps-ci-google-drive-auth)步驟，以取得新的 `GDRIVE_OAUTH2` 權杖，接著在 GitHub 儲存庫中[更新密鑰](#aaps-ci-update-secret)，然後[重新執行建置](#aaps-ci-rerun)。
   - 若授權再次失敗，或 Google 不再要求你同意，請先從你的 Google 帳戶移除既有的 AAPS 存取權，請參閱[下方](#aaps-ci-google-remove-access)。
 
 (aaps-ci-google-remove-access)=
@@ -91,20 +91,20 @@ Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usu
 
   ![aaps_ci_google_access_2](../images/Building-the-App/CI/aaps_ci_google_access_2.png)
 
-  - On the details page, tap **Remove all access**.
+  - 在詳細資料頁面中，點選 **移除所有存取權**。
 
   ![aaps_ci_google_access_3](../images/Building-the-App/CI/aaps_ci_google_access_3.png)
 
-  - Tap **Confirm**.
+  - 點選 **確認**。
 
   ![aaps_ci_google_access_4](../images/Building-the-App/CI/aaps_ci_google_access_4_confirm.png)
 
-  - Google confirms that AAPS no longer has access. AAPS 不會再出現在已連結的應用程式清單中。
+  - Google 確認 AAPS 已無法存取。 AAPS 不會再出現在已連結的應用程式清單中。
 
   ![aaps_ci_google_access_5](../images/Building-the-App/CI/aaps_ci_google_access_5_removed.png)
 
   - 現在乾淨地重新開始授權：請關閉 **兩者**（準備頁面與檔案管理器應用程式），從檔案管理器重新開啟 aaps-ci-preparation.html，並重新執行 [Google Drive Auth](#aaps-ci-google-drive-auth) 步驟。 Google 會再次要求你授權，且該頁會提供新的 `GDRIVE_OAUTH2` 權杖。
-  - [Update the `GDRIVE_OAUTH2` secret](#aaps-ci-update-secret) in your GitHub repository with the new token, then [re-run the build](#aaps-ci-rerun).
+  - 使用新的權杖，在 GitHub 儲存庫中[更新 `GDRIVE_OAUTH2` 密鑰](#aaps-ci-update-secret)，然後[重新執行建置](#aaps-ci-rerun)。
 
 (aaps-ci-disable-software)=
 ### 停用可能會影響 OAUTH2 授權的軟體
@@ -112,7 +112,7 @@ Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usu
 
 (aaps-ci-actions-permission)=
 ### 檢查 GitHub Actions 權限設定
-  - 請確保 GitHub Actions 政策設置為「Allow all actions and reusable workflows」（Settings → Actions → General）。 If you change it, press **Save** below the options.
+  - 請確保 GitHub Actions 政策設置為「Allow all actions and reusable workflows」（Settings → Actions → General）。如果您有變更，請按一下選項下方的 **儲存**。
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
@@ -134,14 +134,14 @@ The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'ac
   ![aaps_ci_workflow_permissions](../images/Building-the-App/CI/aaps-ci-workflow-permissions.jpg)
 
 (aaps-ci-password-special-characters)=
-### Build Fails Checking The Keystore Password
-  - In the [build log](#aaps-ci-read-the-logs), the step **Validating keystore, alias and password** fails with `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`, followed by `Keystore was tampered with, or password was incorrect`. The build stops there: the keystore and passwords are checked before AAPS is built.
+### 檢查金鑰庫密碼時建置失敗
+  - 在[建置記錄](#aaps-ci-read-the-logs)中，**驗證金鑰庫、別名和密碼**步驟因 `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect` 而失敗，接著出現 `Keystore was tampered with, or password was incorrect`。建置會在此處停止：AAPS 開始建置前，會先檢查金鑰庫和密碼。
 
-  ![Wrong keystore password in the build log](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
+  ![建置記錄中的金鑰庫密碼錯誤](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
 
-  - The build workflow keeps every character of your passwords intact. Enter `KEYSTORE_PASSWORD` and `KEY_PASSWORD` exactly as they are, without adding a backslash or any other escape character. If you added backslashes, [update the secrets](#aaps-ci-update-secret) with the password exactly as it is. The example below is wrong: the password is `Example2026`, the backslash was added.
+  - 建置工作流程會保留密碼中的所有字元，不會變更。請原樣輸入 `KEYSTORE_PASSWORD` 和 `KEY_PASSWORD`，不要加入反斜線或其他跳脫字元。如果您加入了反斜線，請使用原始密碼[更新密鑰](#aaps-ci-update-secret)。以下範例有誤：密碼是 `Example2026`，但多加了反斜線。
 
-  ![Password entered with an added backslash](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
+  ![輸入的密碼多加了反斜線](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
 
-  - If the build still fails when signing the APK although your password is correct, and the password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is older than September 2026 and still parses these characters. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev, then re-run the build workflow.
+  - 如果密碼正確，但 APK 簽章時建置仍然失敗，而且密碼包含 `$`、反引號、`"` 或 `\`，表示您分支中的工作流程檔案早於 2026 年 9 月，仍會剖析這些字元。將您的分支[同步至最新的 dev 版本](#Update-to-new-version-update-your-repo)，然後重新執行建置工作流程。
   - 豎線 `|` 是特殊情況。 「[Option 1](#aaps-ci-option1)」的準備頁會將金鑰庫、密碼與別名合併為一個以 `|` 分隔的 `KEYSTORE_SET` Secret，工作流程會依該字元進行分割。準備頁所產生的密碼僅包含英文字母與數字，因此使用 Option 1 不會發生此情況。只有在你自行以含有 `|` 的密碼組合出 `KEYSTORE_SET` Secret 時，才可能發生。此時請刪除 `KEYSTORE_SET`，改為依照「[Option 2](#aaps-ci-option2)」輸入個別的 Secrets。
