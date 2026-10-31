@@ -38,7 +38,7 @@ Eine Liste der Definitionen findet sich am Ende des Dokumentenabschnitts. Sollte
 
 - [*Stable*](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) Neueste stabile und getestete Version.
 
-- **NOTE: new sensors require updated an OOP2 app, for this it is recommended to use at least the latest xDrip release (Stable) version, matching the latest OOP2.**
+- **NOTE: new sensors require an updated OOP2 app, for this it is recommended to use at least the latest xDrip release (Stable) version, matching the latest OOP2.**
 
  
 
@@ -315,7 +315,7 @@ Auf dem **BT Device** Tab (nach links wischen) kannst Du weitere Verbindungsdeta
 
 - **Was passiert hier?** Wenn eine Bluetoothverbindung aufgebaut wird, wird ein Private Shared Key erzeugt. Dieser Schlüssel wird benötigt, um die Kommunikation zwischen dem Sensor und der anfragenden App (oder anfragendem Gerät) zuzulassen. Es ist sehr wahrscheinlich, dass die LL-App oder das Lesegerät während der Verbindung einen neuen privaten gemeinsamen Schlüssel für die Kommunikation erstellen. This means that after bonding, xDrip is not aware of the new key and will not be able to communicate with the sensor.
 
-  - Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readers in xDrip. In den Android-Berechtigungen der LL-App musst Du lediglich die **Standortfreigabe** ausschalten. Once this is done you should be able to use the LL app and xDrip simultaneously. Es wird empfohlen, keine Standard-Anwendung fürs NFC-Scannen festzulegen und so bei jedem NFC-Scan entscheiden zu können, mit welcher App Du den Sensor auslesen möchtest. VERGISS beim nächsten Sensorwechsel NICHT die LL-App nach dem ersten Scan zum Starten der Aufwärmphase zu beenden („Stopp erzwingen“). After the sensor is configured and receiving readings in xDrip you can then start the LL app again.
+  - Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readings in xDrip. In den Android-Berechtigungen der LL-App musst Du lediglich die **Standortfreigabe** ausschalten. Once this is done you should be able to use the LL app and xDrip simultaneously. Es wird empfohlen, keine Standard-Anwendung fürs NFC-Scannen festzulegen und so bei jedem NFC-Scan entscheiden zu können, mit welcher App Du den Sensor auslesen möchtest. VERGISS beim nächsten Sensorwechsel NICHT die LL-App nach dem ersten Scan zum Starten der Aufwärmphase zu beenden („Stopp erzwingen“). After the sensor is configured and receiving readings in xDrip you can then start the LL app again.
 
 &nbsp;
 
@@ -353,7 +353,7 @@ Auf dem **BT Device** Tab (nach links wischen) kannst Du weitere Verbindungsdeta
 
 - **You will still be able to NFC scan readings with the FSL2 Reader (version 1 with updated FW or version 2) WHEN the FSL2 sensor has been started with the FSL Reader FIRST.** The FSL2 standalone reader can still be used to scan readings on the active sensor once it is bonded via Bluetooth to xDrip.
 
-  - Du **MUSST**, um den Sensor zu starten, ihn **mit dem Libre Lesegerät scannen, mit dem Du auch die Aufwärmphase ALS ERSTES** eingeleitet hast. Danach können auch andere Softwareanwendungen NFC-Messungen vom nun aktivierten Sensor zu erhalten.
+  - You **MUST** start the sensor with the very first NFC scan to initiate sensor warmup **with the FSL Reader FIRST**. Danach können auch andere Softwareanwendungen NFC-Messungen vom nun aktivierten Sensor zu erhalten.
 - Nach meinem Verständnis signalisiert der Libre 2 Sensor exakt alle 2 Minuten seine Verfügbarkeit und Präsenz über BLE, solange noch keine Verbindung aufgebaut wurde oder ein Verbindungsaufbau erfolgt. Dies ist auf jedem Bluetooth-Gerät, das die Möglichkeit hat nach Bluetooth-Geräten zu scannen, zu erkennen. Das Gerät, das als Erstes auf dieses Signal reagiert, gewinnt das Rennen und ist das *einzige* Gerät, das sich mit dem Sensor verbinden und auslesen kann. Der private „Shared Key“ wird während des NFC-Verbindungsprozesses erzeugt und zur Entschlüsselung der FSL 2 Kommunikation verwendet. Der Sensor ist damit für andere Geräte, die diesen privaten „shared key“ nicht haben und dennoch versuchen sich zu verbinden, nicht verfügbar. Es scheint so zu sein, dass das FSL 2 Lesegerät immer, unabhängig davon wer der „Gegner“ ist, das Rennen macht.
 
 &nbsp;
@@ -375,12 +375,12 @@ Auf dem **BT Device** Tab (nach links wischen) kannst Du weitere Verbindungsdeta
 &nbsp;
 
 - **You can't run LL and xDrip in parallel together for Bluetooth readings**. LibreLink wird immer versuchen, die Bluetooth-Verbindung zum Sensor zu kapern und zu übernehmen. In diesem Fall, bist Du bis zum Laufzeitende des Sensors auf LibreLink angewiesen. Daher funktioniert es nicht immer, die Apps parallel zu nutzen. As I mention below, you can enable the LL app and do an NFC scan to get the LL reading (if you need to compare, want to retrieve history for yourself or endocrinologist reports) however you should disable it as soon as you have your reading and not try to attempt this within a minute of when xDrip is going to retrieve its Bluetooth reading. Ich bin mir aktuell nicht sicher, welchen Einfluss der Einsatz des Libre 2 Lesegeräts hat. Ich werde das zu einem späteren Zeitpunkt testen.
-- Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readers in xDrip. In den Android-Berechtigungen der LL-App musst Du lediglich die **Standortfreigabe** ausschalten. Once this is done you should be able to use the LL app and xDrip simultaneously. Es wird empfohlen, keine Standard-Anwendung fürs NFC-Scannen festzulegen und so bei jedem NFC-Scan entscheiden zu können, mit welcher App Du den Sensor auslesen möchtest. VERGISS beim nächsten Sensorwechsel NICHT die LL-App nach dem ersten Scan zum Starten der Aufwärmphase zu beenden („Stopp erzwingen“). After the sensor is configured and receiving readings in xDrip you can then start the LL app again.
+- Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readings in xDrip. In den Android-Berechtigungen der LL-App musst Du lediglich die **Standortfreigabe** ausschalten. Once this is done you should be able to use the LL app and xDrip simultaneously. Es wird empfohlen, keine Standard-Anwendung fürs NFC-Scannen festzulegen und so bei jedem NFC-Scan entscheiden zu können, mit welcher App Du den Sensor auslesen möchtest. VERGISS beim nächsten Sensorwechsel NICHT die LL-App nach dem ersten Scan zum Starten der Aufwärmphase zu beenden („Stopp erzwingen“). After the sensor is configured and receiving readings in xDrip you can then start the LL app again.
 
 &nbsp;
 
 - **NFC-Scan-Geräte von Drittanbietern können weiterhin genutzt werden**. Yes, I listed this as a disadvantage but I also wanted to point out that if something goes wrong with the sensor and LL captures control of it, you can always fall back to placing an NFC scanning device on the sensor to get readings in xDrip. Wenn Du Dich mit einem Setup, dass einen Drittanbieter NFC-Scan-Gerät (Miaomiao, Bubble, Blucon) enthält, wohler fühlst, kannst Du das Gerät auch anstelle einer direkten Bluetooth-Verbindung verwenden. In einzelnen Fällen und für bestimme Smartphones funktioniert die native Bluetooth-Verbindung und -Datenabfrage zum Sensor nicht verlässlich. In dieser Situation können diese Geräte entweder als Backup oder regulär genutzt werden. Wie dem auch sei, Du hast die Möglichkeit.
-- Wenn Du vorhast, das **FSL-Lesegerät** als NFC-Scangerät zum Auslesen der Messwerte zu nutzen, MUSS der **ALLERERSTE SCAN** zum Starten der Aufwärmphase des Libre 2 Sensors mit dem **LESEGERÄT** erfolgen.
+- If you are planning on using the **FSL Reader** as an NFC scanning device to take readings, you MUST start the FSL2 sensor with the **VERY FIRST NFC scan** to warm up the sensor with the **READER FIRST**.
 
 &nbsp;
 
@@ -425,7 +425,7 @@ Auf dem **BT Device** Tab (nach links wischen) kannst Du weitere Verbindungsdeta
 
 - Stelle sicher, dass in den Android-Einstellungen das NFC-Lesegerät aktiviert ist.
 - Der NFC-Reader muss mit **ISO 15693**-Tags kompatibel sein. Einige Cubot Smartphones sind sehr schwierig zu bedienen.
-- Schau in der Smartphone-Anleitung nach, wo die NFC-Antenne positioniert ist. Bring it to the sensor and stay on it for 10 seconds: xDrip NFC reading takes longer than the vendor app or the reader.
+- Look into your phone documentation to identify the NFC antenna position. Bring it to the sensor and stay on it for 10 seconds: xDrip NFC reading takes longer than the vendor app or the reader.
 - Try to close xDrip before scanning the sensor.
 - Make sure no other app wants to read the sensor (you might see a selection with different app choices when scanning: select xDrip but don't move the phone).
 - Try all combinations of xDrip NFC settings *Use faster multi-block reading method* and *Use Any-tag optimized reading method* knowing that NFC scans are usually more reliable with both these options **off**.
