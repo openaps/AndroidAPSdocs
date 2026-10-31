@@ -56,9 +56,9 @@ Gradle 同步可能因多種原因失敗。當你收到“gradle 同步失敗”
 
   * [檢查 git 安裝](#BuildingAaps-steps-for-installing-git)
 
-  * 如果你在 Windows 上，且剛安裝了 Git，則應重新啟動電腦，以便全域可用 Git。
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * 如果 Git 已安裝，你已經重新啟動（如果在 Windows 上），而 Git 仍無法找到：
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * 在計算機上搜索文件“git.exe”。
 
@@ -210,7 +210,7 @@ git config --global user.email 你的email@xxx.com
 
 ## 成功生成簽章 APK，但生成了 0 個建置變體
 
-當你生成簽名 apk 時，你可能會收到生成成功的通知，但告訴你“生成的 build 變體為 0”：
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![生成了 0 個建置變體的 APK](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -235,7 +235,7 @@ git config --global user.email 你的email@xxx.com
 
 ## Apk 未安裝
 
-![手機應用程序未安裝](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * 請確保你已將 "app-full-release.apk" 文件傳輸到你的手機。
 * This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
