@@ -1,6 +1,6 @@
 # Instellingen (voorkeuren)
 
-In **AAPS** v4 vind je de voorkeuren op het scherm **Instellingen**. Er zijn drie manieren om ze te openen — zie [Wijzigingen maken in je AAPS-configuratie](../SettingUpAaps/ChangeAapsConfiguration.md) voor de details:
+In **AAPS** v4 vind je de voorkeuren op het scherm **Instellingen**. Er zijn drie manieren om ze te openen — zie [Wijzigingen maken in de configuratie van AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) voor de details:
 
 1. Tik op het pictogram **Instellingen** (tandwiel) rechtsboven in het hoofdscherm: alle instellingen, verdeeld over secties die je kunt openklappen.
 2. Tik in **Configuratie** op "**Instellingen**" onder een actieve plugin: alleen de instellingen van die plugin.
@@ -119,7 +119,7 @@ Als de app beveiligd is, moet je het wachtwoord invoeren of de biometrische veri
 
 - In het voorbeeld hieronder gebruikt de bolus beveiliging het **Hoofdwachtwoord**: **AAPS** vraagt erom voordat een behandelingsdialoog zoals **Insuline** opent. Met **Biometrisch** kun je het hoofdwachtwoord invoeren als de biometrische verificatie niet werkt.
 
-![Melding Authentificatie vereist, die om het hoofdwachtwoord vraagt](../images/preferences/bolus_protection_prompt.png)
+![Melding Authenticatie vereist, die om het hoofdwachtwoord vraagt](../images/preferences/bolus_protection_prompt.png)
 
 (Preferences-password-and-pin-retention)=
 ### Geldigheid wachtwoord en pincode
@@ -200,13 +200,13 @@ Tik op het **streefbereik** op het hoofdscherm om het scherm **Tijdelijk streefd
 
 Lees [hier hoe je tijdelijke streefdoelen activeert](#TempTargets-where-can-i-select-a-temp-target).
 
-### Ontlucht/Vul standaard insuline hoeveelheden
+### Prime/Vul standaard insuline hoeveelheden
 
-Wil je de slang vullen of de canule voorvullen via **AAPS**? Dat doe je met de knoppen **Ontlucht/vul** in het uitgeklapte statuspaneel van het hoofdscherm.
+Wil je de slang vullen of de canule voorvullen via **AAPS**? Dat doe je met de knoppen **Prime/Vul** in het uitgeklapte statuspaneel van het hoofdscherm.
 
-De standaardhoeveelheden van de drie vulknoppen stel je in bij de instellingen **Ontlucht/vul**, afhankelijk van de lengte van je katheter. Typ "prime" in de zoekbalk van het hoofdscherm om ze te openen.
+De standaardhoeveelheden van de drie vulknoppen stel je in bij de instellingen **Prime/Vul**, afhankelijk van de lengte van je canule. Typ "prime" in de zoekbalk van het hoofdscherm om ze te openen.
 
-![Standaardhoeveelheden Ontlucht/vul](../images/preferences/settings_prime_fill.png)
+![Standaardhoeveelheden Prime/Vul](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
 ### Statusindicatoren
@@ -368,7 +368,7 @@ Bij gebruik van NSClientV3 moeten alle uploaders de Nightscout API v3 gebruiken.
 
 - Stel je *Nightscout URL* in (bijv. <https://yoursitename.yourplatform.dom>).
 - **Zorg ervoor dat de URL is ingevuld ZONDER /api/v1/ aan het eind.**
-- Maak in Nightscout een *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* aan (hiervoor heb je [Nightscout 15](https://nightscout.github.io/update/update/) nodig om de V3 API te gebruiken) en vul het in bij **Nightscout toegangstoken** (niet je API Secret!). Op **AAPSClient** kun je in plaats daarvan de QR-code van de hoofdtelefoon scannen. Daarmee krijgt de client een eigen token. Een client die met de pincode is gekoppeld, krijgt na het koppelen een eigen token van de hoofdtelefoon. Zie [Het eigen Nightscout-token van de client](#client-master-control-own-token).
+- Maak in Nightscout een *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* aan (hiervoor heb je [Nightscout 15](https://nightscout.github.io/update/update/) nodig om de V3 API te gebruiken) en vul het in bij **Nightscout toegangstoken** (niet je API Secret!). Op **AAPSClient** kun je in plaats daarvan de QR-code van de AAPS-telefoon scannen. Daarmee krijgt de client een eigen token. Een client die met de pincode is gekoppeld, krijgt na het koppelen een eigen token van de AAPS-telefoon. Zie [Het eigen Nightscout-token van de client](#client-master-control-own-token).
 - Hiermee kunnen gegevens worden gelezen en geschreven tussen de Nightscout-website en **AAPS**.
 - Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
 - Laat "Websockets gebruiken" aan staan (aanbevolen).
@@ -423,7 +423,7 @@ Meer informatie vind je op de pagina [SMS-commando's](../RemoteFeatures/SMSComma
 (preferences-wear)=
 ## Wear
 
-Deze sectie wordt getoond als de plugin **Wear** is ingeschakeld in [Configuratie > Communicatie](#Config-Builder-wear). Meer informatie vind je op de pagina's [Wear AAPS gebruiken op een smartwatch](../WearOS/WearOsSmartwatch.md) en [AAPS bedienen via je Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+Deze sectie wordt getoond als de plugin **Wear** is ingeschakeld in [Configuratie > Communicatie](#Config-Builder-wear). Meer informatie vind je op de pagina's [AAPS instellen op je Wear OS-horloge](../WearOS/WearOsSmartwatch.md) en [AAPS bedienen via je Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
 
 ![Instellingen > Wear](../images/preferences/settings_wear.png)
 
@@ -439,7 +439,7 @@ Deze sectie wordt getoond als de plugin **Wear** is ingeschakeld in [Configurati
 
 ![Instellingen > Wear > Instellingen Wear Wizard](../images/preferences/settings_wear_wear_wizard.png)
 
-**Aanpasbare Wijzerplaat Instellingen** bevat **Aangepaste wijzerplaten toestaan**. Een bestand met een aangepaste wijzerplaat kan waarden bevatten voor sommige instellingen van het horloge. Als deze schakelaar aan staat, mag zo'n wijzerplaat bij het laden die instellingen op het horloge veranderen; als hij uit staat, wordt de wijzerplaat geladen maar blijven de instellingen zoals ze zijn:
+**Aanpasbare Wijzerplaat Instellingen** bevat **Aangepaste wijzerplaten toestaan**. Een bestand met een aangepaste watchface kan waarden bevatten voor sommige instellingen van het horloge. Als deze schakelaar aan staat, mag zo'n watchface bij het laden die instellingen op het horloge veranderen; als hij uit staat, wordt de watchface geladen maar blijven de instellingen zoals ze zijn:
 
 ![Instellingen > Wear > Aanpasbare Wijzerplaat Instellingen](../images/preferences/settings_wear_custom_watchface.png)
 
