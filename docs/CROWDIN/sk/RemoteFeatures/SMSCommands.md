@@ -25,7 +25,7 @@ Predvolený minimálny čas medzi príkazmi na bolus je 15 minút. Z bezpečnost
 
 AAPS vás tiež SMS správou informuje, či boli vaše príkazy na diaľku, napríklad bolus alebo zmena profilu, vykonané. Je vhodné nastaviť to tak, aby sa potvrdzovacie SMS posielali aspoň na dve rôzne telefónne čísla pre prípad, že by niekto ukradol jeden z prijímajúcich telefónov.
 
-**Ak podávate bolus cez SMS príkazy, sacharidy musíte zadať samostatne (druhou SMS, **AAPSClient**...)!** Ak to neurobíte, IOB bude správny, ale COB príliš nízky. To môže viesť k tomu, že sa nepodá korekčný bolus, pretože **AAPS** predpokladá, že máte príliš veľa aktívneho inzulínu.
+**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
 
 Pri citlivých príkazoch sa na zvýšenie bezpečnosti musí použiť aplikácia Authenticator s časovo obmedzeným jednorazovým heslom.
 
@@ -110,9 +110,10 @@ Z bezpečnostných dôvodov musí za kódom odpovede nasledovať PIN. Zvoľte PI
 
 Požiadavky na PIN:
 
-* 3 až 6 číslic
-* nie rovnaké číslice (_napr._ 1111 alebo 1224)
-* nie čísla za sebou (_napr._ 1234)
+* at least 6 digits
+* digits only
+
+For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
 
 ![Ďalší povinný kód PIN na konci tokenu](../images/sms_pin.png)
 
@@ -122,54 +123,54 @@ Požiadavky na PIN:
 * Otvorte nainštalovanú aplikáciu Authenticator na _telefóne opatrovateľa_, nastavte nové pripojenie a
 * Telefónom opatrovateľa naskenujte QR kód, ktorý sa zobrazí pod **Naskenujte kód pre nastavenie AAPS OTP kódov**.
 
-![Nastavenie autentifikátora pomocou QR kódu](../images/sms_authenticator_setup.png)
+![Authenticator setup with QR code](../images/sms_authenticator_setup.png)
 
 * V časti **Otestujte jednorázové heslo** zadajte do poľa **Kód pre kontrolu** jednorazový kód z aplikácie Authenticator v telefóne opatrovateľa a za ním váš PIN:
 
-Príklad:
+Example:
 * Token z aplikácie Authenticator je 457051
 * Váš povinný PIN je 2401
 * Kód pre kontrolu: 4570512401
 
-Ak je zadanie správne, červený text „NESPRÁVNY PIN“ sa automaticky zmení na zelené „OK“. **Nie je tu žiadne tlačidlo, ktoré by ste mali stlačiť!** Proces je hotový, po zadaní kódu nemusíte stlačiť žiadne tlačidlo „OK“:
+If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. **There is no button you can press!** The process is now complete, there is no “OK” button you need to press after entering the code:
 
-![Test jednorazového hesla a resetovanie autentifikátorov](../images/sms_authenticator_test.png)
+![Test One-Time-Password and Reset Authenticators](../images/sms_authenticator_test.png)
 
-Teraz by ste mali mať SMS príkazy nastavené.
+You should now be set up with SMS commands.
 
-Ak chcete odstrániť nastavené autentifikátory, použite tlačidlo **Resetovať autentifikátory** v dolnej časti obrazovky **Nastavenie autentifikátora**. (Resetovaním autentifikátora urobíte VŠETKY už nastavené autentifikátory neplatnými. Budete ich musieť nastaviť znova.)
+Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
 
 ## Používanie SMS príkazov
 
 ### Prvé kroky s SMS príkazmi
 
-1)  Aby ste overili, že ste všetko nastavili správne, otestujte spojenie: z telefónu opatrovateľa pošlite do telefónu s **AAPS** SMS správu „bg“. Mali by ste dostať odpoveď podobnú tejto:
+1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the **AAPS** phone. You should get a response similar to that shown here:
 
 ![obrázok](../images/remote-control-06.png)
 
-Ak nedostanete žiadnu odpoveď, pozrite si časť [Riešenie problémov](#SMSCommands-troubleshooting) nižšie.
+If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
 
-2)  Teraz vyskúšajte SMS príkaz, ktorý vyžaduje aplikáciu Authenticator, _napr._ „target hypo“. Telefón opatrovateľa dostane odpoveď s výzvou, aby ste zadali **šesťmiestne heslo** z aplikácie Authenticator a za ním ďalší tajný **PIN**, ktorý poznajú iba opatrovatelia/sledujúci (spolu desať číslic, ak má váš PIN iba 4 číslice).
+2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
 
-Keď budete SMS príkaz posielať prvýkrát, skúste to v blízkosti telefónu s **AAPS**, aby ste videli, ako to funguje:
+When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
 
 ![obrázok](../images/remote-control-16.png)
 
-Telefón opatrovateľa dostane od **AAPS** SMS odpoveď, ktorá potvrdí, či bol SMS príkaz na diaľku úspešne vykonaný.
+The caregiver’s phone will receive an SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully.
 
-Ak bol príkaz úspešný, dostanete odpoveď, ktorá to potvrdí. Ak nastane problém, dostanete chybovú správu. Časté chyby nájdete v časti [Riešenie problémov](#SMSCommands-troubleshooting) nižšie.
+If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message. See [Troubleshooting](#SMSCommands-troubleshooting) below for common errors.
 
-**Nápoveda**: Ak sa bude posielať veľa SMS, môže byť užitočné mať v mobilnom programe neobmedzené SMS (pre každý používaný telefón).
+**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
 ### Podávanie bolusov k jedlu pomocou SMS príkazov
 
-Bolus inzulínu na diaľku môžete podať cez **SMS príkazy** alebo cez spárovaný **AAPSClient** (pozrite [Ovládanie Master ↔ Client](#client-master-control)); cez webovú stránku Nightscout to nie je možné. Sacharidy môžete zadať aj cez SMS alebo **AAPSClient**. Pomocou SMS nie je možné poslať príkaz na sacharidy aj na inzulín v jednej SMS správe. Tieto príkazy musíte poslať samostatne takto:
+Remote bolusing of insulin can be done via **SMS Commands** or through a paired **AAPSClient** (see [Master ↔ Client control](#client-master-control)); it cannot be done through the Nightscout website. Carbs can be announced through SMS or **AAPSClient** as well. With SMS, it is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
 
-1)  Pošlite bolus inzulínu (_napr._ „bolus 2“ podá bolus 2 jednotky). Bolus cez SMS príkazy zodpovedá voľbe **Ošetrenia** → **Inzulín** v **AAPS**. 2)  Pošlite sacharidy (_napr._ „carbs 20“ zadá 20 g sacharidov). Zodpovedá to voľbe **Ošetrenia** → **Sacharidy** v **AAPS**.
+1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to **Treatments** → **Insulin** in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to **Treatments** → **Carbs** in **AAPS**.
 
-Aby ste predišli hypoglykémii, je dobré začať opatrne a podať bolus s **menej inzulínu**, než by zodpovedalo vášmu sacharidovému pomeru, pretože neberiete do úvahy aktuálnu glykémiu ani jej trend.
+To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
 
-**Poradie, v akom tieto príkazy pošlete, je dôležité**. Ak akýmkoľvek spôsobom zadáte veľké množstvo sacharidov a máte povolené SMB, **AAPS** môže hneď reagovať a podať časť bolusu inzulínu. Ak potom skúsite poslať bolus inzulínu _po_ zadaní sacharidov, môžete sa stretnúť s nepríjemným oneskorením a so správou „bolus prebieha“ a potom musíte skontrolovať, čo bolo podané ako SMB. Alebo ak si nevšimnete, že sa podáva SMB, a váš vlastný následný bolus je tiež úspešný, môže sa k jedlu celkovo podať príliš veľa inzulínu. Preto pri podávaní bolusov k jedlu na diaľku vždy pošlite bolus inzulínu _pred_ zadaním sacharidov. Ak chcete, môžete **AAPSClient** kombinovať so SMS príkazmi: sacharidy zadané v spárovanom **AAPSClient** nepotrebujú overovací kód, a preto sú rýchlejšie než SMS príkazy. Sacharidy ani iné ošetrenia zadané na webovej stránke Nightscout sa **nepoužijú**, kým je zapnuté ovládanie z klienta; **AAPS** je vtedy v [režime zvýšeného zabezpečenia](#client-master-control-hardened-mode).
+**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can combine **AAPSClient** with SMS commands: carbs entered on a paired **AAPSClient** need no authentication code and are therefore quicker than SMS commands. Carbs or other treatments entered on the Nightscout website are **not** applied while client control is on; **AAPS** is then in [hardened mode](#client-master-control-hardened-mode).
 
 (SMSCommands-commands)=
 ## Príkazy
@@ -179,24 +180,24 @@ Aby ste predišli hypoglykémii, je dobré začať opatrne a podať bolus s **me
 :local: true
 ```
 
-Príkazy musíte posielať v angličtine. Odpoveď bude vo vašom jazyku, ak je text odpovede už [preložený](#translations-translate-strings-for-AAPS-app). Na veľkosti písmen v príkazoch nezáleží, môžete použiť malé aj veľké písmená.
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](#translations-translate-strings-for-AAPS-app). The commands are not case-sensitive, you can use lower or upper case.
 
-![Príklad SMS príkazov](../images/SMSCommands.png)
+![SMS Commands Example](../images/SMSCommands.png)
 
-**Tabuľky SMS príkazov** nižšie ukazujú všetky možné SMS príkazy. Pre lepšie pochopenie sú uvedené _príkladové hodnoty_. Príkazy majú rovnaký rozsah možných hodnôt (ciele, percento profilu atď.), aký je povolený v samotnej aplikácii **AAPS**.
+The **SMS Commands Tables** below show all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the **AAPS** app itself.
 
 (authentication-or-not)=
 ### S overením alebo bez neho?
 
-Niektoré SMS príkazy dajú odpoveď hneď, iné vyžadujú silné **overenie** cez aplikáciu Authenticator. Jednoduchý dotaz ako „**BG**“ (žiada aktuálnu glykémiu) sa rýchlo napíše, nepotrebuje overenie a vráti informácie o stave **AAPS**, ako vidíte nižšie:
+Some SMS commands give an immediate response, and some SMS commands require strong **authentication** through the Authenticator app. A simple enquiry like “**BG**” (which requests an update on current glucose) is quick to type, doesn't need authenticating, and returns the **AAPS** status information shown below:
 
 ![obrázok](../images/remote-control-06.png)
 
-Príkazy, ktoré potrebujú vyššiu bezpečnosť, vyžadujú zadanie kódu, napríklad:
+Commands which need more security require a code to be entered, for example:
 
-![SMS authenticated for markdown-smaller](../images/remote-control-07.png)
+![SMS authenticated](../images/remote-control-07.png)
 
-Stĺpec *Overenie* v tabuľkách nižšie ukazuje, či každý príkaz vyžaduje takéto silné overenie.
+The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
 
 ### Dáta CGM
 
@@ -223,7 +224,7 @@ Stĺpec *Overenie* v tabuľkách nižšie ukazuje, či každý príkaz vyžaduje
 | BASAL 30% 50      | Áno      | Spustí bazál 30 % na 50 min    |
 | BASAL STOP/CANCEL | Áno      | Zastaví dočasný bazál          |
 
-Niektoré pumpy prijímajú dočasný bazál iba v percentách, iné iba v U/h. Ak použijete iný tvar, **AAPS** odpovie *„Táto pumpa prijíma dočasný bazál len v percentách, nie v U/h.“* (alebo naopak) a nič nenastaví. Trvanie musí byť násobkom kroku trvania dočasného bazálu vašej pumpy.
+Some pumps take a temp basal only in percent, others only in U/h. If you use the other form, **AAPS** answers *"This pump takes a temp basal only in percent, not in U/h."* (or the reverse) and sets nothing. The duration must be a multiple of your pump's temp basal duration step.
 
 
 ### Okruh
@@ -239,7 +240,7 @@ Niektoré pumpy prijímajú dočasný bazál iba v percentách, iné iba v U/h. 
 
 ### Bolus
 
-Bolus na diaľku nie je povolený do 15 min (túto hodnotu je možné upraviť, iba ak sú pridané 2 telefónne čísla) po poslednom príkaze bolusu alebo príkazoch na diaľku! V takom prípade bude odpoveď *Diaľkovo ovládaný bolus nie je momentálne povolený. Skúste to neskôr.* Táto odpoveď príde aj vtedy, keď pumpa práve podáva bolus.
+Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
 
 | Príkaz               | Overenie | Funkcia a *odpoveď*                                                                                                                                               |
 | -------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -259,7 +260,7 @@ Bolus na diaľku nie je povolený do 15 min (túto hodnotu je možné upraviť, 
 | PROFILE 1      | Áno      | Prepne profil na profil 1 v zozname.<br/>Použite čísla, ktoré vráti príkaz **PROFILE LIST**,<br/>nie názvy, pod ktorými ste profily uložili |
 | PROFILE 2 30   | Áno      | Prepne profil na Profile2 s 30 %                                                                                                                        |
 
-Percento musí byť medzi 30 a 250 %, rovnako ako v aplikácii. Hodnota mimo tohto rozsahu sa odmietne ešte predtým, než budete vyzvaní na zadanie overovacieho kódu.
+The percentage must be between 30 and 250 %, as in the app. A value outside this range is refused before you are asked for the authentication code.
 
 ### Dočasné ciele
 
@@ -275,7 +276,7 @@ Percento musí byť medzi 30 a 250 %, rovnako ako v aplikácii. Hodnota mimo toh
 | Príkaz           | Overenie | Funkcia a *odpoveď*                                                                                                                                                                                                                                                |
 | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | RESTART          | Áno      | Reštartuje AAPS. Užitočné pri problémoch, ktoré sa zvyčajne vyriešia reštartom.                                                                                                                                                                                    |
-| SMS DISABLE/STOP | Áno      | Ak chcete vypnúť službu SMS na diaľku, odpovedzte kódom.<br/>Majte na pamäti, že ju budete môcť znova zapnúť<br/>iba priamo v hlavnom telefóne (master) s **AAPS**.                                                                                    |
+| SMS DISABLE/STOP | Áno      | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                   |
 | HELP             | Nie      | Vráti všetky funkcie, na ktoré sa môžete opýtať:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Ďalším príkazom ***HELP ***FUNCTION****** zobrazíte<br/>všetky možnosti dostupné v tejto časti. |
 | HELP BOLUS       |          | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                               |
 
@@ -289,27 +290,27 @@ Percento musí byť medzi 30 a 250 %, rovnako ako v aplikácii. Hodnota mimo toh
 
 ### Čo _nemôžeme_ robiť pomocou SMS príkazov?
 
-1)  **Nemôžete nastaviť _dočasné_ prepnutie profilu** (napríklad nastaviť „profile exercise“ na 60 minút), ale môžete natrvalo prepnúť na „profile exercise“. Dočasné prepnutia profilu môžete namiesto toho nastaviť cez **AAPSClient**.
+1)  **You cannot set a _temporary_ profile switch** (so for example, setting "profile exercise" for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profile switches can instead be set through **AAPSClient**.
 
-2)  **Nemôžete zrušiť automatizácie** ani **nastaviť vlastné ciele**, existujú však približné riešenia: Ako príklad si predstavte, že bežný cieľ v profile je 5,5. V AAPS ste nastavili automatizáciu, ktorá kvôli hodine telocviku v škole vždy nastaví vysoký cieľ 7,0 medzi 14:30 a 15:30. Jednou z podmienok automatizácie je, že „neexistuje žiadny dočasný cieľ“. Tento týždeň sa na poslednú chvíľu dozviete, že telocvik je zrušený a namiesto neho bude jedenie pizze, ale vaše dieťa je už v škole s telefónom s **AAPS**. Ak automatizácia spustí vysoký dočasný cieľ 7,0 a vy ho zrušíte (v telefóne s **AAPS** alebo na diaľku), podmienky automatizácie sú stále splnené a **AAPS** o minútu jednoducho nastaví vysoký cieľ znova.
+2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the **AAPS** phone. If the high temporary target of 7.0 is started by the automation, and you cancel it (on the **AAPS** phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
 
-**Ak by ste mali prístup k telefónu s AAPS**, mohli by ste automatizáciu vypnúť/upraviť, alebo ak to nechcete urobiť, jednoducho nastaviť nový dočasný cieľ 5,6 na 60 min ťuknutím na cieľ na hlavnej obrazovke alebo cez **Spravovať** → **Dočasný cieľ**. Tým by ste zabránili tomu, aby automatizácia nastavila vysoký cieľ 7,0.
+**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min by pressing on the target on the main screen, or via **Manage** → **Temp Target**. This would prevent the automation from setting the high target of 7.0.
 
-**Ak nemáte prístup k telefónu s AAPS**, SMS príkazy môžete použiť na približné riešenie: napríklad príkazom „target meal“ nastavíte cieľ 5,0 na 45 minút (ďalšie predvolené ciele sú 8,0 pre aktivitu alebo hypoglykémiu, pozrite tabuľku). Pomocou SMS príkazov však nemôžete zadať _konkrétnu_ hodnotu cieľa (napríklad 5,6 na 60 minút), na to by ste potrebovali **AAPSClient**.
+**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** to do this.
 
 ### Čo sa stane, ak si to s práve poslaným príkazom rozmyslím?
 
-**AAPS** vykoná iba posledný príkaz. Ak teda napíšete „bolus 1.5“ a potom bez overenia pošlete nový príkaz „bolus 1“, skorší príkaz 1.5 sa ignoruje. **AAPS** vždy pošle do telefónu opatrovateľa odpoveď, ktorá potvrdí, o aký SMS príkaz ide, ešte predtým, než budete vyzvaní na zadanie overovacieho kódu, a tiež odpoveď po vykonaní akcie.
+**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
 
 ### Prečo som nedostal(a) odpoveď na SMS príkaz?
 
-Môže to mať jeden z týchto dôvodov:
+It could be for one of these reasons:
 
-1)  Správa sa nedostala do telefónu (problémy so sieťou). 2)  **AAPS** ešte spracúva požiadavku (_napr._ bolus, ktorého podanie môže chvíľu trvať podľa rýchlosti podávania bolusu). 3)  Telefón s **AAPS** nemá v čase prijatia príkazu dobré Bluetooth spojenie s pumpou a príkaz zlyhal (to zvyčajne spustí alarm v telefóne s **AAPS**).
+1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The **AAPS** phone does not have a good Bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the **AAPS** phone).
 
 ### Žiadna odpoveď na SMS príkazy
 
-V telefóne opatrovateľa a/alebo v telefóne s **AAPS** skúste vypnúť tieto možnosti:
+On the caregiver phone and/or **AAPS** phone, try disabling the following options :
 * **Send as chat message** ![Vypnutie odosielania SMS ako chatových správ](../images/SMSdisableChat.png)
 * Ak používate aplikáciu Android Messages alebo Google Messages (Správy), vypnite správy RCS:
   - otvorte konkrétnu SMS konverzáciu v aplikácii Správy
@@ -319,7 +320,7 @@ V telefóne opatrovateľa a/alebo v telefóne s **AAPS** skúste vypnúť tieto 
 
 ### Chyby pri vykonávaní príkazov
 
-Príkaz nemusí byť úspešný z viacerých dôvodov:
+There are several possible reasons the command may not be successful:
 
 * Nastavenie SMS príkazov nie je dokončené/správne
 * Poslali ste príkaz v nesprávnom formáte (napríklad „disconnect pump 45“ namiesto „pump disconnect 45“)
@@ -328,25 +329,25 @@ Príkaz nemusí byť úspešný z viacerých dôvodov:
 * Telefón s **AAPS** je mimo dosahu pumpy alebo s ňou stratil spojenie
 * Systém práve podáva bolus
 
-Časté chyby ukazujú príklady nižšie:
+Common errors are shown in the examples below:
 
 ![obrázok](../images/remote-control-17.png)
 
 ### Ako môžem zastaviť príkaz, ktorý už bol overený?
 
-Nemôžete. Bolus poslaný cez SMS však môžete zrušiť priamo v telefóne s **AAPS** – ak ste rýchli, jednoducho ho zrušíte v okne s priebehom bolusu. Mnohé SMS príkazy (okrem bolusov a zadania sacharidov) sa dajú ľahko vrátiť späť, alebo sa pri chybe dajú urobiť kroky, ktoré zmiernia nechcené účinky.
+You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
 
-Aj pri chybách v bolusoch a zadaní sacharidov môžete niečo urobiť. Napríklad ak ste zadali 20 g sacharidov, ale vaše dieťa zje iba 10 g a vy (ani opatrovateľ na mieste) nemôžete záznam vymazať priamo v telefóne s **AAPS**, môžete nastaviť vysoký dočasný cieľ alebo znížený profil, aby bol **AAPS** menej agresívny.
+For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
 
 ### Viacnásobné SMS
 
-Ak opakovane dostávate tú istú správu (_napr._ o prepnutí profilu), možno ste omylom vytvorili slučku s inými aplikáciami. Môže to byť napríklad xDrip. Ak áno, uistite sa, že xDrip (ani žiadna iná aplikácia) nenahráva ošetrenia do Nightscoutu.
+If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
 
-Ak je iná aplikácia nainštalovaná na viacerých telefónoch, vypnite nahrávanie na všetkých z nich.
+If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
 (sms-commands-too-many-messages)=
 ### Dostávam od SMS príkazov až príliš veľa SMS správ. Môžem ich obmedziť alebo vypnúť?
 
-Používanie SMS príkazov môže viesť k mnohým automatickým správam z telefónu s **AAPS** do telefónu opatrovateľa. Ak máte v **AAPS** nastavené automatizácie, budete dostávať aj správy, napríklad „Bazálny profil v pumpe aktualizovaný“. Ak sa bude posielať veľa SMS, môže byť užitočné mať neobmedzené SMS v mobilnom programe telefónu s **AAPS** (aj pre každý používaný telefón opatrovateľa) a vo všetkých telefónoch vypnúť upozornenia, zvuky alebo vibrácie pre SMS. SMS príkazy nie je možné používať bez toho, aby ste dostávali tieto správy. Preto možno budete chcieť na priamu komunikáciu s dieťaťom (ak je dosť staré) používať iný spôsob než SMS. Medzi bežné alternatívne komunikačné aplikácie, ktoré používajú opatrovatelia s **AAPS**, patria Whatsapp, Lime, Telegram a Facebook Messenger.
+Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
 
-SMS „Profile changed“ (profil zmenený) môžete vypnúť, ak zmena profilu prišla z Nightscoutu. Na to vytvorte súbor s názvom **presne**  `do_not_send_sms_on_profile_change` v priečinku `extra` vo vašom AAPS priečinku.
+It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
