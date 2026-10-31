@@ -46,7 +46,7 @@ To tell the apps apart, some elements have a different color: yellow for **AAPSC
 
 ![圖像](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-然後前往電腦上的 _下載_ 資料夾。在 Windows 上，-下載- 將顯示右邊的選單欄：
+然後前往電腦上的 _下載_ 資料夾。 On Windows, _downloads_ will show in the right hand ribbon:
 
 ![圖像](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
@@ -62,7 +62,7 @@ The same rule applies when you install several client apps (**AAPSClient**, **AA
 
 ### Synchronization: AAPSClient and AAPS set up
 
-Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion)). The example below shows the synchronization set-up with NSClientV3 and Nightscout 15; other data sources are available in __AAPS__ (e.g. xDrip).
+Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). The example below shows the synchronization set-up with NSClientV3 and Nightscout 15; other data sources are available in __AAPS__ (e.g. xDrip).
 
 In **Configuration** > **Communication**, the user synchronizes their data with Nightscout through __NSClientV3__ (using the v3 API), set up the same way for both __AAPS__ and the follower phone.
 
@@ -279,7 +279,7 @@ b)  The user wishes to avoid typing an authentication code (as required for SMS 
 
 A smartwatch needs **Wear OS 3 or newer** to be able to control **AAPS**. Please check the technical specifications of the watch, and see the [Smartwatches page](../Getting-Started/Watches.md). 如果不確定，請在 **AAPS** 的 Facebook/Discord 群組中搜尋或詢問。
 
-以下是設置流行型號 Samsung Galaxy Watch 4（40 毫米）的具體操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。如果你有設置其他智慧型手錶的經驗，並且認為這對其他用戶有幫助，請[編輯文件](../SupportingAaps/HowToEditTheDocs.md)，將你的發現分享給更廣泛的 **AAPS** 社群。
+Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。如果你有設置其他智慧型手錶的經驗，並且認為這對其他用戶有幫助，請[編輯文件](../SupportingAaps/HowToEditTheDocs.md)，將你的發現分享給更廣泛的 **AAPS** 社群。
 
 ### 選項 3) 在手錶上運作 AAPSClient 以遠端控制手機上的 **AAPS**
 
