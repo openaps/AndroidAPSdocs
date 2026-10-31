@@ -400,7 +400,7 @@ Ak **AAPS** musel dávku obmedziť, napríklad preto, že vypočítaný bolus je
     
     Hodinky s Wear OS sú zariadenia s veľmi obmedzenou energiou. Veľkosť puzdra hodiniek obmedzuje kapacitu batérie, ktorá sa do nich zmestí. Aj napriek nedávnemu pokroku v hardvéri aj v softvéri treba hodinky s Wear OS stále nabíjať každý deň.
     
-    Ak vám batéria nevydrží celý deň (od rána do večera), tu je niekoľko tipov na riešenie problému.
+    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
     
     Najviac batérie spotrebúva:
     
