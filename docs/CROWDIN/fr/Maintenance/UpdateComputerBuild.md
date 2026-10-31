@@ -53,7 +53,7 @@ The minimal version required is described in the [Building Instructions](#Buildi
 * Wait while download is in progress, you will see this as info in the bottom bar. Une fois terminé, vous verrez un message de réussite.
 
   ```{note}
-  The files that were updated may vary! This is not an indication
+  The files that were updated may vary! This is not an indication of a problem.
   ```
 
    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
