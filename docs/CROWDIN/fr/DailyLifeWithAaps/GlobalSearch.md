@@ -12,7 +12,7 @@
 
 ## Ouvrir la recherche
 
-Appuyez sur le champ **🔍 Recherche** en haut de la **Vue d'ensemble** (à côté du menu ☰). Commencez à taper : les résultats apparaissent pendant la saisie (après une courte pause), groupés par catégorie :
+Appuyez sur le champ **🔍 Recherche** en haut de la **Vue d'ensemble** (à côté du menu ☰). Commencez à taper : les résultats apparaissent pendant la saisie (après une courte pause), groupés par catégorie :
 
 ![Résultats de la recherche globale, groupés par catégorie](../images/v4/Search/search_results.png)
 
@@ -22,7 +22,7 @@ Effacez le champ avec le **✕**, ou fermez la recherche avec le bouton **Retour
 
 ## Rechercher en anglais *ou* dans votre langue
 
-Ceci est important à savoir : la recherche compare **à la fois** le texte dans votre **langue choisie** **et** le texte original en **anglais**.
+Ceci est important à savoir : la recherche compare **à la fois** le texte dans votre **langue choisie** **et** le texte original en **anglais**.
 
 - Si votre application est, par exemple, en allemand ou en tchèque, vous pouvez taper le mot **traduit** **ou** le mot **anglais** — les deux trouvent le paramètre.
 - Une correspondance sur le titre **traduit** est classée en premier, puis le titre **anglais**, puis les **descriptions** traduites et anglaises.
@@ -34,7 +34,7 @@ Ainsi, un guide ou un message de forum écrit en anglais vous mène quand même 
 
 ## Ce que couvre la recherche
 
-Les résultats sont groupés dans ces catégories :
+Les résultats sont groupés dans ces catégories :
 
 - **Plugins** — chaque plugin visible dans votre version (les mêmes que ceux listés dans [Configuration](../SettingUpAaps/ConfigBuilder.md)). Chaque ligne de plugin a son **interrupteur d'activation**, vous pouvez donc activer ou désactiver un plugin directement depuis les résultats — appuyer sur la ligne d'un plugin désactivé (activable) l'active.
 - **Dialogues** — les écrans de traitement/action et de gestion (Assistant Bolus, Insuline, Bolus étendu, Étalonnage, Cible Temp, Profil, …). Les écrans qui ne s'appliquent pas à votre version sont exclus (par exemple *Associer au maître* sur un maître, *Clients autorisés* sur un client).
@@ -44,7 +44,7 @@ Les résultats sont groupés dans ces catégories :
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-Une préférence dont le plugin est actuellement **désactivé** apparaît quand même — **grisée** et non cliquable — avec une remarque *« Plugin … désactivé »*, pour que vous sachiez que le paramètre existe et quel plugin activer pour y accéder.
+Une préférence dont le plugin est actuellement **désactivé** apparaît quand même — **grisée** et non cliquable — avec une remarque *« Plugin … désactivé »*, pour que vous sachiez que le paramètre existe et quel plugin activer pour y accéder.
 
 ![Un paramètre grisé d'un plugin désactivé](../images/v4/Search/search_disabled_plugin.png)
 ```
@@ -53,19 +53,19 @@ Une préférence dont le plugin est actuellement **désactivé** apparaît quand
 
 ## Résultats de la documentation (en ligne)
 
-Pendant la recherche locale, **AAPS** interroge aussi en parallèle la **documentation AndroidAPS** officielle (hébergée sur ReadTheDocs). Les pages trouvées apparaissent dans un groupe **Documentation** en bas, chacune avec une icône 📖, le titre de la section et un court extrait :
+Pendant la recherche locale, **AAPS** interroge aussi en parallèle la **documentation AndroidAPS** officielle (hébergée sur ReadTheDocs). Les pages trouvées apparaissent dans un groupe **Documentation** en bas, chacune avec une icône 📖, le titre de la section et un court extrait :
 
 ![Résultats de la documentation (wiki) avec extraits](../images/v4/Search/search_documentation.png)
 
 - Si la documentation est traduite dans la langue de votre application, **AAPS** recherche en même temps dans les pages traduites et dans les pages en anglais. Les pages dans votre langue viennent en premier, puis les pages en anglais qui n'ont pas déjà été trouvées.
 - Appuyer sur un résultat de la documentation ouvre cette page dans votre **navigateur**.
-- La recherche dans la documentation nécessite **internet** — hors ligne, vous voyez à la place la remarque *« La recherche dans la documentation nécessite une connexion internet »*, et les résultats locaux (dans l'application) fonctionnent toujours normalement.
+- La recherche dans la documentation nécessite **internet** — hors ligne, vous voyez à la place la remarque *« La recherche dans la documentation nécessite une connexion internet »*, et les résultats locaux (dans l'application) fonctionnent toujours normalement.
 
 ---
 
 ## Ouvrir un résultat
 
-Appuyez sur un résultat pour y aller directement :
+Appuyez sur un résultat pour y aller directement :
 
 - **Plugin** → ouvre ce plugin.
 - **Dialogue** → ouvre cet écran ou cette boîte de dialogue.
@@ -79,7 +79,7 @@ L'ouverture des paramètres et des actions protégées respecte toujours votre *
 
 ## Raccourcis pour utilisateurs avancés
 
-Deux recherches spéciales listent toute une catégorie en une fois :
+Deux recherches spéciales listent toute une catégorie en une fois :
 
 - `%PLUGINS%` — liste **tous** les plugins.
 - `%DIALOGS%` — liste **toutes** les boîtes de dialogue/écrans d'action.
