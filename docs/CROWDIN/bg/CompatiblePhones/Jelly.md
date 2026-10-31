@@ -10,7 +10,7 @@
 **Предимства**
 
 * Той е наистина малък.
-* Дори да кажете на хората, те може да не го смятат за нормален смартфон и по-лесно ще го приемат като изключение там, където телефоните обикновено не са разрешени.
+* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
 
 **Недостатъци**
 
@@ -33,7 +33,7 @@ Jelly има силни функции за оптимизация, които *
 
 ### Оптимизация на живота на батерията
 
-За да не пречи на **AAPS** (и на други **DIY приложения** като BYODA, xDrip, OOP2, Juggluco и др.), изключете ограничението в „Използване на батерията“ (battery usage) на Jelly Star, като изберете „Неограничено“ (unrestricted).
+To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
