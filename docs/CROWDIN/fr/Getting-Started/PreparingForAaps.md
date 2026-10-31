@@ -111,7 +111,7 @@ De cette façon, vous pourrez utiliser exactement le même fichier keystore à c
 
 Par ailleurs, **AAPS** vous donne la possibilité d'[exporter tous vos paramètres de configuration](../Maintenance/ExportImportSettings.md). Cela vous permet de récupérer votre système en toute sécurité tout en changeant de téléphone, de mettre à jour/réinstaller l'application avec un minimum d'interruption. 
 
-#### Troubleshooting
+#### Dépannage
 
 N'hésitez pas à contacter la communauté AAPS si vous avez un doute sur quoi que ce soit – il n'y a pas de question bête ! Tous les utilisateurs, quel que soit leur niveau d'expérience, sont encouragés à poser leurs questions. Les temps de réponse aux questions sont généralement courts, grâce au grand nombre d'utilisateurs d'**AAPS**.
 
@@ -190,7 +190,7 @@ Voici une estimation approximative du temps nécessaire :
 
 Même lorsque vous serez complètement opérationnel sur **AAPS**, vous aurez toujours besoin d'ajuster régulièrement vos paramètres afin d'améliorer la gestion globale de votre diabète.
 
-## Requirements
+## Prérequis
 
 ### Considérations médicales
 
