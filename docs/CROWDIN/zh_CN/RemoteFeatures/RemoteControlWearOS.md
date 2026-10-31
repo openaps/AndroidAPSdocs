@@ -400,7 +400,7 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     Wear OS watches are very power-constrained devices. 手表表壳的大小限制了内置电池的容量。尽管在硬件和软件方面取得了最近的进步，Wear OS手表仍然需要每天充电。
     
-    如果实际电池续航时间短于一天（从日落到日出），以下是一些故障排除提示：
+    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
     
     Main battery-demanding areas are:
     
