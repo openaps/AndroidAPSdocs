@@ -13,7 +13,7 @@ This is the recommended way to build AAPS from an **Android phone**. It also wor
 
 **AAPS Builder** builds the AAPS app for you in GitHub, the free code-hosting website. There is nothing to install on your phone, and no preparation file to open.
 
-A setup page on this site walks you through it. It takes about 10 minutes the first time:
+A setup page walks you through it. It takes about 10 minutes the first time:
 
 1. Create an empty **private** repository in your GitHub account: the setup page opens GitHub with everything filled in, you only confirm.
 2. Add the **build workflow**, the file that tells GitHub how to build AAPS.
@@ -27,7 +27,7 @@ You do **not** need to fork AndroidAPS: the AAPS source code is downloaded from 
 ```{admonition} Where the code comes from
 :class: note
 
-The setup page and the build workflow are part of this documentation: they are maintained and reviewed together with it. The <a href="../_static/aaps-builder/aaps-builder-build.yml">workflow</a> you add to your repository is short: it runs the [build steps](https://github.com/openaps/AndroidAPSdocs/blob/dev/.github/workflows/aaps-builder.yml) kept in the documentation repository, pinned to one reviewed version. You can read both before you use them. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
+The setup page and the build workflow are maintained by the AAPS developers in the [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder) repository. The [workflow](https://github.com/nightscout/aaps-builder/blob/main/aaps-builder-build.yml) you add to your repository is short: it runs the [build steps](https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/aaps-builder.yml) kept in that repository, pinned to one reviewed version. You can read both before you use them. When it builds, the workflow downloads only the official AAPS source code and GitHub's own build tools. Your keystore never leaves your browser and your private repository.
 ```
 
 (aaps-builder-before-you-start)=
@@ -93,13 +93,13 @@ In [step 3](#aaps-builder-step3) of the setup page:
 
 Keep `keystore.zip` and its `ZIP_PASSWORD` somewhere safe, off your phone: it is the backup of your key.
 
-Your fork's Google Drive access can't be copied either. To also save the builds of AAPS Builder in Google Drive, do [step 7](#aaps-builder-google-drive). You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
+To also save the builds of AAPS Builder in Google Drive, do [step 7](#aaps-builder-google-drive): the setup page gets a new `GDRIVE_OAUTH2` for you. You can keep your fork until AAPS built with AAPS Builder is installed on your phone.
 
 ## Open the setup page
 
-**→ [Open the AAPS Builder setup page](#aaps-builder-setup)**
+**→ <a href="https://nightscout.github.io/aaps-builder/" target="_blank" rel="noopener">Open the AAPS Builder setup page</a>** (nightscout.github.io/aaps-builder)
 
-Keep this documentation page open: long-press the link above and choose **Open in new tab**. The steps below explain each part of the setup page in more detail.
+The link opens the setup page in a new tab. Keep this documentation page open: the steps below explain each part of the setup page in more detail. The setup page is in English: use this page to follow it in your language.
 
 The setup page opens each GitHub page in a new Chrome tab. To come back to the setup page, tap the tab button next to Chrome's address bar (the square with a number) and choose the AAPS Builder setup page.
 
@@ -123,7 +123,13 @@ This step creates an empty private repository in your GitHub account. Only you c
    **Already created an empty private repository yourself?** Type its exact name here, don't tap **Create my private repository**, and go to [step 2](#aaps-builder-step2).
    ```
 
-4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`.
+   ```{note}
+   **Already have an AAPS Builder repository** (from an earlier version of the setup page or from the old template)? Don't create a new one: type its exact name, skip **Create my private repository**, and update the workflow as explained in [Updating AAPS](#aaps-builder-updates). Your secrets stay as they are. If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 3.
+
+   Don't type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+   ```
+
+4. Check the line **Your repository:** it shows `github.com/<your username>/my-aaps`. The setup page remembers the name from your last visit: check it every time before you use its buttons.
 
 5. Tap **Create my private repository**.
 
@@ -332,17 +338,17 @@ From September 2026, Google's [Android developer verification](#android-develope
 
 You can also have each build saved to your Google Drive, in the folder `AAPS/<version>`. This is optional: the app is always available on the build page.
 
-It needs one more secret, `GDRIVE_OAUTH2`. You get its value with the preparation file used by the other browser build methods:
+It needs one more secret, `GDRIVE_OAUTH2`. Step 7 of the setup page gets it from Google for you, on a phone or a computer. **AAPS** can then only see and change the files it creates in your Google Drive, nothing else.
 
-1. On a **computer**, download the preparation file and open it as described in [Option 1 – Computer](BrowserBuildO1Computer.md). Skip the keystore part: you already have your key.
-2. Follow [Step 3 – Authorize Google Drive](#aaps-ci-google-drive-auth) to get the `GDRIVE_OAUTH2` value.
-3. On the setup page, step 7 opens your secrets page.
-
-   ![Setup page step 7](../images/Building-the-App/CI/AapsBuilder48_Step7.png)
-
-   Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Paste your `GDRIVE_OAUTH2` value into the big **Secret** box and tap **Add secret**.
+1. On the setup page, tap **Connect Google Drive**. Google opens in a new tab.
+2. Choose your Google account and allow access. If Google says the app is not verified, tap **Advanced**, then **Go to …**.
+3. The new tab then shows an error such as **This site can't be reached** or **127.0.0.1 refused to connect**. **This is expected:** Google's answer is in the address of that tab. Tap the address bar, select the whole address (it starts with `http://127.0.0.1:47913/`) and copy it.
+4. Go back to the setup page tab within a few minutes: Google's answer is only valid for a short time, and only once. Paste the address into **Paste the copied address here** and tap **Get GDRIVE_OAUTH2**. The page shows **GDRIVE_OAUTH2 is ready**.
+5. Tap **Open the secrets page**. Tap **Copy name**, then paste it into the small **Name** field (the name is `GDRIVE_OAUTH2`). Tap **Copy secret**, paste it into the big **Secret** box and tap **Add secret**.
 
 From the next build, the APKs are also saved in Google Drive.
+
+Already have a `GDRIVE_OAUTH2` value from the preparation file of the other browser build methods? It works too: add it as the `GDRIVE_OAUTH2` secret.
 
 Google stops the access if you don't build for 6 months, or if you change your Google password. The build then tells you so: redo these steps. See [Google refresh token expired](#aaps-ci-google-token-expired).
 
@@ -378,7 +384,7 @@ To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the ste
 - **"Page not found" (404) when the setup page opens GitHub**: log in to github.com in the same browser (GitHub shows 404 for private repositories when you are not logged in). If you are logged in, the username or repository name in step 1 of the setup page does not match your repository. Type the exact names.
 - **"No GitHub user with this name"** in step 1: type your GitHub username, as shown in your GitHub profile, not your e-mail.
 - **No Download link, or the GitHub app opened**: the GitHub app cannot download builds. Open the build in Chrome as explained in [step 6](#aaps-builder-step6). To stop GitHub links opening in the app: Android **Settings** → **Apps** → **GitHub** → **Open by default** → turn off **Open supported links**.
-- **"Could not read the workflow file"** on the setup page: reload the page and tap the button again. The setup page must be opened from this documentation site.
+- **"Could not read the workflow file"** on the setup page: reload the page and tap the button again. Open the setup page only from its address, [nightscout.github.io/aaps-builder](https://nightscout.github.io/aaps-builder/).
 - **GitHub says the file already exists** when you commit the workflow: your repository already has a workflow. Update it instead, as explained in [Updating AAPS](#aaps-builder-updates).
 - **"Google Drive access has expired or was revoked"**: redo [step 7](#aaps-builder-google-drive) and update the `GDRIVE_OAUTH2` secret.
 
@@ -387,5 +393,5 @@ For other GitHub and Google Drive issues, see [Browser build troubleshooting](..
 ```{toctree}
 :hidden:
 
-AAPS Builder setup page <BrowserBuildAapsBuilderSetup.md>
+AAPS Builder setup page (moved) <BrowserBuildAapsBuilderSetup.md>
 ```

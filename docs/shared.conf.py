@@ -421,6 +421,9 @@ if on_rtd:
 # the documentation). The AAPS Builder setup page reads its workflow file from this site and
 # checks the typed GitHub username with GitHub's public API (connect-src 'self' api.github.com);
 # the web installer makes no requests at all (connect-src 'none').
+# The AAPS Builder setup page moved to nightscout.github.io/aaps-builder. Its entry and
+# _static/aaps-builder/ stay until every translation of BrowserBuildAapsBuilderSetup.md is the
+# short "moved" page: until then the old translated pages still load those files.
 # 'unsafe-inline' scripts: the page logic is embedded in the page, as are some theme scripts.
 tool_page_csp = ("default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; "
                  "img-src 'self' data:; font-src 'self' data:; connect-src %s; "
