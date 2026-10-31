@@ -1,16 +1,16 @@
 # Εξομάλυνση των δεδομένων γλυκόζης στο αίμα
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Αν τα δεδομένα **BG** πηδούν απότομα ή έχουν θόρυβο, το **AAPS** μπορεί να δώσει λάθος δόση ινσουλίνης. Αυτό μπορεί να προκαλέσει υψηλές ή χαμηλές τιμές. Αν δείτε σφάλματα ή τα δεδομένα του CGM σας πηδούν απότομα, είναι σημαντικό να απενεργοποιήσετε το κύκλωμα μέχρι να λυθεί το πρόβλημα. Ανάλογα με το CGM σας, τέτοια προβλήματα μπορεί να οφείλονται στη ρύθμιση του CGM στο **AAPS** (όπως εξηγείται παρακάτω) ή σε πρόβλημα στο σημείο του αισθητήρα CGM (που μπορεί να χρειάζεται αλλαγή του αισθητήρα CGM).
 
 ## Smoothing data within AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+Το **AAPS** σας δίνει την επιλογή να εξομαλύνετε τα δεδομένα μέσα στο **AAPS** και όχι μέσα στην εφαρμογή του CGM. Ανοίξτε το **μενού** (☰), επιλέξτε [**Διαμόρφωση**](../SettingUpAaps/ConfigBuilder.md) και μετά **Εξομάλυνση**. Υπάρχουν τέσσερις επιλογές και μόνο μία μπορεί να είναι ενεργή κάθε φορά: **Χωρίς εξομάλυνση**, **Εκθετική εξομάλυνση**, **Μέση εξομάλυνση** και **Unscented Kalman Filter**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Διαμόρφωση > Εξομάλυνση](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponential smoothing
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Γενικά, αυτή είναι η προτεινόμενη επιλογή για αρχή, γιατί είναι η πιο δυνατή στην αφαίρεση του θορύβου και ξαναγράφει την πιο πρόσφατη τιμή. Δείτε όμως τον πίνακα παρακάτω για άλλες ειδικές συστάσεις.
 
 ### Average smoothing
 
@@ -18,27 +18,27 @@ This option works similar to back smoothing that was previously implemented on c
 
 ### No Smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Χρησιμοποιήστε αυτή την επιλογή μόνο αν τα δεδομένα του CGM σας εξομαλύνονται σωστά από την εφαρμογή συλλογής δεδομένων πριν σταλούν στο **AAPS**.
 
 ### Unscented Kalman Filter (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Αυτή η επιλογή χρησιμοποιεί ένα στατιστικό μοντέλο. Εκτιμά συνεχώς την πραγματική τιμή γλυκόζης σας και πόσο γρήγορα αλλάζει, από τις μετρήσεις που έρχονται (και που μπορεί να έχουν θόρυβο). Προσαρμόζεται αυτόματα στο πόσο θόρυβο έχει ο αισθητήρας σας τώρα. Επίσης εντοπίζει και απορρίπτει ξαφνικές μετρήσεις που είναι πολύ εκτός (outliers). Είναι μια πιο προηγμένη εναλλακτική από την Εκθετική και τη Μέση εξομάλυνση. Είναι χρήσιμη αν θέλετε η εξομάλυνση να προσαρμόζεται μόνη της στον θόρυβο του αισθητήρα σας που αλλάζει, αντί να χρησιμοποιεί μια σταθερή μέθοδο.
 
 (smoothing-xdrip-dexcom-g6)=
 
 ## Suggestions to use smoothing
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Μπορείτε επίσης να αλλάζετε τη μέθοδο εξομάλυνσης αυτόματα, για παράδειγμα ανάλογα με την ηλικία του αισθητήρα, με την [ενέργεια Αυτοματισμού](#automations-automation-action) **Αλλαγή εξομάλυνσης**.
 
-|               | Exponential |  Average  | No Smoothing |
-| ------------- |:-----------:|:---------:|:------------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+|               | Exponential |     Average      | No Smoothing |
+| ------------- |:-----------:|:----------------:|:------------:|
+| G5/G6/ONE     |  If noisy   |                  | Recommended  |
+| G7/ONE+/Stelo |  If noisy   | Αν είναι σταθερό |              |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Οι αισθητήρες Libre έχουν θόρυβο και μπορεί να χρειάζονται εξομάλυνση. Όταν χρησιμοποιείτε την άμεση σύνδεση του xDrip ή την πηγή δεδομένων τροποποιημένης εφαρμογής (λήψη από άλλη εφαρμογή, μαζί και το Juggluco), [η εξομάλυνση γίνεται ήδη μέσα στην εφαρμογή](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| Αισθητήρας / Πηγή δεδομένων | Juggluco | xDrip άμεση σύνδεση | xDrip γέφυρα | xDrip τροποποιημένη εφαρμογή |
+| --------------------------- |:--------:|:-------------------:|:------------:|:----------------------------:|
+| Libre 1/14 days/Pro         |   Δ/Υ    |         Δ/Υ         |   Average    |             Δ/Υ              |
+| Libre 2/2+ (EU)             | Average  |        None         |   Average    |             None             |
+| Libre 2/2+/3/3+             | Average  |         Δ/Υ         |     Δ/Υ      |             None             |
