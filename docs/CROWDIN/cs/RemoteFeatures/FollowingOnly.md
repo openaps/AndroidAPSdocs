@@ -86,7 +86,7 @@ Nevýhody (podle zkušeností uživatelů)
 
 * Vyžaduje Android 5.0 nebo novější.
 
-* Má tmavé rozhraní, velké hodnoty a tlačítka, je navržená pro používání v noci.
+* It has a dark UI, large readings and buttons, designed for usage at night.
 
 ### xDrip (Android)
 
@@ -200,7 +200,7 @@ SugarPixel je zařízení, které slouží jako druhý displej a systém výstra
 ![Sledování s Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * Hodiny podporují jednotky mmol/l i mg/dl a mají zvukové alarmy.
-* K dispozici je několik zobrazení, přehled najdete na [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
+* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
 * Nastavení a konfigurace zařízení zahrnuje jen několik jednoduchých kroků. Po nastavení potřebuje ke své funkci jen napájení a Wi-Fi.
 * Zařízení Ulanzi TC001 je výrazně levnější než SugarPixel.
 * Software i s návodem k instalaci najdete na [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
