@@ -34,7 +34,7 @@ Karta **Dawka Dobowa Insuliny** pokazuje jeden wiersz na każdy poprzedni dzień
 - **Baza**: tylko insulina bazowa.
 - **Bolus**: suma bolusów i SMB.
 - **TDD Całkowita**: całkowita dobowa dawka insuliny (**TDD**), suma insuliny z bolusów i bazy podanej w ciągu dnia.
-- **Węglowodany**: wpisane węglowodany i wirtualne węgle (eCarbs).
+- **Węglowodany**: wpisane węglowodany i eCarbs.
 
 Sekcja **TDD** jest obliczana po otwarciu strony, co trwa kilka sekund. Dotknij **Przelicz**, aby obliczyć ją ponownie.
 
