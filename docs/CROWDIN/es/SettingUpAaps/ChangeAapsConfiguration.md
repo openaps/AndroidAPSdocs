@@ -4,15 +4,15 @@ Cuando hayas terminado el **[Asistente de configuración](../SettingUpAaps/Setup
 
 Hay tres rutas para cambiar la configuración de **AAPS**. La ruta que elijas es solo una cuestión de comodidad o de preferencia personal, porque todas llevan a los mismos ajustes.
 
-These are as follows:
+Son los siguientes:
 
 1. La pantalla **Configuración**,
 2. La pantalla **Ajustes** o
 3. Los **Ajustes** de un complemento, que se abren desde su categoría en **Configuración**.
 
-Here we explain which option is most convenient for each situation:
+Aquí explicamos qué opción es la mejor para cada situación:
 
-## Configuration
+## Configuración
 
 Abre el **menú** (☰) en la esquina superior izquierda de la pantalla principal y elige **Configuración**:
 
@@ -22,7 +22,7 @@ Abre el **menú** (☰) en la esquina superior izquierda de la pantalla principa
 
 La documentación de la pantalla Configuración está disponible [aquí](../SettingUpAaps/ConfigBuilder.md).
 
-## Configuración
+## Ajustes
 
 Toca el icono **Ajustes** (rueda dentada) en la esquina superior derecha de la pantalla principal. Así se abren los ajustes de **todos los complementos activados en un solo lugar**, agrupados en secciones que se pueden desplegar:
 
