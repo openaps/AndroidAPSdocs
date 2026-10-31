@@ -1,178 +1,178 @@
-# Profile switch & Profile Percentage
+# Profiel wissel & Profiel percentage
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
+Dit deel legt uit wat een **Profiel wissel** en een **Profiel percentage** zijn. Hoe je een **Profiel** maakt, lees je in [Je AAPS-profiel](#your-aaps-profile-create-and-edit-profiles).
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+Als je net begint met **AAPS**, moet je een **Profiel** maken, begrijpen hoe je een **Profiel wissel** uitvoert en leren wat het effect is van een **Profiel percentage** in **AAPS**. De functies **Profiel wissel** en **Profiel percentage** kunnen vooral nuttig zijn bij:
 
-- the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
+- de menstruatiecyclus - een aanpassing in procenten binnen een **Profiel** kan worden ingesteld in **Automatisering**, zodat **AAPS** zich kan aanpassen aan de verschillende fases van de hormooncyclus en de verwachte insulineresistentie.
 
-- Exercise - a percentage adjustment within a **Profile** can be set up in **Automations** for exercise in order to reduce basal intake.
+- Sport - een aanpassing in procenten binnen een **Profiel** kan voor sport worden ingesteld in **Automatisering**, zodat er minder basaal wordt gegeven.
 
-- Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
+- Nachtdienst of ploegendienst - voor wie in ploegen werkt, kan een tijdverschuiving in het **Profiel** worden ingesteld. Je verandert het aantal uren in het **Profiel** naar hoeveel later/eerder de gebruiker gaat slapen of wakker wordt.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+Waarom een **Profiel percentage** gebruiken in plaats van een tijdelijke aanpassing van het basaal? Om effectiever te zijn, past een **Profiel percentage** een evenredige verlaging of verhoging toe op: basaal, ISF en I:C. Zo berekent **AAPS** een evenwichtige aanpak bij het geven van de insuline van de gebruiker. Een lager basaal in het **Profiel** van de gebruiker in **AAPS** helpt weinig als het algoritme dezelfde verhoudingen voor ISF en I:C blijft gebruiken.
 
 (ProfileSwitch-change-percentage)=
 
-## Change the Profile Percentage from the main screen
+## Het profiel percentage wijzigen vanaf het hoofdscherm
 
-You need at least one saved **Profile**. A **Profile Percentage** is always applied through a **Profile Switch**: you activate a **Profile** again, this time with a percentage.
+Je hebt minstens één opgeslagen **Profiel** nodig. Een **Profiel percentage** wordt altijd toegepast met een **Profiel wissel**: je activeert een **Profiel** opnieuw, deze keer met een percentage.
 
-```{admonition} Coming from AAPS 3? :class: note A long press on the profile name no longer opens the profile switch dialog. **Tap** the profile name, then tap the round **▶** button at the bottom right: it opens the same settings (percentage, duration, Activity temp target).
+```{admonition} Kom je van AAPS 3? :class: note Lang drukken op de profielnaam opent het venster voor de profiel wissel niet meer. **Tik** op de profielnaam en tik dan op de ronde knop **▶** rechtsonder: die opent dezelfde instellingen (percentage, tijdsduur, tijdelijk streefdoel Activiteit).
 
-    <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
+    <br />1. Tik op het hoofdscherm **op de profielnaam** (naast het sterpictogram). Het [Profiel-scherm](#ProfileSwitch-manage-v4) opent op de kaart van het actieve **Profiel**, gemarkeerd met **ACTIEF**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![Tik op de profielnaam op het hoofdscherm om het Profiel-scherm te openen](../images/ProfileSwitch2.png)
     
-    2. To keep the same **Profile**, leave the **ACTIVE** card selected. To change **Profile** at the same time, swipe to another card.
-    3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
-    4. Set the **Percentage** with **−** / **+** (steps of 5 %), or type it in (30 to 250 %). The field always starts at **100 %**: it does not show the percentage that is running now. For example, enter **80** for 20 % less insulin, or **120** for 20 % more.
-    5. Set the **Duration** in minutes:
-       * **0** keeps the new percentage until you make another **Profile Switch**;
-       * any other value ends the switch after that time, and **AAPS** goes back to the **Profile** that was running before.
+    2. Wil je hetzelfde **Profiel** houden, laat dan de kaart **ACTIEF** geselecteerd. Wil je tegelijk van **Profiel** wisselen, veeg dan naar een andere kaart.
+    3. Tik op de ronde knop **▶** (**Activeer**) rechtsonder. Het scherm **Activeer** opent.
+    4. Stel het **Percentage** in met **−** / **+** (stappen van 5%), of typ het in (30 tot 250%). Het veld begint altijd op **100%**: het toont niet het percentage dat nu actief is. Vul bijvoorbeeld **80** in voor 20% minder insuline, of **120** voor 20% meer.
+    5. Stel de **Tijdsduur** in minuten in:
+       * **0** houdt het nieuwe percentage aan tot je een nieuwe **Profiel wissel** doet;
+       * elke andere waarde stopt de wissel na die tijd, en **AAPS** gaat terug naar het **Profiel** dat daarvoor actief was.
     
-       ![The Activate screen set to 80 % for 60 minutes](../images/v4/Profiles/profile_activate_percentage.png)
+       ![Het scherm Activeer ingesteld op 80% voor 60 minuten](../images/v4/Profiles/profile_activate_percentage.png)
     
-    6. Tap **▶ Activate** at the bottom of the screen. Check the summary in the **Profile switch** dialog and tap **OK**.
+    6. Tik op **▶ Activeer** onderaan het scherm. Controleer de samenvatting in het venster **Profiel wissel** en tik op **OK**.
     
-       ![The confirmation dialog — profile, percentage and duration](../images/v4/Profiles/profile_activate_confirm.png)
+       ![Het bevestigingsvenster — profiel, percentage en tijdsduur](../images/v4/Profiles/profile_activate_confirm.png)
     
-    Back on the main screen, the profile name shows the percentage and the remaining time, for example *Normal (80%) (59')*, and turns yellow while a switch with a duration is running. A star marks the switch on the glucose graph. See [the main screen](#aaps-screens-profile--target).
+    Terug op het hoofdscherm toont de profielnaam het percentage en de resterende tijd, bijvoorbeeld *Normal (80%) (59')*. De naam wordt geel zolang een wissel met een tijdsduur loopt. Een ster markeert de wissel in de glucosegrafiek. Zie [het hoofdscherm](#aaps-screens-profile--target).
     
-    ![The main screen while an 80 % profile switch is running](../images/v4/Profiles/profile_switch_running.png)
+    ![Het hoofdscherm terwijl een profiel wissel van 80% loopt](../images/v4/Profiles/profile_switch_running.png)
     
-    To **go back to 100 %** before the end, repeat the steps and keep **Percentage** at 100 and **Duration** at 0.
+    Om voor het einde **terug te gaan naar 100%**, herhaal je de stappen en laat je **Percentage** op 100 en **Tijdsduur** op 0.
     
-    ```{admonition} One-tap percentages
+    ```{admonition} Percentages met één tik
     :class: tip
-    If you often use the same percentage (sport, illness), add a [Profile shortcut](#profile-shortcuts) to the Quick Launch bar, or create a [scene](Scenes.md). Both apply a profile with a preset percentage and duration in one tap.
+    Gebruik je vaak hetzelfde percentage (sport, ziekte), voeg dan een [Profiel-snelkoppeling](#profile-shortcuts) toe aan de QuickLaunch-balk, of maak een [scène](Scenes.md). Beide passen met één tik een profiel toe met een vooraf ingesteld percentage en tijdsduur.
     
 
 (ProfileSwitch-manage-v4)=
 
-## Managing and activating profiles (Manage → Profile)
+## Profielen beheren en activeren (Beheren → Profiel)
 
-In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+In **AAPS** v4 beheer en activeer je profielen vanuit het scherm **Beheren** (onderste navigatie) → **Profiel** (*“Profielen beheren en activeren”*).
 
-The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 30.15 U*). Below the selected card you see that profile's details — **Units**, **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+Het Profiel-scherm toont je profielen als een **carrousel van kaarten waar je doorheen kunt vegen**. De kaart van het actieve profiel is gemarkeerd met **ACTIEF** en toont de totale basaal per dag (bijv. *∑ 30,15 E*). Onder de geselecteerde kaart zie je de details van dat profiel — **Eenheden**, type **Insuline**, en de schema's voor **KH-ratio**, **ISF**, **basaal** en **streefdoel** met grafieken.
 
-![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+![Het Profiel-scherm — profielcarrousel, details en actiebalk](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+De knoppen onderaan werken op het **geselecteerde** profiel: **➕ Toevoegen**, **✏️ Bewerk**, **⧉ Dupliceren** en **‘️ Verwijderen**, en de ronde knop **▶ Activeer** rechts. Hoe je de vier schema's in de editor invult (KH-ratio / ISF / BAS / DOEL), lees je in [Profielen maken en bewerken](#your-aaps-profile-create-and-edit-profiles).
 
-**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+**⧉ Dupliceren** gebruikt het pictogram met twee vierkantjes dat vaak voor *kopiëren* wordt gebruikt, maar er is niets om te plakken: het maakt de kopie in één stap. Bevestig *Profiel "Normal" kopiëren?* en een nieuw profiel met de naam *Normal kopie* wordt aan het einde van de carrousel toegevoegd en geselecteerd, klaar voor **✏️ Bewerk** (waar je het ook een andere naam kunt geven). Dit is niet hetzelfde als het klonen van een eerdere **Profiel wissel** uit de Behandelingen geschiedenis. Dat maakt een nieuw profiel *met het percentage en de tijdverschuiving al toegepast*. Zie [Een profiel wissel bewaren voor later](#ProfileSwitch-keep-for-later).
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **Alleen de knop ▶ Activeer?** Je instellingen zijn beveiligd, dus het scherm opent als alleen-lezen. Tik op het **✏️ potlood** in de bovenste balk en voer je wachtwoord voor de instellingen in. Zie [Instellingen beveiliging vergrendelt nu ook de beheerschermen](#v4changes-read-only-management).
 
-### Reordering profiles
+### Profielen herschikken
 
-If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+Heb je meer dan één profiel, dan kun je de volgorde in de carrousel kiezen: tik op het pictogram **Herschikken** (⇅, twee pijlen omhoog en omlaag) in de bovenste balk. De pagina-indicator wordt vervangen door **◀ / ▶ verplaatsknoppen** met een weergave *positie / totaal* — zet de middelste kaart eerder of later, en bevestig met **✓** (of annuleer met **✕**). De nieuwe volgorde wordt één keer opgeslagen, als je bevestigt.
 
-![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+![Herschikmodus — verplaatsknoppen en positie](../images/v4/Profiles/profile_reorder.png)
 
-### Activating a profile
+### Een profiel activeren
 
-Select a profile and tap **▶ Activate**. The **Activate** screen lets you tailor how the **Profile Switch** is applied:
+Kies een profiel en tik op **▶ Activeer**. In het scherm **Activeer** bepaal je hoe de **Profiel wissel** wordt toegepast:
 
-![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+![Het scherm Activeer — percentage, tijdsduur, tijdverschuiving, tijd](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
-- **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
-- **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
-- **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
-- **Reuse** — appears when the running switch has a percentage other than 100 % or a time shift, for example **Reuse 80% 0h**. Tap it to fill in the same percentage and time shift, for instance to prolong a switch that is about to end.
+- **Percentage** (30–250%, begint elke keer op 100%) — schaalt het hele profiel. 100% gebruikt het zoals het is; 70% verlaagt bijvoorbeeld het basaal en de berekende insulinedosis (zowel maaltijdbolussen als correcties) met 30%. Het verandert je glucosestreefwaarden en de opname van koolhydraten niet. Zie [Profiel percentage](#profile-percentage) voor het volledige effect.
+- **Tijdsduur** (0–10080 minuten, dat is tot 7 dagen) — hoe lang de wissel duurt. **0 = onbeperkt** (tot je opnieuw wisselt); bij een waarde boven 0 gaat AAPS aan het einde terug naar het vorige profiel.
+- **Tijdelijk streefdoel / Activiteit** — verschijnt alleen als je een **Tijdsduur** en een **Percentage** onder 100% instelt. Zet het aan om ook een [tijdelijk streefdoel Activiteit](#TempTargets-activity-temp-target) te starten voor dezelfde tijdsduur, zoals je voor het sporten zou doen.
+- **Tijd verschuiving** — toont *0h*; tik op **Wijzigen** om het schema tot 23 uur vooruit of terug te zetten (handig bij ploegendienst of reizen). Zie [Tijdverschuiving](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
+- **Hergebruik** — verschijnt als de actieve wissel een ander percentage dan 100% of een tijdverschuiving heeft, bijvoorbeeld **Hergebruik 80% 0h**. Tik erop om hetzelfde percentage en dezelfde tijdverschuiving in te vullen, bijvoorbeeld om een wissel te verlengen die bijna afloopt.
     
-    ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
+    ![De knop Hergebruik terwijl een wissel van 80% loopt](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+- **Tijd** — standaard *Nu*. Je kunt een andere tijd kiezen, tot 24 uur voor of na nu. Een wissel in de toekomst start op dat tijdstip; een tijdelijk streefdoel Activiteit dat je erbij instelt, start dan ook op dat tijdstip.
     
-    ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+    ![De tijd van een profiel wissel kiezen](../images/v4/Profiles/profile_activate_time_picker.png)
 
-- **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
+- **Notities** — alleen zichtbaar als [Notities weergeven in dialogen](#Preferences-show-notes-field-in-treatments-dialogs) aan staat.
 
-If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
+Als de basaalstanden bij het gekozen percentage niet passen bij je pomp, verschijnt bovenaan een waarschuwing en blijft **▶ Activeer** uitgeschakeld: kies een ander percentage.
 
-Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+Tik op **▶ Activeer** en dan op **OK** in het bevestigingsvenster. Het actieve profiel heeft dan het label **ACTIEF** op zijn kaart.
 
-```{admonition} Your pump may round the basal rates :class: note Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+```{admonition} Je pomp kan de basaalstanden afronden :class: note Elke pomp kan basaalstanden alleen in zijn eigen stappen geven (bijvoorbeeld 0,05 E/u), dus rondt hij de standen van je **Profiel** af. **AAPS** gebruikt dan het basaal dat de pomp echt geeft, zodat IOB en TDD juist blijven. Als de pomp per dag iets meer of minder insuline geeft dan je **Profiel**, vertelt de melding *"Basaal profiel in de pomp is bijgewerkt"* hoeveel, bijvoorbeeld *"het geeft 10,00 E per dag in plaats van 10,12 E"*.
 
-If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+Als de pomp een basaal meldt dat ver afwijkt van je **Profiel**, houdt **AAPS** het basaal van het **Profiel** aan en vraagt je om de basaalstanden in de pomp te controleren.
 
-    <br />```{admonition} Percentage and time shift make one profile go a long way
+    <br />```{admonition} Met percentage en tijdverschuiving doe je veel met één profiel
     :class: note
-    Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+    Maak niet veel bijna gelijke profielen, maar houd één basisprofiel en pas het toe met een ander **percentage** of een andere **tijdverschuiving** voor situaties die vaker voorkomen (ziekte, sport, reizen). Dit is precies wat [scènes](Scenes.md) automatisch doen.
     
 
-A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+Een profiel wissel kan niet alleen vanuit dit scherm. Dezelfde wissel kan ook gestart worden vanaf een **Wear OS-horloge**, een gekoppelde **client** (zie [Master ↔ Client besturing](../RemoteFeatures/ClientMasterControl.md)), een **[scène](Scenes.md)**, of een regel in **Automatisering**.
 
-## Profile Percentage
+## Profiel percentage
 
-It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
+Het is belangrijk dat een gebruiker de belangrijkste kenmerken van een **Profiel percentage** begrijpt. Als je een **Profiel wissel** doet met een hoger of lager percentage, worden de instellingen in het **Profiel** van de gebruiker met hetzelfde percentage verhoogd of verlaagd.
 
-For example: a **Profile Switch** to 130% (means the user is 30% more insulin resistant) will instruct **AAPS** to
+Bijvoorbeeld: een **Profiel wissel** naar 130% (dit betekent dat de gebruiker 30% insulineresistenter is) laat **AAPS**:
 
-- **increase** the basal rate by 30%; 
-- **lower** the **ISF**: by dividing by 1.3;
-- **lower** the **I:C** by dividing by 1.3.
+- de basaalstand met 30% **verhogen**; 
+- de **ISF** **verlagen**: door te delen door 1,3;
+- de **I:C** **verlagen** door te delen door 1,3.
 
-Remember lowering the **ISF** or **I:C** means a stronger ratio and more insulin being administered. This fact can be easily overlooked by new users to **AAPS**.
+Let op: een lagere **ISF** of **I:C** betekent een sterkere verhouding en dus meer insuline. Nieuwe gebruikers van **AAPS** vergeten dit gemakkelijk.
 
-Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or closed) will continue to work on top of the selected percentage **Profile**.
+Na de keuze past **AAPS** de standaard basaalstand aan, en **AAPS** (open of gesloten) blijft werken bovenop het gekozen percentage van het **Profiel**.
 
-The effect of a **Profile** Percentage is summarized in the table below:
+Het effect van een **Profiel** percentage staat in de tabel hieronder:
 
-| Profile Switch  
-Percentage |    Effect    |     I:C  
-g/U     | example  
+| Profiel wissel  
+Percentage |    Effect     |     I:C  
+g/E     | voorbeeld  
 15g |          ISF  
-mmol/L/U  
-mg/dL/U          | U to lower  
+mmol/L/E  
+mg/dL/E          | E om te dalen  
 2mmol/L  
 40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:------------------------------:|
-|             90%             |    Weaker    | 5/0.9  
-=**5.55** |     2.7 U     | 2.2/0.9  
-=**2.4**  
+|:---------------------------:|:-------------:|:-----------------:|:---------------:|:------------------------------------------:|:---------------------------------:|
+|             90%             |    Zwakker    | 5/0,9  
+=**5,55** |      2,7 E      | 2,2/0,9  
+=**2,4**  
   
-40/0.9  
-=**44.4** |             0.8 U              |
-|          **100%**           | **Standard** |       **5**       |    **3 U**    |                **2.2  
-40**                |           **0.9** U            |
-|            130%             |   Stronger   | 5/1.3  
-=**3.85** |     3.9 U     | 2.2/1.3  
-=**1.7**  
+40/0,9  
+=**44,4** |               0,8 E               |
+|          **100%**           | **Standaard** |       **5**       |     **3 E**     |                **2,2  
+40**                |             **0,9** E             |
+|            130%             |    Sterker    | 5/1,3  
+=**3,85** |      3,9 E      | 2,2/1,3  
+=**1,7**  
   
-40/1.3  
-=**30.8** |             1.2 U              |
+40/1,3  
+=**30,8** |               1,2 E               |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
-## Time shift of the Circadian Percentage Profile
+## Tijdverschuiving van het circadiaanse percentage profiel
 
-A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
+Een ‘tijdverschuiving’ in het **Profiel** van de gebruiker verschuift de instellingen van het **Profiel** over de klok van de dag (‘circadiaan’) met het ingevoerde aantal uren. Dit kan handig zijn voor:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
-- **users changing time zones during travelling**; or
-- **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
+- **wie 's nachts of in ploegen werkt**: verander bij nachtdiensten het aantal uren in het **Profiel** naar hoeveel later/eerder de gebruiker gaat slapen of wakker wordt; 
+- **gebruikers die tijdens het reizen van tijdzone wisselen**; of
+- **kinderen met type 1**: die een vaste bedtijd hebben en bij wie de insulineresistentie al in hun **Profiel** is verwerkt. Als het kind om welke reden dan ook later naar bed gaat, kan de verzorger een ‘tijdverschuiving’ toepassen op het **Profiel** van het kind. Zo reageert **AAPS** op de insulineresistentie op het tijdstip dat de gebruiker wil.
 
-It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. This time must be shifted by x hours. So please be mindful of the directions as described in the following example:
+Het gaat er altijd om van welk uur de instellingen van het **Profiel** de instellingen van het huidige tijdstip moeten vervangen. Deze tijd moet x uur worden verschoven. Let dus goed op de richting, zoals beschreven in het volgende voorbeeld:
 
-- Current time: 12:00
-- **Positive** time shift 
+- Huidige tijd: 12:00
+- **Positieve** tijdverschuiving 
     - 2:00 **+10 h** -> 12:00
-    - Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-- **Negative** time shift 
+    - De instellingen van 2:00 worden gebruikt in plaats van de instellingen die normaal om 12:00 gelden, door de positieve tijdverschuiving.
+- **Negatieve** tijdverschuiving 
     - 22:00 **-10 h** -> 12:00
-    - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    - De instellingen van 22:00 (10 uur 's avonds) worden gebruikt in plaats van de instellingen die normaal om 12:00 gelden, door de negatieve tijdverschuiving.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Richting van de tijdverschuiving bij een profiel wissel](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Door zo momentopnamen van het **Profiel** te maken, kan het verleden veel nauwkeuriger worden berekend en kun je wijzigingen in het **Profiel** volgen.
 
 (ProfileSwitch-keep-for-later)=
 
-## Keep a profile switch for later use
+## Een profiel wissel bewaren voor later
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+Als je een profiel wissel met percentage en/of tijdverschuiving hebt gedaan, kun je dit tijdelijke profiel kopiëren naar een nieuw profiel.
 
-To do this, open the menu (☰) → **Treatments** and go to the **Profile switch** tab, see [Clone a Profile switch to a new Profile](#your-aaps-profile-clone-profile-switch).
+Open hiervoor het menu (☰) → **Behandelingen** en ga naar het tabblad **Profiel wissel**, zie [Een Profiel wissel klonen naar een nieuw Profiel](#your-aaps-profile-clone-profile-switch).
