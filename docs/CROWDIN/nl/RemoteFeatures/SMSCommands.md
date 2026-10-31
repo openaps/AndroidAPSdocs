@@ -19,7 +19,7 @@ De meeste aanpassingen op afstand (tijdelijke streefdoelen, koolhydraten, profie
 
 Als je **SMS Commando's** in **AAPS** inschakelt, bedenk dan dat de telefoon die commando's op afstand mag geven, gestolen kan worden en/of door iemand anders gebruikt kan worden. Vergrendel je telefoon altijd met minstens een pincode. Een sterk wachtwoord en/of biometrische vergrendeling wordt sterk aangeraden. Zorg dat dit anders is dan je APK-hoofdwachtwoord (het wachtwoord dat nodig is om de instellingen van **AAPS** te exporteren).
 
-Daarnaast wordt aangeraden om een [tweede telefoonnummer](#SMSCommands-authorized-phone-numbers) toe te staan voor SMS-commando's. Zo kun je met het tweede nummer de SMS-commando's [uitschakelen](#SMSCommands-other) als je hoofdtelefoon voor bediening op afstand in verkeerde handen komt.
+Daarnaast wordt aangeraden om een [tweede telefoonnummer](#SMSCommands-authorized-phone-numbers) toe te staan voor SMS-commando's. Zo kun je met het tweede nummer de SMS-commando's [uitschakelen](#SMSCommands-other) als je belangrijkste telefoon voor bediening op afstand in verkeerde handen komt.
 
 De standaard minimale tijd tussen bolus-commando's is 15 minuten. Om veiligheidsredenen moet je minstens twee geautoriseerde telefoonnummers toevoegen om deze tijd korter te maken. Als je binnen 15 minuten na de vorige bolus opnieuw een bolus op afstand probeert, krijg je het antwoord “Bolus op afstand niet beschikbaar. Probeer het later opnieuw”
 
@@ -29,7 +29,7 @@ AAPS laat je ook per SMS weten of je commando's op afstand, zoals een bolus of e
 
 Voor de gevoelige commando's moet een authenticator-app met een tijdgebonden eenmalig wachtwoord worden gebruikt, voor meer veiligheid.
 
-Als je een telefoon van een verzorger geen SMS-commando's meer wilt laten sturen, gebruik dan de noodknop “[Reset Authentificatie](#sms-commands-authenticator-setup)” in **AAPS** of stuur het SMS-commando “[SMS stop](#SMSCommands-other)”. Door de authenticators te resetten, maak je ALLE telefoons van verzorgers ongeldig. Je moet ze daarna opnieuw instellen.
+Als je een telefoon van een verzorger geen SMS-commando's meer wilt laten sturen, gebruik dan de noodknop “[Reset Authenticatie](#sms-commands-authenticator-setup)” in **AAPS** of stuur het SMS-commando “[SMS stop](#SMSCommands-other)”. Door de authenticators te resetten, maak je ALLE telefoons van verzorgers ongeldig. Je moet ze daarna opnieuw instellen.
 
 ## Instellen van SMS-commando's
 
@@ -39,7 +39,7 @@ Als je een telefoon van een verzorger geen SMS-commando's meer wilt laten sturen
 ```
 
 (sms-commands-authenticator-setup)=
-### Authentificatie instellingen
+### Authenticatie instellingen
 
 Tweestapsverificatie wordt gebruikt om de veiligheid te verbeteren.
 
@@ -80,7 +80,7 @@ Nu de instellingen van de telefoon zijn gecontroleerd, ga je in de **AAPS**-app 
 
 Open de instellingen van **SMS Commando's**.
 
-Schakel **Sta opdrachten via SMS toe** in. De opties **Extra verplichte PIN aan einde van token** en **Authentificatie instellingen** verschijnen pas als dit is ingeschakeld:
+Schakel **Sta opdrachten via SMS toe** in. De opties **Extra verplichte PIN aan einde van token** en **Authenticatie instellingen** verschijnen pas als dit is ingeschakeld:
 
 ![Instellingen van SMS Commando's](../images/sms_communicator_settings.png)
 
@@ -117,11 +117,11 @@ Gebruik voor een veiligere PIN niet vaak hetzelfde cijfer (_bijv._ 111111) of ee
 
 ![Extra verplichte PIN aan einde van token](../images/sms_pin.png)
 
-#### Authentificatie instellingen
+#### Authenticatie instellingen
 
-* Tik op **Authentificatie instellingen** en volg de stap-voor-stap-instructies op het scherm.
+* Tik op **Authenticatie instellingen** en volg de stap-voor-stap-instructies op het scherm.
 * Open de geïnstalleerde authenticator-app op de _telefoon van de verzorger_, stel een nieuwe verbinding in en
-* Scan met de telefoon van de verzorger de QR-code die getoond wordt onder **Scan code om AndroidAPS OTP codes in te stellen**.
+* Scan met de telefoon van de verzorger de QR-code die getoond wordt onder **Scan code om AAPS OTP codes in te stellen**.
 
 ![Authenticator instellen met QR-code](../images/sms_authenticator_setup.png)
 
@@ -134,11 +134,11 @@ Voorbeeld:
 
 Als de invoer goed is, verandert de rode tekst “FOUTIEVE PIN” vanzelf in een groene “OK”. **Er is geen knop om op te drukken!** Het proces is nu klaar. Er is geen knop “OK” waarop je moet drukken na het invoeren van de code:
 
-![Test eenmalig wachtwoord en Reset Authentificatie](../images/sms_authenticator_test.png)
+![Test eenmalig wachtwoord en Reset Authenticatie](../images/sms_authenticator_test.png)
 
 De SMS-commando's zijn nu ingesteld.
 
-Gebruik de knop **Reset Authentificatie** onderaan het scherm **Authentificatie instellingen** als je ingestelde authenticators wilt verwijderen. (Door de authenticators te resetten maak je ALLE al ingestelde authenticators ongeldig. Je moet ze daarna opnieuw instellen.)
+Gebruik de knop **Reset Authenticatie** onderaan het scherm **Authenticatie instellingen** als je ingestelde authenticators wilt verwijderen. (Door de authenticators te resetten maak je ALLE al ingestelde authenticators ongeldig. Je moet ze daarna opnieuw instellen.)
 
 ## SMS-commando's gebruiken
 
