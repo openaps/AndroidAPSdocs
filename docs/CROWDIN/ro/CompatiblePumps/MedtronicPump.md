@@ -41,8 +41,8 @@ Un grafic de comparație pentru diferitele dispozitive compatibile RileyLink poa
 Următoarele setări trebuie să fie configurate în pompă pentru ca AAPS să trimită comenzi de la distanță. Etapele necesare pentru a face fiecare modificare pe un Medtronic 715 sunt indicate în paranteze pentru fiecare setare. Etapele exacte pot varia în funcție de tipul pompei și/sau versiunea firmware.
 
 - **Activează modul de la distanță în pompa** (Pe pompă apasă Act și mergi la utilități -> Opțiuni de distanță, Selectați Activat, și pe ecranul următor să adăugați ID și să adăugați orice ID aleatoriu cum ar fi 111111). Cel puțin un ID trebuie să fie pe lista de ID-uri la distanță pentru ca pompa să se aștepte la comunicarea la distanță.
-- **Setați bazala maximă** (Pe pompă apăsați Act și ajungeți la bazală și apoi selectați Rată bazală Max) ca un exemplu de setare a acestei valori la de patru ori rata bazală standard maximă ar permite o rată bazală temporară de 400 %. Valoarea maximă permisă de pompă este de 34,9 unități pe oră.
-- **Setează bolusul maxim** (Pe pompă, apăsați pe Act și mergeți la bolus, apoi selectați bolus maxim) Acesta este cel mai mare bolus pe care pompa îl va accepta. Valoarea maximă permisă de pompă este 25.
+- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. Valoarea maximă permisă de pompă este de 34,9 unități pe oră.
+- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. Valoarea maximă permisă de pompă este 25.
 - **Setează profilul la standard**. (Pe pompă, apăsați pe Act și mergeți la Bazal, apoi Selectați Tipare) Pompa va avea nevoie de un singur profil, deoarece AAPS va gestiona profiluri diferite pe telefonul dumneavoastră. Nu sunt necesare alte tipare.
 - **Setează tipul de rată bazală temporară** (În pompă apăsați Act și mergeți la bazală și apoi tipul bazalei temporare). Selectați Absolut (nu Procent).
 
@@ -76,8 +76,8 @@ While setting up AAPS to work with your medtronic pump you need to set the follo
 - **Numărul de serie al pompei**: afișat pe spatele pompei și începe cu SN. Ar trebui să introduceți doar cele 6 numere afișate fără nici un caracter alfabetic (de exemplu 123456).
 - **Tip pompă**: Pompa model pe care o folosiți (de exemplu 522). 
 - **Frecvența pompei**: Există două opțiuni bazate pe locul în care pompa a fost distribuită inițial. Vă rugăm să verificați [Întrebările frecvente](#MedtronicPump-faq) dacă nu sunteți sigur ce opțiune să selectați: 
-    - pentru SUA & Canada, frecvența utilizată este de 916 Mhz
-    - pentru restul lumii, frecvența utilizată este 868 Mhz
+    - for US & Canada, frequency used is 916 MHz
+    - for Worldwide, frequency used is 868 MHz
 - **Bazală maximă în pompă (U/h)**: Aceasta trebuie să corespundă setării din pompă (vedeți Configurarea pompei de mai sus). Din nou, această setare trebuie selectată cu atenție, deoarece va determina cât de mult AAPS poate livra prin rata bazală. Aceasta va stabili efectiv rata bazală temporară maximă. De exemplu, stabilirea acestei valori la de patru ori valoarea maximă a valorii bazalei standard ar permite o rată bazală temporară de 400%. Valoarea maximă permisă de pompă este de 34,9 unități pe oră.
 - **Bolus maxim în pompă (U)** (într-o oră): Aceasta trebuie să corespundă setării setate de pompă (vedeți Configurarea pompei de mai sus). Această setare trebuie analizată cu atenție, deoarece determină cât de mare poate fi setat bolusul de către AAPS.
 - **Întârziere înainte ca bolusul să înceapă (s)**: Numărul de secunde după ce un bolus este emis înainte ca această comandă să fie trimisă la pompă. Această perioadă de timp permite utilizatorului să anuleze bolusul în cazul în care o comandă bolus este trimisă din greșeală. Nu este posibilă anularea unui bolus care a început prin AAPS. Singurul mod de a anula un bolus care a început deja este de a suspenda pompa manual, urmat de reluare.
@@ -166,7 +166,7 @@ AAPS utilizează un număr de serie pentru sincronizare și numărul de serie es
 
 ### OpenAPS users
 
-Utilizatorii OpenAPS ar trebui să ia aminte că AAPS cu Medtronic utilizează o abordare complet diferită față cea de la OpenAPS. Prin folosirea AAPS, principala metodă de a interacționa cu pompa este prin telefonul dumneavoastră. În cazuri normale de utilizare, este posibil ca singura dată când este necesară utilizarea meniului pompei să fie atunci când se schimbă rezervoarele. Acest lucru este foarte diferit atunci când se utilizează OpenAPS, unde cel puțin o parte din bolus este administrată, de obicei, prin intermediul butoanelor rapide pentru bolus. În cazul în care pompa este folosită pentru a livra manual un bolus, pot apărea probleme dacă AAPS încearcă să livreze unul în același timp. În astfel de cazuri există controale care încearcă să prevină problemele, dar acest lucru trebuie evitat pe cât posibil.
+Utilizatorii OpenAPS ar trebui să ia aminte că AAPS cu Medtronic utilizează o abordare complet diferită față cea de la OpenAPS. Prin folosirea AAPS, principala metodă de a interacționa cu pompa este prin telefonul dumneavoastră. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. Acest lucru este foarte diferit atunci când se utilizează OpenAPS, unde cel puțin o parte din bolus este administrată, de obicei, prin intermediul butoanelor rapide pentru bolus. În cazul în care pompa este folosită pentru a livra manual un bolus, pot apărea probleme dacă AAPS încearcă să livreze unul în același timp. În astfel de cazuri există controale care încearcă să prevină problemele, dar acest lucru trebuie evitat pe cât posibil.
 
 ### Jurnalizare
 
@@ -200,7 +200,7 @@ Codul GNARL acceptă pe deplin toate funcțiile folosite de driverul Medtronic �
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### Ce trebuie făcut dacă am pierdut conexiunea la RileyLink și/sau pompă?
+### What to do if I lose connection to RileyLink and/or pump?
 
 Există o serie de opțiuni pentru încercarea rezolvării problemelor de conectivitate.
 
@@ -220,7 +220,7 @@ Pe spatele pompei veți găsi o linie care detaliază numărul modelului dumneav
 
 - NA - America de Nord (în selecția de frecvențe trebuie să selectați "US & Canada (916 MHz)")
 - CA - Canada (în selecția de frecvențe trebuie să selectați "US & Canada (916 MHz)")
-- WW - Lume (în selectarea frecvenței trebuie să selectați "Worldwide (868 Mhz)")
+- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
 
 (MedtronicPump-pump-unreachable)=
 
@@ -229,7 +229,7 @@ Pe spatele pompei veți găsi o linie care detaliază numărul modelului dumneav
 Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
 
 1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
-2. Set **Medtronic Encoding** to **Hardware Encoding**.
+2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
 
 ## Unde să obțineți ajutor
 
