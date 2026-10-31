@@ -173,7 +173,7 @@ Define which action buttons are visible on the main screen: tap the small **gear
 ![Configure QuickLaunch](../images/preferences/quicklaunch_config.png)
 
 (Preferences-quick-wizard)=
-### Quick Wizard
+### Швидкий майстер
 
 Create customized buttons for certain standard meals or snacks which will be displayed on the main screen. Useful for standard meals frequently eaten.
 
@@ -213,10 +213,10 @@ The default amounts of the three fill buttons can be defined in the **Prime/Fill
 
 Status lights give a visual warning for:
 
-- Sensor age
+- Вік сенсора
 - Insulin age (days reservoir is used)
 - Reservoir level (units)
-- Cannula age
+- Вік канюлі
 - Pump battery age
 - Pump battery level (%)
 
