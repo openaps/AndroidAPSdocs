@@ -42,7 +42,7 @@ When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and
 
 * 在手機設定中關閉「自動日期和時間」（手動更改時區）。
 
-當下飛機時：
+When you get off the plane:
 
 * 關閉幫浦。
 * 更改手機時區。
@@ -62,7 +62,7 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 這可能導致 **TDD** 不精準。但這不應該成為問題。
 
-因此 Insight 使用者不需要擔心時區變更和時間更改。此規則有一個例外：Insight 幫浦內部有一個小型電池來供電時間等。當你更換「主」電池時保持時間運作。如果更換電池的時間過長，這個內部電池會耗盡電力，時鐘將被重置，並在插入新電池後要求輸入時間和日期。在這種情況下，更換電池之前的所有項目將在 AAPS 的計算中被跳過，因為無法正確識別正確的時間。
+因此 Insight 使用者不需要擔心時區變更和時間更改。此規則有一個例外：Insight 幫浦內部有一個小型電池來供電時間等。當你更換「主」電池時保持時間運作。 If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. 在這種情況下，更換電池之前的所有項目將在 AAPS 的計算中被跳過，因為無法正確識別正確的時間。
 
 ## Accu-Chek Combo 的時區變更
 
