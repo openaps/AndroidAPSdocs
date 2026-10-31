@@ -54,7 +54,7 @@ Necesitas al menos un **Perfil** guardado. Un **Porcentaje del perfil** siempre 
 
 En **AAPS** v4 los perfiles se administran y se activan desde la pantalla **Administrar** (navegación inferior) → **Perfil** (*«Gestionar y activar perfiles»*).
 
-La pantalla de Perfil muestra tus perfiles como un **carrusel de tarjetas que se deslizan**. La tarjeta del perfil en uso está marcada como **ACTIVO** y muestra su basal diaria total (p. ej. *∑ 30.15 U*). Debajo de la tarjeta seleccionada ves los detalles de ese perfil: **Unidades**, tipo de **Insulina** y los horarios de **IC**, **ISF**, **basal** y **objetivo**, con gráficos.
+La pantalla de Perfil muestra tus perfiles como un **carrusel de tarjetas que se deslizan**. La tarjeta del perfil en uso está marcada como **ACTIVO** y muestra su basal diaria total (p. ej. *∑ 30,15 U*). Debajo de la tarjeta seleccionada ves los detalles de ese perfil: **Unidades**, tipo de **Insulina** y los horarios de **IC**, **ISF**, **basal** y **objetivo**, con gráficos.
 
 ![La pantalla de Perfil: carrusel de perfiles, detalles y barra de acciones](../images/v4/Profiles/profile_manage.png)
 
@@ -94,7 +94,7 @@ Si las tasas basales con el porcentaje elegido no son compatibles con tu bomba, 
 
 Toca **▶ Activar** y luego **OK** en el diálogo de confirmación. El perfil en uso lleva entonces la marca **ACTIVO** en su tarjeta.
 
-```{admonition} Tu bomba puede redondear las tasas basales :class: note Cada bomba solo puede dar tasas basales en sus propios pasos (por ejemplo 0,05 U/h), por eso redondea las tasas de tu **Perfil**. Entonces **AAPS** usa la basal que la bomba da de verdad, así la IOB y la TDD siguen siendo correctas. Si la bomba da un poco más o menos insulina al día que tu **Perfil**, el aviso *«Perfil basal actualizado en la bomba»* te dice cuánto, por ejemplo *«da 10.00 U al día en lugar de 10.12 U»*.
+```{admonition} Tu bomba puede redondear las tasas basales :class: note Cada bomba solo puede dar tasas basales en sus propios pasos (por ejemplo 0,05 U/h), por eso redondea las tasas de tu **Perfil**. Entonces **AAPS** usa la basal que la bomba da de verdad, así la IOB y la TDD siguen siendo correctas. Si la bomba da un poco más o menos insulina al día que tu **Perfil**, el aviso *«Perfil basal actualizado en la bomba»* te dice cuánto, por ejemplo *«da 10,00 U al día en lugar de 10,12 U»*.
 
 Si la bomba informa de una basal muy distinta de tu **Perfil**, **AAPS** mantiene la basal del **Perfil** y te pide que revises las tasas basales en la bomba.
 
