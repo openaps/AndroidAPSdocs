@@ -34,7 +34,7 @@ Nebo klikněte na ikonu tužky, která se zobrazí v horní liště obsahu strá
 
 3. Libovolnou možností v kroku 2 vytvoříte nový branch ve svém repozitáři, kde budou uloženy vaše změny. Udělejte své úpravy do souboru.
 
-Pro stránky dokumentace používáme Markdown. Soubory mají příponu „.md“. Specifikace Markdownu není pevně daná a pro naše soubory Markdown v současnosti používáme myst_parser. Dbejte na správnou syntaxi, jak je [popsáno níže](#code-syntax).
+Pro stránky dokumentace používáme Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Dbejte na správnou syntaxi, jak je [popsáno níže](#code-syntax).
 
 ![Úprava větve](../images/PR3.png)
 
@@ -147,10 +147,10 @@ Obrázky vložíte pomocí této syntaxe Markdown.
 
 Obrázky mají být ve formátu PNG nebo JPEG.
 
-Názvy obrázků mají odpovídat jednomu z následujících pravidel pojmenování. V příkladu používám příponu png. Pokud používáte JPEG, použijte místo toho příponu jpeg.
+Image names should conform to one of the following naming rules. V příkladu používám příponu png. Pokud používáte JPEG, použijte místo toho příponu jpeg.
 
 - `filename-image-xx.png`, kde xx je jedinečné dvoumístné číslo obrázku v tomto souboru.
-- `filename-image-xx.png`, kde xx je smysluplný název podle autora souboru md.
+- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
 Obrázky jsou ve složce images pro angličtinu a do ostatních jazyků je automaticky přenese Crowdin. Nemusíte pro to nic dělat!
 
@@ -199,7 +199,7 @@ Potom na tento odkaz odkažte v textu, který píšete, tímto typem odkazu.
 
 Do dokumentace můžete přidat rámečky s poznámkou nebo varováním.
 
-Dále můžete přidat sbalitelné poznámky s podrobnými informacemi, aby uživatele, které podrobnosti nezajímají, neodradily od čtení celého textu. Používejte je prosím s rozmyslem, protože dokumentace má být co nejsnáze čitelná.
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Používejte je prosím s rozmyslem, protože dokumentace má být co nejsnáze čitelná.
 
 #### Poznámky
 
@@ -312,7 +312,7 @@ Příklad slovesa v **trpném rodě**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object)”*
 
-*“delivered”* je zde sloveso v trpném rodě. Podmět a předmět jsou proti větě v činném rodě prohozené. Větu jsme museli prodloužit o “is” a “by the”. Zvažte také, zda začít větu slovesem v činném rodě.
+*“delivered”* is a passive verb here. Podmět a předmět jsou proti větě v činném rodě prohozené. Větu jsme museli prodloužit o “is” a “by the”. Zvažte také, zda začít větu slovesem v činném rodě.
 
 Místo: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
@@ -527,7 +527,7 @@ Vysvětlení objasňuje, prohlubuje a rozšiřuje čtenářovo porozumění tém
     
     *W je lepší než z, protože…*
     
-    Kde je to vhodné, nabídněte hodnocení a i názory..
+    Offer judgements and even opinions where appropriate.
     
     *x v systému y je obdobou w v systému z. Ale…*
     
