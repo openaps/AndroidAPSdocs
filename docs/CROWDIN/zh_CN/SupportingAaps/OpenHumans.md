@@ -98,7 +98,7 @@ OpenAPS 数据共享库旨在为 DIYAPS 社区提供简便的数据共享方式�
 
 ## 数据隐私
 
-Open Humans 通过为每个项目分配数字 ID 来保护隐私。这使得项目能识别但无法确认您的身份。 AAPS 上传的应用 ID 类似，仅用于数据管理。更多信息请参考：
+Open Humans 通过为每个项目分配数字 ID 来保护隐私。 This allows projects to recognize but not identify you. AAPS 上传的应用 ID 类似，仅用于数据管理。更多信息请参考：
 
 - [Open Humans 数据使用政策](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)
