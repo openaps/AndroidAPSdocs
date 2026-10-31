@@ -34,7 +34,7 @@ Algunos teléfonos pueden funcionar mejor que otros, según la calidad de su Blu
 
 Ten en cuenta las siguientes limitaciones:
 
-* El bolo extendido y el bolo multionda no se admiten por ahora (en su lugar puedes usar [Carbohidratos Extendidos/eCarbs](../DailyLifeWithAaps/ExtendedCarbs.md)).
+* El bolo extendido y el bolo multionda no se admiten por ahora (en su lugar puedes usar [Carbohidratos extendidos (eCarbs)](../DailyLifeWithAaps/ExtendedCarbs.md)).
 * Solo se admite un perfil basal (el primero).
 * La tasa basal más baja de tu **Perfil** es 0,05 U/h. **AAPS** rechaza un **Perfil** con una tasa más baja. El Combo redondea las tasas basales a sus propios pasos (0,01 U/h por debajo de 1 U/h, 0,05 U/h hasta 10 U/h, 0,1 U/h por encima). **AAPS** usa las tasas que la bomba da realmente.
 * Las tasas basales temporales están limitadas al 500 % de la tasa basal actual. **AAPS** tiene en cuenta este límite.
@@ -326,7 +326,7 @@ El algoritmo OpenAPS no admite un bolo extendido o un bolo multionda en paralelo
 * Si el bolo se administró pero el historial de la bomba también tenía otros bolos que **AAPS** no conocía, ahora se registran y **AAPS** te pide comprobar la IOB antes del siguiente bolo.
 * Si la conexión con la bomba se pierde **durante** un bolo, **AAPS** no registra 0 U: muestra cuánto había administrado la bomba hasta ese momento y avisa de que la bomba todavía puede administrar el resto. **No vuelvas a dar el bolo.** **AAPS** lee la cantidad real del historial de la bomba en la siguiente conexión.
 * Si la conexión se pierde mientras **AAPS** envía el bolo, no se sabe si la bomba lo recibió. Comprueba el historial de bolos en la bomba antes del siguiente bolo.
-* Si **AAPS** no puede confirmar que se administró un bolo, muestra **Entrega del bolo fallida. No se ha entregado ningún bolo. Para asegurarse, por favor, compruebe la bomba para evitar un doble bolo y después vuelva a dar el bolo.** Los bolos nunca se repiten automáticamente.
+* Si **AAPS** no puede confirmar que se administró un bolo, muestra **Entrega del bolo fallida. No se ha entregado ningún bolo. Para asegurarte, comprueba la bomba para evitar un doble bolo y después vuelve a poner el bolo.** Los bolos nunca se repiten automáticamente.
 
 ## Dónde obtener ayuda
 
