@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Їжа (ваша база їжі)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+База **Їжа** — це ваш особистий список збережених продуктів. Кожен запис зберігає **вуглеводи** продукту (і, за бажанням, жири, білки, енергію та категорію). Так ви можете тримати в одному місці те, що часто їсте, і починати болюс зі збереженого продукту з уже заповненими вуглеводами.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Як відкрити базу їжі
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Відкрийте екран **Керувати** (нижня навігація) і виберіть **Їжа** (*«Керувати записами бази їжі»*). В **AAPS** v4 Їжа **більше не плагін** — нічого вмикати не потрібно; це окремий екран, який відкривається з [панелі «Керувати»](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## Список їжі
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Ваші продукти показано у списку, який можна прокручувати. Кожен рядок показує **назву** продукту, його **порцію / одиницю / категорію** та його **вуглеводи**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Список бази їжі з пошуком і кнопкою додавання](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Пошук** (угорі) — фільтрує список за **назвою** (без урахування регістру).
+- **Фільтр категорій** — кнопки-фільтри дозволяють звузити список до однієї **категорії**; коли категорію вибрано, з'являються кнопки її **підкатегорій**. (Натисніть вибрану кнопку ще раз, щоб скасувати вибір.)
+- **➕** (внизу праворуч) — додати новий продукт (див. нижче).
+- Натисніть рядок, щоб **редагувати** цей продукт.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Якщо у списку (або в поточному фільтрі) немає записів, екран показує **Немає даних**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Додавання і редагування продукту
+
+Натисніть **➕**, щоб додати продукт, або натисніть наявний рядок, щоб редагувати його. Редактор відкривається як нижня панель (**Додати їжу** / **Редагувати їжу**):
+
+![Редактор їжі — назва, категорія, порція, вуглеводи і макронутрієнти](../images/v4/Food/food_editor.png)
+
+Поля:
+
+- **Назва** — обов'язкове поле (без нього зберегти не можна).
+- **Категорія** і **Підкатегорія** — необов'язкові, для групування/фільтрування продуктів.
+- **Порція** і **Одиниця** — типовий розмір порції; **Одиниця** за замовчуванням — **г**.
+- **Вуглеводи (г)** — кількість вуглеводів у продукті.
+- **Жири (г)**, **Білки (г)**, **Енергія (кДж)** — необов'язкові поживні значення.
+
+Натисніть **Зберегти**, щоб зберегти продукт, або **Скасувати**, щоб відкинути зміни. Під час редагування наявного продукту в редакторі є також кнопка **Видалити**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Після видалення продукту з'являється повідомлення **«Їжу видалено»** з дією **Скасувати**, тож випадкове видалення легко скасувати.
 ```
 
 ---
 
-## Using a food for a bolus
+## Як використати продукт для болюсу
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+У кожному рядку продукту є кнопка **калькулятора**. Натискання на неї відкриває **Калькулятор болюса** з уже заповненими **вуглеводами** цього продукту, а **назва** продукту додається як примітка до запису терапії — тож ви підтверджуєте і вводите болюс, не вводячи вуглеводи ще раз.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Збережене число **вуглеводів** передається прямо в калькулятор — **AAPS** не множить його на порцію чи на те, скільки ви з'їли. Якщо у вас інша кількість, змініть вуглеводи в калькуляторі перед підтвердженням. (*Усередині* калькулятора болюса або діалогу вуглеводів немає вибору їжі; ви починаєте з рядка продукту тут.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Звідки береться їжа (синхронізація з Nightscout)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+База їжі синхронізується через **Nightscout**, але **лише в одному напрямку**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Завантаження:** **AAPS** **читає** продукти з **бази їжі** вашого сайту Nightscout і тримає локальний список синхронізованим з нею. Це відбувається під час синхронізації NSClient, тож спарений **клієнт/спостерігач** теж отримує ті самі продукти.
+- **Вивантаження:** **AAPS** **не** надсилає продукти **в** Nightscout — NSClient не підтримує вивантаження записів їжі. Тому продукти, які ви створюєте або редагуєте **в AAPS**, залишаються **на цьому пристрої** і не передаються в Nightscout чи на інші ваші пристрої.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Оскільки їжа **лише завантажується**, щоб мати один список їжі на вашому телефоні, у вашого спостерігача/[клієнта](../RemoteFeatures/ClientMasterControl.md) і в решті вашої системи, ведіть його в **Nightscout** (у його вбудованому редакторі їжі). **AAPS** завантажить ці записи. Продукт, доданий лише в **AAPS**, зберігається тільки на цьому пристрої — і не зникає: завантаження зіставляє записи Nightscout за їхнім Nightscout ID, тож воно додає й оновлює їх, але ніколи не перезаписує і не видаляє продукт, який ви створили локально (продукт видаляється лише тоді, коли його копію видалено в Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Зверніть увагу: база їжі також **не** входить до підписаного каналу керування «основний телефон ↔ клієнт» — вона передається лише як дані Nightscout.
 ```
 
 ---
 
-## Not on the watch
+## Немає на годиннику
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+База їжі — це функція **телефону**: на годиннику **Wear OS** немає ні перегляду їжі, ні плитки, ні меню.
 
 ---
 
