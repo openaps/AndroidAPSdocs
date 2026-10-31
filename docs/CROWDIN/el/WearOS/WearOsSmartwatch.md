@@ -55,14 +55,14 @@ The **Complications watchface** has seven complication slots. Long-press the wat
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Position  | Default                                                             | Alternative                           |
+| Slot | Θέση      | Default                                                             | Alternative                           |
 | ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
 | 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
 | 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
 | 3    | Right     | CoB Icon                                                            | BR & Target                           |
 | 4    | Graph     | BG Graph                                                            | BG Graph                              |
 | 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | Running mode                                                        | Running mode                          |
+| 6    | Top-left  | Τρόπος λειτουργίας                                                  | Τρόπος λειτουργίας                    |
 | 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
 
 The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
@@ -256,7 +256,7 @@ The final step is to configure **AAPS** on the phone to interact with **Wear.apk
 
 * Tick the **Wear** box
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Διαμόρφωση > Επικοινωνία με το Wear ενεργοποιημένη](../images/v4/Configuration/configuration_communication_wear.png)
 
 To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
 
