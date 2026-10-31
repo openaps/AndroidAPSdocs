@@ -12,8 +12,8 @@ OOP pentru Libre2 (găsiți-l [aici](#Libre2_OOP2)) creează aceleași citiri de
 
 Există motive întemeiate pentru a utiliza un transmițător Bluetooth:
 
--   Puteți alege diferite strategii de calibrare OOP2 (1): cu valorile cititorului folosind "Fără calibrare", sau prin calibrarea senzorului ca un Libre 1 folosind "calibrare bazată pe valori brute" sau, în cele din urmă, să calibreze valorile cititorului cu "calibrare bazată pe glicemie".  
-  Asigurați-vă că lăsați OOP1 dezactivat (2).
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
+  Make sure to leave OOP1 disabled (2).
 
     → Meniu Hamburger → Setări → Setări mai puțin frecvente → Alte diferite opțiuni
 
@@ -30,9 +30,9 @@ Observație: Transmițătorul poate fi utilizat în paralel cu aplicația LibreL
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-Acest lucru nu va porni fizic niciun senzor Libre2 și nici nu va interacționa cu aceștia în vreun fel. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. Dacă este disponibil, introduceți două valori ale glicemiei din sânge pentru calibrarea inițială. Now the blood glucose values should be displayed in xDrip every 5 minutes. Valorile pierdute, pentru că ați fost prea departe de telefon, nu vor fi recuperate înapoi.
+Acest lucru nu va porni fizic niciun senzor Libre2 și nici nu va interacționa cu aceștia în vreun fel. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Valorile pierdute, pentru că ați fost prea departe de telefon, nu vor fi recuperate înapoi.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. Vă puteți verifica glicemia după activarea și puteți face o nouă calibrare inițială.
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Configurați AAPS (doar pentru buclă)
 
