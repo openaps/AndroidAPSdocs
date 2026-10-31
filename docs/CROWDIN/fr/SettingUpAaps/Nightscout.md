@@ -10,7 +10,7 @@ Dans **AAPS** 4, le contrôle à distance ne passe pas par le site web Nightscou
 
 Soyez extrêmement prudent si vous utilisez Nightscout comme source de données de glycémie dans AAPS.
 
-### Nightscout settings
+### Paramètres Nightscout
 
 Vous pouvez bloquer l'accès public à votre site Nightscout avec les [rôles d'authentification](https://nightscout.github.io/nightscout/security) : ne partagez votre URL qu'avec un jeton `readable`, jamais avec un jeton `admin`.
 
