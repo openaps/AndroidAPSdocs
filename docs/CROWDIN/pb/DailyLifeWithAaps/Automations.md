@@ -1,4 +1,4 @@
-# Automation
+# Automação
 
 ```{contents} In this page
 :backlinks: entry
@@ -125,7 +125,7 @@ Há limites de segurança definidos para as **Automações**:
 Tenha cuidado ao selecionar um valor negativo na **Automação**
 ```
 
-É preciso ter cuidado ao escolher um ‘valor negativo’ na ‘Condição’, como "menor que", nas **Automações**. For example:
+É preciso ter cuidado ao escolher um ‘valor negativo’ na ‘Condição’, como "menor que", nas **Automações**. Por exemplo:
 
 ![Texto alternativo](../images/Automations/automation_comparison_operators.png)
 
@@ -144,7 +144,7 @@ Acionar uma **Automação** para qualquer número que seja **maior que** -0,1 mm
 
 ![Gatilhos da Automação](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Role para baixo para ver o resto da lista:
 
 ![Gatilhos da Automação, continuação](../images/Automations/automation_trigger_picker_2.png)
 
@@ -178,7 +178,7 @@ Várias condições podem ser ligadas com
 
 * Usar localização passiva: o **AAPS** só obtém a localização quando outros apps a solicitam.
 * Usar localização pela rede: localização da sua rede Wi-Fi.
-* Use GPS location (Attention! Isso pode gastar muita bateria!)
+* Usar localização por GPS (Atenção! Isso pode gastar muita bateria!)
 
 **Gatilhos** : dados da bomba e do sensor
 
@@ -198,7 +198,7 @@ Observe que, em todos os gatilhos de idade, a comparação "igual" dificilmente 
 
 ![Ações da Automação](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Role para baixo para ver o resto da lista:
 
 ![Ações da Automação, continuação](../images/Automations/automation_action_picker_2.png)
 
