@@ -5,7 +5,7 @@
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Recursos da bomba com o AAPS
 
 * Comunica-se com o **AAPS** pelo Bluetooth do próprio celular, sem um dispositivo de comunicação adicional.
 * As mudanças de horário de verão e de fuso horário devem ser feitas manualmente.
@@ -34,7 +34,7 @@ Depois de selecionado, o cartão **Diaconn G8** mostra dois botões, **Configura
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o pareamento começa pelo botão **Parear** na tela da bomba; não existe a configuração **Bomba selecionada**.
+A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, o pareamento começa pelo botão **Parear** na tela da bomba; não existe a configuração **Bomba selecionada**.
 ```
 
 - Na tela da bomba, toque em **Parear**. A tela **Pareamento de bomba Diaconn** se abre e o **AAPS** procura bombas próximas.
@@ -65,7 +65,7 @@ The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o parea
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o status da bomba é mostrado na tela da bomba (**Gerenciar** > **Bomba**) e sincronizado com o botão **Atualizar**.
+A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, o status da bomba é mostrado na tela da bomba (**Gerenciar** > **Bomba**) e sincronizado com o botão **Atualizar**.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
@@ -122,7 +122,7 @@ The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, o statu
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, uma troca de bateria é registrada com **Gerenciar** > **Troca de Bateria da Bomba**; não existe a aba **Ações**.
+A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, uma troca de bateria é registrada com **Gerenciar** > **Troca de Bateria da Bomba**; não existe a aba **Ações**.
 ```
 
 ### Função de bólus estendido
@@ -130,9 +130,9 @@ The screenshot above is from an earlier **AAPS** version. No **AAPS** 4, uma tro
 - Se você usar o bólus estendido, o loop fechado será desativado.
 - Veja [esta página](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) para saber por que o bólus estendido não funciona em um ambiente de loop fechado.
 
-## Where to get help
+## Onde obter ajuda
 
-O desenvolvimento do driver da Diaconn G8 é feito pela comunidade de forma **voluntária**. Before requesting help, please:
+O desenvolvimento do driver da Diaconn G8 é feito pela comunidade de forma **voluntária**. Antes de pedir ajuda:
 
 1. **Leia** a seção correspondente desta documentação para confirmar como a função deve funcionar.
 2. **Pergunte** no canal *#AAPS* do [Discord](https://discord.gg/4fQUWHZ4Mw) ou em um dos outros [canais da comunidade](../GettingHelp/WhereCanIGetHelp.md).
