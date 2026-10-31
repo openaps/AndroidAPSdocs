@@ -14,13 +14,13 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 :::{tab-item} Wiki
 ### Run the Workflow to Build the Signed APK
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
+1. Dans votre copie GitHub d'AndroidAPS, sélectionnez Actions.
+2. Développez All Workflows.
 3. Select AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Faites défiler vers le bas et appuyez sur Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
@@ -30,14 +30,14 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
+6. Vous verrez le message Workflow run was successfully requested. Actualisez la page de votre navigateur et vous pourrez suivre l'avancement de la compilation. Quand l'action est terminée, l'action AAPS CI affiche une coche verte. Vous avez compilé avec succès la nouvelle version d'Android APS.
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
 
 ### Install the AAPS APK
 
 1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+2. Ouvrez le dossier AAPS, sélectionnez le dossier de la nouvelle version : vous y trouverez la version pour le téléphone et la version pour Android Wear.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
 :::  
@@ -79,7 +79,7 @@ Tap **Select AAPS Version** and pick the version to build. The newest version is
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicates that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
