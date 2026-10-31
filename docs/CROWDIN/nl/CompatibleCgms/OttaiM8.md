@@ -1,7 +1,7 @@
 # Ottai M8
 
 
-## Using M8 with Ottai app
+## M8 gebruiken met de Ottai-app
 
 -   Download en installeer de apk via <https://play.google.com/store/apps/details?id=com.ottai.seas>. Gebruik voor de Chinese versie van Ottai <https://ottai.com.cn/70ICjxAI4i>
 
