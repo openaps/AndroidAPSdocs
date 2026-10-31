@@ -24,7 +24,7 @@
 :local: true
 ```
 
-Ако имате проблеми, вижте отделната страница за [отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Експортирайте настройките си
 
