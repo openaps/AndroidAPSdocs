@@ -1,25 +1,25 @@
-# Search the documentation
+# 搜尋說明文件
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+說明文件包含許多資訊。如果您想尋找特定主題、詞彙或設定，使用搜尋功能通常比瀏覽選單更快。
 
-## How to search
+## 搜尋方式
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+搜尋框位於螢幕左側導覽面板的頂端。
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+在較小的螢幕（例如手機）上，導覽面板會隱藏。點選左上角的選單（☰）圖示，即可開啟導覽面板並顯示搜尋框。
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. 在搜尋框中輸入一個或多個關鍵字。
+2. 按下 `Enter` 鍵或點選搜尋圖示。
+3. 搜尋結果頁面會列出所有包含關鍵字的頁面。點選搜尋結果即可前往相符的頁面。
 
-## Tips for better results
+## 改善搜尋結果的小技巧
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- 請使用明確的詞彙（例如 `temp target` 或 `autosens`），而非完整句子。
+- 使用多個關鍵字搜尋時，會顯示包含這些詞彙的頁面。先使用較廣泛的關鍵字搜尋，再逐步加入關鍵字來縮小範圍。
+- 搜尋範圍僅限於您目前正在閱讀的文件語系和版本。如果找不到需要的內容，請切換至英文版搜尋。英文版的內容最完整（請參閱 [變更語系和版本](./ChangeLanguageVersion.md)）。
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+搜尋索引會自動建立。最近新增的內容可能需要一段時間才會出現在搜尋結果中。
 ```
