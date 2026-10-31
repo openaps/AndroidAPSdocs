@@ -1,23 +1,23 @@
-# Change language and version
+# Changer la langue et la version
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+La documentation que vous lisez est disponible en plusieurs langues. Elle est propre à une version donnée d'**AAPS**. La langue et la version peuvent toutes les deux être changées depuis le menu en bas à droite de l'écran.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Cliquez sur la barre en bas à droite de l'écran pour ouvrir le menu de choix de la langue et de la version.
 ```
 
 ![Ouvrir le menu de langue](../images/documentation_language_menu.png)
 
 ## Changer la langue
 
-In the menu, select the language you want to read the documentation in.
+Dans le menu, choisissez la langue dans laquelle vous voulez lire la documentation.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+N'hésitez pas à rejoindre les traducteurs et relecteurs sur [Crowdin](https://crowdin.com/project/androidapsdocs) pour aider à traduire la documentation dans votre langue.
 
-## Change version
+## Changer la version
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+La version actuelle est affichée en bas à droite de l'écran. Pour passer à une autre version, cliquez sur la version actuelle et choisissez la version dont vous avez besoin.
 
 ```{warning}
-Lorsque vous changez de langue et/ou de version, vous pouvez obtenir un 404 - Page introuvable, si la page de langue ou de version n'existe pas. Cela se produit fréquemment lors du changement de version mais ne devrait pas se produire lors du changement de langue : la page s'affichera en anglais si elle n'est pas encore traduite.
+Lorsque vous changez de langue et/ou de version, vous pouvez obtenir une erreur 404 - Page introuvable, si la page n'existe pas dans cette langue ou cette version. Cela se produit fréquemment lors du changement de version mais ne devrait pas se produire lors du changement de langue : la page s'affichera en anglais si elle n'est pas encore traduite.
 ```
