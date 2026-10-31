@@ -28,13 +28,13 @@ En el [Asistente de bolo](#aaps-screens-bolus-wizard), tres botones debajo del c
 
 | Tipo                     | Alimentos típicos (como aparecen en la app)                                                                                      | Carbohidratos ahora, usados para el bolo | eCarbs añadidos                                            |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------- |
-| **Pan** (predeterminado) | Pan, pastas saladas, yogur, fruta, patatas, arroz, avena, verduras                                                               | 100 %                                    | None                                                       |
+| **Pan** (predeterminado) | Pan, pastas saladas, yogur, fruta, patatas, arroz, avena, verduras                                                               | 100 %                                    | Ninguno                                                    |
 | **Pastel**               | Empanadillas, pasta, platos asiáticos ricos en hidratos y grasas, bollería dulce y de masa fermentada, cereales, miel, mermelada | 90 %                                     | 20 %, empiezan 60 minutos más tarde, repartidos en 2 horas |
 | **Pizza**                | Lasaña, pizza, hamburguesas, patatas fritas, patatas al horno, patatas de bolsa                                                  | 80 %                                     | 35 %, empiezan 60 minutos más tarde, repartidos en 3 horas |
 
 **Ejemplo**: escribes 100 g y eliges **Pizza**. El bolo se calcula para 80 g, registrados ahora. 35 g de eCarbs empiezan 1 hora más tarde y se reparten en 3 horas.
 
-Good to know:
+Conviene saber:
 * No es un simple reparto: con **Pastel** y **Pizza**, los carbohidratos registrados suman **más de lo que escribiste** (110 % y 115 %). La parte extra está solo en los eCarbs.
 * El bolo solo cubre los carbohidratos que se toman ahora. **AAPS** no da un bolo por adelantado para los eCarbs: el lazo los tiene en cuenta cuando empiezan, como cualquier otro [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
 * Si fijas una **Hora de los carbohidratos**, los eCarbs empiezan 60 minutos después de esa hora.
