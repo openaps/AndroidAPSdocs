@@ -3,14 +3,14 @@
 Η κατάσταση ενημερώνεται μία φορά την ώρα και αντικατοπτρίζει μόνο την κατάσταση στο Crowdin.
 
 ```{tip}
-Προσέξτε, το ποσοστό διόρθωσης πρέπει να είναι χαμηλότερο από το ποσοστό των μεταφράσεων, αλλά αποφάσισαν να το εμφανίσουν πάνω από τις μεταφράσεις.
+Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
 Είναι καλύτερο να κοιτάξουμε μόνο το ποσοστό των μεταφράσεων για να δούμε αν πρόκειται να γίνει δουλειά.
 ```
 
 ```{admonition} needed time for final publication
 Μετά τη μετάφραση του Crowdin προγραμματίζεται ένας συγχρονισμός στο Github κάθε μέρα για να μεταφέρετε μεταφράσεις στο Github όπως αιτήματα έλξης. (PR).
 
-Η αποδοχή του PR είναι μια χειροκίνητη εργασία που θα γίνει όσο το δυνατόν γρηγορότερα.
+The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
 ## κατάσταση μετάφρασης εφαρμογής
