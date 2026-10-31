@@ -1,6 +1,6 @@
 (Sensitivity-detection-and-COB-sensitivity-detection)=
 
-# Gevoeligheids detectie (Autosens)
+# Gevoeligheidsdetectie (Autosens)
 
 ## Gevoeligheidsalgoritme
 
