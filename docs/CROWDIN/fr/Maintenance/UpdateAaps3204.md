@@ -14,7 +14,7 @@ Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de dé
 
 | Version AAPS            | Version<br/>Android Studio<br/>préférée | Version<br/>Android Studio<br/>alternative | Gradle | JVM |
 | ----------------------- | --------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                 | jusqu'à Meerkat                                        | 8.2    | 17  |
+| [3.2.0.4](#version3204) | Hedgehog (2023.1.1)                                 | jusqu'à Meerkat                                        | 8.2    | 17  |
 
 La « version préférée » est fournie avec la bonne version de JVM. La version préférée est aussi la version minimale que vous pouvez utiliser pour compiler **AAPS**. Vous ne pourrez **PAS** compiler avec une version plus ancienne que la version « préférée ». Si vous utilisez une autre version, vous pouvez rencontrer des problèmes liés à la version de JVM. Consultez la page [Dépannage d'Android Studio](#incompatible-gradle-jvm) pour vous aider à résoudre ces problèmes. Si votre version actuelle d'Android Studio n'est pas dans le tableau, vous devez d'abord la mettre à jour.
 
