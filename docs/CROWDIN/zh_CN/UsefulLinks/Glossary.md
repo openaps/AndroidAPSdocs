@@ -20,7 +20,7 @@
 
 **Autosens** = 计算 24 小时到 8 小时窗口之间的胰岛素敏感性等。 Further info → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Azure** = 云计算平台，用于托管 **Nightscout** 网页应用程序 Azure → 参见 **Nightscout**。
+**Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
 
 **BAT** = status light for low pump battery, shown in the status row of **AAPS'** main screen → see also **CAN** / **RES** / **SEN**.
 
@@ -54,17 +54,17 @@
 
 **Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s **TDD** and **BG**.
 
-**缓释碳水化合物(eCarbs)** = 延时释放的碳水化合物(extended Carbs)。将碳水化合物分配至数小时摄入，用以匹配蛋白质吸收，并允许**AAPS**进行扩展大剂量输注。 Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
+**缓释碳水化合物(eCarbs)** = 延时释放的碳水化合物(extended Carbs)。 Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
 
 **FCL** = Full Closed Loop. A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → Wiki - 'full closed loop' and see also **HCL**.
 
-**FGM** = 由Freestyle Libre生产的闪速葡萄糖监测仪(Flash Glucose Monitor)。更多信息 → 维基 - 'BG 来源'，另见 'CGM'。
+**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. 更多信息 → 维基 - 'BG 来源'，另见 'CGM'。
 
 **git** = 一种用于存储和下载 **AAPS** 源代码的工具。
 
-**GitHub** = 一个基于网络的托管服务和构建流程，专为**AAPS**软件版本控制系统设计，用于追踪计算机文件的变更并协调团队对这些文件的协作工作。它对于 **APK** 更新也是必需的。更多信息 → 维基 - '更新 APK'。
+**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. 更多信息 → 维基 - '更新 APK'。
 
-**Glimp** = 用于收集 Freestyle Libre Glimp 数据的应用。
+**Glimp** = an app to collect values from Freestyle Libre.
 
 **HCL (or Hybrid Closed Loop)** = a loop which automates insulin delivery between meals, but still requires the user to bolus for meals. Nearly every system in everyday use, including **AAPS**, is a hybrid closed loop → see also **FCL** / **Closed Loop**.
 
@@ -74,7 +74,7 @@
 
 **ISF** = 胰岛素敏感性因子。一单位胰岛素预计会减少的血糖量。 Unit is either mg/dL/U or mmol/L/U. These are not equivalent without a conversion!
 
-**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuid).
+**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuild).
 
 **LGS** = 低血糖暂停。 See [Wiki - Low Glucose Suspend](#KeyAapsFeatures-LGS)
 
@@ -86,7 +86,7 @@
 
 **min_5m_carbimpact** = 安全功能参数，当系统无法根据使用者的血糖反应确定碳水化合物吸收率时，该参数将作为默认碳水化合物衰减率的计算基准。 Further info → [Wiki - 'Preferences'](#Preferences-min_5m_carbimpact).
 
-**Nightscout** = 开源项目，用于访问和报告 **CGM** 数据。 The central data hub for the user’ **AAPS** data and can generate reports to view the user’s historical **Nightscout** data expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
+**Nightscout** = 开源项目，用于访问和报告 **CGM** 数据。 The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
 
 **Nightscout** → 另见 **Nightscout Reporter**。这对于跟踪儿童糖尿病管理的父母特别有用。
 
@@ -110,19 +110,19 @@
 
 **Profile** = 用户的基本治疗设置（基础率、**DIA**、**IC**、**ISF**、**BG**目标）。 **AAPS** only uses profiles created within **AAPS** (**Manage** → **Profile**), but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
 
-**Profile switch** = 将用户的**Profile**（暂时）切换为存储在**AAPS**中的不同**Profile**。
+**Profile switch** = (temporary) switch of the user’s **Profile** to a different **Profile** saved within **AAPS**.
 
-**Profile Percentage** = 在选定的时间段内，对用户的**Profile**应用（暂时的）百分比增加或减少。
+**Profile Percentage** = a (temporary) percentage increase or decrease applied to a user’s **Profile** for a selected time period.
 
 **RES** = status light for overdue reservoir change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **SEN**.
 
-**RileyLink** = 开源硬件设备，用于桥接蓝牙低功耗（BLE）与916MHz（旧款美敦力泵使用）或433MHz（Omnipod Eros泵使用）无线通信。
+**RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication.
 
 **SAGE** = 传感器使用时间。 This is displayed on the main screen of **AAPS** and in **Nightscout**, based on the user's **Sensor Insert** careportal entries → see also **Nightscout**.
 
 **SEN** = status light for overdue sensor change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **RES**.
 
-**Sensivity detection** = 计算由于运动、荷尔蒙等引起的胰岛素敏感性变化。 see also → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Sensitivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. see also → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
 **Sensor noise** = 描述**CGM**读取值不稳定导致**BG**值“跳动”的术语。 Further info → [Wiki - 'Smoothing blood glucose data'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
