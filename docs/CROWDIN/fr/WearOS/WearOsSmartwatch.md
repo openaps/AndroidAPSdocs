@@ -2,7 +2,7 @@
 
 Les instructions ci-dessous s'appliquent à l'apk **AAPS Wear** que vous devez compiler. Si vous ne l'avez pas encore compilé, consultez le guide [ici](../WearOS/BuildingAapsWearOS.md). Lors de la compilation, utilisez bien le même fichier keystore que pour l'apk **AAPS** du téléphone.
 
-Vous pouvez aussi utiliser une partie de ces informations pour l'apk **Wear** de **AAPSClient** et de **PumpControl**. Chaque application **Wear** ne communiquera qu'avec son application de téléphone correspondante. Par exemple : l'application **AAPSClient Wear** ne peut être utilisée que pour afficher les données de **AAPSClient** et pas celles d'**AAPS**. Quand plusieurs variantes client (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) sont installées côte à côte, les tuiles de chacune ont un petit en-tête dans la couleur d'accent de cette variante. Vous pouvez ainsi les distinguer en les faisant défiler.
+Vous pouvez aussi utiliser une partie de ces informations pour l'apk **Wear** de **AAPSClient** et de **PumpControl**. Chaque application **Wear** ne communiquera qu'avec son application de téléphone correspondante. Par exemple : l'application **AAPSClient Wear** ne peut être utilisée que pour afficher les données de **AAPSClient** et pas celles d'**AAPS**. Quand plusieurs variantes client (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) sont installées côte à côte, les tuiles de chacune ont un petit en-tête dans la couleur d'accent de cette variante. Vous pouvez ainsi les distinguer en les faisant défiler.
 
 ## Versions Wear OS et compatibilité
 
@@ -232,7 +232,7 @@ Un code d'appairage Wi-Fi, l'adresse IP et le port s'affichent :
 - Vérifiez que la montre et le téléphone sont sur le même réseau et le même appareil Wi-Fi. Les répéteurs Wi-Fi ou les points d'accès, en particulier, peuvent poser des problèmes.
 - Placez-vous près de votre routeur principal, puis redémarrez le téléphone et la montre.
 
-**Appairage :**
+**Appairage :**
 
 - Montre : Débogage sans fil : notez l'adresse IP.
 - Wear Installer : saisissez l'adresse IP dans l'application Wear Installer.
@@ -289,7 +289,7 @@ Vous trouverez d'autres conseils de dépannage [ici](https://freepoc.org/wear-in
 
 ## Sélectionnez un cadran AAPS sur votre montre WearOS
 
-Il existe plusieurs cadrans de montre disponibles dans la version standard de l'APK AAPS pour Wear OS. Une fois que vous avez installé l'APK AAPS Wear sur votre montre, ils seront disponibles. Voici les étapes pour en sélectionner un :
+Il existe plusieurs cadrans de montre disponibles dans la version standard de l'APK AAPS pour Wear OS. Une fois que vous avez installé l'APK AAPS Wear sur votre montre, ils seront disponibles. Voici les étapes pour en sélectionner un :
 
 1. Sur votre montre (en supposant qu'il s'agit de WearOS), appuyez longuement sur votre cadran actuel pour ouvrir l'écran de sélection du cadran. Faites défiler complètement vers la droite jusqu'au bouton « Ajouter un cadran » et sélectionnez-le
 
