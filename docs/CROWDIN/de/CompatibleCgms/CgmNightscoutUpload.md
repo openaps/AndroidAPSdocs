@@ -1,6 +1,6 @@
 # Other CGM uploaded to Nightscout
 
-Wenn Du ein anderes CGM-System nutzt, dessen Daten **nur** an [Nightscout](https://nightscout.github.io/) gesendet werden können.
+Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
 
 ```{important}
 Wenn Du Netzwerkprobleme hast, Deine Nightscout-Seite nicht verfügbar ist oder Du offline unterwegs bist, wird die Datenquelle nicht funktionieren. Verwende es mit Vorsicht.
