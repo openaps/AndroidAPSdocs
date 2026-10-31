@@ -123,7 +123,7 @@ Please feel free to reach out to the AAPS community if there is anything you fee
 
 
 
-#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
+#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
 
 This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
@@ -182,9 +182,9 @@ Here is an approximate timeframe:
 | Configuring CGM → xDrip → AAPS initially                                            | 1 hour          |
 | Configuring AAPS → pump initially                                                    | 1 hour          |
 | Configuring AAPS → Nightscout/Tidepool (reporting only)                              | 1 hour          |
-| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers                           | 1 hour          |
+| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers                            | 1 hour          |
 | Objective 1: Setting up visualization and monitoring                                 | 1 hour          |
-| Objective 2: Learn how to control AAPS                                               | 2 hour          |
+| Objective 2: Learn how to control AAPS                                               | 2 hours         |
 | Objective 3: Prove your knowledge                                                    | Up to 14 days   |
 | Objective 4: Starting on an open loop                                                | Minimum of 7 days |
 | Objective 5: Understanding your open loop                                            | 7 days          |

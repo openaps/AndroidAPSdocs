@@ -74,6 +74,7 @@ Release date: 31-10-2026
 - Insulin management: insulin catalogue, nicknames, selection in profile and wizard @Philoul
 - Calibration plugin @MilosKozak
 - [Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
+- New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
 - [Site rotation](#Aapsscreens-site-rotation): track and rotate infusion sites @Philoul @MilosKozak
 - [Autotune](../AdvancedOptions/Autotune.md) rework @Philoul
 - New [widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
@@ -571,7 +572,7 @@ v3 is new protocol. More safe and efficient
 LIMITATIONS
 - NS 15 must be used with AAPS 3.2
 - v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
-- in opposite because of old uneffective method of tracking changes v1 see changes done by v3
+- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
 - remember NS still uses v1 internally so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient or SMS if you want to enter data remotely
 
 RECOMMENDED SETTING

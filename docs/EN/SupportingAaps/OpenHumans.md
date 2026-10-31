@@ -100,7 +100,7 @@ Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
 
 ## Data Privacy
 
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but not identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
 
 - [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)

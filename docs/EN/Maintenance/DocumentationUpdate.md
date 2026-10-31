@@ -103,7 +103,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## January 2022
 
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) - update @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
 ## December 2021
 
@@ -114,7 +114,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 - Best practices for calibrating a libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) reformulation of impact
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
 ## October 2021
@@ -167,7 +167,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 ## September 2020
 
 - Major update for new AAPS version 2.7
-- For details see `release notes <Releasenotes-version-2-7-0>`
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## June 2020
 
@@ -230,7 +230,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
 - [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS commands update](../RemoteFeatures/SMSCommands.md)
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
 - Update - quick walk-through for experienced users
 - Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).

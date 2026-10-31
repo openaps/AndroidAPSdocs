@@ -404,7 +404,7 @@ When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert
 
 Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
 
-If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
 
 Main battery-demanding areas are:
 

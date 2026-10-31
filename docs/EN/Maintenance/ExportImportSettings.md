@@ -112,7 +112,7 @@ For doing automating settings exports [(**see Automation**)](../DailyLifeWithAap
 
 You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
 
-_**Note:** On importing settings to user always needs to enter the AAPS password!_
+_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
 
 ![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
 
@@ -155,7 +155,7 @@ By default, an import leaves your pump settings alone: the pump selected in **Co
 
 3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Settings**
 
-4. From the **AAPS** main screen select Request and allow on all permissions listed in red on the top
+4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
 
 5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
 
