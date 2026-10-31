@@ -10,9 +10,9 @@ Wersja dev AAPS jest tylko dla deweloperów i testerów, którzy dobrze radzą s
 
 Jednak gałąź dev to dobre miejsce, aby zobaczyć, jakie funkcje są testowane, pomóc w usuwaniu błędów i przekazać opinię, jak nowe funkcje działają w praktyce. Często ludzie testują gałąź dev na starym telefonie i starej pompie, dopóki nie są pewni, że jest stabilna. Każde użycie odbywa się na własne ryzyko. Gdy testujesz nowe funkcje, pamiętaj, że sam wybierasz testowanie funkcji, która jest wciąż w rozwoju. Robisz to na własne ryzyko i z należytą starannością, aby zadbać o swoje bezpieczeństwo.
 
-Jeśli znajdziesz błąd lub uważasz, że podczas używania gałęzi dev coś poszło nie tak, sprawdź [zakładkę Issues](https://github.com/nightscout/AndroidAPS/issues), czy ktoś inny już go nie zgłosił. Jeśli nie, dodaj zgłoszenie sam. Im więcej informacji tu podasz, tym lepiej (pamiętaj, że może być potrzebne udostępnienie [plików logów](../GettingHelp/AccessingLogFiles.md)). O nowych funkcjach można też rozmawiać na [Discordzie](https://discord.gg/4fQUWHZ4Mw).
+Jeśli znajdziesz błąd lub uważasz, że podczas używania gałęzi dev coś poszło nie tak, sprawdź [zakładkę Issues](https://github.com/nightscout/AndroidAPS/issues), czy ktoś inny już go nie zgłosił. Jeśli nie, dodaj zgłoszenie sam. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). O nowych funkcjach można też rozmawiać na [Discordzie](https://discord.gg/4fQUWHZ4Mw).
 
-Wersja dev ma datę ważności. Wydaje się to niewygodne, gdy wszystko dobrze działa, ale ma swój cel. Gdy w użyciu jest tylko jedna wersja dev, łatwiej śledzić błędy, które zgłaszają ludzie. Deweloperzy nie chcą sytuacji, w której w użyciu są trzy wersje dev, w niektórych błędy są naprawione, w innych nie, a ludzie dalej zgłaszają te już naprawione.
+Wersja dev ma datę ważności. Wydaje się to niewygodne, gdy wszystko dobrze działa, ale ma swój cel. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. Deweloperzy nie chcą sytuacji, w której w użyciu są trzy wersje dev, w niektórych błędy są naprawione, w innych nie, a ludzie dalej zgłaszają te już naprawione.
 
 (branch-ci-test)=
 
