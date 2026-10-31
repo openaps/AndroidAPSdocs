@@ -50,7 +50,7 @@ Automation rules are created and modified from the **Automation** screen (**Mana
 
 1. 与所有技术一样，**持续葡萄糖监测系统（CGMs）**、**胰岛素泵**和手机都有可能出现故障：技术问题或传感器错误可能会中断**自动化操作**，这时可能需要进行手动干预。
 
-1. 随着日常活动的变化，**自动操作的需求**也可能发生变化。在工作/学校/假期之间切换时，请在日历中设置提醒，以审查当前活跃的**自动操作**（它们很容易激活和停用）。 For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. **Requirements for Automations are likely to change as routines change**. 在工作/学校/假期之间切换时，请在日历中设置提醒，以审查当前活跃的**自动操作**（它们很容易激活和停用）。 For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
 
 1. **自动操作**可能会相互冲突，因此最好在安全环境中仔细审查任何新的**自动操作**设置，并了解为什么**自动操作**可能未按预期触发。
 
