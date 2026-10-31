@@ -93,7 +93,7 @@ Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)
 
 În acest ghid veți găsi _exemplu_ capturi de ecran pentru construirea fișierului **AAPS**. Pentru că  **Android Studio** - programul pe care îl folosim pentru a construi **AAPS** - este actualizat în mod regulat, este posibil ca aceste capturi de ecran să nu fie identice cu instalarea, dar ar trebui să fie în continuare posibile de urmat.
 
-Deoarece **Android Studio** rulează pe platformele Windows, Mac OS X și Linux, pot exista, de asemenea, diferențe minore între diferitele platforme.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
 ### Instalare Git
@@ -102,7 +102,7 @@ Deoarece **Android Studio** rulează pe platformele Windows, Mac OS X și Linux,
 :class: dropdown
 
 Git este cunoscut ca "_Versioning Control System_" (VCS).
-Git este un program care vă permite să urmăriți modificările din cod și să colaborați cu ceilalți. Veți folosi Git pentru a face o copie a codului sursă **AAPS** de pe siteul GitHub pe calculatorul local. Then, you will use Git on your computer to build the **AAPS** application (apk). 
+Git este un program care vă permite să urmăriți modificările din cod și să colaborați cu ceilalți. Veți folosi Git pentru a face o copie a codului sursă **AAPS** de pe siteul GitHub pe calculatorul local. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
@@ -140,8 +140,8 @@ Android Studio este un program care rulează pe calculatorul dumneavoastră. Vă
 Unul dintre cele mai importante lucruri la instalarea Android Studio este **să aveți răbdare!** În timpul instalării și instalării, Android Studio descarcă multe lucruri, ce vor dura timp.
 
 ```{admonition} Different UI
-:class: avertizare
-Notă de import: Studio Android și-a schimbat interfața în timpul ultimelor versiuni. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
+:class: warning
+Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](#computerbuild-NewUI).
 ```
 
 Versiunea de Android Studio este foarte importantă. Vedeți instrucțiunile [de mai sus](#Building-APK-recommended-specification-of-computer-for-building-apk-file) pentru a alege versiunea corectă a Android Studio.
@@ -156,7 +156,7 @@ Instalați Android Studio prin apăsarea pe "Următorul", așa cum se arată în
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-Dacă doriți să salvați spațiul de stocare, puteți debifa Android Virtual Device: nu este folosit pentru construirea **AAPS**.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -314,7 +314,7 @@ If the automatic setting is successful, your current version of **Git** will be 
 
 If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
 * manually enter the path which you saved [earlier](#BuildingAaps-steps-for-installing-git), or
-* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Verify your settings with the **Test** button!
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Apăsați pe "Creați nou..." (2) pentru a începe să creați propriul fișier 
 ```{admonition} INFORMATION!
 :class: note
 You will only need to create the keystore once.
-If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_Note:_** The key store is a file in which the information for signing the app is stored. Este criptat și informația este securizată cu parole.
