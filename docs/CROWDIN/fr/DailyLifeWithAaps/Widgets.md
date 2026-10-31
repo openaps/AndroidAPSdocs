@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# Widgets de l'écran d'accueil
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** propose des widgets que vous pouvez ajouter à l'écran d'accueil de votre téléphone. Un widget affiche vos données actuelles sans ouvrir l'application. Appuyez sur un widget pour ouvrir **AAPS**.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Widgets disponibles
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Cinq widgets sont disponibles. Ils se trouvent sous **AAPS** dans le sélecteur de widgets d'Android :
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![Widgets AAPS dans le sélecteur de widgets d'Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                          |
-| --------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, loop mode, profile, target, sensitivity, IOB and COB.                    |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading. |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                    |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                         |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                |
+| Widget                           | Taille par défaut | Ce qu'il affiche                                                                                                                                                                  |
+| -------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Widget AAPS**                  | 5 × 2             | Le bloc d'état de l'écran principal : glycémie avec tendance et delta, mode de la boucle, profil, cible, sensibilité, IA et GA.                                                   |
+| **Cercle de glycémie AAPS**      | 2 × 2             | Le cercle de glycémie de l'écran principal : un anneau de la couleur de la glycémie, l'arc de tendance, le delta, la valeur de la glycémie et le temps depuis la dernière mesure. |
+| **AAPS petit**                   | 2 × 2             | Nom du profil, glycémie avec flèche de tendance, temps depuis la dernière mesure, delta, IA et GA.                                                                                |
+| **AAPS Gly + IA + GA (compact)** | 4 × 1             | Une ligne avec la glycémie et la flèche de tendance, l'IA et les GA.                                                                                                              |
+| **Graphique Gly. AAPS**          | 3 × 1             | La valeur de la glycémie avec un petit graphique des dernières mesures.                                                                                                           |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+Le **Widget AAPS**, le **Cercle de glycémie** et le widget **petit** sur un écran d'accueil :
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![Widget AAPS, Cercle de glycémie et widget petit sur l'écran d'accueil](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+Le widget **compact** et le widget **Graphique Gly.** :
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Widget compact et widget Graphique Gly. sur l'écran d'accueil](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+Les valeurs de glycémie ont les mêmes couleurs que dans **AAPS** : vert dans la cible, jaune au-dessus de la cible, rouge en dessous de la cible.
 
 ---
 
-## Widget configuration
+## Ajouter un widget
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+Les étapes exactes dépendent de votre téléphone et de son lanceur d'applications. Sur la plupart des téléphones :
 
-The **Widget configuration** dialog has two settings:
+1. Faites un appui long sur une zone vide de l'écran d'accueil et choisissez **Widgets**.
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![Le sélecteur de widgets](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. Ouvrez **AAPS** dans la liste et appuyez sur le widget souhaité.
+3. Appuyez sur **Ajouter** (ou faites glisser le widget à l'endroit souhaité).
 
-Each widget has its own configuration.
+   ![Le bouton Ajouter sous le widget choisi](../images/widgets/widget_picker_add_button.png)
+
+Le widget est placé sur l'écran d'accueil. Juste après l'ajout, il est affiché avec des poignées : faites glisser une poignée pour **redimensionner** le widget, ou faites glisser le widget pour le déplacer. Le cercle de glycémie peut prendre n'importe quelle taille.
+
+![Un widget qui vient d'être ajouté, avec ses poignées de redimensionnement et le bouton des réglages](../images/widgets/widget_glucose_circle_added.png)
+
+Si la page de l'écran d'accueil est pleine, le téléphone place le widget sur une nouvelle page.
 
 ---
 
-## Good to know
+## Configuration du widget
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+Appuyez sur le bouton **crayon** affiché sur le widget juste après l'avoir ajouté. Plus tard, faites un appui long sur le widget pour retrouver les poignées et le crayon.
+
+La boîte de dialogue **Configuration du widget** a deux réglages :
+
+- **Configurer l’opacité** — l'opacité du fond du widget. Une valeur faible laisse voir le fond d'écran à travers.
+- **Utiliser la couleur noire** — utilise un fond noir à la place du fond par défaut.
+
+![Configuration du widget](../images/widgets/widget_configuration.png)
+
+Chaque widget a sa propre configuration.
+
+---
+
+## Bon à savoir
+
+- Un widget **affiche** seulement des données. Vous ne pouvez pas faire de bolus ni rien modifier depuis un widget.
+- Le widget est mis à jour par **AAPS**. Si **AAPS** ne fonctionne pas, ou si Android le limite en arrière-plan, le widget peut afficher des données anciennes. Vérifiez le temps depuis la dernière mesure, et assurez-vous qu'**AAPS** est exclu de l'[optimisation de la batterie](#SetupWizard-StoragePermission).
+- Avec **AAPSClient**, **AAPSClient2** et **AAPSClient3**, le fond du widget est jaune, bleu ou vert, pour que vous puissiez distinguer les applications. Augmentez l'opacité dans la configuration du widget si la couleur est difficile à voir. Voir [À propos d'AAPSClient, AAPSClient2 et AAPSClient3](#remotecontrol-aapsclient-versions).
