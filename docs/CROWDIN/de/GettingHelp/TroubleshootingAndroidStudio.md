@@ -57,9 +57,9 @@ Klone den Quellcode noch einmal so wie es in der Dokumentation beschrieben ist u
 
   * [Prüfe die Git-Installation](#BuildingAaps-steps-for-installing-git)
 
-  * Falls Du mit Windows arbeitest und Git erst kurz zuvor installiert wurde, solltest Du Deinen Computer neu starten, um Git nach der Installation global verfügbar zu machen
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * Falls Git installiert ist, Du (als Windows-Nutzender) Deinen Computer neu gestartet hast und Git immer noch nicht gefunden werden kann:
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * Suche auf deinem Computer nach einer Datei "git.exe".
 
@@ -212,7 +212,7 @@ Wenn Du die folgende Fehlermeldung erhältst, musst Du, bevor Du es noch einmal 
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-Wenn Du die APK erstellst, bekommst Du möglicherweise den Hinweis, dass das Generieren zwar erfolgreich war, aber, dass keine „build variants“ erzeugt wurden:
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![APK mit 0 Build-Varianten erstellt](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ Deine App wurde erfolgreich gebaut und kann auf das Smartphone übertragen werde
 
 ## APK not installed / Installation fehlgeschlagen
 
-![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
 * This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
