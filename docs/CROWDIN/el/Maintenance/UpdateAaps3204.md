@@ -25,37 +25,37 @@
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">Λειτουργικό σύστημα (μόνο 64 bit)</th>
+    <td class="tg-baqh">Windows 8 ή νεότερα</td>
+    <td class="tg-baqh">Mac OS 10.14 ή νεότερο</td>
+    <td class="tg-baqh">Οποιοδήποτε Linux που υποστηρίζει Gnome, KDE ή Unity DE,&nbsp;&nbsp;GNU C Library 2.31 ή νεότερη</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (μόνο 64 bit)</th>
+    <td class="tg-baqh">Αρχιτεκτονική CPU x86_64, Intel Core 2ης γενιάς ή νεότερο, ή CPU AMD με υποστήριξη για <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Chip με αρχιτεκτονική ARM, ή Intel Core 2ης γενιάς ή νεότερο με υποστήριξη για <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">Αρχιτεκτονική CPU x86_64, Intel Core 2ης γενιάς ή νεότερο, ή επεξεργαστής AMD με υποστήριξη για AMD Virtualization (AMD-V) και SSSE3</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB ή περισσότερο</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Δίσκος</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Τουλάχιστον 30GB ελεύθερος χώρος. Συνιστάται SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
+    <th class="tg-baqh"><p align="center">Ανάλυση οθόνης</th>
     <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 τουλάχιστον<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Ευρυζωνική σύνδεση</td>
   </tr>
 </tbody>
 </table>
 
-**Συνιστάται έντονα (δεν είναι υποχρεωτικό) να χρησιμοποιείτε SSD (Solid State Disk) αντί για HDD (Hard Disk Drive), γιατί το build του αρχείου apk του AAPS θα διαρκεί λιγότερο.**  Μπορείτε όμως να χρησιμοποιήσετε και HDD για το build του αρχείου apk του **AAPS**. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Συνιστάται έντονα (δεν είναι υποχρεωτικό) να χρησιμοποιείτε SSD (Solid State Disk) αντί για HDD (Hard Disk Drive), γιατί το build του αρχείου apk του AAPS θα διαρκεί λιγότερο.**  Μπορείτε όμως να χρησιμοποιήσετε και HDD για το build του αρχείου apk του **AAPS**. Αν το κάνετε, το build μπορεί να διαρκέσει πολύ. Όμως, όταν ξεκινήσει, μπορείτε να το αφήσετε να τρέχει χωρίς επίβλεψη.
 
 ## Βοήθεια και υποστήριξη κατά το build της 3.2.0.4
 
