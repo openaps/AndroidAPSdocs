@@ -53,7 +53,7 @@ In case you experience problems, see separate page for [troubleshooting Android 
 * 等待下載過程進行，你會在底部欄看到進度資訊。完成後，你將看到成功訊息。
 
   ```{note}
-  更新的檔案可能會有所不同！這並不代表指示
+  更新的檔案可能會有所不同！ This is not an indication of a problem.
   ```
 
    ![Android Studio - Pull 成功](../images/update/06_GitPullSuccess.png)
