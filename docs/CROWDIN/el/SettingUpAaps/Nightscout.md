@@ -4,53 +4,53 @@
 
 ## Ζητήματα ασφάλειας
 
-Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
+Το Nightscout είναι ο διακομιστής αναφορών και παρακολούθησης του **AAPS**: το **AAPS** στέλνει εκεί τα δεδομένα σας και εσείς ή οι φροντιστές σας τα βλέπετε στον ιστότοπο Nightscout ή σε εφαρμογές παρακολούθησης. Περιέχει τα ιατρικά σας δεδομένα, τα προφίλ και τις θεραπείες σας. Γι' αυτό αξίζει να σκεφτείτε πώς θα προστατέψετε τον ιστότοπο Nightscout σας.
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+Στο **AAPS** 4 ο απομακρυσμένος έλεγχος δεν γίνεται μέσω του ιστότοπου Nightscout. Όσο ο έλεγχος από πελάτες είναι ενεργός ([ενισχυμένη λειτουργία](#client-master-control-hardened-mode)), το **AAPS** **δεν εφαρμόζει** θεραπείες ή στόχους που γράφονται απευθείας στο Nightscout. Οι απομακρυσμένες εντολές έρχονται αντί γι' αυτό από ένα συζευγμένο **AAPSClient** — δείτε [Έλεγχος Master ↔ Client](#client-master-control).
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+Να είστε πολύ προσεκτικοί αν χρησιμοποιείτε το Nightscout ως πηγή δεδομένων γλυκόζης (BG) για το AAPS.
 
 ### Ρυθμίσεις Nightscout
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+Μπορείτε να απαγορεύσετε τη δημόσια πρόσβαση στον ιστότοπο Nightscout σας με τους [ρόλους πιστοποίησης](https://nightscout.github.io/nightscout/security): μοιράζεστε τη διεύθυνση URL σας μόνο με ένα διακριτικό (token) `readable`, ποτέ με ένα διακριτικό `admin`.
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+Το `API_SECRET` του Nightscout είναι ο κύριος κωδικός του ιστότοπού σας: μην το μοιράζεστε δημόσια.
 
 (Nightscout-aaps-settings)=
 
-### AAPS settings
+### Ρυθμίσεις του AAPS
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+Η αποδοχή δεδομένων από το Nightscout (αλλαγές προφίλ, θεραπείες, ...) είναι προαιρετική και είναι απενεργοποιημένη από προεπιλογή. Οι διακόπτες που περιγράφονται παρακάτω είναι κρυμμένοι όσο ο έλεγχος από πελάτες είναι ενεργός (ενισχυμένη λειτουργία) και στην [απλή λειτουργία](#preferences-simple-mode).
 
-* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
-* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
-* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
+* Ανοίξτε τις ρυθμίσεις **Συγχρονισμός** του πρόσθετου NSClientV3 με έναν από τους δύο τρόπους: 1) **Ρυθμίσεις** (εικονίδιο με το γρανάζι στην κύρια οθόνη) -> **NSClientV3** -> **Συγχρονισμός**, ή 2) **Διαμόρφωση** (μενού ☰) -> **Επικοινωνία** -> «**Ρυθμίσεις**» κάτω από το NSClientV3.
+* Ενεργοποιήστε την επιλογή «Αποστολή δεδομένων στο NS».
+* Η επιλογή «Αποστολή δεδομένων γλυκόζης στο NS» βρίσκεται στις ρυθμίσεις της πηγής BG σας (**Διαμόρφωση → Πηγή BG → Ρυθμίσεις**). Ενεργοποιήστε την, εκτός αν η πηγή δεδομένων γλυκόζης (BG) του AAPS είναι το Nightscout: σε αυτή την περίπτωση **μην** την ενεργοποιήσετε.
+* Μην ενεργοποιήσετε την επιλογή «Λήψη δεδομένων CGM από το NS», εκτός αν το Nightscout είναι η πηγή δεδομένων γλυκόζης (BG) σας.
 
-#### Do not sync from Nightscout
+#### Χωρίς συγχρονισμό από το Nightscout
 
-Keeping all the "Receive ... from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Αν κρατάτε απενεργοποιημένες όλες τις επιλογές «Λήψη ... από το NS», είστε σίγουροι ότι το AAPS δεν θα χρησιμοποιήσει καμία αλλαγή από το Nightscout:
 
-![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
+![Μόνο αποστολή στο Nightscout](../images/preferences/settings_nsclient_sync.png)
 
-#### Accept changes from Nightscout
+#### Αποδοχή αλλαγών από το Nightscout
 
-Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+Αν ενεργοποιήσετε αυτές τις επιλογές, μπορείτε να αλλάζετε ρυθμίσεις του AAPS μέσω του Nightscout, για παράδειγμα να τροποποιείτε και να αλλάζετε προφίλ, να ορίζετε προσωρινούς στόχους και να προσθέτετε υδατάνθρακες που θα λάβει υπόψη το AAPS. Εμφανίζονται μόνο όταν ο έλεγχος από πελάτες και η απλή λειτουργία είναι απενεργοποιημένα.  
+Σημείωση: οι θεραπείες με ινσουλίνη θα χρησιμοποιούνται μόνο για υπολογισμούς, όπως το «Μην κάνετε bolus, μόνο καταγραφή».
 
-![Nightscout receive options enabled](../images/NSsafety3.png)
+![Ενεργοποιημένες επιλογές λήψης από το Nightscout](../images/NSsafety3.png)
 
 ### Περαιτέρω ρυθμίσεις ασφαλείας
 
-Keep your phone up to date as described in [safety first](#preparing-safety-first).
+Κρατάτε το τηλέφωνό σας ενημερωμένο, όπως περιγράφεται στην ενότητα [Πρώτα η ασφάλεια](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
-## Εγχειρίδιο εγκατάστασης Nightscout
+## Χειροκίνητη ρύθμιση του Nightscout
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+Υποθέτουμε ότι έχετε ήδη έναν ιστότοπο Nightscout. Αν όχι, επισκεφθείτε τη σελίδα [Nightscout](http://nightscout.github.io/nightscout/new_user/) για πλήρεις οδηγίες εγκατάστασης. Οι παρακάτω οδηγίες είναι ρυθμίσεις που θα χρειαστεί επίσης να προσθέσετε στον ιστότοπο Nightscout σας. Ο ιστότοπος Nightscout σας πρέπει να έχει τουλάχιστον την έκδοση 15. Γι' αυτό ελέγξτε ότι χρησιμοποιείτε την [τελευταία έκδοση](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version), αλλιώς θα δείτε μήνυμα σφάλματος στην εφαρμογή AAPS.
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [Επεξεργαστείτε τις μεταβλητές σας](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
 * Προσθέστε ή επεξεργαστείτε τις μεταβλητές ως εξής:
   
@@ -58,16 +58,16 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Μπορούν να ρυθμιστούν διάφοροι συναγερμοί για την [παρακολούθηση της αντλίας](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), ειδικότερα για το πόσο άδεια είναι η μπαταρία: 
+  * Μπορείτε να ορίσετε διάφορους συναγερμούς για την [παρακολούθηση της αντλίας](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring). Συνιστάται ιδιαίτερα ο συναγερμός για το ποσοστό (%) της μπαταρίας: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Αποθηκεύστε τις αλλαγές. Ο ιστότοπος Nightscout σας θα πρέπει τώρα να μπορεί να εμφανίσει τις ενδείξεις (pills). Μπορείτε να τις εμφανίζετε πάντα, αν τις προσθέσετε στο `SHOW_PLUGINS`.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
-  ![Nightscout Pills](../images/nightscout1.png)
+  ![Ενδείξεις (pills) του Nightscout](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Το Nightscout ως πληρωμένη υπηρεσία SaaS (Software as a Service)
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+Ορίστε τις μεταβλητές στη διαδικτυακή σελίδα του παρόχου. Αν χρειάζεται, επικοινωνήστε με την υποστήριξη του παρόχου.
