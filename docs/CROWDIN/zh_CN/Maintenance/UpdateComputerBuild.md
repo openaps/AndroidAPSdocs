@@ -53,7 +53,7 @@ The minimal version required is described in the [Building Instructions](#Buildi
 * 等待下载完成，底部状态栏会显示进度。完成后，会显示成功消息。
 
   ```{note}
-  更新的文件可能不同！这并不意味着有问题。
+  更新的文件可能不同！ This is not an indication of a problem.
   ```
 
    ![Android Studio - Pull 成功](../images/update/06_GitPullSuccess.png)
