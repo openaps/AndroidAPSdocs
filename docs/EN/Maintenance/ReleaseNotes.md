@@ -74,6 +74,7 @@ Release date: 31-10-2026
 - Insulin management: insulin catalogue, nicknames, selection in profile and wizard @Philoul
 - Calibration plugin @MilosKozak
 - [Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
+- New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
 - [Site rotation](#Aapsscreens-site-rotation): track and rotate infusion sites @Philoul @MilosKozak
 - [Autotune](../AdvancedOptions/Autotune.md) rework @Philoul
 - New [widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
