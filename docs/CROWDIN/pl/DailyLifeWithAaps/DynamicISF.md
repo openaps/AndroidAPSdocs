@@ -95,7 +95,7 @@ Gdy używasz [Kalkulatora bolusa](#aaps-screens-bolus-wizard), **ISF** jest uży
 Gdy używasz **dynamicznego ISF**, używany tu **ISF** to średnia wartości dynamicznego ISF z ostatnich 24 godz.
 
 (dyn-isf-preferences)=
-## Settings
+## Ustawienia
 
 Aby włączyć, zaznacz **Włącz wrażliwość dynamiczną** w [Ustawienia > OpenAPS SMB](#Preferences-openaps-smb-settings). Po włączeniu pojawiają się nowe ustawienia.
 
