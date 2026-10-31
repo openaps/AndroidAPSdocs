@@ -16,7 +16,7 @@ Szczegóły znajdziesz na stronie [FAQ](../UsefulLinks/FAQ.md).
 | ----------------------- | -------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
 | [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                | do Meerkat                                             | 8.2    | 17  |
 
-„Zalecana wersja” zawiera odpowiednią wersję JVM. Zalecana wersja jest też minimalną wersją, której możesz użyć do zbudowania **AAPS**. **NIE** zbudujesz aplikacji w wersji starszej niż „zalecana”. Jeśli używasz innej wersji, mogą wystąpić problemy związane z wersją JVM. Zobacz stronę [Rozwiązywanie problemów z Android Studio](#troubleshooting_androidstudio-uncommitted-changes), aby rozwiązać te problemy. Jeśli Twojej obecnej wersji Android Studio nie ma w tabeli, MUSISZ ją najpierw zaktualizować.
+„Zalecana wersja” zawiera odpowiednią wersję JVM. Zalecana wersja jest też minimalną wersją, której możesz użyć do zbudowania **AAPS**. **NIE** zbudujesz aplikacji w wersji starszej niż „zalecana”. Jeśli używasz innej wersji, mogą wystąpić problemy związane z wersją JVM. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. Jeśli Twojej obecnej wersji Android Studio nie ma w tabeli, MUSISZ ją najpierw zaktualizować.
 
 Wersja Gradle jest powiązana z kodem źródłowym. Zawsze otrzymasz właściwą wersję Gradle podczas pobierania lub aktualizacji kodu źródłowego. Podajemy ją tu tylko dla informacji, nie musisz nic z nią robić.
 
@@ -125,7 +125,7 @@ Jeśli nie pamiętasz, jak to zrobić, zobacz stronę [Tworzenie i przywracanie 
 * Poczekaj, aż pobieranie się zakończy. Informację o tym zobaczysz na dolnym pasku. Po zakończeniu zobaczysz komunikat o powodzeniu.
 
   ```{note}
-  Lista zaktualizowanych plików może być inna! To nie jest oznaka problemu
+  Lista zaktualizowanych plików może być inna! This is not an indication of a problem.
   ```
 
 
