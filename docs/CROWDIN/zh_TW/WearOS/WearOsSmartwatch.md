@@ -1,79 +1,79 @@
-# Set up AAPS on your Wear OS watch
+# 在 Wear OS 手錶上設定 AAPS
 
 以下說明適用於您需要自行建置的 **AAPS Wear** APK。如果您尚未建置，請參閱 [此處](../WearOS/BuildingAapsWearOS.md)連結的指南在建置時，請確保使用與手機版 **AAPS** APK 相同的金鑰庫（keystore）檔案。
 
-您也可以將其中部分資訊應用於 **AAPSClient** 與 **PumpControl** 的 **Wear** APK。 Each **Wear** app will communicate with its matching phone app. 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。 When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+您也可以將其中部分資訊應用於 **AAPSClient** 與 **PumpControl** 的 **Wear** APK。每個**Wear**應用都將與其一致的手機應用進行通信。例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。如果同時安裝了多個用戶端版本（**AAPSClient**、**AAPSClient2**、**AAPSClient3**），每個版本的資訊方塊上方都會以該版本的強調色顯示小標題，方便您滑動瀏覽時辨別。
 
 ## Wear OS 版本和相容性
 
 (wearos-watchface-changes)=
 
-### Wear OS watch face changes (impact on AAPS watchfaces)
+### Wear OS 錶盤變更（對 AAPS 錶盤的影響）
 
 ```{admonition} Why newer Wear OS watches break AAPS watchfaces
 :class: warning
 
-In June 2025 Google [announced changes](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html) that phase out the legacy watch face engine (the AndroidX / Wearable Support Library, or "WSL", engine) in favour of the newer declarative **Watch Face Format**. The **AAPS** custom watchfaces are built on the legacy engine, so the newer the Wear OS version, the more likely an AAPS watchface is to misbehave or stop working.
+Google 於 2025 年 6 月[宣布變更](https://android-developers.googleblog.com/2025/06/upcoming-changes-to-wear-os-watch-faces.html)，將逐步淘汰舊版錶盤引擎（AndroidX／Wearable Support Library，或稱「WSL」引擎），改採較新的宣告式 **Watch Face Format**。 **AAPS** 自訂錶盤是以舊版引擎建置，因此 Wear OS 版本越新，AAPS 錶盤越可能發生異常或停止運作。
 
-This affects the **watchfaces** specifically — AAPS **complications**, tiles and remote-control functions are not impacted. It is also why **a firmware/system update on a Wear OS watch can break AAPS watchfaces**, and a watch cannot be rolled back to an older Wear OS version afterwards. If your AAPS watchface currently works, **disable automatic watch updates**.
+此變更只會影響**錶盤**，不會影響 AAPS 的**複雜功能**、資訊方塊和遠端控制功能。這也是為什麼 **Wear OS 手錶的韌體／系統更新可能會導致 AAPS 錶盤無法運作**；而且更新後，手錶無法降回較舊的 Wear OS 版本。如果您的 AAPS 錶盤目前運作正常，請**停用手錶自動更新**。
 ```
 
-The table below summarises how Google's change affects the AAPS (legacy-engine) watchfaces by Wear OS version:
+下表摘要說明 Google 的變更對不同 Wear OS 版本上的 AAPS（舊版引擎）錶盤造成的影響：
 
-| Wear OS version         | Base Android | API level | Impact on AAPS (legacy) watchfaces                                                                                                                                                          |
-| ----------------------- | ------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wear OS 6               | Android 16   | 36        | **Legacy watchfaces no longer available** — AAPS installs a [Watch Face Format watchface](#wearos-aaps-v4-watchface) instead: your custom watchface, or the AAPS V4 complications watchface |
-| Wear OS 5               | Android 14   | 34        | **Severe** — active (interactive) mode often fails, complications freeze, animations stop                                                                                                   |
-| Wear OS 4               | Android 13   | 33        | **Moderate** — throttling, missed updates, partial failures                                                                                                                                 |
-| Wear OS 3.0 / 3.2 / 3.5 | Android 11   | 30        | **Low** — legacy engine still supported                                                                                                                                                     |
+| Wear OS 版本              | 基礎 Android 版本 | API 層級 | 對 AAPS（舊版）錶盤的影響                                                                                     |
+| ----------------------- | ------------- | ------ | --------------------------------------------------------------------------------------------------- |
+| Wear OS 6               | Android 16    | 36     | **舊版錶盤已無法使用** — AAPS 會改為安裝[Watch Face Format 錶盤](#wearos-aaps-v4-watchface)：您自訂的錶盤，或 AAPS V4 複雜功能錶盤 |
+| Wear OS 5               | Android 14    | 34     | **嚴重** — 互動模式經常無法運作、複雜功能凍結、動畫停止                                                                     |
+| Wear OS 4               | Android 13    | 33     | **中度** — 更新頻率受限、漏掉更新、部分功能失效                                                                         |
+| Wear OS 3.0 / 3.2 / 3.5 | Android 11    | 30     | **輕微** — 仍支援舊版引擎                                                                                    |
 
-If your watch runs a version where AAPS watchfaces are unreliable, you can instead display AAPS data through **complications** on a compatible watchface, or use [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication, fed by the [External Companion Apps](#external-companion-apps) plugin of **AAPS**. On **Wear OS 6 and newer**, AAPS installs a replacement watchface built in the new format — see below.
+如果您的手錶使用的版本會導致 AAPS 錶盤運作不穩定，您可以改用相容的錶盤，透過**複雜功能**顯示 AAPS 資料；也可以使用 [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) 的複雜功能，資料由 **AAPS** 的[外部輔助應用程式](#external-companion-apps)外掛提供。在 **Wear OS 6 及更新版本**中，AAPS 會安裝以新格式製作的替代錶盤，請參閱下方說明。
 
 (wearos-aaps-v4-watchface)=
 
-### Wear OS 6 and newer — the watchface AAPS installs
+### Wear OS 6 及更新版本 — AAPS 安裝的錶盤
 
-Watches running **Wear OS 6 or newer** cannot run the classic AAPS watchfaces as watchfaces. For these watches the AAPS watch app brings two watchfaces built in Google's new **Watch Face Format**. Wear OS lets an app install only **one** watchface, so you choose which of the two is on the watch:
+搭載 **Wear OS 6 或更新版本**的手錶無法將傳統 AAPS 錶盤做為錶盤使用。這類手錶上的 AAPS 手錶應用程式內建了兩款使用 Google 全新 **Watch Face Format** 格式的錶盤。 Wear OS 只允許應用程式安裝**一款**錶盤，因此您可以選擇要在手錶上使用哪一款：
 
-- **Custom watchface** (default): shows the custom watchface you loaded from the phone with **Load Watchface** (see [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface)). The watch draws your design as a picture, so every existing custom watchface works. The complication slots a custom watchface may define are **not available** in this picture, because Wear OS only delivers complication data to a real watchface. Long-press the face to reach its one setting: whether the always-on display shows a plain clock or your own design, dimmed.
-- **Complications watchface** (the **AAPS V4** watchface): its **seven complication slots** come **preconfigured with AAPS data**: BG value, IOB, COB, the [BG Graph complication](#Watchfaces-complications), basal rate / temp target, and the **Running Mode** icon in the top-left slot (tap it to change the loop mode from the watch). Tap the time at the top to open the watch's alarm app. You can change what each slot shows in the watch face editor.
+- **自訂錶盤**（預設）：顯示您從手機使用 **載入錶盤**功能載入的自訂錶盤（請參閱[切換至 AAPS 錶盤](#WearOS_changing-to-AAPS-watchface)）。手錶會將您的設計顯示為圖片，因此所有現有的自訂錶盤都能使用。自訂錶盤可能會提供資訊欄位，但這些欄位在圖片中**無法使用**，因為 Wear OS 只會將資訊欄位資料提供給真正的錶盤。長按錶盤即可進入唯一的設定：選擇螢幕恆亮時要顯示一般時鐘，還是調暗後的自訂設計。
+- **資訊欄位錶盤**（**AAPS V4** 錶盤）：內含**七個資訊欄位**，並**預先設定為顯示 AAPS 資料**：血糖值、IOB、COB、[血糖圖表資訊欄位](#Watchfaces-complications)、基礎率／臨時目標，以及左上方資訊欄位中的**執行模式**圖示（輕觸即可從手錶變更循環模式）。輕觸上方的時間即可開啟手錶的鬧鐘應用程式。您可以在錶盤編輯器中變更各個資訊欄位的顯示內容。
 
-You choose on the phone: open the **Wear** plugin and, under **Watchface installed on watch**, select one of the two. This card is only shown while a Wear OS 6 or newer watch is connected. **AAPS** asks you to confirm, because the watch replaces its face immediately. Switching away from the **Complications watchface** also resets the complications you changed in the watch face editor back to the defaults, and the confirmation says so. While the **Complications watchface** is selected, the custom watchface buttons are hidden and a preview of the face is shown instead. If you load a custom watchface while the **Complications watchface** is selected, **AAPS** reminds you to switch to **Custom watchface** to see it on the watch.
+請在手機上選擇：開啟 **Wear** 外掛，然後在**手錶上安裝的錶盤**下方選擇其中一款。只有在連線至 Wear OS 6 或更新版本的手錶時，才會顯示此卡片。 **AAPS** 會要求您確認，因為手錶會立即替換目前的錶盤。切換離開**資訊欄位錶盤**時，您在錶盤編輯器中變更的資訊欄位也會重設為預設值，確認訊息中會說明這一點。選取**資訊欄位錶盤**時，自訂錶盤按鈕會隱藏，並改為顯示錶盤預覽。選取**資訊欄位錶盤**時載入自訂錶盤，**AAPS** 會提醒您切換至**自訂錶盤**，才能在手錶上看到該錶盤。
 
-- The selected watchface is **installed and activated automatically** the first time the AAPS watch app runs on such a watch, and it is **updated automatically** together with the watch app.
-- If you removed the watchface, an **Install watchface** entry appears at the bottom of the watch's AAPS **main menu** — tap it to reinstall.
+- AAPS 手錶應用程式首次在這類手錶上執行時，所選錶盤會**自動安裝並啟用**，之後也會隨著手錶應用程式**自動更新**。
+- 如果您移除了錶盤，手錶 AAPS**主選單**底部會出現**安裝錶盤**項目，輕觸即可重新安裝。
 
-While a watch running Wear OS 5 or older is connected, the **Watchface installed on watch** card is not shown at all (the mechanism it relies on requires Wear OS 6); the classic watchfaces run there as before.
+連線至搭載 Wear OS 5 或更舊版本的手錶時，不會顯示**手錶上安裝的錶盤**卡片（此功能所需的機制必須使用 Wear OS 6）；傳統錶盤在這類手錶上仍可照常使用。
 
 (wearos-complications-watchface-setup)=
 
-### Complications watchface — recommended setup
+### 資訊欄位錶盤 — 建議設定
 
-The **Complications watchface** has seven complication slots. Long-press the watchface, tap **Customize**, and pick a data source for each slot. The slots are numbered as in the watch face editor: **1** left, **2** centre, **3** right, **4** the graph, **5** bottom, **6** top-left and **7** top-right.
+**資訊欄位錶盤**有七個資訊欄位。長按錶盤，輕觸**自訂**，再為各個資訊欄位選擇資料來源。資訊欄位的編號與錶盤編輯器相同：**1** 左側、**2** 中央、**3** 右側、**4** 圖表、**5** 底部、**6** 左上方，以及 **7** 右上方。
 
-| Default setup                                                                                   | Alternative setup                                                                                       |
-| ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| ![Complications watchface, default setup](../images/wearos/complications_watchface_default.png) | ![Complications watchface, alternative setup](../images/wearos/complications_watchface_alternative.png) |
+| 預設設定                                                                 | 替代設定                                                                     |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| ![資訊欄位錶盤，預設設定](../images/wearos/complications_watchface_default.png) | ![資訊欄位錶盤，替代設定](../images/wearos/complications_watchface_alternative.png) |
 
-| Slot | Position  | Default                                                             | Alternative                           |
-| ---- | --------- | ------------------------------------------------------------------- | ------------------------------------- |
-| 1    | Left      | IoB Icon                                                            | CoB & IoB                             |
-| 2    | Centre    | Blood Glucose                                                       | Blood Glucose                         |
-| 3    | Right     | CoB Icon                                                            | BR & Target                           |
-| 4    | Graph     | BG Graph                                                            | BG Graph                              |
-| 5    | Bottom    | BR & Target                                                         | Uploader/Phone Battery                |
-| 6    | Top-left  | 運行模式                                                                | 運行模式                                  |
-| 7    | Top-right | Uploader/Phone Battery, or an app shortcut to **AAPS Snooze Alert** | App shortcut to **AAPS Snooze Alert** |
+| 欄位 | 位置  | 預設                                 | 替代項目                     |
+| -- | --- | ---------------------------------- | ------------------------ |
+| 1  | 左   | IoB圖示                              | BR、CoB及IoB               |
+| 2  | 中央  | 血糖                                 | 血糖                       |
+| 3  | 右   | CoB圖示                              | 基礎率與目標                   |
+| 4  | 圖表  | 血糖圖表                               | 血糖圖表                     |
+| 5  | 底部  | 基礎率與目標                             | Uploader/顯示手機電池          |
+| 6  | 左上方 | 運行模式                               | 運行模式                     |
+| 7  | 右上方 | 上傳器／手機電池，或可開啟 **AAPS 延後警示**的應用程式捷徑 | 可開啟 **AAPS 延後警示**的應用程式捷徑 |
 
-The **AAPS Snooze Alert** shortcut is picked from the watch's own **App shortcut** complications. Tapping it snoozes the alarm that is sounding on the phone.
+請從手錶內建的**應用程式捷徑**資訊欄位中，選擇 **AAPS 延後警示**捷徑。輕觸後即可延後手機上正在響起的鬧鐘。
 
 ```{tip}
-Turn on **Always-on display** on the watch (**Settings** > **Display**). The watchface then keeps showing your glucose when the wrist is down, instead of a blank or a plain clock.
+在手錶上開啟<strong>螢幕恆亮</strong>（<strong>設定</strong> > <strong>螢幕</strong>）。這樣手腕垂下時，錶盤仍會顯示您的血糖，而不是空白畫面或一般時鐘。
 ```
 
 ```{admonition} No complication data while the watch is locked
 :class: note
-If a **Lock type** is set under **Settings** > **Security and privacy**, the watch hides complication data while it is locked, and the watchface shows empty slots until you unlock it. To keep the data visible, turn off **Hide information** in the same menu.
+如果您在<strong>設定</strong> > <strong>安全性與隱私權</strong>中設定了<strong>螢幕鎖定類型</strong>，手錶在鎖定時會隱藏資訊欄位資料，因此錶盤上的資訊欄位會保持空白，直到您解鎖為止。若要讓資料持續顯示，請在相同選單中關閉<strong>隱藏資訊</strong>。
 ```
 
 ### Wear OS 3
@@ -83,32 +83,32 @@ If a **Lock type** is set under **Settings** > **Security and privacy**, the wat
 
 (BuildingAapsWearOs-WearOS5)=
 
-### Wear OS 4 and Wear OS 5
+### Wear OS 4 和 Wear OS 5
 
-Example: Galaxy Watch 4, 5, 6, 7 and Ultra or Pixel Watch that have **not** been updated to Wear OS 6 yet. Check the version under **Settings** > **About watch** > **Software**.
+例如：尚**未**更新至 Wear OS 6 的 Galaxy Watch 4、5、6、7 和 Ultra，或 Pixel Watch。請在**設定** > **關於手錶** > **軟體**中查看版本。
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) (for Wear OS 5 follow [this video](https://www.youtube.com/watch?v=yef_qGvcCnk)). All **AAPS Wear** functions work, but the classic **AAPS** watchfaces are limited as described in the table above: throttled on Wear OS 4, often failing on Wear OS 5.
+請使用 [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) 安裝 **AAPS Wear** APK（Wear OS 5 請參閱[這部影片](https://www.youtube.com/watch?v=yef_qGvcCnk)）。所有 **AAPS Wear** 功能都可正常使用，但傳統 **AAPS** 錶盤有上述表格所述的限制：在 Wear OS 4 上更新頻率受限，在 Wear OS 5 上則常常無法正常運作。
 
 ```{admonition} Wear OS 5
 :class: warning
-On Wear OS 5 the AAPS watchface has to be selected with Wear Installer 2 right after installing the Wear app: the installer offers the **AAPS (Custom)** watchface at the end of the installation. If you accidentally switch to another watchface, repeat the installation. Changing the watchface settings (Dark, Watchdivider, etc.) may not be possible.
+在 Wear OS 5 上，安裝 Wear app 後，必須立即使用 Wear Installer 2 選取 AAPS 錶盤：安裝程式會在安裝程序結束時提供 **AAPS (Custom)** 錶盤。如果不小心切換到其他錶盤，請重新安裝。錶盤設定（深色、錶面分隔線等）可能無法變更。
 
-If the classic watchface currently works for you, **disable automatic watch updates**: the next firmware update is likely to break it. If you update to Wear OS 6 anyway, read the section above: **AAPS** then installs its own watchface in the new format.
+如果目前使用的經典錶盤運作正常，請**停用自動更新手錶**：下一次韌體更新很可能會導致錶盤無法使用。如果仍要更新至 Wear OS 6，請參閱上方的說明：**AAPS** 會以新格式安裝自己的錶盤。
 ```
 
-If the watchface is too unreliable, consider [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler) with a complication instead. It needs the [External Companion Apps](#external-companion-apps) plugin enabled in **AAPS**.
+如果錶盤不太穩定，可以考慮改用 [GlucoDataHandler](https://play.google.com/store/apps/details?id=de.michelinside.glucodatahandler)，並搭配複雜功能使用。您必須在 **AAPS** 中啟用 [外部輔助 app](#external-companion-apps) 外掛。
 
-### Wear OS 6 and newer
+### Wear OS 6 及更新版本
 
-Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 2025 update. Most Galaxy and Pixel watches have received this update.
+範例：搭載 One UI 8 Watch 的 Galaxy Watch 4 及更新機型、2025 年更新後的 Pixel Watch。大多數 Galaxy 和 Pixel 手錶都已收到這項更新。
 
-Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
+使用 [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) 安裝 **AAPS Wear** APK。無法使用經典錶盤；**AAPS** 會自動安裝手機上選取的錶盤，請參閱[AAPS 安裝的錶盤](#wearos-aaps-v4-watchface)。 **AAPS Wear** 的操作不受限制。
 
-## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
+## 如何使用 **AAPS** 設定 Samsung Galaxy Watch 4 智慧型手錶
 
 本節假設你對智慧型手錶完全陌生，將向你介紹一款流行手錶（**Galaxy Watch 4**）的基本操作，隨後是逐步設置 **AAPS** 在手錶上運作的指南。
 
-_This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and later the watch asks for a **pairing code** when a phone or computer connects over ADB. Wear Installer 2 and the terminal procedure [below](#BuildingAapsWearOs-WearOS5-TShoot) both support it.
+_本指南適用於搭載 Wear OS 3 的 Galaxy Watch。_在 Wear OS 4 及更新版本上，手機或電腦透過 ADB 連線時，手錶會要求輸入**配對碼**。 Wear Installer 2 和下方的終端機操作步驟[都](#BuildingAapsWearOs-WearOS5-TShoot)支援此功能。
 
 這裡有關於 [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) 和 [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0) 的基本設置指南
 
@@ -124,7 +124,7 @@ _This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and 
 
 ## 設置 Samsung 帳號
 
-你需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。如果你已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，你無法簡單地將其更改為成人帳戶。 One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. 第二天，該帳戶將被轉換為成人帳戶，然後你可以繼續設置 Samsung 帳戶。
+你需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。如果你已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，你無法簡單地將其更改為成人帳戶。解決此問題的一種方法是將目前的出生日期修改為使目前年齡為 12 歲零 364 天。第二天，該帳戶將被轉換為成人帳戶，然後你可以繼續設置 Samsung 帳戶。
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -137,11 +137,11 @@ a) 使用 USB 傳輸線將 **AAPS** wear apk 檔案放入手機，然後將其�
 b) 從 Android Studio 將 Wear.apk 剪切並粘貼到你的 Gdrive 中。
 
 
-要將 AAPS 側載到智慧型手錶，你可以使用： 1) Wear Installer 2 2) Easy Fire Tools 3) Android 偵錯橋接（ADB） 我們建議使用 Wear Installer 2，因為影片中的說明與流程非常清楚、易於理解。 If Wear Installer 2 does not work for you, try Easy Fire Tools or ADB, both described below.
+要將 AAPS 側載到智慧型手錶，你可以使用： 1) Wear Installer 2 2) Easy Fire Tools 3) Android 偵錯橋接（ADB） 我們建議使用 Wear Installer 2，因為影片中的說明與流程非常清楚、易於理解。如果 Wear Installer 2 無法使用，請試試下方介紹的 Easy Fire Tools 或 ADB。
 
 ### 使用 Wear Installer 2 將 **AAPS** Wear 從手機側載到手錶上
 
- ![Wear Installer 2 app icon](../images/wearos/wear_installer2_icon.png)
+ ![Wear Installer 2 app 圖示](../images/wearos/wear_installer2_icon.png)
 
 Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發，你可以從 Google Play 將其下載到手機上，並用來將 AAPS wear 應用程式側載到手錶上。該應用程式包含一個便捷的“如何側載”[影片](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
 
@@ -149,7 +149,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 對於 Wear OS 5 智慧型手錶，請參閱[此影片](https://www.youtube.com/watch?v=yef_qGvcCnk)。參見故障排除提示[如下](#BuildingAapsWearOs-WearOS5-TShoot)。
 ```
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it while setting up the phone).
+這部影片提供所有必要的詳細資訊（建議在另一台裝置上開啟影片，設定手機時就能一邊觀看）。
 
 如影片中所述，完成後，請關閉手錶上的 ADB 偵錯，以避免消耗智慧型手錶的電池。
 
@@ -163,17 +163,17 @@ This provides all the necessary detail (best to open the video on a separate dev
 
 2) 將自己設為手錶的開發者（設置完成並連線到手機後）：
 
-Go to **Settings** > **System** > **About** > **Versions** (the menu names vary between watch brands — on some watches it is **About watch** > **Software info** > **Software version**).
+前往**設定** > **系統** > **關於** > **版本**（不同品牌手錶的選單名稱可能不同；有些手錶的路徑是**關於手錶** > **軟體資訊** > **軟體版本**）。
 
 ![圖像](../images/wearos/easyfire02.png)
 
-Rapidly tap on **Build number** (or **Software version**) several times until a message tells you that you are now a developer.
+快速連續點選**版本號碼**（或**軟體版本**）數次，直到出現訊息通知您已成為開發人員。
 
 ![圖像](../images/wearos/easyfire03.png)
 
-Go back to **Settings** > **System**: a new **Developer options** menu is now shown.
+返回**設定** > **系統**，此時會出現新的**開發人員選項**選單。
 
-In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, and confirm the prompts. Wireless debugging then shows the watch's **IP address & Port**, something like: **192.168.1.214** : 5555. You only need the IP address (here **192.168.1.214**), not the port number after the colon. Note that the IP address can change, for example every time you change to a new phone handset for AAPS.
+在**開發人員選項**中，開啟**ADB 偵錯**和**無線偵錯</strong)，並確認提示訊息。開啟無線偵錯後，畫面會顯示手錶的**IP 位址和連接埠**，例如：**192.168.1.214** : 5555。您只需要 IP 位址（此處為 **192.168.1.214**），不需要冒號後面的連接埠號碼。請注意，IP 位址可能會變更，例如每次您為 AAPS 換用新手機時。  </p>
 
 ![圖像](../images/wearos/easyfire04.png)
 
@@ -208,16 +208,16 @@ In **Developer options**, turn on **ADB debugging** and **Wireless debugging**, 
 - 前往 設定 → 開發人員選項。啟用 **ADB 偵錯**
 - 前往 設定 → 開發人員選項 → 無線偵錯 → **配對新裝置**
 
-You will see a Wi-Fi pairing code and IP address and port appearing:
+畫面上會顯示 Wi-Fi 配對碼、IP 位址和連接埠：
 
-![Watch screen showing the Wi-Fi pairing code and IP address and port](../images/wearos/ADB03.png)
+![顯示 Wi-Fi 配對碼、IP 位址和連接埠的手錶畫面](../images/wearos/ADB03.png)
 
 - 在終端機中： `adb pair ipaddress:port` 例如 `adb pair 10.10.1.125:36299`
 - 系統會要求輸入配對代碼。輸入該代碼。
 - 你會看到以下回應：<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - 在終端機中輸入： <br>`adb devices`。<br> 你應該會看到類似以下的內容：<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
+- 現在前往你電腦中存放 Wear APK 的資料夾，然後輸入<br> `adb install wear-full.apk` <br>將其中的 wear-full.apk 替換為你的 APK 檔名。
 - 你會看到：<br> `Performing Streamed Install`<br> `Success`
 
 
@@ -234,9 +234,9 @@ You will see a Wi-Fi pairing code and IP address and port appearing:
 **配對中 :**
 
 - 手錶：無線偵錯：記下 IP 地址。
-- Wear Installer: Enter the IP in the Wear Installer app.
+- Wear Installer：在 Wear Installer app 中輸入 IP 位址。
 - 選擇配對新設備，記下顯示的配對碼和埠號。
-- Wear Installer: enter the pairing code + space + port number.
+- Wear Installer：輸入配對碼、空格和連接埠號碼。
 - Wear Installer 應該報告配對成功。如果沒有，請退出 Wear Installer，然後重試。
 
 一旦配對成功，你應該能安裝 AAPS Wear apk：
@@ -247,29 +247,29 @@ You will see a Wi-Fi pairing code and IP address and port appearing:
 
 ## 設置 **AAPS** 手機與手錶的連線
 
-最後一步是在手機上設定 **AAPS**，使其能與手錶上的 **Wear.apk** 進行互動。 To do this, enable the Wear plugin:
+最後一步是在手機上設定 **AAPS**，使其能與手錶上的 **Wear.apk** 進行互動。若要執行此操作，請啟用 Wear 外掛：
 
 * 前往手機上的 **AAPS** 應用程式
 
-* Open the **menu** (☰) in the top-left corner and go to **Configuration** > **Communication**
+* 開啟左上角的**選單**（☰），前往**組態設定** > **通訊**
 
-* Tick the **Wear** box
+* 勾選**Wear**方塊
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![已在「組態 > 與 Wear 通訊」中啟用](../images/v4/Configuration/configuration_communication_wear.png)
 
-To bolus or take other actions from the watch, also turn on **Wear control** in [Settings > Wear](#preferences-wear).
+若要透過手錶注射或執行其他操作，請一併前往[設定 > Wear](#preferences-wear)，開啟**Wear 控制**。
 
 要更改 **AAPS** 手錶錶盤，請按下手錶的主畫面，他將進入“自訂”模式。然後向右滑動，直到看到所有 **AAPS** 錶盤。
 
 如果 **AAPS** Wear.apk 已成功側載到智慧型手錶上，他將顯示如下：
 
 
-![Wear plugin showing the connected Galaxy Watch, and the AAPS app on the watch](../images/wearos/wear_apk_installed.png)
+![顯示已連線 Galaxy Watch 的 Wear 外掛，以及手錶上的 AAPS app](../images/wearos/wear_apk_installed.png)
 
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use **Wear.apk** & **AAPS** remotely via Wi-Fi.
+部分智慧型手錶（例如 Samsung Galaxy）必須在 Samsung Galaxy 的「進階功能」中開啟「遠端連線」，才能透過 Wi-Fi 遠端使用 **Wear.apk** 和 **AAPS**。
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![已開啟遠端連線的 Galaxy Wearable「進階功能」畫面](../images/wearos/galaxy_wearable_remote_connection.png)
 
 (wear-os-watch-phone-communication)=
 
@@ -279,7 +279,7 @@ For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Sa
 2.  檢查智慧型手錶是否已連線到網際網路（而不僅僅是透過藍牙與手機連線）。
 3.  檢查 **AAPS** 手機和智慧型手錶是否已在 Samsung 應用程式中配對或連線。
 4.  也可能需要對手機和智慧型手錶進行硬重啟（即關閉並重新啟動手機）。
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** Wear apk onto the watch: the watch app of a browser build is the `aaps-wear-….apk` file, see [Building the Wear app](../WearOS/BuildingAapsWearOS.md). If the file you installed is any of the following: a) an **AAPSClient** Wear apk (while the phone runs **AAPS**); b) a `.aab` file; or c) a file with the word ‘debug’ in its name, you have not selected the correct Wear OS apk during the build.
+5.  假設您已成功將 Wear.apk 下載到手機，但沒有收到血糖資料，請_確認_手錶上側載的是正確的 **AAPS** Wear APK：瀏覽器版本的手錶 app 檔案名稱為 `aaps-wear-….apk`，請參閱[建置 Wear app](../WearOS/BuildingAapsWearOS.md)。如果您安裝的檔案屬於以下任一種： a) **AAPSClient** Wear APK（手機執行的是 **AAPS**）； b) `.aab` 檔案；或 c) 檔名中含有「debug」的檔案， 代表您在建置時選錯了 Wear OS APK。
 6.  檢查路由器是否未將設備相互隔離。
 
 更多問題排除提示請參閱[這裡](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
@@ -292,28 +292,35 @@ AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。當你在手錶
 
 1. 在手錶上（假設使用 WearOS），長按目前手錶外觀以打開手錶外觀選擇畫面，然後向右捲動直到看到「新增手錶外觀」按鈕並選擇他
 
-![Watchface selector with the Add watch face button](../images/wearos/watchface_add.png)
+![含有「新增錶盤」按鈕的錶盤選擇畫面](../images/wearos/watchface_add.png)
 
-2. Scroll through the list until you find "AAPS (Custom)" (depending on the watch, the watch faces of installed apps are listed under a "Downloaded" section or grouped by app) and click the middle of the image to add it to your shortlist of current watchfaces. 不用擔心目前「AAPS（自訂）」手錶外觀的外觀，我們將在下一步選擇你喜歡的外觀。
+2. 在清單中往下捲動，找到「AAPS (Custom)」（依手錶不同，已安裝 app 的錶盤可能會列在「已下載」區段，或依 app 分組），然後點選圖片中央，將它加入目前使用的錶盤清單。不用擔心目前「AAPS（自訂）」手錶外觀的外觀，我們將在下一步選擇你喜歡的外觀。
 
-![List of AAPS watchfaces, with AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
+![AAPS 錶盤清單，包含 AAPS (Custom)](../images/wearos/watchface_list_aaps.png)
 
-3. Now open AAPS on your phone and open the Wear plugin: **Configuration** > **Communication** > **Wear** > **Open plugin** (tick **Wear** first if it is not enabled).
+3. 現在在手機上開啟 AAPS，並前往 Wear 外掛：**組態設定** > **通訊** > **Wear** > **開啟外掛**（如果尚未啟用，請先勾選**Wear**）。
 
-![Wear plugin with the Custom Watchface card](../images/wearos/wear_plugin_custom_watchface.png)
+![顯示自訂錶盤卡片的 Wear 外掛](../images/wearos/wear_plugin_custom_watchface.png)
 
 4. 點擊「載入手錶外觀」按鈕，並選擇你喜歡的手錶外觀。
 
-![Select Custom Watchface list](../images/wearos/select_custom_watchface.png)
+![選取「自訂錶盤」清單](../images/wearos/select_custom_watchface.png)
 
-5. 查看你的手錶，現在應該顯示你選擇的「AAPS（自訂）」手錶外觀。等待幾秒鐘讓他重新整理。 The **Wear** screen on the phone now shows the name of the loaded watchface and a preview of it. **Infos Watchface** lists its details and the fields it contains, and **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) where you can download other custom watchfaces. 你現在可以透過長按錶面，然後在錶面圖像上按“自訂”按鈕來自訂錶面等項目。
+5. 查看你的手錶，現在應該顯示你選擇的「AAPS（自訂）」手錶外觀。等待幾秒鐘讓他重新整理。手機上的**Wear**畫面現在會顯示已載入錶盤的名稱及預覽。**錶盤資訊**會列出錶盤的詳細資訊和所含欄位；**更多錶盤**則會開啟
+
+錶盤交流網站</a)，您可以在此下載其他自訂錶盤。你現在可以透過長按錶面，然後在錶面圖像上按“自訂”按鈕來自訂錶面等項目。</li> </ol> 
+   
+   
 
 ```{admonition} Complications on a custom watchface
 :class: note
-Custom watchfaces made with version 3.0 or newer of the custom watchface format can contain up to five complication slots, with their position and size defined by the watchface (**Complication layout**). On the watch, long-press the watchface, tap **Customize** and tap **Complication 1** to **Complication 5** to choose the data source shown in each slot. The same rows are listed in the watch's AAPS app under **Settings** > **AAPS(Custom)**; tapping one there opens the same picker. **Complication type priority** decides whether a slot prefers a value or gauge, text, or an icon when the data source offers several. A changed priority only applies the next time you pick a data source for that slot.
+使用 3.0 版或更新版本自訂錶盤格式製作的錶盤，最多可包含五個複雜功能欄位；欄位的位置和大小由錶盤定義（**複雜功能版面配置**）。在手錶上長按錶盤，點選 **自訂**，再點選 **複雜功能 1** 到 **複雜功能 5**，即可選擇要在各個欄位顯示的資料來源。手錶上的 AAPS App 也會在 **設定** > **AAPS（自訂）** 中列出相同的欄位；點選其中一個欄位，就會開啟相同的選擇器。**複雜功能類型優先順序**會決定當資料來源提供多種選項時，欄位要優先顯示數值或量表、文字，還是圖示。變更優先順序後，只有在下次為該欄位選擇資料來源時才會生效。
 
-These slots only work on watches running **Wear OS 5 or older**, where the custom watchface runs as a real watchface. On **Wear OS 6 and newer**, the custom watchface is shown as a picture without its complication slots, and steps 1 and 2 above are not needed: make sure **Custom watchface** is selected under **Watchface installed on watch** in the phone's **Wear** plugin (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)).
+這些欄位僅適用於搭載 **Wear OS 5 或更舊版本**的手錶，因為在這些版本中，自訂錶盤會以真正的錶盤執行。在 **Wear OS 6 及更新版本**中，自訂錶盤會以圖片形式顯示，不會包含複雜功能欄位，因此不需要執行上方的步驟 1 和 2：請確認手機 **Wear** 外掛中 **安裝在手錶上的錶盤**已選取 **自訂錶盤**（請參閱[ AAPS 安裝的錶盤](#wearos-aaps-v4-watchface)）。
 ```
+
+
+
 
 ## AAPSv2 手錶外觀 - 圖例
 
@@ -325,7 +332,7 @@ B - CGM 資料讀取值
 
 C - 自最後一次 CGM 資料讀取以來的分鐘數
 
-D - change compared to last CGM reading (in mmol or mg/dL)
+D - 與上次 CGM 讀取值相比的變化量（單位為 mmol 或 mg/dL）
 
 E - 過去 15 分鐘的 CGM 讀取值平均變化
 
