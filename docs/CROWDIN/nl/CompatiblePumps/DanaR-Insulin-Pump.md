@@ -7,7 +7,7 @@
 * Communiceert met **AAPS** via de eigen Bluetooth van je telefoon, zonder extra communicatieapparaat.
 * Wisselingen van tijdzone en zomer-/wintertijd vragen geen speciale actie, omdat de pomp zijn eigen geschiedenis niet gebruikt.
 
-## Pomp koppelen
+## Instellen
 
 * In de pomp ga naar Main Menu > Setting > User Option
 * Zet "8. Extended Bolus" aan.
