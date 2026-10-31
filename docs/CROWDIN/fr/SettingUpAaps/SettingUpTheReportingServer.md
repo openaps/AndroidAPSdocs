@@ -12,7 +12,7 @@ Nous recommandons l'utilisation de Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout est une application web. Elle peut enregistrer et afficher les données de votre MGC et les données d'**AAPS**, et elle crée des rapports. C'est une plateforme puissante, intégrée à **AAPS** depuis de nombreuses années. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
+Nightscout est une application web. Elle peut enregistrer et afficher les données de votre MGC et les données d'**AAPS**, et elle crée des rapports. C'est une plateforme puissante, intégrée à **AAPS** depuis de nombreuses années. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Il transmet aussi les commandes à distance que les aidants envoient à **AAPS** depuis **AAPSClient** (voir [Contrôle Maître ↔ Client](#client-master-control)).
 
 Nightscout est un logiciel open-source. N'importe qui peut créer et maintenir un serveur Nightscout, en utilisant des services gratuits ou payants.
 
