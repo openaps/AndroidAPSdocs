@@ -21,7 +21,7 @@ Twoja aplikacja AAPS została już zbudowana w przeglądarce? Postępuj zgodnie 
 
 ## Aktualizacja AAPS w Android Studio
 
-Postępuj zgodnie z [tą instrukcją](./UpdateComputerBuild.md).
+Follow [these instructions](./UpdateComputerBuild.md).
 
 ## Aktualizacja AAPS z wiersza poleceń
 
@@ -31,7 +31,7 @@ Użyj [tej samej instrukcji](../SettingUpAaps/CLIBuild.md) co przy wcześniejszy
 
 ### Sprawdź wersję AAPS w telefonie
 
-Sprawdź w [Informacjach o wersji](../Maintenance/ReleaseNotes.md), czy po aktualizacji trzeba wykonać jakieś dodatkowe kroki.
+Sprawdź na stronie [Informacje o wersji](../Maintenance/ReleaseNotes.md), czy po aktualizacji trzeba wykonać jakieś dodatkowe kroki.
 
 Po zainstalowaniu nowego pliku apk:
 
