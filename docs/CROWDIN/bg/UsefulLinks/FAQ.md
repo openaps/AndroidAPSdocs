@@ -1,423 +1,423 @@
-# FAQ for loopers
+# Често задавани въпроси
 
-How to add questions to the FAQ: Follow these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+Как да добавите въпроси към този списък: следвайте тези [инструкции](../SupportingAaps/HowToEditTheDocs.md)
 
-## General
+## Общи
 
-### Can I just download the AAPS installation file?
+### Мога ли просто да изтегля инсталационния файл на AAPS?
 
-Не. There is no downloadable apk file for AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Here's the reason why:
+Не. Няма APK файл на AAPS за изтегляне. Трябва сами да го [компилирате](../SettingUpAaps/BuildingAaps.md). Ето защо:
 
-AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AAPS се използва за управление на помпата и за подаване на инсулин. Според действащите правила в Европа всички системи от клас IIa или IIb са медицински изделия, за които е нужно регулаторно одобрение (маркировка CE). За това одобрение са нужни различни проучвания и разрешения. Разпространяването на нерегулирано (несертифицирано) устройство е незаконно. Подобни правила има и в други части на света.
 
-This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
+Тези правила не се отнасят само за продажбата (в смисъл на получаване на пари), а за всяко разпространение (дори безплатно). Единственият начин да използвате приложението в рамките на тези правила е сами да изградите медицинското изделие за себе си.
 
-That’s why apks aren’t available.
+Затова няма готови APK файлове.
 
 (FAQ-how-to-begin)=
 
-### How to begin?
+### Как да започна?
 
-Start with [Preparing to start with AAPS](../Getting-Started/PreparingForAaps.md): it walks you through everything below in more detail.
+Започнете с [Подготовка за започване с AAPS](../Getting-Started/PreparingForAaps.md): там всичко по-долу е описано по-подробно, стъпка по стъпка.
 
-First of all, you have to **get loopable hardware components**:
+Първо трябва да **се снабдите с хардуерни компоненти, подходящи за затворен кръг**:
 
-* A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-* an [Android smartphone](../Getting-Started/Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-* a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+* [поддържана инсулинова помпа](../Getting-Started/CompatiblePumps.md), 
+* [смартфон с Android](../Getting-Started/Phones.md) (Apple iOS не се поддържа от AAPS – можете да разгледате [iOS Loop](https://loopkit.github.io/loopdocs/)) и
+* [система за продължително наблюдение на глюкозата](../Getting-Started/CompatiblesCgms.md). 
 
-Secondly, you have to **setup your software components**: [AAPS](../SettingUpAaps/BuildingAaps.md), [CGM/FGM source](../Getting-Started/CompatiblesCgms.md) and a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Второ, трябва да **настроите софтуерните компоненти**: [AAPS](../SettingUpAaps/BuildingAaps.md), [източник на данни от CGM/FGM](../Getting-Started/CompatiblesCgms.md) и [сървър за отчети](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Thirdly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your [basal rate and carb ratio](../SettingUpAaps/YourAapsProfile.md) are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [Autotune](#autotune-how-autotune-calculates-adjustments) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old-fashioned way](https://integrateddiabetes.com/basal-testing/).
+Трето, трябва да научите и **да разберете референтния дизайн на OpenAPS, за да проверите своите настройки за лечение**. Основният принцип на затворения кръг е, че вашата [базална доза и коефициент за въглехидрати](../SettingUpAaps/YourAapsProfile.md) са точни. Всички препоръки предполагат, че базалните ви нужди са покрити и че всички пикове или спадове, които виждате, се дължат на други фактори, които изискват еднократни корекции (физическа активност, стрес и др.). Корекциите, които затвореният кръг може да прави от съображения за безопасност, са ограничени (вижте максималния разрешен временен базал в [OpenAPS Reference Design](https://openaps.org/reference-design/)). Затова не бива да хабите разрешените дози за коригиране на грешен основен базал. Ако например често получавате нисък временен базал преди хранене, вероятно базалът ви трябва да се коригира. Можете да използвате [Autotune](#autotune-how-autotune-calculates-adjustments), за да анализирате голямо количество данни и да получите предложение дали и как трябва да се коригират базалите и/или ISF, както и дали трябва да се промени коефициентът за въглехидрати. Или можете да тествате и настроите базала си по [стария начин](https://integrateddiabetes.com/basal-testing/).
 
-### What practicalities of looping do I have?
+### Какви практически въпроси ще имам при използване на затворен кръг?
 
-#### Password protection
+#### Защита с парола
 
-If you don't want your settings to be easily changed, you can protect them with a password, a PIN or your phone's biometric authentication (fingerprint, face). Open **Settings** > **Protection** > **Settings protection** and choose the type of protection. You can also protect the whole app or only boluses in the same place. See [Settings protection](#Preferences-settings-protection) for details.
+Ако не искате настройките ви да могат лесно да се променят, можете да ги защитите с парола, ПИН или биометрично удостоверяване на телефона (пръстов отпечатък, лице). Отворете **Настройки** > **Защита** > **Защита на настройките** и изберете вида защита. На същото място можете да защитите и цялото приложение или само болусите. Вижте [Защита на настройките](#Preferences-settings-protection) за подробности.
 
-#### Android Wear Smartwatches
+#### Смарт часовници с Android Wear
 
-If you use the AAPS watch app to bolus or change settings, every request has to be confirmed on the watch: after you send it, the watch shows a summary with a **CONFIRM** button. See [Remote control from a Wear OS watch](../RemoteFeatures/RemoteControlWearOS.md).
+Ако използвате приложението AAPS за часовник, за да правите болус или да променяте настройки, всяка заявка трябва да се потвърди на часовника: след като я изпратите, часовникът показва обобщение с бутон **ПОТВЪРДИ**. Вижте [Управление на AAPS чрез смарт часовник с Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 (FAQ-disconnect-pump)=
 
-#### Disconnect pump
+#### Разкачване на помпата
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
+Ако свалите помпата за душ, вана, плуване, спорт или други дейности, трябва да съобщите на AAPS, че не се подава инсулин, за да остане IOB правилен.
 
-The pump can be disconnected using the [loop icon](#AapsScreens-loop-status) on the AAPS main screen: press it and select **Disconnect pump** with the duration you need. If the activity takes longer than planned, press the icon again and pick a new duration: you don't need to reconnect first. See [Disconnecting the pump for showering or activity](#pumps-cannulas-disconnecting) for how to avoid a lack of insulin during long disconnections.
+Помпата може да се разкачи чрез [иконата на кръга](#AapsScreens-loop-status) на главния екран на AAPS: натиснете я и изберете **Разкачи помпата** с нужната продължителност. Ако дейността продължи по-дълго от планираното, натиснете иконата отново и изберете нова продължителност: не е нужно първо да свързвате помпата отново. Вижте [Разкачване на помпата за душ или физическа активност](#pumps-cannulas-disconnecting), за да разберете как да избегнете липса на инсулин при дълго разкачване.
 
-#### Recommendations not only based on one single CGM reading
+#### Препоръките не се основават само на едно измерване от CGM
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
+От съображения за безопасност препоръките се основават не на едно измерване от CGM, а на средната делта (средната промяна). Затова, ако пропуснете някои стойности, може да мине известно време след възстановяването на данните, преди AAPS отново да започне да работи в затворен кръг.
 
-#### Further readings
+#### Допълнителни материали за четене
 
-There are several blogs with good tips to help you understand the practicalities of looping. Some of them are no longer online: the links below marked "archived copy" open a saved copy on the Internet Archive.
+Има няколко блога с добри съвети, които ще ви помогнат да разберете практическата страна на затворения кръг. Някои от тях вече не са онлайн: връзките по-долу, отбелязани с „архивно копие“, отварят запазено копие в Internet Archive.
 
-    * [Fine-tuning Settings](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (archived copy)
-    * [Why DIA matters](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (archived copy)
-    * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-    * [Hormones and autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (archived copy)
+    * [Фина настройка на параметрите](https://web.archive.org/web/20171029031305/http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM (архивно копие)
+    * [Защо DIA е важно](https://web.archive.org/web/20231130035027/http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM (архивно копие)
+    * [Ограничаване на скоковете след хранене](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+    * [Хормони и autosens](https://web.archive.org/web/20170902081839/http://seemycgm.com/2017/06/06/hormones-2/) See my CGM (архивно копие)
     
 
 (what-emergency-equipment-is-recommended-to-take-with-me)= (FAQ-emergency-equipment)=
 
-### What emergency equipment is recommended to take with me?
+### Какво оборудване за спешни случаи се препоръчва да нося със себе си?
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
+Трябва да носите със себе си същите средства за спешни случаи като всеки друг човек с диабет тип 1 на терапия с инсулинова помпа. Когато използвате затворен кръг с AAPS, силно се препоръчва да имате следното допълнително оборудване със себе си или наблизо:
 
-* Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-* Pump batteries
-* Access to your backups, both on the phone and in the cloud (e.g. Google Drive, Dropbox), so that you can set up AAPS again on another phone (see [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md)): 
-  * the current [apk](../SettingUpAaps/BuildingAaps.md) of AAPS and of any other apps you use (e.g. xDrip, Juggluco, BYODA).
-  * your keystore file (from building the apk) and its password,
-  * your latest settings export files from AAPS and your other apps,
-  * your **AAPS** master password: you cannot import the settings file without it.
+* Външна батерия и кабели за зареждане на смартфона, часовника и (ако е нужно) BT четеца или устройството Link
+* Батерии за помпата
+* Достъп до резервните ви копия – както на телефона, така и в облака (напр. Google Drive, Dropbox), за да можете да настроите AAPS отново на друг телефон (вижте [Създаване и възстановяване на резервни копия](../Maintenance/ExportImportSettings.md)): 
+  * текущия [apk](../SettingUpAaps/BuildingAaps.md) на AAPS и на всички други приложения, които използвате (напр. xDrip, Juggluco, BYODA).
+  * файла с хранилището за ключове (от компилирането на apk) и паролата за него,
+  * последните файлове с експорт на настройките от AAPS и от другите ви приложения,
+  * главната парола на **AAPS**: без нея не можете да импортирате файла с настройки.
 
 (FAQ-organize-backups)=
 
-#### How to organize my backups?
+#### Как да организирам резервните си копия?
 
-Export settings very regularly: after each pod or reservoir change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+Експортирайте настройките много редовно: след всяка смяна на пача или на резервоара, след промяна на профила, когато сте изпълнили цел, ако смените помпата… Дори нищо да не се променя, експортирайте веднъж месечно. Пазете няколко стари файла с експорт на настройките.
 
-**AAPS** can do this for you: it can export your settings automatically (for example with an [Automation](#ExportImportSettings-Automating-Settings-Export) after each pod change) and save the export directly to a cloud folder (Google Drive). See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+**AAPS** може да направи това вместо вас: може да експортира настройките автоматично (например с [Автоматизация](#ExportImportSettings-Automating-Settings-Export) след всяка смяна на пача) и да записва експорта директно в папка в облака (Google Drive). Вижте [Създаване и възстановяване на резервни копия](../Maintenance/ExportImportSettings.md).
 
-### How can I safely and securely attach the CGM/FGM?
+### Как да закрепя сигурно и безопасно CGM/FGM?
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
+Можете да го залепите. Има няколко вида предварително перфорирани лепенки („overpatches“) за често използвани CGM системи (търсете в Google, eBay или Amazon). Някои потребители на затворен кръг използват по-евтина стандартна кинезиологична лента или rocktape.
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+Можете да го закрепите. Можете също да купите ленти за горната част на ръката, които закрепват CGM/FGM (търсете в Google, eBay или Amazon).
 
-## APS algorithm
+## Алгоритъм на APS
 
-### Why does OpenAPS AMA show "dia: 3" even though I have a different DIA in my profile?
+### Защо OpenAPS AMA показва „dia: 3“, въпреки че в профила ми е зададено друго DIA?
 
-With **OpenAPS AMA** selected in **Configuration** > **APS**, **Open plugin** shows the data sent to the algorithm. In its **Profile** section, `dia` is always 3.0 or less:
+Когато в **Конфигурация** > **APS** е избран **OpenAPS AMA**, **Отвори плъгин** показва данните, изпратени към алгоритъма. В секцията **Профил** `dia` винаги е 3.0 или по-малко:
 
-![OpenAPS AMA plugin screen with dia 3.0 in the profile data](../images/screens/openaps_ama_plugin.png)
+![Екранът на плъгина OpenAPS AMA с dia 3.0 в данните на профила](../images/screens/openaps_ama_plugin.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
+При AMA DIA всъщност не означава „време на действие на инсулина“. Това е параметър, който преди беше свързан с DIA. Сега той означава „за колко време трябва да приключи корекцията“. Той няма нищо общо с изчисляването на IOB. В OpenAPS SMB този параметър вече не е нужен.
 
-## Other settings
+## Други настройки
 
-### Nightscout settings
+### Настройки на Nightscout
 
 (FAQ-nsclient-blocked)=
 
-#### AAPSClient (or AAPS) does not upload data: "Blocked by…". What can I do?
+#### AAPSClient (или AAPS) не качва данни: „Блокирано от…“. Какво мога да направя?
 
-The NSClient status shows why no data is sent:
+Статусът на NSClient показва защо не се изпращат данни:
 
-* **Blocked by connectivity options**: the connection settings do not allow the current connection. For example, you are on cellular data but only Wi-Fi is allowed, or you are not on one of the allowed Wi-Fi networks (SSIDs).
-* **Blocked by charging options**: the connection settings only allow syncing while the phone is charging (or only on battery), and this is not the case right now.
-* **No connectivity**: the phone has no internet connection.
+* **Блокирано от настройките за връзка**: настройките за връзка не позволяват текущата връзка. Например използвате мобилни данни, но е разрешен само Wi-Fi, или не сте свързани с някоя от разрешените Wi-Fi мрежи (SSID).
+* **Блокирано от настройките за зареждане**: настройките за връзка позволяват синхронизация само докато телефонът се зарежда (или само на батерия), а в момента това не е така.
+* **Няма връзка**: телефонът няма връзка с интернет.
 
-Check the [NSClient connection settings](#Preferences-nsclient): **Use cellular data**, **Use roaming**, **Use WiFi**, **WiFi SSID**, **Sync on battery** and **Sync while charging**.
+Проверете [настройките за връзка на NSClient](#Preferences-nsclient): **Използвай мобилни данни**, **Използвай данни в роуминг**, **Използвай WiFi**, **WiFi SSID на мрежа**, **Синхронизирай NS на батерия** и **Синхронизирай, докато телефонът се зарежда**.
 
-### CGM settings
+### Настройки на CGM
 
 (FAQ-advanced-filtering)=
 
-#### Why does AAPS say 'SMB always and after carbs disabled because active BG source doesn't support advanced filtering'?
+#### Защо AAPS показва „SMB „винаги включен“ и „след въглехидрати“ е забранен, защото е активен източник на КЗ, който не поддържа необходимата филтрация“?
 
-**Enable SMB always** and **Enable SMB after carbs** can only be used with a [trusted BG data source](#GettingStarted-TrustedBGSource): a sensor and CGM app that can tell **AAPS** which sensor the readings come from. With any other BG source, **AAPS** switches these two options off and shows this message. Check the list of trusted sources and, if your sensor is listed, make sure you use one of the CGM apps shown for it. See also [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Винаги използвай SMB** и **Разреши SMB след въглехидрати** могат да се използват само с [надежден източник на данни за КЗ](#GettingStarted-TrustedBGSource): сензор и CGM приложение, които могат да съобщят на **AAPS** от кой сензор идват стойностите. При всеки друг източник на КЗ **AAPS** изключва тези две опции и показва това съобщение. Проверете списъка с надеждни източници и ако сензорът ви е в него, уверете се, че използвате едно от CGM приложенията, посочени за него. Вижте също [Изглаждане на данните за кръвната захар](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
-### Pump
+### Помпа
 
-#### Batteries
+#### Батерии
 
-Looping can reduce the pump battery faster than normal use because the system interacts through Bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+Затвореният кръг може да изтощава батерията на помпата по-бързо от нормалната употреба, защото системата комуникира през Bluetooth много повече от потребител, който управлява помпата ръчно. Най-добре е да смените батерията при 25 %, защото след това комуникацията става трудна. Можете да зададете аларми за батерията на помпата чрез променливата PUMP_WARN_BATT_P в сайта си Nightscout. Начини да удължите живота на батерията:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
-* reduce the length of time the backlight stays on (within pump settings menu)
-* select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-* AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, enable **Log app start event** in the NSClient **Advanced settings**: Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, turn off battery optimization for AAPS so that the phone stops closing it down: see [battery savings](#FAQ-battery-savings) below.
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
-* for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy while in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+* намалете времето, през което LCD дисплеят остава включен (в менюто с настройки на помпата)
+* намалете времето, през което подсветката остава включена (в менюто с настройки на помпата)
+* настройте известията да са със звуков сигнал вместо с вибрация (в менюто с настройки на помпата)
+* натискайте бутоните на помпата само при презареждане; използвайте AAPS, за да виждате цялата история, нивото на батерията и количеството в резервоара.
+* На някои телефони приложението AAPS често може да бъде затваряно, за да се пести енергия или да се освободи RAM. Когато AAPS се стартира отново, при всяко стартиране създава Bluetooth връзка с помпата и отново прочита текущата базална доза и историята на болусите. Това изразходва батерията. За да видите дали това се случва, включете **Записвай стартиране на AAPS** в **Разширени настройки** на NSClient: Nightscout ще получава събитие при всяко рестартиране на AAPS и така проблемът се проследява лесно. За да намалите вероятността това да се случва, изключете оптимизацията на батерията за AAPS, за да не го затваря телефонът: вижте [пестене на батерията](#FAQ-battery-savings) по-долу.
+* почистете контактите на батерията с кърпичка със спирт, за да няма остатъци от фабричен восък/грес.
+* при [помпите Dana R/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md) процедурата при стартиране пропуска силен ток през батерията, за да разруши нарочно пасивиращия слой (той предотвратява загубата на енергия при съхранение), но това не винаги го разрушава на 100 %. Извадете и поставете отново батерията 2–3 пъти, докато на екрана се покаже 100 %, или използвайте ключа за батерията, за да направите кратко съединение на батерията преди поставянето ѝ: допрете го до двата контакта за част от секундата.
+* вижте още съвети за [определени видове батерии](#Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
-#### Changing reservoirs and cannulas
+#### Смяна на резервоари и канюли
 
-The reservoir must be changed directly on the pump, then the change is recorded in **AAPS**. Follow the step-by-step [guide for changing the pump reservoir and cannula](#pumps-cannulas-changing-reservoir-and-cannula).
+Резервоарът трябва да се смени директно на помпата, след което смяната се записва в **AAPS**. Следвайте стъпка по стъпка [ръководството за смяна на резервоара и канюлата на помпата](#pumps-cannulas-changing-reservoir-and-cannula).
 
-### Wallpaper
+### Тапет
 
-You can find the AAPS wallpaper for your phone on the [phones page](#Phones-phone-wallpaper).
+Тапета на AAPS за телефона си можете да намерите на [страницата „Телефони“](#Phones-phone-wallpaper).
 
-### Daily usage
+### Ежедневна употреба
 
-Many of the situations below can be prepared once as a [scene](#scenes): a preset that switches profile, temp target and other settings with one tap. **AAPS** offers ready-made templates, for example *Exercise*, *Sleep*, *Alcohol* or *Bathing*.
+Много от ситуациите по-долу могат да се подготвят веднъж като [сценарий](#scenes): предварителна настройка, която сменя профила, временната цел и други настройки с едно докосване. **AAPS** предлага готови шаблони, например *Физ. активност*, *Сън*, *Алкохол* или *Душ*.
 
-#### Hygiene
+#### Хигиена
 
 (what-to-do-when-taking-a-shower-or-bath)=
 
-##### What to do when taking a shower or bath?
+##### Какво да правя, когато се къпя под душа или във ваната?
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump). The *Bathing* [scene](#scenes) template does this for you.
+Можете да свалите помпата, докато се къпете под душа или във ваната. За този кратък период може да нямате нужда от нея, но трябва да съобщите на AAPS, че сте я разкачили, за да са правилни изчисленията на IOB. Вижте [описанието по-горе](#FAQ-disconnect-pump). Шаблонът за [сценарий](#scenes) *Душ* прави това вместо вас.
 
-#### Work
+#### Работа
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need, or save your workday settings as a [scene](#scenes).
+В зависимост от работата си можете да използвате различни настройки за лечение в работните дни. Като потребител на затворен кръг трябва да обмислите [смяна на профил](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) за обичайния си работен ден. Например можете да превключите на профил над 100 %, ако работата ви е по-малко натоварваща (напр. седите на бюро), или под 100 %, ако сте активни и на крака цял ден. Можете също да използвате висока или ниска временна цел или [изместване във времето на профила](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile), когато работите много по-рано или по-късно от обичайното или ако работите на смени. Можете също да създадете втори профил (напр. „вкъщи“ и „работен ден“) и всеки ден да правите смяна на профил към профила, който ви е нужен, или да запишете настройките си за работен ден като [сценарий](#scenes).
 
-### Leisure activities
+### Свободно време
 
 (FAQ-sports)=
 
-#### Sports
+#### Спорт
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+Трябва да промените старите си навици при спорт отпреди затворения кръг. Ако просто приемете един или повече „спортни“ въглехидрати както преди, системата със затворен кръг ще ги разпознае и ще ги коригира.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+Така ще имате повече активни въглехидрати, но в същото време кръгът ще противодейства и ще подава инсулин.
 
-When looping you should try these steps:
+Когато използвате затворен кръг, опитайте следните стъпки:
 
-* Make a [profile switch](#ProfileSwitch-change-percentage) < 100%: tap the profile name on the main screen, tap the round **▶** button, then set **Percentage** and **Duration**.
-* Set an [activity temp target](#TempTargets-activity-temp-target) above your standard target. With a percentage below 100 % and a duration, the same **Activate** screen offers a **Temporary target / Activity** switch that starts both at once.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](#Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](#Open-APS-features-enable-smb-always) are disabled.
+* Направете [смяна на профил](#ProfileSwitch-change-percentage) < 100 %: докоснете името на профила на главния екран, докоснете кръглия бутон **▶** и задайте **Процент** и **Продължителност**.
+* Задайте [временна цел за физическа активност](#TempTargets-activity-temp-target) над стандартната си цел. При процент под 100 % и зададена продължителност същият екран **Активиране** предлага превключвател **Временна цел / Физ. активност**, който стартира и двете едновременно.
+* Ако използвате SMB, уверете се, че [„Използвай SMB с високи цели“](#Open-APS-features-enable-smb-with-high-temp-targets) и [„Винаги използвай SMB“](#Open-APS-features-enable-smb-always) са изключени.
 
-Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+Важно е какво правите с тези настройки преди и след спорта. Направете промените навреме преди спорта и имайте предвид ефекта от попълването на запасите в мускулите.
 
-The *Exercise* and *Post-exercise Night* [scene](#scenes) templates bundle these settings, so you can start them with one tap. If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) to start the profile switch and TT, or the scene. Location based automation might also be an idea but makes preprocessing more difficult.
+Шаблоните за [сценарий](#scenes) *Физ. активност* и *Вечер след физ. активност* събират тези настройки заедно, така че можете да ги стартирате с едно докосване. Ако спортувате редовно по едно и също време (напр. тренировка във фитнеса), можете да използвате [автоматизация](../DailyLifeWithAaps/Automations.md), за да стартирате смяната на профил и TT или сценария. Автоматизация въз основа на местоположението също е вариант, но прави предварителната подготовка по-трудна.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+Процентът при смяната на профил, стойността на временната цел за физическа активност и най-доброто време за промените са индивидуални. Започнете внимателно, когато търсите правилната стойност за себе си (започнете с по-нисък процент и по-висока TT).
 
-#### Sex
+#### Секс
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#FAQ-disconnect-pump).
+Можете да свалите помпата, за да сте „свободни“, но трябва да съобщите на AAPS, за да са правилни изчисленията на IOB. Вижте [описанието по-горе](#FAQ-disconnect-pump).
 
-#### Drinking alcohol
+#### Пиене на алкохол
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
+Пиенето на алкохол е рисковано в режим Затворен кръг, защото алгоритъмът не може да предвиди правилно КЗ под влиянието на алкохола. Трябва сами да намерите свой начин за справяне с това, като използвате следните функции в AAPS:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a [profile switch](#ProfileSwitch-change-percentage) to noticeably less than 100% 
+* Да изключите режима Затворен кръг и да лекувате диабета ръчно или
+* да зададете високи временни цели и да изключите UAM, за да не може кръгът да увеличи IOB заради хранене, което не сте въвели, или
+* направете [смяна на профил](#ProfileSwitch-change-percentage) на стойност, значително по-ниска от 100 % 
 
-The *Alcohol* [scene](#scenes) template is a starting point you can adapt to your own method.
+Шаблонът за [сценарий](#scenes) *Алкохол* е отправна точка, която можете да промените според своя начин.
 
-When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
+Когато пиете алкохол, трябва постоянно да следите CGM, за да избегнете хипогликемия, като ръчно приемате въглехидрати.
 
-#### Sleeping
+#### Сън
 
-##### How can I loop during the night without mobile and Wi-Fi radiation?
+##### Как да използвам затворен кръг през нощта без мобилни данни и Wi-Fi (без излъчване)?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work if your CGM app runs on the same phone as AAPS, such as xDrip, Juggluco or BYODA; it will NOT work if you get the BG-readings via Nightscout):
+Много потребители включват самолетния режим на телефона си през нощта. Ако искате кръгът да ви помага, докато спите, направете следното (това работи само ако CGM приложението ви работи на същия телефон като AAPS, например xDrip, Juggluco или BYODA; НЯМА да работи, ако получавате стойностите на КЗ чрез Nightscout):
 
-1. Turn on airplane mode in your mobile.
-2. Wait until the airplane mode is active.
-3. Turn on Bluetooth.
+1. Включете самолетния режим на телефона си.
+2. Изчакайте, докато самолетният режим се включи.
+3. Включете Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+Тогава не получавате обаждания и не сте свързани с интернет. Но кръгът продължава да работи.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip) when phone is in airplane mode. In xDrip, go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+Някои хора са забелязали проблеми с локалното излъчване (AAPS не получава стойности на КЗ от xDrip), когато телефонът е в самолетен режим. В xDrip отидете в Settings > Inter-app settings > Identify receiver и въведете `info.nightscout.androidaps`.
 
 ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-If you want different settings at night (for example a higher target), the *Sleep* [scene](#scenes) template is a good starting point.
+Ако искате различни настройки през нощта (например по-висока цел), шаблонът за [сценарий](#scenes) *Сън* е добра отправна точка.
 
-#### Traveling
+#### Пътуване
 
-##### How to deal with time zone changes?
+##### Как да се справя със смяната на часовата зона?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+При Dana R и Dana R Korean не е нужно да правите нищо. За другите помпи вижте страницата [пътуване със смяна на часовата зона](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) за повече подробности.
 
-### Medical topics
+### Медицински въпроси
 
-#### Hospitalization
+#### Хоспитализация
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../UsefulLinks/ClinicianGuideToAaps.md).
+Ако искате да споделите информация за AAPS и затворения кръг „направи си сам“ (DIY) с лекарите си, можете да разпечатате [ръководството за AAPS за лекари](../UsefulLinks/ClinicianGuideToAaps.md).
 
-#### Medical appointment with your endocrinologist
+#### Преглед при вашия ендокринолог
 
-##### Reporting
+##### Отчети
 
-You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+Можете да покажете отчетите си от Nightscout (https://YOUR-NS-SITE.com/report) или да използвате [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
-## Frequent questions on Discord and their answers...
+## Чести въпроси в Discord и отговорите им...
 
-### My problem is not listed here.
+### Моят проблем не е описан тук.
 
-See [where to get help](../GettingHelp/WhereCanIGetHelp.md). If you found the solution yourself, **remind us to add it to this list!**
+Вижте [Къде мога да получа помощ?](../GettingHelp/WhereCanIGetHelp.md). Ако сте намерили решението сами, **напомнете ни да го добавим към този списък!**
 
-### Building and installing
+### Компилиране и инсталиране
 
 (FAQ-build-errors)=
 
-#### I have problems, errors building the app.
+#### Имам проблеми и грешки при компилирането на приложението.
 
-Please check the troubleshooting page for the way you build **AAPS** (see [Building AAPS](../SettingUpAaps/BuildingAaps.md)):
+Моля, проверете страницата за отстраняване на неизправности за начина, по който компилирате **AAPS** (вижте [Компилиране на AAPS](../SettingUpAaps/BuildingAaps.md)):
 
-* building with a browser: [Browser build: troubleshooting](#aaps-ci-troubleshooting),
-* building with Android Studio: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+* компилиране в браузъра: [Отстраняване на неизправности при компилиране в браузъра](#aaps-ci-troubleshooting),
+* компилиране с Android Studio: [Отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
 (FAQ-build-error-file-name-too-long)=
 
-#### Build error: file name too long
+#### Грешка при компилиране: file name too long (твърде дълго име на файл)
 
-This error can happen when building with Android Studio: the build stops with an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "C:\src\AndroidAPS").
+Тази грешка може да се появи при компилиране с Android Studio: компилирането спира с грешка, че името на файла е твърде дълго. Възможни решения: Преместете изходния код в папка по-близо до основната папка на диска (напр. "C:\src\AndroidAPS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+В Android Studio: Уверете се, че „Gradle“ е завършил синхронизирането и индексирането, след като отворите проекта и изтеглите промените (pull) от GitHub. Изпълнете Build->Clean Project, преди да изпълните Rebuild Project. Изпълнете File->Invalidate Caches and Restart в Android Studio.
 
 (FAQ-running-dev-version)=
 
-#### Alert: Running dev version. Closed loop is disabled
+#### Аларма: Използвате dev версия. Затвореният кръг е изключен
 
-**AAPS** shows this message when you run a development (dev) version without engineering mode: in a dev version, closed loop only works in engineering mode.
+**AAPS** показва това съобщение, когато използвате версия за разработка (dev) без инженерен режим: в dev версия затвореният кръг работи само в инженерен режим.
 
-The dev version is meant for testing, not for actual looping: read [Development branch](../AdvancedOptions/DevBranch.md) before going further.
+Версията dev е предназначена за тестване, а не за реално използване на затворен кръг: прочетете [Клон за разработка](../AdvancedOptions/DevBranch.md), преди да продължите.
 
-To turn on engineering mode:
+За да включите инженерния режим:
 
-1. Place a file named `engineering_mode` in the `extra` subfolder of your AAPS directory (the folder you chose in the setup wizard, usually `AAPS/extra`). Any file will do as long as it is properly named.
-2. Restart **AAPS** so that it finds the file.
+1. Поставете файл с име `engineering_mode` в подпапката `extra` на директорията на AAPS (папката, която сте избрали в съветника за настройване, обикновено `AAPS/extra`). Подходящ е всеки файл, стига да е правилно наименуван.
+2. Рестартирайте **AAPS**, за да намери файла.
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+Подсказка: направете копие на съществуващ лог файл и го преименувайте на „engineering_mode“ (внимание: без разширение на файла!).
 
-### Objectives
+### Цели
 
-#### I'm stuck on an objective and need help.
+#### Блокирал съм на една цел и имам нужда от помощ.
 
-First read [Completing the Objectives](../SettingUpAaps/CompletingTheObjectives.md). If you are still stuck, screen capture the question and answers and post them on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+Първо прочетете [Изпълнение на целите](../SettingUpAaps/CompletingTheObjectives.md). Ако все още не можете да продължите, направете снимка на екрана с въпроса и отговорите и я публикувайте в канала на AAPS в Discord. Не забравяйте да напишете кои опции сте избрали (или не сте избрали) и защо. Ще получите подсказки и помощ, но ще трябва сами да намерите отговорите.
 
-### Settings, passwords and backups
+### Настройки, пароли и резервни копия
 
 (FAQ-reset-master-password)=
 
-#### How to reset the master password?
+#### Как да нулирам главната парола?
 
-If you forgot your master password, you can reset it to your pump's serial number:
+Ако сте забравили главната си парола, можете да я нулирате до серийния номер на помпата си:
 
-1. Create an empty file named `PasswordReset` (no file extension) in the `extra` subfolder of your AAPS directory (usually `AAPS/extra`).
-2. Restart **AAPS**. Your pump must be connected: **AAPS** shows "Waiting for pump…" and needs to read the pump serial number within 30 seconds.
-3. **AAPS** shows "Password set!": your master password is now your **pump serial number**. The `PasswordReset` file is deleted automatically.
-4. Open **Settings** > **Protection** > **Master password** and set a new password.
+1. Създайте празен файл с име `PasswordReset` (без разширение на файла) в подпапката `extra` на директорията на AAPS (обикновено `AAPS/extra`).
+2. Рестартирайте **AAPS**. Помпата ви трябва да е свързана: **AAPS** показва „Чакаме помпата…“ и трябва да прочете серийния номер на помпата в рамките на 30 секунди.
+3. **AAPS** показва „Паролата е зададена!“: главната ви парола вече е **серийният номер на помпата**. Файлът `PasswordReset` се изтрива автоматично.
+4. Отворете **Настройки** > **Защита** > **Главна парола** и задайте нова парола.
 
-If the pump is not reached in time, nothing changes: check the pump connection and try again.
+Ако помпата не бъде достигната навреме, нищо не се променя: проверете връзката с помпата и опитайте отново.
 
-This only resets the master password. A settings, application or bolus password or PIN is not reset, but you can always use the master password instead of them.
+Това нулира само главната парола. Паролата или ПИН кодът за настройките, за приложението или за болус не се нулират, но винаги можете да използвате главната парола вместо тях.
 
-    {admonition} Old settings files
+    {admonition} Стари файлове с настройки
     :class: warning
-    Settings files exported with the old master password can only be imported with that old password.
+    Файловете с настройки, експортирани със старата главна парола, могат да се импортират само с тази стара парола.
 
 (FAQ-where-are-settings-files)=
 
-#### Where can I find settings files?
+#### Къде мога да намеря файловете с настройки?
 
-Settings files are stored in the `preferences` subfolder of the AAPS directory you chose in the [setup wizard](#SetupWizard-StoragePermission) (for example `/internal storage/AAPS/preferences`). If you set up a cloud folder (Google Drive), your exports can also be saved there. See [Creating and restoring back-ups](../Maintenance/ExportImportSettings.md).
+Файловете с настройки се съхраняват в подпапката `preferences` на директорията на AAPS, която сте избрали в [съветника за настройване](#SetupWizard-StoragePermission) (например `/internal storage/AAPS/preferences`). Ако сте настроили папка в облака (Google Drive), експортите ви могат да се записват и там. Вижте [Създаване и възстановяване на резервни копия](../Maintenance/ExportImportSettings.md).
 
-WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+ВНИМАНИЕ: Не губете паролата си, защото без нея няма да можете да импортирате шифрован файл с настройки!
 
 (FAQ-import-settings-earlier-versions)=
 
-#### How do I import settings from earlier versions of AAPS into AAPS v3 or v4 ?
+#### Как да импортирам настройки от по-стари версии на AAPS в AAPS v3 или v4?
 
-You can only import settings (in AAPS v3 or v4) that were exported using AAPS v2.8x or later. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install the current AAPS version and import v2.8 settings in it.
+В AAPS v3 или v4 можете да импортирате само настройки, които са експортирани с AAPS v2.8x или по-нова версия. Ако сте използвали версия на AAPS, по-стара от v2.8x, или трябва да използвате експорт на настройки, по-стар от v2.8x, първо трябва да инсталирате AAPS v2.8. Импортирайте по-старите настройки от v2.x във v2.8. След като проверите, че всичко е наред, можете да експортирате настройките от v2.8. Инсталирайте текущата версия на AAPS и импортирайте в нея настройките от v2.8.
 
-If you use the same key to build the old and the new version, you won't even have to import settings. You can install the new version over the old one.
+Ако използвате същия ключ за компилиране на старата и на новата версия, дори няма да е нужно да импортирате настройките. Можете да инсталирате новата версия върху старата.
 
-There were some new objectives added. You'll need to validate them.
+Добавени са някои нови цели. Ще трябва да ги изпълните.
 
 (FAQ-delete-treatments)=
 
-#### Where can I delete treatments?
+#### Къде мога да изтрия лечения?
 
-Open the **menu** (☰) and select **Treatments history**. Long press an entry to select it, tap more entries if needed, then tap the **trash can** icon and confirm. See [Treatments history](#aaps-screens-treatments).
+Отворете **менюто** (☰) и изберете **История на леченията**. Задръжте продължително запис, за да го изберете, докоснете още записи, ако е нужно, след това докоснете иконата **кошче** и потвърдете. Вижте [История на леченията](#aaps-screens-treatments).
 
-### Phone and connection problems
+### Проблеми с телефона и връзката
 
 (FAQ-aaps-stops)=
 
-#### AAPS stops everyday around the same time.
+#### AAPS спира всеки ден по едно и също време.
 
-* Google Play Protect may shut down **AAPS** every morning on some phones. If this happens, go to the Google Play options and disable **Google Play Protect**.
-* Check for "cleaning" apps (ie CCleaner etc) and uninstall them.
-* Turn off all battery optimizations for **AAPS** (see [battery savings](#FAQ-battery-savings) below).
+* На някои телефони Google Play Protect може да спира **AAPS** всяка сутрин. Ако това се случва, отидете в опциите на Google Play и изключете **Google Play Protect**.
+* Проверете за приложения за „почистване“ (напр. CCleaner и др.) и ги деинсталирайте.
+* Изключете всички оптимизации на батерията за **AAPS** (вижте [пестене на батерията](#FAQ-battery-savings) по-долу).
 
 (FAQ-battery-savings)=
 
-#### How to configure battery savings?
+#### Как да настроя пестенето на батерията?
 
-Your phone may suspend **AAPS** and related apps (CGM app, Bluetooth) when you are not using it. **AAPS** then cannot do its work, and Bluetooth connections to the sensor and pump (or RileyLink) may be shut down, causing "pump unreachable" alerts and communication errors.
+Телефонът ви може да спира **AAPS** и свързаните приложения (CGM приложението, Bluetooth), когато не го използвате. Тогава **AAPS** не може да върши работата си, а Bluetooth връзките със сензора и помпата (или RileyLink) може да бъдат прекъснати. Това води до аларми „Помпата е недостъпна“ и грешки в комуникацията.
 
-Turn off battery optimization for **AAPS**, your CGM app (e.g. xDrip) and the Bluetooth system app. The way to do this depends on the phone's brand, model and Android version:
+Изключете оптимизацията на батерията за **AAPS**, за CGM приложението си (напр. xDrip) и за системното приложение Bluetooth. Начинът зависи от марката, модела и версията на Android на телефона:
 
-* see [Battery optimization](#generaltroubleshooting-android-related-issues) for Pixel, Samsung and Huawei phones,
-* in **AAPS**, open the **menu** (☰) > **About** and tap **Don't kill my app?**, or visit [Don't kill my app](https://dontkillmyapp.com/) for other brands.
+* вижте [Оптимизация на батерията](#generaltroubleshooting-android-related-issues) за телефони Pixel, Samsung и Huawei,
+* в **AAPS** отворете **менюто** (☰) > **За приложението** и докоснете **Don't kill my app?** или посетете [Don't kill my app](https://dontkillmyapp.com/) за други марки.
 
-If you are not sure that battery savings cause your problem, you can temporarily turn off all battery savings on the phone: your battery will drain faster, but you will quickly see if the problem goes away.
+Ако не сте сигурни, че проблемът ви се дължи на пестенето на батерията, можете временно да изключите всички функции за пестене на батерията на телефона: батерията ще се изтощава по-бързо, но бързо ще видите дали проблемът изчезва.
 
 (FAQ-pump-unreachable-alerts)=
 
-#### Pump unreachable alerts several times a day or at night.
+#### Аларми „Помпата е недостъпна“ няколко пъти на ден или през нощта.
 
-Your phone may be suspending **AAPS** or even Bluetooth, causing it to lose the connection to the pump or RileyLink (see [battery savings](#FAQ-battery-savings) above).
+Телефонът ви може да спира **AAPS** или дори Bluetooth, при което се губи връзката с помпата или с RileyLink (вижте [пестене на батерията](#FAQ-battery-savings) по-горе).
 
-You can also change when the alert is raised: press the **Settings** (gear) icon on the top right of the main screen, then select **Local alerts** > **Pump unreachable threshold** (30 to 300 minutes). Check your pump's page: some recommend a value, e.g. 120 minutes for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
+Можете също да промените кога се подава алармата: натиснете иконата **Настройки** (зъбно колело) горе вдясно на главния екран, след това изберете **Локални аларми** > **Граница за недостъпна помпа** (от 30 до 300 минути). Проверете страницата на вашата помпа: за някои помпи има препоръчана стойност, напр. 120 минути за [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md).
 
 (FAQ-link-unresponsive)=
 
-#### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+#### Моят Link/помпа/пач не реагира (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+При някои телефони Bluetooth връзката с устройствата Link (RL/OL/EmaL...) прекъсва.
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+При някои телефони устройствата Link спират да реагират (AAPS показва, че са свързани, но устройствата Link не могат да достигнат помпата или да ѝ подават команди).
 
-First try the **Reset RileyLink** button on the pump screen (see your pump's page: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). If this does not help, the easiest way to get all these parts working together is:
+Първо опитайте бутона **Ресет на RileyLink** на екрана на помпата (вижте страницата на вашата помпа: [Medtronic](#MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump), [Omnipod Eros](#OmnipodEros-reset-rileylink-config-notes)). Ако това не помогне, най-лесният начин всички тези части отново да работят заедно е:
 
-1. Power off the Link.
-2. Quit **AAPS** (**menu** (☰) > **Exit**).
-3. Long press the **AAPS** icon, open the Android **App info**, tap **Force stop**, then **Storage** > **Clear cache** (do NOT clear storage/data!).
-4. Rarely some phones may need a reboot here. You can try without reboot.
-5. Power on the Link.
-6. Start **AAPS**.
-7. On the pump screen, tap **Pair RileyLink** and select your Link again.
+1. Изключете устройството Link.
+2. Затворете **AAPS** (**меню** (☰) > **Изход**).
+3. Задръжте продължително иконата на **AAPS**, отворете **Информация за приложението** (App info) на Android, докоснете **Принудително спиране** (Force stop), след това **Хранилище** (Storage) > **Изчистване на кеша** (Clear cache) (НЕ изчиствайте хранилището/данните!).
+4. Рядко на някои телефони тук може да е нужно рестартиране. Можете да опитате без рестартиране.
+5. Включете устройството Link.
+6. Стартирайте **AAPS**.
+7. На екрана на помпата докоснете **Свързване на RileyLink** и изберете отново своето устройство Link.
 
-### Remote control
+### Дистанционно управление
 
 (FAQ-aapsclient)=
 
-#### Configuring and Using the AAPSClient remote app
+#### Настройване и използване на приложението за дистанционно управление AAPSClient
 
-**AAPSClient** is a separate app that lets a caregiver follow and control **AAPS** remotely. Since **AAPS** v4, controlling **AAPS** from AAPSClient needs a one-time pairing between the two apps. See:
+**AAPSClient** е отделно приложение, с което болногледач/родител може да следи и да управлява **AAPS** дистанционно. От **AAPS** v4 управлението на **AAPS** от AAPSClient изисква еднократно свързване на двете приложения. Вижте:
 
-* [The AAPSClient app](#aapsclient-app): installing, first start and pairing,
-* [Master ↔ Client control](#client-master-control): what can be controlled and how pairing works,
-* [AAPSClient on a smartwatch](#remotecontrol-smartwatches).
+* [Приложението AAPSClient](#aapsclient-app): инсталиране, първо стартиране и свързване,
+* [Контрол главен ↔ клиент](#client-master-control): какво може да се управлява и как работи свързването,
+* [AAPSClient на смарт часовник](#remotecontrol-smartwatches).
 
 (FAQ-hardened-mode)=
 
-#### Treatments I enter on the Nightscout website are not applied
+#### Леченията, които въвеждам в уебсайта на Nightscout, не се прилагат
 
-That is [hardened mode](#client-master-control-hardened-mode). While client control is on — always in Simple Mode — **AAPS** takes changes only from paired clients, not from the Nightscout website or other apps. Enter them on a paired **AAPSClient** instead.
+Това е [режимът на засилена защита](#client-master-control-hardened-mode). Докато контролът от клиентско приложение е включен – а в Опростен режим той винаги е включен – **AAPS** приема промени само от свързани клиенти, а не от уебсайта на Nightscout или от други приложения. Вместо това ги въведете в свързано приложение **AAPSClient**.
 
-### Alerts and warnings
+### Аларми и предупреждения
 
-#### I have a red warning badge (red triangle) / AAPS won't enable closed loop / Loop stays in LGS / I had a yellow triangle
+#### Имам червен предупредителен знак (червен триъгълник) / AAPS не включва затворения кръг / Кръгът остава в LGS / Имах жълт триъгълник
 
-The red warning badge on the BG source shortcut is a security feature in AAPS. See [BG warning sign](#aaps-screens-bg-warning-sign) for the full explanation.
+Червеният предупредителен знак върху прекия път към източника на КЗ е функция за безопасност в AAPS. Вижте [Предупредителен знак за КЗ](#aaps-screens-bg-warning-sign) за пълното обяснение.
 
-A red warning badge on the BG source shortcut in the bottom bar (the red triangle of older versions) means that you have duplicate BGs and AAPS can't calculate precisely the deltas. A closed loop is switched to **Low Glucose Suspend** mode: it still reduces or suspends your basal to protect you against lows, but it gives no correction insulin. You need to delete one BG of each duplicated value in order to clear the warning. Tap the shortcut to open your [BG source screen](#aaps-screens-bg-source): the duplicate is highlighted in red. Long press one line you want to delete, check one of each lines that are doubled and tap the trash icon. You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+Червеният предупредителен знак върху прекия път към източника на КЗ в долната лента (червеният триъгълник в по-старите версии) означава, че имате дублирани стойности на КЗ и AAPS не може да изчисли точно делтите. Затвореният кръг се превключва в режим **Спиране на базал при ниска КЗ**: той все още намалява или спира базала, за да ви предпази от ниска КЗ, но не подава инсулин за корекция. Трябва да изтриете по една стойност от всяка дублирана стойност на КЗ, за да изчезне предупреждението. Докоснете прекия път, за да отворите [екрана на източника на КЗ](#aaps-screens-bg-source): дублираната стойност е оцветена в червено. Задръжте продължително един ред, който искате да изтриете, отметнете по един от всеки дублиран ред и докоснете иконата на кошчето. Може да се наложи да нулирате базите данни на AAPS, ако има твърде много двойни стойности на КЗ. В този случай ще загубите и статистиката, IOB, COB и избрания профил.
 
-Once the warning is gone, AAPS does not go back to **Closed Loop** by itself. Press the loop icon on the main screen and select **Closed Loop** again.
+След като предупреждението изчезне, AAPS не се връща сам в **Затворен кръг**. Натиснете иконата на кръга на главния екран и изберете отново **Затворен кръг**.
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+Възможна причина за проблема: xDrip и/или NS добавят по-късно (backfilling) пропуснати стойности на КЗ.
 
-The yellow triangle of older versions meant unstable delay between each BG reading (BGs not received every 5 min regularly, or missing BGs), which often happens with Libre or after a G6 transmitter change. **AAPS** 4 no longer shows it: it recalculates the values in the background and the loop works correctly.
+Жълтият триъгълник в по-старите версии означаваше нестабилен интервал между стойностите на КЗ (стойностите не идват редовно на всеки 5 мин или липсват стойности). Това често се случва при Libre или след смяна на трансмитера на G6. **AAPS** 4 вече не го показва: той преизчислява стойностите във фонов режим и кръгът работи правилно.
 
 ### Omnipod DASH
 
 (FAQ-move-dash-pod)=
 
-#### Can I move an active DASH Pod to another phone?
+#### Мога ли да преместя активен пач DASH на друг телефон?
 
-The Pod state is included in the exported settings, so an active Pod can be moved to another phone by exporting the settings right before the move and importing them on the other phone. This is not officially supported and there is a risk of losing the Pod: if possible, try it when your Pod is about to expire.
+Състоянието на пача се включва в експортираните настройки. Затова активен пач може да се премести на друг телефон, като експортирате настройките точно преди преместването и ги импортирате на другия телефон. Това не се поддържа официално и има риск да загубите пача: ако е възможно, опитайте, когато пачът ви скоро ще изтече.
 
-Read these sections first:
+Първо прочетете тези раздели:
 
-* [Export and import settings](#omnipod-dash-export-import) on the Omnipod DASH page, and [Tubeless pumps](#ExportImportSettings-tubeless-pumps): on the new phone, tick **Also replace pump settings** and use a file exported during the Pod you are wearing now,
-* [Discarding a pod](#omnipod-dash-discard-pod), to remove the Pod from the old phone afterwards. Keep the old phone in airplane mode until the Pod is discarded, so that both phones never talk to the Pod.
+* [Експорт и импорт на настройки](#omnipod-dash-export-import) на страницата за Omnipod DASH и [Помпи без маркуч](#ExportImportSettings-tubeless-pumps): на новия телефон отметнете **Замени и настройките на помпата** и използвайте файл, експортиран по време на пача, който носите в момента,
+* [Изхвърляне на пач](#omnipod-dash-discard-pod), за да премахнете след това пача от стария телефон. Пазете стария телефон в самолетен режим, докато пачът бъде изхвърлен, за да не комуникират никога и двата телефона с пача.
