@@ -80,7 +80,7 @@
 * Pro DanaRS s firmwarem v3 nebo Dana-i je výchozí heslo odvozené od data výroby a vypočítá se jako MMDD, kde MM je měsíc a DD je den, kdy byla pumpa vyrobena (tj. '0124' představuje měsíc 01 a den 24).
     
     * Z hlavního menu vyberte REVIEW a pak SHIPPING INFORMATION z podnabídky.
-    * Třetí číslo je datum výroby. 
+    * Number 3 is manufacturing date. 
     * Pro v3/i se toto heslo používá pouze pro uzamčení nabídky na pumpě. Nepoužívá se pro komunikaci a není nutné jej zadávat do AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
