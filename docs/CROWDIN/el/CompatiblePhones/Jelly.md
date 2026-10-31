@@ -2,47 +2,47 @@
 
 ## Jelly Star Mini
 
-**Features**
+**Λειτουργίες**
 
 * Android 13
 * 8 GB RAM
 
-**Advantages**
+**Πλεονεκτήματα**
 
 * Είναι πραγματικά μικρό.
-* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+* Ακόμα κι αν το πείτε στους άλλους, ίσως δεν το θεωρήσουν κανονικό smartphone. Έτσι θα το δεχτούν πιο εύκολα ως εξαίρεση, όταν τα τηλέφωνα κανονικά δεν επιτρέπονται.
 
-**Disadvantages**
+**Μειονεκτήματα**
 
-* Συνιστάται μόνο για έμπειρους loopers (ορισμένες ρυθμίσεις δεν είναι αναγνωρίσιμες, πρέπει να ξέρετε από την εμπειρία με ένα μεγάλο τηλέφωνο Android AAPS, πώς και πού βρίσκεται. Ορισμένα κουμπιά AAPS είναι δύσκολο να αγγιχτούν με πολλή αίσθηση, αλλά όχι με πενιχρά δάχτυλα.)
+* Συνιστάται μόνο για έμπειρους loopers (ορισμένες ρυθμίσεις δεν είναι αναγνωρίσιμες, πρέπει να ξέρετε από την εμπειρία με ένα μεγάλο τηλέφωνο Android AAPS, πώς και πού βρίσκεται. Ορισμένα κουμπιά του AAPS πατιούνται μόνο με πολλή προσοχή και όχι με χοντρά δάχτυλα.)
 * Μπορεί να χρησιμοποιηθεί μόνο ως κινητό για το κύκλωμα. Είναι καλύτερα να έχετε ένα κανονικό smartphone στην τσέπη σας. 
 
-### Battery life optimization
+### Βελτιστοποίηση διάρκειας μπαταρίας
 
-The Jelly comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip, OOP2, Juggluco, etc...).
+Το Jelly έχει ισχυρές λειτουργίες βελτιστοποίησης που **πρέπει** να απενεργοποιηθούν για το AAPS (και για άλλες εφαρμογές DIY, όπως BYODA, xDrip, OOP2, Juggluco κ.λπ.).
 
 ![](../images/Jelly_Settings1.png)
 
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+Μπορείτε να αφήσετε ενεργή την Intelligent assistance (έξυπνη βοήθεια), αλλά **πρέπει να είναι απενεργοποιημένη για τις εφαρμογές DIY**.
 
 ![](../images/Jelly_Settings2.png)
 
-You can enable NFC for Libre sensors.
+Μπορείτε να ενεργοποιήσετε το NFC για τους αισθητήρες Libre.
 
 ![](../images/Jelly_Settings3.png)
 
-### Battery life optimization
+### Βελτιστοποίηση διάρκειας μπαταρίας
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+Για να μην υπάρχουν παρεμβολές στο **AAPS**, απενεργοποιήστε τον περιορισμό 'battery usage' (χρήση μπαταρίας) του Jelly Star, επιλέγοντας 'unrestricted' (χωρίς περιορισμούς) για το **AAPS** (και για άλλες **εφαρμογές DIY**, όπως BYODA, xDrip, OOP2, Juggluco κ.λπ.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Θυμηθείτε να απενεργοποιήσετε το Google Play Protect.
 
-### Remote Connection for Wear apk
+### Remote Connection (απομακρυσμένη σύνδεση) για το Wear apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+Σε ορισμένα έξυπνα ρολόγια, όπως το Samsung Galaxy, η ρύθμιση 'Remote Connection' στις Advanced Features του Samsung Galaxy πρέπει να είναι **ενεργή**, για να χρησιμοποιείτε το Jelly, το **Wear.apk** & το **AAPS** απομακρυσμένα μέσω Wi-Fi.
 
 ![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
