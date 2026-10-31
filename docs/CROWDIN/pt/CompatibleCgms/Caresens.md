@@ -1,29 +1,29 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+Há várias formas de usar os dados do CareSens com o **AAPS**:
 
 - xDrip
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**Nota:** Não precisa da app de seguidor Sens365 para ligar ao AAPS.
 
 ## 1. xDrip
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+1. Instale e configure a app oficial CareSens.
+2. Na app CareSens, vá a settings -> Manage Data and Connections -> ative o interruptor xDrip. Se preferir, desligue as ligações de dados para CareLevo, DIA:CONN, CloudLoop, etc. em «others».
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![Ligações de dados da app CareSens](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+2. Instale o xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. No xDrip, vá a settings -> hardware data source e selecione `Companion App` como fonte de dados.
+4. No **AAPS**, selecione xDrip em [**Configuração → Fonte da Glicose**](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+1. Instale a app Juggluco.
+2. No Juggluco, abra o menu esquerdo e selecione `Photo`
+3. Leia o código QR na embalagem do sensor.
+4. No menu esquerdo -> settings -> exchange data, confirme que o xDrip broadcast está ativado.
+5. No **AAPS**, selecione xDrip em [**Configuração → Fonte da Glicose**](#Config-Builder-bg-source).
