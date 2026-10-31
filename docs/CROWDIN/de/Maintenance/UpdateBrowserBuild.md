@@ -24,7 +24,7 @@ Das musst Du nur beim ersten Mal machen. Für die danach folgenden Updates, kann
 :local: true
 ```
 
-Falls Du damit Probleme haben solltest, findest Du einige Lösungen auf der eigenen Seite [Fehlerbehebung für Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Exportiere Deine Einstellungen
 
