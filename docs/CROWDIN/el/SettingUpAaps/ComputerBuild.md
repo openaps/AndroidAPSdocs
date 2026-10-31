@@ -1,6 +1,6 @@
 <!-- Android Studio Build, FKA Computer Build. Preserve filenames to avoid breaking URLs. -->
 
-# Δημιουργία στο Android Studio
+# Δημιουργία με το Android Studio
 
 Αυτός είναι ο παραδοσιακός τρόπος για να δημιουργήσετε την εφαρμογή AAPS.
 
@@ -15,7 +15,7 @@
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## Προδιαγραφές υπολογιστή και λογισμικού για τη δημιουργία του AAPS
 
 * Για το build του apk μπορεί να χρειάζεται μια συγκεκριμένη έκδοση του **[Android Studio](https://developer.android.com/studio/)**. Δείτε τον πίνακα παρακάτω:
 
@@ -40,45 +40,45 @@
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">Λειτουργικό σύστημα (μόνο 64 bit)</th>
+    <td class="tg-baqh">Windows 8 ή νεότερα</td>
+    <td class="tg-baqh">Mac OS 10.14 ή νεότερο</td>
+    <td class="tg-baqh">Οποιοδήποτε Linux που υποστηρίζει Gnome, KDE ή Unity DE,&nbsp;&nbsp;GNU C Library 2.31 ή νεότερη</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (μόνο 64 bit)</th>
+    <td class="tg-baqh">Αρχιτεκτονική CPU x86_64, Intel Core 2ης γενιάς ή νεότερο, ή CPU AMD με υποστήριξη για <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Chip με αρχιτεκτονική ARM, ή Intel Core 2ης γενιάς ή νεότερο με υποστήριξη για <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">Αρχιτεκτονική CPU x86_64, Intel Core 2ης γενιάς ή νεότερο, ή επεξεργαστής AMD με υποστήριξη για AMD Virtualization (AMD-V) και SSSE3</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
     <td class="tg-baqh" colspan="3"><p align="center">16GB ή περισσότερο</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Δίσκος</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Τουλάχιστον 30GB ελεύθερος χώρος. Συνιστάται SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
+    <th class="tg-baqh"><p align="center">Ανάλυση οθόνης</th>
     <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 τουλάχιστον<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Ευρυζωνική σύνδεση</td>
   </tr>
 </tbody>
 </table>
 
-**Συνιστάται έντονα (δεν είναι υποχρεωτικό) να χρησιμοποιείτε SSD (Solid State Disk) αντί για HDD (Hard Disk Drive), γιατί το build του αρχείου apk του AAPS θα διαρκεί λιγότερο.**  Μπορείτε όμως να χρησιμοποιήσετε και HDD για το build του αρχείου apk του **AAPS**. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Συνιστάται έντονα (δεν είναι υποχρεωτικό) να χρησιμοποιείτε SSD (Solid State Disk) αντί για HDD (Hard Disk Drive), γιατί το build του αρχείου apk του AAPS θα διαρκεί λιγότερο.**  Μπορείτε όμως να χρησιμοποιήσετε και HDD για το build του αρχείου apk του **AAPS**. Αν το κάνετε, το build μπορεί να διαρκέσει πολύ. Όμως, όταν ξεκινήσει, μπορείτε να το αφήσετε να τρέχει χωρίς επίβλεψη.
 
-## Help and support during the building process
+## Βοήθεια και υποστήριξη κατά τη δημιουργία
 
 Αν έχετε δυσκολίες στη δημιουργία της εφαρμογής **AAPS**, υπάρχει ειδική ενότητα [**Αντιμετώπιση προβλημάτων του Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md). Δείτε την πρώτα.
 
 Αν πιστεύετε ότι κάτι στις οδηγίες build είναι λάθος, λείπει ή δεν είναι σαφές, ή αν συνεχίζετε να έχετε δυσκολίες, επικοινωνήστε με την ομάδα χρηστών του **AAPS** στο [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ή στο [Discord](https://discord.gg/4fQUWHZ4Mw). Αν θέλετε να αλλάξετε κάτι μόνοι σας (ενημέρωση στιγμιότυπων οθόνης _κ.λπ._), υποβάλετε ένα [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Step-by-step guide to building the AAPS app
+## Οδηγός βήμα προς βήμα για τη δημιουργία της εφαρμογής AAPS
 
 ```{admonition} WARNING
 :class: warning
@@ -106,26 +106,26 @@
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Βήματα για την εγκατάσταση του Git
 
 1.  Ελέγξτε αν έχετε ήδη εγκατεστημένο το **Git**. Μπορείτε να το κάνετε αν γράψετε «git» στη γραμμή αναζήτησης των Windows. Αν δείτε το **“Git bash”** ή κάποια άλλη μορφή του Git, είναι ήδη εγκατεστημένο και μπορείτε να πάτε κατευθείαν στην [εγκατάσταση του Android Studio](#install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Αν δεν έχετε εγκατεστημένο το Git, κατεβάστε και εγκαταστήστε την τελευταία έκδοση για το σύστημά σας από την ενότητα "Download" [**εδώ**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. Αν δεν έχετε εγκατεστημένο το Git, κατεβάστε και εγκαταστήστε την τελευταία έκδοση για το σύστημά σας από την ενότητα "Download" [**εδώ**](https://git-scm.com/downloads). Κάθε πρόσφατη έκδοση του Git πρέπει να δουλεύει. Επιλέξτε τη σωστή έκδοση για το σύστημά σας: Mac, Windows ή Linux.
 
-**Σημείωση για χρήστες Mac:** η σελίδα του Git θα σας ζητήσει επίσης να εγκαταστήσετε ένα επιπλέον πρόγραμμα, το "homebrew", που βοηθά στην εγκατάσταση. If you install Git via homebrew, there is no need to change any preferences.
+**Σημείωση για χρήστες Mac:** η σελίδα του Git θα σας ζητήσει επίσης να εγκαταστήσετε ένα επιπλέον πρόγραμμα, το "homebrew", που βοηθά στην εγκατάσταση. Αν εγκαταστήσετε το Git μέσω homebrew, δεν χρειάζεται να αλλάξετε καμία ρύθμιση.
 
 (Make_a_note_of_Git_path)=
 
-* Κατά την εγκατάσταση, όταν σας ζητηθεί "select destination location", σημειώστε _πού_ εγκαθίσταται το Git (τη «**διαδρομή εγκατάστασης**»). Θα τη χρειαστείτε για έλεγχο στο επόμενο βήμα. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* Κατά την εγκατάσταση, όταν σας ζητηθεί "select destination location", σημειώστε _πού_ εγκαθίσταται το Git (τη «**διαδρομή εγκατάστασης**»). Θα τη χρειαστείτε για έλεγχο στο επόμενο βήμα. Θα είναι κάτι σαν "C:\Program Files\Git\cmd\git.exe"
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Στα διάφορα βήματα της εγκατάστασης του Git, απλώς δεχτείτε όλες τις προεπιλεγμένες επιλογές.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  Αν μετά την εγκατάσταση ξεχάσατε να σημειώσετε πού εγκαταστάθηκε το Git, μπορείτε να το βρείτε έτσι: γράψτε «git» στη γραμμή αναζήτησης του υπολογιστή, κάντε δεξί κλικ στο "Git bash", επιλέξτε "open file location" (άνοιγμα θέσης αρχείου) και περάστε το ποντίκι πάνω από το εικονίδιο "Git bash". Τότε θα δείτε πού είναι εγκατεστημένο.
 
-* Reboot your computer before the next step.
+* Κάντε επανεκκίνηση του υπολογιστή σας πριν από το επόμενο βήμα.
 
 (Building-APK-install-android-studio)=
 ### Εγκατάσταση του Android Studio
@@ -150,9 +150,9 @@
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+Όταν τελειώσει η λήψη, ανοίξτε την εφαρμογή που κατεβάσατε για να την εγκαταστήσετε στον υπολογιστή σας. Ίσως χρειαστεί να αποδεχτείτε / επιβεβαιώσετε κάποιες προειδοποιήσεις των Windows για εφαρμογές που κατεβάσατε!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. **Δεν** χρειάζεται να αλλάξετε καμία ρύθμιση!
+Εγκαταστήστε το Android Studio κάνοντας κλικ στο "Next", όπως φαίνεται στα επόμενα στιγμιότυπα οθόνης. **Δεν** χρειάζεται να αλλάξετε καμία ρύθμιση!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
@@ -162,53 +162,53 @@ Install Android Studio by clicking "Next", as shown in the following screenshots
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Τώρα κάντε κλικ στο "Install":
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+Όταν ολοκληρωθεί, πατήστε "Next"
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finished" to start Android Studio for the first time.
+Στο τελευταίο βήμα, κάντε κλικ στο "Finished" για να ξεκινήσετε το Android Studio για πρώτη φορά.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Θα σας ρωτήσει αν θέλετε να βοηθήσετε στη βελτίωση του Android Studio. Επιλέξτε ό,τι προτιμάτε. Δεν θα αλλάξει τίποτα στα επόμενα βήματα.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Η οθόνη υποδοχής σας καλωσορίζει στην εγκατάσταση του Android Studio. Πατήστε "Next".
 
 ![Καλώς ήρθατε](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Επιλέξτε "Standard" ως τύπο εγκατάστασης.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Επιβεβαιώστε τις ρυθμίσεις κάνοντας ξανά κλικ στο "Next".
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Τώρα πρέπει να αποδεχτείτε τις άδειες χρήσης. Αριστερά υπάρχουν δύο ενότητες (1 + 3). Επιλέξτε τη μία μετά την άλλη και για την καθεμία επιλέξτε "Accept" (2 + 4) δεξιά.
 
-Then the "Finish" (5) button can be clicked.
+Μετά μπορείτε να κάνετε κλικ στο κουμπί "Finish" (5).
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Τώρα θα γίνει λήψη και εγκατάσταση κάποιων πακέτων Android. Κάντε υπομονή και περιμένετε.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+Όταν τελειώσει, θα δείτε την παρακάτω οθόνη, όπου μπορείτε να επιλέξετε ξανά "Finish".
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Τώρα θα δείτε την οθόνη Welcome του Android Studio.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### Λήψη του κώδικα του AAPS
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
@@ -224,40 +224,40 @@ You will now see the Welcome screen of Android Studio.
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+Τώρα θα πούμε στο Android Studio από πού θα πάρει τον κώδικα:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* Αριστερά πρέπει να είναι επιλεγμένο (από προεπιλογή) το "Repository URL" (1).
+* Ως version control (σύστημα ελέγχου εκδόσεων) πρέπει να είναι επιλεγμένο (από προεπιλογή) το "Git" (2).
+* Τώρα αντιγράψτε αυτό το URL:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    και επικολλήστε το στο πεδίο URL (3).
 
-* Ελέγξτε ότι ο (προεπιλεγμένος) φάκελος όπου θα αποθηκευτεί ο κώδικας που αντιγράφετε δεν υπάρχει ήδη στον υπολογιστή σας (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Ελέγξτε ότι ο (προεπιλεγμένος) φάκελος όπου θα αποθηκευτεί ο κώδικας που αντιγράφετε δεν υπάρχει ήδη στον υπολογιστή σας (4). Μπορείτε να το αλλάξετε σε κάποιον άλλο φάκελο, αλλά θυμηθείτε πού το αποθηκεύσατε!
+* Τώρα κάντε κλικ στο κουμπί "Clone" (5).
 
 ```{admonition} INFORMATION
 :class: note
 Σημειώστε τον φάκελο. Εκεί αποθηκεύεται ο πηγαίος κώδικάς σας!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Τώρα θα δείτε μια οθόνη που λέει ότι το αποθετήριο (repository) αντιγράφεται:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+Κάποια στιγμή το Android Studio θα κλείσει και θα ξεκινήσει ξανά. Μπορεί να σας ρωτήσει αν εμπιστεύεστε το project. Κάντε κλικ στο "Trust project":
 
   ![Εμπιστοσύνη στο project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Μόνο για χρήστες Windows: Αν το τείχος προστασίας σας ζητήσει άδεια, δώστε πρόσβαση:
 
  ![Άδεια τείχους προστασίας για java](../images/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+Όταν το αποθετήριο αντιγραφεί με επιτυχία, το Android Studio θα ανοίξει το project που αντιγράφηκε.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
@@ -274,7 +274,7 @@ After the repository is cloned successfully, Android Studio will open the cloned
 
 Όταν ανοίξει το Android Studio, περιμένετε υπομονετικά (αυτό μπορεί να πάρει μερικά λεπτά) και κυρίως **μην** ενημερώσετε το project, όπως προτείνεται στο αναδυόμενο παράθυρο.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Το Android Studio θα ξεκινήσει αυτόματα ένα "Gradle project sync" (συγχρονισμό του project με το Gradle), που θα χρειαστεί μερικά λεπτά για να τελειώσει. Μπορείτε να δείτε ότι (ακόμη) τρέχει:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
@@ -289,14 +289,14 @@ Android Studio will start a "Gradle project sync" automatically, which will take
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Μπορείτε να αφήσετε το gradle sync να τρέχει και να συνεχίσετε ήδη με τα επόμενα βήματα.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Ορισμός της διαδρομής του Git στις ρυθμίσεις του Android Studio
 
 Τώρα θα πούμε στο Android Studio πού θα βρει το Git, που εγκαταστήσατε [νωρίτερα](#install-git-if-you-dont-have-it).
 
-* Μόνο για χρήστες Windows: Βεβαιωθείτε ότι έχετε κάνει επανεκκίνηση του υπολογιστή μετά την [εγκατάσταση του Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Μόνο για χρήστες Windows: Βεβαιωθείτε ότι έχετε κάνει επανεκκίνηση του υπολογιστή μετά την [εγκατάσταση του Git](#install-git-if-you-dont-have-it). Αν όχι, κάντε επανεκκίνηση τώρα και ανοίξτε ξανά το Android Studio
 
 Πάνω αριστερά στο **Android Studio**, ανοίξτε το μενού hamburger και πηγαίνετε στο **File** > **Settings** (στα Windows) ή στο **Android Studio** > **Preferences** (στο Mac). Ανοίγει το παρακάτω παράθυρο. Κάντε κλικ για να ανοίξετε τη λίστα **Version Control** (1) και επιλέξτε **Git** (2)
 
@@ -320,7 +320,7 @@ You can leave the gradle sync running and follow the next steps already.
   ![Το Git δεν βρέθηκε](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### Δημιουργία του «υπογεγραμμένου» APK του AAPS
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
@@ -334,7 +334,7 @@ You can leave the gradle sync running and follow the next steps already.
 **Σημαντικό: Βεβαιωθείτε ότι ο συγχρονισμός gradle (gradle sync) ολοκληρώθηκε με επιτυχία πριν συνεχίσετε!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Επιλέξτε **Build** (1) και μετά επιλέξτε **Generate Signed App Bundle / APK** (2)
+Κάντε κλικ στο μενού hamburger πάνω αριστερά για να ανοίξει η γραμμή μενού. Επιλέξτε **Build** (1) και μετά επιλέξτε **Generate Signed App Bundle / APK** (2)
 
 ![Δημιουργία apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
@@ -351,7 +351,7 @@ Click the hamburger menu on the top left to open the menu bar. Επιλέξτε 
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Κάντε κλικ στο "Create new..." (2) για να ξεκινήσετε τη δημιουργία του key store σας.
 
 ```{admonition} INFORMATION!
 :class: note
@@ -359,11 +359,11 @@ Click "Create new..." (2) to start creating your key store.
 Αν έχετε δημιουργήσει το AAPS στο παρελθόν, ΜΗ δημιουργήσετε νέο keystore. Επιλέξτε το υπάρχον και γράψτε τους κωδικούς του!
 ```
 
-**_Σημείωση:_** Το key store (keystore) είναι ένα αρχείο όπου αποθηκεύονται οι πληροφορίες για την υπογραφή της εφαρμογής. It is encrypted, and the information is secured with passwords.
+**_Σημείωση:_** Το key store (keystore) είναι ένα αρχείο όπου αποθηκεύονται οι πληροφορίες για την υπογραφή της εφαρμογής. Είναι κρυπτογραφημένο και οι πληροφορίες προστατεύονται με κωδικούς πρόσβασης.
 
 ![Δημιουργία key store](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Κάντε κλικ στο σύμβολο «φάκελος» (1) για να επιλέξετε μια διαδρομή στον υπολογιστή σας για το key store σας.
 
   **Μην** χρησιμοποιήσετε τον φάκελο όπου αποθηκεύσατε τον πηγαίο κώδικα, αλλά έναν φάκελο που θα μεταφέρατε και σε έναν νέο υπολογιστή.
 
@@ -372,31 +372,31 @@ Click "Create new..." (2) to start creating your key store.
 Σημειώστε κάπου πού είναι αποθηκευμένο το keystore σας. Θα το χρειαστείτε όταν δημιουργήσετε την επόμενη ενημέρωση του AndroidAPS!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Τώρα επιλέξτε έναν απλό κωδικό πρόσβασης (και σημειώστε τον), γράψτε τον στο πεδίο κωδικού (2) και επιβεβαιώστε τον (2).
 
-  The passwords for key store and key do not have to be sophisticated. Αν στο μέλλον χάσετε τον κωδικό σας, δείτε [Επανεγκατάσταση του AAPS με νέο keystore](#reinstall-aaps).
+  Οι κωδικοί για το key store και για το κλειδί δεν χρειάζεται να είναι πολύπλοκοι. Αν στο μέλλον χάσετε τον κωδικό σας, δείτε [Επανεγκατάσταση του AAPS με νέο keystore](#reinstall-aaps).
 
 ```{warning}
 **Μη χρησιμοποιείτε ειδικούς χαρακτήρες στους κωδικούς σας.** Χρησιμοποιήστε μόνο γράμματα και ψηφία για τον κωδικό του keystore και του κλειδιού. Ειδικά, μη χρησιμοποιείτε `$`, backtick (ανάποδη απόστροφο), `"` ή `\`. Αν αργότερα περάσετε στη [Δημιουργία μέσω browser](#aaps-ci-option2) και χρησιμοποιήσετε ξανά αυτό το keystore, αυτοί οι χαρακτήρες μπορεί να κάνουν την υπογραφή να αποτύχει. Δείτε [Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων](#aaps-ci-password-special-characters).
 ```
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* Το προεπιλεγμένο alias (3) για το κλειδί σας είναι "key0". Μην το αλλάξετε.
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Τώρα χρειάζεστε έναν κωδικό πρόσβασης για το κλειδί σας. Για να είναι απλό, αν θέλετε, μπορείτε να χρησιμοποιήσετε τον ίδιο κωδικό που βάλατε παραπάνω για το keystore σας. Γράψτε έναν κωδικό πρόσβασης (4) και επιβεβαιώστε τον.
 
 ```{admonition} WARNING!
 :class: warning
 Σημειώστε αυτούς τους κωδικούς πρόσβασης! Θα τους χρειαστείτε όταν δημιουργήσετε την επόμενη ενημέρωση του AAPS!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Η ισχύς είναι 25 χρόνια από προεπιλογή. Αφήστε την όπως είναι.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Γράψτε το όνομα και το επώνυμό σας (5). Δεν χρειάζεται να προσθέσετε άλλες πληροφορίες, αλλά μπορείτε αν θέλετε (6-7).
 
-* Click "OK" (8) to continue:
+* Κάντε κλικ στο "OK" (8) για να συνεχίσετε:
 
 
-Στη σελίδα **Generate signed App Bundle or APK** θα εμφανίζεται τώρα η διαδρομή προς το keystore σας. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
+Στη σελίδα **Generate signed App Bundle or APK** θα εμφανίζεται τώρα η διαδρομή προς το keystore σας. Τώρα γράψτε ξανά τον κωδικό του Key Store (1) και τον κωδικό του Key (2), και τσεκάρετε το κουτί (3) για απομνημόνευση των κωδικών, ώστε να μη χρειάζεται να τους γράψετε ξανά την επόμενη φορά που θα δημιουργήσετε το apk (δηλαδή όταν ενημερώνετε σε νέα έκδοση του AAPS). Κάντε κλικ στο "Next" (4):
 
 ![Απομνημόνευση κωδικών πρόσβασης](../images/Building-the-App/044_RememberPwd.png)
 
@@ -405,21 +405,21 @@ Click "Create new..." (2) to start creating your key store.
 
    ![Επιλογή build variant](../images/Building-the-App/045_BuildPath.png)
 
-Το Android Studio θα δημιουργήσει τώρα το apk του **AAPS**. It will show "Gradle Build running" (2) at the bottom right. Η διαδικασία παίρνει λίγο χρόνο, ανάλογα με τον υπολογιστή και τη σύνδεσή σας στο internet, οπότε **κάντε υπομονή!** Αν θέλετε να δείτε την πρόοδο της δημιουργίας, κάντε κλικ στο μικρό σφυρί "build" (1) στο κάτω μέρος του Android Studio:
+Το Android Studio θα δημιουργήσει τώρα το apk του **AAPS**. Κάτω δεξιά θα εμφανιστεί "Gradle Build running" (2). Η διαδικασία παίρνει λίγο χρόνο, ανάλογα με τον υπολογιστή και τη σύνδεσή σας στο internet, οπότε **κάντε υπομονή!** Αν θέλετε να δείτε την πρόοδο της δημιουργίας, κάντε κλικ στο μικρό σφυρί "build" (1) στο κάτω μέρος του Android Studio:
 
 ![Το Gradle τρέχει](../images/Building-the-App/046_BuildRunning.png)
 
-Now you can watch the building progress:
+Τώρα μπορείτε να παρακολουθήσετε την πρόοδο της δημιουργίας:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". Αν σας ξεφύγει, κάντε κλικ στο εικονίδιο ειδοποιήσεων (1) για να ανοίξουν οι ειδοποιήσεις (Notifications) και μετά στο **locate** (2):
+Όταν τελειώσει η δημιουργία, το Android Studio θα δείξει το μήνυμα "BUILD SUCCESSFUL". Μπορεί να δείτε μια αναδυόμενη ειδοποίηση, όπου μπορείτε να κάνετε κλικ και να επιλέξετε "locate". Αν σας ξεφύγει, κάντε κλικ στο εικονίδιο ειδοποιήσεων (1) για να ανοίξουν οι ειδοποιήσεις (Notifications) και μετά στο **locate** (2):
 
 ![Η δημιουργία ολοκληρώθηκε](../images/Building-the-App/049_ReopenNotification.png)
 
 **_Αν η δημιουργία δεν πέτυχε, δείτε την ενότητα [Αντιμετώπιση προβλημάτων του Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
-In the Notifications box, click on the blue link "locate":
+Στο πλαίσιο Notifications (ειδοποιήσεις), κάντε κλικ στον μπλε σύνδεσμο "locate":
 
 ![Εντοπισμός του build](../images/Building-the-App/048_BuildFinished.png) Θα ανοίξει η διαχείριση αρχείων και θα σας δείξει το αρχείο apk που μόλις δημιουργήσατε.
 
@@ -431,7 +431,7 @@ In the Notifications box, click on the blue link "locate":
 Αν πιστεύετε ότι ίσως θέλετε στο μέλλον να χρησιμοποιήσετε smartwatch Android Wear, τώρα είναι η καλύτερη στιγμή να δημιουργήσετε το apk του AAPS Wear, ώστε να είστε σίγουροι ότι θα συγχρονίζεται με το apk του AAPS σας.
 ```
 
-Προχωρήστε στο επόμενο στάδιο: [Μεταφορά και εγκατάσταση του **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
+Προχωρήστε στο επόμενο στάδιο: [Μεταφορά και εγκατάσταση του **AAPS** στο τηλέφωνό σας](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
 
