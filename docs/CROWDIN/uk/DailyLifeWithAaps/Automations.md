@@ -50,7 +50,7 @@
 
 1. Як і будь-яка техніка, **CGM**, **помпи** і телефони можуть працювати несправно: технічні проблеми або помилки сенсора можуть порушити дії **автоматизації**, і може знадобитися ручне втручання.
 
-1. **Requirements for Automations are likely to change as routines change**. Коли змінюються періоди роботи / навчання / відпустки, поставте собі нагадування в календарі, щоб перевірити, які правила **автоматизації** зараз активні (їх легко вмикати та вимикати). Наприклад, якщо ви їдете у відпустку і вам більше не потрібна автоматизація для шкільного спорту чи щоденних тренувань, або потрібно змінити час.
+1. **Потреби в автоматизації, найімовірніше, змінюватимуться разом зі зміною розпорядку дня**. Коли змінюються періоди роботи / навчання / відпустки, поставте собі нагадування в календарі, щоб перевірити, які правила **автоматизації** зараз активні (їх легко вмикати та вимикати). Наприклад, якщо ви їдете у відпустку і вам більше не потрібна автоматизація для шкільного спорту чи щоденних тренувань, або потрібно змінити час.
 
 1. Правила **автоматизації** можуть конфліктувати між собою. Добре уважно перевіряти будь-які нові налаштування **автоматизації** в безпечних умовах і розуміти, чому **автоматизація** спрацювала або не спрацювала так, як ви очікували.
 
@@ -234,47 +234,47 @@ Scroll down to see the rest of the list:
 
 **Варіанти:**
 
-* select the event to record: **Note**, **Exercise**, **Question**, **Announcement** or **Pump Site Change**, and an optional note. The name of the action changes to the event you select.
-* **Duration**: used for **Note**, **Exercise** and **Pump Site Change**. **Question** and **Announcement** have no duration: they record your current BG instead.
-* **Pump Site Change** resets the cannula age, as if you had recorded a site change by hand. Example: some pumps (like the Combo) record a reservoir change by themselves, but not the site change. If you always change both together, a rule with **Insulin age** less than 1 hour and **Cannula age** more than 24 hours can record the site change for you.
+* виберіть подію для запису: **Примітка**, **Тренування**, **Питання**, **Оголошення** або **Заміна канюлі**, і, за бажанням, примітку. Назва дії змінюється на вибрану подію.
+* **Тривалість**: використовується для **Примітка**, **Тренування** і **Заміна канюлі**. **Питання** та **Оголошення** не мають тривалості: натомість вони записують вашу поточну ГК.
+* **Заміна канюлі** скидає вік канюлі, так само як ручний запис заміни канюлі. Приклад: деякі помпи (наприклад, Combo) самі записують заміну резервуара, але не заміну канюлі. Якщо ви завжди міняєте їх разом, правило з **Вік інсуліну** менше 1 години та **Вік канюлі** більше 24 годин може записати заміну канюлі за вас.
 
-![The events of the Note action](../images/Automations/automation_action_careportal_events.png) ![The Note action set to Pump Site Change](../images/Automations/automation_action_careportal_site_change.png)
+![Події дії «Примітка»](../images/Automations/automation_action_careportal_events.png) ![Дія «Примітка» з вибраною «Заміна канюлі»](../images/Automations/automation_action_careportal_site_change.png)
 
-**Actions:** **Send SMS** (in the **Alerts** group)
-
-**Варіанти:**
-
-* enter the text of the message. It is sent to all the phone numbers allowed in the [SMS Communicator](../RemoteFeatures/SMSCommands.md) settings. The SMS Communicator plugin must be enabled.
-
-**Actions:** **Change profile to** (in the **Profile** group)
+**Дії:** **Надіслати SMS** (у групі **Сповіщення**)
 
 **Варіанти:**
 
-* select the **Profile** to activate. It is activated at 100%, without timeshift. If this profile is already active, the action does nothing.
+* введіть текст повідомлення. Воно надсилається на всі номери телефонів, дозволені в налаштуваннях [SMS Комунікатор](../RemoteFeatures/SMSCommands.md). Плагін SMS Комунікатор має бути ввімкнений.
 
-**Actions:** **Enable/disable SMB** (in the **Loop & insulin** group)
-
-**Варіанти:**
-
-* choose **On** or **Off**. This changes the **Enable SMB** setting of OpenAPS SMB, exactly as if you had changed it in **Settings**, and stays until you or another rule change it back.
-
-**Actions:** **Autotune profile** (in the **Loop & insulin** group)
+**Дії:** **Змінити профіль на** (у групі **Профіль**)
 
 **Варіанти:**
 
-* select the profile to tune and the number of days: see [Run Autotune with an automation rule](#autotune-run-autotune-with-an-automation-rule).
+* виберіть **профіль**, який потрібно активувати. Він активується на 100 %, без зсуву часу. Якщо цей профіль уже активний, дія нічого не робить.
 
-**Actions:** **Stop processing** (in the **Loop & insulin** group)
-
-**Варіанти:**
-
-* none. When a rule with this action runs, **AAPS** does not check the rules below it in the list during that run. Add it to a rule that must take priority over the rules below it (see [the order of the Automations](#Automations-the-order-of-the-automations-in-the-list-matters)).
-
-**Actions:** **Run scene**, **Enable scene**, **Disable scene** (in the **Scenes** group)
+**Дії:** **Увімкнути/вимкнути SMB** (у групі **Петля та інсулін**)
 
 **Варіанти:**
 
-* select the [scene](Scenes.md) to run, enable or disable.
+* виберіть **Увімк.** або **Вимк.** Це змінює налаштування **Увімкнути SMB** в OpenAPS SMB точно так само, як якщо б ви змінили його в **Налаштуваннях**, і зміна діє, доки ви або інше правило не змінить її назад.
+
+**Дії:** **Профіль Autotune** (у групі **Петля та інсулін**)
+
+**Варіанти:**
+
+* виберіть профіль для налаштування і кількість днів: див. [Запуск Autotune за правилом автоматизації](#autotune-run-autotune-with-an-automation-rule).
+
+**Дії:** **Зупинити обробку** (у групі **Петля та інсулін**)
+
+**Варіанти:**
+
+* немає. Коли виконується правило з цією дією, **AAPS** під час цього запуску не перевіряє правила, які стоять нижче в списку. Додайте її до правила, яке має мати перевагу над правилами нижче (див. [порядок правил автоматизації](#Automations-the-order-of-the-automations-in-the-list-matters)).
+
+**Дії:** **Запустити сцену**, **Увімкнути сцену**, **Вимкнути сцену** (у групі **Сцени**)
+
+**Варіанти:**
+
+* виберіть [сцену](Scenes.md), яку потрібно запустити, увімкнути або вимкнути.
 
 Після додавання «Дії» потрібно змінити значення за замовчуванням на потрібне число: натисніть на значення і змініть його.
 
@@ -287,7 +287,7 @@ Scroll down to see the rest of the list:
 
 ![Альтернативний текст](../images/Automations/automation_rule_list.png)
 
-To reprioritize the **Automation** rules, touch and hold the **=** handle on the right side of the rule. Змінюйте порядок **автоматизації**, переміщуючи правила вгору або вниз.
+Щоб змінити пріоритет правил **автоматизації**, натисніть і утримуйте ручку **=** праворуч від правила. Змінюйте порядок **автоматизації**, переміщуючи правила вгору або вниз.
 
 ![Альтернативний текст](../images/Automations/automation_rule_reorder.png)
 
@@ -304,7 +304,7 @@ To reprioritize the **Automation** rules, touch and hold the **=** handle on the
 (automations-low-glucose-temp-target)=
 ### Тимчасова ціль при низькій глюкозі
 
-This **Automation** triggers an automatic **Temp Target** when **BG** falls below a certain threshold — here, when glucose is lesser than 70 mg/dL, a target of 110 mg/dL is started for 30 minutes:
+Ця **автоматизація** автоматично запускає **тимчасову ціль**, коли **ГК** падає нижче певного порогу — тут, коли глюкоза менше 70 мг/дл, запускається ціль 110 мг/дл на 30 хвилин:
 
 ![Альтернативний текст](../images/Automations/automation_example_low_glucose_rule.png)
 
@@ -312,40 +312,40 @@ This **Automation** triggers an automatic **Temp Target** when **BG** falls belo
 
 ![Альтернативний текст](../images/Automations/automation_example_lunch_rule.png)
 
-Цю **автоматизацію** створено для користувача, який обідає на роботі приблизно в той самий час кожного робочого дня. Вона спрацьовує лише тоді, коли користувач перебуває в заданому «розташуванні».  So if the user is not at work one day, this **Automation** will not activate.
+Цю **автоматизацію** створено для користувача, який обідає на роботі приблизно в той самий час кожного робочого дня. Вона спрацьовує лише тоді, коли користувач перебуває в заданому «розташуванні».  Отже, якщо одного дня користувач не на роботі, ця **автоматизація** не спрацює.
 
-This **Automation** will set a low **Temp Target** (Eating Soon) at 13:00 to drive BG to 90 mg/dL (or 5 mmol/L) in preparation for lunch.
+Ця **автоматизація** о 13:00 встановлює низьку **тимчасову ціль** (Очікуваний прийом їжі), щоб довести ГК до 90 мг/дл (або 5 ммоль/л) перед обідом.
 
-The ‘Trigger’ location has a name, a position (tap **Pick from map**, or use your current location) and a radius in metres, and fires when you are inside (or outside) the area:
+«Тригер» розташування має назву, позицію (натисніть **Вибрати на карті** або використайте поточне розташування) і радіус у метрах. Він спрацьовує, коли ви всередині (або поза) зоною:
 
 ![Альтернативний текст](../images/Automations/automation_example_lunch_location_condition.png)
 
 Через поєднання «Та» **автоматизація** спрацьовує лише у «вибраний час» і лише тоді, коли користувач перебуває у вибраному розташуванні.
 
-The **Automation** will not be triggered on any other time at this location or at this time outside the 50-metre radius around the chosen position.
+**Автоматизація** не спрацює в цьому місці в інший час, а також у цей час поза радіусом 50 метрів навколо вибраної позиції.
 
-### Wi-Fi SSID Location Automation
+### Автоматизація за розташуванням Wi-Fi SSID
 
-Using a Wi-Fi SSID is a good option to trigger an **Automation** while within range of a specific Wi-Fi network (compared with GPS): it is fairly precise, uses less battery, and works in enclosed spaces where GPS and other location services might not be available.
+Wi-Fi SSID - добрий спосіб запускати **автоматизацію**, коли ви в зоні певної мережі Wi-Fi (порівняно з GPS): він досить точний, менше розряджає батарею і працює в закритих приміщеннях, де GPS та інші служби розташування можуть бути недоступні.
 
 Ось ще один приклад налаштування **тимчасової цілі** лише в робочі дні перед сніданком (1).
 
 
-The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
-and while being connected to a home Wi-Fi network (3).
+**Автоматизація** спрацює о 05:30 лише з понеділка по п'ятницю (2)  
+і лише під час підключення до домашньої мережі Wi-Fi (3).
 
 
-It will then set a **Temp Target** of 75 mg/dL for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is traveling on vacation, for instance.
+Потім вона встановить **тимчасову ціль** 75 мг/дл на 30 хвилин (4). Одна з переваг використання розташування в тому, що правило не спрацює, якщо користувач, наприклад, поїхав у відпустку.
 
-![Wi-Fi rule: task name (1), weekday time condition (2) and Wi-Fi SSID condition (3)](../images/Automations/automation_example_wifi_rule.png)
+![Правило Wi-Fi: назва завдання (1), умова часу в робочі дні (2) та умова Wi-Fi SSID (3)](../images/Automations/automation_example_wifi_rule.png)
 
-Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
+Прокрутіть униз, щоб побачити дію: **тимчасова ціль** 75 мг/дл на 30 хвилин (4).
 
-![Wi-Fi rule action: Start temp target of 75 mg/dL for 30 minutes (4)](../images/Automations/automation_example_wifi_action.png)
+![Дія правила Wi-Fi: Запустити тимчасову ціль 75 мг/дл на 30 хвилин (4)](../images/Automations/automation_example_wifi_action.png)
 
 Ось знімок екрана з тригерами **автоматизації**:
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
+1) Під головним «ТА» (щоб правило спрацювало, мають виконуватися обидві умови) 1) Повторюваний час = Пн,Вт,Ср,Чт,Пт о 5:30  
 1) Wi-Fi SSID = My_Home_WiFi_Name
 
 ![Альтернативний текст](../images/Automations/automation_example_wifi_condition.png)
@@ -372,18 +372,18 @@ Scroll down to see the action: a **Temp Target** of 75 mg/dL for 30 minutes (4).
 
 ![Експорт під час активації Pod](../images/Automations/automation_settings_export_pod_activation.png)
 
-Примітка: виконання експорту записується в Careportal. Примітка: автоматизація **взагалі** не спрацює, якщо ви раніше жодного разу не робили експорт налаштувань вручну. See [Settings → Maintenance](#preferences-maintenance-settings) for proper activation of unattended settings export.
+Примітка: виконання експорту записується в Careportal. Примітка: автоматизація **взагалі** не спрацює, якщо ви раніше жодного разу не робили експорт налаштувань вручну. Див. [Налаштування → Обслуговування](#preferences-maintenance-settings), щоб правильно ввімкнути фоновий експорт налаштувань.
 
 
 ## Журнал автоматизації
 
-**AAPS** shows a log of the most recent **Automation** events at the bottom of the **Automation** screen, below the rules. Use it to verify that your rules triggered when you expected them to.
+**AAPS** показує журнал останніх подій **автоматизації** внизу екрана **Автоматизація**, під правилами. За ним можна перевірити, чи спрацювали ваші правила тоді, коли ви очікували.
 
-In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose Temp Target](#automations-low-glucose-temp-target) above) is enabled. The log (2) shows that at 03:09 PM, glucose fell below 70 mg/dL and the rule triggered:
-* the action was "Start temp target: 110mg/dL@30 min": a **Temp Target** of 110 mg/dL for 30 minutes;
-* **OK** at the end means that the action was carried out successfully.
+У прикладі нижче правило **Low glucose temp target** (1) (див. [Тимчасова ціль при низькій глюкозі](#automations-low-glucose-temp-target) вище) увімкнено. Журнал (2) показує, що о 03:09 PM глюкоза впала нижче 70 мг/дл і правило спрацювало:
+* дія була "Start temp target: 110mg/dL@30 min": **тимчасова ціль** 110 мг/дл на 30 хвилин;
+* **OK** у кінці означає, що дію успішно виконано.
 
-![Automation screen: an enabled rule (1) and its log entry (2)](../images/Automations/automation_example_log.png)
+![Екран «Автоматизація»: увімкнене правило (1) і його запис у журналі (2)](../images/Automations/automation_example_log.png)
 
 (automations-troubleshooting)=
 
@@ -391,17 +391,17 @@ In the example below, the **Low glucose temp target** rule (1) (see [Low Glucose
 
 * Проблема: __AAPS не запускає мої правила автоматизації?__
 
-Check that the box left of the **Automation** name is ‘ticked’ to ensure the rule is activated:
+Перевірте, що позначку ліворуч від назви **автоматизації** «поставлено», тобто правило ввімкнене:
 
 ![Альтернативний текст](../images/Automations/automation_rule_activated_deactivated.png)
 
 * Проблема: __Мої правила автоматизації спрацьовують у неправильному порядку.__
 
-Check your rule prioritization order as discussed above here.
+Перевірте порядок пріоритету ваших правил, як описано вище.
 
-* Problem: __A condition shows "Unknown trigger … - never true".__
+* Проблема: __Умова показує «Невідомий тригер … – ніколи не спрацьовує».__
 
-The rule contains a trigger that this version of **AAPS** cannot read, for example after you went back to an older version or imported settings from a newer one. Such a trigger is never true, so the rule does not run. It is kept unchanged, so a newer version can still use it. Edit the rule and replace the trigger, or update **AAPS**.
+Правило містить тригер, який ця версія **AAPS** не може прочитати, наприклад, після повернення до старішої версії або після імпорту налаштувань з новішої. Такий тригер ніколи не спрацьовує, тому правило не виконується. Його зберігають без змін, щоб новіша версія могла його використати. Змініть правило і замініть тригер, або оновіть **AAPS**.
 
 ## Альтернативи автоматизації
 
