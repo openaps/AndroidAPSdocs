@@ -9,7 +9,7 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Zur Aktualisierung auf eine neue Version befolge bitte die Schritte in der [Update Anleitung](UpdateToNewVersion). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
+Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
@@ -24,7 +24,7 @@ Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird
 
 Die Enddaten der AAPS-Versionen findest Du unter [Supportende](EndOfLife.md).
 
-**Ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. Dies ist eine Chance die Sicherheit für jeden **AAPS**-Nutzenden und die DIY-Community zu verbessern. Vielen Dank für Dein Verständnis.
+**Ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Vielen Dank für Dein Verständnis.
 
 (maintenance-android-version-aaps-version)=
 
@@ -141,7 +141,7 @@ Vollständiges Änderungsprotokoll: <https://github.com/nightscout/AndroidAPS/co
 - NSClientV3: Lücke nach Re-Connect behoben @MilosKozak
 - Automatisierung: Deserialisierungsproblem behoben @MilosKozak
 - Equil: Batterie-Report korrigiert @MilosKozak
-- Workflow bereinigt @vanelsberg
+- Cleanup workflow @vanelsberg
 - Equil: Verhalten nach Fehler verbessert @MilosKozak
 - DanaRS: Interne Pumpenkommunikation korrigiert @MilosKozak
 - Insight: TBR-Synchronisation korrigiert @MilosKozak
@@ -168,7 +168,7 @@ Erscheinungsdatum: 04.02.2026
 
 - Equil: Resistenzhandling für diverse Modelle korrigiert @hhfcvmars
 - Tidepool: Session-Handling korrigiert @MilosKozak
-- Medtrum: Aktivierungspfad korrigiert, indem doppelte Befüllung vermieden wird @MilosKozak
+- Medtrum: Fix activation path by preventing double fill @MilosKozak
 - COB: COB-Berechnung korrigiert (deckt gefährlichen Sonderfall ab) @MilosKozak
 
 (version3410)=
@@ -261,7 +261,7 @@ Erscheinungsdatum: 31.12.2025
 * Verbesserte Deduplizierung bei NS-Ausfall @MilosKozak
 
 ### UI/UX Verbesserungen
-* Diverse Verbesserungen @MilosKozak @Philoul @olorinmaia
+* various improvements @MilosKozak @Philoul @olorinmaia
 
 ### Automatisierung
 * Neue SMB-Steuerungsaktion – SMB über Automatisierung aktivieren/deaktivieren @MilosKozak
@@ -300,7 +300,7 @@ Erscheinungsdatum: 27.03.2025
 
 (version-enforcement)=
 
-### Beginnend mit dieser Version, wurde die Benachrichtigung und die Pflicht auf die neueste Version aktualisieren zu müssen vereinfacht und aufgeweicht. Das Vorgehen ist wie folgt:
+### Starting this version, notification and version enforcement has been simplified and softened and works following way:
 *  Frist läuft nicht ab, wenn das Gerät offline ist (wenn keine Verbindung zum Internet besteht). D. h. es gibt keine 60- und 90-Tage „Übergangsfristen“ mehr.
 *  Nach Ablauf wird der LGS-Modus erzwungen
 *  Du erhältst seltener Warnungen/Benachrichtigungen:
@@ -322,7 +322,7 @@ Erscheinungsdatum: 27.03.2025
 * Radiobuttons UI verbessert @olorinmaia
 * Automatisierung: Position aus der Karte auswählen @MilosKozak
 * Version auf der Übersicht sichtbar @MilosKozak
-* Kompilierung mit vorhandenem Git-System wird erzwungen (keine Zip-Downloads)
+* Compilation with existing git system is enforced (no zip downloads)
 * Version auf der Übersicht anzeigen @MilosKozak
 * Tidepool-Upload verbessert @ConstantinMatheis
 
@@ -342,7 +342,7 @@ Erscheinungsdatum: 21.01.2025
 ### Behobene Fehler
 
 * Dash: Bonding ist optional (standardmäßig ausgeschaltet) @MilosKozak
-* Equil: Bolus 10+U Fehler behoben, Alarmverbesserungen @EquilHack
+* Equil: fixed bolus 10+U, alarm improvements @EquilHack
 * Garmin: Smartwatch-Verbesserungen @swissalpine
 * Smartwatch-Verbesserungen @olorinmaia
 * Loop-Status von der Smartwatch steuern @tdrkDev
@@ -558,21 +558,21 @@ Erscheinungsdatum: 23.10.2023
 v1 ist das alte, für den Datenaustausch zwischen NS-Website und NS-Server verwendete, Protokoll. Es hat viele Beschränkungen
 - v1 sendet nur Daten für 2 Tage
 - v1 sendet bei jedem Reconnect alle Daten der zwei Tage erneut
-- Websockets müssen zwingend genutzt werden = permanente Verbindung, höherer Akkuverbrauch
+- using websockets is mandatory = permanent connection, more battery consumption
 - Bei wiederholten Reconnects mit Nightscout wird die Verbindung für 15 Minuten pausiert, um eine erhöhte Datennutzung zu verhindern
 
 v3 ist das neue Protokoll. Es ist sicherer und effizienter
 - Mit Token lassen sich Zugriffsrechte besser definieren
 - Das Protokoll ist auf AAPS & NS-Seite Seite effizienter
 - Es kann Daten der letzten 3 Monate von NS auslesen
-- Du kannst entscheiden, ob Du Websockets auf allen Geräten nutzen möchtest oder nicht. Wenn Du sie nutzt, bekommst Du schnellere Updates. Nutzt Du sie nicht, hast Du einen niedrigeren Akkuverbrauch, aber langsamere Updates.
+- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power consumption, but slower updates ie. minutes)
 - Der NSClient wird bei Verbindungsabbrüchen nicht angehalten (pausiert)
 
 EINSCHRÄNKUNGEN
 - NS 15 muss mit AAPS 3.2 verwendet werden
 - V3 erkennt keine Updates, die durch das V1 Protokoll vorgenommen wurden. Das wird vermutlich in einer der kommenden Nightscout-Versionen behoben sein
-- Im umgekehrten Fall erkennt V1, durch die wenig effiziente Art Änderungen nachzuverfolgen, Änderungen, die durch V3 vorgenommen wurden
-- Bitte habe im Kopf, dass Nighscout intern immer noch V1 nutzt, und es deswegen nicht möglich ist, Daten über die Nightscout-Weboberfläche einzugeben, sofern Du V3 verwendest. Um die Daten remote einzugeben, musst Du SMS über den AAPSClient nutzen
+- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
+- Bitte habe im Kopf, dass Nighscout intern immer noch V1 nutzt, und es deswegen nicht möglich ist, Daten über die Nightscout-Weboberfläche einzugeben, sofern Du V3 verwendest. You must use AAPSClient or SMS if you want to enter data remotely
 
 EMPFOHLENE EINSTELLUNGEN
 - Aus den oben beschriebenen Gründen solltest Du auf allen Deinen Geräten die gleiche Methode verwenden (Hinweis: zum Redaktionsschluss nutzen alle Uploader derzeit noch V1). Wenn Du Dich für V3 entscheidest, wähle in AAPS und allen AAPSClients V3
