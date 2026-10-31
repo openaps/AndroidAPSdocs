@@ -1,49 +1,49 @@
 # DanaR
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump.md) if you have the DanaRS launched in 2017 instead.*
+*Тези указания са за настройване на приложението и помпата, ако имате DanaR. Ако вместо това имате DanaRS, пусната на пазара през 2017 г., вижте [Инсулинова помпа DanaRS](./DanaRS-Insulin-Pump.md).*
 
 ## Възможности на помпата при употреба с AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Timezone and DST changes need no special action, as the pump does not use its own history.
+* Комуникира с **AAPS** чрез вградения Bluetooth на телефона, без допълнително комуникационно устройство.
+* Смяната на часовата зона и на лятното часово време (DST) не изисква специални действия, защото помпата не използва собствената си история.
 
-## Setup
+## Настройка
 
-* In the pump go to Main Menu > Setting > User Option
-* Turn on "8. Удължен болус"
+* На помпата отидете в Main Menu > Setting > User Option
+* Включете „8. Extended Bolus“
 
-![DanaR pump](../images/danar1.png)
+![Помпа DanaR](../images/danar1.png)
 
-* Go to Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
+* Отидете в Main Menu > Setting > Discovery
+* В настройките на телефона отидете в Bluetooth, потърсете устройства наблизо, изберете серийния номер на вашата DanaR и въведете паролата (паролата за сдвояване е 0000). Ако DanaR не се показва при търсенето, рестартирайте телефона, извадете батерията на DanaR, поставете я отново и повторете тези две стъпки.
 
-* In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
+* В **AAPS** отворете **менюто** (☰) в горния ляв ъгъл, отидете в **Конфигурация** > **Помпа** и изберете вашия тип DanaR (**DanaR**, **DanaR Корейска** или **DanaRv2**).
   
-  ![Configuration > Pump with the DanaR plugins](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![Конфигурация > Помпа с плъгините за DanaR](../images/v4/Configuration/configuration_pump_list_1.png)
 
-* Open the pump screen: tap **Open plugin** on the DanaR card (or go to **Manage** > **Pump**).
+* Отворете екрана на помпата: докоснете **Отвори плъгин** на картата на DanaR (или отидете в **Управление** > **Помпа**).
 
-* Tap **Pairing**. On the pairing screen: 
-  * Enter your pump password under **Pump password** (default password is 1234).
-  * Under **Select paired device**, tap your DanaR serial number. If the list is empty, tap **Open Bluetooth settings** and pair the pump with your phone first (see the step above). When you come back to **AAPS**, the pump appears in the list. If it does not, tap the refresh icon.
-  * Tap **Pairing**. **AAPS** connects to the pump and checks the password.
-* To change the driver settings, tap **Settings** on the DanaR card in **Configuration** > **Pump**: 
-  * **Bolus speed** (DanaR and DanaRv2): change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
-  * **Use extended boluses for >200%** (DanaR and DanaR Korean): enable this if you want **AAPS** to allow a basal rate above 200%. Note this means you cannot loop with high TBRs while using extended boluses for food.
-* Set basal step on pump to 0.01 U/h
-* Set bolus step on pump to 0.1 U. **AAPS** reads the bolus step from the pump and uses it for every bolus.
+* Докоснете **Сдвояване**. На екрана за сдвояване: 
+  * Въведете паролата на помпата в **Парола за помпата** (паролата по подразбиране е 1234).
+  * В **Изберете сдвоено устройство** докоснете серийния номер на вашата DanaR. Ако списъкът е празен, докоснете **Отваряне на Bluetooth настройки** и първо сдвоете помпата с телефона (вижте стъпката по-горе). Когато се върнете в **AAPS**, помпата се появява в списъка. Ако не се появи, докоснете иконата за обновяване.
+  * Докоснете **Сдвояване**. **AAPS** се свързва с помпата и проверява паролата.
+* За да промените настройките на драйвера, докоснете **Настройки** на картата на DanaR в **Конфигурация** > **Помпа**: 
+  * **Скорост на болус** (DanaR и DanaRv2): променя скоростта на болуса по подразбиране (12 сек/Е, 30 сек/Е или 60 сек/Е).
+  * **Използвай удължени болуси при >200%** (DanaR и DanaR Корейска): включете това, ако искате **AAPS** да позволява базална доза над 200 %. Имайте предвид, че това означава, че не можете да използвате кръга с високи временни базали (TBR), докато използвате удължени болуси за храна.
+* Задайте стъпката на базала на помпата на 0,01 U/h
+* Задайте стъпката на болуса на помпата на 0,1 U. **AAPS** прочита стъпката на болуса от помпата и я използва за всеки болус.
 * Разрешете удължените болуси в настройките на помпата
 
-## Timezone traveling with Dana R pump
+## Пътуване през часови зони с помпа Dana R
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+За информация относно пътуване през часови зони вижте раздела [Пътуване през часови зони с помпи](#timezone-traveling-danarv2-danars).
 
 ## Къде да получите помощ
 
-Development of the DanaR driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Разработката на драйвера за DanaR се извършва от общността на **доброволчески** начала. Преди да поискате помощ, моля:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Прочетете** съответния раздел от тази документация, за да проверите как трябва да работи функцията.
+2. **Попитайте** в канала *#AAPS* в [Discord](https://discord.gg/4fQUWHZ4Mw) или в някой от другите [канали на общността](../GettingHelp/WhereCanIGetHelp.md).
+3. **Съобщете за грешка**, като първо потърсите в [съществуващите проблеми (issues)](https://github.com/nightscout/AndroidAPS/issues); ако вашият го няма, отворете [нов проблем (issue)](https://github.com/nightscout/AndroidAPS/issues) и приложете своите [лог файлове](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Когато искате помощ, посочете марката и модела на телефона си, версията на Android, версията на **AAPS** и описание на проблема на прост английски език (какво се е променило, кога е работило за последно).
