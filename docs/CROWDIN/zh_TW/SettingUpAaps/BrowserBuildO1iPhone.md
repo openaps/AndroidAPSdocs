@@ -1,17 +1,17 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# 選項 1 · iPhone / iPad – 建立新的金鑰庫
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
+在 **iPhone / iPad** 上使用[選項 1](BrowserBuildO1.md)（建立新的金鑰庫）。（以下以 iPad 為例。）
 ```
 
-## 1. Download the preparation file
+## 1. 下載準備檔案
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. 開啟準備檔案並建立金鑰庫
 
 iOS 上相容的作法（以 iPad 為例）
 <!--crowdin: exclude-->
@@ -30,4 +30,4 @@ iOS 上相容的作法（以 iPad 為例）
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**下一步：[步驟 3 – 授權 Google Drive](BrowserBuildGoogleDrive.md) →**
