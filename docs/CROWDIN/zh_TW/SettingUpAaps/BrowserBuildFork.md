@@ -1,54 +1,54 @@
 (github-fork)=
 
-# Browser build – Step 1: Create your GitHub fork
+# 瀏覽器建置－步驟 1：建立 GitHub 複刻
 
 ```{note}
-This is **Step 1** of the [Browser build](BrowserBuild.md).
+這是<a href="BrowserBuild.md">瀏覽器建置</a>的**步驟 1**。
 ```
 
-You will need to secretly store your personal Android Java Key and Google Drive information in GitHub (later in the process, we will explain how).
+你需要儲存你的個人 Android Java 金鑰和 Google 雲端硬碟資訊於 GitHub 中的 Secrets（稍後會說明如何操作）。
 
-Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
+由於這無法在 AndroidAPS 的公開倉庫中完成，你需要製作自己的原始碼副本（稱為分支）。
 
-## GitHub account
+## GitHub 帳號
 
-You need to [create a GitHub account](https://github.com/signup) if you don't have one yet.  
-You can sign up with your email, or you can sign up with Google. Follow the registration and verification process.
+如果你尚未擁有帳號，你需要[創建一個 GitHub 帳號](https://github.com/signup)。  
+你可以使用電子郵件註冊，也可以透過 Google 註冊。遵循註冊和驗證過程。
 
-When you have an account, [sign in to GitHub](https://github.com/login).
+當你擁有帳號後，請[登入 GitHub](https://github.com/login)。
 
-## Fork AndroidAPS
+## 分支 AndroidAPS
 
-Open the official AndroidAPS repository following [this link](https://github.com/nightscout/AndroidAPS).
+按照[這個連結](https://github.com/nightscout/AndroidAPS)打開官方 AndroidAPS 倉庫。
 
-Tap on the fork icon. This will create a copy inside your own account.
+點選分支圖示。這將在你的帳號內創建一個副本。
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-Scroll down the next screen and tap **Create Fork**.
+向下滾動至下一個螢幕並點選**建立分支**。
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the master branch only" if you will want to build developers versions or customizations.*
+*注意：如果您之後想建置開發人員版本或自訂版本，可以**取消勾選**「只複製 master 分支」。*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?</br></br>
+無法複刻，而且看到這個畫面？</br></br>
 **`No available destinations to fork this repository.`**</br></br>
-![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
-This means you already have an existing fork of AndroidAPS.</br>
-Make sure it's up to date and continue to Preparation Steps.
+![已經複刻](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
+這表示您已經有 AndroidAPS 的複刻版本。</br>
+請確認該版本已更新至最新狀態，然後繼續進行準備步驟。
 ```
 
 ```{warning}
-**Never delete your fork without having done a backup of your secrets!**
+在沒有備份你的 secrets 前，絕對不要刪除你的 fork！
 ```
 
-GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
+GitHub 現在顯示你個人的 AndroidAPS 副本。請保持這個瀏覽器頁籤開啟。
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
 ----
 
-**Next: [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) →**
+**下一步：[步驟 2－建立簽署金鑰庫](BrowserBuildKeystore.md) →**
