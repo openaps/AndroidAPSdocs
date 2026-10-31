@@ -21,7 +21,7 @@ Už jste aplikaci AAPS sestavili v prohlížeči? Postupujte podle návodu pro m
 
 ## Aktualizace AAPS pomocí Android Studia
 
-Postupujte podle [tohoto návodu](./UpdateComputerBuild.md).
+Follow [these instructions](./UpdateComputerBuild.md).
 
 ## Aktualizace AAPS z příkazové řádky
 
