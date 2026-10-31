@@ -63,7 +63,7 @@ Tik op de knop met het **potlood** die op de widget verschijnt direct nadat je h
 
 Het venster **Widget configuratie** heeft twee instellingen:
 
-- **Configureer transparantie** — hoe ondoorzichtig de achtergrond van de widget is. Bij een lage waarde schijnt de achtergrondafbeelding erdoorheen.
+- **Configureer dekking** — hoe ondoorzichtig de achtergrond van de widget is. Bij een lage waarde schijnt de achtergrondafbeelding erdoorheen.
 - **Gebruik zwarte kleur** — gebruik een zwarte achtergrond in plaats van de standaardachtergrond.
 
 ![Widget configuratie](../images/widgets/widget_configuration.png)
@@ -76,4 +76,4 @@ Elke widget heeft zijn eigen instellingen.
 
 - Een widget **toont** alleen gegevens. Je kunt vanuit een widget geen bolus geven en niets wijzigen.
 - De widget wordt bijgewerkt door **AAPS**. Als **AAPS** niet draait, of als Android de app op de achtergrond beperkt, kan de widget oude gegevens tonen. Controleer de tijd sinds de laatste meting, en zorg dat **AAPS** is uitgezonderd van [batterijoptimalisatie](#SetupWizard-StoragePermission).
-- Bij **AAPSClient**, **AAPSClient2** en **AAPSClient3** is de achtergrond van de widget geel, blauw of groen, zodat je de apps uit elkaar kunt houden. Maak in de widgetconfiguratie de achtergrond minder doorzichtig (hogere waarde) als de kleur moeilijk te zien is. Zie [Over AAPSClient, AAPSClient2 en AAPSClient3](#remotecontrol-aapsclient-versions).
+- Bij **AAPSClient**, **AAPSClient2** en **AAPSClient3** is de achtergrond van de widget geel, blauw of groen, zodat je de apps uit elkaar kunt houden. Verhoog de dekking in de widgetconfiguratie als de kleur moeilijk te zien is. Zie [Over AAPSClient, AAPSClient2 en AAPSClient3](#remotecontrol-aapsclient-versions).
