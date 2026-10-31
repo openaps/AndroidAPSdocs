@@ -125,7 +125,7 @@ Dla **Automatyzacji** ustawione są limity bezpieczeństwa:
 Zachowaj ostrożność, gdy wybierasz wartość ujemną w **Automatyzacji**
 ```
 
-Zachowaj ostrożność, gdy wybierasz „wartość ujemną” w „Warunku”, np. „mniejsze niż” w **Automatyzacjach**. For example:
+Zachowaj ostrożność, gdy wybierasz „wartość ujemną” w „Warunku”, np. „mniejsze niż” w **Automatyzacjach**. Na przykład:
 
 ![Tekst alternatywny](../images/Automations/automation_comparison_operators.png)
 
@@ -387,7 +387,7 @@ W poniższym przykładzie reguła **Low glucose temp target** (1) (zobacz wyżej
 
 (automations-troubleshooting)=
 
-## Troubleshooting
+## Rozwiązywanie problemów
 
 * Problem: __Moje automatyzacje nie są uruchamiane przez AAPS?__
 
