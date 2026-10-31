@@ -1,50 +1,50 @@
-# Building AAPS
+# Компилиране на AAPS
 
-## Build yourself instead of download
+## Компилирайте сами, вместо да изтегляте
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Приложението AAPS (файл apk) не може да бъде изтеглено готово заради правилата за медицинските изделия. Законно е да компилирате приложението за собствена употреба, но НЕ БИВА да давате копие на други хора!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Вижте [страницата с често задавани въпроси](../UsefulLinks/FAQ.md) за подробности.
 
 ---
 
-Three methods are available to build the AAPS app:
+Има три начина за компилиране на приложението AAPS:
 
-### Build with a browser (recommended)
+### Компилиране в браузъра (препоръчително)
 
-You can build the app with your smartphone using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Можете да компилирате приложението от смартфона си с GitHub Actions. От телефон с Android страницата за настройка [AAPS Builder](#aaps-builder) ви води стъпка по стъпка, а вие сами стартирате всяко компилиране. От компютър или iPhone можете също да компилирате с fork и да запишете приложението в своя Google Drive.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Следвайте тези инструкции.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Компилиране с Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Можете да компилирате приложението на компютъра си с Android Studio. Преди това беше единственият начин за компилиране, днес Android Studio се използва главно от разработчици, които искат да променят кода.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Следвайте тези инструкции.](./ComputerBuild.md)**
+
+----
+
+### Компилиране от командния ред
+
+Този начин е за тези, които предпочитат да компилират AAPS локално от командния ред, без да инсталират Android Studio.
+
+**[Следвайте тези инструкции.](./CLIBuild.md)**
 
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Ако компилирането не успее
 
-Each build method has its own troubleshooting section:
+Всеки начин за компилиране има свой раздел за отстраняване на неизправности:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Отстраняване на неизправности в AAPS Builder](#aaps-builder-troubleshooting)
+* **Компилиране в браузъра** от компютър или iPhone: [Компилиране в браузъра: отстраняване на неизправности](#aaps-ci-troubleshooting)
+* **Android Studio**: [Отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Загубили сте хранилището за ключове (keystore) или паролата му? Вижте [Преинсталиране на AAPS с ново хранилище за ключове](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Ако приложението е компилирано, но не се инсталира на телефона ви, вижте [Прехвърляне и инсталиране на AAPS](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Ако проблемът ви не е описан тук, вижте [Къде мога да получа помощ?](../GettingHelp/WhereCanIGetHelp.md)
