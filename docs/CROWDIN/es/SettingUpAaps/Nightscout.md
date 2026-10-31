@@ -10,7 +10,7 @@ En **AAPS** 4, el control remoto no pasa por el sitio web de Nightscout. Mientra
 
 Ten muchísimo cuidado si usas Nightscout como fuente de datos de glucosa de AAPS.
 
-### Nightscout settings
+### Ajustes de Nightscout
 
 Puedes impedir el acceso público a tu sitio de Nightscout con los [roles de autenticación](https://nightscout.github.io/nightscout/security): comparte tu URL solo con un token `readable`, nunca con un token `admin`.
 
