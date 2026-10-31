@@ -1,19 +1,19 @@
 (aaps-ci-option2-computer)=
 
-# Option 2 · Computer – Upload your existing keystore
+# Optie 2 · Computer – Je bestaande keystore uploaden
 
 ```{note}
-[Option 2](BrowserBuildO2.md) (upload an existing keystore) on a **computer** (Windows / Mac / Linux).
+[Optie 2](BrowserBuildO2.md) (een bestaande keystore uploaden) op een **computer** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. Het voorbereidingsbestand downloaden
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and upload the keystore
+## 2. Een lokale server starten en de keystore uploaden
 
-Use a computer (supports Windows/Mac/Linux)
+Een computer gebruiken (Windows/Mac/Linux)
 
 <!--crowdin: exclude-->
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -28,23 +28,23 @@ Use a computer (supports Windows/Mac/Linux)
   </div>
 </div>
 
-Install Simple Web Server</br></br> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store. If your browser asks whether to open the store app, allow it.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br></br>
+Installeer Simple Web Server</br></br> Gebruik je Windows of een Mac, dan kun je het installeren via de Microsoft Store of de Mac App Store. Vraagt je browser of de store-app geopend mag worden, sta dit dan toe.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br></br>
 
-Example on Mac:
+Voorbeeld op een Mac:
 
-- get → install → open</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
+- downloaden → installeren → openen</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
 
-- Click Get Started</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
+- Klik op Get Started</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
 
-- Click New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
+- Klik op New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
 
-- In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
+- Kies bij Folder Path de map waarin aaps-ci-preparation.html staat en klik dan op Create Server.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
 
-- Seeing this screen means the server has been started.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
+- Als je dit scherm ziet, is de server gestart.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
 
-- Do not close Simple Web Server. Please switch to your browser and open</br></br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
+- Sluit Simple Web Server niet af. Ga naar je browser en open</br></br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
 
-- For the subsequent steps, please refer to the video below, starting from 2 minute 18 seconds.</br></br>
+- Bekijk voor de volgende stappen de video hieronder, vanaf 2 minuten en 18 seconden.</br></br>
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -60,4 +60,4 @@ Example on Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Volgende: [Stap 3 – Google Drive autoriseren](BrowserBuildGoogleDrive.md) →**
