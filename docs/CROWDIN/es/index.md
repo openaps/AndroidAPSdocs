@@ -126,7 +126,7 @@ Detección de sensibilidad <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
 ISF Dinámico <./DailyLifeWithAaps/DynamicISF.md>
 Cambio de perfil y porcentaje del perfil <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
 Objetivos temporales <./DailyLifeWithAaps/TempTargets.md>
-Carbohidratos Extendidos/eCarbs <./DailyLifeWithAaps/ExtendedCarbs.md>
+Carbohidratos extendidos (eCarbs) <./DailyLifeWithAaps/ExtendedCarbs.md>
 Asistentes rápidos (bolos con un toque) <./DailyLifeWithAaps/QuickWizards.md>
 Escenas (ajustes de situación) <./DailyLifeWithAaps/Scenes.md>
 Automatización <./DailyLifeWithAaps/Automations.md>
