@@ -3,13 +3,14 @@
 该状态每小时更新一次，且仅反映Crowdin平台中的翻译进度。
 
 ```{tip}
-请注意：校对完成度必须低于翻译进度，但系统设计将其显示在翻译进度上方。建议仅关注翻译进度百分比来判断剩余工作量。
+Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
+建议仅关注翻译进度百分比来判断剩余工作量。
 ```
 
 ```{admonition} needed time for final publication
 Crowdin翻译完成后，系统每日定时同步至GitHub，通过拉取请求（PR）提交翻译内容。
 
-PR的审核验收为人工操作，我们将尽快处理。
+The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
 ## 应用程序翻译状态
