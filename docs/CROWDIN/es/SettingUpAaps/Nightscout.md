@@ -4,53 +4,53 @@
 
 ## Consideraciones de seguridad
 
-Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
+Nightscout es el servidor de informes y de seguimiento de **AAPS**: **AAPS** sube tus datos a él, y tú o tus cuidadores pueden verlos en el sitio web de Nightscout o en apps de seguimiento. Contiene tus datos médicos, perfiles y tratamientos, así que vale la pena pensar en cómo proteger tu sitio web de Nightscout.
 
-In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+En **AAPS** 4, el control remoto no pasa por el sitio web de Nightscout. Mientras el control de clientes está activado ([modo reforzado](#client-master-control-hardened-mode)), **AAPS** **no aplica** los tratamientos ni los objetivos introducidos directamente en Nightscout. En su lugar, las órdenes remotas llegan desde un **AAPSClient** emparejado; consulta [Control máster ↔ cliente](#client-master-control).
 
-Exercise maximum caution if using Nightscout as your AAPS BG data source.
+Ten muchísimo cuidado si usas Nightscout como fuente de datos de glucosa de AAPS.
 
 ### Nightscout settings
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+Puedes impedir el acceso público a tu sitio de Nightscout con los [roles de autenticación](https://nightscout.github.io/nightscout/security): comparte tu URL solo con un token `readable`, nunca con un token `admin`.
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+El `API_SECRET` de Nightscout es la contraseña principal de tu sitio: no la compartas públicamente.
 
 (Nightscout-aaps-settings)=
 
-### AAPS settings
+### Ajustes de AAPS
 
-Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
+Aceptar datos de Nightscout (cambios de perfil, tratamientos, ...) es opcional y está desactivado por defecto. Los interruptores descritos abajo están ocultos mientras el control de clientes está activado (modo reforzado) y en [modo sencillo](#preferences-simple-mode).
 
-* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
-* Enable "Upload data to NS".
-* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
-* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
+* Abre los ajustes de **Sincronización** del complemento NSClientV3 de una de estas formas: 1) **Ajustes** (icono del engranaje en la pantalla principal) -> **NSClientV3** -> **Sincronización**, o 2) **Configuración** (menú ☰) -> **Comunicación** -> «**Ajustes**» debajo de NSClientV3.
+* Activa «Subir datos a NS».
+* «Subir datos de glucemia a Nightscout» está en los ajustes de tu fuente de glucosa (**Configuración → Fuente de glucosa → Ajustes**). Actívalo, salvo que tu fuente de datos de glucosa de AAPS sea Nightscout: en ese caso **no** lo actives.
+* No actives «Recibir datos de MCG desde NS» salvo que Nightscout sea tu fuente de datos de glucosa.
 
-#### Do not sync from Nightscout
+#### No sincronizar desde Nightscout
 
-Keeping all the "Receive ... from NS" options disabled makes sure no Nightscout change will be used by AAPS:
+Mantener desactivadas todas las opciones «Recibir ... desde NS» asegura que AAPS no usará ningún cambio de Nightscout:
 
-![Nightscout upload only](../images/preferences/settings_nsclient_sync.png)
+![Solo subir a Nightscout](../images/preferences/settings_nsclient_sync.png)
 
-#### Accept changes from Nightscout
+#### Aceptar cambios desde Nightscout
 
-Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+Activar estas opciones te permite cambiar ajustes de AAPS desde Nightscout, como modificar y cambiar perfiles, objetivos temporales y añadir carbohidratos, que AAPS tendrá en cuenta. Solo se muestran cuando el control de clientes y el modo sencillo están desactivados.  
+Ten en cuenta que los tratamientos de insulina solo se usarán para cálculos, como «No poner bolo, solo registrar».
 
-![Nightscout receive options enabled](../images/NSsafety3.png)
+![Opciones de recepción de Nightscout activadas](../images/NSsafety3.png)
 
 ### Configuraciones de seguridad adicionales
 
-Keep your phone up to date as described in [safety first](#preparing-safety-first).
+Mantén tu teléfono actualizado como se describe en [la seguridad es lo primero](#preparing-safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Configuración manual de Nightscout
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+Se supone que ya tienes un sitio de Nightscout; si no, visita la página de [Nightscout](http://nightscout.github.io/nightscout/new_user/) para ver las instrucciones completas de instalación. Las instrucciones de abajo son ajustes que también tendrás que añadir a tu sitio de Nightscout. Tu sitio de Nightscout debe tener al menos la versión 15, así que comprueba que usas la [última versión](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version); si no, recibirás un mensaje de error en tu app de AAPS.
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [Edita tus variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
 * Agrega o edita las variables de la siguiente manera:
   
@@ -62,12 +62,12 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Guarda los cambios. Ahora tu sitio de Nightscout debería permitirte mostrar las píldoras. Puedes hacer que se muestren por defecto añadiéndolas en `SHOW_PLUGINS`.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
-  ![Nightscout Pills](../images/nightscout1.png)
+  ![Píldoras de Nightscout](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Nightscout como SaaS de pago (Software as a Service, software como servicio)
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+Usa la interfaz web del proveedor para configurar las variables. Si hace falta, contacta con el servicio de soporte del proveedor.
