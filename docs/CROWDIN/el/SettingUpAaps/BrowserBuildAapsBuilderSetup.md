@@ -141,7 +141,8 @@ The build steps are updated for you: at every build, your repository runs the ve
    Ανοίγει: <code class="aapsb-repoUrl"></code>
 
    Βλέπετε "Page not found" (404); Ελέγξτε πρώτα ότι είστε συνδεδεμένοι στο github.com σε αυτόν τον browser: το GitHub δείχνει 404 για ιδιωτικά αποθετήρια όταν δεν είστε συνδεδεμένοι. Αλλιώς, το όνομα χρήστη ή το όνομα αποθετηρίου στο βήμα 1 δεν ταιριάζει με το αποθετήριό σας: ελέγξτε τα στο github.com και γράψτε τα στο βήμα 1. Άνοιξε αντί γι' αυτό η εφαρμογή GitHub; Πατήστε "RUN WORKFLOW", ελέγξτε την έκδοση και την παραλλαγή (variant) και πατήστε ξανά "RUN WORKFLOW". Αν η εφαρμογή δείχνει ακόμα "Nothing to see here", τραβήξτε τη λίστα προς τα κάτω για να δείτε το build σας.
-2. Αν σας ζητηθεί, πατήστε το πράσινο κουμπί για να ενεργοποιήσετε τα workflows.
+2. If asked, click the green button to enable workflows.
+The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
 3. Πατήστε "Run workflow" και μετά το πράσινο κουμπί "Run workflow". Το "latest" δημιουργεί την πιο νέα έκδοση του AAPS. ***συμβουλή:*** *μπορείτε να δημιουργήσετε άλλη έκδοση γράφοντας το όνομα του [tag](https://github.com/nightscout/AndroidAPS/tags) της αντί για "latest"*
 4. Περιμένετε περίπου 15–30 λεπτά. Ένα πράσινο τικ σημαίνει ότι τελείωσε.
 Θέλετε ένα email όταν τελειώσει το build; Το GitHub σας στέλνει email μόνο όταν ένα build αποτύχει. Για να παίρνετε email και όταν πετύχει: στο github.com, ανοίξτε την εικόνα του προφίλ σας → Settings → Notifications → System → Actions και αποεπιλέξτε το "Only notify for failed workflows".
