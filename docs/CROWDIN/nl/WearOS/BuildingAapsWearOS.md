@@ -1,6 +1,6 @@
 # De Wear AAPS-app bouwen
 
-De **AAPS**-app voor een Wear OS-smartwatch (de **Wear-apk**, `aaps-wear-….apk`) is een apart installatiebestand, los van de **AAPS**-app voor de telefoon. Je hebt ze allebei nodig: de telefoon-app voert de loop uit, de horloge-app toont de gegevens ervan en kan er commando's naar sturen. De horloge-app wordt vanaf de telefoon geïnstalleerd, zie [Wear AAPS gebruiken op een smartwatch](WearOsSmartwatch.md).
+De **AAPS**-app voor een Wear OS-smartwatch (de **Wear-apk**, `aaps-wear-….apk`) is een apart installatiebestand, los van de **AAPS**-app voor de telefoon. Je hebt ze allebei nodig: de telefoon-app voert de loop uit, de horloge-app toont de gegevens ervan en kan er commando's naar sturen. De horloge-app wordt vanaf de telefoon geïnstalleerd, zie [AAPS instellen op je Wear OS-horloge](WearOsSmartwatch.md).
 
 De twee apps werken alleen samen als ze bij elkaar passen:
 
@@ -51,7 +51,7 @@ Waar vind je de Wear-apk:
 
 Bewaar de Wear-apk samen met de telefoon-apk in je back-ups. Met **AAPS Builder** blijven de bestanden maar 14 dagen op de buildpagina staan.
 
-Volgende stap: installeer de Wear-apk op het horloge, zie [Wear AAPS gebruiken op een smartwatch](WearOsSmartwatch.md).
+Volgende stap: installeer de Wear-apk op het horloge, zie [AAPS instellen op je Wear OS-horloge](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-android-studio)=
 
@@ -70,7 +70,7 @@ Kies "**fullRelease**" om het **AAPS** Wear-apk-bestand te maken.
 
 Als je wilt, kun je in plaats daarvan **“pumpcontrolRelease”** bouwen uit het keuzemenu. Daarmee kun je de pomp alleen op afstand bedienen, maar zonder te loopen.
 
-Volgende stap: installeer de Wear-apk op het horloge, zie [Wear AAPS gebruiken op een smartwatch](WearOsSmartwatch.md).
+Volgende stap: installeer de Wear-apk op het horloge, zie [AAPS instellen op je Wear OS-horloge](WearOsSmartwatch.md).
 
 (building-aaps-wear-os-troubleshooting)=
 
@@ -92,4 +92,4 @@ Volg de [Bouwinstructies voor de opdrachtregel](../SettingUpAaps/CLIBuild.md) en
 ./gradlew :wear:assembleFullRelease
 ```
 
-De niet-ondertekende Wear-apk wordt opgeslagen in `wear/build/outputs/apk/full/release/`. Onderteken hem met `apksigner`, precies zoals de telefoon-apk, en installeer hem daarna op het horloge, zie [Wear AAPS gebruiken op een smartwatch](WearOsSmartwatch.md).
+De niet-ondertekende Wear-apk wordt opgeslagen in `wear/build/outputs/apk/full/release/`. Onderteken hem met `apksigner`, precies zoals de telefoon-apk, en installeer hem daarna op het horloge, zie [AAPS instellen op je Wear OS-horloge](WearOsSmartwatch.md).
