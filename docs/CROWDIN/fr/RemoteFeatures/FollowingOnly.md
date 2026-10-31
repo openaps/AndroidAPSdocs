@@ -28,18 +28,18 @@ Les stratégies les plus courantes utilisées avec **AAPS** sont expliquées plu
 
 * Dexcom Follow convient très bien aux enseignants, aux grands-parents et aux personnes qui connaissent peu le diabète et la glycémie. Il a des alertes personnalisables (niveau de glycémie, son à jouer, etc.). Les alarmes peuvent être complètement désactivées si besoin. C'est très utile si vous avez un capteur qui se stabilise encore et crée plusieurs fausses hypoglycémies.
 
-#### Configurer Dexcom Follow : guide pratique
+#### Configurer Dexcom Follow : guide pratique
 
 Si vous utilisez l'application Dexcom non officielle BYODA pour recevoir les données du capteur, vous pourrez peut-être envoyer des invitations aux suiveurs depuis l'application BYODA.
 
-Vous ne pouvez plus envoyer d'e-mails d'invitation aux suiveurs Dexcom depuis des applications tierces. Dans xDrip, la demande d'invitation donne seulement le message « invite not sent » (invitation non envoyée).
+Vous ne pouvez plus envoyer d'e-mails d'invitation aux suiveurs Dexcom depuis des applications tierces. Dans xDrip, la demande d'invitation donne seulement le message « invite not sent » (invitation non envoyée).
 
 Vous devez installer l'application officielle Dexcom, envoyer l'invitation, puis désinstaller l'application officielle.
 
-Voici les étapes à suivre :
+Voici les étapes à suivre :
 
-1)  Installez l'application officielle « Dexcom » sur _n'importe quel_ smartphone (Android/iPhone). Cela peut être le téléphone du suiveur, si c'est plus pratique. 2)  Connectez-vous avec votre nom d'utilisateur et votre mot de passe Dexcom. Ce sont les mêmes identifiants que pour Dexcom Clarity, si vous êtes déjà client Dexcom/Clarity. Si vous n'avez pas de compte Dexcom, vous pouvez en créer un à cette étape.   
-3)  Faites défiler les menus d'introduction. 4)  Choisissez « pas de code » pour le code du capteur. 5)  Sous Transmitter SN (n° de série de l'émetteur), choisissez « saisir manuellement » et saisissez un code d'émetteur valide quelconque. Utilisez si possible le code d'un de vos émetteurs expirés, pour ne pas gêner le fonctionnement de votre émetteur actuel. Ces codes suivent un format précis de chiffres et de lettres : « NLNNNL », et seules certaines combinaisons sont valides. Le plus simple est donc d'utiliser un code que vous savez valide. 6)  Quand l'application cherche l'émetteur et le capteur, vous pouvez inviter des suiveurs : touchez les trois petits points en haut à gauche de l'application, puis ajoutez un nouveau suiveur. Vous pouvez aussi utiliser cette fonction si un de vos suiveurs a changé de téléphone et a besoin d'une nouvelle invitation : supprimez-le de la liste des suiveurs et renvoyez-lui un nouvel e-mail d'invitation à utiliser sur son nouveau téléphone. 7)  Sur le téléphone du suiveur, installez Dexcom Follow depuis l'App Store (iPhone) ou Google Play (Android). Configurez l'application Dexcom Follow. Elle vous demandera d'ouvrir vos e-mails pour trouver l'invitation à devenir suiveur.    
+1)  Installez l'application officielle « Dexcom » sur _n'importe quel_ smartphone (Android/iPhone). Cela peut être le téléphone du suiveur, si c'est plus pratique. 2)  Connectez-vous avec votre nom d'utilisateur et votre mot de passe Dexcom. Ce sont les mêmes identifiants que pour Dexcom Clarity, si vous êtes déjà client Dexcom/Clarity. Si vous n'avez pas de compte Dexcom, vous pouvez en créer un à cette étape.   
+3)  Faites défiler les menus d'introduction. 4)  Choisissez « pas de code » pour le code du capteur. 5)  Sous Transmitter SN (n° de série de l'émetteur), choisissez « saisir manuellement » et saisissez un code d'émetteur valide quelconque. Utilisez si possible le code d'un de vos émetteurs expirés, pour ne pas gêner le fonctionnement de votre émetteur actuel. Ces codes suivent un format précis de chiffres et de lettres : « NLNNNL », et seules certaines combinaisons sont valides. Le plus simple est donc d'utiliser un code que vous savez valide. 6)  Quand l'application cherche l'émetteur et le capteur, vous pouvez inviter des suiveurs : touchez les trois petits points en haut à gauche de l'application, puis ajoutez un nouveau suiveur. Vous pouvez aussi utiliser cette fonction si un de vos suiveurs a changé de téléphone et a besoin d'une nouvelle invitation : supprimez-le de la liste des suiveurs et renvoyez-lui un nouvel e-mail d'invitation à utiliser sur son nouveau téléphone. 7)  Sur le téléphone du suiveur, installez Dexcom Follow depuis l'App Store (iPhone) ou Google Play (Android). Configurez l'application Dexcom Follow. Elle vous demandera d'ouvrir vos e-mails pour trouver l'invitation à devenir suiveur.    
 8)  Vous pouvez maintenant supprimer l'application officielle Dexcom G6.
 
 Pour Dexcom Follow, les données du capteur sont ensuite exportées depuis le téléphone **AAPS**, soit directement depuis BYODA, soit depuis xDrip, selon l'application que vous utilisez.
@@ -49,7 +49,7 @@ Pour Dexcom Follow, les données du capteur sont ensuite exportées depuis le t�
 
 ![image](../images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
-Avantages (selon les utilisateurs) :
+Avantages (selon les utilisateurs) :
 
 * Disponible sur l'[App Store](https://apps.apple.com/us/app/nightguard/id1116430352), avec une interface simple et facile à utiliser.
 
@@ -59,7 +59,7 @@ Avantages (selon les utilisateurs) :
 
 * Montée ou baisse rapide sur 2 à 5 mesures de suite (au choix). Possibilité de choisir aussi le delta entre deux mesures
 
-* Pause intelligente : pas d'alerte si la glycémie évolue dans la bonne direction
+* Pause intelligente : pas d'alerte si la glycémie évolue dans la bonne direction
 
 * Il y a un onglet Care (soins) qui semble permettre de définir une nouvelle cible temporaire pour une durée donnée, de supprimer la cible temporaire ou de saisir des glucides.
 
@@ -114,18 +114,18 @@ Si la source de données d'**AAPS** n'est pas xDrip, mais que vous pouvez affich
 
 ![image](../images/remote_control_and_following/xdrip4ios.jpg)
 
-xDripSwift est né du portage de l'application xDrip d'origine vers iOS, puis il a évolué en « xDrip for iOS », écrit **xDrip4iOS**.
+xDripSwift est né du portage de l'application xDrip d'origine vers iOS, puis il a évolué en « xDrip for iOS », écrit **xDrip4iOS**.
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
 Le [groupe Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) est le principal lieu d'entraide de la communauté pour xDrip4iOS et Shuggah. **xDrip4iOS** peut se connecter à de nombreux systèmes MGC et émetteurs, et afficher la glycémie, des graphiques et des statistiques. Il peut aussi émettre des alarmes. Il peut aussi envoyer les données à Nightscout ou servir d'[application de suivi pour Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). 
 
-« Comment obtenir **xDrip4iOS** sur mon iPhone ? »
-Il y a deux possibilités :
+« Comment obtenir **xDrip4iOS** sur mon iPhone ? »
+Il y a deux possibilités :
 
 1. Si vous avez un Mac et un compte Apple Developer (99 EUR/USD par an), vous pouvez compiler votre propre xDrip4iOS en [suivant les instructions](https://xdrip4ios.readthedocs.io/en/latest/install/build/).
 
-Si vous le souhaitez, vous pouvez ensuite devenir « releaser » (diffuseur) et [partager une version Personal Testflight de xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) avec jusqu'à 100 autres personnes pour les aider.
+Si vous le souhaitez, vous pouvez ensuite devenir « releaser » (diffuseur) et [partager une version Personal Testflight de xDrip4iOS](https://xdrip4ios.readthedocs.io/en/latest/install/personal_testflight/) avec jusqu'à 100 autres personnes pour les aider.
 
 2. Rejoignez le [groupe Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) et lisez les messages épinglés pour connaître les méthodes actuelles pour obtenir l'application. **Ne demandez pas d'invitation à l'application** (lisez les règles du groupe).
 ```
@@ -134,7 +134,7 @@ Si vous le souhaitez, vous pouvez ensuite devenir « releaser » (diffuseur) et 
 
 ![image](../images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-« Qu'est-ce que **Shuggah** ? » Un groupe de développeurs ukrainiens a copié le code du projet xDrip4iOS (qui est public sur GitHub) et l'a publié sur l'App Store avec un compte professionnel. La version Shuggah n'est en aucun cas gérée par les développeurs de xDrip4iOS.
+« Qu'est-ce que **Shuggah** ? » Un groupe de développeurs ukrainiens a copié le code du projet xDrip4iOS (qui est public sur GitHub) et l'a publié sur l'App Store avec un compte professionnel. La version Shuggah n'est en aucun cas gérée par les développeurs de xDrip4iOS.
 
 Le [groupe Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) aide pour xDrip4iOS et les applications Apple Watch correspondantes.
 
@@ -145,7 +145,7 @@ Le [groupe Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/a
 ![image](../images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/) peut être téléchargé sur iPhone depuis l'App Store. Sugarmate est compatible avec :
+[Sugarmate](https://sugarmate.io/) peut être téléchargé sur iPhone depuis l'App Store. Sugarmate est compatible avec :
 * Apple iPhone (nécessite la version 13.0 du système ou plus récente)
 * Apple iPad (nécessite la version 13.0 du système ou plus récente)
 * Google Android (enregistrez l'application web sur votre écran d'accueil)
