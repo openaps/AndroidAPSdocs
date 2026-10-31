@@ -1,23 +1,23 @@
-# Change language and version
+# Alterar o idioma e a versão
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+A documentação que está a ler está disponível em vários idiomas e corresponde a uma versão específica do **AAPS**. Pode alterar o idioma e a versão no menu no canto inferior direito do ecrã.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Clique na barra no canto inferior direito do ecrã para abrir o menu de seleção do idioma e da versão.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Abrir o menu de idiomas](../images/documentation_language_menu.png)
 
 ## Alterar Idioma
 
-In the menu, select the language you want to read the documentation in.
+No menu, selecione o idioma em que quer ler a documentação.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Junte-se aos tradutores e revisores no [Crowdin](https://crowdin.com/project/androidapsdocs) e ajude a traduzir a documentação para o seu idioma.
 
-## Change version
+## Alterar a versão
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+A versão atual é mostrada no canto inferior direito do ecrã. Para mudar para outra versão, clique na versão atual e selecione a versão de que precisa.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Ao alterar o idioma e/ou a versão, pode aparecer o erro 404 – Página não encontrada, se a página não existir nesse idioma ou nessa versão. Isto acontece com frequência ao mudar de versão, mas não deve acontecer ao mudar de idioma: se a página ainda não estiver traduzida, é mostrada em inglês.
 ```
