@@ -13,11 +13,11 @@ Fyzickou výměnu zásobníku nelze provést přes **AAPS**, musí se udělat p�
 
 1. V **AAPS** odpojte pumpu: na hlavní obrazovce stiskněte [ikonu smyčky](#AapsScreens-loop-status) a vyberte **Odpojit pumpu** na 1 hodinu. Ikona se změní na šedou ikonu zástrčky, která ukazuje, že je pumpa odpojená.
 
-2. Fyzicky vyměňte zásobník inzulinu: fyzicky odpojte pumpu od těla a podle pokynů výrobce vyměňte zásobník/nádržku na inzulín a kanylu.
+2. Fyzicky vyměňte zásobník inzulínu: fyzicky odpojte pumpu od těla a podle pokynů výrobce vyměňte zásobník/nádržku na inzulín a kanylu.
 
 3. Naplňte hadičky a kanylu: to lze provést přímo na pumpě. Ujistěte se, že odstraníte všechny bublinky v hadičkách.
 
-4. Připojte k tělu novou kanylu. Jakmile je kanyla nastřelena a jehla odstraněna, připojená kanyla má obsahuje malou vzduchovou mezeru, kterou je třeba také naplnit. Abyste to oznámili v **AAPS** a naplnili kanylu: otevřete **Plnění/doplňování** (v rozbaleném stavovém panelu na hlavní obrazovce, v panelu **Spravovat** nebo jako tlačítko [Rychlého spuštění](QuickLaunch.md)) a podle potřeby zaškrtněte **Výměna setu** a/nebo **Výměna inzulínu**, aby se výměna zaznamenala. Nyní stiskněte výchozí množství pro naplnění kanyly (obvykle kolem 0,3 U, ale ověřte, že tato hodnota odpovídá vaší kanyle) a vyberte **OK**. Přečtěte si souhrnnou zprávu a plnění potvrďte klepnutím na **OK**.
+4. Připojte k tělu novou kanylu. Jakmile je kanyla nastřelena a jehla odstraněna, připojená kanyla má obsahuje malou vzduchovou mezeru, kterou je třeba také naplnit. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Nyní stiskněte výchozí množství pro naplnění kanyly (obvykle kolem 0,3 U, ale ověřte, že tato hodnota odpovídá vaší kanyle) a vyberte **OK**. Přečtěte si souhrnnou zprávu a plnění potvrďte klepnutím na **OK**.
 
    ![Plnění/doplňování v panelu Spravovat u pumpy s hadičkou](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -28,7 +28,7 @@ Fyzickou výměnu zásobníku nelze provést přes **AAPS**, musí se udělat p�
 
 * Zaznamenání výměny setu resetuje Autosens na 100 %. Resetuje také příslušné stavové kontrolky a stáří kanyly/inzulínu na hlavní obrazovce **AAPS**.
 
-* Výchozí množství pro plnění můžete nastavit/upravit v nastavení **Plnění/doplňování** – napište „prime“ do vyhledávacího pole na hlavní obrazovce a nastavení se otevře (viz [Předvolby](../SettingUpAaps/Preferences.md)). Podívejte se do příbalového letáku vaší kanyly a ověřte, kolika jednotkamy inzulinu (v závislosti na délce jehly a hadičky) je třeba pro doplnění vaší kanyly.
+* Výchozí množství pro plnění můžete nastavit/upravit v nastavení **Plnění/doplňování** – napište „prime“ do vyhledávacího pole na hlavní obrazovce a nastavení se otevře (viz [Předvolby](../SettingUpAaps/Preferences.md)). Podívejte se do příbalového letáku vaší kanyly a ověřte, kolika jednotkami inzulínu (v závislosti na délce jehly a hadičky) je třeba pro doplnění vaší kanyly.
 
 * Inzulín vydaný funkcí plnění **AAPS** nezapočítává do aktivního inzulínu (IOB) a v [Historii ošetření](#aaps-screens-treatments) je označen jako „Prime“.
 
@@ -80,7 +80,7 @@ Kterou strategii upřednostníte je na vašem osobním rozhodnutí a nejlépe se
 **Spravovat → Rotace míst aplikace** otevře dialog Rotace míst aplikace v režimu zobrazení:
 
 - Dvěma tlačítky nahoře (ikona kanyly a ikona senzoru) můžete zobrazit jen místa kanyly, jen místa senzoru, nebo obojí
-- K dispozici jsou všechny výměny kanyly a senzoru za posledních 45 dní.
+- All Cannula change and Sensor change events from the past 45 days are available.
 - Klepněte na oblast místa nebo na jeden záznam v seznamu níže a seznam se vyfiltruje jen na záznamy ve vybrané oblasti. Vybraná oblast bude zvýrazněna světle zelenou barvou.
 - Klepnutím na ikonu **tužky** vedle záznamu otevřete zobrazení úprav a změníte jeho umístění, šipku nebo poznámku
 
@@ -100,7 +100,7 @@ Režim úprav vám umožní vybrat umístění, šipku a poznámku k vybranému 
 
 - Upravovaný záznam se zobrazuje pod obrázky těla, s ikonou svého typu (kanyla nebo senzor)
 - Přední a zadní pohled jsou zobrazeny vedle sebe: klepněte na oblast, kam jste ho umístili
-- Jakmile vyberete místo (zvýrazněné zeleně), uvidíte v seznamu níže všechny záznamy za posledních 45 dní na tomto místě
+- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
 
 ![Režim úprav](../images/SiteRotation/EditMode.png)
 
