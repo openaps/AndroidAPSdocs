@@ -53,7 +53,7 @@ Minimalna wymagana wersja jest opisana w [instrukcji budowania](#Building-APK-re
 * Poczekaj, aż pobieranie się zakończy. Informację o tym zobaczysz na dolnym pasku. Po zakończeniu zobaczysz komunikat o powodzeniu.
 
   ```{note}
-  Lista zaktualizowanych plików może być inna! To nie jest oznaka problemu
+  Lista zaktualizowanych plików może być inna! This is not an indication of a problem.
   ```
 
    ![Android Studio – Pull zakończony powodzeniem](../images/update/06_GitPullSuccess.png)
