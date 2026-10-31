@@ -400,7 +400,7 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     Wear OS watches are very power-constrained devices. Размер их корпуса ограничивает емкость встроенной батареи. Даже с последними достижениями в аппаратном и программном обеспечении часов Wear OS по-прежнему требуется ежедневная подзарядка.
     
-    Если аккумулятор работает меньше светового дня (от рассвета до заката), то рассмотрите несколько советов по увеличению работоспособности устройства.
+    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
     
     Main battery-demanding areas are:
     
