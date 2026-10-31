@@ -1,4 +1,4 @@
-# 設定（偏好設定）
+# 設定
 
 在 **AAPS** v4 中，您可以在 **設定**畫面找到偏好設定。有三種方式可以進入偏好設定；詳情請參閱[變更 AAPS 組態設定](../SettingUpAaps/ChangeAapsConfiguration.md)：
 
@@ -28,11 +28,12 @@
 
 **語系**
 
-- 新增選項可使用手機的預設語系（推薦）。
+- By default **AAPS** follows the language of the phone (recommended).
 
-- 如果你希望**AAPS**使用不同於標準手機語言的語言，你可以從廣泛的選擇中選擇。
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
 - 變更語系後，**AAPS** 的文字會立即切換為新的語系。如果部分文字仍顯示舊語系，請重新啟動 **AAPS**。
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
 - 在[簡易模式](#preferences-simple-mode)中隱藏的設置。
 
 (preferences-simple-mode)= **簡易模式**
@@ -354,7 +355,7 @@ AMA 的標準值為 3，SMB 的標準值為 8。
 詳細資訊請參閱專門的[Tidepool](../SettingUpAaps/Tidepool.md)頁面。
 
 (Preferences-nsclient)=
-## NSClient
+## NSClientV3
 
 ![設定 > NSClientV3](../images/preferences/settings_nsclient.png)
 
@@ -410,7 +411,7 @@ NSClient 外掛（在組態選單中顯示為 **NSClientV3**）會與 Nightscout
 - 若要刪除所有 SSID，請在該欄位中輸入空格。
 
 (Preferences-advanced-settings-nsclient)=
-### 進階設定（NSClient）
+### Advanced settings (NSClientV3)
 
 ![NSClient 進階設定](../images/preferences/settings_nsclient_advanced.png)
 
@@ -468,6 +469,10 @@ NSClient 外掛（在組態選單中顯示為 **NSClientV3**）會與 Nightscout
 ![設定 > 本機提醒](../images/preferences/settings_local_alerts.png)
 
 設定應該是簡單明瞭的。
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
 ## 維護設置
