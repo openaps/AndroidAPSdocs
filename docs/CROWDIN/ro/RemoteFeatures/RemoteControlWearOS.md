@@ -400,7 +400,7 @@ If **AAPS** had to limit the dose, for example because the calculated bolus is a
     
     Wear OS watches are very power-constrained devices. Dimensiunea ceasului limitează capacitatea bateriei incluse. Chiar și cu progresele recente atât pe partea de hardware, cât și pe cea de software, ceasurile Wear OS necesită în continuare încărcare zilnică.
     
-    Dacă bateria ține mai puțin de o zi (de dimineața până seara), iată câteva sfaturi pentru a rezolva problemele.
+    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
     
     Main battery-demanding areas are:
     
