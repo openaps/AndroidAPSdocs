@@ -21,7 +21,7 @@ Um pâncreas artificial pode ser visto como um [«piloto automático para a sua 
 
 Num avião, o piloto automático não faz todo o trabalho do piloto humano; o piloto não pode dormir durante o voo inteiro. O piloto automático ajuda o trabalho do piloto. Liberta-o do peso de ter de gerir constantemente o avião, permitindo que o piloto se concentre numa monitorização mais ampla. O piloto automático recebe sinais de vários sensores, um computador avalia os dados juntamente com as indicações do piloto e depois faz os ajustes necessários, avisando o piloto de qualquer problema. O piloto deixa de ter de se preocupar em tomar decisões continuamente, e esta analogia pode ser aplicada ao **AAPS**.
 
-![image](../images/autopilot.png)
+![imagem](../images/autopilot.png)
 
 (Introduction-what-does-hybrid-closed-loop-mean)=
 ## O que significa loop fechado híbrido?
@@ -38,7 +38,7 @@ Também foram lançados vários sistemas comerciais de loop fechado híbrido. S�
 
 ## O que é o Android APS (AAPS)?
 
-![image](../images/basic-outline-of-AAPS.png)
+![imagem](../images/basic-outline-of-AAPS.png)
 
 **Figura 1**. Esquema básico do Android APS (Sistema de Pâncreas Artificial), AAPS.
 
