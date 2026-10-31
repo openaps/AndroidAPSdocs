@@ -151,17 +151,17 @@ These settings are not part of the Medtrum driver. Open them from the **Settings
 
 Open **Settings** > **Pump**:
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Ustawienia > Pompa](../images/preferences/settings_pump.png)
 
 **BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
 
 Enable this setting if you often have connection problems with your pump.
 
-#### Local alerts
+#### Lokalne alarmy
 
 Open **Settings** > **Local alerts**:
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Ustawienia > Lokalne alarmy](../images/preferences/settings_local_alerts.png)
 
 ##### Alert if pump is unreachable
 
@@ -236,7 +236,7 @@ Wait for priming to complete.
 
 When priming is complete, tap **Next** to continue.
 
-#### Site Rotation
+#### Zmiana miejsca
 
 This step only appears if you manage pump sites with [Site Rotation](#Aapsscreens-site-rotation) (setting **Manage pump site rotation**). Choose where you place the patch on your body, or skip this step.
 
