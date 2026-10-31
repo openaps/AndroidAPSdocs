@@ -58,7 +58,7 @@ Please note that Facebook has recently removed external links shared within the 
 
 ### 波蘭
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl)：波蘭 AAPS 社群與糖尿病支援小組
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
 
 ### 瑞典
 
