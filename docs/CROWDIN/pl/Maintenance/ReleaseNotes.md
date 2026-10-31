@@ -9,7 +9,7 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Aby zaktualizować do nowej wersji, postępuj zgodnie z [instrukcją aktualizacji](UpdateToNewVersion). Rozdział o rozwiązywaniu problemów na stronie z instrukcją aktualizacji opisuje też najczęstsze trudności przy aktualizacji **AAPS**.
+Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. Rozdział o rozwiązywaniu problemów na stronie z instrukcją aktualizacji opisuje też najczęstsze trudności przy aktualizacji **AAPS**.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
@@ -24,7 +24,7 @@ Jeśli nie zaktualizujesz do daty wygaśnięcia, **AAPS** przełączy się na Ot
 
 Daty końca wsparcia wersji AAPS znajdziesz na stronie [Koniec wsparcia](EndOfLife.md).
 
-**Nie ignoruj tego powiadomienia.** Nowe wersje **AAPS** zawierają ważne poprawki bezpieczeństwa. Dlatego każdy użytkownik **AAPS** musi jak najszybciej zaktualizować do najnowszej wersji. Ma to poprawić bezpieczeństwo każdego użytkownika **AAPS** i społeczności DIY. Dziękujemy za zrozumienie.
+**Nie ignoruj tego powiadomienia.** Nowe wersje **AAPS** zawierają ważne poprawki bezpieczeństwa. Dlatego każdy użytkownik **AAPS** musi jak najszybciej zaktualizować do najnowszej wersji. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Dziękujemy za zrozumienie.
 
 (maintenance-android-version-aaps-version)=
 
@@ -67,7 +67,7 @@ Data wydania: 31.10.2026
 - [Sceny](../DailyLifeWithAaps/Scenes.md): zapisz zestaw akcji i uruchamiaj je razem @MilosKozak
 - [Sterowanie Master ↔ Client](../RemoteFeatures/ClientMasterControl.md): wysyłanie poleceń z telefonu opiekuna do urządzenia pacjenta @MilosKozak
   - [Role opiekunów](#client-master-control-roles): Tylko odczyt, Posiłki, Opiekun lub Administrator dla każdego urządzenia opiekuna @MilosKozak
-  - [Tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode): gdy kontrola z urządzenia opiekuna jest włączona, urządzenie pacjenta przyjmuje zmiany tylko od sparowanych urządzeń opiekuna @MilosKozak
+  - [Tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode): gdy sterowanie z urządzenia opiekuna jest włączone, urządzenie pacjenta przyjmuje zmiany tylko od sparowanych urządzeń opiekuna @MilosKozak
   - Parowanie kodem QR, który ustawia też Nightscout na urządzeniu opiekuna, albo kodem PIN; sekret parowania jest wymieniany zaraz po sparowaniu @MilosKozak
   - [Własny token Nightscout](#client-master-control-own-token) dla każdego urządzenia opiekuna, tylko z prawami, których ono potrzebuje @MilosKozak
 - Obsługa [stężenia insuliny](../AdvancedOptions/InsulinConcentration.md) (U200, U500) w pompach, kalkulatorze i profilach @Philoul @MilosKozak
@@ -141,7 +141,7 @@ Pełna lista zmian: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...
 - NSClientV3: naprawiono lukę po ponownym połączeniu @MilosKozak
 - Automatyzacja: naprawiono deserializację @MilosKozak
 - Equil: naprawiono raport baterii @MilosKozak
-- Porządki w workflow @vanelsberg
+- Cleanup workflow @vanelsberg
 - Equil: lepsze wychodzenie z błędów @MilosKozak
 - DanaRS: naprawiono komunikację z pompą w wersji krajowej (domestic) @MilosKozak
 - Insight: naprawiono synchronizację TBR @MilosKozak
@@ -168,7 +168,7 @@ Data wydania: 04.02.2026
 
 - Equil: naprawiono opór dla różnych modeli @hhfcvmars
 - Tidepool: naprawiono sesję @MilosKozak
-- Medtrum: naprawiono ścieżkę aktywacji przez zapobieganie podwójnemu napełnieniu @MilosKozak
+- Medtrum: Fix activation path by preventing double fill @MilosKozak
 - COB: naprawiono obliczanie COB (dotyczy niebezpiecznego przypadku brzegowego) @MilosKozak
 
 (version3410)=
@@ -261,7 +261,7 @@ Data wydania: 31.12.2025
 * Ulepszone usuwanie duplikatów przy błędzie NS @MilosKozak
 
 ### Ulepszenia interfejsu (UI/UX)
-* różne ulepszenia @MilosKozak @Philoul @olorinmaia
+* various improvements @MilosKozak @Philoul @olorinmaia
 
 ### Automatyzacja
 * Nowa akcja sterowania SMB – włączanie/wyłączanie SMB przez automatyzację @MilosKozak
@@ -300,7 +300,7 @@ Data wydania: 27.03.2025
 
 (version-enforcement)=
 
-### Od tej wersji powiadomienia i wymuszanie wersji są prostsze i łagodniejsze. Działają tak:
+### Starting this version, notification and version enforcement has been simplified and softened and works following way:
 *  Brak wygaśnięcia, gdy urządzenie jest offline (bez połączenia z internetem). Oznacza to, że nie ma już okresów przejściowych 60 i 90 dni.
 *  Po wygaśnięciu wymuszany jest tryb LGS
 *  Ostrzeżenia/powiadomienia będziesz dostawać rzadziej:
@@ -322,7 +322,7 @@ Data wydania: 27.03.2025
 * Ulepszenia interfejsu przycisków wyboru (RadioButton) @olorinmaia
 * Automatyzacja: wybór pozycji z mapy @MilosKozak
 * Wersja widoczna na głównych ekranach @MilosKozak
-* Wymuszona kompilacja z istniejącym systemem git (bez pobierania plików zip)
+* Compilation with existing git system is enforced (no zip downloads)
 * Pokazywanie wersji na ekranie głównym @MilosKozak
 * Ulepszenia wysyłania do Tidepool @ConstantinMatheis
 
@@ -342,7 +342,7 @@ Data wydania: 21.01.2025
 ### Poprawki błędów
 
 * Dash: bonding jest opcjonalny (domyślnie wyłączony) @MilosKozak
-* Equil: naprawiono bolus 10+ U, ulepszenia alarmów @EquilHack
+* Equil: fixed bolus 10+U, alarm improvements @EquilHack
 * Garmin: ulepszenia zegarka @swissalpine
 * Ulepszenia zegarka @olorinmaia
 * Sterowanie stanem pętli z zegarka @tdrkDev
@@ -558,21 +558,21 @@ Data wydania: 23.10.2023
 v1 to stary protokół wymiany danych między stroną NS a serwerem NS. Ma wiele ograniczeń
 - v1 wysyła tylko 2 dni danych
 - v1 wysyła dane z całych 2 dni przy każdym ponownym połączeniu
-- websockety są obowiązkowe = stałe połączenie, większe zużycie baterii
+- using websockets is mandatory = permanent connection, more battery consumption
 - przy częstych rozłączeniach z NS połączenie jest wstrzymywane na 15 minut, aby nie zużywać dużo danych
 
 v3 to nowy protokół. Bezpieczniejszy i wydajniejszy
 - dzięki tokenom możesz dokładniej określić prawa dostępu
 - protokół jest wydajniejszy po obu stronach (AAPS i NS)
 - Może odczytać z NS dane z maksymalnie 3 miesięcy
-- na każdym urządzeniu możesz wybrać, czy używać websocketów (z websocketami aktualizacje są szybsze, bez nich zużycie energii jest mniejsze, ale aktualizacje wolniejsze, czyli co kilka minut)
+- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power consumption, but slower updates ie. minutes)
 - NSClient nie jest wstrzymywany przy rozłączeniach
 
 OGRANICZENIA
 - Z AAPS 3.2 musisz używać NS 15
 - v3 nie widzi zmian zrobionych protokołem v1 (prawdopodobnie zostanie to rozwiązane w przyszłej wersji NS)
-- odwrotnie, z powodu starej, mało wydajnej metody śledzenia zmian, v1 widzi zmiany zrobione przez v3
-- pamiętaj, że NS wewnętrznie nadal używa v1, więc jeśli używasz v3, nie możesz wpisywać danych przez stronę NS. Jeśli chcesz zdalnie wpisywać dane, musisz używać AAPSClient lub SMS
+- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
+- pamiętaj, że NS wewnętrznie nadal używa v1, więc jeśli używasz v3, nie możesz wpisywać danych przez stronę NS. You must use AAPSClient or SMS if you want to enter data remotely
 
 ZALECANE USTAWIENIA
 - z powodu wszystkich powyższych punktów wybierz tylko jedną metodę i używaj jej na wszystkich urządzeniach (pamiętaj, że w chwili pisania tego tekstu wszystkie inne uploadery używają v1). Jeśli zdecydujesz się na v3, wybierz v3 w AAPS i we wszystkich AAPSClient
