@@ -1,6 +1,6 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The DASH driver is a well-established way to loop with Omnipod.
+Deze instructies zijn voor het instellen van de pomp van de **Omnipod DASH**-generatie **(NIET Omnipod Eros)**. De DASH-driver is een beproefde manier om te loopen met Omnipod.
 
 ```{contents} Table of contents
 :depth: 1
@@ -9,9 +9,9 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 ## Omnipod DASH specificaties
 
-Key characteristics of the **Omnipod DASH** ('DASH'):
+Belangrijkste kenmerken van de **Omnipod DASH** ('DASH'):
 
-- The DASH pods are identified by a **blue needle cap** (the older EROS pod has a clear needle cap). Verder zijn de pods qua afmetingen gelijk.
+- De DASH-pods herken je aan een **blauwe naalddop** (de oudere EROS-pod heeft een doorzichtige naalddop). Verder zijn de pods qua afmetingen gelijk.
 - DASH heeft geen BLE-brug (link) nodig (GEEN RileyLink, OrangeLink of EmaLink nodig).
 - De Bluetooth-verbinding van de DASH wordt alleen gebruikt bij het sturen van een opdracht (bijv. een bolus) en wordt direct daarna verbroken.
 - **AAPS** wacht tot de pod bereikbaar is om opdrachten te sturen.
@@ -21,10 +21,10 @@ Key characteristics of the **Omnipod DASH** ('DASH'):
 (omnipod-dash-constraints)=
 
 ## Bekende beperkingen/problemen van Omnipod DASH in AAPS
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to turn on **Bluetooth bonding** (in the **Advanced Settings** section of the [Dash settings](#omnipod-dash-advanced-settings)) to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- DST and timezone changes are not applied automatically. After a clock change you must update the pod manually: press **Refresh** on the DASH pump screen, then press **Set time** (shown when the pod and phone time zones differ) or perform a **Profile Switch** (see [Timezone change for Omnipod Dash](#timezone-traveling-with-pumps)).
-- Dash ondersteunt alleen basaalstanden in stappen van 0,05 E/u. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you open **Pod History** on the DASH pump screen, it will display that 0.05 basal was set. Dit betekent ook dat de laagste basaalstand die de DASH in **AAPS** toestaat 0,05 E/u is.
-- The settings file contains the active Pod session. Export your settings after each Pod activation, and see [Export and import settings](#omnipod-dash-export-import) before importing settings.
+- Het algemene advies is om **AAPS** te gebruiken op Android 14 of 16. Over Android 15 zijn in de community veel [problemen](https://github.com/nightscout/AndroidAPS/issues/3471) gemeld. Als je toch Android 15 gebruikt, moet je waarschijnlijk **Bluetooth bonding** aanzetten (in het deel **Geavanceerde instellingen** van de [Dash-instellingen](#omnipod-dash-advanced-settings)) om Pods goed te kunnen activeren en gebruiken. Zie [Algemene probleemoplossing](../GettingHelp/GeneralTroubleshooting.md) voor meer info over de instellingen voor bonding.
+- Zomertijd en wijzigingen van tijdzone worden niet automatisch toegepast. Na een wijziging van de klok moet je de pod zelf bijwerken: druk op **Vernieuwen** op het DASH-pompscherm en druk dan op **Tijd instellen** (zichtbaar als de tijdzones van pod en telefoon verschillen) of doe een **Profiel wissel** (zie [Tijdzonewijziging voor Omnipod Dash](#timezone-traveling-with-pumps)).
+- Dash ondersteunt alleen basaalstanden in stappen van 0,05 E/u. Als je in je **AAPS-profiel** een basaal instelt met stappen van 0,01, geeft AAPS geen waarschuwing, ook al rondt de pod de stand naar boven af op stappen van 0,05. Als je **Pod Historie** opent op het DASH-pompscherm, zie je dat er 0,05 basaal is ingesteld. Dit betekent ook dat de laagste basaalstand die de DASH in **AAPS** toestaat 0,05 E/u is.
+- Het instellingenbestand bevat de actieve Pod-sessie. Exporteer je instellingen na elke Pod-activering, en lees [Instellingen exporteren en importeren](#omnipod-dash-export-import) voordat je instellingen importeert.
 - Bij het instellen van een nieuw basaal profiel onderbreekt DASH de toediening voordat het nieuwe basale **Profiel** wordt ingesteld. Bij een onderbreking van de communicatie of een fout start het basale profiel niet vanzelf opnieuw. Zie het deel [Insulinetoediening hervatten](#omnipod-dash-resuming-insulin-delivery) voor details.
 - Als waarschuwingen zijn ingesteld en de pod bijna verloopt, blijft de pod piepen tot de waarschuwingen zijn stilgezet. Zie [Pod-alarmen stilzetten](#omnipod-dash-silencing-pod-alerts) voor details.
 - Er zijn een aantal bekende problemen met Bluetooth die problemen bij het activeren van een pod kunnen geven. Zie [Bluetooth-probleemoplossing](../GettingHelp/BluetoothTroubleshooting.md) voor de bekende problemen en oplossingen.
@@ -42,9 +42,9 @@ Key characteristics of the **Omnipod DASH** ('DASH'):
     -  De Omnipod Dash-driver van **AAPS** maakt via Bluetooth verbinding met de DASH Pod.  
       **AAPS** maakt automatisch een nieuwe Bluetooth-verbinding met de Pod elke keer dat het een opdracht moet sturen (bijv. een bolus). Na het sturen van de opdracht wordt de Bluetooth-verbinding direct verbroken.
        - **Opmerking:**
-         - De Bluetooth-verbinding kan worden onderbroken of verstoord door andere Bluetooth-apparaten die gekoppeld zijn aan de telefoon waarop **AAPS** draait, zoals oordopjes enz. Zulke apparaten kunnen op sommige telefoonmodellen verbindingsfouten of problemen bij het activeren van een pod geven. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) list for known working configurations when choosing the phone for an Omnipod DASH setup.
+         - De Bluetooth-verbinding kan worden onderbroken of verstoord door andere Bluetooth-apparaten die gekoppeld zijn aan de telefoon waarop **AAPS** draait, zoals oordopjes enz. Zulke apparaten kunnen op sommige telefoonmodellen verbindingsfouten of problemen bij het activeren van een pod geven. Bekijk bij het kiezen van een telefoon voor Omnipod DASH de lijst met [geteste hardware-opstellingen](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true). Daar staan combinaties die bekend goed werken.
          - Er zijn een aantal bekende problemen met Bluetooth die problemen bij het activeren van een pod kunnen geven (zie [Probleemoplossing](#troubleshooting) voor advies over andere Bluetooth-problemen), vooral het deel [Problemen met Bluetooth](#omnipod-dash-bluetooth-related-issues).
-    - The phone must run **Android 12 or newer**, with **AAPS** built and installed using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions. Always run the latest released version.
+    - De telefoon moet **Android 12 of nieuwer** hebben, met **AAPS** gebouwd en geïnstalleerd volgens de instructies [**APK bouwen**](../SettingUpAaps/BuildingAaps.md). Gebruik altijd de nieuwste uitgebrachte versie.
 - Een ondersteunde [**Continue glucosemonitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
 De instructies hieronder leggen uit hoe je met **AAPS** een nieuwe pod-sessie activeert. Wacht tot je huidige Pod bijna verloopt, want je moet met **AAPS** een nieuwe Pod activeren. Als een pod is gedeactiveerd, kan hij niet opnieuw worden gebruikt of geactiveerd. Het deactiveren is definitief.
@@ -72,8 +72,8 @@ Zolang **AAPS** werkt, stuurt het opdrachten om de basaalstand aan te passen die
 Als de pod om een of andere reden geen nieuwe opdrachten krijgt (bijvoorbeeld omdat de verbinding verloren is door de afstand tussen Pod en telefoon), gaat de pod automatisch terug naar de standaard basaalstanden uit je [**Profiel**](../SettingUpAaps/YourAapsProfile.md).
 
 ### AAPS-profielen ondersteunen geen basale tijdblokken van 30 minuten
-Als je nieuw bent met **AAPS** en je basale [**Profiel**](../SettingUpAaps/YourAapsProfile.md) voor het eerst instelt: basaalstanden die op een half uur beginnen worden niet ondersteund. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
-You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Hoewel de DASH-hardware zelf basale **Profiel**-blokken van 30 minuten ondersteunt, ondersteunt **AAPS** dit NIET.
+Als je nieuw bent met **AAPS** en je basale [**Profiel**](../SettingUpAaps/YourAapsProfile.md) voor het eerst instelt: basaalstanden die op een half uur beginnen worden niet ondersteund. Een voorbeeld: als je op je Omnipod PDM een basaalstand van 1,1 eenheden hebt die om 09:30 begint en 2 uur duurt tot 11:30, kun je dit basale **Profiel** niet precies zo in **AAPS** zetten.  
+Je moet deze basaalstand van 1,1 eenheden dan veranderen naar een tijdblok van 9:00–11:00 of 10:00–12:00. Hoewel de DASH-hardware zelf basale **Profiel**-blokken van 30 minuten ondersteunt, ondersteunt **AAPS** dit NIET.
 
 ### Basaalstanden van 0 E/u in het profiel worden NIET ondersteund in AAPS
 De DASH ondersteunt wel een basaalstand van nul, maar **AAPS** gebruikt veelvouden van de basaalstand uit het **Profiel** van de gebruiker om automatische behandelingen te bepalen. Het kan daarom niet werken met een basaalstand van nul.  
@@ -82,281 +82,281 @@ Een tijdelijke basaalstand van nul kun je wel krijgen met de functie "Verbreek v
 
 ## Dash selecteren in AAPS
 
-There are **two** ways to select the Omnipod DASH driver in **AAPS**:
+Er zijn **twee** manieren om de Omnipod DASH-driver te selecteren in **AAPS**:
 
 ### Optie 1: Nieuwe installaties
 
-When you install **AAPS** for the first time, the **Setup Wizard** guides you through the key features and installation requirements of **AAPS**. When you reach the **Pump** step, select **Omnipod Dash**.
+Als je **AAPS** voor het eerst installeert, leidt de **Setup Wizard** je door de belangrijkste functies en installatie-eisen van **AAPS**. Als je bij de stap **Pomp** komt, selecteer dan **Omnipod Dash**.
 
-![The Pump step of the setup wizard with Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
+![De stap Pomp van de setup wizard met Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-If you are not sure yet, you can select **Virtual Pump** for now and select **Omnipod Dash** later, after setting up **AAPS** (see Option 2).
+Als je het nog niet zeker weet, kun je nu **Virtuele Pomp** selecteren en **Omnipod Dash** later kiezen, nadat je **AAPS** hebt ingesteld (zie optie 2).
 
 (omnipod-dash-option-2-config-builder)=
-### Option 2: The Configuration screen
+### Optie 2: Het scherm Configuratie
 
-On an existing installation you can select the **Omnipod Dash** pump from the **Configuration** screen:
+Bij een bestaande installatie kun je de **Omnipod Dash**-pomp selecteren in het scherm **Configuratie**:
 
-1. Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration**.
-2. Tap **Pump** and select the radio button of **Omnipod Dash** (*"Pump integration for Omnipod Dash (the new, Bluetooth-enabled model with a blue needle cap)"*).
+1. Open het **menu** (☰) linksboven in het hoofdscherm en selecteer **Configuratie**.
+2. Tik op **Pomp** en selecteer het keuzerondje van **Omnipod Dash** (*"Pomp integratie voor Omnipod Dash (het nieuwe, Bluetooth-enabled model met een blauwe naalddop)"*).
 
-3. Once it is selected, the **Omnipod Dash** card shows two buttons:
-   - **Settings** opens the [Dash settings](#omnipod-dash-settings).
-   - **Open plugin** opens the [DASH pump screen](#omnipod-dash-tab).
+3. Als het geselecteerd is, toont de kaart **Omnipod Dash** twee knoppen:
+   - **Instellingen** opent de [Dash-instellingen](#omnipod-dash-settings).
+   - **Plug-in openen** opent het [DASH-pompscherm](#omnipod-dash-tab).
 
-   ![The Omnipod Dash plugin enabled in Configuration > Pump](../images/v4/Pumps/dash_enabled.png)
+   ![De Omnipod Dash-plugin ingeschakeld in Configuratie > Pomp](../images/v4/Pumps/dash_enabled.png)
 
 ### Controleren of de Omnipod-driver is geselecteerd
 
-To check that **Omnipod Dash** is selected, open **Manage** (bottom navigation of the main screen) and tap **Pump**. The DASH pump screen opens, as shown in the next section.
+Om te controleren of **Omnipod Dash** geselecteerd is, open je **Beheren** (navigatie onderaan het hoofdscherm) en tik je op **Pomp**. Het DASH-pompscherm opent, zoals in het volgende deel te zien is.
 
 (omnipod-dash-tab)=
 
-## The DASH pump screen
+## Het DASH-pompscherm
 
-The DASH pump screen is where you manage your pods: activate and deactivate them, refresh the pod status, silence alerts and look at the pod history. Open it with **Manage** > **Pump**, or with **Open plugin** on the **Omnipod Dash** card in **Configuration** > **Pump**.
+Op het DASH-pompscherm beheer je je pods: activeren en deactiveren, de pod-status vernieuwen, alarmen stilzetten en de pod-historie bekijken. Open het met **Beheren** > **Pomp**, of met **Plug-in openen** op de kaart **Omnipod Dash** in **Configuratie** > **Pomp**.
 
-This is the screen without an active pod:
+Dit is het scherm zonder actieve pod:
 
-![The DASH pump screen without an active pod](../images/v4/Pumps/dash_pump_screen.png)
+![Het DASH-pompscherm zonder actieve pod](../images/v4/Pumps/dash_pump_screen.png)
 
-And this is the screen with an active pod:
+En dit is het scherm met een actieve pod:
 
-![The DASH pump screen with an active pod](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
+![Het DASH-pompscherm met een actieve pod](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-The **Settings** (gear) icon in the top-right corner opens the [Dash settings](#omnipod-dash-settings).
+Het pictogram **Instellingen** (tandwiel) rechtsboven opent de [Dash-instellingen](#omnipod-dash-settings).
 
-***NOTE:** If a field on the pump screen shows (uncertain), press **Refresh** to update the pod status.*
+***LET OP:** Als een veld op het pompscherm (onzeker) toont, druk dan op **Vernieuwen** om de pod-status bij te werken.*
 
 ### Velden
 
-- **Bluetooth Address:** The Bluetooth address of the pod.
+- **Bluetooth adres:** Het Bluetooth-adres van de pod.
 
-- **Connection quality:** How reliably **AAPS** connects to the pod, shown as *successful connections / all connection attempts :: success rate*, for example `412/420 :: 98.10 %`. After more than 50 successful connections, the value turns yellow below 90 % and red below 70 %. A low value points to a Bluetooth problem (see [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues)).
+- **Verbindingskwaliteit:** Hoe betrouwbaar **AAPS** verbinding maakt met de pod, getoond als *gelukte verbindingen / alle verbindingspogingen :: slagingspercentage*, bijvoorbeeld `412/420 :: 98.10 %`. Na meer dan 50 gelukte verbindingen wordt de waarde geel onder 90% en rood onder 70%. Een lage waarde wijst op een Bluetooth-probleem (zie [Problemen met Bluetooth](#omnipod-dash-bluetooth-related-issues)).
 
-- **Delivery Status:** The raw delivery status reported by the pod. This field is shown only in engineering mode builds.
+- **Leveringsstatus:** De ruwe leveringsstatus die de pod meldt. Dit veld wordt alleen getoond in builds met engineering mode.
 
-- **Unique ID:** The unique ID **AAPS** gave to the pod during activation.
+- **Uniek ID:** Het unieke ID dat **AAPS** tijdens het activeren aan de pod gaf.
 
-- **LOT Number:** The production lot number of the pod.
+- **LOT Nummer:** Het productielotnummer van de pod.
 
-- **Sequence Number:** The sequence number of the pod.
+- **Volgnummer:** Het volgnummer van de pod.
 
-- **Firmware Version:** The firmware and Bluetooth versions of the pod.
+- **Firmware versie:** De firmware- en Bluetooth-versies van de pod.
 
-- **Time on Pod:** The current time on the pod, with its time zone. The text turns red when the time zone of the pod is different from the time zone of the phone, and yellow when the pod time is more than 10 minutes off.
+- **Tijd op Pod:** De huidige tijd op de pod, met de tijdzone. De tekst wordt rood als de tijdzone van de pod anders is dan die van de telefoon, en geel als de tijd op de pod meer dan 10 minuten afwijkt.
 
-- **Pod Expires:** The date and time when the pod expires (72 hours after activation). The text turns yellow in the last 4 hours before this time. It never turns red, because the pod keeps delivering insulin after it.
+- **Pod verloopt:** De datum en tijd waarop de pod verloopt (72 uur na activering). De tekst wordt geel in de laatste 4 uur voor dit moment. Hij wordt nooit rood, omdat de pod daarna nog insuline blijft toedienen.
 
-- **Pod Hard End:** The end of the pod's grace period (8 hours after **Pod Expires**, for a maximum pod life of 80 hours). The text turns yellow when the grace period starts (at **Pod Expires**) and red in the last 4 hours before the hard end. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
+- **Harde einddatum Pod:** Het einde van de extra tijd van de pod (8 uur na **Pod verloopt**, voor een maximale levensduur van de pod van 80 uur). De tekst wordt geel als de extra tijd begint (bij **Pod verloopt**) en rood in de laatste 4 uur voor het harde einde. Tijdens de extra tijd toont het veld ook de resterende tijd, bijvoorbeeld *(17m resterend)*. Bij het harde einde stopt de pod met insuline toedienen en moet hij vervangen worden.
 
-- **Pod Status:** The state of the pod: **No Active Pod**, **Setup in progress**, **Running**, **Suspended** or, after a pod fault, **ALARM**.
+- **Pod Status:** De status van de pod: **Geen actieve Pod**, **Setup wordt uitgevoerd**, **Actief**, **Onderbroken** of, na een pod-fout, **ALARM**.
 
-- **Last Connection:** How long ago **AAPS** last communicated with the pod.
+- **Laatste verbinding:** Hoe lang geleden **AAPS** voor het laatst met de pod communiceerde.
 
-  - *Moments ago* - less than 10 seconds ago.
+  - *Zojuist* - minder dan 10 seconden geleden.
 
-  - *Less than a minute ago* - between 10 and 60 seconds ago.
+  - *Minder dan een minuut geleden* - tussen 10 en 60 seconden geleden.
 
-  - *XX minutes ago* - more than 1 minute ago (and *X hours and XX minutes ago* after an hour).
+  - *XX minuten geleden* - meer dan 1 minuut geleden (en *X uur en XX minuten geleden* na een uur).
 
-- **Last bolus:** The amount of the last bolus sent to the pod and how long ago it was given. An unconfirmed bolus is marked (uncertain).
+- **Laatste bolus:** De hoeveelheid van de laatste bolus die naar de pod is gestuurd, en hoe lang geleden die werd gegeven. Een niet-bevestigde bolus wordt gemarkeerd met (onzeker).
 
-- **Base Basal Rate:** The basal rate programmed for the current time in your basal **Profile**.
+- **Basis basaalstand:** De basaalstand die voor de huidige tijd in je basale **Profiel** staat.
 
-- **Temp Basal Rate:** The temporary basal rate (TBR) that is currently running, with its start time and duration. This field is only shown while a TBR is running.
+- **Tijdelijke basaalstand:** De tijdelijke basaalstand (TBR) die nu loopt, met de begintijd en de duur. Dit veld wordt alleen getoond als er een TBR loopt.
 
-- **Reservoir:** Shows *Over 50 U left* when more than 50 units are left in the reservoir. Below 50 units, the exact amount is shown. The value turns red below 20 units.
+- **Reservoir:** Toont *Meer dan 50 E over* als er meer dan 50 eenheden in het reservoir zitten. Onder 50 eenheden wordt de precieze hoeveelheid getoond. De waarde wordt rood onder 20 eenheden.
 
-- **Total Delivered:** The total amount of insulin delivered from the reservoir. This includes the insulin used for priming.
+- **Totaal toegediend:** De totale hoeveelheid insuline die uit het reservoir is toegediend. Dit is inclusief de insuline die gebruikt is voor het vullen.
 
-- **Active Pod Alerts:** Alerts that are currently active on the pod, for example *Pod will expire soon* or *Low Reservoir*.
+- **Actieve pod alarmen:** Waarschuwingen die nu actief zijn op de pod, bijvoorbeeld *Pod verloopt binnenkort* of *Laag reservoir niveau*.
 
-- **Errors:** The pod fault, if the pod has failed, shown in red as *Pod Fault:* followed by the fault code and name, for example *Pod Fault: 020 ALARM_OCCLUDED*. Review the [Pod History](#omnipod-dash-view-pod-history) and the log files for past errors and more detailed information. See [Pod Failures](#omnipod-dash-pod-failures).
+- **Foutmeldingen:** De pod-fout, als de pod defect is, in het rood getoond als *Pod foutmelding:* gevolgd door de foutcode en naam, bijvoorbeeld *Pod foutmelding: 020 ALARM_OCCLUDED*. Bekijk de [Pod Historie](#omnipod-dash-view-pod-history) en de logbestanden voor eerdere fouten en meer gedetailleerde informatie. Zie [Pod-storingen](#omnipod-dash-pod-failures).
 
-- **PDM Notification:** Shown only after a pod fault. It shows the fault the way the Omnipod PDM would have shown it: a title (for example *Occlusion Detected*, *Empty Reservoir* or *Pod Expired*), what happened (for example *Insulin delivery stopped. Change Pod now.*) and a *Ref:* code.
+- **PDM-melding:** Alleen getoond na een pod-fout. Het toont de fout zoals de Omnipod PDM die zou tonen: een titel (bijvoorbeeld *Verstopping gedetecteerd*, *Leeg reservoir* of *Pod verlopen*), wat er gebeurd is (bijvoorbeeld *Insulinetoediening gestopt. Vervang de Pod nu.*) en een *Ref:*-code.
 
 ### Knoppen
 
-The buttons at the bottom of the pump screen change with the state of the pod. Only the buttons that make sense at that moment are shown.
+De knoppen onderaan het pompscherm veranderen met de status van de pod. Alleen de knoppen die op dat moment zinvol zijn, worden getoond.
 
-- **Refresh:** Asks the pod for its current status.
-  - *Use it to update the pod status and to clear fields that show (uncertain).*
-  - *See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for more information.*
+- **Vernieuwen:** Vraagt de pod om zijn huidige status.
+  - *Gebruik het om de pod-status bij te werken en om velden met (onzeker) te wissen.*
+  - *Zie het deel [Probleemoplossing](#omnipod-dash-troubleshooting) hieronder voor meer informatie.*
 
-- **Silence Alerts:** Stops the pod alert beeps (for example pod expiry or low reservoir). Shown only while the pod has an active alert. See [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts).
+- **Alarmen Stil:** Stopt de piepjes van pod-waarschuwingen (bijvoorbeeld pod verloopt of laag reservoir). Alleen getoond als de pod een actieve waarschuwing heeft. Zie [Pod-alarmen stilzetten](#omnipod-dash-silencing-pod-alerts).
 
-- **Resume Delivery:** Resumes insulin delivery on a suspended pod. Shown only when delivery is suspended. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
+- **Toediening hervatten:** Hervat de insulinetoediening op een onderbroken pod. Alleen getoond als de toediening onderbroken is. Zie [Insulinetoediening hervatten](#omnipod-dash-resuming-insulin-delivery).
 
-- **Set time:** Updates the pod to the time zone of your phone by sending your basal **Profile** again. Shown only when the time zone of the pod differs from the time zone of your phone.
+- **Tijd instellen:** Zet de pod op de tijdzone van je telefoon door je basale **Profiel** opnieuw te sturen. Alleen getoond als de tijdzone van de pod anders is dan de tijdzone van je telefoon.
 
-- [**Activeer Pod**](#omnipod-dash-activate-pod): Vult en activeert een nieuwe pod. Shown when no pod is active.
+- [**Activeer Pod**](#omnipod-dash-activate-pod): Vult en activeert een nieuwe pod. Getoond als er geen pod actief is.
 
-- [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the active pod. Shown as soon as a pod is paired with **AAPS**, also when an activation stopped part-way (for example because the pod failed during activation). **AAPS** asks you to confirm before it deactivates the pod.
+- [**Deactiveer Pod**](#omnipod-dash-deactivate-pod): Deactiveert de actieve pod. Getoond zodra een pod gekoppeld is met **AAPS**, ook als een activering halverwege is gestopt (bijvoorbeeld omdat de pod tijdens het activeren defect raakte). **AAPS** vraagt je om te bevestigen voordat het de pod deactiveert.
 
-- **Play Test Beep:** Makes the pod play a single test beep.
+- **Testpieptoon afspelen:** Laat de pod één testpieptoon afspelen.
 
-- [**Pod History**](#omnipod-dash-view-pod-history): Shows the activity history of the active pod.
+- [**Pod Historie**](#omnipod-dash-view-pod-history): Toont de activiteiten van de actieve pod.
 
-- **Discard Pod:** Removes an unfinished pod from **AAPS**. Shown only when a pod activation stopped part-way. **AAPS** asks you to confirm. After discarding, **AAPS** can no longer communicate with that pod: remove it from your body.
+- **Pod verwijderen:** Verwijdert een niet-afgemaakte pod uit **AAPS**. Alleen getoond als een pod-activering halverwege is gestopt. **AAPS** vraagt je om te bevestigen. Na het verwijderen kan **AAPS** niet meer met die pod communiceren: haal hem van je lichaam.
 
-![The Pod Management menu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+![Het menu Pod Management](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, which had a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
+De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, die een apart menu **Pod Management** had. In **AAPS** 4 zijn al deze acties, ook **Activeer Pod**, **Deactiveer Pod**, **Testpieptoon afspelen** en **Pod Historie**, knoppen met tekst direct op het pompscherm.
 ```
 
 (omnipod-dash-activate-pod)=
 
 ## Activeer Pod
 
-1. Open the DASH pump screen (**Manage** > **Pump**) and press **Activate Pod**. The activation wizard opens.
+1. Open het DASH-pompscherm (**Beheren** > **Pomp**) en druk op **Activeer Pod**. De wizard voor activering opent.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 is **Activeer Pod** een knop direct op het DASH-pompscherm, in plaats van in het menu **Pod Management**.
    ```
 
-   If you have never activated a **Profile** in **AAPS** before, the wizard first shows the **Profile required** step: select the profile to apply on activation and continue.
+   Als je nog nooit een **Profiel** hebt geactiveerd in **AAPS**, toont de wizard eerst de stap **Profiel vereist**: kies het profiel dat bij het activeren moet worden gebruikt en ga verder.
 
-2. The **Fill Pod** step is shown. Fill a new pod with enough insulin for 3 days, **at least 80 units**. Listen for two beeps from the pod: they mean the minimum amount of 80 units has been filled. Empty the fill syringe completely, even after hearing the two beeps. Do not remove the pod's needle cap yet.
+2. De stap **Pod vullen** wordt getoond. Vul een nieuwe pod met genoeg insuline voor 3 dagen, **minstens 80 eenheden**. Luister naar twee piepjes van de pod: die betekenen dat de minimale hoeveelheid van 80 eenheden is gevuld. Maak de vulspuit helemaal leeg, ook nadat je de twee piepjes hebt gehoord. Haal de naalddop nog niet van de pod.
 
-   ***NOTE:** When you calculate the amount of insulin you need for 3 days, remember that priming the pod uses about 3-10 units.*
+   ***LET OP:** Denk er bij het berekenen van de insuline die je voor 3 dagen nodig hebt aan dat het vullen van de pod ongeveer 3–10 eenheden kost.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)
 
    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-   Make sure that the new pod and the phone running **AAPS** are close to each other and press **Next**.
+   Zorg dat de nieuwe pod en de telefoon met **AAPS** dicht bij elkaar liggen en druk op **Volgende**.
 
-3. If you use more than one insulin in **AAPS**, the **Select Insulin** step is shown. It shows the **Currently active** insulin. If you filled the pod with a different insulin, press **Change** and select it. **AAPS** applies a **Profile Switch** with this insulin when the activation is finished. Press **Next**.
+3. Als je meer dan één insuline gebruikt in **AAPS**, wordt de stap **Selecteer insuline** getoond. Die toont de insuline die **Momenteel actief** is. Als je de pod met een andere insuline hebt gevuld, druk dan op **Wissel** en selecteer die. **AAPS** doet een **Profiel wissel** met deze insuline als het activeren klaar is. Druk op **Volgende**.
 
-   ![The Select Insulin step](../images/v4/Pumps/dash_wizard_select_insulin.png)
+   ![De stap Selecteer insuline](../images/v4/Pumps/dash_wizard_select_insulin.png)
 
-4. On the **Initialize Pod** step, **AAPS** pairs with the new pod and primes it. You hear a click followed by a series of ticking sounds as the pod primes itself. When this has finished successfully, the **Next** button appears. Press **Next**.
+4. In de stap **Pod initialiseren** koppelt **AAPS** met de nieuwe pod en vult hem. Je hoort een klik, gevolgd door een reeks tikgeluiden terwijl de pod zichzelf vult. Als dit gelukt is, verschijnt de knop **Volgende**. Druk op **Volgende**.
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-   ***NOTE**: If an error message such as _Scan failed_ or _'Could not find an available pod for activation'_ appears (this can happen), do not panic. Press **Retry**. In most cases the activation then continues successfully.*
+   ***LET OP**: Als een foutmelding zoals _Scan is mislukt_ of _'Could not find an available pod for activation'_ verschijnt (dit kan gebeuren), raak dan niet in paniek. Druk op **Opnieuw**. Meestal gaat het activeren dan goed verder.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-   If the pod has failed (for example because its activation time was exceeded), **Deactivate Pod** is shown instead of **Retry**. Use it and start again with a new pod.
+   Als de pod defect is (bijvoorbeeld omdat de activeringstijd is overschreden), wordt **Deactiveer Pod** getoond in plaats van **Opnieuw**. Gebruik die knop en begin opnieuw met een nieuwe pod.
 
-   If you press **Cancel** before the activation is finished, **AAPS** asks you to confirm that you want to exit. Press **OK** to leave the wizard, or **Cancel** to stay.
+   Als je op **Annuleren** drukt voordat het activeren klaar is, vraagt **AAPS** je te bevestigen dat je wilt afsluiten. Druk op **OK** om de wizard te verlaten, of op **Annuleren** om te blijven.
 
-   ![The Exit confirmation](../images/v4/Pumps/dash_wizard_exit_confirm.png)
+   ![De bevestiging Afsluiten](../images/v4/Pumps/dash_wizard_exit_confirm.png)
 
-5. If you manage pump site rotation in **AAPS** (**Manage pump site rotation** in the [Site Rotation](#Aapsscreens-site-rotation) settings), the **Site location** step is shown. Select where you are going to place the pod on the body diagram and press **Next**, or press **Skip**.
+5. Als je de rotatie van pompplekken beheert in **AAPS** (**Plaatsingslocatie pomp beheren** in de instellingen van [Site rotatie](#Aapsscreens-site-rotation)), wordt de stap **Plaatsingsplek** getoond. Kies op de afbeelding van het lichaam waar je de pod gaat plakken en druk op **Volgende**, of druk op **Overslaan**.
 
-   ![The Site location step](../images/v4/Pumps/dash_wizard_site_location.png)
+   ![De stap Plaatsingsplek](../images/v4/Pumps/dash_wizard_site_location.png)
 
-6. Next, prepare the infusion site for the new pod. Wash your hands to avoid any risk of infection. Clean the infusion site with soap and water or an alcohol wipe, and let the skin air dry completely before you continue. If the adhesive irritates your skin, consider using a barrier wipe or barrier spray.
+6. Bereid daarna de plek voor de nieuwe pod voor. Was je handen om infecties te voorkomen. Maak de plek schoon met water en zeep of een alcoholdoekje, en laat de huid helemaal aan de lucht drogen voordat je verdergaat. Als de pleister je huid irriteert, kun je een beschermend doekje of beschermende spray gebruiken.
 
-   On the **Attach Pod** step, remove the pod's blue plastic needle cap. If the cannula or anything else sticks out of the pod, or it looks unusual, **STOP**: press **Cancel** and start again with a new pod. If everything looks **OK**, take off the white paper backing from the adhesive and stick the pod to the chosen site on your body.
+   Haal in de stap **Plaats de Pod** de blauwe plastic naalddop van de pod. Als de canule of iets anders uit de pod steekt, of als hij er vreemd uitziet: **STOP**. Druk op **Annuleren** en begin opnieuw met een nieuwe pod. Als alles er **OK** uitziet, haal je het witte papier van de pleister en plak je de pod op de gekozen plek op je lichaam.
 
-   When finished, press **Next**.
+   Druk daarna op **Volgende**.
 
    ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-7. A confirmation dialog appears: *When you press OK, the cannula will be inserted.* **Press OK ONLY if you are ready to insert the cannula!**
+7. Er verschijnt een bevestiging: *Als je op OK drukt, wordt de canule ingebracht.* **Druk ALLEEN op OK als je klaar bent om de canule in te brengen!**
 
    ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-8. On the **Insert Cannula** step, **AAPS** sets your basal schedule and the pod inserts the cannula. This can take some time (1-2 minutes maximum). **Wees geduldig!**
+8. In de stap **Canule inbrengen** stelt **AAPS** je basaalschema in en brengt de pod de canule in. Dit kan even duren (maximaal 1–2 minuten). **Wees geduldig!**
 
-   ***NOTE:** It is good practice to pinch the skin near the cannula insertion point before the cannula is inserted. This helps the needle go in smoothly and lowers your chance of occlusions (blockages).*
+   ***LET OP:** Het is verstandig om de huid bij de plek van de canule even samen te knijpen voordat de canule wordt ingebracht. Zo gaat de naald soepel naar binnen en is de kans op verstoppingen kleiner.*
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-9. When the cannula has been inserted successfully, the **Next** button appears. Press **Next**.
+9. Als de canule goed is ingebracht, verschijnt de knop **Volgende**. Druk op **Volgende**.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-10. The **Pod Activated** step is shown. Check that the cannula has been inserted correctly, and change the pod if you think it has not.
+10. De stap **Pod geactiveerd** wordt getoond. Controleer of de canule goed is ingebracht, en vervang de pod als je denkt dat dat niet zo is.
 
-    Press **Finish**.
+    Druk op **Voltooien**.
 
     Gefeliciteerd! Je hebt nu een nieuwe pod-sessie gestart.
 
     ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-11. You are back on the DASH pump screen. It now shows the information of your active pod, including the current basal rate, reservoir level, insulin delivered, pod errors and alerts. **Activate Pod** is replaced by **Deactivate Pod**: you cannot activate another pod without deactivating the active pod first.
+11. Je bent terug op het DASH-pompscherm. Het toont nu de informatie van je actieve pod, zoals de huidige basaalstand, het reservoirniveau, de toegediende insuline, pod-fouten en waarschuwingen. **Activeer Pod** is vervangen door **Deactiveer Pod**: je kunt geen andere pod activeren zonder eerst de actieve pod te deactiveren.
 
-    ***NOTE:** For more details on the information shown, see [The DASH pump screen](#omnipod-dash-tab).*
+    ***LET OP:** Zie [Het DASH-pompscherm](#omnipod-dash-tab) voor meer details over de getoonde informatie.*
 
     ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-    ***NOTE:** It is good practice to export your settings AFTER activating the pod. Export your settings after each pod change and once a month. Copy the exported settings file to a cloud storage location (for example Google Drive) or somewhere off your phone in case you lose your phone (see [**Export settings**](../Maintenance/ExportImportSettings.md)).*
+    ***LET OP:** Het is verstandig om je instellingen te exporteren NA het activeren van de pod. Exporteer je instellingen na elke podwissel en één keer per maand. Kopieer het geëxporteerde instellingenbestand naar een cloudopslag (bijvoorbeeld Google Drive) of ergens anders buiten je telefoon, voor het geval je je telefoon kwijtraakt (zie [**Exporteer instellingen**](../Maintenance/ExportImportSettings.md)).*
 
-If an earlier activation stopped after the pod was primed, pressing **Activate Pod** continues from the **Attach Pod** step.
+Als een eerdere activering stopte nadat de pod gevuld was, gaat **Activeer Pod** verder vanaf de stap **Plaats de Pod**.
 
 (omnipod-dash-deactivate-pod)=
 
 ## Deactiveer Pod
 
-Under normal circumstances, a pod lasts three days (72 hours), plus a grace period of 8 hours after the pod expiry warning: 80 hours in total.
+Normaal gaat een pod drie dagen (72 uur) mee, plus 8 uur extra tijd na de waarschuwing dat de pod verloopt: 80 uur in totaal.
 
-To deactivate a pod (either because it expired or because it failed):
+Om een pod te deactiveren (omdat hij verlopen of defect is):
 
-1. Open the DASH pump screen (**Manage** > **Pump**) and press **Deactivate Pod**.
+1. Open het DASH-pompscherm (**Beheren** > **Pomp**) en druk op **Deactiveer Pod**.
 
-   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![De knop Deactiveer Pod op het DASH-pompscherm](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-2. On the **Deactivate Pod** step, press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
+2. Druk in de stap **Deactiveer Pod** op **Volgende**. Een venster vraagt: *Een gedeactiveerde Pod kan niet opnieuw worden gebruikt. Nu deze Pod deactiveren?* Druk op **OK** om de pod te deactiveren, of op **Annuleren** om hem te houden. Deactiveren stopt alle insulinetoediening en kan niet ongedaan worden gemaakt.
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
-3. The **Deactivating Pod** step is shown while **AAPS** deactivates the pod. The pod beeps to confirm that deactivation was successful.
+3. De stap **Pod wordt gedeactiveerd** wordt getoond terwijl **AAPS** de pod deactiveert. De pod piept om te bevestigen dat het deactiveren gelukt is.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the wizard shows its progress as a row of dots at the top instead of a progress bar.
+   De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 toont de wizard de voortgang als een rij puntjes bovenaan, in plaats van een voortgangsbalk.
    ```
 
-   When deactivation has finished successfully, the **Next** button appears. Press **Next**.
+   Als het deactiveren gelukt is, verschijnt de knop **Volgende**. Druk op **Volgende**.
 
    ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-   If deactivation fails, an error message and a **Discard Pod** button are shown. See [Discarding a pod](#omnipod-dash-discard-pod) below before you use it. You can also press **Cancel** and try **Deactivate Pod** again later.
+   Als het deactiveren mislukt, worden een foutmelding en een knop **Pod verwijderen** getoond. Lees [Een pod verwijderen](#omnipod-dash-discard-pod) hieronder voordat je die knop gebruikt. Je kunt ook op **Annuleren** drukken en later opnieuw **Deactiveer Pod** proberen.
 
-4. The **Pod Deactivated** step is shown. Remove the pod from your body and press **Finish**.
+4. De stap **Pod gedeactiveerd** wordt getoond. Haal de pod van je lichaam en druk op **Voltooien**.
 
    ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. You are back on the DASH pump screen. Check that the **Pod Status** field shows **No Active Pod** and that the **Activate Pod** button is shown again.
+5. Je bent terug op het DASH-pompscherm. Controleer of het veld **Pod Status** **Geen actieve Pod** toont en of de knop **Activeer Pod** weer zichtbaar is.
 
-   ![The DASH pump screen showing No Active Pod](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
+   ![Het DASH-pompscherm met Geen actieve Pod](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 (omnipod-dash-discard-pod)=
 
-### Discarding a pod
+### Een pod verwijderen
 
-Only discard a pod when all communication with it keeps failing. If **AAPS** can still communicate with the pod, use **Deactivate Pod** instead.
+Verwijder een pod alleen als alle communicatie ermee blijft mislukken. Als **AAPS** nog wel met de pod kan communiceren, gebruik dan **Deactiveer Pod**.
 
-- **AAPS** asks you to confirm before it discards the pod.
-- After that, **AAPS** can no longer communicate with that pod.
-- **Insulin delivery has NOT been suspended**, because the pod was not deactivated properly. **Remove the pod from your body!**
-- The **Pod Discarded** step confirms that the pod state has been discarded. Press **Finish**. You can now activate a new pod.
+- **AAPS** vraagt je om te bevestigen voordat het de pod verwijdert.
+- Daarna kan **AAPS** niet meer met die pod communiceren.
+- **De insulinetoediening is NIET gestopt**, omdat de pod niet goed is gedeactiveerd. **Haal de pod van je lichaam!**
+- De stap **Pod is verwijderd** bevestigt dat de status van de pod is verwijderd. Druk op **Voltooien**. Je kunt nu een nieuwe pod activeren.
 
 (omnipod-dash-resuming-insulin-delivery)=
 
 ## Insulinetoediening hervatten
 
-**NOTE**: During **Profile Switches**, like when using the PDM, **AAPS** must suspend delivery on the pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, delivery can stay suspended. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
+**LET OP**: Bij een **Profiel wissel** moet **AAPS**, net als de PDM, de toediening op de pod onderbreken voordat het nieuwe basale **Profiel** wordt ingesteld. Als de communicatie mislukt tussen de opdrachten om te onderbreken en te hervatten, kan de toediening onderbroken blijven. Lees [**Toediening onderbroken**](#omnipod-dash-delivery-suspended) in het deel probleemoplossing voor meer details.
 
-When insulin delivery is suspended, you need to tell the pod to resume insulin delivery. When the command has been processed successfully, the pod delivers insulin again using the basal rate for the current time from your active basal **Profile**. The pod again accepts commands for bolus, **TBR** and **SMB**.
+Als de insulinetoediening onderbroken is, moet je de pod vertellen dat hij de insulinetoediening moet hervatten. Als de opdracht goed is verwerkt, dient de pod weer insuline toe met de basaalstand voor de huidige tijd uit je actieve basale **Profiel**. De pod accepteert dan weer opdrachten voor bolus, **TBR** en **SMB**.
 
-1. Open the DASH pump screen and check that the **Pod Status** field shows **Suspended**. Press **Resume Delivery** to tell the pod to resume normal insulin delivery.
+1. Open het DASH-pompscherm en controleer of het veld **Pod Status** **Onderbroken** toont. Druk op **Toediening hervatten** om de pod te vertellen dat hij de normale insulinetoediening moet hervatten.
 
    ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
 
-2. When the command was successful, the **Pod Status** field shows **Running** and the **Resume Delivery** button disappears.
+2. Als de opdracht gelukt is, toont het veld **Pod Status** **Actief** en verdwijnt de knop **Toediening hervatten**.
 
    ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
@@ -364,119 +364,119 @@ When insulin delivery is suspended, you need to tell the pod to resume insulin d
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshots above are from an earlier **AAPS** version, which showed a confirmation dialog. In **AAPS** 4 you confirm the result on the DASH pump screen: the **Pod Status** field shows **Running** and the **Resume Delivery** button is gone.
+   De schermafbeeldingen hierboven komen uit een eerdere **AAPS**-versie, die een bevestigingsvenster toonde. In **AAPS** 4 zie je het resultaat op het DASH-pompscherm: het veld **Pod Status** toont **Actief** en de knop **Toediening hervatten** is weg.
    ```
 
-   If the command fails, **AAPS** shows a warning dialog starting with *Failed to resume delivery*. Press **Refresh** and try again.
+   Als de opdracht mislukt, toont **AAPS** een waarschuwing die begint met *Hervatten van insulinetoediening is mislukt*. Druk op **Vernieuwen** en probeer het opnieuw.
 
-   ![The Failed to resume delivery warning](../images/v4/Pumps/dash_resume_failed.png)
+   ![De waarschuwing Hervatten van insulinetoediening is mislukt](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
 ## Pod-alarmen stilzetten
 
-This section explains how to stop the pod beeps when the pod approaches the end of its life. When these beeps start depends on the **Alerts** settings (see [Dash Settings](#omnipod-dash-settings)):
+Dit deel legt uit hoe je de piepjes van de pod stopt als de pod het einde van zijn levensduur nadert. Wanneer deze piepjes beginnen, hangt af van de instellingen bij **Waarschuwingen** (zie [Dash-instellingen](#omnipod-dash-settings)):
 
-- **Reminder at hours before expiry (72 Hours):** how many hours before the 72-hour expiry the pod starts to beep.
-- **Alert at hours before shutdown (80 Hours):** how many hours before the 80-hour shutdown the pod beeps again.
+- **Herinnering uren voor vervaldatum (72 uur):** hoeveel uur voor het verlopen na 72 uur de pod begint te piepen.
+- **Waarschuwing op uren voor uitschakelen (80 uur):** hoeveel uur voor het uitschakelen na 80 uur de pod opnieuw piept.
 
-The maximum life of a pod is 80 hours (3 days 8 hours). However, the pod manufacturer recommends not going beyond 72 hours (3 days).
+De maximale levensduur van een pod is 80 uur (3 dagen en 8 uur). De fabrikant van de pod raadt echter aan om niet langer dan 72 uur (3 dagen) te gaan.
 
-***NOTE**: The **Silence Alerts** button is only shown on the DASH pump screen while the pod has an active alert, for example pod expiry or low reservoir. If the **Silence Alerts** button is not shown but you hear the pod beeping, press **Refresh**.*
+***LET OP**: De knop **Alarmen Stil** wordt alleen op het DASH-pompscherm getoond als de pod een actieve waarschuwing heeft, bijvoorbeeld pod verloopt of laag reservoir. Als de knop **Alarmen Stil** niet zichtbaar is maar je de pod wel hoort piepen, druk dan op **Vernieuwen**.*
 
-1. When the reminder time is reached, the pod beeps to tell you that it will expire soon and that you need to change it. On the DASH pump screen, the **Pod Expires (1)** field shows the exact time the pod will expire (72 hours after activation). The text turns yellow 4 hours before this time. After it, **Pod Hard End** turns yellow and shows the time left until the pod stops delivering insulin. The **Active Pod Alerts (2)** field shows **Pod will expire soon**, and the **Silence Alerts (3)** button is shown.
+1. Als de tijd van de herinnering bereikt is, piept de pod om je te laten weten dat hij binnenkort verloopt en dat je hem moet vervangen. Op het DASH-pompscherm toont het veld **Pod verloopt (1)** de precieze tijd waarop de pod verloopt (72 uur na activering). De tekst wordt 4 uur voor dit moment geel. Daarna wordt **Harde einddatum Pod** geel en toont het de resterende tijd tot de pod stopt met insuline toedienen. Het veld **Actieve pod alarmen (2)** toont **Pod verloopt binnenkort**, en de knop **Alarmen Stil (3)** wordt getoond.
 
    ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Press **Silence Alerts**. **AAPS** sends the command to the pod to stop the expiry beeps.
+2. Druk op **Alarmen Stil**. **AAPS** stuurt de opdracht naar de pod om de piepjes voor het verlopen te stoppen.
 
    ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version, where this screen was the **DASH** tab. In **AAPS** 4 the **Silence Alerts** button is on the DASH pump screen (**Manage** > **Pump**).
+   De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, waarin dit scherm het tabblad **DASH** was. In **AAPS** 4 staat de knop **Alarmen Stil** op het DASH-pompscherm (**Beheren** > **Pomp**).
    ```
 
-3. When the alerts have been silenced, the alert is no longer shown in the **Active Pod Alerts** field, the **Silence Alerts** button disappears, and the pod stops its expiry beeps.
+3. Als de waarschuwingen zijn stilgezet, staat de waarschuwing niet meer in het veld **Actieve pod alarmen**, verdwijnt de knop **Alarmen Stil** en stopt de pod met piepen.
 
    ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version, which showed a confirmation dialog. In **AAPS** 4 you confirm the result on the DASH pump screen: the alert is gone from the **Active Pod Alerts** field.
+   De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, die een bevestigingsvenster toonde. In **AAPS** 4 zie je het resultaat op het DASH-pompscherm: de waarschuwing is weg uit het veld **Actieve pod alarmen**.
    ```
 
-   If the command fails, **AAPS** shows a warning dialog starting with *Failed to silence alerts*. Press **Refresh** and try again.
+   Als de opdracht mislukt, toont **AAPS** een waarschuwing die begint met *Meldingen negeren mislukt*. Druk op **Vernieuwen** en probeer het opnieuw.
 
-The low reservoir alert works the same way. When the insulin left in the pod drops to the **Number of units** set in the **Alerts** settings, the pod beeps. The **Reservoir** field shows the amount left, the **Active Pod Alerts** field shows **Low Reservoir**, and the **Silence Alerts** button is shown. Press **Silence Alerts** to stop the beeps, and plan your next pod change.
+De waarschuwing voor een laag reservoir werkt op dezelfde manier. Als de insuline in de pod daalt tot het **Aantal eenheden** dat bij **Waarschuwingen** is ingesteld, piept de pod. Het veld **Reservoir** toont de resterende hoeveelheid, het veld **Actieve pod alarmen** toont **Laag reservoir niveau**, en de knop **Alarmen Stil** wordt getoond. Druk op **Alarmen Stil** om de piepjes te stoppen, en plan je volgende podwissel.
 
-![The DASH pump screen with a Low Reservoir alert](../images/v4/Pumps/dash_low_reservoir_alert.png)
+![Het DASH-pompscherm met een waarschuwing Laag reservoir niveau](../images/v4/Pumps/dash_low_reservoir_alert.png)
 
 (omnipod-dash-view-pod-history)=
 
 ## Pod Historie bekijken
 
-This section explains how to look at the history of your active pod and filter it by type of action. The pod history shows the commands sent to your active pod and their results during its three-day (72 - 80 hours) life.
+Dit deel legt uit hoe je de historie van je actieve pod bekijkt en filtert op type actie. De pod-historie toont de opdrachten die naar je actieve pod zijn gestuurd en de resultaten daarvan, tijdens zijn levensduur van drie dagen (72–80 uur).
 
-It is useful to check the boluses, TBRs and basal commands that were sent to the pod. The other categories help with troubleshooting and show the order of events that led up to a failure.
+Het is handig om de bolussen, TBR's en basaalopdrachten te controleren die naar de pod zijn gestuurd. De andere categorieën helpen bij het oplossen van problemen en tonen de volgorde van gebeurtenissen die tot een storing leidden.
 
-**NOTE:** **Only the last command can be uncertain**. New commands *are not sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. To 'fix' an uncertain command, press **Refresh** on the DASH pump screen.
+**LET OP:** **Alleen de laatste opdracht kan onzeker zijn**. Nieuwe opdrachten *worden niet verstuurd* tot de **laatste 'onzekere' opdracht 'bevestigd' of 'afgewezen' is**. Om een onzekere opdracht te 'herstellen', druk je op **Vernieuwen** op het DASH-pompscherm.
 
-1. Open the DASH pump screen and press **Pod History**.
+1. Open het DASH-pompscherm en druk op **Pod Historie**.
 
    ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 is **Pod Historie** een knop direct op het DASH-pompscherm, in plaats van in het menu **Pod Management**.
    ```
 
-2. The **Pod History** screen opens with the **All** filter selected. It lists every command with its time and result, newest first, grouped by day. Use the filter buttons at the top (for example **Boluses** or **Basals**) to show only one type of command. Press the back arrow to return to the DASH pump screen.
+2. Het scherm **Pod Historie** opent met het filter **Alle** geselecteerd. Het toont elke opdracht met de tijd en het resultaat, nieuwste eerst, gegroepeerd per dag. Gebruik de filterknoppen bovenaan (bijvoorbeeld **Bolussen** of **Basaalstanden**) om maar één type opdracht te tonen. Druk op de terugpijl om terug te gaan naar het DASH-pompscherm.
 
    ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The second screenshot above is from an earlier **AAPS** version, where you picked the type of command from a **Type** list. In **AAPS** 4 you use the filter buttons shown in the first screenshot.
+   De tweede schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, waarin je het type opdracht koos uit een lijst **Type**. In **AAPS** 4 gebruik je de filterknoppen uit de eerste schermafbeelding.
    ```
 
-   For boluses, the amount is followed by the bolus type when it is not a normal bolus, for example *0.05 U (SMB)* or *0.05 U (Basal correction)*. A basal correction is a very small bolus (one pod pulse, 0.05 U) that the driver sends by itself; you did not request it.
+   Bij bolussen staat na de hoeveelheid het type bolus als het geen normale bolus is, bijvoorbeeld *0,05 E (SMB)* of *0,05 E (Basaal correctie)*. Een basaalcorrectie is een heel kleine bolus (één puls van de pod, 0,05 E) die de driver zelf stuurt; jij hebt er niet om gevraagd.
 
    ```{admonition} Why basal corrections happen
    :class: note
-   The pod delivers basal insulin in pulses of 0.05 U, timed by an internal clock. Each time the basal rate changes (for example when the loop sets a new **TBR**), the pod restarts this clock, and the pulse it was counting towards is lost. Because the loop changes the basal rate often, especially overnight, the pod can end up delivering less basal insulin than expected.
+   De pod dient basale insuline toe in pulsen van 0,05 E, getimed door een interne klok. Elke keer dat de basaalstand verandert (bijvoorbeeld als de loop een nieuwe **TBR** instelt), start de pod deze klok opnieuw, en de puls waar hij naartoe telde gaat verloren. Omdat de loop de basaalstand vaak verandert, vooral 's nachts, kan de pod uiteindelijk minder basale insuline toedienen dan verwacht.
 
-   **AAPS** compares the basal insulin the pod reports as delivered with what it should have delivered. When the shortfall reaches half a pulse or more, the driver delivers one extra pulse as a basal correction, so you still get the basal insulin your profile and the loop asked for. No correction is sent while the pod is suspended, or while a zero **TBR** is running.
+   **AAPS** vergelijkt de basale insuline die de pod als toegediend meldt met wat hij had moeten toedienen. Als het tekort een halve puls of meer is, dient de driver één extra puls toe als basaalcorrectie. Zo krijg je toch de basale insuline waar je profiel en de loop om vroegen. Er wordt geen correctie gestuurd als de pod onderbroken is, of als er een **TBR** van nul loopt.
    ```
 
 (omnipod-dash-settings)=
 
 ## Dash-instellingen
 
-There are two ways to open the Dash driver settings:
+Er zijn twee manieren om de instellingen van de Dash-driver te openen:
 
-- Press the **Settings** (gear) icon in the top-right corner of the [DASH pump screen](#omnipod-dash-tab).
-- Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration** > **Pump**. On the **Omnipod Dash** card, press **Settings**.
+- Druk op het pictogram **Instellingen** (tandwiel) rechtsboven op het [DASH-pompscherm](#omnipod-dash-tab).
+- Open het **menu** (☰) linksboven in het hoofdscherm en selecteer **Configuratie** > **Pomp**. Druk op de kaart **Omnipod Dash** op **Instellingen**.
 
-The settings are grouped into four expandable sections: **Confirmation Beeps**, **Alerts**, **Notifications** and **Advanced Settings**. Tap a section to open it:
+De instellingen zijn verdeeld in vier delen die je kunt openklappen: **Bevestigings pieptonen**, **Waarschuwingen**, **Notificaties** en **Geavanceerde instellingen**. Tik op een deel om het te openen:
 
-![The Dash settings](../images/v4/Pumps/dash_settings.png)
+![De Dash-instellingen](../images/v4/Pumps/dash_settings.png)
 
-Most settings are on/off switches.
+De meeste instellingen zijn aan/uit-schakelaars.
 
-### Confirmation Beeps
+### Bevestigings pieptonen
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
-Confirmation beeps from the pod for bolus, basal, SMB and TBR delivery and changes.
+Bevestigingspiepjes van de pod bij toediening en wijzigingen van bolus, basaal, SMB en TBR.
 
-**Bolus beeps enabled:**    The pod beeps when a bolus is delivered. On by default.
+**Bolus pieptonen ingeschakeld:**    De pod piept als een bolus is toegediend. Standaard aan.
 
-**Basal beeps enabled:**    The pod beeps when a new basal rate is set, or when the active basal rate is canceled or changed. Off by default.
+**Basaal pieptonen ingeschakeld:**    De pod piept als een nieuwe basaalstand wordt ingesteld, of als de actieve basaalstand wordt geannuleerd of gewijzigd. Standaard uit.
 
-**SMB beeps enabled:**  The pod beeps when an SMB is delivered. On by default.
+**SMB pieptonen ingeschakeld:**  De pod piept als een SMB is toegediend. Standaard aan.
 
-**TBR beeps enabled:**  The pod beeps when a TBR is set or canceled. Off by default.
+**TBR pieptonen ingeschakeld:**  De pod piept als een TBR wordt ingesteld of geannuleerd. Standaard uit.
 
 ### Waarschuwingen
 
@@ -484,78 +484,78 @@ Confirmation beeps from the pod for bolus, basal, SMB and TBR delivery and chang
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 these settings are in the expandable **Alerts** section.
+De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 staan deze instellingen in het deel **Waarschuwingen**, dat je kunt openklappen.
 ```
 
-Pod alerts for pod expiry, shutdown and low reservoir. When you change these settings while a pod is active, **AAPS** sends the new alert settings to the pod.
+Pod-waarschuwingen voor het verlopen en uitschakelen van de pod en voor een laag reservoir. Als je deze instellingen wijzigt terwijl er een pod actief is, stuurt **AAPS** de nieuwe instellingen voor waarschuwingen naar de pod.
 
-***NOTE:** An **AAPS** notification is ALWAYS shown for any alert once **AAPS** has communicated with the pod after the alert was triggered. Dismissing the notification does NOT stop the pod alert. To stop the alert, open the DASH pump screen and press **Silence Alerts**.*
+***LET OP:** Er wordt ALTIJD een melding van **AAPS** getoond voor elke waarschuwing, zodra **AAPS** met de pod heeft gecommuniceerd nadat de waarschuwing is afgegaan. Het wegklikken van de melding stopt de pod-waarschuwing NIET. Om de waarschuwing te stoppen, open je het DASH-pompscherm en druk je op **Alarmen Stil**.*
 
-**Expiration reminder enabled:**    When this is on, the pod beeps when the reminder time is reached. On by default.
+**Herinnering vervaldatum ingeschakeld:**    Als dit aan staat, piept de pod als de tijd van de herinnering bereikt is. Standaard aan.
 
-**Reminder at hours before expiry (72 Hours):** How many hours before the 72-hour pod expiry the reminder starts (1 to 24 hours; default 4).
+**Herinnering uren voor vervaldatum (72 uur):** Hoeveel uur voor het verlopen van de pod na 72 uur de herinnering begint (1 tot 24 uur; standaard 4).
 
-**Expiration alert enabled:**   When this is on, the pod beeps when the alert time is reached, and again 1 hour before shutdown. On by default.
+**Alert vervaldatum ingeschakeld:**   Als dit aan staat, piept de pod als de tijd van de waarschuwing bereikt is, en opnieuw 1 uur voor het uitschakelen. Standaard aan.
 
-**Alert at hours before shutdown (80 Hours):**  How many hours before the 80-hour pod shutdown the alert starts (1 to 8 hours; default 8).
+**Waarschuwing op uren voor uitschakelen (80 uur):**  Hoeveel uur voor het uitschakelen van de pod na 80 uur de waarschuwing begint (1 tot 8 uur; standaard 8).
 
-**Low reservoir alert enabled:**    The pod alerts you when the insulin left in the reservoir drops to the value in **Number of units**. On by default.
+**Pieptonen voor "Reservoir bijna leeg" ingeschakeld:**    De pod waarschuwt je als de insuline in het reservoir daalt tot de waarde bij **Aantal eenheden**. Standaard aan.
 
-**Number of units:**    The number of units at which the low reservoir alert is triggered (5 to 50 units; default 20).
+**Aantal eenheden:**    Het aantal eenheden waarbij de waarschuwing voor een laag reservoir afgaat (5 tot 50 eenheden; standaard 20).
 
 ### Notificaties
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
-Choose whether **AAPS** plays a sound with its notifications when it is uncertain whether a TBR, SMB or bolus was delivered, and when delivery is suspended.
+Kies of **AAPS** een geluid afspeelt bij zijn meldingen als het niet zeker is of een TBR, SMB of bolus is toegediend, en als de toediening onderbroken is.
 
-***NOTE:** These are phone notifications only; the pod itself does not beep.*
+***LET OP:** Dit zijn alleen meldingen op de telefoon; de pod zelf piept niet.*
 
-**Sound for uncertain TBR notifications enabled:**  Plays a sound with the notification when **AAPS** is uncertain whether a TBR was set.
+**Geluid voor onzekere TBR notificaties ingeschakeld:**  Speelt een geluid af bij de melding als **AAPS** niet zeker is of een TBR is ingesteld.
 
-**Sound for uncertain SMB notifications enabled:**  Plays a sound with the notification when **AAPS** is uncertain whether an SMB was delivered.
+**Geluid voor onzekere SMB notificaties ingeschakeld:**  Speelt een geluid af bij de melding als **AAPS** niet zeker is of een SMB is toegediend.
 
-**Sound for uncertain bolus notifications enabled:**    Plays a sound with the notification when **AAPS** is uncertain whether a bolus was delivered.
+**Geluid voor onzekere bolus notificaties ingeschakeld:**    Speelt een geluid af bij de melding als **AAPS** niet zeker is of een bolus is toegediend.
 
-**Sound when delivery suspended notification enabled:**     Plays a sound with the notification when insulin delivery is suspended.
+**Geluid voor levering onderbroken notificatie ingeschakeld:**     Speelt een geluid af bij de melding als de insulinetoediening onderbroken is.
 
 (omnipod-dash-advanced-settings)=
 
-### Advanced Settings
+### Geavanceerde instellingen
 
-![The Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+![Het deel Geavanceerde instellingen](../images/v4/Pumps/dash_settings_advanced.png)
 
-**Bluetooth bonding:**  Bonds the pod with the phone over Bluetooth. Try it only if the pod cannot keep a stable connection, for example on Android 15 (see [Omnipod DASH known AAPS constraints/issues](#omnipod-dash-constraints)). When it is on, the phone shows pairing requests that you must accept. Leave it off if the pod connects fine. It has no effect below Android 15. Off by default.
+**Bluetooth bonding:**  Koppelt (bonding) de pod via Bluetooth vast aan de telefoon. Probeer dit alleen als de pod geen stabiele verbinding houdt, bijvoorbeeld op Android 15 (zie [Bekende beperkingen/problemen van Omnipod DASH in AAPS](#omnipod-dash-constraints)). Als dit aan staat, toont de telefoon koppelverzoeken die je moet accepteren. Laat het uit als de pod goed verbinding maakt. Onder Android 15 heeft het geen effect. Standaard uit.
 
-## Insulin and cannula age
+## Leeftijd van insuline en canule
 
-The [status row](#screens-sensor-level-battery) on the main screen shows the age of your insulin and cannula. With Omnipod, these work a little differently than with tube-based pumps.
+De [statusregel](#screens-sensor-level-battery) op het hoofdscherm toont de leeftijd van je insuline en canule. Bij Omnipod werkt dit iets anders dan bij pompen met een slang.
 
-**AAPS** records a cannula change and an insulin change automatically each time you activate a pod. This resets the **Insulin** and **Cannula** ages to zero after every pod change. You do not need to record them yourself with **Prime/Fill**. This is because the pod inserts the cannula directly into the skin where it is attached: Omnipod does not use a tube.
+**AAPS** registreert automatisch een canulewissel en een insulinewissel elke keer dat je een pod activeert. Daardoor worden de leeftijden van **Insuline** en **Canule** na elke podwissel op nul gezet. Je hoeft ze niet zelf te registreren met **Ontlucht/vul**. Dit komt doordat de pod de canule direct in de huid brengt op de plek waar hij geplakt is: Omnipod gebruikt geen slang.
 
-**Pump battery** age is not reported: the battery and the insulin reservoir are built into each pod, and the battery always lasts longer than the pod itself (maximum 80 hours).
+De leeftijd van de **Pomp batterij** wordt niet gemeld: de batterij en het insulinereservoir zitten in elke pod, en de batterij gaat altijd langer mee dan de pod zelf (maximaal 80 uur).
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, where these ages were shown in the **Careportal** section of the **Actions** tab. In **AAPS** 4 they are shown in the status row on the main screen.
+De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, waarin deze leeftijden werden getoond in het deel **Careportal** van het tabblad **Acties**. In **AAPS** 4 worden ze getoond in de statusregel op het hoofdscherm.
 ```
 
 ### Niveau
 
 **Insulineniveau**
 
-The insulin level shown is the amount reported by the pod. However, the pod only reports the actual reservoir level when it is below 50 units. Until then, *Over 50 U left* is shown. The amount reported is not exact: when the pod reports 'empty', in most cases the reservoir still has a few units of insulin left.
+Het getoonde insulineniveau is de hoeveelheid die de pod meldt. De pod meldt het werkelijke niveau van het reservoir echter pas als het onder 50 eenheden is. Tot dan wordt *Meer dan 50 E over* getoond. De gemelde hoeveelheid is niet precies: als de pod 'leeg' meldt, zit er meestal nog een paar eenheden insuline in het reservoir.
 
-The DASH pump screen shows the level as follows:
+Het DASH-pompscherm toont het niveau zo:
 
-  * **Over 50 U left** - The pod reports more than 50 units in the reservoir.
-  * **Below 50 units** - The exact amount of insulin left in the reservoir, as reported by the pod.
+  * **Meer dan 50 E over** - De pod meldt meer dan 50 eenheden in het reservoir.
+  * **Onder 50 eenheden** - De precieze hoeveelheid insuline in het reservoir, zoals de pod die meldt.
 
 Extra opmerking:
-  * **SMS** - Returns the value, or 50+U when over 50 units, in SMS responses.
-  * **Nightscout** - Uploads a value of 50 when over 50 units to Nightscout (version 14.07 and older). Newer versions report a value of 50+ when over 50 units.
+  * **SMS** - Geeft de waarde, of 50+U bij meer dan 50 eenheden, in SMS-antwoorden.
+  * **Nightscout** - Uploadt een waarde van 50 naar Nightscout bij meer dan 50 eenheden (versie 14.07 en ouder). Nieuwere versies melden een waarde van 50+ bij meer dan 50 eenheden.
 
 (omnipod-dash-troubleshooting)=
 
@@ -583,9 +583,9 @@ Voor bekende problemen met Bluetooth-verbindingen, het wegvallen van pomp/pods, 
      - Je kunt een melding krijgen dat een van de opdrachten niet bevestigd is: dit hangt af van het moment waarop de fout gebeurde.
      - **AAPS** probeert elke 15 minuten het nieuwe basale profiel in te stellen.
      - **AAPS** toont elke 15 minuten een melding dat de toediening onderbroken is, zolang de toediening nog onderbroken is (hervatten van de toediening is mislukt).
-     - The [**Resume Delivery**](#omnipod-dash-resuming-insulin-delivery) button is shown on the DASH pump screen if you want to resume delivery manually.
+     - De knop [**Toediening hervatten**](#omnipod-dash-resuming-insulin-delivery) wordt op het DASH-pompscherm getoond als je de toediening zelf wilt hervatten.
      - Als het **AAPS** zelf niet lukt om de toediening te hervatten (dit gebeurt als de pod niet bereikbaar is, het geluid uit staat enz.), gaat de pod 3 minuten lang elke minuut 4 keer piepen. Dit herhaalt zich elke 15 minuten als de toediening langer dan 20 minuten onderbroken blijft.
-  - For unconfirmed commands, press **Refresh** on the DASH pump screen to confirm or deny them.
+  - Voor niet-bevestigde opdrachten druk je op **Vernieuwen** op het DASH-pompscherm om ze te bevestigen of af te wijzen.
 
 *****LET OP:** Als je de pod hoort piepen, ga er dan niet van uit dat de toediening doorgaat zonder op de telefoon te kijken. De toediening kan onderbroken blijven, ***dus je moet het controleren!******
 
@@ -598,15 +598,15 @@ Voor bekende problemen met Bluetooth-verbindingen, het wegvallen van pomp/pods, 
 - Het is beter om geen ondersteunings- of vervangingsverzoeken bij Insulet in te dienen, omdat AAPS geen goedgekeurde manier is om de Pods te gebruiken.
 - Een lijst met foutcodes is [**hier te vinden**](https://github.com/openaps/openomni/wiki/Fault-event-codes), om de oorzaak te helpen bepalen.
 
-When a pod fails, it stops delivering insulin and beeps continuously. **AAPS** shows a notification on the main screen with the fault code and name, and the *Ref:* code, for example *Pod Fault: 020 ALARM_OCCLUDED*. Press **Dismiss** to close the notification. This does not stop the pod beeping.
+Als een pod defect raakt, stopt hij met insuline toedienen en piept hij onafgebroken. **AAPS** toont een melding op het hoofdscherm met de foutcode en naam, en de *Ref:*-code, bijvoorbeeld *Pod foutmelding: 020 ALARM_OCCLUDED*. Druk op **Negeren** om de melding te sluiten. Dit stopt het piepen van de pod niet.
 
-![A pod fault notification](../images/v4/Pumps/dash_pod_fault_notification.png)
+![Een melding van een pod-fout](../images/v4/Pumps/dash_pod_fault_notification.png)
 
-On the DASH pump screen, the **Pod Status** field shows **ALARM**, the **Errors** field shows the pod fault, and the **PDM Notification** field explains it, for example *Occlusion Detected. Insulin delivery stopped. Change Pod now. Check your BG*.
+Op het DASH-pompscherm toont het veld **Pod Status** **ALARM**, het veld **Foutmeldingen** toont de pod-fout, en het veld **PDM-melding** legt het uit, bijvoorbeeld *Verstopping gedetecteerd. Insulinetoediening gestopt. Vervang de Pod nu. Controleer uw bloedglucose*.
 
-![The DASH pump screen after a pod fault](../images/v4/Pumps/dash_pump_screen_pod_fault.png)
+![Het DASH-pompscherm na een pod-fout](../images/v4/Pumps/dash_pump_screen_pod_fault.png)
 
-A failed pod cannot be used again. Check your blood glucose, then [deactivate the pod](#omnipod-dash-deactivate-pod) and activate a new one.
+Een defecte pod kan niet opnieuw worden gebruikt. Controleer je bloedglucose, en [deactiveer daarna de pod](#omnipod-dash-deactivate-pod) en activeer een nieuwe.
 
 ---
 ### Pod-storingen met fout 49 voorkomen
@@ -617,49 +617,49 @@ Deze fout heeft te maken met een verkeerde pod-status voor een opdracht, of met 
 
 ### Waarschuwingen ‘Pomp niet beschikbaar’
 
-Als er gedurende een ingestelde tijd geen verbinding met de pod kan worden gemaakt, verschijnt een waarschuwing “Pomp niet beschikbaar”. Pump unreachable alerts can be configured by pressing the **Settings** (gear) icon on the top right of the main screen, then selecting **Local Alerts** ➜ **Pump unreachable threshold**. De aanbevolen waarde is een waarschuwing na **120** minuten.
+Als er gedurende een ingestelde tijd geen verbinding met de pod kan worden gemaakt, verschijnt een waarschuwing “Pomp niet beschikbaar”. Waarschuwingen voor een onbereikbare pomp stel je in door op het pictogram **Instellingen** (tandwiel) rechtsboven in het hoofdscherm te drukken en dan **Lokale alarmen** ➜ **Maximale tijd pomp onbereikbaar** te kiezen. De aanbevolen waarde is een waarschuwing na **120** minuten.
 
 ---
 (omnipod-dash-export-import)=
-### Export and import settings
+### Instellingen exporteren en importeren
 
-Exporting **AAPS** settings lets you restore all your settings and Objectives, for example after reinstalling **AAPS** or on a new phone. **Export your settings right after each Pod activation** and copy the file to a safe place off your phone (for example Google Drive), so the active Pod can be restored too. See [Creating and restoring back-ups](#ExportImportSettings-Settings-Export).
+Door de instellingen van **AAPS** te exporteren, kun je al je instellingen en Doelen terugzetten, bijvoorbeeld na een herinstallatie van **AAPS** of op een nieuwe telefoon. **Exporteer je instellingen direct na elke Pod-activering** en kopieer het bestand naar een veilige plek buiten je telefoon (bijvoorbeeld Google Drive), zodat ook de actieve Pod kan worden teruggezet. Zie [Back-ups maken en terugzetten](#ExportImportSettings-Settings-Export).
 
 ```{admonition} Importing settings can end your active Pod
 :class: warning
-On the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session is kept and only the other settings are imported. Tick it only on a new phone, with a file exported during the Pod you are wearing now. See [Tubeless pumps](#ExportImportSettings-tubeless-pumps).
+Laat op de telefoon die de Pod al gebruikt **Vervang ook de pompinstellingen** uitgevinkt: de Pod-sessie blijft dan behouden en alleen de andere instellingen worden geïmporteerd. Vink het alleen aan op een nieuwe telefoon, met een bestand dat is geëxporteerd tijdens de Pod die je nu draagt. Zie [Slangloze pompen](#ExportImportSettings-tubeless-pumps).
 ```
 
-If the imported settings contain a Pod that is no longer active, see the next section.
+Als de geïmporteerde instellingen een Pod bevatten die niet meer actief is, zie dan het volgende deel.
 
 ---
-### Importing settings that contain Pod state from an inactive Pod
+### Instellingen importeren met de status van een Pod die niet meer actief is
 
-Als je instellingen importeert met gegevens van een Pod die niet meer actief is, probeert AAPS daarmee verbinding te maken. Dat mislukt natuurlijk. You cannot activate a new Pod in this situation.
+Als je instellingen importeert met gegevens van een Pod die niet meer actief is, probeert AAPS daarmee verbinding te maken. Dat mislukt natuurlijk. In deze situatie kun je geen nieuwe Pod activeren.
 
 Om de oude pod-sessie te verwijderen:
-1. On the DASH pump screen, press **Deactivate Pod**. The deactivation will most likely fail.
-2. When it fails, press **Discard Pod** and confirm (see [Discarding a pod](#omnipod-dash-discard-pod)).
-3. Once the old pod is removed, you can activate a new pod.
+1. Druk op het DASH-pompscherm op **Deactiveer Pod**. Het deactiveren mislukt waarschijnlijk.
+2. Als het mislukt, druk dan op **Pod verwijderen** en bevestig (zie [Een pod verwijderen](#omnipod-dash-discard-pod)).
+3. Als de oude pod verwijderd is, kun je een nieuwe pod activeren.
 
 ### Generic error: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
 
-If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration.
+Als je deze fout krijgt bij het initialiseren van een nieuwe pod, mislukt **AAPS** omdat het nog instellingen van een oude pod in de configuratie heeft.
 
 ![omnipod_address_in_use](../images/DASH_images/Errors/omnipod_address_in_use.png)
 
-This can happen if you restore from a backup, or a pod deactivation fails.
+Dit kan gebeuren als je een back-up terugzet, of als het deactiveren van een pod mislukt.
 
-To resolve it, press **Cancel** to leave the activation. On the DASH pump screen, press **Discard Pod** if it is shown. Otherwise press **Deactivate Pod**, and when the deactivation fails, press **Discard Pod** (see [Discarding a pod](#omnipod-dash-discard-pod)).
+Om het op te lossen, druk je op **Annuleren** om het activeren te verlaten. Druk op het DASH-pompscherm op **Pod verwijderen** als die knop zichtbaar is. Druk anders op **Deactiveer Pod**, en als het deactiveren mislukt, druk dan op **Pod verwijderen** (zie [Een pod verwijderen](#omnipod-dash-discard-pod)).
 
-You should now be able to Activate a new pod.
+Je kunt nu een nieuwe pod activeren.
 
 ---
-### Reinstalling AAPS
+### AAPS opnieuw installeren
 
 Als je **AAPS** verwijdert, verlies je al je instellingen, doelen en de huidige Pod-sessie. **Zorg dat je een recent geëxporteerd instellingenbestand hebt om ze terug te zetten!**
 
-When on an active Pod, use an export made during the current Pod session (see [Export and import settings](#omnipod-dash-export-import)).
+Gebruik bij een actieve Pod een export die gemaakt is tijdens de huidige Pod-sessie (zie [Instellingen exporteren en importeren](#omnipod-dash-export-import)).
 
 1. Exporteer je instellingen en bewaar een kopie op een veilige plek (bijv. Google Drive).
 2. Verwijder **AAPS** en herstart je telefoon.
@@ -670,7 +670,7 @@ When on an active Pod, use an export made during the current Pod session (see [E
 7. Als je klaar bent: exporteer de huidige instellingen.
 
 ---
-### Updating AAPS to a newer version
+### AAPS bijwerken naar een nieuwere versie
 
 Meestal is verwijderen niet nodig. Je kunt een installatie “over de bestaande heen” doen door de installatie van de nieuwe versie te starten. Dit kan ook tijdens een actieve Pod-sessie.
 
@@ -681,19 +681,19 @@ Meestal is verwijderen niet nodig. Je kunt een installatie “over de bestaande 
 5. Als je klaar bent: exporteer de huidige instellingen.
 
 ---
-### Omnipod driver alerts
+### Waarschuwingen van de Omnipod-driver
 
-The Omnipod Dash driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.
+De Omnipod Dash-driver toont verschillende eigen waarschuwingen op het **hoofdscherm**. De meeste zijn alleen ter informatie en kun je wegklikken. Bij sommige moet de gebruiker iets doen om de oorzaak van de waarschuwing op te lossen.
 
 Hieronder staat een overzicht van de belangrijkste waarschuwingen die je kunt tegenkomen:
 
-- *Pod Fault: XXX NAME*, followed by *Ref: ...*: the pod has failed and stopped delivering insulin. Change the pod. See [Pod Failures](#omnipod-dash-pod-failures).
-- *No Active Pod*: no pod session was found. This notification keeps coming back until you activate a new pod. Once a pod is activated, it disappears automatically.
-- *Insulin delivery suspended*: the pod has suspended insulin delivery. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
-- *Setting basal profile might have failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen (the message still says "Omnipod tab"), and press **Resume Delivery** if it is shown.
-- *Unable to verify whether SMB (X U) succeeded. Refresh pod status to confirm or deny this command.* **AAPS** could not confirm that the **SMB** was delivered. Press **Refresh** on the DASH pump screen and check the **Last bolus** field.
-- *Bolus delivery status uncertain. Refresh pod status to confirm or deny.* The same for a normal bolus: press **Refresh** on the DASH pump screen.
-- *Timezone on pod is different from the timezone on phone. Basal rate is incorrect. Switch profile to fix* See the DST and timezone note in [Omnipod DASH known AAPS constraints/issues](#omnipod-dash-constraints).
+- *Pod foutmelding: XXX NAAM*, gevolgd door *Ref: ...*: de pod is defect en is gestopt met insuline toedienen. Vervang de pod. Zie [Pod-storingen](#omnipod-dash-pod-failures).
+- *Geen actieve Pod*: er is geen pod-sessie gevonden. Deze melding blijft terugkomen tot je een nieuwe pod activeert. Als er een pod is geactiveerd, verdwijnt de melding vanzelf.
+- *Insuline levering is opgeschort*: de pod heeft de insulinetoediening onderbroken. Zie [Insulinetoediening hervatten](#omnipod-dash-resuming-insulin-delivery).
+- *Instellen van basaal profiel is mogelijk mislukt. De insulinetoediening kan onderbroken zijn! Vernieuw de Pod status handmatig in het Omnipod tabblad en hervat de toediening indien nodig.* Het instellen van het basale **Profiel** op de pod is misschien mislukt. Druk op **Vernieuwen** op het DASH-pompscherm (de melding noemt nog het "Omnipod tabblad") en druk op **Toediening hervatten** als die knop zichtbaar is.
+- *Kan niet verifiëren of SMB (X E) is geslaagd. Vernieuw de pod status om deze opdracht te bevestigen of te weigeren.* **AAPS** kon niet bevestigen dat de **SMB** is toegediend. Druk op **Vernieuwen** op het DASH-pompscherm en controleer het veld **Laatste bolus**.
+- *Bolus levering status onzeker. Vernieuw de Pod status om te bevestigen of te weigeren.* Hetzelfde geldt voor een normale bolus: druk op **Vernieuwen** op het DASH-pompscherm.
+- *Tijdzone op pod verschilt van de tijdzone op de telefoon. Basaal stand is onjuist. Wissel profiel om het op te lossen* Zie de opmerking over zomertijd en tijdzones in [Bekende beperkingen/problemen van Omnipod DASH in AAPS](#omnipod-dash-constraints).
 
 (omnipod-dash-where-to-get-help-for-dash)=
 
@@ -715,6 +715,6 @@ Als je om hulp vraagt, zorg dan dat je de volgende informatie bij de hand hebt. 
    - Werkte het eerder wel?
    - Wanneer werkte het wel of niet?
    - Heb je iets veranderd in de configuratie of in de profielinstellingen?
-   - Did you pair a new Bluetooth device?
+   - Heb je een nieuw Bluetooth-apparaat gekoppeld?
    - Heb je een nieuwe app bijgewerkt of geïnstalleerd?
    - Hoe lang werkte het voordat het stopte?
