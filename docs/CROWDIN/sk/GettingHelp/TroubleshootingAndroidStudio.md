@@ -57,9 +57,9 @@ Naklonujte zdrojový kód znova podľa návodu vo wiki a nepovoľte aktualizáci
 
   * [Kontrola inštalácie Gitu](#BuildingAaps-steps-for-installing-git)
 
-  * ak používate Windows a Git ste práve nainštalovali, mali by ste po inštalácii reštartovať počítač, aby bol Git dostupný globálne
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * Ak je Git nainštalovaný, reštartovali ste počítač (ak používate Windows) a Git sa stále nedá nájsť:
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * Vyhľadajte vo svojom počítači súbor „git.exe“.
 
@@ -212,7 +212,7 @@ Ak dostanete chybovú správu vyššie, musíte si stiahnuť správnu verziu JVM
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-Keď generujete podpísané APK, môžete dostať oznámenie, že generovanie bolo úspešné, ale že sa vygenerovalo „0 build variants“ (0 variantov zostavenia):
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![APK vygenerované s 0 variantmi zostavenia](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ Vaše APK sa úspešne zostavilo a môžete ho preniesť do telefónu!
 
 ## APK sa nenainštalovalo
 
-![aplikácia v telefóne nie je nainštalovaná](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * Uistite sa, že ste do telefónu preniesli súbor „app-full-release.apk“.
 * Táto chyba zvyčajne znamená, že nové APK je podpísané iným úložiskom kľúčov ako váš nainštalovaný **AAPS**. Ak ešte máte svoje predchádzajúce úložisko kľúčov, vyberte ho a zostavte APK znova. Inak pozrite [Preinštalovanie AAPS s novým úložiskom kľúčov](#reinstall-aaps).
