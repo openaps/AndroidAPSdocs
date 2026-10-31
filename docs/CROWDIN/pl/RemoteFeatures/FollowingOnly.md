@@ -86,7 +86,7 @@ Wady (według użytkowników)
 
 * Wymaga Androida 5.0 lub nowszego.
 
-* Ma ciemny interfejs, duże wartości i przyciski, jest przeznaczona do używania w nocy.
+* It has a dark UI, large readings and buttons, designed for usage at night.
 
 ### xDrip (Android)
 
@@ -200,7 +200,7 @@ SugarPixel to urządzenie do dodatkowego wyświetlania wartości glukozy i alarm
 ![Obserwowanie z Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * Zegar obsługuje jednostki mmol/l i mg/dl oraz ma alarmy dźwiękowe.
-* Dostępnych jest kilka widoków ekranu. Przegląd znajdziesz na [GitHub nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
+* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
 * Konfiguracja urządzenia wymaga tylko kilku prostych kroków. Po konfiguracji potrzebuje do działania tylko zasilania i Wi-Fi.
 * Urządzenie Ulanzi TC001 jest dużo tańsze niż SugarPixel.
 * Oprogramowanie i instrukcję instalacji znajdziesz na [GitHub nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
