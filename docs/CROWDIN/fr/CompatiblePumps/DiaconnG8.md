@@ -5,7 +5,7 @@
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Fonctionnalités de la pompe avec AAPS
 
 * Communique avec **AAPS** par le Bluetooth natif de votre téléphone, sans appareil de communication supplémentaire.
 * Les changements d'heure d'été et de fuseau horaire doivent être faits à la main.
@@ -34,7 +34,7 @@ Une fois le plugin sélectionné, la carte **Diaconn G8** affiche deux boutons, 
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. Dans **AAPS** 4, l'appairage démarre avec le bouton **Appairer** de l'écran de la pompe ; il n'y a pas de paramètre **Pompe sélectionnée**.
+La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, l'appairage démarre avec le bouton **Appairer** de l'écran de la pompe ; il n'y a pas de paramètre **Pompe sélectionnée**.
 ```
 
 - Sur l'écran de la pompe, appuyez sur **Appairer**. L'écran **Appairage pompe Diaconn** s'ouvre et **AAPS** recherche les pompes à proximité.
@@ -65,7 +65,7 @@ The screenshot above is from an earlier **AAPS** version. Dans **AAPS** 4, l'app
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. Dans **AAPS** 4, l'état de la pompe s'affiche sur l'écran de la pompe (**Gestion** > **Pompe**) et se synchronise avec le bouton **Actualiser**.
+La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, l'état de la pompe s'affiche sur l'écran de la pompe (**Gestion** > **Pompe**) et se synchronise avec le bouton **Actualiser**.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
@@ -122,7 +122,7 @@ The screenshot above is from an earlier **AAPS** version. Dans **AAPS** 4, l'ét
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. Dans **AAPS** 4, un changement de pile s'enregistre avec **Gestion** > **Changement pile pompe** ; il n'y a pas d'onglet **Actions**.
+La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, un changement de pile s'enregistre avec **Gestion** > **Changement pile pompe** ; il n'y a pas d'onglet **Actions**.
 ```
 
 ### Fonction Bolus Étendu
@@ -130,7 +130,7 @@ The screenshot above is from an earlier **AAPS** version. Dans **AAPS** 4, un ch
 - Si vous utilisez un bolus étendu, cela désactivera la boucle fermée.
 - Voir [cette page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) pour savoir pourquoi le bolus étendu ne fonctionne pas en boucle fermée.
 
-## Where to get help
+## Où obtenir de l'aide
 
 Le pilote Diaconn G8 est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
 
