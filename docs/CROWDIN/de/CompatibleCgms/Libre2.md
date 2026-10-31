@@ -12,8 +12,8 @@ Der Libre 2 OOP (Details findest Du [hier](#Libre2_OOP2)) erzeugt die gleichen G
 
 Es psricht viel dafür einen Bluetooth-Transmitter zu nutzen:
 
--   Du kannst verschiedene OOP2-Kalibrierungsstrategien wählen (1): den Wert "No calibration", oder kalibriere den Sensor wie einen Libre 1 mit "Calibrate based on raw" oder kalibriere den Wert mit "Calibrate based on glucose".  
-  Stelle sicher, dass OOP1 deaktiviert ist (2).
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
+  Make sure to leave OOP1 disabled (2).
 
     → Hamburger Menü → Einstellungen → Erweiterte Einstellungen → Andere verschiedene Einstellungen
 
@@ -30,9 +30,9 @@ Bemerkung: Der Transmitter kann parallel zur LibreLink-App verwendet werden.
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-Damit wird der Libre2 Sensor nicht gestartet und wird auch kein Datenaustausch möglich. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. Wenn verfügbar, gib zwei blutige Messwerte für die Anfangskalibrierung ein. Now the blood glucose values should be displayed in xDrip every 5 minutes. Übersprungene Werte, weil Du zum Beispiel zu weit von Deinem Telefon entfernt warst, werden nicht nachgefüllt.
+Damit wird der Libre2 Sensor nicht gestartet und wird auch kein Datenaustausch möglich. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Übersprungene Werte, weil Du zum Beispiel zu weit von Deinem Telefon entfernt warst, werden nicht nachgefüllt.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. Du kannst nach der Aktivierung blutig messen und eine neue erste Kalibrierung hinzufügen.
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### AAPS konfigurieren (nur für's Loopen)
 
