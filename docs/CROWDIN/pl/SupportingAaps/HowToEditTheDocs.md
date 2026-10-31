@@ -34,7 +34,7 @@ Albo kliknij ikonę ołówka, która pojawia się na górnym pasku edytowanej st
 
 3. Każda z opcji w kroku 2 utworzy nową gałąź w TWOIM repozytorium, w której zostaną zapisane Twoje zmiany. Wprowadź zmiany w pliku.
 
-Strony dokumentacji piszemy w Markdown. Pliki mają rozszerzenie „.md”. Specyfikacja Markdown nie jest ustalona na stałe, a obecnie do naszych plików Markdown używamy myst_parser. Uważaj, aby używać poprawnej składni, jak [opisano poniżej](#code-syntax).
+Strony dokumentacji piszemy w Markdown. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Uważaj, aby używać poprawnej składni, jak [opisano poniżej](#code-syntax).
 
 ![Gałąź edycji](../images/PR3.png)
 
@@ -147,10 +147,10 @@ Aby dodać obraz, użyj tej składni Markdown.
 
 Obraz powinien być w formacie PNG lub JPEG.
 
-Nazwy obrazów powinny spełniać jedną z poniższych zasad nazewnictwa. W przykładzie używam rozszerzenia png. Jeśli używasz JPEG, użyj rozszerzenia jpeg.
+Image names should conform to one of the following naming rules. W przykładzie używam rozszerzenia png. Jeśli używasz JPEG, użyj rozszerzenia jpeg.
 
 - `filename-image-xx.png`, gdzie xx to unikalna liczba dwucyfrowa dla obrazów w tym pliku.
-- `filename-image-xx.png`, gdzie xx to nazwa, która ma znaczenie dla autora pliku md.
+- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
 Obrazy znajdują się w folderze images dla języka angielskiego i Crowdin automatycznie przenosi je do innych języków. Nie musisz nic z tym robić!
 
@@ -199,7 +199,7 @@ Potem dodaj link do tej etykiety w tekście, który piszesz, takim rodzajem link
 
 Możesz dodawać do dokumentacji ramki z uwagami i ostrzeżeniami.
 
-Możesz też dodać zwijane uwagi ze szczegółami. Dzięki temu osoby, które nie interesują się szczegółami, nie muszą w ogóle czytać tego tekstu. Używaj ich ostrożnie, bo dokumentacja powinna być jak najłatwiejsza do czytania.
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Używaj ich ostrożnie, bo dokumentacja powinna być jak najłatwiejsza do czytania.
 
 #### Notatki
 
@@ -312,7 +312,7 @@ Przykład **strony biernej**:
 
 - *„The insulin (podmiot) is delivered (czasownik) by the pump (dopełnienie)”*
 
-*„delivered”* jest tu w stronie biernej. Podmiot i dopełnienie zamieniły się miejscami w porównaniu ze zdaniem w stronie czynnej. Zdanie stało się dłuższe, bo musieliśmy dodać „is” i „by the”. Rozważ też zaczynanie od czasownika w stronie czynnej.
+*“delivered”* is a passive verb here. Podmiot i dopełnienie zamieniły się miejscami w porównaniu ze zdaniem w stronie czynnej. Zdanie stało się dłuższe, bo musieliśmy dodać „is” i „by the”. Rozważ też zaczynanie od czasownika w stronie czynnej.
 
 Zamiast: *„You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
@@ -527,7 +527,7 @@ Wyjaśnienie porządkuje, pogłębia i poszerza wiedzę czytelnika na dany temat
     
     *W jest lepsze niż z, ponieważ…*
     
-    Gdzie to pasuje, przedstawiaj oceny, a nawet opinie.
+    Offer judgements and even opinions where appropriate.
     
     *x w systemie y odpowiada w w systemie z. Jednak…*
     
