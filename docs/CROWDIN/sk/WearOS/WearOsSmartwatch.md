@@ -2,7 +2,7 @@
 
 Pokyny nižšie platia pre apk **AAPS Wear**, ktorý si musíte zostaviť. Ak ste ho ešte nezostavili, pozrite návod [tu](../WearOS/BuildingAapsWearOS.md). Pri zostavovaní použite rovnaký súbor úložiska kľúčov, aký ste použili pre apk **AAPS** v telefóne.
 
-Niektoré informácie môžete použiť aj pre apk **Wear** aplikácií **AAPSClient** a **PumpControl**. Každá aplikácia **Wear** komunikuje so svojou zodpovedajúcou aplikáciou v telefóne. Napríklad: aplikáciu **AAPSClient Wear** môžete použiť na zobrazenie dát z **AAPSClient**, nie dát z **AAPS**. Ak je vedľa seba nainštalovaných viac variantov klienta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), dlaždice každého z nich majú malú hlavičku vo farbe daného variantu, aby ste ich pri prechádzaní rozlíšili.
+Niektoré informácie môžete použiť aj pre apk **Wear** aplikácií **AAPSClient** a **PumpControl**. Each **Wear** app will communicate with its matching phone app. Napríklad: aplikáciu **AAPSClient Wear** môžete použiť na zobrazenie dát z **AAPSClient**, nie dát z **AAPS**. Ak je vedľa seba nainštalovaných viac variantov klienta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), dlaždice každého z nich majú malú hlavičku vo farbe daného variantu, aby ste ich pri prechádzaní rozlíšili.
 
 ## Verzie Wear OS a kompatibilita
 
@@ -104,7 +104,7 @@ Príklad: Galaxy Watch 4 a novšie s One UI 8 Watch, Pixel Watch po aktualizáci
 
 Nainštalujte apk **AAPS Wear** pomocou [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Klasické ciferníky nie sú dostupné; **AAPS** automaticky nainštaluje ciferník vybraný v telefóne, pozrite [ciferník, ktorý AAPS nainštaluje](#wearos-aaps-v4-watchface). Funkcie **AAPS Wear** nie sú nijako obmedzené.
 
-## Ako nastaviť inteligentné hodinky Samsung Galaxy 4 s **AAPS**
+## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
 
 Táto časť predpokladá, že s inteligentnými hodinkami začínate úplne od začiatku. Dáva vám základný prehľad o obľúbených hodinkách **Galaxy Watch 4** a potom podrobný návod, ako nastaviť **AAPS** na hodinkách.
 
@@ -124,7 +124,7 @@ Aplikácia „Galaxy Wearable“ obsahuje aj časť s návodom na použitie. V t
 
 ## Nastavenie účtu Samsung
 
-E-mailový účet, ktorý použijete na nastavenie účtu Samsung, musí mať dátum narodenia, podľa ktorého má používateľ aspoň 13 rokov. Inak sa povolenia Samsung schvaľujú veľmi ťažko. Ak ste dieťaťu mladšiemu ako 13 rokov vytvorili účet Gmail a používate túto e-mailovú adresu, nemôžete ho jednoducho zmeniť na účet dospelého. Jedno riešenie je zmeniť aktuálny dátum narodenia tak, aby mal používateľ práve 12 rokov a 363 dní. Na druhý deň sa účet zmení na účet dospelého a môžete pokračovať v nastavení účtu Samsung.
+E-mailový účet, ktorý použijete na nastavenie účtu Samsung, musí mať dátum narodenia, podľa ktorého má používateľ aspoň 13 rokov. Inak sa povolenia Samsung schvaľujú veľmi ťažko. Ak ste dieťaťu mladšiemu ako 13 rokov vytvorili účet Gmail a používate túto e-mailovú adresu, nemôžete ho jednoducho zmeniť na účet dospelého. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. Na druhý deň sa účet zmení na účet dospelého a môžete pokračovať v nastavení účtu Samsung.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -218,7 +218,7 @@ Zobrazí sa párovací kód Wi-Fi, IP adresa a port:
 - Uvidíte odpoveď:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - V termináli napíšte: <br>`adb devices`.<br> Mali by ste vidieť niečo takéto:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Teraz prejdite do priečinka v počítači, kde je apk aplikácie Wear, a napíšte<br> `adb install wear-full.apk` <br>pričom wear.apk nahraďte názvom svojho súboru apk.
+- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
 - Uvidíte:<br> `Performing Streamed Install`<br> `Success`
 
 
@@ -235,7 +235,7 @@ Zobrazí sa párovací kód Wi-Fi, IP adresa a port:
 **Párovanie:**
 
 - Hodinky: Bezdrôtové ladenie: poznačte si IP adresu.
-- Wear Installer: zadajte IP adresu v aplikácii Wear Installer.
+- Wear Installer: Enter the IP in the Wear Installer app.
 - Vyberte Pair new (spárovať nové zariadenie), poznačte si zobrazený párovací kód a číslo portu.
 - Wear Installer: zadajte párovací kód + medzeru + číslo portu.
 - Wear Installer by mal oznámiť, že párovanie bolo úspešné. Ak nie, ukončite Wear Installer a skúste to znova.
