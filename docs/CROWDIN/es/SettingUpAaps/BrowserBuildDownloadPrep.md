@@ -1,22 +1,22 @@
-Both keystore options (Option 1 and Option 2) use the same preparation file. Download it:
+Las dos opciones de almacén de claves (Opción 1 y Opción 2) usan el mismo archivo de preparación. Descárgalo:
 
 - [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+1. Si abres esta página desde dentro de una app (con una vista web), puede que el archivo HTML no se descargue. En ese caso, copia la URL y ábrela en tu navegador:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+O visita la página de la última versión:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.Backup copy hosted on this site:
+2.Copia de respaldo alojada en este sitio:
 
- - If the external link is also unavailable, you can use this backup file to download.
+ - Si el enlace externo tampoco está disponible, puedes descargar este archivo de respaldo.
 <!--crowdin:disable-->
 
 ```{eval-rst}
