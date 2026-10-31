@@ -116,7 +116,7 @@ Automatisering wordt uitgevoerd op de **master**, dus snelkoppelingen voor autom
 
 ### Voorinstellingen tijdelijke streefwaarden
 
-Elk van je voorinstellingen voor **[Tijdelijk streefdoel](TempTargets.md)** kan als knop worden toegevoegd (de naam, het streefdoel en de tijdsduur worden getoond, bijvoorbeeld *"Eet Binnenkort — 5,0 mmol/L, 45 min"*). Als je erop tikt, wordt om bevestiging gevraagd en daarna start dat tijdelijke streefdoel.
+Elk van je voorinstellingen voor **[Tijdelijk streefdoel](TempTargets.md)** kan als knop worden toegevoegd (de naam, het streefdoel en de tijdsduur worden getoond, bijvoorbeeld *"Eet Binnenkort — 5,0 mmol/l, 45 min"*). Als je erop tikt, wordt om bevestiging gevraagd en daarna start dat tijdelijke streefdoel.
 
 ![De dynamische categorieën — Quick Wizard en Voorinstellingen tijdelijke streefwaarden (Scènes en Automatisering verschijnen als je die hebt)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
