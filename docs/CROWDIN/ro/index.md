@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- xx xxxx 202x : Version {{ aaps_version }}.x.x is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+ 31 October 2026 : Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
 
 ```
 
@@ -51,7 +51,7 @@ Section **12) Resources**, contains archived or additional documentation, includ
 :class: pericol
 Siguranța **AAPS** se bazează pe caracteristicile de siguranță ale hardware-ului dumneavoastră (telefon, pompă, CGM). Utilizați numai o pompă de insulină și un senzor de monitorizare continuă a glicemiei (CGM) care sunt complet funcționale și aprobate de către FDA/CE. Nu utilizați echipamente, pompe de insulină și CGM, stricate, modificate sau auto-construite. Utilizați doar materialele consumabile originale (inseratoare, canule și rezervoare de insulină) aprobate de către producător pentru a fi utilizate cu pompa și cu senzorul dumneavoastră. Utilizarea unor materiale netestate sau modificate poate cauza inexactitate și erori în dozarea insulinei, ceea ce duce la riscuri semnificative pentru utilizator. 
 
-Nu utilizați **AAPS** dacă iei inhibitori SGLT-2 (glifozine), deoarece aceștia scad concentrația de zahăr din sânge. Vă creșteți riscul de cetoacidoză diabetică (CAD) din cauza administrării reduse de insulină și de hipoglicemie din cauza scăderii nivelului de zahăr din sânge. 
+Nu utilizați **AAPS** dacă iei inhibitori SGLT-2 (glifozine), deoarece aceștia scad concentrația de zahăr din sânge. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
 ```
 
 ```{admonition} Disclaimer
