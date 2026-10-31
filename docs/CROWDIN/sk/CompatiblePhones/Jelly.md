@@ -10,7 +10,7 @@
 **Výhody**
 
 * Je naozaj malý.
-* Aj keď to ľuďom poviete, nemusia ho považovať za bežný smartfón a ľahšie ho prijmú ako výnimku tam, kde telefóny zvyčajne nie sú povolené.
+* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
 
 **Nevýhody**
 
@@ -33,7 +33,7 @@ Pre senzory Libre môžete zapnúť NFC.
 
 ### Optimalizácia výdrže batérie
 
-Aby nedochádzalo k rušeniu **AAPS**, na telefóne Jelly Star treba v časti „Využitie batérie“ (battery usage) vybrať „Bez obmedzení“ (unrestricted) (aj pre ostatné **aplikácie DIY**, ako BYODA, xDrip, OOP2, Juggluco atď.).
+To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
