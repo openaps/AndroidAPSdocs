@@ -49,7 +49,7 @@ There are four different methods to access the readings from Eversense:
 
 ![трансляция ESEL](../images/ESELpatch.png)
 
-Если вы запускаете ESEL с новой установкой Eversense впервые, то до появления первых данных в xDrip может понадобиться до 15 минут!
+If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
 
 4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
