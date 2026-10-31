@@ -2,7 +2,7 @@
 
 Плагін Autotune — це реалізація алгоритму OpenAPS autotune в AAPS. Він аналізує вашу недавню історію AAPS і пропонує зміни базальних швидкостей, ISF та вуглеводного коефіцієнта.
 
-Плагін Autotune доступний у версіях AAPS з [3.4](#version3400), але типово прихований.
+Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Як Autotune розраховує зміни
@@ -129,7 +129,7 @@ Autotune можна запускати трьома способами: вруч
 - **Використовувати циркадні IC/ISF** (типово вимкнено): див. [Добовий профіль IC або ISF](#autotune-circadian-ic-or-isf-profile) нижче.
 
 (autotune-other-settings)=
-### Other settings
+### Інші налаштування
 
 - Autotune також використовує Max autosens ratio і Min autosens ratio, щоб обмежити зміни. Ці значення можна переглянути та змінити в [**Налаштування** > **Налаштування засвоєння** > **Додаткові налаштування**](../SettingUpAaps/Preferences.md) (**Autosens макс.** і **Autosens мін.**).
 
