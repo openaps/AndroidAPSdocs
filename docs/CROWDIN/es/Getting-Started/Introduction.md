@@ -76,7 +76,7 @@ Con inversión de tu tiempo, **AAPS** potencialmente puede llevar a:
 
 - Mejora en la calidad del sueño y reducción general en la frecuencia de intervenciones nocturnas;
 
-- Monitorización remota y administración de la entrega de insulina para cuidadores de personas con diabetes tipo 1; y
+- Seguimiento remoto y administración de la entrega de insulina para cuidadores de personas con diabetes tipo 1; y
 
 - simplificar todo tu equipo portátil para la diabetes (receptor del monitor continuo de glucosa y dispositivos para controlar la insulina) usando un teléfono Android controlado por **AAPS**.
 
@@ -170,18 +170,18 @@ A 25 de junio de 2023, hay cuatro sistemas principales de lazo cerrado de códig
 | BOMBA               | [Medtronic antiguas](../CompatiblePumps/MedtronicPump.md)                     | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![disponible](../images/available.png)                | ![disponible](../images/available.png)      |
 | BOMBA               | [Equil 5.3](../CompatiblePumps/Equil5.3.md)                                   | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
 | BOMBA               | [CareLevo](../CompatiblePumps/CareLevo.md)                                    | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
-| CGM                 | [Dexcom G7/One+/Stelo](../CompatibleCgms/DexcomG7.md)                         | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
-| CGM                 | [Dexcom One](../CompatibleCgms/DexcomG6.md)                                   | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
-| CGM                 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                    | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![disponible](../images/available.png)                | ![disponible](../images/available.png)      |
-| CGM                 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                                     | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
-| CGM                 | [Libre 2/2+](../CompatibleCgms/Libre2.md)                                     | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
-| CGM                 | [Libre 1](../CompatibleCgms/Libre1.md)                                        | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
-| CGM                 | [Eversense](../CompatibleCgms/Eversense.md)                                   | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
-| CGM                 | [MM640G/MM630G](../CompatibleCgms/MM640g.md)                                  | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
-| CGM                 | [PocTech](../CompatibleCgms/PocTech.md)                                       | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
-| CGM                 | [Ottai](../CompatibleCgms/OttaiM8.md)                                         | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
-| CGM                 | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)                                    | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
-| CGM                 | [Nightscout como fuente de glucosa](../CompatibleCgms/CgmNightscoutUpload.md) | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![disponible](../images/available.png)                | ![disponible](../images/available.png)      |
+| MCG                 | [Dexcom G7/One+/Stelo](../CompatibleCgms/DexcomG7.md)                         | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| MCG                 | [Dexcom One](../CompatibleCgms/DexcomG6.md)                                   | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| MCG                 | [Dexcom G6](../CompatibleCgms/DexcomG6.md)                                    | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![disponible](../images/available.png)                | ![disponible](../images/available.png)      |
+| MCG                 | [Libre 3/3+](../CompatibleCgms/Libre3.md)                                     | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| MCG                 | [Libre 2/2+](../CompatibleCgms/Libre2.md)                                     | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| MCG                 | [Libre 1](../CompatibleCgms/Libre1.md)                                        | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| MCG                 | [Eversense](../CompatibleCgms/Eversense.md)                                   | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png)           | ![disponible](../images/available.png)      |
+| MCG                 | [MM640G/MM630G](../CompatibleCgms/MM640g.md)                                  | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| MCG                 | [PocTech](../CompatibleCgms/PocTech.md)                                       | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| MCG                 | [Ottai](../CompatibleCgms/OttaiM8.md)                                         | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| MCG                 | [Syai Tag](../CompatibleCgms/SyaiTagX1.md)                                    | ![disponible](../images/available.png)      | ![no disponible](../images/unavailable.png) | ![no disponible](../images/unavailable.png)           | ![no disponible](../images/unavailable.png) |
+| MCG                 | [Nightscout como fuente de glucosa](../CompatibleCgms/CgmNightscoutUpload.md) | ![disponible](../images/available.png)      | ![disponible](../images/available.png)      | ![disponible](../images/available.png)                | ![disponible](../images/available.png)      |
 
 _Notas de la tabla:_
 1. Un **rig** es un pequeño ordenador sin pantalla que llevas contigo. Un tipo de dispositivo compatible es Intel Edison + Explorer Board y el otro es Raspberry Pi + Explorer HAT o Adafruit RFM69HCW Bonnet. Los primeros sistemas APS se basaban en esta configuración, porque los teléfonos móviles no podían ejecutar los algoritmos necesarios. El uso de estos sistemas ha bajado, porque la configuración en teléfonos móviles es ahora más fácil y los teléfonos ya tienen pantalla. Además, Intel ha dejado de vender el Intel Edison. Los excelentes algoritmos de OpenAPS **oref0** y **oref1** están ahora incluidos en AAPS y en Trio.
@@ -214,7 +214,7 @@ Cualquier dispositivo que utilice comunicaciones por radio podría ser hackeado,
 
 1.  En la configuración de la bomba, limita tanto la cantidad máxima permitida para los bolos como la configuración máxima de la basal temporal a cantidades que consideres más seguras. Estos son límites estrictos que no creemos que ningún hacker malicioso pueda eludir.
 
-2.  Activa las alarmas de tu CGM tanto para glucosas altas como bajas.
+2.  Activa las alarmas de tu MCG tanto para glucosas altas como bajas.
 
 3.  Monitorea la administración de tu insulina en línea. Los usuarios de Nightscout pueden configurar alarmas adicionales para alertar sobre una amplia variedad de condiciones, incluyendo condiciones que son mucho más probables de ocurrir que un ataque malicioso. Además de los niveles altos y bajos, Nightscout puede mostrar datos de diagnóstico útiles para verificar que la bomba está funcionando según lo deseado, incluyendo la cantidad actual de insulina activa (IOB), el historial de la basal temporal de la bomba y el historial de bolos de la bomba. También se puede configurar para alertar de manera proactiva a los usuarios sobre condiciones no deseadas, como picos y caídas de glucosa previstos, bajo nivel de insulina en el depósito y baja batería de la bomba.
 
@@ -226,9 +226,9 @@ Una bajada rápida de la HbA1c y un mejor control de la glucosa suenan bien. Sin
 
 #### Seguridad médica: dispositivos, consumibles y otros medicamentos
 
-Usa una bomba de insulina y un CGM probados, que funcionen por completo y que estén aprobados por la FDA o con marcado CE para un lazo de páncreas artificial. Las modificaciones de hardware o software a estos componentes pueden causar una dosificación inesperada de la insulina, causando un riesgo significativo para el usuario. Si encuentras o te ofrecen bombas de insulina o receptores de CGM rotos, modificados o hechos en casa, no los uses para crear un sistema AAPS.
+Usa una bomba de insulina y un MCG probados, que funcionen por completo y que estén aprobados por la FDA o con marcado CE para un lazo de páncreas artificial. Las modificaciones de hardware o software a estos componentes pueden causar una dosificación inesperada de la insulina, causando un riesgo significativo para el usuario. Si encuentras o te ofrecen bombas de insulina o receptores de MCG rotos, modificados o hechos en casa, no los uses para crear un sistema AAPS.
 
-Usa consumibles originales, como insertadores, cánulas y depósitos de insulina, aprobados por el fabricante de tu bomba y de tu CGM. El uso de suministros no probados o modificados puede provocar inexactitud del MCG y errores de dosificación de la insulina. La insulina es muy peligrosa si la dosis es incorrecta: por favor, no juegues con tu vida modificando tus consumibles.
+Usa consumibles originales, como insertadores, cánulas y depósitos de insulina, aprobados por el fabricante de tu bomba y de tu MCG. El uso de suministros no probados o modificados puede provocar inexactitud del MCG y errores de dosificación de la insulina. La insulina es muy peligrosa si la dosis es incorrecta: por favor, no juegues con tu vida modificando tus consumibles.
 
 No tomes inhibidores de SGLT-2 (gliflozinas) cuando uses **AAPS**, porque bajan el azúcar en sangre de forma imposible de calcular. Combinar este efecto con un sistema que baja las tasas basales para subir la glucosa es peligroso; hay más detalles en la [sección de seguridad](#preparing-safety-first) principal.
 
@@ -238,7 +238,7 @@ No tomes inhibidores de SGLT-2 (gliflozinas) cuando uses **AAPS**, porque bajan 
 Te animamos a hablar con tus médicos sobre tu intención de usar **AAPS**. No tengas miedo de hablar con sinceridad con tu equipo de diabetes si piensas usar **AAPS** (o cualquier otro lazo OS-AID). La transparencia y la confianza entre paciente y médico son fundamentales.
 
 ### Forma de hacerlo sugerida:
-Empieza una conversación con tu médico para saber cuánto conoce la tecnología para la diabetes, como los CGM, las bombas, los lazos híbridos y los lazos comerciales, y qué opina de ella. Tu médico o endocrinólogo debería conocer la tecnología básica y estar dispuesto a hablar contigo de los avances recientes en los productos de lazo comerciales disponibles en su región.
+Empieza una conversación con tu médico para saber cuánto conoce la tecnología para la diabetes, como los MCG, las bombas, los lazos híbridos y los lazos comerciales, y qué opina de ella. Tu médico o endocrinólogo debería conocer la tecnología básica y estar dispuesto a hablar contigo de los avances recientes en los productos de lazo comerciales disponibles en su región.
 
 #### Precedentes locales
 
@@ -258,7 +258,7 @@ c) Empezar con **AAPS** supone un paso _gradual_ desde la bomba en lazo «abiert
 
 d) Tienes soporte técnico de la comunidad OS-AID en GitHub, Discord y grupos cerrados de Facebook.
 
-e) Podrás presentar **la información del CGM y de la insulina del lazo/bomba** en informes combinados en las consultas (mediante Nightscout o Tidepool), ya sea impresos o en pantalla (si llevas un portátil o una tableta). Tener juntos los datos del CGM y de la insulina permitirá a tu médico usar mejor su tiempo para revisar tus informes y le ayudará a valorar tu progreso.
+e) Podrás presentar **la información del MCG y de la insulina del lazo/bomba** en informes combinados en las consultas (mediante Nightscout o Tidepool), ya sea impresos o en pantalla (si llevas un portátil o una tableta). Tener juntos los datos del MCG y de la insulina permitirá a tu médico usar mejor su tiempo para revisar tus informes y le ayudará a valorar tu progreso.
 
 f) Si tu equipo sigue muy en contra, dale a tu médico copias impresas de los artículos de referencia enlazados en este texto y el enlace a la sección de **AAPS** para médicos: [Para médicos: introducción general y guía de **AAPS**](../UsefulLinks/ClinicianGuideToAaps.md)
 
@@ -274,7 +274,7 @@ c) **Recomendación** de que los profesionales sanitarios **apoyen** a los pacie
 
 d) Recomendación de que los profesionales sanitarios intenten informarse sobre todas las opciones de tratamiento que pueden beneficiar a los pacientes, incluidos los sistemas AID de código abierto disponibles.  Si los profesionales sanitarios no tienen recursos para formarse, o tienen dudas legales o normativas, deberían considerar **colaborar o trabajar en equipo con otros profesionales sanitarios** que sí los tengan;
 
-e) Énfasis en que todos los usuarios de CGM deben tener en todo momento acceso libre y en tiempo real a **sus propios datos de salud**
+e) Énfasis en que todos los usuarios de MCG deben tener en todo momento acceso libre y en tiempo real a **sus propios datos de salud**
 
 f) Énfasis en que estos sistemas de código abierto no han pasado las mismas evaluaciones normativas que las tecnologías médicas comerciales, y en que no hay soporte técnico comercial. Sin embargo, **hay mucho apoyo de la comunidad**; y
 
@@ -332,7 +332,7 @@ La **Figura 4 (abajo)** muestra todo el potencial del sistema **AAPS** para un u
 
 ## ¿Cómo se desarrolla y mejora AAPS continuamente?
 
-La mayoría de los usuarios de **AAPS** utilizan la versión completamente probada **master** de AAPS, que ha sido sometida a pruebas para detectar errores y problemas antes de ser lanzada a la comunidad. Entre bastidores, los desarrolladores prueban nuevas mejoras y las prueban en versiones de "desarrollo" (**dev**) de **AAPS** con una comunidad de usuarios dispuestos a realizar actualizaciones de errores en corto plazo. Si las mejoras funcionan bien, se lanzan como una nueva versión "master" de **AAPS**. Cada nueva versión «master» se anuncia en el grupo de Facebook, para que los usuarios habituales de **AAPS** puedan leer sobre ella y actualizar a la nueva versión master.
+La mayoría de los usuarios de **AAPS** utilizan la versión completamente probada **master** de AAPS, que ha sido sometida a pruebas para detectar errores y problemas antes de ser lanzada a la comunidad. Entre bastidores, los desarrolladores prueban nuevas mejoras y las prueban en versiones de "desarrollo" (**dev**) de **AAPS** con una comunidad de usuarios dispuestos a realizar actualizaciones de errores en corto plazo. Si las mejoras funcionan bien, se lanzan como una nueva versión «master» de **AAPS**. Cada nueva versión «master» se anuncia en el grupo de Facebook, para que los usuarios habituales de **AAPS** puedan leer sobre ella y actualizar a la nueva versión master.
 
 Algunos usuarios de **AAPS** con experiencia y seguridad hacen experimentos con tecnologías nuevas y con versiones dev de la aplicación **AAPS**; puede ser interesante leer sobre ellos para los usuarios menos aventureros, ¡sin tener que hacerlo ellos mismos! Las personas tienden a compartir estos experimentos en el grupo de Facebook también.
 
@@ -353,7 +353,7 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 La tabla de arriba supone que el usuario tiene acceso tanto a un monitor continuo de glucosa como a una bomba de insulina.
 
-*Todos los datos de **AAPS** se pueden poner a disposición de los profesionales sanitarios mediante plataformas para compartir datos, como Nightscout, que registra y muestra en tiempo real los datos del CGM, la administración de insulina, los carbohidratos introducidos, las predicciones y la configuración. Los registros de Nightscout incluyen informes diarios y semanales que pueden ayudar a los profesionales sanitarios a hablar con los pacientes con diabetes tipo 1 usando datos más precisos sobre el control glucémico y los aspectos de comportamiento.
+*Todos los datos de **AAPS** se pueden poner a disposición de los profesionales sanitarios mediante plataformas para compartir datos, como Nightscout, que registra y muestra en tiempo real los datos del MCG, la administración de insulina, los carbohidratos introducidos, las predicciones y la configuración. Los registros de Nightscout incluyen informes diarios y semanales que pueden ayudar a los profesionales sanitarios a hablar con los pacientes con diabetes tipo 1 usando datos más precisos sobre el control glucémico y los aspectos de comportamiento.
 
 (accessibility-for-users-aaps-who-are-partially-or-completely-blind)=
 
