@@ -1,13 +1,13 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+CareLevo 是由 CareMedi 製造的無管路貼片式幫浦。每個貼片最多可裝 300 U 的胰島素，佩戴時間最長為 7 天（168 小時）。它會透過手機的藍牙與 **AAPS** 通訊，不需要額外裝置。
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+CareLevo 驅動程式是 <strong x-id="1">AAPS</strong> 的新功能。首次啟用貼片前，請詳讀本頁內容，並將幫浦本身的使用說明放在手邊。
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+貼片可輸送的最小劑量為 0.05 U。請在 **設定檔**中將基礎率設為至少 0.05 U/h，並以 0.05 U/h 為增量調整；否則 **設定檔**預期輸送的胰島素量，會與貼片實際輸送的量略有差異。 **AAPS** 會使用貼片接受的基礎率。
 
 ```{contents} Table of contents
 :depth: 1
@@ -16,147 +16,147 @@ The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the *
 
 ## 幫浦與AAPS的功能
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* 透過手機內建的藍牙與**AAPS**通訊，不需要額外的通訊裝置。
+* 注射劑量請以 0.05 U 為增量調整。
+* 基礎率範圍為 0.05 U/h 至 15 U/h，並以 0.05 U/h 為增量調整；基礎率時段為 30 分鐘。
+* 臨時基礎率以絕對值設定，最長可設為 12 小時。
+* 延長注射最長可設為 8 小時。
+* 夏令時間和時區變更必須手動處理。時區變更時，貼片會通知您。
 
-## Pump Setup
+## 幫浦設定
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. 在 **AAPS** 主畫面左上角開啟**選單**（☰），然後選取**組態設定**。
+1. 在幫浦區段中選取 **Carelevo**。
+1. 按下返回鍵，回到主畫面。
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![在「組態設定 > 幫浦」中選取的 Carelevo 外掛](../images/v4/Pumps/carelevo_enabled.png)
 
 ## 設定
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+點選 **管理 → 幫浦**（或 **組態設定 → 幫浦 → 開啟外掛**），開啟幫浦畫面。
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+點選右上角的 **設定**（齒輪）圖示，開啟 CareLevo 設定。有三項設定可供使用：
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![Carelevo 驅動程式設定](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### 胰島素不足通知設定
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+儲液槽中的剩餘胰島素量達到所選數值時，貼片會通知您。可設定為 20 U 至 50 U，並以 5 U 為增量調整。預設值為 30 U。不論此設定為何，當剩餘胰島素少於 10 U 時，貼片都會發出嚴重警報並停止輸送胰島素。
 
-### Patch Usage Notification Setting
+### 貼片使用通知設定
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+貼片佩戴時間達到所選時數時，會通知您，方便您安排更換時間。可設定為 24 至 167 小時。預設值為 116 小時。
 
-### Patch Info Alarm
+### 貼片資訊警報
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+開啟此選項後，貼片會在注射、延長注射或臨時基礎率開始及結束時發出嗶聲。預設為關閉。
 
-## The pump screen
+## 幫浦畫面
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![尚未啟用貼片時的 Carelevo 幫浦畫面](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+幫浦畫面會顯示**藍牙狀態**（沒有啟用的貼片、已中斷連線或已連線）、貼片的**序號**、**啟用時間**和**到期時間**、目前的**基礎率**和**臨時基礎率**、**剩餘胰島素**（剩餘量／裝入量）、**貼片剩餘時間**，以及**已輸送的胰島素總量**。
 
-The buttons depend on the state of the patch:
+畫面上的按鈕會依貼片狀態而有所不同：
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **啟用貼片**：開始啟用新貼片，請參閱下文。
+* **胰島素填充指南**：顯示將胰島素注入貼片的 12 個步驟。
+* **暫停輸注**／**繼續輸注**：暫停或重新開始輸送胰島素，請參閱下文。
+* **棄置貼片**：停止使用目前的貼片，之後即可啟用新貼片。
 
-## Activating a patch
+## 啟用貼片
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+開始前，請確認 **AAPS** 中已啟用 **設定檔**，且藍牙已開啟。貼片開啟後，必須在限定時間內完成啟用；如果逾時，貼片會發出**貼片安裝逾時**警報，且無法使用。
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+在幫浦畫面上點選**啟用貼片**，並依照步驟操作。插入針頭前，您隨時可以取消；已輸入的內容將會放棄。
 
-### Select the insulin
+### 選取胰島素
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+確認您使用的胰島素。貼片必須使用速效 U-100 胰島素。
 
-### Fill the patch with insulin
+### 將胰島素注入貼片
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+請考量預計佩戴貼片的時間，注入 50 至 300 U 的胰島素。如需填充說明，請點選**胰島素填充指南**。接著點選填充量，並選擇您填入的胰島素量；**AAPS** 會使用此數值顯示剩餘胰島素量。
 
-### Connect the patch
+### 連線貼片
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. 從泡殼包裝中取出貼片，並取下針頭護帽。
+1. 按住貼片的電源按鈕超過 1 秒。聽到嗶聲後，點選 **搜尋貼片**。
+1. 找到的貼片正確時，點選 **確認**。如果貼片不正確，請點選 **重新掃描**。
 
-### Safety check
+### 安全檢查
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+貼片連線後，按下 **安全性檢查**。貼片會自行測試並進行預充填。確認針頭尖端有形成一滴胰島素。如果看不到胰島素液滴，請按下 **重試**。檢查完成後，按下 **下一步**。
 
-### Site and patch attachment
+### 選擇部位並貼上貼片
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. 選擇您要佩戴貼片的部位。
+1. 使用酒精棉片徹底清潔該部位。
+1. 撕下背膠，將貼片貼在外觀上，並讓標記點朝上。
+1. 貼片貼妥後，按下 **下一步**。
 
-### Insert the needle
+### 插入針頭
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. 依箭頭方向轉動安全護蓋，然後取下護蓋。
+1. 將施打器的推鈕完全按到底，並按住 10 秒。針頭插入時會發出嗶聲。
+1. 取下施打器，然後按下 **確認插入**。
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+如果插入失敗，**AAPS** 會告知您還剩下幾次嘗試機會。如果沒有剩餘的嘗試機會，貼片會發出 **針頭插入錯誤**警示，且必須更換貼片。
 
-Insulin delivery starts as soon as the insertion is confirmed.
+確認插入後，胰島素輸注便會開始。
 
-## Bolus messages
+## 注射訊息
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+如果貼片拒絕注射，**AAPS** 會告知您原因。例如，*無法進行注射。可注射量：2.8 U* 表示貼片目前最多只能注射此劑量。
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+如果您停止注射，但貼片未確認停止，**AAPS** 會等待注射結束，並記錄貼片回報的劑量。如果注射沒有被記錄（例如注射進行中時停止），**AAPS** 會根據貼片的總量補上該筆資料，並提醒您先確認 IOB，再嘗試注射。
 
-## Suspending and resuming insulin delivery
+## 暫停及恢復胰島素輸注
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+在幫浦畫面按下 **暫停輸注**，並選擇暫停輸注的時間：30 分鐘至 4 小時，每次增加 30 分鐘。輸注不會自行恢復：暫停時間結束時，貼片會發出 **開始輸注胰島素**提醒。在幫浦畫面按下 **恢復輸注**，或在提醒中按下 **開始輸注胰島素**，然後確認。
 
-## Discarding a patch
+## 棄置貼片
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+在幫浦畫面按下 **棄置貼片**，然後確認。胰島素輸注會停止，且貼片將無法再次使用。從身上取下貼片，並啟用新的貼片。
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+如果貼片因重大警示而停止，警示畫面會改為提供 **停用貼片**選項。按下此選項會以相同方式棄置貼片。
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## 警示與通知
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+貼片會回報三種等級的事件。這些事件都會以 **AAPS** 通知的形式顯示。
 
-### Critical alarms
+### 重大警示
 
-Insulin delivery has stopped. Act now:
+胰島素輸注已停止。請立即處理：
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (5 ℃ and 37 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **胰島素不足**：剩餘胰島素少於 10 U。請停用貼片並更換。
+* **貼片已逾期**：貼片已達使用期限。請停用貼片並更換。
+* **電量不足**：丟棄並更換貼片。
+* **溫度過高／過低**：將貼片移至適合的環境，溫度介於 40 ℉ 至 99 ℉（5 ℃ 至 37 ℃）。
+* **自動關閉**：由於您未理會自動關閉警示，貼片已停止運作。按下 **開始輸注胰島素**，重新開始基礎胰島素輸注。
+* **貼片套用逾時**、**自我診斷失敗**、**貼片錯誤**、**阻塞**和**針頭插入錯誤**：停用貼片並更換。
 
 ### 警報
 
-Insulin delivery continues, but something needs your attention:
+胰島素輸注會繼續，但有事項需要您留意：
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉.
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **胰島素不足**：儲藥槽中的胰島素已達到**胰島素不足通知設定**中設定的量。請準備更換貼片。
+* **貼片即將到期**和**貼片使用期限已到**：請更換貼片。
+* **電量不足**：請準備更換貼片。
+* **溫度過高／過低**：貼片恢復至 40 ℉ 至 99 ℉ 的範圍內之前，輸注會暫停。
+* **自動關閉**：點選 **確定**。如果未理會此警示，警示會升級為重大警報，並停止輸注。
+* **貼片註冊未完成**：點選 **確定**以完成註冊。
+* **開始輸注胰島素**：您設定的暫停時間已結束。點選 **開始輸注胰島素**，恢復輸注。
+* **開啟藍牙**和**BLE 未連線**：手機無法連線至貼片。請開啟藍牙，或檢查貼片連線。
 
-### Notices
+### 通知
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+僅供參考：**胰島素不足**、**貼片使用時間通知**（已超過**貼片使用通知設定**中設定的時間）、**貼片檢查通知**、**時區變更**和**檢查血糖**（注射後到達設定的時間）。
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+貼片也會在自身的低血糖暫停（**LGS**）功能啟動或結束時發出通知。 **AAPS** 不會使用此功能；循環會自行處理低血糖。
 
 ## 如何尋求協助
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+如要回報 CareLevo 驅動程式的問題，請前往 [AAPS GitHub 問題回報頁面](https://github.com/nightscout/AndroidAPS/issues)，或在 AAPS 社群頻道中回報。請參閱 [如何取得協助](../GettingHelp/WhereCanIGetHelp.md)。
