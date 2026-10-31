@@ -1,0 +1,3 @@
+<head>
+  <meta http-equiv="Refresh" content="0; URL=https://androidaps.readthedocs.io/en/latest/SettingUpAaps/TransferringAndInstallingAaps.html#android-developer-verification" />
+</head>
