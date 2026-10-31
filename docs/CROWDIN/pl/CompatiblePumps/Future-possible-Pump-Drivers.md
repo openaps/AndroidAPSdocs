@@ -2,61 +2,61 @@
 
 Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, status ich wsparcia w dowolnym systemie pętlowym, oraz status dla systemu AAPS. Na końcu jest trochę informacji, jakie są wymagania, aby pompa nadawała się do pracy w pętli.
 
-    {contents} Table of contents
+    {contents} Spis treści
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Pompy w fazie integracji z AAPS
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Wkrótce:** sterowniki dla tych pomp są w trakcie tworzenia i działają już w wersjach testowych.
 
-Omnipod 5 ([Homepage](https://www.omnipod.com/))
+Omnipod 5 ([Strona domowa](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Sterownik Omnipod 5 w trakcie tworzenia](../images/future-pumps/omnipod5-driver.png)
 
-Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
+Tandem: t:Mobi ([Strona domowa](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Sterownik Tandem t:Mobi w trakcie tworzenia](../images/future-pumps/tandem-mobi-driver.png)
 
-## Pumps that are Loopable
+## Pompy, które nadają się do pętli
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([Strona domowa](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Status pętli:** Pompa może nadawać się do pętli, ale jej protokół jest na razie nieznany. Producent nie jest zainteresowany open source.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Wymagany sprzęt dla AAPS:** brak. Wygląda na to, że ma obsługę BT.
 
-### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X3 ([Strona domowa](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Status pętli:** Możliwy przyszły kandydat do pętli. Mamy nadzieję, że t:slim X3 pozwoli na pełne sterowanie z telefonu, co umożliwi obsługę w AAPS, ale termin i funkcje wciąż nie są znane.
 
-**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+**Wymagany sprzęt dla AAPS:** brak. Prawdopodobnie będzie mieć Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Uwagi:** Jeszcze nie wydana. Wygląda na to, że w planach Tandem t:slim X3 jest wciąż odsuwana na rzecz t:Mobi (także w wersji bez drenu) i Sigi (ich pompy typu patch).
 
-### Twiist ([Homepage](https://www.twiist.com/))
+### Twiist ([Strona domowa](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Status pętli:** Nadaje się do pętli.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Wymagany sprzęt dla AAPS:** brak. Ma Bluetooth.
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Pompa insulinowa Willcare ([Strona domowa](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Status pętli:** Na razie nie nadaje się do pętli, ale skontaktowali się z nami pracownicy firmy, którzy chcą rozwinąć pompę tak, aby nadawała się do pętli (myślę, że na razie brakuje tylko poleceń odczytu/ustawienia profilu).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Wymagany sprzęt dla AAPS:** brak. Wygląda na to, że ma obsługę BT.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Uwagi:** Firma jest zainteresowana integracją z AAPS, więc może sama wykonać implementację.
 
-### Ypsopump ([Homepage](https://www.ypsomed.com/))
+### Ypsopump ([Strona domowa](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Status pętli:** Nadaje się do pętli. Protokół Bluetooth tej pompy został odtworzony przez społeczność (inżynieria wsteczna), więc komunikacja z nią jest w zasadzie możliwa.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Wymagany sprzęt dla AAPS:** brak. Ma Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Uwagi:** Ypsopump chroni komunikację Bluetooth silnym szyfrowaniem firmy zewnętrznej. Praca z nim jest technicznie trudna, przez co zbudowanie i utrzymanie niezawodnego sterownika jest trudne. Nie ma jeszcze sterownika AAPS gotowego do codziennego użytku.
 
-## Pumps no longer sold (companies no longer operating)
+## Pompy, które nie są już sprzedawane (firmy już nie działają)
 
 ### Animas Vibe
 
@@ -66,53 +66,53 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Uwagi:** Koniec wsparcia w marcu 2025.
 
-## Pumps that aren't Loopable
+## Pompy, które nie są odpowiednie dla pętli
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Uwagi:** Medtronic [wycofał się](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X2 ([Strona domowa](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Uwagi:** Protokół Bluetooth Tandem został odtworzony (inżynieria wsteczna), ale w t:slim X2 można podawać tylko bolusy — nie da się sterować podawaniem bazy — więc nie można jej bezpiecznie używać w pętli. Raczej się to nie zmieni, chyba że Tandem pozwoli na pełne sterowanie X2 z telefonu, co bardziej prawdopodobnie pojawi się dopiero w t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Uwagi:** Społeczności nie udało się nawiązać komunikacji z pompą Solo.
 
-## Requirements for pumps being loopable
+## Wymagania, aby pompa nadawała się do pętli
 
-**Prerequisite**
+**Wymagania wstępne**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Pompa musi obsługiwać pewien rodzaj zdalnego sterowania. (BT, częstotliwość radiowa itp.)
+- Protokół komunikacji jest złamany/udokumentowany itp.
 
-**Minimal requirement**
+**Minimalne wymagania**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Ustawienie tymczasowej dawki bazowej
+- Odczyt statusu
+- Anulowanie tymczasowej dawki bazowej
 
-**For oref1(SMB) or Bolusing:**
+**Dla oref1 (SMB) lub podawania bolusów:**
 
-- Set Bolus
+- Podanie bolusa
 
-**Good to have**
+**Dodatkowe przydatne funkcje**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Anulowanie bolusa
+- Odczyt profilu bazowego (prawie wymagane)
+- Ustawienie profilu bazowego (dobrze, gdy jest)
+- Odczyt historii 
 
-**Other (not required but good to have)**
+**Inne (niewymagane, ale przydatne)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Ustawienie bolusa przedłużonego
+- Anulowanie bolusa przedłużonego
+- Odczyt historii
+- Odczyt TDD (całkowita dawka dobowa)
 
-### Other pumps support
+### Obsługa innych pomp
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Jeśli chcesz poznać status innych pomp, skontaktuj się z nami na Discordzie.
