@@ -28,13 +28,13 @@ Dans l'[Assistant Bolus](#aaps-screens-bolus-wizard), trois boutons sous le cham
 
 | Type                  | Aliments typiques (comme listés dans l'application)                                                                                  | Glucides maintenant, utilisés pour le bolus | eGlucides ajoutés                                      |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------------------------ |
-| **Pain** (par défaut) | Pain, viennoiseries salées, yaourts, fruits, pommes de terre, riz, flocons d'avoine, légumes                                         | 100 %                                       | None                                                   |
+| **Pain** (par défaut) | Pain, viennoiseries salées, yaourts, fruits, pommes de terre, riz, flocons d'avoine, légumes                                         | 100 %                                       | Aucun                                                  |
 | **Gâteau**            | Raviolis, pâtes, plats asiatiques riches en glucides et en graisses, pâtisseries sucrées et viennoiseries, céréales, miel, confiture | 90 %                                        | 20 %, début 60 minutes plus tard, réparti sur 2 heures |
 | **Pizza**             | Lasagnes, pizza, hamburgers, frites, pommes de terre au four, chips                                                                  | 80 %                                        | 35 %, début 60 minutes plus tard, réparti sur 3 heures |
 
 **Exemple** : vous saisissez 100 g et choisissez **Pizza**. Le bolus est calculé pour 80 g, enregistrés maintenant. 35 g d'eGlucides commencent 1 heure plus tard et sont répartis sur 3 heures.
 
-Good to know:
+Bon à savoir :
 * Ce n'est pas un simple partage : avec **Gâteau** et **Pizza**, les glucides enregistrés font au total **plus que ce que vous avez saisi** (110 % et 115 %). Le surplus est seulement dans les eGlucides.
 * Le bolus couvre seulement les glucides pris maintenant. **AAPS** ne fait pas de bolus à l'avance pour les eGlucides : la boucle les prend en compte quand ils commencent, comme tous les autres [eGlucides](#Extended-Carbs-extended-carbs-ecarbs).
 * Si vous réglez une **Heure des glucides**, les eGlucides commencent 60 minutes après cette heure.
