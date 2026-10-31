@@ -98,7 +98,7 @@ Voir aussi les [Conditions d'utilisation Open Humans](https://www.openhumans.org
 
 ## Protection des données
 
-Open Humans s'occupe de la protection de votre vie privée en vous assignant un identifiant numérique pour chaque projet. Cela permet aux projets de vous reconnaître mais pas vous identifier. The Application ID uploaded by AAPS is similar and only helps administrate the data. Plus d'informations peuvent être trouvées ici :
+Open Humans s'occupe de la protection de votre vie privée en vous assignant un identifiant numérique pour chaque projet. This allows projects to recognize but not identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. Plus d'informations peuvent être trouvées ici :
 
 - [Règles d'utilisation des données Open Humans](https://www.openhumans.org/data-use/)
 - [Open Humans et GDPR](https://www.openhumans.org/gdpr/)
