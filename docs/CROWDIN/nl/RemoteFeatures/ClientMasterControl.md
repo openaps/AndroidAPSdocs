@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# Master ↔ Client besturing (ondertekende besturing op afstand)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+Vanaf **AAPS** versie 4 kan een volgtelefoon met **AAPSClient** veel meer dan alleen behandelingen via Nightscout *aankondigen*: zodra hij **gekoppeld** is met de hoofdtelefoon, kan hij **ondertekende commando's** sturen. De hoofdtelefoon (de **master**) controleert, bevestigt en voert ze uit — ook het geven van een **insulinebolus** met de pomp van de master.
 
-This page explains how it works, and how to set it up and use it.
+Deze pagina legt uit hoe het werkt, hoe je het instelt en hoe je het gebruikt.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,257 +12,257 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **Master** = de hoofdtelefoon met **AAPS** die de pomp heeft en de loop draait (de `full` app).
+- **Client** = een **AAPSClient**-telefoon zonder pomp die de master volgt en hem nu ook *bestuurt*.
+- Beide telefoons moeten met **dezelfde Nightscout**-site verbonden zijn. Alle communicatie gaat nog steeds via Nightscout — er is geen directe verbinding tussen de telefoons nodig.
 ```
 
 ---
 
-## How it works
+## Hoe het werkt
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+In **AAPS** v3 kon **AAPSClient** alleen niet-ondertekende careportal-behandelingen naar Nightscout schrijven, en kon hij geen bolus geven. Besturing op afstand vraagt nu om een eenmalige [koppeling](#client_master_master_setup). Zie ook [Wat er veranderd is in AAPS v4](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4 gebruikt een eigen **Client-Control**-kanaal. Het loopt nog steeds via je Nightscout-site (in de `settings`-collectie), maar elk bericht is **cryptografisch ondertekend** met een geheime sleutel die alleen de twee telefoons kennen. De geheime sleutel wordt één keer doorgegeven, tijdens het **koppelen**, en direct daarna vervangen door een nieuwe. Zo gaat hij nooit als leesbare tekst over het netwerk.
 
-The guiding principle is **the master is in charge**:
+Het basisprincipe is **de master beslist**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. De client stuurt een *verzoek* (“bolus 2 E”, “start de scène Sport”, “stel dit tijdelijk streefdoel in”…).
+2. De **master** rekent de actie opnieuw uit en **begrenst** die met zijn **eigen** actuele gegevens (profiel, IOB, COB, huidig tijdelijk streefdoel, pomp). Daarna **maakt hij de exacte bevestiging** die de gebruiker te zien krijgt.
+3. De client (of het horloge) toont de bevestigingstekst van de **master** — hij maakt nooit een eigen tekst.
+4. Na de bevestiging **voert de master de actie één keer uit** en meldt het resultaat terug aan de client.
 
-What this means for you:
+Wat dit voor jou betekent:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **Ondertekende commando's**: alleen clients die je gekoppeld hebt, kunnen commando's sturen (geheime koppelingssleutel en handtekening per client). Oude of herhaalde commando's worden geweigerd.
+- **Een rol voor elke client**: je bepaalt wat elke client mag doen, van *Alleen lezen* tot *Beheerder* — zie [Rollen van clients](#client-master-control-roles).
+- **Insulinebolus vanaf een client**: de master geeft de bolus met zijn pomp, en de client toont de voortgang van de toediening.
+- **De master beslist**: hij begrenst elke actie met zijn eigen limieten en schrijft de bevestiging die op de client wordt getoond.
+- **Alleen gekoppelde clients wijzigen de therapie**: zolang client besturing aan staat, neemt de master geen behandelingen of wijzigingen meer over die direct in Nightscout zijn ingevoerd — zie [Beveiligde modus](#client-master-control-hardened-mode).
+- **Elke client krijgt een eigen Nightscout-token** met alleen de rechten die een client nodig heeft — zie [Het eigen Nightscout-token van de client](#client-master-control-own-token).
+- **Master offline**: acties worden geblokkeerd met een duidelijke melding.
+- **Een client intrekken** kost één tik (per client), of gebruik de schakelaar op de master om alle clients te stoppen.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Acties die je vanaf een client kunt starten: **bolus**, **koolhydraten / eCarbs**, **tijdelijk streefdoel** (instellen & annuleren), **profielwissel**, wijziging van **loop / bedrijfsmodus**, **tijdelijk basaal** (instellen & annuleren), **vertraagde bolus** (instellen & annuleren), **insulinekeuze** en **[scènes](../DailyLifeWithAaps/Scenes.md)**. Een deel van de **instellingen** wordt ook in beide richtingen gelijk gehouden tussen master en clients.
 
 ---
 
-## Roles and prerequisites
+## Rollen en voorwaarden
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- **Websockets** are needed on both phones: commands only reach the master over the websocket connection. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients.
+- De **master** draait de normale `full` versie van **AAPS** en is verbonden met je pomp.
+- De **master** gebruikt **NSClientV3** met je Nightscout en toont *verbonden*. Geef hem een **beheerderstoken** (admin token) van je Nightscout: daarmee kan de master voor elke client een eigen token maken en dit aan de client tonen als QR-code.
+- De **client** draait **[AAPSClient](AapsClient.md)** (of **AAPSClient2** / **AAPSClient3** voor meer patiënten — zie [Over AAPSClient, AAPSClient2 en AAPSClient3](#remotecontrol-aapsclient-versions)). Hij moet **dezelfde** Nightscout gebruiken. Als je hem instelt met de QR-code van de master, krijgt de client zijn Nightscout-adres en token van de master; stel anders eerst zelf **NSClientV3** op de client in.
+- **Websockets** zijn nodig op beide telefoons: commando's bereiken de master alleen via de websocket-verbinding. Zolang client besturing aan staat, houdt **AAPS** websockets aan, op de master en op gekoppelde clients.
 ```
 
-Pairing and synchronization are two different things:
+Koppelen en synchroniseren zijn twee verschillende dingen:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- **Synchronisatie** (gegevens: BG, behandelingen, profiel) stel je in zoals eerder — zie [Synchronisatie](#RemoteControl_aapsclient). De QR-code van de master kan dit voor je doen op de client.
+- **Koppelen** (besturing: het ondertekende commandokanaal dat hier wordt beschreven) is de nieuwe stap hieronder.
 
 ---
 
-## Setting it up
+## Instellen
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. Op de master — besturing aanzetten en een client toevoegen
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+Open op de master het scherm **Beheren** en kies **Geautoriseerde clients**.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+Zet **Client controle toestaan** aan (standaard staat dit **uit**). Dit is de hoofdschakelaar: als hij uit staat, kan geen enkele client commando's sturen, maar je gekoppelde clients blijven bewaard, zodat je hem later weer aan kunt zetten. Als je hem aanzet, gaat ook de [Beveiligde modus](#client-master-control-hardened-mode) aan. Dit wordt getoond als "*Beveiligde modus ingeschakeld*" met een **(i)** die het uitlegt. In de [Eenvoudige modus](#preferences-simple-mode) staat client besturing altijd aan, daarom wordt de schakelaar niet getoond.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![Scherm Geautoriseerde clients op de master](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+Tik op de knop **+** (rechtsonder) om een client toe te voegen. In het venster **Nieuwe client**:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. Vul een **apparaatnaam** in, zodat je de client in de lijst herkent.
+2. Kies **hoe de telefoon wordt ingesteld** (zie de tabel hieronder).
+3. Kies de **[rol](#client-master-control-roles)**. Er wordt niets voor je gekozen: de juiste rol hangt af van wie de telefoon gebruikt.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![Venster Nieuwe client op de master: apparaatnaam, hoe de telefoon wordt ingesteld en de rol](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| Manier                              | Wat de nieuwe telefoon krijgt                                                  | Gebruik dit als                                                                                               |
+| ----------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| **QR-code: Nightscout en koppelen** | het Nightscout-adres, een eigen Nightscout-token en de koppeling, met één scan | de nieuwe telefoon een camera heeft: de snelste manier, je hoeft niets te typen                               |
+| **QR-code: alleen Nightscout**      | het Nightscout-adres en een eigen Nightscout-token, geen koppeling             | de telefoon alleen gegevens moet **tonen** en nooit commando's mag sturen                                     |
+| **PIN**                             | alleen de koppeling; de telefoon houdt zijn huidige Nightscout-instellingen    | de telefoon geen camera heeft (of de master geen tokens kan maken); hij moet al met Nightscout verbonden zijn |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+De twee manieren met een QR-code hebben een **beheerderstoken** nodig in de **NSClientV3**-instellingen van de master, omdat de master het token van de client in Nightscout aanmaakt. Zonder zo'n token worden de QR-code-opties wel getoond, maar je kunt ze niet kiezen, en het venster zegt waarom; de **PIN** werkt altijd.
 
-#### With a QR code
+#### Met een QR-code
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+Tik op **OK**: de master maakt het Nightscout-token van de client en toont een **QR-code**. Een code die ook koppelt, werkt ongeveer **twee minuten**; het scherm telt af en sluit vanzelf als de client gekoppeld is. Scan de code op de nieuwe telefoon zoals beschreven in [Op de client](#client_master_client_setup).
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+Iedereen die de QR-code ziet, kan je Nightscout lezen, en een code die koppelt bevat ook de koppeling. Toon de code alleen aan de nieuwe telefoon. **AAPS** blokkeert schermafbeeldingen zolang de code op het scherm staat.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![Het QR-code-scherm van de master met de aftelling (code onscherp gemaakt)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### Met een PIN
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**.
+Tik op **OK**: de master toont een **koppel-PIN** van 8 cijfers, in twee groepen van vier (bijvoorbeeld `1234 5678`). Deze PIN is **eenmalig** en **verloopt na ongeveer twee minuten**.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![Koppelscherm op de master met de eenmalige PIN (de PIN op deze afbeelding is verlopen)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+De PIN beschermt de geheime koppelingssleutel die via Nightscout wordt uitgewisseld. Deel hem alleen met het apparaat dat je koppelt, plaats hem niet openbaar, en laat hem verlopen als je hem niet gebruikt. Je kunt altijd een nieuwe PIN maken door opnieuw op **+** te tikken.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. Op de client — koppelen met de master
 
-#### Scanning the QR code
+#### De QR-code scannen
 
-You can scan the master's QR code in two places:
+Je kunt de QR-code van de master op twee plekken scannen:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- in de **Setup Wizard** van de client, bij de stap "**Instellen vanaf de 'master'**", die vóór de Nightscout-stap komt. Eén scan stelt dan Nightscout in en, met een code die koppelt, ook de koppeling. Daarmee is het instellen klaar: de wizard sluit en het startscherm opent;
+- later op elk moment via **Beheren → Koppel met master → Scan de QR-code**.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+De eerste keer vraagt **AAPSClient** toestemming voor de **camera**. Als je dat weigert, zegt het scherm dat de camera nodig is. Je kunt de toestemming dan geven met **Probeer het opnieuw**, of in plaats daarvan koppelen met de PIN.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+Richt de camera op de code. De client toont wat de code doet — het Nightscout-adres en, bij een code die koppelt, de master waarmee hij koppelt — en vraagt "**Deze code gebruiken?**". Tik op **Gebruik**: de client zet **NSClientV3** aan, vervangt zijn Nightscout-adres en token door die uit de code en zet websockets aan. Een code die koppelt, koppelt ook de telefoon; hij meldt zich bij de master zodra hij met Nightscout verbonden is.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![De wizardstap Instellen vanaf de 'master' op de client](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
-The scanner is not available on iOS yet, and a desktop has no camera: use the PIN there.
+De scanner is nog niet beschikbaar op iOS, en een desktop heeft geen camera: gebruik daar de PIN.
 ```
 
-#### Entering the PIN
+#### De PIN invoeren
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+Open op de client **Beheren → Koppel met master** (of de wizardstap **Koppel met master**, na de Nightscout-stap), **voer de PIN van 8 cijfers in** die op de master staat en tik op **Koppel**. De client gebruikt de PIN om het koppelaanbod veilig via Nightscout op te halen. Daarna vraagt hij "**Koppel met deze master?**" en toont hij de identificatie van de master. Tik op **Koppel** om te bevestigen (zie [Koppelen met de master](#aapsclient-pairing-with-the-master) voor een schermafbeelding).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![Scherm Koppel met master op de client vóór het koppelen — voer hier de PIN in](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### Na het koppelen
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+Zodra een client gekoppeld is, stuurt hij een **Hello** (groet) naar de master. Hij verschijnt dan in de lijst **Geautoriseerde clients** van de master als **Actief**, met een tijd *“laatst gezien”*. De client kent zijn [rol](#client-master-control-roles) uit de koppeling, dus hij toont meteen de juiste knoppen. Een koppeling die in de Setup Wizard is gemaakt, rondt de wizard af. In dezelfde stap vervangen de twee telefoons de geheime koppelingssleutel door een nieuwe die nooit over het netwerk is gegaan (zie [Opmerkingen over beveiliging](#client-master-control-security)), en een client die met de PIN is ingesteld krijgt een eigen Nightscout-token (zie [Het eigen Nightscout-token van de client](#client-master-control-own-token)). Een client kan met **één** master tegelijk gekoppeld zijn; om met een andere master te koppelen, kies je eerst **Ontkoppelen**.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![Scherm Koppel met master op de client (al gekoppeld)](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. Clients beheren
 
-From the master's **Authorized clients** screen you can, at any time:
+In het scherm **Geautoriseerde clients** van de master kun je op elk moment:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- **De rol wijzigen** van een client met de rij van vier knoppen onder de naam. De nieuwe rol werkt meteen, zonder opnieuw te koppelen.
+- **Zien met welk Nightscout-token** een client schrijft: "*Eigen Nightscout token*" is wat je wilt. Een rode regel "*Gebruikt het Nightscout token …, dat meer rechten heeft dan een client nodig heeft*" betekent dat de client nog een token met meer rechten gebruikt, meestal je beheerderstoken — zie [Het eigen Nightscout-token van de client](#client-master-control-own-token).
+- Een enkele client **intrekken** — tik op het **prullenbak**-pictogram ernaast. De client kan geen commando's meer sturen tot hij opnieuw gekoppeld is. Zijn eigen Nightscout-token wordt ook verwijderd, dus hij kan je Nightscout ook niet meer lezen.
+- **Alle besturing stoppen** zonder de koppelingen te verliezen — zet **Client controle toestaan** uit.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+Telefoons die zijn ingesteld met **QR-code: alleen Nightscout** staan onder de clients, bij "**Nightscout alleen lezen**". Voor elk van deze telefoons kun je de QR-code opnieuw tonen (om dezelfde telefoon opnieuw in te stellen) of het token verwijderen. Dan heeft de telefoon geen toegang meer tot je Nightscout.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![Geautoriseerde clients met een gekoppelde client (rolknoppen, eigen Nightscout-token) en een telefoon onder Nightscout alleen lezen](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## Rollen van clients
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+Elke gekoppelde client heeft een **rol**. De master controleert die bij elk commando, en de client toont alleen wat zijn rol toestaat. Een nieuwe rol werkt meteen, zonder opnieuw te koppelen. De rollen bouwen op elkaar voort: elke rol kan alles wat de rol ervoor kan.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| Rol              | De client mag                                                                                                                                                                                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Alleen lezen** | alleen gegevens tonen. Hij blijft gekoppeld, dus hij is klaar als je hem een hogere rol geeft.                                                                                                                                                                                     |
+| **Maaltijden**   | een bolus geven, de bolus wizard en QuickWizard gebruiken, koolhydraten invoeren en een lopende bolus stoppen. Koolhydraten die je hier invoert, kunnen ervoor zorgen dat de loop meer insuline geeft.                                                                             |
+| **Zorgverlener** | alles doen wat een gebruiker in **AAPS** doet: tijdelijke streefdoelen, profiel- en insulinewissels, loopmodus, tijdelijk basaal, vertraagde bolus, scènes, careportal-gebeurtenissen, kalibraties en records verwijderen. Hij kan geen instellingen of voorinstellingen wijzigen. |
+| **Beheerder**    | alles doen, ook instellingen en voorinstellingen (QuickWizard, voorinstellingen voor tijdelijke streefdoelen, scènes, profielen, automatisering, insuline).                                                                                                                        |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+De **(i)** bovenaan het scherm **Geautoriseerde clients** toont dezelfde uitleg. Op de client toont **Beheren → Koppel met master** de eigen rol van de telefoon.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## Beveiligde modus
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+Als **Client controle toestaan** aan staat, is de master in de **beveiligde modus**: hij neemt alleen wijzigingen over van gekoppelde clients. Hij neemt **geen** behandelingen, tijdelijke streefdoelen, profielwijzigingen, wijzigingen van de bedrijfsmodus of verwijderingen over die direct in Nightscout zijn gemaakt, bijvoorbeeld op de Nightscout-website of in andere apps.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- De instellingen voor het overnemen van gegevens uit Nightscout (**NSClientV3 → Synchronisatie**) zijn verborgen zolang de beveiligde modus aan staat; **AAPS** behandelt ze alsof ze uit staan.
+- De master **uploadt** nog steeds al zijn gegevens naar Nightscout, BG inbegrepen, en houdt **websockets** aan.
+- Als de master zijn **BG uit Nightscout** haalt, neemt hij BG daar nog steeds van over.
+- Om de geschiedenis op een **nieuwe** master te laden, gebruik je **Volledige synchronisatie** in **NSClientV3**: dit neemt alles over wat in Nightscout staat, profielen inbegrepen.
+- [SMS-commando's](SMSCommands.md) worden niet beïnvloed.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+Een gekoppelde client volgt de beveiligde modus van de master: hij houdt websockets aan, en dezelfde Nightscout-instellingen zijn op de client verborgen. Een niet-gekoppelde client houdt zijn eigen instellingen.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+De [Eenvoudige modus](#preferences-simple-mode) zet de beveiligde modus altijd aan. Om hem uit te zetten, verlaat je de Eenvoudige modus en zet je **Client controle toestaan** op de master uit.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+Alles wat een gekoppelde client stuurt, wordt ondertekend, gecontroleerd en bevestigd door de master. Een behandeling die op de Nightscout-website is ingevoerd, niet: iedereen met schrijfrechten op je Nightscout kan die toevoegen. In de beveiligde modus kunnen alleen ondertekende commando's veranderen wat de master doet.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## Het eigen Nightscout-token van de client
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+Een client heeft geen beheerderstoken nodig. Hij leest alleen je Nightscout en stuurt zijn commando's via Nightscout naar de master; zelf uploadt hij niets. Daarom geeft de master elke client een eigen Nightscout-token, met alleen deze rechten:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- alles lezen,
+- schrijven naar de `settings`-collectie, het kanaal naar de master,
+- Nightscout-alarmen sluimeren.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+Het token hoort bij een Nightscout-rol met de naam **`aaps-client`**. De master maakt die rol aan de eerste keer dat hij hem nodig heeft. Je kunt de rol en de tokens (met de naam `aaps-` en de naam van de client) zien in de **Admin tools** (beheertools) van je Nightscout-site. Als de rol daar wordt gewijzigd, zet de master hem terug de volgende keer dat hij een token maakt of dat je **Geautoriseerde clients** opent.
 
-How a client gets its token:
+Hoe een client zijn token krijgt:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **Ingesteld met een QR-code**: het token zit in de code.
+- **Gekoppeld met de PIN** (of gekoppeld voordat dit bestond): na het koppelen stuurt de master de client zijn eigen token via het gekoppelde kanaal, versleuteld. De client controleert eerst of inloggen ermee werkt, en gebruikt het daarna in plaats van het token dat hij had. Hiervoor heeft de master een beheerderstoken nodig; zonder dat token houdt de client zijn token, en zijn kaart op de master toont de rode regel.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**Een client houdt zijn eigen token.** Zodra de master heeft gezien dat een client met zijn eigen token schrijft, neemt hij de commando's van die client alleen nog met dat token aan. Een commando dat met een ander token is geschreven (bijvoorbeeld een beheerderstoken dat later in de client is ingevoerd, of het token van een andere client) wordt geweigerd, ook al is de client gekoppeld. De client zegt dan "*Het master apparaat heeft dit geweigerd: deze client schrijft met een ander token naar Nightscout dan zijn eigen token*". Zijn kaart op de master meldt dit in het rood. De client wordt nog steeds als online getoond, zodat je kunt zien wat er mis is. Om dit op te lossen, verwijder je de client op de master en voeg je hem opnieuw toe.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+De master verwijdert of wijzigt nooit een Nightscout-token dat hij niet zelf heeft gemaakt (een token met andere rollen dan `aaps-client`): die zijn van jou. Hij verwijdert het eigen token van een client wanneer je de client verwijdert.
 
 ---
 
-## Using remote control
+## Besturing op afstand gebruiken
 
-### Triggering an action from the client
+### Een actie starten vanaf de client
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+Gebruik de client precies zoals je de telefoon zelf zou gebruiken: open **Koolhydraten**, **Insuline**, **Tijdelijk streefdoel**, **Profiel**, **Scènes**, het menu **Beheren**, enz., en vul de waarden in.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+Als je bevestigt, toont de client kort **“Maakt verbinding met master…”**. De **master** rekent de actie uit en begrenst die, en daarna toont de client de **eigen bevestiging van de master** — precies de regels, waarden en kleuren die de master op zijn eigen scherm zou tonen. Controleer ze en tik op **OK** om door te gaan.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![Een bevestiging van een scène, gemaakt door de master en getoond op de client](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+Hetzelfde geldt voor een gewone invoer van koolhydraten — de hoeveelheid die ter bevestiging wordt getoond, is de hoeveelheid die de master heeft berekend:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![Bevestiging van koolhydraten, gemaakt door de master](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+Nadat je hebt bevestigd, voert de master de actie één keer uit en het resultaat wordt op de client getoond.
 
-### Insulin bolus from a client
+### Insulinebolus vanaf een client
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+Dit is de belangrijkste nieuwe mogelijkheid in v4. Een bolus die op een client is gestart, wordt **door de master met zijn pomp gegeven**. De master begrenst hem met zijn eigen limieten, en de client toont de **voortgang van de toediening** zolang die loopt (en een alarm als de pomp een fout meldt).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+Een client bepaalt nooit zelf de hoeveelheid die wordt gegeven. De master rekent die opnieuw uit en begrenst hem, jij bevestigt de hoeveelheid die de master heeft gemaakt, en pas daarna wordt die gegeven.
 ```
 
 (clientmastercontrol-when-the-master-is-offline)=
-### When the master is offline
+### Als de master offline is
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+Als de master niet bereikbaar is (de telefoon staat uit of slaapt, is niet met Nightscout verbonden, of websockets werken niet), worden besturingsacties op de client **geblokkeerd voordat er iets wordt verstuurd**, en krijg je een duidelijke melding. Er wordt niets half uitgevoerd.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![Melding op de client als de master offline is](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+De client controleert de bereikbaarheid automatisch opnieuw en zet de besturing weer aan zodra de master weer online is.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### Wear OS (horloge) op een client
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+Een horloge dat aan een **client**-telefoon is gekoppeld, stuurt zijn acties via de client door naar de master (horloge → client → master). Het horloge toont de bevestigingsregels van de **master** en het echte resultaat, net als de telefoon. Het horloge instellen is niet veranderd — zie [Wear OS](../WearOS/WearOsSmartwatch.md).
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -271,90 +271,90 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## Configuratie en instellingen wijzigen
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+Koppelen doet meer dan losse acties doorsturen — het houdt ook de **configuratie** en veel **instellingen** gelijk tussen de master en zijn clients.
 
-### Configuration (which plugins are active)
+### Configuratie (welke plugins actief zijn)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+De actieve **plugins** (APS-algoritme, gevoeligheid, vloeiend maken, …) worden op de **master** gekozen en naar elke gekoppelde client **gespiegeld**. Op een client zijn deze keuzes gemarkeerd met een klein **telefoonpictogram** in het scherm [Configuratie](#configuration_sync_icon) — wijzig ze op de master en de clients volgen automatisch, en andersom.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+Op een client staat het telefoonpictogram bij *Vloeiend maken*, *Kalibratie*, *Gevoeligheid detectie* en *APS* (gesynchroniseerd vanaf de master), maar niet bij *Communicatie*:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![Configuratielijst op een client — het telefoonpictogram markeert de categorieën die met de master worden gesynchroniseerd](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+Verbindingsgegevens die per apparaat verschillen — vooral de **NSClient Nightscout-URL / toegangstoken** — worden *niet* gesynchroniseerd. Elke telefoon heeft zijn eigen gegevens; op een client komen ze uit de QR-code van de master, of je stelt ze zelf in.
 
-### Profiles
+### Profielen
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+Je **profiellijst** wordt ook gelijk gehouden tussen de master en zijn gekoppelde clients. Op een gekoppelde client toont **Beheren → Profiel** dezelfde profielen als de master. Je kunt een profiel **bewerken** of **activeren**, en — net als elk ander commando — wordt de wijziging naar de **master** gestuurd, daar toegepast en teruggesynchroniseerd.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+De eerste keer dat je een profiel activeert op een nieuw geïnstalleerde client, kan de client "*Er wordt nog geen insuline gebruikt*" tonen en je vragen om **de insuline te kiezen**. Kies de insuline die op de master actief is (**Beheren → Insuline instellingen** op de master toont die).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+Op een client die **niet gekoppeld** is, is het scherm Profiel nog steeds beschikbaar, maar **alleen om te bekijken**: de client toont de profielen die hij via Nightscout ontvangt (hij heeft ze nodig voor zijn eigen berekeningen), maar er is geen knop om te bewerken of te activeren — er is geen master om de wijziging naar te sturen.
 
 ### Instellingen
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+Een deel van de **instellingen** werkt **in beide richtingen**: je kunt ze wijzigen op de **master of op een gekoppelde client**, en de wijziging wordt naar de andere kant gesynchroniseerd. Als je zo'n instelling op een client wijzigt, wordt die via het ondertekende kanaal naar de master gestuurd en daar toegepast. Daarna wordt de geldende waarde teruggestuurd — wat je op de client ziet, is dus altijd wat de master heeft opgeslagen. Als dezelfde instelling bijna tegelijk op twee apparaten wordt gewijzigd, **wint de laatste wijziging**. Bij een instelling met een schuifregelaar wordt de nieuwe waarde verstuurd als je je vinger optilt.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+In de instellingen markeert hetzelfde kleine **telefoonpictogram** de afzonderlijke instellingen die worden gesynchroniseerd. In het voorbeeld hieronder wordt *Afkapmoment koolhydraatabsorptie* gesynchroniseerd (telefoonpictogram), terwijl instellingen zonder pictogram alleen voor dit apparaat gelden:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![De instellingen van een plugin — het telefoonpictogram markeert de gesynchroniseerde instellingen](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
+Omdat de master de opgeslagen waarde bepaalt, moet de master **bereikbaar** zijn als je vanaf een client een configuratie-item wijzigt dat door de master wordt bestuurd, of een instelling die in beide richtingen werkt. Als de master offline is, zijn die bedieningselementen op de client uitgeschakeld (zie [Als de master offline is](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## Opmerkingen over beveiliging
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **Geheime koppelingssleutel**: de master geeft die één keer aan de client — beschermd door de PIN in een Nightscout-document, of in de QR-code — en beide bewaren hem versleuteld.
+- **Een nieuwe geheime sleutel direct na het koppelen**: het eerste bericht van de client na het koppelen start een sleuteluitwisseling, en vanaf dat moment gebruiken beide telefoons een geheime sleutel die nooit over het netwerk is gegaan. Een geheime sleutel die iemand misschien heeft gezien (een gefotografeerde QR-code, een PIN-aanbod dat uit Nightscout is gelezen), heeft daarna geen nut meer. Telefoons die gekoppeld zijn voordat dit bestond, doen hetzelfde één keer na de update.
+- **Elk commando is ondertekend** (HMAC). De master weigert alles waarvan de handtekening niet past bij een gekoppelde client.
+- **Herhalen wordt voorkomen** met een teller per client die alleen oploopt, en elk commando **verloopt** na een korte geldigheidsduur.
+- **Zo min mogelijk rechten in Nightscout**: elke client heeft een [eigen Nightscout-token](#client-master-control-own-token), dat alleen kan lezen en schrijven naar het client-control-kanaal. Zodra de client het heeft gebruikt, neemt de master zijn commando's alleen nog met dat token aan. Als je de client verwijdert, wordt het token verwijderd.
+- **Alleen ondertekende wijzigingen**: in de [beveiligde modus](#client-master-control-hardened-mode) negeert de master therapiewijzigingen die direct in Nightscout zijn ingevoerd.
+- **De master ondertekent wat hij deelt**: de instellingen, de lijst met clients en het teken "master is actief" dat de master in Nightscout zet voor zijn clients, dragen de handtekening van de master. Een client neemt ze alleen over als de handtekening van de master is, dus het token van een andere client kan ze niet wijzigen. De client leert de sleutel van de master bij het koppelen, of uit de QR-code voor een telefoon die Nightscout alleen leest. Een geweigerd document staat in het NSClient-log als "*✕ SETTINGS … refused*".
+- **Jij houdt de controle**: geef elke client de [rol](#client-master-control-roles) die hij nodig heeft, trek een client in met één tik, of zet alles uit met **Client controle toestaan**.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+Als een client wordt hersteld uit een back-up die zijn commandoteller terugzet, weigert de master de volgende commando's als herhalingen. **Ontkoppel en koppel opnieuw** om dit op te lossen.
 ```
 
 ---
 
 (client-master-control-troubleshooting)=
 
-## Troubleshooting
+## Probleemoplossing
 
-| Symptom                                                                                                    | What to check                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                           | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Command **rejected** by the master                                                                         | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master.                                                                                                                                                                       |
-| Commands work but are **slow**                                                                             | Enable **websockets** on both phones (otherwise the apps fall back to slower polling).                                                                                                                                                                                                                                       |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                       | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                              | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| The QR code options cannot be chosen in the **New client** dialog                                          | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout has a token with this name and other rights"*                                                 | One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.                                                                                                                                                                                                                       |
-| *"A client with this name is in the list already"*                                                         | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                 | Master and client must run the **same** version of **AAPS**. Update the older one.                                                                                                                                                                                                                                           |
-| The client says *"This code has expired"*                                                                  | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                           | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.                                                                                    |
-| A client can no longer read Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Add it again.                                                                                                                                                                                                                               |
-| Treatments entered on the Nightscout website are not applied                                               | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
+| Symptoom                                                                                                                                  | Wat je moet controleren                                                                                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| De client zegt dat de **master offline is**                                                                                               | De telefoon van de master is wakker en draait **AAPS**; beide telefoons zijn verbonden in **NSClientV3**; **websockets** staan aan op beide; dezelfde Nightscout-site.                                                                                                                                                                                                                                          |
+| De client zegt dat hij **niet gekoppeld** is                                                                                              | Koppel opnieuw via **Beheren → Koppel met master**. Controleer of de client **Actief** is in de lijst **Geautoriseerde clients** van de master.                                                                                                                                                                                                                                                                 |
+| Commando **geweigerd** door de master                                                                                                     | De master controleert opnieuw met zijn huidige toestand — bijvoorbeeld: het gekozen profiel bestaat niet meer, of het pomptype past niet. Controleer het op de master.                                                                                                                                                                                                                                          |
+| Commando's werken, maar zijn **traag**                                                                                                    | Zet **websockets** aan op beide telefoons (anders vallen de apps terug op langzamer periodiek ophalen).                                                                                                                                                                                                                                                                                                         |
+| Koppelen wordt geannuleerd met *"De koppelingssleutel kon niet worden opgeslagen"*                                                        | Er is niets gewijzigd. Start het koppelen opnieuw; als het blijft mislukken, start **AAPSClient** opnieuw en probeer het nog een keer.                                                                                                                                                                                                                                                                          |
+| Er gebeurt niets na het koppelen                                                                                                          | Controleer of **Client controle toestaan** AAN staat op de master, en of de master met Nightscout verbonden is.                                                                                                                                                                                                                                                                                                 |
+| De QR-code-opties kunnen niet worden gekozen in het venster **Nieuwe client**                                                             | Het venster zegt waarom. *Geen beheerderstoken*: geef de master een beheerderstoken van je Nightscout, of voeg de client toe met de **PIN**. *Niet verbonden*: wacht tot de master *verbonden* toont in **NSClientV3**.                                                                                                                                                                                         |
+| *"Nightscout heeft al een token met deze naam en andere rechten"*                                                                         | Een van je eigen Nightscout-tokens heet `aaps-` plus deze naam. Kies een andere naam voor de client.                                                                                                                                                                                                                                                                                                            |
+| *"Een client met deze naam bestaat al"*                                                                                                   | Kies een andere naam, of verwijder eerst die client.                                                                                                                                                                                                                                                                                                                                                            |
+| De client zegt *"Deze code komt uit een andere AAPS versie"*                                                                              | Master en client moeten **dezelfde** versie van **AAPS** draaien. Werk de oudste bij.                                                                                                                                                                                                                                                                                                                           |
+| De client zegt *"Deze code is verlopen"*                                                                                                  | Een code die koppelt, werkt ongeveer twee minuten. Voeg de client opnieuw toe op de master om een nieuwe code te krijgen.                                                                                                                                                                                                                                                                                       |
+| De client zegt *"Deze telefoon is al gekoppeld"*                                                                                          | Ontkoppel hem eerst (**Beheren → Koppel met master → Ontkoppelen**) en scan dan opnieuw. Een code **alleen Nightscout** werkt ook op een gekoppelde telefoon.                                                                                                                                                                                                                                                   |
+| De client zegt *"Het master apparaat heeft dit geweigerd: deze client schrijft met een ander token naar Nightscout dan zijn eigen token"* | De client gebruikte eerder zijn eigen Nightscout-token en schrijft nu met een ander token, bijvoorbeeld nadat er een token in zijn Nightscout-instellingen is ingevoerd. Verwijder de client op de master en voeg hem opnieuw toe (zie [Het eigen Nightscout-token van de client](#client-master-control-own-token)).                                                                                           |
+| Het NSClient-log op de client toont *"✕ SETTINGS … refused"* en de instellingen volgen de master niet meer                                | Iemand anders heeft het instellingendocument van de master geschreven, of de master heeft een nieuwe sleutel (bijvoorbeeld nadat zijn gegevens zijn gewist). Een gekoppelde client neemt een nieuwe sleutel vanzelf over de volgende keer dat hij met Nightscout verbindt. Een telefoon die Nightscout alleen leest, heeft de QR-code van de master opnieuw nodig (**Nightscout alleen lezen → Toon QR-code**). |
+| De kaart van de client toont *"Gebruikt het Nightscout token …"* in het rood                                                              | De client schrijft nog met een token dat meer rechten heeft dan hij nodig heeft. De master stuurt hem na het koppelen zijn eigen token, maar alleen als de master een beheerderstoken heeft. Controleer het token van de master, of stel de client opnieuw in met een QR-code.                                                                                                                                  |
+| Een client kan Nightscout niet meer lezen                                                                                                 | Zijn token is verwijderd, bijvoorbeeld omdat de client op de master is verwijderd. Voeg hem opnieuw toe.                                                                                                                                                                                                                                                                                                        |
+| Behandelingen die op de Nightscout-website zijn ingevoerd, worden niet toegepast                                                          | Dit is normaal in de [beveiligde modus](#client-master-control-hardened-mode): voer ze in plaats daarvan in op een gekoppelde client.                                                                                                                                                                                                                                                                           |
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Voor problemen met Nightscout / synchronisatie, zie eerst [Problemen met NSClient oplossen](../GettingHelp/TroubleshootingNsClient.md).
 
 ---
 
