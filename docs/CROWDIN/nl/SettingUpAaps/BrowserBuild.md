@@ -55,23 +55,23 @@ Je moet steeds van tabblad naar tabblad gaan: begin met alle tabbladen gesloten,
 
 Bouwen in de browser bestaat uit een reeks keuzes. Volg deze stappen in deze volgorde:
 
-1. **[Maak je GitHub-fork](BrowserBuildFork.md)** – maak je persoonlijke kopie van de broncode van AAPS.
-2. **[Maak je keystore voor ondertekening](BrowserBuildKeystore.md)** – de belangrijkste keuze: maak een nieuwe keystore (Optie 1) of upload je bestaande keystore (Optie 2), en volg dan de pagina voor jouw apparaat.
-3. **[Geef toegang tot Google Drive](BrowserBuildGoogleDrive.md)** – laat GitHub de gebouwde app in je Google Drive opslaan.
-4. **[Bouw de APK](BrowserBuildAPK.md)** – start de GitHub Actions-workflow en kies je versie en variant.
+1. **[Je GitHub-fork maken](BrowserBuildFork.md)** – maak je persoonlijke kopie van de broncode van AAPS.
+2. **[Je keystore voor ondertekening maken](BrowserBuildKeystore.md)** – de belangrijkste keuze: maak een nieuwe keystore (Optie 1) of upload je bestaande keystore (Optie 2), en volg dan de pagina voor jouw apparaat.
+3. **[Google Drive autoriseren](BrowserBuildGoogleDrive.md)** – laat GitHub de gebouwde app in je Google Drive opslaan.
+4. **[De APK bouwen](BrowserBuildAPK.md)** – start de GitHub Actions-workflow en kies je versie en variant.
 
 Als je problemen hebt, zie **[Bouwen in de browser: probleemoplossing](../GettingHelp/BrowserBuildTroubleshooting.md)**. Voor optionele handelingen met een fork, zie [je keystore exporteren](#ci-keystore-export) of [een commit cherry-picken](#github-cherry-pick).
 
 ----
 
-**Begin met [Stap 1 – Maak je GitHub-fork](BrowserBuildFork.md) →**
+**Begin met [Stap 1 – Je GitHub-fork maken](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Stap 1: Maak je fork <BrowserBuildFork.md>
-Stap 2: Maak je keystore <BrowserBuildKeystore.md>
-Stap 3: Geef toegang tot Google Drive <BrowserBuildGoogleDrive.md>
-Stap 4: Bouw de APK <BrowserBuildAPK.md>
+Stap 1: Je fork maken <BrowserBuildFork.md>
+Stap 2: Je keystore maken <BrowserBuildKeystore.md>
+Stap 3: Google Drive autoriseren <BrowserBuildGoogleDrive.md>
+Stap 4: De APK bouwen <BrowserBuildAPK.md>
 ```
