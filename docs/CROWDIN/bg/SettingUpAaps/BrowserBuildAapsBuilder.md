@@ -227,7 +227,10 @@ GitHub показва **Page not found** (404)? Първо проверете д
 
    Ако вместо това се отвори **приложението GitHub**: докоснете **RUN WORKFLOW**, проверете версията и варианта и докоснете отново **RUN WORKFLOW**. Приложението може все още да показва **Nothing to see here**: дръпнете списъка надолу, за да го опресните и да видите компилацията си. След това продължете със стъпка 4 по-долу.
 
-2. Ако GitHub попита, докоснете зеления бутон, за да разрешите работните процеси (workflows).
+2. If GitHub asks, tap the green button to enable workflows.
+
+   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+
 3. Докоснете **Run workflow**. Отваря се малък формуляр:
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
    - **Variant** (вариант): оставете `fullRelease` за нормална употреба с помпа. Другите варианти са обяснени във [варианти на компилацията](#browserbuild-variant). `aapsclient3Release` компилира **AAPSClient3**, който е наличен от версия 4.0 на **AAPS** (вижте [За AAPSClient, AAPSClient2 и AAPSClient3](#remotecontrol-aapsclient-versions)).
