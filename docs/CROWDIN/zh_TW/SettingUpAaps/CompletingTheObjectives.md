@@ -8,7 +8,7 @@
 
 當**AAPS**第一次安裝時，必須完成每一個目標才能進入下一個目標。隨著進展，每個**目標**將逐漸解鎖新功能。
 
-**目標 1 到 8**將指導你從在智慧型手機上配置**AAPS**到“基本”混合關閉循環。這將需要大約 6 週的時間來完成。你可以在使用虛擬幫浦的情況下繼續進行到**目標 5**（在此期間使用其他胰島素給藥方法）。 **Objectives 9 and 10** are designed to test more advanced **AAPS** features with the aim of better control of your diabetes, and will take up to 3 months to complete, possibly longer. 有關估計時間分解的進一步詳情可在這裡獲得：[設置所有內容需要多長時間？](#preparing-how-long-will-it-take)
+**目標 1 到 8**將指導你從在智慧型手機上配置**AAPS**到“基本”混合關閉循環。這將需要大約 6 週的時間來完成。你可以在使用虛擬幫浦的情況下繼續進行到**目標 5**（在此期間使用其他胰島素給藥方法）。**目標 9 和 10**旨在測試較進階的**AAPS**功能，以協助您更妥善地控制糖尿病；完成這些目標最多需要 3 個月，也可能更久。有關估計時間分解的進一步詳情可在這裡獲得：[設置所有內容需要多長時間？](#preparing-how-long-will-it-take)
 
 在進行**目標**的過程中，如果需要，你還可以刪除進度並[返回早期的目標](#go-back-in-objectives)。
 
@@ -31,36 +31,36 @@
 
 **目標 1**要求用戶在**AAPS**中設置基本技術配置。在完成此步驟之前無法取得進展。
 
-- Select the correct CGM/FGM in [Configuration → BG Source](#Config-Builder-bg-source). 詳情請見[BG來源](../Getting-Started/CompatiblesCgms.md)。
-- Select the correct Pump in [Configuration → Pump](#Config-Builder-pump) to ensure your pump can communicate with **AAPS**. 如果你使用的幫浦模型沒有**AAPS**的循環驅動程式，或如果你想在使用其他胰島素給藥系統的同時完成早期**目標**，則選擇**虛擬幫浦**。詳情請見[胰島素幫浦](../Getting-Started/CompatiblePumps.md)。
+- 請在[組態 → 血糖來源](#Config-Builder-bg-source)中選取正確的 CGM/FGM。詳情請見[BG來源](../Getting-Started/CompatiblesCgms.md)。
+- 請在[組態 → 幫浦](#Config-Builder-pump)中選取正確的幫浦，確保幫浦能與**AAPS**通訊。如果你使用的幫浦模型沒有**AAPS**的循環驅動程式，或如果你想在使用其他胰島素給藥系統的同時完成早期**目標**，則選擇**虛擬幫浦**。詳情請見[胰島素幫浦](../Getting-Started/CompatiblePumps.md)。
 - 如果使用 Nightscout：
   - 請遵循[Nightscout](../SettingUpAaps/Nightscout.md)頁面中的說明，以確保**Nightscout**能接收和顯示**AAPS**資料。
-  - Note that the URL in **NSClientV3** must be **_without_ "/api/v1/"** at the end - see [Settings → NSClientV3](#Preferences-nsclient).
+  - 請注意，**NSClientV3** 中的網址結尾**_不可包含_「/api/v1/」**，請參閱[設定 → NSClientV3](#Preferences-nsclient)。
 - 如果使用 Tidepool：
   - 請遵循[Tidepool](../SettingUpAaps/Tidepool.md)頁面中的說明，以確保**Tidepool**能接收和顯示**AAPS**資料。
 
-Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognize it.*
+注意：*您可能需要等到下一筆感測器血糖讀取值傳入後，**AAPS** 才會辨識到它。*
 
 (objectives-objective2)=
 ## 目標 2：學習如何控制 AAPS
 
-**Objective 2** requires several ‘tasks’ to be actioned as shown in the screenshot below. Each task shows its status (**1**): the orange "**Not completed yet**" turns into "**Completed, well done!**" as soon as **AAPS** has registered the action. Tap **Hint** (**2**) underneath a task to open the related documentation, in case you are not familiar with a specific action yet.
+**目標 2**需要完成幾項「任務」，如下方螢幕截圖所示。每項任務都會顯示其狀態（**1**）：橘色的「**尚未完成**」會在**AAPS**記錄到您已執行該操作後，立即變成「**已完成，做得好！**」。如果您還不熟悉某項操作，請點選任務下方的**提示**（**2**），開啟相關說明文件。
 
 ![目標 2 的截圖](../images/Objective2_V2_5.png)
 
 完成**目標 2**的任務為：
 - 將你的**設定檔**設為90%，持續10分鐘。
-  - _Hint_: Tap your Profile name on the main screen to open the **Profile** screen, then use the **Activate** (▶) button and set percentage and duration. 更多資訊請參閱[設定檔切換與設定檔百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。
+  - _提示_：點選主畫面上的設定檔名稱，開啟**設定檔**畫面，接著使用**註冊**（▶）按鈕，並設定百分比和時間長度。更多資訊請參閱[設定檔切換與設定檔百分比](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。
   - _注意_：**AAPS**不接受低於0.05U/hr的基礎率。如果你的**設定檔**包含0.06U/hr或更低的基礎率，你需要創建一個臨時**設定檔**，其基礎率要更高，然後才能完成此任務。完成此任務後，切換回你的正常**設定檔**。
-- Simulate "taking a shower" by [disconnecting your pump](#AapsScreens-loop-status) in **AAPS** for a duration of 1h.
-  - _Hint_: press the loop icon on the main screen to open the Loop dialog, then choose a duration under **Disconnect pump**.
+- 透過[中斷連線幫浦](#AapsScreens-loop-status)，模擬「洗澡」情境，持續1小時，並在**AAPS**中操作。
+  - _提示_：按下主畫面上的循環圖示，開啟循環對話框，接著在**中斷幫浦連線**下方選擇時間長度。
 - 通過重新連接你的幫浦結束「洗澡」。
-  - _Hint_: press the "disconnected"-icon to open the loop dialog again and choose **Reconnect Pump**.
+  - _提示_：按下「已中斷連線」圖示，再次開啟循環對話框，然後選擇**重新連線幫浦**。
 - 設置一個自訂的[**臨時目標**](../DailyLifeWithAaps/TempTargets.md)，持續10分鐘。
-  - _Hint_: press the target range on the main screen to bring up the temporary target screen.
+  - _提示_：按下主畫面上的目標範圍，即可開啟臨時目標畫面。
 - 顯示**循環**外掛的內容。
-  - _Hint_: open **Configuration → Loop** and tap "**Open plugin**".
-- Use scroll or zoom on the BG chart to look at larger or smaller time frames.
+  - _提示_：開啟**組態 → 循環**，然後點選「**開啟外掛**」。
+- 在血糖圖表上滑動或縮放，即可查看較長或較短的時間範圍。
 
 
 (objectives-objective3)=
@@ -71,48 +71,48 @@ Note - *You may need to wait for the next sensor glucose reading to arrive befor
 有些使用者覺得**目標 3**是最難完成的目標。請閱讀**AAPS**文件以了解題目。如果你在研究**AAPS**文件後仍然感到困惑，請在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)群組中搜尋「目標 3」（因為你的問題很可能已經被提問並得到回覆）。這些群組可以提供友善的提示，或指引你查閱**AAPS**文件的相關部分。
 
 同時：
-- To reduce the number of notifications / decisions you are asked to make (temporary basal rates) while in Open Loop, set a wide target range in your **Profile** _e.g._ 90 - 150 mg/dL or 5.0 - 8.5 mmol/L.
+- 在開放循環模式下，若要減少需要您處理的通知／決策（臨時基礎率），請在**設定檔**中設定較寬的目標範圍，_例如_ 90 - 150 mg/dL 或 5.0 - 8.5 mmol/L。
 - 你可能想在晚上設置更寬的上限，或者甚至停用開環模式。
 
-To proceed with **Objective 3**, tap a question row to open it. 請仔細閱讀每個問題並選擇你的答案。
+若要繼續進行**目標 3**，請點選問題列以開啟問題。請仔細閱讀每個問題並選擇你的答案。
 
 每個問題可能有多個正確答案！如果選擇了不正確的答案，該問題將被鎖定 1 小時，你才能再次回去回答問題。當你再次嘗試回答時，請注意答案的順序可能已經改變，這是為了確保你仔細閱讀並真正暸解每個答案的正確性（或錯誤性）。
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the **Objectives**, particularly **Objective 3**. 因此，任何添加到**目標 3**的新問題將標記為「未完成」，因為**AAPS**會要求你採取行動。不要擔心，因為每個**目標**都是獨立的，你不會**失去現有的AAPS功能**，只要其他**目標**保持完成狀態即可。
+**AAPS** 有時會新增功能，因此可能需要在**目標**中新增問題，尤其是**目標 3**。因此，任何添加到**目標 3**的新問題將標記為「未完成」，因為**AAPS**會要求你採取行動。不要擔心，因為每個**目標**都是獨立的，你不會**失去現有的AAPS功能**，只要其他**目標**保持完成狀態即可。
 ```
 
 ## 目標 4：開始使用開環
 
-The purpose of **Objective 4** is to recognize how often **AAPS** will evaluate the user's basal rate against glucose levels, and recommend temporary basal rate adjustments. 作為這個**目標**的一部分，你將首次啟用開放循環，並接受提出的20個臨時基礎率變更，若需要，手動在你的幫浦上應用這些變更。你還將觀察到[**臨時目標**](../DailyLifeWithAaps/TempTargets.md)的影響。 If you are not familiar with setting a temporary basal rate change in **AAPS** yet, see the pump actions in the **Manage** sheet ([Where did the Actions tab go?](#screens-action-tab)).
+**目標 4**旨在讓您了解**AAPS**多久會根據血糖值評估使用者的基礎率，並建議調整臨時基礎率。作為這個**目標**的一部分，你將首次啟用開放循環，並接受提出的20個臨時基礎率變更，若需要，手動在你的幫浦上應用這些變更。你還將觀察到[**臨時目標**](../DailyLifeWithAaps/TempTargets.md)的影響。如果您還不熟悉如何在**AAPS**中設定臨時基礎率變更，請參閱**管理**面板中的幫浦操作（[「操作」分頁在哪裡？](#screens-action-tab)）。
 
 完成此目標的最短時間為：**7天**。這是一個強制的等待時間。即使所有基礎率變更都已應用，也無法繼續到下一個**目標**。
 
-- Select Open Loop by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Open Loop** as running mode.
+- 按下主畫面上的[循環圖示](#AapsScreens-loop-status)，並選擇**開放循環**作為執行模式，即可選取開放循環。
 - 在 7 天內手動執行至少 20 次臨時基礎率建議；將他們輸入到你的（實體）幫浦中，並在 AAPS 中確認你已接受他們。確保這些基礎率調整顯示在**AAPS**和**Nightscout**中。
 - 在必要時使用[**臨時目標**](../DailyLifeWithAaps/TempTargets.md)。在治療低血糖後，使用預定的「低血糖臨時目標」以防止系統過度修正回升。
 - 如果你此時仍處於 [簡單模式](#preferences-simple-mode)，現在可能是關閉它的好時機。
 
-為減少在開放循環中所提出的基礎率變更數，你仍可以使用[**目標 3**](#objective-3-prove-your-knowledge)中所述的技巧。 Additionally, you can change the minimum percentage for recommended basal rate changes with the "**Open mode minimum change**" setting in **Settings → Loop**. 數值越高，你會收到的變更通知就越少。
+為減少在開放循環中所提出的基礎率變更數，你仍可以使用[**目標 3**](#objective-3-prove-your-knowledge)中所述的技巧。此外，您也可以在**設定 → 循環**中，透過「**開放模式最小變更量**」設定，調整建議基礎率變更的最低百分比。數值越高，你會收到的變更通知就越少。
 
 ![開放循環最小請求變更](../images/OpenLoop_MinimalRequestChange2.png)
 
 ```{admonition} Note
 :class: note
 
-You don't need to action each and every system recommendation!
+您不需要執行每一項系統建議！
 ```
 (objectives-objective5)=
 ## 目標 5：暸解你的開環，包括其臨時基礎率建議
 
-作為**目標 5**的一部分，你將開始了解臨時基礎率建議是如何得出的。 This includes the [determination of basal logic](#aaps-screens-how-predictions-become-a-dosing-decision), analyzing the impact by observing [prediction lines in **AAPS Overview**](#aaps-screens-prediction-lines) (or Nightscout) and looking at the detailed calculations shown on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**).
+作為**目標 5**的一部分，你將開始了解臨時基礎率建議是如何得出的。這包括[判斷基礎率邏輯](#aaps-screens-how-predictions-become-a-dosing-decision)、透過查看[**AAPS 總覽**](#aaps-screens-prediction-lines)（或 Nightscout）中的預測線來分析影響，以及查看**OpenAPS SMB**外掛畫面上顯示的詳細計算結果（**組態 → APS → 開啟外掛**）。
 
 完成此目標的預計時間為：**7天**。
 
-This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). This value can be set in [Settings → OpenAPS SMB](#Preferences-openaps-smb-settings). In [simple mode](#preferences-simple-mode), **AAPS** sets this value automatically and you don't need to change it. 如果你仍在使用虛擬幫浦，請確保在**AAPS**和你的胰島素幫浦中均設置此安全設置。
+此**目標**要求您依照[OpenAPS 功能](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)中的說明，判斷並設定「最高基礎率」（max-basal）數值。您可以在[設定 → OpenAPS SMB](#Preferences-openaps-smb-settings)中設定此數值。在[簡易模式](#preferences-simple-mode)中，**AAPS**會自動設定此數值，您不需要變更。如果你仍在使用虛擬幫浦，請確保在**AAPS**和你的胰島素幫浦中均設置此安全設置。
 
-你可能希望將你的[**設定檔**血糖目標](#profile-glucose-targets)設置得比平時高，直到你對**AAPS**的計算和設置熟悉為止。 You may wish to experiment with adjusting your **BG target** in your **Profile** being in a tighter range (say, 1 or less mmol/L [20 mg/dL or less] wide) and observe the resulting behavior.
+你可能希望將你的[**設定檔**血糖目標](#profile-glucose-targets)設置得比平時高，直到你對**AAPS**的計算和設置熟悉為止。您可以試著將**設定檔**中的**血糖目標**調整為較窄的範圍（例如 1 mmol/L 以下［20 mg/dL 以下］的範圍），並觀察後續變化。
 
 ![停止標誌](../images/sign_stop.png)
 
@@ -131,7 +131,7 @@ This **Objective** requires you to determine and set your “Maximum basal rate�
 ![警告標誌](../images/sign_warning.png)
 ```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
 :class: note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+您仍需要自行處理偏高的血糖值（使用幫浦或注射筆手動注射修正劑量）！
 ```
 
 作為**目標 6**的一部分，你將關閉循環並啟動其**低血糖暫停**（LGS）模式，當[最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)設定為零時。你必須在LGS模式下持續5天來完成這個**目標**。你應該利用這段時間檢查你的**設定檔**設定是否準確，並且LGS事件不會過於頻繁地被觸發。
@@ -140,12 +140,12 @@ You will still need to correct high BG values by yourself (manually with correct
 
 在你以**LGS**模式關閉循環之前，確保你的當前**設定檔**（基礎、ISF、IC）已被充分測試，這是至關重要的。不正確的**設定檔**可能會使你陷入低血糖情況，需要手動處理。準確的**設定檔**將有助於在5天期間減少低血糖處理的需求。
 
-**If you still observe frequent or severe low glucose episodes consider refining your [insulin type's DIA](#Config-Builder-insulin-dia), basal, ISF and carb ratios.** Please refer to the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group which has much discussion on this.
+**如果您仍經常發生低血糖，或低血糖情況嚴重，請考慮調整[胰島素類型的作用時間（DIA）](#Config-Builder-insulin-dia)、基礎率、ISF 和碳水化合物比率。**請參閱[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)群組，這些主題在群組中有許多討論。
 
 
 在**目標 6**期間，**AAPS**將最大IOB設定重置為零。**此覆蓋設定將在進入目標 7 時結束。**
 
-這意味著當你在**目標 6**時，如果傳感器的血糖水平下降，**AAPS**將為你減少基礎胰島素的供應。 But, if sensor glucose levels are rising, **AAPS** will increase the basal rate above your **Profile** value only if **basal IOB** is negative as a result of a previous **LGS**. 否則，**AAPS**不會將基礎提升到超過你當前的個人設定，即使血糖水平上升。這樣的警告是為了避免低血糖，因為你正在學習使用**AAPS**。
+這意味著當你在**目標 6**時，如果傳感器的血糖水平下降，**AAPS**將為你減少基礎胰島素的供應。不過，如果感測器血糖值正在上升，只有在先前發生**LGS**而導致**基礎胰島素活性胰島素**為負值時，**AAPS**才會將基礎率提高到**設定檔**中的數值以上。否則，**AAPS**不會將基礎提升到超過你當前的個人設定，即使血糖水平上升。這樣的警告是為了避免低血糖，因為你正在學習使用**AAPS**。
 
 **因此，你必須用手動的胰島素注射來處理高血糖值。**
 
@@ -154,18 +154,18 @@ You will still need to correct high BG values by yourself (manually with correct
 ![例子：負IOB](../images/Objective6_negIOB.png)
 
 - 將你的目標範圍設置得比平常略高，以增加安全緩衝。
-- Enable 'Low Glucose Suspend' mode by pressing the Loop icon on the main screen and choosing **Low Glucose Suspend** as running mode.
+- 按下主畫面上的循環圖示，並選擇**低血糖停幫浦**作為執行模式，即可啟用「低血糖停幫浦」模式。
 - 檢視啟動的臨時基礎率，觀察 「首頁總覽」螢幕上的藍綠色基礎文本或 「首頁總覽」圖表中的藍綠色基礎呈現。
 - 在處理低血糖後，你可能會暫時經歷血糖反彈，但無法提高基礎率來應對反彈。
 
 (objectives-objective7)=
 ## 目標 7：調整閉環模式，將 maxIOB 提高至 0 以上並逐步降低血糖目標
 
-要完成**目標 7**，你必須關閉循環並提升你的[最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)。由於低血糖暫停模式，**maxIOB** 在 **目標 6** 中會自動被歸零。現在已不再如此。 **AAPS**將開始使用你所定義的最大IOB值來調整高血糖值。 In [simple mode](#preferences-simple-mode), **AAPS** sets maxIOB automatically and you don't need to change it.
+要完成**目標 7**，你必須關閉循環並提升你的[最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)。由於低血糖暫停模式，**maxIOB** 在 **目標 6** 中會自動被歸零。現在已不再如此。 **AAPS**將開始使用你所定義的最大IOB值來調整高血糖值。在[簡易模式](#preferences-simple-mode)中，**AAPS**會自動設定 maxIOB，您不需要變更。
 
 完成這個目標的最短時間為**1天**。這是一個強制的等待時間。在這段時間內，無法進入下一個**目標**。
 
-- Select **Closed Loop** by pressing the [Loop icon](#AapsScreens-loop-status) on the main screen and choosing **Closed Loop** as running mode. 保持在**閉合循環**中至少持續1天。
+- 在主畫面按下 [循環圖示](#AapsScreens-loop-status)，選擇 **循環模式**，再選擇 **閉環** 作為運作模式。保持在**閉合循環**中至少持續1天。
 
 - 慢慢提高“**最大總 IOB OpenAPS 不能超過**” （在 OpenAPS 中稱為 'max-iob'）的值，直到你找到最適合自己的設置。
 
@@ -188,11 +188,11 @@ You will still need to correct high BG values by yourself (manually with correct
 
 完成此目標的最短時間為**7天**。這是一個強制的等待時間。在這段時間內，無法進入下一個**目標**。
 
-Enable [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md) over a period of 7 days (in [simple mode](#preferences-simple-mode) it is enabled by default) and watch [**Overview**'s graph white line](#AapsScreens-section-g-additional-graphs) showing your insulin sensitivity rising or falling due to exercise or hormones etc. Keep an eye on the **OpenAPS SMB** plugin screen (**Configuration → APS → Open plugin**) which shows **AAPS** adjusting the sensitivity, basals and targets accordingly.
+啟用 [自動敏感度調整](../DailyLifeWithAaps/KeyAapsFeatures.md)，持續觀察 7 天（在[簡易模式](#preferences-simple-mode)中，預設會啟用此功能），並留意 [**總覽**圖表中的白線](#AapsScreens-section-g-additional-graphs)，查看運動、荷爾蒙等因素如何讓胰島素敏感度上升或下降。請留意 **OpenAPS SMB** 外掛畫面（**組態設定 → APS → 開啟外掛**），其中會顯示 **AAPS** 如何相應調整敏感度、基礎率和目標值。
 
-現在是檢視你對[敏感度檢測](#Config-Builder-sensitivity-detection)設定的好時機。 You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs).
+現在是檢視你對[敏感度檢測](#Config-Builder-sensitivity-detection)設定的好時機。您可以在主畫面的[額外圖表](#AapsScreens-section-g-additional-graphs)中查看敏感度。
 
-Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustments) as a one off to check your basals remain accurate or do a traditional basal test.
+此外，你可以使用[自動調整](#autotune-how-autotune-calculates-adjustments)來檢查你的基礎是否準確，或進行傳統的基礎測試。
 
 (objectives-objective9)=
 ## 目標 9：啟用白天使用的其他 oref1 功能，例如超微量注射 (SMB)
@@ -203,7 +203,7 @@ Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustmen
 
 - 本文件中的[SMB部分](#Open-APS-features-super-micro-bolus-smb)和[openAPS文件中的oref1覆蓋](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)是理解**SMB**及**無基礎胰島素輸送**的必讀內容。
 - 一旦完成，你可以[提升最大IOB](#Open-APS-features-maximum-total-iob-openaps-cant-go-over)以更有效地使用**SMB**。最大IOB現在包含所有**IOB**，而不僅僅是累積的基礎。此門檻值暫停**SMB**，直到IOB降至此值以下（_例如_，**最大IOB**設為7U，而為了覆蓋一餐注射8U：在IOB降到7U以下之前，SMBs將被暫停，並不會發放）。建議的初始設定為將**maxIOB**設為**平均餐後追加劑量 + 3 倍的每日最高基礎速率**，其中「每日最高基礎速率」指一天中任意時段的每小時最大值。請參考[目標 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets)。
-- Evaluate your carb absorption rate and consider changing the “min_5m_carbimpact”-parameter in [Settings → Absorption settings → min_5m_carbimpact](#Preferences-min_5m_carbimpact) if you find it too slow or too fast.
+- 評估碳水化合物的吸收速率；如果您覺得吸收速度太慢或太快，請考慮變更 [設定 → 吸收設定 → min_5m_carbimpact](#Preferences-min_5m_carbimpact) 中的「min_5m_carbimpact」參數。
 
 (objectives-objective10)=
 ## 目標 10：自動化
@@ -214,37 +214,37 @@ Additionally, you can use [Autotune](#autotune-how-autotune-calculates-adjustmen
 
 首先閱讀文件頁面[自動化](../DailyLifeWithAaps/Automations.md)。
 
-Set up the most basic automation rule; for example trigger an Android notification in a few minutes:
-- Open **Manage → Automation** and tap the **+** button (**Add rule**).
-- Enter a **Task name**, for example "My first automation notification".
-- Under **Condition**, tap "**EDIT**".
-  - Tap "**Add trigger**" and select "**Time**". **AAPS** creates an entry for today at the current time.
-  - Change the time so that it triggers in a few minutes.
-  - Tap the **Save** icon (top right) to go back to the rule.
-- Under **Action**, tap "**ADD**" and select "**Notification**".
-  - Enter a message in the action card, for example "My first automation".
-- Tap the **Save** icon (top right) and make sure the rule is **Enabled**.
+設定最基本的自動化規則，例如：在幾分鐘後觸發 Android 通知。
+- 開啟 **管理 → 自動化**，然後點選 **+** 按鈕（**新增規則**）。
+- 輸入**工作名稱**，例如「我的第一則自動化通知」。
+- 在**條件**下方，點選「**編輯**」。
+  - 點選「**新增觸發條件**」，然後選擇「**時間**」。 **AAPS** 會新增一筆今天目前時間的項目。
+  - 將時間調整為幾分鐘後觸發。
+  - 點選 **儲存** 圖示（右上角），返回規則設定。
+- 在**動作**下方，點選「**新增**」，然後選擇「**通知**」。
+  - 在動作卡片中輸入訊息，例如「我的第一則自動化通知」。
+- 點選 **儲存** 圖示（右上角），並確認規則已**啟用**。
 - 等到時間觸發通知（根據你的手機，可能會有幾分鐘的延遲）
 
 接下來，你可以嘗試設置更有用的**自動化**。文件頁面提供了一些範例，你也可以在[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)群組中搜尋“自動化”截圖。在[Discord](https://discord.gg/4fQUWHZ4Mw)社群中也有一個專屬頻道。
 
 例如，如果你每天早上在上學/上班前的同一時間吃相同的早餐，你可以建立一個**自動化**，比如“早餐前目標”，以在早餐前30分鐘將**臨時目標**設置為稍微降低的值。在這種情況下，你的條件可能會包括 "定期時間"，選擇一週中的特定日子（星期一、星期二、星期三、星期四、星期五）和特定時間（上午 06:30）。該行動將包含“開始臨時目標”，搭配一個低於平常目標值的設定，並持續 30 分鐘。
 
-## When all objectives are completed
+## 完成所有目標後
 
-Once you have accomplished all the **Objectives**, the list shows each of them with a tick and the date it was accomplished. The **Objectives** item disappears from the bottom navigation; you can still open the list with **Configuration → Constraints → Objectives → Open plugin**.
+完成所有**目標**後，清單中的每個目標旁都會顯示勾選記號和完成日期。**目標**項目會從底部導覽列消失；您仍可透過 **組態設定 → 限制條件 → 目標 → 開啟外掛** 開啟清單。
 
-![All objectives accomplished](../images/objectives/objectives_completed.png)
+![已完成所有目標](../images/objectives/objectives_completed.png)
 
-Press "**More**" under an objective to see its tasks again:
+點選目標下方的「**更多**」，即可再次查看其工作項目：
 
-![Details of an accomplished objective](../images/objectives/objective_1_details.png)
+![已完成目標的詳細資料](../images/objectives/objective_1_details.png)
 
 (CompletingTheObjectives-go-back-in-objectives)=
 ## 返回目標
 
-If you wish to go back in the **Objectives** for whatever reason, open the finished **Objective** with "**More**" and tap "**Reset finished state**":
+如果您因任何原因想回到**目標**，請點選已完成的**目標**下方的「**更多**」，然後點選「**重設完成狀態**」：
 
 ![返回目標](../images/Objective_ClearFinished.png)
 
-In the same way, the **Objective** you are currently working on can be restarted with "**Reset started state**".
+同樣地，您目前正在進行的**目標**也可以透過「**重設開始狀態**」重新開始。
