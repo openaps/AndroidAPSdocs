@@ -167,26 +167,26 @@ Algunos objetivos exigen que pase un número de días para asegurarse de que ent
 
 Este es un plazo aproximado:
 
-| Tareas                                                               |        Tiempo aprox.         |
-| -------------------------------------------------------------------- |:----------------------------:|
-| Primera lectura de la documentación                                  |           1–2 días           |
-| Configurar GitHub para permitir la compilación en el navegador       |          1–4 horas           |
-| Configurar un servidor de informes                                   |            1 hora            |
-| Instalar una app de MCG (xDrip, BYODA, …)                            |            1 hora            |
-| Configuración inicial de MCG → xDrip → AAPS                          |            1 hora            |
-| Configuración inicial de AAPS → bomba                                |            1 hora            |
-| Configurar AAPS → Nightscout/Tidepool (solo informes)                |            1 hora            |
-| Opcional: configurar Nightscout ↔ **AAPS** y NSFollowers             |            1 hora            |
-| Objetivo 1: Configurar la visualización y la monitorización          |            1 hora            |
-| Objetivo 2: Aprenda cómo controlar AAPS                              |           2 horas            |
-| Objetivo 3: Compruebe su conocimiento                                |        Hasta 14 días         |
-| Objetivo 4: Iniciando con un lazo abierto                            |        Mínimo 7 días         |
-| Objetivo 5: Comprender tu lazo abierto                               |            7 días            |
-| Objetivo 6: Empezando a cerrar el lazo (Suspensión por glucosa baja) |   Mínimo 5, hasta 14 días    |
-| Objetivo 7: Ajustando el lazo cerrado                                |  Mínimo 1 día, hasta 7 días  |
-| Objetivo 8: Ajustar las basales y ratios, activar Autosens           | Mínimo 7 días, hasta 14 días |
-| Objetivo 9: Activar Super Micro Bolo (SMB)                           |        Mínimo 28 días        |
-| Objetivo 10: Automatización                                          |        Mínimo 28 días        |
+| Tareas                                                             |        Tiempo aprox.         |
+| ------------------------------------------------------------------ |:----------------------------:|
+| Primera lectura de la documentación                                |           1–2 días           |
+| Configurar GitHub para permitir la compilación en el navegador     |          1–4 horas           |
+| Configurar un servidor de informes                                 |            1 hora            |
+| Instalar una app de MCG (xDrip, BYODA, …)                          |            1 hora            |
+| Configuración inicial de MCG → xDrip → AAPS                        |            1 hora            |
+| Configuración inicial de AAPS → bomba                              |            1 hora            |
+| Configurar AAPS → Nightscout/Tidepool (solo informes)              |            1 hora            |
+| Opcional: configurar Nightscout ↔ **AAPS** y NSFollowers           |            1 hora            |
+| Objetivo 1: Configurar la visualización y la monitorización        |            1 hora            |
+| Objetivo 2: Aprender a controlar AAPS                              |           2 horas            |
+| Objetivo 3: Demostrar tus conocimientos                            |        Hasta 14 días         |
+| Objetivo 4: Empezar con un lazo abierto                            |        Mínimo 7 días         |
+| Objetivo 5: Comprender tu lazo abierto                             |            7 días            |
+| Objetivo 6: Empezar a cerrar el lazo (Suspensión por glucosa baja) |   Mínimo 5, hasta 14 días    |
+| Objetivo 7: Ajustar el lazo cerrado                                |  Mínimo 1 día, hasta 7 días  |
+| Objetivo 8: Ajustar las basales y ratios, activar Autosens         | Mínimo 7 días, hasta 14 días |
+| Objetivo 9: Activar el super micro bolo (SMB)                      |        Mínimo 28 días        |
+| Objetivo 10: Automatización                                        |        Mínimo 28 días        |
 
 Cuando **AAPS** ya funcione por completo, seguirás teniendo que ajustar tu configuración con regularidad para mejorar el control general de tu diabetes.
 
@@ -232,7 +232,7 @@ Recomendamos a los usuarios mantener actualizada la versión de Android de su te
 :class: warning
 Samsung, por desgracia, suele forzar actualizaciones en sus teléfonos, lo que puede causar problemas de conexión Bluetooth. Para desactivar estas actualizaciones forzadas, tienes que poner el teléfono en «modo desarrollador»:
 
-1. Ve a **Ajustes** > **Acerca del teléfono** > **Información de software** y toca **Número de compilación** hasta que confirme que has activado el modo desarrollador.
+1. Ve a **Ajustes** > **Información del teléfono** > **Información de software** y toca **Número de compilación** hasta que confirme que has activado el modo desarrollador.
 2. Vuelve al menú principal de **Ajustes**, donde deberías ver una nueva opción de menú **Opciones de desarrollador**.
 3. Abre **Opciones de desarrollador**, busca **Actualización automática del sistema** y desactívala.
 ```
