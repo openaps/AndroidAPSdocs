@@ -2,7 +2,7 @@
 
 Plugin Autotune je implementácia algoritmu autotune z OpenAPS v AAPS. Analyzuje vašu nedávnu históriu v AAPS a navrhuje úpravy bazálnych dávok, ISF a sacharidového pomeru.
 
-Plugin Autotune je dostupný vo verziách AAPS od [3.4](#version3400), ale predvolene je skrytý.
+Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Ako Autotune vypočítava úpravy
