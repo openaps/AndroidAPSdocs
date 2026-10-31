@@ -211,7 +211,7 @@ Una **ICR más alta / más débil** = más comida por unidad, es decir, recibes 
 
 ### Cómo configurarlo
 
-La **figura de abajo** muestra un ejemplo de la **ICR** de un usuario y cómo se puede configurar en un **Perfil de AAPS**. Al introducir estos valores, se introduce la parte final de la ratio: así, una ratio insulina-carbohidratos de 1:3,5 se introduce simplemente como «3.5».
+La **figura de abajo** muestra un ejemplo de la **ICR** de un usuario y cómo se puede configurar en un **Perfil de AAPS**. Al introducir estos valores, se introduce la parte final de la ratio: así, una ratio insulina-carbohidratos de 1:3,5 se introduce simplemente como «3,5».
 
 ![ICR del perfil](../images/Profile_ICR.png)
 
