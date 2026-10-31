@@ -41,8 +41,8 @@ Porovnávaciu tabuľku rôznych zariadení kompatibilných s Rileylinkom nájdet
 Aby mohol AAPS na diaľku posielať príkazy, nastavte na pumpe tieto nastavenia. Kroky potrebné na každú zmenu na pumpe Medtronic 715 sú pri každom nastavení uvedené v zátvorkách. Presné kroky sa môžu líšiť podľa typu pumpy a/alebo verzie firmvéru.
 
 - **Zapnite na pumpe vzdialený režim** (na pumpe stlačte Act a prejdite do Utilities -> Remote Options, vyberte On a na ďalšej obrazovke zvoľte Add ID a pridajte ľubovoľné ID, napríklad 111111). Aby pumpa očakávala vzdialenú komunikáciu, v zozname Remote ID musí byť aspoň jedno ID.
-- **Nastavte maximálny bazál** (na pumpe stlačte Act, prejdite do Basal a potom vyberte Max Basal Rate). Ak túto hodnotu nastavíte napríklad na štvornásobok vašej najvyššej bežnej bazálnej dávky, umožní to dočasný bazál 400 %. Najvyššia hodnota, ktorú pumpa povolí, je 34,9 jednotky za hodinu.
-- **Nastavte maximálny bolus** (na pumpe stlačte Act, prejdite do Bolus a potom vyberte Max Bolus). Je to najväčší bolus, ktorý pumpa prijme. Najvyššia hodnota, ktorú pumpa povolí, je 25.
+- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. Najvyššia hodnota, ktorú pumpa povolí, je 34,9 jednotky za hodinu.
+- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. Najvyššia hodnota, ktorú pumpa povolí, je 25.
 - **Nastavte profil na Standard**. (Na pumpe stlačte Act, prejdite do Basal a potom vyberte Patterns.) Pumpa potrebuje iba jeden profil, pretože rôzne profily bude spravovať AAPS vo vašom telefóne. Ďalšie vzory (Patterns) nie sú potrebné.
 - **Nastavte typ dočasnej bazálnej dávky** (na pumpe stlačte Act, prejdite do Basal a potom do Temp Basal Type). Vyberte Absolute (nie Percent).
 
@@ -76,8 +76,8 @@ Pri nastavovaní AAPS na prácu s pumpou Medtronic musíte v časti **Nastavenia
 - **Sériové číslo pumpy**: Je uvedené na zadnej strane pumpy a začína na SN. Zadajte iba 6 zobrazených číslic bez písmen (napr. 123456).
 - **Typ pumpy**: Model pumpy, ktorý používate (napr. 522). 
 - **Frekvencia pumpy**: Sú dve možnosti podľa toho, kde bola vaša pumpa pôvodne distribuovaná. Ak si nie ste istí, ktorú možnosť zvoliť, pozrite si [Časté otázky](#MedtronicPump-faq)): 
-    - pre US & Canada sa používa frekvencia 916 MHz
-    - pre celý svet (Worldwide) sa používa frekvencia 868 MHz
+    - for US & Canada, frequency used is 916 MHz
+    - for Worldwide, frequency used is 868 MHz
 - **Max. bazál v pumpe (U/h)**: Musí sa zhodovať s nastavením vo vašej pumpe (pozrite Konfigurácia pumpy vyššie). Aj toto nastavenie musíte zvoliť starostlivo, pretože určuje, koľko inzulínu môže AAPS podať cez bazálnu dávku. Tým sa v skutočnosti nastaví maximálny dočasný bazál. Ak túto hodnotu nastavíte napríklad na štvornásobok vašej najvyššej bežnej bazálnej dávky, umožní to dočasný bazál 400 %. Najvyššia hodnota, ktorú pumpa povolí, je 34,9 jednotky za hodinu.
 - **Max. bolus v pumpe (U)** (za hodinu): Musí sa zhodovať s nastavením vo vašej pumpe (pozrite Konfigurácia pumpy vyššie). Toto nastavenie dobre zvážte, pretože určuje, aký veľký bolus môže AAPS vôbec nastaviť.
 - **Oneskorenie pred podaním bolusu (s)**: Počet sekúnd od zadania bolusu do chvíle, keď sa príkaz naozaj odošle do pumpy. Počas tohto času môže používateľ bolus zrušiť, ak bol príkaz na bolus odoslaný omylom. Bolus, ktorý sa začal podávať cez AAPS, nie je možné zrušiť. Bolus, ktorý sa už začal podávať, sa dá zrušiť jedine tak, že pumpu ručne pozastavíte a potom ju znovu spustíte.
@@ -166,7 +166,7 @@ AAPS používa na synchronizáciu sériové číslo a sériové číslo je vidit
 
 ### Používatelia OpenAPS
 
-Používatelia OpenAPS by mali vedieť, že AAPS s pumpou Medtronic používa úplne iný prístup ako OpenAPS. Pri používaní AAPS komunikujete s pumpou hlavne cez telefón. Pri bežnom používaní budete ponuku pumpy pravdepodobne potrebovať iba pri výmene zásobníka. Pri OpenAPS je to veľmi odlišné, tam sa aspoň časť bolusu zvyčajne podáva tlačidlami rýchleho bolusu. Ak pumpou ručne podávate bolus, môžu nastať problémy, keď sa AAPS v rovnakom čase pokúsi podať bolus. Existujú kontroly, ktoré sa snažia takýmto problémom predísť, ale aj tak by ste sa tomu mali, ak je to možné, vyhnúť.
+Používatelia OpenAPS by mali vedieť, že AAPS s pumpou Medtronic používa úplne iný prístup ako OpenAPS. Pri používaní AAPS komunikujete s pumpou hlavne cez telefón. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. Pri OpenAPS je to veľmi odlišné, tam sa aspoň časť bolusu zvyčajne podáva tlačidlami rýchleho bolusu. Ak pumpou ručne podávate bolus, môžu nastať problémy, keď sa AAPS v rovnakom čase pokúsi podať bolus. Existujú kontroly, ktoré sa snažia takýmto problémom predísť, ale aj tak by ste sa tomu mali, ak je to možné, vyhnúť.
 
 ### Logovanie
 
@@ -200,7 +200,7 @@ Kód GNARL plne podporuje všetky funkcie, ktoré ovládač Medtronic v AAPS pou
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### Čo robiť, ak stratím spojenie s RileyLinkom a/alebo pumpou?
+### What to do if I lose connection to RileyLink and/or pump?
 
 Na vyriešenie problémov so spojením môžete skúsiť viacero možností.
 
@@ -220,7 +220,7 @@ Na zadnej strane pumpy nájdete riadok s číslom modelu a so špeciálnym trojp
 
 - NA – Severná Amerika (vo výbere frekvencie musíte zvoliť „US & Canada (916 MHz)“)
 - CA – Kanada (vo výbere frekvencie musíte zvoliť „US & Canada (916 MHz)“)
-- WW – celý svet (vo výbere frekvencie musíte zvoliť „Celosvetové (868 MHz)“)
+- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
 
 (MedtronicPump-pump-unreachable)=
 
@@ -229,7 +229,7 @@ Na zadnej strane pumpy nájdete riadok s číslom modelu a so špeciálnym trojp
 Niektoré pumpy Medtronic po aktualizácii **AAPS** hlásia chybu „pump unreachable“ (pumpa nedostupná). Opravíte ju zmenou typu kódovania:
 
 1. Prejdite do **Konfigurácia** > **Pumpa** a na karte **Medtronic** ťuknite na **Nastavenia**.
-2. Nastavte **Kódovanie Medtronic** na **Hardvérové kódovanie 4b6b**.
+2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
 
 ## Kde získať pomoc
 
