@@ -59,7 +59,7 @@ If in doubt, you can also select **Virtual Pump** and select **Medtrum** later, 
 
 On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
 
-Open the top-left **menu** (☰), tap **Configuration** > **Pump**, and select the **Medtrum** card. Only one pump can be active at a time.
+Open the top-left **menu** (☰), tap **Configuration** > **Pump**, and select the **Medtrum** card. Une seule pompe peut être active à la fois.
 
 ![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_4.png)
 
@@ -151,7 +151,7 @@ These settings are not part of the Medtrum driver. Open them from the **Settings
 
 Open **Settings** > **Pump**:
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Paramètres > Pompe](../images/preferences/settings_pump.png)
 
 **BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
 
@@ -161,7 +161,7 @@ Enable this setting if you often have connection problems with your pump.
 
 Open **Settings** > **Local alerts**:
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Paramètres > Alertes locales](../images/preferences/settings_local_alerts.png)
 
 ##### Alert if pump is unreachable
 
