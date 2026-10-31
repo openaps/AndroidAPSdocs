@@ -1,70 +1,70 @@
-# Dexcom G6 and ONE
+# Dexcom G6 e ONE
 
-## Basics first
+## O básico primeiro
 
--   Follow general CGM hygiene and setting sensor recommendation [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+-   Siga as recomendações gerais de higiene do CGM e de colocação do sensor [aqui](../CompatibleCgms/GeneralCGMRecommendation.md).
 
-## General hints for looping with G6 and ONE
+## Dicas gerais para usar o loop com o G6 e o ONE
 
-- Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
+- Os transmissores recentes chamam-se Firefly. Os sensores não podem ser reiniciados sem retirar o transmissor, que por sua vez não pode ser reposto; também não geram dados brutos.
 
-- If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
+- Se reiniciar sensores, esteja pronto para calibrar e vigie a variação.
 
-- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+- A pré-imersão (pre-soak) do G6/ONE com calibração de fábrica pode dar variação nos resultados. Se fizer pré-imersão (pre-soak), para ter os melhores resultados, provavelmente terá de calibrar o sensor.
 
-Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Leia mais no [artigo](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) publicado por Tim Street em [www.diabettech.com](https://www.diabettech.com).
 
-## If using G6 or ONE with xDrip
+## Se usar o G6 ou o ONE com o xDrip
 
-- If not already set up, download [xDrip](https://github.com/NightscoutFoundation/xDrip) and adjust its settings following the [xDrip settings page](../CompatibleCgms/xDrip.md).
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-- When using xDrip as receiver uninstall the Dexcom app first. **You cannot connect xDrip and Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip alarms use the [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip.
-- You can also use xDrip as a companion app of the official Dexcom app, but you might experience delays in BG readings.
-- xDrip always uses the transmitter's [native algorithm](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) with current transmitters; there is no reason to disable it. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) only function on old transmitters (firmware 1.6.5.25 or earlier), where they are needed to prevent the sensor stopping after 10 days; recent (Firefly) transmitters ignore them. See [Restart a sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) before attempting any restart.
-- Everything related to the sensor and transmitter themselves is documented on the [xDrip Dexcom page](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+- Se ainda não o fez, transfira o [xDrip](https://github.com/NightscoutFoundation/xDrip) e ajuste as suas definições seguindo a [página de definições do xDrip](../CompatibleCgms/xDrip.md).
+- Selecione xDrip em [**Configuração → Fonte da Glicose**](#Config-Builder-bg-source).
+- Os transmissores Dexcom G6 e ONE podem estar ligados ao mesmo tempo ao recetor Dexcom (ou, em alternativa, à bomba t:slim) e a uma app no seu telefone.
+- Se usar o xDrip como recetor, desinstale primeiro a app Dexcom. **Não pode ligar o xDrip e a app Dexcom ao transmissor ao mesmo tempo!**
+- Se precisa do Clarity e quer aproveitar os alarmes do xDrip, use a [BYODA](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (só G6) com transmissão local para o xDrip.
+- Também pode usar o xDrip como app complementar da app oficial Dexcom, mas pode ter atrasos nas leituras de glicose.
+- Com os transmissores atuais, o xDrip usa sempre o [algoritmo nativo](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) do transmissor; não há razão para o desativar. Os [reinícios preventivos](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) só funcionam em transmissores antigos (firmware 1.6.5.25 ou anterior), onde são precisos para evitar que o sensor pare ao fim de 10 dias; os transmissores recentes (Firefly) ignoram-nos. Veja [Reiniciar um sensor](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) antes de tentar qualquer reinício.
+- Tudo o que diz respeito ao próprio sensor e transmissor está documentado na [página Dexcom do xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
-## If using G6 with Build Your Own Dexcom App
+## Se usar o G6 com a Build Your Own Dexcom App
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated.
+A Dexcom BYODA é agora uma versão muito antiga da app e não pode ser atualizada.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip
+-   A [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) suporta transmissão local para o AAPS e/ou o xDrip
 
--   This app lets you use your Dexcom G6 with any Android smartphone.
--   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
--   Install the downloaded apk
--   Enter sensor code and transmitter serial no. in patched app.
--   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   After short time BYODA should pick-up transmitter signal.
+-   Esta app permite usar o seu Dexcom G6 com qualquer smartphone Android.
+-   Desinstale a app original da Dexcom ou a app Dexcom modificada, se usou uma delas antes (**não pare** o sensor que está a funcionar)
+-   Instale o apk transferido
+-   Introduza o código do sensor e o número de série do transmissor na app modificada.
+-   Nas definições do telefone, vá a apps > Dexcom G6 > permissions > additional permissions e carregue em 'Access Dexcom app'.
+-   Pouco tempo depois, a BYODA deve captar o sinal do transmissor.
 
-### Settings for AAPS
+### Definições do AAPS
 
--   Select **BYODA** in [**Configuration → BG Source**](#Config-Builder-bg-source).
+-   Selecione **BYODA** em [**Configuração → Fonte da Glicose**](#Config-Builder-bg-source).
 
--   If you don't receive any values select any other data source, then re-select **BYODA** to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+-   Se não receber valores, selecione outra fonte de dados e depois selecione de novo **BYODA** para que sejam pedidas as permissões que estabelecem a ligação entre o AAPS e a transmissão da BYODA.
 
-### Settings for xDrip
+### Definições do xDrip
 
--   Select '640G/Eversense' as data source.
--   Command 'start sensor' must be performed in xDrip in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+-   Selecione '640G/Eversense' como fonte de dados.
+-   O comando 'start sensor' tem de ser executado no xDrip para receber valores. Isto não afeta o sensor atual, controlado pela Build Your Own Dexcom App.
 
 
 (DexcomG6-troubleshooting-g6)=
-## Troubleshooting G6 and ONE
+## Resolução de problemas do G6 e do ONE
 
-### Dexcom G6/ONE specific troubleshooting
+### Resolução de problemas específicos do Dexcom G6/ONE
 
--   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+-   Desça até **Troubleshooting** [aqui](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
-### General troubleshooting
+### Resolução de problemas geral
 
-General Troubleshooting for CGMs can be found [here](#general-cgm-troubleshooting).
+A resolução de problemas geral para CGM está [aqui](#general-cgm-troubleshooting).
 
-### New transmitter with running sensor
+### Transmissor novo com sensor em funcionamento
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). If you opt for [this solution](https://youtu.be/tx-kTsrkNUM) instead, you must be careful to avoid [damaging sensor contacts](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) with the strip.
+Se tiver de mudar o transmissor durante uma sessão de sensor em curso, pode tentar retirar o transmissor sem danificar o suporte do sensor. Pode encontrar um vídeo [aqui](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). Se preferir [esta solução](https://youtu.be/tx-kTsrkNUM), tenha cuidado para não [danificar os contactos do sensor](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) com a tira.
