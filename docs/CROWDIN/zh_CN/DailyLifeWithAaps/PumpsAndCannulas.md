@@ -17,7 +17,7 @@ Patch pumps fill and prime themselves in their own activation wizard, and their 
 
 3. 排气/给管路充盈胰岛素：这步请在泵上操作完成请务必消除管路中的任何气泡。
 
-4. 把新的留置针打入身体并和新的管路进行连接一旦插入管路并拔出针头后，连接的套管现在会有一个小的气泡，这个气泡也需要进行排气处理。 To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Pump site change** and/or **Insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. 把新的留置针打入身体并和新的管路进行连接一旦插入管路并拔出针头后，连接的套管现在会有一个小的气泡，这个气泡也需要进行排气处理。 To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
 
    ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -80,7 +80,7 @@ b) If you want to be more aggressive (for example, you are heading for hyperglyc
 **Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
 
 - With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change event since the past 45 days are available.
+- All Cannula change and Sensor change events from the past 45 days are available.
 - Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
 - Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
 
@@ -100,7 +100,7 @@ Edit Mode allows you to select Location, Arrow, and Note associated to selected 
 
 - The entry being edited is shown below the body images, with its type icon (cannula or sensor)
 - Front and back views are shown side by side: tap the area where you placed it
-- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
 
 ![Edit Mode](../images/SiteRotation/EditMode.png)
 
