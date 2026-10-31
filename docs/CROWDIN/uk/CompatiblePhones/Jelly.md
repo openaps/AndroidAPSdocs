@@ -2,7 +2,7 @@
 
 ## Jelly Star Mini
 
-**Features**
+**Функції**
 
 * Android 13
 * 8 ГБ RAM
@@ -45,4 +45,4 @@ Jelly має сильні функції оптимізації, які **тре
 
 Для деяких смарт-годинників, як-от Samsung Galaxy, параметр «Remote Connection» у розділі Advanced Features годинника Samsung Galaxy має бути **увімкнений**, щоб використовувати Jelly, **Wear.apk** та **AAPS** віддалено через Wi-Fi.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, Advanced features, Remote connection увімкнено](../images/wearos/galaxy_wearable_remote_connection.png)
