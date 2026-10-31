@@ -1,6 +1,13 @@
-# DanaR 泵
+# DanaR
 
 *本指南适用于DanaR泵体的应用程序配置操作。若使用2017年发布的DanaRS泵体，请参阅[DanaRS胰岛素泵](./DanaRS-Insulin-Pump.md)章节。*
+
+## AAPS支持的胰岛素泵功能
+
+* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
+* Timezone and DST changes need no special action, as the pump does not use its own history.
+
+## 设置
 
 * 在泵体操作界面进入：主菜单 > 设置 > 用户选项
 * 开启“8. 扩展大剂量"
@@ -10,17 +17,33 @@
 * 转到主菜单 > 设置 > 发现
 * 手机端进入蓝牙设置，扫描周边设备后选择DanaR序列号，输入配对密码（默认密码0000）。若扫描未发现DanaR设备，请重启手机并取出DanaR电池后重新执行上述步骤。
 
-* 在AAPS配置生成器中，选择您使用的DanaR型号（DanaR/DanaR韩版/DanaRv2）。
+* In **AAPS**, open the **menu** (☰) in the top-left corner, go to **Configuration** > **Pump** and select the type of DanaR you have (**DanaR**, **DanaR Korean** or **DanaRv2**).
+  
+  ![Configuration > Pump with the DanaR plugins](../images/v4/Configuration/configuration_pump_list_1.png)
 
-* 点击右上角三点图标选择菜单。选择首选项。
-* 选择DanaR蓝牙设备，点击您的DanaR序列号。
-* 选择泵体密码选项，输入您的密码。(默认密码为 1234）
-* 如需允许AAPS设置超过200%的基础率，请启用"使用延长大剂量实现>200%"功能。请注意：启用该功能后，进食期间使用延长大剂量时将无法同步执行高临时基础率闭环。
-* 在DanaR泵体设置的偏好选项中，可修改默认大剂量输注速度（12秒/单位、30秒/单位或60秒/单位）。
+* Open the pump screen: tap **Open plugin** on the DanaR card (or go to **Manage** > **Pump**).
+
+* Tap **Pairing**. On the pairing screen: 
+  * Enter your pump password under **Pump password** (default password is 1234).
+  * Under **Select paired device**, tap your DanaR serial number. If the list is empty, tap **Open Bluetooth settings** and pair the pump with your phone first (see the step above). When you come back to **AAPS**, the pump appears in the list. If it does not, tap the refresh icon.
+  * Tap **Pairing**. **AAPS** connects to the pump and checks the password.
+* To change the driver settings, tap **Settings** on the DanaR card in **Configuration** > **Pump**: 
+  * **Bolus speed** (DanaR and DanaRv2): change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
+  * **Use extended boluses for >200%** (DanaR and DanaR Korean): enable this if you want **AAPS** to allow a basal rate above 200%. Note this means you cannot loop with high TBRs while using extended boluses for food.
 * 将泵体基础率步进值设为0.01单位/小时。
-* 将泵体大剂量步进值设为0.1单位/小时。
+* Set bolus step on pump to 0.1 U. **AAPS** reads the bolus step from the pump and uses it for every bolus.
 * 在泵上启用扩展大剂量
 
 ## Dana R泵跨时区操作指南
 
 跨时区操作说明请参阅[泵体时区切换](#timezone-traveling-danarv2-danars)章节。
+
+## 获取帮助途径
+
+Development of the DanaR driver is done by the community on a **volunteer** basis. Before requesting help, please:
+
+1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
+2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
+3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+
+When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
