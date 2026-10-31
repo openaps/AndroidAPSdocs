@@ -158,7 +158,7 @@ Les paramètres de la [source des glycémies](#Config-Builder-bg-source) choisie
 
 ![Paramètres > xDrip+ Glycémie](../images/preferences/settings_xdrip.png)
 
-- **Télécharger des Gly vers NS** : **AAPS** envoie vers Nightscout les valeurs de glycémie reçues. Activez cette option seulement si l'application du MGC ne les envoie pas déjà elle-même.
+- **Envoyer des Gly vers NS** : **AAPS** envoie vers Nightscout les valeurs de glycémie reçues. Activez cette option seulement si l'application du MGC ne les envoie pas déjà elle-même.
 - **Enregistrer le changement de capteur** : crée automatiquement un événement de changement de capteur quand le capteur est inséré.
 
 ## L'écran principal
@@ -177,7 +177,7 @@ Choisissez les boutons d'action visibles sur l'écran principal : appuyez sur l
 
 Créez des boutons personnalisés pour certains repas ou collations standards. Ils seront affichés sur l'écran principal. Utile pour les repas standards que vous mangez souvent.
 
-Pour chaque bouton, vous définissez les glucides et la méthode de calcul du bolus. Ensuite, vous définissez pendant quelle période le bouton est visible sur l'écran principal : un seul bouton par période. Le bouton n'est pas visible en dehors de la plage horaire définie, ou si vous avez assez d'IOB pour couvrir les glucides définis dans le bouton Assistant Rapide. Si vous définissez des horaires différents pour les différents repas, vous aurez toujours le bon bouton de repas standard sur l'écran principal, selon l'heure de la journée.
+Pour chaque bouton, vous définissez les glucides et la méthode de calcul du bolus. Ensuite, vous définissez pendant quelle période le bouton est visible sur l'écran principal : un seul bouton par période. Le bouton n'est pas visible en dehors de la plage horaire définie, ou si vous avez assez d'IA pour couvrir les glucides définis dans le bouton Assistant Rapide. Si vous définissez des horaires différents pour les différents repas, vous aurez toujours le bon bouton de repas standard sur l'écran principal, selon l'heure de la journée.
 
 Pour gérer vos préréglages de l'Assistant Rapide, tapez « QuickWizard » dans la barre de recherche de l'écran principal et ouvrez **Assistant Rapide - Gérer les préréglages de l'assistant rapide**.
 
@@ -190,7 +190,7 @@ La proposition doit être confirmée avant l'injection de l'insuline.
 
 Les [cibles temporaires (CT)](../DailyLifeWithAaps/TempTargets.md) vous permettent de changer votre cible de glycémie pour une certaine durée. Avec des CT par défaut, vous pouvez facilement changer votre cible pour une activité, un repas imminent, etc.
 
-Appuyez sur la **plage cible** sur l'écran principal pour ouvrir l'écran **Cible Temp**. Faites défiler les cartes des préréglages (Repas imminent, Activité, Hypo) et changez la cible et la durée de chaque préréglage sous **Paramètres Prédéfinis**. Les valeurs prédéfinies sont :
+Appuyez sur la **plage cible** sur l'écran principal pour ouvrir l'écran **Cible Temp**. Faites défiler les cartes des préréglages (Repas imminent, Activité, Hypo) et changez la cible et la durée de chaque préréglage sous **Paramètres Prédéfinis**. Les valeurs prédéfinies sont :
 
 * Repas imminent : cible 90 mg/dl / 5,0 mmol/l, durée 45 min
 * Activité : cible 140 mg/dl / 7,8 mmol/l, durée 90 min
@@ -243,7 +243,7 @@ Le **Pourcentage de Bolus** définit le [pourcentage par défaut](#AapsScreens-s
 
 La valeur par défaut est 100 % : pas de correction. Même si vous mettez une autre valeur ici, vous pouvez toujours la changer à chaque fois que vous utilisez l'assistant bolus. Si ce paramètre est à 75 % et que vous deviez faire un bolus de 10 U, l'assistant bolus proposera un bolus repas de seulement 7,5 unités.
 
-Avec les [SMB](#objectives-objective9), beaucoup de personnes ne font pas un bolus repas de 100 % de l'insuline nécessaire, mais seulement d'une partie (par ex. 75 %), et laissent les SMB avec UAM (détection des repas non annoncés) faire le reste. Une valeur inférieure à 100 % ici peut être utile :
+Avec les [SMB](#objectives-objective9), beaucoup de personnes ne font pas un bolus repas de 100 % de l'insuline nécessaire, mais seulement d'une partie (par ex. 75 %), et laissent les SMB avec les RNS (repas non signalés) faire le reste. Une valeur inférieure à 100 % ici peut être utile :
 * pour les personnes avec une digestion lente : envoyer tout le bolus au début peut causer une hypoglycémie, car l'insuline agit plus vite que la digestion.
 * pour laisser plus de place à **AAPS** pour gérer lui-même la **hausse de la glycémie**. Dans les deux cas, **AAPS** compensera la partie manquante du bolus avec des SMB, si et quand il le juge adapté.
 
@@ -291,7 +291,7 @@ La liste des paramètres que vous voyez dépend de votre progression dans les [O
 
 ![Paramètres > OpenAPS SMB, options SMB](../images/preferences/settings_openaps_smb_2.png)
 
-![Paramètres > OpenAPS SMB, UAM et glucides nécessaires](../images/preferences/settings_openaps_smb_3.png)
+![Paramètres > OpenAPS SMB, RNS et glucides nécessaires](../images/preferences/settings_openaps_smb_3.png)
 
 Les **Paramètres Avancés**, en bas de la section, contiennent des valeurs que vous n'avez normalement pas besoin de changer :
 
@@ -310,17 +310,17 @@ Paramètre masqué en [mode simple](#preferences-simple-mode).
 
 L'algorithme utilise le BGI (impact sur la glycémie) pour déterminer quand [les glucides sont absorbés](../DailyLifeWithAaps/CobCalculation.md).
 
-Quand l'absorption des glucides ne peut pas être calculée de façon dynamique à partir des réactions de votre glycémie, **AAPS** applique une décroissance par défaut à vos glucides. En résumé, c'est une sécurité. Cette valeur est utilisée seulement pendant les trous dans les données du **MGC**, ou quand l'activité physique « consomme » toute la hausse de glycémie qui ferait sinon diminuer les COB dans **AAPS**.
+Quand l'absorption des glucides ne peut pas être calculée de façon dynamique à partir des réactions de votre glycémie, **AAPS** applique une décroissance par défaut à vos glucides. En résumé, c'est une sécurité. Cette valeur est utilisée seulement pendant les trous dans les données du **MGC**, ou quand l'activité physique « consomme » toute la hausse de glycémie qui ferait sinon diminuer les GA dans **AAPS**.
 
-Pour le dire simplement: L'algorithme "sait" comment vos glycémies *devraient* se comporter quand elles sont affectées par la dose actuelle d'insuline, etc. Chaque fois qu'il y a un écart positif par rapport au comportement attendu, une partie des glucides est considérée comme absorbée. Gros changement = beaucoup de glucides, etc.
+Pour le dire simplement : L'algorithme "sait" comment vos glycémies *devraient* se comporter quand elles sont affectées par la dose actuelle d'insuline, etc. Chaque fois qu'il y a un écart positif par rapport au comportement attendu, une partie des glucides est considérée comme absorbée. Gros changement = beaucoup de glucides, etc.
 
 Le min_5m_carbimpact définit l'impact par défaut de l'absorption des glucides par 5 minutes. Pour la description complète du paramètre, voir la [documentation OpenAPS sur les préférences et les paramètres de sécurité](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
 La valeur standard pour AMA est de 3, pour SMB c'est 8.
 
-Le graphique COB sur l'écran principal montre quand min_5m_carbimpact est utilisé : des points orange apparaissent en haut de la courbe COB.
+Le graphique GA sur l'écran principal montre quand min_5m_carbimpact est utilisé : des points orange apparaissent en haut de la courbe des GA.
 
-![Graphique COB](../images/main/cob_graph_min_5m_carbimpact.png)
+![Graphique GA](../images/main/cob_graph_min_5m_carbimpact.png)
 
 ### Coupure d'absorption
 
@@ -397,7 +397,7 @@ Quand le contrôle client est activé (toujours en mode simple), ces paramètres
 
 ### Contrôle à distance
 
-L'interrupteur « **Autoriser le contrôle par un client** » n'est plus dans ces paramètres : il se trouve en haut de **Gestion → Clients autorisés**, où les clients appairés sont gérés. Voir la page dédiée [Contrôle maître / client](../RemoteFeatures/ClientMasterControl.md), avec le [mode renforcé](#client-master-control-hardened-mode), que cet interrupteur active.
+L'interrupteur « **Autoriser le contrôle par un client** » n'est plus dans ces paramètres : il se trouve en haut de **Gestion → Clients autorisés**, où les clients appairés sont gérés. Voir la page dédiée [Contrôle maître ↔ client](../RemoteFeatures/ClientMasterControl.md), avec le [mode renforcé](#client-master-control-hardened-mode), que cet interrupteur active.
 
 ### Paramètres de connexion
 
@@ -457,11 +457,11 @@ Cette section est affichée quand le plugin **Autotune** est activé dans [Confi
 
 ![Paramètres > Automatisation](../images/preferences/settings_automation.png)
 
-Sélectionnez le service de localisation à utiliser :
+Sélectionnez le service de localisation à utiliser :
 
 - Utiliser la localisation passive : **AAPS** prend la localisation seulement quand d'autres applis la demandent
-- Utiliser la localisation par le réseau : Localisation de votre Wifi
-- Utiliser la localisation GPS (Attention ! Peut entrainer une consommation excessive de la batterie !)
+- Utiliser la localisation par le réseau : Localisation de votre Wifi
+- Utiliser la localisation GPS (Attention ! Peut entrainer une consommation excessive de la batterie !)
 
 ## Alertes locales
 
@@ -554,7 +554,7 @@ Pour arrêter l'export vers le cloud, appuyez sur l'icône **✕** (**Effacer le
 
 ## Open Humans
 
-Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Les détails sont décrits sur la [page Open Humans](../SupportingAaps/OpenHumans.md).
+Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Les détails sont décrits sur la [page Open Humans](../SupportingAaps/OpenHumans.md).
 
 Dans **Paramètres → Open Humans**, vous pouvez définir quand les données doivent être envoyées
 - uniquement si connecté au Wi-Fi
