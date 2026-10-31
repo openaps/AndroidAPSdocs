@@ -1,16 +1,16 @@
 # Smoothing blood glucose data
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Якщо дані **ГК** стрибають або мають шум, **AAPS** може неправильно дозувати інсулін. Це може призвести до високої або низької глюкози. Якщо ви бачите помилки або дані вашого CGM стрибають, важливо вимкнути петлю, поки проблему не буде усунено. Залежно від вашого CGM, причиною може бути налаштування CGM в **AAPS** (як пояснено нижче) або проблема з місцем установки сенсора CGM (тоді, можливо, потрібно замінити сенсор CGM).
 
 ## Smoothing data within AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** дає змогу згладжувати дані всередині **AAPS**, а не в застосунку CGM. Відкрийте **меню** (☰), виберіть [**Конфігурація**](../SettingUpAaps/ConfigBuilder.md), потім **Згладжування**. Є чотири варіанти, і активним може бути лише один: **Без згладжування**, **Експоненційне згладжування**, **Згладжування середнім** і **Unscented Kalman Filter**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Конфігурація > Згладжування](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponential smoothing
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Загалом це рекомендований варіант для початку: він найсильніше усуває шум і переписує найновіше значення. Однак для інших конкретних рекомендацій дивіться таблицю нижче.
 
 ### Average smoothing
 
@@ -18,27 +18,27 @@ This option works similar to back smoothing that was previously implemented on c
 
 ### No Smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Використовуйте цей варіант, лише якщо ваш застосунок-збирач даних правильно згладжує дані CGM перед передачею в **AAPS**.
 
 ### Unscented Kalman Filter (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Цей варіант використовує статистичну модель. Вона постійно оцінює ваше справжнє значення глюкози та швидкість його зміни за вхідними (можливо, шумними) показниками і автоматично підлаштовується під поточний рівень шуму вашого сенсора. Він також виявляє та відкидає раптові викиди (окремі помилкові показники). Це розширена альтернатива експоненційному згладжуванню та згладжуванню середнім. Вона корисна, якщо ви хочете, щоб згладжування саме підлаштовувалося під змінний рівень шуму сенсора, а не використовувало фіксований метод.
 
 (smoothing-xdrip-dexcom-g6)=
 
 ## Suggestions to use smoothing
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Ви також можете змінювати метод згладжування автоматично, наприклад залежно від віку сенсора, за допомогою [дії Автоматизації](#automations-automation-action) **Змінити згладжування**.
 
-|               | Exponential |  Average  | No Smoothing |
-| ------------- |:-----------:|:---------:|:------------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+|               | Exponential |       Average       | No Smoothing |
+| ------------- |:-----------:|:-------------------:|:------------:|
+| G5/G6/ONE     |  If noisy   |                     | Recommended  |
+| G7/ONE+/Stelo |  If noisy   | Якщо дані стабільні |              |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Сенсори Libre мають шум і можуть потребувати згладжування. Якщо ви використовуєте пряме підключення xDrip або джерело даних «пропатчений застосунок» (отримання даних з іншого застосунку, зокрема з Juggluco), [згладжування вже виконується в застосунку](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| Сенсор / джерело даних | Juggluco | xDrip пряме | xDrip міст | xDrip пропатчений застосунок |
+| ---------------------- |:--------:|:-----------:|:----------:|:----------------------------:|
+| Libre 1/14 днів/Pro    |   Н/Д    |     Н/Д     |  Average   |             Н/Д              |
+| Libre 2/2+ (ЄС)        | Average  |    None     |  Average   |             None             |
+| Libre 2/2+/3/3+        | Average  |     Н/Д     |    Н/Д     |             None             |
