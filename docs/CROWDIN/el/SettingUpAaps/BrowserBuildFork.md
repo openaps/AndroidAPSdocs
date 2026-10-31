@@ -1,6 +1,6 @@
 (github-fork)=
 
-# Δημιουργία μέσω browser – Βήμα 1: Δημιουργήστε το fork σας στο GitHub
+# Δημιουργία μέσω browser – Βήμα 1: Δημιουργία του fork σας στο GitHub
 
 ```{note}
 Αυτό είναι το **Βήμα 1** της [Δημιουργίας μέσω browser](BrowserBuild.md).
@@ -51,4 +51,4 @@
 
 ----
 
-**Επόμενο: [Βήμα 2 – Δημιουργήστε το keystore υπογραφής σας](BrowserBuildKeystore.md) →**
+**Επόμενο: [Βήμα 2 – Δημιουργία του keystore υπογραφής σας](BrowserBuildKeystore.md) →**
