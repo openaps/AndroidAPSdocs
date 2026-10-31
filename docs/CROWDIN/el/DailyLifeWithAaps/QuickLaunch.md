@@ -1,154 +1,154 @@
 (quicklaunch)=
-# QuickLaunch (overview quick-action toolbar)
+# QuickLaunch (γραμμή γρήγορων ενεργειών στην επισκόπηση)
 
-**QuickLaunch** is the small **quick-action toolbar** that floats at the bottom of the **AAPS** overview, just above the bottom navigation. It is a customizable row of one-tap buttons: you decide which actions live there, in which order, so the things you do most often are always one tap away on the main screen.
+Το **QuickLaunch** είναι η μικρή **γραμμή γρήγορων ενεργειών** που αιωρείται στο κάτω μέρος της επισκόπησης του **AAPS**, ακριβώς πάνω από την κάτω πλοήγηση. Είναι μια σειρά από κουμπιά με ένα πάτημα, που μπορείτε να προσαρμόσετε: εσείς αποφασίζετε ποιες ενέργειες υπάρχουν εκεί και με ποια σειρά, ώστε όσα κάνετε πιο συχνά να είναι πάντα ένα πάτημα μακριά στην κύρια οθόνη.
 
 ```{contents} Table of contents
 :depth: 2
 :local: true
 ```
 
-![The QuickLaunch toolbar on the overview](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
+![Η γραμμή QuickLaunch στην επισκόπηση](../images/v4/QuickLaunch/quicklaunch_toolbar.png)
 
 ---
 
-## Using the toolbar
+## Χρήση της γραμμής
 
-The toolbar sits on the **overview**, between the graphs and the bottom navigation:
+Η γραμμή βρίσκεται στην **επισκόπηση**, ανάμεσα στα γραφήματα και την κάτω πλοήγηση:
 
-![The QuickLaunch toolbar in place on the overview](../images/v4/QuickLaunch/quicklaunch_overview.png)
+![Η γραμμή QuickLaunch στη θέση της στην επισκόπηση](../images/v4/QuickLaunch/quicklaunch_overview.png)
 
-- **Tap** an icon to run its action — exactly as if you had opened it from its normal screen (a bolus or treatment still shows its usual confirmation first).
-- **Long-press** an icon to see a **tooltip** with the action's name and a short description.
-- If you add **more buttons than fit** on screen, the extra ones move into an **overflow menu** (the **⋮** button at the end of the toolbar).
-- Each icon keeps its action's **color** (e.g. insulin, carbs, temp target), so it is recognizable at a glance.
+- **Πατήστε** ένα εικονίδιο για να εκτελέσετε την ενέργειά του — ακριβώς σαν να την ανοίγατε από τη συνηθισμένη της οθόνη (ένα bolus ή μια θεραπεία δείχνει πρώτα τη συνηθισμένη επιβεβαίωση).
+- **Πατήστε παρατεταμένα** ένα εικονίδιο για να δείτε μια **επεξήγηση** με το όνομα της ενέργειας και μια σύντομη περιγραφή.
+- Αν προσθέσετε **περισσότερα κουμπιά από όσα χωρούν** στην οθόνη, τα επιπλέον πηγαίνουν σε ένα **μενού υπερχείλισης** (το κουμπί **⋮** στο τέλος της γραμμής).
+- Κάθε εικονίδιο κρατά το **χρώμα** της ενέργειάς του (π.χ. ινσουλίνη, υδατάνθρακες, προσωρινός στόχος), ώστε να το αναγνωρίζετε με μια ματιά.
 
 ```{admonition} The toolbar is always there
 :class: note
-The last button is always **Configure QuickLaunch** (the **⚙️** gear). It cannot be removed, so you can always reach the configuration screen straight from the toolbar. By default the toolbar contains just two buttons — the **Bolus wizard** and this gear.
+Το τελευταίο κουμπί είναι πάντα το **Ρύθμιση QuickLaunch** (το γρανάζι **⚙️**). Δεν μπορεί να αφαιρεθεί, ώστε να φτάνετε πάντα στην οθόνη ρύθμισης κατευθείαν από τη γραμμή. Από προεπιλογή η γραμμή έχει μόνο δύο κουμπιά — τον **Οδηγό Bolus** και αυτό το γρανάζι.
 ```
 
 ---
 
-## Configuring QuickLaunch
+## Ρύθμιση του QuickLaunch
 
-Tap the **⚙️** gear on the toolbar (or open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → … → Configure QuickLaunch**) to open the **Configure QuickLaunch** screen (*“Customize quick-action buttons on overview”*).
+Πατήστε το γρανάζι **⚙️** στη γραμμή (ή ανοίξτε **[Διαμόρφωση](../SettingUpAaps/ConfigBuilder.md) → … → Ρύθμιση QuickLaunch**) για να ανοίξει η οθόνη **Ρύθμιση QuickLaunch** (*«Προσαρμογή των κουμπιών γρήγορων ενεργειών στην επισκόπηση»*).
 
-![Configure QuickLaunch — Selected actions, then the catalog of actions to add](../images/v4/QuickLaunch/quicklaunch_config.png)
+![Ρύθμιση QuickLaunch — οι Επιλεγμένες ενέργειες και μετά ο κατάλογος ενεργειών για προσθήκη](../images/v4/QuickLaunch/quicklaunch_config.png)
 
-The screen has two parts:
+Η οθόνη έχει δύο μέρη:
 
-- **Selected actions** (at the top) — the buttons currently on your toolbar, in toolbar order.
-- A **catalog** below it — every action you can add, grouped by category. Each catalog entry has a **➕** button to add it.
+- **Επιλεγμένες ενέργειες** (στο επάνω μέρος) — τα κουμπιά που έχει τώρα η γραμμή σας, με τη σειρά της γραμμής.
+- Ένας **κατάλογος** από κάτω — όλες οι ενέργειες που μπορείτε να προσθέσετε, ομαδοποιημένες ανά κατηγορία. Κάθε καταχώριση του καταλόγου έχει ένα κουμπί **➕** για να την προσθέσετε.
 
-### Selected actions — reorder, edit, remove
+### Επιλεγμένες ενέργειες — αλλαγή σειράς, επεξεργασία, αφαίρεση
 
-Each selected action has:
+Κάθε επιλεγμένη ενέργεια έχει:
 
-- a **⠿ drag handle** — press and drag to **reorder** the buttons (the order here is the order on the toolbar),
-- a **−** button — **remove** it from the toolbar,
-- and, for a **Profile** shortcut only, a **✏️** button to edit its percentage/duration (see [Profile shortcuts](#profile-shortcuts)).
+- μια **⠿ λαβή μεταφοράς** — πατήστε και σύρετε για να **αλλάξετε τη σειρά** των κουμπιών (η σειρά εδώ είναι η σειρά στη γραμμή),
+- ένα κουμπί **−** — για να την **αφαιρέσετε** από τη γραμμή,
+- και, μόνο για συντόμευση **Προφίλ**, ένα κουμπί **✏️** για να αλλάξετε το ποσοστό/τη διάρκειά της (δείτε [Συντομεύσεις προφίλ](#profile-shortcuts)).
 
-Changes take effect **immediately** — there is no separate *Save*. Adding an action drops it at the end of the toolbar; reorder it from there.
+Οι αλλαγές ισχύουν **αμέσως** — δεν υπάρχει ξεχωριστό *Αποθήκευση*. Μια ενέργεια που προσθέτετε μπαίνει στο τέλος της γραμμής· αλλάξτε τη θέση της από εκεί.
 
 ---
 
-## The action categories
+## Οι κατηγορίες ενεργειών
 
-The catalog groups everything you can add into the following categories, in this order. Categories that have nothing to offer (e.g. you have no scenes) are simply not shown.
+Ο κατάλογος ομαδοποιεί όλα όσα μπορείτε να προσθέσετε στις παρακάτω κατηγορίες, με αυτή τη σειρά. Οι κατηγορίες που δεν έχουν τίποτα να προσφέρουν (π.χ. δεν έχετε σενάρια) απλώς δεν εμφανίζονται.
 
-### Treatment
+### Θεραπεία
 
-The everyday treatment and CGM dialogs:
+Οι καθημερινοί διάλογοι θεραπείας και CGM:
 
-- **Insulin** — deliver a bolus manually.
-- **Carbs** — record carbs without insulin.
-- **Bolus wizard** — open the bolus calculator.
-- **Treatment** — record insulin and carbs together.
-- **CGM** — open your CGM app (e.g. xDrip).
-- **Calibration** — calibrate the CGM sensor.
+- **Ινσουλίνη** — χορήγηση bolus χειροκίνητα.
+- **Υδατάνθρακες** — καταγραφή υδατανθράκων χωρίς ινσουλίνη.
+- **Οδηγός Bolus** — ανοίγει τον υπολογιστή bolus.
+- **Θεραπεία** — καταγραφή ινσουλίνης και υδατανθράκων μαζί.
+- **CGM** — ανοίγει την εφαρμογή CGM σας (π.χ. xDrip).
+- **Βαθμονόμηση** — βαθμονόμηση του αισθητήρα CGM.
 
-### Care Portal
+### Careportal
 
-The care-portal events and device-maintenance records:
+Τα συμβάντα careportal και οι καταγραφές συντήρησης συσκευών:
 
-- **BG Check**, **Note**, **Exercise**, **Question**, **Announcement**,
-- **Sensor Insert**, **Pump Battery Change**, **Pump Site Change**, **Prime/Fill**, **Site Rotation**.
+- **Έλεγχος BG**, **Σημείωση**, **Άσκηση**, **Ερώτηση**, **Ανακοίνωση**,
+- **Τοποθέτηση αισθητήρα**, **Αλλαγή Μπαταρίας Αντλίας**, **Αλλαγή σημείου αντλίας**, **Πλήρωση/Γέμισμα**, **Εναλλαγή σημείων**.
 
-**Prime/Fill** and **Pump Battery Change** are only offered when your pump uses them. Patch pumps, for example, fill and change the battery in their own activation steps, so these entries are not shown for them (as in the **Manage** sheet).
+Τα **Πλήρωση/Γέμισμα** και **Αλλαγή Μπαταρίας Αντλίας** προσφέρονται μόνο όταν η αντλία σας τα χρησιμοποιεί. Οι αντλίες patch, για παράδειγμα, γεμίζουν και αλλάζουν μπαταρία στα δικά τους βήματα ενεργοποίησης, γι' αυτό αυτές οι καταχωρίσεις δεν εμφανίζονται για αυτές (όπως και στο φύλλο **Διαχείριση**).
 
-![The Care Portal category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
+![Η κατηγορία Careportal στον κατάλογο](../images/v4/QuickLaunch/quicklaunch_categories_2.png)
 
-These are the same entries you would otherwise reach through the **[Treatments](#v4changes-treatments)** and **[Manage](#v4changes-manage)** sheets — QuickLaunch just puts the ones you use on the overview.
+Είναι οι ίδιες καταχωρίσεις που αλλιώς θα βρίσκατε στα φύλλα **[Θεραπείες](#v4changes-treatments)** και **[Διαχείριση](#v4changes-manage)** — το QuickLaunch απλώς βάζει στην επισκόπηση όσες χρησιμοποιείτε.
 
-### Manage
+### Διαχείριση
 
-The screens of the **[Manage](#v4changes-manage)** sheet, in the same order, so you can open the one you use most from the toolbar:
+Οι οθόνες του φύλλου **[Διαχείριση](#v4changes-manage)**, με την ίδια σειρά, ώστε να ανοίγετε από τη γραμμή αυτή που χρησιμοποιείτε περισσότερο:
 
-- **Profile**, **Insulin settings** (manage and activate insulin configurations — named differently from **Insulin** on purpose, because that button delivers a bolus), **Temp Target**, **QuickWizard**, **Scenes**, **Automation**, **Food**,
-- **Running mode** — close or open the loop, suspend it, or disconnect the pump,
-- **Authorized clients** — only on a master or a paired client.
+- **Προφίλ**, **Ρυθμίσεις ινσουλίνης** (διαχείριση και ενεργοποίηση ρυθμίσεων ινσουλίνης — έχει σκόπιμα διαφορετικό όνομα από το **Ινσουλίνη**, γιατί εκείνο το κουμπί χορηγεί bolus), **Προσωρινός στόχος**, **Γρήγορος Οδηγός**, **Σενάρια**, **Αυτοματισμός**, **Τρόφιμα**,
+- **Τρόπος λειτουργίας** — κλείσιμο ή άνοιγμα του κυκλώματος, αναστολή του ή αποσύνδεση της αντλίας,
+- **Εξουσιοδοτημένοι πελάτες** — μόνο σε κύρια συσκευή (master) ή σε συζευγμένο πελάτη.
 
-These buttons open the screen; they do not start anything by themselves. To start a scene or a QuickWizard in one tap, add it from the **Scenes** or **Quick Wizard** category below.
+Αυτά τα κουμπιά ανοίγουν την οθόνη· δεν ξεκινούν τίποτα μόνα τους. Για να ξεκινάτε ένα σενάριο ή έναν Γρήγορο Οδηγό με ένα πάτημα, προσθέστε τον από την κατηγορία **Σενάρια** ή **Γρήγορος Οδηγός** παρακάτω.
 
-![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
+![Η κατηγορία Διαχείριση στον κατάλογο](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![Η κατηγορία Διαχείριση, συνέχεια](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
-### Quick Wizard
+### Γρήγορος Οδηγός
 
-Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
+Κάθε προεπιλογή **[Γρήγορου Οδηγού](QuickWizards.md)** μπορεί να προστεθεί ως κουμπί, ώστε ένα γεύμα που επαναλαμβάνεται να είναι ένα πάτημα μακριά από την επισκόπηση. Το κουμπί έχει το όνομα της προεπιλογής και δείχνει την ποσότητα υδατανθράκων/ινσουλίνης· όταν το πατάτε, εκτελεί τον Γρήγορο Οδηγό με τη συνηθισμένη επιβεβαίωση.
 
-QuickWizards set to show on the watch only are not offered. A QuickWizard button on the toolbar follows the same rules as in the **Treatments** sheet: it is hidden outside its [valid time range](#quickwizard_validity) and for a short time after use. It stays in your toolbar configuration and comes back when the QuickWizard can be used again.
+Οι Γρήγοροι Οδηγοί που έχουν ρυθμιστεί να εμφανίζονται μόνο στο ρολόι δεν προσφέρονται. Ένα κουμπί Γρήγορου Οδηγού στη γραμμή ακολουθεί τους ίδιους κανόνες όπως στο φύλλο **Θεραπείες**: κρύβεται έξω από το [έγκυρο χρονικό διάστημά](#quickwizard_validity) του και για λίγο χρόνο μετά τη χρήση. Μένει στη ρύθμιση της γραμμής σας και επιστρέφει όταν ο Γρήγορος Οδηγός μπορεί να χρησιμοποιηθεί ξανά.
 
-### Scenes
+### Σενάρια
 
-Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks for confirmation, then activates the scene (the same bundle of actions you would get from the Scenes screen). This category appears only if you have at least one scene.
+Κάθε ενεργοποιημένο **[σενάριο](Scenes.md)** μπορεί να προστεθεί ως κουμπί. Όταν το πατάτε, ζητά επιβεβαίωση και μετά ενεργοποιεί το σενάριο (το ίδιο σύνολο ενεργειών που θα παίρνατε από την οθόνη Σενάρια). Αυτή η κατηγορία εμφανίζεται μόνο αν έχετε τουλάχιστον ένα σενάριο.
 
-The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
+Η επεξήγηση και ο κατάλογος δείχνουν την ίδια σύνοψη με το **Διαχείριση → Σενάρια**, για παράδειγμα *«3 ενέργειες, 2 h → Cooldown»*, όπου το όνομα μετά το βέλος είναι το επόμενο σενάριο.
 
-### Αυτοματοποίηση
+### Αυτοματισμός
 
-Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
+Οι κανόνες αυτοματισμού σας τύπου **ενέργεια χρήστη** (αυτοί που ξεκινάτε με το χέρι) μπορούν να προστεθούν ως κουμπιά. Όταν πατάτε ένα, ζητά επιβεβαίωση και μετά εκτελεί τις ενέργειες του κανόνα.
 
 ```{admonition} Automation buttons run on the master
 :class: note
-Automation executes on the **master**, so automation shortcuts are offered and run only on the master. They are not available on a paired **[client](../RemoteFeatures/ClientMasterControl.md)**.
+Ο αυτοματισμός εκτελείται στην **κύρια συσκευή (master)**, γι' αυτό οι συντομεύσεις αυτοματισμού προσφέρονται και εκτελούνται μόνο στην κύρια συσκευή. Δεν είναι διαθέσιμες σε συζευγμένο **[πελάτη](../RemoteFeatures/ClientMasterControl.md)**.
 ```
 
-### Temp Target Presets
+### Προεπιλογές προσωρινού στόχου
 
-Each of your **[Temp Target](TempTargets.md)** presets can be added as a button (its name, its target and its duration are shown, for example *"Eating soon — 5.0 mmol/L, 45 min"*). Tapping it asks for confirmation, then starts that temp target.
+Κάθε προεπιλογή **[προσωρινού στόχου](TempTargets.md)** μπορεί να προστεθεί ως κουμπί (φαίνονται το όνομά της, ο στόχος και η διάρκειά της, για παράδειγμα *«Γεύμα Σύντομα — 5,0 mmol/L, 45 λεπ.»*). Όταν το πατάτε, ζητά επιβεβαίωση και μετά ξεκινά αυτόν τον προσωρινό στόχο.
 
-![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
+![Οι δυναμικές κατηγορίες — Γρήγορος Οδηγός και Προεπιλογές προσωρινού στόχου (τα Σενάρια και ο Αυτοματισμός εμφανίζονται όταν έχετε κάποια)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
-### Profile
+### Προφίλ
 
-Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
+Κάθε **[προφίλ](ProfileSwitch-ProfilePercentage.md)** μπορεί να προστεθεί ως **συντόμευση** που κάνει μια **αλλαγή προφίλ** με ένα πάτημα. Σε αντίθεση με τις περισσότερες συντομεύσεις, μια συντόμευση Προφίλ έχει δικό της **ποσοστό** και δική της **διάρκεια**, που τα ορίζετε αφού την προσθέσετε, με το κουμπί **✏️**:
 
-- **Percentage** (30–250 %, in steps of 5 %) — scale the profile when it is applied. 100 % uses it as-is.
-- **Duration** (0–10080 min, that is up to 7 days, in steps of 10 min) — how long the switch lasts. **0 = Permanent** (until you switch again).
+- **Ποσοστό** (30–250%, σε βήματα του 5%) — αλλάζει την κλίμακα του προφίλ όταν εφαρμόζεται. Το 100% το χρησιμοποιεί όπως είναι.
+- **Διάρκεια** (0–10080 λεπ., δηλαδή έως 7 ημέρες, σε βήματα των 10 λεπ.) — πόσο διαρκεί η αλλαγή. **0 = Μόνιμο** (μέχρι να κάνετε νέα αλλαγή).
 
-![Profile shortcuts and plugin categories in the catalog](../images/v4/QuickLaunch/quicklaunch_categories.png)
+![Συντομεύσεις προφίλ και κατηγορίες προσθέτων στον κατάλογο](../images/v4/QuickLaunch/quicklaunch_categories.png)
 
-This lets you keep several buttons for the **same** profile at different strengths — for example *“Profile 100 %”* and *“Profile 70 % for 2 h”* — and apply either with a single tap. (You can add the same profile more than once with different settings.)
+Έτσι μπορείτε να έχετε πολλά κουμπιά για το **ίδιο** προφίλ με διαφορετική ένταση — για παράδειγμα *«Προφίλ 100%»* και *«Προφίλ 70% για 2 ώρ.»* — και να εφαρμόζετε όποιο θέλετε με ένα πάτημα. (Μπορείτε να προσθέσετε το ίδιο προφίλ περισσότερες από μία φορές με διαφορετικές ρυθμίσεις.)
 
-### Plugins
+### Πρόσθετα
 
-![Plugin shortcuts in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
+![Συντομεύσεις προσθέτων στον κατάλογο](../images/v4/QuickLaunch/quicklaunch_categories_6.png)
 
-Finally, any **enabled plugin** that has its own screen can be added as a shortcut to open it directly. These are grouped by plugin type — **Pump**, **BG Source**, **APS**, **Loop**, **Sensitivity detection**, **Smoothing**, **Calibration**, **Constraints**, **Communication** and **General** — so you can, for instance, jump straight to your pump or loop screen from the overview.
+Τέλος, κάθε **ενεργοποιημένο πρόσθετο** που έχει δική του οθόνη μπορεί να προστεθεί ως συντόμευση για να την ανοίγετε κατευθείαν. Αυτές ομαδοποιούνται ανά τύπο πρόσθετου — **Αντλία**, **Πηγή BG**, **APS**, **Κύκλωμα**, **Ανίχνευση ευαισθησίας**, **Εξομάλυνση**, **Βαθμονόμηση**, **Περιορισμοί**, **Επικοινωνία** και **Γενικά** — ώστε, για παράδειγμα, να πηγαίνετε κατευθείαν από την επισκόπηση στην οθόνη της αντλίας ή του κυκλώματος.
 
 ---
 
-## QuickLaunch and Master/Client
+## QuickLaunch και Master/Client
 
-Unlike most of your settings, the **QuickLaunch toolbar is configured per device** — it is stored **locally and is not synced** between your master and paired clients, so each device keeps its own set of buttons. (It *is* included in a settings **backup/export**, so a restore brings it back on the same device.)
+Σε αντίθεση με τις περισσότερες ρυθμίσεις σας, η **γραμμή QuickLaunch ρυθμίζεται ξεχωριστά σε κάθε συσκευή** — αποθηκεύεται **τοπικά και δεν συγχρονίζεται** ανάμεσα στην κύρια συσκευή σας και τους συζευγμένους πελάτες, οπότε κάθε συσκευή κρατά τα δικά της κουμπιά. (Η γραμμή *περιλαμβάνεται* όμως σε ένα **αντίγραφο ασφαλείας/εξαγωγή** ρυθμίσεων, οπότε μια επαναφορά την ξαναφέρνει στην ίδια συσκευή.)
 
-What each device can put on its toolbar still depends on what it has: QuickWizards, scenes, temp-target presets and profiles all sync, so a client's catalog offers the same items — you simply choose them per device. A few details to know:
+Το τι μπορεί να βάλει κάθε συσκευή στη γραμμή της εξαρτάται πάντως από το τι έχει: οι Γρήγοροι Οδηγοί, τα σενάρια, οι προεπιλογές προσωρινού στόχου και τα προφίλ συγχρονίζονται όλα, οπότε ο κατάλογος ενός πελάτη προσφέρει τα ίδια στοιχεία — απλώς τα επιλέγετε ξεχωριστά σε κάθε συσκευή. Μερικές λεπτομέρειες που πρέπει να ξέρετε:
 
-- Buttons whose target no longer exists (a deleted QuickWizard, scene or preset, a disabled rule) are **skipped automatically**.
-- **Automation** shortcuts are offered and run only on the **master** (automation executes on the master). Scene, QuickWizard, temp-target and profile buttons are available on a client.
-- When you tap a button on a client that must run on the master (a bolus, temp target, profile switch or scene), the **master** carries it out and authors the confirmation. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md).
+- Τα κουμπιά των οποίων ο στόχος δεν υπάρχει πια (ένας διαγραμμένος Γρήγορος Οδηγός, σενάριο ή προεπιλογή, ένας απενεργοποιημένος κανόνας) **παραλείπονται αυτόματα**.
+- Οι συντομεύσεις **Αυτοματισμού** προσφέρονται και εκτελούνται μόνο στην **κύρια συσκευή (master)** (ο αυτοματισμός εκτελείται στην κύρια συσκευή). Τα κουμπιά σεναρίου, Γρήγορου Οδηγού, προσωρινού στόχου και προφίλ είναι διαθέσιμα σε πελάτη.
+- Όταν πατάτε σε πελάτη ένα κουμπί που πρέπει να εκτελεστεί στην κύρια συσκευή (bolus, προσωρινός στόχος, αλλαγή προφίλ ή σενάριο), η **κύρια συσκευή** το εκτελεί και δημιουργεί την επιβεβαίωση. Δείτε [Έλεγχος Master ↔ Client](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 
