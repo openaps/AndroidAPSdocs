@@ -6,13 +6,13 @@
 L'option la plus simple pour compiler AAPS est la [Compilation dans le navigateur](./BrowserBuild.md).
 ```
 
-Testé avec Fedora et Debian Linux ; les autres systèmes devraient fonctionner avec très peu d'ajustements.
+Testé avec Fedora et Debian Linux ; les autres systèmes devraient fonctionner avec très peu d'ajustements.
 
 ## Prérequis
 
 Consultez la version minimale de Java requise dans [ce tableau](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Installez le paquet OpenJDK adapté avec le gestionnaire de paquets du système. Par exemple, sous Debian, les paquets s'appellent `openjdk-21-jdk`. Il doit contenir les programmes `javac` et `keytool`.
 
-Téléchargez le paquet *Android Command line tools* depuis la [page Android Studio](https://developer.android.com/studio#command-line-tools-only). Android Studio lui-même n'est pas nécessaire. Vous trouverez plus d'informations sur l'installation de ce paquet dans la [documentation de sdkmanager](https://developer.android.com/tools/sdkmanager). Une fois le paquet installé, vous devez définir manuellement deux [variables d'environnement](https://developer.android.com/tools/variables) : `ANDROID_HOME` et `PATH`. Enfin, exécutez `sdkmanager --licenses` pour terminer l'installation.
+Téléchargez le paquet *Android Command line tools* depuis la [page Android Studio](https://developer.android.com/studio#command-line-tools-only). Android Studio lui-même n'est pas nécessaire. Vous trouverez plus d'informations sur l'installation de ce paquet dans la [documentation de sdkmanager](https://developer.android.com/tools/sdkmanager). Une fois le paquet installé, vous devez définir manuellement deux [variables d'environnement](https://developer.android.com/tools/variables) : `ANDROID_HOME` et `PATH`. Enfin, exécutez `sdkmanager --licenses` pour terminer l'installation.
 
 ## Compiler AAPS avec le Gradle wrapper
 
@@ -33,7 +33,7 @@ Vous aurez besoin du fichier keystore et de sa phrase de passe à chaque mise à
 
 ### 2. Compiler le fichier APK d'AAPS
 
-Clonez le [dépôt git](https://github.com/nightscout/AndroidAPS) s'il n'est pas encore cloné. AAPS utilise la branche master pour la dernière version stable ; vérifiez que vous êtes sur la branche ou le tag que vous voulez compiler.
+Clonez le [dépôt git](https://github.com/nightscout/AndroidAPS) s'il n'est pas encore cloné. AAPS utilise la branche master pour la dernière version stable ; vérifiez que vous êtes sur la branche ou le tag que vous voulez compiler.
 
 Exécutez `./gradlew :app:assembleFullRelease` dans le dépôt. Il télécharge automatiquement Gradle et les dépendances, puis compile le code. Si la compilation réussit, vous devez avoir un APK non signé dans `app/build/outputs/apk/full/release/app-full-release-unsigned.apk`. Il doit aussi avoir installé le programme `apksigner` dans `$ANDROID_HOME`. Mettez à nouveau à jour votre `PATH`.
 
@@ -41,7 +41,7 @@ Exécutez `./gradlew :app:assembleFullRelease` dans le dépôt. Il télécharge 
 
 <!-- Suggest building outside the git repo, to minimize risk of accidental APK commits -->
 
-Allez dans votre répertoire personnel et créez un fichier APK signé :
+Allez dans votre répertoire personnel et créez un fichier APK signé :
 
 ```sh
 apksigner sign \
