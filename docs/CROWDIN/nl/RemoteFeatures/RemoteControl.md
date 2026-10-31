@@ -113,7 +113,7 @@ Na het koppelen biedt **AAPSClient** de verzorger bijna dezelfde schermen als **
 - **Beheren**: profielen, insuline-instellingen, tijdelijke streefdoelen, QuickWizard, automatisering, voeding, site rotatie, koppelen en de lopende tijdelijke basaal.
 - **Hoofdmenu**: behandelingen geschiedenis, historie bekijken, statistieken, onderhoud, configuratie.
 
-Op **AAPSClient** is er geen pomp en zijn er geen doelen. Zie [De AAPSClient-app](AapsClient.md) voor een uitgebreide beschrijving.
+Op **AAPSClient** is er geen pomp en zijn er geen doelen. Zie [De app AAPSClient](AapsClient.md) voor een uitgebreide beschrijving.
 
 Met **AAPSClient** kan de verzorger op afstand, via het mobiele netwerk of internet, de meeste aanpassingen doen die ook direct in **AAPS** kunnen, **ook insulinebolussen**. Elke opdracht wordt ondertekend en via Nightscout naar de **AAPS**-telefoon gestuurd. Die controleert de opdracht met zijn eigen gegevens, begrenst hem, toont zijn eigen bevestiging en voert hem pas daarna uit. **AAPSClient** _kan_ veel sneller zijn dan [SMS-commando's](../RemoteFeatures/SMSCommands.md), vooral voor opdrachten die authenticatie nodig hebben.
 
@@ -233,7 +233,7 @@ Dit kan handig lijken om aangekondigde koolhydraten (waarvoor geen bolus is gege
 
 ![Wear Remote 1](../images/Wear_Remote1.png)
 
-Als je [**AAPS** op je horloge hebt ingesteld](../WearOS/BuildingAapsWearOS.md), vind je uitgebreide details over de wijzerplaten en hun functies in [Wear AAPS gebruiken op een smartwatch](../WearOS/WearOsSmartwatch.md).
+Als je [**AAPS** op je horloge hebt ingesteld](../WearOS/BuildingAapsWearOS.md), vind je uitgebreide details over de watchfaces en hun functies in [AAPS instellen op je Wear OS-horloge](../WearOS/WearOsSmartwatch.md).
 
 Een kort overzicht: de volgende functies kun je vanaf de smartwatch starten:
 
@@ -265,7 +265,7 @@ Je kunt extra apps op het horloge zetten, zoals WhatsApp, bijvoorbeeld om berich
 
 Een video over het instellen van WhatsApp voor berichten op het Galaxy Watch 4-horloge (niet alle functies van WhatsApp werken) vind je [hier](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
-Met aanpassingen in de app **Galaxy wearable** op de **AAPS**-telefoon en op het horloge kunnen WhatsApp-berichten met een lichte trilling worden gemeld en over de bestaande wijzerplaat worden getoond.
+Met aanpassingen in de app **Galaxy wearable** op de **AAPS**-telefoon en op het horloge kunnen WhatsApp-berichten met een lichte trilling worden gemeld en over de bestaande watchface worden getoond.
 
 ### Optie 2) **AAPS** op het horloge, om **AAPS** op een telefoon op afstand te bedienen
 
