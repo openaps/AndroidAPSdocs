@@ -9,7 +9,7 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Pro aktualizaci na novou verzi postupujte podle pokynů v [návodu k aktualizaci](UpdateToNewVersion). Sekce řešení problémů na stránce návodu k aktualizaci se věnuje i nejčastějším potížím při aktualizaci **AAPS**.
+Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. Sekce řešení problémů na stránce návodu k aktualizaci se věnuje i nejčastějším potížím při aktualizaci **AAPS**.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
@@ -24,7 +24,7 @@ Pokud neaktualizujete do data vypršení platnosti, **AAPS** se přepne do otev�
 
 Data konce podpory jednotlivých verzí AAPS najdete na stránce [Konec podpory](EndOfLife.md).
 
-**Oznámení neignorujte.** Nové verze **AAPS** přinášejí důležité bezpečnostní opravy. Proto musí každý uživatel **AAPS** co nejdříve aktualizovat na nejnovější verzi. Cílem je zlepšit bezpečnost každého uživatele **AAPS** i celé DIY komunity. Děkujeme za pochopení.
+**Oznámení neignorujte.** Nové verze **AAPS** přinášejí důležité bezpečnostní opravy. Proto musí každý uživatel **AAPS** co nejdříve aktualizovat na nejnovější verzi. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Děkujeme za pochopení.
 
 (maintenance-android-version-aaps-version)=
 
@@ -141,7 +141,7 @@ Datum vydání: 31. 10. 2026
 - NSClientV3: oprava mezery v datech po opětovném připojení @MilosKozak
 - Automatizace: oprava deserializace @MilosKozak
 - Equil: oprava hlášení baterie @MilosKozak
-- Úklid workflow @vanelsberg
+- Cleanup workflow @vanelsberg
 - Equil: vylepšené zotavení po chybě @MilosKozak
 - DanaRS: oprava komunikace s domácí (korejskou) verzí pumpy @MilosKozak
 - Insight: oprava synchronizace TBR @MilosKozak
@@ -168,7 +168,7 @@ Datum vydání: 04. 02. 2026
 
 - Equil: oprava odporu pro různé modely @hhfcvmars
 - Tidepool: oprava relace @MilosKozak
-- Medtrum: oprava průběhu aktivace – zabránění dvojitému plnění @MilosKozak
+- Medtrum: Fix activation path by preventing double fill @MilosKozak
 - COB: oprava výpočtu COB (řeší nebezpečný okrajový případ) @MilosKozak
 
 (version3410)=
@@ -261,7 +261,7 @@ Datum vydání: 31. 12. 2025
 * Vylepšená deduplikace při selhání NS @MilosKozak
 
 ### Vylepšení UI/UX
-* různá vylepšení @MilosKozak @Philoul @olorinmaia
+* various improvements @MilosKozak @Philoul @olorinmaia
 
 ### Automatizace
 * Nová akce pro ovládání SMB – zapnutí/vypnutí SMB pomocí automatizace @MilosKozak
@@ -300,7 +300,7 @@ Datum vydání: 27. 03. 2025
 
 (version-enforcement)=
 
-### Od této verze jsou oznámení a vynucování verze zjednodušené a mírnější a fungují takto:
+### Starting this version, notification and version enforcement has been simplified and softened and works following way:
 *  Když je zařízení offline (bez připojení k internetu), platnost nevyprší. To znamená, že už neexistují lhůty 60 a 90 dní.
 *  Po vypršení platnosti se vynutí režim LGS
 *  Varování/oznámení budete dostávat méně často:
@@ -322,7 +322,7 @@ Datum vydání: 27. 03. 2025
 * Vylepšení UI přepínačů (radiobuttons) @olorinmaia
 * Automatizace: výběr polohy z mapy @MilosKozak
 * Verze je vidět na hlavních obrazovkách @MilosKozak
-* Je vynucena kompilace s existujícím systémem git (žádné stahování zip)
+* Compilation with existing git system is enforced (no zip downloads)
 * Zobrazení verze na hlavní obrazovce @MilosKozak
 * Vylepšení nahrávání do Tidepoolu @ConstantinMatheis
 
@@ -342,7 +342,7 @@ Datum vydání: 21. 01. 2025
 ### Opravy chyb
 
 * Dash: bonding je volitelný (ve výchozím stavu vypnutý) @MilosKozak
-* Equil: opraven bolus 10+ U, vylepšené alarmy @EquilHack
+* Equil: fixed bolus 10+U, alarm improvements @EquilHack
 * Garmin: vylepšení hodinek @swissalpine
 * Vylepšení hodinek @olorinmaia
 * Ovládání stavu smyčky z hodinek @tdrkDev
@@ -558,21 +558,21 @@ Datum vydání: 23. 10. 2023
 v1 je starý protokol pro výměnu dat mezi webem NS a serverem NS. Má mnoho omezení
 - v1 posílá jen data za 2 dny
 - v1 posílá všechna data za 2 dny při každém novém připojení
-- websockety jsou povinné = trvalé připojení, vyšší spotřeba baterie
+- using websockets is mandatory = permanent connection, more battery consumption
 - při častém odpojování se spojení s NS pozastaví na 15 minut, aby se zabránilo vysoké spotřebě dat
 
 v3 je nový protokol. Bezpečnější a efektivnější
 - při používání tokenů můžete lépe nastavit přístupová práva
 - protokol je efektivnější na obou stranách (AAPS i NS)
 - Umí z NS načíst data až za 3 měsíce
-- na každém zařízení si můžete vybrat, zda websockety použijete, nebo ne (s nimi jsou aktualizace rychlejší, bez nich je nižší spotřeba energie, ale aktualizace jsou pomalejší, tj. v minutách)
+- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power consumption, but slower updates ie. minutes)
 - NSClient se při odpojení nepozastavuje
 
 OMEZENÍ
 - S AAPS 3.2 se musí používat NS 15
 - v3 nevidí změny provedené protokolem v1 (pravděpodobně to bude vyřešeno v některé budoucí verzi NS)
-- naopak v1 změny provedené přes v3 vidí, protože používá starou, neefektivní metodu sledování změn
-- pamatujte, že NS zatím interně stále používá v1, takže pokud používáte v3, nelze zadávat data přes webové rozhraní NS. Pokud chcete zadávat data na dálku, musíte použít AAPSClient nebo SMS
+- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
+- pamatujte, že NS zatím interně stále používá v1, takže pokud používáte v3, nelze zadávat data přes webové rozhraní NS. You must use AAPSClient or SMS if you want to enter data remotely
 
 DOPORUČENÉ NASTAVENÍ
 - kvůli všemu výše uvedenému byste si měli vybrat jen jednu metodu a používat ji na všech zařízeních (pamatujte, že všechny ostatní uploadery v době psaní tohoto textu používají v1). Pokud se rozhodnete přejít na v3, vyberte v3 v AAPS i ve všech AAPSClientech
