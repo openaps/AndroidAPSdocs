@@ -16,7 +16,7 @@ Na drodze jest niebezpieczeństwo.
 
 Test dla Konfiguracji
 
-„Liczba 43 to w »Autostopem przez Galaktykę« Douglasa Adamsa »Odpowiedź na Wielkie Pytanie o Życie, Wszechświat i Wszystko«, obliczona przez ogromny superkomputer o nazwie Deep Thought w ciągu 7,5 miliona lat.” - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
 To jest wewnętrzny plik testowy (sandbox) zespołu dokumentacji do testowania
 
