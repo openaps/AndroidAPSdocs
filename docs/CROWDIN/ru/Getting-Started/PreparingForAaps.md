@@ -32,7 +32,7 @@ This damage can include **sight loss, and permanent neuropathy (pain)**. It is p
 
 #### Как быстро можно понижать HbA1c без риска необратимых последствий?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
 
 N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for an HbA1c calculator tool.
 
@@ -123,7 +123,7 @@ In addition, **AAPS** provides the ability to [export all your configuration set
 
 
 
-#### [Where to go for help](../UsefulLinks/BackgroundReading.md)?
+#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
 
 Целью этого раздела является предоставление новым пользователям ссылок на ресурсы помощи, включая доступ к поддержке сообщества, состоящего как из новых, так и из опытных пользователей, которые могут ответить на вопросы и устранить ошибки, при работе с AAPS.
 
@@ -173,12 +173,12 @@ Here is an approximate timeframe:
 | Configuring GitHub to allow the browser build                 |            1-4 hours             |
 | Setting up a reporting server                                 |              1 hour              |
 | Installing a CGM app (xDrip, BYODA, …)                        |              1 hour              |
-| Configuring CGM → xDrip → APPS initially                      |              1 hour              |
+| Configuring CGM → xDrip → AAPS initially                      |              1 hour              |
 | Configuring AAPS → pump initially                             |              1 hour              |
 | Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
-| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |              1 hour              |
+| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers     |              1 hour              |
 | Objective 1: Setting up visualization and monitoring          |              1 hour              |
-| Цель 2: Научитесь контролировать AAPS                         |              2 часа              |
+| Цель 2: Научитесь контролировать AAPS                         |             2 hours              |
 | Цель 3: Подтвердите ваши знания                               |            До 14 дней            |
 | Цель 4: Начните с открытого цикла                             |        Minimum of 7 days         |
 | Objective 5: Understanding your open loop                     |              7 дней              |
