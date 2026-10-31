@@ -98,7 +98,7 @@ OpenAPS 資料公用主要在為 DIYAPS 社群提供簡單的方法來共享資�
 
 ## 資料隱私
 
-Open Humans 透過為你分配一個數字 ID 來保護你的隱私，該 ID 用於每個項目。這使項目可以識別你但無法確認你的身份。 AAPS 上傳的應用程式 ID 與此類似，僅用於資料管理。更多資訊請參閱：
+Open Humans 透過為你分配一個數字 ID 來保護你的隱私，該 ID 用於每個項目。 This allows projects to recognize but not identify you. AAPS 上傳的應用程式 ID 與此類似，僅用於資料管理。更多資訊請參閱：
 
 - [Open Humans 資料使用政策](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)
