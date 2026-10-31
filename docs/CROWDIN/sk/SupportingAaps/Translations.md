@@ -1,6 +1,6 @@
 # Ako prekladať reťazce aplikácie AAPS alebo dokumentácie
 
-* Pre reťazce použité v aplikácii prejdite na <https://crowdin.com/project/androidaps> a prihláste sa pomocou svojho účtu GitHub
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * Pre dokumentáciu navštívte <https://crowdin.com/project/androidapsdocs> a prihláste sa pomocou svojho účtu GitHub
 
 * Pošlite tímu dokumentácie žiadosť o pripojenie. Kliknite na vlajku požadovaného jazyka a potom na tlačidlo „Join“ v pravom hornom rohu ďalšej stránky. Uveďte jazyk, napíšte niečo o sebe a svojich skúsenostiach s AAPS a či chcete byť prekladateľom alebo korektorom (iba ľudia so skúsenosťami s prekladom + pokročilí používatelia AAPS).
@@ -63,8 +63,8 @@ Schválenie je ručný krok. Ako nezisková organizácia neposkytujeme SLA (zaru
     
         1. Toto je preklad, ktorý pripravujete. Text môžete skopírovať zhora alebo vybrať jeden z návrhov nižšie.
     
-        1. Toto sú návrhy prekladu. Najmä tu vidíte, nakoľko Crowdin hodnotí návrh ako vhodný, alebo či už bol text preložený v minulosti a objavil sa znova iba preto, že sa text presunul, ale jeho obsah sa nezmenil.
-        1. Stlačte tlačidlo „save“ a uložte návrh prekladu. Potom sa odovzdá korektorovi na záverečnú kontrolu.
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. Stlačte tlačidlo „save“ a uložte návrh prekladu. It will then be passed to a proofreader for final check.
     
     ![Preklad dokumentácie](../images/translation_WikiTranslate.png)
     
@@ -101,4 +101,4 @@ Na to sa musia korektori osobitne pozrieť!
     
     ![schválenie textu](../images/translations-proofreading.png)
 
-* Keď korektor schváli preklad, pridá sa do najbližšieho zostavenia dokumentácie. Zostavenie nemá pevný plán, robí sa podľa potreby, približne raz za týždeň, okrem sviatkov. Ak chcete proces urýchliť, môžete tím dokumentácie informovať o nových prekladoch.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Ak chcete proces urýchliť, môžete tím dokumentácie informovať o nových prekladoch.
