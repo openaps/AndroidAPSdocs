@@ -1,7 +1,7 @@
 (v4-changes)=
-# What changed in AAPS v4
+# Τι άλλαξε στο AAPS v4
 
-This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
+Αυτή η σελίδα συγκεντρώνει τις σημαντικές **αλλαγές στη συμπεριφορά** μεταξύ των εκδόσεων v3 και v4 του **AAPS** — πράγματα που λειτουργούν διαφορετικά, έχουν μετακινηθεί ή έχουν αφαιρεθεί — ώστε οι υπάρχοντες χρήστες να ξέρουν τι να περιμένουν όταν κάνουν την ενημέρωση. Δείτε επίσης τις [Σημειώσεις έκδοσης](ReleaseNotes.md) και τις [οδηγίες ενημέρωσης](UpdateToNewVersion.md).
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,160 +10,160 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## Το NSClient v1 αφαιρέθηκε
 
-**AAPS** v3 shipped **two** Nightscout synchronization plugins:
+Το **AAPS** v3 είχε **δύο** πρόσθετα (plugins) συγχρονισμού με το Nightscout:
 
-- **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
-- **NSClientV3** — the client for the newer Nightscout **API v3**.
+- **NSClient** — τον παλιό client (το παλιό Nightscout REST / socket.io API, που λέγεται επίσης *«v1»*), και
+- **NSClientV3** — τον client για το νεότερο **API v3** του Nightscout.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+Στο **AAPS** v4 το παλιό πρόσθετο **NSClient (v1)** έχει **αφαιρεθεί**. Για τον συγχρονισμό με το Nightscout υπάρχει πλέον μόνο το **NSClientV3**.
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+Αν εσείς (ή ο ακόλουθός σας με το **AAPSClient**) συγχρονίζατε ακόμα με το παλιό πρόσθετο **NSClient (v1)**, αλλάξτε σε **NSClientV3** πριν ή μετά την ενημέρωση:
 
-- Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
-- Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
-- If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- Ανοίξτε **[Διαμόρφωση](../SettingUpAaps/ConfigBuilder.md) → Επικοινωνία → NSClientV3**.
+- Εισάγετε τη **Διεύθυνση Nightscout** και ένα **διακριτικό πρόσβασης (access token)** (το NSClientV3 χρησιμοποιεί access token, *όχι* το παλιό API secret — δείτε [δημιουργία token](https://nightscout.github.io/nightscout/security/#create-a-token)).
+- Ο ιστότοπος Nightscout σας πρέπει να υποστηρίζει το **API v3** (Nightscout 15 ή νεότερο).
+- Αν χρησιμοποιείτε **websockets**, ενεργοποιήστε ή απενεργοποιήστε τα και στις **δύο** συσκευές, στην κύρια (master) και στον ακόλουθο — ποτέ μόνο στη μία.
 ```
 
-This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
+Αυτό αλλάζει μόνο τον τρόπο που η εφαρμογή επικοινωνεί με το Nightscout. Τα δεδομένα σας στο Nightscout δεν αλλάζουν.
 
 ---
 
-## The bottom navigation: Treatments, Scenes and Manage
+## Η κάτω γραμμή πλοήγησης: Θεραπείες, Σενάρια και Διαχείριση
 
-In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
+Στο **AAPS** v3 μετακινούσασταν στην εφαρμογή με μια σειρά από **καρτέλες** (Επισκόπηση, Ενέργειες, Θεραπείες, …), και αρκετές λειτουργίες ήταν **πρόσθετα** που ενεργοποιούσατε στο Config Builder (**Ενέργειες**, **Αυτοματισμός**, **Τρόφιμα**, …).
 
-In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+Στο **AAPS** v4 οι καρτέλες δεν υπάρχουν πια, ούτε το κουτάκι με το μάτι στο Config Builder που έδειχνε ένα πρόσθετο ως καρτέλα. Η κύρια οθόνη είναι η **Επισκόπηση**, και μια **κάτω γραμμή πλοήγησης** σας δίνει τρία φύλλα (sheets). **Οι Ενέργειες, ο Αυτοματισμός και τα Τρόφιμα δεν είναι πια πρόσθετα** — δεν χρειάζεται να ενεργοποιήσετε τίποτα στη [Διαμόρφωση](../SettingUpAaps/ConfigBuilder.md) (το Config Builder με νέο όνομα). Οι λειτουργίες τους βρίσκονται τώρα σε αυτά τα φύλλα.
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### Θεραπείες — καταχώριση και χορήγηση
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
+Στο φύλλο **Θεραπείες** καταγράφετε ή χορηγείτε μια θεραπεία: **Οδηγός Bolus**, **Ινσουλίνη** (χειροκίνητο bolus), **Υδατάνθρακες**, **Θεραπεία** (ινσουλίνη + υδατάνθρακες μαζί), **Βαθμονόμηση**, **CGM** (ανοίγει την εφαρμογή CGM σας, αν έχει ρυθμιστεί) και οι **[Γρήγοροι Οδηγοί](../DailyLifeWithAaps/QuickWizards.md)** σας.
 
-![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
+![Το φύλλο Θεραπείες στο κάτω μέρος της οθόνης](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+Σε ένα **ρολόι Wear OS** οι ίδιες θεραπείες καταχωρίζονται από το **μενού AAPS** του ρολογιού (Οδηγός Bolus / Υπολογιστής, eCarbs, Θεραπεία, …):
 
-![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
+![Οι ενέργειες θεραπείας στο μενού AAPS του ρολογιού](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### Σενάρια
 
-Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
+Οι έτοιμες ρυθμίσεις σας για διάφορες καταστάσεις — δείτε [Σενάρια](../DailyLifeWithAaps/Scenes.md).
 
 (v4changes-manage)=
-### Manage — manage and activate
+### Διαχείριση — διαχείριση και ενεργοποίηση
 
-The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+Στο φύλλο **Διαχείριση** διαχειρίζεστε και ενεργοποιείτε όλα τα υπόλοιπα: **[Προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Ρυθμίσεις ινσουλίνης** (οι διαμορφώσεις ινσουλίνης σας), **[Προσωρινός στόχος](../DailyLifeWithAaps/TempTargets.md)**, έτοιμες ρυθμίσεις **[Γρήγορου Οδηγού](../DailyLifeWithAaps/QuickWizards.md)**, **[Σενάρια](../DailyLifeWithAaps/Scenes.md)**, **Αυτοματισμός**, **Τρόφιμα**, **Εναλλαγή σημείων**, **Αντλία**, **[Εξουσιοδοτημένοι πελάτες](../RemoteFeatures/ClientMasterControl.md)** — καθώς και οι ενέργειες της αντλίας που ήταν παλιά στην καρτέλα *Ενέργειες* (**Εκτεταμένο Bolus**, **ακύρωση προσωρινού βασικού ρυθμού**, **Πλήρωση/Γέμισμα**, **Τοποθέτηση αισθητήρα**, **Αλλαγή Μπαταρίας Αντλίας**).
 
-![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
+![Το φύλλο Διαχείριση στο κάτω μέρος της οθόνης](../images/v4/BehavioralChanges/manage_sheet.png)
 
-All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
+Όλοι οι υπάρχοντες κανόνες αυτοματισμού και οι καταχωρίσεις τροφίμων σας διατηρούνται. Άλλαξε μόνο ο τρόπος που φτάνετε σε αυτές τις λειτουργίες.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### Πού πήγε η καρτέλα Ενέργειες;
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+Το **AAPS** 3.x είχε μια καρτέλα «Ενέργειες». Στο **AAPS** 4 οι λειτουργίες της βρίσκονται σε άλλα σημεία:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **Αλλαγή Προφίλ** και **Ποσοστό προφίλ**: πατήστε το [όνομα του προφίλ](#aaps-screens-profile--target) στην κύρια οθόνη, ή **Διαχείριση → Προφίλ**. Δείτε [Αλλαγή του ποσοστού προφίλ](#ProfileSwitch-change-percentage).
+* **Προσωρινός στόχος**: πατήστε τον [στόχο](#aaps-screens-profile--target) στην κύρια οθόνη, ή **Διαχείριση → Προσωρινός στόχος**.
+* **Πλήρωση/Γέμισμα**, **Τοποθέτηση αισθητήρα**, **Έλεγχος BG** και οι άλλες καταχωρίσεις careportal: στον ανοιγμένο [πίνακα κατάστασης](#aaps-screens-careportal), στη **Διαχείριση**, ή ως κουμπιά [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md).
+* **Εξερεύνηση ιστορικού**, **Στατιστικά** (TDD): στο **μενού** (☰).
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Στο **AAPS** v3, ένα παρατεταμένο πάτημα στο όνομα του προφίλ άνοιγε το παράθυρο αλλαγής προφίλ (ποσοστό, διάρκεια, προσωρινός στόχος Άσκησης). Στο **AAPS** v4, **πατήστε** το όνομα του προφίλ (ή **Διαχείριση → Προφίλ**) και μετά πατήστε το στρογγυλό κουμπί **▶** κάτω δεξιά για να ανοίξουν οι ίδιες ρυθμίσεις. Δείτε [Αλλαγή του ποσοστού προφίλ](#ProfileSwitch-change-percentage).
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## Η Προστασία ρυθμίσεων κλειδώνει τώρα και τις οθόνες διαχείρισης
 
-In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+Στο **AAPS** v3, η [Προστασία ρυθμίσεων](#Preferences-settings-protection) ζητούσε τον κωδικό σας μόνο όταν ανοίγατε τις ρυθμίσεις. Μπορούσατε ακόμα να προσθέσετε ή να επεξεργαστείτε προφίλ στην καρτέλα **Τοπικό προφίλ** χωρίς αυτόν.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+Στο **AAPS** v4, η Προστασία ρυθμίσεων καλύπτει και την επεξεργασία στις οθόνες διαχείρισης: **Προφίλ**, **Ρυθμίσεις ινσουλίνης**, **Προσωρινός στόχος** και **Γρήγορος Οδηγός**. Αν οι ρυθμίσεις σας είναι κλειδωμένες, αυτές οι οθόνες ανοίγουν σε λειτουργία **μόνο ανάγνωσης**:
 
-- You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- Μπορείτε να δείτε τις καταχωρίσεις και να πατήσετε **▶ Ενεργοποίηση** ή να τις χρησιμοποιήσετε.
+- Τα κουμπιά **Προσθήκη / Επεξεργασία / Κλώνος / Διαγραφή** είναι **κρυμμένα**. Μόνο το **✏️ μολύβι** στην πάνω γραμμή δείχνει ότι μπορείτε να ξεκλειδώσετε την επεξεργασία.
 
-![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
+![Η οθόνη Προφίλ σε λειτουργία μόνο ανάγνωσης — μόνο Ενεργοποίηση στο κάτω μέρος, μολύβι στην πάνω γραμμή](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+Για να προσθέσετε, να επεξεργαστείτε, να κλωνοποιήσετε ή να διαγράψετε μια καταχώριση, πατήστε το **✏️ μολύβι** στην πάνω γραμμή και εισάγετε τον κωδικό των ρυθμίσεων (ή χρησιμοποιήστε βιομετρικά στοιχεία). Τα κουμπιά εμφανίζονται.
 
-If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+Αν δεν χρειάζεται να προστατεύσετε τις ρυθμίσεις σας, μπορείτε να απενεργοποιήσετε την Προστασία ρυθμίσεων στο **Ρυθμίσεις → Προστασία**.
 ```
 
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## Η ινσουλίνη που χρησιμοποιείται δεν μπορεί να αλλάξει
 
-In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+Στο **AAPS** v3, μπορούσατε να αλλάξετε τη DIA της ινσουλίνης που χρησιμοποιούσατε οποιαδήποτε στιγμή.
 
-In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+Στο **AAPS** v4, η ινσουλίνη με την ένδειξη **ΕΝΕΡΓΟ** στο **Διαχείριση → Ρυθμίσεις ινσουλίνης** είναι γκριζαρισμένη: δεν μπορείτε να την επεξεργαστείτε ή να τη διαγράψετε.
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+Όταν κάνετε την αναβάθμιση, το **AAPS** κρατά την ινσουλίνη και τη DIA που είχαν ήδη αποθηκεύσει οι αλλαγές προφίλ σας στη v3. Αν βρει παλαιότερα αρχεία όπου η ινσουλίνη είναι γνωστή αλλά η DIA όχι, χρησιμοποιεί μια προεπιλεγμένη DIA για αυτά και δείχνει ένα μήνυμα μία φορά, για παράδειγμα *Τα παλαιότερα αρχεία δεν είχαν διάρκεια δράσης ινσουλίνης, επομένως χρησιμοποιήθηκαν 9,0 ώρες για το Lyumjev. Ελέγξτε τις ρυθμίσεις ινσουλίνης σας — τα αρχεία που έχουν ήδη μετεγκατασταθεί δεν ενημερώνονται αργότερα.* Ελέγξτε τις ρυθμίσεις ινσουλίνης σας όταν το δείτε.
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+Για να αλλάξετε τη DIA ή την κορύφωση (peak), προσθέστε μια νέα ινσουλίνη με το **+**, προσαρμόστε την, αποθηκεύστε την και πατήστε **▶ Ενεργοποίηση**. Δείτε [Αλλαγή της ινσουλίνης που χρησιμοποιείται](#Config-Builder-insulin-change-active).
 ```
 
 ---
 
 (v4changes-remote-control)=
-## AAPSClient remote control needs pairing
+## Ο απομακρυσμένος έλεγχος με το AAPSClient χρειάζεται σύζευξη
 
-In **AAPS** v3, **AAPSClient** controlled **AAPS** by writing care-portal treatments to Nightscout, and could not deliver a bolus.
+Στο **AAPS** v3, το **AAPSClient** έλεγχε το **AAPS** γράφοντας θεραπείες careportal στο Nightscout, και δεν μπορούσε να χορηγήσει bolus.
 
-In **AAPS** v4, the client and the main phone are **paired** once, and every command is signed. The main phone checks and confirms each command, and a client can now also deliver a bolus.
+Στο **AAPS** v4, ο πελάτης (client) και το κύριο τηλέφωνο κάνουν **σύζευξη** μία φορά, και κάθε εντολή είναι υπογεγραμμένη. Το κύριο τηλέφωνο ελέγχει και επιβεβαιώνει κάθε εντολή, και ένας πελάτης μπορεί τώρα να χορηγήσει και bolus.
 
-- Each client has a **[role](#client-master-control-roles)** that limits what it may do.
-- While client control is on, the main phone is in **[hardened mode](#client-master-control-hardened-mode)**: treatments and changes typed directly into Nightscout (the website, other apps) are no longer applied.
-- Each client gets a **[Nightscout token of its own](#client-master-control-own-token)** with only the rights it needs.
+- Κάθε πελάτης έχει έναν **[ρόλο](#client-master-control-roles)** που περιορίζει τι μπορεί να κάνει.
+- Όσο είναι ενεργός ο έλεγχος από πελάτες, το κύριο τηλέφωνο είναι σε **[ενισχυμένη λειτουργία](#client-master-control-hardened-mode)**: θεραπείες και αλλαγές που γράφονται απευθείας στο Nightscout (στον ιστότοπο, σε άλλες εφαρμογές) δεν εφαρμόζονται πια.
+- Κάθε πελάτης παίρνει ένα **[δικό του token Nightscout](#client-master-control-own-token)**, μόνο με τα δικαιώματα που χρειάζεται.
 
 ```{admonition} What you need to do
 :class: important
-Pair each **AAPSClient** with the main phone: see [Master ↔ Client control](#client-master-control). With an admin token on the main phone, the main phone shows a QR code that sets up and pairs the client in one scan. If you used to enter treatments on the Nightscout website, enter them on a paired client instead.
+Κάντε σύζευξη κάθε **AAPSClient** με το κύριο τηλέφωνο: δείτε [Έλεγχος Master ↔ Client](#client-master-control). Με ένα admin token στο κύριο τηλέφωνο, το κύριο τηλέφωνο δείχνει έναν κωδικό QR που ρυθμίζει τον πελάτη και κάνει τη σύζευξη με μία σάρωση. Αν καταχωρίζατε θεραπείες στον ιστότοπο Nightscout, καταχωρίστε τις τώρα σε έναν πελάτη με σύζευξη.
 ```
 
 ---
 
-## Duplicate BG data now switches the loop to Low Glucose Suspend
+## Διπλά δεδομένα BG αλλάζουν τώρα το κύκλωμα σε Αναστολή Χαμηλής Γλυκόζης
 
-When **AAPS** receives the same BG reading twice (a red warning badge on the BG source shortcut in the bottom bar), it cannot calculate your trend reliably, so it stops giving correction insulin.
+Όταν το **AAPS** λαμβάνει την ίδια τιμή BG δύο φορές (ένα κόκκινο σήμα προειδοποίησης στη συντόμευση της πηγής BG στην κάτω γραμμή), δεν μπορεί να υπολογίσει σωστά την τάση σας, και έτσι σταματά να δίνει ινσουλίνη διόρθωσης.
 
-In **AAPS** v3 this happened quietly in the background: your loop still showed as **Closed Loop**, even though it could no longer correct.
+Στο **AAPS** v3 αυτό γινόταν αθόρυβα στο παρασκήνιο: το κύκλωμα εμφανιζόταν ακόμα ως **Κλειστό Κύκλωμα**, αν και δεν μπορούσε πια να κάνει διορθώσεις.
 
-In **AAPS** v4 the change is visible. A closed loop is switched to **Low Glucose Suspend** mode, and the loop dialog tells you why: *"LGS mode due to doubled values in BG source"*. **AAPS** can still reduce or suspend your basal to protect you against lows.
+Στο **AAPS** v4 η αλλαγή φαίνεται. Ένα κλειστό κύκλωμα αλλάζει σε λειτουργία **Αναστολή Χαμηλής Γλυκόζης**, και το παράθυρο του κυκλώματος σας λέει τον λόγο: *«Λειτουργία LGS λόγω διπλών τιμών στην πηγή γλυκόζης»*. Το **AAPS** μπορεί ακόμα να μειώσει ή να σταματήσει τον βασικό ρυθμό σας για να σας προστατέψει από υπογλυκαιμίες.
 
 ```{admonition} What you need to do
 :class: important
-Find and remove the duplicate readings — see [BG warning sign](#aaps-screens-bg-warning-sign).
+Βρείτε και αφαιρέστε τις διπλές τιμές — δείτε [Σήμα προειδοποίησης BG](#aaps-screens-bg-warning-sign).
 
-Once they are gone, **AAPS** stays in **Low Glucose Suspend**. It does not go back to **Closed Loop** on its own: press and hold the loop icon and select **Closed Loop** again.
+Όταν αφαιρεθούν, το **AAPS** μένει σε **Αναστολή Χαμηλής Γλυκόζης**. Δεν επιστρέφει μόνο του σε **Κλειστό Κύκλωμα**: πατήστε παρατεταμένα το εικονίδιο του κυκλώματος και επιλέξτε ξανά **Κλειστό Κύκλωμα**.
 ```
 
 ---
 
 (v4changes-tidepool)=
-## Tidepool: data now shows under the device name AAPS
+## Tidepool: τα δεδομένα εμφανίζονται τώρα με το όνομα συσκευής AAPS
 
-In **AAPS** v3, the data uploaded to [Tidepool](../SettingUpAaps/Tidepool.md) was shown in Tidepool under another device name.
+Στο **AAPS** v3, τα δεδομένα που ανέβαιναν στο [Tidepool](../SettingUpAaps/Tidepool.md) εμφανίζονταν στο Tidepool με άλλο όνομα συσκευής.
 
-In **AAPS** v4, the data is shown under the device name **AAPS**. After the update, **AAPS** starts a new data set in Tidepool. Your older data stays in Tidepool under the old device name.
+Στο **AAPS** v4, τα δεδομένα εμφανίζονται με το όνομα συσκευής **AAPS**. Μετά την ενημέρωση, το **AAPS** ξεκινά ένα νέο σύνολο δεδομένων στο Tidepool. Τα παλαιότερα δεδομένα σας μένουν στο Tidepool με το παλιό όνομα συσκευής.
 
 ```{admonition} What you need to do
 :class: important
-Usually nothing: new data simply appears under **AAPS**.
+Συνήθως τίποτα: τα νέα δεδομένα απλώς εμφανίζονται με το όνομα **AAPS**.
 
-Do **not** run "**Full synchronization**" while the old data is still in Tidepool: the same data would then be there twice. If you want all your data under the new name, use the "**Purge all data**" button on the [Tidepool screen](#tidepool-menu) first (it also deletes the old data uploaded by **AAPS**), then run "**Full synchronization**". Only the data still stored in **AAPS** on your phone can be uploaded again.
+**Μην** εκτελέσετε «**Πλήρης συγχρονισμός**» όσο τα παλιά δεδομένα είναι ακόμα στο Tidepool: τότε τα ίδια δεδομένα θα υπήρχαν δύο φορές. Αν θέλετε όλα τα δεδομένα σας με το νέο όνομα, πατήστε πρώτα το κουμπί «**Διαγραφή όλων των δεδομένων**» στην [οθόνη Tidepool](#tidepool-menu) (διαγράφει επίσης τα παλιά δεδομένα που ανέβασε το **AAPS**) και μετά εκτελέστε «**Πλήρης συγχρονισμός**». Μόνο τα δεδομένα που είναι ακόμα αποθηκευμένα στο **AAPS** στο τηλέφωνό σας μπορούν να ανέβουν ξανά.
 ```
 
 ---
