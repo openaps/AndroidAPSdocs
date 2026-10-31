@@ -55,23 +55,23 @@ Tendrás que pasar de una pestaña a otra: empieza con todas las pestañas cerra
 
 La compilación en el navegador es una serie de decisiones. Sigue estos pasos en orden:
 
-1. **[Crea tu fork en GitHub](BrowserBuildFork.md)**: haz tu copia personal del código fuente de AAPS.
-2. **[Crea tu almacén de claves de firma](BrowserBuildKeystore.md)**: la decisión clave es generar un nuevo almacén de claves (opción 1) o subir el que ya tienes (opción 2); después sigue la página para tu dispositivo.
-3. **[Autoriza Google Drive](BrowserBuildGoogleDrive.md)**: permite que GitHub guarde la app compilada en tu Google Drive.
-4. **[Compila el APK](BrowserBuildAPK.md)**: ejecuta el workflow de GitHub Actions y elige tu versión y variante.
+1. **[Crear tu fork de GitHub](BrowserBuildFork.md)**: haz tu copia personal del código fuente de AAPS.
+2. **[Crear tu almacén de claves de firma](BrowserBuildKeystore.md)**: la decisión clave es generar un nuevo almacén de claves (opción 1) o subir el que ya tienes (opción 2); después sigue la página para tu dispositivo.
+3. **[Autorizar Google Drive](BrowserBuildGoogleDrive.md)**: permite que GitHub guarde la app compilada en tu Google Drive.
+4. **[Compilar el APK](BrowserBuildAPK.md)**: ejecuta el workflow de GitHub Actions y elige tu versión y variante.
 
 Si tienes problemas, consulta **[Compilación en el navegador: solución de problemas](../GettingHelp/BrowserBuildTroubleshooting.md)**. Para operaciones opcionales con un fork, consulta [exportar tu almacén de claves](#ci-keystore-export) o [aplicar un commit con cherry-pick](#github-cherry-pick).
 
 ----
 
-**Empieza con el [Paso 1: crea tu fork en GitHub](BrowserBuildFork.md) →**
+**Empieza con el [Paso 1 – Crear tu fork de GitHub](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Paso 1: Crea tu fork <BrowserBuildFork.md>
-Paso 2: Crea tu almacén de claves <BrowserBuildKeystore.md>
-Paso 3: Autoriza Google Drive <BrowserBuildGoogleDrive.md>
-Paso 4: Compila el APK <BrowserBuildAPK.md>
+Paso 1: Crear tu fork <BrowserBuildFork.md>
+Paso 2: Crear tu almacén de claves <BrowserBuildKeystore.md>
+Paso 3: Autorizar Google Drive <BrowserBuildGoogleDrive.md>
+Paso 4: Compilar el APK <BrowserBuildAPK.md>
 ```
