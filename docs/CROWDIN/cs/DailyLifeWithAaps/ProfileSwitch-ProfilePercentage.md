@@ -2,7 +2,7 @@
 
 Tato část vysvětluje, co je **přepnutí profilu** a **procento profilu**. Jak vytvořit **profil**, se dozvíte v části [Váš profil AAPS](#your-aaps-profile-create-and-edit-profiles).
 
-Na začátku cesty s **AAPS** si musíte vytvořit **profil**, pochopit, jak provést **přepnutí profilu**, a naučit se, jaký vliv má **procento profilu** v **AAPS**. Funkce **přepnutí profilu** a **procento profilu** mohou být zvláště užitečné pro:
+Na začátku cesty s **AAPS** si musíte vytvořit **profil**, pochopit, jak provést **přepnutí profilu**, a naučit se, jaký vliv má **procento profilu** v **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
 
 - menstruační cyklus – v **automatizacích** lze nastavit procentní úpravu **profilu**, aby se **AAPS** přizpůsobil různým fázím hormonálního cyklu a předpokládané inzulínové rezistenci.
 
@@ -125,25 +125,25 @@ Vliv **procenta profilu** shrnuje tato tabulka:
 procento |     Účinek     |     I:C  
 g/U     | příklad  
 15 g |          ISF  
-mmol/l/U  
-mg/dl/U          | U na snížení o  
-2 mmol/l  
-40 mg/dl |
-|:---------------------------:|:--------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------------:|
+mmol/L/U  
+mg/dL/U          | U to lower  
+2mmol/L  
+40mg/dL |
+|:---------------------------:|:--------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
 |            90 %             |     Slabší     | 5/0,9  
-=**5,55** |     2,7 U      | 2,2/0,9  
+=**5,55** |     2.7 U      | 2,2/0,9  
 =**2,4**  
   
 40/0,9  
-=**44,4** |                0,8 U                 |
+=**44,4** |             0.8 U              |
 |          **100 %**          | **Standardní** |       **5**       |    **3 U**     |                **2,2  
-40**                |              **0,9** U               |
+40**                |           **0.9** U            |
 |            130 %            |    Silnější    | 5/1,3  
-=**3,85** |     3,9 U      | 2,2/1,3  
+=**3,85** |     3.9 U      | 2,2/1,3  
 =**1,7**  
   
 40/1,3  
-=**30,8** |                1,2 U                 |
+=**30,8** |             1.2 U              |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
