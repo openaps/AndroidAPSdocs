@@ -1,4 +1,4 @@
-# AAPS Setup Wizard
+# Assistente de Configuração do AAPS
 
 ```{contents} In this page
 :backlinks: entry
@@ -444,7 +444,7 @@ Agora seleciona a sua bomba de insulina. Leia a documentação da sua [bomba de 
 
 Percorra a lista e selecione a sua bomba. Neste exemplo usamos a "**Bomba virtual**", que é útil enquanto ainda está a aprender e ainda não ligou uma bomba real:
 
-![Pump](../images/setup-wizard/Wizard-Pump.png)
+![Bomba](../images/setup-wizard/Wizard-Pump.png)
 
 São suportadas muitas bombas — desloque a lista para baixo para encontrar a sua:
 
@@ -460,7 +460,7 @@ Se já configurou o seu perfil e sabe como ligar a sua bomba, pode ligá-la agor
 
 Toque em "**SEGUINTE**" para ir para o ecrã seguinte.
 
-## APS algorithm
+## Algoritmo APS
 
 Use the OpenAPS SMB algorithm as your APS algorithm. Apesar do nome, a função SMB do algoritmo está desativada até estar familiarizado com o AAPS e ter completado os primeiros objetivos. De qualquer forma, o OpenAPS SMB é mais recente e, em geral, melhor do que o OpenAPS AMA.
 
