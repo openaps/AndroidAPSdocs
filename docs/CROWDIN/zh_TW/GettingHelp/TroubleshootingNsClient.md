@@ -12,7 +12,7 @@ Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3**
 
 * 重新啟動
 
-首先應該嘗試重新啟動 Nightscout 和手機，查看問題是否仍然存在。
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 如果你的 Nightscout 是託管在 Heroku 上，可以登入 Heroku，點擊你的 Nightscout 應用名稱，點擊「更多」選單，然後選擇「重新啟動所有 dynos」。
 
