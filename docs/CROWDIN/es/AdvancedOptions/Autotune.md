@@ -129,7 +129,7 @@ La función **Cambio automático de perfil** solo está disponible en el modo De
 - **Usar ratios IC/ISF basados en el ritmo circadiano** (por defecto desactivado): consulta [Perfil de IC o ISF circadiano](#autotune-circadian-ic-or-isf-profile) más abajo.
 
 (autotune-other-settings)=
-### Other settings
+### Otros ajustes
 
 - Autotune también usa la relación máxima de Autosens y la relación mínima de Autosens para limitar la variación. Puedes ver y cambiar estos valores en [**Ajustes** > **Ajustes de absorción** > **Ajustes avanzados**](../SettingUpAaps/Preferences.md) (**Autosens máximo** y **Autosens mínimo**).
 
