@@ -1,6 +1,6 @@
 # 建立和恢復備份
 
-當你在手機上安裝 AAPS 時，它將成為你每日依賴的「醫療設備」。強烈建議針對手機故障、被盜或遺失時有一個緊急備份計畫。 Therefore, it is essential to prepare by asking yourself: "What if?"
+當你在手機上安裝 AAPS 時，它將成為你每日依賴的「醫療設備」。強烈建議針對手機故障、被盜或遺失時有一個緊急備份計畫。因此，事先做好準備非常重要，請先問問自己：「如果發生了某種狀況，該怎麼辦？」
 
 要將你的 AAPS 設定恢復到現有或新手機，重要的是將以下項目保存在安全的地方（也就是說：不能放在你的手機上）。最佳做法是保留至少兩份獨立備份：一份在本機硬碟、USB 隨身碟，並且（建議）再放一份在雲端儲存空間，例如 Google Drive 或 Microsoft 365 OneDrive。將備份存放在雲端後，你就能隨時隨地從手機讀取所有所需資訊，以便在任何地點、任何時間還原你的設定。
 
@@ -12,7 +12,7 @@
 - 最近的 **AAPS 安裝檔 .APK** 副本
 - 最近的 **設定匯出** 檔案：用於恢復重要的設定（包括你的目標！）。
 - 你的 **AAPS 主密碼**
-- Backups of additional utilities: Such as BYODA and/or xDrip.
+- 其他工具的備份：例如 BYODA 和／或 xDrip。
 - 針對你設定的個人筆記。
 
 以下是建議的備份項目。
@@ -20,7 +20,7 @@
 ## 建立備份
 
 ### 從構置 APK 時使用的電腦匯出的金鑰存儲檔案
-當你從 Android Studio 構建 .APK 安裝檔時，會使用 **憑證檔案和密碼來簽署 .APK 安裝檔**。若要更新當前的 AAPS 安裝，必須用與首次安裝相同的憑證簽署更新的 .APK 安裝檔。在更新時，所有的設定和 AAPS 資料庫都將被保留。 Note that without this, you are required to first uninstall the current application and then [reinstall](#reinstall-aaps) and reconfigure AAPS.
+當你從 Android Studio 構建 .APK 安裝檔時，會使用 **憑證檔案和密碼來簽署 .APK 安裝檔**。若要更新當前的 AAPS 安裝，必須用與首次安裝相同的憑證簽署更新的 .APK 安裝檔。在更新時，所有的設定和 AAPS 資料庫都將被保留。請注意，若沒有這項備份，您必須先解除安裝目前的應用程式，再[重新安裝](#reinstall-aaps)並重新設定 AAPS。
 
 維持憑證和相關密碼將大大減少未來更新 APK 的複雜性，特別是如果你需要從新電腦構建應用時。請參閱 [更新 AAPS](../Maintenance/UpdateToNewVersion.md) 部分，了解在構置新 APK 時如何使用金鑰存儲檔案的詳細資訊。
 
@@ -39,13 +39,13 @@
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+您可以在設定 [AAPS](#SetupWizard-StoragePermission) 時選擇的 **AAPS 資料夾**中找到設定。</br>
+您也可以在<strong x-id="1">維護</strong>畫面（<strong x-id="1">選單</strong>（☰） > <strong x-id="1">維護</strong>）變更 **AAPS 資料夾**，請參閱[設定本機 AAPS 資料夾](#preferences-maintenance-logdirectory)。
 ```
 
 擁有 APK 安裝檔的副本（見上文）和你的 **設定** 檔後，你可以迅速在現有或新手機上啟動。
 
-**Settings** 檔案用於自訂 AAPS 應用程式，以符合你的特定設定。 They encompass details such as your **Configuration** settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+**Settings** 檔案用於自訂 AAPS 應用程式，以符合你的特定設定。其中包含**組態**設定、目標狀態、第三方通訊設定（例如 Nightscout、Tidepool）、自動化項目和設定檔等資訊。
 
 將 AAPS 設定匯出為檔案使你能夠將其配置恢復到特定的時間點。如前所述，除了所有組態設定外，匯出檔也包含你的目標狀態，當 **(re)installing** AAPS 時需要一併還原。否則你將必須從頭完成所有目標，才能啟用封閉循環。設定檔也能讓你還原「最後已知可用」的設定，以撤銷任何組態變更。
 
@@ -58,23 +58,23 @@ You can also change the **AAPS directory** on the **Maintenance** screen (**menu
 
 **如何手動備份：**
 
-1. If this your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). 設置密碼並將其紀錄在安全的地方。_若沒有此密碼，你將無法訪問你的**設定**備份。_
+1. 如果這是您第一次匯入或匯出**設定**，您需要先在[設定 > 防護](#Preferences-master-password)中設定主密碼。設置密碼並將其紀錄在安全的地方。_若沒有此密碼，你將無法訪問你的**設定**備份。_
 
-2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
+2. 在 **AAPS** 主畫面開啟**選單**（☰） > **維護**。在**匯出設定**旁點選**本機**和**雲端**選項，以選擇檔案的儲存位置（請參閱下方的**匯出或匯入設定**），然後點選**匯出設定**。 **AAPS** 會顯示檔案的儲存位置：選擇**本機**時會顯示檔名；選擇**雲端**時則會顯示 **Google 雲端硬碟**。點選**確定**。
 
-   ![Export settings to a local file](../images/Maintenance/export_settings_confirm_local.png)
+   ![將設定匯出至本機檔案](../images/Maintenance/export_settings_confirm_local.png)
 
-   ![Export settings to Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
+   ![將設定匯出至 Google 雲端硬碟](../images/Maintenance/export_settings_confirm_cloud.png)
 
-   Type the master password set above and tap **OK**.
+   輸入上方設定的主密碼，然後點選**確定**。
 
-   ![Master password for the export](../images/Maintenance/export_settings_password.png)
+   ![匯出用主密碼](../images/Maintenance/export_settings_password.png)
 
-   **Settings exported** (local) or **Cloud export successful** (cloud) confirms the export.
+   出現**設定已匯出**（本機）或**雲端匯出成功**（雲端）的訊息，即表示匯出完成。
 
-   ![Settings exported message](../images/Maintenance/export_settings_done_local.png)
+   ![「設定已匯出」訊息](../images/Maintenance/export_settings_done_local.png)
 
-   ![Cloud export successful message](../images/Maintenance/export_settings_done_cloud.png)
+   ![「雲端匯出成功」訊息](../images/Maintenance/export_settings_done_cloud.png)
 
 3. 使用你的手機檔案總管（通常稱為「檔案」或「我的檔案」），導航至內部儲存 > AAPS > 偏好設定。在這裡你可以看到所有匯出的偏好設定檔案副本。檔案名稱應為`YYYY-MM-DD_Time_appname.json`。將此檔案上傳到你選擇的雲端平台。然後從雲端平台下載一份副本到你的本地電腦。
 
@@ -84,8 +84,8 @@ You can also change the **AAPS directory** on the **Maintenance** screen (**menu
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+您可以在設定 [AAPS](#SetupWizard-StoragePermission) 時選擇的 **AAPS 資料夾**中找到設定。</br>
+您也可以在<strong x-id="1">維護</strong>畫面（<strong x-id="1">選單</strong>（☰） > <strong x-id="1">維護</strong>）變更 **AAPS 資料夾**，請參閱[設定本機 AAPS 資料夾](#preferences-maintenance-logdirectory)。
 ```
 
 建議定期執行設定匯出，特別是在進行設定更改之前和之後。你可以選擇**手動或（建議）透過自動化**來進行匯出。務必記下你的 AAPS 主密碼，並將設定檔從手機複製到例如雲端儲存空間等位置進行備份。
@@ -93,97 +93,97 @@ You can also change the **AAPS directory** on the **Maintenance** screen (**menu
 **注意**：_匯出的設定將使用你的 AAPS 主密碼進行加密：若沒有用於匯出的主密碼， 你將無法匯入設定檔！_
 
 ### 匯出或匯入設定
-To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
+若要匯出或匯入設定，請開啟**選單**（☰），然後選擇**維護**。在**檔案管理**中，**匯出設定**和**匯入設定**旁的**本機**與**雲端**選項，可讓您選擇設定檔的儲存位置或讀取來源：**本機**是手機上的 AAPS 資料夾；設定好[雲端資料夾](#preferences-maintenance-cloud)後，即可使用**雲端**。點選選項即可開啟或關閉；至少會保留一個選項為選取狀態，而且兩列會共用相同的選擇。接著點選**匯出設定**或**匯入設定**按鈕即可開始。
 
-![Maintenance menu with the Export settings and Import settings rows](../images/Maintenance/maintenance_export_import.png)
+![維護選單中的「匯出設定」和「匯入設定」列](../images/Maintenance/maintenance_export_import.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
 ### 自動設定匯出
 
-For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+若要自動匯出設定，請開啟[（**請參閱自動化**）](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)[**設定** > **維護**](#preferences-maintenance-settings)，展開**無人值守設定匯出**，並開啟**啟用自動匯出設定**。
 
 你現在可以將[自動化](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export)配置為定期匯出設定（_例如_每週），或在pod變更後進行匯出。
 
-_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
+_**注意：**匯入設定時，使用者一律需要輸入 AAPS 主密碼！_
 
-![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
+![「設定 &gt; 維護 &gt; 無人值守設定匯出」畫面中的「啟用自動匯出設定」開關](../images/Maintenance/settings_unattended_export.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
 ## 從備份中恢復至新手機或重新安裝 AAPS
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).</br>
-If **AAPS** loses access to that directory (this can happen after a reinstall or after clearing the app's storage), it shows an **Access to the AAPS directory was lost** notification and stops saving settings to the phone until you [select the directory again](#preferences-maintenance-logdirectory).
+您可以在設定 [AAPS](#SetupWizard-StoragePermission) 時選擇的 **AAPS 資料夾**中找到設定。</br>
+您也可以在<strong x-id="1">維護</strong>畫面（<strong x-id="1">選單</strong>（☰） > <strong x-id="1">維護</strong>）變更 **AAPS 資料夾**，請參閱[設定本機 AAPS 資料夾](#preferences-maintenance-logdirectory)。</br>
+如果 **AAPS** 無法再存取該資料夾（可能發生在重新安裝應用程式或清除應用程式儲存空間後），畫面會顯示「已失去 AAPS 資料夾的存取權」通知，並停止將設定儲存至手機，直到您[重新選取資料夾](#preferences-maintenance-logdirectory)。
 ```
 
-Use these instructions if you have a back-up of your APK and **Settings** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+如果您有 APK 和**設定**的備份，並想將其載入新手機，或因任何原因需要在現有手機上刪除並重新安裝 APK，請依照以下說明操作。
 
 _如果你在使用相同金鑰庫生成的APK更新**AAPS**，則無需遵循此過程。不過，仍建議在更新前建立備份。_
 
-如果你在丟失或更換原始金鑰庫後更新**AAPS**（即：使用未轉移金鑰庫的新電腦），確保按照上文備份所有設定，然後在你的手機上卸載現有版本的**AAPS**。 See [Reinstalling AAPS with a new keystore](#reinstall-aaps) for the full procedure.
+如果你在丟失或更換原始金鑰庫後更新**AAPS**（即：使用未轉移金鑰庫的新電腦），確保按照上文備份所有設定，然後在你的手機上卸載現有版本的**AAPS**。完整操作流程請參閱[使用新的金鑰庫重新安裝 AAPS](#reinstall-aaps)。
 
 如有需要，[在下面步驟之前設置你的CGM/BG源接收器](../Getting-Started/CompatiblesCgms.md)
 
 (ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-The **Preferences** file contains the session of the pod or patch that was active when you exported it.
-- **Export right after every pod or patch activation** and copy the file off your phone.
-- **Same phone, pod still running:** leave **Also replace pump settings** unticked. Your current pod is kept and only the other settings are imported.
-- **New phone taking over the pod:** tick **Also replace pump settings**, and only use a file exported during the pod you are wearing now. A file from an earlier pod replaces your current pod session, and you will need to start a new pod.
-- **An old pod session was imported by mistake:** **AAPS** keeps trying to reach that pod and you cannot activate a new one. Deactivate it; if that fails, discard it (see for example [Discarding a pod](#omnipod-dash-discard-pod) for Omnipod DASH).
+**偏好設定**檔案包含您匯出時正在使用的 Pod 或貼片工作階段。
+- **每次啟動 Pod 或貼片後，請立即匯出**，並將檔案複製到手機以外的位置。
+- **使用同一支手機，Pod 仍在運作：**不要勾選**同時取代幫浦設定**。這樣會保留目前的 Pod，只匯入其他設定。
+- **在新手機上接手目前使用的 Pod：**勾選**同時取代幫浦設定**，而且只能使用您目前佩戴的 Pod 使用期間所匯出的檔案。如果使用較早之前的 Pod 所匯出的檔案，會取代目前的 Pod 工作階段，您必須啟動新的 Pod。
+- **誤匯入舊的 Pod 工作階段：****AAPS** 會持續嘗試連線到該 Pod，導致您無法啟動新的 Pod。請先停用該 Pod；如果無法停用，請將其棄置（例如，Omnipod DASH 的相關說明請參閱[棄置 Pod](#omnipod-dash-discard-pod)）。
 ```
 
 ```{admonition} Pump settings are kept unless you say otherwise
 :class: note
-By default, an import leaves your pump settings alone: the pump selected in **Configuration**, its pairing and all its other settings stay as they are on this phone. Tick **Also replace pump settings** on the import screen only when you restore onto a new phone that should take over the same pump. Settings that are not in the file are never deleted by an import.
+匯入時，預設不會變更幫浦設定：此手機在**組態設定**中選取的幫浦、配對資訊及其他設定都會維持原樣。只有在新手機要接手使用同一個幫浦時，才在匯入畫面勾選**同時取代幫浦設定**。匯入時，檔案中沒有的設定絕不會遭到刪除。
 ```
 
 1. 使用上述 APK 的備份副本，按照[新安裝](../SettingUpAaps/TransferringAndInstallingAaps.md)的說明進行操作
 
 2. 啟動**AAPS**並允許任何要求的權限
 
-3. 退出安裝嚮導。 We will be importing all the necessary settings from the back-up copy of **Settings**
+3. 退出安裝嚮導。我們將從**設定**備份檔案匯入所有必要的設定
 
-4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
+4. 在**AAPS**主畫面點選**授予**，並允許頂端**所需權限**面板列出的所有權限
 
-5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+5. 在**AAPS**主畫面中，前往[設定 > 保護](#Preferences-master-password)，將主密碼設為與備份使用的密碼相同。
 
-6. If you haven't done it yet, [set the **AAPS directory**](#preferences-maintenance-logdirectory): from the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **AAPS directory**.
+6. 如果尚未設定，請[設定**AAPS 目錄**](#preferences-maintenance-logdirectory)：在**AAPS**主畫面開啟**選單**（☰）> **維護** > **AAPS 目錄**。
 
-7. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **Export settings** > type in the master password set above > **OK**. 這將在手機上建立偏好設定資料夾（如果尚未存在）。
+7. 在**AAPS**主畫面開啟**選單**（☰）> **維護** > **匯出設定** > 輸入上方設定的主密碼 > **確定**。這將在手機上建立偏好設定資料夾（如果尚未存在）。
 
 8. 從你的雲端平台下載**偏好設定**檔案的備份。
 
 9. 使用你的檔案管理器（常見為「Files」或「My Files」），如果你的 **AAPS Directory** 設為 `/internal storage/AAPS`，請將檔案從下載資料夾移動到 `/internal storage/AAPS/preferences`
 
-10. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** and tap **Import settings**. Select the preferences file you want to restore from (the newest is at the top). Make sure you select the correct preferences file, all .json files from the preferences folder (or from the cloud directory, with **Cloud**) will be shown.
+10. 在**AAPS**主畫面開啟**選單**（☰）> **維護**，然後點選**匯入設定**。選取要還原的偏好設定檔案（最新的檔案會顯示在最上方）。請確認選取正確的偏好設定檔案。偏好設定資料夾（或使用**雲端**時的雲端目錄）中的所有 .json 檔案都會顯示。
 
-    ![List of settings files to import](../images/Maintenance/import_settings_files.png)
+    ![要匯入的設定檔案清單](../images/Maintenance/import_settings_files.png)
 
-    **AAPS** shows the details of the file. Type the master password set above and tap **Decrypt & Review**.
+    **AAPS**會顯示檔案詳細資訊。輸入上方設定的主密碼，然後點選**解密並檢視**。
 
-11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Then tap **Import**.
+11. 檔案解密後，請決定如何處理幫浦設定。如果要在新手機上接手使用同一個幫浦，請勾選**同時取代幫浦設定**，讓配對資訊和幫浦設定都從檔案中匯入。如果要保留此手機目前已配對的幫浦，請勿勾選此選項。接著點選**匯入**。
 
-    ![Decrypted settings file with the Also replace pump settings box and the Import button](../images/Maintenance/import_settings_review.png)
+    ![已解密的設定檔案，其中顯示「同時取代幫浦設定」核取方塊和「匯入」按鈕](../images/Maintenance/import_settings_review.png)
 
-12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
+12. **AAPS**會詢問**要套用匯入的設定嗎？**，並告知將變更多少項設定；如果您未勾選該選項，也會告知會保留多少項幫浦設定。目前尚未寫入任何設定，因此點選**取消**，手機就會維持原狀。點選**確定**以套用設定。
 
-    ![Apply imported settings? dialog](../images/Maintenance/import_settings_apply.png)
+    ![要套用匯入的設定嗎？對話視窗](../images/Maintenance/import_settings_apply.png)
 
-13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
+13. **AAPS**會立即套用匯入的設定，不需要重新啟動。只有設定已變更的外掛會重新啟動。執行期間，**AAPS**會顯示**正在套用設定…**；如果幫浦正在忙碌，則會顯示**正在等待幫浦…**，並在幫浦閒置後套用設定。如果幫浦忙碌超過一分鐘，**AAPS**會詢問您是否要重試。出現**設定已套用**訊息，即表示匯入的設定已開始使用。匯入期間排入佇列的任何治療項目都會被取消。**AAPS**會通知您該項目已取消，因此不會重複傳送到幫浦。
 
-    ![Settings applied message](../images/Maintenance/import_settings_applied.png)
+    ![「設定已套用」訊息](../images/Maintenance/import_settings_applied.png)
 
-If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Select your pump again in **Configuration** and check its settings.
+如果檔案中選取的幫浦不受此版本的**AAPS**支援，**AAPS**會改用**虛擬幫浦**，並通知您此變更。請在**組態設定**中重新選取您的幫浦，並檢查其設定。
 
-14. Tubeless pumps (Omnipod and Medtrum) users only - if you ticked **Also replace pump settings** and your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+14. 僅適用於無管幫浦（Omnipod 和 Medtrum）使用者：如果您勾選了**同時取代幫浦設定**，而**偏好設定**並非從您目前使用的同一個 Pod 備份而來，您必須啟動新的 Pod 才能開始輸注胰島素。
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, open the **menu** (☰) in the top left > **Configuration** > **Pump** > switch to **Virtual Pump** > then switch back to your pump type
+**疑難排解：**如果您無法在**AAPS**主畫面設定啟用中的設定檔，請開啟左上角的**選單**（☰）> **組態設定** > **幫浦** > 切換至**虛擬幫浦** > 再切換回您的幫浦類型
 
 ### Dana RS 使用者注意事項
 
-- If you ticked **Also replace pump settings**, the pump connection settings are imported too: **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.
+- 如果您勾選了**同時取代幫浦設定**，也會一併匯入幫浦連線設定：新手機上的**AAPS**會「認得」該幫浦，因此不會開始掃描藍牙裝置。
 - 請手動配對新手機與幫浦。
