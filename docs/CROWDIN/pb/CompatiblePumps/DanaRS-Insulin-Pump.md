@@ -10,7 +10,7 @@
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## Recursos da bomba com o AAPS
 
 * Comunica-se com o **AAPS** pelo Bluetooth do próprio telefone, sem um dispositivo de comunicação extra.
 * Mudanças de horário de verão e de fuso horário devem ser feitas manualmente (veja [Viagens entre fusos horários](#timezone-traveling-danarv2-danars)).
@@ -36,7 +36,7 @@
     
     ![Tela da bomba Dana-i/RS antes do pareamento](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* Na tela da bomba, toque em **Pareando**. O **AAPS** procura bombas próximas.
+* Na tela da bomba, toque em **Pareamento**. O **AAPS** procura bombas próximas.
 
 * Toque na sua bomba na lista.
     
@@ -154,18 +154,18 @@ Ao trocar para um novo telefone, os seguintes passos são necessários:
 ### DanaRS v3, Dana-i, Dana-i2
 
 * Inicie o processo de pareamento como descrito [acima](#DanaRS-Insulin-Pump-pairing-pump).
-* Às vezes, pode ser necessário apagar primeiro as informações de pareamento no **AAPS**. Na tela da bomba (**Gerenciar** > **Bomba**), toque em **Desfazer pareamento** e confirme **Redefinir informações de pareamento?**. Depois, toque em **Pareando** novamente.
+* Às vezes, pode ser necessário apagar primeiro as informações de pareamento no **AAPS**. Na tela da bomba (**Gerenciar** > **Bomba**), toque em **Desfazer pareamento** e confirme **Redefinir informações de pareamento?**. Depois, toque em **Pareamento** novamente.
 
 ## Viagens entre fusos horários com as bombas DanaRS, Dana-i e Dana-i2
 
 Para informações sobre viagens entre fusos horários, veja a seção [Viagens entre fusos horários com bombas](#timezone-traveling-danarv2-danars).
 
-## Where to get help
+## Onde obter ajuda
 
-O desenvolvimento do driver DanaRS/Dana-i/Dana-i2 é feito pela comunidade de forma **voluntária**. Before requesting help, please:
+O desenvolvimento do driver DanaRS/Dana-i/Dana-i2 é feito pela comunidade de forma **voluntária**. Antes de pedir ajuda:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Leia** a seção desta documentação sobre o assunto para confirmar como o recurso deve funcionar.
+2. **Pergunte** no canal *#AAPS* do [Discord](https://discord.gg/4fQUWHZ4Mw) ou em um dos outros [canais da comunidade](../GettingHelp/WhereCanIGetHelp.md).
+3. **Relate um bug**: primeiro procure nos [issues existentes](https://github.com/nightscout/AndroidAPS/issues); se o seu não estiver na lista, abra um [novo issue](https://github.com/nightscout/AndroidAPS/issues) e anexe os seus [arquivos de log](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Ao pedir ajuda, informe a marca e o modelo do seu telefone, a versão do Android, a versão do **AAPS** e uma descrição simples do problema (o que mudou, quando funcionou pela última vez).
