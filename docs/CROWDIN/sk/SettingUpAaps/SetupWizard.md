@@ -1,538 +1,538 @@
-# AAPS Setup Wizard
+# Sprievodca nastavením AAPS
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+Pri prvom spustení **AAPS** vás prevedie „**Sprievodca nastavením**“, aby ste mohli rýchlo nastaviť všetky základné nastavenia vašej aplikácie jedným ťahom. **Sprievodca nastavením** vás navedie, aby ste nezabudli na niečo zásadné. Napríklad **nastavenia povolení** sú základom správneho nastavenia **AAPS**.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Nie je však povinné mať všetko úplne nakonfigurované pri prvom spustení **Sprievodcu nastavením**. Sprievodcu môžete jednoducho ukončiť a vrátiť sa k nemu neskôr. Po dokončení **Sprievodcu nastavením** máte tri spôsoby, ako konfiguráciu ďalej vyladiť alebo zmeniť. Vysvetlíme ich v ďalšej časti. Nevadí teda, ak niektoré body v Sprievodcovi nastavením preskočíte, môžete ich ľahko nastaviť neskôr.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+Počas používania **Sprievodcu nastavením** a hneď po ňom si v **AAPS** nemusíte všimnúť žiadne výrazné zmeny. Ak chcete zapnúť okruh **AAPS**, musíte postupne plniť **Ciele**, ktoré povoľujú jednu funkciu za druhou. **Cieľ 1** spustíte na konci Sprievodcu nastavením. Vy ovládate **AAPS**, nie naopak.
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+Ak chcete poznať štruktúru cieľov, prečítajte si [Plnenie cieľov](../SettingUpAaps/CompletingTheObjectives.md), ale potom sa sem vráťte a najprv prejdite Sprievodcu nastavením.
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+Zo skúseností vieme, že začiatočníci sa často sami nútia nastaviť **AAPS** čo najrýchlejšie. To môže viesť k frustrácii, pretože sa treba naučiť veľa nového.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Preto si na nastavenie okruhu nechajte dosť času. Prínos dobre fungujúceho okruhu **AAPS** je obrovský.
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Ak je v dokumentácii chyba alebo máte lepší nápad, ako niečo vysvetliť, môžete požiadať o pomoc komunitu, ako je opísané v časti [Kde získať pomoc](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Uvítacia správa
 
-When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
+Po otvorení Sprievodcu nastavením sa zobrazí krátka uvítacia správa a hneď v dolnej časti obrazovky aj panel „**Požadované povolenia**“ (pozrite ďalšiu časť).
 
-Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
+Keď udelíte povolenia, panel sa zatvorí a na uvítacej obrazovke sa zobrazí tlačidlo „**Ďalej**“. Pokračujte stlačením „**ĎALEJ**“:
 
-![Welcome](../images/setup-wizard/Wizard-Welcome.png)
+![Vitajte](../images/setup-wizard/Wizard-Welcome.png)
 
-## Required permissions
+## Požadované povolenia
 
-**AAPS** needs a few permissions to operate correctly. The Wizard groups them on a single "**Permissions Required**" panel, each with its own "**Grant**" button. Grant them one by one — the icon next to each item turns into a tick once it is done.
+**AAPS** potrebuje na správne fungovanie niekoľko povolení. Sprievodca ich zoskupuje na jednom paneli „**Požadované povolenia**“, každé s vlastným tlačidlom „**Povoliť**“. Udeľte ich jedno po druhom – keď je povolenie udelené, ikona vedľa položky sa zmení na fajku.
 
-![Permissions](../images/setup-wizard/Wizard-Permissions.png)
+![Povolenia](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Optimalizácia batérie
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Spotreba batérie je pri smartfónoch dôležitá, pretože výkon batérií je stále dosť obmedzený. Preto operačný systém Android vo vašom smartfóne obmedzuje, ktoré aplikácie môžu bežať a spotrebúvať čas procesora, a tým aj energiu batérie.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be excluded from battery optimization.
+**AAPS** však musí bežať pravidelne, _napr._ aby každých pár minút prijal hodnoty glykémie a potom pomocou algoritmu rozhodol, ako na vašu glykémiu reagovať podľa vašich nastavení. Preto musí byť vyňatý z optimalizácie batérie.
 
-Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
+Stlačte „**Povoliť**“ vedľa „**Optimalizácia batérie**“ a potom v dialógu „Povoliť aplikácii stále bežať na pozadí?“ vyberte „**Povoliť**“:
 
-![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
+![Povoliť beh na pozadí](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
 (SetupWizard-StoragePermission)=
 
-### AAPS Directory
+### AAPS priečinok
 
-**AAPS** needs to store its settings and log information on the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** potrebuje ukladať svoje nastavenia a logy do trvalého úložiska vášho smartfónu. Trvalé úložisko znamená, že údaje budú dostupné aj po reštarte smartfónu. Ostatné informácie sa jednoducho stratia, pretože sa neukladajú do trvalého úložiska.
 
-Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
+Stlačte „**Povoliť**“ vedľa „**AAPS priečinok**“. Otvorí sa súborový systém telefónu a môžete vybrať, kam bude **AAPS** ukladať svoje údaje.
 
 ```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
+Odporúčame zvoliť predvolený priečinok AAPS.</br>
+**Nevyberajte** podpriečinok priečinka AAPS.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
+Predvolený priečinok je **AAPS**, ale môžete použiť akýkoľvek iný priečinok určený len na tento účel. Ak je to potrebné, priečinok vytvorte, otvorte ho a vyberte „**POUŽIŤ TENTO PRIEČINOK**“ (USE THIS FOLDER):
 
-![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+![Výber priečinka](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
-Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+Tlačidlom „**POVOLIŤ**“ (ALLOW) potvrďte, že chcete **AAPS** udeliť prístup k vybranému priečinku:
 
-![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
+![Povoliť prístup k priečinku](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
-### Notifications
+### Notifikácie
 
-Android requires special permission for apps if they want to send you notifications.
+Android vyžaduje pre aplikácie špeciálne povolenie, ak vám chcú posielať notifikácie.
 
-While it is a good feature to disable notifications _e.g._ from social media apps, it is essential that you allow **AAPS** to send you notifications.
+Vypnúť notifikácie _napr._ zo sociálnych sietí je užitočné, ale je nevyhnutné, aby ste **AAPS** dovolili posielať vám notifikácie.
 
-Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
+Stlačte „**Povoliť**“ vedľa „**Notifikácie**“ a v systémovej výzve vyberte „**Povoliť**“:
 
-![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
+![Povoliť notifikácie](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-### Alarms and reminders
+### Alarmy a pripomienky
 
-On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
+V **Androide 14 a novšom** potrebuje **AAPS** povolenie „**Alarmy a pripomienky**“, aby alarmy mohli zobudiť obrazovku, keď **AAPS** beží na pozadí, a aby pripomienky (napríklad z **Automatizácie**) zazneli načas.
 
-This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+Táto položka sa zobrazuje, len kým je potrebná. Keď je **AAPS** vyňatý z optimalizácie batérie (pozrite vyššie), Android povolí presné alarmy automaticky a položka zmizne. Ak je stále v zozname, stlačte „**Povoliť**“ vedľa „**Alarmy a pripomienky**“. Otvorí sa obrazovka systémových nastavení pre **AAPS**. Zapnite prepínač a vráťte sa do **AAPS**. V Androide 13 a staršom sa táto položka nezobrazuje a nie je potrebné nič robiť.
 
-Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
+Keď majú všetky povolenia fajku (tri, alebo štyri v Androide 14 a novšom), panel „**Požadované povolenia**“ sa sám zatvorí a na uvítacej obrazovke môžete pokračovať stlačením „**ĎALEJ**“.
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimization
+### Optimalizácia batérie pre Bluetooth
 
 ```{admonition} Extra Android setting, not part of the Wizard
 :class: note
-The following is additional Android configuration done outside of the Setup Wizard. It is not one of the "Grant" buttons above, but it is important for a reliable pump connection.
+Nasleduje ďalšie nastavenie Androidu, ktoré sa robí mimo Sprievodcu nastavením. Nie je to žiadne z tlačidiel „Povoliť“ vyššie, ale je dôležité pre spoľahlivé spojenie s pumpou.
 ```
 
-Newer versions of Android have added battery optimization to the system Bluetooth application too.
+Novšie verzie Androidu pridali optimalizáciu batérie aj do systémovej aplikácie Bluetooth.
 
-As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+Okrem vypnutia optimalizácie batérie pre **AAPS** ju pravdepodobne budete musieť vypnúť aj pre systémovú aplikáciu Bluetooth. Ak to neurobíte, môže dochádzať k výpadkom spojenia s pumpou a ďalším problémom.
 
-***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+***POZNÁMKA: Postup je popísaný aj v dokumentácii xDrip: [dokumentácia xDrip](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
+V Androide 16 postupujte podľa týchto krokov; v iných verziách sa obrazovky budú od snímok mierne líšiť:
 
-1. Open Android settings and search for **Apps**, and open the Apps settings.
+1. Otvorte nastavenia Androidu, vyhľadajte **Aplikácie** (Apps) a otvorte nastavenia aplikácií.
 
    ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+2. Zobrazia sa nastavenia aplikácií, ale musíme ich rozbaliť, aby boli vidieť všetky aplikácie. Kliknite na **Zobraziť všetky aplikácie** (See all apps).
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots** (⋮) on the top right (1). Then click on **Show system** (2).
+3. Aplikácia Bluetooth je systémová aplikácia, a preto je predvolene skrytá. Musíme teda zobraziť systémové aplikácie. Kliknite na **tri bodky** (⋮) vpravo hore (1). Potom kliknite na **Zobraziť systémové** (Show system) (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+4. Vyhľadajte aplikáciu `Bluetooth` a kliknite na `Bluetooth` a/alebo `Legacy Bluetooth`. Ak sú tam obe, postup urobte pre obe.
 
-   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+   ***POZNÁMKA: `Bluetooth MIDI Service` môžete pokojne ignorovať, AAPS ju nepoužíva***
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
+   1. V Androide 12 kliknite na `Batéria` (Battery), v Androide 13 a novšom kliknite na `Využitie batérie aplikáciou` (App battery usage),
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
-5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
+5. V Androide 12 a novšom vyberte možnosť `Bez obmedzení` (Unrestricted). V Androide 15 a novšom musíte rozbaliť nastavenie `Povoliť používanie na pozadí` (Allow background usage) – kliknite na časť zvýraznenú červenou a potom dokončite postup krokom 6.
 
    ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-6. On Android 16 Select `Unrestricted`
+6. V Androide 16 vyberte `Bez obmedzení` (Unrestricted)
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-## License agreement
+## Licenčná zmluva
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+V licenčnej zmluve pre koncového používateľa sú dôležité informácie o právnych aspektoch používania **AAPS**. Pozorne si ju prečítajte.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Ak nerozumiete alebo nemôžete súhlasiť s licenčnou zmluvou koncového používateľa, nepoužívajte **AAPS** vôbec!
 
-If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" button and follow the Setup Wizard:
+Ak rozumiete a súhlasíte, stlačte tlačidlo „**ROZUMIEM A SÚHLASÍM**“ a pokračujte v Sprievodcovi nastavením:
 
 ![EULA](../images/setup-wizard/Wizard-EULA.png)
 
-A "**Next**" button appears once you have agreed. Press "**NEXT**".
+Po vyjadrení súhlasu sa zobrazí tlačidlo „**Ďalej**“. Stlačte „**ĎALEJ**“.
 
-The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
+Na ďalšej obrazovke „**Povolenia**“ sú povolenia uvedené znova. Všetky by mali mať fajku, pretože ste ich udelili hneď na začiatku. Ak niektoré chýba, stlačte vedľa neho „**Povoliť**“. Pokračujte stlačením „**ĎALEJ**“:
 
-![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+![Povolenia udelené](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
 ## Hlavné heslo
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
+Konfigurácia **AAPS** obsahuje citlivé údaje (_napr._ prístupový token k vášmu serveru Nightscout), preto je zašifrovaná heslom, ktoré tu nastavíte.
 
-The Wizard shows "**Password not set**". Press "**Set**":
+Sprievodca zobrazuje „**Heslo nie je nastavené**“. Stlačte „**Nastaviť**“:
 
-![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+![Hlavné heslo nie je nastavené](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
 
-This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
+Otvorí sa obrazovka „**Ochrana**“. Stlačte „**Hlavné heslo**“ (zobrazené ako „Heslo nie je nastavené“):
 
 ![Ochrana](../images/setup-wizard/Wizard-Protection.png)
 
-Enter the same password in both fields and press "**OK**":
+Zadajte rovnaké heslo do oboch polí a stlačte „**OK**“:
 
-![Password](../images/setup-wizard/Wizard-Password.png)
+![Heslo](../images/setup-wizard/Wizard-Password.png)
 
-Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+Vráťte sa späť šípkou v ľavom hornom rohu. Sprievodca teraz zobrazuje „**Heslo nastavené!**“:
 
-![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+![Hlavné heslo je nastavené](../images/setup-wizard/Wizard-MasterPassword-Set.png)
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+**NESTRAŤTE SVOJE HLAVNÉ HESLO**. Poznačte si ho _napr._ na Disku Google – je to dobré miesto, pretože Google ho za vás zálohuje. Váš smartfón alebo počítač sa môže pokaziť a nemusíte mať žiadnu aktuálnu kópiu. Ak zabudnete hlavné heslo, môže byť neskôr ťažké obnoviť nastavenie profilu a postup v **Cieľoch**.
 ```
 
-When you are done, press "**NEXT**" to go to the next screen.
+Keď skončíte, stlačte „**ĎALEJ**“ a prejdite na ďalšiu obrazovku.
 
 (setup-wizard-import-settings)=
-## Import settings
+## Importovať nastavenia
 
-This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
+Táto obrazovka sa zobrazí, len keď **AAPS** nájde v priečinku **AAPS** skôr exportované nastavenia („Nájdené uložené nastavenia“), napríklad keď aplikáciu preinštalujete alebo prechádzate na nový telefón.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
-- To start with a new configuration, press "**NEXT**" and continue with the Wizard.
+- Ak chcete obnoviť predchádzajúcu konfiguráciu, stlačte „**Importovať nastavenia**“ – pozrite [Vytváranie a obnova záloh](../Maintenance/ExportImportSettings.md).
+- Ak chcete začať s novou konfiguráciou, stlačte „**ĎALEJ**“ a pokračujte v Sprievodcovi.
 
-![Import settings](../images/setup-wizard/Wizard-ImportSettings.png)
+![Importovať nastavenia](../images/setup-wizard/Wizard-ImportSettings.png)
 
-## Units (mg/dL <-> mmol/L)
+## Jednotky (mg/dl <-> mmol/l)
 
-Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
+Vyberte, či sú vaše hodnoty glykémie v mg/dl alebo v mmol/l, a potom stlačte tlačidlo „**ĎALEJ**“:
 
-![Jednotky](../images/setup-wizard/Wizard-Units.png)
+![Jednotky glykémie](../images/setup-wizard/Wizard-Units.png)
 
-## Display Settings
+## Nastavenie zobrazenia
 
-Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
+Tu nastavíte „**Dolná značka**“ a „**Horná značka**“ pre zobrazenie glykémie zo senzora. Hodnoty glykémie medzi týmito dvoma značkami sa zobrazujú ako „v rozsahu“. Predvolené hodnoty (72 a 180 mg/dl) zatiaľ môžete nechať a neskôr ich upraviť.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Hodnoty, ktoré zvolíte, ovplyvňujú iba grafické zobrazenie grafu a nič iné.
 
-Your glucose target _e.g._ is configured separately in your profile.
+_Napr._ vašu cieľovú glykémiu nastavujete samostatne vo svojom profile.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+Rozsah na analýzu TIR (čas v rozsahu) sa nastavuje samostatne vo vašom reportovacom serveri.
 
-Adjust the marks with the "−" / "+" buttons if needed, then press the "**NEXT**" button:
+Ak je to potrebné, upravte značky tlačidlami „−“ / „+“ a potom stlačte tlačidlo „**ĎALEJ**“:
 
-![Display Settings](../images/setup-wizard/Wizard-Display.png)
+![Nastavenie zobrazenia](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Communication
+## Komunikácia
 
-The "**Communication**" screen lists the plugins used to upload, synchronize and broadcast your data:
+Obrazovka „**Komunikácia**“ obsahuje zoznam pluginov na nahrávanie, synchronizáciu a vysielanie vašich údajov:
 
-- **SMS Communicator** – remote control of **AAPS** using SMS commands
-- **NSClientV3** – synchronizes your data with Nightscout using the v3 API
-- **Tidepool** – uploads data to Tidepool
-- **xDrip** – sends data to xDrip
-- **Open Humans** – upload and donate your diabetes data to scientific projects
-- **Wear** – monitor and control **AAPS** from a WearOS watch
-- **External Companion Apps** – data broadcasting to various external apps
-- **Garmin** – connection to a Garmin device
+- **SMS komunikátor** – vzdialené ovládanie **AAPS** pomocou SMS príkazov
+- **NSClientV3** – synchronizuje vaše údaje s Nightscoutom cez API v3
+- **Tidepool** – nahráva údaje do Tidepoolu
+- **xDrip** – posiela údaje do xDripu
+- **Open Humans** – nahratie a darovanie vašich údajov o diabete pre vedecké projekty
+- **Wear** – sledovanie a ovládanie **AAPS** z hodiniek s Wear OS
+- **Externé sprievodné (Companion) aplikácie** – vysielanie údajov do rôznych externých aplikácií
+- **Garmin** – pripojenie k zariadeniu Garmin
 
-![Communication](../images/setup-wizard/Wizard-Communication.png)
+![Komunikácia](../images/setup-wizard/Wizard-Communication.png)
 
-Scroll down to see the rest of the list:
+Zvyšok zoznamu uvidíte, keď posuniete obrazovku nadol:
 
-![Communication more](../images/setup-wizard/Wizard-Communication-More.png)
+![Komunikácia – ďalšie](../images/setup-wizard/Wizard-Communication-More.png)
 
-You could configure several of these now, but for the first run we will just focus on the reporting server. If you are not able to set it up at the moment, skip it for now — you can configure it later.
+Viaceré z nich by ste mohli nastaviť už teraz, ale pri prvom spustení sa zameriame len na reportovací server. Ak ho teraz nemôžete nastaviť, zatiaľ ho preskočte – nastaviť ho môžete aj neskôr.
 
-In this example we use Nightscout as reporting server. Tick the box on the right of "**NSClientV3**" to enable it. For Tidepool it is even simpler, as you only need your personal login information.
+V tomto príklade používame ako reportovací server Nightscout. Zaškrtnite políčko vpravo od „**NSClientV3**“ a tým ho zapnete. Pri Tidepoole je to ešte jednoduchšie, pretože potrebujete iba svoje osobné prihlasovacie údaje.
 
-Once enabled, press "**Settings**" below NSClientV3 to configure it:
+Po zapnutí stlačte „**Nastavenia**“ pod NSClientV3 a nastavte ho:
 
 ![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-Here you configure the Nightscout reporting server. The NSClientV3 settings are shown as one scrollable page:
+Tu nastavíte reportovací server Nightscout. Nastavenia NSClientV3 sú zobrazené na jednej stránke, ktorou sa dá posúvať:
 
-![NSClientV3 settings](../images/setup-wizard/Wizard-NSClientV3.png)
+![Nastavenia NSClientV3](../images/setup-wizard/Wizard-NSClientV3.png)
 
-Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirm with "**OK**".
+Stlačte „**Adresa Nightscoutu**“ a zadajte adresu svojho osobného servera Nightscout (URL, ktorú ste si nastavili sami alebo ktorú ste dostali od poskytovateľa služby). Potvrďte tlačidlom „**OK**“.
 
-Press "**Nightscout access token**" and enter the access token for your Nightscout server. Without this token, access will not work. If you don't have it yet, please check the documentation for setting up the reporting server.
+Stlačte „**Nightscout prístupový token**“ a zadajte prístupový token pre váš server Nightscout. Bez tohto tokenu prístup nebude fungovať. Ak ho ešte nemáte, pozrite si dokumentáciu k nastaveniu reportovacieho servera.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout.
+Nechajte zapnuté „**Použiť websockety**“ pre komunikáciu s Nightscoutom v reálnom čase.
 
-The remaining sections can be left at their defaults for now. They are described here so you know where to find them later:
+Ostatné časti môžete zatiaľ nechať v predvolenom nastavení. Popisujeme ich tu, aby ste neskôr vedeli, kde ich nájdete:
 
-**Alarm options** — Nightscout alarms, announcements and stale-data thresholds. Leave the switches off for now; we only open them so you are aware of the options.
+**Nastavenie alarmov** – alarmy z Nightscoutu, oznámenia a limity pre neaktuálne údaje. Prepínače zatiaľ nechajte vypnuté; otvárame ich len preto, aby ste o týchto možnostiach vedeli.
 
-**Connection settings** — choose how data is transferred. Caregivers must enable "**Use cellular data**", otherwise the phone of the person they care for (_e.g._ a child) cannot upload outside Wi-Fi range, _e.g._ on the way to school. Other users can disable cellular transfer to save data or battery. If in doubt, leave everything enabled.
+**Nastavenie pripojenia** – vyberte, ako sa majú údaje prenášať. Opatrovatelia musia zapnúť „**Použiť mobilné dáta**“, inak telefón osoby, o ktorú sa starajú (_napr._ dieťaťa), nemôže nahrávať údaje mimo dosahu Wi-Fi, _napr._ cestou do školy. Ostatní používatelia môžu prenos cez mobilnú sieť vypnúť, aby šetrili dáta alebo batériu. Ak si nie ste istí, nechajte všetko zapnuté.
 
 ![Nastavenie pripojenia](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
 
-**Advanced Settings** — enable "**Log app start event**" if you want to see in Nightscout when the app restarts (useful for caregivers). Keep "**Create announcements from errors**" and "**Create announcements from carbs required**" enabled. Leave "**Use slow sync**" off; you would only use it if the Nightscout server is slow to process a large amount of data.
+**Rozšírené nastavenia** – zapnite „**Zaznamenávať spustenie aplikácie**“, ak chcete v Nightscoute vidieť, kedy sa aplikácia reštartuje (užitočné pre opatrovateľov). Nechajte zapnuté „**Vytvárať z chýb oznámenia**“ a „**Vytvoriť oznámenie z výstrahy požadovaných sacharidov**“. „**Použiť pomalú synchronizáciu**“ nechajte vypnuté; použili by ste ju len vtedy, keby server Nightscout spracovával veľké množstvo údajov pomaly.
 
-![Advanced settings](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
+![Rozšírené nastavenia](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-Go back to the list of plugins and press "**NEXT**" to go to the next screen.
+Vráťte sa do zoznamu pluginov a stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku.
 
-## Client control
+## Ovládanie z klienta
 
-From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
+Od verzie 4 **AAPS** môžu byť klientske zariadenia s aplikáciou **AAPSClient** **spárované** s týmto telefónom (**master**) a ovládať ho podpísanými príkazmi posielanými cez Nightscout. Toto je nový odporúčaný spôsob vzdialeného ovládania **AAPS** – úplné vysvetlenie a nastavenie nájdete v [Ovládanie Master ↔ Client](../RemoteFeatures/ClientMasterControl.md).
 
-There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**. There you add a client with a **QR code** (it sets up Nightscout on the client too) or with a **PIN**, and give it a **role**.
+Na tejto obrazovke teraz nemusíte nič nastavovať; klientov môžete kedykoľvek neskôr spárovať cez **Spravovať → Autorizovaní klienti**. Tam pridáte klienta pomocou **QR kódu** (ten nastaví aj Nightscout na klientovi) alebo pomocou **PIN** kódu a priradíte mu **rolu**.
 
-- "**Authorized clients**" — manage the paired client devices allowed to control this master.
-- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+- „**Autorizovaní klienti**“ – správa spárovaných klientskych zariadení, ktoré môžu ovládať tento master.
+- „**Prijímanie dát z Nightscoutu**“ – prijímanie ošetrení a údajov zadaných priamo v Nightscoute (starý, menej bezpečný spôsob) je teraz predvolene vypnuté. Tieto nastavenia otvorte, len ak to ešte potrebujete, _napr._ na zadávanie údajov cez Nightscout alebo aplikácie tretích strán.
 
-When client control is already on — always in [Simple Mode](#preferences-simple-mode) — this phone is in [hardened mode](#client-master-control-hardened-mode): it takes changes only from paired clients, so the screen explains hardened mode instead of offering the "**Nightscout data acceptance**" settings.
+Keď je ovládanie z klienta už zapnuté – v [Jednoduchom móde](#preferences-simple-mode) vždy – je tento telefón v [režime zvýšeného zabezpečenia](#client-master-control-hardened-mode): prijíma zmeny len od spárovaných klientov, preto obrazovka namiesto nastavení „**Prijímanie dát z Nightscoutu**“ vysvetľuje režim zvýšeného zabezpečenia.
 
-![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+![Ovládanie z klienta](../images/setup-wizard/Wizard-ClientControl.png)
 
-"**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
+„**Prijímanie dát z Nightscoutu**“ otvorí nastavenia „**Synchronizácia**“, kde má každý druh údajov prijímaných z Nightscoutu vlastný prepínač:
 
-![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
+![Nastavenia prijímania dát z Nightscoutu](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-Press "**NEXT**" to go to the next screen.
+Stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku.
 
 (setup-wizard-instance-name)=
-## Who is using this phone?
+## Kto používa tento telefón?
 
-Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
+Tu zadáte meno osoby, ktorá tento telefón používa. Podľa neho sa táto inštancia **AAPS** v reportoch a pri synchronizácii odlíši od ostatných, napríklad ak **AAPS** používajú dve deti vo vašej rodine. Používa sa aj v názvoch exportovaných súborov s nastaveniami a zobrazuje sa na hodinkách.
 
-It can be anything. You can change it later in **Settings → General → Instance name**.
+Môže to byť čokoľvek. Neskôr ho môžete zmeniť v **Nastavenia → Všeobecné → Názov inštancie**.
 
-Press "**NEXT**" to go to the next screen.
+Stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku.
 
 ![Názov](../images/setup-wizard/Wizard-Name.png)
 
 ## Typ pacienta
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+Tu si vyberiete „Typ pacienta“, čo je dôležité, pretože softvér **AAPS** má rôzne limity v závislosti od veku pacienta. Je to dôležité z bezpečnostných dôvodov.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
+Tu môžete tiež nastaviť **maximálny povolený bolus** pre jedlo. Teda najväčší bolus, ktorý potrebujete na pokrytie svojich bežných jedál. Je to bezpečnostná funkcia, ktorá pomáha predísť náhodnému predávkovaniu pri boluse na jedlo.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+Druhý limit je podobný, ale týka sa maximálneho príjmu sacharidov, ktorý očakávate.
 
-After setting these values, press "**NEXT**" to go to the next screen:
+Po nastavení týchto hodnôt stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku:
 
-![Patient](../images/setup-wizard/Wizard-PatientType.png)
+![Pacient](../images/setup-wizard/Wizard-PatientType.png)
 
 ## Inzulín
 
-Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
+Tu nastavíte inzulín, ktorý používate v pumpe. Nové inzulínové profily vyžadujú **DIA aspoň 5 h**.
 
-Press the "**Insulin**" button to open the insulin editor:
+Stlačením tlačidla „**Inzulín**“ otvoríte editor inzulínu:
 
 ![Inzulín](../images/setup-wizard/Wizard-Insulin.png)
 
-In the editor you can give the insulin a **nickname** and set its **Peak** (in minutes) and **DIA** (in hours). The quickest way is to load a preset with "**Load peak from**" — choose **Novorapid**, **Fiasp** or **Lyumjev** — and the peak is filled in for you. The graph at the bottom previews the resulting insulin activity curve.
+V editore môžete inzulínu dať **prezývku** a nastaviť jeho **Vrchol** (v minútach) a **DIA** (v hodinách). Najrýchlejšie je načítať predvoľbu cez „**Načítať vrchol z**“ – vyberte **Novorapid**, **Fiasp** alebo **Lyumjev** – a vrchol sa vyplní za vás. Graf v dolnej časti zobrazuje náhľad výslednej krivky aktivity inzulínu.
 
-![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
+![Editor inzulínu](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
-Pick the preset that matches your insulin, for example **Fiasp**:
+Vyberte predvoľbu, ktorá zodpovedá vášmu inzulínu, napríklad **Fiasp**:
 
-![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
+![Inzulín Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
 ```{admonition} Use your insulin brand's preset peak
 :class: danger
-Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
+Vrchol nemeňte, ak nie ste odborník – predvolené hodnoty pre jednotlivé značky inzulínu zvyčajne fungujú dobre.
 ```
 
-If you are a new **AAPS** user, set **DIA** to 9 hours — see [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to understand why.
+Ak ste nový používateľ **AAPS**, nastavte **DIA** na 9 hodín – prečo, vysvetľuje časť [Doba pôsobenia inzulínu (DIA) a vrchol](#Config-Builder-insulin-dia).
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note
-If a paired client (_e.g._ another phone) has changed the insulin configuration, a dialog appears. Press **OK** to load their changes, or **Cancel** to keep editing (your next save will overwrite theirs).
+Ak spárovaný klient (_napr._ iný telefón) zmenil konfiguráciu inzulínu, zobrazí sa dialóg. Stlačením **OK** načítate jeho zmeny, stlačením **Zrušiť** budete pokračovať v úpravách (vaše ďalšie uloženie prepíše jeho zmeny).
 ```
 
-![Insulin changed](../images/setup-wizard/Wizard-Insulin-Changed.png)
+![Inzulín zmenený](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
-Press the save icon (top right), then press "**NEXT**" to go to the next screen.
+Stlačte ikonu uloženia (vpravo hore) a potom stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku.
 
-## Blood sugar source
+## Zdroj glykémie
 
-Here you select where **AAPS** gets its glucose data from. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Tu vyberiete, odkiaľ **AAPS** získava údaje o glykémii. Prečítajte si dokumentáciu k vášmu [zdroju glykémie](../Getting-Started/CompatiblesCgms.md).
 
-Many sources are available — scroll through the list and select the one you use:
+K dispozícii je veľa zdrojov – prejdite zoznamom a vyberte ten, ktorý používate:
 
 ![Zdroj glykémie](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
+Keď vyberiete zdroj, jeho karta sa rozbalí a zobrazí dve tlačidlá: „**Nastavenia**“ na úpravu príjmu údajov a „**Otvoriť plugin**“ na otvorenie vlastnej obrazovky zdroja. V príklade nižšie je vybraný **BYODA**. Niektoré zdroje v tomto kroku nemajú čo nastaviť, takže zvyčajne môžete prejsť rovno na ďalšiu obrazovku:
 
-![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
+![Nastavenia zdroja glykémie](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-After making your selection, press "**NEXT**" to go to the next screen.
+Po výbere stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku.
 
 (setup-wizard-profile)=
 ## Profil
 
-Now we are entering a very important part of the Setup Wizard.
+Teraz sa dostávame k veľmi dôležitej časti Sprievodcu nastavením.
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+Skôr než na nasledujúcej obrazovke zadáte údaje svojho profilu, prečítajte si dokumentáciu o [profiloch](../SettingUpAaps/YourAapsProfile.md).
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+Pre bezpečnú činnosť **AAPS** je nevyhnutný presný profil.
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+Je nutné, aby ste svoj profil určili a prebrali so svojím lekárom a aby sa jeho funkčnosť potvrdila úspešným testovaním bazálnej dávky, ISF a I:C!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+Ak robot dostane nesprávne vstupy, zlyhá – a to zakaždým. **AAPS** môže pracovať iba s informáciami, ktoré mu poskytnete. Ak je váš profil príliš silný, riskujete hypoglykémiu a ak je príliš slabý, riskujete hyperglykémiu. 
 ```
 
-Press the "**Profile**" button to open the profile editor:
+Stlačením tlačidla „**Profil**“ otvoríte editor profilu:
 
 ![Profil](../images/setup-wizard/Wizard-Profile.png)
 
-The editor opens empty ("No records available"). Press the "**+**" button at the bottom to create a new profile:
+Editor sa otvorí prázdny („Nie sú k dispozícii žiadne záznamy“). Stlačením tlačidla „**+**“ v dolnej časti vytvoríte nový profil:
 
-![Profile empty](../images/setup-wizard/Wizard-Profile-Empty.png)
+![Prázdny profil](../images/setup-wizard/Wizard-Profile-Empty.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+Z dlhodobého hľadiska môžete mať podľa potreby viacero profilov. Tu vytvoríme iba jeden.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
-The example profile here is only to show you how to enter data.
+Tento vzorový profil slúži len na ukážku, ako zadávať údaje.
 
-It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
+Nemá to byť presný ani dobre optimalizovaný profil, pretože potreby každého človeka sú veľmi odlišné.
 
-Don't use it for actually looping!
+Nepoužívajte ho na skutočnú liečbu okruhom!
 ```
 
-The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
+Nový profil (napríklad „**LocalProfile1**“) má štyri karty: **I:C**, **ISF**, **BAZ** a **CIEĽ**. Profil premenujete stlačením ceruzky vedľa jeho názvu. Vyplňte všetky karty – karta zostane červená a zobrazuje chybové hlásenie, kým neobsahuje platné hodnoty:
 
-![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
+![Nový profil s chybami](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
-Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
+Stlačte „**I:C**“ a zadajte svoje hodnoty [I:C](#your-aaps-profile-insulin-to-carbs-ratio). Ďalšie časové úseky pridáte tlačidlom „**+**“:
 
-![IC](../images/setup-wizard/Wizard-Profile-IC.png)
+![I:C](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Press "**ISF**" and enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+Stlačte „**ISF**“ a zadajte svoje [hodnoty ISF](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
-Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
+Stlačte „**BAZ**“ a zadajte svoje [bazálne dávky](#your-aaps-profile-basal-rates):
 
-![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
+![BAZ](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-Press "**TARG**" and enter your blood sugar target values.
+Stlačte „**CIEĽ**“ a zadajte svoje cieľové hodnoty glykémie.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+Pri otvorenom okruhu môže byť tento cieľ širší rozsah, inak by vás **AAPS** neustále upozorňoval, aby ste zmenili dočasný bazál alebo iné nastavenie, a to môže byť vyčerpávajúce.
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Neskôr, pri uzavretom okruhu, budete mať zvyčajne iba jednu hodnotu pre hornú aj dolnú hranicu. Vďaka tomu **AAPS** ľahšie dosiahne cieľ a celkovo lepšie kontroluje váš diabetes.
 
-![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
+![CIEĽ](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
+Keď sú všetky štyri karty platné, **ikona uloženia** (vpravo hore) sa aktivuje. Stlačením profil uložíte:
 
-![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
+![Ikona uloženia](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
+Editor zatvorte tlačidlom „**X**“ v ľavom hornom rohu. Súhrn profilu potom zobrazí jeho názov, celkový denný bazál (∑), jednotky a hodnoty I:C a ISF s ich grafmi:
 
-![Save](../images/setup-wizard/Wizard-Profile-Save.png)
+![Uložiť](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
 :class: note
-You can have several profiles defined, but only one activated profile running at any given time.
+Môžete mať definovaných viac profilov, ale v jednej chvíli môže bežať len jeden aktivovaný profil.
 ```
 
-Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
+Stlačte tlačidlo „**▶**“ (aktivovať) vpravo dole. Otvorí sa obrazovka „**Aktivovať**“. Keďže sa zatiaľ nepoužíva žiadny inzulín, najprv vás požiada o výber inzulínu, ktorý používate, aby ho prepnutie profilu mohlo zaznamenať. Tlačidlo „**Aktivovať**“ zostane sivé, kým to neurobíte:
 
-![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
+![Najprv vyberte inzulín](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
-Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
+Stlačte „**Zvoľte inzulín**“ a vyberte inzulín, ktorý ste nastavili predtým. Percento nechajte na 100 % a stlačte „**Aktivovať**“:
 
-![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
+![Aktivovať](../images/setup-wizard/Wizard-Profile-Activate.png)
 
-A profile switch dialog appears. In this case let it stay as preset and confirm with "**OK**":
+Zobrazí sa dialóg prepnutia profilu. V tomto prípade nechajte predvolené hodnoty a potvrďte tlačidlom „**OK**“:
 
 ```{admonition} Profile switch dialog
 :class: note
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile to suit the circumstances.
+Neskôr sa naučíte, ako tento všeobecný dialóg použiť v situáciách, ako je choroba alebo šport, keď musíte profil prispôsobiť okolnostiam.
 ```
 
-![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
+![Prepnutie profilu](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-Your profile is now active. Press "**NEXT**" to go to the next screen.
+Váš profil je teraz aktívny. Stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku.
 
 ## Inzulínová pumpa
 
-Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+Teraz vyberiete svoju inzulínovú pumpu. Prečítajte si dokumentáciu k vašej [inzulínovej pumpe](../Getting-Started/CompatiblePumps.md).
 
-Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
+Prejdite zoznamom a vyberte svoju pumpu. V tomto príklade používame „**Virtuálna pumpa**“, ktorá je užitočná, kým sa ešte učíte a nemáte pripojenú skutočnú pumpu:
 
 ![Pumpa](../images/setup-wizard/Wizard-Pump.png)
 
-Many pumps are supported — scroll down to find yours:
+Podporovaných púmp je veľa – posuňte sa nižšie a nájdite tú svoju:
 
-![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
+![Pumpa – ďalšie](../images/setup-wizard/Wizard-Pump-More.png)
 
-When you select a real pump, **AAPS** asks for a confirmation, because it will copy the basal rates of your profile to the pump and overwrite the basal rates stored there. Press "**OK**" only if the basal rates in your **AAPS** profile are correct; otherwise press "**Cancel**" and switch to the pump later:
+Keď vyberiete skutočnú pumpu, **AAPS** si vyžiada potvrdenie, pretože skopíruje bazálne dávky z vášho profilu do pumpy a prepíše bazálne dávky, ktoré sú v nej uložené. Stlačte „**OK**“, len ak sú bazálne dávky vo vašom profile **AAPS** správne; inak stlačte „**Zrušiť**“ a na pumpu prepnite neskôr:
 
-![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
+![Potvrdenie pri výbere skutočnej pumpy](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#bluetooth-permission)).
+Ak vybraná pumpa komunikuje cez Bluetooth, **AAPS** po dokončení Sprievodcu požiada o povolenie pripájať sa k zariadeniam v okolí (pozrite [Povolenie pre Bluetooth](#bluetooth-permission)).
 
-If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
+Ak už máte nastavený profil a viete, ako pripojiť pumpu, môžete ju pripojiť hneď. Inak zatiaľ nechajte **Virtuálna pumpa** – zmeniť to môžete kedykoľvek, alebo môžete Sprievodcu nastavením opustiť šípkou v ľavom hornom rohu a nechať **AAPS** najprv zobraziť nejaké hodnoty glykémie.
 
-Press "**NEXT**" to go to the next screen.
+Stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku.
 
-## APS algorithm
+## Algoritmus APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name, the SMB feature of the algorithm is disabled until you are familiar with AAPS and have worked through the first objectives. OpenAPS SMB is newer and generally better than OpenAPS AMA anyway.
+Ako algoritmus APS použite algoritmus OpenAPS SMB. Napriek názvu je funkcia SMB tohto algoritmu vypnutá, kým sa s AAPS neoboznámite a nesplníte prvé ciele. OpenAPS SMB je aj tak novší a zvyčajne lepší ako OpenAPS AMA.
 
-SMB is disabled at the start because the SMB feature reacts faster to a blood sugar increase, using a Super Micro Bolus instead of increasing the basal rate percentage. Because your profile is generally not as good in the beginning as it is after some experience, the feature is disabled at first.
+SMB je na začiatku vypnuté, pretože funkcia SMB reaguje na nárast glykémie rýchlejšie – namiesto zvýšenia percenta bazálnej dávky použije Super Micro Bolus. Keďže váš profil na začiatku zvyčajne nie je taký dobrý ako po získaní skúseností, je táto funkcia najprv vypnutá.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: note
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+OpenAPS AMA je najjednoduchší algoritmus, ktorý nepodporuje mikrobolusy na korekciu vysokých hodnôt. Môžu nastať situácie, keď je lepšie použiť tento algoritmus, ale neodporúčame to.
 ```
 
-Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
+Vyberte „**OpenAPS SMB**“ a potom stlačením „**Nastavenia**“ zobrazte podrobnosti:
 
 ![APS](../images/setup-wizard/Wizard-APS.png)
 
-The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
+Jediná možnosť je tu „**Použiť dynamickú citlivosť**“. Nechajte ju vypnutú a zatiaľ nič nemeňte – len si prečítajte text.
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+Kvôli obmedzeniam v **Cieľoch** teraz aj tak nemôžete používať „uzavretý okruh“ ani „funkcie SMB“.
 
-Go back and press "**NEXT**" to go to the next screen:
+Vráťte sa späť a stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku:
 
-![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
+![Nastavenia APS](../images/setup-wizard/Wizard-APS-Settings.png)
 
-## Sensitivity detection
+## Detekcia citlivosti
 
-Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
+Ako štandardný plugin citlivosti nechajte vybrané „**Citlivosť Oref1**“:
 
-![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
+![Citlivosť](../images/setup-wizard/Wizard-Sensitivity.png)
 
-If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
+Ak stlačíte „**Nastavenia**“, môžete si pozrieť nastavenia absorpcie; predvolené hodnoty (_napr._ hraničný čas absorpcie 6 h) sú zatiaľ v poriadku.
 
-![Sensitivity settings](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
+![Nastavenia citlivosti](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
 
-Press "**NEXT**" to go to the next screen.
+Stlačením „**ĎALEJ**“ prejdite na ďalšiu obrazovku.
 
-## Start Objective 1
+## Spustite Cieľ 1
 
-You are now entering the Objectives — the qualification for access to further **AAPS** features.
+Teraz vstupujete do Cieľov – sú to podmienky na prístup k ďalším funkciám **AAPS**.
 
-Press "**Open Objectives**":
+Stlačte „**Otvoriť Ciele**“:
 
 ![Ciele](../images/setup-wizard/Wizard-Objectives.png)
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
+Tu spúšťame Cieľ 1, aj keď naše nastavenie v tejto chvíli ešte nie je úplne pripravené na úspešné splnenie tohto Cieľa. Ale je to začiatok.
 
-Press the "**Start**" button next to "**1. Objective**":
+Stlačte tlačidlo „**Štart**“ vedľa „**1. cieľ**“:
 
-![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
+![Zoznam cieľov](../images/setup-wizard/Wizard-Objectives-List.png)
 
-The objective expands to show its individual checks. You can see that you already made some progress, while other items are still to be done:
+Cieľ sa rozbalí a zobrazí jednotlivé kontroly. Vidíte, že niektoré veci už máte splnené a iné ešte treba urobiť:
 
-![Objective started](../images/setup-wizard/Wizard-Objectives-Started.png)
+![Cieľ spustený](../images/setup-wizard/Wizard-Objectives-Started.png)
 
-Go back, then press "**FINISH**" to complete the Setup Wizard:
+Vráťte sa späť a stlačením „**DOKONČIŤ**“ ukončite Sprievodcu nastavením:
 
-![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
+![Dokončiť](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
+Po stlačení „**DOKONČIŤ**“ sa dostanete na hlavnú obrazovku **AAPS**. Môže sa otvoriť panel „**Notifikácia**“ s informačnými správami, napríklad o prepnutí profilu, ktoré ste práve urobili – každú správu odstránite stlačením „**Zatvoriť**“ pod ňou.
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+Ak v ktoromkoľvek bode omylom opustíte Sprievodcu nastavením, môžete ho jednoducho spustiť znova alebo zmeniť [konfiguráciu okruhu AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) ručne.
 
-## Bluetooth permission
+## Povolenie pre Bluetooth
 
-If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
+Ak vyberiete pumpu, ktorá sa pripája cez Bluetooth (napríklad **Omnipod Dash**), banner vám pripomenie, že **AAPS** potrebuje povolenie pre Bluetooth. Zatiaľ môžete stlačiť „**Zatvoriť**“ – povolenie udelíte po dokončení Sprievodcu:
 
-![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
+![Potrebný Bluetooth](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+Po dokončení Sprievodcu nastavením sa na hlavnej obrazovke **AAPS** zobrazí panel „**Požadované povolenia**“. Ostatné povolenia sú už udelené; stlačte „**Povoliť**“ vedľa „**Bluetooth**“:
 
-![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
+![Bluetooth – tlačidlo Povoliť](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Select "**Allow**" so **AAPS** can find and connect to your pump:
+Vyberte „**Povoliť**“, aby **AAPS** mohol nájsť vašu pumpu a pripojiť sa k nej:
 
-![Bluetooth Allow](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
+![Bluetooth – systémové povolenie](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+Ak je váš okruh **AAPS** teraz úplne nastavený, pokračujte ďalšou časťou [„Plnenie cieľov“](../SettingUpAaps/CompletingTheObjectives.md).
