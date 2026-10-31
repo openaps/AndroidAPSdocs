@@ -3,14 +3,14 @@
 El estado se actualiza una vez por hora y refleja únicamente el estado de Crowdin.
 
 ```{tip}
-Cuidado, el porcentaje de correcciones debe ser inferior al de traducciones, pero han decidido mostrarlo encima de las traducciones.
+Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
 Es mejor fijarse sólo en el nivel porcentual de las traducciones para ver si hay que trabajar.
 ```
 
 ```{admonition} needed time for final publication
 Después de la traducción con Crowdin, está programada una sincronización con Github todos los días, para transferir las traducciones a Github como un pull request (PR).
 
-La aceptación del Pull Request (PR) es una tarea manual que se realizará lo más rápido posible.
+The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
 ## Estado de la traducción de la aplicación
