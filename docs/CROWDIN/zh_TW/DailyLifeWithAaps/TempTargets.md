@@ -8,26 +8,26 @@
 
 臨時目標可以在這些範圍內定義：
 
-|    | 臨時目標                   |
-| -- | ---------------------- |
-| 最小 | 4 mmol/L or 72 mg/dL   |
-| 最大 | 10 mmol/L or 180 mg/dL |
+|    | 臨時目標                  |
+| -- | --------------------- |
+| 最小 | 4 mmol/L 或 72 mg/dL   |
+| 最大 | 10 mmol/L 或 180 mg/dL |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS** 內建三種適合運動（**活動**）、用餐（**即將用餐**）以及預測到低血糖（**低血糖**）時使用的 **臨時目標** 預設值。這些預設值位於 **臨時目標** 畫面（**管理** → **臨時目標**），也可以直接點選主畫面上的 **目標標籤** 開啟。
 
 使用者在**AAPS**中選擇臨時目標時，應對能達到的結果保持合理的期望。達到預期**血糖**目標的成功率取決於多種因素，包括使用者的**AAPS**設置、整體**血糖**控制、胰島素庫存量、胰島素敏感度、胰島素抵抗力、運動期間的活動量等等。
 
 一個**臨時目標**可能需要大約30分鐘甚至更長時間才能達到預期的**血糖**目標。 **AAPS** 無法立即達到**血糖**目標，因此使用者在選擇**臨時目標**時應注意這一點。
 
-The sections below summarize the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+以下各節將說明 **活動臨時目標**、**即將用餐臨時目標**和 **低血糖臨時目標** 的功能。以下顯示的數值是隨附的預設值，你可以[調整各預設值](#TempTargets-change-preset-defaults)以符合自己的需求。
 
 ### 臨時目標 - 活動
 
 ![臨時目標活動](../images/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**血糖目標（預設值，可調整）**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS 會以 140 mg/dL 或 7.8 mmol/L 為目標，持續 1 小時 30 分鐘。
 
 **用戶在選擇時可能希望考慮的其他因素**：
 
@@ -42,15 +42,15 @@ AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
 
 - *選擇* 此 **臨時目標** 在計劃運動前 1–2 小時進行，以確保降低體內胰島素量(IOB) (此 **臨時目標** 的正確時機將因人而異)
 - *選擇*一個臨時設定檔（降低），在活動中持續使用，以確保降低 **體內胰島素量 (IOB)**；
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *請確保* 將 **臨時目標** 設定為在運動前不久*停用*，因為 **活性胰島素** 已經降低，而且有些人在運動後會出現 **血糖** 快速上升的情況。
 
 ### 臨時目標 - 即將用餐
 
-![TT Eating soon](../images/TempTarget1.png)
+![即將用餐臨時目標](../images/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**血糖目標（預設值，可調整）**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS 會以 90 mg/dL 或 5.0 mmol/L 為目標，持續 45 分鐘。
 
 **用戶在選擇時可能希望考慮的其他因素**：
 
@@ -63,11 +63,11 @@ AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
 
 ### 臨時目標 - 低血糖
 
-![TT Hypo](../images/TempTarget3.png)
+![臨時目標 低血糖](../images/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**血糖目標（預設值，可調整）**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS 會以 160 mg/dL 或 8.9 mmol/L 為目標，持續 1 小時。
 
 **用戶在選擇時可能希望考慮的其他因素**：
 
@@ -78,67 +78,67 @@ AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## 設定及管理臨時目標（管理 → 臨時目標）
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+在 **AAPS** 第 4 版中，你可以在 **管理** 畫面（底部導覽列）→ **臨時目標**（*「管理及設定臨時目標」*）管理 **臨時目標** 預設值，並啟動臨時目標。
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![臨時目標畫面——預設值輪播區、編輯器和操作列](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+畫面分為三個部分：
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **預設值輪播區**（上方）——滑動瀏覽臨時目標預設值。每張卡片都會顯示預設值的**名稱**、**目標**和**持續時間**；目前正在使用的臨時目標會以醒目方式標示。
+2. **編輯器**（中間）——顯示實際套用的**臨時目標**和**持續時間**，以及**啟用**日期／時間。
+3. **操作列**（下方）——**➕ 新增**、**️ 刪除**和**▶ 啟用**按鈕。
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+選取預設值卡片後，該預設值的**目標**和**持續時間**會載入編輯器。
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} 內建預設值與自訂預設值 :class: note 內建預設值——**即將用餐**、**活動**和**低血糖**——一律存在，且**無法刪除**（但你可以變更其數值並儲存）。自行建立的預設值則屬於**自訂**預設值，可以自由編輯或刪除。
 
-    <br />### Activating a temporary target
+    <br />### 啟用臨時目標
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    滑動至所需的預設值（其數值會載入編輯器），可視需要在編輯器中調整**目標**／**持續時間**，然後點選 **▶ 啟用**。啟動前會顯示確認畫面，列出確切的目標、持續時間和原因：
     
-    ![Activation confirmation](../images/TempTarget8.png)
+    ![啟用確認畫面](../images/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    確認後，臨時目標會立即開始（或在所選的**啟用**時間開始），並持續設定的時間。
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} 編輯數值只會套用一次，不會變更預設值
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    編輯器中的**目標**和**持續時間**，是你現在點選**啟用**時會使用的數值。如果你變更這些數值，變更只會**暫時生效**：僅套用於這次啟用，**不會修改已儲存的預設值**。這樣你就可以「調整後啟用」一次性的臨時目標（例如，今天以稍微不同的目標啟用*活動*），而不會永久變更預設值。
     
 
-### Saving changes to a preset
+### 儲存預設值的變更
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+如果你*確實*想保留編輯後的數值，請點選**儲存**：編輯器中的內容與所選預設值不同時，頂端工具列會出現**儲存**圖示。點選該圖示，會將目前的**目標**和**持續時間**（自訂預設值也包含名稱）儲存回所選的預設值。對於內建預設值，操作列也會出現**還原預設值**按鈕（↺），可恢復該預設值的原始數值。
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![顯示「儲存」圖示和「還原預設值」按鈕的臨時目標畫面](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+簡單來說：
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **啟用** → 只使用這些數值**一次**（不變更預設值）。
+- **儲存** → 將這些數值設為預設值的**新預設值**。
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+若要將內建預設值還原為原始狀態，請選取該預設值並點選**↺ 還原**按鈕。只有當內建預設值目前的數值與原廠預設值不同時，操作列才會顯示此按鈕；點選後會還原該預設值原本的**目標**和**持續時間**。
 
-### Adding and removing presets
+### 新增及移除預設值
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ 新增**——使用編輯器目前的數值**建立新的自訂預設值**。新的卡片會出現在輪播區。
+- **️ 刪除**——移除所選的**自訂**預設值。內建預設值（*即將用餐*、*活動*、*低血糖*）無法刪除。
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+至少有兩個**自訂**預設值後，也可以調整它們在輪播區中的順序：點選頂端列的**重新排序**圖示（⇅），使用**◀ / ▶ 移動按鈕**移動置中的卡片，然後點選**✓**確認。內建預設值的位置不會變動，只有自訂預設值可以移動。（操作方式與[重新排序設定檔](ProfileSwitch-ProfilePercentage.md)相同。）
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+你的預設值屬於同步組態的一部分，因此會在主用戶端與配對用戶端之間共用。
 
-### Other ways to set a temporary target
+### 設定臨時目標的其他方式
 
-A temporary target can also be set without opening this screen:
+也可以不開啟此畫面，直接設定臨時目標：
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- 使用「碳水化合物」對話方塊中的 **TT 切換開關** — 請參閱[下方](#TempTargets-carbs-dialog)，
+- 使用 **[QuickLaunch 工具列](QuickLaunch.md)上的預設按鈕** — 在 *設定 QuickLaunch* 中的 *臨時目標預設值*類別，會為每個預設值提供一個按一下即可啟用的按鈕，
+- 使用 **Wear OS 手錶**（「**臨時目標**」選單項目／小工具），
+- 使用已配對的**用戶端** — 請參閱[主控端 ↔ 用戶端控制](../RemoteFeatures/ClientMasterControl.md)，
+- 將其設為**[情境](Scenes.md)**的一部分（「*臨時目標*」動作），或
+- 使用**自動化**規則（「*開始臨時目標*」／「*停止臨時目標*」）。
 
 * * *
 
@@ -146,42 +146,42 @@ A temporary target can also be set without opening this screen:
 
 ## 我可以在哪裡選擇臨時目標？
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+最快的方法是點選主畫面上的**目標標籤**（會顯示目前的目標範圍）：
 
-![Target chip on the main screen](../images/TempTarget6.png)
+![主畫面上的目標標籤](../images/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+這會開啟上方所述的**臨時目標**畫面 — 滑動到要使用的預設值，然後點選 **▶ 啟用**。也可以透過**管理** → **臨時目標**開啟相同畫面。
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= 輸入碳水化合物時，完全不需要開啟**臨時目標**畫面：**碳水化合物**對話方塊（**治療** → **碳水化合物**）頂端有「**開始低血糖 TT**」、「**開始即將用餐 TT**」和「**開始活動 TT**」切換開關。開啟其中一個開關後，系統會在新增碳水化合物資料時一併啟用對應的預設值：
 
-![TT toggles in the Carbs dialog](../images/TempTarget5.png)
+![碳水化合物對話方塊中的 TT 切換開關](../images/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} 自動啟用低血糖 TT
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    如果您在血糖低於 72 mg/dL（4 mmol/L）時開啟**碳水化合物**對話方塊，**AAPS** 會自動預先選取「**開始低血糖 TT**」切換開關（除非目前已啟用目標值較高且剩餘時間較長的臨時目標）。
 
 (TempTargets-change-preset-defaults)=
 
 ## 我可以在哪裡更改預設的**臨時目標**，並根據個人偏好進行覆蓋？
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+每個預設值的**目標值**和**持續時間**都可以直接在**臨時目標**畫面中編輯，不再需要另外到偏好設定中設定：
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. 開啟**臨時目標**畫面（點選目標標籤，或選擇**管理** → **臨時目標**）。
+2. 滑動到要變更的預設值。
+3. 在編輯器中調整**臨時目標**和／或**持續時間**。
+4. 點選頂端工具列中出現的**儲存**圖示。
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![編輯預設值 — 工具列中的「儲存」圖示，以及動作列中的「還原」](../images/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+當編輯器中的設定與內建預設值的原始設定不同時，動作列也會出現 **↺ 還原**按鈕 — 點選即可還原預設值的原始目標值和持續時間。
 
 ## 如何取消一個正在運作的**臨時目標**？
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+啟用臨時目標期間，主畫面上的目標標籤會顯示目標值和剩餘時間。點選目標標籤 — 在**臨時目標**畫面中，正在執行的預設值會標示為**啟用中**；底部工具列的末端、**▶ 啟用**按鈕左側，會出現紅色的 **✗ 取消**按鈕。點選該按鈕並確認：
 
-![Cancelling a running temp target](../images/TempTarget9.png)
+![取消正在執行的臨時目標](../images/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+也可以透過 **Wear OS 手錶**、已配對的**用戶端**，或**自動化**規則（「*停止臨時目標*」）停止正在執行的臨時目標。
 
 (臨時目標-低血糖臨時目標)=
 
@@ -191,13 +191,13 @@ A running temporary target can also be stopped from a **Wear OS watch**, from a 
 
 有時候當食用了治療低血糖的碳水化合物時，使用者的**血糖**會迅速上升，**AAPS**會透過啟用**SMB**來應對快速上升的**血糖**。
 
-一些使用者希望在**臨時目標-低血糖**期間避免**SMB**的給藥。 This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+一些使用者希望在**臨時目標-低血糖**期間避免**SMB**的給藥。若要達成此效果，請在**設定** → **OpenAPS SMB** 中停用「*啟用高臨時目標時使用 SMB*」（詳情請見下文）：
 
-- In (Advanced, objective 9): the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- 在「進階」第 9 個目標中：使用者可以在 OpenAPS SMB 中，為 100 mg/dL（5.6 mmol/L）或更高的**臨時目標**啟用「*高臨時目標會提高敏感度*」，讓 **AAPS** 提高敏感度。
 
-- In (Advanced, objective 9): the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- 在「進階」第 9 個目標中：使用者可以停用「*啟用高臨時目標時使用 SMB*」。如此一來，即使 **AAPS** 的活性碳水化合物大於 0、「啟用低臨時目標時使用 SMB」或「一律啟用 SMB」已開啟，且 OpenAPS SMB 正在運作，**AAPS** 在高臨時目標啟用期間仍不會給予 SMB。
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+注意：如果您在血糖低於 72 mg/dL 或 4 mmol/L 時開啟**碳水化合物**對話方塊，**AAPS** 會自動預先選取「**開始低血糖 TT**」切換開關。
 
 (臨時目標-活動臨時目標)=
 
@@ -207,13 +207,13 @@ Note: if you open the **Carbs dialog** while your blood glucose is less than 72 
 
 為了簡化**臨時目標-運動**的設定，使用者可以配置一個預設的**臨時目標-運動**，透過減少胰島素使用來提高**血糖**數值，以減緩**血糖**下降並避免低血糖。
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. 每個人在運動期間達到穩定**血糖**控制的情況各不相同。另請參閱常見問題中的[運動部分](#FAQ-sports)。
+新使用者可能需要試用並調整**臨時目標活動**的預設設定，才能讓此功能最符合自己的需求。每個人在運動期間達到穩定**血糖**控制的情況各不相同。另請參閱常見問題中的[運動部分](#FAQ-sports)。
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+有些使用者也會偏好在啟用**臨時目標活動**之前及期間，啟用**設定檔切換**（將設定檔百分比調低至 100% 以下，以減少 **AAPS** 輸送的胰島素）。您可以一步完成這兩項設定：點選主畫面上的設定檔名稱，再點選圓形的 **▶** 按鈕，將**百分比**設為低於 100%，並設定**持續時間**，然後開啟**臨時目標／活動**。請參閱[變更設定檔百分比](#ProfileSwitch-change-percentage)。
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. 此外，如果停用*「高臨時目標時的SMB」*，即使**COB**大於0，並且**SMB**已啟用，且**OpenAPS SMB**處於活動狀態，**AAPS**也不會在高臨時目標期間進行**SMB**。
+「進階」第 9 個目標：使用者可以在 OpenAPS **SMB** 中，為 100 mg/dL（5.6 mmol/L）或更高的**臨時目標**啟用「*高臨時目標會提高敏感度*」。 99 mg/dL（5.5 mmol/L）是一般目標，既不是高目標，也不是低目標。此外，如果停用*「高臨時目標時的SMB」*，即使**COB**大於0，並且**SMB**已啟用，且**OpenAPS SMB**處於活動狀態，**AAPS**也不會在高臨時目標期間進行**SMB**。
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+此外，如果停用「*啟用高臨時目標時使用 SMB*」，即使活性碳水化合物大於 0、「*啟用低臨時目標時使用 SMB*」或「*一律啟用 SMB*」已開啟，且 OpenAPS **SMB** 正在運作，**AAPS** 仍不會給予 **SMB**。
 
 (臨時目標-即將用餐臨時目標)=
 
@@ -221,16 +221,16 @@ Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** w
 
 **臨時目標-即將用餐**可以幫助實現緩和的血糖下降，並確保在用餐前有充足的**胰島素庫存量**。
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. 通常，除非使用者對**AAPS**有一定的經驗，否則在使用**臨時目標-即將用餐**時應該預期進行餐前注射，特別是在進食高碳水化合物飲食時。
+對於不會預先注射胰島素的使用者，這可能是很重要的工具。不過，**臨時目標－即將用餐**的效果會受到多項因素影響，包括使用者的設定、飲食是否為低碳水化合物，以及是否使用速效胰島素（例如 Fiasp 或 Lyumjev），以免需要預先注射胰島素。通常，除非使用者對**AAPS**有一定的經驗，否則在使用**臨時目標-即將用餐**時應該預期進行餐前注射，特別是在進食高碳水化合物飲食時。
 
 你可以在文章[「如何啟用‘即將用餐模式’」](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/)或[這裡](https://diyps.org/tag/eating-soon-mode/)了解更多關於「即將用餐模式」的訊息。
 
-進階設定，[目標9](#objectives-objective9)：如果你使用 OpenAPS SMB 並啟用了*「低臨時目標降低敏感度」*，**AAPS**會更加積極地運作。 For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+進階設定，[目標9](#objectives-objective9)：如果你使用 OpenAPS SMB 並啟用了*「低臨時目標降低敏感度」*，**AAPS**會更加積極地運作。使用此選項時，**臨時目標**必須設為 98 mg/dL（5.4 mmol/L）或更低。
 
 ## 如何在臨時目標期間關閉**SMB**？
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+若要啟用此功能，請開啟**設定** → **OpenAPS SMB**，並停用「*啟用高臨時目標時使用 SMB*」。
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![「啟用高臨時目標時使用 SMB」偏好設定](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+如此一來，即使活性碳水化合物大於 0、「*啟用低臨時目標時使用 SMB*」或「*一律啟用 SMB*」已開啟，且 OpenAPS SMB 正在運作，**AAPS** 仍不會給予 **SMB**。
