@@ -9,7 +9,7 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Pri aktualizácii na novú verziu postupujte podľa pokynov v [návode na aktualizáciu](UpdateToNewVersion). Najčastejšie ťažkosti pri aktualizácii **AAPS** rieši aj časť o riešení problémov na stránke s návodom na aktualizáciu.
+Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. Najčastejšie ťažkosti pri aktualizácii **AAPS** rieši aj časť o riešení problémov na stránke s návodom na aktualizáciu.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
@@ -24,7 +24,7 @@ Ak neaktualizujete do dátumu vypršania platnosti, **AAPS** sa prepne na otvore
 
 Dátumy konca podpory jednotlivých verzií AAPS nájdete na stránke [Koniec podpory](EndOfLife.md).
 
-**Notifikáciu neignorujte.** Nové verzie **AAPS** prinášajú dôležité bezpečnostné opravy. Preto musí každý používateľ **AAPS** čo najskôr aktualizovať na najnovšiu verziu. Je to snaha zlepšiť bezpečnosť každého používateľa **AAPS** aj komunity DIY. Ďakujeme za pochopenie.
+**Notifikáciu neignorujte.** Nové verzie **AAPS** prinášajú dôležité bezpečnostné opravy. Preto musí každý používateľ **AAPS** čo najskôr aktualizovať na najnovšiu verziu. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Ďakujeme za pochopenie.
 
 (maintenance-android-version-aaps-version)=
 
@@ -141,7 +141,7 @@ Dátum vydania: 31.10.2026
 - NSClientV3: oprava medzery v dátach po opätovnom pripojení @MilosKozak
 - Automatizácia: oprava deserializácie @MilosKozak
 - Equil: oprava hlásenia batérie @MilosKozak
-- Upratanie workflowu @vanelsberg
+- Cleanup workflow @vanelsberg
 - Equil: vylepšené zotavenie z chýb @MilosKozak
 - DanaRS: oprava komunikácie s domácou (kórejskou) pumpou @MilosKozak
 - Insight: oprava synchronizácie TBR @MilosKozak
@@ -168,7 +168,7 @@ Dátum vydania: 04.02.2026
 
 - Equil: oprava odporu pre rôzne modely @hhfcvmars
 - Tidepool: oprava relácie @MilosKozak
-- Medtrum: oprava postupu aktivácie zabránením dvojitého plnenia @MilosKozak
+- Medtrum: Fix activation path by preventing double fill @MilosKozak
 - COB: oprava výpočtu COB (rieši nebezpečný okrajový prípad) @MilosKozak
 
 (version3410)=
@@ -261,7 +261,7 @@ Dátum vydania: 31.12.2025
 * Vylepšené odstraňovanie duplikátov pri zlyhaní NS @MilosKozak
 
 ### Vylepšenia UI/UX
-* rôzne vylepšenia @MilosKozak @Philoul @olorinmaia
+* various improvements @MilosKozak @Philoul @olorinmaia
 
 ### Automatizácia
 * Nová akcia ovládania SMB – zapnutie/vypnutie SMB cez automatizáciu @MilosKozak
@@ -300,7 +300,7 @@ Dátum vydania: 27.03.2025
 
 (version-enforcement)=
 
-### Od tejto verzie sú upozornenia a vynucovanie verzie zjednodušené a zmiernené a fungujú takto:
+### Starting this version, notification and version enforcement has been simplified and softened and works following way:
 *  Žiadne vypršanie platnosti, keď je zariadenie offline (ak nie je pripojené na internet). To znamená, že už neexistujú lehoty 60 a 90 dní.
 *  Po vypršaní platnosti sa vynúti režim LGS
 *  Upozornenia/notifikácie budete dostávať menej často:
@@ -322,7 +322,7 @@ Dátum vydania: 27.03.2025
 * Vylepšenia rozhrania prepínačov (Radiobuttons) @olorinmaia
 * Automatizácia: výber polohy z mapy @MilosKozak
 * Verzia viditeľná na hlavných obrazovkách @MilosKozak
-* Vynútená kompilácia s existujúcim systémom git (žiadne sťahovanie zip)
+* Compilation with existing git system is enforced (no zip downloads)
 * Zobrazenie verzie na hlavnej obrazovke @MilosKozak
 * Vylepšenia nahrávania do Tidepool @ConstantinMatheis
 
@@ -342,7 +342,7 @@ Dátum vydania: 21.01.2025
 ### Opravy chýb
 
 * Dash: párovanie (bonding) je voliteľné (predvolene vypnuté) @MilosKozak
-* Equil: opravený bolus 10+ U, vylepšenia alarmov @EquilHack
+* Equil: fixed bolus 10+U, alarm improvements @EquilHack
 * Garmin: vylepšenia hodiniek @swissalpine
 * Vylepšenia hodiniek @olorinmaia
 * Ovládanie stavu okruhu z hodiniek @tdrkDev
@@ -558,21 +558,21 @@ Dátum vydania: 23.10.2023
 v1 je starý protokol na výmenu dát medzi webovou stránkou NS a serverom NS. Má veľa obmedzení
 - v1 posiela iba 2 dni dát
 - v1 posiela všetky dáta za 2 dni pri každom opätovnom pripojení
-- používanie websocketov je povinné = trvalé pripojenie, vyššia spotreba batérie
+- using websockets is mandatory = permanent connection, more battery consumption
 - pri častých výpadkoch spojenia s NS sa pripojenie pozastaví na 15 minút, aby sa zabránilo veľkej spotrebe dát
 
 v3 je nový protokol. Bezpečnejší a efektívnejší
 - pri používaní tokenov môžete lepšie určiť prístupové práva
 - protokol je efektívnejší na oboch stranách (AAPS a NS)
 - Dokáže z NS načítať dáta až za 3 mesiace
-- na každom zariadení si môžete vybrať, či websockety použijete alebo nie (použitie znamená rýchlejšie aktualizácie, nepoužitie znamená nižšiu spotrebu energie, ale pomalšie aktualizácie, t. j. v minútach)
+- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power consumption, but slower updates ie. minutes)
 - NSClient sa pri výpadkoch spojenia nepozastavuje
 
 OBMEDZENIA
 - S AAPS 3.2 sa musí používať NS 15
 - v3 nevidí aktualizácie urobené protokolom v1 (pravdepodobne to bude vyriešené v niektorej budúcej verzii NS)
-- naopak, kvôli starej neefektívnej metóde sledovania zmien v1 vidí zmeny urobené cez v3
-- pamätajte, že NS zatiaľ interne stále používa v1, preto ak používate v3, nie je možné zadávať dáta cez webové rozhranie NS. Ak chcete zadávať dáta na diaľku, musíte používať AAPSClient alebo SMS
+- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
+- pamätajte, že NS zatiaľ interne stále používa v1, preto ak používate v3, nie je možné zadávať dáta cez webové rozhranie NS. You must use AAPSClient or SMS if you want to enter data remotely
 
 ODPORÚČANÉ NASTAVENIE
 - kvôli všetkému uvedenému by ste si mali vybrať iba jednu metódu a používať ju na všetkých zariadeniach (pamätajte, že v čase písania tohto textu všetky ostatné nástroje na nahrávanie používajú v1). Ak sa rozhodnete prejsť na v3, vyberte v3 v AAPS aj vo všetkých AAPSClientoch
