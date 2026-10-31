@@ -227,7 +227,10 @@ GitHub affiche **Page not found** (404) ? Vérifiez d'abord que vous êtes conn
 
    Si c'est l'**application GitHub** qui s'ouvre : appuyez sur **RUN WORKFLOW**, vérifiez la version et la variante, puis appuyez de nouveau sur **RUN WORKFLOW**. L'application peut encore afficher **Nothing to see here** : tirez la liste vers le bas pour l'actualiser et voir votre compilation. Continuez ensuite avec l'étape 4 ci-dessous.
 
-2. Si GitHub le demande, appuyez sur le bouton vert pour activer les workflows.
+2. If GitHub asks, tap the green button to enable workflows.
+
+   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+
 3. Appuyez sur **Run workflow**. Un petit formulaire s'ouvre :
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
    - **Variant** : gardez `fullRelease` pour une utilisation normale avec une pompe. Les autres variantes sont expliquées dans [variantes de compilation](#browserbuild-variant). `aapsclient3Release` compile **AAPSClient3**, disponible à partir de la version 4.0 d'**AAPS** (voir [À propos d'AAPSClient, AAPSClient2 et AAPSClient3](#remotecontrol-aapsclient-versions)).
