@@ -108,7 +108,7 @@ En **AAPS** v3 podías cambiar en cualquier momento la DIA de la insulina que us
 
 En **AAPS** v4, la insulina marcada como **ACTIVO** en **Administrar → Configuración de insulina** aparece en gris: no puedes editarla ni borrarla.
 
-Al actualizar, **AAPS** conserva la insulina y la DIA que ya guardaron tus cambios de perfil de v3. Si encuentra registros antiguos con una insulina conocida pero sin DIA, usa una DIA predeterminada para ellos y muestra un mensaje una sola vez, por ejemplo *Los registros antiguos no tenían duración de la insulina, por lo que se utilizaron 9,0 horas para Lyumjev. Compruebe sus ajustes de insulina: los registros ya migrados no se actualizan a posteriori* Cuando lo veas, revisa tus ajustes de insulina.
+Al actualizar, **AAPS** conserva la insulina y la DIA que ya guardaron tus cambios de perfil de v3. Si encuentra registros antiguos con una insulina conocida pero sin DIA, usa una DIA predeterminada para ellos y muestra un mensaje una sola vez, por ejemplo *Los registros antiguos no tenían duración de la insulina, por lo que se utilizaron 9,0 horas para Lyumjev. Comprueba tus ajustes de insulina: los registros ya migrados no se actualizan a posteriori* Cuando lo veas, revisa tus ajustes de insulina.
 
 ```{admonition} What you need to do
 :class: important
