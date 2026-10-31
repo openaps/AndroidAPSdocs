@@ -1,170 +1,170 @@
 # Accu-Chek Insight
 
-**Αυτό το λογισμικό είναι μέρος του DIY τεχνητό παγκρέας και δεν είναι προϊόν, αλλά απαιτεί από εσάς να διαβάσετε, να μάθετε και να κατανοήσετε το σύστημα, συμπεριλαμβανομένου του τρόπου χρήσης του. Δεν είναι κάτι που κάνει όλη τη διαχείριση του διαβήτη για σας, αλλά σας επιτρέπει να βελτιώσετε τα επίπεδα σακχάρων σας και την ποιότητα ζωής σας, εάν είστε πρόθυμοι να αφιερώσετε τον απαιτούμενο χρόνο. Μη βιάζεστε με αυτό, αλλά δώστε χρόνο στον εαυτό σας να μάθει. Εσείς μόνο είστε υπεύθυνοι για οτιδήποτε κάνετε με αυτό.**
+**Αυτό το λογισμικό είναι μέρος μιας λύσης DIY τεχνητού παγκρέατος και δεν είναι προϊόν, αλλά απαιτεί από εσάς να διαβάσετε, να μάθετε και να κατανοήσετε το σύστημα, συμπεριλαμβανομένου του τρόπου χρήσης του. Δεν είναι κάτι που κάνει όλη τη διαχείριση του διαβήτη για σας, αλλά σας επιτρέπει να βελτιώσετε τα επίπεδα σακχάρων σας και την ποιότητα ζωής σας, εάν είστε πρόθυμοι να αφιερώσετε τον απαιτούμενο χρόνο. Μη βιάζεστε, αλλά δώστε στον εαυτό σας χρόνο να μάθει. Μόνο εσείς είστε υπεύθυνοι για ό,τι κάνετε με αυτό.**
 
-```{admonition} Accu-Chek Insight is being phased out :class: note
+```{admonition} Το Accu-Chek Insight αποσύρεται :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
+Η Roche αποχωρεί από την αγορά αντλιών ινσουλίνης, για να επικεντρώσει τα προϊόντα της για τον διαβήτη στο CGM Accu-Chek SmartGuide. Έχει ανακοινώσει το τέλος των πωλήσεων των αντλιών Accu-Chek Combo και Accu-Chek Insight. Η μικροαντλία Accu-Chek Solo, που της απομένει, επίσης αποσύρεται σταδιακά (τελευταίες παραδόσεις στη Γερμανία στο τέλος του 2025). Η αλλαγή γίνεται ανά περιοχή, ξεκινώντας από τη Γερμανία, και αναμένεται να ακολουθήσουν άλλες ευρωπαϊκές αγορές. Η υποστήριξη για το Insight αναφέρεται ήδη ως λήξασα (δείτε [Αντλίες που δεν πωλούνται πια](./Future-possible-Pump-Drivers.md)). Αν βασίζεστε σε αυτή την αντλία, σχεδιάστε από νωρίς τη μετάβαση σε μια υποστηριζόμενη αντλία.
 
     <br />```{note}
-    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
+    Πριν το **AAPS** αποκτήσει δικό του οδηγό για το Insight, το Insight ελεγχόταν μέσω της ξεχωριστής εφαρμογής [SightRemote](https://github.com/TebbeUbben/SightRemote). Το SightRemote δεν χρειάζεται πια και δεν συντηρείται: αν το έχετε ακόμα εγκατεστημένο από τότε, απεγκαταστήστε το και χρησιμοποιήστε μια τρέχουσα έκδοση του **AAPS**.
     
 
-```{contents} Table of contents :depth: 1 :local: true
+```{contents} Περιεχόμενα :depth: 1 :local: true
 
-    <br />## Pump capabilities with AAPS
+    <br />## Δυνατότητες της αντλίας με το AAPS
     
-    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-    * Automatic DST and timezone handling.
+    * Επικοινωνεί με το **AAPS** μέσω του Bluetooth του τηλεφώνου σας, χωρίς επιπλέον συσκευή επικοινωνίας.
+    * Αυτόματος χειρισμός θερινής ώρας και ζώνης ώρας.
     
-    ## Hardware and software requirements
+    ## Απαιτήσεις υλικού και λογισμικού
     
-    * A Roche Accu-Chek Insight pump (any firmware, they all work)
+    * Μια αντλία Roche Accu-Chek Insight (οποιοδήποτε firmware, όλα λειτουργούν)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Σημείωση: Το AAPS γράφει πάντα τα δεδομένα στο **πρώτο προφίλ βασικού ρυθμού της αντλίας**.
     
-    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
-    * The AAPS app installed on your phone
+    * Ένα τηλέφωνο Android με Android 12 ή νεότερο (δείτε [Τηλέφωνα](../Getting-Started/Phones.md))
+    * Η εφαρμογή AAPS εγκατεστημένη στο τηλέφωνό σας
     
-    ## Setup
+    ## Ρύθμιση
     
-    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    * Η αντλία Insight πρέπει να είναι συνδεδεμένη μόνο με μία συσκευή κάθε φορά. Αν έχετε χρησιμοποιήσει στο παρελθόν το τηλεχειριστήριο του Insight (μετρητή), πρέπει να αφαιρέσετε τον μετρητή από τη λίστα συζευγμένων συσκευών της αντλίας: **Menu** > **Settings** > **Communication** > **Remove device**.
     
        ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
     
-    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    * Στο [Διαμόρφωση > Αντλία](#Config-Builder-pump), επιλέξτε την κάρτα **Accu-Chek Insight**. Μόνο μία αντλία μπορεί να είναι ενεργή κάθε φορά.
     
-       ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+       ![Διαμόρφωση > Αντλία με το πρόσθετο Accu-Chek Insight](../images/v4/Configuration/configuration_pump_list_1.png)
     
-       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+       Μόλις επιλεγεί, η κάρτα **Accu-Chek Insight** δείχνει δύο κουμπιά, **Ρυθμίσεις** και **Άνοιγμα πρόσθετου**:
     
-       ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
+       ![Το πρόσθετο Accu-Chek Insight επιλεγμένο στο Διαμόρφωση > Αντλία](../images/v4/Pumps/accu_chek_insight_enabled.png)
     
-       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+       Το **Ρυθμίσεις** ανοίγει τις ρυθμίσεις του οδηγού Accu-Chek Insight (δείτε [Ρυθμίσεις στο AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
     
-       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+       Το **Άνοιγμα πρόσθετου** (ή **Διαχείριση → Αντλία**) ανοίγει την οθόνη της αντλίας Accu-Chek Insight. Πριν από τη σύζευξη μιας αντλίας, η οθόνη μοιάζει έτσι:
     
-       ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
+       ![Οθόνη της αντλίας Accu-Chek Insight πριν από τη σύζευξη](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
     (accu-chek-insight-pairing)=
-    ### Pairing
+    ### Σύζευξη
     
-    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
-    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    * Στην οθόνη της αντλίας, πατήστε **Σύζευξη Insight**. Ανοίγει ο οδηγός σύζευξης και αναζητά κοντινές συσκευές Bluetooth (πάνω μέρος της παρακάτω εικόνας).
+    * Στην αντλία Insight, μεταβείτε στο **Menu** > **Settings** > **Communication** > **Add Device**. Η αντλία δείχνει την παρακάτω οθόνη (κάτω μέρος της παρακάτω εικόνας) με τον σειριακό αριθμό της αντλίας.
     
        ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
     
-    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    * Πίσω στο τηλέφωνό σας, πατήστε τον σειριακό αριθμό της αντλίας στη λίστα των συσκευών Bluetooth. Αν το Android σας ζητήσει να επιβεβαιώσετε τη σύζευξη, πατήστε **Σύζευξη**.
     
        ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
     
-    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    * Η αντλία και το τηλέφωνο δείχνουν και τα δύο έναν κωδικό. Ελέγξτε ότι οι κωδικοί είναι ίδιοι και στις δύο συσκευές. Επιβεβαιώστε στην αντλία και πατήστε **Ναι** στο τηλέφωνο. (Πατήστε **Όχι** αν οι κωδικοί δεν ταιριάζουν.)
     
        ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
     
-    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    * Το τηλέφωνο δείχνει **Σύζευξη ολοκληρώθηκε**. Πατήστε **Έξοδος** για να επιστρέψετε στην οθόνη της αντλίας.
     
        ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
     
-    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    * Για να ελέγξετε ότι όλα είναι εντάξει, δείτε την οθόνη της αντλίας (**Διαχείριση → Αντλία**). Μετά τη σύζευξη, η οθόνη δείχνει πληροφορίες για την αντλία, όπως **Σειριακός αριθμός**, **Ημερομηνία κατασκευής**, **Έκδοση λογισμικού** και **Διεύθυνση Bluetooth**.
     
        ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
     
-       ```{admonition} Older screenshot
+       ```{admonition} Παλαιότερο στιγμιότυπο οθόνης
        :class: note
-       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       Εκτός από το πάνω μέρος της πρώτης εικόνας, τα παραπάνω στιγμιότυπα σύζευξης είναι από παλαιότερη έκδοση του **AAPS** και μπορεί να φαίνονται διαφορετικά στο **AAPS** 4.
        ```
     
-    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    * Για να καταργήσετε τη σύζευξη, πατήστε **Κατάργηση σύζευξης** στην οθόνη της αντλίας και επιβεβαιώστε το **Επαναφορά στοιχείων σύζευξης;**. Μετά εμφανίζεται ξανά το κουμπί **Σύζευξη Insight**.
     
-    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    Σημείωση: Δεν υπάρχει μόνιμη σύνδεση μεταξύ αντλίας και τηλεφώνου. Το **AAPS** συνδέεται μόνο όταν χρειάζεται (για παράδειγμα για να ορίσει προσωρινό βασικό ρυθμό, να δώσει bolus ή να διαβάσει το ιστορικό της αντλίας). Αλλιώς οι μπαταρίες του τηλεφώνου και της αντλίας θα άδειαζαν πολύ γρήγορα.
     
     (Accu-Chek-Insight-Pump-settings-in-aaps)=
-    ## Settings in AAPS
+    ## Ρυθμίσεις στο AAPS
     
-    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    Ανοίξτε τις ρυθμίσεις με το **Ρυθμίσεις** στην κάρτα **Accu-Chek Insight** στο **Διαμόρφωση** > **Αντλία** ή με το εικονίδιο γραναζιού πάνω δεξιά στην οθόνη της αντλίας.
     
-    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Ρυθμίσεις του οδηγού Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    Στις ρυθμίσεις του Insight στο **AAPS** μπορείτε να ενεργοποιήσετε τις παρακάτω επιλογές:
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+    * **Καταγραφή αλλαγών δεξαμενής**: καταγράφει αυτόματα αλλαγή φύσιγγας ινσουλίνης όταν εκτελείτε στην αντλία το πρόγραμμα "fill cannula".
     
-    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    * **Καταγραφή αλλαγών σωληνακίου**: προσθέτει μια σημείωση στη βάση δεδομένων του **AAPS** όταν εκτελείτε στην αντλία το πρόγραμμα "tube filling".
     
-    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    * **Καταγραφή αλλαγών σημείου έγχυσης**: προσθέτει μια σημείωση στη βάση δεδομένων του **AAPS** όταν εκτελείτε στην αντλία το πρόγραμμα "cannula filling". **Σημείωση: Μια αλλαγή σημείου έγχυσης μηδενίζει επίσης το Autosens.**
     
-    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    * **Καταγραφή αλλαγών μπαταρίας**: καταγράφει αλλαγή μπαταρίας όταν βάζετε νέα μπαταρία στην αντλία.
     
-    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    * **Καταγραφή αλλαγών κατάστασης λειτουργίας**: προσθέτει μια σημείωση στη βάση δεδομένων του **AAPS** κάθε φορά που ξεκινάτε, σταματάτε ή θέτετε σε παύση την αντλία.
     
-    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    * **Καταγραφή ειδοποιήσεων**: προσθέτει μια σημείωση στη βάση δεδομένων του **AAPS** κάθε φορά που η αντλία δίνει μια ειδοποίηση (εκτός από υπενθυμίσεις, ακύρωση bolus και ακύρωση TBR, που δεν καταγράφονται).
     
-    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    * **Ενεργοποίηση εξομοίωσης TBR**: η αντλία Insight μπορεί να ορίσει προσωρινούς βασικούς ρυθμούς (TBR) μόνο έως 250%. Για να ξεπεραστεί αυτό το όριο, η εξομοίωση TBR λέει στην αντλία να χορηγήσει εκτεταμένο bolus για την επιπλέον ινσουλίνη, αν ζητηθεί TBR πάνω από 250%.
     
-      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+      **Σημείωση: Χρησιμοποιείτε μόνο ένα εκτεταμένο bolus κάθε φορά. Πολλά εκτεταμένα bolus ταυτόχρονα μπορεί να προκαλέσουν σφάλματα.**
     
-    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    * **Απενεργοποίηση δονήσεων κατά τη χειροκίνητη δόση bolus**: η αντλία Insight δεν δονείται όταν χορηγεί χειροκίνητο bolus (ή εκτεταμένο bolus). Διαθέσιμο μόνο με firmware Insight 3.x.
     
-    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    * **Απενεργοποίηση δονήσεων κατά την αυτόματη δόση bolus**: η αντλία Insight δεν δονείται όταν χορηγεί αυτόματο bolus (SMB ή προσωρινό βασικό ρυθμό με εξομοίωση TBR). Διαθέσιμο μόνο με firmware Insight 3.x.
     
-    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you have connection problems, choose a longer wait time.
-        <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
-        <br><br>no connection -> wait <b>5</b> sec.
-          <br>  retry -> no connection -> wait <b>6</b> sec.
-          <br>  retry -> no connection -> wait <b>7</b> sec.
-          <br>  retry -> no connection -> wait <b>8</b> sec.
+    * **Ελάχ. διάρκεια αποκατάστασης [s]** και **Μέγ. διάρκεια αποκατάστασης [s]**: πόσο περιμένει το **AAPS** πριν δοκιμάσει ξανά μετά από μια αποτυχημένη προσπάθεια σύνδεσης. Μπορείτε να επιλέξετε από 0 έως 20 δευτερόλεπτα. Αν έχετε προβλήματα σύνδεσης, επιλέξτε μεγαλύτερο χρόνο αναμονής.
+        <br><br>Παράδειγμα για ελάχ. διάρκεια αποκατάστασης = 5 και μέγ. διάρκεια αποκατάστασης = 20
+        <br><br>καμία σύνδεση -> αναμονή <b>5</b> δευτ.
+          <br>  νέα προσπάθεια -> καμία σύνδεση -> αναμονή <b>6</b> δευτ.
+          <br>  νέα προσπάθεια -> καμία σύνδεση -> αναμονή <b>7</b> δευτ.
+          <br>  νέα προσπάθεια -> καμία σύνδεση -> αναμονή <b>8</b> δευτ.
           <br>...
-          <br>retry -> no connection -> wait <b>20</b> sec.
-          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>νέα προσπάθεια -> καμία σύνδεση -> αναμονή <b>20</b> δευτ.
+          <br>νέα προσπάθεια -> καμία σύνδεση -> αναμονή <b>20</b> δευτ.
           <br>...
     
-    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    * **Καθυστέρηση αποσύνδεσης [s]**: πόσο (σε δευτερόλεπτα) περιμένει το **AAPS** πριν αποσυνδεθεί από την αντλία, αφού τελειώσει μια ενέργεια. Μπορείτε να επιλέξετε από 0 έως 15 δευτερόλεπτα. Η προεπιλεγμένη τιμή είναι 5 δευτερόλεπτα.
     
-    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    Για τα διαστήματα που η αντλία ήταν σταματημένη, το **AAPS** καταγράφει προσωρινό βασικό ρυθμό 0%.
     
-    ### The pump screen
+    ### Η οθόνη της αντλίας
     
-    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    Η οθόνη της αντλίας Accu-Chek Insight (**Διαχείριση → Αντλία**) δείχνει την τρέχουσα κατάσταση της αντλίας, για παράδειγμα **Κατάσταση**, **Τελευταία σύνδεση**, **Κατάσταση λειτουργίας**, **Μπαταρία**, **Επίπεδο δεξαμενής**, τις σημερινές συνολικές ημερήσιες δόσεις (**TDD Bolus**, **TDD βασικός**), τους βασικούς ρυθμούς και το τελευταίο bolus. Μετά τη σύζευξη της αντλίας, υπάρχουν αυτά τα κουμπιά:
     
-    * **Refresh**: refreshes the pump status.
-    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
-    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
+    * **Ανανέωση**: ανανεώνει την κατάσταση της αντλίας.
+    * **Ενεργοποίηση ειδοποίησης τέλους TBR (ρύθμιση αντλίας)** / **Απενεργοποίηση ειδοποίησης τέλους TBR (ρύθμιση αντλίας)**: μια κανονική αντλία Insight δίνει συναγερμό όταν τελειώνει ένας TBR. Αυτό το κουμπί ενεργοποιεί ή απενεργοποιεί αυτόν τον συναγερμό, χωρίς να χρειάζεται λογισμικό διαμόρφωσης.
+    * **Κατάργηση σύζευξης**: καταργεί τη σύζευξη με την αντλία (δείτε [Σύζευξη](#accu-chek-insight-pairing)).
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
     
-    ```{admonition} Older screenshot
+    ```{admonition} Παλαιότερο στιγμιότυπο οθόνης
     :class: note
-    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    Το παραπάνω στιγμιότυπο οθόνης είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 η οθόνη της αντλίας φαίνεται διαφορετική και έχει επίσης κουμπί **Κατάργηση σύζευξης**.
     
 
 ## Ρυθμίσεις στην αντλία
 
-Configure alarms in the pump as follows:
+Ρυθμίστε τους συναγερμούς στην αντλία ως εξής:
 
 * Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
-* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (remove all bars)
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (αφαιρέστε όλες τις μπάρες)
 * Menu > Modes > Signal mode > Quiet
 
-This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Έτσι σιγούν όλοι οι συναγερμοί της αντλίας και το AAPS αποφασίζει αν ένας συναγερμός σας αφορά. Αν το AAPS δεν επιβεβαιώσει έναν συναγερμό, η έντασή του αυξάνεται (πρώτα μπιπ, μετά δόνηση).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
-### Vibration
+### Δόνηση
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
+Ανάλογα με την έκδοση firmware της αντλίας σας, το Insight δονείται για λίγο κάθε φορά που χορηγείται ένα bolus (για παράδειγμα, όταν το AAPS δίνει SMB ή όταν η εξομοίωση TBR χορηγεί εκτεταμένο bolus).
 
-* Firmware 1.x: No vibration by design.
-* Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AAPS delivers bolus silently.
+* Firmware 1.x: Χωρίς δόνηση από κατασκευής.
+* Firmware 2.x: Η δόνηση δεν μπορεί να απενεργοποιηθεί.
+* Firmware 3.x: Το AAPS χορηγεί το bolus αθόρυβα.
 
-Firmware version can be found in the menu.
+Την έκδοση firmware μπορείτε να τη βρείτε στο μενού.
 
 ## Αντικατάσταση μπαταρίας
 
-Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
+Η μπαταρία του Insight, όταν χρησιμοποιείτε το κύκλωμα, διαρκεί από 10 έως 14 ημέρες, το πολύ 20 ημέρες. Ο χρήστης που το ανέφερε χρησιμοποιεί μπαταρίες λιθίου Energizer.
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Η αντλία Insight έχει μια μικρή εσωτερική μπαταρία, που κρατά σε λειτουργία βασικές λειτουργίες, όπως το ρολόι, όσο αλλάζετε την αφαιρούμενη μπαταρία. Αν η αλλαγή της μπαταρίας διαρκέσει πολύ, αυτή η εσωτερική μπαταρία μπορεί να εξαντληθεί, το ρολόι θα επαναρυθμιστεί και θα σας ζητηθεί να εισάγετε νέα ώρα και ημερομηνία μετά την εισαγωγή μιας νέας μπαταρίας. Αν συμβεί αυτό, όλες οι εγγραφές στο AAPS πριν από την αλλαγή της μπαταρίας δεν θα περιλαμβάνονται πια στους υπολογισμούς, γιατί η σωστή ώρα δεν μπορεί να βρεθεί με ακρίβεια.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 
@@ -172,26 +172,26 @@ The Insight pump has a small internal battery to keep essential functions like t
 
 ### Εκτεταμένο bolus
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Χρησιμοποιείτε μόνο ένα εκτεταμένο bolus κάθε φορά, γιατί πολλά εκτεταμένα bolus ταυτόχρονα μπορεί να προκαλέσουν σφάλματα.
 
 ### Τέλος χρόνου
 
-Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
+Μερικές φορές η αντλία Insight δεν απαντά, ενώ το **AAPS** δημιουργεί τη σύνδεση. Τότε το **AAPS** δείχνει την ειδοποίηση "Τέλος χρόνου κατά τη διάρκεια handshake - επαναφορά bluetooth".
 
-![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
+![Insight: επαναφορά Bluetooth](../images/Insight_ResetBT.png)
 
-If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
+Αν συμβεί αυτό, απενεργοποιήστε το Bluetooth στην αντλία ΚΑΙ στο τηλέφωνο για περίπου 10 δευτερόλεπτα και μετά ενεργοποιήστε το ξανά.
 
 ## Διέλευση χρονικών ζωνών με αντλία Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+Για πληροφορίες σχετικά με τα ταξίδια σε άλλες ζώνες ώρας, δείτε την ενότητα [Ταξίδια σε άλλες ζώνες ώρας με αντλίες](#timezone-traveling-insight).
 
-## Where to get help
+## Πού θα βρείτε βοήθεια
 
-Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Η ανάπτυξη του οδηγού Insight γίνεται από την κοινότητα σε **εθελοντική** βάση. Πριν ζητήσετε βοήθεια:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Διαβάστε** τη σχετική ενότητα αυτής της τεκμηρίωσης, για να βεβαιωθείτε πώς πρέπει να λειτουργεί η λειτουργία.
+2. **Ρωτήστε** στο κανάλι *#AAPS* στο [Discord](https://discord.gg/4fQUWHZ4Mw) ή σε ένα από τα άλλα [κανάλια της κοινότητας](../GettingHelp/WhereCanIGetHelp.md).
+3. **Αναφέρετε ένα σφάλμα**: ψάξτε πρώτα στα [υπάρχοντα issues](https://github.com/nightscout/AndroidAPS/issues). Αν το δικό σας δεν υπάρχει, ανοίξτε ένα [νέο issue](https://github.com/nightscout/AndroidAPS/issues) και επισυνάψτε τα [αρχεία καταγραφής](../GettingHelp/AccessingLogFiles.md) σας.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Όταν ζητάτε βοήθεια, αναφέρετε τη μάρκα και το μοντέλο του τηλεφώνου σας, την έκδοση Android, την έκδοση του **AAPS** και μια περιγραφή του προβλήματος σε απλά αγγλικά (τι άλλαξε, πότε λειτούργησε τελευταία φορά).
