@@ -9,7 +9,7 @@ Potrzeba obsługi takich posiłków jednak nadal istnieje. Dlatego AAPS obsługu
 
 eCarbs to węglowodany rozłożone na kilka godzin. Przy zwykłych posiłkach, w których jest więcej węglowodanów niż tłuszczu/białka, zwykle wystarczy wpisać węglowodany od razu (i w razie potrzeby zmniejszyć pierwszy bolus), aby uniknąć zbyt wczesnego podania insuliny.  Przy posiłkach wolniej wchłanianych, gdy wpisanie wszystkich węglowodanów od razu daje zbyt dużo IOB z SMB, możesz użyć eCarbs. Pozwalają one dokładniej odwzorować, jak węglowodany (i równoważniki węglowodanów, które wpisujesz dla innych makroskładników) są wchłaniane i jak wpływają na glikemię. Dzięki tej informacji pętla może podawać SMB bardziej stopniowo, aby pokryć te węglowodany. Można to traktować jak dynamiczny bolus przedłużony (powinno to działać także bez SMB, ale zapewne mniej skutecznie).
 
-**Uwaga:** eCarbs nie służą tylko do posiłków tłustych lub bogatych w białko. Możesz ich używać w każdej sytuacji, w której coś podnosi poziom cukru, np. przy innych lekach, takich jak kortykosteroidy.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## Jak używać eCarbs
 
@@ -62,7 +62,7 @@ Szybciej będzie, jeśli *Kalkulator bolusa* doda eCarbs za Ciebie: wybierz [typ
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Bolus przedłużony i dlaczego nie działa w zamkniętej pętli?
 
-Jak wspomniano powyżej, bolusy przedłużone lub wielofalowe nie działają dobrze w zamkniętej pętli. [Szczegóły znajdziesz poniżej](#why-extended-boluses-wont-work-in-a-closed-loop-environment)
+Jak wspomniano powyżej, bolusy przedłużone lub wielofalowe nie działają dobrze w zamkniętej pętli. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Bolus przedłużony i przejście na otwartą pętlę - tylko pompy Dana i Insight
