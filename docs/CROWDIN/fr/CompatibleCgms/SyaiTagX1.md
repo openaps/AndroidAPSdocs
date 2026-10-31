@@ -1,15 +1,15 @@
 # Syai X1
 
 
-## Using X1 And Syai Tag app
+## Utiliser le X1 avec l'application Syai Tag
 
 -   Installez l'apk depuis <https://play.google.com/store/apps/details?id=com.syai.tag>.
 
--   Start X1 sensor
+-   Démarrer le capteur X1
 
 - Choisissez **Syai/Ottai** dans [Configuration, Source GLY](#Config-Builder-bg-source).
 
-Activez la diffusion (broadcast) dans l'application Syai :
+Activez la diffusion (broadcast) dans l'application Syai :
 
 1. Choisissez Profile
 2. Syai Health Ecosystem
