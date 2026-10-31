@@ -2,7 +2,7 @@
 
 Poniższe instrukcje dotyczą apk **AAPS Wear**, który musisz zbudować. Jeśli jeszcze go nie zbudowałeś, zobacz instrukcję [tutaj](../WearOS/BuildingAapsWearOS.md). Podczas budowania użyj tego samego pliku magazynu kluczy (keystore), którego użyłeś dla apk **AAPS** na telefon.
 
-Część tych informacji przyda się też dla apk **AAPSClient** i **PumpControl** **Wear**. Każda aplikacja **Wear** komunikuje się z pasującą do niej aplikacją na telefonie. Na przykład: aplikacji **AAPSClient Wear** możesz użyć do wyświetlania danych z **AAPSClient**, a nie z **AAPS**. Gdy obok siebie zainstalowanych jest kilka wersji klienta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), kafelki każdej z nich mają mały nagłówek w kolorze tej wersji, dzięki czemu odróżnisz je podczas przesuwania.
+Część tych informacji przyda się też dla apk **AAPSClient** i **PumpControl** **Wear**. Each **Wear** app will communicate with its matching phone app. Na przykład: aplikacji **AAPSClient Wear** możesz użyć do wyświetlania danych z **AAPSClient**, a nie z **AAPS**. Gdy obok siebie zainstalowanych jest kilka wersji klienta (**AAPSClient**, **AAPSClient2**, **AAPSClient3**), kafelki każdej z nich mają mały nagłówek w kolorze tej wersji, dzięki czemu odróżnisz je podczas przesuwania.
 
 ## Wersje Wear OS i zgodność
 
@@ -104,7 +104,7 @@ Przykład: Galaxy Watch 4 i nowsze z One UI 8 Watch, Pixel Watch po aktualizacji
 
 Zainstaluj apk **AAPS Wear** przez [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). Klasyczne tarcze nie są dostępne. **AAPS** automatycznie instaluje tarczę wybraną na telefonie, zobacz [tarcza instalowana przez AAPS](#wearos-aaps-v4-watchface). Brak ograniczeń w działaniu **AAPS Wear**.
 
-## Jak skonfigurować smartwatch Samsung Galaxy 4 z **AAPS**
+## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
 
 Ta sekcja jest dla osób, które dopiero zaczynają ze smartwatchami. Najpierw przedstawia podstawy popularnego zegarka **Galaxy Watch 4**, a potem krok po kroku pokazuje, jak skonfigurować **AAPS** na zegarku.
 
@@ -124,7 +124,7 @@ Aplikacja „Galaxy Wearable” ma też sekcję z instrukcją obsługi. Otwórz 
 
 ## Zakładanie konta Samsung
 
-Upewnij się, że konto e-mail, którego używasz do założenia konta Samsung, ma taką datę urodzenia, że użytkownik ma co najmniej 13 lat. W przeciwnym razie bardzo trudno zatwierdzić uprawnienia Samsung. Jeśli Twoje dziecko poniżej 13 lat ma konto Gmail i używasz tego adresu e-mail, nie możesz po prostu zmienić go na konto dla dorosłych. Jednym z obejść jest zmiana obecnej daty urodzenia tak, aby wiek wynosił 12 lat i 363 dni. Następnego dnia konto zmieni się w konto dla dorosłych i możesz kontynuować zakładanie konta Samsung.
+Upewnij się, że konto e-mail, którego używasz do założenia konta Samsung, ma taką datę urodzenia, że użytkownik ma co najmniej 13 lat. W przeciwnym razie bardzo trudno zatwierdzić uprawnienia Samsung. Jeśli Twoje dziecko poniżej 13 lat ma konto Gmail i używasz tego adresu e-mail, nie możesz po prostu zmienić go na konto dla dorosłych. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. Następnego dnia konto zmieni się w konto dla dorosłych i możesz kontynuować zakładanie konta Samsung.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -218,7 +218,7 @@ Pojawi się kod parowania Wi-Fi oraz adres IP i port:
 - Zobaczysz odpowiedź:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - W terminalu wpisz: <br>`adb devices`.<br> Powinieneś zobaczyć coś takiego:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Teraz przejdź do folderu na komputerze, w którym jest apk Wear, i wpisz<br> `adb install wear-full.apk` <br>zamieniając wear.apk na nazwę swojego pliku apk.
+- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
 - Zobaczysz:<br> `Performing Streamed Install`<br> `Success`
 
 
@@ -235,7 +235,7 @@ Pojawi się kod parowania Wi-Fi oraz adres IP i port:
 **Parowanie:**
 
 - Zegarek: Debugowanie bezprzewodowe: zapisz adres IP.
-- Wear Installer: wpisz adres IP w aplikacji Wear Installer.
+- Wear Installer: Enter the IP in the Wear Installer app.
 - Wybierz parowanie nowego urządzenia, zapisz wyświetlony kod parowania i numer portu.
 - Wear Installer: wpisz kod parowania + spację + numer portu.
 - Wear Installer powinien zgłosić, że parowanie się udało. Jeśli nie, zamknij Wear Installer i spróbuj ponownie.
@@ -280,7 +280,7 @@ W niektórych smartwatchach, np. Samsung Galaxy, opcja „Remote Connection” (
 2.  Sprawdź, czy smartwatch jest połączony z internetem (a nie tylko z telefonem przez Bluetooth).
 3.  Sprawdź, czy telefon z **AAPS** i smartwatch są sparowane lub połączone w aplikacji Samsung.
 4.  Może też pomóc pełny restart telefonu i smartwatcha (czyli wyłączenie i włączenie telefonu).
-5.  Jeśli udało Ci się pobrać Wear.apk na telefon, ale nie dostajesz danych BG, _sprawdź_, czy na zegarek zainstalowałeś właściwy apk **AAPS** Wear: aplikacja na zegarek z budowania w przeglądarce to plik `aaps-wear-….apk`, zobacz [Budowanie aplikacji AAPS Wear](../WearOS/BuildingAapsWearOS.md). Jeśli zainstalowany plik jest jednym z poniższych: a) apk **AAPSClient** Wear (gdy na telefonie działa **AAPS**); b) plik `.aab`; albo c) plik ze słowem ‘debug’ w nazwie, to podczas budowania nie wybrałeś właściwego apk Wear OS.
+5.  Jeśli udało Ci się pobrać Wear.apk na telefon, ale nie dostajesz danych BG, _sprawdź_, czy na zegarek zainstalowałeś właściwy apk **AAPS** Wear: aplikacja na zegarek z budowania w przeglądarce to plik `aaps-wear-….apk`, zobacz [Budowanie aplikacji AAPS na zegarek (Wear)](../WearOS/BuildingAapsWearOS.md). Jeśli zainstalowany plik jest jednym z poniższych: a) apk **AAPSClient** Wear (gdy na telefonie działa **AAPS**); b) plik `.aab`; albo c) plik ze słowem ‘debug’ w nazwie, to podczas budowania nie wybrałeś właściwego apk Wear OS.
 6.  Sprawdź, czy router nie izoluje urządzeń od siebie.
 
 Więcej wskazówek rozwiązywania problemów znajdziesz [tutaj](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
