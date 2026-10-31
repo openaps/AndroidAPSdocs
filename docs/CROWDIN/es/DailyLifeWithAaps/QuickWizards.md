@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# Asistentes rápidos (bolos con un toque)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+Un **Asistente rápido** es un botón guardado para una comida o situación que se repite. Lleva una cantidad fija de **carbohidratos** (y cómo dosificar para ellos). Así puedes administrar un bolo — o solo registrar carbohidratos — con un solo toque y una confirmación, sin abrir cada vez la calculadora de bolo completa.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## Abrir los Asistentes rápidos
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Abre la pantalla **Administrar** (navegación inferior) y elige **Asistente rápido** (*«Gestionar ajustes preestablecidos del asistente rápido»*).
 
 ---
 
-## The three modes
+## Administrar los Asistentes rápidos
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Tus Asistentes rápidos se muestran como un **carrusel de tarjetas que se deslizan** (cada tarjeta muestra el texto del botón, los carbohidratos y el rango de tiempo válido). El editor de abajo configura el asistente **seleccionado**. La barra de acciones inferior tiene **➕ añadir**, **⧉ duplicar**, **🗑️ borrar** y un botón **▶** para ejecutar el Asistente rápido seleccionado.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![El editor del Asistente rápido — modo, carbohidratos, hora de la ingesta y rango de tiempo válido](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+Los campos principales del editor son:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Botón texto** — el texto que se muestra en el botón.
+- **Carbohidratos** y **Hora de la ingesta** — la cantidad de carbohidratos y su desfase de tiempo.
+- **Rango de tiempo válido** — consulta [Validez](#quickwizard_validity).
+- **Opciones de la calculadora** y **Selección de dispositivo** — ver más abajo.
 
 ---
 
-## Validity — when the button appears
+## Los tres modos
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+El selector de la parte superior del editor — **Asistente / Insulina / Carbohidratos** — decide **qué hace el botón** al tocarlo:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Asistente** — ejecuta la **calculadora de bolo** completa para los carbohidratos configurados, con tu **glucosa, IOB, COB y tendencia** actuales (según las *Opciones de la calculadora* de abajo). Administra el bolo *calculado* y registra los carbohidratos. Este es el asistente rápido clásico.
+- **Insulina** — administra una **cantidad fija de insulina** que tú defines — sin cálculo.
+- **Carbohidratos** — registra **solo los carbohidratos** configurados, **sin bolo**.
 
 ---
 
-## Invocation points — where you use it
+## Opciones de la calculadora (modo Asistente)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Para un botón en modo **Asistente** eliges qué datos usa el cálculo:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Usar glucemia**, **Usar COB**, **Usar IOB** (con *Sólo IOB positiva*), **Usar tendencia** (*Todo / Solo valores positivos / Solo valores negativos*), **Usar objetivo temporal**, **Usar alarma**.
+- **Porcentaje de bolo** — ajusta el bolo calculado.
+- **Añadir eCarbs** — también programa carbohidratos extendidos.
+
+![Opciones de la calculadora, Porcentaje de bolo y Selección de dispositivo](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Validez — cuándo aparece el botón
+
+(quickwizard_validity)= El **Rango de tiempo válido** (*Desde / Hasta*) controla **cuándo** se muestra y se puede usar un Asistente rápido. Un botón configurado, por ejemplo, para **06:00–10:00** solo aparece por la mañana. Así un Asistente rápido de *Desayuno* no llena tu pantalla (ni se toca por error) a la hora de la cena. Fuera de su horario, el botón no se muestra en el panel **Tratamientos** ni en la [barra de Lanzamiento rápido](QuickLaunch.md). Un botón de la barra no se borra: vuelve cuando su horario empieza otra vez.
+
+Cuando el rango de tiempo válido es menor de 4 horas, el botón también se oculta durante 30 minutos después de usarlo, para no introducir la misma comida dos veces por error.
+
+---
+
+## Puntos de uso — dónde lo usas
+
+Los interruptores de **Selección de dispositivo** deciden dónde aparece cada Asistente rápido:
+
+- **Mostrar en el teléfono** — aparece en el **panel [Tratamientos](../Maintenance/V4Changes.md)** (con la dosis calculada en el mismo botón). Un Asistente rápido que se muestra en el teléfono también se puede **fijar como botón de acción rápida en la pantalla principal**: abre *Configurar Lanzamiento Rápido* (el ⚙ de la barra de [Lanzamiento rápido](QuickLaunch.md)) y añádelo desde la categoría **Asistente rápido**.
+- **Mostrar en el reloj** — aparece en el **mosaico Asistente rápido de Wear OS** (desliza hasta él en el carrusel de mosaicos del reloj y toca un botón para ejecutarlo — igual que el [mosaico de Escenas](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+La sección **Selección de dispositivo** solo aparece en el editor cuando el complemento **Reloj** está activado y su preferencia **Control desde el reloj** está encendida. Sin ella, cada Asistente rápido se muestra simplemente en el teléfono.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+En el teléfono, los Asistentes rápidos aparecen en la parte superior del panel inferior **Tratamientos**:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![Asistentes rápidos (arriba) en el panel inferior Tratamientos abierto](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…y como botón de acción rápida en la pantalla principal:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![Un botón de acción rápida de Asistente rápido en la pantalla principal](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![El mosaico Asistente rápido en un reloj Wear OS](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Un **cliente** emparejado (**AAPSClient**) también puede iniciar un Asistente rápido — el **máster** lo calcula y lo administra (consulta [Control máster ↔ cliente](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Desde donde se inicie, tocar un Asistente rápido siempre muestra una **confirmación** (la confirmación creada por el máster, si se inicia desde un cliente o un reloj) antes de administrar nada.
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Un Asistente rápido se rechaza cuando su dosis supera tu bolo máximo, o cuando sus carbohidratos o eCarbs superan tu máximo de carbohidratos (por ejemplo, después de bajar el límite). Cuando los carbohidratos superan el límite, el botón del panel **Tratamientos** está desactivado. Edita el Asistente rápido o el límite.
 
 ---
 
-## Adding and removing
+## Añadir y eliminar
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Añadir** — crea un nuevo Asistente rápido.
+- **⧉ Duplicar** — copia uno como punto de partida.
+- **🗑️ Borrar** — elimina uno.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Con dos o más Asistentes rápidos también puedes cambiar su orden en el carrusel: toca el icono **Reordenar** (⇅) en la barra superior, mueve la tarjeta central con los **botones de mover ◀ / ▶** y confirma con **✓**. (Los controles son iguales que al [reordenar perfiles](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+Los Asistentes rápidos forman parte de la configuración sincronizada, así que se comparten entre tu máster y los clientes emparejados.
 
 ---
 
