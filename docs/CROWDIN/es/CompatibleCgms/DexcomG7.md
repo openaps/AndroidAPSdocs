@@ -29,7 +29,7 @@ Dexcom BYODA es ahora una versión muy antigua de la app y no se puede actualiza
 -   Esta app te permite usar tu Dexcom G7 con cualquier teléfono Android.
 -   Desinstala la app original de Dexcom
 -   Instala el apk descargado
--   Introduce el código del sensor en la app modificada
+-   Introduce el código del sensor en la app parcheada
 -   Después de poco tiempo, BYODA debería captar la señal del transmisor
 
 (DexcomG7-xdrip-companion-app)=
