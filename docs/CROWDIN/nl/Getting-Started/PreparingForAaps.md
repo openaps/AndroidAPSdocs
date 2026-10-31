@@ -28,7 +28,7 @@ Wees voorzichtig met een snelle verbetering van de bloedglucoseregeling en een s
 
 Een belangrijk punt voor de veiligheid: **een snelle daling van het HbA1c en een betere bloedglucoseregeling kunnen blijvende schade veroorzaken bij mensen die al langere tijd een hoge glucose hebben**. Veel mensen met diabetes weten dit niet, en niet alle zorgverleners wijzen hun patiënten op dit probleem.
 
-Deze schade kan bestaan uit **verlies van zicht en blijvende neuropathie (pijn)**. Je kunt deze schade voorkomen door je gemiddelde glucose langzamer te verlagen. Heb je nu een hoog HbA1c en stap je over op **AAPS** (of een ander closed loop-systeem)? Bespreek dit mogelijke risico dan _alsjeblieft_ met je behandelteam voordat je begint. Spreek samen een planning af waarin je veilige glucosestreefwaarden geleidelijk verlaagt. Je kunt in het begin makkelijk hogere glucosestreefwaarden instellen in **AAPS** (nu is de hoogste streefwaarde die je kunt kiezen 11,1 mmol/l, maar je kunt ook bewust een zwak profiel gebruiken als dat nodig is). Daarna verlaag je de streefwaarde in de loop van de maanden.
+Deze schade kan bestaan uit **verlies van zicht en blijvende neuropathie (pijn)**. Je kunt deze schade voorkomen door je gemiddelde glucose langzamer te verlagen. Heb je nu een hoog HbA1c en stap je over op **AAPS** (of een ander gesloten loop-systeem)? Bespreek dit mogelijke risico dan _alsjeblieft_ met je behandelteam voordat je begint. Spreek samen een planning af waarin je veilige glucosestreefwaarden geleidelijk verlaagt. Je kunt in het begin makkelijk hogere glucosestreefwaarden instellen in **AAPS** (nu is de hoogste streefwaarde die je kunt kiezen 11,1 mmol/l, maar je kunt ook bewust een zwak profiel gebruiken als dat nodig is). Daarna verlaag je de streefwaarde in de loop van de maanden.
 
 #### Hoe snel kan ik mijn HbA1c verlagen zonder het risico op blijvende schade?
 
@@ -49,7 +49,7 @@ Over het algemeen wordt aangenomen dat mensen met _pas_ vastgestelde diabetes ty
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2-remmers, ook gliflozines genoemd, remmen de terugopname van glucose in de nieren. Gliflozines verlagen de bloedsuiker op een manier die niet te berekenen is. Daarom MAG je ze NIET gebruiken als je een closed loop-systeem zoals AAPS gebruikt! Er is dan een groot risico op ketoacidose en/of hypoglykemie! De combinatie van dit medicijn met een systeem dat de basaalstanden verlaagt om de BG te verhogen is extra gevaarlijk. 
+SGLT-2-remmers, ook gliflozines genoemd, remmen de terugopname van glucose in de nieren. Gliflozines verlagen de bloedsuiker op een manier die niet te berekenen is. Daarom MAG je ze NIET gebruiken als je een gesloten loop-systeem zoals AAPS gebruikt! Er is dan een groot risico op ketoacidose en/of hypoglykemie! De combinatie van dit medicijn met een systeem dat de basaalstanden verlaagt om de BG te verhogen is extra gevaarlijk. 
 
 Kort samengevat:
 - **Voorbeeld 1: risico op een hypo**
@@ -213,7 +213,7 @@ Deze documentatie probeert de benodigde technische kennis zo klein mogelijk te h
 
 - **Browser build** (aanbevolen): bouw de app direct vanaf je smartphone met GitHub Actions, zonder computer of Android Studio. Met [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md) heb je alleen een GitHub-account nodig: je downloadt de app direct van GitHub. Voor de fork-methode heb je ook een Google-account nodig om de app in je Google Drive op te slaan.
 - **Build met Android Studio**: bouw de app op je computer met Android Studio. Dit gebruiken vooral ontwikkelaars die de code willen aanpassen.
-- **Build via de command-line**: voor gebruikers die liever lokaal bouwen zonder Android Studio te installeren.
+- **Bouwen via de opdrachtregel**: voor gebruikers die liever lokaal bouwen zonder Android Studio te installeren.
 
 Naast het bouwen van de app moet je ook een rapportageserver opzetten, een aantal apps op je Android-telefoon instellen en kennis opbouwen over het behandelen van diabetes. Dat lukt als je stap voor stap werkt, geduld hebt en hulp vraagt aan de **AAPS**-community. Kun je al je weg vinden op internet en je eigen Gmail-e-mails beheren? Dan is het bouwen van **AAPS** goed te doen. Neem gewoon de tijd.
 
