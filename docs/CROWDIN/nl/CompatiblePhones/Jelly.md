@@ -7,42 +7,42 @@
 * Android 13
 * 8 GB RAM
 
-**Advantages**
+**Voordelen**
 
 * Hij is echt heel klein.
-* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
+* Ook als je het mensen vertelt, zien ze hem misschien niet als een normale smartphone. Daarom accepteren ze hem makkelijker als uitzondering op plaatsen waar telefoons normaal niet zijn toegestaan.
 
-**Disadvantages**
+**Nadelen**
 
-* Hij is echt heel klein. Wordt daarom alleen aangeraden voor ervaren loopers (sommige dingen zijn nauwelijks te lezen, je moet weten waar je alles kunt vinden uit eerdere ervaringen met een normaal formaat telefoon). Sommige AAPS knoppen zijn lastig te raken omdat ze zo klein zijn, je hebt dus wat geduld nodig en je moet niet al te grote of onhandige vingers hebben.
+* Alleen aanbevolen voor ervaren loopers (sommige instellingen zijn niet goed te herkennen; je moet uit ervaring met een grote Android-telefoon met AAPS weten hoe en waar alles zit. Sommige AAPS-knoppen zijn met wat gevoel goed te raken, maar niet met dikke vingers.)
 * Kan alleen worden gebruikt als extra telefoon om mee te loopen. Het is beter om een andere smartphone bij je te hebben voor dagelijks telefoon/internetgebruik. 
 
-### Battery life optimization
+### Batterijduur optimaliseren
 
-The Jelly comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip, OOP2, Juggluco, etc...).
+De Jelly heeft sterke optimalisatiefuncties die voor AAPS (en andere DIY-apps zoals BYODA, xDrip, OOP2, Juggluco, enz.) uitgeschakeld **moeten** worden.
 
 ![](../images/Jelly_Settings1.png)
 
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+Je kunt Intelligente assistentie ingeschakeld laten, maar het **moet uitgeschakeld zijn voor DIY-apps**.
 
 ![](../images/Jelly_Settings2.png)
 
-You can enable NFC for Libre sensors.
+Je kunt NFC inschakelen voor Libre sensors.
 
 ![](../images/Jelly_Settings3.png)
 
-### Battery life optimization
+### Batterijduur optimaliseren
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+Om storing van **AAPS** te voorkomen, moet je 'batterijgebruik' van de Jelly Star uitschakelen door 'onbeperkt' te kiezen voor **AAPS** (en voor andere **DIY-apps** zoals BYODA, xDrip, OOP2, Juggluco, enz.).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
 ### Google Play Protect
 
-Remember to disable Google Play Protect.
+Vergeet niet om Google Play Protect uit te schakelen.
 
-### Remote Connection for Wear apk
+### Remote Connection voor de Wear-apk
 
-For certain smart watches, like the Samsung Galaxy, 'Remote Connection' under Samsung Galaxy's Advanced Features must be switched **on** to use the Jelly, **Wear.apk** & **AAPS** remotely via Wi-Fi.
+Bij sommige smartwatches, zoals de Samsung Galaxy, moet 'Remote Connection' onder Advanced Features van de Samsung Galaxy **aan** staan om de Jelly, **Wear.apk** & **AAPS** op afstand via wifi te gebruiken.
 
 ![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
