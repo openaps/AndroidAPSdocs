@@ -1,6 +1,6 @@
 # CareLevo
 
-De CareLevo is een patchpomp zonder slangetje, gemaakt door CareMedi. Elke patch bevat maximaal 300 E insuline en wordt maximaal 7 dagen (168 uur) gedragen. De pomp communiceert met **AAPS** via de Bluetooth van je telefoon, zonder extra apparaat.
+De CareLevo is een patchpomp zonder slang, gemaakt door CareMedi. Elke patch bevat maximaal 300 E insuline en wordt maximaal 7 dagen (168 uur) gedragen. De pomp communiceert met **AAPS** via de Bluetooth van je telefoon, zonder extra apparaat.
 
 ```{admonition} New driver
 :class: warning
@@ -43,7 +43,7 @@ Open de CareLevo instellingen door rechtsboven op het icoon **Instellingen** (ta
 
 De patch geeft een melding als de resterende insuline in het reservoir de gekozen hoeveelheid bereikt. Je kunt dit instellen van 20 E tot 50 E, in stappen van 5 E. De standaardwaarde is 30 E. Los van deze instelling geeft de patch een kritiek alarm en stopt hij met insuline toedienen als er minder dan 10 E over is.
 
-### Melding gebruiksduur patch
+### Instelling melding gebruiksduur patch
 
 De patch geeft een melding als hij het gekozen aantal uren gedragen is, zodat je het vervangen kunt plannen. Je kunt dit instellen van 24 tot 167 uur. De standaardwaarde is 116 uur.
 
@@ -153,7 +153,7 @@ De insulinetoediening gaat door, maar iets vraagt je aandacht:
 
 ### Mededelingen
 
-Alleen ter informatie: **Insuline bijna op**, **Melding gebruiksduur patch** (de tijd die is ingesteld in **Melding gebruiksduur patch** is voorbij), **Melding patch controleren**, **Tijdzone gewijzigd** en **Bloedglucose controleren** (een ingestelde tijd na een bolus).
+Alleen ter informatie: **Insuline bijna op**, **Melding gebruikstijd patch** (de tijd die is ingesteld in **Instelling melding gebruiksduur patch** is voorbij), **Melding patch controleren**, **Tijdzone gewijzigd** en **Bloedglucose controleren** (een ingestelde tijd na een bolus).
 
 De patch meldt ook wanneer zijn eigen functie voor onderbreken bij lage glucose (**LGS**) start of stopt. **AAPS** gebruikt deze functie niet; de loop regelt lage glucose zelf.
 
