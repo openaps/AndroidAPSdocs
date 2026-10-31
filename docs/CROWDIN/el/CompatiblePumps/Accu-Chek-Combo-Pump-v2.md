@@ -5,7 +5,7 @@
 ```{admonition} Accu-Chek Combo is being phased out
 :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. If you rely on this pump, plan ahead for a transition to a supported pump.
+Η Roche αποσύρεται από την αγορά αντλιών ινσουλίνης, για να επικεντρωθεί στο CGM Accu-Chek SmartGuide. Έχει ανακοινώσει το τέλος των πωλήσεων των αντλιών Accu-Chek Combo και Accu-Chek Insight. Η μικροαντλία Accu-Chek Solo, που της απομένει, επίσης αποσύρεται σταδιακά (τελευταίες παραδόσεις στη Γερμανία στο τέλος του 2025). Η αλλαγή γίνεται ανά περιοχή, ξεκινώντας από τη Γερμανία, και αναμένεται να ακολουθήσουν άλλες ευρωπαϊκές αγορές. Αν βασίζεστε σε αυτή την αντλία, σχεδιάστε από νωρίς τη μετάβαση σε μια υποστηριζόμενη αντλία.
 ```
 
 ```{contents} Table of contents
@@ -13,87 +13,87 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Δυνατότητες της αντλίας με το AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Automatic DST and timezone handling.
+* Επικοινωνεί με το **AAPS** μέσω του Bluetooth του τηλεφώνου σας, χωρίς επιπλέον συσκευή επικοινωνίας.
+* Αυτόματος χειρισμός θερινής ώρας (DST) και ζώνης ώρας.
 
 ## Απαιτήσεις υλικού και λογισμικού
 
-* A Roche Accu-Chek Combo (any firmware, they all work).
+* Μια αντλία Roche Accu-Chek Combo (οποιοδήποτε firmware, λειτουργούν όλα).
 * Μια συσκευή Smartpix ή Realtyme μαζί με το λογισμικό 360 Configuration Software για τη ρύθμιση της αντλίας. (Η Roche αποστέλλει τις συσκευές Smartpix και το λογισμικό για τη ρύθμιση δωρεάν στους πελάτες της κατόπιν αιτήματος.)
-* A compatible phone running Android 12 or newer. See [release notes](#maintenance-android-version-aaps-version) for details.
-* The **AAPS** app installed on your phone.
+* Ένα συμβατό τηλέφωνο με Android 12 ή νεότερο. Δείτε τις [σημειώσεις έκδοσης](#maintenance-android-version-aaps-version) για λεπτομέρειες.
+* Η εφαρμογή **AAPS** εγκατεστημένη στο τηλέφωνό σας.
 
-Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Παρακαλώ προσέξτε ότι η λίστα δεν είναι ολοκληρωμένη και έχει φτιαχτεί από την προσωπική εμπειρία άλλων χρηστών. Σας ενθαρρύνουμε επίσης να εισαγάγετε και εσείς την εμπειρία σας και, συνεπώς, να βοηθήσετε άλλους (αυτά τα προγράμματα προχωρούν με τη συνδρομή όλων).
+Μερικά τηλέφωνα μπορεί να λειτουργούν καλύτερα από άλλα. Αυτό εξαρτάται από την ποιότητα της υποστήριξης Bluetooth και από το αν έχουν επιπλέον, πολύ επιθετική λογική εξοικονόμησης ενέργειας. Μια λίστα τηλεφώνων υπάρχει στη σελίδα [Τηλέφωνα](#Phones-list-of-tested-phones). Παρακαλώ προσέξτε ότι η λίστα δεν είναι ολοκληρωμένη και έχει φτιαχτεί από την προσωπική εμπειρία άλλων χρηστών. Σας ενθαρρύνουμε επίσης να εισαγάγετε και εσείς την εμπειρία σας και, συνεπώς, να βοηθήσετε άλλους (αυτά τα προγράμματα προχωρούν με τη συνδρομή όλων).
 
 (combov2-before-you-begin)=
-## Before you begin
+## Πριν ξεκινήσετε
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Plan on spending about an hour for setting everything up and checking that everything is working properly.
+**ΠΡΩΤΑ Η ΑΣΦΑΛΕΙΑ** - μην κάνετε αυτή τη διαδικασία σε περιβάλλον όπου δεν μπορείτε να διορθώσετε ένα σφάλμα. Έχετε κοντά σας τη συσκευή Smartpix / Realtyme και το 360 Configuration Software. Υπολογίστε περίπου μία ώρα για να ρυθμίσετε τα πάντα και να ελέγξετε ότι όλα λειτουργούν σωστά.
 
-Be aware of the following limitations:
+Έχετε υπόψη τους παρακάτω περιορισμούς:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
-* Only one basal profile (the first one) is supported.
-* The lowest basal rate in your **Profile** is 0.05 U/h. **AAPS** refuses a **Profile** with a lower rate. The Combo rounds basal rates to its own steps (0.01 U/h below 1 U/h, 0.05 U/h up to 10 U/h, 0.1 U/h above). **AAPS** uses the rates the pump really gives.
-* Temporary basal rates are limited to 500% of the current basal rate. **AAPS** takes this limit into account.
-* The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because you tap **Refresh** on the Accu-Chek Combo pump screen), it will notice that profile no. 1 is the current one, and enable the loop again.
-* If the loop requests a running TBR to be cancelled, the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.
-* Η σταθερότητα της σύνδεσης bluetooth διαφέρει ανάλογα με το τηλέφωνο, προκαλώντας συναγερμούς "μην εύρεση αντλίας", όταν δεν υπάρχει πλέον σύνδεση με την αντλία. If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
-* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
+* Το εκτεταμένο bolus και το bolus πολλαπλών κυμάτων δεν υποστηρίζονται προς το παρόν (μπορείτε να χρησιμοποιήσετε αντί γι' αυτά [Εκτεταμένους υδατάνθρακες](../DailyLifeWithAaps/ExtendedCarbs.md)).
+* Υποστηρίζεται μόνο ένα προφίλ βασικού ρυθμού (το πρώτο).
+* Ο χαμηλότερος βασικός ρυθμός στο **Προφίλ** σας είναι 0,05 U/h. Το **AAPS** δεν δέχεται **Προφίλ** με χαμηλότερο ρυθμό. Το Combo στρογγυλεύει τους βασικούς ρυθμούς στα δικά του βήματα (0,01 U/h κάτω από 1 U/h, 0,05 U/h έως 10 U/h, 0,1 U/h πάνω από αυτό). Το **AAPS** χρησιμοποιεί τους ρυθμούς που πραγματικά δίνει η αντλία.
+* Οι προσωρινοί βασικοί ρυθμοί έχουν όριο το 500% του τρέχοντος βασικού ρυθμού. Το **AAPS** λαμβάνει υπόψη αυτό το όριο.
+* Το κύκλωμα απενεργοποιείται αν το τρέχον ενεργό προφίλ στην αντλία δεν είναι το προφίλ αρ. 1. Αυτό συνεχίζεται μέχρι να γίνει ενεργό το προφίλ αρ. 1. Μετά από αυτό, την επόμενη φορά που το AAPS θα συνδεθεί (είτε μόνο του μετά από λίγο είτε επειδή πατάτε **Ανανέωση** στην οθόνη της αντλίας Accu-Chek Combo), θα δει ότι το τρέχον προφίλ είναι το προφίλ αρ. 1 και θα ενεργοποιήσει ξανά το κύκλωμα.
+* Αν το κύκλωμα ζητήσει να ακυρωθεί ένας TBR που τρέχει, το Combo θα ορίσει αντί γι' αυτό έναν TBR 90% ή 110% για 15 λεπτά. Αυτό γίνεται επειδή η πραγματική ακύρωση ενός TBR προκαλεί ειδοποίηση στην αντλία με πολλές δονήσεις, και αυτές οι δονήσεις δεν μπορούν να απενεργοποιηθούν.
+* Η σταθερότητα της σύνδεσης Bluetooth διαφέρει από τηλέφωνο σε τηλέφωνο και προκαλεί ειδοποιήσεις «Η αντλία δεν είναι διαθέσιμη», όταν δεν υπάρχει πλέον σύνδεση με την αντλία. Αν συμβεί αυτό το σφάλμα, βεβαιωθείτε ότι το Bluetooth είναι ενεργό, πατήστε **Ανανέωση** στην οθόνη της αντλίας (**Διαχείριση** > **Αντλία**) για να δείτε αν ήταν ένα περιστασιακό πρόβλημα, και αν ακόμα δεν γίνεται σύνδεση, επανεκκινήστε το τηλέφωνο, κάτι που συνήθως το διορθώνει.
+* Υπάρχει και ένα άλλο πρόβλημα, όπου η επανεκκίνηση δεν βοηθά, αλλά πρέπει να πατηθεί ένα κουμπί στην αντλία (που επανεκκινεί τη στοίβα Bluetooth της αντλίας), πριν η αντλία δεχτεί ξανά συνδέσεις από το τηλέφωνο.
 * Η ρύθμιση ενός TBR στην αντλία πρέπει να αποφεύγεται, αφού το κύκλωμα αναλαμβάνει τον έλεγχο των TBRs. Η ανίχνευση ενός νέου TBR στην αντλία μπορεί να διαρκέσει έως και 20 λεπτά και η επίδραση του TBR θα ληφθεί υπόψη μόνο από τη στιγμή που ανιχνεύεται, οπότε στη χειρότερη περίπτωση μπορεί να υπάρχουν 20 λεπτά του TBR που δεν φαίνονται στην IOB.
 
-The driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+Ο οδηγός υποστηρίζει προς το παρόν τις παρακάτω γλώσσες στο Combo. (Αυτό δεν σχετίζεται με τη γλώσσα του AAPS - είναι η γλώσσα που φαίνεται στην οθόνη LCD του ίδιου του Combo.)
 
 * Αγγλικά
-* Spanish
-* French
-* Italian
+* Ισπανικά
+* Γαλλικά
+* Ιταλικά
 * Ρώσικα
-* Turkish
-* Polish
+* Τουρκικά
+* Πολωνικά
 * Τσέχικα
-* Hungarian
-* Slovak
-* Romanian
-* Croatian
+* Ουγγρικά
+* Σλοβακικά
+* Ρουμανικά
+* Κροατικά
 * Ολλανδικά
 * Ελληνικά
-* Finnish
-* Norwegian
-* Portuguese
-* Swedish
-* Danish
+* Φινλανδικά
+* Νορβηγικά
+* Πορτογαλικά
+* Σουηδικά
+* Δανικά
 * Γερμανικά
-* Slovenian
+* Σλοβενικά
 * Λιθουανικά
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**Σημαντικό**: Αν η αντλία σας είναι ρυθμισμένη σε γλώσσα που δεν υπάρχει σε αυτή τη λίστα, επικοινωνήστε με τους προγραμματιστές και ρυθμίστε τη γλώσσα της αντλίας σε μία από αυτή τη λίστα. Αλλιώς ο οδηγός δεν θα λειτουργεί σωστά.
 
-## Phone setup
+## Ρύθμιση τηλεφώνου
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+Είναι πολύ σημαντικό να βεβαιωθείτε ότι οι βελτιστοποιήσεις μπαταρίας είναι απενεργοποιημένες. Το AAPS ήδη ανιχνεύει μόνο του πότε υπόκειται σε αυτές τις βελτιστοποιήσεις και ζητά στην οθόνη του να απενεργοποιηθούν. Όμως, στα σύγχρονα τηλέφωνα Android, το ίδιο το Bluetooth _είναι_ εφαρμογή (εφαρμογή συστήματος). Και συνήθως αυτή η «εφαρμογή Bluetooth» εκτελείται _με ενεργές βελτιστοποιήσεις μπαταρίας από προεπιλογή_. Γι' αυτό το Bluetooth μπορεί να σταματήσει να απαντά όταν το τηλέφωνο θέλει να εξοικονομήσει ενέργεια, επειδή τερματίζει την εφαρμογή Bluetooth. Αυτό σημαίνει ότι και στις ρυθμίσεις αυτής της εφαρμογής συστήματος Bluetooth πρέπει να απενεργοποιηθούν οι βελτιστοποιήσεις μπαταρίας. Δυστυχώς, ο τρόπος για να βρείτε αυτή την εφαρμογή συστήματος Bluetooth διαφέρει από τηλέφωνο σε τηλέφωνο. Στο απλό (stock) Android, πηγαίνετε στις Ρυθμίσεις -> Εφαρμογές -> Εμφάνιση όλων των N εφαρμογών (N = ο αριθμός των εφαρμογών στο τηλέφωνό σας). Μετά ανοίξτε το μενού πάνω δεξιά και πατήστε «Εμφάνιση συστήματος» ή «Εμφάνιση εφαρμογών συστήματος» ή «Όλες οι εφαρμογές». Τώρα, στη μεγαλύτερη λίστα εφαρμογών, βρείτε μια εφαρμογή «Bluetooth». Επιλέξτε την και στην οθόνη «Πληροφορίες εφαρμογής» πατήστε «Μπαταρία». Εκεί απενεργοποιήστε τις βελτιστοποιήσεις μπαταρίας (μερικές φορές λέγονται «χρήση μπαταρίας»).
 
-## Combo setup
+## Ρύθμιση του Combo
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. Αν δεν έχετε το λογισμικό, παρακαλώ καλέστε την γραμμή υποστήριξης Accu-Check. Συνήθως στέλνουν στους εγγεγραμμένους χρήστες ένα CD με το "Λογισμικό Διαμόρφωσης Αντλίας 360" και μια συσκευή σύνδεσης SmartPix USB με υπέρυθρη σύνδεση (η συσκευή Realtyme λειτουργεί επίσης εάν το έχετε).
+* Ρυθμίστε την αντλία με το Accu-Chek 360 Configuration Software. Αν δεν έχετε το λογισμικό, επικοινωνήστε με τη γραμμή υποστήριξης της Accu-Chek. Συνήθως στέλνουν στους εγγεγραμμένους χρήστες ένα CD με το "Λογισμικό Διαμόρφωσης Αντλίας 360" και μια συσκευή σύνδεσης SmartPix USB με υπέρυθρη σύνδεση (η συσκευή Realtyme λειτουργεί επίσης εάν το έχετε).
 
-  - **Required settings** (marked green in screenshots):
+  - **Απαιτούμενες ρυθμίσεις** (σημειωμένες με πράσινο σε στιγμιότυπα οθόνης):
 
      * Ορίστε/αφήστε τη διαμόρφωση του μενού ως "Standard", το οποίο θα αφήσει να εμφανίζονται μόνο τα υποστηριζόμενα μενού/ενέργειες στην αντλία και να αποκρύπτονται εκείνα τα οποία δεν υποστηρίζονται (εκτεταμένο/συνδυαστικό bolus, πολλαπλοί βασικοί ρυθμοί) που προκαλούν περιορισμό της λειτουργικότητας του κυκλώματος όταν χρησιμοποιούνται επειδή δεν είναι δυνατό να τρέξετε το κύκλωμα με ασφαλή τρόπο όταν χρησιμοποιούνται.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
+     * Βεβαιωθείτε ότι το _Quick Info Text_ είναι ρυθμισμένο σε "QUICK INFO" (χωρίς τα εισαγωγικά, βρίσκεται στο _Insulin Pump Options_).
+     * Ορίστε το _Maximum Adjustment_ του TBR σε 500%
+     * Απενεργοποιήστε το _Signal End of Temporary Basal Rate_
+     * Ορίστε το _Duration increment_ του TBR σε 15 λεπ.
      * Ενεργοποιήστε το Bluetooth
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Συνιστώμενες ρυθμίσεις** (σημειώνονται με μπλε σε στιγμιότυπα οθόνης)
 
-     * Ορίστε το συναγερμό για χαμηλή αμπούλα ινσουλίνης σύμφωνα με τις προτιμήσεις σας
+     * Ορίστε τον συναγερμό χαμηλής δεξαμενής ινσουλίνης όπως σας βολεύει
      * Ρυθμίστε το μέγιστο bolus που είναι κατάλληλο για τη θεραπεία σας για να προστατεύεστε από σφάλματα του λογισμικού
-     * Ομοίως, ρυθμίστε τη μέγιστη διάρκεια του Προσωρινού Βασικού Ρυθμού (TBR) TBR για ασφάλεια. Επιτρέψτε τουλάχιστον 3 ώρες, αφού η επιλογή αποσύνδεσης της αντλίας για 3 ώρες ρυθμίζει ένα Προσωρινό Βασικό 0% για 3 ώρες.
-     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
+     * Ομοίως, ρυθμίστε τη μέγιστη διάρκεια του προσωρινού βασικού ρυθμού (TBR) για ασφάλεια. Επιτρέψτε τουλάχιστον 3 ώρες, αφού η επιλογή αποσύνδεσης της αντλίας για 3 ώρες ρυθμίζει ένα Προσωρινό Βασικό 0% για 3 ώρες.
+     * Ενεργοποιήστε το κλείδωμα πλήκτρων στην αντλία, για να μην γίνεται bolus από την αντλία, ειδικά αν χρησιμοποιούσατε την αντλία πριν και είχατε συνήθεια να κάνετε γρήγορο bolus.
      * Ορίστε χρονικό όριο οθόνης και χρονικό όριο μενού στο ελάχιστο των 5,5 και 5 αντίστοιχα. Αυτό επιτρέπει στο AAPS να επανέλθει πιο γρήγορα από καταστάσεις σφάλματος και να μειώσει τις δονήσεις που μπορεί να προκύψουν κατά τη διάρκεια τέτοιων σφαλμάτων
 
   ![Στιγμιότυπο οθόνης των ρυθμίσεων μενού χρήστη](../images/combo/combo-menu-settings.png)
@@ -102,238 +102,238 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Στιγμιότυπο οθόνης των ρυθμίσεων bolus](../images/combo/combo-bolus-settings.png)
 
-  ![Στιγμιότυπο οθόνης των ρυθμίσεων αμπούλας ινσουλίνης](../images/combo/combo-insulin-settings.png)
+  ![Στιγμιότυπο οθόνης των ρυθμίσεων δεξαμενής ινσουλίνης](../images/combo/combo-insulin-settings.png)
 
-## Activating the driver and pairing it with the Combo
+## Ενεργοποίηση του οδηγού και σύζευξη με το Combo
 
-* Open the **menu** (☰) in the top-left corner, go to [**Configuration** > **Pump**](../SettingUpAaps/ConfigBuilder.md) and select **Accu-Chek Combo**.
+* Ανοίξτε το **μενού** (☰) πάνω αριστερά, πηγαίνετε στο [**Διαμόρφωση** > **Αντλία**](../SettingUpAaps/ConfigBuilder.md) και επιλέξτε **Accu-Chek Combo**.
 
-  ![Configuration > Pump with the Accu-Chek Combo plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![Διαμόρφωση > Αντλία με το πρόσθετο Accu-Chek Combo](../images/v4/Configuration/configuration_pump_list_1.png)
 
-  Once it is selected, the **Accu-Chek Combo** card shows two buttons, **Settings** and **Open plugin**:
+  Μόλις επιλεγεί, η κάρτα **Accu-Chek Combo** δείχνει δύο κουμπιά, **Ρυθμίσεις** και **Άνοιγμα πρόσθετου**:
 
-  ![The Accu-Chek Combo plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_combo_enabled.png)
+  ![Το πρόσθετο Accu-Chek Combo επιλεγμένο στο Διαμόρφωση > Αντλία](../images/v4/Pumps/accu_chek_combo_enabled.png)
 
-  **Settings** opens the settings of the Accu-Chek Combo driver (see [Settings](#combov2-preferences) below):
+  Το **Ρυθμίσεις** ανοίγει τις ρυθμίσεις του οδηγού Accu-Chek Combo (δείτε [Ρυθμίσεις](#combov2-preferences) παρακάτω):
 
-  ![Accu-Chek Combo driver settings](../images/v4/Pumps/accu_chek_combo_settings.png)
+  ![Ρυθμίσεις του οδηγού Accu-Chek Combo](../images/v4/Pumps/accu_chek_combo_settings.png)
 
-  **Open plugin** (or **Manage** > **Pump**) opens the Accu-Chek Combo pump screen. Before a pump is paired it shows **Not paired to a pump**:
+  Το **Άνοιγμα πρόσθετου** (ή **Διαχείριση** > **Αντλία**) ανοίγει την οθόνη της αντλίας Accu-Chek Combo. Πριν γίνει σύζευξη με αντλία, δείχνει **Δεν υπάρχει σύζευξη με μία αντλία**:
 
-  ![Accu-Chek Combo pump screen before pairing](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
+  ![Οθόνη της αντλίας Accu-Chek Combo πριν από τη σύζευξη](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. The **Pair with pump** screen opens. Follow the steps shown on screen, then tap **Start pairing**. When Android asks for permission to make the phone visible to other Bluetooth devices, tap **Allow**. Eventually, the Combo shows a 10-digit pairing PIN on its screen, and **AAPS** asks for it. Enter that PIN in the **10-digit PIN** field.
+* Στην οθόνη της αντλίας, πατήστε **Σύζευξη**. Ανοίγει η οθόνη **Σύζευξη με αντλία**. Ακολουθήστε τα βήματα στην οθόνη και μετά πατήστε **Έναρξη σύζευξης**. Όταν το Android ζητήσει άδεια να κάνει το τηλέφωνο ορατό σε άλλες συσκευές Bluetooth, πατήστε **Να επιτρέπεται**. Στο τέλος, το Combo δείχνει στην οθόνη του ένα 10-ψήφιο PIN σύζευξης και το **AAPS** το ζητά. Πληκτρολογήστε αυτό το PIN στο πεδίο **10-ψήφιο PIN**.
 
-  ![The Pair with pump screen with the Start pairing button](../images/combo/combov2-pairing-screen-1.png)
+  ![Η οθόνη Σύζευξη με αντλία με το κουμπί Έναρξη σύζευξης](../images/combo/combov2-pairing-screen-1.png)
 
-  ![Android asking to make the phone visible to other Bluetooth devices](../images/combo/combov2-pairing-bt-visible-prompt.png)
+  ![Το Android ζητά να γίνει το τηλέφωνο ορατό σε άλλες συσκευές Bluetooth](../images/combo/combov2-pairing-bt-visible-prompt.png)
 
-  ![Combo pairing in progress, scanning for the pump](../images/combo/combov2-pairing-screen-2.png)
+  ![Σύζευξη Combo σε εξέλιξη, αναζήτηση της αντλίας](../images/combo/combov2-pairing-screen-2.png)
 
-  The next pictures are from an older **AAPS** version. The steps and texts are the same, but the screens look slightly different.
+  Οι επόμενες εικόνες είναι από παλαιότερη έκδοση του **AAPS**. Τα βήματα και τα κείμενα είναι ίδια, αλλά οι οθόνες φαίνονται λίγο διαφορετικές.
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
+  ![Στιγμιότυπο οθόνης σύζευξης Combo 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Στιγμιότυπο οθόνης σύζευξης Combo 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Στιγμιότυπο οθόνης σύζευξης Combo 4](../images/combo/combov2-pairing-screen-5.png)
 
-* If the PIN is entered incorrectly, **AAPS** shows **PIN did not work. Check if there was a typo. If this keeps happening, cancel and retry pairing.**
+* Αν το PIN πληκτρολογηθεί λάθος, το **AAPS** δείχνει **Το PIN δεν λειτούργησε. Ελέγξτε αν υπάρχει τυπογραφικό λάθος. Εάν αυτό συνεχίζει να συμβαίνει, ακυρώστε και προσπαθήστε να κάνετε νέα σύζευξη.**
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+  ![Στιγμιότυπο οθόνης σύζευξης Combo 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* When **Successfully paired with Combo** is shown, tap **OK**. You return to the pump screen, which now shows the pump status (see [Accu-Chek Combo pump screen contents](#combov2-tab-contents) below). The **Pairing** button is replaced by **Unpair**.
+* Όταν εμφανιστεί **Επιτυχής σύζευξη με Combo**, πατήστε **OK**. Επιστρέφετε στην οθόνη της αντλίας, που τώρα δείχνει την κατάσταση της αντλίας (δείτε [Περιεχόμενο της οθόνης της αντλίας Accu-Chek Combo](#combov2-tab-contents) παρακάτω). Το κουμπί **Σύζευξη** αντικαθίσταται από το **Κατάργηση σύζευξης**.
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. Η αντλία θα πρέπει τώρα να έχει σε λειτουργία το TBR και το bolus στο ιστορικό. Το AAPS θα πρέπει επίσης να δείχνει το ενεργό TBR και το bolus που χορηγήθηκε.
+* Για να ελέγξετε τη ρύθμισή σας (με την αντλία **αποσυνδεδεμένη** από κάθε καθετήρα, για ασφάλεια!), ορίστε με το AAPS έναν TBR 500% για 15 λεπ. και κάντε ένα bolus. Η αντλία θα πρέπει τώρα να έχει σε λειτουργία το TBR και το bolus στο ιστορικό. Το AAPS θα πρέπει επίσης να δείχνει το ενεργό TBR και το bolus που χορηγήθηκε.
 
-* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
+* Στο Combo συνιστάται να ενεργοποιήσετε το κλείδωμα πλήκτρων, για να μην γίνεται bolus από την αντλία, ειδικά αν χρησιμοποιούσατε την αντλία πριν και είχατε συνήθεια να χρησιμοποιείτε τη λειτουργία «quick bolus».
 
-## Notes about pairing
+## Σημειώσεις για τη σύζευξη
 
-The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
+Το Accu-Chek Combo αναπτύχθηκε πριν κυκλοφορήσει το Bluetooth 4.0 και μόλις έναν χρόνο μετά την κυκλοφορία της πρώτης έκδοσης του Android. Γι' αυτό ο τρόπος σύζευξης με άλλες συσκευές δεν είναι 100% συμβατός με τον τρόπο που γίνεται σήμερα στο Android. Για να λυθεί αυτό πλήρως, το AAPS θα χρειαζόταν δικαιώματα επιπέδου συστήματος, που υπάρχουν μόνο για εφαρμογές συστήματος. Αυτές τις εγκαθιστούν στο τηλέφωνο οι κατασκευαστές του - οι χρήστες δεν μπορούν να εγκαταστήσουν εφαρμογές συστήματος.
 
-The consequence of this is that pairing will never be 100% without problems. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+Γι' αυτό η σύζευξη δεν θα είναι ποτέ 100% χωρίς προβλήματα. Συγκεκριμένα, κατά τη σύζευξη, το παράθυρο PIN Bluetooth του Android μπορεί να εμφανιστεί για λίγο και να κλείσει μόνο του. Μερικές φορές όμως μένει στην οθόνη και ζητά ένα 4-ψήφιο PIN. (Αυτό δεν είναι το ίδιο με το 10-ψήφιο PIN σύζευξης του Combo.) Μην πληκτρολογήσετε τίποτα, απλά πατήστε ακύρωση. Αν η σύζευξη δεν συνεχίσει, ακολουθήστε τις οδηγίες στην οθόνη για να δοκιμάσετε ξανά τη σύζευξη.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo pump screen contents
+## Περιεχόμενο της οθόνης της αντλίας Accu-Chek Combo
 
-To open the pump screen, go to **Manage** > **Pump**. Once a pump is paired, it shows the following information (items are listed from top to bottom):
+Για να ανοίξετε την οθόνη της αντλίας, πηγαίνετε στο **Διαχείριση** > **Αντλία**. Μετά τη σύζευξη με αντλία, δείχνει τις παρακάτω πληροφορίες (από πάνω προς τα κάτω):
 
-![Screenshot of the Accu-Chek Combo pump screen with pairing (older AAPS version)](../images/combo/combov2-tab-with-pairing.png)
+![Στιγμιότυπο οθόνης της αντλίας Accu-Chek Combo με σύζευξη (παλαιότερη έκδοση του AAPS)](../images/combo/combov2-tab-with-pairing.png)
 
-1. **Driver state**: The driver can be in one of the following states:
-   - **Disconnected**: There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - **Connecting**
-   - **Checking pump**: the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - **Ready**: the driver is ready to accept commands from AAPS
-   - **Suspended**: the pump is suspended (shown as "stopped" in the Combo)
-   - A description of the command being executed, for example **Setting basal profile** or **Updating pump status**
-   - **Error**: an error occurred; the connection was terminated, any ongoing command was aborted
-2. **Last connection**: How many minutes ago the driver successfully connected to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. **Battery**: Battery level; the Combo only indicates **Full**, **Low** or **Empty**, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-4. **Reservoir**: How many IU are currently in the Combo's reservoir
-5. **Last bolus**: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is not shown
-6. **Temp basal**: Details about the currently active temporary basal; if none is currently active, this is not shown
-7. **Base basal rate**: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-8. **Serial number**: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-9. **Bluetooth address**: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+1. **Κατάσταση οδηγού**: Ο οδηγός μπορεί να είναι σε μία από τις παρακάτω καταστάσεις:
+   - **Αποσυνδέθηκε**: Δεν υπάρχει σύνδεση Bluetooth· ο οδηγός είναι σε αυτή την κατάσταση τον περισσότερο χρόνο και συνδέεται με την αντλία μόνο όταν χρειάζεται - έτσι εξοικονομείται ενέργεια
+   - **Συνδέεται**
+   - **Έλεγχος αντλίας**: η αντλία είναι συνδεδεμένη, αλλά ο οδηγός κάνει αυτή τη στιγμή ελέγχους ασφαλείας, για να βεβαιωθεί ότι όλα είναι σωστά και ενημερωμένα
+   - **Έτοιμο**: ο οδηγός είναι έτοιμος να δεχτεί εντολές από το AAPS
+   - **Σε αναστολή**: η αντλία είναι σε αναστολή (στο Combo φαίνεται ως "stopped")
+   - Περιγραφή της εντολής που εκτελείται, για παράδειγμα **Ρύθμιση βασικού προφίλ** ή **Ενημέρωση κατάστασης αντλίας**
+   - **Σφάλμα**: συνέβη σφάλμα· η σύνδεση τερματίστηκε και κάθε εντολή σε εξέλιξη διακόπηκε
+2. **Τελευταία σύνδεση**: Πριν από πόσα λεπτά ο οδηγός συνδέθηκε επιτυχώς με το Combo· αν περάσουν περισσότερα από 30 λεπτά, το στοιχείο εμφανίζεται με κόκκινο χρώμα
+3. **Μπαταρία**: Στάθμη μπαταρίας· το Combo δείχνει μόνο **Γεμάτη**, **Χαμηλή** ή **Άδεια** και δεν δίνει κάτι πιο ακριβές (όπως ποσοστό), γι' αυτό εδώ φαίνονται μόνο αυτά τα τρία επίπεδα
+4. **Δεξαμενή**: Πόσες IU υπάρχουν τώρα στη δεξαμενή του Combo
+5. **Τελευταίο Bolus:** Πριν από πόσα λεπτά χορηγήθηκε το τελευταίο bolus· αν δεν έχει χορηγηθεί ακόμα κανένα από την έναρξη του AAPS, δεν εμφανίζεται
+6. **Προσωρινός Ρυθμός**: Στοιχεία για τον προσωρινό βασικό ρυθμό που είναι ενεργός τώρα· αν δεν υπάρχει ενεργός, δεν εμφανίζεται
+7. **Βάση Βασικού Ρυθμού**: Ο τρέχων ενεργός βασικός ρυθμός βάσης («βάση» σημαίνει ο βασικός ρυθμός χωρίς την επίδραση κάποιου ενεργού TBR στον συντελεστή του βασικού ρυθμού)
+8. **Σειριακός αριθμός**: Ο σειριακός αριθμός του Combo όπως τον δίνει η αντλία (είναι ο σειριακός αριθμός που φαίνεται στο πίσω μέρος του Combo)
+9. **Διεύθυνση Bluetooth**: Η διεύθυνση Bluetooth 6 byte του Combo, στη μορφή `XX:XX:XX:XX:XX:XX`
 
-While the driver is doing something (for example, setting a basal profile), a box below the list describes the current activity, with a thin progress bar showing the progress.
+Όταν ο οδηγός κάνει κάτι (για παράδειγμα, ρυθμίζει ένα βασικό προφίλ), ένα πλαίσιο κάτω από τη λίστα περιγράφει την τρέχουσα ενέργεια, με μια λεπτή μπάρα που δείχνει την πρόοδο.
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing. When the driver switches to the command mode however, that field is left blank.
+Το Combo μπορεί να λειτουργεί μέσω Bluetooth στη λειτουργία _remote-terminal_ (απομακρυσμένου τερματικού) ή στη λειτουργία _command_ (εντολών). Η λειτουργία remote-terminal αντιστοιχεί στη «λειτουργία τηλεχειρισμού» του μετρητή του Combo, που μιμείται την οθόνη LCD και τα τέσσερα κουμπιά της αντλίας. Ορισμένες εντολές πρέπει να εκτελούνται από τον οδηγό σε αυτή τη λειτουργία, επειδή δεν υπάρχουν στη λειτουργία command. Η δεύτερη λειτουργία είναι πολύ πιο γρήγορη, αλλά, όπως είπαμε, κάνει λιγότερα πράγματα. Όταν είναι ενεργή η λειτουργία remote-terminal, η τρέχουσα οθόνη remote-terminal φαίνεται στο πεδίο ακριβώς πάνω από την εικόνα του Combo. Όταν όμως ο οδηγός περνά στη λειτουργία command, αυτό το πεδίο μένει κενό.
 
-(You do not influence this; the driver fully decides on its own what mode to use. This is merely a note for you to know why sometimes you can see Combo frames in that field.)
+(Δεν το επηρεάζετε εσείς· ο οδηγός αποφασίζει μόνος του ποια λειτουργία θα χρησιμοποιήσει. Αυτή είναι απλώς μια σημείωση, για να ξέρετε γιατί μερικές φορές βλέπετε εικόνες του Combo σε αυτό το πεδίο.)
 
-At the bottom, there are these buttons:
+Στο κάτω μέρος υπάρχουν αυτά τα κουμπιά:
 
-- **Refresh**: Triggers an immediate pump status update. It is also used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)). You can only tap it when the driver is disconnected, suspended or in the error state.
-- **Unpair**: Unpairs the paired Combo from **AAPS** and Android, after you confirm **Do you really want to unpair the pump?**. When no pump is paired, this button is replaced by **Pairing**.
+- **Ανανέωση**: Ξεκινά αμέσως ενημέρωση της κατάστασης της αντλίας. Χρησιμοποιείται επίσης για να μάθει το AAPS ότι ένα σφάλμα που βρέθηκε πριν έχει πλέον διορθωθεί και ότι το AAPS μπορεί να ελέγξει ξανά ότι όλα είναι σωστά (περισσότερα παρακάτω στην [ενότητα για τις ειδοποιήσεις](#combov2-alerts)). Μπορείτε να το πατήσετε μόνο όταν ο οδηγός είναι αποσυνδεδεμένος, σε αναστολή ή σε κατάσταση σφάλματος.
+- **Κατάργηση σύζευξης**: Καταργεί τη σύζευξη του Combo με το **AAPS** και το Android, αφού επιβεβαιώσετε το **Θέλετε πραγματικά να καταργήσετε τη σύζευξη της αντλίας;**. Όταν δεν υπάρχει σύζευξη με αντλία, αυτό το κουμπί αντικαθίσταται από το **Σύζευξη**.
 
 (combov2-preferences)=
 ## Ρυθμίσεις
 
-These settings are available for the Combo driver (**Configuration** > **Pump** > **Accu-Chek Combo** > **Settings**, or the settings icon (cog wheel) on the pump screen). Items are listed from top to bottom:
+Αυτές οι ρυθμίσεις υπάρχουν για τον οδηγό του Combo (**Διαμόρφωση** > **Αντλία** > **Accu-Chek Combo** > **Ρυθμίσεις**, ή το εικονίδιο ρυθμίσεων (γρανάζι) στην οθόνη της αντλίας). Τα στοιχεία είναι από πάνω προς τα κάτω:
 
-1. **Discovery duration (in seconds)**: When pairing, the driver makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
-2. **Autodetect and automatically enter insulin reservoir change**: If enabled, the driver enters the "reservoir change" that you would normally enter yourself with **Manage** > **Prime/Fill**. This is explained [in further detail below](#combov2-autodetections).
-3. **Autodetect and automatically enter battery change**: If enabled, the driver enters the "battery change" that you would normally enter yourself with **Manage** > **Pump Battery Change**. This is explained [in further detail below](#combov2-autodetections).
-4. **Enable verbose Combo logging**: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to **AAPS** logs and lessen their usefulness.
+1. **Διάρκεια εξεύρεσης (σε δευτερόλεπτα)**: Κατά τη σύζευξη, ο οδηγός κάνει το τηλέφωνο ορατό στην αντλία. Αυτό ορίζει πόσο διαρκεί αυτή η ορατότητα. Από προεπιλογή είναι επιλεγμένο το μέγιστο (300 δευτερόλεπτα = 5 λεπτά). Το Android δεν επιτρέπει να διαρκεί η ορατότητα χωρίς τέλος, γι' αυτό πρέπει να επιλεγεί μια διάρκεια.
+2. **Αυτόματη ανίχνευση και αυτόματη εισαγωγή αλλαγής δεξαμενής ινσουλίνης**: Αν είναι ενεργό, ο οδηγός καταχωρεί την «αλλαγή δεξαμενής» που κανονικά θα καταχωρούσατε εσείς με **Διαχείριση** > **Πλήρωση/Γέμισμα**. Αυτό εξηγείται [πιο αναλυτικά παρακάτω](#combov2-autodetections).
+3. **Αυτόματη ανίχνευση και αυτόματη εισαγωγή αλλαγής μπαταρίας**: Αν είναι ενεργό, ο οδηγός καταχωρεί την «αλλαγή μπαταρίας» που κανονικά θα καταχωρούσατε εσείς με **Διαχείριση** > **Αλλαγή Μπαταρίας Αντλίας**. Αυτό εξηγείται [πιο αναλυτικά παρακάτω](#combov2-autodetections).
+4. **Ενεργοποίηση λεπτομερούς καταγραφής Combo**: Αυτό αυξάνει πολύ τον όγκο της καταγραφής του οδηγού. **ΠΡΟΣΟΧΗ**: Μην το ενεργοποιήσετε, εκτός αν σας το ζητήσει ένας προγραμματιστής. Αλλιώς αυτό μπορεί να προσθέσει πολύ «θόρυβο» στα αρχεία καταγραφής του **AAPS** και να τα κάνει λιγότερο χρήσιμα.
 
-Pairing and unpairing are done on the pump screen, not in the settings (see above).
+Η σύζευξη και η κατάργηση σύζευξης γίνονται στην οθόνη της αντλίας, όχι στις ρυθμίσεις (δείτε παραπάνω).
 
 (combov2-autodetections)=
-## Autodetecting and automatically entering battery and reservoir changes
+## Αυτόματη ανίχνευση και αυτόματη καταχώριση αλλαγής μπαταρίας και δεξαμενής
 
-The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
+Ο οδηγός μπορεί να ανιχνεύει αλλαγές μπαταρίας και δεξαμενής, παρακολουθώντας τη στάθμη της μπαταρίας και της δεξαμενής. Αν την τελευταία φορά που ενημερώθηκε η κατάσταση της αντλίας το Combo ανέφερε χαμηλή μπαταρία, και τώρα, στη νέα ενημέρωση, η στάθμη της μπαταρίας είναι κανονική, τότε ο οδηγός συμπεραίνει ότι ο χρήστης άλλαξε την μπαταρία. Η ίδια λογική ισχύει για τη στάθμη της δεξαμενής: Αν τώρα είναι υψηλότερη από πριν, αυτό θεωρείται αλλαγή δεξαμενής.
 
-This only works if the battery and reservoir are replaced when these levels are reported as low _and_ the battery and reservoir are sufficiently filled.
+Αυτό λειτουργεί μόνο αν η μπαταρία και η δεξαμενή αλλάζονται όταν η στάθμη τους αναφέρεται ως χαμηλή _και_ η νέα μπαταρία και η δεξαμενή είναι αρκετά γεμάτες.
 
-These autodetections can be turned off in the driver [settings](#combov2-preferences).
+Αυτές οι αυτόματες ανιχνεύσεις μπορούν να απενεργοποιηθούν στις [ρυθμίσεις](#combov2-preferences) του οδηγού.
 
 (combov2-alerts)=
-## Alerts (warnings and errors) and how they are handled
+## Ειδοποιήσεις (προειδοποιήσεις και σφάλματα) και πώς αντιμετωπίζονται
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
+Το Combo εμφανίζει τις ειδοποιήσεις ως οθόνες remote-terminal. Οι προειδοποιήσεις εμφανίζονται με κωδικό "Wx" (x είναι ένα ψηφίο), μαζί με μια σύντομη περιγραφή. Ένα παράδειγμα είναι "W7", "TBR OVER". Τα σφάλματα είναι παρόμοια, αλλά εμφανίζονται με κωδικό "Ex".
 
-Certain warnings are automatically dismissed by the driver. These are:
+Ορισμένες προειδοποιήσεις τις κλείνει αυτόματα ο οδηγός. Αυτές είναι:
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main screen
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main screen
-- W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
+- W1 "reservoir low" : ο οδηγός τη μετατρέπει σε προειδοποίηση «χαμηλή δεξαμενή», που φαίνεται στην κύρια οθόνη του AAPS
+- W2 "battery low" : ο οδηγός τη μετατρέπει σε προειδοποίηση «χαμηλή μπαταρία», που φαίνεται στην κύρια οθόνη του AAPS
+- W3, W6, W7, W8 : όλες αυτές είναι μόνο πληροφορίες για τον χρήστη, οπότε ο οδηγός μπορεί να τις κλείνει αυτόματα με ασφάλεια
 
-Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo pump screen contents above](#combov2-tab-contents)). This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by tapping **Refresh** on the Accu-Chek Combo pump screen. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
+Οι άλλες προειδοποιήσεις _δεν_ κλείνουν αυτόματα. Επίσης, τα σφάλματα _ποτέ_ δεν κλείνουν αυτόματα. Και τα δύο αντιμετωπίζονται με τον ίδιο τρόπο: Ο οδηγός εμφανίζει ένα παράθυρο ειδοποίησης πάνω από την οθόνη του AAPS και διακόπτει κάθε εντολή που εκτελείται εκείνη τη στιγμή. Μετά ο οδηγός περνά στην κατάσταση «σφάλμα» (δείτε [το περιεχόμενο της οθόνης της αντλίας Accu-Chek Combo παραπάνω](#combov2-tab-contents)). Σε αυτή την κατάσταση δεν μπορεί να εκτελεστεί καμία εντολή. Ο χρήστης πρέπει να αντιμετωπίσει το σφάλμα στην αντλία· για παράδειγμα, ένα σφάλμα απόφραξης μπορεί να χρειάζεται αλλαγή του καθετήρα. Όταν ο χρήστης αντιμετωπίσει το σφάλμα, η κανονική λειτουργία συνεχίζεται αν πατήσει **Ανανέωση** στην οθόνη της αντλίας Accu-Chek Combo. Τότε ο οδηγός συνδέεται με το Combo και ενημερώνει την κατάστασή του, ελέγχοντας αν εμφανίζεται ακόμα σφάλμα στην οθόνη κ.λπ. Επίσης, ο οδηγός ανανεώνει μόνος του την κατάσταση της αντλίας μετά από λίγο, οπότε δεν είναι υποχρεωτικό να πατήσετε αυτό το κουμπί.
 
-Bolusing is a special case. It is done in the Combo's command mode, which does not report mid-bolus that an alert appeared. As a consequence, the driver cannot automatically dismiss warnings _during_ a bolus. This means that unfortunately, the pump will be beeping until the bolus is finished. The most common mid-bolus alert typically is W1 "reservoir low". **Don't** dismiss Combo warnings on the pump itself manually during a bolus. You risk interrupting the bolus. The driver will take care of the warning once the bolus is over.
+Το bolus είναι ειδική περίπτωση. Γίνεται στη λειτουργία command του Combo, η οποία δεν αναφέρει κατά τη διάρκεια του bolus ότι εμφανίστηκε ειδοποίηση. Γι' αυτό ο οδηγός δεν μπορεί να κλείσει αυτόματα προειδοποιήσεις _κατά τη διάρκεια_ ενός bolus. Αυτό σημαίνει ότι, δυστυχώς, η αντλία θα κάνει ήχο μέχρι να τελειώσει το bolus. Η πιο συχνή ειδοποίηση κατά τη διάρκεια bolus είναι συνήθως η W1 "reservoir low" (χαμηλή δεξαμενή). **Μην** κλείνετε χειροκίνητα τις προειδοποιήσεις του Combo στην ίδια την αντλία κατά τη διάρκεια ενός bolus. Υπάρχει κίνδυνος να διακόψετε το bolus. Ο οδηγός θα χειριστεί την προειδοποίηση μόλις τελειώσει το bolus.
 
-Alerts that happen while the driver is not connected to the Combo will not be noticed by the driver. The Combo has no way of automatically pushing that alert to the phone; it is always the phone that has to initiate the connection. As a consequence, the alert will persist until the driver connects to the pump. You can tap **Refresh** on the pump screen to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+Ειδοποιήσεις που εμφανίζονται όταν ο οδηγός δεν είναι συνδεδεμένος με το Combo δεν θα γίνουν αντιληπτές από τον οδηγό. Το Combo δεν μπορεί να στείλει μόνο του την ειδοποίηση στο τηλέφωνο· πάντα το τηλέφωνο πρέπει να ξεκινήσει τη σύνδεση. Γι' αυτό η ειδοποίηση θα παραμείνει μέχρι ο οδηγός να συνδεθεί με την αντλία. Μπορείτε να πατήσετε **Ανανέωση** στην οθόνη της αντλίας, για να ξεκινήσει σύνδεση και ο οδηγός να χειριστεί την ειδοποίηση αμέσως (αντί να περιμένετε μέχρι το ίδιο το AAPS να αποφασίσει να ξεκινήσει σύνδεση).
 
-**IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by tapping **Refresh** or by the driver's eventual auto-update) and no error is shown anymore.
+**ΣΗΜΑΝΤΙΚΟ**: Αν συμβεί σφάλμα ή εμφανιστεί προειδοποίηση που δεν είναι από αυτές που κλείνουν αυτόματα, ο οδηγός περνά σε κατάσταση σφάλματος. Σε αυτή την κατάσταση το κύκλωμα **ΘΑ ΕΙΝΑΙ ΜΠΛΟΚΑΡΙΣΜΕΝΟ** μέχρι να ανανεωθεί η κατάσταση της αντλίας! Ξεμπλοκάρει μετά την ενημέρωση της κατάστασης της αντλίας (είτε πατώντας **Ανανέωση** είτε με την αυτόματη ενημέρωση του οδηγού κάποια στιγμή) και όταν δεν εμφανίζεται πια σφάλμα.
 
-## Things to be careful about when using the Combo
+## Τι πρέπει να προσέχετε όταν χρησιμοποιείτε το Combo
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-* Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
-* Μην ρυθμίσετε ή ακυρώσετε ένα TBR στην αντλία. The loop assumes control of TBRs and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-* Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#combov2-before-you-begin)).
-* Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](#combov2-alerts) for a more detailed explanation why.
+* Να θυμάστε ότι αυτό δεν είναι προϊόν. Ειδικά στην αρχή, ο χρήστης πρέπει να παρακολουθεί και να καταλαβαίνει το σύστημα, τους περιορισμούς του και πώς μπορεί να αποτύχει. Συνιστάται έντονα να ΜΗΝ χρησιμοποιείται αυτό το σύστημα όταν το άτομο που το χρησιμοποιεί δεν μπορεί να το καταλάβει πλήρως.
+* Λόγω του τρόπου που λειτουργεί ο τηλεχειρισμός του Combo, αρκετές ενέργειες (ειδικά η ρύθμιση προφίλ βασικού ρυθμού) είναι αργές σε σύγκριση με άλλες αντλίες. Αυτός είναι ένας δυστυχώς αναπόφευκτος περιορισμός του Combo.
+* Μην ρυθμίσετε ή ακυρώσετε ένα TBR στην αντλία. Το κύκλωμα αναλαμβάνει τον έλεγχο των TBR και δεν μπορεί να λειτουργήσει αξιόπιστα αλλιώς, επειδή δεν είναι δυνατό να βρεθεί η ώρα έναρξης ενός TBR που όρισε ο χρήστης στην αντλία.
+* Μην πατάτε κουμπιά στην αντλία όσο το AAPS επικοινωνεί με την αντλία (το λογότυπο Bluetooth φαίνεται στην αντλία όσο είναι συνδεδεμένη με το AAPS). Αυτό θα διακόψει τη σύνδεση Bluetooth. Κάντε το μόνο αν υπάρχουν προβλήματα με τη σύνδεση (δείτε [την ενότητα «Πριν ξεκινήσετε» παραπάνω](#combov2-before-you-begin)).
+* Μην πατάτε κουμπιά όσο η αντλία χορηγεί bolus. Ειδικά, μην προσπαθείτε να κλείσετε ειδοποιήσεις πατώντας κουμπιά. Δείτε [την ενότητα για τις ειδοποιήσεις](#combov2-alerts) για πιο αναλυτική εξήγηση του γιατί.
 
-## Checklist for when no connection can be established with the Combo
+## Λίστα ελέγχου όταν δεν γίνεται σύνδεση με το Combo
 
-The driver does its best to connect to the Combo, and uses a couple of tricks to maximize reliability. Still, sometimes, connections aren't established. Here are some steps to take for trying to remedy this situation.
+Ο οδηγός κάνει ό,τι μπορεί για να συνδεθεί με το Combo και χρησιμοποιεί μερικά κόλπα για μέγιστη αξιοπιστία. Παρ' όλα αυτά, μερικές φορές οι συνδέσεις δεν γίνονται. Εδώ είναι μερικά βήματα για να προσπαθήσετε να λύσετε το πρόβλημα.
 
-1. Press a button on the Combo. Sometimes, the Combo's Bluetooth stack becomes non-responsive, and does not accept connections anymore. By pressing a button on the Combo and making the LCD show something, the Bluetooth stack is reset. Most of the time, this is the only step that's needed to fix the connection issues.
-2. Restart the phone. This may be needed if there is an issue with the phone's Bluetooth stack itself.
-3. If the Combo's battery cap is old, consider replacing it. Old battery caps can cause issues with the Combo's power supply, which affect Bluetooth.
-4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.
+1. Πατήστε ένα κουμπί στο Combo. Μερικές φορές η στοίβα Bluetooth του Combo σταματά να απαντά και δεν δέχεται πια συνδέσεις. Αν πατήσετε ένα κουμπί στο Combo και η οθόνη LCD δείξει κάτι, η στοίβα Bluetooth επανεκκινείται. Τις περισσότερες φορές, μόνο αυτό το βήμα χρειάζεται για να λυθούν τα προβλήματα σύνδεσης.
+2. Επανεκκινήστε το τηλέφωνο. Αυτό μπορεί να χρειαστεί αν υπάρχει πρόβλημα στην ίδια τη στοίβα Bluetooth του τηλεφώνου.
+3. Αν το καπάκι μπαταρίας του Combo είναι παλιό, σκεφτείτε να το αλλάξετε. Τα παλιά καπάκια μπαταρίας μπορεί να προκαλούν προβλήματα στην τροφοδοσία του Combo, που επηρεάζουν το Bluetooth.
+4. Αν οι προσπάθειες σύνδεσης συνεχίζουν να αποτυγχάνουν, σκεφτείτε να καταργήσετε τη σύζευξη και μετά να κάνετε ξανά σύζευξη με την αντλία.
 
 (combov2-tips-for-basic-usage)=
-## Tips for basic usage
+## Συμβουλές για βασική χρήση
 
-### How to ensure smooth operations
+### Πώς να εξασφαλίσετε ομαλή λειτουργία
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
-* Always make sure that the pump battery is as full as possible. See the battery section for tips regarding the battery.
-* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys.
+* Να **έχετε πάντα μαζί σας το smartphone** και τη νύχτα να το αφήνετε δίπλα στο κρεβάτι σας. Επειδή η αντλία σας μπορεί να βρίσκεται πίσω ή κάτω από το σώμα σας όταν κοιμάστε, μια ψηλότερη θέση (σε ράφι ή έπιπλο) είναι η καλύτερη.
+* Να φροντίζετε πάντα η μπαταρία της αντλίας να είναι όσο το δυνατόν πιο γεμάτη. Δείτε την ενότητα για την μπαταρία για συμβουλές σχετικά με την μπαταρία.
+* Όποτε είναι δυνατό, χειρίζεστε την αντλία μόνο μέσω της εφαρμογής AAPS. Για να το κάνετε πιο εύκολο, ενεργοποιήστε το κλείδωμα πλήκτρων στην αντλία στο **PUMP SETTINGS / KEY LOCK / ON**. Μόνο όταν αλλάζετε την μπαταρία ή τη δεξαμενή χρειάζεται να χρησιμοποιήσετε τα πλήκτρα της αντλίας.
 
-![Keylock](../images/combo/combo-tips-keylock.png)
+![Κλείδωμα πλήκτρων](../images/combo/combo-tips-keylock.png)
 
-### Pump not reachable. What to do?
+### Η αντλία δεν είναι διαθέσιμη. Τι να κάνετε;
 
-#### Activate pump unreachable alarm
-* In **AAPS**, tap the **Settings** (gear) icon at the top right of the main screen, go to **Local alerts**, activate **Alert if pump is unreachable** and set **Pump unreachable threshold** to **31** minutes.
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+#### Ενεργοποιήστε τον συναγερμό όταν η αντλία δεν είναι προσβάσιμη
+* Στο **AAPS**, πατήστε το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά στην κύρια οθόνη, πηγαίνετε στο **Τοπικές ειδοποιήσεις**, ενεργοποιήστε το **Ειδοποίηση αν η αντλία δεν είναι προσβάσιμη** και ορίστε το **Όριο μη προσβάσιμης αντλίας** σε **31** λεπτά.
+* Έτσι ο συναγερμός δεν θα ενεργοποιείται όταν φεύγετε από το δωμάτιο και το τηλέφωνο μένει στο γραφείο, αλλά θα σας ειδοποιεί αν η αντλία δεν είναι προσβάσιμη για χρόνο μεγαλύτερο από τη διάρκεια ενός προσωρινού βασικού ρυθμού.
 
-#### Restore reachability of the pump
+#### Αποκαταστήστε τη σύνδεση με την αντλία
 
-* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, tap **Refresh** on the Accu-Chek Combo pump screen (**Manage** > **Pump**). Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump.
+* Όταν το AAPS δείχνει συναγερμό **Η αντλία δεν είναι διαθέσιμη**, πρώτα ξεκλειδώστε τα πλήκτρα και **πατήστε οποιοδήποτε πλήκτρο στην αντλία** (π.χ. το κουμπί «κάτω»). Μόλις σβήσει η οθόνη της αντλίας, πατήστε **Ανανέωση** στην οθόνη της αντλίας Accu-Chek Combo (**Διαχείριση** > **Αντλία**). Τότε συνήθως η επικοινωνία επανέρχεται.
+* Εάν αυτό δεν σας βοηθήσει, επανεκκινήστε το smartphone σας. Μετά την επανεκκίνηση, το AAPS θα ενεργοποιηθεί ξανά και θα γίνει νέα σύνδεση με την αντλία.
 
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
+* Οι δοκιμές με διάφορα smartphones έδειξαν ότι ορισμένα smartphones προκαλούν το σφάλμα «Η αντλία δεν είναι διαθέσιμη» πιο συχνά από άλλα. Δείτε τη σελίδα [Τηλέφωνα](#Phones-list-of-tested-phones) για smartphones που δοκιμάστηκαν με επιτυχία.
 
-#### Root causes and consequences of frequent communication errors
-* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. You can tell by the fact that the treatment buttons (QuickLaunch toolbar) on the main screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last connection** field of the pump screen (**Manage** > **Pump**), you can check when AAPS last communicated with the pump.
+#### Αιτίες και συνέπειες των συχνών σφαλμάτων επικοινωνίας
+* Σε τηλέφωνα με **λίγη μνήμη** (ή ρυθμίσεις **επιθετικής εξοικονόμησης ενέργειας**), το AAPS συχνά τερματίζεται. Το καταλαβαίνετε από το ότι τα κουμπιά θεραπειών (γραμμή QuickLaunch) στην κύρια οθόνη δεν φαίνονται όταν ανοίγετε το AAPS, επειδή το σύστημα κάνει αρχικοποίηση. Αυτό μπορεί να προκαλέσει συναγερμούς «Η αντλία δεν είναι διαθέσιμη» κατά την εκκίνηση. Στο πεδίο **Τελευταία σύνδεση** της οθόνης της αντλίας (**Διαχείριση** > **Αντλία**), μπορείτε να δείτε πότε το AAPS επικοινώνησε τελευταία φορά με την αντλία.
 
-![No connection to pump](../images/combo/combov2-tips-no-connection-to-pump.png)
+![Δεν υπάρχει σύνδεση με την αντλία](../images/combo/combov2-tips-no-connection-to-pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
-* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed.
+* Αυτό το σφάλμα μπορεί να αδειάζει την μπαταρία της αντλίας πιο γρήγορα, επειδή το βασικό προφίλ διαβάζεται από την αντλία όταν η εφαρμογή ξεκινά ξανά.
+* Αυξάνει επίσης την πιθανότητα να συμβεί το σφάλμα όπου η αντλία απορρίπτει όλες τις εισερχόμενες συνδέσεις, μέχρι να πατηθεί ένα κουμπί στην αντλία.
 
-### Cancellation of temporary basal rate fails
-* Occasionally, AAPS cannot automatically cancel a **TBR CANCELED** alert. Then you have to either tap **Refresh** on the Accu-Chek Combo pump screen or the alarm on the pump will need to be confirmed.
+### Η ακύρωση του προσωρινού βασικού ρυθμού αποτυγχάνει
+* Μερικές φορές το AAPS δεν μπορεί να ακυρώσει αυτόματα μια ειδοποίηση **TBR CANCELED**. Τότε πρέπει είτε να πατήσετε **Ανανέωση** στην οθόνη της αντλίας Accu-Chek Combo είτε να επιβεβαιώσετε τον συναγερμό στην αντλία.
 
-### Pump battery considerations
+### Θέματα για την μπαταρία της αντλίας
 
-#### Changing the battery
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop** for 1 hour.
-* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
+#### Αλλαγή μπαταρίας
+* Μετά από συναγερμό **χαμηλής μπαταρίας**, αλλάξτε την μπαταρία το συντομότερο δυνατό, ώστε να υπάρχει πάντα αρκετή ενέργεια για αξιόπιστη επικοινωνία Bluetooth με το smartphone, ακόμα και αν το τηλέφωνο είναι πιο μακριά από την αντλία.
+* Ακόμα και μετά από συναγερμό **χαμηλής μπαταρίας**, η μπαταρία μπορεί να χρησιμοποιηθεί για αρκετό χρόνο. Ωστόσο, συνιστάται να έχετε πάντα μαζί σας μια νέα μπαταρία μετά από ένα συναγερμό χαμηλής μπαταρίας.
+* Πριν αλλάξετε την μπαταρία, πατήστε το σύμβολο **Κύκλωμα** στην κύρια οθόνη και επιλέξτε **Αναστολή κυκλώματος** για 1 ώρα.
+* Περιμένετε να επικοινωνήσει το τηλέφωνο με την αντλία και να σβήσει το λογότυπο Bluetooth στην αντλία.
 
-![Bluetooth enabled](../images/combo/combo-tips-compo.png)
+![Ενεργοποιημένο Bluetooth](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* You don't need to re-set the pump's clock after the battery change: AAPS automatically updates the pump's date and time.
-* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
+* Ξεκλειδώστε τα πλήκτρα της αντλίας, βάλτε την αντλία σε λειτουργία stop, επιβεβαιώστε έναν προσωρινό βασικό ρυθμό που ίσως ακυρώθηκε και αλλάξτε γρήγορα την μπαταρία.
+* Δεν χρειάζεται να ρυθμίσετε ξανά το ρολόι της αντλίας μετά την αλλαγή μπαταρίας: το AAPS ενημερώνει αυτόματα την ημερομηνία και την ώρα της αντλίας.
+* Μετά βάλτε ξανά την αντλία σε λειτουργία run και επιλέξτε **Συνέχιση**, πατώντας το εικονίδιο **Κύκλωμα σε αναστολή** στην κύρια οθόνη.
+* Το AAPS θα ορίσει ξανά έναν απαραίτητο προσωρινό βασικό ρυθμό με την επόμενη τιμή γλυκόζης αίματος.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
-#### Battery type and causes of short battery life
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries.
+#### Τύπος μπαταρίας και αιτίες βραχείας διάρκειας ζωής της μπαταρίας
+* Επειδή η έντονη επικοινωνία Bluetooth καταναλώνει πολλή ενέργεια, χρησιμοποιείτε μόνο **μπαταρίες υψηλής ποιότητας**, όπως Energizer Ultimate Lithium, τις «power one» από το «μεγάλο» service pack της Accu-Chek ή, αν θέλετε επαναφορτιζόμενη μπαταρία, μπαταρίες Eneloop.
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the service pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+Η τυπική διάρκεια ζωής των διαφόρων τύπων μπαταρίας είναι:
+* **Energizer Ultimate Lithium**: 4 έως 7 εβδομάδες
+* **Power One Alkaline** (Varta) από το service pack: 2 έως 4 εβδομάδες
+* Επαναφορτιζόμενες μπαταρίες **Eneloop rechargeable** (BK-3MCCE): 1 έως 3 εβδομάδες
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period.
-* The smart phone hardware and software (Android operating system and Bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+Αν η διάρκεια ζωής της μπαταρίας σας είναι πολύ μικρότερη από τα παραπάνω, ελέγξτε τις παρακάτω πιθανές αιτίες:
+* Υπάρχουν ορισμένες παραλλαγές του βιδωτού καπακιού μπαταρίας της αντλίας Combo, που βραχυκυκλώνουν εν μέρει τις μπαταρίες και τις αδειάζουν γρήγορα. Τα καπάκια χωρίς αυτό το πρόβλημα μπορούν να αναγνωριστούν από τις χρυσές μεταλλικές επαφές.
+* Αν το ρολόι της αντλίας δεν «επιβιώνει» μια σύντομη αλλαγή μπαταρίας, πιθανότατα έχει χαλάσει ο πυκνωτής που κρατά το ρολόι σε λειτουργία κατά τη διάρκεια μιας σύντομης διακοπής ρεύματος. Σε αυτή την περίπτωση, μπορεί να βοηθήσει η αντικατάσταση της αντλίας από τη Roche, που δεν είναι πρόβλημα κατά την περίοδο της εγγύησης.
+* Το υλικό και το λογισμικό του smartphone (λειτουργικό σύστημα Android και στοίβα Bluetooth) επηρεάζουν επίσης τη διάρκεια ζωής της μπαταρίας της αντλίας, αν και οι ακριβείς παράγοντες δεν είναι ακόμα πλήρως γνωστοί. Εάν έχετε την ευκαιρία, δοκιμάστε ένα άλλο smartphone και συγκρίνετε τη διάρκεια ζωής της μπαταρίας.
 
-### Extended bolus, multiwave bolus
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
-* Use **e-Carbs** when entering carbs or using the Bolus wizard by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in your blood. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs.
-* Before eating, set a temporary **Eating Soon** target with glucose 80 for several hours (press the target on the main screen, or **Manage** > **Temp Target**). The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
-* Then use the **Bolus wizard** to enter the full carbs of the meal, but do not directly apply the values it suggests. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+### Εκτεταμένο bolus, bolus πολλαπλών κυμάτων
+Ο αλγόριθμος OpenAPS δεν υποστηρίζει παράλληλο εκτεταμένο bolus ή bolus πολλαπλών κυμάτων. Όμως μπορείτε να πετύχετε παρόμοια θεραπεία με τις παρακάτω εναλλακτικές:
+* Χρησιμοποιήστε **e-Carbs** όταν καταχωρείτε υδατάνθρακες ή όταν χρησιμοποιείτε τον Οδηγό Bolus: καταχωρήστε τους υδατάνθρακες όλου του γεύματος και τη διάρκεια στην οποία περιμένετε να φτάσουν οι υδατάνθρακες ως γλυκόζη στο αίμα σας. Το σύστημα θα υπολογίσει μικρές ποσότητες υδατανθράκων, μοιρασμένες ίσα σε όλη τη διάρκεια. Έτσι ο αλγόριθμος θα δίνει αντίστοιχη ινσουλίνη, ενώ ελέγχει συνεχώς τη συνολική άνοδο/πτώση της γλυκόζης αίματος. Για προσέγγιση σαν bolus πολλαπλών κυμάτων, μπορείτε επίσης να συνδυάσετε ένα μικρότερο άμεσο bolus με e-carbs.
+* Πριν φάτε, ορίστε έναν προσωρινό στόχο **Γεύμα Σύντομα** με γλυκόζη 80 για αρκετές ώρες (πατήστε τον στόχο στην κύρια οθόνη ή **Διαχείριση** > **Προσωρινός στόχος**). Η διάρκεια πρέπει να βασίζεται στο διάστημα που θα επιλέγατε για ένα εκτεταμένο bolus. Έτσι ο στόχος σας θα μείνει χαμηλότερος από το συνηθισμένο και θα αυξηθεί η ποσότητα ινσουλίνης που χορηγείται.
+* Μετά χρησιμοποιήστε τον **Οδηγό Bolus** για να καταχωρήσετε όλους τους υδατάνθρακες του γεύματος, αλλά μην εφαρμόσετε αμέσως τις τιμές που προτείνει. Αν θέλετε bolus σαν πολλαπλών κυμάτων, μειώστε τη δόση ινσουλίνης. Ανάλογα με το γεύμα, ο αλγόριθμος πρέπει τώρα να χορηγήσει επιπλέον SMB ή υψηλότερους προσωρινούς βασικούς ρυθμούς, για να αντιμετωπίσει την άνοδο της γλυκόζης αίματος. Εδώ πρέπει να δοκιμάσετε πολύ προσεκτικά το όριο ασφαλείας του βασικού ρυθμού (Max U/h, μέγιστο βασικό IOB) και, αν χρειάζεται, να το αλλάξετε προσωρινά.
 
-* Don't use the extended or multiwave bolus directly on the pump. The driver does not support them (see [Before you begin](#combov2-before-you-begin)); if a multiwave bolus is given on the pump anyway, **AAPS** records it from the pump history as a normal bolus plus an extended bolus, so it is counted in IOB. An extended bolus does not work in a closed loop environment (see [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details).
+* Μη χρησιμοποιείτε το εκτεταμένο bolus ή το bolus πολλαπλών κυμάτων απευθείας στην αντλία. Ο οδηγός δεν τα υποστηρίζει (δείτε [Πριν ξεκινήσετε](#combov2-before-you-begin))· αν παρ' όλα αυτά δοθεί bolus πολλαπλών κυμάτων από την αντλία, το **AAPS** το καταγράφει από το ιστορικό της αντλίας ως κανονικό bolus συν ένα εκτεταμένο bolus, ώστε να μετρά στο IOB. Ένα εκτεταμένο bolus δεν λειτουργεί σε κλειστό κύκλωμα (δείτε [αυτή τη σελίδα](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) για λεπτομέρειες).
 
-### Alarms at bolus delivery
-* After each bolus, the driver reads the pump's bolus history. This is a safety mechanism to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump.
-* Before a bolus, if the pump history has a bolus that **AAPS** did not know about (for example, a bolus given directly on the pump), the requested bolus is **not given**, because it was calculated without that insulin. **AAPS** shows **The pump history has a bolus that AAPS did not know about. The requested bolus was not given...** Check the bolus history on the pump and your IOB. If a bolus is still needed, calculate it again. This also applies when the unknown bolus is found on a new connection.
-* If the bolus was given but the pump history also had other boluses that **AAPS** did not know about, they are recorded now and **AAPS** asks you to check IOB before the next bolus.
-* If the connection to the pump is lost **during** a bolus, **AAPS** does not record 0 U: it shows how much the pump had given by then and warns that the pump may still give the rest. **Do not bolus again.** **AAPS** reads the real amount from the pump history at the next connection.
-* If the connection is lost while **AAPS** sends the bolus, it is not known whether the pump got it. Check the bolus history on the pump before the next bolus.
-* If **AAPS** cannot confirm that a bolus was delivered, it shows **Bolus delivery failed. It appears no bolus was delivered. To be sure, please check the pump to avoid a double bolus and then bolus again.** Boluses are never retried automatically.
+### Συναγερμοί κατά την χορήγηση bolus
+* Μετά από κάθε bolus, ο οδηγός διαβάζει το ιστορικό bolus της αντλίας. Αυτός είναι ένας μηχανισμός ασφαλείας, για να υπολογίζεται σωστά η ενεργή ινσουλίνη (IOB), ακόμα και όταν δίνεται bolus απευθείας από την αντλία.
+* Πριν από ένα bolus, αν στο ιστορικό της αντλίας υπάρχει bolus που το **AAPS** δεν γνώριζε (για παράδειγμα, bolus που δόθηκε απευθείας στην αντλία), το bolus που ζητήθηκε **δεν χορηγείται**, επειδή υπολογίστηκε χωρίς αυτή την ινσουλίνη. Το **AAPS** δείχνει **Στο ιστορικό της αντλίας υπάρχει ένα bolus που το AAPS δεν γνώριζε. Το bolus που ζητήθηκε δεν χορηγήθηκε...** Ελέγξτε το ιστορικό bolus στην αντλία και το IOB σας. Αν χρειάζεται ακόμα bolus, υπολογίστε το ξανά. Αυτό ισχύει επίσης όταν το άγνωστο bolus βρεθεί σε μια νέα σύνδεση.
+* Αν το bolus χορηγήθηκε, αλλά στο ιστορικό της αντλίας υπήρχαν και άλλα bolus που το **AAPS** δεν γνώριζε, αυτά καταγράφονται τώρα και το **AAPS** σας ζητά να ελέγξετε το IOB πριν από το επόμενο bolus.
+* Αν η σύνδεση με την αντλία χαθεί **κατά τη διάρκεια** ενός bolus, το **AAPS** δεν καταγράφει 0 U: δείχνει πόσο είχε χορηγήσει η αντλία μέχρι τότε και προειδοποιεί ότι η αντλία μπορεί να χορηγεί ακόμα το υπόλοιπο. **Μην κάνετε ξανά bolus.** Το **AAPS** διαβάζει την πραγματική ποσότητα από το ιστορικό της αντλίας στην επόμενη σύνδεση.
+* Αν η σύνδεση χαθεί την ώρα που το **AAPS** στέλνει το bolus, δεν είναι γνωστό αν η αντλία το έλαβε. Ελέγξτε το ιστορικό bolus στην αντλία πριν από το επόμενο bolus.
+* Αν το **AAPS** δεν μπορεί να επιβεβαιώσει ότι χορηγήθηκε ένα bolus, δείχνει **Η χορήγηση bolus απέτυχε. Φαίνεται ότι δεν χορηγήθηκε bolus. Για να είστε σίγουροι, ελέγξτε την αντλία, ώστε να αποφύγετε διπλό bolus, και μετά κάντε ξανά bolus.** Τα bolus δεν επαναλαμβάνονται ποτέ αυτόματα.
 
-## Where to get help
+## Πού θα βρείτε βοήθεια
 
-Development of the Combo driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Η ανάπτυξη του οδηγού Combo γίνεται από την κοινότητα σε **εθελοντική** βάση. Πριν ζητήσετε βοήθεια:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Διαβάστε** τη σχετική ενότητα αυτής της τεκμηρίωσης για να επιβεβαιώσετε πώς πρέπει να λειτουργεί η λειτουργία.
+2. **Ρωτήστε** στο κανάλι *#AAPS* στο [Discord](https://discord.gg/4fQUWHZ4Mw) ή σε ένα από τα άλλα [κανάλια της κοινότητας](../GettingHelp/WhereCanIGetHelp.md).
+3. **Αναφέρετε ένα σφάλμα**: ψάξτε πρώτα στα [υπάρχοντα issues](https://github.com/nightscout/AndroidAPS/issues)· αν το δικό σας δεν υπάρχει, ανοίξτε ένα [νέο issue](https://github.com/nightscout/AndroidAPS/issues) και επισυνάψτε τα [αρχεία καταγραφής](../GettingHelp/AccessingLogFiles.md) σας.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Όταν ζητάτε βοήθεια, γράψτε τη μάρκα και το μοντέλο του τηλεφώνου σας, την έκδοση Android, την έκδοση του **AAPS** και μια απλή περιγραφή του προβλήματος (τι άλλαξε, πότε λειτουργούσε τελευταία φορά).
