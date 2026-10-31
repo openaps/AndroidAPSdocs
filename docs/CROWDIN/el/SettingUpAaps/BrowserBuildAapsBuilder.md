@@ -227,7 +227,10 @@ Step 3 unlocks when step 2 is done. Το κλειδί σας, οι κωδικο�
 
    Αν ανοίξει η **εφαρμογή GitHub**: πατήστε **RUN WORKFLOW**, ελέγξτε την έκδοση και την παραλλαγή και πατήστε ξανά **RUN WORKFLOW**. Η εφαρμογή μπορεί να δείχνει ακόμα **Nothing to see here**: τραβήξτε τη λίστα προς τα κάτω για να ανανεωθεί και να δείτε το build σας. Μετά συνεχίστε με το βήμα 4 παρακάτω.
 
-2. Αν το GitHub το ζητήσει, πατήστε το πράσινο κουμπί για να ενεργοποιήσετε τα workflows.
+2. If GitHub asks, tap the green button to enable workflows.
+
+   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+
 3. Πατήστε **Run workflow**. Ανοίγει μια μικρή φόρμα:
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
    - **Variant** (παραλλαγή): αφήστε το `fullRelease` για κανονική χρήση με αντλία. Οι άλλες παραλλαγές εξηγούνται στις [παραλλαγές του build](#browserbuild-variant). Το `aapsclient3Release` δημιουργεί το **AAPSClient3**, που υπάρχει από την έκδοση 4.0 του **AAPS** (δείτε [Σχετικά με τα AAPSClient, AAPSClient2 και AAPSClient3](#remotecontrol-aapsclient-versions)).
