@@ -30,7 +30,7 @@
 
 ![Екран помпи Diaconn G8 до спарювання](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![зображення](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -47,11 +47,11 @@
 1. Останні 5 цифр серійного номера (SN) на задній стороні помпи.
 2. Натисніть кнопку O > Information > BLE > останні 5 цифр.
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![зображення](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Після вибору помпи з'явиться вікно із запитом PIN-коду. Введіть PIN-код, показаний на помпі, щоб завершити з'єднання.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![зображення](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 - Коли з'явиться **Спарювання успішне!**, торкніться **OK**, щоб повернутися на екран помпи.
 
@@ -61,7 +61,7 @@
 - Торкніться **Оновити**, щоб підключитися до помпи, оновити статус і синхронізувати журнали.
 - Торкніться **Історія помпи**, щоб побачити історію, прочитану з помпи.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![зображення](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -87,15 +87,15 @@
 
 - Натисніть і утримуйте кнопку Bluetooth угорі приблизно 3 секунди.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![зображення](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Натисніть кнопку налаштувань біля спареної інсулінової помпи Diaconn G8.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![зображення](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Розпаруйте.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![зображення](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - В **AAPS** відкрийте екран помпи (**Керувати** > **Помпа**), торкніться **Розпарувати** і підтвердьте **Скинути дані спарювання?**.
 - Повторіть спарювання помпи через Bluetooth (див. вище).
