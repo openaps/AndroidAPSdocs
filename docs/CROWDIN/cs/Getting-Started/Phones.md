@@ -26,7 +26,7 @@ Vedeme seznam [testovaných sestav hardwaru](https://docs.google.com/spreadsheet
 
 Tento seznam obsahuje zpětnou vazbu od uživatelů k používání telefonu s **AAPS** a s danou pumpou a CGM. Může vám pomoci ověřit, zda váš telefon / pumpu / CGM už jiní uživatelé úspěšně používali.
 
-The document is read-only. Pomocí CTRL-F můžete hledat v textu tabulky Google.
+Dokument je jen pro čtení. Pomocí CTRL-F můžete hledat v textu tabulky Google.
 
 Pokud chcete zaznamenat svůj test nastavení hardwaru, vyplňte prosím tento [formulář](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Po vyplnění formuláře se tabulka automaticky aktualizuje každých 5 minut.
 
