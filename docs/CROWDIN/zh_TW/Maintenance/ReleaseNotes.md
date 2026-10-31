@@ -9,22 +9,22 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. 問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
+請依照 [更新手冊](UpdateToNewVersion.md) 中的指示，更新至新版本。問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
-See [What changed in AAPS v4](V4Changes.md) for the notable behavioral changes — features that have moved, been renamed, or been removed.
+如需了解重要的行為變更（包括功能移動、重新命名或移除），請參閱 [AAPS v4 的變更內容](V4Changes.md)。
 ```
 
 當有可用的更新時，你會收到如下的通知：
 
 ![更新資訊](../images/AAPS_LoopDisable90days.png)
 
-如果您未在到期日之前更新，**AAPS** 將切換至開環模式。
+如果你未在到期日之前更新，**AAPS** 將切換至開環模式。
 
 請參閱 [End of life](EndOfLife.md) 以了解 AAPS 版本的支援終止日期。
 
-**請勿忽略該通知。** **AAPS** 的新版本提供重要的安全性修正。因此，每位 **AAPS** 使用者都必須盡快更新到最新版本。 This is an effort to try to improve the safety for each **AAPS** user and the DIY community. 感謝你的諒解。
+**請勿忽略該通知。** **AAPS** 的新版本提供重要的安全性修正。因此，每位 **AAPS** 使用者都必須盡快更新到最新版本。這項工作旨在提升每位 **AAPS** 使用者和 DIY 社群的安全性。感謝你的諒解。
 
 (maintenance-android-version-aaps-version)=
 
@@ -34,19 +34,19 @@ See [What changed in AAPS v4](V4Changes.md) for the notable behavioral changes �
 
 為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。這些版本不包含其他改進。
 
-Find your Android version in the table below and use the matching **AAPS** version. The code is downloaded from <https://github.com/nightscout/AndroidAPS> using the branch shown.
+請在下表中找出您的 Android 版本，並使用相應的 **AAPS** 版本。程式碼是從 <https://github.com/nightscout/AndroidAPS> 下載，請使用表格中列出的分支。
 
-| Your Android version | AAPS version to use | Branch to download                                               |
-| -------------------- | ------------------- | ---------------------------------------------------------------- |
-| Android 12 及以上       | Latest version      | [master](https://github.com/nightscout/AndroidAPS) (default)     |
-| Android 11           | **3.3.2.1**         | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
-| Android 9, 10        | **3.2.0.4**         | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
-| Android 8            | **2.8.2.1**         | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
-| Android 7            | **2.6.2**           | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
+| 您的 Android 版本  | 適用的 AAPS 版本 | 要下載的分支                                                           |
+| -------------- | ----------- | ---------------------------------------------------------------- |
+| Android 12 及以上 | 最新版本        | [master](https://github.com/nightscout/AndroidAPS)（預設）           |
+| Android 11     | **3.3.2.1** | [3.3.2.1](https://github.com/nightscout/AndroidAPS/tree/3.3.2.1) |
+| Android 9、10   | **3.2.0.4** | [3.2.0.4](https://github.com/nightscout/AndroidAPS/tree/3.2.0.4) |
+| Android 8      | **2.8.2.1** | [2.8.2.1](https://github.com/nightscout/AndroidAPS/tree/2.8.2.1) |
+| Android 7      | **2.6.2**   | [2.6.2](https://github.com/nightscout/AndroidAPS/tree/2.6.2)     |
 
 ## WearOS 版本
 
-- AAPS requires WearOS 3.0, 3.2 or 3.5 (Android 11, API level 30) or newer. WearOS 2 watches are not supported.
+- AAPS 需要 Wear OS 3.0、3.2 或 3.5（Android 11、API level 30）或更新版本。不支援 Wear OS 2 手錶。
 
 ```{tip}
 WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
@@ -56,64 +56,64 @@ WearOS 5, API 等級 34 (Android 14) 有[限制](#BuildingAapsWearOs-WearOS5)。
 
 (version400)=
 
-## Version 4.0.0
+## 版本 4.0.0
 
-Release date: 31-10-2026
+發布日期：2106-02-31
 
 ### 新功能
-- New user interface: phone app rebuilt in Jetpack Compose @MilosKozak
-- [Global search](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
-- Kotlin Multiplatform migration, client for Windows, Mac, Linux desktop and iOS @MilosKozak
-- [Scenes](../DailyLifeWithAaps/Scenes.md): save a set of actions and run them together @MilosKozak
-- [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md): send commands from a client phone to the master @MilosKozak
-  - [Client roles](#client-master-control-roles): Read-only, Meals, Caregiver or Admin for each client @MilosKozak
-  - [Hardened mode](#client-master-control-hardened-mode): with client control on, the master takes changes only from paired clients @MilosKozak
-  - Pairing with a QR code that also sets up Nightscout on the client, or with a PIN; the pairing secret is replaced right after pairing @MilosKozak
-  - [Own Nightscout token](#client-master-control-own-token) for each client, with only the rights a client needs @MilosKozak
-- [Insulin concentration](../AdvancedOptions/InsulinConcentration.md) support (U200, U500) across pumps, wizard and profiles @Philoul @MilosKozak
-- Insulin management: insulin catalogue, nicknames, selection in profile and wizard @Philoul
-- Calibration plugin @MilosKozak
-- [Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md): Unscented Kalman Filter (UKF) @piecycle
-- [Site rotation](#Aapsscreens-site-rotation): track and rotate infusion sites @Philoul @MilosKozak
-- [Autotune](../AdvancedOptions/Autotune.md) rework @Philoul
-- New [widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
-- Accessibility: the phone app works with a screen reader - named controls, spoken status, graph descriptions and headings to skim @MilosKozak
-- [Settings import](../Maintenance/ExportImportSettings.md): can keep the pump settings @MilosKozak
-- Persistent notification uses Android live updates, with Samsung Now bar support and the delta @premnirmal
-- BG graph: [press and hold](#aaps-screens-graph-press-and-hold) to see the values at a reading, on every graph of the overview @t1dude @olorinmaia
-- Performance improvements @MilosKozak
-- Automatic e-carbs in Bolus wizard @MilosKozak
+- 全新使用者介面：使用 Jetpack Compose 重新打造手機 App @MilosKozak
+- [全域搜尋](../DailyLifeWithAaps/GlobalSearch.md) @MilosKozak
+- 遷移至 Kotlin Multiplatform，並推出適用於 Windows、Mac、Linux 桌面版和 iOS 的用戶端 @MilosKozak
+- [場景](../DailyLifeWithAaps/Scenes.md)：儲存一組操作，並一次執行 @MilosKozak
+- [主控端 ↔ 用戶端控制](../RemoteFeatures/ClientMasterControl.md)：從用戶端手機傳送指令給主控端 @MilosKozak
+  - [用戶端角色](#client-master-control-roles)：可為各個用戶端設定唯讀、餐點、照護者或管理員角色 @MilosKozak
+  - [強化模式](#client-master-control-hardened-mode)：啟用用戶端控制後，主控端只會接受已配對用戶端所做的變更 @MilosKozak
+  - 可透過 QR Code 配對，同時在用戶端設定 Nightscout；也可使用 PIN 碼配對。配對密鑰會在配對完成後立即更換 @MilosKozak
+  - 為每個用戶端設定專屬的 [Nightscout 權杖](#client-master-control-own-token)，並只授予用戶端所需的權限 @MilosKozak
+- 支援各種幫浦、嚮導和設定檔的[胰島素濃度](../AdvancedOptions/InsulinConcentration.md)（U200、U500）@Philoul @MilosKozak
+- 胰島素管理：胰島素目錄、暱稱，以及在設定檔和嚮導中選擇胰島素 @Philoul
+- 校正外掛 @MilosKozak
+- [平滑處理](../CompatibleCgms/SmoothingBloodGlucoseData.md)：無跡卡爾曼濾波器（UKF）@piecycle
+- [注射部位輪替](#Aapsscreens-site-rotation)：追蹤並輪替輸注部位 @Philoul @MilosKozak
+- [Autotune](../AdvancedOptions/Autotune.md) 改版 @Philoul
+- 新增[小工具](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
+- 無障礙功能：手機 App 可搭配螢幕閱讀器使用，提供控制項名稱、語音狀態提示、圖表說明及便於快速瀏覽的標題 @MilosKozak
+- [匯入設定](../Maintenance/ExportImportSettings.md)時可保留幫浦設定 @MilosKozak
+- 持續通知採用 Android 即時更新功能，支援 Samsung Now Bar 和 delta @premnirmal
+- 血糖圖表：在總覽的每張圖表上[按住](#aaps-screens-graph-press-and-hold)，即可查看讀取值 @t1dude @olorinmaia
+- 效能改進 @MilosKozak
+- 注射嚮導中新增自動 e-carb 功能 @MilosKozak
 
-### New devices
-- **CareLevo**: new [pump driver](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
-- **Dana-i2**: support @MilosKozak
-- **Instara**: new CGM source @leohunt
+### 新裝置
+- **CareLevo**：新增[幫浦驅動程式](../CompatiblePumps/CareLevo.md) @Kisu-Choi @MilosKozak
+- **Dana-i2**：新增支援 @MilosKozak
+- **Instara**：新增 CGM 資料來源 @leohunt
 
 ### 幫浦驅動程式改進
-- Pump overview screens rebuilt for Insight, Medtronic, Medtrum, Omnipod, Dana, Diaconn and Equil @MilosKozak
-- **Omnipod Dash**: PDM style Ref codes and readable fault descriptions, drift compensation always on, better bolus type reporting @nl-ruud
-- **Omnipod**: hard-end date for Dash & Eros @mcnelson
-- **DanaR, RS**: pump emulator for testing @MilosKozak
-- **Equil**: pump emulator for testing @MilosKozak
-- Many pump and loop fixes @MilosKozak and others
+- 重新設計 Insight、Medtronic、Medtrum、Omnipod、Dana、Diaconn 和 Equil 的幫浦總覽畫面 @MilosKozak
+- **Omnipod Dash**：PDM 樣式的參考代碼和易讀的故障說明、始終啟用漂移補償，以及更完善的注射類型回報 @nl-ruud
+- **Omnipod**：Dash 和 Eros 的強制到期日 @mcnelson
+- **DanaR、RS**：新增幫浦模擬器供測試使用 @MilosKozak
+- **Equil**：新增幫浦模擬器供測試使用 @MilosKozak
+- 修正多項幫浦和循環功能問題 @MilosKozak 等人
 
 ### Wear OS
-- [Watch app](../WearOS/WearOsSmartwatch.md) rebuilt in Compose, new tiles and complications, automatic watch face install (Watch Face Push) on Wear OS 6+ @olorinmaia @Philoul
-- CustomWatchface available for WearOS 6.0 (GW7, GW8, GW9...) with a WFF dedicated watchface @Philoul @olorinmaia
-- CustomWatchface can now include 5 Complication slots you can customize (new feature only available for older watches) @Philoul
-- New [WFF watchface based on AAPS complications](#wearos-complications-watchface-setup) @olorinmaia
-- Corrections in Bolus wizard and Quick wizard result @olorinmaia
-- New BG graph and Running mode activity in main menu @olorinmaia
-- Bolus wizard: [meal type](#WearOsSmartwatch-wizard-meal-type) page that splits the carbs like the phone wizard, and [carb time](#WearOsSmartwatch-wizard-carb-time) with the *time to eat* reminder on the watch @olorinmaia
-- [Phone alarms on the watch](#WearOsSmartwatch-phone-alarms): the watch shows the alarm and offers Silence and Mute 5 min @olorinmaia
+- [手錶 App](../WearOS/WearOsSmartwatch.md)以 Compose 重新打造，新增錶面資訊方塊和錶面功能，並可在 Wear OS 6 以上版本自動安裝錶面（Watch Face Push）@olorinmaia @Philoul
+- CustomWatchface 支援 Wear OS 6.0（GW7、GW8、GW9 等），並提供專用的 WFF 錶面 @Philoul @olorinmaia
+- CustomWatchface 現在可加入 5 個可自訂的錶面功能欄位（這項新功能僅適用於較舊款手錶）@Philoul
+- 新增[以 AAPS 錶面功能為基礎的 WFF 錶面](#wearos-complications-watchface-setup) @olorinmaia
+- 修正注射嚮導和快速嚮導的結果 @olorinmaia
+- 主選單新增血糖圖表和「運動模式」活動 @olorinmaia
+- 注射嚮導：新增[餐點類型](#WearOsSmartwatch-wizard-meal-type)頁面，可像手機版嚮導一樣拆分碳水化合物；並新增[碳水化合物時間](#WearOsSmartwatch-wizard-carb-time)功能，可在手錶上提醒*用餐時間* @olorinmaia
+- [在手錶上顯示手機鬧鐘](#WearOsSmartwatch-phone-alarms)：手錶會顯示鬧鐘，並提供靜音和靜音 5 分鐘的選項 @olorinmaia
 
-### Build
-- CI workflows for tag/branch builds, JDK version mapping @Angus-repo
+### 建置
+- CI 工作流程支援標籤／分支建置，並加入 JDK 版本對應 @Angus-repo
 
 ### 貢獻者
 @MilosKozak @Philoul @olorinmaia @Kisu-Choi @leohunt @piecycle @Angus-repo @mcnelson @t1dude @premnirmal @nl-ruud
 
-Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0>
+完整變更記錄：<https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.0>
 
 (version3426)=
 
@@ -141,7 +141,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 - NSClientV3：修正重新連線後的資料缺口 @MilosKozak
 - Automation：修正反序列化問題 @MilosKozak
 - Equil：修正電池報告 @MilosKozak
-- Cleanup workflow @vanelsberg
+- 清理工作流程 @vanelsberg
 - Equil：改善錯誤復原 @MilosKozak
 - DanaRS：修正國內版幫浦通訊 @MilosKozak
 - Insight：修正臨時基礎率同步 @MilosKozak
@@ -168,7 +168,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 - Equil：針對不同機型修正電阻設定 @hhfcvmars
 - Tidepool：修正工作階段 @MilosKozak
-- Medtrum: Fix activation path by preventing double fill @MilosKozak
+- Medtrum：修正註冊流程，避免重複填充 @MilosKozak
 - COB：修正 COB 計算（涵蓋危險的邊界案例）@MilosKozak
 
 (version3410)=
@@ -261,7 +261,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 * 改進 Nightscout 異常時的重複資料過濾 @MilosKozak
 
 ### UI/UX 改進
-* various improvements @MilosKozak @Philoul @olorinmaia
+* 多項改進 @MilosKozak @Philoul @olorinmaia
 
 ### 自動化
 * 新的微量注射控制動作 - 透過自動化啟用/停用微量注射 @MilosKozak
@@ -300,7 +300,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 (version-enforcement)=
 
-### Starting this version, notification and version enforcement has been simplified and softened and works following way:
+### 從此版本開始，通知和版本強制執行機制已簡化並放寬，運作方式如下：
 *  當設備離線時不會過期（如果沒有網路連線）。這意味著不再有 60 天和 90 天的寬限期。
 *  過期後將強制進入 LGS 模式
 *  你將會收到警告/通知的頻率會降低：
@@ -322,7 +322,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 * 單選按鈕 UI 改進 @olorinmaia
 * 自動化：從地圖選擇位置 @MilosKozak
 * 主畫面上可見版本 @MilosKozak
-* Compilation with existing git system is enforced (no zip downloads)
+* 必須使用現有的 Git 系統進行編譯（不提供 ZIP 下載）
 * 在主畫面上顯示版本 @MilosKozak
 * Tidepool 上傳改善 @ConstantinMatheis
 
@@ -342,7 +342,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 ### 錯誤修正
 
 * Dash: 連線是可選的（預設為關閉） @MilosKozak
-* Equil: fixed bolus 10+U, alarm improvements @EquilHack
+* Equil：修正 10 U 以上的注射問題，並改進鬧鐘 @EquilHack
 * Garmin：手錶改進 @swissalpine
 * 手錶改進 @olorinmaia
 * 從手錶控制循環狀態 @tdrkDev
@@ -401,7 +401,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 ### 主要功能
 
-* **[Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md)** feature is no more a dedicated plugin, but is now included as an option of [OpenAPS SMB](#Config-Builder-aps) plugin, along with some changes in its behavior:
+* **[動態 ISF](../DailyLifeWithAaps/DynamicISF.md)**不再是獨立的外掛，現在已整合為 [OpenAPS SMB](#Config-Builder-aps) 外掛中的選項，並調整了部分運作方式：
   * 在動態敏感度強度方面，**動態 ISF** 現在會考慮 **設定檔切換** 和 **設定檔百分比** 的影響。
   * 將使用過去 24 小時的平均 **ISF** 計算，該數值將用於注射嚮導和 **COB** 的計算。**設定檔中的 ISF** 值完全不會被使用（僅在歷史資料無法使用時作為備用）
   * DynamicISF 文件頁面已重新編寫。請閱讀重要部分 [啟動 Dynamic ISF 時需考慮的事項](#dyn-isf-things-to-consider-when-activating-dynamicisf)。
@@ -558,21 +558,21 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。他有許多限制
 - v1 僅發送 2 天的資料
 - 每次重新連線時，v1 都會發送所有 2 天的資料
-- using websockets is mandatory = permanent connection, more battery consumption
+- 必須使用 WebSocket，也就是必須保持連線，耗電量會增加
 - 在頻繁中斷連線時，NS 連線會暫停 15 分鐘，以防止高資料使用量
 
 v3 是新的協議。更加安全和高效
 - 使用令牌可以更好地定義查看權限
 - 協議在 AAPS 和 NS 兩端都更高效
 - 他可以從 NS 讀取長達 3 個月的資料
-- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power consumption, but slower updates ie. minutes)
+- 可為每部裝置選擇是否使用 WebSocket（使用時更新速度較快；不使用時耗電量較低，但更新速度較慢，例如可能需要數分鐘）
 - NSClient 在中斷連線時不會暫停
 
 限制
 - NS 15 必須與 AAPS 3.2 一起使用
 - v3 不會看到由 v1 協議完成的更新（可能會在未來的 NS 版本中解決）
-- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
-- 請記住，NS 迄今仍然在內部使用 v1，因此如果您使用 v3，則無法通過 NS 網頁 UI 輸入資料。 You must use AAPSClient or SMS if you want to enter data remotely
+- 相反地，由於舊有的變更追蹤方法效率不佳，v1 可以看到 v3 所做的變更
+- 請記住，NS 迄今仍然在內部使用 v1，因此如果您使用 v3，則無法通過 NS 網頁 UI 輸入資料。若要遠端輸入資料，必須使用 AAPSClient 或 SMS
 
 推薦設置
 - 基於以上所有原因，你應選擇一種方法並在所有設備上使用他（記住，撰寫本文時，所有其他上傳器都在使用 v1）。如果你決定使用 v3，請在 AAPS 和所有 AAPSClients 中選擇 v3
