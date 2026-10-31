@@ -26,7 +26,7 @@ Une fois le plugin sélectionné, la carte **Diaconn G8** affiche deux boutons, 
 
 **Paramètres** ouvre les paramètres du pilote Diaconn G8 (voir [Réglage des options de pompe Diaconn G8](#diaconn-g8-insulin-pump-option-setting) ci-dessous).
 
-**Ouvrir le plugin** (ou **Gestion** > **Pompe**) ouvre l'écran de la pompe Diaconn G8. Avant l'appairage d'une pompe, il ressemble à ceci :
+**Ouvrir le plugin** (ou **Gestion** > **Pompe**) ouvre l'écran de la pompe Diaconn G8. Avant l'appairage d'une pompe, il ressemble à ceci :
 
 ![Écran de la pompe Diaconn G8 avant l'appairage](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
@@ -42,7 +42,7 @@ La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**. Dans
 
 ![Écran Appairage pompe Diaconn pendant la recherche des pompes](../images/DiaconnG8/DiaconnG8_05.png)
 
-- Il y a deux options pour vérifier votre numéro de modèle :
+- Il y a deux options pour vérifier votre numéro de modèle :
 
 1. Les 5 derniers chiffres du numéro SN au dos de la pompe.
 2. Cliquez sur le bouton O > Information > BLE > Derniers 5 chiffres.
@@ -132,7 +132,7 @@ La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**. Dans
 
 ## Où obtenir de l'aide
 
-Le pilote Diaconn G8 est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
+Le pilote Diaconn G8 est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
 
 1. **Lisez** la section correspondante de cette documentation pour vérifier comment la fonction doit marcher.
 2. **Demandez** sur le canal *#AAPS* de [Discord](https://discord.gg/4fQUWHZ4Mw), ou dans un des autres [canaux de la communauté](../GettingHelp/WhereCanIGetHelp.md).
