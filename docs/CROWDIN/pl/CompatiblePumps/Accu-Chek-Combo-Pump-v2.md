@@ -40,8 +40,8 @@ Zwróć uwagę na następujące ograniczenia:
 * Tymczasowe dawki bazowe są ograniczone do 500% aktualnej dawki bazowej. **AAPS** uwzględnia ten limit.
 * Pętla jest wyłączona, jeśli aktualnie aktywny profil na pompie nie jest profilem nr 1. Trwa to, dopóki profil nr 1 nie stanie się aktywny. Gdy tak się stanie, przy następnym połączeniu AAPS (samodzielnie po pewnym czasie lub gdy stukniesz **Odśwież** na ekranie pompy Accu-Chek Combo) zauważy, że aktywny jest profil nr 1, i znów włączy pętlę.
 * Jeśli pętla zażąda anulowania trwającej bazy tymczasowej (TBR), Combo zamiast tego ustawi TBR 90% lub 110% na 15 minut. Dzieje się tak, ponieważ anulowanie TBR wywołuje na pompie alert z wieloma wibracjami, a tych wibracji nie da się wyłączyć.
-* Stabilność połączenia Bluetooth zależy od telefonu. Mogą pojawiać się alarmy „pompa nieosiągalna”, gdy połączenia z pompą nie da się już nawiązać. Jeśli wystąpi ten błąd, upewnij się, że Bluetooth jest włączony, i stuknij **Odśwież** na ekranie pompy (**Zarządzaj** > **Pompa**), aby sprawdzić, czy był to przejściowy problem. Jeśli nadal nie ma połączenia, uruchom ponownie telefon – to zwykle rozwiązuje problem.
-* Jest też inny problem, w którym restart nie pomaga i trzeba nacisnąć przycisk na pompie (co resetuje stos Bluetooth pompy), zanim pompa znów przyjmie połączenia z telefonu.
+* Stabilność połączenia Bluetooth zależy od telefonu. Mogą pojawiać się alarmy „pompa nieosiągalna”, gdy połączenia z pompą nie da się już nawiązać. If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
+* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
 * Unikaj ustawiania TBR na pompie, ponieważ to pętla przejmuje kontrolę nad TBR. Wykrycie nowego TBR na pompie może potrwać do 20 minut, a działanie TBR zostanie uwzględnione dopiero od chwili wykrycia. W najgorszym przypadku może więc być 20 minut TBR, których nie widać w IOB.
 
 Sterownik obsługuje obecnie następujące języki w Combo. (Nie ma to związku z językiem w AAPS – chodzi o język wyświetlany na samym wyświetlaczu LCD Combo).
@@ -213,7 +213,7 @@ To automatyczne wykrywanie można wyłączyć w [ustawieniach](#combov2-preferen
 (combov2-alerts)=
 ## Alarmy (ostrzeżenia i błędy) i ich obsługa
 
-Combo pokazuje alarmy jako ekrany zdalnego terminala. Ostrzeżenia mają kod „Wx” (x to cyfra) i krótki opis. Przykład: „W7”, „TBR OVER”. Błędy wyglądają podobnie, ale mają kod „Ex”.
+Combo pokazuje alarmy jako ekrany zdalnego terminala. Warnings are shown with a "Wx" code (x is a digit), along with a short description. Przykład: „W7”, „TBR OVER”. Błędy wyglądają podobnie, ale mają kod „Ex”.
 
 Niektóre ostrzeżenia sterownik zamyka automatycznie. Są to:
 
@@ -223,7 +223,7 @@ Niektóre ostrzeżenia sterownik zamyka automatycznie. Są to:
 
 Inne ostrzeżenia _nie_ są zamykane automatycznie. Błędy także _nigdy_ nie są zamykane automatycznie. Obie te grupy są obsługiwane tak samo: sterownik wyświetla okno alarmu nad interfejsem AAPS i przerywa każde trwające polecenie. Sterownik przechodzi wtedy w stan „błąd” (zobacz [zawartość ekranu pompy Accu-Chek Combo powyżej](#combov2-tab-contents)). W tym stanie nie można wykonać żadnego polecenia. Użytkownik musi obsłużyć błąd na pompie; na przykład błąd okluzji może wymagać wymiany kaniuli. Gdy użytkownik zajmie się błędem, normalną pracę można wznowić, stukając **Odśwież** na ekranie pompy Accu-Chek Combo. Sterownik łączy się wtedy z Combo i aktualizuje jej stan, sprawdzając między innymi, czy błąd nadal jest na ekranie. Sterownik także sam odświeża stan pompy po pewnym czasie, więc ręczne naciśnięcie tego przycisku nie jest konieczne.
 
-Bolus to przypadek szczególny. Jest podawany w trybie poleceń Combo, który w trakcie bolusa nie zgłasza, że pojawił się alarm. Dlatego sterownik nie może automatycznie zamykać ostrzeżeń _w trakcie_ bolusa. Niestety oznacza to, że pompa będzie piszczeć aż do końca bolusa. Najczęstszy alarm w trakcie bolusa to zwykle W1 „reservoir low” (niski poziom w zbiorniku). **Nie** zamykaj ręcznie ostrzeżeń Combo na samej pompie w trakcie bolusa. Ryzykujesz przerwanie bolusa. Sterownik zajmie się ostrzeżeniem po zakończeniu bolusa.
+Bolus to przypadek szczególny. Jest podawany w trybie poleceń Combo, który w trakcie bolusa nie zgłasza, że pojawił się alarm. Dlatego sterownik nie może automatycznie zamykać ostrzeżeń _w trakcie_ bolusa. Niestety oznacza to, że pompa będzie piszczeć aż do końca bolusa. Najczęstszy alarm w trakcie bolusa to zwykle W1 „reservoir low” (niski poziom w zbiorniku). **Don't** dismiss Combo warnings on the pump itself manually during a bolus. Ryzykujesz przerwanie bolusa. Sterownik zajmie się ostrzeżeniem po zakończeniu bolusa.
 
 Sterownik nie zauważy alarmów, które pojawią się, gdy nie jest połączony z Combo. Combo nie potrafi sama wysłać alarmu do telefonu; to zawsze telefon musi rozpocząć połączenie. Dlatego alarm pozostaje aktywny, dopóki sterownik nie połączy się z pompą. Możesz stuknąć **Odśwież** na ekranie pompy, aby wymusić połączenie i pozwolić sterownikowi od razu obsłużyć alarm (zamiast czekać, aż AAPS sam rozpocznie połączenie).
 
@@ -251,8 +251,8 @@ Sterownik robi wszystko, aby połączyć się z Combo, i używa kilku sztuczek, 
 
 ### Jak zapewnić płynne działanie
 
-* Zawsze **noś smartfon przy sobie**, a w nocy zostaw go obok łóżka. Pompa może leżeć za tobą lub pod tobą, gdy śpisz, dlatego najlepiej sprawdza się wyższe miejsce (na półce lub szafce).
-* Zawsze dbaj o to, aby bateria pompy była jak najbardziej naładowana. Wskazówki dotyczące baterii znajdziesz w sekcji o baterii.
+* Zawsze **noś smartfon przy sobie**, a w nocy zostaw go obok łóżka. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
+* Zawsze dbaj o to, aby bateria pompy była jak najbardziej naładowana. See the battery section for tips regarding the battery.
 * Gdy to możliwe, obsługuj pompę tylko przez aplikację AAPS. Aby to ułatwić, włącz blokadę klawiszy na pompie w **PUMP SETTINGS / KEY LOCK / ON**. Klawiszy pompy trzeba używać tylko przy wymianie baterii lub zbiornika.
 
 ![Blokada klawiszy](../images/combo/combo-tips-keylock.png)
@@ -287,13 +287,13 @@ Sterownik robi wszystko, aby połączyć się z Combo, i używa kilku sztuczek, 
 * Po alarmie **low battery** (słaba bateria) wymień baterię jak najszybciej, aby zawsze było dość energii na niezawodną komunikację Bluetooth ze smartfonem, nawet gdy telefon jest dalej od pompy.
 * Nawet po alarmie **low battery** bateria może jeszcze działać przez dłuższy czas. Mimo to po alarmie „low battery” zalecamy zawsze mieć przy sobie nową baterię.
 * Przed wymianą baterii naciśnij symbol **Pętla** na ekranie głównym i wybierz **Wstrzymaj pętlę** na 1 godzinę.
-* Poczekaj, aż AAPS skomunikuje się z pompą, a logo Bluetooth na pompie zniknie.
+* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
 
 ![Bluetooth włączony](../images/combo/combo-tips-compo.png)
 
 * Zdejmij blokadę klawiszy na pompie, przełącz pompę w tryb stop, potwierdź ewentualne anulowanie bazy tymczasowej i szybko wymień baterię.
 * Po wymianie baterii nie musisz ponownie ustawiać zegara pompy: AAPS sam aktualizuje datę i godzinę w pompie.
-* Potem przełącz pompę z powrotem w tryb pracy (run) i wybierz **Wznów** po naciśnięciu ikony **Pętla wstrzymana** na ekranie głównym.
+* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AAPS ustawi ponownie potrzebną bazę tymczasową, gdy przyjdzie następna wartość glikemii.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
@@ -314,9 +314,9 @@ Jeśli bateria działa wyraźnie krócej niż podano wyżej, sprawdź następuj�
 
 ### Bolus przedłużony, bolus wielofalowy
 Algorytm OpenAPS nie obsługuje równoległego bolusa przedłużonego ani bolusa wielofalowego. Podobne leczenie można jednak uzyskać w następujący sposób:
-* Używaj **e-Carbs** (przedłużonych węglowodanów) przy wpisywaniu węglowodanów lub w kalkulatorze bolusa: wpisz węglowodany całego posiłku i czas, w którym spodziewasz się, że węglowodany trafią do krwi jako glukoza. System obliczy wtedy małe porcje węglowodanów rozłożone równo na cały ten czas. Dzięki temu algorytm poda odpowiednią ilość insuliny i jednocześnie będzie stale sprawdzał ogólny wzrost/spadek glikemii. Aby uzyskać efekt podobny do bolusa wielofalowego, możesz też połączyć mniejszy bolus natychmiastowy z e-carbs.
+* Używaj **e-Carbs** (przedłużonych węglowodanów) przy wpisywaniu węglowodanów lub w kalkulatorze bolusa: wpisz węglowodany całego posiłku i czas, w którym spodziewasz się, że węglowodany trafią do krwi jako glukoza. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. Aby uzyskać efekt podobny do bolusa wielofalowego, możesz też połączyć mniejszy bolus natychmiastowy z e-carbs.
 * Przed jedzeniem ustaw cel tymczasowy **Wkrótce posiłek** z glukozą 80 na kilka godzin (naciśnij cel na ekranie głównym lub **Zarządzaj** > **Cel tymczasowy**). Czas trwania wybierz tak, jak wybrałbyś czas bolusa przedłużonego. Dzięki temu cel będzie niższy niż zwykle, a ilość podanej insuliny większa.
-* Następnie użyj **Kalkulatora bolusa**, aby wpisać wszystkie węglowodany posiłku, ale nie zatwierdzaj od razu proponowanych wartości. Jeśli ma być podany bolus podobny do wielofalowego, zmniejsz dawkę insuliny. Zależnie od posiłku algorytm musi teraz podać dodatkowe SMB lub wyższe bazy tymczasowe, aby przeciwdziałać wzrostowi glikemii. Z ograniczeniami bezpieczeństwa dawki bazowej (Max IE / h, maksymalna bazowa IOB) eksperymentuj tu bardzo ostrożnie i w razie potrzeby zmieniaj je tylko tymczasowo.
+* Następnie użyj **Kalkulatora bolusa**, aby wpisać wszystkie węglowodany posiłku, ale nie zatwierdzaj od razu proponowanych wartości. Jeśli ma być podany bolus podobny do wielofalowego, zmniejsz dawkę insuliny. Zależnie od posiłku algorytm musi teraz podać dodatkowe SMB lub wyższe bazy tymczasowe, aby przeciwdziałać wzrostowi glikemii. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
 
 * Nie używaj bolusa przedłużonego ani wielofalowego bezpośrednio na pompie. Sterownik ich nie obsługuje (zobacz [Zanim zaczniesz](#combov2-before-you-begin)); jeśli mimo to podasz bolus wielofalowy na pompie, **AAPS** zapisze go z historii pompy jako zwykły bolus plus bolus przedłużony, więc zostanie uwzględniony w IOB. Bolus przedłużony nie działa w zamkniętej pętli (szczegóły na [tej stronie](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)).
 
