@@ -2,49 +2,49 @@
 
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Η εφαρμογή AAPS (ένα αρχείο apk) δεν είναι διαθέσιμη για λήψη, λόγω των κανονισμών για τις ιατρικές συσκευές. Είναι νόμιμο να κάνετε build της εφαρμογής για δική σας χρήση, αλλά δεν πρέπει να δίνετε αντίγραφο σε άλλους!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Δείτε τη σελίδα [Συχνές Ερωτήσεις](../UsefulLinks/FAQ.md) για λεπτομέρειες.
 
 ---
 
-Three methods are available to build the AAPS app:
+Υπάρχουν τρεις τρόποι για να δημιουργήσετε την εφαρμογή AAPS:
 
-### Build with a browser (recommended)
+### Δημιουργία μέσω browser (συνιστάται)
 
-You can build the app with your smartphone using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Μπορείτε να δημιουργήσετε την εφαρμογή από το smartphone σας με το GitHub Actions. Από τηλέφωνο Android, η σελίδα ρύθμισης του [AAPS Builder](#aaps-builder) σας καθοδηγεί βήμα βήμα, και ξεκινάτε κάθε build μόνοι σας. Από υπολογιστή ή iPhone, μπορείτε επίσης να κάνετε build με ένα fork και να αποθηκεύσετε την εφαρμογή στο Google Drive σας.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Ακολουθήστε αυτές τις οδηγίες.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Δημιουργία με το Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Μπορείτε να δημιουργήσετε την εφαρμογή στον υπολογιστή σας με το Android Studio. Παλιότερα αυτός ήταν ο μόνος τρόπος για build, σήμερα το Android Studio το χρησιμοποιούν κυρίως προγραμματιστές που θέλουν να κάνουν αλλαγές στον κώδικα.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Ακολουθήστε αυτές τις οδηγίες.](./ComputerBuild.md)**
+
+----
+
+### Δημιουργία από τη γραμμή εντολών
+
+Αυτή η επιλογή είναι για όσους προτιμούν να κάνουν build το AAPS τοπικά από τη γραμμή εντολών, χωρίς να εγκαταστήσουν το Android Studio.
+
+**[Ακολουθήστε αυτές τις οδηγίες.](./CLIBuild.md)**
 
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Αν το build αποτύχει
 
-Each build method has its own troubleshooting section:
+Κάθε τρόπος build έχει τη δική του ενότητα αντιμετώπισης προβλημάτων:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Αντιμετώπιση προβλημάτων του AAPS Builder](#aaps-builder-troubleshooting)
+* **Δημιουργία μέσω browser** από υπολογιστή ή iPhone: [Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων](#aaps-ci-troubleshooting)
+* **Android Studio**: [Αντιμετώπιση προβλημάτων του Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Χάσατε το keystore σας ή τον κωδικό του; Δείτε [Επανεγκατάσταση του AAPS με νέο keystore](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Αν η εφαρμογή δημιουργήθηκε αλλά δεν εγκαθίσταται στο τηλέφωνό σας, δείτε [Μεταφορά και εγκατάσταση του AAPS](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Αν το πρόβλημά σας δεν αναφέρεται εδώ, δείτε [Πού μπορώ να βρω βοήθεια;](../GettingHelp/WhereCanIGetHelp.md).
