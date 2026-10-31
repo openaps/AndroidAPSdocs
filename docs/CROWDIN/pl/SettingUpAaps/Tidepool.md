@@ -1,10 +1,10 @@
 # Tidepool
 
-Tidepool to narzędzie innej firmy. Zbiera dane o glikemii, insulinie i węglowodanach (oraz notatki, które dodajesz do zabiegów leczenia). Możesz je analizować i udostępniać swojemu zespołowi diabetologicznemu. Od wersji AAPS 3.2 Tidepool może zastąpić Nightscout przy spełnieniu części Zadania 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool to narzędzie innej firmy. Zbiera dane o glikemii, insulinie i węglowodanach (oraz notatki, które dodajesz do zabiegów leczenia). Możesz je analizować i udostępniać swojemu zespołowi diabetologicznemu. Od wersji AAPS 3.2 Tidepool może zastąpić Nightscout przy spełnieniu części Zadania 1. Może też być używany razem z Nightscout jako dodatkowa platforma raportów, która dobrze współpracuje z placówkami medycznymi. Może to być dobra opcja dla dzieci używających AAPS, które chcą mieć zdalne monitorowanie i sterowanie z Nightscout, ale też platformę raportów, z którą zespół diabetologiczny czuje się pewniej.
 
-Ważne: Tidepool służy tylko do raportów. It is NOT a real-time follow app. Jeśli potrzebujesz obserwujących poza głównym telefonem z AAPS, musisz także skonfigurować Nightscout.
+Ważne: Tidepool służy tylko do raportów. NIE jest to aplikacja do obserwowania danych w czasie rzeczywistym. Jeśli potrzebujesz obserwujących poza głównym telefonem z AAPS, musisz także skonfigurować Nightscout.
 
-Uwaga: organizacja Tidepool wprowadziła na rynek produkt iOS Loop z zatwierdzeniem FDA. This effort has nothing to do with their data reporting platform or AAPS.
+Uwaga: organizacja Tidepool wprowadziła na rynek produkt iOS Loop z zatwierdzeniem FDA. Nie ma to nic wspólnego z ich platformą raportów danych ani z AAPS.
 
 
 ## Krok 1 – Załóż konto Tidepool
@@ -58,7 +58,7 @@ Przyciski na dole ekranu Tidepool:
 
 - „**Prześlij teraz**” — prześlij nowe dane od razu, bez czekania na następne automatyczne przesłanie.
 - „**Pełna synchronizacja**” — prześlij ponownie wszystkie dane zapisane w **AAPS**.
-- „**Wyczyść wszystkie dane**” — usuń **wszystkie** dane, które **AAPS** przesłało na twoje konto Tidepool. Tego nie można cofnąć. Używaj tego tylko do usunięcia błędnych lub zdublowanych danych, a potem uruchom „**Pełna synchronizacja**”, aby ponownie przesłać swoje dane.
+- „**Wyczyść wszystkie dane**” — usuń **wszystkie** dane, które **AAPS** przesłał na twoje konto Tidepool. Tego nie można cofnąć. Używaj tego tylko do usunięcia błędnych lub zdublowanych danych, a potem uruchom „**Pełna synchronizacja**”, aby ponownie przesłać swoje dane.
 - „**Wyczyść log**” — wyczyść log widoczny na ekranie Tidepool.
 
 ![Ekran Tidepool i jego przyciski](../images/v4/Tidepool/tidepool_menu.png)
