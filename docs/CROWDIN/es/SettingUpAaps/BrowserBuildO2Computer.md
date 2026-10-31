@@ -1,19 +1,19 @@
 (aaps-ci-option2-computer)=
 
-# Option 2 · Computer – Upload your existing keystore
+# Opción 2 · Ordenador – Subir tu almacén de claves existente
 
 ```{note}
-[Option 2](BrowserBuildO2.md) (upload an existing keystore) on a **computer** (Windows / Mac / Linux).
+[Opción 2](BrowserBuildO2.md) (subir un almacén de claves existente) en un **ordenador** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. Descargar el archivo de preparación
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and upload the keystore
+## 2. Iniciar un servidor local y subir el almacén de claves
 
-Use a computer (supports Windows/Mac/Linux)
+Usar un ordenador (Windows/Mac/Linux)
 
 <!--crowdin: exclude-->
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -28,23 +28,23 @@ Use a computer (supports Windows/Mac/Linux)
   </div>
 </div>
 
-Install Simple Web Server</br></br> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store. If your browser asks whether to open the store app, allow it.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br></br>
+Instala Simple Web Server</br></br> Si usas Windows o Mac, puedes instalarlo desde Microsoft Store o desde Mac App Store. Si tu navegador pregunta si quieres abrir la app de la tienda, permítelo.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br></br>
 
-Example on Mac:
+Ejemplo en Mac:
 
-- get → install → open</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
+- get → install → open (obtener → instalar → abrir)</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
 
-- Click Get Started</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
+- Haz clic en Get Started</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
 
-- Click New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
+- Haz clic en New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
 
-- In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
+- En Folder Path, selecciona la carpeta donde está aaps-ci-preparation.html y luego haz clic en Create Server.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
 
-- Seeing this screen means the server has been started.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
+- Si ves esta pantalla, el servidor ya está iniciado.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
 
-- Do not close Simple Web Server. Please switch to your browser and open</br></br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
+- No cierres Simple Web Server. Cambia a tu navegador y abre</br></br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
 
-- For the subsequent steps, please refer to the video below, starting from 2 minute 18 seconds.</br></br>
+- Para los siguientes pasos, consulta el vídeo de abajo a partir del minuto 2:18.</br></br>
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
     <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
@@ -60,4 +60,4 @@ Example on Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Siguiente: [Paso 3 – Autorizar Google Drive](BrowserBuildGoogleDrive.md) →**
