@@ -22,7 +22,7 @@ Cuando haya una nueva actualización disponible, recibirás una notificación co
 
 Si no actualizas antes de la fecha de caducidad, **AAPS** pasará a Lazo abierto.
 
-Consulta [Fin de soporte](EndOfLife.md) para ver las fechas de fin de las versiones de AAPS.
+Consulta [Fin de vida útil](EndOfLife.md) para ver las fechas de fin de las versiones de AAPS.
 
 **No ignores la notificación.** Las nuevas versiones de **AAPS** traen correcciones de seguridad importantes. Por eso, todos los usuarios de **AAPS** deben actualizar a la última versión lo antes posible. Es un esfuerzo para mejorar la seguridad de cada usuario de **AAPS** y de la comunidad DIY. Gracias por tu comprensión.
 
@@ -233,7 +233,7 @@ Fecha de lanzamiento: 31-12-2025
 ### Nuevas funciones
 * Modo de funcionamiento @MilosKozak
   * Mostrar el [historial del estado del lazo](#AapsScreens-running-mode) en las pestañas de tratamientos
-  * Mostrar y permitir cambiar el [estado del lazo desde AAPSClient](#RemoteControl_aapsclient).<br>NOTA: necesita el ajuste [NSClient > Sincronización > Recibir modo de ejecución desde NS](#Preferences-nsclient-synchronization)
+  * Mostrar y permitir cambiar el [estado del lazo desde AAPSClient](#RemoteControl_aapsclient).<br>NOTA: necesita el ajuste [NSClient > Sincronización > Recibir modo de funcionamiento desde NS](#Preferences-nsclient-synchronization)
 * [Nuevos MCG](../Getting-Started/CompatiblesCgms.md): Glunovo, Intelligo, Sinocare
 * Soporte de [Rotación del sitio](#Aapsscreens-site-rotation) @Philoul
 * Nueva [acción de automatización](#automations-automation-action): activar o desactivar los SMB @MilosKozak
@@ -512,11 +512,11 @@ Fecha de lanzamiento: 23-10-2023
 ### Notas importantes
 
 - NS 15 es necesario
-- Al utilizar websockets en el plugin NS v3,  los tratamientos introducidos a través de NS UI (botón más) y otras aplicaciones que utilizan la API v1, no se envían a AAPS. Esto se solucionará en futuras versiones de NS. Usa siempre el mismo cliente (v1 o v3) en AAPS y en AAPSClient hasta que NS pase internamente del todo a v3. Lo mismo es válido para AAPS y el propio AAPSClient.
+- Al usar websockets en el complemento NS v3, los tratamientos introducidos desde la NS UI (botón más) y desde otras aplicaciones que usan la API v1 no se envían a AAPS. Esto se solucionará en futuras versiones de NS. Usa siempre el mismo cliente (v1 o v3) en AAPS y en AAPSClient hasta que NS pase internamente del todo a v3. Lo mismo es válido para AAPS y el propio AAPSClient.
 - Los websockets en el complemento v3 funcionan de forma parecida al complemento v1. Sin websockets habilitados, AAPS programa regularmente descargas desde NS, lo que debería reducir el consumo de batería, porque NS no está permanentemente conectado. Por otro lado, esto significa retrasos en el intercambio de datos. ¡Lee [aquí](#Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) los comentarios importantes del equipo de desarrollo antes de usarla!
 - Si estás usando xDrip como fuente de MCG, debes seleccionarlo de nuevo después de la actualización, debido a cambios internos.
 - Tidepool puede utilizarse como sustituto de NS para superar el primer objetivo.
-- Si envías datos a xDrip+, debes configurar el plugin de sincronización de xDrip+. Para recibir los datos de glucosa de AAPS en xDrip, debes seleccionar “xDrip+ Sync Follower” como fuente
+- Si envías datos a xDrip+, debes configurar el complemento de sincronización de xDrip+. Para recibir los datos de glucosa de AAPS en xDrip, debes seleccionar “xDrip+ Sync Follower” como fuente
 - Si quieres cambiar al controlador ComboV2, debes desinstalar Ruffy y emparejar de nuevo la bomba con AAPS
 - Para utilizar el complemento ISFDinámico, debes iniciar el Objetivo 11 (todos los anteriores deben estar en estado terminado para permitir el inicio del  objetivo 11)
 
@@ -529,7 +529,7 @@ Fecha de lanzamiento: 23-10-2023
 - Soporte para DanaI coreana @MilosKozak
 - Soporte al MCG Glunovo @christinadamianou
 - Soporte a Dexcom G7 @MilosKozak @rICTx-T1D @khskekec
-- Plugin NSClient v3 @MilosKozak
+- Complemento NSClient v3 @MilosKozak
 - Soporte para Tidepool @MilosKozak
 - Complemento de suavizado @MilosKozak, @justmara, Suavizado exponencial @nichi (Tsunami), Suavizado promedio @jbr7rr
 - Algoritmo ISF Dinámico @Chris Wilson, @tim2000s
