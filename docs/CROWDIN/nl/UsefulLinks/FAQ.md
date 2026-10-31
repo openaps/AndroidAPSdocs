@@ -20,7 +20,7 @@ Dat is waarom een kant-en-klare apk niet verspreid mag worden.
 
 Begin met [Voorbereiden om te starten met AAPS](../Getting-Started/PreparingForAaps.md): daar wordt alles hieronder stap voor stap en uitgebreider uitgelegd.
 
-Ten eerste moet je alle **fysieke onderdelen van een closed loop** verzamelen:
+Ten eerste moet je alle **fysieke onderdelen van een gesloten loop** verzamelen:
 
 * Een [ondersteunde insulinepomp](../Getting-Started/CompatiblePumps.md), 
 * een [Android-smartphone](../Getting-Started/Phones.md) (Apple iOS wordt niet ondersteund door AAPS - kijk eventueel naar [iOS Loop](https://loopkit.github.io/loopdocs/)) en
@@ -28,7 +28,7 @@ Ten eerste moet je alle **fysieke onderdelen van een closed loop** verzamelen:
 
 Ten tweede moet je je **software-onderdelen instellen**: [AAPS](../SettingUpAaps/BuildingAaps.md), de [CGM/FGM-bron](../Getting-Started/CompatiblesCgms.md) en een [rapportageserver](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Ten derde moet je het **OpenAPS reference design leren en begrijpen om je behandelfactoren te controleren**. Het basisprincipe van een closed loop is dat je [basaalstand en koolhydraatratio](../SettingUpAaps/YourAapsProfile.md) kloppen. Alle aanbevelingen gaan ervan uit dat je basaalbehoefte klopt. Pieken of dalen die je ziet, komen dan door andere factoren, die daarom een eenmalige aanpassing nodig hebben (sport, stress enz.). De aanpassingen die de closed loop mag doen, zijn voor de veiligheid beperkt (zie de maximaal toegestane tijdelijke basaalstand in het [OpenAPS Reference Design](https://openaps.org/reference-design/)). Je wilt de toegestane dosering dus niet verspillen aan het corrigeren van een verkeerde basaalstand. Als de loop bijvoorbeeld vaak een lage tijdelijke basaalstand instelt vlak voor een maaltijd, dan moet je basaal waarschijnlijk worden aangepast. Je kunt [Autotune](#autotune-how-autotune-calculates-adjustments) gebruiken om een grote hoeveelheid gegevens te laten bekijken. Het stelt dan voor of en hoe je basaal en/of ISF moet aanpassen, en ook of je koolhydraatratio moet veranderen. Of je kunt je basaal testen en instellen op de [ouderwetse manier](https://integrateddiabetes.com/basal-testing/).
+Ten derde moet je het **OpenAPS reference design leren en begrijpen om je behandelfactoren te controleren**. Het basisprincipe van een gesloten loop is dat je [basaalstand en koolhydraatratio](../SettingUpAaps/YourAapsProfile.md) kloppen. Alle aanbevelingen gaan ervan uit dat je basaalbehoefte klopt. Pieken of dalen die je ziet, komen dan door andere factoren, die daarom een eenmalige aanpassing nodig hebben (sport, stress enz.). De aanpassingen die de gesloten loop mag doen, zijn voor de veiligheid beperkt (zie de maximaal toegestane tijdelijke basaalstand in het [OpenAPS Reference Design](https://openaps.org/reference-design/)). Je wilt de toegestane dosering dus niet verspillen aan het corrigeren van een verkeerde basaalstand. Als de loop bijvoorbeeld vaak een lage tijdelijke basaalstand instelt vlak voor een maaltijd, dan moet je basaal waarschijnlijk worden aangepast. Je kunt [Autotune](#autotune-how-autotune-calculates-adjustments) gebruiken om een grote hoeveelheid gegevens te laten bekijken. Het stelt dan voor of en hoe je basaal en/of ISF moet aanpassen, en ook of je koolhydraatratio moet veranderen. Of je kunt je basaal testen en instellen op de [ouderwetse manier](https://integrateddiabetes.com/basal-testing/).
 
 ### Wat moet ik in de praktijk weten over loopen?
 
@@ -122,7 +122,7 @@ Controleer de [verbindingsinstellingen van NSClient](#Preferences-nsclient): **M
 
 #### Waarom zegt AAPS 'SMB altijd en na koolhydraten gedeactiveerd doordat de gekozen BG bron geen geavanceerde filtering ondersteunt'?
 
-**SMB altijd toestaan** en **Activeren SMB na invoer van koolhydraten** kun je alleen gebruiken met een [betrouwbare BG-bron](#GettingStarted-TrustedBGSource): een sensor en CGM-app die **AAPS** kunnen vertellen van welke sensor de metingen komen. Met elke andere BG-bron zet **AAPS** deze twee opties uit en toont het deze melding. Bekijk de lijst met betrouwbare bronnen en zorg, als je sensor erin staat, dat je een van de CGM-apps gebruikt die erbij genoemd worden. Zie ook [Filteren van bloed glucose waardes](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**SMB altijd toestaan** en **SMB toestaan na koolhydraten** kun je alleen gebruiken met een [betrouwbare BG-bron](#GettingStarted-TrustedBGSource): een sensor en CGM-app die **AAPS** kunnen vertellen van welke sensor de metingen komen. Met elke andere BG-bron zet **AAPS** deze twee opties uit en toont het deze melding. Bekijk de lijst met betrouwbare bronnen en zorg, als je sensor erin staat, dat je een van de CGM-apps gebruikt die erbij genoemd worden. Zie ook [Vloeiend maken van bloedglucosewaarden](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Pomp
 
@@ -169,7 +169,7 @@ Afhankelijk van je werk kun je ervoor kiezen om op werkdagen andere behandelfact
 
 #### Sporten
 
-Je moet je oude sportgewoontes van vóór de loop aanpassen. Als je net als vroeger gewoon een of meer sportkoolhydraten neemt, ziet het closed loop systeem die en corrigeert het ze.
+Je moet je oude sportgewoontes van vóór de loop aanpassen. Als je net als vroeger gewoon een of meer sportkoolhydraten neemt, ziet het gesloten loop-systeem die en corrigeert het ze.
 
 Je hebt dan meer koolhydraten aan boord, maar tegelijk werkt de loop dat tegen en geeft hij insuline af.
 
@@ -191,9 +191,9 @@ Je kunt de pomp loskoppelen voor wat 'vrijheid', maar je moet AAPS wel vertellen
 
 #### Alcohol drinken
 
-Alcohol drinken is riskant in closed loop, omdat het algoritme de invloed van alcohol op je BG niet goed kan voorspellen. Je moet zelf uitzoeken hoe je hiermee omgaat, met de volgende functies in AAPS:
+Alcohol drinken is riskant in gesloten loop, omdat het algoritme de invloed van alcohol op je BG niet goed kan voorspellen. Je moet zelf uitzoeken hoe je hiermee omgaat, met de volgende functies in AAPS:
 
-* De closed loop uitschakelen en je diabetes handmatig behandelen, of
+* De gesloten loop uitschakelen en je diabetes handmatig behandelen, of
 * een hoog tijdelijk streefdoel instellen en UAM uitschakelen, zodat de loop de IOB niet verhoogt door een onaangekondigde maaltijd, of
 * doe een [profiel wissel](#ProfileSwitch-change-percentage) naar duidelijk minder dan 100% 
 
@@ -266,13 +266,13 @@ In Android Studio: Zorg dat "Gradle" klaar is met synchroniseren en indexeren na
 
 #### Waarschuwing: Dev versie actief. Closed loop gedeactiveerd
 
-**AAPS** toont deze melding als je een ontwikkelversie (dev) gebruikt zonder engineering modus: in een dev versie werkt de closed loop alleen in engineering modus.
+**AAPS** toont deze melding als je een ontwikkelversie (dev) gebruikt zonder engineering modus: in een dev versie werkt de gesloten loop alleen in engineering modus.
 
 De dev versie is bedoeld om te testen, niet om echt mee te loopen: lees [Development branch (ontwikkelversie)](../AdvancedOptions/DevBranch.md) voordat je verder gaat.
 
 Zo zet je de engineering modus aan:
 
-1. Zet een bestand met de naam `engineering_mode` in de submap `extra` van je AAPS map (de map die je in de setup wizard hebt gekozen, meestal `AAPS/extra`). Elk bestand is goed, zolang het de juiste naam heeft.
+1. Zet een bestand met de naam `engineering_mode` in de submap `extra` van je AAPS map (de map die je in de Setup Wizard hebt gekozen, meestal `AAPS/extra`). Elk bestand is goed, zolang het de juiste naam heeft.
 2. Start **AAPS** opnieuw, zodat het het bestand vindt.
 
 Tip: Maak een kopie van een bestaand logbestand en hernoem het naar "engineering_mode" (let op: geen bestandsextensie!).
@@ -308,7 +308,7 @@ Dit reset alleen het hoofdwachtwoord. Een wachtwoord of pincode voor instellinge
 
 #### Waar vind ik de instellingenbestanden?
 
-Instellingenbestanden worden opgeslagen in de submap `preferences` van de AAPS map die je in de [setup wizard](#SetupWizard-StoragePermission) hebt gekozen (bijvoorbeeld `/internal storage/AAPS/preferences`). Heb je een cloudmap (Google Drive) ingesteld, dan kunnen je exports ook daar worden opgeslagen. Zie [Back-ups maken en terugzetten](../Maintenance/ExportImportSettings.md).
+Instellingenbestanden worden opgeslagen in de submap `preferences` van de AAPS map die je in de [Setup Wizard](#SetupWizard-StoragePermission) hebt gekozen (bijvoorbeeld `/internal storage/AAPS/preferences`). Heb je een cloudmap (Google Drive) ingesteld, dan kunnen je exports ook daar worden opgeslagen. Zie [Back-ups maken en terugzetten](../Maintenance/ExportImportSettings.md).
 
 WAARSCHUWING: Zorg dat je je wachtwoord niet kwijtraakt, want zonder dit wachtwoord kun je een versleuteld instellingenbestand niet importeren!
 
@@ -397,11 +397,11 @@ Dat komt door de [beveiligde modus](#client-master-control-hardened-mode). Zolan
 
 ### Alarmen en waarschuwingen
 
-#### Ik heb een rood waarschuwingsteken (rode driehoek) / AAPS zet de closed loop niet aan / De loop blijft in LGS / Ik had een gele driehoek
+#### Ik heb een rood waarschuwingsteken (rode driehoek) / AAPS zet de gesloten loop niet aan / De loop blijft in LGS / Ik had een gele driehoek
 
 Het rode waarschuwingsteken op de snelkoppeling van de BG-bron is een veiligheidsfunctie in AAPS. Zie [BG-waarschuwingsteken](#aaps-screens-bg-warning-sign) voor de volledige uitleg.
 
-Een rood waarschuwingsteken op de snelkoppeling van de BG-bron in de onderste balk (de rode driehoek van oudere versies) betekent dat je dubbele BG-waarden hebt en dat AAPS de delta's niet precies kan berekenen. Een closed loop wordt overgezet naar de modus **Stop bij laag**: die verlaagt of stopt nog steeds je basaal om je tegen lage waarden te beschermen, maar geeft geen correctie-insuline. Je moet van elke dubbele waarde één BG verwijderen om de waarschuwing weg te krijgen. Tik op de snelkoppeling om je [BG-bronscherm](#aaps-screens-bg-source) te openen: de dubbele waarde is rood gemarkeerd. Druk lang op een regel die je wilt verwijderen, vink van elke dubbele regel er één aan en tik op het prullenbak-pictogram. Mogelijk moet je de AAPS database resetten als er te veel dubbele BG-waarden zijn. In dat geval raak je ook de statistieken, IOB, COB en het gekozen profiel kwijt.
+Een rood waarschuwingsteken op de snelkoppeling van de BG-bron in de onderste balk (de rode driehoek van oudere versies) betekent dat je dubbele BG-waarden hebt en dat AAPS de delta's niet precies kan berekenen. Een gesloten loop wordt overgezet naar de modus **Stop bij laag**: die verlaagt of stopt nog steeds je basaal om je tegen lage waarden te beschermen, maar geeft geen correctie-insuline. Je moet van elke dubbele waarde één BG verwijderen om de waarschuwing weg te krijgen. Tik op de snelkoppeling om je [BG-bronscherm](#aaps-screens-bg-source) te openen: de dubbele waarde is rood gemarkeerd. Druk lang op een regel die je wilt verwijderen, vink van elke dubbele regel er één aan en tik op het prullenbak-pictogram. Mogelijk moet je de AAPS database resetten als er te veel dubbele BG-waarden zijn. In dat geval raak je ook de statistieken, IOB, COB en het gekozen profiel kwijt.
 
 Als de waarschuwing weg is, gaat AAPS niet vanzelf terug naar **Closed loop**. Druk op het loop-pictogram op het hoofdscherm en kies weer **Closed loop**.
 
