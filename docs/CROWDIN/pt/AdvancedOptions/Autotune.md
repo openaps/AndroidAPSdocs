@@ -2,7 +2,7 @@
 
 O plugin Autoajuste é uma implementação no AAPS do algoritmo autotune do OpenAPS. Analisa o seu histórico recente do AAPS para sugerir ajustes às suas taxas basais, ao FSI e ao rácio de hidratos de carbono (IHC).
 
-O plugin Autoajuste está disponível nas versões do AAPS desde a [3.4](#version3400), mas está oculto por predefinição.
+Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Como o Autoajuste calcula os ajustes
@@ -129,7 +129,7 @@ A função **Trocar perfil automaticamente** só está disponível no modo Dev/E
 - **Usar IHC/FSI circadianos** (predefinição: desativado): veja [Perfil de IHC ou FSI circadiano](#autotune-circadian-ic-or-isf-profile) abaixo.
 
 (autotune-other-settings)=
-### Other settings
+### Outras definições
 
 - O Autoajuste também usa o rácio máximo e o rácio mínimo do Autosens para limitar a variação. Pode ver e ajustar estes valores em [**Definições** > **Definições de absorção** > **Definições avançadas**](../SettingUpAaps/Preferences.md) (**Autosens máx.** e **Autosens mín.**).
 
