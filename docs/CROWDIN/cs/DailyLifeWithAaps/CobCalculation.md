@@ -2,7 +2,7 @@
 
 ## Jak AAPS počítá hodnotu COB?
 
-Když uživatel zadá sacharidy jako součást jídla nebo jako korekční sacharidy, **AAPS** je přičte k aktuálním aktivním sacharidům (**COB**). **AAPS** pak počítá vstřebávání sacharidů uživatele podle pozorovaných odchylek jeho **glykémie**. Rychlost vstřebávání závisí na faktoru citlivosti na sacharidy (**„CSF**“). Nejde o nastavení v **profilu** uživatele. **AAPS** ho počítá z nastavení **ISF/I:C** a udává, o kolik mg/dl zvýší 1 g sacharidů **glykémii** uživatele.
+Když uživatel zadá sacharidy jako součást jídla nebo jako korekční sacharidy, **AAPS** je přičte k aktuálním aktivním sacharidům (**COB**). **AAPS** pak počítá vstřebávání sacharidů uživatele podle pozorovaných odchylek jeho **glykémie**. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). Nejde o nastavení v **profilu** uživatele. **AAPS** ho počítá z nastavení **ISF/I:C** a udává, o kolik mg/dl zvýší 1 g sacharidů **glykémii** uživatele.
 
 ## Faktor citlivosti na sacharidy
 
@@ -87,7 +87,7 @@ Obrazovku **Historie ošetření** lze použít k opravě chybného záznamu sac
 ![Smazání záznamu sacharidů z historie ošetření](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
 1. Zkontrolujte a zapamatujte si aktuální **COB** a **IOB** na hlavní obrazovce **AAPS**.
-2. Otevřete **Historii ošetření** (postranní nabídka → *Historie ošetření*), karta **Sacharidy a bolusy**. Podle typu pumpy se sacharidy mohou zobrazit společně s inzulínem na jednom řádku, nebo jako samostatný záznam (např. u Dana RS).
+2. Otevřete **Historii ošetření** (postranní nabídka → *Historie ošetření*), karta **Sacharidy a bolusy**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
 3. **Dlouze stiskněte** chybný záznam sacharidů – seznam se přepne do **režimu výběru** se zaškrtávacím políčkem na každém řádku a záznam bude zaškrtnutý (označeno **1** výše). Zaškrtněte i všechny další záznamy, které chcete odstranit.
 4. Klepněte na ikonu **🗑 Smazat** v horní liště (označeno **2**) a potvrďte – potvrzovací dialog přesně ukáže, co se odstraní.
 5. Zkontrolujte, že se sacharidy úspěšně odstranily, tak, že znovu zkontrolujete **COB** na hlavní obrazovce **AAPS**.
