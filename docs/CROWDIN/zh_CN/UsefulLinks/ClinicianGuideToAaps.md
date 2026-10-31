@@ -1,8 +1,12 @@
 # 致临床医生——AAPS的一般介绍和使用指南
 
+```{note}
+This page is a high-level introduction for clinicians. It was last reviewed in June 2026. AAPS develops continuously, so for the most accurate and up-to-date detail always refer to the [main AAPS documentation](../index.md).
+```
+
 本页面专为两类用户设计，对开源人工胰腺技术（如AAPS）感兴趣的临床医师，以及需向医师分享此类信息的患者。
 
-本指南包含关于DIY闭环系统的高阶信息，特别是AAPS的工作原理。如需了解这些主题的更多详细信息，请查阅[在线版AAPS完整文档](../index.md)。如有疑问，可向患者进一步了解详情，或随时联系社区咨询。（如未使用社交媒体（如[Twitter](https://twitter.com/kozakmilos)或Facebook），欢迎发送邮件至developers@AndroidAPS.org） [您也可在此查阅部分最新研究及疗效相关数据](https://openaps.org/outcomes/)。
+本指南包含关于DIY闭环系统的高阶信息，特别是AAPS的工作原理。如需了解这些主题的更多详细信息，请查阅[在线版AAPS完整文档](../index.md)。如有疑问，可向患者进一步了解详情，或随时联系社区咨询。 (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@aaps.app). [您也可在此查阅部分最新研究及疗效相关数据](https://openaps.org/outcomes/)。
 
 ## 构建DIY闭环系统的步骤：
 
@@ -22,7 +26,7 @@
 
 ## 数据采集方式：
 
-在AAPS中，Android设备运行一个特殊的应用程序进行数学计算，该设备与支持的泵通过蓝牙通信。 AAPS可以通过WiFi或移动数据与其他设备和云端通信，以收集额外信息，并向患者、护理人员和亲人报告其正在做什么以及为什么这样做。
+在AAPS中，Android设备运行一个特殊的应用程序进行数学计算，该设备与支持的泵通过蓝牙通信。 AAPS can communicate with other devices and to the cloud via Wi-Fi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
 
 Android设备需要：
 
@@ -48,6 +52,8 @@ AAPS使用与OpenAPS相同的核心算法和功能集。算法会做出多个预
 ### 以下是紫色预测线的示例，以及它们可能如何不同：
 
 ![Purple prediction line examples](../images/Prediction_lines.jpg)
+
+(clinicianguide-dosing-scenarios)=
 
 ### 以下是影响胰岛素输送所需调整的不同时间段的示例：
 
@@ -81,9 +87,9 @@ AAPS使用与OpenAPS相同的核心算法和功能集。算法会做出多个预
 
 患者最重要的调整原则是：​每次仅修改一个参数，并观察2-3天效果后，再决定是否调整其他设置（除非明显恶化，此时应立即恢复至先前参数）。人类倾向于一次性调整所有参数，但这样做可能导致后续设置更加不理想，且难以恢复到已知的良好状态。
 
-调整设置最强大的工具之一是基础率、胰岛素敏感系数和碳水比率的自动计算工具。 ​这被称为“[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”​​。它的设计初衷是独立/手动运行，通过数据引导您或患者逐步调整设置。在社群中，最佳实践是在尝试手动调整设置之前，先运行（或查看）Autotune报告。在AAPS中，Autotune目前是作为"一次性工具"运行的，不过开发团队也正在努力将其直接集成到AAPS系统内。由于这些参数既是标准泵胰岛素输注的前提条件，也是闭环胰岛素输注的基础，因此讨论Autotune结果并调整这些参数，自然成为与临床医生沟通的重要环节。
+调整设置最强大的工具之一是基础率、胰岛素敏感系数和碳水比率的自动计算工具。 This is called “[Autotune](#autotune-how-autotune-calculates-adjustments)”. 它的设计初衷是独立/手动运行，通过数据引导您或患者逐步调整设置。在社群中，最佳实践是在尝试手动调整设置之前，先运行（或查看）Autotune报告。 Autotune is built into AAPS as a plugin (**Configuration** → **General** → **Autotune**); see [Autotune](../AdvancedOptions/Autotune.md). It can be run on demand or automatically. 由于这些参数既是标准泵胰岛素输注的前提条件，也是闭环胰岛素输注的基础，因此讨论Autotune结果并调整这些参数，自然成为与临床医生沟通的重要环节。
 
-此外，人类行为（从手动糖尿病管理模式中学到的）往往会影响治疗效果，即便是使用DIY闭环系统时也是如此。例如，如果预测血糖将走低，且AAPS系统已在血糖下降过程中减少了胰岛素输注，那么仅需少量碳水化合物（如3-4克）即可将血糖从70 mg/dl（3.9 mmol）提升上来。然而，在许多情况下，患者可能会选择摄入更多碳水化合物进行治疗（例如坚持"15法则"），这将导致血糖更快上升——既因额外的葡萄糖摄入，也因在低血糖发生前胰岛素输注量已被调低。
+此外，人类行为（从手动糖尿病管理模式中学到的）往往会影响治疗效果，即便是使用DIY闭环系统时也是如此。 For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dL (3.9 mmol/L). 然而，在许多情况下，患者可能会选择摄入更多碳水化合物进行治疗（例如坚持"15法则"），这将导致血糖更快上升——既因额外的葡萄糖摄入，也因在低血糖发生前胰岛素输注量已被调低。
 
 ## OpenAPS
 
@@ -98,4 +104,4 @@ AAPS使用与OpenAPS相同的核心算法和功能集。算法会做出多个预
 * [完整的AAPS文档](../index.md)
 * [OpenAPS参考设计](https://OpenAPS.org/reference-design/)（该文档阐述了OpenAPS如何实现安全性设计）：https://openaps.org/reference-design/
 * [完整的OpenAPS文档](https://openaps.readthedocs.io/en/latest/index.html) 
-  * [关于OpenAPS计算的更多详情](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+  * See [how AAPS turns predictions into a dosing decision](#aaps-screens-how-predictions-become-a-dosing-decision) in this documentation, or [OpenAPS's determine-basal documentation](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic) for the underlying algorithm in full technical detail
