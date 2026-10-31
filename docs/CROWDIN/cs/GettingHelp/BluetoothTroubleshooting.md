@@ -1,6 +1,6 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# Bluetooth related issues
+# Problémy související s Bluetooth
 
 Někteří uživatelé narazili na problémy s Bluetooth: selhání aktivace Omnipod DASH, potíže s připojením Medtrum Nano a další chyby podů. Mnoho z těchto problémů má příčinu v jedné z následujících situací.
 
