@@ -93,7 +93,7 @@ These buttons open the screen; they do not start anything by themselves. To star
 
 ![The Manage category in the catalog](../images/v4/QuickLaunch/quicklaunch_categories_manage.png) ![The Manage category, continued](../images/v4/QuickLaunch/quicklaunch_categories_manage_2.png)
 
-### Quick Wizard
+### Szybki kalkulator
 
 Each of your **[QuickWizard](QuickWizards.md)** presets can be added as a button, so a recurring meal is one tap from the overview. The button carries the preset's name and shows the carbs/insulin amount; tapping it runs the QuickWizard with its usual confirmation.
 
@@ -105,7 +105,7 @@ Each enabled **[scene](Scenes.md)** can be added as a button. Tapping it asks fo
 
 The tooltip and the catalog show the same summary as **Manage → Scenes**, for example *"3 actions, 2 h → Cooldown"*, where the name after the arrow is the follow-up scene.
 
-### Automation
+### Automatyzacja
 
 Your **user-action** automation rules (the ones you trigger by hand) can be added as buttons. Tapping one asks for confirmation, then runs that rule's actions.
 
@@ -121,7 +121,7 @@ Each of your **[Temp Target](TempTargets.md)** presets can be added as a button 
 ![The dynamic categories — Quick Wizard and Temp Target Presets (Scenes and Automation appear when you have some)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
 (profile-shortcuts)=
-### Profile
+### Profil
 
 Every **[profile](ProfileSwitch-ProfilePercentage.md)** can be added as a **shortcut** that performs a **profile switch** in one tap. Unlike most shortcuts, a Profile shortcut carries its own **percentage** and **duration**, which you set after adding it with the **✏️** button:
 
