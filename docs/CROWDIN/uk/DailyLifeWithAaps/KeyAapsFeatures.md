@@ -8,7 +8,7 @@ The loop status is shown on the main screen with one of the icons below.
 
 See [AAPS screens > The main screen > Loop status](#AapsScreens-loop-status) for information on how to select the loop mode and on the other icons in the picture (4 to 6).
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Статус петлі](../images/Home2020_LoopStatus.png)
 
 (KeyAapsFeatures-OpenLoop)=
 
@@ -267,7 +267,7 @@ With this option enabled, the SMB algorithm can recognize unannounced meals. Thi
 
 Minimum grams of carbs to display a carbs suggestion alert. Eating of additional carbs will be suggested when the reference design detects that it requires carbs. In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
 
-Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+Сповіщення про потрібні вуглеводи за бажанням можна надсилати в Nightscout. Тоді буде показано й розіслано оголошення.
 
 In any case, the required carbs will be displayed in the COB section on your main screen.
 
