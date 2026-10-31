@@ -1,4 +1,4 @@
-# Instellingen (voorkeuren)
+# Instellingen
 
 In **AAPS** v4 vind je de voorkeuren op het scherm **Instellingen**. Er zijn drie manieren om ze te openen — zie [Wijzigingen maken in de configuratie van AAPS](../SettingUpAaps/ChangeAapsConfiguration.md) voor de details:
 
@@ -28,11 +28,12 @@ In **AAPS** v4 vind je de voorkeuren op het scherm **Instellingen**. Er zijn dri
 
 **Taal**
 
-- Nieuwe optie om de standaard ingestelde taal van jouw telefoon te gebruiken (aanbevolen).
+- By default **AAPS** follows the language of the phone (recommended).
 
-- Wil je **AAPS** in een andere taal dan de standaardtaal van je telefoon? Dan kun je kiezen uit veel talen.
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
 - Als je de taal verandert, worden de teksten van **AAPS** meteen in de nieuwe taal getoond. Zie je nog teksten in de oude taal? Start **AAPS** dan opnieuw.
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
 - Instelling verborgen in [eenvoudige modus](#preferences-simple-mode).
 
 (preferences-simple-mode)= **Eenvoudige modus**
@@ -354,7 +355,7 @@ Bijvoorbeeld met de **Virtuele Pomp** heet de sectie **Virtuele pomp instellinge
 Meer informatie vind je op de pagina [Tidepool](../SettingUpAaps/Tidepool.md).
 
 (Preferences-nsclient)=
-## NSClient
+## NSClientV3
 
 ![Instellingen > NSClientV3](../images/preferences/settings_nsclient.png)
 
@@ -410,7 +411,7 @@ De schakelaar "**Client controle toestaan**" staat niet meer in deze instellinge
 - Om alle SSID's te verwijderen, vul je een spatie in dit veld in.
 
 (Preferences-advanced-settings-nsclient)=
-### Geavanceerde instellingen (NSClient)
+### Advanced settings (NSClientV3)
 
 ![Geavanceerde instellingen NSClient](../images/preferences/settings_nsclient_advanced.png)
 
@@ -468,6 +469,10 @@ Selecteer welke locatieservice moet worden gebruikt:
 ![Instellingen > Lokale alarmen](../images/preferences/settings_local_alerts.png)
 
 Instellingen spreken voor zich.
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
 ## Onderhoud instellingen
