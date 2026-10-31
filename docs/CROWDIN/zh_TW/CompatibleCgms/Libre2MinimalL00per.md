@@ -38,7 +38,7 @@ Transferred from [MinimalL00per](https://www.minimallooper.com/post/how-to-setup
 
 - [*Stable*](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) 最新的穩定測試版本。
 
-- **NOTE: new sensors require updated an OOP2 app, for this it is recommended to use at least the latest xDrip release (Stable) version, matching the latest OOP2.**
+- **NOTE: new sensors require an updated OOP2 app, for this it is recommended to use at least the latest xDrip release (Stable) version, matching the latest OOP2.**
 
  
 
@@ -315,7 +315,7 @@ Press the Hamburger menu in the upper left of the xDrip Overview screen and sele
 
 - - **發生了什麼事情?** 當藍牙連線建立時，會創建一個私有共享密鑰，這是允許傳感器與呼叫應用程式/裝置之間進行通信所需的。 LL 應用程式或讀取器在連接期間高機率會創建一個新的私有共享密鑰來進行通信。 This means that after bonding, xDrip is not aware of the new key and will not be able to communicate with the sensor.
 
-  - Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readers in xDrip. 在 LL 應用程式的 Android 權限中，您只需關閉**允許定位**設定。 Once this is done you should be able to use the LL app and xDrip simultaneously. 我建議您不要為 NFC 掃描選擇預設應用程式，而是選擇您想要用於掃描傳感器的應用程式。另外，別忘了，在下一次更換傳感器時，請在新的傳感器初始的暖機 NFC 掃描後強制關閉 LL 應用程式。 After the sensor is configured and receiving readings in xDrip you can then start the LL app again.
+  - Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readings in xDrip. 在 LL 應用程式的 Android 權限中，您只需關閉**允許定位**設定。 Once this is done you should be able to use the LL app and xDrip simultaneously. 我建議您不要為 NFC 掃描選擇預設應用程式，而是選擇您想要用於掃描傳感器的應用程式。另外，別忘了，在下一次更換傳感器時，請在新的傳感器初始的暖機 NFC 掃描後強制關閉 LL 應用程式。 After the sensor is configured and receiving readings in xDrip you can then start the LL app again.
 
 &nbsp;
 
@@ -353,7 +353,7 @@ Press the Hamburger menu in the upper left of the xDrip Overview screen and sele
 
 - **You will still be able to NFC scan readings with the FSL2 Reader (version 1 with updated FW or version 2) WHEN the FSL2 sensor has been started with the FSL Reader FIRST.** The FSL2 standalone reader can still be used to scan readings on the active sensor once it is bonded via Bluetooth to xDrip.
 
-  - 您**必須**用版本的第一次 NFC 掃描來啟動傳感器，以與 FSL 讀取器**首先**進行傳感器暖機。在這一點之後，其他軟體應用程式也能夠從現在啟用的傳感器中獲取 NFC 讀取值。
+  - You **MUST** start the sensor with the very first NFC scan to initiate sensor warmup **with the FSL Reader FIRST**. 在這一點之後，其他軟體應用程式也能夠從現在啟用的傳感器中獲取 NFC 讀取值。
 - 據我了解，FSL2 傳感器（只要它尚未建立或不在嘗試建立連接的狀態）將會每 2 分鐘宣告其存在（和可用性），可在任何能夠掃描藍牙裝置的藍牙設備上可見。無論哪個設備最先對這個廣播訊號回應，就能成並*唯一*能夠連線和讀取傳感器的裝置，因為在NFC掃描連線過程中會創建一個私有共享金鑰，用來解密FSL 2通訊。然後，這個傳感器對於其他沒有這個私有共享金鑰且可能也在嘗試連線的設備將無法使用。看起來 FSL 2 讀取器無論對上哪個「競爭裝置」，都會是最先回應的那一個。
 
 &nbsp;
@@ -375,12 +375,12 @@ Press the Hamburger menu in the upper left of the xDrip Overview screen and sele
 &nbsp;
 
 - **You can't run LL and xDrip in parallel together for Bluetooth readings**. LL將始終嘗試“搶佔”與傳感器的藍牙連接並進行綁定。如果發生這種情況，您將無法在傳感器其餘的使用時間中避免使用LL。所以，同時執行這些應用程式並不一定每次都能正常運作。 As I mention below, you can enable the LL app and do an NFC scan to get the LL reading (if you need to compare, want to retrieve history for yourself or endocrinologist reports) however you should disable it as soon as you have your reading and not try to attempt this within a minute of when xDrip is going to retrieve its Bluetooth reading. 我不確定在這種情況下使用FSL2讀取器如何運作，但我稍後會測試。
-- Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readers in xDrip. 在 LL 應用程式的 Android 權限中，您只需關閉**允許定位**設定。 Once this is done you should be able to use the LL app and xDrip simultaneously. 我建議您不要為 NFC 掃描選擇預設應用程式，而是選擇您想要用於掃描傳感器的應用程式。另外，別忘了，在下一次更換傳感器時，請在新的傳感器初始的暖機 NFC 掃描後強制關閉 LL 應用程式。 After the sensor is configured and receiving readings in xDrip you can then start the LL app again.
+- Several users have reported that the LL app can be restarted after successfully starting the sensor and receiving readings in xDrip. 在 LL 應用程式的 Android 權限中，您只需關閉**允許定位**設定。 Once this is done you should be able to use the LL app and xDrip simultaneously. 我建議您不要為 NFC 掃描選擇預設應用程式，而是選擇您想要用於掃描傳感器的應用程式。另外，別忘了，在下一次更換傳感器時，請在新的傳感器初始的暖機 NFC 掃描後強制關閉 LL 應用程式。 After the sensor is configured and receiving readings in xDrip you can then start the LL app again.
 
 &nbsp;
 
 - **第三方NFC掃描設備仍然可以使用**。 Yes, I listed this as a disadvantage but I also wanted to point out that if something goes wrong with the sensor and LL captures control of it, you can always fall back to placing an NFC scanning device on the sensor to get readings in xDrip. 如果您更喜歡使用第三方NFC掃描設備（如MiaoMiao、Bubble、Blucon）組成的設置，而非直接的藍牙連接，也可以使用此裝置。有時某些手機與原生藍牙傳感器的綁定和資料檢索不良。您可以將這些設備作為備用或正常使用，無論如何您仍然有這個選項。
-- 如果您計劃使用**FSL讀取器**作為NFC掃描設備進行讀取值，您 MUST 在**非常第一個NFC掃描**時啟動FSL2傳感器，並先使用**讀取器**預熱傳感器。
+- If you are planning on using the **FSL Reader** as an NFC scanning device to take readings, you MUST start the FSL2 sensor with the **VERY FIRST NFC scan** to warm up the sensor with the **READER FIRST**.
 
 &nbsp;
 
@@ -425,7 +425,7 @@ Press the Hamburger menu in the upper left of the xDrip Overview screen and sele
 
 - 確保你的手機 NFC 閱讀器在 Android 設定中已啟用。
 - NFC 閱讀器必須與 **ISO 15693** 標籤相容。某些 Cubot 手機使用起來非常困難。
-- 查看手機說明書以識別 NFC 天線位置。 Bring it to the sensor and stay on it for 10 seconds: xDrip NFC reading takes longer than the vendor app or the reader.
+- Look into your phone documentation to identify the NFC antenna position. Bring it to the sensor and stay on it for 10 seconds: xDrip NFC reading takes longer than the vendor app or the reader.
 - Try to close xDrip before scanning the sensor.
 - Make sure no other app wants to read the sensor (you might see a selection with different app choices when scanning: select xDrip but don't move the phone).
 - Try all combinations of xDrip NFC settings *Use faster multi-block reading method* and *Use Any-tag optimized reading method* knowing that NFC scans are usually more reliable with both these options **off**.
