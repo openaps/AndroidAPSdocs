@@ -21,7 +21,7 @@ Vous pouvez utiliser [Autotune](https://autotuneweb.azurewebsites.net/) pour gui
 :class: note
 Les **Profils** varient beaucoup d'une personne à l'autre.
 
-Pour les débits de basal, les facteurs de sensibilité à l'insuline (SI) et les ratios glucides/insuline (G/I), les valeurs absolues et l'évolution des besoins en insuline varient beaucoup d'une personne à l'autre. Ils dépendent de votre biologie, de votre sexe, de votre âge, de votre condition physique, etc., ainsi que de facteurs à court terme comme une maladie ou un sport récent. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Pour les débits de basal, les facteurs de sensibilité à l'insuline (SI) et les ratios glucides/insuline (G/I), les valeurs absolues et l'évolution des besoins en insuline varient beaucoup d'une personne à l'autre. Ils dépendent de votre biologie, de votre sexe, de votre âge, de votre condition physique, etc., ainsi que de facteurs à court terme comme une maladie ou un sport récent. Pour plus de conseils à ce sujet, le livre [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) d'Adam Brown est un excellent livre à lire.
 
 ```
 
@@ -91,7 +91,7 @@ La **figure ci-dessous** montre un exemple de réglage des débits de basal dans
 
 ![Basal rates](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Bien régler vos débits de basal se fait par essais successifs, et doit se faire avec votre équipe diabète.
 
 Il existe des méthodes de test du basal. En général, on observe ses débits de basal et ses besoins en insuline pendant un jeûne <u>intermittent</u> sur 24 heures. Vous devez tester vos débits de basal sur toute la journée, mais il n'est pas conseillé de jeûner 24 h d'affilée. En effet, le corps déclenche alors des mécanismes de compensation, par exemple des hormones. Une méthode conseillée est de jeûner pendant 8 heures, sur 3 jours différents.
 
@@ -131,7 +131,7 @@ The insulin sensitivity factor (sometimes called correction factor) is a measure
 
 **En mmol/l :** Si vous avez un **SI** de 1,5, chaque unité d'insuline fera baisser votre glycémie d'environ 1,5 mmol/l (par exemple de 8 mmol/l à 6,5 mmol/l).
 
-Ces exemples montrent que plus la valeur du **SI** est _petite_, moins vous êtes sensible à l'insuline. Donc si vous baissez votre SI de 40 à 35 (mg/dl) ou de 1,5 à 1,3 (mmol/l), on dit souvent que vous renforcez votre **SI**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Ces exemples montrent que plus la valeur du **SI** est _petite_, moins vous êtes sensible à l'insuline. Donc si vous baissez votre SI de 40 à 35 (mg/dl) ou de 1,5 à 1,3 (mmol/l), on dit souvent que vous renforcez votre **SI**. À l'inverse, augmenter la valeur de **SI** de 40 à 45 (mg/dl) ou de 1,5 à 1,8 (mmol/l) affaiblit votre **SI**.
 
 ### Impact
 
@@ -139,9 +139,9 @@ Un **SI plus bas / plus fort** (par ex. 40 au lieu de 50) signifie que l'insulin
 
 Un **SI plus haut / plus faible** (par ex. 45 au lieu de 35) signifie que l'insuline fait plus baisser votre **glycémie** par unité. Ceci conduit à une correction moins agressive / plus faible de la boucle avec **moins d'insuline**. Si votre **SI** est trop faible (grande valeur), cela peut provoquer une **glycémie** haute.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+**Par exemple :**
+* La **glycémie** est à 190 mg/dl (10,5 mmol/l) et la cible à 100 mg/dl (5,6 mmol/l).
+* Vous voulez donc une correction de `190 - 100 = 90 mg/dL` ou `10.5 - 5.6 = 4.9 mmol/L`
 * Si `SI = 30` -> `90 / 30 = 3` ou `SI = 1,63` -> `4,9 / 1,63 = 3` : 3 unités d'insuline
 * Si `SI = 45` -> `90 / 45 = 2` ou `SI = 2,45` -> `4,9 / 2,45 = 2` : 2 unités d'insuline
 
@@ -193,7 +193,7 @@ Il est courant d'avoir des **G/I** différents selon le moment de la journée, �
 > 
 > Avec le **G/I**, la quantité d'insuline est fixe et la quantité de glucides est variable. (« Combien de grammes de glucides une unité d'insuline peut-elle couvrir ? »)
 > 
-> Example:
+> Par exemple :
 > 
 > Facteur unité de pain (UP = 12 g de glucides) : 2,4 U/UP -> Il vous faut 2,4 unités d'insuline quand vous mangez une unité de pain.
 > 
