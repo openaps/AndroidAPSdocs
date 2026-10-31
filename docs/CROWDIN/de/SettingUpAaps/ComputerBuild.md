@@ -93,7 +93,7 @@ Bitte springe direkt zur [Update-Anleitung](../Maintenance/UpdateToNewVersion.md
 
 Diese Anleitung enthält _beispielhafte_ Screenshots zum Erstellen der **AAPS**-APK-Datei. Weil **Android Studio** - die Software, die wir zum Erstellen der **AAPS**-APK verwenden - regelmäßig aktualisiert wird, sind diese Screenshots vielleicht nicht mit Deiner Installation identisch. Sie sollten trotzdem ausreichen durch den Prozess zu kommen.
 
-Da **Android Studio** auf Windows, Mac OS X und Linux Plattformen läuft, kann es auch kleinere Unterschiede in den Schritten zwischen den verschiedenen Plattformen geben.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
 ### Git installieren
@@ -102,7 +102,7 @@ Da **Android Studio** auf Windows, Mac OS X und Linux Plattformen läuft, kann e
 :class: dropdown
 
 Git ist ein „_Versioning Control System_“ (VCS).
-Git ist ein Programm, das es Dir erlaubt Änderungen im Code zu verfolgen und mit anderen zusammenzuarbeiten. Du wirst Git dazu nutzen, eine Kopie des **AAPS** Quellcodes von der Github Webseite auf Deinem lokalen Computer zu erstellen. Anschließend wirst Du Git auf Deinem Computer verwenden, um die **AAPS** Anwendung (apk) zu erstellen. 
+Git ist ein Programm, das es Dir erlaubt Änderungen im Code zu verfolgen und mit anderen zusammenzuarbeiten. Du wirst Git dazu nutzen, eine Kopie des **AAPS** Quellcodes von der Github Webseite auf Deinem lokalen Computer zu erstellen. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
@@ -141,7 +141,7 @@ Einer der wichtigsten Punkte bei der Installation von Android Studio ist: **Gedu
 
 ```{admonition} Different UI
 :class: warning
-Wichtige Anmerkung: Android Studio hat seine Benutzeroberfläche (UI) seit den letzten Versionen geändert. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. Nutzt Du noch eine ältere Version der Benutzeroberfläche, dann solltest Du Android Studio als Erstes auf das neue Design umstellen. Wie das funktioniert ist [hier beschrieben](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. Nutzt Du noch eine ältere Version der Benutzeroberfläche, dann solltest Du Android Studio als Erstes auf das neue Design umstellen. Wie das funktioniert ist [hier beschrieben](#computerbuild-NewUI).
 ```
 
 Die Android-Studio-Version ist sehr wichtig. Schaue Dir die [Anleitung oben](#Building-APK-recommended-specification-of-computer-for-building-apk-file) an, um die richtige Android Studio Version auszuwählen.
@@ -156,7 +156,7 @@ Installiere Android Studio, indem Du, wie in den folgenden Screenshots gezeigt, 
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-Wenn Du Festplattenplatz sparen möchtest, kannst Du Option Android Virtual Device deaktivieren: Diese wird nicht zum Erstellen von **AAPS** genutzt.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -314,7 +314,7 @@ Wenn die automatische Erkennung funktioniert, wird die **Git**-Version in der N�
 
 If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
 * den Pfad, den Du [vorher](#BuildingAaps-steps-for-installing-git) gespeichert hast, manuell eingeben oder
-* auf das Ordnersymbol (1) klicken und manuell zum Verzeichnis, in dem **git.exe** [vorher](#BuildingAaps-steps-for-installing-git) installiert wurde, navigieren.
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Überprüfe die Einstellungen mit dem **Test**-Button!
 
   ![Git wurde nicht gefunden](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Klicke auf "Create new..." (2), um mit der Erzeugung Deines Keystore zu beginnen
 ```{admonition} INFORMATION!
 :class: note
 You will only need to create the keystore once.
-Wenn Du AAPS schon einmal erstellt (gebaut) hast, erstelle KEINEN neuen Keystore, sondern wähle den bestehenden und gib dessen Passwörter ein!
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_Hinweis:_** Der Keystore ist eine Datei, in der die Informationen zum Signieren der App gespeichert sind. Die Datei ist verschlüsselt und passwortgeschützt.
