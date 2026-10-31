@@ -2,16 +2,16 @@
 
 # 問題排除
 
-**Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
+**遇到問題時，請從這裡開始。**文件中的許多頁面都提供疑難排解資訊。本頁彙整了這些資訊，依主題整理成一份連結清單，協助您解決最常見的問題。
 
-If you do not find your answer below, also check:
+如果您在下方找不到答案，也可以查看：
 
-* the [FAQ](../UsefulLinks/FAQ.md) for answers to frequent questions, and
-* the [Profile tuning guide](ProfileTuning.md) if your loop runs but your glucose control needs improving.
+* [常見問題](../UsefulLinks/FAQ.md)，尋找常見問題的解答；以及
+* [設定檔調整指南](ProfileTuning.md)，如果循環系統有在運作，但您仍需要改善血糖控制情況。
 
 ```{admonition} Still stuck?
 :class: tip
-If none of the links solve your problem, see [Where can I get help](WhereCanIGetHelp.md) to ask the community (Facebook, Discord), or send your [log files](AccessingLogFiles.md) to the developers.
+如果這些連結都無法解決您的問題，請參閱 [哪裡可以取得協助](WhereCanIGetHelp.md)，向社群（Facebook、Discord）求助，或將您的[記錄檔](AccessingLogFiles.md)傳送給開發人員。
 ```
 
 ---
@@ -22,29 +22,29 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 ### 建立 & 更新
 
-* If the build fails, see [If the build fails](#building-aaps-troubleshooting): it lists the troubleshooting section for each build method:
+* 如果建置失敗，請參閱 [建置失敗時的處理方式](#building-aaps-troubleshooting)：此頁面列出各種建置方式的疑難排解章節：
   * [AAPS Builder](#aaps-builder-troubleshooting)
   * [瀏覽器建置](#aaps-ci-troubleshooting)
   * [Android Studio](TroubleshootingAndroidStudio.md)
-* Lost keystore, or new keystore: [Reinstalling AAPS](#reinstall-aaps)
-* Updating **AAPS**: [with AAPS Builder](#aaps-builder-updates), [with a browser build (fork)](#update-browser-build-troubleshooting), [with Android Studio](#update-computer-build-troubleshooting)
+* 金鑰儲存庫遺失，或需要使用新的金鑰儲存庫：[重新安裝 AAPS](#reinstall-aaps)
+* 更新 **AAPS**：使用 [AAPS Builder](#aaps-builder-updates)、使用 [瀏覽器建置（分支版本）](#update-browser-build-troubleshooting)，或使用 [Android Studio](#update-computer-build-troubleshooting)
 
 ### 安裝中
 
-* [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
-* Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
+* [Google Play Protect 警告](#transferring-installing-play-protect-warning)：系統回報此應用程式不安全。
+* 安裝時出現關於未經驗證開發人員的訊息，導致安裝**遭到封鎖**：請參閱 [Android 開發人員驗證](#android-developer-verification)，瞭解免費的安裝方式。
 
 ### 設定
 
-* [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
-* [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
-* [Nightscout Client](TroubleshootingNsClient.md)
+* [設定檔：「基礎率與目前的幫浦不相容」](#your-aaps-profile-basal-not-compatible)
+* [幫浦：「資料來自不同的幫浦」](#config-builder-wrong-pump-data)
+* [Nightscout 用戶端](TroubleshootingNsClient.md)
 
-### Usage
+### 使用說明
 
-* [Wrong carb values (slow carbs absorption)](#CobCalculation-detection-of-wrong-cob-values)
-* [Automations](#automations-troubleshooting)
-* [Full closed loop](#full-closed-loop-troubleshooting)
+* [碳水化合物數值錯誤（碳水化合物吸收緩慢）](#CobCalculation-detection-of-wrong-cob-values)
+* [自動化](#automations-troubleshooting)
+* [全自動閉環](#full-closed-loop-troubleshooting)
 
 ---
 
@@ -59,15 +59,15 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 (generaltroubleshooting-android-related-issues)=
 
-## Android Related Issues
+## Android 相關問題
 
-### Battery optimization
+### 電池優化
 
-**AAPS** can help you find the right settings for your phone: open the **menu** (☰) > **About** and tap **Don't kill my app?**. It opens the instructions for your phone brand on [Don't kill my app](https://dontkillmyapp.com/). The [setup wizard](#setup-wizard-bluetooth-battery-optimisation) also asks you to turn off battery optimization for **AAPS** and Bluetooth.
+**AAPS** 可以協助您找出適合手機的設定：開啟**選單**（☰）> **關於**，然後點選 **Don't kill my app?**。系統會開啟 [Don't kill my app](https://dontkillmyapp.com/) 網站上適用於您手機品牌的操作說明。[設定嚮導](#setup-wizard-bluetooth-battery-optimisation)也會要求您關閉 **AAPS** 和藍牙的電池最佳化功能。
 
 Android 已實作預設啟用的省電設定。這些設定會自動暫停/中止對系統運作非必需的應用程式，以降低不需要隨時執行的 App 的電量消耗。
 
-When this is enabled, it will very likely cause issue for **AAPS** and other supporting apps like **xDrip**.
+啟用這項功能後，很可能會導致 **AAPS** 和其他支援的應用程式（例如 **xDrip**）發生問題。
 
 為確保 **AAPS** 與其他支援的應用程式能夠隨時保持運作，請務必停用電池優化。
 
@@ -93,7 +93,7 @@ When this is enabled, it will very likely cause issue for **AAPS** and other sup
 
   ![藍牙應用程式](../images/troubleshooting/pixel/03_bluetooth.png)
 
-* Click the "App battery usage" and select "Unrestricted" (called "Not optimized" on some older Android versions).
+* 點選「應用程式電池用量」，然後選取「不受限制」（部分舊版 Android 稱為「未最佳化」）。
 
   ![藍牙電池優化](../images/troubleshooting/pixel/04_btunrestricted.png)
 
@@ -108,7 +108,7 @@ When this is enabled, it will very likely cause issue for **AAPS** and other sup
 
   ![顯示系統應用程式](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* Now search the Bluetooth app and select it to see its settings.
+* 接著搜尋藍牙應用程式並點選，查看其設定。
 
   ![藍牙應用程式](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
@@ -116,13 +116,13 @@ When this is enabled, it will very likely cause issue for **AAPS** and other sup
 
   ![電池](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Unrestricted" (called "Not optimized" on some older Android versions).
+* 將其設為「不受限制」（部分舊版 Android 稱為「未最佳化」）。
 
-  ![Unrestricted](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![不受限制](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
 #### 華為手機
 
-See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+請參閱這份指南：[Huawei 藍牙與電池最佳化](../CompatiblePhones/Huawei.md)
 
 ---
 
@@ -134,7 +134,7 @@ See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones
 
 * [一般問題](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
-* [Libre 2 with Minimal Looper](#minimallooper-troubleshooting)
+* [搭配 Minimal Looper 使用 Libre 2](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
 * [xDrip - 無 CGM 資料](#xdrip-identify-receiver)
 * [xDrip - Dexcom 問題排除](#xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
@@ -168,7 +168,7 @@ See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones
 
 * [已測試的手機與裝置設定清單](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true)
 * [Jelly](../CompatiblePhones/Jelly.md)
-* [Huawei Bluetooth & battery optimization](../CompatiblePhones/Huawei.md)
+* [Huawei 藍牙與電池最佳化](../CompatiblePhones/Huawei.md)
 
 ---
 
@@ -176,8 +176,8 @@ See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones
 
 ## 遠端控制
 
-* [AAPSClient and remote control (pairing, commands not received)](#client-master-control-troubleshooting)
-* ['Nightscout access token' issues](#remotecontrol-nightscout-access-token)
+* [AAPSClient 與遠端控制（配對、未收到指令）](#client-master-control-troubleshooting)
+* [「Nightscout 存取權杖」相關問題](#remotecontrol-nightscout-access-token)
 * [SMS 指令](#SMSCommands-troubleshooting)
 * [Android Auto](#android-auto-troubleshooting)
 
@@ -190,6 +190,6 @@ See this guide for [Huawei Bluetooth & battery optimization](../CompatiblePhones
 針對智慧型手錶的已知問題與解決步驟的實用連結
 
 * [問題排除 Wear 應用程式](#Watchfaces-troubleshooting-the-wear-app)
-* [Watch and phone do not communicate](#wear-os-watch-phone-communication)
+* [手錶與手機無法通訊](#wear-os-watch-phone-communication)
 * [Wear OS 5](#wear-os-5-troubleshooting)
-* [Building the Wear app](#building-aaps-wear-os-troubleshooting)
+* [建置 Wear 應用程式](#building-aaps-wear-os-troubleshooting)
