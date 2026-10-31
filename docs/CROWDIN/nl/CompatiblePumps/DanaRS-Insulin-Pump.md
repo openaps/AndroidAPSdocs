@@ -1,87 +1,87 @@
-# DanaRS, Dana-i and Dana-i2
+# DanaRS, Dana-i en Dana-i2
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards, a Dana-i or a Dana-i2. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump.md) if you have the original DanaR instead.*
+*Deze instructies zijn voor het instellen van de app en je pomp als je een DanaRS (vanaf 2017), een Dana-i of een Dana-i2 hebt. Ga naar [DanaR insulinepomp](./DanaR-Insulin-Pump.md) als je in plaats daarvan de originele DanaR hebt.*
 
-**Dana-i2 can be used from AAPS version 4.0 onwards.** It uses the same **Dana-i/RS** driver as the Dana-i.
+**De Dana-i2 kan worden gebruikt vanaf AAPS versie 4.0.** Hij gebruikt dezelfde **Dana-i/RS** driver als de Dana-i.
 
-* In DanaRS/i/i2 pump "BASAL A" is used by the app. Existing data gets overwritten.
+* In de DanaRS/i/i2 pomp wordt "BASAL A" door de app gebruikt. Bestaande gegevens worden overschreven.
 
-    {contents} Table of contents
+    {contents} Inhoudsopgave
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## Mogelijkheden van de pomp met AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually (see [Timezone traveling](#timezone-traveling-danarv2-danars)).
+* Communiceert met **AAPS** via de eigen Bluetooth van je telefoon, zonder extra communicatieapparaat.
+* Wisselingen van zomer-/wintertijd en tijdzone moet je met de hand regelen (zie [Wisselen van tijdzone](#timezone-traveling-danarv2-danars)).
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
 ## Koppelen van de pomp
 
-* Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-* Tap **Pump** and select **Dana-i/RS**.
+* Open het **menu** (☰) linksboven in het hoofdscherm van **AAPS** en selecteer **Configuratie**.
+* Tik op **Pomp** en selecteer **Dana-i/RS**.
     
-    ![Configuration > Pump with the Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
+    ![Configuratie > Pomp met de Dana-i/RS plugin](../images/v4/Configuration/configuration_pump_list_2.png)
     
-    Once it is selected, the **Dana-i/RS** card shows two buttons, **Settings** and **Open plugin**:
+    Als hij geselecteerd is, toont de **Dana-i/RS** kaart twee knoppen, **Instellingen** en **Plug-in openen**:
     
-    ![The Dana-i/RS plugin selected in Configuration > Pump](../images/v4/Pumps/dana_i_rs_enabled.png)
+    ![De Dana-i/RS plugin geselecteerd in Configuratie > Pomp](../images/v4/Pumps/dana_i_rs_enabled.png)
     
-    **Settings** opens the settings of the Dana-i/RS driver:
+    **Instellingen** opent de instellingen van de Dana-i/RS driver:
     
-    ![Dana-i/RS driver settings](../images/v4/Pumps/dana_i_rs_settings.png)
+    ![Instellingen van de Dana-i/RS driver](../images/v4/Pumps/dana_i_rs_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Dana-i/RS pump screen. Before a pump is paired it looks like this:
+    **Plug-in openen** (of **Beheren** > **Pomp**) opent het pompscherm van de Dana-i/RS. Voordat er een pomp gekoppeld is, ziet het er zo uit:
     
-    ![Dana-i/RS pump screen before pairing](../images/v4/Pumps/dana_i_rs_pump_screen.png)
+    ![Pompscherm van de Dana-i/RS voor het koppelen](../images/v4/Pumps/dana_i_rs_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. **AAPS** scans for nearby pumps.
+* Tik op het pompscherm op **Koppelen**. **AAPS** zoekt naar pompen in de buurt.
 
-* Tap the entry for your pump in the list.
+* Tik in de lijst op je pomp.
     
-    ![The Pairing screen listing a Dana pump found by the scan](../images/DanaRS_i_Pairing.png)
+    ![Het scherm Koppelen met een Dana pomp die bij het zoeken is gevonden](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** This works the same way as other Bluetooth pairings you may know (for example, smartphone and car audio).
+* **Je moet het koppelen op de pomp bevestigen!** Dit werkt op dezelfde manier als andere Bluetooth koppelingen die je misschien kent (bijvoorbeeld smartphone en autoradio).
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Koppeling bevestigen op DanaRS](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* Volg het koppelingsproces dat past bij het type en de firmware van je pomp:
     
-    * For DanaRS v1, **AAPS** asks for the **Pump password (v1 only)**. Enter your pump password (see [Default password](#DanaRS-Insulin-Pump-default-password)).
-    * For DanaRS v3, **AAPS** asks you to press OK on the pump and type the 2 sequences of numbers and letters shown on the pump. Keep the pump display on by pressing the minus button until you have finished. Then tap **Done**.
-    * For Dana-i and Dana-i2, the standard Android pairing dialog appears. Enter the 6-digit number shown on the pump.
+    * Bij een DanaRS v1 vraagt **AAPS** om het **Pomp wachtwoord (alleen v1)**. Voer je pompwachtwoord in (zie [Standaard wachtwoord](#DanaRS-Insulin-Pump-default-password)).
+    * Bij een DanaRS v3 vraagt **AAPS** je om op de pomp op OK te drukken en de 2 reeksen cijfers en letters in te typen die de pomp toont. Houd het scherm van de pomp aan door op de minknop te drukken tot je klaar bent. Tik daarna op **Gereed**.
+    * Bij een Dana-i en Dana-i2 verschijnt het gewone Android koppelvenster. Voer het 6-cijferige nummer in dat de pomp toont.
 
-* When **Pairing successful!** is shown, tap **Done**.
+* Als **Succesvol gekoppeld!** verschijnt, tik je op **Gereed**.
     
-    ![Pairing successful!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
+    ![Succesvol gekoppeld!](../images/v4/Pumps/dana_i_rs_pairing_success.png)
     
-    You are back on the pump screen, which now shows your pump's status.
+    Je bent terug op het pompscherm, dat nu de status van je pomp toont.
     
-    ![Dana-i/RS pump screen after pairing](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
+    ![Pompscherm van de Dana-i/RS na het koppelen](../images/v4/Pumps/dana_i_rs_pump_screen_paired.png)
 
-* In **Settings**, select **Bolus speed** to change the default bolus speed (12 s/U, 30 s/U or 60 s/U).
+* Selecteer in **Instellingen** de optie **Bolussnelheid** om de standaard bolussnelheid te wijzigen (12 s/E, 30 s/E of 60 s/E).
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.05 U using Doctors menu (see pump user guide). **AAPS** reads the basal and bolus steps from the pump and uses them for every bolus, so a bolus always matches the step set on the pump. The pump screen shows them in the **Basal/Bolus step** row.
+* Zet de basaalstap op de pomp op 0,01 E/u via het artsenmenu (zie de handleiding van de pomp).
+* Zet de bolusstap op de pomp op 0,05 E via het artsenmenu (zie de handleiding van de pomp). **AAPS** leest de basaal- en bolusstap uit de pomp en gebruikt die voor elke bolus, zodat een bolus altijd past bij de stap die op de pomp is ingesteld. Het pompscherm toont ze in de regel **Basaal/bolus stap**.
 * Activeer vertraagde bolussen op de pomp
 
-### Options shown only for some models
+### Opties die alleen bij sommige modellen zichtbaar zijn
 
-* **Auto lock**: on a Dana-i2, the **User options** screen (on the pump screen, **Manage** > **Pump**) has an **Auto lock** switch for the pump's auto lock setting. Press **Save options to pump** after changing it.
-* **Easy mode**: on pump models that have an easy menu mode, the pump screen shows an **Easy mode** row with **On** or **Off**.
-* If a Dana-i2 refuses a bolus, **AAPS** shows the reason, for example *Pump is not primed*, *Not enough insulin in the reservoir* or *Easy sleep mode is on in the pump*.
+* **Automatische vergrendeling**: bij een Dana-i2 heeft het scherm **Gebruikersopties** (op het pompscherm, **Beheren** > **Pomp**) een schakelaar **Automatische vergrendeling** voor de automatische vergrendeling van de pomp. Druk na het wijzigen op **Opties op de pomp opslaan**.
+* **Eenvoudige modus**: bij pompmodellen met een eenvoudig menu toont het pompscherm een regel **Eenvoudige modus** met **Aan** of **Uit**.
+* Als een Dana-i2 een bolus weigert, toont **AAPS** de reden, bijvoorbeeld *De pomp is niet voorgevuld*, *Onvoldoende insuline in het reservoir* of *De 'Easy Sleep'-modus van de pomp is ingeschakeld.*
 
 (DanaRS-Insulin-Pump-default-password)=
 
 ### Standaard wachtwoord
 
 * Voor DanaRS met firmware v1 en v2 is het standaard wachtwoord 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
+* Bij een DanaRS met firmware v3 of een Dana-i wordt het standaardwachtwoord afgeleid van de productiedatum van de pomp. Het wordt berekend als MMDD, waarbij MM de maand is en DD de dag waarop de pomp is gemaakt (bijvoorbeeld '0124' staat voor maand 01 en dag 24).
     
-    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manufacturing date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
+    * Kies in het MAIN MENU de optie REVIEW en open daarna SHIPPING INFORMATION in het submenu
+    * Nummer 3 is de productiedatum. 
+    * Bij v3/i wordt dit wachtwoord alleen gebruikt om het menu op de pomp te vergrendelen. Het wordt niet gebruikt voor communicatie en je hoeft het niet in AAPS in te voeren.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
@@ -92,7 +92,7 @@
     
     ![DanaRS Hoofdmenu](../images/DanaRSPW_01_MainMenu.png)
 
-* In opties menu kies "GEBRUIKER OPTIE"
+* Kies in het optiemenu "USER OPTION"
     
     ![DanaRS Optie menu](../images/DanaRSPW_02_OptionMenu.png)
 
@@ -102,7 +102,7 @@
 
 * Druk OK om oude wachtwoord in te voeren.
 
-* Enter **old password** (Default password see [above](#DanaRS-Insulin-Pump-default-password)) and press OK
+* Voer het **oude wachtwoord** in (standaardwachtwoord: zie [hierboven](#DanaRS-Insulin-Pump-default-password)) en druk op OK
     
     ![DanaRS Voer oude wachtwoord in](../images/DanaRSPW_04_11PWenter.png)
 
@@ -114,11 +114,11 @@
 
 * Bevestig met OK knop.
 
-* Press OK to save setting.
+* Druk op OK om de instelling op te slaan.
     
     ![DanaRS Opslaan nieuw wachtwoord](../images/DanaRSPW_06_PWnewSave.png)
 
-* Gebruik de pijlknop om omlaag te gaan naar "14. EXIT" and press OK to exit.
+* Gebruik de pijlknop om omlaag te gaan naar "14. EXIT" en druk op OK om af te sluiten.
     
     ![DanaRS Afsluiten](../images/DanaRSPW_07_Exit.png)
 
@@ -128,44 +128,44 @@
 
 ### Foutmelding tijdens toedienen insuline
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+In het geval dat de verbinding tussen AAPS en DanaRS wordt verbroken tijdens het toedienen van een bolus (d.w.z. als je wegloopt van je telefoon terwijl DanaRS bezig is insuline te geven) dan zul je het volgende bericht zien en een alarmgeluid horen.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarm insulinetoediening](../images/DanaRS_Error_bolus.png)
 
-* In de meeste gevallen krijg je deze foutmelding omdat de communicatie werd verbroken, en is gewoon de juiste hoeveelheid insuline gegeven. Controleer dit eerst voordat je een eventuele nieuwe bolus geeft.
-* Check in the pump history that the correct bolus was given. You can do this on the pump itself, or in **AAPS** on the pump screen (**Manage** > **Pump**) > **Pump history** > **Boluses**.
-* Delete the error entry in [treatments](#screens-bolus-carbs) if you wish.
-* The real amount is read and recorded at the next connection. To force this, tap **Refresh** on the pump screen, or just wait for the next connection.
+* In de meeste gevallen is dit alleen een communicatieprobleem en is de juiste hoeveelheid insuline toegediend.
+* Controleer in de pompgeschiedenis of de juiste bolus is gegeven. Dat kan op de pomp zelf, of in **AAPS** op het pompscherm (**Beheren** > **Pomp**) > **Historiek** > **Bolussen**.
+* Verwijder de foutregel in [behandelingen](#screens-bolus-carbs) als je wilt.
+* De echte hoeveelheid wordt bij de volgende verbinding uitgelezen en opgeslagen. Om dit af te dwingen, tik je op **Vernieuwen** op het pompscherm, of je wacht gewoon op de volgende verbinding.
 
 ## Een andere telefoon gebruiken
 
-When switching to a new phone the following steps are necessary:
+Wanneer je een nieuwe telefoon gaat gebruiken, moet je dat doen via de volgende stappen:
 
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
-* Transfer settings from old to new phone
+* [Exporteer instellingen](../Maintenance/ExportImportSettings.md) op je oude telefoon
+* Instellingen overzetten van oude naar nieuwe telefoon
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* If you tick **Also replace pump settings** when importing, the pump connection settings are imported too and AAPS on your new phone will already "know" the pump and therefore not start a Bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AAPS on the new phone.
-* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
+* **Koppel de Dana RS handmatig** met de nieuwe telefoon
+* Als je bij het importeren **Vervang ook de pompinstellingen** aanvinkt, worden ook de instellingen voor de pompverbinding geïmporteerd. AAPS op je nieuwe telefoon "kent" de pomp dan al en start daarom geen Bluetooth scan. Daarom moeten de nieuwe telefoon en de pomp handmatig gekoppeld worden.
+* Installeer AAPS op de nieuwe telefoon.
+* [Importeer instellingen](../Maintenance/ExportImportSettings.md) op je nieuwe telefoon
 
 ### DanaRS v3, Dana-i, Dana-i2
 
-* Start pairing procedure as described [above](#DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes you may need to clear the pairing information in **AAPS** first. On the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**. Then tap **Pairing** again.
+* Start de koppeling zoals [hierboven](#DanaRS-Insulin-Pump-pairing-pump) beschreven.
+* Soms moet je eerst de koppelingsgegevens in **AAPS** wissen. Tik op het pompscherm (**Beheren** > **Pomp**) op **Ontkoppelen** en bevestig **Reset pomp koppeling?**. Tik daarna opnieuw op **Koppelen**.
 
-## Timezone traveling with DanaRS, Dana-i and Dana-i2 pumps
+## Wisselen van tijdzone met DanaRS, Dana-i en Dana-i2 pompen
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-danarv2-danars).
+Informatie over reizen door tijdzones vind je in de sectie [Wisselen van tijdzone met pompen](#timezone-traveling-danarv2-danars).
 
-## Where to get help
+## Waar je hulp kunt krijgen
 
-Development of the DanaRS/Dana-i/Dana-i2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+De ontwikkeling van de DanaRS/Dana-i/Dana-i2 driver wordt door de community gedaan, op **vrijwillige** basis. Doe het volgende voordat je om hulp vraagt:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lees** het betreffende deel van deze documentatie om te controleren hoe de functie hoort te werken.
+2. **Vraag** het op het kanaal *#AAPS* op [Discord](https://discord.gg/4fQUWHZ4Mw), of in een van de andere [community kanalen](../GettingHelp/WhereCanIGetHelp.md).
+3. **Meld een bug**: zoek eerst in de [bestaande issues](https://github.com/nightscout/AndroidAPS/issues). Staat jouw probleem er niet bij, open dan een [nieuwe issue](https://github.com/nightscout/AndroidAPS/issues) en voeg je [logbestanden](../GettingHelp/AccessingLogFiles.md) toe.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Beschrijf als je om hulp vraagt: merk en model van je telefoon, Android versie, **AAPS** versie, en een duidelijke beschrijving van het probleem in gewone taal (wat er is veranderd, wanneer het voor het laatst werkte).
