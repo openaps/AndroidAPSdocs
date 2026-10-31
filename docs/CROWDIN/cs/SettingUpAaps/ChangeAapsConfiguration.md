@@ -12,7 +12,7 @@ Máte tyto možnosti:
 
 Zde vysvětlujeme, která možnost je nejvhodnější pro jakou situaci:
 
-## Configuration
+## Konfigurace
 
 Otevřete **nabídku** (☰) v levém horním rohu hlavní obrazovky a vyberte **Konfigurace**:
 
@@ -36,7 +36,7 @@ Dokumentace k nastavení je k dispozici [zde](../SettingUpAaps/Preferences.md).
 
 V **Konfiguraci** otevřete kategorii a klepněte na „**Nastavení**“ pod aktivním pluginem. Dostanete se přímo do nastavení **pouze tohoto pluginu**:
 
-![Nastavení a Otevřít modul pod aktivním pluginem](../images/v4/Configuration/configuration_open_plugin.png)
+![Nastavení a Otevřít plugin pod aktivním pluginem](../images/v4/Configuration/configuration_open_plugin.png)
 
 Tato cesta je vhodná například tehdy, když víte, že chcete změnit konfiguraci své pumpy: otevřete **Konfigurace → Pumpa** a pak klepněte na „**Nastavení**“ pod vybranou pumpou.
 
