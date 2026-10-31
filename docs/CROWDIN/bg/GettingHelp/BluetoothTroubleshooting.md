@@ -19,11 +19,11 @@
 
 ## Оптимизиране на батерията за Bluetooth
 
-В по-новите версии на Android оптимизирането на батерията е включено за системното приложение Bluetooth. Известно е, че това причинява проблеми при някои помпи и CGM с Bluetooth.
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Известно е, че това причинява проблеми при някои помпи и CGM с Bluetooth.
 
-Ако сте следвали [Съветника за настройване](../SettingUpAaps/SetupWizard) и сте изпълнили настройките от раздела [Оптимизиране на батерията за Bluetooth](#setup-wizard-bluetooth-battery-optimisation), тази настройка трябва да е правилна. Ако обаче сте следвали по-стара версия на това ръководство, възможно е да не сте я променили.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
-Проверете дали това е настроено правилно, ако помпата или CGM губят връзка.
+Verify this is correctly configured if you have pump and CGM disconnections.
 
 ---
 
@@ -33,7 +33,7 @@
 
 Android ви позволява да контролирате какво може да прави или до какво има достъп всяко приложение на телефона ви чрез система от разрешения. За всяко инсталирано приложение можете да изберете дали да разрешите или да забраните конкретни разрешения, напр. достъп до файловете на устройството, достъп до Bluetooth, търсене на устройства в близост и др.
 
-**AAPS** има нужда от няколко конкретни разрешения, за да работи, а едно от тях, нужно за работата на подовете, е разрешението „Устройства в близост“. Много други приложения също изискват това разрешение. Общността установява, че някои приложения, когато получат това разрешение, могат да причинят проблеми с активирането на нови подове на някои устройства.
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. Много други приложения също изискват това разрешение. Общността установява, че някои приложения, когато получат това разрешение, могат да причинят проблеми с активирането на нови подове на някои устройства.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -50,16 +50,16 @@ Android ви позволява да контролирате какво мож�
 
 - **Amazon Alexa**  Премахването на „Устройства в близост“ за приложението Alexa е решило проблема при някои хора, но спира възможността за сдвояване на IoT устройства с Matter
 
-- **MINI app**  Изглежда, че приложението е базирано на приложението myBMW и затова може да се държи по същия начин
+- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
 - **BM2** Приложение за наблюдение на соларна батерия, използвано в някои кемпери и соларни системи за къмпинг; когато приложението работеше, то пречеше на активирането на нов под. Принудителното спиране (Force stop) на приложението по време на активиране на нов под заобикаля проблема. Стартирането на приложението след това не изглеждаше да пречи на работата на Dash (на Pixel 8 Pro с Android 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### Как да отнемете разрешението „Устройства в близост“ на други приложения:
-Ако имате проблеми с активирането на нов под, въпреки че използвате правилната поддържана версия на **AAPS** за своята версия на Android: може да се наложи да отнемете разрешението на другите приложения, докато активирате нов под.
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
-Следвайте тази процедура, за да отнемете разрешението „Устройства в близост“ на всички приложения освен **AAPS**:
+Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
