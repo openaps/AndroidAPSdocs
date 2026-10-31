@@ -53,7 +53,7 @@
 
 ## Προβλήματα σχετικά με το Bluetooth
 
-Για γνωστά προβλήματα με συνδέσεις Bluetooth, διακοπές σύνδεσης με αντλίες/Pod ή προβλήματα ενεργοποίησης και σύνδεσης, δείτε το [Αντιμετώπιση προβλημάτων Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
+Για γνωστά προβλήματα με συνδέσεις Bluetooth, διακοπές σύνδεσης με αντλίες/Pod ή προβλήματα ενεργοποίησης και σύνδεσης, δείτε τη σελίδα [Προβλήματα σχετικά με το Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
@@ -132,7 +132,7 @@
 
 Χρήσιμοι σύνδεσμοι για γνωστά προβλήματα των CGM και τις λύσεις τους.
 
-* [General](#general-cgm-troubleshooting)
+* [Γενικά](#general-cgm-troubleshooting)
 * [Dexcom G6](#DexcomG6-troubleshooting-g6)
 * [Libre 2 με Minimal Looper](#minimallooper-troubleshooting)
 * [Libre 3](#libre3-experiences-and-troubleshooting)
