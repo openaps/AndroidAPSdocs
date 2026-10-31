@@ -9,7 +9,7 @@ Principala atracție a buclei complet închise **FCL** este aceea că are poten�
 
 În timp ce **buclă închisă hibrid** ('HCL') se bazează pe algoritm, acesta necesită totuși ca utilizatorul să livreze bolusuri manual înainte de mese. Drept rezultat, bucla poate intra într-o oprire temporară (bazală temporară zero) pentru a preveni administrarea în exces a insulinei.
 
-În **FCL** bolusurile legate de dimensiunea meselor nu mai sunt necesare: lăsați-le în baza algoritmului!  **AAPS** le poate permite fără ca utilizatorul să boluseze, și fără a face intrări de carbohidrați într-un mod numit 'mese neanunțate' **("UAM")**. **UAM** permite **AAPS** să tolereze mai bine intrările incorecte de carbohidrați fiind mai agresiv.
+În **FCL** bolusurile legate de dimensiunea meselor nu mai sunt necesare: lăsați-le în baza algoritmului!  **AAPS** can handle meals without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. **UAM** permite **AAPS** să tolereze mai bine intrările incorecte de carbohidrați fiind mai agresiv.
 
 ## La ce să ne așteptăm?
 
@@ -31,14 +31,14 @@ Succesul pentru **FCL** cere utilizatorului să:
 **FCL** nu este pentru toată lumea:
 
 - Unii utilizatori **FCL** ating TIR (70-180) aproximativ 90% și HbA1c sub 6%, dar alți utilizatori preferă un control mai strict. Notably, minimizing values over 140 mg/dL at diets with rapid carbs probably requires pre-bolusing.
-- Reglarea **AAPS** poate fi dificilă. Nu este destinat acelor utilizatori care se simt copleșiți de AAPS.  Va trebui să dedicați câteva săptămâni pentru a ajusta și a regla **FCL**. Să dedicați acest timp poate duce la rezultate mai bune și la controlul **glicemiei**.
+- Reglarea **AAPS** poate fi dificilă. It is not for those users who feel overwhelmed by AAPS.  Va trebui să dedicați câteva săptămâni pentru a ajusta și a regla **FCL**. Să dedicați acest timp poate duce la rezultate mai bune și la controlul **glicemiei**.
 - Gestionarea meselor poate deveni mai ușoară, însă exercițiul fizic poate reprezenta încă o provocare în **FCL**. Celor mai mulți dintre noi ne place să limităm gustările din timpul sportului în încercarea de a controla greutatea corporală.
 - Rămân încă dificultăți în a stabili un **FCL** pentru copii (discutat mai jos).
 
 
 ## Buclă hibridă închisă reglată bine
 
-Este recomandabil să se stabilească mai întâi o **HCL** bine reglată înainte de a lua în considerare tranziția la **FCL**.  Succesul cu **FCL** necesită o reglare individualizată a setărilor utilizatorului astfel încât **AAPS** să poată oferi insulină pentru a imita îndeaproape modul reușit de buclă hibridă închisă al DUMNEAVOASTRĂ.
+It is advisable to first establish a well-tuned **HCL** before considering the transition to **FCL**.  Succesul cu **FCL** necesită o reglare individualizată a setărilor utilizatorului astfel încât **AAPS** să poată oferi insulină pentru a imita îndeaproape modul reușit de buclă hibridă închisă al DUMNEAVOASTRĂ.
 
 **FCL** cere utilizatorului să configureze și să regleze **Automatizările**. Cu toate acestea, utilizatorul trebuie să aibă o înțelegere sigură a nevoilor sale de gestionare a insulinei înainte de a se înhăma la **FCL**. Erorile pot fi mascate de contra-erori. Acest lucru poate crea un sistem **FCL** instabil, și îl poate face greu de corectat ulterior. Ar trebui să vă așteptați să atingeți un %TIR comparabil cu FCL așa cum vedeți astăzi în **HCL**.
 
@@ -58,7 +58,7 @@ Sursă:
 
 IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- va rezulta în semnificativ mai puține vârfuri ale *glicemiei** decât ale insulinelor mai lente;
+- will result in significantly lower **BG** peaks than slower insulins;
 - tolerează primul bolus de la masă cu o întârziere de câteva minute fără a aduce la înălțimi inacceptabile ale vârfurilor; și
 - minimize the effect on **BG** peak from different carb loads (meal sizes).
 
@@ -70,9 +70,9 @@ However, Fiasp or Lyumjev can result in frequent pump occlusions, even after opt
 
 **BG** values and stable Bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **FCL** necesită un sistem stabil din punct de vedere tehnic 24/7:
 
-- **performanța CGM. Senzorul CGM nu ar trebui să producă valori săltărețe **ale glicemiei** care ar putea fi interpretate greșit de **FCL** ca un semn al unui început de masă. Similar, calibrările **CGM** pot produce rezultate săltărețe.
+- your **CGM’s performance**. Your CGM should not produce jumpy **BG** values that could be misinterpreted by **FCL** as a sign of a starting meal. Similar, calibrările **CGM** pot produce rezultate săltărețe.
 - cum și unde se face orice netezirea valorilor de la **CGM** și ce poate implica acest lucru pentru ajustările dumneavoastră. Notably how delta is defined, and AAPS recognizing this as being sign of a starting meal.
-- Bluetooth stability for the pump and CGM  pump;
+- Bluetooth stability for the pump and CGM;
 - evitarea (sau cel puțin recunoașterea precoce) a ocluziei pompei;
 - fluxul de date și aplicațiile utilizate ale telefonului dumneavoastră și diferența între zilele de utilizare a senzorului;
 - păstrarea tuturor componentelor **AAPS** bine încărcate și în piesele de schimb în proximitate imediată; și
@@ -114,8 +114,8 @@ Nivelurile neobișnuite sau neregulate ale activității fizice prezintă dificu
 
 **FCL** poate prezenta provocări suplimentare pentru copii, iar acestea includ:
 
-- Este posibil ca Lyumjev sau Fiasp să nu fie disponibile sau bine tolerate.
-- Rata bazală pe oră poate fi foarte scăzută, oferind o bază slabă pentru <0>SMB</0> mari.
+- Lyumjev or Fiasp may not be available or well tolerated.
+- Hourly basal rate may be very low, providing a poor basis for big **SMBs**.
 - Dieta poate fi bogată în componente dulci. Cu volumul sangvin tipic scăzut al unui corp mic, tendință puternică către vârfuri ale **glicemiei**.
 - Hormonii de creștere și modificările substanțiale ale sensibilității la insulină fac dificilă menținerea cu precizie a unui <0>FCL</0> ajustat
 
@@ -149,7 +149,7 @@ Setările **AAPS'** trebuie să fie suficient de bine configurate pentru a face 
 
 Pentru succesul **FCL**, **ISF** este parametrul cheie de ajustare. Când se utilizeaza **AAPS** varianta master + **Automatizări**, **o schimbare de profil > 100% trebuie să fie declanșată în mod automat la momentul recunoașterii mesei** (prin diferențele dintre citirile de glicemie, delta), și să propună un **ISF** mărit.
 
-**AAPS** master permite până la o mărire temporară de 130% a **Profilului** în modul **HCL**. Amplificarea **ISF** se face în 3 pași:
+**AAPS** Master allows up to 130% temporary **Profile** in **HCL** mode. Amplificarea **ISF** se face în 3 pași:
 
 - Pasul 1 - revizuiește **ISF-ul** care este aplicabil pentru această oră de masă în cadrul **Profilulului**, și vedeți dacă spre exemplu Autosens sugerează o modificare care ia în considerare starea curentă (ultimele câteva ore) de sensibilitate la insulină a organismului.
 - Pasul 2 - aplică un factor (1/Profile%, așa cum este setat în **Automatizări**) pentru a crește **ISF**.
@@ -163,13 +163,13 @@ Cutii de bifat în partea de sus. Aveți opțiunea:
 
 - Pentru fiecare regulă de **Automatizare** puteți bifa căsuța pentru acțiunea utilizatorului =>, atunci acțiunile definite nu vor fi executate în mod automat când se întrunesc condițiile. Mai degrabă, ecranul principal **AAPS** vă va avertiza ori de câte ori **FCL** va da automat un **SMB**. Aveți apoi posibilitatea să spuneți "da" sau "nu". Acest lucru este extrem de util în faza de reglare.
 
-Această caracteristică poate fi utilă în anumite situații cum ar fi sindromul "picioare pe podea" în care apare o creștere bruscă a **glicemiei** la trezirea de dimineață, dar utilizatorul vrea să prevină un răspuns complet automat de tip "micul dejun a început".
+This feature can be useful for certain situations like “foot to floor” syndrome where there is a sudden rise in **BG** when getting up in the morning, but the user wants to prevent a fully automatic “breakfast started” response.
 
 Secțiunea de mai jos oferă îndrumări despre modul de grupare al **Automatizărilor** Condiții și modul de abordare al situațiilor în care **AAPS** ar trebui să crească (sau să diminueze) administrarea de insulină. Deoarece **ISF** nu poate fi ajustat direct, creșterea **Procentajului de profil** peste 100% va face același lucru pentru ceea ce vrem.
 
 ### SMB automatizate la creștere glicemiei
 
-Cheia pentru succesul **FCL** **la începutul creșterilor glicemice de după mese, SMB automate și foarte mari trebuie administrate prin buclă cât mai repede posibil** "pentru a prinde din urmă" **IOB** necesar (comparativ cu bolusul administrat tipic pentru o masă similară în **HCL**!)
+The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
 To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might be not meal –related and those delta which might be.
 
@@ -180,7 +180,7 @@ To achieve this, data from your **HCL** should be analyzed to determine which **
 - Dar puteți folosi o delta medie. Prin compararea diferențelor (detlta) în condițiile **Automatizărilor** dumneavoastră ați putea defini chiar și acțiuni de agresivitate diferită în funcție dacă creșterea **glicemiei** este într-o manieră accelerată sau nu.
 
 > ( delta – media scurtă delta )>n este un termen care ar putea fi utilizat pentru detectarea accelerării, pentru a declanșa primul **SMB** la cel mai scurt timp semn de creștere a **glicemiei**. -                                                                             
-> Atenție: nu se poate folosi cu **valori ale CGM-ului care sunt slabe sau foarte omogenizate!
+> Caution: not possible to use with poor or highly smoothened **CGM** values!
 
 Un **CGM** cu date nepotrivite pune utilizatorul într-o poziție proastă deoarece, pentru a fi în siguranță, ai nevoie să "îndiguiești" definiția ta de delta, care ar putea fi sigur un semn al unei mese începute. Asta înseamnă:
 
@@ -203,9 +203,9 @@ Trebuie să "le pui în scenă" acestea două (+ poate o a treia) **Automatizare
 
 Țineți cont de asta, încă din faza de creștere (!), "abundența" de **IOB** trebuie blocată astfel încât efectele tardive ale **insulinei** (**coada** de după 3-5 ore) să nu depășească capacitatea de frânare a buclei prin bazala temporară zero ("tăierea" bazalei, pentru a reduce riscul hipoglicemiei).
 
-Cu mese mari există uneori o **a doua creștere**. Până atunci, de obicei, și IOB a scăzut puțin, iar Automatizările mai agresive intră din nou în vigoare. (Verifică dacă condiția pentru IOB în automatizarea #2 nu este setată prea jos pentru ca acest lucru să se întâmple).
+Cu mese mari există uneori o **a doua creștere**. Până atunci, de obicei, și IOB a scăzut puțin, iar Automatizările mai agresive intră din nou în vigoare. (Check that your iob condition in Automation #2 is not set too low for this to happen).
 
-La scurt timp după ce câteva **SMB** inițiale sunt date vine o **perioadă echilibrată** unde administrarea moderată de insulină trebuie să acopere carbohidrații suplimentari ce sunt absorbiți. (Cu excepția meselor sărace în carbohidrați, unde bucla poate vedea o creștere prea slabă a **glicemiei**, și trece la bazală temporară zero chiar imediat).
+La scurt timp după ce câteva **SMB** inițiale sunt date vine o **perioadă echilibrată** unde administrarea moderată de insulină trebuie să acopere carbohidrații suplimentari ce sunt absorbiți. (Except in low carb meals, where the loop might see too weak of a **BG** rise, and go into zero-temping right away already now).
 
 Ecranul principal **AAPS** (unde vedeți COB=0 în **UAM** bucla completă) s-ar putea ca în această fază să ceară mai mulți carbohidrați necesari. În modul **UAM** asta pur și simplu înseamnă, ai putea face o verificare estimativă a plauzibilității: Este acea cantitate de carbohidrați probabil în corpul tău, neabsorbită de la masa dumneavoastră de acum aproximativ o oră (în legătură cu care nu v-ați furnizat bucla cu informații)?
 
@@ -214,7 +214,7 @@ Ecranul principal **AAPS** (unde vedeți COB=0 în **UAM** bucla completă) s-ar
 
 Deseori, **Automatizările** #1 și/sau #2 fac IOB să crească la înălțimi care de obicei sunt suficiente pentru mesele **dumneavoastră**. Pentru reglarea personalizată, uitați-vă în datele **HCL** la valorile maxime de IOB care apar în timpul meselor bine gestionate (de cele mai multe ori: bolusul mesei introdus), și peste ce valoare a survenit la sfârșit o hipoglicemie (sau o cerință pentru carbohidrați suplimentari).
 
-Praguri IOB de bun-simț la care ați reduce agresivitatea buclei dumneavoastră, s-ar putea să nu fie la fel pentru fiecare masă. Dar mai ales în prima oră de la începerea mesei, ceea ce este crucial în modul **UAM**. Se va amâna pentru fiecare utilizator. Pentru unii utilizatori, în jur de 30g/oră se absoarbe și pentru a defini un **IOB** semnificativ independent de masa exactă poate fi posibil.
+Praguri IOB de bun-simț la care ați reduce agresivitatea buclei dumneavoastră, s-ar putea să nu fie la fel pentru fiecare masă. Dar mai ales în prima oră de la începerea mesei, ceea ce este crucial în modul **UAM**. It will differ for each user. Pentru unii utilizatori, în jur de 30g/oră se absoarbe și pentru a defini un **IOB** semnificativ independent de masa exactă poate fi posibil.
 
 Pentru mese excepționale, sau pentru o diminuare a acesteia în cazul în care urmează sportul, pragul **IOB** poate fi stabilit rapid în mod diferit în **Automatizare**.
 
@@ -268,7 +268,7 @@ Generally, it makes no sense to keep optimizing settings for one kind of meal. O
 Pentru a preveni hipoglicemia în orele 3-5 de după masă, reduceți agresivitatea înainte ca prea mult IOB să se acumuleze. Abordări specifice:
 
 - Faceți ca **ISF** să fie din ce în ce mai blând deja în timpul creșterii de glicemie, ca în exemplele date de Automatizare #1 și #2.
-- Definiți pragul de IOB, dincolo de care **AAPS** devine semnificativ mai prudent (Automatizarea #3, de mai sus). Atenție acest **IOB** poate fi depășit de ultimul **SMB** înainte de a intra în vigoare; și mai departe de către RBT, dacă în buclă se observă absorbția de carbohidrați insulinReq va fi asigurată o mișcare contraactivă spre un IOB mai mic.
+- Definiți pragul de IOB, dincolo de care **AAPS** devine semnificativ mai prudent (Automatizarea #3, de mai sus). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq. Carbs getting absorbed will provide a counter-movement towards lower iob.
 - Pragul de IOB poate fi diferențiat în funcție de mese: prin clonarea automatizărilor, se poate diferenția cu ușurință pentru intervalele orare de mic dejun, prânz și cină (sau chiar pentru locuri geografice, cum ar fi cantina companiei sau soacra șamd)
 > S-ar putea diferenția și mai mult în aceste intervale orare, prin stabilirea unor ținte temporare diferite pentru carbohidrați înceți față de carbohidrați rapizi, șamd și, prin urmare, să se poată "programa pentru" diferite tipuri de masă care pot apărea în acest moment al zilei, și prin apeluri la **Automatizările** special ajustate pentru ele. Acest lucru nu este probabil necesar, cu excepția cazului în care obiceiurile dumneavoastră alimentare variază mult.
 
@@ -310,7 +310,7 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 - Mesele nu sunt recunoscute de îndată
     - Verificați (in)stabilitatea Bluetooth
     - Verificați dacă puteți seta delta mai mici pentru a declanșa primul **SMB**
-    - Experimentați cu un aperitiv, supă câteva minute înainte de începerea mesei
+    - Experiment with an aperitif, soup a couple of minutes before meal start
 - SMB sunt prea slabe
     - Verificați ordinea **Automatizărilor** (spre exemplu, delta mare înainte de delta mic)
     - Check (real-time) in the **APS** plugin screen whether hourly profile basal and set minutes (max 120) limit allowed SMB size
@@ -323,7 +323,7 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 
 - Mesele sunt recunoscute în mod eronat
     - Verificați dacă ați putea seta delta mai mari pentru a declanșa primul **SMB**
-    - Apăsați pe "Acțiune utilizator" din Automatizarea conexă, astfel încât în viitor să puteți decide ad-hoc să blocați execuția Automatizării dacă nu are legătură cu masa
+    - Click “User action” in the related Automation, so in the future you can ad hoc decide to block execution of the Automation if not meal-related
     - Pentru a preveni gustările să declanșeze **SMB** ca la o masă, setați o țintă temporară>100 când luați gustări (așa cum ați face oricum în timpul activităților sportive și pentru gustările anti-hipoglicemie)
 - SMB livrează în general prea multă insulină
     - Check (real-time) in the **APS** plugin screen whether **SMB max range extension** must be set smaller
@@ -332,8 +332,8 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 - Probleme cu "coada" de insulină după mese
     - Este posibil să fie necesar să luați o gustare (a se vedea predicția hipoglicemică) sau comprimate de glucoză (dacă sunt sunteți în zona de hipoglicemie). Dar țineți cont că carbohidrații necesari, de care v-ar spune bucla la un moment dat, sunt foarte probabil exagerați, deoarece bucla nu are absolut nicio informație despre cantitatea de carbohidrați (în timp ce dumneavoastră puteți ghici câți ar mai fi, inclusiv din grăsimi și proteine) care încă așteaptă să fie absorbită.
     - O informație valoroasă ar fi dacă problema își are originea în cea mai mare parte încă din faza de creștere a glicemiei. Atunci stabilirea unui iobTH mai mic ar putea fi un remediu facil.
-    - Dacă nevoia de carbohidrați suplimentari se întâmplă des, notați câte grame sunt necesare (fără să numărați din nou ceea ce ați luat în cele din urma prea mult și a necesitat insulină suplimentară).  Apoi folosiți valoarea din profil a IC pentru a estima câtă insulină, mai puțin **SMB**, ar fi trebuit administrată, și mergeți cu această informație în reglajul dumneavoastră (referitor la **Procentajul Profilului** în **Automatizări**, sau poate și iobTH setat). Acest lucru se poate referi la **SMB-** date când glicemia era mare, sau la extinderea, de asemenea, în ceea ce privește **SMB** în timpul creșterii **glicemiei**.
-    - S-ar putea să trebuiască pur și simplu să acceptați vârfuri mai mari de **glicemie** pentru a nu face hipoglicemie. Sau schimbați dieta la ceva cu cantități mai mici de carbohidrați și cantități mai mari de proteine și grăsimi.
+    - Dacă nevoia de carbohidrați suplimentari se întâmplă des, notați câte grame sunt necesare (fără să numărați din nou ceea ce ați luat în cele din urma prea mult și a necesitat insulină suplimentară).  Apoi folosiți valoarea din profil a IC pentru a estima câtă insulină, mai puțin **SMB**, ar fi trebuit administrată, și mergeți cu această informație în reglajul dumneavoastră (referitor la **Procentajul Profilului** în **Automatizări**, sau poate și iobTH setat). This may relate to the **SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
+    - S-ar putea să trebuiască pur și simplu să acceptați vârfuri mai mari de **glicemie** pentru a nu face hipoglicemie. Or change diet to something with lower amounts of carbs, and higher amount of protein and fats.
 
 
 ### Mai multe informații
