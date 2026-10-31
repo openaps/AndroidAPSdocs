@@ -4,11 +4,11 @@ Antes de comenzar tu rig, necesitarás muchas horas de lectura para comprender c
 
 ## Listado de lecturas
 
-[OpenAPS.org #noestamosesperando -https://openaps.org/](https://openaps.org/)
+[OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[Documentación de OpenAPS - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
-[Documentación de Loop -https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
+[Documentación de Loop - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
 [Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
@@ -26,11 +26,11 @@ Antes de comenzar tu rig, necesitarás muchas horas de lectura para comprender c
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/), de Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe), de Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+["Pumping insulin"](https://amzn.eu/d/iaCsFa2), de John Walsh & Ruth Roberts
 
 ## Lecturas y artículos sobre los lazos cerrados "hazlo tú mismo"
 
@@ -44,4 +44,4 @@ Antes de comenzar tu rig, necesitarás muchas horas de lectura para comprender c
 
 [Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[Entrevista en directo con Dana Lewis, creadora del sistema de páncreas «hazlo tú mismo» (DIYPS) - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
