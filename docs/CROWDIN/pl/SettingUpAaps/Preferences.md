@@ -3,7 +3,7 @@
 W **AAPS** v4 preferencje znajdziesz na ekranie **Ustawienia**. Dostać się do nich możesz na trzy sposoby – szczegóły znajdziesz na stronie [Wprowadzanie zmian w konfiguracji AAPS](../SettingUpAaps/ChangeAapsConfiguration.md):
 
 1. Dotknij ikony **Ustawienia** (koło zębate) w prawym górnym rogu ekranu głównego: wszystkie ustawienia, pogrupowane w rozwijane sekcje.
-2. W menu **Ustawienia** (konfiguracja) dotknij „**Ustawienia**” pod aktywną wtyczką: tylko ustawienia tej wtyczki.
+2. W **Konfiguracji** dotknij „**Ustawienia**” pod aktywną wtyczką: tylko ustawienia tej wtyczki.
 3. Użyj **paska wyszukiwania** u góry ekranu głównego: po prostu zacznij wpisywać część szukanego tekstu. W ten sposób znajdziesz pojedyncze ustawienia (także te niewidoczne na ekranie Ustawienia), okna dialogowe i dokumentację.
 
 ![Wyniki wyszukiwania dla "target"](../images/preferences/settings_search.png)
@@ -18,7 +18,7 @@ W **AAPS** v4 preferencje znajdziesz na ekranie **Ustawienia**. Dostać się do 
 ```
 
 (Preferences-general)=
-## General
+## Ogólne
 
 ![Ustawienia > Ogólne](../images/preferences/settings_general.png)
 
@@ -99,7 +99,7 @@ Wymagane, aby można było [eksportować ustawienia](../Maintenance/ExportImport
 
 - Chroń swoje ustawienia hasłem lub uwierzytelnianiem biometrycznym telefonu (np. gdy [dziecko używa **AAPS**](../RemoteFeatures/RemoteMonitoring.md)). Jeśli włączysz tę funkcję, przy każdym otwarciu widoku związanego z Ustawieniami zostaniesz poproszony o uwierzytelnienie.
 
-- Ekrany zarządzania (**Profil**, **Ustawienia insuliny**, **Cel tymczasowy**, **Szybki bolus**) otwierają się wtedy **tylko do odczytu**. Nadal możesz aktywować lub użyć wpisu, ale dodawanie, edycja, klonowanie i usuwanie są ukryte, dopóki nie odblokujesz ustawień. Zobacz [Ochrona ustawień blokuje teraz także ekrany zarządzania](#v4changes-read-only-management).
+- Ekrany zarządzania (**Profil**, **Ustawienia insuliny**, **Cel tymczasowy**, **Szybki kalkulator**) otwierają się wtedy **tylko do odczytu**. Nadal możesz aktywować lub użyć wpisu, ale dodawanie, edycja, klonowanie i usuwanie są ukryte, dopóki nie odblokujesz ustawień. Zobacz [Ochrona ustawień blokuje teraz także ekrany zarządzania](#v4changes-read-only-management).
 
 - Hasła użytkownika używaj wtedy, gdy chcesz, aby hasło główne chroniło tylko [eksportowane ustawienia](../Maintenance/ExportImportSettings.md), a do edycji ustawień chcesz używać innego hasła.
 
@@ -177,11 +177,11 @@ Określ, które przyciski akcji są widoczne na ekranie głównym: dotknij małe
 
 Utwórz własne przyciski dla wybranych standardowych posiłków lub przekąsek. Będą one widoczne na ekranie głównym. Przydatne przy standardowych posiłkach, które często jesz.
 
-Dla każdego przycisku określasz węglowodany i sposób obliczania bolusa. Następnie określasz, w jakim przedziale czasu przycisk będzie widoczny na ekranie głównym – tylko jeden przycisk na jeden przedział. Przycisk nie będzie widoczny poza ustawionym przedziałem czasu ani wtedy, gdy masz dość IOB, aby pokryć węglowodany ustawione w przycisku Szybkiego bolusa. Jeśli dla różnych posiłków ustawisz różne godziny, na ekranie głównym zawsze zobaczysz przycisk standardowego posiłku pasujący do pory dnia.
+Dla każdego przycisku określasz węglowodany i sposób obliczania bolusa. Następnie określasz, w jakim przedziale czasu przycisk będzie widoczny na ekranie głównym – tylko jeden przycisk na jeden przedział. Przycisk nie będzie widoczny poza ustawionym przedziałem czasu ani wtedy, gdy masz dość IOB, aby pokryć węglowodany ustawione w przycisku Szybkiego kalkulatora. Jeśli dla różnych posiłków ustawisz różne godziny, na ekranie głównym zawsze zobaczysz przycisk standardowego posiłku pasujący do pory dnia.
 
-Aby zarządzać presetami Szybkiego bolusa, wpisz „QuickWizard” w pasku wyszukiwania na ekranie głównym i otwórz **Szybki bolus - Zarządzaj presetami kalkulatora bolusa**.
+Aby zarządzać presetami Szybkiego kalkulatora, wpisz „QuickWizard” w pasku wyszukiwania na ekranie głównym i otwórz **Szybki kalkulator - Zarządzaj presetami kalkulatora bolusa**.
 
-Gdy klikniesz przycisk szybkiego bolusa, **AAPS** obliczy i zaproponuje bolus na te węglowodany na podstawie twoich aktualnych współczynników (z uwzględnieniem glikemii lub aktywnej insuliny, jeśli tak ustawisz).
+Gdy klikniesz przycisk Szybkiego kalkulatora, **AAPS** obliczy i zaproponuje bolus na te węglowodany na podstawie twoich aktualnych współczynników (z uwzględnieniem glikemii lub aktywnej insuliny, jeśli tak ustawisz).
 
 Propozycję musisz potwierdzić, zanim insulina zostanie podana.
 
@@ -202,11 +202,11 @@ Dowiedz się, [jak włączyć cele tymczasowe](#TempTargets-where-can-i-select-a
 
 ### Standardowe ilości insuliny do wypełnienia/napełnienia
 
-Jeśli chcesz wypełnić dren lub napełnić kaniulę przez **AAPS**, użyj przycisków **Rozpocznij/Wypełnij** w rozwiniętym panelu stanu na ekranie głównym.
+Jeśli chcesz wypełnić dren lub napełnić kaniulę przez **AAPS**, użyj przycisków **Napełnij/Wypełnij** w rozwiniętym panelu stanu na ekranie głównym.
 
-Domyślne ilości dla trzech przycisków wypełniania możesz ustawić w ustawieniach **Rozpocznij/Wypełnij**, zależnie od długości twojego drenu. Aby je otworzyć, wpisz „prime” w pasku wyszukiwania na ekranie głównym.
+Domyślne ilości dla trzech przycisków wypełniania możesz ustawić w ustawieniach **Napełnij/Wypełnij**, zależnie od długości twojego drenu. Aby je otworzyć, wpisz „prime” w pasku wyszukiwania na ekranie głównym.
 
-![Standardowe ilości Rozpocznij/Wypełnij](../images/preferences/settings_prime_fill.png)
+![Standardowe ilości Napełnij/Wypełnij](../images/preferences/settings_prime_fill.png)
 
 (Preferences-status-lights)=
 ### Wskaźniki stanu
@@ -269,7 +269,7 @@ Gdy używasz trybu **Otwarta pętla**, dostajesz powiadomienie za każdym razem,
 
 ## Advanced Meal Assist (AMA) lub Super Micro Bolus (SMB)
 
-Zależnie od ustawień w [Ustawienia > APS](../SettingUpAaps/ConfigBuilder.md) możesz wybrać jeden z dwóch algorytmów:
+Zależnie od ustawień w [Konfiguracja > APS](../SettingUpAaps/ConfigBuilder.md) możesz wybrać jeden z dwóch algorytmów:
 
 - [Advanced meal assist (OpenAPS AMA)](#Open-APS-features-advanced-meal-assist-ama) – stan algorytmu z 2017 roku
 - [Super Micro Bolus (OpenAPS SMB)](#Open-APS-features-super-micro-bolus-smb) – najnowszy algorytm, zalecany dla początkujących
@@ -333,17 +333,17 @@ Czas, po którym każdy posiłek jest uznany za wchłonięty; pozostałe węglow
 - Określ minimalny i maksymalny współczynnik [autosens](#Open-APS-features-autosens).
 - Zwykle nie zmienia się wartości standardowych (maks. 1,2 i min. 0,7).
 
-## Pump
+## Pompa
 
 ![Ustawienia > Pompa](../images/preferences/settings_pump.png)
 
-### BT Watchdog
+### Watchdog BT
 
 W razie potrzeby włącz Watchdog BT (np. dla pomp Dana). Wyłącza Bluetooth na jedną sekundę, jeśli nie można połączyć się z pompą. Może to pomóc na niektórych telefonach, na których stos Bluetooth się zawiesza.
 
 ## Ustawienia pompy
 
-Dostępne tu opcje zależą od sterownika pompy wybranego w [Ustawienia > Pompa](#Config-Builder-pump). Sparuj i skonfiguruj pompę zgodnie z [instrukcjami dla twojej pompy](../Getting-Started/CompatiblePumps.md).
+Dostępne tu opcje zależą od sterownika pompy wybranego w [Konfiguracja > Pompa](#Config-Builder-pump). Sparuj i skonfiguruj pompę zgodnie z [instrukcjami dla twojej pompy](../Getting-Started/CompatiblePumps.md).
 
 Na przykład dla **Pompa wirtualna** sekcja nazywa się **Ustawienia pompy wirtualnej**. Wybierasz **Typ pompy**, który ma udawać wirtualna pompa, oraz to, czy jej stan jest wysyłany do Nightscout:
 
@@ -382,7 +382,7 @@ Wybór synchronizacji zależy od tego, jak chcesz używać **AAPS**.
 
 Możesz wybrać, które dane chcesz [wysyłać do Nightscout i pobierać z Nightscout](#Nightscout-aaps-settings).
 
-Gdy sterowanie z urządzenia opiekuna jest włączone (zawsze w trybie uproszczonym), te ustawienia są ukryte: **AAPS** działa wtedy w [trybie wzmocnionym](#client-master-control-hardened-mode), nie przyjmuje zmian zrobionych bezpośrednio w Nightscout i wysyła wszystkie swoje dane.
+Gdy sterowanie z urządzenia opiekuna jest włączone (zawsze w trybie uproszczonym), te ustawienia są ukryte: **AAPS** działa wtedy w [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode), nie przyjmuje zmian zrobionych bezpośrednio w Nightscout i wysyła wszystkie swoje dane.
 
 ### Opcje alarmu
 
@@ -395,9 +395,9 @@ Gdy sterowanie z urządzenia opiekuna jest włączone (zawsze w trybie uproszczo
 - Ogłoszenia NS powtarzają [ogłoszenia](https://nightscout.github.io/nightscout/discover/#announcement) Nightscout w powiadomieniach **AAPS**.
 - Możesz zmienić próg alarmów o nieaktualnych danych (stale data i urgent stale data), gdy przez pewien czas nie przychodzą żadne dane z Nightscout.
 
-### Remote control
+### Zdalne sterowanie
 
-Przełącznika „**Zezwalaj na sterowanie z urządzenia opiekuna**” nie ma już w tych ustawieniach: jest na górze ekranu **Zarządzaj → Autoryzowani opiekunowie**, gdzie zarządzasz sparowanymi klientami. Zobacz osobną stronę [Sterowanie Master ↔ Client](../RemoteFeatures/ClientMasterControl.md), także o [trybie wzmocnionym](#client-master-control-hardened-mode), który włącza ten przełącznik.
+Przełącznika „**Zezwalaj na sterowanie z urządzenia opiekuna**” nie ma już w tych ustawieniach: jest na górze ekranu **Zarządzaj → Autoryzowani opiekunowie**, gdzie zarządzasz sparowanymi klientami. Zobacz osobną stronę [Sterowanie Master ↔ Client](../RemoteFeatures/ClientMasterControl.md), także o [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode), który włącza ten przełącznik.
 
 ### Ustawienia połączenia
 
@@ -423,7 +423,7 @@ Więcej informacji na osobnej stronie [Komendy SMS](../RemoteFeatures/SMSCommand
 (preferences-wear)=
 ## Oprogramowanie Wear (Smartwatch)
 
-Ta sekcja jest widoczna, gdy wtyczka **Oprogramowanie Wear (Smartwatch)** jest włączona w [Ustawienia > Komunikacja](#Config-Builder-wear). Więcej informacji na osobnych stronach [Smartwatch z Wear OS](../WearOS/WearOsSmartwatch.md) i [Obsługa AAPS ze smartwatcha Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
+Ta sekcja jest widoczna, gdy wtyczka **Oprogramowanie Wear (Smartwatch)** jest włączona w [Konfiguracja > Komunikacja](#Config-Builder-wear). Więcej informacji na osobnych stronach [Smartwatch z Wear OS](../WearOS/WearOsSmartwatch.md) i [Obsługa AAPS ze smartwatcha Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 ![Ustawienia > Wear](../images/preferences/settings_wear.png)
 
@@ -439,7 +439,7 @@ Ta sekcja jest widoczna, gdy wtyczka **Oprogramowanie Wear (Smartwatch)** jest w
 
 ![Ustawienia > Wear > Ustawienia kreatora Wear](../images/preferences/settings_wear_wear_wizard.png)
 
-**Ustawienia niestandardowej tarczy** zawierają opcję **Pozwól na niestandardowe tarcze zegarka**. Plik niestandardowej tarczy może zawierać wartości niektórych ustawień zegarka. Gdy ten przełącznik jest włączony, wczytanie takiej tarczy może zmienić te ustawienia na zegarku; gdy jest wyłączony, tarcza zostaje wczytana, ale ustawienia się nie zmieniają:
+**Ustawienia niestandardowej tarczy** zawierają opcję **Pozwól na niestandardowe tarcze zegarka**. Plik własnej tarczy może zawierać wartości niektórych ustawień zegarka. Gdy ten przełącznik jest włączony, wczytanie takiej tarczy może zmienić te ustawienia na zegarku; gdy jest wyłączony, tarcza zostaje wczytana, ale ustawienia się nie zmieniają:
 
 ![Ustawienia > Wear > Ustawienia niestandardowej tarczy](../images/preferences/settings_wear_custom_watchface.png)
 
@@ -449,7 +449,7 @@ Ta sekcja jest widoczna, gdy wtyczka **Oprogramowanie Wear (Smartwatch)** jest w
 
 ## Autotune
 
-Ta sekcja jest widoczna, gdy wtyczka **Autotune** jest włączona w [Ustawienia > Ogólne](#Config-Builder-autotune). Ustawienia są opisane na osobnej stronie [Autotune](../AdvancedOptions/Autotune.md).
+Ta sekcja jest widoczna, gdy wtyczka **Autotune** jest włączona w [Konfiguracja > Ogólne](#Config-Builder-autotune). Ustawienia są opisane na osobnej stronie [Autotune](../AdvancedOptions/Autotune.md).
 
 ![Ustawienia > Autotune](../images/preferences/settings_autotune.png)
 
@@ -488,7 +488,7 @@ Możesz pomóc w dalszym rozwoju **AAPS**, wysyłając raporty o awariach do pro
 
 Po upływie okresu przejściowego 1 tygodnia zapisane hasło wygasa, a każdy automatyczny eksport ustawień zostanie przerwany i pojawi się powiadomienie z prośbą o ponowne wpisanie hasła. [(**Automatyczne eksporty ustawień**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) będą zapisywane na listach „Portal opieki” i „Wpis użytkownika” w **AAPS**, w sekcji Leczenie.
 
-Po włączeniu tej opcji wykonaj ręczny eksport ustawień. Zostaniesz wtedy poproszony o hasło, aby **AAPS** mogło je zapisać.
+Po włączeniu tej opcji wykonaj ręczny eksport ustawień. Zostaniesz wtedy poproszony o hasło, aby **AAPS** mógł je zapisać.
 
 ### Pliki logów
 
@@ -554,7 +554,7 @@ Aby zakończyć eksport do chmury, dotknij ikony **✕** (**Wyczyść ustawienia
 
 ## Open Humans
 
-You can help the community by donating your data to research projects! Szczegóły znajdziesz na [stronie Open Humans](../SupportingAaps/OpenHumans.md).
+Możesz pomóc społeczności, przekazując swoje dane do projektów badawczych! Szczegóły znajdziesz na [stronie Open Humans](../SupportingAaps/OpenHumans.md).
 
 W **Ustawienia → Open Humans** możesz określić, kiedy dane mają być wysyłane
 - tylko po połączeniu z Wi-Fi
