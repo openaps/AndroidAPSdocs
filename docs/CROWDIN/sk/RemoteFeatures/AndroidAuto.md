@@ -13,6 +13,8 @@ To znamená, že:
 
 ![CGM dáta z AAPS v Android Auto](../images/android_auto_01.png)
 
+(androidauto-check-that-aaps-can-show-notifications)=
+
 ## Check that AAPS can show notifications
 
 **AAPS** vždy zobrazuje notifikáciu stavu s aktuálnou glykémiou, IOB a COB. Práve túto notifikáciu zobrazuje Android Auto v aute. V **AAPS** netreba nič zapínať, ale Android musí **AAPS** povoliť zobrazovať notifikácie.
@@ -28,6 +30,8 @@ Posuňte sa nižšie a uistite sa, že **Aktuálny stav** je zapnutý: to je kan
 Pred cestou k autu teraz skontrolujte, či v telefóne vidíte notifikáciu stavu **AAPS**!
 
 ![Notifikácia AAPS v telefóne](../images/android_auto_04.png)
+
+(androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
 ## Allow the use of "unknown sources" with Android Auto.
 
@@ -79,4 +83,4 @@ Vaše CGM dáta sa zobrazia takto:
 
 ## Riešenie problémov:
 
-* Ak notifikáciu nevidíte, skontrolujte, či ste v Androide [povolili AAPS zobrazovať notifikácie](#check-that-aaps-can-show-notifications) a či [Android Auto má prístup k notifikáciám](#allow-the-use-of-unknown-sources-with-android-auto).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
