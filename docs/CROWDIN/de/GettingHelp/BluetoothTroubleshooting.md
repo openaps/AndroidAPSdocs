@@ -19,11 +19,11 @@ Einige dieser Probleme betreffen wahrscheinlich auch andere Bluetooth Insulinpum
 
 ## Bluetooth-Akku-Optimierung
 
-Neuere Android-Versionen haben standardmäßig die Akku-Optimierung für die Bluetooth-App des Systems eingeschaltet. Dies führt erwiesenerrmaßen zu einigen Problemen bei Pumpen und CGMs, die Bluetooth nutzen.
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Dies führt erwiesenerrmaßen zu einigen Problemen bei Pumpen und CGMs, die Bluetooth nutzen.
 
-Wenn Du den [Einrichtungsassistenten](../SettingUpAaps/SetupWizard) genutzt hast, und den Konfigurationsvorschlägen im Abschnitt [Bluetooth Akku-Optimierung](#setup-wizard-bluetooth-battery-optimisation) gefolgt bist, sollte die Einstellung bereits korrekt sein. Bist Du allerdings durch eine ältere Version der Anleitung gegangen, wurde die Einstellung nicht auf den richtigen Wert geändert.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
-Solltest Du Verbindungsabbrüche zwischen dem CGM und Deiner Pumpe haben, überprüfe, ob die Einstellung richtig gesetzt ist.
+Verify this is correctly configured if you have pump and CGM disconnections.
 
 ---
 
@@ -33,7 +33,7 @@ Solltest Du Verbindungsabbrüche zwischen dem CGM und Deiner Pumpe haben, überp
 
 Du kannst mit Android durch ein Berechtigungsmodell genau festlegen, was jede App tun darf und wie sie auf Dein Smartphone zugreifen darf. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
 
-Um funktionieren zu können, benötigt **AAPS** eine Reihe spezifischer Berechtigungen. Eine davon, die sicherstellt, dass die Pods funktionieren, ist die Berechtigung für „Geräte in der Nähe“. Es gibt viele andere Anwendungen, die diese Berechtigung ebenfalls benötigen. Die Community hat herausgefunden, dass eine Reihe von Anwendungen, wenn ihnen diese Berechtigung gegeben wird, Probleme bei der Aktivierung neuer Pods auf einigen Geräten verursachen können.
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. Es gibt viele andere Anwendungen, die diese Berechtigung ebenfalls benötigen. Die Community hat herausgefunden, dass eine Reihe von Anwendungen, wenn ihnen diese Berechtigung gegeben wird, Probleme bei der Aktivierung neuer Pods auf einigen Geräten verursachen können.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -50,16 +50,16 @@ Ping @XiTatiON im Discord-Kanal #omnipod-dash an, um Apps, die zur Liste hinzuge
 
 - **Amazon Alexa** Das Löschen der Berechtigung „Geräte in der Nähe“ für die Alexa-App, hat das Problem für einige Leute gelöst, hat aber den Nebeneffekt, dass Matter-IoT-Geräte nicht mehr gekoppelt werden können
 
-- **MINI App** Die App scheint auf der myBMW-App zu basieren und verhält sich folglich genau so
+- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
 - **BM2** Eine App zum Management einer Solarbatterie. Sie wird in Wohnmobilen und im Camping-Bereich für Solarinstallationen genutzt. Wenn die App läuft, verhindert sie die Aktivierung eines neuen Pods. Als Workaround kannst Du für den Zeitraum in dem ein neuer Pod aktiviert werden soll, die App deaktivieren (Stopp erzwingen). Das Ausführen der App danach schien die Funktion des DASH (auf einem Pixel 8 Pro mit Android 16) zu beeinträchtigen.
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### How to revoke "Nearby device" permissions for other apps:
-Solltest Du die richtige unterstütze **AAPS**-Version für Deine Android-Version im Einsatz haben und Du dennoch Probleme bei der Pod-Aktivierung haben: Es kann notwendig sein, für den Zeitraum der Pod-Aktivierung die Berechtigung den andere Apps zu entziehen.
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
-Befolge die folgenden Schritte, um die „Geräte in der Nähe“-Berechtigung allen Apps außer **AAPS** zu entziehen:
+Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
