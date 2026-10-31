@@ -1,7 +1,7 @@
 (scenes)=
 # Scènes (voorinstellingen voor situaties)
 
-Een **scène** is een voorinstelling met een naam die **een groep acties in één keer uitvoert**. Bijvoorbeeld een voorinstelling *Slaap*, *Beweging/sport* of *Ziekte dag* die met één tik je profiel wisselt, een tijdelijk streefdoel instelt, SMB aan- of uitzet en een Careportal-notitie toevoegt. Als je wilt, doet hij dat voor een vaste tijdsduur.
+Een **scène** is een voorinstelling met een naam die **een groep acties in één keer uitvoert**. Bijvoorbeeld een voorinstelling *Slaap*, *Beweging/sport* of *Ziektedag* die met één tik je profiel wisselt, een tijdelijk streefdoel instelt, SMB aan- of uitzet en een Careportal-notitie toevoegt. Als je wilt, doet hij dat voor een vaste tijdsduur.
 
 ```{contents} Table of contents
 :depth: 2
@@ -20,7 +20,7 @@ Je hoeft niet elke keer met de hand meerdere dingen te veranderen als een bekend
 - **Loopmodus** — verander de bedrijfsmodus (bijv. naar een voorzichtigere modus).
 - **Careportal-notitie** — sla een gebeurtenis op (bijv. *Sport*, *Ziekte*), zodat deze in de grafiek en in Nightscout te zien is.
 
-Een scène heeft ook een **tijdsduur** — een vaste tijd (minuten/uren/dagen) of *Onbeperkt (handmatig einde)* — en een **eindactie** die wordt uitgevoerd als de scène afloopt: een **melding**, of de scène kan **doorgaan** in een andere scène (bijvoorbeeld *Ziekte dag → Beweging/sport*).
+Een scène heeft ook een **tijdsduur** — een vaste tijd (minuten/uren/dagen) of *Onbeperkt (handmatig einde)* — en een **eindactie** die wordt uitgevoerd als de scène afloopt: een **melding**, of de scène kan **doorgaan** in een andere scène (bijvoorbeeld *Ziektedag → Beweging/sport*).
 
 ---
 
@@ -45,7 +45,7 @@ Tik op de knop **+** om een nieuwe scène te maken.
 
 ### Begin met een sjabloon
 
-Om een scène te **maken**, tik je op de knop **+** in het scherm Scènes. De eerste stap is **Aanmaken op basis van een sjabloon**: kies een kant-en-klare scène voor een veelvoorkomende situatie — *Beweging/sport*, *Ziekte dag*, *Ziekte dag - overgeven*, *Slaap*, *Nacht na beweging/sport*, *Voor de maaltijd*, *Alcohol*, *Autorijden*, *Baden*, *Luteale fase*, *Warm Weer*, *Medische Procedure* — of begin met een *Blanco* scène. Elk sjabloon **vult de aanbevolen acties alvast in**. Je kunt alles aanpassen in de volgende stappen.
+Om een scène te **maken**, tik je op de knop **+** in het scherm Scènes. De eerste stap is **Aanmaken op basis van een sjabloon**: kies een kant-en-klare scène voor een veelvoorkomende situatie — *Beweging/sport*, *Ziektedag*, *Ziektedag - overgeven*, *Slaap*, *Nacht na beweging/sport*, *Voor de maaltijd*, *Alcohol*, *Autorijden*, *Baden*, *Luteale fase*, *Warm Weer*, *Medische Procedure* — of begin met een *Blanco* scène. Elk sjabloon **vult de aanbevolen acties alvast in**. Je kunt alles aanpassen in de volgende stappen.
 
 ![“Aanmaken op basis van een sjabloon” — kies een beginpunt](../images/v4/Scenes/templates_picker.png)
 
