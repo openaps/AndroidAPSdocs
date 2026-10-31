@@ -1,178 +1,178 @@
-# Profile switch & Profile Percentage
+# Смяна на профил и процент на профила
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
+Този раздел обяснява какво са **Смяна на профил** и **Процент на профила**. Можете да научите как да създадете **профил** на страницата [Вашият профил в AAPS](#your-aaps-profile-create-and-edit-profiles).
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can offer be particularly beneficial for:
+Когато започвате с **AAPS**, ще трябва да създадете **профил**, да разберете как се прави **Смяна на профил** и да научите какъв е ефектът на **Процента на профила** в **AAPS**. Функциите **Смяна на профил** и **Процент на профила** могат да бъдат особено полезни при:
 
-- the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
+- менструалния цикъл – в **Автоматизация** може да се настрои процентна промяна на **профила**, за да може **AAPS** да се съобрази с различните фази на хормоналния цикъл и с очакваната инсулинова резистентност.
 
-- Exercise - a percentage adjustment within a **Profile** can be set up in **Automations** for exercise in order to reduce basal intake.
+- физическа активност – в **Автоматизация** може да се настрои процентна промяна на **профила** за физическа активност, за да се намали базалът.
 
-- Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
+- нощна работа или работа на смени – за хора, които работят на смени, може да се настрои отместване във времето на **профила**: броят часове в **профила** се променя според това колко по-късно/по-рано потребителят ще си легне или ще стане.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+Защо да използвате **Процент на профила** вместо временна промяна на базала? За да бъде по-ефективен, **Процентът на профила** прилага пропорционално намаление или увеличение на: базала, ISF и I:C. Така **AAPS** изчислява балансирано подаването на инсулин на потребителя. Намаляването само на базала в **профила** на потребителя в **AAPS** дава малка полза, ако алгоритъмът продължава да използва същите коефициенти ISF и I:C.
 
 (ProfileSwitch-change-percentage)=
 
-## Change the Profile Percentage from the main screen
+## Промяна на процента на профила от главния екран
 
-You need at least one saved **Profile**. A **Profile Percentage** is always applied through a **Profile Switch**: you activate a **Profile** again, this time with a percentage.
+Нужен ви е поне един записан **профил**. **Процентът на профила** винаги се прилага чрез **Смяна на профил**: активирате отново **профил**, този път с процент.
 
-```{admonition} Coming from AAPS 3? :class: note A long press on the profile name no longer opens the profile switch dialog. **Tap** the profile name, then tap the round **▶** button at the bottom right: it opens the same settings (percentage, duration, Activity temp target).
+```{admonition} Идвате от AAPS 3? :class: note Продължителното натискане на името на профила вече не отваря диалога за смяна на профил. **Докоснете** името на профила и след това докоснете кръглия бутон **▶** долу вдясно: той отваря същите настройки (процент, продължителност, временна цел „Физ. активност“).
 
-    <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
+    <br />1. На главния екран **докоснете името на профила** (до иконата със звезда). Отваря се [екранът „Профил“](#ProfileSwitch-manage-v4) на картата на текущия **профил**, маркирана с **АКТИВЕН**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![Докоснете името на профила на главния екран, за да отворите екрана „Профил“](../images/ProfileSwitch2.png)
     
-    2. To keep the same **Profile**, leave the **ACTIVE** card selected. To change **Profile** at the same time, swipe to another card.
-    3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
-    4. Set the **Percentage** with **−** / **+** (steps of 5 %), or type it in (30 to 250 %). The field always starts at **100 %**: it does not show the percentage that is running now. For example, enter **80** for 20 % less insulin, or **120** for 20 % more.
-    5. Set the **Duration** in minutes:
-       * **0** keeps the new percentage until you make another **Profile Switch**;
-       * any other value ends the switch after that time, and **AAPS** goes back to the **Profile** that was running before.
+    2. За да запазите същия **профил**, оставете избрана картата с **АКТИВЕН**. За да смените и **профила** в същото време, плъзнете до друга карта.
+    3. Докоснете кръглия бутон **▶** (**Активиране**) долу вдясно. Отваря се екранът **Активиране**.
+    4. Задайте **Процент** с **−** / **+** (на стъпки от 5 %) или го въведете (от 30 до 250 %). Полето винаги започва от **100 %**: то не показва процента, който работи в момента. Например въведете **80** за 20 % по-малко инсулин или **120** за 20 % повече.
+    5. Задайте **Срок** в минути:
+       * **0** запазва новия процент, докато не направите друга **Смяна на профил**;
+       * всяка друга стойност прекратява смяната след това време и **AAPS** се връща към **профила**, който е работил преди това.
     
-       ![The Activate screen set to 80 % for 60 minutes](../images/v4/Profiles/profile_activate_percentage.png)
+       ![Екранът „Активиране“, настроен на 80 % за 60 минути](../images/v4/Profiles/profile_activate_percentage.png)
     
-    6. Tap **▶ Activate** at the bottom of the screen. Check the summary in the **Profile switch** dialog and tap **OK**.
+    6. Докоснете **▶ Активиране** в долната част на екрана. Проверете обобщението в диалога **Смяна на профил** и докоснете **ОК**.
     
-       ![The confirmation dialog — profile, percentage and duration](../images/v4/Profiles/profile_activate_confirm.png)
+       ![Диалогът за потвърждение — профил, процент и продължителност](../images/v4/Profiles/profile_activate_confirm.png)
     
-    Back on the main screen, the profile name shows the percentage and the remaining time, for example *Normal (80%) (59')*, and turns yellow while a switch with a duration is running. A star marks the switch on the glucose graph. See [the main screen](#aaps-screens-profile--target).
+    След връщане на главния екран името на профила показва процента и оставащото време, например *Normal (80%) (59')*, и става жълто, докато работи смяна с продължителност. Звезда отбелязва смяната на графиката на КЗ. Вижте [главния екран](#aaps-screens-profile--target).
     
-    ![The main screen while an 80 % profile switch is running](../images/v4/Profiles/profile_switch_running.png)
+    ![Главният екран, докато работи смяна на профил на 80 %](../images/v4/Profiles/profile_switch_running.png)
     
-    To **go back to 100 %** before the end, repeat the steps and keep **Percentage** at 100 and **Duration** at 0.
+    За да **се върнете към 100 %** преди края, повторете стъпките и оставете **Процент** на 100 и **Срок** на 0.
     
-    ```{admonition} One-tap percentages
+    ```{admonition} Проценти с едно докосване
     :class: tip
-    If you often use the same percentage (sport, illness), add a [Profile shortcut](#profile-shortcuts) to the Quick Launch bar, or create a [scene](Scenes.md). Both apply a profile with a preset percentage and duration in one tap.
+    Ако често използвате един и същ процент (спорт, болест), добавете [пряк път към профил](#profile-shortcuts) в лентата QuickLaunch или създайте [сценарий](Scenes.md). И двете прилагат профил с предварително зададени процент и продължителност с едно докосване.
     
 
 (ProfileSwitch-manage-v4)=
 
-## Managing and activating profiles (Manage → Profile)
+## Управление и активиране на профили (Управление → Профил)
 
-In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+В **AAPS** v4 профилите се управляват и активират от екрана **Управление** (долната навигация) → **Профил** (*„Редакция и активация на профили“*).
 
-The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 30.15 U*). Below the selected card you see that profile's details — **Units**, **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+Екранът „Профил“ показва профилите ви като **карусел от карти, които се плъзгат**. Картата на текущия профил е маркирана с **АКТИВЕН** и показва общия му дневен базал (напр. *∑ 30,15 U*). Под избраната карта виждате подробностите за този профил — **Единици**, тип **Инсулин** и графиците за **IC**, **ISF**, **базал** и **цел** с графики.
 
-![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+![Екранът „Профил“ — карусел с профили, подробности и лента с действия](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+Бутоните долу действат върху **избрания** профил: **➕ Добави**, **✏️ Редактирай**, **⧉ Клонирай** и **‘️ Изтрий**, а вдясно е кръглият бутон **▶ Активиране**. За това как да попълните четирите графика в редактора (И / Въгл, Чувств, БАЗА, ЦЕЛ), вижте [Създаване и редактиране на профили](#your-aaps-profile-create-and-edit-profiles).
 
-**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+**⧉ Клонирай** използва иконата с два квадрата, която често означава *копиране*, но няма какво да поставяте: дубликатът се прави с една стъпка. Потвърдете *Да се клонира ли профил Normal?* и нов профил с име *Normal copy* се добавя в края на карусела и се избира, готов за **✏️ Редактирай** (там можете и да го преименувате). Това не е същото като клонирането на минала **Смяна на профил** от историята на леченията, което създава нов профил *с приложени процент и отместване във времето*. Вижте [Запазване на смяна на профил за по-късно използване](#ProfileSwitch-keep-for-later).
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **Има само бутон ▶ Активиране?** Настройките ви са защитени, затова екранът се отваря само за четене. Докоснете **✏️ молива** в горната лента и въведете паролата за настройките. Вижте [Защитата на настройките вече заключва и екраните за управление](#v4changes-read-only-management).
 
-### Reordering profiles
+### Подреждане на профили
 
-If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+Ако имате повече от един профил, можете да изберете реда им в карусела: докоснете иконата **Подреди** (⇅, две стрелки нагоре и надолу) в горната лента. Индикаторът на страниците се заменя с **бутони за преместване ◀ / ▶** и показване *позиция / общо* — премествайте картата в центъра по-рано или по-късно и след това потвърдете с **✓** (или отхвърлете с **✕**). Новият ред се записва веднъж, когато потвърдите.
 
-![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+![Режим на подреждане — бутони за преместване и показване на позицията](../images/v4/Profiles/profile_reorder.png)
 
-### Activating a profile
+### Активиране на профил
 
-Select a profile and tap **▶ Activate**. The **Activate** screen lets you tailor how the **Profile Switch** is applied:
+Изберете профил и докоснете **▶ Активиране**. Екранът **Активиране** ви позволява да нагласите как да се приложи **Смяната на профил**:
 
-![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+![Екранът „Активиране“ — процент, срок, отместване във времето, време](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
-- **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
-- **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
-- **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
-- **Reuse** — appears when the running switch has a percentage other than 100 % or a time shift, for example **Reuse 80% 0h**. Tap it to fill in the same percentage and time shift, for instance to prolong a switch that is about to end.
+- **Процент** (30–250 %, всеки път започва от 100 %) — променя пропорционално целия профил. При 100 % профилът се използва без промяна; например 70 % намалява базала и изчислената доза инсулин (и болусите за хранене, и корекциите) с 30 %. Това не променя целевите стойности на КЗ, нито усвояването на въглехидратите. Вижте [Процент на профила](#profile-percentage) за пълния ефект.
+- **Срок** (0–10080 минути, т.е. до 7 дни) — колко дълго продължава смяната. **0 = без ограничение** (докато не смените отново); стойност, различна от нула, връща предишния профил, когато изтече.
+- **Временна цел / Физ. активност** — появява се само когато зададете **Срок** и **Процент** под 100 %. Включете го, за да стартирате и [временна цел „Физ. активност“](#TempTargets-activity-temp-target) за същото време, както бихте направили преди физическа активност.
+- **Време на отместване** — показва *0ч*; докоснете **Промяна**, за да преместите графика напред или назад с до 23 часа (полезно при работа на смени или пътуване). Вижте [Отместване във времето](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
+- **Приложи отново** — появява се, когато текущата смяна е с процент, различен от 100 %, или с отместване във времето, например **Приложи отново 80% 0ч**. Докоснете го, за да попълните същите процент и отместване във времето, например за да удължите смяна, която скоро ще приключи.
     
-    ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
+    ![Бутонът „Приложи отново“, докато работи смяна на 80 %](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+- **Време** — по подразбиране *Сега*. Можете да изберете друго време, до 24 часа преди или след текущия момент. Смяна, зададена в бъдещето, започва в този момент; временната цел „Физ. активност“, зададена заедно с нея, също започва тогава.
     
-    ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+    ![Избор на времето на смяна на профил](../images/v4/Profiles/profile_activate_time_picker.png)
 
-- **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
+- **Бележки** — показва се само ако [Покажи бележките в диалоговите прозорци](#Preferences-show-notes-field-in-treatments-dialogs) е включено.
 
-If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
+Ако базалните дози при избрания процент не са съвместими с помпата ви, най-горе се показва предупреждение и **▶ Активиране** остава неактивен: изберете друг процент.
 
-Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+Докоснете **▶ Активиране** и след това **ОК** в диалога за потвърждение. След това текущият профил носи значката **АКТИВЕН** на картата си.
 
-```{admonition} Your pump may round the basal rates :class: note Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+```{admonition} Помпата може да закръгли базалните дози :class: note Всяка помпа може да подава базал само на своите стъпки (например 0,05 U/h), затова тя закръглява дозите от вашия **профил**. След това **AAPS** използва базала, който помпата наистина подава, така че IOB и TDD остават правилни. Ако помпата подава малко повече или по-малко инсулин на ден, отколкото е във вашия **профил**, известието *„Профилът на помпата е обновен“* ви казва с колко, например *„подава 10,00 U на ден вместо 10,12 U“*.
 
-If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+Ако помпата отчита базал, който е далеч от вашия **профил**, **AAPS** запазва базала от **профила** и ви моли да проверите базалните дози в помпата.
 
-    <br />```{admonition} Percentage and time shift make one profile go a long way
+    <br />```{admonition} С процент и отместване във времето един профил покрива много ситуации
     :class: note
-    Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+    Вместо да създавате много подобни профили, използвайте един основен профил и го прилагайте с различен **процент** или **отместване във времето** при повтарящи се ситуации (болест, физическа активност, пътуване). Точно това автоматизират [сценариите](Scenes.md).
     
 
-A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+Смяната на профил не е само на този екран. Същата смяна може да бъде задействана и от **часовник с Wear OS**, свързан **клиент** (вижте [Контрол главен ↔ клиент](../RemoteFeatures/ClientMasterControl.md)), **[сценарий](Scenes.md)** или правило в **Автоматизация**.
 
-## Profile Percentage
+## Процент на профила
 
-It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
+Важно е потребителят да разбира основните особености на **Процента на профила**. Когато приложите процентно увеличение или намаление при **Смяна на профил**, параметрите, зададени в **профила** на потребителя, се увеличават или намаляват със същия процент.
 
-For example: a **Profile Switch** to 130% (means the user is 30% more insulin resistant) will instruct **AAPS** to
+Например: **Смяна на профил** на 130 % (означава, че потребителят е с 30 % по-инсулинорезистентен) ще накара **AAPS** да
 
-- **increase** the basal rate by 30%; 
-- **lower** the **ISF**: by dividing by 1.3;
-- **lower** the **I:C** by dividing by 1.3.
+- **увеличи** базалната доза с 30 %; 
+- **намали** **ISF**, като го раздели на 1,3;
+- **намали** **I:C**, като го раздели на 1,3.
 
-Remember lowering the **ISF** or **I:C** means a stronger ratio and more insulin being administered. This fact can be easily overlooked by new users to **AAPS**.
+Запомнете, че по-ниски **ISF** или **I:C** означават по-силен коефициент и повече подаден инсулин. Новите потребители на **AAPS** лесно могат да пропуснат това.
 
-Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or closed) will continue to work on top of the selected percentage **Profile**.
+След като го изберете, **AAPS** променя стандартната базална доза и **AAPS** (в отворен или затворен кръг) продължава да работи на базата на избрания процентен **профил**.
 
-The effect of a **Profile** Percentage is summarized in the table below:
+Ефектът на процента на **профила** е обобщен в таблицата по-долу:
 
-| Profile Switch  
-Percentage |    Effect    |    I:C  
-g/UI     | example  
-15g |         ISF  
-mmol/L/UI  
-mg/dL/UI         | UI to lower  
-2mmol/L  
-40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:-------------------------------:|
-|             90%             |    Weaker    | 5/0.9  
-=**5.55** |    2.7 UI     | 2.2/0.9  
-=**2.4**  
+| Смяна на профил  
+Процент |     Ефект      |     I:C  
+г/U     | пример  
+15 г |          ISF  
+mmol/l/U  
+mg/dl/U          | U за понижаване с  
+2 mmol/l  
+40 mg/dl |
+|:-------------------------:|:--------------:|:-----------------:|:-------------:|:------------------------------------------:|:---------------------------------------:|
+|           90 %            |    По-слаб     | 5/0,9  
+=**5,55** |     2,7 U     | 2,2/0,9  
+=**2,4**  
   
-40/0.9  
-=**44.4** |             0.8 UI              |
-|          **100%**           | **Standard** |       **5**       |   **3 UI**    |                **2.2  
-40**                |           **0.9** UI            |
-|            130%             |   Stronger   | 5/1.3  
-=**3.85** |    3.9 UI     | 2.2/1.3  
-=**1.7**  
+40/0,9  
+=**44,4** |                  0,8 U                  |
+|         **100 %**         | **Стандартен** |       **5**       |    **3 U**    |                **2,2  
+40**                |                **0,9** U                |
+|           130 %           |    По-силен    | 5/1,3  
+=**3,85** |     3,9 U     | 2,2/1,3  
+=**1,7**  
   
-40/1.3  
-=**30.8** |             1.2 UI              |
+40/1,3  
+=**30,8** |                  1,2 U                  |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
-## Time shift of the Circadian Percentage Profile
+## Отместване във времето на циркадния процентен профил
 
-A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
+„Отместване във времето“ на **профила** на потребителя премества настройките на **профила** по денонощния часовник („циркаден“) с въведения брой часове. Това може да е полезно за:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
-- **users changing time zones during travelling**; or
-- **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
+- **хора, които работят нощни смени или на смени**: при работа на нощни смени броят часове в **профила** се променя според това колко по-късно/по-рано потребителят ще си легне или ще стане; 
+- **потребители, които сменят часовите зони при пътуване**; или
+- **деца с диабет тип 1**, които имат определен режим за лягане и инсулинова резистентност, взета предвид в техния **профил**. Ако по някаква причина детето ще си легне по-късно, родителят може да приложи „отместване във времето“ към **профила** на детето, за да може **AAPS** да реагира на инсулиновата резистентност в желания от потребителя период.
 
-It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. This time must be shifted by x hours. So please be mindful of the directions as described in the following example:
+Въпросът винаги е: настройките на **профила** от кой час трябва да заменят настройките за текущия час. Това време трябва да се отмести с x часа. Затова, моля, внимавайте с посоките, както е описано в следващия пример:
 
-- Current time: 12:00
-- **Positive** time shift 
-    - 2:00 **+10 h** -> 12:00
-    - Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-- **Negative** time shift 
-    - 22:00 **-10 h** -> 12:00
-    - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+- Текущо време: 12:00
+- **Положително** отместване във времето 
+    - 2:00 **+10 ч** -> 12:00
+    - Поради положителното отместване ще се използват настройките от 2:00 вместо настройките, които обикновено се използват в 12:00.
+- **Отрицателно** отместване във времето 
+    - 22:00 **-10 ч** -> 12:00
+    - Поради отрицателното отместване ще се използват настройките от 22:00 вместо настройките, които обикновено се използват в 12:00.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Посоки на отместването във времето при смяна на профил](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Този механизъм за запазване на моментни снимки на **профила** позволява много по-точно изчисляване на миналото и възможност да се проследяват промените в **профила**.
 
 (ProfileSwitch-keep-for-later)=
 
-## Keep a profile switch for later use
+## Запазване на смяна на профил за по-късно използване
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+След като сте направили смяна на профил с процент и/или отместване във времето, можете да направите копие на този временен профил като нов профил.
 
-To do this, open the menu (☰) → **Treatments** and go to the **Profile switch** tab, see [Clone a Profile switch to a new Profile](#your-aaps-profile-clone-profile-switch).
+За да направите това, отворете менюто (☰) → **Лечения** и отидете в раздела **Смяна на профил**, вижте [Клониране на смяна на профил в нов профил](#your-aaps-profile-clone-profile-switch).
