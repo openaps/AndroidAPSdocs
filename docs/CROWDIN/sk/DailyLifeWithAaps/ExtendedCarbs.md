@@ -9,7 +9,7 @@ Takéto jedlá však treba stále nejako zvládnuť. Preto AAPS podporuje tzv. p
 
 eSacharidy sú sacharidy rozdelené na niekoľko hodín. Pri bežných jedlách, ktoré majú viac sacharidov ako tukov a bielkovín, zvyčajne stačí zadať sacharidy vopred (a v prípade potreby znížiť úvodný bolus), aby sa inzulín nepodal príliš skoro.  Pri pomalšie vstrebávaných jedlách, pri ktorých by zadanie všetkých sacharidov vopred viedlo k príliš vysokému IOB zo SMB, však môžete použiť eSacharidy. Tie presnejšie napodobnia, ako sa sacharidy (a všetky sacharidové ekvivalenty, ktoré zadáte za iné živiny) vstrebávajú a ovplyvňujú glykémiu. Vďaka týmto informáciám môže okruh podávať SMB postupnejšie, aby tieto sacharidy pokryl. Dá sa to chápať ako dynamický predĺžený bolus (malo by to fungovať aj bez SMB, ale pravdepodobne menej účinne).
 
-**Poznámka:** eSacharidy nie sú len pre jedlá s veľa tukmi alebo bielkovinami: môžu pomôcť v každej situácii, keď niečo zvyšuje glykémiu, napr. iné lieky, ako sú kortikosteroidy.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## Ako sa eSacharidy používajú
 
@@ -62,7 +62,7 @@ Rýchlejšie to ide, ak eSacharidy pridá za vás *Bolusová kalkulačka*: pod p
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Predĺžený bolus a prečo nefunguje v uzavretom okruhu?
 
-Ako bolo spomenuté vyššie, predĺžené ani viacvlnové (multiwave) bolusy v uzavretom okruhu naozaj nefungujú. Podrobnosti nájdete [nižšie](#why-extended-boluses-wont-work-in-a-closed-loop-environment)
+Ako bolo spomenuté vyššie, predĺžené ani viacvlnové (multiwave) bolusy v uzavretom okruhu naozaj nefungujú. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Predĺžený bolus a prepnutie na otvorený okruh – iba pumpy Dana a Insight
