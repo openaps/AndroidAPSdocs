@@ -19,11 +19,11 @@
 
 ## 藍牙 電池優化
 
-較新的 Android 版本已對系統的藍牙應用程式啟用電池優化。這已知會對藍牙幫浦與 CGM 造成一些問題。
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. 這已知會對藍牙幫浦與 CGM 造成一些問題。
 
-如果你依照 [設定嚮導](../SettingUpAaps/SetupWizard)，並完成 [藍牙 電池優化](#setup-wizard-bluetooth-battery-optimisation) 區段中的設定，這個設定應該是正確的。不過，如果你依循較舊版本的指南，則可能尚未變更此設定。
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
-如果你遇到幫浦與 CGM 斷線，請檢查此設定是否正確。
+Verify this is correctly configured if you have pump and CGM disconnections.
 
 ---
 
@@ -33,7 +33,7 @@
 
 Android 透過權限模型讓你控制每個應用程式在手機上能做什麼、能存取什麼。 For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
 
-**AAPS** 需要多項特定權限才能運作，其中確保 Pod 正常工作的必要權限是「附近裝置」。也有許多其他應用程式需要此權限；社群發現，當某些應用被授予此權限時，可能會在部分裝置上導致新 Pod 的啟用發生問題。
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. 也有許多其他應用程式需要此權限；社群發現，當某些應用被授予此權限時，可能會在部分裝置上導致新 Pod 的啟用發生問題。
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -50,16 +50,16 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 
 - **Amazon Alexa** 對部分人而言，移除 Alexa 應用程式的「Nearby devices」權限可解決問題，但會使配對 Matter IoT 裝置的功能失效
 
-- **MINI app** 此 App 似乎是以 myBMW app 為基礎，因此可能會呈現相同行為
+- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
 - **BM2** 太陽能電池監測應用程式，常用於部分露營車與露營太陽能架設；當該 App 執行時，會阻止新 Pod 的註冊。在註冊新 Pod 時強制停止該 App，是解決此問題的權宜之計。之後再執行該 App，似乎不會干擾 Dash 的功能（在執行 Android 16 的 Pixel 8 Pro 上）。
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### How to revoke "Nearby device" permissions for other apps:
-如果你在啟用新 Pod 時遇到問題，且你使用的 **AAPS** 版本與你的 Android 版本相容，在啟用新 Pod 的過程中，可能需要先撤銷其他應用程式的該權限。
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
-請依照以下步驟，將除了 **AAPS** 之外的所有應用程式的「附近裝置」權限撤銷：
+Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note${NEW_LINE>本指南中的螢幕擷取畫面與說明，來自 Google Pixel 8 Pro 的原生 Android 16 安裝。其他品牌與裝置的選單與設定描述可能不完全相同，請依你的裝置調整步驟；若卡關，請參閱 [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) 章節，了解如何向社群尋求支援。
