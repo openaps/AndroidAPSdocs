@@ -71,15 +71,15 @@
 ## Ноември 2024 г.
 
 - Актуализация на [Вашият профил в AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Преработено е съдържанието за [смарт часовниците с Wear OS](../WearOS/BuildingAapsWearOS.md) @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
 
 ## Октомври 2024 г.
 
 - Актуализация на няколко страници:
-  - [Колко време ще отнеме?](#preparing-how-long-will-it-take), [Преглед на компонентите](../DailyLifeWithAaps/CobCalculation.md), [Изпълнение на целите](../SettingUpAaps/CompletingTheObjectives.md), [Вашият профил в AAPS](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) и [Опции](../SettingUpAaps/Preferences.md), [Екраните на AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [Калкулиране на COB](../DailyLifeWithAaps/CobCalculation.md), [Динамично ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Указания за компилиране с Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Техническа работа (процес за публикуване на документацията, организация на файловете...) @psonnerat и @emilise
+- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
 
 ***
 
@@ -102,7 +102,7 @@
 
 ## Януари 2022 г.
 
-- [Отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio) – актуализация @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
 ## Декември 2021 г.
 
@@ -113,7 +113,7 @@
 
 - Добри практики за калибриране на сензор Libre 2
 - [ISF](../UsefulLinks/FAQ.md) – ново описание на въздействието
-- Актуализация на [Отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Премахнато е модифицираното приложение [Dexcom](../CompatibleCgms/DexcomG6.md), защото е остаряло
 
 ## Октомври 2021 г.
@@ -166,7 +166,7 @@
 ## Септември 2020 г.
 
 - Голяма актуализация за новата версия 2.7 на AAPS
-- За подробности вижте `release notes <Releasenotes-version-2-7-0>`
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## Юни 2020 г.
 
@@ -191,7 +191,7 @@
 - [Компилиране на apk с Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS с фърмуер v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **засега не може да се използва с AAPS!**
 - [Удължен болус и превключване към отворен кръг](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Актуализиране на apk с Android Studio 3.6.1](../Maintenance/UpdateToNewVersion)
+- [Актуализиране на apk с Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
 ## Февруари 2020 г.
 
@@ -229,7 +229,7 @@
 - [Нови указания за Freestyle Libre 2](../CompatibleCgms/Libre2.md)
 - [Смяна на профил с процент – пример](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [Актуализация на SMS командите](../RemoteFeatures/SMSCommands.md)
-- [Отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- [Отстраняване на неизправности в Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - [Отстраняване на неизправности – колекция от връзки](../GettingHelp/GeneralTroubleshooting.md)
 - Актуализиране – кратко ръководство за опитни потребители
 - Документация – актуализация за [редактирането](#edit-the-docs-code-syntax) и [превода](#translations-translation-of-the-documentation).
