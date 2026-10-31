@@ -8,7 +8,7 @@
 
 ### Деактивиране на качването към Nightscout
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Не позволявайте на друго приложение да качва данни (кръвна захар и лечения) в Nightscout.
 
 Деактивирайте всяко активно качване (uploader) към Nightscout в Juggluco.
 
@@ -18,11 +18,11 @@ You shouldn't let any other app upload data (blood glucose and treatments) to Ni
 
 ## Juggluco към AAPS
 
-Juggluco може да изпраща кръвна захар директно към AAPS, като позволява SMB винаги, ако използвате [доверен сензор](#GettingStarted-TrustedBGSource).
+Juggluco може да изпраща стойностите на кръвната захар директно към AAPS и така позволява SMB по всяко време, ако използвате [надежден сензор](#GettingStarted-TrustedBGSource).
 
 При използване на сензор Libre 2/2+/3/3+, отчитанията на всяка минута ще бъдат изпращани към AAPS, но няма да задействат изчисления на всяка минута в AAPS.
 
-Активирайте xDrip broadcast в Juggluco (не активирайте Patched Libre), потвърдете и запазете информацията за AAPS пакета. Select the xDrip BG data source in AAPS.
+Активирайте xDrip broadcast в Juggluco (не активирайте Patched Libre), потвърдете и запазете информацията за AAPS пакета. Изберете в AAPS източника на данни за КЗ „КЗ от xDrip+“.
 
 Приложете достатъчно [изглаждане](./SmoothingBloodGlucoseData.md) в AAPS.
 
@@ -30,12 +30,12 @@ Juggluco може да изпраща кръвна захар директно �
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip
+## Juggluco към xDrip
 
-Juggluco can send blood glucose to xDrip which will then send them to AAPS.
+Juggluco може да изпраща стойностите на кръвната захар към xDrip, който след това ги изпраща към AAPS.
 
-Активирайте Patched Libre в Juggluco (не активирайте xDrip broadcast), потвърдете и запазете информацията за dexdrip пакета. Select the xDrip BG data source in AAPS.
+Активирайте Patched Libre в Juggluco (не активирайте xDrip broadcast), потвърдете и запазете информацията за dexdrip пакета. Изберете в AAPS източника на данни за КЗ „КЗ от xDrip+“.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary, when using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute to 5 minutes readings and [also smoothen](#libre2-value-smoothing-raw-values) them.
+Приложете достатъчно [изглаждане](./SmoothingBloodGlucoseData.md) в AAPS, ако е нужно. Когато използвате сензор Libre 2/2+/3/3+, xDrip ще осреднява стойностите през 1 минута до стойности през 5 минути и [също ще ги изглажда](#libre2-value-smoothing-raw-values).
 
-![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)
+![Juggluco към xDrip](../images/juggluco/Juggluco-xDrip+.png)
