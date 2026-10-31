@@ -114,7 +114,7 @@ Setup Wizard <./SettingUpAaps/SetupWizard.md>
 Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
 Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
 - Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Preferences <./SettingUpAaps/Preferences.md>
+- Settings <./SettingUpAaps/Preferences.md>
 Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 

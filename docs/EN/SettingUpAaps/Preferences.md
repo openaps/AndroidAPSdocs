@@ -1,4 +1,4 @@
-# Settings (Preferences)
+# Settings
 
 In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
 
@@ -360,7 +360,7 @@ For example with the **Virtual Pump**, the section is called **Virtual pump sett
 More information on the dedicated [Tidepool](../SettingUpAaps/Tidepool.md) page.
 
 (Preferences-nsclient)=
-## NSClient
+## NSClientV3
 
 ![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
 
@@ -416,7 +416,7 @@ The switch "**Allow client control**" is no longer in these settings: it is at t
 - To delete all SSIDs enter a blank space in the field.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Advanced settings (NSClientV3)
 
 ![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
 
