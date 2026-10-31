@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Voeding (je eigen voedingsdatabase)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+De database **Voeding** is je eigen lijst met opgeslagen voedingsmiddelen. Elk item bewaart de **koolhydraten** van een voedingsmiddel (en eventueel ook vet, eiwit, energie en een categorie). Zo heb je wat je vaak eet op één plek, en kun je een bolus starten vanuit een opgeslagen voedingsmiddel waarbij de koolhydraten al zijn ingevuld.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## De voedingsdatabase openen
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Open het scherm **Beheren** (navigatie onderaan) en kies **Voeding** (*“Voedingsmiddelen beheren”*). In **AAPS** v4 is Voeding **geen plugin meer** — je hoeft niets in te schakelen; het is een apart scherm dat je opent via het [menu Beheren](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## De lijst met voedingsmiddelen
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Je voedingsmiddelen staan in een lijst waarin je kunt scrollen. Elke regel toont de **naam** van het voedingsmiddel, de **portie / eenheid / categorie** en de **koolhydraten**:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![De lijst van de voedingsdatabase, met zoeken en de knop voor toevoegen](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Zoeken** (bovenaan) — filter de lijst op **naam** (hoofdletters maken niet uit).
+- **Filter op categorie** — met chips kun je de lijst beperken tot één **categorie**; als je een categorie kiest, verschijnen er chips voor de **subcategorie**. (Tik nog een keer op een gekozen chip om hem te wissen.)
+- **➕** (rechtsonder) — voeg een nieuw voedingsmiddel toe (zie hieronder).
+- Tik op een regel om dat voedingsmiddel te **bewerken**.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Als de lijst (of het huidige filter) leeg is, toont het scherm **Geen data**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Een voedingsmiddel toevoegen en bewerken
+
+Tik op **➕** om toe te voegen, of tik op een bestaande regel om die te bewerken. Er opent een editor onderaan het scherm (**Voedingsmiddel toevoegen** / **Voedingsmiddel bewerken**):
+
+![De editor voor voedingsmiddelen — naam, categorie, portie, koolhydraten en macro's](../images/v4/Food/food_editor.png)
+
+De velden zijn:
+
+- **Naam** — verplicht (zonder naam kun je niet opslaan).
+- **Categorie** en **Subcategorie** — optioneel, om voedingsmiddelen te groeperen of te filteren.
+- **Portie** en **Eenheid** — de gebruikelijke portiegrootte; **Eenheid** is standaard **g**.
+- **Koolhydraten (g)** — de hoeveelheid koolhydraten van het voedingsmiddel.
+- **Vet (g)**, **Eiwit (g)**, **Energie (kJ)** — optionele voedingswaarden.
+
+Tik op **Opslaan** om het op te slaan, of op **Annuleren** om het te negeren. Als je een bestaand voedingsmiddel bewerkt, heeft de editor ook een knop **Verwijderen**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Als je een voedingsmiddel verwijdert, verschijnt de melding **“Voedingsmiddel verwijderd”** met de actie **Ongedaan maken**. Zo kun je een verwijdering per ongeluk makkelijk terugdraaien.
 ```
 
 ---
 
-## Using a food for a bolus
+## Een voedingsmiddel gebruiken voor een bolus
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Elke regel heeft een knop **Calculator**. Als je erop tikt, opent de **Bolus wizard** met de **koolhydraten** van dat voedingsmiddel al ingevuld en de **naam** als notitie bij de behandeling — zo bevestig en geef je de bolus zonder de koolhydraten opnieuw in te typen.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Het opgeslagen aantal **koolhydraten** gaat direct naar de wizard — **AAPS** vermenigvuldigt het niet met de portie of met hoeveel je hebt gegeten. Eet je een andere hoeveelheid, pas dan de koolhydraten in de wizard aan voordat je bevestigt. (Er is geen keuzelijst voor voedingsmiddelen *in* de Bolus wizard of in het venster Koolhydraten; je start vanaf de regel van het voedingsmiddel hier.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Waar de voedingsmiddelen vandaan komen (Nightscout-synchronisatie)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+De voedingsdatabase wordt gedeeld via **Nightscout**, maar **alleen in één richting**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Downloaden:** **AAPS** **leest** voedingsmiddelen uit de **voedingsdatabase** van je Nightscout-site en houdt de lokale lijst daarmee gelijk. Dit gebeurt als onderdeel van de NSClient-synchronisatie, dus een gekoppelde **client/volger** krijgt ook dezelfde voedingsmiddelen.
+- **Uploaden:** **AAPS** stuurt voedingsmiddelen **niet** **naar** Nightscout — NSClient kan geen voedingsmiddelen uploaden. Voedingsmiddelen die je **in AAPS** maakt of bewerkt, blijven daarom **op dat apparaat** en gaan niet naar Nightscout of naar je andere apparaten.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Omdat voeding **alleen gedownload** wordt, deel je één lijst met voedingsmiddelen tussen je telefoon, je volger/[client](../RemoteFeatures/ClientMasterControl.md) en de rest van je systeem door die lijst bij te houden in **Nightscout** (met de ingebouwde editor voor voeding). **AAPS** haalt die items dan op. Een voedingsmiddel dat je alleen in **AAPS** toevoegt, staat alleen op dat apparaat — en blijft daar ook: een download koppelt Nightscout-items via hun Nightscout-ID. Hij voegt die toe en werkt ze bij, maar overschrijft of verwijdert nooit een voedingsmiddel dat je lokaal hebt gemaakt (een voedingsmiddel wordt alleen verwijderd als de kopie ervan in Nightscout wordt verwijderd).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Let op: de voedingsdatabase is ook **geen** deel van het ondertekende master ↔ client-besturingskanaal — hij gaat alleen als Nightscout-gegevens mee.
 ```
 
 ---
 
-## Not on the watch
+## Niet op het horloge
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+De voedingsdatabase is een functie van de **telefoon** — er is geen voedingslijst, tegel of menu op een **Wear OS-horloge**.
 
 ---
 
