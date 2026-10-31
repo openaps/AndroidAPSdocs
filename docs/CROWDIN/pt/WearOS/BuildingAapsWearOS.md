@@ -92,4 +92,4 @@ Siga as [Instruções de compilação na linha de comandos](../SettingUpAaps/CLI
 ./gradlew :wear:assembleFullRelease
 ```
 
-The unsigned Wear apk is written under `wear/build/outputs/apk/full/release/`. Sign it with `apksigner` exactly like the phone apk, then install it on the watch, see [Set up AAPS on your Wear OS watch](WearOsSmartwatch.md).
+O Wear apk não assinado fica em `wear/build/outputs/apk/full/release/`. Assine-o com o `apksigner` exatamente como o APK do telefone e depois instale-o no relógio, veja [Configurar o AAPS no seu relógio Wear OS](WearOsSmartwatch.md).
