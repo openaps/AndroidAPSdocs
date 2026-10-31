@@ -7,40 +7,40 @@
 
 ## Pump capabilities with AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* Communique avec **AAPS** par le Bluetooth natif de votre téléphone, sans appareil de communication supplémentaire.
+* Les changements d'heure d'été et de fuseau horaire doivent être faits à la main.
 
 ## Appairage Bluetooth de la pompe à insuline
 
-- Tap the **menu** (☰) in the top-left corner.
+- Appuyez sur le **menu** (☰) en haut à gauche.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+![Le menu avec l'entrée Configuration](../images/v4/Configuration/configuration_menu.png)
 
-- Tap **Configuration** > **Pump** and select **Diaconn G8**.
+- Appuyez sur **Configuration** > **Pompe** et sélectionnez **Diaconn G8**.
 
-![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Configuration > Pompe avec le plugin Diaconn G8](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and **Open plugin**:
+Une fois le plugin sélectionné, la carte **Diaconn G8** affiche deux boutons, **Paramètres** et **Ouvrir le plugin** :
 
-![The Diaconn G8 plugin selected in Configuration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
+![Le plugin Diaconn G8 sélectionné dans Configuration > Pompe](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-**Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
+**Paramètres** ouvre les paramètres du pilote Diaconn G8 (voir [Réglage des options de pompe Diaconn G8](#diaconn-g8-insulin-pump-option-setting) ci-dessous).
 
-**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+**Ouvrir le plugin** (ou **Gestion** > **Pompe**) ouvre l'écran de la pompe Diaconn G8. Avant l'appairage d'une pompe, il ressemble à ceci :
 
-![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
+![Écran de la pompe Diaconn G8 avant l'appairage](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
 ![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing starts from the **Pair** button on the pump screen; there is no **Selected pump** setting.
+The screenshot above is from an earlier **AAPS** version. Dans **AAPS** 4, l'appairage démarre avec le bouton **Appairer** de l'écran de la pompe ; il n'y a pas de paramètre **Pompe sélectionnée**.
 ```
 
-- On the pump screen, tap **Pair**. The **Diaconn Pump Pairing** screen opens and **AAPS** scans for nearby pumps.
-- Tap your insulin pump's model number once it appears in the list (for example **DIACONN-65010**).
+- Sur l'écran de la pompe, appuyez sur **Appairer**. L'écran **Appairage pompe Diaconn** s'ouvre et **AAPS** recherche les pompes à proximité.
+- Appuyez sur le numéro de modèle de votre pompe à insuline quand il apparaît dans la liste (par exemple **DIACONN-65010**).
 
-![Diaconn Pump Pairing screen scanning for pumps](../images/DiaconnG8/DiaconnG8_05.png)
+![Écran Appairage pompe Diaconn pendant la recherche des pompes](../images/DiaconnG8/DiaconnG8_05.png)
 
 - Il y a deux options pour vérifier votre numéro de modèle :
 
@@ -49,23 +49,23 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing 
 
 ![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a PIN code. Enter the PIN number displayed on your pump to complete the connection.
+- Quand vous sélectionnez votre pompe, une fenêtre s'ouvre et demande un code PIN. Saisissez le code PIN affiché sur votre pompe pour terminer la connexion.
 
  ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- When **Pairing successful!** is shown, tap **OK** to go back to the pump screen.
+- Quand **Appairage réussi !** s'affiche, appuyez sur **OK** pour revenir à l'écran de la pompe.
 
 ## Contrôle de l'état de la pompe et synchronisation des journaux
 
-- Once your pump is connected, open the pump screen (**Manage** > **Pump**). It shows the pump status (battery, reservoir, last connection, last bolus, basal rate and more).
-- Tap **Refresh** to connect to the pump, update the status and synchronize the logs.
-- Tap **Pump history** to see the history read from the pump.
+- Une fois la pompe connectée, ouvrez l'écran de la pompe (**Gestion** > **Pompe**). Il affiche l'état de la pompe (pile, réservoir, dernière connexion, dernier bolus, débit basal et plus encore).
+- Appuyez sur **Actualiser** pour vous connecter à la pompe, mettre à jour l'état et synchroniser les journaux.
+- Appuyez sur **Historique pompe** pour voir l'historique lu dans la pompe.
 
 ![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump status is shown on the pump screen (**Manage** > **Pump**) and synchronized with the **Refresh** button.
+The screenshot above is from an earlier **AAPS** version. Dans **AAPS** 4, l'état de la pompe s'affiche sur l'écran de la pompe (**Gestion** > **Pompe**) et se synchronise avec le bouton **Actualiser**.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
@@ -74,16 +74,16 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 **Que faire dans le cas d'une connexion Bluetooth instable avec la pompe.**
 
-### Method 1) Restart AAPS, then check the pump again
+### Méthode 1) Redémarrez AAPS, puis vérifiez à nouveau la pompe
 
-- Tap the **menu** (☰) in the top-left corner.
-- Tap **Exit** at the bottom of the menu.
+- Appuyez sur le **menu** (☰) en haut à gauche.
+- Appuyez sur **Quitter** en bas du menu.
 
-![The menu with the Exit entry at the bottom](../images/v4/Configuration/configuration_menu.png)
+![Le menu avec l'entrée Quitter en bas](../images/v4/Configuration/configuration_menu.png)
 
-- Start **AAPS** again and check the connection to the pump.
+- Redémarrez **AAPS** et vérifiez la connexion à la pompe.
 
-### Method 2) If the first method doesn't work, disconnect Bluetooth and then reconnect.
+### Méthode 2) Si la première méthode ne fonctionne pas, déconnectez le Bluetooth puis reconnectez-le.
 
 - Appuyez et maintenez le bouton Bluetooth en haut pendant environ 3 secondes.
 
@@ -97,7 +97,7 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 ![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- In **AAPS**, open the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**.
+- Dans **AAPS**, ouvrez l'écran de la pompe (**Gestion** > **Pompe**), appuyez sur **Dissocier** et confirmez **Réinitialiser les informations d'appairage ?**.
 - Répétez le processus d'appairage Bluetooth pour la pompe (voir ci-dessus).
 
 ## Informations complémentaires
@@ -106,36 +106,36 @@ The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump
 
 ### Réglage des options de pompe Diaconn G8
 
-- **Configuration** > **Pump** > **Diaconn G8** > **Settings**
-- Or, on the pump screen (**Manage** > **Pump**), tap the settings icon (cog wheel) in the top-right corner.
+- **Configuration** > **Pompe** > **Diaconn G8** > **Paramètres**
+- Ou, sur l'écran de la pompe (**Gestion** > **Pompe**), appuyez sur l'icône des paramètres (roue dentée) en haut à droite.
 
-![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
+![Paramètres du pilote Diaconn G8](../images/v4/Pumps/diaconn_g8_settings.png)
 
-- **Bolus speed** sets how fast the pump delivers a bolus.
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an "Insulin Change" event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a "Site Change" event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically added as a note when a "Tube Change" event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a "Battery Change" event occurs. You can also record a battery change yourself with **Manage** > **Pump Battery Change**. (Note: Pour changer la pile, veuillez arrêter toutes les fonctions d'injection en cours avant de continuer.)
-- **Diaconn Cloud Sync** sends the pump logs to the Diaconn Cloud.
+- **Vitesse bolus** règle la vitesse à laquelle la pompe délivre un bolus.
+- Si l'option **Enreg. changement de réservoir** est activée, les détails sont automatiquement envoyés au careportal lors d'un événement « Changement d'insuline ».
+- Si l'option **Enreg. le changement d'aiguille** est activée, les détails sont automatiquement envoyés au careportal lors d'un événement « Changement de site ».
+- Si l'option **Enreg. changement de tubulure** est activée, les détails sont automatiquement ajoutés comme note lors d'un événement « Changement de tubulure ».
+- Si l'option **Enreg. changement pile** est activée, les détails sont automatiquement envoyés au careportal lors d'un événement « Changement de pile ». Vous pouvez aussi enregistrer vous-même un changement de pile avec **Gestion** > **Changement pile pompe**. (Remarque : pour changer la pile, veuillez arrêter toutes les fonctions d'injection en cours avant de continuer.)
+- **Synchro Diaconn Cloud** envoie les journaux de la pompe vers le Diaconn Cloud.
 
 ![Menu d'actions du Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 a battery change is recorded with **Manage** > **Pump Battery Change**; there is no **Actions** tab.
+The screenshot above is from an earlier **AAPS** version. Dans **AAPS** 4, un changement de pile s'enregistre avec **Gestion** > **Changement pile pompe** ; il n'y a pas d'onglet **Actions**.
 ```
 
 ### Fonction Bolus Étendu
 
 - Si vous utilisez un bolus étendu, cela désactivera la boucle fermée.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Voir [cette page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) pour savoir pourquoi le bolus étendu ne fonctionne pas en boucle fermée.
 
 ## Where to get help
 
-Development of the Diaconn G8 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Le pilote Diaconn G8 est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lisez** la section correspondante de cette documentation pour vérifier comment la fonction doit marcher.
+2. **Demandez** sur le canal *#AAPS* de [Discord](https://discord.gg/4fQUWHZ4Mw), ou dans un des autres [canaux de la communauté](../GettingHelp/WhereCanIGetHelp.md).
+3. **Signalez un bug** : cherchez d'abord dans les [tickets existants](https://github.com/nightscout/AndroidAPS/issues) ; si le vôtre n'y est pas, ouvrez un [nouveau ticket](https://github.com/nightscout/AndroidAPS/issues) et joignez vos [fichiers log](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Quand vous demandez de l'aide, indiquez la marque et le modèle de votre téléphone, la version d'Android, la version d'**AAPS** et une description simple du problème (ce qui a changé, quand cela a fonctionné pour la dernière fois).
