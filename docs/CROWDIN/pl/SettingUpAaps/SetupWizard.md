@@ -182,7 +182,7 @@ Gdy skończysz, naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
 
 Ten ekran pojawia się tylko wtedy, gdy **AAPS** znajdzie w katalogu **AAPS** wcześniej wyeksportowane ustawienia („Znaleziono zapisane ustawienia”), na przykład gdy instalujesz aplikację ponownie albo przenosisz się na nowy telefon.
 
-- Aby przywrócić poprzednią konfigurację, naciśnij „**Importuj ustawienia**” — patrz [Eksport i import ustawień](../Maintenance/ExportImportSettings.md).
+- Aby przywrócić poprzednią konfigurację, naciśnij „**Importuj ustawienia**” — patrz [Tworzenie i przywracanie kopii zapasowych](../Maintenance/ExportImportSettings.md).
 - Aby zacząć z nową konfiguracją, naciśnij „**DALEJ**” i kontynuuj w kreatorze.
 
 ![Importuj ustawienia](../images/setup-wizard/Wizard-ImportSettings.png)
@@ -266,7 +266,7 @@ Od wersji 4 **AAPS** urządzenia opiekuna z aplikacją **AAPSClient** można **s
 Na tym ekranie nie musisz teraz nic konfigurować. Urządzenia opiekuna możesz sparować później w dowolnym momencie w **Zarządzaj → Autoryzowani opiekunowie**. Tam dodajesz urządzenie opiekuna **kodem QR** (konfiguruje on też Nightscout na urządzeniu opiekuna) albo **kodem PIN** i nadajesz mu **rolę**.
 
 - „**Autoryzowani opiekunowie**” — zarządzanie sparowanymi urządzeniami opiekuna, które mogą sterować tym urządzeniem pacjenta.
-- „**Przyjmowanie danych z Nightscout**” — przyjmowanie zabiegów leczenia i danych wpisanych bezpośrednio w Nightscout (stary, mniej bezpieczny sposób) jest teraz domyślnie wyłączone. Otwieraj te ustawienia tylko wtedy, gdy nadal tego potrzebujesz, _np._ aby wpisywać dane przez Nightscout lub aplikacje innych firm.
+- „**Przyjmowanie danych z Nightscout**” — przyjmowanie wpisów leczenia i danych wpisanych bezpośrednio w Nightscout (stary, mniej bezpieczny sposób) jest teraz domyślnie wyłączone. Otwieraj te ustawienia tylko wtedy, gdy nadal tego potrzebujesz, _np._ aby wpisywać dane przez Nightscout lub aplikacje innych firm.
 
 Gdy sterowanie z urządzenia opiekuna jest już włączone — zawsze w [Trybie uproszczonym](#preferences-simple-mode) — ten telefon jest w [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode): przyjmuje zmiany tylko od sparowanych urządzeń opiekuna. Dlatego ekran wyjaśnia tryb silniejszych zabezpieczeń zamiast pokazywać ustawienia „**Przyjmowanie danych z Nightscout**”.
 
