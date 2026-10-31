@@ -39,7 +39,7 @@ Deze instructies zijn voor het instellen van de Medtrum-insulinepomp.
 
 Een tijdelijke basaalstand van nul kun je instellen met de functie "Verbreek verbinding met de pomp", of met een combinatie van Loop deactiveren/Tijdelijke basaalstand of Onderbreek loop/Tijdelijke basaalstand.
 
-## Pomp koppelen
+## Instellen
 
 ```{caution}
 Als je een patch met **AAPS** activeert, **MOET** je elk ander apparaat uitzetten dat met de Medtrum-pompbasis kan praten, bijvoorbeeld een actieve PDM of de Medtrum-app.
@@ -151,17 +151,17 @@ Deze instellingen horen niet bij de Medtrum-driver. Je opent ze met het pictogra
 
 Open **Instellingen** > **Pomp**:
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Instellingen > Pomp](../images/preferences/settings_pump.png)
 
 **BT Watchdog** zet Bluetooth op de telefoon één seconde uit als **AAPS** geen verbinding met de pomp kan maken. Dit kan helpen op sommige telefoons waar Bluetooth vastloopt.
 
 Zet deze instelling aan als je vaak verbindingsproblemen met je pomp hebt.
 
-#### Lokaal gegenereerde waarschuwingen
+#### Lokale alarmen
 
 Open **Instellingen** > **Lokale alarmen**:
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Instellingen > Lokale alarmen](../images/preferences/settings_local_alerts.png)
 
 ##### Waarschuw als de pomp niet bereikbaar is
 
