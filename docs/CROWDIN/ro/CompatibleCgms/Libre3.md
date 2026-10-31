@@ -44,11 +44,11 @@ The blood glucose values are received by the xDrip app on the smartphone.
 
 ### Pasul 3: Porniți senzorul în xDrip
 
-In xDrip start the sensor with "Start Sensor" and "not today". Nu este necesar să țineți telefonul mobil pe senzor. De fapt, "Start Senzor" nu va porni fizic niciun senzor Libre 3 sau nu va interacționa cu aceștia în vreun caz. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. Dacă sunt disponibile, introduceți două valori măsurate ale glicemiei capilare pentru calibrarea inițială. Now the blood glucose values should be displayed in xDrip every 5 minutes. Valorile pierdute, spre exemplu pentru că ați fost prea departe de telefon, nu vor fi recuperate înapoi.
+In xDrip start the sensor with "Start Sensor" and "not today". Nu este necesar să țineți telefonul mobil pe senzor. De fapt, "Start Senzor" nu va porni fizic niciun senzor Libre 3 sau nu va interacționa cu aceștia în vreun caz. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Valorile pierdute, spre exemplu pentru că ați fost prea departe de telefon, nu vor fi recuperate înapoi.
 
 Așteptați cel puțin 15-20 minute dacă nu există încă date.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. Puteți să vă verificați glicemia după activare și să faceți o nouă calibrare inițială.
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Step 4: Configure AAPS
 
