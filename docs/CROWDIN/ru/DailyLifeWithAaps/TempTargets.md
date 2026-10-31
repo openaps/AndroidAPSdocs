@@ -42,7 +42,7 @@ AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
 
 - *выбрать* эту **ВЦ** за 1-2 часа до планируемой нагрузки, чтобы обеспечить уменьшение активного инсулина IOB (правильное время для этой ВЦ индивидуально); и
 - *выбрать* временный Профиль (пониженный) на время запланированного мероприятия для обеспечения понижения активного инсулина **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG** post exercise.
+- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
 
 ### ВЦ - Ожидаемый прием пищи
 
@@ -209,7 +209,7 @@ Note: if you open the **Carbs dialog** while your blood glucose is less than 72 
 
 New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Все люди разные, когда речь идет о достижении стабильного контроля уровня глюкозы во время тренировки. См. также [Раздел Спорт](#FAQ-sports) в Часто задаваемых вопросах.
 
-Некоторые пользователи предпочитают активировать **Смену профиля** (снижение профиля < 100 % для снижения количества инсулина с помощью **AAPS**) до и во время активной **Временной Цели Нагрузка**. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
 
 Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. В этом случае **AAPS** будет более чувствительным.
 
@@ -221,7 +221,7 @@ Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** w
 
 **Временная цель Ожидаемый прием пищи** может помочь плавно снизить **ГК** и обеспечить достаточное количество **активного инсулина IOB** перед едой.
 
-Это может быть важным инструментом для тех пользователей, которые не вводят предварительный болюс на еду, однако эффективность **Временной цели Ожидаемый прием пищи** будет зависеть от ряда факторов, в том числе: настроек пользователя, ниличия низкоуглеводной диеты и используют ли они быстродействующий инсулин (например, Fiasp или Lyjumjev), чтобы исключить необходимость предварительных болюсов. Обычно, пока пользователи не имеют опыта работы с **AAPS**, им следует рассчитывать на предварительный болюс при использовании **ВЦ – ожидаемый приём пищи**, и это особенно актуально, если они придерживаются диеты с высоким содержанием углеводов.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Обычно, пока пользователи не имеют опыта работы с **AAPS**, им следует рассчитывать на предварительный болюс при использовании **ВЦ – ожидаемый приём пищи**, и это особенно актуально, если они придерживаются диеты с высоким содержанием углеводов.
 
 Подробнее о режиме «Ожидаемый прием пищи» можно прочитать в статье [Как пользоваться режимом «Ожидаемый прием пищи»](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned. /) или [здесь](https://diyps.org/tag/eating-soon-mode/).
 
