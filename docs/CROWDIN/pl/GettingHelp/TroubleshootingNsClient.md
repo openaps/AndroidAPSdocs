@@ -12,7 +12,7 @@ Otwórz ekran NSClient (**Konfiguracja** > **Komunikacja** > **NSClientV3** > **
 
 * Restart
 
-Najpierw uruchom ponownie oba: Nightscout, a potem telefon. Sprawdź, czy problem nadal występuje
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 Jeśli Twój Nightscout działa na Heroku, możesz go uruchomić ponownie tak: zaloguj się do Heroku, kliknij nazwę swojej aplikacji Nightscout, kliknij menu 'More', a potem 'Restart all dynos'.
 
@@ -34,7 +34,7 @@ Obejście problemów z połączeniem w Azure: w Application settings ustaw HTTP 
 
 * Brak odczytów BG z Nightscout
 
-Jeśli **AAPS** poprawnie łączy się z Nightscout, ale BG jest wyświetlana jako N/A: w [ustawieniach NSClientV3](#Preferences-nsclient) otwórz **Synchronizacja** i włącz **Odbieraj dane CGM z NS**. Ta opcja jest ukryta, gdy sterowanie przez opiekuna jest włączone ([tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode)); wtedy sprawdź, czy w **Konfiguracja** → **Źródło BG** wybrane jest **NSClient BG**.
+Jeśli **AAPS** poprawnie łączy się z Nightscout, ale BG jest wyświetlana jako N/A: w [ustawieniach NSClientV3](#Preferences-nsclient) otwórz **Synchronizacja** i włącz **Odbieraj dane CGM z NS**. Ta opcja jest ukryta, gdy sterowanie z urządzenia opiekuna jest włączone ([tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode)); wtedy sprawdź, czy w **Konfiguracja** → **Źródło BG** wybrane jest **NSClient BG**.
 
 * Jeśli nadal masz błąd...
 
