@@ -98,7 +98,7 @@ At least 56 days of data (2 cycles) are needed. With less data, the card shows *
 Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
 
 * Carbs and bolus
-* [Extended bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* [Подовжений болюс](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temp basal
 * [Temporary target](../DailyLifeWithAaps/TempTargets.md)
 * [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
