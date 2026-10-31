@@ -120,7 +120,7 @@ Une confirmation est demandée après chaque choix.
     
       ![Données de glycémie en double : icône de boucle AGB et raccourci de la source de glycémie avec un badge d'avertissement rouge](../images/bg_warn_red.png)
     
-    Appuyez sur l'icône de la boucle : la carte **Restrictions** en haut vous en donne la raison : « BgQualityCheck: Mode AGB en raison des valeurs en double dans la source de glycémie ».
+    Appuyez sur l'icône de la boucle : la carte **Restrictions** en haut vous en donne la raison : « BgQualityCheck : Mode AGB en raison des valeurs en double dans la source de glycémie ».
     
       ![Boîte de dialogue du mode de fonctionnement : AGB en raison des valeurs en double](../images/main/bg_doubled_constraint.png)
     
@@ -129,11 +129,11 @@ Une confirmation est demandée après chaque choix.
     Votre boucle continue de fonctionner, mais seulement pour vous protéger des hypoglycémies : **AAPS** peut encore réduire ou suspendre votre basale, mais il ne donnera aucune insuline de correction tant que vous n'aurez pas résolu ce problème !
     
 
-Vous devez savoir pourquoi vous avez des Gly dupliquées :
+Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
-* Est-ce que la connexion avec Dexcom (Dexcom Bridge) est activée sur votre instance Nightscout ? Désactivez cette connexion en allant dans l'interface d'administration de votre instance Nightscout, éditez la variable "ENABLED" et retirez la partie "bridge" à cet endroit. (Pour heroku, [vous trouverez les détails ici](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
-* Y a-t-il plusieurs sources qui envoient votre glycémie vers Nightscout ? Si vous utilisez l'application BYODA, activez l'envoi dans **AAPS**, mais ne l'activez pas dans xDrip, si vous l'utilisez.
-* Avez-vous des suiveurs qui pourraient recevoir votre glycémie mais aussi la renvoyer vers votre site Nightscout ?
+* Est-ce que la connexion avec Dexcom (Dexcom Bridge) est activée sur votre instance Nightscout ? Désactivez cette connexion en allant dans l'interface d'administration de votre instance Nightscout, éditez la variable "ENABLED" et retirez la partie "bridge" à cet endroit. (Pour heroku, [vous trouverez les détails ici](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Y a-t-il plusieurs sources qui envoient votre glycémie vers Nightscout ? Si vous utilisez l'application BYODA, activez l'envoi dans **AAPS**, mais ne l'activez pas dans xDrip, si vous l'utilisez.
+* Avez-vous des suiveurs qui pourraient recevoir votre glycémie mais aussi la renvoyer vers votre site Nightscout ?
 * En dernier recours : dans les [paramètres NSClient](#Preferences-nsclient), choisissez les paramètres de synchronisation et désactivez l'option « Recevoir les données MGC depuis NS ».
 
 Pour supprimer l'avertissement tout de suite et que la boucle corrige à nouveau, supprimez les valeurs en double depuis l'écran Source GLY : appuyez sur le raccourci dans la barre du bas. La valeur en double est surlignée en rouge. Faites un appui long sur une valeur pour commencer la sélection, cochez les doublons et appuyez sur l'icône de la corbeille en haut à droite.
@@ -208,7 +208,7 @@ Si **AAPS** détecte une résistance ou une sensibilité, la cible change par ra
     * Appuyez sur la puce pour voir la répartition entre l'insuline des bolus et l'insuline basale (première boîte de dialogue sur l'image, ici avec une IA négative après une période de basale réduite)
 2. **Épi** : [glucides actifs (GA)](../DailyLifeWithAaps/CobCalculation.md) - glucides que vous avez mangés et qui ne sont pas encore absorbés
 3. Le bouton bleu-vert à droite montre le **débit basal actuel** : une ligne plate quand la basale du profil est en cours, une icône différente quand un débit basal temporaire est actif
-4. La **ligne du pourcentage** montre la sensibilité actuelle ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). Quand la boucle change votre ISF, la ligne montre aussi l'ISF du profil, une flèche et l'ISF que la boucle utilise maintenant, par exemple « 80% 2.0 ↗ 2.5 ». Appuyez dessus pour voir la valeur Autosens et l'ISF effectif (deuxième boîte de dialogue sur l'image). Si la boucle utilise une autre valeur que le dernier résultat d'Autosens (par exemple parce qu'une cible temporaire change votre sensibilité), la boîte de dialogue affiche aussi cette valeur comme **Autosens dans l'algorithme**. Quand Autosens est désactivé, la boucle garde l'ISF de votre profil et aucun ISF effectif n'est affiché.
+4. La **ligne du pourcentage** montre la sensibilité actuelle ([Autosens](#Open-APS-features-autosens) / [DynamicISF](../DailyLifeWithAaps/DynamicISF.md)). Quand la boucle change votre SI, la ligne montre aussi la SI du profil, une flèche et la SI que la boucle utilise maintenant, par exemple « 80% 2.0 ↗ 2.5 ». Appuyez dessus pour voir la valeur Autosens et la SI effective (deuxième boîte de dialogue sur l'image). Si la boucle utilise une autre valeur que le dernier résultat d'Autosens (par exemple parce qu'une cible temporaire change votre sensibilité), la boîte de dialogue affiche aussi cette valeur comme **Autosens dans l'algorithme**. Quand Autosens est désactivé, la boucle garde la SI de votre profil et aucune SI effective n'est affichée.
 
 La boîte de dialogue IA, ouverte en appuyant sur la puce IA :
 
@@ -410,7 +410,7 @@ Le nouveau graphique est ajouté sous les autres. Ici, un deuxième graphique su
 
 ![Écran principal avec un deuxième graphique supplémentaire](../images/main/main_screen_additional_graph.png)
 
-La plupart des utilisateurs apprécient la configuration suivante pour les graphiques supplémentaires :
+La plupart des utilisateurs apprécient la configuration suivante pour les graphiques supplémentaires :
 
 * Graphique 1 avec IA, GA, changement de sensibilité
 * Graphique 2 avec Déviations et Impact glycémique.
@@ -513,7 +513,7 @@ Permet d'enregistrer les glucides sans faire de bolus.
 
 Certaines [cibles temporaires prédéfinies](#TempTargets-hypo-temp-target) (Hypo, Repas imminent, Activité) peuvent être démarrées directement avec les interrupteurs en haut.
 
-**Décalage horaire** : quand allez-vous manger / avez-vous mangé les glucides.
+**Heure des glucides** : quand allez-vous manger / avez-vous mangé les glucides.
 
 **Durée** : à utiliser pour les [« glucides étendus »](ExtendedCarbs). Cette ligne est repliée, pour que vous n'y tapiez pas les grammes par erreur : utilisez **-** / **+** pour la changer, ou appuyez sur le chevron pour l'ouvrir et taper une valeur.
 
@@ -573,7 +573,7 @@ L'assistant bolus peut être utilisé quelle que soit votre **glycémie** actuel
 
 La ligne d'icônes sous l'en-tête montre quelles entrées sont prises dans le calcul (glycémie, tendance, IA, cible temporaire, GA). Appuyer sur une icône active / désactive cette entrée dans le calcul ; l'icône **(i)** affiche le détail des nombres du calcul.
 
-#### Combinaisons de COB (Carb On Board = glucides actifs) et IOB (Insulin On Board = insuline active) et leur signification
+#### Combinaisons de GA (glucides actifs) et d'IA (insuline active) et leur signification
 
 * Pour des raisons de sécurité, l'entrée IA ne peut pas être désactivée quand les GA sont activés, car vous risqueriez de recevoir trop d'insuline : **AAPS** ne tiendrait pas compte de ce qui a déjà été injecté.
 * Si vous activez GA et IA, les glucides non absorbés qui ne sont pas déjà couverts par de l'insuline + toute l'insuline injectée en DBT ou en SMB seront pris en compte.
@@ -593,7 +593,7 @@ Sous le champ **Glucides**, les boutons **Pain**, **Gâteau** et **Pizza** indiq
 
 La ligne **Correction** sert si vous voulez modifier la dose finale pour une raison quelconque.
 
-Seul le champ **Glucides** est toujours ouvert. Les autres lignes (**Correction**, **Décalage horaire**, **Gly** et **Utiliser pourcentage**) sont repliées : elles affichent leur valeur avec des boutons **-** / **+**, pour que vous puissiez la changer par petits pas. Appuyez sur le chevron pour ouvrir une ligne et taper une valeur, et appuyez à nouveau dessus pour fermer la ligne. Cela évite de taper des grammes par erreur dans le champ **Correction**.
+Seul le champ **Glucides** est toujours ouvert. Les autres lignes (**Correction**, **Heure des glucides**, **Gly** et **Utiliser pourcentage**) sont repliées : elles affichent leur valeur avec des boutons **-** / **+**, pour que vous puissiez la changer par petits pas. Appuyez sur le chevron pour ouvrir une ligne et taper une valeur, et appuyez à nouveau dessus pour fermer la ligne. Cela évite de taper des grammes par erreur dans le champ **Correction**.
 
 ![Lignes repliées dans l'assistant bolus](../images/v4/Screens/bolus_wizard_bottom.png)
 
@@ -601,7 +601,7 @@ Appuyez n'importe où sur la ligne **Profil** pour ouvrir la liste de vos profil
 
 ![La liste des profils dans l'assistant bolus](../images/v4/Screens/bolus_wizard_profile_list.png)
 
-Le champ **Décalage horaire** sert au pré-bolus : vous indiquez au système qu'il y aura un délai avant que les glucides arrivent. Vous pouvez mettre une valeur négative dans ce champ si vous faites un bolus pour des glucides déjà consommés.
+Le champ **Heure des glucides** sert au pré-bolus : vous indiquez au système qu'il y aura un délai avant que les glucides arrivent. Vous pouvez mettre une valeur négative dans ce champ si vous faites un bolus pour des glucides déjà consommés.
 
 **Régler l'alarme** (rappel de repas) : quand une heure de glucides dans le futur est saisie, un interrupteur « **Régler l'alarme** » apparaît pour que vous receviez un rappel à l'heure donnée, quand il faut manger les glucides que vous avez saisis dans **AAPS** :
 
@@ -613,7 +613,7 @@ Le champ **Gly** est normalement déjà rempli avec la dernière valeur de votre
 
 Le bouton de résultat en bas affiche le bolus proposé ; quand vous appuyez dessus, une confirmation est demandée avant toute injection d'insuline.
 
-Bon à savoir :
+Bon à savoir :
 
 * Si le bolus calculé est plus élevé que votre **[Bolus maximum](#Preferences-maximum-bolus)**, il est réduit au bolus maximum, et la confirmation affiche l'avertissement « Contrainte de Bolus appliquée ». Un [Assistant Rapide](../DailyLifeWithAaps/QuickWizards.md) est refusé à la place.
 * Quand le bolus est seulement enregistré (par exemple quand la pompe est déconnectée), l'avertissement « **Les bolus seront seulement enregistrés** » reste en haut de la boîte de dialogue, même quand vous faites défiler.
@@ -756,7 +756,7 @@ Vous donne des statistiques sur votre dose totale quotidienne, le temps dans la 
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Assistant Profil
 
 Ouvrez le **menu** (☰) et choisissez **Assistant Profil**.
 
