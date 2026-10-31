@@ -58,7 +58,7 @@
 
 ### Полша
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): полска общност на AAPS и група за подкрепа при диабет
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
 
 ### Швеция
 
