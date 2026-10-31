@@ -26,7 +26,7 @@ Mantenemos una lista de las [configuraciones de hardware probadas](https://docs.
 
 Esta lista recoge la experiencia de los usuarios con un teléfono junto con **AAPS** y una bomba y un MCG concretos. Te puede ayudar a comprobar si otros usuarios ya han usado con éxito tu teléfono / bomba / MCG.
 
-The document is read-only. Con CTRL-F puedes buscar en el texto de la hoja de Google.
+El documento es de solo lectura. Con CTRL-F puedes buscar en el texto de la hoja de Google.
 
 Para registrar tu prueba de una configuración de hardware, rellena este [formulario](https://docs.google.com/forms/d/e/1FAIpQLSfoGKLYEx4aUAJ5RWL3xLJeNdmRyxtXmDzpGhuU3Rfcj2H_Jw/viewform). Después de rellenar el formulario, la hoja se actualiza automáticamente cada 5 minutos.
 
