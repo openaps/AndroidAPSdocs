@@ -1,308 +1,308 @@
-# Remote control of AAPS
+# Віддалене керування AAPS
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-There are four highly effective tools for remotely managing **AAPS**:
+Є чотири дуже ефективні інструменти для віддаленого керування **AAPS**:
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android; an iPhone version is in development) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
-4) [Smartwatches](#RemoteControl_smartwatches) (Android)
+1) [SMS-команди](#RemoteControl_SMS-Commands) (телефон-послідовник може бути Android або iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (телефон-послідовник — Android; версія для iPhone розробляється) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS або інший комп'ютер/пристрій), переважно для стеження: див. примітку про [керування з клієнта](#client-master-control) в цьому розділі.  
+4) [Розумні годинники](#RemoteControl_smartwatches) (Android)
 
-The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
+Перші три підходять переважно для доглядачів/батьків, але розумні годинники дуже корисні і для доглядачів/батьків, **і** для дорослих з діабетом.
 
-![image](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
+![зображення](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
 (RemoteControl_SMS-Commands)=
 
-## 1) SMS Commands
+## 1) SMS-команди
 
-See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Див. окрему сторінку [SMS-команди](../RemoteFeatures/SMSCommands.md).
 
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-**AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver the same screens and buttons to send commands remotely to **AAPS**:
+**AAPSClient** на вигляд дуже схожий на сам **AAPS**: доглядач має ті самі екрани і кнопки, щоб віддалено надсилати команди в **AAPS**:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Головний екран AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
 (remotecontrol-aapsclient-versions)=
-### About AAPSClient, AAPSClient2 and AAPSClient3
+### Про AAPSClient, AAPSClient2 і AAPSClient3
 
-There are 3 versions of the client app: **AAPSClient**, **AAPSClient2** and **AAPSClient3**. They work the same way. The only difference is that they can be installed side by side on the same follower phone.
+Є 3 версії клієнтського застосунку: **AAPSClient**, **AAPSClient2** і **AAPSClient3**. Вони працюють однаково. Єдина відмінність: їх можна встановити поруч на одному телефоні-послідовнику.
 
-A caregiver who follows one person needs only **AAPSClient**. To follow and remote control a second person (with their own **Nightscout** site and their own **AAPS** phone), install **AAPSClient2** as well, and **AAPSClient3** for a third person. Each app is set up and [paired](#aapsclient-pairing-with-the-master) on its own, with the **Nightscout** site and the **AAPS** phone of the person it follows.
+Доглядачу, який стежить за однією людиною, потрібен лише **AAPSClient**. Щоб стежити за другою людиною (з її власним сайтом **Nightscout** і власним телефоном з **AAPS**) і віддалено керувати, встановіть також **AAPSClient2**, а для третьої людини — **AAPSClient3**. Кожен застосунок налаштовують і [спаровують](#aapsclient-pairing-with-the-master) окремо — із сайтом **Nightscout** і телефоном з **AAPS** тієї людини, за якою він стежить.
 
-To tell the apps apart, some elements have a different color: yellow for **AAPSClient**, blue for **AAPSClient2** and green for **AAPSClient3**. Those elements are the app icon, the widget background, and the **AAPS** status section on the home screen of the app. <br/> Note: the opacity of the widget background can be set in the widget configuration. At a low opacity the color is hard to see.
+Щоб застосунки було легко розрізнити, деякі елементи мають різний колір: жовтий для **AAPSClient**, синій для **AAPSClient2** і зелений для **AAPSClient3**. Ці елементи — значок застосунку, фон віджета і розділ стану **AAPS** на головному екрані застосунку. <br/> Примітка: непрозорість фону віджета можна задати в налаштуваннях віджета. При низькій непрозорості колір погано видно.
 
-![Widget and status section colors of AAPSClient, AAPSClient2 and AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+![Кольори віджета і розділу стану в AAPSClient, AAPSClient2 і AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
-### Download and installation
+### Завантаження і встановлення
 
-**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+**AAPSClient** можна встановити на один або на кілька телефонів-послідовників (наприклад, телефон-послідовник батька 1 і телефон-послідовник батька 2), щоб обидва доглядачі мали доступ і могли віддалено керувати телефоном пацієнта з **AAPS**.
 
-To download **AAPSClient**, navigate to the [Github repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Щоб завантажити **AAPSClient**, перейдіть до [репозиторію Github](https://github.com/nightscout/AndroidAPS/releases/) і натисніть на файл **«app-AAPSClient-release_x.x.x.x»** (версія може бути новішою, ніж на знімку екрана нижче):
 
-![image](../images/remote_control_and_following/AAPSClient_download_02.png)
+![зображення](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Then go to  _downloads_ on your computer. On Windows, _downloads_ will show in the right hand ribbon:
+Потім відкрийте _downloads_ (завантаження) на комп'ютері. У Windows _downloads_ (завантаження) з'являться на панелі праворуч:
 
-![image](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
+![зображення](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-Once downloaded, click _show in folder_ to locate the file.
+Після завантаження натисніть _show in folder_ (показати в папці), щоб знайти файл.
 
-The **AAPSClient** apk can now be either:
+Тепер apk **AAPSClient** можна:
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+перенести на телефон-послідовник через USB-кабель; або перетягнути в папку Google Drive, а потім встановити на телефоні-послідовнику, торкнувшись файлу «app-AAPSClient-release».
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
+Якщо вам потрібен **AAPS** для себе і **AAPSClient** для моніторингу іншої людини, вам треба зібрати **AAPSClient** самостійно, а не завантажувати його з репозиторію Github, як описано вище. Причина в тому, що не можна встановити на один телефон **AAPS** і **AAPSClient**, підписані різними ключами. <br/> Щоб зібрати **AAPSClient** самостійно, виконайте ті самі кроки, що і для [звичайної збірки AAPS](../SettingUpAaps/BuildingAaps.md). На сторінці **Generate signed App Bundle or APK** виберіть **aapsclientRelease** замість **fullRelease**.
 
-The same rule applies when you install several client apps (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) on one follower phone: they must all be signed with the **same key**. Otherwise Android refuses to install the second one (error `INSTALL_FAILED_DUPLICATE_PERMISSION`).
+Те саме правило діє, коли ви встановлюєте кілька клієнтських застосунків (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) на один телефон-послідовник: усі вони мають бути підписані **тим самим ключем**. Інакше Android не дасть встановити другий (помилка `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
-### Synchronization: AAPSClient and AAPS set up
+### Синхронізація: налаштування AAPSClient і AAPS
 
-Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). The example below shows the synchronization set-up with NSClientV3 and Nightscout 15; other data sources are available in __AAPS__ (e.g. xDrip).
+Після встановлення apk __AAPSClient__ на телефон-послідовник переконайтеся, що **NSClientV3** налаштовано однаково на обох телефонах для Nightscout 15 (див. [примітки до оновлення](../Maintenance/UpdateToNewVersion.md)). Приклад нижче показує налаштування синхронізації з NSClientV3 і Nightscout 15; в __AAPS__ доступні й інші джерела даних (наприклад, xDrip).
 
-In **Configuration** > **Communication**, the user synchronizes their data with Nightscout through __NSClientV3__ (using the v3 API), set up the same way for both __AAPS__ and the follower phone.
+У **Конфігурація** > **Звʼязок** користувач синхронізує свої дані з Nightscout через __NSClientV3__ (з API v3). Його налаштовують однаково і в __AAPS__, і на телефоні-послідовнику.
 
-![Configuration > Communication with NSClientV3 selected](../images/v4/Configuration/configuration_communication.png)
+![Конфігурація > Звʼязок з вибраним NSClientV3](../images/v4/Configuration/configuration_communication.png)
 
-The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by setting up NSClientV3 on each. On the follower phone this can be done by scanning a QR code shown by **AAPS** instead, see [Pairing AAPSClient with AAPS](#remotecontrol-pairing) below:
+Користувач має переконатися, що __обидва__ телефони, з AAPS і з AAPSClient, синхронізуються між собою: для цього на кожному налаштовують NSClientV3. На телефоні-послідовнику замість цього можна відсканувати QR-код, який показує **AAPS**, див. [Спарювання AAPSClient з AAPS](#remotecontrol-pairing) нижче:
 
-- Enter your **Nightscout URL** in the NSClientV3 **Settings**
+- Введіть **URL Nightscout** у **Налаштуваннях** NSClientV3
 
-- Enter your **Nightscout access token** in the same settings. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token). On the **AAPS** phone use an **admin token**: with it **AAPS** makes a token of its own for each follower phone.
+- Введіть **Токен доступу Nightscout** у тих самих налаштуваннях. Будь ласка, дотримуйтеся інструкцій [тут](https://nightscout.github.io/nightscout/security/#create-a-token). На телефоні з **AAPS** використовуйте **токен адміністратора (admin token)**: з ним **AAPS** створює окремий токен для кожного телефону-послідовника.
 
-- Enable **Use websockets** on **both** phones. On the **AAPS** phone websockets are **required** for remote control: without them, **AAPS** cannot receive commands from **AAPSClient**. On both phones they also make synchronization faster, at the cost of slightly higher battery use.
+- Увімкніть **Використовувати websockets** на **обох** телефонах. На телефоні з **AAPS** websockets **обов'язкові** для віддаленого керування: без них **AAPS** не може отримувати команди від **AAPSClient**. На обох телефонах вони також прискорюють синхронізацію, але трохи більше витрачають батарею.
 
-![Settings > NSClientV3 with Nightscout URL, Nightscout access token and Use websockets](../images/preferences/settings_nsclient.png)
+![Налаштування > NSClientV3 з URL Nightscout, токеном доступу Nightscout і «Використовувати websockets»](../images/preferences/settings_nsclient.png)
 
 
-The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ in the **NSClientV3** screen of each phone. At this point **AAPSClient** follows **AAPS** (BG, treatments, profile), but it cannot control it yet: pair the two phones as described below.
+Користувач має переконатися, що і __AAPSClient__, і __AAPS__ показують «Підключено» на екрані **NSClientV3** кожного телефону. Тепер **AAPSClient** стежить за **AAPS** (ГК, терапія, профіль), але ще не може ним керувати: спаруйте два телефони, як описано нижче.
 
 (remotecontrol-pairing)=
-### Pairing AAPSClient with AAPS (remote control)
+### Спарювання AAPSClient з AAPS (віддалене керування)
 
-From **AAPS** version 4, **AAPSClient** controls **AAPS** through a secure, **paired** connection. Synchronization alone is not enough: until the phones are paired, **AAPSClient** only shows **Manage** with a view-only **Profile** and **Pair with master**.
+Починаючи з **AAPS** версії 4, **AAPSClient** керує **AAPS** через захищене **спарене** з'єднання. Самої синхронізації недостатньо: поки телефони не спарені, **AAPSClient** показує лише **Керувати** з **Профілем** тільки для перегляду і **Спарувати з основним пристроєм**.
 
-1. On the **AAPS** phone, open **Manage → Authorized clients** and turn on **Allow client control** (it is off by default, and always on in Simple Mode).
-2. Tap **+**, enter a name for the follower phone, choose how it is set up and choose its **role**:
-   - **QR code: Nightscout and pairing** — **AAPS** shows a QR code that sets up Nightscout on the follower phone and pairs it, in one scan. This needs an admin token in the **AAPS** phone's NSClientV3 settings.
-   - **PIN** — for a follower phone without a camera, already connected to Nightscout: note the one-time **PIN** (valid for about two minutes).
-3. On the **AAPSClient** phone, scan the code (in the Setup Wizard, or **Manage → Pair with master → Scan QR code**), or open **Manage → Pair with master** and enter the PIN. Confirm.
+1. На телефоні з **AAPS** відкрийте **Керувати → Авторизовані клієнти** і увімкніть **Дозволити керування з клієнтів** (за замовчуванням вимкнено, у простому режимі завжди увімкнено).
+2. Торкніться **+**, введіть назву телефону-послідовника, виберіть спосіб налаштування і його **роль**:
+   - **QR-код: Nightscout і спарювання** — **AAPS** показує QR-код, який одним скануванням налаштовує Nightscout на телефоні-послідовнику і спаровує його. Для цього в налаштуваннях NSClientV3 на телефоні з **AAPS** потрібен токен адміністратора.
+   - **PIN** — для телефону-послідовника без камери, вже підключеного до Nightscout: запишіть одноразовий **PIN** (дійсний близько двох хвилин).
+3. На телефоні з **AAPSClient** відскануйте код (у Майстрі налаштування або в **Керувати → Спарувати з основним пристроєм → Сканувати QR-код**) або відкрийте **Керувати → Спарувати з основним пристроєм** і введіть PIN. Підтвердьте.
 
-The follower phone then appears as **Active** in the **Authorized clients** list, and **AAPSClient** shows **Treatments**, **Scenes** and **Manage**. The follower phone gets a Nightscout token of its own, with only the rights it needs. The full procedure, with screenshots and troubleshooting, is on [Master ↔ Client control](#client_master_master_setup).
+Після цього телефон-послідовник з'явиться як **Активний** у списку **Авторизовані клієнти**, а **AAPSClient** покаже **Терапія**, **Сцени** і **Керувати**. Телефон-послідовник отримує власний токен Nightscout лише з тими правами, які йому потрібні. Повна інструкція зі знімками екрана і порадами щодо проблем є на сторінці [Керування основний телефон ↔ клієнт](#client_master_master_setup).
 
-Check that the set-up works: enter carbs on **AAPSClient**, confirm the amount shown, and check that the entry appears in **Treatments** on both phones.
+Перевірте, що все працює: введіть вуглеводи в **AAPSClient**, підтвердьте показану кількість і перевірте, що запис з'явився в **Терапії** на обох телефонах.
 
 (remotecontrol-nightscout-access-token)=
 
-### Troubleshooting 'Nightscout access token' configuration issues
+### Усунення проблем з налаштуванням «Токен доступу Nightscout»
 
-The precise 'Nightscout access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
+Точне налаштування «Токен доступу Nightscout» може відрізнятися залежно від того, чи ваш Nightscout розміщено на платному хостингу.
 
-If you are struggling with **AAPS** to accept the 'Nightscout access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'Nightscout access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+Якщо **AAPS** не приймає «Токен доступу Nightscout» і ви використовуєте платний хостинг Nightscout, спершу варто звернутися до вашого постачальника Nightscout і запитати, як вирішити проблему з «Токеном доступу Nightscout». Інакше зверніться до групи **AAPS**, але перед цим, будь ласка, ще раз перевірте, що ви правильно виконали інструкції [тут](https://nightscout.github.io/nightscout/security/#create-a-token).
 
-### What AAPSClient offers
+### Що пропонує AAPSClient
 
-Once paired, **AAPSClient** offers the caregiver almost the same screens as **AAPS** itself:
+Після спарювання **AAPSClient** дає доглядачу майже ті самі екрани, що і сам **AAPS**:
 
-- **Treatments**: insulin bolus, carbs and the bolus wizard.
-- **Scenes**: start and stop [scenes](../DailyLifeWithAaps/Scenes.md).
-- **Manage**: profiles, insulin settings, temporary targets, QuickWizard, automation, food, site rotation, pairing and the running temp basal.
-- **Main menu**: treatments history, history browser, statistics, maintenance, configuration.
+- **Терапія**: болюс інсуліну, вуглеводи і калькулятор болюса.
+- **Сцени**: запуск і зупинка [сцен](../DailyLifeWithAaps/Scenes.md).
+- **Керувати**: профілі, налаштування інсуліну, тимчасові цілі, Швидкий майстер, автоматизація, їжа, чергування місць введення, спарювання і поточний тимчасовий базал.
+- **Головне меню**: історія терапії, перегляд історії, статистика, обслуговування, конфігурація.
 
-There is no pump and no objectives on **AAPSClient**. See [The AAPSClient app](AapsClient.md) for a detailed description.
+В **AAPSClient** немає помпи і завдань. Докладний опис див. на сторінці [Застосунок AAPSClient](AapsClient.md).
 
-**AAPSClient** lets the caregiver make most of the adjustments allowed directly in **AAPS**, **including insulin boluses**, remotely over the mobile or internet network. Every command is signed and sent through Nightscout to the **AAPS** phone, which checks it against its own data, caps it, shows you its own confirmation, and only then executes it. **AAPSClient** _can_ be much faster than [SMS Commands](../RemoteFeatures/SMSCommands.md), especially for commands that would need authentication.
+**AAPSClient** дозволяє доглядачу віддалено, через мобільну мережу або інтернет, робити більшість змін, доступних прямо в **AAPS**, **включно з болюсами інсуліну**. Кожна команда підписується і надсилається через Nightscout на телефон з **AAPS**. Він перевіряє її за власними даними, обмежує, показує вам власне підтвердження і лише після цього виконує. **AAPSClient** _може_ бути значно швидшим, ніж [SMS-команди](../RemoteFeatures/SMSCommands.md), особливо для команд, які потребують автентифікації.
 
-Treatments entered in Nightscout by other means (for example the Nightscout website) are not applied while client control is on: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode) and takes changes only from paired clients. With client control off, they are applied only if the matching **Receive** options are enabled in the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+Терапія, введена в Nightscout іншим способом (наприклад, через сайт Nightscout), не застосовується, поки увімкнено керування з клієнтів: тоді **AAPS** працює в [захищеному режимі](#client-master-control-hardened-mode) і приймає зміни лише від спарених клієнтів. Коли керування з клієнтів вимкнено, вона застосовується, лише якщо увімкнено відповідні параметри **Отримувати** у [розділі «Синхронізація» налаштувань NSClient](#Preferences-nsclient-synchronization).
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc).
+Віддалене керування через **AAPSClient** рекомендовано лише тоді, коли синхронізація працює добре (_тобто_ ви не бачите небажаних змін даних, як-от самовільна зміна TT, TBR тощо).
 
-### AAPSClient with smartwatch options
+### AAPSClient з можливостями для розумного годинника
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG and loop status. Once **AAPSClient** is paired with **AAPS**, the watch actions (including boluses, carbs, temp targets and profile changes) are relayed through **AAPSClient** to **AAPS**, which confirms and executes them: see [Wear OS on a client](#clientmastercontrol-wear-os-on-a-client). You can read more about Smartwatches [here](#remotecontrol-smartwatches).
+Розумний годинник може бути дуже корисним інструментом для керування **AAPS** у дітей. Можливі кілька різних конфігурацій. Якщо **AAPSClient** встановлено на телефоні доглядача, [застосунок **AAPSClient WearOS**](https://github.com/nightscout/AndroidAPS/releases/) можна завантажити і встановити на сумісний розумний годинник, підключений до телефону батьків. Він показуватиме поточну ГК і стан петлі. Коли **AAPSClient** спарено з **AAPS**, дії з годинника (включно з болюсами, вуглеводами, тимчасовими цілями і змінами профілю) передаються через **AAPSClient** в **AAPS**, який їх підтверджує і виконує: див. [Wear OS (годинник) на клієнті](#clientmastercontrol-wear-os-on-a-client). Більше про розумні годинники читайте [тут](#remotecontrol-smartwatches).
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#2-aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+Nightscout — це сервер «у хмарі», але є також окремий застосунок **Nightscout**, який можна завантажити прямо з App Store на iPhone. Якщо ваш телефон-послідовник — Android, окремого застосунку Nightscout немає, і краще використовувати [**AAPSClient**](#2-aapsclient). Або, якщо ви хочете лише стежити, а не надсилати терапію, можна завантажити і встановити застосунок [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) з Play Маркет.
 
-Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
+Після встановлення застосунку **Nightscout** на iPhone відкрийте його і виконайте кроки налаштування: введіть адресу вашого Nightscout (див. нижче, ліворуч). Вигляд адреси може бути різним, залежно від того, де розміщено ваш Nightscout. (_наприклад,_ http://youraddresshere.herokuapp.com). Потім введіть ваш API secret Nightscout (див. нижче, праворуч). Якщо застосунок не запитав пароль API, введіть його, натиснувши на замок угорі застосунку:
 
-![image](../images/remote-control-24.png)
+![зображення](../images/remote-control-24.png)
 
-More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
+Більше інформації про налаштування є прямо на сайті [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
+Під час першого входу ви побачите дуже простий екран. Налаштуйте, що показувати: виберіть меню-«гамбургер» угорі праворуч і прогорніть вниз:
 
-![image](../images/remote-control-25.png)
+![зображення](../images/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up.
+Прогорніть вниз до «Settings» (Налаштування). Можливо, ви захочете змінити «scale» (шкала) на «linear» (лінійна), бо за замовчуванням ГК показано в логарифмічній шкалі, а в «render basal» (показ базалу) вибрати «default» (за замовчуванням), щоб було видно базал помпи.
 
-![image](../images/remote-control-25b.png)
+![зображення](../images/remote-control-25b.png)
 
-Select your desired options. Uncheck alarms if you use an alternative app for alarms.
+Виберіть потрібні параметри. Зніміть позначку з сигналів, якщо для сигналів ви використовуєте інший застосунок.
 
-![image](../images/remote-control-26.png)
+![зображення](../images/remote-control-26.png)
 
-Continue to scroll down until you get to “show plugins”.
+Гортайте далі вниз до «show plugins» (показати плагіни).
 
-You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+Переконайтеся, що «careportal» позначено. Можна також вибрати інші показники (найкорисніші: IOB, care portal, pump, cannula age, insulin age, basal profile і OpenAPS).
 
-Importantly, you now need to click “save” at the bottom for these changes to take effect.
+Важливо: тепер натисніть «save» (зберегти) внизу, щоб зміни почали діяти.
 
-![image](../images/remote-control-27.png)
+![зображення](../images/remote-control-27.png)
 
-After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+Після натискання «save» застосунок повернеться до головного екрана Nightscout, який виглядатиме приблизно так:
 
-1. Current glucose value
-2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
-3. Recent glucose trace with treatments (carbs, boluses) displayed
-4. Longer-term glucose trace
-5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
-6. "**+**" menu for entering treatments (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies them).
-7. Select different time period to display
-8. Basal insulin profile
-9. Green line = historical glucose Blue lines = predicted glucose
+1. Поточне значення глюкози
+2. Інформація про стан системи AAPS — торкніться окремих вкладок на екрані, щоб побачити подробиці. Додавайте або прибирайте ці елементи через меню-гамбургер.
+3. Недавній графік глюкози з терапією (вуглеводи, болюси)
+4. Довший графік глюкози
+5. Меню-«гамбургер» для налаштування вигляду, створення звітів, редагування профілів і адміністративних інструментів Nightscout
+6. Меню «**+**» для введення терапії (див. [нижче](#RemoteControl_nightscout-treatments), коли **AAPS** її застосовує).
+7. Вибір іншого періоду для показу
+8. Профіль базального інсуліну
+9. Зелена лінія = історія глюкози Сині лінії = прогноз глюкози
 
-![image](../images/remote-control-28.png)
+![зображення](../images/remote-control-28.png)
 
-Looking in more detail at the top left menu of the Nightscout app:
+Докладніше про меню вгорі ліворуч у застосунку Nightscout:
 
-1. Careportal retrospective edit
-2. Turn on/off alarms
-3. Hamburger - for setting preferences
-4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
+1. Careportal: редагування минулих записів
+2. Увімкнути/вимкнути сигнали
+3. Гамбургер — для налаштувань
+4. Careportal — запис терапії (див. [нижче](#RemoteControl_nightscout-treatments), коли **AAPS** застосовує ці записи)
 
-![nightscout top bar](../images/remote-control-29.png)
+![верхня панель nightscout](../images/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+На цьому екрані в сірих вкладках є дуже багато інформації про стан системи **AAPS** (а якщо торкнутися вкладки, з'явиться ще більше):
 
-1. 5min glucose trend
-2. Bolus wizard preview
-3. Press on Basal to see your current profile and basal information
-4. Time since latest CGM reading in AAPS
-5. **Pump**: insulin, battery % and when AAPS last connected to it
-6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
-7. Press on IOB to see split of basal and bolus insulin
-8. Insulin age in reservoir
+1. Тренд глюкози за 5 хв
+2. Попередній перегляд калькулятора болюса (Bolus wizard preview)
+3. Натисніть на Basal, щоб побачити поточний профіль і інформацію про базал
+4. Час від останнього показника CGM в AAPS
+5. **Помпа**: інсулін, заряд батареї у % і коли AAPS востаннє до неї підключався
+6. Коли AAPS востаннє оновлювався — якщо минуло більше 5 хв, це може означати проблему зі зв'язком між телефоном з AAPS і помпою/CGM
+7. Натисніть на IOB, щоб побачити розподіл на базальний і болюсний інсулін
+8. Вік інсуліну в резервуарі
 9. Вік канюлі
-10. Battery status of AAPS phone
-11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+10. Стан батареї телефону з AAPS
+11. Розмір вашої бази даних. Якщо вона надто заповнена (лише для власного Nightscout — для платних хостингів це неважливо), можуть початися проблеми зі зв'язком. Щоб зменшити це число, можна видалити дані в меню Admin tools (через гамбургер).
 
-![image](../images/remote-control-30.png)
+![зображення](../images/remote-control-30.png)
 
-![image](../images/remote-control-31.png)
+![зображення](../images/remote-control-31.png)
 
-Press "refresh" at the bottom of the page to close the popup.
+Натисніть «refresh» внизу сторінки, щоб закрити спливне вікно.
 
 (RemoteControl_nightscout-treatments)=
-### Sending treatments through the Nightscout app to AAPS
+### Надсилання терапії в AAPS через застосунок Nightscout
 
-In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed, checked and confirmed by the **AAPS** phone. While client control is on, the **AAPS** phone is in [hardened mode](#client-master-control-hardened-mode): treatments, temporary targets and profile switches entered on the Nightscout website or in the Nightscout app are **not** applied. The Nightscout app is then a tool for following only.
+В **AAPS** 4 підтримуваний спосіб віддалено керувати **AAPS** — це **спарений AAPSClient**, див. [Керування основний телефон ↔ клієнт](#client-master-control): кожен клієнт має [роль](#client-master-control-roles), яка обмежує, що він може робити, а кожну команду підписує, перевіряє і підтверджує телефон з **AAPS**. Поки увімкнено керування з клієнтів, телефон з **AAPS** працює в [захищеному режимі](#client-master-control-hardened-mode): терапія, тимчасові цілі і перемикання профілю, введені на сайті Nightscout або в застосунку Nightscout, **не** застосовуються. Тоді застосунок Nightscout — це інструмент лише для стеження.
 
 ```{admonition} Only when client control is off
 :class: warning
-If **Allow client control** is off in **Manage → Authorized clients** (and Simple Mode is off), **AAPS** applies careportal entries from Nightscout only for the data types you turned on under **Receive** in the [Synchronization section of the NSClientV3 settings](#Preferences-nsclient-synchronization): carbs, temporary targets, profile switches and the other careportal entries. Insulin is never delivered this way: a "Correction bolus" entered in Nightscout is only *announced*, and **AAPS** counts it as insulin on board without delivering it. This set-up is not recommended for remote control; use a paired **AAPSClient** instead.
+Якщо **Дозволити керування з клієнтів** вимкнено в **Керувати → Авторизовані клієнти** (і простий режим вимкнено), **AAPS** застосовує записи careportal з Nightscout лише для тих типів даних, які ви увімкнули в параметрах **Отримувати** у [розділі «Синхронізація» налаштувань NSClientV3](#Preferences-nsclient-synchronization): вуглеводи, тимчасові цілі, перемикання профілю та інші записи careportal. Інсулін так ніколи не подається: «Болюс на корекцію», введений у Nightscout, лише *оголошується*, і **AAPS** враховує його як активний інсулін, не подаючи його. Таке налаштування не рекомендовано для віддаленого керування; натомість використовуйте спарений **AAPSClient**.
 ```
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
+Більше про можливості **Nightscout** читайте [тут](https://nightscout.github.io/)
 
-### Tips for getting the most out of the Nightscout app
+### Поради, як найкраще використовувати застосунок Nightscout
 
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
+1). Якщо ви «застрягли» на сторінці і хочете знову побачити головний екран, просто натисніть «refresh» (оновити, внизу посередині). Ви повернетеся на головну сторінку **Nightscout** з графіком ГК.
 
-To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
+Щоб побачити поточний профіль, який працює на телефоні, натискайте різні значки на екрані над графіком. Більше інформації (поточний вуглеводний коефіцієнт, чутливість, часовий пояс тощо) можна побачити, натиснувши «basal», а «OpenAPS» показує інформацію про профіль, поточну ціль тощо. Також можна стежити за зарядом батареї телефону (%) і батареї помпи (%). BWP показує, що, на думку алгоритму, станеться в майбутньому з урахуванням IOB і COB.
 
-#### Other icons in the menu: what does the pencil (edit) mean?
+#### Інші значки в меню: що означає олівець (редагування)?
 
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
+(Технічно) олівцем редагування можна перемістити або видалити болюси чи корекції за останні 48 год.
 
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+Більше про це [тут](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
+Це може бути корисно, щоб видалити оголошені вуглеводи (на які болюс не подали), але зараз це погано працює з **AAPS**. Ми радимо робити такі зміни прямо в застосунку **AAPS**.
 
 (RemoteControl_smartwatches)= (remotecontrol-smartwatches)=
 
-## 4) Smartwatches
+## 4) Розумні годинники
 
-### Option 1) Controlling AAPS from a Wear OS Watch
+### Варіант 1) Керування AAPS з годинника Wear OS
 
 ![Wear Remote 1](../images/Wear_Remote1.png)
 
-Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Коли ви [налаштуєте **AAPS** на годиннику](../WearOS/BuildingAapsWearOS.md), докладний опис циферблатів і їхніх функцій див. на сторінці [Налаштування AAPS на годиннику з Wear OS](../WearOS/WearOsSmartwatch.md).
 
-As a brief overview, the following functions can be triggered from the smartwatch:
+Коротко: з розумного годинника можна запустити такі функції:
 
-* set a temporary target
+* встановити тимчасову ціль
 
-* use the bolus calculator (calculation variables can be defined in settings on the phone)
+* використати калькулятор болюса (параметри розрахунку можна задати в налаштуваннях на телефоні)
 
-* administer eCarbs
+* ввести eCarbs
 
-* administer a bolus (insulin + carbs)
+* подати болюс (інсулін + вуглеводи)
 
-* watch settings
+* налаштування годинника
 
-* status
+* стан
 
-* check pump status
+* перевірити стан помпи
 
-* check loop status
+* перевірити стан петлі
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* перевірити і змінити профіль, CPP (Circadian Percentage Profile = зсув часу + відсоток)
 
-* show TDD (Total daily dose = bolus + basal per day)
+* показати TDD (загальна добова доза = болюс + базал за добу)
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
+* Віддалений болюс, коли доглядач і дитина з ЦД1 у різних місцях (це можливо для годинника з **AAPS** і телефону з **AAPS**, якщо обидва пристрої підключені до мережі)
 
-#### Communication from caregivers to the watch using other apps (like WhatsApp)
+#### Зв'язок доглядачів з годинником через інші застосунки (наприклад, WhatsApp)
 
-It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+На годинник можна додати інші застосунки, наприклад WhatsApp, щоб, скажімо, обмінюватися повідомленнями між доглядачами і дітьми. Важливо, щоб із телефоном був пов'язаний лише ОДИН обліковий запис Google, інакше годинник не перенесе ці дані. Щоб мати обліковий запис Samsung, вам має бути 13 років або більше. Його треба створити на ту саму електронну адресу, яка використовується на телефоні Android.
 
-A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+Відео про налаштування WhatsApp для повідомлень на годиннику Galaxy Watch 4 (усі функції WhatsApp там недоступні) можна переглянути [тут](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
+Якщо змінити налаштування і в застосунку **Galaxy Wearable** на телефоні з **AAPS**, і на годиннику, повідомлення WhatsApp можуть сповіщати легкою вібрацією, а саме повідомлення показуватиметься поверх циферблата.
 
-### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
+### Варіант 2) **AAPS** на годиннику для віддаленого керування **AAPS** на телефоні
 
-Similarly to using a follower phone with **AAPSClient** or SMS commands (see the sections above), a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via Bluetooth and needs neither Nightscout nor an authentication code. As a side-note, if both smartwatch and **AAPS** phone linked by Bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations, which can be useful in circumstances where the T1D child is in school.
+Так само як телефон-послідовник з **AAPSClient** або SMS-командами (див. розділи вище), розумний годинник можна використовувати для віддаленого керування **AAPS** і для показу повних даних профілю. Головна відмінність від телефону-послідовника: годинник зв'язаний з телефоном з **AAPS** через Bluetooth, і йому не потрібні ні Nightscout, ні код автентифікації. Додатково: якщо годинник і телефон з **AAPS**, зв'язані через Bluetooth, також підключені до мережі Wi-Fi/мобільних даних, годинник взаємодіятиме з телефоном з **AAPS** і на більшій відстані. Це включає віддалене подання болюса, коли доглядач з годинником з **AAPS** і дитина з ЦД1 (з телефоном з **AAPS**) у різних місцях. Це може бути корисно, наприклад, коли дитина з ЦД1 у школі.
 
-A remote control smartwatch is therefore often useful in any situation where:
+Тому годинник для віддаленого керування часто корисний у будь-якій ситуації, коли:
 
-a)  **AAPSClient** or **SMS** commands cannot work; or
+a)  **AAPSClient** або **SMS**-команди не можуть працювати; або
 
-b)  The user wishes to avoid typing an authentication code (as required for SMS commands).
+b)  користувач не хоче вводити код автентифікації (потрібний для SMS-команд).
 
-A smartwatch needs **Wear OS 3 or newer** to be able to control **AAPS**. Please check the technical specifications of the watch, and see the [Smartwatches page](../Getting-Started/Watches.md). Search, or ask in the **AAPS**  Facebook/Discord groups if unsure.
+Щоб керувати **AAPS**, розумному годиннику потрібна **Wear OS 3 або новіша**. Будь ласка, перевірте технічні характеристики годинника і див. сторінку [Розумні годинники та AAPS](../Getting-Started/Watches.md). Якщо не впевнені, пошукайте або запитайте в групах **AAPS**  у Facebook/Discord.
 
-Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
+Нижче наведено інструкції з налаштування **AAPS** на популярному годиннику Samsung Galaxy Watch 4 (40 мм). Годинник [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) теж популярний вибір. Якщо ви налаштовували інший розумний годинник і вважаєте, що це буде корисно іншим, будь ласка, додайте це на ці сторінки ([редагувати документацію](../SupportingAaps/HowToEditTheDocs.md)), щоб поділитися досвідом з усією спільнотою **AAPS**.
 
-### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
+### Варіант 3) AAPSClient на годиннику для віддаленого керування **AAPS** на телефоні
 
 ![Wear Remote 2](../images/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
+Програму для годинника, **AAPSClient** Wear apk, можна завантажити прямо з [Github](https://github.com/nightscout/AndroidAPS/releases/).
 
-To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
+Щоб завантажити програму, натисніть на застосунок для годинника, який відповідає клієнтському застосунку на телефоні: **wear-aapsclient-release_**_версія_ — для **AAPSClient**, **wear-aapsclient2-release_**_версія_ — для **AAPSClient2** (див. [Про AAPSClient, AAPSClient2 і AAPSClient3](#remotecontrol-aapsclient-versions)):
 
-![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
-
-
-Then "save as" and save the file to a convenient location on your computer:
+![зображення](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
 
-![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+Потім виберіть «save as» (зберегти як) і збережіть файл у зручне місце на комп'ютері:
 
 
+![зображення](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
 
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+
+
+Apk **AAPSClient** wear можна перенести на телефон і встановити на годинник так само, як застосунок **AAPS** Wear, як описано в [Перенесення застосунку Wear на телефон з AAPS](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
 
 
 
