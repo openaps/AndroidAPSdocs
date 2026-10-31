@@ -20,7 +20,7 @@
 
 **Autosens** = výpočet citlivosti na inzulín za období 24 a 8 hodin atd. Další informace → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Azure** = cloudová platforma pro hostování webové aplikace **Nightscout** → viz také **Nightscout**.
+**Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
 
 **BAT** = kontrolka slabé baterie pumpy ve stavovém řádku hlavní obrazovky **AAPS** → viz také **CAN** / **RES** / **SEN**.
 
@@ -54,17 +54,17 @@
 
 **Dynamic ISF (nebo DynISF)** (dynamická ISF) = funkce **AAPS**, která dynamicky upravuje citlivost na inzulín (**ISF**) podle **TDD** a **BG** uživatele.
 
-**eCarbs** = extended Carbs, rozložené sacharidy (v aplikaci „eSacharidy“). Sacharidy rozložené do několika hodin (např. kvůli bílkovinám), díky kterým může **AAPS** podávat inzulín postupně, podobně jako prodloužený bolus. Další informace → [Wiki - „Rozložené sacharidy“](../DailyLifeWithAaps/ExtendedCarbs.md)
+**eCarbs** = extended Carbs, rozložené sacharidy (v aplikaci „eSacharidy“). Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Další informace → [Wiki - „Rozložené sacharidy“](../DailyLifeWithAaps/ExtendedCarbs.md)
 
 **FCL** = Full Closed Loop, plně uzavřená smyčka. Smyčka, která od uživatele nepotřebuje žádné zadání k jídlu: žádné počítání sacharidů a žádný bolus na jídlo. Další informace → Wiki - „plně uzavřená smyčka“ a viz také **HCL**.
 
-**FGM** = Flash Glucose Monitor (okamžité monitorování glukózy), systém Freestyle Libre. Další informace → Wiki - „Zdroj glykémie“ a viz také „CGM“.
+**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Další informace → Wiki - „Zdroj glykémie“ a viz také „CGM“.
 
 **git** = nástroj pro ukládání a stahování zdrojového kódu **AAPS**.
 
-**GitHub** = webová služba pro hostování a sestavování softwaru **AAPS** se systémem správy verzí, který sleduje změny v souborech a koordinuje práci na nich, hlavně v týmech. Je také potřeba pro aktualizace **APK**. Další informace → Wiki - „aktualizace APK“.
+**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Další informace → Wiki - „aktualizace APK“.
 
-**Glimp** = aplikace Glimp pro načítání hodnot z Freestyle Libre.
+**Glimp** = an app to collect values from Freestyle Libre.
 
 **HCL (nebo Hybrid Closed Loop)** (hybridní uzavřená smyčka) = smyčka, která automatizuje podávání inzulínu mezi jídly, ale bolus na jídlo musí uživatel stále podat sám. Téměř každý systém v každodenním použití, včetně **AAPS**, je hybridní uzavřená smyčka → viz také **FCL** / **Closed Loop**.
 
@@ -74,7 +74,7 @@
 
 **ISF** = Insulin Sensitivity Factor, citlivost na inzulín. Očekávaný pokles glykémie po podání jedné jednotky inzulínu. Jednotka je buď mg/dl/U, nebo mmol/l/U. Bez přepočtu tyto hodnoty nejsou stejné!
 
-**Keystore (nebo JKS)** (úložiště klíčů) = úložiště klíčů Java (Java KeyStore), tedy šifrovaný soubor, ve kterém jsou uložené vaše osobní vývojářské certifikáty a klíče potřebné pro sestavení **AAPS** (i pro každé další sestavení).
+**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuild).
 
 **LGS** = Low Glucose Suspend, ochrana před nízkou glykémií. Viz [Wiki - Ochrana před nízkou glykémií](#KeyAapsFeatures-LGS)
 
@@ -86,7 +86,7 @@
 
 **min_5m_carbimpact** = bezpečnostní funkce: výchozí rychlost vstřebávání sacharidů, která se použije, když se vstřebávání nedá určit z reakce glykémie uživatele. Další informace → [Wiki - „Předvolby“](#Preferences-min_5m_carbimpact).
 
-**Nightscout** = open source projekt pro přístup k datům z **CGM** a pro reporty z nich. Centrální úložiště dat z **AAPS** uživatele. Umí vytvářet reporty z historických dat uživatele v **Nightscoutu**: odhadované HbA1c, čas v cíli nebo hledání vzorců v datech pomocí percentilového grafu atd.
+**Nightscout** = open source projekt pro přístup k datům z **CGM** a pro reporty z nich. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
 
 **Nightscout** → viz také **Nightscout Reporter**. To je užitečné hlavně pro rodiče, kteří sledují léčbu diabetu svého dítěte.
 
@@ -110,19 +110,19 @@
 
 **Profile** (profil) = základní nastavení léčby uživatele (bazální dávka, **DIA**, **IC**, **ISF**, cílová **BG**). **AAPS** používá jen profily vytvořené v **AAPS** (**Spravovat** → **Profil**), ale **profily** z **Nightscoutu** lze do **AAPS** zkopírovat (synchronizovat). Další informace → [Wiki - „Váš profil AAPS“](../SettingUpAaps/YourAapsProfile.md).
 
-**Profile switch** (přepnutí profilu) = (dočasné) přepnutí **profilu** uživatele na jiný **profil** uložený v **AAPS**.
+**Profile switch** = (temporary) switch of the user’s **Profile** to a different **Profile** saved within **AAPS**.
 
-**Profile Percentage** (procento profilu) = (dočasné) procentuální zvýšení nebo snížení **profilu** uživatele na zvolenou dobu.
+**Profile Percentage** = a (temporary) percentage increase or decrease applied to a user’s **Profile** for a selected time period.
 
 **RES** = kontrolka zpožděné výměny zásobníku ve stavovém řádku hlavní obrazovky **AAPS** → viz také **BAT** / **CAN** / **SEN**.
 
-**RileyLink** = open source hardwarové zařízení, které propojuje Bluetooth Low Energy (BLE) s bezdrátovou komunikací na 916 MHz (pro staré pumpy Medtronic) nebo 433 MHz (pro pumpy Omnipod Eros).
+**RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication.
 
 **SAGE** = sensor age, stáří senzoru. Zobrazuje se na hlavní obrazovce **AAPS** a v **Nightscoutu** podle záznamů péče **Výměna senzoru** uživatele → viz také **Nightscout**.
 
 **SEN** = kontrolka zpožděné výměny senzoru ve stavovém řádku hlavní obrazovky **AAPS** → viz také **BAT** / **CAN** / **RES**.
 
-**Sensitivity detection** (detekce citlivosti) = výpočet citlivosti na inzulín, která se mění kvůli pohybu, hormonům atd. viz také → [DIABETTECH - „Autosens“](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Sensitivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. viz také → [DIABETTECH - „Autosens“](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
 **Sensor noise** (šum senzoru) = nestabilní hodnoty z **CGM**, které vedou ke „skákajícím“ hodnotám **BG**. Další informace → [Wiki - „Vyhlazování dat glykémie“](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
