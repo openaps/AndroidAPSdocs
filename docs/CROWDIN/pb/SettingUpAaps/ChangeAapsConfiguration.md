@@ -22,7 +22,7 @@ Open the **menu** (☰) in the top-left corner of the main screen and choose **C
 
 The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
 
-## Settings
+## Configurações
 
 Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
 
