@@ -1,4 +1,4 @@
-# Settings (Preferences)
+# 设置
 
 In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
 
@@ -28,11 +28,12 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 
 **语言**
 
-- 新选项：使用手机默认语言（推荐）。
+- By default **AAPS** follows the language of the phone (recommended).
 
-- 如果你想让**AAPS**使用与手机标准语言不同的语言，你可以从多种语言中选择。
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
 - When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
 - 该设置在[简单模式](#preferences-simple-mode)下被隐藏。
 
 (preferences-simple-mode)= **简单模式**
@@ -354,7 +355,7 @@ For example with the **Virtual Pump**, the section is called **Virtual pump sett
 在[Tidepool](../SettingUpAaps/Tidepool.md)页面上有更多信息。
 
 (Preferences-nsclient)=
-## NSClient
+## NSClientV3
 
 ![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
 
@@ -410,7 +411,7 @@ The switch "**Allow client control**" is no longer in these settings: it is at t
 - 要在字段中删除所有SSID，请输入一个空格。
 
 (Preferences-advanced-settings-nsclient)=
-### 高级设置（NSClient）
+### Advanced settings (NSClientV3)
 
 ![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
 
@@ -468,6 +469,10 @@ This section is shown when the **Autotune** plugin is enabled in [Configuration 
 ![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
 
 设置一看就能明白。
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
 ## 维护设置
