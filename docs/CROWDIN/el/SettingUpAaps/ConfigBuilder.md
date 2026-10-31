@@ -1,51 +1,51 @@
-# Configuration (Config Builder)
+# Διαμόρφωση (Config Builder)
 
-```{admonition} Coming from AAPS v3? :class: note The **Config Builder** is now called **Configuration** and is in the **menu** (☰). See [What changed in AAPS v4](#v4-changes).
+```{admonition} Έρχεστε από το AAPS v3; :class: note Το **Config Builder** ονομάζεται τώρα **Διαμόρφωση** και βρίσκεται στο **μενού** (☰). Δείτε [Τι άλλαξε στο AAPS v4](#v4-changes).
 
-    <br />**Configuration** is where you choose which plugins are active (CGM, pump, APS algorithm, sensitivity, sync, …) and open each plugin and its settings. The [walkthrough](#configuration-v4) is below; the rest of this page describes each section in detail.
+    <br />Στη **Διαμόρφωση** επιλέγετε ποια πρόσθετα είναι ενεργά (CGM, αντλία, αλγόριθμος APS, ευαισθησία, συγχρονισμός, …) και ανοίγετε κάθε πρόσθετο και τις ρυθμίσεις του. Η [περιγραφή βήμα προς βήμα](#configuration-v4) είναι παρακάτω. Το υπόλοιπο της σελίδας περιγράφει κάθε ενότητα αναλυτικά.
     
     (configuration-v4)=
-    ## Configuration in AAPS v4
+    ## Διαμόρφωση στο AAPS v4
     
-    In **AAPS** v4, tap the **menu** (☰) in the **top-left** corner of the main screen and choose **Configuration** (*“Set up your configuration (CGM, pump, …) and enable features”*).
+    Στο **AAPS** v4, πατήστε το **μενού** (☰) στην **πάνω αριστερή** γωνία της κύριας οθόνης και επιλέξτε **Διαμόρφωση** (*«Ρυθμίστε τη διαμόρφωσή σας (CGM, αντλία, …) και ενεργοποιήστε λειτουργίες»*).
     
-    ![The top-left menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+    ![Το μενού πάνω αριστερά με την επιλογή Διαμόρφωση](../images/v4/Configuration/configuration_menu.png)
     
-    Plugins are grouped by **category** — for example *Smoothing*, *Calibration*, *Sensitivity detection*, *APS*, *Communication* and *General*. Each row shows the category name and the **currently active** plugin (e.g. *APS → OpenAPS SMB*). Tap a row to open a category.
+    Τα πρόσθετα είναι ομαδοποιημένα σε **κατηγορίες** — για παράδειγμα *Εξομάλυνση*, *Βαθμονόμηση*, *Ανίχνευση ευαισθησίας*, *APS*, *Επικοινωνία* και *Γενικά*. Κάθε γραμμή δείχνει το όνομα της κατηγορίας και το **ενεργό τώρα** πρόσθετο (π.χ. *APS → OpenAPS SMB*). Πατήστε μια γραμμή για να ανοίξετε μια κατηγορία.
     
-    ![The Configuration screen, listing plugin categories](../images/v4/Configuration/configuration_plugins.png)
+    ![Η οθόνη Διαμόρφωση με τη λίστα των κατηγοριών πρόσθετων](../images/v4/Configuration/configuration_plugins.png)
     
-    Inside a category you see the plugins available for it. For single-choice categories you pick the active one; some categories are multi-select (*“Choose any that apply”*). Each plugin offers two actions:
+    Μέσα σε μια κατηγορία βλέπετε τα πρόσθετα που υπάρχουν για αυτήν. Στις κατηγορίες μίας επιλογής διαλέγετε το ενεργό πρόσθετο. Κάποιες κατηγορίες επιτρέπουν πολλές επιλογές (*«Επιλέξτε όσα ισχύουν.»*). Κάθε πρόσθετο έχει δύο ενέργειες:
     
-    - **Open plugin** — opens the plugin's own screen.
-    - **Settings** — opens the plugin's preferences (settings may be grouped into expandable sections).
+    - **Άνοιγμα πρόσθετου** — ανοίγει την οθόνη του πρόσθετου.
+    - **Ρυθμίσεις** — ανοίγει τις ρυθμίσεις του πρόσθετου (οι ρυθμίσεις μπορεί να είναι ομαδοποιημένες σε ενότητες που ανοίγουν).
     
-    ![A category showing its plugins, each with “Open plugin” and “Settings”](../images/v4/Configuration/configuration_open_plugin.png)
+    ![Μια κατηγορία με τα πρόσθετά της, το καθένα με «Άνοιγμα πρόσθετου» και «Ρυθμίσεις»](../images/v4/Configuration/configuration_open_plugin.png)
     
     (configuration_sync_icon)=
-    ### The mobile icon — “synced from the master”
+    ### Το εικονίδιο κινητού — «συγχρονίζεται από την κύρια συσκευή»
     
-    A small **mobile (phone) icon** next to a category or setting means that item is **synchronized from the master** — its value/selection is delivered to this device over the NSClientV3 (Nightscout) channel.
+    Ένα μικρό **εικονίδιο κινητού (τηλεφώνου)** δίπλα σε μια κατηγορία ή ρύθμιση σημαίνει ότι αυτό το στοιχείο **συγχρονίζεται από την κύρια συσκευή (master)** — η τιμή/επιλογή του έρχεται σε αυτή τη συσκευή μέσω του καναλιού NSClientV3 (Nightscout).
     
-    On a **client** (**AAPSClient**) these items are **kept in sync with the master**. The icon is only shown on a client, so it does not appear in the screenshot above, which was taken on the main **AAPS** app. On a client it typically appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS*. Exactly how the master and clients stay aligned — and which settings you can change from either side — is covered under [Master ↔ Client control](#client-master-config-prefs).
+    Σε έναν **πελάτη** (**AAPSClient**) αυτά τα στοιχεία **μένουν συγχρονισμένα με την κύρια συσκευή**. Το εικονίδιο εμφανίζεται μόνο σε πελάτη. Γι' αυτό δεν φαίνεται στο παραπάνω στιγμιότυπο, που τραβήχτηκε στην κύρια εφαρμογή **AAPS**. Σε πελάτη εμφανίζεται συνήθως στα *Εξομάλυνση*, *Βαθμονόμηση*, *Ανίχνευση ευαισθησίας* και *APS*. Πώς ακριβώς μένουν συντονισμένοι η κύρια συσκευή και οι πελάτες — και ποιες ρυθμίσεις μπορείτε να αλλάξετε από κάθε πλευρά — περιγράφεται στο [Έλεγχος Master ↔ Client](#client-master-config-prefs).
     
-    The same icon also appears **inside the settings**, next to the individual preferences that are synced. In the example below *Absorption cutoff* carries the icon; settings without the icon are configured per device:
+    Το ίδιο εικονίδιο εμφανίζεται επίσης **μέσα στις ρυθμίσεις**, δίπλα σε κάθε επιλογή που συγχρονίζεται. Στο παρακάτω παράδειγμα το *Όριο απορρόφησης* έχει το εικονίδιο. Οι ρυθμίσεις χωρίς το εικονίδιο ορίζονται ξεχωριστά σε κάθε συσκευή:
     
-    ![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+    ![Οι ρυθμίσεις ενός πρόσθετου — το εικονίδιο κινητού δείχνει τις επιλογές που συγχρονίζονται](../images/v4/ClientMaster/preferences_synced_icon.png)
     
-    Items **without** the icon are configured **per device**. The most important example is the **NSClientV3 (Communication)** connection itself — the **Nightscout URL**, **access token** and **websockets** are set on each phone individually, so they do **not** show the mobile icon.
+    Τα στοιχεία **χωρίς** το εικονίδιο ορίζονται **ξεχωριστά σε κάθε συσκευή**. Το πιο σημαντικό παράδειγμα είναι η ίδια η σύνδεση **NSClientV3 (Επικοινωνία)** — η **Διεύθυνση Nightscout**, το **διακριτικό πρόσβασης (access token)** και τα **websockets** ορίζονται χωριστά σε κάθε τηλέφωνο. Γι' αυτό **δεν** έχουν το εικονίδιο κινητού.
     
     ---
     
     (Config-Builder-tab-or-hamburger-menu)=
-    ## Opening a plugin screen
+    ## Άνοιγμα της οθόνης ενός πρόσθετου
     
-    Each plugin screen is opened in one of these ways (the tabs and the eye checkbox of **AAPS** v3 are gone, see [What changed in AAPS v4](#v4-changes)):
+    Κάθε οθόνη πρόσθετου ανοίγει με έναν από τους παρακάτω τρόπους (οι καρτέλες και το κουτάκι με το μάτι του **AAPS** v3 δεν υπάρχουν πια, δείτε [Τι άλλαξε στο AAPS v4](#v4-changes)):
     
-    - **Configuration** → the plugin's category → **Open plugin**,
-    - the **Manage** sheet of the bottom navigation, for the screens you use most (Profile, Insulin settings, Pump, Automation, Food...),
-    - a [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) button that you add yourself,
-    - the **search bar** on the main screen.
+    - **Διαμόρφωση** → η κατηγορία του πρόσθετου → **Άνοιγμα πρόσθετου**,
+    - το φύλλο **Διαχείριση** στην κάτω γραμμή πλοήγησης, για τις οθόνες που χρησιμοποιείτε πιο συχνά (Προφίλ, Ρυθμίσεις ινσουλίνης, Αντλία, Αυτοματισμός, Τρόφιμα...),
+    - ένα κουμπί [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) που προσθέτετε μόνοι σας,
+    - η **γραμμή αναζήτησης** στην κύρια οθόνη.
     
     ```{contents}
     :backlinks: entry
@@ -54,391 +54,391 @@
 
 (ConfigBuilder_Profile)=
 
-## Profile
+## Προφίλ
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Αυτή η μονάδα δεν μπορεί να απενεργοποιηθεί, γιατί είναι βασικό μέρος του **AAPS**.
 
-See [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) for a basic understanding of what goes inside your **Profile**.
+Δείτε [Το προφίλ σας στο AAPS](../SettingUpAaps/YourAapsProfile.md) για να καταλάβετε βασικά τι περιέχει το **Προφίλ** σας.
 
 (insulin)= (Config-Builder-insulin)=
 
 ## Ινσουλίνη
 
-![Insulin settings](../images/manage/insulin_settings.png)
+![Ρυθμίσεις ινσουλίνης](../images/manage/insulin_settings.png)
 
-In **AAPS** 4 the insulin is no longer a plugin selected in **Configuration**. Open **Manage → Insulin settings** to set up the insulin you are using.
+Στο **AAPS** 4 η ινσουλίνη δεν είναι πια πρόσθετο που επιλέγεται στη **Διαμόρφωση**. Ανοίξτε **Διαχείριση → Ρυθμίσεις ινσουλίνης** για να ρυθμίσετε την ινσουλίνη που χρησιμοποιείτε.
 
-The insulin editor lets you:
+Στον επεξεργαστή ινσουλίνης μπορείτε:
 
-* give the profile an **Insulin nickname** so it is easy to recognise,
-* set the **Peak** (time to maximum insulin activity, in minutes) and the **DIA** (Duration of Insulin Activity, in hours), either by typing the value or using the **–** / **+** buttons,
-* tap a **Load peak from** preset button — **Novorapid** (75 min), **Fiasp** (55 min) or **Lyumjev** (45 min) — to fill in the standard peak time for that insulin in one step.
+* να δώσετε στο προφίλ ένα **Ψευδώνυμο ινσουλίνης**, ώστε να το αναγνωρίζετε εύκολα,
+* να ορίσετε την **Κορυφή** (χρόνος μέχρι τη μέγιστη δράση της ινσουλίνης, σε λεπτά) και τη **DIA** (διάρκεια δράσης της ινσουλίνης, σε ώρες), είτε γράφοντας την τιμή είτε με τα κουμπιά **–** / **+**,
+* να πατήσετε ένα κουμπί προεπιλογής **Φόρτωση κορυφής από** — **Novorapid** (75 λεπ.), **Fiasp** (55 λεπ.) ή **Lyumjev** (45 λεπ.) — για να συμπληρώσετε με μία κίνηση τον τυπικό χρόνο κορυφής αυτής της ινσουλίνης.
 
-The allowed ranges are the same whatever insulin you use:
+Τα επιτρεπόμενα εύρη είναι τα ίδια, όποια ινσουλίνη κι αν χρησιμοποιείτε:
 
-* **DIA**: 5 to 9 hours (5 to 10 hours if the patient type is set to **Pregnant**). See [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to choose a value.
-* **Peak**: 35 to 120 minutes.
+* **DIA**: 5 έως 9 ώρες (5 έως 10 ώρες αν ο τύπος ασθενούς είναι **Κύηση**). Δείτε [Διάρκεια δράσης ινσουλίνης (DIA) και κορυφή](#Config-Builder-insulin-dia) για να επιλέξετε μια τιμή.
+* **Κορυφή**: 35 έως 120 λεπτά.
 
-The **IOB** (insulin on board) and **Activity** curves shown at the bottom of the editor update as you change the values, so you can see straight away how your settings shape the insulin action.
+Οι καμπύλες **IOB** (ενεργή ινσουλίνη) και **Δράση** στο κάτω μέρος του επεξεργαστή αλλάζουν καθώς αλλάζετε τις τιμές. Έτσι βλέπετε αμέσως πώς οι ρυθμίσεις σας διαμορφώνουν τη δράση της ινσουλίνης.
 
-More information to understand the Insulin Profile as shown in **AAPS** [here](#AapsScreens-insulin-profile).
+Περισσότερες πληροφορίες για το προφίλ ινσουλίνης, όπως εμφανίζεται στο **AAPS**, θα βρείτε [εδώ](#AapsScreens-insulin-profile).
 
 (Config-Builder-insulin-change-active)=
 
-### Changing the insulin in use (DIA or peak)
+### Αλλαγή της ινσουλίνης σε χρήση (DIA ή κορυφή)
 
-The insulin marked **ACTIVE** is the one your running profile uses. Its fields are greyed out: you cannot edit or delete it. This way, the insulin name shown in your running profile always matches the settings actually in use.
+Η ινσουλίνη με την ένδειξη **ΕΝΕΡΓΟ** είναι αυτή που χρησιμοποιεί το τρέχον προφίλ σας. Τα πεδία της είναι γκρι: δεν μπορείτε να την επεξεργαστείτε ή να τη διαγράψετε. Έτσι, το όνομα ινσουλίνης που φαίνεται στο τρέχον προφίλ σας ταιριάζει πάντα με τις ρυθμίσεις που χρησιμοποιούνται πραγματικά.
 
-To change the DIA or peak you are using:
+Για να αλλάξετε τη DIA ή την κορυφή που χρησιμοποιείτε:
 
-1. Open **Manage → Insulin settings**. If the screen opens read-only (a **✏️ pencil** in the top bar), tap the pencil and unlock your settings.
-2. Tap **+** (*Add new insulin*). **AAPS** creates a copy of the insulin shown on screen.
-3. Set the new **Peak** and/or **DIA**, then tap the save icon (top right).
-4. Tap **▶** (*Activate insulin*) and confirm. The new insulin becomes **ACTIVE**.
+1. Ανοίξτε **Διαχείριση → Ρυθμίσεις ινσουλίνης**. Αν η οθόνη ανοίξει μόνο για ανάγνωση (ένα **✏️ μολύβι** στην πάνω γραμμή), πατήστε το μολύβι και ξεκλειδώστε τις ρυθμίσεις σας.
+2. Πατήστε **+** (*Προσθήκη νέας ινσουλίνης*). Το **AAPS** δημιουργεί ένα αντίγραφο της ινσουλίνης που φαίνεται στην οθόνη.
+3. Ορίστε τη νέα **Κορυφή** και/ή **DIA** και μετά πατήστε το εικονίδιο αποθήκευσης (πάνω δεξιά).
+4. Πατήστε **▶** (*Ενεργοποίηση ινσουλίνης*) και επιβεβαιώστε. Η νέα ινσουλίνη έχει τώρα την ένδειξη **ΕΝΕΡΓΟ**.
 
-```{admonition} The name includes peak and DIA :class: note **AAPS** adds the peak, DIA and concentration to the insulin name automatically (for example *Fiasp 55m 8h U100*), so you can tell your configurations apart at a glance.
+```{admonition} Το όνομα περιέχει την κορυφή και τη DIA :class: note Το **AAPS** προσθέτει αυτόματα την κορυφή, τη DIA και τη συγκέντρωση στο όνομα της ινσουλίνης (για παράδειγμα *Fiasp 55m 8h U100*), ώστε να ξεχωρίζετε τις ρυθμίσεις σας με μια ματιά.
 
-    <br />You can delete the old insulin once it is no longer active.
+    <br />Μπορείτε να διαγράψετε την παλιά ινσουλίνη μόλις δεν είναι πια ενεργή.
     
-    ### The "Load peak from" presets
+    ### Οι προεπιλογές «Φόρτωση κορυφής από»
     
-    In **AAPS** 4 there is no list of insulin types to choose from. Every insulin uses the same exponential activity curve; only its **Peak** and **DIA** differ. The **Load peak from** presets in the insulin editor fill in the recommended peak for the most common insulins in one tap (the small ⓘ next to **Load peak from** lists them with their peak values). You can still adjust the **Peak** and **DIA** afterwards.
+    Στο **AAPS** 4 δεν υπάρχει λίστα με τύπους ινσουλίνης για να διαλέξετε. Κάθε ινσουλίνη χρησιμοποιεί την ίδια εκθετική καμπύλη δράσης. Διαφέρουν μόνο η **Κορυφή** και η **DIA**. Οι προεπιλογές **Φόρτωση κορυφής από** στον επεξεργαστή ινσουλίνης συμπληρώνουν με ένα πάτημα τη συνιστώμενη κορυφή για τις πιο συνηθισμένες ινσουλίνες (το μικρό ⓘ δίπλα στο **Φόρτωση κορυφής από** τις δείχνει μαζί με τις τιμές κορυφής τους). Μπορείτε μετά να προσαρμόσετε την **Κορυφή** και τη **DIA**.
     
-    Only change the peak away from its recommended value if you understand the effect of doing so. The [insulin curve graph](#AapsScreens-insulin-profile) helps you to understand the curves.
+    Αλλάξτε την κορυφή από τη συνιστώμενη τιμή μόνο αν καταλαβαίνετε τι αποτέλεσμα θα έχει αυτό. Το [γράφημα της καμπύλης ινσουλίνης](#AapsScreens-insulin-profile) σας βοηθά να καταλάβετε τις καμπύλες.
     
     #### Novorapid
     
-    ![Insulin curve with the Novorapid peak](../images/Profile/ConfBuild_Insulin_RAO.png)
+    ![Καμπύλη ινσουλίνης με την κορυφή του Novorapid](../images/Profile/ConfBuild_Insulin_RAO.png)
     
-    * recommended for Humalog, Novolog and Novorapid (called *Rapid-Acting Oref* in **AAPS** v3)
-    * Peak = 75 minutes after injection
+    * συνιστάται για Humalog, Novolog και Novorapid (στο **AAPS** v3 λεγόταν *Rapid-Acting Oref*)
+    * Κορυφή = 75 λεπτά μετά την ένεση
     
     #### Fiasp
     
-    ![Insulin curve with the Fiasp peak](../images/Profile/ConfBuild_Insulin_URO.png)
+    ![Καμπύλη ινσουλίνης με την κορυφή του Fiasp](../images/Profile/ConfBuild_Insulin_URO.png)
     
-    * recommended for Fiasp (called *Ultra-Rapid Oref* in **AAPS** v3)
-    * Peak = 55 minutes after injection
+    * συνιστάται για Fiasp (στο **AAPS** v3 λεγόταν *Ultra-Rapid Oref*)
+    * Κορυφή = 55 λεπτά μετά την ένεση
     
     (Config-Builder-lyumjev)=
     #### Lyumjev
     
-    ![Insulin curve with the Lyumjev peak](../images/Profile/ConfBuild_Insulin_L.png)
+    ![Καμπύλη ινσουλίνης με την κορυφή του Lyumjev](../images/Profile/ConfBuild_Insulin_L.png)
     
-    * recommended for Lyumjev
-    * Peak = 45 minutes after injection
+    * συνιστάται για Lyumjev
+    * Κορυφή = 45 λεπτά μετά την ένεση
     
-    #### Custom peak
+    #### Προσαρμοσμένη κορυφή
     
-    * There is no separate "Free-Peak Oref" insulin type in **AAPS** 4: enter any **Peak** (35 to 120 minutes) directly in the [insulin editor](#Config-Builder-insulin), without using a preset.
-    * A custom peak is useful if you use an insulin that is not in the list, or a mixture of different insulins.
+    * Στο **AAPS** 4 δεν υπάρχει ξεχωριστός τύπος ινσουλίνης "Free-Peak Oref": γράψτε οποιαδήποτε **Κορυφή** (35 έως 120 λεπτά) απευθείας στον [επεξεργαστή ινσουλίνης](#Config-Builder-insulin), χωρίς προεπιλογή.
+    * Μια προσαρμοσμένη κορυφή είναι χρήσιμη αν χρησιμοποιείτε ινσουλίνη που δεν είναι στη λίστα ή μείγμα από διαφορετικές ινσουλίνες.
     
     (Config-Builder-insulin-dia)=
-    ### Duration of insulin action (DIA) and peak
+    ### Διάρκεια δράσης ινσουλίνης (DIA) και κορυφή
     
     ```{warning}
-    In looping, decreasing DIA or peak will always increase administered insulin. DIA works differently in AAPS than in commercial AID systems, and careless changes to these settings can change insulin dosing in a way which is much larger or smaller than expected.
+    Στο κύκλωμα, η μείωση της DIA ή της κορυφής αυξάνει πάντα την ινσουλίνη που χορηγείται. Η DIA λειτουργεί διαφορετικά στο AAPS από ό,τι στα εμπορικά συστήματα AID. Απρόσεκτες αλλαγές σε αυτές τις ρυθμίσεις μπορεί να αλλάξουν τη δοσολογία της ινσουλίνης πολύ περισσότερο ή πολύ λιγότερο από ό,τι περιμένετε.
     
 
-AAPS models the timeline of insulin action with a mathematical formula, configured using **DIA** and the closely related **peak** settings. DIA is the theoretical duration until IOB reaches zero and peak is the point in time when the effect of insulin is strongest. This yields an IOB curve and an activity curve, which is simply the **rate** of IOB decay.
+Το AAPS περιγράφει τη χρονική πορεία της δράσης της ινσουλίνης με έναν μαθηματικό τύπο, που ρυθμίζεται με τη **DIA** και τη στενά συνδεδεμένη ρύθμιση **κορυφή**. Η DIA είναι η θεωρητική διάρκεια μέχρι το IOB να φτάσει στο μηδέν και η κορυφή είναι η χρονική στιγμή που η δράση της ινσουλίνης είναι πιο ισχυρή. Από αυτά προκύπτει μια καμπύλη IOB και μια καμπύλη δράσης, η οποία είναι απλώς ο **ρυθμός** μείωσης του IOB.
 
-Consider that when AAPS is looping, it's normal to have periods of [zero-temping](#Open-APS-features-super-micro-bolus-smb). This missing basal insulin is fully subtracted from the IOB, explaining why IOB will in practice reach zero many hours earlier than the configured DIA. You can inspect [bolus IOB and basal IOB](#aaps-screens-iob-cob-basal-sens) separately from the main screen.
+Λάβετε υπόψη ότι, όταν το AAPS λειτουργεί σε κύκλωμα, είναι φυσιολογικό να υπάρχουν περίοδοι με [μηδενικό βασικό (zero temp)](#Open-APS-features-super-micro-bolus-smb). Αυτή η βασική ινσουλίνη που λείπει αφαιρείται πλήρως από το IOB. Αυτό εξηγεί γιατί στην πράξη το IOB φτάνει στο μηδέν πολλές ώρες νωρίτερα από τη DIA που έχετε ορίσει. Μπορείτε να δείτε χωριστά το [IOB του bolus και το IOB του βασικού ρυθμού](#aaps-screens-iob-cob-basal-sens) από την κύρια οθόνη.
 
-To configure DIA and peak, tap **Manage** in the main screen, and then tap **Insulin settings**. AAPS displays the active insulin configuration like this:
+Για να ρυθμίσετε τη DIA και την κορυφή, πατήστε **Διαχείριση** στην κύρια οθόνη και μετά πατήστε **Ρυθμίσεις ινσουλίνης**. Το AAPS δείχνει τη ρύθμιση της ενεργής ινσουλίνης έτσι:
 
-![Sample insulin configuration](../images/manage/insulin_profile.png)
+![Παράδειγμα ρύθμισης ινσουλίνης](../images/manage/insulin_profile.png)
 
-In this example, the peak setting is 55 minutes, DIA is 8 hours and [insulin concentration](#Insulin-Concentration) is the standard 100 IU/mL.
+Σε αυτό το παράδειγμα η κορυφή είναι 55 λεπτά, η DIA είναι 8 ώρες και η [συγκέντρωση ινσουλίνης](#Insulin-Concentration) είναι η τυπική 100 IU/mL.
 
-Due to the influence of zero-temping explained above and the formula used for IOB decay in AAPS, most users set a clearly higher DIA than in commercial systems. In general, many people find that a **DIA** of 9h works well for them. After you have more experience with AAPS and have a well-tuned profile, you can try to find personalized DIA and peak settings with the information below.
+Λόγω της επίδρασης του μηδενικού βασικού που εξηγήθηκε παραπάνω και του τύπου που χρησιμοποιεί το AAPS για τη μείωση του IOB, οι περισσότεροι χρήστες ορίζουν σαφώς μεγαλύτερη DIA από ό,τι στα εμπορικά συστήματα. Γενικά, πολλοί βρίσκουν ότι μια **DIA** 9 ωρών τους ταιριάζει καλά. Όταν αποκτήσετε περισσότερη εμπειρία με το AAPS και έχετε ένα καλά ρυθμισμένο προφίλ, μπορείτε να προσπαθήσετε να βρείτε προσωπικές ρυθμίσεις DIA και κορυφής με τις πληροφορίες παρακάτω.
 
-````{admonition} Details on the impact of DIA and peak configuration :class: dropdown
+````{admonition} Λεπτομέρειες για την επίδραση των ρυθμίσεων DIA και κορυφής :class: dropdown
 
-Since the basal rate has an indirect influence on IOB decay in AAPS, it follows that too high basal rates can mask too high DIA, and vice versa. It makes sense to first carefully tune basal rates before adjusting DIA and peak. Additionally, consider that the DIA and peak settings interact, in the sense that the effect of DIA depends on peak, and vice versa.
+Επειδή ο βασικός ρυθμός επηρεάζει έμμεσα τη μείωση του IOB στο AAPS, πολύ υψηλοί βασικοί ρυθμοί μπορεί να κρύψουν μια πολύ υψηλή DIA, και αντίστροφα. Έχει νόημα να ρυθμίσετε πρώτα προσεκτικά τους βασικούς ρυθμούς και μετά να προσαρμόσετε τη DIA και την κορυφή. Επίσης, λάβετε υπόψη ότι οι ρυθμίσεις DIA και κορυφής αλληλεπιδρούν: η επίδραση της DIA εξαρτάται από την κορυφή, και αντίστροφα.
 
-These charts show the exact impact of DIA and peak on the IOB curves, across the range of allowed values.
+Αυτά τα γραφήματα δείχνουν την ακριβή επίδραση της DIA και της κορυφής στις καμπύλες IOB, σε όλο το εύρος των επιτρεπόμενων τιμών.
 
-Adjusting DIA:
+Προσαρμογή της DIA:
 
 ```{image} ../images/iob_remaining_static_peak.png :width: 400px
 
-    <br />Adjusting peak:
+    <br />Προσαρμογή της κορυφής:
     
     ```{image} ../images/iob_remaining_static_dia.png
     :width: 400px
     
 
-Finally, a comparison adjusting DIA and peak in parallel. The logic here is that both values are adjusted in the same relative amounts, so that `49/35 ~ 7/5`. Or similarly, `120/93 ~ 9/7`. The intervals will be consistent regardless of the baseline DIA or peak, as long as the relative change is the same for both.
+Τέλος, μια σύγκριση με προσαρμογή της DIA και της κορυφής μαζί. Η λογική εδώ είναι ότι και οι δύο τιμές αλλάζουν κατά την ίδια αναλογία, ώστε `49/35 ~ 7/5`. Ή παρόμοια, `120/93 ~ 9/7`. Τα διαστήματα θα είναι ίδια, όποια κι αν είναι η αρχική DIA ή κορυφή, αρκεί η αναλογική αλλαγή να είναι ίδια και για τις δύο.
 
 ```{image} ../images/iob_remaining_uniform.png :width: 400px
 
-    <br />Note that when DIA and peak are adjusted in this fashion, every point in the curve will shift by the same relative amount.
+    <br />Σημειώστε ότι, όταν η DIA και η κορυφή αλλάζουν με αυτόν τον τρόπο, κάθε σημείο της καμπύλης μετακινείται κατά την ίδια αναλογία.
     
     ````
     
-    #### Further reading on DIA and peak configuration
+    #### Περισσότερα για τις ρυθμίσεις DIA και κορυφής
     
-    * [Technical details and historical background from the AAPS predecessor, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
-    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) on Diabettech.
-    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) on See My CGM (archive).
-    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) and other articles on Bionic Wookie, recommending a DIA of 9h for Lyumjev, Fiasp, NovoRapid, Humalog.
+    * [Τεχνικές λεπτομέρειες και ιστορικό από τον πρόγονο του AAPS, το OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
+    * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) (γιατί κάνουμε συχνά λάθος στη διάρκεια δράσης ινσουλίνης (DIA) και γιατί αυτό έχει σημασία) στο Diabettech.
+    * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) (εκθετικές καμπύλες ινσουλίνης + Fiasp) στο See My CGM (αρχείο).
+    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) (αναθεωρημένο μοντέλο Humalog σε κλειστό κύκλωμα) και άλλα άρθρα στο Bionic Wookie, που συνιστούν DIA 9 ωρών για Lyumjev, Fiasp, NovoRapid, Humalog.
     
     (Config-Builder-bg-source)=
-    ## BG Source
-    Select the blood glucose source you are using. See [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
+    ## Πηγή BG
+    Επιλέξτε την πηγή γλυκόζης αίματος που χρησιμοποιείτε. Δείτε τη σελίδα [Πηγή BG](../Getting-Started/CompatiblesCgms.md) για περισσότερες πληροφορίες ρύθμισης.
     
-    ![Configuration > BG Source](../images/v4/Configuration/configuration_bg_source.png)
+    ![Διαμόρφωση > Πηγή BG](../images/v4/Configuration/configuration_bg_source.png)
     
-    Scroll down to see the other sources:
+    Κάντε κύλιση προς τα κάτω για να δείτε τις άλλες πηγές:
     
-    ![Configuration > BG Source, continued](../images/v4/Configuration/configuration_bg_source_2.png)
+    ![Διαμόρφωση > Πηγή BG, συνέχεια](../images/v4/Configuration/configuration_bg_source_2.png)
     
-    ![Configuration > BG Source, end of the list](../images/v4/Configuration/configuration_bg_source_3.png)
+    ![Διαμόρφωση > Πηγή BG, τέλος της λίστας](../images/v4/Configuration/configuration_bg_source_3.png)
     
-    * [xDrip+ BG](../CompatibleCgms/xDrip.md) - also for compatible apps such as [Juggluco](../CompatibleCgms/Juggluco.md)
-    * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - only if you know what you are doing, see [BG Source](../Getting-Started/CompatiblesCgms.md).
+    * [xDrip+ BG](../CompatibleCgms/xDrip.md) - και για συμβατές εφαρμογές, όπως το [Juggluco](../CompatibleCgms/Juggluco.md)
+    * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - μόνο αν ξέρετε τι κάνετε, δείτε [Πηγή BG](../Getting-Started/CompatiblesCgms.md).
     * [MM640g](../CompatibleCgms/MM640g.md)
-    * Glimp - only version 4.15.57 and newer are supported
+    * Glimp - υποστηρίζεται μόνο η έκδοση 4.15.57 και νεότερες
     * [BYODA (Build Your Own Dexcom App)](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
-    * MicroTech CGM App - for the Aidex / LinX CGM
+    * MicroTech CGM App - για το CGM Aidex / LinX
     * [Poctech](../CompatibleCgms/PocTech.md)
-    * Tomato (MiaoMiao) - Tomato App for MiaoMiao device
-    * [Glunovo](https://infinovo.com/) - Glunovo App for Glunovo CGM system
-    * Intelligo - Intelligo App
-    * Syai/Ottai - for the Syai and Ottai apps (see [Syai Tag](../CompatibleCgms/SyaiTagX1.md) and [Ottai](../CompatibleCgms/OttaiM8.md))
-    * SI App - patched SI App or Sibionics App for Sibionics CGM
-    * Sino App - patched app for Sinocare CGM
-    * Notification Reader - reads glucose values from the notifications shown by official CGM apps (Dexcom, Medtronic, Eversense, etc.)
-    * Instara - Instara App
-    * Random BG - generates random BG data for testing. It can only be enabled in an engineering (developer) build with the **Virtual Pump**, so in a normal **AAPS** installation it cannot be used.
+    * Tomato (MiaoMiao) - εφαρμογή Tomato για τη συσκευή MiaoMiao
+    * [Glunovo](https://infinovo.com/) - εφαρμογή Glunovo για το σύστημα CGM Glunovo
+    * Intelligo - εφαρμογή Intelligo
+    * Syai/Ottai - για τις εφαρμογές Syai και Ottai (δείτε [Syai Tag](../CompatibleCgms/SyaiTagX1.md) και [Ottai](../CompatibleCgms/OttaiM8.md))
+    * SI App - τροποποιημένη (patched) εφαρμογή SI App ή εφαρμογή Sibionics για το CGM Sibionics
+    * Sino App - τροποποιημένη (patched) εφαρμογή για το CGM Sinocare
+    * Ανάγνωση ειδοποιήσεων - διαβάζει τιμές γλυκόζης από τις ειδοποιήσεις των επίσημων εφαρμογών CGM (Dexcom, Medtronic, Eversense κ.λπ.)
+    * Instara - εφαρμογή Instara
+    * Τυχαίες τιμές BG - δημιουργεί τυχαία δεδομένα BG για δοκιμές. Μπορεί να ενεργοποιηθεί μόνο σε έκδοση μηχανικού (engineering/developer build) με την **Εικονική Αντλία**. Έτσι, σε μια κανονική εγκατάσταση του **AAPS** δεν μπορεί να χρησιμοποιηθεί.
     
-    ## Smoothing
+    ## Εξομάλυνση
     
-    ![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+    ![Διαμόρφωση > Εξομάλυνση](../images/v4/Configuration/configuration_smoothing.png)
     
-    See [Smoothing blood glucose data](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+    Δείτε [Εξομάλυνση των δεδομένων γλυκόζης στο αίμα](../CompatibleCgms/SmoothingBloodGlucoseData.md).
     
-    ## Calibration
+    ## Βαθμονόμηση
     
-    Choose how **AAPS** treats the values it receives from your sensor:
+    Επιλέξτε πώς το **AAPS** χειρίζεται τις τιμές που λαμβάνει από τον αισθητήρα σας:
     
-    - **No calibration**: the sensor values are used as they are. Use this when the sensor is already factory-calibrated and accurate. This is the default.
-    - **Linear calibration**: **AAPS** corrects the sensor values with a slope and an offset that it computes from your fingerstick entries.
+    - **Χωρίς βαθμονόμηση**: οι τιμές του αισθητήρα χρησιμοποιούνται όπως είναι. Χρησιμοποιήστε το όταν ο αισθητήρας είναι ήδη βαθμονομημένος από το εργοστάσιο και ακριβής. Αυτή είναι η προεπιλογή.
+    - **Γραμμική βαθμονόμηση**: το **AAPS** διορθώνει τις τιμές του αισθητήρα με μια κλίση και μια μετατόπιση που υπολογίζει από τις μετρήσεις σας από το δάχτυλο.
     
-    How **Linear calibration** works:
+    Πώς λειτουργεί η **Γραμμική βαθμονόμηση**:
     
-    - It needs a **sensor change** to be logged, so that it knows when the sensor session started. The first 2 hours of a session are skipped as warm-up.
-    - It needs at least **2 fingerstick entries**. Recent entries count more than old ones.
-    - The correction is only applied when the result is in a safe range. If your entries are too close together, only the offset is corrected.
-    - **Open plugin** shows the status of the calibration, the slope and correction in use, and the list of fingerstick entries. You can add an entry with **Add calibration** and remove a wrong one.
+    - Χρειάζεται να έχει καταγραφεί **αλλαγή αισθητήρα**, ώστε να ξέρει πότε ξεκίνησε η χρήση του αισθητήρα. Οι πρώτες 2 ώρες μετά την αλλαγή παραλείπονται ως προθέρμανση.
+    - Χρειάζεται τουλάχιστον **2 μετρήσεις από το δάχτυλο**. Οι πρόσφατες μετρήσεις μετράνε περισσότερο από τις παλιές.
+    - Η διόρθωση εφαρμόζεται μόνο όταν το αποτέλεσμα είναι σε ασφαλές εύρος. Αν οι μετρήσεις σας είναι πολύ κοντά μεταξύ τους, διορθώνεται μόνο η μετατόπιση.
+    - Το **Άνοιγμα πρόσθετου** δείχνει την κατάσταση της βαθμονόμησης, την κλίση και τη διόρθωση που χρησιμοποιούνται, και τη λίστα με τις μετρήσεις από το δάχτυλο. Μπορείτε να προσθέσετε μια μέτρηση με **Προσθήκη βαθμονόμησης** και να αφαιρέσετε μια λάθος μέτρηση.
     
-    ```{admonition} Calibrate with care
+    ```{admonition} Βαθμονομήστε προσεκτικά
     :class: warning
-    A wrong fingerstick value leads to wrong glucose values and therefore to wrong insulin dosing. Wash your hands before measuring, and do not calibrate while your glucose is changing fast.
+    Μια λάθος τιμή από το δάχτυλο οδηγεί σε λάθος τιμές γλυκόζης και άρα σε λάθος δόσεις ινσουλίνης. Πλύνετε τα χέρια σας πριν από τη μέτρηση και μη βαθμονομείτε όταν η γλυκόζη σας αλλάζει γρήγορα.
     
 
-![Configuration > Calibration](../images/v4/Configuration/configuration_calibration.png)
+![Διαμόρφωση > Βαθμονόμηση](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 
 ## Pump
 
-Select the pump you are using. See [Compatible pumps](../Getting-Started/CompatiblePumps.md) page for more setup information.
+Επιλέξτε την αντλία που χρησιμοποιείτε. Δείτε τη σελίδα [Συμβατές αντλίες](../Getting-Started/CompatiblePumps.md) για περισσότερες πληροφορίες ρύθμισης.
 
-![Configuration > Pump](../images/v4/Configuration/configuration_pump_list_1.png)
+![Διαμόρφωση > Αντλία](../images/v4/Configuration/configuration_pump_list_1.png)
 
-Scroll down to see all the pump drivers:
+Κάντε κύλιση προς τα κάτω για να δείτε όλους τους οδηγούς αντλιών:
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_2.png)
+![Διαμόρφωση > Αντλία, συνέχεια](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Configuration > Pump, continued](../images/v4/Configuration/configuration_pump_list_3.png)
+![Διαμόρφωση > Αντλία, συνέχεια](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Configuration > Pump, end of the list](../images/v4/Configuration/configuration_pump_list_4.png)
+![Διαμόρφωση > Αντλία, τέλος της λίστας](../images/v4/Configuration/configuration_pump_list_4.png)
 
-When you select another pump, **AAPS** asks you to confirm the change:
+Όταν επιλέγετε άλλη αντλία, το **AAPS** σας ζητά να επιβεβαιώσετε την αλλαγή:
 
-![Switch plugin confirmation](../images/v4/Pumps/switch_plugin_dialog.png)
+![Επιβεβαίωση αλλαγής πρόσθετου](../images/v4/Pumps/switch_plugin_dialog.png)
 
 * [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* Dana R Korean (για την εγχώρια αντλία DanaR της Κορέας)
+* Dana Rv2 (αντλία DanaR με ανεπίσημη αναβάθμιση υλικολογισμικού)
 * [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)
-* Omnipod for [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
-* Dash for [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+* Omnipod για [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* Dash για [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
 * [Medtronic](../CompatiblePumps/MedtronicPump.md)
 * [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * [EOPatch2](../CompatiblePumps/EOPatch2.md)
 * [Medtrum](../CompatiblePumps/MedtrumNano.md)
 * [Equil 5.3](../CompatiblePumps/Equil5.3.md)
 * [Carelevo](../CompatiblePumps/CareLevo.md)
-* Virtual pump: open loop - **AAPS** suggestions only 
-  * as you make you first steps with **AAPS**, during the first [objectives](../SettingUpAaps/CompletingTheObjectives.md)
-  * for pump which doesn't have any driver yet
+* Εικονική αντλία: ανοιχτό κύκλωμα - μόνο προτάσεις του **AAPS** 
+  * όταν κάνετε τα πρώτα σας βήματα με το **AAPS**, κατά τα πρώτα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md)
+  * για αντλία που δεν έχει ακόμα οδηγό (driver)
 
 (config-builder-wrong-pump-data)=
 
-### Message: "Data is coming from different pump"
+### Μήνυμα: «Τα δεδομένα προέρχονται από διαφορετική αντλία»
 
-**AAPS** remembers the pump it is connected to (pump type and serial number). If it receives data from another pump, for example after your pump was replaced by a new one of the same model, it shows this message and ignores the data from that pump:
+Το **AAPS** θυμάται την αντλία με την οποία είναι συνδεδεμένο (τύπο αντλίας και σειριακό αριθμό). Αν λάβει δεδομένα από άλλη αντλία, για παράδειγμα αφού η αντλία σας αντικαταστάθηκε από μια νέα του ίδιου μοντέλου, δείχνει αυτό το μήνυμα και αγνοεί τα δεδομένα από εκείνη την αντλία:
 
-![Data is coming from different pump](../images/Screen_DifferentPump.png)
+![Τα δεδομένα προέρχονται από διαφορετική αντλία](../images/Screen_DifferentPump.png)
 
-To use the new pump, change the pump driver: select **Virtual pump**, confirm, then select your pump again. **AAPS** then registers the pump it is connected to now.
+Για να χρησιμοποιήσετε τη νέα αντλία, αλλάξτε τον οδηγό αντλίας: επιλέξτε **Εικονική Αντλία**, επιβεβαιώστε και μετά επιλέξτε ξανά την αντλία σας. Το **AAPS** καταχωρεί τότε την αντλία με την οποία είναι συνδεδεμένο τώρα.
 
 (Config-Builder-sensitivity-detection)=
 
 ## Ανίχνευση ευαισθησίας
 
-![Configuration > Sensitivity detection](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![Διαμόρφωση > Ανίχνευση ευαισθησίας](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about how the sensitivity ratio itself is calculated can be found in [Key AAPS Features > Autosens](#Open-APS-features-autosens).
+Επιλέξτε τον τύπο ανίχνευσης ευαισθησίας. Για περισσότερες λεπτομέρειες για τους διάφορους τύπους, [διαβάστε εδώ](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Αναλύει τα ιστορικά δεδομένα σε πραγματικό χρόνο και κάνει προσαρμογές, αν αναγνωρίσει ότι αντιδράτε στην ινσουλίνη πιο ευαίσθητα (ή αντίθετα, με μεγαλύτερη αντίσταση) από το συνηθισμένο. Περισσότερες λεπτομέρειες για το πώς υπολογίζεται ο ίδιος ο λόγος ευαισθησίας θα βρείτε στο [Βασικά χαρακτηριστικά του AAPS > Autosens](#Open-APS-features-autosens).
 
-You can view your sensitivity on the main screen in an [additional graph](#AapsScreens-section-g-additional-graphs), by selecting SEN and watching the white line. Note, you need to be in [Objective 8](#objectives-objective8) in order to let Sensitivity Detection/[Autosens](#Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Μπορείτε να δείτε την ευαισθησία σας στην κύρια οθόνη σε ένα [πρόσθετο γράφημα](#AapsScreens-section-g-additional-graphs), αν επιλέξετε SEN και κοιτάξετε τη λευκή γραμμή. Σημείωση: πρέπει να βρίσκεστε στο [Βήμα 8](#objectives-objective8), ώστε η Ανίχνευση ευαισθησίας/το [Autosens](#Open-APS-features-autosens) να προσαρμόζει αυτόματα την ποσότητα ινσουλίνης που χορηγείται. Πριν φτάσετε σε αυτό το βήμα, το ποσοστό Autosens / η γραμμή στο γράφημά σας εμφανίζεται μόνο για πληροφόρηση.
 
 ### Ρύθμιση απορρόφησης
 
-If you use Oref1 with **SMB** you must change **min_5m_carbimpact** to 8. The value is only used during gaps in **CGM** readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause **AAPS** to decay COB. At times when [carb absorption](../DailyLifeWithAaps/CobCalculation.md) can't be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Αν χρησιμοποιείτε το Oref1 με **SMB**, πρέπει να αλλάξετε το **min_5m_carbimpact** σε 8. Η τιμή χρησιμοποιείται μόνο όταν λείπουν μετρήσεις **CGM** ή όταν η σωματική άσκηση «καταναλώνει» όλη την άνοδο της γλυκόζης αίματος που αλλιώς θα έκανε το **AAPS** να μειώνει τους COB. Όταν η [απορρόφηση υδατανθράκων](../DailyLifeWithAaps/CobCalculation.md) δεν μπορεί να υπολογιστεί δυναμικά από τις αντιδράσεις του αίματός σας, εφαρμόζει μια προεπιλεγμένη μείωση στους υδατάνθρακές σας. Ουσιαστικά είναι μια βαλβίδα ασφαλείας.
 
 (Config-Builder-aps)=
 
 ## APS
 
-![Configuration > APS](../images/v4/Configuration/configuration_aps.png)
+![Διαμόρφωση > APS](../images/v4/Configuration/configuration_aps.png)
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm with **Open plugin**.
+Επιλέξτε τον αλγόριθμο APS που θέλετε για τις προσαρμογές της θεραπείας. Μπορείτε να δείτε τις τρέχουσες λεπτομέρειες του επιλεγμένου αλγορίθμου με το **Άνοιγμα πρόσθετου**.
 
 * OpenAPS AMA 
-  * Advanced Meal Assist: older algorithm not recommended anymore.
-  * In simple terms, the benefits are after you give yourself a meal bolus, the system can high-temp more quickly IF you enter carbs reliably.
+  * Advanced Meal Assist: παλαιότερος αλγόριθμος που δεν συνιστάται πλέον.
+  * Με απλά λόγια, το όφελος είναι ότι, αφού κάνετε bolus για ένα γεύμα, το σύστημα μπορεί να βάλει πιο γρήγορα υψηλό προσωρινό βασικό ρυθμό, ΑΝ καταχωρείτε τους υδατάνθρακες σωστά.
 * [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) 
-  * Super Micro Bolus: most recent algorithm recommended for all users.
-  * In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly small **Super Micro Boluses**.
-  * Note : It is recommended to use this algorithm from the beginning, even though you will not actually get SMBs delivered until [Objective 9](#objectives-objective9).
+  * Super Micro Bolus: ο πιο πρόσφατος αλγόριθμος, συνιστάται για όλους τους χρήστες.
+  * Σε αντίθεση με το AMA, το SMB δεν χρησιμοποιεί προσωρινούς βασικούς ρυθμούς για να ελέγχει τη γλυκόζη, αλλά κυρίως μικρά **Super Micro Bolus**.
+  * Σημείωση: συνιστάται να χρησιμοποιείτε αυτόν τον αλγόριθμο από την αρχή, παρόλο που στην πράξη δεν θα χορηγούνται SMB μέχρι το [Βήμα 9](#objectives-objective9).
 * [Auto ISF](#Open-APS-features-auto-isf) 
-  * Experimental algorithm for advanced users. It is only listed once the objectives are completed.
+  * Πειραματικός αλγόριθμος για προχωρημένους χρήστες. Εμφανίζεται στη λίστα μόνο αφού ολοκληρωθούν τα Βήματα.
 
-If switching from AMA to SMB algorithm, *min_5m_carbimpact* must be changed manually to **8** (default value for SMB) in [Settings → Absorption settings](#Preferences-min_5m_carbimpact).
+Αν αλλάζετε από τον αλγόριθμο AMA στον SMB, το *min_5m_carbimpact* πρέπει να αλλάξει χειροκίνητα σε **8** (προεπιλεγμένη τιμή για το SMB) στις [Ρυθμίσεις → Ρύθμιση απορρόφησης](#Preferences-min_5m_carbimpact).
 
 ## Κύκλωμα
 
-This module cannot be disabled as it is a core part of **AAPS**.
+Αυτή η μονάδα δεν μπορεί να απενεργοποιηθεί, γιατί είναι βασικό μέρος του **AAPS**.
 
-![Configuration > Loop](../images/v4/Configuration/configuration_loop.png)
+![Διαμόρφωση > Κύκλωμα](../images/v4/Configuration/configuration_loop.png)
 
-## Constraints
+## Περιορισμοί
 
-![Configuration > Constraints](../images/v4/Configuration/configuration_constraints.png)
+![Διαμόρφωση > Περιορισμοί](../images/v4/Configuration/configuration_constraints.png)
 
-### Objectives
+### Βήματα
 
-**AAPS** has a learning program (a series of objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system.
+Το **AAPS** έχει ένα πρόγραμμα εκμάθησης (μια σειρά από Βήματα) που πρέπει να ολοκληρώσετε βήμα προς βήμα. Αυτό θα σας καθοδηγήσει με ασφάλεια στη ρύθμιση ενός συστήματος κλειστού κυκλώματος.
 
-See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
+Δείτε τη σελίδα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md) για περισσότερες πληροφορίες.
 
-## Communication
+## Επικοινωνία
 
-In this category (called **Synchronization** in **AAPS** v3), you choose if/where you want **AAPS** to send your data to.
+Σε αυτή την κατηγορία (που στο **AAPS** v3 λεγόταν **Συγχρονισμός**) επιλέγετε αν και πού θέλετε το **AAPS** να στέλνει τα δεδομένα σας.
 
-![Configuration > Communication](../images/v4/Configuration/configuration_communication.png)
+![Διαμόρφωση > Επικοινωνία](../images/v4/Configuration/configuration_communication.png)
 
-Scroll down to see the rest of the list:
+Κάντε κύλιση προς τα κάτω για να δείτε την υπόλοιπη λίστα:
 
-![Configuration > Communication, continued](../images/v4/Configuration/configuration_communication_2.png)
+![Διαμόρφωση > Επικοινωνία, συνέχεια](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md) and/or for [remote monitoring](../RemoteFeatures/RemoteMonitoring.md), [remote control](../RemoteFeatures/RemoteControl.md).
+Μπορεί να χρησιμοποιηθεί ως [διακομιστής αναφορών](../SettingUpAaps/SettingUpTheReportingServer.md) και/ή για [απομακρυσμένη παρακολούθηση](../RemoteFeatures/RemoteMonitoring.md), [απομακρυσμένο έλεγχο](../RemoteFeatures/RemoteControl.md).
 
-See [Synchronization with the reporting server](#SetupWizard-synchronization-with-the-reporting-server-and-more) to set up NSClientV3 synchronization.
+Δείτε [Συγχρονισμός με τον διακομιστή αναφορών](#SetupWizard-synchronization-with-the-reporting-server-and-more) για να ρυθμίσετε τον συγχρονισμό NSClientV3.
 
 ### Tidepool
 
-Can be used as a [reporting server](../SettingUpAaps/SettingUpTheReportingServer.md).
+Μπορεί να χρησιμοποιηθεί ως [διακομιστής αναφορών](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-See [Tidepool](../SettingUpAaps/Tidepool.md).
+Δείτε [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Used to **send** data such as glucose values and treatments to xDrip+ on the same phone. Its settings also hold **Send status to xDrip+**, a status line with IOB and COB that xDrip+ and some watch companion apps display.
+Χρησιμοποιείται για να **στέλνει** δεδομένα, όπως τιμές γλυκόζης και θεραπείες, στο xDrip+ στο ίδιο τηλέφωνο. Οι ρυθμίσεις του περιέχουν επίσης την επιλογή **Αποστολή κατάστασης στο xDrip+**, μια γραμμή κατάστασης με IOB και COB που δείχνουν το xDrip+ και κάποιες συνοδευτικές εφαρμογές ρολογιού.
 
 ### Open Humans
 
-See [Open Humans](../SupportingAaps/OpenHumans.md).
+Δείτε [Open Humans](../SupportingAaps/OpenHumans.md).
 
 (Config-Builder-wear)=
 
 ### Wear
 
-Monitor and control **AAPS** from a Wear OS watch. Setting up the watch is explained on [Wear OS smartwatch](../WearOS/WearOsSmartwatch.md). After enabling the plugin, choose its options in [Settings > Wear](#preferences-wear). Using the watch is explained on [Operation of AAPS via your Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+Παρακολουθήστε και ελέγξτε το **AAPS** από ένα ρολόι Wear OS. Η ρύθμιση του ρολογιού εξηγείται στη σελίδα [Έξυπνο ρολόι Wear OS](../WearOS/WearOsSmartwatch.md). Αφού ενεργοποιήσετε το πρόσθετο, επιλέξτε τις ρυθμίσεις του στις [Ρυθμίσεις > Wear](#preferences-wear). Η χρήση του ρολογιού εξηγείται στη σελίδα [Χειρισμός του AAPS από το έξυπνο ρολόι Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Εξωτερικές συνοδευτικές εφαρμογές
 
-Broadcasts **AAPS** status data on the phone so that other apps installed on it can display it — for example watch or widget companion apps. The broadcast includes glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Enable it only if a companion app you use asks for this data.
+Μεταδίδει (broadcast) δεδομένα κατάστασης του **AAPS** στο τηλέφωνο, ώστε άλλες εφαρμογές που είναι εγκατεστημένες σε αυτό να μπορούν να τα δείχνουν — για παράδειγμα συνοδευτικές εφαρμογές ρολογιού ή widget. Η μετάδοση περιέχει γλυκόζη και τάση, IOB, COB, βασικό και προσωρινό βασικό ρυθμό, όνομα προφίλ, κατάσταση κυκλώματος, μπαταρία τηλεφώνου και αντλίας, επίπεδο δεξαμενής και πρόοδο του bolus. Ενεργοποιήστε το μόνο αν μια συνοδευτική εφαρμογή που χρησιμοποιείτε ζητά αυτά τα δεδομένα.
 
-Apps known to read this broadcast are [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi and Amazfit watches), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS complications and widgets, and Android Auto through GlucoDataAuto) and the G-Watch app. Their setup is described on [Smartwatches and AAPS](#watches-external-companion-apps). Some of them also use **Send status to xDrip+** from the **xDrip** plugin above for a status line with IOB and COB.
+Εφαρμογές που διαβάζουν αυτή τη μετάδοση είναι το [WatchDrip+](https://bigdigital.home.blog/) (ρολόγια Xiaomi και Amazfit), το [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (complications και widget στο Wear OS, και Android Auto μέσω του GlucoDataAuto) και η εφαρμογή G-Watch. Η ρύθμισή τους περιγράφεται στη σελίδα [Έξυπνα ρολόγια και AAPS](#watches-external-companion-apps). Κάποιες από αυτές χρησιμοποιούν επίσης την επιλογή **Αποστολή κατάστασης στο xDrip+** του πρόσθετου **xDrip** παραπάνω, για μια γραμμή κατάστασης με IOB και COB.
 
-In earlier versions this plugin was called **Samsung Tizen**, after the [G-Watch app for Samsung Tizen watches](#Watchfaces-tizen) it was first made for.
+Σε παλαιότερες εκδόσεις αυτό το πρόσθετο λεγόταν **Samsung Tizen**, από την [εφαρμογή G-Watch για ρολόγια Samsung Tizen](#Watchfaces-tizen) για την οποία φτιάχτηκε αρχικά.
 
 ### Garmin
 
-Connection to Garmin device (Fenix, Edge...)
+Σύνδεση με συσκευή Garmin (Fenix, Edge...)
 
 ## Θεραπείες
 
-Open the **menu** (☰) and select [Treatments history](#aaps-screens-treatments) to see the treatments that have been recorded. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through **Treatments → Carbs** in the bottom navigation (see [Carbs](#screens-bolus-carbs)).
+Ανοίξτε το **μενού** (☰) και επιλέξτε [Ιστορικό θεραπειών](#aaps-screens-treatments) για να δείτε τις θεραπείες που έχουν καταγραφεί. Αν θέλετε να διορθώσετε ή να διαγράψετε μια καταχώρηση (π.χ. φάγατε λιγότερους υδατάνθρακες από ό,τι περιμένατε), επιλέξτε «Αφαίρεση» και καταχωρήστε τη νέα τιμή (αλλάξτε την ώρα αν χρειάζεται) από **Θεραπείες → Υδατάνθρακες** στην κάτω γραμμή πλοήγησης (δείτε [Υδατάνθρακες](#screens-bolus-carbs)).
 
 ## General
 
-In **AAPS** 4 the **General** category of **Configuration** only lists **Autotune**. The other features described below are always available and no longer need to be enabled here; each paragraph says where to find them.
+Στο **AAPS** 4 η κατηγορία **Γενικά** της **Διαμόρφωσης** περιέχει μόνο το **Autotune**. Οι άλλες λειτουργίες που περιγράφονται παρακάτω είναι πάντα διαθέσιμες και δεν χρειάζεται πια να ενεργοποιηθούν εδώ. Κάθε παράγραφος λέει πού θα τις βρείτε.
 
-![Configuration > General](../images/v4/Configuration/configuration_general.png)
+![Διαμόρφωση > Γενικά](../images/v4/Configuration/configuration_general.png)
 
-### Σφαιρική Εικόνα
+### Επισκόπηση
 
-The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any more and has no settings of its own in **Configuration**. The options that used to be here are in **Settings** (gear icon): [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs), [Status lights](#Preferences-status-lights) and the [Bolus percentage](#Preferences-deliver-this-part-of-bolus-wizard-result) used by the bolus wizard. The super bolus option of **AAPS** 3.x is [not available as a setting](#Preferences-advanced-settings-overview) in **AAPS** 4.
+Η [κύρια οθόνη](#AapsScreens-the-homescreen) του **AAPS** δεν είναι πια πρόσθετο και δεν έχει δικές της ρυθμίσεις στη **Διαμόρφωση**. Οι επιλογές που υπήρχαν εδώ βρίσκονται τώρα στις **Ρυθμίσεις** (εικονίδιο με το γρανάζι): [Εμφάνιση σημειώσεων στους διαλόγους](#Preferences-show-notes-field-in-treatments-dialogs), [Ενδείξεις κατάστασης](#Preferences-status-lights) και το [Ποσοστό bolus](#Preferences-deliver-this-part-of-bolus-wizard-result) που χρησιμοποιεί ο οδηγός bolus. Η επιλογή super bolus του **AAPS** 3.x [δεν υπάρχει ως ρύθμιση](#Preferences-advanced-settings-overview) στο **AAPS** 4.
 
 (Config-Builder-actions)=
 
 ### Ενέργειες
 
-The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
+Η καρτέλα Ενέργειες του **AAPS** 3.x δεν υπάρχει πια. Τα κουμπιά της βρίσκονται τώρα στο φύλλο **Διαχείριση** — δείτε [Πού πήγε η καρτέλα Ενέργειες;](#screens-action-tab).
 
-### Αυτοματοποίηση
+### Αυτοματισμός
 
-**Manage → Automation** lets you manage your [Automations](../DailyLifeWithAaps/Automations.md), starting at [Objective 10](#objectives-objective10).
+Στο **Διαχείριση → Αυτοματισμός** διαχειρίζεστε τους [Αυτοματισμούς](../DailyLifeWithAaps/Automations.md) σας, από το [Βήμα 10](#objectives-objective10) και μετά.
 
 (Config-Builder-sms-communicator)=
 
 ### Επικοινωνία με SMS
 
-Allows remote caregivers to control some **AAPS** features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
+Επιτρέπει σε απομακρυσμένους φροντιστές να ελέγχουν κάποιες λειτουργίες του **AAPS** μέσω SMS. Δείτε [Εντολές SMS](../RemoteFeatures/SMSCommands.md) για περισσότερες πληροφορίες ρύθμισης.
 
-### Φαγητό
+### Τρόφιμα
 
-**Manage → Food** displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Το **Διαχείριση → Τρόφιμα** δείχνει τις προεπιλογές τροφίμων που έχουν οριστεί στη βάση δεδομένων τροφίμων του Nightscout. Δείτε το [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) για περισσότερες πληροφορίες ρύθμισης.
 
-Note: Entries cannot be used in the **AAPS** calculator. (View only)
+Σημείωση: οι καταχωρήσεις δεν μπορούν να χρησιμοποιηθούν στον υπολογιστή (calculator) του **AAPS**. (μόνο προβολή)
 
 (Config-Builder-autotune)=
 
 ### Autotune
 
-You can enable Autotune, see [here](../AdvancedOptions/Autotune.md).
+Μπορείτε να ενεργοποιήσετε το Autotune, δείτε [εδώ](../AdvancedOptions/Autotune.md).
 
 ### Συντήρηση
 
-Open the **menu** (☰) and select **Maintenance** to export / import settings and manage log files.
+Ανοίξτε το **μενού** (☰) και επιλέξτε **Συντήρηση** για εξαγωγή / εισαγωγή ρυθμίσεων και διαχείριση των αρχείων καταγραφής.
 
-![Maintenance screen, log files](../images/screens/maintenance.png)
+![Οθόνη Συντήρηση, αρχεία καταγραφής](../images/screens/maintenance.png)
 
-![Maintenance screen, file management](../images/screens/maintenance_2.png)
+![Οθόνη Συντήρηση, διαχείριση αρχείων](../images/screens/maintenance_2.png)
 
-![Maintenance screen, database management](../images/screens/maintenance_3.png)
+![Οθόνη Συντήρηση, διαχείριση βάσης δεδομένων](../images/screens/maintenance_3.png)
 
 ### Διαμόρφωση
 
-Now called **Configuration**: this current page.
+Ονομάζεται τώρα **Διαμόρφωση**: αυτή η σελίδα.
