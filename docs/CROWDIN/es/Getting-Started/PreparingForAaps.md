@@ -111,7 +111,7 @@ Así podrás usar exactamente el mismo archivo de almacén de claves cada vez qu
 
 Además, **AAPS** permite [exportar toda tu configuración](../Maintenance/ExportImportSettings.md). Esto garantiza que puedas recuperar tu sistema de manera segura al cambiar de teléfono, actualizar o reinstalar la aplicación con la mínima interrupción. 
 
-#### Troubleshooting
+#### Solucionando problemas
 
 No dudes en ponerte en contacto con la comunidad de AAPS si hay algo de lo que te sientes inseguro. ¡No existen preguntas tontas! Animamos a todos los usuarios, con cualquier nivel de experiencia, a hacer preguntas. Las preguntas suelen recibir respuesta rápida, gracias al gran número de usuarios de **AAPS**.
 
@@ -190,7 +190,7 @@ Este es un plazo aproximado:
 
 Cuando **AAPS** ya funcione por completo, seguirás teniendo que ajustar tu configuración con regularidad para mejorar el control general de tu diabetes.
 
-## Requirements
+## Requisitos
 
 ### Consideraciones médicas
 
