@@ -2,33 +2,33 @@
 
 # Detekcja wrażliwości (sensitivity)
 
-## Sensitivity algorithm
+## Algorytm wrażliwości
 
-**AAPS** currently offers 3 sensitivity detection models:
+**AAPS** ma obecnie 3 modele wykrywania wrażliwości:
 
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Wrażliwość AAPS
+* Wrażliwość ŚredniaWażona
+* Wrażliwość Oref1
 
-### Sensitivity AAPS
+### Wrażliwość AAPS
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+Wrażliwość jest obliczana tak samo jak w Oref1, ale możesz ustawić, z jakiego okresu wstecz brane są dane. Minimalne wchłanianie węglowodanów jest obliczane z maksymalnego czasu wchłaniania węglowodanów ustawionego w ustawieniach.
 
-### Sensitivity WeightedAverage
+### Wrażliwość ŚredniaWażona
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+Wrażliwość jest obliczana jako średnia ważona odchyleń. Możesz ustawić, z jakiego okresu wstecz brane są dane. Nowsze odchylenia mają większą wagę. Minimalne wchłanianie węglowodanów jest obliczane z maksymalnego czasu wchłaniania węglowodanów ustawionego w ustawieniach. Ten algorytm najszybciej reaguje na zmiany wrażliwości.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
-### Sensitivity Oref1
+### Wrażliwość Oref1
 
-Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
+Wrażliwość jest obliczana z danych z ostatnich 8 godzin albo od ostatniej zmiany miejsca wkłucia, jeśli była mniej niż 8 godzin temu. Węglowodany (jeśli nie zostały wchłonięte) są usuwane po czasie ustawionym w ustawieniach. Tylko algorytm Oref1 obsługuje niezgłoszone posiłki (UAM, un-announced meals). Oznacza to, że okresy z wykrytym UAM są pomijane przy obliczaniu wrażliwości. Jeśli więc używasz SMB z UAM, musisz wybrać algorytm Oref1, aby to działało poprawnie. Więcej informacji o UAM znajdziesz w sekcji [Super Mikro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 jest zalecaną opcją: tylko on potrafi wykrywać UAM i działać z [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), nowszym algorytmem.
 
 ## Równoczesne węglowodany
 
-There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+Gdy kilka posiłków nakłada się na siebie, jest duża różnica między algorytmami Wrażliwość AAPS i Wrażliwość ŚredniaWażona z jednej strony a Oref1 z drugiej.
 
-* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
-* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.
+* Oref1 zakłada, że w danym czasie wchłania się tylko jeden posiłek: drugi posiłek zaczyna się wchłaniać dopiero, gdy pierwszy całkowicie się wchłonie.
+* Wrażliwość AAPS i Wrażliwość ŚredniaWażona zaczynają wchłanianie od razu po wpisaniu węglowodanów. Jeśli w organizmie jest więcej niż jeden posiłek, minimalne wchłanianie węglowodanów dostosuje się do wielkości posiłku i maksymalnego czasu wchłaniania. Minimalne wchłanianie będzie więc większe niż w Oref1.
