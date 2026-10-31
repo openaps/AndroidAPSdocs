@@ -21,7 +21,7 @@
 
 ## 使用 Android Studio 更新 AAPS
 
-請遵循 [這些指示。](./UpdateComputerBuild.md)
+Follow [these instructions](./UpdateComputerBuild.md).
 
 ## 使用命令列更新 AAPS
 
