@@ -1,4 +1,4 @@
-# Compatible Pumps
+# Bombas compatíveis
 
 AAPS works with a number of insulin pumps. A lista a seguir mostra os dispositivos suportados no momento. Entre parênteses, ela indica se o AAPS se comunica com a bomba pela função Bluetooth do seu telefone ou se precisa de um dispositivo compatível com RileyLink.
 
