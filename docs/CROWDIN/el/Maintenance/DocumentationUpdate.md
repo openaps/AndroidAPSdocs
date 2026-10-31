@@ -71,15 +71,15 @@
 ## November 2024
 
 - Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
 
 ## October 2024
 
 - Update of several pages:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnerat & @emilise
+- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
 
 ***
 
@@ -102,7 +102,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## January 2022
 
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) - update @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
 ## December 2021
 
@@ -113,7 +113,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 - Best practices for calibrating a libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) reformulation of impact
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
 ## Οκτώβριος 2021
@@ -166,7 +166,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 ## Σεπτεμβρίου 2020
 
 - Major update for new AAPS version 2.7
-- For details see `release notes <Releasenotes-version-2-7-0>`
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## June 2020
 
@@ -191,7 +191,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Build apk with Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
 - [Extended bolus and switch to open loop](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Update apk with Android Studio 3.6.1](../Maintenance/UpdateToNewVersion)
+- [Update apk with Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
 ## February 2020
 
@@ -229,7 +229,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
 - [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS commands update](../RemoteFeatures/SMSCommands.md)
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
 - Update - quick walk-through for experienced users
 - Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).
