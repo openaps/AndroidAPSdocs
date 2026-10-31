@@ -1,274 +1,274 @@
-# Transferring and Installing AAPS on your smartphone
+# Прехвърляне и инсталиране на AAPS на вашия смартфон
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
+В предишния раздел, [компилиране на **AAPS**](../SettingUpAaps/BuildingAaps.md), компилирахте приложението **AAPS** (файл .apk) на компютър.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+Следващите стъпки са да **прехвърлите** APK файла на **AAPS** (както и други приложения, които може да са ви нужни, например BYODA, xDrip или друго приложение за приемане на данни от CGM) на своя смартфон с Android и след това да **инсталирате** приложението (приложенията). След като инсталирате **AAPS** на смартфона, можете да преминете към [**настройването на кръга на AAPS**](../SettingUpAaps/SetupWizard.md).
 
-This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
+Тази страница обяснява също [проверката на разработчиците на Android](#android-developer-verification) – промяна, която Google въвежда от септември 2026 г. и която засяга инсталирането на приложения, компилирани от самия потребител, както и [безплатните начини за инсталиране](#android-developer-verification-free-methods), които продължават да работят след промяната.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Installing AAPS by tapping the APK file
+## Инсталиране на AAPS чрез докосване на APK файла
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
+Днес инсталирате **AAPS**, като прехвърлите APK файла на телефона си и го отворите („докоснете“). Има няколко начина да прехвърлите APK файла на **AAPS** от компютъра на смартфона. Тук обясняваме два различни начина:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Вариант 1 – Използвайте своя Google Drive (Gdrive)
+* Вариант 2 – Използвайте USB кабел
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+Имайте предвид, че прехвърлянето по имейл може да създаде трудности и не се препоръчва.
 
 ```{admonition} Android developer verification
 :class: warning
-Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, use one of the [free installation methods](#android-developer-verification-free-methods) further down this page.
+Google въвежда [проверката на разработчиците на Android](#android-developer-verification) от септември 2026 г. (първо в Бразилия, Индонезия, Сингапур и Тайланд; в целия свят през 2027 г.). Там, където тя се прилага, инсталирането на APK чрез докосване на файла – както е описано в двата варианта по-долу – е блокирано. В такъв случай използвайте някой от [безплатните начини за инсталиране](#android-developer-verification-free-methods) по-надолу на тази страница.
 ```
 
-### Option 1. Use Google drive to transfer files
+### Вариант 1. Използвайте Google Drive за прехвърляне на файлове
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+Отворете [Google.com](https://www.google.com/) в уеб браузъра си и влезте в своя профил в Google.
 
-On the right upper side select the Drive app in the Google menu.
+Горе вдясно изберете приложението Drive в менюто на Google.
 
-![Start Drive App](../images/GoogleDriveInWebbrowser.png)
+![Стартиране на приложението Drive](../images/GoogleDriveInWebbrowser.png)
 
-Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
+Натиснете **Нов** (New) горе вляво (или щракнете с десния бутон на мишката в празно място под файловете и папките си) и изберете **Качване на файл** (File upload).
 
-![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
+![Качване на apk файла с приложението Google Drive](../images/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+Файлът apk вече трябва да е качен в Google Drive.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Използвайте приложението Google Drive, за да стартирате файла apk за инсталиране
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Преминете на мобилния телефон и стартирайте приложението Google Drive. То е предварително инсталирано и може да се намери там, където са другите приложения на Google, или чрез търсене по името на приложението.
 
-![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
+![стартирайте приложението Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
+Стартирайте инсталирането на apk файла, като докоснете името на файла в приложението Google Drive на телефона.
 
-![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
+![стартирайте инсталирането на apk файла](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
+Ако получите известие за сигурност, че в момента не е разрешено да инсталирате приложения от Google Drive, докоснете „Настройки“ (Settings) и разрешете това само за кратко, а след това го забранете отново, защото е риск за сигурността да остане разрешено през цялото време.
 
-![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Известие за сигурност от Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Известие за сигурност от Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finishes, you are done with this step.
+След като инсталирането приключи, тази стъпка е завършена.
 
-You should see the **AAPS** icon and be able to open the app.
+Трябва да виждате иконата на **AAPS** и да можете да отворите приложението.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**ВАЖНО ИЗВЕСТИЕ ЗА БЕЗОПАСНОСТ**
+Забранихте ли отново инсталирането от Google Drive?
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Моля, продължете с [настройването на кръга на AAPS](../SettingUpAaps/SetupWizard.md).
 
-### Option 2. Use a USB cable to transfer files
+### Вариант 2. Използвайте USB кабел за прехвърляне на файлове
 
-The second way to transfer the AAPS apk file is with a [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+Вторият начин да прехвърлите apk файла на AAPS е с [USB кабел](https://support.google.com/android/answer/9064445?hl=en).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Прехвърлете файла от мястото му на компютъра в папката „downloads“ (Изтегляния) на телефона.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+На телефона ще трябва да разрешите инсталиране от неизвестни източници. Обяснения как да направите това можете да намерите в интернет (_напр._ [тук](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [тук](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+След като прехвърлите файла чрез плъзгане, отворете папката „Downloads“ (Изтегляния) на телефона и натиснете apk файла на AAPS:
 
-![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
+![apk файлът в папката Downloads](../images/install/install_01_downloads_apk.png)
 
-The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
+Първия път Android ви казва, че на телефона не е разрешено да инсталира неизвестни приложения от този източник. Натиснете „**Настройки**“ (Settings):
 
-![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+![Известие за сигурност за неизвестни приложения](../images/install/install_02_unknown_apps_notice.png)
 
-Enable "**Allow from this source**", then go back:
+Включете „**Разрешаване от този източник**“ (Allow from this source) и се върнете назад:
 
-![Allow from this source enabled](../images/install/install_04_unknown_apps_allowed.png)
+![„Разрешаване от този източник“ е включено](../images/install/install_04_unknown_apps_allowed.png)
 
-Press the apk file again and select "**Install**":
+Натиснете отново apk файла и изберете „**Инсталиране**“ (Install):
 
-![Install prompt](../images/install/install_05_install_prompt.png)
+![Запитване за инсталиране](../images/install/install_05_install_prompt.png)
 
-When the installation is finished, press "**Open**" to start **AAPS**, or "**Done**" to open it later:
+Когато инсталирането приключи, натиснете „**Отваряне**“ (Open), за да стартирате **AAPS**, или „**Готово**“ (Done), за да го отворите по-късно:
 
-![App installed](../images/install/install_07_app_installed.png)
+![Приложението е инсталирано](../images/install/install_07_app_installed.png)
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
+**ВАЖНО ИЗВЕСТИЕ ЗА БЕЗОПАСНОСТ**
+Не забравяйте след инсталирането отново да изключите „Разрешаване от този източник“ (Allow from this source), защото е риск за сигурността да остане включено през цялото време.
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Моля, продължете с [настройването на кръга на AAPS](../SettingUpAaps/SetupWizard.md).
 
 (transferring-installing-play-protect-warning)=
-## Google Play Protect warning
+## Предупреждение от Google Play Protect
 
-When you install **AAPS**, Google Play Protect may warn you that the app is unsafe, was built for an older version of Android and doesn't include the latest privacy protections.
+Когато инсталирате **AAPS**, Google Play Protect може да ви предупреди, че приложението не е безопасно, че е създадено за по-стара версия на Android и че не включва най-новите защити на поверителността.
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+![Предупреждение от Google Play Protect](../images/troubleshooting/InstallGPP.png)
 
-This is expected for an app you built yourself. Tap **More details**, then **Install anyway**.
+Това е очаквано за приложение, което сте компилирали сами. Докоснете **Още подробности** (More details), след това **Инсталиране въпреки това** (Install anyway).
 
-If the installation is **blocked** with a message about an unverified developer (not just a warning), see [Android developer verification](#android-developer-verification) below.
+Ако инсталирането е **блокирано** със съобщение за непотвърден разработчик (а не е само предупреждение), вижте [Проверка на разработчиците на Android](#android-developer-verification) по-долу.
 
 (android-developer-verification)=
 
-## Android developer verification
+## Проверка на разработчиците на Android
 
-Google is introducing **Android developer verification**: on most Android phones, apps will only install if they were registered with Google by a verified developer. This also applies to apps installed from an APK file ("sideloading") — which is how you install the **AAPS** app you built yourself.
+Google въвежда **проверка на разработчиците на Android**: на повечето телефони с Android приложенията ще се инсталират само ако са регистрирани в Google от потвърден разработчик. Това важи и за приложения, инсталирани от APK файл („sideloading“) – а точно така инсталирате приложението **AAPS**, което сте компилирали сами.
 
-### What is changing
+### Какво се променя
 
-When you install **AAPS** on a phone with Google services (a "certified" Android device — virtually every phone sold with the Play Store), Android will check whether the app comes from a developer registered with Google. If not, the normal installation by tapping the APK file is blocked.
+Когато инсталирате **AAPS** на телефон с услуги на Google („сертифицирано“ устройство с Android – практически всеки телефон, който се продава с Play Store), Android ще провери дали приложението е от разработчик, регистриран в Google. Ако не е, обичайното инсталиране чрез докосване на APK файла се блокира.
 
-**The check happens when an app is installed or updated.** It does not remove apps that are already installed and running.
+**Проверката се извършва, когато приложение се инсталира или актуализира.** Тя не премахва приложения, които вече са инсталирани и работят.
 
-Google is rolling this out gradually:
+Google въвежда това постепенно:
 
-| When               | What happens                                                                                                                              |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| August 2026        | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones                   |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
-| 2027               | Enforcement expands to the **rest of the world** and to **all installations**, including APK files                                        |
+| Кога                 | Какво се случва                                                                                                                                                                              |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Август 2026 г.       | Безплатните профили на разработчик за „ограничено разпространение“ (limited distribution) са отворени за целия свят, а „разширеният процес“ (advanced flow) започва да достига до телефоните |
+| 30 септември 2026 г. | Проверката се прилага в **Бразилия, Индонезия, Сингапур и Тайланд** за приложения, инсталирани от Google Play и от няколко други магазина за приложения                                      |
+| 2027                 | Прилагането се разширява към **останалата част от света** и към **всички инсталации**, включително APK файлове                                                                               |
 
-Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
+Подробностите са публикувани от Google на страниците [Android developer verification](https://developer.android.com/developer-verification) (проверка на разработчиците на Android), включително [често задавани въпроси (FAQ)](https://developer.android.com/developer-verification/guides/faq). Google все още може да промени датите и подробностите; тази страница ще бъде актуализирана, докато въвеждането напредва.
 
-### Does this affect me?
+### Засяга ли ме това?
 
-- **Building AAPS is not affected at all.** The [browser build](#browser-build), the [Android Studio build](ComputerBuild.md) and the [CLI build](CLIBuild.md) work exactly as before, and your keystore does not change.
-- **Your current AAPS keeps running.** Verification is only checked when installing or updating an app.
-- **If you live in Brazil, Indonesia, Singapore or Thailand:** from September 30, 2026, verification is enforced for apps installed from Google Play and a few other app stores. Google states that installing an APK file directly is not covered by this first step, so **AAPS** should still install as usual. Nevertheless, prepare one of the [free installation methods](#android-developer-verification-free-methods) below now, so that you are not caught out if this changes.
-- **If you live anywhere else:** nothing changes for you before 2027, and doing nothing for now is a legitimate choice. But set up one of the [free installation methods](#android-developer-verification-free-methods) below while nothing is broken: discovering the block on the day an update is refused, with the [advanced flow's](#android-developer-verification-advanced-flow) 24-hour wait ahead of you, is the wrong moment.
-- **Old phones:** verification applies to phones running Android 7 or higher, which means every phone able to run **AAPS**.
+- **Компилирането на AAPS изобщо не е засегнато.** [Компилирането в браузъра](#browser-build), [компилирането с Android Studio](ComputerBuild.md) и [компилирането от командния ред](CLIBuild.md) работят точно както преди, а вашето хранилище за ключове (keystore) не се променя.
+- **Текущото ви AAPS продължава да работи.** Проверката се извършва само при инсталиране или актуализиране на приложение.
+- **Ако живеете в Бразилия, Индонезия, Сингапур или Тайланд:** от 30 септември 2026 г. проверката се прилага за приложения, инсталирани от Google Play и от няколко други магазина за приложения. Google заявява, че директното инсталиране на APK файл не е обхванато от тази първа стъпка, така че **AAPS** би трябвало да се инсталира както обикновено. Въпреки това подгответе още сега някой от [безплатните начини за инсталиране](#android-developer-verification-free-methods) по-долу, за да не бъдете изненадани, ако това се промени.
+- **Ако живеете другаде:** за вас нищо не се променя преди 2027 г. и засега е напълно допустимо да не правите нищо. Но настройте някой от [безплатните начини за инсталиране](#android-developer-verification-free-methods) по-долу, докато всичко работи: най-неподходящият момент да откриете блокирането е денят, в който актуализация бъде отказана, а пред вас е 24-часовото чакане на [разширения процес](#android-developer-verification-advanced-flow).
+- **Стари телефони:** проверката важи за телефони с Android 7 или по-нова версия, т.е. за всеки телефон, на който може да работи **AAPS**.
 
 (android-developer-verification-free-methods)=
 
-## Free ways to install AAPS
+## Безплатни начини за инсталиране на AAPS
 
-You do **not** need to pay Google anything to keep using **AAPS**. There are several free methods; pick the one that matches your situation.
+**Не** е нужно да плащате нищо на Google, за да продължите да използвате **AAPS**. Има няколко безплатни начина; изберете този, който отговаря на вашата ситуация.
 
 ```{admonition} Which method should I use?
 :class: tip
-- You have a **computer** (whichever way you built **AAPS**): use [ADB](#android-developer-verification-adb) or, if you prefer to avoid the command line, the [web installer](#android-developer-verification-web). Both are exempt from verification, have no limits, and need no Google account.
-- You have **no computer at all**: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
-- You prefer to register with Google so the normal "tap the APK" installation keeps working: a [free limited distribution account](#android-developer-verification-limited-account) exists, but it is untested with **AAPS**.
+- Имате **компютър** (без значение как сте компилирали **AAPS**): използвайте [ADB](#android-developer-verification-adb) или, ако предпочитате да избегнете командния ред, [уеб инсталатора](#android-developer-verification-web). И двата начина са освободени от проверката, нямат ограничения и не изискват профил в Google.
+- **Нямате компютър**: използвайте [разширения процес](#android-developer-verification-advanced-flow) на телефона си.
+- Предпочитате да се регистрирате в Google, за да продължи да работи обичайното инсталиране „чрез докосване на APK“: има [безплатен профил за ограничено разпространение](#android-developer-verification-limited-account), но той не е изпробван с **AAPS**.
 ```
 
 (android-developer-verification-adb)=
 
-### Option 1: Install with ADB (computer needed)
+### Вариант 1: Инсталиране с ADB (нужен е компютър)
 
-ADB (Android Debug Bridge) is Google's official tool for installing apps from a computer onto a phone with a USB cable. Google has confirmed that **apps installed with ADB do not require verification** — there is no waiting period, no device limit and no registration.
+ADB (Android Debug Bridge) е официалният инструмент на Google за инсталиране на приложения от компютър на телефон чрез USB кабел. Google потвърди, че **приложенията, инсталирани с ADB, не изискват проверка** – няма период на изчакване, няма ограничение за броя устройства и няма регистрация.
 
-One-time preparation:
+Еднократна подготовка:
 
-1. On your phone, enable the hidden developer options: go to **Settings** > **About phone** (on some phones **Software information**) and tap **Build number** seven times, until the phone confirms you are a developer.
-1. Go back to the main **Settings**, open the new **Developer options** entry and enable **USB debugging**.
-1. On your computer, make sure ADB is available:
-   - If you use **Android Studio**, ADB is already installed with it.
-   - Otherwise, download Google's free [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) and unzip the folder. No installation is needed; ADB is the `adb` program inside that folder.
+1. На телефона си включете скритите опции за разработчици: отидете в **Настройки** (Settings) > **Всичко за телефона** (About phone) (на някои телефони **Информация за софтуера** (Software information)) и докоснете **Номер на компилацията** (Build number) седем пъти, докато телефонът потвърди, че сте разработчик.
+1. Върнете се в основните **Настройки** (Settings), отворете новия елемент **Опции за разработчици** (Developer options) и включете **Отстраняване на грешки през USB** (USB debugging).
+1. На компютъра се уверете, че ADB е наличен:
+   - Ако използвате **Android Studio**, ADB вече е инсталиран заедно с него.
+   - В противен случай изтеглете безплатните [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) на Google и разархивирайте папката. Не е нужно инсталиране; ADB е програмата `adb` в тази папка.
 
-Installing (and later updating) **AAPS**:
+Инсталиране (и по-късно актуализиране) на **AAPS**:
 
-1. Connect the phone to the computer with a USB cable. There is no need to transfer the APK file to the phone first: ADB sends it straight from the computer.
-1. On the phone, accept the **Allow USB debugging?** prompt (the first time only).
-1. On the computer, open a terminal (command prompt) in the folder containing ADB and the **AAPS** APK file, and run:
+1. Свържете телефона с компютъра чрез USB кабел. Не е нужно първо да прехвърляте APK файла на телефона: ADB го изпраща направо от компютъра.
+1. На телефона приемете запитването **Да се разреши ли отстраняването на грешки през USB?** (Allow USB debugging?) (само първия път).
+1. На компютъра отворете терминал (команден ред) в папката, която съдържа ADB и APK файла на **AAPS**, и изпълнете:
 
    ```
    adb install -r app-full-release.apk
    ```
 
-   Replace `app-full-release.apk` with the actual name of your APK file. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
+   Заменете `app-full-release.apk` с действителното име на вашия APK файл. Опцията `-r` актуализира вече инсталирано **AAPS**, като запазва всичките му данни и настройки.
 
-1. Wait for `Success` to be displayed. **AAPS** is now installed on your phone.
+1. Изчакайте да се покаже `Success`. **AAPS** вече е инсталирано на телефона ви.
 
-The same command is used for every future update. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
+Същата команда се използва за всяка бъдеща актуализация. [Страниците за Wear OS](../WearOS/WearOsSmartwatch.md) вече използват ADB по същия начин за инсталиране на приложението за часовника.
 
-If you would rather not use a cable: on Android 11 and later, **wireless debugging** (also under **Developer options**) can do the same over Wi-Fi, after a one-time pairing with a code shown on the phone.
+Ако предпочитате да не използвате кабел: на Android 11 и по-нови версии **безжичното отстраняване на грешки** (wireless debugging) (също в **Опции за разработчици**) може да направи същото през Wi-Fi след еднократно сдвояване с код, показан на телефона.
 
 (android-developer-verification-web)=
 
-### Option 2: Install from a web page (computer, no command line)
+### Вариант 2: Инсталиране от уеб страница (компютър, без команден ред)
 
-If the command line is not for you, a web page can do exactly what ADB does, directly from your browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
+Ако командният ред не е за вас, уеб страница може да направи точно това, което прави ADB, направо от браузъра ви. Тъй като тя комуникира с телефона чрез същия механизъм като ADB, тя има **същото освобождаване от проверката** – но няма нищо за изтегляне, няма папка за разархивиране и няма команда за въвеждане.
 
-This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
+Това е най-лесният начин, ако сте използвали [компилиране в браузъра](#browser-build) и никога не сте отваряли команден ред.
 
-1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **[AAPS web installer](#web-installer)** in your browser.
-1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
+1. Включете **Отстраняване на грешки през USB** (USB debugging) на телефона (стъпки 1 и 2 от [метода с ADB](#android-developer-verification-adb) по-горе – еднократна настройка).
+1. Отворете **[уеб инсталатора на AAPS](#web-installer)** в браузъра си.
+1. Свържете телефона с USB кабел и следвайте инструкциите на страницата: свържете, изберете своя APK файл и инсталирайте.
 
-Three things to know:
+Три неща, които трябва да знаете:
 
-- It only works in **Chrome, Edge or Opera**. Firefox and Safari cannot talk to USB devices.
-- Only one program can use the phone's ADB connection at a time, so **close Android Studio** (or anything else that uses ADB) before connecting.
-- A web page connected this way gets full control of your phone. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
+- Работи само в **Chrome, Edge или Opera**. Firefox и Safari не могат да комуникират с USB устройства.
+- Само една програма може да използва ADB връзката на телефона в даден момент, затова **затворете Android Studio** (или всичко друго, което използва ADB), преди да се свържете.
+- Уеб страница, свързана по този начин, получава пълен контрол над телефона ви. **Използвайте само адреса по-горе** от документацията на **AAPS** – никога страница за инсталиране, намерена чрез търсачка. Уеб инсталаторът на **AAPS** работи изцяло в браузъра ви: вашият APK файл не се качва никъде.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
-The web installer also works from **Chrome on another Android phone** with a USB-C to USB-C cable — so a parent can install **AAPS** onto a child's phone with no computer in the house.
+Уеб инсталаторът работи и от **Chrome на друг телефон с Android** с кабел USB-C към USB-C – така родител може да инсталира **AAPS** на телефона на детето, без да има компютър вкъщи.
 ```
 
 (android-developer-verification-advanced-flow)=
 
-### Option 3: The "advanced flow" on your phone (no computer needed)
+### Вариант 3: „Разширеният процес“ (advanced flow) на телефона (не е нужен компютър)
 
-Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
+Google предоставя резервен изход за опитни потребители, които разбират рисковете от инсталиране на непотвърдени приложения. Той се нарича **разширен процес** (advanced flow). Google започна да го въвежда на телефоните през август 2026 г., преди проверката да започне да се прилага, така че можете да го настроите още сега. Това е еднократна настройка на самия телефон, която **отнема 24 часа**:
 
-1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
-1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
-1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
-1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
-1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
-1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
+1. Включете скритите опции за разработчици (вижте стъпка 1 от метода с ADB по-горе), след това отворете **Настройки** (Settings) > **Опции за разработчици** (Developer options) > **Приложения от непотвърдени разработчици** (Apps from unverified developers).
+1. Включете **Разрешаване на приложения от непотвърдени разработчици** (Allow apps from unverified developers). Телефонът иска да въведете заключването на екрана, за да потвърди, че сте вие.
+1. Телефонът пита дали някой ви моли да включите тази настройка и обяснява, че банки, държавни институции или полицията никога не биха ви помолили да го направите. Прочетете предупреждението и потвърдете, че никой не ви притиска и не ви напътства (това е защита срещу измамници).
+1. **Рестартирайте телефона си.** Така започва еднократен **24-часов период на изчакване**.
+1. След 24 часа отидете отново в **Настройки** (Settings) > **Опции за разработчици** (Developer options) > **Приложения от непотвърдени разработчици** (Apps from unverified developers), за да завършите настройката.
+1. Изберете дали да разрешите непотвърдени приложения за **7 дни** или **за неопределено време** (indefinitely). За **AAPS** изберете **за неопределено време**, иначе следващата ви актуализация ще бъде блокирана, след като изминат 7-те дни.
 
-After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
+След тази настройка инсталирането или актуализирането на APK файла на **AAPS** работи както днес, с едно допълнително предупреждение, че приложението е от непотвърден разработчик – докоснете **Инсталиране въпреки това** (Install anyway).
 
-Good to know:
+Добре е да знаете:
 
-- You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
-- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
-- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
-- Google states that your choice follows your Google account to your other devices, so a new phone should not mean another 24-hour wait.
-- If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store. You can help it along by opening **Android Developer Verifier** in the Play Store.
+- След това можете отново да изключите **Опции за разработчици**: разширеният процес остава включен. Google също така не дава на приложенията (например банковите приложения) начин да разберат, че разширеният процес е включен.
+- Ако изключите разширения процес, инсталирането **или актуализирането** на **AAPS** отново се блокира (инсталираното ви **AAPS** продължава да работи). Имате 10 минути, за да го включите отново; след това 24-часовият период на изчакване започва отначало.
+- Промяната на часовника на телефона не съкращава периода на изчакване и ADB не може да го пропусне.
+- Google заявява, че изборът ви следва профила ви в Google към другите ви устройства, така че нов телефон не би трябвало да означава ново 24-часово чакане.
+- Ако не можете да намерите **Приложения от непотвърдени разработчици** (Apps from unverified developers) в опциите за разработчици, телефонът ви все още не е получил тази функция. Тя се доставя от системен компонент, наречен **Android Developer Verifier**, който Google разпространява постепенно чрез Play Store. Можете да ускорите това, като отворите **Android Developer Verifier** в Play Store.
 
 ```{note}
-Google describes this as a first version and may still change the screens and steps; this section will be updated with screenshots once the final version is available.
+Google описва това като първа версия и все още може да промени екраните и стъпките; този раздел ще бъде актуализиран с екранни снимки, когато окончателната версия е налична.
 ```
 
 (android-developer-verification-limited-account)=
 
-### Option 4: Register with Google (free limited distribution account)
+### Вариант 4: Регистрация в Google (безплатен профил за ограничено разпространение)
 
-Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
+Google предлага **безплатен** вид профил на разработчик за любители и за лична употреба, наречен **профил за ограничено разпространение** (limited distribution account). Той е отворен за всички от август 2026 г.:
 
-- **No government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use). You do need a Google account with 2-step verification, a Google payments profile holding your legal name and address, and a contact email address.
-- You register your app's package name in Google's Android Developer Console, and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and the console.
-- Once registered, the normal installation (tapping the APK file) works again on the authorized phones, without ADB and without the advanced flow.
-- A limited distribution account can later be upgraded to a full account, but not the other way round.
+- **Без държавен документ за самоличност** и **без такса** (за разлика от платения профил на разработчик, който не е нужен за лична употреба на **AAPS**). Нужни са ви профил в Google с потвърждаване в 2 стъпки, платежен профил в Google с вашето законно име и адрес, както и имейл адрес за контакт.
+- Регистрирате името на пакета на приложението си в Android Developer Console на Google и разрешавате телефоните, на които то може да се инсталира (до **20 устройства**), чрез свързване (handshake) с QR код или връзка между телефона и конзолата.
+- След регистрацията обичайното инсталиране (докосване на APK файла) отново работи на разрешените телефони, без ADB и без разширения процес.
+- Профил за ограничено разпространение може по-късно да бъде надграден до пълен профил, но не и обратно.
 
 ```{warning}
-Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review. The outcome of such a review is unknown, and the paid developer account ($25 and a government ID) does not help here: paying only removes the 20-device cap, not the package name review.
+Google не е обяснил как работи регистрацията, когато много хора компилират едно и също приложение с отворен код: всяко самостоятелно компилирано **AAPS** използва едно и също име на пакет (`info.nightscout.androidaps`) с различен ключ за подписване, а в често задаваните въпроси (FAQ) на Google се посочва, че име на пакет, което вече се използва от други, не може просто да бъде заявено и изисква допълнителен преглед. Резултатът от такъв преглед не е известен, а платеният профил на разработчик ($25 и държавен документ за самоличност) не помага тук: плащането премахва само ограничението от 20 устройства, но не и прегледа на името на пакета.
 
-For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
+Затова все още не могат да бъдат написани инструкции стъпка по стъпка. Този раздел ще бъде допълнен, след като регистрацията бъде изпробвана с **AAPS**. Дотогава ADB, уеб инсталаторът и разширеният процес по-горе са надеждни алтернативи.
 ```
 
-## What does not change
+## Какво не се променя
 
-- Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
-- Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
-- Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
-- Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
+- Самостоятелното компилиране на **AAPS** с всеки от трите [начина за компилиране](BuildingAaps.md).
+- Вашият профил в GitHub, хранилището (repository) ви за компилиране (AAPS Builder) или fork, както и хранилището ви за ключове (keystore).
+- Инсталираното ви приложение **AAPS**, настройките ви и вашите [цели](CompletingTheObjectives.md).
+- Телефоните без услуги на Google и [инсталирането с ADB](#android-developer-verification-adb) като цяло.
 
 ## Къде да получите помощ
 
-1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
-3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
+1. **Прочетете** [често задаваните въпроси за проверката на разработчиците](https://developer.android.com/developer-verification/guides/faq) на Google за въпроси относно самата проверка.
+2. **Попитайте** в канала *#AAPS* в [Discord](https://discord.gg/4fQUWHZ4Mw) или в някой от другите [канали на общността](../GettingHelp/WhereCanIGetHelp.md), ако инсталирането е блокирано.
+3. Когато търсите помощ, посочете марката и модела на телефона си, версията на Android, държавата си и точното съобщение, което се показва, когато инсталирането не успее.
 
 ```{toctree}
 :hidden:
 
-AAPS web installer <WebInstaller.md>
+Уеб инсталатор на AAPS <WebInstaller.md>
 ```
