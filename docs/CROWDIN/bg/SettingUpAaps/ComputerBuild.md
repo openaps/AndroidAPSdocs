@@ -93,7 +93,7 @@
 
 В това ръководство ще намерите _примерни_ екранни снимки от компилирането на apk файла на **AAPS**. Тъй като **Android Studio** – програмата, с която компилираме apk файла на **AAPS** – редовно се актуализира, тези екранни снимки може да не са еднакви с вашата инсталация, но все пак би трябвало да можете да ги следвате.
 
-Тъй като **Android Studio** работи на Windows, Mac OS X и Linux, може да има и малки разлики в стъпките за различните платформи.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
 ### Инсталиране на Git
@@ -102,7 +102,7 @@
 :class: dropdown
 
 Git е известен като „_система за контрол на версиите_“ (Versioning Control System, VCS).\
-Git е програма, която ви позволява да проследявате промените в кода и да работите съвместно с други хора. Ще използвате Git, за да направите копие на изходния код на **AAPS** от уебсайта GitHub на своя компютър. След това ще използвате Git на компютъра си, за да компилирате приложението **AAPS** (apk). 
+Git е програма, която ви позволява да проследявате промените в кода и да работите съвместно с други хора. Ще използвате Git, за да направите копие на изходния код на **AAPS** от уебсайта GitHub на своя компютър. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
@@ -141,7 +141,7 @@ Android Studio е програма, която работи на компютъ�
 
 ```{admonition} Different UI
 :class: warning
-Важна бележка: Android Studio промени потребителския си интерфейс в последните версии. Това ръководство показва стъпките с *новия интерфейс* (new UI). Екранните снимки са направени с „Ladybug“, така че по-новите версии може да изглеждат малко по-различно. Ако все още използвате стария интерфейс, може първо да превключите Android Studio към новия интерфейс, като следвате [тези инструкции](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. Това ръководство показва стъпките с *новия интерфейс* (new UI). Екранните снимки са направени с „Ladybug“, така че по-новите версии може да изглеждат малко по-различно. Ако все още използвате стария интерфейс, може първо да превключите Android Studio към новия интерфейс, като следвате [тези инструкции](#computerbuild-NewUI).
 ```
 
 Версията на Android Studio е много важна. Вижте [инструкциите по-горе](#Building-APK-recommended-specification-of-computer-for-building-apk-file), за да изберете правилната версия на Android Studio.
@@ -156,7 +156,7 @@ Android Studio е програма, която работи на компютъ�
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-Ако искате да спестите място на твърдия диск, можете да махнете отметката от Android Virtual Device: то не се използва за компилиране на **AAPS**.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -314,7 +314,7 @@ Android Studio може да препоръча актуализиране на 
 
 Ако установите, че **git.exe** не се намира автоматично или че натискането на „Test“ води до грешка, можете:
 * да въведете ръчно пътя, който записахте [по-рано](#BuildingAaps-steps-for-installing-git), или
-* да натиснете иконата на папка (1) и ръчно да отидете до папката, в която [по-рано](#BuildingAaps-steps-for-installing-git) беше инсталиран **git.exe**
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Проверете настройките си с бутона **Test**!
 
   ![Git не е намерен](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Android изисква всяко приложение да бъде _подпи
 ```{admonition} INFORMATION!
 :class: note
 Ще трябва да създадете хранилището за ключове (keystore) само веднъж.
-Ако вече сте компилирали AAPS, НЕ създавайте ново хранилище за ключове (keystore), а изберете съществуващото и въведете паролите му!
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_Бележка:_** Хранилището за ключове (keystore) е файл, в който се съхранява информацията за подписване на приложението. То е шифровано и информацията е защитена с пароли.
