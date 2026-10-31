@@ -1,4 +1,4 @@
-# Αυτοματοποίηση
+# Αυτοματισμός
 
 ```{contents} In this page
 :backlinks: entry
@@ -50,7 +50,7 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
 
-1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. **Requirements for Automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
 
 1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect.
 
@@ -144,7 +144,7 @@ It is important to carefully consider the exact intention of your **Automation**
 
 ![Automation Triggers](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Κάντε κύλιση προς τα κάτω για να δείτε την υπόλοιπη λίστα:
 
 ![Automation Triggers, continued](../images/Automations/automation_trigger_picker_2.png)
 
@@ -178,7 +178,7 @@ Several conditions can be linked with
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
 * Use network location: Location of your Wi-Fi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* Χρήση τοποθεσίας GPS (Προσοχή! This can cause excessive battery drain!)
 
 **Triggers** : pump and sensor data
 
@@ -198,7 +198,7 @@ Note that for all age related triggers the equal comparison is unlikely to trigg
 
 ![Automation Actions](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Κάντε κύλιση προς τα κάτω για να δείτε την υπόλοιπη λίστα:
 
 ![Automation Actions, continued](../images/Automations/automation_action_picker_2.png)
 
