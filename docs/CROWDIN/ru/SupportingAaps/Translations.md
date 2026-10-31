@@ -1,6 +1,6 @@
 # Как переводить интерфейс AndroidAPS или статьи документации
 
-* Для перевода текста в интерфейсе приложения пройдите по ссылке <https://crowdin.com/project/androidaps> и залогиньтесь с помощью вашей учетной записи GitHub
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * Для перевода статей документации перейдите по ссылке <https://crowdin.com/project/androidapsdocs> и залогиньтесь, используя вашу учетную запись GitHub
 
 * Запросите участие в команде составителей документации. Для этого кликните по флагу желаемого языка, а затем нажмите кнопку "Join" ("Присоединиться") в правом верхнем углу следующей страницы. Пожалуйста, укажите свой язык, сообщите немного информации о себе, своем опыте с AAPS, о том, какую роль хотите получить - переводчика (translator) или корректора (proofreader) (указывайте корректора только если вы имеете опыт в переводах + опытный пользователь AAPS).
@@ -61,8 +61,8 @@
     
         1. Оригинал текста, над которым вы сейчас работаете. Ваш перевод. Вы можете скопировать текст из поля выше или выбрать один из предложенных ниже.
     
-        1. Имеющиеся варианты перевода. Здесь также можно увидеть, насколько платформа Crowdin оценивает этот перевод как подходящий, или ситуацию, когда перевод был сделан ранее и текст был реорганизован без изменения содержания.
-        1. Нажмите кнопку "save" ("Сохранить") чтобы сохранить свое предложение перевода. После этого ваш вариант будет доступен для финальной оценки корректором.
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. Нажмите кнопку "save" ("Сохранить") чтобы сохранить свое предложение перевода. It will then be passed to a proofreader for final check.
     
     ![Translation docs](../images/translation_WikiTranslate.png)
     
@@ -97,4 +97,4 @@
     
     ![одобрить текст](../images/translations-proofreading.png)
 
-* Когда корректор одобрит перевод, последний будет добавлен в ближайшую сборку документации. Определенного расписания сборок нет, но они происходят примерно каждую неделю, исключая праздники. Для ускорения процесса вы можете проинформировать команду о появлении нового перевода.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Для ускорения процесса вы можете проинформировать команду о появлении нового перевода.
