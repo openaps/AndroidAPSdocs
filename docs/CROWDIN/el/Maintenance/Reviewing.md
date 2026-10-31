@@ -1,195 +1,195 @@
-# Reviewing your data
+# Έλεγχος των δεδομένων σας
 
-## AAPS History Browser
+## Εξερεύνηση ιστορικού του AAPS
 
-**AAPS** keeps all your history (**BG**, treatments, basal, targets, **Profile Switch**, …) in a local database on the phone. This database is not part of the [settings export](../Maintenance/ExportImportSettings.md). You can review it in **AAPS** itself with the **History browser** and the **Statistics** screen described below. For long-term reviews and reports, upload your data to [Nightscout](../SettingUpAaps/Nightscout.md) or [Tidepool](../SettingUpAaps/Tidepool.md).
+Το **AAPS** κρατά όλο το ιστορικό σας (**γλυκόζη αίματος (BG)**, θεραπείες, βασικός ρυθμός, στόχοι, **Αλλαγή Προφίλ**, …) σε μια τοπική βάση δεδομένων στο τηλέφωνο. Αυτή η βάση δεδομένων δεν είναι μέρος της [εξαγωγής ρυθμίσεων](../Maintenance/ExportImportSettings.md). Μπορείτε να την ελέγξετε μέσα στο ίδιο το **AAPS** με την **Εξερεύνηση ιστορικού** και την οθόνη **Στατιστικά** που περιγράφονται παρακάτω. Για μακροχρόνιους ελέγχους και αναφορές, ανεβάστε τα δεδομένα σας στο [Nightscout](../SettingUpAaps/Nightscout.md) ή στο [Tidepool](../SettingUpAaps/Tidepool.md).
 
-**AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
+Το ιστορικό του **AAPS** μπορεί να ελεγχθεί στην **Εξερεύνηση ιστορικού**: ανοίξτε το **μενού** (☰) και επιλέξτε **Εξερεύνηση ιστορικού**.
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Ιστορικό περιήγησης](../images/v4/Screens/history_browser.png)
 
-- Tap the **date card** to pick the day you want to review.
-- The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
-- Use the **<** and **>** arrows to move one day back or forward, and **Now** to return to the current day.
-- The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
+- Πατήστε την **κάρτα ημερομηνίας** για να διαλέξετε την ημέρα που θέλετε να ελέγξετε.
+- Τα γραφήματα ανοίγουν με σμίκρυνση, ώστε να δείχνουν **ολόκληρη την επιλεγμένη ημέρα**. Κάντε τσίμπημα με δύο δάχτυλα για να μεγεθύνετε ένα μέρος της.
+- Χρησιμοποιήστε τα βέλη **<** και **>** για να πάτε μία ημέρα πίσω ή μπροστά και το **Τώρα** για να επιστρέψετε στην τρέχουσα ημέρα.
+- Τα γραφήματα δείχνουν τα ίδια δεδομένα με τα γραφήματα της κύριας οθόνης (BG, θεραπείες, βασικός ρυθμός, IOB, COB, δράση, αποκλίσεις...).
 
 (reviewing-statistics)=
-## AAPS Statistics
+## Στατιστικά του AAPS
 
-**AAPS** provides basic monitoring statistics.
+Το **AAPS** παρέχει βασικά στατιστικά παρακολούθησης.
 
-Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
+Οι περισσότερες τιμές βασίζονται στις [συστάσεις](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes) της ADA 2023.
 
-To open them, open the **menu** (☰) and select **Statistics**.
+Για να τα ανοίξετε, ανοίξτε το **μενού** (☰) και επιλέξτε **Στατιστικά**.
 
-![Menu with Statistics](../images/Maintenance/statistics.png)
+![Μενού με τα Στατιστικά](../images/Maintenance/statistics.png)
 
-The **Statistics** screen has four tabs: **Insulin**, **Time in Range**, **Glucose** and **Cycle**. Tap a tab, or swipe left or right to move between them.
+Η οθόνη **Στατιστικά** έχει τέσσερις καρτέλες: **Ινσουλίνη**, **Χρόνος εντός στόχου**, **Γλυκόζη** και **Κύκλος**. Πατήστε μια καρτέλα ή σύρετε αριστερά ή δεξιά για να πάτε από τη μία στην άλλη.
 
 (reviewing-tdd)=
-### Insulin tab: Total Daily Dose
+### Καρτέλα Ινσουλίνη: Συνολική ημερήσια δόση
 
-The **Total Daily Dose** card shows one line per day for the previous days (up to one week) for which **AAPS** has insulin data, then their **Average**, then **Today** so far. Right after installing **AAPS**, only **Today** is shown. The columns are:
+Η κάρτα **Συνολική ημερήσια δόση** δείχνει μία γραμμή για κάθε προηγούμενη ημέρα (έως μία εβδομάδα) για την οποία το **AAPS** έχει δεδομένα ινσουλίνης, μετά τη **Μέση** τιμή τους και μετά το **Σήμερα** μέχρι τώρα. Αμέσως μετά την εγκατάσταση του **AAPS**, εμφανίζεται μόνο το **Σήμερα**. Οι στήλες είναι:
 
-- **Basal**: only basal.
-- **Bolus**: the sum of bolus treatments and SMBs.
-- **TDD Total**: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- **Carbs**: declared carbs and eCarbs treatments.
+- **Βασικός Ρυθμός**: μόνο ο βασικός ρυθμός.
+- **Bolus**: το άθροισμα των bolus και των SMB.
+- **TDD σύνολο**: η συνολική ημερήσια δόση ινσουλίνης (**TDD**), το άθροισμα της ινσουλίνης bolus και βασικού ρυθμού που χορηγήθηκε μέσα στην ημέρα.
+- **Υδατάνθρακες**: οι υδατάνθρακες και τα eCarbs που καταχωρήθηκαν.
 
-The **TDD** section is calculated when you open the page and takes a few seconds to compute. Tap **Recalculate** to compute it again.
+Το τμήμα **TDD** υπολογίζεται όταν ανοίγετε τη σελίδα και ο υπολογισμός διαρκεί λίγα δευτερόλεπτα. Πατήστε **Επανυπολογισμός** για να γίνει ξανά ο υπολογισμός.
 
-![Statistics: the Insulin tab with the Total Daily Dose](../images/Maintenance/statistics2.png)
+![Στατιστικά: η καρτέλα Ινσουλίνη με τη συνολική ημερήσια δόση](../images/Maintenance/statistics2.png)
 
-The **TDD** is your bolus plus basal insulin per day. Some doctors use - especially for new pumpers - a basal-bolus ratio of 50:50: the total base basal (**TBB**, the sum of your basal rates over 24 hours) should then be about half of the TDD. Others prefer a TBB of 32 % to 37 % of the TDD.
+Η **TDD** είναι η ινσουλίνη bolus και βασικού ρυθμού ανά ημέρα. Κάποιοι γιατροί χρησιμοποιούν - ειδικά για όσους ξεκινούν με αντλία - αναλογία βασικού ρυθμού προς bolus 50:50: τότε ο συνολικός βασικός ρυθμός (**TBB**, το άθροισμα των βασικών ρυθμών σας σε 24 ώρες) πρέπει να είναι περίπου το μισό της TDD. Άλλοι προτιμούν TBB από 32 % έως 37 % της TDD.
 
-Like most rules of thumb, this is of limited real validity. Your diabetes may vary!
+Όπως οι περισσότεροι πρακτικοί κανόνες, αυτός έχει περιορισμένη πραγματική αξία. Ο διαβήτης σας μπορεί να είναι διαφορετικός!
 
-### Time in Range tab
+### Καρτέλα Χρόνος εντός στόχου
 
-Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
+Χρόνος εντός στόχου (**TIR**): 70-180 mg/dL ή 3,9-10 mmol/L.
 
-**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+Οι πληροφορίες **TIR** είναι διαθέσιμες για 7 και 30 ημέρες, ανάλογα με το πόσα δεδομένα υπάρχουν στη βάση δεδομένων του **AAPS**.
 
-Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
+Τα στατιστικά για τον χρόνο εντός στενού στόχου (TITR) 70-140 mg/dL ή 3,9-7,8 mmol/L είναι διαθέσιμα παρακάτω (η οθόνη δείχνει αυτό το εύρος ως 70-141).
 
-**Discuss targets with your endo**
+**Συζητήστε τους στόχους με τον ενδοκρινολόγο σας**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress .
+Ο διαβήτης σας μπορεί να είναι διαφορετικός. Κάθε προτεινόμενος στόχος πρέπει να συζητηθεί με τον ενδοκρινολόγο σας ή με την ιατρική ομάδα που σας υποστηρίζει. Αν χρησιμοποιούνται σωστά, τα στατιστικά του AAPS μπορούν να είναι ένα χρήσιμο εργαλείο για να παρακολουθείτε τις τάσεις της __γλυκόζης αίματος (BG)__ και την πρόοδό σας.
 
-![Statistics](../images/Maintenance/statistics3.png)
+![Στατιστικά](../images/Maintenance/statistics3.png)
 
-Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
+Παρακάτω, η κάρτα **Dexcom TIR** δείχνει αναλυτικά στατιστικά **TIR** για 14 ημέρες.
 
-**SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
+**SD**: τυπική απόκλιση, ένας [δείκτης](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) της διακύμανσης της γλυκόζης (η υψηλότερη τιμή = η χειρότερη).
 
-HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
+HbA1c: η εκτίμηση της γλυκοζυλιωμένης αιμοσφαιρίνης, με βάση τον μέσο όρο των μετρήσεων του CGM. Είναι μια ενδεικτική τιμή και μπορεί να μην ταιριάζει με τις εξετάσεις HbA1c αίματος.
 
-![Statistics](../images/Maintenance/statistics4.png)
+![Στατιστικά](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
-### Glucose tab: Ambulatory Glucose Profile (AGP)
+### Καρτέλα Γλυκόζη: Περιπατητικό προφίλ γλυκόζης (AGP)
 
-The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually moves over the day. Choose the period with the buttons at the top: **Today**, **24h**, **7d**, **30d** or **90d**.
+Το **Περιπατητικό προφίλ γλυκόζης** (**AGP**) δείχνει πώς κινείται συνήθως η γλυκόζη σας μέσα στην ημέρα. Επιλέξτε την περίοδο με τα κουμπιά στο πάνω μέρος: **Σήμερα**, **24ώ**, **7ημ**, **30ημ** ή **90ημ**.
 
-- **The chart**: one day from midnight to midnight. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). A narrow band means your glucose is similar from day to day at that hour. Dashed lines mark your **LOW mark**, 140 mg/dL (7.8 mmol/L) and your **HIGH mark**.
-- **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
-- **SD** (standard deviation) and **CV** (coefficient of variation): how much your glucose varies. A lower value means steadier glucose.
-- **Days**: how many days of CGM data were used.
+- **Το γράφημα**: μία ημέρα από μεσάνυχτα σε μεσάνυχτα. Η γραμμή είναι ο **Διάμεσος** (οι μισές μετρήσεις σας εκείνη την ώρα ήταν χαμηλότερες και οι μισές υψηλότερες). Γύρω της, μια ζώνη περιέχει το μεσαίο μισό των μετρήσεών σας (**25–75%**) και μια πιο φαρδιά ζώνη τις περισσότερες από αυτές (**10–90%**). Μια στενή ζώνη σημαίνει ότι η γλυκόζη σας είναι παρόμοια από μέρα σε μέρα εκείνη την ώρα. Οι διακεκομμένες γραμμές δείχνουν το **ΧΑΜΗΛΟ σημείο**, τα 140 mg/dL (7,8 mmol/L) και το **ΥΨΗΛΟ σημείο** σας.
+- **Γλυκαιμική επισκόπηση**: ο χρόνος μέσα στο εύρος σας, μέσα στο στενό εύρος (70–140 mg/dL ή 3,9–7,8 mmol/L), πάνω και κάτω από το εύρος σας, και μετά ο **Μέσος όρος** και ο **Διάμεσος** της γλυκόζης σας. Το εύρος σας είναι το **ΧΑΜΗΛΟ σημείο** και το **ΥΨΗΛΟ σημείο** που ορίζονται στο [Εύρος εμφάνισης](#Preferences-range-for-visualization).
+- **eA1c** και **GMI**: δύο εκτιμήσεις της HbA1c που υπολογίζονται από τις μετρήσεις του CGM σας. Όπως η HbA1c παραπάνω, μπορεί να μην ταιριάζουν με τις εξετάσεις HbA1c αίματος.
+- **SD** (τυπική απόκλιση) και **CV** (συντελεστής μεταβλητότητας): πόσο μεταβάλλεται η γλυκόζη σας. Μια χαμηλότερη τιμή σημαίνει πιο σταθερή γλυκόζη.
+- **Ημέρες**: πόσες ημέρες δεδομένων CGM χρησιμοποιήθηκαν.
 
-![Statistics: the Glucose tab with the AGP chart](../images/Maintenance/statistics_agp.png) ![Statistics: Glycemic overview and glucose metrics](../images/Maintenance/statistics_agp2.png)
+![Στατιστικά: η καρτέλα Γλυκόζη με το γράφημα AGP](../images/Maintenance/statistics_agp.png) ![Στατιστικά: Γλυκαιμική επισκόπηση και τιμές γλυκόζης](../images/Maintenance/statistics_agp2.png)
 
-Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your last 14 days of glucose as a pentagon. A smaller pentagon means better glucose control.
+Κάτω από το AGP, η κάρτα **Πεντάγωνο γλυκόζης (CGP)** δείχνει πέντε μετρήσεις της γλυκόζης σας των τελευταίων 14 ημερών ως πεντάγωνο. Ένα μικρότερο πεντάγωνο σημαίνει καλύτερο έλεγχο της γλυκόζης.
 
-![Statistics: the Glucose Pentagon](../images/Maintenance/statistics_cgp.png)
+![Στατιστικά: το Πεντάγωνο γλυκόζης](../images/Maintenance/statistics_cgp.png)
 
-### Cycle tab: TDD Cycle Pattern
+### Καρτέλα Κύκλος: Κυκλικό μοτίβο TDD
 
-**TDD Cycle Pattern** overlays your daily insulin totals in 28-day cycles, to help you spot recurring patterns. Each cycle is drawn as a line (**Individual cycles**), together with their average.
+Το **Κυκλικό μοτίβο TDD** δείχνει τις ημερήσιες ποσότητες ινσουλίνης σας τη μία πάνω στην άλλη σε κύκλους 28 ημερών, για να σας βοηθήσει να βρείτε μοτίβα που επαναλαμβάνονται. Κάθε κύκλος σχεδιάζεται ως γραμμή (**Μεμονωμένοι κύκλοι**), μαζί με τον μέσο όρο τους.
 
-- **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
-- **Cycle offset**: moves the start of the cycle (0 to 27 days).
+- **Ακατέργαστο TDD** / **Καθαρό TDD**: επιλέξτε τη συνολική ημερήσια δόση όπως χορηγήθηκε ή την TDD χωρίς την ινσουλίνη για τους υδατάνθρακες.
+- **Μετατόπιση κύκλου**: μετακινεί την αρχή του κύκλου (0 έως 27 ημέρες).
 
-At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
+Χρειάζονται τουλάχιστον 56 ημέρες δεδομένων (2 κύκλοι). Με λιγότερα δεδομένα, η κάρτα δείχνει **Δεν υπάρχουν αρκετά δεδομένα (χρειάζονται τουλάχιστον 56 ημέρες για 2 κύκλους)**. Το μοτίβο υπολογίζεται μόνο όταν ανοίγετε την καρτέλα **Κύκλος**, γιατί διαβάζει δεδομένα 168 ημερών.
 
 (aaps-screens-treatments)=
-## Treatments history
+## Ιστορικό θεραπειών
 
-Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
+Ανοίξτε το **μενού** (☰) πάνω αριστερά στην κύρια οθόνη και επιλέξτε **Ιστορικό θεραπειών**. Σε αυτή την προβολή μπορείτε να δείτε και να αλλάξετε το ιστορικό των παρακάτω θεραπειών, καθεμία στη δική της καρτέλα (σύρετε τη σειρά καρτελών για να τις δείτε όλες):
 
-* Carbs and bolus
+* Υδατάνθρακες και bolus
 * [Εκτεταμένο bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temp basal
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
+* Προσωρινός βασικός ρυθμός
+* [Προσωρινός στόχος](../DailyLifeWithAaps/TempTargets.md)
 * [Αλλαγή Προφίλ](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes and careportal entries
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+* Careportal: σημειώσεις και καταχωρήσεις careportal
+* Τρόπος λειτουργίας: ιστορικό της κατάστασης του κυκλώματος
+* Καταχώρηση χρήστη: άλλες σημειώσεις που δεν στέλνονται στο Nightscout
 
-At the end of each line, small icons show where the data comes from or has been sent to:
-* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
-* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
-* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
+Στο τέλος κάθε γραμμής, μικρά εικονίδια δείχνουν από πού προέρχονται τα δεδομένα ή πού έχουν σταλεί:
+* Εικονίδιο **Nightscout** (το λογότυπο του Nightscout): τα δεδομένα προέρχονται από το Nightscout ή έχουν καταγραφεί στο Nightscout
+* Εικονίδιο **αντλίας**: τα δεδομένα προέρχονται από το ιστορικό της αντλίας (έχουν επεξεργαστεί από την αντλία)
+* Εικονίδιο **κάδου**: η καταχώρηση έχει διαγραφεί (εμφανίζεται μόνο όταν εμφανίζετε τις διαγραμμένες καταχωρήσεις με το εικονίδιο **ματιού** πάνω δεξιά)
 
 (screens-bolus-carbs)=
-### Carbs and bolus
+### Υδατάνθρακες και bolus
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Υδατάνθρακες και bolus](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+Σε αυτή την καρτέλα μπορείτε να δείτε το ιστορικό bolus και υδατανθράκων. Κάθε bolus (γραμμή **1**) δείχνει το IOB που απομένει από αυτό δίπλα στην ποσότητα ινσουλίνης. Η προέλευση του bolus μπορεί να είναι:
+* Γεύμα (καταχωρημένο χειροκίνητα με τα κουμπιά Ινσουλίνη, Γρήγορος Οδηγός ή Οδηγός Bolus)
+* SMB, όταν χρησιμοποιείτε τη λειτουργία SMB
 
-The carbs entries (line **2**) are shown with their amount in grams.
+Οι καταχωρήσεις υδατανθράκων (γραμμή **2**) εμφανίζονται με την ποσότητά τους σε γραμμάρια.
 
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
+Αν χρησιμοποιήσατε τον [Οδηγό Bolus](#aaps-screens-bolus-wizard) για να υπολογίσετε τη δόση ινσουλίνης, μπορείτε να πατήσετε το κείμενο «Υπολογ» στη γραμμή του bolus για να δείτε πώς υπολογίστηκε το bolus.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+Ανάλογα με την αντλία, η ινσουλίνη και οι υδατάνθρακες μπορεί να εμφανίζονται σε μία γραμμή ή σε πολλές γραμμές: μία για τις λεπτομέρειες του υπολογισμού, μία για τους υδατάνθρακες και μία για το ίδιο το bolus.
 
-The Treatments history can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+Το Ιστορικό θεραπειών μπορεί να χρησιμοποιηθεί για να διορθώσετε λάθος καταχωρήσεις υδατανθράκων (_π.χ._ υπερεκτιμήσατε ή υποεκτιμήσατε τους υδατάνθρακες). Σημειώστε ότι δεν μπορείτε να αλλάξετε μια υπάρχουσα καταχώρηση. Πρέπει να ακολουθήσετε την παρακάτω διαδικασία:
 
-1. Check and remember actual COB and IOB on the main screen.
-2. Depending on pump, carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount: press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.
-4. Make sure carbs are removed successfully by checking COB on the main screen again.
-5. Do the same for IOB if there is just one line including carbs and insulin.
+1. Ελέγξτε και θυμηθείτε τα τρέχοντα COB και IOB στην κύρια οθόνη.
+2. Ανάλογα με την αντλία, οι υδατάνθρακες μπορεί να εμφανίζονται μαζί με την ινσουλίνη σε μία γραμμή ή ως ξεχωριστή καταχώρηση (π.χ. με το Dana RS).
+3. Διαγράψτε την καταχώρηση με τη λάθος ποσότητα υδατανθράκων: πατήστε το εικονίδιο του κάδου, επιλέξτε τις γραμμές που θέλετε να διαγράψετε και μετά πατήστε ξανά το εικονίδιο του κάδου για να ολοκληρώσετε.
+4. Βεβαιωθείτε ότι οι υδατάνθρακες διαγράφηκαν σωστά, ελέγχοντας ξανά το COB στην κύρια οθόνη.
+5. Κάντε το ίδιο για το IOB αν υπάρχει μόνο μία γραμμή με υδατάνθρακες και ινσουλίνη.
 
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   → Αν οι υδατάνθρακες δεν διαγραφούν όπως πρέπει και προσθέσετε επιπλέον υδατάνθρακες όπως εξηγείται εδώ (6.), το COB θα είναι πολύ υψηλό και αυτό μπορεί να οδηγήσει σε υπερβολική χορήγηση ινσουλίνης.
 
-6. Enter the correct carb amount again (**Treatments → Carbs** in the bottom navigation, or a [QuickLaunch](#quicklaunch) **Carbs** button) and make sure to set the correct event time.
-7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
+6. Καταχωρήστε ξανά τη σωστή ποσότητα υδατανθράκων (**Θεραπείες → Υδατάνθρακες** στην κάτω γραμμή πλοήγησης ή ένα κουμπί **Υδατάνθρακες** του [QuickLaunch](#quicklaunch)) και βεβαιωθείτε ότι ορίσατε τη σωστή ώρα του συμβάντος.
+7. Αν υπάρχει μόνο μία γραμμή με υδατάνθρακες και ινσουλίνη, πρέπει να προσθέσετε και την ποσότητα ινσουλίνης. Βεβαιωθείτε ότι ορίσατε τη σωστή ώρα του συμβάντος και ελέγξτε το IOB στην κύρια οθόνη αφού επιβεβαιώσετε τη νέα καταχώρηση.
 
-### Temp basal
+### Προσωρινός βασικός ρυθμός
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Προσωρινός βασικός ρυθμός](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
-* Positive IOB if the temp basal was higher than the one set in the Profile
-* Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
+Οι **προσωρινοί βασικοί ρυθμοί** που εφαρμόστηκαν από το κύκλωμα εμφανίζονται εδώ. Όταν μια καταχώρηση έχει ακόμη επίδραση στο IOB, η πληροφορία εμφανίζεται δίπλα στον ρυθμό (γραμμή **1**). Μπορεί να είναι:
+* Θετικό IOB, αν ο προσωρινός βασικός ρυθμός ήταν υψηλότερος από αυτόν που ορίζει το προφίλ
+* Αρνητικό IOB για μηδενικό προσωρινό ρυθμό (όπως στη γραμμή **1**) ή αν ο προσωρινός βασικός ρυθμός ήταν χαμηλότερος από αυτόν που ορίζει το προφίλ
 
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
+Η διαγραφή των καταχωρήσεων επηρεάζει μόνο τις αναφορές σας στο Nightscout και πιθανότατα θα αλλοιώσει το πραγματικό σας IOB - δεν συνιστάται.
 
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+Στα αριστερά μιας γραμμής, ένα κόκκινο S σημαίνει «Αναστολή»: συμβαίνει όταν ο βασικός ρυθμός δεν χορηγείται εκείνη τη στιγμή. Αυτό είναι φυσιολογικό, για παράδειγμα κατά την αλλαγή ενός pod.
 
-### Temporary target
+### Προσωρινός στόχος
 
-![Temporary target](../images/TreatmentsView3.png)
+![Προσωρινός στόχος](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+Εδώ μπορείτε να δείτε το ιστορικό των προσωρινών στόχων.
 
 ### Αλλαγή Προφίλ
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Αλλαγή Προφίλ](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
+Εδώ μπορείτε να δείτε το ιστορικό των αλλαγών προφίλ. Μπορεί να δείτε πολλές καταχωρήσεις κάθε φορά που αλλάζετε προφίλ: η γραμμή **1**, αποθηκευμένη και στο NS και στο ιστορικό της αντλίας, αντιστοιχεί στην πραγματική αλλαγή. Η γραμμή **2**, αποθηκευμένη στο Nightscout αλλά όχι στο ιστορικό της αντλίας, αντιστοιχεί στο αίτημα αλλαγής προφίλ που έκανε ο χρήστης.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+Η διαγραφή των καταχωρήσεων επηρεάζει μόνο τις αναφορές σας στο Nightscout και δεν αλλάζει ποτέ το τρέχον προφίλ.
 
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+Μπορείτε να χρησιμοποιήσετε το κουμπί **Κλώνος** στη γραμμή **2** για να δημιουργήσετε ένα αντίγραφο μιας **Αλλαγής Προφίλ**. Δείτε [Το προφίλ σας στο AAPS > Διαχείριση των προφίλ σας](#your-aaps-profile-clone-profile-switch) για περισσότερες πληροφορίες.
 
 ### Careportal
 
-![Care portal](../images/TreatmentsView5.png)
+![Careportal](../images/TreatmentsView5.png)
 
-This tab shows all notes and careportal entries recorded in Nightscout.
+Αυτή η καρτέλα δείχνει όλες τις σημειώσεις και τις καταχωρήσεις careportal που έχουν καταγραφεί στο Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
-### Running mode
+### Τρόπος λειτουργίας
 
-![Running mode](../images/TreatmentsView6.png)
+![Τρόπος λειτουργίας](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, LGS, suspend, disconnect.
+Αυτή η καρτέλα δείχνει το ιστορικό των αλλαγών της [κατάστασης του κυκλώματος](#AapsScreens-loop-status): ανοιχτό, κλειστό, LGS, αναστολή, αποσύνδεση.
 
-### User entry
+### Καταχώρηση χρήστη
 
-![User entry](../images/screens/treatments_user_entry.png)
+![Καταχώρηση χρήστη](../images/screens/treatments_user_entry.png)
 
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+Αυτή η καρτέλα δείχνει τις ενέργειες που έγιναν στο **AAPS** από τον χρήστη ή από έναν **Αυτοματισμό** (αλλαγές τρόπου λειτουργίας κυκλώματος, αλλαγές προφίλ, θεραπείες, εξαγωγές ρυθμίσεων...). Αυτές οι καταχωρήσεις δεν στέλνονται στο Nightscout.
 
 ------
 
-## What is the difference between Nightscout vs Tidepool?
+## Ποια είναι η διαφορά ανάμεσα στο Nightscout και στο Tidepool;
 
-Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
+Το Nightscout μπορεί να αποθηκεύει τα δεδομένα του **AAPS** του χρήστη και προσφέρει μεγάλη ποικιλία από [εργαλεία αναφορών](https://nightscout.github.io/nightscout/reports/).
 
-Whereas, Tidepool allows the user to [review their data](https://www.tidepool.org/viewing-your-data) and provides [simple sharing with your endo team](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
+Το Tidepool, από την άλλη, επιτρέπει στον χρήστη να [ελέγχει τα δεδομένα του](https://www.tidepool.org/viewing-your-data) και προσφέρει [απλή κοινή χρήση με την ιατρική σας ομάδα](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
