@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# Widgets op het startscherm
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+**AAPS** heeft widgets die je op het startscherm van je telefoon kunt zetten. Een widget toont je actuele gegevens zonder dat je de app hoeft te openen. Tik op een widget om **AAPS** te openen.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Beschikbare widgets
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Er zijn vijf widgets. Ze staan onder **AAPS** in de widgetkiezer van Android:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![AAPS-widgets in de widgetkiezer van Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                          |
-| --------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, loop mode, profile, target, sensitivity, IOB and COB.                    |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading. |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                    |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                         |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                |
+| Widget                            | Standaardgrootte | Wat hij toont                                                                                                                              |
+| --------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **AAPS widget**                   | 5 × 2            | Het statusblok van het hoofdscherm: BG met trend en delta, loopmodus, profiel, streefdoel, gevoeligheid, IOB en COB.                       |
+| **AAPS glucosecirkel**            | 2 × 2            | De BG-cirkel van het hoofdscherm: een ring in de kleur van de BG, de trendboog, de delta, de BG-waarde en de tijd sinds de laatste meting. |
+| **AAPS Klein**                    | 2 × 2            | Profielnaam, BG met trendpijl, tijd sinds de laatste meting, delta, IOB en COB.                                                            |
+| **AAPS BG + IOB + COB (compact)** | 4 × 1            | Eén regel met BG en trendpijl, IOB en COB.                                                                                                 |
+| **AAPS BG-grafiek**               | 3 × 1            | De BG-waarde met een kleine grafiek van de laatste metingen.                                                                               |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+De **AAPS widget**, de **glucosecirkel** en de widget **Klein** op een startscherm:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![AAPS widget, glucosecirkel en widget Klein op het startscherm](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+De widget **compact** en de widget **BG-grafiek**:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Widget compact en widget BG-grafiek op het startscherm](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+BG-waarden hebben dezelfde kleuren als in **AAPS**: groen binnen bereik, geel boven het bereik, rood onder het bereik.
 
 ---
 
-## Widget configuration
+## Een widget toevoegen
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+De precieze stappen hangen af van je telefoon en de launcher. Op de meeste telefoons:
 
-The **Widget configuration** dialog has two settings:
+1. Druk lang op een lege plek van het startscherm en kies **Widgets**.
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![De widgetkiezer](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. Open **AAPS** in de lijst en tik op de widget die je wilt.
+3. Druk op **Toevoegen** (of sleep de widget naar de plek die je wilt).
 
-Each widget has its own configuration.
+   ![De knop Toevoegen onder de gekozen widget](../images/widgets/widget_picker_add_button.png)
+
+De widget wordt op het startscherm geplaatst. Direct na het toevoegen zie je grepen rond de widget: sleep aan een greep om de **grootte te wijzigen**, of sleep de widget om hem te verplaatsen. De glucosecirkel kan elke grootte krijgen.
+
+![Een net toegevoegde widget, met de grepen voor de grootte en de knop voor de instellingen](../images/widgets/widget_glucose_circle_added.png)
+
+Als de pagina van het startscherm vol is, zet de telefoon de widget op een nieuwe pagina.
 
 ---
 
-## Good to know
+## Widget configuratie
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+Tik op de knop met het **potlood** die op de widget verschijnt direct nadat je hem hebt toegevoegd. Later druk je lang op de widget om de grepen en het potlood weer te zien.
+
+Het venster **Widget configuratie** heeft twee instellingen:
+
+- **Configureer transparantie** — hoe ondoorzichtig de achtergrond van de widget is. Bij een lage waarde schijnt de achtergrondafbeelding erdoorheen.
+- **Gebruik zwarte kleur** — gebruik een zwarte achtergrond in plaats van de standaardachtergrond.
+
+![Widget configuratie](../images/widgets/widget_configuration.png)
+
+Elke widget heeft zijn eigen instellingen.
+
+---
+
+## Goed om te weten
+
+- Een widget **toont** alleen gegevens. Je kunt vanuit een widget geen bolus geven en niets wijzigen.
+- De widget wordt bijgewerkt door **AAPS**. Als **AAPS** niet draait, of als Android de app op de achtergrond beperkt, kan de widget oude gegevens tonen. Controleer de tijd sinds de laatste meting, en zorg dat **AAPS** is uitgezonderd van [batterijoptimalisatie](#SetupWizard-StoragePermission).
+- Bij **AAPSClient**, **AAPSClient2** en **AAPSClient3** is de achtergrond van de widget geel, blauw of groen, zodat je de apps uit elkaar kunt houden. Maak in de widgetconfiguratie de achtergrond minder doorzichtig (hogere waarde) als de kleur moeilijk te zien is. Zie [Over AAPSClient, AAPSClient2 en AAPSClient3](#remotecontrol-aapsclient-versions).
