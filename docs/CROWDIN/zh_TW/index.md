@@ -106,14 +106,14 @@ AAPS 專用 Google 帳號（選用） <./UsefulLinks/DedicatedGoogleAccountForAa
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) 設定 AAPS
+:caption: 4) Configure AAPS
 
-設定嚮導 <./SettingUpAaps/SetupWizard.md>
-您的 AAPS 設定檔 <./SettingUpAaps/YourAapsProfile.md>
-變更 AAPS 組態 <./SettingUpAaps/ChangeAapsConfiguration.md>
-- 組態（組態建置工具） <./SettingUpAaps/ConfigBuilder.md>
-- 偏好設定 <./SettingUpAaps/Preferences.md>
-完成各項目標 <./SettingUpAaps/CompletingTheObjectives.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Settings <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +165,15 @@ Exchange 網站上的自訂錶盤 <./ExchangeSiteCustomWatchfaces/index.md>
 ```
 
 ```{toctree}
-:caption: 8) 維護 AAPS
+:caption: 8) Maintenance of AAPS
 
-匯出／匯入設定 <./Maintenance/ExportImportSettings.md>
-AAPS 版本資訊 <./Maintenance/ReleaseNotes.md>
-AAPS v4 的變更內容 <./Maintenance/V4Changes.md>
-更新至新版 AAPS <./Maintenance/UpdateToNewVersion.md>
-- 瀏覽器更新（分支版本） <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio 更新 <./Maintenance/UpdateComputerBuild.md>
-停止支援 <./Maintenance/EndOfLife.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+What changed in AAPS v4 <./Maintenance/V4Changes.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+End of life <./Maintenance/EndOfLife.md>
 
 ```
 
