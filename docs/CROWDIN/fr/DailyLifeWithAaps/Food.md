@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Aliments (votre base de données d'aliments)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+La base de données **Aliments** est votre liste personnelle d'aliments enregistrés. Chaque entrée enregistre les **glucides** d'un aliment (et, si vous le voulez, ses lipides, protéines, énergie et une catégorie). Vous pouvez ainsi garder au même endroit ce que vous mangez souvent, et démarrer un bolus depuis un aliment enregistré avec ses glucides déjà remplis.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Ouvrir la base de données d'aliments
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Ouvrez l'écran **Gestion** (navigation en bas) et choisissez **Aliments** (*« Gérer les entrées de la base de données alimentaire »*). Dans **AAPS** v4, Aliments **n'est plus un plugin** — il n'y a rien à activer ; c'est un écran à part, ouvert depuis le [panneau Gestion](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## La liste des aliments
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Vos aliments sont affichés dans une liste que vous pouvez faire défiler. Chaque ligne affiche le **nom** de l'aliment, sa **portion / unité / catégorie** et ses **glucides** :
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![La liste de la base de données d'aliments, avec la recherche et le bouton d'ajout](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Recherche** (en haut) — filtre la liste par **nom** (sans tenir compte des majuscules/minuscules).
+- **Filtre par catégorie** — des puces permettent de réduire la liste à une **catégorie** ; quand une catégorie est choisie, des puces de **sous-catégorie** apparaissent pour elle. (Appuyez à nouveau sur une puce sélectionnée pour l'effacer.)
+- **➕** (en bas à droite) — ajoute un nouvel aliment (voir ci-dessous).
+- Appuyez sur une ligne pour **modifier** cet aliment.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Si la liste (ou le filtre actuel) n'a aucune entrée, l'écran affiche **Aucune donnée**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Ajouter et modifier un aliment
+
+Appuyez sur **➕** pour ajouter, ou appuyez sur une ligne existante pour la modifier. Un éditeur s'ouvre dans un panneau en bas de l'écran (**Ajouter un aliment** / **Éditer un aliment**) :
+
+![L'éditeur d'aliment — nom, catégorie, portion, glucides et macronutriments](../images/v4/Food/food_editor.png)
+
+Les champs sont :
+
+- **Nom** — obligatoire (vous ne pouvez pas enregistrer sans lui).
+- **Catégorie** et **Sous-catégorie** — facultatifs, servent à grouper/filtrer les aliments.
+- **Portion** et **Unité** — la taille habituelle d'une portion ; **Unité** vaut **g** par défaut.
+- **Glucides (g)** — la quantité de glucides de l'aliment.
+- **Lipides (g)**, **Protéines (g)**, **Énergie (kJ)** — valeurs nutritionnelles facultatives.
+
+Appuyez sur **Enregistrer** pour l'enregistrer, ou sur **Annuler** pour l'abandonner. Quand vous modifiez un aliment existant, l'éditeur a aussi un bouton **Supprimer**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+La suppression d'un aliment affiche un message **« Aliment supprimé »** avec une action **Annuler**, donc une suppression par erreur est facile à annuler.
 ```
 
 ---
 
-## Using a food for a bolus
+## Utiliser un aliment pour un bolus
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Chaque ligne d'aliment a un bouton **calculatrice**. Un appui ouvre l'**Assistant Bolus** avec les **glucides** de cet aliment déjà remplis et le **nom** de l'aliment ajouté comme remarque du traitement — vous confirmez et injectez sans saisir à nouveau les glucides.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Le nombre de **glucides** enregistré pour l'aliment est passé tel quel à l'assistant — **AAPS** ne le multiplie pas par la portion ni par la quantité que vous avez mangée. Si votre quantité est différente, ajustez les glucides dans l'assistant avant de confirmer. (Il n'y a pas de choix d'aliment *dans* l'Assistant Bolus ni dans la boîte de dialogue Glucides ; vous partez de la ligne de l'aliment ici.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## D'où viennent les aliments (synchronisation Nightscout)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+La base de données d'aliments est partagée via **Nightscout**, mais **dans un seul sens** :
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Téléchargement :** **AAPS** **lit** les aliments de la **base de données d'aliments** de votre site Nightscout et garde la liste locale synchronisée avec elle. Cela fait partie de la synchronisation NSClient, donc un **client/suiveur** associé reçoit aussi les mêmes aliments.
+- **Envoi :** **AAPS** n'envoie **pas** les aliments **vers** Nightscout — NSClient ne permet pas d'envoyer des entrées d'aliments. Les aliments que vous créez ou modifiez **dans AAPS** restent donc **sur cet appareil** et ne sont pas transmis à Nightscout ni à vos autres appareils.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Comme les aliments sont **seulement téléchargés**, pour partager une seule liste d'aliments entre votre téléphone, votre suiveur/[client](../RemoteFeatures/ClientMasterControl.md) et le reste de votre installation, il faut la gérer dans **Nightscout** (avec son éditeur d'aliments intégré). **AAPS** récupérera ces entrées. Un aliment ajouté seulement dans **AAPS** reste local à cet appareil — et y reste : un téléchargement reconnaît les entrées Nightscout par leur ID Nightscout, il ajoute et met à jour celles-ci, mais n'écrase et ne supprime jamais un aliment que vous avez créé localement (un aliment est supprimé seulement quand sa copie Nightscout est supprimée dans Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Notez que la base de données d'aliments ne fait **pas** non plus partie du canal de contrôle signé maître ↔ client — elle passe uniquement comme données Nightscout.
 ```
 
 ---
 
-## Not on the watch
+## Pas sur la montre
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+La base de données d'aliments est une fonction du **téléphone** — il n'y a pas de navigateur d'aliments, de tuile ni de menu sur une **montre Wear OS**.
 
 ---
 
