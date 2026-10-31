@@ -1,298 +1,298 @@
-# Remote control of AAPS
+# Απομακρυσμένος έλεγχος του AAPS
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-There are four highly effective tools for remotely managing **AAPS**:
+Υπάρχουν τέσσερα πολύ αποτελεσματικά εργαλεία για την απομακρυσμένη διαχείριση του **AAPS**:
 
-1) [SMS commands](#RemoteControl_SMS-Commands) (follower phone can be either Android or iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (follower phone is Android; an iPhone version is in development) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS or other computer/device), mainly for following: see the note on [client control](#client-master-control) in that section.  
-4) [Smartwatches](#RemoteControl_smartwatches) (Android)
+1) [Εντολές SMS](#RemoteControl_SMS-Commands) (το τηλέφωνο του ακόλουθου μπορεί να είναι Android ή iOS), 2) [AAPSClient](#RemoteControl_aapsclient) (το τηλέφωνο του ακόλουθου είναι Android· μια έκδοση για iPhone είναι υπό ανάπτυξη) 3) [Nightscout](#RemoteControl_nightscout) (Android, iOS ή άλλος υπολογιστής/συσκευή), κυρίως για παρακολούθηση: δείτε τη σημείωση για τον [έλεγχο από πελάτη](#client-master-control) σε εκείνη την ενότητα.  
+4) [Έξυπνα ρολόγια](#RemoteControl_smartwatches) (Android)
 
-The first three are mostly appropriate for caregivers/parents, but smartwatches are very useful for caregivers/parents **and** for adults with diabetes themselves.
+Τα τρία πρώτα ταιριάζουν κυρίως σε φροντιστές/γονείς, αλλά τα έξυπνα ρολόγια είναι πολύ χρήσιμα για φροντιστές/γονείς **και** για τους ίδιους τους ενήλικες με διαβήτη.
 
 ![image](../images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
 (RemoteControl_SMS-Commands)=
 
-## 1) SMS Commands
+## 1) Εντολές SMS
 
-See the dedicated [SMS Commands](../RemoteFeatures/SMSCommands.md) page.
+Δείτε την ειδική σελίδα [Εντολές SMS](../RemoteFeatures/SMSCommands.md).
 
 (RemoteControl_aapsclient)=
 ## 2) AAPSClient
 
-**AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver the same screens and buttons to send commands remotely to **AAPS**:
+Το **AAPSClient** μοιάζει πολύ στην εμφάνιση με το ίδιο το **AAPS** και δίνει στον φροντιστή τις ίδιες οθόνες και τα ίδια κουμπιά για να στέλνει εντολές από απόσταση στο **AAPS**:
 
-![AAPSClient home screen](../images/v4/AapsClient/aapsclient_home.png)
+![Αρχική οθόνη του AAPSClient](../images/v4/AapsClient/aapsclient_home.png)
 
 (remotecontrol-aapsclient-versions)=
-### About AAPSClient, AAPSClient2 and AAPSClient3
+### Για τα AAPSClient, AAPSClient2 και AAPSClient3
 
-There are 3 versions of the client app: **AAPSClient**, **AAPSClient2** and **AAPSClient3**. They work the same way. The only difference is that they can be installed side by side on the same follower phone.
+Υπάρχουν 3 εκδόσεις της εφαρμογής πελάτη: **AAPSClient**, **AAPSClient2** και **AAPSClient3**. Λειτουργούν με τον ίδιο τρόπο. Η μόνη διαφορά είναι ότι μπορούν να εγκατασταθούν μαζί στο ίδιο τηλέφωνο ακόλουθου.
 
-A caregiver who follows one person needs only **AAPSClient**. To follow and remote control a second person (with their own **Nightscout** site and their own **AAPS** phone), install **AAPSClient2** as well, and **AAPSClient3** for a third person. Each app is set up and [paired](#aapsclient-pairing-with-the-master) on its own, with the **Nightscout** site and the **AAPS** phone of the person it follows.
+Ένας φροντιστής που παρακολουθεί ένα άτομο χρειάζεται μόνο το **AAPSClient**. Για να παρακολουθείτε και να ελέγχετε από απόσταση ένα δεύτερο άτομο (με δικό του ιστότοπο **Nightscout** και δικό του τηλέφωνο **AAPS**), εγκαταστήστε επίσης το **AAPSClient2**, και το **AAPSClient3** για ένα τρίτο άτομο. Κάθε εφαρμογή ρυθμίζεται και [κάνει σύζευξη](#aapsclient-pairing-with-the-master) ξεχωριστά, με τον ιστότοπο **Nightscout** και το τηλέφωνο **AAPS** του ατόμου που παρακολουθεί.
 
-To tell the apps apart, some elements have a different color: yellow for **AAPSClient**, blue for **AAPSClient2** and green for **AAPSClient3**. Those elements are the app icon, the widget background, and the **AAPS** status section on the home screen of the app. <br/> Note: the opacity of the widget background can be set in the widget configuration. At a low opacity the color is hard to see.
+Για να ξεχωρίζετε τις εφαρμογές, ορισμένα στοιχεία έχουν διαφορετικό χρώμα: κίτρινο για το **AAPSClient**, μπλε για το **AAPSClient2** και πράσινο για το **AAPSClient3**. Αυτά τα στοιχεία είναι το εικονίδιο της εφαρμογής, το φόντο του widget και η ενότητα κατάστασης του **AAPS** στην αρχική οθόνη της εφαρμογής. <br/> Σημείωση: η αδιαφάνεια του φόντου του widget ρυθμίζεται στη διαμόρφωση του widget. Με χαμηλή αδιαφάνεια το χρώμα φαίνεται δύσκολα.
 
-![Widget and status section colors of AAPSClient, AAPSClient2 and AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
+![Χρώματα του widget και της ενότητας κατάστασης στα AAPSClient, AAPSClient2 και AAPSClient3](../images/remote_control_and_following/AAPSClient_and_AAPSClient2.png)
 
-### Download and installation
+### Λήψη και εγκατάσταση
 
-**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+Το **AAPSClient** μπορεί να εγκατασταθεί σε ένα τηλέφωνο ή σε πολλά τηλέφωνα ακολούθων (π.χ. το τηλέφωνο του γονέα 1 και το τηλέφωνο του γονέα 2), ώστε και οι δύο φροντιστές να έχουν πρόσβαση και να ελέγχουν από απόσταση το τηλέφωνο **AAPS** του ασθενούς.
 
-To download **AAPSClient**, navigate to the [Github repository](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Για να κατεβάσετε το **AAPSClient**, πηγαίνετε στο [αποθετήριο στο Github](https://github.com/nightscout/AndroidAPS/releases/) και πατήστε το αρχείο **“app-AAPSClient-release_x.x.x.x”** (μπορεί να είναι νεότερη έκδοση από αυτήν στην εικόνα παρακάτω):
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Then go to  _downloads_ on your computer. On Windows, _downloads_ will show in the right hand ribbon:
+Μετά πηγαίνετε στις _λήψεις_ (downloads) στον υπολογιστή σας. Στα Windows, οι _λήψεις_ (downloads) εμφανίζονται στη δεξιά πλευρά:
 
 ![image](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-Once downloaded, click _show in folder_ to locate the file.
+Μόλις γίνει η λήψη, πατήστε _show in folder_ (εμφάνιση στον φάκελο) για να βρείτε το αρχείο.
 
-The **AAPSClient** apk can now be either:
+Το apk του **AAPSClient** μπορεί τώρα είτε:
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+Να μεταφερθεί με καλώδιο USB στο τηλέφωνο του ακόλουθου· ή Να μπει σε φάκελο του Google Drive και μετά να εγκατασταθεί στο τηλέφωνο του ακόλουθου πατώντας το αρχείο "app-AAPSClient-release".
 
-Should you be needing **AAPS** for yourself, and **AAPSClient** for monitoring someone else, you will need to build **AAPSClient** yourself instead of downloading it from the Github repository as described above. The reason is that you can't install both **AAPS** and **AAPSClient** on the same phone, signed by a different key. <br/> To build **AAPSClient** yourself, follow the same process as [regular AAPS build](../SettingUpAaps/BuildingAaps.md). On the **Generate signed App Bundle or APK** page, select **aapsclientRelease** instead of **fullRelease**.
+Αν χρειάζεστε το **AAPS** για τον εαυτό σας και το **AAPSClient** για να παρακολουθείτε κάποιον άλλο, πρέπει να κάνετε build το **AAPSClient** μόνοι σας, αντί να το κατεβάσετε από το αποθετήριο στο Github όπως περιγράφεται παραπάνω. Ο λόγος είναι ότι δεν μπορείτε να εγκαταστήσετε το **AAPS** και το **AAPSClient** στο ίδιο τηλέφωνο αν είναι υπογεγραμμένα με διαφορετικό κλειδί. <br/> Για να κάνετε build το **AAPSClient** μόνοι σας, ακολουθήστε την ίδια διαδικασία με την [κανονική δημιουργία του AAPS](../SettingUpAaps/BuildingAaps.md). Στη σελίδα **Generate signed App Bundle or APK** επιλέξτε **aapsclientRelease** αντί για **fullRelease**.
 
-The same rule applies when you install several client apps (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) on one follower phone: they must all be signed with the **same key**. Otherwise Android refuses to install the second one (error `INSTALL_FAILED_DUPLICATE_PERMISSION`).
+Ο ίδιος κανόνας ισχύει όταν εγκαθιστάτε πολλές εφαρμογές πελάτη (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) σε ένα τηλέφωνο ακόλουθου: πρέπει όλες να είναι υπογεγραμμένες με το **ίδιο κλειδί**. Αλλιώς το Android δεν εγκαθιστά τη δεύτερη (σφάλμα `INSTALL_FAILED_DUPLICATE_PERMISSION`).
 
-### Synchronization: AAPSClient and AAPS set up
+### Συγχρονισμός: ρύθμιση του AAPSClient και του AAPS
 
-Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). The example below shows the synchronization set-up with NSClientV3 and Nightscout 15; other data sources are available in __AAPS__ (e.g. xDrip).
+Μόλις εγκατασταθεί το apk του __AAPSClient__ στο τηλέφωνο του ακόλουθου, βεβαιωθείτε ότι το **NSClientV3** είναι ρυθμισμένο με τον ίδιο τρόπο και στα δύο τηλέφωνα για το Nightscout 15 (δείτε τις [σημειώσεις ενημέρωσης](../Maintenance/UpdateToNewVersion.md)). Το παράδειγμα παρακάτω δείχνει τη ρύθμιση συγχρονισμού με NSClientV3 και Nightscout 15. Στο __AAPS__ υπάρχουν και άλλες πηγές δεδομένων (π.χ. xDrip).
 
-In **Configuration** > **Communication**, the user synchronizes their data with Nightscout through __NSClientV3__ (using the v3 API), set up the same way for both __AAPS__ and the follower phone.
+Στο **Διαμόρφωση** > **Επικοινωνία**, ο χρήστης συγχρονίζει τα δεδομένα του με το Nightscout μέσω του __NSClientV3__ (με το v3 API), με την ίδια ρύθμιση στο __AAPS__ και στο τηλέφωνο του ακόλουθου.
 
-![Configuration > Communication with NSClientV3 selected](../images/v4/Configuration/configuration_communication.png)
+![Διαμόρφωση > Επικοινωνία με επιλεγμένο το NSClientV3](../images/v4/Configuration/configuration_communication.png)
 
-The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by setting up NSClientV3 on each. On the follower phone this can be done by scanning a QR code shown by **AAPS** instead, see [Pairing AAPSClient with AAPS](#remotecontrol-pairing) below:
+Ο χρήστης πρέπει να βεβαιωθεί ότι __και τα δύο__ τηλέφωνα, AAPS και AAPS Client, συγχρονίζονται μεταξύ τους, ρυθμίζοντας το NSClientV3 σε καθένα. Στο τηλέφωνο του ακόλουθου αυτό μπορεί να γίνει και με σάρωση ενός κωδικού QR που δείχνει το **AAPS**. Δείτε παρακάτω τη [Σύζευξη του AAPSClient με το AAPS](#remotecontrol-pairing):
 
-- Enter your **Nightscout URL** in the NSClientV3 **Settings**
+- Γράψτε τη **Διεύθυνση Nightscout** στις **Ρυθμίσεις** του NSClientV3
 
-- Enter your **Nightscout access token** in the same settings. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token). On the **AAPS** phone use an **admin token**: with it **AAPS** makes a token of its own for each follower phone.
+- Γράψτε το **Διακριτικό πρόσβασης Nightscout** στις ίδιες ρυθμίσεις. Ακολουθήστε τις οδηγίες [εδώ](https://nightscout.github.io/nightscout/security/#create-a-token). Στο τηλέφωνο **AAPS** χρησιμοποιήστε ένα **admin token** (διακριτικό διαχειριστή): με αυτό το **AAPS** φτιάχνει δικό του διακριτικό για κάθε τηλέφωνο ακόλουθου.
 
-- Enable **Use websockets** on **both** phones. On the **AAPS** phone websockets are **required** for remote control: without them, **AAPS** cannot receive commands from **AAPSClient**. On both phones they also make synchronization faster, at the cost of slightly higher battery use.
+- Ενεργοποιήστε το **Χρήση websockets** **και στα δύο** τηλέφωνα. Στο τηλέφωνο **AAPS** τα websockets είναι **απαραίτητα** για τον απομακρυσμένο έλεγχο: χωρίς αυτά, το **AAPS** δεν μπορεί να λάβει εντολές από το **AAPSClient**. Και στα δύο τηλέφωνα κάνουν επίσης τον συγχρονισμό πιο γρήγορο, με λίγο μεγαλύτερη κατανάλωση μπαταρίας.
 
-![Settings > NSClientV3 with Nightscout URL, Nightscout access token and Use websockets](../images/preferences/settings_nsclient.png)
+![Ρυθμίσεις > NSClientV3 με Διεύθυνση Nightscout, Διακριτικό πρόσβασης Nightscout και Χρήση websockets](../images/preferences/settings_nsclient.png)
 
 
-The user should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ in the **NSClientV3** screen of each phone. At this point **AAPSClient** follows **AAPS** (BG, treatments, profile), but it cannot control it yet: pair the two phones as described below.
+Ο χρήστης πρέπει να βεβαιωθεί ότι και το __AAPSClient__ και το __AAPS__ δείχνουν «connected» (συνδεδεμένο) στην οθόνη **NSClientV3** του κάθε τηλεφώνου. Σε αυτό το σημείο το **AAPSClient** παρακολουθεί το **AAPS** (γλυκόζη, θεραπείες, προφίλ), αλλά δεν μπορεί ακόμη να το ελέγχει: κάντε σύζευξη των δύο τηλεφώνων όπως περιγράφεται παρακάτω.
 
 (remotecontrol-pairing)=
-### Pairing AAPSClient with AAPS (remote control)
+### Σύζευξη του AAPSClient με το AAPS (απομακρυσμένος έλεγχος)
 
-From **AAPS** version 4, **AAPSClient** controls **AAPS** through a secure, **paired** connection. Synchronization alone is not enough: until the phones are paired, **AAPSClient** only shows **Manage** with a view-only **Profile** and **Pair with master**.
+Από την έκδοση 4 του **AAPS**, το **AAPSClient** ελέγχει το **AAPS** μέσω ασφαλούς σύνδεσης με **σύζευξη**. Ο συγχρονισμός μόνος του δεν αρκεί: μέχρι να γίνει σύζευξη των τηλεφώνων, το **AAPSClient** δείχνει μόνο το **Διαχείριση** με **Προφίλ** μόνο για προβολή και το **Σύζευξη με κύρια συσκευή**.
 
-1. On the **AAPS** phone, open **Manage → Authorized clients** and turn on **Allow client control** (it is off by default, and always on in Simple Mode).
-2. Tap **+**, enter a name for the follower phone, choose how it is set up and choose its **role**:
-   - **QR code: Nightscout and pairing** — **AAPS** shows a QR code that sets up Nightscout on the follower phone and pairs it, in one scan. This needs an admin token in the **AAPS** phone's NSClientV3 settings.
-   - **PIN** — for a follower phone without a camera, already connected to Nightscout: note the one-time **PIN** (valid for about two minutes).
-3. On the **AAPSClient** phone, scan the code (in the Setup Wizard, or **Manage → Pair with master → Scan QR code**), or open **Manage → Pair with master** and enter the PIN. Confirm.
+1. Στο τηλέφωνο **AAPS** ανοίξτε το **Διαχείριση → Εξουσιοδοτημένοι πελάτες** και ενεργοποιήστε το **Να επιτρέπεται ο έλεγχος από πελάτες** (από προεπιλογή είναι απενεργοποιημένο, και σε Απλή λειτουργία είναι πάντα ενεργό).
+2. Πατήστε **+**, γράψτε ένα όνομα για το τηλέφωνο του ακόλουθου, επιλέξτε πώς θα ρυθμιστεί και επιλέξτε τον **ρόλο** του:
+   - **Κωδικός QR: Nightscout και σύζευξη** — το **AAPS** δείχνει έναν κωδικό QR που ρυθμίζει το Nightscout στο τηλέφωνο του ακόλουθου και κάνει τη σύζευξη, με μία σάρωση. Αυτό χρειάζεται ένα admin token (διακριτικό διαχειριστή) στις ρυθμίσεις NSClientV3 του τηλεφώνου **AAPS**.
+   - **PIN** — για τηλέφωνο ακόλουθου χωρίς κάμερα, που είναι ήδη συνδεδεμένο στο Nightscout: σημειώστε το **PIN** μίας χρήσης (ισχύει για περίπου δύο λεπτά).
+3. Στο τηλέφωνο με το **AAPSClient**, σαρώστε τον κωδικό (στον Οδηγό εγκατάστασης ή στο **Διαχείριση → Σύζευξη με κύρια συσκευή → Σάρωση κωδικού QR**), ή ανοίξτε το **Διαχείριση → Σύζευξη με κύρια συσκευή** και γράψτε το PIN. Επιβεβαιώστε.
 
-The follower phone then appears as **Active** in the **Authorized clients** list, and **AAPSClient** shows **Treatments**, **Scenes** and **Manage**. The follower phone gets a Nightscout token of its own, with only the rights it needs. The full procedure, with screenshots and troubleshooting, is on [Master ↔ Client control](#client_master_master_setup).
+Μετά το τηλέφωνο του ακόλουθου εμφανίζεται ως **Ενεργός** στη λίστα **Εξουσιοδοτημένοι πελάτες**, και το **AAPSClient** δείχνει **Θεραπείες**, **Σενάρια** και **Διαχείριση**. Το τηλέφωνο του ακόλουθου παίρνει δικό του διακριτικό Nightscout, μόνο με τα δικαιώματα που χρειάζεται. Η πλήρης διαδικασία, με εικόνες και αντιμετώπιση προβλημάτων, βρίσκεται στο [Έλεγχος Master ↔ Client](#client_master_master_setup).
 
-Check that the set-up works: enter carbs on **AAPSClient**, confirm the amount shown, and check that the entry appears in **Treatments** on both phones.
+Ελέγξτε ότι η ρύθμιση λειτουργεί: καταχωρίστε υδατάνθρακες στο **AAPSClient**, επιβεβαιώστε την ποσότητα που εμφανίζεται και ελέγξτε ότι η καταχώριση εμφανίζεται στις **Θεραπείες** και στα δύο τηλέφωνα.
 
 (remotecontrol-nightscout-access-token)=
 
-### Troubleshooting 'Nightscout access token' configuration issues
+### Αντιμετώπιση προβλημάτων με τη ρύθμιση του «Διακριτικό πρόσβασης Nightscout»
 
-The precise 'Nightscout access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
+Η ακριβής ρύθμιση του «Διακριτικό πρόσβασης Nightscout» μπορεί να διαφέρει ανάλογα με το αν ο πάροχος του Nightscout σας είναι πληρωμένη υπηρεσία φιλοξενίας ή όχι.
 
-If you are struggling with **AAPS** to accept the 'Nightscout access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'Nightscout access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+Αν το **AAPS** δεν δέχεται το «Διακριτικό πρόσβασης Nightscout» και χρησιμοποιείτε πληρωμένη υπηρεσία φιλοξενίας Nightscout, ίσως είναι καλό να επικοινωνήσετε πρώτα με τον πάροχο του Nightscout σας για να λύσετε το πρόβλημα. Αλλιώς, απευθυνθείτε στην ομάδα του **AAPS**, αλλά πρώτα ελέγξτε ξανά ότι ακολουθήσατε σωστά τις οδηγίες [εδώ](https://nightscout.github.io/nightscout/security/#create-a-token).
 
-### What AAPSClient offers
+### Τι προσφέρει το AAPSClient
 
-Once paired, **AAPSClient** offers the caregiver almost the same screens as **AAPS** itself:
+Μετά τη σύζευξη, το **AAPSClient** δίνει στον φροντιστή σχεδόν τις ίδιες οθόνες με το ίδιο το **AAPS**:
 
-- **Treatments**: insulin bolus, carbs and the bolus wizard.
-- **Scenes**: start and stop [scenes](../DailyLifeWithAaps/Scenes.md).
-- **Manage**: profiles, insulin settings, temporary targets, QuickWizard, automation, food, site rotation, pairing and the running temp basal.
-- **Main menu**: treatments history, history browser, statistics, maintenance, configuration.
+- **Θεραπείες**: bolus ινσουλίνης, υδατάνθρακες και ο οδηγός bolus.
+- **Σενάρια**: έναρξη και διακοπή [σεναρίων](../DailyLifeWithAaps/Scenes.md).
+- **Διαχείριση**: προφίλ, ρυθμίσεις ινσουλίνης, προσωρινοί στόχοι, Γρήγορος Οδηγός, αυτοματισμοί, τρόφιμα, εναλλαγή σημείων έγχυσης, σύζευξη και ο τρέχων προσωρινός βασικός ρυθμός.
+- **Κύριο μενού**: ιστορικό θεραπειών, εξερεύνηση ιστορικού, στατιστικά, συντήρηση, διαμόρφωση.
 
-There is no pump and no objectives on **AAPSClient**. See [The AAPSClient app](AapsClient.md) for a detailed description.
+Στο **AAPSClient** δεν υπάρχει αντλία και δεν υπάρχουν βήματα (objectives). Δείτε το [Η εφαρμογή AAPSClient](AapsClient.md) για αναλυτική περιγραφή.
 
-**AAPSClient** lets the caregiver make most of the adjustments allowed directly in **AAPS**, **including insulin boluses**, remotely over the mobile or internet network. Every command is signed and sent through Nightscout to the **AAPS** phone, which checks it against its own data, caps it, shows you its own confirmation, and only then executes it. **AAPSClient** _can_ be much faster than [SMS Commands](../RemoteFeatures/SMSCommands.md), especially for commands that would need authentication.
+Το **AAPSClient** επιτρέπει στον φροντιστή να κάνει από απόσταση, μέσω του δικτύου κινητής ή του internet, τις περισσότερες ρυθμίσεις που επιτρέπονται απευθείας στο **AAPS**, **μαζί με bolus ινσουλίνης**. Κάθε εντολή υπογράφεται και στέλνεται μέσω του Nightscout στο τηλέφωνο **AAPS**. Αυτό την ελέγχει με τα δικά του δεδομένα, της βάζει όρια, σας δείχνει δική του επιβεβαίωση και μόνο τότε την εκτελεί. Το **AAPSClient** _μπορεί_ να είναι πολύ πιο γρήγορο από τις [Εντολές SMS](../RemoteFeatures/SMSCommands.md), ειδικά για εντολές που θα χρειάζονταν πιστοποίηση.
 
-Treatments entered in Nightscout by other means (for example the Nightscout website) are not applied while client control is on: **AAPS** is then in [hardened mode](#client-master-control-hardened-mode) and takes changes only from paired clients. With client control off, they are applied only if the matching **Receive** options are enabled in the [Synchronization section of NSClient preferences](#Preferences-nsclient-synchronization).
+Θεραπείες που καταχωρίζονται στο Nightscout με άλλους τρόπους (για παράδειγμα από τον ιστότοπο του Nightscout) δεν εφαρμόζονται όσο ο έλεγχος από πελάτες είναι ενεργός: το **AAPS** είναι τότε σε [ενισχυμένη λειτουργία ασφαλείας (hardened mode)](#client-master-control-hardened-mode) και δέχεται αλλαγές μόνο από πελάτες με σύζευξη. Όταν ο έλεγχος από πελάτες είναι απενεργοποιημένος, εφαρμόζονται μόνο αν είναι ενεργές οι αντίστοιχες επιλογές **Λήψη** στην [ενότητα Συγχρονισμός των ρυθμίσεων του NSClient](#Preferences-nsclient-synchronization).
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc).
+Ο απομακρυσμένος έλεγχος μέσω του **AAPSClient** συνιστάται μόνο αν ο συγχρονισμός σας λειτουργεί καλά (_δηλ._ δεν βλέπετε ανεπιθύμητες αλλαγές δεδομένων, όπως αλλαγή TT, TBR κ.λπ. από μόνες τους).
 
-### AAPSClient with smartwatch options
+### AAPSClient με επιλογές για έξυπνο ρολόι
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the caregiver's phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG and loop status. Once **AAPSClient** is paired with **AAPS**, the watch actions (including boluses, carbs, temp targets and profile changes) are relayed through **AAPSClient** to **AAPS**, which confirms and executes them: see [Wear OS on a client](#clientmastercontrol-wear-os-on-a-client). You can read more about Smartwatches [here](#remotecontrol-smartwatches).
+Ένα έξυπνο ρολόι μπορεί να είναι πολύ χρήσιμο εργαλείο για τη διαχείριση του **AAPS** σε παιδιά. Είναι δυνατές μερικές διαφορετικές διαμορφώσεις. Αν το **AAPSClient** είναι εγκατεστημένο στο τηλέφωνο του φροντιστή, η [εφαρμογή **AAPSClient WearOS**](https://github.com/nightscout/AndroidAPS/releases/) μπορεί να εγκατασταθεί σε ένα συμβατό έξυπνο ρολόι που είναι συνδεδεμένο με το τηλέφωνο του γονέα. Αυτό θα δείχνει την τρέχουσα γλυκόζη και την κατάσταση του κυκλώματος. Μόλις γίνει σύζευξη του **AAPSClient** με το **AAPS**, οι ενέργειες του ρολογιού (μαζί με bolus, υδατάνθρακες, προσωρινούς στόχους και αλλαγές προφίλ) περνούν μέσω του **AAPSClient** στο **AAPS**, που τις επιβεβαιώνει και τις εκτελεί: δείτε [Wear OS σε πελάτη](#clientmastercontrol-wear-os-on-a-client). Μπορείτε να διαβάσετε περισσότερα για τα έξυπνα ρολόγια [εδώ](#remotecontrol-smartwatches).
 
 (RemoteControl_nightscout)=
 ## 3) Nightscout
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](#2-aapsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) app from the Playstore.
+Εκτός από το ότι το Nightscout είναι διακομιστής στο «σύννεφο» (cloud), υπάρχει και ειδική εφαρμογή **Nightscout**, που μπορείτε να κατεβάσετε απευθείας από το App Store στο iPhone σας. Αν έχετε τηλέφωνο ακόλουθου με Android, δεν υπάρχει ειδική εφαρμογή Nightscout και είναι καλύτερα να χρησιμοποιήσετε το [**AAPSClient**](#2-aapsclient). Αν θέλετε μόνο να παρακολουθείτε και όχι να στέλνετε θεραπείες, μπορείτε να εγκαταστήσετε την εφαρμογή [Nightwatch](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch) από το Play Store.
 
-Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
+Αφού εγκαταστήσετε την εφαρμογή **Nightscout** στο iPhone σας, ανοίξτε την και ακολουθήστε τις οδηγίες ρύθμισης. Γράψτε τη διεύθυνση του Nightscout σας (δείτε παρακάτω, αριστερά). Η μορφή της μπορεί να διαφέρει ανάλογα με το πού φιλοξενείται το Nightscout σας. (_π.χ._ http://youraddresshere.herokuapp.com). Μετά γράψτε το API secret του Nightscout σας (δείτε παρακάτω, δεξιά). Αν δεν σας ζητηθεί ο κωδικός API, πρέπει να τον γράψετε πατώντας το λουκέτο στο πάνω μέρος της εφαρμογής:
 
 ![image](../images/remote-control-24.png)
 
-More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
+Περισσότερες πληροφορίες για τη ρύθμιση θα βρείτε απευθείας στο [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-When you first log in, you will have a very simple display. Customize the display options, by selecting the “hamburger” in the top right and scrolling down:
+Όταν συνδεθείτε για πρώτη φορά, θα δείτε μια πολύ απλή οθόνη. Προσαρμόστε τις επιλογές εμφάνισης: πατήστε το μενού «hamburger» (τρεις γραμμές) πάνω δεξιά και κάντε κύλιση προς τα κάτω:
 
 ![image](../images/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up.
+Κάντε κύλιση προς τα κάτω μέχρι το «Settings». Ίσως θέλετε να αλλάξετε το «scale» σε «linear», γιατί η προεπιλογή για την εμφάνιση της γλυκόζης είναι λογαριθμική. Στο «render basal» επιλέξτε «default», ώστε να εμφανίζεται ο βασικός ρυθμός της αντλίας.
 
 ![image](../images/remote-control-25b.png)
 
-Select your desired options. Uncheck alarms if you use an alternative app for alarms.
+Επιλέξτε τις επιλογές που θέλετε. Αποεπιλέξτε τους συναγερμούς αν χρησιμοποιείτε άλλη εφαρμογή για συναγερμούς.
 
 ![image](../images/remote-control-26.png)
 
-Continue to scroll down until you get to “show plugins”.
+Συνεχίστε την κύλιση προς τα κάτω μέχρι το «show plugins».
 
-You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+Βεβαιωθείτε ότι το «careportal» είναι επιλεγμένο. Μπορείτε να επιλέξετε και διάφορες άλλες τιμές (οι πιο χρήσιμες είναι: IOB, care portal, pump, cannula age, insulin age, basal profile και OpenAPS).
 
-Importantly, you now need to click “save” at the bottom for these changes to take effect.
+Σημαντικό: τώρα πρέπει να πατήσετε «save» στο κάτω μέρος για να ισχύσουν οι αλλαγές.
 
 ![image](../images/remote-control-27.png)
 
-After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+Μετά το «save» η εφαρμογή επιστρέφει στην κύρια οθόνη του Nightscout, που μοιάζει κάπως έτσι:
 
-1. Current glucose value
-2. Information on AAPS system status - touch the individual tabs on the screen to display more detail. Add or remove these display options using hamburger menu.
-3. Recent glucose trace with treatments (carbs, boluses) displayed
-4. Longer-term glucose trace
-5. "Hamburger" menu for setting display options, generating reports, editing profiles and Nightscout admin tools
-6. "**+**" menu for entering treatments (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies them).
-7. Select different time period to display
-8. Basal insulin profile
-9. Green line = historical glucose Blue lines = predicted glucose
+1. Τρέχουσα τιμή γλυκόζης
+2. Πληροφορίες για την κατάσταση του συστήματος AAPS - πατήστε τις καρτέλες στην οθόνη για περισσότερες λεπτομέρειες. Προσθέστε ή αφαιρέστε αυτές τις επιλογές εμφάνισης από το μενού hamburger.
+3. Πρόσφατη καμπύλη γλυκόζης με τις θεραπείες (υδατάνθρακες, bolus)
+4. Καμπύλη γλυκόζης για μεγαλύτερο διάστημα
+5. Μενού «hamburger» για επιλογές εμφάνισης, δημιουργία αναφορών, επεξεργασία προφίλ και εργαλεία διαχείρισης του Nightscout
+6. Μενού «**+**» για καταχώριση θεραπειών (δείτε [παρακάτω](#RemoteControl_nightscout-treatments) πότε τις εφαρμόζει το **AAPS**).
+7. Επιλογή διαφορετικής χρονικής περιόδου για εμφάνιση
+8. Προφίλ βασικής ινσουλίνης
+9. Πράσινη γραμμή = γλυκόζη μέχρι τώρα Μπλε γραμμές = προβλεπόμενη γλυκόζη
 
 ![image](../images/remote-control-28.png)
 
-Looking in more detail at the top left menu of the Nightscout app:
+Πιο αναλυτικά, το μενού πάνω αριστερά στην εφαρμογή Nightscout:
 
-1. Careportal retrospective edit
-2. Turn on/off alarms
-3. Hamburger - for setting preferences
-4. Careportal - Log treatment (see [below](#RemoteControl_nightscout-treatments) for when **AAPS** applies these)
+1. Εκ των υστέρων επεξεργασία στο Careportal
+2. Ενεργοποίηση/απενεργοποίηση συναγερμών
+3. Hamburger - για ρύθμιση προτιμήσεων
+4. Careportal - καταγραφή θεραπείας (δείτε [παρακάτω](#RemoteControl_nightscout-treatments) πότε τις εφαρμόζει το **AAPS**)
 
-![nightscout top bar](../images/remote-control-29.png)
+![πάνω γραμμή του nightscout](../images/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+Στις γκρι καρτέλες αυτής της οθόνης υπάρχουν πάρα πολλές πληροφορίες για την κατάσταση του συστήματος **AAPS** (και ακόμη περισσότερες αν πατήσετε την καρτέλα):
 
-1. 5min glucose trend
-2. Bolus wizard preview
-3. Press on Basal to see your current profile and basal information
-4. Time since latest CGM reading in AAPS
-5. **Pump**: insulin, battery % and when AAPS last connected to it
-6. Last time AAPS refreshed - if this is longer than 5 mins it can indicate a connection issue between AAPS phone and pump/CGM
-7. Press on IOB to see split of basal and bolus insulin
-8. Insulin age in reservoir
-9. Cannula age
-10. Battery status of AAPS phone
-11. Size of your database. If it gets too full (DIY Nightscout only - hosted services just ignore) you may start having connectivity issues. You can delete data to reduce the size of the number in the Admin tools menu (via hamburger).
+1. Τάση γλυκόζης 5 λεπ.
+2. Προεπισκόπηση οδηγού bolus (Bolus wizard preview)
+3. Πατήστε το Basal για να δείτε το τρέχον προφίλ σας και πληροφορίες για τον βασικό ρυθμό
+4. Χρόνος από την τελευταία μέτρηση CGM στο AAPS
+5. **Αντλία**: ινσουλίνη, μπαταρία % και πότε συνδέθηκε τελευταία φορά το AAPS μαζί της
+6. Τελευταία ανανέωση του AAPS - αν είναι πάνω από 5 λεπ., μπορεί να σημαίνει πρόβλημα σύνδεσης ανάμεσα στο τηλέφωνο AAPS και την αντλία/το CGM
+7. Πατήστε το IOB για να δείτε πώς χωρίζεται σε βασική ινσουλίνη και ινσουλίνη bolus
+8. Ηλικία ινσουλίνης στη δεξαμενή
+9. Ηλικία καθετήρα
+10. Κατάσταση μπαταρίας του τηλεφώνου AAPS
+11. Μέγεθος της βάσης δεδομένων σας. Αν γεμίσει πολύ (μόνο για DIY Nightscout - οι υπηρεσίες φιλοξενίας απλώς το αγνοούν), μπορεί να αρχίσετε να έχετε προβλήματα σύνδεσης. Μπορείτε να διαγράψετε δεδομένα για να μειώσετε αυτόν τον αριθμό από το μενού Admin tools (μέσω του hamburger).
 
 ![image](../images/remote-control-30.png)
 
 ![image](../images/remote-control-31.png)
 
-Press "refresh" at the bottom of the page to close the popup.
+Πατήστε «refresh» στο κάτω μέρος της σελίδας για να κλείσετε το αναδυόμενο παράθυρο.
 
 (RemoteControl_nightscout-treatments)=
-### Sending treatments through the Nightscout app to AAPS
+### Αποστολή θεραπειών στο AAPS μέσω της εφαρμογής Nightscout
 
-In **AAPS** 4 the supported way to control **AAPS** remotely is a **paired AAPSClient**, see [Master ↔ Client control](#client-master-control): each client has a [role](#client-master-control-roles) that limits what it may do, and every command is signed, checked and confirmed by the **AAPS** phone. While client control is on, the **AAPS** phone is in [hardened mode](#client-master-control-hardened-mode): treatments, temporary targets and profile switches entered on the Nightscout website or in the Nightscout app are **not** applied. The Nightscout app is then a tool for following only.
+Στο **AAPS** 4 ο υποστηριζόμενος τρόπος για απομακρυσμένο έλεγχο του **AAPS** είναι ένα **AAPSClient με σύζευξη**, δείτε [Έλεγχος Master ↔ Client](#client-master-control): κάθε πελάτης έχει έναν [ρόλο](#client-master-control-roles) που περιορίζει τι μπορεί να κάνει, και κάθε εντολή υπογράφεται, ελέγχεται και επιβεβαιώνεται από το τηλέφωνο **AAPS**. Όσο ο έλεγχος από πελάτες είναι ενεργός, το τηλέφωνο **AAPS** είναι σε [ενισχυμένη λειτουργία ασφαλείας (hardened mode)](#client-master-control-hardened-mode): θεραπείες, προσωρινοί στόχοι και αλλαγές προφίλ που καταχωρίζονται στον ιστότοπο ή στην εφαρμογή Nightscout **δεν** εφαρμόζονται. Η εφαρμογή Nightscout είναι τότε εργαλείο μόνο για παρακολούθηση.
 
 ```{admonition} Only when client control is off
 :class: warning
-If **Allow client control** is off in **Manage → Authorized clients** (and Simple Mode is off), **AAPS** applies careportal entries from Nightscout only for the data types you turned on under **Receive** in the [Synchronization section of the NSClientV3 settings](#Preferences-nsclient-synchronization): carbs, temporary targets, profile switches and the other careportal entries. Insulin is never delivered this way: a "Correction bolus" entered in Nightscout is only *announced*, and **AAPS** counts it as insulin on board without delivering it. This set-up is not recommended for remote control; use a paired **AAPSClient** instead.
+Αν το **Να επιτρέπεται ο έλεγχος από πελάτες** είναι απενεργοποιημένο στο **Διαχείριση → Εξουσιοδοτημένοι πελάτες** (και η Απλή λειτουργία είναι απενεργοποιημένη), το **AAPS** εφαρμόζει καταχωρίσεις careportal από το Nightscout μόνο για τους τύπους δεδομένων που ενεργοποιήσατε στο **Λήψη** στην [ενότητα Συγχρονισμός των ρυθμίσεων του NSClientV3](#Preferences-nsclient-synchronization): υδατάνθρακες, προσωρινοί στόχοι, αλλαγές προφίλ και οι άλλες καταχωρίσεις careportal. Ινσουλίνη δεν χορηγείται ποτέ με αυτόν τον τρόπο: ένα «Correction bolus» που καταχωρίζεται στο Nightscout είναι μόνο *ανακοίνωση*, και το **AAPS** το μετράει ως ενεργή ινσουλίνη (IOB) χωρίς να το χορηγήσει. Αυτή η ρύθμιση δεν συνιστάται για απομακρυσμένο έλεγχο· χρησιμοποιήστε αντί γι' αυτό ένα **AAPSClient** με σύζευξη.
 ```
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
+Διαβάστε περισσότερα για τις επιλογές του **Nightscout** [εδώ](https://nightscout.github.io/)
 
-### Tips for getting the most out of the Nightscout app
+### Συμβουλές για να αξιοποιήσετε στο έπακρο την εφαρμογή Nightscout
 
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
+1). Αν «κολλήσετε» σε μια σελίδα και θέλετε να δείτε ξανά την κύρια οθόνη, απλώς πατήστε «refresh» (κάτω στη μέση). Θα επιστρέψετε στην αρχική σελίδα του **Nightscout** με το γράφημα γλυκόζης.
 
-To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
+Για να δείτε το τρέχον προφίλ που τρέχει στο τηλέφωνο, πατήστε τα διάφορα εικονίδια στην οθόνη πάνω από το γράφημα. Περισσότερες πληροφορίες (τρέχουσα αναλογία υδατανθράκων, ευαισθησία, ζώνη ώρας κ.λπ.) θα δείτε αν πατήσετε «basal». Το «OpenAPS» δίνει πληροφορίες για το προφίλ, τον τρέχοντα στόχο κ.λπ. Μπορείτε επίσης να παρακολουθείτε την μπαταρία % του τηλεφώνου και την μπαταρία % της αντλίας. Το BWP δίνει πληροφορίες για το τι πιστεύει ο αλγόριθμος ότι θα γίνει στο μέλλον, με βάση το IOB και το COB.
 
-#### Other icons in the menu: what does the pencil (edit) mean?
+#### Άλλα εικονίδια στο μενού: τι σημαίνει το μολύβι (επεξεργασία);
 
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
+Μπορείτε (τεχνικά) να χρησιμοποιήσετε το μολύβι επεξεργασίας για να μετακινήσετε ή να διαγράψετε θεραπείες bolus ή διόρθωσης των τελευταίων 48 ωρών.
 
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+Περισσότερα για αυτό [εδώ](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
+Αυτό θα μπορούσε να είναι χρήσιμο για να διαγράψετε υδατάνθρακες που καταχωρίσατε (αλλά δεν κάνατε bolus γι' αυτούς). Στην πράξη όμως τώρα δεν λειτουργεί καλά με το **AAPS**, και προτείνουμε να κάνετε τέτοιες αλλαγές απευθείας στην εφαρμογή **AAPS**.
 
 (RemoteControl_smartwatches)= (remotecontrol-smartwatches)=
 
-## 4) Smartwatches
+## 4) Έξυπνα ρολόγια
 
-### Option 1) Controlling AAPS from a Wear OS Watch
+### Επιλογή 1) Έλεγχος του AAPS από ρολόι Wear OS
 
 ![Wear Remote 1](../images/Wear_Remote1.png)
 
-Once you have [setup **AAPS** on your watch](../WearOS/BuildingAapsWearOS.md), extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Αφού [ρυθμίσετε το **AAPS** στο ρολόι σας](../WearOS/BuildingAapsWearOS.md), αναλυτικές πληροφορίες για τις προσόψεις του ρολογιού και τις λειτουργίες τους θα βρείτε στο [Χειρισμός του Wear AAPS σε έξυπνο ρολόι](../WearOS/WearOsSmartwatch.md).
 
-As a brief overview, the following functions can be triggered from the smartwatch:
+Με λίγα λόγια, οι παρακάτω λειτουργίες μπορούν να ξεκινήσουν από το έξυπνο ρολόι:
 
-* set a temporary target
+* ορισμός προσωρινού στόχου
 
-* use the bolus calculator (calculation variables can be defined in settings on the phone)
+* χρήση του υπολογιστή bolus (οι παράμετροι του υπολογισμού ορίζονται στις ρυθμίσεις του τηλεφώνου)
 
-* administer eCarbs
+* χορήγηση eCarbs
 
-* administer a bolus (insulin + carbs)
+* χορήγηση bolus (ινσουλίνη + υδατάνθρακες)
 
-* watch settings
+* ρυθμίσεις ρολογιού
 
-* status
+* κατάσταση
 
-* check pump status
+* έλεγχος κατάστασης αντλίας
 
-* check loop status
+* έλεγχος κατάστασης κυκλώματος
 
-* check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* έλεγχος και αλλαγή προφίλ, CPP (Circadian Percentage Profile = χρονική μετατόπιση + ποσοστό)
 
-* show TDD (Total daily dose = bolus + basal per day)
+* εμφάνιση TDD (Total daily dose, συνολική ημερήσια δόση = bolus + βασικός ρυθμός ανά ημέρα)
 
-* Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to the network)
+* Απομακρυσμένο bolus όταν ο φροντιστής και το παιδί με διαβήτη τύπου 1 είναι σε διαφορετικά μέρη (αυτό είναι δυνατό για το ρολόι **AAPS** και το τηλέφωνο **AAPS**, αρκεί και οι δύο συσκευές να είναι συνδεδεμένες στο δίκτυο)
 
-#### Communication from caregivers to the watch using other apps (like WhatsApp)
+#### Επικοινωνία από τους φροντιστές στο ρολόι με άλλες εφαρμογές (όπως το WhatsApp)
 
-It is possible to add additional apps to the watch, like WhatsApp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+Μπορείτε να προσθέσετε κι άλλες εφαρμογές στο ρολόι, όπως το WhatsApp, για μηνύματα (για παράδειγμα) ανάμεσα σε φροντιστές και παιδιά. Είναι σημαντικό να υπάρχει μόνο ΕΝΑΣ λογαριασμός Google συνδεδεμένος με το τηλέφωνο, αλλιώς το ρολόι δεν θα φέρει αυτά τα δεδομένα. Για λογαριασμό Samsung πρέπει να είστε 13 ετών ή μεγαλύτεροι, και πρέπει να ρυθμιστεί με την ίδια διεύθυνση email που χρησιμοποιείται στο τηλέφωνο Android.
 
-A video explaining getting WhatsApp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of WhatsApp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+Ένα βίντεο που εξηγεί πώς ρυθμίζεται το WhatsApp για μηνύματα στο ρολόι Galaxy 4 (δεν έχετε όλες τις λειτουργίες του WhatsApp) θα βρείτε [εδώ](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for WhatsApp messages to announce with a slight vibration, and also for the WhatsApp message to display over the existing watchface.
+Με ρυθμίσεις στην εφαρμογή **Galaxy wearable** στο τηλέφωνο **AAPS** και στο ρολόι, τα μηνύματα WhatsApp μπορούν να ειδοποιούν με μια ελαφριά δόνηση και να εμφανίζονται πάνω από την τρέχουσα πρόσοψη του ρολογιού.
 
-### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
+### Επιλογή 2) **AAPS** στο ρολόι, για απομακρυσμένο έλεγχο του **AAPS** σε ένα τηλέφωνο
 
-Similarly to using a follower phone with **AAPSClient** or SMS commands (see the sections above), a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via Bluetooth and needs neither Nightscout nor an authentication code. As a side-note, if both smartwatch and **AAPS** phone linked by Bluetooth are also on a Wi-Fi/Cellular data network, the watch will also interact with the **AAPS** phone, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations, which can be useful in circumstances where the T1D child is in school.
+Όπως με ένα τηλέφωνο ακόλουθου με **AAPSClient** ή με εντολές SMS (δείτε τις ενότητες παραπάνω), ένα έξυπνο ρολόι μπορεί να χρησιμοποιηθεί για απομακρυσμένο έλεγχο του **AAPS** και να δίνει πλήρη δεδομένα προφίλ. Μια βασική διαφορά από το τηλέφωνο ακόλουθου είναι ότι το ρολόι συνδέεται με το τηλέφωνο **AAPS** μέσω Bluetooth και δεν χρειάζεται ούτε Nightscout ούτε κωδικό πιστοποίησης. Επιπλέον, αν το ρολόι και το τηλέφωνο **AAPS** που συνδέονται με Bluetooth είναι επίσης σε δίκτυο Wi-Fi/κινητής, το ρολόι θα επικοινωνεί με το τηλέφωνο **AAPS** και από μεγαλύτερη απόσταση. Αυτό περιλαμβάνει απομακρυσμένη χορήγηση bolus όταν ο φροντιστής με το ρολόι **AAPS** και το παιδί με διαβήτη τύπου 1 (με το τηλέφωνο **AAPS**) είναι σε διαφορετικά μέρη. Αυτό μπορεί να είναι χρήσιμο, για παράδειγμα όταν το παιδί είναι στο σχολείο.
 
-A remote control smartwatch is therefore often useful in any situation where:
+Γι' αυτό ένα έξυπνο ρολόι για απομακρυσμένο έλεγχο είναι συχνά χρήσιμο σε κάθε περίπτωση όπου:
 
-a)  **AAPSClient** or **SMS** commands cannot work; or
+α)  το **AAPSClient** ή οι εντολές **SMS** δεν μπορούν να λειτουργήσουν· ή
 
-b)  The user wishes to avoid typing an authentication code (as required for SMS commands).
+β)  ο χρήστης θέλει να μη γράφει κωδικό πιστοποίησης (όπως χρειάζεται για τις εντολές SMS).
 
-A smartwatch needs **Wear OS 3 or newer** to be able to control **AAPS**. Please check the technical specifications of the watch, and see the [Smartwatches page](../Getting-Started/Watches.md). Search, or ask in the **AAPS**  Facebook/Discord groups if unsure.
+Ένα έξυπνο ρολόι χρειάζεται **Wear OS 3 ή νεότερο** για να μπορεί να ελέγχει το **AAPS**. Ελέγξτε τα τεχνικά χαρακτηριστικά του ρολογιού και δείτε τη σελίδα [Έξυπνα ρολόγια και AAPS](../Getting-Started/Watches.md). Αν δεν είστε σίγουροι, ψάξτε ή ρωτήστε στις ομάδες του **AAPS**  στο Facebook/Discord.
 
-Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../SupportingAaps/HowToEditTheDocs.md) to share your findings with the wider **AAPS** community.
+Παρακάτω υπάρχουν ειδικοί οδηγοί για τη ρύθμιση του **AAPS** στο δημοφιλές Samsung Galaxy Watch 4 (40mm). Το ρολόι [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) είναι επίσης δημοφιλής επιλογή. Αν έχετε εμπειρία με τη ρύθμιση ενός άλλου έξυπνου ρολογιού που πιστεύετε ότι θα βοηθούσε άλλους, προσθέστε το σε αυτές τις σελίδες ([επεξεργασία της τεκμηρίωσης](../SupportingAaps/HowToEditTheDocs.md)) για να μοιραστείτε όσα βρήκατε με την ευρύτερη κοινότητα του **AAPS**.
 
-### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
+### Επιλογή 3) AAPSClient σε ρολόι για απομακρυσμένο έλεγχο του **AAPS** σε ένα τηλέφωνο
 
 ![Wear Remote 2](../images/Wear_Remote2.png)
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
+Το λογισμικό για το ρολόι, το **AAPSClient** Wear apk, μπορείτε να το κατεβάσετε απευθείας από το [Github](https://github.com/nightscout/AndroidAPS/releases/).
 
-To download the software, click on the watch app that matches the client app on the phone: **wear-aapsclient-release_**_version_ goes with **AAPSClient**, **wear-aapsclient2-release_**_version_ goes with **AAPSClient2** (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)):
+Για να κατεβάσετε το λογισμικό, πατήστε την εφαρμογή ρολογιού που ταιριάζει με την εφαρμογή πελάτη στο τηλέφωνο: το **wear-aapsclient-release_**_έκδοση_ πάει με το **AAPSClient**, το **wear-aapsclient2-release_**_έκδοση_ πάει με το **AAPSClient2** (δείτε [Για τα AAPSClient, AAPSClient2 και AAPSClient3](#remotecontrol-aapsclient-versions)):
 
 ![image](../images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
 
-Then "save as" and save the file to a convenient location on your computer:
+Μετά επιλέξτε «save as» (αποθήκευση ως) και αποθηκεύστε το αρχείο σε ένα βολικό σημείο στον υπολογιστή σας:
 
 
 ![image](../images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
@@ -302,7 +302,7 @@ Then "save as" and save the file to a convenient location on your computer:
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
+Το **AAPSClient** wear apk μπορεί να μεταφερθεί στο τηλέφωνό σας και να εγκατασταθεί χειροκίνητα (side-load) στο ρολόι με τον ίδιο τρόπο όπως η εφαρμογή **AAPS** Wear, όπως περιγράφεται στο [Μεταφορά της εφαρμογής Wear στο τηλέφωνο AAPS σας](#remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)  
 
 
 
