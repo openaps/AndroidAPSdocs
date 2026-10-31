@@ -756,7 +756,7 @@ Na čtyřech kartách zobrazuje statistiky celkové denní dávky, času v cíli
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Pomocník s profilem
 
 Otevřete **nabídku** (☰) a vyberte **Pomocník s profilem**.
 
