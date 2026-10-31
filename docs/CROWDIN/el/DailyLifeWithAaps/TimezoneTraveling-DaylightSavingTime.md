@@ -42,7 +42,7 @@ To avoid this there are two possibilities:
 
 * Απενεργοποιήστε την "Αυτόματη ημερομηνία και ώρα" στις ρυθμίσεις του τηλεφώνου σας (αλλαγή σε χειροκίνητης ζώνη ώρας)
 
-When get out of plane:
+When you get off the plane:
 
 * κλείστε την αντλία
 * αλλάξτε ώρα στο τηλέφωνο
@@ -62,7 +62,7 @@ The Insight also records the history entries in which moment time was changed an
 
 It may cause inaccuracies in the **TDDs**. But it shouldn't be a problem.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
 
 ## Timezone Change for Accu-Chek Combo
 
