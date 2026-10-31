@@ -6,36 +6,36 @@ C'est la méthode classique pour compiler votre application AAPS.
 
 Vous pouvez compiler l'application sans ordinateur avec la méthode [Compilation dans le navigateur](./BrowserBuild.md).
 
-## Construire vous-même au lieu de télécharger
+## Compiler vous-même au lieu de télécharger
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes !**
+**L'application AAPS (le fichier apk) n'est pas disponible en téléchargement, en raison de la réglementation concernant les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes !**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
 
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## Prérequis matériels et logiciels pour la compilation de AAPS
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. Voir le tableau ci-dessous :
+* Une version précise d'**[Android Studio](https://developer.android.com/studio/)** peut être nécessaire pour compiler l'apk. Voir le tableau ci-dessous :
 
-| AAPS Version                | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| --------------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                       | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                     | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100)     | 2020.3.1                                             | testé jusqu'à Quail 4                                  | 7.3.3  | 17  |
-| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                  | testé jusqu'à Quail 4                                  | 8.2    | 17  |
-| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                      | testé jusqu'à Quail 4                                  | 8.10   | 21  |
-| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                   | testé jusqu'à Quail 4                                  | 8.11.1 | 21  |
-| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                   | testé jusqu'à Quail 4                                  | 8.13   | 21  |
-| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                   | testé jusqu'à Quail 4                                  | 9      | 21  |
-| [4.0.0-beta1](#version4000) | Rabbit 1                                             | jusqu'à la dernière Rabbit 1                           | 9.8    | 21  |
+| Version AAPS                | Version<br/>Android Studio<br/>préférée | Version<br/>Android Studio<br/>alternative | Gradle | JVM |
+| --------------------------- | --------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
+| 2.6.2                       | 3.6.1                                               |                                                        | 5.6.4  | 11  |
+| 2.8.2.1                     | 4.1.1                                               |                                                        | 6.1.1  | 13  |
+| [3.1.0.3](#version3100)     | 2020.3.1                                            | testé jusqu'à Quail 4                                  | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                 | testé jusqu'à Quail 4                                  | 8.2    | 17  |
+| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                     | testé jusqu'à Quail 4                                  | 8.10   | 21  |
+| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                  | testé jusqu'à Quail 4                                  | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                  | testé jusqu'à Quail 4                                  | 8.13   | 21  |
+| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                  | testé jusqu'à Quail 4                                  | 9      | 21  |
+| [4.0.0-beta1](#version4000) | Rabbit 1                                            | jusqu'à la dernière Rabbit 1                           | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+La « version préférée » est fournie avec la bonne version de JVM. La version préférée est aussi la version minimale que vous pouvez utiliser pour compiler **AAPS**. Vous ne pourrez **PAS** compiler avec une version plus ancienne que la version « préférée ». Si vous utilisez une autre version, vous pouvez rencontrer des problèmes liés à la version de JVM. Voir la page [Dépannage d'Android Studio](#troubleshooting_androidstudio-uncommitted-changes) pour vous aider à résoudre ces problèmes. Si votre version actuelle d'Android Studio n'est pas dans le tableau, vous devez d'abord la mettre à jour.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+La version de Gradle est liée au code source. Vous aurez toujours la bonne version de Gradle quand vous téléchargez ou mettez à jour le code source. Elle est indiquée ici seulement pour information. Vous n'avez rien à faire.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* [Les systèmes Windows 32 bits](#troubleshooting_androidstudio-unable-to-start-daemon-process) ne sont pas compatibles avec Android Studio. Notez bien qu'**un CPU 64 bits et un système d'exploitation 64 bits sont tous les deux obligatoires.** Si votre système NE remplit PAS cette condition, vous devez changer le matériel ou le logiciel concerné, ou tout le système.
 
 <table class="tg">
 <tbody>
@@ -61,7 +61,7 @@ The Gradle version is linked to the source code, you will always get the correct
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">Minimum 1280 x 800 <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
@@ -70,13 +70,13 @@ The Gradle version is linked to the source code, you will always get the correct
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. Si vous le faites, le processus de compilation peut prendre beaucoup de temps avant de se terminer, mais une fois lancé, vous pouvez le laisser tourner sans surveillance.
+**Il est fortement recommandé (non obligatoire) d'utiliser un disque dur SSD et non un HDD car cela sera plus rapide pour compiler le fichier apk d'AAPS.** Il est malgré tout possible d'utiliser un disque HDD pour compiler le fichier apk d'**AAPS**. Si vous le faites, le processus de compilation peut prendre beaucoup de temps avant de se terminer, mais une fois lancé, vous pouvez le laisser tourner sans surveillance.
 
 ## Aide et support pour le processus de compilation
 
 Si vous avez des difficultés pendant la compilation de l'application **AAPS**, il existe une section dédiée [**Dépannage d'Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md). Consultez-la d'abord.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Si vous pensez que quelque chose dans les instructions de compilation est incorrect, pas assez documenté ou confus, ou si vous avez encore des difficultés, n'hésitez pas à contacter d'autres utilisateurs d'**AAPS** sur [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ou [Discord](https://discord.gg/4fQUWHZ4Mw). Si vous voulez mettre à jour quelque chose vous-même (mettre à jour les captures d'écran _etc_), veuillez soumettre une [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
 ## Guide pas à pas pour compiler l'application AAPS
 
@@ -91,9 +91,9 @@ Rendez-vous directement au [guide de mise à jour](../Maintenance/UpdateToNewVer
 :local: true
 ```
 
-Dans ce guide, vous trouverez des captures d'écran de la compilation du fichier apk de **AAPS** à titre d'exemple. Étant donné qu'**Android Studio** (le logiciel que nous utilisons pour compiler l'apk **AAPS**) est régulièrement mis à jour, ces captures d'écran peuvent ne pas être identiques à votre installation, mais vous devriez toujours pouvoir les suivre.
+Dans ce guide, vous trouverez des captures d'écran _d'exemple_ de la compilation du fichier apk d'**AAPS**. Étant donné qu'**Android Studio** (le logiciel que nous utilisons pour compiler l'apk **AAPS**) est régulièrement mis à jour, ces captures d'écran peuvent ne pas être identiques à votre installation, mais vous devriez toujours pouvoir les suivre.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
+Comme **Android Studio** fonctionne sous Windows, Mac OS X et Linux, il peut aussi y avoir de petites différences dans les étapes selon la plateforme.
 
 (install-git-if-you-dont-have-it)=
 ### Installer Git
@@ -102,7 +102,7 @@ Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there mi
 :class: dropdown
 
 Git est un « _système de contrôle de version_ » (VCS, Versioning Control System).\
-Git est un programme qui permet de suivre les changements dans le code et de collaborer avec d'autres personnes. Vous utiliserez Git pour faire une copie du code source **AAPS** depuis le site web GitHub sur votre ordinateur local. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
+Git est un programme qui permet de suivre les changements dans le code et de collaborer avec d'autres personnes. Vous utiliserez Git pour faire une copie du code source **AAPS** depuis le site web GitHub sur votre ordinateur local. Ensuite, vous utiliserez Android Studio sur votre ordinateur pour compiler l'application **AAPS** (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
@@ -141,7 +141,7 @@ Une des choses les plus importantes lors de l'installation d'Android Studio : **
 
 ```{admonition} Different UI
 :class: warning
-Important note: Android Studio changed its UI during the last releases. Ce guide montre les étapes avec la *nouvelle interface*. Les captures d'écran ont été faites avec « Ladybug », donc les versions plus récentes peuvent être un peu différentes. Si vous utilisez toujours l'ancienne interface utilisateur, vous pouvez basculer sur la nouvelle interface utilisateur en suivant [ces instructions](#computerbuild-NewUI).
+Remarque importante : l'interface d'Android Studio a changé lors des dernières versions. Ce guide montre les étapes avec la *nouvelle interface*. Les captures d'écran ont été faites avec « Ladybug », donc les versions plus récentes peuvent être un peu différentes. Si vous utilisez toujours l'ancienne interface utilisateur, vous pouvez basculer sur la nouvelle interface utilisateur en suivant [ces instructions](#computerbuild-NewUI).
 ```
 
 La version d'Android Studio est très importante. Voir les [instructions ci-dessus](#Building-APK-recommended-specification-of-computer-for-building-apk-file) pour choisir la bonne version d'Android Studio.
@@ -156,7 +156,7 @@ Install Android Studio by clicking "Next", as shown in the following screenshots
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
+Si vous voulez économiser de l'espace disque, vous pouvez décocher Android Virtual Device : il ne sert pas à compiler **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -314,7 +314,7 @@ Si le réglage automatique réussit, votre version actuelle de **Git** s'affiche
 
 Si **git.exe** n'est pas trouvé automatiquement, ou si un clic sur « Test » donne une erreur, vous pouvez soit
 * saisir à la main le chemin que vous avez noté [plus tôt](#BuildingAaps-steps-for-installing-git), ou
-* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
+* cliquez sur l'icône de dossier (1) et allez manuellement dans le dossier où **git.exe** a été installé [plus tôt](#BuildingAaps-steps-for-installing-git)
 * Vérifiez vos réglages avec le bouton **Test** !
 
   ![Git non trouvé](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Cliquez sur "Create new.../Créer nouveau..." (2) pour commencer la création de
 ```{admonition} INFORMATION!
 :class: note
 Vous n'aurez besoin de créer le keystore qu'une seule fois.
-If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
+Si vous avez déjà compilé AAPS, NE créez PAS de nouveau keystore : sélectionnez votre keystore existant et saisissez ses mots de passe !
 ```
 
 **_Remarque :_** le keystore (magasin de clés) est un fichier qui contient les informations pour signer l'application. Il est crypté et les informations sont sécurisées avec un mot de passe.
