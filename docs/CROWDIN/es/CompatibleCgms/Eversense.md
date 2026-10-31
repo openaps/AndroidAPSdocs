@@ -3,7 +3,7 @@
 Hay cuatro métodos diferentes para acceder a las lecturas de Eversense:
 
 - ESEL en modo complementario (companion mode)
-- ESEL en modo modificado (patched mode)
+- ESEL en modo parcheado (patched mode)
 - App complementaria de xDrip (Companion App)
 - Lector de notificaciones (integrado en **AAPS**)
 
@@ -26,18 +26,18 @@ Lee los datos de las notificaciones de la app de Eversense (funciona con la app 
    - Opcional, pero necesario para rellenar datos que faltan (backfilling): inicia sesión en tu cuenta de Eversense
    - En Sync, activa Auto synchronization (sincronización automática)
 2. Configuración de ESEL:
-   - Desactiva el ajuste «Get data from patched Eversense App» (obtener datos de la app de Eversense modificada)
+   - Desactiva el ajuste «Get data from patched Eversense App» (obtener datos de la app de Eversense parcheada)
    - Para rellenar datos que faltan (backfilling): activa «Fill missing data from eversensedms.com»
    - Introduce como dirección de correo y contraseña tus datos de inicio de sesión de Eversense
 3. Configura «MM640g» como fuente de glucosa en [**Configuración → Fuente de glucosa**](#Config-Builder-bg-source).
 
-### App de Eversense modificada
+### App de Eversense parcheada
 
- Necesita una versión modificada de la app de Eversense (funciona totalmente sin conexión, incluido el relleno de datos que faltan).
+ Necesita una versión parcheada de la app de Eversense (funciona totalmente sin conexión, incluido el relleno de datos que faltan).
 
 1. Desinstala la app de Eversense (Advertencia: ¡se perderán tus datos históricos locales de más de 1 semana!)
 
-2. Instala la [app de Eversense modificada](https://cr4ck3d3v3r53n53.club) y úsala como describe el proveedor
+2. Instala la [app de Eversense parcheada](https://cr4ck3d3v3r53n53.club) y úsala como describe el proveedor
 
    - Inicia la app de Eversense, inicia sesión, conéctate a tu transmisor y úsala igual que la app normal.
 
