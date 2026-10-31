@@ -1,406 +1,406 @@
 (medtrum-nano-300u)=
 # Medtrum Nano 200U / 300U
 
-These instructions are for configuring the Medtrum insulin pump.
+Estas instrucciones sirven para configurar la bomba de insulina Medtrum.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
-* All loop functionality supported (SMB, TBR etc)
-* Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+## Funciones de la bomba con AAPS
+* Todas las funciones del lazo son compatibles (SMB, TBR, etc.)
+* Cambio automático de horario de verano y de zona horaria
+* El controlador de AAPS no admite el bolo extendido
 
-## Requisitos hardware y software
-* **Compatible Medtrum pumpbase and reservoir patches**
-    - Currently supported:
-        - Medtrum TouchCare Nano 200U with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
-        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
-* **Compatible Android phone** with a BLE Bluetooth connection
-    - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
+## Requisitos de hardware y software
+* **Bases de bomba y parches con reservorio de Medtrum compatibles**
+    - Modelos compatibles ahora:
+        - Medtrum TouchCare Nano 200U con bases de bomba ref.: **MD0201** y **MD8201**.
+        - Medtrum TouchCare 300U con base de bomba ref.: **MD8301**.
+        - Si tienes un modelo no compatible y quieres donar el equipo o ayudar con las pruebas, contacta con nosotros por Discord [aquí](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+* **AAPS compilado e instalado** siguiendo las instrucciones de [Compilar AAPS](../SettingUpAaps/BuildingAaps.md).
+* **Un teléfono Android compatible** con conexión Bluetooth BLE
+    - Consulta las [Notas de la versión](../Maintenance/ReleaseNotes.md) de AAPS
 
-## Before you begin
+## Antes de empezar
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
+**LA SEGURIDAD ES LO PRIMERO** No hagas este proceso en un lugar donde no puedas solucionar un error (es imprescindible tener parches de reserva, insulina y dispositivos para controlar la bomba).
 
-**The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
+**El PDM y la app de Medtrum no funcionarán con un parche activado por AAPS.** Antes quizá usabas el PDM o la app de Medtrum para enviar órdenes a tu bomba. Por seguridad, solo puedes usar el parche activado con el dispositivo o la app que lo activó.
 
-*This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
+*Esto NO significa que debas tirar tu PDM. Se recomienda guardarlo en un lugar seguro como reserva para emergencias, por ejemplo si pierdes el teléfono o AAPS no funciona bien.*
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Tu bomba no deja de administrar insulina cuando no está conectada a AAPS** Las tasas basales por defecto se programan en la bomba tal como están definidas en el perfil activo. Mientras AAPS funcione, enviará órdenes de basal temporal que duran como máximo 120 minutos. Si por algún motivo la bomba no recibe nuevas órdenes (por ejemplo, porque se perdió la comunicación por la distancia entre la bomba y el teléfono), la bomba vuelve a la tasa basal por defecto programada en ella cuando termina la basal temporal.
 
-**The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**El perfil de AAPS no admite tasas basales en periodos de 30 minutos** Si eres nuevo en AAPS y configuras tu perfil basal por primera vez, ten en cuenta que no se admiten tasas basales que empiezan a la media hora, y tendrás que ajustar tu perfil basal para que empiece en la hora en punto. Por ejemplo, si tienes una tasa basal de 1,1 unidades que empieza a las 09:30 y dura 2 horas hasta las 11:30, esto no funcionará. Tendrás que cambiar esta tasa basal de 1,1 unidades a un periodo de 9:00–11:00 o de 10:00–12:00. Aunque el equipo de la bomba Medtrum admite pasos de 30 minutos en el perfil basal, AAPS por ahora no puede tenerlos en cuenta en sus algoritmos.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. The minimum profile basal rate is 0.05 U/h.
+**AAPS NO admite tasas basales de 0 U/h en el perfil** Aunque la bomba Medtrum admite una tasa basal cero, AAPS usa múltiplos de la tasa basal del perfil para decidir los tratamientos automáticos y por eso no puede funcionar con una tasa basal cero. La tasa basal mínima del perfil es 0,05 U/h.
 
-A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+Puedes conseguir una basal temporal a cero con la función «Desconectar bomba» o con una combinación de Desactivar lazo/basal temporal o Suspender lazo/basal temporal.
 
 ## Configuración
 
 ```{caution}
-When you activate a patch with **AAPS**, you **MUST** turn off every other device that can talk to the Medtrum pump base, for example an active PDM or the Medtrum app.
+Cuando activas un parche con **AAPS**, **DEBES** apagar todos los demás dispositivos que pueden comunicarse con la base de la bomba Medtrum, por ejemplo un PDM activo o la app de Medtrum.
 ```
 
-### Step 1: Select Medtrum pump
+### Paso 1: Selecciona la bomba Medtrum
 
-#### Option 1: New installations
+#### Opción 1: Instalaciones nuevas
 
-If you are installing **AAPS** for the first time, the **Setup Wizard** guides you through the setup. Select **Medtrum** when you reach the **Pump** step.
+Si instalas **AAPS** por primera vez, el **Asistente de configuración** te guía en la configuración. Selecciona **Medtrum** cuando llegues al paso **Bomba**.
 
-If in doubt, you can also select **Virtual Pump** and select **Medtrum** later, after setting up **AAPS** (see option 2).
+Si tienes dudas, también puedes seleccionar **Bomba virtual** y seleccionar **Medtrum** más tarde, después de configurar **AAPS** (ver opción 2).
 
-![Setup Wizard pump step](../images/setup-wizard/Wizard-Pump.png)
+![Paso de la bomba en el Asistente de configuración](../images/setup-wizard/Wizard-Pump.png)
 
-#### Option 2: The Configuration screen
+#### Opción 2: La pantalla Configuración
 
-On an existing installation you can select the **Medtrum** pump in [Configuration > Pump](#Config-Builder-pump):
+En una instalación existente puedes seleccionar la bomba **Medtrum** en [Configuración > Bomba](#Config-Builder-pump):
 
-Open the top-left **menu** (☰), tap **Configuration** > **Pump**, and select the **Medtrum** card. Only one pump can be active at a time.
+Abre el **menú** (☰) arriba a la izquierda, toca **Configuración** > **Bomba** y selecciona la tarjeta **Medtrum**. Solo puede haber una bomba activa a la vez.
 
-![Configuration > Pump with the Medtrum plugin](../images/v4/Configuration/configuration_pump_list_4.png)
+![Configuración > Bomba con el complemento Medtrum](../images/v4/Configuration/configuration_pump_list_4.png)
 
-Once it is selected, the **Medtrum** card shows two buttons, **Settings** and **Open plugin**:
+Una vez seleccionada, la tarjeta **Medtrum** muestra dos botones, **Ajustes** y **Abrir complemento**:
 
-![The Medtrum plugin selected in Configuration > Pump](../images/v4/Pumps/medtrum_enabled.png)
+![El complemento Medtrum seleccionado en Configuración > Bomba](../images/v4/Pumps/medtrum_enabled.png)
 
-**Open plugin** (or **Manage → Pump**) opens the Medtrum pump screen. You use it to change patches and to see the pump status. Before a patch is activated it looks like this:
+**Abrir complemento** (o **Administrar → Bomba**) abre la pantalla de la bomba Medtrum. La usas para cambiar parches y ver el estado de la bomba. Antes de activar un parche, se ve así:
 
-![Medtrum pump screen before pairing](../images/v4/Pumps/medtrum_pump_screen.png)
+![Pantalla de la bomba Medtrum antes del emparejamiento](../images/v4/Pumps/medtrum_pump_screen.png)
 
 (medtrum-step-2)=
-### Step 2: Change Medtrum settings
+### Paso 2: Cambia los ajustes de Medtrum
 
-Tap **Settings** on the **Medtrum** card in **Configuration** > **Pump**. You can also tap the gear icon in the top-right corner of the Medtrum pump screen. This opens the **Medtrum pump settings**:
+Toca **Ajustes** en la tarjeta **Medtrum** en **Configuración** > **Bomba**. También puedes tocar el icono del engranaje arriba a la derecha en la pantalla de la bomba Medtrum. Así se abren los **Ajustes de la bomba Medtrum**:
 
-![Medtrum driver settings](../images/v4/Pumps/medtrum_settings.png)
+![Ajustes del controlador de Medtrum](../images/v4/Pumps/medtrum_settings.png)
 
 ```{note}
-There is no **Serial Number** setting any more. **AAPS** finds your pump base with a Bluetooth scan the first time you activate a patch (see [Step 3](#medtrum-activate-patch)), and remembers its serial number. To use a different pump base, see [Unpair](#medtrum-unpair).
+Ya no existe el ajuste **Número de serie**. **AAPS** encuentra tu base de bomba con una búsqueda por Bluetooth la primera vez que activas un parche (ver [Paso 3](#medtrum-activate-patch)) y recuerda su número de serie. Para usar otra base de bomba, consulta [Desemparejar](#medtrum-unpair).
 ```
 
-#### Alarm Settings
+#### Ajustes de las alarmas
 
-***Default: Beep.***
+***Por defecto: Pitido.***
 
-This setting changes the way that the pump alerts you when there is a warning or error.
+Este ajuste cambia la forma en que la bomba te avisa cuando hay una advertencia o un error.
 
-- **Beep**: the patch beeps on alarms and warnings.
-- **Silent**: the patch does not alert you on alarms and warnings.
+- **Pitido**: el parche pita con las alarmas y advertencias.
+- **Silencio**: el parche no te avisa de las alarmas y advertencias.
 
-Note: In silent mode **AAPS** still sounds the alarm, depending on your phone's volume settings. If you do not respond to the alarm, the patch eventually beeps.
+Nota: en modo silencio, **AAPS** sigue haciendo sonar la alarma, según los ajustes de volumen de tu teléfono. Si no respondes a la alarma, al final el parche pita.
 
-#### Notification on pump warning
+#### Notificación sobre advertencia de la bomba
 
-***Default: Enabled.***
+***Por defecto: activado.***
 
-This setting changes the way **AAPS** shows notifications for non-critical pump warnings. When enabled, a notification is shown on the phone when a pump warning occurs, including:
-- Low battery
-- Low reservoir (20 units)
-- Patch expires soon
+Este ajuste cambia la forma en que **AAPS** muestra notificaciones para advertencias no críticas de la bomba. Si está activado, se muestra una notificación en el teléfono cuando hay una advertencia de la bomba, por ejemplo:
+- Batería baja
+- Reservorio bajo (20 unidades)
+- El parche caduca pronto
 
-We recommend leaving this enabled when the pump alarms are set to **Silent**. In either case these warnings are also shown on the Medtrum pump screen under [Active alarms](#medtrum-active-alarms).
+Recomendamos dejarlo activado cuando las alarmas de la bomba están en **Silencio**. En ambos casos, estas advertencias también se muestran en la pantalla de la bomba Medtrum en [Alarmas activas](#medtrum-active-alarms).
 
 (medtrum-patch-expiration)=
-#### Patch Expiration
+#### Caducidad del parche
 
-***Default: Enabled.***
+***Por defecto: activado.***
 
-This setting changes the behavior of the patch. When enabled, the patch expires after 3 days and gives an audible warning if you have sound enabled. After 3 days and 8 hours the patch stops working.
+Este ajuste cambia el comportamiento del parche. Si está activado, el parche caduca a los 3 días y da un aviso sonoro si tienes el sonido activado. A los 3 días y 8 horas, el parche deja de funcionar.
 
-If this setting is disabled, the patch does not warn you before it stops. With recent pump base firmware, a patch runs for 5 days at most.
+Si este ajuste está desactivado, el parche no te avisa antes de dejar de funcionar. Con el firmware reciente de la base de la bomba, un parche funciona como máximo 5 días.
 
-#### Pump expiry warning [hours]
+#### Aviso de expiración de la bomba [horas]
 
-***Default: 72 hours.***
+***Por defecto: 72 horas.***
 
-This setting changes the time of the expiration warning. When [Patch Expiration](#medtrum-patch-expiration) is enabled, **AAPS** shows a notification this many hours after activation.
+Este ajuste cambia el momento del aviso de caducidad. Si [Caducidad del parche](#medtrum-patch-expiration) está activado, **AAPS** muestra una notificación cuando pasan este número de horas desde la activación.
 
-#### Hourly Maximum Insulin [Units]
+#### Insulina máxima por hora [Unidades]
 
-***Default: 25U.***
+***Por defecto: 25 U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
+Este ajuste cambia la cantidad máxima de insulina que se puede administrar en una hora. Si se supera este límite, el parche se suspende y da una alarma. Puedes restablecer la alarma con el botón **Restablecer alarmas** en la pantalla de la bomba, ver [Restablecer alarmas](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Pon un valor razonable para tus necesidades de insulina.
 
-#### Daily Maximum Insulin [Units]
+#### Insulina máxima diaria [Unidades]
 
-***Default: 80U.***
+***Por defecto: 80 U.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded, the patch suspends and gives an alarm. You can reset the alarm with the **Reset alarms** button on the pump screen, see [Reset alarms](#nano-reset-alarms).
+Este ajuste cambia la cantidad máxima de insulina que se puede administrar en un día. Si se supera este límite, el parche se suspende y da una alarma. Puedes restablecer la alarma con el botón **Restablecer alarmas** en la pantalla de la bomba, ver [Restablecer alarmas](#nano-reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Pon un valor razonable para tus necesidades de insulina.
 
-#### Scan on connection error
+#### Escanear por error de conexión
 
-***Default: Off.***
+***Por defecto: desactivado.***
 
-Located under **Advanced Settings**.
+Se encuentra en **Ajustes avanzados**.
 
-Only enable this if you have connection problems. When enabled, the driver scans for the pump again before trying to reconnect to it. Make sure the Location permission for **AAPS** is set to "Allow all the time".
+Activa esto solo si tienes problemas de conexión. Si está activado, el controlador vuelve a buscar la bomba antes de intentar reconectarse a ella. Asegúrate de que el permiso de ubicación de **AAPS** está en «Permitir todo el tiempo».
 
-### Step 2b: AAPS alert settings
+### Paso 2b: Ajustes de alertas de AAPS
 
-These settings are not part of the Medtrum driver. Open them from the **Settings** (gear) icon in the top-right corner of the main screen. See [Settings](../SettingUpAaps/Preferences.md) for more.
+Estos ajustes no forman parte del controlador de Medtrum. Ábrelos con el icono de **Ajustes** (engranaje) arriba a la derecha de la pantalla principal. Consulta [Ajustes](../SettingUpAaps/Preferences.md) para más información.
 
-#### BT Watchdog
+#### Guardián BT
 
-Open **Settings** > **Pump**:
+Abre **Ajustes** > **Bomba**:
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Ajustes > Bomba](../images/preferences/settings_pump.png)
 
-**BT Watchdog** switches off the phone's Bluetooth for one second if **AAPS** cannot connect to the pump. This may help on some phones where Bluetooth freezes.
+**Guardián BT** apaga el Bluetooth del teléfono durante un segundo si **AAPS** no puede conectarse a la bomba. Esto puede ayudar en algunos teléfonos en los que el Bluetooth se bloquea.
 
-Enable this setting if you often have connection problems with your pump.
+Activa este ajuste si a menudo tienes problemas de conexión con tu bomba.
 
-#### Alarma local
+#### Alertas locales
 
-Open **Settings** > **Local alerts**:
+Abre **Ajustes** > **Alertas locales**:
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Ajustes > Alertas locales](../images/preferences/settings_local_alerts.png)
 
-##### Alert if pump is unreachable
+##### Alerta si la bomba no es alcanzable
 
-***Default: Enabled.***
+***Por defecto: activado.***
 
-This setting is forced on when the Medtrum driver is enabled. It alerts you when the pump is unreachable. This can happen when the pump is out of range, or when it is not responding because of a faulty patch or pump base, for example when water leaks between the pump base and the patch.
+Este ajuste se activa de forma obligatoria cuando el controlador de Medtrum está activado. Te avisa cuando la bomba no es alcanzable. Esto puede pasar cuando la bomba está fuera de alcance, o cuando no responde por un parche o una base de bomba defectuosos, por ejemplo cuando entra agua entre la base de la bomba y el parche.
 
-For safety reasons this setting cannot be disabled.
+Por seguridad, este ajuste no se puede desactivar.
 
-##### Pump unreachable threshold
+##### Umbral de bomba no alcanzable
 
-***Default: 30 min.***
+***Por defecto: 30 min.***
 
-This setting changes how long **AAPS** waits before alerting you that the pump is unreachable.
+Este ajuste cambia cuánto tiempo espera **AAPS** antes de avisarte de que la bomba no es alcanzable.
 
-You can change this setting when using the Medtrum pump, but we recommend keeping it at 30 minutes for safety reasons.
+Puedes cambiar este ajuste cuando usas la bomba Medtrum, pero por seguridad recomendamos dejarlo en 30 minutos.
 
 (medtrum-activate-patch)=
-### Step 3: Activate patch
+### Paso 3: Activa el parche
 
-**Before you continue:**
-- Have your Medtrum pump base and a new reservoir patch ready.
-- Turn off other devices that can talk to the Medtrum pump (PDM and Medtrum app).
-- Ideally, make sure **AAPS** is set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). If no profile is active, the activation starts with a **Profile required** step where you choose the profile to activate.
+**Antes de continuar:**
+- Ten preparados la base de la bomba Medtrum y un parche con reservorio nuevo.
+- Apaga los demás dispositivos que pueden comunicarse con la bomba Medtrum (PDM y app de Medtrum).
+- Lo ideal es que **AAPS** esté configurado y que haya un [perfil activado](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md). Si no hay ningún perfil activo, la activación empieza con un paso **Perfil requerido** en el que eliges el perfil que quieres activar.
 
-#### Start the activation
+#### Iniciar la activación
 
-Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**. If you have set up [settings protection](#Preferences-protection), you must enter your password or PIN first.
+Abre la [pantalla de la bomba Medtrum](#nano-overview) (**Administrar → Bomba**) y toca **Cambiar parche**. Si has configurado la [protección de los ajustes](#Preferences-protection), primero debes introducir tu contraseña o PIN.
 
-If a patch is already active, you are asked to deactivate it first, see [Deactivate patch](#nano-deactivate-patch).
+Si ya hay un parche activo, se te pide que lo desactives primero, ver [Desactivar el parche](#nano-deactivate-patch).
 
-The activation is a step-by-step wizard. Follow the prompts to fill and activate a new patch. Tap **Cancel** at any step to stop.
+La activación es un asistente paso a paso. Sigue las instrucciones para llenar y activar un parche nuevo. Toca **Cancelar** en cualquier paso para parar.
 
 ```{important}
-Only put the patch on your body and insert the cannula when the wizard tells you to (after priming is complete).
+Pon el parche en el cuerpo e inserta la cánula solo cuando el asistente te lo diga (después de que termine el purgado).
 ```
 
-The first steps you see depend on your setup:
+Los primeros pasos que ves dependen de tu configuración:
 
-1. **Profile required**: only if no profile is active. Select the profile to apply, then continue.
-2. **Find Pump**: only the first time, or after you used [Unpair](#medtrum-unpair). Connect the pump base to a fresh patch to power it on. **AAPS** scans for nearby Medtrum pump bases (their names start with `MT`). Tap yours in the list. **AAPS** saves its serial number, then goes straight to filling the patch.
+1. **Perfil requerido**: solo si no hay ningún perfil activo. Selecciona el perfil que quieres aplicar y continúa.
+2. **Buscar bomba**: solo la primera vez, o después de usar [Desemparejar](#medtrum-unpair). Conecta la base de la bomba a un parche nuevo para encenderla. **AAPS** busca bases de bomba Medtrum cercanas (sus nombres empiezan por `MT`). Toca la tuya en la lista. **AAPS** guarda su número de serie y pasa directamente al llenado del parche.
 
-   ![Find Pump step scanning for a Medtrum pump base](../images/medtrum/activation/FindPump.png)
+   ![Paso Buscar bomba buscando una base de bomba Medtrum](../images/medtrum/activation/FindPump.png)
 
-3. **Activate Patch**: only when **AAPS** already knows your pump base. The screen says "No active patch. Press **Next** to begin the activation process." Make sure the pump base is **not** connected to the patch yet, then tap **Next**.
+3. **Activar parche**: solo si **AAPS** ya conoce tu base de bomba. La pantalla dice «No hay ningún parche activo. Presiona **Siguiente** para iniciar el proceso de activación». Asegúrate de que la base de la bomba **no** está conectada todavía al parche y toca **Siguiente**.
 
-![Start Activation](../images/medtrum/activation/StartActivation.png)
+![Iniciar la activación](../images/medtrum/activation/StartActivation.png)
 
-#### Connect and fill the patch
+#### Conectar y llenar el parche
 
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
+![Llenar el parche](../images/medtrum/activation/FillPatch.png)
 
-Connect the pump base to the patch, remove the residual air and fill the patch with insulin. A minimum of 70 units is needed for activation. The screen shows the reservoir level. Do not attach the patch to your body yet.
+Conecta la base de la bomba al parche, elimina el aire residual y llena el parche con insulina. Se necesitan como mínimo 70 unidades para la activación. La pantalla muestra el nivel del reservorio. No pegues todavía el parche al cuerpo.
 
-When the patch is detected and filled, the **Next** button appears. Tap it.
+Cuando el parche se detecta y está lleno, aparece el botón **Siguiente**. Tócalo.
 
-#### Select insulin
+#### Seleccionar insulina
 
-This step only appears if you have more than one insulin set up in **AAPS**. Select the insulin you are filling the patch with. **AAPS** applies a profile switch with this insulin after activation.
+Este paso solo aparece si tienes más de una insulina configurada en **AAPS**. Selecciona la insulina con la que llenas el parche. **AAPS** aplica un cambio de perfil con esta insulina después de la activación.
 
-#### Prime the patch
+#### Purgar el parche
 
-![Half press](../images/medtrum/activation/HalfPress.png)
+![Pulsar hasta la mitad](../images/medtrum/activation/HalfPress.png)
 
-Do **not** remove the safety lock. Half-press the needle button on the patch, then tap **Next** to start priming.
+**No** quites el cierre de seguridad. Pulsa hasta la mitad el botón de la aguja del parche y luego toca **Siguiente** para iniciar el purgado.
 
-![Prime progress](../images/medtrum/activation/PrimeProgress.png)
+![Progreso del purgado](../images/medtrum/activation/PrimeProgress.png)
 
-Wait for priming to complete.
+Espera a que termine el purgado.
 
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
+![Purgado completado](../images/medtrum/activation/PrimeComplete.png)
 
-When priming is complete, tap **Next** to continue.
+Cuando termine el purgado, toca **Siguiente** para continuar.
 
-#### Site Rotation
+#### Rotación del sitio
 
-This step only appears if you manage pump sites with [Site Rotation](#Aapsscreens-site-rotation) (setting **Manage pump site rotation**). Choose where you place the patch on your body, or skip this step.
+Este paso solo aparece si gestionas los lugares de la bomba con [Rotación del sitio](#Aapsscreens-site-rotation) (ajuste **Gestionar la rotación del lugar de inserción de la bomba**). Elige dónde pones el parche en el cuerpo, o salta este paso.
 
-#### Attach patch
+#### Colocar el parche
 
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
+![Colocar el parche](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin and remove the stickers. Remove the safety lock, attach the patch to your body, and press the needle button to insert the cannula.
+Limpia la piel y quita los adhesivos. Quita el cierre de seguridad, pega el parche al cuerpo y pulsa el botón de la aguja para insertar la cánula.
 
-Tap **Next** to activate the patch.
+Toca **Siguiente** para activar el parche.
 
-#### Activate patch
+#### Activar el parche
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+![Activar el parche](../images/medtrum/activation/ActivatePatch.png)
 
-**AAPS** activates the pump and sets the initial basal rate. Please wait. When activation is complete, the following screen appears:
+**AAPS** activa la bomba y ajusta la tasa basal inicial. Espera, por favor. Cuando termina la activación, aparece esta pantalla:
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+![Activación completa](../images/medtrum/activation/ActivationComplete.png)
 
 ```{admonition} Older screenshot
 :class: note
-Apart from **Find Pump**, the activation screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+Excepto **Buscar bomba**, las capturas de pantalla de la activación de arriba son de una versión anterior de **AAPS** y pueden verse diferentes en **AAPS** 4.
 ```
 
-It shows how many units are left in the patch. Tap **OK** to return to the pump screen.
+Muestra cuántas unidades quedan en el parche. Toca **OK** para volver a la pantalla de la bomba.
 
 ```{tip}
-After a new activation, [export your settings](../Maintenance/ExportImportSettings.md). This lets you recover this patch session later, for example on a new phone.
+Después de una nueva activación, [exporta tus ajustes](../Maintenance/ExportImportSettings.md). Así puedes recuperar esta sesión del parche más tarde, por ejemplo en un teléfono nuevo.
 ```
 
 (nano-deactivate-patch)=
 
-### Deactivate patch
+### Desactivar el parche
 
-To deactivate the active patch, open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
+Para desactivar el parche activo, abre la [pantalla de la bomba Medtrum](#nano-overview) (**Administrar → Bomba**) y toca **Cambiar parche**.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Desactivar el parche](../images/medtrum/activation/DeactivatePatch.png)
 
-You are asked to confirm that you want to deactivate the current patch. **This cannot be undone.** Tap **Next** to deactivate, or **Cancel** to return to the pump screen.
+Se te pide que confirmes que quieres desactivar el parche actual. **Esto no se puede deshacer.** Toca **Siguiente** para desactivar, o **Cancelar** para volver a la pantalla de la bomba.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Progreso de la desactivación](../images/medtrum/activation/DeactivateProgress.png)
 
-If **AAPS** cannot deactivate the patch (for example because the pump base has already been removed from the patch), tap **Discard** to forget the current patch session. You can then activate a new patch.
+Si **AAPS** no puede desactivar el parche (por ejemplo, porque la base de la bomba ya se ha quitado del parche), toca **Descartar** para olvidar la sesión del parche actual. Después puedes activar un parche nuevo.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Desactivación completa](../images/medtrum/activation/DeactivateComplete.png)
 
-When deactivation is complete, retract the needle and remove the patch from your body. Remove the pump base and dispose of the used patch. Tap **OK** to return to the pump screen, or **Next** to start activating a new patch.
+Cuando termina la desactivación, retira la aguja y quita el parche del cuerpo. Quita la base de la bomba y desecha el parche usado. Toca **OK** para volver a la pantalla de la bomba, o **Siguiente** para empezar a activar un parche nuevo.
 
 (nano-resume-interrupted-activation)=
 
-### Resume interrupted activation
+### Reanudar una activación interrumpida
 
-If a patch activation is interrupted, for example because the phone battery runs out, you can resume it. Open the [Medtrum pump screen](#nano-overview) (**Manage → Pump**) and tap **Change Patch**.
+Si se interrumpe la activación de un parche, por ejemplo porque se agota la batería del teléfono, puedes reanudarla. Abre la [pantalla de la bomba Medtrum](#nano-overview) (**Administrar → Bomba**) y toca **Cambiar parche**.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Reanudar una activación interrumpida](../images/medtrum/activation/ActivationInProgress.png)
 
-Tap **Next** to resume the activation. Tap **Discard** to reset the activation status, so you can activate a new patch.
+Toca **Siguiente** para reanudar la activación. Toca **Descartar** para restablecer el estado de activación y poder activar un parche nuevo.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Leyendo el estado de activación](../images/medtrum/activation/ReadingActivationStatus.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots in **Deactivate patch** and **Resume interrupted activation** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+Las capturas de pantalla de **Desactivar el parche** y **Reanudar una activación interrumpida** son de una versión anterior de **AAPS** y pueden verse diferentes en **AAPS** 4.
 ```
 
-The driver reads the activation status from the pump. If this works, the wizard continues at the step where it stopped.
+El controlador lee el estado de activación de la bomba. Si funciona, el asistente continúa en el paso donde se paró.
 
 (nano-overview)=
 
-## Pump screen
+## Pantalla de la bomba
 
-The Medtrum pump screen (**Manage → Pump**) shows the current status of the Medtrum patch. It also has buttons to change the patch, reset alarms and refresh the status. A banner at the top shows important states, for example **Patch not activated** or **Pump is suspended**.
+La pantalla de la bomba Medtrum (**Administrar → Bomba**) muestra el estado actual del parche Medtrum. También tiene botones para cambiar el parche, restablecer las alarmas y actualizar el estado. Un aviso en la parte superior muestra estados importantes, por ejemplo **Parche no activado** o **Bomba suspendida**.
 
-![Medtrum pump screen with an active patch](../images/v4/Pumps/medtrum_pump_screen_active.png)
+![Pantalla de la bomba Medtrum con un parche activo](../images/v4/Pumps/medtrum_pump_screen_active.png)
 
-The screen can show these rows. Some rows only appear when they have a value.
+La pantalla puede mostrar estas filas. Algunas filas solo aparecen cuando tienen un valor.
 
-- **Last connection**: how long ago **AAPS** last connected to the pump.
-- **Last bolus**: the last bolus that was delivered.
-- **Battery**: the current battery voltage of the patch.
-- **Reservoir**: the current reservoir level.
-- **Serial number**: the serial number of your pump base.
-- **Pump state**: the current state of the pump. For example **Active** (the patch is activated and running normally) or **Stopped** (the patch is not activated).
-- **Base basal rate**: the basal rate from your profile that is running now.
-- **Temp basal**: the temporary basal rate, if one is running.
-- **Active bolus**: the bolus that is being delivered right now.
-- **Active alarms**: see [below](#medtrum-active-alarms).
-- **Pump type**: the model of your pump base.
-- **FW version**: the firmware version of the pump base.
-- **Patch no**: the sequence number of the activated patch. It goes up by one every time you activate a new patch.
-- **Activation**: the date and time the patch was activated, and how long ago that was.
-- **Patch expires**: the date and time when the patch expires. Shows **Not enabled** if [Patch Expiration](#medtrum-patch-expiration) is off.
+- **Última conexión**: cuánto tiempo hace que **AAPS** se conectó por última vez a la bomba.
+- **Último bolo**: el último bolo administrado.
+- **Batería**: la tensión actual de la batería del parche.
+- **Reservorio**: el nivel actual del reservorio.
+- **Número de serie**: el número de serie de tu base de bomba.
+- **Estado de la bomba**: el estado actual de la bomba. Por ejemplo **Activo** (el parche está activado y funciona con normalidad) o **Detenido** (el parche no está activado).
+- **Dosis basal base**: la tasa basal de tu perfil que funciona ahora.
+- **Basal temporal**: la tasa basal temporal, si hay una en curso.
+- **Bolo activo**: el bolo que se está administrando ahora mismo.
+- **Alarmas activas**: ver [más abajo](#medtrum-active-alarms).
+- **Tipo de bomba**: el modelo de tu base de bomba.
+- **Versión de firmware**: la versión del firmware de la base de la bomba.
+- **Parche n°**: el número de orden del parche activado. Sube en uno cada vez que activas un parche nuevo.
+- **Activación**: la fecha y hora en que se activó el parche, y cuánto tiempo hace de eso.
+- **El parche expira**: la fecha y hora en que caduca el parche. Muestra **No habilitado** si [Caducidad del parche](#medtrum-patch-expiration) está desactivado.
 
 (medtrum-active-alarms)=
-### Active alarms
+### Alarmas activas
 
-This row shows any alarms that are active right now, for example a low reservoir or an expiring patch.
+Esta fila muestra las alarmas que están activas ahora mismo, por ejemplo un reservorio bajo o un parche que va a caducar.
 
-### Refresh
+### Actualizar
 
-This button refreshes the status of the patch. It is only available when a patch is active and **AAPS** is not connected to the pump at that moment.
+Este botón actualiza el estado del parche. Solo está disponible cuando hay un parche activo y **AAPS** no está conectado a la bomba en ese momento.
 
-### Change Patch
+### Cambiar parche
 
-This button starts the wizard to change the patch. See [Activate patch](#medtrum-activate-patch) for more information.
+Este botón inicia el asistente para cambiar el parche. Consulta [Activar el parche](#medtrum-activate-patch) para más información.
 
 (medtrum-unpair)=
-### Unpair
+### Desemparejar
 
-This button only appears when **AAPS** knows a pump base. It clears the stored pump base serial number and disconnects. The next time you activate a patch, **AAPS** scans for a pump base again (the **Find Pump** step). Use this if you switch to a different pump base. Only do this when no patch is active.
+Este botón solo aparece cuando **AAPS** conoce una base de bomba. Borra el número de serie guardado de la base de la bomba y desconecta. La próxima vez que actives un parche, **AAPS** vuelve a buscar una base de bomba (el paso **Buscar bomba**). Usa esto si cambias a otra base de bomba. Hazlo solo cuando no haya ningún parche activo.
 
 (nano-reset-alarms)=
 
-### Reset alarms
+### Restablecer alarmas
 
-The **Reset alarms** button only appears on the pump screen when the patch has suspended itself, for example after a maximum daily insulin alarm. Tap it to reset the alarms and resume insulin delivery.
+El botón **Restablecer alarmas** solo aparece en la pantalla de la bomba cuando el parche se ha suspendido solo, por ejemplo después de una alarma de máximo diario de insulina. Tócalo para restablecer las alarmas y reanudar la administración de insulina.
 
-![Reset alarms](../images/medtrum/ResetAlarms.png)
+![Restablecer alarmas](../images/medtrum/ResetAlarms.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different, but the **Reset alarms** button works the same way.
+La captura de pantalla de arriba es de una versión anterior de **AAPS**. En **AAPS** 4 la pantalla de la bomba se ve diferente, pero el botón **Restablecer alarmas** funciona igual.
 ```
 
-## Switching phone, export/import settings
+## Cambiar de teléfono, exportar/importar ajustes
 
-When you switch to a new phone, do the following:
-* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone.
-* Transfer the settings file from the old phone to the new phone, and import it into **AAPS**. Tick **Also replace pump settings** on the import screen, otherwise the patch session is not transferred to the new phone.
+Cuando cambies a un teléfono nuevo, haz lo siguiente:
+* [Exportar ajustes](../Maintenance/ExportImportSettings.md) en tu teléfono antiguo.
+* Pasa el archivo de ajustes del teléfono antiguo al nuevo e impórtalo en **AAPS**. Marca **También reemplazar la configuración de la bomba** en la pantalla de importación; si no, la sesión del parche no se pasa al teléfono nuevo.
 
-The imported settings file must be from the patch session you are using now, otherwise the patch will not connect (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+El archivo de ajustes importado debe ser de la sesión del parche que usas ahora; si no, el parche no se conectará (ver [Bombas sin tubo](#ExportImportSettings-tubeless-pumps)).
 
-After a settings import, the driver syncs the history with the pump. This can take a while, depending on the age of the settings file. The progress ("Syncing records, ... left") is shown on the main screen:
+Después de importar los ajustes, el controlador sincroniza el historial con la bomba. Esto puede tardar un rato, según la antigüedad del archivo de ajustes. El progreso («Sincronizando registros, quedan ...») se muestra en la pantalla principal:
 
-![Sync progress](../images/medtrum/SyncProgress.png)
+![Progreso de la sincronización](../images/medtrum/SyncProgress.png)
 
 (medtrum-nano-troubleshooting)=
 
-## Troubleshooting
+## Solucionando problemas
 
-### Connection issues
+### Problemas de conexión
 
-If you have connection timeouts or other connection problems:
-- In the Android app settings for **AAPS**, set the Location permission to "Allow all the time".
-- Try enabling **Scan on connection error** (Medtrum settings > **Advanced Settings**) and **BT Watchdog** (**Settings** > **Pump**), see [Step 2](#medtrum-step-2).
+Si tienes tiempos de espera agotados u otros problemas de conexión:
+- En los ajustes de la app de Android para **AAPS**, pon el permiso de ubicación en «Permitir todo el tiempo».
+- Prueba a activar **Escanear por error de conexión** (ajustes de Medtrum > **Ajustes avanzados**) y **Guardián BT** (**Ajustes** > **Bomba**), ver [Paso 2](#medtrum-step-2).
 
-### Bluetooth issues
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+### Problemas de Bluetooth
+Para problemas conocidos con conexiones Bluetooth, cortes de conexión de la bomba o del pod, o problemas de activación y conexión, consulta [Solución de problemas de Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
-### Activation interrupted
+### Activación interrumpida
 
-If the activation is interrupted, for example by an empty phone battery or a phone crash, you can resume it. Tap **Change Patch** on the pump screen and follow the steps in [Resume interrupted activation](#nano-resume-interrupted-activation).
+Si se interrumpe la activación, por ejemplo porque la batería del teléfono se agota o el teléfono falla, puedes reanudarla. Toca **Cambiar parche** en la pantalla de la bomba y sigue los pasos de [Reanudar una activación interrumpida](#nano-resume-interrupted-activation).
 
-### Preventing patch faults
+### Evitar fallos del parche
 
-The patch can give a variety of errors. To prevent frequent errors:
-- Make sure the pumpbase is properly seated in the patch and no gaps are visible.
-- When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
+El parche puede dar varios errores. Para evitar errores frecuentes:
+- Asegúrate de que la base de la bomba está bien encajada en el parche y de que no se ven huecos.
+- Al llenar el parche, no hagas demasiada fuerza con el émbolo. No intentes llenar el parche por encima del máximo de tu modelo.
 
-## Where to get help
+## Dónde obtener ayuda
 
-All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+Todo el desarrollo del controlador de Medtrum lo hace la comunidad de forma **voluntaria**; te pedimos que lo tengas en cuenta y sigas estas pautas antes de pedir ayuda:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Nivel 0:** Lee la sección de esta documentación sobre tu problema, para entender bien cómo debe funcionar la función que te da problemas.
+-  **Nivel 1:** Si sigues teniendo problemas que no puedes resolver con este documento, ve al canal *#Medtrum* en **Discord** con [este enlace de invitación](https://discord.gg/4fQUWHZ4Mw).
+-  **Nivel 2:** Busca en las incidencias existentes para ver si tu problema ya se ha informado en [Issues](https://github.com/nightscout/AAPS/issues) si existe, confirma, comenta o añade información sobre tu problema. Si no existe, crea una [nueva incidencia](https://github.com/nightscout/AndroidAPS/issues) y adjunta [tus archivos de registro](../GettingHelp/AccessingLogFiles.md).
+-  **Ten paciencia: la mayoría de los miembros de nuestra comunidad son voluntarios con buena voluntad, y resolver problemas a menudo requiere tiempo y paciencia tanto de los usuarios como de los desarrolladores.**
