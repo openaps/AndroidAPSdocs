@@ -44,11 +44,11 @@ The blood glucose values are received by the xDrip app on the smartphone.
 
 ### Schritt 3: Sensor in xDrip starten
 
-In xDrip start the sensor with "Start Sensor" and "not today". Es ist nicht notwendig, das Mobiltelefon auf den Sensor zu halten. Tatsächlich startet "Start Sensor" physisch keinen Libre 3 Sensor oder interagiert auch nicht mit ihnen. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. Wenn verfügbar, gib zwei blutige Messwerte für die Anfangskalibrierung ein. Now the blood glucose values should be displayed in xDrip every 5 minutes. Übersprungene Werte, weil Du zum Beispiel zu weit von Deinem Telefon entfernt warst, werden nicht nachgefüllt.
+In xDrip start the sensor with "Start Sensor" and "not today". Es ist nicht notwendig, das Mobiltelefon auf den Sensor zu halten. Tatsächlich startet "Start Sensor" physisch keinen Libre 3 Sensor oder interagiert auch nicht mit ihnen. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Übersprungene Werte, weil Du zum Beispiel zu weit von Deinem Telefon entfernt warst, werden nicht nachgefüllt.
 
 Warte mindestens 15-20 Minuten, wenn noch keine Daten vorhanden sind.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. Du kannst nach der Aktivierung blutig messen und eine neue erste Kalibrierung erfassen.
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Step 4: Configure AAPS
 
