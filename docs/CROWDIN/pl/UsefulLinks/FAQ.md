@@ -277,7 +277,7 @@ To turn on engineering mode:
 
 Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
 
-### Objectives
+### Zadania
 
 #### I'm stuck on an objective and need help.
 
