@@ -71,15 +71,15 @@
 ## November 2024
 
 - Aktualizácia stránky [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganizácia obsahu o [inteligentných hodinkách s Wear OS](../WearOS/BuildingAapsWearOS.md) @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
 
 ## Október 2024
 
 - Aktualizácia viacerých stránok:
-  - [Ako dlho to bude trvať](#preparing-how-long-will-it-take), [Prehľad komponentov](../DailyLifeWithAaps/CobCalculation.md), [Plnenie cieľov](../SettingUpAaps/CompletingTheObjectives.md), [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md), [Konfigurácia (Config Builder)](../SettingUpAaps/ConfigBuilder.md) a [Nastavenia](../SettingUpAaps/Preferences.md), [Obrazovky AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [Výpočet COB](../DailyLifeWithAaps/CobCalculation.md), [Dynamická ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Návod na zostavenie pre Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technická práca (proces nasadzovania dokumentácie, organizácia súborov...) @psonnerat a @emilise
+- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
 
 ***
 
@@ -102,7 +102,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 
 ## Január 2022
 
-- [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio) – aktualizácia @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
 ## December 2021
 
@@ -113,7 +113,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 
 - Odporúčané postupy pri kalibrácii senzora Libre 2
 - [ISF](../UsefulLinks/FAQ.md) – nová formulácia popisu vplyvu
-- Aktualizácia stránky [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Odstránená upravená aplikácia [Dexcom](../CompatibleCgms/DexcomG6.md), pretože je zastaraná
 
 ## Október 2021
@@ -166,7 +166,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 ## September 2020
 
 - Veľká aktualizácia pre novú verziu AAPS 2.7
-- Podrobnosti nájdete v `release notes <Releasenotes-version-2-7-0>`
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## Jún 2020
 
@@ -191,7 +191,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 - [Zostavenie APK v Android Studiu 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS s firmvérom v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **sa s AAPS momentálne nedá používať!**
 - [Predĺžený bolus a prepnutie na otvorený okruh](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Aktualizácia APK v Android Studiu 3.6.1](../Maintenance/UpdateToNewVersion)
+- [Aktualizácia APK v Android Studiu 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
 ## Február 2020
 
@@ -229,7 +229,7 @@ Dokumentácia AAPS 3.1 je dostupná [tu](https://androidaps.readthedocs.io/en/3.
 - [Nový návod pre Freestyle Libre 2](../CompatibleCgms/Libre2.md)
 - [Prepnutie profilu s percentom – príklad](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [Aktualizácia SMS príkazov](../RemoteFeatures/SMSCommands.md)
-- [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio)
+- [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio.md)
 - [Riešenie problémov – zbierka odkazov](../GettingHelp/GeneralTroubleshooting.md)
 - Aktualizácia – rýchly prehľad pre skúsených používateľov
 - Dokumentácia – aktualizácia stránok o [úpravách](#edit-the-docs-code-syntax) a [preklade](#translations-translation-of-the-documentation).
