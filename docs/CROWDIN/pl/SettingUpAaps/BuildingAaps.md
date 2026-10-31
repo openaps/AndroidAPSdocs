@@ -1,50 +1,50 @@
-# Building AAPS
+# Budowanie AAPS
 
-## Build yourself instead of download
+## Zbuduj sam zamiast pobierać
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplikacji AAPS (pliku apk) nie można pobrać gotowej z powodu przepisów dotyczących wyrobów medycznych. Zbudowanie aplikacji na własny użytek jest legalne, ale NIE WOLNO Ci przekazywać jej kopii innym osobom!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Szczegóły znajdziesz na stronie [FAQ](../UsefulLinks/FAQ.md).
 
 ---
 
-Three methods are available to build the AAPS app:
+Aplikację AAPS możesz zbudować na trzy sposoby:
 
-### Build with a browser (recommended)
+### Budowanie w przeglądarce (zalecane)
 
-You can build the app with your smartphone using GitHub Actions. From an Android phone, the [AAPS Builder](#aaps-builder) setup page walks you through it, and you start each build yourself. From a computer or an iPhone, you can also build with a fork and save the app in your Google Drive.
+Możesz zbudować aplikację na smartfonie za pomocą GitHub Actions. Na telefonie z Androidem przeprowadzi Cię przez to strona konfiguracji [AAPS Builder](#aaps-builder), a każde budowanie uruchamiasz sam. Na komputerze albo iPhonie możesz też budować z forkiem i zapisać aplikację na swoim Dysku Google.
 
-**[Follow these instructions.](./BrowserBuild.md)**
-
-----
-
-### Build with Android Studio
-
-You can build the app with your computer using Android Studio. This used to be the only build option, nowadays Android Studio is mostly used by developers who consider making code changes.
-
-**[Follow these instructions.](./ComputerBuild.md)**
+**[Postępuj zgodnie z tymi instrukcjami.](./BrowserBuild.md)**
 
 ----
 
-### Build using the command-line
+### Budowanie w Android Studio
 
-This option is intended for those who prefer to build AAPS in local command-line, without installing Android Studio.
+Możesz zbudować aplikację na komputerze za pomocą Android Studio. Kiedyś była to jedyna możliwość budowania, dziś z Android Studio korzystają głównie programiści, którzy chcą zmieniać kod.
 
-**[Follow these instructions.](./CLIBuild.md)**
+**[Postępuj zgodnie z tymi instrukcjami.](./ComputerBuild.md)**
+
+----
+
+### Budowanie z wiersza poleceń
+
+Ta opcja jest dla osób, które wolą budować AAPS lokalnie w wierszu poleceń, bez instalowania Android Studio.
+
+**[Postępuj zgodnie z tymi instrukcjami.](./CLIBuild.md)**
 
 ----
 
 (building-aaps-troubleshooting)=
-## If the build fails
+## Jeśli budowanie się nie uda
 
-Each build method has its own troubleshooting section:
+Każda metoda budowania ma własną sekcję rozwiązywania problemów:
 
-* **AAPS Builder**: [AAPS Builder troubleshooting](#aaps-builder-troubleshooting)
-* **Browser build** from a computer or an iPhone: [Browser build troubleshooting](#aaps-ci-troubleshooting)
-* **Android Studio**: [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
+* **AAPS Builder**: [Rozwiązywanie problemów z AAPS Builder](#aaps-builder-troubleshooting)
+* **Budowanie w przeglądarce** na komputerze albo iPhonie: [Budowanie w przeglądarce: rozwiązywanie problemów](#aaps-ci-troubleshooting)
+* **Android Studio**: [Rozwiązywanie problemów z Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 
-Lost your keystore or its password? See [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Zgubiłeś magazyn kluczy albo jego hasło? Zobacz [Ponowna instalacja AAPS z nowym magazynem kluczy](#reinstall-aaps).
 
-If the app is built but does not install on your phone, see [Transferring and installing AAPS](TransferringAndInstallingAaps.md).
+Jeśli aplikacja jest zbudowana, ale nie instaluje się na telefonie, zobacz [Przenoszenie i instalacja AAPS na smartfonie](TransferringAndInstallingAaps.md).
 
-If your problem is not listed, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Jeśli Twojego problemu nie ma na liście, zobacz [Gdzie mogę uzyskać pomoc?](../GettingHelp/WhereCanIGetHelp.md).
