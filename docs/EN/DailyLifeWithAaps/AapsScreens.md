@@ -300,6 +300,8 @@ This works the same way on the [additional graphs](#aaps-screens-additional-grap
 
 When the clock of the phone jumped, at a daylight saving change or in a new time zone, a dashed vertical line marks that moment in the BG graph, with a small clock icon at its foot. The same dashed line runs through the [additional graphs](#aaps-screens-additional-graphs) below.
 
+![The clock-change marker: a dashed line with a clock icon, next to the now line](../images/main/graph_clock_change.png)
+
 (AapsScreens-activate-optional-information)=
 #### Activate optional information
 
@@ -592,7 +594,11 @@ The **Carb time** field is for pre-bolusing so you can tell the system that ther
 
 ![Set alarm for future carbs](../images/Home2021_BolusWizard_EatingReminder.png)
 
-The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+The reminder starts when the bolus has been delivered. While it runs, a **Time to eat** bar on the main screen counts down, with **Stop** and **+5 min**. **+5 min** moves the end of the wait five minutes later, and the bar shows the total wait. When the time has come, the reminder rings with its own sound, a soft kitchen timer. Besides **Silence alarm** (the screen stays open) and **Silence and close**, the alarm screen offers **+5 min**, which starts a new five-minute wait. Once it has rung, the bar reads *The time is up* with **+5 min** and **Dismiss**; **Silence and close** removes the bar too. The bar and the alarm are also shown on **AAPSClient**, and on the [watch](#WearOsSmartwatch-wizard-carb-time). The reminder does not create a timer in your phone's clock app. If Android does not let **AAPS** set alarms, the wizard asks you to allow *Alarms and reminders* for **AAPS** in the Android settings. The bell is not offered for a carb time in the past.
+
+![The Time to eat bar on the main screen, with +5 min and Stop](../images/main/main_eat_reminder_bar.png)
+
+![The Time to eat alarm screen: +5 min, Silence alarm, Silence and close](../images/main/eat_reminder_alarm.png)
 
 The **BG** field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. When the reading is recent, the **BG** row stays folded. The field follows new readings while the wizard is open, until you change it yourself.
 
