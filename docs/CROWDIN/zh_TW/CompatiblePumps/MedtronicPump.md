@@ -13,14 +13,14 @@
 
 你可以查看如何在[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect)或[LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware)中檢查幫浦韌體。
 
-    {contents} Table of contents
+    {contents} 目錄
     :depth: 1
     :local: true
 
 ## 幫浦與AAPS的功能
 
-* Requires a RileyLink-compatible device to communicate with **AAPS**.
-* Automatic DST and timezone handling.
+* 需要 RileyLink 相容裝置，才能與 **AAPS** 通訊。
+* 自動夏令時間（DST）與時區處理.
 
 ## 硬體和軟體需求
 
@@ -41,8 +41,8 @@
 為了讓 AAPS 遠端發送指令，應在幫浦上配置以下設定。每個設定的步驟如下所示（適用於美敦力 715）。具體步驟可能會根據幫浦類型和/或韌體版本有所不同。
 
 - **啟用幫浦上的遠端模式**（在幫浦上按下 Act 並前往工具 -> 遠端選項，選擇開啟，並在下一個畫面中新增 ID，輸入任意隨機 ID，如 111111）。遠端 ID 列表中至少需要一個 ID，幫浦才會接受遠端通訊。
-- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. 幫浦允許的最大值為每小時 34.9 單位。
-- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. 幫浦允許的最大值為 25 單位。
+- **設定最大基礎率**（在幫浦上按下 Act，前往「基礎率」，然後選擇「最大基礎率」）。例如，將此值設定為最大標準基礎率的 4 倍，即可使用 400% 的臨時基礎率。幫浦允許的最大值為每小時 34.9 單位。
+- **設定最大注射量**（在幫浦上按下 Act，前往「注射」，然後選擇「最大注射量」）。這是幫浦所接受的最大注射量。幫浦允許的最大值為 25 單位。
 - **設定設定檔為標準**。（在幫浦上按下 Act 並前往基礎率，然後選擇模式）幫浦只需要一個設定檔，因為 AAPS 會在你的手機上管理不同的設定檔。不需要其他模式。
 - **設定臨時基礎率類型**（在幫浦上按下 Act 並前往基礎率，然後選擇臨時基礎率類型）。選擇絕對值（不要選擇百分比）。
 
@@ -53,31 +53,31 @@
 - 有兩種方式可在 AAPS 中配置你的美敦力幫浦：
 
 1. 使用全新安裝時的設置嚮導
-2. In **Configuration** > **Pump**, by selecting **Medtronic**
+2. 在**組態** > **幫浦**中，選擇 **Medtronic**
     
-    ![Configuration > Pump with the Medtronic plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+    ![使用 Medtronic 外掛的「組態」>「幫浦」](../images/v4/Configuration/configuration_pump_list_3.png)
     
-    Once it is selected, the **Medtronic** card shows two buttons, **Settings** and **Open plugin**:
+    選取後，**Medtronic** 卡片上會顯示兩個按鈕：**設定**和**開啟外掛**：
     
-    ![The Medtronic plugin selected in Configuration > Pump](../images/v4/Pumps/medtronic_enabled.png)
+    ![在「組態」>「幫浦」中選取的 Medtronic 外掛](../images/v4/Pumps/medtronic_enabled.png)
     
-    **Settings** opens the settings of the Medtronic driver:
+    **設定**會開啟 Medtronic 驅動程式的設定：
     
-    ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
+    ![Medtronic 驅動程式設定](../images/v4/Pumps/medtronic_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
+    **開啟外掛**（或「**管理**」>「**幫浦**」）會開啟 Medtronic 幫浦畫面。尚未配對幫浦時，畫面如下：
     
-    ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
+    ![配對前的 Medtronic 幫浦畫面](../images/v4/Pumps/medtronic_pump_screen.png)
 
 在使用設定嚮導配置美敦力幫浦時，可能因藍牙問題而無法完成設置（例如，無法成功連接到幫浦）。如果發生這種情況，你應該選擇虛擬幫浦選項來完成配置，並使用選項 2 進行進一步問題排除。
 
-While setting up AAPS to work with your medtronic pump you need to set the following items in **Settings** (see the settings picture above):
+設定 AAPS 與 Medtronic 幫浦搭配使用時，請在**設定**中設定以下項目（請參閱上方的設定圖片）：
 
 - **幫浦序列號**：顯示在幫浦背面，以 SN 開頭。您應該只輸入顯示的 6 位數字，沒有任何字母字符（例如：123456）。
 - **幫浦型號**：你使用的幫浦型號（例如 522）。 
 - **幫浦頻率**：有兩個選項，根據你的幫浦最初發行的地區。如果你不確定選擇哪個選項，請檢查[常見問題解答](#MedtronicPump-faq)： 
-    - for US & Canada, frequency used is 916 MHz
-    - for Worldwide, frequency used is 868 MHz
+    - 美國和加拿大使用的頻率為 916 MHz
+    - 全球其他地區使用的頻率為 868 MHz
 - **幫浦最大基礎率（U/h）**：這需要與你的幫浦上設置的設定相符（請參閱上方的幫浦配置）。再次提醒，此設定必須謹慎選擇，因為他將決定 AAPS 可透過你的基礎率提供的胰島素量。這將有效地設置最大臨時基礎率。作為範例，將此數值設置為你最大標準基礎率的四倍，將允許 400% 的臨時基礎率。幫浦允許的最大值為每小時 34.9 單位。
 - **幫浦最大注射量（U）**（每小時）：這需要與你的幫浦上設置的設定相符（請參閱上方的幫浦配置）。此設定應謹慎考慮，因為他決定了 AAPS 可設置的最大注射量。
 - **注射啟動前的延遲時間（秒）**：注射發出後到實際發送指令到幫浦的時間（以秒為單位）。這段時間允許使用者在錯誤發送注射指令時取消注射。無法取消已透過 AAPS 啟動的注射。取消已開始的注射的唯一方法是手動暫停幫浦，然後再重新啟動。
@@ -89,29 +89,29 @@ While setting up AAPS to work with your medtronic pump you need to set the follo
     - 鋰電池（擴展檢視）
     - 鎳鋅電池（擴展檢視）
     - 鎳氫電池（擴展檢視）
-- **Use Scanning**: Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. 這應能提高與裝置連線的可靠性。
+- **使用掃描**：連線至 RileyLink 相容裝置前，先啟動藍牙掃描。這應能提高與裝置連線的可靠性。
 
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink**: This feature is only supported on newer link devices such as the EmaLink or OrangeLink. The value is shown as **RileyLink Battery** on the Medtronic pump screen.
-- **Set neutral temp basals**: By default Medtronic pumps beep on the hour when a temporary basal rate is active. 啟用此選項可以通過在小時變更時中斷臨時基礎來減少聽到的嗶聲數量。
+- **顯示 OrangeLink/EmaLink/DiaLink 回報的電池電量**：此功能僅適用於較新的連結裝置，例如 EmaLink 或 OrangeLink。此數值會顯示在 Medtronic 幫浦畫面中的**RileyLink 電池電量**欄位。
+- **設定中性臨時基礎率**：Medtronic 幫浦在臨時基礎率啟用時，預設會每小時整點發出嗶聲。啟用此選項可以通過在小時變更時中斷臨時基礎來減少聽到的嗶聲數量。
 
 (pairing-your-rileylink-compatible-device)=
 
-### Pairing your RileyLink compatible device
+### 配對 RileyLink 相容裝置
 
-Your RileyLink compatible device is paired from the Medtronic pump screen, not from the Bluetooth menu of your phone:
+請在 Medtronic 幫浦畫面中配對 RileyLink 相容裝置，而非在手機的藍牙選單中配對：
 
-- Open the pump screen (**Manage** > **Pump**, or **Open plugin** on the Medtronic card in **Configuration** > **Pump**).
-- Tap **Pair RileyLink**. **AAPS** scans for nearby RileyLink compatible devices.
-- Tap your device in the list. When **RileyLink paired successfully** is shown, tap **OK**.
+- 開啟幫浦畫面（「**管理**」>「**幫浦**」，或在「**組態**」>「**幫浦**」中的 Medtronic 卡片上點選「**開啟外掛**」）。
+- 點選**配對 RileyLink**。 **AAPS** 會掃描附近的 RileyLink 相容裝置。
+- 點選清單中的裝置。畫面顯示**RileyLink 配對成功**時，點選**確定**。
 
-## Medtronic pump screen
+## Medtronic 幫浦畫面
 
-To open the Medtronic pump screen, go to **Manage** > **Pump**. The pump screen displays the current pump status information along with some Medtronic specific actions (see the pump screen picture above).
+若要開啟 Medtronic 幫浦畫面，請前往「**管理**」>「**幫浦**」。幫浦畫面會顯示目前的幫浦狀態資訊，以及 Medtronic 專用操作（請參閱上方的幫浦畫面圖片）。
 
 - **RileyLink 狀態**：手機與 Rileylink 相容裝置之間連線的目前狀態。此狀態應始終顯示為已連線。任何其他狀態可能需要使用者介入。 
-- **RileyLink 電池**：顯示 EmaLink 或 OrangeLink 裝置的目前電池電量。 Only shown if **Show battery level reported by OrangeLink/EmaLink/DiaLink** is enabled in the Medtronic settings.
+- **RileyLink 電池**：顯示 EmaLink 或 OrangeLink 裝置的目前電池電量。只有在 Medtronic 設定中啟用**顯示 OrangeLink/EmaLink/DiaLink 回報的電池電量**時才會顯示。
 - **幫浦狀態**：幫浦連線的目前狀態。由於幫浦不會始終保持連線，主要會顯示睡眠圖示。還有許多其他可能的狀態，例如當 AAPS 嘗試發送指令時顯示“正在喚醒”，或其他可能的幫浦指令，如“獲取時間”、“設置 TBR”等。
-- **Battery**: Shows battery status based on the value chosen for **Battery Type (Power View)** in the Medtronic settings.
+- **電池**：根據 Medtronic 設定中選擇的**電池類型（Power View）**顯示電池狀態。
 - **最後連線：**最後一次成功的幫浦連線距今有多久。
 - **最後注射：**最後一次成功的注射距今有多久。
 - **基礎基礎率**：這是目前小時內幫浦運作的基礎基礎率，根據你的活動設定檔設定。
@@ -119,24 +119,24 @@ To open the Medtronic pump screen, go to **Manage** > **Pump**. The pump screen 
 - **儲液筒**：顯示儲液筒中的胰島素量（至少每小時更新一次）。
 - **錯誤**：如果有問題，則顯示錯誤文字（主要顯示配置中的錯誤）。
 
-At the bottom of the screen there are these buttons:
+畫面底部有以下按鈕：
 
 - **重新整理**：用於重新整理幫浦的目前狀態。此功能應僅在連線長時間中斷時使用，因為這將需要完整的資料重新整理（檢索歷史紀錄、獲取/設置時間、獲取設定檔、獲取電池狀態等）。
-- **Pair RileyLink**: Finds and pairs your RileyLink compatible device (see [above](#pairing-your-rileylink-compatible-device)).
-- **Pump history**: Shows pump history (see [below](#MedtronicPump-pump-history)).
-- **RL Stats**: Shows RL Stats (see [below](#MedtronicPump-rl-status-rileylink-status)).
-- **Wake and Tune Up** and **Reset RileyLink**: See [Actions](#medtronic-actions) below.
-- **Clear Bolus Block**: Only shown for a short time after a bolus, while **AAPS** waits for the pump to finish delivering it. Tapping it ends this wait.
+- **配對 RileyLink**：尋找並配對 RileyLink 相容裝置（請參閱[上方](#pairing-your-rileylink-compatible-device)）。
+- **幫浦歷史記錄**：顯示幫浦歷史記錄（請參閱[下方](#MedtronicPump-pump-history)）。
+- **RL 統計資料**：顯示 RL 統計資料（請參閱[下方](#MedtronicPump-rl-status-rileylink-status)）。
+- **喚醒並調整**和**重設 RileyLink**：請參閱下方的[操作](#medtronic-actions)。
+- **清除注射阻擋**：注射後的一小段時間內才會顯示，此時 **AAPS** 正在等待幫浦完成注射。點選此按鈕即可結束等待。
 
 (MedtronicPump-pump-history)=
 
 ## 幫浦歷史紀錄
 
-![Pump history screen with its filter buttons](../images/Medtronic03.png)
+![含篩選按鈕的幫浦歷史記錄畫面](../images/Medtronic03.png)
 
-幫浦歷史紀錄每 5 分鐘檢索一次並存儲在本地。僅存儲過去 24 小時的歷史紀錄。 This allows for a convenient way to see pump behavior should that be required. The only items stored are those relevant to AAPS and will not include a configuration function that has no relevance.
+幫浦歷史紀錄每 5 分鐘檢索一次並存儲在本地。僅存儲過去 24 小時的歷史紀錄。若有需要，可透過此功能輕鬆查看幫浦的運作情況。只會儲存與 AAPS 相關的項目，不會包含無關的組態功能。
 
-Tap **Pump history** on the pump screen to open it. By default **All** is selected. Tap one of the filter buttons at the top (for example **Boluses**, **Basals** or **Alarms**) to show only one type of entry.
+在幫浦畫面上點選**幫浦歷史記錄**即可開啟。預設會選取**全部**。點選頂端的其中一個篩選按鈕（例如**注射**、**基礎率**或**警報**），即可只顯示一種類型的項目。
 
 (MedtronicPump-rl-status-rileylink-status)=
 
@@ -153,10 +153,10 @@ RL 狀態對話框有兩個標籤：
 
 ## 操作
 
-When the Medtronic driver is used, two additional actions are available on the pump screen (**Manage** > **Pump**):
+使用 Medtronic 驅動程式時，幫浦畫面（「**管理**」>「**幫浦**」）會多出兩個操作：
 
-- **喚醒並調整**：如果 AAPS 長時間未能連線到你的幫浦（應每 5 分鐘連線一次），你可以強制進行調整。這將嘗試透過搜尋幫浦使用的所有可能無線電頻率來聯繫幫浦。若成功連線，則成功頻率將設置為預設值。 While the tune-up runs, the RileyLink status on the pump screen shows it. If a tune-up fails (for example because the pump was out of range), **AAPS** tries again by itself about every 10 minutes.
-- **Reset RileyLink** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
+- **喚醒並調整**：如果 AAPS 長時間未能連線到你的幫浦（應每 5 分鐘連線一次），你可以強制進行調整。這將嘗試透過搜尋幫浦使用的所有可能無線電頻率來聯繫幫浦。若成功連線，則成功頻率將設置為預設值。調校期間，幫浦螢幕上會顯示 RileyLink 的狀態。如果調校失敗（例如幫浦超出訊號範圍），**AAPS** 會自行每隔約 10 分鐘重試一次。
+- **重設 RileyLink** - 如果您重設了相容於 RileyLink 的裝置，可能需要使用這個功能，讓裝置重新完成設定（設定頻率、頻率類型及編碼）。
 
 ## 重要提示
 
@@ -166,7 +166,7 @@ AAPS 使用序列號進行同步，序列號會公開到 NS。因為了解舊美
 
 ### OpenAPS 用戶
 
-OpenAPS 用戶應注意，AAPS 與美敦力的使用方式與 OpenAPS 完全不同。使用 AAPS 時，與幫浦互動的主要方式是透過手機。 In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. 這與使用 OpenAPS 時非常不同，因為至少部分注射通常是透過快速注射按鈕完成的。如果使用幫浦手動輸送注射，而 AAPS 同時嘗試輸送注射，可能會出現問題。在這種情況下有檢查機制來防止問題發生，但仍應盡量避免。
+OpenAPS 用戶應注意，AAPS 與美敦力的使用方式與 OpenAPS 完全不同。使用 AAPS 時，與幫浦互動的主要方式是透過手機。一般情況下，只有在更換藥匣時才需要使用幫浦選單。這與使用 OpenAPS 時非常不同，因為至少部分注射通常是透過快速注射按鈕完成的。如果使用幫浦手動輸送注射，而 AAPS 同時嘗試輸送注射，可能會出現問題。在這種情況下有檢查機制來防止問題發生，但仍應盡量避免。
 
 ### 日誌紀錄
 
@@ -184,9 +184,9 @@ OpenAPS 用戶應注意，AAPS 與美敦力的使用方式與 OpenAPS 完全不�
 
 當你的手機切換到新時間時，AAPS 將自動偵測時區變更並更新幫浦的時間。
 
-Traveling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2), which will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Traveling west, however, can result in issues as you are effectively going back in time, which can result in incorrect IOB data.
+向東旅行表示您需要在目前時間上增加時數（例如從 GMT+0 到 GMT+2），這不會造成任何問題，因為時間不會重疊（例如，不會出現同一個小時重複兩次的情況）。不過，向西旅行可能會造成問題，因為實際上您是回到過去的時間，這可能導致 IOB 資料不正確。
 
-The issues seen when traveling west are known to the developers and work on a possible solution is ongoing. 目前，請注意此問題可能會發生，並在更改時區時仔細監控。目前請注意，這個問題可能會發生，並在更改時區時仔細監控。
+開發人員已知向西旅行時會出現這些問題，目前正持續研究可能的解決方案。目前，請注意此問題可能會發生，並在更改時區時仔細監控。目前請注意，這個問題可能會發生，並在更改時區時仔細監控。
 
 ### GNARL 是否為完全相容的 Rileylink 相容裝置？
 
@@ -200,13 +200,13 @@ GNARL 代碼完全支援 AAPS 美敦力驅動程式使用的所有功能，這�
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### What to do if I lose connection to RileyLink and/or pump?
+### 如果我與 RileyLink 和／或幫浦中斷連線，該怎麼辦？
 
 有多種選項可以嘗試解決連線問題。
 
-- Tap **Wake and Tune Up** on the pump screen (**Manage** > **Pump**) as detailed above.
+- 如上所述，在幫浦螢幕上點選 **喚醒並調校**（**管理** > **幫浦**）。
 - 停用手機上的藍牙，等待 10 秒鐘，然後重新啟用。這將強制 Rileylink 裝置重新連線到手機。
-- 重置 Rileylink 裝置。 You must then tap **Reset RileyLink** on the pump screen (**Manage** > **Pump**).
+- 重置 Rileylink 裝置。接著，您必須在幫浦螢幕上點選 **重設 RileyLink**（**管理** > **幫浦**）。
 - 其他使用者發現，當其他方法無效時，以下步驟能有效恢復連線： 
     1. 重新啟動手機
     2. *同時* 重新啟動 Rileylink 裝置
@@ -220,23 +220,23 @@ GNARL 代碼完全支援 AAPS 美敦力驅動程式使用的所有功能，這�
 
 - NA - 北美（在頻率選擇中需要選擇“美國和加拿大（916 MHz）”）
 - CA - 加拿大（在頻率選擇中需要選擇“美國和加拿大（916 MHz）”）
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
+- WW - 全球通用（選擇頻率時，請選取「全球通用（868 MHz）」）
 
 (MedtronicPump-pump-unreachable)=
 
-### How to fix the "pump unreachable" error
+### 如何修正「無法連線至幫浦」錯誤
 
-Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
+部分 Medtronic 幫浦在更新 **AAPS** 後，會顯示「無法連線至幫浦」錯誤。若要修正此問題，請變更編碼類型：
 
-1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
-2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
+1. 前往 **組態設定** > **幫浦**，然後點選 **Medtronic** 卡片上的 **設定**。
+2. 將 **Medtronic 編碼**設為 **Hardware 4b6b Encoding**。
 
 ## 如何尋求協助
 
-Development of the Medtronic driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Medtronic 驅動程式由社群成員以**志工**方式開發。尋求協助前，請先：
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **閱讀**本文件中相關的章節，確認該功能的預期運作方式。
+2. 在 [Discord](https://discord.gg/4fQUWHZ4Mw) 的 *#AAPS* 頻道，或其他[社群頻道](../GettingHelp/WhereCanIGetHelp.md)中**詢問**。
+3. 若要**回報錯誤**，請先搜尋[現有問題](https://github.com/nightscout/AndroidAPS/issues)；如果沒有找到您的問題，請[建立新問題](https://github.com/nightscout/AndroidAPS/issues)，並附上您的[記錄檔](../GettingHelp/AccessingLogFiles.md)。
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+尋求協助時，請提供手機品牌和型號、Android 版本、**AAPS** 版本，以及清楚描述問題的內容（發生了什麼變化、上次正常運作的時間）。
