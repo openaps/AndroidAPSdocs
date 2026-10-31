@@ -1,6 +1,6 @@
 # Tidepool
 
-Tidepool to narzędzie innej firmy. Zbiera dane o glikemii, insulinie i węglowodanach (oraz notatki, które dodajesz do zabiegów leczenia). Możesz je analizować i udostępniać swojemu zespołowi diabetologicznemu. Od wersji AAPS 3.2 Tidepool może zastąpić Nightscout przy spełnieniu części Zadania 1. Może też być używany razem z Nightscout jako dodatkowa platforma raportów, która dobrze współpracuje z placówkami medycznymi. Może to być dobra opcja dla dzieci używających AAPS, które chcą mieć zdalne monitorowanie i sterowanie z Nightscout, ale też platformę raportów, z którą zespół diabetologiczny czuje się pewniej.
+Tidepool to narzędzie innej firmy. Zbiera dane o glikemii, insulinie i węglowodanach (oraz notatki, które dodajesz do wpisów leczenia). Możesz je analizować i udostępniać swojemu zespołowi diabetologicznemu. Od wersji AAPS 3.2 Tidepool może zastąpić Nightscout przy spełnieniu części Zadania 1. Może też być używany razem z Nightscout jako dodatkowa platforma raportów, która dobrze współpracuje z placówkami medycznymi. Może to być dobra opcja dla dzieci używających AAPS, które chcą mieć zdalne monitorowanie i sterowanie z Nightscout, ale też platformę raportów, z którą zespół diabetologiczny czuje się pewniej.
 
 Ważne: Tidepool służy tylko do raportów. NIE jest to aplikacja do obserwowania danych w czasie rzeczywistym. Jeśli potrzebujesz obserwujących poza głównym telefonem z AAPS, musisz także skonfigurować Nightscout.
 
