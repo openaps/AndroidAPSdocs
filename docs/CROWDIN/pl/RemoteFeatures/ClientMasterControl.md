@@ -249,6 +249,7 @@ To najważniejsza nowa możliwość w v4. Bolus uruchomiony na urządzeniu opiek
 Urządzenie opiekuna nigdy samo nie decyduje o podanej dawce. Urządzenie pacjenta oblicza ją od nowa i ogranicza, Ty potwierdzasz dawkę podaną przez urządzenie pacjenta i dopiero wtedy jest ona podawana.
 ```
 
+(clientmastercontrol-when-the-master-is-offline)=
 ### Gdy urządzenie pacjenta jest offline
 
 Jeśli urządzenie pacjenta jest nieosiągalne (telefon jest wyłączony lub uśpiony, nie jest połączony z Nightscout albo websockety nie działają), akcje sterowania na urządzeniu opiekuna są **blokowane, zanim cokolwiek zostanie wysłane**, i widzisz jasny komunikat. Nic nie zostaje wykonane tylko w połowie.
@@ -302,7 +303,7 @@ W ustawieniach ta sama mała **ikona telefonu** oznacza pojedyncze ustawienia, k
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Urządzenie pacjenta decyduje o zapisanej wartości, dlatego zmiana elementu konfiguracji sterowanego przez urządzenie pacjenta lub ustawienia dwukierunkowego z urządzenia opiekuna wymaga, aby urządzenie pacjenta było **osiągalne**. Gdy urządzenie pacjenta jest offline, te elementy są wyłączone na urządzeniu opiekuna (zobacz [Gdy urządzenie pacjenta jest offline](#when-the-master-is-offline)).
+Urządzenie pacjenta decyduje o zapisanej wartości, dlatego zmiana elementu konfiguracji sterowanego przez urządzenie pacjenta lub ustawienia dwukierunkowego z urządzenia opiekuna wymaga, aby urządzenie pacjenta było **osiągalne**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
