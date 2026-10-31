@@ -6,7 +6,7 @@
 ```{admonition} Wording used on this page
 :class: note
 - **Client** = een telefoon waarop **AAPSClient** draait.
-- **Master** = de hoofdtelefoon met **AAPS** die de pomp beheert en de loop uitvoert.
+- **Master** = de telefoon met **AAPS** die de pomp beheert en de loop uitvoert.
 ```
 
 ```{admonition} iPhone version in development
@@ -41,13 +41,13 @@ Je krijgt **AAPSClient** op dezelfde manier als **AAPS**, zie [AAPSClient downlo
 
 Bij de eerste start doorloopt **AAPSClient** dezelfde **Setup Wizard** die je kent van **AAPS**, maar met veel minder stappen: op een volger stel je geen profiel, insuline, pomp, APS of doelen in:
 
-1. **Welkom**, **licentieovereenkomst**, **Machtigingen** en **Hoofdwachtwoord**: hetzelfde als in de hoofdapp, zie de [AAPS Setup Wizard](../SettingUpAaps/SetupWizard.md).
-2. De client vraagt **niet** naar de **eenheden** of de **LAAG/HOOG grens**: die neemt hij over van de hoofdtelefoon zodra hij met Nightscout verbonden is. Je kunt ze later zien in **Instellingen**, waar een klein **telefoonicoon** laat zien dat ze [gesynchroniseerd zijn met de hoofdtelefoon](#client-master-config-prefs). Je kunt ze alleen bewerken als de master bereikbaar is.
-3. **Instellen vanaf de 'master'**: open op de master **Beheren → Geautoriseerde clients**, voeg deze telefoon toe met een **QR-code** en tik hier op **Scan de QR-code**. Eén scan stelt Nightscout in met een eigen token voor deze telefoon en, met een code die koppelt, koppelt hij ook de telefoon. De telefoon neemt ook de naam over waarmee hij op de master is toegevoegd, als naam van dit exemplaar (letters met accenten worden gewone letters, "Miloš" wordt "Milos"). **Na de scan is het instellen klaar**: de wizard sluit, omdat de volgende stappen alleen zouden laten zien wat de code al heeft gedaan. Heb je geen QR-code? Sla deze stap dan over. (Alleen Android: de scanner is nog niet beschikbaar op iOS.)
+1. **Welkom**, **licentieovereenkomst**, **Machtigingen** en **Hoofdwachtwoord**: hetzelfde als in de hoofdapp, zie de [Setup Wizard van AAPS](../SettingUpAaps/SetupWizard.md).
+2. De client vraagt **niet** naar de **eenheden** of de **LAAG/HOOG grens**: die neemt hij over van de AAPS-telefoon zodra hij met Nightscout verbonden is. Je kunt ze later zien in **Instellingen**, waar een klein **telefoonicoon** laat zien dat ze [gesynchroniseerd zijn met de AAPS-telefoon](#client-master-config-prefs). Je kunt ze alleen bewerken als de master bereikbaar is.
+3. **Instellen vanaf de master**: open op de master **Beheren → Geautoriseerde clients**, voeg deze telefoon toe met een **QR-code** en tik hier op **Scan de QR-code**. Eén scan stelt Nightscout in met een eigen token voor deze telefoon en, met een code die koppelt, koppelt hij ook de telefoon. De telefoon neemt ook de naam over waarmee hij op de master is toegevoegd, als naam van dit exemplaar (letters met accenten worden gewone letters, "Miloš" wordt "Milos"). **Na de scan is het instellen klaar**: de wizard sluit, omdat de volgende stappen alleen zouden laten zien wat de code al heeft gedaan. Heb je geen QR-code? Sla deze stap dan over. (Alleen Android: de scanner is nog niet beschikbaar op iOS.)
 
-   ![De stap Instellen vanaf de 'master' met de knop Scan de QR-code](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+   ![De stap Instellen vanaf de master met de knop Scan de QR-code](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
-4. **Communicatie**: de lijst met plugins toont alleen wat een volger nodig heeft (NSClientV3, xDrip+, Wear, Externe Companion Apps, Garmin). Heb je geen QR-code gescand? Zet dan **NSClientV3** aan en vul **dezelfde Nightscout URL** in als op de hoofdtelefoon, plus een toegangstoken, met **websockets** aan, precies zoals beschreven in [Synchronisatie](#RemoteControl_aapsclient).
+4. **Communicatie**: de lijst met plugins toont alleen wat een volger nodig heeft (NSClientV3, xDrip+, Wear, Externe Companion Apps, Garmin). Heb je geen QR-code gescand? Zet dan **NSClientV3** aan en vul **dezelfde Nightscout URL** in als op de AAPS-telefoon, plus een toegangstoken, met **websockets** aan, precies zoals beschreven in [Synchronisatie](#RemoteControl_aapsclient).
 
    ![De stap Communicatie op de client](../images/v4/AapsClient/aapsclient_wizard_communication.png)
 
@@ -63,7 +63,7 @@ Bij de eerste start doorloopt **AAPSClient** dezelfde **Setup Wizard** die je ke
 
 Open op de **master** **Beheren → Geautoriseerde clients** en voeg een client toe. Er zijn twee manieren om te koppelen:
 
-- **Met een QR-code** (het snelst, als de telefoon een camera heeft): scan de code in de wizardstap "**Instellen vanaf de 'master'**" of via **Beheren → Koppel met master → Scan de QR-code**, en bevestig met "**Gebruik**". Dit stelt ook Nightscout in.
+- **Met een QR-code** (het snelst, als de telefoon een camera heeft): scan de code in de wizardstap "**Instellen vanaf de master**" of via **Beheren → Koppel met master → Scan de QR-code**, en bevestig met "**Gebruik**". Dit stelt ook Nightscout in.
 - **Met de pincode**: open op de **client** de wizardstap hierboven (of **Beheren → Koppel met master**), typ de eenmalige pincode die op de master staat en druk op "**Koppel**". De client laat dan zien wie hij gaat vertrouwen; bevestig met "**Koppel**":
 
 ![Bevestiging op de client voordat het koppelen wordt afgerond](../images/v4/AapsClient/aapsclient_pair_confirm.png)
