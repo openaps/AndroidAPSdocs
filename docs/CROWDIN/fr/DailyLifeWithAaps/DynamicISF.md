@@ -33,7 +33,7 @@ Avec la **SI dynamique**, les valeurs de **SI** saisies dans le **Profil** ne so
 
 ![SI dyn.](../images/DynamicISF/DynISF2.png)
 
-La partie entourée en rouge montre : `profile ISF` -> `ISF as calculated by DynISF` (SI du profil, puis SI calculée par DynISF). <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
+La partie entourée en rouge montre : `profile ISF` -> `ISF as calculated by DynISF` (SI du profil, puis SI calculée par DynISF). <br/> Un appui sur cette section ouvre une boîte de dialogue avec des informations supplémentaires, comme la **SI** utilisée pour l'assistant et pour l'absorption des glucides (voir [Autres utilisations de la SI](#dynisf-other-usages-of-isf) ci-dessous).
 
 La valeur de la **DynISF** peut aussi être affichée dans un graphique : appuyez sur **Ajouter graphique** sous les graphiques de l'écran principal et choisissez **V_SI** (sensibilité variable). Elle apparaît comme une ligne blanche (en bas de l'image ci-dessus).
 
@@ -134,4 +134,4 @@ Ce paramètre (*« Ajuster les calculs de sensibilité avec DynamicISF »*) remp
   * Mode de vie variable (repas ou activité physique irréguliers)
   * DTQ ou sensibilité irrégulières d'un jour à l'autre.
 * Il n'existe pas de guide précis pour régler la valeur de départ du **Facteur d'ajustement**. Mais comme point de départ : si les valeurs de votre **Profil** sont correctes, quand vous êtes dans la cible et que la **glycémie** est stable, la valeur de la **DynISF** devrait être à peu près la même que celle de votre **Profil** avant.<br/>Si vous voyez que la **SI dynamique** est trop agressive, baissez le **Facteur d'ajustement**, et inversement.
-* Même si la **DynISF** n'utilise pas du tout la **SI du profil**, si vous remarquez que votre sensibilité est très différente de celle enregistrée dans votre **Profil**, pensez à mettre le profil à jour. This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
+* Même si la **DynISF** n'utilise pas du tout la **SI du profil**, si vous remarquez que votre sensibilité est très différente de celle enregistrée dans votre **Profil**, pensez à mettre le profil à jour. Cela peut être utile si vous perdez vos données **AAPS** (_par ex._ nouveau téléphone, nouvelle version d'**AAPS**…), car la **SI du profil** sera utilisée comme valeur de secours pendant les 7 jours suivants.
