@@ -9,7 +9,7 @@
 
 eCarbs are carbs that are split up over several hours. בארוחות סטנדרטיות עם יותר פחמימות מאשר שומן\חלבון, רישום פחמימות מקדים (והפחתת הבולוס הראשוני במידת הצורך) מספיקה בדרך כלל כדי למנוע מתן אינסולין מוקדם מדי.  אבל עבור ארוחות איטיות יותר, בולוס על כל הפחמימות מראש גורם ליותר מדי אינסולין פעיל מ-SMB, ניתן להשתמש בפחמימות ממושכות כדי לדמות בצורה נכונה יותר את ספיגת הפחמימות (או המקבילה לפחמימות שתזינו עבור חלבון או שומן) והשפעתה על רמת הגלוקוז בדם. עם המידע הזה, הלולאה יכולה להזריק בולוסי SMB בהדרגה כדי להתמודד עם אותן פחמימות, אפשר לחשוב על כך כבולוס מושהה דינמי (זה אמור לעבוד גם ללא SMBs, אבל עם פחות יעילות).
 
-**הערה:** פחמימות ממושכות אינן מוגבלות לארוחות כבדות העשירות בשומן או חלבון: ניתן להשתמש בהן גם כדי לעזור בכל מצב שבו יש השפעות שמעלות את רמת הסוכר בדם כמו שימוש בתרופות כגון קורטיקוסטרואידים.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## אופן השימוש בפחמימות ממושכות
 
@@ -62,7 +62,7 @@ For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carb
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## בולוס מושהה ומדוע הוא לא יעבוד במערכת לולאה סגורה?
 
-כפי שהוזכר לעיל בולוסים ממושכים או מרובי גלים לא באמת עובדים בסביבת לולאה סגורה. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+כפי שהוזכר לעיל בולוסים ממושכים או מרובי גלים לא באמת עובדים בסביבת לולאה סגורה. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### בולוס מושהה ומעבר ללולאה פתוחה - משאבת Dana ו-Insight בלבד
