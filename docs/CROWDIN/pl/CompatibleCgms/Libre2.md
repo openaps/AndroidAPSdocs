@@ -12,8 +12,8 @@ Libre2 OOP (znajdziesz go [tutaj](#Libre2_OOP2)) tworzy takie same odczyty BG ja
 
 Jest kilka dobrych powodów, aby używać nadajnika Bluetooth:
 
--   Możesz wybrać różne sposoby kalibracji OOP2 (1): wartości jak z czytnika przy „no calibration”, kalibrację sensora jak w Libre 1 przy „calibrate based on raw” albo kalibrację wartości podobnych do czytnika przy „calibrate based on glucose”.  
-  Upewnij się, że OOP1 jest wyłączone (2).
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
+  Make sure to leave OOP1 disabled (2).
 
     → Menu (☰) → Settings → Less common settings → Other misc. options
 
@@ -30,9 +30,9 @@ Uwaga: nadajnika można używać razem z aplikacją LibreLink, nie przeszkadza j
 
 ![xDrip: uruchomienie nadajnika Libre i sensora 3](../images/xDrip_Libre_Transmitter03.png)
 
-To w żaden sposób fizycznie nie uruchamia sensora Libre2 ani nie komunikuje się z nim. Służy to tylko do poinformowania xDrip, że nowy sensor dostarcza wartości glukozy. Jeśli możesz, wpisz dwa pomiary z krwi do pierwszej kalibracji. Teraz wartości glukozy powinny pojawiać się w xDrip co 5 minut. Pominięte wartości, np. gdy byłeś za daleko od telefonu, nie zostaną uzupełnione.
+To w żaden sposób fizycznie nie uruchamia sensora Libre2 ani nie komunikuje się z nim. Służy to tylko do poinformowania xDrip, że nowy sensor dostarcza wartości glukozy. If available, enter two blood-measured values for the initial calibration. Teraz wartości glukozy powinny pojawiać się w xDrip co 5 minut. Pominięte wartości, np. gdy byłeś za daleko od telefonu, nie zostaną uzupełnione.
 
-Po zmianie sensora xDrip automatycznie wykryje nowy sensor i usunie wszystkie dane kalibracji. Po aktywacji możesz sprawdzić glikemię i wykonać nową pierwszą kalibrację.
+Po zmianie sensora xDrip automatycznie wykryje nowy sensor i usunie wszystkie dane kalibracji. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Konfiguracja AAPS (tylko do używania pętli)
 
