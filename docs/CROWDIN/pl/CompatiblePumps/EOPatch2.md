@@ -1,278 +1,278 @@
 # EOPatch2
 
-The patch needs rapid-acting U-100 insulin, such as NovoRapid or Humalog. Use the rapid-acting insulin your doctor has prescribed for you.
+Patch wymaga szybko działającej insuliny U-100, np. NovoRapid lub Humalog. Używaj szybko działającej insuliny, którą przepisał Ci lekarz.
 
-The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your **Profile** to at least 0.05 U/hr, in steps of 0.05 U/hr. Otherwise **AAPS** rounds each rate to the nearest 0.05 U/hr (never down to 0) and uses the rates the patch really gives, so the total insulin per day differs slightly from your **Profile**. In the same way, boluses must be at least 0.05 U.
+Najmniejsza dawka, jaką patch może podać, to 0,05 U. Ustaw każdą dawkę bazową w swoim **Profilu** na co najmniej 0,05 U/godz., w krokach co 0,05 U/godz. W przeciwnym razie **AAPS** zaokrągla każdą dawkę do najbliższej wartości 0,05 U/godz. (nigdy w dół do 0) i używa dawek, które patch naprawdę podaje, więc dzienna ilość insuliny trochę różni się od Twojego **Profilu**. Tak samo bolusy muszą wynosić co najmniej 0,05 U.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Funkcje pompy w AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* Komunikuje się z **AAPS** przez wbudowany Bluetooth telefonu, bez dodatkowego urządzenia pośredniczącego.
+* Zmiany czasu letniego/zimowego i strefy czasowej trzeba obsłużyć ręcznie.
 
-## Pump setup
+## Konfiguracja pompy
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. In the **Pump** section, select **EOPatch2**.
-1. Press the Back key to return to the main screen.
+1. Otwórz **menu** (☰) w lewym górnym rogu ekranu głównego **AAPS** i wybierz **Konfiguracja**.
+1. W sekcji **Pompa** wybierz **EOPatch2**.
+1. Naciśnij przycisk Wstecz, aby wrócić do ekranu głównego.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png) ![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Menu z pozycją Konfiguracja](../images/v4/Configuration/configuration_menu.png) ![Konfiguracja > Pompa z wtyczką EOPatch2](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and **Open plugin**:
+Po wybraniu karta **EOPatch2** pokazuje dwa przyciski: **Ustawienia** i **Otwórz wtyczkę**:
 
-![The EOPatch2 plugin selected in Configuration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
+![Wtyczka EOPatch2 wybrana w Konfiguracja > Pompa](../images/v4/Pumps/eopatch2_enabled.png)
 
-## Settings
+## Ustawienia
 
-Open the EOPatch2 settings in one of two ways:
+Ustawienia EOPatch2 możesz otworzyć na dwa sposoby:
 
-* press **Settings** on the **EOPatch2** card in **Configuration**, or
-* open the pump screen (**Manage** → **Pump**) and press the gear icon in the top-right corner.
+* naciśnij **Ustawienia** na karcie **EOPatch2** w **Konfiguracji** albo
+* otwórz ekran pompy (**Zarządzaj** → **Pompa**) i naciśnij ikonę koła zębatego w prawym górnym rogu.
 
-There are three settings:
+Są trzy ustawienia:
 
-![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
+![Ustawienia EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Low reservoir Alerts
+### Alarmy niskiego poziomu zbiornika
 
-A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
+Ostrzeżenie pojawia się, gdy ilość insuliny w patchu spadnie do tej wartości lub niżej. Możesz ustawić od 10 do 50 U, w krokach co 5 U. Domyślnie jest 10 U.
 
-### Patch expiration Reminder
+### Przypomnienie o wygaśnięciu Patcha
 
-Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. The default is 4 hours.
+Przypomina, ile czasu zostało do wygaśnięcia obecnego patcha. Możesz ustawić od 1 do 24 godzin, w krokach co 1 godzinę. Domyślnie są to 4 godziny.
 
-### Patch buzzer Reminders
+### Alarmy akustyczne pompy
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. It has no effect on your normal basal. The default is off.
+Gdy ta opcja jest włączona, patch wydaje sygnał dźwiękowy, gdy bolus, bolus przedłużony lub baza tymczasowa zaczyna się i kończy. Nie ma to wpływu na Twoją zwykłą bazę. Domyślnie opcja jest wyłączona.
 
-## Activating a new patch
+## Aktywacja nowego patcha
 
-### Open the activation wizard
+### Otwórz kreator aktywacji
 
-Open the pump screen with **Manage** → **Pump** (or press **Open plugin** on the **EOPatch2** card in **Configuration**). When no patch is active, the screen shows **Not activated** and an **Activate Patch** button at the bottom.
+Otwórz ekran pompy przez **Zarządzaj** → **Pompa** (lub naciśnij **Otwórz wtyczkę** na karcie **EOPatch2** w **Konfiguracji**). Gdy żaden patch nie jest aktywny, ekran pokazuje **Nieaktywowany** i przycisk **Aktywuj Patch** na dole.
 
-Press **Activate Patch** to start the wizard.
+Naciśnij **Aktywuj Patch**, aby uruchomić kreator.
 
-![The EOPatch2 pump screen with the Activate Patch button](../images/v4/Pumps/eopatch_pump_screen.png)
+![Ekran pompy EOPatch2 z przyciskiem Aktywuj Patch](../images/v4/Pumps/eopatch_pump_screen.png)
 
-The wizard guides you through each step. The row of dots at the top shows how far along you are.
+Kreator prowadzi Cię przez każdy krok. Rząd kropek na górze pokazuje, na którym etapie jesteś.
 
 ```{note}
-If you have never activated a **Profile** in **AAPS**, the wizard first shows a **Profile required** page. Select the profile to use and press **Activate profile**.
+Jeśli nigdy nie aktywowałeś **Profilu** w **AAPS**, kreator najpierw pokaże stronę **Wymagany profil**. Wybierz profil, którego chcesz używać, i naciśnij **Aktywuj profil**.
 ```
 
-### Filling Insulin
+### Napełnianie Insuliny
 
-Insert the syringe needle into the insulin fill port on the patch. Slowly push the plunger to fill the patch. Once there is more than 80 U in the patch, it beeps once and starts up (boots).
+Wbij igłę strzykawki w port napełniania insuliny na patchu. Powoli naciskaj tłok, aby napełnić patch. Gdy w patchu jest więcej niż 80 U, patch wyda jeden sygnał i się uruchomi.
 
-When you hear the beep, press **Start pairing**.
+Gdy usłyszysz sygnał, naciśnij **Rozpocznij parowanie**.
 
-![The Filling Insulin step with the Start pairing button](../images/v4/Pumps/eopatch_activate_filling.png)
+![Krok Napełnianie Insuliny z przyciskiem Rozpocznij parowanie](../images/v4/Pumps/eopatch_activate_filling.png)
 
 ```{warning}
-- Do not turn the needle action lever until the wizard tells you to. Turning it too early can cause serious problems during filling or the safety check.
-- The patch holds 80 to 200 U. If you put in less than 80 U, the patch does not work.
-- Take the insulin out of the refrigerator 15 to 30 minutes before filling, so it reaches room temperature. The insulin must be at least 10°C.
+- Nie obracaj dźwigni igły, dopóki kreator Ci tego nie każe. Zbyt wczesne obrócenie może spowodować poważne problemy podczas napełniania lub kontroli bezpieczeństwa.
+- Patch mieści od 80 do 200 U. Jeśli wlejesz mniej niż 80 U, patch nie będzie działać.
+- Wyjmij insulinę z lodówki 15 do 30 minut przed napełnianiem, aby osiągnęła temperaturę pokojową. Insulina musi mieć co najmniej 10°C.
 ```
 
-### Patch pairing
+### Parowanie Patcha
 
-**AAPS** now tries to pair with the patch automatically. During pairing, two Android Bluetooth pairing requests appear. Press **OK** on the first one. Press **OK** again on the second one, which shows a passkey.
+**AAPS** próbuje teraz automatycznie sparować się z patchem. Podczas parowania pojawią się dwie prośby Androida o parowanie Bluetooth. Na pierwszej naciśnij **OK**. Na drugiej, która pokazuje klucz dostępu (passkey), też naciśnij **OK**.
 
 ```{warning}
-- Keep the patch and your phone within 30 cm of each other while pairing.
-- After the patch has booted, it beeps every 3 minutes until pairing is complete.
-- You must finish activating the patch within 60 minutes of it booting. If you cannot, discard the patch.
+- Podczas parowania trzymaj patch i telefon w odległości do 30 cm od siebie.
+- Po uruchomieniu patch wydaje sygnał co 3 minuty, dopóki parowanie się nie zakończy.
+- Aktywację patcha musisz zakończyć w ciągu 60 minut od jego uruchomienia. Jeśli nie zdążysz, odrzuć patch.
 ```
 
-![Patch pairing step](../images/EOPatch/Bild6.png) ![First Bluetooth pairing request](../images/EOPatch/Bild7.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/Bild8.png)
+![Krok parowania patcha](../images/EOPatch/Bild6.png) ![Pierwsza prośba o parowanie Bluetooth](../images/EOPatch/Bild7.png) ![Druga prośba o parowanie Bluetooth z kluczem dostępu](../images/EOPatch/Bild8.png)
 
 ```{admonition} Older screenshot
 :class: note
-The two Bluetooth pairing screenshots are from an earlier **AAPS** version: the **AAPS** screen behind the Android pairing request looks different in **AAPS** 4.
+Dwa zrzuty ekranu parowania Bluetooth pochodzą z wcześniejszej wersji **AAPS**: ekran **AAPS** za prośbą Androida o parowanie wygląda inaczej w **AAPS** 4.
 ```
 
-### Select insulin
+### Wybierz insulinę
 
-Select the insulin you filled the patch with and press **Next**. **AAPS** applies a profile switch with this insulin after activation.
+Wybierz insulinę, którą napełniłeś patch, i naciśnij **Dalej**. Po aktywacji **AAPS** wykonuje zmianę profilu z tą insuliną.
 
-### Prepare for attaching the Patch
+### Przygotuj się do założenia Patcha
 
-Remove the adhesive tape from the patch, then press **Next**.
+Zdejmij taśmę samoprzylepną z patcha, a potem naciśnij **Dalej**.
 
-If a needle sticks out, or if the patch is wet, dirty or its adhesive tape is folded, press **Discard** instead and use a new patch.
+Jeśli igła wystaje albo patch jest mokry, brudny lub jego taśma samoprzylepna jest zagięta, naciśnij zamiast tego **Odrzuć** i użyj nowego patcha.
 
-![Prepare for attaching the Patch step](../images/EOPatch/Bild9.png)
+![Krok Przygotuj się do założenia Patcha](../images/EOPatch/Bild9.png)
 
-### Site location
+### Miejsce wkłucia
 
-This step only appears if **Manage pump site rotation** is turned on in the site rotation settings. Tap the place on the body diagram where you will attach the patch and press **Next**, or press **Skip**.
+Ten krok pojawia się tylko wtedy, gdy w ustawieniach zmiany miejsca wkłucia włączona jest opcja **Zarządzaj zmianą miejsca wkłucia pompy**. Dotknij na schemacie ciała miejsca, w którym założysz patch, i naciśnij **Dalej** albo naciśnij **Pomiń**.
 
-### Attaching the Patch
+### Zakładanie Patcha
 
-Insulin should go into a spot with fatty tissue under the skin, but few nerves or blood vessels. The abdomen, arm or thigh are good choices. Clean and dry the site, then attach the patch to your skin.
+Insulina powinna trafić w miejsce z tkanką tłuszczową pod skórą, ale z niewielką liczbą nerwów i naczyń krwionośnych. Dobrym wyborem jest brzuch, ramię lub udo. Oczyść i osusz miejsce, a potem przyklej patch do skóry.
 
-Check the infusion site, then press **Start safety check**.
+Sprawdź miejsce wkłucia, a potem naciśnij **Rozpocznij kontrolę bezpieczeństwa**.
 
 ```{warning}
-- Press down the edges of the patch tape evenly, so the whole patch sticks firmly to your skin.
-- If the patch does not stick completely, air can get between the patch and your skin. This weakens the adhesive and the water resistance of the patch.
+- Równomiernie dociśnij brzegi taśmy patcha, aby cały patch mocno przylegał do skóry.
+- Jeśli patch nie przylega całkowicie, między patch a skórę może dostać się powietrze. To osłabia klej i wodoodporność patcha.
 ```
 
-![Attaching the Patch step](../images/EOPatch/Bild10.png)
+![Krok Zakładanie Patcha](../images/EOPatch/Bild10.png)
 
-### Safety check
+### Kontrola bezpieczeństwa
 
-The safety check takes about 30 seconds. When it is finished, the patch beeps once. If it fails, press **Retry**.
+Kontrola bezpieczeństwa trwa około 30 sekund. Gdy się zakończy, patch wyda jeden sygnał. Jeśli się nie powiedzie, naciśnij **Ponów**.
 
 ```{warning}
-For safe use, do not turn the needle action lever until the safety check is complete.
+Dla bezpieczeństwa nie obracaj dźwigni igły, dopóki kontrola bezpieczeństwa się nie zakończy.
 ```
 
-![Attaching the Patch step with the Start safety check button](../images/EOPatch/Bild11.png) ![Safety check in progress](../images/EOPatch/Bild12.png)
+![Krok Zakładanie Patcha z przyciskiem Rozpocznij kontrolę bezpieczeństwa](../images/EOPatch/Bild11.png) ![Trwa kontrola bezpieczeństwa](../images/EOPatch/Bild12.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots from **Prepare for attaching the Patch** to **Safety check** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+Zrzuty ekranu od **Przygotuj się do założenia Patcha** do **Kontrola bezpieczeństwa** pochodzą z wcześniejszej wersji **AAPS** i w **AAPS** 4 mogą wyglądać inaczej.
 ```
 
-### Inserting the needle
+### Wbijanie igły
 
-Hold the patch firmly. Turn the needle action lever upward by more than 100° to insert the needle. The patch beeps once when the needle is inserted correctly. Then keep turning the lever all the way to remove it. Press **Next**.
+Mocno trzymaj patch. Obróć dźwignię igły w górę o więcej niż 100°, aby wbić igłę. Gdy igła zostanie wbita prawidłowo, patch wyda jeden sygnał. Potem obracaj dźwignię dalej do końca, aby ją wyjąć. Naciśnij **Dalej**.
 
 ```{caution}
-If you go to the next step without hearing the beep, a **Needle insertion Error** appears. Check for the beep and press **Retry**. If the error remains, press **Discard** to deactivate the patch.
+Jeśli przejdziesz do następnego kroku bez usłyszenia sygnału, pojawi się **Błąd wkłuwania igły**. Sprawdź, czy był sygnał, i naciśnij **Ponów**. Jeśli błąd nadal występuje, naciśnij **Odrzuć**, aby dezaktywować patch.
 ```
 
-### Patch activation completed
+### Aktywacja Patcha zakończona
 
-The last page confirms that the patch is active and that it will remind you when it nears its expiration time. Press **Finish** to go back to the pump screen.
+Ostatnia strona potwierdza, że patch jest aktywny i że przypomni Ci, gdy zbliży się czas jego wygaśnięcia. Naciśnij **Zakończ**, aby wrócić do ekranu pompy.
 
-## Discarding the patch
+## Odrzucanie patcha
 
-Replace the patch when it is low on insulin, when it expires, or if it is faulty. We recommend using each patch for no more than 84 hours after it boots.
+Wymień patch, gdy kończy się w nim insulina, gdy wygaśnie lub gdy jest uszkodzony. Zalecamy używanie każdego patcha nie dłużej niż 84 godziny od jego uruchomienia.
 
-1. Open the pump screen (**Manage** → **Pump**). While a patch is active, press **Discard Patch**.
-1. The **Discard Patch** page shows the time left and the insulin left in the patch. Press **Discard Patch**.
-1. A dialog asks you to confirm. Press **Discard Patch** again.
-1. When the patch has been deactivated, the wizard shows **Discarding the patch is completed.** Remove the patch from your body and press **Confirm**.
+1. Otwórz ekran pompy (**Zarządzaj** → **Pompa**). Gdy patch jest aktywny, naciśnij **Odrzuć Patch**.
+1. Strona **Odrzuć Patch** pokazuje pozostały czas i ilość insuliny pozostałej w patchu. Naciśnij **Odrzuć Patch**.
+1. Pojawi się okno z prośbą o potwierdzenie. Naciśnij ponownie **Odrzuć Patch**.
+1. Gdy patch zostanie dezaktywowany, kreator pokaże **Usuwanie Patcha zostało zakończone.** Zdejmij patch z ciała i naciśnij **Potwierdź**.
 
-After that, the wizard continues straight on to activating a new patch (see above). Press the back arrow if you want to stop here.
+Potem kreator od razu przechodzi do aktywacji nowego patcha (patrz wyżej). Jeśli chcesz tu zakończyć, naciśnij strzałkę wstecz.
 
-While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
+Gdy żaden patch nie jest aktywny, **AAPS** pokazuje pompę jako wstrzymaną i zapisuje bazę tymczasową 0 U/godz., więc insulina bazowa nie jest liczona do IOB, dopóki nie aktywujesz następnego patcha.
 
-![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/Bild13.png) ![Discard Patch page](../images/EOPatch/Bild14.png) ![Discard Patch confirmation dialog](../images/EOPatch/Bild15.png) ![Discarding the patch is completed](../images/EOPatch/Bild16.png)
+![Ekran pompy EOPatch2 z przyciskiem DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Strona Odrzuć Patch](../images/EOPatch/Bild14.png) ![Okno potwierdzenia Odrzuć Patch](../images/EOPatch/Bild15.png) ![Usuwanie Patcha zostało zakończone](../images/EOPatch/Bild16.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Discard Patch**.
+Zrzuty ekranu powyżej pochodzą z wcześniejszej wersji **AAPS**. W **AAPS** 4 ekran pompy otwierasz przez **Zarządzaj** → **Pompa**, a przycisk na nim nazywa się **Odrzuć Patch**.
 ```
 
 ```{admonition} If the patch does not respond
 :class: warning
-If **AAPS** cannot reach the patch, it may show a page about turning off the patch's alarm by hand: remove the patch from your body, peel off the adhesive tape, and use a clip to press firmly into the hole next to the insulin fill port.
+Jeśli **AAPS** nie może połączyć się z patchem, może pokazać stronę o ręcznym wyłączeniu alarmu patcha: zdejmij patch z ciała, odklej taśmę samoprzylepną i użyj spinacza, aby mocno wcisnąć przycisk w otworze obok portu napełniania insuliny.
 
-The **Discard Patch** page also has a **Force Reset** button. It only clears the patch from **AAPS**, without sending any command to the patch. The patch keeps delivering insulin until its battery runs out or you turn it off by hand. Use it only if a normal discard fails, and remove the patch from your body.
+Strona **Odrzuć Patch** ma też przycisk **Wymuś reset**. Usuwa on patch tylko z **AAPS**, bez wysyłania żadnego polecenia do patcha. Patch nadal podaje insulinę, dopóki nie wyczerpie się jego bateria albo nie wyłączysz go ręcznie. Używaj go tylko wtedy, gdy normalne odrzucenie się nie powiedzie, i zdejmij patch z ciała.
 ```
 
-## Suspending and resuming insulin delivery
+## Wstrzymywanie i wznawianie podawania insuliny
 
-Suspending insulin delivery also cancels any extended bolus and temporary basal. When you resume, these are **not** restarted. While insulin delivery is suspended, the patch beeps every 15 minutes.
+Wstrzymanie podawania insuliny anuluje też trwający bolus przedłużony i bazę tymczasową. Po wznowieniu **nie** są one uruchamiane ponownie. Gdy podawanie insuliny jest wstrzymane, patch wydaje sygnał co 15 minut.
 
-### Suspending insulin delivery
+### Wstrzymywanie podawania insuliny
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Suspend pump**.
-1. A dialog explains what will be suspended. Press **Confirm**.
-1. In the **Basal Suspending Time** dialog, choose how long to suspend: 30 min, 1 hr, 1 hr 30 min or 2 hr. Press **Confirm**.
+1. Otwórz ekran pompy (**Zarządzaj** → **Pompa**) i naciśnij **Wstrzymaj pompę**.
+1. Okno wyjaśnia, co zostanie wstrzymane. Naciśnij **Potwierdź**.
+1. W oknie **Czas zawieszenia bazy** wybierz, na jak długo wstrzymać: 30 min, 1 godz, 1 godz 30 min lub 2 godz. Naciśnij **Potwierdź**.
 
-Insulin delivery is suspended for the time you chose.
+Podawanie insuliny zostanie wstrzymane na wybrany czas.
 
-![The EOPatch2 pump screen with the SUSPEND button](../images/EOPatch/Bild17.png) ![Suspend confirmation dialog](../images/EOPatch/Bild18.png) ![Basal Suspending Time dialog](../images/EOPatch/Bild19.png)
+![Ekran pompy EOPatch2 z przyciskiem SUSPEND](../images/EOPatch/Bild17.png) ![Okno potwierdzenia wstrzymania](../images/EOPatch/Bild18.png) ![Okno Czas zawieszenia bazy](../images/EOPatch/Bild19.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Suspend pump**.
+Zrzuty ekranu powyżej pochodzą z wcześniejszej wersji **AAPS**. W **AAPS** 4 ekran pompy otwierasz przez **Zarządzaj** → **Pompa**, a przycisk na nim nazywa się **Wstrzymaj pompę**.
 ```
 
-### Resuming insulin delivery
+### Wznawianie podawania insuliny
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Resume pump**.
-1. In the **Resume insulin delivery** dialog, press **Confirm**.
+1. Otwórz ekran pompy (**Zarządzaj** → **Pompa**) i naciśnij **Wznów pompę**.
+1. W oknie **Wznów podawanie insuliny** naciśnij **Potwierdź**.
 
-![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/Bild20.png) ![Resume insulin delivery dialog](../images/EOPatch/Bild21.png)
+![Ekran pompy EOPatch2 z przyciskiem RESUME](../images/EOPatch/Bild20.png) ![Okno Wznów podawanie insuliny](../images/EOPatch/Bild21.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Resume pump**.
+Zrzuty ekranu powyżej pochodzą z wcześniejszej wersji **AAPS**. W **AAPS** 4 ekran pompy otwierasz przez **Zarządzaj** → **Pompa**, a przycisk na nim nazywa się **Wznów pompę**.
 ```
 
 ```{warning}
-When the suspend time ends, **AAPS** shows an **End of insulin suspend** warning. Insulin delivery does **not** restart until you confirm it. If you do not, you could develop hyperglycemia.
+Gdy czas wstrzymania minie, **AAPS** pokaże ostrzeżenie **Koniec zawieszenia podaży insuliny**. Podawanie insuliny **nie** wznowi się, dopóki tego nie potwierdzisz. Jeśli tego nie zrobisz, może u Ciebie wystąpić hiperglikemia.
 ```
 
 (eopatch2-alarms-and-warnings)=
 
-## Alarms and warnings
+## Alarmy i ostrzeżenia
 
-### Alarms
+### Alarmy
 
-Alarms are for urgent, top-priority situations and need your action straight away. **AAPS** sounds an alarm that keeps going until you acknowledge it, and shows the message as a notification on the **Overview** screen. An alarm means there is a problem with the patch in use. In many cases the patch has to be discarded and replaced with a new one.
+Alarmy dotyczą pilnych sytuacji o najwyższym priorytecie i wymagają od Ciebie natychmiastowego działania. **AAPS** włącza alarm dźwiękowy, który trwa, dopóki go nie potwierdzisz, i pokazuje komunikat jako powiadomienie na **ekranie głównym**. Alarm oznacza problem z używanym patchem. W wielu przypadkach patch trzeba odrzucić i wymienić na nowy.
 
-When you press **Confirm** on the notification, **AAPS** handles the alarm. For most alarms, this deactivates the patch. For an **Inappropriate temperature** alarm, the button is **Retry**.
+Gdy naciśniesz **Potwierdź** w powiadomieniu, **AAPS** obsłuży alarm. W przypadku większości alarmów patch zostanie wtedy dezaktywowany. Przy alarmie **Niewłaściwa temperatura** przycisk to **Ponów**.
 
-![EOPatch2 alarm](../images/EOPatch/Bild22.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/Bild23.png)
-
-```{admonition} Older screenshot
-:class: note
-The alarm screenshots are from an earlier **AAPS** version and may look different in **AAPS** 4.
-```
-
-The different alarms are explained below.
-
-| Alarm                      | Explanation                                                                                                                                                    |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | The patch has run out of insulin.                                                                                                                              |
-| Patch expired              | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
-| Occlusion                  | The patch's insulin path seems to be blocked.                                                                                                                  |
-| Power on self-test failure | The patch found an unexpected error during its self-test after booting.                                                                                        |
-| Inappropriate temperature  | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
-| Needle insertion Error     | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
-| Patch battery Error        | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
-| Patch activation Error     | The patch was not fully activated within 60 minutes of booting.                                                                                                |
-| Patch Error                | The patch found an unexpected error while being activated or used.                                                                                             |
-
-### Warnings
-
-Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
-
-![EOPatch2 warning shown on the Overview screen](../images/EOPatch/Bild24.png)
+![Alarm EOPatch2](../images/EOPatch/Bild22.png) ![Alarm EOPatch2 po dezaktywacji patcha](../images/EOPatch/Bild23.png)
 
 ```{admonition} Older screenshot
 :class: note
-This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning appears on the main screen, which looks different.
+Zrzuty ekranu alarmów pochodzą z wcześniejszej wersji **AAPS** i w **AAPS** 4 mogą wyglądać inaczej.
 ```
 
-The different warnings are explained below.
+Poszczególne alarmy są opisane poniżej.
 
-| Warning                      | Explanation                                                                                                                   |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| Low reservoir                | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
-| Patch operating life expired | The patch's usage period is over.                                                                                             |
-| Patch will expire soon       | The patch must be discarded in 1 hour.                                                                                        |
-| Incomplete Patch activation  | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
-| Patch battery low            | The patch's battery is low.                                                                                                   |
+| Alarm                                           | Wyjaśnienie                                                                                                                                                  |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Pusty zbiornik                                  | W patchu skończyła się insulina.                                                                                                                             |
+| Patch wygasł                                    | Czas użytkowania patcha minął i nie może on już podawać insuliny.                                                                                            |
+| Zatkanie                                        | Droga podawania insuliny w patchu wydaje się zablokowana.                                                                                                    |
+| Błąd podczas auto-diagnostyki przy uruchamianiu | Patch wykrył nieoczekiwany błąd podczas autotestu po uruchomieniu.                                                                                           |
+| Niewłaściwa temperatura                         | Temperatura patcha jest poza normalnym zakresem pracy podczas aktywacji lub używania. Przenieś patch w miejsce o odpowiedniej temperaturze (od 4,4 do 37°C). |
+| Błąd wkłucia igły                               | Igła nie została prawidłowo wbita podczas aktywacji. Sprawdź, czy krawędź wkłucia igły na patchu i dźwignia igły są w jednej linii.                          |
+| Błąd baterii Patcha                             | Wewnętrzna bateria patcha zaraz się wyczerpie i patch się wyłączy.                                                                                           |
+| Błąd aktywacji Patcha                           | Patch nie został w pełni aktywowany w ciągu 60 minut od uruchomienia.                                                                                        |
+| Błąd Patcha                                     | Patch wykrył nieoczekiwany błąd podczas aktywacji lub używania.                                                                                              |
 
-## Where to get help
+### Ostrzeżenia
 
-Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Ostrzeżenia dotyczą sytuacji o średnim lub niskim priorytecie. Ostrzeżenie pojawia się jako powiadomienie na **ekranie głównym**.
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+![Ostrzeżenie EOPatch2 na ekranie głównym](../images/EOPatch/Bild24.png)
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+```{admonition} Older screenshot
+:class: note
+Ten zrzut ekranu pochodzi z wcześniejszej wersji **AAPS**: w **AAPS** 4 ostrzeżenie pojawia się na ekranie głównym, który wygląda inaczej.
+```
+
+Poszczególne ostrzeżenia są opisane poniżej.
+
+| Ostrzeżenie                        | Wyjaśnienie                                                                                                            |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Koniec zawieszenia podaży insuliny | Wybrany czas wstrzymania minął. Naciśnij **Wznów pompę** w powiadomieniu, aby wznowić podawanie insuliny.              |
+| Niski poziom zbiornika             | Ilość insuliny w patchu jest mniejsza niż wartość ustawiona w **Alarmy niskiego poziomu zbiornika**.                   |
+| Okres użytkowania Patcha minął     | Okres użytkowania patcha minął.                                                                                        |
+| Patch wkrótce wygaśnie             | Patch trzeba odrzucić w ciągu 1 godziny.                                                                               |
+| Niekompletna aktywacja Patcha      | Aktywacja patcha została przerwana na dłużej niż 3 minuty po parowaniu. Otwórz ekran pompy i dokończ aktywację patcha. |
+| Słaba bateria Patcha               | Bateria patcha jest słaba.                                                                                             |
+
+## Gdzie uzyskać pomoc
+
+Sterownik EOPatch2 jest rozwijany przez społeczność na zasadzie **wolontariatu**. Zanim poprosisz o pomoc:
+
+1. **Przeczytaj** odpowiedni rozdział tej dokumentacji, aby sprawdzić, jak dana funkcja ma działać.
+2. **Zapytaj** na kanale *#AAPS* na [Discordzie](https://discord.gg/4fQUWHZ4Mw) lub na jednym z innych [kanałów społeczności](../GettingHelp/WhereCanIGetHelp.md).
+3. **Zgłoś błąd**: najpierw przeszukaj [istniejące zgłoszenia](https://github.com/nightscout/AndroidAPS/issues); jeśli Twojego problemu tam nie ma, utwórz [nowe zgłoszenie](https://github.com/nightscout/AndroidAPS/issues) i dołącz [pliki logów](../GettingHelp/AccessingLogFiles.md).
+
+Gdy prosisz o pomoc, podaj markę i model telefonu, wersję Androida, wersję **AAPS** oraz prosty, jasny opis problemu (co się zmieniło, kiedy ostatnio działało).
