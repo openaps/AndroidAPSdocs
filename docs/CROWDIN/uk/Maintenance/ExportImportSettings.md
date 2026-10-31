@@ -1,189 +1,189 @@
-# Creating and restoring back-ups
+# Створення та відновлення резервних копій
 
-When installing AAPS on your phone it becomes a "medical device" you rely on daily. It is highly recommended to have an emergency backup plan for when your phone gets defective, stolen or lost. Therefore, it is essential to prepare by asking yourself: "What if?"
+Коли ви встановлюєте AAPS на телефон, він стає «медичним пристроєм», на який ви покладаєтеся щодня. Дуже рекомендуємо мати аварійний план на випадок, якщо телефон зламається, його вкрадуть або ви його загубите. Тому важливо підготуватися, запитавши себе: «А що, якщо?»
 
-To restore your AAPS setup to an existing or new phone, it's important to keep following items in a secure location (read: not on your phone). Best practice is to keep at least two separate backups: on a local hard drive, USB stick and (preferred) on Cloud storage like Google Drive or Microsoft 365 OneDrive. By storing your backups in the cloud you'll always have everything needed accessible from your phone to restore your setup anywhere and anytime.
+Щоб відновити налаштування AAPS на наявному або новому телефоні, важливо зберігати такі речі в безпечному місці (тобто не на телефоні). Найкраще зберігати щонайменше дві окремі резервні копії: на локальному жорсткому диску, USB-флешці і (бажано) у хмарному сховищі, наприклад Google Drive або Microsoft 365 OneDrive. Якщо ви зберігаєте резервні копії в хмарі, усе потрібне для відновлення буде доступне з телефону будь-де і будь-коли.
 
-Consider acquiring a secondary backup phone and practicing restoring AAPS to ensure the backup phone works as expected. This step will give you confidence that your emergency plan is effective and that you can seamlessly continue using AAPS if your primary phone becomes unavailable.
+Подумайте про запасний телефон і потренуйтеся відновлювати на ньому AAPS, щоб переконатися, що запасний телефон працює як слід. Цей крок дасть вам упевненість, що ваш аварійний план працює і що ви зможете без перерви користуватися AAPS, якщо основний телефон стане недоступним.
 
-To be able to restore, having the following items at hand is important:
+Для відновлення важливо мати під рукою:
 
-- Your **Android Studio keystore file** and associated **password**: Needed for (re)building the AAPS .APK installer file.
-- A recent copy of the **AAPS installer .APK**
-- A recent **settings export** file: For restoring important settings (which includes your objectives!).
-- Your **AAPS master password**
-- Backups of additional utilities: Such as BYODA and/or xDrip.
-- Personal notes on your setup.
+- Ваш **файл keystore з Android Studio** і відповідний **пароль**: потрібні для (повторної) збірки інсталяційного файлу AAPS .APK.
+- Свіжу копію **інсталяційного файлу AAPS .APK**
+- Свіжий файл **експорту налаштувань**: для відновлення важливих налаштувань (зокрема ваших завдань!).
+- Ваш **головний пароль AAPS**
+- Резервні копії додаткових застосунків: наприклад, BYODA та/або xDrip.
+- Особисті нотатки про ваше налаштування.
 
-Below are the items that are recommended for keeping back-ups.
+Нижче наведено речі, резервні копії яких рекомендуємо зберігати.
 
-## Creating back-ups
+## Створення резервних копій
 
-### Keystore file from the computer you used to build the APK
-When building your .APK installer file from Android Studio, it uses the **keystore file and password to sign the .APK installer file**. To update your current AAPS installation, it is required to sign the update .APK installer file with the same keystore used for the initial installation. When updating, all settings and the AAPS database will be kept. Note that without this, you are required to first uninstall the current application and then [reinstall](#reinstall-aaps) and reconfigure AAPS.
+### Файл keystore з комп'ютера, на якому ви збирали APK
+Коли ви збираєте інсталяційний файл .APK в Android Studio, використовується **файл keystore і пароль для підпису інсталяційного файлу .APK**. Щоб оновити поточне встановлення AAPS, інсталяційний файл оновлення .APK потрібно підписати тим самим keystore, що й під час першого встановлення. Під час оновлення всі налаштування і база даних AAPS зберігаються. Зверніть увагу: без цього вам доведеться спочатку видалити поточний застосунок, а потім [перевстановити](#reinstall-aaps) і знову налаштувати AAPS.
 
-Maintaining the keystore and associated password will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the [Updating AAPS](../Maintenance/UpdateToNewVersion.md) section for details on using the keystore when building a new APK.
+Якщо ви збережете keystore і його пароль, оновлювати APK у майбутньому буде набагато простіше, особливо якщо потрібно буде зібрати застосунок на новому комп'ютері. Як використовувати keystore під час збірки нового APK, дивіться в розділі [Оновлення AAPS](../Maintenance/UpdateToNewVersion.md).
 
-**When to back-up:** The keystore should be backed up after you first build the **AAPS** .APK installer file.
+**Коли створювати резервну копію:** резервну копію keystore слід створити після першої збірки інсталяційного файлу **AAPS** .APK.
 
-**How to back-up:** Locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting **Build > APK > Next**. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension `.jks`). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
+**Як створити резервну копію:** знайдіть шлях до свого keystore. Якщо ви його не пам'ятаєте, його можна знайти в Android Studio через **Build > APK > Next**. Шлях буде вказано в полі “Key store path”. У файловому менеджері перейдіть за цим шляхом і зробіть копію файлу keystore (з розширенням `.jks`). Збережіть його в надійному хмарному сховищі на випадок, якщо ваш комп'ютер стане недоступним. Також обов'язково запишіть пароль keystore, псевдонім ключа (key alias) і пароль ключа.
 
-### Copies of the most recent APK
-In case your main **AAPS** phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using **AAPS** with a new phone. Note: you will also need your preferences backed up as noted below.
+### Копії найновішого APK
+Якщо ваш основний телефон з **AAPS** загублено або пошкоджено, копія APK дозволить швидко продовжити користуватися **AAPS** на новому телефоні. Примітка: вам також знадобиться резервна копія налаштувань, як описано нижче.
 
-**When to back-up:** You should maintain a back-up of the most recent APK that you installed on your main **AAPS** phone. You may want to also maintain one earlier version in case you need to roll back to that for any reason.
+**Коли створювати резервну копію:** зберігайте резервну копію найновішого APK, який ви встановили на основний телефон з **AAPS**. Можна також зберігати одну старішу версію на випадок, якщо з будь-якої причини потрібно буде повернутися до неї.
 
-**How to back-up:** Maintain a copy on the computer used to build the APK with Android Studio. Additionally, it is recommended to use a cloud platform to store a copy of the installer APK. Make sure you know how to locate both backups when needed. Consider setting up dedicated folders to store these backups.
+**Як створити резервну копію:** зберігайте копію на комп'ютері, на якому ви збирали APK в Android Studio. Крім того, рекомендуємо зберігати копію інсталяційного APK на хмарній платформі. Переконайтеся, що ви знаєте, де знайти обидві резервні копії, коли вони знадобляться. Можна створити окремі папки для цих резервних копій.
 
-### AAPS settings file (also referred to as 'Preferences')
+### Файл налаштувань AAPS (також називається 'Preferences')
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+Ваші налаштування знаходяться в **Каталозі AAPS**, який ви вибрали під час [налаштування AAPS](#SetupWizard-StoragePermission).</br>
+**Каталог AAPS** також можна змінити на екрані **Обслуговування** (**меню** (☰) > **Обслуговування**), дивіться [Налаштування локального каталогу AAPS](#preferences-maintenance-logdirectory).
 ```
 
-With a copy of the APK installer file (see above) and your **Settings** file, you can quickly get up and running on an existing or new phone.
+Маючи копію інсталяційного файлу APK (див. вище) і файл **Налаштування**, ви зможете швидко почати роботу на наявному або новому телефоні.
 
-The **Settings** file is used to customize the AAPS application to fit your specific setup. They encompass details such as your **Configuration** settings, objective status, third-party communication settings (e.g., Nightscout, Tidepool), automations, and profiles.
+Файл **Налаштування** використовується, щоб пристосувати застосунок AAPS до вашого налаштування. Він містить, зокрема, ваші налаштування **Конфігурації**, стан завдань, налаштування зв'язку зі сторонніми сервісами (наприклад, Nightscout, Tidepool), автоматизації та профілі.
 
-Exporting the AAPS settings to file enables you to restore its configuration to a specific point in time. As mentioned, in addition to all configuration settings, the export file also contains the status of your objectives, which you need to restore when **(re)installing** AAPS. Without this you will be required to redo all objectives from start to enable closed loop. Settings files also enable you to restore "last known good" settings for undoing any configuration changes.
+Експорт налаштувань AAPS у файл дозволяє відновити конфігурацію на певний момент часу. Як уже сказано, крім усіх налаштувань конфігурації, файл експорту також містить стан ваших завдань, який потрібно відновити під час **(повторного) встановлення** AAPS. Без нього вам доведеться виконати всі завдання з самого початку, щоб увімкнути закриту петлю. Файли налаштувань також дозволяють відновити «останні добрі» налаштування, щоб скасувати зміни конфігурації.
 
-**When to back-up AAPS settings:**
-* Each time you complete an objective to prevent losing your progress. _Without a copy of your **Settings** you will have to complete all objectives again in the event you need to re-install AAPS or replace your phone._
+**Коли створювати резервну копію налаштувань AAPS:**
+* Щоразу, коли ви виконали завдання, щоб не втратити свій прогрес. _Без копії **Налаштувань** вам доведеться знову виконати всі завдання, якщо потрібно буде перевстановити AAPS або замінити телефон._
 
-* Any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back up your **Settings** before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
+* Щоразу, коли ви плануєте суттєві зміни конфігурації (зміна налаштувань SMB, зміна типу інсуліну, зміна помпи, зміни в автоматизаціях), створюйте резервну копію **Налаштувань** до і після змін. Так у вас будуть найновіші налаштування, а також копія налаштувань до змін, якщо потрібно буде до них повернутися.
 
-* Tubeless pumps (Such as Omnipod and Medtrum) users only : the **Settings** file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+* Лише для користувачів безтрубкових помп (наприклад, Omnipod і Medtrum): файл **Налаштування** містить дані з'єднання з поточним подом, і його можна використати для відновлення з'єднання з цим подом на новому телефоні. Якщо у вас немає копії налаштувань, експортованої після запуску поточного пода, вам доведеться запустити новий под, якщо потрібно буде замінити поточний телефон.
 
-**How to back-up manually:**
+**Як створити резервну копію вручну:**
 
-1. If this your first time importing or exporting **Settings** you will need to set a master password in [Settings > Protection](#Preferences-master-password). Set a password and record this in a safe place. _You will be unable to access your **Settings** back-ups without this password._
+1. Якщо ви імпортуєте або експортуєте **Налаштування** вперше, вам потрібно задати головний пароль у [Налаштування > Захист](#Preferences-master-password). Задайте пароль і запишіть його в безпечному місці. _Без цього пароля ви не зможете відкрити резервні копії **Налаштувань**._
 
-2. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance**. Choose where to save the file with the **Local** and **Cloud** chips next to **Export settings** (see **Exporting or Importing Settings** below), then tap **Export settings**. **AAPS** shows where the file will go: the file name for **Local**, **Google Drive** for **Cloud**. Tap **OK**.
+2. На головному екрані **AAPS** відкрийте **меню** (☰) > **Обслуговування**. Виберіть, куди зберегти файл, за допомогою перемикачів **Локально** і **Хмара** поруч з **Експорт налаштувань** (дивіться **Експорт або імпорт налаштувань** нижче), потім натисніть **Експорт налаштувань**. **AAPS** показує, куди буде збережено файл: ім'я файлу для **Локально**, **Google Drive** для **Хмара**. Натисніть **OK**.
 
-   ![Export settings to a local file](../images/Maintenance/export_settings_confirm_local.png)
+   ![Експорт налаштувань у локальний файл](../images/Maintenance/export_settings_confirm_local.png)
 
-   ![Export settings to Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
+   ![Експорт налаштувань у Google Drive](../images/Maintenance/export_settings_confirm_cloud.png)
 
-   Type the master password set above and tap **OK**.
+   Введіть головний пароль, заданий вище, і натисніть **OK**.
 
-   ![Master password for the export](../images/Maintenance/export_settings_password.png)
+   ![Головний пароль для експорту](../images/Maintenance/export_settings_password.png)
 
-   **Settings exported** (local) or **Cloud export successful** (cloud) confirms the export.
+   Повідомлення **Налаштування експортовано** (локально) або **Експорт у хмару виконано** (хмара) підтверджує експорт.
 
-   ![Settings exported message](../images/Maintenance/export_settings_done_local.png)
+   ![Повідомлення «Налаштування експортовано»](../images/Maintenance/export_settings_done_local.png)
 
-   ![Cloud export successful message](../images/Maintenance/export_settings_done_cloud.png)
+   ![Повідомлення «Експорт у хмару виконано»](../images/Maintenance/export_settings_done_cloud.png)
 
-3. Using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be `YYYY-MM-DD_Time_appname.json`. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
+3. У файловому менеджері телефону (зазвичай він називається “Files” («Файли») або “My Files” («Мої файли»)) перейдіть до Internal Storage («Внутрішня пам'ять») > AAPS > preferences. Тут ви побачите копії всіх експортованих файлів налаштувань. Ім'я файлу має бути `YYYY-MM-DD_Time_appname.json`. Вивантажте цей файл на хмарну платформу на ваш вибір. Потім завантажте з хмарної платформи копію також на свій локальний комп'ютер.
 
 (ExportImportSettings-Settings-Export)=
 
-## Settings Export
+## Експорт налаштувань
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).
+Ваші налаштування знаходяться в **Каталозі AAPS**, який ви вибрали під час [налаштування AAPS](#SetupWizard-StoragePermission).</br>
+**Каталог AAPS** також можна змінити на екрані **Обслуговування** (**меню** (☰) > **Обслуговування**), дивіться [Налаштування локального каталогу AAPS](#preferences-maintenance-logdirectory).
 ```
 
-It is recommended to do regular settings exports, especially before and after making configuration changes. You can choose to do exports **manually or (preferred) through automation**. Make sure to take a note of your AAPS master password and to backup your settings files by copying them off your phone to for instance a cloud storage location.
+Рекомендуємо регулярно експортувати налаштування, особливо до і після змін конфігурації. Експорт можна робити **вручну або (бажано) за допомогою автоматизації**. Обов'язково запишіть головний пароль AAPS і збережіть резервні копії файлів налаштувань поза телефоном, наприклад у хмарному сховищі.
 
-**Note**: _The exported settings will be encrypted with your AAPS master password: without the master password used for exporting you will be unable to import the settings file!_
+**Примітка**: _Експортовані налаштування шифруються вашим головним паролем AAPS: без головного пароля, використаного під час експорту, ви не зможете імпортувати файл налаштувань!_
 
-### Exporting or Importing Settings
-To export or import settings, open the **menu** (☰) and select **Maintenance**. Under **File management**, the **Local** and **Cloud** chips next to **Export settings** and **Import settings** choose where the settings file is saved to or read from: **Local** is the AAPS directory on your phone, **Cloud** is available once a [Cloud Directory](#preferences-maintenance-cloud) is set up. Tapping a chip turns it on or off; at least one always stays selected, and both rows share the same choice. Then tap **Export settings** or **Import settings** itself to start.
+### Експорт або імпорт налаштувань
+Щоб експортувати або імпортувати налаштування, відкрийте **меню** (☰) і виберіть **Обслуговування**. У розділі **Керування файлами** перемикачі **Локально** і **Хмара** поруч з **Експорт налаштувань** та **Імпорт налаштувань** визначають, куди зберігається файл налаштувань або звідки він читається: **Локально** — це каталог AAPS на вашому телефоні, **Хмара** доступна, коли налаштовано [Хмарний каталог](#preferences-maintenance-cloud). Натискання на перемикач вмикає або вимикає його; щонайменше один завжди залишається вибраним, і обидва рядки мають однаковий вибір. Потім натисніть саме **Експорт налаштувань** або **Імпорт налаштувань**, щоб почати.
 
-![Maintenance menu with the Export settings and Import settings rows](../images/Maintenance/maintenance_export_import.png)
+![Меню «Обслуговування» з рядками «Експорт налаштувань» та «Імпорт налаштувань»](../images/Maintenance/maintenance_export_import.png)
 
 (ExportImportSettings-Automating-Settings-Export)=
-### Automating Settings Export
+### Автоматизація експорту налаштувань
 
-For doing automating settings exports [(**see Automation**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) open [**Settings** > **Maintenance**](#preferences-maintenance-settings), expand **Unattended Settings Export** and switch on **Enable automated settings export**.
+Для автоматичного експорту налаштувань [(**див. Автоматизація**)](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) відкрийте [**Налаштування** > **Обслуговування**](#preferences-maintenance-settings), розгорніть **Фоновий експорт налаштувань** і увімкніть **Увімкнути автоматичний експорт налаштувань**.
 
-You can now configure [Automation](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) to export settings, either on a regular basis (_i.e._ each week), or after a pod change.
+Тепер можна налаштувати [Автоматизацію](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export) для експорту налаштувань: або регулярно (_наприклад_, щотижня), або після заміни пода.
 
-_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
+_**Примітка:** під час імпорту налаштувань завжди потрібно вводити головний пароль AAPS!_
 
-![Settings > Maintenance > Unattended Settings Export with the Enable automated settings export switch](../images/Maintenance/settings_unattended_export.png)
+![Налаштування > Обслуговування > Фоновий експорт налаштувань з перемикачем «Увімкнути автоматичний експорт налаштувань»](../images/Maintenance/settings_unattended_export.png)
 
 (ExportImportSettings-restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps)=
-## Restoring from your backups on a new phone or fresh installation of AAPS
+## Відновлення з резервних копій на новому телефоні або в новому встановленні AAPS
 
 ```{admonition} Where are preferences stored on my phone?
 :class: tip
-You will find your settings in the **AAPS Directory** you have selected during [AAPS setup](#SetupWizard-StoragePermission).</br>
-You can also change the **AAPS directory** on the **Maintenance** screen (**menu** (☰) > **Maintenance**), see [Setting the local AAPS directory](#preferences-maintenance-logdirectory).</br>
-If **AAPS** loses access to that directory (this can happen after a reinstall or after clearing the app's storage), it shows an **Access to the AAPS directory was lost** notification and stops saving settings to the phone until you [select the directory again](#preferences-maintenance-logdirectory).
+Ваші налаштування знаходяться в **Каталозі AAPS**, який ви вибрали під час [налаштування AAPS](#SetupWizard-StoragePermission).</br>
+**Каталог AAPS** також можна змінити на екрані **Обслуговування** (**меню** (☰) > **Обслуговування**), дивіться [Налаштування локального каталогу AAPS](#preferences-maintenance-logdirectory).</br>
+Якщо **AAPS** втратить доступ до цього каталогу (це може статися після перевстановлення або після очищення сховища застосунку), він показує сповіщення **Доступ до каталогу AAPS втрачено** і перестає зберігати налаштування на телефоні, доки ви [не виберете каталог ще раз](#preferences-maintenance-logdirectory).
 ```
 
-Use these instructions if you have a back-up of your APK and **Settings** that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+Використовуйте ці інструкції, якщо у вас є резервна копія APK і **Налаштувань**, яку ви хочете завантажити на новий телефон, або якщо з будь-якої причини вам довелося видалити і знову встановити APK на наявному телефоні.
 
-_If you are updating **AAPS** using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
+_Якщо ви оновлюєте **AAPS** за допомогою APK, зібраного з тим самим keystore, цей процес вам не потрібен. Однак все одно радимо створити резервну копію перед тим, як встановити оновлення._
 
-If you are updating **AAPS** after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back up all settings per the above and then uninstall the existing version of **AAPS** on your phone. See [Reinstalling AAPS with a new keystore](#reinstall-aaps) for the full procedure.
+Якщо ви оновлюєте **AAPS** після того, як втратили або замінили свій початковий keystore (наприклад, збираєте на новому комп'ютері без перенесення keystore), обов'язково створіть резервну копію всіх налаштувань, як описано вище, а потім видаліть наявну версію **AAPS** з телефону. Повну процедуру дивіться в розділі [Перевстановлення AAPS з новим keystore](#reinstall-aaps).
 
-If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
+Якщо потрібно, перед наступними кроками [налаштуйте свій CGM/застосунок-приймач ГК](../Getting-Started/CompatiblesCgms.md)
 
 (ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-The **Preferences** file contains the session of the pod or patch that was active when you exported it.
-- **Export right after every pod or patch activation** and copy the file off your phone.
-- **Same phone, pod still running:** leave **Also replace pump settings** unticked. Your current pod is kept and only the other settings are imported.
-- **New phone taking over the pod:** tick **Also replace pump settings**, and only use a file exported during the pod you are wearing now. A file from an earlier pod replaces your current pod session, and you will need to start a new pod.
-- **An old pod session was imported by mistake:** **AAPS** keeps trying to reach that pod and you cannot activate a new one. Deactivate it; if that fails, discard it (see for example [Discarding a pod](#omnipod-dash-discard-pod) for Omnipod DASH).
+Файл **Налаштування** містить сесію пода або патча, який був активним, коли ви його експортували.
+- **Експортуйте одразу після кожної активації пода або патча** і скопіюйте файл з телефону.
+- **Той самий телефон, под ще працює:** залиште **Також замінити налаштування помпи** без позначки. Ваш поточний под зберігається, імпортуються лише інші налаштування.
+- **Новий телефон переймає под:** позначте **Також замінити налаштування помпи** і використовуйте лише файл, експортований під час пода, який ви носите зараз. Файл з попереднього пода замінить сесію вашого поточного пода, і вам доведеться запустити новий под.
+- **Помилково імпортовано стару сесію пода:** **AAPS** і далі намагається зв'язатися з тим подом, і ви не можете активувати новий. Деактивуйте його; якщо це не вдається, викиньте його (дивіться, наприклад, [Викидання Pod](#omnipod-dash-discard-pod) для Omnipod DASH).
 ```
 
 ```{admonition} Pump settings are kept unless you say otherwise
 :class: note
-By default, an import leaves your pump settings alone: the pump selected in **Configuration**, its pairing and all its other settings stay as they are on this phone. Tick **Also replace pump settings** on the import screen only when you restore onto a new phone that should take over the same pump. Settings that are not in the file are never deleted by an import.
+Типово імпорт не змінює налаштування помпи: помпа, вибрана в **Конфігурації**, її спарювання і всі інші її налаштування залишаються такими, як є на цьому телефоні. Позначайте **Також замінити налаштування помпи** на екрані імпорту лише тоді, коли відновлюєте налаштування на новий телефон, який має перейняти ту саму помпу. Налаштування, яких немає у файлі, імпорт ніколи не видаляє.
 ```
 
-1. Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
+1. Використовуючи резервну копію APK, описану вище, виконайте інструкції для [нового встановлення](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
-2. Launch **AAPS** and allow any requested permissions
+2. Запустіть **AAPS** і надайте всі запитані дозволи
 
-3. Exit the Setup Wizard. We will be importing all the necessary settings from the back-up copy of **Settings**
+3. Вийдіть з майстра налаштування. Ми імпортуємо всі потрібні налаштування з резервної копії **Налаштувань**
 
-4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
+4. На головному екрані **AAPS** натисніть **Надати** і надайте всі дозволи, перелічені на панелі **Потрібні дозволи** вгорі
 
-5. From the **AAPS** main screen, set the master password in [Settings > Protection](#Preferences-master-password) to the same password as you used with your back-ups.
+5. На головному екрані **AAPS** задайте головний пароль у [Налаштування > Захист](#Preferences-master-password) — той самий пароль, який ви використовували для резервних копій.
 
-6. If you haven't done it yet, [set the **AAPS directory**](#preferences-maintenance-logdirectory): from the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **AAPS directory**.
+6. Якщо ви ще цього не зробили, [задайте **Каталог AAPS**](#preferences-maintenance-logdirectory): на головному екрані **AAPS** відкрийте **меню** (☰) > **Обслуговування** > **Каталог AAPS**.
 
-7. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** > **Export settings** > type in the master password set above > **OK**. This will create the preferences folder if it does not already exist on your phone.
+7. На головному екрані **AAPS** відкрийте **меню** (☰) > **Обслуговування** > **Експорт налаштувань** > введіть головний пароль, заданий вище > **OK**. Це створить папку preferences, якщо її ще немає на вашому телефоні.
 
-8. Download the back-up of your **Preferences** file from your cloud platform.
+8. Завантажте з хмарної платформи резервну копію файлу налаштувань (**Preferences**).
 
-9. Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to `/internal storage/AAPS/preferences` if your **AAPS Directory** has been set `/internal storage/AAPS`
+9. У файловому менеджері (зазвичай він називається “Files” («Файли») або “My Files” («Мої файли»)) перемістіть файл із завантажень до `/internal storage/AAPS/preferences`, якщо ваш **Каталог AAPS** встановлено як `/internal storage/AAPS`
 
-10. From the **AAPS** main screen, open the **menu** (☰) > **Maintenance** and tap **Import settings**. Select the preferences file you want to restore from (the newest is at the top). Make sure you select the correct preferences file, all .json files from the preferences folder (or from the cloud directory, with **Cloud**) will be shown.
+10. На головному екрані **AAPS** відкрийте **меню** (☰) > **Обслуговування** і натисніть **Імпорт налаштувань**. Виберіть файл налаштувань, з якого потрібно відновити (найновіший угорі). Переконайтеся, що вибрали правильний файл налаштувань: показуються всі файли .json з папки preferences (або з хмарного каталогу, якщо вибрано **Хмара**).
 
-    ![List of settings files to import](../images/Maintenance/import_settings_files.png)
+    ![Список файлів налаштувань для імпорту](../images/Maintenance/import_settings_files.png)
 
-    **AAPS** shows the details of the file. Type the master password set above and tap **Decrypt & Review**.
+    **AAPS** показує відомості про файл. Введіть головний пароль, заданий вище, і натисніть **Розшифрувати & переглянути**.
 
-11. Once the file is decrypted, decide what to do with the pump settings. On a new phone that takes over the same pump, tick **Also replace pump settings** so the pairing and the pump settings come from the file. Leave the box unticked to keep the pump this phone is already paired with. Then tap **Import**.
+11. Коли файл розшифровано, вирішіть, що робити з налаштуваннями помпи. На новому телефоні, який переймає ту саму помпу, позначте **Також замінити налаштування помпи**, щоб спарювання і налаштування помпи було взято з файлу. Залиште поле без позначки, щоб зберегти помпу, з якою цей телефон уже спарений. Потім натисніть **Імпортувати**.
 
-    ![Decrypted settings file with the Also replace pump settings box and the Import button](../images/Maintenance/import_settings_review.png)
+    ![Розшифрований файл налаштувань з полем «Також замінити налаштування помпи» і кнопкою «Імпортувати»](../images/Maintenance/import_settings_review.png)
 
-12. **AAPS** asks **Apply imported settings?** and tells you how many settings will change and, if you left the box unticked, how many pump settings are kept. Nothing has been written yet, so **Cancel** leaves your phone exactly as it was. Tap **OK** to apply.
+12. **AAPS** запитує **Застосувати імпортовані налаштування?** і показує, скільки налаштувань зміниться, а якщо ви залишили поле без позначки, — скільки налаштувань помпи буде збережено. Ще нічого не записано, тому **Скасувати** залишає телефон точно таким, яким він був. Натисніть **OK**, щоб застосувати.
 
-    ![Apply imported settings? dialog](../images/Maintenance/import_settings_apply.png)
+    ![Застосувати імпортовані налаштування? діалог](../images/Maintenance/import_settings_apply.png)
 
-13. **AAPS** applies the imported settings straight away, without restarting. Only the plugins whose settings changed are restarted. While this runs, **AAPS** shows **Applying settings…**; if the pump is busy, it shows **Waiting for pump…** and applies the settings once the pump is idle. If the pump is still busy after one minute, **AAPS** offers to try again. A **Settings applied** message confirms that the imported settings are in use. Any treatment you had queued while the import ran is dropped and **AAPS** tells you that it was cancelled, so nothing is sent to the pump twice.
+13. **AAPS** застосовує імпортовані налаштування одразу, без перезапуску. Перезапускаються лише плагіни, налаштування яких змінилися. Під час цього **AAPS** показує **Застосування налаштувань…**; якщо помпа зайнята, він показує **Очікування помпи…** і застосовує налаштування, коли помпа звільниться. Якщо помпа все ще зайнята через одну хвилину, **AAPS** пропонує спробувати ще раз. Повідомлення **Налаштування застосовано** підтверджує, що імпортовані налаштування використовуються. Будь-яку терапію, що стояла в черзі під час імпорту, буде скасовано, і **AAPS** повідомить вам про це, тому ніщо не буде надіслано на помпу двічі.
 
-    ![Settings applied message](../images/Maintenance/import_settings_applied.png)
+    ![Повідомлення «Налаштування застосовано»](../images/Maintenance/import_settings_applied.png)
 
-If the file selected a pump that this version of **AAPS** does not have, **AAPS** falls back to the **Virtual Pump** and tells you so. Select your pump again in **Configuration** and check its settings.
+Якщо у файлі вибрано помпу, якої немає в цій версії **AAPS**, **AAPS** перемикається на **Віртуальна помпа** і повідомляє вам про це. Виберіть свою помпу знову в **Конфігурації** і перевірте її налаштування.
 
-14. Tubeless pumps (Omnipod and Medtrum) users only - if you ticked **Also replace pump settings** and your **Preferences** were not backed up from the same pod you are currently using, you will need to start a new pod to begin insulin delivery.
+14. Лише для користувачів безтрубкових помп (Omnipod і Medtrum): якщо ви позначили **Також замінити налаштування помпи**, а ваші **Налаштування** не були збережені під час того самого пода, який ви використовуєте зараз, вам доведеться запустити новий под, щоб почати введення інсуліну.
 
-**Troubleshooting:** if you are unable to get an active profile set from the **AAPS** main screen, open the **menu** (☰) in the top left > **Configuration** > **Pump** > switch to **Virtual Pump** > then switch back to your pump type
+**Усунення проблем:** якщо не вдається встановити активний профіль, на головному екрані **AAPS** відкрийте **меню** (☰) зліва вгорі > **Конфігурація** > **Помпа** > перемкніть на **Віртуальна помпа** > потім перемкніть назад на свій тип помпи
 
-### Note for Dana RS users
+### Примітка для користувачів Dana RS
 
-- If you ticked **Also replace pump settings**, the pump connection settings are imported too: **AAPS** on your new phone will already "know" the pump and therefore not start a Bluetooth scan.
-- Please pair new phone and pump manually.
+- Якщо ви позначили **Також замінити налаштування помпи**, налаштування з'єднання з помпою теж імпортуються: **AAPS** на новому телефоні вже «знатиме» помпу і тому не запускатиме пошук Bluetooth.
+- Спаруйте новий телефон і помпу вручну.
