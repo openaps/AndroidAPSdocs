@@ -1,42 +1,42 @@
-# Update to a new version or branch
+# Оновлення до нової версії або гілки
 
-## Build yourself instead of download
+## Зберіть самі, а не завантажуйте
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** не можна завантажити через правила для медичних виробів. Збирати застосунок для власного використання законно, але ви не повинні давати його копію іншим! Докладніше див. на [сторінці FAQ](../UsefulLinks/FAQ.md).
 
 ## Важливі примітки
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Do not forget to export your **AAPS'** settings.
+- Будь ласка, оновіть **AAPS** до нової версії якомога швидше після виходу нового випуску.
+- Коли вийде новий випуск, ви побачите в самому застосунку **AAPS** інформаційний банер про нову версію.
+- Про нову версію також оголошують у Facebook у день випуску.
+- Після виходу випуску уважно прочитайте [Примітки до випуску](ReleaseNotes.md) і з’ясуйте всі питання зі спільнотою у Facebook або Discord, перш ніж почати оновлення.
+- Не забудьте експортувати налаштування **AAPS**.
 
-## Update AAPS with browser build
+## Оновлення AAPS зі збіркою в браузері
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+Ви вже зібрали застосунок AAPS у браузері? Виконайте інструкції для способу, який ви використали:
 
-- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder** (ваш приватний репозиторій, зазвичай з назвою `my-aaps`): [Оновлення AAPS з AAPS Builder](#aaps-builder-updates). Тут немає fork, який треба синхронізувати.
+- **Fork і файл підготовки** (ваша власна копія AndroidAPS): [Оновлення в браузері (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## Оновлення AAPS з Android Studio
 
-Follow [these instructions](./UpdateComputerBuild.md).
+Виконайте [ці інструкції](./UpdateComputerBuild.md).
 
-## Update AAPS with the command-line
+## Оновлення AAPS з командного рядка
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Скористайтеся [тими самими інструкціями](../SettingUpAaps/CLIBuild.md), що й під час попередньої збірки AAPS, але отримайте нові зміни через git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Check AAPS version on phone
+### Перевірте версію AAPS на телефоні
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+Перевірте в [Примітках до випуску](../Maintenance/ReleaseNotes.md), чи є особливі інструкції після оновлення.
 
-After you installed the new apk:
+Після встановлення нового apk:
 
-- you can check the **AAPS'** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The **AAPS'** current version can be viewed;
-- ensure import settings have been actioned; and
-- please check your **AAPS'** settings under **Settings** and ensure these remain accurate.
+- ви можете перевірити версію **AAPS** на телефоні: відкрийте **меню** (☰) зліва вгорі, а потім **Про застосунок** (як на знімку екрана нижче). можна переглянути поточну версію **AAPS**;
+- переконайтеся, що налаштування імпортовано; і
+- перевірте налаштування **AAPS** у розділі **Налаштування** і переконайтеся, що вони досі правильні.
 
-![About dialog with the AAPS version installed](../images/about_dialog_version.png)
+![Вікно «Про застосунок» з версією встановленого AAPS](../images/about_dialog_version.png)
