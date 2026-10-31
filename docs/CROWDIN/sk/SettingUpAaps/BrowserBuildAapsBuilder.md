@@ -103,7 +103,7 @@ Nechajte túto stránku dokumentácie otvorenú: dlho podržte prst na odkaze vy
 
 Stránka nastavenia otvára každú stránku GitHubu na novej karte Chromu. Ak sa chcete vrátiť na stránku nastavenia, ťuknite na tlačidlo kariet vedľa panela s adresou v Chrome (štvorček s číslom) a zvoľte stránku nastavenia AAPS Builder.
 
-Stránka nastavenia beží celá vo vašom prehliadači: váš kľúč a heslá sa nikam neposielajú, okrem GitHub secretu, do ktorého ich sami vložíte. Only your GitHub username is sent to GitHub, to check that it exists. Pamätá si vaše používateľské meno na GitHube a názov repozitára, takže sa k nej môžete kedykoľvek vrátiť a znova otvoriť stránku so secretmi alebo svoje zostavenia.
+Stránka nastavenia beží celá vo vašom prehliadači: váš kľúč a heslá sa nikam neposielajú, okrem GitHub secretu, do ktorého ich sami vložíte. Na GitHub sa posiela iba vaše používateľské meno na GitHube, aby sa overilo, že existuje. Pamätá si vaše používateľské meno na GitHube a názov repozitára, takže sa k nej môžete kedykoľvek vrátiť a znova otvoriť stránku so secretmi alebo svoje zostavenia.
 
 ![Stránka nastavenia AAPS Builder](../images/Building-the-App/CI/AapsBuilder30_Step1.png)
 
@@ -241,7 +241,7 @@ Krok 4 sa odomkne po dokončení kroku 3. Váš kľúč, jeho heslá a jeho alia
 Toto stačí urobiť iba raz.
 
 ```{tip}
-GitHub ukazuje **Page not found** (404)? First check that you are logged in to github.com in this browser: GitHub shows 404 for private repositories when you are not logged in. Inak sa používateľské meno alebo názov repozitára v kroku 1 nezhoduje s vaším repozitárom. Skontrolujte názov na github.com, opravte ho v kroku 1 a znova ťuknite na tlačidlo.
+GitHub ukazuje **Page not found** (404)? Najprv skontrolujte, či ste v tomto prehliadači prihlásení na github.com: GitHub ukazuje 404 pri súkromných repozitároch, keď nie ste prihlásení. Inak sa používateľské meno alebo názov repozitára v kroku 1 nezhoduje s vaším repozitárom. Skontrolujte názov na github.com, opravte ho v kroku 1 a znova ťuknite na tlačidlo.
 ```
 
 (aaps-builder-step5)=
@@ -257,7 +257,7 @@ GitHub ukazuje **Page not found** (404)? First check that you are logged in to g
 2. Ak sa to GitHub spýta, ťuknite na zelené tlačidlo, ktoré povolí workflowy.
 3. Ťuknite na **Run workflow**. Otvorí sa malý formulár:
    - **Version**: ponechajte `latest`, ak chcete zostaviť najnovšie vydanie AAPS, alebo zadajte číslo vydania, napríklad `3.3.2.1`.
-   - **Variant**: na bežné používanie s pumpou ponechajte `fullRelease`. Ostatné varianty sú vysvetlené v časti [varianty zostavenia](#browserbuild-variant). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
+   - **Variant**: na bežné používanie s pumpou ponechajte `fullRelease`. Ostatné varianty sú vysvetlené v časti [varianty zostavenia](#browserbuild-variant). `aapsclient3Release` zostaví **AAPSClient3**, ktorý je dostupný od verzie **AAPS** 4.0 (pozrite [O AAPSClient, AAPSClient2 a AAPSClient3](#remotecontrol-aapsclient-versions)).
    - Ťuknite na zelené tlačidlo **Run workflow**.
 
    ![Formulár Run workflow s hodnotami latest a fullRelease](../images/Building-the-App/CI/AapsBuilder16_RunWorkflow.png)
@@ -316,7 +316,7 @@ Ak tam nie je tlačidlo **Build AAPS** ani **Run workflow**:
 
    ![Stiahnuté súbory v Chrome s APK súborom AAPS](../images/Building-the-App/CI/AapsBuilder29_Downloads.png)
 
-`aaps-wear-….apk` je aplikácia pre smart hodinky. Ak ich nepoužívate, preskočte ju.
+`aaps-wear-….apk` je aplikácia pre inteligentné hodinky. Ak ich nepoužívate, preskočte ju.
 
 Aplikácia zostáva na stránke zostavenia **14 dní**. V repozitári sa nezobrazuje v časti **Code**. Skopírujte ju na bezpečné miesto mimo telefónu, spolu s exportmi nastavení.
 
@@ -366,7 +366,7 @@ Prvý riadok súboru ukazuje jeho verziu.
 
 (aaps-builder-troubleshooting)=
 
-## Troubleshooting
+## Riešenie problémov
 
 Ak chcete zistiť, prečo zostavenie zlyhalo, [prečítajte si log zostavenia](#aaps-ci-read-the-logs): názvy krokov sú iné, ale chybu nájdete rovnakým spôsobom. Rovnakým spôsobom môžete aj [aktualizovať secret](#aaps-ci-update-secret) a [znova spustiť zostavenie](#aaps-ci-rerun).
 
@@ -382,7 +382,7 @@ Ak chcete zistiť, prečo zostavenie zlyhalo, [prečítajte si log zostavenia](#
 - **GitHub hlási, že súbor už existuje**, keď robíte commit workflow: váš repozitár už workflow má. Namiesto toho ho aktualizujte podľa popisu v časti [Aktualizácia AAPS](#aaps-builder-updates).
 - **„Google Drive access has expired or was revoked“**: zopakujte [krok 7](#aaps-builder-google-drive) a aktualizujte secret `GDRIVE_OAUTH2`.
 
-Ďalšie problémy s GitHubom a Diskom Google nájdete v časti [Riešenie problémov so zostavením v prehliadači](../GettingHelp/BrowserBuildTroubleshooting.md).
+Ďalšie problémy s GitHubom a Diskom Google nájdete v časti [Zostavenie v prehliadači: riešenie problémov](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ```{toctree}
 :hidden:
