@@ -21,7 +21,7 @@ Belangrijkste kenmerken van de **Omnipod DASH** ('DASH'):
 (omnipod-dash-constraints)=
 
 ## Bekende beperkingen/problemen van Omnipod DASH in AAPS
-- Het algemene advies is om **AAPS** te gebruiken op Android 14 of 16. Over Android 15 zijn in de community veel [problemen](https://github.com/nightscout/AndroidAPS/issues/3471) gemeld. Als je toch Android 15 gebruikt, moet je waarschijnlijk **Bluetooth bonding** aanzetten (in het deel **Geavanceerde instellingen** van de [Dash-instellingen](#omnipod-dash-advanced-settings)) om Pods goed te kunnen activeren en gebruiken. Zie [Algemene probleemoplossing](../GettingHelp/GeneralTroubleshooting.md) voor meer info over de instellingen voor bonding.
+- Het algemene advies is om **AAPS** te gebruiken op Android 14 of 16. Over Android 15 zijn in de community veel [problemen](https://github.com/nightscout/AndroidAPS/issues/3471) gemeld. Als je toch Android 15 gebruikt, moet je waarschijnlijk **Bluetooth bonding** aanzetten (in het deel **Geavanceerde instellingen** van de [Dash-instellingen](#omnipod-dash-advanced-settings)) om Pods goed te kunnen activeren en gebruiken. Zie [Probleemoplossing](../GettingHelp/GeneralTroubleshooting.md) voor meer info over de instellingen voor bonding.
 - Zomertijd en wijzigingen van tijdzone worden niet automatisch toegepast. Na een wijziging van de klok moet je de pod zelf bijwerken: druk op **Vernieuwen** op het DASH-pompscherm en druk dan op **Tijd instellen** (zichtbaar als de tijdzones van pod en telefoon verschillen) of doe een **Profiel wissel** (zie [Tijdzonewijziging voor Omnipod Dash](#timezone-traveling-with-pumps)).
 - Dash ondersteunt alleen basaalstanden in stappen van 0,05 E/u. Als je in je **AAPS-profiel** een basaal instelt met stappen van 0,01, geeft AAPS geen waarschuwing, ook al rondt de pod de stand naar boven af op stappen van 0,05. Als je **Pod Historie** opent op het DASH-pompscherm, zie je dat er 0,05 basaal is ingesteld. Dit betekent ook dat de laagste basaalstand die de DASH in **AAPS** toestaat 0,05 E/u is.
 - Het instellingenbestand bevat de actieve Pod-sessie. Exporteer je instellingen na elke Pod-activering, en lees [Instellingen exporteren en importeren](#omnipod-dash-export-import) voordat je instellingen importeert.
@@ -88,7 +88,7 @@ Er zijn **twee** manieren om de Omnipod DASH-driver te selecteren in **AAPS**:
 
 Als je **AAPS** voor het eerst installeert, leidt de **Setup Wizard** je door de belangrijkste functies en installatie-eisen van **AAPS**. Als je bij de stap **Pomp** komt, selecteer dan **Omnipod Dash**.
 
-![De stap Pomp van de setup wizard met Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
+![De stap Pomp van de Setup Wizard met Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
 Als je het nog niet zeker weet, kun je nu **Virtuele Pomp** selecteren en **Omnipod Dash** later kiezen, nadat je **AAPS** hebt ingesteld (zie optie 2).
 
@@ -184,7 +184,7 @@ De knoppen onderaan het pompscherm veranderen met de status van de pod. Alleen d
   - *Gebruik het om de pod-status bij te werken en om velden met (onzeker) te wissen.*
   - *Zie het deel [Probleemoplossing](#omnipod-dash-troubleshooting) hieronder voor meer informatie.*
 
-- **Alarmen Stil:** Stopt de piepjes van pod-waarschuwingen (bijvoorbeeld pod verloopt of laag reservoir). Alleen getoond als de pod een actieve waarschuwing heeft. Zie [Pod-alarmen stilzetten](#omnipod-dash-silencing-pod-alerts).
+- **Alarmen dempen:** Stopt de piepjes van pod-waarschuwingen (bijvoorbeeld pod verloopt of laag reservoir). Alleen getoond als de pod een actieve waarschuwing heeft. Zie [Pod-alarmen stilzetten](#omnipod-dash-silencing-pod-alerts).
 
 - **Toediening hervatten:** Hervat de insulinetoediening op een onderbroken pod. Alleen getoond als de toediening onderbroken is. Zie [Insulinetoediening hervatten](#omnipod-dash-resuming-insulin-delivery).
 
@@ -382,22 +382,22 @@ Dit deel legt uit hoe je de piepjes van de pod stopt als de pod het einde van zi
 
 De maximale levensduur van een pod is 80 uur (3 dagen en 8 uur). De fabrikant van de pod raadt echter aan om niet langer dan 72 uur (3 dagen) te gaan.
 
-***LET OP**: De knop **Alarmen Stil** wordt alleen op het DASH-pompscherm getoond als de pod een actieve waarschuwing heeft, bijvoorbeeld pod verloopt of laag reservoir. Als de knop **Alarmen Stil** niet zichtbaar is maar je de pod wel hoort piepen, druk dan op **Vernieuwen**.*
+***LET OP**: De knop **Alarmen dempen** wordt alleen op het DASH-pompscherm getoond als de pod een actieve waarschuwing heeft, bijvoorbeeld pod verloopt of laag reservoir. Als de knop **Alarmen dempen** niet zichtbaar is maar je de pod wel hoort piepen, druk dan op **Vernieuwen**.*
 
-1. Als de tijd van de herinnering bereikt is, piept de pod om je te laten weten dat hij binnenkort verloopt en dat je hem moet vervangen. Op het DASH-pompscherm toont het veld **Pod verloopt (1)** de precieze tijd waarop de pod verloopt (72 uur na activering). De tekst wordt 4 uur voor dit moment geel. Daarna wordt **Harde einddatum Pod** geel en toont het de resterende tijd tot de pod stopt met insuline toedienen. Het veld **Actieve pod alarmen (2)** toont **Pod verloopt binnenkort**, en de knop **Alarmen Stil (3)** wordt getoond.
+1. Als de tijd van de herinnering bereikt is, piept de pod om je te laten weten dat hij binnenkort verloopt en dat je hem moet vervangen. Op het DASH-pompscherm toont het veld **Pod verloopt (1)** de precieze tijd waarop de pod verloopt (72 uur na activering). De tekst wordt 4 uur voor dit moment geel. Daarna wordt **Harde einddatum Pod** geel en toont het de resterende tijd tot de pod stopt met insuline toedienen. Het veld **Actieve pod alarmen (2)** toont **Pod verloopt binnenkort**, en de knop **Alarmen dempen (3)** wordt getoond.
 
    ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Druk op **Alarmen Stil**. **AAPS** stuurt de opdracht naar de pod om de piepjes voor het verlopen te stoppen.
+2. Druk op **Alarmen dempen**. **AAPS** stuurt de opdracht naar de pod om de piepjes voor het verlopen te stoppen.
 
    ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, waarin dit scherm het tabblad **DASH** was. In **AAPS** 4 staat de knop **Alarmen Stil** op het DASH-pompscherm (**Beheren** > **Pomp**).
+   De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie, waarin dit scherm het tabblad **DASH** was. In **AAPS** 4 staat de knop **Alarmen dempen** op het DASH-pompscherm (**Beheren** > **Pomp**).
    ```
 
-3. Als de waarschuwingen zijn stilgezet, staat de waarschuwing niet meer in het veld **Actieve pod alarmen**, verdwijnt de knop **Alarmen Stil** en stopt de pod met piepen.
+3. Als de waarschuwingen zijn stilgezet, staat de waarschuwing niet meer in het veld **Actieve pod alarmen**, verdwijnt de knop **Alarmen dempen** en stopt de pod met piepen.
 
    ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
@@ -408,7 +408,7 @@ De maximale levensduur van een pod is 80 uur (3 dagen en 8 uur). De fabrikant va
 
    Als de opdracht mislukt, toont **AAPS** een waarschuwing die begint met *Meldingen negeren mislukt*. Druk op **Vernieuwen** en probeer het opnieuw.
 
-De waarschuwing voor een laag reservoir werkt op dezelfde manier. Als de insuline in de pod daalt tot het **Aantal eenheden** dat bij **Waarschuwingen** is ingesteld, piept de pod. Het veld **Reservoir** toont de resterende hoeveelheid, het veld **Actieve pod alarmen** toont **Laag reservoir niveau**, en de knop **Alarmen Stil** wordt getoond. Druk op **Alarmen Stil** om de piepjes te stoppen, en plan je volgende podwissel.
+De waarschuwing voor een laag reservoir werkt op dezelfde manier. Als de insuline in de pod daalt tot het **Aantal eenheden** dat bij **Waarschuwingen** is ingesteld, piept de pod. Het veld **Reservoir** toont de resterende hoeveelheid, het veld **Actieve pod alarmen** toont **Laag reservoir niveau**, en de knop **Alarmen dempen** wordt getoond. Druk op **Alarmen dempen** om de piepjes te stoppen, en plan je volgende podwissel.
 
 ![Het DASH-pompscherm met een waarschuwing Laag reservoir niveau](../images/v4/Pumps/dash_low_reservoir_alert.png)
 
@@ -489,7 +489,7 @@ De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 
 
 Pod-waarschuwingen voor het verlopen en uitschakelen van de pod en voor een laag reservoir. Als je deze instellingen wijzigt terwijl er een pod actief is, stuurt **AAPS** de nieuwe instellingen voor waarschuwingen naar de pod.
 
-***LET OP:** Er wordt ALTIJD een melding van **AAPS** getoond voor elke waarschuwing, zodra **AAPS** met de pod heeft gecommuniceerd nadat de waarschuwing is afgegaan. Het wegklikken van de melding stopt de pod-waarschuwing NIET. Om de waarschuwing te stoppen, open je het DASH-pompscherm en druk je op **Alarmen Stil**.*
+***LET OP:** Er wordt ALTIJD een melding van **AAPS** getoond voor elke waarschuwing, zodra **AAPS** met de pod heeft gecommuniceerd nadat de waarschuwing is afgegaan. Het wegklikken van de melding stopt de pod-waarschuwing NIET. Om de waarschuwing te stoppen, open je het DASH-pompscherm en druk je op **Alarmen dempen**.*
 
 **Herinnering vervaldatum ingeschakeld:**    Als dit aan staat, piept de pod als de tijd van de herinnering bereikt is. Standaard aan.
 
@@ -531,7 +531,7 @@ Kies of **AAPS** een geluid afspeelt bij zijn meldingen als het niet zeker is of
 
 De [statusregel](#screens-sensor-level-battery) op het hoofdscherm toont de leeftijd van je insuline en canule. Bij Omnipod werkt dit iets anders dan bij pompen met een slang.
 
-**AAPS** registreert automatisch een canulewissel en een insulinewissel elke keer dat je een pod activeert. Daardoor worden de leeftijden van **Insuline** en **Canule** na elke podwissel op nul gezet. Je hoeft ze niet zelf te registreren met **Ontlucht/vul**. Dit komt doordat de pod de canule direct in de huid brengt op de plek waar hij geplakt is: Omnipod gebruikt geen slang.
+**AAPS** registreert automatisch een canulewissel en een insulinewissel elke keer dat je een pod activeert. Daardoor worden de leeftijden van **Insuline** en **Canule** na elke podwissel op nul gezet. Je hoeft ze niet zelf te registreren met **Prime/Vul**. Dit komt doordat de pod de canule direct in de huid brengt op de plek waar hij geplakt is: Omnipod gebruikt geen slang.
 
 De leeftijd van de **Pomp batterij** wordt niet gemeld: de batterij en het insulinereservoir zitten in elke pod, en de batterij gaat altijd langer mee dan de pod zelf (maximaal 80 uur).
 
@@ -561,7 +561,7 @@ Extra opmerking:
 
 ## Probleemoplossing
 
-Dit deel behandelt bekende problemen en oplossingen bij het gebruik van Omnipod DASH met AAPS. Er is ook een deel [Algemene probleemoplossing](../GettingHelp/GeneralTroubleshooting.md) in de documentatie. Lees dat ook, want het behandelt ook onderwerpen die voor sommige Pod-problemen belangrijk zijn.
+Dit deel behandelt bekende problemen en oplossingen bij het gebruik van Omnipod DASH met AAPS. Er is ook een deel [Probleemoplossing](../GettingHelp/GeneralTroubleshooting.md) in de documentatie. Lees dat ook, want het behandelt ook onderwerpen die voor sommige Pod-problemen belangrijk zijn.
 
 ---
 
@@ -627,7 +627,7 @@ Door de instellingen van **AAPS** te exporteren, kun je al je instellingen en Do
 
 ```{admonition} Importing settings can end your active Pod
 :class: warning
-Laat op de telefoon die de Pod al gebruikt **Vervang ook de pompinstellingen** uitgevinkt: de Pod-sessie blijft dan behouden en alleen de andere instellingen worden geïmporteerd. Vink het alleen aan op een nieuwe telefoon, met een bestand dat is geëxporteerd tijdens de Pod die je nu draagt. Zie [Slangloze pompen](#ExportImportSettings-tubeless-pumps).
+Laat op de telefoon die de Pod al gebruikt **Vervang ook de pompinstellingen** uitgevinkt: de Pod-sessie blijft dan behouden en alleen de andere instellingen worden geïmporteerd. Vink het alleen aan op een nieuwe telefoon, met een bestand dat is geëxporteerd tijdens de Pod die je nu draagt. Zie [Pompen zonder slang](#ExportImportSettings-tubeless-pumps).
 ```
 
 Als de geïmporteerde instellingen een Pod bevatten die niet meer actief is, zie dan het volgende deel.
@@ -693,7 +693,7 @@ Hieronder staat een overzicht van de belangrijkste waarschuwingen die je kunt te
 - *Instellen van basaal profiel is mogelijk mislukt. De insulinetoediening kan onderbroken zijn! Vernieuw de Pod status handmatig in het Omnipod tabblad en hervat de toediening indien nodig.* Het instellen van het basale **Profiel** op de pod is misschien mislukt. Druk op **Vernieuwen** op het DASH-pompscherm (de melding noemt nog het "Omnipod tabblad") en druk op **Toediening hervatten** als die knop zichtbaar is.
 - *Kan niet verifiëren of SMB (X E) is geslaagd. Vernieuw de pod status om deze opdracht te bevestigen of te weigeren.* **AAPS** kon niet bevestigen dat de **SMB** is toegediend. Druk op **Vernieuwen** op het DASH-pompscherm en controleer het veld **Laatste bolus**.
 - *Bolus levering status onzeker. Vernieuw de Pod status om te bevestigen of te weigeren.* Hetzelfde geldt voor een normale bolus: druk op **Vernieuwen** op het DASH-pompscherm.
-- *Tijdzone op pod verschilt van de tijdzone op de telefoon. Basaal stand is onjuist. Wissel profiel om het op te lossen* Zie de opmerking over zomertijd en tijdzones in [Bekende beperkingen/problemen van Omnipod DASH in AAPS](#omnipod-dash-constraints).
+- *Tijdzone op pod verschilt van de tijdzone op de telefoon. Basaalstand is onjuist. Wissel profiel om het op te lossen* Zie de opmerking over zomertijd en tijdzones in [Bekende beperkingen/problemen van Omnipod DASH in AAPS](#omnipod-dash-constraints).
 
 (omnipod-dash-where-to-get-help-for-dash)=
 
