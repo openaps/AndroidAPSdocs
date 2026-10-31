@@ -127,7 +127,7 @@ If you observe the following patterns after a few days, consider the following c
 
 1. 首先，你需要在 **設定檔** 中正確設定預設基礎率。
 2. 從目標值開始，最好沒有負 IOB。
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin C4. 非常精準地量測已知份量的碳水，並記錄開始時間與 Start IOB。 Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured CI). 別忘了把碳水吃掉 ;)
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. 非常精準地量測已知份量的碳水，並記錄開始時間與 Start IOB。 Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). 別忘了把碳水吃掉 ;)
 4. 幾個小時後，當 COB=0[*](#profiletuning-cob-zero) 且你回到目標值時，記錄結束時間，並記下 End IOB；像先前一樣檢查總注射胰島素，並將其稱為 End insulin。*注意：只要長於你的消化時間，時間範圍並不重要*
 5. 從 Start 與 End 胰島素用量的差額中，再減去/加上 End IOB - Start IOB 的差異。 Then subtract the basal insulin calculated from your **Profile's** settings.
 6. 若 __血糖__ 在目標範圍內，你將得到用於「消化」碳水的總胰島素用量。計算你的 **I:C**。
