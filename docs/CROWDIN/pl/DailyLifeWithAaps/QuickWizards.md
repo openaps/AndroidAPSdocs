@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# Szybki kalkulator (bolusy jednym dotknięciem)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+**Szybki kalkulator** to zapisany przycisk do szybkiego użycia dla posiłku lub sytuacji, która często się powtarza. Zawiera stałą ilość **węglowodanów** (i sposób dawkowania dla nich). Dzięki temu podasz bolus — albo tylko zapiszesz węglowodany — jednym dotknięciem i potwierdzeniem, bez otwierania za każdym razem pełnego kalkulatora bolusa.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## Otwieranie szybkiego kalkulatora
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Otwórz ekran **Zarządzaj** (dolny pasek nawigacji) i wybierz **Szybki kalkulator** (*„Zarządzaj presetami kalkulatora bolusa”*).
 
 ---
 
-## The three modes
+## Zarządzanie szybkimi kalkulatorami
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Twoje szybkie kalkulatory są pokazane jako **karuzela kart, którą przewijasz palcem** (każda karta pokazuje tekst przycisku, węglowodany i zakres czasu ważności). Edytor poniżej ustawia **wybrany** szybki kalkulator. Dolny pasek akcji ma przyciski **➕ dodaj**, **⧉ sklonuj**, **🗑️ usuń** oraz przycisk **▶**, który uruchamia wybrany szybki kalkulator.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![Edytor szybkiego kalkulatora — tryb, węglowodany, czas węglowodanów i zakres czasu ważności](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+Główne pola edytora to:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Tekst przycisku** — napis pokazany na przycisku.
+- **Węglowodany** i **Czas węglowodanów** — ilość węglowodanów i ich przesunięcie w czasie.
+- **Zakres czasu ważności** — zobacz [Ważność](#quickwizard_validity).
+- **Opcje kalkulatora** i **Wybór urządzenia** — zobacz poniżej.
 
 ---
 
-## Validity — when the button appears
+## Trzy tryby
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+Przełącznik na górze edytora — **Kreator / Insulina / Węglowodany** — decyduje, **co robi przycisk** po dotknięciu:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Kreator** — uruchamia pełny **kalkulator bolusa** dla ustawionych węglowodanów i używa Twoich aktualnych wartości **BG, IOB, COB i trendu** (zgodnie z *Opcjami kalkulatora* poniżej). Podaje *obliczony* bolus i zapisuje węglowodany. To jest klasyczny szybki kalkulator.
+- **Insulina** — podaje **stałą, ustawioną przez Ciebie dawkę insuliny** — bez obliczeń.
+- **Węglowodany** — zapisuje **tylko ustawione węglowodany**, **bez bolusa**.
 
 ---
 
-## Invocation points — where you use it
+## Opcje kalkulatora (tryb Kreator)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Dla przycisku w trybie **Kreator** wybierasz, których danych używają obliczenia:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Użyj BG**, **Użyj COB**, **Użyj IOB** (z opcją *Tylko dodatnie wartości IoB*), **Użyj trendu** (*Każdego / Tylko rosnącego / Tylko malejącego*), **Użyj celu tymczasowego**, **Użyj alarmu**.
+- **Procent bolusa** — zmienia obliczony bolus o podany procent.
+- **Dodaj eCarbs** — dodatkowo planuje rozłożone węglowodany (eCarbs).
+
+![Opcje kalkulatora, procent bolusa i wybór urządzenia](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Ważność — kiedy przycisk się pojawia
+
+(quickwizard_validity)= **Zakres czasu ważności** (*Od / Do*) określa, **kiedy** szybki kalkulator jest widoczny i można go użyć. Przycisk ustawiony na przykład na **06:00–10:00** pojawia się tylko rano. Dzięki temu szybki kalkulator *Śniadanie* nie zaśmieca ekranu przy kolacji (i nie zostanie dotknięty przez pomyłkę). Poza swoim oknem czasu przycisk jest ukryty w panelu **Leczenie** i na [pasku QuickLaunch](QuickLaunch.md). Przycisk na pasku nie jest usuwany: wraca, gdy okno czasu znowu się otworzy.
+
+Gdy zakres czasu ważności jest krótszy niż 4 godziny, przycisk jest też ukryty przez 30 minut po użyciu. Dzięki temu ten sam posiłek nie zostanie wpisany dwa razy przez pomyłkę.
+
+---
+
+## Miejsca uruchamiania — gdzie go używasz
+
+Przełączniki **Wybór urządzenia** decydują, gdzie pojawia się każdy szybki kalkulator:
+
+- **Pokaż na telefonie** — pojawia się w **panelu [Leczenie](../Maintenance/V4Changes.md)** (obliczona dawka jest pokazana od razu na przycisku). Szybki kalkulator pokazany na telefonie można też **przypiąć jako przycisk szybkiej akcji na ekranie głównym**: otwórz *Konfiguracja szybkich akcji* (⚙ na pasku [QuickLaunch](QuickLaunch.md)) i dodaj go z kategorii **Szybki kalkulator**.
+- **Pokaż na zegarku** — pojawia się na **kafelku Szybki kalkulator w Wear OS** (przewiń do niego w karuzeli kafelków zegarka, a potem dotknij przycisku, aby go uruchomić — tak samo jak [kafelek Scena](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+Sekcja **Wybór urządzenia** pojawia się w edytorze tylko wtedy, gdy wtyczka **Wear** jest włączona, a jej ustawienie **Sterowanie z zegarka** jest włączone. Bez tego każdy szybki kalkulator jest po prostu pokazany na telefonie.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+Na telefonie szybkie kalkulatory pojawiają się na górze dolnego panelu **Leczenie**:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![Szybkie kalkulatory (na górze) w otwartym dolnym panelu Leczenie](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…oraz jako przycisk szybkiej akcji na ekranie głównym:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![Przycisk szybkiej akcji Szybki kalkulator na ekranie głównym](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![Kafelek Szybki kalkulator na zegarku z Wear OS](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Sparowane **urządzenie opiekuna** (**AAPSClient**) też może uruchomić szybki kalkulator — **urządzenie pacjenta** oblicza i podaje dawkę (zobacz [Sterowanie Master ↔ Client](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Bez względu na to, skąd go uruchomisz, dotknięcie szybkiego kalkulatora zawsze pokazuje **potwierdzenie**, zanim cokolwiek zostanie podane (przy uruchomieniu z urządzenia opiekuna lub zegarka jest to potwierdzenie przygotowane przez urządzenie pacjenta).
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Szybki kalkulator jest odrzucany, gdy jego dawka jest większa niż Twój maksymalny bolus albo gdy jego węglowodany lub eCarbs są większe niż Twój limit węglowodanów (na przykład po obniżeniu limitu). Gdy węglowodany przekraczają limit, przycisk w panelu **Leczenie** jest nieaktywny. Zmień szybki kalkulator albo limit.
 
 ---
 
-## Adding and removing
+## Dodawanie i usuwanie
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Dodaj** — tworzy nowy szybki kalkulator.
+- **⧉ Sklonuj** — tworzy kopię istniejącego jako punkt startowy.
+- **🗑️ Usuń** — usuwa szybki kalkulator.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Gdy masz dwa lub więcej szybkich kalkulatorów, możesz też zmienić ich kolejność w karuzeli: dotknij ikony **Zmień kolejność** (⇅) na górnym pasku, przesuwaj kartę ze środka **przyciskami ◀ / ▶**, a potem potwierdź **✓**. (Przyciski wyglądają tak samo jak przy [zmianie kolejności profili](ProfileSwitch-ProfilePercentage.md)).
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+Szybkie kalkulatory są częścią synchronizowanej konfiguracji, więc są wspólne dla urządzenia pacjenta i sparowanych urządzeń opiekuna.
 
 ---
 
