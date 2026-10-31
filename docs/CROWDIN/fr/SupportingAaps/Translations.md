@@ -1,6 +1,6 @@
 # How to translate strings for the AAPS app or the documentation
 
-* Pour les chaînes utilisées dans l'application, allez sur <https://crowdin.com/project/androidaps> et connectez-vous à l'aide de votre compte GitHub
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * Pour la documentation, allez sur <https://crowdin.com/project/androidapsdocs> et connectez vous à l'aide de votre compte GitHub
 
 * Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
@@ -63,8 +63,8 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
     
         1. C'est la traduction que vous êtes en train de préparer. Vous pouvez copier le texte au dessus ou sélectionner une des suggestions au dessous.
     
-        1. Voilà la proposition de traduction. Surtout vous pouvez voir le taux de modification calculé par Crowdin ou si c'est quelquechose qui a déjà été traduit, et de voir si c'est juste une reformulation du texte sans changement de contenu.
-        1. Appuyez sur le bouton "Save" pour enregistrer une proposition pour la traduction. Il sera ensuite soumis à un correcteur pour la vérification finale.
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. Appuyez sur le bouton "Save" pour enregistrer une proposition pour la traduction. It will then be passed to a proofreader for final check.
     
     ![Translation docs](../images/translation_WikiTranslate.png)
     
@@ -101,4 +101,4 @@ C'est le travail des correcteurs pour avoir un regard spécial sur ça !
     
     ![approuver le texte](../images/translations-proofreading.png)
 
-* Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine compilation de la doc qui ne se produit pas régulièrement, mais environ une fois par semaine, sauf pendant les vacances. Pour accélérer le processus, vous pouvez informer l'équipe doc sur les nouvelles traductions.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Pour accélérer le processus, vous pouvez informer l'équipe doc sur les nouvelles traductions.
