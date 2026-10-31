@@ -17,7 +17,7 @@ Fizycznej wymiany wkładu/zbiornika nie da się wykonać przez **AAPS**. Trzeba 
 
 3. Napełnij dren i kaniulę: możesz to zrobić bezpośrednio na pompie. Pamiętaj, aby usunąć wszystkie pęcherzyki powietrza z drenu.
 
-4. Załóż nową kaniulę na ciało. Po wkłuciu kaniuli i wyjęciu igły w kaniuli zostaje mała przestrzeń z powietrzem, którą też trzeba napełnić. Aby zapisać to w **AAPS** i napełnić wkłucie: otwórz **Napełnij/Wypełnij** (w rozwiniętym panelu stanu na ekranie głównym, w panelu **Zarządzaj** albo jako przycisk [QuickLaunch](QuickLaunch.md)) i zaznacz **Zapisz zmianę wkłucia** i/lub **Zapisz zmianę zasobnika insuliny**, zależnie od tego, co wymieniasz. Teraz naciśnij domyślną ilość do napełnienia kaniuli (zwykle około 0,3 U, ale sprawdź, czy ta wartość jest właściwa dla Twojej kaniuli) i wybierz **OK**. Przeczytaj podsumowanie i potwierdź napełnianie, dotykając **OK**.
+4. Załóż nową kaniulę na ciało. Po wkłuciu kaniuli i wyjęciu igły w kaniuli zostaje mała przestrzeń z powietrzem, którą też trzeba napełnić. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Teraz naciśnij domyślną ilość do napełnienia kaniuli (zwykle około 0,3 U, ale sprawdź, czy ta wartość jest właściwa dla Twojej kaniuli) i wybierz **OK**. Przeczytaj podsumowanie i potwierdź napełnianie, dotykając **OK**.
 
    ![Napełnij/Wypełnij w panelu Zarządzaj przy pompie z drenem](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -80,7 +80,7 @@ Wybór strategii jest bardzo indywidualny. Najlepiej ustalić go metodą prób i
 **Zarządzaj → Zmiana miejsca** otwiera okno zmiany miejsca w trybie podglądu:
 
 - Dwoma przyciskami na górze (ikona kaniuli i ikona sensora) możesz pokazać tylko miejsca kaniuli, tylko miejsca sensora albo oba
-- Dostępne są wszystkie zdarzenia zmiany kaniuli i zmiany sensora z ostatnich 45 dni.
+- All Cannula change and Sensor change events from the past 45 days are available.
 - Kliknij obszar ciała albo jeden wpis na liście poniżej, aby lista pokazała tylko wpisy z wybranego obszaru. Wybrany obszar zostanie podświetlony na jasnozielono.
 - Dotknij ikony **ołówka** obok wpisu, aby otworzyć widok edycji i zmienić jego miejsce wkłucia, strzałkę lub notatkę
 
@@ -100,7 +100,7 @@ Tryb edycji pozwala wybrać lokalizację, strzałkę i notatkę dla wybranego wp
 
 - Edytowany wpis jest pokazany pod obrazkami ciała, z ikoną swojego typu (kaniula lub sensor)
 - Widok z przodu i z tyłu są pokazane obok siebie: dotknij obszaru, w którym umieszczono wkłucie
-- Po wybraniu miejsca (podświetlonego na zielono) na liście poniżej zobaczysz wszystkie wpisy z tego miejsca z ostatnich 45 dni
+- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
 
 ![Tryb edycji](../images/SiteRotation/EditMode.png)
 
