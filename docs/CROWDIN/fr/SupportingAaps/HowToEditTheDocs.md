@@ -34,7 +34,7 @@ Or click the pencil icon that appears in the top bar of the page contents to be 
 
 3. L'une ou l'autre des options de l'étape 2 créera une nouvelle branche dans VOTRE repository Github où vos modifications seront enregistrées. Effectuez vos modifications dans le fichier.
 
-Nous utilisons markdown pour les pages de documentation. Le fichier a obtenu le suffixe ".md". La spécification Markdown n'est pas corrigée et nous utilisons pour le moment le myst_parser pour nos fichiers markdown. Take care to use the correct syntax as [described below](#code-syntax).
+Nous utilisons markdown pour les pages de documentation. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
 
 ![Éditer la branche](../images/PR3.png)
 
@@ -147,10 +147,10 @@ Pour inclure des images, vous utilisez cette syntaxe de markdown.
 
 Le type d'image doit être PNG ou JPEG.
 
-Les noms d'images doivent respecter une des règles de nommage suivantes. Dans l'exemple j'utilise png comme extension. In case you use JPEG please use jpeg as a suffix instead.
+Image names should conform to one of the following naming rules. Dans l'exemple j'utilise png comme extension. In case you use JPEG please use jpeg as a suffix instead.
 
 - `nom-de-fichier-image-xx.png` où xx est un nombre unique à deux chiffres pour les images dans ce fichier.
-- `nom-de-fichier-image-xx.png` où xx est un nom complet pour l'auteur du fichier md.
+- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
 Les images sont situées dans le dossier images pour la langue anglaise et propagées automatiquement vers les autres langues par Crowdin. Vous n'avez rien à faire pour cela !
 
@@ -199,7 +199,7 @@ Then link this reference in the text you are writing with the following kind of 
 
 You can add notes and warning boxes to documentation.
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. Please use these carefully as the documentation should be as easy to read as possible.
 
 #### Notes
 
@@ -312,7 +312,7 @@ Example of a **passive verb**:
 
 - *“The insulin (subject) is delivered (verb) by the pump (object)”*
 
-*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
 
 Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
@@ -527,7 +527,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
     
     *W is better than z, because…*
     
-    Offer judgements and even opinions where appropriate..
+    Offer judgements and even opinions where appropriate.
     
     *An x in system y is analogous to a w in system z. However…*
     
