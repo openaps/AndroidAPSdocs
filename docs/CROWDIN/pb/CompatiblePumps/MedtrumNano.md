@@ -23,7 +23,7 @@ These instructions are for configuring the Medtrum insulin pump.
 * **Compatible Android phone** with a BLE Bluetooth connection
     - See AAPS [Release Notes](../Maintenance/ReleaseNotes.md)
 
-## Before you begin
+## Antes de começar
 
 **SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
 
