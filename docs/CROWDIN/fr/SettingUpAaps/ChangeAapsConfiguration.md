@@ -1,43 +1,43 @@
-# Making changes to your AAPS' configuration
+# Modifier la configuration d'AAPS
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Après avoir terminé l'**[Assistant de configuration](../SettingUpAaps/SetupWizard.md)**, vous n'avez pas besoin de relancer tout l'assistant si vous voulez seulement modifier une partie de la configuration d'**AAPS**.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+Il y a trois voies pour modifier la configuration d'**AAPS**. Le choix de la voie est simplement une question de commodité ou de préférence personnelle, car chaque voie mène aux mêmes paramètres.
 
 Ces possibilités sont les suivantes :
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. L'écran **Configuration**,
+2. L'écran **Paramètres** ou
+3. Les **Paramètres** d'un plugin, ouverts depuis sa catégorie dans **Configuration**.
 
 Nous expliquons ci-dessous quelle option est la plus pratique pour chaque situation :
 
 ## Configuration
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+Ouvrez le **menu** (☰) en haut à gauche de l'écran principal et choisissez **Configuration** :
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![Ouvrir Configuration depuis le menu en haut à gauche](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+**Configuration** sert à **choisir les plugins actifs** : votre MGC, votre pompe, l'algorithme APS, le calcul de sensibilité, la synchronisation et plus encore, regroupés par catégorie. C'est le même écran que l'Assistant de configuration a réglé pour vous.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+La documentation de l'écran Configuration est disponible [ici](../SettingUpAaps/ConfigBuilder.md).
 
 ## Paramètres
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+Touchez l'icône **Paramètres** (roue dentée) en haut à droite de l'écran principal. Cela ouvre les paramètres de **tous les plugins activés à un seul endroit**, regroupés en sections dépliables :
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![L'écran Paramètres avec ses sections dépliables](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+C'est une bonne voie si vous ne savez pas bien où chercher une option de configuration. Mais elle peut être un peu longue si vous savez que vous voulez modifier la configuration d'un seul plugin précis.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+La documentation des paramètres est disponible [ici](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## Les Paramètres d'un plugin
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+Dans **Configuration**, ouvrez une catégorie et touchez « **Paramètres** » sous le plugin actif. Vous arrivez directement aux paramètres de **ce plugin seulement** :
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![Paramètres et Ouvrir le plugin sous le plugin actif](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+Par exemple, c'est une bonne voie si vous savez que vous voulez modifier la configuration de votre pompe : ouvrez **Configuration → Pompe**, puis touchez « **Paramètres** » sous la pompe choisie.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+C'est un « raccourci » vers les mêmes paramètres que ceux de l'écran général **Paramètres**.
