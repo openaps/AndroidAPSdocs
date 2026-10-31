@@ -1,6 +1,6 @@
 # Other CGM uploaded to Nightscout
 
-Если у вас другая система мониторинга отправляющая даннные **только** в [Nightscout](https://nightscout.github.io/).
+Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
 
 ```{important}
 Этот источник данных не будет работать, когда вы находитесь в автономном режиме, когда имеются проблемы с сетью или когда ваш сайт Nightscout недоступен. Используйте с осторожностью.
