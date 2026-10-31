@@ -141,7 +141,8 @@ Všetky tri budete potrebovať, ak niekedy budete AAPS zostavovať iným spôsob
    Otvorí: <code class="aapsb-repoUrl"></code>
 
    Zobrazuje sa „Page not found“ (404)? Najprv skontrolujte, či ste v tomto prehliadači prihlásení na github.com: GitHub ukazuje 404 pri súkromných repozitároch, keď nie ste prihlásení. Inak sa vaše používateľské meno alebo názov repozitára v kroku 1 nezhoduje s vaším repozitárom: skontrolujte ich na github.com a zadajte ich v kroku 1. Namiesto toho sa otvorila aplikácia GitHub? Ťuknite na „RUN WORKFLOW“, skontrolujte verziu a variant a znova ťuknite na „RUN WORKFLOW“. Ak aplikácia stále ukazuje „Nothing to see here“, potiahnite zoznam nadol, aby ste videli svoje zostavenie.
-2. Ak sa to vyžaduje, kliknite na zelené tlačidlo, ktoré povolí workflowy.
+2. If asked, click the green button to enable workflows.
+The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
 3. Kliknite na „Run workflow“ a potom na zelené tlačidlo „Run workflow“. „latest“ zostaví najnovšiu verziu AAPS. ***tip:*** *inú verziu môžete zostaviť tak, že namiesto „latest“ zadáte názov jej [tagu](https://github.com/nightscout/AndroidAPS/tags)*
 4. Počkajte asi 15–30 minút. Zelená fajka znamená, že je hotovo.
 Chcete e-mail, keď je zostavenie hotové? GitHub vám pošle e-mail, iba keď zostavenie zlyhá. Ak ho chcete dostať aj pri úspechu: na github.com otvorte svoj profilový obrázok → Settings → Notifications → System → Actions a zrušte zaškrtnutie „Only notify for failed workflows“.
