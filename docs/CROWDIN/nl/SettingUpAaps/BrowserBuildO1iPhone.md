@@ -1,19 +1,19 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# Optie 1 · iPhone / iPad – Een nieuwe keystore maken
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
+[Optie 1](BrowserBuildO1.md) (een nieuwe keystore maken) op een **iPhone / iPad** (als voorbeeld zie je een iPad).
 ```
 
-## 1. Download the preparation file
+## 1. Het voorbereidingsbestand downloaden
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. Het voorbereidingsbestand openen en de keystore maken
 
-Compatible with iOS (using iPad as an example)
+Werkt met iOS (met een iPad als voorbeeld)
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -30,4 +30,4 @@ Compatible with iOS (using iPad as an example)
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Volgende: [Stap 3 – Google Drive autoriseren](BrowserBuildGoogleDrive.md) →**
