@@ -1,23 +1,23 @@
-# Change language and version
+# Αλλαγή γλώσσας και έκδοσης
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+Η τεκμηρίωση που διαβάζετε τώρα υπάρχει σε πολλές γλώσσες και αφορά μια συγκεκριμένη έκδοση του **AAPS**. Μπορείτε να αλλάξετε και τη γλώσσα και την έκδοση από το μενού κάτω δεξιά στην οθόνη.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Κάντε κλικ στη γραμμή κάτω δεξιά στην οθόνη για να ανοίξει το μενού επιλογής γλώσσας και έκδοσης.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Άνοιγμα του μενού γλώσσας](../images/documentation_language_menu.png)
 
 ## Αλλάξτε γλώσσα
 
-In the menu, select the language you want to read the documentation in.
+Στο μενού, επιλέξτε τη γλώσσα στην οποία θέλετε να διαβάσετε την τεκμηρίωση.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Είστε ευπρόσδεκτοι να γίνετε μεταφραστές και διορθωτές στο [Crowdin](https://crowdin.com/project/androidapsdocs), για να βοηθήσετε στη μετάφραση της τεκμηρίωσης στη γλώσσα σας.
 
-## Change version
+## Αλλάξτε έκδοση
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+Η τρέχουσα έκδοση φαίνεται κάτω δεξιά στην οθόνη. Για να αλλάξετε σε άλλη έκδοση, κάντε κλικ στην τρέχουσα έκδοση και επιλέξτε την έκδοση που χρειάζεστε.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Όταν αλλάζετε γλώσσα ή/και έκδοση, μπορεί να δείτε το μήνυμα 404 - Page not found (η σελίδα δεν βρέθηκε), αν η σελίδα δεν υπάρχει σε αυτή τη γλώσσα ή έκδοση. Αυτό συμβαίνει συχνά όταν αλλάζετε έκδοση, αλλά δεν πρέπει να συμβαίνει όταν αλλάζετε γλώσσα: η σελίδα θα εμφανιστεί στα Αγγλικά, αν δεν έχει μεταφραστεί ακόμα.
 ```
