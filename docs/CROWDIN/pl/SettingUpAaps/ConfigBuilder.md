@@ -1,19 +1,19 @@
-# Ustawienia (Kreator konfiguracji)
+# Konfiguracja (Config Builder)
 
-```{admonition} Przechodzisz z AAPS v3? :class: note **Kreator konfiguracji** nazywa się teraz **Ustawienia** i znajduje się w **menu** (☰). Zobacz [Co zmieniło się w AAPS v4](#v4-changes).
+```{admonition} Przechodzisz z AAPS v3? :class: note **Config Builder** nazywa się teraz **Konfiguracja** i znajduje się w **menu** (☰). Zobacz [Co zmieniło się w AAPS v4](#v4-changes).
 
-    <br />**Ustawienia** (menu ☰) to miejsce, w którym wybierasz, które wtyczki są aktywne (CGM, pompa, algorytm APS, wrażliwość, synchronizacja, …), oraz otwierasz każdą wtyczkę i jej ustawienia. [Przewodnik krok po kroku](#configuration-v4) jest poniżej; reszta tej strony szczegółowo opisuje każdą sekcję.
+    <br />**Konfiguracja** (menu ☰) to miejsce, w którym wybierasz, które wtyczki są aktywne (CGM, pompa, algorytm APS, wrażliwość, synchronizacja, …), oraz otwierasz każdą wtyczkę i jej ustawienia. [Przewodnik krok po kroku](#configuration-v4) jest poniżej; reszta tej strony szczegółowo opisuje każdą sekcję.
     
     (configuration-v4)=
-    ## Ustawienia w AAPS v4
+    ## Konfiguracja w AAPS v4
     
-    W **AAPS** v4 dotknij **menu** (☰) w **lewym górnym** rogu ekranu głównego i wybierz **Ustawienia** (*„Ustaw swoją konfigurację (CGM, pompa, ...) i włącz funkcje.”*).
+    W **AAPS** v4 dotknij **menu** (☰) w **lewym górnym** rogu ekranu głównego i wybierz **Konfiguracja** (*„Ustaw swoją konfigurację (CGM, pompa, ...) i włącz funkcje.”*).
     
-    ![Menu w lewym górnym rogu z pozycją Ustawienia](../images/v4/Configuration/configuration_menu.png)
+    ![Menu w lewym górnym rogu z pozycją Konfiguracja](../images/v4/Configuration/configuration_menu.png)
     
     Wtyczki są pogrupowane według **kategorii** — na przykład *Wygładzanie*, *Kalibracja*, *Detekcja wrażliwości (sensitivity)*, *APS*, *Komunikacja* i *Ogólne*. Każdy wiersz pokazuje nazwę kategorii i **obecnie aktywną** wtyczkę (np. *APS → OpenAPS SMB*). Dotknij wiersza, aby otworzyć kategorię.
     
-    ![Ekran Ustawienia z listą kategorii wtyczek](../images/v4/Configuration/configuration_plugins.png)
+    ![Ekran Konfiguracja z listą kategorii wtyczek](../images/v4/Configuration/configuration_plugins.png)
     
     W kategorii widzisz wtyczki, które są w niej dostępne. W kategoriach jednokrotnego wyboru wybierasz jedną aktywną wtyczkę; niektóre kategorie są wielokrotnego wyboru (*„Wybierz wszystkie, które pasują.”*). Każda wtyczka ma dwie akcje:
     
@@ -42,7 +42,7 @@
     
     Każdy ekran wtyczki możesz otworzyć na jeden z tych sposobów (karty i pole wyboru z okiem z **AAPS** v3 już nie istnieją, zobacz [Co zmieniło się w AAPS v4](#v4-changes)):
     
-    - **Ustawienia** → kategoria wtyczki → **Otwórz wtyczkę**,
+    - **Konfiguracja** → kategoria wtyczki → **Otwórz wtyczkę**,
     - panel **Zarządzaj** w dolnym pasku nawigacji, dla ekranów, których używasz najczęściej (Profil, Ustawienia insuliny, Pompa, Automatyzacja, Żywność...),
     - przycisk [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md), który dodajesz sam,
     - **pasek wyszukiwania** na ekranie głównym.
@@ -66,7 +66,7 @@ Zobacz [Twój profil AAPS](../SettingUpAaps/YourAapsProfile.md), aby zrozumieć 
 
 ![Ustawienia insuliny](../images/manage/insulin_settings.png)
 
-W **AAPS** 4 insuliny nie wybiera się już jako wtyczki w menu **Ustawienia**. Otwórz **Zarządzaj → Ustawienia insuliny**, aby ustawić insulinę, której używasz.
+W **AAPS** 4 insuliny nie wybiera się już jako wtyczki w menu **Konfiguracja**. Otwórz **Zarządzaj → Ustawienia insuliny**, aby ustawić insulinę, której używasz.
 
 Edytor insuliny pozwala:
 
@@ -187,13 +187,13 @@ Na koniec porównanie, w którym DIA i szczyt zmienia się jednocześnie. Zasada
     ## Źródło BG
     Wybierz źródło glukozy, którego używasz. Więcej informacji o konfiguracji znajdziesz na stronie [Źródło BG](../Getting-Started/CompatiblesCgms.md).
     
-    ![Ustawienia > Źródło BG](../images/v4/Configuration/configuration_bg_source.png)
+    ![Konfiguracja > Źródło BG](../images/v4/Configuration/configuration_bg_source.png)
     
     Przewiń w dół, aby zobaczyć pozostałe źródła:
     
-    ![Ustawienia > Źródło BG, ciąg dalszy](../images/v4/Configuration/configuration_bg_source_2.png)
+    ![Konfiguracja > Źródło BG, ciąg dalszy](../images/v4/Configuration/configuration_bg_source_2.png)
     
-    ![Ustawienia > Źródło BG, koniec listy](../images/v4/Configuration/configuration_bg_source_3.png)
+    ![Konfiguracja > Źródło BG, koniec listy](../images/v4/Configuration/configuration_bg_source_3.png)
     
     * [xDrip+ BG](../CompatibleCgms/xDrip.md) - także dla zgodnych aplikacji, takich jak [Juggluco](../CompatibleCgms/Juggluco.md)
     * [NSClient BG](../CompatibleCgms/CgmNightscoutUpload.md) - tylko jeśli wiesz, co robisz, zobacz [Źródło BG](../Getting-Started/CompatiblesCgms.md).
@@ -214,7 +214,7 @@ Na koniec porównanie, w którym DIA i szczyt zmienia się jednocześnie. Zasada
     
     ## Wygładzanie
     
-    ![Ustawienia > Wygładzanie](../images/v4/Configuration/configuration_smoothing.png)
+    ![Konfiguracja > Wygładzanie](../images/v4/Configuration/configuration_smoothing.png)
     
     Zobacz [Wygładzanie danych dotyczących poziomu glukozy we krwi](../CompatibleCgms/SmoothingBloodGlucoseData.md).
     
@@ -237,23 +237,23 @@ Na koniec porównanie, w którym DIA i szczyt zmienia się jednocześnie. Zasada
     Błędna wartość z palca prowadzi do błędnych wartości glukozy, a przez to do błędnego dawkowania insuliny. Przed pomiarem umyj ręce i nie kalibruj, gdy glukoza szybko się zmienia.
     
 
-![Ustawienia > Kalibracja](../images/v4/Configuration/configuration_calibration.png)
+![Konfiguracja > Kalibracja](../images/v4/Configuration/configuration_calibration.png)
 
 (Config-Builder-pump)=
 
-## Pump
+## Pompa
 
 Wybierz pompę, z której korzystasz. Więcej informacji o konfiguracji znajdziesz na stronie [Kompatybilne pompy](../Getting-Started/CompatiblePumps.md).
 
-![Ustawienia > Pompa](../images/v4/Configuration/configuration_pump_list_1.png)
+![Konfiguracja > Pompa](../images/v4/Configuration/configuration_pump_list_1.png)
 
 Przewiń w dół, aby zobaczyć wszystkie sterowniki pomp:
 
-![Ustawienia > Pompa, ciąg dalszy](../images/v4/Configuration/configuration_pump_list_2.png)
+![Konfiguracja > Pompa, ciąg dalszy](../images/v4/Configuration/configuration_pump_list_2.png)
 
-![Ustawienia > Pompa, ciąg dalszy](../images/v4/Configuration/configuration_pump_list_3.png)
+![Konfiguracja > Pompa, ciąg dalszy](../images/v4/Configuration/configuration_pump_list_3.png)
 
-![Ustawienia > Pompa, koniec listy](../images/v4/Configuration/configuration_pump_list_4.png)
+![Konfiguracja > Pompa, koniec listy](../images/v4/Configuration/configuration_pump_list_4.png)
 
 Gdy wybierzesz inną pompę, **AAPS** poprosi o potwierdzenie zmiany:
 
@@ -291,7 +291,7 @@ Aby używać nowej pompy, zmień sterownik pompy: wybierz **Pompa wirtualna**, p
 
 ## Detekcja wrażliwości (sensitivity)
 
-![Ustawienia > Detekcja wrażliwości (sensitivity)](../images/v4/Configuration/configuration_sensitivity_detection.png)
+![Konfiguracja > Detekcja wrażliwości (sensitivity)](../images/v4/Configuration/configuration_sensitivity_detection.png)
 
 Wybierz rodzaj detekcji wrażliwości. Więcej szczegółów o różnych rozwiązaniach [przeczytasz tutaj](../DailyLifeWithAaps/SensitivityDetectionAndCob.md). Analizuje na bieżąco dane historyczne i wprowadza korekty, jeśli rozpozna, że reagujesz na insulinę bardziej wrażliwie (albo odwrotnie, z większą opornością) niż zwykle. Więcej szczegółów o tym, jak obliczany jest sam współczynnik wrażliwości, znajdziesz w [Kluczowe funkcje AAPS > Autosens](#Open-APS-features-autosens).
 
@@ -305,7 +305,7 @@ Jeśli używasz Oref1 z **SMB**, musisz zmienić **min_5m_carbimpact** na 8. Ta 
 
 ## APS
 
-![Ustawienia > APS](../images/v4/Configuration/configuration_aps.png)
+![Konfiguracja > APS](../images/v4/Configuration/configuration_aps.png)
 
 Wybierz algorytm APS w celu dostosowania terapii. Aktywne szczegóły wybranego algorytmu zobaczysz przez **Otwórz wtyczkę**.
 
@@ -325,11 +325,11 @@ Jeśli przechodzisz z algorytmu AMA na SMB, musisz ręcznie zmienić *min_5m_car
 
 Tego modułu nie można wyłączyć, ponieważ jest podstawową częścią **AAPS**.
 
-![Ustawienia > Pętla](../images/v4/Configuration/configuration_loop.png)
+![Konfiguracja > Pętla](../images/v4/Configuration/configuration_loop.png)
 
 ## Ograniczenia
 
-![Ustawienia > Ograniczenia](../images/v4/Configuration/configuration_constraints.png)
+![Konfiguracja > Ograniczenia](../images/v4/Configuration/configuration_constraints.png)
 
 ### Zadania
 
@@ -341,11 +341,11 @@ Więcej informacji znajdziesz na stronie [Zadania](../SettingUpAaps/CompletingTh
 
 W tej kategorii (w **AAPS** v3 nazywanej **Synchronizacja**) wybierasz, czy i dokąd **AAPS** ma wysyłać Twoje dane.
 
-![Ustawienia > Komunikacja](../images/v4/Configuration/configuration_communication.png)
+![Konfiguracja > Komunikacja](../images/v4/Configuration/configuration_communication.png)
 
 Przewiń w dół, aby zobaczyć resztę listy:
 
-![Ustawienia > Komunikacja, ciąg dalszy](../images/v4/Configuration/configuration_communication_2.png)
+![Konfiguracja > Komunikacja, ciąg dalszy](../images/v4/Configuration/configuration_communication_2.png)
 
 ### NSClientV3
 
@@ -375,7 +375,7 @@ Monitoruj **AAPS** i steruj nim z zegarka z Wear OS. Konfigurację zegarka opisa
 
 (external-companion-apps)=
 
-### External Companion Apps
+### Zewnętrzne aplikacje towarzyszące
 
 Rozgłasza dane o stanie **AAPS** na telefonie, aby inne zainstalowane na nim aplikacje mogły je wyświetlać — na przykład aplikacje towarzyszące dla zegarków lub widżetów. Rozgłaszane dane obejmują glukozę i trend, IOB, COB, bazę i bazę tymczasową, nazwę profilu, stan pętli, baterię telefonu i pompy, poziom zbiornika oraz postęp bolusa. Włącz ją tylko wtedy, gdy aplikacja towarzysząca, której używasz, prosi o te dane.
 
@@ -391,19 +391,19 @@ Połączenie z urządzeniem Garmin (Fenix, Edge...)
 
 Otwórz **menu** (☰) i wybierz [Historia leczenia](#aaps-screens-treatments), aby zobaczyć zapisane leczenie. Jeśli chcesz edytować lub usunąć wpis (np. zjedzono mniej węglowodanów, niż planowano), wybierz „Usuń” i wpisz nową wartość (w razie potrzeby zmień czas) przez **Leczenie → Węglowodany** w dolnym pasku nawigacji (zobacz [Węglowodany](#screens-bolus-carbs)).
 
-## General
+## Ogólne
 
-W **AAPS** 4 kategoria **Ogólne** w menu **Ustawienia** zawiera tylko **Autotune**. Pozostałe funkcje opisane poniżej są zawsze dostępne i nie trzeba ich już tu włączać; każdy akapit mówi, gdzie je znaleźć.
+W **AAPS** 4 kategoria **Ogólne** w menu **Konfiguracja** zawiera tylko **Autotune**. Pozostałe funkcje opisane poniżej są zawsze dostępne i nie trzeba ich już tu włączać; każdy akapit mówi, gdzie je znaleźć.
 
-![Ustawienia > Ogólne](../images/v4/Configuration/configuration_general.png)
+![Konfiguracja > Ogólne](../images/v4/Configuration/configuration_general.png)
 
 ### Przegląd
 
-[Ekran główny](#AapsScreens-the-homescreen) **AAPS** nie jest już wtyczką i nie ma własnych ustawień w menu **Ustawienia**. Opcje, które tu były, znajdziesz teraz w **Ustawienia** (ikona koła zębatego): [Pokaż notatki w oknach dialogowych](#Preferences-show-notes-field-in-treatments-dialogs), [Wskaźniki stanu](#Preferences-status-lights) i [Procent bolusa](#Preferences-deliver-this-part-of-bolus-wizard-result) używany przez kalkulator bolusa. Opcja superbolusa z **AAPS** 3.x [nie jest dostępna jako ustawienie](#Preferences-advanced-settings-overview) w **AAPS** 4.
+[Ekran główny](#AapsScreens-the-homescreen) **AAPS** nie jest już wtyczką i nie ma własnych ustawień w menu **Konfiguracja**. Opcje, które tu były, znajdziesz teraz w **Ustawienia** (ikona koła zębatego): [Pokaż notatki w oknach dialogowych](#Preferences-show-notes-field-in-treatments-dialogs), [Wskaźniki stanu](#Preferences-status-lights) i [Procent bolusa](#Preferences-deliver-this-part-of-bolus-wizard-result) używany przez kalkulator bolusa. Opcja superbolusa z **AAPS** 3.x [nie jest dostępna jako ustawienie](#Preferences-advanced-settings-overview) w **AAPS** 4.
 
 (Config-Builder-actions)=
 
-### Actions
+### Akcje
 
 Karta Akcje z **AAPS** 3.x już nie istnieje. Jej przyciski są teraz w panelu **Zarządzaj** — zobacz [Gdzie jest karta Akcje?](#screens-action-tab).
 
@@ -439,6 +439,6 @@ Otwórz **menu** (☰) i wybierz **Konserwacja**, aby eksportować / importować
 
 ![Ekran Konserwacja, zarządzanie bazą danych](../images/screens/maintenance_3.png)
 
-### Kreator konfiguracji
+### Config Builder
 
-Teraz nazywa się **Ustawienia**: to właśnie ta strona.
+Teraz nazywa się **Konfiguracja**: to właśnie ta strona.
