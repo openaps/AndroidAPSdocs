@@ -119,9 +119,9 @@ Vous n'avez pas besoin de définir d'abord un mot de passe principal dans le nou
 
 ![Mot de passe de décryptage du fichier de paramètres](../images/ReinstallAaps/reinstall_import_password.png)
 
-Cochez **Remplacer aussi les paramètres de la pompe** : sinon, votre pompe et ses paramètres ne sont pas restaurés. Utilisateurs d'Omnipod et de Medtrum : cochez-la seulement si le fichier a été exporté pendant votre pod ou patch actuel (voir [Pompes sans tubulure](#ExportImportSettings-tubeless-pumps)).
+Cochez **Remplacer aussi les paramètres de pompe** : sinon, votre pompe et ses paramètres ne sont pas restaurés. Utilisateurs d'Omnipod et de Medtrum : cochez-la seulement si le fichier a été exporté pendant votre pod ou patch actuel (voir [Pompes sans tubulure](#ExportImportSettings-tubeless-pumps)).
 
-![Remplacer aussi les paramètres de la pompe coché](../images/ReinstallAaps/reinstall_import_replace_pump.png)
+![Remplacer aussi les paramètres de pompe coché](../images/ReinstallAaps/reinstall_import_replace_pump.png)
 
 Appuyez sur **Import**, puis sur **OK** pour appliquer les paramètres, et encore sur **OK** dans **Paramètres appliqués**.
 
