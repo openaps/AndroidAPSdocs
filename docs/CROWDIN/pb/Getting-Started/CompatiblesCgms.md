@@ -72,7 +72,7 @@ Trusted data sources allow **SMB** delivery, all the time.
 | Dexcom G7        |                BYODA, xDrip (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip)                 |
 | Dexcom ONE+      |                    xDrip (**Direct, Native**), </br>Juggluco (**xDrip broadcast** without xDrip)                    |
 | Dexcom ONE/Stelo |                                             xDrip (**Direct, Native**)                                              |
-| Libre 2/2+ (EU)  | xDrip (OOP2 **no calibration**), </br>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
+| Libre 2/2+ (UE)  | xDrip (OOP2 **no calibration**), </br>Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip) |
 | Libre 2/2+/3/3+  |                    Juggluco (**xDrip broadcast** without xDrip, or **Patched Libre** with xDrip)                    |
 | Syai             |                                                      Syai App                                                       |
 
