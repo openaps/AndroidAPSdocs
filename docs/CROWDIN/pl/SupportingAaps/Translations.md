@@ -1,6 +1,6 @@
 # Jak przetłumaczyć teksty dla aplikacji AAPS lub dokumentacji
 
-* Aby tłumaczyć teksty aplikacji, przejdź do <https://crowdin.com/project/androidaps> i zaloguj się swoim kontem GitHub
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * Aby tłumaczyć dokumentację, przejdź do <https://crowdin.com/project/androidapsdocs> i zaloguj się swoim kontem GitHub
 
 * Wyślij prośbę o dołączenie do zespołu dokumentacji. Aby to zrobić, kliknij flagę wybranego języka, a następnie przycisk „Join” w prawym górnym rogu następnej strony. Podaj język, napisz kilka słów o sobie i swoim doświadczeniu z AAPS oraz czy chcesz być tłumaczem czy korektorem (korektor: tylko osoby z doświadczeniem w tłumaczeniu i zaawansowani użytkownicy AAPS).
@@ -63,8 +63,8 @@ Zatwierdzenie jest robione ręcznie. Jako organizacja non-profit nie gwarantujem
     
         1. To tłumaczenie, które przygotowujesz. Możesz skopiować tekst z góry lub wybrać jedną z sugestii poniżej.
     
-        1. To są sugestie tłumaczenia. Możesz tu zobaczyć, jak bardzo Crowdin ocenia dopasowanie. Widać też, czy tekst był już przetłumaczony wcześniej i pojawił się znowu tylko przez zmianę układu tekstu, bez zmiany treści.
-        1. Kliknij przycisk „save”, aby zapisać propozycję tłumaczenia. Potem trafi ono do korektora do końcowego sprawdzenia.
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. Kliknij przycisk „save”, aby zapisać propozycję tłumaczenia. It will then be passed to a proofreader for final check.
     
     ![Tłumaczenie dokumentacji](../images/translation_WikiTranslate.png)
     
@@ -101,4 +101,4 @@ Korektor musi zwrócić na to szczególną uwagę!
     
     ![Zatwierdzanie tekstu](../images/translations-proofreading.png)
 
-* Gdy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnego budowania dokumentacji. Nie ma stałego harmonogramu, dzieje się to na żądanie, ale zwykle mniej więcej raz w tygodniu, poza okresem świąt i wakacji. Aby przyspieszyć proces, możesz poinformować zespół dokumentacji o nowych tłumaczeniach.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. Aby przyspieszyć proces, możesz poinformować zespół dokumentacji o nowych tłumaczeniach.
