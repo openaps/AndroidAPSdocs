@@ -1,7 +1,7 @@
 (food)=
-# Food (your food database)
+# Τρόφιμα (η βάση τροφίμων σας)
 
-The **Food** database is your personal list of saved foods. Each entry stores a food's **carbs** (and, optionally, its fat, protein, energy and a category), so you can keep the things you eat often in one place and start a bolus from a saved food with its carbs already filled in.
+Η βάση **Τρόφιμα** είναι η προσωπική σας λίστα με αποθηκευμένα τρόφιμα. Κάθε εγγραφή αποθηκεύει τους **υδατάνθρακες** ενός τροφίμου (και, αν θέλετε, τα λιπαρά, την πρωτεΐνη, την ενέργεια και μια κατηγορία). Έτσι κρατάτε σε ένα σημείο ό,τι τρώτε συχνά και μπορείτε να ξεκινήσετε ένα bolus από ένα αποθηκευμένο τρόφιμο με τους υδατάνθρακες ήδη συμπληρωμένους.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,80 +10,80 @@ The **Food** database is your personal list of saved foods. Each entry stores a 
 
 ---
 
-## Opening the food database
+## Άνοιγμα της βάσης τροφίμων
 
-Open the **Manage** screen (bottom navigation) and choose **Food** (*“Manage food database entries”*). In **AAPS** v4 Food is **no longer a plugin** — there is nothing to enable; it is a standalone screen reached from the [Manage sheet](#v4changes-manage).
-
----
-
-## The food list
-
-Your foods are shown as a scrollable list. Each row shows the food's **name**, its **portion / unit / category**, and its **carbs**:
-
-![The food database list, with search and the add button](../images/v4/Food/food_list.png)
-
-- **🔍 Search** (top) — filter the list by **name** (case-insensitive).
-- **Category filter** — chips let you narrow the list to a **category**; once a category is picked, **subcategory** chips appear for it. (Tap a selected chip again to clear it.)
-- **➕** (bottom-right) — add a new food (see below).
-- Tap a row to **edit** that food.
-
-If the list (or the current filter) has no entries, the screen shows **No data**.
+Ανοίξτε την οθόνη **Διαχείριση** (κάτω μπάρα πλοήγησης) και επιλέξτε **Τρόφιμα** (*«Διαχείριση εγγραφών της βάσης τροφίμων»*). Στο **AAPS** v4 τα Τρόφιμα **δεν είναι πλέον πρόσθετο** — δεν χρειάζεται να ενεργοποιήσετε κάτι· είναι μια ξεχωριστή οθόνη που ανοίγει από το [μενού Διαχείριση](#v4changes-manage).
 
 ---
 
-## Adding and editing a food
+## Η λίστα τροφίμων
 
-Tap **➕** to add, or tap an existing row to edit. An editor opens as a bottom sheet (**Add Food** / **Edit Food**):
+Τα τρόφιμά σας εμφανίζονται σε μια λίστα με κύλιση. Κάθε γραμμή δείχνει το **όνομα** του τροφίμου, τη **μερίδα / μονάδα / κατηγορία** και τους **υδατάνθρακές** του:
 
-![The food editor — name, category, portion, carbs and macros](../images/v4/Food/food_editor.png)
+![Η λίστα της βάσης τροφίμων, με αναζήτηση και κουμπί προσθήκης](../images/v4/Food/food_list.png)
 
-The fields are:
+- **🔍 Αναζήτηση** (πάνω) — φιλτράρει τη λίστα με βάση το **όνομα** (χωρίς διάκριση πεζών-κεφαλαίων).
+- **Φίλτρο κατηγορίας** — με τα κουμπιά (chips) περιορίζετε τη λίστα σε μια **κατηγορία**· όταν επιλέξετε κατηγορία, εμφανίζονται κουμπιά **υποκατηγορίας** για αυτήν. (Πατήστε ξανά ένα επιλεγμένο κουμπί για να το καταργήσετε.)
+- **➕** (κάτω δεξιά) — προσθήκη νέου τροφίμου (δείτε παρακάτω).
+- Πατήστε μια γραμμή για να **επεξεργαστείτε** αυτό το τρόφιμο.
 
-- **Name** — required (you can't save without it).
-- **Category** and **Subcategory** — optional, used to group/filter foods.
-- **Portion** and **Unit** — the typical serving size; **Unit** defaults to **g**.
-- **Carbs (g)** — the carbohydrate amount for the food.
-- **Fat (g)**, **Protein (g)**, **Energy (kJ)** — optional nutrition values.
+Αν η λίστα (ή το τρέχον φίλτρο) δεν έχει εγγραφές, η οθόνη δείχνει **Δεν υπάρχουν δεδομένα**.
 
-Tap **Save** to store it, or **Cancel** to discard. When editing an existing food the editor also has a **Delete** button.
+---
+
+## Προσθήκη και επεξεργασία τροφίμου
+
+Πατήστε **➕** για προσθήκη ή πατήστε μια υπάρχουσα γραμμή για επεξεργασία. Ανοίγει ένας επεξεργαστής από το κάτω μέρος της οθόνης (**Προσθήκη τροφίμου** / **Επεξεργασία τροφίμου**):
+
+![Ο επεξεργαστής τροφίμου — όνομα, κατηγορία, μερίδα, υδατάνθρακες και μακροθρεπτικά](../images/v4/Food/food_editor.png)
+
+Τα πεδία είναι:
+
+- **Όνομα** — υποχρεωτικό (δεν μπορείτε να αποθηκεύσετε χωρίς αυτό).
+- **Κατηγορία** και **Υποκατηγορία** — προαιρετικά, για ομαδοποίηση/φιλτράρισμα τροφίμων.
+- **Μερίδα** και **Μονάδα** — το συνηθισμένο μέγεθος μερίδας· η **Μονάδα** είναι από προεπιλογή **g**.
+- **Υδατάνθρακες (g)** — η ποσότητα υδατανθράκων του τροφίμου.
+- **Λιπαρά (g)**, **Πρωτεΐνη (g)**, **Ενέργεια (kJ)** — προαιρετικές διατροφικές τιμές.
+
+Πατήστε **Αποθήκευση** για να το αποθηκεύσετε ή **Ακύρωση** για να το απορρίψετε. Όταν επεξεργάζεστε ένα υπάρχον τρόφιμο, ο επεξεργαστής έχει επίσης κουμπί **Διαγραφή**.
 
 ```{admonition} Deleting is undoable
 :class: note
-Deleting a food shows a **“Food deleted”** message with an **Undo** action, so an accidental delete is easy to reverse.
+Η διαγραφή ενός τροφίμου δείχνει το μήνυμα **«Το τρόφιμο διαγράφηκε»** με την ενέργεια **Αναίρεση**, οπότε μια διαγραφή κατά λάθος αναιρείται εύκολα.
 ```
 
 ---
 
-## Using a food for a bolus
+## Χρήση τροφίμου για bolus
 
-Each food row has a **calculator** button. Tapping it opens the **bolus wizard** with that food's **carbs** already filled in and the food's **name** added as the treatment note — so you confirm and deliver without re-typing the carbs.
+Κάθε γραμμή τροφίμου έχει ένα κουμπί **υπολογιστή**. Αν το πατήσετε, ανοίγει ο **Οδηγός Bolus** με τους **υδατάνθρακες** του τροφίμου ήδη συμπληρωμένους και το **όνομα** του τροφίμου ως σημείωση της θεραπείας — έτσι επιβεβαιώνετε και χορηγείτε χωρίς να πληκτρολογήσετε ξανά τους υδατάνθρακες.
 
 ```{admonition} The carbs value is used as-is
 :class: note
-The food's stored **carbs** number is passed straight to the wizard — **AAPS** does not multiply it by the portion or by how much you ate. If you have a different amount, adjust the carbs in the wizard before confirming. (There is no food picker *inside* the bolus wizard or the carbs dialog; you start from the food row here.)
+Ο αποθηκευμένος αριθμός **υδατανθράκων** του τροφίμου περνά απευθείας στον οδηγό — το **AAPS** δεν τον πολλαπλασιάζει με τη μερίδα ή με το πόσο φάγατε. Αν φάγατε διαφορετική ποσότητα, διορθώστε τους υδατάνθρακες στον οδηγό πριν επιβεβαιώσετε. (Δεν υπάρχει επιλογή τροφίμου *μέσα* στον Οδηγό Bolus ή στο παράθυρο υδατανθράκων· ξεκινάτε από τη γραμμή του τροφίμου εδώ.)
 ```
 
 ---
 
-## Where foods come from (Nightscout sync)
+## Από πού έρχονται τα τρόφιμα (συγχρονισμός με Nightscout)
 
-The food database is shared through **Nightscout**, but **in one direction only**:
+Η βάση τροφίμων μοιράζεται μέσω του **Nightscout**, αλλά **μόνο προς μία κατεύθυνση**:
 
-- **Download:** **AAPS** **reads** foods from your Nightscout site's **food database** and keeps the local list in sync with it. This runs as part of NSClient syncing, so a paired **client/follower** ends up with the same foods too.
-- **Upload:** **AAPS** does **not** push foods **to** Nightscout — NSClient does not support uploading food entries. Foods you create or edit **inside AAPS** therefore stay **on that device** and are not propagated to Nightscout or to your other devices.
+- **Λήψη:** Το **AAPS** **διαβάζει** τρόφιμα από τη **βάση τροφίμων** του Nightscout σας και κρατά την τοπική λίστα συγχρονισμένη με αυτήν. Αυτό γίνεται ως μέρος του συγχρονισμού NSClient, οπότε ένας συνδεδεμένος **πελάτης/ακόλουθος** έχει επίσης τα ίδια τρόφιμα.
+- **Αποστολή:** Το **AAPS** **δεν** στέλνει τρόφιμα **στο** Nightscout — το NSClient δεν υποστηρίζει αποστολή εγγραφών τροφίμων. Γι' αυτό, τα τρόφιμα που δημιουργείτε ή επεξεργάζεστε **μέσα στο AAPS** μένουν **σε αυτή τη συσκευή** και δεν μεταφέρονται στο Nightscout ή στις άλλες συσκευές σας.
 
 ```{admonition} Maintain your shared list in Nightscout
 :class: important
-Because food is **download-only**, the way to share one food list across your phone, your follower/[client](../RemoteFeatures/ClientMasterControl.md) and the rest of your setup is to maintain it in **Nightscout** (its built-in food editor). **AAPS** will pull those entries down. A food added only in **AAPS** is local to that device — and stays put: a download matches Nightscout entries by their Nightscout ID, so it adds and updates those but never overwrites or removes a food you created locally (a food is only removed when its Nightscout copy is deleted in Nightscout).
+Επειδή τα τρόφιμα γίνονται **μόνο λήψη**, ο τρόπος για να έχετε μία λίστα τροφίμων στο τηλέφωνό σας, στον ακόλουθο/[πελάτη](../RemoteFeatures/ClientMasterControl.md) σας και στο υπόλοιπο σύστημά σας είναι να τη διατηρείτε στο **Nightscout** (στον ενσωματωμένο επεξεργαστή τροφίμων του). Το **AAPS** θα κατεβάσει αυτές τις εγγραφές. Ένα τρόφιμο που προστέθηκε μόνο στο **AAPS** είναι τοπικό σε αυτή τη συσκευή — και μένει εκεί: η λήψη ταιριάζει τις εγγραφές του Nightscout με βάση το Nightscout ID τους, οπότε προσθέτει και ενημερώνει αυτές, αλλά ποτέ δεν αντικαθιστά ή αφαιρεί ένα τρόφιμο που δημιουργήσατε τοπικά (ένα τρόφιμο αφαιρείται μόνο όταν το αντίγραφό του διαγραφεί στο Nightscout).
 
-Note that the food database is **not** part of the master ↔ client signed control channel either — it travels purely as Nightscout data.
+Σημειώστε ότι η βάση τροφίμων **δεν** είναι επίσης μέρος του υπογεγραμμένου καναλιού ελέγχου master ↔ client — μεταφέρεται μόνο ως δεδομένα του Nightscout.
 ```
 
 ---
 
-## Not on the watch
+## Όχι στο ρολόι
 
-The food database is a **phone** feature — there is no food browser, tile or menu on a **Wear OS watch**.
+Η βάση τροφίμων είναι λειτουργία του **τηλεφώνου** — δεν υπάρχει περιήγηση τροφίμων, πλακίδιο ή μενού σε **ρολόι Wear OS**.
 
 ---
 
