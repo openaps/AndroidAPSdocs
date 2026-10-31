@@ -19,11 +19,11 @@ Some of these issues likely apply to other Bluetooth Insulin pumps too, the Medt
 
 ## Bluetooth Battery Optimisation
 
-Newer versions of Android have enable Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. This is known to cause some issues for Bluetooth pumps and CGMs.
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide its possible you have not changed this setting.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
-Verify this is correctly configured if you have pump an CGM disconnections.
+Verify this is correctly configured if you have pump and CGM disconnections.
 
 ---
 
@@ -33,7 +33,7 @@ Verify this is correctly configured if you have pump an CGM disconnections.
 
 Android allows you to control what each app is able to do or access on your phone via a permission model. For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
 
-**AAPS** requires a number of specific permission to function, one which is required ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. There are many other applications which also require this permission, the community is finding that a number of applications when they are granted this permission can cause issues with activating new Pods on some devices.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -50,16 +50,16 @@ Ping @XiTatiON on #omnipod-dash Discord channel to discuss apps to be added to t
 
 - **Amazon Alexa**	Removing "Nearby devices" for Alexa app resolved problem for some people but will break the ability to pair Matter IOT devices
 
-- **MINI app**	Appears the app is based on myBMW app and might mirror it's behavior as a result
+- **MINI app**	Appears the app is based on myBMW app and might mirror its behavior as a result
 
 - **BM2** Solar Battery Monitoring app, used in a some camper van and camping solar setups, when the app is running it prevented activation of a new Pod. Force Stopping the app while activating an new pod is a workaround to the issue. Running the app after that didn't appear to interfere with Dash functionality (On a Pixel 8 Pro running A16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### How to revoke "Nearby device" permissions for other apps:
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android. It may be necessary to revoked the permission for other apps while activating a new Pod.
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
-Follow this procedure to revoked the "Nearby device" permission for all apps except **AAPS**:
+Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note

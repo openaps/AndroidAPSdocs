@@ -51,7 +51,7 @@ The user has set an **Automation** to trigger a 5am ‘Temp Target-Activity’ t
 
 1. As with any technology, **CGMs**, **Pumps** and phones can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed. 
 
-1. **Requirements for **Automations** are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. **Requirements for Automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which **Automations** are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
 
 1. **Automations** may conflict with each other, and it is good to review any new **Automation(s)** setting carefully in a safe environment, and understand why an **Automation** may or may not have triggered in the way you expect. 
 

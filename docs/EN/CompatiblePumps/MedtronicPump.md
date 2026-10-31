@@ -39,8 +39,8 @@ A comparison chart for the various Rileylink compatible devices can be found at 
 The following settings should be configured on the pump in order for AAPS to remotely send commands.  The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting.  The exact steps may vary based on pump type and/or firmware version.
 
 - **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as  111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
-- **Set Max Basal** (On the pump press Act and got to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Set Max Bolus** (On the pump press Act and to to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept.  The maximum value permitted by the pump is 25.
+- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
+- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept.  The maximum value permitted by the pump is 25.
 - **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AAPS will manage different profiles on your phone.  No other patterns are required.
 - **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type).  Select Absolute (not Percent).
 
@@ -71,8 +71,8 @@ While setting up AAPS to work with your medtronic pump you need to set the follo
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alphabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
 - **Pump Frequency**: There are two options based on where your pump was originally distributed.  Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select):
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
+    - for US & Canada, frequency used is 916 MHz
+    - for Worldwide, frequency used is 868 MHz
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above).  Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate.  This will effectively set the maximum temporary basal rate.  As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
 - **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above).  This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
 - **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump.  This period of time allows the user to cancel the bolus in the event a bolus command is sent in error.  It is not possible to cancel a bolus that has started via AAPS.  The only way to cancel a bolus that has already started is to suspend the pump manually followed by resuming it.
@@ -150,7 +150,7 @@ When the Medtronic driver is used, two additional actions are available on the p
 AAPS is using serial number for synchronization and serial number is exposed to NS. Because knowledge of serial number of old Medtronic pump can be used to control the pump remotely take special care to hardening NS site preventing leakage of SN of your pump. See https://nightscout.github.io/nightscout/security/ 
 
 ### OpenAPS users
-OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS.  Using AAPS the primary method of interacting with the pump is via your phone.  In normal use cases it is likely that the only time it is required to use the pump menu is when changing resevoirs.  This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons.  In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time.  There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS.  Using AAPS the primary method of interacting with the pump is via your phone.  In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs.  This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons.  In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time.  There are checks to try and prevent issues in such cases but this should still be avoided where possible.
 
 ### Logging
 In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintenance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
@@ -179,7 +179,7 @@ The GNARL code fully supports all of the functions used by the Medtronic driver 
 ## FAQ
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
-### What to do if I loose connection to RileyLink and/or pump?
+### What to do if I lose connection to RileyLink and/or pump?
 There are a number of options to try and resolve connectivity issues.
 - Tap **Wake and Tune Up** on the pump screen (**Manage** > **Pump**) as detailed above.
 - Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
@@ -195,7 +195,7 @@ There are a number of options to try and resolve connectivity issues.
 On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
 - NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
 - CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
 
 (MedtronicPump-pump-unreachable)=
 ### How to fix the "pump unreachable" error
@@ -203,7 +203,7 @@ On the back of the pump you will find a line detailing your model number along w
 Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
 
 1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
-2. Set **Medtronic Encoding** to **Hardware Encoding**.
+2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
 
 ## Where to get help
 

@@ -127,7 +127,7 @@ If you observe the following patterns after a few days, consider the following c
 
 1. First, you need the correct default basal settings in your **Profile**.
 2. Start on target, better without negative IOB.
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin C4. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured CI). Don't forget to eat the carbs ;)
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Very accurately measure a known portion of carbs, and record the start time and Start IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Don't forget to eat the carbs ;)
 4. After some hours, when COB=0[*](#profiletuning-cob-zero) and you're back on target, record end time, and note down the End IOB, check the total insulin given as before and call it End insulin.
    *NOTE: The time frame is NOT important, as long as it is longer than your digestion*
 5. From the difference between Start and End insulin amount, subtract/add the difference end IOB - start IOB. Then subtract the basal insulin calculated from your **Profile's** settings.

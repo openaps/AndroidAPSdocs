@@ -22,7 +22,7 @@ Insulin comes in different strengths, defined by the number of units per millili
 
 - **U100:** The global standard, containing **100 IU/ml**.
 - **U200-U500:** More concentrated insulins (e.g. U200 has 200 IU/ml) for smaller injection volumes.
-- **U40:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 requires U40-specific syringes.**
+- **U40/U50:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 requires U40-specific syringes.**
 - **Manual Dilution:** A clinical practice to create highly diluted insulin (e.g. U50, U10) for rare cases like neonatal use or extreme sensitivity. This requires meticulous pharmacy preparation.
 
 ```{admonition} Critical Warning
@@ -152,7 +152,7 @@ To create an insulin with another concentration, first open **Manage → Insulin
 
 - Click the "+" icon at the bottom of the screen.
 - Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
-  - diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
+  - Diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
   - U200 is more for adults with high insulin needs.
 
   ![The concentration dropdown in Insulin settings](../images/v4/Insulin/insulin_concentration_dropdown.png)

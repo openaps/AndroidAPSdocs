@@ -35,7 +35,7 @@ For our example we are going to make an edit to AndroidAPSdocs. This can be done
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved.  Make your edits to the file.
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
+We are using markdown for the docs pages. The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
 
 ![Edit branch](../images/PR3.png)
 
@@ -149,10 +149,10 @@ To include images you use this markdown syntax.
 
 The type of image should be PNG or JPEG.
 
-Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+Image names should conform to one of the following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
 
 * `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-* `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+* `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
 
 Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
 
@@ -201,7 +201,7 @@ Then link this reference in the text you are writing with the following kind of 
 
 You can add notes and warning boxes to documentation.
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all.
+Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text.
 Please use these carefully as the documentation should be as easy to read as possible.
 
 #### Notes
@@ -327,7 +327,7 @@ Example of a **passive verb**:
 - *“The insulin (subject) is delivered (verb) by the pump (object)”*
   
 
-*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”.   Also consider starting with the active verb.
+*“delivered”* is a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”.   Also consider starting with the active verb.
 
 Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
@@ -551,7 +551,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
   
     *W is better than z, because…*
   
-    Offer judgements and even opinions where appropriate..
+    Offer judgements and even opinions where appropriate.
   
     *An x in system y is analogous to a w in system z. However…*
   

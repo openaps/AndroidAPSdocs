@@ -77,7 +77,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24). 
 
   * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-  * Number 3 is manifacturing date. 
+  * Number 3 is manufacturing date. 
   * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=

@@ -11,7 +11,7 @@ Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3**
 
 * Restart
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
 
