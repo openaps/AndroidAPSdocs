@@ -67,7 +67,7 @@ El diálogo mientras el lazo está suspendido, con **Reanudar** y las duraciones
 
 ![Diálogo del lazo mientras el lazo está suspendido](../images/loop/loop_dialog_suspended.png)
 
-El diálogo mientras la bomba está desconectada, con **Vuelva a conectar la bomba** y las duraciones para alargar la desconexión:
+El diálogo mientras la bomba está desconectada, con **Vuelve a conectar la bomba** y las duraciones para alargar la desconexión:
 
 ![Diálogo del lazo mientras la bomba está desconectada](../images/loop/loop_dialog_disconnected.png)
 
@@ -433,7 +433,7 @@ La IOB puede ser negativa, si no queda ningún resto de bolo previo y tenemos un
 
 La disminución depende de tus [ajustes de DIA y del tipo de insulina](#Config-Builder-insulin-dia).
 
-#### Hidratos de carbono en cuerpo (COB)
+#### Carbohidratos en cuerpo (COB)
 
 Muestra los carbohidratos que tienes "a bordo" (los activos, que aún no han sido absorbidos en tu cuerpo).
 
@@ -511,7 +511,7 @@ El diálogo de insulina también se puede usar cuando la bomba está suspendida 
 
 Permite registrar carbohidratos sin bolo.
 
-Algunos [objetivos temporales predefinidos](#TempTargets-hypo-temp-target) (Hipo, Comiendo pronto, Actividad) se pueden iniciar directamente con los interruptores de arriba.
+Algunos [objetivos temporales predefinidos](#TempTargets-hypo-temp-target) (Hipo, Comiendo Pronto, Actividad) se pueden iniciar directamente con los interruptores de arriba.
 
 **Hora de los carbohidratos**: cuándo vas a comer o has comido los carbohidratos.
 
@@ -617,7 +617,7 @@ Conviene saber:
 
 * Si el bolo calculado es mayor que tu **[Bolo máximo](#Preferences-maximum-bolus)**, se reduce al bolo máximo, y la confirmación muestra el aviso «Bolus constraint applied» (restricción de bolo aplicada). En cambio, un [Asistente rápido](../DailyLifeWithAaps/QuickWizards.md) se rechaza.
 * Cuando el bolo solo se registra (por ejemplo, mientras la bomba está desconectada), el aviso «**El bolo sólo se anotará**» se queda en la parte superior del diálogo, también cuando te desplazas.
-* Un bolo que pones a mano tiene prioridad sobre un [SMB](#Open-APS-features-super-micro-bolus-smb) que espera para administrarse: el SMB se descarta y el lazo vuelve a calcular. Si en este momento se está administrando un SMB, tu bolo se rechaza con el mensaje «Se está administrando un microbolo (SMB) en este momento. Inténtelo de nuevo cuando haya finalizado». No se administra insulina, y los carbohidratos introducidos con ese bolo no se guardan: espera un momento y vuelve a introducirlos.
+* Un bolo que pones a mano tiene prioridad sobre un [SMB](#Open-APS-features-super-micro-bolus-smb) que espera para administrarse: el SMB se descarta y el lazo vuelve a calcular. Si en este momento se está administrando un SMB, tu bolo se rechaza con el mensaje «Se está administrando un microbolo (SMB) en este momento. Inténtalo de nuevo cuando haya finalizado». No se administra insulina, y los carbohidratos introducidos con ese bolo no se guardan: espera un momento y vuelve a introducirlos.
 
 (AapsScreens-wrong-cob-detection)=
 
