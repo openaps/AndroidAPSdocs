@@ -9,7 +9,7 @@ Cu toate acestea, încă mai există necesitatea de a face față acestor mese. 
 
 eCarbs are carbs that are split up over several hours. Pentru mesele standard cu mai mulți carbohidrați decât grăsimi/proteină, de obicei este suficient să se introducă carbohidrații înainte (și să se reducă valoarea bolusului inițial, dacă este necesar) pentru a preveni administrarea prea rapidă a insulinei.  Dar pentru mesele cu absorbție mai lentă, unde introducerea întregii cantități de carbohidrați de la început duce la un surplus de insulină activă (IOB) din cauza micro-bolusurilor automate (SMB), se pot folosi carbohidrații extinși pentru a simula mai precis modul în care carbohidrații (și orice echivalent de carbohidrați introdus pentru alți macronutrienți) sunt absorbiți și influențează glicemia. Cu această informație, bucla poate administra SMB mai granular pentru a face față acestor carbohidrați, ceea ce poate fi văzut ca un bolus extins dinamic (acest lucru ar trebui să funcționeze și fără SMB, dar este probabil mai puțin eficace).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## Mechanics of using eCarbs
 
@@ -62,7 +62,7 @@ For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carb
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Extended bolus and why they won't work in closed-loop environment?
 
-După cum s-a menționat mai sus, bolusurile extinse sau multiunde nu funcționează cu adevărat într-un sistem de tip buclă închisă. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+După cum s-a menționat mai sus, bolusurile extinse sau multiunde nu funcționează cu adevărat într-un sistem de tip buclă închisă. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Bolus extins și comutați la buclă deschisă - doar pompele Dana și Insight
