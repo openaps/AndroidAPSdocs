@@ -483,7 +483,7 @@ Ga terug en druk op "**VOLGENDE**" om naar het volgende scherm te gaan:
 
 ![APS-instellingen](../images/setup-wizard/Wizard-APS-Settings.png)
 
-## Gevoeligheids detectie (Autosens)
+## Gevoeligheidsdetectie (Autosens)
 
 Laat "**Gevoeligheid Oref1**" gekozen als de standaard plugin voor gevoeligheid:
 
