@@ -295,7 +295,7 @@ Wartość domyślna: 4 (nie zmieniaj jej, chyba że naprawdę musisz i wiesz, co
 
 **Auto ISF** to **eksperymentalny** algorytm dla zaawansowanych użytkowników. Opiera się na OpenAPS SMB i dodaje reguły, które wzmacniają lub osłabiają współczynnik wrażliwości na insulinę (ISF) w zależności od zachowania glukozy.
 
-To funkcja deweloperska: można ją włączyć tylko w [wersji rozwojowej (dev)](../AdvancedOptions/DevBranch.md) z włączonym **Trybem Inżynierskim**. W zwykłej wersji (release) jest zawsze wyłączona i dlatego nie jest widoczna w **Ustawienia → APS**. Ukończenie [Zadań](../SettingUpAaps/CompletingTheObjectives.md) jej nie odblokowuje.
+To funkcja deweloperska: można ją włączyć tylko w [wersji rozwojowej (dev)](../AdvancedOptions/DevBranch.md) z włączonym **Trybem Inżynierskim**. W zwykłej wersji (release) jest zawsze wyłączona i dlatego nie jest widoczna w **Konfiguracja → APS**. Ukończenie [Zadań](../SettingUpAaps/CompletingTheObjectives.md) jej nie odblokowuje.
 
 Po jej wybraniu jej **Ustawienia** zawierają ustawienia OpenAPS SMB oraz grupę **Ustawienia AutoISF**:
 
