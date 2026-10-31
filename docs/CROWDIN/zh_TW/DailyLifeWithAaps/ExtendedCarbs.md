@@ -9,7 +9,7 @@
 
 eCarbs are carbs that are split up over several hours. 對於高碳水化合物的標準餐食，提前輸入碳水化合物（如果需要，可以減少初始注射量）通常足以避免過早的胰島素注射。但是對於吸收較慢的餐食，如果完全提前輸入碳水化合物會導致來自 SMB 的 IOB 過多，eCarbs 可以更準確地模擬碳水化合物（以及你為其他營養素輸入的任何碳水化合物等效物）的吸收，並影響血糖。有了這些資訊，循環系統可以更逐步地管理 SMB 來處理這些碳水化合物，這可以被視為一種動態的延長注射（即使沒有 SMB 也應該有效，但可能不如有 SMB 時效果好）。
 
-**注意：** eCarbs 不僅限於高脂肪/高蛋白餐食：他們也可以幫助應對任何會提高血糖的情況，例如服用其他藥物（如類固醇）。
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## 使用 eCarbs 的操作方式
 
@@ -62,7 +62,7 @@ For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carb
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## 延長注射及其為何在閉環系統中無法運作？
 
-如上所述，延長或多波段注射在閉環系統中並不真正有效。[請參閱下方詳情](#why-extended-boluses-wont-work-in-a-closed-loop-environment)
+如上所述，延長或多波段注射在閉環系統中並不真正有效。 [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### 延長注射與切換至開放循環 - 僅限 Dana 與 Insight 幫浦
