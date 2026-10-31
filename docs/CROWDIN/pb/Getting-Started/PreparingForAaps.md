@@ -12,7 +12,7 @@ Muitos detalhes ligados à experiência na documentação do **AAPS** fazem mais
 
 (preparing-safety-first)=
 
-## Safety First
+## Segurança em primeiro lugar
 “Com grandes poderes vêm grandes responsabilidades…”
 
 ### Segurança técnica
@@ -190,7 +190,7 @@ Aqui está um prazo aproximado:
 
 Mesmo quando o **AAPS** já estiver funcionando por completo, você ainda vai precisar ajustar suas configurações com regularidade para melhorar o controle geral do seu diabetes.
 
-## Requirements
+## Requisitos
 
 ### Considerações médicas
 
