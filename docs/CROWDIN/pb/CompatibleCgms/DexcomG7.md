@@ -1,103 +1,103 @@
-# Dexcom G7, ONE+ and Stelo
+# Dexcom G7, ONE+ e Stelo
 
 
-## Fundamental in advance
+## Importante antes de começar
 
-Noteworthy is the fact that the G7, ONE+ and Stelo systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Vale notar que os sistemas G7, ONE+ e Stelo, ao contrário do G6, não suavizam os valores, nem no app, nem no receptor. Mais detalhes sobre isso [aqui](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ```{admonition} Smoothing method 
-Read [Smoothing method](../CompatibleCgms/SmoothingBloodGlucoseData.md) suggestions to use for Dexcom G7/ONE+/Stelo
+Leia as sugestões de [Método de suavização](../CompatibleCgms/SmoothingBloodGlucoseData.md) para usar com Dexcom G7/ONE+/Stelo
 ```
 
-## 1. xDrip (direct connection to G7, ONE+ or Stelo)
+## 1. xDrip (conexão direta com G7, ONE+ ou Stelo)
 
-- xDrip connects to the sensor itself: uninstall the Dexcom app, as only one app can connect to the sensor. To keep the Dexcom app, use [xDrip Companion App](#DexcomG7-xdrip-companion-app) instead.
-- Follow the instructions here: [xDrip G7, ONE+ and Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). A recent xDrip release is required — see the linked page for the minimum version.
-- Select  xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- O xDrip se conecta ao próprio sensor: desinstale o app da Dexcom, pois só um app pode se conectar ao sensor. Para manter o app da Dexcom, use o [xDrip Companion App](#DexcomG7-xdrip-companion-app).
+- Siga as instruções aqui: [xDrip G7, ONE+ e Stelo](https://navid200.github.io/xDrip/docs/Dexcom/G7.html). É necessária uma versão recente do xDrip — veja a versão mínima na página do link.
+- Selecione xDrip em [**Configuração → Fonte de BG**](#Config-Builder-bg-source).
 
-- Adjust the xDrip settings according to the explanations on the xDrip settings page  [xDrip settings](../CompatibleCgms/xDrip.md)
+- Ajuste as configurações do xDrip conforme as explicações da página [Configurações do xDrip](../CompatibleCgms/xDrip.md)
 
-## 2. Build Your Own Dexcom App (G7 only)
+## 2. Build Your Own Dexcom App (só G7)
 
 ```{admonition} Old app version
 :class: warning
-Dexcom BYODA is now a very old version of the app and cannot be updated. Not available for ONE+ or Stelo.
+O Dexcom BYODA é agora uma versão muito antiga do app e não pode ser atualizado. Não disponível para ONE+ ou Stelo.
 ```
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS
+-   O [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) suporta envio local (broadcast) para o AAPS
 
--   This app lets you use your Dexcom G7 with any Android smartphone.
--   Uninstall the original Dexcom app
--   Install the downloaded apk
--   Enter sensor code in patched app
--   After short time BYODA should pick-up transmitter signal
+-   Este app permite usar o seu Dexcom G7 com qualquer smartphone Android.
+-   Desinstale o app original da Dexcom
+-   Instale o apk baixado
+-   Digite o código do sensor no app modificado
+-   Após pouco tempo, o BYODA deve captar o sinal do transmissor
 
 (DexcomG7-xdrip-companion-app)=
 
-## 3. xDrip Companion App (G7, ONE+ and Stelo)
+## 3. xDrip Companion App (G7, ONE+ e Stelo)
 
-The official Dexcom app stays connected to the sensor. xDrip reads the glucose values from the notifications of the Dexcom app and sends them to **AAPS**.
+O app oficial da Dexcom continua conectado ao sensor. O xDrip lê os valores de glicose das notificações do app da Dexcom e os envia para o **AAPS**.
 
 ```{admonition} Not a trusted data source
 :class: note
-**AAPS** does not consider xDrip in Companion App mode a [trusted BG data source](#GettingStarted-TrustedBGSource): SMBs are not allowed all the time.
+O **AAPS** não considera o xDrip no modo Companion App uma [fonte de dados de BG confiável](#GettingStarted-TrustedBGSource): os SMBs não são permitidos o tempo todo.
 ```
 
-### Read the Dexcom app notifications
+### Ler as notificações do app da Dexcom
 
-- Keep the Dexcom app installed and connected to the sensor. Its notifications must stay visible: do not silence or hide them.
-- Download and install [xDrip](https://github.com/NightscoutFoundation/xDrip). Use the same glucose units in xDrip as in the Dexcom app.
-- In xDrip, go to **Settings** > **Hardware Data Source** and select **Companion App**.
+- Mantenha o app da Dexcom instalado e conectado ao sensor. As notificações dele devem continuar visíveis: não silencie nem oculte essas notificações.
+- Baixe e instale o [xDrip](https://github.com/NightscoutFoundation/xDrip). Use no xDrip as mesmas unidades de glicose do app da Dexcom.
+- No xDrip, vá em **Settings** > **Hardware Data Source** e selecione **Companion App**.
 
   ![xDrip Hardware Data Source: Companion App](../images/xDrip_Companion_DataSource.png)
 
-- xDrip asks for permission to read notifications. Tap **OK**, then select **xDrip** in the list and turn on **Allow notification access**.
+- O xDrip pede permissão para ler as notificações. Toque em **OK**, depois selecione **xDrip** na lista e ative **Permitir acesso a notificações**.
 
-  ![Notification access list](../images/xDrip_Companion_NotificationAccess1.png)
+  ![Lista de acesso a notificações](../images/xDrip_Companion_NotificationAccess1.png)
 
-- If **Allow notification access** is greyed out (*Controlled by Restricted Setting*), Android blocks it because xDrip was not installed from the Play Store:
+- Se **Permitir acesso a notificações** estiver em cinza (*Controlado por configuração restrita*), o Android bloqueia o acesso porque o xDrip não foi instalado pela Play Store:
 
-  ![Notification access controlled by restricted setting](../images/xDrip_Companion_Restricted.png)
+  ![Acesso a notificações controlado por configuração restrita](../images/xDrip_Companion_Restricted.png)
 
-  Open the xDrip app info (long press the xDrip icon > **App info**), tap the three dots menu at the top right and select **Allow restricted settings**. Then go back to the notification access screen and allow it.
+  Abra as informações do app xDrip (toque longo no ícone do xDrip > **Informações do app**), toque no menu de três pontos no canto superior direito e selecione **Permitir configurações restritas**. Depois volte à tela de acesso a notificações e permita o acesso.
 
-  ![App info: Allow restricted settings](../images/xDrip_Companion_AllowRestricted.png)
+  ![Informações do app: Permitir configurações restritas](../images/xDrip_Companion_AllowRestricted.png)
 
-  ![Notification access allowed for xDrip](../images/xDrip_Companion_NotificationAccess2.png)
+  ![Acesso a notificações permitido para o xDrip](../images/xDrip_Companion_NotificationAccess2.png)
 
-- Readings appear in xDrip when the Dexcom app shows a new value. If nothing appears, you may need to start a sensor in xDrip: this has no effect on the real sensor. Stelo gives a reading every 15 minutes in this mode.
+- As leituras aparecem no xDrip quando o app da Dexcom mostra um novo valor. Se nada aparecer, talvez seja preciso iniciar um sensor no xDrip: isso não tem efeito no sensor real. Neste modo, o Stelo envia uma leitura a cada 15 minutos.
 
 ### Companion Bluetooth (G7)
 
-When the Dexcom app is connected to a G7 sensor, xDrip can also listen to the readings the sensor sends to the Dexcom app over Bluetooth. xDrip does not pair with the sensor and you do not need to enter the sensor code: the Dexcom app stays in control.
+Quando o app da Dexcom está conectado a um sensor G7, o xDrip também pode escutar por Bluetooth as leituras que o sensor envia ao app da Dexcom. O xDrip não pareia com o sensor e você não precisa digitar o código do sensor: o app da Dexcom continua no controle.
 
-With **Companion Bluetooth**, xDrip gets the exact time and trend of each reading from the sensor, instead of the time the notification appeared, and fills gaps when the phone was out of range (backfill).
+Com o **Companion Bluetooth**, o xDrip recebe do sensor a hora exata e a tendência de cada leitura, em vez da hora em que a notificação apareceu, e preenche lacunas de quando o telefone estava fora de alcance (backfill).
 
-- In xDrip, go to **Settings** > **Less common settings** > **Bluetooth Settings** and enable **Companion Bluetooth**.
+- No xDrip, vá em **Settings** > **Less common settings** > **Bluetooth Settings** e ative **Companion Bluetooth**.
 
-  ![xDrip Bluetooth Settings: Companion Bluetooth](../images/xDrip_Companion_Bluetooth.png)
+  ![Configurações de Bluetooth do xDrip: Companion Bluetooth](../images/xDrip_Companion_Bluetooth.png)
 
-- This does not work on all phones and Android versions. Disable it if you see problems.
-- If an old Dexcom sensor is still in the phone's Bluetooth list, xDrip might listen to the wrong one: in Android **Settings** > **Connected devices**, forget sensors you no longer use.
-- Companion Bluetooth is made for the G7. With ONE+ and Stelo, rely on notifications.
+- Isso não funciona em todos os telefones e versões do Android. Desative se você notar problemas.
+- Se um sensor Dexcom antigo ainda estiver na lista de Bluetooth do telefone, o xDrip pode escutar o sensor errado: no Android, em **Configurações** > **Dispositivos conectados**, esqueça os sensores que você não usa mais.
+- O Companion Bluetooth foi feito para o G7. Com ONE+ e Stelo, use as notificações.
 
-### Configuration in AAPS
+### Configuração no AAPS
 
-- Select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
-- Adjust the xDrip settings according to the explanations on the xDrip settings page [xDrip settings](../CompatibleCgms/xDrip.md).
+- Selecione xDrip em [**Configuração → Fonte de BG**](#Config-Builder-bg-source).
+- Ajuste as configurações do xDrip conforme as explicações da página [Configurações do xDrip](../CompatibleCgms/xDrip.md).
 
-## 4. Juggluco (G7 and ONE+)
+## 4. Juggluco (G7 e ONE+)
 
-Version 9.0+ required
+Necessária a versão 9.0 ou superior
 
-- Disable the app previously connected to the sensor: Uninstall the app or use "Force Stop." Disable "Nearby Devices" permission in app settings. Restrict the app's battery usage.
+- Desative o app que estava conectado ao sensor antes: desinstale o app ou use "Forçar parada". Desative a permissão "Dispositivos próximos" nas configurações do app. Restrinja o uso da bateria pelo app.
 
-- Forget the sensor in Bluetooth settings: In Android settings, find the sensor in bonded devices and select "Forget." Dexcom G7 sensor names start with DXCM.
+- Esqueça o sensor nas configurações de Bluetooth: nas configurações do Android, encontre o sensor nos dispositivos pareados e selecione "Esquecer". Os nomes dos sensores Dexcom G7 começam com DXCM.
 
-- Avoid interference from other sensors: Keep old Dexcom sensors out of Bluetooth range.
+- Evite interferência de outros sensores: mantenha os sensores Dexcom antigos fora do alcance do Bluetooth.
 
-- Connect the G7 sensor to Juggluco: Open Juggluco → Left menu → Photo. Scan the data matrix on the G7 sensor's applicator. Wait up to 5 minutes for Juggluco to find the sensor.
+- Conecte o sensor G7 ao Juggluco: abra o Juggluco → menu à esquerda → Photo. Escaneie o data matrix no aplicador do sensor G7. Aguarde até 5 minutos para o Juggluco encontrar o sensor.
 
-- Pairing requirements: Agree to pair the sensor with Juggluco. Ensure the screen isn’t locked during pairing. If pairing fails, wait 5 minutes before trying again.
+- Requisitos para parear: aceite parear o sensor com o Juggluco. Garanta que a tela não esteja bloqueada durante o pareamento. Se o pareamento falhar, aguarde 5 minutos antes de tentar novamente.
 
-- Exception: Wear OS watches can bond without pressing an agree button.
+- Exceção: relógios Wear OS podem parear sem apertar um botão para aceitar.
