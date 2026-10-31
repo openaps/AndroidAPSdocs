@@ -1,41 +1,41 @@
-# Juggluco settings
+# Налаштування Juggluco
 
-If not already set up, then download [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
+Якщо ще не налаштовано, завантажте [Juggluco](https://www.juggluco.nl/Juggluco/download.html).
 
-Follow the [instructions](https://www.juggluco.nl/Jugglucohelp/introhelp.html) to connect your sensor.
+Дотримуйтеся [інструкцій](https://www.juggluco.nl/Jugglucohelp/introhelp.html), щоб підключити сенсор.
 
-## Basic settings for all CGM systems
+## Базові налаштування для всіх систем CGM
 
-### Disable Nightscout uploader
+### Вимкніть вивантаження в Nightscout
 
-You shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Не дозволяйте жодному іншому застосунку вивантажувати дані (глюкозу крові та терапію) в Nightscout.
 
-Disable any active uploader to Nightscout in Juggluco.
+Вимкніть у Juggluco будь-яке активне вивантаження в Nightscout.
 
-![Disable Nightscout Upload](../images/juggluco/DisableNightscoutUpload.png)
+![Вимкнення вивантаження в Nightscout](../images/juggluco/DisableNightscoutUpload.png)
 
 (juggluco-to-aaps)=
 
-## Juggluco to AAPS
+## Juggluco → AAPS
 
-Juggluco can send blood glucose directly to AAPS, enabling SMBs always if you are using a [trusted sensor](#GettingStarted-TrustedBGSource).
+Juggluco може надсилати значення глюкози крові прямо в AAPS. Якщо ви використовуєте [надійний сенсор](#GettingStarted-TrustedBGSource), SMB будуть дозволені завжди.
 
-When using a Libre 2/2+/3/3+ sensor, minute-by-minute readings will be sent to AAPS but will not trigger minute-by-minute calculations in AAPS.
+З сенсором Libre 2/2+/3/3+ значення щохвилини надсилаються в AAPS, але AAPS не робить розрахунки щохвилини.
 
-Enable xDrip broadcast in Juggluco (do not enable Patched Libre), confirm and save the AAPS package information. Select the xDrip BG data source in AAPS.
+Увімкніть xDrip broadcast у Juggluco (не вмикайте Patched Libre), підтвердьте та збережіть інформацію про пакет AAPS. Виберіть в AAPS джерело даних ГК xDrip.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS.
+Застосуйте достатнє [згладжування](./SmoothingBloodGlucoseData.md) в AAPS.
 
-![Juggluco to AAPS](../images/juggluco/Juggluco-AAPS.png)
+![Juggluco → AAPS](../images/juggluco/Juggluco-AAPS.png)
 
 (juggluco-to-xdrip)=
 
-## Juggluco to xDrip
+## Juggluco → xDrip
 
-Juggluco can send blood glucose to xDrip which will then send them to AAPS.
+Juggluco може надсилати значення глюкози крові в xDrip, а xDrip потім надсилає їх в AAPS.
 
-Enable Patched Libre in Juggluco (do not enable xDrip broadcast), confirm and save the dexdrip package information. Select the xDrip BG data source in AAPS.
+Увімкніть Patched Libre у Juggluco (не вмикайте xDrip broadcast), підтвердьте та збережіть інформацію про пакет dexdrip. Виберіть в AAPS джерело даних ГК xDrip.
 
-Apply sufficient [smoothing](./SmoothingBloodGlucoseData.md) in AAPS if necessary, when using a Libre 2/2+/3/3+ sensor, xDrip will average the minute-by-minute to 5 minutes readings and [also smoothen](#libre2-value-smoothing-raw-values) them.
+Застосуйте достатнє [згладжування](./SmoothingBloodGlucoseData.md) в AAPS, якщо потрібно. З сенсором Libre 2/2+/3/3+ xDrip усереднює щохвилинні значення до 5-хвилинних і [також згладжує](#libre2-value-smoothing-raw-values) їх.
 
-![Juggluco to xDrip](../images/juggluco/Juggluco-xDrip+.png)
+![Juggluco → xDrip](../images/juggluco/Juggluco-xDrip+.png)
