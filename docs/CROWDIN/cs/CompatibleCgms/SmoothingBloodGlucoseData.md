@@ -1,44 +1,44 @@
-# Vyhlazování zarušených dat glykémií
+# Vyhlazování dat glykémie
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Pokud jsou data **glykémie** skákající/zašuměná, **AAPS** může dávkovat inzulín nesprávně, což vede k vysokým nebo nízkým glykémiím. Pokud u svého CGM pozorujete chyby nebo skákající data, je důležité vypnout smyčku, dokud se problém nevyřeší. Podle toho, jaký CGM máte, mohou být příčinou takových problémů nastavení CGM v **AAPS** (jak je vysvětleno níže) nebo problém s místem, kde je senzor CGM zavedený (pak může být nutné senzor vyměnit).
 
-## Smoothing data within AAPS
+## Vyhlazování dat v AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** nabízí možnost vyhlazovat data přímo v **AAPS**, a ne v aplikaci CGM. Otevřete **nabídku** (☰), vyberte [**Konfigurace**](../SettingUpAaps/ConfigBuilder.md) a pak **Vyhlazování**. Jsou čtyři možnosti a aktivní může být vždy jen jedna: **Žádné vyhlazování**, **Exponenciální vyhlazování**, **Průměrovací vyhlazování** a **Unscented Kalmanův filtr**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Konfigurace > Vyhlazování](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponenciální vyhlazování
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Obecně je to doporučená možnost pro začátek, protože nejsilněji potlačuje šum a přepisuje nejnovější hodnotu. Další konkrétní doporučení však najdete v tabulce níže.
 
 ### Průměrovací vyhlazování
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Tato možnost funguje podobně jako zpětné vyhlazování, které dříve používaly některé platformy CGM. Rychleji reaguje na nedávné změny glykémie, a proto spíše nesprávně reaguje na zašuměná data CGM.
 
-### No Smoothing
+### Žádné vyhlazování
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Tuto možnost použijte jen tehdy, když data CGM správně vyhlazuje vaše sběrná aplikace dříve, než je pošle do **AAPS**.
 
-### Unscented Kalman Filter (UKF)
+### Unscented Kalmanův filtr (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Tato možnost používá statistický model, který z příchozích (možná zašuměných) hodnot průběžně odhaduje vaši skutečnou glykémii a rychlost její změny a automaticky se přizpůsobuje tomu, jak moc je váš senzor právě zašuměný. Také rozpozná a vyřadí náhlé odlehlé hodnoty. Je to pokročilejší alternativa k exponenciálnímu a průměrovacímu vyhlazování, užitečná, pokud chcete, aby se vyhlazování samo přizpůsobovalo měnící se úrovni šumu senzoru, místo použití pevné metody.
 
 (smoothing-xdrip-dexcom-g6)=
 
-## Suggestions to use smoothing
+## Doporučení pro použití vyhlazování
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Metodu vyhlazování můžete měnit i automaticky, například podle stáří senzoru, pomocí [akce automatizace](#automations-automation-action) **Změnit vyhlazování**.
 
-|               | Exponential |  Průměr   | No Smoothing |
-| ------------- |:-----------:|:---------:|:------------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+|               |      Exponenciální       |          Průměr          | Žádné vyhlazování |
+| ------------- |:------------------------:|:------------------------:|:-----------------:|
+| G5/G6/ONE     | Pokud jsou data zašuměná |                          |    Doporučeno     |
+| G7/ONE+/Stelo | Pokud jsou data zašuměná | Pokud jsou data stabilní |                   |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Senzory Libre jsou zašuměné a mohou vyžadovat vyhlazování. Když používáte přímé spojení xDrip nebo zdroj dat z upravené aplikace (příjem z jiné aplikace, včetně Juggluco), [vyhlazování už probíhá uvnitř aplikace](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |    Průměr    |       N.A.        |
-| Libre 2/2+ (EU)      |  Průměr  |    Žádný     |    Průměr    |       Žádný       |
-| Libre 2/2+/3/3+      |  Průměr  |     N.A.     |     N.A.     |       Žádný       |
+| Senzor / Zdroj dat | Juggluco  | xDrip – přímé spojení | xDrip – můstek | xDrip – upravená aplikace |
+| ------------------ |:---------:|:---------------------:|:--------------:|:-------------------------:|
+| Libre 1/14 dní/Pro | Netýká se |       Netýká se       |     Průměr     |         Netýká se         |
+| Libre 2/2+ (EU)    |  Průměr   |         Žádný         |     Průměr     |           Žádný           |
+| Libre 2/2+/3/3+    |  Průměr   |       Netýká se       |   Netýká se    |           Žádný           |
