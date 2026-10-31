@@ -1,6 +1,6 @@
 # Jiný CGM nahrávaný do Nightscoutu
 
-Pokud máte nastavený jiný CGM, který umí posílat data glykémie **jen** do [Nightscoutu](https://nightscout.github.io/).
+Use this option if you have any other CGM set up that can send your BG data **only** to [Nightscout](https://nightscout.github.io/).
 
 ```{important}
 Tento zdroj dat nebude fungovat, když jste offline, když máte potíže se sítí nebo když vaše stránka Nightscout nefunguje. Používejte opatrně.
