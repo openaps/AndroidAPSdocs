@@ -18,7 +18,7 @@ En algún momento te sugerirán que hagas un pull request (PR). Así es como tus
 
 (Nota complementaria: Si eres un alumno visual, hay un video de YouTube [aquí](https://youtu.be/4b6tsL0_kzg) mostrando el flujo de trabajo de PR.)
 
-Para nuestro ejemplo, vamos a hacer un cambio en AndroidAPSdocs. Esto se puede hacer en cualquier PC con Windows, Mac, etc. (cualquier computadora con acceso a Internet).
+Para nuestro ejemplo, vamos a hacer un cambio en AndroidAPSdocs. Esto se puede hacer en cualquier PC con Windows, Mac, etc. (cualquier ordenador con acceso a Internet).
 
 1. Ve a <https://github.com/openaps/AndroidAPSdocs> y pulsa Fork arriba a la derecha para hacer tu propia copia del repositorio.
 
