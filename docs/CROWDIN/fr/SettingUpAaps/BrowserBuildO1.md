@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# Option 1 – Générer un nouveau keystore
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation) and downloaded the preparation file.
+Cette page fait partie de l'[Étape 2 – Créer votre keystore de signature](BrowserBuildKeystore.md) de la [Compilation dans le navigateur](BrowserBuild.md). Vérifiez que vous avez lu le [choix entre l'Option 1 et l'Option 2](#aaps-ci-preparation) et téléchargé le fichier de préparation.
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+L'Option 1 génère pour vous un tout nouveau keystore de signature. Elle convient aux nouveaux utilisateurs, aux personnes qui n'ont pas de JKS, ou à celles qui ont oublié le mot de passe ou l'alias.
 
-## Choose your device
+## Choisissez votre appareil
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Vous compilez depuis un **téléphone Android** ? Utilisez plutôt [AAPS Builder](BrowserBuildAapsBuilder.md) : il n'a pas besoin de fichier de préparation.
 ```
 
-Follow the page that matches the device you are building from:
+Suivez la page qui correspond à l'appareil depuis lequel vous compilez :
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
+- **[Ordinateur](BrowserBuildO1Computer.md)** – Windows, Mac ou Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Vous pouvez changer d'appareil à tout moment – ouvrez simplement la page correspondante.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
+Ordinateur <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```
