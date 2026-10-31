@@ -118,7 +118,7 @@ Het is heel belangrijk dat batterijoptimalisaties uitgeschakeld zijn. AAPS ziet 
 
   ![Instellingen van de Accu-Chek Combo driver](../images/v4/Pumps/accu_chek_combo_settings.png)
 
-  **Plug-in openen** (of **Beheren** > **Pomp**) opent het Accu-Chek Combo pompscherm. Zolang er geen pomp gekoppeld is, toont het **Niet verbonden met een pomp**:
+  **Plug-in openen** (of **Beheren** > **Pomp**) opent het Accu-Chek Combo pompscherm. Zolang er geen pomp gekoppeld is, toont het **Niet gekoppeld aan een pomp**:
 
   ![Accu-Chek Combo pompscherm voor het koppelen](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
 
@@ -195,7 +195,7 @@ Onderaan staan deze knoppen:
 Deze instellingen zijn beschikbaar voor de Combo driver (**Configuratie** > **Pomp** > **Accu-Chek Combo** > **Instellingen**, of het instellingen-icoon (tandwiel) op het pompscherm). Van boven naar beneden:
 
 1. **Tijd ontdekking (in seconden)**: Bij het koppelen maakt de driver de telefoon zichtbaar voor de pomp. Dit bepaalt hoe lang de telefoon zichtbaar blijft. Standaard is het maximum gekozen (300 seconden = 5 minuten). Android staat niet toe dat de telefoon onbeperkt zichtbaar blijft, dus je moet een tijdsduur kiezen.
-2. **Autodetect en voer automatisch de vervanging van het insulinereservoir in**: Als dit aan staat, voert de driver de "reservoirwissel" in die je normaal zelf invoert met **Beheren** > **Ontlucht/vul**. Dit wordt [hieronder verder uitgelegd](#combov2-autodetections).
+2. **Autodetect en voer automatisch de vervanging van het insulinereservoir in**: Als dit aan staat, voert de driver de "reservoirwissel" in die je normaal zelf invoert met **Beheren** > **Prime/Vul**. Dit wordt [hieronder verder uitgelegd](#combov2-autodetections).
 3. **Automatisch batterijwijziging detecteren en automatisch invoeren**: Als dit aan staat, voert de driver de "batterijwissel" in die je normaal zelf invoert met **Beheren** > **Pomp bat. wissel**. Dit wordt [hieronder verder uitgelegd](#combov2-autodetections).
 4. **Schakel uitgebreide Combo logboekregistratie in**: Hiermee schrijft de driver veel meer naar de logbestanden. **LET OP**: Schakel dit niet in, tenzij een ontwikkelaar je daarom vraagt. Anders kan dit veel ruis in de **AAPS**-logbestanden geven, waardoor ze minder bruikbaar worden.
 
