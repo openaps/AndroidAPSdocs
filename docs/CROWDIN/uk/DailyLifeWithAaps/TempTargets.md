@@ -1,236 +1,236 @@
-# Temp-Targets
+# Тимчасові цілі
 
-## What are Temp-Targets and where can I set and configure them?
+## Що таке тимчасові цілі і де їх задавати та налаштовувати?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**Тимчасова ціль** (скорочено **ТЦ**) — це функція **AAPS**, яка дозволяє користувачу змінити свій [цільовий діапазон **ГК**](#profile-glucose-targets) для запланованих занять. Для цього **AAPS** змінює кількість інсуліну, яку вводить користувач.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Ціль глюкози, особливо короткочасна (менше ніж 4 години), не обов'язково має бути *фактичним значенням*, якого ви очікуєте чи хочете досягти. Це скоріше хороший спосіб сказати **AAPS** працювати більш або менш агресивно, і при цьому утримувати глюкозу в діапазоні.
 
-Temporary targets can be defined within those boundaries :
+Тимчасові цілі можна задати в таких межах:
 
-|         | Temporary target       |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|          | Тимчасова ціль           |
+| -------- | ------------------------ |
+| Мінімум  | 4 ммоль/л або 72 мг/дл   |
+| Максимум | 10 ммоль/л або 180 мг/дл |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+**AAPS** має три вбудовані шаблони **тимчасових цілей**: для тренувань (**Активність**), для їжі (**Очікуваний прийом їжі**) і для передбаченої гіпоглікемії (**Гіпо**). Вони знаходяться на екрані **Тимчасова ціль** (**Керувати** → **Тимчасова ціль**), який також можна відкрити, просто натиснувши **значок цілі** на головному екрані.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Користувачі повинні мати реалістичні очікування щодо результатів, яких можна досягти, коли вибирають **тимчасову ціль** в **AAPS**. Чи вдасться досягти бажаної цілі **ГК**, залежить від багатьох чинників: наскільки надійні налаштування **AAPS** користувача, загальний контроль **ГК**, **IOB**, чутливість до інсуліну, інсулінорезистентність, інтенсивність навантаження під час тренування тощо.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+**Тимчасовій цілі** може знадобитися приблизно 30 хвилин або більше, щоб досягти бажаної цілі **ГК**. **AAPS** не може досягти цілі **ГК** миттєво, і користувачі повинні пам'ятати про це, коли вибирають **тимчасову ціль**.
 
-The sections below summarize the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+Розділи нижче коротко описують функції **тимчасової цілі «Активність»**, **тимчасової цілі «Очікуваний прийом їжі»** і **тимчасової цілі «Гіпо»**. Показані значення — це стандартні значення, з якими постачається застосунок. Ви можете [змінити кожен шаблон](#TempTargets-change-preset-defaults) під свої потреби.
 
-### TT - Activity
+### ТЦ «Активність»
 
-![TT Activity](../images/TempTarget2.png)
+![ТЦ «Активність»](../images/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**Ціль ГК (стандартний шаблон, можна змінити)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+AAPS намагатиметься досягти 140 мг/дл або 7,8 ммоль/л протягом 1 год 30 хв
 
-**Other considerations users may wish to factor in when selecting**:
+**Що ще користувачі можуть врахувати під час вибору**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+Залежно від рівня **ГК** **AAPS** «зменшить» введення інсуліну, щоб досягти цілі **ГК**. Якщо ціль **ГК** не в діапазоні (тобто вища за ціль **ГК**, вибрану в **профілі** користувача), **AAPS** може залишити базал увімкненим.
 
-In closed loop mode, **SMB**:
+У режимі закритої петлі **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *може бути* вимкнено (докладніше нижче); і/або
+- базал може бути увімкнено, якщо **AAPS** має негативний **IOB**, або <0.
 
-Users may also wish to consider:
+Користувачі також можуть розглянути:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *вибір* цієї **ТЦ** за 1–2 години до запланованого тренування, щоб зменшити IOB (правильний час для цієї ТЦ у кожної людини різний); і
+- *вибір* тимчасового профілю (зменшення) на час запланованого заняття, щоб зменшити **IOB**;
+- *щоб* **ТЦ** *закінчилася* незадовго до тренування, бо **IOB** уже зменшено, а в деяких користувачів **ГК** швидко зростає після тренування.
 
-### TT - Eating soon
+### ТЦ «Очікуваний прийом їжі»
 
-![TT Eating soon](../images/TempTarget1.png)
+![ТЦ «Очікуваний прийом їжі»](../images/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**Ціль ГК (стандартний шаблон, можна змінити)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+AAPS намагатиметься досягти 90 мг/дл або 5,0 ммоль/л протягом 45 хвилин
 
-**Other considerations users may wish to factor in when selecting**:
+**Що ще користувачі можуть врахувати під час вибору**:
 
-In closed loop mode, **SMB**:
+У режимі закритої петлі **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- залишиться увімкненим; і/або
+- базал також може бути увімкнено залежно від налаштувань **профілю** користувача.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+Залежно від рівня **ГК** **AAPS** «збільшить» введення інсуліну в межах налаштувань **AAPS** користувача, щоб досягти бажаної цілі **ГК**.
 
-### TT - Hypo
+### ТЦ «Гіпо»
 
-![TT Hypo](../images/TempTarget3.png)
+![ТЦ «Гіпо»](../images/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**Ціль ГК (стандартний шаблон, можна змінити)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+AAPS намагатиметься досягти 160 мг/дл або 8,9 ммоль/л протягом 1 години
 
-**Other considerations users may wish to factor in when selecting**:
+**Що ще користувачі можуть врахувати під час вибору**:
 
-In closed loop mode, **SMB**:
+У режимі закритої петлі **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *може бути* вимкнено (докладніше нижче); і/або
+- базал може бути увімкнено, якщо **AAPS** має негативний **IOB**, або <0.
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## Як задавати тимчасові цілі та керувати ними (Керувати → Тимчасова ціль)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+В **AAPS** v4 ви керуєте **шаблонами** ТЦ і запускаєте тимчасову ціль на екрані **Керувати** (нижня панель навігації) → **Тимчасова ціль** (*«Керувати тимчасовими цілями й встановлювати їх»*).
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![Екран «Тимчасова ціль» — карусель шаблонів, редактор і панель дій](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+Екран має три частини:
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **Карусель шаблонів** (вгорі) — гортайте свої шаблони ТЦ. Кожна картка показує **назву**, **ціль** і **тривалість** шаблону; поточну ТЦ, яка працює, виділено.
+2. **Редактор** (посередині) — **Тимчасова ціль** і **Тривалість**, які буде фактично застосовано, а також дата/час **Активація**.
+3. **Панель дій** (внизу) — кнопки **➕ додати**, **‘️ видалити** і **▶ активувати**.
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+Вибір картки шаблону завантажує її **ціль** і **тривалість** у редактор.
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} Вбудовані та користувацькі шаблони :class: note Вбудовані шаблони — **Очікуваний прийом їжі**, **Активність** і **Гіпо** — існують завжди, і їх **не можна видалити** (але можна змінити їх значення та зберегти). Усі шаблони, які ви створюєте самі, є **користувацькими**, і їх можна вільно змінювати або видаляти.
 
-    <br />### Activating a temporary target
+    <br />### Активація тимчасової цілі
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    Перейдіть гортанням до потрібного шаблону (його значення завантажуються в редактор), за бажанням змініть **ціль**/**тривалість** у редакторі, потім натисніть **▶ Активувати**. Перш ніж щось почнеться, підтвердження показує точну ціль, тривалість і причину:
     
-    ![Activation confirmation](../images/TempTarget8.png)
+    ![Підтвердження активації](../images/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    Після підтвердження тимчасова ціль починається одразу (або у вибраний час **Активація**) і працює протягом заданої **тривалості**.
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} Зміна чисел діє лише один раз — вона не змінює шаблон
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    **Ціль** і **тривалість** у редакторі — це значення, які **Активувати** використає *саме зараз*. Якщо ви їх зміните, ця зміна **тимчасова**: вона діє лише для цієї активації і **не змінює збережений шаблон**. Так ви можете «змінити й активувати» одноразову ТЦ (наприклад, сьогодні активувати *Активність* з трохи іншою ціллю), не змінюючи шаблон назавжди.
     
 
-### Saving changes to a preset
+### Збереження змін у шаблоні
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+Якщо ви *справді* хочете зберегти змінене значення, натисніть **Зберегти**: коли редактор відрізняється від вибраного шаблону, на верхній панелі інструментів з'являється значок **Зберегти**. Натискання на нього зберігає поточну **ціль** і **тривалість** (і назву для користувацьких шаблонів) у вибраний шаблон. Для вбудованих шаблонів на панелі дій також з'являється кнопка **Повернути значення за замовчуванням** (↺): вона повертає стандартні значення шаблону.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![Екран «Тимчасова ціль» зі значком «Зберегти» і кнопкою «Повернути значення за замовчуванням»](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+Отже, просте правило:
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **Активувати** → використати числа **один раз** (шаблон не змінюється).
+- **Зберегти** → зробити числа **новими стандартними значеннями** шаблону.
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+Щоб повернути вбудований шаблон до заводського стану, виберіть його і натисніть кнопку **↺ Повернути**. Вона з'являється на панелі дій лише для **вбудованого** шаблону, значення якого зараз відрізняються від заводських, і відновлює початкові **ціль** і **тривалість** цього шаблону.
 
-### Adding and removing presets
+### Додавання та видалення шаблонів
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ Додати** — створити **новий користувацький шаблон** з поточних значень редактора. Нова картка з'являється в каруселі.
+- **‘️ Видалити** — видалити вибраний **користувацький** шаблон. Вбудовані шаблони (*Очікуваний прийом їжі*, *Активність*, *Гіпо*) не можна видалити.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Коли у вас є щонайменше два **користувацькі** шаблони, ви також можете змінити їх порядок у каруселі: натисніть значок **Змінити порядок** (⇅) на верхній панелі, пересуньте центральну картку **кнопками переміщення ◀ / ▶**, потім підтвердьте кнопкою **✓**. Вбудовані шаблони залишаються на своїх місцях — пересувати можна лише користувацькі шаблони. (Елементи керування такі самі, як під час [зміни порядку профілів](ProfileSwitch-ProfilePercentage.md).)
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+Ваші шаблони є частиною синхронізованої конфігурації, тому вони спільні для вашого основного телефону і спарених клієнтів.
 
-### Other ways to set a temporary target
+### Інші способи задати тимчасову ціль
 
-A temporary target can also be set without opening this screen:
+Тимчасову ціль можна також задати, не відкриваючи цей екран:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- **перемикачами ТЦ у діалозі «Вуглеводи»** — див. [нижче](#TempTargets-carbs-dialog),
+- **кнопкою шаблону на [панелі швидкого запуску](QuickLaunch.md)** — категорія *Шаблони тимчасових цілей* у *Налаштувати швидкий запуск* пропонує кнопку для кожного вашого шаблону, яка працює одним дотиком,
+- з **годинника з Wear OS** (пункт меню або плитка **Тимчасова ціль**),
+- зі спареного **клієнта** — див. [Керування «основний телефон ↔ клієнт»](../RemoteFeatures/ClientMasterControl.md),
+- як частину **[сцени](Scenes.md)** (дія *Тимчасова ціль*), або
+- правилом **Автоматизації** (*Запустити тимчасову ціль* / *Скасувати тимчасову ціль*).
 
 * * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## Де можна вибрати тимчасову ціль?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+Найшвидший спосіб — натиснути **значок цілі** на головному екрані (він показує ваш поточний цільовий діапазон):
 
-![Target chip on the main screen](../images/TempTarget6.png)
+![Значок цілі на головному екрані](../images/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+Це відкриває екран **Тимчасова ціль**, описаний вище — перейдіть гортанням до шаблону і натисніть **▶ Активувати**. Той самий екран також можна відкрити через **Керувати** → **Тимчасова ціль**.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= Коли ви вводите вуглеводи, вам взагалі не потрібно відкривати екран **Тимчасова ціль**: **діалог «Вуглеводи»** (**Терапія** → **Вуглеводи**) має вгорі перемикачі **Запустити ТЦ при гіпо**, **Запустити ТЦ «Очікуваний прийом їжі»** і **Запустити ТЦ для активності**. Увімкніть один із них, і відповідний шаблон буде активовано разом із записом вуглеводів:
 
-![TT toggles in the Carbs dialog](../images/TempTarget5.png)
+![Перемикачі ТЦ у діалозі «Вуглеводи»](../images/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} Автоматична ТЦ «Гіпо»
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    Якщо ви відкриваєте **діалог «Вуглеводи»**, коли ваша глюкоза нижча за 72 мг/дл (4 ммоль/л), **AAPS** сам вибирає перемикач **Запустити ТЦ при гіпо** (якщо вже не працює вища тимчасова ціль з довшим залишком часу).
 
 (TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Де можна змінити стандартну тимчасову ціль і замінити її своїми значеннями?
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+**Ціль** і **тривалість** кожного шаблону змінюються прямо на екрані **Тимчасова ціль** — окремого пункту в налаштуваннях для цього більше немає:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. Відкрийте екран **Тимчасова ціль** (натисніть значок цілі або **Керувати** → **Тимчасова ціль**).
+2. Перейдіть гортанням до шаблону, який хочете змінити.
+3. Змініть **Тимчасова ціль** і/або **Тривалість** у редакторі.
+4. Натисніть значок **Зберегти**, який з'являється на верхній панелі інструментів.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![Зміна шаблону — значок «Зберегти» на панелі інструментів, «Повернути» на панелі дій](../images/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+Поки редактор відрізняється від заводських значень вбудованого шаблону, на панелі дій також з'являється кнопка **↺ Повернути** — натисніть її, щоб відновити початкові ціль і тривалість шаблону.
 
-## How do I cancel a Temp-Target?
+## Як скасувати тимчасову ціль?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+Поки тимчасова ціль працює, значок цілі на головному екрані показує ціль і час, що залишився. Натисніть його — на екрані **Тимчасова ціль** поточний шаблон виділено як **АКТИВНО**, а в кінці нижньої панелі інструментів, одразу ліворуч від кнопки **▶ Активувати**, з'являється червона кнопка **✗ Скасувати**. Натисніть її та підтвердьте:
 
-![Cancelling a running temp target](../images/TempTarget9.png)
+![Скасування тимчасової цілі, яка працює](../images/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+Тимчасову ціль, яка працює, можна також зупинити з **годинника з Wear OS**, зі спареного **клієнта** або правилом **Автоматизації** (*Скасувати тимчасову ціль*).
 
 (TempTargets-hypo-temp-target)=
 
-## Hypo Temp-Target
+## Тимчасова ціль «Гіпо»
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**Тимчасова ціль «Гіпо»** дозволяє **AAPS** захистити користувача від низького цукру в крові, зменшуючи введення інсуліну. Якщо користувач передбачає, що його **ГК** знизиться: зазвичай **AAPS** має з цим впоратися, але багато залежить від стабільності налаштувань **AAPS** користувача. **Тимчасова ціль «Гіпо»** дозволяє користувачу випередити передбачене зниження і дати **AAPS** команду зменшити інсулін.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+Іноді після вуглеводів, з'їдених для лікування гіпо, **ГК** користувача може швидко зрости, і **AAPS** буде коригувати швидке зростання **ГК**, вмикаючи **SMB**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+Деякі користувачі хочуть уникнути введення **SMB** під час **тимчасової цілі «Гіпо»**. Для цього вимкніть *'Увімкнути SMB з високою тимчасовою ціллю'* у **Налаштування** → **OpenAPS SMB** (див. нижче):
 
-- In (Advanced, objective 9): the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Для досвідчених (завдання 9): користувач може увімкнути *«Висока тимчасова ціль підвищує чутливість»* для **тимчасових цілей** 100 мг/дл (5,6 ммоль/л) або вище в OpenAPS SMB, і **AAPS** буде чутливішим.
 
-- In (Advanced, objective 9): the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Для досвідчених (завдання 9): користувач може вимкнути *«Увімкнути SMB з високою тимчасовою ціллю»*, і тоді, навіть якщо **AAPS** має COB > 0, увімкнено «Увімкнути SMB з низькою тимчасовою ціллю» або «Увімкнути SMB завжди» і OpenAPS SMB активний, **AAPS** не вводитиме SMB, поки активні високі тимчасові цілі.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+Примітка: якщо ви відкриваєте **діалог «Вуглеводи»**, коли ваша глюкоза крові нижча за 72 мг/дл або 4 ммоль/л, **AAPS** автоматично вибирає перемикач **Запустити ТЦ при гіпо**.
 
 (TempTargets-activity-temp-target)=
 
-## Activity Temp-Target
+## Тимчасова ціль «Активність»
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Перед тренуванням і під час нього користувачу може знадобитися вища ціль, щоб запобігти гіпоглікемії під час активності.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+Щоб спростити **тимчасову ціль «Активність»**, користувач може налаштувати стандартну **тимчасову ціль «Активність»**, яка підвищує рівень **ГК** через зменшення інсуліну, щоб сповільнити падіння **ГК** і уникнути гіпоглікемії.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
+Новим користувачам **AAPS** може знадобитися поекспериментувати й налаштувати під себе стандартні значення **тимчасової цілі «Активність»**, щоб ця функція працювала для них якнайкраще. Усі люди різні, коли йдеться про стабільний контроль ГК під час тренувань. Див. також [розділ про спорт у FAQ](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Деякі користувачі також люблять активувати **перемикання профілю** (зменшення профілю < 100 %, щоб **AAPS** вводив менше інсуліну) перед **тимчасовою ціллю «Активність»** і поки вона працює. Ви можете запустити обидва за один крок: натисніть назву профілю на головному екрані, натисніть круглу кнопку **▶**, задайте **Відсоток** нижче 100 % і **Тривалість**, потім увімкніть **Тимчасова ціль / Активність**. Див. [Змінити відсоток профілю](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+Для досвідчених, завдання 9: користувачі можуть увімкнути *'Висока тимчасова ціль підвищує чутливість'* для **тимчасових цілей** 100 мг/дл (5,6 ммоль/л) або вище в OpenAPS **SMB**. Ціль 99 мг/дл (5,5 ммоль/л) — це звичайна ціль, ні висока, ні низька. Тоді **AAPS** більш чутливий.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+Крім того, якщо *'Увімкнути SMB з високою тимчасовою ціллю'* вимкнено, **AAPS** не вводитиме **SMB**, навіть якщо COB > 0, увімкнено *'Увімкнути SMB з низькою тимчасовою ціллю'* або *'Увімкнути SMB завжди'* і OpenAPS **SMB** активний.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Eating soon Temp-Target
+## Тимчасова ціль «Очікуваний прийом їжі»
 
-**Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+**Тимчасова ціль «Очікуваний прийом їжі»** може допомогти м'яко знизити **ГК** і забезпечити достатньо **IOB** перед їжею.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon** and this is particularly so, if eating a high carb diet.
+Це може бути важливим інструментом для користувачів, які не роблять болюс заздалегідь. Але ефективність **тимчасової цілі «Очікуваний прийом їжі»** залежатиме від багатьох чинників: налаштувань користувача, чи харчується він з малою кількістю вуглеводів і чи використовує швидкий інсулін (наприклад, Fiasp або Lyumjev), щоб не робити болюс заздалегідь. Зазвичай, поки користувачі не мають досвіду з **AAPS**, їм варто робити болюс заздалегідь, коли вони використовують **тимчасову ціль «Очікуваний прийом їжі»**, особливо якщо вони їдять багато вуглеводів.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Більше про режим «Eating soon» («Очікуваний прийом їжі») можна прочитати у статті ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (англійською) або [тут](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+Для досвідчених, [завдання 9](#objectives-objective9): якщо ви використовуєте OpenAPS SMB і увімкнули *'Низька тимчасова ціль знижує чутливість'*, **AAPS** працює трохи агресивніше. Для цього параметра **тимчасова ціль** має бути 98 мг/дл (5,4 ммоль/л) або нижче.
 
-## How do I turn off SMB during Temp-Targets?
+## Як вимкнути SMB під час тимчасових цілей?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+Щоб це зробити, відкрийте **Налаштування** → **OpenAPS SMB** і вимкніть *'Увімкнути SMB з високою тимчасовою ціллю'*.
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![Параметр «Увімкнути SMB з високою тимчасовою ціллю»](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+Так **AAPS** не вводитиме **SMB**, навіть якщо COB > 0, увімкнено *'Увімкнути SMB з низькою тимчасовою ціллю'* або *'Увімкнути SMB завжди'* і OpenAPS SMB активний.
