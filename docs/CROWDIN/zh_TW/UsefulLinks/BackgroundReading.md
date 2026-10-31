@@ -26,7 +26,7 @@
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“亮點與地雷”](https://diatribe.org/bright-spots-and-landmines/) 由亞當·布朗著
+[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
 
 [《像胰臟一樣思考》](https://amzn.eu/d/iVU0RGe) 作者：Gary Scheiner
 
