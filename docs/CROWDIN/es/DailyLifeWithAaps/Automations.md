@@ -125,7 +125,7 @@ Las **automatizaciones** tienen límites de seguridad:
 Ten cuidado al elegir un valor negativo en una **Automatización**
 ```
 
-Ten cuidado al elegir un «valor negativo» en la «Condición», por ejemplo con «es menor que», en las **automatizaciones**. For example:
+Ten cuidado al elegir un «valor negativo» en la «Condición», por ejemplo con «es menor que», en las **automatizaciones**. Por ejemplo:
 
 ![Texto alternativo](../images/Automations/automation_comparison_operators.png)
 
