@@ -125,10 +125,10 @@ Het effect van een **Profiel** percentage staat in de tabel hieronder:
 Percentage |    Effect     |     I:C  
 g/E     | voorbeeld  
 15g |          ISF  
-mmol/L/E  
-mg/dL/E          | E om te dalen  
-2mmol/L  
-40mg/dL |
+mmol/l/E  
+mg/dl/E          | E om te dalen  
+2mmol/l  
+40mg/dl |
 |:---------------------------:|:-------------:|:-----------------:|:---------------:|:------------------------------------------:|:---------------------------------:|
 |             90%             |    Zwakker    | 5/0,9  
 =**5,55** |      2,7 E      | 2,2/0,9  
