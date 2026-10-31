@@ -1,28 +1,28 @@
 (github-cherry-pick)=
 
-# Browser build: cherry-pick a commit
+# Збірка в браузері: перенесення коміту (cherry-pick)
 
 ```{note}
-This is an optional, advanced operation. It only works if you build with a **fork** ([Browser build steps 1–4](../SettingUpAaps/BrowserBuild.md)). **AAPS Builder** repositories do not include this workflow.
+Це необов'язкова операція для досвідчених користувачів. Вона працює лише тоді, коли ви збираєте з **fork** ([Збірка в браузері, кроки 1–4](../SettingUpAaps/BrowserBuild.md)). Репозиторії **AAPS Builder** не містять цього workflow.
 ```
 
-Use this only when a developer asks you to test a specific change (they give you one or more commit hashes) before it is in a released version.
+Використовуйте це лише тоді, коли розробник просить вас перевірити певну зміну (він дає вам один або кілька хешів комітів) до того, як вона увійде у випущену версію.
 
 ## Before you start
 
-- [Sync your fork](#Update-to-new-version-update-your-repo): this workflow builds the current state of your branch, not a version you pick from a list.
-- Google Drive must be authorized ([Step 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)): the built app is saved there, like a normal build.
+- [Синхронізуйте свій fork](#Update-to-new-version-update-your-repo): цей workflow збирає поточний стан вашої гілки, а не версію, яку ви вибираєте зі списку.
+- Google Drive має бути авторизований ([Крок 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)): зібраний застосунок зберігається там, як і при звичайній збірці.
 
-## Run the workflow
+## Запуск workflow
 
-1. In your GitHub fork of AndroidAPS, open **Actions**.
-2. Expand **All workflows** and select **Cherry Pick CI (Pre-release Feature Backport)**.
-3. Tap **Run workflow** and fill in:
+1. У своєму fork AndroidAPS на GitHub відкрийте **Actions**.
+2. Розгорніть **All workflows** і виберіть **Cherry Pick CI (Pre-release Feature Backport)**.
+3. Натисніть **Run workflow** і заповніть:
 
    ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
 
-   - **Use workflow from**: the branch to add the commits to, normally `master`.
-   - **Upstream repository**: where the commits come from. Keep `nightscout/AndroidAPS` unless the developer told you otherwise.
-   - **Commit hash(es) to cherry-pick**: the hash(es) you were given, separated by spaces.
-   - **Select Build Variant**: see [variants](#browserbuild-variant) (normally `fullRelease`).
-4. Tap **Run workflow**. When it completes, the app is in your Google Drive, as after a [normal build](../SettingUpAaps/BrowserBuildAPK.md).
+   - **Use workflow from** (гілка workflow): гілка, до якої треба додати коміти, зазвичай `master`.
+   - **Upstream repository** (вихідний репозиторій): звідки беруться коміти. Залиште `nightscout/AndroidAPS`, якщо розробник не сказав інакше.
+   - **Commit hash(es) to cherry-pick** (хеші комітів): хеш(і), які вам дали, через пробіл.
+   - **Select Build Variant** (варіант збірки): див. [варіанти](#browserbuild-variant) (зазвичай `fullRelease`).
+4. Tap **Run workflow**. Коли workflow завершиться, застосунок буде у вашому Google Drive, як після [звичайної збірки](../SettingUpAaps/BrowserBuildAPK.md).
