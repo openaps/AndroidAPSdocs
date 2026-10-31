@@ -1,77 +1,77 @@
 (aaps-ci-google-drive-auth)=
 
-# Browser build – Step 3: Authorize Google Drive
+# Compilación en el navegador – Paso 3: autorizar Google Drive
 
 ```{note}
-This is **Step 3** of the [Browser build](BrowserBuild.md). First complete [Step 2 – Create your signing keystore](BrowserBuildKeystore.md).
+Este es el **Paso 3** de la [Compilación en el navegador](BrowserBuild.md). Primero completa el [Paso 2 – Crear tu almacén de claves de firma](BrowserBuildKeystore.md).
 ```
 
 ```{warning}
-No matter which of the prior sets of instructions you followed (Option 1 or Option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+No importa qué instrucciones seguiste antes (Opción 1 u Opción 2): DEBES añadir la autorización de Google Drive para poder usar la compilación en el navegador.
 ```
 
-Note: If you already followed this part in the video, you can now skip to [Step 4 – Build the APK](BrowserBuildAPK.md).
+Nota: si ya hiciste esta parte con el vídeo, ahora puedes saltar al [Paso 4 – Compilar el APK](BrowserBuildAPK.md).
 
 ```{warning}
-If the Google authorization does not start or the preparation page fails, close the preparation page, open `aaps-ci-preparation.html` again the same way as in Step 2, and start this step again. See [troubleshooting](#aaps-ci-preparation-web).
+Si la autorización de Google no empieza o la página de preparación falla, cierra la página de preparación, abre otra vez `aaps-ci-preparation.html` de la misma forma que en el Paso 2 y empieza este paso de nuevo. Consulta la [solución de problemas](#aaps-ci-preparation-web).
 ```
 
-Return to the preparation page tab.
+Vuelve a la pestaña de la página de preparación.
 
-Scroll down to the Google Drive Auth section and tap Start Auth.
+Desplázate hacia abajo hasta la sección Google Drive Auth y toca Start Auth.
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
-Select your Google account.
+Selecciona tu cuenta de Google.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+Desplázate hacia abajo y acepta el acceso. La página web lo necesita para obtener la clave de autenticación de Google Drive.
 
-Tap Continue.
+Toca Continue.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
+El campo `GDRIVE_OAUTH2` se rellenará; toca el botón Copy de arriba.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
-Switch back to the GitHub tab.
+Vuelve a la pestaña de GitHub.
 
-Scroll down to Repository secrets and tap New repository secret.
+Desplázate hacia abajo hasta Repository secrets y toca New repository secret.
 
-If you followed Option 1 you should see this:
+Si seguiste la Opción 1, deberías ver esto:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-If you followed Option 2 there will be more keys:
+Si seguiste la Opción 2, habrá más claves:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+En el campo Name, pega el texto que acabas de copiar. Mantén pulsado el cuadro de texto para mostrar el menú de pegar.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the preparation page tab.
+Cambia a la pestaña de la página de preparación.
 
-Tap the second Copy button.
+Toca el segundo botón Copy.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
-Switch back to the GitHub tab.
+Vuelve a la pestaña de GitHub.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. En el campo Secret, pega el texto que acabas de copiar. Mantén pulsado el cuadro de texto para mostrar el menú de pegar.
 
-2. Tap Add secret.
+2. Toca Add secret.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 
-You should have either two (option 1) or five (option 2) secrets entries now.
+Ahora deberías tener dos (Opción 1) o cinco (Opción 2) secretos.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
-GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
+Ahora GitHub podrá guardar el archivo APK de AAPS en tu Google Drive cuando esté compilado.
 
 ----
 
-**Next: [Step 4 – Build the APK](BrowserBuildAPK.md) →**
+**Siguiente: [Paso 4 – Compilar el APK](BrowserBuildAPK.md) →**
