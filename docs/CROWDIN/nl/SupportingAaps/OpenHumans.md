@@ -2,7 +2,7 @@
 
 ## Doneer je gegevens aan de wetenschap
 
-Je kunt de community verder helpen door jouw gegevens te doneren aan wetenschappelijk onderzoek. Dit helpt onderzoekers om dit project vooruit te helpen, nieuwe wetenschappelijke ideeën te ontwikkelen en de open mind van open source closed loop systemen te verbreden. AAPS kan je gegevens synchroniseren met [Open Humans](https://www.openhumans.org). Dat is een platform waarop je persoonlijke gegevens kunt uploaden, koppelen en bewaren, zoals genetische gegevens, activiteit en gezondheidsgegevens.
+Je kunt de community verder helpen door jouw gegevens te doneren aan wetenschappelijk onderzoek. Dit helpt onderzoekers om dit project vooruit te helpen, nieuwe wetenschappelijke ideeën te ontwikkelen en de open mind van open source gesloten loop-systemen te verbreden. AAPS kan je gegevens synchroniseren met [Open Humans](https://www.openhumans.org). Dat is een platform waarop je persoonlijke gegevens kunt uploaden, koppelen en bewaren, zoals genetische gegevens, activiteit en gezondheidsgegevens.
 
 Je behoudt de volledige controle over wat er met je gegevens gebeurt en welke projecten je wilt ondersteunen door ze toegang tot je gegevens te geven. Welke gegevens worden gebruikt en op welke manier, is afhankelijk van de projecten waar je je op OpenHumans bij aansluit.
 
