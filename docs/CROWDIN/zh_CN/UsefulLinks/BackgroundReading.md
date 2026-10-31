@@ -26,7 +26,7 @@
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[《亮点与陷阱》](https://diatribe.org/bright-spots-and-landmines/) 作者：Adam Brown
+[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
 
 [《像胰腺一样思考》](https://amzn.eu/d/iVU0RGe) 作者：Gary Scheiner
 
