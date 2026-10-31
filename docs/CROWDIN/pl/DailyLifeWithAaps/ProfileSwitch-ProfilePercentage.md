@@ -2,7 +2,7 @@
 
 W tej części wyjaśniamy, czym jest **zmiana profilu** i **procent profilu**. Jak utworzyć **profil**, dowiesz się na stronie [Twój profil AAPS](#your-aaps-profile-create-and-edit-profiles).
 
-Gdy zaczynasz pracę z **AAPS**, musisz utworzyć **profil**, nauczyć się wykonywać **zmianę profilu** i zrozumieć, jak działa **procent profilu** w **AAPS**. **Zmiana profilu** lub **procent profilu** mogą być szczególnie przydatne w takich sytuacjach:
+Gdy zaczynasz pracę z **AAPS**, musisz utworzyć **profil**, nauczyć się wykonywać **zmianę profilu** i zrozumieć, jak działa **procent profilu** w **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
 
 - cykl menstruacyjny – w **Automatyzacji** możesz ustawić zmianę procentu **profilu**, aby **AAPS** dopasował się do różnych faz cyklu hormonalnego i do przewidywanej insulinooporności.
 
@@ -125,25 +125,25 @@ Działanie **procentu profilu** pokazuje poniższa tabela:
 Procent |    Działanie    |     I:C  
 g/U     | przykład  
 15 g |          ISF  
-mmol/l/U  
-mg/dl/U          | U do obniżenia o  
-2 mmol/l  
-40 mg/dl |
-|:------------------------:|:---------------:|:-----------------:|:---------------:|:------------------------------------------:|:--------------------------------------:|
+mmol/L/U  
+mg/dL/U          | U to lower  
+2mmol/L  
+40mg/dL |
+|:------------------------:|:---------------:|:-----------------:|:---------------:|:------------------------------------------:|:------------------------------:|
 |           90%            |     Słabszy     | 5/0,9  
-=**5,55** |      2,7 U      | 2,2/0,9  
+=**5,55** |      2.7 U      | 2,2/0,9  
 =**2,4**  
   
 40/0,9  
-=**44,4** |                 0,8 U                  |
+=**44,4** |             0.8 U              |
 |         **100%**         | **Standardowy** |       **5**       |     **3 U**     |                **2,2  
-40**                |               **0,9** U                |
+40**                |           **0.9** U            |
 |           130%           |   Silniejszy    | 5/1,3  
-=**3,85** |      3,9 U      | 2,2/1,3  
+=**3,85** |      3.9 U      | 2,2/1,3  
 =**1,7**  
   
 40/1,3  
-=**30,8** |                 1,2 U                  |
+=**30,8** |             1.2 U              |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
