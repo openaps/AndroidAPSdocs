@@ -8,7 +8,7 @@ Chaque version d'AAPS peut avoir une date de fin. Après cette date, AAPS peut [
 
 1. Dans AAPS, ouvrez le **menu** (☰) en haut à gauche et choisissez **À propos**. Vous y verrez votre version d'AAPS.
 2. Cherchez la même version dans le premier tableau ci-dessous. Lisez la date de fin à côté. Les dates sont écrites sous la forme **année-mois-jour**. Par exemple, `2026-10-30` signifie le 30 octobre 2026.
-3. Consultez les [Notes de Version](ReleaseNotes.md) et le [guide de mise à jour](UpdateToNewVersion.md) avant de faire la mise à jour. La version que vous pouvez utiliser dépend aussi de la version Android de votre téléphone.
+3. Consultez les [notes de version](ReleaseNotes.md) et le [guide de mise à jour](UpdateToNewVersion.md) avant de faire la mise à jour. La version que vous pouvez utiliser dépend aussi de la version Android de votre téléphone.
 
 Le tableau n'indique pas de date de fin pour chaque version d'AAPS. Si votre version n'y figure pas, sa date de fin n'a peut-être pas encore été fixée. Cela ne veut pas dire qu'elle sera prise en charge pour toujours.
 
@@ -30,7 +30,7 @@ Le tableau n'indique pas de date de fin pour chaque version d'AAPS. Si votre ver
 
 Android donne à chaque version du système un **niveau d'API**, c'est-à-dire un nombre utilisé par les applications. Par exemple, le niveau d'API 30 correspond à Android 11. Le tableau ci-dessous utilise les niveaux d'API des données des versions AAPS. La version d'AAPS de chaque ligne est la valeur indiquée pour le niveau d'API affiché. Ce n'est pas une liste complète des versions que vous pouvez installer.
 
-Pour choisir une version d'AAPS pour votre téléphone, utilisez les [conseils sur les versions Android dans les Notes de Version](#maintenance-android-version-aaps-version). Si aucune version d'AAPS n'est indiquée pour un niveau d'API, le tableau affiche « Aucune indiquée ».
+Pour choisir une version d'AAPS pour votre téléphone, utilisez les [conseils sur les versions Android dans les notes de version](#maintenance-android-version-aaps-version). Si aucune version d'AAPS n'est indiquée pour un niveau d'API, le tableau affiche « Aucune indiquée ».
 
 <div id="aaps-eol-android" class="wy-table-responsive" hidden>
   <table>
