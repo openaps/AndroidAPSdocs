@@ -141,7 +141,8 @@ The build steps are updated for you: at every build, your repository runs the ve
    Відкриє: <code class="aapsb-repoUrl"></code>
 
    Бачите "Page not found" (404, сторінку не знайдено)? Спочатку перевірте, що ви увійшли на github.com у цьому браузері: для приватних репозиторіїв GitHub показує 404, якщо ви не увійшли. Інакше ім'я користувача або назва репозиторію з кроку 1 не збігаються з вашим репозиторієм: перевірте їх на github.com і введіть у кроці 1. Натомість відкрився застосунок GitHub? Натисніть «RUN WORKFLOW», перевірте версію та варіант і знову натисніть «RUN WORKFLOW». Якщо застосунок і далі показує «Nothing to see here», потягніть список униз, щоб побачити свою збірку.
-2. Якщо з'явиться запит, натисніть зелену кнопку, щоб увімкнути робочі процеси (workflows).
+2. If asked, click the green button to enable workflows.
+The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
 3. Натисніть «Run workflow», а потім зелену кнопку «Run workflow». «latest» збирає найновішу версію AAPS. ***порада:*** *ви можете зібрати іншу версію, ввівши назву її [тегу](https://github.com/nightscout/AndroidAPS/tags) замість «latest»*
 4. Зачекайте приблизно 15–30 хвилин. Зелена галочка означає, що збірку завершено.
 Хочете отримати e-mail, коли збірка завершиться? GitHub надсилає e-mail лише тоді, коли збірка не вдалася. Щоб отримувати його й після успішної збірки: на github.com відкрийте своє фото профілю → Settings → Notifications → System → Actions і зніміть позначку «Only notify for failed workflows» (повідомляти лише про невдалі робочі процеси).
