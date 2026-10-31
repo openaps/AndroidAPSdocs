@@ -1,5 +1,5 @@
 (Extended-Carbs-extended-carbs-ecarbs)=
-# Carbohidratos Extendidos/eCarbs
+# Carbohidratos extendidos (eCarbs)
 
 ## ¿Qué son los eCarbs y cuándo son útiles?
 
@@ -26,11 +26,11 @@ Los eCarbs en la pantalla principal: el número entre paréntesis en el campo **
 
 En el [Asistente de bolo](#aaps-screens-bolus-wizard), tres botones debajo del campo **Carbohidratos** te permiten elegir la rapidez con la que se absorbe tu comida. Elige uno antes de confirmar. Según el tipo, **AAPS** toma una parte de los carbohidratos que has escrito como carbohidratos normales y añade [carbohidratos extendidos («eCarbs»)](#Extended-Carbs-extended-carbs-ecarbs) más tarde para comidas lentas y copiosas. Pulsa el icono **(i)** junto a los botones para ver los alimentos típicos del tipo elegido y qué hace con tus carbohidratos.
 
-| Tipo                     | Alimentos típicos (como aparecen en la app)                                                                                      | Carbohidratos ahora, usados para el bolo | eCarbs añadidos                                            |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------- |
-| **Pan** (predeterminado) | Pan, pastas saladas, yogur, fruta, patatas, arroz, avena, verduras                                                               | 100 %                                    | Ninguno                                                    |
-| **Pastel**               | Empanadillas, pasta, platos asiáticos ricos en hidratos y grasas, bollería dulce y de masa fermentada, cereales, miel, mermelada | 90 %                                     | 20 %, empiezan 60 minutos más tarde, repartidos en 2 horas |
-| **Pizza**                | Lasaña, pizza, hamburguesas, patatas fritas, patatas al horno, patatas de bolsa                                                  | 80 %                                     | 35 %, empiezan 60 minutos más tarde, repartidos en 3 horas |
+| Tipo                     | Alimentos típicos (como aparecen en la app)                                                                                           | Carbohidratos ahora, usados para el bolo | eCarbs añadidos                                            |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------- |
+| **Pan** (predeterminado) | Pan, pastas saladas, yogur, fruta, patatas, arroz, avena, verduras                                                                    | 100 %                                    | Ninguno                                                    |
+| **Pastel**               | Empanadillas, pasta, platos asiáticos ricos en carbohidratos y grasas, bollería dulce y de masa fermentada, cereales, miel, mermelada | 90 %                                     | 20 %, empiezan 60 minutos más tarde, repartidos en 2 horas |
+| **Pizza**                | Lasaña, pizza, hamburguesas, patatas fritas, patatas al horno, patatas de bolsa                                                       | 80 %                                     | 35 %, empiezan 60 minutos más tarde, repartidos en 3 horas |
 
 **Ejemplo**: escribes 100 g y eliges **Pizza**. El bolo se calcula para 80 g, registrados ahora. 35 g de eCarbs empiezan 1 hora más tarde y se reparten en 3 horas.
 
@@ -57,7 +57,7 @@ Un ejemplo, p. ej. para una pizza, sería dar un bolo (parcial) al principio con
 
 Para empezar más rápido, el *Asistente de bolo* puede añadir los eCarbs por ti: elige el [tipo de carbohidratos](#AapsScreens-carbs-type) **Pastel** o **Pizza** debajo del campo **Carbohidratos** (ver arriba). Las cantidades y los tiempos son fijos, así que usa el diálogo *Carbohidratos* si quieres otros valores.
 
-**Notas importantes:** Por supuesto, tendrás que probar qué valores concretos te funcionan. También puedes ajustar con cuidado el ajuste *máximo de minutos de basal para limitar el SMB* para que el algoritmo sea más o menos agresivo. Con comidas bajas en carbohidratos, altas en grasas y proteínas, puede ser suficiente usar solo eCarbs sin bolos manuales (consulte el post arriba mencionado). Cuando se generan eCarbs, también se crea una nota en el Portal de cuidados que documenta todos los datos introducidos, para que sea más fácil repetirlos y mejorarlos.
+**Notas importantes:** Por supuesto, tendrás que probar qué valores concretos te funcionan. También puedes ajustar con cuidado el ajuste *máximo de minutos de basal para limitar el SMB* para que el algoritmo sea más o menos agresivo. Con comidas bajas en carbohidratos, altas en grasas y proteínas, puede ser suficiente usar solo eCarbs sin bolos manuales (consulta la entrada del blog de arriba). Cuando se generan eCarbs, también se crea una nota en el Portal de cuidados que documenta todos los datos introducidos, para que sea más fácil repetirlos y mejorarlos.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## ¿Bolo extendido y por qué no funciona en un entorno de lazo cerrado?
@@ -85,7 +85,7 @@ Mientras el bolo extendido está en curso, el lazo funciona en modo **Lazo abier
 
 ![Icono de lazo abierto en la pantalla principal mientras hay un bolo extendido en curso](../images/extended_bolus_main_screen.png)
 
-El menú **Administrar** muestra un botón **Cancelar** con la tasa y el tiempo transcurrido / total (por ejemplo **Cancelar 2.00 U/h 1/60'**). Tócalo para detener el bolo extendido antes de tiempo:
+El menú **Administrar** muestra un botón **Cancelar** con la tasa y el tiempo transcurrido / total (por ejemplo **Cancelar 2,00 U/h 1/60'**). Tócalo para detener el bolo extendido antes de tiempo:
 
 ![Botón Cancelar de un bolo extendido en curso en el menú Administrar](../images/extended_bolus_running_manage.png)
 
