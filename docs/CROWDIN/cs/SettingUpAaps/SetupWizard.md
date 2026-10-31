@@ -23,7 +23,7 @@ Proto si na nastavení smyčky dejte čas. Přínosy dobře fungující smyčky 
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Pokud narazíte na chybu v dokumentaci nebo máte lepší nápad, jak něco vysvětlit, můžete vždy požádat komunitu o pomoc, jak je popsáno v sekci [Propojení s dalšími uživateli](../GettingHelp/WhereCanIGetHelp.md).
 ```
 ## Uvítací zpráva
 
@@ -70,7 +70,7 @@ Potvrďte tlačítkem „**POVOLIT**“, že chcete aplikaci **AAPS** udělit p�
 
 ![Povolení přístupu ke složce](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
-### Notifications
+### Oznámení
 
 Android vyžaduje zvláštní oprávnění pro aplikace, které potřebují posílat uživateli upozornění.
 
@@ -182,7 +182,7 @@ Až budete hotovi, stiskněte „**DALŠÍ**“ a přejděte na další obrazovk
 
 Tato obrazovka se zobrazí, jen když **AAPS** najde v adresáři **AAPS** dříve exportované nastavení („Nalezeno uložené nastavení“), například když aplikaci přeinstalujete nebo přecházíte na nový telefon.
 
-- Chcete-li obnovit předchozí konfiguraci, stiskněte „**Importovat nastavení**“ – viz [Export a import nastavení](../Maintenance/ExportImportSettings.md).
+- Chcete-li obnovit předchozí konfiguraci, stiskněte „**Importovat nastavení**“ – viz [Vytváření a obnova záloh](../Maintenance/ExportImportSettings.md).
 - Chcete-li začít s novou konfigurací, stiskněte „**DALŠÍ**“ a pokračujte v Průvodci.
 
 ![Importujte nastavení](../images/setup-wizard/Wizard-ImportSettings.png)
@@ -261,7 +261,7 @@ Vraťte se na seznam pluginů a stiskněte „**DALŠÍ**“ pro přechod na dal
 
 ## Ovládání z klienta
 
-Od verze 4 aplikace **AAPS** lze klientská zařízení s aplikací **AAPSClient** **spárovat** s tímto telefonem (**hlavním zařízením**) a ovládat ho podepsanými příkazy posílanými přes Nightscout. Toto je nový doporučený způsob, jak **AAPS** ovládat na dálku – úplné vysvětlení a nastavení najdete v části [Ovládání Master ↔ Client](../RemoteFeatures/ClientMasterControl.md).
+Od verze 4 aplikace **AAPS** lze klientská zařízení s aplikací **AAPSClient** **spárovat** s tímto telefonem (**hlavním zařízením**) a ovládat ho podepsanými příkazy posílanými přes Nightscout. Toto je nový doporučený způsob, jak **AAPS** ovládat na dálku – úplné vysvětlení a nastavení najdete na stránce [Ovládání master ↔ klient](../RemoteFeatures/ClientMasterControl.md).
 
 Na této obrazovce teď nemusíte nic nastavovat. Klienty můžete kdykoli později spárovat v **Spravovat → Autorizovaní klienti**. Tam přidáte klienta pomocí **QR kódu** (ten nastaví Nightscout i na klientovi) nebo pomocí **PINu** a přidělíte mu **roli**.
 
@@ -289,7 +289,7 @@ Stiskněte „**DALŠÍ**“ pro přechod na další obrazovku.
 
 ![Název](../images/setup-wizard/Wizard-Name.png)
 
-## Patient type
+## Typ pacienta
 
 Zde vyberete „Typ pacienta“. Je to důležité, protože software **AAPS** má různé limity podle věku pacienta. Nastavení je důležité z bezpečnostních důvodů.
 
@@ -341,7 +341,7 @@ K dispozici je mnoho zdrojů – projděte seznam a vyberte ten, který použív
 
 ![Zdroj glykémie](../images/setup-wizard/Wizard-BGSource.png)
 
-Jakmile zdroj vyberete, jeho karta se rozbalí a zobrazí dvě tlačítka: „**Nastavení**“ pro úpravu příjmu dat a „**Otevřít modul**“ pro otevření vlastní obrazovky zdroje. V příkladu níže je vybraný **BYODA**. Některé zdroje v tomto kroku nemají co nastavit, takže obvykle můžete rovnou přejít na další obrazovku:
+Jakmile zdroj vyberete, jeho karta se rozbalí a zobrazí dvě tlačítka: „**Nastavení**“ pro úpravu příjmu dat a „**Otevřít plugin**“ pro otevření vlastní obrazovky zdroje. V příkladu níže je vybraný **BYODA**. Některé zdroje v tomto kroku nemají co nastavit, takže obvykle můžete rovnou přejít na další obrazovku:
 
 ![Nastavení zdroje glykémie](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
@@ -444,7 +444,7 @@ Teď vyberete svou inzulínovou pumpu. Přečtěte si dokumentaci k vaší [inzu
 
 Projděte seznam a vyberte svou pumpu. V tomto příkladu používáme „**Virtuální pumpu**“. Je užitečná, dokud se učíte a ještě nemáte připojenou skutečnou pumpu:
 
-![Pump](../images/setup-wizard/Wizard-Pump.png)
+![Pumpa](../images/setup-wizard/Wizard-Pump.png)
 
 Podporováno je mnoho pump – svou najdete posunutím dolů:
 
@@ -460,7 +460,7 @@ Pokud už máte profil nastavený a víte, jak pumpu připojit, klidně ji přip
 
 Stiskněte „**DALŠÍ**“ pro přechod na další obrazovku.
 
-## APS algorithm
+## Algoritmus APS
 
 Vyberte OpenAPS SMB jako váš APS algoritmus. Navzdory názvu je funkce SMB v algoritmu vypnutá, dokud se s AAPS neseznámíte a nesplníte první cíle. OpenAPS SMB je stejně novější a obecně lepší než OpenAPS AMA.
 
