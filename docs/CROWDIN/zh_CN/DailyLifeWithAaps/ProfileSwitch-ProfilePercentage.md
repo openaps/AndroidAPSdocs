@@ -2,7 +2,7 @@
 
 本节将解释什么是**配置文件切换（Profile Switch）**和**配置文件百分比（Profile Percentage）**。 You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
 
-当您初次开始使用**AAPS**时，您需要创建一个**配置文件**，了解如何进行**配置文件切换**，并学习配置文件百分比在AAPS中的影响。**配置文件切换**或**配置文件百分比**的功能可以带来以下特别好处：
+当您初次开始使用**AAPS**时，您需要创建一个**配置文件**，了解如何进行**配置文件切换**，并学习配置文件百分比在AAPS中的影响。 The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
 
 - **月经周期**：可以在**自动化（Automations）**中设置**配置文件**内的百分比调整，以便<0>AAPS</0>能够适应激素周期的不同阶段和预测的胰岛素抵抗。
 
@@ -122,27 +122,28 @@ A profile switch is not limited to this screen. The same switch can also be trig
 **配置文件百分比**的影响总结如下表：
 
 | 配置文件切换  
-百分比 |   影响   |     I:C（g/UI）      | 示例  
-（15g） |         ISF  
-mmol/L/UI  
-mg/dL/UI         | UI to lower  
+百分比 |   影响   |     I:C  
+g/U      | 示例  
+（15g） |          ISF  
+mmol/L/U  
+mg/dL/U          | U to lower  
 2mmol/L  
 40mg/dL |
-|:------------:|:------:|:------------------:|:----------:|:------------------------------------------:|:-------------------------------:|
+|:------------:|:------:|:------------------:|:----------:|:------------------------------------------:|:------------------------------:|
 |     90%      |   较弱   | 5/0.9  
-= **5.55** |   2.7 UI   | 2.2/0.9  
+= **5.55** |   2.7 U    | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
-=**44.4** |             0.8 UI              |
-|   **100%**   | **标准** |       **5**        |  **3 UI**  |                **2.2  
-40**                |           **0.9** UI            |
+=**44.4** |             0.8 U              |
+|   **100%**   | **标准** |       **5**        |  **3 U**   |                **2.2  
+40**                |           **0.9** U            |
 |     130%     |   较强   | 5/1.3  
-=**3.85**  |   3.9 UI   | 2.2/1.3  
+=**3.85**  |   3.9 U    | 2.2/1.3  
 =**1.7**  
   
 40/1.3  
-=**30.8** |             1.2 UI              |
+=**30.8** |             1.2 U              |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
