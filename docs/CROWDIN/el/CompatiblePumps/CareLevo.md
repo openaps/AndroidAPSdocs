@@ -1,162 +1,162 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+Η CareLevo είναι μια αντλία patch χωρίς σωληνάκι, από την εταιρεία CareMedi. Κάθε Patch χωρά έως 300 U ινσουλίνης και φοριέται έως 7 ημέρες (168 ώρες). Επικοινωνεί με το **AAPS** μέσω του Bluetooth του τηλεφώνου σας, χωρίς επιπλέον συσκευή.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+Ο οδηγός CareLevo είναι νέος στο **AAPS**. Διαβάστε όλη αυτή τη σελίδα πριν ενεργοποιήσετε το πρώτο σας Patch και έχετε κοντά σας τις οδηγίες χρήσης της αντλίας.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+Η μικρότερη δόση που μπορεί να χορηγήσει το Patch είναι 0,05 U. Ορίστε τους βασικούς ρυθμούς στο **Προφίλ** σε τουλάχιστον 0,05 U/h, σε βήματα των 0,05 U/h. Αλλιώς η ινσουλίνη που περιμένει το **Προφίλ** και η ινσουλίνη που χορηγεί το Patch διαφέρουν λίγο. Το **AAPS** χρησιμοποιεί τους βασικούς ρυθμούς που δέχτηκε το Patch.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Δυνατότητες της αντλίας με το AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* Επικοινωνεί με το **AAPS** μέσω του Bluetooth του τηλεφώνου σας, χωρίς επιπλέον συσκευή επικοινωνίας.
+* Bolus σε βήματα των 0,05 U.
+* Βασικοί ρυθμοί από 0,05 U/h έως 15 U/h, σε βήματα των 0,05 U/h, με τμήματα βασικού ρυθμού των 30 λεπτών.
+* Προσωρινοί βασικοί ρυθμοί ως απόλυτη τιμή, έως 12 ώρες.
+* Εκτεταμένο bolus έως 8 ώρες.
+* Τις αλλαγές θερινής ώρας και ζώνης ώρας πρέπει να τις κάνετε χειροκίνητα. Το Patch σας ειδοποιεί όταν αλλάζει η ζώνη ώρας.
 
-## Pump Setup
+## Ρύθμιση αντλίας
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. Ανοίξτε το **μενού** (☰) στην πάνω αριστερή γωνία της κύριας οθόνης του **AAPS** και επιλέξτε **Διαμόρφωση**.
+1. Επιλέξτε **Carelevo** στην ενότητα Αντλία.
+1. Πατήστε το πλήκτρο Πίσω για να επιστρέψετε στην κύρια οθόνη.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![Το πρόσθετο Carelevo επιλεγμένο στο Διαμόρφωση > Αντλία](../images/v4/Pumps/carelevo_enabled.png)
 
 ## Ρυθμίσεις
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+Ανοίξτε την οθόνη της αντλίας με **Διαχείριση → Αντλία** (ή **Διαμόρφωση → Αντλία → Άνοιγμα πρόσθετου**).
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+Ανοίξτε τις ρυθμίσεις της CareLevo πατώντας το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά. Υπάρχουν τρεις ρυθμίσεις:
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![Ρυθμίσεις του οδηγού Carelevo](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### Ρύθμιση ειδοποίησης χαμηλής ινσουλίνης
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+Το Patch σας ειδοποιεί όταν η ινσουλίνη που μένει στη δεξαμενή φτάσει την ποσότητα που επιλέξατε. Μπορεί να οριστεί από 20 U έως 50 U, σε βήματα των 5 U. Η προεπιλογή είναι 30 U. Ανεξάρτητα από αυτή τη ρύθμιση, το Patch δίνει κρίσιμο συναγερμό και σταματά τη χορήγηση ινσουλίνης όταν μένουν λιγότερες από 10 U.
 
-### Patch Usage Notification Setting
+### Ρύθμιση ειδοποίησης χρήσης Patch
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+Το Patch σας ειδοποιεί όταν το έχετε φορέσει για τον αριθμό ωρών που επιλέξατε, ώστε να προγραμματίσετε την αλλαγή. Μπορεί να οριστεί από 24 έως 167 ώρες. Η προεπιλογή είναι 116 ώρες.
 
-### Patch Info Alarm
+### Συναγερμός πληροφοριών Patch
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+Όταν είναι ενεργό, το patch κάνει μπιπ όταν ξεκινά και όταν τελειώνει ένα bolus, ένα εκτεταμένο bolus ή ένας προσωρινός βασικός ρυθμός. Η προεπιλογή είναι ανενεργό.
 
-## The pump screen
+## Η οθόνη της αντλίας
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![Οθόνη της αντλίας Carelevo χωρίς ενεργό Patch](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+Η οθόνη της αντλίας δείχνει την **Κατάσταση Bluetooth** (Χωρίς ενεργό Patch, Αποσυνδεδεμένο ή Συνδεδεμένο), τον **Σειριακός αριθμός** του Patch, την **Ώρα ενεργοποίησης** και τη **Λήξη** του, τον τρέχοντα **Βασικός ρυθμός** και τον **Προσωρινός βασικός ρυθμός**, το **Υπόλοιπο ινσουλίνης** (υπόλοιπο / γέμισμα), τον **Υπόλοιπος χρόνος Patch** και τη **Συνολική ινσουλίνη που χορηγήθηκε**.
 
-The buttons depend on the state of the patch:
+Τα κουμπιά εξαρτώνται από την κατάσταση του Patch:
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **Ενεργοποίηση Patch**: ξεκινά την ενεργοποίηση ενός νέου Patch, δείτε παρακάτω.
+* **Οδηγός ινσουλίνης**: δείχνει τα δώδεκα βήματα για το γέμισμα ενός Patch με ινσουλίνη.
+* **Αναστολή έγχυσης** / **Συνέχιση έγχυσης**: σταματά προσωρινά και ξεκινά ξανά τη χορήγηση ινσουλίνης, δείτε παρακάτω.
+* **Απόρριψη Patch**: σταματά το τρέχον Patch, ώστε να μπορεί να ενεργοποιηθεί ένα νέο.
 
-## Activating a patch
+## Ενεργοποίηση ενός Patch
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+Πριν ξεκινήσετε, βεβαιωθείτε ότι ένα **Προφίλ** είναι ενεργό στο **AAPS** και ότι το Bluetooth είναι ενεργοποιημένο. Το Patch πρέπει να ενεργοποιηθεί μέσα σε περιορισμένο χρόνο αφού ανοίξει. Αν ο χρόνος τελειώσει, το Patch δίνει τον συναγερμό **Λήξη χρόνου εφαρμογής Patch** και δεν μπορεί να χρησιμοποιηθεί.
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+Πατήστε **Ενεργοποίηση Patch** στην οθόνη της αντλίας και ακολουθήστε τα βήματα. Μπορείτε να ακυρώσετε οποιαδήποτε στιγμή πριν από την εισαγωγή της βελόνας. Ό,τι έχετε εισαγάγει απορρίπτεται.
 
-### Select the insulin
+### Επιλογή της ινσουλίνης
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+Επιβεβαιώστε την ινσουλίνη που χρησιμοποιείτε. Το Patch χρειάζεται ινσουλίνη ταχείας δράσης U-100.
 
-### Fill the patch with insulin
+### Γέμισμα του Patch με ινσουλίνη
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+Γεμίστε το Patch με 50 έως 300 U, ανάλογα με το πόσο καιρό θα το φορέσετε. Πατήστε **Οδηγός ινσουλίνης** αν χρειάζεστε τις οδηγίες γεμίσματος. Μετά πατήστε την ποσότητα πλήρωσης και επιλέξτε την ποσότητα που γεμίσατε. Το **AAPS** τη χρησιμοποιεί για να δείχνει την ινσουλίνη που απομένει.
 
-### Connect the patch
+### Σύνδεση του Patch
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. Βγάλτε το Patch από τη συσκευασία (blister) και αφαιρέστε το καπάκι της βελόνας.
+1. Πατήστε το κουμπί λειτουργίας του Patch για περισσότερο από ένα δευτερόλεπτο. Μετά το μπιπ, πατήστε **Αναζήτηση Patch**.
+1. Αν το Patch που βρέθηκε είναι το σωστό, πατήστε **Επιβεβαίωση**. Αν δεν είναι, πατήστε **Νέα σάρωση**.
 
-### Safety check
+### Έλεγχος ασφαλείας
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+Μόλις συνδεθεί το Patch, πατήστε **Έλεγχος ασφαλείας**. Το Patch κάνει αυτοέλεγχο και γέμισμα (prime). Ελέγξτε ότι έχει σχηματιστεί μια σταγόνα ινσουλίνης στην άκρη της βελόνας. Αν δεν φαίνεται σταγόνα, πατήστε **Επανάληψη**. Όταν ολοκληρωθεί ο έλεγχος, πατήστε **Επόμενο**.
 
-### Site and patch attachment
+### Σημείο και τοποθέτηση του Patch
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. Επιλέξτε το σημείο όπου θα φορέσετε το Patch.
+1. Καθαρίστε καλά το σημείο με ένα μαντηλάκι οινοπνεύματος.
+1. Αφαιρέστε την προστατευτική ταινία και κολλήστε το Patch στο δέρμα σας με τη σημειωμένη κουκκίδα προς τα πάνω.
+1. Πατήστε **Επόμενο** μόλις κολλήσει το Patch.
 
-### Insert the needle
+### Εισαγωγή της βελόνας
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. Γυρίστε το καπάκι ασφαλείας προς την κατεύθυνση του βέλους και αφαιρέστε το.
+1. Πατήστε το κουμπί του εφαρμογέα τελείως προς τα κάτω και κρατήστε το για 10 δευτερόλεπτα. Όταν μπει η βελόνα, ακούγεται ένα μπιπ.
+1. Αφαιρέστε τον εφαρμογέα και πατήστε **Επιβεβαίωση εισαγωγής**.
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+Αν η εισαγωγή αποτύχει, το **AAPS** σας λέει πόσες προσπάθειες απομένουν. Όταν δεν απομένει καμία προσπάθεια, το Patch δίνει τον συναγερμό **Σφάλμα εισαγωγής βελόνας** και πρέπει να αντικατασταθεί.
 
-Insulin delivery starts as soon as the insertion is confirmed.
+Η χορήγηση ινσουλίνης ξεκινά μόλις επιβεβαιωθεί η εισαγωγή.
 
-## Bolus messages
+## Μηνύματα bolus
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+Αν το Patch αρνηθεί ένα bolus, το **AAPS** σας λέει γιατί. Για παράδειγμα, το μήνυμα *Το bolus δεν μπορεί να χορηγηθεί. Διαθέσιμο bolus: 2,8 U* σημαίνει ότι το Patch μπορεί να χορηγήσει τώρα μόνο αυτή την ποσότητα.
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+Αν σταματήσετε ένα bolus και το Patch δεν επιβεβαιώσει τη διακοπή, το **AAPS** περιμένει να τελειώσει το bolus και καταγράφει την ποσότητα που αναφέρει το Patch. Αν ένα bolus δεν καταγράφηκε (για παράδειγμα επειδή σταμάτησε ενώ χορηγούνταν), το **AAPS** το προσθέτει από το σύνολο του Patch και σας ζητά να ελέγξετε το IOB πριν δοκιμάσετε ξανά.
 
-## Suspending and resuming insulin delivery
+## Αναστολή και συνέχιση της χορήγησης ινσουλίνης
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+Πατήστε **Αναστολή έγχυσης** στην οθόνη της αντλίας και επιλέξτε πόσο θα διαρκέσει η παύση της χορήγησης: από 30 λεπτά έως 4 ώρες, σε βήματα των 30 λεπτών. Η χορήγηση δεν συνεχίζεται μόνη της: όταν τελειώσει η παύση, το Patch δίνει την ειδοποίηση **Έναρξη ινσουλίνης**. Πατήστε **Συνέχιση έγχυσης** στην οθόνη της αντλίας ή **Έναρξη ινσουλίνης** στην ειδοποίηση και επιβεβαιώστε.
 
-## Discarding a patch
+## Απόρριψη ενός Patch
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+Πατήστε **Απόρριψη Patch** στην οθόνη της αντλίας και επιβεβαιώστε. Η χορήγηση ινσουλίνης σταματά και το Patch δεν μπορεί πλέον να χρησιμοποιηθεί. Αφαιρέστε το Patch από το σώμα σας και ενεργοποιήστε ένα νέο.
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+Όταν ένας κρίσιμος συναγερμός έχει σταματήσει το Patch, ο συναγερμός προσφέρει αντί γι' αυτό το κουμπί **Απενεργοποίηση Patch**. Αν το πατήσετε, το Patch απορρίπτεται με τον ίδιο τρόπο.
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## Συναγερμοί και ειδοποιήσεις
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+Το Patch αναφέρει τρία επίπεδα συμβάντων. Όλα εμφανίζονται ως ειδοποιήσεις του **AAPS**.
 
-### Critical alarms
+### Κρίσιμοι συναγερμοί
 
-Insulin delivery has stopped. Act now:
+Η χορήγηση ινσουλίνης έχει σταματήσει. Ενεργήστε αμέσως:
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (5 ℃ and 37 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **Χαμηλή ινσουλίνη**: μένουν λιγότερες από 10 U. Απενεργοποιήστε το Patch και αλλάξτε το.
+* **Το Patch έληξε**: το Patch έφτασε στο τέλος της ζωής του. Απενεργοποιήστε το Patch και αλλάξτε το.
+* **Χαμηλή μπαταρία**: απορρίψτε το Patch και αλλάξτε το.
+* **Υψηλή/Χαμηλή θερμοκρασία**: μετακινηθείτε σε κατάλληλη θερμοκρασία, μεταξύ 40 ℉ και 99 ℉ (5 ℃ και 37 ℃).
+* **Αυτόματη απενεργοποίηση**: το Patch σταμάτησε επειδή αγνοήθηκε η ειδοποίηση Αυτόματη απενεργοποίηση. Πατήστε **Έναρξη ινσουλίνης** για να ξεκινήσει ξανά η χορήγηση βασικού ρυθμού.
+* **Λήξη χρόνου εφαρμογής Patch**, **Ο αυτοέλεγχος απέτυχε**, **Σφάλμα Patch**, **Απόφραξη** και **Σφάλμα εισαγωγής βελόνας**: απενεργοποιήστε το Patch και αλλάξτε το.
 
-### Alerts
+### Ειδοποιήσεις
 
-Insulin delivery continues, but something needs your attention:
+Η χορήγηση ινσουλίνης συνεχίζεται, αλλά κάτι χρειάζεται την προσοχή σας:
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉.
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **Χαμηλή ινσουλίνη**: η δεξαμενή έφτασε την ποσότητα που ορίστηκε στη **Ρύθμιση ειδοποίησης χαμηλής ινσουλίνης**. Ετοιμαστείτε να αλλάξετε το Patch.
+* **Το Patch λήγει σύντομα** και **Η διάρκεια λειτουργίας του Patch έληξε**: αλλάξτε το Patch.
+* **Χαμηλή μπαταρία**: ετοιμαστείτε να αλλάξετε το Patch.
+* **Υψηλή/Χαμηλή θερμοκρασία**: η χορήγηση σταματά προσωρινά μέχρι το Patch να επιστρέψει μεταξύ 40 ℉ και 99 ℉.
+* **Αυτόματη απενεργοποίηση**: πατήστε **OK**. Αν την αγνοήσετε, η ειδοποίηση γίνεται κρίσιμος συναγερμός και η χορήγηση σταματά.
+* **Η ενεργοποίηση του Patch δεν ολοκληρώθηκε**: πατήστε **OK** για να ολοκληρώσετε την ενεργοποίηση.
+* **Έναρξη ινσουλίνης**: η παύση που ορίσατε τελείωσε. Πατήστε **Έναρξη ινσουλίνης** για να συνεχιστεί η χορήγηση.
+* **Ενεργοποιήστε το Bluetooth** και **Το BLE δεν είναι συνδεδεμένο**: το τηλέφωνο δεν μπορεί να επικοινωνήσει με το Patch. Ενεργοποιήστε το Bluetooth ή ελέγξτε τη σύνδεση του Patch.
 
-### Notices
+### Ενημερώσεις
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+Μόνο για ενημέρωση: **Χαμηλή ινσουλίνη**, **Ειδοποίηση χρόνου χρήσης Patch** (πέρασε ο χρόνος που ορίστηκε στη **Ρύθμιση ειδοποίησης χρήσης Patch**), **Ειδοποίηση ελέγχου Patch**, **Αλλαγή ζώνης ώρας** και **Ελέγξτε τη γλυκόζη αίματος** (ορισμένο χρόνο μετά από ένα bolus).
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+Το Patch αναφέρει επίσης πότε ξεκινά ή τελειώνει η δική του λειτουργία αναστολής σε χαμηλή γλυκόζη (**LGS**). Το **AAPS** δεν χρησιμοποιεί αυτή τη λειτουργία· το κύκλωμα χειρίζεται μόνο του τη χαμηλή γλυκόζη.
 
-## Where to get help
+## Πού θα βρείτε βοήθεια
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Αναφέρετε προβλήματα με τον οδηγό CareLevo στη [σελίδα GitHub issues του AAPS](https://github.com/nightscout/AndroidAPS/issues) ή στα κανάλια της κοινότητας του AAPS, δείτε [Πού μπορώ να βρω βοήθεια;](../GettingHelp/WhereCanIGetHelp.md).
