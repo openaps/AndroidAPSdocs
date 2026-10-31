@@ -44,7 +44,7 @@ Open de Equil-instellingen met **Instellingen** op de kaart **Equil**, of met he
 * **Alarm bij bijna lege batterij**: waarschuwt je als de batterij van de pomp bijna leeg is.
 * **Alarm bij bijna leeg reservoir**: waarschuwt je als er weinig insuline in het reservoir zit.
 * **Alarmtoon**: hoe de pomp je waarschuwt: **Dempen**, **Alleen trillen**, **Alleen toon** of **Trillen en geluid**.
-* **Bolussnelheid**: hoe snel een bolus wordt gegeven: **1.5 E/min (standaard)**, **3 E/min**, **6 E/min** of **12 E/min**. Een snellere bolus kan vaker occlusiealarmen geven.
+* **Bolussnelheid**: hoe snel een bolus wordt gegeven: **1,5 E/min (standaard)**, **3 E/min**, **6 E/min** of **12 E/min**. Een snellere bolus kan vaker occlusiealarmen geven.
 
 ![De keuzes voor Bolussnelheid in de Equil-instellingen](../images/v4/Pumps/equil_bolus_speed.png)
 
