@@ -35,7 +35,7 @@ Możesz też zmieniać metodę wygładzania automatycznie, na przykład zależni
 | G5/G6/ONE     | Jeśli dane mają szumy |                        |    Zalecane     |
 | G7/ONE+/Stelo | Jeśli dane mają szumy | Jeśli dane są stabilne |                 |
 
-Sensory Libre mają szumy i mogą wymagać wygładzania. Gdy używasz bezpośredniego połączenia xDrip lub źródła danych z poprawionej aplikacji (odbieranie z innej aplikacji, także z Juggluco), [wygładzanie jest już wykonywane w tej aplikacji](#libre2-value-smoothing-raw-values).
+Sensory Libre mają szumy i mogą wymagać wygładzania. Gdy używasz bezpośredniego połączenia xDrip lub źródła danych ze zmodyfikowanej aplikacji (patched) (odbieranie z innej aplikacji, także z Juggluco), [wygładzanie jest już wykonywane w tej aplikacji](#libre2-value-smoothing-raw-values).
 
 | Sensor / źródło danych |   Juggluco   | xDrip direct | xDrip bridge | xDrip patched app |
 | ---------------------- |:------------:|:------------:|:------------:|:-----------------:|
