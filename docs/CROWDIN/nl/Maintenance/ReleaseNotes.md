@@ -13,7 +13,7 @@ Volg de instructies in de [handleiding voor het bijwerken](UpdateToNewVersion.md
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
-Zie [Wat er veranderd is in AAPS v4](V4Changes.md) voor de belangrijke wijzigingen in gedrag: functies die verplaatst zijn, een nieuwe naam hebben gekregen of verwijderd zijn.
+Zie [Wat is er veranderd in AAPS v4](V4Changes.md) voor de belangrijke wijzigingen in gedrag: functies die verplaatst zijn, een nieuwe naam hebben gekregen of verwijderd zijn.
 ```
 
 Als er een nieuwe update beschikbaar is, krijg je een notificatie zoals deze:
@@ -405,7 +405,7 @@ Release datum: 29-12-2024
   * Met **Profiel wissel** en **Profiel percentage** wordt nu rekening gehouden bij **Dynamische ISF** voor de sterkte van de dynamische gevoeligheid
   * De gemiddelde **ISF** van de laatste 24 uur wordt berekend. Deze waarde wordt gebruikt voor de Bolus wizard en de berekening van **COB**. De waarde **Profiel ISF** wordt helemaal niet meer gebruikt (behalve als terugval als er geen historische gegevens zijn)
   * De documentatiepagina over DynamicISF is herschreven. Lees het belangrijke deel [Waar je op moet letten als je Dynamische ISF aanzet](#dyn-isf-things-to-consider-when-activating-dynamicisf).
-* ["SMB altijd toestaan" en "Activeren SMB na invoer van koolhydraten"](#Open-APS-features-enable-smb-always) voor gebruikers van FreeStyle Libre 2 en Libre 3
+* ["SMB altijd toestaan" en "SMB toestaan na koolhydraten"](#Open-APS-features-enable-smb-always) voor gebruikers van FreeStyle Libre 2 en Libre 3
   * Let op: dit vereist de nieuwste versie van xDrip+ of Juggluco.
 * Nieuwe triggers voor **Automatisering**
 * Automatisch exporteren van instellingen
@@ -428,7 +428,7 @@ Release datum: 29-12-2024
 
 #### CGM's en pompen
 
-* ["SMB altijd toestaan" en "Activeren SMB na invoer van koolhydraten"](#Open-APS-features-enable-smb-always) voor gebruikers van FreeStyle Libre 2 en Libre 3 @MilosKozak
+* ["SMB altijd toestaan" en "SMB toestaan na koolhydraten"](#Open-APS-features-enable-smb-always) voor gebruikers van FreeStyle Libre 2 en Libre 3 @MilosKozak
 * Verbeteringen in de [Medtrum-driver](../CompatiblePumps/MedtrumNano.md) @jbr77rr
   * Betere communicatie, met een nieuwe instelling om problemen op sommige smartphones te omzeilen
   * Toon het reservoirniveau aan het begin van de activering
@@ -531,7 +531,7 @@ Release datum: 23-10-2023
 - Ondersteuning voor G7 @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3-plugin @MilosKozak
 - Ondersteuning voor Tidepool @MilosKozak
-- Plugin voor vloeiend maken @MilosKozak, @justmara, Exponentiëel vloeiend maken @nichi (Tsunami), Gemiddeld vloeiend maken @jbr7rr
+- Plugin voor vloeiend maken @MilosKozak, @justmara, Exponentieel vloeiend maken @nichi (Tsunami), Gemiddeld vloeiend maken @jbr7rr
 - DynamicISF-plugin @Chris Wilson, @tim2000s
 - Garmin-watchface & ondersteuning voor hartslag @buessow
 - Nieuw logo @thiagomsoares
@@ -545,7 +545,7 @@ Release datum: 23-10-2023
 - interne wijzigingen: nieuwere versies van bibliotheken, migratie naar rx3, nieuwe structuur van modules @MilosKozak
 - verbeteringen in de Diaconn-driver @miyeongkim
 - meer opties voor onderhoud van de database @MilosKozak
-- AAPSClient laat zien of de hoofdtelefoon aan de lader is aangesloten @MilosKozak
+- AAPSClient laat zien of de AAPS-telefoon aan de lader is aangesloten @MilosKozak
 - Wijziging in de Bolus wizard. Als de CGM niet beschikbaar is, wordt het percentage genegeerd (dus wordt 100% gebruikt)
 - migratie naar het kts-buildsysteem @MilosKozak
 - betere CI-integratie @MilosKozak @buessow
