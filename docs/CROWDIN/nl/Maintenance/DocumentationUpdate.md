@@ -34,7 +34,7 @@
 
 ## Januari 2025
 
-- Release [3.4](#version3400) en verzamelde updates van de documentatie (Wizard, versies voor bouwen op de computer, Configuratie)
+- [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) release and documentation update roll-up (Wizard, Computer build versions, Config Builder)
 - Update van de CGM-lijst. Dexcom G5, Tomato en Glimp verwijderd.
 - [Site rotatie (scherm)](#Aapsscreens-site-rotation)
 - [Bedrijfsmodus](#AapsScreens-running-mode)
@@ -148,7 +148,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 - Dexcom G6 met [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - [Batterijniveau](#screens-sensor-level-battery) van de Libre smart reader
 - [Doelen](#objectives-objective3) - nieuwe vragen
-- Andere [nieuwe functies van AAPS 2.8.0](#Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.0)
 
 ## December 2020
 
@@ -167,7 +167,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 ## September 2020
 
 - Grote update voor de nieuwe AAPS-versie 2.7
-- Zie voor details de [release notes](#Releasenotes-version-2-7-0)
+- For details see the [release notes](https://github.com/nightscout/AndroidAPS/releases/tag/2.7.0)
 
 ## Juni 2020
 
@@ -202,7 +202,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 - Functie [Vertraagde bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - gesloten loop wordt uitgeschakeld
 - Nieuwe [Lokaal profiel plugin](../SettingUpAaps/ConfigBuilder.md)
 - Voorbeeldsetup - update Dexcom G6
-- [Versie 2.6.0](#Releasenotes-version-2-6-0) - grote nieuwe functies
+- [Version 2.6.0](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-260) - major new features
 - [Wear complicaties](../WearOS/WearOsSmartwatch.md)
 
 ## Januari 2020
@@ -237,7 +237,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 
 ## Oktober 2019
 
-- Updates voor [AAPS-versie 2.5](#Releasenotes-version-2-5-0) (vooral op de [pagina over bijwerken](../Maintenance/UpdateToNewVersion.md))
+- [AAPS version 2.5](https://github.com/openaps/AndroidAPSdocs/blob/e7e2e73cae3dd16af3391ce770fb48b3b3388c1b/docs/EN/Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion.md))
 - [Accu-Chek Insight - logopties](#Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB-berekening op een aparte pagina](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - onjuiste COB-waarde herkennen](#CobCalculation-detection-of-wrong-cob-values)
