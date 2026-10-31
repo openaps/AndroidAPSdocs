@@ -12,7 +12,7 @@ Muitos detalhes ligados à experiência na documentação do **AAPS** fazem mais
 
 (preparing-safety-first)=
 
-## Safety First
+## Segurança em primeiro lugar
 «Com grande poder vem grande responsabilidade…»
 
 ### Segurança técnica
@@ -180,7 +180,7 @@ Eis um calendário aproximado:
 | Objetivo 1: Configurar a visualização e a monitorização       |            1 hora             |
 | Objetivo 2: Aprender a controlar o AAPS                       |            2 horas            |
 | Objetivo 3: Prove o seu conhecimento                          |          Até 14 dias          |
-| Objetivo 4: Iniciar um loop aberto                            |       Mínimo de 7 dias        |
+| Objetivo 4: A iniciar em loop aberto                          |       Mínimo de 7 dias        |
 | Objetivo 5: Compreender o seu loop aberto                     |            7 dias             |
 | Objetivo 6: Começar a fechar o loop (Suspensão Glicose Baixa) |   Mínimo de 5, até 14 dias    |
 | Objetivo 7: Afinar o loop fechado                             |  Mínimo de 1 dia, até 7 dias  |
@@ -190,7 +190,7 @@ Eis um calendário aproximado:
 
 Quando o **AAPS** estiver totalmente a funcionar, ainda vai precisar de afinar regularmente as suas definições para melhorar a gestão global da sua diabetes.
 
-## Requirements
+## Requisitos
 
 ### Considerações médicas
 
