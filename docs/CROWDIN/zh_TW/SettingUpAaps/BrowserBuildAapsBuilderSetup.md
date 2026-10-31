@@ -12,7 +12,7 @@
 
 ## 步驟 1 – 建立你的私人建置儲存庫
 
-這會在你的 GitHub 帳號下建立一個空的私人儲存庫。只有你能看到它，以及由它建置的應用程式。你**不**需要對 AndroidAPS 進行派生：每次建置都會從官方的 AndroidAPS 儲存庫下載 AAPS 原始碼。
+This creates your own private copy of AAPS Builder in your GitHub account: a repository with the build workflow already in it. 只有你能看到它，以及由它建置的應用程式。你**不**需要對 AndroidAPS 進行派生：每次建置都會從官方的 AndroidAPS 儲存庫下載 AAPS 原始碼。
 
 <label class="aapsb-label" for="aapsb-user">你的 GitHub 使用者名稱</label>
 <input class="aapsb-input" type="text" id="aapsb-user" autocomplete="username" spellcheck="false" placeholder="my-github-name" />
@@ -25,42 +25,48 @@
 
 請沿用建議名稱。已用其他名稱建立過儲存庫？請在此輸入完全相同的名稱。
 
+```{note}
+**Already have an AAPS Builder repository** (made with an earlier version of this page)? Do not create a new one: type its exact name here, skip the button below, and update its workflow once: see **Updating your copy** at the end of this step. Your secrets stay as they are.
+
+If you want a new repository anyway, choose a name you don't have yet, for example `my-aaps-2`, and use the same keystore in step 2.
+
+Do not type the name of your fork of AndroidAPS: a fork is public, and it already builds with its own **AAPS CI** workflow.
+```
+
 你的儲存庫：<code class="aapsb-repoUrl"></code>
 
-已自行建立空的私人儲存庫？請不要點擊下方按鈕；在上方輸入其完整名稱，然後前往步驟 2。
+Check this name before you use the buttons below: the page remembers the name from your last visit.
 
 <a class="aapsb-btn" id="aapsb-createRepo" target="_blank" rel="noopener">建立我的私人儲存庫</a>
 
-在開啟的 GitHub 頁面中，名稱已填入且已選取 Private。請勿變更任何設定，也不要新增 README 或其他檔案。
+On the GitHub page that opens, everything is already filled in: the template `nightscout/aaps-builder`, your account as owner, the name of your repository, and **Private**. Do not change anything, and leave **Include all branches** unticked.
 
 1. 點選綠色的 Create repository 按鈕。
-2. 回到此頁進行步驟 2。
+2. GitHub shows your new repository with a folder `.github` and a file `README.md`: the build workflow is in it. 回到此頁進行步驟 2。
+
+```{admonition} Your new repository is empty (no files)?
+:class: warning
+
+It was not created from the template. Delete it (**Settings** → bottom of the page → **Delete this repository**), then tap **Create my private repository** again.
+```
+
+```{admonition} Updating your copy (existing AAPS Builder repository)
+:class: dropdown
+
+The build steps are updated for you: at every build, your repository runs the version released by the AAPS developers in nightscout/aaps-builder, and nothing in your repository changes. You only replace your workflow file when [Docs updates & changes](../Maintenance/DocumentationUpdate.md) announces it (for example for a new build variant), or once if your repository was made with an earlier version of this page or from the old template. Your `KEYSTORE_SET` secret stays as it is.
+
+1. <a class="aapsb-btn aapsb-secondary" href="https://github.com/nightscout/aaps-builder/blob/main/.github/workflows/build.yml" target="_blank" rel="noopener">Open the newest workflow</a>
+
+   On a computer, click the **copy icon** ("Copy raw file") at the top right of the file. On a phone, open the <a href="https://raw.githubusercontent.com/nightscout/aaps-builder/main/.github/workflows/build.yml" target="_blank" rel="noopener">plain-text version</a> instead, press and hold the text → **Select all** → **Copy**.
+2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">Open my workflow file</a>
+
+   Opens `.github/workflows/build.yml` in <code class="aapsb-repoUrl"></code> for editing.
+3. Replace the whole text with the copied workflow (on a phone: press and hold → **Select all** → **Paste**), then click **Commit changes…** twice. The first line of the file shows its version.
+```
 
 (aaps-builder-setup-step2)=
 
-## 步驟 2 – 新增建置工作流程
-
-建置工作流程是告訴 GitHub 如何建置 AAPS 的檔案。該檔案來自 AAPS 文件：<a id="aapsb-viewWorkflow" href="../_static/aaps-builder/aaps-builder-build.yml" target="_blank" rel="noopener">檢視工作流程</a>。
-
-1. <a class="aapsb-btn" id="aapsb-addWorkflow" target="_blank" rel="noopener">將工作流程加入我的儲存庫</a> <span class="aapsb-msg" id="aapsb-workflowMsg"></span>
-
-   開啟：<code class="aapsb-repoUrl"></code>，新檔案 `.github/workflows/build.yml`，已經填好。
-2. 確認頂端的檔名是 `.github/workflows/build.yml`。請勿更動文字。
-3. 點選 **Commit changes…**，然後在開啟的視窗中再次點選 **Commit changes**。
-
-```{admonition} Updating the workflow, or the text area is empty?
-:class: dropdown
-
-1. <button class="aapsb-btn aapsb-secondary" type="button" id="aapsb-copyWorkflow">複製工作流程</button> <span class="aapsb-msg" id="aapsb-copyWorkflowMsg"></span>
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openWorkflowFile" target="_blank" rel="noopener">開啟我的工作流程檔案</a>
-
-   若是第一次新增工作流程，請改用上方的按鈕。
-3. 以複製的工作流程取代全部文字（在手機上長按），然後連續按兩次 **Commit changes…**。
-```
-
-(aaps-builder-setup-step3)=
-
-## 步驟 3 – 你的簽章金鑰
+## Step 2 – Your signing key
 
 應用程式必須使用你自己的金鑰簽章。請一律使用相同的金鑰，否則更新時必須先解除安裝 AAPS（並且會遺失其設定）。請在兩個分頁籤中擇一。
 
@@ -120,15 +126,15 @@
 ````
 
 `````
-(aaps-builder-setup-step4)=
-## 步驟 4 – 將金鑰提供給你的儲存庫
-<span id="aapsb-s4wait">請先完成步驟 3。</span>
+(aaps-builder-setup-step3)=
+## Step 3 – Give the key to your repository
+<span id="aapsb-s3wait">Finish step 2 first.</span>
 
-<div id="aapsb-s4ready" hidden>
+<div id="aapsb-s3ready" hidden>
   1. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets" target="_blank" rel="noopener">開啟 Secrets 頁面</a> 開啟：<code class="aapsb-repoUrl"></code> 出現「找不到頁面」（404）？請先確認你已在此瀏覽器登入 github.com：未登入時，GitHub 對私人儲存庫會顯示 404。否則就是你在步驟 1 輸入的使用者名稱或儲存庫名稱與實際的儲存庫不相符：請到 github.com 檢查，並在步驟 1 重新輸入正確資訊。 2. 點選「複製名稱」，然後將它貼到較小的「Name」欄位中：`KEYSTORE_SET` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="name">複製名稱</button> 3. 點選「複製機密」，然後把長長的代碼貼到較大的「Secret」欄位中：<code id="aapsb-secretPreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="secret">複製機密</button> <span class="aapsb-msg" id="aapsb-copyMsg"></span> 這個機密是一段非常長的代碼（數千個字元），不是單字 KEYSTORE_SET。先複製並貼上名稱，再貼上那段長代碼。 4. 點選「Add secret」。完成。這一步之後就不需要再做了。
 </div>
-(aaps-builder-setup-step5)=
-## 步驟 5 – 建置應用程式
+(aaps-builder-setup-step4)=
+## Step 4 – Build the app
 
 1. <a class="aapsb-btn" id="aapsb-openActions" target="_blank" rel="noopener">開啟建置頁面</a>
 
@@ -136,20 +142,20 @@
 
    出現「找不到頁面」（404）？請先確認你已在此瀏覽器登入 github.com：未登入時，GitHub 對私人儲存庫會顯示 404。否則就是你在步驟 1 輸入的使用者名稱或儲存庫名稱與實際的儲存庫不相符：請到 github.com 檢查，並在步驟 1 重新輸入正確資訊。 是否改由 GitHub App 開啟？點選「RUN WORKFLOW」，確認版本與變體，然後再點選一次「RUN WORKFLOW」。如果 App 仍顯示「Nothing to see here」，請下拉清單以查看你的建置。
 2. 若系統提示，請點選綠色按鈕以啟用工作流程。
-3. 點選「Run workflow」，再點選綠色的「Run workflow」按鈕。 「latest」會建置最新的 AAPS 版本。 ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
+3. 點選「Run workflow」，再點選綠色的「Run workflow」按鈕。 「latest」會建置最新的 AAPS 版本。***提示：*** *輸入其他版本的[標籤](https://github.com/nightscout/AndroidAPS/tags)名稱，即可建置該版本，而不必輸入「latest」*
 4. 請等待約 15–30 分鐘。綠色勾勾代表已完成。
 想在建置完成時收到電子郵件通知嗎？ GitHub 只會在建置失敗時寄送郵件給你。若也想在成功時收到通知：前往 github.com，開啟你的個人頭像 → Settings → Notifications → System → Actions，並取消勾選「Only notify for failed workflows」。
 
 ```{admonition} No "Build AAPS" / "Run workflow" button?
 :class: warning
 
-1. 開啟你的儲存庫，確認檔案 `.github/workflows/build.yml` 是否存在。若缺少該檔或檔名不同，請再做一次[步驟 2](#aaps-builder-setup-step2)。
+1. Open your repository and check that it has a folder `.github` with the file `workflows/build.yml`. If the repository is empty, it was not created from the template: delete it (**Settings** → bottom of the page → **Delete this repository**) and do [step 1](#aaps-builder-setup-step1) again with the button.
 2. 開啟 Actions 分頁。若顯示工作流程已停用，請點選綠色按鈕以啟用。接著在清單中點選「Build AAPS」。
 ```
 
-(aaps-builder-setup-step6)=
+(aaps-builder-setup-step5)=
 
-## 步驟 6－在你的手機上安裝
+## Step 5 – Install on your phone
 
 ```{admonition} Before every update: back up your settings!
 :class: warning
@@ -176,22 +182,40 @@
 
 APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上顯示。它會保留 14 天。
 
-有新的 AAPS 版本？先備份你的設定，然後依照第 5 步進行建置。你的儲存庫不會自行進行任何建置。
+有新的 AAPS 版本？ Back up your settings, then build it with [step 4](#aaps-builder-setup-step4). 你的儲存庫不會自行進行任何建置。
 
-(aaps-builder-setup-step7)=
+(aaps-builder-setup-step6)=
 
-## 步驟 7－選用：把 App 存到 Google Drive
+## Step 6 – Optional: get the app in Google Drive
 
-想讓 APK 出現在你的 Google Drive（永久保存）嗎？再新增一個 Secret。
+想讓 APK 出現在你的 Google Drive（永久保存）嗎？ Add one more secret, GDRIVE_OAUTH2. This page gets it from Google for you. AAPS can then only see and change the files it creates in your Google Drive, nothing else.
 
-1. 依 AAPS 文件的說明取得 GDRIVE_OAUTH2 值（會在電腦上使用官方的 AAPS 準備頁面）：[將建置儲存到 Google Drive](#aaps-builder-google-drive)。
-2. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">開啟 Secrets 頁面</a>
+1. <a class="aapsb-btn" id="aapsb-googleAuth" target="_blank" rel="noopener">Connect Google Drive</a>
 
-   將開啟：<code class="aapsb-repoUrl"></code>
+   Google opens in a new tab. Choose your Google account and allow AAPS to see and change its own files. If Google says the app is not verified, tap "Advanced", then "Go to …".
+2. Then the new tab shows an error like **"This site can't be reached"** or **"127.0.0.1 refused to connect"**. **This is expected.** Google's answer is in the address of that tab.
 
-   出現「找不到頁面」（404）嗎？請先確認你已在此瀏覽器登入 github.com：未登入時，GitHub 對私人儲存庫會顯示 404。否則就是你在步驟 1 輸入的使用者名稱或儲存庫名稱與實際的儲存庫不相符：請到 github.com 檢查，並在步驟 1 重新輸入正確資訊。
-3. 點選「Copy name」，然後把它貼到較小的「Name」欄位：`GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
-4. 將你的 GDRIVE_OAUTH2 值貼到較大的「Secret」欄位，然後點選「Add secret」。
+   Tap the address bar of that tab, select all of the address and copy it. It starts with `http://127.0.0.1:47913/`. Come back to this page within a few minutes: the answer is only valid for a short time.
+3. <label class="aapsb-label" for="aapsb-googleUrl">Paste the copied address here</label> <input class="aapsb-input" type="url" id="aapsb-googleUrl" autocomplete="off" spellcheck="false" placeholder="http://127.0.0.1:47913/aaps-builder?…" /> <button class="aapsb-btn" type="button" id="aapsb-googleGo">Get GDRIVE_OAUTH2</button> <span class="aapsb-msg" id="aapsb-googleMsg"></span>
+
+<div id="aapsb-gdriveReady" hidden>
+
+4. <a class="aapsb-btn aapsb-secondary" id="aapsb-openSecrets2" target="_blank" rel="noopener">Open the secrets page</a>
+
+   Opens: <code class="aapsb-repoUrl"></code>
+
+   Getting "Page not found" (404)? 請先確認你已在此瀏覽器登入 github.com：未登入時，GitHub 對私人儲存庫會顯示 404。否則就是你在步驟 1 輸入的使用者名稱或儲存庫名稱與實際的儲存庫不相符：請到 github.com 檢查，並在步驟 1 重新輸入正確資訊。
+5. Tap "Copy name", then paste it into the small "Name" field: `GDRIVE_OAUTH2` <button class="aapsb-btn aapsb-secondary" type="button" data-aapsb-copy="gdrive">Copy name</button>
+6. Tap "Copy secret", then paste the code into the big "Secret" box: <code id="aapsb-gdrivePreview"></code> <button class="aapsb-btn" type="button" data-aapsb-copy="gdriveValue">Copy secret</button> <span class="aapsb-msg" id="aapsb-gdriveCopyMsg"></span>
+7. 點選「Add secret」。
+
+</div>
+
+```{admonition} Already have a GDRIVE_OAUTH2 value?
+:class: dropdown
+
+A value from the AAPS preparation page of the other browser build works too: open the secrets page, add the name `GDRIVE_OAUTH2` and paste your value. See [Save the builds in Google Drive](#aaps-builder-google-drive).
+```
 
 下次建置時，APK 也會儲存在 Google Drive 的資料夾 AAPS/&lt;version&gt; 中。
 
@@ -199,33 +223,39 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
 
 ----
 
-本頁所有操作都在你的瀏覽器中執行。你的金鑰與密碼絕不會被送往任何地方，除非是你自行貼上的目的地。僅會將你的 GitHub 使用者名稱送到 GitHub，以檢查該帳號是否存在。此頁面與工作流程為 AAPS 文件的一部分，基於 AAPS Builder（AGPL-3.0）。
+本頁所有操作都在你的瀏覽器中執行。你的金鑰與密碼絕不會被送往任何地方，除非是你自行貼上的目的地。僅會將你的 GitHub 使用者名稱送到 GitHub，以檢查該帳號是否存在。 In step 6, the Google answer is sent only to Google, to get GDRIVE_OAUTH2. The build workflow is maintained by the AAPS developers in [nightscout/aaps-builder](https://github.com/nightscout/aaps-builder), based on AAPS Builder (AGPL-3.0).
 
 <div id="aapsb-msgs" hidden>
 
 - <span data-aapsb-msg="copied">已複製長碼：請貼到較大的「Secret」欄位，然後點選「Add secret」。</span>
 - <span data-aapsb-msg="copiedName">已複製名稱：請貼到較小的「Name」欄位。</span>
 - <span data-aapsb-msg="userOk">✓ 找到 GitHub 使用者。</span>
-- <span data-aapsb-msg="userBad">✗ 沒有此名稱的 GitHub 使用者。請使用你的使用者名稱（顯示於 GitHub 個人檔案），不要使用電子郵件。</span>
-- <span data-aapsb-msg="copiedShort">已複製 ✓</span>
-- <span data-aapsb-msg="needUser">請先在步驟 1 輸入你的 GitHub 使用者名稱。</span>
-- <span data-aapsb-msg="workflowCopied">已複製工作流程（版本 {v}）。請貼到 GitHub。</span>
-- <span data-aapsb-msg="workflowReady">工作流程版本 {v} 已就緒。</span>
-- <span data-aapsb-msg="workflowErr">無法讀取工作流程檔案。重新載入此頁面後再試一次。</span>
-- <span data-aapsb-msg="errPipe">密碼與別名不可包含字元 |</span>
-- <span data-aapsb-msg="errNoFile">請選擇你的金鑰庫檔案。</span>
-- <span data-aapsb-msg="errEmpty">請輸入密碼與別名。</span>
-- <span data-aapsb-msg="errPass">金鑰庫密碼錯誤。</span>
-- <span data-aapsb-msg="errKeyPass">金鑰密碼錯誤。</span>
-- <span data-aapsb-msg="errAlias">在金鑰庫中找不到該別名。可用：{aliases}</span>
+- <span data-aapsb-msg="userBad">✗ 沒有此名稱的 GitHub 使用者。 Use your username (shown in your GitHub profile), not your e-mail.</span>
+- <span data-aapsb-msg="copiedShort">Copied ✓</span>
+- <span data-aapsb-msg="needUser">Enter your GitHub username in step 1 first.</span>
+- <span data-aapsb-msg="errPipe">Passwords and alias cannot contain the character |</span>
+- <span data-aapsb-msg="errNoFile">Choose your keystore file.</span>
+- <span data-aapsb-msg="errEmpty">Fill in password and alias.</span>
+- <span data-aapsb-msg="errPass">Wrong keystore password.</span>
+- <span data-aapsb-msg="errKeyPass">Wrong key password.</span>
+- <span data-aapsb-msg="errAlias">Alias not found in the keystore. 可用：{aliases}</span>
 - <span data-aapsb-msg="errFormat">這看起來不像是金鑰庫檔案。</span>
-- <span data-aapsb-msg="okHave">金鑰庫正常！請繼續進行步驟 4。</span>
-- <span data-aapsb-msg="okHaveUnchecked">已讀取金鑰庫。在建置時會檢查該密碼。請繼續進行步驟 4。</span>
-- <span data-aapsb-msg="errShort">密碼長度至少需 8 個字元。</span>
-- <span data-aapsb-msg="errAscii">僅可使用 a–z、A–Z、0–9 與 ! 等符號 ? # － 不可有空白、重音字母，亦不可包含 |</span>
+- <span data-aapsb-msg="okHave">金鑰庫正常！ Continue with step 3.</span>
+- <span data-aapsb-msg="okHaveUnchecked">Keystore read. 在建置時會檢查該密碼。 Continue with step 3.</span>
+- <span data-aapsb-msg="errShort">The password must be at least 8 characters.</span>
+- <span data-aapsb-msg="errAscii">Use only a–z, A–Z, 0–9 and symbols such as ! ? # － 不可有空白、重音字母，亦不可包含 |</span>
 - <span data-aapsb-msg="errMatch">兩次輸入的密碼不相符。</span>
 - <span data-aapsb-msg="working">正在建立金鑰…</span>
-- <span data-aapsb-msg="okNew">已建立金鑰。下載下方的備份後，請繼續進行步驟 4。</span>
+- <span data-aapsb-msg="okNew">已建立金鑰。 Download the backup below, then continue with step 3.</span>
+- <span data-aapsb-msg="gNoUrl">Paste the whole address of the Google tab first.</span>
+- <span data-aapsb-msg="gNoCode">This address has no answer from Google. Copy the whole address of the tab that shows the error, starting with http://127.0.0.1:47913/</span>
+- <span data-aapsb-msg="gDenied">Google access was not allowed. Tap "Connect Google Drive" again and allow access.</span>
+- <span data-aapsb-msg="gOldUrl">This address belongs to an older attempt. Tap "Connect Google Drive" again and use the new address.</span>
+- <span data-aapsb-msg="gWorking">Asking Google…</span>
+- <span data-aapsb-msg="gFailed">Google did not accept it ({error}). The answer is valid only for a few minutes and only once: tap "Connect Google Drive" again.</span>
+- <span data-aapsb-msg="gNoRefresh">Google sent no long-term access. Tap "Connect Google Drive" again.</span>
+- <span data-aapsb-msg="gOk">GDRIVE_OAUTH2 is ready. Add it as a secret below.</span>
+- <span data-aapsb-msg="gCopied">Code copied: paste it in the big "Secret" box, then tap "Add secret".</span>
 
 </div>
 
@@ -250,28 +280,27 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
 
 <script src="../_static/aaps-builder/aaps-builder.forge.min.js"></script>
 <script>
-// AAPS Builder setup page logic. Walks the user through creating an empty private GitHub
-// repository, adding the build workflow (_static/aaps-builder/aaps-builder-build.yml), and
-// creating the KEYSTORE_SET secret. The repository then builds AAPS from the official source,
+// AAPS Builder setup page logic. Walks the user through creating a private copy of the
+// github.com/nightscout/aaps-builder template (the build workflow is in it) and creating the
+// KEYSTORE_SET secret. The repository then builds AAPS from the official source,
 // github.com/nightscout/AndroidAPS, with GitHub Actions.
 //
-// The keystore and passwords never leave this browser. The only requests are reading the workflow
-// file and asking GitHub's public API whether the typed username exists (only the name is sent).
-// The page's Content-Security-Policy (set in docs/shared.conf.py) allows only the AAPS
-// documentation site itself and https://api.github.com.
+// The keystore and passwords never leave this browser. The only requests are asking GitHub's
+// public API whether the typed username exists (only the name is sent) and, in the optional
+// Google Drive step, sending Google's one-time answer to Google's token endpoint. The page's
+// Content-Security-Policy (set in docs/shared.conf.py) allows only the AAPS documentation site
+// itself, https://api.github.com and https://oauth2.googleapis.com/token.
 //
 // Based on AAPS Builder by the AAPS Builder authors (github.com/dio99/aaps-builder), GNU Affero
-// General Public License v3.0 (AGPL-3.0). Modified for the AAPS documentation: no template
-// repository, workflow and page maintained in github.com/openaps/AndroidAPSdocs, texts in the
-// page so they can be translated.
+// General Public License v3.0 (AGPL-3.0). Modified for the AAPS documentation: texts in the page
+// so they can be translated, workflow maintained in github.com/nightscout/aaps-builder.
 // Vendor library: _static/aaps-builder/aaps-builder.forge.min.js = node-forge 1.3.1
-// (BSD-3-Clause or GPL-2.0), https://github.com/digitalbazaar/forge. Pinned: it is the
-// unmodified dist/forge.min.js of the npm package node-forge@1.3.1, checked against the npm
-// registry integrity hash. SHA-256 (verify after any change, update only after review):
-// dc67fd132427ad96c9666c844b39565413c40ddb1f2d063c53512fbf6d387dfd
+// (BSD-3-Clause or GPL-2.0), https://github.com/digitalbazaar/forge, the unmodified
+// dist/forge.min.js of the npm package node-forge@1.3.1.
 (() => {
+  const TEMPLATE = { owner: 'nightscout', name: 'aaps-builder' };
   const REPO_NAME = 'my-aaps';
-  const WORKFLOW_PATH = '.github/workflows/build.yml';       // where it goes in the user's repository
+  const WORKFLOW_PATH = '.github/workflows/build.yml';       // where the template puts it
 
   const $ = id => document.getElementById('aapsb-' + id);
   // The texts are in the page (hidden list above), so they are translated with it.
@@ -292,14 +321,7 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
   repoInput.value = store.get('ghRepo') || REPO_NAME;
   const repo = () => repoInput.value.trim() || REPO_NAME;
 
-  // Step 2: GitHub's new-file page, prefilled with the file name and the workflow text (value=).
-  // The workflow is short (it calls the reviewed build steps in the AAPS documentation repository).
-  let workflowText = null;
-  const newFilePath = () => '/new/main?filename=' + encodeURIComponent(WORKFLOW_PATH) +
-    (workflowText ? '&value=' + encodeURIComponent(workflowText) : '');
-
   const LINKS = [
-    ['addWorkflow', newFilePath],
     ['openWorkflowFile', '/edit/main/' + WORKFLOW_PATH],
     ['openSecrets', '/settings/secrets/actions/new'],
     ['openSecrets2', '/settings/secrets/actions/new'],
@@ -311,12 +333,14 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
     const u = user();
     store.set('ghUser', u);
     store.set('ghRepo', repo());
-    // github.com/new with documented prefill parameters: an EMPTY private repository, no template.
-    const p = new URLSearchParams({ owner: '@me', name: repo(), visibility: 'private' });
+    // GitHub's own "Use this template" page, with its documented prefill parameters: the copy is
+    // private and contains the build workflow. owner=@me is the signed-in user.
+    const p = new URLSearchParams({ template_owner: TEMPLATE.owner, template_name: TEMPLATE.name,
+                                    owner: '@me', name: repo(), visibility: 'private' });
     $('createRepo').href = 'https://github.com/new?' + p;
     document.querySelectorAll('.aapsb-repoUrl').forEach(el => { el.textContent = `github.com/${u || '…'}/${repo()}`; });
     const base = `https://github.com/${encodeURIComponent(u)}/${encodeURIComponent(repo())}`;
-    for (const [id, path] of LINKS) $(id).href = u ? base + (typeof path === 'function' ? path() : path) : '#aaps-builder-setup-step1';
+    for (const [id, path] of LINKS) $(id).href = u ? base + path : '#aaps-builder-setup-step1';
   }
   userInput.addEventListener('input', updateLinks);
   // Check that the username exists (GitHub's public API, sends only the name)
@@ -337,6 +361,7 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
   for (const [id] of LINKS) {
     $(id).addEventListener('click', e => { if (!user()) { e.preventDefault(); userInput.focus(); alert(t('needUser')); } });
   }
+  $('createRepo').addEventListener('click', () => done(1));
 
   // ---------- helpers ----------
   const utf8 = s => new TextEncoder().encode(s);
@@ -364,47 +389,17 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
   }
   function msg(id, text, cls) { const el = $(id); el.className = 'aapsb-msg ' + cls; el.textContent = text; }
 
-  // ---------- step 2: build workflow (read from the AAPS documentation site only) ----------
-  const WORKFLOW_URL = $('viewWorkflow').href;               // _static/aaps-builder/aaps-builder-build.yml
-  async function loadWorkflow() {
-    const r = await fetch(WORKFLOW_URL, { cache: 'no-store' });
-    if (!r.ok) throw new Error(r.status);
-    const text = (await r.text()).replace(/\r\n/g, '\n');
-    const v = (text.match(/^# AAPS Builder build workflow, version (\S+)/m) || [])[1];
-    if (!v) throw new Error('not the workflow');
-    return { text, v };
-  }
-  loadWorkflow().then(({ text, v }) => {
-    workflowText = text;
-    msg('workflowMsg', t('workflowReady', { v }), 'ok');
-    updateLinks();
-  }).catch(e => { console.error(e); msg('workflowMsg', t('workflowErr'), 'err'); });
-  $('addWorkflow').addEventListener('click', e => {
-    if (!workflowText) { e.preventDefault(); msg('workflowMsg', t('workflowErr'), 'err'); return; }
-    if (user()) done(2);
-  });
-  $('copyWorkflow').addEventListener('click', async () => {
-    try {
-      const { text, v } = await loadWorkflow();
-      await copyText(text);
-      msg('copyWorkflowMsg', t('workflowCopied', { v }), 'ok');
-    } catch (e) {
-      console.error(e);
-      msg('copyWorkflowMsg', t('workflowErr'), 'err');
-    }
-  });
-
   let secretValue = null;
   function setSecret(ksBytes, storePass, alias, keyPass) {
     const raw = [bytesToB64(ksBytes), storePass, alias, keyPass].join('|');
     secretValue = bytesToB64(utf8(raw));
     $('secretPreview').textContent = secretValue.slice(0, 16) + '…';
-    done(3);
-    $('s4wait').hidden = true;
-    $('s4ready').hidden = false;
+    done(2);
+    $('s3wait').hidden = true;
+    $('s3ready').hidden = false;
   }
 
-  // ---------- step 3a: existing keystore ----------
+  // ---------- step 2a: existing keystore ----------
   function parseJks(bytes) {
     const v = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
     if (v.getUint32(0) !== 0xFEEDFEED) return null;
@@ -508,7 +503,7 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
     }
   });
 
-  // ---------- step 3b: new keystore ----------
+  // ---------- step 2b: new keystore ----------
   // Use the browser's cryptographic RNG for everything forge needs (salts, IVs, serial)
   forge.random.getBytesSync = n => String.fromCharCode.apply(null, crypto.getRandomValues(new Uint8Array(n)));
   forge.random.getBytes = (n, cb) => cb ? cb(null, forge.random.getBytesSync(n)) : forge.random.getBytesSync(n);
@@ -553,12 +548,96 @@ APK 不會出現在你的儲存庫「Code」頁籤裡，只會在建置頁面上
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   });
 
-  // ---------- step 4 / 7: copy secret names and value ----------
+  // ---------- step 6: Google Drive access (GDRIVE_OAUTH2) ----------
+  // The same Google OAuth client, scope and PKCE flow as the AAPS preparation page
+  // (github.com/nightscout/aaps-ci-preparation), so the build workflow reads the value the same
+  // way: base64(client_id|refresh_token). Google sends the browser to a loopback address where
+  // nothing listens: the tab shows an error, but its address holds the answer. The user copies that
+  // address here, and this page sends the code to Google's token endpoint, and nowhere else.
+  // The PKCE verifier stays in this tab, so the code is useless to anything else that sees it.
+  const GOOGLE_CLIENT_ID = '705061051276-5ssikkg2ag39l7hj9t63saq549n3s2n5.apps.googleusercontent.com';
+  const GOOGLE_REDIRECT = 'http://127.0.0.1:47913/aaps-builder';
+  const session = {
+    get: k => { try { return sessionStorage.getItem(k); } catch { return null; } },
+    set: (k, v) => { try { sessionStorage.setItem(k, v); } catch {} }
+  };
+  const randomHex = n => [...crypto.getRandomValues(new Uint8Array(n))].map(b => b.toString(16).padStart(2, '0')).join('');
+  const b64url = bytes => bytesToB64(bytes).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+
+  // The link is ready before the tap, so the browser opens it as a normal link and does not
+  // block it as a pop-up.
+  async function setGoogleLink(verifier, state) {
+    const challenge = b64url(new Uint8Array(await crypto.subtle.digest('SHA-256', utf8(verifier))));
+    const p = new URLSearchParams({
+      client_id: GOOGLE_CLIENT_ID, redirect_uri: GOOGLE_REDIRECT, response_type: 'code',
+      scope: 'https://www.googleapis.com/auth/drive.file', access_type: 'offline',
+      // consent: Google sends a refresh token only when the user is asked, also after an earlier grant
+      prompt: 'consent', code_challenge_method: 'S256', code_challenge: challenge, state
+    });
+    $('googleAuth').href = 'https://accounts.google.com/o/oauth2/v2/auth?' + p;
+  }
+  // A new attempt: new verifier and state
+  function newGoogleAttempt() {
+    const verifier = randomHex(32), state = randomHex(16);
+    session.set('gVerifier', verifier);
+    session.set('gState', state);
+    return setGoogleLink(verifier, state);
+  }
+  // Keep the attempt of this tab if the page is reloaded while the user is in the Google tab
+  if (session.get('gVerifier') && session.get('gState')) setGoogleLink(session.get('gVerifier'), session.get('gState'));
+  else newGoogleAttempt();
+
+  let gdriveValue = null;
+  $('googleGo').addEventListener('click', async () => {
+    const text = $('googleUrl').value.trim();
+    if (!text) return msg('googleMsg', t('gNoUrl'), 'err');
+    let params;
+    try { params = new URL(text).searchParams; } catch { return msg('googleMsg', t('gNoCode'), 'err'); }
+    if (params.get('error')) return msg('googleMsg', t('gDenied'), 'err');
+    const code = params.get('code');
+    if (!code) return msg('googleMsg', t('gNoCode'), 'err');
+    if (params.get('state') !== session.get('gState')) return msg('googleMsg', t('gOldUrl'), 'err');
+    $('googleGo').disabled = true;
+    msg('googleMsg', t('gWorking'), '');
+    try {
+      const r = await fetch('https://oauth2.googleapis.com/token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          client_id: GOOGLE_CLIENT_ID, code, code_verifier: session.get('gVerifier'),
+          grant_type: 'authorization_code', redirect_uri: GOOGLE_REDIRECT
+        })
+      });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) {
+        msg('googleMsg', t('gFailed', { error: data.error || r.status }), 'err');
+        await newGoogleAttempt();
+        return;
+      }
+      if (!data.refresh_token) { msg('googleMsg', t('gNoRefresh'), 'err'); await newGoogleAttempt(); return; }
+      gdriveValue = bytesToB64(utf8(GOOGLE_CLIENT_ID + '|' + data.refresh_token));
+      $('gdrivePreview').textContent = gdriveValue.slice(0, 16) + '…';
+      $('gdriveReady').hidden = false;
+      $('googleUrl').value = '';
+      msg('googleMsg', t('gOk'), 'ok');
+      done(6);
+      await newGoogleAttempt();      // the code is used up; a new tap starts a new attempt
+    } catch (e) {
+      console.error(e);
+      msg('googleMsg', t('gFailed', { error: String(e) }), 'err');
+    } finally {
+      $('googleGo').disabled = false;
+    }
+  });
+
+  // ---------- step 3 / 6: copy secret names and values ----------
   document.querySelectorAll('[data-aapsb-copy]').forEach(b => b.addEventListener('click', async () => {
-    const fixed = { name: 'KEYSTORE_SET', gdrive: 'GDRIVE_OAUTH2' };
-    await copyText(fixed[b.dataset.aapsbCopy] ?? secretValue);
-    if (b.dataset.aapsbCopy === 'secret') msg('copyMsg', t('copied'), 'ok');
-    if (b.dataset.aapsbCopy === 'name') msg('copyMsg', t('copiedName'), 'ok');
+    const kind = b.dataset.aapsbCopy;
+    const values = { name: 'KEYSTORE_SET', gdrive: 'GDRIVE_OAUTH2', secret: secretValue, gdriveValue };
+    await copyText(values[kind]);
+    if (kind === 'secret') msg('copyMsg', t('copied'), 'ok');
+    if (kind === 'name') msg('copyMsg', t('copiedName'), 'ok');
+    if (kind === 'gdriveValue') msg('gdriveCopyMsg', t('gCopied'), 'ok');
     const label = b.textContent;
     b.textContent = t('copiedShort');
     setTimeout(() => { b.textContent = label; }, 2000);
