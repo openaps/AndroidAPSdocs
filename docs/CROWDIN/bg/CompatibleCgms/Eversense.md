@@ -49,7 +49,7 @@
 
 ![Излъчване от ESEL (ESEL Broadcast)](../images/ESELpatch.png)
 
-Ако стартирате ESEL за първи път с нова инсталация на Eversense, може да минат до 15 мин, докато първите стойности се появят в xDrip!
+If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
 
 4. Изберете „MM640g“ като източник на КЗ в [**Конфигурация → Източник на КЗ**](#Config-Builder-bg-source).
 
