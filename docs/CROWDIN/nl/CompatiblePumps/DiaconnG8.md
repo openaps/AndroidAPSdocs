@@ -30,7 +30,7 @@ Als die gekozen is, toont de kaart **Diaconn G8** twee knoppen, **Instellingen**
 
 ![Pompscherm van de Diaconn G8 vóór het koppelen](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![Afbeelding](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -47,11 +47,11 @@ De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 
 1. De laatste 5 cijfers van het serienummer (SN) op de achterkant van de pomp.
 2. Klik op de O-knop > Information > BLE > laatste 5 cijfers.
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![Afbeelding](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Als je de pomp kiest, verschijnt een venster dat om een pincode vraagt. Voer de pincode in die op je pomp staat om de verbinding te maken.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![Afbeelding](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 - Als **Succesvol gekoppeld!** verschijnt, tik je op **OK** om terug te gaan naar het pompscherm.
 
@@ -61,7 +61,7 @@ De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 
 - Tik op **Vernieuwen** om verbinding te maken met de pomp, de status bij te werken en de logs te synchroniseren.
 - Tik op **Historiek** om de geschiedenis te zien die uit de pomp is gelezen.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![Afbeelding](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -87,15 +87,15 @@ De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 
 
 - Houd de Bluetooth-knop bovenaan ongeveer 3 seconden ingedrukt.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![Afbeelding](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Klik op de instellingenknop bij de gekoppelde Diaconn G8 insulinepomp.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![Afbeelding](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Ontkoppelen.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![Afbeelding](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - Open in **AAPS** het pompscherm (**Beheren** > **Pomp**), tik op **Ontkoppelen** en bevestig **Koppelingsgegevens opnieuw instellen?**.
 - Koppel de pomp opnieuw via Bluetooth (zie hierboven).
