@@ -41,8 +41,8 @@
 為了讓 AAPS 遠端發送指令，應在幫浦上配置以下設定。每個設定的步驟如下所示（適用於美敦力 715）。具體步驟可能會根據幫浦類型和/或韌體版本有所不同。
 
 - **啟用幫浦上的遠端模式**（在幫浦上按下 Act 並前往工具 -> 遠端選項，選擇開啟，並在下一個畫面中新增 ID，輸入任意隨機 ID，如 111111）。遠端 ID 列表中至少需要一個 ID，幫浦才會接受遠端通訊。
-- **設定最大基礎率**（在幫浦上按下 Act，然後前往基礎率，然後選擇最大基礎率）作為範例，將此數值設置為你最大標準基礎率的四倍，將允許 400% 的臨時基礎率。幫浦允許的最大值為每小時 34.9 單位。
-- **設定最大注射量**（在幫浦上按下 Act 並前往注射，然後選擇最大注射量）這是幫浦可接受的最大注射量。幫浦允許的最大值為 25 單位。
+- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. 幫浦允許的最大值為每小時 34.9 單位。
+- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. 幫浦允許的最大值為 25 單位。
 - **設定設定檔為標準**。（在幫浦上按下 Act 並前往基礎率，然後選擇模式）幫浦只需要一個設定檔，因為 AAPS 會在你的手機上管理不同的設定檔。不需要其他模式。
 - **設定臨時基礎率類型**（在幫浦上按下 Act 並前往基礎率，然後選擇臨時基礎率類型）。選擇絕對值（不要選擇百分比）。
 
@@ -76,8 +76,8 @@ While setting up AAPS to work with your medtronic pump you need to set the follo
 - **幫浦序列號**：顯示在幫浦背面，以 SN 開頭。您應該只輸入顯示的 6 位數字，沒有任何字母字符（例如：123456）。
 - **幫浦型號**：你使用的幫浦型號（例如 522）。 
 - **幫浦頻率**：有兩個選項，根據你的幫浦最初發行的地區。如果你不確定選擇哪個選項，請檢查[常見問題解答](#MedtronicPump-faq)： 
-    - 美國和加拿大使用的頻率為 916 Mhz
-    - 全球其他地區使用的頻率為 868 Mhz
+    - for US & Canada, frequency used is 916 MHz
+    - for Worldwide, frequency used is 868 MHz
 - **幫浦最大基礎率（U/h）**：這需要與你的幫浦上設置的設定相符（請參閱上方的幫浦配置）。再次提醒，此設定必須謹慎選擇，因為他將決定 AAPS 可透過你的基礎率提供的胰島素量。這將有效地設置最大臨時基礎率。作為範例，將此數值設置為你最大標準基礎率的四倍，將允許 400% 的臨時基礎率。幫浦允許的最大值為每小時 34.9 單位。
 - **幫浦最大注射量（U）**（每小時）：這需要與你的幫浦上設置的設定相符（請參閱上方的幫浦配置）。此設定應謹慎考慮，因為他決定了 AAPS 可設置的最大注射量。
 - **注射啟動前的延遲時間（秒）**：注射發出後到實際發送指令到幫浦的時間（以秒為單位）。這段時間允許使用者在錯誤發送注射指令時取消注射。無法取消已透過 AAPS 啟動的注射。取消已開始的注射的唯一方法是手動暫停幫浦，然後再重新啟動。
@@ -166,7 +166,7 @@ AAPS 使用序列號進行同步，序列號會公開到 NS。因為了解舊美
 
 ### OpenAPS 用戶
 
-OpenAPS 用戶應注意，AAPS 與美敦力的使用方式與 OpenAPS 完全不同。使用 AAPS 時，與幫浦互動的主要方式是透過手機。在正常的使用情境下，可能唯一需要使用幫浦選單的時刻是更換儲液筒時。這與使用 OpenAPS 時非常不同，因為至少部分注射通常是透過快速注射按鈕完成的。如果使用幫浦手動輸送注射，而 AAPS 同時嘗試輸送注射，可能會出現問題。在這種情況下有檢查機制來防止問題發生，但仍應盡量避免。
+OpenAPS 用戶應注意，AAPS 與美敦力的使用方式與 OpenAPS 完全不同。使用 AAPS 時，與幫浦互動的主要方式是透過手機。 In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. 這與使用 OpenAPS 時非常不同，因為至少部分注射通常是透過快速注射按鈕完成的。如果使用幫浦手動輸送注射，而 AAPS 同時嘗試輸送注射，可能會出現問題。在這種情況下有檢查機制來防止問題發生，但仍應盡量避免。
 
 ### 日誌紀錄
 
@@ -200,7 +200,7 @@ GNARL 代碼完全支援 AAPS 美敦力驅動程式使用的所有功能，這�
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### 如果我失去與 RileyLink 和/或幫浦的連線該怎麼辦？
+### What to do if I lose connection to RileyLink and/or pump?
 
 有多種選項可以嘗試解決連線問題。
 
@@ -220,7 +220,7 @@ GNARL 代碼完全支援 AAPS 美敦力驅動程式使用的所有功能，這�
 
 - NA - 北美（在頻率選擇中需要選擇“美國和加拿大（916 MHz）”）
 - CA - 加拿大（在頻率選擇中需要選擇“美國和加拿大（916 MHz）”）
-- WW - 全球（在頻率選擇中需要選擇“全球（868 MHz）”）
+- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
 
 (MedtronicPump-pump-unreachable)=
 
@@ -229,7 +229,7 @@ GNARL 代碼完全支援 AAPS 美敦力驅動程式使用的所有功能，這�
 Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
 
 1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
-2. Set **Medtronic Encoding** to **Hardware Encoding**.
+2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
 
 ## 如何尋求協助
 
