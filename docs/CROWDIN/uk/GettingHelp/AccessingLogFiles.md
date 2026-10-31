@@ -1,15 +1,15 @@
 (Accessing-logfiles-accessing-logfiles)=
 
-# Accessing logfiles
+# Доступ до файлів журналу (логів)
 
-* Connect phone to a computer in file transfer mode
-* Locate the log files in the AAPS data directory, in `Android\data\info.nightscout.androidaps\files`.  
-    The naming of the root storage folder may vary a little depending on the phone.
-* The location is `Android\data\info.nightscout.aapsclient\files` for [AAPSClient](#RemoteControl_aapsclient).
-* Note : log location has changed in **AAPS 3.3**. See the previous versions' documentation if needed.
+* Підключіть телефон до комп'ютера в режимі передавання файлів
+* Файли журналу знаходяться в папці даних AAPS: `Android\data\info.nightscout.androidaps\files`.  
+    Назва кореневої папки сховища може трохи відрізнятися залежно від телефону.
+* Для [AAPSClient](#RemoteControl_aapsclient) це місце: `Android\data\info.nightscout.aapsclient\files`.
+* Примітка: місце збереження журналів змінилося в **AAPS 3.3**. За потреби дивіться документацію попередніх версій.
 
-![logs](../images/aapslog.png)
+![журнали](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
-* Previous log files are zipped and stored in folders in date/time order. 
-* If you are sharing your log file in [discord](https://discord.gg/4fQUWHZ4Mw) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* Поточний журнал – це файл .log. Його можна переглянути різними способами: через [LogCat](https://developer.android.com/studio/debug/am-logcat.html) в Android Studio, у будь-якому застосунку Android для перегляду журналів або просто як звичайний текст. 
+* Попередні файли журналу стиснуті в zip і зберігаються в папках за датою та часом. 
+* Якщо ви ділитеся файлом журналу в [discord](https://discord.gg/4fQUWHZ4Mw), щоб обговорити можливу помилку, розпакуйте та вивантажте файл з датою до того, як сталася помилка.
