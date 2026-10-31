@@ -2,7 +2,7 @@
 
 # AAPS-webinstaller
 
-Installeer de **AAPS** APK die je hebt gebouwd op je Android-telefoon, rechtstreeks vanuit deze browser, via een USB-kabel. Geen command-line, niets te downloaden. Apps die zo (via ADB) worden geïnstalleerd, zijn **vrijgesteld van de Android-ontwikkelaarsverificatie van Google**.
+Installeer de **AAPS** APK die je hebt gebouwd op je Android-telefoon, rechtstreeks vanuit deze browser, via een USB-kabel. Geen opdrachtregel, niets te downloaden. Apps die zo (via ADB) worden geïnstalleerd, zijn **vrijgesteld van de Android-ontwikkelaarsverificatie van Google**.
 
 ```{admonition} This page runs entirely in your browser
 :class: tip
