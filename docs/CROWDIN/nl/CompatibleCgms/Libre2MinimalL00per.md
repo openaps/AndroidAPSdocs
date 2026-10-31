@@ -6,7 +6,7 @@ Onderaan dit document staat een lijst met definities. Ken je een term of afkorti
 
  
 
-## Configuration
+## Configuratie
 
 ### Hardware
 
@@ -57,7 +57,7 @@ Onderaan dit document staat een lijst met definities. Ken je een term of afkorti
   - [*Stap 8: Verzamelen van data duurt 3 tot 15 minuten*](#minimallooper-step8)
   - [*Stap 9: Controleer of de sensor verbonden is en data levert*](#minimallooper-step9)
 
-- *[Notes](#minimallooper-notes)*
+- *[Notities](#minimallooper-notes)*
 - *[Voordelen](#minimallooper-advantages)*
 - *[Nadelen](#minimallooper-disadvantages)*
 - <u>*\[Probleemoplossing\](#minimallooper-troubleshooting)*</u>
@@ -309,7 +309,7 @@ Op het scherm **BT Device** (veeg naar links) kun je meer verbindingsdetails van
 
 (minimallooper-notes)=
 
-### Notes
+### Notities
 
 - **NFC-scans met LL NADAT het koppelen in xDrip klaar is**: je kunt NFC-scans doen, maar het koppelen met xDrip moet eerst klaar zijn. Kijk altijd in xDrip of de volgende 5-minutenwaarde bijna komt (bijv. 4 minuten geleden). Is het bijna 5 min, wacht dan tot de nieuwe BT-waarde binnen is en doe daarna de NFC-scan. Scan je op het verkeerde moment, dan verstoor je het BT-proces in xDrip en komen er geen BT-waarden binnen. Het kan dan een tijdje duren voordat er opnieuw gekoppeld en verzonden wordt, en soms kan LL de BT-verbinding van de sensor "afpakken". Maar tussen deze BT-waarden door heb ik nooit problemen gehad met een NFC-scan, gevolgd door het direct uitschakelen van de app. Ik weet niet zeker of LL elke keer uitgeschakeld moet worden, maar ik doe het voor de zekerheid.
 
