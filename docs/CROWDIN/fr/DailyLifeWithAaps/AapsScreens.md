@@ -131,7 +131,7 @@ Une confirmation est demandée après chaque choix.
 
 Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
-* Est-ce que la connexion avec Dexcom (Dexcom Bridge) est activée sur votre instance Nightscout ? Désactivez cette connexion en allant dans l'interface d'administration de votre instance Nightscout, éditez la variable "ENABLED" et retirez la partie "bridge" à cet endroit. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* Est-ce que la connexion avec Dexcom (Dexcom Bridge) est activée sur votre instance Nightscout ? Désactivez cette connexion en allant dans l'interface d'administration de votre instance Nightscout, éditez la variable "ENABLED" et retirez la partie "bridge" à cet endroit. (Pour heroku, [vous trouverez les détails ici](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Y a-t-il plusieurs sources qui envoient votre glycémie vers Nightscout ? Si vous utilisez l'application BYODA, activez l'envoi dans **AAPS**, mais ne l'activez pas dans xDrip, si vous l'utilisez.
 * Avez-vous des suiveurs qui pourraient recevoir votre glycémie mais aussi la renvoyer vers votre site Nightscout ?
 * En dernier recours : dans les [paramètres NSClient](#Preferences-nsclient), choisissez les paramètres de synchronisation et désactivez l'option « Recevoir les données MGC depuis NS ».
@@ -421,7 +421,7 @@ Insuline Active incluant les bolus **et la basal**.
 
 (aaps-screens-iob)=
 
-#### Insulin on board (IOB)
+#### Insuline Active (IA)
 
 Affiche la quantité d'insuline que vous avez à chaque instant (= insuline active dans votre corps). Elle inclut l'insuline des bolus et des débits de basal temporaires (**mais exclut les débits de basal définis dans votre profil**).
 
@@ -578,7 +578,7 @@ La ligne d'icônes sous l'en-tête montre quelles entrées sont prises dans le c
 * Pour des raisons de sécurité, l'entrée IA ne peut pas être désactivée quand les GA sont activés, car vous risqueriez de recevoir trop d'insuline : **AAPS** ne tiendrait pas compte de ce qui a déjà été injecté.
 * Si vous activez GA et IA, les glucides non absorbés qui ne sont pas déjà couverts par de l'insuline + toute l'insuline injectée en DBT ou en SMB seront pris en compte.
 * Si vous activez IA sans GA, **AAPS** tient compte de l'insuline déjà injectée, mais ne la compense pas avec les glucides encore à absorber. Cela conduit à un avis de « manque de glucides ».
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. De cette façon, seuls les nouveaux glucides sont ajoutés, car le repas principal n'est pas forcément absorbé. Peu après un bolus de repas, l'IA ne correspond donc pas exactement aux GA.
+* Si vous faites un bolus pour de la **nourriture supplémentaire** peu après un bolus de repas (par ex. un dessert en plus), il peut être utile de **désactiver toutes les entrées**. De cette façon, seuls les nouveaux glucides sont ajoutés, car le repas principal n'est pas forcément absorbé. Peu après un bolus de repas, l'IA ne correspond donc pas exactement aux GA.
 * Pour des raisons de sécurité, une **cible temporaire** est prise dans le calcul seulement si vous activez son entrée à la main.
 
 (AapsScreens-section-j)=
@@ -613,7 +613,7 @@ Le champ **Gly** est normalement déjà rempli avec la dernière valeur de votre
 
 Le bouton de résultat en bas affiche le bolus proposé ; quand vous appuyez dessus, une confirmation est demandée avant toute injection d'insuline.
 
-Good to know:
+Bon à savoir :
 
 * Si le bolus calculé est plus élevé que votre **[Bolus maximum](#Preferences-maximum-bolus)**, il est réduit au bolus maximum, et la confirmation affiche l'avertissement « Contrainte de Bolus appliquée ». Un [Assistant Rapide](../DailyLifeWithAaps/QuickWizards.md) est refusé à la place.
 * Quand le bolus est seulement enregistré (par exemple quand la pompe est déconnectée), l'avertissement « **Les bolus seront seulement enregistrés** » reste en haut de la boîte de dialogue, même quand vous faites défiler.
@@ -746,9 +746,9 @@ Permet de revenir en arrière dans l'historique d'**AAPS**. Voir la page dédié
 
 (aaps-screens-statistics)=
 
-## Statistics
+## Statistiques
 
-![Statistics](../images/v4/Screens/statistics.png)
+![Statistiques](../images/v4/Screens/statistics.png)
 
 Ouvrez le **menu** (☰) et choisissez **Statistiques**.
 
