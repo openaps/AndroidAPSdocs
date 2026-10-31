@@ -1,170 +1,170 @@
 # Accu-Chek Insight
 
-**Ce logiciel fait partie d'une solution de pancréas artificiel DIY (Faire soi même) et n'est pas un produit, mais exige que VOUS oblige à lire, apprendre et comprendre le système, y compris comment l'utiliser. Ce n'est pas quelque chose qui gère tout votre gestion du diabète à votre place, mais il vous permet d'améliorer votre diabète et votre qualité de vie, si vous êtes prêt à y mettre le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
+**Ce logiciel fait partie d'une solution de pancréas artificiel DIY (à faire soi-même). Ce n'est pas un produit, mais il exige que VOUS lisiez, appreniez et compreniez le système, y compris comment l'utiliser. Il ne gère pas tout votre diabète à votre place, mais il vous permet d'améliorer votre diabète et votre qualité de vie, si vous êtes prêt à y consacrer le temps nécessaire. Ne vous précipitez pas, prenez le temps d'apprendre. Vous êtes le seul responsable de ce que vous faites avec ce système.**
 
-```{admonition} Accu-Chek Insight is being phased out :class: note
+```{admonition} L'Accu-Chek Insight est en cours d'arrêt :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. Support for the Insight is already listed as ended (see [Pumps no longer sold](./Future-possible-Pump-Drivers.md)). If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche se retire du marché des pompes à insuline pour recentrer son offre diabète sur le MGC Accu-Chek SmartGuide. Roche a annoncé la fin des ventes des pompes Accu-Chek Combo et Accu-Chek Insight ; sa dernière micropompe, l'Accu-Chek Solo, est aussi en cours d'arrêt (dernières livraisons en Allemagne fin 2025). Ce changement se fait région par région. Il commence en Allemagne, et les autres marchés européens devraient suivre. Le support de l'Insight est déjà indiqué comme terminé (voir [Pompes qui ne sont plus vendues](./Future-possible-Pump-Drivers.md)). Si vous dépendez de cette pompe, préparez à l'avance le passage à une pompe prise en charge.
 
     <br />```{note}
-    Before **AAPS** had a native Insight driver, the Insight was controlled through the separate [SightRemote](https://github.com/TebbeUbben/SightRemote) app. SightRemote is no longer needed or maintained: if you still have it installed from those days, uninstall it and use a current version of **AAPS** instead.
+    Avant que **AAPS** ait un pilote Insight intégré, l'Insight était contrôlée par l'application séparée [SightRemote](https://github.com/TebbeUbben/SightRemote). SightRemote n'est plus nécessaire et n'est plus maintenue : si elle est encore installée depuis cette époque, désinstallez-la et utilisez une version actuelle d'**AAPS**.
     
 
-```{contents} Table of contents :depth: 1 :local: true
+```{contents} Table des matières :depth: 1 :local: true
 
-    <br />## Pump capabilities with AAPS
+    <br />## Fonctions de la pompe avec AAPS
     
-    * Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-    * Automatic DST and timezone handling.
+    * Communique avec **AAPS** par le Bluetooth intégré de votre téléphone, sans appareil de communication supplémentaire.
+    * Gestion automatique de l'heure d'été et du fuseau horaire.
     
-    ## Hardware and software requirements
+    ## Matériel et logiciel nécessaires
     
-    * A Roche Accu-Chek Insight pump (any firmware, they all work)
+    * Une pompe Roche Accu-Chek Insight (tous les firmwares fonctionnent)
     
-    Note: AAPS will write data always in **first basal rate profile in the pump**.
+    Remarque : AAPS écrit toujours les données dans le **premier profil de débit basal de la pompe**.
     
-    * An Android phone running Android 12 or newer (see [Phones](../Getting-Started/Phones.md))
-    * The AAPS app installed on your phone
+    * Un téléphone Android avec Android 12 ou plus récent (voir [Téléphones](../Getting-Started/Phones.md))
+    * L'application AAPS installée sur votre téléphone
     
-    ## Setup
+    ## Configuration
     
-    * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: **Menu** > **Settings** > **Communication** > **Remove device**.
+    * La pompe Insight ne doit être connectée qu'à un seul appareil à la fois. Si vous avez déjà utilisé la télécommande Insight (lecteur), vous devez supprimer le lecteur de la liste des appareils appairés de votre pompe : **Menu** > **Settings** > **Communication** > **Remove device**.
     
-       ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
+       ![Capture d'écran : supprimer le lecteur de l'Insight](../images/Insight_RemoveMeter.png)
     
-    * In [Configuration > Pump](#Config-Builder-pump), select the **Accu-Chek Insight** card. Only one pump can be active at a time.
+    * Dans [Configuration > Pompe](#Config-Builder-pump), choisissez la carte **Accu-Chek Insight**. Une seule pompe peut être active à la fois.
     
-       ![Configuration > Pump with the Accu-Chek Insight plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+       ![Configuration > Pompe avec le plugin Accu-Chek Insight](../images/v4/Configuration/configuration_pump_list_1.png)
     
-       Once it is selected, the **Accu-Chek Insight** card shows two buttons, **Settings** and **Open plugin**:
+       Une fois le plugin choisi, la carte **Accu-Chek Insight** affiche deux boutons, **Paramètres** et **Ouvrir le plugin** :
     
-       ![The Accu-Chek Insight plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_insight_enabled.png)
+       ![Le plugin Accu-Chek Insight choisi dans Configuration > Pompe](../images/v4/Pumps/accu_chek_insight_enabled.png)
     
-       **Settings** opens the settings of the Accu-Chek Insight driver (see [Settings in AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
+       **Paramètres** ouvre les paramètres du pilote Accu-Chek Insight (voir [Paramètres dans AAPS](#Accu-Chek-Insight-Pump-settings-in-aaps)).
     
-       **Open plugin** (or **Manage → Pump**) opens the Accu-Chek Insight pump screen. Before a pump is paired it looks like this:
+       **Ouvrir le plugin** (ou **Gestion → Pompe**) ouvre l'écran de la pompe Accu-Chek Insight. Avant l'appairage d'une pompe, il ressemble à ceci :
     
-       ![Accu-Chek Insight pump screen before pairing](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
+       ![Écran de la pompe Accu-Chek Insight avant l'appairage](../images/v4/Pumps/accu_chek_insight_pump_screen.png)
     
     (accu-chek-insight-pairing)=
-    ### Pairing
+    ### Appairage
     
-    * On the pump screen, tap **Insight pairing**. The pairing wizard opens and searches for nearby Bluetooth devices (top of the picture below).
-    * On the Insight pump, go to **Menu** > **Settings** > **Communication** > **Add Device**. The pump shows the following screen (bottom of the picture below) with the serial number of the pump.
+    * Sur l'écran de la pompe, touchez **Appairage de Insight**. L'assistant d'appairage s'ouvre et recherche les appareils Bluetooth à proximité (en haut de l'image ci-dessous).
+    * Sur la pompe Insight, allez dans **Menu** > **Settings** > **Communication** > **Add Device**. La pompe affiche l'écran suivant (en bas de l'image ci-dessous) avec le numéro de série de la pompe.
     
-       ![Screenshot of Insight Pairing 1](../images/Insight_Pairing1.png)
+       ![Capture d'écran : appairage Insight 1](../images/Insight_Pairing1.png)
     
-    * Back on your phone, tap the pump serial number in the list of Bluetooth devices. If Android asks you to confirm the pairing, tap **Pair**.
+    * De retour sur votre téléphone, touchez le numéro de série de la pompe dans la liste des appareils Bluetooth. Si Android vous demande de confirmer l'appairage, touchez **Appairer**.
     
-       ![Screenshot of Insight Pairing 2](../images/Insight_Pairing2.png)
+       ![Capture d'écran : appairage Insight 2](../images/Insight_Pairing2.png)
     
-    * The pump and the phone both show a code. Check that the codes are the same on both devices. Confirm on the pump, and tap **Yes** on the phone. (Tap **No** if the codes do not match.)
+    * La pompe et le téléphone affichent tous les deux un code. Vérifiez que les codes sont identiques sur les deux appareils. Confirmez sur la pompe, et touchez **Oui** sur le téléphone. (Touchez **Non** si les codes ne correspondent pas.)
     
-       ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
+       ![Capture d'écran : appairage Insight 3](../images/Insight_Pairing3.png)
     
-    * The phone shows **Pairing completed**. Tap **Exit** to return to the pump screen.
+    * Le téléphone affiche **Appairage terminé**. Touchez **Quitter** pour revenir à l'écran de la pompe.
     
-       ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
+       ![Capture d'écran : appairage Insight 4](../images/Insight_Pairing4.png)
     
-    * To check that all is well, look at the pump screen (**Manage → Pump**). Once the pump is paired, it shows information about the pump, such as **Serial number**, **Manufacturing date**, **Release software version** and **Bluetooth address**.
+    * Pour vérifier que tout va bien, regardez l'écran de la pompe (**Gestion → Pompe**). Une fois la pompe appairée, l'écran affiche des informations sur la pompe, comme le **Numéro de série**, la **Date de fabrication**, la **Version du logiciel** et l'**Adresse Bluetooth**.
     
-       ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
+       ![Capture d'écran : informations d'appairage Insight](../images/Insight_PairingInformation.png)
     
-       ```{admonition} Older screenshot
+       ```{admonition} Ancienne capture d'écran
        :class: note
-       Apart from the top of the first picture, the pairing screenshots above are from an earlier **AAPS** version and may look different in **AAPS** 4.
+       Sauf le haut de la première image, les captures d'écran d'appairage ci-dessus viennent d'une version plus ancienne d'**AAPS** et peuvent être différentes dans **AAPS** 4.
        ```
     
-    * To remove the pairing, tap **Unpair** on the pump screen and confirm **Reset pairing information?**. The **Insight pairing** button then appears again.
+    * Pour supprimer l'appairage, touchez **Désappairer** sur l'écran de la pompe et confirmez **Réinitialiser les informations d'appairage ?**. Le bouton **Appairage de Insight** apparaît alors de nouveau.
     
-    Note: There is no permanent connection between the pump and the phone. **AAPS** only connects when needed (for example to set a temporary basal rate, give a bolus or read the pump history). Otherwise the batteries of the phone and the pump would drain far too fast.
+    Remarque : il n'y a pas de connexion permanente entre la pompe et le téléphone. **AAPS** se connecte seulement quand c'est nécessaire (par exemple pour régler un débit basal temporaire, donner un bolus ou lire l'historique de la pompe). Sinon, les piles du téléphone et de la pompe se videraient beaucoup trop vite.
     
     (Accu-Chek-Insight-Pump-settings-in-aaps)=
-    ## Settings in AAPS
+    ## Paramètres dans AAPS
     
-    Open the settings with **Settings** on the **Accu-Chek Insight** card in **Configuration** > **Pump**, or with the gear icon in the top-right corner of the pump screen.
+    Ouvrez les paramètres avec **Paramètres** sur la carte **Accu-Chek Insight** dans **Configuration** > **Pompe**, ou avec l'icône en forme de roue dentée en haut à droite de l'écran de la pompe.
     
-    ![Accu-Chek Insight driver settings](../images/v4/Pumps/accu_chek_insight_settings.png)
+    ![Paramètres du pilote Accu-Chek Insight](../images/v4/Pumps/accu_chek_insight_settings.png)
     
-    In the Insight settings in **AAPS** you can enable the following options:
+    Dans les paramètres Insight d'**AAPS**, vous pouvez activer les options suivantes :
     
-    * **Log reservoir changes**: automatically records an insulin cartridge change when you run the "fill cannula" program on the pump.
+    * **Enreg. changement de réservoir** : enregistre automatiquement un changement de cartouche d'insuline quand vous lancez le programme "fill cannula" (remplir la canule) sur la pompe.
     
-    * **Log tube changes**: adds a note to the **AAPS** database when you run the "tube filling" program on the pump.
+    * **Enreg. changement de tubulure** : ajoute une note dans la base de données d'**AAPS** quand vous lancez le programme "tube filling" (remplissage de la tubulure) sur la pompe.
     
-    * **Log site changes**: adds a note to the **AAPS** database when you run the "cannula filling" program on the pump. **Note: A site change also resets Autosens.**
+    * **Enreg. changement de site** : ajoute une note dans la base de données d'**AAPS** quand vous lancez le programme "cannula filling" (remplissage de la canule) sur la pompe. **Remarque : un changement de site réinitialise aussi Autosens.**
     
-    * **Log battery changes**: records a battery change when you put a new battery in the pump.
+    * **Enreg. changement batterie** : enregistre un changement de pile quand vous mettez une nouvelle pile dans la pompe.
     
-    * **Log operating mode changes**: adds a note to the **AAPS** database whenever you start, stop or pause the pump.
+    * **Enreg. changement mode de fonctionnement** : ajoute une note dans la base de données d'**AAPS** chaque fois que vous démarrez, arrêtez ou mettez en pause la pompe.
     
-    * **Log alerts**: adds a note to the **AAPS** database whenever the pump issues an alert (except reminders, bolus and TBR cancellation, which are not recorded).
+    * **Enreg. alertes** : ajoute une note dans la base de données d'**AAPS** chaque fois que la pompe émet une alerte (sauf les rappels, l'annulation de bolus et l'annulation de DBT, qui ne sont pas enregistrés).
     
-    * **Enable TBR emulation**: the Insight pump can only set temporary basal rates (TBRs) up to 250%. To get around this limit, TBR emulation tells the pump to deliver an extended bolus for the extra insulin if a TBR of more than 250% is requested.
+    * **Activer l’émulation de DBT** : la pompe Insight peut seulement régler des débits basaux temporaires (DBT) jusqu'à 250 %. Pour contourner cette limite, l'émulation de DBT demande à la pompe d'injecter un bolus étendu pour l'insuline en plus si un DBT de plus de 250 % est demandé.
     
-      **Note: Only use one extended bolus at a time. Several extended boluses at the same time might cause errors.**
+      **Remarque : n'utilisez qu'un seul bolus étendu à la fois. Plusieurs bolus étendus en même temps peuvent provoquer des erreurs.**
     
-    * **Disable vibrations on manual bolus delivery**: stops the Insight pump from vibrating when it delivers a manual bolus (or extended bolus). Only available with Insight firmware 3.x.
+    * **Désactiver les vibrations des bolus manuels** : empêche la pompe Insight de vibrer quand elle injecte un bolus manuel (ou un bolus étendu). Disponible seulement avec le firmware Insight 3.x.
     
-    * **Disable vibrations on automated bolus delivery**: stops the Insight pump from vibrating when it delivers an automatic bolus (SMB or temp basal with TBR emulation). Only available with Insight firmware 3.x.
+    * **Désactiver les vibrations des bolus automatiques** : empêche la pompe Insight de vibrer quand elle injecte un bolus automatique (SMB ou basal temporaire avec émulation de DBT). Disponible seulement avec le firmware Insight 3.x.
     
-    * **Min. recovery duration [s]** and **Max. recovery duration [s]**: how long **AAPS** waits before trying again after a failed connection attempt. Vous pouvez choisir entre 0 et 20 secondes. If you have connection problems, choose a longer wait time.
-        <br><br>Example for min. de récupération = 5 et durée max. recovery duration = 20
-        <br><br>no connection -> wait <b>5</b> sec.
-          <br>  retry -> no connection -> wait <b>6</b> sec.
-          <br>  retry -> no connection -> wait <b>7</b> sec.
-          <br>  retry -> no connection -> wait <b>8</b> sec.
+    * **Durée min. de récupération [s]** et **Durée max. de récupération [s]** : combien de temps **AAPS** attend avant de réessayer après une tentative de connexion échouée. Vous pouvez choisir entre 0 et 20 secondes. Si vous avez des problèmes de connexion, choisissez un temps d'attente plus long.
+        <br><br>Exemple pour durée min. de récupération = 5 et durée max. de récupération = 20
+        <br><br>pas de connexion -> attendre <b>5</b> s
+          <br>  nouvel essai -> pas de connexion -> attendre <b>6</b> s
+          <br>  nouvel essai -> pas de connexion -> attendre <b>7</b> s
+          <br>  nouvel essai -> pas de connexion -> attendre <b>8</b> s
           <br>...
-          <br>retry -> no connection -> wait <b>20</b> sec.
-          <br>retry -> no connection -> wait <b>20</b> sec.
+          <br>nouvel essai -> pas de connexion -> attendre <b>20</b> s
+          <br>nouvel essai -> pas de connexion -> attendre <b>20</b> s
           <br>...
     
-    * **Disconnect delay [s]**: how long (in seconds) **AAPS** waits before disconnecting from the pump after an operation is finished. You can choose from 0 to 15 seconds. The default value is 5 seconds.
+    * **Délai de déconnexion [s]** : combien de temps (en secondes) **AAPS** attend avant de se déconnecter de la pompe quand une opération est terminée. Vous pouvez choisir entre 0 et 15 secondes. La valeur par défaut est 5 secondes.
     
-    For periods when the pump was stopped, **AAPS** logs a temporary basal rate of 0%.
+    Pour les périodes où la pompe était arrêtée, **AAPS** enregistre un débit basal temporaire de 0 %.
     
-    ### The pump screen
+    ### L'écran de la pompe
     
-    The Accu-Chek Insight pump screen (**Manage → Pump**) shows the current status of the pump, for example **Status**, **Last connected**, **Operating mode**, **Battery**, **Reservoir level**, today's total daily doses (**TDD Bolus**, **TDD Basal**), basal rates and the last bolus. Once the pump is paired, it has these buttons:
+    L'écran de la pompe Accu-Chek Insight (**Gestion → Pompe**) affiche l'état actuel de la pompe, par exemple **État**, **Dernière connexion**, **Mode de fonctionnement**, **Pile**, **Niveau du réservoir**, les doses totales quotidiennes du jour (**DTQ Bolus**, **DTQ Basale**), les débits basaux et le dernier bolus. Une fois la pompe appairée, il a ces boutons :
     
-    * **Refresh**: refreshes the pump status.
-    * **Enable notification of TBR end (pump setting)** / **Disable notification of TBR end (pump setting)**: a standard Insight pump sounds an alarm when a TBR finishes. This button turns that alarm on or off without the need for configuration software.
-    * **Unpair**: removes the pairing with the pump (see [Pairing](#accu-chek-insight-pairing)).
+    * **Actualiser** : actualise l'état de la pompe.
+    * **Activer la notification de la fin DBT (réglage de pompe)** / **Désactiver la notification de la fin de DBT (réglage de pompe)** : une pompe Insight standard émet une alarme quand un DBT se termine. Ce bouton active ou désactive cette alarme sans avoir besoin du logiciel de configuration.
+    * **Désappairer** : supprime l'appairage avec la pompe (voir [Appairage](#accu-chek-insight-pairing)).
     
-    ![Screenshot of Insight Status](../images/Insight_Status2.png)
+    ![Capture d'écran : état Insight](../images/Insight_Status2.png)
     
-    ```{admonition} Older screenshot
+    ```{admonition} Ancienne capture d'écran
     :class: note
-    The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump screen looks different and also has an **Unpair** button.
+    La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**. Dans **AAPS** 4, l'écran de la pompe est différent et a aussi un bouton **Désappairer**.
     
 
 ## Paramètres de la pompe
 
 Configurez les alarmes dans la pompe comme suit :
 
-* Menu > Réglages > Réglages pompe > Réglages Mode > Silencieux > Signal > Sonore
-* Menu > Réglages > Réglages pompe > Réglages Mode > Silencieux > Volume > 0 (suppimez toutes les barres)
-* Menu > Modes > Type de signal > Silencieux
+* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (supprimez toutes les barres)
+* Menu > Modes > Signal mode > Quiet
 
-This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Cela coupe le son de toutes les alarmes de la pompe, et AAPS décide si une alarme est importante pour vous. Si AAPS n'acquitte pas une alarme, son volume augmente (d'abord un bip, puis une vibration).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
 ### Vibration
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
+Selon la version du firmware de votre pompe, l'Insight vibre brièvement à chaque bolus injecté (par exemple quand AAPS envoie un SMB ou quand l'émulation de DBT injecte un bolus étendu).
 
 * Firmware 1.x : Aucune vibration par conception.
 * Firmware 2.x : Les vibrations ne peuvent pas être désactivées.
-* Firmware 3.x: AAPS delivers bolus silently.
+* Firmware 3.x : AAPS injecte les bolus sans vibration.
 
-La version du firmware se trouve dans le menu Appairage de Insight / Version du logiciel.
+La version du firmware se trouve dans le menu.
 
 ## Remplacement de pile
 
-La durée de vie de la pile de l'Insight, lorsque vous bouclez, est comprise entre 10 et 14 jours, et au maximum 20 jours. L'utilisateur qui a déclaré cela utilise des piles Energizer ultimate lithium.
+La durée de vie de la pile de l'Insight, lorsque vous bouclez, est comprise entre 10 et 14 jours, et au maximum 20 jours. L'utilisateur qui a signalé cela utilise des piles au lithium Energizer.
 
-La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer à nouveau la date et l'heure après avoir mis la nouvelle pile. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer à nouveau la date et l'heure après avoir mis la nouvelle pile. Si cela arrive, toutes les entrées d'AAPS avant le changement de pile ne sont plus prises en compte dans les calculs, car l'heure correcte ne peut pas être déterminée.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 
@@ -176,22 +176,22 @@ Il ne faut utiliser qu'un seul bolus étendu à la fois car plusieurs bolus éte
 
 ### Délai expiré
 
-Sometimes the Insight pump does not answer while **AAPS** sets up the connection. **AAPS** then shows the notification "Timeout during handshake - reset bluetooth".
+Parfois, la pompe Insight ne répond pas pendant qu'**AAPS** établit la connexion. **AAPS** affiche alors la notification "Expiration pendant l'appairage - réinitialiser le Bluetooth".
 
 ![Réinitialisation Bluetooth Insight](../images/Insight_ResetBT.png)
 
-If this happens, turn off Bluetooth on the pump AND on the phone for about 10 seconds, then turn it back on.
+Si cela arrive, désactivez le Bluetooth sur la pompe ET sur le téléphone pendant environ 10 secondes, puis réactivez-le.
 
 ## Voyager avec différents fuseaux horaires avec une pompe Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](#timezone-traveling-insight).
+Pour les voyages avec changement de fuseau horaire, voir la section [Voyager avec changement de fuseau horaire avec les pompes](#timezone-traveling-insight).
 
-## Where to get help
+## Où obtenir de l'aide
 
-Development of the Insight driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Le pilote Insight est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lire** la section de cette documentation qui concerne votre problème, pour vérifier comment la fonction doit marcher.
+2. **Demander** sur le canal *#AAPS* sur [Discord](https://discord.gg/4fQUWHZ4Mw), ou dans un des autres [canaux de la communauté](../GettingHelp/WhereCanIGetHelp.md).
+3. **Signaler un bug** en cherchant dans les [tickets existants](https://github.com/nightscout/AndroidAPS/issues) ; si le vôtre n'y est pas, ouvrez un [nouveau ticket](https://github.com/nightscout/AndroidAPS/issues) et joignez vos [fichiers log](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Pour demander de l'aide, indiquez la marque et le modèle de votre téléphone, la version d'Android, la version d'**AAPS** et une description simple du problème (ce qui a changé, quand cela a fonctionné pour la dernière fois).
