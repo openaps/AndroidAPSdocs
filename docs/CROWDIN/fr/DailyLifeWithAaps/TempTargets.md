@@ -42,7 +42,7 @@ Les utilisateurs peuvent aussi envisager de :
 
 - *choisir* cette **CT** 1–2 heures avant l'exercice prévu pour avoir moins d'IA (le bon moment pour cette CT varie selon les personnes) ; et
 - *choisir* un profil temporaire (réduit) pendant la durée de l'activité prévue, pour avoir moins d'**IA** ;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *s'assurer* que la **CT** est programmée pour être *désactivée* peu avant l'exercice, car l'**IA** est déjà réduite et certains utilisateurs ont une montée rapide de la **glycémie** après l'exercice.
 
 ### CT - Repas imminent
 
@@ -209,7 +209,7 @@ Pour simplifier la **cible temporaire Activité**, l'utilisateur peut configurer
 
 Les nouveaux utilisateurs d'**AAPS** peuvent avoir besoin de tester et de personnaliser les réglages par défaut de leur **cible temporaire Activité** pour que cette fonction marche au mieux pour eux. Chaque personne est différente pour obtenir une glycémie stable pendant l'exercice. Voir aussi la [section sport de la FAQ](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Vous pouvez démarrer les deux en une seule étape : appuyez sur le nom du profil sur l'écran principal, appuyez sur le bouton rond **▶**, réglez un **Pourcentage** sous 100 % et une **Durée**, puis activez **Cible Temp / Activité**. Voir [Modifier le pourcentage du profil](#ProfileSwitch-change-percentage).
+Certains utilisateurs préfèrent aussi activer un **Changement de profil** (une baisse du profil < 100 % pour réduire l'insuline délivrée par **AAPS**) avant et pendant la **cible temporaire Activité**. Vous pouvez démarrer les deux en une seule étape : appuyez sur le nom du profil sur l'écran principal, appuyez sur le bouton rond **▶**, réglez un **Pourcentage** sous 100 % et une **Durée**, puis activez **Cible Temp / Activité**. Voir [Modifier le pourcentage du profil](#ProfileSwitch-change-percentage).
 
 Avancé, objectif 9 : les utilisateurs peuvent activer *« Cible Temp haute augmente la sensibilité »* pour les **cibles temporaires** de 100 mg/dl (5,6 mmol/l) ou plus dans OpenAPS **SMB**. Une cible de 99 mg/dl (5,5 mmol/l) est une cible normale, ni haute ni basse. **AAPS** est alors plus sensible.
 
@@ -221,7 +221,7 @@ De plus, si *« Activer les SMB avec Cibles Temp hautes »* est désactivé, **A
 
 La **cible temporaire - Repas imminent** peut aider à faire baisser doucement la **glycémie** et à avoir assez d'**IA** avant de manger.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. En général, tant qu'ils n'ont pas d'expérience avec **AAPS**, les utilisateurs doivent prévoir un pré-bolus quand ils utilisent la **cible temporaire - Repas imminent**, surtout avec une alimentation riche en glucides.
+Cela peut être un outil important pour les utilisateurs qui ne font pas de pré-bolus. Cependant, l'efficacité de la **cible temporaire - Repas imminent** dépend de plusieurs facteurs, notamment : les réglages de l'utilisateur, s'il suit une alimentation pauvre en glucides et s'il utilise une insuline rapide (comme Fiasp ou Lyumjev) pour ne plus avoir besoin de pré-bolus. En général, tant qu'ils n'ont pas d'expérience avec **AAPS**, les utilisateurs doivent prévoir un pré-bolus quand ils utilisent la **cible temporaire - Repas imminent**, surtout avec une alimentation riche en glucides.
 
 Vous pouvez en savoir plus sur le « mode Repas imminent » dans l'article [« How to do “eating soon” mode »](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (en anglais) ou [ici](https://diyps.org/tag/eating-soon-mode/).
 
