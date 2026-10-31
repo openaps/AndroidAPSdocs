@@ -73,7 +73,7 @@ Closed Loop is only possible if you are in **[Objective 7](#objectives-objective
 
 Благодаря микроболюсам SMB при компенсации блюд, содержащих только "медленные" углеводы, системе достаточно сообщить только о запланированном количестве углеводов, в остальном положившись на **AAPS**. Однако это может дать более высокие постпрандиальные (после приема пищи) пики, поскольку преболюс не вводился. Или, при необходимости, можно предварительно ввести **преболюс**, который ** только частично** покрывает углеводы (например, 2/3 от предполагаемого количества), и позволить алгоритму **SMB** ввести оставшуюся часть инсулина.
 
-![SMB на основном графике](../images/SMBs.png)
+![SMBs on the IOB graph](../images/SMBs.png)
 
 SMBs are shown on the [IOB graph](#aaps-screens-iob) with blue triangles. [Press and hold](#aaps-screens-graph-press-and-hold) the graph at a triangle to see how much insulin was delivered, or use the [Treatments history](#aaps-screens-treatments).
 
