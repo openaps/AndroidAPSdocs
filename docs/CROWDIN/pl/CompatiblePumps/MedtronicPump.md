@@ -41,8 +41,8 @@ Porównanie różnych urządzeń kompatybilnych z RileyLink znajdziesz na [getri
 Poniższe ustawienia powinny zostać skonfigurowane na pompie, aby AAPS mógł zdalnie przesyłać polecenia. Kroki niezbędne do dokonania każdej zmiany na Medtronic 715 są pokazane w nawiasach dla każdego ustawienia. Dokładne kroki mogą różnić się w zależności od typu pompy i/lub wersji oprogramowania.
 
 - **Włącz tryb zdalny na pompie** (na pompie naciśnij Act i przejdź do Utilities -> Remote Options, wybierz On, a na następnym ekranie wybierz Add ID i dodaj dowolne ID, na przykład 111111). Przynajmniej jedno ID musi być na liście zdalnych ID, aby pompa spodziewała się zdalnej komunikacji.
-- **Ustaw maksymalną dawkę bazową** (na pompie naciśnij Act, przejdź do Basal i wybierz Max Basal Rate). Przykład: ustawienie tej wartości na cztery razy więcej niż twoja największa standardowa dawka bazowa pozwoli na bazę tymczasową 400%. Maksymalna wartość dozwolona przez pompę to 34,9 jednostki na godzinę.
-- **Ustaw maksymalny bolus** (na pompie naciśnij Act, przejdź do Bolus i wybierz Max Bolus). To największy bolus, jaki pompa przyjmie. Maksymalna wartość dozwolona przez pompę to 25.
+- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. Maksymalna wartość dozwolona przez pompę to 34,9 jednostki na godzinę.
+- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. Maksymalna wartość dozwolona przez pompę to 25.
 - **Ustaw schemat na Standard**. (na pompie naciśnij Act, przejdź do Basal, a potem Select Patterns) Pompa potrzebuje tylko jednego profilu, bo AAPS będzie zarządzać różnymi profilami na twoim telefonie. Inne schematy nie są potrzebne.
 - **Ustaw rodzaj tymczasowej dawki bazowej** (na pompie naciśnij Act, przejdź do Basal, a potem Temp Basal Type). Wybierz Absolute (nie Percent).
 
@@ -76,8 +76,8 @@ Podczas konfiguracji AAPS do pracy z pompą Medtronic musisz ustawić następuj�
 - **Numer seryjny pompy**: Wyświetlany na odwrocie pompy i zaczyna się od SN. Wpisz tylko 6 pokazanych cyfr, bez liter (np. 123456).
 - **Typ pompy**: Model pompy, której używasz (np. 522). 
 - **Częstotliwość pompy**: Są dwie możliwości, w zależności od tego, gdzie twoja pompa była pierwotnie sprzedawana. Sprawdź [FAQ](#MedtronicPump-faq), jeśli nie wiesz, którą opcję wybrać): 
-    - dla USA i Kanady częstotliwość to 916 MHz
-    - dla reszty świata (Worldwide) częstotliwość to 868 MHz
+    - for US & Canada, frequency used is 916 MHz
+    - for Worldwide, frequency used is 868 MHz
 - **Max dawka bazowa w pompie (U/h)**: To ustawienie musi zgadzać się z ustawieniem w pompie (zobacz konfigurację pompy powyżej). Tę wartość też trzeba wybrać ostrożnie, bo określa, ile insuliny AAPS może podać przez dawkę bazową. W praktyce ustawia to maksymalną dawkę bazy tymczasowej. Przykład: ustawienie tej wartości na cztery razy więcej niż twoja największa standardowa dawka bazowa pozwoli na bazę tymczasową 400%. Maksymalna wartość dozwolona przez pompę to 34,9 jednostki na godzinę.
 - **Max bolus w pompie (U)** (w ciągu godziny): To ustawienie musi zgadzać się z ustawieniem na pompie (zobacz konfigurację pompy powyżej). To ustawienie powinno być starannie wybrane, ponieważ będzie ono określać jak duży bolus może dostarczyć AAPS.
 - **Opóźnienie przed rozpoczęciem bolusa(s)**: Liczba sekund od zlecenia bolusa do chwili, gdy polecenie zostanie naprawdę wysłane do pompy. Ten okres pozwala użytkownikowi na anulowanie bolusa w przypadku gdy polecenie zostało wysłane przez pomyłkę. Nie można anulować przez AAPS bolusa, który już się zaczął. Jedyny sposób, aby anulować bolus, który już się zaczął, to ręcznie zawiesić pompę, a potem ją wznowić.
@@ -166,7 +166,7 @@ AAPS używa numeru seryjnego do synchronizacji i ten numer jest widoczny w NS. Z
 
 ### Użytkownicy OpenAPS
 
-Użytkownicy OpenAPS powinni zwrócić uwagę, że AAPS z pompami Medtronic używa kompletnie innego podejścia niż OpenAPS. W AAPS z pompą komunikujesz się głównie przez telefon. W normalnym użyciu menu pompy będzie prawdopodobnie potrzebne tylko przy wymianie zbiornika. Znacznie różni się to od używania OpenAPS, gdzie przynajmniej część bolusów jest zazwyczaj dostarczana za pomocą przycisków szybkiego bolusu. W przypadku gdy pompa jest użyta do ręcznego podania bolusa, mogą wystąpić problemy, gdy AAPS próbuje dostarczyć bolus w tym samym czasie. Istnieją zabezpieczenia, które próbują zapobiegać takim problemom, ale mimo to należy tego w miarę możliwości unikać.
+Użytkownicy OpenAPS powinni zwrócić uwagę, że AAPS z pompami Medtronic używa kompletnie innego podejścia niż OpenAPS. W AAPS z pompą komunikujesz się głównie przez telefon. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. Znacznie różni się to od używania OpenAPS, gdzie przynajmniej część bolusów jest zazwyczaj dostarczana za pomocą przycisków szybkiego bolusu. W przypadku gdy pompa jest użyta do ręcznego podania bolusa, mogą wystąpić problemy, gdy AAPS próbuje dostarczyć bolus w tym samym czasie. Istnieją zabezpieczenia, które próbują zapobiegać takim problemom, ale mimo to należy tego w miarę możliwości unikać.
 
 ### Logi
 
@@ -200,7 +200,7 @@ Kod GNARL w pełni wspiera wszystkie funkcje używane przez sterownik Medtronic 
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### Co zrobić, gdy utracę połączenie z RileyLink i/lub z pompą?
+### What to do if I lose connection to RileyLink and/or pump?
 
 Jest kilka możliwości rozwiązania problemów z łącznością.
 
@@ -220,7 +220,7 @@ Na odwrocie pompy znajdziesz fragment opisujący numer twojego modelu wraz ze sp
 
 - NA – North America, Ameryka Północna (przy wyborze częstotliwości musisz wybrać „USA i Kanada (916 MHz)”)
 - CA – Canada, Kanada (przy wyborze częstotliwości musisz wybrać „USA i Kanada (916 MHz)”)
-- WW – Worldwide, reszta świata (przy wyborze częstotliwości musisz wybrać „Świat (868 Mhz)”)
+- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
 
 (MedtronicPump-pump-unreachable)=
 
@@ -229,7 +229,7 @@ Na odwrocie pompy znajdziesz fragment opisujący numer twojego modelu wraz ze sp
 Niektóre pompy Medtronic po aktualizacji **AAPS** zgłaszają błąd „pump unreachable” (pompa nieosiągalna). Aby to naprawić, zmień typ kodowania:
 
 1. Przejdź do **Konfiguracja** > **Pompa** i dotknij **Ustawienia** na karcie **Medtronic**.
-2. Ustaw **Kodowanie Medtronic** na **Sprzętowe kodowanie 4b6b (w RileyLink)**.
+2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
 
 ## Gdzie uzyskać pomoc
 
