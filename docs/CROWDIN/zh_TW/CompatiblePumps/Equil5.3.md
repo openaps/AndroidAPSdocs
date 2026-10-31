@@ -9,123 +9,123 @@
 
 ## 幫浦與AAPS的功能
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* 無導管貼片式幫浦，可透過手機內建的藍牙與 **AAPS** 通訊，不需要額外的通訊裝置。
+* **AAPS** 將 Equil 視為儲液槽容量為 200 U 的貼片式幫浦：主畫面會顯示貼片式幫浦的狀態燈號，且不提供 **預充／填充**和 **更換幫浦電池**功能。填充、預充和更換電池都要在幫浦嚮導中完成。
+* 幫浦暫停或停止時，**AAPS** 會記錄一筆 0 U/h 的臨時基礎率，因此不會將基礎胰島素計入活性胰島素。
+* 夏令時間和時區變更必須手動處理。
 
 ## 硬體和軟體需求
 * **相容的 Equil 硬體**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  目前支援 Equil 5.3 和 5.4。
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* 依照 [建置 APK](../SettingUpAaps/BuildingAaps.md) 說明建置並安裝的 **AAPS**
 
 ## 設定
 
 ### 選擇 Equil 幫浦
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+點選左上角的 **選單**（☰），選擇 **[組態設定工具](#Config-Builder-pump)**，然後在 **幫浦**下方選取 **Equil**。
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+選取後，**Equil** 卡片上會顯示兩個按鈕：**設定**和 **開啟外掛**：
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![在「組態設定工具」&gt;「幫浦」中選取的 Equil 外掛](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+點選 **開啟外掛**（或 **管理** → **幫浦**）即可開啟 Equil 幫浦畫面。尚未配對幫浦時，畫面如下：
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![尚未配對時的 Equil 幫浦畫面](../images/v4/Pumps/equil_pump_screen.png)
 
 ### 設定
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+點選 **Equil** 卡片上的 **設定**，或點選幫浦畫面右上角的齒輪圖示，即可開啟 Equil 設定。
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Equil 驅動程式設定](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **電池電量不足警示**：幫浦電池電量不足時發出警示。
+* **藥量不足警示**：儲液槽中的胰島素不足時發出警示。
+* **警示音效**：設定幫浦發出警示的方式：**靜音**、**僅震動**、**僅音效**或 **震動和音效**。
+* **注射速度**：設定注射速度：**1.5 U/min（標準）**、**3 U/min**、**6 U/min**或 **12 U/min**。較快的注射速率可能會觸發更多阻塞警報。
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![Equil 設定中的注射速度選項](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+貼片本身會拒絕任何高於 **AAPS** 設定上限的基礎率。 **AAPS** 會採用你的 **最高基礎率**[設定](../SettingUpAaps/Preferences.md)與 **設定檔**中最高的每小時基礎率，兩者之中較高的數值。因此，貼片一定會接受你的設定檔，以及循環功能要求的臨時基礎率。 **AAPS** 也會將允許的最高注射量傳送至貼片。
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+變更 **最高基礎率**或 **最高注射量**時，**AAPS** 會自動將新數值傳送至貼片。每次切換設定檔時，也會傳送這些數值。不需要在貼片本身進行任何設定。
 ```
 
-### Pair the pump
+### 配對幫浦
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+在幫浦畫面中，按下 **配對**。嚮導會逐步引導你完成各項操作。頂端的圓點列會顯示目前的進度。
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+如果 Android 詢問是否允許 **AAPS** 搜尋並連線至附近的裝置，請按下 **允許**。 **AAPS** 需要這項權限才能搜尋幫浦。
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Android 詢問是否允許搜尋附近裝置的畫面](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+嚮導包含以下步驟。按下 **下一步**繼續，或按下 **取消**離開嚮導。
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **需要設定檔**：只有在你尚未於 **AAPS** 中註冊任何 **設定檔**時，才會顯示此步驟。選取要使用的設定檔，然後按下 **啟用設定檔**。
+1. **組裝幫浦**：組裝幫浦、已填充的儲液槽和已充電的電池。
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![「組裝幫浦」步驟](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **尋找幫浦**：**AAPS** 會搜尋附近的 Equil 幫浦。從清單中選取你的幫浦。
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![「尋找幫浦」步驟，清單中顯示一台 Equil 幫浦](../images/Equil/find_pump.png)
+1. **配對裝置**：你可以在 **設定配對密碼**中輸入配對密碼。密碼必須為 4 個字元，且只能使用 `ABCDEF0123456789`。按下 **配對**。
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![「配對裝置」步驟，畫面中顯示配對密碼](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **選取胰島素**：只有在設定了多種胰島素時才會顯示。選取藥量中的胰島素。
+1. **預充／填充**：幫浦**不可**放在底板上。按下**預充／填充**，為藥量預充，直到針尖上出現一滴胰島素。按下 **下一步**。
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![預充／填充步驟](../images/Equil/prime_fill.png)
+1. **部位輪替**：只有在部位輪替設定中開啟**管理幫浦部位輪替**時才會顯示。點選要安裝幫浦的位置，或按下**略過**。
+1. **安裝幫浦**：將幫浦安裝到底板上。
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![安裝幫浦步驟](../images/Equil/attach_pump.png)
+1. **預充套管**：幫浦安裝到底板上後，按下**排出空氣**，排出套管中的空氣。按下 **下一步**。
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![使用「排出空氣」按鈕預充套管的步驟](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **確認**：將幫浦戴在身上，然後按下**完成**。
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![使用「完成」按鈕確認的步驟](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+如果您設定了自己的配對密碼（建議這麼做以確保安全），請將密碼存放在安全的地方。密碼會儲存在幫浦中。每次重新配對時，幫浦都會要求輸入密碼，直到您在 **AAPS** 中正確取消配對為止。在此之前，您也無法使用原廠手持控制器（PDA）操作幫浦。
 ```
 
-### Pump screen after pairing
+### 配對後的幫浦螢幕
 
-Once the pump is paired, the pump screen shows these buttons:
+幫浦配對後，幫浦螢幕會顯示以下按鈕：
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **重新整理**：立即讀取幫浦的狀態和歷史記錄。
+* **暫停**／**恢復輸注**：停止或重新開始輸注胰島素。
+* **更換藥量**：引導您取下幫浦、裝入新的藥量（以及視需要更換電池）、預充，然後重新安裝幫浦。第一個步驟會詢問：*您也要換上新的輸注組（底板和套管）嗎？*
+  * **是，使用新的輸注組**：您可以選擇部位並預充套管，而**AAPS**會記錄胰島素更換和套管更換。
+  * **否，只更換藥量或電池**：不會預充套管，而**AAPS**只會記錄胰島素更換。
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  更換藥量後，電池電量會顯示為**-**，直到**AAPS**再次從幫浦讀取電量為止。
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![「更換藥量」的第一個步驟會詢問是否要換上新的輸注組](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **歷史記錄**：顯示幫浦記錄的事件。
+* **取消裝置配對**：引導您取下幫浦，並取消幫浦與**AAPS**的配對。這會停止胰島素輸注、將幫浦的活塞退回底部，並刪除配對資料。
 
 ### 警報
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* 低胰島素警報會在每個剩餘量門檻（10 U、5 U 和 2 U）各響一次，並在藥量用盡時響起。低電量警報會在電量降至 10% 和 5% 時各響一次。每個門檻只會警報一次，直到下次更換藥量為止。
+* 幫浦警報和停止輸注事件也會以通知的形式記錄在治療資料中，並標註幫浦記錄事件的時間，方便您日後查看幫浦停止的時間和原因。
+* 如果藥量在注射期間用盡，**AAPS**只會記錄到當時已注射的胰島素量，並告知您兩個數值。
 
 ## 如何尋求協助
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Equil 驅動程式由社群以**志願**方式開發。尋求協助前，請先：
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **請閱讀**本文件中相關的章節，確認此功能的運作方式。
+2. 請在 [Discord](https://discord.gg/4fQUWHZ4Mw) 的 *#AAPS* 頻道，或其他[社群頻道](../GettingHelp/WhereCanIGetHelp.md)之一**提出問題**。
+3. 若要**回報錯誤**，請先搜尋[現有問題](https://github.com/nightscout/AndroidAPS/issues)；如果沒有列出您的問題，請[新增問題](https://github.com/nightscout/AndroidAPS/issues)，並附上您的[紀錄檔](../GettingHelp/AccessingLogFiles.md)。
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+尋求協助時，請提供手機廠牌與型號、Android 版本、**AAPS** 版本，以及簡明易懂的問題描述（發生了什麼變化、上次正常運作的時間）。
