@@ -59,7 +59,7 @@ La Boucle Fermée n'est possible que si vous êtes à l'**[Objectif 7](#objectiv
 - Changer une canule ou changer de profil réinitialise le ratio Autosens à 100 % (un changement de profil en pourcentage avec une durée ne réinitialise pas Autosens).
 - Autosens ajuste votre basal et votre SI (c.-à-d. qu'il imite ce que fait un changement de profil).
 - Si vous mangez des glucides en continu pendant une longue période, Autosens sera moins efficace pendant cette période, car les glucides sont exclus du calcul des deltas de **glycémie**.
-- The deviations are converted into a **sensitivity ratio** (a percentage): a ratio below 100% means AAPS thinks you're more sensitive to insulin than your **Profile** assumes (so it lowers effective basal and raises the ISF value), while a ratio above 100% means you're more resistant (so it raises basal and lowers the ISF value).
+- Les déviations sont converties en un **ratio de sensibilité** (un pourcentage) : un ratio sous 100 % signifie qu'AAPS pense que vous êtes plus sensible à l'insuline que ce que votre **Profil** suppose (il baisse donc le débit basal effectif et augmente la valeur de SI), tandis qu'un ratio au-dessus de 100 % signifie que vous êtes plus résistant (il augmente donc le débit basal et baisse la valeur de SI).
 - Par défaut, ce ratio reste entre 0,7 (70 %, plus sensible) et 1,2 (120 %, plus résistant), pour qu'une série de données inhabituelles ne puisse pas trop éloigner vos doses de votre **Profil**. Ces limites peuvent être modifiées dans les paramètres avancés du Calcul de Sensibilité.
 - Autosens et [Autotune](../AdvancedOptions/Autotune.md) traitent le même problème de fond sur des échelles de temps différentes : Autosens ajuste vos doses *en direct*, minute par minute, selon les 8 à 24 dernières heures, alors qu'Autotune réécrit lentement votre *Profil* lui-même, selon des semaines d'historique. Il est normal et prévu d'utiliser les deux : ils se complètent au lieu de faire double emploi.
 
@@ -103,7 +103,7 @@ Les paramètres d'OpenAPS SMB sont décrits ci-dessous.
 
 (Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
-### Maximum basal rate
+### Débit de base maximum
 
 Ce paramètre de sécurité détermine le débit basal temporaire maximal que la pompe à insuline peut délivrer. On l'appelle aussi **max-basal**.
 
@@ -190,9 +190,9 @@ Quand elle est activée, de nouveaux paramètres apparaissent.
 
 Si ce paramètre est activé, les **SMB** sont toujours délivrés même si l'utilisateur a choisi une **Cible Temp** haute (c.-à-d. 100 mg/dl ou 5,6 mmol/l et plus, quelle que soit la cible du **Profil**). Soyez prudent en l'activant : les **SMB** peuvent devenir trop agressifs si vos paramètres ne sont pas bien réglés ou si votre **Profil** change souvent (par exemple chez les enfants).
 
-When this setting is disabled, a high **Temp Target** turns **SMBs** off. Par exemple, si cette option est désactivée, vous pouvez désactiver les **SMB** en réglant une **Cible Temp** de 100 mg/dl ou 5,6 mmol/l et plus. Cette option désactive aussi les **SMB**, quelle que soit l'autre condition qui essaie de les activer, sauf avec une **Cible Temp** basse comme **Repas imminent** (ou toute **Cible Temp** de 98 mg/dl ou 5,4 mmol/l et moins), qui peut encore délivrer des **SMB** pour amener la **glycémie** vers la cible.
+Quand ce paramètre est désactivé, une **Cible Temp** haute désactive les **SMB**. Par exemple, si cette option est désactivée, vous pouvez désactiver les **SMB** en réglant une **Cible Temp** de 100 mg/dl ou 5,6 mmol/l et plus. Cette option désactive aussi les **SMB**, quelle que soit l'autre condition qui essaie de les activer, sauf avec une **Cible Temp** basse comme **Repas imminent** (ou toute **Cible Temp** de 98 mg/dl ou 5,4 mmol/l et moins), qui peut encore délivrer des **SMB** pour amener la **glycémie** vers la cible.
 
-This setting does not turn **SMB** on by itself. With a high temp target, **SMB** is only given if one of the other settings below (for example **Enable SMB always** or **Enable SMB with COB**) also allows it.
+Ce paramètre n'active pas les **SMB** à lui seul. Avec une cible temporaire haute, un **SMB** n'est donné que si un des autres paramètres ci-dessous (par exemple **Activer en permanence les SMB** ou **Activer SMB avec les GA**) le permet aussi.
 
 (Open-APS-features-enable-smb-always)=
 
@@ -323,7 +323,7 @@ AMA, abréviation de « advanced meal assist » (assistance repas avancée), est
 
 Vous pouvez trouver plus d'informations dans la [documentation OpenAPS](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Maximum basal rate (OpenAPS "max-basal")
+### Débit de base maximum (OpenAPS « max-basal »)
 
 Ce paramètre de sécurité empêche **AAPS** de pouvoir donner un débit basal dangereusement élevé et limite le débit basal temporaire à x U/h. Il est conseillé de choisir une valeur raisonnable. Une bonne règle est de prendre le débit basal le plus élevé de votre profil et de le multiplier par 4, et au moins par 3. Par exemple, si le débit basal le plus élevé de votre profil est de 1,0 U/h, vous pouvez le multiplier par 4 pour obtenir 4 U/h, et régler 4 comme paramètre de sécurité.
 
