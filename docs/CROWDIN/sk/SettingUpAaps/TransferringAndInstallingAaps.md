@@ -1,274 +1,274 @@
-# Transferring and Installing AAPS on your smartphone
+# Prenos a inštalácia AAPS do smartfónu
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
+V predchádzajúcej časti, [Zostavenie **AAPS**](../SettingUpAaps/BuildingAaps.md), ste na počítači zostavili aplikáciu **AAPS** (je to súbor .apk).
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+Ďalším krokom je **preniesť** súbor APK **AAPS** (a aj ďalšie aplikácie, ktoré môžete potrebovať, napríklad BYODA, xDrip alebo inú aplikáciu na príjem dát z CGM) do vášho smartfónu s Androidom a potom aplikáciu (aplikácie) **nainštalovať**. Po inštalácii **AAPS** do smartfónu môžete prejsť na [**nastavenie okruhu AAPS**](../SettingUpAaps/SetupWizard.md).
 
-This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
+Táto stránka tiež vysvetľuje [overovanie vývojárov pre Android](#android-developer-verification). Je to zmena, ktorú Google zavádza od septembra 2026 a ktorá ovplyvňuje inštaláciu vlastnoručne zostavených aplikácií. Opisuje aj [bezplatné spôsoby inštalácie](#android-developer-verification-free-methods), ktoré budú fungovať aj po tejto zmene.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Installing AAPS by tapping the APK file
+## Inštalácia AAPS ťuknutím na súbor APK
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
+Dnes sa **AAPS** inštaluje tak, že súbor APK prenesiete do telefónu a otvoríte ho (ťuknete naň). Existuje niekoľko spôsobov, ako preniesť súbor APK **AAPS** z počítača do smartfónu. Tu vysvetľujeme dva rôzne spôsoby:
 
-* Option 1 -  Use your Google drive (Gdrive)
-* Option 2 -  Use a USB cable
+* Možnosť 1 – pomocou Disku Google (Gdrive)
+* Možnosť 2 – pomocou kábla USB
 
-Please note that transfer by email might cause difficulties, and is discouraged.
+Upozorňujeme, že prenos e-mailom môže spôsobovať problémy a neodporúča sa.
 
 ```{admonition} Android developer verification
 :class: warning
-Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, use one of the [free installation methods](#android-developer-verification-free-methods) further down this page.
+Google zavádza [overovanie vývojárov pre Android](#android-developer-verification) od septembra 2026 (najprv v Brazílii, Indonézii, Singapure a Thajsku; na celom svete v roku 2027). Tam, kde sa overovanie vyžaduje, je inštalácia súboru APK ťuknutím na súbor – ako to opisujú obe možnosti nižšie – zablokovaná. V takom prípade použite jeden z [bezplatných spôsobov inštalácie](#android-developer-verification-free-methods) nižšie na tejto stránke.
 ```
 
-### Option 1. Use Google drive to transfer files
+### Možnosť 1. Prenos súborov pomocou Disku Google
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+Vo webovom prehliadači otvorte [Google.com](https://www.google.com/) a prihláste sa do svojho účtu Google.
 
-On the right upper side select the Drive app in the Google menu.
+Vpravo hore v ponuke Google vyberte aplikáciu Disk.
 
-![Start Drive App](../images/GoogleDriveInWebbrowser.png)
+![Spustenie aplikácie Disk Google](../images/GoogleDriveInWebbrowser.png)
 
-Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
+Kliknite vľavo hore na **Nový** (New) (alebo kliknite pravým tlačidlom na prázdne miesto pod vašimi súbormi a priečinkami) a vyberte **Nahrať súbor** (File upload).
 
-![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
+![Nahratie súboru apk cez aplikáciu Disk Google](../images/GoogleDriveUploadFile.png)
 
-The apk file should now be uploaded on Google Drive.
+Súbor apk by teraz mal byť nahratý na Disk Google.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### Inštalácia súboru apk pomocou aplikácie Disk Google
 
-Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
+Prepnite sa do mobilu a spustite aplikáciu Disk Google. Je to predinštalovaná aplikácia a nájdete ju tam, kde sú ostatné aplikácie Google, alebo vyhľadaním jej názvu.
 
-![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
+![spustite aplikáciu Disk Google](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
+Inštaláciu súboru apk spustíte ťuknutím na názov súboru v aplikácii Disk Google v mobile.
 
-![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
+![spustite inštaláciu súboru apk](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
+Ak dostanete bezpečnostné upozornenie, že momentálne nemáte povolené inštalovať aplikácie z Disku Google, ťuknite na „Nastavenia“ a povoľte to len na tento krátky čas. Potom to znova zakážte, pretože nechať to stále povolené je bezpečnostné riziko.
 
-![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Bezpečnostné upozornenie Disku Google](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Bezpečnostné upozornenie Disku Google](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finishes, you are done with this step.
+Po dokončení inštalácie je tento krok hotový.
 
-You should see the **AAPS** icon and be able to open the app.
+Mali by ste vidieť ikonu **AAPS** a mať možnosť otvoriť aplikáciu.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**DÔLEŽITÉ BEZPEČNOSTNÉ UPOZORNENIE**
+Nezabudli ste zakázať inštaláciu z Disku Google?
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Pokračujte [nastavením okruhu AAPS](../SettingUpAaps/SetupWizard.md).
 
-### Option 2. Use a USB cable to transfer files
+### Možnosť 2. Prenos súborov pomocou kábla USB
 
-The second way to transfer the AAPS apk file is with a [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+Druhý spôsob, ako preniesť súbor apk AAPS, je pomocou [kábla USB](https://support.google.com/android/answer/9064445?hl=en).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Preneste súbor z jeho umiestnenia v počítači do priečinka „downloads“ (Stiahnuté súbory) v telefóne.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+V telefóne budete musieť povoliť inštaláciu z neznámych zdrojov. Vysvetlenia, ako to urobiť, nájdete na internete (_napr._ [tu](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) alebo [tu](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+Keď súbor prenesiete pretiahnutím, otvorte v telefóne priečinok „Stiahnuté súbory“ (Downloads) a ťuknite na súbor apk AAPS:
 
-![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
+![Súbor apk v priečinku Stiahnuté súbory](../images/install/install_01_downloads_apk.png)
 
-The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
+Pri prvej inštalácii vám Android oznámi, že telefón nemá povolené inštalovať neznáme aplikácie z tohto zdroja. Ťuknite na „**Nastavenia**“:
 
-![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+![Bezpečnostné upozornenie pre neznáme aplikácie](../images/install/install_02_unknown_apps_notice.png)
 
-Enable "**Allow from this source**", then go back:
+Zapnite „**Povoliť z tohto zdroja**“ a vráťte sa späť:
 
-![Allow from this source enabled](../images/install/install_04_unknown_apps_allowed.png)
+![Zapnuté Povoliť z tohto zdroja](../images/install/install_04_unknown_apps_allowed.png)
 
-Press the apk file again and select "**Install**":
+Znova ťuknite na súbor apk a vyberte „**Inštalovať**“:
 
-![Install prompt](../images/install/install_05_install_prompt.png)
+![Výzva na inštaláciu](../images/install/install_05_install_prompt.png)
 
-When the installation is finished, press "**Open**" to start **AAPS**, or "**Done**" to open it later:
+Keď sa inštalácia dokončí, ťuknite na „**Otvoriť**“, aby ste spustili **AAPS**, alebo na „**Hotovo**“, ak ju chcete otvoriť neskôr:
 
-![App installed](../images/install/install_07_app_installed.png)
+![Aplikácia je nainštalovaná](../images/install/install_07_app_installed.png)
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
+**DÔLEŽITÉ BEZPEČNOSTNÉ UPOZORNENIE**
+Po inštalácii nezabudnite znova vypnúť „Povoliť z tohto zdroja“, pretože nechať to stále zapnuté je bezpečnostné riziko.
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Pokračujte [nastavením okruhu AAPS](../SettingUpAaps/SetupWizard.md).
 
 (transferring-installing-play-protect-warning)=
-## Google Play Protect warning
+## Upozornenie Google Play Protect
 
-When you install **AAPS**, Google Play Protect may warn you that the app is unsafe, was built for an older version of Android and doesn't include the latest privacy protections.
+Keď inštalujete **AAPS**, Google Play Protect vás môže upozorniť, že aplikácia nie je bezpečná, bola zostavená pre staršiu verziu Androidu a neobsahuje najnovšiu ochranu súkromia.
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+![Upozornenie Google Play Protect](../images/troubleshooting/InstallGPP.png)
 
-This is expected for an app you built yourself. Tap **More details**, then **Install anyway**.
+Pri aplikácii, ktorú ste si zostavili sami, je to očakávané. Ťuknite na **Ďalšie podrobnosti** (More details) a potom na **Napriek tomu inštalovať** (Install anyway).
 
-If the installation is **blocked** with a message about an unverified developer (not just a warning), see [Android developer verification](#android-developer-verification) below.
+Ak je inštalácia **zablokovaná** so správou o neoverenom vývojárovi (nie je to len upozornenie), pozrite si časť [Overovanie vývojárov pre Android](#android-developer-verification) nižšie.
 
 (android-developer-verification)=
 
-## Android developer verification
+## Overovanie vývojárov pre Android
 
-Google is introducing **Android developer verification**: on most Android phones, apps will only install if they were registered with Google by a verified developer. This also applies to apps installed from an APK file ("sideloading") — which is how you install the **AAPS** app you built yourself.
+Google zavádza **overovanie vývojárov pre Android**: na väčšine telefónov s Androidom sa budú dať nainštalovať iba aplikácie, ktoré v Google zaregistroval overený vývojár. Týka sa to aj aplikácií inštalovaných zo súboru APK („sideloading“) – a presne takto inštalujete aplikáciu **AAPS**, ktorú ste si sami zostavili.
 
-### What is changing
+### Čo sa mení
 
-When you install **AAPS** on a phone with Google services (a "certified" Android device — virtually every phone sold with the Play Store), Android will check whether the app comes from a developer registered with Google. If not, the normal installation by tapping the APK file is blocked.
+Keď inštalujete **AAPS** do telefónu so službami Google („certifikované“ zariadenie s Androidom – prakticky každý telefón predávaný s Obchodom Play), Android overí, či aplikácia pochádza od vývojára zaregistrovaného v Google. Ak nie, bežná inštalácia ťuknutím na súbor APK je zablokovaná.
 
-**The check happens when an app is installed or updated.** It does not remove apps that are already installed and running.
+**Kontrola prebieha pri inštalácii alebo aktualizácii aplikácie.** Neodstraňuje aplikácie, ktoré sú už nainštalované a bežia.
 
-Google is rolling this out gradually:
+Google to zavádza postupne:
 
-| When               | What happens                                                                                                                              |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| August 2026        | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones                   |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
-| 2027               | Enforcement expands to the **rest of the world** and to **all installations**, including APK files                                        |
+| Kedy               | Čo sa stane                                                                                                                                               |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| August 2026        | Bezplatné vývojárske účty s „obmedzenou distribúciou“ sú dostupné na celom svete a do telefónov sa začína dostávať „rozšírený postup“ (advanced flow)     |
+| 30. september 2026 | Overovanie sa vyžaduje v **Brazílii, Indonézii, Singapure a Thajsku** pre aplikácie inštalované z Google Play a niekoľkých ďalších obchodov s aplikáciami |
+| 2027               | Overovanie sa rozšíri na **zvyšok sveta** a na **všetky inštalácie** vrátane súborov APK                                                                  |
 
-Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
+Podrobnosti zverejňuje Google na stránkach [Android developer verification](https://developer.android.com/developer-verification) (overovanie vývojárov pre Android) vrátane [častých otázok](https://developer.android.com/developer-verification/guides/faq). Google môže termíny a podrobnosti ešte zmeniť; táto stránka sa bude aktualizovať podľa toho, ako bude zavádzanie pokračovať.
 
-### Does this affect me?
+### Týka sa to aj mňa?
 
-- **Building AAPS is not affected at all.** The [browser build](#browser-build), the [Android Studio build](ComputerBuild.md) and the [CLI build](CLIBuild.md) work exactly as before, and your keystore does not change.
-- **Your current AAPS keeps running.** Verification is only checked when installing or updating an app.
-- **If you live in Brazil, Indonesia, Singapore or Thailand:** from September 30, 2026, verification is enforced for apps installed from Google Play and a few other app stores. Google states that installing an APK file directly is not covered by this first step, so **AAPS** should still install as usual. Nevertheless, prepare one of the [free installation methods](#android-developer-verification-free-methods) below now, so that you are not caught out if this changes.
-- **If you live anywhere else:** nothing changes for you before 2027, and doing nothing for now is a legitimate choice. But set up one of the [free installation methods](#android-developer-verification-free-methods) below while nothing is broken: discovering the block on the day an update is refused, with the [advanced flow's](#android-developer-verification-advanced-flow) 24-hour wait ahead of you, is the wrong moment.
-- **Old phones:** verification applies to phones running Android 7 or higher, which means every phone able to run **AAPS**.
+- **Na zostavenie AAPS to nemá žiadny vplyv.** [Zostavenie v prehliadači](#browser-build), [zostavenie v Android Studiu](ComputerBuild.md) aj [zostavenie z príkazového riadku](CLIBuild.md) fungujú presne ako predtým a vaše úložisko kľúčov sa nemení.
+- **Vaše súčasné AAPS beží ďalej.** Overenie sa kontroluje iba pri inštalácii alebo aktualizácii aplikácie.
+- **Ak žijete v Brazílii, Indonézii, Singapure alebo Thajsku:** od 30. septembra 2026 sa overovanie vyžaduje pre aplikácie inštalované z Google Play a niekoľkých ďalších obchodov s aplikáciami. Google uvádza, že priama inštalácia súboru APK do tohto prvého kroku nepatrí, takže **AAPS** by sa malo stále inštalovať ako zvyčajne. Napriek tomu si už teraz pripravte jeden z [bezplatných spôsobov inštalácie](#android-developer-verification-free-methods) nižšie, aby vás neprekvapilo, ak sa to zmení.
+- **Ak žijete kdekoľvek inde:** pred rokom 2027 sa pre vás nič nemení a zatiaľ nerobiť nič je tiež rozumná voľba. Ale nastavte si jeden z [bezplatných spôsobov inštalácie](#android-developer-verification-free-methods) nižšie, kým ešte všetko funguje. Zlá chvíľa je zistiť blokovanie v deň, keď telefón odmietne aktualizáciu, a mať pred sebou 24-hodinové čakanie [rozšíreného postupu](#android-developer-verification-advanced-flow).
+- **Staré telefóny:** overovanie platí pre telefóny s Androidom 7 alebo novším, teda pre každý telefón, na ktorom môže bežať **AAPS**.
 
 (android-developer-verification-free-methods)=
 
-## Free ways to install AAPS
+## Bezplatné spôsoby inštalácie AAPS
 
-You do **not** need to pay Google anything to keep using **AAPS**. There are several free methods; pick the one that matches your situation.
+Aby ste mohli **AAPS** používať ďalej, **nemusíte** Googlu nič platiť. Existuje niekoľko bezplatných spôsobov; vyberte si ten, ktorý zodpovedá vašej situácii.
 
 ```{admonition} Which method should I use?
 :class: tip
-- You have a **computer** (whichever way you built **AAPS**): use [ADB](#android-developer-verification-adb) or, if you prefer to avoid the command line, the [web installer](#android-developer-verification-web). Both are exempt from verification, have no limits, and need no Google account.
-- You have **no computer at all**: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
-- You prefer to register with Google so the normal "tap the APK" installation keeps working: a [free limited distribution account](#android-developer-verification-limited-account) exists, but it is untested with **AAPS**.
+- Máte **počítač** (bez ohľadu na to, ako ste **AAPS** zostavili): použite [ADB](#android-developer-verification-adb) alebo, ak sa chcete vyhnúť príkazovému riadku, [webový inštalátor](#android-developer-verification-web). Oba spôsoby sú z overovania vyňaté, nemajú žiadne obmedzenia a nepotrebujú účet Google.
+- **Nemáte vôbec žiadny počítač**: použite v telefóne [rozšírený postup](#android-developer-verification-advanced-flow).
+- Chcete sa radšej zaregistrovať v Google, aby bežná inštalácia „ťuknutím na APK“ fungovala ďalej: existuje [bezplatný účet s obmedzenou distribúciou](#android-developer-verification-limited-account), ale s **AAPS** zatiaľ nie je vyskúšaný.
 ```
 
 (android-developer-verification-adb)=
 
-### Option 1: Install with ADB (computer needed)
+### Možnosť 1: Inštalácia pomocou ADB (potrebujete počítač)
 
-ADB (Android Debug Bridge) is Google's official tool for installing apps from a computer onto a phone with a USB cable. Google has confirmed that **apps installed with ADB do not require verification** — there is no waiting period, no device limit and no registration.
+ADB (Android Debug Bridge) je oficiálny nástroj od Google na inštaláciu aplikácií z počítača do telefónu cez kábel USB. Google potvrdil, že **aplikácie inštalované cez ADB nevyžadujú overenie** – nie je tu žiadna čakacia doba, žiadny limit zariadení a žiadna registrácia.
 
-One-time preparation:
+Jednorazová príprava:
 
-1. On your phone, enable the hidden developer options: go to **Settings** > **About phone** (on some phones **Software information**) and tap **Build number** seven times, until the phone confirms you are a developer.
-1. Go back to the main **Settings**, open the new **Developer options** entry and enable **USB debugging**.
-1. On your computer, make sure ADB is available:
-   - If you use **Android Studio**, ADB is already installed with it.
-   - Otherwise, download Google's free [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) and unzip the folder. No installation is needed; ADB is the `adb` program inside that folder.
+1. V telefóne zapnite skryté možnosti vývojára: prejdite do **Nastavenia** > **Informácie o telefóne** (na niektorých telefónoch **Informácie o softvéri**) a ťuknite sedemkrát na **Číslo zostavy**, kým telefón nepotvrdí, že ste vývojár.
+1. Vráťte sa do hlavných **Nastavení**, otvorte novú položku **Možnosti vývojára** a zapnite **Ladenie cez USB**.
+1. V počítači skontrolujte, či máte ADB:
+   - Ak používate **Android Studio**, ADB je už nainštalované spolu s ním.
+   - Inak si stiahnite bezplatné [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) od Google a priečinok rozbaľte. Nič nie je potrebné inštalovať; ADB je program `adb` v tomto priečinku.
 
-Installing (and later updating) **AAPS**:
+Inštalácia (a neskôr aktualizácia) **AAPS**:
 
-1. Connect the phone to the computer with a USB cable. There is no need to transfer the APK file to the phone first: ADB sends it straight from the computer.
-1. On the phone, accept the **Allow USB debugging?** prompt (the first time only).
-1. On the computer, open a terminal (command prompt) in the folder containing ADB and the **AAPS** APK file, and run:
+1. Pripojte telefón k počítaču káblom USB. Súbor APK nemusíte najprv prenášať do telefónu: ADB ho pošle priamo z počítača.
+1. V telefóne potvrďte výzvu **Povoliť ladenie cez USB?** (iba prvýkrát).
+1. V počítači otvorte terminál (príkazový riadok) v priečinku, v ktorom je ADB a súbor APK **AAPS**, a spustite:
 
    ```
    adb install -r app-full-release.apk
    ```
 
-   Replace `app-full-release.apk` with the actual name of your APK file. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
+   Namiesto `app-full-release.apk` zadajte skutočný názov vášho súboru APK. Voľba `-r` aktualizuje už nainštalované **AAPS** a zachová všetky jeho dáta a nastavenia.
 
-1. Wait for `Success` to be displayed. **AAPS** is now installed on your phone.
+1. Počkajte, kým sa zobrazí `Success`. **AAPS** je teraz nainštalované vo vašom telefóne.
 
-The same command is used for every future update. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
+Rovnaký príkaz použijete pri každej ďalšej aktualizácii. [Stránky o Wear OS](../WearOS/WearOsSmartwatch.md) už používajú ADB rovnakým spôsobom na inštaláciu aplikácie do hodiniek.
 
-If you would rather not use a cable: on Android 11 and later, **wireless debugging** (also under **Developer options**) can do the same over Wi-Fi, after a one-time pairing with a code shown on the phone.
+Ak nechcete použiť kábel: od Androidu 11 dokáže to isté cez Wi-Fi **bezdrôtové ladenie** (tiež v **Možnostiach vývojára**), po jednorazovom spárovaní pomocou kódu, ktorý sa zobrazí v telefóne.
 
 (android-developer-verification-web)=
 
-### Option 2: Install from a web page (computer, no command line)
+### Možnosť 2: Inštalácia z webovej stránky (počítač, bez príkazového riadku)
 
-If the command line is not for you, a web page can do exactly what ADB does, directly from your browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
+Ak vám príkazový riadok nevyhovuje, webová stránka dokáže priamo z prehliadača urobiť presne to isté, čo ADB. Keďže s telefónom komunikuje rovnakým mechanizmom ako ADB, má **rovnakú výnimku z overovania** – ale nič nesťahujete, nič nerozbaľujete a nepíšete žiadny príkaz.
 
-This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
+Je to najjednoduchšia cesta, ak ste použili [zostavenie v prehliadači](#browser-build) a nikdy ste neotvorili príkazový riadok.
 
-1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **[AAPS web installer](#web-installer)** in your browser.
-1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
+1. V telefóne zapnite **Ladenie cez USB** (kroky 1 a 2 [spôsobu s ADB](#android-developer-verification-adb) vyššie – jednorazové nastavenie).
+1. V prehliadači otvorte **[Webový inštalátor AAPS](#web-installer)**.
+1. Pripojte telefón káblom USB a postupujte podľa pokynov na stránke: pripojte, vyberte súbor APK a nainštalujte.
 
-Three things to know:
+Tri veci, ktoré treba vedieť:
 
-- It only works in **Chrome, Edge or Opera**. Firefox and Safari cannot talk to USB devices.
-- Only one program can use the phone's ADB connection at a time, so **close Android Studio** (or anything else that uses ADB) before connecting.
-- A web page connected this way gets full control of your phone. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
+- Funguje iba v prehliadačoch **Chrome, Edge alebo Opera**. Firefox a Safari nedokážu komunikovať so zariadeniami USB.
+- Pripojenie ADB telefónu môže naraz používať iba jeden program, preto pred pripojením **zatvorte Android Studio** (alebo čokoľvek iné, čo používa ADB).
+- Webová stránka pripojená týmto spôsobom získa úplnú kontrolu nad vaším telefónom. **Používajte iba adresu uvedenú vyššie** z dokumentácie **AAPS** – nikdy nie stránku s inštalátorom nájdenú cez vyhľadávač. Webový inštalátor **AAPS** beží celý vo vašom prehliadači: váš súbor APK sa nikam nenahráva.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
-The web installer also works from **Chrome on another Android phone** with a USB-C to USB-C cable — so a parent can install **AAPS** onto a child's phone with no computer in the house.
+Webový inštalátor funguje aj z **Chromu na inom telefóne s Androidom** s káblom USB-C na USB-C – takže rodič môže nainštalovať **AAPS** do telefónu dieťaťa, aj keď doma nemá počítač.
 ```
 
 (android-developer-verification-advanced-flow)=
 
-### Option 3: The "advanced flow" on your phone (no computer needed)
+### Možnosť 3: „Rozšírený postup“ (advanced flow) v telefóne (bez počítača)
 
-Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
+Pre skúsených používateľov, ktorí rozumejú rizikám inštalácie neoverených aplikácií, ponúka Google núdzové riešenie s názvom **rozšírený postup** (advanced flow). Google ho začal do telefónov zavádzať v auguste 2026, ešte pred začiatkom vynucovania, takže si ho môžete nastaviť už teraz. Je to jednorazové nastavenie priamo v telefóne a jeho dokončenie **trvá 24 hodín**:
 
-1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
-1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
-1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
-1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
-1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
-1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
+1. Zapnite skryté možnosti vývojára (pozrite krok 1 spôsobu s ADB vyššie) a potom otvorte **Nastavenia** > **Možnosti vývojára** > **Aplikácie od neoverených vývojárov** (Apps from unverified developers).
+1. Zapnite **Povoliť aplikácie od neoverených vývojárov** (Allow apps from unverified developers). Telefón si vyžiada zámku obrazovky, aby overil, že ste to vy.
+1. Telefón sa opýta, či vás niekto žiada o zapnutie tohto nastavenia, a vysvetlí, že banky, štátne úrady ani polícia vás o to nikdy nežiadajú. Prečítajte si upozornenie a potvrďte, že vás nikto nenúti ani nenavádza (je to ochrana pred podvodníkmi).
+1. **Reštartujte telefón.** Tým sa spustí jednorazová **24-hodinová čakacia doba**.
+1. Po 24 hodinách sa vráťte do **Nastavenia** > **Možnosti vývojára** > **Aplikácie od neoverených vývojárov** a dokončite nastavenie.
+1. Vyberte, či chcete neoverené aplikácie povoliť na **7 dní** alebo **natrvalo**. Pre **AAPS** vyberte **natrvalo**, inak bude vaša ďalšia aktualizácia po uplynutí 7 dní zablokovaná.
 
-After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
+Po tomto nastavení funguje inštalácia alebo aktualizácia APK **AAPS** ako dnes, len s jedným upozornením navyše, že aplikácia je od neovereného vývojára – ťuknite na **Napriek tomu inštalovať**.
 
-Good to know:
+Dobré vedieť:
 
-- You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
-- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
-- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
-- Google states that your choice follows your Google account to your other devices, so a new phone should not mean another 24-hour wait.
-- If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store. You can help it along by opening **Android Developer Verifier** in the Play Store.
+- **Možnosti vývojára** potom môžete znova vypnúť: rozšírený postup zostane zapnutý. Google tiež aplikáciám (napríklad bankovým) nedáva žiadnu možnosť zistiť, že je rozšírený postup zapnutý.
+- Ak rozšírený postup vypnete, inštalácia **aj aktualizácia** **AAPS** je znova zablokovaná (vaše nainštalované **AAPS** beží ďalej). Na jeho opätovné zapnutie máte 10 minút; potom sa 24-hodinová čakacia doba začne znova.
+- Zmena času v telefóne čakaciu dobu neskráti a ADB ju nedokáže preskočiť.
+- Google uvádza, že vaša voľba prejde s vaším účtom Google aj na vaše ďalšie zariadenia, takže nový telefón by nemal znamenať ďalšie 24-hodinové čakanie.
+- Ak v možnostiach vývojára nenájdete **Aplikácie od neoverených vývojárov**, váš telefón túto funkciu ešte nedostal. Dodáva ju systémová súčasť s názvom **Android Developer Verifier**, ktorú Google postupne zavádza cez Obchod Play. Môžete to urýchliť tak, že v Obchode Play otvoríte **Android Developer Verifier**.
 
 ```{note}
-Google describes this as a first version and may still change the screens and steps; this section will be updated with screenshots once the final version is available.
+Google to opisuje ako prvú verziu a obrazovky aj kroky sa ešte môžu zmeniť; keď bude dostupná konečná verzia, táto časť sa doplní o snímky obrazovky.
 ```
 
 (android-developer-verification-limited-account)=
 
-### Option 4: Register with Google (free limited distribution account)
+### Možnosť 4: Registrácia v Google (bezplatný účet s obmedzenou distribúciou)
 
-Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
+Google ponúka **bezplatný** typ vývojárskeho účtu pre nadšencov a osobné použitie s názvom **účet s obmedzenou distribúciou** (limited distribution account), ktorý je od augusta 2026 dostupný pre všetkých:
 
-- **No government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use). You do need a Google account with 2-step verification, a Google payments profile holding your legal name and address, and a contact email address.
-- You register your app's package name in Google's Android Developer Console, and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and the console.
-- Once registered, the normal installation (tapping the APK file) works again on the authorized phones, without ADB and without the advanced flow.
-- A limited distribution account can later be upgraded to a full account, but not the other way round.
+- **Bez občianskeho preukazu** a **bez poplatku** (na rozdiel od plateného vývojárskeho účtu, ktorý na osobné používanie **AAPS** nepotrebujete). Potrebujete však účet Google s dvojstupňovým overením, platobný profil Google s vaším úradným menom a adresou a kontaktnú e-mailovú adresu.
+- V Android Developer Console od Google zaregistrujete názov balíka vašej aplikácie a autorizujete telefóny, do ktorých sa môže inštalovať, najviac **20 zariadení**. Autorizácia prebieha spárovaním telefónu a konzoly cez QR kód alebo odkaz.
+- Po registrácii na autorizovaných telefónoch znova funguje bežná inštalácia (ťuknutím na súbor APK), bez ADB a bez rozšíreného postupu.
+- Účet s obmedzenou distribúciou sa dá neskôr zmeniť na plný účet, ale nie naopak.
 
 ```{warning}
-Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review. The outcome of such a review is unknown, and the paid developer account ($25 and a government ID) does not help here: paying only removes the 20-device cap, not the package name review.
+Google nevysvetlil, ako funguje registrácia, keď tú istú aplikáciu s otvoreným zdrojovým kódom zostavuje veľa ľudí: každé vlastnoručne zostavené **AAPS** používa rovnaký názov balíka (`info.nightscout.androidaps`) s iným podpisovým kľúčom. Podľa častých otázok Google nie je možné názov balíka, ktorý už používajú iní, jednoducho získať a vyžaduje sa ďalšia kontrola. Výsledok takej kontroly nie je známy a platený vývojársky účet (25 USD a občiansky preukaz) tu nepomôže: zaplatenie odstráni iba limit 20 zariadení, nie kontrolu názvu balíka.
 
-For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
+Preto zatiaľ nie je možné napísať podrobný návod krok za krokom. Táto časť sa doplní, keď bude registrácia vyskúšaná s **AAPS**. Medzitým sú ADB, webový inštalátor a rozšírený postup opísané vyššie spoľahlivé alternatívy.
 ```
 
-## What does not change
+## Čo sa nemení
 
-- Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
-- Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
-- Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
-- Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
+- Vlastné zostavenie **AAPS** ktorýmkoľvek z troch [spôsobov zostavenia](BuildingAaps.md).
+- Váš účet GitHub, váš repozitár na zostavenie (AAPS Builder) alebo fork a vaše úložisko kľúčov.
+- Vaša nainštalovaná aplikácia **AAPS**, vaše nastavenia a vaše [ciele](CompletingTheObjectives.md).
+- Telefóny bez služieb Google a vo všeobecnosti [inštalácie cez ADB](#android-developer-verification-adb).
 
-## Where to get help
+## Kde získať pomoc
 
-1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
-3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
+1. **Prečítajte si** [časté otázky o overovaní vývojárov](https://developer.android.com/developer-verification/guides/faq) od Google, ak máte otázky o samotnom overovaní.
+2. Ak je inštalácia zablokovaná, **opýtajte sa** na kanáli *#AAPS* na [Discorde](https://discord.gg/4fQUWHZ4Mw) alebo na niektorom z ďalších [kanálov komunity](../GettingHelp/WhereCanIGetHelp.md).
+3. Keď žiadate o pomoc, uveďte značku a model telefónu, verziu Androidu, vašu krajinu a presné znenie správy, ktorá sa zobrazí, keď inštalácia zlyhá.
 
 ```{toctree}
 :hidden:
 
-AAPS web installer <WebInstaller.md>
+Webový inštalátor AAPS <WebInstaller.md>
 ```
