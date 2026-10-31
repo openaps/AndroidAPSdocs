@@ -1,4 +1,4 @@
-# Váš profil v AAPS
+# Váš profil AAPS
 
 Váš **profil AAPS** je sada čtyř klíčových parametrů, které určují, jak má **AAPS** podávat inzulín v reakci na glykémii ze senzoru. Toto jsou hlavní parametry, na kterých je **AAPS** postaven. Jak budete postupovat **Cíli**, odemknete další nastavitelné parametry (např. nastavení SMB). To, jak dobře tyto funkce fungují, ale závisí na tom, zda je váš základní **Profil** správný. **Profil** obsahuje:
 * [cílové glykémie](#profile-glucose-targets),
@@ -34,13 +34,13 @@ Níže jsou snímky obrazovky z **AAPS** s _ukázkovým_ profilem. Upozornění:
 ![Příklad aktivního profilu](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Cílové hodnoty glykémie
 
 ### Popis
 
 Vaše **cílová glykémie** je základní hodnota a všechny výpočty **AAPS** vycházejí z ní. Liší se od cílového rozmezí, ve kterém se obvykle snažíte udržet glykémii. Cíl se používá ve výpočtech **AAPS**: pokud **AAPS** předpovídá, že vaše **glykémie** skončí mimo cílové rozmezí, zasáhne, aby vás do tohoto rozmezí vrátil.
 
-The targets can be defined within those boundaries :
+Cíle můžete nastavit v těchto mezích:
 
 |         | _Dolní_ cíl              | _Horní_ cíl                |
 | ------- | ------------------------ | -------------------------- |
@@ -63,7 +63,7 @@ V [otevřené smyčce](#KeyAapsFeatures-OpenLoop), zvlášť když procházíte 
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Bazální dávky
 
 ### Popis
 
@@ -89,7 +89,7 @@ Naopak příliš nízký bazál může vést k vysokým glykémiím a k tomu, ž
 
 **Obrázek níže** ukazuje příklad, jak lze bazální dávky nastavit v profilu **AAPS**.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Bazální dávky](../images/Profile_BasalRates.png)
 
 Správné bazály se hledají metodou pokus–omyl a mělo by to probíhat po dohodě s vaším diabetologickým týmem.
 
@@ -121,11 +121,11 @@ Editor profilu umožňuje začínat bazální dávky jen v celou hodinu. Bazáln
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Citlivost na inzulín (ISF)
 
 ### Popis
 
-Faktor citlivosti na inzulín (někdy nazývaný korekční faktor) říká o kolik se sníží hladina krevního cukru po podání 1 jednotky inzulínu.
+Faktor citlivosti na inzulín (někdy nazývaný korekční faktor) říká, o kolik se sníží glykémie po podání 1 jednotky inzulínu.
 
 **V jednotkách mg/dl:** Pokud máte **ISF** 40, každá jednotka inzulínu sníží vaši glykémii přibližně o 40 mg/dl (například glykémie klesne ze 140 mg/dl na 100 mg/dl).
 
@@ -165,13 +165,13 @@ Výchozím bodem pro stanovení vaší citlivosti v průběhu dne je výpočet z
 
 Za předpokladu, že máte správné bazály, to můžete otestovat tak, že pozastavíte smyčku, zkontrolujete, že **IOB** je nula, a vezmete si několik glukózových tablet, abyste se dostali na stabilní „vysokou“ hodnotu.
 
-Poté si aplikujete adekvátní množství inzulinu (podle aktuálního nastavení citlivosti), abyste glykémii dostali na cílovou hodnotu.
+Poté si aplikujete adekvátní množství inzulínu (podle aktuálního nastavení citlivosti), abyste glykémii dostali na cílovou hodnotu.
 
-Buďte opatrní, protože tato hodnota je často nastavena příliš nízko. Příliš nízko znamená, že vám 1 jednotka inzulinu sníží glykémii více, než jste očekávali.
+Buďte opatrní, protože tato hodnota je často nastavena příliš nízko. Příliš nízko znamená, že vám 1 jednotka inzulínu sníží glykémii více, než jste očekávali.
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Inzulínosacharidový poměr (ICR)
 
 ### Popis
 
@@ -179,7 +179,7 @@ Buďte opatrní, protože tato hodnota je často nastavena příliš nízko. Př
 
 Někteří lidé místo **ICR** používají také zkratku **I:C** nebo mluví o sacharidovém poměru: **CR**.
 
-Například inzulíno sacharidový poměr 1:10 znamená, že na každých 10 gramů zkonzumovaných sacharidů si vezmete 1 U inzulinu. Jídlo s obsahem 25g sacharidů potřebuje 2,5 jednotky inzulínu.
+Například inzulínosacharidový poměr 1:10 znamená, že na každých 10 gramů zkonzumovaných sacharidů si vezmete 1 U inzulínu. Jídlo s obsahem 25g sacharidů potřebuje 2,5 jednotky inzulínu.
 
 Pokud je váš **ICR** slabší (vyšší hodnota), třeba 1:20, potřebovali byste k pokrytí 10 g sacharidů jen 0,5 U inzulínu. Jídlo s obsahem 25g sacharidů potřebuje 25/20 = 1,25 jednotky inzulínu.
 
@@ -189,7 +189,7 @@ Je běžné mít v různou denní dobu různý **ICR** kvůli hladinám hormonů
 > 
 > V některých evropských zemích se používaly chlebové/výměnné jednotky pro stanovení toho, kolik inzulínu je na dané jídlo potřeba. Z počátku odpovídala 1 výměnná jednotka 12 g sacharidů, později se to změnilo na 10 g sacharidů.
 > 
-> V tomto modelu bylo množství sacharidů fixní a měnilo se množství inzulinu. („Kolik inzulínu je zapotřebí k pokrytí jedné výměnné jednotky?“)
+> V tomto modelu bylo množství sacharidů fixní a měnilo se množství inzulínu. („Kolik inzulínu je zapotřebí k pokrytí jedné výměnné jednotky?“)
 > 
 > Při použití **ICR** je množství inzulínu pevné a množství sacharidů se mění. („Kolik g sacharidů lze pokrýt jednou jednotkou inzulínu?“)
 > 
@@ -226,11 +226,11 @@ Za předpokladu, že máte správné bazály, můžete to otestovat takto: zkont
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Proč je důležité mít správně nastavený profil
 
 **Proč bych se měl pokusit nastavit svůj profil správně? Nemůže se o to prostě postarat smyčka?**
 
-Hybridní uzavřená smyčka se _může_ pokusit upravit podávání inzulínu tak, aby omezila špatnou kontrolu glykémie způsobenou nesprávnými hodnotami v **Profilu**. It can do this, for example, by withholding insulin delivery if you are going to hypo. Mnohem lepší kontroly glykémie ale dosáhnete, pokud už jsou nastavení vašeho **Profilu** co nejblíže tomu, co vaše tělo potřebuje. To je jeden z důvodů, proč **AAPS** používá postupné cíle, které vás vedou od otevřené smyčky k hybridní uzavřené smyčce. Navíc přijdou chvíle, kdy budete muset smyčku otevřít (zahřívání senzoru, selhání senzoru _apod._), někdy i uprostřed noci, a pro tyto situace budete chtít mít nastavení správné.
+Hybridní uzavřená smyčka se _může_ pokusit upravit podávání inzulínu tak, aby omezila špatnou kontrolu glykémie způsobenou nesprávnými hodnotami v **Profilu**. Může to udělat například tak, že zastaví podávání inzulínu, když vám hrozí hypoglykémie. Mnohem lepší kontroly glykémie ale dosáhnete, pokud už jsou nastavení vašeho **Profilu** co nejblíže tomu, co vaše tělo potřebuje. To je jeden z důvodů, proč **AAPS** používá postupné cíle, které vás vedou od otevřené smyčky k hybridní uzavřené smyčce. Navíc přijdou chvíle, kdy budete muset smyčku otevřít (zahřívání senzoru, selhání senzoru _apod._), někdy i uprostřed noci, a pro tyto situace budete chtít mít nastavení správné.
 
 Pokud s **AAPS** začínáte po používání jiného systému s pumpou s otevřenou nebo uzavřenou smyčkou, budete už mít rozumnou představu, jaké hodnoty použít pro bazální dávky (**BR**), citlivost na inzulín (**ISF**) a inzulínosacharidové poměry (**ICR**).
 
