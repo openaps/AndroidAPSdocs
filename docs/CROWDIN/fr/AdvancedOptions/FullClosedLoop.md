@@ -287,7 +287,7 @@ De plus, il est très facile et rapide de modifier des conditions ou des actions
 
 (full-closed-loop-troubleshooting)=
 
-## Troubleshooting
+## Dépannage
 
 ### Comment revenir en boucle fermée hybride
 
