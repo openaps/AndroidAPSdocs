@@ -1,100 +1,100 @@
-# Update with Android Studio
+# Оновлення з Android Studio
 
-## Build yourself instead of download
+## Зберіть самі, а не завантажуйте
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** не можна завантажити через правила для медичних виробів. Збирати застосунок для власного використання законно, але ви не повинні давати його копію іншим! Докладніше див. на [сторінці FAQ](../UsefulLinks/FAQ.md).
 
 ```{note}
-In case you want to build **AAPS** on a new computer : copy your back-up keystore file to the new computer. Then follow the [Initial build **AAPS** procedure](../SettingUpAaps/BuildingAaps.md) instead of this guide. With the only difference that instead of creating a new keystore, you can select the one you have copied on the new computer.
+Якщо ви хочете зібрати **AAPS** на новому комп’ютері: скопіюйте резервну копію файлу keystore на новий комп’ютер. Потім виконайте [процедуру першої збірки **AAPS**](../SettingUpAaps/BuildingAaps.md), а не цю інструкцію. Єдина різниця: замість того щоб створювати новий keystore, ви можете вибрати той, який скопіювали на новий комп’ютер.
 ```
 
-## Overview for updating to a new version of AAPS with Android Studio
+## Огляд оновлення до нової версії AAPS з Android Studio
 
 ```{contents} Steps for updating to a new version of AAPS
 :depth: 1
 :local: true
 ```
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
+Якщо виникли проблеми, див. окрему сторінку [Усунення проблем з Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md).
 
-### Export your settings
+### Експортуйте налаштування
 
-Export your settings from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+Експортуйте налаштування з наявної версії **AAPS** на вашому телефоні. Можливо, вони вам не знадобляться, але краще перестрахуватися.
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+Якщо ви не пам’ятаєте, як це зробити, див. сторінку [Експорт та імпорт налаштувань](ExportImportSettings.md).
 
-### Check your Android Studio version
+### Перевірте версію Android Studio
 
-The minimal version required is described in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file). If your version is older, please [update Android Studio first](#Building-APK-install-android-studio)!
+Мінімальну потрібну версію описано в [інструкціях зі збірки](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Якщо ваша версія старіша, будь ласка, [спочатку оновіть Android Studio](#Building-APK-install-android-studio)!
 
 (Update-to-new-version-update-your-local-copy)=
-### Update your local copy
+### Оновіть вашу локальну копію
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Відкрийте ваш наявний проєкт AAPS в Android Studio. Можливо, вам потрібно буде вибрати ваш проєкт. Клацніть (двічі) на проєкт AAPS.
 
-  ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+  ![Android Studio – вибір проєкту](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* У рядку меню Android Studio виберіть Git -> Fetch
 
-   ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+   ![Меню Android Studio – Git – Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* У правому нижньому куті ви побачите повідомлення, що Fetch виконано успішно.
 
-   ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+   ![Меню Android Studio – Git – Fetch виконано успішно](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* Тепер у рядку меню виберіть Git -> Pull
 
-   ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+   ![Меню Android Studio – Git – Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Залиште всі параметри як є (origin/master) і виберіть Pull
 
-   ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+   ![Android Studio – Git – вікно Pull](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message.
+* Зачекайте, поки триває завантаження: це видно в нижньому рядку. Коли все завершиться, ви побачите повідомлення про успіх.
 
   ```{note}
-  The files that were updated may vary! This is not an indication of a problem.
+  Список оновлених файлів може відрізнятися! Це не ознака проблеми.
   ```
 
-   ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+   ![Android Studio – Pull виконано успішно](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running to download some dependencies. Wait until it is finished.
+* Запуститься Gradle Sync, щоб завантажити деякі залежності. Зачекайте, поки він завершиться.
 
-  ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
+  ![Android Studio – Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-### Check JVM version
+### Перевірте версію JVM
 
-This check is particularly indicated if you have already built a previous version of **AAPS** on the same computer.
+Ця перевірка особливо потрібна, якщо ви вже збирали попередню версію **AAPS** на цьому самому комп’ютері.
 
-Check in the [Building Instructions](#Building-APK-recommended-specification-of-computer-for-building-apk-file) the required version for JVM, matching the **AAPS** version you are now building. Then follow the steps described at [Incompatible Gradle JVM](#incompatible-gradle-jvm) to make sure you currently use the correct version.
+Перевірте в [інструкціях зі збірки](#Building-APK-recommended-specification-of-computer-for-building-apk-file), яка версія JVM потрібна для версії **AAPS**, яку ви зараз збираєте. Потім виконайте кроки з розділу [Несумісна Gradle JVM (Incompatible Gradle JVM)](#incompatible-gradle-jvm), щоб переконатися, що ви зараз використовуєте правильну версію.
 
 (Update-to-new-version-build-the-signed-apk)=
-### Build the Signed APK
+### Зберіть підписаний APK
 
-Your sourcecode is now the current released version, and all prerequisites have been checked. It's time to build the signed apk as described in the [build signed apk section](#Building-APK-generate-signed-apk).
+Ваш вихідний код тепер відповідає поточній випущеній версії, і всі попередні вимоги перевірено. Час зібрати підписаний apk, як описано в [розділі про збірку підписаного apk](#Building-APK-generate-signed-apk).
 
 (Update-to-new-version-transfer-and-install)=
 
-### Transfer and install the apk
-You need to transfer the apk to your phone so you can install it.
+### Передайте та встановіть apk
+Вам потрібно передати apk на телефон, щоб його встановити.
 
 ```{note}
-If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates.
-For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk. **Make sure to export your settings!**
+Якщо ви зібрали застосунок з тим самим наявним keystore в Android Studio, то видаляти наявний застосунок з телефона не потрібно. Під час встановлення apk виконуйте підказки, щоб встановити оновлення.
+В інших випадках, наприклад якщо ви створили в Android Studio новий keystore для підписаного apk, вам потрібно видалити старий застосунок перед встановленням apk. **Обов’язково експортуйте налаштування!**
 ```
 
-See the instructions for [transferring and installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Where Google's [Android developer verification](#android-developer-verification) is enforced (from September 2026, depending on your country), install with [ADB](#android-developer-verification-adb) instead of tapping the APK file.
+Див. інструкції з [перенесення та встановлення AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md). Там, де Google вже вимагає [перевірку розробників Android](#android-developer-verification) (з вересня 2026 року, залежно від вашої країни), встановлюйте застосунок через [ADB](#android-developer-verification-adb), а не натисканням на файл APK.
 
-Continue [here](#Update-to-new-version-check-aaps-version-on-phone).
+Продовжуйте [тут](#Update-to-new-version-check-aaps-version-on-phone).
 
 (update-computer-build-troubleshooting)=
 
 ## Усунення несправностей
 
-If anything goes wrong, don't panic.
+Якщо щось пішло не так, не панікуйте.
 
-Take a breath!
+Зробіть вдих!
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) if your problem is already documented!
+Потім подивіться окрему сторінку [Усунення проблем з Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md): можливо, вашу проблему вже описано!
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Якщо вам потрібна додаткова допомога, зверніться до інших користувачів **AAPS** у [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) або [Discord](https://discord.gg/4fQUWHZ4Mw).
