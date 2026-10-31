@@ -21,7 +21,7 @@ Si activas el **Comunicador por SMS** en **AAPS**, ten en cuenta que el teléfon
 
 Además, se recomienda permitir un [segundo número de teléfono](#SMSCommands-authorized-phone-numbers) para los comandos SMS. Así puedes usar el segundo número para [desactivar](#SMSCommands-other) el comunicador por SMS si tu teléfono remoto principal queda comprometido.
 
-El tiempo mínimo por defecto entre comandos de bolo es de 15 minutos. Por seguridad, tienes que añadir al menos dos números de teléfono autorizados para poder bajarlo a un tiempo más corto. Si intentas poner otro bolo remoto en los 15 minutos siguientes al bolo anterior, recibirás la respuesta «Bolo remoto no disponible. Inténtelo de nuevo más tarde»
+El tiempo mínimo por defecto entre comandos de bolo es de 15 minutos. Por seguridad, tienes que añadir al menos dos números de teléfono autorizados para poder bajarlo a un tiempo más corto. Si intentas poner otro bolo remoto en los 15 minutos siguientes al bolo anterior, recibirás la respuesta «Bolo remoto no disponible. Inténtalo de nuevo más tarde»
 
 AAPS también te avisará por mensaje de texto si tus comandos remotos, como un bolo o un cambio de perfil, se han ejecutado. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
 
@@ -240,7 +240,7 @@ Algunas bombas aceptan una basal temporal solo en porcentaje, otras solo en U/h.
 
 ### Bolo
 
-No se permite el bolo remoto en los próximos 15 minutos (este valor sólo es editable si se han agregado 2 números de teléfono) después del último comando de bolo o comandos remotos. En este caso, la respuesta sería *Bolo remoto no disponible. Inténtelo de nuevo más tarde.* Esta respuesta también se envía cuando la bomba está administrando un bolo.
+No se permite el bolo remoto en los próximos 15 minutos (este valor sólo es editable si se han agregado 2 números de teléfono) después del último comando de bolo o comandos remotos. En este caso, la respuesta sería *Bolo remoto no disponible. Inténtalo de nuevo más tarde.* Esta respuesta también se envía cuando la bomba está administrando un bolo.
 
 | Comando              | Aut. | Función y *respuesta*                                                                                                                                                               |
 | -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
