@@ -86,7 +86,7 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 * 需要 Android 5.0 及以上版本。
 
-* 它有深色界面、大字體和按鈕，設計用於夜間使用。
+* It has a dark UI, large readings and buttons, designed for usage at night.
 
 ### xDrip (Android)
 
@@ -199,7 +199,7 @@ SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次�
 ![追蹤 Nightscout 錶鐘](../images/FollowingNightscoutClock.png)
 
 * 這個錶鐘支援 mmol/L 和 mg/dL 單位，並包含可聽到的警報。
-* 提供多種顯示方式，詳見[Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) 以獲取總覽。
+* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
 * 設定和配置裝置只需幾個簡單步驟。一旦設置完成，只需供電和 Wi-Fi 即可運行。
 * Ulanzi TC001 裝置的購買價格顯著低於 SugarPixel。
 * 軟體及安裝說明可以在[Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file)上找到。
