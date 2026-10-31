@@ -2,22 +2,22 @@
 
 ## Compiler vous-même au lieu de télécharger
 
-**AAPS** n'est pas disponible au téléchargement, à cause des règles sur les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes ! Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
+**AAPS** n'est pas disponible au téléchargement, à cause des règles sur les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes ! Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
 
 ## Remarques importantes
 
 - Mettez à jour vers la nouvelle version d'**AAPS** le plus tôt possible après sa publication.
 - Quand une nouvelle version est disponible, vous recevez dans l'application **AAPS** un bandeau d'information sur la nouvelle version.
 - La nouvelle version est aussi annoncée sur Facebook au moment de sa publication.
-- Après la publication, lisez attentivement les [Notes de Version](ReleaseNotes.md) et posez vos questions à la communauté sur Facebook ou Discord avant de faire la mise à jour.
+- Après la publication, lisez attentivement les [notes de version](ReleaseNotes.md) et posez vos questions à la communauté sur Facebook ou Discord avant de faire la mise à jour.
 - N'oubliez pas d'exporter les paramètres d'**AAPS**.
 
 ## Mettre à jour AAPS avec la compilation dans le navigateur
 
-Vous avez déjà compilé votre application AAPS avec un navigateur ? Suivez les instructions de la méthode que vous avez utilisée :
+Vous avez déjà compilé votre application AAPS avec un navigateur ? Suivez les instructions de la méthode que vous avez utilisée :
 
-- **AAPS Builder** (votre dépôt privé, en général nommé `my-aaps`) : [Mettre à jour AAPS avec AAPS Builder](#aaps-builder-updates). Il n'y a pas de fork à synchroniser.
-- **Fork et fichier de préparation** (votre propre copie d'AndroidAPS) : [Mise à jour avec un navigateur (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder** (votre dépôt privé, en général nommé `my-aaps`) : [Mettre à jour AAPS avec AAPS Builder](#aaps-builder-updates). Il n'y a pas de fork à synchroniser.
+- **Fork et fichier de préparation** (votre propre copie d'AndroidAPS) : [Mise à jour avec un navigateur (fork)](./UpdateBrowserBuild.md).
 
 ## Mettre à jour AAPS avec Android Studio
 
@@ -31,12 +31,12 @@ Utilisez les [mêmes instructions](../SettingUpAaps/CLIBuild.md) que pour la com
 
 ### Vérifier la version d'AAPS sur le téléphone
 
-Regardez dans les [Notes de Version](../Maintenance/ReleaseNotes.md) s'il y a des instructions particulières après la mise à jour.
+Regardez dans les [notes de version](../Maintenance/ReleaseNotes.md) s'il y a des instructions particulières après la mise à jour.
 
-Après avoir installé le nouvel apk :
+Après avoir installé le nouvel apk :
 
-- vous pouvez vérifier la version d'**AAPS** sur votre téléphone en ouvrant le **menu** (☰) en haut à gauche, puis **À propos** (voir la capture d'écran ci-dessous) ; vous pouvez voir la version actuelle d'**AAPS** ;
-- vérifiez que l'import des paramètres a bien été fait ; et
+- vous pouvez vérifier la version d'**AAPS** sur votre téléphone en ouvrant le **menu** (☰) en haut à gauche, puis **À propos** (voir la capture d'écran ci-dessous) ; vous pouvez voir la version actuelle d'**AAPS** ;
+- vérifiez que l'import des paramètres a bien été fait ; et
 - vérifiez les paramètres d'**AAPS** dans **Paramètres** et assurez-vous qu'ils sont toujours corrects.
 
 ![Fenêtre À propos avec la version d'AAPS installée](../images/about_dialog_version.png)
