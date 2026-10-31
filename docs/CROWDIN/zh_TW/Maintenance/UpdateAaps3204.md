@@ -16,7 +16,7 @@
 | ----------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
 | [3.2.0.4](#version3200) | Hedgehog（2023.1.1）                       | 升級至 Meerkat                              | 8.2    | 17  |
 
-"首選版本"已打包與適當的JVM版本。首選版本也是你可以用來建立**AAPS**的最小版本。你**無法**在比"首選"版本更舊的版本上建立。如果使用不同的版本，你可能會遇到與JVM版本相關的問題。 See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. 如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
+"首選版本"已打包與適當的JVM版本。首選版本也是你可以用來建立**AAPS**的最小版本。你**無法**在比"首選"版本更舊的版本上建立。如果使用不同的版本，你可能會遇到與JVM版本相關的問題。請參閱 [Android Studio 問題排除](#incompatible-gradle-jvm) 頁面以協助解決這些問題。如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
 
 Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲得正確的Gradle版本。此處僅供參考，你不必採取行動。
 
@@ -125,7 +125,7 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 * 等待下載過程進行，你會在底部欄看到進度資訊。完成後，你將看到成功訊息。
 
   ```{note}
-  更新的檔案可能會有所不同！ This is not an indication of a problem.
+  更新的檔案可能會有所不同！這並不表示有問題。
   ```
 
 
@@ -153,7 +153,7 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 
 ![開啟Gradle設定](../images/studioTroubleshooting/09_GradleSettings.png)
 
-- In **Gradle JDK** field (1), check if the appropriate version: **jbr-17** is selected. If not, click on the field, and see if it is already available in the list. If it is not in the list (the screenshot below shows a computer where only **jbr-21** is available), select **Download JDK...** (2).
+- 在**Gradle JDK**欄位 (1) 中，確認是否已選取適當的版本：**jbr-17**。如果沒有，請點選欄位，確認清單中是否已有該版本。如果清單中沒有該版本（下方螢幕截圖顯示的電腦只有**jbr-21**），請選取**下載 JDK...** (2)。
 
 ![選擇下載JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
 
