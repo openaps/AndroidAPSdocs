@@ -110,7 +110,7 @@ W **Zadaniu 5** zaczniesz rozumieć, skąd biorą się zalecenia bazy tymczasowe
 
 Szacowany czas ukończenia tego zadania: **7 dni**.
 
-W tym **Zadaniu** musisz ustalić i ustawić wartość „Maks. U/godz. dla bazy tymczasowej” (max-basal), jak opisano w [funkcjach OpenAPS](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Tę wartość możesz ustawić w [Ustawienia → OpenAPS SMB](#Preferences-openaps-smb-settings). W [trybie uproszczonym](#preferences-simple-mode) **AAPS** ustawia tę wartość automatycznie i nie musisz jej zmieniać. Jeśli nadal używasz wirtualnej pompy, upewnij się, że to ustawienie bezpieczeństwa jest ustawione zarówno w **AAPS**, jak i w Twojej pompie insulinowej.
+This **Objective** requires you to determine and set your “Maximum basal rate” (max-basal) value as described in [OpenAPS-features](#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to). Tę wartość możesz ustawić w [Ustawienia → OpenAPS SMB](#Preferences-openaps-smb-settings). W [trybie uproszczonym](#preferences-simple-mode) **AAPS** ustawia tę wartość automatycznie i nie musisz jej zmieniać. Jeśli nadal używasz wirtualnej pompy, upewnij się, że to ustawienie bezpieczeństwa jest ustawione zarówno w **AAPS**, jak i w Twojej pompie insulinowej.
 
 Możesz ustawić [cel BG w **Profilu**](#profile-glucose-targets) wyżej niż zwykle, dopóki nie poczujesz się pewnie z obliczeniami i ustawieniami **AAPS**. Możesz wypróbować ustawienie w **Profilu** węższego zakresu **celu BG** (np. o szerokości 1 mmol/l lub mniej [20 mg/dl lub mniej]) i obserwować, jak system się zachowuje.
 
