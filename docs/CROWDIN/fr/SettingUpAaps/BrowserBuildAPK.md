@@ -1,22 +1,22 @@
 (github-build-apk)=
 
-# Browser build – Step 4: Build the APK
+# Compilation dans le navigateur – Étape 4 : compiler l'APK
 
 ```{note}
-This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md).
+Ceci est l'**Étape 4** de la [Compilation dans le navigateur](BrowserBuild.md). Terminez d'abord l'[Étape 3 – Autoriser Google Drive](BrowserBuildGoogleDrive.md).
 ```
 
-## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+## GitHub Actions AAPS-CI pour compiler l'APK AAPS
+ - Convient à la plupart des utilisateurs.
 
 ```{tab-set}
 
 :::{tab-item} Wiki
-### Run the Workflow to Build the Signed APK
+### Lancer le workflow pour compiler l'APK signé
 
 1. Dans votre copie GitHub d'AndroidAPS, sélectionnez Actions.
 2. Développez All Workflows.
-3. Select AAPS-CI
+3. Choisissez AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
@@ -24,7 +24,7 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
+5. Laissez **Use workflow from** sur la branche master. Dans **Select AAPS Version**, choisissez la version d'**AAPS** que vous voulez compiler (en général la plus récente). Choisissez la [variante](#browserbuild-variant) (fullRelease) et appuyez sur Run workflow.
 
 
 
@@ -34,15 +34,15 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
 
-### Install the AAPS APK
+### Installer l'APK AAPS
 
-1. Open your Google Drive
+1. Ouvrez votre Google Drive
 2. Ouvrez le dossier AAPS, sélectionnez le dossier de la nouvelle version : vous y trouverez la version pour le téléphone et la version pour Android Wear.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
-:::  
+:::
 
-:::{tab-item} Video
+:::{tab-item} Vidéo
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
@@ -58,37 +58,37 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ```
 
-## Build Version selection
+## Choix de la version à compiler
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**Seules les versions d'AAPS 3.3.2.1 et plus récentes peuvent être compilées avec la méthode dans le navigateur.**
 
-Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+Appuyez sur **Select AAPS Version** et choisissez la version à compiler. La version la plus récente est en haut de la liste.
 
-![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+![Liste Select AAPS Version](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 
-## Build Variants selection
+## Choix de la variante de compilation
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*Remarque : les applications Android et Android Wear sont compilées toutes les deux automatiquement.*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-    - pumpcontrolRelease: To replace your pump app/controller
+  - Choisissez la variante dont vous avez besoin :
+    - fullRelease : pour une utilisation normale avec la pompe, avec toutes les fonctions.
+    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient) : pour les aidants (nécessite [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` compile **AAPSClient3**, disponible à partir de la version 4.0 d'**AAPS** (voir [À propos d'AAPSClient, AAPSClient2 et AAPSClient3](#remotecontrol-aapsclient-versions)).
+    - pumpcontrolRelease : pour remplacer l'application ou la télécommande de votre pompe
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Les variantes qui finissent par « Debug » indiquent que l'APK sera compilé en mode debug, ce qui est utile aux développeurs pour le dépannage.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 ----
 
-Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Quand la compilation a réussi, l'apk est enregistré dans votre Google Drive. Continuez avec [Transfert et installation de AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+À partir de septembre 2026, la [vérification des développeurs Android](#android-developer-verification) de Google peut bloquer l'installation de l'APK en appuyant sur le fichier, selon votre pays. Des solutions gratuites sont expliquées sur cette page.
 ```
 
-If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
+Si la compilation échoue, [cherchez d'abord ce qui ne va pas dans le log de compilation](#aaps-ci-read-the-logs), puis consultez [Dépannage de la compilation dans le navigateur](../GettingHelp/BrowserBuildTroubleshooting.md). Pour inclure un commit précis dans votre compilation, voir [cherry-pick d'un commit](#github-cherry-pick).
