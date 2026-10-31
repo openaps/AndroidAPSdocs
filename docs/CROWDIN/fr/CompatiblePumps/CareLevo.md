@@ -1,162 +1,162 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+La CareLevo est une pompe patch sans tubulure, fabriquée par CareMedi. Chaque patch contient jusqu'à 300 U d'insuline et se porte jusqu'à 7 jours (168 heures). Elle communique avec **AAPS** par le Bluetooth de votre téléphone, sans autre appareil.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+Le pilote CareLevo est nouveau dans **AAPS**. Lisez toute cette page avant d'activer votre premier patch, et gardez à portée de main le mode d'emploi de la pompe.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+La plus petite dose que le patch peut injecter est 0,05 U. Réglez les débits basaux de votre **Profil** à 0,05 U/h minimum, par pas de 0,05 U/h. Sinon, l'insuline prévue par le **Profil** et l'insuline injectée par le patch sont un peu différentes. **AAPS** utilise les débits basaux acceptés par le patch.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Fonctionnalités de la pompe avec AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* Communique avec **AAPS** par le Bluetooth natif de votre téléphone, sans appareil de communication supplémentaire.
+* Bolus par pas de 0,05 U.
+* Débits basaux de 0,05 U/h à 15 U/h par pas de 0,05 U/h, avec des segments basaux de 30 minutes.
+* Débits basaux temporaires en débit absolu, jusqu'à 12 heures.
+* Bolus étendu jusqu'à 8 heures.
+* Les changements d'heure d'été et de fuseau horaire doivent être faits à la main. Le patch vous avertit quand le fuseau horaire change.
 
-## Pump Setup
+## Configuration de la pompe
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. Ouvrez le **menu** (☰) en haut à gauche de l'écran principal d'**AAPS** et sélectionnez **Configuration**.
+1. Choisissez **Carelevo** dans la section Pompe.
+1. Appuyez sur la touche Retour pour revenir à l'écran principal.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![Le plugin Carelevo choisi dans Configuration > Pompe](../images/v4/Pumps/carelevo_enabled.png)
 
 ## Paramètres
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+Ouvrez l'écran de la pompe avec **Gestion → Pompe** (ou **Configuration → Pompe → Ouvrir le plugin**).
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+Ouvrez les paramètres CareLevo en appuyant sur l'icône **Paramètres** (roue dentée) en haut à droite. Trois paramètres sont disponibles :
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![Paramètres du pilote Carelevo](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### Réglage de l'alerte insuline basse
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+Le patch vous avertit quand l'insuline restante dans le réservoir atteint la quantité choisie. Vous pouvez la régler de 20 U à 50 U, par pas de 5 U. La valeur par défaut est 30 U. Quel que soit ce réglage, le patch déclenche une alarme critique et arrête l'injection d'insuline quand il reste moins de 10 U.
 
-### Patch Usage Notification Setting
+### Réglage de l'alerte de durée d'utilisation du patch
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+Le patch vous avertit quand il a été porté pendant le nombre d'heures choisi, pour que vous puissiez préparer le changement. Vous pouvez la régler de 24 à 167 heures. La valeur par défaut est 116 heures.
 
-### Patch Info Alarm
+### Alarme d'information du patch
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+Quand cette option est activée, le patch émet un bip quand un bolus, un bolus étendu ou un débit basal temporaire commence et quand il se termine. Par défaut, elle est désactivée.
 
-## The pump screen
+## L'écran de la pompe
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![Écran de la pompe Carelevo sans patch actif](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+L'écran de la pompe affiche l'**État du Bluetooth** (Aucun patch actif, Déconnectée ou Connectée), le **N° de série** du patch, sa **Date d’activation** et son **Expiration**, le **Débit Basal** actuel et le **Débit basal temporaire**, l'**Insuline restante** (restante / remplie), la **Durée restante du patch** et le **Total d'insuline injectée**.
 
-The buttons depend on the state of the patch:
+Les boutons dépendent de l'état du patch :
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **Activer le Patch** : lance l'activation d'un nouveau patch, voir plus bas.
+* **Guide insuline** : montre les douze étapes pour remplir un patch avec de l'insuline.
+* **Suspendre la perfusion** / **Reprendre la perfusion** : met en pause et redémarre l'injection d'insuline, voir plus bas.
+* **Retirer le Patch** : arrête le patch actuel pour pouvoir en activer un nouveau.
 
-## Activating a patch
+## Activer un patch
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+Avant de commencer, vérifiez qu'un **Profil** est actif dans **AAPS** et que le Bluetooth est activé. Le patch doit être activé dans un temps limité après sa mise en marche. Si ce temps est dépassé, le patch déclenche l'alarme **Délai d'application du patch dépassé** et ne peut pas être utilisé.
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+Appuyez sur **Activer le Patch** sur l'écran de la pompe et suivez les étapes. Vous pouvez annuler à tout moment avant l'insertion de l'aiguille ; ce que vous avez saisi est alors supprimé.
 
-### Select the insulin
+### Choisir l'insuline
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+Confirmez l'insuline que vous utilisez. Le patch nécessite une insuline rapide U-100.
 
-### Fill the patch with insulin
+### Remplir le patch avec de l'insuline
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+Remplissez le patch avec 50 à 300 U, selon la durée pendant laquelle vous allez le porter. Appuyez sur **Guide insuline** si vous avez besoin des instructions de remplissage. Ensuite, touchez la quantité de remplissage et choisissez la quantité que vous avez remplie ; **AAPS** l'utilise pour afficher l'insuline restante.
 
-### Connect the patch
+### Connecter le patch
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. Sortez le patch de son emballage (blister) et retirez le capuchon de l'aiguille.
+1. Appuyez sur le bouton marche du patch pendant plus d'une seconde. Après le bip, touchez **Rechercher le patch**.
+1. Si le patch trouvé est le bon, touchez **Confirmer**. Sinon, touchez **Rechercher à nouveau**.
 
-### Safety check
+### Contrôle de sécurité
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+Une fois le patch connecté, appuyez sur **Contrôle de sécurité**. Le patch se teste lui-même et fait l'amorçage. Vérifiez qu'une goutte d'insuline s'est formée au bout de l'aiguille. Si aucune goutte n'est visible, appuyez sur **Réessayer**. Quand le contrôle est terminé, appuyez sur **Suivant**.
 
-### Site and patch attachment
+### Site et pose du patch
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. Choisissez le site où vous allez porter le patch.
+1. Nettoyez bien le site avec une lingette d'alcool.
+1. Retirez le film de protection et collez le patch sur votre peau, avec le point marqué vers le haut.
+1. Appuyez sur **Suivant** quand le patch est collé.
 
-### Insert the needle
+### Insérer l'aiguille
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. Tournez le capuchon de sécurité dans le sens de la flèche et retirez-le.
+1. Appuyez à fond sur le bouton-poussoir de l'applicateur et maintenez-le pendant 10 secondes. Un bip retentit quand l'aiguille est insérée.
+1. Retirez l'applicateur et appuyez sur **Confirmer l'insertion**.
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+Si l'insertion échoue, **AAPS** vous indique combien d'essais il reste. Quand il ne reste plus d'essai, le patch déclenche l'alarme **Erreur d'insertion de l'aiguille** et doit être remplacé.
 
-Insulin delivery starts as soon as the insertion is confirmed.
+L'injection d'insuline commence dès que l'insertion est confirmée.
 
-## Bolus messages
+## Messages de bolus
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+Si le patch refuse un bolus, **AAPS** vous dit pourquoi. Par exemple, *Bolus ne peut pas être injecté. Bolus disponible : 2,8 U* signifie que le patch ne peut injecter que cette quantité pour le moment.
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+Si vous arrêtez un bolus et que le patch ne confirme pas l'arrêt, **AAPS** attend la fin du bolus et enregistre la quantité indiquée par le patch. Si un bolus n'a pas été enregistré (par exemple parce qu'il a été arrêté pendant l'injection), **AAPS** l'ajoute à partir du total du patch et vous demande de vérifier l'IA avant de réessayer.
 
-## Suspending and resuming insulin delivery
+## Suspendre et reprendre l'injection d'insuline
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+Appuyez sur **Suspendre la perfusion** sur l'écran de la pompe et choisissez la durée de la pause : de 30 minutes à 4 heures, par pas de 30 minutes. L'injection ne reprend pas toute seule : à la fin de la pause, le patch déclenche l'alerte **Démarrer l'insuline**. Appuyez sur **Reprendre la perfusion** sur l'écran de la pompe, ou sur **Démarrer l'insuline** dans l'alerte, puis confirmez.
 
-## Discarding a patch
+## Retirer un patch
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+Appuyez sur **Retirer le Patch** sur l'écran de la pompe et confirmez. L'injection d'insuline s'arrête et le patch ne peut plus être utilisé. Retirez le patch de votre corps et activez-en un nouveau.
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+Quand une alarme critique a arrêté le patch, l'alarme propose à la place **Désactiver le Patch**. Ce bouton retire le patch de la même façon.
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## Alarmes et notifications
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+Le patch signale trois niveaux d'événements. Ils sont tous affichés comme notifications **AAPS**.
 
-### Critical alarms
+### Alarmes critiques
 
-Insulin delivery has stopped. Act now:
+L'injection d'insuline est arrêtée. Agissez tout de suite :
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (5 ℃ and 37 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **Insuline basse** : il reste moins de 10 U. Désactivez le patch et changez-le.
+* **Patch expiré** : le patch est arrivé en fin de vie. Désactivez le patch et changez-le.
+* **Piles Faibles** : retirez le patch et changez-le.
+* **Température haute/basse** : allez dans un endroit à température adaptée, entre 40 ℉ et 99 ℉ (5 ℃ et 37 ℃).
+* **Arrêt automatique** : le patch s'est arrêté car l'alerte Arrêt automatique a été ignorée. Appuyez sur **Démarrer l'insuline** pour relancer l'injection basale.
+* **Délai d'application du patch dépassé**, **Échec de l'autodiagnostic**, **Erreur du patch**, **Occlusion** et **Erreur d'insertion de l'aiguille** : désactivez le patch et changez-le.
 
-### Alerts
+### Alertes
 
-Insulin delivery continues, but something needs your attention:
+L'injection d'insuline continue, mais quelque chose demande votre attention :
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉.
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **Insuline basse** : le réservoir a atteint la quantité réglée dans **Réglage de l'alerte insuline basse**. Préparez le changement du patch.
+* **Le patch va bientôt expirer** et **Durée de vie du patch dépassée** : changez le patch.
+* **Piles Faibles** : préparez le changement du patch.
+* **Température haute/basse** : l'injection est en pause jusqu'à ce que le patch soit de nouveau entre 40 ℉ et 99 ℉.
+* **Arrêt automatique** : touchez **OK**. Si elle est ignorée, l'alerte devient une alarme critique et l'injection s'arrête.
+* **Activation du patch incomplète** : touchez **OK** pour terminer l'activation.
+* **Démarrer l'insuline** : la pause que vous avez réglée est terminée. Touchez **Démarrer l'insuline** pour reprendre l'injection.
+* **Activer le Bluetooth** et **BLE non connecté** : le téléphone ne peut pas joindre le patch. Activez le Bluetooth ou vérifiez la connexion du patch.
 
-### Notices
+### Avis
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+Pour information seulement : **Insuline basse**, **Avis de durée d'utilisation du patch** (la durée réglée dans **Réglage de l'alerte de durée d'utilisation du patch** est dépassée), **Avis de vérification du patch**, **Changement de fuseau horaire** et **Vérifier la glycémie** (un temps réglé après un bolus).
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+Le patch signale aussi quand sa propre fonction d'arrêt sur glycémie basse (**AGB**) commence ou se termine. **AAPS** n'utilise pas cette fonction ; la boucle gère elle-même les glycémies basses.
 
-## Where to get help
+## Où obtenir de l'aide
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Signalez les problèmes du pilote CareLevo sur la [page des tickets GitHub d'AAPS](https://github.com/nightscout/AndroidAPS/issues) ou dans les canaux de la communauté AAPS, voir [Où puis-je obtenir de l'aide ?](../GettingHelp/WhereCanIGetHelp.md).
