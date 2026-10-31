@@ -13,7 +13,7 @@ Roche se retire du marché des pompes à insuline pour recentrer son activité d
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Fonctionnalités de la pompe avec AAPS
 
 * Communique avec **AAPS** par le Bluetooth natif de votre téléphone, sans appareil de communication supplémentaire.
 * Gestion automatique de l'heure d'été et des fuseaux horaires.
@@ -328,7 +328,7 @@ L'algorithme OpenAPS ne prend pas en charge un bolus étendu en parallèle ni un
 * Si la connexion est perdue pendant qu'**AAPS** envoie le bolus, on ne sait pas si la pompe l'a reçu. Vérifiez l'historique des bolus sur la pompe avant le prochain bolus.
 * Si **AAPS** ne peut pas confirmer qu'un bolus a été délivré, il affiche **Administration bolus échouée. Il semble qu’aucun bolus n’a été administré. Pour être sûr, veuillez vérifier la pompe pour éviter un double bolus ensuite refaire le bolus une nouvelle fois.** Les bolus ne sont jamais relancés automatiquement.
 
-## Where to get help
+## Où obtenir de l'aide
 
 Le développement du pilote Combo est fait par la communauté, de façon **bénévole**. Avant de demander de l'aide, merci de :
 
