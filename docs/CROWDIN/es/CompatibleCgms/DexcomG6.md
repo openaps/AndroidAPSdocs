@@ -36,9 +36,9 @@ Dexcom BYODA es ahora una versión muy antigua de la app y no se puede actualiza
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) permite la transmisión local a AAPS y/o xDrip
 
 -   Esta app te permite usar tu Dexcom G6 con cualquier teléfono Android.
--   Desinstala la app original de Dexcom o la app de Dexcom modificada si usabas una de ellas antes (**no detengas** el sensor que está en uso)
+-   Desinstala la app original de Dexcom o la app de Dexcom parcheada si usabas una de ellas antes (**no detengas** el sensor que está en uso)
 -   Instala el apk descargado
--   Introduce el código del sensor y el número de serie del transmisor en la app modificada.
+-   Introduce el código del sensor y el número de serie del transmisor en la app parcheada.
 -   En los ajustes del teléfono, ve a apps > Dexcom G6 > permisos > permisos adicionales y pulsa 'Access Dexcom app'.
 -   Después de poco tiempo, BYODA debería recibir la señal del transmisor.
 
