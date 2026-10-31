@@ -252,7 +252,7 @@ Pokud váš lékařský tým nepodporuje smyčku s **AAPS**, mohou pomoci násle
 
 a) Systém **AAPS** byl navržen pacienty a jejich pečovateli. Byl koneckonců navržen s ohledem na bezpečnost, ale také na základě důkladných zkušeností pacientů. Po celém světě je mnoho tisíc uživatelů **AAPS**. Je tedy pravděpodobné, že mezi pacienty vaší ambulance jsou i další, kteří používají smyčku OS-AID (ať už o tom ambulance ví, nebo ne).
 
-b) Nedávné recenzované doporučení zveřejněné v předním mezinárodním lékařském časopise [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ potvrdilo, že smyčky OS-AID jsou **bezpečné** a **účinně zlepšují kontrolu diabetu**, včetně času v rozsahu. V předních časopisech, jako je [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_, pravidelně vycházejí články o pokroku komunity smyček OS-AID.
+b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
 
 c) Rozběh používání **AAPS** vyžaduje _zvolna postupovat_ od "otevřené" smyčky, přes vypnutí při nízké glykémii až po hybridní "uzavřenou" smyčku, a to postupným plněním množství cílů. Existuje tedy strukturovaný postup vyžadující, aby uživatel prokázal úroveň své odborné způsobilosti v každém stadiu a doladil své základní nastavení (bazály, ISF a ICR) dříve, než může smyčku "uzavřít".
 
@@ -264,7 +264,7 @@ f) Pokud váš tým stále silně nesouhlasí, dejte svému lékaři vytištěn�
 
 #### Podpora smyček OS-AID ze strany dalších lékařů
 
-Článek zveřejněný v [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)[ (autor Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, a spoluautor Dr. Sufyan Hussain, konzultant diabetologie a čestný starší přednášející na King’s v Londýně) poskytuje:
+The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
 
 a) **Ujištění** pro odborníky, že systémy umělé slinivky OS-AID / open source jsou „bezpečnou a účinnou léčbou“ diabetu 1. typu, s pokyny k doporučením, rozhovorům, podpoře a dokumentaci;
 
