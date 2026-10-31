@@ -1,131 +1,131 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Αυτές οι οδηγίες είναι για τη ρύθμιση της αντλίας ινσουλίνης Equil.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Δυνατότητες της αντλίας με το AAPS
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* Αντλία patch χωρίς σωλήνα που επικοινωνεί με το **AAPS** μέσω του Bluetooth του τηλεφώνου σας, χωρίς επιπλέον συσκευή επικοινωνίας.
+* Το **AAPS** χειρίζεται την Equil ως αντλία patch με δεξαμενή 200 U: η κύρια οθόνη δείχνει τις ενδείξεις κατάστασης για αντλία patch, και τα **Πλήρωση/Γέμισμα** και **Αλλαγή Μπαταρίας Αντλίας** δεν προσφέρονται. Το γέμισμα, η πλήρωση και η αλλαγή μπαταρίας γίνονται στους οδηγούς (wizards) της αντλίας.
+* Όσο η αντλία είναι σε αναστολή ή σταματημένη, το **AAPS** καταγράφει προσωρινό βασικό ρυθμό 0 U/h, ώστε να μη μετράει βασική ινσουλίνη στο IOB.
+* Τις αλλαγές θερινής ώρας και ζώνης ώρας πρέπει να τις κάνετε χειροκίνητα.
 
 ## Απαιτήσεις υλικού και λογισμικού
-* **Compatible Equil hardware**
+* **Συμβατό υλικό Equil**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  Προς το παρόν υποστηρίζονται οι Equil 5.3 και 5.4.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* Το **AAPS** έχει δημιουργηθεί και εγκατασταθεί σύμφωνα με τις οδηγίες [Δημιουργία του AAPS](../SettingUpAaps/BuildingAaps.md)
 
 ## Ρύθμιση
 
-### Select Equil pump
+### Επιλογή της αντλίας Equil
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+Ανοίξτε το **μενού** (☰) στην πάνω αριστερή γωνία, επιλέξτε **[Διαμόρφωση](#Config-Builder-pump)** και στην ενότητα **Αντλία** επιλέξτε **Equil**.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+Μόλις την επιλέξετε, η κάρτα **Equil** δείχνει δύο κουμπιά, **Ρυθμίσεις** και **Άνοιγμα πρόσθετου**:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![Το πρόσθετο Equil επιλεγμένο στη Διαμόρφωση > Αντλία](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+Το **Άνοιγμα πρόσθετου** (ή **Διαχείριση** → **Αντλία**) ανοίγει την οθόνη της αντλίας Equil. Πριν από τη σύζευξη μιας αντλίας, η οθόνη μοιάζει έτσι:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![Η οθόνη της αντλίας Equil πριν από τη σύζευξη](../images/v4/Pumps/equil_pump_screen.png)
 
 ### Ρυθμίσεις
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+Ανοίξτε τις ρυθμίσεις της Equil με το **Ρυθμίσεις** στην κάρτα **Equil** ή με το εικονίδιο γραναζιού στην πάνω δεξιά γωνία της οθόνης της αντλίας.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Ρυθμίσεις του οδηγού Equil](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **Συναγερμός χαμηλής μπαταρίας**: σας προειδοποιεί όταν η μπαταρία της αντλίας είναι χαμηλή.
+* **Συναγερμός χαμηλής ινσουλίνης**: σας προειδοποιεί όταν η ινσουλίνη στη δεξαμενή είναι λίγη.
+* **Ήχος ειδοποίησης**: πώς σας ειδοποιεί η αντλία: **Σίγαση**, **Μόνο δόνηση**, **Μόνο ήχος** ή **Δόνηση και ήχος**.
+* **Ταχύτητα Bolus**: πόσο γρήγορα χορηγείται ένα bolus: **1,5 U/min (κανονική)**, **3 U/min**, **6 U/min** ή **12 U/min**. Ένα πιο γρήγορο bolus μπορεί να δώσει περισσότερους συναγερμούς απόφραξης.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![Οι επιλογές Ταχύτητα Bolus στις ρυθμίσεις της Equil](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+Το ίδιο το patch απορρίπτει κάθε βασικό ρυθμό πάνω από ένα μέγιστο που το **AAPS** προγραμματίζει σε αυτό. Το **AAPS** παίρνει τη μεγαλύτερη τιμή ανάμεσα στη [ρύθμιση](../SettingUpAaps/Preferences.md) **μέγιστος βασικός ρυθμός** και στον υψηλότερο ωριαίο βασικό ρυθμό του **Προφίλ** σας, ώστε το patch να δέχεται πάντα το προφίλ σας και τους προσωρινούς βασικούς ρυθμούς που ζητά το κύκλωμα. Το **AAPS** στέλνει επίσης στο patch το μέγιστο επιτρεπόμενο bolus σας.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+Όταν αλλάζετε τον **μέγιστο βασικό ρυθμό** ή το **μέγιστο bolus**, το **AAPS** στέλνει αυτόματα τις νέες τιμές στο patch. Στέλνονται επίσης με κάθε αλλαγή προφίλ. Δεν χρειάζεται να ρυθμίσετε τίποτα στο ίδιο το patch.
 ```
 
-### Pair the pump
+### Σύζευξη της αντλίας
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+Στην οθόνη της αντλίας πατήστε **Σύζευξη**. Ένας οδηγός σας καθοδηγεί σε κάθε βήμα. Η σειρά από τελείες στο πάνω μέρος δείχνει σε ποιο σημείο βρίσκεστε.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+Αν το Android ρωτήσει αν το **AAPS** μπορεί να βρίσκει και να συνδέεται σε κοντινές συσκευές, πατήστε **Να επιτρέπεται** (Allow). Το **AAPS** το χρειάζεται για να βρει την αντλία.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Το Android ζητά άδεια για εύρεση κοντινών συσκευών](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+Ο οδηγός έχει αυτά τα βήματα. Πατήστε **Επόμενο** για να συνεχίσετε ή **Ακύρωση** για να βγείτε από τον οδηγό.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **Απαιτείται προφίλ**: εμφανίζεται μόνο αν δεν έχετε ενεργοποιήσει ποτέ ένα **Προφίλ** στο **AAPS**. Επιλέξτε το προφίλ που θα χρησιμοποιήσετε και πατήστε **Ενεργοποίηση προφίλ**.
+1. **Συναρμολόγηση αντλίας**: συναρμολογήστε την αντλία, τη γεμάτη δεξαμενή και τη φορτισμένη μπαταρία.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![Βήμα Συναρμολόγηση αντλίας](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Εύρεση αντλίας**: το **AAPS** αναζητά αντλίες Equil κοντά σας. Επιλέξτε την αντλία σας από τη λίστα.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![Βήμα Εύρεση αντλίας με μια αντλία Equil στη λίστα](../images/Equil/find_pump.png)
+1. **Σύζευξη συσκευής**: μπορείτε να εισαγάγετε έναν κωδικό σύζευξης στο **Ορισμός κωδικού σύζευξης**. Πρέπει να έχει 4 χαρακτήρες, από τους `ABCDEF0123456789`. Πατήστε **Σύζευξη**.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![Βήμα Σύζευξη συσκευής με τον κωδικό σύζευξης](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Επιλογή ινσουλίνης**: εμφανίζεται μόνο αν έχετε ρυθμίσει περισσότερες από μία ινσουλίνες. Επιλέξτε την ινσουλίνη που έχει η δεξαμενή.
+1. **Πλήρωση / Γέμισμα**: η αντλία **δεν** πρέπει να είναι στη βάση της. Πατήστε **Πλήρωση/Γέμισμα** και κάντε πλήρωση της δεξαμενής μέχρι να εμφανιστεί μια σταγόνα ινσουλίνης στην άκρη της βελόνας. Πατήστε **Επόμενο**.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![Βήμα Πλήρωση / Γέμισμα](../images/Equil/prime_fill.png)
+1. **Εναλλαγή σημείων**: εμφανίζεται μόνο αν το **Διαχείριση εναλλαγής σημείων αντλίας** είναι ενεργό στις ρυθμίσεις εναλλαγής σημείων. Πατήστε το σημείο όπου θα τοποθετήσετε την αντλία ή πατήστε **Παράλειψη**.
+1. **Τοποθέτηση αντλίας**: τοποθετήστε την αντλία στη βάση της.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![Βήμα Τοποθέτηση αντλίας](../images/Equil/attach_pump.png)
+1. **Πλήρωση καθετήρα**: όταν η αντλία είναι στη βάση, πατήστε **Εξαέρωση** για να βγει ο αέρας από τον καθετήρα. Πατήστε **Επόμενο**.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![Βήμα Πλήρωση καθετήρα με το κουμπί Εξαέρωση](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **Επιβεβαίωση**: βάλτε την αντλία στο σώμα σας και πατήστε **Τέλος**.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![Βήμα Επιβεβαίωση με το κουμπί Τέλος](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+Αν ορίσετε δικό σας κωδικό σύζευξης (συνιστάται για την ασφάλειά σας), φυλάξτε τον σε ασφαλές μέρος. Ο κωδικός αποθηκεύεται στην αντλία. Η αντλία τον ζητά σε κάθε νέα σύζευξη μέχρι να καταργήσετε σωστά τη σύζευξη στο **AAPS**. Μέχρι τότε, η αντλία δεν μπορεί να χρησιμοποιηθεί ούτε με το αρχικό χειριστήριο (PDA).
 ```
 
-### Pump screen after pairing
+### Η οθόνη της αντλίας μετά τη σύζευξη
 
-Once the pump is paired, the pump screen shows these buttons:
+Μόλις γίνει η σύζευξη της αντλίας, η οθόνη της αντλίας δείχνει αυτά τα κουμπιά:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **Ανανέωση**: διαβάζει τώρα την κατάσταση και το ιστορικό της αντλίας.
+* **Αναστολή** / **Συνέχιση χορήγησης**: σταματά ή ξεκινά ξανά τη χορήγηση ινσουλίνης.
+* **Αλλαγή δεξαμενής**: σας καθοδηγεί να αφαιρέσετε την αντλία, να βάλετε νέα δεξαμενή (και, αν χρειάζεται, νέα μπαταρία), να κάνετε πλήρωση και να την τοποθετήσετε ξανά. Το πρώτο βήμα ρωτά *Θα βάλετε και νέο σετ έγχυσης (βάση και καθετήρα);*
+  * **Ναι, νέο σετ έγχυσης**: επιλέγετε το σημείο, γίνεται πλήρωση του καθετήρα και το **AAPS** καταγράφει αλλαγή ινσουλίνης και αλλαγή καθετήρα.
+  * **Όχι, μόνο δεξαμενή ή μπαταρία**: δεν γίνεται πλήρωση του καθετήρα και το **AAPS** καταγράφει μόνο αλλαγή ινσουλίνης.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  Μετά από αλλαγή δεξαμενής, το επίπεδο μπαταρίας δείχνει **-** μέχρι το **AAPS** να το διαβάσει ξανά από την αντλία.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![Το πρώτο βήμα της Αλλαγή δεξαμενής ρωτά για νέο σετ έγχυσης](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **Ιστορικό**: δείχνει τα συμβάντα που κατέγραψε η αντλία.
+* **Κατάργηση σύζευξης συσκευής**: σας καθοδηγεί να αφαιρέσετε την αντλία και να καταργήσετε τη σύζευξή της με το **AAPS**. Αυτό σταματά τη χορήγηση ινσουλίνης, επαναφέρει το έμβολο της αντλίας στο κάτω μέρος και διαγράφει τη σύζευξη.
 
-### Alarms
+### Συναγερμοί
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* Ο συναγερμός χαμηλής ινσουλίνης ηχεί μία φορά σε κάθε επίπεδο (10 U, 5 U και 2 U) και όταν η δεξαμενή αδειάσει. Ο συναγερμός χαμηλής μπαταρίας ηχεί μία φορά στο 10% και μία φορά στο 5%. Κάθε επίπεδο δίνει συναγερμό μόνο μία φορά μέχρι την επόμενη αλλαγή δεξαμενής.
+* Οι συναγερμοί και οι διακοπές της αντλίας καταγράφονται επίσης ως ανακοινώσεις στις θεραπείες, με την ώρα που τις κατέγραψε η αντλία, ώστε να βλέπετε αργότερα πότε και γιατί σταμάτησε η αντλία.
+* Αν η δεξαμενή αδειάσει κατά τη διάρκεια ενός bolus, το **AAPS** καταγράφει μόνο την ινσουλίνη που δόθηκε μέχρι τότε και σας λέει και τις δύο ποσότητες.
 
-## Where to get help
+## Πού θα βρείτε βοήθεια
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Την ανάπτυξη του οδηγού Equil την κάνει η κοινότητα **εθελοντικά**. Πριν ζητήσετε βοήθεια:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Διαβάστε** τη σχετική ενότητα αυτής της τεκμηρίωσης για να επιβεβαιώσετε πώς πρέπει να λειτουργεί η λειτουργία.
+2. **Ρωτήστε** στο κανάλι *#AAPS* στο [Discord](https://discord.gg/4fQUWHZ4Mw) ή σε ένα από τα άλλα [κανάλια της κοινότητας](../GettingHelp/WhereCanIGetHelp.md).
+3. **Αναφέρετε ένα σφάλμα**: ψάξτε πρώτα στα [υπάρχοντα issues](https://github.com/nightscout/AndroidAPS/issues)· αν το δικό σας δεν υπάρχει, ανοίξτε ένα [νέο issue](https://github.com/nightscout/AndroidAPS/issues) και επισυνάψτε τα [αρχεία καταγραφής](../GettingHelp/AccessingLogFiles.md) σας.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Όταν ζητάτε βοήθεια, γράψτε τη μάρκα και το μοντέλο του τηλεφώνου σας, την έκδοση Android, την έκδοση του **AAPS** και μια απλή περιγραφή του προβλήματος (τι άλλαξε, πότε λειτουργούσε τελευταία φορά).
