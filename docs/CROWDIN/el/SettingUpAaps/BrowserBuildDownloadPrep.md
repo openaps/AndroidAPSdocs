@@ -1,22 +1,22 @@
-Both keystore options (Option 1 and Option 2) use the same preparation file. Download it:
+Και οι δύο επιλογές keystore (Επιλογή 1 και Επιλογή 2) χρησιμοποιούν το ίδιο αρχείο προετοιμασίας. Κατεβάστε το:
 
 - [aaps-ci-preparation.html](https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html)
 
 ````{admonition} Note
 :class: note
 
-1. If you open this page from within an app (via a web view), the HTML file may not download. Please copy the URL and open it in your browser instead:
+1. Αν ανοίξετε αυτή τη σελίδα μέσα από μια εφαρμογή (σε web view), το αρχείο HTML μπορεί να μην κατέβει. Αντιγράψτε τη διεύθυνση URL και ανοίξτε την στον browser σας:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/download/release-v1.1.2/aaps-ci-preparation.html
 ```
-Or visit the latest release page:
+Ή επισκεφθείτε τη σελίδα της πιο νέας έκδοσης:
 ```text
 https://github.com/nightscout/aaps-ci-preparation/releases/latest
 ```
 
-2.Backup copy hosted on this site:
+2.Εφεδρικό αντίγραφο σε αυτόν τον ιστότοπο:
 
- - If the external link is also unavailable, you can use this backup file to download.
+ - Αν και ο εξωτερικός σύνδεσμος δεν είναι διαθέσιμος, μπορείτε να κατεβάσετε αυτό το εφεδρικό αρχείο.
 <!--crowdin:disable-->
 
 ```{eval-rst}
