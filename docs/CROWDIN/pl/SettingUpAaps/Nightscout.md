@@ -10,7 +10,7 @@ W **AAPS** 4 zdalne sterowanie nie odbywa się przez stronę Nightscout. Gdy kon
 
 Zachowaj największą ostrożność, jeśli używasz Nightscout jako źródła danych BG dla AAPS.
 
-### Nightscout settings
+### Ustawienia Nightscout
 
 Możesz zablokować publiczny dostęp do swojej strony Nightscout za pomocą [ról uwierzytelniania](https://nightscout.github.io/nightscout/security): udostępniaj swój adres URL tylko z tokenem `readable`, nigdy z tokenem `admin`.
 
@@ -22,9 +22,9 @@ Możesz zablokować publiczny dostęp do swojej strony Nightscout za pomocą [r�
 
 Akceptowanie danych z Nightscout (zmiany profilu, leczenie, ...) jest opcjonalne i domyślnie wyłączone. Przełączniki opisane poniżej są ukryte, gdy włączona jest kontrola z urządzenia opiekuna (tryb silniejszych zabezpieczeń) oraz w [trybie uproszczonym](#preferences-simple-mode).
 
-* Otwórz ustawienia **Synchronizacja** wtyczki NSClientV3 na jeden z dwóch sposobów: 1) **Ustawienia** (ikona koła zębatego na ekranie głównym) -> **NSClientV3** -> **Synchronizacja** albo 2) **Ustawienia** (menu ☰) -> **Komunikacja** -> „**Ustawienia**” pod NSClientV3.
+* Otwórz ustawienia **Synchronizacja** wtyczki NSClientV3 na jeden z dwóch sposobów: 1) **Ustawienia** (ikona koła zębatego na ekranie głównym) -> **NSClientV3** -> **Synchronizacja** albo 2) **Konfiguracja** (menu ☰) -> **Komunikacja** -> „**Ustawienia**” pod NSClientV3.
 * Włącz „Przesyłaj dane do NS”.
-* „Przekaż glikemię do NS” znajdziesz w ustawieniach swojego źródła BG (**Ustawienia → Źródło BG → Ustawienia**). Włącz tę opcję, chyba że źródłem danych BG w AAPS jest Nightscout: wtedy jej **nie** włączaj.
+* „Przekaż glikemię do NS” znajdziesz w ustawieniach swojego źródła BG (**Konfiguracja → Źródło BG → Ustawienia**). Włącz tę opcję, chyba że źródłem danych BG w AAPS jest Nightscout: wtedy jej **nie** włączaj.
 * Nie włączaj „Odbieraj dane CGM z NS”, chyba że Nightscout jest Twoim źródłem danych BG.
 
 #### Nie synchronizuj z Nightscout
