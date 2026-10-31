@@ -164,7 +164,7 @@ This opens the "**Protection**" screen. Press "**Master password**" (shown as "P
 
 Enter the same password in both fields and press "**OK**":
 
-![Password](../images/setup-wizard/Wizard-Password.png)
+![Senha](../images/setup-wizard/Wizard-Password.png)
 
 Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
 
