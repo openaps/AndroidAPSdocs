@@ -41,7 +41,7 @@ Características principais da **Omnipod DASH** («DASH»):
 - **Um telefone Android compatível** com Bluetooth Low Energy (BLE) (veja [Telefones](../Getting-Started/Phones.md) para mais informação); além disso, a informação seguinte ajuda a ter em conta outros pontos importantes para ativar e usar a DASH com sucesso num telefone compatível:
     -  O controlador Omnipod Dash do **AAPS** liga-se ao Pod DASH por Bluetooth.  
       O **AAPS** estabelece automaticamente uma nova ligação Bluetooth ao Pod sempre que precisa de enviar um comando (por exemplo, um bólus); depois de enviar o comando, a ligação Bluetooth é desligada de imediato.
-       - **NOTE:**
+       - **NOTA:**
          - A ligação Bluetooth pode ser interrompida/perturbada por outros dispositivos Bluetooth ligados ao telefone onde corre o **AAPS**, como auriculares, etc. Dispositivos como estes podem causar erros de ligação ou problemas na ativação do Pod em alguns modelos de telefones. Ao escolher o telefone para a Omnipod DASH, é boa ideia consultar a lista de [configurações de hardware testadas](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true), com configurações que se sabe que funcionam.
          - Há vários problemas conhecidos com o Bluetooth que podem causar problemas na ativação do Pod (veja [Resolução de problemas](#troubleshooting) para conselhos sobre outros problemas de Bluetooth), em especial a secção [Problemas relacionados com o Bluetooth](#omnipod-dash-bluetooth-related-issues).
     - O telefone tem de ter o **Android 12 ou mais recente**, com o **AAPS** compilado e instalado segundo as instruções [**Compilar o AAPS**](../SettingUpAaps/BuildingAaps.md). Use sempre a versão publicada mais recente.
@@ -112,7 +112,7 @@ Para verificar que a **Omnipod Dash** está selecionada, abra **Gerir** (navega�
 
 (omnipod-dash-tab)=
 
-## The DASH pump screen
+## O ecrã da bomba DASH
 
 O ecrã da bomba DASH é onde gere os seus Pods: ativá-los e desativá-los, atualizar o estado do Pod, silenciar alertas e ver o histórico do Pod. Abra-o com **Gerir** > **Bomba**, ou com **Abrir plugin** no cartão **Omnipod Dash** em **Configuração** > **Bomba**.
 
@@ -521,7 +521,7 @@ Escolha se o **AAPS** toca um som com as suas notificações quando não tem a c
 
 (omnipod-dash-advanced-settings)=
 
-### Advanced Settings
+### Definições avançadas
 
 ![A secção Definições avançadas](../images/v4/Pumps/dash_settings_advanced.png)
 
