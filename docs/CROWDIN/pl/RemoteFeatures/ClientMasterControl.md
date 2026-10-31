@@ -1,9 +1,9 @@
 (client-master-control)=
-# Master ↔ Client control (signed remote control)
+# Sterowanie Master ↔ Client (podpisane zdalne sterowanie)
 
-From **AAPS** version 4, a follower phone running **AAPSClient** can do much more than *announce* treatments through Nightscout: once it has been **paired** with the main phone, it can send **signed commands** that the main phone (the **master**) checks, confirms and executes — including delivering an **insulin bolus** on the master's pump.
+Od wersji 4 **AAPS** telefon obserwującego z aplikacją **AAPSClient** może zrobić dużo więcej niż tylko *zgłaszać* leczenie przez Nightscout: po **sparowaniu** z głównym telefonem może wysyłać **podpisane polecenia**, które główny telefon (urządzenie pacjenta, **master**) sprawdza, potwierdza i wykonuje — także podanie **bolusa insuliny** z pompy urządzenia pacjenta.
 
-This page explains how it works, and how to set it up and use it.
+Ta strona wyjaśnia, jak to działa, jak to skonfigurować i jak tego używać.
 
 ```{contents} Table of contents
 :depth: 2
@@ -12,256 +12,256 @@ This page explains how it works, and how to set it up and use it.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = the main **AAPS** phone that owns the pump and runs the loop (the `full` app).
-- **Client** = an **AAPSClient** phone with no pump that follows and now also *controls* the master.
-- Both phones must be connected to the **same Nightscout** site. All communication still travels through Nightscout — no direct connection between the phones is needed.
+- **Master** (urządzenie pacjenta) = główny telefon z **AAPS**, który steruje pompą i prowadzi pętlę (aplikacja `full`).
+- **Client** (urządzenie opiekuna) = telefon z **AAPSClient** bez pompy, który obserwuje urządzenie pacjenta, a teraz także nim *steruje*.
+- Oba telefony muszą być połączone z **tą samą stroną Nightscout**. Cała komunikacja nadal idzie przez Nightscout — bezpośrednie połączenie między telefonami nie jest potrzebne.
 ```
 
 ---
 
-## How it works
+## Jak to działa
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3, **AAPSClient** could only write unsigned care-portal treatments to Nightscout, and could not deliver a bolus. Remote control now needs a one-time [pairing](#client_master_master_setup). See also [What changed in AAPS v4](#v4changes-remote-control).
+W **AAPS** v3 **AAPSClient** mógł tylko zapisywać w Nightscout niepodpisane wpisy portalu opieki i nie mógł podać bolusa. Zdalne sterowanie wymaga teraz jednorazowego [parowania](#client_master_master_setup). Zobacz też [Co zmieniło się w AAPS v4](#v4changes-remote-control).
 ```
 
-**AAPS** v4 uses a dedicated **Client-Control** channel. It still rides on your Nightscout site (in the `settings` collection), but every message is **cryptographically signed** with a secret that only the two phones know. The secret is handed over once, during **pairing**, and replaced by a new one right after it, so it never travels in clear text.
+**AAPS** v4 używa osobnego kanału **Client-Control**. Nadal działa on przez Twoją stronę Nightscout (w kolekcji `settings`), ale każda wiadomość jest **podpisana kryptograficznie** tajnym kluczem, który znają tylko te dwa telefony. Tajny klucz jest przekazywany raz, podczas **parowania**, i zaraz potem zastępowany nowym, więc nigdy nie jest przesyłany otwartym tekstem.
 
-The guiding principle is **the master is in charge**:
+Główna zasada brzmi: **decyduje urządzenie pacjenta**:
 
-1. The client sends an *intent* (“bolus 2 U”, “start the Exercise scene”, “set this temp target”…).
-2. The **master** re-computes and **caps** the action against its **own** live data (profile, IOB, COB, current temp target, pump), and **authors the exact confirmation** the user will see.
-3. The client (or watch) shows the **master's** confirmation text — it never builds its own.
-4. On confirmation the master **executes once** and reports the result back to the client.
+1. Urządzenie opiekuna wysyła *zamiar* („bolus 2 U”, „uruchom scenę Ćwiczenia”, „ustaw ten cel tymczasowy”…).
+2. **Urządzenie pacjenta** oblicza akcję od nowa i **ogranicza** ją według **własnych** aktualnych danych (profil, IOB, COB, aktualny cel tymczasowy, pompa) oraz **tworzy dokładny tekst potwierdzenia**, który zobaczy użytkownik.
+3. Urządzenie opiekuna (lub zegarek) pokazuje tekst potwierdzenia **urządzenia pacjenta** — nigdy nie tworzy własnego.
+4. Po potwierdzeniu urządzenie pacjenta **wykonuje akcję jeden raz** i odsyła wynik do urządzenia opiekuna.
 
-What this means for you:
+Co to oznacza dla Ciebie:
 
-- **Signed commands**: only the clients you paired can send commands (per-client pairing secret and signature). Old or replayed commands are rejected.
-- **A role for each client**: you decide what each client may do, from *Read-only* to *Admin* — see [Client roles](#client-master-control-roles).
-- **Insulin bolus from a client**: the master delivers it on its pump, and the client shows the delivery progress.
-- **The master decides**: it caps every action against its own constraints and writes the confirmation shown on the client.
-- **Only paired clients change therapy**: while client control is on, the master no longer takes treatments or changes typed directly into Nightscout — see [Hardened mode](#client-master-control-hardened-mode).
-- **Each client gets its own Nightscout token** with only the rights a client needs — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Master offline**: actions are blocked with a clear message.
-- **Revoking a client** takes one tap (per client), or use the master's switch to stop all clients.
+- **Podpisane polecenia**: polecenia mogą wysyłać tylko sparowane przez Ciebie urządzenia opiekuna (każde ma własny tajny klucz parowania i podpis). Stare lub powtórzone polecenia są odrzucane.
+- **Rola dla każdego urządzenia opiekuna**: decydujesz, co może robić każde urządzenie opiekuna, od *Tylko odczyt* do *Administrator* — zobacz [Role urządzeń opiekuna](#client-master-control-roles).
+- **Bolus insuliny z urządzenia opiekuna**: urządzenie pacjenta podaje go swoją pompą, a urządzenie opiekuna pokazuje postęp podawania.
+- **Decyduje urządzenie pacjenta**: ogranicza każdą akcję według własnych ograniczeń i tworzy potwierdzenie pokazywane na urządzeniu opiekuna.
+- **Tylko sparowane urządzenia opiekuna zmieniają terapię**: gdy sterowanie z urządzenia opiekuna jest włączone, urządzenie pacjenta nie przyjmuje już leczenia ani zmian wpisanych bezpośrednio w Nightscout — zobacz [Tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode).
+- **Każde urządzenie opiekuna dostaje własny token Nightscout** tylko z uprawnieniami, których potrzebuje — zobacz [Własny token Nightscout urządzenia opiekuna](#client-master-control-own-token).
+- **Urządzenie pacjenta offline**: akcje są blokowane i widzisz jasny komunikat.
+- **Odebranie dostępu urządzeniu opiekuna** to jedno dotknięcie (dla każdego urządzenia osobno). Możesz też użyć przełącznika na urządzeniu pacjenta, aby zatrzymać wszystkie urządzenia opiekuna.
 
-Actions that can be triggered from a client: **bolus**, **carbs / eCarbs**, **temporary target** (set & cancel), **profile switch**, **loop / running-mode** change, **temp basal** (set & cancel), **extended bolus** (set & cancel), **insulin selection**, and **[scenes](../DailyLifeWithAaps/Scenes.md)**. A subset of bidirectional **preferences** is also kept in sync between master and clients.
+Akcje, które można uruchomić z urządzenia opiekuna: **bolus**, **węglowodany / eCarbs**, **cel tymczasowy** (ustawienie i anulowanie), **zmiana profilu**, zmiana **pętli / trybu pracy**, **baza tymczasowa** (ustawienie i anulowanie), **bolus przedłużony** (ustawienie i anulowanie), **wybór insuliny** oraz **[sceny](../DailyLifeWithAaps/Scenes.md)**. Część **ustawień** jest też synchronizowana w obie strony między urządzeniem pacjenta a urządzeniami opiekuna.
 
 ---
 
-## Roles and prerequisites
+## Role i wymagania
 
 ```{admonition} Before you start
 :class: important
-- The **master** runs the normal `full` **AAPS** build and is connected to your pump.
-- The **master** uses **NSClientV3** with your Nightscout and is showing *connected*. Give it an **admin token** of your Nightscout: with it the master can make a token of its own for each client and show it to the client as a QR code.
-- The **client** runs **[AAPSClient](AapsClient.md)** (or **AAPSClient2** / **AAPSClient3** for further patients — see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)). It must use the **same** Nightscout. If you set it up with the master's QR code, the client gets its Nightscout address and token from the master; otherwise set up **NSClientV3** on it yourself first.
-- **Websockets** are needed on both phones: commands only reach the master over the websocket connection. While client control is on, **AAPS** keeps websockets on, on the master and on paired clients.
+- **Urządzenie pacjenta** (master) ma zwykłą wersję `full` **AAPS** i jest połączone z Twoją pompą.
+- **Urządzenie pacjenta** używa **NSClientV3** z Twoim Nightscout i pokazuje stan *połączono*. Daj mu **token administratora** Twojego Nightscout: dzięki niemu urządzenie pacjenta może utworzyć osobny token dla każdego urządzenia opiekuna i pokazać mu go jako kod QR.
+- **Urządzenie opiekuna** (client) ma aplikację **[AAPSClient](AapsClient.md)** (lub **AAPSClient2** / **AAPSClient3** dla kolejnych pacjentów — zobacz [O AAPSClient, AAPSClient2 i AAPSClient3](#remotecontrol-aapsclient-versions)). Musi używać **tego samego** Nightscout. Jeśli konfigurujesz je kodem QR z urządzenia pacjenta, urządzenie opiekuna dostaje z niego adres Nightscout i token; w przeciwnym razie najpierw sam skonfiguruj na nim **NSClientV3**.
+- **Websockety** są potrzebne na obu telefonach: polecenia docierają do urządzenia pacjenta tylko przez połączenie websocket. Gdy sterowanie z urządzenia opiekuna jest włączone, **AAPS** utrzymuje websockety włączone na urządzeniu pacjenta i na sparowanych urządzeniach opiekuna.
 ```
 
-Pairing and synchronization are two different things:
+Parowanie i synchronizacja to dwie różne rzeczy:
 
-- **Synchronization** (data: BG, treatments, profile) is set up as before — see [Synchronization](#RemoteControl_aapsclient). The master's QR code can do it for you on the client.
-- **Pairing** (control: the signed command channel described here) is the new step below.
+- **Synchronizację** (dane: BG, leczenie, profil) konfigurujesz jak dotąd — zobacz [Synchronizacja](#RemoteControl_aapsclient). Kod QR z urządzenia pacjenta może zrobić to za Ciebie na urządzeniu opiekuna.
+- **Parowanie** (sterowanie: opisany tutaj kanał podpisanych poleceń) to nowy krok opisany poniżej.
 
 ---
 
-## Setting it up
+## Konfiguracja
 
 (client_master_master_setup)=
-### 1. On the master — enable control and add a client
+### 1. Na urządzeniu pacjenta — włącz sterowanie i dodaj urządzenie opiekuna
 
-On the master, open the **Manage** screen and choose **Authorized clients**.
+Na urządzeniu pacjenta otwórz ekran **Zarządzaj** i wybierz **Autoryzowani opiekunowie**.
 
-Turn on **Allow client control** (it is **off** by default). This is the master kill-switch: with it off, no client can send commands, but your paired clients are kept so you can turn it back on later. Turning it on also turns on [Hardened mode](#client-master-control-hardened-mode), shown as "*Hardened mode on*" with an **(i)** that explains it. In [Simple Mode](#preferences-simple-mode) client control is always on, so the switch is not shown.
+Włącz **Zezwalaj na sterowanie z urządzenia opiekuna** (domyślnie jest **wyłączone**). To główny wyłącznik: gdy jest wyłączony, żadne urządzenie opiekuna nie może wysyłać poleceń, ale sparowane urządzenia opiekuna zostają zapisane, więc możesz go później włączyć ponownie. Włączenie go włącza też [Tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode), co widać jako „*Włączono tryb silniejszych zabezpieczeń*” z ikoną **(i)**, która to wyjaśnia. W [Trybie uproszczonym](#preferences-simple-mode) sterowanie z urządzenia opiekuna jest zawsze włączone, więc przełącznik nie jest widoczny.
 
-![Authorized clients screen on the master](../images/v4/ClientMaster/authorized_clients_master.png)
+![Ekran Autoryzowani opiekunowie na urządzeniu pacjenta](../images/v4/ClientMaster/authorized_clients_master.png)
 
-Tap the **+** button (bottom right) to add a client. In the **New client** dialog:
+Dotknij przycisku **+** (w prawym dolnym rogu), aby dodać urządzenie opiekuna. W oknie **Nowe urządzenie opiekuna**:
 
-1. Enter a **device name**, so you can recognize it in the list.
-2. Choose **how the phone is set up** (see the table below).
-3. Choose its **[role](#client-master-control-roles)**. Nothing is selected for you: the right role depends on who uses the phone.
+1. Wpisz **nazwę urządzenia**, aby rozpoznać je na liście.
+2. Wybierz, **jak skonfigurowano telefon** (zobacz tabelę poniżej).
+3. Wybierz jego **[rolę](#client-master-control-roles)**. Nic nie jest wybrane za Ciebie: właściwa rola zależy od tego, kto używa telefonu.
 
-![New client dialog on the master: device name, how the phone is set up, and its role](../images/v4/ClientMaster/new_client_master.png)
+![Okno Nowe urządzenie opiekuna na urządzeniu pacjenta: nazwa urządzenia, sposób konfiguracji telefonu i jego rola](../images/v4/ClientMaster/new_client_master.png)
 
-| Way                                 | What the new phone gets                                                       | Use it when                                                                                            |
-| ----------------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| **QR code: Nightscout and pairing** | the Nightscout address, its own Nightscout token and the pairing, in one scan | the new phone has a camera: the quickest way, nothing to type                                          |
-| **QR code: Nightscout only**        | the Nightscout address and its own Nightscout token, no pairing               | the phone should only **show** data and never send commands                                            |
-| **PIN**                             | the pairing only; it keeps the Nightscout settings it has                     | the phone has no camera (or the master cannot make tokens); it must be connected to Nightscout already |
+| Sposób                             | Co dostaje nowy telefon                                                     | Kiedy używać                                                                                                    |
+| ---------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Kod QR: Nightscout i parowanie** | adres Nightscout, własny token Nightscout i parowanie — w jednym skanowaniu | nowy telefon ma aparat: najszybszy sposób, nie trzeba nic wpisywać                                              |
+| **Kod QR: tylko Nightscout**       | adres Nightscout i własny token Nightscout, bez parowania                   | telefon ma tylko **pokazywać** dane i nigdy nie wysyłać poleceń                                                 |
+| **PIN**                            | tylko parowanie; telefon zachowuje swoje ustawienia Nightscout              | telefon nie ma aparatu (albo urządzenie pacjenta nie może tworzyć tokenów); musi już być połączony z Nightscout |
 
-The two QR code ways need an **admin token** in the master's **NSClientV3** settings, because the master makes the client's token in Nightscout. Without one, the QR code options are shown but cannot be chosen, and the dialog says why; the **PIN** always works.
+Oba sposoby z kodem QR wymagają **tokenu administratora** w ustawieniach **NSClientV3** urządzenia pacjenta, bo to urządzenie pacjenta tworzy w Nightscout token dla urządzenia opiekuna. Bez niego opcje kodu QR są widoczne, ale nie można ich wybrać, a okno wyjaśnia dlaczego; **PIN** działa zawsze.
 
-#### With a QR code
+#### Kodem QR
 
-Tap **OK**: the master makes the client's Nightscout token and shows a **QR code**. A code that also pairs works for about **two minutes**; the screen counts down and closes by itself when the client has paired. Scan it on the new phone as described in [On the client](#client_master_client_setup).
+Dotknij **OK**: urządzenie pacjenta tworzy token Nightscout dla urządzenia opiekuna i pokazuje **kod QR**. Kod, który także paruje, działa przez około **dwie minuty**; ekran odlicza czas i zamyka się sam, gdy urządzenie opiekuna zostanie sparowane. Zeskanuj go na nowym telefonie, jak opisano w części [Na urządzeniu opiekuna](#client_master_client_setup).
 
 ```{admonition} The QR code is a secret
 :class: warning
-Anyone who sees the QR code can read your Nightscout, and a code that pairs also carries the pairing. Show it only to the new phone. **AAPS** blocks screenshots while the code is on screen.
+Każdy, kto zobaczy kod QR, może odczytać Twój Nightscout, a kod, który paruje, zawiera też dane parowania. Pokaż go tylko nowemu telefonowi. **AAPS** blokuje zrzuty ekranu, gdy kod jest na ekranie.
 ```
 
-![The master's QR code screen with its countdown (code blurred)](../images/v4/ClientMaster/qr_code_master.png)
+![Ekran kodu QR na urządzeniu pacjenta z odliczaniem (kod rozmyty)](../images/v4/ClientMaster/qr_code_master.png)
 
-#### With a PIN
+#### PIN-em
 
-Tap **OK**: the master displays an 8-digit **pairing PIN**, shown in two groups of four (for example `1234 5678`). This PIN is **one-time** and **expires after about two minutes**.
+Dotknij **OK**: urządzenie pacjenta pokazuje 8-cyfrowy **PIN parowania** w dwóch grupach po cztery cyfry (na przykład `1234 5678`). Ten PIN jest **jednorazowy** i **wygasa po około dwóch minutach**.
 
-![Master pairing screen showing the one-time PIN (the PIN shown here is expired)](../images/v4/ClientMaster/pairing_pin_master.png)
+![Ekran parowania na urządzeniu pacjenta z jednorazowym PIN-em (pokazany tu PIN już wygasł)](../images/v4/ClientMaster/pairing_pin_master.png)
 
 ```{admonition} The pairing PIN is a secret
 :class: warning
-The PIN protects the pairing secret that is exchanged through Nightscout. Share it only with the device you are pairing, do not post it publicly, and let it expire if you do not use it. A fresh PIN can always be generated by tapping **+** again.
+PIN chroni tajny klucz parowania, który jest przekazywany przez Nightscout. Podaj go tylko urządzeniu, które parujesz, nie publikuj go i pozwól mu wygasnąć, jeśli go nie używasz. Nowy PIN możesz zawsze wygenerować, dotykając ponownie **+**.
 ```
 
 (client_master_client_setup)=
-### 2. On the client — pair with the master
+### 2. Na urządzeniu opiekuna — sparuj z urządzeniem pacjenta
 
-#### Scanning the QR code
+#### Skanowanie kodu QR
 
-You can scan the master's QR code in two places:
+Kod QR urządzenia pacjenta możesz zeskanować w dwóch miejscach:
 
-- in the client's **Setup Wizard**, on the step "**Set up from the master**", which comes before the Nightscout step. One scan then sets up Nightscout and, with a code that pairs, also the pairing, so the setup is finished: the wizard closes and the home screen opens;
-- at any time later from **Manage → Pair with master → Scan QR code**.
+- w **Kreatorze konfiguracji** urządzenia opiekuna, na kroku „**Konfiguracja z telefonu pacjenta**”, który jest przed krokiem Nightscout. Jedno skanowanie konfiguruje wtedy Nightscout, a kodem, który paruje, także parowanie, więc konfiguracja jest zakończona: kreator się zamyka i otwiera się ekran główny;
+- w dowolnym momencie później w **Zarządzaj → Sparuj z telefonem pacjenta → Skanuj kod QR**.
 
-The first time, **AAPSClient** asks for the **camera** permission. If you refuse it, the screen says that the camera is needed, and you can allow it with **Try again** or pair with the PIN instead.
+Za pierwszym razem **AAPSClient** prosi o uprawnienie do **aparatu**. Jeśli odmówisz, ekran poinformuje, że aparat jest potrzebny. Możesz wtedy zezwolić na niego przyciskiem **Spróbuj ponownie** albo sparować za pomocą PIN-u.
 
-Point the camera at the code. The client shows what the code does — the Nightscout address and, for a code that pairs, the master it pairs with — and asks "**Use this code?**". Tap **Use**: the client turns on **NSClientV3**, replaces its Nightscout address and token with the ones from the code and turns on websockets. A code that pairs also pairs the phone; it says hello to the master as soon as it has connected to Nightscout.
+Skieruj aparat na kod. Urządzenie opiekuna pokazuje, co robi kod — adres Nightscout oraz, dla kodu, który paruje, urządzenie pacjenta, z którym się sparuje — i pyta „**Użyć tego kodu?**”. Dotknij **Użyj**: urządzenie opiekuna włącza **NSClientV3**, zastępuje swój adres Nightscout i token tymi z kodu i włącza websockety. Kod, który paruje, paruje też telefon; telefon wysyła powitanie do urządzenia pacjenta, gdy tylko połączy się z Nightscout.
 
-![The client's Set up from the master wizard step](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![Krok kreatora Konfiguracja z telefonu pacjenta na urządzeniu opiekuna](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
-The scanner is not available on iOS yet, and a desktop has no camera: use the PIN there.
+Skaner nie jest jeszcze dostępny na iOS, a komputer nie ma aparatu: tam użyj PIN-u.
 ```
 
-#### Entering the PIN
+#### Wpisywanie PIN-u
 
-On the client, open **Manage → Pair with master** (or the wizard step **Pair with master**, after the Nightscout step), **enter the 8-digit PIN** shown on the master and tap **Pair**. The client uses the PIN to securely retrieve the pairing offer through Nightscout, then asks "**Pair with this master?**" and shows the master's identifier. Tap **Pair** to confirm (see [Pairing with the master](#aapsclient-pairing-with-the-master) for a screenshot).
+Na urządzeniu opiekuna otwórz **Zarządzaj → Sparuj z telefonem pacjenta** (lub krok kreatora **Sparuj z telefonem pacjenta**, po kroku Nightscout), **wpisz 8-cyfrowy PIN** pokazany na urządzeniu pacjenta i dotknij **Paruj**. Urządzenie opiekuna używa PIN-u, aby bezpiecznie pobrać z Nightscout zaproszenie do parowania, a potem pyta „**Sparować z tym urządzeniem pacjenta?**” i pokazuje identyfikator urządzenia pacjenta. Dotknij **Sparuj**, aby potwierdzić (zrzut ekranu znajdziesz w części [Parowanie z telefonem pacjenta](#aapsclient-pairing-with-the-master)).
 
-![Pair-with-master screen on the client before pairing — enter the PIN here](../images/v4/ClientMaster/pair_with_master_unpaired.png)
+![Ekran Sparuj z telefonem pacjenta na urządzeniu opiekuna przed sparowaniem — tutaj wpisz PIN](../images/v4/ClientMaster/pair_with_master_unpaired.png)
 
-#### After pairing
+#### Po sparowaniu
 
-Once a client is paired it sends a **Hello** to the master and appears in the master's **Authorized clients** list as **Active**, with a *“last seen”* time. The client knows its [role](#client-master-control-roles) from the pairing, so it shows the right buttons at once. A pairing made in the Setup Wizard finishes the wizard. In the same step the two phones replace the pairing secret with a new one that never travelled (see [Security notes](#client-master-control-security)), and a client that was set up with the PIN gets its own Nightscout token (see [The client's own Nightscout token](#client-master-control-own-token)). A client can be paired with **one** master at a time; to pair with a different master, **Unpair** first.
+Po sparowaniu urządzenie opiekuna wysyła do urządzenia pacjenta wiadomość **Hello** i pojawia się na liście **Autoryzowani opiekunowie** urządzenia pacjenta jako **Aktywny**, z czasem *„Ostatnio widziany”*. Urządzenie opiekuna zna swoją [rolę](#client-master-control-roles) z parowania, więc od razu pokazuje właściwe przyciski. Parowanie wykonane w Kreatorze konfiguracji kończy kreator. W tym samym kroku oba telefony zastępują tajny klucz parowania nowym, który nigdy nie był przesyłany (zobacz [Uwagi dotyczące bezpieczeństwa](#client-master-control-security)), a urządzenie opiekuna skonfigurowane PIN-em dostaje własny token Nightscout (zobacz [Własny token Nightscout urządzenia opiekuna](#client-master-control-own-token)). Urządzenie opiekuna może być sparowane tylko z **jednym** urządzeniem pacjenta naraz; aby sparować je z innym urządzeniem pacjenta, najpierw użyj **Odłącz**.
 
-![Pair-with-master screen on the client (already-paired state)](../images/v4/ClientMaster/pair_with_master_client.png)
+![Ekran Sparuj z telefonem pacjenta na urządzeniu opiekuna (stan: już sparowano)](../images/v4/ClientMaster/pair_with_master_client.png)
 
-### 3. Managing clients
+### 3. Zarządzanie urządzeniami opiekuna
 
-From the master's **Authorized clients** screen you can, at any time:
+Na ekranie **Autoryzowani opiekunowie** urządzenia pacjenta możesz w każdej chwili:
 
-- **Change the role** of a client with the row of four buttons under its name. The new role takes effect at once, without pairing again.
-- **See which Nightscout token** a client writes with: "*Own Nightscout token*" is what you want. A red line "*Uses the Nightscout token …, which has more rights than a client needs*" means the client still uses a token with more rights, usually your admin token — see [The client's own Nightscout token](#client-master-control-own-token).
-- **Revoke** a single client — tap the **trash** icon next to it. The client can no longer send commands until it is paired again. Its own Nightscout token is deleted too, so it can no longer read your Nightscout either.
-- **Stop all control** without losing the pairings — turn off **Allow client control**.
+- **Zmienić rolę** urządzenia opiekuna rzędem czterech przycisków pod jego nazwą. Nowa rola działa od razu, bez ponownego parowania.
+- **Zobaczyć, jakim tokenem Nightscout** zapisuje urządzenie opiekuna: właściwy stan to „*Własny token Nightscout*”. Czerwona linia „*Używa tokena Nightscout …, który ma więcej uprawnień, niż potrzebuje klient*” oznacza, że urządzenie opiekuna nadal używa tokenu z większymi uprawnieniami, zwykle Twojego tokenu administratora — zobacz [Własny token Nightscout urządzenia opiekuna](#client-master-control-own-token).
+- **Odebrać dostęp** jednemu urządzeniu opiekuna — dotknij ikony **kosza** obok niego. Urządzenie opiekuna nie może wtedy wysyłać poleceń, dopóki nie zostanie ponownie sparowane. Jego własny token Nightscout też zostaje usunięty, więc nie może już także odczytywać Twojego Nightscout.
+- **Zatrzymać całe sterowanie** bez utraty parowań — wyłącz **Zezwalaj na sterowanie z urządzenia opiekuna**.
 
-Phones set up with **QR code: Nightscout only** are listed below the clients, under "**Read Nightscout only**". For each of them you can show the QR code again (to set up the same phone again) or delete its token, which ends its access to your Nightscout.
+Telefony skonfigurowane opcją **Kod QR: tylko Nightscout** są pokazane pod urządzeniami opiekuna, w części „**Tylko odczyt Nightscout**”. Dla każdego z nich możesz ponownie pokazać kod QR (aby jeszcze raz skonfigurować ten sam telefon) albo usunąć jego token, co kończy jego dostęp do Twojego Nightscout.
 
-![Authorized clients with a paired client (role buttons, own Nightscout token) and a phone under Read Nightscout only](../images/v4/ClientMaster/authorized_clients_roles.png)
+![Autoryzowani opiekunowie ze sparowanym urządzeniem opiekuna (przyciski ról, własny token Nightscout) i telefonem w części Tylko odczyt Nightscout](../images/v4/ClientMaster/authorized_clients_roles.png)
 
 ---
 
 (client-master-control-roles)=
-## Client roles
+## Role urządzeń opiekuna
 
-Each paired client has a **role**. The master checks it for every command, and the client shows only what its role allows. A new role takes effect at once, without pairing again. The roles build on each other: each one can do everything the one before it can.
+Każde sparowane urządzenie opiekuna ma **rolę**. Urządzenie pacjenta sprawdza ją przy każdym poleceniu, a urządzenie opiekuna pokazuje tylko to, na co pozwala jego rola. Nowa rola działa od razu, bez ponownego parowania. Role są zbudowane jedna na drugiej: każda może robić wszystko to, co rola przed nią.
 
-| Role          | The client may                                                                                                                                                                                                                |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Read-only** | only show data. It stays paired, so it is ready when you give it a higher role.                                                                                                                                               |
-| **Meals**     | give a bolus, use the bolus wizard and QuickWizard, enter carbs, and stop a running bolus. Carbs entered here can make the loop give more insulin.                                                                            |
-| **Caregiver** | do everything a user does in **AAPS**: temp targets, profile and insulin switches, loop mode, temp basal, extended bolus, scenes, careportal events, calibrations and removing records. It cannot change settings or presets. |
-| **Admin**     | do everything, settings and presets included (QuickWizard, temp target presets, scenes, profiles, automation, insulin).                                                                                                       |
+| Rola              | Urządzenie opiekuna może                                                                                                                                                                                                                                                |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tylko odczyt**  | tylko pokazywać dane. Pozostaje sparowane, więc jest gotowe, gdy dasz mu wyższą rolę.                                                                                                                                                                                   |
+| **Posiłki**       | podać bolus, użyć kalkulatora bolusa i Szybkiego kalkulatora, wpisać węglowodany i zatrzymać trwający bolus. Wpisane tu węglowodany mogą sprawić, że pętla poda więcej insuliny.                                                                                        |
+| **Opiekun**       | robić wszystko, co użytkownik robi w **AAPS**: cele tymczasowe, zmiany profilu i insuliny, tryb pętli, baza tymczasowa, bolus przedłużony, sceny, zdarzenia portalu opieki, kalibracje i usuwanie wpisów. Nie może zmieniać ustawień ani ustawień wstępnych (presetów). |
+| **Administrator** | robić wszystko, także zmieniać ustawienia i presety (Szybki kalkulator, presety celów tymczasowych, sceny, profile, automatyzacja, insulina).                                                                                                                           |
 
-The **(i)** at the top of the **Authorized clients** screen shows the same explanation. On the client, **Manage → Pair with master** shows the phone's own role.
+Ikona **(i)** u góry ekranu **Autoryzowani opiekunowie** pokazuje to samo wyjaśnienie. Na urządzeniu opiekuna **Zarządzaj → Sparuj z telefonem pacjenta** pokazuje rolę tego telefonu.
 
 ---
 
 (client-master-control-hardened-mode)=
-## Hardened mode
+## Tryb silniejszych zabezpieczeń
 
-When **Allow client control** is on, the master is in **hardened mode**: it takes changes only from paired clients. It does **not** take treatments, temp targets, profile changes, running mode changes or deletes that are made directly in Nightscout, for example on the Nightscout website or in other apps.
+Gdy **Zezwalaj na sterowanie z urządzenia opiekuna** jest włączone, urządzenie pacjenta działa w **trybie silniejszych zabezpieczeń**: przyjmuje zmiany tylko od sparowanych urządzeń opiekuna. **Nie** przyjmuje leczenia, celów tymczasowych, zmian profilu, zmian trybu pracy ani usunięć wykonanych bezpośrednio w Nightscout, na przykład na stronie Nightscout lub w innych aplikacjach.
 
-- The settings for accepting data from Nightscout (**NSClientV3 → Synchronization**) are hidden while hardened mode is on; **AAPS** uses them as if they were off.
-- The master still **uploads** all its data to Nightscout, BG included, and keeps **websockets** on.
-- If the master gets its **BG from Nightscout**, it still takes BG from there.
-- To load the history on a **new** master, use **Full sync** in **NSClientV3**: it takes everything that is in Nightscout, profiles included.
-- [SMS commands](SMSCommands.md) are not affected.
+- Ustawienia przyjmowania danych z Nightscout (**NSClientV3 → Synchronizacja**) są ukryte, gdy tryb silniejszych zabezpieczeń jest włączony; **AAPS** traktuje je tak, jakby były wyłączone.
+- Urządzenie pacjenta nadal **wysyła** wszystkie swoje dane do Nightscout, także BG, i utrzymuje **websockety** włączone.
+- Jeśli urządzenie pacjenta dostaje **BG z Nightscout**, nadal pobiera BG stamtąd.
+- Aby wczytać historię na **nowym** urządzeniu pacjenta, użyj **Pełna synchronizacja** w **NSClientV3**: pobiera ona wszystko, co jest w Nightscout, także profile.
+- [Polecenia SMS](SMSCommands.md) działają bez zmian.
 
-A paired client follows the master's hardened mode: it keeps websockets on, and the same Nightscout settings are hidden on it. An unpaired client keeps its own settings.
+Sparowane urządzenie opiekuna stosuje tryb silniejszych zabezpieczeń urządzenia pacjenta: utrzymuje websockety włączone, a te same ustawienia Nightscout są na nim ukryte. Niesparowane urządzenie opiekuna zachowuje własne ustawienia.
 
-[Simple Mode](#preferences-simple-mode) always turns hardened mode on. To turn it off, leave Simple Mode and turn off **Allow client control** on the master.
+[Tryb uproszczony](#preferences-simple-mode) zawsze włącza tryb silniejszych zabezpieczeń. Aby go wyłączyć, wyjdź z Trybu uproszczonego i wyłącz **Zezwalaj na sterowanie z urządzenia opiekuna** na urządzeniu pacjenta.
 
 ```{admonition} Why hardened mode
 :class: note
-Everything a paired client sends is signed, checked and confirmed by the master. A treatment typed into the Nightscout website is not: anybody with write access to your Nightscout could add it. In hardened mode only signed commands can change what the master does.
+Wszystko, co wysyła sparowane urządzenie opiekuna, jest podpisane, sprawdzone i potwierdzone przez urządzenie pacjenta. Leczenie wpisane na stronie Nightscout nie jest: mógł je dodać każdy, kto ma prawo zapisu do Twojego Nightscout. W trybie silniejszych zabezpieczeń tylko podpisane polecenia mogą zmienić to, co robi urządzenie pacjenta.
 ```
 
 ---
 
 (client-master-control-own-token)=
-## The client's own Nightscout token
+## Własny token Nightscout urządzenia opiekuna
 
-A client does not need an admin token. It only reads your Nightscout and sends its commands to the master through it; it uploads nothing itself. So the master gives each client a Nightscout token of its own, with just these rights:
+Urządzenie opiekuna nie potrzebuje tokenu administratora. Tylko odczytuje Twój Nightscout i wysyła przez niego polecenia do urządzenia pacjenta; samo niczego nie przesyła. Dlatego urządzenie pacjenta daje każdemu urządzeniu opiekuna osobny token Nightscout tylko z tymi uprawnieniami:
 
-- read everything,
-- write to the `settings` collection, the channel to the master,
-- snooze Nightscout alarms.
+- odczyt wszystkiego,
+- zapis do kolekcji `settings`, czyli kanału do urządzenia pacjenta,
+- wyciszanie alarmów Nightscout.
 
-The token belongs to a Nightscout role named **`aaps-client`**, which the master creates the first time it needs it. You can see the role and the tokens (named `aaps-` and the client's name) in the **Admin tools** of your Nightscout site. If the role is changed there, the master sets it back the next time it makes a token or you open **Authorized clients**.
+Token należy do roli Nightscout o nazwie **`aaps-client`**, którą urządzenie pacjenta tworzy, gdy po raz pierwszy jej potrzebuje. Rolę i tokeny (o nazwie `aaps-` i nazwa urządzenia opiekuna) zobaczysz w **Admin tools** (narzędzia administratora) na Twojej stronie Nightscout. Jeśli rola zostanie tam zmieniona, urządzenie pacjenta przywróci ją, gdy następnym razem utworzy token lub gdy otworzysz **Autoryzowani opiekunowie**.
 
-How a client gets its token:
+Jak urządzenie opiekuna dostaje swój token:
 
-- **Set up with a QR code**: the token is in the code.
-- **Paired with the PIN** (or paired before this existed): after pairing, the master sends the client its own token through the paired channel, encrypted. The client first checks that a login with it works, then uses it instead of the token it had. This needs an admin token on the master; without one, the client keeps its token, and its card on the master shows the red line.
+- **Konfiguracja kodem QR**: token jest w kodzie.
+- **Parowanie PIN-em** (lub parowanie wykonane, zanim ta funkcja istniała): po sparowaniu urządzenie pacjenta wysyła urządzeniu opiekuna jego własny token przez sparowany kanał, w postaci zaszyfrowanej. Urządzenie opiekuna najpierw sprawdza, czy logowanie tym tokenem działa, a potem używa go zamiast dotychczasowego tokenu. Wymaga to tokenu administratora na urządzeniu pacjenta; bez niego urządzenie opiekuna zachowuje swój token, a jego karta na urządzeniu pacjenta pokazuje czerwoną linię.
 
-**A client keeps its own token.** Once the master has seen a client write with its own token, it takes that client's commands only with that token. A command written with another token (for example an admin token typed into the client later, or another client's token) is refused, even though the client is paired, and the client says "*The master refused it: this phone writes to Nightscout with another token than its own*". Its card on the master says so in red. The client still shows as online, so you can see what is wrong. To fix it, remove the client on the master and add it again.
+**Urządzenie opiekuna zachowuje własny token.** Gdy urządzenie pacjenta zobaczy, że urządzenie opiekuna zapisuje własnym tokenem, od tej chwili przyjmuje polecenia tego urządzenia opiekuna tylko z tym tokenem. Polecenie zapisane innym tokenem (na przykład tokenem administratora wpisanym później na urządzeniu opiekuna albo tokenem innego urządzenia opiekuna) jest odrzucane, nawet jeśli urządzenie opiekuna jest sparowane, a urządzenie opiekuna pokazuje komunikat „*Telefon pacjenta odrzucił żądanie: ten telefon zapisuje dane do Nightscout innym tokenem niż własny*”. Jego karta na urządzeniu pacjenta pokazuje to na czerwono. Urządzenie opiekuna nadal jest pokazywane jako online, więc widać, co jest nie tak. Aby to naprawić, usuń urządzenie opiekuna na urządzeniu pacjenta i dodaj je ponownie.
 
-The master never deletes or changes a Nightscout token it did not make (one with other roles than `aaps-client`): those are yours. It deletes a client's own token when you remove the client.
+Urządzenie pacjenta nigdy nie usuwa ani nie zmienia tokenu Nightscout, którego samo nie utworzyło (tokenu z innymi rolami niż `aaps-client`): te tokeny należą do Ciebie. Usuwa własny token urządzenia opiekuna, gdy usuniesz to urządzenie opiekuna.
 
 ---
 
-## Using remote control
+## Używanie zdalnego sterowania
 
-### Triggering an action from the client
+### Uruchamianie akcji z urządzenia opiekuna
 
-Use the client exactly as you would the phone itself: open **Carbs**, **Insulin**, **Temp Target**, **Profile**, **Scenes**, the **Manage** sheet, etc., and fill in the values.
+Używaj urządzenia opiekuna dokładnie tak jak samego telefonu pacjenta: otwórz **Węglowodany**, **Insulina**, **Cel tymczasowy**, **Profil**, **Sceny**, panel **Zarządzaj** itd. i wpisz wartości.
 
-When you confirm, the client briefly shows **“Contacting master…”**, the **master** computes and caps the action, and the client then displays the **master's own confirmation** — the exact lines, values and colors the master would show on its own screen. Review them and tap **OK** to go ahead.
+Gdy potwierdzisz, urządzenie opiekuna przez chwilę pokazuje **„Łączenie z telefonem pacjenta…”**, **urządzenie pacjenta** oblicza i ogranicza akcję, a potem urządzenie opiekuna wyświetla **potwierdzenie utworzone przez urządzenie pacjenta** — dokładnie te linie, wartości i kolory, które urządzenie pacjenta pokazałoby na własnym ekranie. Sprawdź je i dotknij **OK**, aby kontynuować.
 
-![A scene confirmation authored by the master and shown on the client](../images/v4/ClientMaster/confirmation_master_authored.png)
+![Potwierdzenie sceny utworzone przez urządzenie pacjenta i pokazane na urządzeniu opiekuna](../images/v4/ClientMaster/confirmation_master_authored.png)
 
-The same applies to a simple carbs entry — the amount shown for confirmation is the one the master computed:
+To samo dotyczy zwykłego wpisu węglowodanów — ilość pokazana do potwierdzenia to ta, którą obliczyło urządzenie pacjenta:
 
-![Carbs confirmation authored by the master](../images/v4/ClientMaster/carbs_confirmation_client.png)
+![Potwierdzenie węglowodanów utworzone przez urządzenie pacjenta](../images/v4/ClientMaster/carbs_confirmation_client.png)
 
-After you confirm, the master executes the action once and the result is reflected back on the client.
+Po potwierdzeniu urządzenie pacjenta wykonuje akcję jeden raz, a wynik jest widoczny na urządzeniu opiekuna.
 
-### Insulin bolus from a client
+### Bolus insuliny z urządzenia opiekuna
 
-This is the main new capability in v4. A bolus started on a client is **delivered by the master on its pump**; the master caps it against its own constraints, and the client shows **live delivery progress** while it runs (and an alarm if the pump reports a failure).
+To najważniejsza nowa możliwość w v4. Bolus uruchomiony na urządzeniu opiekuna jest **podawany przez urządzenie pacjenta jego pompą**; urządzenie pacjenta ogranicza go według własnych ograniczeń, a urządzenie opiekuna pokazuje **postęp podawania na żywo** (oraz alarm, jeśli pompa zgłosi błąd).
 
 ```{admonition} Boluses are always confirmed and capped on the master
 :class: note
-A client never decides the delivered amount on its own. The master recomputes and caps it, you confirm the master-authored amount, and only then is it delivered.
+Urządzenie opiekuna nigdy samo nie decyduje o podanej dawce. Urządzenie pacjenta oblicza ją od nowa i ogranicza, Ty potwierdzasz dawkę podaną przez urządzenie pacjenta i dopiero wtedy jest ona podawana.
 ```
 
-### When the master is offline
+### Gdy urządzenie pacjenta jest offline
 
-If the master is not reachable (its phone is off/asleep, not connected to Nightscout, or websockets are down), control actions on the client are **blocked before anything is sent**, and you get a clear message. Nothing is half-applied.
+Jeśli urządzenie pacjenta jest nieosiągalne (telefon jest wyłączony lub uśpiony, nie jest połączony z Nightscout albo websockety nie działają), akcje sterowania na urządzeniu opiekuna są **blokowane, zanim cokolwiek zostanie wysłane**, i widzisz jasny komunikat. Nic nie zostaje wykonane tylko w połowie.
 
-![Client message when the master is offline](../images/v4/ClientMaster/master_offline_error.png)
+![Komunikat na urządzeniu opiekuna, gdy urządzenie pacjenta jest offline](../images/v4/ClientMaster/master_offline_error.png)
 
-The client re-checks reachability automatically and re-enables control once the master is back online.
+Urządzenie opiekuna automatycznie sprawdza ponownie połączenie i znów włącza sterowanie, gdy urządzenie pacjenta jest z powrotem online.
 
 (clientmastercontrol-wear-os-on-a-client)=
 
-### Wear OS (watch) on a client
+### Wear OS (zegarek) na urządzeniu opiekuna
 
-A watch paired to a **client** phone relays its actions through the client to the master (watch → client → master). The watch shows the **master's** confirmation lines and the real result, just like the phone. Setting up the watch is unchanged — see [Wear OS](../WearOS/WearOsSmartwatch.md).
+Zegarek sparowany z telefonem **opiekuna** przekazuje swoje akcje przez urządzenie opiekuna do urządzenia pacjenta (zegarek → urządzenie opiekuna → urządzenie pacjenta). Zegarek pokazuje linie potwierdzenia **urządzenia pacjenta** i prawdziwy wynik, tak samo jak telefon. Konfiguracja zegarka się nie zmienia — zobacz [Smartwatch z Wear OS](../WearOS/WearOsSmartwatch.md).
 
 
 <!-- 📷 SCREENSHOT NEEDED (optional): watch confirmation screen relayed from the master,
@@ -270,90 +270,90 @@ A watch paired to a **client** phone relays its actions through the client to th
 ---
 
 (client-master-config-prefs)=
-## Changing configuration and preferences
+## Zmiana konfiguracji i ustawień
 
-Pairing does more than relay one-off actions — it also keeps the **configuration** and many **preferences** aligned between the master and its clients.
+Parowanie robi więcej niż przekazywanie pojedynczych akcji — utrzymuje też zgodność **konfiguracji** i wielu **ustawień** między urządzeniem pacjenta a jego urządzeniami opiekuna.
 
-### Configuration (which plugins are active)
+### Konfiguracja (które wtyczki są aktywne)
 
-The active **plugins** (APS algorithm, sensitivity, smoothing, …) are chosen on the **master** and **mirrored** to every paired client. On a client these selections are marked with a small **mobile icon** in the [Configuration](#configuration_sync_icon) screen — change them on the master and the clients follow automatically and vice versa.
+Aktywne **wtyczki** (algorytm APS, wrażliwość, wygładzanie, …) wybiera się na **urządzeniu pacjenta** i są one **kopiowane** na każde sparowane urządzenie opiekuna. Na urządzeniu opiekuna te wybory są oznaczone małą **ikoną telefonu** na ekranie [Konfiguracja](#configuration_sync_icon) — zmień je na urządzeniu pacjenta, a urządzenia opiekuna zmienią się automatycznie, i odwrotnie.
 
-On a client, the mobile icon appears on *Smoothing*, *Calibration*, *Sensitivity detection* and *APS* (synced from the master), but not on *Communication*:
+Na urządzeniu opiekuna ikona telefonu jest widoczna przy *Wygładzanie*, *Kalibracja*, *Detekcja wrażliwości* i *APS* (synchronizowane z urządzenia pacjenta), ale nie przy *Komunikacja*:
 
-![Configuration list on a client — the mobile icon marks the categories synced with the master](../images/v4/ClientMaster/configuration_client.png)
+![Lista Konfiguracja na urządzeniu opiekuna — ikona telefonu oznacza kategorie synchronizowane z urządzeniem pacjenta](../images/v4/ClientMaster/configuration_client.png)
 
-Connection details that are unique to each device — most importantly the **NSClient Nightscout URL / access token** — are *not* synced. Each phone has its own; on a client they come from the master's QR code, or you set them yourself.
+Dane połączenia, które są inne dla każdego urządzenia — przede wszystkim **adres URL Nightscout / token dostępu w NSClient** — *nie* są synchronizowane. Każdy telefon ma własne; na urządzeniu opiekuna pochodzą z kodu QR urządzenia pacjenta albo ustawiasz je sam.
 
-### Profiles
+### Profile
 
-Your **profile list** is also kept in sync between the master and its paired clients. On a paired client, **Manage → Profile** shows the same profiles as the master; you can **edit** a profile or **activate** one, and — like every other command — the change is sent to the **master**, applied there, and synced back.
+Twoja **lista profili** jest też synchronizowana między urządzeniem pacjenta a sparowanymi urządzeniami opiekuna. Na sparowanym urządzeniu opiekuna **Zarządzaj → Profil** pokazuje te same profile co urządzenie pacjenta; możesz **edytować** profil lub go **aktywować**, a zmiana — jak każde inne polecenie — jest wysyłana do **urządzenia pacjenta**, tam stosowana i synchronizowana z powrotem.
 
-The first time you activate a profile on a newly installed client, the client may show "*No insulin is in use yet*" and ask you to **select the insulin**. Choose the insulin that is active on the master (**Manage → Insulin settings** on the master shows it).
+Gdy po raz pierwszy aktywujesz profil na nowo zainstalowanym urządzeniu opiekuna, może ono pokazać „*Nie używasz jeszcze żadnej insuliny*” i poprosić o **wybranie insuliny**. Wybierz insulinę, która jest aktywna na urządzeniu pacjenta (pokazuje ją **Zarządzaj → Ustawienia insuliny** na urządzeniu pacjenta).
 
-On a client that is **not paired**, the Profile screen is still available but **view-only**: the client shows the profiles it receives through Nightscout (it needs them for its own calculations), but there is no edit or activate button — there is no master to send the change to.
+Na urządzeniu opiekuna, które **nie jest sparowane**, ekran Profil jest nadal dostępny, ale **tylko do podglądu**: urządzenie opiekuna pokazuje profile, które dostaje przez Nightscout (potrzebuje ich do własnych obliczeń), ale nie ma przycisku edycji ani aktywacji — nie ma urządzenia pacjenta, do którego można wysłać zmianę.
 
-### Preferences
+### Ustawienia
 
-A subset of **preferences** is **bidirectional**: you can change them on the **master or on a paired client**, and the change is synchronized to the other side. When you change such a preference on a client, it is sent to the master over the signed channel, applied there, and the authoritative value is sent back — so what you see on the client is always what the master stored. If the same preference is changed on two devices at almost the same time, the **most recent edit wins**. For a setting with a slider, the new value is sent when you lift your finger.
+Część **ustawień** jest **dwukierunkowa**: możesz je zmienić **na urządzeniu pacjenta lub na sparowanym urządzeniu opiekuna**, a zmiana jest synchronizowana na drugą stronę. Gdy zmienisz takie ustawienie na urządzeniu opiekuna, jest ono wysyłane do urządzenia pacjenta podpisanym kanałem, tam stosowane, a wiążąca wartość wraca z powrotem — więc na urządzeniu opiekuna zawsze widzisz to, co zapisało urządzenie pacjenta. Jeśli to samo ustawienie zostanie zmienione na dwóch urządzeniach prawie w tym samym czasie, **wygrywa najnowsza zmiana**. Przy ustawieniu z suwakiem nowa wartość jest wysyłana, gdy podniesiesz palec.
 
-Inside the settings, the same small **mobile icon** marks the individual preferences that are synced. In the example below *Absorption cutoff* is synced (mobile icon), while settings without the icon are device-local:
+W ustawieniach ta sama mała **ikona telefonu** oznacza pojedyncze ustawienia, które są synchronizowane. W przykładzie poniżej *Czas odcięcia wchłaniania* jest synchronizowany (ikona telefonu), a ustawienia bez ikony są lokalne dla urządzenia:
 
-![A plugin's settings — the mobile icon marks the synced preferences](../images/v4/ClientMaster/preferences_synced_icon.png)
+![Ustawienia wtyczki — ikona telefonu oznacza synchronizowane ustawienia](../images/v4/ClientMaster/preferences_synced_icon.png)
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Because the master is the authority for the stored value, editing a master-controlled configuration item or a bidirectional preference from a client requires the master to be **reachable**. When the master is offline those controls are disabled on the client (see [When the master is offline](#when-the-master-is-offline)).
+Urządzenie pacjenta decyduje o zapisanej wartości, dlatego zmiana elementu konfiguracji sterowanego przez urządzenie pacjenta lub ustawienia dwukierunkowego z urządzenia opiekuna wymaga, aby urządzenie pacjenta było **osiągalne**. Gdy urządzenie pacjenta jest offline, te elementy są wyłączone na urządzeniu opiekuna (zobacz [Gdy urządzenie pacjenta jest offline](#when-the-master-is-offline)).
 ```
 
 ---
 
 (client-master-control-security)=
-## Security notes
+## Uwagi dotyczące bezpieczeństwa
 
 ```{admonition} How the channel is protected
 :class: tip
-- **Pairing secret**: the master hands it to the client once — protected by the PIN in a Nightscout document, or inside the QR code — and both store it encrypted.
-- **A new secret right after pairing**: the client's first message after pairing starts a key exchange, and from then on both phones use a secret that never travelled. A secret that someone may have seen (a photographed QR code, a PIN offer read from Nightscout) is of no use afterwards. Phones paired before this existed do the same once after the update.
-- **Every command is signed** (HMAC). The master rejects anything whose signature does not match a paired client.
-- **Replay is prevented** by a per-client monotonic counter, and every command **expires** after a short time-to-live.
-- **Least rights in Nightscout**: each client has its [own Nightscout token](#client-master-control-own-token), which can only read and write to the client-control channel. Once it has used it, the master takes its commands only with that token. Removing the client deletes it.
-- **Only signed changes**: in [hardened mode](#client-master-control-hardened-mode) the master ignores therapy changes typed directly into Nightscout.
-- **The master signs what it shares**: the settings, the client list and the "master is alive" sign that the master puts in Nightscout for its clients carry the master's signature. A client takes them only when the signature is the master's, so another client's token cannot change them. The client learns the master's key when it pairs, or from the QR code for a phone that only reads Nightscout. A refused document shows in the NSClient log as "*✕ SETTINGS … refused*".
-- **You stay in control**: give each client the [role](#client-master-control-roles) it needs, revoke a client with one tap, or disable everything with **Allow client control**.
+- **Tajny klucz parowania**: urządzenie pacjenta przekazuje go urządzeniu opiekuna jeden raz — chroniony PIN-em w dokumencie Nightscout albo w kodzie QR — i oba urządzenia przechowują go zaszyfrowany.
+- **Nowy tajny klucz zaraz po parowaniu**: pierwsza wiadomość urządzenia opiekuna po sparowaniu rozpoczyna wymianę kluczy i od tej chwili oba telefony używają tajnego klucza, który nigdy nie był przesyłany. Tajny klucz, który ktoś mógł zobaczyć (sfotografowany kod QR, zaproszenie PIN odczytane z Nightscout), jest potem bezużyteczny. Telefony sparowane, zanim ta funkcja istniała, robią to samo jeden raz po aktualizacji.
+- **Każde polecenie jest podpisane** (HMAC). Urządzenie pacjenta odrzuca wszystko, czego podpis nie pasuje do sparowanego urządzenia opiekuna.
+- **Powtórzenie jest blokowane** przez rosnący licznik dla każdego urządzenia opiekuna, a każde polecenie **wygasa** po krótkim czasie ważności.
+- **Najmniejsze uprawnienia w Nightscout**: każde urządzenie opiekuna ma [własny token Nightscout](#client-master-control-own-token), który pozwala tylko na odczyt i zapis do kanału sterowania urządzenia opiekuna. Gdy urządzenie opiekuna go użyje, urządzenie pacjenta przyjmuje jego polecenia tylko z tym tokenem. Usunięcie urządzenia opiekuna usuwa ten token.
+- **Tylko podpisane zmiany**: w [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode) urządzenie pacjenta ignoruje zmiany terapii wpisane bezpośrednio w Nightscout.
+- **Urządzenie pacjenta podpisuje to, co udostępnia**: ustawienia, lista urządzeń opiekuna i znak „urządzenie pacjenta działa”, który urządzenie pacjenta umieszcza w Nightscout dla urządzeń opiekuna, mają podpis urządzenia pacjenta. Urządzenie opiekuna przyjmuje je tylko wtedy, gdy podpis należy do urządzenia pacjenta, więc token innego urządzenia opiekuna nie może ich zmienić. Urządzenie opiekuna poznaje klucz urządzenia pacjenta podczas parowania albo z kodu QR, jeśli telefon tylko odczytuje Nightscout. Odrzucony dokument jest widoczny w logu NSClient jako „*✕ SETTINGS … refused*”.
+- **Ty masz kontrolę**: daj każdemu urządzeniu opiekuna [rolę](#client-master-control-roles), której potrzebuje, odbierz dostęp urządzeniu opiekuna jednym dotknięciem albo wyłącz wszystko przełącznikiem **Zezwalaj na sterowanie z urządzenia opiekuna**.
 ```
 
 ```{admonition} After restoring a backup
 :class: warning
-If a client is restored from a backup that rolls its command counter backwards, the master will reject its next commands as replays. Simply **unpair and pair again** to recover.
+Jeśli urządzenie opiekuna zostanie przywrócone z kopii zapasowej, która cofa jego licznik poleceń, urządzenie pacjenta odrzuci jego następne polecenia jako powtórzone. Aby to naprawić, po prostu **odłącz i sparuj ponownie**.
 ```
 
 ---
 
 (client-master-control-troubleshooting)=
 
-## Troubleshooting
+## Rozwiązywanie problemów
 
-| Symptom                                                                                                    | What to check                                                                                                                                                                                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Client says the **master is offline**                                                                      | Master phone awake and running **AAPS**; both phones connected in **NSClientV3**; **websockets** enabled on both; same Nightscout site.                                                                                                                                                                                      |
-| Client says it is **not paired**                                                                           | Pair again from **Manage → Pair with master**. Confirm the client is **Active** in the master's **Authorized clients** list.                                                                                                                                                                                                 |
-| Command **rejected** by the master                                                                         | The master re-validates against its current state — e.g. the chosen profile no longer exists, or the pump type does not match. Re-check on the master.                                                                                                                                                                       |
-| Commands work but are **slow**                                                                             | Enable **websockets** on both phones (otherwise the apps fall back to slower polling).                                                                                                                                                                                                                                       |
-| Pairing is cancelled with *"The pairing secret could not be stored"*                                       | Nothing was changed. Start the pairing again; if it keeps failing, restart **AAPSClient** and try once more.                                                                                                                                                                                                                 |
-| Nothing happens after pairing                                                                              | Make sure **Allow client control** is ON on the master, and that the master is connected to Nightscout.                                                                                                                                                                                                                      |
-| The QR code options cannot be chosen in the **New client** dialog                                          | The dialog says why. *Not an admin token*: give the master an admin token of your Nightscout, or add the client with the **PIN**. *Not connected*: wait until the master shows *connected* in **NSClientV3**.                                                                                                                |
-| *"Nightscout has a token with this name and other rights"*                                                 | One of your own Nightscout tokens is called `aaps-` and this name. Choose another name for the client.                                                                                                                                                                                                                       |
-| *"A client with this name is in the list already"*                                                         | Choose another name, or remove that client first.                                                                                                                                                                                                                                                                            |
-| The client says *"This code is from another AAPS version"*                                                 | Master and client must run the **same** version of **AAPS**. Update the older one.                                                                                                                                                                                                                                           |
-| The client says *"This code has expired"*                                                                  | A code that pairs works for about two minutes. Add the client again on the master to get a new code.                                                                                                                                                                                                                         |
-| The client says *"This phone is paired already"*                                                           | Unpair it first (**Manage → Pair with master → Unpair**), then scan again. A **Nightscout only** code works on a paired phone too.                                                                                                                                                                                           |
-| The client says *"The master refused it: this phone writes to Nightscout with another token than its own"* | The client used its own Nightscout token before and now writes with another one, for example after a token was typed into its Nightscout settings. Remove the client on the master and add it again (see [The client's own Nightscout token](#client-master-control-own-token)).                                             |
-| The NSClient log on the client shows *"✕ SETTINGS … refused"* and its settings no longer follow the master | Somebody else wrote the master's settings document, or the master has a new key (for example after its data was cleared). A paired client takes a new key by itself the next time it connects to Nightscout. A phone that only reads Nightscout needs the master's QR code again (**Read Nightscout only → show the code**). |
-| The client's card shows *"Uses the Nightscout token …"* in red                                             | The client still writes with a token that has more rights than it needs. The master sends it its own token after pairing, but only if the master has an admin token. Check the master's token, or set the client up again with a QR code.                                                                                    |
-| A client can no longer read Nightscout                                                                     | Its token was deleted, for example because the client was removed on the master. Add it again.                                                                                                                                                                                                                               |
-| Treatments entered on the Nightscout website are not applied                                               | Expected in [hardened mode](#client-master-control-hardened-mode): enter them on a paired client instead.                                                                                                                                                                                                                    |
+| Objaw                                                                                                                                | Co sprawdzić                                                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Urządzenie opiekuna pokazuje, że **urządzenie pacjenta jest offline**                                                                | Telefon pacjenta nie jest uśpiony i działa na nim **AAPS**; oba telefony są połączone w **NSClientV3**; **websockety** są włączone na obu; ta sama strona Nightscout.                                                                                                                                                                                                                     |
+| Urządzenie opiekuna pokazuje, że **nie jest sparowane**                                                                              | Sparuj ponownie w **Zarządzaj → Sparuj z telefonem pacjenta**. Sprawdź, czy urządzenie opiekuna ma stan **Aktywny** na liście **Autoryzowani opiekunowie** urządzenia pacjenta.                                                                                                                                                                                                           |
+| Polecenie **odrzucone** przez urządzenie pacjenta                                                                                    | Urządzenie pacjenta sprawdza polecenie ponownie według swojego aktualnego stanu — np. wybrany profil już nie istnieje albo typ pompy się nie zgadza. Sprawdź to ponownie na urządzeniu pacjenta.                                                                                                                                                                                          |
+| Polecenia działają, ale **wolno**                                                                                                    | Włącz **websockety** na obu telefonach (inaczej aplikacje przechodzą na wolniejsze odpytywanie).                                                                                                                                                                                                                                                                                          |
+| Parowanie jest anulowane z komunikatem *„Nie udało się zapisać klucza parowania na tym telefonie”*                                   | Nic nie zostało zmienione. Rozpocznij parowanie ponownie; jeśli nadal się nie udaje, uruchom ponownie **AAPSClient** i spróbuj jeszcze raz.                                                                                                                                                                                                                                               |
+| Po sparowaniu nic się nie dzieje                                                                                                     | Upewnij się, że **Zezwalaj na sterowanie z urządzenia opiekuna** jest WŁĄCZONE na urządzeniu pacjenta i że urządzenie pacjenta jest połączone z Nightscout.                                                                                                                                                                                                                               |
+| Nie można wybrać opcji kodu QR w oknie **Nowe urządzenie opiekuna**                                                                  | Okno wyjaśnia dlaczego. *To nie jest token administratora*: daj urządzeniu pacjenta token administratora Twojego Nightscout albo dodaj urządzenie opiekuna za pomocą **PIN**. *Nie połączono*: poczekaj, aż urządzenie pacjenta pokaże *połączono* w **NSClientV3**.                                                                                                                      |
+| *„Nightscout ma już token o takiej samej nazwie, ale innych uprawnieniach”*                                                          | Jeden z Twoich tokenów Nightscout nazywa się `aaps-` i ta nazwa. Wybierz inną nazwę dla urządzenia opiekuna.                                                                                                                                                                                                                                                                              |
+| *„Klient o tej nazwie znajduje się już na liście”*                                                                                   | Wybierz inną nazwę albo najpierw usuń to urządzenie opiekuna.                                                                                                                                                                                                                                                                                                                             |
+| Urządzenie opiekuna pokazuje *„Ten kod pochodzi z innej wersji AAPS”*                                                                | Urządzenie pacjenta i urządzenie opiekuna muszą mieć **tę samą** wersję **AAPS**. Zaktualizuj starsze z nich.                                                                                                                                                                                                                                                                             |
+| Urządzenie opiekuna pokazuje *„Ten kod wygasł”*                                                                                      | Kod, który paruje, działa przez około dwie minuty. Dodaj urządzenie opiekuna ponownie na urządzeniu pacjenta, aby dostać nowy kod.                                                                                                                                                                                                                                                        |
+| Urządzenie opiekuna pokazuje *„Ten telefon jest już sparowany”*                                                                      | Najpierw go odłącz (**Zarządzaj → Sparuj z telefonem pacjenta → Odłącz**), potem zeskanuj ponownie. Kod **tylko Nightscout** działa też na sparowanym telefonie.                                                                                                                                                                                                                          |
+| Urządzenie opiekuna pokazuje *„Telefon pacjenta odrzucił żądanie: ten telefon zapisuje dane do Nightscout innym tokenem niż własny”* | Urządzenie opiekuna używało wcześniej własnego tokenu Nightscout, a teraz zapisuje innym, na przykład po wpisaniu tokenu w jego ustawieniach Nightscout. Usuń urządzenie opiekuna na urządzeniu pacjenta i dodaj je ponownie (zobacz [Własny token Nightscout urządzenia opiekuna](#client-master-control-own-token)).                                                                    |
+| Log NSClient na urządzeniu opiekuna pokazuje *„✕ SETTINGS … refused”*, a jego ustawienia już nie podążają za urządzeniem pacjenta    | Ktoś inny zapisał dokument ustawień urządzenia pacjenta albo urządzenie pacjenta ma nowy klucz (na przykład po wyczyszczeniu jego danych). Sparowane urządzenie opiekuna samo przyjmie nowy klucz, gdy następnym razem połączy się z Nightscout. Telefon, który tylko odczytuje Nightscout, potrzebuje ponownie kodu QR urządzenia pacjenta (**Tylko odczyt Nightscout → Pokaż kod QR**). |
+| Karta urządzenia opiekuna pokazuje na czerwono *„Używa tokena Nightscout …”*                                                         | Urządzenie opiekuna nadal zapisuje tokenem, który ma więcej uprawnień, niż potrzebuje. Urządzenie pacjenta wysyła mu własny token po sparowaniu, ale tylko wtedy, gdy samo ma token administratora. Sprawdź token urządzenia pacjenta albo skonfiguruj urządzenie opiekuna ponownie kodem QR.                                                                                             |
+| Urządzenie opiekuna nie może już odczytywać Nightscout                                                                               | Jego token został usunięty, na przykład dlatego, że urządzenie opiekuna usunięto na urządzeniu pacjenta. Dodaj je ponownie.                                                                                                                                                                                                                                                               |
+| Leczenie wpisane na stronie Nightscout nie jest stosowane                                                                            | Tak ma być w [trybie silniejszych zabezpieczeń](#client-master-control-hardened-mode): wpisuj je na sparowanym urządzeniu opiekuna.                                                                                                                                                                                                                                                       |
 
-For Nightscout / synchronization problems first see [Troubleshooting NSClient](../GettingHelp/TroubleshootingNsClient.md).
+Przy problemach z Nightscout / synchronizacją najpierw zobacz [Wskazówki dotyczące rozwiązywania problemów z NSClient](../GettingHelp/TroubleshootingNsClient.md).
 
 ---
 
