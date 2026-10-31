@@ -71,15 +71,15 @@
 ## Listopad 2024
 
 - Aktualizacja strony [Twój profil AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Nowy układ treści o [smartwatchach z Wear OS](../WearOS/BuildingAapsWearOS.md) @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
 
 ## Październik 2024
 
 - Aktualizacja kilku stron:
-  - [Ile to potrwa](#preparing-how-long-will-it-take), [Przegląd komponentów](../DailyLifeWithAaps/CobCalculation.md), [Ukończenie zadań](../SettingUpAaps/CompletingTheObjectives.md), [Twój profil AAPS](../SettingUpAaps/YourAapsProfile.md), [Konfiguracja (Config Builder)](../SettingUpAaps/ConfigBuilder.md) i [Ustawienia (Preferencje)](../SettingUpAaps/Preferences.md), [Ekrany AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [Obliczanie COB](../DailyLifeWithAaps/CobCalculation.md), [Dynamiczny ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Instrukcje budowania dla Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Prace techniczne (proces publikacji dokumentacji, organizacja plików...) @psonnerat i @emilise
+- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
 
 ***
 
@@ -102,7 +102,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 
 ## Styczeń 2022
 
-- [Rozwiązywanie problemów z Android Studio](../GettingHelp/TroubleshootingAndroidStudio) – aktualizacja @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
 ## Grudzień 2021
 
@@ -113,7 +113,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 
 - Dobre praktyki kalibracji sensora Libre 2
 - [ISF](../UsefulLinks/FAQ.md) – nowy opis wpływu
-- Aktualizacja strony [Rozwiązywanie problemów z Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Usunięto zmodyfikowaną aplikację [Dexcom](../CompatibleCgms/DexcomG6.md) (patched), ponieważ jest przestarzała
 
 ## Październik 2021
@@ -166,7 +166,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 ## Wrzesień 2020
 
 - Duża aktualizacja dla nowej wersji AAPS 2.7
-- Szczegóły w `release notes <Releasenotes-version-2-7-0>`
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## Czerwiec 2020
 
@@ -191,7 +191,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 - [Budowanie APK w Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS z oprogramowaniem v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **obecnie nie może być używana z AAPS!**
 - [Bolus przedłużony i przełączenie na otwartą pętlę](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Aktualizacja APK w Android Studio 3.6.1](../Maintenance/UpdateToNewVersion)
+- [Aktualizacja APK w Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
 ## Luty 2020
 
@@ -229,7 +229,7 @@ Dokumentacja AAPS 3.1 jest dostępna [tutaj](https://androidaps.readthedocs.io/e
 - [Nowy samouczek dla Freestyle Libre 2](../CompatibleCgms/Libre2.md)
 - [Zmiana profilu z procentem – przykład](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [Aktualizacja poleceń SMS](../RemoteFeatures/SMSCommands.md)
-- [Rozwiązywanie problemów z Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- [Rozwiązywanie problemów z Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - [Rozwiązywanie problemów – zbiór linków](../GettingHelp/GeneralTroubleshooting.md)
 - Aktualizacja – szybki przewodnik dla doświadczonych użytkowników
 - Dokumentacja – aktualizacja stron o [edycji](#edit-the-docs-code-syntax) i [tłumaczeniu](#translations-translation-of-the-documentation).
