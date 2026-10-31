@@ -1,4 +1,4 @@
-# Completing the Objectives
+# Concluir os objetivos
 
 O **AAPS** tem uma série de **Objetivos** que têm de ser concluídos, para ajudar o utilizador a avançar do loop aberto básico até ao loop fechado híbrido e a todas as funções do **AAPS**. Concluir os **Objetivos** serve para garantir que:
 
@@ -83,7 +83,7 @@ For each question, there may be more than one answer that is correct! If an inco
 De tempos a tempos, são adicionadas ao **AAPS** novas funções que podem obrigar a adicionar uma nova pergunta aos **Objetivos**, sobretudo ao **Objetivo 3**. Por isso, qualquer pergunta nova adicionada ao **Objetivo 3** aparece como «não concluída», porque o **AAPS** vai pedir-lhe que a responda. Não se preocupe: como cada **Objetivo** é independente, **não perde as funções do AAPS que já tem**, desde que os outros **Objetivos** continuem concluídos.
 ```
 
-## Objetivo 4: Iniciar um loop aberto
+## Objetivo 4: A iniciar em loop aberto
 
 O **Objetivo 4** serve para perceber com que frequência o **AAPS** avalia a taxa basal do utilizador em relação aos valores de glicose e recomenda ajustes temporários da taxa basal. Neste **Objetivo**, vai ativar o loop aberto pela primeira vez e aceitar 20 alterações propostas da taxa basal temporária e, se for preciso, aplicá-las manualmente na sua bomba. Também vai observar o efeito dos [**Alvos temporários**](../DailyLifeWithAaps/TempTargets.md). Se ainda não sabe definir uma alteração temporária da taxa basal no **AAPS**, veja as ações da bomba no painel **Gerir** ([Para onde foi o separador Ações?](#screens-action-tab)).
 
@@ -104,7 +104,7 @@ Para reduzir o número de alterações da taxa basal propostas em loop aberto, t
 Não precisa de executar todas as recomendações do sistema!
 ```
 (objectives-objective5)=
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## Objetivo 5: Compreender o seu loop aberto, incluindo as recomendações de basais temporárias
 
 No **Objetivo 5** vai começar a perceber como são calculadas as recomendações de basal temporária. Isto inclui a [lógica de cálculo da basal](#aaps-screens-how-predictions-become-a-dosing-decision), analisar o efeito observando as [linhas de previsão na **Visão geral do AAPS**](#aaps-screens-prediction-lines) (ou no Nightscout) e ver os cálculos detalhados no ecrã do plugin **OpenAPS SMB** (**Configuração → APS → Abrir plugin**).
 
