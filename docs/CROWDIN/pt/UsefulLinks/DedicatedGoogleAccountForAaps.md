@@ -1,4 +1,4 @@
-# A dedicated Google account for AAPS (optional)
+# Uma conta Google dedicada ao AAPS (opcional)
 
 Alguns utilizadores do **AAPS** preferem usar também a sua conta de e-mail principal para o **AAPS**. Em alternativa, alguns utilizadores do **AAPS** (ou os seus cuidadores) criam uma conta de e-mail dedicada ao **AAPS** - isto é opcional; mostramos abaixo um exemplo de como o fazer.
 
