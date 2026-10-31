@@ -86,7 +86,7 @@ Usuń niepotrzebny plik .json albo przenieś go poza ten folder. Potem spróbuj 
 
 ### Wiersz poleceń
 
-Postępuj zgodnie z [Instrukcją budowania z wiersza poleceń](../SettingUpAaps/CLIBuild.md) i powtórz kroki kompilacji i podpisywania dla modułu `wear`, z tym samym magazynem kluczy:
+Postępuj według strony [Instrukcja budowania z wiersza poleceń](../SettingUpAaps/CLIBuild.md) i powtórz kroki kompilacji i podpisywania dla modułu `wear`, z tym samym magazynem kluczy:
 
 ```sh
 ./gradlew :wear:assembleFullRelease
