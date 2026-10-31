@@ -19,7 +19,7 @@ Voir [ici](#juggluco-to-aaps).
 ## Méthode 2 : convertir les valeurs à 1 minute en valeurs à 5 minutes avec xDrip
 Cette méthode utilise Juggluco pour recevoir les données brutes du capteur, à intervalle d'1 minute. Elles sont ensuite transmises à xDrip, qui les lisse en données à intervalle de 5 minutes et les transmet à AAPS.
 
-### Étape 1 : Configurez Juggluco
+### Étape 1 : Configurez Juggluco
 Téléchargez et installez l'application Juggluco depuis [ce lien](https://www.juggluco.nl/Juggluco/download.html). Suivez les instructions [ici](https://www.juggluco.nl/Juggluco/libre3/)
 
 Vérifiez que vous envoyez les glycémies à xDrip : dans les paramètres de Juggluco, vous pouvez configurer Juggluco pour envoyer ses glycémies à d'autres applications. Juggluco peut envoyer trois types de diffusions (broadcasts) de ce genre : le **Patched Libre broadcast** était utilisé à l'origine par l'application Librelink patchée et peut servir à envoyer les glycémies à xDrip
@@ -42,7 +42,7 @@ Les glycémies sont reçues par l'application xDrip sur le smartphone.
 
 
 
-### Étape 3 : Démarrez le capteur dans xDrip
+### Étape 3 : Démarrez le capteur dans xDrip
 
 Dans xDrip, démarrez le capteur avec « Start Sensor » et « not today ». Il n'est pas nécessaire de tenir le téléphone mobile sur le capteur. En fait, « Start Sensor » ne démarre physiquement aucun capteur Libre 3 et n'interagit jamais avec eux. Cela sert seulement à indiquer à xDrip qu'un nouveau capteur envoie des glycémies. Si possible, saisissez deux mesures de glycémie capillaire pour la calibration initiale. Les glycémies devraient maintenant s'afficher dans xDrip toutes les 5 minutes. Les valeurs manquées, par ex. parce que vous étiez trop loin de votre téléphone, ne seront pas complétées après coup.
 
@@ -86,7 +86,7 @@ Pour passer de l'application Libre 3 à Juggluco, vous devez forcer l'arrêt de 
 (libre3-experiences-and-troubleshooting)=
 ## Astuces et Dépannages
 
-### Résolution de problèmes de la connexion Libre3 -> Juggluco
+### Dépannage de la connexion Libre3 -> Juggluco
 
 - Vérifiez que vous utilisez une version récente de l'application Juggluco
 - Vérifiez vos paramètres selon ce guide
@@ -97,6 +97,6 @@ Pour passer de l'application Libre 3 à Juggluco, vous devez forcer l'arrêt de 
 
 ### Aide supplémentaire
 
-Instructions d'origine : [site web jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
+Instructions d'origine : [site web jkaltes](https://www.juggluco.nl/Juggluco/libre3/)
 
-Dépôt Github Supplémentaire : [Lien Github](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Dépôt Github Supplémentaire : [Lien Github](https://github.com/maheini/FreeStyle-Libre-3-patch)
