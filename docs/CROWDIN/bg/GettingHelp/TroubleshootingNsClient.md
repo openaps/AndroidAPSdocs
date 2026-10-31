@@ -12,7 +12,7 @@ NSClient разчита на стабилна комуникация с Nightsco
 
 * Рестарт
 
-Като първа стъпка опитайте да рестартирате и двете: първо Nightscout, а след това телефона, за да видите дали проблемът остава
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 Ако вашият Nightscout се хоства в Heroku, можете да рестартирате Nightscout така: влезте в Heroku, натиснете името на приложението си за Nightscout, натиснете менюто „More“, а след това „Restart all dynos“.
 
