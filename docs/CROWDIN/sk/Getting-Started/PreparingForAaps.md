@@ -12,7 +12,7 @@ Mnohé podrobnosti týkajúce sa skúseností v dokumentácii k **AAPS** dávaj�
 
 (preparing-safety-first)=
 
-## Safety First
+## Bezpečnosť na prvom mieste
 „S veľkou mocou prichádza aj veľká zodpovednosť…“
 
 ### Technická bezpečnosť
@@ -23,12 +23,12 @@ Systém **AAPS** má rozsiahlu sadu bezpečnostných prvkov. Tieto obmedzenia sa
 ### Zdravotná bezpečnosť
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
-V súvislosti s rýchlym zlepšením kontroly hladiny glukózy v krvi a znížením HbA1c sa odporúča opatrnosť 
+V súvislosti s rýchlym zlepšením kontroly glykémie a znížením HbA1c sa odporúča opatrnosť 
 ```
 
-Dôležitým bezpečnostným aspektom je, že **rýchle zníženie HbA1c a zlepšená kontrola hladiny glukózy v krvi u osôb, ktoré majú dlhší čas zvýšené hladiny glukózy, môže spôsobiť trvalé poškodenie**. Mnohí ľudia s diabetom o tom nevedia a nie všetci lekári na to svojich pacientov upozornia.
+Dôležitým bezpečnostným aspektom je, že **rýchle zníženie HbA1c a zlepšená kontrola glykémie u osôb, ktoré majú dlhší čas zvýšenú glykémiu, môže spôsobiť trvalé poškodenie**. Mnohí ľudia s diabetom o tom nevedia a nie všetci lekári na to svojich pacientov upozornia.
 
-Toto poškodenie môže zahŕňať **stratu zraku a trvalú neuropatiu (bolesť)**. Tomuto poškodeniu sa dá vyhnúť pomalším znižovaním priemerných hladín glukózy. Ak máte momentálne zvýšený HbA1c a prechádzate na **AAPS** (alebo akýkoľvek iný systém s uzavretým okruhom), _prosím_ preberte toto možné riziko so svojím lekárskym tímom ešte pred začatím a dohodnite sa s ním na časovom pláne, v ktorom budete cieľovú glykémiu znižovať postupne a bezpečne. Na začiatku môžete v **AAPS** ľahko nastaviť vyššiu cieľovú glykémiu (najvyšší cieľ, ktorý teraz môžete zvoliť, je 11,1 mmol/l, ale v prípade potreby môžete aj zámerne používať slabší profil) a potom cieľ v priebehu mesiacov postupne znižovať.
+Toto poškodenie môže zahŕňať **stratu zraku a trvalú neuropatiu (bolesť)**. Tomuto poškodeniu sa dá vyhnúť pomalším znižovaním priemernej glykémie. Ak máte momentálne zvýšený HbA1c a prechádzate na **AAPS** (alebo akýkoľvek iný systém s uzavretým okruhom), _prosím_ preberte toto možné riziko so svojím lekárskym tímom ešte pred začatím a dohodnite sa s ním na časovom pláne, v ktorom budete cieľovú glykémiu znižovať postupne a bezpečne. Na začiatku môžete v **AAPS** ľahko nastaviť vyššiu cieľovú glykémiu (najvyšší cieľ, ktorý teraz môžete zvoliť, je 11,1 mmol/l, ale v prípade potreby môžete aj zámerne používať slabší profil) a potom cieľ v priebehu mesiacov postupne znižovať.
 
 #### Ako rýchlo si môžem znížiť HbA1c bez rizika trvalého poškodenia?
 
@@ -86,7 +86,7 @@ So zostavením vám pomôžu tieto časti dokumentácie:
 
 - [Zostavenie AAPS](../SettingUpAaps/BuildingAaps.md) vás krok za krokom prevedie zostavením aplikácie a jej inštaláciou do telefónu;
 
-- [Časté otázky](../UsefulLinks/FAQ.md) odpovedajú na bežné otázky a vysvetľujú chyby, ktoré sa vyskytujú najčastejšie; a
+- Stránka [Najčastejšie otázky používateľov APS](../UsefulLinks/FAQ.md) odpovedá na bežné otázky a vysvetľuje chyby, ktoré sa vyskytujú najčastejšie; a
 
 - rozcestník [Riešenie problémov](../GettingHelp/GeneralTroubleshooting.md) zhromažďuje riešenia najčastejších problémov, zoradené podľa tém.
 
@@ -111,7 +111,7 @@ Vďaka tomu budete môcť použiť presne ten istý súbor vždy, keď sa vytvor
 
 Okrem toho **AAPS** poskytuje možnosť [exportovať všetky vaše konfiguračné nastavenia](../Maintenance/ExportImportSettings.md). Vďaka tomu môžete pri výmene telefónu, aktualizácii alebo preinštalovaní aplikácie bezpečne obnoviť systém s čo najmenšími problémami. 
 
-#### Troubleshooting
+#### Riešenie problémov
 
 Ak si niečím nie ste istí, neváhajte sa obrátiť na komunitu AAPS – hlúpe otázky neexistujú! Všetkých používateľov bez ohľadu na úroveň skúseností povzbudzujeme, aby sa pýtali. Vďaka veľkému množstvu používateľov **AAPS** sú odpovede na vaše otázky pomerne rýchle.
 
@@ -146,11 +146,11 @@ Okrem troch základných hardvérových komponentov (telefón, pumpa, glukózov�
 
 ### 2) Reportovací server: Nightscout (Tidepool*)
 
-Aby ste mohli **AAPS** naplno využívať, musíte si nastaviť server Nightscout. Môžete to [urobiť sami](https://nightscout.github.io/nightscout/new_user/#free-diy) alebo zaplatiť malý poplatok za [spravovanú službu Nightscout](https://nightscout.github.io/#nightscout-as-a-service), ktorá vám bude nastavená. Nightscout sa používa na zhromažďovanie údajov z **AAPS** a vie vytvárať detailné prehľady, ktoré prepájajú dáta zo senzora a vzory podávania inzulínu. Opatrovatelia môžu tiež používať Nightscout na diaľkovú komunikáciu s aplikáciou **AAPS** a dohliadať na liečbu diabetu svojho dieťaťa. Medzi takéto funkcie patrí monitorovanie hladín glukózy a inzulínu v reálnom čase, diaľkové podávanie inzulínu (prostredníctvom SMS) a oznámenia o jedle. Hodnotiť liečbu diabetu len podľa dát z CGM bez dát z pumpy je ako riadiť auto, ktorého vodič je slepý a spolujazdec mu opisuje, čo vidí. Ako alternatívu k Nightscoutu môžete použiť aj Tidepool.
+Aby ste mohli **AAPS** naplno využívať, musíte si nastaviť server Nightscout. Môžete to [urobiť sami](https://nightscout.github.io/nightscout/new_user/#free-diy) alebo zaplatiť malý poplatok za [spravovanú službu Nightscout](https://nightscout.github.io/#nightscout-as-a-service), ktorá vám bude nastavená. Nightscout sa používa na zhromažďovanie údajov z **AAPS** a vie vytvárať detailné prehľady, ktoré prepájajú dáta zo senzora a vzory podávania inzulínu. Opatrovatelia môžu tiež používať Nightscout na diaľkovú komunikáciu s aplikáciou **AAPS** a dohliadať na liečbu diabetu svojho dieťaťa. Medzi takéto funkcie patrí monitorovanie glykémie a inzulínu v reálnom čase, diaľkové podávanie inzulínu (prostredníctvom SMS) a oznámenia o jedle. Hodnotiť liečbu diabetu len podľa dát z CGM bez dát z pumpy je ako riadiť auto, ktorého vodič je slepý a spolujazdec mu opisuje, čo vidí. Ako alternatívu k Nightscoutu môžete použiť aj Tidepool.
 
 ### 3) Aplikácia senzora CGM
 
-V závislosti od vášho glukózového senzora/CGM budete potrebovať kompatibilnú aplikáciu na prijímanie hodnôt glukózy a ich odosielanie do **AAPS**. Nižšie sú zobrazené rôzne možnosti a ďalšie informácie nájdete v sekcii [kompatibilných CGM](../Getting-Started/CompatiblesCgms.md):
+V závislosti od vášho glukózového senzora/CGM budete potrebovať kompatibilnú aplikáciu na prijímanie hodnôt glykémie a ich odosielanie do **AAPS**. Nižšie sú zobrazené rôzne možnosti a ďalšie informácie nájdete v sekcii [kompatibilných CGM](../Getting-Started/CompatiblesCgms.md):
 
 ![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](../images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
 
@@ -190,7 +190,7 @@ Tu je približný časový rámec:
 
 Aj keď budete fungovať plne na **AAPS**, budete musieť pravidelne dolaďovať nastavenia, aby ste zlepšili celkovú liečbu diabetu.
 
-## Requirements
+## Požiadavky
 
 ### Zdravotné hľadiská
 
@@ -198,13 +198,13 @@ Okrem lekárskych upozornení v [časti bezpečnosť](#preparing-safety-first) s
 
 #### Voľba inzulínu
 
-Výpočty **AAPS** sú založené na koncentráciách inzulínu 100 U/ml (rovnako ako štandard pumpy). Inzulín nastavíte v **Spravovať → Nastavenia inzulínu**: nastavte **Vrchol** a **Doba pôsobenia inzulínu** (DIA), alebo použite **Nahraj vrchol z** a doplňte štandardný čas vrcholu jedného z prednastavených inzulínov:
+Výpočty **AAPS** sú založené na koncentráciách inzulínu 100 U/ml (rovnako ako štandard pumpy). Inzulín nastavíte v **Spravovať → Nastavenia inzulínu**: nastavte **Vrchol** a **Doba pôsobenia inzulínu** (DIA), alebo použite **Načítať vrchol z** a doplňte štandardný čas vrcholu jedného z prednastavených inzulínov:
 
 - **Novorapid** (aj pre Humalog a NovoLog)
 - **Fiasp**
 - **Lyumjev**
 
-Pokročilí používatelia môžu zadať ľubovoľný čas vrcholu (35 až 120 minút) priamo, napríklad pre zmes inzulínov. Pozri [Nastavenia inzulínu](#Config-Builder-insulin).
+Pokročilí používatelia môžu zadať ľubovoľný čas vrcholu (35 až 120 minút) priamo, napríklad pre zmes inzulínov. Pozrite [Nastavenia inzulínu](#Config-Builder-insulin).
 
 
 ### Technické hľadiská
@@ -221,7 +221,7 @@ Okrem zostavenia aplikácie musíte tiež nastaviť reportovací server, nastavi
 
 #### Verzie AAPS a Androidu
 
-Aktuálna verzia aplikácie **AAPS** (4.0) vyžaduje smartfón so systémom **Android 12.0 alebo novším**. Ak plánujete kúpiť nový telefón, odporúčame (k januáru 2026) Android 16.<br/> Z bezpečnostných dôvodov dôrazne odporúčame udržiavať vaše zostavenie **AAPS** aktuálne. Pre používateľov, ktorí nemôžu používať zariadenie so systémom Android 12.0 alebo novším, sú však stále k dispozícii staršie verzie aplikácie **AAPS** kompatibilné so staršími verziami systému Android, pozri: [Poznámky k vydaniu](#maintenance-android-version-aaps-version).
+Aktuálna verzia aplikácie **AAPS** (4.0) vyžaduje smartfón so systémom **Android 12.0 alebo novším**. Ak plánujete kúpiť nový telefón, odporúčame (k januáru 2026) Android 16.<br/> Z bezpečnostných dôvodov dôrazne odporúčame udržiavať vaše zostavenie **AAPS** aktuálne. Pre používateľov, ktorí nemôžu používať zariadenie so systémom Android 12.0 alebo novším, sú však stále k dispozícii staršie verzie aplikácie **AAPS** kompatibilné so staršími verziami systému Android, pozrite: [Poznámky k vydaniu](#maintenance-android-version-aaps-version).
 
 #### Výber modelu smartfónu
 Presný model, ktorý si kúpite, závisí od požadovaných funkcií. Odporúčania a spätnú väzbu od používateľov týkajúce sa funkčných nastavení nájdete na [stránke Telefóny](../Getting-Started/Phones.md).
