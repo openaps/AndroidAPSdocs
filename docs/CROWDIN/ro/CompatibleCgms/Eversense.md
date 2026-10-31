@@ -49,7 +49,7 @@ Citește datele din notificările aplicației Eversense (funcționează cu aplic
 
 ![Transmitere ESEL](../images/ESELpatch.png)
 
-Dacă rulați ESEL cu o instalare nouă de Eversense pentru prima dată, poate dura până la 15 minute până când primele valori apar în xDrip!
+If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
 
 4. Set "MM640g" as BG source in [**Configuration → BG Source**](#Config-Builder-bg-source).
 
