@@ -2,7 +2,7 @@
 
 ## AAPS tamamen gönüllü çabalarla çalışır ve ücretli personeli yoktur.
 
-Geliştiriciler, çok yaygın bir ihtiyaca yönelik bir çözüm geliştirmek ve iyileştirmek için birlikte çalışan ebeveynler, bakıcılar, sevdikleriniz ve diyabetli kişilerdir. Geliştiriciler boş zamanlarını ücretsiz olarak bağışlar, ancak bu kadar şaşırtıcı bir açık kaynak ve herkes için ücretsiz bir şey yapmak için ek maliyetlerle yüzleşmelerini beklemek biraz haksızlık olur.
+Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Geliştiriciler boş zamanlarını ücretsiz olarak bağışlar, ancak bu kadar şaşırtıcı bir açık kaynak ve herkes için ücretsiz bir şey yapmak için ek maliyetlerle yüzleşmelerini beklemek biraz haksızlık olur.
 
 *Yeni bir teçhizatı tam olarak test etmek için geliştiricilerin yedek bir telefona ve yedek bir pompaya sahip olmaları gerekir, çünkü kararlı olana kadar bir insan üzerinde kullanılamaz. Daha yeni modeller piyasaya çıktıkça test edilmelidir. Bağışlanan paranın bir kısmı, bu malzemelerin ülkeler arasında geliştiricilere nakliyesinin lojistik maliyetleri için de gereklidir. Bazen geliştiricilerin karanlık odalarından çıkmaları ve konferanslarda ve etkinliklerde buluşup yaratıcı ve analitik beyinlerinin birbirine sıçramasına izin verme maliyetlerine katkıda bulunmak da güzeldir.*
 
