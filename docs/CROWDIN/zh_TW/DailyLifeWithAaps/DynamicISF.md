@@ -33,7 +33,7 @@
 
 ![實作使用上述方程計算當前<strong x-id="1">ISF</strong>，並在 oref1 預測中用於<strong x-id="1">體內胰島素</strong>、<strong x-id="1">ZT</strong> 和 <strong x-id="1">UAM</strong>。](../images/DynamicISF/DynISF2.png)
 
-紅色圈起的部分顯示： `設定檔 ISF` -> `根據 DynISF 計算的 ISF`。 <br/> 點擊此部分顯示對話框，提供更多資訊，例如計算器和碳水化合物吸收所使用的 **ISF**（請參見 [ISF 的其他用途](#dynisf-other-usages-of-isf)）。
+紅色圈起的部分顯示： `設定檔 ISF` -> `根據 DynISF 計算的 ISF`。 <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
 
 The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
 
@@ -134,4 +134,4 @@ This setting (*"Adjust sensitivity calculations when using DynamicISF"*) replace
   * 生活方式變化（飲食或身體活動模式不一致）
   * 每日的 TDD 或敏感性不一致。
 * 沒有準確的指導來設定 **調整因子** 的初始值。然而，作為起點：假設你的 **設定檔** 數值正確，當你處於範圍內且 **血糖** 水平穩定時，**動態 ISF** 值應該與你之前在 **設定檔** 中的值大致相同。<br/>如果你發現 **動態 ISF** 太積極，請降低 **調整因子**，反之亦然。
-* 儘管 **動態 ISF** 完全不使用 **設定檔 ISF**，如果你注意到你的敏感性與你之前存儲的 **設定檔** 上的數值相差很大，你應該考慮將其保持最新。這在你遺失 **AAPS** 資料（例如：新手機、新版 **AAPS** 等）時可能會很有用，因為你的 **設定檔 ISF** 將在未來 7 天內作為備用使用。
+* 儘管 **動態 ISF** 完全不使用 **設定檔 ISF**，如果你注意到你的敏感性與你之前存儲的 **設定檔** 上的數值相差很大，你應該考慮將其保持最新。 This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
