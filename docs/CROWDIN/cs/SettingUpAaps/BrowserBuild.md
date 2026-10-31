@@ -24,7 +24,7 @@ Stránka nastavení vás provede vytvořením vlastního soukromého repozitář
 
 Funguje to i z prohlížeče na počítači.
 
-**→ [Sestavení pomocí AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [Sestavení s AAPS Builder](BrowserBuildAapsBuilder.md)**
 
 ### Na počítači nebo iPhonu / iPadu: fork a přípravný soubor
 
@@ -60,7 +60,7 @@ Sestavení v prohlížeči je řada rozhodnutí. Postupujte podle těchto kroků
 3. **[Autorizujte Disk Google](BrowserBuildGoogleDrive.md)** – povolte GitHubu ukládat sestavenou aplikaci na váš Disk Google.
 4. **[Sestavte APK](BrowserBuildAPK.md)** – spusťte workflow v GitHub Actions a vyberte verzi a variantu.
 
-Pokud narazíte na potíže, viz **[Řešení problémů se sestavením v prohlížeči](../GettingHelp/BrowserBuildTroubleshooting.md)**. Volitelné operace s forkem najdete v částech [export úložiště klíčů](#ci-keystore-export) a [cherry-pick commitu](#github-cherry-pick).
+Pokud narazíte na potíže, viz **[Sestavení v prohlížeči: řešení problémů](../GettingHelp/BrowserBuildTroubleshooting.md)**. Volitelné operace s forkem najdete v částech [export úložiště klíčů](#ci-keystore-export) a [cherry-pick commitu](#github-cherry-pick).
 
 ----
 
