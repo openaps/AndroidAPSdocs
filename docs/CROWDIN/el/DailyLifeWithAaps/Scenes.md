@@ -1,7 +1,7 @@
 (scenes)=
-# Scenes (situation presets)
+# Σενάρια (έτοιμες ρυθμίσεις για καταστάσεις)
 
-A **scene** is a named preset that applies a **bundle of actions at once** — for example a *Sleep*, *Exercise* or *Sick Day* preset that switches your profile, sets a temporary target, toggles SMB and adds a care-portal note with a single tap, optionally for a set duration.
+Ένα **σενάριο** είναι μια αποθηκευμένη ρύθμιση με όνομα που εκτελεί **πολλές ενέργειες μαζί**. Για παράδειγμα, ένα σενάριο *Ύπνος*, *Άσκηση* ή *Ημέρα ασθένειας* αλλάζει το προφίλ σας, ορίζει έναν προσωρινό στόχο, ενεργοποιεί ή απενεργοποιεί το SMB και προσθέτει μια σημείωση careportal με ένα πάτημα, αν θέλετε για ορισμένη διάρκεια.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,170 +10,170 @@ A **scene** is a named preset that applies a **bundle of actions at once** — f
 
 ---
 
-## What is a scene
+## Τι είναι ένα σενάριο
 
-Instead of changing several things by hand every time a recurring situation comes up, you set them up once as a scene and activate it with one tap. A scene can bundle any of these actions:
+Αντί να αλλάζετε πολλά πράγματα με το χέρι κάθε φορά που επαναλαμβάνεται μια κατάσταση, τα ρυθμίζετε μία φορά ως σενάριο και το ενεργοποιείτε με ένα πάτημα. Ένα σενάριο μπορεί να περιέχει οποιαδήποτε από αυτές τις ενέργειες:
 
-- **Profile switch** — switch profile and/or scale it by percentage (e.g. 70 %).
-- **Temporary target** — set a temp target (e.g. *Activity*, *Eating soon*, or a custom value).
-- **SMB on/off** — enable or disable super-micro-boluses while the scene is active.
-- **Loop mode** — change the running mode (e.g. to a more conservative mode).
-- **Care-portal note** — log an event (e.g. *Exercise*, *Sickness*) so it shows on the graph and in Nightscout.
+- **Αλλαγή Προφίλ** — αλλάζει το προφίλ ή/και το προσαρμόζει με ένα ποσοστό (π.χ. 70%).
+- **Προσωρινός στόχος** — ορίζει έναν προσωρινό στόχο (π.χ. *Άσκηση*, *Γεύμα Σύντομα* ή μια δική σας τιμή).
+- **SMB ενεργό/ανενεργό** — ενεργοποιεί ή απενεργοποιεί τα super-micro-bolus όσο το σενάριο είναι ενεργό.
+- **Τρόπος λειτουργίας κυκλώματος** — αλλάζει τον τρόπο λειτουργίας (π.χ. σε έναν πιο συντηρητικό τρόπο).
+- **Σημείωση careportal** — καταγράφει ένα συμβάν (π.χ. *Άσκηση*, *Ασθένεια*), ώστε να φαίνεται στο γράφημα και στο Nightscout.
 
-A scene also has a **duration** — a fixed time (minutes/hours/days) or *Indefinite (manual end)* — and an **end action** that runs when it finishes: either a **notification**, or it can **chain** into another scene (for example *Sick Day → Exercise*).
-
----
-
-## Managing scenes
-
-Open **Manage → Scenes** to see, create, edit, enable/disable and reorder your scenes.
-
-![The Scenes management screen](../images/v4/Scenes/scenes_list.png)
-
-Each scene card shows:
-
-- a **checkbox** to enable/disable the scene,
-- an **icon** and **name**,
-- a summary — *“N actions, duration”*, and the **→ chained scene** if it chains into another one,
-- and three buttons: **▶ activate**, **✏️ edit**, **🗑️ delete**.
-
-Tap the **+** button to create a new scene.
+Ένα σενάριο έχει επίσης **διάρκεια** — σταθερό χρόνο (λεπτά/ώρες/ημέρες) ή *Χωρίς όριο (χειροκίνητος τερματισμός)* — και μια **ενέργεια λήξης** που εκτελείται όταν τελειώνει: είτε μια **ειδοποίηση**, είτε μπορεί να **συνεχίσει** σε ένα άλλο σενάριο (για παράδειγμα *Ημέρα ασθένειας → Άσκηση*).
 
 ---
 
-## Creating or editing a scene
+## Διαχείριση σεναρίων
 
-### Start from a template
+Ανοίξτε **Διαχείριση → Σενάρια** για να δείτε, να δημιουργήσετε, να αλλάξετε, να ενεργοποιήσετε/απενεργοποιήσετε και να αλλάξετε τη σειρά των σεναρίων σας.
 
-To **create** a scene, tap the **+** button on the Scenes screen. The first step is **Start from template**: pick a ready-made scene for a common situation — *Exercise*, *Sick Day*, *Sick Day — Vomiting*, *Sleep*, *Post-exercise Night*, *Pre-meal*, *Alcohol*, *Driving*, *Bathing*, *Luteal Phase*, *Hot Weather*, *Medical Procedure* — or start from a *Blank* scene. Each template **pre-fills the recommended actions** and you can adjust everything in the following steps.
+![Η οθόνη διαχείρισης σεναρίων](../images/v4/Scenes/scenes_list.png)
 
-![“Start from template” — pick a starting point](../images/v4/Scenes/templates_picker.png)
+Κάθε κάρτα σεναρίου δείχνει:
 
-After you pick a template, its purpose is explained — *when* and *why* to use it — before you continue:
+- ένα **πλαίσιο επιλογής** για να ενεργοποιήσετε/απενεργοποιήσετε το σενάριο,
+- ένα **εικονίδιο** και ένα **όνομα**,
+- μια σύνοψη — *«N ενέργειες, διάρκεια»* — και το **→ επόμενο σενάριο**, αν συνεχίζει σε άλλο σενάριο,
+- και τρία κουμπιά: **▶ ενεργοποίηση**, **✏️ επεξεργασία**, **🗑️ διαγραφή**.
 
-![A template's explanation](../images/v4/Scenes/template_explanation.png)
-
-### Step through the actions
-
-The rest of the editor is a short **step-by-step** wizard. Each step is one action type with an *“Include … in scene”* switch — turn it on only for the actions you want this scene to perform, and leave the rest off.
-
-![The scene editor — the Profile switch step](../images/v4/Scenes/scene_editor.png)
-
-Work through the steps with **Next**/**Back**: *Profile switch*, *Temporary target*, *SMB*, *Loop mode*, *Care-portal note*, then the **duration**, the **end action** (notify or chain into another scene), and finally the scene's **name and icon**. Save when you are done. (To **edit** an existing scene, tap its **✏️** button — you go straight into these steps.)
-
-Each step starts with a short explanation of what the action does. The steps look like this, here with the *Exercise* template:
-
-**Temporary target** — pick one of your temp target presets:
-
-![The Temporary target step](../images/v4/Scenes/scene_editor_step3.png)
-
-**SMB** — enable or disable SMB while the scene is active:
-
-![The SMB step](../images/v4/Scenes/scene_editor_step4.png)
-
-**Running mode** — optionally change the loop mode:
-
-![The Running mode step](../images/v4/Scenes/scene_editor_step5.png)
-
-**Careportal** — the event type and note to log:
-
-![The Careportal step](../images/v4/Scenes/scene_editor_step6.png)
-
-**Duration** — how long the scene stays active; 0 means until you end it yourself:
-
-![The Duration step](../images/v4/Scenes/scene_editor_step7.png)
-
-**Follow-up scene** — optionally the scene that starts when this one ends:
-
-![The Follow-up scene step](../images/v4/Scenes/scene_editor_followup.png)
-
-**Scene** — the name and the icon. Press **Finish** to save:
-
-![The name and icon step](../images/v4/Scenes/scene_editor_step9.png)
+Πατήστε το κουμπί **+** για να δημιουργήσετε ένα νέο σενάριο.
 
 ---
 
-## Activating a scene
+## Δημιουργία ή επεξεργασία σεναρίου
 
-Activate a scene from the **Scenes** list (the **▶** button) or from the **Scenes** entry in the bottom navigation. In the **Scenes** sheet of the bottom navigation, each scene shows the same summary as in the Scenes list, and the **pencil** at the top of the sheet opens **Manage → Scenes** to create or edit your scenes.
+### Έναρξη από πρότυπο
 
-![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
+Για να **δημιουργήσετε** ένα σενάριο, πατήστε το κουμπί **+** στην οθόνη Σενάρια. Το πρώτο βήμα είναι **Έναρξη από πρότυπο**: διαλέξτε ένα έτοιμο σενάριο για μια συνηθισμένη κατάσταση — *Άσκηση*, *Ημέρα ασθένειας*, *Ημέρα ασθένειας — Έμετος*, *Ύπνος*, *Νύχτα μετά την άσκηση*, *Πριν το γεύμα*, *Αλκοόλ*, *Οδήγηση*, *Μπάνιο*, *Ωχρινική φάση*, *Ζέστη*, *Ιατρική επέμβαση* — ή ξεκινήστε από ένα *Κενό* σενάριο. Κάθε πρότυπο **συμπληρώνει από πριν τις προτεινόμενες ενέργειες** και μπορείτε να αλλάξετε τα πάντα στα επόμενα βήματα.
 
-Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
+![«Έναρξη από πρότυπο» — διαλέξτε ένα σημείο εκκίνησης](../images/v4/Scenes/templates_picker.png)
 
-![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
+Αφού διαλέξετε ένα πρότυπο, εξηγείται ο σκοπός του — *πότε* και *γιατί* να το χρησιμοποιήσετε — πριν συνεχίσετε:
 
-If the scene chains into another one, the confirmation ends with **→** and the name of that follow-up scene, the same way it is shown in the Scenes list.
+![Η εξήγηση ενός προτύπου](../images/v4/Scenes/template_explanation.png)
 
-When you start the scene from the **Scenes** entry of the bottom navigation, the confirmation is a simpler dialog with the same list of actions. Press **OK** to activate:
+### Περάστε από τις ενέργειες βήμα προς βήμα
 
-![Scene confirmation when started from the bottom navigation](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+Το υπόλοιπο του επεξεργαστή είναι ένας σύντομος οδηγός **βήμα προς βήμα**. Κάθε βήμα είναι ένας τύπος ενέργειας με έναν διακόπτη *«Συμπερίληψη … στο σενάριο»*. Ενεργοποιήστε τον μόνο για τις ενέργειες που θέλετε να εκτελεί αυτό το σενάριο και αφήστε τις υπόλοιπες ανενεργές.
 
-After you confirm, the actions are applied and the **active scene** is shown at the top of the overview with an **End Scene** button. If the scene chains into another one, the banner also names that follow-up scene:
+![Ο επεξεργαστής σεναρίου — το βήμα Αλλαγή Προφίλ](../images/v4/Scenes/scene_editor.png)
 
-![The active-scene banner on the overview, with the End Scene button](../images/v4/Scenes/scene_active_banner.png)
+Περάστε από τα βήματα με **Επόμενο**/**Πίσω**: *Αλλαγή Προφίλ*, *Προσωρινός στόχος*, *SMB*, *Τρόπος λειτουργίας κυκλώματος*, *Σημείωση careportal*, μετά τη **διάρκεια**, την **ενέργεια λήξης** (ειδοποίηση ή συνέχεια σε άλλο σενάριο) και τέλος το **όνομα και το εικονίδιο** του σεναρίου. Αποθηκεύστε όταν τελειώσετε. (Για να **αλλάξετε** ένα υπάρχον σενάριο, πατήστε το κουμπί **✏️** του — μπαίνετε κατευθείαν σε αυτά τα βήματα.)
 
-The scene's actions stay in effect until:
+Κάθε βήμα ξεκινά με μια σύντομη εξήγηση του τι κάνει η ενέργεια. Τα βήματα μοιάζουν έτσι, εδώ με το πρότυπο *Άσκηση*:
 
-- its **duration** ends (the **end action** runs — a notification, or it chains into the next scene), or
-- you tap **End Scene** to end it manually. If the scene chains into another one, you get two choices: **Skip to** the follow-up scene (the active scene ends and the follow-up starts now), or **End Scene** (the active scene ends and the follow-up does not start).
+**Προσωρινός στόχος** — διαλέξτε μία από τις έτοιμες ρυθμίσεις προσωρινού στόχου:
 
-A scene without follow-up only asks you to confirm:
+![Το βήμα Προσωρινός στόχος](../images/v4/Scenes/scene_editor_step3.png)
 
-![End Scene dialog](../images/v4/Scenes/scene_end_dialog.png)
+**SMB** — ενεργοποιήστε ή απενεργοποιήστε το SMB όσο το σενάριο είναι ενεργό:
 
-Ending a scene **reverts** the changes it made (for example the profile switch and temp target it started).
+![Το βήμα SMB](../images/v4/Scenes/scene_editor_step4.png)
 
-While a scene is active, the profile and the target on the main screen carry a small scene icon when the scene set them. The **Scenes** sheet of the bottom navigation stays available to start another scene:
+**Τρόπος λειτουργίας** — αν θέλετε, αλλάξτε τον τρόπο λειτουργίας του κυκλώματος:
 
-![The Scenes sheet while a scene is active](../images/v4/Scenes/scenes_sheet_active.png)
+![Το βήμα Τρόπος λειτουργίας](../images/v4/Scenes/scene_editor_step5.png)
 
-When the duration runs out on its own, the changes are reverted straight away and the banner changes to **Scene ended** with a **Dismiss** button. Dismissing only clears the banner from the screen — the scene itself is already over, so automation rules and a chained scene carry on without waiting for it.
+**Careportal** — ο τύπος συμβάντος και η σημείωση για καταγραφή:
+
+![Το βήμα Careportal](../images/v4/Scenes/scene_editor_step6.png)
+
+**Διάρκεια** — πόσο χρόνο μένει ενεργό το σενάριο· 0 σημαίνει μέχρι να το τερματίσετε εσείς:
+
+![Το βήμα Διάρκεια](../images/v4/Scenes/scene_editor_step7.png)
+
+**Επόμενο σενάριο** — αν θέλετε, το σενάριο που ξεκινά όταν τελειώσει αυτό:
+
+![Το βήμα Επόμενο σενάριο](../images/v4/Scenes/scene_editor_followup.png)
+
+**Σενάριο** — το όνομα και το εικονίδιο. Πατήστε **Τέλος** για αποθήκευση:
+
+![Το βήμα όνομα και εικονίδιο](../images/v4/Scenes/scene_editor_step9.png)
 
 ---
 
-## Triggering scenes from Automation
+## Ενεργοποίηση σεναρίου
 
-A scene does not have to be started by hand — **Automation** can run it for you. When you add an action to an automation rule (**Manage → Automation**), the action picker has a **Scenes** category:
+Ενεργοποιήστε ένα σενάριο από τη λίστα **Σενάρια** (το κουμπί **▶**) ή από την επιλογή **Σενάρια** στην κάτω γραμμή πλοήγησης. Στο φύλλο **Σενάρια** της κάτω γραμμής πλοήγησης, κάθε σενάριο δείχνει την ίδια σύνοψη όπως στη λίστα Σενάρια. Το **μολύβι** στο πάνω μέρος του φύλλου ανοίγει τη **Διαχείριση → Σενάρια** για να δημιουργήσετε ή να αλλάξετε τα σενάριά σας.
 
-- **Run scene** — activate a scene when the rule's triggers fire (for example at a set time, when you arrive somewhere, or when glucose crosses a threshold).
-- **Enable scene** / **Disable scene** — make a scene available (or unavailable) without activating it.
+![Το φύλλο Σενάρια της κάτω γραμμής πλοήγησης](../images/v4/Scenes/scenes_sheet.png)
 
-![The “Scenes” actions in the Automation action picker](../images/v4/Scenes/automation_scene_action.png)
+Πριν εφαρμοστεί οτιδήποτε, βλέπετε μια **επιβεβαίωση** που δείχνει ακριβώς τι θα κάνει το σενάριο, για να το ελέγξετε:
 
-Automation can also **react to** a scene: the trigger list includes a **Scene** trigger, so a rule can run only while a particular scene is active. Combined with a scene's **end action** (revert, notify, or chain into another scene), this lets scenes start, follow on and finish automatically.
+![Επιβεβαίωση ενεργοποίησης σεναρίου, με τη λίστα των ενεργειών](../images/v4/Scenes/scene_confirmation.png)
+
+Αν το σενάριο συνεχίζει σε άλλο σενάριο, η επιβεβαίωση τελειώνει με **→** και το όνομα του επόμενου σεναρίου, όπως φαίνεται και στη λίστα Σενάρια.
+
+Όταν ξεκινάτε το σενάριο από την επιλογή **Σενάρια** της κάτω γραμμής πλοήγησης, η επιβεβαίωση είναι ένα πιο απλό παράθυρο με την ίδια λίστα ενεργειών. Πατήστε **OK** για ενεργοποίηση:
+
+![Επιβεβαίωση σεναρίου όταν ξεκινά από την κάτω γραμμή πλοήγησης](../images/v4/Scenes/scene_confirmation_from_sheet.png)
+
+Αφού επιβεβαιώσετε, οι ενέργειες εφαρμόζονται και το **ενεργό σενάριο** εμφανίζεται στο πάνω μέρος της επισκόπησης με ένα κουμπί **Τερματισμός σεναρίου**. Αν το σενάριο συνεχίζει σε άλλο σενάριο, η γραμμή δείχνει επίσης το όνομα του επόμενου σεναρίου:
+
+![Η γραμμή ενεργού σεναρίου στην επισκόπηση, με το κουμπί Τερματισμός σεναρίου](../images/v4/Scenes/scene_active_banner.png)
+
+Οι ενέργειες του σεναρίου μένουν σε ισχύ μέχρι:
+
+- να τελειώσει η **διάρκειά** του (εκτελείται η **ενέργεια λήξης** — μια ειδοποίηση ή συνέχεια στο επόμενο σενάριο), ή
+- να πατήσετε **Τερματισμός σεναρίου** για να το τερματίσετε χειροκίνητα. Αν το σενάριο συνεχίζει σε άλλο σενάριο, έχετε δύο επιλογές: **Μετάβαση σε** επόμενο σενάριο (το ενεργό σενάριο τελειώνει και το επόμενο ξεκινά τώρα) ή **Τερματισμός σεναρίου** (το ενεργό σενάριο τελειώνει και το επόμενο δεν ξεκινά).
+
+Ένα σενάριο χωρίς επόμενο σενάριο σας ζητά μόνο επιβεβαίωση:
+
+![Παράθυρο Τερματισμός σεναρίου](../images/v4/Scenes/scene_end_dialog.png)
+
+Ο τερματισμός ενός σεναρίου **αναιρεί** τις αλλαγές που έκανε (για παράδειγμα την αλλαγή προφίλ και τον προσωρινό στόχο που ξεκίνησε).
+
+Όσο ένα σενάριο είναι ενεργό, το προφίλ και ο στόχος στην κύρια οθόνη έχουν ένα μικρό εικονίδιο σεναρίου, όταν τα όρισε το σενάριο. Το φύλλο **Σενάρια** της κάτω γραμμής πλοήγησης μένει διαθέσιμο για να ξεκινήσετε άλλο σενάριο:
+
+![Το φύλλο Σενάρια όσο ένα σενάριο είναι ενεργό](../images/v4/Scenes/scenes_sheet_active.png)
+
+Όταν η διάρκεια τελειώσει μόνη της, οι αλλαγές αναιρούνται αμέσως και η γραμμή αλλάζει σε **Το σενάριο τερματίστηκε** με ένα κουμπί **Παράβλεψη**. Η παράβλεψη απλώς αφαιρεί τη γραμμή από την οθόνη — το ίδιο το σενάριο έχει ήδη τελειώσει, οπότε οι κανόνες αυτοματισμού και ένα επόμενο σενάριο συνεχίζουν χωρίς να την περιμένουν.
 
 ---
 
-## Scenes with Master/Client and a watch
+## Εκκίνηση σεναρίων από τον Αυτοματισμό
 
-The **currently active scene is synchronized** across all of your paired devices — activate it on one phone and the others show it too.
+Ένα σενάριο δεν χρειάζεται να ξεκινήσει με το χέρι — ο **Αυτοματισμός** μπορεί να το εκτελέσει για εσάς. Όταν προσθέτετε μια ενέργεια σε έναν κανόνα αυτοματισμού (**Διαχείριση → Αυτοματισμός**), η επιλογή ενεργειών έχει μια κατηγορία **Σενάρια**:
 
-A paired **client** (**AAPSClient**) can also activate or end a scene: the request is sent to the **master**, which authors the confirmation and applies the scene on its own state. See [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for how that works.
+- **Εκτέλεση σεναρίου** — ενεργοποιεί ένα σενάριο όταν ενεργοποιηθούν οι συνθήκες του κανόνα (για παράδειγμα σε μια ορισμένη ώρα, όταν φτάνετε κάπου ή όταν η γλυκόζη περάσει ένα όριο).
+- **Ενεργοποίηση σεναρίου** / **Απενεργοποίηση σεναρίου** — κάνει ένα σενάριο διαθέσιμο (ή μη διαθέσιμο) χωρίς να το ξεκινήσει.
+
+![Οι ενέργειες «Σενάρια» στην επιλογή ενεργειών του Αυτοματισμού](../images/v4/Scenes/automation_scene_action.png)
+
+Ο Αυτοματισμός μπορεί επίσης να **αντιδρά σε** ένα σενάριο: η λίστα συνθηκών περιέχει τη συνθήκη **Σενάριο**, ώστε ένας κανόνας να εκτελείται μόνο όσο ένα συγκεκριμένο σενάριο είναι ενεργό. Μαζί με την **ενέργεια λήξης** ενός σεναρίου (αναίρεση, ειδοποίηση ή συνέχεια σε άλλο σενάριο), έτσι τα σενάρια μπορούν να ξεκινούν, να συνεχίζουν το ένα μετά το άλλο και να τελειώνουν αυτόματα.
+
+---
+
+## Σενάρια με Master/Client και ρολόι
+
+Το **τρέχον ενεργό σενάριο συγχρονίζεται** σε όλες τις συνδεδεμένες συσκευές σας — αν το ενεργοποιήσετε σε ένα τηλέφωνο, το δείχνουν και τα άλλα.
+
+Ένας συνδεδεμένος **client** (**AAPSClient**) μπορεί επίσης να ενεργοποιήσει ή να τερματίσει ένα σενάριο: το αίτημα στέλνεται στον **master**, που δημιουργεί την επιβεβαίωση και εφαρμόζει το σενάριο στη δική του κατάσταση. Δείτε [Έλεγχος Master ↔ Client](../RemoteFeatures/ClientMasterControl.md) για το πώς λειτουργεί.
 
 (scenes-from-watch)=
-### From a Wear OS watch
+### Από ρολόι Wear OS
 
-Scenes are available on a **Wear OS watch** as a **Scene tile**. Swipe to the **Scene** tile in the watch's tile carousel (add it from the carousel's tile list first if it isn't there yet) and tap the scene you want to start:
+Τα σενάρια είναι διαθέσιμα σε **ρολόι Wear OS** ως **πλακίδιο Σενάριο**. Σαρώστε μέχρι το πλακίδιο **Σενάριο** στα πλακίδια του ρολογιού (αν δεν υπάρχει ακόμα, προσθέστε το πρώτα από τη λίστα πλακιδίων) και πατήστε το σενάριο που θέλετε να ξεκινήσετε:
 
-![The Scene tile on a Wear OS watch](../images/v4/Scenes/scene_watch_tile.png)
+![Το πλακίδιο Σενάριο σε ρολόι Wear OS](../images/v4/Scenes/scene_watch_tile.png)
 
-The tile has four slots. By default each slot fills itself **automatically** with the next of your enabled scenes, in the order they have on the phone. To choose yourself, **long-press the tile** and open its settings: for each of the four slots you can keep **Automatic**, pin a **specific scene**, or select **None** to leave the slot empty. A slot pinned to a scene that has since been deleted or disabled shows **Unavailable** — pick another scene for it.
+Το πλακίδιο έχει τέσσερις θέσεις. Από προεπιλογή, κάθε θέση συμπληρώνεται **αυτόματα** με το επόμενο από τα ενεργά σενάριά σας, με τη σειρά που έχουν στο τηλέφωνο. Για να διαλέξετε εσείς, **πατήστε παρατεταμένα το πλακίδιο** και ανοίξτε τις ρυθμίσεις του: για καθεμία από τις τέσσερις θέσεις μπορείτε να κρατήσετε το **Αυτόματο**, να καρφιτσώσετε ένα **συγκεκριμένο σενάριο** ή να επιλέξετε **Κανένα** για να μείνει η θέση κενή. Μια θέση καρφιτσωμένη σε σενάριο που στο μεταξύ διαγράφηκε ή απενεργοποιήθηκε δείχνει **Μη διαθέσιμο** — διαλέξτε άλλο σενάριο για αυτήν.
 
-The watch then shows a confirmation — tap **✓** to activate, or swipe back to cancel:
+Το ρολόι δείχνει μετά μια επιβεβαίωση — πατήστε **✓** για ενεργοποίηση ή σαρώστε προς τα πίσω για ακύρωση:
 
-![Confirming a scene on the watch](../images/v4/Scenes/scene_watch_confirm.png)
+![Επιβεβαίωση σεναρίου στο ρολόι](../images/v4/Scenes/scene_watch_confirm.png)
 
-Just like on a client, the **master authors the confirmation and runs the scene**; the watch only relays the request (via the client phone, if the watch is paired to a client).
+Όπως και σε έναν client, **ο master δημιουργεί την επιβεβαίωση και εκτελεί το σενάριο**· το ρολόι μόνο προωθεί το αίτημα (μέσω του τηλεφώνου client, αν το ρολόι είναι συνδεδεμένο με client).
 
-While a scene is running — or its **Scene ended** banner is still showing on the phone — the tile shows an **End** button with the name of the scene under it. Tap it to end the active scene, or to clear the leftover banner, from your wrist.
+Όσο ένα σενάριο εκτελείται — ή η γραμμή **Το σενάριο τερματίστηκε** φαίνεται ακόμα στο τηλέφωνο — το πλακίδιο δείχνει ένα κουμπί **Τέλος** με το όνομα του σεναρίου από κάτω. Πατήστε το για να τερματίσετε το ενεργό σενάριο ή για να αφαιρέσετε τη γραμμή που έμεινε, από τον καρπό σας.
 
-If the running scene chains into another one, the tile also shows a **Skip** button with the name of the follow-up scene under it. These are the same two choices as on the phone:
+Αν το σενάριο που εκτελείται συνεχίζει σε άλλο σενάριο, το πλακίδιο δείχνει επίσης ένα κουμπί **Παράλειψη** με το όνομα του επόμενου σεναρίου από κάτω. Αυτές είναι οι ίδιες δύο επιλογές όπως στο τηλέφωνο:
 
-- **End** — the active scene ends. The confirmation tells you that the follow-up will not start.
-- **Skip** — the active scene ends and the follow-up scene starts now. The confirmation names both scenes.
+- **Τέλος** — το ενεργό σενάριο τελειώνει. Η επιβεβαίωση σας λέει ότι το επόμενο σενάριο δεν θα ξεκινήσει.
+- **Παράλειψη** — το ενεργό σενάριο τελειώνει και το επόμενο σενάριο ξεκινά τώρα. Η επιβεβαίωση αναφέρει και τα δύο σενάρια.
 
-The watch's [Loop Status screen](#WearOsSmartwatch-loop-status) also shows the active scene, the time it has left and its follow-up.
+Η [οθόνη Κατάσταση κυκλώματος](#WearOsSmartwatch-loop-status) του ρολογιού δείχνει επίσης το ενεργό σενάριο, τον χρόνο που απομένει και το επόμενο σενάριο.
 
 ---
 
