@@ -28,11 +28,12 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 
 **Language**
 
-- New option to use phone's default language (recommended).
+- By default **AAPS** follows the language of the phone (recommended).
 
-- In case you want **AAPS** in a different language than your standard phone language, you can choose from a broad variety.
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
 - When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
 - Setting hidden in [simple mode](#preferences-simple-mode).
 
 (preferences-simple-mode)=
@@ -473,6 +474,10 @@ Select which location service shall be used:
 ![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
 
 Settings should be self-explanatory.
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
 ## Maintenance settings

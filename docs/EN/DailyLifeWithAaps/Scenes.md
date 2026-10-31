@@ -99,6 +99,8 @@ Activate a scene from the **Scenes** list (the **▶** button) or from the **Sce
 
 ![The Scenes sheet of the bottom navigation](../images/v4/Scenes/scenes_sheet.png)
 
+If [bolus protection](#Preferences-protection) is on, **AAPS** asks for it before a scene starts or ends. Changing a scene needs the [settings protection](#Preferences-settings-protection) instead.
+
 Before anything is applied you get a **confirmation** that lists exactly what the scene will do, so you can review it:
 
 ![Scene activation confirmation, listing the bundled actions](../images/v4/Scenes/scene_confirmation.png)
