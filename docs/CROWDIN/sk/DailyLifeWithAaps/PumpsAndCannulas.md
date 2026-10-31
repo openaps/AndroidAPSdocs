@@ -17,7 +17,7 @@ Fyzickú výmenu náplne/zásobníka nie je možné urobiť cez **AAPS**, musí 
 
 3. Naplňte hadičku a kanylu: môžete to urobiť priamo na pumpe. Uistite sa, že v hadičke nezostali žiadne bubliny.
 
-4. Pripevnite novú kanylu na telo. Keď je kanyla zavedená a ihla vytiahnutá, v pripevnenej kanyle je malá vzduchová medzera, ktorú treba tiež naplniť. Ak to chcete oznámiť v **AAPS** a naplniť kanylu: otvorte **Plnenie/doplňovanie** (v rozbalenom stavovom paneli na hlavnej obrazovke, v paneli **Spravovať** alebo ako tlačidlo [Rýchleho spustenia](QuickLaunch.md)) a podľa potreby zaškrtnite **Zaznamenať výmenu setu** a/alebo **Zaznamenať výmenu inzulínu**, aby sa výmena zaznamenala. Teraz stlačte predvolené množstvo na plnenie kanyly (zvyčajne okolo 0,3 U, ale overte, či je táto hodnota správna pre vašu kanylu) a vyberte **OK**. Prečítajte si súhrnnú správu a plnenie potvrďte ťuknutím na **OK**.
+4. Pripevnite novú kanylu na telo. Keď je kanyla zavedená a ihla vytiahnutá, v pripevnenej kanyle je malá vzduchová medzera, ktorú treba tiež naplniť. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Teraz stlačte predvolené množstvo na plnenie kanyly (zvyčajne okolo 0,3 U, ale overte, či je táto hodnota správna pre vašu kanylu) a vyberte **OK**. Prečítajte si súhrnnú správu a plnenie potvrďte ťuknutím na **OK**.
 
    ![Plnenie/doplňovanie v paneli Spravovať pri pumpe s hadičkou](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -80,7 +80,7 @@ Ktorý postup uprednostníte, je veľmi individuálne a najlepšie to zistíte s
 **Spravovať → Striedanie miest** otvorí dialóg Striedanie miest v režime zobrazenia:
 
 - Dvoma tlačidlami hore (ikona kanyly a ikona senzora) môžete zobraziť iba miesta kanyly, iba miesta senzora alebo oboje
-- K dispozícii sú všetky udalosti výmeny kanyly a výmeny senzora za posledných 45 dní.
+- All Cannula change and Sensor change events from the past 45 days are available.
 - Kliknite na oblasť miesta alebo na jeden záznam v zozname nižšie a zoznam sa vyfiltruje len na záznamy vo vybranej oblasti. Vybraná oblasť bude zvýraznená svetlo zelenou farbou.
 - Ťuknite na ikonu **ceruzky** vedľa záznamu, otvorí sa režim úprav, kde môžete zmeniť miesto aplikácie, šípku alebo poznámku
 
@@ -100,7 +100,7 @@ Režim úprav vám umožňuje vybrať miesto, šípku a poznámku k vybranému z
 
 - Upravovaný záznam sa zobrazuje pod obrázkami tela spolu s ikonou svojho typu (kanyla alebo senzor)
 - Pohľad spredu a zozadu sa zobrazujú vedľa seba: ťuknite na oblasť, kde ste ho umiestnili
-- Keď je miesto vybrané (zvýraznené zelenou), v zozname nižšie uvidíte všetky záznamy na tomto mieste za posledných 45 dní
+- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
 
 ![Režim úprav](../images/SiteRotation/EditMode.png)
 
