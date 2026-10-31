@@ -2,7 +2,7 @@
 
 ## AAPS如何计算COB值
 
-当用户以饮食记录或碳水化合物校正方式输入碳水化合物时，**AAPS**将把该计算结果纳入当前活性碳水化合物（**COB**）。​ **AAPS**然后根据观察到的用户**BG**（血糖）值的偏差来计算用户碳水化合物的吸收情况。吸收速率取决于碳水化合物的敏感系数（**CSF**）。 This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
+当用户以饮食记录或碳水化合物校正方式输入碳水化合物时，**AAPS**将把该计算结果纳入当前活性碳水化合物（**COB**）。​ **AAPS**然后根据观察到的用户**BG**（血糖）值的偏差来计算用户碳水化合物的吸收情况。 The rate of absorption depends on the carb’s sensitivity factor (**CSF**). This is not a feature within the user’s **Profile** but is calculated by **AAPS** according to **ISF/I:C** setup, and is determined by how many mg/dL 1 g of carbs will raise the user’s **BG**.
 
 ## 碳水化合物敏感系数（Carb Sensitivity Factor，CSF）
 
@@ -40,7 +40,7 @@ The screenshot above is from an earlier **AAPS** version — in **AAPS** 4 the g
 
 吸收计算使得在指定时间后COB = 0：
 
-![AAPS, 加权平均](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
 如果采用最小碳水化合物吸收（min_5m_carbimpact）而非根据**血糖（BG）**偏差计算得出的值，那么在**活性碳水（COB）**图上会出现一个橙色的点。
 
@@ -87,7 +87,7 @@ The **Treatments history** screen can be used to correct a faulty carb entry by 
 ![Deleting a carb entry from Treatments history](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
 1. Check and remember actual **COB** and **IOB** on the **AAPS** main screen.
-2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
+2. Open **Treatments history** (drawer menu → *Treatments history*), tab **Carbs and bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
 3. **Long-press** the faulty carb entry — the list switches to **selection mode** with a checkbox on every line, and the entry is ticked (marked **1** above). Tick any further entries you want to remove as well.
 4. Tap the **🗑 Delete** icon in the top bar (marked **2**) and confirm — the confirmation dialog lists exactly what will be removed.
 5. Make sure carbs are removed successfully by checking **COB** on the **AAPS** main screen again.
