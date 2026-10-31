@@ -85,7 +85,7 @@ For Dexcom Follow, the sensor data is then exported from the **AAPS** phone eith
 
 * 需要Android 5.0及以上版本。
 
-* 具有深色Ul、大号读数和按钮，专为夜间使用而设计。
+* It has a dark UI, large readings and buttons, designed for usage at night.
 
 ### xDrip (Android)
 
@@ -197,7 +197,7 @@ SugarPixel是一种用于连续血糖监测的备选葡萄糖显示警报系统�
 ![Following Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * 该时钟支持mmol/L和mg/dL单位，并包括声音警报。
-* 有多个显示选项，请参考[Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it)以获取概览。
+* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
 * 设置和配置设备只需几个简单步骤。一旦设置完成，它只需要电源和Wi-Fi即可工作。
 * Ulanzi TC001设备的购买成本显著低于SugarPixel。
 * 软件及安装说明可在[Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file)上找到。
