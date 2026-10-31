@@ -92,7 +92,7 @@ The **figure below** shows an example of how the basal rates can be set in an **
 
 ![Basal rates](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetic team.
+Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
 
 There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast over 3 different days for a period of 8 hours.
 

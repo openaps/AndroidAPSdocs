@@ -237,7 +237,7 @@ E.g.
 `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp	device`<br>
 
 - Now go to the folder on your computer where the Wear apk is and type<br>
-`adb install wear-full.apk` <br>with wear.apk replaced by the name of your apk file.
+`adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
 - You will see:<br>
 `Performing Streamed Install`<br> `Success`
 

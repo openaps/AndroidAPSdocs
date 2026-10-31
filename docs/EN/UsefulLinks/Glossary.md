@@ -74,7 +74,7 @@ __FGM__ = Flash Glucose Monitor such as the Abbott Freestyle Libre.
 
 __git__ = a tool used store and download the __AAPS’__ source code.  
 
-__GitHub__ = a web-based hosting service and build process for the __AAPS’__ software version-control system for tracking changes in computer files and coordinating work on those files especially for teams. 
+__GitHub__ = a web-based service that hosts the __AAPS__ source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. 
 It is also necessary for __APK__ updates.  Further info →  Wiki - 'update APK'.
 
 __Glimp__ = an app to collect values from Freestyle Libre.

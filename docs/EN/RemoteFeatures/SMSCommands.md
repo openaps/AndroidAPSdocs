@@ -277,7 +277,7 @@ The percentage must be between 30 and 250 %, as in the app. A value outside this
 | Command            | Auth | Function & *Response*                                                                                                                                                             |
 |--------------------|------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | RESTART            | Yes  | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                 |
-| SMS DISABLE/STOP   | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                  |
+| SMS DISABLE/STOP   | Yes  | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                  |
 | HELP               | No   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further **HELP *FUNCTION*** command to list<br/>all options available in this section. |
 | HELP BOLUS         |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                    |
 

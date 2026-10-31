@@ -50,7 +50,7 @@ To download **AAPSClient**, navigate to the [Github repository](https://github.c
 
 ![image](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Then go to  _downloads_ on your computer. On Windows, _downloads_ will show the right hand ribbon:
+Then go to  _downloads_ on your computer. On Windows, _downloads_ will show in the right hand ribbon:
 
 ![image](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
