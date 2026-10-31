@@ -136,7 +136,7 @@ Google publiceert de details op de pagina's over [Android developer verification
 
 ### Geldt dit voor mij?
 
-- **Het bouwen van AAPS verandert helemaal niet.** [Bouwen in de browser](#browser-build), [bouwen met Android Studio](ComputerBuild.md) en [bouwen via de command-line (CLI)](CLIBuild.md) werken precies zoals eerst, en je keystore verandert niet.
+- **Het bouwen van AAPS verandert helemaal niet.** [Bouwen in de browser](#browser-build), [bouwen met Android Studio](ComputerBuild.md) en [bouwen via de opdrachtregel (CLI)](CLIBuild.md) werken precies zoals eerst, en je keystore verandert niet.
 - **Je huidige AAPS blijft werken.** Verificatie wordt alleen gecontroleerd bij het installeren of bijwerken van een app.
 - **Woon je in Brazilië, Indonesië, Singapore of Thailand?** Vanaf 30 september 2026 wordt verificatie afgedwongen voor apps die worden geïnstalleerd vanuit Google Play en een paar andere app-winkels. Google zegt dat het direct installeren van een APK-bestand niet onder deze eerste stap valt. **AAPS** zou dus nog gewoon moeten installeren. Bereid toch nu al een van de [gratis installatiemethoden](#android-developer-verification-free-methods) hieronder voor, zodat je niet verrast wordt als dit verandert.
 - **Woon je ergens anders?** Voor 2027 verandert er voor jou niets, en voorlopig niets doen is een prima keuze. Maar stel een van de [gratis installatiemethoden](#android-developer-verification-free-methods) hieronder in zolang alles nog werkt. Het is een slecht moment om de blokkade pas te ontdekken op de dag dat een update wordt geweigerd, met de 24 uur wachttijd van de [geavanceerde procedure](#android-developer-verification-advanced-flow) nog voor je.
@@ -150,7 +150,7 @@ Je hoeft Google **niets** te betalen om **AAPS** te blijven gebruiken. Er zijn m
 
 ```{admonition} Which method should I use?
 :class: tip
-- Je hebt een **computer** (op welke manier je **AAPS** ook hebt gebouwd): gebruik [ADB](#android-developer-verification-adb) of, als je de command-line liever niet gebruikt, de [webinstaller](#android-developer-verification-web). Beide zijn vrijgesteld van verificatie, hebben geen limieten en hebben geen Google-account nodig.
+- Je hebt een **computer** (op welke manier je **AAPS** ook hebt gebouwd): gebruik [ADB](#android-developer-verification-adb) of, als je de opdrachtregel liever niet gebruikt, de [webinstaller](#android-developer-verification-web). Beide zijn vrijgesteld van verificatie, hebben geen limieten en hebben geen Google-account nodig.
 - Je hebt **helemaal geen computer**: gebruik de [geavanceerde procedure](#android-developer-verification-advanced-flow) op je telefoon.
 - Je registreert je liever bij Google, zodat de normale installatie door "op de APK te tikken" blijft werken: er bestaat een [gratis account voor beperkte distributie](#android-developer-verification-limited-account), maar dit is nog niet getest met **AAPS**.
 ```
@@ -189,11 +189,11 @@ Wil je liever geen kabel gebruiken? Op Android 11 en nieuwer kan **Draadloze fou
 
 (android-developer-verification-web)=
 
-### Optie 2: Installeren vanaf een webpagina (computer, geen command-line)
+### Optie 2: Installeren vanaf een webpagina (computer, geen opdrachtregel)
 
-Is de command-line niets voor jou? Dan kan een webpagina precies hetzelfde doen als ADB, rechtstreeks vanuit je browser. Omdat de pagina via hetzelfde mechanisme als ADB met de telefoon praat, geldt **dezelfde vrijstelling van verificatie**. Maar je hoeft niets te downloaden, geen map uit te pakken en geen opdracht te typen.
+Is de opdrachtregel niets voor jou? Dan kan een webpagina precies hetzelfde doen als ADB, rechtstreeks vanuit je browser. Omdat de pagina via hetzelfde mechanisme als ADB met de telefoon praat, geldt **dezelfde vrijstelling van verificatie**. Maar je hoeft niets te downloaden, geen map uit te pakken en geen opdracht te typen.
 
-Dit is de makkelijkste weg als je [in de browser hebt gebouwd](#browser-build) en nog nooit een command-line hebt geopend.
+Dit is de makkelijkste weg als je [in de browser hebt gebouwd](#browser-build) en nog nooit een opdrachtregel hebt geopend.
 
 1. Zet **USB-foutopsporing** aan op de telefoon (stap 1 en 2 van de [ADB-methode](#android-developer-verification-adb) hierboven; eenmalig instellen).
 1. Open de **[AAPS-webinstaller](#web-installer)** in je browser.
