@@ -2,7 +2,7 @@
 
 ## Jak AAPS oblicza wartość COB?
 
-Gdy wprowadzasz węglowodany jako posiłek lub korektę węglowodanami, **AAPS** doda je do aktualnych aktywnych węglowodanów (**COB**). Następnie **AAPS** oblicza wchłanianie węglowodanów na podstawie zaobserwowanych odchyleń Twoich wartości **BG**. Szybkość wchłaniania zależy od współczynnika wrażliwości na węglowodany („**CSF**”). Nie jest to ustawienie w Twoim **Profilu**. **AAPS** oblicza go na podstawie ustawień **ISF/I:C**. Mówi on, o ile mg/dl 1 g węglowodanów podniesie Twoją **BG**.
+Gdy wprowadzasz węglowodany jako posiłek lub korektę węglowodanami, **AAPS** doda je do aktualnych aktywnych węglowodanów (**COB**). Następnie **AAPS** oblicza wchłanianie węglowodanów na podstawie zaobserwowanych odchyleń Twoich wartości **BG**. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). Nie jest to ustawienie w Twoim **Profilu**. **AAPS** oblicza go na podstawie ustawień **ISF/I:C**. Mówi on, o ile mg/dl 1 g węglowodanów podniesie Twoją **BG**.
 
 ## Współczynnik wrażliwości na węglowodany (CSF)
 
@@ -87,7 +87,7 @@ Na ekranie **Historia leczenia** możesz poprawić błędny wpis węglowodanów,
 ![Usuwanie wpisu węglowodanów z historii leczenia](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
 1. Sprawdź i zapamiętaj aktualne **COB** i **IOB** na ekranie głównym **AAPS**.
-2. Otwórz **Historia leczenia** (menu boczne → *Historia leczenia*), zakładka **Węglowodany i bolus**. Zależnie od pompy węglowodany mogą być pokazane razem z insuliną w jednej linii albo jako osobny wpis (np. w Dana RS).
+2. Otwórz **Historia leczenia** (menu boczne → *Historia leczenia*), zakładka **Węglowodany i bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
 3. **Naciśnij i przytrzymaj** błędny wpis węglowodanów — lista przejdzie w **tryb wyboru** z polem wyboru w każdej linii, a wpis zostanie zaznaczony (oznaczenie **1** powyżej). Zaznacz też inne wpisy, które chcesz usunąć.
 4. Dotknij ikony **🗑 Usuń** na górnym pasku (oznaczenie **2**) i potwierdź — okno potwierdzenia pokazuje dokładnie, co zostanie usunięte.
 5. Upewnij się, że węglowodany zostały usunięte, sprawdzając ponownie **COB** na ekranie głównym **AAPS**.
