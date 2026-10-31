@@ -27,7 +27,7 @@ Autotune sa dá spustiť tromi spôsobmi: ručne jednorazovo priamo v plugine (a
 
 V podpriečinku `extra` vo vašom [AAPS priečinku](#preferences-maintenance-settings) v telefóne vytvorte prázdny súbor s názvom `enable_autotune`.
 
-***POZNÁMKA: V nastaveniach **AAPS** skontrolujte, kde je váš AAPS priečinok, a uistite sa, že ste súbor vložili do správneho priečinka; viacerí používatelia už súbor omylom vložili do nesprávneho priečinka.***
+***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
 
 ![Zapnutie Autotune](../images/Autotune/Autotune_0.png)
 
@@ -97,11 +97,11 @@ Reštartujte **AAPS**. Potom otvorte **ponuku** (☰), zvoľte **Konfigurácia**
 
 - Ak chcete nahradiť vstupný profil výsledkom Autotune, kliknite na tlačidlo „Aktualizovať vstupný profil“ a potvrďte okno tlačidlom OK
 
-  - Poznámka: ak kliknete na „Aktivovať profil“ po „Aktualizovať vstupný profil“, aktivujete svoj aktualizovaný profil, a nie predvolený profil „Vyladené“.
+  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
 
   ![Autotune – aktualizácia vstupného profilu](../images/Autotune/Autotune_9.png)
 
-- Ak ste vstupný profil aktualizovali, tlačidlo „Aktualizovať vstupný profil“ sa nahradí tlačidlom „Vrátiť vstupný profil“ (pozrite snímku obrazovky nižšie). Takto hneď uvidíte, či váš aktuálny vstupný profil v **Spravovať → Profil** už obsahuje výsledok posledného výpočtu, alebo nie. Týmto tlačidlom môžete tiež obnoviť vstupný profil bez výsledku Autotune
+- Ak ste vstupný profil aktualizovali, tlačidlo „Aktualizovať vstupný profil“ sa nahradí tlačidlom „Vrátiť vstupný profil“ (pozrite snímku obrazovky nižšie). Takto hneď uvidíte, či váš aktuálny vstupný profil v **Spravovať → Profil** už obsahuje výsledok posledného výpočtu, alebo nie. You also have the possibility to recover your input profile without autotune result with this button
 
   ![Autotune – aktualizácia vstupného profilu](../images/Autotune/Autotune_10.png)
 
@@ -157,7 +157,7 @@ Funkcia **Automatické prepnutie profilu** je dostupná iba v režime Dev/Engine
 
 - Ak ťuknete na ikonu **oka** vpravo od poľa **Počet dní s dátami**, zobrazí sa výber dní. Môžete určiť, ktoré dni v týždni sa majú zahrnúť do výpočtu Autotune (na snímke obrazovky nižšie vidíte príklad pre „pracovné dni“, kde sú sobota a nedeľa z výpočtu Autotune vyradené)
   - Ak je počet dní zahrnutých do výpočtu Autotune nižší ako **Počet dní s dátami**, vpravo od výberu dní uvidíte, koľko dní bude zahrnutých (v príklade nižšie 10 dní)
-  - Toto nastavenie dáva dobré výsledky iba vtedy, ak počet zostávajúcich dní nie je príliš malý (napríklad ak ladíte konkrétny profil pre víkendové dni so zvolenou iba sobotou a nedeľou, mali by ste nastaviť **Počet dní s dátami** aspoň na 21 alebo 28, aby sa do výpočtu Autotune zahrnulo 6 alebo 8 dní)
+  - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
 
   ![Predvolená obrazovka Autotune](../images/Autotune/Autotune_14b.png)
 
