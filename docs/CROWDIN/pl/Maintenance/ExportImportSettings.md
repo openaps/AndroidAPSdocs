@@ -1,6 +1,6 @@
 # Tworzenie i przywracanie kopii zapasowych
 
-Gdy zainstalujesz AAPS w telefonie, staje się on „urządzeniem medycznym”, na którym polegasz każdego dnia. Zdecydowanie zalecamy mieć awaryjny plan na wypadek, gdy telefon się zepsuje, zostanie skradziony lub zgubiony. Dlatego koniecznie przygotuj się, zadając sobie pytanie: „Co, jeśli…?
+Gdy zainstalujesz AAPS w telefonie, staje się on „urządzeniem medycznym”, na którym polegasz każdego dnia. Zdecydowanie zalecamy mieć awaryjny plan na wypadek, gdy telefon się zepsuje, zostanie skradziony lub zgubiony. Therefore, it is essential to prepare by asking yourself: "What if?"
 
 Aby przywrócić konfigurację AAPS na obecnym lub nowym telefonie, ważne jest przechowywanie poniższych rzeczy w bezpiecznym miejscu (czyli nie w telefonie). Najlepiej mieć co najmniej dwie osobne kopie zapasowe: na lokalnym dysku, pendrivie i (najlepiej) w chmurze, np. Google Drive lub Microsoft 365 OneDrive. Gdy przechowujesz kopie zapasowe w chmurze, zawsze masz z telefonu dostęp do wszystkiego, czego potrzebujesz, by przywrócić konfigurację w dowolnym miejscu i czasie.
 
@@ -104,7 +104,7 @@ Aby włączyć automatyczny eksport ustawień [(**patrz Automatyzacja**)](../Dai
 
 Możesz teraz ustawić [Automatyzację](../DailyLifeWithAaps/Automations.md#automating-preference-settings-export), aby eksportowała ustawienia regularnie (_np._ co tydzień) albo po wymianie poda.
 
-_**Uwaga:** Przy imporcie ustawień zawsze musisz wpisać hasło AAPS!_
+_**Note:** On importing settings, the user always needs to enter the AAPS master password!_
 
 ![Ustawienia > Konserwacja > Automatyczny Eksport Ustawień z przełącznikiem Włącz automatyczny eksport ustawień](../images/Maintenance/settings_unattended_export.png)
 
@@ -129,8 +129,8 @@ W razie potrzeby przed wykonaniem poniższych kroków [skonfiguruj odbiornik dan
 (ExportImportSettings-tubeless-pumps)=
 ```{admonition} Tubeless pumps (Omnipod and Medtrum) users
 :class: warning
-Plik **Ustawień** zawiera sesję poda lub plastra (patch), który był aktywny w chwili eksportu.
-- **Eksportuj zaraz po każdej aktywacji poda lub plastra** i skopiuj plik poza telefon.
+Plik **Ustawień** zawiera sesję poda lub pompy typu patch, która była aktywna w chwili eksportu.
+- **Eksportuj zaraz po każdej aktywacji poda lub pompy typu patch** i skopiuj plik poza telefon.
 - **Ten sam telefon, pod nadal działa:** pozostaw **Także zastąp ustawienia pompy** niezaznaczone. Twój obecny pod zostaje zachowany, a importowane są tylko pozostałe ustawienia.
 - **Nowy telefon przejmuje pod:** zaznacz **Także zastąp ustawienia pompy** i użyj tylko pliku wyeksportowanego w czasie noszenia obecnego poda. Plik z wcześniejszego poda zastąpi sesję Twojego obecnego poda i będziesz musiał uruchomić nowy pod.
 - **Przez pomyłkę zaimportowano sesję starego poda:** **AAPS** wciąż próbuje połączyć się z tym podem i nie możesz aktywować nowego. Dezaktywuj go; jeśli to się nie uda, porzuć go (patrz np. [Porzucanie poda](#omnipod-dash-discard-pod) dla Omnipod DASH).
@@ -147,7 +147,7 @@ Domyślnie import nie zmienia ustawień pompy: pompa wybrana w **Konfiguracji**,
 
 3. Wyjdź z kreatora konfiguracji. Zaimportujemy wszystkie potrzebne ustawienia z kopii zapasowej **Ustawień**
 
-4. Na ekranie głównym **AAPS** wybierz prośbę o uprawnienia (Request) i zezwól na wszystkie uprawnienia wymienione na czerwono u góry
+4. From the **AAPS** main screen press **Grant** and allow all permissions listed in the **Permissions Required** panel on the top
 
 5. Na ekranie głównym **AAPS** ustaw hasło główne w [Ustawienia > Ochrona aplikacji](#Preferences-master-password) na to samo hasło, którego użyłeś przy kopiach zapasowych.
 
