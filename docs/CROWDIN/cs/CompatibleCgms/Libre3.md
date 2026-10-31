@@ -44,11 +44,11 @@ Hodnoty glykémie přijímá aplikace xDrip v telefonu.
 
 ### Krok 3: Spuštění senzoru v xDrip
 
-V xDrip spusťte senzor pomocí „Start Sensor“ a „not today“. Telefon není nutné přikládat k senzoru. „Start Sensor“ ve skutečnosti žádný senzor Libre 3 fyzicky nespustí a nijak s ním nekomunikuje. Tím se xDrip jen sděluje, že nový senzor posílá hodnoty glykémie. Pokud je to možné, zadejte pro úvodní kalibraci dvě hodnoty naměřené z krve. Nyní by se hodnoty glykémie měly v xDrip zobrazovat každých 5 minut. Vynechané hodnoty, např. protože jste byli příliš daleko od telefonu, se zpětně nedoplní.
+V xDrip spusťte senzor pomocí „Start Sensor“ a „not today“. Telefon není nutné přikládat k senzoru. „Start Sensor“ ve skutečnosti žádný senzor Libre 3 fyzicky nespustí a nijak s ním nekomunikuje. Tím se xDrip jen sděluje, že nový senzor posílá hodnoty glykémie. If available, enter two blood-measured values for the initial calibration. Nyní by se hodnoty glykémie měly v xDrip zobrazovat každých 5 minut. Vynechané hodnoty, např. protože jste byli příliš daleko od telefonu, se zpětně nedoplní.
 
 Pokud stále nejsou žádná data, počkejte alespoň 15–20 minut.
 
-Po výměně senzoru xDrip nový senzor automaticky rozpozná a smaže všechna kalibrační data. Po aktivaci si můžete zkontrolovat glykémii z krve a provést novou úvodní kalibraci.
+Po výměně senzoru xDrip nový senzor automaticky rozpozná a smaže všechna kalibrační data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Krok 4: Konfigurace AAPS
 
