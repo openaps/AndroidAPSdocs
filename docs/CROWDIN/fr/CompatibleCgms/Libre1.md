@@ -7,7 +7,7 @@ Pour utiliser votre Libre comme un MGC qui reçoit une nouvelle glycémie toutes
 Vérifiez que le pont et l'application que vous voulez utiliser sont compatibles avec votre capteur.  
 ```
 
-Certains ponts sont encore disponibles sur le marché :
+Certains ponts sont encore disponibles sur le marché :
 
 -   [Lecteur MiaoMiao](https://www.miaomiao.cool/) (version 1, 2 ou 3), aussi disponible sur AliExpress.
 -   [Bubble / Mini / Nano](https://www.bubblesmartreader.com/) chez des vendeurs européens ([BubbleShop](https://bubbleshop.eu/)) ou, pour les utilisateurs russes, [ici](https://vk.com/saharmonitor/). Aussi disponible sur AliExpress.
