@@ -1,197 +1,197 @@
-# Smartwatches and AAPS
+# Έξυπνα ρολόγια και AAPS
 
-Various smartwatches can be used to display some of the information available in **AAPS** or perform remote actions.
+Διάφορα έξυπνα ρολόγια μπορούν να δείχνουν μερικές από τις πληροφορίες του **AAPS** ή να κάνουν απομακρυσμένες ενέργειες.
 
-Having a smartwatch directly control **AAPS** (pump and sensor) is achieved using full Android watches (that are considered like small [smartphones](./Phones.md)).
+Για να ελέγχει ένα έξυπνο ρολόι απευθείας το **AAPS** (αντλία και αισθητήρα), χρειάζεστε πλήρη ρολόγια Android (που θεωρούνται σαν μικρά [smartphone](./Phones.md)).
 
-Some smartwatches can allow you to enter treatments, or more, but with the phone itself still managing **AAPS**.
+Μερικά έξυπνα ρολόγια σάς επιτρέπουν να καταχωρείτε θεραπείες ή και άλλα, αλλά το ίδιο το τηλέφωνο συνεχίζει να διαχειρίζεται το **AAPS**.
 
-Smartwatches are becoming increasingly used with **AAPS** _both_ for adults with diabetes and carers/parents of children with diabetes.
+Τα έξυπνα ρολόγια χρησιμοποιούνται όλο και περισσότερο με το **AAPS** _τόσο_ από ενήλικες με διαβήτη όσο και από φροντιστές/γονείς παιδιών με διαβήτη.
 
-## General advantages of using smartwatches with **AAPS**
+## Γενικά πλεονεκτήματα από τη χρήση έξυπνων ρολογιών με το **AAPS**
 
 
-Smartwatches - depending on the model - can be used in many different ways with **AAPS**. They can be used to fully or partly control **AAPS**, or simply to remotely check glucose levels, insulin-on-board, and other parameters.
+Τα έξυπνα ρολόγια - ανάλογα με το μοντέλο - μπορούν να χρησιμοποιηθούν με πολλούς διαφορετικούς τρόπους με το **AAPS**. Μπορούν να ελέγχουν πλήρως ή εν μέρει το **AAPS** ή απλά να δείχνουν από απόσταση τη γλυκόζη, την ενεργή ινσουλίνη (IOB) και άλλες τιμές.
 
-Integrating a smartwatch with **AAPS** can be useful in many situations, including driving a car or (motor) bike and during exercise. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking at a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling the user to keep their **AAPS** phone stored out of sight (like inside a bag), while still using the smartwatch for remote control.
+Η σύνδεση ενός έξυπνου ρολογιού με το **AAPS** μπορεί να είναι χρήσιμη σε πολλές περιστάσεις, όπως όταν οδηγείτε αυτοκίνητο ή (μοτο)ποδήλατο και κατά την άσκηση. Μερικοί άνθρωποι θεωρούν ότι το να κοιτάτε ένα ρολόι (σε μια συνάντηση, σε ένα πάρτι, στο τραπέζι κ.λπ.) είναι πιο διακριτικό από το να κοιτάτε ένα τηλέφωνο. Από άποψη ασφάλειας, ένα έξυπνο ρολόι μπορεί επίσης να βοηθά όταν μετακινείστε: ο χρήστης κρατά το τηλέφωνο **AAPS** κρυμμένο (για παράδειγμα μέσα σε μια τσάντα) και χρησιμοποιεί το έξυπνο ρολόι για απομακρυσμένο έλεγχο.
 
-## Specific advantages for parents/carers using **AAPS**
+## Ειδικά πλεονεκτήματα για γονείς/φροντιστές που χρησιμοποιούν το **AAPS**
 
-For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS**  phone. This can be useful, for example, if the **AAPS** phone is hidden away in a pump belt.
+Για ένα παιδί - αν το τηλέφωνο **AAPS** του είναι κοντά - ένας φροντιστής μπορεί να χρησιμοποιεί ένα έξυπνο ρολόι για να παρακολουθεί ή να κάνει αλλαγές χωρίς να χρειάζεται το τηλέφωνο **AAPS**. Αυτό μπορεί να είναι χρήσιμο, για παράδειγμα, αν το τηλέφωνο **AAPS** είναι κρυμμένο σε μια ζώνη αντλίας.
 
-A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for remote control or [following only](../RemoteFeatures/FollowingOnly.md).
+Ένα έξυπνο ρολόι μπορεί να χρησιμοποιηθεί _μαζί_ με τις επιλογές που βασίζονται σε ΤΗΛΕΦΩΝΟ για απομακρυσμένο έλεγχο ή [μόνο παρακολούθηση](../RemoteFeatures/FollowingOnly.md), ή _αντί_ για αυτές.
 
-Additionally, unlike parent/caregiver follower phones (which rely on the mobile network or Wi-Fi connection), Bluetooth connected smartwatches can be useful in remote locations, like a cave, in a boat, or half-way up a mountain. If both devices (**AAPS** phone and smartwatch) are on the same Wi-Fi network, they can also use Wi-Fi.
+Επιπλέον, σε αντίθεση με τα τηλέφωνα παρακολούθησης των γονέων/φροντιστών (που χρειάζονται δίκτυο κινητής ή σύνδεση Wi-Fi), τα έξυπνα ρολόγια που συνδέονται με Bluetooth μπορούν να είναι χρήσιμα σε απομακρυσμένα μέρη, όπως σε μια σπηλιά, σε ένα σκάφος ή στη μέση ενός βουνού. Αν και οι δύο συσκευές (τηλέφωνο **AAPS** και έξυπνο ρολόι) είναι στο ίδιο δίκτυο Wi-Fi, μπορούν επίσης να χρησιμοποιούν το Wi-Fi.
 
-## Different types of Smartwatch-AAPS interactions
+## Διαφορετικοί τρόποι συνεργασίας έξυπνου ρολογιού και AAPS
 
-There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
+Σήμερα υπάρχουν πέντε κύριοι τρόποι με τους οποίους τα έξυπνα ρολόγια χρησιμοποιούνται μαζί με το **AAPS**. Φαίνονται στον παρακάτω πίνακα: 
 
-| Watch Setup         | Features                                       | Requirements                                                                                                                                                                                                                                                                                                        |
-| ------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standalone          | AAPS without a phone                           | Full Android smartwatch (check min Android)</br> Running **app-fullRelease**                                                                                                                                                                                                                                        |
-| Full remote control | Most AAPS functions                            | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease**                                                                                                                                                                                                                                      |
-| Remote control      | AAPSClient functions                           | Android **Wear OS** watch (check Android/API)</br>Running **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                           |
-| Remote control      | Some AAPSClient functions                      | Garmin watches</br>(older Samsung Tizen and Fitbit setups only, not recommended)</br>See below.                                                                                                                                                                                                                     |
-| Display             | Glucose, trend, IOB, COB, loop and pump status | Many smartwatches, through a companion app on the **AAPS** phone fed by the [External Companion Apps](#watches-external-companion-apps) broadcast: [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>See below. |
+| Ρύθμιση ρολογιού              | Λειτουργίες                                               | Απαιτήσεις                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Αυτόνομο                      | AAPS χωρίς τηλέφωνο                                       | Πλήρες έξυπνο ρολόι Android (ελέγξτε την ελάχιστη έκδοση Android)</br> Εκτελεί το **app-fullRelease**                                                                                                                                                                                                                                                          |
+| Πλήρης απομακρυσμένος έλεγχος | Οι περισσότερες λειτουργίες του AAPS                      | Ρολόι Android **Wear OS** (ελέγξτε Android/API)</br>Εκτελεί το **wear-fullRelease**                                                                                                                                                                                                                                                                            |
+| Απομακρυσμένος έλεγχος        | Λειτουργίες του AAPSClient                                | Ρολόι Android **Wear OS** (ελέγξτε Android/API)</br>Εκτελεί το **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                                                                 |
+| Απομακρυσμένος έλεγχος        | Μερικές λειτουργίες του AAPSClient                        | Ρολόγια Garmin</br>(μόνο παλιότερες ρυθμίσεις Samsung Tizen και Fitbit, δεν συνιστώνται)</br>Δείτε παρακάτω.                                                                                                                                                                                                                                                   |
+| Προβολή                       | Γλυκόζη, τάση, IOB, COB, κατάσταση κυκλώματος και αντλίας | Πολλά έξυπνα ρολόγια, μέσω μιας συνοδευτικής εφαρμογής στο τηλέφωνο **AAPS** που παίρνει δεδομένα από τη μετάδοση [Εξωτερικές συνοδευτικές εφαρμογές](#watches-external-companion-apps): [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>Δείτε παρακάτω. |
 
-## Before you buy a smartwatch…
+## Πριν αγοράσετε έξυπνο ρολόι…
 
-The exact model of smartwatch you buy depends on the desired function(s). You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list of tested phones that also contains some smartwatches.
+Το ακριβές μοντέλο ρολογιού που θα αγοράσετε εξαρτάται από τις λειτουργίες που θέλετε. Χρήσιμες πληροφορίες θα βρείτε στη [σελίδα Τηλέφωνα](#Phones-list-of-tested-phones), μαζί με μια λίστα δοκιμασμένων τηλεφώνων που περιέχει και μερικά έξυπνα ρολόγια.
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. The different options summarized in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
+Δημοφιλείς μάρκες ρολογιών είναι τα Samsung Galaxy, Garmin, Fossil και Mi band. Οι διάφορες επιλογές του παραπάνω πίνακα εξηγούνται πιο αναλυτικά παρακάτω, για να σας βοηθήσουν να αποφασίσετε ποιο έξυπνο ρολόι ταιριάζει στην περίπτωσή σας.
 
-If you are integrating a smartwatch with **AAPS** on a phone with the intention to remotely interact with **AAPS**, you also need to consider if the two devices are compatible with each other, particularly if you have an older, or an unusual phone.
+Αν συνδέετε ένα έξυπνο ρολόι με το **AAPS** σε ένα τηλέφωνο με σκοπό να χειρίζεστε το **AAPS** από απόσταση, πρέπει επίσης να ελέγξετε αν οι δύο συσκευές είναι συμβατές μεταξύ τους, ειδικά αν έχετε παλιό ή ασυνήθιστο τηλέφωνο.
 
-In general, if you only want to follow glucose numbers and not interact with **AAPS**, there are a wider range of affordable and simpler watches you can use.
+Γενικά, αν θέλετε μόνο να βλέπετε τις τιμές γλυκόζης και όχι να χειρίζεστε το **AAPS**, υπάρχει μεγαλύτερη επιλογή από φθηνότερα και πιο απλά ρολόγια.
 
-The best way to choose a smartwatch is to search for "watch" posts on either Discord or Facebook **AAPS** groups. Have a read of others' experiences, and post any specific questions if your query isn't answered by older posts.
+Ο καλύτερος τρόπος για να διαλέξετε έξυπνο ρολόι είναι να αναζητήσετε αναρτήσεις για "watch" στις ομάδες του **AAPS** στο Discord ή στο Facebook. Διαβάστε τις εμπειρίες άλλων και κάντε τις δικές σας ερωτήσεις, αν οι παλιότερες αναρτήσεις δεν απαντούν στο ερώτημά σας.
 
-## Full Android
+## Πλήρες Android
 
-It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
+Ακούγεται ελκυστική επιλογή, σωστά; Όμως, προς το παρόν, μόνο λίγοι ενθουσιώδεις χρήστες δοκιμάζουν το **AAPS** σε αυτόνομο ρολόι. Υπάρχει περιορισμένος αριθμός έξυπνων ρολογιών με λογική διεπαφή που λειτουργούν επίσης καλά για αυτόνομη χρήση του **AAPS** και της εφαρμογής CGM σας. Δημοφιλή μοντέλα είναι τα LEMFO LEM 15 Pro και 16. Θα χρειαστεί να εγκαταστήσετε στο ρολόι το apk "full" του **AAPS** (το apk που συνήθως εγκαθίσταται σε smartphone) και όχι το apk "wear" του **AAPS**.
 
-While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
+Δεν υπάρχει σαφής προδιαγραφή που να σας λέει αν ένα ρολόι θα λειτουργεί καλά για αυτόνομη χρήση του **AAPS**, αλλά οι παρακάτω παράμετροι βοηθούν:
 
-1)  Android 12 or newer. 2)  Being able to take the watchface off “square” mode to make text larger and easier to read. 3)  Very good battery life. 4)  Good Bluetooth range.
+1)  Android 12 ή νεότερο. 2)  Δυνατότητα να βγει η πρόσοψη ρολογιού από τη λειτουργία «τετράγωνο», ώστε το κείμενο να γίνει μεγαλύτερο και πιο ευανάγνωστο. 3)  Πολύ καλή διάρκεια μπαταρίας. 4)  Καλή εμβέλεια Bluetooth.
 
-Most of the frustrations of standalone **AAPS** watches come from interacting with a tiny screen, and the fact that the current AAPS full app interface has not been designed for a watch. You may prefer to use a stylus to edit **AAPS**  settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+Οι περισσότερες δυσκολίες με τα αυτόνομα ρολόγια **AAPS** προέρχονται από τη χρήση μιας πολύ μικρής οθόνης και από το ότι η τωρινή διεπαφή της πλήρους εφαρμογής AAPS δεν σχεδιάστηκε για ρολόι. Λόγω του μικρού μεγέθους της οθόνης, ίσως προτιμήσετε να χρησιμοποιείτε γραφίδα για να αλλάζετε τις ρυθμίσεις του **AAPS** στο ρολόι. Επίσης, μερικά κουμπιά του AAPS μπορεί να μη φαίνονται στην οθόνη του ρολογιού.
 
-Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor Bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below.
+Άλλες δυσκολίες είναι ότι είναι δύσκολο να έχετε αρκετή διάρκεια μπαταρίας, και τα ρολόγια με αρκετή μπαταρία είναι συχνά ογκώδη και χοντρά. Οι χρήστες αναφέρουν ότι παλεύουν με το λειτουργικό σύστημα και τις ρυθμίσεις εξοικονόμησης ενέργειας, ότι δυσκολεύονται να ξεκινήσουν αισθητήρες στο ρολόι, ότι η εμβέλεια Bluetooth είναι κακή (για να διατηρείται η σύνδεση και με τον αισθητήρα και με την αντλία) και ότι η αντοχή στο νερό είναι αμφίβολη. Παραδείγματα φαίνονται στις παρακάτω φωτογραφίες.
 
 ![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Αν σας ενδιαφέρει να ρυθμίσετε ένα αυτόνομο ρολόι, διαβάστε τις αναρτήσεις και τα σχόλια στην ομάδα του **AAPS** στο Facebook (καλές λέξεις αναζήτησης είναι “standalone” και “Lemfo”) και στο Discord για περισσότερες πληροφορίες.
 
 ## Wear OS
 
-**AAPS** code contains an app extension that can be installed on [**Wear OS** smartwatches](https://wearos.google.com/#oem-carousel).
+Ο κώδικας του **AAPS** περιέχει μια επέκταση της εφαρμογής που μπορεί να εγκατασταθεί σε [έξυπνα ρολόγια **Wear OS**](https://wearos.google.com/#oem-carousel).
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Διαμόρφωση > Επικοινωνία με το Wear ενεργοποιημένη](../images/v4/Configuration/configuration_communication_wear.png)
 
-Verify your smartwatch satisfies **AAPS** [prerequisites](#maintenance-android-version-aaps-version).
+Ελέγξτε ότι το έξυπνο ρολόι σας πληροί τις [προϋποθέσεις](#maintenance-android-version-aaps-version) του **AAPS**.
 
-### What _is_ Wear OS?
+### Τι _είναι_ το Wear OS;
 
-The first three smartwatch options require the smartwatch to have **Wear OS** installed.
+Για τις τρεις πρώτες επιλογές, το έξυπνο ρολόι πρέπει να έχει εγκατεστημένο το **Wear OS**.
 
-**Wear OS** is the operating system which runs on some modern Android smartwatches. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch must be running **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer**. Each Wear OS release follows the Android version it is based on: **Wear OS 3** is Android 11 (API level 30), **Wear OS 4** is Android 13 (API level 33), **Wear OS 5** is Android 14 (API level 34) and **Wear OS 6** is Android 16 (API level 36). Watches on Wear OS 2 cannot run **AAPS**.
+Το **Wear OS** είναι το λειτουργικό σύστημα που τρέχει σε μερικά σύγχρονα έξυπνα ρολόγια Android. Αν η περιγραφή του έξυπνου ρολογιού αναφέρει μόνο _συμβατότητα_ με Android και iOS, αυτό δεν σημαίνει ότι τρέχει Wear OS. Μπορεί να είναι κάποιο άλλο λειτουργικό σύστημα του κατασκευαστή, που δεν είναι συμβατό με το **AAPS**. Για να υποστηρίζει την εγκατάσταση και χρήση οποιασδήποτε έκδοσης του **AAPS** ή του **AAPSClient**, ένα έξυπνο ρολόι πρέπει να τρέχει **Wear OS 3.0, 3.2 ή 3.5** (Android 11, επίπεδο API 30) **ή νεότερο**. Κάθε έκδοση του Wear OS ακολουθεί την έκδοση Android στην οποία βασίζεται: το **Wear OS 3** είναι Android 11 (επίπεδο API 30), το **Wear OS 4** είναι Android 13 (επίπεδο API 33), το **Wear OS 5** είναι Android 14 (επίπεδο API 34) και το **Wear OS 6** είναι Android 16 (επίπεδο API 36). Τα ρολόγια με Wear OS 2 δεν μπορούν να τρέξουν το **AAPS**.
 
-If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which can be selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watchface in addition to the time.
+Αν εγκαταστήσετε το wear.apk του **AAPS** σε ρολόι **Wear OS**, μπορείτε να επιλέξετε ανάμεσα σε διάφορες ειδικές προσόψεις ρολογιού του **AAPS**. Εναλλακτικά, μπορείτε να χρησιμοποιήσετε μια κανονική πρόσοψη ρολογιού, με τις πληροφορίες του **AAPS** σε μικρά πλακίδια στην πρόσοψη, που λέγονται «επιπλοκές» (complications). Επιπλοκή είναι κάθε στοιχείο που εμφανίζεται σε μια πρόσοψη ρολογιού εκτός από την ώρα.
 
 ```{note}
-Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (the higher the Wear OS version, the more severe), although **complications** keep working. Before buying or updating a watch, read [Wear OS watch face changes](#wearos-watchface-changes).
+Οι πρόσφατες αλλαγές του **Wear OS** χαλάνε σταδιακά τις ειδικές προσόψεις του **AAPS** (όσο νεότερη η έκδοση του Wear OS, τόσο πιο σοβαρά), αλλά οι **επιπλοκές** συνεχίζουν να λειτουργούν. Πριν αγοράσετε ή ενημερώσετε ένα ρολόι, διαβάστε τις [Αλλαγές στις προσόψεις του Wear OS](#wearos-watchface-changes).
 ```
 
 
-### What could my smartwatch look like?
+### Πώς θα μπορούσε να φαίνεται το έξυπνο ρολόι μου;
 
-After [installing **AAPS** onto your watch](../WearOS/WearOsSmartwatch.md), you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the home screen until the screen shrinks and swipe right to select an alternative screen:
+Μετά την [εγκατάσταση του **AAPS** στο ρολόι σας](../WearOS/WearOsSmartwatch.md), θα μπορείτε αυτόματα να επιλέξετε την πρόσοψη που προτιμάτε από αυτές τις προσόψεις που είναι φτιαγμένες για το **AAPS**. Στα περισσότερα ρολόγια, απλά πατάτε παρατεταμένα στην αρχική οθόνη μέχρι να μικρύνει η οθόνη και σύρετε δεξιά για να επιλέξετε άλλη οθόνη:
 
 ![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
-These are the basic screens embedded in **AAPS**, there are [more watchfaces](#WearOS_changing-to-AAPS-watchface) and you can also use [complications](#Watchfaces-complications).
+Αυτές είναι οι βασικές οθόνες που περιέχονται στο **AAPS**. Υπάρχουν [περισσότερες προσόψεις](#WearOS_changing-to-AAPS-watchface) και μπορείτε επίσης να χρησιμοποιήσετε [επιπλοκές](#Watchfaces-complications).
 
-### How would I operate a Wear OS watch from day-to-day?
+### Πώς θα χρησιμοποιώ ένα ρολόι Wear OS στην καθημερινότητα;
 
-Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customized watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Περισσότερες πληροφορίες για τις προσόψεις και την καθημερινή χρήση, καθώς και για το πώς να φτιάξετε (και να μοιραστείτε) τη δική σας πρόσοψη, θα βρείτε στην ενότητα [Χειρισμός του Wear AAPS σε έξυπνο ρολόι](../WearOS/WearOsSmartwatch.md).
 
 (Watchfaces-tizen)= (watches-external-companion-apps)=
 
-## External Companion Apps
+## Εξωτερικές συνοδευτικές εφαρμογές
 
-**AAPS** can broadcast its status to other apps installed on the same phone: glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Several watch companion apps read this broadcast and display the data on watches that **AAPS** does not support directly. To send the data, enable **External Companion Apps** in **Configuration** > **Communication** (see [External Companion Apps](#external-companion-apps) on the Configuration page). The broadcast is sent with each new reading and cannot be requested: a refresh button in the companion app has no effect on **AAPS**.
+Το **AAPS** μπορεί να μεταδίδει την κατάστασή του σε άλλες εφαρμογές στο ίδιο τηλέφωνο: γλυκόζη και τάση, IOB, COB, βασικό ρυθμό και προσωρινό βασικό ρυθμό, όνομα προφίλ, κατάσταση κυκλώματος, μπαταρία τηλεφώνου και αντλίας, στάθμη δεξαμενής και πρόοδο του bolus. Αρκετές συνοδευτικές εφαρμογές ρολογιών διαβάζουν αυτή τη μετάδοση και δείχνουν τα δεδομένα σε ρολόγια που το **AAPS** δεν υποστηρίζει απευθείας. Για να στέλνονται τα δεδομένα, ενεργοποιήστε τις **Εξωτερικές συνοδευτικές εφαρμογές** στη **Διαμόρφωση** > **Επικοινωνία** (δείτε [Εξωτερικές συνοδευτικές εφαρμογές](#external-companion-apps) στη σελίδα της διαμόρφωσης). Η μετάδοση στέλνεται με κάθε νέα τιμή και δεν μπορεί να ζητηθεί: ένα κουμπί ανανέωσης στη συνοδευτική εφαρμογή δεν έχει καμία επίδραση στο **AAPS**.
 
-![Configuration > Communication: the External Companion Apps card](../images/v4/Configuration/configuration_external_companion_apps.png)
+![Διαμόρφωση > Επικοινωνία: η κάρτα Εξωτερικές συνοδευτικές εφαρμογές](../images/v4/Configuration/configuration_external_companion_apps.png)
 
-Companion apps known to use this broadcast:
+Συνοδευτικές εφαρμογές που ξέρουμε ότι χρησιμοποιούν αυτή τη μετάδοση:
 
-- [WatchDrip+](https://bigdigital.home.blog/) for Xiaomi and Amazfit watches, see [Xiaomi and Amazfit watches](#watches-xiaomi-amazfit) below.
-- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) for Wear OS watches, as a complication or a widget. It is a useful fallback on Wear OS versions where the **AAPS** watchfaces are unreliable, see [Set up AAPS on your Wear OS watch](../WearOS/WearOsSmartwatch.md). Its companion app GlucoDataAuto shows the same data in a car with Android Auto.
-- [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) for Samsung Tizen watches, and its later Wear OS port. In earlier **AAPS** versions the plugin was named **Samsung Tizen** after this app.
+- [WatchDrip+](https://bigdigital.home.blog/) για ρολόγια Xiaomi και Amazfit, δείτε παρακάτω [Ρολόγια Xiaomi και Amazfit](#watches-xiaomi-amazfit).
+- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) για ρολόγια Wear OS, ως επιπλοκή ή widget. Είναι μια χρήσιμη εναλλακτική λύση σε εκδόσεις Wear OS όπου οι προσόψεις του **AAPS** δεν είναι αξιόπιστες, δείτε [Ρύθμιση του AAPS στο ρολόι Wear OS](../WearOS/WearOsSmartwatch.md). Η συνοδευτική της εφαρμογή GlucoDataAuto δείχνει τα ίδια δεδομένα στο αυτοκίνητο με Android Auto.
+- [Εφαρμογή G-Watch](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) για ρολόγια Samsung Tizen, και η μεταγενέστερη έκδοσή της για Wear OS. Σε παλιότερες εκδόσεις του **AAPS** το πρόσθετο λεγόταν **Samsung Tizen** από το όνομα αυτής της εφαρμογής.
 
 ```{warning}
-The **G-Watch app** and its **Wear OS** port are no longer maintained, and Samsung has moved its smartwatches from Tizen to Wear OS. G-Watch is only relevant for existing, older setups and is not recommended for a new installation. Check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for the latest news.
+Η **εφαρμογή G-Watch** και η έκδοσή της για **Wear OS** δεν συντηρούνται πλέον, και η Samsung έχει μεταφέρει τα έξυπνα ρολόγια της από Tizen σε Wear OS. Το G-Watch αφορά μόνο υπάρχουσες, παλιότερες ρυθμίσεις και δεν συνιστάται για νέα εγκατάσταση. Δείτε την ειδική [ομάδα στο Facebook](https://www.facebook.com/groups/gwatchapp) για τα τελευταία νέα.
 ```
 
 (Watchfaces-garmin)=
 
 ## Garmin
 
-There are some watch faces for Garmin that integrate with [AAPS](https://apps.garmin.com/search?keywords=androidaps), on the Garmin ConnectIQ store.
+Υπάρχουν μερικές προσόψεις για Garmin που συνδέονται με το [AAPS](https://apps.garmin.com/search?keywords=androidaps), στο κατάστημα Garmin ConnectIQ.
 
-![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
+![Διαμόρφωση > Επικοινωνία: η κάρτα Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/Garmin_WF-annotated.png)
+Το [AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) συνδέεται απευθείας με το **AAPS**. Δείχνει δεδομένα κατάστασης του κυκλώματος (ενεργή ινσουλίνη, προσωρινός βασικός ρυθμός) εκτός από τις τιμές γλυκόζης και στέλνει τις μετρήσεις καρδιακών παλμών στο **AAPS**. Είναι διαθέσιμη στο κατάστημα ConnectIQ. Ενεργοποιήστε το πρόσθετο **Garmin** στη **Διαμόρφωση → Επικοινωνία**. ![Πρόσοψη AAPS Glucose Watch με αριθμημένα πεδία](../images/Garmin_WF-annotated.png)
 
-1. Highest and lowest glucose values on the graph
-2. Glucose change per minute
-3. Insulin on board (IOB)
-4. Time since the last glucose reading (minutes:seconds)
-5. Temporary basal rate, as a percentage of the profile basal rate
-6. Glucose graph of the last 2 hours
-7. Current glucose value
+1. Η υψηλότερη και η χαμηλότερη τιμή γλυκόζης στο γράφημα
+2. Μεταβολή γλυκόζης ανά λεπτό
+3. Ενεργή ινσουλίνη (IOB)
+4. Χρόνος από την τελευταία τιμή γλυκόζης (λεπτά:δευτερόλεπτα)
+5. Προσωρινός βασικός ρυθμός, ως ποσοστό του βασικού ρυθμού του προφίλ
+6. Γράφημα γλυκόζης των τελευταίων 2 ωρών
+7. Τρέχουσα τιμή γλυκόζης
 
 
 
 ## Fitbit
 
 ```{warning}
-Google is moving Fitbit into Google Health and is removing third-party apps and watch faces from Fitbit watches in the EU. Fitbit watchfaces are therefore **no longer a recommended option**, and buying a Fitbit for use with **AAPS** is not recommended.
+Η Google μεταφέρει το Fitbit στο Google Health και αφαιρεί τις εφαρμογές και τις προσόψεις τρίτων από τα ρολόγια Fitbit στην ΕΕ. Γι' αυτό οι προσόψεις Fitbit **δεν είναι πλέον συνιστώμενη επιλογή**, και δεν συνιστάται η αγορά ενός Fitbit για χρήση με το **AAPS**.
 ```
 
-For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github.io/nightscout/wearable/#fitbit) list some monitoring-only options, such as [Glance](https://glancewatchface.com/). These are third-party watchfaces too, so the same EU restriction applies.
+Για υπάρχοντα ρολόγια Fitbit, οι [σελίδες του Nightscout](https://nightscout.github.io/nightscout/wearable/#fitbit) αναφέρουν μερικές επιλογές μόνο για παρακολούθηση, όπως το [Glance](https://glancewatchface.com/). Αυτές είναι επίσης προσόψεις τρίτων, οπότε ισχύει ο ίδιος περιορισμός της ΕΕ.
 
-## Following only
+## Μόνο παρακολούθηση
 
-These smartwatches will reflect some **AAPS** information, some will require other apps.
+Αυτά τα έξυπνα ρολόγια δείχνουν μερικές πληροφορίες του **AAPS**. Μερικά χρειάζονται άλλες εφαρμογές.
 
-There are a wide range of affordable smartwatches which can provide display only. If you are using Nightscout, then a good overview of all the options is [here](https://nightscout.github.io/nightscout/wearable/#)
+Υπάρχει μεγάλη επιλογή από φθηνά έξυπνα ρολόγια που μπορούν μόνο να εμφανίζουν δεδομένα. Αν χρησιμοποιείτε το Nightscout, μια καλή επισκόπηση όλων των επιλογών υπάρχει [εδώ](https://nightscout.github.io/nightscout/wearable/#)
 
-Here below some of the follow-only watch options popular with **AAPS** users:
+Παρακάτω είναι μερικές δημοφιλείς επιλογές ρολογιών μόνο για παρακολούθηση μεταξύ των χρηστών του **AAPS**:
 
 (watches-xiaomi-amazfit)=
-### Xiaomi and Amazfit watches
+### Ρολόγια Xiaomi και Amazfit
 
-**WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
+Το **WatchDrip+** είναι μια συνοδευτική εφαρμογή που φτιάχνει η κοινότητα και δείχνει δεδομένα γλυκόζης και κυκλώματος σε διάφορα μοντέλα έξυπνων ρολογιών, κυρίως των μαρκών Xiaomi (_π.χ._ Mi Band) και Amazfit:
 
 ![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
-Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
+Από την έκδοση 0.5, το **WatchDrip+** διαβάζει τα δεδομένα του απευθείας από το **AAPS**, χωρίς να χρειάζεται το xDrip+ ως ενδιάμεσο. Στο τηλέφωνο **AAPS**:
 
-1. Enable **External Companion Apps** in **Configuration** > **Communication**, see [above](#watches-external-companion-apps). It provides the current glucose, delta, trend arrow, IOB and pump status.
-2. Enable the **xDrip** plugin in **Configuration** > **Communication** and turn on **Send status to xDrip+** in its settings. It provides the IOB/COB status line, and the glucose graph on the watch fills in after a few readings.
-3. If xDrip+ is installed on the phone, disable its **Broadcast Service API** (xDrip+ > Settings > Inter-app settings) so that the watch does not receive the data twice. If xDrip+ was only relaying data to the watch, you can uninstall it.
+1. Ενεργοποιήστε τις **Εξωτερικές συνοδευτικές εφαρμογές** στη **Διαμόρφωση** > **Επικοινωνία**, δείτε [παραπάνω](#watches-external-companion-apps). Δίνει την τρέχουσα γλυκόζη, τη μεταβολή (delta), το βέλος τάσης, το IOB και την κατάσταση της αντλίας.
+2. Ενεργοποιήστε το πρόσθετο **xDrip** στη **Διαμόρφωση** > **Επικοινωνία** και ενεργοποιήστε την επιλογή **Αποστολή κατάστασης στο xDrip+** στις ρυθμίσεις του. Δίνει τη γραμμή κατάστασης IOB/COB, και το γράφημα γλυκόζης στο ρολόι γεμίζει μετά από μερικές τιμές.
+3. Αν το xDrip+ είναι εγκατεστημένο στο τηλέφωνο, απενεργοποιήστε το **Broadcast Service API** του (xDrip+ > Settings > Inter-app settings), ώστε το ρολόι να μη λαμβάνει τα δεδομένα δύο φορές. Αν το xDrip+ απλά μετέφερε δεδομένα στο ρολόι, μπορείτε να το απεγκαταστήσετε.
 
-The refresh button of WatchDrip+ has no effect with **AAPS**: the data arrives with each new reading.
+Το κουμπί ανανέωσης του WatchDrip+ δεν έχει καμία επίδραση με το **AAPS**: τα δεδομένα έρχονται με κάθε νέα τιμή.
 
 
-You can read more about them, including how to set them up, on the [WatchDrip+ website](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable. They are a popular option especially for kids and those with smaller wrists to wear.
+Μπορείτε να διαβάσετε περισσότερα για αυτά, και για το πώς να τα ρυθμίσετε, στον [ιστότοπο του WatchDrip+](https://bigdigital.home.blog/). Το πλεονέκτημα αυτών των ρολογιών είναι ότι είναι μικρά και σχετικά φθηνά. Είναι δημοφιλής επιλογή ειδικά για παιδιά και για όσους έχουν μικρότερους καρπούς.
 
-### Pebble watch
+### Ρολόι Pebble
 
 ![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
 ![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS**  then send either an SMS or pushover notification.
+Τα ρολόγια Pebble ([δεν παράγονται πλέον](https://en.wikipedia.org/wiki/Pebble_(watch))) πουλιόνταν από το 2013 έως το 2016 και μπορεί ακόμα να βρεθούν μεταχειρισμένα. Η Fitbit ανέλαβε την περιουσία της Pebble. Οι χρήστες Pebble μπορούν να χρησιμοποιούν την πρόσοψη Urchin για να βλέπουν δεδομένα του Nightscout. Τα δεδομένα που μπορούν να εμφανιστούν περιλαμβάνουν IOB, τον τρέχοντα ενεργό προσωρινό βασικό ρυθμό και τις προβλέψεις. Σε ανοιχτό κύκλωμα μπορείτε να χρησιμοποιήσετε το IFTTT για να φτιάξετε μια εφαρμογή (applet) που λέει: αν ληφθεί μια ειδοποίηση από το **AAPS**, τότε στείλε SMS ή ειδοποίηση pushover.
 
-### [Bluejay watches](https://bluejay.website/)
-
-
-![BlueJay U3 watch](../images/watches/bluejay_u3.png)
+### [Ρολόγια Bluejay](https://bluejay.website/)
 
 
-These are unique pieces of technology which can receive glucose data **directly** from the Dexcom transmitter. It is not widely known that Dexcom G6/G7 transmitters actually broadcast the current glucose data on _two_ separate channels, a phone channel and a medical channel. The Bluejay watches can be set to receive glucose data on either channel, so if **AAPS** is using the phone channel, then the Bluejay watches can use the medical channel.
+![Ρολόι BlueJay U3](../images/watches/bluejay_u3.png)
 
-The key advantage is that the watch is independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or theme park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
 
-The original **Bluejay GTS** is discontinued and cannot read the Dexcom G7. The later models (U1, then the current **U3**, sold as early access at the time of writing) are full Android watches running xDrip, which collect from the Dexcom G6 and G7 directly. The vendor describes the watch as a research tool, not for medical use. Reported disadvantages are that it does not always pick up a reading every 5 minutes and that the battery needs frequent charging. Check the [Bluejay website](https://bluejay.website/) for the current model and availability.
+Είναι μοναδικές συσκευές που μπορούν να λαμβάνουν δεδομένα γλυκόζης **απευθείας** από τον πομπό Dexcom. Δεν είναι ευρέως γνωστό ότι οι πομποί Dexcom G6/G7 μεταδίδουν την τρέχουσα γλυκόζη σε _δύο_ ξεχωριστά κανάλια: ένα κανάλι για το τηλέφωνο και ένα ιατρικό κανάλι. Τα ρολόγια Bluejay μπορούν να ρυθμιστούν να λαμβάνουν δεδομένα γλυκόζης από οποιοδήποτε από τα δύο κανάλια. Έτσι, αν το **AAPS** χρησιμοποιεί το κανάλι του τηλεφώνου, τα ρολόγια Bluejay μπορούν να χρησιμοποιούν το ιατρικό κανάλι.
 
-### Apple watch
+Το βασικό πλεονέκτημα είναι ότι το ρολόι είναι ανεξάρτητο και από το τηλέφωνο και από το σύστημα κυκλώματος. Έτσι, για παράδειγμα, αν αποσυνδέσετε την αντλία και το τηλέφωνο **AAPS** στην παραλία ή σε λούνα παρκ και είστε εκτός εμβέλειας του τηλεφώνου **AAPS**, μπορείτε ακόμα να λαμβάνετε τιμές από το Dexcom απευθείας στο ρολόι Bluejay.
 
-Check [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#).
+Το αρχικό **Bluejay GTS** δεν παράγεται πλέον και δεν μπορεί να διαβάσει το Dexcom G7. Τα νεότερα μοντέλα (U1, και μετά το τωρινό **U3**, που πωλείται ως πρώιμη πρόσβαση τη στιγμή που γράφεται αυτό το κείμενο) είναι πλήρη ρολόγια Android με xDrip, που λαμβάνουν δεδομένα απευθείας από τα Dexcom G6 και G7. Ο κατασκευαστής περιγράφει το ρολόι ως εργαλείο έρευνας, όχι για ιατρική χρήση. Τα μειονεκτήματα που αναφέρονται είναι ότι δεν λαμβάνει πάντα μια τιμή κάθε 5 λεπτά και ότι η μπαταρία θέλει συχνή φόρτιση. Δείτε τον [ιστότοπο του Bluejay](https://bluejay.website/) για το τρέχον μοντέλο και τη διαθεσιμότητα.
 
-The Apple watch now supports G7 direct connection and can be used simultaneously with **AAPS**.
+### Ρολόι Apple
+
+Δείτε το [Nightscout στο ρολόι σας](https://nightscout.github.io/nightscout/wearable/#).
+
+Το ρολόι Apple υποστηρίζει πλέον απευθείας σύνδεση με το G7 και μπορεί να χρησιμοποιείται ταυτόχρονα με το **AAPS**.
 
