@@ -252,7 +252,7 @@ Ask if your team has any patients under their care who already use OS-AID loopin
 
 a) **AAPS** 系統是由患者及其看護者設計的。他的設計最終是為了安全，同時也借鑒了深入的患者經驗。 There are many thousands of **AAPS** users worldwide. There is therefore likely to be other patients using OS-AID looping in your clinic's patient population (whether they know about it or not).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the OS-AID looping community.
+b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
 
 c) 使用 **AAPS** 需 _一步步_ 的使用，從“開環”幫浦開始，經過低血糖暫停功能，再進入混合“閉環”模式，這一過程需要完成一些目標。因此有一個結構化的計劃，要求用戶在每個階段展示一定的能力，並微調他們的基礎設置（基礎率、ISF和ICR），然後才能關閉閉環。
 
@@ -264,7 +264,7 @@ f) 如果你的醫療團隊仍然強烈反對，請將本文中提到的參考�
 
 #### Support for OS-AID looping by other clinicians
 
-發表於[Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/) (_1_) [由Kings’和Guy’s以及St Thomas’ NHS Foundation Trust共同領導，並由倫敦King’s榮譽高級講師兼顧問糖尿病專家Sufyan Hussain博士共同領導] 的文章提供了：
+The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
 
 a) **Assurance** for professionals that OS-AID artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
 
