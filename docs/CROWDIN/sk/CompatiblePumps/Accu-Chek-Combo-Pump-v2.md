@@ -40,8 +40,8 @@ Majte na pamäti tieto obmedzenia:
 * Dočasné bazály sú obmedzené na 500 % aktuálnej bazálnej dávky. **AAPS** s týmto limitom počíta.
 * Okruh je vypnutý, ak aktuálne aktívny profil v pumpe nie je profil č. 1. Tak to zostane, kým nebude aktívny profil č. 1. Keď sa to stane, AAPS pri ďalšom pripojení (buď samo po chvíli, alebo keď ťuknete na **Obnoviť** na obrazovke pumpy Accu-Chek Combo) zistí, že aktuálny je profil č. 1, a okruh znova zapne.
 * Ak okruh požiada o zrušenie bežiaceho dočasného bazálu (TBR), Combo namiesto toho nastaví dočasný bazál 90 % alebo 110 % na 15 minút. Dôvodom je, že skutočné zrušenie dočasného bazálu vyvolá na pumpe výstrahu, ktorá spôsobí veľa vibrácií, a tieto vibrácie sa nedajú vypnúť.
-* Stabilita spojenia cez Bluetooth sa líši podľa telefónu. Spôsobuje výstrahy „pumpa nedostupná“, keď sa už nepodarí nadviazať spojenie s pumpou. Ak sa táto chyba objaví, overte, že je zapnutý Bluetooth, a na obrazovke pumpy (**Spravovať** > **Pumpa**) ťuknite na **Obnoviť**, aby ste zistili, či nešlo o občasný problém. Ak sa spojenie stále nenadviaže, reštartujte telefón, čo to zvyčajne vyrieši.
-* Existuje aj ďalší problém, pri ktorom reštart nepomôže, ale treba stlačiť tlačidlo na pumpe (tým sa reštartuje softvér Bluetooth (Bluetooth stack) v pumpe). Až potom pumpa znova prijme spojenie z telefónu.
+* Stabilita spojenia cez Bluetooth sa líši podľa telefónu. Spôsobuje výstrahy „pumpa nedostupná“, keď sa už nepodarí nadviazať spojenie s pumpou. If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
+* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
 * Dočasný bazál na pumpe nenastavujte, pretože dočasné bazály riadi okruh. Zistenie nového dočasného bazálu na pumpe môže trvať až 20 minút a jeho účinok sa započíta až od chvíle, keď sa zistí. V najhoršom prípade teda môže 20 minút dočasného bazálu chýbať v IOB.
 
 Ovládač momentálne podporuje na pumpe Combo tieto jazyky. (Nesúvisí to s jazykom v AAPS – ide o jazyk, ktorý zobrazuje samotný LCD displej pumpy Combo.)
@@ -213,7 +213,7 @@ Toto automatické zisťovanie môžete vypnúť v [nastaveniach](#combov2-prefer
 (combov2-alerts)=
 ## Výstrahy (upozornenia a chyby) a ako sa spracúvajú
 
-Combo zobrazuje výstrahy ako obrazovky vzdialeného terminálu. Upozornenia sa zobrazujú s kódom „Wx“ (x je číslica) spolu s krátkym popisom. Príkladom je „W7“, „TBR OVER“. Chyby vyzerajú podobne, ale namiesto toho majú kód „Ex“.
+Combo zobrazuje výstrahy ako obrazovky vzdialeného terminálu. Warnings are shown with a "Wx" code (x is a digit), along with a short description. Príkladom je „W7“, „TBR OVER“. Chyby vyzerajú podobne, ale namiesto toho majú kód „Ex“.
 
 Niektoré upozornenia ovládač automaticky potvrdí. Sú to:
 
@@ -223,7 +223,7 @@ Niektoré upozornenia ovládač automaticky potvrdí. Sú to:
 
 Ostatné upozornenia sa automaticky _nepotvrdzujú_. Ani chyby sa automaticky _nikdy_ nepotvrdzujú. Oba prípady sa spracúvajú rovnako: ovládač zobrazí dialóg s výstrahou nad rozhraním AAPS a preruší vykonávanie všetkých prebiehajúcich príkazov. Ovládač potom prejde do stavu „chyba“ (pozrite [Obsah obrazovky pumpy Accu-Chek Combo vyššie](#combov2-tab-contents)). V tomto stave nie je možné vykonať žiadny príkaz. Používateľ musí chybu vyriešiť na pumpe; napríklad pri chybe oklúzie môže byť potrebné vymeniť kanylu. Keď používateľ chybu vyrieši, bežnú prevádzku obnovíte ťuknutím na **Obnoviť** na obrazovke pumpy Accu-Chek Combo. Ovládač sa potom pripojí k pumpe Combo a aktualizuje jej stav. Pritom skontroluje, či sa na obrazovke stále zobrazuje chyba atď. Ovládač tiež po chvíli stav pumpy obnoví sám, takže ručné stlačenie tohto tlačidla nie je povinné.
 
-Bolus je špeciálny prípad. Podáva sa v režime príkazov pumpy Combo, ktorý počas bolusu nehlási, že sa objavila výstraha. Preto ovládač nemôže upozornenia automaticky potvrdzovať _počas_ bolusu. Bohužiaľ to znamená, že pumpa bude pípať, kým sa bolus neskončí. Najčastejšia výstraha počas bolusu je zvyčajne W1 „reservoir low“ (takmer prázdny zásobník). Upozornenia pumpy Combo počas bolusu **nepotvrdzujte** ručne priamo na pumpe. Riskujete, že bolus prerušíte. Ovládač sa o upozornenie postará, keď sa bolus skončí.
+Bolus je špeciálny prípad. Podáva sa v režime príkazov pumpy Combo, ktorý počas bolusu nehlási, že sa objavila výstraha. Preto ovládač nemôže upozornenia automaticky potvrdzovať _počas_ bolusu. Bohužiaľ to znamená, že pumpa bude pípať, kým sa bolus neskončí. Najčastejšia výstraha počas bolusu je zvyčajne W1 „reservoir low“ (takmer prázdny zásobník). **Don't** dismiss Combo warnings on the pump itself manually during a bolus. Riskujete, že bolus prerušíte. Ovládač sa o upozornenie postará, keď sa bolus skončí.
 
 Výstrahy, ktoré vzniknú, keď ovládač nie je pripojený k pumpe Combo, ovládač nezaznamená. Combo nemá ako výstrahu samo poslať do telefónu; spojenie musí vždy začať telefón. Preto výstraha zostane, kým sa ovládač k pumpe nepripojí. Na obrazovke pumpy môžete ťuknúť na **Obnoviť**, aby ste spustili pripojenie a ovládač výstrahu spracoval hneď (namiesto čakania, kým sa AAPS samo rozhodne pripojiť).
 
@@ -251,8 +251,8 @@ Ovládač sa zo všetkých síl snaží pripojiť k pumpe Combo a používa niek
 
 ### Ako zaistiť plynulú prevádzku
 
-* **Smartfón noste vždy pri sebe**, v noci ho nechajte vedľa postele. Pumpa môže počas spánku ležať za vaším telom alebo pod ním, preto je najlepšie dať telefón vyššie (na poličku alebo dosku).
-* Vždy dbajte na to, aby bola batéria pumpy čo najviac nabitá. Tipy k batérii nájdete v časti o batérii.
+* **Smartfón noste vždy pri sebe**, v noci ho nechajte vedľa postele. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
+* Vždy dbajte na to, aby bola batéria pumpy čo najviac nabitá. See the battery section for tips regarding the battery.
 * Vždy, keď je to možné, ovládajte pumpu iba cez aplikáciu AAPS. Aby ste si to uľahčili, zapnite na pumpe zámok tlačidiel v **PUMP SETTINGS / KEY LOCK / ON**. Tlačidlá pumpy treba použiť iba pri výmene batérie alebo zásobníka.
 
 ![Zámok tlačidiel](../images/combo/combo-tips-keylock.png)
@@ -287,13 +287,13 @@ Ovládač sa zo všetkých síl snaží pripojiť k pumpe Combo a používa niek
 * Po alarme **low battery** (takmer vybitá batéria) treba batériu vymeniť čo najskôr, aby bolo vždy dosť energie na spoľahlivú komunikáciu so smartfónom cez Bluetooth, aj keď je telefón od pumpy ďalej.
 * Aj po alarme **low battery** sa batéria môže ešte dosť dlho používať. Napriek tomu odporúčame mať po alarme „low battery“ vždy pri sebe novú batériu.
 * Pred výmenou batérie ťuknite na symbol **Okruh** na hlavnej obrazovke a vyberte **Pozastaviť uzavretý okruh** na 1 hodinu.
-* Počkajte, kým telefón dokončí komunikáciu s pumpou a logo Bluetooth na pumpe zmizne.
+* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
 
 ![Bluetooth zapnutý](../images/combo/combo-tips-compo.png)
 
 * Odomknite zámok tlačidiel na pumpe, prepnite pumpu do režimu stop, potvrďte prípadne zrušený dočasný bazál a rýchlo vymeňte batériu.
 * Po výmene batérie nemusíte znova nastavovať hodiny pumpy: AAPS dátum a čas v pumpe aktualizuje automaticky.
-* Potom prepnite pumpu späť do režimu run a po ťuknutí na ikonu **Uzavretý okruh pozastavený** na hlavnej obrazovke vyberte **Obnoviť**.
+* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AAPS znova nastaví potrebný dočasný bazál, keď príde ďalšia hodnota glykémie.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
@@ -314,9 +314,9 @@ Ak je výdrž vašej batérie výrazne kratšia ako tieto hodnoty, skontrolujte 
 
 ### Predĺžený bolus, viacvlnový bolus
 Algoritmus OpenAPS nepodporuje súbežný predĺžený bolus ani viacvlnový bolus. Podobnú liečbu však môžete dosiahnuť týmito alternatívami:
-* Pri zadávaní sacharidov alebo v bolusovej kalkulačke použite **eSacharidy**: zadajte sacharidy celého jedla a dobu, počas ktorej očakávate, že sa sacharidy dostanú do krvi ako glukóza. Systém potom vypočíta malé dávky sacharidov rovnomerne rozložené na celú dobu. Algoritmus tak podá zodpovedajúce dávky inzulínu a stále pritom priebežne sleduje celkový vzostup/pokles glykémie. Pre postup podobný viacvlnovému bolusu môžete tiež skombinovať menší okamžitý bolus s eSacharidmi.
+* Pri zadávaní sacharidov alebo v bolusovej kalkulačke použite **eSacharidy**: zadajte sacharidy celého jedla a dobu, počas ktorej očakávate, že sa sacharidy dostanú do krvi ako glukóza. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. Pre postup podobný viacvlnovému bolusu môžete tiež skombinovať menší okamžitý bolus s eSacharidmi.
 * Pred jedlom nastavte na niekoľko hodín dočasný cieľ **Pred jedlom** s glykémiou 80 (ťuknite na cieľ na hlavnej obrazovke alebo použite **Spravovať** > **Dočasný cieľ**). Trvanie by malo zodpovedať intervalu, ktorý by ste zvolili pre predĺžený bolus. Váš cieľ tak bude nižší ako zvyčajne, a preto sa podá viac inzulínu.
-* Potom v dialógu **Bolusová kalkulačka** zadajte všetky sacharidy jedla, ale navrhnuté hodnoty priamo nepoužite. Ak chcete podať bolus podobný viacvlnovému, dávku inzulínu znížte. Podľa jedla teraz musí algoritmus podať ďalšie SMB alebo vyššie dočasné bazály, aby pôsobil proti vzostupu glykémie. Bezpečnostné obmedzenia bazálu (Max IE / h, maximálny bazálny IOB) tu treba skúšať veľmi opatrne a v prípade potreby ich dočasne zmeniť.
+* Potom v dialógu **Bolusová kalkulačka** zadajte všetky sacharidy jedla, ale navrhnuté hodnoty priamo nepoužite. Ak chcete podať bolus podobný viacvlnovému, dávku inzulínu znížte. Podľa jedla teraz musí algoritmus podať ďalšie SMB alebo vyššie dočasné bazály, aby pôsobil proti vzostupu glykémie. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
 
 * Predĺžený ani viacvlnový bolus nepodávajte priamo na pumpe. Ovládač ich nepodporuje (pozrite [Skôr než začnete](#combov2-before-you-begin)). Ak sa na pumpe aj tak podá viacvlnový bolus, **AAPS** ho z histórie pumpy zaznamená ako bežný bolus a predĺžený bolus, takže sa započíta do IOB. Predĺžený bolus nefunguje v prostredí uzavretého okruhu (podrobnosti nájdete na [tejto stránke](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)).
 
