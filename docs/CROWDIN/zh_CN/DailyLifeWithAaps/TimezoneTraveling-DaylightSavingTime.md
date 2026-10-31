@@ -42,7 +42,7 @@ These pumps require special care because **AAPS** uses history from the pump but
 
 * 在手机设置中关闭“自动日期和时间”（手动更改时区）。
 
-下飞机后：
+When you get off the plane:
 
 * 关闭泵。
 * 更改手机时区。
@@ -62,7 +62,7 @@ Insight还会记录历史条目，记录时间更改的时刻以及从（旧）�
 
 It may cause inaccuracies in the **TDDs**. 但这应该不成问题。 
 
-因此，Insight用户无需担心时区变化和时间变化。但这一规则有一个例外：Insight泵配有一个小型的内部电池，用于在更换“真实”电池时供电以保持时间等设置。如果更换电池的时间过长，这个内部电池就会耗尽能量，时钟会重置，并且在插入新电池后会要求您输入时间和日期。在这种情况下，由于无法正确识别正确的时间，AAPS（先进自动泵送系统）在计算时会跳过电池更换之前的所有记录。
+因此，Insight用户无需担心时区变化和时间变化。但这一规则有一个例外：Insight泵配有一个小型的内部电池，用于在更换“真实”电池时供电以保持时间等设置。 If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. 在这种情况下，由于无法正确识别正确的时间，AAPS（先进自动泵送系统）在计算时会跳过电池更换之前的所有记录。
 
 ## Timezone Change for Accu-Chek Combo
 
