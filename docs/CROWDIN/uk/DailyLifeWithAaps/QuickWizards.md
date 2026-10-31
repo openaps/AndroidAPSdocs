@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# Швидкий майстер (болюс одним дотиком)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+**Швидкий майстер** — це збережена кнопка для частої страви або ситуації, яка працює одним дотиком. Вона містить фіксовану кількість **вуглеводів** (і спосіб дозування для них). Так ви можете ввести болюс — або лише записати вуглеводи — одним дотиком і підтвердженням, а не відкривати щоразу повний болюсний калькулятор.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## Як відкрити Швидкий майстер
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Відкрийте екран **Керувати** (нижня панель навігації) і виберіть **Швидкий майстер** (*«Керувати шаблонами швидкого майстра»*).
 
 ---
 
-## The three modes
+## Керування кнопками Швидкого майстра
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Ваші кнопки Швидкого майстра показано як **карусель карток, яку можна гортати** (кожна картка показує текст кнопки, вуглеводи та час дії). Редактор нижче налаштовує **вибрану** кнопку; нижня панель дій має кнопки **➕ додати**, **⧉ клонувати**, **🗑️ видалити** та кнопку **▶**, яка запускає вибраний Швидкий майстер.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![Редактор Швидкого майстра — режим, вуглеводи, час прийому вуглеводів і час дії](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+Основні поля редактора:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Текст кнопки** — назва, яку видно на кнопці.
+- **Вуглеводи** та **Час прийому вуглеводів** — кількість вуглеводів і їх зсув у часі.
+- **Час дії** — див. [Час дії](#quickwizard_validity).
+- **Параметри калькулятора** та **Вибір пристрою** — див. нижче.
 
 ---
 
-## Validity — when the button appears
+## Три режими
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+Перемикач угорі редактора — **Калькулятор / Інсулін / Вуглеводи** — визначає, **що робить кнопка** після натискання:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Калькулятор** — запускає повний **болюсний калькулятор** для налаштованих вуглеводів і використовує ваші поточні **ГК, IOB, COB і тренд** (згідно з *Параметрами калькулятора* нижче). Він вводить *розрахований* болюс і записує вуглеводи. Це класичний Швидкий майстер.
+- **Інсулін** — вводить **фіксовану, задану вами кількість інсуліну** — без розрахунку.
+- **Вуглеводи** — записує налаштовані **лише вуглеводи**, **без болюсу**.
 
 ---
 
-## Invocation points — where you use it
+## Параметри калькулятора (режим «Калькулятор»)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Для кнопки в режимі **Калькулятор** ви вибираєте, які дані використовує розрахунок:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Використовувати ГК**, **Використовувати COB**, **Використовувати IOB** (з *Тільки позитивний IOB*), **Використовувати тренд** (*Усе / Лише позитивні / Лише негативні*), **Використовувати тимчасову ціль**, **Використовувати сигнал**.
+- **Відсоток болюсу** — змінює розрахований болюс на цей відсоток.
+- **Додати eCarbs** — також планує подовжені вуглеводи.
+
+![Параметри калькулятора, відсоток болюсу та вибір пристрою](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Час дії — коли кнопку видно
+
+(quickwizard_validity)= **Час дії** (*Від / До*) визначає, **коли** Швидкий майстер видно і ним можна користуватися. Кнопка, налаштована, наприклад, на **06:00–10:00**, з'являється лише вранці — тож Швидкий майстер *Сніданок* не захаращує екран (і його не натиснуть випадково) під час вечері. Поза своїм часом кнопку приховано в панелі **Терапія** і на [панелі швидкого запуску](QuickLaunch.md). Кнопку на панелі не видалено: вона з'явиться знову, коли знову настане її час.
+
+Якщо час дії коротший за 4 години, кнопку також приховано на 30 хвилин після використання, щоб ту саму страву не ввели двічі помилково.
+
+---
+
+## Де можна користуватися Швидким майстром
+
+Перемикачі **Вибір пристрою** визначають, де з'являється кожен Швидкий майстер:
+
+- **Показувати на телефоні** — кнопка з'являється на **панелі [Терапія](../Maintenance/V4Changes.md)** (розраховану дозу видно прямо на кнопці). Швидкий майстер, який показано на телефоні, можна також **закріпити як кнопку швидкої дії на екрані «Огляд»**: відкрийте *Налаштувати швидкий запуск* (⚙ на панелі [швидкого запуску](QuickLaunch.md)) і додайте його з категорії **Швидкий майстер**.
+- **Показувати на годиннику** — кнопка з'являється на **плитці Швидкого майстра у Wear OS** (перейдіть до неї гортанням плиток на годиннику, потім натисніть кнопку, щоб запустити її — так само, як на [плитці сцен](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+Розділ **Вибір пристрою** з'являється в редакторі, лише коли плагін **Wear** увімкнено і в ньому увімкнено параметр **Керування з годинника**. Без цього кожен Швидкий майстер просто показано на телефоні.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+На телефоні кнопки Швидкого майстра з'являються вгорі нижньої панелі **Терапія**:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![Кнопки Швидкого майстра (вгорі) у відкритій нижній панелі «Терапія»](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…і як кнопка швидкої дії на екрані «Огляд»:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![Кнопка швидкої дії Швидкого майстра на екрані «Огляд»](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![Плитка Швидкого майстра на годиннику з Wear OS](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Спарений **клієнт** (**AAPSClient**) також може запустити Швидкий майстер — **основний телефон** розраховує та вводить його (див. [Керування «основний телефон ↔ клієнт»](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Звідки б його не запустили, натискання на Швидкий майстер завжди показує **підтвердження** (підтвердження від основного телефону, якщо запуск із клієнта чи годинника), перш ніж щось буде введено.
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Швидкий майстер буде відхилено, якщо його доза більша за ваш максимальний болюс або якщо його вуглеводи чи eCarbs більші за ваш максимум вуглеводів (наприклад, після того як ви знизили ліміт). Якщо вуглеводів більше за ліміт, кнопка на панелі **Терапія** неактивна. Змініть Швидкий майстер або ліміт.
 
 ---
 
-## Adding and removing
+## Додавання та видалення
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Додати** — створити новий Швидкий майстер.
+- **⧉ Клонувати** — зробити копію як основу для нового.
+- **🗑️ Видалити** — видалити кнопку.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Якщо у вас дві або більше кнопок Швидкого майстра, ви також можете змінити їх порядок у каруселі: натисніть значок **Змінити порядок** (⇅) на верхній панелі, пересуньте центральну картку кнопками **◀ / ▶**, потім підтвердьте кнопкою **✓**. (Елементи керування такі самі, як під час [зміни порядку профілів](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+Кнопки Швидкого майстра є частиною синхронізованої конфігурації, тому вони спільні для вашого основного телефону і спарених клієнтів.
 
 ---
 
