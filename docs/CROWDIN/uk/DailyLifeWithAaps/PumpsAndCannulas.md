@@ -75,7 +75,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## Чергування місць введення
 
 **Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
 
@@ -88,7 +88,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 - The **cog** icon (upper right) opens the settings: **User profile for site rotation** opens a dialog where you choose **Man**, **Woman** or **Child**, and the **Manage pump site rotation** and **Manage CGM site rotation** switches select which sites you manage.
 
-![Settings](../images/SiteRotation/Settings.png)
+![Налаштування](../images/SiteRotation/Settings.png)
 
 ![User profile for site rotation dialog](../images/SiteRotation/Type.png)
 
