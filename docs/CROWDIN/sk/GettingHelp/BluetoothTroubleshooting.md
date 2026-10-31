@@ -19,11 +19,11 @@ Niektoré z týchto problémov sa pravdepodobne týkajú aj iných inzulínovýc
 
 ## Optimalizácia batérie pre Bluetooth
 
-Novšie verzie Androidu majú pre systémovú aplikáciu Bluetooth zapnutú optimalizáciu batérie. Je známe, že to spôsobuje problémy s pumpami a CGM, ktoré používajú Bluetooth.
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Je známe, že to spôsobuje problémy s pumpami a CGM, ktoré používajú Bluetooth.
 
-Ak ste postupovali podľa stránky [Sprievodca nastavením](../SettingUpAaps/SetupWizard) a podľa nastavení v časti [Optimalizácia batérie pre Bluetooth](#setup-wizard-bluetooth-battery-optimisation), toto nastavenie by malo byť správne. Ak ste však postupovali podľa staršej verzie tohto návodu, je možné, že ste toto nastavenie nezmenili.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
-Ak sa vám pumpa alebo CGM odpája, overte, či je toto nastavenie správne.
+Verify this is correctly configured if you have pump and CGM disconnections.
 
 ---
 
@@ -33,7 +33,7 @@ Ak sa vám pumpa alebo CGM odpája, overte, či je toto nastavenie správne.
 
 Android vám pomocou povolení umožňuje určiť, čo môže každá aplikácia v telefóne robiť alebo k čomu má prístup. Pre každú nainštalovanú aplikáciu môžete povoliť alebo zakázať konkrétne povolenia, napr. prístup k súborom v zariadení, prístup k Bluetooth, vyhľadávanie zariadení v okolí atď.
 
-**AAPS** na svoju činnosť potrebuje niekoľko konkrétnych povolení. Jedno z nich, ktoré je potrebné na správne fungovanie Podov, je povolenie „Zariadenia v okolí“. Toto povolenie vyžaduje aj mnoho iných aplikácií. Komunita zistila, že niektoré aplikácie, ktoré toto povolenie dostanú, môžu na niektorých zariadeniach spôsobovať problémy s aktiváciou nových Podov.
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. Toto povolenie vyžaduje aj mnoho iných aplikácií. Komunita zistila, že niektoré aplikácie, ktoré toto povolenie dostanú, môžu na niektorých zariadeniach spôsobovať problémy s aktiváciou nových Podov.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -50,16 +50,16 @@ Ak chcete navrhnúť aplikácie na doplnenie do tohto zoznamu, napíšte @XiTati
 
 - **Amazon Alexa**  Odobratie povolenia „Zariadenia v okolí“ aplikácii Alexa niektorým ľuďom problém vyriešilo, ale potom nebude možné párovať zariadenia IoT so štandardom Matter
 
-- **MINI app**  Zdá sa, že aplikácia je založená na aplikácii myBMW, a preto sa môže správať rovnako
+- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
 - **BM2** Aplikácia na sledovanie solárnej batérie, ktorá sa používa v niektorých obytných dodávkach a solárnych zostavách na kempovanie. Keď bola aplikácia spustená, zabránila aktivácii nového Podu. Problém sa dá obísť tak, že aplikáciu počas aktivácie nového Podu vynútene zastavíte. Keď bola aplikácia potom znova spustená, fungovanie Dash zrejme nerušila (na Pixel 8 Pro s Androidom 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### Ako odobrať povolenie „Zariadenia v okolí“ iným aplikáciám:
-Ak máte problémy s aktiváciou nového Podu a používate správnu podporovanú verziu **AAPS** pre vašu verziu Androidu, môže byť potrebné odobrať toto povolenie iným aplikáciám počas aktivácie nového Podu.
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
-Podľa tohto postupu odoberiete povolenie „Zariadenia v okolí“ všetkým aplikáciám okrem **AAPS**:
+Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
