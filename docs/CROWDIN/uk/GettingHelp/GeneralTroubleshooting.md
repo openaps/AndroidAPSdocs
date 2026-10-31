@@ -53,7 +53,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 
 ## Проблеми, пов’язані з Bluetooth
 
-Про відомі проблеми з Bluetooth-з’єднанням, обриви зв’язку з помпою/Pod, а також проблеми з активацією та підключенням див. [Усунення проблем з Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
+Про відомі проблеми з Bluetooth-з’єднанням, обриви зв’язку з помпою/Pod, а також проблеми з активацією та підключенням див. [Проблеми, пов’язані з Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
