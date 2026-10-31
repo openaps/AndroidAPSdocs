@@ -42,7 +42,7 @@ AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
 
 - *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
 - 在计划活动的持续时间内*选择*一个临时配置文件（降低）以确保减少**IOB**；
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise as reduced **IOB** as some users experience a rapid rise in **BG** post exercise.
+- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
 
 ### TT - 即将进食
 
@@ -209,7 +209,7 @@ Note: if you open the **Carbs dialog** while your blood glucose is less than 72 
 
 New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. 每个人在运动期间达到稳定BG控制的能力都是不同的。另请参阅[FAQ中的运动部分](#FAQ-sports)。
 
-一些用户还喜欢在启用**临时目标-活动**之前和期间激活**配置文件切换**（即配置文件减少至<100%，以减少**AAPS**的胰岛素输送）。 You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
 
 Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. 那么 **AAPS** 会更加敏感。
 
@@ -221,7 +221,7 @@ Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** w
 
 **临时目标-即将进食**可以帮助实现**BG**的温和下降，并确保在进食前有足够的**IOB**。
 
-这对于那些不提前注射的用户来说可能是一个重要的工具，但**临时目标-即将进食**的有效性将取决于多种因素，包括：用户的设置、是否食用低碳水化合物饮食以及是否使用超速效胰岛素（如Fiasp或Lyjumjev）来消除提前注射的需要。通常，在用户使用**AAPS**有经验之前，他们应该预期在使用**临时目标-即将进食**时需要提前注射，特别是如果食用高碳水化合物饮食的话。
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. 通常，在用户使用**AAPS**有经验之前，他们应该预期在使用**临时目标-即将进食**时需要提前注射，特别是如果食用高碳水化合物饮食的话。
 
 您可以在文章['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/)或[此处](https://diyps.org/tag/eating-soon-mode/)了解更多关于“即将进食模式”的信息。
 
