@@ -86,7 +86,7 @@
 
 * Изисква Android 5.0 или по-нова версия.
 
-* Има тъмен интерфейс, големи стойности и бутони и е създадено за използване през нощта.
+* It has a dark UI, large readings and buttons, designed for usage at night.
 
 ### xDrip (Android)
 
@@ -200,7 +200,7 @@ SugarPixel е устройство – допълнителен дисплей �
 ![Следене с Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * Часовникът поддържа единици mmol/l и mg/dl и има звукови аларми.
-* Има няколко вида изглед, вижте [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) за преглед.
+* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
 * Настройката и конфигурирането на устройството са само няколко прости стъпки. След като бъде настроено, за работа му трябват само захранване и Wi-Fi.
 * Устройството Ulanzi TC001 е значително по-евтино за купуване от SugarPixel.
 * Софтуерът и инструкциите за инсталиране могат да се намерят в [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
