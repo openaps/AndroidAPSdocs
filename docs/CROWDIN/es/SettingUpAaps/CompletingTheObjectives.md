@@ -42,7 +42,7 @@ El **Objetivo 1** pide al usuario hacer la configuración técnica básica en **
 Nota: *puede que tengas que esperar a la siguiente lectura de glucosa del sensor antes de que **AAPS** la reconozca.*
 
 (objectives-objective2)=
-## Objetivo 2: Aprenda cómo controlar AAPS
+## Objetivo 2: Aprender a controlar AAPS
 
 El **Objetivo 2** pide hacer varias «tareas», como se ve en la captura de pantalla de abajo. Cada tarea muestra su estado (**1**): el texto naranja «**No completado**» cambia a «**¡Completado, bien hecho!**» en cuanto **AAPS** registra la acción. Toca **Pista** (**2**) debajo de una tarea para abrir la documentación relacionada, si todavía no conoces bien una acción concreta.
 
@@ -55,7 +55,7 @@ Las tareas para completar el **Objetivo 2** son:
 - Simula «darte una ducha» [desconectando tu bomba](#AapsScreens-loop-status) en **AAPS** durante 1 h.
   - _Pista_: pulsa el icono del lazo en la pantalla principal para abrir el diálogo del lazo y luego elige una duración en **Desconectar bomba**.
 - Termina «la ducha» volviendo a conectar tu bomba.
-  - _Pista_: pulsa el icono de «desconectada» para abrir otra vez el diálogo del lazo y elige **Vuelva a conectar la bomba**.
+  - _Pista_: pulsa el icono de «desconectada» para abrir otra vez el diálogo del lazo y elige **Vuelve a conectar la bomba**.
 - Pon un [**Objetivo temporal**](../DailyLifeWithAaps/TempTargets.md) personalizado con una duración de 10 min.
   - _Pista_: pulsa el rango objetivo en la pantalla principal para abrir la pantalla de objetivo temporal.
 - Muestra el contenido del complemento **Lazo**.
@@ -64,7 +64,7 @@ Las tareas para completar el **Objetivo 2** son:
 
 
 (objectives-objective3)=
-## Objetivo 3: Compruebe su conocimiento
+## Objetivo 3: Demostrar tus conocimientos
 
 El **Objetivo 3** pide al usuario aprobar un examen tipo test que comprueba tus conocimientos de **AAPS**.
 
@@ -83,7 +83,7 @@ Para seguir con el **Objetivo 3**, toca la fila de una pregunta para abrirla. Le
 De vez en cuando se añaden nuevas funciones a **AAPS** que pueden requerir añadir una nueva pregunta a los **Objetivos**, sobre todo al **Objetivo 3**. Por eso, cada nueva pregunta añadida al **Objetivo 3** aparecerá como «incompleta», porque **AAPS** te pedirá que la respondas. No te preocupes: como cada **Objetivo** es independiente, **no perderás las funciones que ya tienes en AAPS**, siempre que los demás **Objetivos** sigan completados.
 ```
 
-## Objetivo 4: Iniciando con un lazo abierto
+## Objetivo 4: Empezar con un lazo abierto
 
 El fin del **Objetivo 4** es ver con qué frecuencia **AAPS** compara la dosis basal del usuario con los niveles de glucosa y recomienda ajustes de la dosis basal temporal. En este **Objetivo** activarás el lazo abierto por primera vez. Aceptarás 20 cambios propuestos de la dosis basal temporal y, si hace falta, los aplicarás a mano en tu bomba. También verás el efecto de los [**Objetivos temporales**](../DailyLifeWithAaps/TempTargets.md). Si todavía no sabes cómo poner un cambio de la dosis basal temporal en **AAPS**, mira las acciones de la bomba en el panel **Administrar** ([¿Dónde está la pestaña Acciones?](#screens-action-tab)).
 
@@ -104,7 +104,7 @@ Para reducir el número de cambios propuestos de la dosis basal en lazo abierto,
 ¡No tienes que aplicar todas y cada una de las recomendaciones del sistema!
 ```
 (objectives-objective5)=
-## Objetivo 5: Comprensión de su lazo abierto, incluidas sus recomendaciones basales temporales
+## Objetivo 5: Comprender tu lazo abierto, incluidas sus recomendaciones de basal temporal
 
 En el **Objetivo 5** empezarás a entender cómo se calculan las recomendaciones de basal temporal. Esto incluye la [lógica que decide la basal](#aaps-screens-how-predictions-become-a-dosing-decision), analizar el efecto observando las [líneas de predicción en **Inicio de AAPS**](#aaps-screens-prediction-lines) (o en Nightscout) y mirar los cálculos detallados que se muestran en la pantalla del complemento **OpenAPS SMB** (**Configuración → APS → Abrir complemento**).
 
@@ -126,7 +126,7 @@ Si usas el lazo abierto con una bomba virtual, **detente aquí**. Pulsa verifica
 ![En blanco](../images/blank.png)
 
 (objectives-objective6)=
-## Objetivo 6: Empezando a cerrar el lazo con Baja Glucosa Suspender
+## Objetivo 6: Empezar a cerrar el lazo con Suspensión por glucosa baja
 
 ![Señal de advertencia](../images/sign_warning.png)
 ```{admonition} Closed loop will not correct high **BG** values in **Objective 6** as it is limited to **Low Glucose Suspend** only!
