@@ -1,4 +1,4 @@
-# AAPS schermen
+# AAPS-schermen
 
 ```{contents}
 :backlinks: entry
@@ -16,7 +16,7 @@ Dit is het eerste scherm dat je ziet als je **AAPS** opent. Het bevat de meeste 
 ### Sectie A - Bovenste balk
 
 * Het **menu** (☰) links opent het navigatiemenu met **Behandelingen geschiedenis**, **Historie bekijken**, **Statistieken**, **Profielhulp**, **Onderhoud**, **Setup Wizard**, **Configuratie** en meer.
-* De **zoekbalk** vindt instellingen, dialoogvensters en documentatie. Begin gewoon te typen (zie [Globaal zoeken](../DailyLifeWithAaps/GlobalSearch.md)).
+* De **zoekbalk** vindt instellingen, dialoogvensters en documentatie. Begin gewoon te typen (zie [Overal zoeken](../DailyLifeWithAaps/GlobalSearch.md)).
 * Het pictogram **Instellingen** (tandwiel) rechts opent alle [instellingen](../SettingUpAaps/Preferences.md).
 
 (aaps-screens-profile--target)=
@@ -249,9 +249,9 @@ Als de drempelwaarde voor alarm wordt overschreden, worden de waarden in rood we
 
 De drempelwaarden kun je wijzigen via het kleine pictogram **Instellingen** dat verschijnt als de statusrij is **uitgeklapt** (pijltje rechts). Zie [Statusindicatoren](#Preferences-status-lights).
 
-Het uitgeklapte statuspaneel heeft aan het eind van sommige rijen ook een knop om een wissel te registreren. Die zet de bijbehorende leeftijd terug: **Toevoegen** op de rij **Sensor** registreert het plaatsen van een sensor. Als je pomp het ondersteunt, verschijnt **Ontlucht/vul** op de rijen **Canule** (of **Patchpomp**) en **Insuline**, en **Toevoegen** op de rij **Pomp batterij**.
+Het uitgeklapte statuspaneel heeft aan het eind van sommige rijen ook een knop om een wissel te registreren. Die zet de bijbehorende leeftijd terug: **Toevoegen** op de rij **Sensor** registreert het plaatsen van een sensor. Als je pomp het ondersteunt, verschijnt **Prime/Vul** op de rijen **Canule** (of **Patchpomp**) en **Insuline**, en **Toevoegen** op de rij **Pomp batterij**.
 
-![Uitgeklapt statuspaneel met Ontlucht/vul op de rijen Canule en Insuline, en Toevoegen op de rijen Sensor en Pomp batterij](../images/main/main_status_row_expanded.png)
+![Uitgeklapt statuspaneel met Prime/Vul op de rijen Canule en Insuline, en Toevoegen op de rijen Sensor en Pomp batterij](../images/main/main_status_row_expanded.png)
 
 Afhankelijk van je pomp heb je misschien niet al deze pictogrammen.
 
@@ -499,7 +499,7 @@ Als je geen bolus via de pomp wilt geven, maar een hoeveelheid insuline wilt reg
 
 ![De rij Tijd, ingeklapt](../images/v4/Screens/insulin_dialog_record_only_time.png) ![De rij Tijd, geopend met het pijltje](../images/v4/Screens/insulin_dialog_time_open.png)
 
-Met de knoppen **+0.5 / +1.0 / +2.0** kun je de hoeveelheid insuline snel verhogen. De stapwaarden kun je wijzigen in de [instellingen van de Bolus wizard](#Preferences-deliver-this-part-of-bolus-wizard-result).
+Met de knoppen **+0,5 / +1,0 / +2,0** kun je de hoeveelheid insuline snel verhogen. De stapwaarden kun je wijzigen in de [instellingen van de Bolus wizard](#Preferences-deliver-this-part-of-bolus-wizard-result).
 
 Het dialoogvenster Insuline kun je ook gebruiken als de pomp onderbroken of ontkoppeld is, bijv. om insuline te registreren die met een pen is gespoten. In dat geval staat "**Bolus wordt alleen geregistreerd**" verplicht aan (rood getoond), en verschijnen er extra velden om het insulinetype en een **Tijd**-verschuiving te kiezen voor een injectie uit het verleden:
 
@@ -537,7 +537,7 @@ De onderste navigatiebalk geeft toegang tot:
 
 * **Scènes** — alleen zichtbaar als je minstens één [scène](../DailyLifeWithAaps/Scenes.md) hebt, of een regel in **Automatisering** die is gemarkeerd als **Gebruikersactie**. Het opent een menu waarin je ze kunt starten; een badge toont hoeveel je er nu kunt starten. Het **potlood** bovenaan het menu opent **Beheren → Scènes**.
 
-* **Beheren** — de centrale plek voor alles wat je in **AAPS** beheert: Profiel, Insuline instellingen, Tijdelijk streefdoel, QuickWizard, Scènes, Automatisering, Voeding, Site rotatie, Pomp en Geautoriseerde clients. Daaronder staan acties voor apparaten en basaal, zoals Sensor ingebracht en Tijdelijk basaal. Sommige onderdelen verschijnen alleen als ze bij jouw opstelling horen. Zo hangen Ontlucht/vul en batterijwissel af van je pomp, en zijn Tijdelijk basaal, Vertraagde bolus en de Careportal-invoer verborgen in de [Eenvoudige modus](#preferences-simple-mode):
+* **Beheren** — de centrale plek voor alles wat je in **AAPS** beheert: Profiel, Insuline instellingen, Tijdelijk streefdoel, QuickWizard, Scènes, Automatisering, Voeding, Site rotatie, Pomp en Geautoriseerde clients. Daaronder staan acties voor apparaten en basaal, zoals Sensor ingebracht en Tijdelijk basaal. Sommige onderdelen verschijnen alleen als ze bij jouw opstelling horen. Zo hangen Prime/Vul en batterijwissel af van je pomp, en zijn Tijdelijk basaal, Vertraagde bolus en de Careportal-invoer verborgen in de [Eenvoudige modus](#preferences-simple-mode):
     
     ![Menu Beheren](../images/v4/Screens/manage_sheet.png)
 
@@ -617,7 +617,7 @@ Goed om te weten:
 
 * Als de berekende bolus hoger is dan je **[Maximum bolus](#Preferences-maximum-bolus)**, wordt hij verlaagd tot de maximale bolus, en toont de bevestiging de waarschuwing "Bolusbeperking toegepast". Een [QuickWizard](../DailyLifeWithAaps/QuickWizards.md) wordt in dat geval geweigerd.
 * Als de bolus alleen wordt geregistreerd (bijvoorbeeld als de pomp ontkoppeld is), blijft de waarschuwing "**Bolus wordt alleen geregistreerd**" bovenaan het dialoogvenster staan, ook als je scrolt.
-* Een bolus die je zelf geeft, gaat voor op een [SMB](#Open-APS-features-super-micro-bolus-smb) die nog moet worden gegeven: de SMB vervalt en de loop rekent opnieuw. Als er op dat moment een SMB wordt gegeven, wordt je bolus geweigerd met de melding "Er wordt nu een SMB geleverd. Probeer het opnieuw wanneer die klaar is." Er wordt geen insuline gegeven, en koolhydraten die je met die bolus hebt ingevoerd worden niet opgeslagen: wacht even en voer ze opnieuw in.
+* Een bolus die je zelf geeft, gaat voor op een [SMB](#Open-APS-features-super-micro-bolus-smb) die nog moet worden gegeven: de SMB vervalt en de loop rekent opnieuw. Als er op dat moment een SMB wordt gegeven, wordt je bolus geweigerd met de melding "Er wordt nu een SMB toegediend. Probeer het opnieuw wanneer die klaar is." Er wordt geen insuline gegeven, en koolhydraten die je met die bolus hebt ingevoerd worden niet opgeslagen: wacht even en voer ze opnieuw in.
 
 (AapsScreens-wrong-cob-detection)=
 
@@ -635,13 +635,13 @@ Zoek je het tabblad **Acties** van **AAPS** 3.x? De functies ervan zijn verhuisd
 
 ## Careportal-invoer
 
-De leeftijden en niveaus in de [statusrij](#screens-sensor-level-battery) (sensor, insuline, canule, pompbatterij) zijn gebaseerd op Careportal-invoer: **Ontlucht/vul** (registreert het wisselen van de infuusplek en de insulinepatroon), **Sensor ingebracht** en **Pomp bat. wissel**.
+De leeftijden en niveaus in de [statusrij](#screens-sensor-level-battery) (sensor, insuline, canule, pompbatterij) zijn gebaseerd op Careportal-invoer: **Prime/Vul** (registreert het wisselen van de infuusplek en de insulinepatroon), **Sensor ingebracht** en **Pomp bat. wissel**.
 
 Je kunt ze registreren vanuit het uitgeklapte statuspaneel op het hoofdscherm, vanuit het menu **Beheren**, of met [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)-knoppen.
 
-**Ontlucht/vul** registreert een wissel van de infuusplek en/of van de insulinepatroon, en kan een hoeveelheid insuline geven om te ontluchten:
+**Prime/Vul** registreert een wissel van de infuusplek en/of van de insulinepatroon, en kan een hoeveelheid insuline geven om te ontluchten:
 
-![Dialoogvenster Ontlucht/vul](../images/dialogs/prime_fill.png)
+![Dialoogvenster Prime/Vul](../images/dialogs/prime_fill.png)
 
 **Sensor ingebracht** en **Pomp bat. wissel** vragen alleen naar de tijd van de gebeurtenis:
 
@@ -663,7 +663,7 @@ Bij **Notitie** en **Sport** kun je een tijdsduur invullen (een ingeklapte rij: 
 
 ![Dialoogvenster Sport](../images/dialogs/careportal_exercise.png)
 
-In al deze dialoogvensters (**Ontlucht/vul**, **Sensor ingebracht**, **Pomp bat. wissel** en de Careportal-invoer) gebruikt de tijd van de gebeurtenis dezelfde rij **Tijd** als het [dialoogvenster Insuline](#aaps-screens-buttons-insulin) en de bolus wizard: gebruik **-** / **+** om de tijd in stappen van 5 minuten te verschuiven (tot een week terug en 12 uur vooruit), of tik op het pijltje om een datum en tijd te kiezen.
+In al deze dialoogvensters (**Prime/Vul**, **Sensor ingebracht**, **Pomp bat. wissel** en de Careportal-invoer) gebruikt de tijd van de gebeurtenis dezelfde rij **Tijd** als het [dialoogvenster Insuline](#aaps-screens-buttons-insulin) en de bolus wizard: gebruik **-** / **+** om de tijd in stappen van 5 minuten te verschuiven (tot een week terug en 12 uur vooruit), of tik op het pijltje om een datum en tijd te kiezen.
 
 ## Site rotatie
 
