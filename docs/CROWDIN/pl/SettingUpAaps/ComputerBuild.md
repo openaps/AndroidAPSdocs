@@ -6,79 +6,79 @@ To tradycyjna metoda budowania aplikacji AAPS.
 
 Aplikację możesz zbudować bez komputera metodą [Budowanie w przeglądarce](./BrowserBuild.md).
 
-## Build yourself instead of download
+## Zbuduj sam zamiast pobierać
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Aplikacji AAPS (pliku apk) nie można pobrać gotowej z powodu przepisów dotyczących wyrobów medycznych. Zbudowanie aplikacji na własny użytek jest legalne, ale NIE WOLNO Ci przekazywać jej kopii innym osobom!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Szczegóły znajdziesz na stronie [FAQ](../UsefulLinks/FAQ.md).
 
 ---
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
-## Computer and software specifications for building AAPS
+## Wymagania dotyczące komputera i oprogramowania do budowania AAPS
 
-* A specific **[Android Studio](https://developer.android.com/studio/)** version may be required to build the apk. Zobacz tabelę poniżej:
+* Do zbudowania pliku apk może być potrzebna konkretna wersja **[Android Studio](https://developer.android.com/studio/)**. Zobacz tabelę poniżej:
 
-| AAPS Version                | Preferred<br/>Android Studio<br/>Version | Alternative<br/>Android Studio<br/>Version | Gradle | JVM |
-| --------------------------- | ---------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
-| 2.6.2                       | 3.6.1                                                |                                                        | 5.6.4  | 11  |
-| 2.8.2.1                     | 4.1.1                                                |                                                        | 6.1.1  | 13  |
-| [3.1.0.3](#version3100)     | 2020.3.1                                             | testowane do Quail 4                                   | 7.3.3  | 17  |
-| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                  | testowane do Quail 4                                   | 8.2    | 17  |
-| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                      | testowane do Quail 4                                   | 8.10   | 21  |
-| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                   | testowane do Quail 4                                   | 8.11.1 | 21  |
-| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                   | testowane do Quail 4                                   | 8.13   | 21  |
-| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                   | testowane do Quail 4                                   | 9      | 21  |
-| [4.0.0-beta1](#version4000) | Rabbit 1                                             | do najnowszej wersji Rabbit 1                          | 9.8    | 21  |
+| Wersja AAPS                 | Zalecana<br/>wersja<br/>Android Studio | Alternatywna<br/>wersja<br/>Android Studio | Gradle | JVM |
+| --------------------------- | -------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
+| 2.6.2                       | 3.6.1                                              |                                                        | 5.6.4  | 11  |
+| 2.8.2.1                     | 4.1.1                                              |                                                        | 6.1.1  | 13  |
+| [3.1.0.3](#version3100)     | 2020.3.1                                           | testowane do Quail 4                                   | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)     | Hedgehog (2023.1.1)                                | testowane do Quail 4                                   | 8.2    | 17  |
+| [3.3.1.3](#version3300)     | Ladybug Feature Drop (2024.2.2)                    | testowane do Quail 4                                   | 8.10   | 21  |
+| [3.3.2](#version3300)       | Meerkat (2024.3.1)                                 | testowane do Quail 4                                   | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                                 | testowane do Quail 4                                   | 8.13   | 21  |
+| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                                 | testowane do Quail 4                                   | 9      | 21  |
+| [4.0.0-beta1](#version4000) | Rabbit 1                                           | do najnowszej wersji Rabbit 1                          | 9.8    | 21  |
 
-The "preferred version" is packaged with the appropriate JVM version. The preferred version is also the minimal version you can use to build **AAPS**. You will **NOT** be able to build on a version older than the "preferred" one. If using a different version, you may encounter issues related to JVM version. See the [Troubleshooting Android Studio](#troubleshooting_androidstudio-uncommitted-changes) page to help solve these issues. If your current Android Studio version is not listed in the table, you must update it first.
+„Zalecana wersja” zawiera odpowiednią wersję JVM. Zalecana wersja jest też minimalną wersją, której możesz użyć do zbudowania **AAPS**. **NIE** zbudujesz aplikacji w wersji starszej niż „zalecana”. Jeśli używasz innej wersji, mogą wystąpić problemy związane z wersją JVM. Zobacz stronę [Rozwiązywanie problemów z Android Studio](#troubleshooting_androidstudio-uncommitted-changes), aby rozwiązać te problemy. Jeśli Twojej obecnej wersji Android Studio nie ma w tabeli, MUSISZ ją najpierw zaktualizować.
 
-The Gradle version is linked to the source code, you will always get the correct Gradle version when downloading / updating the source code. It is mentioned here for reference only, you don't have to take action on it.
+Wersja Gradle jest powiązana z kodem źródłowym. Zawsze otrzymasz właściwą wersję Gradle podczas pobierania lub aktualizacji kodu źródłowego. Podajemy ją tu tylko dla informacji, nie musisz nic z nią robić.
 
-* [Windows 32-bit systems](#troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+* [32-bitowe systemy Windows](#troubleshooting_androidstudio-unable-to-start-daemon-process) nie są obsługiwane przez Android Studio. Pamiętaj, że **64-bitowy procesor i 64-bitowy system operacyjny są warunkiem obowiązkowym.** Jeśli Twój system NIE spełnia tego warunku, musisz wymienić odpowiedni sprzęt, oprogramowanie lub cały system.
 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">System operacyjny (tylko 64-bit)</th>
+    <td class="tg-baqh">Windows 8 lub nowszy</td>
+    <td class="tg-baqh">Mac OS 10.14 lub nowszy</td>
+    <td class="tg-baqh">Dowolny Linux z obsługą Gnome, KDE lub Unity DE;&nbsp;&nbsp;GNU C Library 2.31 lub nowsza</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">Procesor (tylko 64-bit)</th>
+    <td class="tg-baqh">Architektura procesora x86_64; Intel Core 2. generacji lub nowszy albo procesor AMD z obsługą <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Układy ARM albo Intel Core 2. generacji lub nowszy z obsługą <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">Architektura procesora x86_64; Intel Core 2. generacji lub nowszy albo procesor AMD z obsługą AMD Virtualization (AMD-V) i SSSE3</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">RAM</th>
+    <th class="tg-baqh"><p align="center">Pamięć RAM</th>
     <td class="tg-baqh" colspan="3"><p align="center">16 GB lub więcej</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Dysk</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Co najmniej 30 GB wolnego miejsca. Zalecany jest dysk SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <th class="tg-baqh"><p align="center">Rozdzielczość</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Minimum 1280 x 800<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Szerokopasmowy</td>
   </tr>
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+**Zdecydowanie zalecamy (nie jest to obowiązkowe) używanie dysku SSD (Solid State Disk) zamiast HDD (Hard Disk Drive), ponieważ budowanie pliku apk AAPS trwa wtedy krócej.**  Do budowania pliku apk **AAPS** możesz nadal używać dysku HDD. Jeśli tak, budowanie może trwać długo, ale gdy już się zacznie, możesz zostawić je bez nadzoru.
 
-## Help and support during the building process
+## Pomoc i wsparcie podczas budowania
 
 Jeśli podczas budowania aplikacji **AAPS** napotkasz problemy, jest osobna sekcja [**Rozwiązywanie problemów z Android Studio**](../GettingHelp/TroubleshootingAndroidStudio.md). Zajrzyj tam najpierw.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
+Jeśli uważasz, że coś w instrukcji budowania jest błędne, brakuje czegoś lub jest niejasne, albo nadal masz problemy, zwróć się do grupy użytkowników **AAPS** na [Facebooku](https://www.facebook.com/groups/AndroidAPSUsers) lub [Discordzie](https://discord.gg/4fQUWHZ4Mw). Jeśli chcesz sam coś zmienić (np. zaktualizować zrzuty ekranu _itp._), wyślij [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
-## Step-by-step guide to building the AAPS app
+## Instrukcja krok po kroku: budowanie aplikacji AAPS
 
 ```{admonition} WARNING
 :class: warning
@@ -106,29 +106,29 @@ Git to program, który pozwala śledzić zmiany w kodzie i współpracować z in
 ```
 
 (BuildingAaps-steps-for-installing-git)=
-#### Steps for Installing Git
+#### Kroki instalacji Git
 
 1.  Sprawdź, czy nie masz już zainstalowanego **Git**. Możesz to zrobić, wpisując „git” w pasku wyszukiwania Windows. Jeśli widzisz **„Git bash”** lub inną formę Git, jest on już zainstalowany i możesz od razu przejść do [instalacji Android Studio](#install-android-studio):
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Jeśli nie masz zainstalowanego Git, pobierz i zainstaluj najnowszą wersję dla swojego systemu z sekcji „Download” [**tutaj**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
+2. Jeśli nie masz zainstalowanego Git, pobierz i zainstaluj najnowszą wersję dla swojego systemu z sekcji „Download” [**tutaj**](https://git-scm.com/downloads). Powinna działać każda nowsza wersja Git. Wybierz wersję dla swojego systemu: Mac, Windows lub Linux.
 
-**Uwaga dla użytkowników Maca:** strona Git poprowadzi Cię też przez instalację dodatkowego programu „homebrew”, który pomaga w instalacji. If you install Git via homebrew, there is no need to change any preferences.
+**Uwaga dla użytkowników Maca:** strona Git poprowadzi Cię też przez instalację dodatkowego programu „homebrew”, który pomaga w instalacji. Jeśli instalujesz Git przez Homebrew, nie musisz zmieniać żadnych ustawień.
 
 (Make_a_note_of_Git_path)=
 
-* Gdy podczas instalacji pojawi się pytanie „select destination location”, zapisz, _gdzie_ instalowany jest Git (to „**ścieżka instalacji**”). Sprawdzisz ją w następnym kroku. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+* Gdy podczas instalacji pojawi się pytanie „select destination location”, zapisz, _gdzie_ instalowany jest Git (to „**ścieżka instalacji**”). Sprawdzisz ją w następnym kroku. Będzie to coś podobnego do „C:\Program Files\Git\cmd\git.exe”
 
-*  As you proceed through several steps of the Git installation, just accept all the default options.
+*  Podczas kolejnych kroków instalacji Git po prostu akceptuj wszystkie domyślne opcje.
 
-*  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+*  Jeśli po instalacji zapomniałeś zapisać, gdzie zainstalowano Git, możesz to sprawdzić tak: wpisz „git” w pasku wyszukiwania na komputerze, kliknij prawym przyciskiem „Git bash”, wybierz „open file location” i najedź myszą na ikonę „Git bash” – zobaczysz, gdzie jest zainstalowany.
 
-* Reboot your computer before the next step.
+* Przed następnym krokiem uruchom ponownie komputer.
 
 (Building-APK-install-android-studio)=
-### Install Android Studio
+### Zainstaluj Android Studio
 
 - **Podczas kolejnych kroków musisz być cały czas online, bo Android Studio pobiera kilka aktualizacji**
 
@@ -150,9 +150,9 @@ Pobierz [aktualną wersję Android Studio](https://developer.android.com/studio)
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+Po zakończeniu pobierania uruchom pobrany program, aby zainstalować go na komputerze. Być może musisz zaakceptować lub potwierdzić ostrzeżenia Windows o pobranych aplikacjach!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. **Nie** musisz zmieniać żadnych ustawień!
+Zainstaluj Android Studio, klikając „Next”, jak na poniższych zrzutach ekranu. **Nie** musisz zmieniać żadnych ustawień!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
@@ -162,53 +162,53 @@ Jeśli chcesz zaoszczędzić miejsce na dysku, możesz odznaczyć Android Virtua
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Teraz kliknij „Install”:
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+Gdy instalacja się zakończy, naciśnij „Next”
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finished" to start Android Studio for the first time.
+W ostatnim kroku kliknij „Finished”, aby uruchomić Android Studio po raz pierwszy.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Android Studio zapyta, czy chcesz pomóc w jego ulepszaniu. Wybierz dowolną opcję – nie ma to wpływu na dalsze kroki.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Zobaczysz ekran powitalny instalatora Android Studio. Naciśnij „Next”.
 
 ![Witaj](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Jako typ instalacji wybierz „Standard”.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Sprawdź ustawienia i ponownie kliknij „Next”.
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Teraz musisz zaakceptować umowy licencyjne. Po lewej stronie są dwie sekcje (1 + 3). Wybierz je po kolei i w każdej zaznacz „Accept” (2 + 4) po prawej stronie.
 
-Then the "Finish" (5) button can be clicked.
+Potem możesz kliknąć przycisk „Finish” (5).
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Teraz zostaną pobrane i zainstalowane pakiety Androida. Bądź cierpliwy i poczekaj.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+Gdy to się skończy, zobaczysz poniższy ekran. Tu ponownie wybierz „Finish”.
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Zobaczysz teraz ekran powitalny Android Studio.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
-### Download the AAPS code
+### Pobierz kod AAPS
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
@@ -224,40 +224,40 @@ Potem kliknij „**Clone Repository**” (2) po prawej:
 
 ![Get_from_VCS](../images/Building-the-App/032_GetVCS.png)
 
-We will now tell Android Studio where to get the code from:
+Teraz wskażesz Android Studio, skąd ma pobrać kod:
 
 ![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
-* "Repository URL" should be selected (by default) on the left (1).
-* "Git" should be selected (by default) as version control (2).
-* Now copy this URL:
+* Po lewej stronie (1) powinno być wybrane (domyślnie) „Repository URL”.
+* Jako system kontroli wersji (2) powinien być wybrany (domyślnie) „Git”.
+* Teraz skopiuj ten adres URL:
     ```
     https://github.com/nightscout/AndroidAPS.git
     ```
-    and paste it into the URL textbox (3).
+    i wklej go w pole URL (3).
 
-* Sprawdź, czy (domyślny) folder do zapisania sklonowanego kodu nie istnieje już na Twoim komputerze (4). You can change it to some directory, but please remember where you stored it!
-* Now click the button "Clone" (5).
+* Sprawdź, czy (domyślny) folder do zapisania sklonowanego kodu nie istnieje już na Twoim komputerze (4). Możesz zmienić go na inny folder, ale pamiętaj, gdzie go zapisałeś!
+* Teraz kliknij przycisk „Clone” (5).
 
 ```{admonition} INFORMATION
 :class: note
 Zapisz, jaki to folder. To tam jest przechowywany Twój kod źródłowy!
 ```
 
-You will now see a screen telling you that the repository is being cloned:
+Zobaczysz teraz ekran z informacją, że repozytorium jest klonowane:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Click on "Trust project":
+W pewnym momencie Android Studio zamknie się i uruchomi ponownie. Możesz zostać zapytany, czy ufasz temu projektowi. Kliknij „Trust project”:
 
   ![Okno Trust Project](../images/Building-the-App/035_TrustProject.png)
 
 
-Only for Windows users: If your firewall asks for permission, grant access:
+Tylko dla użytkowników Windows: jeśli zapora sieciowa poprosi o zgodę, zezwól na dostęp:
 
  ![Zgoda zapory sieciowej dla Javy](../images/AndroidStudio361_18.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project.
+Gdy repozytorium zostanie sklonowane, Android Studio otworzy sklonowany projekt.
 
 (computerbuild-NewUI)=
 ```{admonition} New UI
@@ -274,7 +274,7 @@ Jeśli nie znajdziesz opcji **New UI**, nie martw się: już jej używasz!
 
 Gdy Android Studio się otworzy, cierpliwie poczekaj (może to potrwać kilka minut) i przede wszystkim **nie** aktualizuj projektu, jak proponuje okienko.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio automatycznie uruchomi „Gradle project sync” (synchronizację projektu). Potrwa to kilka minut. Możesz zobaczyć, że (nadal) działa:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
@@ -289,14 +289,14 @@ Tylko na komputerach z Windows: może pojawić się powiadomienie o działaniu W
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Możesz zostawić działającą synchronizację Gradle i już teraz wykonywać kolejne kroki.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Ustaw ścieżkę Git w ustawieniach Android Studio
 
 Teraz pokażemy Android Studio, gdzie jest Git, który zainstalowałeś [wcześniej](#install-git-if-you-dont-have-it).
 
-* Tylko dla Windows: upewnij się, że uruchomiłeś ponownie komputer po [instalacji Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
+* Tylko dla Windows: upewnij się, że uruchomiłeś ponownie komputer po [instalacji Git](#install-git-if-you-dont-have-it). Jeśli nie, uruchom teraz ponownie komputer i otwórz ponownie Android Studio
 
 W lewym górnym rogu **Android Studio** otwórz menu (hamburger) i przejdź do **File** > **Settings** (na Windows) lub **Android Studio** > **Preferences** (na Macu). Otworzy się następujące okno. Kliknij, aby rozwinąć listę **Version Control** (1), i wybierz **Git** (2)
 
@@ -320,7 +320,7 @@ Jeśli **git.exe** nie zostanie znaleziony automatycznie albo kliknięcie „Tes
   ![Nie znaleziono Git](../images/Building-the-App/039_GitTestError.png)
 
 (Building-APK-generate-signed-apk)=
-### Build the AAPS "signed" APK
+### Zbuduj „podpisany” plik APK AAPS
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
@@ -334,7 +334,7 @@ Dla nas oznacza to tylko tyle, że tworzymy plik podpisu, czyli „keystore” (
 **Ważne: zanim przejdziesz dalej, upewnij się, że synchronizacja gradle zakończyła się pomyślnie!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Wybierz **Build** (1), a potem **Generate Signed App Bundle / APK** (2)
+Kliknij menu (ikona z trzema kreskami) w lewym górnym rogu, aby otworzyć pasek menu. Wybierz **Build** (1), a potem **Generate Signed App Bundle / APK** (2)
 
 ![Budowanie apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
@@ -351,7 +351,7 @@ Jeśli chcesz utworzyć apk na zegarek, musisz teraz wybrać AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Click "Create new..." (2) to start creating your key store.
+Kliknij „Create new...” (2), aby zacząć tworzyć magazyn kluczy.
 
 ```{admonition} INFORMATION!
 :class: note
@@ -359,11 +359,11 @@ Magazyn kluczy tworzysz tylko raz.
 Jeśli już wcześniej budowałeś AAPS, NIE twórz nowego magazynu kluczy, tylko wybierz istniejący i wpisz jego hasła!
 ```
 
-**_Uwaga:_** magazyn kluczy (keystore) to plik, w którym są zapisane informacje do podpisania aplikacji. It is encrypted, and the information is secured with passwords.
+**_Uwaga:_** magazyn kluczy (keystore) to plik, w którym są zapisane informacje do podpisania aplikacji. Jest zaszyfrowany, a informacje są chronione hasłami.
 
 ![Tworzenie magazynu kluczy](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Kliknij ikonę „folderu” (1), aby wybrać na komputerze ścieżkę dla magazynu kluczy.
 
   **Nie** używaj folderu, w którym jest Twój kod źródłowy, tylko folderu, który przeniósłbyś też na nowy komputer.
 
@@ -372,31 +372,31 @@ Jeśli już wcześniej budowałeś AAPS, NIE twórz nowego magazynu kluczy, tylk
 Zapisz sobie, gdzie jest przechowywany Twój magazyn kluczy. Będziesz go potrzebować przy budowaniu następnej aktualizacji AndroidAPS!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Teraz wybierz proste hasło (i zapisz je), wpisz je w polu hasła (2) i potwierdź je (2).
 
-  The passwords for key store and key do not have to be sophisticated. Jeśli w przyszłości zgubisz hasło, zobacz [Ponowna instalacja AAPS z nowym magazynem kluczy](#reinstall-aaps).
+  Hasła do magazynu kluczy i do klucza nie muszą być skomplikowane. Jeśli w przyszłości zgubisz hasło, zobacz [Ponowna instalacja AAPS z nowym magazynem kluczy](#reinstall-aaps).
 
 ```{warning}
 **Unikaj znaków specjalnych w hasłach.** Do haseł magazynu kluczy i klucza używaj tylko liter i cyfr. W szczególności nie używaj `$`, odwrotnego apostrofu (backtick), `"` ani `\`. Jeśli później przejdziesz na [Budowanie w przeglądarce](#aaps-ci-option2) i użyjesz tego samego magazynu kluczy, te znaki mogą spowodować błąd podpisywania. Zobacz [Budowanie w przeglądarce: rozwiązywanie problemów](#aaps-ci-password-special-characters).
 ```
 
-* The default alias (3) for your key is "key0", leave this unchanged.
+* Domyślny alias (3) Twojego klucza to „key0” – nie zmieniaj go.
 
-* You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm it.
+* Teraz potrzebujesz hasła do klucza. Dla prostoty możesz użyć tego samego hasła, którego użyłeś wyżej dla magazynu kluczy. Wpisz hasło (4) i potwierdź je.
 
 ```{admonition} WARNING!
 :class: warning
 Zapisz te hasła! Będziesz ich potrzebować przy budowaniu następnej aktualizacji AAPS!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Domyślna ważność to 25 lat – zostaw ją bez zmian.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Wpisz swoje imię i nazwisko (5). Inne informacje nie są wymagane, ale możesz je dodać (6-7).
 
-* Click "OK" (8) to continue:
+* Kliknij „OK” (8), aby kontynuować:
 
 
-Na stronie **Generate signed App Bundle or APK** zobaczysz teraz ścieżkę do swojego magazynu kluczy. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
+Na stronie **Generate signed App Bundle or APK** zobaczysz teraz ścieżkę do swojego magazynu kluczy. Teraz ponownie wpisz hasło magazynu kluczy (1) i hasło klucza (2) oraz zaznacz pole (3), aby zapamiętać hasła. Wtedy nie musisz ich wpisywać przy następnym budowaniu apk (np. przy aktualizacji do nowej wersji AAPS). Kliknij „Next” (4):
 
 ![Zapamiętaj hasła](../images/Building-the-App/044_RememberPwd.png)
 
@@ -405,27 +405,27 @@ Na następnym ekranie wybierz wariant budowania „fullRelease” (1) i kliknij 
 
    ![Wybór wariantu budowania](../images/Building-the-App/045_BuildPath.png)
 
-Android Studio zbuduje teraz apk **AAPS**. It will show "Gradle Build running" (2) at the bottom right. Proces zajmuje trochę czasu, zależnie od komputera i połączenia z internetem, więc **bądź cierpliwy!** Jeśli chcesz śledzić postęp budowania, kliknij mały młotek „build” (1) na dole okna Android Studio:
+Android Studio zbuduje teraz apk **AAPS**. W prawym dolnym rogu pojawi się „Gradle Build running” (2). Proces zajmuje trochę czasu, zależnie od komputera i połączenia z internetem, więc **bądź cierpliwy!** Jeśli chcesz śledzić postęp budowania, kliknij mały młotek „build” (1) na dole okna Android Studio:
 
 ![Gradle działa](../images/Building-the-App/046_BuildRunning.png)
 
-Now you can watch the building progress:
+Teraz możesz obserwować postęp budowania:
 
 ![Android_Studio_building](../images/Building-the-App/047_BuildDetails.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". Jeśli to przegapisz, kliknij ikonę powiadomień (1), aby otworzyć powiadomienia, a potem **locate** (2):
+Po zakończeniu budowania Android Studio wyświetli komunikat „BUILD SUCCESSFUL”. Może pojawić się wyskakujące powiadomienie – możesz je kliknąć i wybrać „locate”. Jeśli to przegapisz, kliknij ikonę powiadomień (1), aby otworzyć powiadomienia, a potem **locate** (2):
 
 ![Budowanie zakończone](../images/Building-the-App/049_ReopenNotification.png)
 
 **_Jeśli budowanie się nie udało, zajrzyj do sekcji [Rozwiązywanie problemów z Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)._**
 
-In the Notifications box, click on the blue link "locate":
+W okienku Notifications kliknij niebieski link „locate”:
 
 ![Znajdź zbudowany plik](../images/Building-the-App/048_BuildFinished.png) Otworzy się menedżer plików i pokaże plik apk, który właśnie zbudowałeś.
 
    ![Położenie pliku apk](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! Masz już zbudowany plik apk **AAPS**. W następnej części dokumentacji przeniesiesz go na smartfon.
+Gratulacje! Masz już zbudowany plik apk **AAPS**. W następnej części dokumentacji przeniesiesz go na smartfon.
 
 ```{tip}
 Jeśli myślisz, że w przyszłości możesz chcieć używać smartwatcha z Android Wear, to najlepszy moment, aby zbudować apk AAPS Wear. Wtedy masz pewność, że będzie zgodny z Twoim apk AAPS.
