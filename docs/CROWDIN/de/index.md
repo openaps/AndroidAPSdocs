@@ -106,14 +106,14 @@ Einrichten des Berichtsservers <./SettingUpAaps/SettingUpTheReportingServer.md>
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) AAPS konfigurieren
+:caption: 4) Configure AAPS
 
-Einrichtungsassistent <./SettingUpAaps/SetupWizard.md>
-Dein AAPS Profil <konfigurieren. SettingUpAaps/YourAapsProfile.md>
-Ändern der AAPS-Konfiguration <./SettingUpAaps/ChangeAapsConfiguration. d>
-- Konfiguration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Einstellungen <. SettingUpAaps/Preferences.md>
-Abschließen der Ziele (Obejctives) <./SettingUpAaps/CompletingTheObjectives.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Settings <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +165,15 @@ Austausch-Plattform für eigene Zifferblätter <./ExchangeSiteCustomWatchfaces/i
 ```
 
 ```{toctree}
-:caption: 8) AAPS pflegen
+:caption: 8) Maintenance of AAPS
 
-Export/Import der Einstellungen <./Maintenance/ExportImportSettings.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
-Änderungen mit AAPS v4 <./Maintenance/V4Changes.md>
-Update auf eine neue AAPS-Version <./Maintenance/UpdateToNewVersion.md>
-- Browser-Update (Fork) <./Maintenance/UpdateBrowserBuild.md>
-- Android Studio-Update <./Maintenance/UpdateComputerBuild.md>
-Supportende <./Maintenance/EndOfLife.md>
+What changed in AAPS v4 <./Maintenance/V4Changes.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+End of life <./Maintenance/EndOfLife.md>
 
 ```
 
