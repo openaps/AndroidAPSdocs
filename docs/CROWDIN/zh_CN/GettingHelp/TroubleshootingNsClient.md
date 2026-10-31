@@ -12,7 +12,7 @@ Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3**
 
 * 重新启动
 
-第一步应尝试重启：先重启Nightscout，再重启手机以确认问题是否持续
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 如果Nightscout托管在Heroku上，可通过以下方式重启：登录Heroku，点击你的nightscout应用名称，点击"More"菜单，选择"Restart all dynos"。
 
