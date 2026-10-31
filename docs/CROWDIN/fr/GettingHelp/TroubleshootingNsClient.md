@@ -8,11 +8,11 @@ Si personne ne vous suit sur Nightscout, vous pouvez choisir de mettre en pause 
 
 * Comment détecter une connexion instable ?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. Si vous voyez beaucoup de reconnexions, alors il y a un problème.
+Ouvrez l'écran NSClient (**Configuration** > **Communication** > **NSClientV3** > **Ouvrir le plugin**) et observez l'**État** et le journal. Avec les websockets activés, l'état doit rester « connected » (connecté), avec presque aucun message de reconnexion dans le journal. Si vous voyez beaucoup de reconnexions, alors il y a un problème.
 
 * Redémarrer
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+Pour commencer, redémarrez Nightscout puis votre téléphone pour voir si le problème persiste.
 
 Si votre site Nightscout est hébergé sur Heroku, vous pouvez redémarrer Nightscout en vous connectant à Heroku, puis en cliquant sur le nom de votre application Nightscout, et enfin en cliquant sur le menu « More », puis « Restart all dynos ».
 
@@ -34,7 +34,7 @@ Une solution aux problèmes de connexion dans Azure est de définir dans les par
 
 * Pas de lecture de glycémie depuis Nightscout
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+Si **AAPS** se connecte correctement à Nightscout mais que la glycémie s'affiche comme N/A : dans les [paramètres NSClientV3](#Preferences-nsclient), ouvrez **Synchronisation** et activez **Recevoir les données MGC depuis NS**. Cette option est masquée quand le contrôle client est activé ([mode renforcé](#client-master-control-hardened-mode)) ; dans ce cas, vérifiez que **Glycémie NSClient** est sélectionné dans **Configuration** → **Source GLY**.
 
 * Si vous avez toujours une erreur...
 
