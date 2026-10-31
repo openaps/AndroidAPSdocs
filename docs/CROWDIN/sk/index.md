@@ -106,14 +106,14 @@ Nastavenie reportovacieho servera <./SettingUpAaps/SettingUpTheReportingServer.m
 - Tidepool <./SettingUpAaps/Tidepool.md>
 ```
 ```{toctree}
-:caption: 4) Konfigurácia AAPS
+:caption: 4) Configure AAPS
 
-Sprievodca nastavením AAPS <./SettingUpAaps/SetupWizard.md>
-Váš profil AAPS <./SettingUpAaps/YourAapsProfile.md>
-Vykonávanie zmien v konfigurácii vášho AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Konfigurácia (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
-- Nastavenia <./SettingUpAaps/Preferences.md>
-Plnenie cieľov <./SettingUpAaps/CompletingTheObjectives.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Configuration (Config Builder) <./SettingUpAaps/ConfigBuilder.md>
+- Settings <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -165,15 +165,15 @@ Stránka na výmenu vlastných ciferníkov <./ExchangeSiteCustomWatchfaces/index
 ```
 
 ```{toctree}
-:caption: 8) Údržba AAPS
+:caption: 8) Maintenance of AAPS
 
-Vytváranie a obnova záloh <./Maintenance/ExportImportSettings.md>
-Poznámky k vydaniu <./Maintenance/ReleaseNotes.md>
-Čo sa zmenilo v AAPS v4 <./Maintenance/V4Changes.md>
-Aktualizácia na novú verziu alebo vetvu <./Maintenance/UpdateToNewVersion.md>
-- Aktualizácia v prehliadači (fork) <./Maintenance/UpdateBrowserBuild.md>
-- Aktualizácia v Android Studiu <./Maintenance/UpdateComputerBuild.md>
-Koniec podpory <./Maintenance/EndOfLife.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+What changed in AAPS v4 <./Maintenance/V4Changes.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
+- Android Studio Update <./Maintenance/UpdateComputerBuild.md>
+End of life <./Maintenance/EndOfLife.md>
 
 ```
 
