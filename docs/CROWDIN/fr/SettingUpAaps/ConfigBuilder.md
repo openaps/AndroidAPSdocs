@@ -27,7 +27,7 @@
     
     Une petite **icône de téléphone** à côté d'une catégorie ou d'un paramètre indique que cet élément est **synchronisé depuis le maître** : sa valeur ou sa sélection est envoyée à cet appareil par le canal NSClientV3 (Nightscout).
     
-    Sur un **client** (**AAPSClient**), ces éléments sont **maintenus synchronisés avec le maître**. L'icône n'apparaît que sur un client. Elle n'est donc pas visible sur la capture d'écran ci-dessus, prise sur l'application principale **AAPS**. Sur un client, elle apparaît en général sur *Lissage*, *Calibration*, *Calcul de Sensibilité* et *APS*. La façon exacte dont le maître et les clients restent alignés, et les paramètres que vous pouvez modifier de chaque côté, sont décrits dans [Contrôle Maître ↔ Client](#client-master-config-prefs).
+    Sur un **client** (**AAPSClient**), ces éléments sont **maintenus synchronisés avec le maître**. L'icône n'apparaît que sur un client. Elle n'est donc pas visible sur la capture d'écran ci-dessus, prise sur l'application principale **AAPS**. Sur un client, elle apparaît en général sur *Lissage*, *Calibration*, *Calcul de Sensibilité* et *APS*. La façon exacte dont le maître et les clients restent alignés, et les paramètres que vous pouvez modifier de chaque côté, sont décrits dans [Contrôle maître ↔ client](#client-master-config-prefs).
     
     La même icône apparaît aussi **dans les paramètres**, à côté de chaque préférence synchronisée. Dans l'exemple ci-dessous, *Coupure d'absorption* porte l'icône ; les paramètres sans icône sont configurés sur chaque appareil :
     
@@ -71,38 +71,38 @@ Dans **AAPS** 4, l'insuline n'est plus un plugin à sélectionner dans **Configu
 L'éditeur d'insuline vous permet de :
 
 * donner au profil un **Nom de l'insuline** facile à reconnaître,
-* régler le **Pic** (délai jusqu'à l'activité maximale de l'insuline, en minutes) et la **DIA** (durée d'action de l'insuline, en heures), en tapant la valeur ou avec les boutons **–** / **+**,
+* régler le **Pic** (délai jusqu'à l'activité maximale de l'insuline, en minutes) et la **DAI** (durée d'action de l'insuline, en heures), en tapant la valeur ou avec les boutons **–** / **+**,
 * toucher un bouton prédéfini **Charger le pic depuis** (**Novorapid** (75 min), **Fiasp** (55 min) ou **Lyumjev** (45 min)) pour remplir en une seule étape le délai du pic standard de cette insuline.
 
 Les plages autorisées sont les mêmes quelle que soit l'insuline utilisée :
 
-* **DIA** : 5 à 9 heures (5 à 10 heures si le type de patient est **Femme enceinte**). Voir [Durée d'action de l'insuline (DIA) et pic](#Config-Builder-insulin-dia) pour choisir une valeur.
+* **DAI** : 5 à 9 heures (5 à 10 heures si le type de patient est **Femme enceinte**). Voir [Durée d'action de l'insuline (DAI) et pic](#Config-Builder-insulin-dia) pour choisir une valeur.
 * **Pic** : 35 à 120 minutes.
 
-Les courbes d'**IOB** (insuline active) et d'**Activité** affichées en bas de l'éditeur se mettent à jour quand vous modifiez les valeurs. Vous voyez donc tout de suite comment vos réglages changent l'action de l'insuline.
+Les courbes d'**IA** (insuline active) et d'**Activité** affichées en bas de l'éditeur se mettent à jour quand vous modifiez les valeurs. Vous voyez donc tout de suite comment vos réglages changent l'action de l'insuline.
 
 Plus d'informations pour comprendre le profil d'insuline tel qu'il est affiché dans **AAPS** [ici](#AapsScreens-insulin-profile).
 
 (Config-Builder-insulin-change-active)=
 
-### Changer l'insuline utilisée (DIA ou pic)
+### Changer l'insuline utilisée (DAI ou pic)
 
 L'insuline marquée **ACTIF** est celle qu'utilise votre profil en cours. Ses champs sont grisés : vous ne pouvez ni la modifier ni la supprimer. Ainsi, le nom d'insuline affiché dans votre profil en cours correspond toujours aux réglages réellement utilisés.
 
-Pour changer la DIA ou le pic que vous utilisez :
+Pour changer la DAI ou le pic que vous utilisez :
 
 1. Ouvrez **Gestion → Paramètres Insuline**. Si l'écran s'ouvre en lecture seule (un **✏️ crayon** dans la barre du haut), touchez le crayon et déverrouillez vos paramètres.
 2. Touchez **+** (*Ajouter une nouvelle insuline*). **AAPS** crée une copie de l'insuline affichée à l'écran.
-3. Réglez le nouveau **Pic** et/ou la nouvelle **DIA**, puis touchez l'icône d'enregistrement (en haut à droite).
+3. Réglez le nouveau **Pic** et/ou la nouvelle **DAI**, puis touchez l'icône d'enregistrement (en haut à droite).
 4. Touchez **▶** (*Activer l'insuline*) et confirmez. La nouvelle insuline devient **ACTIF**.
 
-```{admonition} Le nom contient le pic et la DIA :class: note **AAPS** ajoute automatiquement le pic, la DIA et la concentration au nom de l'insuline (par exemple *Fiasp 55m 8h U100*). Vous pouvez ainsi distinguer vos configurations d'un coup d'œil.
+```{admonition} Le nom contient le pic et la DAI :class: note **AAPS** ajoute automatiquement le pic, la DAI et la concentration au nom de l'insuline (par exemple *Fiasp 55m 8h U100*). Vous pouvez ainsi distinguer vos configurations d'un coup d'œil.
 
     <br />Vous pouvez supprimer l'ancienne insuline quand elle n'est plus active.
     
     ### Les préréglages « Charger le pic depuis »
     
-    Dans **AAPS** 4, il n'y a pas de liste de types d'insuline à choisir. Toutes les insulines utilisent la même courbe d'activité exponentielle ; seuls leur **Pic** et leur **DIA** sont différents. Les préréglages **Charger le pic depuis** de l'éditeur d'insuline remplissent en une seule touche le pic recommandé pour les insulines les plus courantes (le petit ⓘ à côté de **Charger le pic depuis** les liste avec leur valeur de pic). Vous pouvez ensuite encore ajuster le **Pic** et la **DIA**.
+    Dans **AAPS** 4, il n'y a pas de liste de types d'insuline à choisir. Toutes les insulines utilisent la même courbe d'activité exponentielle ; seuls leur **Pic** et leur **DAI** sont différents. Les préréglages **Charger le pic depuis** de l'éditeur d'insuline remplissent en une seule touche le pic recommandé pour les insulines les plus courantes (le petit ⓘ à côté de **Charger le pic depuis** les liste avec leur valeur de pic). Vous pouvez ensuite encore ajuster le **Pic** et la **DAI**.
     
     Ne changez le pic par rapport à sa valeur recommandée que si vous comprenez l'effet de ce changement. Le [graphique de la courbe d'insuline](#AapsScreens-insulin-profile) vous aide à comprendre les courbes.
     
@@ -134,31 +134,31 @@ Pour changer la DIA ou le pic que vous utilisez :
     * Un pic personnalisé est utile si vous utilisez une insuline qui n'est pas dans la liste, ou un mélange de plusieurs insulines.
     
     (Config-Builder-insulin-dia)=
-    ### Durée d'action de l'insuline (DIA) et pic
+    ### Durée d'action de l'insuline (DAI) et pic
     
     ```{warning}
-    En boucle, diminuer la DIA ou le pic augmente toujours l'insuline délivrée. La DIA ne fonctionne pas de la même façon dans AAPS que dans les systèmes AID commerciaux. Des changements faits sans attention dans ces réglages peuvent modifier les doses d'insuline beaucoup plus ou beaucoup moins que prévu.
+    En boucle, diminuer la DAI ou le pic augmente toujours l'insuline délivrée. La DAI ne fonctionne pas de la même façon dans AAPS que dans les systèmes AID commerciaux. Des changements faits sans attention dans ces réglages peuvent modifier les doses d'insuline beaucoup plus ou beaucoup moins que prévu.
     
 
-AAPS modélise le déroulement de l'action de l'insuline avec une formule mathématique, configurée avec la **DIA** et le réglage de **pic**, qui lui est étroitement lié. La DIA est la durée théorique jusqu'à ce que l'IOB atteigne zéro, et le pic est le moment où l'effet de l'insuline est le plus fort. On obtient ainsi une courbe d'IOB et une courbe d'activité, qui est simplement la **vitesse** de diminution de l'IOB.
+AAPS modélise le déroulement de l'action de l'insuline avec une formule mathématique, configurée avec la **DAI** et le réglage de **pic**, qui lui est étroitement lié. La DAI est la durée théorique jusqu'à ce que l'IA atteigne zéro, et le pic est le moment où l'effet de l'insuline est le plus fort. On obtient ainsi une courbe d'IA et une courbe d'activité, qui est simplement la **vitesse** de diminution de l'IA.
 
-Notez que quand AAPS est en boucle, il est normal d'avoir des périodes de [basal temporaire à zéro](#Open-APS-features-super-micro-bolus-smb). Cette insuline basale manquante est entièrement soustraite de l'IOB. C'est pourquoi, en pratique, l'IOB atteint zéro de nombreuses heures avant la DIA configurée. Vous pouvez voir séparément l'[IOB des bolus et l'IOB basale](#aaps-screens-iob-cob-basal-sens) depuis l'écran principal.
+Notez que quand AAPS est en boucle, il est normal d'avoir des périodes de [basal temporaire à zéro](#Open-APS-features-super-micro-bolus-smb). Cette insuline basale manquante est entièrement soustraite de l'IA. C'est pourquoi, en pratique, l'IA atteint zéro de nombreuses heures avant la DAI configurée. Vous pouvez voir séparément l'[IA des bolus et l'IA basale](#aaps-screens-iob-cob-basal-sens) depuis l'écran principal.
 
-Pour configurer la DIA et le pic, touchez **Gestion** sur l'écran principal, puis touchez **Paramètres Insuline**. AAPS affiche la configuration d'insuline active comme ceci :
+Pour configurer la DAI et le pic, touchez **Gestion** sur l'écran principal, puis touchez **Paramètres Insuline**. AAPS affiche la configuration d'insuline active comme ceci :
 
 ![Exemple de configuration d'insuline](../images/manage/insulin_profile.png)
 
-Dans cet exemple, le pic est réglé sur 55 minutes, la DIA est de 8 heures et la [concentration de l'insuline](#Insulin-Concentration) est la valeur standard de 100 UI/ml.
+Dans cet exemple, le pic est réglé sur 55 minutes, la DAI est de 8 heures et la [concentration de l'insuline](#Insulin-Concentration) est la valeur standard de 100 UI/ml.
 
-À cause de l'effet des basals temporaires à zéro expliqué plus haut et de la formule utilisée par AAPS pour la diminution de l'IOB, la plupart des utilisateurs règlent une DIA nettement plus longue que dans les systèmes commerciaux. En général, beaucoup de personnes trouvent qu'une **DIA** de 9 h leur convient bien. Quand vous aurez plus d'expérience avec AAPS et un profil bien réglé, vous pourrez essayer de trouver une DIA et un pic personnalisés avec les informations ci-dessous.
+À cause de l'effet des basals temporaires à zéro expliqué plus haut et de la formule utilisée par AAPS pour la diminution de l'IA, la plupart des utilisateurs règlent une DAI nettement plus longue que dans les systèmes commerciaux. En général, beaucoup de personnes trouvent qu'une **DAI** de 9 h leur convient bien. Quand vous aurez plus d'expérience avec AAPS et un profil bien réglé, vous pourrez essayer de trouver une DAI et un pic personnalisés avec les informations ci-dessous.
 
-````{admonition} Détails sur l'effet de la configuration de la DIA et du pic :class: dropdown
+````{admonition} Détails sur l'effet de la configuration de la DAI et du pic :class: dropdown
 
-Comme le débit basal a une influence indirecte sur la diminution de l'IOB dans AAPS, des débits basals trop élevés peuvent masquer une DIA trop longue, et inversement. Il est donc logique de bien régler d'abord les débits basals avant d'ajuster la DIA et le pic. De plus, les réglages de DIA et de pic interagissent : l'effet de la DIA dépend du pic, et inversement.
+Comme le débit basal a une influence indirecte sur la diminution de l'IA dans AAPS, des débits basals trop élevés peuvent masquer une DAI trop longue, et inversement. Il est donc logique de bien régler d'abord les débits basals avant d'ajuster la DAI et le pic. De plus, les réglages de DAI et de pic interagissent : l'effet de la DAI dépend du pic, et inversement.
 
-Ces graphiques montrent l'effet exact de la DIA et du pic sur les courbes d'IOB, sur toute la plage des valeurs autorisées.
+Ces graphiques montrent l'effet exact de la DAI et du pic sur les courbes d'IA, sur toute la plage des valeurs autorisées.
 
-Ajustement de la DIA :
+Ajustement de la DAI :
 
 ```{image} ../images/iob_remaining_static_peak.png :width: 400px
 
@@ -168,20 +168,20 @@ Ajustement de la DIA :
     :width: 400px
     
 
-Enfin, une comparaison où la DIA et le pic sont ajustés en même temps. L'idée est que les deux valeurs sont ajustées dans les mêmes proportions, de sorte que `49/35 ~ 7/5`. Ou de la même façon, `120/93 ~ 9/7`. Les intervalles restent les mêmes quelle que soit la DIA ou le pic de départ, tant que le changement relatif est le même pour les deux.
+Enfin, une comparaison où la DAI et le pic sont ajustés en même temps. L'idée est que les deux valeurs sont ajustées dans les mêmes proportions, de sorte que `49/35 ~ 7/5`. Ou de la même façon, `120/93 ~ 9/7`. Les intervalles restent les mêmes quelle que soit la DAI ou le pic de départ, tant que le changement relatif est le même pour les deux.
 
 ```{image} ../images/iob_remaining_uniform.png :width: 400px
 
-    <br />Notez que quand la DIA et le pic sont ajustés de cette façon, chaque point de la courbe se décale de la même proportion.
+    <br />Notez que quand la DAI et le pic sont ajustés de cette façon, chaque point de la courbe se décale de la même proportion.
     
     ````
     
-    #### Pour en savoir plus sur la configuration de la DIA et du pic
+    #### Pour en savoir plus sur la configuration de la DAI et du pic
     
     * [Détails techniques et historique du prédécesseur d'AAPS, OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) (en anglais).
     * [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) (pourquoi nous nous trompons souvent sur la durée d'action de l'insuline, en anglais) sur Diabettech.
     * [Exponential Insulin Curves + Fiasp](https://web.archive.org/web/20220630154425/http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/) (courbes d'insuline exponentielles et Fiasp, en anglais) sur See My CGM (archive).
-    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) (modèle Humalog révisé en boucle fermée, en anglais) et d'autres articles sur Bionic Wookie, qui recommandent une DIA de 9 h pour Lyumjev, Fiasp, NovoRapid et Humalog.
+    * [Revised Humalog model in a closed loop](https://bionicwookiee.com/2022/04/13/revised-humalog-model-in-a-closed-loop/) (modèle Humalog révisé en boucle fermée, en anglais) et d'autres articles sur Bionic Wookie, qui recommandent une DAI de 9 h pour Lyumjev, Fiasp, NovoRapid et Humalog.
     
     (Config-Builder-bg-source)=
     ## Source GLY
@@ -299,7 +299,7 @@ Vous pouvez voir votre sensibilité sur l'écran principal dans un [graphique su
 
 ### Paramètres d’absorption
 
-Si vous utilisez Oref1 avec **SMB**, vous devez régler **min_5m_carbimpact** sur 8. Cette valeur est utilisée seulement pendant les interruptions des données **CGM**, ou quand l'activité physique « consomme » toute la hausse de glycémie qui, sinon, permettrait à **AAPS** de faire baisser les GA (COB). Quand l'[absorption des glucides](../DailyLifeWithAaps/CobCalculation.md) ne peut pas être calculée de façon dynamique à partir des réactions de votre glycémie, une absorption par défaut est appliquée à vos glucides. En résumé, c'est une sécurité.
+Si vous utilisez Oref1 avec **SMB**, vous devez régler **min_5m_carbimpact** sur 8. Cette valeur est utilisée seulement pendant les interruptions des données du **MGC**, ou quand l'activité physique « consomme » toute la hausse de glycémie qui, sinon, permettrait à **AAPS** de faire baisser les GA. Quand l'[absorption des glucides](../DailyLifeWithAaps/CobCalculation.md) ne peut pas être calculée de façon dynamique à partir des réactions de votre glycémie, une absorption par défaut est appliquée à vos glucides. En résumé, c'est une sécurité.
 
 (Config-Builder-aps)=
 
@@ -349,19 +349,19 @@ Faites défiler vers le bas pour voir le reste de la liste :
 
 ### NSClientV3
 
-Peut être utilisé comme [serveur de reporting](../SettingUpAaps/SettingUpTheReportingServer.md) et/ou pour la [surveillance à distance](../RemoteFeatures/RemoteMonitoring.md) et le [contrôle à distance](../RemoteFeatures/RemoteControl.md).
+Peut être utilisé comme [serveur de rapports](../SettingUpAaps/SettingUpTheReportingServer.md) et/ou pour la [surveillance à distance](../RemoteFeatures/RemoteMonitoring.md) et le [contrôle à distance](../RemoteFeatures/RemoteControl.md).
 
-Voir [Synchronisation avec le serveur de reporting](#SetupWizard-synchronization-with-the-reporting-server-and-more) pour configurer la synchronisation NSClientV3.
+Voir [Synchronisation avec le serveur de rapports](#SetupWizard-synchronization-with-the-reporting-server-and-more) pour configurer la synchronisation NSClientV3.
 
 ### Tidepool
 
-Peut être utilisé comme [serveur de reporting](../SettingUpAaps/SettingUpTheReportingServer.md).
+Peut être utilisé comme [serveur de rapports](../SettingUpAaps/SettingUpTheReportingServer.md).
 
 Voir [Tidepool](../SettingUpAaps/Tidepool.md).
 
 ### xDrip
 
-Sert à **envoyer** des données, comme les valeurs de glycémie et les traitements, à xDrip+ sur le même téléphone. Ses paramètres contiennent aussi **Envoyer l'état à xDrip+** : une ligne d'état avec l'IOB et les GA (COB), que xDrip+ et certaines applications compagnon pour montres affichent.
+Sert à **envoyer** des données, comme les valeurs de glycémie et les traitements, à xDrip+ sur le même téléphone. Ses paramètres contiennent aussi **Envoyer l'état à xDrip+** : une ligne d'état avec l'IA et les GA, que xDrip+ et certaines applications compagnon pour montres affichent.
 
 ### Open Humans
 
@@ -377,9 +377,9 @@ Surveiller et contrôler **AAPS** depuis une montre Wear OS. La configuration de
 
 ### Applications compagnon externes
 
-Diffuse les données d'état d'**AAPS** sur le téléphone, pour que d'autres applications installées dessus puissent les afficher, par exemple des applications compagnon pour montres ou widgets. La diffusion contient la glycémie et sa tendance, l'IOB, les GA (COB), le débit basal et le débit basal temporaire, le nom du profil, l'état de la boucle, la batterie du téléphone et de la pompe, le niveau du réservoir et la progression du bolus. Activez-la seulement si une application compagnon que vous utilisez demande ces données.
+Diffuse les données d'état d'**AAPS** sur le téléphone, pour que d'autres applications installées dessus puissent les afficher, par exemple des applications compagnon pour montres ou widgets. La diffusion contient la glycémie et sa tendance, l'IA, les GA, le débit basal et le débit basal temporaire, le nom du profil, l'état de la boucle, la batterie du téléphone et de la pompe, le niveau du réservoir et la progression du bolus. Activez-la seulement si une application compagnon que vous utilisez demande ces données.
 
-Les applications connues pour lire cette diffusion sont [WatchDrip+](https://bigdigital.home.blog/) (montres Xiaomi et Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (complications et widgets Wear OS, et Android Auto via GlucoDataAuto) et l'application G-Watch. Leur configuration est décrite sur la page [Montres connectées et AAPS](#watches-external-companion-apps). Certaines utilisent aussi **Envoyer l'état à xDrip+** du plugin **xDrip** ci-dessus, pour une ligne d'état avec l'IOB et les GA (COB).
+Les applications connues pour lire cette diffusion sont [WatchDrip+](https://bigdigital.home.blog/) (montres Xiaomi et Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (complications et widgets Wear OS, et Android Auto via GlucoDataAuto) et l'application G-Watch. Leur configuration est décrite sur la page [Montres connectées et AAPS](#watches-external-companion-apps). Certaines utilisent aussi **Envoyer l'état à xDrip+** du plugin **xDrip** ci-dessus, pour une ligne d'état avec l'IA et les GA.
 
 Dans les versions précédentes, ce plugin s'appelait **Samsung Tizen**, d'après l'[application G-Watch pour les montres Samsung Tizen](#Watchfaces-tizen) pour laquelle il a d'abord été créé.
 
