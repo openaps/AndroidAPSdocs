@@ -21,7 +21,7 @@ Pokud narazíte na problémy, podívejte se na samostatnou stránku [Řešení p
 
 Exportujte nastavení ze stávající verze **AAPS** ve svém telefonu. Možná ho nebudete potřebovat, ale opatrnosti není nikdy dost.
 
-Pokud si nepamatujete, jak to udělat, podívejte se na stránku [Export a import nastavení](ExportImportSettings.md).
+Pokud si nepamatujete, jak to udělat, podívejte se na stránku [Vytváření a obnova záloh](ExportImportSettings.md).
 
 ### Zkontrolujte verzi Android Studia
 
@@ -89,7 +89,7 @@ Pokračujte [zde](#Update-to-new-version-check-aaps-version-on-phone).
 
 (update-computer-build-troubleshooting)=
 
-## Troubleshooting
+## Řešení problémů
 
 Pokud se něco pokazí, nepanikařte.
 
