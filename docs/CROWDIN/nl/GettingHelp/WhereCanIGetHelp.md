@@ -20,7 +20,7 @@ Let op: Facebook heeft onlangs externe links verwijderd die in de **AAPS** Faceb
 
 ## Andere Engelstalige bronnen
 
-* [Looped Facebookgroep](https://www.facebook.com/groups/TheLoopedGroup): voor alle DIY closed loop systemen (OpenAPS, Loop en AndroidAPS)
+* [Looped Facebookgroep](https://www.facebook.com/groups/TheLoopedGroup): voor alle DIY gesloten loop-systemen (OpenAPS, Loop en AndroidAPS)
 * [xDrip - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in de cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in het algemeen
 * [AndroidAPS op Discord](https://discord.gg/4fQUWHZ4Mw)
