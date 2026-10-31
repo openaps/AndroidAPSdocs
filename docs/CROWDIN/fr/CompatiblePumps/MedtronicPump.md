@@ -17,7 +17,7 @@ Vous pouvez trouver comment vérifier le firmware de la pompe dans la [documenta
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## Fonctionnalités de la pompe avec AAPS
 
 * Nécessite un appareil compatible RileyLink pour communiquer avec **AAPS**.
 * Gestion automatique de l'heure d'été et des fuseaux horaires.
@@ -231,7 +231,7 @@ Certaines pompes Medtronic signalent une erreur « pump unreachable » (pompe ho
 1. Allez dans **Configuration** > **Pompe** et touchez **Paramètres** sur la carte **Medtronic**.
 2. Réglez **Encodage Medtronic** sur **Encodage matériel 4b6b**.
 
-## Where to get help
+## Où obtenir de l'aide
 
 Le développement du pilote Medtronic est fait par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
 
