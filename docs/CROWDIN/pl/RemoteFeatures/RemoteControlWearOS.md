@@ -225,7 +225,7 @@ Jeśli **AAPS** musiał ograniczyć dawkę, np. dlatego, że obliczony bolus jes
       * _Menu_: menu główne **AAPS**
       * _Kalkulator_: kalkulator bolusa
       * _Terapia_: okno leczenia, insulina i węglowodany
-      * _wirtualne węgle_: okno eCarbs
+      * _eCarbs_: okno eCarbs
       * _Status_: menu statusu
       * _Tryb pracy_: okno wyboru trybu pracy. Wymaga włączenia **Sterowanie z zegarka** w ustawieniach Wear w telefonie, w przeciwnym razie otworzy się menu główne.
       * _Brak_: dotknięcie nic nie robi
@@ -400,7 +400,7 @@ Jeśli **AAPS** musiał ograniczyć dawkę, np. dlatego, że obliczony bolus jes
     
     Zegarki z Wear OS mają bardzo ograniczoną ilość energii. Rozmiar koperty zegarka ogranicza pojemność baterii w środku. Nawet przy najnowszych ulepszeniach sprzętu i oprogramowania zegarki z Wear OS nadal trzeba ładować codziennie.
     
-    Jeśli bateria wytrzymuje krócej niż jeden dzień (od rana do wieczora), oto kilka wskazówek, jak rozwiązać problem.
+    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
     
     Najwięcej energii zużywają:
     
