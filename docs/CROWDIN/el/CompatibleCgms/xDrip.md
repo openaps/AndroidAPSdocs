@@ -14,7 +14,7 @@
 
 ![Βασικές ρυθμίσεις xDrip 1](../images/xDrip_Basic1.png)
 
-#### Απενεργοποιήστε το αυτόματο καλιμπράρισμα και τις θεραπείες
+#### Απενεργοποιήστε την αυτόματη βαθμονόμηση και τις θεραπείες
 
 Βεβαιωθείτε ότι το `Automatic Calibration` (7) είναι απενεργοποιημένο. Αν το κουτάκι για το `Automatic Calibration` είναι επιλεγμένο, ενεργοποιήστε μία φορά το `Download treatments` (6), μετά αφαιρέστε την επιλογή από το `Automatic Calibration` και απενεργοποιήστε ξανά το `Download treatments`.
 
@@ -46,7 +46,7 @@
 
 Αν έχετε ενεργοποιήσει επίσης το `Accept treatments` στο xDrip και το `Ενεργοποίηση εκπομπών στο xDrip+.` στο πρόσθετο xDrip του AAPS, τότε το xDrip θα λαμβάνει από το AAPS πληροφορίες για ινσουλίνη, υδατάνθρακες και βασικό ρυθμό.
 
-Αν ενεργοποιήσετε το `Accept Calibrations`, το xDrip θα χρησιμοποιεί τα καλιμπραρίσματα από το AAPS. Προσέξτε όταν χρησιμοποιείτε αυτή τη λειτουργία με αισθητήρες Dexcom: διαβάστε πρώτα [αυτό](https://navid200.github.io/xDrip/docs/Calibrate-G6.html).
+Αν ενεργοποιήσετε το `Accept Calibrations`, το xDrip θα χρησιμοποιεί τις βαθμονομήσεις από το AAPS. Προσέξτε όταν χρησιμοποιείτε αυτή τη λειτουργία με αισθητήρες Dexcom: διαβάστε πρώτα [αυτό](https://navid200.github.io/xDrip/docs/Calibrate-G6.html).
 
 Θυμηθείτε να απενεργοποιήσετε το Import Sounds, ώστε το xDrip να μη βγάζει ήχο κάθε φορά που το AAPS στέλνει αλλαγή βασικού ρυθμού/προφίλ.
 
@@ -61,14 +61,14 @@
     
     ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-## Χρήση του AAPS για καλιμπράρισμα στο xDrip
+## Χρήση του AAPS για βαθμονόμηση στο xDrip
 
-- Αν θέλετε να μπορείτε να καλιμπράρετε από το AAPS, στο xDrip πηγαίνετε Settings → Interapp Compatibility → Accept Calibrations και επιλέξτε ON. 
+- Αν θέλετε να μπορείτε να βαθμονομήσετε από το AAPS, στο xDrip πηγαίνετε Settings → Interapp Compatibility → Accept Calibrations και επιλέξτε ON. 
 - Μπορεί επίσης να θέλετε να ελέγξετε τις επιλογές στο Settings → Less Common Settings → Advanced Calibration Settings.
 
-## Dexcom sensors
+## Αισθητήρες Dexcom
 
-Όλα όσα αφορούν τον ίδιο τον αισθητήρα και τον πομπό της Dexcom (έναρξη, διακοπή, αντικατάσταση, καλιμπράρισμα, αντιμετώπιση προβλημάτων) περιγράφονται και ενημερώνονται στην [τεκμηρίωση Dexcom του xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Ακολουθήστε αυτές τις οδηγίες για τον αισθητήρα. Οι ρυθμίσεις που συνδέουν το xDrip με το **AAPS** (που περιγράφονται παραπάνω σε αυτή τη σελίδα) είναι το μόνο μέρος που αφορά ειδικά το AAPS.
+Όλα όσα αφορούν τον ίδιο τον αισθητήρα και τον πομπό της Dexcom (έναρξη, διακοπή, αντικατάσταση, βαθμονόμηση, αντιμετώπιση προβλημάτων) περιγράφονται και ενημερώνονται στην [τεκμηρίωση Dexcom του xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Ακολουθήστε αυτές τις οδηγίες για τον αισθητήρα. Οι ρυθμίσεις που συνδέουν το xDrip με το **AAPS** (που περιγράφονται παραπάνω σε αυτή τη σελίδα) είναι το μόνο μέρος που αφορά ειδικά το AAPS.
 
 ### Dexcom G6 και ONE
 
@@ -81,7 +81,7 @@
 
 - Το xDrip χρησιμοποιεί πάντα τον [εγγενή αλγόριθμο](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) του πομπού με τους τρέχοντες πομπούς. Δεν υπάρχει λόγος να τον απενεργοποιήσετε.
 - Οι [προληπτικές επανεκκινήσεις](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) λειτουργούν μόνο σε παλιούς πομπούς (firmware 1.6.5.25 ή παλαιότερο), όπου χρειάζονται για να μη σταματήσει ο αισθητήρας μετά από 10 ημέρες. Οι νεότεροι πομποί (Firefly) τις αγνοούν.
-- Για επανεκκίνηση αισθητήρα σε πομπό Firefly πρέπει να [αφαιρέσετε τον πομπό](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). Μετά την επανεκκίνηση οι τιμές μπορεί να έχουν μεγάλο σφάλμα, κάτι που είναι επικίνδυνο όταν το κύκλωμα είναι ενεργό: διαβάστε ολόκληρο το [Επανεκκίνηση αισθητήρα](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) και [καλιμπράρετε προσεκτικά](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
+- Για επανεκκίνηση αισθητήρα σε πομπό Firefly πρέπει να [αφαιρέσετε τον πομπό](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). Μετά την επανεκκίνηση οι τιμές μπορεί να έχουν μεγάλο σφάλμα, κάτι που είναι επικίνδυνο όταν το κύκλωμα είναι ενεργό: διαβάστε ολόκληρο το [Επανεκκίνηση αισθητήρα](https://navid200.github.io/xDrip/docs/Restart-G6-sensor.html) και [βαθμονομήστε προσεκτικά](https://navid200.github.io/xDrip/docs/Calibrate-after-G6Restart.html).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
