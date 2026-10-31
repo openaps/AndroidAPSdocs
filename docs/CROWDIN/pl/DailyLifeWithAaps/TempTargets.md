@@ -42,7 +42,7 @@ Możesz też rozważyć:
 
 - *wybranie* tego **TT** 1–2 godziny przed planowanymi ćwiczeniami, aby mieć mniejsze IOB (właściwy czas dla tego TT jest u każdego inny); i
 - *wybranie* tymczasowego profilu (zmniejszenie) na czas planowanej aktywności, aby mieć mniejsze **IOB**;
-- *zaplanowanie*, aby **TT** został *wyłączony* krótko przed ćwiczeniami, gdy **IOB** jest już mniejsze, ponieważ u niektórych osób **BG** szybko rośnie po ćwiczeniach.
+- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
 
 ### TT - Wkrótce posiłek
 
@@ -209,7 +209,7 @@ Aby ułatwić korzystanie z **celu tymczasowego Ćwiczenia**, możesz ustawić d
 
 Nowi użytkownicy **AAPS** mogą potrzebować prób i dopasowania domyślnych ustawień **celu tymczasowego Ćwiczenia**, aby ta funkcja działała u nich jak najlepiej. Każdy człowiek inaczej osiąga stabilną kontrolę BG podczas ćwiczeń. Zobacz też [sekcję o sporcie w FAQ](#FAQ-sports).
 
-Niektórzy wolą też włączyć **Zmianę profilu** (zmniejszenie profilu < 100%, aby **AAPS** podawał mniej insuliny) przed i w trakcie **celu tymczasowego Ćwiczenia**. Możesz uruchomić oba w jednym kroku: dotknij nazwy profilu na ekranie głównym, dotknij okrągłego przycisku **▶**, ustaw **Procent** poniżej 100% i **Czas trwania**, a potem włącz **Cel tymczasowy / Aktywność**. Zobacz [Zmiana procentu profilu](#ProfileSwitch-change-percentage).
+Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Możesz uruchomić oba w jednym kroku: dotknij nazwy profilu na ekranie głównym, dotknij okrągłego przycisku **▶**, ustaw **Procent** poniżej 100% i **Czas trwania**, a potem włącz **Cel tymczasowy / Aktywność**. Zobacz [Zmiana procentu profilu](#ProfileSwitch-change-percentage).
 
 Dla zaawansowanych, zadanie 9: możesz włączyć *'Wysoki cel tymczasowy zwiększa wrażliwość'* dla **celów tymczasowych** od 100 mg/dl (5,6 mmol/l) wzwyż w OpenAPS **SMB**. Cel 99 mg/dl (5,5 mmol/l) jest celem normalnym, ani wysokim, ani niskim. Wtedy **AAPS** jest bardziej wrażliwy.
 
@@ -221,7 +221,7 @@ Dodatkowo, jeśli *'Włącz SMB z wysokim tymczasowym poziomem docelowym'* jest 
 
 **Cel tymczasowy Wkrótce posiłek** może pomóc łagodnie obniżyć **BG** i zapewnić odpowiednią ilość **IOB** przed jedzeniem.
 
-To może być ważne narzędzie dla osób, które nie podają bolusa przed posiłkiem. Skuteczność **celu tymczasowego Wkrótce posiłek** zależy jednak od wielu czynników, takich jak: Twoje ustawienia, czy stosujesz dietę niskowęglowodanową i czy używasz szybko działającej insuliny (np. Fiasp lub Lyumjev), aby nie musieć podawać bolusa przed posiłkiem. Zwykle, dopóki nie masz doświadczenia z **AAPS**, musisz liczyć się z podawaniem bolusa przed posiłkiem także przy **celu tymczasowym Wkrótce posiłek**. Dotyczy to szczególnie diety z dużą ilością węglowodanów.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Zwykle, dopóki nie masz doświadczenia z **AAPS**, musisz liczyć się z podawaniem bolusa przed posiłkiem także przy **celu tymczasowym Wkrótce posiłek**. Dotyczy to szczególnie diety z dużą ilością węglowodanów.
 
 Więcej o „trybie Eating soon” możesz przeczytać w artykule ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) lub [tutaj](https://diyps.org/tag/eating-soon-mode/).
 
