@@ -39,7 +39,7 @@ Une fois les autorisations accordées, le panneau se ferme et l'écran de bienve
 
 ![Autorisations](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Optimisation de la batterie
 
 La consommation de la batterie est un point important sur les smartphones, car les performances des batteries restent assez limitées. C'est pourquoi le système Android de votre smartphone limite le droit des applications à fonctionner et à utiliser le processeur, et donc la batterie.
 
@@ -444,7 +444,7 @@ Maintenant, vous choisissez votre pompe à insuline. Lisez la documentation de v
 
 Faites défiler la liste et choisissez votre pompe. Dans cet exemple, nous utilisons la « **Pompe virtuelle** ». Elle est utile tant que vous apprenez et que vous n'avez pas encore connecté de vraie pompe :
 
-![Pump](../images/setup-wizard/Wizard-Pump.png)
+![Pompe](../images/setup-wizard/Wizard-Pump.png)
 
 De nombreuses pompes sont prises en charge : faites défiler vers le bas pour trouver la vôtre :
 
@@ -460,7 +460,7 @@ Si vous avez déjà configuré votre profil et savez comment connecter votre pom
 
 Appuyez sur « **SUIVANT** » pour passer à l'écran suivant.
 
-## APS algorithm
+## Algorithme APS
 
 Choisissez l'algorithme SMB OpenAPS comme algorithme APS. Malgré son nom, la fonction SMB de l'algorithme est désactivée tant que vous ne connaissez pas bien AAPS et que vous n'avez pas fait les premiers objectifs. De toute façon, OpenAPS SMB est plus récent et en général meilleur qu'OpenAPS AMA.
 
