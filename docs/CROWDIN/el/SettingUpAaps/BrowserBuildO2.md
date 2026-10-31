@@ -1,43 +1,43 @@
 (aaps-ci-option2)=
 
-# Option 2 – Upload your existing keystore
+# Επιλογή 2 – Ανέβασμα του υπάρχοντος keystore σας
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation) and downloaded the preparation file.
+Αυτό είναι μέρος του [Βήματος 2 – Δημιουργία του keystore υπογραφής σας](BrowserBuildKeystore.md) της [Δημιουργίας μέσω browser](BrowserBuild.md). Βεβαιωθείτε ότι έχετε διαβάσει την [απόφαση Επιλογή 1 ή Επιλογή 2](#aaps-ci-preparation) και ότι έχετε κατεβάσει το αρχείο προετοιμασίας.
 ```
 
-Option 2 reuses the JKS you already created on a previous build of AAPS from a computer in Android Studio. It is suitable for users who already have a JKS and know the JKS password and alias.
+Η Επιλογή 2 χρησιμοποιεί ξανά το JKS που έχετε ήδη δημιουργήσει σε προηγούμενο build του AAPS από υπολογιστή με το Android Studio. Είναι κατάλληλη για χρήστες που έχουν ήδη ένα JKS και ξέρουν τον κωδικό και το alias του JKS.
 
-For `KEYSTORE_PASSWORD`, `KEY_ALIAS`, and `KEY_PASSWORD`, enter your actual password and alias in GitHub – those from Android Studio, see below where you used them.
+Για τα `KEYSTORE_PASSWORD`, `KEY_ALIAS` και `KEY_PASSWORD`, εισαγάγετε στο GitHub τον πραγματικό σας κωδικό και alias – αυτά από το Android Studio· δείτε παρακάτω πού τα χρησιμοποιήσατε.
 
 ```{warning}
-**Passwords with special characters.** Enter your passwords exactly as they are. Do not add a backslash or any other escape character: the build workflow keeps every character intact, and an added backslash becomes part of the password.
+**Κωδικοί με ειδικούς χαρακτήρες.** Εισαγάγετε τους κωδικούς σας ακριβώς όπως είναι. Μην προσθέσετε ανάποδη κάθετο (backslash) ή άλλο χαρακτήρα διαφυγής: το workflow του build κρατά κάθε χαρακτήρα όπως είναι, και μια backslash που προσθέσατε γίνεται μέρος του κωδικού.
 
-If the build still fails at the signing step and your password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is outdated. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev and re-run the build. See [Browser build troubleshooting](#aaps-ci-password-special-characters).
+Αν το build αποτυγχάνει ακόμα στο βήμα της υπογραφής και ο κωδικός σας περιέχει `$`, backtick, `"` ή `\`, τότε το αρχείο του workflow στο fork σας είναι παλιό. [Συγχρονίστε το fork σας](#Update-to-new-version-update-your-repo) με το πιο πρόσφατο dev και τρέξτε ξανά το build. Δείτε [Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων](#aaps-ci-password-special-characters).
 ```
 
 ```{admonition} KEY + PASSWORDS
 :class: dropdown
 
-![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
+![Απομνημόνευση κωδικών](../images/Building-the-App/044_RememberPwd.png)
 ```
 
-## Choose your device
+## Επιλέξτε τη συσκευή σας
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Κάνετε build από ένα **τηλέφωνο Android**; Χρησιμοποιήστε αντί για αυτό το [AAPS Builder](BrowserBuildAapsBuilder.md): δεν χρειάζεται αρχείο προετοιμασίας.
 ```
 
-Follow the page that matches the device you are building from:
+Ακολουθήστε τη σελίδα για τη συσκευή από την οποία κάνετε build:
 
-- **[Computer](BrowserBuildO2Computer.md)** – Windows, Mac or Linux.
+- **[Υπολογιστής](BrowserBuildO2Computer.md)** – Windows, Mac ή Linux.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Μπορείτε να αλλάξετε συσκευή οποιαδήποτε στιγμή – απλώς ανοίξτε την αντίστοιχη σελίδα.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO2Computer.md>
+Υπολογιστής <BrowserBuildO2Computer.md>
 ```
