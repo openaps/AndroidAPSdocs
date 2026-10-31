@@ -1,28 +1,28 @@
 (github-cherry-pick)=
 
-# Browser build: cherry-pick a commit
+# 瀏覽器建置：挑選提交
 
 ```{note}
-This is an optional, advanced operation. It only works if you build with a **fork** ([Browser build steps 1–4](../SettingUpAaps/BrowserBuild.md)). **AAPS Builder** repositories do not include this workflow.
+這是選擇性進階操作。只有使用 **fork** 進行建置時才能使用（[瀏覽器建置步驟 1–4](../SettingUpAaps/BrowserBuild.md)）。 **AAPS Builder** 的儲存庫不包含這個工作流程。
 ```
 
-Use this only when a developer asks you to test a specific change (they give you one or more commit hashes) before it is in a released version.
+只有在開發者請您測試某項特定變更時才使用此功能（開發者會提供一個或多個提交雜湊值），也就是在該變更納入正式發布版本之前進行測試。
 
 ## 開始之前
 
-- [Sync your fork](#Update-to-new-version-update-your-repo): this workflow builds the current state of your branch, not a version you pick from a list.
-- Google Drive must be authorized ([Step 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)): the built app is saved there, like a normal build.
+- [同步您的 fork](#Update-to-new-version-update-your-repo)：此工作流程會建置您分支目前的狀態，而不是從清單中選擇的版本。
+- 必須先授權 Google Drive（[步驟 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)）：建置完成的 App 會儲存在 Google Drive 中，與一般建置相同。
 
-## Run the workflow
+## 執行工作流程
 
-1. In your GitHub fork of AndroidAPS, open **Actions**.
-2. Expand **All workflows** and select **Cherry Pick CI (Pre-release Feature Backport)**.
-3. Tap **Run workflow** and fill in:
+1. 在 AndroidAPS 的 GitHub fork 中，開啟 **Actions**。
+2. 展開 **All workflows**，然後選擇 **Cherry Pick CI (Pre-release Feature Backport)**。
+3. 點選 **Run workflow**，並填寫以下欄位：
 
    ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
 
-   - **Use workflow from**: the branch to add the commits to, normally `master`.
-   - **Upstream repository**: where the commits come from. Keep `nightscout/AndroidAPS` unless the developer told you otherwise.
-   - **Commit hash(es) to cherry-pick**: the hash(es) you were given, separated by spaces.
-   - **Select Build Variant**: see [variants](#browserbuild-variant) (normally `fullRelease`).
-4. 點選 **Run workflow**。 When it completes, the app is in your Google Drive, as after a [normal build](../SettingUpAaps/BrowserBuildAPK.md).
+   - **Use workflow from**：要加入提交的分支，通常是 `master`。
+   - **Upstream repository**：提交來源的儲存庫。除非開發者另有指示，請保留 `nightscout/AndroidAPS`。
+   - **Commit hash(es) to cherry-pick**：填入開發者提供的提交雜湊值，多個值請以空格分隔。
+   - **選取建置變體**：請參閱[變體](#browserbuild-variant)（通常為 `fullRelease`）。
+4. 點選 **Run workflow**。完成後，應用程式就會出現在你的 Google Drive 中，就像[一般建置](../SettingUpAaps/BrowserBuildAPK.md)完成後一樣。
