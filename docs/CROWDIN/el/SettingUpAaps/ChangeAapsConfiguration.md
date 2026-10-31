@@ -1,43 +1,43 @@
-# Making changes to your AAPS' configuration
+# Αλλαγές στη διαμόρφωση του AAPS
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Αφού ολοκληρώσετε τον **[Οδηγό εγκατάστασης](../SettingUpAaps/SetupWizard.md)**, δεν χρειάζεται να τρέξετε ξανά όλο τον Οδηγό αν θέλετε να αλλάξετε μόνο μερικά μέρη της διαμόρφωσης του **AAPS**.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+Υπάρχουν τρεις δρόμοι για να αλλάξετε τη διαμόρφωση του **AAPS**. Ποιον δρόμο θα διαλέξετε είναι απλώς θέμα ευκολίας ή προσωπικής προτίμησης, γιατί όλοι οι δρόμοι οδηγούν στις ίδιες ρυθμίσεις.
 
 These are as follows:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. Η οθόνη **Διαμόρφωση**,
+2. Η οθόνη **Ρυθμίσεις** ή
+3. Οι **Ρυθμίσεις** ενός πρόσθετου, που ανοίγουν από την κατηγορία του στη **Διαμόρφωση**.
 
 Here we explain which option is most convenient for each situation:
 
-## Configuration
+## Διαμόρφωση
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+Ανοίξτε το **μενού** (☰) πάνω αριστερά στην κύρια οθόνη και επιλέξτε **Διαμόρφωση**:
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![Άνοιγμα της Διαμόρφωσης από το μενού πάνω αριστερά](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+Η **Διαμόρφωση** χρησιμοποιείται για να **επιλέξετε ποια πρόσθετα είναι ενεργά** — το CGM, την αντλία, τον αλγόριθμο APS, την ανίχνευση ευαισθησίας, τον συγχρονισμό και άλλα, ομαδοποιημένα σε κατηγορίες. Είναι η ίδια οθόνη που ρύθμισε για εσάς ο Οδηγός εγκατάστασης.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+Η τεκμηρίωση της οθόνης Διαμόρφωση υπάρχει [εδώ](../SettingUpAaps/ConfigBuilder.md).
 
 ## Ρυθμίσεις
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+Πατήστε το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά στην κύρια οθόνη. Ανοίγουν οι ρυθμίσεις **όλων των ενεργών πρόσθετων σε ένα μέρος**, ομαδοποιημένες σε ενότητες που ανοίγουν και κλείνουν:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![Η οθόνη Ρυθμίσεις με τις ενότητες που ανοίγουν και κλείνουν](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Αυτός είναι καλός δρόμος αν δεν ξέρετε ακριβώς πού να βρείτε μια επιλογή διαμόρφωσης. Μπορεί όμως να είναι λίγο κουραστικός αν ξέρετε ότι θέλετε να αλλάξετε τη διαμόρφωση μόνο ενός συγκεκριμένου πρόσθετου.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+Η τεκμηρίωση των ρυθμίσεων υπάρχει [εδώ](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## Οι Ρυθμίσεις ενός πρόσθετου
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+Μέσα στη **Διαμόρφωση**, ανοίξτε μια κατηγορία και πατήστε «**Ρυθμίσεις**» κάτω από το ενεργό πρόσθετο. Μεταφέρεστε κατευθείαν στις ρυθμίσεις **μόνο αυτού του πρόσθετου**:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![Ρυθμίσεις και Άνοιγμα πρόσθετου κάτω από το ενεργό πρόσθετο](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+Για παράδειγμα, αυτός είναι καλός δρόμος αν ξέρετε ότι θέλετε να αλλάξετε τη διαμόρφωση της αντλίας σας: ανοίξτε **Διαμόρφωση → Αντλία** και μετά πατήστε «**Ρυθμίσεις**» κάτω από την επιλεγμένη αντλία.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+Αυτή είναι μια «συντόμευση» προς τις ίδιες ρυθμίσεις που εμφανίζονται στη γενική οθόνη **Ρυθμίσεις**.
