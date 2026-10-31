@@ -71,15 +71,15 @@
 ## Listopad 2024
 
 - Aktualizace stránky [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Přeorganizován obsah o [chytrých hodinkách s Wear OS](../WearOS/BuildingAapsWearOS.md) @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
 
 ## Říjen 2024
 
 - Aktualizace několika stránek:
-  - [Jak dlouho to bude trvat](#preparing-how-long-will-it-take), [Přehled komponent](../DailyLifeWithAaps/CobCalculation.md), [Plnění cílů](../SettingUpAaps/CompletingTheObjectives.md), [Váš profil AAPS](../SettingUpAaps/YourAapsProfile.md), [Konfigurace](../SettingUpAaps/ConfigBuilder.md) a [Předvolby](../SettingUpAaps/Preferences.md), [Obrazovky AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [Kalkulace COB](../DailyLifeWithAaps/CobCalculation.md), [Dynamická ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Návod na sestavení pro Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technické práce (proces nasazení dokumentace, uspořádání souborů...) @psonnerat a @emilise
+- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
 
 ***
 
@@ -102,7 +102,7 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 
 ## Leden 2022
 
-- [Řešení problémů s Android Studiem](../GettingHelp/TroubleshootingAndroidStudio) – aktualizace @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
 ## Prosinec 2021
 
@@ -113,7 +113,7 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 
 - Doporučený postup kalibrace senzoru Libre 2
 - [ISF](../UsefulLinks/FAQ.md) – nové vysvětlení vlivu
-- Aktualizace stránky [Řešení problémů s Android Studiem](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Odstraněna upravená aplikace [Dexcom](../CompatibleCgms/DexcomG6.md), protože je zastaralá
 
 ## Říjen 2021
@@ -166,7 +166,7 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 ## Září 2020
 
 - Velká aktualizace pro novou verzi AAPS 2.7
-- Podrobnosti viz `release notes <Releasenotes-version-2-7-0>`
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## Červen 2020
 
@@ -191,7 +191,7 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 - [Sestavení APK v Android Studiu 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS s firmwarem v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **zatím nelze s AAPS používat!**
 - [Prodloužený bolus a přepnutí na otevřenou smyčku](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Aktualizace APK v Android Studiu 3.6.1](../Maintenance/UpdateToNewVersion)
+- [Aktualizace APK v Android Studiu 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
 ## Únor 2020
 
@@ -229,7 +229,7 @@ Dokumentace AAPS 3.1 je k dispozici [zde](https://androidaps.readthedocs.io/en/3
 - [Nový návod pro Freestyle Libre 2](../CompatibleCgms/Libre2.md)
 - [Přepnutí profilu s procentem – příklad](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [Aktualizace SMS příkazů](../RemoteFeatures/SMSCommands.md)
-- [Řešení problémů s Android Studiem](../GettingHelp/TroubleshootingAndroidStudio)
+- [Řešení problémů s Android Studiem](../GettingHelp/TroubleshootingAndroidStudio.md)
 - [Řešení problémů – sbírka odkazů](../GettingHelp/GeneralTroubleshooting.md)
 - Aktualizace – rychlý přehled pro zkušené uživatele
 - Dokumentace – aktualizace stránek [úpravy](#edit-the-docs-code-syntax) a [překladu](#translations-translation-of-the-documentation).
