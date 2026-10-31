@@ -12,7 +12,7 @@ The Libre2 OOP (find it [here](#Libre2_OOP2)) is creating the same BG readings a
 
 There are some good reasons to use a Bluetooth transmitter:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
   Make sure to leave OOP1 disabled (2).
 
     → Hamburger Menu → Settings → Less common settings → Other misc. options
@@ -30,9 +30,9 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-This will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+This will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check you blood glucose after activation and make a new initial calibration.
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Configure AAPS (for looping only)
 
