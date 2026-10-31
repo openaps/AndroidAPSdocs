@@ -1,10 +1,10 @@
 (Sensitivity-detection-and-COB-sensitivity-detection)=
 
-# Detección sensibilidad
+# Detección de sensibilidad
 
-## Sensitivity algorithm
+## Algoritmo de sensibilidad
 
-**AAPS** currently offers 3 sensitivity detection models:
+**AAPS** ofrece ahora 3 modelos de detección de sensibilidad:
 
 * Sensibilidad AAPS
 * Sensibilidad promedio ponderada
@@ -12,23 +12,23 @@
 
 ### Sensibilidad AAPS
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+La sensibilidad se calcula igual que en Oref1, pero puedes indicar el periodo de tiempo hacia atrás que se tiene en cuenta. La absorción mínima de carbohidratos se calcula a partir del tiempo máximo de absorción de carbohidratos definido en las preferencias.
 
 ### Sensibilidad promedio ponderada
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+La sensibilidad se calcula como un promedio ponderado de las desviaciones. Puedes indicar el periodo de tiempo hacia atrás que se tiene en cuenta. Las desviaciones más recientes tienen más peso. La absorción mínima de carbohidratos se calcula a partir del tiempo máximo de absorción de carbohidratos definido en las preferencias. Este algoritmo es el más rápido en seguir los cambios de sensibilidad.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
 ### Sensibilidad Oref1
 
-Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
+La sensibilidad se calcula con los datos de las últimas 8 horas, o desde el último cambio de cánula si fue hace menos de 8 horas. Los carbohidratos (si no se han absorbido) se cortan después del tiempo indicado en las preferencias. Solo el algoritmo Oref1 admite las comidas no anunciadas (UAM). Esto significa que los periodos con UAM detectadas se excluyen del cálculo de la sensibilidad. Por eso, si usas SMB con UAM, tienes que elegir el algoritmo Oref1 para que funcione bien. Para más información sobre UAM, consulta la sección [Supermicrobolo (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 es la opción recomendada: es la única que puede detectar UAM y funcionar con [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), el algoritmo más reciente.
 
 ## Carbohidratos simultáneos
 
-There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+Hay una diferencia importante entre los algoritmos Sensibilidad AAPS y WeightedAverage por un lado, y Oref1 por otro, cuando se solapan varias comidas.
 
-* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
-* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.
+* Oref1 espera que solo se descuente una comida a la vez: la segunda comida empieza a descontarse cuando la primera se ha descontado por completo.
+* Sensibilidad AAPS y WeightedAverage empiezan a descontar los carbohidratos en cuanto los introduces. Si hay más de una comida activa, el descuento mínimo de carbohidratos se ajusta según el tamaño de la comida y el tiempo máximo de absorción. Por eso, la absorción mínima será más alta que con Oref1.
