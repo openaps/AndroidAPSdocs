@@ -33,7 +33,7 @@ Gdy używasz **dynamicznego ISF**, wartości **ISF** wpisane w **Profilu** nie s
 
 ![Dyn ISF](../images/DynamicISF/DynISF2.png)
 
-Sekcja zakreślona na czerwono pokazuje: `profile ISF` -> `ISF as calculated by DynISF`. <br/> Dotknięcie tej sekcji otwiera okno z dodatkowymi informacjami, np. z **ISF** używanym przez kalkulator i do wchłaniania węglowodanów (zobacz poniżej [Inne zastosowania ISF](#dynisf-other-usages-of-isf)).
+Sekcja zakreślona na czerwono pokazuje: `profile ISF` -> `ISF as calculated by DynISF`. <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
 
 Wartość **DynISF** można też pokazać na wykresie: dotknij **Dodaj wykres** pod wykresami na ekranie głównym i wybierz **VSENS** (zmienna wrażliwość). Jest pokazywana jako biała linia (na dole powyższego obrazka).
 
@@ -134,4 +134,4 @@ To ustawienie (*„Dostosuj obliczenia wrażliwości podczas korzystania z Dynam
   * Zmienny tryb życia (nieregularne posiłki lub aktywność fizyczna)
   * Niestała TDD lub wrażliwość z dnia na dzień.
 * Nie ma dokładnej instrukcji, jak ustawić początkową wartość **Współczynnika korygującego**. Na początek jednak: jeśli wartości Twojego **Profilu** są poprawne, to gdy jesteś w zakresie, a poziom **BG** jest stabilny, wartość **DynISF** powinna być mniej więcej taka sama jak wcześniej w Twoim **Profilu**.<br/>Jeśli widzisz, że **dynamiczny ISF** jest zbyt agresywny, obniż **Współczynnik korygujący**, a w odwrotnym przypadku go podnieś.
-* Choć **DynISF** w ogóle nie używa **ISF z Profilu**, jeśli zauważysz, że Twoja wrażliwość bardzo różni się od zapisanej w **Profilu**, warto ją aktualizować. Może to pomóc, gdy stracisz dane **AAPS** (_np._ nowy telefon, nowa wersja **AAPS**…), bo przez następne 7 dni jako zapas będzie używany **ISF z Profilu**.
+* Choć **DynISF** w ogóle nie używa **ISF z Profilu**, jeśli zauważysz, że Twoja wrażliwość bardzo różni się od zapisanej w **Profilu**, warto ją aktualizować. This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
