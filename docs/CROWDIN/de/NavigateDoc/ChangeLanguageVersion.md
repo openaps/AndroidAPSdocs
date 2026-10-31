@@ -1,4 +1,4 @@
-# Change language and version
+# Sprache und Version ändern
 
 The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
 
