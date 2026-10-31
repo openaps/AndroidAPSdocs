@@ -94,7 +94,7 @@ Dit zijn de basisschermen die in **AAPS** zitten. Er zijn [meer watchfaces](#Wea
 
 ### Hoe gebruik ik een Wear OS-horloge in het dagelijks leven?
 
-Meer informatie over de watchfaces en het dagelijks gebruik, ook hoe je je eigen watchface maakt (en deelt), staat in het hoofdstuk [AAPS bedienen met een Wear OS-smartwatch](../WearOS/WearOsSmartwatch.md).
+Meer informatie over de watchfaces en het dagelijks gebruik, ook hoe je je eigen watchface maakt (en deelt), staat in het hoofdstuk [AAPS instellen op je Wear OS-horloge](../WearOS/WearOsSmartwatch.md).
 
 (Watchfaces-tizen)= (watches-external-companion-apps)=
 
