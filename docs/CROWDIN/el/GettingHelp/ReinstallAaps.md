@@ -1,153 +1,153 @@
 (reinstall-aaps)=
-# Reinstalling AAPS with a new keystore
+# Επανεγκατάσταση του AAPS με νέο keystore
 
-Every **AAPS** apk is signed with a **keystore**. An update only installs over your current **AAPS** if it is signed with the **same keystore**: all your settings and data are then kept. That's why it is recommended to store the keystore and its password in a safe place.
+Κάθε apk του **AAPS** είναι υπογεγραμμένο με ένα **keystore**. Μια ενημέρωση εγκαθίσταται πάνω στο τρέχον **AAPS** μόνο αν είναι υπογεγραμμένη με το **ίδιο keystore**: τότε κρατιούνται όλες οι ρυθμίσεις και τα δεδομένα σας. Γι' αυτό συνιστάται να φυλάτε το keystore και τον κωδικό του σε ασφαλές μέρος.
 
-If you try to install an apk signed with a different keystore than before, you will get an error message explaining that the installation failed!
+Αν προσπαθήσετε να εγκαταστήσετε ένα apk υπογεγραμμένο με διαφορετικό keystore από πριν, θα δείτε ένα μήνυμα σφάλματος ότι η εγκατάσταση απέτυχε!
 
 (reinstall-aaps-when)=
-## When do you need to reinstall?
+## Πότε χρειάζεται επανεγκατάσταση;
 
-You need to uninstall and reinstall **AAPS** when your new apk is signed with a different keystore, for example:
+Πρέπει να απεγκαταστήσετε και να εγκαταστήσετε ξανά το **AAPS** όταν το νέο σας apk είναι υπογεγραμμένο με διαφορετικό keystore, για παράδειγμα:
 
-- You cannot find your old keystore or its password.
-- You created a new keystore, for example with [Option 1 of the browser build](../SettingUpAaps/BrowserBuildKeystore.md) or **Create a new key** in [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
-- You build on a new computer and did not copy your keystore to it.
+- Δεν μπορείτε να βρείτε το παλιό σας keystore ή τον κωδικό του.
+- Δημιουργήσατε νέο keystore, για παράδειγμα με την [Επιλογή 1 της δημιουργίας μέσω browser](../SettingUpAaps/BrowserBuildKeystore.md) ή με το **Create a new key** (δημιουργία νέου κλειδιού) στο [AAPS Builder](../SettingUpAaps/BrowserBuildAapsBuilder.md).
+- Κάνετε build σε νέο υπολογιστή και δεν αντιγράψατε το keystore σας σε αυτόν.
 
-If you still have your keystore, you don't need this page: reuse it and [update **AAPS**](../Maintenance/UpdateToNewVersion.md) in place.
+Αν έχετε ακόμη το keystore σας, δεν χρειάζεστε αυτή τη σελίδα: χρησιμοποιήστε το ξανά και [ενημερώστε το **AAPS**](../Maintenance/UpdateToNewVersion.md) χωρίς απεγκατάσταση.
 
 (reinstall-aaps-before)=
-## Before you start
+## Πριν ξεκινήσετε
 
-- Uninstalling **AAPS** deletes all its settings, your [objectives](../SettingUpAaps/CompletingTheObjectives.md) and the current pump connection. You get them back by importing your **settings file**, so make sure you have a recent one.
-- The settings file does not contain your treatment and glucose history. If you upload to [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), you can load it back after the reinstall (step 8).
-- You need your [**master password**](#Preferences-master-password): the settings file is encrypted with it.
-- **Omnipod and Medtrum users:** read [Tubeless pumps](#ExportImportSettings-tubeless-pumps) first. Your settings file must have been exported during the pod or patch you are wearing now.
-- If needed, [set up your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) before you start.
+- Η απεγκατάσταση του **AAPS** διαγράφει όλες τις ρυθμίσεις του, τα [Βήματα](../SettingUpAaps/CompletingTheObjectives.md) σας και την τρέχουσα σύνδεση με την αντλία. Τα παίρνετε πίσω με εισαγωγή του **αρχείου ρυθμίσεων** σας, οπότε βεβαιωθείτε ότι έχετε ένα πρόσφατο.
+- Το αρχείο ρυθμίσεων δεν περιέχει το ιστορικό θεραπειών και γλυκόζης σας. Αν ανεβάζετε δεδομένα στο [Nightscout](../SettingUpAaps/SettingUpTheReportingServer.md), μπορείτε να το φορτώσετε ξανά μετά την επανεγκατάσταση (βήμα 8).
+- Χρειάζεστε τον [**κύριο κωδικό**](#Preferences-master-password) σας: το αρχείο ρυθμίσεων είναι κρυπτογραφημένο με αυτόν.
+- **Χρήστες Omnipod και Medtrum:** διαβάστε πρώτα την ενότητα [Αντλίες χωρίς σωληνάκι](#ExportImportSettings-tubeless-pumps). Το αρχείο ρυθμίσεων πρέπει να έχει εξαχθεί κατά τη διάρκεια του pod ή του patch που φοράτε τώρα.
+- Αν χρειάζεται, [ρυθμίστε τον δέκτη της πηγής CGM/BG](../Getting-Started/CompatiblesCgms.md) πριν ξεκινήσετε.
 
 (reinstall-aaps-steps)=
-## Steps
+## Βήματα
 
-The pictures show a move from **AAPS** 3.4 (steps 1 to 3) to **AAPS** 4 (steps 6 to 8). Other versions look slightly different.
+Οι εικόνες δείχνουν τη μετάβαση από το **AAPS** 3.4 (βήματα 1 έως 3) στο **AAPS** 4 (βήματα 6 έως 8). Άλλες εκδόσεις φαίνονται λίγο διαφορετικές.
 
 (reinstall-aaps-export)=
-### 1. Export your settings
+### 1. Εξαγωγή των ρυθμίσεων
 
-Export your settings with the **AAPS** currently installed on your phone. See [Settings Export](#ExportImportSettings-Settings-Export) for details.
+Εξάγετε τις ρυθμίσεις σας με το **AAPS** που είναι τώρα εγκατεστημένο στο τηλέφωνό σας. Δείτε την ενότητα [Εξαγωγή ρυθμίσεων](#ExportImportSettings-Settings-Export) για λεπτομέρειες.
 
-In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User Settings**, tick **Local Storage** and tap **OK**.
+Στο **AAPS** 3.4: ανοίξτε τη **Συντήρηση** και πατήστε **Export options** (επιλογές εξαγωγής). Στο **User Settings** (ρυθμίσεις χρήστη), επιλέξτε **Local Storage** (τοπική αποθήκευση) και πατήστε **OK**.
 
-*Note: you can also use [Cloud Storage](#preferences-maintenance-cloud) to have a safety backup copy: that's a good idea, but keep Local Storage for recovering settings quickly.*
+*Σημείωση: μπορείτε επίσης να χρησιμοποιήσετε την [αποθήκευση cloud](#preferences-maintenance-cloud) για ένα επιπλέον αντίγραφο ασφαλείας: είναι καλή ιδέα, αλλά κρατήστε την τοπική αποθήκευση για γρήγορη επαναφορά των ρυθμίσεων.*
 
-![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
+![Export options με το User Settings ρυθμισμένο σε Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tap it.
+Το κουμπί γράφει τώρα **Export settings (local)** (εξαγωγή ρυθμίσεων, τοπικά). Πατήστε το.
 
-![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
+![Συντήρηση με το κουμπί Export settings (local)](../images/ReinstallAaps/reinstall_export_settings_local.png)
 
-**AAPS** shows the name of the file it will create. Tap **OK**, type your master password and tap **OK**.
+Το **AAPS** δείχνει το όνομα του αρχείου που θα δημιουργήσει. Πατήστε **OK**, πληκτρολογήστε τον κύριο κωδικό σας και πατήστε **OK**.
 
-![Export settings confirmation with the file name](../images/ReinstallAaps/reinstall_export_confirm.png)
+![Επιβεβαίωση εξαγωγής ρυθμίσεων με το όνομα του αρχείου](../images/ReinstallAaps/reinstall_export_confirm.png)
 
-In **AAPS** 4: open **Maintenance**, select the **Local** chip next to **Export settings** and tap **Export settings**.
+Στο **AAPS** 4: ανοίξτε τη **Συντήρηση**, επιλέξτε το chip **Τοπικά** δίπλα στο **Εξαγωγή ρυθμίσεων** και πατήστε **Εξαγωγή ρυθμίσεων**.
 
 (reinstall-aaps-copy)=
-### 2. Copy the settings file off your phone
+### 2. Αντιγράψτε το αρχείο ρυθμίσεων έξω από το τηλέφωνό σας
 
-The file is in the **preferences** folder of your [**AAPS** directory](#SetupWizard-StoragePermission), named like `2026-10-13_222735_full.json`. Copy or upload it to an external location (i.e. your computer, cloud storage service...). The file normally stays on your phone after the uninstall, but keep a copy elsewhere in case.
+Το αρχείο βρίσκεται στον φάκελο **preferences** του [φακέλου **AAPS**](#SetupWizard-StoragePermission) σας, με όνομα όπως `2026-10-13_222735_full.json`. Αντιγράψτε το ή ανεβάστε το σε εξωτερικό μέρος (π.χ. τον υπολογιστή σας, μια υπηρεσία αποθήκευσης cloud...). Το αρχείο κανονικά μένει στο τηλέφωνό σας μετά την απεγκατάσταση, αλλά για κάθε περίπτωση κρατήστε ένα αντίγραφο και αλλού.
 
 (reinstall-aaps-nightscout-before)=
-### 3. Synchronize with Nightscout
+### 3. Συγχρονισμός με το Nightscout
 
-This step is not mandatory but recommended if you use [DynISF](#Open-APS-features-DynamicISF): it will allow you to resume directly with the current settings instead of waiting 5 days to build necessary data for the plugin. NSClient V3 needs to be [enabled and configured](../SettingUpAaps/SettingUpTheReportingServer.md).
+Αυτό το βήμα δεν είναι υποχρεωτικό, αλλά συνιστάται αν χρησιμοποιείτε [DynISF](#Open-APS-features-DynamicISF): έτσι συνεχίζετε αμέσως με τις τρέχουσες ρυθμίσεις, αντί να περιμένετε 5 ημέρες μέχρι να συγκεντρωθούν τα δεδομένα που χρειάζεται το πρόσθετο. Το NSClient V3 πρέπει να είναι [ενεργό και ρυθμισμένο](../SettingUpAaps/SettingUpTheReportingServer.md).
 
-Make sure Nightscout has all your data before you uninstall.
+Βεβαιωθείτε ότι το Nightscout έχει όλα τα δεδομένα σας πριν από την απεγκατάσταση.
 
-Open **NSClient**, tap the **Full synchronization** button at the bottom of the screen, then **OK**.
+Ανοίξτε το **NSClient**, πατήστε το κουμπί **Πλήρης συγχρονισμός** στο κάτω μέρος της οθόνης και μετά **OK**.
 
-![NSClient screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
+![Οθόνη NSClient με το κουμπί Πλήρης συγχρονισμός](../images/ReinstallAaps/reinstall_ns_fullsync_menu_before.png)
 
-*Note: the time necessary depends on your Nightscout hosting service.*
+*Σημείωση: ο χρόνος που χρειάζεται εξαρτάται από την υπηρεσία φιλοξενίας του Nightscout σας.*
 
-![Full synchronization confirmation](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
+![Επιβεβαίωση πλήρους συγχρονισμού](../images/ReinstallAaps/reinstall_ns_fullsync_confirm.png)
 
-**AAPS** then offers to clean up its database. **OK** removes data older than 3 months from the phone, which makes the synchronization much faster. **Cancel** synchronizes without cleaning up. The phone database is deleted when you uninstall anyway, so both are fine.
+Το **AAPS** στη συνέχεια προτείνει να καθαρίσει τη βάση δεδομένων του. Το **OK** διαγράφει από το τηλέφωνο τα δεδομένα που είναι παλαιότερα από 3 μήνες, και έτσι ο συγχρονισμός γίνεται πολύ πιο γρήγορα. Η **Ακύρωση** κάνει συγχρονισμό χωρίς καθαρισμό. Η βάση δεδομένων του τηλεφώνου διαγράφεται έτσι κι αλλιώς με την απεγκατάσταση, οπότε και τα δύο είναι εντάξει.
 
-![Database cleanup question](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
+![Ερώτηση για την εκκαθάριση της βάσης δεδομένων](../images/ReinstallAaps/reinstall_ns_fullsync_cleanup.png)
 
-Leave **AAPS** running until the synchronization is finished.
+Αφήστε το **AAPS** να λειτουργεί μέχρι να τελειώσει ο συγχρονισμός.
 
 (reinstall-aaps-build)=
-### 4. Build the new apk
+### 4. Δημιουργήστε το νέο apk
 
-[Build](../SettingUpAaps/BuildingAaps.md) a new signed apk with your new keystore and transfer it to your phone.
+[Δημιουργήστε](../SettingUpAaps/BuildingAaps.md) ένα νέο υπογεγραμμένο apk με το νέο σας keystore και μεταφέρετέ το στο τηλέφωνό σας.
 
 (reinstall-aaps-uninstall)=
-### 5. Uninstall AAPS
+### 5. Απεγκατάσταση του AAPS
 
-In your phone's **Settings** > **Apps** > **AAPS**, tap **Uninstall** and confirm with **OK**.
+Στο τηλέφωνό σας, στις **Ρυθμίσεις** > **Εφαρμογές** > **AAPS**, πατήστε **Απεγκατάσταση** και επιβεβαιώστε με **OK**.
 
-![App info of AAPS with the Uninstall button](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
+![Πληροφορίες εφαρμογής του AAPS με το κουμπί Απεγκατάσταση](../images/ReinstallAaps/reinstall_uninstall_appinfo.png)
 
 (reinstall-aaps-install)=
-### 6. Install and start the new AAPS
+### 6. Εγκατάσταση και εκκίνηση του νέου AAPS
 
-[Install](../SettingUpAaps/TransferringAndInstallingAaps.md) the new apk and start **AAPS**. The [setup wizard](../SettingUpAaps/SetupWizard.md) asks for the permissions **AAPS** needs: tap **Grant** for each of them. This also turns [battery optimization](#setup-wizard-bluetooth-battery-optimisation) off again.
+[Εγκαταστήστε](../SettingUpAaps/TransferringAndInstallingAaps.md) το νέο apk και ξεκινήστε το **AAPS**. Ο [οδηγός εγκατάστασης](../SettingUpAaps/SetupWizard.md) ζητά τις άδειες που χρειάζεται το **AAPS**: πατήστε **Παραχώρηση** για καθεμία. Έτσι απενεργοποιείται ξανά και η [βελτιστοποίηση μπαταρίας](#setup-wizard-bluetooth-battery-optimisation).
 
-![Permissions Required list of the setup wizard](../images/ReinstallAaps/reinstall_permissions.png)
+![Η λίστα «Απαιτούνται άδειες» του οδηγού εγκατάστασης](../images/ReinstallAaps/reinstall_permissions.png)
 
-For **AAPS Directory**, select the same **AAPS** folder as before (the one with the **preferences** folder in it), tap **Use this folder** and **Allow**.
+Για τον **Φάκελο AAPS**, επιλέξτε τον ίδιο φάκελο **AAPS** όπως πριν (αυτόν που περιέχει τον φάκελο **preferences**), πατήστε **Χρήση αυτού του φακέλου** και **Να επιτραπεί**.
 
-![Selecting the existing AAPS folder](../images/ReinstallAaps/reinstall_aaps_directory.png)
+![Επιλογή του υπάρχοντος φακέλου AAPS](../images/ReinstallAaps/reinstall_aaps_directory.png)
 
-When **AAPS** finds your exported settings, the setup wizard shows a [Stored settings found](#setup-wizard-import-settings) screen where you can import them. You can also close the wizard and import from **Maintenance** as described below.
+Όταν το **AAPS** βρει τις ρυθμίσεις που εξαγάγατε, ο οδηγός εγκατάστασης δείχνει την οθόνη [Βρέθηκαν αποθηκευμένες ρυθμίσεις](#setup-wizard-import-settings), όπου μπορείτε να τις εισαγάγετε. Μπορείτε επίσης να κλείσετε τον οδηγό και να κάνετε εισαγωγή από τη **Συντήρηση**, όπως περιγράφεται παρακάτω.
 
 (reinstall-aaps-import)=
-### 7. Import your settings
+### 7. Εισαγωγή των ρυθμίσεών σας
 
-If the settings file is no longer on your phone, copy it back to the **preferences** folder of your **AAPS** directory.
+Αν το αρχείο ρυθμίσεων δεν υπάρχει πια στο τηλέφωνό σας, αντιγράψτε το ξανά στον φάκελο **preferences** του φακέλου **AAPS** σας.
 
-Open the menu (☰) > **Maintenance**, select the **Local** chip next to **Import settings** and tap **Import settings**.
+Ανοίξτε το μενού (☰) > **Συντήρηση**, επιλέξτε το chip **Τοπικά** δίπλα στο **Εισαγωγή ρυθμίσεων** και πατήστε **Εισαγωγή ρυθμίσεων**.
 
-![Maintenance with Import settings](../images/ReinstallAaps/reinstall_maintenance_import.png)
+![Συντήρηση με την Εισαγωγή ρυθμίσεων](../images/ReinstallAaps/reinstall_maintenance_import.png)
 
-The list shows each file with its **AAPS** version and how old it is. Choose the file you exported in step 1.
+Η λίστα δείχνει κάθε αρχείο με την έκδοση του **AAPS** και πόσο παλιό είναι. Επιλέξτε το αρχείο που εξαγάγατε στο βήμα 1.
 
-![List of settings files to import](../images/ReinstallAaps/reinstall_import_file_list.png)
+![Λίστα αρχείων ρυθμίσεων για εισαγωγή](../images/ReinstallAaps/reinstall_import_file_list.png)
 
-You don't need to set a master password in the new **AAPS** first. Type the master password you used for the export in **Decryption password** and tap **Decrypt**. **File was encrypted with a different password** is expected: the new **AAPS** doesn't know your password yet. The import restores it with your other settings.
+Δεν χρειάζεται να ορίσετε πρώτα κύριο κωδικό στο νέο **AAPS**. Πληκτρολογήστε τον κύριο κωδικό που χρησιμοποιήσατε στην εξαγωγή στο πεδίο **Κωδικός αποκρυπτογράφησης** και πατήστε **Αποκρυπτογράφηση**. Το μήνυμα **Το αρχείο κρυπτογραφήθηκε με διαφορετικό κωδικό** είναι αναμενόμενο: το νέο **AAPS** δεν ξέρει ακόμη τον κωδικό σας. Η εισαγωγή τον επαναφέρει μαζί με τις άλλες ρυθμίσεις σας.
 
-![Decryption password for the settings file](../images/ReinstallAaps/reinstall_import_password.png)
+![Κωδικός αποκρυπτογράφησης για το αρχείο ρυθμίσεων](../images/ReinstallAaps/reinstall_import_password.png)
 
-Tick **Also replace pump settings**: without it, your pump and its settings are not restored. Omnipod and Medtrum users: only tick it if the file was exported during your current pod or patch (see [Tubeless pumps](#ExportImportSettings-tubeless-pumps)).
+Επιλέξτε **Αντικατάσταση και των ρυθμίσεων αντλίας**: χωρίς αυτό, η αντλία σας και οι ρυθμίσεις της δεν επανέρχονται. Χρήστες Omnipod και Medtrum: επιλέξτε το μόνο αν το αρχείο εξήχθη κατά τη διάρκεια του τρέχοντος pod ή patch σας (δείτε [Αντλίες χωρίς σωληνάκι](#ExportImportSettings-tubeless-pumps)).
 
-![Also replace pump settings ticked](../images/ReinstallAaps/reinstall_import_replace_pump.png)
+![Επιλεγμένο το «Αντικατάσταση και των ρυθμίσεων αντλίας»](../images/ReinstallAaps/reinstall_import_replace_pump.png)
 
-Tap **Import**, then **OK** to apply the settings and **OK** again on **Settings applied**.
+Πατήστε **Εισαγωγή**, μετά **OK** για να εφαρμοστούν οι ρυθμίσεις, και ξανά **OK** στο **Οι ρυθμίσεις εφαρμόστηκαν**.
 
-![Apply imported settings confirmation](../images/ReinstallAaps/reinstall_import_apply.png)
+![Επιβεβαίωση εφαρμογής των ρυθμίσεων που εισήχθησαν](../images/ReinstallAaps/reinstall_import_apply.png)
 
 (reinstall-aaps-nightscout-after)=
-### 8. Get your history back from Nightscout
+### 8. Ανάκτηση του ιστορικού σας από το Nightscout
 
-Open the menu (☰) > [**Configuration**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Communication** and tap **Open plugin** under **NSClientV3**. Check that the status shows **Connected**. If it doesn't, see [Troubleshooting NSClient](TroubleshootingNsClient.md).
+Ανοίξτε το μενού (☰) > [**Διαμόρφωση**](../SettingUpAaps/ChangeAapsConfiguration.md) > **Επικοινωνία** και πατήστε **Άνοιγμα πρόσθετου** κάτω από το **NSClientV3**. Ελέγξτε ότι η κατάσταση δείχνει **Συνδέθηκε**. Αν όχι, δείτε [Αντιμετώπιση προβλημάτων του NSClient](TroubleshootingNsClient.md).
 
-![Communication with the NSClientV3 Open plugin button](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
+![Επικοινωνία με το κουμπί Άνοιγμα πρόσθετου του NSClientV3](../images/ReinstallAaps/reinstall_ns_open_plugin.png)
 
-Tap the **Full synchronization** button at the bottom of the screen and **OK**. The database is new, so you can answer the cleanup question either way.
+Πατήστε το κουμπί **Πλήρης συγχρονισμός** στο κάτω μέρος της οθόνης και **OK**. Η βάση δεδομένων είναι νέα, οπότε στην ερώτηση για τον καθαρισμό μπορείτε να απαντήσετε όπως θέλετε.
 
-![NSClientV3 screen with the Full synchronization button](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
+![Οθόνη NSClientV3 με το κουμπί Πλήρης συγχρονισμός](../images/ReinstallAaps/reinstall_ns_fullsync_menu_after.png)
 
-**AAPS** loads your data from Nightscout. The log shows **Full sync finished** when it is done.
+Το **AAPS** φορτώνει τα δεδομένα σας από το Nightscout. Όταν τελειώσει, το αρχείο καταγραφής δείχνει **Full sync finished** (ο πλήρης συγχρονισμός ολοκληρώθηκε).
 
-![NSClientV3 log with Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
+![Αρχείο καταγραφής NSClientV3 με το Full sync finished](../images/ReinstallAaps/reinstall_ns_fullsync_finished.png)
 
 (reinstall-aaps-check)=
-### 9. Check and keep looping
+### 9. Έλεγχος και συνέχεια του κυκλώματος
 
-Check that your pump is connected and your CGM values arrive, then keep on looping.
+Ελέγξτε ότι η αντλία σας είναι συνδεδεμένη και ότι οι τιμές του CGM φτάνουν, και μετά συνεχίστε το κύκλωμα.
 
 (reinstall-aaps-afterwards)=
-## Afterwards
+## Μετά
 
-Always keep using your new keystore from now on, and store it with its password somewhere safe, off your phone. See [Creating back-ups](../Maintenance/ExportImportSettings.md).
+Από εδώ και πέρα χρησιμοποιείτε πάντα το νέο σας keystore, και φυλάξτε το μαζί με τον κωδικό του σε ασφαλές μέρος, έξω από το τηλέφωνό σας. Δείτε [Δημιουργία αντιγράφων ασφαλείας](../Maintenance/ExportImportSettings.md).
