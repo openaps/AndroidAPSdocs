@@ -100,7 +100,7 @@ Continue [here](#Update-to-new-version-check-aaps-version-on-phone)
 
 (update-browser-build-troubleshooting)=
 
-## Troubleshooting
+## Усунення несправностей
 
 If anything goes wrong, don't panic.
 
