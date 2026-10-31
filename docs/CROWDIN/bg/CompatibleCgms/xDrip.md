@@ -99,7 +99,7 @@
 #### Смяна на трансмитер
 
 - Изключете оригиналния приемник на Dexcom (ако го използвате) и не го включвайте отново, преди xDrip да покаже стойности.
-- Забравете устройството в xDrip (System Status → Forget Device) И в настройките за Bluetooth на смартфона (показва се като Dexcom?? където ?? са последните две цифри от серийния номер на трансмитера).
+- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
 - Дръжте стария трансмитер извън обхвата на Bluetooth, за да не се свърже отново.
 - След това следвайте [Start a G6 or ONE transmitter](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
