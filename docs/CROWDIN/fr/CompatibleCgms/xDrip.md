@@ -59,14 +59,14 @@ Pensez à désactiver Import Sounds pour éviter que xDrip fasse sonner une sonn
 - Si vous avez des problèmes avec la diffusion locale (AAPS ne reçoit pas les valeurs de glycémie de xDrip), allez dans → Menu hamburger (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) et saisissez `info.nightscout.androidaps` pour la version AAPS (si vous utilisez la version PumpControl, saisissez plutôt `info.nightscout.aapspumpcontrol` !!).
 - Attention : la correction automatique a parfois tendance à changer le i en majuscule. Vous **devez utiliser uniquement des lettres minuscules** en tapant `info.nightscout.androidaps` (ou `info.nightscout.aapspumpcontrol` pour PumpControl). Un I majuscule empêcherait l'application de recevoir les valeurs de glycémie de xDrip.
     
-    ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+    ![xDrip Paramètres inter-applications de base Identify receiver](../images/xDrip_InterApp_NS.png)
 
 ## Utiliser AAPS pour étalonner dans xDrip
 
 - Si vous voulez pouvoir étalonner avec AAPS, allez dans xDrip dans Settings → Interapp Compatibility → Accept Calibrations et choisissez ON. 
 - Vous pouvez aussi vérifier les options dans Settings → Less Common Settings → Advanced Calibration Settings.
 
-## Dexcom sensors
+## Capteurs Dexcom
 
 Tout ce qui concerne le capteur et le transmetteur Dexcom eux-mêmes (démarrage, arrêt, remplacement, étalonnage, dépannage) est décrit et tenu à jour dans la [documentation Dexcom de xDrip](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Suivez ces instructions pour le capteur ; les paramètres qui connectent xDrip à **AAPS** (décrits plus haut sur cette page) sont la seule partie propre à AAPS.
 
