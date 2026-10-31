@@ -227,7 +227,10 @@ Solo tienes que hacer esto una vez.
 
    Si en su lugar se abre la **app de GitHub**: toca **RUN WORKFLOW**, comprueba la versión y la variante, y toca **RUN WORKFLOW** otra vez. La app puede seguir mostrando **Nothing to see here**: desliza la lista hacia abajo para actualizarla y ver tu compilación. Luego continúa con el paso 4 de abajo.
 
-2. Si GitHub lo pide, toca el botón verde para activar los workflows.
+2. If GitHub asks, tap the green button to enable workflows.
+
+   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+
 3. Toca **Run workflow**. Se abre un pequeño formulario:
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
    - **Variant**: deja `fullRelease` para el uso normal con una bomba. Las otras variantes se explican en [variantes de compilación](#browserbuild-variant). `aapsclient3Release` compila **AAPSClient3**, disponible desde la versión 4.0 de **AAPS** (consulta [Acerca de AAPSClient, AAPSClient2 y AAPSClient3](#remotecontrol-aapsclient-versions)).
