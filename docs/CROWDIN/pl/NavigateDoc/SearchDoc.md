@@ -1,25 +1,25 @@
-# Search the documentation
+# Wyszukiwanie w dokumentacji
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+Dokumentacja zawiera wiele informacji. Jeśli szukasz konkretnego tematu, pojęcia lub ustawienia, wyszukiwarka jest często szybsza niż przeglądanie menu.
 
-## How to search
+## Jak szukać
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+Pole wyszukiwania znajduje się na górze panelu nawigacji po lewej stronie ekranu.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+Na mniejszych ekranach (np. w telefonie) panel nawigacji jest ukryty. Dotknij ikony menu (☰) w lewym górnym rogu, aby go otworzyć i zobaczyć pole wyszukiwania.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Wpisz jedno lub więcej słów kluczowych w pole wyszukiwania.
+2. Naciśnij `Enter` lub dotknij ikony wyszukiwania.
+3. Otworzy się strona wyników z listą wszystkich stron, na których występują Twoje słowa kluczowe. Kliknij wynik, aby przejść do pasującej strony.
 
-## Tips for better results
+## Wskazówki dla lepszych wyników
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Używaj konkretnych pojęć (np. `temp target` lub `autosens`) zamiast całych zdań.
+- Wyszukiwanie kilku słów kluczowych zwraca strony, które zawierają te słowa. Zacznij od ogólnych słów i dodawaj kolejne, aby zawęzić wyniki.
+- Wyszukiwanie obejmuje tylko język i wersję dokumentacji, którą teraz czytasz. Jeśli nie możesz czegoś znaleźć, przełącz się na wersję angielską, która jest najbardziej kompletna (zobacz [Zmiana języka i wersji](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+Indeks wyszukiwania jest budowany automatycznie. Bardzo nowe treści mogą być dostępne w wyszukiwarce dopiero po pewnym czasie.
 ```
