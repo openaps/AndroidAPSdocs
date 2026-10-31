@@ -30,7 +30,7 @@
 * Om de instellingen van de driver te wijzigen, tik je op **Instellingen** op de DanaR-kaart in **Configuratie** > **Pomp**: 
   * **Bolussnelheid** (DanaR en DanaRv2): wijzig de standaard bolussnelheid (12 s/E, 30 s/E of 60 s/E).
   * **Gebruik vertraagde bolussen voor >200%** (DanaR en DanaR Koreaans): zet dit aan als je wilt dat **AAPS** een basaalstand boven 200% toestaat. Let op: dit betekent dat je niet kunt loopen met hoge TBR's terwijl je vertraagde bolussen voor eten gebruikt.
-* Zet de stapgrootte voor basaal op 0,01 E/uur
+* Zet de stapgrootte voor basaal op 0,01 E/u
 * Zet de bolusstap op de pomp op 0,1 E. **AAPS** leest de bolusstap uit de pomp en gebruikt die voor elke bolus.
 * Activeer vertraagde bolussen op de pomp
 
