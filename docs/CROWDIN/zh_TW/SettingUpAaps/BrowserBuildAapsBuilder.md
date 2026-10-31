@@ -229,7 +229,10 @@ GitHub 顯示 **找不到頁面**（404）？請先確認你已在此瀏覽器�
 
    如果改為開啟 **GitHub app**：點選 **RUN WORKFLOW**，確認版本與變體，然後再次點選 **RUN WORKFLOW**。應用程式可能仍顯示 **Nothing to see here**：將清單向下拉以重新整理，然後就能看到你的建置。然後繼續進行下方的步驟 4。
 
-2. 若 GitHub 要求，請點選綠色按鈕以啟用工作流程。
+2. If GitHub asks, tap the green button to enable workflows.
+
+   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+
 3. 點選 **Run workflow**。會開啟一個小型表單：
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
    - **Variant**：一般與幫浦搭配使用時，維持 `fullRelease`。其他變體的說明請參閱 [建置變體](#browserbuild-variant)。 `aapsclient3Release` 會建置 **AAPSClient3**，適用於 **AAPS** 4.0 版（請參閱 [關於 AAPSClient、AAPSClient2 和 AAPSClient3](#remotecontrol-aapsclient-versions)）。
