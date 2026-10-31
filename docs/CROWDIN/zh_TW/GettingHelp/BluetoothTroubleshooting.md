@@ -19,11 +19,11 @@
 
 ## 藍牙 電池優化
 
-Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. 這已知會對藍牙幫浦與 CGM 造成一些問題。
+較新版的 Android 已為系統藍牙 App 啟用電池最佳化。這已知會對藍牙幫浦與 CGM 造成一些問題。
 
-If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
+如果您已按照[設定精靈](../SettingUpAaps/SetupWizard.md)的指示操作，並依照[藍牙電池最佳化](#setup-wizard-bluetooth-battery-optimisation)一節中的設定完成設定，這項設定應該就是正確的。不過，如果您參考的是較舊版本的指南，可能還沒有變更這項設定。
 
-Verify this is correctly configured if you have pump and CGM disconnections.
+如果幫浦和 CGM 發生連線中斷，請確認這項設定是否正確。
 
 ---
 
@@ -31,13 +31,13 @@ Verify this is correctly configured if you have pump and CGM disconnections.
 
 ## 使用 Android 權限「Nearby devices」的應用程式，可能導致連線中斷與 Pod 註冊問題
 
-Android 透過權限模型讓你控制每個應用程式在手機上能做什麼、能存取什麼。 For each app installed you can choose to allow or deny specific permissions, e.g. access files on the device, access to Bluetooth, scan for nearby devices etc.
+Android 透過權限模型讓你控制每個應用程式在手機上能做什麼、能存取什麼。您可以為每個已安裝的 App 選擇允許或拒絕特定權限，例如讀取裝置上的檔案、使用藍牙，以及掃描附近的裝置等。
 
-**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. 也有許多其他應用程式需要此權限；社群發現，當某些應用被授予此權限時，可能會在部分裝置上導致新 Pod 的啟用發生問題。
+**AAPS** 需要多項特定權限才能運作，其中一項是 Pod 正常運作所需的「附近裝置」權限。也有許多其他應用程式需要此權限；社群發現，當某些應用被授予此權限時，可能會在部分裝置上導致新 Pod 的啟用發生問題。
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
-### Apps that use "Nearby device" permissions and are known to have caused problems:
+### 使用「附近裝置」權限且已知會引發問題的應用程式：
 
 社群中多處討論過，以下清單中的應用程式會對 Omnipod DASH 裝置造成問題，有些情況下也會影響 Medtrum Nano。
 
@@ -50,16 +50,16 @@ Android 透過權限模型讓你控制每個應用程式在手機上能做什麼
 
 - **Amazon Alexa** 對部分人而言，移除 Alexa 應用程式的「Nearby devices」權限可解決問題，但會使配對 Matter IoT 裝置的功能失效
 
-- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
+- **MINI App** 看起來是以 myBMW App 為基礎，因此可能會有類似的行為。
 
 - **BM2** 太陽能電池監測應用程式，常用於部分露營車與露營太陽能架設；當該 App 執行時，會阻止新 Pod 的註冊。在註冊新 Pod 時強制停止該 App，是解決此問題的權宜之計。之後再執行該 App，似乎不會干擾 Dash 的功能（在執行 Android 16 的 Pixel 8 Pro 上）。
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
-### How to revoke "Nearby device" permissions for other apps:
-If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
+### 如何撤銷其他應用程式的「附近裝置」權限：
+如果您無法註冊新的 Pod，且使用的 **AAPS** 版本符合您 Android 版本的支援需求，註冊新 Pod 時可能需要撤銷其他 App 的權限。
 
-Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
+請按照以下步驟，撤銷所有 App 的「附近裝置」權限，但保留 **AAPS** 的權限：
 
 ```{admonition} Menus and settings
 :class: note${NEW_LINE>本指南中的螢幕擷取畫面與說明，來自 Google Pixel 8 Pro 的原生 Android 16 安裝。其他品牌與裝置的選單與設定描述可能不完全相同，請依你的裝置調整步驟；若卡關，請參閱 [Where to get help for dash](#omnipod-dash-where-to-get-help-for-dash) 章節，了解如何向社群尋求支援。
@@ -100,7 +100,7 @@ Follow this procedure to revoke the "Nearby device" permission for all apps exce
 
 (bluetoothtroubleshooting-re-enable-nearby-device-permission)=
 
-### How to re-enable "Nearby device" permissions for system apps and other apps:
+### 如何為系統應用程式與其他應用程式重新啟用「Nearby device」權限：
 
 1. 如有需要，請參閱 **「How to revoke "Nearby device" permissions for other apps」** 章節以瞭解如何前往應用程式的隱私設定，進入 **Nearby device** 設定後請繼續第 2 步。
 
@@ -112,7 +112,7 @@ Follow this procedure to revoke the "Nearby device" permission for all apps exce
 
    ![android_auto_nearby_dev_missing](../images/android_16/android_auto_nearby_dev_missing.png)
 
-3. To show hidden system apps press the **three-dot menu (⋮) (1)** in the top right corner, then press **"Show system" (2)**. 現在您應該可以在清單中看到先前隱藏的系統應用程式 **Android Auto (3)**。
+3. 若要顯示隱藏的系統 App，請按右上角的**三點選單（⋮）（1）**，再按**「顯示系統 App」（2）**。現在您應該可以在清單中看到先前隱藏的系統應用程式 **Android Auto (3)**。
 
 ```{admonition} Find your app
 :class: tip
@@ -129,21 +129,21 @@ Follow this procedure to revoke the "Nearby device" permission for all apps exce
 
 ## Android 15 經常性藍牙連線問題
 
-升級 Android 或更換到近期手機後，**AAPS**經常會失去與幫浦的藍牙連線。重新啟動手機後，這個問題會暫時消失。 If you use an **Omnipod DASH** and your phone runs Android 15, turning on the **Bluetooth bonding** setting may help improve the stability of the Bluetooth connection. To turn it on:
+升級 Android 或更換到近期手機後，**AAPS**經常會失去與幫浦的藍牙連線。重新啟動手機後，這個問題會暫時消失。如果您使用 **Omnipod DASH**，且手機搭載 Android 15，開啟**藍牙配對**設定可能有助於提升藍牙連線的穩定性。開啟方式如下：
 
 ```{admonition} Android 16
 :class: warning
-Only turn on **Bluetooth bonding** on Android 15, and only if you experience connectivity issues. DO NOT turn on bonding on Android 16.
+只有在 Android 15 上，且遇到連線問題時，才開啟**藍牙配對**。請勿在 Android 16 上開啟藍牙配對。
 ```
 
-1. Open the [Dash settings](#omnipod-dash-settings): open the DASH pump screen with **Manage** > **Pump** and press the **Settings** (gear) icon in the top-right corner.
+1. 開啟[Dash 設定](#omnipod-dash-settings)：在 DASH 幫浦畫面中，按**管理** > **幫浦**，再按右上角的**設定**（齒輪）圖示。
 
-   ![The DASH pump screen](../images/v4/Pumps/dash_pump_screen.png)
+   ![DASH 幫浦畫面](../images/v4/Pumps/dash_pump_screen.png)
 
-2. Open the **Advanced Settings** section and turn on **Bluetooth bonding**.
+2. 開啟**進階設定**區段，然後開啟**藍牙配對**。
 
-   ![Bluetooth bonding in the Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+   ![進階設定區段中的藍牙配對](../images/v4/Pumps/dash_settings_advanced.png)
 
-3. If the phone shows a pairing request, accept it.
+3. 如果手機顯示配對要求，請接受。
 
 4. 重新啟動您的手機。
