@@ -59,7 +59,7 @@ Zamknięta pętla jest możliwa tylko wtedy, gdy jesteś na **[Zadaniu 7](#objec
 - Wymiana kaniuli lub zmiana profilu resetuje współczynnik Autosens z powrotem do 100% (procentowa zmiana profilu z czasem trwania nie resetuje Autosens).
 - Autosens dostosowuje bazę i ISF (czyli działa podobnie jak przesunięcie profilu).
 - Jeśli jesz węglowodany stale przez dłuższy czas, Autosens działa w tym okresie słabiej, bo węglowodany są wyłączone z obliczeń delty **BG**.
-- Odchylenia są przeliczane na **współczynnik wrażliwości** (procent): współczynnik poniżej 100% oznacza, że AAPS uważa, że jesteś bardziej wrażliwy na insulinę, niż zakłada twój **Profil** (więc obniża efektywną bazę i ISF), a współczynnik powyżej 100% oznacza, że jesteś bardziej oporny (więc je podnosi).
+- The deviations are converted into a **sensitivity ratio** (a percentage): a ratio below 100% means AAPS thinks you're more sensitive to insulin than your **Profile** assumes (so it lowers effective basal and raises the ISF value), while a ratio above 100% means you're more resistant (so it raises basal and lowers the ISF value).
 - Domyślnie ten współczynnik jest utrzymywany między 0,7 (70%, większa wrażliwość) a 1,2 (120%, większa oporność), więc seria nietypowych danych nie może za bardzo oddalić dawkowania od twojego **Profilu**. Te granice można zmienić w ustawieniach zaawansowanych wtyczki Detekcja wrażliwości.
 - Autosens i [Autotune](../AdvancedOptions/Autotune.md) rozwiązują ten sam problem w różnej skali czasu: Autosens na bieżąco, minuta po minucie, koryguje twoje *aktualne* dawkowanie na podstawie ostatnich 8–24 godz., a Autotune powoli zmienia sam *Profil* na podstawie historii z wielu tygodni. Używanie obu naraz jest normalne i oczekiwane — uzupełniają się, a nie dublują.
 
@@ -103,7 +103,7 @@ Ustawienia OpenAPS SMB opisano poniżej.
 
 (Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
-### Maks. U/h, na jaką można ustawić bazę tymczasową
+### Maximum basal rate
 
 To ustawienie bezpieczeństwa określa maksymalną dawkę bazy tymczasowej, jaką może podać pompa insulinowa. Nazywa się je też **max-basal**.
 
@@ -190,9 +190,9 @@ Po jej włączeniu pojawiają się nowe ustawienia.
 
 Jeśli to ustawienie jest włączone, **SMB** będą podawane nawet wtedy, gdy ustawisz wysoki **Cel tymczasowy** (czyli 100 mg/dl lub 5,6 mmol/l i więcej, niezależnie od celu w **Profilu**). Włączaj to ostrożnie: **SMB** mogą stać się zbyt agresywne, jeśli twoje ustawienia nie są dobrze dopasowane albo twój **Profil** często się zmienia (np. u dzieci).
 
-Ta opcja służy do wyłączenia SMB, gdy to ustawienie jest wyłączone. Na przykład, jeśli ta opcja jest wyłączona, możesz wyłączyć **SMB**, ustawiając **Cel tymczasowy** 100 mg/dl lub 5,6 mmol/l i więcej. Ta opcja wyłączy też **SMB** bez względu na to, jaki inny warunek próbuje włączyć SMB — z wyjątkiem niskiego **Celu tymczasowego**, takiego jak **Wkrótce posiłek** (lub dowolnego **Celu tymczasowego** 98 mg/dl lub 5,4 mmol/l i niżej), przy którym **SMB** mogą nadal być podawane, aby sprowadzić **BG** do celu.
+When this setting is disabled, a high **Temp Target** turns **SMBs** off. Na przykład, jeśli ta opcja jest wyłączona, możesz wyłączyć **SMB**, ustawiając **Cel tymczasowy** 100 mg/dl lub 5,6 mmol/l i więcej. Ta opcja wyłączy też **SMB** bez względu na to, jaki inny warunek próbuje włączyć SMB — z wyjątkiem niskiego **Celu tymczasowego**, takiego jak **Wkrótce posiłek** (lub dowolnego **Celu tymczasowego** 98 mg/dl lub 5,4 mmol/l i niżej), przy którym **SMB** mogą nadal być podawane, aby sprowadzić **BG** do celu.
 
-Jeśli to ustawienie jest włączone, **SMB** przy wysokim celu tymczasowym będzie włączony tylko wtedy, gdy włączona jest też opcja **Włącz SMB z niskim tymczasowym poziomem docelowym**.
+This setting does not turn **SMB** on by itself. With a high temp target, **SMB** is only given if one of the other settings below (for example **Enable SMB always** or **Enable SMB with COB**) also allows it.
 
 (Open-APS-features-enable-smb-always)=
 
@@ -323,7 +323,7 @@ AMA, czyli skrót od „advanced meal assist” (zaawansowane wspomaganie posił
 
 Więcej informacji znajdziesz w [dokumentacji OpenAPS](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Maks. U/h, na jaką można ustawić bazę tymczasową (OpenAPS "max-basal")
+### Maximum basal rate (OpenAPS "max-basal")
 
 To ustawienie bezpieczeństwa chroni przed tym, aby **AAPS** kiedykolwiek podał niebezpiecznie wysoką dawkę bazową, i ogranicza bazę tymczasową do x U/h. Ustaw tu rozsądną wartość. Dobra zasada: weź najwyższą dawkę bazową w swoim profilu i pomnóż ją przez 4, a co najmniej przez 3. Na przykład, jeśli najwyższa dawka bazowa w twoim profilu to 1,0 U/h, możesz pomnożyć ją przez 4, otrzymać 4 U/h i ustawić 4 jako parametr bezpieczeństwa.
 
