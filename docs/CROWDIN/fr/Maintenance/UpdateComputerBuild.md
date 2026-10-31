@@ -2,10 +2,10 @@
 
 ## Compiler vous-même au lieu de télécharger
 
-**AAPS** n'est pas disponible au téléchargement, à cause des règles sur les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes ! Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
+**AAPS** n'est pas disponible au téléchargement, à cause des règles sur les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à d'autres personnes ! Consultez la [Foire Aux Questions (FAQ)](../UsefulLinks/FAQ.md) pour plus de détails.
 
 ```{note}
-Si vous voulez compiler **AAPS** sur un nouvel ordinateur : copiez la sauvegarde de votre fichier keystore sur le nouvel ordinateur. Suivez ensuite la [procédure de première compilation d'**AAPS**](../SettingUpAaps/BuildingAaps.md) au lieu de ce guide. La seule différence : au lieu de créer un nouveau keystore, vous pouvez sélectionner celui que vous avez copié sur le nouvel ordinateur.
+Si vous voulez compiler **AAPS** sur un nouvel ordinateur : copiez la sauvegarde de votre fichier keystore sur le nouvel ordinateur. Suivez ensuite la [procédure de première compilation d'**AAPS**](../SettingUpAaps/BuildingAaps.md) au lieu de ce guide. La seule différence : au lieu de créer un nouveau keystore, vous pouvez sélectionner celui que vous avez copié sur le nouvel ordinateur.
 ```
 
 ## Vue d'ensemble de la mise à jour vers une nouvelle version d'AAPS avec Android Studio
@@ -25,7 +25,7 @@ Consultez la page [Créer et restaurer des sauvegardes](ExportImportSettings.md)
 
 ### Vérifier votre version d'Android Studio
 
-La version minimale nécessaire est décrite dans les [instructions de compilation](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Si votre version est plus ancienne, [mettez d'abord Android Studio à jour](#Building-APK-install-android-studio) !
+La version minimale nécessaire est décrite dans les [instructions de compilation](#Building-APK-recommended-specification-of-computer-for-building-apk-file). Si votre version est plus ancienne, [mettez d'abord Android Studio à jour](#Building-APK-install-android-studio) !
 
 (Update-to-new-version-update-your-local-copy)=
 ### Mettre à jour votre copie locale
@@ -53,7 +53,7 @@ La version minimale nécessaire est décrite dans les [instructions de compilati
 * Attendez pendant le téléchargement. Vous voyez l'avancement dans la barre du bas. Une fois terminé, vous verrez un message de réussite.
 
   ```{note}
-  Les fichiers mis à jour peuvent être différents ! Ce n'est pas le signe d'un problème.
+  Les fichiers mis à jour peuvent être différents ! Ce n'est pas le signe d'un problème.
   ```
 
    ![Android Studio - Pull réussi](../images/update/06_GitPullSuccess.png)
@@ -80,7 +80,7 @@ Vous devez transférer l'apk sur votre téléphone pour pouvoir l'installer.
 
 ```{note}
 Si vous avez compilé avec le même keystore existant dans Android Studio, vous n'avez pas besoin de supprimer l'application existante sur votre téléphone. Lorsque vous installez l'apk, suivez les instructions pour installer les mises à jour.
-Pour d'autres cas, comme la création d'un nouveau keystore dans Android Studio pour votre apk signé, vous devrez supprimer l'ancienne application avant d'installer l'apk. **N'oubliez pas d'exporter vos paramètres !**
+Pour d'autres cas, comme la création d'un nouveau keystore dans Android Studio pour votre apk signé, vous devrez supprimer l'ancienne application avant d'installer l'apk. **N'oubliez pas d'exporter vos paramètres !**
 ```
 
 Consultez les instructions de [Transfert et installation de AAPS sur votre smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md). Là où la [vérification des développeurs Android](#android-developer-verification) de Google est appliquée (à partir de septembre 2026, selon votre pays), installez avec [ADB](#android-developer-verification-adb) au lieu d'appuyer sur le fichier APK.
@@ -93,8 +93,8 @@ Continuez [ici](#Update-to-new-version-check-aaps-version-on-phone).
 
 Si quelque chose ne va pas, ne paniquez pas.
 
-Respirez un bon coup !
+Respirez un bon coup !
 
-Consultez ensuite la page séparée [Dépannage d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) pour voir si votre problème est déjà décrit !
+Consultez ensuite la page séparée [Dépannage d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) pour voir si votre problème est déjà décrit !
 
 Si vous avez besoin de plus d'aide, contactez d'autres utilisateurs d'**AAPS** sur [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ou [Discord](https://discord.gg/4fQUWHZ4Mw).
