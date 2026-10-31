@@ -403,7 +403,7 @@ The [main screen](#AapsScreens-the-homescreen) of **AAPS** is not a plugin any m
 
 (Config-Builder-actions)=
 
-### Actions
+### Дії
 
 The Actions tab of **AAPS** 3.x no longer exists. Its buttons are now in the **Manage** sheet — see [Where did the Actions tab go?](#screens-action-tab).
 
