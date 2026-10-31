@@ -7,21 +7,21 @@ Estas instruções são para configurar a bomba de insulina Equil.
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Recursos da bomba com o AAPS
 
 * Bomba de patch sem tubo que se comunica com o **AAPS** pelo Bluetooth do próprio celular, sem um dispositivo de comunicação adicional.
 * O **AAPS** trata a Equil como uma bomba de patch com reservatório de 200 U: a tela principal mostra as luzes de status de bomba de patch, e **Purgar/Preencher** e **Troca de Bateria da Bomba** não são oferecidos. O preenchimento, a purga e a troca de bateria são feitos nos assistentes da bomba.
 * Enquanto a bomba está suspensa ou parada, o **AAPS** registra uma basal temporária de 0 U/h, para que nenhuma insulina basal seja contada no IOB.
 * As mudanças de horário de verão e de fuso horário devem ser feitas manualmente.
 
-## Hardware and software requirements
+## Requisitos de hardware e software
 * **Hardware Equil compatível**
 
   No momento, as versões Equil 5.3 e 5.4 são compatíveis.
 
 * **AAPS** compilado e instalado seguindo as instruções de [Compilar o APK](../SettingUpAaps/BuildingAaps.md)
 
-## Setup
+## Configuração
 
 ### Selecione a bomba Equil
 
@@ -78,14 +78,14 @@ O assistente tem estas etapas. Pressione **Seguinte** para continuar ou **Cancel
    ![Etapa Parear dispositivo com a senha de pareamento](../images/Equil/activate3.png)
 
 1. **Selecionar insulina**: só aparece se você tiver mais de uma insulina configurada. Selecione a insulina que está no reservatório.
-1. **Purgar / Preencher**: a bomba **não** pode estar na placa de base. Pressione **Purgar/Preencher** e purgue o reservatório até aparecer uma gota de insulina na ponta da agulha. Press **Next**.
+1. **Purgar / Preencher**: a bomba **não** pode estar na placa de base. Pressione **Purgar/Preencher** e purgue o reservatório até aparecer uma gota de insulina na ponta da agulha. Pressione **Seguinte**.
 
    ![Etapa Purgar / Preencher](../images/Equil/prime_fill.png)
 1. **Rotação do local**: só aparece se **Gerenciar rodízio do local da bomba** estiver ativado nas configurações de rotação do local. Toque no local onde você vai colocar a bomba ou pressione **Ignorar**.
 1. **Conectar a bomba**: encaixe a bomba na placa de base.
 
    ![Etapa Conectar a bomba](../images/Equil/attach_pump.png)
-1. **Purgar a cânula**: depois que a bomba estiver na placa de base, pressione **Purgar ar** para tirar o ar da cânula. Press **Next**.
+1. **Purgar a cânula**: depois que a bomba estiver na placa de base, pressione **Purgar ar** para tirar o ar da cânula. Pressione **Seguinte**.
 
    ![Etapa Purgar a cânula com o botão Purgar ar](../images/Equil/prime_cannula.png)
 
@@ -120,9 +120,9 @@ Depois que a bomba estiver pareada, a tela da bomba mostra estes botões:
 * Os alarmes e paradas da bomba também são registrados como anúncios nos tratamentos, no horário em que a bomba os registrou, para que você possa ver depois quando e por que a bomba parou.
 * Se o reservatório ficar vazio durante um bólus, o **AAPS** registra somente a insulina aplicada até aquele momento e informa as duas quantidades.
 
-## Where to get help
+## Onde obter ajuda
 
-O desenvolvimento do driver da Equil é feito pela comunidade de forma **voluntária**. Before requesting help, please:
+O desenvolvimento do driver da Equil é feito pela comunidade de forma **voluntária**. Antes de pedir ajuda:
 
 1. **Leia** a seção correspondente desta documentação para confirmar como a função deve funcionar.
 2. **Pergunte** no canal *#AAPS* do [Discord](https://discord.gg/4fQUWHZ4Mw) ou em um dos outros [canais da comunidade](../GettingHelp/WhereCanIGetHelp.md).
