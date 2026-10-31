@@ -57,7 +57,7 @@ Je voorinstellingen voor situaties, zie [Scènes](../DailyLifeWithAaps/Scenes.md
 (v4changes-manage)=
 ### Beheren: beheren en activeren
 
-In het menu **Beheren** beheer en activeer je al het andere: **[Profiel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insuline instellingen** (je insulineconfiguraties), **[Tijdelijk streefdoel](../DailyLifeWithAaps/TempTargets.md)**, voorinstellingen voor **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)**, **[Scènes](../DailyLifeWithAaps/Scenes.md)**, **Automatisering**, **Voeding**, **Site rotatie**, **Pomp**, **[Geautoriseerde clients](../RemoteFeatures/ClientMasterControl.md)**, en ook de pompacties die vroeger op het tabblad *Acties* stonden (**Vertraagde bolus**, **Annuleer tijdelijk basaal**, **Ontlucht/vul**, **Sensor ingebracht**, **Pomp bat. wissel**).
+In het menu **Beheren** beheer en activeer je al het andere: **[Profiel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insuline instellingen** (je insulineconfiguraties), **[Tijdelijk streefdoel](../DailyLifeWithAaps/TempTargets.md)**, voorinstellingen voor **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)**, **[Scènes](../DailyLifeWithAaps/Scenes.md)**, **Automatisering**, **Voeding**, **Site rotatie**, **Pomp**, **[Geautoriseerde clients](../RemoteFeatures/ClientMasterControl.md)**, en ook de pompacties die vroeger op het tabblad *Acties* stonden (**Vertraagde bolus**, **Annuleer tijdelijk basaal**, **Prime/Vul**, **Sensor ingebracht**, **Pomp bat. wissel**).
 
 ![Het menu Beheren onderaan](../images/v4/BehavioralChanges/manage_sheet.png)
 
@@ -70,7 +70,7 @@ Al je bestaande automatiseringsregels en voedingsitems blijven bewaard; alleen d
 
 * **Profiel wissel** en **Profiel percentage**: tik op de [profielnaam](#aaps-screens-profile--target) op het hoofdscherm, of ga naar **Beheren → Profiel**. Zie [Het Profiel percentage wijzigen](#ProfileSwitch-change-percentage).
 * **Tijdelijk streefdoel**: tik op het [streefdoel](#aaps-screens-profile--target) op het hoofdscherm, of ga naar **Beheren → Tijdelijk streefdoel**.
-* **Ontlucht/vul**, **Sensor ingebracht**, **BG Controle** en de andere careportal-items: in het uitgevouwen [statuspaneel](#aaps-screens-careportal), in **Beheren**, of als [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)-knoppen.
+* **Prime/Vul**, **Sensor ingebracht**, **BG Controle** en de andere careportal-items: in het uitgevouwen [statuspaneel](#aaps-screens-careportal), in **Beheren**, of als [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)-knoppen.
 * **Historie bekijken**, **Statistieken** (TDD): in het **menu** (☰).
 
 ```{admonition} Profile switch and profile percentage
@@ -122,15 +122,15 @@ Wil je de DIA of piek aanpassen? Voeg dan een nieuwe insuline toe met **+**, pas
 
 In **AAPS** v3 bediende **AAPSClient** **AAPS** door careportal-behandelingen naar Nightscout te schrijven, en kon het geen bolus toedienen.
 
-In **AAPS** v4 worden de client en de hoofdtelefoon één keer **gekoppeld**, en elke opdracht wordt ondertekend. De hoofdtelefoon controleert en bevestigt elke opdracht, en een client kan nu ook een bolus toedienen.
+In **AAPS** v4 worden de client en de AAPS-telefoon één keer **gekoppeld**, en elke opdracht wordt ondertekend. De AAPS-telefoon controleert en bevestigt elke opdracht, en een client kan nu ook een bolus toedienen.
 
 - Elke client heeft een **[rol](#client-master-control-roles)** die beperkt wat hij mag doen.
-- Zolang client besturing aan staat, staat de hoofdtelefoon in **[beveiligde modus](#client-master-control-hardened-mode)**: behandelingen en wijzigingen die je rechtstreeks in Nightscout invoert (de website, andere apps), worden niet meer toegepast.
+- Zolang client besturing aan staat, staat de AAPS-telefoon in **[beveiligde modus](#client-master-control-hardened-mode)**: behandelingen en wijzigingen die je rechtstreeks in Nightscout invoert (de website, andere apps), worden niet meer toegepast.
 - Elke client krijgt een **[eigen Nightscout-token](#client-master-control-own-token)** met alleen de rechten die hij nodig heeft.
 
 ```{admonition} What you need to do
 :class: important
-Koppel elke **AAPSClient** met de hoofdtelefoon: zie [Master ↔ Client besturing](#client-master-control). Met een admin-token op de hoofdtelefoon toont de hoofdtelefoon een QR-code die de client in één scan instelt en koppelt. Voerde je behandelingen vroeger in op de Nightscout-website? Voer ze dan voortaan in op een gekoppelde client.
+Koppel elke **AAPSClient** met de AAPS-telefoon: zie [Master ↔ Client besturing](#client-master-control). Met een admin-token op de AAPS-telefoon toont de AAPS-telefoon een QR-code die de client in één scan instelt en koppelt. Voerde je behandelingen vroeger in op de Nightscout-website? Voer ze dan voortaan in op een gekoppelde client.
 ```
 
 ---
