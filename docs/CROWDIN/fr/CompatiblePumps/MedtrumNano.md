@@ -9,7 +9,7 @@ Ces instructions sont pour la configuration de la pompe à insuline Medtrum.
 ```
 
 ## Fonctionnalités de la pompe avec AAPS
-* Toutes les fonctionnalités de boucle fonctionnent (SMB, TBR, etc.)
+* Toutes les fonctionnalités de boucle fonctionnent (SMB, DBT, etc.)
 * Gestion automatique de l'heure d'été et du fuseau horaire
 * Le bolus étendu n'est pas pris en charge par le pilote AAPS
 
@@ -17,11 +17,11 @@ Ces instructions sont pour la configuration de la pompe à insuline Medtrum.
 * **Base de pompe et réservoirs Medtrum compatibles**
     - Actuellement pris en charge 
         - Medtrum TouchCare Nano 200U avec les références de base de pompe  **MD0201** et **MD8201**.
-        - Medtrum TouchCare 300U avec la référence de base de pompe : **MD8301**.
+        - Medtrum TouchCare 300U avec la référence de base de pompe : **MD8301**.
         - Si vous avez un modèle non pris en charge et êtes prêt à faire un don de matériel ou à participer aux tests, veuillez nous contacter via discord [ici](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **AAPS compilé et installé** en suivant les instructions de [Compilation d'AAPS](../SettingUpAaps/BuildingAaps.md).
 * **Un téléphone Android compatible** avec une connexion Bluetooth BLE
-    - Voir les [Notes de Version](../Maintenance/ReleaseNotes.md) d'AAPS
+    - Voir les [notes de version](../Maintenance/ReleaseNotes.md) d'AAPS
 
 ## Avant de commencer
 
@@ -45,9 +45,9 @@ Un débit basal temporaire de zéro est possible avec la fonction « Déconnect
 Quand vous activez un patch avec **AAPS**, vous **DEVEZ** éteindre tous les autres appareils qui peuvent communiquer avec la base de pompe Medtrum, par exemple un PDM actif ou l'application Medtrum.
 ```
 
-### Étape 1 : Sélectionnez la pompe Medtrum
+### Étape 1 : Sélectionnez la pompe Medtrum
 
-#### Option 1 : Nouvelles installations
+#### Option 1 : Nouvelles installations
 
 Si vous installez **AAPS** pour la première fois, l'**Assistant de configuration** vous guide pendant la configuration. Choisissez **Medtrum** quand vous arrivez à l'étape **Pompe**.
 
@@ -55,7 +55,7 @@ En cas de doute, vous pouvez aussi choisir **Pompe virtuelle** et choisir **Medt
 
 ![Étape Pompe de l'Assistant de configuration](../images/setup-wizard/Wizard-Pump.png)
 
-#### Option 2 : l'écran Configuration
+#### Option 2 : l'écran Configuration
 
 Sur une installation existante, vous pouvez choisir la pompe **Medtrum** dans [Configuration > Pompe](#Config-Builder-pump) 
 
@@ -72,7 +72,7 @@ Une fois choisie, la carte **Medtrum** affiche deux boutons, **Paramètres** et 
 ![Écran de la pompe Medtrum avant l'association](../images/v4/Pumps/medtrum_pump_screen.png)
 
 (medtrum-step-2)=
-### Étape 2 : Modifier les paramètres Medtrum
+### Étape 2 : Modifier les paramètres Medtrum
 
 Appuyez sur **Paramètres** sur la carte **Medtrum** dans **Configuration** > **Pompe**. Vous pouvez aussi appuyer sur l'icône en forme d'engrenage en haut à droite de l'écran de la pompe Medtrum. Cela ouvre les **Paramètres de la pompe Medtrum** 
 
@@ -84,7 +84,7 @@ Il n'y a plus de paramètre **Numéro de série**. **AAPS** trouve votre base de
 
 #### Paramètres d'Alarme
 
-***Par défaut : Bip.***
+***Par défaut : Bip.***
 
 Ce paramètre change la façon dont la pompe vous avertit en cas d'alerte ou d'erreur.
 
@@ -95,7 +95,7 @@ Remarque  en mode silencieux, **AAPS** déclenche quand même l'alarme, selon l
 
 #### Notification sur l'alerte pompe
 
-***Par défaut : Activé.***
+***Par défaut : Activé.***
 
 Ce paramètre change la façon dont **AAPS** affiche les notifications pour les alertes non critiques de la pompe. Quand il est activé, une notification s'affiche sur le téléphone en cas d'alerte de la pompe, par exemple 
 - Batterie faible
@@ -107,7 +107,7 @@ Nous recommandons de le laisser activé quand les alarmes de la pompe sont régl
 (medtrum-patch-expiration)=
 #### Expiration du Patch
 
-***Par défaut : Activé.***
+***Par défaut : Activé.***
 
 Ce paramètre modifie le comportement du patch. Quand il est activé, le patch expire après 3 jours et donne une alerte sonore si le son est activé. Après 3 jours et 8 heures, le patch s'arrête de fonctionner.
 
@@ -165,7 +165,7 @@ Ouvrez **Paramètres** > **Alertes locales** 
 
 ##### Alerte si la pompe est hors de portée
 
-***Par défaut : Activé.***
+***Par défaut : Activé.***
 
 Ce paramètre est forcé à activé quand le pilote Medtrum est activé. Il vous avertit quand la pompe est hors de portée. Cela peut arriver quand la pompe est trop loin, ou quand elle ne répond pas à cause d'un patch ou d'une base de pompe défectueux, par exemple quand de l'eau s'infiltre entre la base de pompe et le patch.
 
@@ -365,7 +365,7 @@ La capture d'écran ci-dessus vient d'une version plus ancienne d'**AAPS**. Dans
 
 Quand vous passez à un nouveau téléphone, faites ceci 
 * [Exportez les paramètres](../Maintenance/ExportImportSettings.md) sur votre ancien téléphone.
-* Transférez le fichier de paramètres de l'ancien téléphone vers le nouveau, et importez-le dans **AAPS**. Cochez **Remplacer aussi les paramètres de la pompe** sur l'écran d'importation, sinon la session de patch n'est pas transférée sur le nouveau téléphone.
+* Transférez le fichier de paramètres de l'ancien téléphone vers le nouveau, et importez-le dans **AAPS**. Cochez **Remplacer aussi les paramètres de pompe** sur l'écran d'importation, sinon la session de patch n'est pas transférée sur le nouveau téléphone.
 
 Le fichier de paramètres importé doit venir de la session de patch que vous utilisez maintenant, sinon le patch ne se connectera pas (voir [Pompes sans tubulure](#ExportImportSettings-tubeless-pumps)).
 
@@ -400,7 +400,7 @@ Le patch peut donner différentes erreurs. Pour éviter des erreurs fréquentes�
 
 Tout le travail de développement du pilote Medtrum est fait par la communauté, de manière **bénévole**. Merci de vous en souvenir et de suivre les règles ci-dessous avant de demander de l'aide 
 
--  **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
+-  **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
 -  **Niveau 1 ** Si vous avez encore des problèmes que vous ne pouvez pas résoudre avec ce document, allez sur le canal *#Medtrum* sur **Discord** avec [ce lien d'invitation](https://discord.gg/4fQUWHZ4Mw).
 -  **Niveau 2 ** Cherchez dans les problèmes existants si votre problème a déjà été signalé dans [Issues](https://github.com/nightscout/AAPS/issues). S'il existe, merci de confirmer, commenter ou ajouter des informations sur votre problème. Sinon, créez un [nouveau problème (issue)](https://github.com/nightscout/AndroidAPS/issues) et joignez [vos fichiers log](../GettingHelp/AccessingLogFiles.md).
 -  **Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.**
