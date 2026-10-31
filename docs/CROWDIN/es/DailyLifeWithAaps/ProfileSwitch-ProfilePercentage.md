@@ -1,178 +1,178 @@
-# Profile switch & Profile Percentage
+# Cambio de perfil y porcentaje del perfil
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
+Esta sección explica qué es un **Cambio de perfil** y un **Porcentaje del perfil**. Puedes aprender a crear un **Perfil** en [Tu perfil de AAPS](#your-aaps-profile-create-and-edit-profiles).
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can offer be particularly beneficial for:
+Al empezar con **AAPS**, tienes que crear un **Perfil**, entender cómo hacer un **Cambio de perfil** y conocer el efecto de un **Porcentaje del perfil** en **AAPS**. Las funciones de **Cambio de perfil** o de **Porcentaje del perfil** pueden ser especialmente útiles para:
 
-- the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
+- el ciclo menstrual: en **Automatización** se puede configurar un ajuste de porcentaje del **Perfil**, para que **AAPS** se adapte a las distintas fases del ciclo hormonal y a la resistencia a la insulina esperada.
 
-- Exercise - a percentage adjustment within a **Profile** can be set up in **Automations** for exercise in order to reduce basal intake.
+- el ejercicio: en **Automatización** se puede configurar un ajuste de porcentaje del **Perfil** para el ejercicio, para reducir la basal.
 
-- Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
+- el trabajo nocturno o por turnos: se puede configurar un desplazamiento de hora en el **Perfil**. Cambia el número de horas del **Perfil** según cuánto más tarde o más temprano te vas a dormir o te despiertas.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+¿Por qué usar un **Porcentaje del perfil** en lugar de un ajuste temporal de la basal? Para ser más eficaz, un **Porcentaje del perfil** aplica una reducción o un aumento proporcional a: basal, ISF e I:C. Así **AAPS** calcula de forma equilibrada la insulina que administra. Reducir solo la basal en el **Perfil** de **AAPS** sirve de poco si el algoritmo sigue usando los mismos valores de ISF e I:C.
 
 (ProfileSwitch-change-percentage)=
 
-## Change the Profile Percentage from the main screen
+## Cambiar el porcentaje del perfil desde la pantalla principal
 
-You need at least one saved **Profile**. A **Profile Percentage** is always applied through a **Profile Switch**: you activate a **Profile** again, this time with a percentage.
+Necesitas al menos un **Perfil** guardado. Un **Porcentaje del perfil** siempre se aplica con un **Cambio de perfil**: activas otra vez un **Perfil**, esta vez con un porcentaje.
 
-```{admonition} Coming from AAPS 3? :class: note A long press on the profile name no longer opens the profile switch dialog. **Tap** the profile name, then tap the round **▶** button at the bottom right: it opens the same settings (percentage, duration, Activity temp target).
+```{admonition} ¿Vienes de AAPS 3? :class: note Una pulsación larga en el nombre del perfil ya no abre el diálogo de cambio de perfil. **Toca** el nombre del perfil y luego el botón redondo **▶** abajo a la derecha: abre los mismos ajustes (porcentaje, duración, objetivo temporal de Actividad).
 
-    <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
+    <br />1. En la pantalla principal, **toca el nombre del perfil** (junto al icono de la estrella). Se abre la [pantalla de Perfil](#ProfileSwitch-manage-v4) en la tarjeta del **Perfil** en uso, marcada como **ACTIVO**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![Toca el nombre del perfil en la pantalla principal para abrir la pantalla de Perfil](../images/ProfileSwitch2.png)
     
-    2. To keep the same **Profile**, leave the **ACTIVE** card selected. To change **Profile** at the same time, swipe to another card.
-    3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
-    4. Set the **Percentage** with **−** / **+** (steps of 5 %), or type it in (30 to 250 %). The field always starts at **100 %**: it does not show the percentage that is running now. For example, enter **80** for 20 % less insulin, or **120** for 20 % more.
-    5. Set the **Duration** in minutes:
-       * **0** keeps the new percentage until you make another **Profile Switch**;
-       * any other value ends the switch after that time, and **AAPS** goes back to the **Profile** that was running before.
+    2. Para mantener el mismo **Perfil**, deja seleccionada la tarjeta **ACTIVO**. Para cambiar también de **Perfil**, desliza a otra tarjeta.
+    3. Toca el botón redondo **▶** (**Activar**) abajo a la derecha. Se abre la pantalla **Activar**.
+    4. Ajusta el **Porcentaje** con **−** / **+** (pasos de 5 %), o escríbelo (de 30 a 250 %). El campo siempre empieza en **100 %**: no muestra el porcentaje que está en uso ahora. Por ejemplo, escribe **80** para un 20 % menos de insulina, o **120** para un 20 % más.
+    5. Ajusta la **Duración** en minutos:
+       * **0** mantiene el nuevo porcentaje hasta que hagas otro **Cambio de perfil**;
+       * cualquier otro valor termina el cambio después de ese tiempo, y **AAPS** vuelve al **Perfil** que estaba en uso antes.
     
-       ![The Activate screen set to 80 % for 60 minutes](../images/v4/Profiles/profile_activate_percentage.png)
+       ![La pantalla Activar con 80 % durante 60 minutos](../images/v4/Profiles/profile_activate_percentage.png)
     
-    6. Tap **▶ Activate** at the bottom of the screen. Check the summary in the **Profile switch** dialog and tap **OK**.
+    6. Toca **▶ Activar** en la parte de abajo de la pantalla. Revisa el resumen en el diálogo **Cambio de perfil** y toca **OK**.
     
-       ![The confirmation dialog — profile, percentage and duration](../images/v4/Profiles/profile_activate_confirm.png)
+       ![El diálogo de confirmación: perfil, porcentaje y duración](../images/v4/Profiles/profile_activate_confirm.png)
     
-    Back on the main screen, the profile name shows the percentage and the remaining time, for example *Normal (80%) (59')*, and turns yellow while a switch with a duration is running. A star marks the switch on the glucose graph. See [the main screen](#aaps-screens-profile--target).
+    De vuelta en la pantalla principal, el nombre del perfil muestra el porcentaje y el tiempo que queda, por ejemplo *Normal (80%) (59')*, y se pone amarillo mientras está en curso un cambio con duración. Una estrella marca el cambio en el gráfico de glucosa. Consulta [la pantalla principal](#aaps-screens-profile--target).
     
-    ![The main screen while an 80 % profile switch is running](../images/v4/Profiles/profile_switch_running.png)
+    ![La pantalla principal durante un cambio de perfil al 80 %](../images/v4/Profiles/profile_switch_running.png)
     
-    To **go back to 100 %** before the end, repeat the steps and keep **Percentage** at 100 and **Duration** at 0.
+    Para **volver al 100 %** antes del final, repite los pasos y deja el **Porcentaje** en 100 y la **Duración** en 0.
     
-    ```{admonition} One-tap percentages
+    ```{admonition} Porcentajes con un toque
     :class: tip
-    If you often use the same percentage (sport, illness), add a [Profile shortcut](#profile-shortcuts) to the Quick Launch bar, or create a [scene](Scenes.md). Both apply a profile with a preset percentage and duration in one tap.
+    Si usas a menudo el mismo porcentaje (deporte, enfermedad), añade un [acceso directo de perfil](#profile-shortcuts) a la barra de Lanzamiento rápido, o crea una [escena](Scenes.md). Ambos aplican un perfil con un porcentaje y una duración ya fijados, con un solo toque.
     
 
 (ProfileSwitch-manage-v4)=
 
-## Managing and activating profiles (Manage → Profile)
+## Administrar y activar perfiles (Administrar → Perfil)
 
-In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+En **AAPS** v4 los perfiles se administran y se activan desde la pantalla **Administrar** (navegación inferior) → **Perfil** (*«Gestionar y activar perfiles»*).
 
-The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 30.15 U*). Below the selected card you see that profile's details — **Units**, **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+La pantalla de Perfil muestra tus perfiles como un **carrusel de tarjetas que se deslizan**. La tarjeta del perfil en uso está marcada como **ACTIVO** y muestra su basal diaria total (p. ej. *∑ 30.15 U*). Debajo de la tarjeta seleccionada ves los detalles de ese perfil: **Unidades**, tipo de **Insulina** y los horarios de **IC**, **ISF**, **basal** y **objetivo**, con gráficos.
 
-![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+![La pantalla de Perfil: carrusel de perfiles, detalles y barra de acciones](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+Los botones de abajo actúan sobre el perfil **seleccionado**: **➕ Añadir**, **✏️ Editar**, **⧉ Duplicar** y **‘️ Borrar**, y el botón redondo **▶ Activar** a la derecha. Para saber cómo rellenar los cuatro horarios en el editor (IC / ISF / BAS / OBJ), consulta [Crear y editar perfiles](#your-aaps-profile-create-and-edit-profiles).
 
-**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+**⧉ Duplicar** usa el icono de dos cuadrados que se usa a menudo para *copiar*, pero no hay nada que pegar: crea la copia en un solo paso. Confirma *¿Duplicar el perfil "Normal"?* y se añade un nuevo perfil llamado *Normal copy* al final del carrusel. Queda seleccionado y listo para **✏️ Editar** (donde también puedes cambiarle el nombre). No es lo mismo que duplicar un **Cambio de perfil** pasado desde el Historial de tratamientos, que crea un nuevo perfil *con el porcentaje y el desplazamiento de hora aplicados*. Consulta [Guardar un cambio de perfil para usarlo más tarde](#ProfileSwitch-keep-for-later).
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **¿Solo ves el botón ▶ Activar?** Tus ajustes están protegidos, por eso la pantalla se abre en modo de solo lectura. Toca el **✏️ lápiz** en la barra superior e introduce tu contraseña de ajustes. Consulta [La protección de ajustes ahora también bloquea las pantallas de gestión](#v4changes-read-only-management).
 
-### Reordering profiles
+### Reordenar perfiles
 
-If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+Si tienes más de un perfil, puedes elegir su orden en el carrusel: toca el icono **Reordenar** (⇅, dos flechas hacia arriba y hacia abajo) en la barra superior. El indicador de página se sustituye por **botones de mover ◀ / ▶** con una indicación *posición / total*. Mueve la tarjeta del centro hacia antes o hacia después y luego confirma con **✓** (o descarta con **✕**). El nuevo orden se guarda una sola vez, cuando confirmas.
 
-![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+![Modo reordenar: botones de mover e indicación de posición](../images/v4/Profiles/profile_reorder.png)
 
-### Activating a profile
+### Activar un perfil
 
-Select a profile and tap **▶ Activate**. The **Activate** screen lets you tailor how the **Profile Switch** is applied:
+Selecciona un perfil y toca **▶ Activar**. La pantalla **Activar** te permite elegir cómo se aplica el **Cambio de perfil**:
 
-![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+![La pantalla Activar: porcentaje, duración, desplazamiento de hora, hora](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
-- **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
-- **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
-- **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
-- **Reuse** — appears when the running switch has a percentage other than 100 % or a time shift, for example **Reuse 80% 0h**. Tap it to fill in the same percentage and time shift, for instance to prolong a switch that is about to end.
+- **Porcentaje** (30–250 %, empieza en 100 % cada vez): escala todo el perfil. 100 % lo usa tal cual; por ejemplo, 70 % reduce un 30 % la basal y la dosis de insulina calculada (tanto bolos de comida como correcciones). No cambia tus objetivos de glucosa ni la absorción de carbohidratos. Consulta [Porcentaje del perfil](#profile-percentage) para ver el efecto completo.
+- **Duración** (0–10080 minutos, es decir, hasta 7 días): cuánto dura el cambio. **0 = sin límite** (hasta que vuelvas a cambiar); un valor distinto de cero vuelve al perfil anterior cuando termina.
+- **Objetivo temporal / Actividad**: aparece solo cuando pones una **Duración** y un **Porcentaje** por debajo del 100 %. Actívalo para iniciar también un [objetivo temporal de Actividad](#TempTargets-activity-temp-target) con la misma duración, como harías antes del ejercicio.
+- **Desplazamiento de hora**: muestra *0h*; toca **Cambiar** para mover el horario hacia delante o hacia atrás hasta 23 horas (útil para el trabajo por turnos o los viajes). Consulta [Desplazamiento de hora](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
+- **Reutilizar**: aparece cuando el cambio en uso tiene un porcentaje distinto del 100 % o un desplazamiento de hora, por ejemplo **Reutilizar 80% 0h**. Tócalo para rellenar el mismo porcentaje y el mismo desplazamiento de hora, por ejemplo para alargar un cambio que está a punto de terminar.
     
-    ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
+    ![El botón Reutilizar durante un cambio al 80 %](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+- **Hora**: *Ahora* por defecto. Puedes elegir otra hora, hasta 24 horas antes o después de ahora. Un cambio puesto en el futuro empieza a esa hora; un objetivo temporal de Actividad puesto con él también empieza a esa hora.
     
-    ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+    ![Elegir la hora de un cambio de perfil](../images/v4/Profiles/profile_activate_time_picker.png)
 
-- **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
+- **Notas**: solo se muestra si [Mostrar notas en los diálogos](#Preferences-show-notes-field-in-treatments-dialogs) está activado.
 
-If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
+Si las tasas basales con el porcentaje elegido no son compatibles con tu bomba, aparece un aviso arriba y **▶ Activar** queda desactivado: elige otro porcentaje.
 
-Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+Toca **▶ Activar** y luego **OK** en el diálogo de confirmación. El perfil en uso lleva entonces la marca **ACTIVO** en su tarjeta.
 
-```{admonition} Your pump may round the basal rates :class: note Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+```{admonition} Tu bomba puede redondear las tasas basales :class: note Cada bomba solo puede dar tasas basales en sus propios pasos (por ejemplo 0,05 U/h), por eso redondea las tasas de tu **Perfil**. Entonces **AAPS** usa la basal que la bomba da de verdad, así la IOB y la TDD siguen siendo correctas. Si la bomba da un poco más o menos insulina al día que tu **Perfil**, el aviso *«Perfil basal actualizado en la bomba»* te dice cuánto, por ejemplo *«da 10.00 U al día en lugar de 10.12 U»*.
 
-If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+Si la bomba informa de una basal muy distinta de tu **Perfil**, **AAPS** mantiene la basal del **Perfil** y te pide que revises las tasas basales en la bomba.
 
-    <br />```{admonition} Percentage and time shift make one profile go a long way
+    <br />```{admonition} Con el porcentaje y el desplazamiento de hora, un solo perfil sirve para mucho
     :class: note
-    Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+    En lugar de crear muchos perfiles parecidos, ten un perfil base y aplícalo con otro **porcentaje** u otro **desplazamiento de hora** en situaciones que se repiten (enfermedad, ejercicio, viajes). Esto es justo lo que automatizan las [escenas](Scenes.md).
     
 
-A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+Un cambio de perfil no se limita a esta pantalla. El mismo cambio también se puede iniciar desde un **reloj Wear OS**, un **cliente** emparejado (consulta [Control máster ↔ cliente](../RemoteFeatures/ClientMasterControl.md)), una **[escena](Scenes.md)** o una regla de **Automatización**.
 
-## Profile Percentage
+## Porcentaje del perfil
 
-It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
+Es importante entender las funciones básicas del **Porcentaje del perfil**. Si aplicas un aumento o una reducción en porcentaje a un **Cambio de perfil**, los parámetros de tu **Perfil** suben o bajan en ese mismo porcentaje.
 
-For example: a **Profile Switch** to 130% (means the user is 30% more insulin resistant) will instruct **AAPS** to
+Por ejemplo: un **Cambio de perfil** al 130 % (significa que eres un 30 % más resistente a la insulina) hace que **AAPS**:
 
-- **increase** the basal rate by 30%; 
-- **lower** the **ISF**: by dividing by 1.3;
-- **lower** the **I:C** by dividing by 1.3.
+- **aumente** la basal un 30 %; 
+- **baje** el **ISF**: lo divide entre 1,3;
+- **baje** el **I:C**: lo divide entre 1,3.
 
-Remember lowering the **ISF** or **I:C** means a stronger ratio and more insulin being administered. This fact can be easily overlooked by new users to **AAPS**.
+Recuerda: bajar el **ISF** o el **I:C** significa un ratio más fuerte y más insulina administrada. Los nuevos usuarios de **AAPS** olvidan esto con facilidad.
 
-Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or closed) will continue to work on top of the selected percentage **Profile**.
+Una vez seleccionado, **AAPS** ajusta la basal por defecto, y **AAPS** (lazo abierto o cerrado) sigue funcionando sobre el **Perfil** con el porcentaje seleccionado.
 
-The effect of a **Profile** Percentage is summarized in the table below:
+El efecto de un Porcentaje del **Perfil** se resume en la siguiente tabla:
 
-| Profile Switch  
-Percentage |    Effect    |    I:C  
-g/UI     | example  
-15g |         ISF  
-mmol/L/UI  
-mg/dL/UI         | UI to lower  
+| Porcentaje del  
+cambio de perfil |    Efecto    |     I:C  
+g/U     | ejemplo  
+15 g |          ISF  
+mmol/L/U  
+mg/dL/U          | U para bajar  
 2mmol/L  
 40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:-------------------------------:|
-|             90%             |    Weaker    | 5/0.9  
-=**5.55** |    2.7 UI     | 2.2/0.9  
-=**2.4**  
+|:---------------------------------:|:------------:|:-----------------:|:--------------:|:------------------------------------------:|:--------------------------------:|
+|               90 %                |  Más débil   | 5/0,9  
+=**5,55** |     2,7 U      | 2,2/0,9  
+=**2,4**  
   
-40/0.9  
-=**44.4** |             0.8 UI              |
-|          **100%**           | **Standard** |       **5**       |   **3 UI**    |                **2.2  
-40**                |           **0.9** UI            |
-|            130%             |   Stronger   | 5/1.3  
-=**3.85** |    3.9 UI     | 2.2/1.3  
-=**1.7**  
+40/0,9  
+=**44,4** |              0,8 U               |
+|             **100 %**             | **Estándar** |       **5**       |    **3 U**     |                **2,2  
+40**                |            **0,9** U             |
+|               130 %               |  Más fuerte  | 5/1,3  
+=**3,85** |     3,9 U      | 2,2/1,3  
+=**1,7**  
   
-40/1.3  
-=**30.8** |             1.2 UI              |
+40/1,3  
+=**30,8** |              1,2 U               |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
-## Time shift of the Circadian Percentage Profile
+## Desplazamiento de hora del perfil circadiano con porcentaje
 
-A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
+Un «desplazamiento de hora» en el **Perfil** mueve los ajustes del **Perfil** en el reloj del día («circadiano») el número de horas que indiques. Esto puede ser útil para:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
-- **users changing time zones during travelling**; or
-- **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
+- **personas que trabajan de noche o por turnos**: para los turnos de noche, cambia el número de horas del **Perfil** según cuánto más tarde o más temprano te vas a dormir o te despiertas; 
+- **personas que cambian de zona horaria al viajar**; o
+- **niños con diabetes tipo 1**: que tienen una rutina fija para ir a dormir y una resistencia a la insulina ya prevista en su **Perfil**. Si por cualquier motivo el niño se va a acostar más tarde, el cuidador puede aplicar un «desplazamiento de hora» al **Perfil** del niño. Así **AAPS** reacciona a la resistencia a la insulina en el momento deseado.
 
-It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. This time must be shifted by x hours. So please be mindful of the directions as described in the following example:
+La pregunta es siempre: ¿los ajustes del **Perfil** de qué hora deben sustituir a los ajustes de la hora actual? Esta hora se debe desplazar x horas. Por eso, ten cuidado con el sentido, como se describe en el siguiente ejemplo:
 
-- Current time: 12:00
-- **Positive** time shift 
+- Hora actual: 12:00
+- **Positivo** desplazamiento de hora 
     - 2:00 **+10 h** -> 12:00
-    - Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-- **Negative** time shift 
+    - Se usarán los ajustes de las 2:00 en lugar de los ajustes que se usan normalmente a las 12:00, por el desplazamiento de hora positivo.
+- **Negativo** desplazamiento de hora 
     - 22:00 **-10 h** -> 12:00
-    - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    - Se usarán los ajustes de las 22:00 (10 de la noche) en lugar de los ajustes que se usan normalmente a las 12:00, por el desplazamiento de hora negativo.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Sentido del desplazamiento de hora en el cambio de perfil](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Este mecanismo de guardar copias instantáneas del **Perfil** permite un cálculo mucho más preciso del pasado y permite seguir los cambios del **Perfil**.
 
 (ProfileSwitch-keep-for-later)=
 
-## Keep a profile switch for later use
+## Guardar un cambio de perfil para usarlo más tarde
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+Cuando hayas hecho un cambio de perfil con porcentaje y/o desplazamiento de hora, puedes copiar este perfil temporal en un nuevo perfil.
 
-To do this, open the menu (☰) → **Treatments** and go to the **Profile switch** tab, see [Clone a Profile switch to a new Profile](#your-aaps-profile-clone-profile-switch).
+Para hacerlo, abre el menú (☰) → **Tratamientos** y ve a la pestaña **Cambio de perfil**; consulta [Duplicar un cambio de perfil en un nuevo perfil](#your-aaps-profile-clone-profile-switch).
