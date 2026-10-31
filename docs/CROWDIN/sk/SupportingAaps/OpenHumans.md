@@ -98,7 +98,7 @@ Pozrite si aj [Podmienky používania Open Humans](https://www.openhumans.org/te
 
 ## Ochrana súkromia
 
-Open Humans chráni vaše súkromie tak, že vám pre každý projekt pridelí číselné ID. Projekty vás tak dokážu rozpoznať, ale nie identifikovať. ID aplikácie, ktoré AAPS nahráva, je podobné a pomáha iba pri správe dát. Viac informácií nájdete tu:
+Open Humans chráni vaše súkromie tak, že vám pre každý projekt pridelí číselné ID. This allows projects to recognize but not identify you. ID aplikácie, ktoré AAPS nahráva, je podobné a pomáha iba pri správe dát. Viac informácií nájdete tu:
 
 - [Zásady používania dát Open Humans](https://www.openhumans.org/data-use/)
 - [Open Humans a GDPR](https://www.openhumans.org/gdpr/)
