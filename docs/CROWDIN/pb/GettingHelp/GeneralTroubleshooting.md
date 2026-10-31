@@ -1,6 +1,6 @@
 (generaltroubleshooting)=
 
-# Troubleshooting
+# Resolução de problemas
 
 **Start here when something is not working.** Troubleshooting information lives on many pages across the documentation. This page brings it together: it is a single collection of links, sorted by topic, to help you solve the most common problems.
 
@@ -51,9 +51,9 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 (generaltroubleshooting-bluetooth-related-issues)=
 
 
-## Bluetooth related issues
+## Problemas relacionados ao Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Para problemas conhecidos com conexões Bluetooth, quedas de conexão de bombas/pods, ou problemas de ativação e de conexão, veja [Problemas relacionados ao Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
