@@ -21,7 +21,7 @@ Deze instructies gaan over het instellen van de Equil insulinepomp.
 
 * **AAPS** gebouwd en geïnstalleerd volgens de instructies in [APK bouwen](../SettingUpAaps/BuildingAaps.md)
 
-## Pomp koppelen
+## Instellen
 
 ### Equil-pomp kiezen
 
@@ -78,14 +78,14 @@ De wizard heeft deze stappen. Druk op **Volgende** om verder te gaan, of op **An
    ![Stap Apparaat koppelen met het koppelwachtwoord](../images/Equil/activate3.png)
 
 1. **Selecteer insuline**: verschijnt alleen als je meer dan één insuline hebt ingesteld. Kies de insuline die in het reservoir zit.
-1. **Prime / Vullen**: de pomp mag **niet** op de basisplaat zitten. Druk op **Ontlucht/Vul** en vul het reservoir voor tot er een druppel insuline aan de punt van de naald hangt. Press **Next**.
+1. **Prime / Vullen**: de pomp mag **niet** op de basisplaat zitten. Druk op **Ontlucht/Vul** en vul het reservoir voor tot er een druppel insuline aan de punt van de naald hangt. Druk op **Volgende**.
 
    ![Stap Prime / Vullen](../images/Equil/prime_fill.png)
 1. **Site rotatie**: verschijnt alleen als **Plaatsingslocatie pomp beheren** aan staat in de instellingen voor site rotatie. Tik op de plek waar je de pomp gaat plakken, of druk op **Overslaan**.
 1. **Pomp aanbrengen**: zet de pomp vast op de basisplaat.
 
    ![Stap Pomp aanbrengen](../images/Equil/attach_pump.png)
-1. **Canule vullen**: zodra de pomp op de basisplaat zit, druk je op **Verwijder lucht** om de lucht uit de canule te halen. Press **Next**.
+1. **Canule vullen**: zodra de pomp op de basisplaat zit, druk je op **Verwijder lucht** om de lucht uit de canule te halen. Druk op **Volgende**.
 
    ![Stap Canule vullen met de knop Verwijder lucht](../images/Equil/prime_cannula.png)
 
