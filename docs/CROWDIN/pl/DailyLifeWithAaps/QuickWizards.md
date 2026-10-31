@@ -12,7 +12,7 @@
 
 ## Otwieranie szybkiego kalkulatora
 
-Otwórz ekran **Zarządzaj** (dolny pasek nawigacji) i wybierz **Szybki kalkulator** (*„Zarządzaj presetami kalkulatora bolusa”*).
+Otwórz ekran **Zarządzaj** (dolny pasek nawigacji) i wybierz **Szybki kalkulator** (*„Zarządzaj ustawieniami szybkiego kalkulatora”*).
 
 ---
 
