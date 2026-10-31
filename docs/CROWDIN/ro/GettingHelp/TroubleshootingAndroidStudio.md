@@ -57,9 +57,9 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * [Check git installation](#BuildingAaps-steps-for-installing-git)
 
-  * if on Windows and the Git was just installed, you should restart your computer to make Git globally available after the installation
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * If Git is installed, you have restarted (if on windows), and Git still couldn't found:
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * Search your computer for a file "git.exe".
 
@@ -212,7 +212,7 @@ If you experience the above error message, you need to download a correct JVM ve
 
 ## Generează APK semnat generat cu succes cu 0 variante de construcție
 
-When you generate the signed apk, you might get the notification that generation was successfully but are told that this is with '0 build variants' were generated:
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ Your apk was built successfully and can be transferred to your phone!
 
 ## Apk not installed
 
-![aplicație telefon neinstalată](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * Asigurați-vă că ați transferat fișierul "app-release.apk" pe telefon.
 * This error usually means the new apk is signed with a different keystore than your installed **AAPS**. If you still have your previous keystore, select it and build again. Otherwise, see [Reinstalling AAPS with a new keystore](#reinstall-aaps).
