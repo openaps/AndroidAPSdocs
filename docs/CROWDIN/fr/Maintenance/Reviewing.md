@@ -6,7 +6,7 @@
 
 **AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Historique](../images/v4/Screens/history_browser.png)
 
 - Tap the **date card** to pick the day you want to review.
 - The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
@@ -93,7 +93,7 @@ Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your l
 At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
 
 (aaps-screens-treatments)=
-## Treatments history
+## Historique Traitements
 
 Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
 
@@ -159,7 +159,7 @@ The history of temporary targets can be seen here.
 
 ### Changement de profil
 
-![Changement profil](../images/TreatmentsView4.png)
+![Changement de profil](../images/TreatmentsView4.png)
 
 The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
 
