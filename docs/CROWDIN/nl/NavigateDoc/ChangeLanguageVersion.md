@@ -1,23 +1,23 @@
-# Change language and version
+# Taal en versie aanpassen
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+De documentatie die je nu leest, is in meerdere talen beschikbaar en hoort bij een bepaalde versie van **AAPS**. Je kunt zowel de taal als de versie aanpassen via het menu rechtsonder op het scherm.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Klik op de balk rechtsonder op het scherm om het menu voor taal en versie te openen.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Taalmenu openen](../images/documentation_language_menu.png)
 
 ## Taal aanpassen
 
-In the menu, select the language you want to read the documentation in.
+Kies in het menu de taal waarin je de documentatie wilt lezen.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Je bent van harte welkom om je bij de vertalers en proeflezers op [Crowdin](https://crowdin.com/project/androidapsdocs) aan te sluiten en de documentatie in jouw taal te helpen vertalen.
 
-## Change version
+## Versie aanpassen
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+De huidige versie staat rechtsonder op het scherm. Wil je naar een andere versie? Klik dan op de huidige versie en kies de versie die je nodig hebt.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Als je de taal en/of de versie aanpast, kun je de melding 404 - Page not found (pagina niet gevonden) krijgen als de pagina in die taal of versie niet bestaat. Dit gebeurt vaak bij het wisselen van versie, maar zou niet moeten gebeuren bij het wisselen van taal: de pagina wordt dan in het Engels getoond als hij nog niet vertaald is.
 ```
