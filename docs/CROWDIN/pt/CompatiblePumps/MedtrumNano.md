@@ -151,17 +151,17 @@ Estas definições não fazem parte do controlador Medtrum. Abra-as com o ícone
 
 Abra **Definições** > **Bomba**:
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Definições > Bomba](../images/preferences/settings_pump.png)
 
 O **Watchdog BT** desliga o Bluetooth do telefone durante um segundo se o **AAPS** não conseguir ligar-se à bomba. Pode ajudar em alguns telefones onde o Bluetooth bloqueia.
 
 Ative esta definição se tiver muitas vezes problemas de ligação com a bomba.
 
-#### Local alerts
+#### Alertas local
 
 Abra **Definições** > **Alertas locais**:
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Definições > Alertas locais](../images/preferences/settings_local_alerts.png)
 
 ##### Alertar se a bomba estiver inacessível
 
