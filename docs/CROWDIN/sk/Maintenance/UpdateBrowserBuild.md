@@ -24,7 +24,7 @@ Tento krok je povinný iba prvýkrát, pri ďalších aktualizáciách potom mô
 :local: true
 ```
 
-Ak máte problémy, pozrite samostatnú stránku [Riešenie problémov s Android Studiom](../GettingHelp/TroubleshootingAndroidStudio).
+In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Exportujte svoje nastavenia
 
