@@ -1,8 +1,8 @@
 # 設定檔切換及設定檔百分比
 
-本節將解釋什麼是**設定檔切換**和**設定檔百分比**。 You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
+本節將解釋什麼是**設定檔切換**和**設定檔百分比**。你可以在 [你的 AAPS 設定檔](#your-aaps-profile-create-and-edit-profiles)中，了解如何建立 **設定檔**。
 
-在開始你的**AAPS**之旅時，你需要創建一個**設定檔**，了解如何執行**設定檔切換**，並學習**AAPS**中**設定檔百分比**的影響。 The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+在開始你的**AAPS**之旅時，你需要創建一個**設定檔**，了解如何執行**設定檔切換**，並學習**AAPS**中**設定檔百分比**的影響。**設定檔切換**或**設定檔百分比**的功能，對以下情況特別有幫助：
 
 - 月經週期 - 可以在**自動化**中設定百分比調整，以便**AAPS**適應不同階段的荷爾蒙週期和預期的胰島素抗性。
 
@@ -14,96 +14,96 @@
 
 (ProfileSwitch-change-percentage)=
 
-## Change the Profile Percentage from the main screen
+## 從主畫面變更設定檔百分比
 
-You need at least one saved **Profile**. A **Profile Percentage** is always applied through a **Profile Switch**: you activate a **Profile** again, this time with a percentage.
+你至少需要一個已儲存的**設定檔**。**設定檔百分比**一律透過**設定檔切換**套用：再次啟用**設定檔**，並指定百分比。
 
-```{admonition} Coming from AAPS 3? :class: note A long press on the profile name no longer opens the profile switch dialog. **Tap** the profile name, then tap the round **▶** button at the bottom right: it opens the same settings (percentage, duration, Activity temp target).
+```{admonition} 從 AAPS 3 升級？ :class: note 現在長按設定檔名稱不會再開啟設定檔切換對話方塊。**點選**設定檔名稱，再點選右下方的圓形**▶**按鈕：這會開啟相同的設定（百分比、持續時間、活動臨時目標）。
 
-    <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
+    <br />1. 在主畫面上，**點選設定檔名稱**（星號圖示旁）。系統會開啟[設定檔畫面](#ProfileSwitch-manage-v4)，並顯示目前執行中的<strong>設定檔</strong>卡片，卡片上會標示<strong>作用中</strong>。
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![在主畫面點選設定檔名稱，開啟設定檔畫面](../images/ProfileSwitch2.png)
     
-    2. To keep the same **Profile**, leave the **ACTIVE** card selected. To change **Profile** at the same time, swipe to another card.
-    3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
-    4. Set the **Percentage** with **−** / **+** (steps of 5 %), or type it in (30 to 250 %). The field always starts at **100 %**: it does not show the percentage that is running now. For example, enter **80** for 20 % less insulin, or **120** for 20 % more.
-    5. Set the **Duration** in minutes:
-       * **0** keeps the new percentage until you make another **Profile Switch**;
-       * any other value ends the switch after that time, and **AAPS** goes back to the **Profile** that was running before.
+    2. 若要保留相同的<strong>設定檔</strong>，請維持選取<strong>作用中</strong>卡片。若要同時變更<strong>設定檔</strong>，請滑動至另一張卡片。
+    3. 點選右下方的圓形<strong>▶</strong>按鈕（<strong>啟用</strong>）。系統會開啟<strong>啟用</strong>畫面。
+    4. 使用<strong>−</strong>／<strong>+</strong>設定<strong>百分比</strong>（每次增減 5 %），或直接輸入數值（30 至 250 %）。欄位一律從 **100 %** 開始，不會顯示目前正在使用的百分比。例如，輸入 **80** 代表胰島素減少 20 %；輸入 **120** 則代表增加 20 %。
+    5. 以分鐘為單位設定<strong>持續時間</strong>：
+       * **0** 代表新百分比會持續套用，直到你再次進行<strong>設定檔切換</strong>；
+       * 輸入其他數值則會在時間到後結束切換，**AAPS** 會恢復使用切換前的<strong>設定檔</strong>。
     
-       ![The Activate screen set to 80 % for 60 minutes](../images/v4/Profiles/profile_activate_percentage.png)
+       ![將啟用畫面設定為 80 %，持續 60 分鐘](../images/v4/Profiles/profile_activate_percentage.png)
     
-    6. Tap **▶ Activate** at the bottom of the screen. Check the summary in the **Profile switch** dialog and tap **OK**.
+    6. 點選畫面底部的 **▶ 啟用**。在<strong>設定檔切換</strong>對話方塊中確認摘要，然後點選<strong>確定</strong>。
     
-       ![The confirmation dialog — profile, percentage and duration](../images/v4/Profiles/profile_activate_confirm.png)
+       ![確認對話方塊 — 設定檔、百分比和持續時間](../images/v4/Profiles/profile_activate_confirm.png)
     
-    Back on the main screen, the profile name shows the percentage and the remaining time, for example *Normal (80%) (59')*, and turns yellow while a switch with a duration is running. A star marks the switch on the glucose graph. See [the main screen](#aaps-screens-profile--target).
+    返回主畫面後，設定檔名稱會顯示百分比和剩餘時間，例如 *Normal (80%) (59')*。若目前正在執行有設定持續時間的切換，名稱會變成黃色。血糖圖表上會以星號標示這次切換。請參閱[主畫面](#aaps-screens-profile--target)。
     
-    ![The main screen while an 80 % profile switch is running](../images/v4/Profiles/profile_switch_running.png)
+    ![正在執行 80 % 設定檔切換時的主畫面](../images/v4/Profiles/profile_switch_running.png)
     
-    To **go back to 100 %** before the end, repeat the steps and keep **Percentage** at 100 and **Duration** at 0.
+    若要在時間結束前**恢復為 100 %**，請重複上述步驟，並將<strong>百分比</strong>設為 100、將<strong>持續時間</strong>設為 0。
     
-    ```{admonition} One-tap percentages
+    ```{admonition} 一鍵套用百分比
     :class: tip
-    If you often use the same percentage (sport, illness), add a [Profile shortcut](#profile-shortcuts) to the Quick Launch bar, or create a [scene](Scenes.md). Both apply a profile with a preset percentage and duration in one tap.
+    如果你經常使用相同的百分比（例如運動或生病時），可以將[設定檔捷徑](#profile-shortcuts)加入快速啟動列，或建立一個[場景](Scenes.md)。兩者都能透過點選一次，套用預先設定好百分比和持續時間的設定檔。
     
 
 (ProfileSwitch-manage-v4)=
 
-## Managing and activating profiles (Manage → Profile)
+## 管理及啟用設定檔（管理 → 設定檔）
 
-In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+在 **AAPS** v4 中，請從**管理**畫面（底部導覽列）→ **設定檔**（*「管理及啟用設定檔」*）管理及啟用設定檔。
 
-The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 30.15 U*). Below the selected card you see that profile's details — **Units**, **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+設定檔畫面會以**可滑動的卡片輪播**顯示你的設定檔。目前執行中的設定檔卡片會標示為**作用中**，並顯示每日基礎胰島素總量（例如 *∑ 30.15 U*）。在選取的卡片下方，你可以查看該設定檔的詳細資料，包括**單位**、**胰島素**類型，以及**IC**、**ISF**、**基礎率**和**目標**時程表與圖表。
 
-![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+![設定檔畫面 — 設定檔輪播、詳細資料和操作列](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+畫面底部的按鈕會對**選取的**設定檔執行操作：**➕ 新增**、**✏️ 編輯**、**⧉ 複製**和**🗑️ 刪除**；右側則是圓形的**▶ 啟用**按鈕。如需了解如何在編輯器中填寫四個時程表（IC／ISF／BAS／TARG），請參閱[建立及編輯設定檔](#your-aaps-profile-create-and-edit-profiles)。
 
-**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+**⧉ 複製**使用常見的雙方塊複製圖示，但不需要貼上；點選後就會立即建立副本。確認是否要*複製設定檔「Normal」*後，新的設定檔「Normal copy」就會新增至輪播末端並自動選取，供你**✏️ 編輯**（也可以重新命名）。這和從治療記錄中複製過去的**設定檔切換**不同；複製過去的設定檔切換會建立一個**已套用百分比和時間偏移**的新設定檔。請參閱[保留設定檔切換供日後使用](#ProfileSwitch-keep-for-later)。
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. See [Settings protection now also locks the management screens](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **只有 ▶ 啟用按鈕嗎？** 您的設定已受到保護，因此畫面會以唯讀模式開啟。點選頂端列中的 **✏️ 鉛筆**，然後輸入設定密碼。請參閱[設定保護現在也會鎖定管理畫面](#v4changes-read-only-management)。
 
-### Reordering profiles
+### 重新排列設定檔
 
-If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+如果您有多個設定檔，可以在輪播中選擇顯示順序：點選頂端列中的 **重新排列** 圖示（⇅，兩個上下箭頭）。頁面指示器會替換為 **◀ / ▶ 移動按鈕**，並顯示 *目前位置 / 總數* — 將置中的卡片往前或往後移動，再點選 **✓** 確認（或點選 **✕** 放棄變更）。確認時，新順序只會儲存一次。
 
-![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+![重新排列模式 — 移動按鈕與位置讀取值](../images/v4/Profiles/profile_reorder.png)
 
-### Activating a profile
+### 啟用設定檔
 
-Select a profile and tap **▶ Activate**. The **Activate** screen lets you tailor how the **Profile Switch** is applied:
+選取設定檔，然後點選 **▶ 啟用**。**啟用**畫面可讓您調整套用**設定檔切換**的方式：
 
-![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+![啟用畫面 — 百分比、持續時間、時間偏移、時間](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
-- **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
-- **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
-- **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
-- **Reuse** — appears when the running switch has a percentage other than 100 % or a time shift, for example **Reuse 80% 0h**. Tap it to fill in the same percentage and time shift, for instance to prolong a switch that is about to end.
+- **百分比**（30–250 %，每次都從 100 % 開始）— 調整整個設定檔的比例。 100 % 代表照原設定套用；例如，70 % 會讓基礎率和計算出的胰島素劑量（餐前注射和校正注射）都減少 30 %。這不會改變您的血糖目標或碳水化合物吸收設定。完整效果請參閱[設定檔百分比](#profile-percentage)。
+- **持續時間**（0–10080 分鐘，也就是最長 7 天）— 設定檔切換的持續時間。 **0 = 無限期**（直到您再次切換）；設定非 0 的時間，則時間結束後會切回先前的設定檔。
+- **臨時目標 / 活動** — 只有在設定了**持續時間**，且**百分比**低於 100 % 時才會顯示。開啟此選項，也會啟動持續時間相同的[活動臨時目標](#TempTargets-activity-temp-target)，就像運動前的設定一樣。
+- **時間偏移** — 顯示 *0h*；點選**變更**，即可將排程往前或往後移動最多 23 小時（適用於輪班工作或旅行）。請參閱[時間偏移](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)。
+- **重複使用** — 目前啟用的設定檔切換百分比不是 100 %，或有設定時間偏移時，才會顯示，例如 **重複使用 80% 0h**。點選此按鈕，即可填入相同的百分比和時間偏移，例如延長即將結束的設定檔切換。
     
-    ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
+    ![80 % 設定檔切換期間顯示的「重複使用」按鈕](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+- **時間** — 預設為*現在*。您可以選擇其他時間，範圍為現在之前或之後最多 24 小時。如果設定檔切換的開始時間設在未來，就會在該時間開始；一併設定的活動臨時目標也會在同一時間開始。
     
-    ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+    ![選擇設定檔切換的時間](../images/v4/Profiles/profile_activate_time_picker.png)
 
-- **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
+- **備註** — 只有在[在對話方塊中顯示備註](#Preferences-show-notes-field-in-treatments-dialogs)已開啟時才會顯示。
 
-If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
+如果所選百分比下的基礎率與您的幫浦不相容，畫面頂端會顯示警告，且**▶ 啟用**按鈕會停用：請選擇其他百分比。
 
-Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+點選**▶ 啟用**，再於確認對話方塊中點選**確定**。目前啟用的設定檔卡片上會顯示**已啟用**標籤。
 
-```{admonition} Your pump may round the basal rates :class: note Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+```{admonition} 您的幫浦可能會將基礎率四捨五入 :class: note 每種幫浦設定的基礎率調整幅度不同（例如 0.05 U/h），因此會將**設定檔**中的基礎率四捨五入。 **AAPS** 會使用幫浦實際輸注的基礎率，因此 IOB 和 TDD 都能保持正確。如果幫浦每天輸注的胰島素量比**設定檔**略多或略少，通知*「幫浦中的基礎率設定檔已更新」*會告知差異，例如*「每天輸注 10.00 U，而非 10.12 U」*。
 
-If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+如果幫浦回報的基礎率與**設定檔**相差甚遠，**AAPS** 會保留**設定檔**中的基礎率，並請您檢查幫浦中的基礎率設定。
 
-    <br />```{admonition} Percentage and time shift make one profile go a long way
+    <br />```{admonition} 透過百分比和時間偏移，讓一個設定檔適用更多情況
     :class: note
-    Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+    與其建立許多相似的設定檔，不如保留一個基礎設定檔，並在經常遇到的情況（生病、運動、旅行）下，套用不同的**百分比**或**時間偏移**。這正是[情境](Scenes.md)會自動處理的事項。
     
 
-A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+設定檔切換不只限於在此畫面操作。您也可以透過 **Wear OS 手錶**、已配對的**用戶端**（請參閱[主控端 ↔ 用戶端控制](../RemoteFeatures/ClientMasterControl.md)）、**[情境](Scenes.md)**或**自動化**規則觸發相同的設定檔切換。
 
 ## 設定檔百分比
 
@@ -126,24 +126,24 @@ A profile switch is not limited to this screen. The same switch can also be trig
 g/U     | 示例  
 15g |          ISF  
 mmol/L/U  
-mg/dL/U          | U to lower  
-2mmol/L  
-40mg/dL |
-|:-----------:|:------:|:-----------------:|:--------:|:------------------------------------------:|:------------------------------:|
+mg/dL/U          | 降低血糖  
+2 mmol/L  
+40 mg/dL 所需的胰島素量 |
+|:-----------:|:------:|:-----------------:|:--------:|:------------------------------------------:|:----------------------------------:|
 |     90%     |   較弱   | 5/0.9  
 =**5.55** |  2.7 U   | 2.2/0.9  
 =**2.4**  
   
 40/0.9  
-=**44.4** |             0.8 U              |
+=**44.4** |               0.8 U                |
 |  **100%**   | **標準** |       **5**       | **3 U**  |                **2.2  
-40**                |           **0.9** U            |
+40**                |             **0.9** U              |
 |    130%     |  更強大   | 5/1.3  
 =**3.85** |  3.9 U   | 2.2/1.3  
 =**1.7**  
   
 40/1.3  
-=**30.8** |             1.2 U              |
+=**30.8** |               1.2 U                |
 
 (設定檔切換-個人設定比例-生理時鐘比例的時間偏移)=
 
@@ -175,4 +175,4 @@ mg/dL/U          | U to lower
 
 一旦你以百分比和/或時間偏移進行了設定檔切換，你可以將此臨時設定檔的複製製作成新的設定檔。
 
-To do this, open the menu (☰) → **Treatments** and go to the **Profile switch** tab, see [Clone a Profile switch to a new Profile](#your-aaps-profile-clone-profile-switch).
+若要這麼做，請開啟選單（☰）→ **治療**，然後前往 **設定檔切換**分頁，請參閱[將設定檔切換複製到新的設定檔](#your-aaps-profile-clone-profile-switch)。
