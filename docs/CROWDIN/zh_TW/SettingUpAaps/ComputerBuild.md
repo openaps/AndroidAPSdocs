@@ -19,17 +19,17 @@
 
 * 可能需要特定版本的 **[Android Studio](https://developer.android.com/studio/)** 來建立 apk。見下表：
 
-| AAPS版本                      | 首選<br/>Android Studio<br/>版本 | 替代<br/>Android Studio<br/>版本 | Gradle | JVM |
-| --------------------------- | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
-| 2.6.2                       | 3.6.1                                    |                                          | 5.6.4  | 11  |
-| 2.8.2.1                     | 4.1.1                                    |                                          | 6.1.1  | 13  |
-| [3.1.0.3](#version3100)     | 2020.3.1                                 | 已測試至 Quail 4                             | 7.3.3  | 17  |
-| [3.2.0.4](#version3204)     | Hedgehog（2023.1.1）                       | 已測試至 Quail 4                             | 8.2    | 17  |
-| [3.3.1.3](#version3300)     | Ladybug功能更新（2024.2.2）                    | 已測試至 Quail 4                             | 8.10   | 21  |
-| [3.3.2](#version3300)       | Meerkat (2024.3.1)                       | 已測試至 Quail 4                             | 8.11.1 | 21  |
-| [3.3.2.1](#version3321)     | Narwhal (2025.1.2)                       | 已測試至 Quail 4                             | 8.13   | 21  |
-| [3.4.2.6](#version3426)     | Panda 2 (2025.3.2)                       | 已測試至 Quail 4                             | 9      | 21  |
-| [4.0.0-beta1](#version4000) | Rabbit 1                                 | 最新版本 Rabbit 1                            | 9.8    | 21  |
+| AAPS版本                                                                   | 首選<br/>Android Studio<br/>版本 | 替代<br/>Android Studio<br/>版本 | Gradle | JVM |
+| ------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------- | ------ |:--- |
+| 2.6.2                                                                    | 3.6.1                                    |                                          | 5.6.4  | 11  |
+| 2.8.2.1                                                                  | 4.1.1                                    |                                          | 6.1.1  | 13  |
+| [3.1.0.3](https://github.com/nightscout/AndroidAPS/releases/tag/3.1.0.3) | 2020.3.1                                 | 已測試至 Quail 4                             | 7.3.3  | 17  |
+| [3.2.0.4](#version3204)                                                  | Hedgehog（2023.1.1）                       | 已測試至 Quail 4                             | 8.2    | 17  |
+| [3.3.1.3](#version3300)                                                  | Ladybug功能更新（2024.2.2）                    | 已測試至 Quail 4                             | 8.10   | 21  |
+| [3.3.2](#version3300)                                                    | Meerkat (2024.3.1)                       | 已測試至 Quail 4                             | 8.11.1 | 21  |
+| [3.3.2.1](#version3321)                                                  | Narwhal (2025.1.2)                       | 已測試至 Quail 4                             | 8.13   | 21  |
+| [3.4.2.6](#version3426)                                                  | Panda 2 (2025.3.2)                       | 已測試至 Quail 4                             | 9      | 21  |
+| [4.0.0](#version400)                                                     | Rabbit 2 (2026.2.2)                      | Latest                                   | 9.8    | 21  |
 
 "首選版本"已打包與適當的JVM版本。首選版本也是你可以用來建立**AAPS**的最小版本。你**無法**在比"首選"版本更舊的版本上建立。如果使用不同的版本，你可能會遇到與JVM版本相關的問題。請參閱 [Android Studio 問題排除](#troubleshooting_androidstudio-uncommitted-changes) 頁面以協助解決這些問題。如果你當前的 Android Studio 版本未在表格中列出，你必須先更新它。
 
@@ -41,27 +41,27 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 <tbody>
   <tr>
     <th class="tg-baqh">作業系統（僅限64位）</th>
-    <td class="tg-baqh">Windows 8或更高版本</td>
-    <td class="tg-baqh">Mac OS 10.14或更高版本</td>
-    <td class="tg-baqh">任何支援Gnome、KDE或Unity DE的Linux;&nbsp;&nbsp;GNU C Library 2.31或更新版本</td>
+    <td class="tg-baqh">Windows 10 or higher</td>
+    <td class="tg-baqh">macOS 12 or higher</td>
+    <td class="tg-baqh">Any Linux distribution that supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library (glibc) 2.31 or later</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">CPU（僅限64位）</th>
-    <td class="tg-baqh">x86_64 CPU架構；第二代Intel Core或更新版本，或支援<a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a>的AMD CPU</td>
-    <td class="tg-baqh">ARM架構晶片，或支援<a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a>的第二代Intel Core或更新版本</td>
-    <td class="tg-baqh">x86_64 CPU架構；第二代Intel Core或更新版本，或支援AMD虛擬化（AMD-V）和SSSE3的AMD處理器</td>
+    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with <a href="https://developer.android.com/studio/install" target="_blank" rel="noopener noreferrer">virtualization support</a> (Intel VT-x or AMD-V) enabled in the BIOS</td>
+    <td class="tg-baqh">Apple Silicon (M1 or newer), or 6th generation Intel Core or newer (support for Intel Macs is being phased out)</td>
+    <td class="tg-baqh">x86_64 CPU from 2017 or newer (Intel 8th generation Core i5, AMD Ryzen, or newer) with virtualization support (Intel VT-x or AMD-V) enabled in the BIOS</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">記憶體</th>
-    <td class="tg-baqh" colspan="3"><p align="center">16GB 或更多</td>
+    <td class="tg-baqh" colspan="3"><p align="center">16GB or more (8GB is the strict minimum for Android Studio alone, 32GB is recommended)</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">硬碟</th>
-    <td class="tg-baqh" colspan="3"><p align="center">至少30GB的可用空間。建議使用SSD。</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 32GB free space. 建議使用SSD。</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">解析度</th>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 最小<br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 minimum (1920 x 1080 recommended)<br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">網際網路</th>
