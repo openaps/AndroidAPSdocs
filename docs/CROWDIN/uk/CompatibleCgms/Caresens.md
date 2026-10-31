@@ -1,29 +1,29 @@
 # CareSens
 
-There are different ways to use CareSens data with **AAPS**:
+Є різні способи використовувати дані CareSens з **AAPS**:
 
 - xDrip
 - Juggluco
 
-**Note:** You do not need the Sens365 follower app to connect to AAPS.
+**Примітка:** для підключення до AAPS вам не потрібен застосунок для стеження Sens365.
 
 ## 1. xDrip
 
-1. Install and set up the official CareSens app.
-2. In CareSens app, go to settings -> Manage Data and Connections -> turn on xDrip switch. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
+1. Установіть і налаштуйте офіційний застосунок CareSens.
+2. У застосунку CareSens перейдіть у settings -> Manage Data and Connections -> увімкніть перемикач xDrip. За бажанням вимкніть підключення даних до CareLevo, DIA:CONN, CloudLoop тощо в розділі «others».
 
-![CareSens App Data Connections](../images/eversenseapp-dataconnections.png)
+![Підключення даних у застосунку CareSens](../images/eversenseapp-dataconnections.png)
 
 
-2. Install xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
-3. In xDrip, go to settings -> hardware data source, select `Companion App` as data source.
-4. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+2. Установіть xDrip: [xDrip](https://github.com/NightscoutFoundation/xDrip).
+3. У xDrip перейдіть у settings -> hardware data source, виберіть `Companion App` як джерело даних.
+4. В **AAPS** виберіть xDrip у [**Конфігурація → Джерело ГК**](#Config-Builder-bg-source).
 
 
 ## 2. Juggluco
 
-1. Install the Juggluco app.
-2. In Juggluco, open the left menu and select `Photo`
-3. Scan the QR code on the package of the sensor.
-4. In left menu -> settings -> exchange data make sure xDrip broadcast is turned on.
-5. In **AAPS**, select xDrip in [**Configuration → BG Source**](#Config-Builder-bg-source).
+1. Установіть застосунок Juggluco.
+2. У Juggluco відкрийте ліве меню та виберіть `Photo`
+3. Відскануйте QR-код на упаковці сенсора.
+4. У лівому меню -> settings -> exchange data переконайтеся, що xDrip broadcast увімкнено.
+5. В **AAPS** виберіть xDrip у [**Конфігурація → Джерело ГК**](#Config-Builder-bg-source).
