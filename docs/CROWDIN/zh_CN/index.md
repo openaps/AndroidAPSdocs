@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- xx xxxx 202x : Version {{ aaps_version }}.x.x is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
+ 31 October 2026 : Version 4.0.0 is out. Check the [Release Notes](#latestrelease) to see what's new and follow the instructions in the [update manual](./Maintenance/UpdateToNewVersion.md) to update.
 
 ```
 
@@ -51,7 +51,7 @@ Section **12) Resources**, contains archived or additional documentation, includ
 :class: danger
 **AAPS**的安全性依赖于你的硬件装备（手机、泵、动态）的安全性能。请务必使用经FDA/CE认证且功能完整的胰岛素泵及动态血糖仪（CGM）。禁止使用损坏、改装或自制的胰岛素泵或动态血糖仪。泵和动态一定要使用原装或者厂商认证的耗材（助针器、管路和储药器）。非官方测试或改装配件可能导致数据误差及胰岛素输注错误，从而对使用者构成重大风险。 
 
-请勿在使用SGLT-2抑制剂（格列净类药物）期间使用**AAPS**。此类药物会降低血糖水平。由于胰岛素输注量减少及血糖水平降低，可能增加糖尿病酮症酸中毒（DKA）及低血糖风险。 
+请勿在使用SGLT-2抑制剂（格列净类药物）期间使用**AAPS**。 You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
 ```
 
 ```{admonition} Disclaimer
