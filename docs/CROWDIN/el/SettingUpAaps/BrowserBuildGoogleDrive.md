@@ -3,7 +3,7 @@
 # Δημιουργία μέσω browser – Βήμα 3: Εξουσιοδότηση του Google Drive
 
 ```{note}
-Αυτό είναι το **Βήμα 3** της [Δημιουργίας μέσω browser](BrowserBuild.md). Ολοκληρώστε πρώτα το [Βήμα 2 – Δημιουργήστε το keystore υπογραφής σας](BrowserBuildKeystore.md).
+Αυτό είναι το **Βήμα 3** της [Δημιουργίας μέσω browser](BrowserBuild.md). Ολοκληρώστε πρώτα το [Βήμα 2 – Δημιουργία του keystore υπογραφής σας](BrowserBuildKeystore.md).
 ```
 
 ```{warning}
