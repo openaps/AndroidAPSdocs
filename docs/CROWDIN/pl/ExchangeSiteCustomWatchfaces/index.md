@@ -1,6 +1,6 @@
-# Wymiana niestandardowych tarcz zegarka
+# Wymiana własnych tarcz zegarka
 
-Tutaj możesz pobrać pliki Zip z niestandardowymi tarczami zegarka, które przygotowali użytkownicy i chcą się nimi z Tobą podzielić.
+Tutaj możesz pobrać pliki Zip z własnymi tarczami zegarka, które przygotowali użytkownicy i chcą się nimi z Tobą podzielić.
 
 Pliki Zip możesz jak zwykle wgrać do folderu „**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**” przez Pull Request w GitHub.
 
@@ -18,5 +18,5 @@ Podczas scalania pull requesta zespół dokumentacji wypakuje plik CustomWatchfa
 |    [![Robby watchface](../images/ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png) <br>**Robby watchface**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Robby_watchface.zip)    |        [![SimpleDigital](../images/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png) <br>**SimpleDigital**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3.zip)         |            [![SteamPunk](../images/ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br>**AAPS (SteamPunk)**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/SteamPunk.zip)            |
 |               [![SteamPunk](../images/ExchangeSiteCustomWatchfaces/Blue_Ring-CustomWatchface.jpg) <br/>**Blue Ring**](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/Blue_Ring.zip)                | [![AAPSV2 TT DarkOnly](../images/ExchangeSiteCustomWatchfaces/AAPSV2_TT_DarkOnly-CustomWatchface.png) <br/>**AAPSV2 + TT DarkOnly** *](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/ExchangeSiteCustomWatchfaces/AAPSV2_TT_DarkOnly.zip) |                                                                                                                                                                                                                                                                    |
 
-*Wymaga zainstalowanej na zegarku Wear niestandardowej tarczy zegarka (Custom WatchFace) w wersji V2 lub nowszej (AAPS V3.3.0 lub nowszy)
+*Wymaga zainstalowanej na zegarku Wear własnej tarczy zegarka (Custom WatchFace) w wersji V2 lub nowszej (AAPS V3.3.0 lub nowszy)
 
