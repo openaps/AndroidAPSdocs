@@ -8,7 +8,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 The [Omnipod System](https://www.omnipod.com/current-podders/resources/omnipod-system) (the original Omnipod, comprising both the Personal Diabetes Manager (PDM) and the Pod) is being discontinued, and the end date varies by country. For example, it will no longer be available in Canada after 30 June 2026. If you rely on the Eros pump, plan ahead for a transition to a supported pump.
 ```
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Você é o único responsável pelo que faz com ele.**
 
 ```{contents} Table of contents
 :depth: 1
@@ -43,7 +43,7 @@ These instructions assume that you are starting a new pod session. If this is no
 
 In this page, **RileyLink** means any of the pod communication devices listed above.
 
-## Before you begin
+## Antes de começar
 
 **SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
 
