@@ -158,17 +158,17 @@ Los ajustes de la [fuente de glucosa](#Config-Builder-bg-source) que elegiste ap
 
 ![Ajustes > xDrip+ BG](../images/preferences/settings_xdrip.png)
 
-- **Subir datos de glucemia a Nightscout**: deja que **AAPS** suba a Nightscout los valores de glucosa recibidos. Actívalo solo si la propia aplicación del CGM no los sube ya.
+- **Subir datos de glucemia a Nightscout**: deja que **AAPS** suba a Nightscout los valores de glucosa recibidos. Actívalo solo si la propia aplicación del MCG no los sube ya.
 - **Registrar cambio de sensor**: crea de forma automática un evento de terapia de cambio de sensor cuando se inserta el sensor.
 
 ## La pantalla principal
 
-En **AAPS** 3.x estos ajustes estaban agrupados en una sección «Overview» (Resumen). En **AAPS** 4 se configuran directamente desde los elementos de la pantalla principal a los que pertenecen.
+En **AAPS** 3.x estos ajustes estaban agrupados en una sección «Inicio». En **AAPS** 4 se configuran directamente desde los elementos de la pantalla principal a los que pertenecen.
 
 (Preferences-buttons)=
 ### Botones de Lanzamiento Rápido
 
-Define qué botones de acción se ven en la pantalla principal: pulsa la pequeña **rueda dentada** abajo en el centro de la pantalla principal («Configurar Lanzamiento Rápido») y pulsa **Añadir** para las acciones a las que quieres acceder rápido (tratamientos, acciones del CGM, entradas del portal de cuidados...).
+Define qué botones de acción se ven en la pantalla principal: pulsa la pequeña **rueda dentada** abajo en el centro de la pantalla principal («Configurar Lanzamiento Rápido») y pulsa **Añadir** para las acciones a las que quieres acceder rápido (tratamientos, acciones del MCG, entradas del portal de cuidados...).
 
 ![KEEP](../images/preferences/quicklaunch_config.png)
 
@@ -192,7 +192,7 @@ Los [objetivos temporales (TT)](../DailyLifeWithAaps/TempTargets.md) te permiten
 
 Pulsa el **rango objetivo** en la pantalla principal para abrir la pantalla **Objetivo temporal**. Desliza entre las tarjetas de ajustes preestablecidos (Comiendo Pronto, Actividad, Hipo) y cambia el objetivo y la duración de cada uno en **Ajustes preestablecidos**. Los valores preestablecidos son:
 
-* Comiendo pronto: objetivo 90 mg/dl / 5,0 mmol/l, duración 45 min
+* Comiendo Pronto: objetivo 90 mg/dl / 5,0 mmol/l, duración 45 min
 * Actividad: objetivo 140 mg/dl / 7,8 mmol/l, duración 90 min
 * Hipo: objetivo 160 mg/dl / 8,9 mmol/l, duración 60 min
 
@@ -310,7 +310,7 @@ Ajuste oculto en el [modo sencillo](#preferences-simple-mode).
 
 El algoritmo usa el BGI (impacto en la glucosa) para saber cuándo [se absorben los carbohidratos](../DailyLifeWithAaps/CobCalculation.md).
 
-Cuando la absorción de carbohidratos no se puede calcular de forma dinámica a partir de la reacción de tu glucosa, **AAPS** aplica a tus carbohidratos una absorción por defecto. Básicamente, es una medida de seguridad. Este valor solo se usa cuando faltan lecturas del **CGM** o cuando la actividad física «gasta» toda la subida de glucosa que, si no, haría que **AAPS** redujera el COB.
+Cuando la absorción de carbohidratos no se puede calcular de forma dinámica a partir de la reacción de tu glucosa, **AAPS** aplica a tus carbohidratos una absorción por defecto. Básicamente, es una medida de seguridad. Este valor solo se usa cuando faltan lecturas del **MCG** o cuando la actividad física «gasta» toda la subida de glucosa que, si no, haría que **AAPS** redujera el COB.
 
 Dicho de forma sencilla: el algoritmo «sabe» cómo *debería* comportarse tu glucosa con la dosis actual de insulina, etc. Siempre que hay una desviación positiva respecto al comportamiento esperado, se absorben/reducen algunos carbohidratos. Cambio grande = muchos carbohidratos, etc.
 
@@ -391,13 +391,13 @@ Mientras el control del cliente está activo (siempre en el Modo sencillo), esto
 - Las opciones de alarmas te permiten elegir qué alarmas de Nightscout usar en la aplicación. **AAPS** dará una alarma cuando se active una alarma de Nightscout.
 - Para que las alarmas suenen, tienes que fijar los valores de las alarmas Urgent High, High, Low y Urgent Low en tus [variables de Nightscout](https://nightscout.github.io/nightscout/setup_variables/#alarms).
 - Solo funcionan mientras tienes conexión con Nightscout y están pensadas para padres y cuidadores.
-- Si tienes la fuente del **CGM** en tu teléfono (p. ej., xDrip o BYODA), usa esas alarmas en lugar de las alarmas de Nightscout.
+- Si tienes la fuente del **MCG** en tu teléfono (p. ej., xDrip o BYODA), usa esas alarmas en lugar de las alarmas de Nightscout.
 - Avisos de Nightscout repite los [avisos (announcements)](https://nightscout.github.io/nightscout/discover/#announcement) de Nightscout en las notificaciones de **AAPS**.
 - Puedes cambiar el umbral de las alarmas de datos antiguos y datos antiguos urgentes, que suenan cuando no se reciben datos de Nightscout durante cierto tiempo.
 
 ### Control remoto
 
-El interruptor «**Permitir el control del cliente**» ya no está en estos ajustes: está arriba en **Administrar → Clientes autorizados**, donde se gestionan los clientes emparejados. Consulta la página [Control Máster / Cliente](../RemoteFeatures/ClientMasterControl.md), que incluye el [modo reforzado](#client-master-control-hardened-mode), que este interruptor activa.
+El interruptor «**Permitir el control del cliente**» ya no está en estos ajustes: está arriba en **Administrar → Clientes autorizados**, donde se gestionan los clientes emparejados. Consulta la página [Control máster ↔ cliente](../RemoteFeatures/ClientMasterControl.md), que incluye el [modo reforzado](#client-master-control-hardened-mode), que este interruptor activa.
 
 ### KEEP
 
@@ -423,7 +423,7 @@ Más información en la página de [Comandos SMS](../RemoteFeatures/SMSCommands.
 (preferences-wear)=
 ## Reloj
 
-Esta sección se muestra cuando el complemento **Reloj** está activado en [Configuración > Comunicación](#Config-Builder-wear). Más información en las páginas [Reloj inteligente Wear OS](../WearOS/WearOsSmartwatch.md) y [Manejar AAPS con tu reloj inteligente Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
+Esta sección se muestra cuando el complemento **Reloj** está activado en [Configuración > Comunicación](#Config-Builder-wear). Más información en las páginas [Reloj inteligente Wear OS](../WearOS/WearOsSmartwatch.md) y [Manejo de AAPS con tu reloj inteligente Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 ![Ajustes > Reloj](../images/preferences/settings_wear.png)
 
