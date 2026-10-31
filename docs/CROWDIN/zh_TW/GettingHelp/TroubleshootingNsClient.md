@@ -8,11 +8,11 @@ NSClient 依賴於與 Nightscout 的穩定連線。不穩定的連線會導致�
 
 * 如何偵測不穩定的連線？
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. 如果看到很多重新連線訊息，則表示有問題。
+開啟 NSClient 畫面（**組態** > **通訊** > **NSClientV3** > **開啟外掛**），並留意**狀態**和記錄檔。啟用 WebSocket 後，狀態應維持為「已連線」，而且記錄檔中幾乎不會出現重新連線訊息。如果看到很多重新連線訊息，則表示有問題。
 
 * 重新啟動
 
-As a first step, restart Nightscout and then your phone to see if the issue is permanent.
+首先，請重新啟動 Nightscout，接著重新啟動手機，確認問題是否持續發生。
 
 如果你的 Nightscout 是託管在 Heroku 上，可以登入 Heroku，點擊你的 Nightscout 應用名稱，點擊「更多」選單，然後選擇「重新啟動所有 dynos」。
 
@@ -34,7 +34,7 @@ Azure 連線問題的解決方法是在應用程式設定中將 HTTP 協議設�
 
 * Nightscout 沒有血糖讀取值
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+如果 **AAPS** 能正常連線至 Nightscout，但血糖顯示為 N/A，請在 [NSClientV3 設定](#Preferences-nsclient)中開啟**同步**，並啟用**從 NS 接收 CGM 資料**。啟用用戶端控制時，此選項會隱藏（[強化模式](#client-master-control-hardened-mode)）；在這種情況下，請確認已在**組態** → **血糖來源**中選取 **NSClient 血糖**。
 
 * 如果仍然出現錯誤…
 
