@@ -1,4 +1,4 @@
-# Compatible Pumps
+# Pompes compatibles
 
 AAPS fonctionne avec un certain nombre de pompes à insuline. La liste suivante montre les appareils pris en charge actuellement. Elle indique entre parenthèses si AAPS communique avec la pompe via le Bluetooth intégré de votre téléphone, ou s'il faut un appareil compatible RileyLink.
 
@@ -38,12 +38,12 @@ AAPS fonctionne avec un certain nombre de pompes à insuline. La liste suivante 
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([appareil de communication supplémentaire](#CompatiblePumps-additional-communication-device) nécessaire)
 
-## My pump is not listed
+## Ma pompe n'est pas dans la liste
 
 L'état des autres pompes qui pourraient fonctionner avec AAPS est décrit sur la page [Pilotes de pompe futurs (possibles)](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Périphérique de communication additionnel
 
 Si aucun appareil de communication supplémentaire n'est mentionné, la communication entre la pompe à insuline et **AAPS** utilise le Bluetooth intégré d'Android. Aucun appareil supplémentaire n'est alors nécessaire pour traduire le protocole de communication.
 
