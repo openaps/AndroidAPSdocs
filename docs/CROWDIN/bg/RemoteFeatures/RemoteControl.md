@@ -46,7 +46,7 @@
 
 ![изображение](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-След това отидете в _изтеглените файлове_ (downloads) на компютъра. В Windows -downloads_ (изтеглени файлове) ще покаже лентата вдясно:
+След това отидете в _изтеглените файлове_ (downloads) на компютъра. On Windows, _downloads_ will show in the right hand ribbon:
 
 ![изображение](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
@@ -62,7 +62,7 @@ APK файлът на **AAPSClient** вече може да бъде:
 
 ### Синхронизация: настройка на AAPSClient и AAPS
 
-След като APK файлът на __AAPSClient__ е инсталиран на телефона на последователя, уверете се, че **NSClientV3** е настроен по един и същ начин на двата телефона за Nightscout 15 (вижте [бележките за обновяване](../Maintenance/UpdateToNewVersion)). Примерът по-долу показва настройката на синхронизацията с NSClientV3 и Nightscout 15. В __AAPS__ има и други източници на данни (напр. xDrip).
+Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). Примерът по-долу показва настройката на синхронизацията с NSClientV3 и Nightscout 15. В __AAPS__ има и други източници на данни (напр. xDrip).
 
 В **Конфигурация** > **Комуникация** потребителят синхронизира данните си с Nightscout чрез __NSClientV3__ (с API v3), настроен по един и същ начин и в __AAPS__, и на телефона на последователя.
 
@@ -279,7 +279,7 @@ APK файлът на **AAPSClient** вече може да бъде:
 
 Смарт часовникът трябва да е с **Wear OS 3 или по-нова**, за да може да управлява **AAPS**. Моля, проверете техническите характеристики на часовника и вижте страницата [Смарт часовници и AAPS](../Getting-Started/Watches.md). Потърсете или попитайте във Facebook/Discord групите на **AAPS**, ако не сте сигурни.
 
-По-долу има конкретни ръководства за настройка на **AAPS** на популярния [Samsung Galaxy Watch 4 (40mm). Часовникът [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) също е популярен избор. Ако имате опит с настройката на друг смарт часовник и смятате, че ще е полезен за други, моля, добавете го в тези страници ([редактирайте документацията](../SupportingAaps/HowToEditTheDocs.md)), за да споделите опита си с цялата общност на **AAPS**.
+Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. Часовникът [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) също е популярен избор. Ако имате опит с настройката на друг смарт часовник и смятате, че ще е полезен за други, моля, добавете го в тези страници ([редактирайте документацията](../SupportingAaps/HowToEditTheDocs.md)), за да споделите опита си с цялата общност на **AAPS**.
 
 ### Вариант 3) AAPSClient на часовника за дистанционно управление на **AAPS** на телефона
 
