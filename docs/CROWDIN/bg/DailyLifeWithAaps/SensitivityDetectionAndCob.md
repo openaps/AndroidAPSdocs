@@ -2,33 +2,33 @@
 
 # Определяне на чувствителност
 
-## Sensitivity algorithm
+## Алгоритъм за чувствителност
 
-**AAPS** currently offers 3 sensitivity detection models:
+В момента **AAPS** предлага 3 модела за определяне на чувствителност:
 
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Чрез AAPS (Sensitivity AAPS)
+* Чрез среднопретеглената стойност (Sensitivity WeightedAverage)
+* Чрез Oref1 (Sensitivity Oref1)
 
-### Sensitivity AAPS
+### Чрез AAPS (Sensitivity AAPS)
 
-Sensitivity is calculated the same way as in Oref1, but you can specify the time range to look back on. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences.
+Чувствителността се изчислява по същия начин като при Oref1, но можете да зададете за какъв период назад да се гледат данните. Минималното усвояване на въглехидратите се изчислява от максималното време за усвояване на въглехидратите, зададено в опциите.
 
-### Sensitivity WeightedAverage
+### Чрез среднопретеглената стойност (Sensitivity WeightedAverage)
 
-Sensitivity is calculated as a weighted average of the deviations. You can specify the time range to look back on. Newer deviations have a higher weight. The minimal carbs absorption is calculated from the max carbs absorption time set in the preferences. This algorithm is the fastest in following sensitivity changes.
+Чувствителността се изчислява като среднопретеглена стойност на отклоненията. Можете да зададете за какъв период назад да се гледат данните. По-новите отклонения имат по-голяма тежест. Минималното усвояване на въглехидратите се изчислява от максималното време за усвояване на въглехидратите, зададено в опциите. Този алгоритъм следва най-бързо промените в чувствителността.
 
 (SensitivityDetectionAndCob-sensitivity-oref1)=
 
-### Sensitivity Oref1
+### Чрез Oref1 (Sensitivity Oref1)
 
-Sensitivity is calculated from the last 8 hours of data, or from the last site change if it is less than 8 hours ago. Carbs (if not absorbed) are cut after the time specified in the preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from the sensitivity calculation. So if you are using SMB with UAM, you have to choose the Oref1 algorithm for it to work properly. For more information about UAM, see the [Super Micro Bolus (SMB)](#Open-APS-features-super-micro-bolus-smb) section.
+Чувствителността се изчислява от данните за последните 8 часа или от последната смяна на мястото на канюлата, ако тя е била преди по-малко от 8 часа. Въглехидратите (ако не са усвоени) се премахват след времето, зададено в опциите. Само алгоритъмът Oref1 поддържа необявени хранения (UAM). Това означава, че периодите с открити UAM не се включват в изчислението на чувствителността. Затова, ако използвате SMB с UAM, трябва да изберете алгоритъма Oref1, за да работи правилно. Повече информация за UAM ще намерите в раздела [Супер микро болус (SMB)](#Open-APS-features-super-micro-bolus-smb).
 
-Oref1 is the recommended option: it is the only one that can detect UAM and work with [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb), the more recent algorithm.
+Oref1 е препоръчителният вариант: той е единственият, който може да открива UAM и да работи с [OpenAPS SMB](#Open-APS-features-super-micro-bolus-smb) – по-новия алгоритъм.
 
-## Simultaneous carbs
+## Едновременни хранения (въглехидрати)
 
-There is a significant difference between the Sensitivity AAPS and WeightedAverage algorithms on one side, and Oref1 on the other, when several meals overlap.
+Когато няколко хранения се припокриват, има съществена разлика между алгоритмите „Чрез AAPS“ и „Чрез среднопретеглената стойност“ от една страна и Oref1 от друга.
 
-* Oref1 expects only one meal decaying at a time: the second meal starts decaying after the first meal is completely decayed.
-* Sensitivity AAPS and WeightedAverage start decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to the meal size and the max absorption time. The minimum absorption will accordingly be higher in comparison to Oref1.
+* Oref1 очаква да се усвоява само по едно хранене: второто хранене започва да се усвоява, след като първото е напълно усвоено.
+* При „Чрез AAPS“ и „Чрез среднопретеглената стойност“ усвояването на въглехидратите започва веднага щом ги въведете. Ако има повече от едно активно хранене, минималното усвояване на въглехидратите се променя според размера на храненето и максималното време за усвояване. Затова минималното усвояване ще бъде по-високо в сравнение с Oref1.
