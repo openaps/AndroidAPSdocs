@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# Πώς να ρυθμίσετε ένα τηλέφωνο Huawei
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**Ποια τηλέφωνα καλύπτει αυτή η σελίδα:** τηλέφωνα Huawei με **EMUI 12 έως EMUI 15**. Όλες αυτές οι εκδόσεις βασίζονται στο Android 12, την ελάχιστη έκδοση για την τρέχουσα έκδοση του **AAPS**. Σε τηλέφωνο με παλαιότερη έκδοση EMUI, μπορείτε να χρησιμοποιήσετε μόνο μια [παλαιότερη έκδοση του AAPS](#maintenance-android-version-aaps-version).
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} Τηλέφωνα με HarmonyOS NEXT / HarmonyOS 5 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+Τα νέα τηλέφωνα Huawei που πωλούνται στην Κίνα έχουν HarmonyOS NEXT (HarmonyOS 5 και νεότερο). Αυτό το σύστημα δεν είναι πια Android και δεν μπορεί να τρέξει το **AAPS**. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Τα τηλέφωνα Huawei κλείνουν πολύ επιθετικά τις εφαρμογές που τρέχουν στο παρασκήνιο. Εφαρμόστε όλες τις παρακάτω ρυθμίσεις στο **AAPS** και στην εφαρμογή του CGM σας (για παράδειγμα xDrip+ ή Juggluco). Αλλιώς το κύκλωμα και οι τιμές γλυκόζης μπορεί να σταματήσουν όταν η οθόνη είναι σβηστή.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+Τα ονόματα των μενού μπορεί να διαφέρουν λίγο ανάλογα με το μοντέλο. Αν δεν βρίσκετε μια ρύθμιση, γράψτε το όνομά της στη γραμμή αναζήτησης στο πάνω μέρος των **Ρυθμίσεων**.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+Οι εικόνες παρακάτω είναι από μια παλαιότερη έκδοση EMUI. Οι ρυθμίσεις είναι ίδιες στα EMUI 12 έως 15.
 
-## Ignore battery optimization
+## Αγνόηση βελτιστοποίησης μπαταρίας
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. Ανοίξτε **Ρυθμίσεις > Εφαρμογές > Εφαρμογές**.
+2. Πατήστε το μενού **⋮** πάνω δεξιά και επιλέξτε **Ειδική πρόσβαση > Βελτιστοποίηση μπαταρίας**.
+3. Πατήστε το βέλος στο πάνω μέρος της λίστας και επιλέξτε **Όλες οι εφαρμογές**.
+4. Επιλέξτε **AAPS** και διαλέξτε **Να μην επιτρέπεται**. Η Huawei δεν θα βελτιστοποιεί πια τις εφαρμογές αυτής της λίστας.
+5. Κάντε το ίδιο για την εφαρμογή του CGM σας.
 
 ![Huawei - αγνοήστε τη βελτιστοποίηση της μπαταρίας](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## Εκκίνηση εφαρμογών: επιτρέψτε την εκτέλεση στο παρασκήνιο
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. Ανοίξτε **Ρυθμίσεις > Μπαταρία > Εκκίνηση εφαρμογών** (ή **Ρυθμίσεις > Εφαρμογές > Εφαρμογές >** επιλέξτε την εφαρμογή **> Μπαταρία > Εκκίνηση εφαρμογών**).
+2. Βρείτε το **AAPS** και απενεργοποιήστε την **Αυτόματη διαχείριση**.
+3. Στο παράθυρο **Μη αυτόματη διαχείριση**, ενεργοποιήστε και τις τρεις επιλογές: 
+    - **Αυτόματη εκκίνηση**
+    - **Δευτερεύουσα εκκίνηση** (μπορεί να ξεκινήσει από άλλες εφαρμογές)
+    - **Εκτέλεση στο παρασκήνιο**
+4. Κάντε το ίδιο για την εφαρμογή του CGM σας.
 
-![Huawei - επιλογές μπαταριών](../images/Huawei_BatteryOptions.png)
+![Huawei - επιλογές μπαταρίας](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## Κλείδωμα του AAPS στις πρόσφατες εφαρμογές
 
-Locked apps are not closed when you clear the recent apps list.
+Οι κλειδωμένες εφαρμογές δεν κλείνουν όταν καθαρίζετε τη λίστα πρόσφατων εφαρμογών.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. Ανοίξτε τη λίστα πρόσφατων εφαρμογών.
+2. Σύρετε προς τα κάτω την κάρτα του **AAPS**. Ένα σύμβολο κλειδαριάς εμφανίζεται στην κάρτα.
+3. Κάντε το ίδιο για την εφαρμογή του CGM σας.
 
 ![Huawei - κλείδωμα εφαρμογής](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## Λειτουργία εξοικονόμησης ενέργειας
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+Κρατήστε απενεργοποιημένες τη **Λειτουργία εξοικονόμησης ενέργειας** και την **Εξαιρετική εξοικονόμηση ενέργειας** (**Ρυθμίσεις > Μπαταρία**). Αυτές κλείνουν τις εφαρμογές στο παρασκήνιο, όποιες κι αν είναι οι παραπάνω ρυθμίσεις.
 
-## If AAPS still stops in the background
+## Αν το AAPS σταματά ακόμα στο παρασκήνιο
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+Δείτε το [Don't kill my app](https://dontkillmyapp.com/huawei) για περισσότερες λύσεις ειδικά για Huawei.
 
-## Honor phones
+## Τηλέφωνα Honor
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Η Honor είναι πλέον ξεχωριστή μάρκα και τα τηλέφωνά της έχουν MagicOS αντί για EMUI. Οι ρυθμίσεις για το παρασκήνιο είναι πολύ παρόμοιες: βρείτε την **Εκκίνηση εφαρμογών** στις ρυθμίσεις μπαταρίας της εφαρμογής, απενεργοποιήστε την **Αυτόματη διαχείριση** και επιτρέψτε και τις τρεις επιλογές. Μετά αφαιρέστε την εφαρμογή από τη βελτιστοποίηση μπαταρίας.
