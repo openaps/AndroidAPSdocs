@@ -2,7 +2,7 @@
 
 ## Jelly Star Mini
 
-**Features**
+**Functies**
 
 * Android 13
 * 8 GB RAM
@@ -45,4 +45,4 @@ Vergeet niet om Google Play Protect uit te schakelen.
 
 Bij sommige smartwatches, zoals de Samsung Galaxy, moet 'Remote Connection' onder Advanced Features van de Samsung Galaxy **aan** staan om de Jelly, **Wear.apk** & **AAPS** op afstand via wifi te gebruiken.
 
-![Galaxy Wearable, Advanced features, Remote connection switched on](../images/wearos/galaxy_wearable_remote_connection.png)
+![Galaxy Wearable, Geavanceerde functies, Verbinding op afstand aangezet](../images/wearos/galaxy_wearable_remote_connection.png)
