@@ -15,7 +15,7 @@
     
     ![La pantalla Configuración, con la lista de categorías de complementos](../images/v4/Configuration/configuration_plugins.png)
     
-    Dentro de una categoría ves los complementos disponibles para ella. En las categorías de una sola opción eliges el complemento activo; algunas categorías permiten elegir varios (*«Seleccione todas las opciones que correspondan»*). Cada complemento ofrece dos acciones:
+    Dentro de una categoría ves los complementos disponibles para ella. En las categorías de una sola opción eliges el complemento activo; algunas categorías permiten elegir varios (*«Selecciona todas las opciones que correspondan»*). Cada complemento ofrece dos acciones:
     
     - **Abrir complemento**: abre la pantalla propia del complemento.
     - **Ajustes**: abre las preferencias del complemento (los ajustes pueden estar agrupados en secciones que se despliegan).
@@ -299,7 +299,7 @@ Puedes ver tu sensibilidad en la pantalla principal en un [gráfico adicional](#
 
 ### Ajustes de absorción
 
-Si usas Oref1 con **SMB**, debes cambiar **min_5m_carbimpact** a 8. Este valor solo se usa cuando faltan lecturas del **CGM** o cuando la actividad física «gasta» toda la subida de glucosa que, si no, haría que **AAPS** redujera los COB. Cuando la [absorción de carbohidratos](../DailyLifeWithAaps/CobCalculation.md) no se puede calcular de forma dinámica a partir de la reacción de tu glucosa, aplica a tus carbohidratos una reducción por defecto. Básicamente, es una medida de seguridad.
+Si usas Oref1 con **SMB**, debes cambiar **min_5m_carbimpact** a 8. Este valor solo se usa cuando faltan lecturas del **MCG** o cuando la actividad física «gasta» toda la subida de glucosa que, si no, haría que **AAPS** redujera los COB. Cuando la [absorción de carbohidratos](../DailyLifeWithAaps/CobCalculation.md) no se puede calcular de forma dinámica a partir de la reacción de tu glucosa, aplica a tus carbohidratos una reducción por defecto. Básicamente, es una medida de seguridad.
 
 (Config-Builder-aps)=
 
