@@ -21,7 +21,7 @@ Puedes usar [Autotune](https://autotuneweb.azurewebsites.net/) como orientación
 :class: note
 Los **Perfiles** varían mucho de una persona a otra.
 
-En las tasas basales (BR), los factores de sensibilidad a la insulina (ISF) y las ratios insulina-carbohidratos (IC o ICR), los valores absolutos y las tendencias de las necesidades de insulina varían mucho de una persona a otra. Dependen de tu biología, sexo, edad, forma física, etc., y también de factores a corto plazo, como una enfermedad o el ejercicio reciente. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+En las tasas basales (BR), los factores de sensibilidad a la insulina (ISF) y las ratios insulina-carbohidratos (IC o ICR), los valores absolutos y las tendencias de las necesidades de insulina varían mucho de una persona a otra. Dependen de tu biología, sexo, edad, forma física, etc., y también de factores a corto plazo, como una enfermedad o el ejercicio reciente. Para saber más sobre esto, el libro [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) de Adam Brown es una lectura excelente.
 
 ```
 
@@ -34,13 +34,13 @@ Abajo se muestran capturas de pantalla de **AAPS** de un perfil de _ejemplo_. Te
 ![Ejemplo de perfil activo](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Objetivos de glucosa
 
 ### Descripción
 
 Tu **objetivo de glucosa** es un valor central y todos los cálculos de **AAPS** se basan en él. Es distinto del rango objetivo, en el que normalmente intentas mantener tus valores de glucosa. El objetivo se usa en los cálculos de **AAPS**: si **AAPS** predice que tu **glucosa** quedará fuera del rango objetivo, actuará para devolverte a ese rango.
 
-The targets can be defined within those boundaries :
+Los objetivos se pueden definir dentro de estos límites:
 
 |        | Objetivo _Bajo_       | Objetivo _Alto_         |
 | ------ | --------------------- | ----------------------- |
@@ -57,25 +57,25 @@ La **figura de abajo** muestra un ejemplo de cómo se puede configurar el objeti
 
 ![Objetivo](../images/Profile_Target.png)
 
-Los objetivos de **glucosa** se configuran según tus preferencias y necesidades personales. Por ejemplo, si te preocupan las hipoglucemias por la noche, puedes poner el objetivo un poco más alto, en 117 mg/dl (6,5 mmol/l), de 21:00 a 7:00. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+Los objetivos de **glucosa** se configuran según tus preferencias y necesidades personales. Por ejemplo, si te preocupan las hipoglucemias por la noche, puedes poner el objetivo un poco más alto, en 117 mg/dl (6,5 mmol/l), de 21:00 a 7:00. Si quieres asegurarte de tener bastante insulina activa (IOB) por la mañana antes del bolo del desayuno, puedes poner un objetivo más bajo de 81 mg/dl (4,5 mmol/l) de 7:00 a 8:00.
 
 En [Lazo abierto](#KeyAapsFeatures-OpenLoop), sobre todo mientras avanzas por [los primeros objetivos](../SettingUpAaps/CompletingTheObjectives.md), usar un rango objetivo amplio puede ser una buena opción mientras aprendes cómo se comporta **AAPS** y ajustas tu **Perfil**.<br/> En [Lazo cerrado](#KeyAapsFeatures-ClosedLoop) (a partir del **[Objetivo 6](#objectives-objective6)**), se recomienda reducir el rango hasta tener un solo objetivo para cada hora del día (objetivo _Bajo_ = objetivo _Alto_), para que **AAPS** reaccione rápido a los cambios de **glucosa**.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Tasas basales
 
 ### Descripción
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Tu tasa basal de insulina (unidades/hora) aporta la insulina de fondo y mantiene estables tus niveles de glucosa cuando no comes ni haces ejercicio.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. Para más información, el capítulo 6 de [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) de Gary Scheiner es muy útil.
+La bomba de insulina administra pequeñas cantidades de insulina de acción rápida cada pocos minutos, para evitar que el hígado libere demasiada glucosa y para llevar la glucosa a las células del cuerpo. La insulina basal suele ser entre el 40 y el 50 % de tu dosis diaria total (TDD), según tu alimentación, y normalmente sigue un ritmo circadiano, con un pico y un valle en las necesidades de insulina a lo largo de 24 horas. Para más información, el capítulo 6 de [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) de Gary Scheiner es muy útil.
 
 La mayoría de los educadores en diabetes tipo 1 (¡y de las personas con diabetes tipo 1!) están de acuerdo en que debes ajustar bien tus tasas basales antes de intentar optimizar tu ISF y tu ICR.
 
 ### Impacto
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Con unas tasas basales correctas te despiertas en rango y puedes saltarte comidas, o comer antes o después durante el día, sin subidas ni bajadas.
 
 Una tasa basal demasiado alta puede provocar glucosas bajas. Y al revés.
 
@@ -89,9 +89,9 @@ Al contrario, una tasa basal demasiado baja puede provocar glucosas altas y que 
 
 La **figura de abajo** muestra un ejemplo de cómo se pueden configurar las tasas basales en un perfil de **AAPS**.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Tasas basales](../images/Profile_BasalRates.png)
 
-Setting your basal rates right is done by trial and error, and should be done in consultation with your diabetes team.
+Ajustar bien tus tasas basales se hace por prueba y error, y debe hacerse junto con tu equipo de diabetes.
 
 Hay métodos de prueba de basales que normalmente consisten en observar tus tasas basales y tus necesidades de insulina durante un ayuno <u>intermitente</u> a lo largo de 24 horas. Aunque tienes que probar tus tasas basales durante todo el día, no se recomienda ayunar 24 h seguidas. Esto se debe a que el cuerpo activa mecanismos, como las hormonas, para compensar. Una forma recomendada es ayunar 8 horas en 3 días distintos.
 
@@ -121,17 +121,17 @@ El editor de perfiles solo te deja empezar tasas basales en horas en punto. Una 
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Factor de sensibilidad a la insulina (ISF)
 
 ### Descripción
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+El factor de sensibilidad a la insulina (a veces llamado factor de corrección) indica cuánto baja tu nivel de glucosa con 1 unidad de insulina.
 
 **En unidades mg/dl:** Si tienes un **ISF** de 40, cada unidad de insulina bajará tu glucosa unos 40 mg/dl (por ejemplo, tu glucosa bajará de 140 mg/dl a 100 mg/dl).
 
 **En unidades mmol/l:** Si tienes un **ISF** de 1,5, cada unidad de insulina bajará tu glucosa unos 1,5 mmol/l (por ejemplo, de 8 mmol/l a 6,5 mmol/l).
 
-Con estos ejemplos puedes ver que cuanto _menor_ es el valor del **ISF**, menos sensible eres a la insulina. Así, si bajas tu ISF de 40 a 35 (mg/dl) o de 1,5 a 1,3 (mmol/l), a esto se le suele llamar hacer más fuerte tu **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
+Con estos ejemplos puedes ver que cuanto _menor_ es el valor del **ISF**, menos sensible eres a la insulina. Así, si bajas tu ISF de 40 a 35 (mg/dl) o de 1,5 a 1,3 (mmol/l), a esto se le suele llamar hacer más fuerte tu **ISF**. Por el contrario, subir el valor del **ISF** de 40 a 45 (mg/dl) o de 1,5 a 1,8 (mmol/l) es hacer más débil tu **ISF**.
 
 ### Impacto
 
@@ -139,9 +139,9 @@ Un **ISF más bajo / más fuerte** (p. ej., 40 en lugar de 50) significa que la 
 
 Un **ISF más alto / más débil** (p. ej., 45 en lugar de 35) significa que la insulina baja tu **glucosa** más por cada unidad. Esto lleva a una corrección menos agresiva / más débil del lazo, con **menos insulina**. Si tu **ISF** es demasiado débil (valor grande), puede provocar una **glucosa** alta.
 
-**Example:**
-* **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
-* So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
+**Ejemplo:**
+* La **glucosa** es 190 mg/dl (10,5 mmol/l) y el objetivo es 100 mg/dl (5,6 mmol/l).
+* Por tanto, quieres una corrección de `190 - 100 = 90 mg/dL` o `10.5 - 5.6 = 4.9 mmol/L`
 * Si `ISF = 30` -> `90 / 30 = 3` o `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 unidades de insulina
 * Si `ISF = 45` -> `90 / 45 = 2` o `ISF = 2.45` -> `4.9 / 2.45 = 2`: 2 unidades de insulina
 
@@ -157,7 +157,7 @@ Mira la **figura de abajo** para ver un ejemplo de cómo se pueden configurar lo
 
 ![ISF del perfil](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. Hay más detalles en el capítulo 7 de [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) de Gary Scheiner.
+Un punto de partida sencillo para calcular tu ISF de día es usar tu dosis diaria total (TDD) con la regla del 1700 (94). Hay más detalles en el capítulo 7 de [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) de Gary Scheiner.
 
 | 1700 (si mides en mg/dl) o 94 (mmol/l) / TDD = ISF aproximado.<br/><br/>Ejemplo: TDD = 40 U<br/>ISF aproximado (mg/dl) = 1700/40 = 43<br/>ISF aproximado (mmol/l) = 94/40 = 2,4 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -171,7 +171,7 @@ Ten cuidado, porque este valor se configura muy a menudo demasiado bajo. Demasia
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Ratio insulina-carbohidratos (ICR)
 
 ### Descripción
 
@@ -179,9 +179,9 @@ La **ICR** mide cuántos gramos de carbohidratos cubre una unidad de insulina.
 
 Algunas personas también usan **I:C** como abreviatura en lugar de **ICR**, o hablan de ratio de carbohidratos: **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Por ejemplo, una ratio insulina-carbohidratos de 1 a 10 (1:10) significa que te pones 1 U de insulina por cada 10 gramos de carbohidratos que comes. Una comida de 25 g de carbohidratos necesitaría 2,5 U de insulina.
 
-Si tu **ICR** es más débil (valor más alto), por ejemplo 1:20, solo necesitarías 0,5 U de insulina para cubrir 10 g de carbohidratos. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Si tu **ICR** es más débil (valor más alto), por ejemplo 1:20, solo necesitarías 0,5 U de insulina para cubrir 10 g de carbohidratos. Una comida de 25 g de carbohidratos necesitaría 25/20 = 1,25 U de insulina.
 
 Es normal tener **ICR** distintas en distintas horas del día, por los niveles de hormonas y la actividad física. Muchas personas tienen su **ICR** más baja / más fuerte a la hora del desayuno, porque suelen ser más resistentes a la insulina. Así, por ejemplo, la **ICR** de un usuario adulto podría ser 1:8 en el desayuno, 1:10 en la comida y 1:10 en la cena. Pero estos patrones no son iguales para todos: algunas personas son más resistentes a la insulina a la hora de la cena y necesitan entonces una **ICR** más fuerte / más pequeña.
 
@@ -193,7 +193,7 @@ Es normal tener **ICR** distintas en distintas horas del día, por los niveles d
 > 
 > Con la **ICR**, la cantidad de insulina es fija y la cantidad de carbohidratos es variable. ("¿Cuántos gr de carbohidratos pueden estar cubiertos por una sola unidad de insulina?")
 > 
-> Example:
+> Ejemplo:
 > 
 > Factor de unidad de pan (UP = 12 g de carbohidratos): 2,4 U/UP -> Necesitas 2,4 unidades de insulina cuando comes una unidad de pan.
 > 
@@ -226,11 +226,11 @@ Si tus tasas basales son correctas, puedes probarlo así: comprueba que la **IOB
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Por qué es importante configurar bien tu perfil
 
 **¿Por qué debo intentar que los ajustes de mi perfil sean correctos? ¿No puede el lazo encargarse de ello?**
 
-Un lazo cerrado híbrido _puede_ intentar ajustar la administración de insulina para reducir el mal control de la glucosa que provocan unos valores incorrectos del **Perfil**. It can do this, for example, by withholding insulin delivery if you are going to hypo. Sin embargo, puedes conseguir un control de la glucosa mucho mejor si los ajustes de tu **Perfil** ya están lo más cerca posible de lo que necesita tu cuerpo. Esta es una de las razones por las que **AAPS** usa objetivos por etapas para pasar de la bomba en lazo abierto al lazo cerrado híbrido. Además, habrá momentos en los que tengas que abrir el lazo (calentamiento del sensor, fallo del sensor, _etc._), a veces en mitad de la noche, y querrás tener los ajustes correctos para estas situaciones.
+Un lazo cerrado híbrido _puede_ intentar ajustar la administración de insulina para reducir el mal control de la glucosa que provocan unos valores incorrectos del **Perfil**. Puede hacerlo, por ejemplo, suspendiendo la administración de insulina si vas a tener una hipoglucemia. Sin embargo, puedes conseguir un control de la glucosa mucho mejor si los ajustes de tu **Perfil** ya están lo más cerca posible de lo que necesita tu cuerpo. Esta es una de las razones por las que **AAPS** usa objetivos por etapas para pasar de la bomba en lazo abierto al lazo cerrado híbrido. Además, habrá momentos en los que tengas que abrir el lazo (calentamiento del sensor, fallo del sensor, _etc._), a veces en mitad de la noche, y querrás tener los ajustes correctos para estas situaciones.
 
 Si empiezas con **AAPS** después de usar otro sistema de bomba en lazo abierto o cerrado, ya tendrás una idea razonable de qué valores usar para las tasas basales (**BR**), los factores de sensibilidad a la insulina (**ISF**) y las ratios insulina-carbohidratos (**ICR**).
 
