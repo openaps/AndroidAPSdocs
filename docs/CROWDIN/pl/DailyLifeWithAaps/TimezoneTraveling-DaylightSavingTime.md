@@ -1,48 +1,48 @@
-# Timezone Change and Daylight Saving
+# Zmiana strefy czasowej i czas letni
 
-When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+Gdy zmienia się strefa czasowa telefonu, **AAPS** około 10 sekund po zmianie od nowa oblicza **IOB**, bazę i wrażliwość dla przeszłości. W tym czasie wykresy i wartości na ekranie głównym mogą odświeżyć się z opóźnieniem.
 
 (timezone-traveling-with-pumps)=
 
-## Timezone change for Omnipod Dash
+## Zmiana strefy czasowej dla Omnipod Dash
 
-* Refresh the pump status in **Manage → Pump**
-* Temporarily select a different **Profile** and then switch back to your original or desired **Profile**
+* Odśwież stan pompy w **Zarządzaj → Pompa**
+* Wybierz na chwilę inny **Profil**, a potem wróć do swojego pierwotnego lub wybranego **Profilu**
 
-## Timezone change for DanaR, Korean DanaR
+## Zmiana strefy czasowej dla DanaR, koreańskiej DanaR
 
 Nie ma problemu ze zmianą strefy czasowej w telefonie, ponieważ te pompy nie używają historii
 
 (timezone-traveling-danarv2-danars)=
 
-## Timezone change for DanaRv2, DanaRS, Dana-i
+## Zmiana strefy czasowej dla DanaRv2, DanaRS, Dana-i
 
-These pumps require special care because **AAPS** uses history from the pump but the records in pump do not have timezone stamp. **This means that if you change time zone in your phone, records will be read with different time zone and will be doubled.**
+Te pompy wymagają szczególnej uwagi, ponieważ **AAPS** używa historii z pompy, ale wpisy w pompie nie mają znacznika strefy czasowej. **To oznacza, że jeśli zmienisz strefę czasową w telefonie, wpisy zostaną odczytane z inną strefą czasową i będą zdublowane.**
 
-To avoid this there are two possibilities:
+Aby tego uniknąć, masz dwie możliwości:
 
-### Option 1: Keep home time and timeshift profile
+### Opcja 1: zachowaj czas domowy i przesuń profil w czasie
 
-* Turn off 'Automatic date and time' in your phone's settings (manual time zone change).
+* Wyłącz „Automatyczna data i godzina” w ustawieniach telefonu (ręczna zmiana strefy czasowej).
 
-* Your phone must keep your standard time as at home for the whole travel period.
+* Przez całą podróż telefon musi mieć Twój standardowy czas, tak jak w domu.
 
-* Time-shift your **Profile** according to time difference between home time and destination time.
+* Przesuń w czasie swój **Profil** o różnicę między czasem w domu a czasem w miejscu docelowym.
    
-   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
-   * Select your **Profile** and tap **▶ Activate**
-   * Set '**Time shift**' according to your destination and tap **Activate**.
+   * Dotknij nazwy **Profilu** na ekranie głównym, aby otworzyć [ekran profilu](#ProfileSwitch-manage-v4)
+   * Wybierz swój **Profil** i dotknij **▶ Aktywuj**
+   * Ustaw „**Zmiana czasu**” zgodnie z miejscem docelowym i dotknij **Aktywuj**.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Zmiana profilu z przesunięciem czasu](../images/ProfileSwitchTimeShift2.png)
    
-   * e.g. Vienna -> New York: **Profile Switch** +6 hours
-   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
+   * np. Wiedeń -> Nowy Jork: **Zmiana profilu** +6 godzin
+   * np. Wiedeń -> Sydney: **Zmiana profilu** -8 godzin
 
-### Option 2: Delete pump history
+### Opcja 2: usuń historię pompy
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* Wyłącz „Automatyczna data i godzina” w ustawieniach telefonu (ręczna zmiana strefy czasowej)
 
-When get out of plane:
+Po wyjściu z samolotu:
 
 * wyłącz pompę
 * zmień strefę czasową w telefonie
@@ -54,81 +54,81 @@ When get out of plane:
 
 (timezone-traveling-insight)=
 
-## Timezone Change for Insight
+## Zmiana strefy czasowej dla Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Sterownik automatycznie dostosowuje czas pompy do czasu telefonu.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in **AAPS** despite the time change.
+Insight zapisuje też w historii wpisy o tym, w którym momencie zmieniono czas oraz z jakiego (starego) czasu na jaki (nowy) czas. Dzięki temu **AAPS** może ustalić poprawny czas mimo zmiany czasu.
 
-It may cause inaccuracies in the **TDDs**. But it shouldn't be a problem.
+Może to spowodować niedokładności w **TDD** (dziennych dawkach insuliny). Nie powinno to jednak być problemem.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Dlatego użytkownik pompy Insight nie musi martwić się zmianami strefy czasowej ani zmianami czasu. Od tej zasady jest jeden wyjątek: pompa Insight ma małą wewnętrzną baterię, która zasila m.in. zegar podczas wymiany „prawdziwej” baterii. Jeśli wymiana baterii trwa zbyt długo, ta wewnętrzna bateria się wyczerpie, zegar zostanie zresetowany i po włożeniu nowej baterii pompa poprosi Cię o wpisanie godziny i daty. W takim przypadku wszystkie wpisy sprzed wymiany baterii są pomijane w obliczeniach AAPS, ponieważ nie da się ustalić ich poprawnego czasu.
 
-## Timezone Change for Accu-Chek Combo
+## Zmiana strefy czasowej dla Accu-Chek Combo
 
-The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+[Sterownik Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatycznie dostosowuje czas pompy do czasu telefonu. Combo nie może zapisywać stref czasowych, tylko czas lokalny, i właśnie ten czas sterownik ustawia w pompie. Dodatkowo sterownik zapisuje strefę czasową w lokalnych ustawieniach AAPS, aby móc zamienić czas lokalny pompy na pełny znacznik czasu z przesunięciem strefy czasowej. Nie musisz nic robić. Jeśli czas w pompie Combo za bardzo różni się od aktualnego czasu telefonu, czas pompy zostanie automatycznie dostosowany.
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+Pamiętaj jednak, że trwa to chwilę, ponieważ można to zrobić tylko w trybie zdalnego terminala, który zwykle działa wolno. To ograniczenie pompy Combo, którego nie da się obejść.
 
-## Timezone Change for Medtrum
+## Zmiana strefy czasowej dla Medtrum
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Sterownik automatycznie dostosowuje czas pompy do czasu telefonu.
 
-Time zone changes keep the history intact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and **IOB**. If you change time manually double check the **IOB**.
+Zmiana strefy czasowej nie narusza historii, może mieć wpływ tylko na TDD. Ręczna zmiana czasu w telefonie może spowodować problemy z historią i **IOB**. Jeśli zmieniasz czas ręcznie, dokładnie sprawdź **IOB**.
 
-When the time zone or time changes running **TBR's** are stopped.
+Gdy zmienia się strefa czasowa lub czas, trwające **TBR** są zatrzymywane.
 
 (time-adjustment-daylight-savings-time-dst)=
 
-## DAYLIGHT SAVING (DST)
+## CZAS LETNI (DST)
 
-Time adjustment for daylight savings time.
+Dostosowanie czasu przy zmianie na czas letni.
 
-Depending on your pump and CGM setup, jumps in time can lead to problems with **AAPS** to function correctly. For some pumps it is better to make time zone adjustments while awake before DST takes place and not during the night.
+W zależności od Twojej pompy i CGM skoki czasu mogą przeszkadzać w poprawnym działaniu **AAPS**. W przypadku niektórych pomp lepiej zmienić strefę czasową przed zmianą czasu, gdy nie śpisz, a nie w nocy.
 
-### DST automatic adjustment for most pumps
+### Automatyczne dostosowanie do czasu letniego (DST) dla większości pomp
 
-* However, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. This is done for safety reasons - **IOB** may be too high due to duplicated bolus prior to DST change.
-* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable the **Loop**: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
-* You will also receive a notification on **AAPS** main screen prior to DST change that the **Loop** has been disabled temporarily. This message will appear without beep, vibration or similar sound.
+* Jednak **Pętla** zostanie wyłączona na 3 godziny PO zmianie czasu (zwykle od 1:00) i **AAPS** wróci do bazy z Twojego **Profilu**. Robi się to ze względów bezpieczeństwa – **IOB** może być za wysokie z powodu zdublowanego bolusa sprzed zmiany czasu.
+* Po zmianie czasu wykonaj **Zmianę profilu** na wybrany **Profil**, aby włączyć **Pętlę**: dotknij nazwy profilu na ekranie głównym, a potem okrągłego przycisku **▶** (zobacz [Aktywacja profilu](#ProfileSwitch-manage-v4)).
+* Przed zmianą czasu na ekranie głównym **AAPS** pojawi się też powiadomienie, że **Pętla** została tymczasowo wyłączona. Ten komunikat pojawi się bez sygnału dźwiękowego, wibracji ani podobnego dźwięku.
 
-If you bolus with **AAPS'** calculator please do not use **COB** and **IOB** data unless you are sure this data is absolutely correct. Take caution and do not use this feature for a couple of hours after DST switch has taken place.
+Jeśli podajesz bolus z kalkulatora **AAPS**, nie używaj danych **COB** i **IOB**, chyba że masz pewność, że te dane są w pełni poprawne. Zachowaj ostrożność i nie używaj tej funkcji przez kilka godzin po zmianie czasu.
 
-### DST for Accu-Chek Insight
+### Czas letni (DST) dla Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* Zmiana na czas letni (DST) odbywa się automatycznie. Nie musisz nic robić.
 
-### DST for Accu-Chek Combo
+### Czas letni (DST) dla Accu-Chek Combo
 
-* Change to DST is done automatically. No action required.
+* Zmiana na czas letni (DST) odbywa się automatycznie. Nie musisz nic robić.
 
-### DST for Medtrum
+### Czas letni (DST) dla Medtrum
 
-* Change to DST is done automatically. No action required.
+* Zmiana na czas letni (DST) odbywa się automatycznie. Nie musisz nic robić.
 
-### DST for Omnipod Dash
+### Czas letni (DST) dla Omnipod Dash
 
-* Either allow **AAPS** to temporarily default background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day prior DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* Możesz pozwolić **AAPS** tymczasowo wrócić do bazy z profilu po zmianie czasu, jak opisano powyżej.
+* Jeśli nie chcesz, aby **AAPS** w nocy tymczasowo wracał do bazy z profilu, możesz zmienić strefę czasową dzień przed zmianą czasu, aby uniknąć zakłóceń w nocy. UWAGA: TA OPCJA MOŻE SPOWODOWAĆ PRZEDWCZESNE WYGAŚNIĘCIE PODA. JEŚLI WYBIERZESZ PONIŻSZĄ FUNKCJĘ, MIEJ PRZY SOBIE ZAPASOWE MATERIAŁY.
 
-#### Actions to take before the clock change
+#### Działania przed zmianą czasu
 
-1. Switch OFF any Phone's settings that automatically sets the Phone's time zone, so the user can change to a desired time zone that does not use DST. How to enable this will depend on your smartphone and Android version.
+1. Wyłącz wszystkie ustawienia telefonu, które automatycznie ustawiają strefę czasową, aby móc wybrać strefę czasową bez czasu letniego. Sposób włączenia zależy od Twojego smartfona i wersji Androida.
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
-   * Unfortunately, some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Niektóre telefony mają dwa ustawienia: jedno do automatycznego ustawiania czasu (które najlepiej zostawić włączone) i jedno do automatycznego ustawiania strefy czasowej (które MUSISZ wyłączyć: **Ustaw automatycznie** (Set automatically) w sekcji **Strefa czasowa** (Time zone) na zrzucie ekranu poniżej).
+   * Niestety niektóre wersje Androida mają jeden przełącznik, który włącza automatyczne ustawianie zarówno czasu, jak i strefy czasowej. Na razie musisz to wyłączyć.
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
 
-2. Find a timezone that has the same time as your current location but doesn't use DST.
+2. Znajdź strefę czasową, która ma ten sam czas co Twoja obecna lokalizacja, ale nie używa czasu letniego.
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
+   * Lista tych krajów jest dostępna tutaj: [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Dla czasu środkowoeuropejskiego (CET) może to być „Brazzaville” (Kongo). Zmień strefę czasową telefonu na Kongo.
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. In **AAPS** refresh your pump and switch to your desired **Profile**.
+3. W **AAPS** odśwież pompę i przełącz na wybrany **Profil**.
 
-4. Check **AAPS's** **IOB** and **COB** and if this is inaccurate disable the **Loop** for at least one DIA and Max-Carb-Time - whatever is bigger.
+4. Sprawdź **IOB** i **COB** w **AAPS**. Jeśli są niedokładne, wyłącz **Pętlę** co najmniej na czas jednego DIA albo maksymalnego czasu wchłaniania węglowodanów (Max-Carb-Time) – w zależności od tego, który jest dłuższy.
 
-5. Actions to take after the clock change. A good time to make revert to local time zone is with low **IOB**. E.g. an hour before a meal such as breakfast. Ideally your **COB** and **IOB** should both be close to zero.
+5. Działania po zmianie czasu. Dobry moment na powrót do lokalnej strefy czasowej to chwila, gdy **IOB** jest niskie. Na przykład godzinę przed posiłkiem, takim jak śniadanie. Najlepiej, aby **COB** i **IOB** były bliskie zera.
