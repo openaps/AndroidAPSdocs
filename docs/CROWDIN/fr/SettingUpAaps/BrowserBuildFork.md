@@ -1,54 +1,54 @@
 (github-fork)=
 
-# Browser build – Step 1: Create your GitHub fork
+# Compilation dans le navigateur – Étape 1 : Créer votre fork GitHub
 
 ```{note}
-This is **Step 1** of the [Browser build](BrowserBuild.md).
+Ceci est l'**Étape 1** de la [Compilation dans le navigateur](BrowserBuild.md).
 ```
 
-You will need to secretly store your personal Android Java Key and Google Drive information in GitHub (later in the process, we will explain how).
+Vous devrez enregistrer en secret dans GitHub votre clé Java Android personnelle et les informations de votre Google Drive (nous expliquerons comment plus loin).
 
-Since this cannot be done inside the public repository of AndroidAPS, you need to make your personal copy of the source code (called a fork).
+Comme cela n'est pas possible dans le dépôt public d'AndroidAPS, vous devez créer votre copie personnelle du code source (appelée un fork).
 
-## GitHub account
+## Compte GitHub
 
-You need to [create a GitHub account](https://github.com/signup) if you don't have one yet.  
-You can sign up with your email, or you can sign up with Google. Follow the registration and verification process.
+Vous devez [créer un compte GitHub](https://github.com/signup) si vous n'en avez pas encore.  
+Vous pouvez vous inscrire avec votre e-mail ou avec Google. Suivez le processus d'inscription et de vérification.
 
-When you have an account, [sign in to GitHub](https://github.com/login).
+Quand vous avez un compte, [connectez-vous à GitHub](https://github.com/login).
 
-## Fork AndroidAPS
+## Créer un fork d'AndroidAPS
 
-Open the official AndroidAPS repository following [this link](https://github.com/nightscout/AndroidAPS).
+Ouvrez le dépôt officiel d'AndroidAPS avec [ce lien](https://github.com/nightscout/AndroidAPS).
 
-Tap on the fork icon. This will create a copy inside your own account.
+Appuyez sur l'icône fork. Cela crée une copie dans votre propre compte.
 
 ![fork_aaps](../images/Building-the-App/CI/ForkAAPS.png)
 
-Scroll down the next screen and tap **Create Fork**.
+Faites défiler l'écran suivant vers le bas et appuyez sur **Create Fork**.
 
 ![fork_aaps_confirm](../images/Building-the-App/CI/ForkAAPS2.png)
 
-*Note: you can **unselect** "Copy the master branch only" if you will want to build developers versions or customizations.*
+*Remarque : vous pouvez **décocher** « Copy the master branch only » (copier uniquement la branche master) si vous voulez compiler des versions de développement ou des versions personnalisées.*
 
 ![fork_aaps_main](../images/Building-the-App/CI/ForkAAPS3.png)
 
 ```{note}
-You cannot fork and you see this?</br></br>
+Vous ne pouvez pas créer de fork et vous voyez ceci ?</br></br>
 **`No available destinations to fork this repository.`**</br></br>
-![Already forked](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
-This means you already have an existing fork of AndroidAPS.</br>
-Make sure it's up to date and continue to Preparation Steps.
+![Déjà forké](../images/Building-the-App/CI/ForkAAPS3b.png)</br></br>
+Cela signifie que vous avez déjà un fork d'AndroidAPS.</br>
+Vérifiez qu'il est à jour et passez aux étapes de préparation.
 ```
 
 ```{warning}
-**Never delete your fork without having done a backup of your secrets!**
+**Ne supprimez jamais votre fork sans avoir fait une sauvegarde de vos secrets !**
 ```
 
-GitHub now displays your personal copy of AndroidAPS. Leave this web browser tab open.
+GitHub affiche maintenant votre copie personnelle d'AndroidAPS. Laissez cet onglet du navigateur ouvert.
 
 ![forked_aaps](../images/Building-the-App/CI/ForkAAPS4.png)
 
 ----
 
-**Next: [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) →**
+**Suivant : [Étape 2 – Créer votre keystore de signature](BrowserBuildKeystore.md) →**
