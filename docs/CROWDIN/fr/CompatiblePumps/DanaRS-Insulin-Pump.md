@@ -10,7 +10,7 @@
     :depth: 1
     :local: true
 
-## Pump capabilities with AAPS
+## Fonctionnalités de la pompe avec AAPS
 
 * Communique avec **AAPS** par le Bluetooth intégré de votre téléphone, sans appareil de communication supplémentaire.
 * Les changements d'heure d'été et de fuseau horaire doivent être faits à la main (voir [Voyager avec changement de fuseau horaire](#timezone-traveling-danarv2-danars)).
@@ -160,7 +160,7 @@ Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessair
 
 Pour les voyages avec changement de fuseau horaire, voir la section [Voyager avec changement de fuseau horaire avec les pompes](#timezone-traveling-danarv2-danars).
 
-## Where to get help
+## Où obtenir de l'aide
 
 Le pilote DanaRS/Dana-i/Dana-i2 est développé par la communauté, de manière **bénévole**. Avant de demander de l'aide, merci de :
 
