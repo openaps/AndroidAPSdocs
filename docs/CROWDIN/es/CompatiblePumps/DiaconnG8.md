@@ -5,137 +5,137 @@
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Funciones de la bomba con AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* Se comunica con **AAPS** mediante el Bluetooth propio del teléfono, sin un dispositivo de comunicación adicional.
+* Los cambios de horario de verano (DST) y de zona horaria se deben hacer a mano.
 
-## Insulin Pump Bluetooth Pairing
+## Emparejamiento Bluetooth de la bomba de insulina
 
-- Tap the **menu** (☰) in the top-left corner.
+- Toca el **menú** (☰) en la esquina superior izquierda.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png)
+![El menú con la entrada Configuración](../images/v4/Configuration/configuration_menu.png)
 
-- Tap **Configuration** > **Pump** and select **Diaconn G8**.
+- Toca **Configuración** > **Bomba** y selecciona **Diaconn G8**.
 
-![Configuration > Pump with the Diaconn G8 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Configuración > Bomba con el complemento Diaconn G8](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **Diaconn G8** card shows two buttons, **Settings** and **Open plugin**:
+Cuando está seleccionado, la tarjeta **Diaconn G8** muestra dos botones, **Ajustes** y **Abrir complemento**:
 
-![The Diaconn G8 plugin selected in Configuration > Pump](../images/v4/Pumps/diaconn_g8_enabled.png)
+![El complemento Diaconn G8 seleccionado en Configuración > Bomba](../images/v4/Pumps/diaconn_g8_enabled.png)
 
-**Settings** opens the settings of the Diaconn G8 driver (see [Diaconn G8 insulin pump option setting](#diaconn-g8-insulin-pump-option-setting) below).
+**Ajustes** abre los ajustes del driver de Diaconn G8 (consulta [Ajustes de la bomba de insulina Diaconn G8](#diaconn-g8-insulin-pump-option-setting) más abajo).
 
-**Open plugin** (or **Manage** > **Pump**) opens the Diaconn G8 pump screen. Before a pump is paired it looks like this:
+**Abrir complemento** (o **Administrar** > **Bomba**) abre la pantalla de la bomba Diaconn G8. Antes de emparejar una bomba, se ve así:
 
-![Diaconn G8 pump screen before pairing](../images/v4/Pumps/diaconn_g8_pump_screen.png)
+![Pantalla de la bomba Diaconn G8 antes del emparejamiento](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
 ![imagen](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 pairing starts from the **Pair** button on the pump screen; there is no **Selected pump** setting.
+La captura de pantalla de arriba es de una versión anterior de **AAPS**. En **AAPS** 4 el emparejamiento empieza con el botón **Vincular** de la pantalla de la bomba; ya no existe el ajuste **Bomba seleccionada**.
 ```
 
-- On the pump screen, tap **Pair**. The **Diaconn Pump Pairing** screen opens and **AAPS** scans for nearby pumps.
-- Tap your insulin pump's model number once it appears in the list (for example **DIACONN-65010**).
+- En la pantalla de la bomba, toca **Vincular**. Se abre la pantalla **Emparejamiento de Bomba Diaconn** y **AAPS** busca bombas cercanas.
+- Toca el número de modelo de tu bomba de insulina cuando aparezca en la lista (por ejemplo **DIACONN-65010**).
 
-![Diaconn Pump Pairing screen scanning for pumps](../images/DiaconnG8/DiaconnG8_05.png)
+![Pantalla Emparejamiento de Bomba Diaconn buscando bombas](../images/DiaconnG8/DiaconnG8_05.png)
 
-- There are two options to check your model number:
+- Hay dos formas de comprobar tu número de modelo:
 
-1. The last 5 digits of the SN number on the back of the pump.
-2. Click on O button > Information > BLE > Last 5 digits.
+1. Los últimos 5 dígitos del número de serie (SN) en la parte trasera de la bomba.
+2. Pulsa el botón O > Information > BLE > últimos 5 dígitos.
 
 ![imagen](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-- Once you select your pump, a window appears asking for a PIN code. Enter the PIN number displayed on your pump to complete the connection.
+- Cuando seleccionas tu bomba, aparece una ventana que pide un código PIN. Introduce el número PIN que muestra tu bomba para completar la conexión.
 
  ![imagen](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- When **Pairing successful!** is shown, tap **OK** to go back to the pump screen.
+- Cuando aparezca **¡Vinculación exitosa!**, toca **OK** para volver a la pantalla de la bomba.
 
-## Pump status check and log synchronization
+## Comprobar el estado de la bomba y sincronizar los registros
 
-- Once your pump is connected, open the pump screen (**Manage** > **Pump**). It shows the pump status (battery, reservoir, last connection, last bolus, basal rate and more).
-- Tap **Refresh** to connect to the pump, update the status and synchronize the logs.
-- Tap **Pump history** to see the history read from the pump.
+- Cuando tu bomba esté conectada, abre la pantalla de la bomba (**Administrar** > **Bomba**). Muestra el estado de la bomba (batería, reservorio, última conexión, último bolo, dosis basal y más).
+- Toca **Actualizar** para conectar con la bomba, actualizar el estado y sincronizar los registros.
+- Toca **Historial de la bomba** para ver el historial leído de la bomba.
 
 ![imagen](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the pump status is shown on the pump screen (**Manage** > **Pump**) and synchronized with the **Refresh** button.
+La captura de pantalla de arriba es de una versión anterior de **AAPS**. En **AAPS** 4 el estado de la bomba se muestra en la pantalla de la bomba (**Administrar** > **Bomba**) y se sincroniza con el botón **Actualizar**.
 ```
 
 (diaconn-g8-bluetooth-troubleshooting)=
 
-## Bluetooth Troubleshooting
+## Solución de problemas de Bluetooth
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Qué hacer si la conexión Bluetooth con la bomba no es estable.**
 
-### Method 1) Restart AAPS, then check the pump again
+### Método 1) Reinicia AAPS y luego vuelve a comprobar la bomba
 
-- Tap the **menu** (☰) in the top-left corner.
-- Tap **Exit** at the bottom of the menu.
+- Toca el **menú** (☰) en la esquina superior izquierda.
+- Toca **Salir** en la parte inferior del menú.
 
-![The menu with the Exit entry at the bottom](../images/v4/Configuration/configuration_menu.png)
+![El menú con la entrada Salir en la parte inferior](../images/v4/Configuration/configuration_menu.png)
 
-- Start **AAPS** again and check the connection to the pump.
+- Vuelve a iniciar **AAPS** y comprueba la conexión con la bomba.
 
-### Method 2) If the first method doesn't work, disconnect Bluetooth and then reconnect.
+### Método 2) Si el primer método no funciona, desconecta el Bluetooth y vuelve a conectarlo.
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+- Mantén pulsado el botón Bluetooth de la parte superior durante unos 3 segundos.
 
 ![imagen](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Pulsa el botón Setting en la bomba de insulina Diaconn G8 emparejada.
 
 ![imagen](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-- Unpair.
+- Unpair (desemparejar).
 
 ![imagen](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-- In **AAPS**, open the pump screen (**Manage** > **Pump**), tap **Unpair** and confirm **Reset pairing information?**.
-- Repeat the Bluetooth pairing process for the pump (see above).
+- En **AAPS**, abre la pantalla de la bomba (**Administrar** > **Bomba**), toca **Desemparejar** y confirma **¿Restablecer información de emparejamiento?**.
+- Repite el proceso de emparejamiento Bluetooth de la bomba (ver arriba).
 
-## Further Information
+## Más información
 
 (diaconn-g8-insulin-pump-option-setting)=
 
-### Diaconn G8 Insulin pump option setting
+### Ajustes de la bomba de insulina Diaconn G8
 
-- **Configuration** > **Pump** > **Diaconn G8** > **Settings**
-- Or, on the pump screen (**Manage** > **Pump**), tap the settings icon (cog wheel) in the top-right corner.
+- **Configuración** > **Bomba** > **Diaconn G8** > **Ajustes**
+- O, en la pantalla de la bomba (**Administrar** > **Bomba**), toca el icono de ajustes (rueda dentada) en la esquina superior derecha.
 
-![Diaconn G8 driver settings](../images/v4/Pumps/diaconn_g8_settings.png)
+![Ajustes del driver de Diaconn G8](../images/v4/Pumps/diaconn_g8_settings.png)
 
-- **Bolus speed** sets how fast the pump delivers a bolus.
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an "Insulin Change" event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a "Site Change" event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically added as a note when a "Tube Change" event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a "Battery Change" event occurs. You can also record a battery change yourself with **Manage** > **Pump Battery Change**. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
-- **Diaconn Cloud Sync** sends the pump logs to the Diaconn Cloud.
+- **Velocidad del bolo** define la velocidad con la que la bomba administra un bolo.
+- Si la opción **Registrar cambios de reservorio** está activada, los datos correspondientes se suben automáticamente al careportal cuando ocurre un evento «Insulin Change» (cambio de insulina).
+- Si la opción **Registrar cambio de aguja** está activada, los datos correspondientes se suben automáticamente al careportal cuando ocurre un evento «Site Change» (cambio de sitio).
+- Si la opción **Registrar cambios de tubo** está activada, los datos correspondientes se añaden automáticamente como nota cuando ocurre un evento «Tube Change» (cambio de tubo).
+- Si la opción **Registrar cambio de batería** está activada, los datos correspondientes se suben automáticamente al careportal cuando ocurre un evento «Battery Change» (cambio de batería). También puedes registrar tú mismo un cambio de batería con **Administrar** > **Cambio de batería de la bomba**. (Nota: para cambiar la batería, primero detén todas las funciones de inyección en curso.)
+- **Sincronización con la nube de Diaconn** envía los registros de la bomba a la nube de Diaconn (Diaconn Cloud).
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+![Menú de acciones de Diaconn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 a battery change is recorded with **Manage** > **Pump Battery Change**; there is no **Actions** tab.
+La captura de pantalla de arriba es de una versión anterior de **AAPS**. En **AAPS** 4 un cambio de batería se registra con **Administrar** > **Cambio de batería de la bomba**; ya no existe la pestaña **Acciones**.
 ```
 
-### Extended Bolus function
+### Función de bolo extendido
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Si usas el bolo extendido, se desactiva el lazo cerrado.
+- Consulta [esta página](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) para saber por qué el bolo extendido no funciona en un entorno de lazo cerrado.
 
-## Where to get help
+## Dónde obtener ayuda
 
-Development of the Diaconn G8 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+El desarrollo del driver de Diaconn G8 lo hace la comunidad de forma **voluntaria**. Antes de pedir ayuda:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lee** la sección correspondiente de esta documentación para confirmar cómo debe funcionar la función.
+2. **Pregunta** en el canal *#AAPS* de [Discord](https://discord.gg/4fQUWHZ4Mw) o en uno de los otros [canales de la comunidad](../GettingHelp/WhereCanIGetHelp.md).
+3. **Informa de un error** buscando primero en los [problemas existentes](https://github.com/nightscout/AndroidAPS/issues); si el tuyo no aparece, abre un [nuevo problema](https://github.com/nightscout/AndroidAPS/issues) y adjunta tus [archivos de registro](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Cuando pidas ayuda, indica la marca y el modelo de tu teléfono, la versión de Android, la versión de **AAPS** y una descripción sencilla del problema (qué cambió y cuándo funcionó por última vez).
