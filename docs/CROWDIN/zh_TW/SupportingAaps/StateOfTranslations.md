@@ -3,13 +3,14 @@
 狀態每小時更新一次，僅反應 Crowdin 上的狀態。
 
 ```{tip}
-注意，校對的百分比要比翻譯的百分比低，但他們卻決定把他顯示在翻譯的上面。最好只查看翻譯百分比來判斷是否還有工作需要完成。
+Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
+最好只查看翻譯百分比來判斷是否還有工作需要完成。
 ```
 
 ```{admonition} needed time for final publication
 在 Crowdin 完成翻譯後，每天都會進行同步到 Github 的排程，將翻譯作為 pull request（PR）傳送到 Github。
 
-PR 的接受是一項手動審核工作，審核人員會盡快完成工作。
+The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
 ## 應用程式翻譯狀態
