@@ -53,7 +53,7 @@ Minimálna požadovaná verzia je uvedená v [návode na zostavenie](#Building-A
 * Počkajte, kým prebieha sťahovanie. Uvidíte to ako informáciu na spodnom paneli. Po dokončení sa zobrazí správa o úspechu.
 
   ```{note}
-  Aktualizované súbory sa môžu líšiť! Nie je to žiadny ukazovateľ
+  Aktualizované súbory sa môžu líšiť! This is not an indication of a problem.
   ```
 
    ![Android Studio – Pull úspešný](../images/update/06_GitPullSuccess.png)
