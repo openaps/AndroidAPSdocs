@@ -161,7 +161,7 @@ Możesz zdjąć pompę na czas prysznica lub kąpieli. Przez ten krótki czas mo
 
 #### Praca
 
-W zależności od Twojej pracy możesz chcieć używać innych ustawień leczenia w dni robocze. Jako użytkownik pętli rozważ [zmianę profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) na typowy dzień pracy. Na przykład możesz przełączyć się na profil powyżej 100%, jeśli masz mało ruchu w pracy (np. siedzisz przy biurku), albo poniżej 100%, jeśli jesteś aktywny i cały dzień na nogach. Możesz też rozważyć wysoki lub niski cel tymczasowy albo [przesunięcie czasowe profilu](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile), gdy pracujesz dużo wcześniej lub później niż zwykle albo pracujesz na zmiany. Możesz też utworzyć drugi profil (np. „dom” i „dzień pracy”) i codziennie zmieniać profil na ten, którego potrzebujesz, albo zapisać ustawienia na dzień pracy jako [scenę](#scenes).
+W zależności od Twojej pracy możesz chcieć używać innych ustawień leczenia w dni robocze. Jako użytkownik pętli rozważ [zmianę profilu](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) na typowy dzień pracy. Na przykład możesz przełączyć się na profil powyżej 100%, jeśli masz mało ruchu w pracy (np. siedzisz przy biurku), albo poniżej 100%, jeśli jesteś aktywny i cały dzień na nogach. You could also consider a high or low temporary target or a [time shift of your profile](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, or if you work different shifts. Możesz też utworzyć drugi profil (np. „dom” i „dzień pracy”) i codziennie zmieniać profil na ten, którego potrzebujesz, albo zapisać ustawienia na dzień pracy jako [scenę](#scenes).
 
 ### Czas wolny
 
@@ -393,7 +393,7 @@ Najpierw spróbuj przycisku **Resetuj RileyLink** na ekranie pompy (zobacz stron
 
 #### Leczenie wprowadzone na stronie Nightscout nie jest stosowane
 
-To [tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode). Gdy kontrola z urządzenia opiekuna jest włączona — w Trybie uproszczonym zawsze — **AAPS** przyjmuje zmiany tylko ze sparowanych urządzeń opiekuna, a nie ze strony Nightscout ani z innych aplikacji. Wprowadzaj je zamiast tego w sparowanym **AAPSClient**.
+To [tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode). Gdy sterowanie z urządzenia opiekuna jest włączone — w Trybie uproszczonym zawsze — **AAPS** przyjmuje zmiany tylko ze sparowanych urządzeń opiekuna, a nie ze strony Nightscout ani z innych aplikacji. Wprowadzaj je zamiast tego w sparowanym **AAPSClient**.
 
 ### Alarmy i ostrzeżenia
 
@@ -401,7 +401,7 @@ To [tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode). Gdy 
 
 Czerwony znak ostrzeżenia przy skrócie do źródła BG to funkcja bezpieczeństwa w AAPS. Pełne wyjaśnienie znajdziesz w części [Znak ostrzeżenia BG](#aaps-screens-bg-warning-sign).
 
-Czerwony znak ostrzeżenia przy skrócie do źródła BG na dolnym pasku nawigacji (czerwony trójkąt w starszych wersjach) oznacza, że masz zdublowane wartości BG i AAPS nie może dokładnie obliczyć zmian (delta). Zamknięta pętla zostaje przełączona w tryb **Zawieszenie przy niskiej glikemii**: nadal zmniejsza lub wstrzymuje bazę, aby chronić Cię przed niskimi wartościami, ale nie podaje insuliny korekcyjnej. Aby usunąć ostrzeżenie, musisz usunąć po jednej wartości BG z każdej zdublowanej pary. Dotknij skrótu, aby otworzyć [ekran źródła BG](#aaps-screens-bg-source): duplikat jest zaznaczony na czerwono. Przytrzymaj jeden wiersz, który chcesz usunąć, zaznacz po jednym wierszu z każdej zdublowanej pary i dotknij ikony kosza. Jeśli jest za dużo zdublowanych BG, może być konieczne wyczyszczenie baz danych AAPS. W takim przypadku stracisz też statystyki, IOB, COB i wybrany profil.
+Czerwony znak ostrzeżenia przy skrócie do źródła BG na dolnym pasku nawigacji (czerwony trójkąt w starszych wersjach) oznacza, że masz zdublowane wartości BG i AAPS nie może dokładnie obliczyć zmian (delta). Zamknięta pętla zostaje przełączona w tryb **Zawieszenie przy niskiej glikemii**: nadal zmniejsza lub wstrzymuje bazę, aby chronić Cię przed niskimi wartościami, ale nie podaje insuliny korekcyjnej. Aby usunąć ostrzeżenie, musisz usunąć po jednej wartości BG z każdej zdublowanej pary. Dotknij skrótu, aby otworzyć [ekran źródła BG](#aaps-screens-bg-source): duplikat jest zaznaczony na czerwono. Przytrzymaj jeden wiersz, który chcesz usunąć, zaznacz po jednym wierszu z każdej zdublowanej pary i dotknij ikony kosza. Jeśli jest za dużo zdublowanych BG, może być konieczne wyczyszczenie baz danych AAPS. In this case, you'll also lose stats, IOB, COB, selected profile.
 
 Gdy ostrzeżenie zniknie, AAPS nie wraca sam do trybu **Zamknięta pętla**. Naciśnij ikonę pętli na ekranie głównym i ponownie wybierz **Zamknięta pętla**.
 
@@ -420,4 +420,4 @@ Stan poda jest zapisywany w eksportowanych ustawieniach, więc aktywny pod możn
 Najpierw przeczytaj te części:
 
 * [Eksport i import ustawień](#omnipod-dash-export-import) na stronie Omnipod DASH oraz [Pompy bez drenu](#ExportImportSettings-tubeless-pumps): na nowym telefonie zaznacz **Także zastąp ustawienia pompy** i użyj pliku wyeksportowanego w czasie noszenia obecnego poda,
-* [Odrzucanie poda](#omnipod-dash-discard-pod), aby potem usunąć pod ze starego telefonu. Trzymaj stary telefon w trybie samolotowym, aż pod zostanie odrzucony, aby oba telefony nigdy nie łączyły się z podem jednocześnie.
+* [Odrzucanie poda](#omnipod-dash-discard-pod), aby potem usunąć pod ze starego telefonu. Keep the old phone in airplane mode until the Pod is discarded, so that the two phones never talk to the Pod at the same time.
