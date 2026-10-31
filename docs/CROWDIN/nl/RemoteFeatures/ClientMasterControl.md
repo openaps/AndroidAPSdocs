@@ -1,7 +1,7 @@
 (client-master-control)=
 # Master ↔ Client besturing (ondertekende besturing op afstand)
 
-Vanaf **AAPS** versie 4 kan een volgtelefoon met **AAPSClient** veel meer dan alleen behandelingen via Nightscout *aankondigen*: zodra hij **gekoppeld** is met de hoofdtelefoon, kan hij **ondertekende commando's** sturen. De hoofdtelefoon (de **master**) controleert, bevestigt en voert ze uit — ook het geven van een **insulinebolus** met de pomp van de master.
+Vanaf **AAPS** versie 4 kan een volgtelefoon met **AAPSClient** veel meer dan alleen behandelingen via Nightscout *aankondigen*: zodra hij **gekoppeld** is met de AAPS-telefoon, kan hij **ondertekende commando's** sturen. De AAPS-telefoon (de **master**) controleert, bevestigt en voert ze uit — ook het geven van een **insulinebolus** met de pomp van de master.
 
 Deze pagina legt uit hoe het werkt, hoe je het instelt en hoe je het gebruikt.
 
@@ -12,7 +12,7 @@ Deze pagina legt uit hoe het werkt, hoe je het instelt en hoe je het gebruikt.
 
 ```{admonition} Wording used on this page
 :class: note
-- **Master** = de hoofdtelefoon met **AAPS** die de pomp heeft en de loop draait (de `full` app).
+- **Master** = de telefoon met **AAPS** die de pomp heeft en de loop draait (de `full` app).
 - **Client** = een **AAPSClient**-telefoon zonder pomp die de master volgt en hem nu ook *bestuurt*.
 - Beide telefoons moeten met **dezelfde Nightscout**-site verbonden zijn. Alle communicatie gaat nog steeds via Nightscout — er is geen directe verbinding tussen de telefoons nodig.
 ```
@@ -23,7 +23,7 @@ Deze pagina legt uit hoe het werkt, hoe je het instelt en hoe je het gebruikt.
 
 ```{admonition} Coming from AAPS v3?
 :class: note
-In **AAPS** v3 kon **AAPSClient** alleen niet-ondertekende careportal-behandelingen naar Nightscout schrijven, en kon hij geen bolus geven. Besturing op afstand vraagt nu om een eenmalige [koppeling](#client_master_master_setup). Zie ook [Wat er veranderd is in AAPS v4](#v4changes-remote-control).
+In **AAPS** v3 kon **AAPSClient** alleen niet-ondertekende careportal-behandelingen naar Nightscout schrijven, en kon hij geen bolus geven. Besturing op afstand vraagt nu om een eenmalige [koppeling](#client_master_master_setup). Zie ook [Wat is er veranderd in AAPS v4](#v4changes-remote-control).
 ```
 
 **AAPS** v4 gebruikt een eigen **Client-Control**-kanaal. Het loopt nog steeds via je Nightscout-site (in de `settings`-collectie), maar elk bericht is **cryptografisch ondertekend** met een geheime sleutel die alleen de twee telefoons kennen. De geheime sleutel wordt één keer doorgegeven, tijdens het **koppelen**, en direct daarna vervangen door een nieuwe. Zo gaat hij nooit als leesbare tekst over het netwerk.
@@ -123,14 +123,14 @@ De PIN beschermt de geheime koppelingssleutel die via Nightscout wordt uitgewiss
 
 Je kunt de QR-code van de master op twee plekken scannen:
 
-- in de **Setup Wizard** van de client, bij de stap "**Instellen vanaf de 'master'**", die vóór de Nightscout-stap komt. Eén scan stelt dan Nightscout in en, met een code die koppelt, ook de koppeling. Daarmee is het instellen klaar: de wizard sluit en het startscherm opent;
+- in de **Setup Wizard** van de client, bij de stap "**Instellen vanaf de master**", die vóór de Nightscout-stap komt. Eén scan stelt dan Nightscout in en, met een code die koppelt, ook de koppeling. Daarmee is het instellen klaar: de wizard sluit en het startscherm opent;
 - later op elk moment via **Beheren → Koppel met master → Scan de QR-code**.
 
 De eerste keer vraagt **AAPSClient** toestemming voor de **camera**. Als je dat weigert, zegt het scherm dat de camera nodig is. Je kunt de toestemming dan geven met **Probeer het opnieuw**, of in plaats daarvan koppelen met de PIN.
 
 Richt de camera op de code. De client toont wat de code doet — het Nightscout-adres en, bij een code die koppelt, de master waarmee hij koppelt — en vraagt "**Deze code gebruiken?**". Tik op **Gebruik**: de client zet **NSClientV3** aan, vervangt zijn Nightscout-adres en token door die uit de code en zet websockets aan. Een code die koppelt, koppelt ook de telefoon; hij meldt zich bij de master zodra hij met Nightscout verbonden is.
 
-![De wizardstap Instellen vanaf de 'master' op de client](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
+![De wizardstap Instellen vanaf de master op de client](../images/v4/AapsClient/aapsclient_wizard_from_master.png)
 
 ```{admonition} Scanning is available on Android
 :class: note
