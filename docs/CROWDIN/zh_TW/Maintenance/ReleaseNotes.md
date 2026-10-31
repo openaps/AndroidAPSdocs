@@ -9,7 +9,7 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-請依照 [更新手冊](UpdateToNewVersion) 中的指示，更新至新版本。問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
+Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. 問題排除部分也更新手冊頁面上說明了，包含升級**AAPS**時最常遇到的問題。
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
@@ -24,7 +24,7 @@ See [What changed in AAPS v4](V4Changes.md) for the notable behavioral changes �
 
 請參閱 [End of life](EndOfLife.md) 以了解 AAPS 版本的支援終止日期。
 
-**請勿忽略該通知。** **AAPS** 的新版本提供重要的安全性修正。因此，每位 **AAPS** 使用者都必須盡快更新到最新版本。這麼做是為了提升每位 **AAPS** 使用者與 DIY 社群的安全性。感謝你的諒解。
+**請勿忽略該通知。** **AAPS** 的新版本提供重要的安全性修正。因此，每位 **AAPS** 使用者都必須盡快更新到最新版本。 This is an effort to try to improve the safety for each **AAPS** user and the DIY community. 感謝你的諒解。
 
 (maintenance-android-version-aaps-version)=
 
@@ -141,7 +141,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 - NSClientV3：修正重新連線後的資料缺口 @MilosKozak
 - Automation：修正反序列化問題 @MilosKozak
 - Equil：修正電池報告 @MilosKozak
-- 清理工作流程 @vanelsberg
+- Cleanup workflow @vanelsberg
 - Equil：改善錯誤復原 @MilosKozak
 - DanaRS：修正國內版幫浦通訊 @MilosKozak
 - Insight：修正臨時基礎率同步 @MilosKozak
@@ -168,7 +168,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 - Equil：針對不同機型修正電阻設定 @hhfcvmars
 - Tidepool：修正工作階段 @MilosKozak
-- Medtrum：修正啟用流程以避免重複填充 @MilosKozak
+- Medtrum: Fix activation path by preventing double fill @MilosKozak
 - COB：修正 COB 計算（涵蓋危險的邊界案例）@MilosKozak
 
 (version3410)=
@@ -261,7 +261,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 * 改進 Nightscout 異常時的重複資料過濾 @MilosKozak
 
 ### UI/UX 改進
-* 多項改進 @MilosKozak @Philoul @olorinmaia
+* various improvements @MilosKozak @Philoul @olorinmaia
 
 ### 自動化
 * 新的微量注射控制動作 - 透過自動化啟用/停用微量注射 @MilosKozak
@@ -300,7 +300,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 
 (version-enforcement)=
 
-### 從這個版本開始，通知和版本強制執行變得簡化並放寬，並以以下方式運作：
+### Starting this version, notification and version enforcement has been simplified and softened and works following way:
 *  當設備離線時不會過期（如果沒有網路連線）。這意味著不再有 60 天和 90 天的寬限期。
 *  過期後將強制進入 LGS 模式
 *  你將會收到警告/通知的頻率會降低：
@@ -322,7 +322,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 * 單選按鈕 UI 改進 @olorinmaia
 * 自動化：從地圖選擇位置 @MilosKozak
 * 主畫面上可見版本 @MilosKozak
-* 強制執行現有 git 系統的編譯（不支援 ZIP 下載）
+* Compilation with existing git system is enforced (no zip downloads)
 * 在主畫面上顯示版本 @MilosKozak
 * Tidepool 上傳改善 @ConstantinMatheis
 
@@ -342,7 +342,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 ### 錯誤修正
 
 * Dash: 連線是可選的（預設為關閉） @MilosKozak
-* Equil: 修正了注射 10+U，警報改進 @EquilHack
+* Equil: fixed bolus 10+U, alarm improvements @EquilHack
 * Garmin：手錶改進 @swissalpine
 * 手錶改進 @olorinmaia
 * 從手錶控制循環狀態 @tdrkDev
@@ -558,21 +558,21 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。他有許多限制
 - v1 僅發送 2 天的資料
 - 每次重新連線時，v1 都會發送所有 2 天的資料
-- 使用 websockets 是必須的 = 持續連線，更多的電量消耗
+- using websockets is mandatory = permanent connection, more battery consumption
 - 在頻繁中斷連線時，NS 連線會暫停 15 分鐘，以防止高資料使用量
 
 v3 是新的協議。更加安全和高效
 - 使用令牌可以更好地定義查看權限
 - 協議在 AAPS 和 NS 兩端都更高效
 - 他可以從 NS 讀取長達 3 個月的資料
-- 你可以選擇是否在每個設備上使用 websockets（使用意味著更快的更新，不使用意味著更低的電量消耗，但更新速度較慢，即數分鐘）
+- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power consumption, but slower updates ie. minutes)
 - NSClient 在中斷連線時不會暫停
 
 限制
 - NS 15 必須與 AAPS 3.2 一起使用
 - v3 不會看到由 v1 協議完成的更新（可能會在未來的 NS 版本中解決）
-- 反過來，因為追蹤變更的方法效率低下，v1 能看到由 v3 完成的變更
-- 請記住，NS 迄今仍然在內部使用 v1，因此如果您使用 v3，則無法通過 NS 網頁 UI 輸入資料。如果你想遠端輸入資料，必須使用 AAPSClient 的 SMS 功能
+- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
+- 請記住，NS 迄今仍然在內部使用 v1，因此如果您使用 v3，則無法通過 NS 網頁 UI 輸入資料。 You must use AAPSClient or SMS if you want to enter data remotely
 
 推薦設置
 - 基於以上所有原因，你應選擇一種方法並在所有設備上使用他（記住，撰寫本文時，所有其他上傳器都在使用 v1）。如果你決定使用 v3，請在 AAPS 和所有 AAPSClients 中選擇 v3
