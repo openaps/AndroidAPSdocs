@@ -141,7 +141,8 @@ Je hebt ze alle drie nodig als je AAPS ooit op een andere manier bouwt, bijv. me
    Opent: <code class="aapsb-repoUrl"></code>
 
    Krijg je "Page not found" (404)? Controleer eerst of je in deze browser bent ingelogd op github.com: GitHub toont 404 voor privé-repositories als je niet bent ingelogd. Anders past je gebruikersnaam of de naam van je repository in stap 1 niet bij je repository: controleer ze op github.com en typ ze in stap 1. Is in plaats daarvan de GitHub-app geopend? Tik op "RUN WORKFLOW", controleer de versie en de variant en tik nog een keer op "RUN WORKFLOW". Toont de app nog steeds "Nothing to see here"? Trek de lijst dan omlaag om je build te zien.
-2. Als dat gevraagd wordt, klik je op de groene knop om workflows aan te zetten.
+2. If asked, click the green button to enable workflows.
+The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
 3. Klik op "Run workflow" en daarna op de groene knop "Run workflow". "latest" bouwt de nieuwste versie van AAPS. ***tip:*** *je kunt een andere versie bouwen door de naam van de [tag](https://github.com/nightscout/AndroidAPS/tags) te typen in plaats van "latest"*
 4. Wacht ongeveer 15–30 minuten. Een groen vinkje betekent dat de build klaar is.
 Wil je een e-mail krijgen als de build klaar is? GitHub stuurt je alleen een e-mail als een build mislukt. Om er ook een te krijgen als hij lukt: open op github.com je profielfoto → Settings → Notifications → System → Actions en zet het vinkje bij "Only notify for failed workflows" uit.
