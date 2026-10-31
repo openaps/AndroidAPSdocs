@@ -127,7 +127,7 @@ Jeśli po kilku dniach zobaczysz poniższe wzorce, rozważ następujące zmiany:
 
 1. Najpierw musisz mieć poprawne domyślne ustawienia bazy w swoim **Profilu**.
 2. Zacznij w celu, najlepiej bez ujemnego IOB.
-3. Zapisz całkowitą podaną insulinę z **Zarządzaj → Pompa** (lub z historii pompy) i nazwij ją Start insulin C4 (insulina na początku). Bardzo dokładnie odmierz znaną porcję węglowodanów i zapisz czas rozpoczęcia oraz IOB na początku (Start IOB). Potem wprowadź węglowodany i bolus do **AAPS** przez kalkulator bolusa (z aktualnie ustawionym CI). Nie zapomnij zjeść tych węglowodanów ;)
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Bardzo dokładnie odmierz znaną porcję węglowodanów i zapisz czas rozpoczęcia oraz IOB na początku (Start IOB). Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Nie zapomnij zjeść tych węglowodanów ;)
 4. Po kilku godzinach, gdy COB=0[*](#profiletuning-cob-zero) i znów jesteś w celu, zapisz czas zakończenia i IOB na końcu (End IOB), sprawdź łączną podaną insulinę tak jak wcześniej i nazwij ją End insulin (insulina na końcu). *UWAGA: Długość okresu NIE jest ważna, o ile jest dłuższa niż czas trawienia*
 5. Od różnicy między End insulin i Start insulin odejmij/dodaj różnicę End IOB – Start IOB. Potem odejmij insulinę bazową obliczoną z ustawień Twojego **Profilu**.
 6. Jeśli __BG__ jest w celu, otrzymasz całkowitą ilość insuliny użytej do „strawienia” węglowodanów. Oblicz swój **I:C**.
