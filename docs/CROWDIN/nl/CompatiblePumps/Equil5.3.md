@@ -1,131 +1,131 @@
 # Equil
 
-These instructions are for configuring the Equil insulin pump.
+Deze instructies gaan over het instellen van de Equil insulinepomp.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Mogelijkheden van de pomp met AAPS
 
-* Tubeless patch pump that communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* **AAPS** treats the Equil as a patch pump with a 200 U reservoir: the main screen shows the patch pump status lights, and **Prime/Fill** and **Pump battery change** are not offered. Filling, priming and changing the battery are done in the pump wizards.
-* While the pump is suspended or stopped, **AAPS** records a 0 U/h temporary basal, so no basal insulin is counted in IOB.
-* DST and timezone changes must be handled manually.
+* Patchpomp zonder slang die met **AAPS** communiceert via de eigen Bluetooth van je telefoon, zonder extra communicatieapparaat.
+* **AAPS** behandelt de Equil als patchpomp met een reservoir van 200 E: het hoofdscherm toont de statuslampjes voor een patchpomp, en **Prime/Vul** en **Pomp bat. wissel** worden niet aangeboden. Vullen, voorvullen en de batterij vervangen doe je in de wizards van de pomp.
+* Zolang de pomp onderbroken of gestopt is, legt **AAPS** een tijdelijk basaal van 0 E/u vast, zodat er geen basale insuline in de IOB wordt meegeteld.
+* Zomertijd en wisselingen van tijdzone moet je zelf afhandelen.
 
 ## Benodigde hardware en software
-* **Compatible Equil hardware**
+* **Geschikte Equil-hardware**
 
-  Currently Equil 5.3 and 5.4 are supported.
+  Op dit moment worden Equil 5.3 en 5.4 ondersteund.
 
-* **AAPS** built and installed using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions
+* **AAPS** gebouwd en geïnstalleerd volgens de instructies in [APK bouwen](../SettingUpAaps/BuildingAaps.md)
 
 ## Pomp koppelen
 
-### Select Equil pump
+### Equil-pomp kiezen
 
-Open the **menu** (☰) in the top-left corner, choose **[Configuration](#Config-Builder-pump)**, and under **Pump** select **Equil**.
+Open het **menu** (☰) linksboven, kies **[Configuratie](#Config-Builder-pump)** en kies onder **Pomp** de **Equil**.
 
-Once it is selected, the **Equil** card shows two buttons, **Settings** and **Open plugin**:
+Als die gekozen is, toont de kaart **Equil** twee knoppen, **Instellingen** en **Plug-in openen**:
 
-![The Equil plugin selected in Configuration > Pump](../images/v4/Pumps/equil_enabled.png)
+![De Equil-plugin gekozen in Configuratie > Pomp](../images/v4/Pumps/equil_enabled.png)
 
-**Open plugin** (or **Manage** → **Pump**) opens the Equil pump screen. Before a pump is paired it looks like this:
+**Plug-in openen** (of **Beheren** → **Pomp**) opent het pompscherm van de Equil. Voordat er een pomp gekoppeld is, ziet het er zo uit:
 
-![Equil pump screen before pairing](../images/v4/Pumps/equil_pump_screen.png)
+![Pompscherm van de Equil vóór het koppelen](../images/v4/Pumps/equil_pump_screen.png)
 
-### Verdere instellingen
+### Instellingen
 
-Open the Equil settings with **Settings** on the **Equil** card, or with the gear icon in the top-right corner of the pump screen.
+Open de Equil-instellingen met **Instellingen** op de kaart **Equil**, of met het tandwiel rechtsboven op het pompscherm.
 
-![Equil driver settings](../images/v4/Pumps/equil_settings.png)
+![Instellingen van de Equil-driver](../images/v4/Pumps/equil_settings.png)
 
-* **Low battery alarm**: warns you when the pump battery is low.
-* **Low drug storage alarm**: warns you when the insulin in the reservoir is low.
-* **Alert tone**: how the pump alerts you: **Mute**, **Vibrate only**, **Tone only** or **Vibrate and tone**.
-* **Bolus speed**: how fast a bolus is given: **1.5 U/min (standard)**, **3 U/min**, **6 U/min** or **12 U/min**. A faster bolus may give more occlusion alarms.
+* **Alarm bij bijna lege batterij**: waarschuwt je als de batterij van de pomp bijna leeg is.
+* **Alarm bij bijna leeg reservoir**: waarschuwt je als er weinig insuline in het reservoir zit.
+* **Alarmtoon**: hoe de pomp je waarschuwt: **Dempen**, **Alleen trillen**, **Alleen toon** of **Trillen en geluid**.
+* **Bolussnelheid**: hoe snel een bolus wordt gegeven: **1.5 E/min (standaard)**, **3 E/min**, **6 E/min** of **12 E/min**. Een snellere bolus kan vaker occlusiealarmen geven.
 
-![The Bolus speed choices in the Equil settings](../images/v4/Pumps/equil_bolus_speed.png)
+![De keuzes voor Bolussnelheid in de Equil-instellingen](../images/v4/Pumps/equil_bolus_speed.png)
 
 ```{admonition} Max basal and max bolus on the patch
 :class: note
-The patch itself refuses any basal rate above a maximum that **AAPS** programs into it. **AAPS** takes the higher of your **max basal** [setting](../SettingUpAaps/Preferences.md) and the highest hourly basal rate in your **Profile**, so the patch always accepts your profile and the temp basals the loop asks for. **AAPS** also sends your maximum allowed bolus to the patch.
+De patch zelf weigert elke basaalstand boven een maximum dat **AAPS** erin programmeert. **AAPS** neemt de hoogste waarde van je **max basaal**-[instelling](../SettingUpAaps/Preferences.md) en de hoogste basaalstand per uur in je **Profiel**, zodat de patch altijd je profiel accepteert en ook de tijdelijke basaalstanden die de loop vraagt. **AAPS** stuurt ook je maximaal toegestane bolus naar de patch.
 
-When you change your **max basal** or **max bolus**, **AAPS** sends the new values to the patch automatically. They are also sent with every profile switch. There is nothing to set on the patch itself.
+Als je je **max basaal** of **max bolus** wijzigt, stuurt **AAPS** de nieuwe waarden automatisch naar de patch. Ze worden ook bij elke profielwissel verstuurd. Op de patch zelf hoef je niets in te stellen.
 ```
 
-### Pair the pump
+### De pomp koppelen
 
-On the pump screen, press **Pair**. A wizard guides you through each step. The row of dots at the top shows how far along you are.
+Druk op het pompscherm op **Koppel**. Een wizard leidt je door elke stap. De rij puntjes bovenaan laat zien hoe ver je bent.
 
-If Android asks whether **AAPS** may find and connect to nearby devices, press **Allow**. **AAPS** needs this to find the pump.
+Als Android vraagt of **AAPS** apparaten in de buurt mag vinden en ermee mag verbinden, druk dan op **Toestaan**. **AAPS** heeft dit nodig om de pomp te vinden.
 
-![Android asking for permission to find nearby devices](../images/Equil/activate1.png)
+![Android vraagt toestemming om apparaten in de buurt te vinden](../images/Equil/activate1.png)
 
-The wizard has these steps. Press **Next** to move on, or **Cancel** to leave the wizard.
+De wizard heeft deze stappen. Druk op **Volgende** om verder te gaan, of op **Annuleren** om de wizard te verlaten.
 
-1. **Profile required**: only shown if you have never activated a **Profile** in **AAPS**. Select the profile to use and press **Activate profile**.
-1. **Assemble pump**: put together the pump, the filled reservoir and the charged battery.
+1. **Profiel vereist**: verschijnt alleen als je in **AAPS** nog nooit een **Profiel** hebt geactiveerd. Kies het profiel dat je wilt gebruiken en druk op **Activeer profiel**.
+1. **Montage pomp**: zet de pomp, het gevulde reservoir en de opgeladen batterij in elkaar.
 
-   ![Assemble pump step](../images/Equil/activate2.png)
+   ![Stap Montage pomp](../images/Equil/activate2.png)
 
-1. **Find Pump**: **AAPS** scans for nearby Equil pumps. Select your pump from the list.
+1. **Pomp zoeken**: **AAPS** zoekt naar Equil-pompen in de buurt. Kies je pomp uit de lijst.
 
-   ![Find Pump step with an Equil pump in the list](../images/Equil/find_pump.png)
-1. **Pair device**: you can enter a pairing password in **Set pair password**. It must be 4 characters long, chosen from `ABCDEF0123456789`. Press **Pair**.
+   ![Stap Pomp zoeken met een Equil-pomp in de lijst](../images/Equil/find_pump.png)
+1. **Apparaat koppelen**: je kunt een koppelwachtwoord invoeren bij **Instellen koppelwachtwoord**. Het moet 4 tekens lang zijn, gekozen uit `ABCDEF0123456789`. Druk op **Koppel**.
 
-   ![Pair device step with the pairing password](../images/Equil/activate3.png)
+   ![Stap Apparaat koppelen met het koppelwachtwoord](../images/Equil/activate3.png)
 
-1. **Select Insulin**: only shown if you have more than one insulin set up. Select the insulin in the reservoir.
-1. **Prime / Fill**: the pump must **not** be on its base plate. Press **Prime/Fill** and prime the reservoir until there is a drop of insulin on the needle tip. Press **Next**.
+1. **Selecteer insuline**: verschijnt alleen als je meer dan één insuline hebt ingesteld. Kies de insuline die in het reservoir zit.
+1. **Prime / Vullen**: de pomp mag **niet** op de basisplaat zitten. Druk op **Ontlucht/Vul** en vul het reservoir voor tot er een druppel insuline aan de punt van de naald hangt. Press **Next**.
 
-   ![Prime / Fill step](../images/Equil/prime_fill.png)
-1. **Site Rotation**: only shown if **Manage pump site rotation** is turned on in the site rotation settings. Tap where you will attach the pump, or press **Skip**.
-1. **Attach pump**: attach the pump to its base plate.
+   ![Stap Prime / Vullen](../images/Equil/prime_fill.png)
+1. **Site rotatie**: verschijnt alleen als **Plaatsingslocatie pomp beheren** aan staat in de instellingen voor site rotatie. Tik op de plek waar je de pomp gaat plakken, of druk op **Overslaan**.
+1. **Pomp aanbrengen**: zet de pomp vast op de basisplaat.
 
-   ![Attach pump step](../images/Equil/attach_pump.png)
-1. **Prime cannula**: once the pump is on the base plate, press **Purge air** to remove air from the cannula. Press **Next**.
+   ![Stap Pomp aanbrengen](../images/Equil/attach_pump.png)
+1. **Canule vullen**: zodra de pomp op de basisplaat zit, druk je op **Verwijder lucht** om de lucht uit de canule te halen. Press **Next**.
 
-   ![Prime cannula step with the Purge air button](../images/Equil/prime_cannula.png)
+   ![Stap Canule vullen met de knop Verwijder lucht](../images/Equil/prime_cannula.png)
 
-1. **Confirm**: put the pump on your body and press **Finish**.
+1. **Bevestigen**: plak de pomp op je lichaam en druk op **Voltooien**.
 
-   ![Confirm step with the Finish button](../images/Equil/confirm.png)
+   ![Stap Bevestigen met de knop Voltooien](../images/Equil/confirm.png)
 
 ```{warning}
-If you set your own pairing password (recommended for your safety), store it somewhere safe. The password is saved in the pump. The pump asks for it at every new pairing until you unpair it properly in **AAPS**. Until then, the pump also cannot be used with the original handheld controller (PDA).
+Als je een eigen koppelwachtwoord instelt (aanbevolen voor je veiligheid), bewaar het dan op een veilige plek. Het wachtwoord wordt in de pomp opgeslagen. De pomp vraagt erom bij elke nieuwe koppeling, tot je hem op de juiste manier ontkoppelt in **AAPS**. Tot dan kun je de pomp ook niet gebruiken met de originele handbediening (PDA).
 ```
 
-### Pump screen after pairing
+### Pompscherm na het koppelen
 
-Once the pump is paired, the pump screen shows these buttons:
+Als de pomp gekoppeld is, toont het pompscherm deze knoppen:
 
-* **Refresh**: reads the state and the history of the pump now.
-* **Suspend** / **Resume delivery**: stop or restart insulin delivery.
-* **Change reservoir**: guides you through detaching the pump, fitting a new reservoir (and, if needed, a new battery), priming and attaching it again. The first step asks *Will you also put on a new infusion set (base plate and cannula)?*
-  * **Yes, new infusion set**: you choose the site, the cannula is primed, and **AAPS** records an insulin change and a cannula change.
-  * **No, only reservoir or battery**: the cannula is not primed and **AAPS** records only an insulin change.
+* **Vernieuwen**: leest nu de status en de geschiedenis van de pomp.
+* **Onderbreken** / **Insulinetoediening hervatten**: stopt de insulinetoediening of start die opnieuw.
+* **Vervang reservoir**: leidt je door het losmaken van de pomp, het plaatsen van een nieuw reservoir (en zo nodig een nieuwe batterij), het voorvullen en het opnieuw aanbrengen. De eerste stap vraagt *Plaatst u ook een nieuwe infusieset (basisplaat en canule)?*
+  * **Ja, een nieuwe infusieset**: je kiest de plek, de canule wordt gevuld en **AAPS** legt een insulinewissel en een canulewissel vast.
+  * **Nee, alleen een reservoir of batterij**: de canule wordt niet gevuld en **AAPS** legt alleen een insulinewissel vast.
 
-  After a reservoir change the battery level shows **-** until **AAPS** reads it again from the pump.
+  Na een reservoirwissel toont het batterijniveau **-** tot **AAPS** het opnieuw uit de pomp leest.
 
-  ![The first step of Change reservoir asks about a new infusion set](../images/Equil/change_reservoir_question.png)
+  ![De eerste stap van Vervang reservoir vraagt naar een nieuwe infusieset](../images/Equil/change_reservoir_question.png)
 
-* **History**: shows the events recorded by the pump.
-* **Unpair device**: guides you through detaching the pump and unpairing it from **AAPS**. This stops insulin delivery, moves the pump plunger back to the bottom, and deletes the pairing.
+* **Geschiedenis**: toont de gebeurtenissen die de pomp heeft vastgelegd.
+* **Apparaat ontkoppelen**: leidt je door het losmaken van de pomp en het ontkoppelen van **AAPS**. Dit stopt de insulinetoediening, zet de zuiger van de pomp terug naar de bodem en wist de koppeling.
 
-### Alarms
+### Alarmen
 
-* The low insulin alarm sounds once at each level (10 U, 5 U and 2 U) and when the reservoir is empty. The low battery alarm sounds once at 10% and once at 5%. Each level alarms only once until the next reservoir change.
-* Pump alarms and stops are also recorded as announcements in the treatments, at the time the pump logged them, so you can see later when and why the pump stopped.
-* If the reservoir runs empty during a bolus, **AAPS** records only the insulin given until then and tells you both amounts.
+* Het alarm voor weinig insuline klinkt één keer bij elk niveau (10 E, 5 E en 2 E) en als het reservoir leeg is. Het alarm voor een bijna lege batterij klinkt één keer bij 10% en één keer bij 5%. Elk niveau geeft maar één keer alarm, tot de volgende reservoirwissel.
+* Alarmen en stops van de pomp worden ook als mededeling in de behandelingen vastgelegd, op het tijdstip waarop de pomp ze registreerde, zodat je later kunt zien wanneer en waarom de pomp stopte.
+* Als het reservoir leegraakt tijdens een bolus, legt **AAPS** alleen de insuline vast die tot dan is gegeven, en toont je beide hoeveelheden.
 
-## Where to get help
+## Waar je hulp kunt krijgen
 
-Development of the Equil driver is done by the community on a **volunteer** basis. Before requesting help, please:
+De Equil-driver wordt door de community ontwikkeld, op **vrijwillige** basis. Doe het volgende voordat je om hulp vraagt:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Lees** het betreffende deel van deze documentatie om na te gaan hoe de functie hoort te werken.
+2. **Vraag** het in het kanaal *#AAPS* op [Discord](https://discord.gg/4fQUWHZ4Mw), of in een van de andere [community-kanalen](../GettingHelp/WhereCanIGetHelp.md).
+3. **Meld een bug**: zoek eerst in de [bestaande issues](https://github.com/nightscout/AndroidAPS/issues); staat jouw probleem er niet bij, open dan een [nieuwe issue](https://github.com/nightscout/AndroidAPS/issues) en voeg je [logbestanden](../GettingHelp/AccessingLogFiles.md) toe.
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Vermeld bij een hulpvraag het merk en model van je telefoon, de Android-versie, de **AAPS**-versie en een duidelijke beschrijving van het probleem (wat is er veranderd, wanneer werkte het voor het laatst).
