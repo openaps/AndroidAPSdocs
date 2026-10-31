@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# 如何設定 Huawei 手機
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**本頁適用的手機：**搭載 **EMUI 12 至 EMUI 15** 的 Huawei 手機。這些版本皆以 Android 12 為基礎，而 Android 12 是目前版本 **AAPS** 的最低需求。如果手機搭載較舊版本的 EMUI，您只能使用[較舊版本的 AAPS](#maintenance-android-version-aaps-version)。
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} HarmonyOS NEXT / HarmonyOS 5 手機 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+近期在中國販售的 Huawei 手機搭載 HarmonyOS NEXT（HarmonyOS 5 及以上版本）。這個系統已不再是 Android，因此無法執行 **AAPS**。 ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Huawei 手機會非常積極地關閉在背景執行的應用程式。請將下列所有設定套用至 **AAPS** 和您的 CGM 應用程式（例如 xDrip+ 或 Juggluco），否則螢幕關閉時，循環功能和血糖讀取值可能會停止更新。
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+不同機型的選單名稱可能略有不同。如果找不到某項設定，請在 **設定** 頂端的搜尋列輸入設定名稱。
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+以下螢幕擷取畫面來自較舊版本的 EMUI。 EMUI 12 至 15 的設定方式都相同。
 
-## Ignore battery optimization
+## 略過電池最佳化
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. 開啟 **設定 > 應用程式 > 應用程式**。
+2. 點選右上角的 **⋮** 選單，然後選取 **特殊存取權 > 電池最佳化**。
+3. 點選清單頂端的箭頭，然後選取 **所有應用程式**。
+4. 選取 **AAPS**，並選擇 **不允許**。 Huawei 之後就不會再最佳化這份清單中的應用程式。
+5. 請對您的 CGM 應用程式重複上述步驟。
 
 ![華為 - 忽略電池優化](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## 應用程式啟動：允許在背景執行
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. 開啟 **設定 > 電池 > 應用程式啟動**（或開啟 **設定 > 應用程式 > 應用程式**，選取應用程式，再前往 **> 電池 > 應用程式啟動**）。
+2. 找到 **AAPS**，並關閉 **自動管理**。
+3. 在 **手動管理**視窗中，開啟以下三個選項： 
+    - **自動啟動**
+    - **次要啟動**（可由其他應用程式啟動）
+    - **在背景執行**
+4. 請對您的 CGM 應用程式重複上述步驟。
 
 ![華為 - 電池選項](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## 將 AAPS 鎖定在最近使用的應用程式清單中
 
-Locked apps are not closed when you clear the recent apps list.
+清除最近使用的應用程式清單時，已鎖定的應用程式不會關閉。
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. 開啟最近使用的應用程式清單。
+2. 在 **AAPS** 卡片上向下滑動。卡片上會出現鎖頭圖示。
+3. 對你的 CGM App 也執行相同操作。
 
 ![華為 - 鎖定應用程式](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## 省電模式
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+請關閉 **省電模式** 和 **超級省電模式**（**設定 > 電池**）。無論上述設定為何，這些模式都會關閉背景 App。
 
-## If AAPS still stops in the background
+## 如果 AAPS 在背景執行時仍會停止
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+如需更多 Huawei 專用解決方法，請參閱 [Don't kill my app](https://dontkillmyapp.com/huawei)。
 
-## Honor phones
+## Honor 手機
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Honor 現在是獨立品牌，其手機使用 MagicOS，而非 EMUI。背景設定非常類似：在 App 的電池設定中找到 **App 啟動**，關閉 **自動管理**，並允許所有三個選項，接著將 App 從電池最佳化清單中移除。
