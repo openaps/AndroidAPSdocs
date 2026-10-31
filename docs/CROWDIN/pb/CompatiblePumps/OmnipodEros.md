@@ -778,7 +778,7 @@ Notificações do AAPS e alertas sonoros do telefone quando não há certeza se 
 - **\*Som das notificações de SMB incerto ativado:** Ative ou desative esta configuração para disparar um alerta sonoro e uma notificação visual quando o AAPS não tem certeza se um SMB foi administrado com sucesso.
 - **\*Sons para notificações incertas de bólus ativados:** Ative ou desative esta configuração para disparar um alerta sonoro e uma notificação visual quando o AAPS não tem certeza se um bólus foi administrado com sucesso.
 
-### Other
+### Outro
 
 Configurações avançadas para ajudar na depuração.
 
@@ -828,12 +828,7 @@ Existem alguns pontos específicos que mostram como o pod Omnipod é diferente d
 
 As idades da **insulina** e da **cânula** na [linha de status](#screens-sensor-level-battery) da tela principal **voltam** para 0 dias e 0 horas **depois de cada troca de pod**. Isso acontece por causa da forma como a bomba Omnipod é construída e funciona. A **bateria da bomba** e o **reservatório de insulina** são integrados em cada pod. Como o pod insere a cânula diretamente na pele onde ele está colado, as bombas Omnipod não usam um tubo tradicional. *Por isso, depois de uma troca de pod, a idade de cada um desses valores volta automaticamente a zero.* A **Idade da bateria da bomba** não é informada, porque a bateria do pod sempre dura mais do que o próprio pod (no máximo 80 horas).
 
-![Actions_Tab](../images/omnipod/Actions_Tab.png)
-
-```{admonition} Older screenshot
-:class: note
-A captura de tela acima é de uma versão anterior do **AAPS**, em que essas idades eram mostradas na seção **CarePortal** da aba **Ações (ACT)**. No **AAPS** 4, elas são mostradas na linha de status da tela principal.
-```
+![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
 ### Níveis
 
