@@ -10,7 +10,7 @@
 **優點**
 
 * 他真的很小。
-* 即使你告訴別人，他們可能也不會認為這是一台普通的智慧型手機，並會更容易接受他在禁止使用手機的場合中的例外情況。
+* Even if you tell people, they might not consider it as a normal smartphone and will accept it more easily as an exception when phones are normally not allowed.
 
 **缺點**
 
@@ -33,7 +33,7 @@ The Jelly comes with strong optimization features that **must** be disabled for 
 
 ### 電池壽命最佳化
 
-To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' (and other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
+To avoid interference with **AAPS**, the Jelly Star 'battery usage' should be disabled by selecting 'unrestricted' for **AAPS** (and for other **DIY apps** like BYODA, xDrip, OOP2, Juggluco, etc...).
 
 ![Jelly_BatterY_1ACA756A-2EC4-4623-B8C4-2CEB9D230A93](../images/JellyStarMini1.jpg)
 
