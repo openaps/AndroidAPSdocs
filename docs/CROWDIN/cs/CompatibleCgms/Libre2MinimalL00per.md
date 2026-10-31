@@ -6,7 +6,7 @@ Seznam definic najdete na konci tohoto dokumentu. Pokud neznáte některé pojmy
 
  
 
-## Configuration
+## Konfigurace
 
 ### Hardware
 
@@ -58,8 +58,8 @@ Seznam definic najdete na konci tohoto dokumentu. Pokud neznáte některé pojmy
   - [*Krok 9: Zkontrolujte, že je senzor připojen a posílá data*](#minimallooper-step9)
 
 - *[Poznámky](#minimallooper-notes)*
-- *[Advantages](#minimallooper-advantages)*
-- *[Disadvantages](#minimallooper-disadvantages)*
+- *[Výhody](#minimallooper-advantages)*
+- *[Nevýhody](#minimallooper-disadvantages)*
 - <u>*\[Řešení problémů\](#minimallooper-troubleshooting)*</u>
 
 ## Než začnete
@@ -341,7 +341,7 @@ Na obrazovce **BT Device** (přejeďte prstem doleva) můžete zkontrolovat dal�
 
 (minimallooper-advantages)=
 
-### Advantages
+### Výhody
 
 - **Upravená aplikace LL už není potřeba** Pro získávání hodnot ze senzoru FSL2 už nepotřebujete upravenou verzi aplikace LL. Upravenou aplikaci LL sice můžete použít, ale oficiální verze aplikace LL umí provést první inicializační NFC sken stejně jako upravená aplikace. Pro inicializační NFC sken, který spouští senzor, mezi nimi není žádný rozdíl.
 
@@ -368,7 +368,7 @@ Na obrazovce **BT Device** (přejeďte prstem doleva) můžete zkontrolovat dal�
 
 (minimallooper-disadvantages)=
 
-### Disadvantages
+### Nevýhody
 
 - **Restart telefonu:** Protože se po restartu telefonu musí proces Bluetooth spustit znovu, musíte se nejdříve ujistit, že jste ručně zakázali aplikaci LL (pokud jste ji neodinstalovali), a trpělivě počkat na první hodnoty (3 až 15 min). To znamená restartovat telefon tak, aby k tomu nedošlo v kritických chvílích, jako jsou korekční bolusy nebo jídla a svačiny.
 
@@ -419,7 +419,7 @@ Na obrazovce **BT Device** (přejeďte prstem doleva) můžete zkontrolovat dal�
 
 (minimallooper-troubleshooting)=
 
-### Troubleshooting
+### Řešení problémů
 
 #### Senzor se nedaří naskenovat přes NFC
 
