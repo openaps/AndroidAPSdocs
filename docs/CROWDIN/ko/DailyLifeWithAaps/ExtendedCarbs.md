@@ -9,7 +9,7 @@
 
 eCarbs are carbs that are split up over several hours. 단백질/지방보다 탄수화물이 많은 표준식단에서 앞에 탄수화물을 입력하고 필요에 따라 초기 인슐린을 줄이는 것은 인슐린이 너무 일찍 주입되는 것을 막아 준다.  하지만 앞에 입력된 많은 탄수화물양은 소화가 느리게 되는 식사의 경우 SMB가 작동하여 너무 많은 IOB를 생성하게 되기 때문에 eCarbs는 어떻게 탄수화물양이 흡수되고 혈당에 영향을 주는지 좀더 정확하게 시뮬레이션하는데 사용된다. 이 정보를 통해 Loop는 탄수화물을 처리하기 위한 SMB를 관리할 수 있게 한다. 그것은 확장 bolus처럼 보일 수도 있지만 확장 bolus는 SMB 없이도 동작하고 그것만으로는 효과적이지 않을 수 있다.
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## Mechanics of using eCarbs
 
@@ -62,7 +62,7 @@ For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carb
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Extended bolus and why they won't work in closed-loop environment?
 
-위에서 언급한 것과 같이, 확장 또는 멀티 웨이브 bolus는 Closed Loop에서 효과적으로 동작하지 않는다. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+위에서 언급한 것과 같이, 확장 또는 멀티 웨이브 bolus는 Closed Loop에서 효과적으로 동작하지 않는다. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Extended bolus and switch to open loop - Dana and Insight pump only
