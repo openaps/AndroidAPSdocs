@@ -14,7 +14,7 @@ Nie pozwalaj żadnej innej aplikacji wysyłać danych (glikemii i leczenia) do N
 
 ![Podstawowe ustawienia xDrip 1](../images/xDrip_Basic1.png)
 
-#### Wyłącz automatyczną kalibrację i zabiegi (treatments)
+#### Wyłącz automatyczną kalibrację i wpisy leczenia (treatments)
 
 Upewnij się, że `Automatic Calibration` (7) jest wyłączone. Jeśli pole `Automatic Calibration` jest zaznaczone, włącz raz `Download treatments` (6), potem odznacz `Automatic Calibration` i ponownie wyłącz `Download treatments`.
 
@@ -24,7 +24,7 @@ Dotknij `Extra Options`(8)
 
     {admonition} Ostrzeżenie dotyczące bezpieczeństwa
     :class: warning
-    Musisz wyłączyć „Upload treatments” w xDrip, w przeciwnym razie zabiegi mogą zostać podwojone w AAPS, co da błędne COB i IOB.
+    Musisz wyłączyć „Upload treatments” w xDrip, w przeciwnym razie wpisy leczenia mogą zostać podwojone w AAPS, co da błędne COB i IOB.
 
 Wyłącz `Upload treatments`(9) i upewnij się, że **NIE** będziesz używać `Back-fill data` (11).
 
@@ -99,7 +99,7 @@ Postępuj według instrukcji:
 #### Wymiana nadajnika
 
 - Wyłącz oryginalny odbiornik Dexcom (jeśli go używasz) i nie włączaj go ponownie, zanim xDrip nie pokaże odczytów.
-- Usuń urządzenie w xDrip (System Status → Forget Device) ORAZ w ustawieniach Bluetooth smartfona (widoczne jako Dexcom?? gdzie ?? to dwie ostatnie cyfry numeru seryjnego nadajnika).
+- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
 - Trzymaj stary nadajnik poza zasięgiem Bluetooth, aby nie połączył się ponownie.
 - Następnie postępuj według [Uruchomienie nadajnika G6 lub ONE](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
