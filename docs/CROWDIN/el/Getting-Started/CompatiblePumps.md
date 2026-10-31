@@ -1,6 +1,6 @@
-# Compatible Pumps
+# Συμβατές αντλίες
 
-AAPS works with a number of insulin pumps. Η παρακάτω λίστα δείχνει τις συσκευές που υποστηρίζονται σήμερα. Σε παρένθεση αναφέρεται αν το AAPS επικοινωνεί με την αντλία μέσω του ενσωματωμένου Bluetooth του τηλεφώνου σας ή αν χρειάζεται μια συσκευή συμβατή με RileyLink.
+Το AAPS λειτουργεί με αρκετές αντλίες ινσουλίνης. Η παρακάτω λίστα δείχνει τις συσκευές που υποστηρίζονται σήμερα. Σε παρένθεση αναφέρεται αν το AAPS επικοινωνεί με την αντλία μέσω του ενσωματωμένου Bluetooth του τηλεφώνου σας ή αν χρειάζεται μια συσκευή συμβατή με RileyLink.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -38,12 +38,12 @@ AAPS works with a number of insulin pumps. Η παρακάτω λίστα δεί
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (χρειάζεται [πρόσθετη συσκευή επικοινωνίας](#CompatiblePumps-additional-communication-device))
 
-## My pump is not listed
+## Η αντλία μου δεν είναι στη λίστα
 
 Λεπτομέρειες για την κατάσταση άλλων αντλιών που ίσως μπορούν να λειτουργήσουν με το AAPS θα βρείτε στη σελίδα [Μελλοντικοί (πιθανοί) οδηγοί αντλιών](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Πρόσθετη συσκευή επικοινωνίας
 
 Αν δεν αναφέρεται πρόσθετη συσκευή επικοινωνίας, η επικοινωνία μεταξύ της αντλίας ινσουλίνης και του **AAPS** γίνεται μέσω του ενσωματωμένου Bluetooth του Android. Δεν χρειάζεται πρόσθετη συσκευή για να «μεταφράσει» το πρωτόκολλο επικοινωνίας.
 
