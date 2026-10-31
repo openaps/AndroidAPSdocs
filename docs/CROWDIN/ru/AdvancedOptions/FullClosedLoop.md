@@ -9,7 +9,7 @@
 
 Несмотря на то, что ** гибридный замкнутый цикл ** ("HCL") имеет собственный алгоритм работы, он, тем не менее требует, чтобы пользователь самостоятельное вводил болюсы на прием пищи. В результате петля может приостановить работу (временный нулевой базал), чтобы предотвратить избыточную подачу инсулина.
 
-В Автономном замкнутом цикле **FCL** больше не требуются болюсы на еду: алгоритм производит все расчеты самостоятельно!  **AAPS** может разрешать прием пищи без подачи болюсов и без введения углеводов в режиме, называемом "непредвиденный прием пищи" **("UAM")**. Режим **UAM** позволяет алгоритму **AAPS** лучше справляться с неверно введенными углеводами за счет большей агрессивности.
+В Автономном замкнутом цикле **FCL** больше не требуются болюсы на еду: алгоритм производит все расчеты самостоятельно!  **AAPS** can handle meals without the user giving any bolus, and without making carb inputs, in a mode called ‘un-announced meals’ **(‘UAM’)**. Режим **UAM** позволяет алгоритму **AAPS** лучше справляться с неверно введенными углеводами за счет большей агрессивности.
 
 ## Чего ожидать?
 
@@ -31,14 +31,14 @@
 Автономный замкнутый цикл (**FCL**) не для всех:
 
 - Многие пользователи автономного цикла добиваются 90% времени в целевом диапазоне (4--! 0), а HbA1c - менее 6%, однако некоторые предпочитают более жесткий контроль. Notably, minimizing values over 140 mg/dL at diets with rapid carbs probably requires pre-bolusing.
-- Тонкая настройка **AAPS** может быть сложной. Особенно для тех, кто не чуствует себя уверенным пользователем AAPS.  Для полноценной настройки **Автономного ЗЦ** понадобится несколько недель. Потраченное время не пропадет зря - вы получите полноценную компенсацию и контоль **ГК**.
+- Тонкая настройка **AAPS** может быть сложной. It is not for those users who feel overwhelmed by AAPS.  Для полноценной настройки **Автономного ЗЦ** понадобится несколько недель. Потраченное время не пропадет зря - вы получите полноценную компенсацию и контоль **ГК**.
 - Как правило, при работе с **АЗЦ**. люди легче справляются с компенсацией питания, чем физической нагрузки. Многие любят ограничивать себя в количестве спортивных перекусов чтобы контролировать массу тела.
 - Организация **АЗЦ** для детей по-прежнему представляет сложности (обсуждаются ниже).
 
 
 ## Правильно настроенный гибридный замкнутый цикл
 
-Прежде чем переходить на **АЗЦ** рекомендуется хорошо отладить гибридный **ЗЦ**.  Для успешной работы **АЗЦ** требуются точные индивидуальные настройки, чтобы ** AAPS** мог полноценно имитировать именно ВАШ гибридный режим замкнутого цикла.
+It is advisable to first establish a well-tuned **HCL** before considering the transition to **FCL**.  Для успешной работы **АЗЦ** требуются точные индивидуальные настройки, чтобы ** AAPS** мог полноценно имитировать именно ВАШ гибридный режим замкнутого цикла.
 
 **АЗЦ** требует настройки режимов **Автоматизации**. Прежде чем переходить на **АЗЦ**, пользователь должен иметь четкое представление о своих потребностях в инсулинотерапии. Ошибки могут маскироваться другими ошибками. Это может создать нестабильную систему **АЗЦ**, которую будет трудно откорректировать. Следует стремиться к достижению целевых показателей времени в диапазоне %TIR, сопоставимых с теми, которые вы уже имеете в гибридном цикле **HCL**.
 
@@ -58,7 +58,7 @@
 
 EEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- приводят к значительному снижению пиковых *ГК** по сравнению с более медленными инсулинами;
+- will result in significantly lower **BG** peaks than slower insulins;
 - справляются с задержкой подачи болюса в пару минут, не допуская при этом пиков; и
 - minimize the effect on **BG** peak from different carb loads (meal sizes).
 
@@ -70,9 +70,9 @@ However, Fiasp or Lyumjev can result in frequent pump occlusions, even after opt
 
 **BG** values and stable Bluetooth connectivity are required to ensure **AAPS** can optimally perform without losing valuable time. **АЗЦ** требует технически стабильной системы 24/7:
 
-- Корректная работа системы мониторинга ГК. Система мониторинга гликемии не должна выдавать скачкообразных значений, которые могут быть истолкованы алгоритмом ЗЦ как признак начала приема пищи. Аналогично, неверные калибровки системы НМГ могут привести к скачкам.
+- your **CGM’s performance**. Your CGM should not produce jumpy **BG** values that could be misinterpreted by **FCL** as a sign of a starting meal. Аналогично, неверные калибровки системы НМГ могут привести к скачкам.
 - как и где выполняется сглаживание мониторинга **НМГ** и как оно влияет на индивидуальные настройки. Notably how delta is defined, and AAPS recognizing this as being sign of a starting meal.
-- Bluetooth stability for the pump and CGM  pump;
+- Bluetooth stability for the pump and CGM;
 - недопущение (или по крайней мере раннее распознавание окклюзии помпы);
 - поток данных и используемые приложения телефона, а также разница между днями использования сенсора;
 - поддержание всех компонентов **AAPS** в хорошо заряженном состоянии и в непосредственной близости от запасных частей; и
@@ -114,8 +114,8 @@ However, Fiasp or Lyumjev can result in frequent pump occlusions, even after opt
 
 **АЗЦ** может создавать дополнительные трудности для детей, в том числе:
 
-- Инсулины Liumjev или Fiasp могут быть недоступны или плохо переносимы.
-- Почасовая скорость базала может быть весьма низкой, что создает плохую основу для больших микроболюсов **SMB**.
+- Lyumjev or Fiasp may not be available or well tolerated.
+- Hourly basal rate may be very low, providing a poor basis for big **SMBs**.
 - Диета может быть богата сладкими компонентами. При низком объеме крови в теле ребёнка очевидна тенденция к высоким скачкам уровня **ГК**.
 - Гормоны роста и заметные изменения чувствительности к инсулину затрудняют точную настройку **АЗЦ**.
 
@@ -149,7 +149,7 @@ Carefully observe/analyze the **SMB** sizes shortly after your meal commences. �
 
 Для успешной работы **АЗЦ** ключевым параметром настройки является чувствительность к инсулину **ISF**. В алгоритме **AAPS** Master + **Автоматизация**, при распознании (через приращения гликемии) приема пищи</strong> должно автоматически запускаться **> 100%-ное изменение профиля, обеспечивающее повышенный **ISF**.</p>
 
-В режиме **Гибридного ЗЦ** **AAPS** Master допускает до 130% временного ** профиля **. Увеличение **ISF** осуществляется в 3 этапа:
+**AAPS** Master allows up to 130% temporary **Profile** in **HCL** mode. Увеличение **ISF** осуществляется в 3 этапа:
 
 - Шаг 1 - анализ **ISF**  данного времени приема пищи в ** профиле** и оценка, может ли, например, Autosens предложить изменения, для текущего состояния чувствительности организма к инсулину (за последние несколько часов)..
 - Шаг 2 - применение коэффициента (1/%Профиля заданного в **Automation**) для повышения **ISF**.
@@ -163,13 +163,13 @@ Carefully observe/analyze the **SMB** sizes shortly after your meal commences. �
 
 - Для каждого правила **Автоматизации** можно поставить галочку напротив пункта «Действие пользователя» => тогда определенные действия не будут автоматически выполняться при появлении Условий. Вместо этого на главном экране **AAPS** будет оповещение каждый раз, когда алгоритм **АЗЦ** вводит микроболюс **SMB**. У вас есть возможность принять или отклонить его. Это очень удобно на стадии отладки.
 
-This feature can be useful for certain situations like “foot to floor” syndrome whher there is a sudden rise in **BG** when getting up in the morning, but the user wants to prevent a fully automatic “breakfast started” response.
+This feature can be useful for certain situations like “foot to floor” syndrome where there is a sudden rise in **BG** when getting up in the morning, but the user wants to prevent a fully automatic “breakfast started” response.
 
 The section below provides guidance how to bundle **Automation’s** Conditions and how to tackle situations in which the **AAPS** should increase (or decrease) insulin delivery. As **ISF** cannot directly be tuned, raising **Profile Percentage** over 100% will do the same for our purposes.
 
 ### Automated big SMBs at bg rise
 
-The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBS must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in h**HCL**!)
+The key to successful **FCL** **at the beginning of BG increases from meals, very large automatic SMBs must be given by the loop as quickly as possible** “to catch up” with the required **IOB** needed (compare with your typical administered bolus for similar meal in **HCL**!)
 
 To achieve this, data from your **HCL** should be analyzed to determine which **deltas** might be not meal –related and those delta which might be.
 
@@ -180,7 +180,7 @@ To achieve this, data from your **HCL** should be analyzed to determine which **
 - Но можете использовать одно из усредненных изменений /приращений. By comparing the deltas in the conditions of your **Automations** you could even define actions of different aggressiveness depending on whether the **BG** rises in an accelerated way or not.
 
 > ( delta – short avg delta )>n   is a term that could be used for acceleration detection , to trigger first **SMB** at earliest sign of rising **BG**. -                                                                             
-> Caution: not possible to use with poor or highly smoothened **CGM-values!
+> Caution: not possible to use with poor or highly smoothened **CGM** values!
 
 A **CGM** with patchy data puts the user in a bad spot because, to be on the safe side,  you need to „sandbag“ your definition which delta is surely a sign of a started meal. This means:
 
@@ -203,9 +203,9 @@ You need to “stage” these two (+ maybe a third) **Automations** to fit with 
 
 Note that, still in the rise phase (!), the "overflow" of **iob** must be blocked so that the late effects of the **insulin** (the "**tail**" after 3-5 hours) will not exceed the braking capacity of the loop through zero-temping (“taking away” basal, to reduce hypo risk).
 
-При большом приёме пищи **иногда наблюдается вторичное увеличение уровня глюкозы**. К этому времени, обычно, уровень активного инсулина немного падает, и более агрессивная Автоматизация снова вступает в силу. (Убедитесь, что критерий активного инсулина в Автоматизации #2 не слишком низок, чтобы это смогло произойти).
+При большом приёме пищи **иногда наблюдается вторичное увеличение уровня глюкозы**. К этому времени, обычно, уровень активного инсулина немного падает, и более агрессивная Автоматизация снова вступает в силу. (Check that your iob condition in Automation #2 is not set too low for this to happen).
 
-Soon after a few initial **SMBs** are given comes a **balanced phase** where moderate delivery of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a**BG** rise, and go into zero-temping right away already now).
+Soon after a few initial **SMBs** are given comes a **balanced phase** where moderate delivery of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a **BG** rise, and go into zero-temping right away already now).
 
 The **AAPS** main screen (where you see cob=0 in **UAM** full loop) might in this phase ask for more carbs required. In **UAM** mode that simply means, you could make a very rough plausibility check: Is that amount of carbs likely in your body, un-absorbed from your meal just about an hour ago (about which you gave your loop no info)?
 
@@ -214,7 +214,7 @@ The **AAPS** main screen (where you see cob=0 in **UAM** full loop) might in thi
 
 Often, **Automations** #1 and/or #2 make iob rise to heights that typically are enough for **your** meals. For personalised tuning, look in your **HCL** data at the max iob values that occur with well-managed meals (often: your meal bolus), and above which magnitude a hypo (or requirement for extra carbs) occurred at the end.
 
-Разумные **ограничения активного инсулина IOB**, при которых следует снизить агрессивность цикла, могут не совпадать для разных видов пищи. But especially in the first hour after the start of a meal, which is very crucial in the **UAM** mode. It will defer to for each user. For some users just about 30g/hour get absorbed, and to define a meaningful **iob** independent of the exact meal can be possible.
+Разумные **ограничения активного инсулина IOB**, при которых следует снизить агрессивность цикла, могут не совпадать для разных видов пищи. But especially in the first hour after the start of a meal, which is very crucial in the **UAM** mode. It will differ for each user. For some users just about 30g/hour get absorbed, and to define a meaningful **iob** independent of the exact meal can be possible.
 
 For exceptional meals, or to lower it if sports follow, the **iob** threshold can rapidly be set differently in your **Automation**.
 
@@ -268,7 +268,7 @@ Generally, it makes no sense to keep optimizing settings for one kind of meal. �
 Чтобы предотвратить гипогликемию в послеобеденные 3 – 5 часов, уменьшите агрессивность алгоритма и не допускайте избытка активного инсулина. Конкретные способы:
 
 - Become milder and milder with the **ISF** already during the glucose rise, as in Automation examples #1 and #2 given.
-- Define the iob threshold, from which **AAPS** is made significantly more cautious (Automation #3, above). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq Carbs getting absorbed will provide a counter-movement towards lower iob.
+- Define the iob threshold, from which **AAPS** is made significantly more cautious (Automation #3, above). Note this **iob** can be exceeded, by the last **SMB** before it went into effect; and then further by TBRs if the loop sees insulinReq. Carbs getting absorbed will provide a counter-movement towards lower iob.
 - The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc)
 > You could differentiate within these time slots even further by setting different TTs for low carb vs. fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with **Automations** specially tuned for them. This is probably not necessary, unless your diet habits do vary a lot.
 
@@ -310,7 +310,7 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 - Момент приёма пищи не распознается вовремя
     - Проверьте стабильность Bluetooth-соединений
     - Check whether you could set smaller deltas to trigger first **SMB**
-    - Экспериментируйте с аперитивом, супом за несколько минут до начала еды
+    - Experiment with an aperitif, soup a couple of minutes before meal start
 - Слишком малые дозы микроболюсов SMB
     - Check order of **Automations** (e.g.: big delta before small delta)
     - Check (real-time) in the **APS** plugin screen whether hourly profile basal and set minutes (max 120) limit allowed SMB size
@@ -323,7 +323,7 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 
 - Некорректно определяется время начала приёма пищи
     - Check whether you could set bigger deltas to trigger first **SMB**
-    - Отметьте галочкой «Действия пользователя» в соответствующей Автоматизации, чтобы в дальнейшем иметь возможность на месте решить, остановить ли выполнение Автоматизации, если приёма пищи на самом деле не было
+    - Click “User action” in the related Automation, so in the future you can ad hoc decide to block execution of the Automation if not meal-related
     - To prevent snacks from triggering **SMBs** as for a meal, set a TT>100 when snacking (as you would do in sports and for anti-hypo snacks, anyways)
 - SMB вводят слишком много инсулина
     - Check (real-time) in the **APS** plugin screen whether **SMB max range extension** must be set smaller
@@ -332,8 +332,8 @@ For instance, it is perfectly possible, without any extra steps after **Automati
 - Проблемы с инсулиновым «хвостом» после еды
     - Возможно, потребуется перекус (из-за прогноза гипогликемии) или прием таблеток декстрозы (если вы уже в зоне гипогликемии). Но обратите внимание, что углеводы, которые может запрашивать алгоритм, скорее всего, сильно преувеличены, поскольку петля не имеет информации о потреблении углеводов (в то время как вы можете предположить, сколько ещё не было усвоено, включая жиры и белки).
     - A valuable information would be whether the problem originates mostly in the bg rise phase already. В этом случае поможет установка более низкое порога активного инсулина iobTH.
-    - Если потребность в дополнительных углеводах возникает слишком часто, запишите, сколько граммов потребовалось (не считая того, что вы в итоге переборщили и вам снова потребовался дополнительный инсулин).  Then use your profile IC value to estimate how much insulin less the **SMB** should have delivered, and go with this info into your tuning (regarding the **Percentage Profile** in **Automations**, or maybe also your set iobTH). This may relate to the**SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
-    - It could well be that you simply have to accept higher **BG** peaks for not going low. Или поменяйте диету, чтобы в ней было меньше углеводов и больше белка и жиров.
+    - Если потребность в дополнительных углеводах возникает слишком часто, запишите, сколько граммов потребовалось (не считая того, что вы в итоге переборщили и вам снова потребовался дополнительный инсулин).  Then use your profile IC value to estimate how much insulin less the **SMB** should have delivered, and go with this info into your tuning (regarding the **Percentage Profile** in **Automations**, or maybe also your set iobTH). This may relate to the **SMBs** given when glucose was high, or also extending regarding also the **SMBs** during the **BG** rise.
+    - It could well be that you simply have to accept higher **BG** peaks for not going low. Or change diet to something with lower amounts of carbs, and higher amount of protein and fats.
 
 
 ### More info
