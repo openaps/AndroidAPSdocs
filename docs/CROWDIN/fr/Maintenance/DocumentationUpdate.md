@@ -2,29 +2,29 @@
 
 ## Octobre 2026
 
-- [Montres connectées et AAPS](#watches-external-companion-apps) : la section **Samsung Tizen** devient **Applications compagnon externes** et liste les applications qui lisent la diffusion (broadcast) d'**AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 et plus récent se connecte directement à **AAPS** sans xDrip+ : étapes de configuration ajoutées, aussi résumées dans [Configuration](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) et [Surveillance à distance](../RemoteFeatures/RemoteMonitoring.md). Montres Bluejay : GTS arrêtée, modèle actuel mis à jour @psonnera
-- [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : workflow de compilation version 6. Les étapes de compilation utilisent maintenant des versions exactes et vérifiées des outils GitHub et de la machine de compilation. La compilation explique aussi clairement quand un mauvais texte a été collé dans le secret `KEYSTORE_SET`. La [page de configuration](#aaps-builder-setup) fait maintenant partie de la documentation et est traduite. Elle vérifie votre nom d'utilisateur GitHub et donne une aide plus claire pour le secret, pour « Page not found » (404) et pour l'application GitHub. Si votre fichier `.github/workflows/build.yml` indique la version 5 ou antérieure, remplacez-le comme expliqué dans [Mise à jour d'AAPS](#aaps-builder-updates) @psonnera
-- [Installateur web AAPS](#web-installer) : c'est maintenant une page de la documentation, traduite comme les autres. L'ancienne adresse fonctionne toujours @psonnera
-- [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : la version 3 du workflow de compilation ajoute la variante `aapsclient3Release` (**AAPSClient3**, AAPS 4.0 et plus récent). Pour la compiler, remplacez votre fichier `.github/workflows/build.yml` comme expliqué dans [Mise à jour d'AAPS](#aaps-builder-updates) @psonnera
-- [Dexcom G7](../CompatibleCgms/DexcomG7.md) : suppression de l'application Dexcom G7 patchée (DiaKEM), qui ne fonctionne plus pour les nouvelles installations @psonnera
-- [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : workflow de compilation version 2. Les compilations hebdomadaires automatiques sont supprimées (pas de planification, pas de variables `AUTO_BUILD` / `AUTO_VARIANT`, pas de tags `built/…`) : chaque compilation est lancée par vous, avec la version et la variante que vous choisissez, et le workflow a seulement un accès en lecture à votre dépôt. Si votre fichier `.github/workflows/build.yml` indique la version 1, remplacez-le comme expliqué dans [Mise à jour d'AAPS](#aaps-builder-updates). Ajout de captures d'écran pour chaque étape @psonnera
-- [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : le workflow de compilation fait maintenant partie de cette documentation. Plus de dépôt modèle (template) : vous créez un dépôt privé vide et vous ajoutez le workflow depuis la page de configuration (nouvelle étape 2). Le workflow ne vérifie plus les mises à jour dans un dépôt externe. Si vous avez créé votre dépôt à partir de l'ancien modèle, remplacez `.github/workflows/build.yml` par le workflow de la page de configuration, comme expliqué dans [Mise à jour d'AAPS](#aaps-builder-updates) @psonnera
-- Nouvelle page [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : compilez AAPS depuis un téléphone Android avec une page de configuration hébergée sur ce site, avec des compilations hebdomadaires automatiques et sans fichier de préparation. Elle remplace les instructions Android de la compilation dans le navigateur (pages File Manager Plus supprimées). AAPS Builder créé par @dio99, documentation par @psonnera
+- [Montres connectées et AAPS](#watches-external-companion-apps) : la section **Samsung Tizen** devient **Applications compagnon externes** et liste les applications qui lisent la diffusion (broadcast) d'**AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 et plus récent se connecte directement à **AAPS** sans xDrip+ : étapes de configuration ajoutées, aussi résumées dans [Configuration](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) et [Surveillance à distance](../RemoteFeatures/RemoteMonitoring.md). Montres Bluejay : GTS arrêtée, modèle actuel mis à jour @psonnera
+- [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : workflow de compilation version 6. Les étapes de compilation utilisent maintenant des versions exactes et vérifiées des outils GitHub et de la machine de compilation. La compilation explique aussi clairement quand un mauvais texte a été collé dans le secret `KEYSTORE_SET`. La [page de configuration](#aaps-builder-setup) fait maintenant partie de la documentation et est traduite. Elle vérifie votre nom d'utilisateur GitHub et donne une aide plus claire pour le secret, pour « Page not found » (404) et pour l'application GitHub. Si votre fichier `.github/workflows/build.yml` indique la version 5 ou antérieure, remplacez-le comme expliqué dans [Mise à jour d'AAPS](#aaps-builder-updates) @psonnera
+- [Installateur web AAPS](#web-installer) : c'est maintenant une page de la documentation, traduite comme les autres. L'ancienne adresse fonctionne toujours @psonnera
+- [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : la version 3 du workflow de compilation ajoute la variante `aapsclient3Release` (**AAPSClient3**, AAPS 4.0 et plus récent). Pour la compiler, remplacez votre fichier `.github/workflows/build.yml` comme expliqué dans [Mise à jour d'AAPS](#aaps-builder-updates) @psonnera
+- [Dexcom G7](../CompatibleCgms/DexcomG7.md) : suppression de l'application Dexcom G7 patchée (DiaKEM), qui ne fonctionne plus pour les nouvelles installations @psonnera
+- [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : workflow de compilation version 2. Les compilations hebdomadaires automatiques sont supprimées (pas de planification, pas de variables `AUTO_BUILD` / `AUTO_VARIANT`, pas de tags `built/…`) : chaque compilation est lancée par vous, avec la version et la variante que vous choisissez, et le workflow a seulement un accès en lecture à votre dépôt. Si votre fichier `.github/workflows/build.yml` indique la version 1, remplacez-le comme expliqué dans [Mise à jour d'AAPS](#aaps-builder-updates). Ajout de captures d'écran pour chaque étape @psonnera
+- [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : le workflow de compilation fait maintenant partie de cette documentation. Plus de dépôt modèle (template) : vous créez un dépôt privé vide et vous ajoutez le workflow depuis la page de configuration (nouvelle étape 2). Le workflow ne vérifie plus les mises à jour dans un dépôt externe. Si vous avez créé votre dépôt à partir de l'ancien modèle, remplacez `.github/workflows/build.yml` par le workflow de la page de configuration, comme expliqué dans [Mise à jour d'AAPS](#aaps-builder-updates) @psonnera
+- Nouvelle page [Compilation dans le navigateur avec AAPS Builder](#aaps-builder) : compilez AAPS depuis un téléphone Android avec une page de configuration hébergée sur ce site, avec des compilations hebdomadaires automatiques et sans fichier de préparation. Elle remplace les instructions Android de la compilation dans le navigateur (pages File Manager Plus supprimées). AAPS Builder créé par @dio99, documentation par @psonnera
 
 ## Août 2026
 
-- [Transfert et installation d'AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md) : la page *Vérification des développeurs Android* est intégrée au guide d'installation ; ajout de l'[installateur web](#android-developer-verification-web) (installe l'APK directement depuis le navigateur, sans vérification) et de l'ADB sans fil @psonnera
+- [Transfert et installation d'AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md) : la page *Vérification des développeurs Android* est intégrée au guide d'installation ; ajout de l'[installateur web](#android-developer-verification-web) (installe l'APK directement depuis le navigateur, sans vérification) et de l'ADB sans fil @psonnera
 
 ## Juillet 2026
 
-- [Introduction](../Getting-Started/Introduction.md) : vérification de l'exactitude de la section APS. Correction du titre et du lien de la citation Frontiers, présentée maintenant comme un contexte et non comme un guide actuel du marché ; mise à jour des affirmations sur le bi-hormonal et la boucle fermée complète ; précision que le contrôleur n'est pas toujours une application de téléphone ; suppression des noms de marques commerciales et des nombres d'utilisateurs sans source ; et correction d'OS-AID en *Open-Source Automated Insulin Delivery* @psonnera
-- [Glossaire](../UsefulLinks/Glossary.md) : ajout des entrées **AID**, **FCL**, **HCL** et **OS-AID**, avec des liens depuis **APS** et **Boucle fermée** @psonnera
-- Nouvelle page [Vérification des développeurs Android](#android-developer-verification) : effet de la future exigence de vérification de Google sur l'installation des applications compilées soi-même, avec des méthodes d'installation gratuites (ADB, procédure avancée, compte de distribution limitée) @psonnera
+- [Introduction](../Getting-Started/Introduction.md) : vérification de l'exactitude de la section APS. Correction du titre et du lien de la citation Frontiers, présentée maintenant comme un contexte et non comme un guide actuel du marché ; mise à jour des affirmations sur le bi-hormonal et la boucle fermée complète ; précision que le contrôleur n'est pas toujours une application de téléphone ; suppression des noms de marques commerciales et des nombres d'utilisateurs sans source ; et correction d'OS-AID en *Open-Source Automated Insulin Delivery* @psonnera
+- [Glossaire](../UsefulLinks/Glossary.md) : ajout des entrées **AID**, **FCL**, **HCL** et **OS-AID**, avec des liens depuis **APS** et **Boucle fermée** @psonnera
+- Nouvelle page [Vérification des développeurs Android](#android-developer-verification) : effet de la future exigence de vérification de Google sur l'installation des applications compilées soi-même, avec des méthodes d'installation gratuites (ADB, procédure avancée, compte de distribution limitée) @psonnera
 
 ## Juin 2026
 
-- [Compilation dans le navigateur](#browser-build) : réorganisée en un parcours sur plusieurs pages qui commence par les choix à faire (Fork → keystore Option 1/Option 2 avec une page dédiée par appareil → Google Drive → Compilation → Dépannage) ; suppression des onglets imbriqués, et l'installation de File Manager Plus devient une étape bien visible @psonnera
-- [Introduction](../Getting-Started/Introduction.md) : la terminologie passe de *DIY* à *OS-AID* (Open-Source Automated Insulin Delivery, administration automatisée d'insuline open source) ; ajout de Trio et Stelo ; mise à jour du tableau de compatibilité pompes/MGC @tmhastings
+- [Compilation dans le navigateur](#browser-build) : réorganisée en un parcours sur plusieurs pages qui commence par les choix à faire (Fork → keystore Option 1/Option 2 avec une page dédiée par appareil → Google Drive → Compilation → Dépannage) ; suppression des onglets imbriqués, et l'installation de File Manager Plus devient une étape bien visible @psonnera
+- [Introduction](../Getting-Started/Introduction.md) : la terminologie passe de *DIY* à *OS-AID* (Open-Source Automated Insulin Delivery, administration automatisée d'insuline open source) ; ajout de Trio et Stelo ; mise à jour du tableau de compatibilité pompes/MGC @tmhastings
 
 ## Mars 2026
 
@@ -45,8 +45,8 @@
 
 ## Octobre 2025
 
-- DiaKEM : les nouvelles installations ne fonctionnent plus depuis la mise à jour des serveurs @psonnera
-- Suppression de l'application Libre 2 patchée (obsolète) : elle ne fonctionne pas avec les nouveaux capteurs @psonnera
+- DiaKEM : les nouvelles installations ne fonctionnent plus depuis la mise à jour des serveurs @psonnera
+- Suppression de l'application Libre 2 patchée (obsolète) : elle ne fonctionne pas avec les nouveaux capteurs @psonnera
 - Refonte de la page Omnipod Dash @XiTatiON
 
 ## Août 2025
@@ -61,7 +61,7 @@
 
 ## Janvier 2025
 
-- Assistant rapide : [fonction d'appui long](#Preferences-quick-wizard) @emilise
+- Assistant rapide : [fonction d'appui long](#Preferences-quick-wizard) @emilise
 - Page [SI dynamique](../DailyLifeWithAaps/DynamicISF.md) réécrite @emilise
 
 ## Décembre 2024
@@ -75,7 +75,7 @@
 
 ## Octobre 2024
 
-- Mise à jour de plusieurs pages :
+- Mise à jour de plusieurs pages :
   - [Combien de temps cela prendra-t-il](#preparing-how-long-will-it-take), [Vue d'ensemble des composants](../Getting-Started/ComponentOverview.md), [Compléter les objectifs](../SettingUpAaps/CompletingTheObjectives.md), [Votre profil AAPS](../SettingUpAaps/YourAapsProfile.md), [Configuration](../SettingUpAaps/ConfigBuilder.md) et [Préférences](../SettingUpAaps/Preferences.md), [Écrans AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [Calcul GA](../DailyLifeWithAaps/CobCalculation.md), [SI dynamique](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Instructions de compilation pour Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
@@ -85,7 +85,7 @@
 
 Historique manquant de mars 2022 à septembre 2024
 
-Avec la refonte de la 3.2, certaines informations obsolètes ont été supprimées. Vous pouvez les trouver dans la version précédente de la documentation :
+Avec la refonte de la 3.2, certaines informations obsolètes ont été supprimées. Vous pouvez les trouver dans la version précédente de la documentation :
 
 La documentation d'AAPS 3.1 est disponible [ici](https://androidaps.readthedocs.io/en/3.1/index.html).
 
@@ -112,7 +112,7 @@ La documentation d'AAPS 3.1 est disponible [ici](https://androidaps.readthedocs.
 ## Novembre 2021
 
 - Bonnes pratiques pour calibrer un capteur Libre 2
-- [SI](../UsefulLinks/FAQ.md) : nouvelle explication de son effet
+- [SI](../UsefulLinks/FAQ.md) : nouvelle explication de son effet
 - Mise à jour du [dépannage d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Suppression de l'application [Dexcom](../CompatibleCgms/DexcomG6.md) patchée, car elle est obsolète
 
@@ -143,7 +143,7 @@ La documentation d'AAPS 3.1 est disponible [ici](https://androidaps.readthedocs.
 
 ## Janvier 2021
 
-- [Onglet Actions](#screens-action-tab) - plus de détails sur la page « Écrans AAPS »
+- [Onglet Actions](#screens-action-tab) - plus de détails sur la page « Écrans AAPS »
 - Dexcom G6 avec [Build Your Own Dexcom App](#DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - [Niveau de batterie](#screens-sensor-level-battery) du lecteur Libre smart reader
 - [Objectifs](#objectives-objective3) - nouvelles questions
@@ -153,7 +153,7 @@ La documentation d'AAPS 3.1 est disponible [ici](https://androidaps.readthedocs.
 
 - [Libre 2](../CompatibleCgms/Libre2.md) - l'application patchée ne fonctionne pas avec les capteurs américains
 - [Limites OpenAPS codées en dur](#Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 : installation manuelle des services Google Play
+- Sony Smartwatch 3 : installation manuelle des services Google Play
 
 ## Octobre 2020
 
@@ -176,7 +176,7 @@ La documentation d'AAPS 3.1 est disponible [ici](https://androidaps.readthedocs.
 ## Mai 2020
 
 - [Bolus étendus uniquement pour les pompes Dana + Insight](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Insight : désactiver la vibration](#Accu-Chek-Insight-Pump-vibration) (firmware 3.x seulement)
+- [Insight : désactiver la vibration](#Accu-Chek-Insight-Pump-vibration) (firmware 3.x seulement)
 - [Changement minimal de demande](#Preferences-minimal-request-change) pour réduire le nombre de notifications en mode boucle ouverte
 - Application Libre Link patchée - vérifier si elle est correctement patchée
 - [Lignes de prédiction](#aaps-screens-prediction-lines) - plus de détails
@@ -188,8 +188,8 @@ La documentation d'AAPS 3.1 est disponible [ici](https://androidaps.readthedocs.
 
 ## Mars 2020
 
-- [Générer l'apk avec Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
-- [DanaRS avec firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **ne peut pas être utilisée avec AAPS pour le moment !**
+- [Compiler l'apk avec Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
+- [DanaRS avec firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **ne peut pas être utilisée avec AAPS pour le moment !**
 - [Bolus étendu et passage en boucle ouverte](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Mettre à jour l'apk avec Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
@@ -254,11 +254,11 @@ La documentation d'AAPS 3.1 est disponible [ici](https://androidaps.readthedocs.
 - [Sécurité Nightscout](#Nightscout-security-considerations)
 - [Décalage horaire du profil](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (plus de détails)
 - [Surveillance à distance](../RemoteFeatures/RemoteMonitoring.md)
-- [Qu'est-ce qu'un système à boucle fermée ?](#Introduction-what-does-hybrid-closed-loop-mean)
+- [Qu'est-ce qu'un système à boucle fermée ?](#Introduction-what-does-hybrid-closed-loop-mean)
 
 ## Août 2019
 
 - Région de l'application Dexcom G6 patchée
-- [Nouveau transmetteur Dexcom G6](#xdrip-connect-g6-transmitter-for-the-first-time) (« firefly » / 8G...)
-- De quoi ai-je besoin ? - nouvelle structure et informations supplémentaires
+- [Nouveau transmetteur Dexcom G6](#xdrip-connect-g6-transmitter-for-the-first-time) (« firefly » / 8G...)
+- De quoi ai-je besoin ? - nouvelle structure et informations supplémentaires
 - Nouvelle structure
