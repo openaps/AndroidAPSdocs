@@ -42,7 +42,7 @@ Uživatelé mohou také zvážit:
 
 - *zvolení* tohoto **DC** 1–2 hodiny před plánovaným cvičením, aby bylo IOB nižší (správné načasování tohoto DC se u každého liší); a
 - *zvolení* dočasného profilu (snížení) po dobu plánované aktivity, aby bylo **IOB** nižší;
-- *načasování* **DC** tak, aby se *vypnul* krátce před cvičením kvůli nižšímu **IOB**, protože u některých uživatelů po cvičení **glykémie** rychle stoupá.
+- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
 
 ### DC - Před jídlem
 
@@ -209,7 +209,7 @@ Pro zjednodušení **dočasného cíle Aktivita** si uživatel může nastavit v
 
 Noví uživatelé **AAPS** možná budou muset zkoušet a přizpůsobit si výchozí nastavení **dočasného cíle Aktivita**, aby jim tato funkce fungovala co nejlépe. Každý člověk je jiný, pokud jde o udržení stabilní glykémie během cvičení. Viz také [sekci o sportu v Nejčastějších otázkách uživatelů APS](#FAQ-sports).
 
-Někteří uživatelé také raději aktivují **přepnutí profilu** (snížení profilu pod 100 %, aby **AAPS** podával méně inzulínu) před zapnutím **dočasného cíle Aktivita** a po dobu, kdy je zapnutý. Obojí můžete spustit najednou: klepněte na název profilu na hlavní obrazovce, klepněte na kulaté tlačítko **▶**, nastavte **Procento** pod 100 % a **Trvání** a pak zapněte **Dočasný cíl / Aktivita**. Viz [Změna procenta profilu](#ProfileSwitch-change-percentage).
+Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. Obojí můžete spustit najednou: klepněte na název profilu na hlavní obrazovce, klepněte na kulaté tlačítko **▶**, nastavte **Procento** pod 100 % a **Trvání** a pak zapněte **Dočasný cíl / Aktivita**. Viz [Změna procenta profilu](#ProfileSwitch-change-percentage).
 
 Pokročilé, cíl 9: uživatelé mohou pro **dočasné cíle** 100 mg/dl (5,6 mmol/l) nebo vyšší zapnout v OpenAPS **SMB** *„Vysoký dočasný cíl zvyšuje citlivost“*. Cíl 99 mg/dl (5,5 mmol/l) je normální cíl, ani vysoký, ani nízký. **AAPS** je pak citlivější.
 
@@ -221,7 +221,7 @@ Pokud je navíc vypnuto *„Povolit SMB při vysokém dočasném cíli“*, **AA
 
 **Dočasný cíl – Před jídlem** pomáhá mírně snížit **glykémii** a zajistit dostatek **IOB** před jídlem.
 
-Může to být důležitý nástroj pro uživatele, kteří nepodávají předstihový bolus. Účinnost **dočasného cíle – Před jídlem** ale závisí na řadě faktorů, například: na nastavení uživatele, zda jí stravu s nízkým obsahem sacharidů a zda používá rychle působící inzulín (např. Fiasp nebo Lyumjev), aby nemusel předstihový bolus podávat. Dokud uživatelé nemají s **AAPS** zkušenosti, měli by při použití **dočasného cíle – Před jídlem** obvykle počítat s předstihovým bolusem, a to zvláště při stravě s vysokým obsahem sacharidů.
+This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Dokud uživatelé nemají s **AAPS** zkušenosti, měli by při použití **dočasného cíle – Před jídlem** obvykle počítat s předstihovým bolusem, a to zvláště při stravě s vysokým obsahem sacharidů.
 
 Více o „režimu Před jídlem“ („Eating soon mode“) si můžete přečíst v článku ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (v angličtině) nebo [zde](https://diyps.org/tag/eating-soon-mode/).
 
