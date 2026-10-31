@@ -1,82 +1,82 @@
 (aaps-ci-preparation)=
 
-# Browser build – Step 2: Create your signing keystore
+# Δημιουργία μέσω browser – Βήμα 2: Δημιουργία του keystore υπογραφής σας
 
 ```{note}
-This is **Step 2** of the [Browser build](BrowserBuild.md). First complete [Step 1 – Create your GitHub fork](BrowserBuildFork.md).
+Αυτό είναι το **Βήμα 2** της [Δημιουργίας μέσω browser](BrowserBuild.md). Πρώτα ολοκληρώστε το [Βήμα 1 – Δημιουργία του fork σας στο GitHub](BrowserBuildFork.md).
 ```
 
-AndroidAPS must be signed with private keys stored in a **Java KeyStore (JKS)**. This is the most important decision of the whole process, because it determines whether you will be able to **upgrade** AAPS later without reinstalling.
+Το AndroidAPS πρέπει να υπογραφεί με ιδιωτικά κλειδιά που είναι αποθηκευμένα σε ένα **Java KeyStore (JKS)**. Αυτή είναι η πιο σημαντική απόφαση σε όλη τη διαδικασία, γιατί καθορίζει αν θα μπορείτε αργότερα να κάνετε **αναβάθμιση** του AAPS χωρίς επανεγκατάσταση.
 
 ```{note}
-In the next steps you will store private information (your keystore, and later your Google Drive access) inside GitHub as **secrets**. A secret is simply an encrypted value that only your own build can read – nobody else, not even people looking at your fork, can see it. This is what keeps your build yours.
+Στα επόμενα βήματα θα αποθηκεύσετε προσωπικές πληροφορίες (το keystore σας και αργότερα την πρόσβαση στο Google Drive σας) μέσα στο GitHub ως **secrets**. Ένα secret είναι απλώς μια κρυπτογραφημένη τιμή που μόνο το δικό σας build μπορεί να διαβάσει – κανείς άλλος δεν μπορεί να τη δει, ούτε όσοι βλέπουν το fork σας. Έτσι το build σας μένει μόνο δικό σας.
 ```
 
-## Choose your keystore strategy
+## Επιλέξτε τον τρόπο για το keystore σας
 
-Read both options and pick the one that matches your situation.
+Διαβάστε και τις δύο επιλογές και διαλέξτε αυτή που ταιριάζει στην περίπτωσή σας.
 
-### Option 1 – Generate a new keystore (new users)
+### Επιλογή 1 – Δημιουργία νέου keystore (νέοι χρήστες)
 
-Choose this if **any** of these is true:
+Επιλέξτε αυτό αν ισχύει **οποιοδήποτε** από τα παρακάτω:
 
-- This is your **first time** building AAPS.
-- You don't have a keystore from a previous Android Studio (computer) build.
-- You have forgotten your keystore password or alias.
+- Δημιουργείτε το AAPS για **πρώτη φορά**.
+- Δεν έχετε keystore από προηγούμενο build με το Android Studio (σε υπολογιστή).
+- Έχετε ξεχάσει τον κωδικό ή το alias του keystore σας.
 
 ```{warning}
-Building AAPS with **Option 1** creates a brand-new keystore, so it **will not allow you to upgrade your existing AAPS** in place. To move to this new build you must export your settings, uninstall the old AAPS, install the new one and import your settings again. Follow the steps in [Reinstalling AAPS with a new keystore](#reinstall-aaps).
+Η δημιουργία του AAPS με την **Επιλογή 1** φτιάχνει ένα εντελώς νέο keystore, οπότε **δεν θα μπορείτε να αναβαθμίσετε το υπάρχον AAPS σας** απευθείας. Για να περάσετε σε αυτό το νέο build, πρέπει να εξαγάγετε τις ρυθμίσεις σας, να απεγκαταστήσετε το παλιό AAPS, να εγκαταστήσετε το νέο και να εισαγάγετε ξανά τις ρυθμίσεις σας. Ακολουθήστε τα βήματα στο [Επανεγκατάσταση του AAPS με νέο keystore](#reinstall-aaps).
 ```
 
-**→ [Continue with Option 1 – Generate a new keystore](BrowserBuildO1.md)**
+**→ [Συνέχεια με την Επιλογή 1 – Δημιουργία νέου keystore](BrowserBuildO1.md)**
 
-### Option 2 – Upload your existing keystore (existing / past users)
+### Επιλογή 2 – Ανέβασμα του υπάρχοντος keystore σας (υπάρχοντες / παλιοί χρήστες)
 
-Choose this if you **already have** the `.jks` keystore you used on a previous build of AAPS from a computer in Android Studio, **and** you know its password and alias (usually `key0`).
+Επιλέξτε αυτό αν **έχετε ήδη** το keystore `.jks` που χρησιμοποιήσατε σε προηγούμενο build του AAPS από υπολογιστή με το Android Studio **και** ξέρετε τον κωδικό και το alias του (συνήθως `key0`).
 
-This keeps your current AAPS install upgradeable: future updates will use the same keystore.
+Έτσι η τωρινή εγκατάσταση του AAPS σας μπορεί να αναβαθμιστεί: οι μελλοντικές ενημερώσεις θα χρησιμοποιούν το ίδιο keystore.
 
-**→ [Continue with Option 2 – Upload your existing keystore](BrowserBuildO2.md)**
+**→ [Συνέχεια με την Επιλογή 2 – Ανέβασμα του υπάρχοντος keystore σας](BrowserBuildO2.md)**
 
 ----
 
 ```{note}
-On the next page you will pick your device (computer or iPhone). Each device page then walks you through downloading and opening the preparation file the right way for that device, and creating your keystore. The built AAPS app will be saved in your Google Drive.
+Στην επόμενη σελίδα θα επιλέξετε τη συσκευή σας (υπολογιστή ή iPhone). Κάθε σελίδα συσκευής σας δείχνει βήμα προς βήμα πώς να κατεβάσετε και να ανοίξετε σωστά το αρχείο προετοιμασίας σε αυτή τη συσκευή και πώς να δημιουργήσετε το keystore σας. Η εφαρμογή AAPS που θα δημιουργηθεί αποθηκεύεται στο Google Drive σας.
 ```
 
-**Next: choose [Option 1](BrowserBuildO1.md) or [Option 2](BrowserBuildO2.md) above, then follow the page for your device.**
+**Επόμενο: επιλέξτε παραπάνω την [Επιλογή 1](BrowserBuildO1.md) ή την [Επιλογή 2](BrowserBuildO2.md) και μετά ακολουθήστε τη σελίδα για τη συσκευή σας.**
 
 ----
 
 (ci-keystore-export)=
 
-## Export your keystore (optional)
+## Εξαγωγή του keystore σας (προαιρετικό)
 
-If you want to export your stored keystore, use this method.
+Αν θέλετε να εξαγάγετε το αποθηκευμένο keystore σας, χρησιμοποιήστε αυτόν τον τρόπο.
 
-This script will export your previously configured keystore information (from Option 1 or Option 2) as a password-protected ZIP file to the `/AAPS/KeyStore` directory in your Google Drive.
+Αυτό το script εξάγει τα στοιχεία του keystore που ρυθμίσατε πριν (με την Επιλογή 1 ή την Επιλογή 2) ως αρχείο ZIP με κωδικό στον φάκελο `/AAPS/KeyStore` του Google Drive σας.
 
 ```{warning}
-Before using this export method, make sure your keystore and Google Drive settings have been completed.
+Πριν χρησιμοποιήσετε αυτόν τον τρόπο εξαγωγής, βεβαιωθείτε ότι έχετε ολοκληρώσει τις ρυθμίσεις του keystore και του Google Drive.
 ```
 
-### Steps:
+### Βήματα:
 
-1. **Add ZIP Password Secret:**
-   - Go to your repository's **Settings** → **Secrets and variables** → **Actions**
-   - Click **New repository secret**
-   - In the **Name** field, enter: `ZIP_PASSWORD`
-   - In the **Secret** field, enter your custom ZIP encryption password
-   - Use only English letters and numbers for the password (no special symbols)
-   - Click **Add secret**
+1. **Προσθέστε το secret με τον κωδικό του ZIP:**
+   - Πηγαίνετε στο αποθετήριό σας: **Settings** → **Secrets and variables** → **Actions**
+   - Πατήστε **New repository secret**
+   - Στο πεδίο **Name** γράψτε: `ZIP_PASSWORD`
+   - Στο πεδίο **Secret** γράψτε τον δικό σας κωδικό κρυπτογράφησης για το ZIP
+   - Χρησιμοποιήστε για τον κωδικό μόνο λατινικά (αγγλικά) γράμματα και αριθμούς (χωρίς ειδικά σύμβολα)
+   - Πατήστε **Add secret**
 
    ![aaps_ci_zip_password.png](../images/Building-the-App/CI/aaps_ci_zip_password.png)
 
-2. **Run Export Workflow:**
-   - Go to the **Actions** tab in your repository
-   - Select **CI KeyStore Export**
-   - Click **Run workflow**
-   - The exported keystore ZIP file will be saved to your Google Drive
+2. **Εκτελέστε το workflow εξαγωγής:**
+   - Πηγαίνετε στην καρτέλα **Actions** του αποθετηρίου σας
+   - Επιλέξτε **CI KeyStore Export**
+   - Πατήστε **Run workflow**
+   - Το αρχείο ZIP με το keystore που εξάγεται αποθηκεύεται στο Google Drive σας
 
    ![aaps_ci_keystore_export.png](../images/Building-the-App/CI/aaps_ci_keystore_export.png)
 
@@ -85,6 +85,6 @@ Before using this export method, make sure your keystore and Google Drive settin
 ```{toctree}
 :hidden:
 
-Option 1 – Generate a new keystore <BrowserBuildO1.md>
-Option 2 – Upload your existing keystore <BrowserBuildO2.md>
+Επιλογή 1 – Δημιουργία νέου keystore <BrowserBuildO1.md>
+Επιλογή 2 – Ανέβασμα του υπάρχοντος keystore σας <BrowserBuildO2.md>
 ```
