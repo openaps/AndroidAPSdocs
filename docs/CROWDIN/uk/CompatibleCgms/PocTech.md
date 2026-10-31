@@ -1,4 +1,4 @@
 # PocTech CT-100
 
-- Install [PocTech App](https://play.google.com/store/apps/details?id=com.poctechcorp.pocct)
-- Select PocTech App in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Встановіть [застосунок PocTech](https://play.google.com/store/apps/details?id=com.poctechcorp.pocct)
+- Виберіть Poctech у [**Конфігурація → Джерело ГК**](#Config-Builder-bg-source).
