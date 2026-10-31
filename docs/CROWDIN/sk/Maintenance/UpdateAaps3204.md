@@ -16,7 +16,7 @@ Podrobnosti nájdete na stránke [Najčastejšie otázky používateľov APS](..
 | ----------------------- | ----------------------------------------------------- | ------------------------------------------------------ | ------ |:--- |
 | [3.2.0.4](#version3200) | Hedgehog (2023.1.1)                                   | až po Meerkat                                          | 8.2    | 17  |
 
-„Preferovaná verzia“ obsahuje vhodnú verziu JVM. Preferovaná verzia je zároveň najnižšia verzia, ktorou môžete zostaviť **AAPS**. Vo verzii staršej ako „preferovaná“ zostavenie **NEBUDE** možné. Ak používate inú verziu, môžete naraziť na problémy súvisiace s verziou JVM. Pri riešení týchto problémov vám pomôže stránka [Riešenie problémov s Android Studiom](#troubleshooting_androidstudio-uncommitted-changes). Ak vaša aktuálna verzia Android Studio nie je uvedená v tabuľke, musíte ju najprv aktualizovať.
+„Preferovaná verzia“ obsahuje vhodnú verziu JVM. Preferovaná verzia je zároveň najnižšia verzia, ktorou môžete zostaviť **AAPS**. Vo verzii staršej ako „preferovaná“ zostavenie **NEBUDE** možné. Ak používate inú verziu, môžete naraziť na problémy súvisiace s verziou JVM. See the [Troubleshooting Android Studio](#incompatible-gradle-jvm) page to help solve these issues. Ak vaša aktuálna verzia Android Studio nie je uvedená v tabuľke, musíte ju najprv aktualizovať.
 
 Verzia Gradle je viazaná na zdrojový kód. Pri stiahnutí / aktualizácii zdrojového kódu vždy dostanete správnu verziu Gradle. Je tu uvedená iba pre informáciu, nemusíte s ňou nič robiť.
 
@@ -125,7 +125,7 @@ Ak si nepamätáte, ako na to, pozrite si stránku [Vytváranie a obnova záloh]
 * Počkajte, kým prebieha sťahovanie. Uvidíte to ako informáciu na spodnom paneli. Po dokončení sa zobrazí správa o úspechu.
 
   ```{note}
-  Aktualizované súbory sa môžu líšiť! Nie je to žiadny ukazovateľ
+  Aktualizované súbory sa môžu líšiť! This is not an indication of a problem.
   ```
 
 
