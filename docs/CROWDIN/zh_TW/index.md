@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- xx xxxx 202x : Version {{ aaps_version }}.x.x is out. 請參閱 [版本公告](#latestrelease) 以瞭解最新變更，並依照 [更新手冊](./Maintenance/UpdateToNewVersion.md) 的指示進行更新。
+ 31 October 2026 : Version 4.0.0 is out. 請參閱 [版本公告](#latestrelease) 以瞭解最新變更，並依照 [更新手冊](./Maintenance/UpdateToNewVersion.md) 的指示進行更新。
 
 ```
 
@@ -51,7 +51,7 @@ Section **12) Resources**, contains archived or additional documentation, includ
 :class: danger
 **AAPS** 的安全性依賴於你硬體（電話、幫浦、CGM）的安全功能。請只使用經過 FDA/CE 認證的全功能胰島素幫浦和 CGM。不使用故障、改裝或自行組裝的胰島素幫浦或 CGM 接收器。僅使用由製造商批准並與幫浦和 CGM 搭配使用的原裝耗材（如注射器、套管和胰島素儲存罐）。使用未經測試或修改的耗材可能會導致資料不準確和胰島素注射錯誤，從而對使用者造成重大風險。 
 
-如果你正在服用 SGLT-2 抑制劑（gliflozins），請勿使用 **AAPS**，因為這會降低血糖數值。由於胰島素供應減少，會增加罹患糖尿病酮酸中毒（DKA）的風險，而血糖下降則會提高低血糖的風險。 
+如果你正在服用 SGLT-2 抑制劑（gliflozins），請勿使用 **AAPS**，因為這會降低血糖數值。 You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
 ```
 
 ```{admonition} Disclaimer
