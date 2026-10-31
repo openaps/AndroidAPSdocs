@@ -1,31 +1,31 @@
 (aaps-ci-option1)=
 
-# Option 1 – Generate a new keystore
+# Επιλογή 1 – Δημιουργία νέου keystore
 
 ```{note}
-This is part of [Step 2 – Create your signing keystore](BrowserBuildKeystore.md) of the [Browser build](BrowserBuild.md). Make sure you have read the [Option 1 vs Option 2 decision](#aaps-ci-preparation) and downloaded the preparation file.
+Αυτό είναι μέρος του [Βήματος 2 – Δημιουργία του keystore υπογραφής σας](BrowserBuildKeystore.md) της [Δημιουργίας μέσω browser](BrowserBuild.md). Βεβαιωθείτε ότι έχετε διαβάσει την [απόφαση Επιλογή 1 ή Επιλογή 2](#aaps-ci-preparation) και ότι έχετε κατεβάσει το αρχείο προετοιμασίας.
 ```
 
-Option 1 generates a brand-new signing keystore for you. It is suitable for first-time users, or those without a JKS, or who have forgotten the password or alias.
+Η Επιλογή 1 δημιουργεί για εσάς ένα εντελώς νέο keystore υπογραφής. Είναι κατάλληλη για όσους το κάνουν για πρώτη φορά, για όσους δεν έχουν JKS ή για όσους έχουν ξεχάσει τον κωδικό ή το alias.
 
-## Choose your device
+## Επιλέξτε τη συσκευή σας
 
 ```{tip}
-Building from an **Android phone**? Use [AAPS Builder](BrowserBuildAapsBuilder.md) instead: it needs no preparation file.
+Κάνετε build από ένα **τηλέφωνο Android**; Χρησιμοποιήστε αντί για αυτό το [AAPS Builder](BrowserBuildAapsBuilder.md): δεν χρειάζεται αρχείο προετοιμασίας.
 ```
 
-Follow the page that matches the device you are building from:
+Ακολουθήστε τη σελίδα για τη συσκευή από την οποία κάνετε build:
 
-- **[Computer](BrowserBuildO1Computer.md)** – Windows, Mac or Linux.
+- **[Υπολογιστής](BrowserBuildO1Computer.md)** – Windows, Mac ή Linux.
 - **[iPhone / iPad](BrowserBuildO1iPhone.md)**.
 
 ```{tip}
-You can switch device at any time – just open the matching page.
+Μπορείτε να αλλάξετε συσκευή οποιαδήποτε στιγμή – απλώς ανοίξτε την αντίστοιχη σελίδα.
 ```
 
 ```{toctree}
 :hidden:
 
-Computer <BrowserBuildO1Computer.md>
+Υπολογιστής <BrowserBuildO1Computer.md>
 iPhone / iPad <BrowserBuildO1iPhone.md>
 ```
