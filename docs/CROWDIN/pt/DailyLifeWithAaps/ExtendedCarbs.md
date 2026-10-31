@@ -34,7 +34,7 @@ No [Assistente de Bólus](#aaps-screens-bolus-wizard), três botões por baixo d
 
 **Exemplo**: introduz 100 g e escolhe **Pizza**. O bólus é calculado para 80 g, registados agora. 35 g de eCarbs começam 1 hora depois e são distribuídos por 3 horas.
 
-Good to know:
+É bom saber:
 * Não é uma simples divisão: com **Bolo** e **Pizza**, os hidratos registados somam **mais do que introduziu** (110 % e 115 %). O excesso está apenas nos eCarbs.
 * O bólus cobre apenas os hidratos comidos agora. O **AAPS** não dá bólus antecipado para os eCarbs: o loop tem-nos em conta quando começam, como quaisquer outros [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
 * Se definir uma **Hora dos hidratos**, os eCarbs começam 60 minutos depois dessa hora.
