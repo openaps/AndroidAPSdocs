@@ -1,538 +1,538 @@
-# AAPS Setup Wizard
+# Съветник за настройване на AAPS
 
 ```{contents} In this page
 :backlinks: entry
 :depth: 2
 ```
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+Когато стартирате **AAPS** за първи път, „**Съветник за настройване**“ ви води през всички основни настройки на приложението наведнъж. **Съветник за настройване** ви води стъпка по стъпка, за да не забравите нещо важно. Например **настройките на разрешенията** са основни за правилната настройка на **AAPS**.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimize/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Не е задължително обаче да настроите всичко докрай още при първото използване на **Съветник за настройване**. Можете лесно да излезете от съветника и да се върнете към него по-късно. След **Съветник за настройване** има три начина да подобрите или промените конфигурацията. Те ще бъдат обяснени в следващия раздел. Затова е нормално да пропуснете някои точки в Съветника за настройване – можете лесно да ги конфигурирате по-късно.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+По време на **Съветник за настройване** и веднага след него може да не забележите големи видими промени в **AAPS**. За да включите кръга на **AAPS**, трябва да изпълните **Цели**, които отключват функциите една по една. Ще започнете **Цел 1** в края на съветника за настройване. Вие управлявате **AAPS**, а не обратното.
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md) but then come back here to run the Setup Wizard first.
+Ако искате да знаете как са подредени целите, прочетете [Изпълнение на целите](../SettingUpAaps/CompletingTheObjectives.md), но след това се върнете тук, за да преминете първо през съветника за настройване.
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+От опит знаем, че начинаещите често се притискат да настроят **AAPS** възможно най-бързо. Това може да доведе до разочарование, защото има много неща за научаване.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Затова, моля, не бързайте с настройката на кръга. Ползите от добре работещ кръг с **AAPS** са огромни.
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Ако има грешка в документацията или имате по-добра идея как нещо да бъде обяснено, можете да поискате помощ от общността, както е обяснено в [Свържете се с други потребители](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Приветствено съобщение
 
-When the Setup Wizard opens, it greets you with a short welcome message and immediately shows a "**Permissions Required**" panel at the bottom of the screen (see next section).
+Когато съветникът за настройване се отвори, той ви поздравява с кратко съобщение и веднага показва панел „**Нужни са разрешения**“ в долната част на екрана (вижте следващия раздел).
 
-Once you have granted the permissions, the panel closes and the welcome screen shows a "**Next**" button. Press "**NEXT**" to continue:
+След като дадете разрешенията, панелът се затваря и на екрана за добре дошли се появява бутон „**Следващ**“. Натиснете „**Следващ**“, за да продължите:
 
 ![Welcome](../images/setup-wizard/Wizard-Welcome.png)
 
-## Required permissions
+## Необходими разрешения
 
-**AAPS** needs a few permissions to operate correctly. The Wizard groups them on a single "**Permissions Required**" panel, each with its own "**Grant**" button. Grant them one by one — the icon next to each item turns into a tick once it is done.
+**AAPS** се нуждае от няколко разрешения, за да работи правилно. Съветникът ги събира в един панел „**Нужни са разрешения**“ и всяко от тях има собствен бутон „**Позволи**“. Дайте ги едно по едно – иконата до всеки ред се променя на отметка, когато е готово.
 
-![Permissions](../images/setup-wizard/Wizard-Permissions.png)
+![Разрешения](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Оптимизиране на батерията
 
-Battery consumption on smartphones is a consideration, as the performance of batteries is still quite limited. Therefore, the Android operating system on your smartphone is restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Разходът на батерията на смартфоните е важен въпрос, защото възможностите на батериите все още са доста ограничени. Затова операционната система Android на смартфона ви ограничава приложенията да работят и да използват процесорно време, а с това и енергия от батерията.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be excluded from battery optimization.
+**AAPS** обаче трябва да работи редовно, _напр._ за да получава стойностите на глюкозата на всеки няколко минути и след това да прилага алгоритъма, за да реши какво да направи с нивата на глюкозата ви според вашите настройки. Затова приложението трябва да бъде изключено от оптимизирането на батерията.
 
-Press "**Grant**" next to "**Battery Optimization**", then select "**Allow**" on the "Let app always run in background?" dialog:
+Натиснете „**Позволи**“ до „**Оптимизиране на батерията**“ и после изберете „**Разрешаване**“ (Allow) в прозореца „Let app always run in background?“ (Да се разреши ли на приложението винаги да работи на заден план?):
 
-![Allow Background](../images/setup-wizard/Wizard-Permissions-Battery.png)
+![Разрешаване на работа във фонов режим](../images/setup-wizard/Wizard-Permissions-Battery.png)
 
 (SetupWizard-StoragePermission)=
 
-### AAPS Directory
+### AAPS директория
 
-**AAPS** needs to store its settings and log information on the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** трябва да записва своите настройки и записите в лога в постоянната памет на смартфона ви. Постоянна памет означава, че информацията ще бъде налична дори след рестартиране на смартфона. Друга информация просто се губи, защото не се записва в постоянната памет.
 
-Press "**Grant**" next to "**AAPS Directory**". This opens the file system on your phone and lets you choose where **AAPS** stores its information.
+Натиснете „**Позволи**“ до „**AAPS директория**“. Така се отваря файловата система на телефона ви и можете да изберете къде **AAPS** да записва своята информация.
 
 ```{tip}
-Choosing the default AAPS directory is recommended.</br>
-Do **not** select a subdirectory of AAPS.
+Препоръчваме да изберете директорията на AAPS по подразбиране.</br>
+**Не** избирайте поддиректория на AAPS.
 ```
 
-The default directory is **AAPS**, but you can use any dedicated directory of your liking. Create the directory if necessary, enter it and choose "**USE THIS FOLDER**":
+Директорията по подразбиране е **AAPS**, но можете да използвате всяка отделна директория по ваш избор. Ако е нужно, създайте директорията, влезте в нея и изберете „**ИЗПОЛЗВАНЕ НА ТАЗИ ПАПКА**“ (USE THIS FOLDER):
 
-![Select folder](../images/setup-wizard/Wizard-Permissions-Directory.png)
+![Избор на папка](../images/setup-wizard/Wizard-Permissions-Directory.png)
 
-Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the selected directory:
+Потвърдете с „**РАЗРЕШАВАНЕ**“ (ALLOW), че давате на **AAPS** достъп до избраната директория:
 
-![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
+![Разрешаване на достъп до папката](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
-### Известия (Notifications)
+### Известия
 
-Android requires special permission for apps if they want to send you notifications.
+Android изисква специално разрешение за приложенията, които искат да ви изпращат известия.
 
-While it is a good feature to disable notifications _e.g._ from social media apps, it is essential that you allow **AAPS** to send you notifications.
+Добре е да изключите известията _напр._ от приложения за социални мрежи, но е задължително да позволите на **AAPS** да ви изпраща известия.
 
-Press "**Grant**" next to "**Notifications**" and select "**Allow**" at the system prompt:
+Натиснете „**Позволи**“ до „**Нотификации**“ и изберете „**Разрешаване**“ (Allow) в системния прозорец:
 
-![Allow notifications](../images/setup-wizard/Wizard-Permissions-Notifications.png)
+![Разрешаване на известия](../images/setup-wizard/Wizard-Permissions-Notifications.png)
 
-### Alarms and reminders
+### Аларми и напомняния
 
-On **Android 14 and newer**, **AAPS** needs the "**Alarms and reminders**" permission so that alarms can wake the screen while **AAPS** is in the background, and so that reminders (for example from an **Automation**) ring on time.
+На **Android 14 и по-нови** **AAPS** се нуждае от разрешението „**Аларми и напомняния**“, за да могат алармите да събуждат екрана, докато **AAPS** работи на заден план, и за да звънят напомнянията (например от **Автоматизация**) навреме.
 
-This item is only shown while it is needed. Once **AAPS** is excluded from battery optimization (see above), Android grants exact alarms automatically and the item disappears. If it is still listed, press "**Grant**" next to "**Alarms and reminders**". This opens a system settings screen for **AAPS**; enable the toggle and return to **AAPS**. On Android 13 and older this item does not appear and no action is needed.
+Този ред се показва само докато е нужен. След като **AAPS** бъде изключено от оптимизирането на батерията (вижте по-горе), Android автоматично разрешава точните аларми и редът изчезва. Ако редът все още е в списъка, натиснете „**Позволи**“ до „**Аларми и напомняния**“. Така се отваря системен екран с настройки за **AAPS**. Включете превключвателя и се върнете в **AAPS**. На Android 13 и по-стари този ред не се показва и не е нужно да правите нищо.
 
-Once all the permissions show a tick (three, or four on Android 14 and newer), the "**Permissions Required**" panel closes by itself and you can press "**NEXT**" on the welcome screen to continue.
+Когато всички разрешения покажат отметка (три или четири на Android 14 и по-нови), панелът „**Нужни са разрешения**“ се затваря сам и можете да натиснете „**Следващ**“ на екрана за добре дошли, за да продължите.
 
 (setup-wizard-bluetooth-battery-optimisation)=
-### Bluetooth battery optimization
+### Оптимизиране на батерията за Bluetooth
 
 ```{admonition} Extra Android setting, not part of the Wizard
 :class: note
-The following is additional Android configuration done outside of the Setup Wizard. It is not one of the "Grant" buttons above, but it is important for a reliable pump connection.
+Следващите стъпки са допълнителни настройки на Android, които се правят извън съветника за настройване. Те не са сред бутоните „Позволи“ по-горе, но са важни за надеждна връзка с помпата.
 ```
 
-Newer versions of Android have added battery optimization to the system Bluetooth application too.
+По-новите версии на Android добавиха оптимизиране на батерията и за системното приложение Bluetooth.
 
-As well as disabling battery optimization for **AAPS**, you will likely need to also disable this for the Bluetooth system app. Failure to do this may lead to pump connection dropouts and issues.
+Освен че изключвате оптимизирането на батерията за **AAPS**, вероятно ще трябва да го изключите и за системното приложение Bluetooth. Ако не направите това, връзката с помпата може да прекъсва и да има проблеми.
 
-***NOTE: The xDrip documentation covers how to do this here: [xDrip documentation](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
+***ЗАБЕЛЕЖКА: Документацията на xDrip описва как да направите това тук: [документация на xDrip](https://navid200.github.io/xDrip/docs/BluetoothBatteryOpt.html)***
 
-Follow these steps on Android 16; other versions will vary slightly from the provided screenshots:
+Изпълнете тези стъпки на Android 16. При другите версии екраните ще са малко по-различни от показаните снимки:
 
-1. Open Android settings and search for **Apps**, and open the Apps settings.
+1. Отворете настройките на Android, потърсете **Приложения** (Apps) и отворете настройките за приложения.
 
    ![settings_apps](../images/setup-wizard/settings_apps.png)
 
-2. You will see the App settings, however we need to expand to see all apps, click on **See all apps** to expand.
+2. Ще видите настройките за приложения, но трябва да покажем всички приложения. Натиснете **Преглед на всички приложения** (See all apps), за да ги покажете.
 
    ![settings_apps](../images/setup-wizard/apps_not_expanded.png)
 
-3. As the Bluetooth app is a system app, it's hidden by default, so we need to show system apps. Click on the **three dots** (⋮) on the top right (1). Then click on **Show system** (2).
+3. Приложението Bluetooth е системно приложение и по подразбиране е скрито, затова трябва да покажем системните приложения. Натиснете **трите точки** (⋮) горе вдясно (1). После натиснете **Показване на системните** (Show system) (2).
 
    ![settings_apps](../images/setup-wizard/show_system.png)
 
-4. Search for the `Bluetooth` app and click on `Bluetooth` and/or `Legacy Bluetooth` if both are present ensure the procedure is followed for both.
+4. Потърсете приложението `Bluetooth` и натиснете `Bluetooth` и/или `Legacy Bluetooth`. Ако има и двете, изпълнете стъпките и за двете.
 
-   ***NOTE: It's safe to ignore the `Bluetooth MIDI Service` this is not used by AAPS***
+   ***ЗАБЕЛЕЖКА: Можете спокойно да пренебрегнете `Bluetooth MIDI Service`, AAPS не го използва***
 
    ![settings_apps_1](../images/setup-wizard/apps_search_blue_13-14.png)    ![settings_apps_2](../images/setup-wizard/apps_search_blue_12.png)    ![settings_apps_3](../images/setup-wizard/apps_search_blue_15.png)
 
-   1. On Android 12 Click on `Battery`, Android 13+ Click on `App battery usage`,
+   1. На Android 12 натиснете `Battery` (Батерия), на Android 13+ натиснете `App battery usage` (Използване на батерията от приложението),
 
-   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))   ![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
+   ![settings_apps_16](../images/setup-wizard/app_bluetooth.png))![settings_apps_12](../images/setup-wizard/app_bluetooth_12.png)
 
-5. On Android 12+ select the `Unrestricted` option, on Android 15+ you need to expand the `Allow background usage` setting, click on the section highlighted in red to do this then follow step 6 to complete.
+5. На Android 12+ изберете опцията `Unrestricted` (Без ограничения). На Android 15+ трябва да разгънете настройката `Allow background usage` (Разрешаване на използването на заден план). За целта натиснете частта, оградена в червено, и след това изпълнете стъпка 6, за да завършите.
 
    ![bluetooth_settings_apps_12](../images/setup-wizard/app_bluetooth_unrestricted_12-14.png)    ![bluetooth_settings_apps_15](../images/setup-wizard/app_bluetooth_allow_background.png)
 
-6. On Android 16 Select `Unrestricted`
+6. На Android 16 изберете `Unrestricted` (Без ограничения)
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-## License agreement
+## Лицензионно споразумение
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+Лицензионното споразумение с крайния потребител съдържа важна информация за правните аспекти при използването на **AAPS**. Моля, прочетете го внимателно.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Ако не разбирате лицензионното споразумение с крайния потребител или не можете да се съгласите с него, моля, изобщо не използвайте **AAPS**!
 
-If you understand and agree, please press the "**I UNDERSTAND AND AGREE**" button and follow the Setup Wizard:
+Ако разбирате и сте съгласни, моля, натиснете бутона „**Разбирам и приемам**“ и следвайте съветника за настройване:
 
-![EULA](../images/setup-wizard/Wizard-EULA.png)
+![EULA (лицензионно споразумение)](../images/setup-wizard/Wizard-EULA.png)
 
-A "**Next**" button appears once you have agreed. Press "**NEXT**".
+След като се съгласите, се появява бутон „**Следващ**“. Натиснете „**Следващ**“.
 
-The next screen, "**Permissions**", lists the permissions again. They should all show a tick, as you granted them at the start. If one is missing, press "**Grant**" next to it. Press "**NEXT**" to continue:
+На следващия екран, „**Разрешения**“, разрешенията са изброени отново. Всички трябва да показват отметка, защото вече сте ги дали в началото. Ако някое липсва, натиснете „**Разрешаване**“ до него. Натиснете „**Следващ**“, за да продължите:
 
-![Permissions granted](../images/setup-wizard/Wizard-Permissions-Granted.png)
+![Разрешенията са дадени](../images/setup-wizard/Wizard-Permissions-Granted.png)
 
-## Master password
+## Главна парола
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ the access token for your Nightscout server) it is encrypted by a password you set here.
+Конфигурацията на **AAPS** съдържа някои чувствителни данни (_напр._ токена за достъп до вашия Nightscout сървър), затова тя се шифрова с парола, която задавате тук.
 
-The Wizard shows "**Password not set**". Press "**Set**":
+Съветникът показва „**Паролата не е зададена**“. Натиснете „**Приложи**“:
 
-![Master password not set](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
+![Главна парола не е зададена](../images/setup-wizard/Wizard-MasterPassword-NotSet.png)
 
-This opens the "**Protection**" screen. Press "**Master password**" (shown as "Password not set"):
+Така се отваря екранът „**Защита**“. Натиснете „**Главна парола**“ (показва се като „Паролата не е зададена“):
 
-![Protection](../images/setup-wizard/Wizard-Protection.png)
+![Защита](../images/setup-wizard/Wizard-Protection.png)
 
-Enter the same password in both fields and press "**OK**":
+Въведете една и съща парола в двете полета и натиснете „**ОК**“:
 
-![Password](../images/setup-wizard/Wizard-Password.png)
+![Парола](../images/setup-wizard/Wizard-Password.png)
 
-Go back with the arrow in the top left corner. The Wizard now shows "**Password set!**":
+Върнете се назад със стрелката в горния ляв ъгъл. Сега съветникът показва „**Паролата е зададена!**“:
 
-![Master password set](../images/setup-wizard/Wizard-MasterPassword-Set.png)
+![Главната парола е зададена](../images/setup-wizard/Wizard-MasterPassword-Set.png)
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-Please **DO NOT LOSE YOUR MASTER PASSWORD**. Make a note of it _e.g._ on Google Drive, which is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+Моля, **НЕ ГУБЕТЕ ГЛАВНАТА СИ ПАРОЛА**. Запишете я _напр._ в Google Drive. Това е добро място, защото Google прави резервно копие вместо вас. Вашият смартфон или компютър може да се повреди и може да се окаже, че нямате копие. Ако забравите главната парола, по-късно може да е трудно да възстановите конфигурацията на профила си и напредъка си в **Целите**.
 ```
 
-When you are done, press "**NEXT**" to go to the next screen.
+Когато сте готови, натиснете „**Следващ**“, за да отидете на следващия екран.
 
 (setup-wizard-import-settings)=
 ## Импорт настройки
 
-This screen is only shown when **AAPS** finds settings exported earlier in the **AAPS** directory ("Stored settings found"), for example when you reinstall the app or move to a new phone.
+Този екран се показва само когато **AAPS** намери по-рано експортирани настройки в директорията на **AAPS** („Открити са предишни настройки“), например когато инсталирате приложението отново или минавате на нов телефон.
 
-- To restore your previous configuration, press "**Import settings**" — see [Export & import settings](../Maintenance/ExportImportSettings.md).
-- To start with a new configuration, press "**NEXT**" and continue with the Wizard.
+- За да възстановите предишната си конфигурация, натиснете „**Импорт настройки**“ – вижте [Експорт и импорт на настройките](../Maintenance/ExportImportSettings.md).
+- За да започнете с нова конфигурация, натиснете „**Следващ**“ и продължете със съветника.
 
 ![Импорт настройки](../images/setup-wizard/Wizard-ImportSettings.png)
 
-## Units (mg/dL <-> mmol/L)
+## Единици (mg/dl <-> mmol/l)
 
-Please select if your glucose values are in mg/dL or mmol/L, then press the "**NEXT**" button:
+Моля, изберете дали стойностите на глюкозата ви са в mg/dl или в mmol/l и после натиснете бутона „**Следващ**“:
 
-![Units](../images/setup-wizard/Wizard-Units.png)
+![Единици](../images/setup-wizard/Wizard-Units.png)
 
-## Display Settings
+## Настройки за визуализация
 
-Here you set the "**LOW mark**" and "**HIGH mark**" for the sensor glucose display. Glucose values between these two marks are shown as "in range". You can leave the default values (72 and 180 mg/dL) for now, and edit them later.
+Тук задавате „**Ниска КЗ под**“ и „**Висока КЗ над**“ за показването на глюкозата от сензора. Стойностите на глюкозата между тези две граници се показват като „в диапазон“. Засега можете да оставите стойностите по подразбиране (72 и 180 mg/dl) и да ги промените по-късно.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Стойностите, които изберете, засягат само графичното представяне на диаграмата и нищо друго.
 
-Your glucose target _e.g._ is configured separately in your profile.
+Вашата целева КЗ _напр._ се задава отделно във вашия профил.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+Диапазонът за анализ на TIR (време в целта) се настройва отделно в сървъра за отчети.
 
-Adjust the marks with the "−" / "+" buttons if needed, then press the "**NEXT**" button:
+Ако е нужно, променете границите с бутоните „−“ / „+“ и после натиснете бутона „**Следващ**“:
 
-![Display Settings](../images/setup-wizard/Wizard-Display.png)
+![Настройки за визуализация](../images/setup-wizard/Wizard-Display.png)
 
 (SetupWizard-synchronization-with-the-reporting-server-and-more)=
-## Communication
+## Комуникация
 
-The "**Communication**" screen lists the plugins used to upload, synchronize and broadcast your data:
+Екранът „**Комуникация**“ показва плъгините, които се използват за качване, синхронизиране и разпращане на данните ви:
 
-- **SMS Communicator** – remote control of **AAPS** using SMS commands
-- **NSClientV3** – synchronizes your data with Nightscout using the v3 API
-- **Tidepool** – uploads data to Tidepool
-- **xDrip** – sends data to xDrip
-- **Open Humans** – upload and donate your diabetes data to scientific projects
-- **Wear** – monitor and control **AAPS** from a WearOS watch
-- **External Companion Apps** – data broadcasting to various external apps
-- **Garmin** – connection to a Garmin device
+- **SMS комуникатор** – дистанционно управление на **AAPS** чрез SMS команди
+- **NSClientV3** – синхронизира данните ви с Nightscout чрез v3 API
+- **Tidepool** – качва данни в Tidepool
+- **xDrip** – изпраща данни към xDrip
+- **Open Humans** – качване и даряване на данните ви за диабета за научни проекти
+- **Часовник** – наблюдение и управление на **AAPS** от часовник с WearOS
+- **Външни приложения за проследяване** – разпращане на данни към различни външни приложения
+- **Garmin** – връзка с устройство Garmin
 
-![Communication](../images/setup-wizard/Wizard-Communication.png)
+![Комуникация](../images/setup-wizard/Wizard-Communication.png)
 
-Scroll down to see the rest of the list:
+Превъртете надолу, за да видите останалата част от списъка:
 
-![Communication more](../images/setup-wizard/Wizard-Communication-More.png)
+![Комуникация – още](../images/setup-wizard/Wizard-Communication-More.png)
 
-You could configure several of these now, but for the first run we will just focus on the reporting server. If you are not able to set it up at the moment, skip it for now — you can configure it later.
+Можете да настроите няколко от тях още сега, но при първото преминаване ще се съсредоточим само върху сървъра за отчети. Ако в момента не можете да го настроите, засега го пропуснете – можете да го настроите по-късно.
 
-In this example we use Nightscout as reporting server. Tick the box on the right of "**NSClientV3**" to enable it. For Tidepool it is even simpler, as you only need your personal login information.
+В този пример използваме Nightscout като сървър за отчети. Отметнете полето вдясно от „**NSClientV3**“, за да го включите. За Tidepool е още по-просто, защото ви трябват само личните данни за вход.
 
-Once enabled, press "**Settings**" below NSClientV3 to configure it:
+След като е включен, натиснете „**Настройки**“ под NSClientV3, за да го настроите:
 
 ![NSClientV3](../images/setup-wizard/Wizard-Communication-NSClient.png)
 
-Here you configure the Nightscout reporting server. The NSClientV3 settings are shown as one scrollable page:
+Тук настройвате сървъра за отчети Nightscout. Настройките на NSClientV3 се показват като една страница, която се превърта:
 
-![NSClientV3 settings](../images/setup-wizard/Wizard-NSClientV3.png)
+![Настройки на NSClientV3](../images/setup-wizard/Wizard-NSClientV3.png)
 
-Press "**Nightscout URL**" and enter your personal Nightscout server address (the URL you set up yourself, or were given by your service provider). Confirm with "**OK**".
+Натиснете „**Nightscout адрес**“ и въведете адреса на вашия личен Nightscout сървър (адреса (URL), който сте настроили сами или сте получили от доставчика на услугата). Потвърдете с „**ОК**“.
 
-Press "**Nightscout access token**" and enter the access token for your Nightscout server. Without this token, access will not work. If you don't have it yet, please check the documentation for setting up the reporting server.
+Натиснете „**Токен за достъп до Nightscout**“ и въведете токена за достъп до вашия Nightscout сървър. Без този токен достъпът няма да работи. Ако все още нямате такъв, моля, вижте документацията за настройване на сървъра за отчети.
 
-Leave "**Use websockets**" enabled for real-time communication with Nightscout.
+Оставете „**Използвай websockets**“ включено за връзка с Nightscout в реално време.
 
-The remaining sections can be left at their defaults for now. They are described here so you know where to find them later:
+Останалите раздели засега могат да останат с настройките по подразбиране. Те са описани тук, за да знаете къде да ги намерите по-късно:
 
-**Alarm options** — Nightscout alarms, announcements and stale-data thresholds. Leave the switches off for now; we only open them so you are aware of the options.
+**Опции за аларми** — аларми, съобщения и прагове за остарели данни в Nightscout. Засега оставете превключвателите изключени. Отваряме ги само за да знаете за тези опции.
 
-**Connection settings** — choose how data is transferred. Caregivers must enable "**Use cellular data**", otherwise the phone of the person they care for (_e.g._ a child) cannot upload outside Wi-Fi range, _e.g._ on the way to school. Other users can disable cellular transfer to save data or battery. If in doubt, leave everything enabled.
+**Настройки за свързване** — изберете как да се предават данните. Болногледачите трябва да включат „**Използвай мобилни данни**“, иначе телефонът на човека, за когото се грижат (_напр._ дете), не може да качва данни извън обхвата на Wi-Fi, _напр._ по пътя към училище. Другите потребители могат да изключат предаването през мобилни данни, за да пестят трафик или батерия. Ако се колебаете, оставете всичко включено.
 
-![Connection settings](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
+![Настройки за свързване](../images/setup-wizard/Wizard-NSClientV3-Connection.png)
 
-**Advanced Settings** — enable "**Log app start event**" if you want to see in Nightscout when the app restarts (useful for caregivers). Keep "**Create announcements from errors**" and "**Create announcements from carbs required**" enabled. Leave "**Use slow sync**" off; you would only use it if the Nightscout server is slow to process a large amount of data.
+**Разширени настройки** — включете „**Записвай стартиране на AAPS**“, ако искате да виждате в Nightscout кога приложението се рестартира (полезно за болногледачи). Оставете включени „**Създавай съобщения за грешки**“ и „**Създавай съобщения при нужда от въглехидрати**“. Оставете „**Използвай бавна синхронизация**“ изключено. Използвате го само ако Nightscout сървърът обработва бавно голямо количество данни.
 
-![Advanced settings](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
+![Разширени настройки](../images/setup-wizard/Wizard-NSClientV3-Advanced.png)
 
-Go back to the list of plugins and press "**NEXT**" to go to the next screen.
+Върнете се към списъка с плъгини и натиснете „**Следващ**“, за да отидете на следващия екран.
 
-## Client control
+## Контрол от клиентско приложение
 
-From **AAPS** version 4, client devices running **AAPSClient** can be **paired** with this phone (the **master**) and control it with signed commands sent over Nightscout. This is the new recommended way to control **AAPS** remotely — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md) for the full explanation and setup.
+От версия 4 на **AAPS** клиентските устройства с **AAPSClient** могат да бъдат **свързани** с този телефон (**главния**) и да го управляват с подписани команди, изпратени през Nightscout. Това е новият препоръчан начин за дистанционно управление на **AAPS** – вижте [Контрол главен ↔ клиент](../RemoteFeatures/ClientMasterControl.md) за пълното обяснение и настройката.
 
-There is nothing you have to configure on this screen now; you can pair clients at any time later from **Manage → Authorized clients**. There you add a client with a **QR code** (it sets up Nightscout on the client too) or with a **PIN**, and give it a **role**.
+На този екран сега не е нужно да настройвате нищо. Можете да свържете клиенти по всяко време по-късно от **Управление → Оторизирани клиенти**. Там добавяте клиент с **QR код** (той настройва и Nightscout на клиента) или с **PIN** и му давате **роля**.
 
-- "**Authorized clients**" — manage the paired client devices allowed to control this master.
-- "**Nightscout data acceptance**" — accepting treatments and data entered directly in Nightscout (the old, less secure way) is now turned off by default. Only open these settings if you still need it, _e.g._ to enter data through Nightscout or third-party apps.
+- „**Оторизирани клиенти**“ — управление на свързаните клиентски устройства, на които е позволено да управляват този главен телефон.
+- „**Приемане на данни от Nightscout**“ — приемането на лечения и данни, въведени директно в Nightscout (старият, по-малко сигурен начин), вече е изключено по подразбиране. Отваряйте тези настройки само ако все още ви трябва, _напр._ за да въвеждате данни през Nightscout или приложения на трети страни.
 
-When client control is already on — always in [Simple Mode](#preferences-simple-mode) — this phone is in [hardened mode](#client-master-control-hardened-mode): it takes changes only from paired clients, so the screen explains hardened mode instead of offering the "**Nightscout data acceptance**" settings.
+Когато контролът от клиентско приложение вече е включен – винаги в [Опростен режим](#preferences-simple-mode) – този телефон е в [режим на засилена защита](#client-master-control-hardened-mode): той приема промени само от свързани клиенти, затова екранът обяснява режима на засилена защита, вместо да предлага настройките „**Приемане на данни от Nightscout**“.
 
-![Client control](../images/setup-wizard/Wizard-ClientControl.png)
+![Контрол от клиентско приложение](../images/setup-wizard/Wizard-ClientControl.png)
 
-"**Nightscout data acceptance**" opens the "**Synchronization**" settings, where each kind of data received from Nightscout has its own switch:
+„**Приемане на данни от Nightscout**“ отваря настройките „**Синхронизация**“, където всеки вид данни, получени от Nightscout, има собствен превключвател:
 
-![Nightscout data acceptance settings](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
+![Настройки за приемане на данни от Nightscout](../images/setup-wizard/Wizard-ClientControl-Synchronization.png)
 
-Press "**NEXT**" to go to the next screen.
+Натиснете „**Следващ**“, за да отидете на следващия екран.
 
 (setup-wizard-instance-name)=
-## Who is using this phone?
+## Кой използва този телефон?
 
-Here you enter the name of the person using this phone. It tells this **AAPS** instance apart from others in reports and when synchronizing, for example if two children in your family use **AAPS**. It is also used in the names of exported settings files and shown on the watch.
+Тук въвеждате името на човека, който използва този телефон. То отличава тази инсталация на **AAPS** от другите в отчетите и при синхронизиране, например ако две деца в семейството ви използват **AAPS**. Използва се и в имената на файловете с експортирани настройки и се показва на часовника.
 
-It can be anything. You can change it later in **Settings → General → Instance name**.
+Може да бъде всичко. Можете да го промените по-късно в **Настройки → Основни → Име на инстанцията**.
 
-Press "**NEXT**" to go to the next screen.
+Натиснете „**Следващ**“, за да отидете на следващия екран.
 
-![Name](../images/setup-wizard/Wizard-Name.png)
+![Име](../images/setup-wizard/Wizard-Name.png)
 
-## Patient type
+## Тип пациент
 
-Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
+Тук избирате „Тип пациент“. Това е важно, защото софтуерът **AAPS** има различни граници в зависимост от възрастта на пациента. Това е важно от съображения за сигурност и безопасност.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for a meal.
+Тук задавате и **максималния разрешен болус** за едно хранене. Тоест най-големият болус, който ви е нужен за типичните ви хранения. Това е функция за безопасност, която помага да избегнете случайно предозиране, когато давате болус за хранене.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+Второто ограничение е подобно, но се отнася за максималното количество въглехидрати, което очаквате да приемете.
 
-After setting these values, press "**NEXT**" to go to the next screen:
+След като зададете тези стойности, натиснете „**Следващ**“, за да отидете на следващия екран:
 
-![Patient](../images/setup-wizard/Wizard-PatientType.png)
+![Пациент](../images/setup-wizard/Wizard-PatientType.png)
 
-## Инсулин (ед.):
+## Инсулин
 
-Here you configure the insulin used in your pump. New insulin profiles require a **DIA of at least 5 h**.
+Тук настройвате инсулина, който се използва в помпата ви. Новите профили на инсулин изискват **DIA най-малко 5 ч**.
 
-Press the "**Insulin**" button to open the insulin editor:
+Натиснете бутона „**Инсулин**“, за да отворите редактора на инсулин:
 
-![Инсулин (ед.):](../images/setup-wizard/Wizard-Insulin.png)
+![Инсулин](../images/setup-wizard/Wizard-Insulin.png)
 
-In the editor you can give the insulin a **nickname** and set its **Peak** (in minutes) and **DIA** (in hours). The quickest way is to load a preset with "**Load peak from**" — choose **Novorapid**, **Fiasp** or **Lyumjev** — and the peak is filled in for you. The graph at the bottom previews the resulting insulin activity curve.
+В редактора можете да дадете на инсулина **кратко име** и да зададете неговия **Пик** (в минути) и **DIA** (в часове). Най-бързият начин е да заредите готова настройка с „**Избери пик от**“ – изберете **Novorapid**, **Fiasp** или **Lyumjev** – и пикът се попълва автоматично. Графиката в долната част показва предварително получената крива на действие на инсулина.
 
-![Insulin editor](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
+![Редактор на инсулин](../images/setup-wizard/Wizard-Insulin-Novorapid.png)
 
-Pick the preset that matches your insulin, for example **Fiasp**:
+Изберете готовата настройка, която отговаря на вашия инсулин, например **Fiasp**:
 
-![Insulin Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
+![Инсулин Fiasp](../images/setup-wizard/Wizard-Insulin-Fiasp.png)
 
 ```{admonition} Use your insulin brand's preset peak
 :class: danger
-Please don't change the peak unless you are an expert — usually the preset values work well for each branded insulin.
+Моля, не променяйте пика, освен ако не сте експерт – обикновено готовите стойности работят добре за всяка марка инсулин.
 ```
 
-If you are a new **AAPS** user, set **DIA** to 9 hours — see [Duration of insulin action (DIA) and peak](#Config-Builder-insulin-dia) to understand why.
+Ако сте нов потребител на **AAPS**, задайте **DIA** на 9 часа – вижте [Време на действие на инсулина (DIA) и пик](#Config-Builder-insulin-dia), за да разберете защо.
 
 ```{admonition} "Insulin configuration changed" dialog
 :class: note
-If a paired client (_e.g._ another phone) has changed the insulin configuration, a dialog appears. Press **OK** to load their changes, or **Cancel** to keep editing (your next save will overwrite theirs).
+Ако свързан клиент (_напр._ друг телефон) е променил конфигурацията на инсулина, се появява диалогов прозорец. Натиснете **ОК**, за да заредите неговите промени, или **Откажи**, за да продължите да редактирате (следващото ви записване ще презапише неговите промени).
 ```
 
-![Insulin changed](../images/setup-wizard/Wizard-Insulin-Changed.png)
+![Инсулинът е променен](../images/setup-wizard/Wizard-Insulin-Changed.png)
 
-Press the save icon (top right), then press "**NEXT**" to go to the next screen.
+Натиснете иконата за записване (горе вдясно) и после натиснете „**Следващ**“, за да отидете на следващия екран.
 
-## Blood sugar source
+## Източник на КЗ
 
-Here you select where **AAPS** gets its glucose data from. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
+Тук избирате откъде **AAPS** получава данните за глюкозата. Моля, прочетете документацията за вашия [източник на КЗ](../Getting-Started/CompatiblesCgms.md).
 
-Many sources are available — scroll through the list and select the one you use:
+Има много източници – превъртете списъка и изберете този, който използвате:
 
-![Източник на данни за КЗ](../images/setup-wizard/Wizard-BGSource.png)
+![Източник на КЗ](../images/setup-wizard/Wizard-BGSource.png)
 
-Once you select a source, its card expands and shows two buttons: "**Settings**" to adjust how the data is received, and "**Open plugin**" to open the source's own screen. In the example below, **BYODA** is selected. Some sources have nothing to configure at this stage, so you can usually go straight to the next screen:
+Когато изберете източник, картата му се разгъва и показва два бутона: „**Настройки**“, за да промените как се получават данните, и „**Отвори плъгин**“, за да отворите собствения екран на източника. В примера по-долу е избран **BYODA**. Някои източници нямат какво да се настройва на този етап, затова обикновено можете да отидете направо на следващия екран:
 
-![BG Source settings](../images/setup-wizard/Wizard-BGSource-Settings.png)
+![Настройки на източника на КЗ](../images/setup-wizard/Wizard-BGSource-Settings.png)
 
-After making your selection, press "**NEXT**" to go to the next screen.
+След като направите избора си, натиснете „**Следващ**“, за да отидете на следващия екран.
 
 (setup-wizard-profile)=
 ## Профил
 
-Now we are entering a very important part of the Setup Wizard.
+Сега стигаме до много важна част от Съветника за настройване.
 
-Please read the documentation about [profiles](../SettingUpAaps/YourAapsProfile.md) before you try to enter your profile details on the following screen.
+Моля, прочетете документацията за [профилите](../SettingUpAaps/YourAapsProfile.md), преди да въведете данните на профила си на следващия екран.
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**.
+Точният профил е необходим, за да действа **AAPS** безопасно.
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+Задължително е да сте определили и обсъдили профила си с лекаря си и той да е доказал, че работи, чрез успешни тестове на базалната доза, ISF и IC!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+Ако робот получи грешни входни данни, той ще греши – всеки път. **AAPS** може да работи само с информацията, която му е дадена. Ако профилът ви е твърде силен, рискувате хипогликемия, а ако е твърде слаб, рискувате хипергликемия. 
 ```
 
-Press the "**Profile**" button to open the profile editor:
+Натиснете бутона „**Профил**“, за да отворите редактора на профили:
 
 ![Профил](../images/setup-wizard/Wizard-Profile.png)
 
-The editor opens empty ("No records available"). Press the "**+**" button at the bottom to create a new profile:
+Редакторът се отваря празен („Няма налични записи“). Натиснете бутона „**+**“ в долната част, за да създадете нов профил:
 
-![Profile empty](../images/setup-wizard/Wizard-Profile-Empty.png)
+![Празен профил](../images/setup-wizard/Wizard-Profile-Empty.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+Ако е нужно, с времето можете да имате няколко профила. Тук създаваме само един.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
-The example profile here is only to show you how to enter data.
+Примерният профил тук е само за да ви покаже как да въвеждате данни.
 
-It is not intended to be an accurate profile or something very well optimized, because each person's needs are so different.
+Той не е предназначен да бъде точен или много добре оптимизиран профил, защото нуждите на всеки човек са много различни.
 
-Don't use it for actually looping!
+Не я използвайте за истински затворен кръг!
 ```
 
-The new profile (for example "**LocalProfile1**") has four tabs: **IC**, **ISF**, **BAS** and **TARG**. Press the pencil next to the profile name to rename it. Fill in every tab — a tab stays red and shows an error message until it contains valid values:
+Новият профил (например „**LocalProfile1**“) има четири раздела: **И / Въгл** (IC), **Чувств** (ISF), **БАЗА** и **ЦЕЛ**. Натиснете молива до името на профила, за да го преименувате. Попълнете всеки раздел – разделът остава червен и показва съобщение за грешка, докато не съдържа валидни стойности:
 
-![New profile with errors](../images/setup-wizard/Wizard-Profile-New-Error.png)
+![Нов профил с грешки](../images/setup-wizard/Wizard-Profile-New-Error.png)
 
-Press "**IC**" and enter your [IC](#your-aaps-profile-insulin-to-carbs-ratio) values. Use the "**+**" button to add more time blocks:
+Натиснете „**И / Въгл**“ и въведете стойностите си за [IC](#your-aaps-profile-insulin-to-carbs-ratio). С бутона „**+**“ добавяте още времеви интервали:
 
 ![IC](../images/setup-wizard/Wizard-Profile-IC.png)
 
-Press "**ISF**" and enter your [ISF values](#your-aaps-profile-insulin-sensitivity-factor):
+Натиснете „**Чувств**“ и въведете своите [стойности за ISF](#your-aaps-profile-insulin-sensitivity-factor):
 
 ![ISF](../images/setup-wizard/Wizard-Profile-ISF.png)
 
-Press "**BAS**" and enter your [basal values](#your-aaps-profile-basal-rates):
+Натиснете „**БАЗА**“ и въведете своите [стойности на базала](#your-aaps-profile-basal-rates):
 
-![BAS](../images/setup-wizard/Wizard-Profile-BAS.png)
+![БАЗА](../images/setup-wizard/Wizard-Profile-BAS.png)
 
-Press "**TARG**" and enter your blood sugar target values.
+Натиснете „**ЦЕЛ**“ и въведете целевите си стойности на кръвната захар.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+При отворен кръг тази цел може да бъде по-широк диапазон. Иначе **AAPS** постоянно ще ви известява да промените временния базал или друга настройка, което може да е изтощително.
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+По-късно, при затворен кръг, обикновено ще имате само една стойност за горна и долна граница. Така на **AAPS** му е по-лесно да достигне целта и да ви даде по-добър общ контрол на диабета.
 
-![TARG](../images/setup-wizard/Wizard-Profile-TARG.png)
+![ЦЕЛ](../images/setup-wizard/Wizard-Profile-TARG.png)
 
-When all four tabs are valid, the **save icon** (top right) becomes active. Press it to save the profile:
+Когато и четирите раздела са валидни, **иконата за записване** (горе вдясно) става активна. Натиснете я, за да запишете профила:
 
-![Save icon](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
+![Икона за записване](../images/setup-wizard/Wizard-Profile-SaveIcon.png)
 
-Close the editor with the "**X**" in the top left corner. The profile summary then shows its name, its total daily basal (∑), the units and the IC and ISF values with their graphs:
+Затворете редактора с „**X**“ в горния ляв ъгъл. След това обобщението на профила показва името му, общия дневен базал (∑), единиците и стойностите на IC и ISF с техните графики:
 
-![Save](../images/setup-wizard/Wizard-Profile-Save.png)
+![Запиши](../images/setup-wizard/Wizard-Profile-Save.png)
 
 ```{admonition} Several defined but only one active profile
 :class: note
-You can have several profiles defined, but only one activated profile running at any given time.
+Можете да имате няколко създадени профила, но в даден момент работи само един активен профил.
 ```
 
-Press the "**▶**" (activate) button at the bottom right. The "**Activate**" screen opens. As no insulin is in use yet, it first asks you to select the insulin you are using, so that the profile switch can record it. The "**Activate**" button stays greyed out until you do:
+Натиснете бутона „**▶**“ (активиране) долу вдясно. Отваря се екранът „**Активиране**“. Тъй като още не се използва инсулин, екранът първо ви моли да изберете инсулина, който използвате, за да може смяната на профил да го запише. Бутонът „**Активиране**“ остава сив, докато не го направите:
 
-![Select the insulin first](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
+![Първо изберете инсулина](../images/setup-wizard/Wizard-Profile-Switch-NoInsulin.png)
 
-Press "**Select Insulin**" and choose the insulin you configured earlier. Leave the percentage at 100 % and press "**Activate**":
+Натиснете „**Изберете инсулин**“ и изберете инсулина, който настроихте по-рано. Оставете процента на 100 % и натиснете „**Активиране**“:
 
-![Activate](../images/setup-wizard/Wizard-Profile-Activate.png)
+![Активиране](../images/setup-wizard/Wizard-Profile-Activate.png)
 
-A profile switch dialog appears. In this case let it stay as preset and confirm with "**OK**":
+Появява се диалогов прозорец за смяна на профил. В този случай оставете го както е зададен и потвърдете с „**ОК**“:
 
 ```{admonition} Profile switch dialog
 :class: note
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile to suit the circumstances.
+По-късно ще научите как да използвате този общ диалогов прозорец при ситуации като болест или спорт, когато трябва да промените профила си според обстоятелствата.
 ```
 
-![Switch](../images/setup-wizard/Wizard-Profile-Switch.png)
+![Смяна](../images/setup-wizard/Wizard-Profile-Switch.png)
 
-Your profile is now active. Press "**NEXT**" to go to the next screen.
+Профилът ви вече е активен. Натиснете „**Следващ**“, за да отидете на следващия екран.
 
-## Insulin pump
+## Инсулинова помпа
 
-Now you select your insulin pump. Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
+Сега избирате инсулиновата си помпа. Моля, прочетете документацията за вашата [инсулинова помпа](../Getting-Started/CompatiblePumps.md).
 
-Scroll the list and select your pump. In this example we use the "**Virtual Pump**", which is useful while you are still learning and have not connected a real pump yet:
+Превъртете списъка и изберете помпата си. В този пример използваме „**Виртуална помпа**“. Тя е полезна, докато още се учите и не сте свързали истинска помпа:
 
-![Pump](../images/setup-wizard/Wizard-Pump.png)
+![Помпа](../images/setup-wizard/Wizard-Pump.png)
 
-Many pumps are supported — scroll down to find yours:
+Поддържат се много помпи – превъртете надолу, за да намерите вашата:
 
-![Pump more](../images/setup-wizard/Wizard-Pump-More.png)
+![Помпа – още](../images/setup-wizard/Wizard-Pump-More.png)
 
-When you select a real pump, **AAPS** asks for a confirmation, because it will copy the basal rates of your profile to the pump and overwrite the basal rates stored there. Press "**OK**" only if the basal rates in your **AAPS** profile are correct; otherwise press "**Cancel**" and switch to the pump later:
+Когато изберете истинска помпа, **AAPS** иска потвърждение, защото ще копира базалните дози от профила ви в помпата и ще презапише базалните дози, записани там. Натиснете „**ОК**“ само ако базалните дози във вашия профил в **AAPS** са правилни. Иначе натиснете „**Откажи**“ и сменете помпата по-късно:
 
-![Confirmation when selecting a hardware pump](../images/setup-wizard/Wizard-Pump-Confirmation.png)
+![Потвърждение при избор на истинска помпа](../images/setup-wizard/Wizard-Pump-Confirmation.png)
 
-If the pump you select communicates over Bluetooth, **AAPS** asks for permission to connect to nearby devices once you finish the Wizard (see [Bluetooth permission](#bluetooth-permission)).
+Ако избраната помпа комуникира чрез Bluetooth, **AAPS** ще поиска разрешение за свързване с устройства наблизо, след като завършите съветника (вижте [Разрешение за Bluetooth](#bluetooth-permission)).
 
-If you have already set up your profile and know how to connect your pump, feel free to connect it now. Otherwise leave it on **Virtual Pump** for the moment — you can change it anytime, or leave the Setup Wizard using the arrow in the top left corner and let **AAPS** first show you some blood glucose values.
+Ако вече сте настроили профила си и знаете как да свържете помпата си, можете да я свържете сега. Иначе засега оставете **Виртуална помпа** – можете да я смените по всяко време или да излезете от съветника за настройване със стрелката в горния ляв ъгъл и да оставите **AAPS** първо да ви покаже няколко стойности на кръвната захар.
 
-Press "**NEXT**" to go to the next screen.
+Натиснете „**Следващ**“, за да отидете на следващия екран.
 
-## APS algorithm
+## Алгоритъм на APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name, the SMB feature of the algorithm is disabled until you are familiar with AAPS and have worked through the first objectives. OpenAPS SMB is newer and generally better than OpenAPS AMA anyway.
+Използвайте алгоритъма OpenAPS SMB като APS алгоритъм. Въпреки името, функцията SMB на алгоритъма е изключена, докато не се запознаете с AAPS и не изпълните първите цели. OpenAPS SMB така или иначе е по-нов и като цяло по-добър от OpenAPS AMA.
 
-SMB is disabled at the start because the SMB feature reacts faster to a blood sugar increase, using a Super Micro Bolus instead of increasing the basal rate percentage. Because your profile is generally not as good in the beginning as it is after some experience, the feature is disabled at first.
+SMB е изключен в началото, защото функцията SMB реагира по-бързо на покачване на кръвната захар, като използва Super Micro Bolus вместо да увеличава процента на базалната доза. В началото профилът ви обикновено не е толкова добър, колкото след известен опит, затова функцията първоначално е изключена.
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: note
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+OpenAPS AMA е най-простият алгоритъм. Той не поддържа микроболуси за коригиране на високи стойности. Може да има случаи, в които е по-добре да използвате този алгоритъм, но това не е препоръката.
 ```
 
-Select "**OpenAPS SMB**", then press "**Settings**" to see the details:
+Изберете „**OpenAPS SMB**“ и после натиснете „**Настройки**“, за да видите подробностите:
 
-![Алгоритъм за APS](../images/setup-wizard/Wizard-APS.png)
+![APS](../images/setup-wizard/Wizard-APS.png)
 
-The only option here is "**Use dynamic sensitivity**". Leave it off and change nothing for now — just read the text.
+Единствената опция тук е „**Използвай динамична чувствителност**“. Засега я оставете изключена и не променяйте нищо – само прочетете текста.
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+Заради ограниченията, които налагат **Цели**, в момента така или иначе не можете да използвате нито „затворен кръг“, нито „функциите на SMB“.
 
-Go back and press "**NEXT**" to go to the next screen:
+Върнете се назад и натиснете „**Следващ**“, за да отидете на следващия екран:
 
-![APS settings](../images/setup-wizard/Wizard-APS-Settings.png)
+![Настройки на APS](../images/setup-wizard/Wizard-APS-Settings.png)
 
 ## Определяне на чувствителност
 
-Leave "**Sensitivity Oref1**" selected as the standard sensitivity plugin:
+Оставете избран „**Чрез Oref1**“ (Sensitivity Oref1) като стандартен плъгин за чувствителност:
 
-![Sensitivity](../images/setup-wizard/Wizard-Sensitivity.png)
+![Чувствителност](../images/setup-wizard/Wizard-Sensitivity.png)
 
-If you press "**Settings**" you can review the absorption settings; the defaults (_e.g._ a 6 h absorption cutoff) are fine for now.
+Ако натиснете „**Настройки**“, можете да прегледате настройките за усвояване. Стойностите по подразбиране (_напр._ граница на усвояването от 6 ч) засега са подходящи.
 
-![Sensitivity settings](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
+![Настройки на чувствителността](../images/setup-wizard/Wizard-Sensitivity-Settings.png)
 
-Press "**NEXT**" to go to the next screen.
+Натиснете „**Следващ**“, за да отидете на следващия екран.
 
-## Start Objective 1
+## Стартиране на Цел 1
 
-You are now entering the Objectives — the qualification for access to further **AAPS** features.
+Сега започвате Целите – стъпките, с които получавате достъп до още функции на **AAPS**.
 
-Press "**Open Objectives**":
+Натиснете „**Отвори целите**“:
 
-![Objectives](../images/setup-wizard/Wizard-Objectives.png)
+![Цели](../images/setup-wizard/Wizard-Objectives.png)
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
+Тук стартираме Цел 1, въпреки че в момента настройката ни още не е напълно готова, за да изпълним успешно тази цел. Но това е началото.
 
-Press the "**Start**" button next to "**1. Objective**":
+Натиснете бутона „**Старт**“ до „**1. Цел**“:
 
-![Objectives list](../images/setup-wizard/Wizard-Objectives-List.png)
+![Списък с целите](../images/setup-wizard/Wizard-Objectives-List.png)
 
-The objective expands to show its individual checks. You can see that you already made some progress, while other items are still to be done:
+Целта се разгъва и показва отделните си проверки. Виждате, че вече имате известен напредък, а други точки още предстоят:
 
-![Objective started](../images/setup-wizard/Wizard-Objectives-Started.png)
+![Целта е стартирана](../images/setup-wizard/Wizard-Objectives-Started.png)
 
-Go back, then press "**FINISH**" to complete the Setup Wizard:
+Върнете се назад и натиснете „**КРАЙ**“, за да завършите съветника за настройване:
 
-![Finish](../images/setup-wizard/Wizard-Objectives-Finish.png)
+![Край](../images/setup-wizard/Wizard-Objectives-Finish.png)
 
-After pressing "**FINISH**" you arrive at the main screen of **AAPS**. A "**Notification**" panel may open with information messages, for example about the profile switch you just made — press "**Dismiss**" below each message to clear it.
+След като натиснете „**КРАЙ**“, попадате на главния екран на **AAPS**. Може да се отвори панел „**Известие**“ с информационни съобщения, например за смяната на профил, която току-що направихте – натиснете „**Откажи**“ под всяко съобщение, за да го изчистите.
 
-If you accidentally leave the Setup Wizard at any point, you can either simply re-start the Wizard, or change the [configuration of the AAPS loop](../SettingUpAaps/ChangeAapsConfiguration.md) manually.
+Ако случайно излезете от съветника за настройване в някой момент, можете просто да стартирате съветника отново или да промените ръчно [конфигурацията на кръга на AAPS](../SettingUpAaps/ChangeAapsConfiguration.md).
 
-## Bluetooth permission
+## Разрешение за Bluetooth
 
-If you select a pump that connects over Bluetooth (for example **Omnipod Dash**), a banner reminds you that **AAPS** needs Bluetooth permission. You can press "**Dismiss**" for now — the permission is granted after you finish the Wizard:
+Ако изберете помпа, която се свързва чрез Bluetooth (например **Omnipod Dash**), банер ви напомня, че **AAPS** се нуждае от разрешение за Bluetooth. Засега можете да натиснете „**Откажи**“ – разрешението се дава, след като завършите съветника:
 
-![Bluetooth needed](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
+![Нужен е Bluetooth](../images/setup-wizard/Wizard-Pump-Bluetooth.png)
 
-Once the Setup Wizard is finished, the **AAPS** main screen shows a "**Permissions Required**" panel. The other permissions are already granted; press "**Grant**" next to "**Bluetooth**":
+След като съветникът за настройване завърши, главният екран на **AAPS** показва панел „**Нужни са разрешения**“. Другите разрешения вече са дадени. Натиснете „**Позволи**“ до „**Bluetooth**“:
 
-![Bluetooth Grant](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
+![Bluetooth – Позволи](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Select "**Allow**" so **AAPS** can find and connect to your pump:
+Изберете „**Разрешаване**“ (Allow), за да може **AAPS** да намери помпата ви и да се свърже с нея:
 
-![Bluetooth Allow](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
+![Bluetooth – Разрешаване](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
-If your **AAPS** loop is now fully setup, please move on to the next section ["Completing the objectives"](../SettingUpAaps/CompletingTheObjectives.md).
+Ако кръгът ви с **AAPS** вече е напълно настроен, моля, преминете към следващия раздел [„Изпълнение на целите“](../SettingUpAaps/CompletingTheObjectives.md).
