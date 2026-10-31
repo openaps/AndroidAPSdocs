@@ -1,6 +1,6 @@
 # Kompatibilné pumpy
 
-AAPS funguje s viacerými inzulínovými pumpami. The following list shows the currently supported devices. It indicates, in brackets, whether AAPS communicates with the pump using your phone's native Bluetooth function or whether it requires a RileyLink compatible device.
+AAPS funguje s viacerými inzulínovými pumpami. Nasledujúci zoznam ukazuje momentálne podporované zariadenia. V zátvorke je uvedené, či AAPS komunikuje s pumpou cez vstavaný Bluetooth vášho telefónu, alebo či potrebuje zariadenie kompatibilné s RileyLinkom.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -22,7 +22,7 @@ AAPS funguje s viacerými inzulínovými pumpami. The following list shows the c
 ../CompatiblePumps/Future-possible-Pump-Drivers.md
 ```
 
-- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; see also [Tips for basic usage](#combov2-tips-for-basic-usage))
+- [Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; pozrite aj [Tipy na základné používanie](#combov2-tips-for-basic-usage))
 - [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [CareLevo](../CompatiblePumps/CareLevo.md) (Bluetooth)
 - [DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md) (Bluetooth)
@@ -32,30 +32,30 @@ AAPS funguje s viacerými inzulínovými pumpami. The following list shows the c
 - [Diaconn G8](../CompatiblePumps/DiaconnG8.md) (Bluetooth)
 - [EOPatch2](../CompatiblePumps/EOPatch2.md) (Bluetooth)
 - [Equil 5.3](../CompatiblePumps/Equil5.3.md) (Bluetooth)
-- Certain older [Medtronic](../CompatiblePumps/MedtronicPump.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- Niektoré staršie pumpy [Medtronic](../CompatiblePumps/MedtronicPump.md) (potrebné je [ďalšie komunikačné zariadenie](#CompatiblePumps-additional-communication-device))
 - [Medtrum Nano 200U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Medtrum 300U](../CompatiblePumps/MedtrumNano.md) (Bluetooth)
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
-- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) ([additional communication device](#CompatiblePumps-additional-communication-device) needed)
+- [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (potrebné je [ďalšie komunikačné zariadenie](#CompatiblePumps-additional-communication-device))
 
 ## Moja pumpa nie je v zozname
 
-Podrobnosti o stave ďalších púmp, ktoré by mohli byť v budúcnosti kompatibilné s AAPS, sú uvedené na stránke [Future (possible) Pumps](../CompatiblePumps/Future-possible-Pump-Drivers.md).
+Podrobnosti o stave ďalších púmp, ktoré by v budúcnosti mohli fungovať s AAPS, sú uvedené na stránke [Budúce (možné) ovládače púmp](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
 ## Prídavné komunikačné zariadenie
 
-If no additional communication device is mentioned, the communication between the insulin pump and **AAPS** is based on the integrated Bluetooth stack of Android, without the need for an additional communication device to translate the communication protocol.
+Ak nie je uvedené ďalšie komunikačné zariadenie, komunikácia medzi inzulínovou pumpou a **AAPS** funguje cez vstavaný Bluetooth v Androide. Ďalšie komunikačné zariadenie na preklad komunikačného protokolu nie je potrebné.
 
-For old Medtronic pumps and Omnipod Eros, an additional communication device (besides your phone) is needed to "translate" the radio signal from the pump to Bluetooth. The device must use the same radio frequency as your pump:
+Pre staré pumpy Medtronic a Omnipod Eros je potrebné ďalšie komunikačné zariadenie (okrem telefónu), ktoré „prekladá“ rádiový signál z pumpy na Bluetooth. Zariadenie musí používať rovnakú rádiovú frekvenciu ako vaša pumpa:
 
 - **Omnipod Eros**: 433 MHz.
-- **Medtronic**: 916 MHz for pumps sold in the US and Canada, 868 MHz for pumps sold elsewhere. See [How to determine what frequency my pump uses](#MedtronicPump-faq).
+- **Medtronic**: 916 MHz pre pumpy predávané v USA a Kanade, 868 MHz pre pumpy predávané inde. Pozrite [Ako zistiť, akú frekvenciu používa moja pumpa](#MedtronicPump-faq).
 
-Available communication devices:
+Dostupné komunikačné zariadenia:
 
-- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  [Webová stránka OrangeLink](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![EmaLink](../images/omnipod/EmaLink.png)  [Webová stránka Emalink](https://github.com/sks01/EmaLink) - [Kontakt](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Kontakt](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [Webová stránka LoopLink](https://www.getlooplink.org/) - [Kontakt](https://jameswedding.substack.com/) - Netestované
