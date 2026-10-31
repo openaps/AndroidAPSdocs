@@ -1,217 +1,217 @@
 (Insulin-Concentration)=
-# Insulin Concentration
+# Συγκέντρωση ινσουλίνης
 
 ```{warning}
-All commercial pumps are designed to be used with Insulin U100 **ONLY**. Using another insulin concentration in a pump can be dangerous. Although more and more users run AAPS with other concentrations, the conversion must always be managed and often leads to errors (even for very skilled users!).
+Όλες οι εμπορικές αντλίες είναι σχεδιασμένες για χρήση **ΜΟΝΟ** με ινσουλίνη U100. Η χρήση άλλης συγκέντρωσης ινσουλίνης σε μια αντλία μπορεί να είναι επικίνδυνη. Αν και όλο και περισσότεροι χρήστες χρησιμοποιούν το AAPS με άλλες συγκεντρώσεις, η μετατροπή πρέπει πάντα να γίνεται με προσοχή και συχνά οδηγεί σε λάθη (ακόμη και για πολύ έμπειρους χρήστες!).
 ```
 
-## Reminder of the basics of insulin
+## Υπενθύμιση των βασικών για την ινσουλίνη
 
-This chapter covers the essential concepts of insulin measurement and delivery.
+Αυτό το κεφάλαιο καλύπτει τις βασικές έννοιες για τη μέτρηση και τη χορήγηση της ινσουλίνης.
 
-### The insulin unit: a measure of action
+### Η μονάδα ινσουλίνης: ένα μέτρο της δράσης
 
-Insulin is measured in **International Units (IU)**, which quantify its biological activity (power to lower blood sugar), not just its physical mass.
+Η ινσουλίνη μετριέται σε **Διεθνείς Μονάδες (IU)**, που μετρούν τη βιολογική της δράση (πόσο μειώνει το σάκχαρο αίματος) και όχι μόνο τη φυσική της μάζα.
 
-- **Definition:** 1 IU corresponds to the activity of a specific amount of insulin, standardized to **approximately 0.04167 mg**.
-- **Key Point:** A "unit" means the same biological effect across all insulin types, ensuring consistent dosing.
+- **Ορισμός:** 1 IU αντιστοιχεί στη δράση μιας συγκεκριμένης ποσότητας ινσουλίνης, τυποποιημένης σε **περίπου 0,04167 mg**.
+- **Βασικό σημείο:** Μια «μονάδα» σημαίνει την ίδια βιολογική δράση σε όλους τους τύπους ινσουλίνης, ώστε η δοσολογία να είναι σταθερή.
 
-### Insulin concentrations
+### Συγκεντρώσεις ινσουλίνης
 
-Insulin comes in different strengths, defined by the number of units per millilitre (ml).
+Η ινσουλίνη υπάρχει σε διάφορες περιεκτικότητες, που ορίζονται από τον αριθμό μονάδων ανά χιλιοστόλιτρο (ml).
 
-- **U100:** The global standard, containing **100 IU/ml**.
-- **U200-U500:** More concentrated insulins (e.g. U200 has 200 IU/ml) for smaller injection volumes.
-- **U40:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 requires U40-specific syringes.**
-- **Manual Dilution:** A clinical practice to create highly diluted insulin (e.g. U50, U10) for rare cases like neonatal use or extreme sensitivity. This requires meticulous pharmacy preparation.
+- **U100:** Το παγκόσμιο πρότυπο, περιέχει **100 IU/ml**.
+- **U200-U500:** Πιο πυκνές ινσουλίνες (π.χ. η U200 έχει 200 IU/ml) για μικρότερους όγκους ένεσης.
+- **U40/U50:** Λιγότερο συνηθισμένες, παλαιότερες συγκεντρώσεις (40 IU/ml και 50 IU/ml). **Η U40 απαιτεί σύριγγες ειδικές για U40.**
+- **Χειροκίνητη αραίωση:** Κλινική πρακτική για τη δημιουργία πολύ αραιωμένης ινσουλίνης (π.χ. U50, U10) για σπάνιες περιπτώσεις, όπως σε νεογνά ή σε πολύ μεγάλη ευαισθησία. Αυτό απαιτεί πολύ προσεκτική προετοιμασία από φαρμακείο.
 
 ```{admonition} Critical Warning
 :class: danger
-Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
+Η χρήση μιας συγκέντρωσης με συσκευή που δεν ταιριάζει είναι εξαιρετικά επικίνδυνη και μπορεί να προκαλέσει σοβαρή υπερδοσολογία ή υποδοσολογία. **Ελέγχετε πάντα τρεις φορές ότι η συγκέντρωση της ινσουλίνης ταιριάζει με τις προδιαγραφές της σύριγγας, της πένας ή της αντλίας.**
 ```
 
-## When using a non-standard concentration?
+## Πότε χρησιμοποιείται μη τυπική συγκέντρωση;
 
-While insulin pumps are designed for U100 insulin, certain specific medical situations require non-standard concentrations. These scenarios require extreme caution and meticulous management.
+Αν και οι αντλίες ινσουλίνης είναι σχεδιασμένες για ινσουλίνη U100, ορισμένες ειδικές ιατρικές καταστάσεις απαιτούν μη τυπικές συγκεντρώσεις. Αυτές οι περιπτώσεις απαιτούν εξαιρετική προσοχή και πολύ προσεκτική διαχείριση.
 
-### Use Case 1: diluted insulin for very low doses
+### Περίπτωση 1: αραιωμένη ινσουλίνη για πολύ μικρές δόσεις
 
-- **Scenario:** Managing type 1 diabetes in very young babies and toddlers.
-- **Problem:** Their insulin needs are so low that the pump's minimum deliverable dose (e.g. 0.05 U) may still be too large, leading to difficulty in achieving precise glycemic control and a high risk of hypoglycemia.
-- **Solution:** Use highly diluted insulin (e.g. U10, which is 10 IU/ml).
-- **Effect:** This increases the volume of fluid delivered per unit of insulin. By making the "packages" of insulin larger in volume but weaker in concentration, it allows much finer adjustments and greater dosing accuracy with the pump's existing settings.
+- **Σενάριο:** Διαχείριση του διαβήτη τύπου 1 σε πολύ μικρά μωρά και νήπια.
+- **Πρόβλημα:** Οι ανάγκες τους σε ινσουλίνη είναι τόσο μικρές, ώστε η ελάχιστη δόση που μπορεί να δώσει η αντλία (π.χ. 0,05 U) μπορεί να είναι ακόμη πολύ μεγάλη. Αυτό δυσκολεύει τον ακριβή έλεγχο της γλυκόζης και αυξάνει πολύ τον κίνδυνο υπογλυκαιμίας.
+- **Λύση:** Χρησιμοποιήστε πολύ αραιωμένη ινσουλίνη (π.χ. U10, δηλαδή 10 IU/ml).
+- **Αποτέλεσμα:** Αυξάνεται ο όγκος υγρού που χορηγείται ανά μονάδα ινσουλίνης. Όταν τα «πακέτα» ινσουλίνης έχουν μεγαλύτερο όγκο αλλά μικρότερη συγκέντρωση, είναι δυνατές πολύ πιο λεπτές ρυθμίσεις και μεγαλύτερη ακρίβεια στη δόση με τις υπάρχουσες ρυθμίσεις της αντλίας.
 
 ```{admonition} Critical Safety Note on Dilution
 :class: danger
-Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
+Η αραίωση ινσουλίνης είναι διαδικασία υψηλού κινδύνου και δεν πρέπει ποτέ να γίνεται στο σπίτι χωρίς ειδική εκπαίδευση και ιατρική επίβλεψη. Πρέπει να γίνεται από επαγγελματία υγείας ή εκπαιδευμένο φροντιστή, με αποστειρωμένο αραιωτικό που είναι ειδικά σχεδιασμένο για τον συγκεκριμένο τύπο ινσουλίνης. **Μη χρησιμοποιείτε ποτέ νερό βρύσης, φυσιολογικό ορό ή οποιοδήποτε άλλο υγρό**, γιατί αυτό μπορεί να απενεργοποιήσει την ινσουλίνη, να αλλάξει τη δράση της και να εισάγει επικίνδυνους μολυσματικούς παράγοντες.
 ```
 
-### Use Case 2: concentrated insulin for high insulin needs or significant insulin resistance
+### Περίπτωση 2: πυκνή ινσουλίνη για μεγάλες ανάγκες σε ινσουλίνη ή σημαντική αντίσταση στην ινσουλίνη
 
-- **Scenario:** Managing adults or adolescents with significant insulin resistance, or individuals who experience localized pain from the additives in standard insulin.
-- **Problem:**
-  1. **High Needs:** Very high daily insulin requirements can exceed the pump's maximum bolus or daily delivery limits.
-  1. **Pain:** The preservatives in insulin can cause stinging or irritation upon infusion.
-- **Solution:** Use a more concentrated insulin, such as U200 (200 IU/ml).
-- **Effect:** This delivers the required insulin dose in half the volume. For the user, the pump's internal settings must be adjusted (e.g. basal rates and boluses halved) to account for the doubled concentration, ensuring the correct number of units are delivered. This also reduces the volume of potentially irritating fluid delivered subcutaneously.
+- **Σενάριο:** Διαχείριση ενηλίκων ή εφήβων με σημαντική αντίσταση στην ινσουλίνη ή ατόμων που έχουν τοπικό πόνο από τα πρόσθετα συστατικά της τυπικής ινσουλίνης.
+- **Πρόβλημα:**
+  1. **Μεγάλες ανάγκες:** Πολύ μεγάλες ημερήσιες ανάγκες σε ινσουλίνη μπορεί να ξεπερνούν το μέγιστο bolus ή τα ημερήσια όρια χορήγησης της αντλίας.
+  1. **Πόνος:** Τα συντηρητικά της ινσουλίνης μπορεί να προκαλέσουν τσούξιμο ή ερεθισμό κατά την έγχυση.
+- **Λύση:** Χρησιμοποιήστε πιο πυκνή ινσουλίνη, όπως U200 (200 IU/ml).
+- **Αποτέλεσμα:** Η απαιτούμενη δόση ινσουλίνης χορηγείται στον μισό όγκο. Για τον χρήστη, οι εσωτερικές ρυθμίσεις της αντλίας πρέπει να προσαρμοστούν (π.χ. βασικοί ρυθμοί και bolus στο μισό) λόγω της διπλάσιας συγκέντρωσης, ώστε να χορηγείται ο σωστός αριθμός μονάδων. Αυτό μειώνει επίσης τον όγκο του υγρού που μπορεί να προκαλεί ερεθισμό και χορηγείται υποδόρια.
 
-## How to manage insulin concentration with AAPS (AAPS 3 and earlier)?
+## Πώς να διαχειριστείτε τη συγκέντρωση ινσουλίνης με το AAPS (AAPS 3 και παλαιότερα);
 
-Using non-U100 insulin in an AAPS loop requires meticulous configuration to align the software's calculations with the actual insulin being delivered. One common method is "Using a Modified Profile".
+Η χρήση ινσουλίνης που δεν είναι U100 σε κύκλωμα AAPS απαιτεί πολύ προσεκτική διαμόρφωση, ώστε οι υπολογισμοί του λογισμικού να ταιριάζουν με την ινσουλίνη που χορηγείται πραγματικά. Μια συνηθισμένη μέθοδος είναι η «Χρήση τροποποιημένου προφίλ».
 
-### Using a modified profile
+### Χρήση τροποποιημένου προφίλ
 
-This method involves tricking AAPS into thinking the patient's insulin needs are lower than they are, to compensate for the pump delivering more concentrated insulin than it is designed for. The use case below is for U200 concentration put into the pump, designed for U100.
+Με αυτή τη μέθοδο «ξεγελάτε» το AAPS, ώστε να πιστεύει ότι ο ασθενής χρειάζεται λιγότερη ινσουλίνη από όση χρειάζεται, για να αντισταθμιστεί το ότι η αντλία χορηγεί πιο πυκνή ινσουλίνη από αυτή για την οποία είναι σχεδιασμένη. Το παρακάτω παράδειγμα αφορά ινσουλίνη συγκέντρωσης U200 σε αντλία σχεδιασμένη για U100.
 
-- **The Core Problem:** A pump designed for U100 is calibrated to deliver **10 µL** for **1 unit**. If you fill it with U200 (1 unit of U200 corresponds to **5 µL** of insulin), when you select **1 unit** on the pump it delivers **10 µL** of insulin, but that volume now contains **2 units of U200 insulin**. This leads to a 100% overdose.
-- **The "Profile Switch 50%" Solution:** To correct this, the patient's entire therapy profile is scaled to be "twice as weak" inside AAPS.
-  1. The user creates a new profile based on their standard U100 profile, using the "Profile Switch **50%**" function.
-  1. This creates a new profile where:
-     - **Basal rates** are halved.
-     - **Insulin-to-Carb Ratio (IC)** is doubled (e.g. 1:10g becomes 1:20g).
-     - **Insulin Sensitivity Factor (ISF)** is doubled (e.g. 1 unit lowers BG by 50 mg/dL (2.8 mmol/L) becomes 1 unit lowers it by 100 mg/dL (5.6 mmol/L)).
-- **The Corrected Result:** AAPS now believes the patient only needs half the insulin. When it calculates and commands a **1-unit** bolus, the pump (designed for U100 but filled with U200) delivers the **10 µL**, which contains **2 real units of U200 insulin**. Because AAPS calculated this dose based on a "half-strength" profile, this **2 real-unit** delivery is the correct, intended dose. The loop's "half-strength" math aligns with the pump's "double-strength" delivery.
+- **Το βασικό πρόβλημα:** Μια αντλία σχεδιασμένη για U100 είναι βαθμονομημένη να χορηγεί **10 µL** για **1 μονάδα**. Αν τη γεμίσετε με U200 (1 μονάδα U200 αντιστοιχεί σε **5 µL** ινσουλίνης), όταν επιλέγετε **1 μονάδα** στην αντλία, αυτή χορηγεί **10 µL** ινσουλίνης, αλλά αυτός ο όγκος περιέχει τώρα **2 μονάδες ινσουλίνης U200**. Αυτό οδηγεί σε υπερδοσολογία 100%.
+- **Η λύση «Αλλαγή Προφίλ 50%»:** Για να διορθωθεί αυτό, όλο το θεραπευτικό προφίλ του ασθενούς γίνεται «δύο φορές πιο αδύναμο» μέσα στο AAPS.
+  1. Ο χρήστης δημιουργεί ένα νέο προφίλ με βάση το κανονικό του προφίλ U100, με τη λειτουργία «Αλλαγή Προφίλ **50%**».
+  1. Έτσι δημιουργείται ένα νέο προφίλ όπου:
+     - Οι **βασικοί ρυθμοί** μειώνονται στο μισό.
+     - Η **Αναλογία Ινσουλίνης προς Υδατάνθρακες (IC)** διπλασιάζεται (π.χ. το 1:10g γίνεται 1:20g).
+     - Ο **Παράγοντας Ευαισθησίας Ινσουλίνης (ISF)** διπλασιάζεται (π.χ. το «1 μονάδα μειώνει τη BG κατά 50 mg/dl (2,8 mmol/l)» γίνεται «1 μονάδα τη μειώνει κατά 100 mg/dl (5,6 mmol/l)»).
+- **Το διορθωμένο αποτέλεσμα:** Το AAPS τώρα πιστεύει ότι ο ασθενής χρειάζεται μόνο τη μισή ινσουλίνη. Όταν υπολογίζει και δίνει εντολή για bolus **1 μονάδας**, η αντλία (σχεδιασμένη για U100 αλλά γεμάτη με U200) χορηγεί τα **10 µL**, που περιέχουν **2 πραγματικές μονάδες ινσουλίνης U200**. Επειδή το AAPS υπολόγισε αυτή τη δόση με βάση ένα προφίλ «μισής ισχύος», αυτή η χορήγηση **2 πραγματικών μονάδων** είναι η σωστή, επιθυμητή δόση. Τα μαθηματικά «μισής ισχύος» του κυκλώματος ταιριάζουν με τη χορήγηση «διπλής ισχύος» της αντλίας.
 
 ```{admonition} Critical Risks and Common Errors
 :class: caution
 
-This method introduces significant risks by creating a persistent disconnect between the app's data and physical reality.
+Αυτή η μέθοδος έχει σημαντικούς κινδύνους, γιατί δημιουργεί μια μόνιμη διαφορά ανάμεσα στα δεδομένα της εφαρμογής και στη φυσική πραγματικότητα.
 
-**The Primary Error: The "External Bolus" Mismatch**
+**Το κύριο λάθος: η ασυμφωνία του «εξωτερικού bolus»**
 
-The most common mistake occurs when delivering and logging insulin **outside** of the AAPS-pump system.
+Το πιο συχνό λάθος γίνεται όταν χορηγείτε και καταγράφετε ινσουλίνη **έξω** από το σύστημα AAPS-αντλίας.
 
-- **The Scenario:** AAPS, using the modified profile, calculates a **5-unit** bolus for a meal. The user injects this with a U200 pen.
-- **The Dual Error:**
-  1. **Wrong Dose Selection:** The user thinks "AAPS calculates 5 units" and, because of the U200 pen, expects to deliver **5 real units of U200** without any conversion. However, because the profile is halved, the body actually needs **10 real units**. This is a **50% underdose**, which can lead to hyperglycemia.
-  1. **Wrong Insulin-on-Board (IOB) Calculation (Overestimated IOB):** When the user records this external bolus in AAPS, they log **5 units**. This is incorrect. Since the AAPS profile is for U200, **1 unit in AAPS equals 2 real units**. Therefore, the 5 real units delivered by the pen should be logged as **2.5 units** in the app. By logging 5 units, the user overestimates the IOB by 100%. AAPS now thinks there are 5 "concentrated units" on board (equivalent to 10 real units) when only 5 real units are active. This can cause the loop to suppress basal insulin or reduce future boluses, worsening the hyperglycemia risk from the initial underdose.
+- **Το σενάριο:** Το AAPS, με το τροποποιημένο προφίλ, υπολογίζει bolus **5 μονάδων** για ένα γεύμα. Ο χρήστης το κάνει ένεση με πένα U200.
+- **Το διπλό λάθος:**
+  1. **Λάθος επιλογή δόσης:** Ο χρήστης σκέφτεται «το AAPS υπολογίζει 5 μονάδες» και, λόγω της πένας U200, περιμένει να χορηγήσει **5 πραγματικές μονάδες U200** χωρίς καμία μετατροπή. Όμως, επειδή το προφίλ είναι στο μισό, ο οργανισμός χρειάζεται στην πραγματικότητα **10 πραγματικές μονάδες**. Αυτό είναι **υποδοσολογία 50%**, που μπορεί να οδηγήσει σε υπεργλυκαιμία.
+  1. **Λάθος υπολογισμός ινσουλίνης σε δράση (IOB) (υπερεκτιμημένο IOB):** Όταν ο χρήστης καταγράφει αυτό το εξωτερικό bolus στο AAPS, καταχωρεί **5 μονάδες**. Αυτό είναι λάθος. Επειδή το προφίλ του AAPS είναι για U200, **1 μονάδα στο AAPS ισούται με 2 πραγματικές μονάδες**. Επομένως, οι 5 πραγματικές μονάδες που χορήγησε η πένα πρέπει να καταγραφούν ως **2,5 μονάδες** στην εφαρμογή. Καταγράφοντας 5 μονάδες, ο χρήστης υπερεκτιμά το IOB κατά 100%. Το AAPS πιστεύει τώρα ότι υπάρχουν 5 «πυκνές μονάδες» σε δράση (ίσες με 10 πραγματικές μονάδες), ενώ δρουν μόνο 5 πραγματικές μονάδες. Αυτό μπορεί να κάνει το κύκλωμα να μειώσει τη βασική ινσουλίνη ή τα επόμενα bolus, και να αυξήσει τον κίνδυνο υπεργλυκαιμίας από την αρχική υποδοσολογία.
 
-**Other Risks:**
+**Άλλοι κίνδυνοι:**
 
-- **Misleading Data and Reports:** All data within AAPS or Nightscout - including IOB, total daily dose (TDD), and historical reports - is in "concentrated units". This gives a distorted picture to the user and their medical team. A doctor reviewing a report might see a TDD of 30 units and not realize the patient actually received 60 real units, leading to incorrect therapy assessments.
-- **Altered Mental Model:** After prolonged use, the user begins to "think" in the app's halved values. They internalize that their ISF is 100 mg/dL (5.6 mmol/L) or their basal is 0.5 U/hr, forgetting these are "concentrated". This creates a dangerous dependency on the system and a loss of touch with their actual insulin requirements, which is critical for safety during pump failures or app issues.
+- **Παραπλανητικά δεδομένα και αναφορές:** Όλα τα δεδομένα στο AAPS ή στο Nightscout - μαζί με το IOB, τη συνολική ημερήσια δόση (TDD) και τις ιστορικές αναφορές - είναι σε «πυκνές μονάδες». Αυτό δίνει μια παραμορφωμένη εικόνα στον χρήστη και στην ιατρική του ομάδα. Ένας γιατρός που ελέγχει μια αναφορά μπορεί να δει TDD 30 μονάδων και να μην καταλάβει ότι ο ασθενής πήρε στην πραγματικότητα 60 πραγματικές μονάδες. Αυτό οδηγεί σε λάθος αξιολόγηση της θεραπείας.
+- **Αλλαγμένος τρόπος σκέψης:** Μετά από μεγάλη χρήση, ο χρήστης αρχίζει να «σκέφτεται» με τις μισές τιμές της εφαρμογής. Συνηθίζει ότι η ISF του είναι 100 mg/dl (5,6 mmol/l) ή ο βασικός ρυθμός του 0,5 U/ώρα, και ξεχνά ότι αυτές είναι «πυκνές» τιμές. Αυτό δημιουργεί μια επικίνδυνη εξάρτηση από το σύστημα και χάνεται η επαφή με τις πραγματικές ανάγκες σε ινσουλίνη. Αυτό είναι κρίσιμο για την ασφάλεια όταν η αντλία χαλάσει ή η εφαρμογή έχει προβλήματα.
 
-**Conclusion:** This method requires absolute vigilance, forcing the user to constantly convert between a "concentrated world" in the app and the physical world. Any external insulin delivery or data review breaks this mental model and poses a severe risk. It fundamentally changes the meaning of every number in the system.
+**Συμπέρασμα:** Αυτή η μέθοδος απαιτεί απόλυτη προσοχή, γιατί ο χρήστης πρέπει συνεχώς να μετατρέπει τιμές ανάμεσα σε έναν «πυκνό κόσμο» στην εφαρμογή και στον φυσικό κόσμο. Κάθε εξωτερική χορήγηση ινσουλίνης ή έλεγχος δεδομένων σπάει αυτόν τον τρόπο σκέψης και είναι σοβαρός κίνδυνος. Αλλάζει από τη βάση το νόημα κάθε αριθμού στο σύστημα.
 ```
 
-## Using the concentration parameter (new feature in AAPS 4.0)
+## Χρήση της παραμέτρου συγκέντρωσης (νέα λειτουργία στο AAPS 4.0)
 
-To mitigate the risks of using a modified profile, a new feature manages insulin concentration directly within AAPS. This feature handles the conversions automatically, allowing the main application to always work in **Real International Units (IU)**.
+Για να μειωθούν οι κίνδυνοι από τη χρήση τροποποιημένου προφίλ, μια νέα λειτουργία διαχειρίζεται τη συγκέντρωση ινσουλίνης απευθείας μέσα στο AAPS. Αυτή η λειτουργία κάνει τις μετατροπές αυτόματα, ώστε η κύρια εφαρμογή να λειτουργεί πάντα σε **Πραγματικές Διεθνείς Μονάδες (IU)**.
 
-### How it works: automatic conversion
+### Πώς λειτουργεί: αυτόματη μετατροπή
 
-The core principle is a clear separation between the app's logic and the pump's communication:
+Η βασική αρχή είναι ο σαφής διαχωρισμός ανάμεσα στη λογική της εφαρμογής και στην επικοινωνία με την αντλία:
 
-- **AAPS Uses International Units:** The main AAPS database, algorithms, reports, and logs **always use Real IU**. This means your IOB, TDD, and therapy settings (basal, ISF, IC) reflect the actual biological insulin units.
-- **Pump Driver Uses Concentrated Units:** All values sent to or received from the pump driver are automatically converted to manage "Concentrated Units" within the pump driver, based on the selected concentration.
-  - **Example with U200:** When the user requests a **1 unit bolus**, the pump driver receives **0.5 CU (Concentrated Units)** before sending it to the pump. The pump (set for U100) then delivers **5 µL**, which contains **1 IU of U200 insulin**.
+- **Το AAPS χρησιμοποιεί Διεθνείς Μονάδες:** Η κύρια βάση δεδομένων, οι αλγόριθμοι, οι αναφορές και τα αρχεία καταγραφής του AAPS **χρησιμοποιούν πάντα Πραγματικές IU**. Αυτό σημαίνει ότι το IOB, η TDD και οι ρυθμίσεις θεραπείας σας (βασικός ρυθμός, ISF, IC) δείχνουν τις πραγματικές βιολογικές μονάδες ινσουλίνης.
+- **Ο οδηγός αντλίας χρησιμοποιεί Πυκνές Μονάδες:** Όλες οι τιμές που στέλνονται ή λαμβάνονται από τον οδηγό αντλίας μετατρέπονται αυτόματα σε «Πυκνές Μονάδες» μέσα στον οδηγό αντλίας, με βάση την επιλεγμένη συγκέντρωση.
+  - **Παράδειγμα με U200:** Όταν ο χρήστης ζητά **bolus 1 μονάδας**, ο οδηγός αντλίας λαμβάνει **0,5 CU (Πυκνές Μονάδες)** πριν το στείλει στην αντλία. Η αντλία (ρυθμισμένη για U100) χορηγεί τότε **5 µL**, που περιέχουν **1 IU ινσουλίνης U200**.
 
-### Benefits and remaining risks
+### Οφέλη και κίνδυνοι που παραμένουν
 
-**Benefits:**
+**Οφέλη:**
 
-- Eliminates the need for a modified profile and its associated mental conversion errors.
-- Users can always "think" in Real IU.
-- For an external bolus with a pen, just select the expected amount of insulin on the pen (whatever the pen and insulin concentration used). No conversion is needed, as pens U100 and U200 always use IU for unit selection.
-- All AAPS reports and data (TDD, IOB) are in Real IU, providing clarity for the user and their medical team.
-- Removes the risk of miscalculating external boluses, as they are logged in Real IU.
+- Δεν χρειάζεται πια τροποποιημένο προφίλ, ούτε οι νοητικές μετατροπές που οδηγούν σε λάθη.
+- Οι χρήστες μπορούν πάντα να «σκέφτονται» σε Πραγματικές IU.
+- Για εξωτερικό bolus με πένα, απλώς επιλέξτε στην πένα την ποσότητα ινσουλίνης που θέλετε (όποια κι αν είναι η πένα και η συγκέντρωση της ινσουλίνης). Δεν χρειάζεται καμία μετατροπή, γιατί οι πένες U100 και U200 χρησιμοποιούν πάντα IU για την επιλογή μονάδων.
+- Όλες οι αναφορές και τα δεδομένα του AAPS (TDD, IOB) είναι σε Πραγματικές IU, και είναι σαφή για τον χρήστη και την ιατρική του ομάδα.
+- Δεν υπάρχει πια κίνδυνος λάθους υπολογισμού των εξωτερικών bolus, γιατί καταγράφονται σε Πραγματικές IU.
 
-**Remaining Risks:**
+**Κίνδυνοι που παραμένουν:**
 
-- **Mental Model Transition:** Users switching from the "modified profile" method must switch their profile back to the correct real profile (i.e. twice as strong if they come from U200), and need time to adjust their **mental model**. After being accustomed to "Concentrated" values in the app, they must re-learn to trust the **real, unhidden IU values** displayed everywhere. This period of adjustment carries a risk of misinterpretation.
-- **Manual Pump Bolus:** Using the pump's own bolus function (bypassing AAPS) results in a 100% overdose, as the pump delivers U200 insulin using U100 volume calculations.
-- **General Warning:** Using non-standard concentrations remains an advanced procedure with risks and is not officially recommended.
+- **Αλλαγή τρόπου σκέψης:** Οι χρήστες που αλλάζουν από τη μέθοδο «τροποποιημένου προφίλ» πρέπει να επαναφέρουν το προφίλ τους στο σωστό πραγματικό προφίλ (δηλαδή δύο φορές πιο ισχυρό αν έρχονται από U200) και χρειάζονται χρόνο για να προσαρμόσουν τον **τρόπο σκέψης** τους. Αφού έχουν συνηθίσει τις «πυκνές» τιμές στην εφαρμογή, πρέπει να μάθουν ξανά να εμπιστεύονται τις **πραγματικές, φανερές τιμές IU** που εμφανίζονται παντού. Αυτή η περίοδος προσαρμογής έχει κίνδυνο λάθος ερμηνείας.
+- **Χειροκίνητο bolus από την αντλία:** Αν χρησιμοποιήσετε τη λειτουργία bolus της ίδιας της αντλίας (χωρίς το AAPS), το αποτέλεσμα είναι υπερδοσολογία 100%, γιατί η αντλία χορηγεί ινσουλίνη U200 με υπολογισμούς όγκου για U100.
+- **Γενική προειδοποίηση:** Η χρήση μη τυπικών συγκεντρώσεων παραμένει μια προχωρημένη διαδικασία με κινδύνους και δεν συνιστάται επίσημα.
 
 ```{admonition} Never use the pump's own interface (tube pump users) to deliver a bolus manually
 :class: danger
-Stick a permanent note on your pump **"U200 Insulin"** as a reminder, to never forget it!
+Κολλήστε μια μόνιμη ετικέτα **«Ινσουλίνη U200»** στην αντλία σας ως υπενθύμιση, για να μην το ξεχάσετε ποτέ!
 ```
 
-### User interface display
+### Εμφάνιση στο περιβάλλον χρήστη
 
-To provide clarity, the user interface shows both real and concentrated units where relevant. Note that the user interface remains unchanged if the current insulin is U100.
+Για σαφήνεια, το περιβάλλον χρήστη δείχνει και τις πραγματικές και τις πυκνές μονάδες όπου χρειάζεται. Σημειώστε ότι το περιβάλλον χρήστη δεν αλλάζει αν η τρέχουσα ινσουλίνη είναι U100.
 
-**Display Examples:**
+**Παραδείγματα εμφάνισης:**
 
-- **Bolus Progress Dialog:**
-  - The Bolus Progress dialog is within the core AAPS application, so only the information in IU is shown (consistent with the user selection): **`2.50 U / 10.00 U delivered`**
-- **Pump Driver Interface (Current Status):**
-  - Within the Pump overview, the delivered amount is shown in both units; for example, if `U200` is selected: **`Last Bolus: 10 U (5 CU) (10')`**
+- **Παράθυρο Πρόοδος Bolus:**
+  - Το παράθυρο Πρόοδος Bolus είναι μέρος της κύριας εφαρμογής AAPS, οπότε εμφανίζονται μόνο οι πληροφορίες σε IU (όπως επέλεξε ο χρήστης): **`Χορηγήθηκαν 2,50 U / 10,00 U`**
+- **Περιβάλλον οδηγού αντλίας (τρέχουσα κατάσταση):**
+  - Στην επισκόπηση της αντλίας, η χορηγημένη ποσότητα εμφανίζεται και στις δύο μονάδες. Για παράδειγμα, αν έχει επιλεγεί `U200`: **`Τελευταίο Bolus: 10 U (5 CU) (10')`**
 
-**Please Note:** Both units (U and CU) are only visible in the main Pump overview. Depending on your specific pump, you can have other screens where only the Concentrated Units are shown. Historical data within pump drivers will typically remain in "Concentrated Units".
+**Σημείωση:** Και οι δύο μονάδες (U και CU) φαίνονται μόνο στην κύρια επισκόπηση της αντλίας. Ανάλογα με την αντλία σας, μπορεί να έχετε άλλες οθόνες όπου εμφανίζονται μόνο οι Πυκνές Μονάδες. Τα ιστορικά δεδομένα μέσα στους οδηγούς αντλιών συνήθως παραμένουν σε «Πυκνές Μονάδες».
 
-### Enabling the feature
+### Ενεργοποίηση της λειτουργίας
 
-Due to the inherent safety risks, this parameter is not enabled by default. To activate it, finish Objective 3 and enable **Insulin concentration support** within General Settings.
+Λόγω των κινδύνων για την ασφάλεια, αυτή η παράμετρος δεν είναι ενεργοποιημένη από προεπιλογή. Για να την ενεργοποιήσετε, ολοκληρώστε το Βήμα 3 και ενεργοποιήστε την **Υποστήριξη συγκέντρωσης ινσουλίνης** στις Γενικές Ρυθμίσεις.
 
-### Create a new insulin with another concentration
+### Δημιουργία νέας ινσουλίνης με άλλη συγκέντρωση
 
-To create an insulin with another concentration, first open **Manage → Insulin settings**.
+Για να δημιουργήσετε ινσουλίνη με άλλη συγκέντρωση, ανοίξτε πρώτα τη **Διαχείριση → Ρυθμίσεις ινσουλίνης**.
 
-- Click the "+" icon at the bottom of the screen.
-- Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
-  - diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
-  - U200 is more for adults with high insulin needs.
+- Πατήστε το εικονίδιο "+" στο κάτω μέρος της οθόνης.
+- Επιλέξτε τη νέα συγκέντρωση από το αναπτυσσόμενο μενού (διαθέσιμες είναι οι U10, U20, U50, U100, U200).
+  - Οι αραιωμένες συγκεντρώσεις όπως U10, U20 ή U50 είναι για παιδιά με πολύ χαμηλούς βασικούς ρυθμούς.
+  - Η U200 είναι κυρίως για ενήλικες με μεγάλες ανάγκες σε ινσουλίνη.
 
-  ![The concentration dropdown in Insulin settings](../images/v4/Insulin/insulin_concentration_dropdown.png)
+  ![Το αναπτυσσόμενο μενού συγκέντρωσης στις Ρυθμίσεις ινσουλίνης](../images/v4/Insulin/insulin_concentration_dropdown.png)
 
-- Adjust peak time, Duration of Insulin Action (DIA), and customize the Insulin Nickname (optional).
-- Use the save button at the top right of the screen.
+- Προσαρμόστε τον χρόνο κορύφωσης, τη Διάρκεια Δράσης Ινσουλίνης (DIA) και, αν θέλετε, το Ψευδώνυμο ινσουλίνης.
+- Πατήστε το κουμπί αποθήκευσης πάνω δεξιά στην οθόνη.
 
-At this step the insulin has been created, but cannot be selected directly from **Insulin settings**.
+Σε αυτό το βήμα η ινσουλίνη έχει δημιουργηθεί, αλλά δεν μπορεί να επιλεγεί απευθείας από τις **Ρυθμίσεις ινσουλίνης**.
 
-### Switch concentration from U100 to Uxxx (AAPS 4)
+### Αλλαγή συγκέντρωσης από U100 σε Uxxx (AAPS 4)
 
 ```{admonition} Switching concentration is only allowed during a reservoir or patch/pod change
 :class: warning
-For safety reasons, AAPS only records a concentration switch during a Reservoir Change or Patch/Pod Change.
+Για λόγους ασφαλείας, το AAPS καταγράφει αλλαγή συγκέντρωσης μόνο κατά την αλλαγή αμπούλας ή την αλλαγή Patch/Pod.
 ```
 
-When you start from U100 insulin, all your profile, historical data and reports are consistent with the International Units standard, so the switch is very "easy":
+Όταν ξεκινάτε από ινσουλίνη U100, όλο το προφίλ σας, τα ιστορικά δεδομένα και οι αναφορές συμφωνούν με το πρότυπο των Διεθνών Μονάδων, οπότε η αλλαγή είναι πολύ «εύκολη»:
 
-- For a Patch/Pod pump, you have a dedicated step when you change the pump, to select the insulin you put into it.
-- For a tube pump, click the Prime/Fill button (for Insulin Change) within the Overview (expanded status bar view), then click the "Change" button.
+- Για αντλία Patch/Pod, υπάρχει ειδικό βήμα κατά την αλλαγή της αντλίας, για να επιλέξετε την ινσουλίνη που βάλατε μέσα.
+- Για αντλία με σωληνάκι, πατήστε το κουμπί Πλήρωση/Γέμισμα (για αλλαγή ινσουλίνης) στην Επισκόπηση (ανοιγμένη γραμμή κατάστασης) και μετά πατήστε το κουμπί «Αλλαγή».
 
-1. Select the target concentration in the dropdown menu (e.g. `U200`).
-1. Then select the right insulin below. Until you confirm, the caption above its name says **Will be activated** (instead of **Currently active**).
+1. Επιλέξτε τη συγκέντρωση που θέλετε στο αναπτυσσόμενο μενού (π.χ. `U200`).
+1. Μετά επιλέξτε τη σωστή ινσουλίνη από κάτω. Μέχρι να επιβεβαιώσετε, η λεζάντα πάνω από το όνομά της γράφει **Θα ενεργοποιηθεί** (αντί για **Ενεργή τώρα**).
 
-   ![An insulin picked but not confirmed yet: Will be activated](../images/v4/Insulin/insulin_will_be_activated.png)
+   ![Μια ινσουλίνη που επιλέχθηκε αλλά δεν έχει επιβεβαιωθεί ακόμη: Θα ενεργοποιηθεί](../images/v4/Insulin/insulin_will_be_activated.png)
 
-1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
-   - This step is mandatory for all Patch/Pod pumps.
-   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within **Manage → Profile** or **Insulin settings**.
+1. **Σημαντικό:** η αλλαγή συγκέντρωσης καταγράφεται στο AAPS μόνο αφού εφαρμοστεί η Αλλαγή Προφίλ στην αντλία.
+   - Αυτό το βήμα είναι υποχρεωτικό για όλες τις αντλίες Patch/Pod.
+   - Για αντλίες με σωληνάκι, περιμένετε να εφαρμοστεί η Αλλαγή Προφίλ στην αντλία, ή μέσα από τη **Διαχείριση → Προφίλ** ή τις **Ρυθμίσεις ινσουλίνης**.
 
-That's all!
+Αυτό είναι όλο!
 
-If a temporary **Profile Switch** (one with a duration) is running when you change the insulin, the new insulin is also given to the profile that comes back when the temporary switch ends. The old insulin does not come back.
+Αν μια προσωρινή **Αλλαγή Προφίλ** (με διάρκεια) είναι ενεργή όταν αλλάζετε την ινσουλίνη, η νέα ινσουλίνη δίνεται και στο προφίλ που επιστρέφει όταν τελειώσει η προσωρινή αλλαγή. Η παλιά ινσουλίνη δεν επιστρέφει.
 
-### Switch concentration for users with U200 insulin associated with a 50% profile (AAPS 4)
+### Αλλαγή συγκέντρωσης για χρήστες με ινσουλίνη U200 και προφίλ 50% (AAPS 4)
 
-When you start from U200 already used in your pump, but associated with a 50% profile, you have to do additional steps compared to the standard switch from U100 insulin.
+Όταν ξεκινάτε με U200 που ήδη χρησιμοποιείτε στην αντλία σας, αλλά μαζί με προφίλ 50%, πρέπει να κάνετε επιπλέον βήματα σε σύγκριση με την κανονική αλλαγή από ινσουλίνη U100.
 
-Keep in mind that the most difficult part will probably not be how to manage the switch correctly within AAPS, but rather to train your brain again to think "IU" instead of "CU". All standard values for boluses (breakfast, lunch, dinner...) will be twice as high, the same for your TDDs, basal rates, etc. You have to be very cautious not to make errors during the first several weeks, until you "think again" in International Units.
+Έχετε υπόψη ότι το πιο δύσκολο μέρος μάλλον δεν θα είναι η σωστή διαχείριση της αλλαγής στο AAPS, αλλά να μάθετε ξανά το μυαλό σας να σκέφτεται σε «IU» αντί για «CU». Όλες οι συνηθισμένες τιμές bolus (πρωινό, μεσημεριανό, βραδινό...) θα είναι διπλάσιες, το ίδιο και οι TDD, οι βασικοί ρυθμοί κ.λπ. Πρέπει να προσέχετε πολύ να μην κάνετε λάθη τις πρώτες εβδομάδες, μέχρι να «σκέφτεστε ξανά» σε Διεθνείς Μονάδες.
 
-- First, prepare a new profile with all values consistent with International Units:
-  - Do a temporary Profile Switch 200% of your standard running profile.
-  - Open the menu (☰) → **Treatments**, go to the **Profile switch** tab and clone the new 200% profile (see [Clone a Profile switch](#your-aaps-profile-clone-profile-switch)).
-  - Switch back to your standard profile until the next Reservoir or Patch change.
-  - Go to **Manage → Profile** and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
-- If you use the Dynamic ISF (DynISF) feature, you have to disable it for at least one week:
-  - All your history recorded within AAPS or Nightscout is in the wrong units (CU), half the real value in International Units. Wait at least one week with the U200 insulin running before re-enabling it.
-- You are now ready to switch insulin (with a new U200 defined within **Insulin settings**) on the following Insulin Change or Pod Change.
-- Once the new U200 insulin is correctly applied, don't forget to apply the new standard profile defined in the first step.
+- Πρώτα, ετοιμάστε ένα νέο προφίλ με όλες τις τιμές σε Διεθνείς Μονάδες:
+  - Κάντε μια προσωρινή Αλλαγή Προφίλ 200% του κανονικού προφίλ που τρέχει.
+  - Ανοίξτε το μενού (☰) → **Θεραπείες**, πηγαίνετε στην καρτέλα **Αλλαγή Προφίλ** και κλωνοποιήστε το νέο προφίλ 200% (δείτε [Κλωνοποίηση μιας Αλλαγής Προφίλ](#your-aaps-profile-clone-profile-switch)).
+  - Επιστρέψτε στο κανονικό σας προφίλ μέχρι την επόμενη αλλαγή αμπούλας ή Patch.
+  - Πηγαίνετε στη **Διαχείριση → Προφίλ** και μετονομάστε αυτό το νέο προφίλ με ένα σαφές όνομα (θα είναι το μελλοντικό σας προφίλ για την ινσουλίνη U200 που ορίζεται στο AAPS 4).
+- Αν χρησιμοποιείτε τη λειτουργία Δυναμική ISF (DynISF), πρέπει να την απενεργοποιήσετε για τουλάχιστον μία εβδομάδα:
+  - Όλο το ιστορικό σας στο AAPS ή στο Nightscout είναι σε λάθος μονάδες (CU), δηλαδή στο μισό της πραγματικής τιμής σε Διεθνείς Μονάδες. Περιμένετε τουλάχιστον μία εβδομάδα με την ινσουλίνη U200 σε χρήση πριν την ενεργοποιήσετε ξανά.
+- Τώρα είστε έτοιμοι να αλλάξετε ινσουλίνη (με μια νέα U200 ορισμένη στις **Ρυθμίσεις ινσουλίνης**) στην επόμενη αλλαγή ινσουλίνης ή αλλαγή Pod.
+- Μόλις εφαρμοστεί σωστά η νέα ινσουλίνη U200, μην ξεχάσετε να εφαρμόσετε το νέο κανονικό προφίλ που ορίσατε στο πρώτο βήμα.
 
-## How to manage external boluses with different pens?
+## Πώς να διαχειριστείτε εξωτερικά bolus με διαφορετικές πένες;
 
-### With U200 insulin associated with a 50% profile (AAPS 3)
+### Με ινσουλίνη U200 και προφίλ 50% (AAPS 3)
 
-Keep in mind that all pen graduations are in International Units, so whatever the pen used (U100, U200), if you use a pen for an external bolus you have to manage conversion in both directions:
+Έχετε υπόψη ότι όλες οι διαβαθμίσεις των πενών είναι σε Διεθνείς Μονάδες. Άρα, όποια πένα κι αν χρησιμοποιείτε (U100, U200), αν χρησιμοποιείτε πένα για εξωτερικό bolus, πρέπει να κάνετε μετατροπή και προς τις δύο κατευθύνσεις:
 
-- From AAPS to the pen: if the Calculator proposes a bolus, or if you have a specific quantity in mind, multiply by 2 when you select the amount on the pen, compared to the same bolus applied from AAPS.
-- From the pen to AAPS: if you selected an amount on the pen to give an external bolus, divide this amount by 2 to record the right quantity within AAPS (Insulin button, external bolus), to get the correct IOB calculation in CU (Concentrated Units).
+- Από το AAPS στην πένα: αν ο Υπολογιστής προτείνει ένα bolus ή αν έχετε στο μυαλό σας μια συγκεκριμένη ποσότητα, πολλαπλασιάστε επί 2 όταν επιλέγετε την ποσότητα στην πένα, σε σύγκριση με το ίδιο bolus από το AAPS.
+- Από την πένα στο AAPS: αν επιλέξατε μια ποσότητα στην πένα για εξωτερικό bolus, διαιρέστε την ποσότητα αυτή με το 2 για να καταγράψετε τη σωστή ποσότητα στο AAPS (κουμπί Ινσουλίνη, εξωτερικό bolus), ώστε να υπολογιστεί σωστά το IOB σε CU (Πυκνές Μονάδες).
 
-### With U200 insulin using the concentration management included in AAPS 4
+### Με ινσουλίνη U200 και τη διαχείριση συγκέντρωσης του AAPS 4
 
-Things are much simpler with the internal management of concentration within AAPS: just select the expected amount on the pen (whatever the pen and corresponding insulin used), and record it within AAPS.
+Τα πράγματα είναι πολύ πιο απλά με την ενσωματωμένη διαχείριση συγκέντρωσης στο AAPS: απλώς επιλέξτε την ποσότητα που θέλετε στην πένα (όποια κι αν είναι η πένα και η αντίστοιχη ινσουλίνη) και καταγράψτε την στο AAPS.
 
-- Within the Insulin button, if you select an external bolus, you can select any type of insulin defined within **Insulin settings** (mainly U100, U200 for pens). That way you get a very precise calculated IOB, even if the peak/DIA of the insulin used with the pen is very different from the peak/DIA used in the pump.
+- Στο κουμπί Ινσουλίνη, αν επιλέξετε εξωτερικό bolus, μπορείτε να επιλέξετε οποιονδήποτε τύπο ινσουλίνης έχει οριστεί στις **Ρυθμίσεις ινσουλίνης** (κυρίως U100, U200 για πένες). Έτσι ο υπολογισμός του IOB είναι πολύ ακριβής, ακόμη κι αν η κορύφωση/DIA της ινσουλίνης της πένας είναι πολύ διαφορετική από την κορύφωση/DIA που χρησιμοποιείται στην αντλία.
