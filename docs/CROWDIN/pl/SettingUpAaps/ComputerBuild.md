@@ -93,7 +93,7 @@ Przejdź od razu do [instrukcji aktualizacji](../Maintenance/UpdateToNewVersion.
 
 W tej instrukcji znajdziesz _przykładowe_ zrzuty ekranu z budowania pliku apk **AAPS**. **Android Studio** – program, którego używamy do budowania apk **AAPS** – jest regularnie aktualizowany. Dlatego zrzuty ekranu mogą różnić się od Twojej instalacji, ale nadal powinno się dać według nich postępować.
 
-**Android Studio** działa na Windows, Mac OS X i Linux, więc kroki na różnych systemach mogą się nieco różnić.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
 ### Zainstaluj Git
@@ -102,7 +102,7 @@ W tej instrukcji znajdziesz _przykładowe_ zrzuty ekranu z budowania pliku apk *
 :class: dropdown
 
 Git to tak zwany „_system kontroli wersji_” (VCS).\
-Git to program, który pozwala śledzić zmiany w kodzie i współpracować z innymi. Użyjesz Git, aby skopiować kod źródłowy **AAPS** ze strony GitHub na swój komputer. Potem użyjesz Git na komputerze, aby zbudować aplikację **AAPS** (apk). 
+Git to program, który pozwala śledzić zmiany w kodzie i współpracować z innymi. Użyjesz Git, aby skopiować kod źródłowy **AAPS** ze strony GitHub na swój komputer. Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
@@ -141,7 +141,7 @@ Jedna z najważniejszych rzeczy przy instalacji Android Studio to **cierpliwoś�
 
 ```{admonition} Different UI
 :class: warning
-Ważne: Android Studio zmieniło swój interfejs w ostatnich wersjach. Ta instrukcja pokazuje kroki w *nowym interfejsie*. Zrzuty ekranu wykonano w wersji „Ladybug”, więc nowsze wersje mogą wyglądać trochę inaczej. Jeśli nadal używasz starego interfejsu, możesz najpierw przełączyć Android Studio na nowy interfejs według [tych instrukcji](#computerbuild-NewUI).
+Important note: Android Studio changed its UI during the last releases. Ta instrukcja pokazuje kroki w *nowym interfejsie*. Zrzuty ekranu wykonano w wersji „Ladybug”, więc nowsze wersje mogą wyglądać trochę inaczej. Jeśli nadal używasz starego interfejsu, możesz najpierw przełączyć Android Studio na nowy interfejs według [tych instrukcji](#computerbuild-NewUI).
 ```
 
 Wersja Android Studio jest bardzo ważna. Zobacz [instrukcje powyżej](#Building-APK-recommended-specification-of-computer-for-building-apk-file), aby wybrać właściwą wersję Android Studio.
@@ -156,7 +156,7 @@ Zainstaluj Android Studio, klikając „Next”, jak na poniższych zrzutach ekr
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-Jeśli chcesz zaoszczędzić miejsce na dysku, możesz odznaczyć Android Virtual Device: nie jest potrzebne do budowania **AAPS**.
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -314,7 +314,7 @@ Jeśli automatyczne ustawienie się uda, obok ścieżki pojawi się Twoja obecna
 
 Jeśli **git.exe** nie zostanie znaleziony automatycznie albo kliknięcie „Test” kończy się błędem, możesz:
 * ręcznie wpisać ścieżkę, którą zapisałeś [wcześniej](#BuildingAaps-steps-for-installing-git), albo
-* kliknąć ikonę folderu (1) i ręcznie przejść do folderu, w którym [wcześniej](#BuildingAaps-steps-for-installing-git) zainstalowano **git.exe**
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * Sprawdź ustawienia przyciskiem **Test**!
 
   ![Nie znaleziono Git](../images/Building-the-App/039_GitTestError.png)
@@ -356,7 +356,7 @@ Kliknij „Create new...” (2), aby zacząć tworzyć magazyn kluczy.
 ```{admonition} INFORMATION!
 :class: note
 Magazyn kluczy tworzysz tylko raz.
-Jeśli już wcześniej budowałeś AAPS, NIE twórz nowego magazynu kluczy, tylko wybierz istniejący i wpisz jego hasła!
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_Uwaga:_** magazyn kluczy (keystore) to plik, w którym są zapisane informacje do podpisania aplikacji. Jest zaszyfrowany, a informacje są chronione hasłami.
