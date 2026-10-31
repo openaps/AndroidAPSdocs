@@ -59,7 +59,7 @@ Většina frustrace ze samostatného provozu **AAPS** na hodinkách pramení z p
 
 Další výzvy spočívají v tom, že je těžké mít dostatečnou kapacitu baterie, a hodinky s dostatečnou baterií jsou často objemné a tlusté. Uživatelé hlásí boj s operačním systémem a nastavením úspory energie, potíže se spuštěním senzorů na hodinkách, slabý dosah Bluetooth (pro udržení spojení se senzorem i pumpou) a sporou voděodolnost. Příklady jsou na fotografiích níže.
 
-![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![obrázek](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
 Pokud máte zájem o nastavení samostatných hodinek, přečtěte si příspěvky ve Facebookové **AAPS** skupině (je dobré vyhledat výrazy "standalone" a "Lemfo") a na Discordu.
 
@@ -88,7 +88,7 @@ Nedávné změny ve **Wear OS** postupně narušují vlastní ciferníky **AAPS*
 
 Po [instalaci **AAPS** do hodinek](../WearOS/WearOsSmartwatch.md) si budete moci automaticky vybrat preferovaný ciferník z těchto ciferníků určených pro **AAPS**. Na většině hodinek stačí dlouze podržet prst na domovské obrazovce, dokud se obrazovka nezmenší, a přejetím doprava vybrat jinou obrazovku:
 
-![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![obrázek](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
 Toto jsou základní obrazovky zabudované v **AAPS**. Existují i [další ciferníky](#WearOS_changing-to-AAPS-watchface) a můžete také použít [komplikace](#Watchfaces-complications).
 
@@ -128,9 +128,9 @@ V obchodě Garmin ConnectIQ jsou ciferníky pro Garmin, které se propojují s [
 2. Změna glykémie za minutu
 3. Aktivní inzulín (IOB)
 4. Čas od poslední hodnoty glykémie (minuty:sekundy)
-5. Dočasná bazální dávka v procentech bazální dávky z profilu
+5. Dočasný bazál v procentech bazální dávky z profilu
 6. Graf glykémie za poslední 2 hodiny
-7. Current glucose value
+7. Aktuální hodnota glykémie
 
 
 
@@ -155,7 +155,7 @@ Níže je několik možností hodinek pouze pro sledování, které jsou oblíbe
 
 **WatchDrip+** je doprovodná aplikace vyvíjená komunitou, která zobrazuje glykémii a data smyčky na různých modelech chytrých hodinek, hlavně značek Xiaomi (_např._ Mi Band) a Amazfit:
 
-![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![obrázek](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 Od verze 0.5 čte **WatchDrip+** data přímo z **AAPS**, bez xDrip+ jako prostředníka. V telefonu s **AAPS**:
 
@@ -170,12 +170,12 @@ Více o nich, včetně jejich nastavení, se dočtete na [webu WatchDrip+](https
 
 ### Hodinky Pebble
 
-![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![obrázek](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
-![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![obrázek](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Hodinky Pebble ([dnes už se nevyrábí](https://en.wikipedia.org/wiki/Pebble_(watch))) se běžně prodávaly v letech 2013 až 2016 a stále mohou být k dostání z druhé ruky. Majetek firmy Pebble převzal Fitbit. Uživatelé Pebble mohou k zobrazení dat z Nightscoutu použít ciferník Urchin. Zobrazit lze například IOB, právě aktivní dočasnou bazální dávku a predikce. Při otevřené smyčce můžete pomocí IFTTT vytvořit applet, který při přijetí oznámení z **AAPS** pošle SMS nebo oznámení přes Pushover.
+Hodinky Pebble ([dnes už se nevyrábí](https://en.wikipedia.org/wiki/Pebble_(watch))) se běžně prodávaly v letech 2013 až 2016 a stále mohou být k dostání z druhé ruky. Majetek firmy Pebble převzal Fitbit. Uživatelé Pebble mohou k zobrazení dat z Nightscoutu použít ciferník Urchin. Zobrazit lze například IOB, právě aktivní dočasný bazál a predikce. Při otevřené smyčce můžete pomocí IFTTT vytvořit applet, který při přijetí oznámení z **AAPS** pošle SMS nebo oznámení přes Pushover.
 
 ### [Hodinky Bluejay](https://bluejay.website/)
 
