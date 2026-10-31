@@ -127,7 +127,7 @@ If you observe the following patterns after a few days, consider the following c
 
 1. Als Erstes brauchst Du eine gut eingestellte (funktionierende) Basalrate Deinem **Profil**.
 2. Starte im Zielbereich/Zielwert (am besten ohne negatives IOB).
-3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin C4. Wiege eine Dir gut bekannte Kohlenhydratmenge ab und notiere die Start-Zeit und das Start-IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured CI). Vergiss nicht, die Kohlenhydrate zu essen ;)
+3. Record the total insulin given in **Manage → Pump** (or pump history) and call it Start insulin. Wiege eine Dir gut bekannte Kohlenhydratmenge ab und notiere die Start-Zeit und das Start-IOB. Then enter carbs and bolus information into **AAPS** using the wizard (with the current configured I:C). Vergiss nicht, die Kohlenhydrate zu essen ;)
 4. Wenn nach einigen Stunden COB=0[*](#profiletuning-cob-zero) ist und Du wieder bei Deinem Zielwert bist, notiere Dir die End-Zeit und das End-IOB. Schau - wie schon vorher - nach der Gesamtinsulinmenge und nenne es End-Insulin. *HINWEIS: Der Zeitraum ist NICHT wichtig, solange er länger ist als der Zeitraum, der für die Verdauung der KH benötigt wurde*
 5. Subtrahiere/addiere von der Differenz aus Start- und End-Insulin die Differenz aus End-IOB und Start- IOB. Then subtract the basal insulin calculated from your **Profile's** settings.
 6. Wenn der __Glukosewert__ im Ziel(bereich) ist, kennst Du dann die Insulinmenge, die genutzt wurde, um Deine Kohlenhydrate zu verdauen. Berechne Deinen **I:C** (Mahlzeitenfaktor).
