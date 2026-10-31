@@ -36,7 +36,7 @@
 
 **BYODA** = Build Your Own Dexcom App. Een manier om je eigen Dexcom-app te maken om de sensorgegevens van de Dexcom G6 uit te lezen.
 
-**CAGE** = Cannula AGE (leeftijd van de canule). Wordt getoond op het hoofdscherm van **AAPS** en in Nightscout, op basis van de careportal-invoer **Ontlucht/vul** van de gebruiker → zie ook **Nightscout**.
+**CAGE** = Cannula AGE (leeftijd van de canule). Wordt getoond op het hoofdscherm van **AAPS** en in Nightscout, op basis van de careportal-invoer **Prime/Vul** van de gebruiker → zie ook **Nightscout**.
 
 **CAN** = statuslampje voor een te late canulewissel, getoond in de statusrij van het hoofdscherm van **AAPS** → zie ook **BAT** / **RES** / **SEN**.
 
@@ -104,7 +104,7 @@
 
 **Piektijd** (Peak time) = het moment waarop de gegeven insuline het sterkst werkt. Meer info → [Wiki - 'Duur van insuline activiteit (DIA) en piek'](#Config-Builder-insulin-dia).
 
-**PH** = Pump History (pompgeschiedenis). Je vindt dit in de behandelgeschiedenis van **AAPS**: open het **menu** (☰) linksboven op het hoofdscherm en kies **Behandelingen**.
+**PH** = Pump History (pompgeschiedenis). Je vindt dit in de behandelingen geschiedenis van **AAPS**: open het **menu** (☰) linksboven op het hoofdscherm en kies **Behandelingen**.
 
 **Voorspellingen** (Predictions) = voorspellingen van de **BG** in de toekomst, op basis van verschillende berekeningen. Meer info → [Wiki - 'voorspellingslijnen'](#aaps-screens-prediction-lines).
 
@@ -124,7 +124,7 @@
 
 **Gevoeligheidsdetectie** (Sensitivity detection) = berekening van de gevoeligheid voor insuline als gevolg van sport, hormonen enz. zie ook → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Sensorruis** (Sensor noise) = een term voor onstabiele metingen van de **CGM**, waardoor de **BG**-waarden "springen". Meer info → [Wiki - 'Filteren van bloed glucose waardes'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+**Sensorruis** (Sensor noise) = een term voor onstabiele metingen van de **CGM**, waardoor de **BG**-waarden "springen". Meer info → [Wiki - 'Vloeiend maken van bloedglucosewaarden'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 **SMB** = Super Micro Bolus. Een functie van **AAPS** om insuline sneller te geven en zo de **BG** bij te sturen. Meer info → [Wiki - '**SMB**'](#Open-APS-features-super-micro-bolus-smb) en zie ook **UAM**.
 
