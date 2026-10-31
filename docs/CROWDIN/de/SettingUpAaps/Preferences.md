@@ -1,4 +1,4 @@
-# Settings (Preferences)
+# Einstellungen
 
 In **AAPS** v4 the preferences are found on the **Settings** screen. There are three routes to reach them — see [Making changes to your AAPS' configuration](../SettingUpAaps/ChangeAapsConfiguration.md) for details:
 
@@ -28,11 +28,12 @@ In **AAPS** v4 the preferences are found on the **Settings** screen. There are t
 
 **Sprache**
 
-- Neue Option, um die Standardsprache des Smartphones zu verwenden (empfohlen).
+- By default **AAPS** follows the language of the phone (recommended).
 
-- Falls Du **AAPS** in einer anderen Sprache als der Standardsprache Deines Smartphones nutzen möchtest, kannst Du zwischen vielen verschiedenen Sprachen wählen.
+- If you want **AAPS** in another language than the phone, choose it here. On Android 13 and newer, **AAPS** registers it as its own app language in Android, so all its screens, the main screen, the widgets and the way numbers are written follow it.
 
 - When you change the language, the texts of **AAPS** switch to the new language straight away. If some texts still show the old language, restart **AAPS**.
+- On Android 12 this setting is not shown: **AAPS** always uses the language of the phone.
 - Einstellung ist im [einfachen Modus](#preferences-simple-mode) versteckt.
 
 (preferences-simple-mode)= **Einfacher Modus**
@@ -354,7 +355,7 @@ For example with the **Virtual Pump**, the section is called **Virtual pump sett
 Mehr Informationen findest Du auf der [Tidepool](../SettingUpAaps/Tidepool.md)-Seite.
 
 (Preferences-nsclient)=
-## Nightscout-Client
+## NSClientV3
 
 ![Settings > NSClientV3](../images/preferences/settings_nsclient.png)
 
@@ -410,7 +411,7 @@ The switch "**Allow client control**" is no longer in these settings: it is at t
 - Gib zum Löschen aller SSIDs ein Leerzeichen in das Feld ein.
 
 (Preferences-advanced-settings-nsclient)=
-### Erweiterte Einstellungen (Nightscout-Client)
+### Advanced settings (NSClientV3)
 
 ![NSClient advanced settings](../images/preferences/settings_nsclient_advanced.png)
 
@@ -468,6 +469,10 @@ Wähle aus, welcher Standortdienst verwendet werden soll:
 ![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
 
 Einstellungen sollten selbsterklärend sein.
+
+**Override Do Not Disturb mode** (on by default): the **AAPS** alarms ring even when the phone is silent or in Do Not Disturb. Turn it off if **AAPS** should respect those modes: the alarms do not ring then, and in Do Not Disturb they only vibrate, on the phone and on the watch. Loop suggestions that arrive during Do Not Disturb are shown without a sound.
+
+When an alarm rings, the alarm screen offers **Silence alarm** (the screen stays open, so you can read the message) and **Silence and close**. Swiping the alarm notification away in the notification tray mutes the alarm. When you open **AAPS** later, an alarm you did not answer is shown again.
 
 (preferences-maintenance-settings)=
 ## Wartungseinstellungen
