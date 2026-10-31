@@ -25,7 +25,7 @@ The default minimum time delay between bolus commands is 15 minutes. For safety 
 
 AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Este recomandabil să fie configurat astfel încât textele de confirmare să fie trimise la cel puțin două numere de telefon diferite, în cazul în care unul dintre telefoanele receptoare este furat.
 
-**If you bolus through SMS Commands, you must enter carbs separately (second SMS, **AAPSClient**...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
+**If you bolus through SMS Commands, you must enter carbs separately (second SMS, AAPSClient...)!** If you fail to do so, the IOB would be correct with too low COB, potentially leading to not performed correction bolus as **AAPS** assumes that you have too much active insulin.
 
 For the sensitive commands, an authenticator app with a time-based one-time password must be used to increase safety.
 
@@ -110,9 +110,10 @@ For safety reasons, the reply code must be followed by a PIN. Choose a PIN which
 
 PIN requirements are:
 
-* 3-6 cifre
-* not the same digits (_i.e._ 1111 or 1224)
-* not sequential numbers (_i.e._ 1234)
+* at least 6 digits
+* digits only
+
+For a safer PIN, do not use the same digit many times (_e.g._ 111111) or a sequence (_e.g._ 123456).
 
 ![PIN obligatoriu suplimentar la sfârșitul codului](../images/sms_pin.png)
 
@@ -126,7 +127,7 @@ PIN requirements are:
 
 * Under **Test One-Time-Password**, enter the one-time passcode from the authenticator app on the caregiver phone followed by your PIN in **Code to check**:
 
-Exemplu:
+Example:
 * The token from the authenticator app is 457051
 * Codul dumneavoastră PIN obligatoriu este 2401
 * Code to check: 4570512401
@@ -137,7 +138,7 @@ If the entry is correct, the red text “WRONG PIN” will change automatically 
 
 You should now be set up with SMS commands.
 
-Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (Prin resetarea autentificatorilor, toți autentificatorii existenți sunt invalidați. Va trebui să îi setați din nou.)
+Use the **Reset Authenticators** button at the bottom of the **Authenticator setup** screen if you want to remove provisioned authenticators. (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again.)
 
 ## SMS commands usage
 
@@ -149,7 +150,7 @@ Use the **Reset Authenticators** button at the bottom of the **Authenticator set
 
 If you don't receive any response, check the [Troubleshooting](#SMSCommands-troubleshooting) section below.
 
-2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
+2)  Now try an SMS command that requires the authenticator, _e.g._ “target hypo”. The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by the additional secret **PIN** known only by caregivers/followers (a string of twelve digits in total, assuming your PIN has 6 digits).
 
 When you try sending an SMS command for the first time, try it in the presence of the **AAPS** phone, to see how it works:
 
@@ -194,7 +195,7 @@ Some SMS commands give an immediate response, and some SMS commands require stro
 
 Commands which need more security require a code to be entered, for example:
 
-![SMS authenticated for markdown-smaller](../images/remote-control-07.png)
+![SMS authenticated](../images/remote-control-07.png)
 
 The *Auth* column in the tables below, indicates whether such a strong authentication is required for each command.
 
@@ -239,7 +240,7 @@ Some pumps take a temp basal only in percent, others only in U/h. If you use the
 
 ### Bolus
 
-Bolusul de la distanță nu este permis în decurs de 15 minute (această valoare este modificabilă doar dacă se adaugă 2 numere de telefon) după ultimul bolus sau ultima comandă de la distanță! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
+Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! In this case, the response would be *Remote bolus not available. Try again later.* This response is also sent when the pump is currently delivering a bolus.
 
 | Command              | Auth | Function & *Response*                                                                                                                                             |
 | -------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -275,7 +276,7 @@ The percentage must be between 30 and 250 %, as in the app. A value outside this
 | Command          | Auth | Function & *Response*                                                                                                                                                                                                                                                  |
 | ---------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | RESTART          | Da   | Restarts AAPS. Useful if you got issues that normally is resolved with a restart.                                                                                                                                                                                      |
-| SMS DISABLE/STOP | Da   | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                          |
+| SMS DISABLE/STOP | Da   | To disable the SMS Remote Service, reply with the code.<br/>Keep in mind that you'll be able to reactivate it directly<br/>from the **AAPS** master smartphone only.                                                                                       |
 | HELP             | Nu   | Returns all functions available for interrogation:<br/>BG, LOOP, PUMP, BASAL, BOLUS, EXTENDED, CAL, PROFILE, TARGET, SMS, CARBS, HELP, RESTART<br/>Send further ***HELP ***FUNCTION****** command to list<br/>all options available in this section. |
 | HELP BOLUS       |      | *BOLUS 1.2<br/>BOLUS 1.2 MEAL*                                                                                                                                                                                                                                   |
 
@@ -342,11 +343,11 @@ For errors in bolusing and carb announcements, you can still take action. For ex
 
 If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip, for example. If so, please ensure that xDrip (or any other app) does not upload treatments to NightScout.
 
-În cazul în care cealaltă aplicație este instalată pe mai multe telefoane, asigurați-vă că dezactivați încărcarea pe toate.
+If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
 (sms-commands-too-many-messages)=
 ### I am getting far too many text messages from SMS Commands. Can I reduce the frequency, or make them stop?
 
 Using SMS commands may generate a lot of automated messages from the **AAPS** phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your **AAPS** phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
 
-It is possible do disabled the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
+It is possible to disable the "Profile changed" SMS, when the Profile change originated from Nightscout. To do this, create a file named **exactly**  `do_not_send_sms_on_profile_change` in the `extra` dir of your AAPS directory.
