@@ -141,7 +141,8 @@ Vai precisar dos três se alguma vez compilar o AAPS de outra forma, por exemplo
    Abre: <code class="aapsb-repoUrl"></code>
 
    Aparece «Page not found» (404)? Primeiro, verifique se iniciou sessão em github.com neste navegador: o GitHub mostra 404 para repositórios privados quando não tem sessão iniciada. Caso contrário, o seu nome de utilizador ou o nome do repositório no passo 1 não corresponde ao seu repositório: verifique-os em github.com e escreva-os no passo 1. Abriu-se a app GitHub em vez do navegador? Toque em «RUN WORKFLOW», verifique a versão e a variante e toque de novo em «RUN WORKFLOW». Se a app ainda mostrar «Nothing to see here», puxe a lista para baixo para ver a sua compilação.
-2. Se for pedido, clique no botão verde para ativar os workflows.
+2. If asked, click the green button to enable workflows.
+The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
 3. Clique em «Run workflow» e depois no botão verde «Run workflow». «latest» compila a versão mais recente do AAPS. ***dica:*** *pode compilar outra versão escrevendo o nome da sua [tag](https://github.com/nightscout/AndroidAPS/tags) em vez de «latest»*
 4. Aguarde cerca de 15–30 minutos. Um visto verde significa que terminou.
 Quer receber um e-mail quando a compilação terminar? O GitHub só envia um e-mail quando uma compilação falha. Para receber também um e-mail quando corre bem: em github.com, abra a sua foto de perfil → Settings → Notifications → System → Actions e desmarque «Only notify for failed workflows».
