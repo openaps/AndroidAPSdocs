@@ -1,19 +1,19 @@
 # Transferring and Installing AAPS on your smartphone
 
-In the previous section, [building **AAPS**](../SettingUpAaps/BuildingAaps.md), you built the **AAPS** app (which is an .apk file) on a computer.
+Στην προηγούμενη ενότητα, [Δημιουργία του **AAPS**](../SettingUpAaps/BuildingAaps.md), δημιουργήσατε την εφαρμογή **AAPS** (ένα αρχείο .apk) σε έναν υπολογιστή.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, xDrip or another CGM receiver app) to your Android smartphone, and then **install** the app(s). Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](../SettingUpAaps/SetupWizard.md).
+Τα επόμενα βήματα είναι να **μεταφέρετε** το αρχείο APK του **AAPS** (καθώς και άλλες εφαρμογές που μπορεί να χρειάζεστε, όπως το BYODA, το xDrip ή άλλη εφαρμογή λήψης CGM) στο τηλέφωνό σας Android και μετά να **εγκαταστήσετε** την εφαρμογή (ή τις εφαρμογές). Μετά την εγκατάσταση του **AAPS** στο τηλέφωνο, μπορείτε να προχωρήσετε στη [**ρύθμιση του κυκλώματος AAPS**](../SettingUpAaps/SetupWizard.md).
 
-This page also explains [Android developer verification](#android-developer-verification), a change Google is rolling out from September 2026 that affects installing self-built apps, and the [free installation methods](#android-developer-verification-free-methods) that keep working after the change.
+Αυτή η σελίδα εξηγεί επίσης την [επαλήθευση προγραμματιστή Android](#android-developer-verification), μια αλλαγή που η Google εισάγει σταδιακά από τον Σεπτέμβριο του 2026 και που επηρεάζει την εγκατάσταση εφαρμογών που δημιουργείτε μόνοι σας, καθώς και τους [δωρεάν τρόπους εγκατάστασης](#android-developer-verification-free-methods) που συνεχίζουν να λειτουργούν μετά την αλλαγή.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Installing AAPS by tapping the APK file
+## Εγκατάσταση του AAPS με πάτημα στο αρχείο APK
 
-Today, you install **AAPS** by transferring the APK file to your phone and opening ("tapping") it. There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
+Σήμερα, εγκαθιστάτε το **AAPS** μεταφέροντας το αρχείο APK στο τηλέφωνό σας και ανοίγοντάς το (με ένα «πάτημα»). Υπάρχουν διάφοροι τρόποι για να μεταφέρετε το αρχείο APK του **AAPS** από τον υπολογιστή σας στο τηλέφωνο. Here we explain two different ways:
 
 * Option 1 -  Use your Google drive (Gdrive)
 * Option 2 -  Use a USB cable
@@ -22,20 +22,20 @@ Please note that transfer by email might cause difficulties, and is discouraged.
 
 ```{admonition} Android developer verification
 :class: warning
-Google is rolling out [Android developer verification](#android-developer-verification) from September 2026 (starting in Brazil, Indonesia, Singapore and Thailand; worldwide in 2027). Where it is enforced, installing an APK by tapping the file — as described in both options below — is blocked. In that case, use one of the [free installation methods](#android-developer-verification-free-methods) further down this page.
+Η Google εισάγει σταδιακά την [επαλήθευση προγραμματιστή Android](#android-developer-verification) από τον Σεπτέμβριο του 2026 (ξεκινά στη Βραζιλία, την Ινδονησία, τη Σιγκαπούρη και την Ταϊλάνδη· σε όλο τον κόσμο το 2027). Όπου εφαρμόζεται, η εγκατάσταση ενός APK με πάτημα στο αρχείο —όπως περιγράφεται και στις δύο επιλογές παρακάτω— μπλοκάρεται. Σε αυτή την περίπτωση, χρησιμοποιήστε έναν από τους [δωρεάν τρόπους εγκατάστασης](#android-developer-verification-free-methods) πιο κάτω σε αυτή τη σελίδα.
 ```
 
 ### Option 1. Use Google drive to transfer files
 
-Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
+Ανοίξτε το [Google.com](https://www.google.com/) στο πρόγραμμα περιήγησης και συνδεθείτε στον λογαριασμό σας Google.
 
 On the right upper side select the Drive app in the Google menu.
 
-![Start Drive App](../images/GoogleDriveInWebbrowser.png)
+![Έναρξη της εφαρμογής Drive](../images/GoogleDriveInWebbrowser.png)
 
-Click **New** at the top left (or right-click an empty area below your files and folders) and select **File upload**.
+Κάντε κλικ στο **Νέο** (New) πάνω αριστερά (ή κάντε δεξί κλικ σε μια κενή περιοχή κάτω από τα αρχεία και τους φακέλους σας) και επιλέξτε **Μεταφόρτωση αρχείου** (File upload).
 
-![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
+![Ανέβασμα του αρχείου apk με την εφαρμογή Google Drive](../images/GoogleDriveUploadFile.png)
 
 The apk file should now be uploaded on Google Drive.
 
@@ -43,232 +43,232 @@ The apk file should now be uploaded on Google Drive.
 
 Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
 
-![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
+![ανοίξτε την εφαρμογή Google Drive](../images/GoogleDriveMobileAPPLaunch.png)
 
-Launch the apk installation by tapping the filename in the Google Drive App on the mobile.
+Ξεκινήστε την εγκατάσταση του apk πατώντας το όνομα του αρχείου στην εφαρμογή Google Drive στο κινητό.
 
-![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
+![ξεκινήστε την εγκατάσταση του apk](../images/GoogleDriveMobileUploadedAPK.png)
 
-In case you get a security notice that you are not allowed to install apps from Google Drive at the moment, tap "Settings" and allow it for that short moment, then disallow it afterwards, as it is a security risk to leave it enabled all the time.
+Αν εμφανιστεί ειδοποίηση ασφαλείας ότι αυτή τη στιγμή δεν επιτρέπεται η εγκατάσταση εφαρμογών από το Google Drive, πατήστε «Ρυθμίσεις» και επιτρέψτε την για αυτή τη σύντομη στιγμή. Μετά απαγορεύστε την ξανά, γιατί είναι κίνδυνος ασφαλείας να μένει ενεργή συνέχεια.
 
-![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Ειδοποίηση ασφαλείας Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Ειδοποίηση ασφαλείας Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-After the installation finishes, you are done with this step.
+Όταν τελειώσει η εγκατάσταση, έχετε ολοκληρώσει αυτό το βήμα.
 
-You should see the **AAPS** icon and be able to open the app.
+Θα πρέπει να βλέπετε το εικονίδιο του **AAPS** και να μπορείτε να ανοίξετε την εφαρμογή.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remember to disallow the installation from Google Drive?
+**ΣΗΜΑΝΤΙΚΗ ΕΙΔΟΠΟΙΗΣΗ ΑΣΦΑΛΕΙΑΣ**
+Θυμηθήκατε να απαγορεύσετε ξανά την εγκατάσταση από το Google Drive;
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Συνεχίστε με τη [ρύθμιση του κυκλώματος AAPS](../SettingUpAaps/SetupWizard.md).
 
 ### Option 2. Use a USB cable to transfer files
 
-The second way to transfer the AAPS apk file is with a [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+Ο δεύτερος τρόπος για να μεταφέρετε το αρχείο apk του AAPS είναι με ένα [καλώδιο USB](https://support.google.com/android/answer/9064445?hl=en).
 
 Transfer the file from its location on your computer to the "downloads" folder on the phone.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+On your phone, you will have to allow installation from unknown sources. Οδηγίες για το πώς γίνεται αυτό θα βρείτε στο διαδίκτυο (_π.χ._ [εδώ](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ή [εδώ](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, open the "Downloads" folder on the phone and press the AAPS apk file:
+Αφού μεταφέρετε το αρχείο σύροντάς το, ανοίξτε τον φάκελο «Λήψεις» (Downloads) στο τηλέφωνο και πατήστε το αρχείο apk του AAPS:
 
-![The apk file in the Downloads folder](../images/install/install_01_downloads_apk.png)
+![Το αρχείο apk στον φάκελο Λήψεις](../images/install/install_01_downloads_apk.png)
 
-The first time, Android tells you that the phone is not allowed to install unknown apps from this source. Press "**Settings**":
+Την πρώτη φορά, το Android σας λέει ότι το τηλέφωνο δεν επιτρέπεται να εγκαθιστά άγνωστες εφαρμογές από αυτή την πηγή. Πατήστε «**Ρυθμίσεις**»:
 
-![Security notice for unknown apps](../images/install/install_02_unknown_apps_notice.png)
+![Ειδοποίηση ασφαλείας για άγνωστες εφαρμογές](../images/install/install_02_unknown_apps_notice.png)
 
-Enable "**Allow from this source**", then go back:
+Ενεργοποιήστε το «**Να επιτρέπεται από αυτή την πηγή**» (Allow from this source) και μετά πηγαίνετε πίσω:
 
-![Allow from this source enabled](../images/install/install_04_unknown_apps_allowed.png)
+![Ενεργοποιημένο το «Να επιτρέπεται από αυτή την πηγή»](../images/install/install_04_unknown_apps_allowed.png)
 
-Press the apk file again and select "**Install**":
+Πατήστε ξανά το αρχείο apk και επιλέξτε «**Εγκατάσταση**»:
 
-![Install prompt](../images/install/install_05_install_prompt.png)
+![Ερώτηση εγκατάστασης](../images/install/install_05_install_prompt.png)
 
-When the installation is finished, press "**Open**" to start **AAPS**, or "**Done**" to open it later:
+Όταν τελειώσει η εγκατάσταση, πατήστε «**Άνοιγμα**» για να ξεκινήσει το **AAPS** ή «**Τέλος**» για να το ανοίξετε αργότερα:
 
-![App installed](../images/install/install_07_app_installed.png)
+![Η εφαρμογή εγκαταστάθηκε](../images/install/install_07_app_installed.png)
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Remember to disable "Allow from this source" again after the installation, as it is a security risk to leave it enabled all the time.
+**ΣΗΜΑΝΤΙΚΗ ΕΙΔΟΠΟΙΗΣΗ ΑΣΦΑΛΕΙΑΣ**
+Θυμηθείτε να απενεργοποιήσετε ξανά το «Να επιτρέπεται από αυτή την πηγή» μετά την εγκατάσταση, γιατί είναι κίνδυνος ασφαλείας να μένει ενεργό συνέχεια.
 ```
 
-Please go on with [configuring the AAPS loop](../SettingUpAaps/SetupWizard.md).
+Συνεχίστε με τη [ρύθμιση του κυκλώματος AAPS](../SettingUpAaps/SetupWizard.md).
 
 (transferring-installing-play-protect-warning)=
-## Google Play Protect warning
+## Προειδοποίηση του Google Play Protect
 
-When you install **AAPS**, Google Play Protect may warn you that the app is unsafe, was built for an older version of Android and doesn't include the latest privacy protections.
+Όταν εγκαθιστάτε το **AAPS**, το Google Play Protect μπορεί να σας προειδοποιήσει ότι η εφαρμογή δεν είναι ασφαλής, ότι δημιουργήθηκε για παλαιότερη έκδοση του Android και ότι δεν περιέχει τις πιο νέες προστασίες απορρήτου.
 
-![Google Play Protect warning](../images/troubleshooting/InstallGPP.png)
+![Προειδοποίηση του Google Play Protect](../images/troubleshooting/InstallGPP.png)
 
-This is expected for an app you built yourself. Tap **More details**, then **Install anyway**.
+Αυτό είναι αναμενόμενο για μια εφαρμογή που δημιουργήσατε μόνοι σας. Πατήστε **Περισσότερες λεπτομέρειες** (More details) και μετά **Εγκατάσταση ούτως ή άλλως** (Install anyway).
 
-If the installation is **blocked** with a message about an unverified developer (not just a warning), see [Android developer verification](#android-developer-verification) below.
+Αν η εγκατάσταση **μπλοκάρεται** με μήνυμα για μη επαληθευμένο προγραμματιστή (και όχι μόνο μια προειδοποίηση), δείτε την [Επαλήθευση προγραμματιστή Android](#android-developer-verification) παρακάτω.
 
 (android-developer-verification)=
 
-## Android developer verification
+## Επαλήθευση προγραμματιστή Android
 
-Google is introducing **Android developer verification**: on most Android phones, apps will only install if they were registered with Google by a verified developer. This also applies to apps installed from an APK file ("sideloading") — which is how you install the **AAPS** app you built yourself.
+Η Google εισάγει την **επαλήθευση προγραμματιστή Android** (Android developer verification): στα περισσότερα τηλέφωνα Android, οι εφαρμογές θα εγκαθίστανται μόνο αν έχουν καταχωριστεί στη Google από έναν επαληθευμένο προγραμματιστή. Αυτό ισχύει και για εφαρμογές που εγκαθίστανται από αρχείο APK («sideloading») — με αυτόν τον τρόπο εγκαθιστάτε την εφαρμογή **AAPS** που δημιουργήσατε μόνοι σας.
 
-### What is changing
+### Τι αλλάζει
 
-When you install **AAPS** on a phone with Google services (a "certified" Android device — virtually every phone sold with the Play Store), Android will check whether the app comes from a developer registered with Google. If not, the normal installation by tapping the APK file is blocked.
+Όταν εγκαθιστάτε το **AAPS** σε τηλέφωνο με υπηρεσίες Google (μια «πιστοποιημένη» συσκευή Android — σχεδόν κάθε τηλέφωνο που πωλείται με το Play Store), το Android θα ελέγχει αν η εφαρμογή προέρχεται από προγραμματιστή καταχωρισμένο στη Google. Αν όχι, η κανονική εγκατάσταση με πάτημα στο αρχείο APK μπλοκάρεται.
 
-**The check happens when an app is installed or updated.** It does not remove apps that are already installed and running.
+**Ο έλεγχος γίνεται όταν μια εφαρμογή εγκαθίσταται ή ενημερώνεται.** Δεν αφαιρεί εφαρμογές που είναι ήδη εγκατεστημένες και λειτουργούν.
 
-Google is rolling this out gradually:
+Η Google το εισάγει σταδιακά:
 
-| When               | What happens                                                                                                                              |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| August 2026        | Free "limited distribution" developer accounts are open worldwide, and the "advanced flow" starts rolling out to phones                   |
-| September 30, 2026 | Verification is enforced in **Brazil, Indonesia, Singapore and Thailand**, for apps installed from Google Play and a few other app stores |
-| 2027               | Enforcement expands to the **rest of the world** and to **all installations**, including APK files                                        |
+| Πότε                | Τι συμβαίνει                                                                                                                                                                       |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Αύγουστος 2026      | Οι δωρεάν λογαριασμοί προγραμματιστή «περιορισμένης διανομής» (limited distribution) είναι ανοιχτοί σε όλο τον κόσμο, και το «advanced flow» αρχίζει να φτάνει στα τηλέφωνα        |
+| 30 Σεπτεμβρίου 2026 | Η επαλήθευση εφαρμόζεται στη **Βραζιλία, την Ινδονησία, τη Σιγκαπούρη και την Ταϊλάνδη**, για εφαρμογές που εγκαθίστανται από το Google Play και μερικά άλλα καταστήματα εφαρμογών |
+| 2027                | Η εφαρμογή επεκτείνεται **σε όλο τον υπόλοιπο κόσμο** και σε **όλες τις εγκαταστάσεις**, μαζί και τα αρχεία APK                                                                    |
 
-Details are published by Google on the [Android developer verification](https://developer.android.com/developer-verification) pages, including a [FAQ](https://developer.android.com/developer-verification/guides/faq). Google may still adjust dates and details; this page will be updated as the rollout progresses.
+Η Google δημοσιεύει τις λεπτομέρειες στις σελίδες [Android developer verification](https://developer.android.com/developer-verification), μαζί με ένα [FAQ](https://developer.android.com/developer-verification/guides/faq) (συχνές ερωτήσεις). Η Google μπορεί ακόμα να αλλάξει ημερομηνίες και λεπτομέρειες· αυτή η σελίδα θα ενημερώνεται όσο προχωρά η εφαρμογή της αλλαγής.
 
-### Does this affect me?
+### Με επηρεάζει αυτό;
 
-- **Building AAPS is not affected at all.** The [browser build](#browser-build), the [Android Studio build](ComputerBuild.md) and the [CLI build](CLIBuild.md) work exactly as before, and your keystore does not change.
-- **Your current AAPS keeps running.** Verification is only checked when installing or updating an app.
-- **If you live in Brazil, Indonesia, Singapore or Thailand:** from September 30, 2026, verification is enforced for apps installed from Google Play and a few other app stores. Google states that installing an APK file directly is not covered by this first step, so **AAPS** should still install as usual. Nevertheless, prepare one of the [free installation methods](#android-developer-verification-free-methods) below now, so that you are not caught out if this changes.
-- **If you live anywhere else:** nothing changes for you before 2027, and doing nothing for now is a legitimate choice. But set up one of the [free installation methods](#android-developer-verification-free-methods) below while nothing is broken: discovering the block on the day an update is refused, with the [advanced flow's](#android-developer-verification-advanced-flow) 24-hour wait ahead of you, is the wrong moment.
-- **Old phones:** verification applies to phones running Android 7 or higher, which means every phone able to run **AAPS**.
+- **Η δημιουργία του AAPS δεν επηρεάζεται καθόλου.** Η [δημιουργία μέσω browser](#browser-build), η [δημιουργία με το Android Studio](ComputerBuild.md) και η [δημιουργία από τη γραμμή εντολών (CLI)](CLIBuild.md) λειτουργούν ακριβώς όπως πριν, και το keystore σας δεν αλλάζει.
+- **Το AAPS που έχετε τώρα συνεχίζει να λειτουργεί.** Η επαλήθευση ελέγχεται μόνο όταν εγκαθιστάτε ή ενημερώνετε μια εφαρμογή.
+- **Αν ζείτε στη Βραζιλία, την Ινδονησία, τη Σιγκαπούρη ή την Ταϊλάνδη:** από τις 30 Σεπτεμβρίου 2026, η επαλήθευση εφαρμόζεται για εφαρμογές που εγκαθίστανται από το Google Play και μερικά άλλα καταστήματα εφαρμογών. Η Google λέει ότι η απευθείας εγκατάσταση αρχείου APK δεν περιλαμβάνεται σε αυτό το πρώτο βήμα, οπότε το **AAPS** θα πρέπει να εγκαθίσταται ακόμα κανονικά. Παρ' όλα αυτά, ετοιμάστε από τώρα έναν από τους [δωρεάν τρόπους εγκατάστασης](#android-developer-verification-free-methods) παρακάτω, ώστε να μη βρεθείτε απροετοίμαστοι αν αυτό αλλάξει.
+- **Αν ζείτε οπουδήποτε αλλού:** τίποτα δεν αλλάζει για εσάς πριν από το 2027, και μπορείτε κανονικά να μην κάνετε τίποτα προς το παρόν. Όμως ρυθμίστε έναν από τους [δωρεάν τρόπους εγκατάστασης](#android-developer-verification-free-methods) παρακάτω όσο όλα λειτουργούν: η χειρότερη στιγμή για να ανακαλύψετε το μπλοκάρισμα είναι τη μέρα που μια ενημέρωση απορρίπτεται, με την αναμονή 24 ωρών του [advanced flow](#android-developer-verification-advanced-flow) μπροστά σας.
+- **Παλιά τηλέφωνα:** η επαλήθευση ισχύει για τηλέφωνα με Android 7 ή νεότερο, δηλαδή για κάθε τηλέφωνο που μπορεί να τρέξει το **AAPS**.
 
 (android-developer-verification-free-methods)=
 
-## Free ways to install AAPS
+## Δωρεάν τρόποι εγκατάστασης του AAPS
 
-You do **not** need to pay Google anything to keep using **AAPS**. There are several free methods; pick the one that matches your situation.
+**Δεν** χρειάζεται να πληρώσετε τίποτα στη Google για να συνεχίσετε να χρησιμοποιείτε το **AAPS**. Υπάρχουν διάφοροι δωρεάν τρόποι· διαλέξτε αυτόν που ταιριάζει στην περίπτωσή σας.
 
 ```{admonition} Which method should I use?
 :class: tip
-- You have a **computer** (whichever way you built **AAPS**): use [ADB](#android-developer-verification-adb) or, if you prefer to avoid the command line, the [web installer](#android-developer-verification-web). Both are exempt from verification, have no limits, and need no Google account.
-- You have **no computer at all**: use the [advanced flow](#android-developer-verification-advanced-flow) on your phone.
-- You prefer to register with Google so the normal "tap the APK" installation keeps working: a [free limited distribution account](#android-developer-verification-limited-account) exists, but it is untested with **AAPS**.
+- Έχετε **υπολογιστή** (όποιον τρόπο κι αν χρησιμοποιήσατε για να δημιουργήσετε το **AAPS**): χρησιμοποιήστε το [ADB](#android-developer-verification-adb) ή, αν προτιμάτε να αποφύγετε τη γραμμή εντολών, το [πρόγραμμα εγκατάστασης web](#android-developer-verification-web). Και οι δύο τρόποι εξαιρούνται από την επαλήθευση, δεν έχουν περιορισμούς και δεν χρειάζονται λογαριασμό Google.
+- **Δεν έχετε καθόλου υπολογιστή**: χρησιμοποιήστε το [advanced flow](#android-developer-verification-advanced-flow) στο τηλέφωνό σας.
+- Προτιμάτε να εγγραφείτε στη Google ώστε να συνεχίσει να λειτουργεί η κανονική εγκατάσταση με «πάτημα στο APK»: υπάρχει ένας [δωρεάν λογαριασμός περιορισμένης διανομής](#android-developer-verification-limited-account), αλλά δεν έχει δοκιμαστεί με το **AAPS**.
 ```
 
 (android-developer-verification-adb)=
 
-### Option 1: Install with ADB (computer needed)
+### Επιλογή 1: Εγκατάσταση με ADB (χρειάζεται υπολογιστής)
 
-ADB (Android Debug Bridge) is Google's official tool for installing apps from a computer onto a phone with a USB cable. Google has confirmed that **apps installed with ADB do not require verification** — there is no waiting period, no device limit and no registration.
+Το ADB (Android Debug Bridge) είναι το επίσημο εργαλείο της Google για την εγκατάσταση εφαρμογών από υπολογιστή σε τηλέφωνο με καλώδιο USB. Η Google έχει επιβεβαιώσει ότι **οι εφαρμογές που εγκαθίστανται με ADB δεν χρειάζονται επαλήθευση** — δεν υπάρχει χρόνος αναμονής, όριο συσκευών ούτε εγγραφή.
 
-One-time preparation:
+Προετοιμασία (μία φορά μόνο):
 
-1. On your phone, enable the hidden developer options: go to **Settings** > **About phone** (on some phones **Software information**) and tap **Build number** seven times, until the phone confirms you are a developer.
-1. Go back to the main **Settings**, open the new **Developer options** entry and enable **USB debugging**.
-1. On your computer, make sure ADB is available:
-   - If you use **Android Studio**, ADB is already installed with it.
-   - Otherwise, download Google's free [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) and unzip the folder. No installation is needed; ADB is the `adb` program inside that folder.
+1. Στο τηλέφωνό σας, ενεργοποιήστε τις κρυφές επιλογές προγραμματιστή: πηγαίνετε στο **Ρυθμίσεις** > **Πληροφορίες τηλεφώνου** (About phone) (σε μερικά τηλέφωνα **Πληροφορίες λογισμικού** (Software information)) και πατήστε επτά φορές το **Αριθμός έκδοσης** (Build number), μέχρι το τηλέφωνο να επιβεβαιώσει ότι είστε προγραμματιστής.
+1. Επιστρέψτε στο κύριο μενού **Ρυθμίσεις**, ανοίξτε το νέο στοιχείο **Επιλογές προγραμματιστή** (Developer options) και ενεργοποιήστε το **Εντοπισμός σφαλμάτων USB** (USB debugging).
+1. Στον υπολογιστή σας, βεβαιωθείτε ότι το ADB είναι διαθέσιμο:
+   - Αν χρησιμοποιείτε το **Android Studio**, το ADB είναι ήδη εγκατεστημένο μαζί του.
+   - Αλλιώς, κατεβάστε τα δωρεάν [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) της Google και αποσυμπιέστε τον φάκελο. Δεν χρειάζεται εγκατάσταση· το ADB είναι το πρόγραμμα `adb` μέσα σε αυτόν τον φάκελο.
 
-Installing (and later updating) **AAPS**:
+Εγκατάσταση (και αργότερα ενημέρωση) του **AAPS**:
 
-1. Connect the phone to the computer with a USB cable. There is no need to transfer the APK file to the phone first: ADB sends it straight from the computer.
-1. On the phone, accept the **Allow USB debugging?** prompt (the first time only).
-1. On the computer, open a terminal (command prompt) in the folder containing ADB and the **AAPS** APK file, and run:
+1. Συνδέστε το τηλέφωνο στον υπολογιστή με ένα καλώδιο USB. Δεν χρειάζεται να μεταφέρετε πρώτα το αρχείο APK στο τηλέφωνο: το ADB το στέλνει απευθείας από τον υπολογιστή.
+1. Στο τηλέφωνο, αποδεχτείτε την ερώτηση **Να επιτρέπεται ο εντοπισμός σφαλμάτων USB;** (Allow USB debugging?) (μόνο την πρώτη φορά).
+1. Στον υπολογιστή, ανοίξτε ένα τερματικό (γραμμή εντολών) στον φάκελο που περιέχει το ADB και το αρχείο APK του **AAPS** και εκτελέστε:
 
    ```
    adb install -r app-full-release.apk
    ```
 
-   Replace `app-full-release.apk` with the actual name of your APK file. The `-r` option updates an already installed **AAPS** while keeping all its data and settings.
+   Αντικαταστήστε το `app-full-release.apk` με το πραγματικό όνομα του αρχείου APK σας. Η επιλογή `-r` ενημερώνει ένα ήδη εγκατεστημένο **AAPS** και κρατά όλα τα δεδομένα και τις ρυθμίσεις του.
 
-1. Wait for `Success` to be displayed. **AAPS** is now installed on your phone.
+1. Περιμένετε μέχρι να εμφανιστεί το `Success`. Το **AAPS** είναι πλέον εγκατεστημένο στο τηλέφωνό σας.
 
-The same command is used for every future update. The [Wear OS pages](../WearOS/WearOsSmartwatch.md) already use ADB in the same way to install the watch app.
+Η ίδια εντολή χρησιμοποιείται για κάθε μελλοντική ενημέρωση. Οι [σελίδες για το Wear OS](../WearOS/WearOsSmartwatch.md) χρησιμοποιούν ήδη το ADB με τον ίδιο τρόπο για την εγκατάσταση της εφαρμογής του ρολογιού.
 
-If you would rather not use a cable: on Android 11 and later, **wireless debugging** (also under **Developer options**) can do the same over Wi-Fi, after a one-time pairing with a code shown on the phone.
+Αν δεν θέλετε να χρησιμοποιήσετε καλώδιο: στο Android 11 και νεότερο, ο **ασύρματος εντοπισμός σφαλμάτων** (wireless debugging, επίσης στις **Επιλογές προγραμματιστή**) κάνει το ίδιο μέσω Wi-Fi, μετά από μια σύζευξη μίας φοράς με έναν κωδικό που εμφανίζεται στο τηλέφωνο.
 
 (android-developer-verification-web)=
 
-### Option 2: Install from a web page (computer, no command line)
+### Επιλογή 2: Εγκατάσταση από μια ιστοσελίδα (υπολογιστής, χωρίς γραμμή εντολών)
 
-If the command line is not for you, a web page can do exactly what ADB does, directly from your browser. Because it talks to the phone through the same mechanism as ADB, it carries the **same exemption from verification** — but there is nothing to download, no folder to unzip and no command to type.
+Αν η γραμμή εντολών δεν είναι για εσάς, μια ιστοσελίδα μπορεί να κάνει ακριβώς ό,τι κάνει το ADB, απευθείας από το πρόγραμμα περιήγησης. Επειδή επικοινωνεί με το τηλέφωνο με τον ίδιο μηχανισμό όπως το ADB, έχει την **ίδια εξαίρεση από την επαλήθευση** — αλλά δεν χρειάζεται να κατεβάσετε τίποτα, να αποσυμπιέσετε φάκελο ή να πληκτρολογήσετε εντολή.
 
-This is the easiest route if you used the [browser build](#browser-build) and have never opened a command line.
+Αυτός είναι ο πιο εύκολος δρόμος αν χρησιμοποιήσατε τη [δημιουργία μέσω browser](#browser-build) και δεν έχετε ανοίξει ποτέ γραμμή εντολών.
 
-1. Enable **USB debugging** on the phone (steps 1 and 2 of the [ADB method](#android-developer-verification-adb) above — one-time setup).
-1. Open the **[AAPS web installer](#web-installer)** in your browser.
-1. Connect the phone with a USB cable and follow the instructions on the page: connect, choose your APK file, and install.
+1. Ενεργοποιήστε τον **Εντοπισμό σφαλμάτων USB** στο τηλέφωνο (βήματα 1 και 2 της [μεθόδου ADB](#android-developer-verification-adb) παραπάνω — ρύθμιση μίας φοράς).
+1. Ανοίξτε το **[Πρόγραμμα εγκατάστασης web του AAPS](#web-installer)** στο πρόγραμμα περιήγησης.
+1. Συνδέστε το τηλέφωνο με ένα καλώδιο USB και ακολουθήστε τις οδηγίες στη σελίδα: σύνδεση, επιλογή του αρχείου APK και εγκατάσταση.
 
-Three things to know:
+Τρία πράγματα που πρέπει να ξέρετε:
 
-- It only works in **Chrome, Edge or Opera**. Firefox and Safari cannot talk to USB devices.
-- Only one program can use the phone's ADB connection at a time, so **close Android Studio** (or anything else that uses ADB) before connecting.
-- A web page connected this way gets full control of your phone. **Use only the address above**, from the **AAPS** documentation — never an installer page found through a search engine. The **AAPS** web installer runs entirely in your browser: your APK file is not uploaded anywhere.
+- Λειτουργεί μόνο σε **Chrome, Edge ή Opera**. Ο Firefox και ο Safari δεν μπορούν να επικοινωνήσουν με συσκευές USB.
+- Μόνο ένα πρόγραμμα κάθε φορά μπορεί να χρησιμοποιεί τη σύνδεση ADB του τηλεφώνου, γι' αυτό **κλείστε το Android Studio** (ή οτιδήποτε άλλο χρησιμοποιεί ADB) πριν συνδεθείτε.
+- Μια ιστοσελίδα που συνδέεται με αυτόν τον τρόπο αποκτά πλήρη έλεγχο του τηλεφώνου σας. **Χρησιμοποιείτε μόνο την παραπάνω διεύθυνση**, από την τεκμηρίωση του **AAPS** — ποτέ μια σελίδα εγκατάστασης που βρήκατε μέσω μηχανής αναζήτησης. Το πρόγραμμα εγκατάστασης web του **AAPS** τρέχει εξ ολοκλήρου στο πρόγραμμα περιήγησής σας: το αρχείο APK σας δεν ανεβαίνει πουθενά.
 
 ```{admonition} No computer? A second phone works too
 :class: tip
-The web installer also works from **Chrome on another Android phone** with a USB-C to USB-C cable — so a parent can install **AAPS** onto a child's phone with no computer in the house.
+Το πρόγραμμα εγκατάστασης web λειτουργεί και από το **Chrome σε άλλο τηλέφωνο Android** με καλώδιο USB-C σε USB-C — έτσι ένας γονέας μπορεί να εγκαταστήσει το **AAPS** στο τηλέφωνο του παιδιού χωρίς να υπάρχει υπολογιστής στο σπίτι.
 ```
 
 (android-developer-verification-advanced-flow)=
 
-### Option 3: The "advanced flow" on your phone (no computer needed)
+### Επιλογή 3: Το «advanced flow» στο τηλέφωνό σας (δεν χρειάζεται υπολογιστής)
 
-Google provides an escape hatch for experienced users who understand the risks of installing unverified apps, called the **advanced flow**. Google started rolling it out to phones in August 2026, ahead of enforcement, so you can set it up now. It is a one-time setup on the phone itself, which **takes 24 hours** to complete:
+Η Google προσφέρει μια διέξοδο για έμπειρους χρήστες που καταλαβαίνουν τους κινδύνους της εγκατάστασης μη επαληθευμένων εφαρμογών, που λέγεται **advanced flow** (προχωρημένη διαδικασία). Η Google άρχισε να το στέλνει στα τηλέφωνα τον Αύγουστο του 2026, πριν από την εφαρμογή της επαλήθευσης, οπότε μπορείτε να το ρυθμίσετε από τώρα. Είναι μια ρύθμιση μίας φοράς στο ίδιο το τηλέφωνο, που **χρειάζεται 24 ώρες** για να ολοκληρωθεί:
 
-1. Enable the hidden developer options (see step 1 of the ADB method above), then open **Settings** > **Developer options** > **Apps from unverified developers**.
-1. Turn on **Allow apps from unverified developers**. The phone asks for your screen lock to confirm it is you.
-1. The phone asks whether someone is asking you to turn on this setting, and explains that banks, government agencies or police would never ask you to do so. Read the warning and confirm that nobody is pressuring or guiding you (this is a protection against scammers).
-1. **Restart your phone.** This starts a one-time **24-hour waiting period**.
-1. After 24 hours, go back to **Settings** > **Developer options** > **Apps from unverified developers** to finish the setup.
-1. Choose whether to allow unverified apps for **7 days** or **indefinitely**. For **AAPS**, choose **indefinitely**, otherwise your next update will be blocked once the 7 days have passed.
+1. Ενεργοποιήστε τις κρυφές επιλογές προγραμματιστή (δείτε το βήμα 1 της μεθόδου ADB παραπάνω) και μετά ανοίξτε **Ρυθμίσεις** > **Επιλογές προγραμματιστή** > **Εφαρμογές από μη επαληθευμένους προγραμματιστές** (Apps from unverified developers).
+1. Ενεργοποιήστε το **Να επιτρέπονται εφαρμογές από μη επαληθευμένους προγραμματιστές** (Allow apps from unverified developers). Το τηλέφωνο ζητά το κλείδωμα οθόνης σας, για να επιβεβαιώσει ότι είστε εσείς.
+1. Το τηλέφωνο ρωτά αν κάποιος σας ζητά να ενεργοποιήσετε αυτή τη ρύθμιση και εξηγεί ότι τράπεζες, δημόσιες υπηρεσίες ή η αστυνομία δεν θα σας ζητούσαν ποτέ κάτι τέτοιο. Διαβάστε την προειδοποίηση και επιβεβαιώστε ότι κανείς δεν σας πιέζει ή σας καθοδηγεί (αυτό είναι προστασία από απατεώνες).
+1. **Κάντε επανεκκίνηση του τηλεφώνου σας.** Έτσι ξεκινά μια **περίοδος αναμονής 24 ωρών**, μία φορά μόνο.
+1. Μετά από 24 ώρες, πηγαίνετε ξανά στο **Ρυθμίσεις** > **Επιλογές προγραμματιστή** > **Εφαρμογές από μη επαληθευμένους προγραμματιστές** για να ολοκληρώσετε τη ρύθμιση.
+1. Επιλέξτε αν θα επιτρέπονται οι μη επαληθευμένες εφαρμογές για **7 ημέρες** ή **επ' αόριστον** (indefinitely). Για το **AAPS**, επιλέξτε **επ' αόριστον**, αλλιώς η επόμενη ενημέρωσή σας θα μπλοκαριστεί μόλις περάσουν οι 7 ημέρες.
 
-After this setup, installing or updating the **AAPS** APK works as it does today, with one extra warning that the app is from an unverified developer — tap **Install anyway**.
+Μετά από αυτή τη ρύθμιση, η εγκατάσταση ή η ενημέρωση του APK του **AAPS** λειτουργεί όπως σήμερα, με μια επιπλέον προειδοποίηση ότι η εφαρμογή είναι από μη επαληθευμένο προγραμματιστή — πατήστε **Εγκατάσταση ούτως ή άλλως** (Install anyway).
 
-Good to know:
+Καλό είναι να ξέρετε:
 
-- You can turn **Developer options** off again afterwards: the advanced flow stays enabled. Google also does not give apps (such as banking apps) any way to detect that the advanced flow is enabled.
-- If you turn the advanced flow off, installing **or updating** **AAPS** is blocked again (your installed **AAPS** keeps running). You have a 10-minute window to turn it back on; after that, the 24-hour waiting period starts again.
-- Changing the phone's clock does not shorten the waiting period, and ADB cannot skip it.
-- Google states that your choice follows your Google account to your other devices, so a new phone should not mean another 24-hour wait.
-- If you cannot find **Apps from unverified developers** in the developer options, your phone has not received the feature yet. It is delivered by a system component called **Android Developer Verifier**, which Google is rolling out gradually through the Play Store. You can help it along by opening **Android Developer Verifier** in the Play Store.
+- Μπορείτε να απενεργοποιήσετε ξανά τις **Επιλογές προγραμματιστή** μετά: το advanced flow μένει ενεργό. Επίσης, η Google δεν δίνει στις εφαρμογές (όπως εφαρμογές τραπεζών) κανέναν τρόπο να ανιχνεύσουν ότι το advanced flow είναι ενεργό.
+- Αν απενεργοποιήσετε το advanced flow, η εγκατάσταση **ή η ενημέρωση** του **AAPS** μπλοκάρεται ξανά (το εγκατεστημένο **AAPS** σας συνεχίζει να λειτουργεί). Έχετε 10 λεπτά για να το ενεργοποιήσετε ξανά· μετά από αυτό, η περίοδος αναμονής 24 ωρών ξεκινά από την αρχή.
+- Η αλλαγή του ρολογιού του τηλεφώνου δεν μικραίνει την περίοδο αναμονής, και το ADB δεν μπορεί να την παρακάμψει.
+- Η Google λέει ότι η επιλογή σας ακολουθεί τον λογαριασμό σας Google στις άλλες συσκευές σας, οπότε ένα νέο τηλέφωνο δεν θα πρέπει να σημαίνει νέα αναμονή 24 ωρών.
+- Αν δεν βρίσκετε το **Εφαρμογές από μη επαληθευμένους προγραμματιστές** στις επιλογές προγραμματιστή, το τηλέφωνό σας δεν έχει λάβει ακόμα τη λειτουργία. Την παρέχει ένα στοιχείο του συστήματος που λέγεται **Android Developer Verifier**, το οποίο η Google στέλνει σταδιακά μέσω του Play Store. Μπορείτε να βοηθήσετε να έρθει πιο γρήγορα ανοίγοντας το **Android Developer Verifier** στο Play Store.
 
 ```{note}
-Google describes this as a first version and may still change the screens and steps; this section will be updated with screenshots once the final version is available.
+Η Google το περιγράφει ως πρώτη έκδοση και μπορεί ακόμα να αλλάξει τις οθόνες και τα βήματα· αυτή η ενότητα θα ενημερωθεί με στιγμιότυπα οθόνης μόλις είναι διαθέσιμη η τελική έκδοση.
 ```
 
 (android-developer-verification-limited-account)=
 
-### Option 4: Register with Google (free limited distribution account)
+### Επιλογή 4: Εγγραφή στη Google (δωρεάν λογαριασμός περιορισμένης διανομής)
 
-Google offers a **free** developer account type for hobbyists and personal use, called a **limited distribution account**, open to everyone since August 2026:
+Η Google προσφέρει έναν **δωρεάν** τύπο λογαριασμού προγραμματιστή για χομπίστες και προσωπική χρήση, που λέγεται **λογαριασμός περιορισμένης διανομής** (limited distribution account) και είναι ανοιχτός σε όλους από τον Αύγουστο του 2026:
 
-- **No government ID** and **no fee** (unlike the paid developer account, which is not needed for personal **AAPS** use). You do need a Google account with 2-step verification, a Google payments profile holding your legal name and address, and a contact email address.
-- You register your app's package name in Google's Android Developer Console, and authorize the phones it may be installed on, up to **20 devices**, through a handshake with a QR code or link between the phone and the console.
-- Once registered, the normal installation (tapping the APK file) works again on the authorized phones, without ADB and without the advanced flow.
-- A limited distribution account can later be upgraded to a full account, but not the other way round.
+- **Χωρίς κρατική ταυτότητα** και **χωρίς χρέωση** (σε αντίθεση με τον πληρωμένο λογαριασμό προγραμματιστή, που δεν χρειάζεται για προσωπική χρήση του **AAPS**). Χρειάζεστε όμως λογαριασμό Google με επαλήθευση σε 2 βήματα, ένα προφίλ πληρωμών Google με το νόμιμο όνομα και τη διεύθυνσή σας, και μια διεύθυνση email επικοινωνίας.
+- Καταχωρίζετε το όνομα πακέτου (package name) της εφαρμογής σας στο Android Developer Console της Google και εξουσιοδοτείτε τα τηλέφωνα στα οποία μπορεί να εγκατασταθεί, έως **20 συσκευές**, μέσω μιας σύνδεσης με κωδικό QR ή σύνδεσμο ανάμεσα στο τηλέφωνο και στο console.
+- Μετά την καταχώριση, η κανονική εγκατάσταση (με πάτημα στο αρχείο APK) λειτουργεί ξανά στα εξουσιοδοτημένα τηλέφωνα, χωρίς ADB και χωρίς το advanced flow.
+- Ένας λογαριασμός περιορισμένης διανομής μπορεί αργότερα να αναβαθμιστεί σε πλήρη λογαριασμό, αλλά όχι αντίστροφα.
 
 ```{warning}
-Google has not explained how registration works when many people build the same open-source app: every self-built **AAPS** uses the same package name (`info.nightscout.androidaps`) with a different signing key, and Google's FAQ states that a package name already in use by others cannot be claimed outright and requires an additional review. The outcome of such a review is unknown, and the paid developer account ($25 and a government ID) does not help here: paying only removes the 20-device cap, not the package name review.
+Η Google δεν έχει εξηγήσει πώς λειτουργεί η καταχώριση όταν πολλοί άνθρωποι δημιουργούν την ίδια εφαρμογή ανοιχτού κώδικα: κάθε **AAPS** που δημιουργείτε μόνοι σας έχει το ίδιο όνομα πακέτου (`info.nightscout.androidaps`) με διαφορετικό κλειδί υπογραφής, και το FAQ της Google λέει ότι ένα όνομα πακέτου που ήδη χρησιμοποιούν άλλοι δεν μπορεί να διεκδικηθεί απευθείας και χρειάζεται επιπλέον έλεγχο. Το αποτέλεσμα ενός τέτοιου ελέγχου είναι άγνωστο, και ο πληρωμένος λογαριασμός προγραμματιστή (25 $ και κρατική ταυτότητα) δεν βοηθά εδώ: η πληρωμή αφαιρεί μόνο το όριο των 20 συσκευών, όχι τον έλεγχο του ονόματος πακέτου.
 
-For this reason, step-by-step instructions cannot be written yet. This section will be completed once registration has been tested with **AAPS**. In the meantime, ADB, the web installer and the advanced flow above are reliable alternatives.
+Για αυτόν τον λόγο, δεν μπορούν ακόμα να γραφτούν οδηγίες βήμα προς βήμα. Αυτή η ενότητα θα συμπληρωθεί μόλις η καταχώριση δοκιμαστεί με το **AAPS**. Μέχρι τότε, το ADB, το πρόγραμμα εγκατάστασης web και το advanced flow παραπάνω είναι αξιόπιστες εναλλακτικές.
 ```
 
-## What does not change
+## Τι δεν αλλάζει
 
-- Building **AAPS** yourself, with any of the three [build methods](BuildingAaps.md).
-- Your GitHub account, your build repository (AAPS Builder) or fork, and your keystore.
-- Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
-- Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
+- Η δημιουργία του **AAPS** από εσάς, με οποιονδήποτε από τους τρεις [τρόπους δημιουργίας](BuildingAaps.md).
+- Ο λογαριασμός σας GitHub, το αποθετήριο build σας (AAPS Builder) ή το fork σας, και το keystore σας.
+- Η εγκατεστημένη εφαρμογή **AAPS**, οι ρυθμίσεις σας και τα [Βήματά](CompletingTheObjectives.md) σας.
+- Τα τηλέφωνα χωρίς υπηρεσίες Google, και γενικά οι [εγκαταστάσεις με ADB](#android-developer-verification-adb).
 
-## Where to get help
+## Πού θα βρείτε βοήθεια
 
-1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
-3. When asking for help, include your phone make and model, Android version, your country, and the exact message displayed when the installation fails.
+1. **Διαβάστε** το [FAQ για την επαλήθευση προγραμματιστή](https://developer.android.com/developer-verification/guides/faq) της Google για ερωτήσεις σχετικά με την ίδια την επαλήθευση.
+2. **Ρωτήστε** στο κανάλι *#AAPS* στο [Discord](https://discord.gg/4fQUWHZ4Mw) ή σε ένα από τα άλλα [κανάλια της κοινότητας](../GettingHelp/WhereCanIGetHelp.md), αν μια εγκατάσταση μπλοκάρεται.
+3. Όταν ζητάτε βοήθεια, αναφέρετε τη μάρκα και το μοντέλο του τηλεφώνου σας, την έκδοση Android, τη χώρα σας και το ακριβές μήνυμα που εμφανίζεται όταν η εγκατάσταση αποτυγχάνει.
 
 ```{toctree}
 :hidden:
 
-AAPS web installer <WebInstaller.md>
+Πρόγραμμα εγκατάστασης web του AAPS <WebInstaller.md>
 ```
