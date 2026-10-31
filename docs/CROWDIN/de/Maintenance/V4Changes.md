@@ -1,7 +1,7 @@
 (v4-changes)=
-# What changed in AAPS v4
+# Änderungen mit AAPS Version 4
 
-This page collects the notable **changes in behavior** between **AAPS** v3 and v4 — things that work differently, have moved, or have been removed — so existing users know what to expect when they update. See also the [Release Notes](ReleaseNotes.md) and the [update manual](UpdateToNewVersion.md).
+Diese Seite gibt einen Überblick über die wichtigsten **Verhaltensänderungen** zwischen **AAPS** v3 und v4 – Dinge, die anders funktionieren, verschoben oder entfernt wurden – damit Du weißt, was auf Dich zukommt. Siehe auch die [Release Notes](ReleaseNotes.md) und die [Update-Anleitung](UpdateToNewVersion.md).
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,109 +10,109 @@ This page collects the notable **changes in behavior** between **AAPS** v3 and v
 
 ---
 
-## NSClient v1 has been removed
+## NSClient v1 wurde entfernt
 
-**AAPS** v3 shipped **two** Nightscout synchronization plugins:
+**AAPS** v3 enthielt **zwei** Module zur Synchronisation mit Nightscout:
 
-- **NSClient** — the legacy client (the old Nightscout REST / socket.io API, also called *“v1”*), and
-- **NSClientV3** — the client for the newer Nightscout **API v3**.
+- **NSClient** – der bisherige Client (die alte REST- bzw. socket.io-API von Nightscout, auch *„v1“* genannt) und
+- **NSClientV3** – der Client für die neuere **API v3** von Nightscout.
 
-In **AAPS** v4 the legacy **NSClient (v1)** plugin has been **removed**. Only **NSClientV3** remains for synchronizing with Nightscout.
+In **AAPS** v4 wurde das alte Modul **NSClient (v1)** **entfernt**. Für die Synchronisation mit Nightscout gibt es jetzt nur noch **NSClientV3**.
 
 ```{admonition} What you need to do
 :class: important
-If you (or your **AAPSClient** follower) were still synchronizing with the old **NSClient (v1)** plugin, switch to **NSClientV3** before/after updating:
+Falls bei Dir (oder Deinem **AAPSClient**-Follower) noch das alte Modul **NSClient (v1)** für die Synchronisation lief, wechsle vor oder nach dem Update zu **NSClientV3**:
 
-- Open **[Configuration](../SettingUpAaps/ConfigBuilder.md) → Communication → NSClientV3**.
-- Enter your **Nightscout URL** and an **access token** (NSClientV3 uses an access token, *not* the old API secret — see [creating a token](https://nightscout.github.io/nightscout/security/#create-a-token)).
-- Your Nightscout site must support the **API v3** (Nightscout 15 or newer).
-- If you use **websockets**, enable or disable them on **both** the master and the follower — never on only one.
+- Öffne **[Konfiguration](../SettingUpAaps/ConfigBuilder.md) → Kommunikation → NSClientV3**.
+- Gib Deine **Nightscout-URL** und ein **Zugriffstoken** ein (NSClientV3 verwendet ein Zugriffstoken, *nicht* das alte API Secret – siehe [Token erstellen](https://nightscout.github.io/nightscout/security/#create-a-token)).
+- Deine Nightscout-Seite muss die **API v3** unterstützen (Nightscout 15 oder neuer).
+- Wenn Du **Websockets** nutzt, schalte sie auf **beiden** Geräten ein oder aus, also auf Master und Follower – nie nur auf einem.
 ```
 
-This affects only how the app talks to Nightscout; your data on Nightscout is unchanged.
+Das betrifft nur die Verbindung zwischen App und Nightscout. Deine Daten in Nightscout bleiben unverändert.
 
 ---
 
-## The bottom navigation: Treatments, Scenes and Manage
+## Die untere Navigationsleiste: Behandlungen, Szenen und Bearbeiten
 
-In **AAPS** v3 you moved around the app with a row of **tabs** (Overview, Actions, Treatments, …), and several features were **plugins** you enabled in the Config Builder (**Actions**, **Automation**, **Food**, …).
+In **AAPS** v3 hast Du Dich über eine Reihe von **Reitern** (Übersicht, Aktionen, Behandlungen, …) durch die App bewegt. Mehrere Funktionen waren **Module**, die Du in der Konfiguration aktiviert hast (**Aktionen**, **Automatisierung**, **Essen**, …).
 
-In **AAPS** v4 the tabs are gone, and so is the eye checkbox in the Config Builder that showed a plugin as a tab. The main screen is the **Overview**, and a **bottom navigation** gives you three sheets. **Actions, Automation and Food are no longer plugins** — there is nothing to enable in [Configuration](../SettingUpAaps/ConfigBuilder.md) (the renamed Config Builder); their functions now live in these sheets.
+In **AAPS** v4 gibt es keine Reiter mehr und damit auch nicht mehr das Augen-Kästchen in der Konfiguration, mit dem ein Modul als Reiter angezeigt wurde. Der Hauptbildschirm ist die **Übersicht**. Über die **untere Navigationsleiste** öffnest Du drei Fenster, die von unten hochklappen. **Aktionen, Automatisierung und Essen sind keine Module mehr** – in der [Konfiguration](../SettingUpAaps/ConfigBuilder.md) musst Du dazu nichts aktivieren. Ihre Funktionen findest Du jetzt in diesen Fenstern.
 
 (v4changes-treatments)=
-### Treatments — enter and deliver
+### Behandlungen – eingeben und abgeben
 
-The **Treatments** sheet is where you record or deliver a treatment: **Bolus wizard**, **Insulin** (manual bolus), **Carbs**, **Treatment** (insulin + carbs together), **Calibration**, **CGM** (open your CGM app, when one is configured), and your **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
+Im Fenster **Behandlungen** erfasst Du eine Behandlung oder gibst sie ab: **Bolus-Rechner**, **Insulin** (manueller Bolus), **Kohlenhydrate**, **Behandlung** (Insulin und Kohlenhydrate zusammen), **Kalibrierung**, **CGM** (öffnet Deine CGM-App, wenn eine eingerichtet ist) und Deine **[QuickWizards](../DailyLifeWithAaps/QuickWizards.md)**.
 
 ![The Treatments bottom sheet](../images/v4/BehavioralChanges/treatments_sheet.png)
 
-On a **Wear OS watch** the same treatments are entered from the watch's **AAPS menu** (Bolus wizard / Calculator, eCarbs, Treatment, …):
+Auf einer **Wear OS-Smartwatch** gibst Du dieselben Behandlungen über das **AAPS-Menü** der Smartwatch ein (Bolus-Rechner / Rechner, eCarbs, Behandlung, …):
 
 ![The treatment actions in the watch's AAPS menu](../images/v4/BehavioralChanges/treatments_watch.png)
 
-### Scenes
+### Szenen
 
-Your situation presets — see [Scenes](../DailyLifeWithAaps/Scenes.md).
+Deine Voreinstellungen für bestimmte Situationen – siehe [Szenen](../DailyLifeWithAaps/Scenes.md).
 
 (v4changes-manage)=
-### Manage — manage and activate
+### Bearbeiten – verwalten und aktivieren
 
-The **Manage** sheet is where you manage and activate everything else: **[Profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulin settings** (your insulin configurations), **[Temp Target](../DailyLifeWithAaps/TempTargets.md)**, **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)** presets, **[Scenes](../DailyLifeWithAaps/Scenes.md)**, **Automation**, **Food**, **Site Rotation**, **Pump**, **[Authorized clients](../RemoteFeatures/ClientMasterControl.md)** — plus the pump actions that used to be on the *Actions* tab (**Extended Bolus**, **cancel temp basal**, **Prime/Fill**, **Sensor Insert**, **Pump Battery Change**).
+Im Fenster **Bearbeiten** verwaltest und aktivierst Du alles andere: **[Profil](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)**, **Insulineinstellungen** (Deine Insulin-Konfigurationen), **[Temporäres Ziel](../DailyLifeWithAaps/TempTargets.md)**, Vorlagen für **[QuickWizard](../DailyLifeWithAaps/QuickWizards.md)**, **[Szenen](../DailyLifeWithAaps/Scenes.md)**, **Automatisierung**, **Essen**, **Wechsel der Setzstellen**, **Pumpe**, **[Autorisierte Clients](../RemoteFeatures/ClientMasterControl.md)** – dazu die Pumpenaktionen, die früher im Reiter *Aktionen* waren (**Verzögerter Bolus**, **Temporäre Basalrate abbrechen**, **Nadelwechsel/Füllen**, **CGM-Sensor gesetzt**, **Pumpenbatterie-Wechsel**).
 
 ![The Manage bottom sheet](../images/v4/BehavioralChanges/manage_sheet.png)
 
-All of your existing automation rules and food entries are kept; only the way you reach these features has changed.
+Deine bestehenden Automatisierungsregeln und Essenseinträge bleiben alle erhalten. Geändert hat sich nur der Weg zu diesen Funktionen.
 
 (screens-action-tab)=
-#### Where did the Actions tab go?
+#### Wo ist der Reiter Aktionen geblieben?
 
-**AAPS** 3.x had an "Actions" tab. In **AAPS** 4 its functions live in other places:
+**AAPS** 3.x hatte einen Reiter „Aktionen“. In **AAPS** 4 findest Du seine Funktionen an anderen Stellen:
 
-* **Profile switch** and **Profile Percentage**: tap the [profile name](#aaps-screens-profile--target) on the main screen, or **Manage → Profile**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
-* **Temporary target**: press the [target](#aaps-screens-profile--target) on the main screen, or **Manage → Temp Target**.
-* **Prime/Fill**, **Sensor Insert**, **BG check** and the other careportal entries: in the expanded [status panel](#aaps-screens-careportal), in **Manage**, or as [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md) buttons.
-* **History browser**, **Statistics** (TDD): in the **menu** (☰).
+* **Profilwechsel** und **Prozentsatz des Profils**: Tippe auf dem Hauptbildschirm auf den [Profilnamen](#aaps-screens-profile--target) oder wähle **Bearbeiten → Profil**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+* **Temporäres Ziel**: Tippe auf dem Hauptbildschirm auf das [Ziel](#aaps-screens-profile--target) oder wähle **Bearbeiten → Temporäres Ziel**.
+* **Nadelwechsel/Füllen**, **CGM-Sensor gesetzt**, **BZ-Test** und die anderen Careportal-Einträge: im aufgeklappten [Statusbereich](#aaps-screens-careportal), unter **Bearbeiten** oder als [QuickLaunch](../DailyLifeWithAaps/QuickLaunch.md)-Knöpfe.
+* **Historie**, **Statistiken** (TDD): im **Menü** (☰).
 
 ```{admonition} Profile switch and profile percentage
 :class: note
-In **AAPS** v3, a long press on the profile name opened the profile switch dialog (percentage, duration, Activity temp target). In **AAPS** v4, **tap** the profile name (or **Manage → Profile**), then tap the round **▶** button at the bottom right to open the same settings. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+In **AAPS** v3 hat ein langer Druck auf den Profilnamen den Dialog für den Profilwechsel geöffnet (Prozentsatz, Dauer, temporäres Ziel für Aktivität). In **AAPS** v4 **tippst** Du auf den Profilnamen (oder wählst **Bearbeiten → Profil**) und dann unten rechts auf den runden Knopf **▶**. Dort findest Du dieselben Einstellungen. Siehe [Prozentsatz des Profils ändern](#ProfileSwitch-change-percentage).
 ```
 
 ---
 
 (v4changes-read-only-management)=
-## Settings protection now also locks the management screens
+## Schutz der Einstellungen sperrt jetzt auch die Verwaltungsbildschirme
 
-In **AAPS** v3, [Settings protection](#Preferences-settings-protection) asked for your password only when you opened the settings. You could still add or edit profiles in the **Local Profile** tab without it.
+In **AAPS** v3 hat der [Schutz der Einstellungen](#Preferences-settings-protection) nur dann nach Deinem Passwort gefragt, wenn Du die Einstellungen geöffnet hast. Im Reiter **Lokales Profil** konntest Du Profile trotzdem ohne Passwort anlegen oder ändern.
 
-In **AAPS** v4, Settings protection also covers editing on the management screens: **Profile**, **Insulin settings**, **Temp Target** and **QuickWizard**. If your settings are locked, these screens open **read-only**:
+In **AAPS** v4 gilt der Schutz der Einstellungen auch für das Bearbeiten auf den Verwaltungsbildschirmen: **Profil**, **Insulineinstellungen**, **Temporäres Ziel** und **QuickWizard**. Sind Deine Einstellungen gesperrt, öffnen sich diese Bildschirme **schreibgeschützt**:
 
-- You can browse the entries and **▶ Activate** or use them.
-- The **Add / Edit / Clone / Delete** buttons are **hidden**. Only the **✏️ pencil** in the top bar shows that you can unlock editing.
+- Du kannst die Einträge durchsehen, mit **▶ Aktivieren** aktivieren oder verwenden.
+- Die Knöpfe **Hinzufügen / Bearbeiten / Klonen / Löschen** sind **ausgeblendet**. Nur der **✏️ Stift** in der oberen Leiste zeigt, dass Du das Bearbeiten freischalten kannst.
 
 ![The read-only Profile screen — only Activate at the bottom, pencil in the top bar](../images/v4/Profiles/profile_manage_readonly.png)
 
 ```{admonition} What you need to do
 :class: important
-To add, edit, clone or delete an entry, tap the **✏️ pencil** in the top bar and enter your settings password (or use biometrics). The buttons appear.
+Um einen Eintrag hinzuzufügen, zu bearbeiten, zu klonen oder zu löschen, tippe auf den **✏️ Stift** in der oberen Leiste und gib Dein Passwort für die Einstellungen ein (oder nutze die Biometrie). Dann erscheinen die Knöpfe.
 
-If you don't need to protect your settings, you can turn Settings protection off in **Settings → Protection**.
+Wenn Du Deine Einstellungen nicht schützen musst, kannst Du den Schutz der Einstellungen unter **Einstellungen → Schutz** ausschalten.
 ```
 
 ---
 
 (v4changes-active-insulin)=
-## The insulin in use can't be edited
+## Das verwendete Insulin kann nicht bearbeitet werden
 
-In **AAPS** v3, you could change the DIA of the insulin you were using at any time.
+In **AAPS** v3 konntest Du die DIA des verwendeten Insulins jederzeit ändern.
 
-In **AAPS** v4, the insulin marked **ACTIVE** in **Manage → Insulin settings** is greyed out: you cannot edit or delete it.
+In **AAPS** v4 ist das Insulin, das unter **Bearbeiten → Insulineinstellungen** als **AKTIV** markiert ist, ausgegraut. Du kannst es weder bearbeiten noch löschen.
 
-When you upgrade, **AAPS** keeps the insulin and DIA that your v3 profile switches already stored. If it finds older records whose insulin is known but whose DIA is not, it uses a default DIA for them and shows a message once, for example *Older records had no insulin duration, so 9.0 hours was used for Lyumjev. Check your insulin settings — already migrated records are not updated afterwards.* Check your insulin settings when you see it.
+Beim Update übernimmt **AAPS** das Insulin und die DIA, die in Deinen Profilwechseln aus v3 schon gespeichert sind. Findet es ältere Einträge, bei denen zwar das Insulin bekannt ist, die DIA aber nicht, verwendet es dafür eine Standard-DIA und zeigt einmalig eine Meldung an, zum Beispiel *Für ältere Einträge war keine Insulinwirkdauer gespeichert, daher wurden 9,0 Stunden für Lyumjev verwendet. Prüfe Deine Insulineinstellungen – bereits migrierte Einträge werden danach nicht mehr geändert.* Wenn Du diese Meldung siehst, prüfe Deine Insulineinstellungen.
 
 ```{admonition} What you need to do
 :class: important
-To change the DIA or peak, add a new insulin with **+**, adjust it, save it and **▶ Activate** it. See [Changing the insulin in use](#Config-Builder-insulin-change-active).
+Um den DIA oder das Wirkmaximum zu ändern, lege mit **+** ein neues Insulin an, passe es an, speichere es und aktiviere es mit **▶ Aktivieren**. Siehe [Das verwendete Insulin wechseln](#Config-Builder-insulin-change-active).
 ```
 
 ---
