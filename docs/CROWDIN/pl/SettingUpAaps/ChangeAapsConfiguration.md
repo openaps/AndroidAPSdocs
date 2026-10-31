@@ -4,15 +4,15 @@ Po ukończeniu **[Kreatora konfiguracji](../SettingUpAaps/SetupWizard.md)** nie 
 
 Konfigurację **AAPS** możesz zmienić na trzy sposoby. Wybór drogi zależy tylko od wygody lub Twoich upodobań, bo każda prowadzi do tych samych ustawień.
 
-These are as follows:
+Są to:
 
 1. ekran **Konfiguracja**,
 2. ekran **Ustawienia** lub
 3. **Ustawienia** wtyczki, otwierane z jej kategorii w **Konfiguracji**.
 
-Here we explain which option is most convenient for each situation:
+Tutaj wyjaśniamy, która opcja jest najwygodniejsza w danej sytuacji:
 
-## Configuration
+## Konfiguracja
 
 Otwórz **menu** (☰) w lewym górnym rogu ekranu głównego i wybierz **Konfiguracja**:
 
@@ -22,7 +22,7 @@ Otwórz **menu** (☰) w lewym górnym rogu ekranu głównego i wybierz **Konfig
 
 Dokumentacja ekranu Konfiguracja jest dostępna [tutaj](../SettingUpAaps/ConfigBuilder.md).
 
-## Settings
+## Ustawienia
 
 Dotknij ikony **Ustawienia** (koło zębate) w prawym górnym rogu ekranu głównego. Otworzą się ustawienia **wszystkich włączonych wtyczek w jednym miejscu**, pogrupowane w rozwijane sekcje:
 
