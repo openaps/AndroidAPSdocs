@@ -1,7 +1,7 @@
 (global-search)=
-# Global search
+# Глобальний пошук
 
-**AAPS** v4 has a **global search** box at the top of the main screen. Type a word and it looks across the whole app at once — plugins, dialogs, settings screens, individual preferences — and, if you are online, the **AndroidAPS documentation** too. It is the fastest way to jump to a setting or screen without remembering where it lives.
+**AAPS** v4 має поле **глобального пошуку** вгорі головного екрана. Введіть слово, і пошук одразу перегляне весь застосунок — плагіни, діалоги, екрани налаштувань, окремі налаштування — а якщо ви онлайн, то й **документацію AndroidAPS**. Це найшвидший спосіб перейти до налаштування чи екрана, не пам'ятаючи, де воно розташоване.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,85 +10,85 @@
 
 ---
 
-## Opening search
+## Як відкрити пошук
 
-Tap the **🔍 Search** field at the top of the **Overview** (next to the ☰ menu). Start typing and results appear as you type (after a short pause), grouped by category:
+Натисніть поле **🔍 Пошук** вгорі екрана **Огляд** (поруч із меню ☰). Почніть вводити текст — результати з'являються під час введення (після короткої паузи), згруповані за категоріями:
 
-![Global search results, grouped by category](../images/v4/Search/search_results.png)
+![Результати глобального пошуку, згруповані за категоріями](../images/v4/Search/search_results.png)
 
-Clear the box with the **✕**, or close search with the device **Back** button.
-
----
-
-## Search in English *or* your own language
-
-This is the part worth knowing: search matches against **both** the text in your **selected language** **and** the original **English** text.
-
-- If your app is in, say, German or Czech, you can type the **localized** word **or** the **English** word — either finds the setting.
-- A match on the **localized** title ranks highest, then the **English** title, then the localized and English **descriptions**.
-- Matching ignores **accents/diacritics** (so *ů* matches *u*, *é* matches *e*) and is **case-insensitive**.
-
-This means a guide or forum post written in English still leads you to the right setting even when your phone shows everything translated.
+Очистіть поле кнопкою **✕** або закрийте пошук кнопкою **Назад** пристрою.
 
 ---
 
-## What search covers
+## Пошук англійською *або* вашою мовою
 
-Results are grouped into these categories:
+Це варто знати: пошук порівнює запит **і** з текстом **вибраною мовою**, **і** з оригінальним текстом **англійською**.
 
-- **Plugins** — every plugin visible in your build (the same ones listed under [Configuration](../SettingUpAaps/ConfigBuilder.md)). Each plugin row carries its **enable switch**, so you can enable or disable a plugin right from the results — tapping the row of a disabled (toggleable) plugin enables it.
-- **Dialogs** — the treatment/action and management screens (Bolus wizard, Insulin, Extended bolus, Calibration, Temp Target, Profile, …). Screens that don't apply to your build are left out (for example *Pair with master* on a master, *Authorized clients* on a client).
-- **Preference categories** — the settings **screens** and sub-screens, both built-in (General, Appearance, Protection, Alerts, Maintenance, …) and from plugins, plus the small settings groups reached from dialogs (Fill buttons, Insulin/Carbs button steps, status-light thresholds, wizard settings, …).
-- **Preferences** — every **individual setting** that has a title. These are filtered to your build/mode, so you only see settings that actually apply (APS / NSClient / pump-control).
-- **Documentation** — pages from the online **AndroidAPS docs** (see below).
+- Якщо ваш застосунок, наприклад, німецькою чи чеською, ви можете ввести **перекладене** слово **або** **англійське** слово — обидва знайдуть налаштування.
+- Найвище стоїть збіг у **перекладеній** назві, далі в **англійській** назві, потім у перекладених та англійських **описах**.
+- Пошук ігнорує **наголоси/діакритичні знаки** (тож *ů* збігається з *u*, *é* — з *e*) і **не враховує регістр**.
+
+Тому посібник чи допис на форумі англійською все одно приведе вас до потрібного налаштування, навіть якщо на телефоні все перекладено.
+
+---
+
+## Що охоплює пошук
+
+Результати згруповано в такі категорії:
+
+- **Плагіни** — усі плагіни, видимі у вашій збірці (ті самі, що перелічені в розділі [Конфігурація](../SettingUpAaps/ConfigBuilder.md)). Кожен рядок плагіна має свій **перемикач увімкнення**, тож ви можете вмикати або вимикати плагін прямо з результатів — натискання рядка вимкненого плагіна (який можна перемикати) вмикає його.
+- **Діалоги** — екрани терапії/дій і керування (Калькулятор болюса, Інсулін, Подовжений болюс, Калібрування, Тимчасова ціль, Профіль, …). Екрани, які не стосуються вашої збірки, не показуються (наприклад, *Спарувати з основним пристроєм* на основному телефоні, *Авторизовані клієнти* на клієнті).
+- **Категорії налаштувань** — **екрани** налаштувань і підекрани, як вбудовані (Загальне, Вигляд, Захист, Сповіщення, Обслуговування, …), так і від плагінів, а також невеликі групи налаштувань, що відкриваються з діалогів (кнопки заповнення, кроки кнопок інсуліну/вуглеводів, пороги покажчиків статусу, налаштування калькулятора, …).
+- **Налаштування** — кожне **окреме налаштування**, яке має назву. Вони відфільтровані за вашою збіркою/режимом, тож ви бачите лише ті налаштування, які справді діють (APS / NSClient / керування помпою).
+- **Документація** — сторінки з онлайн-**документації AndroidAPS** (див. нижче).
 
 ```{admonition} Settings that belong to a disabled plugin
 :class: note
-A preference whose plugin is currently **disabled** still shows up — **greyed out** and not tappable — with a *“Plugin … disabled”* note, so you can tell the setting exists and which plugin to enable to reach it.
+Налаштування, плагін якого зараз **вимкнено**, все одно показується — **сірим** і без можливості натиснути — з приміткою *«Плагін … вимкнено»*, тож ви бачите, що налаштування існує і який плагін треба увімкнути, щоб до нього дістатися.
 
-![A greyed-out setting from a disabled plugin](../images/v4/Search/search_disabled_plugin.png)
+![Сіре налаштування вимкненого плагіна](../images/v4/Search/search_disabled_plugin.png)
 ```
 
 ---
 
-## Documentation results (online)
+## Результати з документації (онлайн)
 
-While the local search runs, **AAPS** also queries the official **AndroidAPS documentation** (hosted on ReadTheDocs) in parallel. Matching pages appear in a **Documentation** group at the bottom, each with a 📖 icon, the section title and a short snippet:
+Поки працює локальний пошук, **AAPS** паралельно надсилає запит до офіційної **документації AndroidAPS** (розміщеної на ReadTheDocs). Знайдені сторінки з'являються в групі **Документація** внизу, кожна зі значком 📖, назвою розділу і коротким уривком:
 
-![Documentation (wiki) results with snippets](../images/v4/Search/search_documentation.png)
+![Результати з документації (wiki) з уривками](../images/v4/Search/search_documentation.png)
 
-- If the documentation is translated into your app language, **AAPS** searches the translated pages and the English pages at the same time. Pages in your language come first, then the English pages that were not already found.
-- Tapping a documentation result opens that page in your **browser**.
-- Documentation search needs **internet** — when you are offline you get a *“Documentation search requires internet connection”* note instead, and the local (in-app) results still work normally.
-
----
-
-## Opening a result
-
-Tap a result to go straight to it:
-
-- **Plugin** → opens that plugin.
-- **Dialog** → opens that screen or dialog.
-- **Preference category** → opens that settings screen.
-- **Preference** → opens the setting **in place** (jumps to it within its screen).
-- **Documentation** → opens the page in your browser.
-
-Opening settings and protected actions still respects your **[protection](../SettingUpAaps/ConfigBuilder.md)** (PIN/password), exactly as it would if you had navigated there by hand. After you act on a result you can press **Back** to return to your search results.
+- Якщо документацію перекладено мовою вашого застосунку, **AAPS** шукає одночасно в перекладених і в англійських сторінках. Спочатку йдуть сторінки вашою мовою, потім англійські сторінки, яких ще не було знайдено.
+- Натискання результату з документації відкриває цю сторінку у вашому **браузері**.
+- Пошук у документації потребує **інтернету** — коли ви офлайн, замість результатів ви бачите примітку *«Для пошуку в документації потрібне підключення до інтернету»*, а локальні результати (у застосунку) і далі працюють як звичайно.
 
 ---
 
-## Power-user shortcuts
+## Як відкрити результат
 
-Two special queries list a whole category at once:
+Натисніть результат, щоб одразу перейти до нього:
 
-- `%PLUGINS%` — list **all** plugins.
-- `%DIALOGS%` — list **all** dialogs/action screens.
+- **Плагін** → відкриває цей плагін.
+- **Діалог** → відкриває цей екран або діалог.
+- **Категорія налаштувань** → відкриває цей екран налаштувань.
+- **Налаштування** → відкриває налаштування **на його місці** (переходить до нього на його екрані).
+- **Документація** → відкриває сторінку у вашому браузері.
+
+Відкриття налаштувань і захищених дій і далі враховує ваш **[захист](../SettingUpAaps/ConfigBuilder.md)** (PIN/пароль) — так само, як якби ви перейшли туди вручну. Після дії з результатом ви можете натиснути **Назад**, щоб повернутися до результатів пошуку.
+
+---
+
+## Швидкі команди для досвідчених
+
+Два спеціальні запити показують цілу категорію одразу:
+
+- `%PLUGINS%` — показати **усі** плагіни.
+- `%DIALOGS%` — показати **усі** діалоги/екрани дій.
 
 ---
 
 ```{admonition} The index stays current
 :class: note
-The search index is built the first time you search and kept ready after that. It is rebuilt automatically when you **enable/disable a plugin** or **change the app language**, so results always reflect your current setup.
+Індекс пошуку створюється під час першого пошуку і потім залишається готовим. Він автоматично створюється заново, коли ви **вмикаєте/вимикаєте плагін** або **змінюєте мову застосунку**, тож результати завжди відповідають вашій поточній конфігурації.
 ```
 
 ---
