@@ -333,7 +333,7 @@ Tiempo tras el cual cualquier comida se considera absorbida; los carbohidratos r
 - Define el ratio mínimo y máximo de [Autosens](#Open-APS-features-autosens).
 - Normalmente no se deben cambiar los valores estándar (máx. 1,2 y mín. 0,7).
 
-## Pump
+## Bomba
 
 ![Ajustes > Bomba](../images/preferences/settings_pump.png)
 
@@ -363,10 +363,10 @@ El complemento NSClient (que aparece como **NSClientV3** en el menú de configur
 ```{admonition} Data uploaders
 :class: warning
 
-Con NSClientV3, todos los programas que suben datos deben usar la API v3 de Nightscout. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Con NSClientV3, todos los programas que suben datos deben usar la API v3 de Nightscout. Si otro programa que sube datos (por ejemplo, tu app de MCG) no es compatible con la API v3, **deja que AAPS suba todos los datos** (glucosa, tratamientos, ...) a Nightscout y desactiva ese otro programa.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
+- Pon tu *URL de Nightscout* (p. ej., <https://yoursitename.yourplatform.dom>).
 - **Asegúrate de que la URL NO tiene /api/v1/ al final.**
 - En Nightscout, crea un *[token de administrador (Admin)](https://nightscout.github.io/nightscout/security/#create-a-token)* (necesitas [Nightscout 15](https://nightscout.github.io/update/update/) para usar la API V3) e introdúcelo en **Token de acceso de Nightscout** (¡no tu API Secret!). En **AAPSClient** puedes escanear en su lugar el código QR del teléfono principal, que crea un token propio para el cliente. Un cliente emparejado con el PIN recibe su propio token del teléfono principal después del emparejamiento. Consulta [El token de Nightscout propio del cliente](#client-master-control-own-token).
 - Esto permite leer y escribir datos entre el sitio web de Nightscout y **AAPS**.
@@ -395,7 +395,7 @@ Mientras el control del cliente está activo (siempre en el Modo sencillo), esto
 - Avisos de Nightscout repite los [avisos (announcements)](https://nightscout.github.io/nightscout/discover/#announcement) de Nightscout en las notificaciones de **AAPS**.
 - Puedes cambiar el umbral de las alarmas de datos antiguos y datos antiguos urgentes, que suenan cuando no se reciben datos de Nightscout durante cierto tiempo.
 
-### Remote control
+### Control remoto
 
 El interruptor «**Permitir el control del cliente**» ya no está en estos ajustes: está arriba en **Administrar → Clientes autorizados**, donde se gestionan los clientes emparejados. Consulta la página [Control Máster / Cliente](../RemoteFeatures/ClientMasterControl.md), que incluye el [modo reforzado](#client-master-control-hardened-mode), que este interruptor activa.
 
