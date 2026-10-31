@@ -33,7 +33,7 @@
 
 ![动态ISF](../images/DynamicISF/DynISF2.png)
 
-红色圆圈标注部分显示：`配置文件 ISF` -> `由 DynISF 计算的 ISF`。点击该部分可查看详细信息，例如计算器使用的 **ISF** 和碳水吸收情况（参见下文 [ISF 的其他用途](#dynisf-other-usages-of-isf)）。
+红色圆圈标注部分显示：`配置文件 ISF` -> `由 DynISF 计算的 ISF`。 <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
 
 The **DynISF** value can also be shown in a graph: tap **Add graph** below the graphs on the main screen and select **VSENS** (variable sensitivity). It shows as a white line (bottom of the image above).
 
@@ -134,4 +134,4 @@ This setting (*"Adjust sensitivity calculations when using DynamicISF"*) replace
   * 生活方式波动大（饮食或运动不规律）；
   * TDD 或敏感度日间差异显著。
 * **调整因子** 的初始值无精确指导原则。然而，作为初始参考点：假设您的 **配置文件** 参数设置正确，当血糖处于目标范围内且 **BG** 水平保持稳定时，**DynISF** 值应大致与您先前 **配置文件** 中的设定值相近。<br/>若发现 **动态 ISF** 作用过于激进，可降低 **调整因子**，反之亦然。
-* 尽管 **DynISF** 不使用**配置文件 ISF**，但若发现敏感度与原配置差异较大，建议更新配置文件。在您丢失 **AAPS** 数据的情况下（_例如_ 更换新手机、升级 **AAPS** 版本等），这一机制将发挥作用，因为您的 **配置文件 ISF** 会作为接下来 7 天的备用参数。
+* 尽管 **DynISF** 不使用**配置文件 ISF**，但若发现敏感度与原配置差异较大，建议更新配置文件。 This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
