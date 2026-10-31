@@ -129,7 +129,7 @@ De functie **Auto switch profile** is alleen beschikbaar in Dev/Engineering mode
 - **Use circadian IC/ISF** (standaard Uit): zie [Circadiaan IC- of ISF-profiel](#autotune-circadian-ic-or-isf-profile) hieronder.
 
 (autotune-other-settings)=
-### Other settings
+### Overige instellingen
 
 - Autotune gebruikt ook Max autosens ratio en Min autosens ratio om de verschillen te begrenzen. Je kunt deze waarden bekijken en aanpassen in [**Instellingen** > **Opname instellingen** > **Geavanceerde instellingen**](../SettingUpAaps/Preferences.md) (**Autosens max** en **Autosens min**).
 
