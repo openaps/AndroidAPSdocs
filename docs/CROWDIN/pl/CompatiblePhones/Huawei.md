@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# Jak skonfigurować telefon Huawei
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**Których telefonów dotyczy ta strona:** telefonów Huawei z **EMUI 12 do EMUI 15**. Wszystkie te wersje są oparte na Androidzie 12, który jest minimum dla obecnej wersji **AAPS**. Na telefonie ze starszą wersją EMUI możesz używać tylko [starszej wersji AAPS](#maintenance-android-version-aaps-version).
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} Telefony z HarmonyOS NEXT / HarmonyOS 5 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+Nowe telefony Huawei sprzedawane w Chinach działają na HarmonyOS NEXT (HarmonyOS 5 i nowszy). Ten system nie jest już Androidem i nie może uruchomić **AAPS**. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Telefony Huawei bardzo agresywnie zamykają aplikacje działające w tle. Zastosuj wszystkie poniższe ustawienia dla **AAPS** i dla Twojej aplikacji CGM (na przykład xDrip+ lub Juggluco), w przeciwnym razie pętla i odczyty glukozy mogą się zatrzymać, gdy ekran jest wyłączony.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+Nazwy menu mogą się trochę różnić w zależności od modelu. Jeśli nie możesz znaleźć ustawienia, wpisz jego nazwę w pasku wyszukiwania na górze **Ustawień**.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+Zrzuty ekranu poniżej pochodzą ze starszej wersji EMUI. Ustawienia są takie same w EMUI 12 do 15.
 
-## Ignore battery optimization
+## Ignorowanie optymalizacji baterii
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. Otwórz **Ustawienia > Aplikacje > Aplikacje**.
+2. Dotknij menu **⋮** w prawym górnym rogu i wybierz **Specjalny dostęp > Optymalizacja baterii**.
+3. Dotknij strzałki na górze listy i wybierz **Wszystkie aplikacje**.
+4. Wybierz **AAPS** i wybierz **Nie zezwalaj**. Huawei nie będzie już optymalizować aplikacji z tej listy.
+5. Powtórz to dla swojej aplikacji CGM.
 
-![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+![Huawei – ignorowanie optymalizacji baterii](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## Uruchamianie aplikacji: zezwól na działanie w tle
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. Otwórz **Ustawienia > Bateria > Uruchamianie aplikacji** (lub **Ustawienia > Aplikacje > Aplikacje >** wybierz aplikację **> Bateria > Uruchamianie aplikacji**).
+2. Znajdź **AAPS** i wyłącz **Zarządzaj automatycznie**.
+3. W oknie **Zarządzaj ręcznie** włącz wszystkie trzy opcje: 
+    - **Automatyczne uruchamianie**
+    - **Uruchamianie pośrednie** (aplikacja może być uruchamiana przez inne aplikacje)
+    - **Działanie w tle**
+4. Powtórz to dla swojej aplikacji CGM.
 
-![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+![Huawei – opcje baterii](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## Zablokuj AAPS na liście ostatnich aplikacji
 
-Locked apps are not closed when you clear the recent apps list.
+Zablokowane aplikacje nie są zamykane, gdy czyścisz listę ostatnich aplikacji.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. Otwórz listę ostatnich aplikacji.
+2. Przesuń w dół kartę **AAPS**. Na karcie pojawi się symbol kłódki.
+3. Zrób to samo dla swojej aplikacji CGM.
 
-![Huawei - lock app](../images/Huawei_LockApp.png)
+![Huawei – blokowanie aplikacji](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## Tryb oszczędzania energii
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+Pozostaw wyłączone **Tryb oszczędzania energii** i **Tryb ultraoszczędzania energii** (**Ustawienia > Bateria**). Zamykają one aplikacje w tle bez względu na powyższe ustawienia.
 
-## If AAPS still stops in the background
+## Jeśli AAPS nadal zatrzymuje się w tle
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+Więcej rozwiązań dla telefonów Huawei znajdziesz na stronie [Don't kill my app](https://dontkillmyapp.com/huawei).
 
-## Honor phones
+## Telefony Honor
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Honor jest teraz osobną marką, a jego telefony działają na MagicOS zamiast EMUI. Ustawienia pracy w tle są bardzo podobne: w ustawieniach baterii aplikacji znajdź **Uruchamianie aplikacji**, wyłącz **Zarządzaj automatycznie** i zezwól na wszystkie trzy opcje, a następnie usuń aplikację z optymalizacji baterii.
