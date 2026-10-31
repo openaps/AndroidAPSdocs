@@ -12,7 +12,7 @@ Zalecamy używanie Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout to aplikacja internetowa, która zapisuje i pokazuje dane z CGM i dane z **AAPS** oraz tworzy raporty. To rozbudowana platforma, która od wielu lat jest zintegrowana z **AAPS**. Pozwala użytkownikom i opiekunom śledzić dane cukrzycowe pacjenta prawie w czasie rzeczywistym (jeśli wszystkie elementy mają dobre połączenie z internetem, między odbiorem danych a ich udostępnieniem mija tylko kilka sekund). Pozwala też opiekunom wysyłać zdalne polecenia do **AAPS**.
+Nightscout to aplikacja internetowa, która zapisuje i pokazuje dane z CGM i dane z **AAPS** oraz tworzy raporty. To rozbudowana platforma, która od wielu lat jest zintegrowana z **AAPS**. Pozwala użytkownikom i opiekunom śledzić dane cukrzycowe pacjenta prawie w czasie rzeczywistym (jeśli wszystkie elementy mają dobre połączenie z internetem, między odbiorem danych a ich udostępnieniem mija tylko kilka sekund). It also carries the remote commands that caregivers send to **AAPS** from **AAPSClient** (see [Master ↔ Client control](#client-master-control)).
 
 Nightscout jest oprogramowaniem open source. Każdy może utworzyć i prowadzić serwer Nightscout, korzystając z darmowych lub płatnych usług.
 
