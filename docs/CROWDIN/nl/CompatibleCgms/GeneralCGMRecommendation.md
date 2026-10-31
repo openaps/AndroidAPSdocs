@@ -32,10 +32,10 @@ Vaak kun je een "Sensor Error" (sensorfout) oplossen door meteen te drinken en r
 
 ### 'Springende' waardes
 
-Je kunt proberen de instellingen voor ruisblokkering in xDrip aan te passen (Settings - Inter-App Settings - Noise Blocking), bijvoorbeeld "Block Very High noise and worse". Zie ook [Filteren van bloed glucose waardes](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Je kunt proberen de instellingen voor ruisblokkering in xDrip aan te passen (Settings - Inter-App Settings - Noise Blocking), bijvoorbeeld "Block Very High noise and worse". Zie ook [Vloeiend maken van bloedglucosewaarden](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 ### Negatieve sensorleeftijd
 
 ![Leeftijd van de sensor op de rij Sensor van het uitgevouwen statuspaneel](../images/main/main_status_row_expanded.png)
 
-De leeftijd van de sensor staat op de rij **Sensor** van het statuspaneel op het hoofdscherm (tik op het pijltje om het uit te vouwen). Een negatieve leeftijd ontstaat als er twee keer een "CGM Sensor Insert" [careportal-invoer](#aaps-screens-careportal) is, of een sensorwissel met een verkeerde datum. Open **Behandelingsgeschiedenis** (menu ☰), selecteer het tabblad **Careportal** en verwijder de foute invoer.
+De leeftijd van de sensor staat op de rij **Sensor** van het statuspaneel op het hoofdscherm (tik op het pijltje om het uit te vouwen). Een negatieve leeftijd ontstaat als er twee keer een "CGM Sensor Insert" [careportal-invoer](#aaps-screens-careportal) is, of een sensorwissel met een verkeerde datum. Open **Behandelingen geschiedenis** (menu ☰), selecteer het tabblad **Careportal** en verwijder de foute invoer.
