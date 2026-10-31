@@ -79,7 +79,7 @@ Klepněte na **Select AAPS Version** a vyberte verzi, kterou chcete sestavit. Ne
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Varianty končící na „Debug“ znamenají, že se APK sestaví v ladicím režimu (debug), což je užitečné pro vývojáře při řešení problémů.
+Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
