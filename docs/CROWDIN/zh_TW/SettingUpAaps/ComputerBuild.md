@@ -92,7 +92,7 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 
 在本指南中，你將找到建置**AAPS** apk文件的_範例_螢幕截圖。由於**Android Studio** - 我們用來建立**AAPS** apk的軟體 - 定期更新，這些螢幕截圖可能與你的安裝不完全相同，但仍然應該可以遵循。
 
-由於**Android Studio**可以在Windows、Mac OS X和Linux平台上運行，因此不同平台的步驟可能會略有不同。
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might also be minor differences in the steps for the different  platforms.
 
 (install-git-if-you-dont-have-it)=
 ### 安裝Git
@@ -101,7 +101,7 @@ Gradle版本與源代碼相連結，下載/更新源代碼時，你將始終獲�
 :class: dropdown
 
 Git被稱為“_版本控制系統_”（VCS）。
-Git是一個可以讓你追蹤程式碼變更並與他人協作的程式。你將使用Git從GitHub網站將**AAPS**的原始碼複製到你的本地電腦。然後，你將在你的電腦上使用Git來建立**AAPS**應用程式（apk）。 
+Git是一個可以讓你追蹤程式碼變更並與他人協作的程式。你將使用Git從GitHub網站將**AAPS**的原始碼複製到你的本地電腦。 Then, you will use Android Studio on your computer to build the **AAPS** application (apk). 
 ```
 
 (BuildingAaps-steps-for-installing-git)=
@@ -140,7 +140,7 @@ Android Studio是一個在你的電腦上運行的程式。它允許你從網際
 
 ```{admonition} Different UI
 :class: warning
-匯入注意：在最近的更新中，Android Studio改變了其使用者介面。 This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. 如果你仍在使用舊的介面，你可能需要先根據[這些指示](#computerbuild-NewUI)將Android Studio切換到新的介面。
+Important note: Android Studio changed its UI during the last releases. This guide shows the steps with the *new UI*. The screenshots were taken with "Ladybug", so newer versions may look slightly different. 如果你仍在使用舊的介面，你可能需要先根據[這些指示](#computerbuild-NewUI)將Android Studio切換到新的介面。
 ```
 
 Android Studio 版本非常重要。請參閱 [上面的指示](#Building-APK-recommended-specification-of-computer-for-building-apk-file) 以選擇適合的 Android Studio 版本。
@@ -155,7 +155,7 @@ Android Studio 版本非常重要。請參閱 [上面的指示](#Building-APK-re
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-如果您希望節省硬碟空間，可以取消勾選 Android 虛擬設備：這不適用於建立 **AAPS**。
+If you want to save hard disk space, you can uncheck Android Virtual Device: it is not used for building **AAPS**.
 
 ![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
@@ -313,7 +313,7 @@ Android Studio 可能會建議更新 gradle 系統。**切勿更新 gradle！** 
 
 If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error, you can either
 * 手動輸入你之前[儲存的路徑](#BuildingAaps-steps-for-installing-git)，或
-* 點擊資料夾圖示（1），手動導航至**git.exe** 安裝的目錄[上面](#BuildingAaps-steps-for-installing-git)
+* click on the folder icon (1) and manually navigate to the directory where **git.exe** was installed [earlier](#BuildingAaps-steps-for-installing-git)
 * 用**測試**按鈕驗證你的設定！
 
   ![未找到 Git](../images/Building-the-App/039_GitTestError.png)
@@ -355,7 +355,7 @@ If you want to create the apk for your watch, you now need to select AndroidAPS.
 ```{admonition} INFORMATION!
 :class: note
 You will only need to create the keystore once.
-如果你之前已經建置過 AAPS，請勿創建新的金鑰庫，而是選擇現有的金鑰庫並輸入其密碼！
+If you have built AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_注意：_**金鑰庫是存儲應用程式簽名資訊的檔案。他是加密的，並且訊息透過密碼進行保護。
