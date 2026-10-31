@@ -23,7 +23,7 @@
 :local: true
 ```
 
-如果您遇到問題，請參見單獨的[問題排除Android Studio](../GettingHelp/TroubleshootingAndroidStudio)頁面。
+In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### 匯出你的設定
 
