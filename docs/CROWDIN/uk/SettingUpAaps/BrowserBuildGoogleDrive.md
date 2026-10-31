@@ -1,77 +1,77 @@
 (aaps-ci-google-drive-auth)=
 
-# Browser build – Step 3: Authorize Google Drive
+# Збірка в браузері – Крок 3: Авторизуйте Google Drive
 
 ```{note}
-This is **Step 3** of the [Browser build](BrowserBuild.md). First complete [Step 2 – Create your signing keystore](BrowserBuildKeystore.md).
+Це **Крок 3** [Збірки в браузері](BrowserBuild.md). Спочатку виконайте [Крок 2 – Створіть свій keystore для підпису](BrowserBuildKeystore.md).
 ```
 
 ```{warning}
-No matter which of the prior sets of instructions you followed (Option 1 or Option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+Незалежно від того, яку з попередніх інструкцій ви виконали (Варіант 1 чи Варіант 2), ви ОБОВ'ЯЗКОВО маєте додати авторизацію Google Drive, щоб збірка в браузері працювала.
 ```
 
-Note: If you already followed this part in the video, you can now skip to [Step 4 – Build the APK](BrowserBuildAPK.md).
+Примітка: якщо ви вже виконали цю частину за відео, можете перейти одразу до [Кроку 4 – Зберіть APK](BrowserBuildAPK.md).
 
 ```{warning}
-If the Google authorization does not start or the preparation page fails, close the preparation page, open `aaps-ci-preparation.html` again the same way as in Step 2, and start this step again. See [troubleshooting](#aaps-ci-preparation-web).
+Якщо авторизація Google не починається або сторінка підготовки видає помилку, закрийте сторінку підготовки, знову відкрийте `aaps-ci-preparation.html` так само, як у Кроці 2, і почніть цей крок знову. Дивіться [усунення проблем](#aaps-ci-preparation-web).
 ```
 
-Return to the preparation page tab.
+Поверніться на вкладку сторінки підготовки.
 
-Scroll down to the Google Drive Auth section and tap Start Auth.
+Прокрутіть униз до розділу «Google Drive Auth» і натисніть «Start Auth» (Почати авторизацію).
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
-Select your Google account.
+Виберіть свій обліковий запис Google.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+Прокрутіть униз і надайте доступ. Він потрібен вебсторінці, щоб отримати ключ авторизації Google Drive.
 
-Tap Continue.
+Натисніть «Continue» (Продовжити).
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
+Поле `GDRIVE_OAUTH2` заповниться. Натисніть верхню кнопку «Copy» (Копіювати).
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
-Switch back to the GitHub tab.
+Поверніться на вкладку GitHub.
 
-Scroll down to Repository secrets and tap New repository secret.
+Прокрутіть униз до «Repository secrets» (секрети репозиторію) і натисніть «New repository secret» (новий секрет репозиторію).
 
-If you followed Option 1 you should see this:
+Якщо ви виконували Варіант 1, ви маєте побачити таке:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-If you followed Option 2 there will be more keys:
+Якщо ви виконували Варіант 2, ключів буде більше:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
-In the Name field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+Вставте щойно скопійований текст у поле «Name» (Назва). Щоб відкрити меню вставлення, довго натисніть на текстове поле.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the preparation page tab.
+Перейдіть на вкладку сторінки підготовки.
 
-Tap the second Copy button.
+Натисніть другу кнопку «Copy» (Копіювати).
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH6.png)
 
-Switch back to the GitHub tab.
+Поверніться на вкладку GitHub.
 
-1. In the Secret field, paste the text you just copied. Use a long touch on the text box to show the paste menu.
+1. Вставте щойно скопійований текст у поле «Secret» (Секрет). Щоб відкрити меню вставлення, довго натисніть на текстове поле.
 
-2. Tap Add secret.
+2. Натисніть «Add secret» (Додати секрет).
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 
-You should have either two (option 1) or five (option 2) secrets entries now.
+Тепер у вас має бути два (Варіант 1) або п'ять (Варіант 2) секретів.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
-GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
+Після збірки GitHub зможе зберегти APK-файл AAPS у вашому Google Drive.
 
 ----
 
-**Next: [Step 4 – Build the APK](BrowserBuildAPK.md) →**
+**Далі: [Крок 4 – Зберіть APK](BrowserBuildAPK.md) →**
