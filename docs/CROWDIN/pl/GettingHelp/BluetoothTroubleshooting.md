@@ -1,6 +1,6 @@
 (bluetoothtroubleshooting-bluetooth-related-issues)=
 
-# Problemy związane z Bluetooth
+# Rozwiązywanie problemów z Bluetooth
 
 Niektórzy użytkownicy mają problemy z nieudaną aktywacją Omnipod DASH, z połączeniem z Medtrum Nano oraz inne błędy podów związane z Bluetooth. Wiele z tych problemów ma jedną z przyczyn opisanych poniżej.
 
@@ -19,11 +19,11 @@ Część z tych problemów dotyczy prawdopodobnie także innych pomp insulinowyc
 
 ## Optymalizacja baterii dla Bluetooth
 
-Nowsze wersje Androida włączają optymalizację baterii dla systemowej aplikacji Bluetooth. Wiadomo, że powoduje to problemy z pompami i systemami CGM na Bluetooth.
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. Wiadomo, że powoduje to problemy z pompami i systemami CGM na Bluetooth.
 
-Jeśli przeszedłeś przez [Kreator konfiguracji AAPS](../SettingUpAaps/SetupWizard) i ustawiłeś wszystko zgodnie z sekcją [Optymalizacja baterii dla Bluetooth](#setup-wizard-bluetooth-battery-optimisation), to ustawienie powinno być poprawne. Jeśli jednak korzystałeś ze starszej wersji tego przewodnika, możliwe, że tego ustawienia nie zmieniłeś.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
-Jeśli pompa lub CGM traci połączenie, sprawdź, czy to ustawienie jest poprawne.
+Verify this is correctly configured if you have pump and CGM disconnections.
 
 ---
 
@@ -33,7 +33,7 @@ Jeśli pompa lub CGM traci połączenie, sprawdź, czy to ustawienie jest popraw
 
 Android pozwala Ci kontrolować, co każda aplikacja może robić lub do czego ma dostęp w telefonie. Służą do tego uprawnienia. Dla każdej zainstalowanej aplikacji możesz zezwolić na konkretne uprawnienia albo ich odmówić, np. dostęp do plików na urządzeniu, dostęp do Bluetooth, wyszukiwanie urządzeń w pobliżu itd.
 
-**AAPS** potrzebuje kilku konkretnych uprawnień, aby działać. Jedno z nich, potrzebne do pracy podów, to uprawnienie „Urządzenia w pobliżu”. Wiele innych aplikacji też potrzebuje tego uprawnienia. Społeczność zauważyła, że niektóre aplikacje z tym uprawnieniem mogą na niektórych urządzeniach powodować problemy z aktywacją nowych podów.
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. Wiele innych aplikacji też potrzebuje tego uprawnienia. Społeczność zauważyła, że niektóre aplikacje z tym uprawnieniem mogą na niektórych urządzeniach powodować problemy z aktywacją nowych podów.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -50,16 +50,16 @@ Napisz do @XiTatiON na kanale Discord #omnipod-dash, aby omówić aplikacje, kt�
 
 - **Amazon Alexa**  Usunięcie uprawnienia „Urządzenia w pobliżu” dla aplikacji Alexa rozwiązało problem u części osób, ale wyłącza możliwość parowania urządzeń IoT Matter.
 
-- **MINI app**  Wygląda na to, że ta aplikacja jest oparta na aplikacji myBMW i dlatego może zachowywać się tak samo.
+- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
 - **BM2** Aplikacja do monitorowania akumulatora solarnego, używana w niektórych kamperach i zestawach solarnych na kemping. Gdy aplikacja działała, nie dało się aktywować nowego poda. Obejściem problemu jest wymuszenie zatrzymania aplikacji na czas aktywacji nowego poda. Późniejsze uruchomienie aplikacji nie zakłócało pracy Dash (na Pixel 8 Pro z Androidem 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### Jak odebrać uprawnienie „Urządzenia w pobliżu” innym aplikacjom:
-Dotyczy sytuacji, gdy masz problemy z aktywacją nowego poda, a używasz właściwej, obsługiwanej wersji **AAPS** dla Twojej wersji Androida. Może być konieczne odebranie tego uprawnienia innym aplikacjom na czas aktywacji nowego poda.
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
-Wykonaj te kroki, aby odebrać uprawnienie „Urządzenia w pobliżu” wszystkim aplikacjom oprócz **AAPS**:
+Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
