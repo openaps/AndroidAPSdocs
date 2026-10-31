@@ -116,7 +116,7 @@ La automatización se ejecuta en el **máster**, así que los accesos directos d
 
 ### Ajustes de objetivos temporales
 
-Cada uno de tus ajustes de **[Objetivo temporal](TempTargets.md)** se puede añadir como botón (se muestran su nombre, su objetivo y su duración, por ejemplo *"Eating soon — 5.0 mmol/L, 45 min"*). Al tocarlo pide confirmación y luego inicia ese objetivo temporal.
+Cada uno de tus ajustes de **[Objetivo temporal](TempTargets.md)** se puede añadir como botón (se muestran su nombre, su objetivo y su duración, por ejemplo *«Comiendo Pronto — 5,0 mmol/l, 45 min»*). Al tocarlo pide confirmación y luego inicia ese objetivo temporal.
 
 ![Las categorías dinámicas: Asistente rápido y Ajustes de objetivos temporales (Escenas y Automatización aparecen cuando tienes alguna)](../images/v4/QuickLaunch/quicklaunch_dynamic.png)
 
