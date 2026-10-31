@@ -19,11 +19,11 @@ Některé z těchto problémů se pravděpodobně týkají i jiných inzulínov�
 
 ## Optimalizace baterie pro Bluetooth
 
-Novější verze Androidu mají pro systémovou aplikaci Bluetooth zapnutou optimalizaci baterie. O tomto nastavení je známo, že způsobuje některé problémy u pump a CGM s Bluetooth.
+Newer versions of Android have enabled Battery optimisation for the system Bluetooth app. O tomto nastavení je známo, že způsobuje některé problémy u pump a CGM s Bluetooth.
 
-Pokud jste postupovali podle [Průvodce nastavením](../SettingUpAaps/SetupWizard) a podle nastavení v části [Optimalizace baterie pro Bluetooth](#setup-wizard-bluetooth-battery-optimisation), mělo by být toto nastavení správné. Pokud jste ale postupovali podle starší verze tohoto návodu, je možné, že jste toto nastavení nezměnili.
+If you followed the [Setup Wizard](../SettingUpAaps/SetupWizard.md) and followed the configuration settings in the [Bluetooth Battery Optimisation](#setup-wizard-bluetooth-battery-optimisation) section then this setting should be correct, however if you followed an older version of this guide it's possible you have not changed this setting.
 
-Pokud se vám pumpa nebo CGM odpojuje, zkontrolujte, zda je toto nastavení správné.
+Verify this is correctly configured if you have pump and CGM disconnections.
 
 ---
 
@@ -33,7 +33,7 @@ Pokud se vám pumpa nebo CGM odpojuje, zkontrolujte, zda je toto nastavení spr�
 
 Android vám pomocí oprávnění umožňuje určit, co může každá aplikace v telefonu dělat nebo k čemu má přístup. U každé nainstalované aplikace můžete povolit nebo zakázat konkrétní oprávnění, např. přístup k souborům v zařízení, přístup k Bluetooth, vyhledávání zařízení v okolí apod.
 
-**AAPS** potřebuje ke své funkci řadu konkrétních oprávnění. Jedním z nich, které je nutné pro správnou funkci Podů, je oprávnění „Zařízení v okolí“. Toto oprávnění vyžaduje i mnoho jiných aplikací. Komunita zjišťuje, že řada aplikací, když toto oprávnění dostane, může na některých zařízeních způsobit problémy s aktivací nových Podů.
+**AAPS** requires a number of specific permissions to function, one which is required to ensure that Pods work is the "Nearby devices" permission. Toto oprávnění vyžaduje i mnoho jiných aplikací. Komunita zjišťuje, že řada aplikací, když toto oprávnění dostane, může na některých zařízeních způsobit problémy s aktivací nových Podů.
 
 (bluetoothtroubleshooting-apps-using-nearby-device-permission-known-apps)=
 
@@ -50,16 +50,16 @@ Pokud chcete navrhnout další aplikace do tohoto seznamu, napište @XiTatiON na
 
 - **Amazon Alexa**  Odebrání oprávnění „Zařízení v okolí“ aplikaci Alexa u některých lidí problém vyřešilo, ale znemožní párování zařízení IoT se standardem Matter.
 
-- **Aplikace MINI**  Zdá se, že aplikace vychází z aplikace myBMW, a proto se může chovat stejně.
+- **MINI app**  Appears the app is based on myBMW app and might mirror its behavior as a result
 
 - **BM2** Aplikace pro sledování solární baterie, používaná v některých obytných dodávkách a solárních sestavách pro kempování. Když aplikace běžela, bránila aktivaci nového Podu. Problém lze obejít tak, že aplikaci během aktivace nového Podu vynuceně ukončíte. Spuštění aplikace potom už funkci Dash zřejmě nerušilo (na Pixelu 8 Pro s Androidem 16).
 
 (bluetoothtroubleshooting-revoke-nearby-device-permission)=
 
 ### Jak odebrat oprávnění „Zařízení v okolí“ ostatním aplikacím:
-Pokud máte problémy s aktivací nového Podu a používáte správnou podporovanou verzi **AAPS** pro svou verzi Androidu: Může být nutné během aktivace nového Podu odebrat toto oprávnění ostatním aplikacím.
+If you are facing issues activating a new Pod and you are running on the correct supported version of **AAPS** for your version of Android, it may be necessary to revoke the permission for other apps while activating a new Pod.
 
-Postupujte takto, abyste oprávnění „Zařízení v okolí“ odebrali všem aplikacím kromě **AAPS**:
+Follow this procedure to revoke the "Nearby device" permission for all apps except **AAPS**:
 
 ```{admonition} Menus and settings
 :class: note
