@@ -1,25 +1,25 @@
-# Search the documentation
+# Zoeken in de documentatie
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+De documentatie bevat veel informatie. Zoek je een bepaald onderwerp, begrip of instelling? Dan is de zoekfunctie vaak sneller dan bladeren via het menu.
 
-## How to search
+## Zo zoek je
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+Het zoekvak staat bovenaan het navigatievenster aan de linkerkant van het scherm.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+Op kleinere schermen (zoals een telefoon) is het navigatievenster verborgen. Tik op het menupictogram (☰) linksboven om het te openen en het zoekvak te tonen.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Typ een of meer trefwoorden in het zoekvak.
+2. Druk op `Enter` of tik op het zoekpictogram.
+3. Er opent een pagina met resultaten. Daarin staat elke pagina waarop je trefwoorden voorkomen. Klik op een resultaat om naar die pagina te gaan.
 
-## Tips for better results
+## Tips voor betere resultaten
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Gebruik gerichte termen (bijvoorbeeld `tijdelijk streefdoel` of `autosens`) in plaats van hele zinnen.
+- Als je met meerdere trefwoorden zoekt, krijg je de pagina's die deze woorden bevatten. Begin breed en voeg trefwoorden toe om de resultaten te beperken.
+- De zoekfunctie doorzoekt alleen de taal en versie van de documentatie die je nu leest. Kun je iets niet vinden? Wissel dan naar de Engelse versie, die het meest volledig is (zie [Taal en versie aanpassen](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+De zoekindex wordt automatisch opgebouwd. Het kan even duren voordat heel nieuwe inhoud vindbaar is.
 ```
