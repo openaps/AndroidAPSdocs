@@ -13,7 +13,7 @@ The following model and firmware combinations are compatible:
 
 You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
-    {contents} Table of contents
+    {contents} Índice
     :depth: 1
     :local: true
 
@@ -65,7 +65,7 @@ The following settings should be configured on the pump in order for AAPS to rem
     
     ![Medtronic driver settings](../images/v4/Pumps/medtronic_settings.png)
     
-    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Before a pump is paired it looks like this:
+    **Open plugin** (or **Manage** > **Pump**) opens the Medtronic pump screen. Antes de a bomba ser pareada, ela fica assim:
     
     ![Medtronic pump screen before pairing](../images/v4/Pumps/medtronic_pump_screen.png)
 
