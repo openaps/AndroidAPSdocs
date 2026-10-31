@@ -363,10 +363,10 @@ Plugin NSClient (v menu konfigurácie sa zobrazuje ako **NSClientV3**) synchroni
 ```{admonition} Data uploaders
 :class: warning
 
-Pri používaní NSClientV3 musia všetky nástroje na nahrávanie dát používať Nightscout API v3. Ak iný nástroj na nahrávanie (napríklad vaša aplikácia CGM) nepodporuje API v3, **nechajte **AAPS** nahrávať všetky údaje** (glykémie, ošetrenia, ...) do Nightscoutu a ten nástroj vypnite.
+Pri používaní NSClientV3 musia všetky nástroje na nahrávanie dát používať Nightscout API v3. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
 ```
 
-- Do poľa *Adresa Nightscoutu* zadajte adresu svojej stránky (napr. <https://yoursitename.yourplaform.dom>).
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
 - **Uistite sa, že adresa URL je BEZ /api/v1/ na konci.**
 - V Nightscoute vytvorte *[token s rolou Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (na použitie V3 API je potrebný [Nightscout 15](https://nightscout.github.io/update/update/)) a zadajte ho do poľa **Nightscout prístupový token** (nie váš API Secret!). V **AAPSClient** môžete namiesto toho naskenovať QR kód hlavného telefónu, čím sa nastaví vlastný token klienta. Klient spárovaný pomocou PIN dostane po spárovaní vlastný token z hlavného telefónu. Pozrite si [Vlastný Nightscout token klienta](#client-master-control-own-token).
 - To vám umožní čítanie a zápis údajov medzi webovou stránkou Nightscout a **AAPS**.
