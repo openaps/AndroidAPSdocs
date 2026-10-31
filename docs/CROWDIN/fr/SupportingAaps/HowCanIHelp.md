@@ -2,7 +2,7 @@
 
 ## AAPS fonctionne entièrement grâce aux bénévoles et n'a pas de personnel rémunéré.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to develop and improve a solution to a very common want. Les développeurs donnent leur temps libre gratuitement, mais il est un peu injuste qu'ils soient confrontés à des coûts supplémentaires pour créer quelque chose d'aussi incroyable et gratuit pour tous.
+Les développeurs sont des parents, des aidants, des proches et des personnes diabétiques qui travaillent ensemble pour développer et améliorer une solution à un besoin très courant. Les développeurs donnent leur temps libre gratuitement, mais il est un peu injuste qu'ils soient confrontés à des coûts supplémentaires pour créer quelque chose d'aussi incroyable et gratuit pour tous.
 
 *Pour tester complètement un nouvel appareil, les développeurs doivent disposer d'un téléphone et d'une pompe de secours car ils ne peuvent pas être utilisés sur un être humain tant que tout n'est pas stable. Les nouveaux modèles doivent être testés au fur et à mesure de leur disponibilité. Une partie de l'argent donné est également nécessaire pour les coûts logistiques liés à l'expédition de ces fournitures vers les pays des développeurs. Parfois, il est également agréable de contribuer aux frais des développeurs pour leur permettre de quitter leurs salles obscures et de se rencontrer lors de conférences et d’événements pour laisser leurs cerveaux créatifs et analytiques se confronter.*
 
