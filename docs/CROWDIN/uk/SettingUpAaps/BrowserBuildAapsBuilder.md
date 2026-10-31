@@ -366,7 +366,7 @@ The first line of the file shows its version.
 
 (aaps-builder-troubleshooting)=
 
-## Troubleshooting
+## Усунення несправностей
 
 To see why a build failed, [read the build log](#aaps-ci-read-the-logs): the step names are different, but you find the error the same way. You can also [update a secret](#aaps-ci-update-secret) and [run the build again](#aaps-ci-rerun) the same way.
 
