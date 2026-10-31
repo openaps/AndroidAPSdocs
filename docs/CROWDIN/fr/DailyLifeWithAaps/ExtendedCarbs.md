@@ -1,102 +1,102 @@
 (Extended-Carbs-extended-carbs-ecarbs)=
 # Glucides étendus / "eGlucides"
 
-## Que sont les eGlucides et quand sont-ils utiles?
+## Que sont les eGlucides et quand sont-ils utiles ?
 
-Avec une thérapie par pompe régulière, Les bolus étendus sont un bon moyen de traiter les repas gras ou absorbés lentement et dont l'impact sur l'augmentation de la glycémie est plus long que la durée d'action de l'insuline. Cependant dans un contexte de boucle, les bolus étendus n'ont pas autant d'intérêt (et posent des difficultés techniques) car il s'agit d'un débit de basal fixe élevé, qui va à l'encontre du fonctionnement de la boucle, qui ajuste dynamiquement le débit de basal. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+Avec une thérapie par pompe classique, les bolus étendus sont un bon moyen de traiter les repas gras ou absorbés lentement, qui font monter la glycémie plus longtemps que la durée d'action de l'insuline. Cependant dans un contexte de boucle, les bolus étendus n'ont pas autant d'intérêt (et posent des difficultés techniques) car il s'agit d'un débit de basal fixe élevé, qui va à l'encontre du fonctionnement de la boucle, qui ajuste dynamiquement le débit de basal. Pour plus de détails, voir [bolus étendu](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) ci-dessous.
 
-Mais le besoin de prendre en charge de tels repas existe toujours. Which is why AAPS supports so called extended carbs or eCarbs.
+Mais le besoin de prendre en charge de tels repas existe toujours. C'est pourquoi AAPS prend en charge les glucides étendus, appelés eGlucides.
 
-eCarbs are carbs that are split up over several hours. Pour les repas standard avec plus de glucides que de graisse/protéines, entrer les glucides à l'avance (et réduire le bolus initial si nécessaire) est généralement suffisant pour éviter d'injecter trop tôt de l'insuline.  Mais pour les repas à absorption plus lente où l'entrée de la totalité des glucides au début entraîne trop d'IA injectée par les SMB, les eGlucides peuvent être utilisés pour simuler plus précisément comment les glucides (et tous les équivalents de glucides que vous entrez pour les autres macronutriments) sont absorbés et influencent la glycémie. Grâce à cette information, la boucle peut gérer les glucides en administrant les SMB de façon plus progressive, ce qui peut être assimilé à un bolus prolongé dynamique (cela devrait également fonctionner sans les SMB, mais probablement moins efficacement).
+Les eGlucides sont des glucides répartis sur plusieurs heures. Pour les repas standard avec plus de glucides que de graisse/protéines, entrer les glucides à l'avance (et réduire le bolus initial si nécessaire) est généralement suffisant pour éviter d'injecter trop tôt de l'insuline.  Mais pour les repas à absorption plus lente où l'entrée de la totalité des glucides au début entraîne trop d'IA injectée par les SMB, les eGlucides peuvent être utilisés pour simuler plus précisément comment les glucides (et tous les équivalents de glucides que vous entrez pour les autres macronutriments) sont absorbés et influencent la glycémie. Grâce à cette information, la boucle peut gérer les glucides en administrant les SMB de façon plus progressive, ce qui peut être vu comme un bolus étendu dynamique (cela devrait aussi fonctionner sans les SMB, mais probablement moins efficacement).
 
-**Remarque :** Les eGlucides ne sont pas limités aux repas lourds en graisses/protéines : ils peuvent également être utilisés pour aider dans toutes les situations où il y a des influences qui augmentent les glycémies, par ex.
+**Remarque :** les eGlucides ne sont pas limités aux repas riches en graisses/protéines : ils peuvent aussi aider dans toutes les situations où quelque chose fait monter la glycémie, par ex. d'autres médicaments comme les corticoïdes.
 
 ## Mécanique d'utilisation d'eGlucides
 
-To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+Pour saisir des eGlucides, ouvrez la boîte de dialogue **Glucides** (**Traitements** → **Glucides**), saisissez le total des glucides, réglez une **Durée** et, si besoin, décalez le début avec **Heure des glucides** (*les nombres ci-dessous sont seulement des exemples, vous devrez essayer vos propres valeurs pour obtenir une réponse glycémique satisfaisante dans vos situations*) :
 
-![Enter carbs](../images/eCarbs_Dialog.png)
+![Saisir les glucides](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
+Les eGlucides sur l'écran principal : le nombre entre parenthèses dans le champ **GA** montre les glucides encore à venir, et le graphique **GA** montre chaque entrée future d'eGlucides par un repère orange. Si vous ne voyez pas de graphique **GA**, ajoutez-en un avec **Ajouter graphique** sous les graphiques (voir [Écrans AAPS](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
+![eGlucides dans le champ GA et sur le graphique GA](../images/eCarbs_Graph.png)
 
 (AapsScreens-carbs-type)=
-## Carbs type in the Bolus wizard: bread, cake or pizza
+## Type de glucides dans l'Assistant Bolus : pain, gâteau ou pizza
 
-In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+Dans l'[Assistant Bolus](#aaps-screens-bolus-wizard), trois boutons sous le champ **Glucides** vous permettent de choisir la vitesse d'absorption de votre repas. Choisissez-en un avant de confirmer. Selon le type, **AAPS** prend une partie des glucides saisis comme glucides normaux, et ajoute plus tard des [glucides étendus (« eGlucides »)](#Extended-Carbs-extended-carbs-ecarbs) pour les repas lents et riches. Appuyez sur l'icône **(i)** à côté des boutons pour voir les aliments typiques du type choisi et son effet sur vos glucides.
 
-| Type                | Typical foods (as listed in the app)                                                                 | Carbs now, used for the bolus | eCarbs added                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | None                                                 |
-| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
-| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+| Type                  | Aliments typiques (comme listés dans l'application)                                                                                  | Glucides maintenant, utilisés pour le bolus | eGlucides ajoutés                                      |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------------------------ |
+| **Pain** (par défaut) | Pain, viennoiseries salées, yaourts, fruits, pommes de terre, riz, flocons d'avoine, légumes                                         | 100 %                                       | None                                                   |
+| **Gâteau**            | Raviolis, pâtes, plats asiatiques riches en glucides et en graisses, pâtisseries sucrées et viennoiseries, céréales, miel, confiture | 90 %                                        | 20 %, début 60 minutes plus tard, réparti sur 2 heures |
+| **Pizza**             | Lasagnes, pizza, hamburgers, frites, pommes de terre au four, chips                                                                  | 80 %                                        | 35 %, début 60 minutes plus tard, réparti sur 3 heures |
 
-**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+**Exemple** : vous saisissez 100 g et choisissez **Pizza**. Le bolus est calculé pour 80 g, enregistrés maintenant. 35 g d'eGlucides commencent 1 heure plus tard et sont répartis sur 3 heures.
 
 Good to know:
-* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
-* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
-* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
-* Grams are rounded down to whole numbers.
-* The percentages, delays and durations are fixed; they can't be changed in the settings.
-* The choice is not remembered: the wizard opens on **Bread** every time.
+* Ce n'est pas un simple partage : avec **Gâteau** et **Pizza**, les glucides enregistrés font au total **plus que ce que vous avez saisi** (110 % et 115 %). Le surplus est seulement dans les eGlucides.
+* Le bolus couvre seulement les glucides pris maintenant. **AAPS** ne fait pas de bolus à l'avance pour les eGlucides : la boucle les prend en compte quand ils commencent, comme tous les autres [eGlucides](#Extended-Carbs-extended-carbs-ecarbs).
+* Si vous réglez une **Heure des glucides**, les eGlucides commencent 60 minutes après cette heure.
+* La boîte de dialogue de confirmation montre les eGlucides sur une ligne à part, _par ex._ « eGlucides 35 g / 3 h (+60 min) ».
+* Les grammes sont arrondis à l'entier inférieur.
+* Les pourcentages, délais et durées sont fixes ; ils ne peuvent pas être modifiés dans les paramètres.
+* Le choix n'est pas mémorisé : l'assistant s'ouvre à chaque fois sur **Pain**.
 
 ______________________________________________________________________
 
-Une façon de gérer les graisses et les protéines avec cette fonctionnalité est décrite ici: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+Une façon de gérer les graisses et les protéines avec cette fonctionnalité est décrite ici : [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
 ______________________________________________________________________
 
 ## Configuration recommandée, exemple de scénario, et notes importantes
 
-La configuration recommandée est d'utiliser le plug-in OpenAPS SMB, avec les SMB activés ainsi que le paramètre *Activer SMB avec les glucides* activé.
+La configuration recommandée est d'utiliser le plugin OpenAPS SMB, avec les SMB activés ainsi que le paramètre *Activer SMB avec les GA* activé.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+Par exemple, pour une pizza, on peut donner un bolus (partiel) au début avec l'*Assistant Bolus*, puis utiliser la boîte de dialogue *Glucides* pour saisir les glucides restants sur une durée de 4–6 heures, avec un début après 1 ou 2 heures.
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+Pour démarrer plus vite, l'*Assistant Bolus* peut ajouter des eGlucides pour vous : choisissez le [type de glucides](#AapsScreens-carbs-type) **Gâteau** ou **Pizza** sous le champ **Glucides** (voir ci-dessus). Les quantités et les délais sont fixes : utilisez plutôt la boîte de dialogue *Glucides* si vous voulez d'autres valeurs.
 
-**Remarques importantes :** Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez également ajuster soigneusement le paramètre *Max minutes de basal pour limiter SMB* pour rendre l'algorithme plus ou moins agressif. Avec des repas faibles en glucides et riches en graisses/protéines, il peut être suffisant d'utiliser uniquement des eGlucides sans bolus manuels (voir le blog ci-dessus). Lorsque des eGlucides sont générés, une note Careportal est également créée pour pouvoir documenter toutes les entrées, et faciliter les itérations et l'amélioration des entrées.
+**Remarques importantes :** Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez aussi ajuster avec prudence le paramètre *Max. minutes de basal pour limiter le SMB* pour rendre l'algorithme plus ou moins agressif. Avec des repas faibles en glucides et riches en graisses/protéines, il peut être suffisant d'utiliser uniquement des eGlucides sans bolus manuels (voir le blog ci-dessus). Lorsque des eGlucides sont générés, une note Careportal est également créée pour pouvoir documenter toutes les entrées, et faciliter les itérations et l'amélioration des entrées.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Bolus étendu et pourquoi ils ne fonctionneront pas dans une boucle fermée ?
 
-Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. [Voir ci-dessous](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) pour plus de détails
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
-### Bolus étendus et passage en boucle ouverte - uniquement pour les pompesDana et Insight
+### Bolus étendu et passage en boucle ouverte - uniquement pour les pompes Dana et Insight
 
 Certaines personnes ont demandé une option pour utiliser des bolus étendus dans AAPS, car ils voulaient traiter les aliments spéciaux comme ils avaient l'habitude de le faire.
 
-That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
+C'est pourquoi **AAPS** propose un bolus étendu aux utilisateurs des pompes Dana et Insight : ouvrez **Gestion** et sélectionnez **Bolus Étendu**.
 
-**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
+**AAPS** vous avertit d'abord que la boucle fermée sera arrêtée pendant le bolus étendu. Appuyez sur **OK** pour continuer :
 
-![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+![Avertissement : le bolus étendu arrête le mode boucle fermée](../images/extended_bolus_stops_loop.png)
 
-Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+Saisissez la quantité d'**Insuline** et la **Durée**, puis appuyez sur le bouton de confirmation en bas et sur **OK** :
 
-![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+![Boîte de dialogue Bolus étendu avec 2 U sur 60 minutes](../images/extended_bolus_dialog.png)
 
-On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+Sur la pompe Insight, le bolus étendu n'est *pas disponible* si l'[émulation DBT](#Accu-Chek-Insight-Pump-settings-in-aaps) est utilisée.
 
-While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+Pendant le bolus étendu, la boucle fonctionne en mode **Boucle Ouverte** (l'icône de la boucle sur l'écran principal change), et la boucle fermée est réactivée automatiquement à la fin du bolus étendu :
 
-![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+![Icône Boucle Ouverte sur l'écran principal pendant un bolus étendu](../images/extended_bolus_main_screen.png)
 
-The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+Le menu **Gestion** affiche un bouton **Annuler** avec le débit et le temps écoulé / total (par exemple **Annuler 2,00 U/h 1/60'**). Appuyez dessus pour arrêter le bolus étendu plus tôt :
 
-![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
+![Bouton Annuler d'un bolus étendu en cours dans le menu Gestion](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Pourquoi les bolus étendus ne marchent pas avec une boucle fermée
 
-1. La boucle détermine que maintenant 1,55 U / h doit être délivré. Que ce soit administré sous forme de bolus étendu ou de DBT n'a pas d'importance pour l'algorithme. En fait, certaines des pompes utilisent le bolus étendu. Que devrait-il arriver alors ? La plupart des pilotes de pompe arrêtent alors le bolus prolongé -> Vous n’avez même pas eu besoin de le démarrer.
+1. La boucle détermine que maintenant 1,55 U / h doit être délivré. Que ce soit administré sous forme de bolus étendu ou de DBT n'a pas d'importance pour l'algorithme. En fait, certaines des pompes utilisent le bolus étendu. Que devrait-il arriver alors ? La plupart des pilotes de pompe arrêtent alors le bolus étendu -> Vous n'avez même pas eu besoin de le démarrer.
 
-2. Si vous aviez le bolus étendu en entrée, que devrait-il se passer dans le modèle?
+2. Si vous aviez le bolus étendu en entrée, que devrait-il se passer dans le modèle ?
 
    1. Doit-il être considéré comme neutre avec le débit de Basal et faire la boucle dessus ? Ensuite, la boucle devrait également être en mesure de réduire le bolus si, par exemple, vous devenez trop bas et que toute l'insuline "neutre" est éliminée ?
-   2. Faut-il simplement ajouter le bolus étendus ? Donc, la boucle devrait simplement être autorisée à continuer ? Même dans la pire des hypo ? Je ne pense pas que ce soit si bon : une hypo est prévue, mais il ne faut pas l'empêcher ?
+   2. Faut-il simplement ajouter le bolus étendu ? Donc, la boucle devrait simplement être autorisée à continuer ? Même dans la pire des hypo ? Je ne pense pas que ce soit si bon : une hypo est prévue, mais il ne faut pas l'empêcher ?
 
-3. L'IA que le bolus étendu accumule est prise en compte après 5 minutes lors du prochain calcul. En conséquence, la boucle donnerait moins de basal. Donc pas beaucoup de changements... exepté la possibilité d'éviter une hypo.
+3. L'IA que le bolus étendu accumule est prise en compte après 5 minutes lors du prochain calcul. En conséquence, la boucle donnerait moins de basal. Donc pas beaucoup de changements... sauf que la possibilité d'éviter une hypo est perdue.
