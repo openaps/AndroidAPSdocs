@@ -1,4 +1,4 @@
-# Building AAPS
+# Compilar o AAPS
 
 ## Compile você mesmo em vez de baixar
 
