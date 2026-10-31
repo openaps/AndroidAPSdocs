@@ -41,8 +41,8 @@
 为便于AAPS远程发送指令，需在泵上配置以下设置。美敦力715泵上更改每个设置所需的操作步骤已在各项设置后用括号标出。具体步骤可能因泵型号和/或固件版本而异。
 
 - **启用泵的远程模式**（在泵上按Act键，进入Utilities -> Remote Options，选择On，在下一屏幕选择Add ID并添加任意随机ID如111111）。远程ID列表中必须至少有一个ID，泵才会接收远程通信。
-- **设置最大基础率**（在泵上按Act键，进入Basal然后选择Max Basal Rate）例如，将此值设置为标准最大基础率的四倍将允许400%的临时基础率。泵允许的最大值为每小时34.9单位。
-- **设置最大单次剂量**（在泵上按Act键，进入Bolus然后选择Max Bolus）这是泵将接受的最大单次剂量。泵允许的最大值为25单位。
+- **Set Max Basal** (On the pump press Act and go to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. 泵允许的最大值为每小时34.9单位。
+- **Set Max Bolus** (On the pump press Act and go to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. 泵允许的最大值为25单位。
 - **将配置文件设为标准**。（在泵上按Act键，进入Basal然后选择Patterns）泵只需一个配置文件，因为AAPS将在您的手机上管理不同的配置文件。无需其他模式。
 - **设置临时基础率类型**（在泵上按Act键，进入Basal然后选择Temp Basal Type）。选择绝对量（非百分比）。
 
@@ -76,8 +76,8 @@ While setting up AAPS to work with your medtronic pump you need to set the follo
 - **泵序列号**：显示在泵背面，以SN开头。只需输入显示的6位数字，无需输入任何字母字符（例如123456）。
 - **泵型号**：您正在使用的泵型号（例如522）。 
 - **泵频率**：根据泵的原始销售地区有两种选项。 Please check the [FAQ](#MedtronicPump-faq) if you are unsure which option to select): 
-    - 美国及加拿大地区使用的频率为916 MHz
-    - 全球其他地区使用的频率为868 MHz
+    - for US & Canada, frequency used is 916 MHz
+    - for Worldwide, frequency used is 868 MHz
 - **泵上最大基础率（单位/小时）**：必须与泵上的设置保持一致（参见上文泵配置部分）。此设置必须谨慎选择，因为它将决定AAPS能通过基础率输送多少胰岛素。这将实际设定临时基础率的最大值。例如，将此值设为标准最大基础率的四倍，将允许400%的临时基础率。泵允许的最大值为每小时34.9单位。
 - **泵上最大单次剂量（单位）**（每小时）：必须与泵上的设置保持一致（参见上文泵配置部分）。此设置需慎重考虑，因为它决定了AAPS能设置的单次剂量上限。
 - **单次剂量开始前延迟（秒）**：发出单次剂量指令后，实际发送至泵前的等待秒数。这段延迟时间允许用户在错误发送单次剂量指令时取消操作。已通过AAPS启动的单次剂量无法取消。取消已启动单次剂量的唯一方法是手动暂停泵，然后恢复运行。
@@ -166,7 +166,7 @@ AAPS使用序列号进行同步，且该序列号会暴露给NS。由于掌握�
 
 ### OpenAPS用户
 
-OpenAPS用户须知：AAPS与美敦力泵配合使用的方案与OpenAPS完全不同。 Using AAPS the primary method of interacting with the pump is via your phone. 在常规使用场景下，通常仅需在更换储药器时使用泵菜单。这与OpenAPS的使用方式截然不同——OpenAPS通常需要通过快速大剂量按钮来输送至少部分药量。若通过泵手动输送大剂量时，AAPS若同时尝试输送药量可能导致冲突。系统设有检查机制来预防此类问题，但仍应尽可能避免这种情况。
+OpenAPS用户须知：AAPS与美敦力泵配合使用的方案与OpenAPS完全不同。 Using AAPS the primary method of interacting with the pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing reservoirs. 这与OpenAPS的使用方式截然不同——OpenAPS通常需要通过快速大剂量按钮来输送至少部分药量。若通过泵手动输送大剂量时，AAPS若同时尝试输送药量可能导致冲突。系统设有检查机制来预防此类问题，但仍应尽可能避免这种情况。
 
 ### 日志记录
 
@@ -200,7 +200,7 @@ GNARL代码完全支持AAPS中美敦力驱动器的所有功能，这意味着�
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### 若与RileyLink和/或泵的连接中断该如何处理？
+### What to do if I lose connection to RileyLink and/or pump?
 
 可尝试以下多种方法解决连接问题。
 
@@ -220,7 +220,7 @@ GNARL代码完全支持AAPS中美敦力驱动器的所有功能，这意味着�
 
 - NA - 北美地区（频率选择中需选"美国及加拿大(916 MHz)"）
 - CA - 加拿大（频率选择中需选"美国及加拿大(916 MHz)"）
-- WW - 全球范围（频率选择中需选"全球(868 MHz)"）
+- WW - Worldwide (in frequency selection you need to select "Worldwide (868 MHz)")
 
 (MedtronicPump-pump-unreachable)=
 
@@ -229,7 +229,7 @@ GNARL代码完全支持AAPS中美敦力驱动器的所有功能，这意味着�
 Some Medtronic pumps report a "pump unreachable" error after an **AAPS** update. To fix it, change the encoding type:
 
 1. Go to **Configuration** > **Pump** and tap **Settings** on the **Medtronic** card.
-2. Set **Medtronic Encoding** to **Hardware Encoding**.
+2. Set **Medtronic Encoding** to **Hardware 4b6b Encoding**.
 
 ## 获取帮助途径
 
