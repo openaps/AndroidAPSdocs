@@ -173,7 +173,7 @@ Export/Import Settings <./Maintenance/ExportImportSettings.md>
 AAPS Release Notes <./Maintenance/ReleaseNotes.md>
 What changed in AAPS v4 <./Maintenance/V4Changes.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
-- Browser Update (fork) <./Maintenance/UpdateBrowserBuild.md>
+- Browser Update (fork, AAPS-CI) <./Maintenance/UpdateBrowserBuild.md>
 - Android Studio Update <./Maintenance/UpdateComputerBuild.md>
 End of life <./Maintenance/EndOfLife.md>
 

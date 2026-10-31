@@ -229,7 +229,7 @@ GitHub shows **Page not found** (404)? First check that you are logged in to git
 
 2. If GitHub asks, tap the green button to enable workflows.
 3. Tap **Run workflow**. A small form opens:
-   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `3.3.2.1`.
+   - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
    - **Variant**: keep `fullRelease` for normal use with a pump. The other variants are explained in [build variants](#browserbuild-variant). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
    - Tap the green **Run workflow** button.
 
