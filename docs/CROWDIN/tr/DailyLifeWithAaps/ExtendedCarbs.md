@@ -9,7 +9,7 @@ Döngü kullansanız da bu tip yemeklerle başetme ihtiyacı hala vardır. Which
 
 eCarbs are carbs that are split up over several hours. Yağ/protein içerikli olmayan standart öğünler için, karbonhidratları önden girmek (ve gerekirse ilk bolusu azaltmak) genellikle çok erken insülin verilmesini önlemek için yeterlidir.  Ancak, tam karbonhidrat girişinin SMB etkisiyle çok fazla AİNS ile sonuçlandığı daha yavaş emilen yemekler için, yKarb, karbonhidratların (ve diğer makrobesinler için girdiğiniz karbonhidrat eşdeğerlerinin) nasıl emildiğini ve kan şekerini nasıl etkilediğini daha doğru bir şekilde simüle etmek için kullanılabilir. Bu bilgi ile döngü, dinamik yayma bolus olarak görülebilen bu karbonhidratlarla başa çıkmak için SMB'leri daha kademeli olarak yönetebilir (Normalde döngü SMB'ler olmadan da çalışmalıdır, ancak muhtemelen etkisi daha az olacaktır).
 
-**Not:** yKarb, yağlı / protein ağırlıklı yemeklerle sınırlı değildir: kan şekerini artıran etkilerin olduğu herhangi bir durumda yardımcı olmak için de kullanılabilirler, örn.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## yKarb kullanmanın mekaniği
 
@@ -62,7 +62,7 @@ For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carb
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Yayma bolus ve neden kapalı döngü ortamında çalışmaz?
 
-Yukarıda belirtildiği gibi, yayma veya çoklu yayma boluslar, kapalı döngü ortamında gerçekten çalışmaz. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+Yukarıda belirtildiği gibi, yayma veya çoklu yayma boluslar, kapalı döngü ortamında gerçekten çalışmaz. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Yayma bolus ve açık döngüye geçiş - yalnızca Dana ve Insight pompası
