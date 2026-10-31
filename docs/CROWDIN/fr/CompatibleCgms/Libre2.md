@@ -8,11 +8,11 @@ Les transmetteurs Bluetooth peuvent être utilisés avec le Libre 2 (EU) ou 2+ (
 
 Vérifiez que le pont et l'application que vous voulez utiliser sont compatibles avec votre capteur et avec xDrip.
 
-Le Libre2 OOP (à trouver [ici](#Libre2_OOP2)) crée les mêmes glycémies que le lecteur d'origine. AAPS avec le Libre 2 fait un lissage sur 10 à 25 minutes pour éviter certains sauts. Voir plus bas [Lissage de valeur & valeurs brutes](#libre2-value-smoothing-raw-values). OOP génère des relevés toutes les 5 minutes avec la moyenne des 5 dernières minutes. Par conséquent, les glycémies ne sont pas aussi lisses, mais elles correspondent au lecteur d'origine et suivent plus vite les glycémies « réelles ». Si vous voulez utiliser la boucle avec OOP, activez tous les paramètres de lissage dans xDrip.
+Le Libre2 OOP (à trouver [ici](#Libre2_OOP2)) crée les mêmes glycémies que le lecteur d'origine. AAPS avec le Libre 2 fait un lissage sur 10 à 25 minutes pour éviter certains sauts. Voir plus bas [Lissage de valeur & valeurs brutes](#libre2-value-smoothing-raw-values). OOP génère des relevés toutes les 5 minutes avec la moyenne des 5 dernières minutes. Par conséquent, les glycémies ne sont pas aussi lisses, mais elles correspondent au lecteur d'origine et suivent plus vite les glycémies « réelles ». Si vous voulez utiliser la boucle avec OOP, activez tous les paramètres de lissage dans xDrip.
 
-Il y a de bonnes raisons d'utiliser un transmetteur Bluetooth :
+Il y a de bonnes raisons d'utiliser un transmetteur Bluetooth :
 
--   Vous pouvez choisir plusieurs stratégies d'étalonnage OOP2 (1) : garder les valeurs du lecteur avec « no calibration », étalonner le capteur comme un Libre 1 avec « calibrate based on raw », ou enfin étalonner les valeurs de type lecteur avec « calibrate based on glucose ».  
+-   Vous pouvez choisir plusieurs stratégies d'étalonnage OOP2 (1) : garder les valeurs du lecteur avec « no calibration », étalonner le capteur comme un Libre 1 avec « calibrate based on raw », ou enfin étalonner les valeurs de type lecteur avec « calibrate based on glucose ».  
   Veillez à laisser OOP1 désactivé (2).
 
     → Menu hamburger → Settings → Less common settings → Other misc. options
@@ -22,11 +22,11 @@ Il y a de bonnes raisons d'utiliser un transmetteur Bluetooth :
 -   Le capteur Libre 2 peut être utilisé 14,5 jours, comme le Libre 1
 -   Le remplissage des 8 dernières heures (backfilling) est entièrement pris en charge
 
-Remarque : le transmetteur peut être utilisé en même temps que l'application LibreLink, sans la gêner.
+Remarque : le transmetteur peut être utilisé en même temps que l'application LibreLink, sans la gêner.
 
 ### Démarrer le capteur
 
-- → Menu hamburger (1) → Start sensor (2) → Start sensor (3) → Répondez « Not Today » (4).
+- → Menu hamburger (1) → Start sensor (2) → Start sensor (3) → Répondez « Not Today » (4).
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
