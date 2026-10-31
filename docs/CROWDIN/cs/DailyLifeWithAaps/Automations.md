@@ -50,7 +50,7 @@ Uživatel si nastavil **automatizaci**, která v 5:00 spustí „Dočasný cíl 
 
 1. Jako každá technologie mohou i **CGM**, **pumpy** a telefony selhat: technické problémy nebo chyby senzoru mohou narušit akce **automatizace** a může být potřeba ruční zásah.
 
-1. **Požadavky na **automatizace** se pravděpodobně změní, když se změní váš denní režim**. Když přecházíte mezi obdobím práce, školy a prázdnin, nastavte si v kalendáři připomínku, abyste zkontrolovali, které **automatizace** jsou právě aktivní (dají se snadno zapnout i vypnout). Například když jedete na dovolenou a už nepotřebujete automatizaci pro školní sport nebo denní cvičení, nebo potřebujete upravit časy.
+1. **Requirements for Automations are likely to change as routines change**. Když přecházíte mezi obdobím práce, školy a prázdnin, nastavte si v kalendáři připomínku, abyste zkontrolovali, které **automatizace** jsou právě aktivní (dají se snadno zapnout i vypnout). Například když jedete na dovolenou a už nepotřebujete automatizaci pro školní sport nebo denní cvičení, nebo potřebujete upravit časy.
 
 1. **Automatizace** mohou být ve vzájemném konfliktu. Je dobré každé nové nastavení **automatizace** pečlivě zkontrolovat v bezpečném prostředí a pochopit, proč se **automatizace** spustila nebo nespustila tak, jak čekáte.
 
