@@ -32,7 +32,7 @@ Voordat je begint met bouwen, heb je nog wat leeswerk te doen om te begrijpen ho
 
 ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) door John Walsh & Ruth Roberts
 
-## Achtergrondinformatie en artikelen over doe-het-zelf closed loopen
+## Achtergrondinformatie en artikelen over doe-het-zelf gesloten loops
 
 <https://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
 
