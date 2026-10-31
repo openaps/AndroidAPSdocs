@@ -1,23 +1,23 @@
-# Change language and version
+# Zmiana języka i wersji
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+Dokumentacja, którą teraz czytasz, jest dostępna w kilku językach i dotyczy konkretnej wersji **AAPS**. Język i wersję możesz zmienić w menu w prawym dolnym rogu ekranu.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Kliknij pasek w prawym dolnym rogu ekranu, aby otworzyć menu wyboru języka i wersji.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Otwieranie menu języka](../images/documentation_language_menu.png)
 
 ## Zmień język
 
-In the menu, select the language you want to read the documentation in.
+W menu wybierz język, w którym chcesz czytać dokumentację.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Zapraszamy do grona tłumaczy i korektorów na [Crowdin](https://crowdin.com/project/androidapsdocs). Pomóż przetłumaczyć dokumentację na Twój język.
 
-## Change version
+## Zmień wersję
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+Bieżąca wersja jest wyświetlana w prawym dolnym rogu ekranu. Aby przełączyć się na inną wersję, kliknij bieżącą wersję i wybierz potrzebną wersję.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Przy zmianie języka i/lub wersji możesz zobaczyć błąd 404 – strona nie znaleziona, jeśli strona w danym języku lub wersji nie istnieje. Często zdarza się to przy zmianie wersji, ale nie powinno się zdarzać przy zmianie języka: jeśli strona nie jest jeszcze przetłumaczona, wyświetli się po angielsku.
 ```
