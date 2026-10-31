@@ -1,12 +1,12 @@
 # 時區變更與夏令時間
 
-When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and sensitivity for the past again from scratch, about 10 seconds after the change. While this runs, the graphs and values on the main screen may take a moment to update.
+手機時區變更時，**AAPS** 會從頭重新計算過去的 **IOB**、基礎率和敏感度；計算會在時區變更約 10 秒後開始。計算期間，主畫面上的圖表和值可能需要稍等片刻才會更新。
 
 (timezone-traveling-with-pumps)=
 
 ## Omnipod Dash 的時區變更
 
-* Refresh the pump status in **Manage → Pump**
+* 在**管理 → 幫浦**中重新整理幫浦狀態
 * 先暫時選擇不同的 **設定檔**，然後再切換回原本或想要的 **設定檔**
 
 ## DanaR、Korean DanaR 的時區變更
@@ -29,20 +29,20 @@ When the time zone of your phone changes, **AAPS** calculates **IOB**, basal and
 
 * 依照家中時間與目的地時間的時差，調整你的 **設定檔** 時間偏移。
    
-   * Tap the **Profile** name on the main screen to open the [Profile screen](#ProfileSwitch-manage-v4)
-   * Select your **Profile** and tap **▶ Activate**
-   * Set '**Time shift**' according to your destination and tap **Activate**.
+   * 在主畫面點選**設定檔**名稱，開啟[設定檔畫面](#ProfileSwitch-manage-v4)
+   * 選取你的**設定檔**，然後點選**▶ 註冊**
+   * 依照目的地設定「**時間偏移**」，然後點選**註冊**。
    
    ![設定切換與時間調整](../images/ProfileSwitchTimeShift2.png)
    
-   * e.g. Vienna -> New York: **Profile Switch** +6 hours
-   * e.g. Vienna -> Sydney: **Profile Switch** -8 hours
+   * 例如，維也納 → 紐約：**設定檔切換** +6 小時
+   * 例如，維也納 → 雪梨：**設定檔切換** -8 小時
 
 ### 方案2：刪除幫浦歷史紀錄
 
 * 在手機設定中關閉「自動日期和時間」（手動更改時區）。
 
-When you get off the plane:
+下飛機後：
 
 * 關閉幫浦。
 * 更改手機時區。
@@ -62,11 +62,11 @@ Insight 也會紀錄更改時間的歷史項目，紀錄時間從哪個（舊）
 
 這可能導致 **TDD** 不精準。但這不應該成為問題。
 
-因此 Insight 使用者不需要擔心時區變更和時間更改。此規則有一個例外：Insight 幫浦內部有一個小型電池來供電時間等。當你更換「主」電池時保持時間運作。 If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. 在這種情況下，更換電池之前的所有項目將在 AAPS 的計算中被跳過，因為無法正確識別正確的時間。
+因此 Insight 使用者不需要擔心時區變更和時間更改。此規則有一個例外：Insight 幫浦內部有一個小型電池來供電時間等。當你更換「主」電池時保持時間運作。如果更換電池花費太多時間，內部電池的電力就會耗盡，時鐘也會重設。裝入新電池後，系統會要求你輸入時間和日期。在這種情況下，更換電池之前的所有項目將在 AAPS 的計算中被跳過，因為無法正確識別正確的時間。
 
 ## Accu-Chek Combo 的時區變更
 
-The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the driver programs into the pump. 此外，他會將時區儲存在本地 AAPS 偏好設定中，以便將幫浦的本地時間轉換為具有時區偏移的完整時間戳記。使用者不需要做任何操作；如果 Combo 的時間與手機的目前時間相差太大，幫浦的時間會自動調整。
+[Combo 驅動程式](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md)會自動將幫浦時間調整為手機時間。 Combo 無法儲存時區，只能儲存當地時間，而驅動程式正是將當地時間設定到幫浦中。此外，他會將時區儲存在本地 AAPS 偏好設定中，以便將幫浦的本地時間轉換為具有時區偏移的完整時間戳記。使用者不需要做任何操作；如果 Combo 的時間與手機的目前時間相差太大，幫浦的時間會自動調整。
 
 請注意，這需要一些時間，因為只能在遠端終端模式下完成，而該模式通常較慢。這是 Combo 無法克服的限制。
 
@@ -88,9 +88,9 @@ The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically 
 
 ### 多數幫浦的 DST 自動調整
 
-* However, the **Loop** will be deactivated for 3 hours AFTER the DST switch (usually 1am onwards) has taken place and **AAPS** will default to background basal as selected in your **Profile**. 這是基於安全考量—在 DST 變更前重複注射可能導致 **IOB** 偏高。
-* After DST has taken place, make a **Profile Switch** to the desired **Profile** to enable the **Loop**: tap the profile name on the main screen, then the round **▶** button (see [Activating a profile](#ProfileSwitch-manage-v4)).
-* 夏令時間調整前，您也會在 **AAPS** 主畫面收到通知，告知**循環**已暫時停用。 This message will appear without beep, vibration or similar sound.
+* 不過，夏令時間切換後的 3 小時內（通常從凌晨 1 點起），**循環**會停用，而 **AAPS** 會採用你在**設定檔**中選定的背景基礎率。這是基於安全考量—在 DST 變更前重複注射可能導致 **IOB** 偏高。
+* 夏令時間切換後，請切換至所需的**設定檔**以啟用**循環**：點選主畫面上的設定檔名稱，再點選圓形的 **▶** 按鈕（請參閱[啟用設定檔](#ProfileSwitch-manage-v4)）。
+* 夏令時間調整前，您也會在 **AAPS** 主畫面收到通知，告知**循環**已暫時停用。這則訊息不會伴隨嗶聲、震動或其他類似提示音。
 
 若你使用 **AAPS** 的計算機進行注射，除非你確定這些資料完全正確，否則請不要使用 **COB** 與 **IOB** 資料。請小心，且在 DST 切換完成後的數小時內不要使用此功能。
 
@@ -102,20 +102,20 @@ The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically 
 
 * DST 變更會自動完成。無需進行任何操作。
 
-### DST for Medtrum
+### Medtrum 的 DST
 
 * DST 變更會自動完成。無需進行任何操作。
 
-### DST for Omnipod Dash
+### Omnipod Dash 的 DST
 
-* Either allow **AAPS** to temporarily default background basal after DST has taken place as explained above.
-* Otherwise, if you do not want **AAPS** to temporarily default to background basal overnight, you can change the time zone the day prior DST is due to take place to avoid overnight disruption. NOTE THIS OPTION MAY CAUSE YOUR POD TO PREMATURELY EXPIRE. PLEASE HAVE SUPPLIES WITH YOU IF OPTING FOR THE FEATURE BELOW.
+* 如上所述，可讓 **AAPS** 在 DST 完成後暫時將背景基礎率作為預設。
+* 否則，若你不想讓 **AAPS** 在夜間暫時改為背景基礎率，你可以在 DST 預定發生的前一天變更時區，以避免夜間中斷。注意：此選項可能導致你的 Pod 提早到期。若選擇下列功能，請務必隨身攜帶耗材。
 
 #### 更改時鐘前的操作
 
 1. 關閉手機中會自動設定時區的設定，這樣使用者就能切換到不採用夏令時間的時區。如何操作取決於你的智慧型手機與 Android 版本。
    
-   * Some phones have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the time zone (which you must turn OFF: **Set automatically** under **Time zone** in the screenshot below).
+   * 有些手機有兩項設定：一項是自動設定時間（理想情況下應保持開啟），另一項是自動設定時區（必須關閉：請在下方螢幕截圖中的 **Time zone** 下方，關閉 **Set automatically**）。
    * 不幸的是，有些 Android 版本只有一個開關，同時控制時間與時區的自動設定。你現在必須關閉這個開關。
 
 ![Screenshot_20260329-110315 (1)](../images/570963727-ca40c1c6-1697-4832-ae10-5cf6a1dc0bce.png)
@@ -123,11 +123,11 @@ The [Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically 
 2. 找到一個與你目前所在地時間相同、但不使用 DST 的時區。
    
    * 可在此找到這些國家的列表 [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Congo). Change your phone's timezone to Congo.
+   * 以中歐時間（CET）為例，可以選擇「Brazzaville」（剛果）。將手機的時區改為剛果。
 
 ![Screenshot_20260329-111830](../images/570966323-b7b7f738-f91e-40df-ad79-f404fbfb9ae6.png)
 
-3. In **AAPS** refresh your pump and switch to your desired **Profile**.
+3. 在 **AAPS** 中重新整理幫浦，並切換至所需的 **設定檔**。
 
 4. 請檢查 **AAPS** 的 **IOB** 和 **COB**；如果數值不準確，請停用**循環**至少一個 DIA 和 Max-Carb-Time 的時間，以較長者為準。
 
