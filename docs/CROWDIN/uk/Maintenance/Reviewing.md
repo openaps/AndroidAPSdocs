@@ -1,195 +1,195 @@
-# Reviewing your data
+# Перегляд ваших даних
 
-## AAPS History Browser
+## Перегляд історії AAPS
 
-**AAPS** keeps all your history (**BG**, treatments, basal, targets, **Profile Switch**, …) in a local database on the phone. This database is not part of the [settings export](../Maintenance/ExportImportSettings.md). You can review it in **AAPS** itself with the **History browser** and the **Statistics** screen described below. For long-term reviews and reports, upload your data to [Nightscout](../SettingUpAaps/Nightscout.md) or [Tidepool](../SettingUpAaps/Tidepool.md).
+**AAPS** зберігає всю вашу історію (**ГК**, терапію, базал, цілі, **Перемикання профілю**, …) у локальній базі даних на телефоні. Ця база даних не входить до [експорту налаштувань](../Maintenance/ExportImportSettings.md). Переглянути її можна в самому **AAPS** за допомогою **Перегляду історії** та екрана **Статистика**, описаних нижче. Для довгострокового аналізу і звітів вивантажуйте свої дані в [Nightscout](../SettingUpAaps/Nightscout.md) або [Tidepool](../SettingUpAaps/Tidepool.md).
 
-**AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
+Історію **AAPS** можна переглянути в **Перегляді історії**: відкрийте **меню** (☰) і виберіть **Перегляд історії**.
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Перегляд історії](../images/v4/Screens/history_browser.png)
 
-- Tap the **date card** to pick the day you want to review.
-- The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
-- Use the **<** and **>** arrows to move one day back or forward, and **Now** to return to the current day.
-- The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
+- Натисніть **картку з датою**, щоб вибрати день, який хочете переглянути.
+- Графіки відкриваються зменшеними, щоб показати **весь вибраний день**. Розведіть два пальці, щоб збільшити частину графіка.
+- Стрілками **<** і **>** можна перейти на один день назад або вперед, а кнопкою **Зараз** — повернутися до поточного дня.
+- Графіки показують ті самі дані, що й графіки головного екрана (ГК, терапія, базал, IOB, COB, активність, відхилення...).
 
 (reviewing-statistics)=
-## AAPS Statistics
+## Статистика AAPS
 
-**AAPS** provides basic monitoring statistics.
+**AAPS** надає базову статистику для моніторингу.
 
-Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
+Більшість значень базуються на [рекомендаціях](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes) ADA 2023.
 
-To open them, open the **menu** (☰) and select **Statistics**.
+Щоб відкрити її, відкрийте **меню** (☰) і виберіть **Статистика**.
 
-![Menu with Statistics](../images/Maintenance/statistics.png)
+![Меню з пунктом «Статистика»](../images/Maintenance/statistics.png)
 
-The **Statistics** screen has four tabs: **Insulin**, **Time in Range**, **Glucose** and **Cycle**. Tap a tab, or swipe left or right to move between them.
+Екран **Статистика** має чотири вкладки: **Інсулін**, **Час у діапазоні**, **Глюкоза** і **Цикл**. Натисніть вкладку або проведіть ліворуч чи праворуч, щоб переходити між ними.
 
 (reviewing-tdd)=
-### Insulin tab: Total Daily Dose
+### Вкладка «Інсулін»: загальна добова доза
 
-The **Total Daily Dose** card shows one line per day for the previous days (up to one week) for which **AAPS** has insulin data, then their **Average**, then **Today** so far. Right after installing **AAPS**, only **Today** is shown. The columns are:
+Картка **Загальна добова доза** показує по одному рядку на кожен із попередніх днів (до одного тижня), за які **AAPS** має дані про інсулін, потім їхнє **Середнє**, а потім **Сьогодні** (на цей момент). Одразу після встановлення **AAPS** показується лише **Сьогодні**. Стовпці:
 
-- **Basal**: only basal.
-- **Bolus**: the sum of bolus treatments and SMBs.
-- **TDD Total**: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- **Carbs**: declared carbs and eCarbs treatments.
+- **Базал**: лише базал.
+- **Болюс**: сума болюсів і SMB.
+- **Загалом TDD**: загальна добова доза інсуліну (**TDD**), сума болюсного і базального інсуліну, введеного за день.
+- **Вуглеводи**: внесені вуглеводи і eCarbs.
 
-The **TDD** section is calculated when you open the page and takes a few seconds to compute. Tap **Recalculate** to compute it again.
+Розділ **TDD** розраховується, коли ви відкриваєте сторінку, і розрахунок триває кілька секунд. Натисніть **Перерахувати**, щоб розрахувати знову.
 
-![Statistics: the Insulin tab with the Total Daily Dose](../images/Maintenance/statistics2.png)
+![Статистика: вкладка «Інсулін» із загальною добовою дозою](../images/Maintenance/statistics2.png)
 
-The **TDD** is your bolus plus basal insulin per day. Some doctors use - especially for new pumpers - a basal-bolus ratio of 50:50: the total base basal (**TBB**, the sum of your basal rates over 24 hours) should then be about half of the TDD. Others prefer a TBB of 32 % to 37 % of the TDD.
+**TDD** — це ваш болюсний плюс базальний інсулін за день. Деякі лікарі використовують — особливо для тих, хто щойно почав користуватися помпою, — співвідношення базал/болюс 50:50: тоді загальний базовий базал (**TBB**, сума ваших базальних швидкостей за 24 години) має становити приблизно половину TDD. Інші віддають перевагу TBB від 32 % до 37 % від TDD.
 
-Like most rules of thumb, this is of limited real validity. Your diabetes may vary!
+Як і більшість приблизних правил, це має обмежену реальну цінність. Ваш діабет може відрізнятися!
 
-### Time in Range tab
+### Вкладка «Час у діапазоні»
 
-Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
+Час у діапазоні (**TIR**): 70–180 мг/дл або 3,9–10 ммоль/л.
 
-**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+Дані **TIR** доступні за 7 і 30 днів, залежно від кількості даних у базі даних **AAPS**.
 
-Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
+Нижче доступна статистика часу у вузькому діапазоні (TITR) 70–140 мг/дл або 3,9–7,8 ммоль/л (на екрані цей діапазон показано як 70–141).
 
-**Discuss targets with your endo**
+**Обговоріть цілі зі своїм ендокринологом**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress .
+Ваш діабет може відрізнятися. Будь-які запропоновані цілі слід обговорити з ендокринологом або вашою медичною командою. Якщо правильно ними користуватися, статистика AAPS може бути ефективним інструментом, щоб стежити за трендами __ГК__ і контролювати прогрес.
 
-![Statistics](../images/Maintenance/statistics3.png)
+![Статистика](../images/Maintenance/statistics3.png)
 
-Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
+Нижче картка **Dexcom TIR** показує детальну статистику **TIR** за 14 днів.
 
-**SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
+**SD**: стандартне відхилення, [показник](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) мінливості ГК (найвище = найгірше).
 
-HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
+HbA1c: оцінка глікованого гемоглобіну, розрахована із середнього значення вимірювань CGM. Це орієнтовне значення, яке може не збігатися з результатами аналізу крові на HbA1c.
 
-![Statistics](../images/Maintenance/statistics4.png)
+![Статистика](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
-### Glucose tab: Ambulatory Glucose Profile (AGP)
+### Вкладка «Глюкоза»: амбулаторний профіль глюкози (AGP)
 
-The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually moves over the day. Choose the period with the buttons at the top: **Today**, **24h**, **7d**, **30d** or **90d**.
+**Амбулаторний профіль глюкози** (**AGP**) показує, як зазвичай змінюється ваша глюкоза протягом дня. Виберіть період кнопками вгорі: **Сьогодні**, **24 год**, **7 дн.**, **30 дн.** або **90 дн.**.
 
-- **The chart**: one day from midnight to midnight. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). A narrow band means your glucose is similar from day to day at that hour. Dashed lines mark your **LOW mark**, 140 mg/dL (7.8 mmol/L) and your **HIGH mark**.
-- **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
-- **SD** (standard deviation) and **CV** (coefficient of variation): how much your glucose varies. A lower value means steadier glucose.
-- **Days**: how many days of CGM data were used.
+- **Графік**: одна доба від півночі до півночі. Лінія — це **Медіана** (половина ваших показників у цю годину була нижчою, половина — вищою). Навколо неї одна смуга охоплює середню половину ваших показників (**25–75%**), а ширша смуга — більшість із них (**10–90%**). Вузька смуга означає, що у цю годину ваша глюкоза день у день схожа. Пунктирні лінії позначають вашу **Нижню межу**, 140 мг/дл (7,8 ммоль/л) і вашу **Верхню межу**.
+- **Глікемічний огляд**: час у вашому діапазоні, у вузькому діапазоні (70–140 мг/дл або 3,9–7,8 ммоль/л), вище і нижче вашого діапазону, потім ваша **Середня** глюкоза і **Медіана**. Ваш діапазон — це **Нижня межа** і **Верхня межа**, задані в розділі [Діапазон для візуалізації](#Preferences-range-for-visualization).
+- **eA1c** і **GMI**: дві оцінки HbA1c, розраховані з ваших показників CGM. Як і HbA1c вище, вони можуть не збігатися з вашими аналізами крові на HbA1c.
+- **SD** (стандартне відхилення) і **CV** (коефіцієнт варіації): наскільки змінюється ваша глюкоза. Нижче значення означає стабільнішу глюкозу.
+- **Дні**: скільки днів даних CGM було використано.
 
-![Statistics: the Glucose tab with the AGP chart](../images/Maintenance/statistics_agp.png) ![Statistics: Glycemic overview and glucose metrics](../images/Maintenance/statistics_agp2.png)
+![Статистика: вкладка «Глюкоза» з графіком AGP](../images/Maintenance/statistics_agp.png) ![Статистика: глікемічний огляд і показники глюкози](../images/Maintenance/statistics_agp2.png)
 
-Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your last 14 days of glucose as a pentagon. A smaller pentagon means better glucose control.
+Під AGP картка **Пентагон глюкози (CGP)** показує п'ять показників вашої глюкози за останні 14 днів у вигляді п'ятикутника. Менший п'ятикутник означає кращий контроль глюкози.
 
-![Statistics: the Glucose Pentagon](../images/Maintenance/statistics_cgp.png)
+![Статистика: Пентагон глюкози](../images/Maintenance/statistics_cgp.png)
 
-### Cycle tab: TDD Cycle Pattern
+### Вкладка «Цикл»: циклічність TDD
 
-**TDD Cycle Pattern** overlays your daily insulin totals in 28-day cycles, to help you spot recurring patterns. Each cycle is drawn as a line (**Individual cycles**), together with their average.
+**Циклічність TDD** накладає ваші добові суми інсуліну за 28-денними циклами, щоб допомогти помітити повторювані закономірності. Кожен цикл показано лінією (**Окремі цикли**), разом з їхнім середнім.
 
-- **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
-- **Cycle offset**: moves the start of the cycle (0 to 27 days).
+- **Необроблена TDD** / **Очищена TDD**: виберіть загальну добову дозу як введено або TDD без інсуліну на вуглеводи.
+- **Зсув циклу**: зсуває початок циклу (від 0 до 27 днів).
 
-At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
+Потрібно щонайменше 56 днів даних (2 цикли). Якщо даних менше, картка показує **Недостатньо даних (для 2 циклів потрібно щонайменше 56 днів)**. Закономірність розраховується лише тоді, коли ви відкриваєте вкладку **Цикл**, бо вона читає дані за 168 днів.
 
 (aaps-screens-treatments)=
-## Treatments history
+## Історія терапії
 
-Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
+Відкрийте **меню** (☰) у лівому верхньому куті головного екрана і виберіть **Історія терапії**. Тут ви можете переглядати і змінювати історію такої терапії, кожна на окремій вкладці (прокрутіть рядок вкладок, щоб побачити всі):
 
-* Carbs and bolus
+* Вуглеводи і болюс
 * [Подовжений болюс](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temp basal
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
-* [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes and careportal entries
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+* Тимчасовий базал
+* [Тимчасова ціль](../DailyLifeWithAaps/TempTargets.md)
+* [Перемикання профілю](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
+* Careportal: нотатки і записи Careportal
+* Робочий режим: історія статусу петлі
+* Введення користувача: інші записи, які не надсилаються в Nightscout
 
-At the end of each line, small icons show where the data comes from or has been sent to:
-* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
-* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
-* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
+У кінці кожного рядка маленькі значки показують, звідки надійшли дані або куди їх надіслано:
+* Значок **Nightscout** (логотип Nightscout): дані надійшли з Nightscout або записані в Nightscout
+* Значок **помпи**: дані надійшли з історії помпи (їх обробила помпа)
+* Значок **кошика**: запис видалено (показується, лише коли ви показуєте видалені записи значком **ока** праворуч угорі)
 
 (screens-bolus-carbs)=
-### Carbs and bolus
+### Вуглеводи і болюс
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Вуглеводи і болюс](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+На цій вкладці можна переглянути журнал болюсів і вуглеводів. Кожен болюс (рядок **1**) показує поруч із кількістю інсуліну залишок пов'язаного IOB. Походження болюса може бути таким:
+* Їжа (введено вручну кнопками «Інсулін», «Швидкий майстер» або «Калькулятор болюса»)
+* SMB, якщо використовується функція SMB
 
-The carbs entries (line **2**) are shown with their amount in grams.
+Записи вуглеводів (рядок **2**) показано з кількістю в грамах.
 
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
+Якщо ви розраховували дозу інсуліну за допомогою [Калькулятора болюса](#aaps-screens-bolus-wizard), натисніть текст “Calc” у рядку болюса, щоб побачити подробиці розрахунку болюса.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+Залежно від помпи, інсулін і вуглеводи можуть бути показані в одному рядку або в кількох: один для подробиць розрахунку, один для вуглеводів, один для самого болюса.
 
-The Treatments history can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+Історію терапії можна використати, щоб виправити неправильні записи вуглеводів (_наприклад_, ви переоцінили або недооцінили вуглеводи). Зверніть увагу, що наявний запис змінити не можна, потрібно зробити так:
 
-1. Check and remember actual COB and IOB on the main screen.
-2. Depending on pump, carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount: press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.
-4. Make sure carbs are removed successfully by checking COB on the main screen again.
-5. Do the same for IOB if there is just one line including carbs and insulin.
+1. Перевірте і запам'ятайте поточні COB і IOB на головному екрані.
+2. Залежно від помпи, вуглеводи можуть бути показані разом з інсуліном в одному рядку або окремим записом (наприклад, з Dana RS).
+3. Видаліть запис з неправильною кількістю вуглеводів: натисніть значок кошика, виберіть рядки для видалення, а потім ще раз натисніть значок кошика, щоб завершити.
+4. Перевірте COB на головному екрані ще раз, щоб переконатися, що вуглеводи успішно видалено.
+5. Зробіть те саме для IOB, якщо є лише один рядок, що містить вуглеводи та інсулін.
 
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   → Якщо вуглеводи не видалено як потрібно, а ви додасте ще вуглеводи, як описано тут (6.), COB буде занадто високим, і це може призвести до введення занадто великої кількості інсуліну.
 
-6. Enter the correct carb amount again (**Treatments → Carbs** in the bottom navigation, or a [QuickLaunch](#quicklaunch) **Carbs** button) and make sure to set the correct event time.
-7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
+6. Знову введіть правильну кількість вуглеводів (**Терапія → Вуглеводи** на нижній панелі навігації або кнопка **Вуглеводи** [швидкого запуску](#quicklaunch)) і обов'язково задайте правильний час події.
+7. Якщо є лише один рядок, що містить вуглеводи та інсулін, вам потрібно також додати кількість інсуліну. Обов'язково задайте правильний час події і перевірте IOB на головному екрані після підтвердження нового запису.
 
-### Temp basal
+### Тимчасовий базал
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Тимчасовий базал](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
-* Positive IOB if the temp basal was higher than the one set in the Profile
-* Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
+Тут показано **тимчасові базали**, застосовані петлею. Якщо запис ще впливає на IOB, ця інформація показана поруч зі швидкістю (рядок **1**). Це може бути:
+* Позитивний IOB, якщо тимчасовий базал був вищим за заданий у профілі
+* Негативний IOB для нульового тимчасового базалу (як у рядку **1**) або якщо тимчасовий базал був нижчим за заданий у профілі
 
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
+Видалення записів впливає лише на ваші звіти в Nightscout і, ймовірно, спотворить ваш справжній IOB — це не рекомендовано.
 
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+Червона літера S зліва від рядка означає “Suspend” (призупинено): так буває, коли базал зараз не вводиться. Це нормальна ситуація, наприклад, під час заміни пода.
 
-### Temporary target
+### Тимчасова ціль
 
-![Temporary target](../images/TreatmentsView3.png)
+![Тимчасова ціль](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+Тут можна переглянути історію тимчасових цілей.
 
-### Profile switch
+### Перемикання профілю
 
 ![Profile Switch](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
+Тут можна переглянути історію перемикань профілю. Кожного разу, коли ви перемикаєте профіль, може з'являтися кілька записів: рядок **1**, збережений і в NS, і в історії помпи, відповідає фактичному перемиканню. Рядок **2**, збережений у Nightscout, але не в історії помпи, відповідає запиту користувача на перемикання профілю.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+Видалення записів впливає лише на ваші звіти в Nightscout і ніколи не змінює поточний профіль.
 
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+Кнопкою **Клонувати** в рядку **2** можна зробити копію **Перемикання профілю**. Більше інформації дивіться в розділі [Ваш профіль AAPS > Керування профілями](#your-aaps-profile-clone-profile-switch).
 
 ### Careportal
 
-![Care portal](../images/TreatmentsView5.png)
+![Careportal](../images/TreatmentsView5.png)
 
-This tab shows all notes and careportal entries recorded in Nightscout.
+Ця вкладка показує всі нотатки і записи Careportal, записані в Nightscout.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
-### Running mode
+### Робочий режим
 
-![Running mode](../images/TreatmentsView6.png)
+![Робочий режим](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, LGS, suspend, disconnect.
+Ця вкладка показує історію змін [статусу петлі](#AapsScreens-loop-status): відкрита, закрита, LGS, призупинено, відключено.
 
-### User entry
+### Введення користувача
 
-![User entry](../images/screens/treatments_user_entry.png)
+![Введення користувача](../images/screens/treatments_user_entry.png)
 
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+Ця вкладка показує дії, виконані в **AAPS** користувачем або **Автоматизацією** (зміни режиму петлі, перемикання профілю, терапія, експорт налаштувань...). Ці записи не надсилаються в Nightscout.
 
 ------
 
-## What is the difference between Nightscout vs Tidepool?
+## Яка різниця між Nightscout і Tidepool?
 
-Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
+Nightscout дозволяє користувачу зберігати дані **AAPS** і пропонує широкий набір [інструментів для звітів](https://nightscout.github.io/nightscout/reports/).
 
-Whereas, Tidepool allows the user to [review their data](https://www.tidepool.org/viewing-your-data) and provides [simple sharing with your endo team](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
+Tidepool натомість дозволяє користувачу [переглядати свої дані](https://www.tidepool.org/viewing-your-data) і надає [простий спосіб ділитися ними з вашою медичною командою](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
