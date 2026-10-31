@@ -125,7 +125,7 @@ Existem limites de segurança para as **Automatizações**:
 Tenha cuidado ao selecionar um valor negativo na **Automatização**
 ```
 
-É preciso ter cuidado ao escolher um «valor negativo» numa «Condição» como «é menor que» nas **Automatizações**. For example:
+É preciso ter cuidado ao escolher um «valor negativo» numa «Condição» como «é menor que» nas **Automatizações**. Por exemplo:
 
 ![Texto alternativo](../images/Automations/automation_comparison_operators.png)
 
@@ -144,7 +144,7 @@ Acionar uma **Automatização** para qualquer número **maior que** -0,1 mmol/l 
 
 ![Condições da Automatização](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Deslize para baixo para ver o resto da lista:
 
 ![Condições da Automatização (continuação)](../images/Automations/automation_trigger_picker_2.png)
 
@@ -178,7 +178,7 @@ Várias condições podem ser ligadas com
 
 * Usar a localização passiva: o **AAPS** só obtém a localização quando outras apps a pedem.
 * Usar a localização da rede: localização da sua rede Wi-Fi.
-* Use GPS location (Attention! Isto pode gastar muita bateria!)
+* Usar a localização GPS (Atenção! Isto pode gastar muita bateria!)
 
 **Condições**: dados da bomba e do sensor
 
@@ -198,7 +198,7 @@ Note que, em todas as condições de idade, a comparação «é igual a» quase 
 
 ![Ações da Automatização](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Deslize para baixo para ver o resto da lista:
 
 ![Ações da Automatização (continuação)](../images/Automations/automation_action_picker_2.png)
 
