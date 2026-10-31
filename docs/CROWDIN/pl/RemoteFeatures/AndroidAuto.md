@@ -13,6 +13,8 @@ To oznacza, że:
 
 ![Dane CGM z AAPS w Android Auto](../images/android_auto_01.png)
 
+(androidauto-check-that-aaps-can-show-notifications)=
+
 ## Sprawdź, czy AAPS może pokazywać powiadomienia
 
 **AAPS** zawsze pokazuje powiadomienie o stanie z aktualną glikemią, IOB i COB. To jest powiadomienie, które Android Auto wyświetla w samochodzie. W **AAPS** nie trzeba niczego włączać, ale Android musi pozwalać **AAPS** na pokazywanie powiadomień.
@@ -28,6 +30,8 @@ Przewiń w dół i upewnij się, że **Bieżący status** jest włączony: to ka
 Zanim pójdziesz do samochodu, sprawdź, czy widzisz w telefonie powiadomienie o stanie **AAPS**!
 
 ![Powiadomienie AAPS w telefonie](../images/android_auto_04.png)
+
+(androidauto-allow-the-use-of-unknown-sources-with-android-auto)=
 
 ## Zezwól w Android Auto na „nieznane źródła”
 
@@ -79,4 +83,4 @@ Dane CGM będą wyświetlane tak:
 
 ## Rozwiązywanie problemów:
 
-* Jeśli nie widzisz powiadomienia, sprawdź, czy w Androidzie [zezwoliłeś AAPS na pokazywanie powiadomień](#check-that-aaps-can-show-notifications) i czy [Android Auto ma dostęp do powiadomień](#allow-the-use-of-unknown-sources-with-android-auto).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](#androidauto-check-that-aaps-can-show-notifications) in Android and if [Android Auto has access rights to notifications](#androidauto-allow-the-use-of-unknown-sources-with-android-auto).
