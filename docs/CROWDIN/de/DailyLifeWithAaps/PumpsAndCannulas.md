@@ -17,7 +17,7 @@ Der physische Catridge-/Reservoirwechsel kann nicht über **AAPS** durchgeführt
 
 3. Schlauch und Kanüle entlüften/füllen: Dies kann direkt an der Pumpe erfolgen. Achte darauf, dass keine Blasen mehr im Schlauch sind.
 
-4. Setze die neue Kanüle. Sobald die Kanüle gesetzt ist und die Setznadel entfernt wurde, hat die neue Kanüle noch etwas Luft in der Kanülennadel, die auch entlüftet werden muss. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Pump site change** and/or **Insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
+4. Setze die neue Kanüle. Sobald die Kanüle gesetzt ist und die Setznadel entfernt wurde, hat die neue Kanüle noch etwas Luft in der Kanülennadel, die auch entlüftet werden muss. To announce this in **AAPS** and prime the site: open **Prime/Fill** (in the expanded status panel on the main screen, in the **Manage** sheet, or as a [QuickLaunch](QuickLaunch.md) button) and tick **Record pump site change** and/or **Record insulin cartridge change** as appropriate to record the change. Now press the default insulin cannula prime amount (it is usually around 0.3 U, but check this value is correct for your cannula) and select **OK**. Read the summary message, and confirm to execute the priming by tapping **OK**.
 
    ![Prime/Fill in the Manage sheet with a tube pump](../images/v4/Screens/manage_sheet_tube_pump.png)
 
@@ -80,7 +80,7 @@ Welche Strategie Du wählen solltest, ist höchst individuell und am besten durc
 **Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
 
 - With the two buttons at the top (cannula icon and sensor icon), you can show Cannula sites only, Sensor sites only, or both
-- All Cannula change and Sensor change event since the past 45 days are available.
+- All Cannula change and Sensor change events from the past 45 days are available.
 - Click on a Site area, or in one entry in the list below to filter the list with only entries in selected area. The selected area will be highlighted in light green color.
 - Tap the **pencil** icon next to an entry to open the Edit view and update its Site location, Arrow or Note
 
@@ -100,7 +100,7 @@ Edit Mode allows you to select Location, Arrow, and Note associated to selected 
 
 - The entry being edited is shown below the body images, with its type icon (cannula or sensor)
 - Front and back views are shown side by side: tap the area where you placed it
-- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the pas 45 days in this site
+- Once a Site selected (highlighted in green), you will see in the list below the list of all entries done in the past 45 days in this site
 
 ![Edit Mode](../images/SiteRotation/EditMode.png)
 
