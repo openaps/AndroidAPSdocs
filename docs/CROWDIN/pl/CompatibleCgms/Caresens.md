@@ -10,7 +10,7 @@ Są różne sposoby, aby używać danych z CareSens w **AAPS**:
 ## 1. xDrip
 
 1. Zainstaluj i skonfiguruj oficjalną aplikację CareSens.
-2. W aplikacji CareSens przejdź do settings -> Manage Data and Connections -> włącz przełącznik xDrip. Jeśli chcesz, wyłącz połączenia danych z CareLevo, DIA:CONN, CloudLoop itd. w sekcji „others”.
+2. W aplikacji CareSens przejdź do settings -> Manage Data and Connections -> włącz przełącznik xDrip. If preferred, turn off the data connections to CareLevo, DIA:CONN, CloudLoop, etc. in "others".
 
 ![Połączenia danych w aplikacji CareSens](../images/eversenseapp-dataconnections.png)
 
