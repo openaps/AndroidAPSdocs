@@ -1,43 +1,43 @@
-# Making changes to your AAPS' configuration
+# Hacer cambios en la configuración de AAPS
 
-After you have completed the **[Setup Wizard](../SettingUpAaps/SetupWizard.md)**, you don't need to run the entire Wizard again if you want to only change parts of your **AAPS**' configuration.
+Cuando hayas terminado el **[Asistente de configuración](../SettingUpAaps/SetupWizard.md)**, no necesitas ejecutar todo el asistente otra vez si solo quieres cambiar partes de la configuración de **AAPS**.
 
-There are three routes to change **AAPS**' configuration. As to which route you take, it is simply a matter of convenience or personal preference, as each route leads to the same settings.
+Hay tres rutas para cambiar la configuración de **AAPS**. La ruta que elijas es solo una cuestión de comodidad o de preferencia personal, porque todas llevan a los mismos ajustes.
 
 These are as follows:
 
-1. The **Configuration** screen,
-2. The **Settings** screen or
-3. A plugin's **Settings**, opened from its category in **Configuration**.
+1. La pantalla **Configuración**,
+2. La pantalla **Ajustes** o
+3. Los **Ajustes** de un complemento, que se abren desde su categoría en **Configuración**.
 
 Here we explain which option is most convenient for each situation:
 
 ## Configuration
 
-Open the **menu** (☰) in the top-left corner of the main screen and choose **Configuration**:
+Abre el **menú** (☰) en la esquina superior izquierda de la pantalla principal y elige **Configuración**:
 
-![Open Configuration from the top-left menu](../images/v4/Configuration/configuration_menu.png)
+![Abrir Configuración desde el menú superior izquierdo](../images/v4/Configuration/configuration_menu.png)
 
-**Configuration** is used to **choose which plugins are active** — your CGM, pump, APS algorithm, sensitivity detection, synchronization and more, grouped by category. It is the same screen the Setup Wizard configured for you.
+**Configuración** sirve para **elegir qué complementos están activos**: tu MCG, tu bomba, el algoritmo APS, la detección de sensibilidad, la sincronización y más, agrupados por categoría. Es la misma pantalla que el Asistente de configuración configuró para ti.
 
-The documentation of the Configuration screen is available [here](../SettingUpAaps/ConfigBuilder.md).
+La documentación de la pantalla Configuración está disponible [aquí](../SettingUpAaps/ConfigBuilder.md).
 
 ## Configuración
 
-Tap the **Settings** (gear) icon in the top-right corner of the main screen. This opens the settings of **all enabled plugins in a single place**, grouped into expandable sections:
+Toca el icono **Ajustes** (rueda dentada) en la esquina superior derecha de la pantalla principal. Así se abren los ajustes de **todos los complementos activados en un solo lugar**, agrupados en secciones que se pueden desplegar:
 
-![The Settings screen with its expandable sections](../images/v4/Configuration/settings_overview.png)
+![La pantalla Ajustes con sus secciones desplegables](../images/v4/Configuration/settings_overview.png)
 
-This is a good route if you are not really sure where to look for a configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Esta es una buena ruta si no sabes bien dónde buscar una opción de configuración, pero puede ser un poco pesada si sabes que solo quieres cambiar la configuración de un complemento concreto.
 
-The documentation of the settings is available [here](../SettingUpAaps/Preferences.md).
+La documentación de los ajustes está disponible [aquí](../SettingUpAaps/Preferences.md).
 
-## A plugin's Settings
+## Los Ajustes de un complemento
 
-Inside **Configuration**, open a category and tap "**Settings**" underneath the active plugin. You are taken directly to the settings of **that plugin only**:
+Dentro de **Configuración**, abre una categoría y toca «**Ajustes**» debajo del complemento activo. Vas directamente a los ajustes de **ese complemento solamente**:
 
-![Settings and Open plugin underneath the active plugin](../images/v4/Configuration/configuration_open_plugin.png)
+![Ajustes y Abrir complemento debajo del complemento activo](../images/v4/Configuration/configuration_open_plugin.png)
 
-For example, this is a good route if you know that you want to change the configuration for your pump: open **Configuration → Pump**, then tap "**Settings**" under the selected pump.
+Por ejemplo, esta es una buena ruta si sabes que quieres cambiar la configuración de tu bomba: abre **Configuración → Bomba** y luego toca «**Ajustes**» debajo de la bomba seleccionada.
 
-This is a "shortcut" to the same settings shown on the general **Settings** screen.
+Es un «atajo» a los mismos ajustes que se muestran en la pantalla general **Ajustes**.
