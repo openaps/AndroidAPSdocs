@@ -1,4 +1,4 @@
-# AAPS Setup Wizard
+# Майстер налаштування AAPS
 
 ```{contents} In this page
 :backlinks: entry
@@ -444,7 +444,7 @@ Later, for closed looping, you will generally have only one value for top and bo
 
 Прокрутіть список і виберіть свою помпу. У цьому прикладі ми використовуємо «**Віртуальна помпа**». Це корисно, поки ви ще навчаєтеся і не підключили справжню помпу:
 
-![Pump](../images/setup-wizard/Wizard-Pump.png)
+![Помпа](../images/setup-wizard/Wizard-Pump.png)
 
 Підтримується багато помп — прокрутіть униз, щоб знайти свою:
 
@@ -460,7 +460,7 @@ Later, for closed looping, you will generally have only one value for top and bo
 
 Натисніть «**ДАЛІ**», щоб перейти до наступного екрана.
 
-## APS algorithm
+## Алгоритм APS
 
 Use the OpenAPS SMB algorithm as your APS algorithm. Попри назву, функція SMB в алгоритмі вимкнена, доки ви не освоїте AAPS і не пройдете перші завдання. Утім, OpenAPS SMB новіший і загалом кращий за OpenAPS AMA.
 
