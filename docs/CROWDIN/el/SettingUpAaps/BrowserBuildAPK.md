@@ -1,48 +1,48 @@
 (github-build-apk)=
 
-# Browser build – Step 4: Build the APK
+# Δημιουργία μέσω browser – Βήμα 4: Δημιουργία του APK
 
 ```{note}
-This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md).
+Αυτό είναι το **Βήμα 4** της [Δημιουργίας μέσω browser](BrowserBuild.md). Ολοκληρώστε πρώτα το [Βήμα 3 – Εξουσιοδότηση του Google Drive](BrowserBuildGoogleDrive.md).
 ```
 
-## AAPS-CI GitHub Actions to Build the AAPS APK
- - Suitable for general users.
+## Δημιουργία του APK του AAPS με το AAPS-CI του GitHub Actions
+ - Κατάλληλο για τους περισσότερους χρήστες.
 
 ```{tab-set}
 
 :::{tab-item} Wiki
-### Run the Workflow to Build the Signed APK
+### Εκτελέστε το workflow για να δημιουργήσετε το υπογεγραμμένο APK
 
-1. In your GitHub copy of AndroidAPS, select Actions.
-2. Expand All Workflows.
-3. Select AAPS-CI
+1. Στο αντίγραφό σας του AndroidAPS στο GitHub, επιλέξτε Actions.
+2. Ανοίξτε το All Workflows.
+3. Επιλέξτε AAPS-CI
 
 ![Actions AAPS-CI](../images/update/CI/GitHubActions1.png)
 
-4. Scroll down and tap Run Workflow.
+4. Κάντε κύλιση προς τα κάτω και πατήστε Run Workflow.
 
 ![Run Workflow](../images/update/CI/GitHubActions2.png)
 
-5. Leave **Use workflow from** on the master branch. In **Select AAPS Version**, select the **AAPS** version you want to build (normally the newest one). Select the [variant](#browserbuild-variant) (fullRelease) and tap Run workflow.
+5. Αφήστε το **Use workflow from** (κλάδος του workflow) στον κλάδο master. Στο **Select AAPS Version** (επιλογή έκδοσης AAPS), επιλέξτε την έκδοση του **AAPS** που θέλετε να δημιουργήσετε (συνήθως την πιο νέα). Επιλέξτε την [παραλλαγή (variant)](#browserbuild-variant) (fullRelease) και πατήστε Run workflow.
 
 
 
 ![Run Workflow](../images/update/CI/GitHubActions3.png)
 
-6. You will see the message Workflow run was successfully requested. Refresh your browser page and you will be able to monitor the build progress. When the action completes, the AAPS CI action will show a green tick mark. You have successfully built the updated version of Android APS.
+6. Θα δείτε το μήνυμα Workflow run was successfully requested. Ανανεώστε τη σελίδα του browser και θα μπορείτε να παρακολουθείτε την πρόοδο του build. Όταν τελειώσει η ενέργεια, το AAPS CI θα δείχνει ένα πράσινο σημάδι ελέγχου (tick). Έχετε κάνει με επιτυχία build της ενημερωμένης έκδοσης του Android APS.
 
 ![Monitor Workflow](../images/update/CI/GitHubActions4.png)
 
-### Install the AAPS APK
+### Εγκατάσταση του APK του AAPS
 
-1. Open your Google Drive
-2. Browse into AAPS, select the new version folder and you will find both the phone and Android Wear versions.
+1. Ανοίξτε το Google Drive σας
+2. Ανοίξτε τον φάκελο AAPS, επιλέξτε τον φάκελο της νέας έκδοσης και θα βρείτε και την έκδοση για το τηλέφωνο και την έκδοση για Android Wear.
 
 ![Google Drive Location](../images/update/CI/GitHubActions5.png)
-:::  
+:::
 
-:::{tab-item} Video
+:::{tab-item} Βίντεο
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
   <div style="position: relative; width: 100%; aspect-ratio: 9/16;">
     <iframe
@@ -58,37 +58,37 @@ This is **Step 4** of the [Browser build](BrowserBuild.md). First complete [Step
 
 ```
 
-## Build Version selection
+## Επιλογή έκδοσης για το build
 
-**Only AAPS versions from 3.3.2.1 and above will build with the Browser method.**
+**Μόνο οι εκδόσεις του AAPS από 3.3.2.1 και νεότερες μπορούν να δημιουργηθούν με τη μέθοδο μέσω browser.**
 
-Tap **Select AAPS Version** and pick the version to build. The newest version is at the top of the list.
+Πατήστε **Select AAPS Version** (επιλογή έκδοσης AAPS) και διαλέξτε την έκδοση που θέλετε να δημιουργήσετε. Η πιο νέα έκδοση είναι στην κορυφή της λίστας.
 
-![Select AAPS Version list](../images/Building-the-App/CI/BrowserBuildVariant2.png)
+![Λίστα Select AAPS Version](../images/Building-the-App/CI/BrowserBuildVariant2.png)
 
 (browserbuild-variant)=
 
-## Build Variants selection
+## Επιλογή παραλλαγής (variant) του build
 
-*Note: both Android and Android Wear apps will be built automatically.*
+*Σημείωση: δημιουργούνται αυτόματα και οι δύο εφαρμογές, για Android και για Android Wear.*
 
-  - Select the variant you need:
-    - fullRelease: For regular pump usage with full functionality.
-    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): For caregivers (requires [Nightscout](../SettingUpAaps/Nightscout.md)). `aapsclient3Release` builds **AAPSClient3**, available from **AAPS** version 4.0 (see [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions)).
-    - pumpcontrolRelease: To replace your pump app/controller
+  - Επιλέξτε την παραλλαγή που χρειάζεστε:
+    - fullRelease: Για κανονική χρήση με αντλία, με όλες τις λειτουργίες.
+    - [aapsclientRelease, aapsclient2Release, aapsclient3Release](#RemoteControl_aapsclient): Για φροντιστές και γονείς (χρειάζεται [Nightscout](../SettingUpAaps/Nightscout.md)). Το `aapsclient3Release` δημιουργεί το **AAPSClient3**, που υπάρχει από την έκδοση 4.0 του **AAPS** (δείτε [Σχετικά με τα AAPSClient, AAPSClient2 και AAPSClient3](#remotecontrol-aapsclient-versions)).
+    - pumpcontrolRelease: Για να αντικαταστήσετε την εφαρμογή/το χειριστήριο της αντλίας σας
 
 ![](../images/Building-the-App/CI/BrowserBuildVariant3.png)
 
-Variants ending with “Debug” indicate that the APK will be built in debug mode, which is useful for developers for troubleshooting.
+Οι παραλλαγές που τελειώνουν σε “Debug” σημαίνουν ότι το APK θα δημιουργηθεί σε λειτουργία debug, που είναι χρήσιμη στους προγραμματιστές για την αντιμετώπιση προβλημάτων.
 
 <!-- If you want to test the items in a pull request has been moved to dev page /AdvancedOptions/DevBranch.md -->
 
 ----
 
-Once the build succeeds, the apk is saved to your Google Drive. Continue with [Transferring and Installing AAPS](TransferringAndInstallingAaps.md).
+Όταν το build πετύχει, το apk αποθηκεύεται στο Google Drive σας. Συνεχίστε με τη [Μεταφορά και εγκατάσταση του AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Από τον Σεπτέμβριο του 2026, η [επαλήθευση προγραμματιστών Android](#android-developer-verification) της Google μπορεί να εμποδίζει την εγκατάσταση του APK με πάτημα στο αρχείο, ανάλογα με τη χώρα σας. Δωρεάν λύσεις εξηγούνται σε εκείνη τη σελίδα.
 ```
 
-If the build fails, first [find out what went wrong in the build log](#aaps-ci-read-the-logs), then see [Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md). To include a specific commit in your build, see [cherry-pick a commit](#github-cherry-pick).
+Αν το build αποτύχει, πρώτα [βρείτε τι πήγε στραβά στο log του build](#aaps-ci-read-the-logs) και μετά δείτε τη σελίδα [Δημιουργία μέσω browser: αντιμετώπιση προβλημάτων](../GettingHelp/BrowserBuildTroubleshooting.md). Για να προσθέσετε ένα συγκεκριμένο commit στο build σας, δείτε [cherry-pick ενός commit](#github-cherry-pick).
