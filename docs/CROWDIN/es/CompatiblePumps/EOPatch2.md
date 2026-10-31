@@ -112,7 +112,7 @@ Si sale una aguja, o si el parche está mojado o sucio o su cinta adhesiva está
 
 Este paso solo aparece si **Gestionar la rotación del lugar de inserción de la bomba** está activado en los ajustes de rotación de zonas. Toca en el dibujo del cuerpo el lugar donde vas a colocar el parche y pulsa **Siguiente**, o pulsa **Omitir**.
 
-### Coloque el parche en su cuerpo
+### Coloca el parche en tu cuerpo
 
 La insulina debe ir a un lugar con tejido graso bajo la piel, pero con pocos nervios o vasos sanguíneos. El abdomen, el brazo o el muslo son buenas opciones. Limpia y seca la zona y luego pega el parche en la piel.
 
@@ -123,7 +123,7 @@ Revisa el lugar de infusión y luego pulsa **Empezar la revisión de seguridad**
 - Si el parche no se pega por completo, puede entrar aire entre el parche y la piel. Esto debilita el adhesivo y la resistencia al agua del parche.
 ```
 
-![Paso Coloque el parche en su cuerpo](../images/EOPatch/Bild10.png)
+![Paso Coloca el parche en tu cuerpo](../images/EOPatch/Bild10.png)
 
 ### Comprobaciones de seguridad
 
@@ -133,7 +133,7 @@ La revisión de seguridad dura unos 30 segundos. Cuando termina, el parche pita 
 Para un uso seguro, no gires la palanca de la aguja hasta que termine la revisión de seguridad.
 ```
 
-![Paso Coloque el parche en su cuerpo con el botón Empezar la revisión de seguridad](../images/EOPatch/Bild11.png) ![Revisión de seguridad en curso](../images/EOPatch/Bild12.png)
+![Paso Coloca el parche en tu cuerpo con el botón Empezar la revisión de seguridad](../images/EOPatch/Bild11.png) ![Revisión de seguridad en curso](../images/EOPatch/Bild12.png)
 
 ```{admonition} Older screenshot
 :class: note
