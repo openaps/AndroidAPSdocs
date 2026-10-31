@@ -1,278 +1,278 @@
 # EOPatch2
 
-The patch needs rapid-acting U-100 insulin, such as NovoRapid or Humalog. Use the rapid-acting insulin your doctor has prescribed for you.
+Το patch χρειάζεται ινσουλίνη ταχείας δράσης U-100, όπως NovoRapid ή Humalog. Χρησιμοποιήστε την ινσουλίνη ταχείας δράσης που σας έχει συνταγογραφήσει ο γιατρός σας.
 
-The smallest dose the patch can deliver is 0.05 U. Set every basal rate in your **Profile** to at least 0.05 U/hr, in steps of 0.05 U/hr. Otherwise **AAPS** rounds each rate to the nearest 0.05 U/hr (never down to 0) and uses the rates the patch really gives, so the total insulin per day differs slightly from your **Profile**. In the same way, boluses must be at least 0.05 U.
+Η μικρότερη δόση που μπορεί να χορηγήσει το patch είναι 0,05 U. Ορίστε κάθε βασικό ρυθμό στο **Προφίλ** σας τουλάχιστον 0,05 U/h, σε βήματα των 0,05 U/h. Αλλιώς το **AAPS** στρογγυλοποιεί κάθε ρυθμό στο πλησιέστερο 0,05 U/h (ποτέ προς τα κάτω στο 0) και χρησιμοποιεί τους ρυθμούς που πραγματικά δίνει το patch, οπότε η συνολική ινσουλίνη ανά ημέρα διαφέρει λίγο από το **Προφίλ** σας. Με τον ίδιο τρόπο, κάθε bolus πρέπει να είναι τουλάχιστον 0,05 U.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Δυνατότητες της αντλίας με το AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* DST and timezone changes must be handled manually.
+* Επικοινωνεί με το **AAPS** μέσω του Bluetooth του τηλεφώνου σας, χωρίς επιπλέον συσκευή επικοινωνίας.
+* Τις αλλαγές θερινής ώρας και ζώνης ώρας πρέπει να τις κάνετε χειροκίνητα.
 
-## Pump setup
+## Ρύθμιση αντλίας
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. In the **Pump** section, select **EOPatch2**.
-1. Press the Back key to return to the main screen.
+1. Ανοίξτε το **μενού** (☰) στην πάνω αριστερή γωνία της κύριας οθόνης του **AAPS** και επιλέξτε **Διαμόρφωση**.
+1. Στην ενότητα **Αντλία** επιλέξτε **EOPatch2**.
+1. Πατήστε το πλήκτρο Πίσω για να επιστρέψετε στην κύρια οθόνη.
 
-![The menu with the Configuration entry](../images/v4/Configuration/configuration_menu.png) ![Configuration > Pump with the EOPatch2 plugin](../images/v4/Configuration/configuration_pump_list_3.png)
+![Το μενού με την επιλογή Διαμόρφωση](../images/v4/Configuration/configuration_menu.png) ![Διαμόρφωση > Αντλία με το πρόσθετο EOPatch2](../images/v4/Configuration/configuration_pump_list_3.png)
 
-Once it is selected, the **EOPatch2** card shows two buttons, **Settings** and **Open plugin**:
+Μόλις το επιλέξετε, η κάρτα **EOPatch2** δείχνει δύο κουμπιά, **Ρυθμίσεις** και **Άνοιγμα πρόσθετου**:
 
-![The EOPatch2 plugin selected in Configuration > Pump](../images/v4/Pumps/eopatch2_enabled.png)
+![Το πρόσθετο EOPatch2 επιλεγμένο στη Διαμόρφωση > Αντλία](../images/v4/Pumps/eopatch2_enabled.png)
 
 ## Ρυθμίσεις
 
-Open the EOPatch2 settings in one of two ways:
+Ανοίξτε τις ρυθμίσεις του EOPatch2 με έναν από δύο τρόπους:
 
-* press **Settings** on the **EOPatch2** card in **Configuration**, or
-* open the pump screen (**Manage** → **Pump**) and press the gear icon in the top-right corner.
+* πατήστε **Ρυθμίσεις** στην κάρτα **EOPatch2** στη **Διαμόρφωση**, ή
+* ανοίξτε την οθόνη της αντλίας (**Διαχείριση** → **Αντλία**) και πατήστε το εικονίδιο γραναζιού στην πάνω δεξιά γωνία.
 
-There are three settings:
+Υπάρχουν τρεις ρυθμίσεις:
 
-![EOPatch2 settings](../images/v4/Pumps/eopatch_settings.png)
+![Ρυθμίσεις του EOPatch2](../images/v4/Pumps/eopatch_settings.png)
 
-### Low reservoir Alerts
+### Ειδοποιήσεις χαμηλής δεξαμενής
 
-A warning appears when the insulin left in the patch drops to this amount or less. You can set it from 10 to 50 U, in steps of 5 U. The default is 10 U.
+Εμφανίζεται μια προειδοποίηση όταν η ινσουλίνη που έμεινε στο patch πέσει σε αυτή την ποσότητα ή λιγότερο. Μπορείτε να την ορίσετε από 10 έως 50 U, σε βήματα των 5 U. Η προεπιλογή είναι 10 U.
 
-### Patch expiration Reminder
+### Υπενθύμιση λήξης Patch
 
-Reminds you how much time is left before the current patch expires. You can set it from 1 to 24 hours, in steps of 1 hour. The default is 4 hours.
+Σας υπενθυμίζει πόσος χρόνος μένει μέχρι να λήξει το τρέχον patch. Μπορείτε να την ορίσετε από 1 έως 24 ώρες, σε βήματα της 1 ώρας. Η προεπιλογή είναι 4 ώρες.
 
-### Patch buzzer Reminders
+### Υπενθυμίσεις βομβητή Patch
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. It has no effect on your normal basal. The default is off.
+Όταν είναι ενεργό, το patch κάνει μπιπ όταν ξεκινά και όταν τελειώνει ένα bolus, ένα εκτεταμένο bolus ή ένας προσωρινός βασικός ρυθμός. Δεν επηρεάζει τον κανονικό βασικό ρυθμό σας. Η προεπιλογή είναι ανενεργό.
 
-## Activating a new patch
+## Ενεργοποίηση νέου patch
 
-### Open the activation wizard
+### Άνοιγμα του οδηγού ενεργοποίησης
 
-Open the pump screen with **Manage** → **Pump** (or press **Open plugin** on the **EOPatch2** card in **Configuration**). When no patch is active, the screen shows **Not activated** and an **Activate Patch** button at the bottom.
+Ανοίξτε την οθόνη της αντλίας με **Διαχείριση** → **Αντλία** (ή πατήστε **Άνοιγμα πρόσθετου** στην κάρτα **EOPatch2** στη **Διαμόρφωση**). Όταν δεν υπάρχει ενεργό patch, η οθόνη δείχνει **Μη ενεργοποιημένο** και ένα κουμπί **Ενεργοποίηση Patch** στο κάτω μέρος.
 
-Press **Activate Patch** to start the wizard.
+Πατήστε **Ενεργοποίηση Patch** για να ξεκινήσει ο οδηγός.
 
-![The EOPatch2 pump screen with the Activate Patch button](../images/v4/Pumps/eopatch_pump_screen.png)
+![Η οθόνη της αντλίας EOPatch2 με το κουμπί Ενεργοποίηση Patch](../images/v4/Pumps/eopatch_pump_screen.png)
 
-The wizard guides you through each step. The row of dots at the top shows how far along you are.
+Ο οδηγός σας καθοδηγεί σε κάθε βήμα. Η σειρά από τελείες στο πάνω μέρος δείχνει σε ποιο σημείο βρίσκεστε.
 
 ```{note}
-If you have never activated a **Profile** in **AAPS**, the wizard first shows a **Profile required** page. Select the profile to use and press **Activate profile**.
+Αν δεν έχετε ενεργοποιήσει ποτέ ένα **Προφίλ** στο **AAPS**, ο οδηγός δείχνει πρώτα μια σελίδα **Απαιτείται προφίλ**. Επιλέξτε το προφίλ που θα χρησιμοποιήσετε και πατήστε **Ενεργοποίηση προφίλ**.
 ```
 
-### Filling Insulin
+### Πλήρωση Ινσουλίνης
 
-Insert the syringe needle into the insulin fill port on the patch. Slowly push the plunger to fill the patch. Once there is more than 80 U in the patch, it beeps once and starts up (boots).
+Βάλτε τη βελόνα της σύριγγας στη θύρα πλήρωσης ινσουλίνης του patch. Πιέστε αργά το έμβολο για να γεμίσετε το patch. Μόλις το patch έχει πάνω από 80 U, κάνει ένα μπιπ και ξεκινά (εκκίνηση).
 
-When you hear the beep, press **Start pairing**.
+Όταν ακούσετε το μπιπ, πατήστε **Έναρξη σύζευξης**.
 
-![The Filling Insulin step with the Start pairing button](../images/v4/Pumps/eopatch_activate_filling.png)
+![Το βήμα Πλήρωση Ινσουλίνης με το κουμπί Έναρξη σύζευξης](../images/v4/Pumps/eopatch_activate_filling.png)
 
 ```{warning}
-- Do not turn the needle action lever until the wizard tells you to. Turning it too early can cause serious problems during filling or the safety check.
-- The patch holds 80 to 200 U. If you put in less than 80 U, the patch does not work.
-- Take the insulin out of the refrigerator 15 to 30 minutes before filling, so it reaches room temperature. The insulin must be at least 10°C.
+- Μη γυρίσετε τον μοχλό δράσης της βελόνας πριν σας το πει ο οδηγός. Αν τον γυρίσετε πολύ νωρίς, μπορεί να προκληθούν σοβαρά προβλήματα κατά το γέμισμα ή τον έλεγχο ασφαλείας.
+- Το patch χωράει 80 έως 200 U. Αν βάλετε λιγότερο από 80 U, το patch δεν λειτουργεί.
+- Βγάλτε την ινσουλίνη από το ψυγείο 15 έως 30 λεπτά πριν από το γέμισμα, ώστε να φτάσει σε θερμοκρασία δωματίου. Η ινσουλίνη πρέπει να έχει τουλάχιστον 10°C.
 ```
 
-### Patch pairing
+### Σύζευξη Patch
 
-**AAPS** now tries to pair with the patch automatically. During pairing, two Android Bluetooth pairing requests appear. Press **OK** on the first one. Press **OK** again on the second one, which shows a passkey.
+Το **AAPS** προσπαθεί τώρα να κάνει αυτόματα σύζευξη με το patch. Κατά τη σύζευξη εμφανίζονται δύο αιτήματα σύζευξης Bluetooth του Android. Πατήστε **OK** στο πρώτο. Πατήστε ξανά **OK** στο δεύτερο, που δείχνει έναν κωδικό πρόσβασης (passkey).
 
 ```{warning}
-- Keep the patch and your phone within 30 cm of each other while pairing.
-- After the patch has booted, it beeps every 3 minutes until pairing is complete.
-- You must finish activating the patch within 60 minutes of it booting. If you cannot, discard the patch.
+- Κρατήστε το patch και το τηλέφωνό σας σε απόσταση έως 30 cm μεταξύ τους κατά τη σύζευξη.
+- Μετά την εκκίνηση του patch, κάνει μπιπ κάθε 3 λεπτά μέχρι να ολοκληρωθεί η σύζευξη.
+- Πρέπει να ολοκληρώσετε την ενεργοποίηση του patch μέσα σε 60 λεπτά από την εκκίνησή του. Αν δεν τα καταφέρετε, απορρίψτε το patch.
 ```
 
-![Patch pairing step](../images/EOPatch/Bild6.png) ![First Bluetooth pairing request](../images/EOPatch/Bild7.png) ![Second Bluetooth pairing request with the passkey](../images/EOPatch/Bild8.png)
+![Το βήμα Σύζευξη Patch](../images/EOPatch/Bild6.png) ![Πρώτο αίτημα σύζευξης Bluetooth](../images/EOPatch/Bild7.png) ![Δεύτερο αίτημα σύζευξης Bluetooth με τον κωδικό πρόσβασης (passkey)](../images/EOPatch/Bild8.png)
 
 ```{admonition} Older screenshot
 :class: note
-The two Bluetooth pairing screenshots are from an earlier **AAPS** version: the **AAPS** screen behind the Android pairing request looks different in **AAPS** 4.
+Οι δύο εικόνες της σύζευξης Bluetooth είναι από παλαιότερη έκδοση του **AAPS**: η οθόνη του **AAPS** πίσω από το αίτημα σύζευξης του Android φαίνεται διαφορετική στο **AAPS** 4.
 ```
 
-### Select insulin
+### Επιλογή ινσουλίνης
 
-Select the insulin you filled the patch with and press **Next**. **AAPS** applies a profile switch with this insulin after activation.
+Επιλέξτε την ινσουλίνη με την οποία γεμίσατε το patch και πατήστε **Επόμενο**. Το **AAPS** κάνει αλλαγή προφίλ με αυτή την ινσουλίνη μετά την ενεργοποίηση.
 
-### Prepare for attaching the Patch
+### Προετοιμασία για την τοποθέτηση του Patch
 
-Remove the adhesive tape from the patch, then press **Next**.
+Αφαιρέστε την αυτοκόλλητη ταινία από το patch και μετά πατήστε **Επόμενο**.
 
-If a needle sticks out, or if the patch is wet, dirty or its adhesive tape is folded, press **Discard** instead and use a new patch.
+Αν εξέχει βελόνα ή αν το patch είναι βρεγμένο, βρώμικο ή η αυτοκόλλητη ταινία του είναι διπλωμένη, πατήστε **Απόρριψη** και χρησιμοποιήστε ένα νέο patch.
 
-![Prepare for attaching the Patch step](../images/EOPatch/Bild9.png)
+![Το βήμα Προετοιμασία για την τοποθέτηση του Patch](../images/EOPatch/Bild9.png)
 
-### Site location
+### Σημείο τοποθέτησης
 
-This step only appears if **Manage pump site rotation** is turned on in the site rotation settings. Tap the place on the body diagram where you will attach the patch and press **Next**, or press **Skip**.
+Αυτό το βήμα εμφανίζεται μόνο αν το **Διαχείριση εναλλαγής σημείων αντλίας** είναι ενεργό στις ρυθμίσεις εναλλαγής σημείων. Πατήστε στο διάγραμμα του σώματος το σημείο όπου θα τοποθετήσετε το patch και πατήστε **Επόμενο**, ή πατήστε **Παράλειψη**.
 
-### Attaching the Patch
+### Επισύναψη του Patch
 
-Insulin should go into a spot with fatty tissue under the skin, but few nerves or blood vessels. The abdomen, arm or thigh are good choices. Clean and dry the site, then attach the patch to your skin.
+Η ινσουλίνη πρέπει να μπαίνει σε σημείο με λιπώδη ιστό κάτω από το δέρμα, αλλά με λίγα νεύρα ή αιμοφόρα αγγεία. Η κοιλιά, ο βραχίονας ή ο μηρός είναι καλές επιλογές. Καθαρίστε και στεγνώστε το σημείο και μετά τοποθετήστε το patch στο δέρμα σας.
 
-Check the infusion site, then press **Start safety check**.
+Ελέγξτε το σημείο έγχυσης και μετά πατήστε **Έναρξη ελέγχου ασφαλείας**.
 
 ```{warning}
-- Press down the edges of the patch tape evenly, so the whole patch sticks firmly to your skin.
-- If the patch does not stick completely, air can get between the patch and your skin. This weakens the adhesive and the water resistance of the patch.
+- Πιέστε ομοιόμορφα τις άκρες της ταινίας του patch, ώστε όλο το patch να κολλήσει σταθερά στο δέρμα σας.
+- Αν το patch δεν κολλήσει εντελώς, μπορεί να μπει αέρας ανάμεσα στο patch και στο δέρμα σας. Αυτό εξασθενεί την κόλλα και την αντοχή του patch στο νερό.
 ```
 
-![Attaching the Patch step](../images/EOPatch/Bild10.png)
+![Το βήμα Επισύναψη του Patch](../images/EOPatch/Bild10.png)
 
-### Safety check
+### Έλεγχος ασφαλείας
 
-The safety check takes about 30 seconds. When it is finished, the patch beeps once. If it fails, press **Retry**.
+Ο έλεγχος ασφαλείας διαρκεί περίπου 30 δευτερόλεπτα. Όταν τελειώσει, το patch κάνει ένα μπιπ. Αν αποτύχει, πατήστε **Επανάληψη**.
 
 ```{warning}
-For safe use, do not turn the needle action lever until the safety check is complete.
+Για ασφαλή χρήση, μη γυρίσετε τον μοχλό δράσης της βελόνας μέχρι να ολοκληρωθεί ο έλεγχος ασφαλείας.
 ```
 
-![Attaching the Patch step with the Start safety check button](../images/EOPatch/Bild11.png) ![Safety check in progress](../images/EOPatch/Bild12.png)
+![Το βήμα Επισύναψη του Patch με το κουμπί Έναρξη ελέγχου ασφαλείας](../images/EOPatch/Bild11.png) ![Έλεγχος ασφαλείας σε εξέλιξη](../images/EOPatch/Bild12.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots from **Prepare for attaching the Patch** to **Safety check** are from an earlier **AAPS** version and may look different in **AAPS** 4.
+Οι εικόνες από το **Προετοιμασία για την τοποθέτηση του Patch** έως το **Έλεγχος ασφαλείας** είναι από παλαιότερη έκδοση του **AAPS** και μπορεί να φαίνονται διαφορετικές στο **AAPS** 4.
 ```
 
-### Inserting the needle
+### Εισαγωγή της βελόνας
 
-Hold the patch firmly. Turn the needle action lever upward by more than 100° to insert the needle. The patch beeps once when the needle is inserted correctly. Then keep turning the lever all the way to remove it. Press **Next**.
+Κρατήστε σταθερά το patch. Γυρίστε τον μοχλό δράσης της βελόνας προς τα πάνω πάνω από 100° για να εισαχθεί η βελόνα. Το patch κάνει ένα μπιπ όταν η βελόνα εισαχθεί σωστά. Μετά συνεχίστε να γυρίζετε τον μοχλό μέχρι το τέλος για να τον αφαιρέσετε. Πατήστε **Επόμενο**.
 
 ```{caution}
-If you go to the next step without hearing the beep, a **Needle insertion Error** appears. Check for the beep and press **Retry**. If the error remains, press **Discard** to deactivate the patch.
+Αν πάτε στο επόμενο βήμα χωρίς να ακούσετε το μπιπ, εμφανίζεται **Σφάλμα εισαγωγής βελόνας**. Ελέγξτε για το μπιπ και πατήστε **Επανάληψη**. Αν το σφάλμα παραμένει, πατήστε **Απόρριψη** για να απενεργοποιήσετε το patch.
 ```
 
-### Patch activation completed
+### Ολοκλήρωση ενεργοποίησης Patch
 
-The last page confirms that the patch is active and that it will remind you when it nears its expiration time. Press **Finish** to go back to the pump screen.
+Η τελευταία σελίδα επιβεβαιώνει ότι το patch είναι ενεργό και ότι θα σας υπενθυμίσει όταν πλησιάζει η ώρα λήξης του. Πατήστε **Τέλος** για να επιστρέψετε στην οθόνη της αντλίας.
 
-## Discarding the patch
+## Απόρριψη του patch
 
-Replace the patch when it is low on insulin, when it expires, or if it is faulty. We recommend using each patch for no more than 84 hours after it boots.
+Αντικαταστήστε το patch όταν έχει λίγη ινσουλίνη, όταν λήξει ή αν είναι ελαττωματικό. Συνιστούμε να χρησιμοποιείτε κάθε patch όχι περισσότερο από 84 ώρες μετά την εκκίνησή του.
 
-1. Open the pump screen (**Manage** → **Pump**). While a patch is active, press **Discard Patch**.
-1. The **Discard Patch** page shows the time left and the insulin left in the patch. Press **Discard Patch**.
-1. A dialog asks you to confirm. Press **Discard Patch** again.
-1. When the patch has been deactivated, the wizard shows **Discarding the patch is completed.** Remove the patch from your body and press **Confirm**.
+1. Ανοίξτε την οθόνη της αντλίας (**Διαχείριση** → **Αντλία**). Όσο ένα patch είναι ενεργό, πατήστε **Απόρριψη Patch**.
+1. Η σελίδα **Απόρριψη Patch** δείχνει τον χρόνο και την ινσουλίνη που έμειναν στο patch. Πατήστε **Απόρριψη Patch**.
+1. Ένα παράθυρο σας ζητά επιβεβαίωση. Πατήστε ξανά **Απόρριψη Patch**.
+1. Όταν το patch απενεργοποιηθεί, ο οδηγός δείχνει **Η απόρριψη του patch ολοκληρώθηκε.** Αφαιρέστε το patch από το σώμα σας και πατήστε **Επιβεβαίωση**.
 
-After that, the wizard continues straight on to activating a new patch (see above). Press the back arrow if you want to stop here.
+Μετά από αυτό, ο οδηγός συνεχίζει κατευθείαν με την ενεργοποίηση νέου patch (δείτε παραπάνω). Πατήστε το βέλος πίσω αν θέλετε να σταματήσετε εδώ.
 
-While no patch is active, **AAPS** shows the pump as suspended and records a 0 U/hr temporary basal, so no basal insulin is counted in IOB until the next patch is activated.
+Όσο δεν υπάρχει ενεργό patch, το **AAPS** δείχνει την αντλία σε αναστολή και καταγράφει προσωρινό βασικό ρυθμό 0 U/h, ώστε να μη μετράει βασική ινσουλίνη στο IOB μέχρι να ενεργοποιηθεί το επόμενο patch.
 
-![The EOPatch2 pump screen with the DISCARD/CHANGE PATCH button](../images/EOPatch/Bild13.png) ![Discard Patch page](../images/EOPatch/Bild14.png) ![Discard Patch confirmation dialog](../images/EOPatch/Bild15.png) ![Discarding the patch is completed](../images/EOPatch/Bild16.png)
+![Η οθόνη της αντλίας EOPatch2 με το κουμπί DISCARD/CHANGE PATCH](../images/EOPatch/Bild13.png) ![Η σελίδα Απόρριψη Patch](../images/EOPatch/Bild14.png) ![Το παράθυρο επιβεβαίωσης Απόρριψη Patch](../images/EOPatch/Bild15.png) ![Η απόρριψη του patch ολοκληρώθηκε](../images/EOPatch/Bild16.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Discard Patch**.
+Τα παραπάνω στιγμιότυπα οθόνης είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 ανοίγετε την οθόνη της αντλίας από **Διαχείριση** → **Αντλία**, και το κουμπί σε αυτήν λέγεται **Απόρριψη Patch**.
 ```
 
 ```{admonition} If the patch does not respond
 :class: warning
-If **AAPS** cannot reach the patch, it may show a page about turning off the patch's alarm by hand: remove the patch from your body, peel off the adhesive tape, and use a clip to press firmly into the hole next to the insulin fill port.
+Αν το **AAPS** δεν μπορεί να επικοινωνήσει με το patch, μπορεί να δείξει μια σελίδα για το πώς να σταματήσετε με το χέρι τον συναγερμό του patch: αφαιρέστε το patch από το σώμα σας, ξεκολλήστε την αυτοκόλλητη ταινία και με ένα κλιπ πιέστε δυνατά μέσα στην τρύπα δίπλα στη θύρα πλήρωσης ινσουλίνης.
 
-The **Discard Patch** page also has a **Force Reset** button. It only clears the patch from **AAPS**, without sending any command to the patch. The patch keeps delivering insulin until its battery runs out or you turn it off by hand. Use it only if a normal discard fails, and remove the patch from your body.
+Η σελίδα **Απόρριψη Patch** έχει επίσης ένα κουμπί **Αναγκαστική επαναφορά**. Αυτό διαγράφει το patch μόνο από το **AAPS**, χωρίς να στείλει καμία εντολή στο patch. Το patch συνεχίζει να χορηγεί ινσουλίνη μέχρι να τελειώσει η μπαταρία του ή να το απενεργοποιήσετε με το χέρι. Χρησιμοποιήστε το μόνο αν η κανονική απόρριψη αποτύχει, και αφαιρέστε το patch από το σώμα σας.
 ```
 
-## Suspending and resuming insulin delivery
+## Αναστολή και συνέχιση της χορήγησης ινσουλίνης
 
-Suspending insulin delivery also cancels any extended bolus and temporary basal. When you resume, these are **not** restarted. While insulin delivery is suspended, the patch beeps every 15 minutes.
+Η αναστολή της χορήγησης ινσουλίνης ακυρώνει επίσης κάθε εκτεταμένο bolus και προσωρινό βασικό ρυθμό. Όταν κάνετε συνέχιση, αυτά **δεν** ξεκινούν ξανά. Όσο η χορήγηση ινσουλίνης είναι σε αναστολή, το patch κάνει μπιπ κάθε 15 λεπτά.
 
-### Suspending insulin delivery
+### Αναστολή χορήγησης ινσουλίνης
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Suspend pump**.
-1. A dialog explains what will be suspended. Press **Confirm**.
-1. In the **Basal Suspending Time** dialog, choose how long to suspend: 30 min, 1 hr, 1 hr 30 min or 2 hr. Press **Confirm**.
+1. Ανοίξτε την οθόνη της αντλίας (**Διαχείριση** → **Αντλία**) και πατήστε **Αναστολή αντλίας**.
+1. Ένα παράθυρο εξηγεί τι θα ανασταλεί. Πατήστε **Επιβεβαίωση**.
+1. Στο παράθυρο **Χρόνος Αναστολής Βασικού** επιλέξτε για πόσο θα γίνει η αναστολή: 30 λεπτά, 1 ώρα, 1 ώρα 30 λεπτά ή 2 ώρες. Πατήστε **Επιβεβαίωση**.
 
-Insulin delivery is suspended for the time you chose.
+Η χορήγηση ινσουλίνης αναστέλλεται για τον χρόνο που επιλέξατε.
 
-![The EOPatch2 pump screen with the SUSPEND button](../images/EOPatch/Bild17.png) ![Suspend confirmation dialog](../images/EOPatch/Bild18.png) ![Basal Suspending Time dialog](../images/EOPatch/Bild19.png)
+![Η οθόνη της αντλίας EOPatch2 με το κουμπί SUSPEND](../images/EOPatch/Bild17.png) ![Το παράθυρο επιβεβαίωσης αναστολής](../images/EOPatch/Bild18.png) ![Το παράθυρο Χρόνος Αναστολής Βασικού](../images/EOPatch/Bild19.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Suspend pump**.
+Τα παραπάνω στιγμιότυπα οθόνης είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 ανοίγετε την οθόνη της αντλίας από **Διαχείριση** → **Αντλία**, και το κουμπί σε αυτήν λέγεται **Αναστολή αντλίας**.
 ```
 
-### Resuming insulin delivery
+### Συνέχιση χορήγησης ινσουλίνης
 
-1. Open the pump screen (**Manage** → **Pump**) and press **Resume pump**.
-1. In the **Resume insulin delivery** dialog, press **Confirm**.
+1. Ανοίξτε την οθόνη της αντλίας (**Διαχείριση** → **Αντλία**) και πατήστε **Συνέχιση αντλίας**.
+1. Στο παράθυρο **Συνέχιση χορήγησης ινσουλίνης** πατήστε **Επιβεβαίωση**.
 
-![The EOPatch2 pump screen with the RESUME button](../images/EOPatch/Bild20.png) ![Resume insulin delivery dialog](../images/EOPatch/Bild21.png)
+![Η οθόνη της αντλίας EOPatch2 με το κουμπί RESUME](../images/EOPatch/Bild20.png) ![Το παράθυρο Συνέχιση χορήγησης ινσουλίνης](../images/EOPatch/Bild21.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. In **AAPS** 4 you open the pump screen from **Manage** → **Pump**, and the button on it is labelled **Resume pump**.
+Τα παραπάνω στιγμιότυπα οθόνης είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 ανοίγετε την οθόνη της αντλίας από **Διαχείριση** → **Αντλία**, και το κουμπί σε αυτήν λέγεται **Συνέχιση αντλίας**.
 ```
 
 ```{warning}
-When the suspend time ends, **AAPS** shows an **End of insulin suspend** warning. Insulin delivery does **not** restart until you confirm it. If you do not, you could develop hyperglycemia.
+Όταν τελειώσει ο χρόνος αναστολής, το **AAPS** δείχνει την προειδοποίηση **Τέλος αναστολής ινσουλίνης**. Η χορήγηση ινσουλίνης **δεν** ξεκινά ξανά μέχρι να το επιβεβαιώσετε. Αν δεν το κάνετε, μπορεί να πάθετε υπεργλυκαιμία.
 ```
 
 (eopatch2-alarms-and-warnings)=
 
-## Alarms and warnings
+## Συναγερμοί και προειδοποιήσεις
 
-### Alarms
+### Συναγερμοί
 
-Alarms are for urgent, top-priority situations and need your action straight away. **AAPS** sounds an alarm that keeps going until you acknowledge it, and shows the message as a notification on the **Overview** screen. An alarm means there is a problem with the patch in use. In many cases the patch has to be discarded and replaced with a new one.
+Οι συναγερμοί είναι για επείγουσες καταστάσεις με την υψηλότερη προτεραιότητα και χρειάζονται άμεση ενέργεια από εσάς. Το **AAPS** ηχεί έναν συναγερμό που συνεχίζει μέχρι να τον επιβεβαιώσετε, και δείχνει το μήνυμα ως ειδοποίηση στην οθόνη **Επισκόπηση**. Ένας συναγερμός σημαίνει ότι υπάρχει πρόβλημα με το patch που χρησιμοποιείτε. Σε πολλές περιπτώσεις το patch πρέπει να απορριφθεί και να αντικατασταθεί με νέο.
 
-When you press **Confirm** on the notification, **AAPS** handles the alarm. For most alarms, this deactivates the patch. For an **Inappropriate temperature** alarm, the button is **Retry**.
+Όταν πατήσετε **Επιβεβαίωση** στην ειδοποίηση, το **AAPS** χειρίζεται τον συναγερμό. Για τους περισσότερους συναγερμούς, αυτό απενεργοποιεί το patch. Για τον συναγερμό **Ακατάλληλη θερμοκρασία**, το κουμπί είναι **Επανάληψη**.
 
-![EOPatch2 alarm](../images/EOPatch/Bild22.png) ![EOPatch2 alarm after the patch was deactivated](../images/EOPatch/Bild23.png)
-
-```{admonition} Older screenshot
-:class: note
-The alarm screenshots are from an earlier **AAPS** version and may look different in **AAPS** 4.
-```
-
-The different alarms are explained below.
-
-| Alarm                      | Explanation                                                                                                                                                    |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | The patch has run out of insulin.                                                                                                                              |
-| Patch expired              | The patch's usage time is over, and it cannot deliver any more insulin.                                                                                        |
-| Occlusion                  | The patch's insulin path seems to be blocked.                                                                                                                  |
-| Power on self-test failure | The patch found an unexpected error during its self-test after booting.                                                                                        |
-| Inappropriate temperature  | The patch is outside its normal operating temperature while you activate or use it. Move the patch to a place with a suitable temperature (4.4 to 37°C).       |
-| Needle insertion Error     | The needle was not inserted correctly during activation. Check that the needle insertion edge of the patch and the needle action lever are in a straight line. |
-| Patch battery Error        | The patch's internal battery is about to run out and the patch will power off.                                                                                 |
-| Patch activation Error     | The patch was not fully activated within 60 minutes of booting.                                                                                                |
-| Patch Error                | The patch found an unexpected error while being activated or used.                                                                                             |
-
-### Warnings
-
-Warnings are for medium- or low-priority situations. A warning appears as a notification on the **Overview** screen.
-
-![EOPatch2 warning shown on the Overview screen](../images/EOPatch/Bild24.png)
+![Συναγερμός EOPatch2](../images/EOPatch/Bild22.png) ![Συναγερμός EOPatch2 αφού απενεργοποιήθηκε το patch](../images/EOPatch/Bild23.png)
 
 ```{admonition} Older screenshot
 :class: note
-This screenshot is from an earlier **AAPS** version: in **AAPS** 4 the warning appears on the main screen, which looks different.
+Οι εικόνες των συναγερμών είναι από παλαιότερη έκδοση του **AAPS** και μπορεί να φαίνονται διαφορετικές στο **AAPS** 4.
 ```
 
-The different warnings are explained below.
+Οι διάφοροι συναγερμοί εξηγούνται παρακάτω.
 
-| Warning                      | Explanation                                                                                                                   |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | The suspend time you chose is over. Press **Resume pump** on the notification to restart insulin delivery.                    |
-| Low reservoir                | The insulin left in the patch is below the amount set in **Low reservoir Alerts**.                                            |
-| Patch operating life expired | The patch's usage period is over.                                                                                             |
-| Patch will expire soon       | The patch must be discarded in 1 hour.                                                                                        |
-| Incomplete Patch activation  | Patch activation was interrupted for more than 3 minutes after pairing. Open the pump screen and finish activating the patch. |
-| Patch battery low            | The patch's battery is low.                                                                                                   |
+| Συναγερμός                         | Επεξήγηση                                                                                                                                                                        |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Άδεια δεξαμενή                     | Το patch έμεινε χωρίς ινσουλίνη.                                                                                                                                                 |
+| Το Patch έληξε                     | Ο χρόνος χρήσης του patch τελείωσε και δεν μπορεί να χορηγήσει άλλη ινσουλίνη.                                                                                                   |
+| Έμφραξη                            | Η διαδρομή της ινσουλίνης στο patch φαίνεται να είναι φραγμένη.                                                                                                                  |
+| Πρόβλημα στον αυτοέλεγχο εκκίνησης | Το patch βρήκε ένα απρόσμενο σφάλμα κατά τον αυτοέλεγχο μετά την εκκίνηση.                                                                                                       |
+| Ακατάλληλη θερμοκρασία             | Το patch είναι εκτός της κανονικής θερμοκρασίας λειτουργίας του ενώ το ενεργοποιείτε ή το χρησιμοποιείτε. Μετακινήστε το patch σε μέρος με κατάλληλη θερμοκρασία (4,4 έως 37°C). |
+| Σφάλμα εισαγωγής βελόνας           | Η βελόνα δεν εισήχθη σωστά κατά την ενεργοποίηση. Ελέγξτε ότι η άκρη εισαγωγής βελόνας του patch και ο μοχλός δράσης της βελόνας είναι σε ευθεία γραμμή.                         |
+| Σφάλμα μπαταρίας Patch             | Η εσωτερική μπαταρία του patch πρόκειται να τελειώσει και το patch θα σβήσει.                                                                                                    |
+| Σφάλμα ενεργοποίησης Patch         | Το patch δεν ενεργοποιήθηκε πλήρως μέσα σε 60 λεπτά από την εκκίνηση.                                                                                                            |
+| Σφάλμα Patch                       | Το patch βρήκε ένα απρόσμενο σφάλμα κατά την ενεργοποίηση ή τη χρήση.                                                                                                            |
 
-## Where to get help
+### Προειδοποιήσεις
 
-Development of the EOPatch2 driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Οι προειδοποιήσεις είναι για καταστάσεις μέσης ή χαμηλής προτεραιότητας. Μια προειδοποίηση εμφανίζεται ως ειδοποίηση στην οθόνη **Επισκόπηση**.
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+![Προειδοποίηση EOPatch2 στην οθόνη Επισκόπηση](../images/EOPatch/Bild24.png)
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+```{admonition} Older screenshot
+:class: note
+Αυτή η εικόνα είναι από παλαιότερη έκδοση του **AAPS**: στο **AAPS** 4 η προειδοποίηση εμφανίζεται στην κύρια οθόνη, που φαίνεται διαφορετική.
+```
+
+Οι διάφορες προειδοποιήσεις εξηγούνται παρακάτω.
+
+| Προειδοποίηση                        | Επεξήγηση                                                                                                                                                 |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Τέλος αναστολής ινσουλίνης           | Ο χρόνος αναστολής που επιλέξατε τελείωσε. Πατήστε **Συνέχιση αντλίας** στην ειδοποίηση για να ξεκινήσει ξανά η χορήγηση ινσουλίνης.                      |
+| Χαμηλή δεξαμενή                      | Η ινσουλίνη που έμεινε στο patch είναι κάτω από την ποσότητα που ορίστηκε στο **Ειδοποιήσεις χαμηλής δεξαμενής**.                                         |
+| Η διάρκεια ζωής του Patch έχει λήξει | Η περίοδος χρήσης του patch τελείωσε.                                                                                                                     |
+| Το Patch θα λήξει σύντομα            | Το patch πρέπει να απορριφθεί μέσα σε 1 ώρα.                                                                                                              |
+| Μη ολοκληρωμένη ενεργοποίηση Patch   | Η ενεργοποίηση του patch διακόπηκε για περισσότερα από 3 λεπτά μετά τη σύζευξη. Ανοίξτε την οθόνη της αντλίας και ολοκληρώστε την ενεργοποίηση του patch. |
+| Χαμηλή μπαταρία Patch                | Η μπαταρία του patch είναι χαμηλή.                                                                                                                        |
+
+## Πού θα βρείτε βοήθεια
+
+Την ανάπτυξη του οδηγού EOPatch2 την κάνει η κοινότητα **εθελοντικά**. Πριν ζητήσετε βοήθεια:
+
+1. **Διαβάστε** τη σχετική ενότητα αυτής της τεκμηρίωσης για να επιβεβαιώσετε πώς πρέπει να λειτουργεί η λειτουργία.
+2. **Ρωτήστε** στο κανάλι *#AAPS* στο [Discord](https://discord.gg/4fQUWHZ4Mw) ή σε ένα από τα άλλα [κανάλια της κοινότητας](../GettingHelp/WhereCanIGetHelp.md).
+3. **Αναφέρετε ένα σφάλμα**: ψάξτε πρώτα στα [υπάρχοντα issues](https://github.com/nightscout/AndroidAPS/issues)· αν το δικό σας δεν υπάρχει, ανοίξτε ένα [νέο issue](https://github.com/nightscout/AndroidAPS/issues) και επισυνάψτε τα [αρχεία καταγραφής](../GettingHelp/AccessingLogFiles.md) σας.
+
+Όταν ζητάτε βοήθεια, γράψτε τη μάρκα και το μοντέλο του τηλεφώνου σας, την έκδοση Android, την έκδοση του **AAPS** και μια απλή περιγραφή του προβλήματος (τι άλλαξε, πότε λειτουργούσε τελευταία φορά).
