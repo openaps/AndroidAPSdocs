@@ -59,7 +59,7 @@ A maioria das frustrações com relógios **AAPS** autónomos vem de usar um ecr
 
 Outras dificuldades: é difícil ter bateria suficiente, e os relógios com bateria suficiente são muitas vezes grandes e grossos. Os utilizadores relatam lutas com o sistema operativo e com as definições de poupança de energia, dificuldade em iniciar sensores no relógio, fraco alcance Bluetooth (para manter a ligação ao sensor e à bomba) e resistência à água duvidosa. Há exemplos nas fotografias abaixo.
 
-![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![imagem](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
 Se tiver interesse em configurar um relógio autónomo, leia as publicações e os comentários no grupo do **AAPS**  no Facebook (boas palavras de pesquisa são «standalone» e «Lemfo») e no Discord para mais informações.
 
@@ -88,7 +88,7 @@ As alterações recentes do **Wear OS** estragam progressivamente as watchfaces 
 
 Depois de [instalar o **AAPS** no seu relógio](../WearOS/WearOsSmartwatch.md), pode logo escolher a sua watchface preferida entre estas watchfaces próprias do **AAPS**. Na maioria dos relógios, basta tocar sem soltar no ecrã inicial até o ecrã encolher e deslizar para a direita para escolher outro ecrã:
 
-![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![imagem](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
 Estes são os ecrãs básicos incluídos no **AAPS**. Há [mais watchfaces](#WearOS_changing-to-AAPS-watchface) e também pode usar [complicações](#Watchfaces-complications).
 
@@ -155,7 +155,7 @@ Seguem-se algumas opções de relógios apenas para seguir, populares entre os u
 
 O **WatchDrip+** é uma aplicação complementar feita pela comunidade que mostra os dados da glicose e do loop em vários modelos de smartwatch, sobretudo das marcas Xiaomi (_p. ex._ Mi Band) e Amazfit:
 
-![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![imagem](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 Desde a versão 0.5, o **WatchDrip+** lê os dados diretamente do **AAPS**, sem o xDrip+ como intermediário. No telefone com o **AAPS**:
 
@@ -170,9 +170,9 @@ Pode ler mais sobre eles, incluindo como os configurar, no [site do WatchDrip+](
 
 ### Relógio Pebble
 
-![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![imagem](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
-![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![imagem](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
 Os relógios Pebble ([já descontinuados](https://en.wikipedia.org/wiki/Pebble_(watch))) estiveram à venda de 2013 a 2016 e ainda podem estar disponíveis em segunda mão. A Fitbit ficou com os ativos da Pebble. Os utilizadores do Pebble podem usar a watchface Urchin para ver os dados do Nightscout. Os dados que podem ser mostrados incluem a IA, a basal temporária ativa e as previsões. Em loop aberto, pode usar o IFTTT para criar um applet que, quando é recebida uma notificação do **AAPS**, envia um SMS ou uma notificação pushover.
