@@ -1,77 +1,77 @@
 (browser-build)=
 
-# Browser build
+# Збірка в браузері
 
-Building AAPS with GitHub Actions.
+Збірка AAPS за допомогою GitHub Actions.
 
-**Minimum AAPS version supported is 3.3.2.1.**
+**Мінімальна підтримувана версія AAPS – 3.3.2.1.**
 
-## Build yourself instead of download
+## Зберіть самі, а не завантажуйте
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Застосунок AAPS (файл apk) не можна завантажити готовим через правила для медичних виробів. Збирати застосунок для власного використання законно, але ви не повинні давати його копію іншим!**
 
-See [FAQ page](../UsefulLinks/FAQ.md) for details.
+Докладніше див. на [сторінці FAQ](../UsefulLinks/FAQ.md).
 
 (Building-APK-without-a-computer)=
 
-## Choose how to build
+## Виберіть спосіб збірки
 
-Pick the method that matches the device you build from:
+Виберіть спосіб, який підходить для пристрою, з якого ви збираєте:
 
-### On an Android phone: AAPS Builder (recommended)
+### На телефоні Android: AAPS Builder (рекомендовано)
 
-A setup page walks you through creating your own private build repository in GitHub. Nothing to install, no preparation file, and you start each build yourself. You download the app directly from GitHub. Google Drive is optional.
+Сторінка налаштування крок за кроком допоможе вам створити власний приватний репозиторій для збірки на GitHub. Нічого не треба встановлювати, не потрібен файл підготовки, і кожну збірку ви запускаєте самі. Застосунок ви завантажуєте прямо з GitHub. Google Drive не обов’язковий.
 
-This also works from a computer browser.
+Це працює і в браузері на комп’ютері.
 
-**→ [Build with AAPS Builder](BrowserBuildAapsBuilder.md)**
+**→ [Збірка з AAPS Builder](BrowserBuildAapsBuilder.md)**
 
-### On a computer or an iPhone / iPad: fork and preparation file
+### На комп’ютері або на iPhone / iPad: fork і файл підготовки
 
-You make a copy (fork) of the AAPS source code in GitHub, create your keystore with a preparation file, and the built app is saved to your Google Drive. Follow the four steps below.
+Ви робите копію (fork) вихідного коду AAPS на GitHub, створюєте свій keystore за допомогою файлу підготовки, а зібраний застосунок зберігається на вашому Google Drive. Виконайте чотири кроки нижче.
 
 ```{note}
-**Already building with a fork?** Keep updating it as described in [Update with a browser](../Maintenance/UpdateBrowserBuild.md), or switch to AAPS Builder. To switch, first get a copy of your keystore from your fork: see [Coming from the previous browser build](#aaps-builder-from-fork).
+**Ви вже збираєте за допомогою fork?** Оновлюйте його і далі, як описано в розділі [Оновлення в браузері](../Maintenance/UpdateBrowserBuild.md), або перейдіть на AAPS Builder. Щоб перейти, спочатку отримайте копію вашого keystore зі свого fork: див. [Перехід з попередньої збірки в браузері](#aaps-builder-from-fork).
 ```
 
-You will need to use multiple tabs in your browser, and switch from one to the other. Example Chrome:
+Вам потрібно буде використовувати кілька вкладок у браузері і переходити з однієї на іншу. Приклад у Chrome:
 
 ![fork_aaps](../images/Building-the-App/CI/BrowserBuildTabs.png)
 
 ```{note}
-You will need to jump from tab to tab: start with all tabs closed to avoid losing yourself when switching from one to another.
+Вам доведеться переходити з вкладки на вкладку: на початку закрийте всі вкладки, щоб не заплутатися, коли переходите з однієї на іншу.
 ```
 
-#### What you'll need
+#### Що вам потрібно
 
-- A **Google account**, so the built app can be saved to your Google Drive.
-- A **GitHub account** (free) – you create this in Step 1.
-- A **web browser** that can keep several tabs open at once (Chrome is assumed below).
-- A small **helper to run the preparation file**. Which one you need depends on the device you build from – there is nothing to install now, Step 2 walks you through it for your device:
-  - **Computer (Windows / Mac / Linux):** Simple Web Server.
-  - **iPhone / iPad:** no extra app – you use the built-in Files app and browser.
+- **Обліковий запис Google**, щоб зібраний застосунок можна було зберегти на ваш Google Drive.
+- **Обліковий запис GitHub** (безкоштовний) – ви створите його на кроці 1.
+- **Веббраузер**, у якому можна тримати відкритими кілька вкладок одночасно (нижче ми використовуємо Chrome).
+- Невелика **допоміжна програма для відкриття файлу підготовки**. Яка саме, залежить від пристрою, з якого ви збираєте. Зараз нічого встановлювати не треба: крок 2 покаже, що робити на вашому пристрої:
+  - **Комп’ютер (Windows / Mac / Linux):** Simple Web Server.
+  - **iPhone / iPad:** додатковий застосунок не потрібен – ви використовуєте вбудований застосунок «Файли» і браузер.
 
-#### The steps
+#### Кроки
 
-The browser build is a series of choices. Follow these steps in order:
+Збірка в браузері – це кілька виборів один за одним. Виконайте ці кроки по порядку:
 
-1. **[Create your GitHub fork](BrowserBuildFork.md)** – make your personal copy of the AAPS source code.
-2. **[Create your signing keystore](BrowserBuildKeystore.md)** – the key decision: generate a new keystore (Option 1) or upload your existing one (Option 2), then follow the page for your device.
-3. **[Authorize Google Drive](BrowserBuildGoogleDrive.md)** – let GitHub save the built app to your Google Drive.
-4. **[Build the APK](BrowserBuildAPK.md)** – run the GitHub Actions workflow and pick your version and variant.
+1. **[Створіть свій fork на GitHub](BrowserBuildFork.md)** – зробіть свою особисту копію вихідного коду AAPS.
+2. **[Створіть свій keystore для підпису](BrowserBuildKeystore.md)** – головний вибір: створити новий keystore (Варіант 1) або вивантажити наявний (Варіант 2), а потім виконати інструкції зі сторінки для вашого пристрою.
+3. **[Авторизуйте Google Drive](BrowserBuildGoogleDrive.md)** – дозвольте GitHub зберігати зібраний застосунок на ваш Google Drive.
+4. **[Зберіть APK](BrowserBuildAPK.md)** – запустіть workflow у GitHub Actions і виберіть версію та варіант.
 
-If you run into trouble, see **[Browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md)**. For optional operations with a fork, see [exporting your keystore](#ci-keystore-export) or [cherry-picking a commit](#github-cherry-pick).
+Якщо виникли проблеми, див. **[Збірка в браузері: усунення проблем](../GettingHelp/BrowserBuildTroubleshooting.md)**. Про додаткові дії з fork див. [експорт вашого keystore](#ci-keystore-export) або [перенесення коміту (cherry-pick)](#github-cherry-pick).
 
 ----
 
-**Start with [Step 1 – Create your GitHub fork](BrowserBuildFork.md) →**
+**Почніть з [Кроку 1 – Створіть свій fork на GitHub](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Step 1: Create your fork <BrowserBuildFork.md>
-Step 2: Create your keystore <BrowserBuildKeystore.md>
-Step 3: Authorize Google Drive <BrowserBuildGoogleDrive.md>
-Step 4: Build the APK <BrowserBuildAPK.md>
+Крок 1: Створіть свій fork <BrowserBuildFork.md>
+Крок 2: Створіть свій keystore <BrowserBuildKeystore.md>
+Крок 3: Авторизуйте Google Drive <BrowserBuildGoogleDrive.md>
+Крок 4: Зберіть APK <BrowserBuildAPK.md>
 ```
