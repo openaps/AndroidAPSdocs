@@ -58,7 +58,7 @@ Facebook nedávno odstranil externí odkazy sdílené ve facebookové skupině *
 
 ### Polsko
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): polská komunita AAPS a podpůrná skupina pro diabetes)
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
 
 ### Švédsko
 
