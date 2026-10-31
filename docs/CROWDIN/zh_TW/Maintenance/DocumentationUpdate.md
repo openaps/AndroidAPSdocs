@@ -71,15 +71,15 @@
 ## 2024年11月
 
 - 更新 [你的 AAPS 配置](../SettingUpAaps/YourAapsProfile.md) @emilise
-- 重整 [Wear OS 智慧型手錶](../WearOS/BuildingAapsWearOS.md) 內容 @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
 
 ## 2024年10月
 
 - 多個頁面的更新：
-  - [需要多長時間](#preparing-how-long-will-it-take)、[組件總覽](../DailyLifeWithAaps/CobCalculation.md)、[完成目標](../SettingUpAaps/CompletingTheObjectives.md)、[你的 AAPS 個人檔案](../SettingUpAaps/YourAapsProfile.md)、[組態建置工具](../SettingUpAaps/ConfigBuilder.md)及[偏好設定](../SettingUpAaps/Preferences.md)、[AAPS螢幕](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [COB計算](../DailyLifeWithAaps/CobCalculation.md)、[動態ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Android Studio Ladybug的建立指導](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnerat & @emilise
+- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
 
 ***
 
@@ -102,7 +102,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 ## 2022年1月
 
-- [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio) - 更新 @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
 ## 2021年12月
 
@@ -113,7 +113,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 
 - 校正 Libre 2 傳感器 的最佳方法
 - [ISF](../UsefulLinks/FAQ.md) 影響的重新表述
-- 更新[Android Studio問題排除](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - 移除已修補的[Dexcom](../CompatibleCgms/DexcomG6.md)應用程式，因為它已過時
 
 ## 2021年10月
@@ -166,7 +166,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 ## 2020年9月
 
 - AAPS 2.7 版的大更新
-- 詳細內容請見 `發布說明 <Releasenotes-version-2-7-0>`
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## 2020年6月
 
@@ -191,7 +191,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [使用 Android Studio 3.6.1 建置 APK](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS 與韌體 v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **目前無法用於 AAPS！**
 - [延長注射並切換到開環](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [使用 Android Studio 3.6.1 更新 APK](../Maintenance/UpdateToNewVersion)
+- [使用 Android Studio 3.6.1 更新 APK](../Maintenance/UpdateToNewVersion.md)
 
 ## 2020年2月
 
@@ -229,7 +229,7 @@ AAPS 3.1 文件可在 [這裡](https://androidaps.readthedocs.io/en/3.1/index.ht
 - [新的 Freestyle Libre 2 教程](../CompatibleCgms/Libre2.md)
 - [帶百分比的設定檔切換 - 示例](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS 指令更新](../RemoteFeatures/SMSCommands.md)
-- [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- [問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - [問題排除 - 連結集合](../GettingHelp/GeneralTroubleshooting.md)
 - 更新 - 供有經驗用戶的快速指導
 - 文件 - 更新[編輯](#edit-the-docs-code-syntax)和[翻譯](#translations-translation-of-the-documentation).
