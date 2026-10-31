@@ -1,6 +1,6 @@
 # AAPS应用及文档翻译指南
 
-* 如需翻译应用内字符串，请访问<https://crowdin.com/project/androidaps> 并使用您的GitHub 账户登录。
+* For the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * 文档翻译请访问<https://crowdin.com/project/androidapsdocs> 并使用您的GitHub 账户登录。
 
 * 请发送加入文档团队的申请。操作步骤：点击目标语言国旗图标 → 在下一页右上角点击"加入"按钮。请注明语言、提供您的个人简介及AAPS使用经验，并说明申请译者或校对员（需具备翻译技能+AAPS高级用户资质）。
@@ -61,8 +61,8 @@
     
         1. 这是您正在准备的翻译文本。您可以复制上面的文本或选择下面的建议之一。
     
-        1. 此为翻译建议。您可特别关注Crowdin对此建议的匹配度评分，或查看该内容是否仅为历史译文经文本重组生成（未实质性更改）。
-        1. 点击"保存"按钮提交翻译建议。该建议随后将提交给校对人员进行最终审核。
+        1. These are the suggestions for a translation. Especially you can see how much Crowdin rates this as a fit, or whether it was already translated in the past and only came back because the text was moved, not changed.
+        1. 点击"保存"按钮提交翻译建议。 It will then be passed to a proofreader for final check.
     
     ![Translation docs](../images/translation_WikiTranslate.png)
     
@@ -99,4 +99,4 @@
     
     ![approve text](../images/translations-proofreading.png)
 
-* 当校对员批准翻译后，它将被添加到下一个文档构建中，该构建没有固定的时间表，而是按需进行，大约每周一次，节假日除外。要加快此过程，您可以通知文档团队有关新翻译的信息。
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during holidays. 要加快此过程，您可以通知文档团队有关新翻译的信息。
