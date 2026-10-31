@@ -5,7 +5,7 @@
 ```{admonition} Latest Release
 :class: note
 
- xx xxxx 202x : Vyšla verze {{ aaps_version }}.x.x. V [poznámkách k vydání](#latestrelease) zjistíte, co je nového. Pro aktualizaci postupujte podle [návodu k aktualizaci](./Maintenance/UpdateToNewVersion.md).
+ 31 October 2026 : Version 4.0.0 is out. V [poznámkách k vydání](#latestrelease) zjistíte, co je nového. Pro aktualizaci postupujte podle [návodu k aktualizaci](./Maintenance/UpdateToNewVersion.md).
 
 ```
 
@@ -51,7 +51,7 @@ V části **11) [Jak podpořit AAPS](SupportingAaps/HowToEditTheDocs.md)** najde
 :class: danger
 Bezpečnost **AAPS** závisí na bezpečnostních funkcích vašeho hardwaru (telefon, pumpa, CGM). Používejte pouze plně funkční inzulínovou pumpu a CGM schválené FDA/CE. Nepoužívejte poškozené, upravené nebo vlastnoručně vyrobené inzulínové pumpy nebo přijímače CGM. Používejte pouze originální spotřební materiál (zavaděče, kanyly a zásobníky inzulínu) schválený výrobcem pro použití s vaší pumpou a CGM. Použití netestovaného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby v dávkování inzulínu, což pro uživatele znamená vážné riziko. 
 
-Nepoužívejte **AAPS**, pokud užíváte SGLT-2 inhibitory (glifloziny), protože snižují glykémii. Zvyšujete tím riziko diabetické ketoacidózy (DKA) kvůli snížené dodávce inzulínu a riziko hypoglykémie kvůli snížené glykémii. 
+Nepoužívejte **AAPS**, pokud užíváte SGLT-2 inhibitory (glifloziny), protože snižují glykémii. You increase the risk of diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
 ```
 
 ```{admonition} Disclaimer
