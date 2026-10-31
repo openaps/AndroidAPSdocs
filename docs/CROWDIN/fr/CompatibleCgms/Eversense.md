@@ -63,7 +63,7 @@ xDrip peut lire les notifications de l'application du fabricant, comme le fait E
 - Réglez les paramètres de xDrip selon les explications de la page [Paramètres xDrip](../CompatibleCgms/xDrip.md).
 - Activez le [Lissage Exponentiel](../CompatibleCgms/SmoothingBloodGlucoseData.md) dans AAPS.
 
-## Notification Reader
+## Lecteur de notifications
 
 **AAPS** peut lire les valeurs de glycémie directement dans les notifications de l'application Eversense officielle, sans autre application entre les deux. Pas de complément des données manquantes (backfill).
 
