@@ -1,6 +1,6 @@
 (aaps-ci-google-drive-auth)=
 
-# Compilation dans le navigateur – Étape 3 : Autoriser Google Drive
+# Compilation dans le navigateur – Étape 3 : Autoriser Google Drive
 
 ```{note}
 Ceci est l'**Étape 3** de la [Compilation dans le navigateur](BrowserBuild.md). Faites d'abord l'[Étape 2 – Créer votre keystore de signature](BrowserBuildKeystore.md).
@@ -10,7 +10,7 @@ Ceci est l'**Étape 3** de la [Compilation dans le navigateur](BrowserBuild.md).
 Quelles que soient les instructions suivies avant (Option 1 ou Option 2), vous DEVEZ ajouter l'autorisation Google Drive pour pouvoir utiliser la compilation dans le navigateur.
 ```
 
-Remarque : si vous avez déjà fait cette partie dans la vidéo, vous pouvez maintenant passer à l'[Étape 4 – Compiler l'APK](BrowserBuildAPK.md).
+Remarque : si vous avez déjà fait cette partie dans la vidéo, vous pouvez maintenant passer à l'[Étape 4 – Compiler l'APK](BrowserBuildAPK.md).
 
 ```{warning}
 Si l'autorisation Google ne démarre pas ou si la page de préparation échoue, fermez la page de préparation, ouvrez à nouveau `aaps-ci-preparation.html` de la même façon qu'à l'Étape 2, puis recommencez cette étape. Voir le [dépannage](#aaps-ci-preparation-web).
@@ -32,7 +32,7 @@ Appuyez sur Continue (Continuer).
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-Le champ `GDRIVE_OAUTH2` se remplit : appuyez sur le bouton Copy du haut.
+Le champ `GDRIVE_OAUTH2` se remplit : appuyez sur le bouton Copy du haut.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
@@ -40,11 +40,11 @@ Revenez à l'onglet GitHub.
 
 Faites défiler jusqu'à Repository secrets et appuyez sur New repository secret.
 
-Si vous avez suivi l'Option 1, vous devriez voir ceci :
+Si vous avez suivi l'Option 1, vous devriez voir ceci :
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-Si vous avez suivi l'Option 2, il y aura plus de clés :
+Si vous avez suivi l'Option 2, il y aura plus de clés :
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
@@ -74,4 +74,4 @@ Une fois l'APK compilé, GitHub pourra enregistrer le fichier apk d'AAPS dans vo
 
 ----
 
-**Suivant : [Étape 4 – Compiler l'APK](BrowserBuildAPK.md) →**
+**Suivant : [Étape 4 – Compiler l'APK](BrowserBuildAPK.md) →**
