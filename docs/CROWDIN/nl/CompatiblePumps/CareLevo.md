@@ -1,162 +1,162 @@
 # CareLevo
 
-The CareLevo is a tubeless patch pump made by CareMedi. Each patch holds up to 300 U of insulin and is worn for up to 7 days (168 hours). It communicates with **AAPS** over your phone's Bluetooth, with no additional device.
+De CareLevo is een patchpomp zonder slangetje, gemaakt door CareMedi. Elke patch bevat maximaal 300 E insuline en wordt maximaal 7 dagen (168 uur) gedragen. De pomp communiceert met **AAPS** via de Bluetooth van je telefoon, zonder extra apparaat.
 
 ```{admonition} New driver
 :class: warning
-The CareLevo driver is new in **AAPS**. Read this whole page before you activate your first patch, and keep the pump's own instructions for use at hand.
+De CareLevo driver is nieuw in **AAPS**. Lees deze hele pagina voordat je je eerste patch activeert, en houd de gebruiksaanwijzing van de pomp zelf bij de hand.
 ```
 
-The smallest dose the patch can deliver is 0.05 U. Set your basal rates in the **Profile** to a minimum of 0.05 U/h in steps of 0.05 U/h, otherwise the insulin the **Profile** expects and the insulin the patch delivers differ slightly. **AAPS** uses the basal rates the patch accepted.
+De kleinste dosis die de patch kan toedienen is 0,05 E. Stel je basaalstanden in het **Profiel** in op minimaal 0,05 E/u, in stappen van 0,05 E/u. Anders verschillen de insuline die het **Profiel** verwacht en de insuline die de patch toedient een beetje. **AAPS** gebruikt de basaalstanden die de patch heeft geaccepteerd.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Mogelijkheden van de pomp met AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Bolus in steps of 0.05 U.
-* Basal rates from 0.05 U/h to 15 U/h in steps of 0.05 U/h, with 30-minute basal segments.
-* Temporary basal rates set as an absolute rate, up to 12 hours.
-* Extended bolus up to 8 hours.
-* DST and timezone changes must be handled manually. The patch notifies you when the time zone changes.
+* Communiceert met **AAPS** via de eigen Bluetooth van je telefoon, zonder extra communicatieapparaat.
+* Bolus in stappen van 0,05 E.
+* Basaalstanden van 0,05 E/u tot 15 E/u in stappen van 0,05 E/u, met basaalblokken van 30 minuten.
+* Tijdelijke basaalstanden ingesteld als absolute waarde, tot 12 uur.
+* Vertraagde bolus tot 8 uur.
+* Zomertijd en wisselingen van tijdzone moet je zelf afhandelen. De patch geeft een melding als de tijdzone verandert.
 
-## Pump Setup
+## Pomp instellen
 
-1. Open the **menu** (☰) in the top-left corner of the **AAPS** main screen and select **Configuration**.
-1. Select **Carelevo** in the Pump section.
-1. Press the Back key to return to the main screen.
+1. Open het **menu** (☰) linksboven op het hoofdscherm van **AAPS** en kies **Configuratie**.
+1. Selecteer **Carelevo** in de sectie Pomp.
+1. Druk op de terugtoets om terug te gaan naar het hoofdscherm.
 
-![The Carelevo plugin selected in Configuration > Pump](../images/v4/Pumps/carelevo_enabled.png)
+![De Carelevo plugin geselecteerd in Configuratie > Pomp](../images/v4/Pumps/carelevo_enabled.png)
 
-## Verdere instellingen
+## Instellingen
 
-Open the pump screen with **Manage → Pump** (or **Configuration → Pump → Open plugin**).
+Open het pompscherm met **Beheren → Pomp** (of **Configuratie → Pomp → Plug-in openen**).
 
-Open the CareLevo settings by pressing the **Settings** (gear) icon in the upper right corner. Three settings are available:
+Open de CareLevo instellingen door rechtsboven op het icoon **Instellingen** (tandwiel) te drukken. Er zijn drie instellingen:
 
-![Carelevo driver settings](../images/v4/Pumps/carelevo_settings.png)
+![Instellingen van de Carelevo driver](../images/v4/Pumps/carelevo_settings.png)
 
-### Low Insulin Notification Setting
+### Melding laag insulineniveau
 
-The patch notifies you when the insulin remaining in the reservoir reaches the chosen amount. It can be set from 20 U to 50 U in 5 U steps. The default is 30 U. Independently of this setting, the patch raises a critical alarm and stops delivering insulin when less than 10 U remain.
+De patch geeft een melding als de resterende insuline in het reservoir de gekozen hoeveelheid bereikt. Je kunt dit instellen van 20 E tot 50 E, in stappen van 5 E. De standaardwaarde is 30 E. Los van deze instelling geeft de patch een kritiek alarm en stopt hij met insuline toedienen als er minder dan 10 E over is.
 
-### Patch Usage Notification Setting
+### Melding gebruiksduur patch
 
-The patch notifies you when it has been worn for the chosen number of hours, so you can plan the change. It can be set from 24 to 167 hours. The default is 116 hours.
+De patch geeft een melding als hij het gekozen aantal uren gedragen is, zodat je het vervangen kunt plannen. Je kunt dit instellen van 24 tot 167 uur. De standaardwaarde is 116 uur.
 
-### Patch Info Alarm
+### Patch infoalarm
 
-When this is on, the patch beeps when a bolus, extended bolus or temporary basal starts and when it ends. The default is off.
+Als dit aan staat, piept de patch als een bolus, vertraagde bolus of tijdelijk basaal start en als die eindigt. Standaard staat dit uit.
 
-## The pump screen
+## Het pompscherm
 
-![Carelevo pump screen without an active patch](../images/v4/Pumps/carelevo_pump_screen.png)
+![Carelevo pompscherm zonder actieve patch](../images/v4/Pumps/carelevo_pump_screen.png)
 
-The pump screen shows the **Bluetooth status** (No Active Patch, Disconnected or Connected), the **Serial No.** of the patch, its **Activation Time** and **Expiration**, the current **Basal Rate** and **Temp basal rate**, the **Insulin Remaining** (remaining / filled), the **Patch Time Remaining** and the **Total insulin delivered**.
+Het pompscherm toont de **Bluetooth status** (Geen actieve patch, Verbinding verbroken of Verbonden), het **Serienr.** van de patch, de **Activeringstijd** en **Vervaldatum**, de huidige **Basaalstand** en **Tijdelijke basaalstand**, de **Resterende insuline** (resterend / gevuld), de **Resterende patchtijd** en de **Totaal toegediende insuline**.
 
-The buttons depend on the state of the patch:
+Welke knoppen er zijn, hangt af van de status van de patch:
 
-* **Activate Patch**: starts the activation of a new patch, see below.
-* **Insulin Guide**: shows the twelve steps for filling a patch with insulin.
-* **Suspend Infusion** / **Resume Infusion**: pauses and restarts insulin delivery, see below.
-* **Discard Patch**: stops the current patch so a new one can be activated.
+* **Activeer patch**: start de activering van een nieuwe patch, zie hieronder.
+* **Uitleg insuline**: toont de twaalf stappen om een patch met insuline te vullen.
+* **Toediening onderbreken** / **Toediening hervatten**: pauzeert de insulinetoediening en start die weer, zie hieronder.
+* **Patch weggooien**: stopt de huidige patch, zodat je een nieuwe kunt activeren.
 
-## Activating a patch
+## Een patch activeren
 
-Before you start, make sure a **Profile** is active in **AAPS** and that Bluetooth is on. The patch must be activated within a limited time once it is switched on; if the time runs out, the patch raises a **Patch Application Timeout** alarm and cannot be used.
+Zorg voordat je begint dat er een **Profiel** actief is in **AAPS** en dat Bluetooth aan staat. Na het aanzetten moet de patch binnen een beperkte tijd geactiveerd worden. Als de tijd om is, geeft de patch het alarm **Tijd voor aanbrengen patch verstreken** en kun je hem niet meer gebruiken.
 
-Press **Activate Patch** on the pump screen and follow the steps. You can cancel at any time before the needle is inserted; what you have entered is discarded.
+Druk op **Activeer patch** op het pompscherm en volg de stappen. Je kunt op elk moment annuleren voordat de naald is ingebracht. Wat je hebt ingevoerd, wordt dan niet bewaard.
 
-### Select the insulin
+### Selecteer de insuline
 
-Confirm the insulin you use. The patch requires rapid-acting U-100 insulin.
+Bevestig de insuline die je gebruikt. De patch heeft snelwerkende U-100 insuline nodig.
 
-### Fill the patch with insulin
+### Vul de patch met insuline
 
-Fill the patch with 50 to 300 U, considering how long you will wear it. Press **Insulin Guide** if you need the filling instructions. Then tap the fill amount and select the amount you filled; **AAPS** uses it to show the insulin remaining.
+Vul de patch met 50 tot 300 E. Houd rekening met hoe lang je hem gaat dragen. Druk op **Uitleg insuline** als je de vulinstructies nodig hebt. Tik daarna op de vulhoeveelheid en selecteer de hoeveelheid die je hebt gevuld. **AAPS** gebruikt die om de resterende insuline te tonen.
 
-### Connect the patch
+### Verbind de patch
 
-1. Take the patch out of its blister and remove the needle cap.
-1. Press the power button of the patch for more than one second. After the beep, tap **Search Patch**.
-1. When the patch found is the right one, tap **Confirm**. Tap **Rescan** if it is not.
+1. Haal de patch uit de blisterverpakking en verwijder de naalddop.
+1. Druk langer dan één seconde op de aan/uit-knop van de patch. Tik na de piep op **Patch zoeken**.
+1. Als de gevonden patch de juiste is, tik dan op **Bevestigen**. Tik op **Opnieuw zoeken** als dat niet zo is.
 
-### Safety check
+### Veiligheidscontrole
 
-Once the patch is connected, press **Safety Check**. The patch tests itself and primes. Check that a droplet of insulin has formed at the needle tip. If no droplet is visible, press **Retry**. When the check is complete, press **Next**.
+Druk op **Veiligheidscontrole** zodra de patch verbonden is. De patch test zichzelf en vult zich (primen). Controleer of er een druppel insuline op de punt van de naald zit. Als je geen druppel ziet, druk dan op **Opnieuw**. Druk op **Volgende** als de controle klaar is.
 
-### Site and patch attachment
+### Plek kiezen en patch aanbrengen
 
-1. Select the site where you will wear the patch.
-1. Clean the site thoroughly with an alcohol swab.
-1. Remove the backing tape and attach the patch to your skin with the marked dot facing upward.
-1. Press **Next** once the patch is attached.
+1. Selecteer de plek waar je de patch gaat dragen.
+1. Maak de plek goed schoon met een alcoholdoekje.
+1. Verwijder de beschermtape en plak de patch op je huid met de gemarkeerde stip naar boven.
+1. Druk op **Volgende** als de patch vastzit.
 
-### Insert the needle
+### Breng de naald in
 
-1. Turn the safety cap in the direction of the arrow and remove it.
-1. Press the applicator push button all the way down and hold it for 10 seconds. A beep sounds when the needle is inserted.
-1. Remove the applicator and press **Confirm Insertion**.
+1. Draai de veiligheidsdop in de richting van de pijl en verwijder hem.
+1. Druk de drukknop van de applicator helemaal in en houd hem 10 seconden ingedrukt. Je hoort een piep als de naald is ingebracht.
+1. Verwijder de applicator en druk op **Inbrengen bevestigen**.
 
-If the insertion fails, **AAPS** tells you how many attempts are left. When no attempt is left, the patch raises a **Needle Insertion Error** alarm and must be replaced.
+Als het inbrengen mislukt, vertelt **AAPS** je hoeveel pogingen er nog over zijn. Als er geen poging meer over is, geeft de patch het alarm **Fout bij inbrengen naald** en moet je hem vervangen.
 
-Insulin delivery starts as soon as the insertion is confirmed.
+De insulinetoediening start zodra het inbrengen is bevestigd.
 
-## Bolus messages
+## Bolusmeldingen
 
-If the patch refuses a bolus, **AAPS** tells you why. For example *Bolus can't be delivered. Bolus available: 2.8 U* means the patch can deliver only that amount now.
+Als de patch een bolus weigert, vertelt **AAPS** je waarom. Bijvoorbeeld *Bolus kan niet worden geleverd. Beschikbare bolus: 2,8 E* betekent dat de patch nu alleen die hoeveelheid kan toedienen.
 
-If you stop a bolus and the patch does not confirm the stop, **AAPS** waits for the bolus to end and records the amount the patch reports. If a bolus was not recorded (for example because it was stopped while it was running), **AAPS** adds it from the patch total and asks you to check IOB before you try again.
+Als je een bolus stopt en de patch de stop niet bevestigt, wacht **AAPS** tot de bolus klaar is en slaat de hoeveelheid op die de patch meldt. Als een bolus niet is opgeslagen (bijvoorbeeld omdat hij tijdens het toedienen is gestopt), voegt **AAPS** hem toe op basis van het totaal van de patch en vraagt je om IOB te controleren voordat je het opnieuw probeert.
 
-## Suspending and resuming insulin delivery
+## Insulinetoediening onderbreken en hervatten
 
-Press **Suspend Infusion** on the pump screen and select how long delivery should pause: from 30 minutes to 4 hours in 30-minute steps. Delivery does not resume by itself: when the pause is over, the patch raises a **Start Insulin** alert. Press **Resume Infusion** on the pump screen, or **Start Insulin** on the alert, and confirm.
+Druk op **Toediening onderbreken** op het pompscherm en selecteer hoe lang de toediening moet pauzeren: van 30 minuten tot 4 uur, in stappen van 30 minuten. De toediening start niet vanzelf weer: als de pauze voorbij is, geeft de patch de melding **Insuline starten**. Druk op **Toediening hervatten** op het pompscherm, of op **Insuline starten** in de melding, en bevestig.
 
-## Discarding a patch
+## Een patch weggooien
 
-Press **Discard Patch** on the pump screen and confirm. Insulin delivery stops and the patch can no longer be used. Remove the patch from your body and activate a new one.
+Druk op **Patch weggooien** op het pompscherm en bevestig. De insulinetoediening stopt en de patch kan niet meer gebruikt worden. Haal de patch van je lichaam en activeer een nieuwe.
 
-When a critical alarm has stopped the patch, the alarm offers **Deactivate Patch** instead. Pressing it discards the patch the same way.
+Als een kritiek alarm de patch heeft gestopt, biedt het alarm in plaats daarvan **Patch deactiveren** aan. Als je daarop drukt, wordt de patch op dezelfde manier weggegooid.
 
 (carelevo-alarms-and-notifications)=
 
-## Alarms and notifications
+## Alarmen en meldingen
 
-The patch reports three levels of events. All of them are shown as **AAPS** notifications.
+De patch meldt gebeurtenissen op drie niveaus. Ze worden allemaal als **AAPS** meldingen getoond.
 
-### Critical alarms
+### Kritieke alarmen
 
-Insulin delivery has stopped. Act now:
+De insulinetoediening is gestopt. Doe nu iets:
 
-* **Low Insulin**: less than 10 U remain. Deactivate the patch and change it.
-* **Patch Expired**: the patch reached the end of its life. Deactivate the patch and change it.
-* **Low Battery**: discard the patch and change it.
-* **High/Low Temperature**: move to a suitable temperature, between 40 ℉ and 99 ℉ (5 ℃ and 37 ℃).
-* **Auto-Off**: the patch stopped because the Auto-Off alert was ignored. Press **Start Insulin** to restart basal delivery.
-* **Patch Application Timeout**, **Self-Diagnosis Failed**, **Patch Error**, **Occlusion** and **Needle Insertion Error**: deactivate the patch and change it.
+* **Insuline bijna op**: er is minder dan 10 E over. Deactiveer de patch en vervang hem.
+* **Patch verlopen**: de patch is aan het einde van zijn gebruiksduur. Deactiveer de patch en vervang hem.
+* **Batterij bijna leeg**: gooi de patch weg en vervang hem.
+* **Hoge/lage temperatuur**: ga naar een plek met een geschikte temperatuur, tussen 40 ℉ en 99 ℉ (5 ℃ en 37 ℃).
+* **Automatisch uit**: de patch is gestopt omdat de melding Automatisch uit is genegeerd. Druk op **Insuline starten** om de basale toediening opnieuw te starten.
+* **Tijd voor aanbrengen patch verstreken**, **Zelfdiagnose mislukt**, **Patchfout**, **Verstopping** en **Fout bij inbrengen naald**: deactiveer de patch en vervang hem.
 
-### Alerts
+### Waarschuwingen
 
-Insulin delivery continues, but something needs your attention:
+De insulinetoediening gaat door, maar iets vraagt je aandacht:
 
-* **Low Insulin**: the reservoir reached the amount set in **Low Insulin Notification Setting**. Prepare to change the patch.
-* **Patch Will Expire Soon** and **Patch Operating Life Expired**: change the patch.
-* **Low Battery**: prepare to change the patch.
-* **High/Low Temperature**: delivery is paused until the patch is back between 40 ℉ and 99 ℉.
-* **Auto-Off**: tap **OK**. If ignored, the alert escalates to a critical alarm and delivery stops.
-* **Patch Activation Incomplete**: tap **OK** to complete the activation.
-* **Start Insulin**: the pause you set has ended. Tap **Start Insulin** to resume delivery.
-* **Turn Bluetooth On** and **BLE Not Connected**: the phone cannot reach the patch. Turn Bluetooth on or check the patch connection.
+* **Insuline bijna op**: het reservoir heeft de hoeveelheid bereikt die is ingesteld in **Melding laag insulineniveau**. Bereid je voor op het vervangen van de patch.
+* **Patch verloopt binnenkort** en **Gebruiksduur patch verlopen**: vervang de patch.
+* **Batterij bijna leeg**: bereid je voor op het vervangen van de patch.
+* **Hoge/lage temperatuur**: de toediening is gepauzeerd tot de patch weer tussen 40 ℉ en 99 ℉ is.
+* **Automatisch uit**: tik op **OK**. Als je de melding negeert, wordt het een kritiek alarm en stopt de toediening.
+* **Activering patch niet voltooid**: tik op **OK** om de activering te voltooien.
+* **Insuline starten**: de pauze die je hebt ingesteld is voorbij. Tik op **Insuline starten** om de toediening te hervatten.
+* **Bluetooth aanzetten** en **BLE niet verbonden**: de telefoon kan de patch niet bereiken. Zet Bluetooth aan of controleer de verbinding met de patch.
 
-### Notices
+### Mededelingen
 
-For information only: **Low Insulin**, **Patch Usage Time Notification** (the time set in **Patch Usage Notification Setting** has passed), **Patch Check Notification**, **Time Zone Change** and **Check Blood Glucose** (a set time after a bolus).
+Alleen ter informatie: **Insuline bijna op**, **Melding gebruiksduur patch** (de tijd die is ingesteld in **Melding gebruiksduur patch** is voorbij), **Melding patch controleren**, **Tijdzone gewijzigd** en **Bloedglucose controleren** (een ingestelde tijd na een bolus).
 
-The patch also reports when its own low glucose suspend (**LGS**) function starts or ends. **AAPS** does not use this function; the loop handles low glucose itself.
+De patch meldt ook wanneer zijn eigen functie voor onderbreken bij lage glucose (**LGS**) start of stopt. **AAPS** gebruikt deze functie niet; de loop regelt lage glucose zelf.
 
-## Where to get help
+## Waar je hulp kunt krijgen
 
-Report problems with the CareLevo driver on the [AAPS GitHub issues page](https://github.com/nightscout/AndroidAPS/issues) or in the AAPS community channels, see [Where can I get help](../GettingHelp/WhereCanIGetHelp.md).
+Meld problemen met de CareLevo driver op de [AAPS GitHub issues-pagina](https://github.com/nightscout/AndroidAPS/issues) of in de AAPS community kanalen, zie [Waar kan ik hulp krijgen](../GettingHelp/WhereCanIGetHelp.md).
