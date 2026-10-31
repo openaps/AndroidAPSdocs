@@ -27,7 +27,7 @@ Autotune can be run three ways: manually as a one-off from within the plugin (as
 
 Create an empty file named `enable_autotune` in the `extra` subfolder of your phone [AAPS directory](#preferences-maintenance-settings).
 
-***NOTE: Ensure you check in the **AAPS** settings where your AAPS Directory is, and that you placed the file in the correct one, a number of several have been caught out putting the file into the wrong folder.***
+***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
 
 ![Enable Autotune](../images/Autotune/Autotune_0.png)
 
@@ -97,11 +97,11 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 - Если вы захотите заменить свой профиль на результат Autotune, нажмите на кнопку "Обновить профиль ввода" и нажмите OK во всплывшем окне
 
-  - Примечание: если нажать на "Активировать профиль" после "Обновить входной профиль", то вы активируете свой обновленный профиль, а не "Tuned" по умолчанию.
+  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
 
   ![Autotune - обновить профиль ввода](../images/Autotune/Autotune_9.png)
 
-- Если вы обновили свой профиль ввода, то кнопка «Обновить профиль ввода» заменяется кнопкой «Вернуть профиль ввода» (см. снимок экрана ниже). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. Также есть возможность восстановить профиль ввода без результатов autotune с помощью этой кнопки
+- Если вы обновили свой профиль ввода, то кнопка «Обновить профиль ввода» заменяется кнопкой «Вернуть профиль ввода» (см. снимок экрана ниже). You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. You also have the possibility to recover your input profile without autotune result with this button
 
   ![Autotune - обновить профиль ввода](../images/Autotune/Autotune_10.png)
 
@@ -157,7 +157,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
 - If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. Можно указать, какой день недели войдет в расчет Autotune (на снимке экрана пример для "рабочих дней" с неотмеченными для расчета autotune субботой и воскресеньем)
   - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
+  - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
 
   ![Экран Autotune по умолчанию](../images/Autotune/Autotune_14b.png)
 
