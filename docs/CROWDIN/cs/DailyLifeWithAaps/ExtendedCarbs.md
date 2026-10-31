@@ -9,7 +9,7 @@ Potřeba řešit taková jídla však stále zůstává. Proto AAPS podporuje ta
 
 eSacharidy jsou sacharidy rozdělené do několika hodin. U běžných jídel s více sacharidy než tuky/bílkovinami obvykle stačí zadat sacharidy předem (a v případě potřeby snížit počáteční bolus), aby se zabránilo příliš brzkému podání inzulínu.  Ale pro pomaleji vstřebávaná jídla, kde zadání všech sacharidů předem způsobí příliš velké IOB z SMB, mohou být použity eSacharidy, aby se přesněji simulovalo vstřebávání sacharidů (a jakýchkoliv ekvivalentů, které zadáte pro ostatní makroživiny). Výsledkem je přesnější simulace průběhu glykémie v krvi. Díky těmto informacím může smyčka podávat SMB k těmto sacharidům postupně, což lze chápat jako dynamický prodloužený bolus (mělo by to fungovat i bez SMB, ale pravděpodobně méně účinně).
 
-**Poznámka:** eSacharidy nejsou určené jen pro jídla bohatá na tuky nebo bílkoviny: můžete je použít v každé situaci, kdy glykémii zvyšují jiné vlivy, např. jiné léky, jako jsou kortikosteroidy.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## Jak eSacharidy fungují
 
@@ -62,7 +62,7 @@ Pro rychlejší začátek může eSacharidy přidat *bolusová kalkulačka*: pod
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Prodloužený bolus a proč nebude fungovat v uzavřené smyčce?
 
-Jak bylo uvedeno výše, prodloužené nebo vícevlnné bolusy v uzavřené smyčce ve skutečnosti nefungují. Podrobnosti [najdete níže](#why-extended-boluses-wont-work-in-a-closed-loop-environment)
+Jak bylo uvedeno výše, prodloužené nebo vícevlnné bolusy v uzavřené smyčce ve skutečnosti nefungují. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Prodloužený bolus a přepnutí na otevřenou smyčku – jen pro pumpy Dana a Insight
