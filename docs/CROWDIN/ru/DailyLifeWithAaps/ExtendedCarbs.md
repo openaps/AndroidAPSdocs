@@ -9,7 +9,7 @@
 
 eCarbs are carbs that are split up over several hours. Для стандартного питания с бОльшим содержанием углеводов, чем жира/белка, введение углеводов заранее (и при необходимости уменьшение начального болюса), как правило, достаточно для предотвращения преждевременной подачи инсулина.  Но для медленно поглощающейся еды, при которой предварительное введение углеводов приводит к слишком большой величине активного инсулина IOB из-за микроболюсов SMB, eCarbs могут применяться для более точного моделирования того, как усваиваются углеводы и влияют на уровень глюкозы в крови. С помощью этой информации алгоритм может управлять микроболюсами SMB которые выступают как пролонгированный болюс на такие углеводы ( должно работать и без SMB, но, возможно, менее эффективно).
 
-**Примечание** eCarbs не ограничиваются тяжелой пищей богатой жирами/белками: они могут помочь и в других случаях, когда увеличивается уровень сахара в крови, например, при приеме кортикостероидов.
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## Механизмы использования eCarbs
 
@@ -62,7 +62,7 @@ For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carb
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Пролонгированный болюс и почему он не будет работать в среде замкнутого цикла?
 
-Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. Подробнее [см. ниже](#why-extended-boluses-wont-work-in-a-closed-loop-environment)
+Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Пролонгированный болюс и переключение на незамкнутый цикл - только для помп Dana и Insight
