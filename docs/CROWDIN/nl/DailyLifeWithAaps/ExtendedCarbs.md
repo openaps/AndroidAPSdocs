@@ -3,7 +3,7 @@
 
 ## Wat zijn eCarbs en wanneer zijn ze handig?
 
-Bij reguliere pomptherapie zijn vertraagde bolussen / multiwave bolussen handig voor vette maaltijden (pizza, pasta, pannenkoeken etc) die je bloedglucose lange tijd laten stijgen, langer dan de insuline bij een normale bolus werkzaam zou zijn. In een closed loop is dat echter niet zo zinvol (en geeft het technische problemen) omdat vertraagde/multiwave bolussen door de pomp worden uitgevoerd als een langdurige en vooraf gedefinieerde hoge basaal. Dat conflicteert met de loop, die de basaalstanden juist dynamisch aanpast. Zie [vertraagde bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) hieronder voor details.
+Bij reguliere pomptherapie zijn vertraagde bolussen / multiwave bolussen handig voor vette maaltijden (pizza, pasta, pannenkoeken etc) die je bloedglucose lange tijd laten stijgen, langer dan de insuline bij een normale bolus werkzaam zou zijn. In een gesloten loop is dat echter niet zo zinvol (en geeft het technische problemen) omdat vertraagde/multiwave bolussen door de pomp worden uitgevoerd als een langdurige en vooraf gedefinieerde hoge basaal. Dat conflicteert met de loop, die de basaalstanden juist dynamisch aanpast. Zie [vertraagde bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) hieronder voor details.
 
 Toch moet je zulke maaltijden nog steeds goed kunnen opvangen. Daarom ondersteunt AAPS zogenaamde vertraagde koolhydraten of eCarbs.
 
@@ -62,7 +62,7 @@ Sneller gaat het als de *Bolus wizard* de eCarbs voor je toevoegt: kies het [typ
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Vertraagde bolus: waarom werkt die niet in een gesloten loop?
 
-Zoals hierboven vermeld, werken vertraagde of multiwave bolussen niet echt in een closed loop. [Zie hieronder](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) voor details
+Zoals hierboven vermeld, werken vertraagde of multiwave bolussen niet echt in een gesloten loop. [Zie hieronder](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) voor details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Vertraagde bolus en overschakelen naar open loop - alleen voor Dana en Insight pomp
@@ -85,14 +85,14 @@ Zolang de vertraagde bolus loopt, werkt de loop in de modus **Open loop** (het l
 
 ![Pictogram Open loop op het hoofdscherm terwijl een vertraagde bolus loopt](../images/extended_bolus_main_screen.png)
 
-Het menu **Beheren** toont een knop **Annuleren** met de stand en de verstreken / totale tijd (bijvoorbeeld **Annuleren 2,00 E/h 1/60'**). Tik erop om de vertraagde bolus eerder te stoppen:
+Het menu **Beheren** toont een knop **Annuleren** met de stand en de verstreken / totale tijd (bijvoorbeeld **Annuleren 2,00 E/u 1/60'**). Tik erop om de vertraagde bolus eerder te stoppen:
 
 ![Knop Annuleren van een lopende vertraagde bolus in het menu Beheren](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
-### Waarom vertraagde bolussen niet werken in een closed loop
+### Waarom vertraagde bolussen niet werken in een gesloten loop
 
-1. De loop bepaalt dat er nu 1,55 E/h moet worden gegeven. Of dit als vertraagde bolus of als TBR wordt gegeven, maakt voor het algoritme niet uit. Sommige pompen gebruiken zelfs de vertraagde bolus. Wat moet er dan gebeuren? De meeste pompdrivers stoppen dan de vertraagde bolus -> Je had hem dus niet eens hoeven te starten.
+1. De loop bepaalt dat er nu 1,55 E/u moet worden gegeven. Of dit als vertraagde bolus of als TBR wordt gegeven, maakt voor het algoritme niet uit. Sommige pompen gebruiken zelfs de vertraagde bolus. Wat moet er dan gebeuren? De meeste pompdrivers stoppen dan de vertraagde bolus -> Je had hem dus niet eens hoeven te starten.
 
 2. Als je de vertraagde bolus als invoer had, wat moet er dan in het model gebeuren?
 
