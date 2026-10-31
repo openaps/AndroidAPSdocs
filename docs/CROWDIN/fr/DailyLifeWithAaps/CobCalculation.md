@@ -2,7 +2,7 @@
 
 ## Comment AAPS calcule-t-il la valeur des GA ?
 
-Quand l'utilisateur saisit des glucides pour un repas ou une correction de glucides, **AAPS** les ajoute aux glucides actifs actuels (**GA**). **AAPS** calcule ensuite l'absorption des glucides à partir des écarts observés dans les valeurs de **glycémie** de l'utilisateur. The rate of absorption depends on the carb’s sensitivity factor (**CSF**). Ce n'est pas un réglage du **Profil** de l'utilisateur : **AAPS** le calcule à partir des réglages **SI/G/I**. Il indique de combien de mg/dl 1 g de glucides fait monter la **glycémie** de l'utilisateur.
+Quand l'utilisateur saisit des glucides pour un repas ou une correction de glucides, **AAPS** les ajoute aux glucides actifs actuels (**GA**). **AAPS** calcule ensuite l'absorption des glucides à partir des écarts observés dans les valeurs de **glycémie** de l'utilisateur. La vitesse d'absorption dépend du facteur de sensibilité aux glucides (**CSF**). Ce n'est pas un réglage du **Profil** de l'utilisateur : **AAPS** le calcule à partir des réglages **SI/G/I**. Il indique de combien de mg/dl 1 g de glucides fait monter la **glycémie** de l'utilisateur.
 
 ## Facteur de sensibilité aux glucides
 
@@ -87,7 +87,7 @@ L'écran **Historique Traitements** permet de corriger une saisie de glucides er
 ![Supprimer une saisie de glucides dans l'Historique Traitements](../images/e123d85d-907e-4545-bf1b-09fee4d42555.png)
 
 1. Vérifiez et notez les **GA** et l'**IA** actuels sur l'écran principal d'**AAPS**.
-2. Ouvrez l'**Historique Traitements** (menu latéral → *Historique Traitements*), onglet **Glucides et bolus**. Depending on the pump, the carbs might show together with insulin in one line or as a separate entry (e.g. with Dana RS).
+2. Ouvrez l'**Historique Traitements** (menu latéral → *Historique Traitements*), onglet **Glucides et bolus**. Selon la pompe, les glucides peuvent apparaître avec l'insuline sur une seule ligne ou comme une entrée séparée (par ex. avec la Dana RS).
 3. Faites un **appui long** sur la saisie de glucides erronée : la liste passe en **mode sélection** avec une case à cocher sur chaque ligne, et la saisie est cochée (repère **1** ci-dessus). Cochez aussi les autres saisies que vous voulez supprimer.
 4. Appuyez sur l'icône **🗑 Supprimer** dans la barre du haut (repère **2**) et confirmez : la boîte de dialogue de confirmation liste exactement ce qui sera supprimé.
 5. Vérifiez que les glucides ont bien été supprimés en regardant de nouveau les **GA** sur l'écran principal d'**AAPS**.
