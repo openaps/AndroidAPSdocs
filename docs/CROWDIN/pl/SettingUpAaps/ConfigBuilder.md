@@ -371,7 +371,7 @@ Zobacz [Open Humans](../SupportingAaps/OpenHumans.md).
 
 ### Oprogramowanie Wear (Smartwatch)
 
-Monitoruj **AAPS** i steruj nim z zegarka z Wear OS. Konfigurację zegarka opisano na stronie [Smartwatch z Wear OS](../WearOS/WearOsSmartwatch.md). Po włączeniu wtyczki wybierz jej opcje w [Ustawienia > Oprogramowanie Wear (Smartwatch)](#preferences-wear). Obsługę zegarka opisano na stronie [Obsługa AAPS za pomocą smartwatcha z Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
+Monitoruj **AAPS** i steruj nim z zegarka z Wear OS. Konfigurację zegarka opisano na stronie [Smartwatch z Wear OS](../WearOS/WearOsSmartwatch.md). Po włączeniu wtyczki wybierz jej opcje w [Ustawienia > Oprogramowanie Wear (Smartwatch)](#preferences-wear). Obsługę zegarka opisano na stronie [Obsługa AAPS ze smartwatcha z Wear OS](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
 
