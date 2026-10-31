@@ -20,13 +20,13 @@ Enfin et surtout, vous ne devez pas prendre d'inhibiteurs du SGLT-2 (gliflozines
 
 Ce n'est pas quelque chose à créer ou à acheter, mais c'est sans doute le « composant » le plus sous-estimé, et il est essentiel. Quand vous laissez un algorithme vous aider à gérer votre diabète, il doit connaître les bons paramètres pour ne pas faire de graves erreurs. Même si d'autres composants vous manquent, vous pouvez déjà vérifier et adapter votre **Profil** en collaboration avec votre équipe médicale.
 
-Le **Profil** comprend :
+Le **Profil** comprend :
 
 - DB (débit basal) : fournit l'insuline de fond ;
-- SI (sensibilité à l'insuline) : de combien votre glycémie va diminuer pour une unité d'insuline ;
+- SI (sensibilité à l'insuline) : de combien votre glycémie va diminuer pour une unité d'insuline ;
 - G/I (ratio glucides/insuline) : combien de grammes de glucides sont couverts par une unité d'insuline.
 
-La plupart des "boucleurs" utilisent le rythme circadien pour les DB, la SI et le G/I, qui adaptent la sensibilité à l'insuline hormonale durant la journée.
+La plupart des boucleurs utilisent le rythme circadien pour les DB, la SI et le G/I, qui adaptent la sensibilité à l'insuline hormonale durant la journée.
 
 En plus de votre **Profil**, vous devez aussi configurer votre **insuline** dans **Gestion → Paramètres Insuline**, y compris sa DAI (durée d'action de l'insuline). Voir [Paramètres Insuline](#Config-Builder-insulin-dia).
 
