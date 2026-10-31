@@ -1,457 +1,457 @@
-# Operation of AAPS via your Wear OS smartwatch
+# Χειρισμός του AAPS από το έξυπνο ρολόι Wear OS
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## Watchface του AAPS
 
 ```{warning}
-The classic **AAPS** watchfaces run on Wear OS 5 and older only, and Wear OS 5 already limits them. On **Wear OS 6 and newer** the watch app installs one watchface in Google's Watch Face Format instead: your custom watchface as a picture, or the **Complications watchface**. See [Wear OS watch face changes](#wearos-watchface-changes) for what breaks on each Wear OS version, and [the watchface AAPS installs](#wearos-aaps-v4-watchface) for Wear OS 6.
+Τα κλασικά watchface του **AAPS** λειτουργούν μόνο σε Wear OS 5 και παλαιότερα, και το Wear OS 5 ήδη τα περιορίζει. Σε **Wear OS 6 και νεότερα**, η εφαρμογή του ρολογιού εγκαθιστά αντί γι' αυτά ένα watchface σε μορφή Watch Face Format της Google: το προσαρμοσμένο watchface σας ως εικόνα ή το **Watchface με Complications**. Δείτε τις [αλλαγές στα watchface του Wear OS](#wearos-watchface-changes) για το τι δεν λειτουργεί σε κάθε έκδοση του Wear OS, και [το watchface που εγκαθιστά το AAPS](#wearos-aaps-v4-watchface) για το Wear OS 6.
 ```
 
-On Wear OS 5 and older, several classic watchfaces are built into the **AAPS** watch app. They show the glucose value with delta, IOB, the active basal rate and a graph of the readings. Two taps work on them:
+Σε Wear OS 5 και παλαιότερα, η εφαρμογή ρολογιού του **AAPS** έχει ενσωματωμένα αρκετά κλασικά watchface. Δείχνουν την τιμή γλυκόζης με τη διαφορά (delta), το IOB, τον ενεργό βασικό ρυθμό και ένα γράφημα των μετρήσεων. Σε αυτές λειτουργούν δύο πατήματα:
 
-* Double-tap the glucose value to open the **AAPS** main menu
-* Double-tap the graph to change its time range
+* Διπλό πάτημα στην τιμή γλυκόζης ανοίγει το κύριο μενού του **AAPS**
+* Διπλό πάτημα στο γράφημα αλλάζει το χρονικό του εύρος
 
-On every Wear OS version, the [complications](#Watchfaces-complications) and the [tiles](#WearOsSmartwatch-wear-os-tiles) described on this page work with any watchface that has room for them.
+Σε κάθε έκδοση του Wear OS, οι [επιπλοκές](#Watchfaces-complications) και τα [πλακίδια](#WearOsSmartwatch-wear-os-tiles) που περιγράφονται σε αυτή τη σελίδα λειτουργούν με κάθε watchface που έχει χώρο για αυτά.
 
-## Configuration
+## Διαμόρφωση
 
-Enable **Wear** in [**Configuration** > **Communication**](#Config-Builder-wear).
+Ενεργοποιήστε το **Wear** στη [**Διαμόρφωση** > **Επικοινωνία**](#Config-Builder-wear).
 
-To bolus or take other actions from the watch, turn on **Wear control**. The bolus wizard options for the watch are set in the same place: see [Settings > Wear](#preferences-wear). While **Wear control** is off, the phone refuses every treatment or mode change sent from the watch, and the watch shows *"Wear control is turned off in the Wear settings on the phone."*
+Για να κάνετε bolus ή άλλες ενέργειες από το ρολόι, ενεργοποιήστε το **Έλεγχος από ρολόι**. Οι επιλογές του οδηγού bolus για το ρολόι ρυθμίζονται στο ίδιο σημείο: δείτε [Ρυθμίσεις > Wear](#preferences-wear). Όσο το **Έλεγχος από ρολόι** είναι απενεργοποιημένο, το τηλέφωνο απορρίπτει κάθε θεραπεία ή αλλαγή τρόπου λειτουργίας που στέλνει το ρολόι, και το ρολόι δείχνει *«Ο έλεγχος από το ρολόι είναι απενεργοποιημένος στις ρυθμίσεις Wear στο τηλέφωνο.»*
 
-With **Open plugin** on the **Wear** card you open the Wear screen:
+Με το **Άνοιγμα πρόσθετου** στην κάρτα **Wear** ανοίγετε την οθόνη Wear:
 
-![Wear plugin screen](../images/screens/wear_plugin.png)
+![Οθόνη του πρόσθετου Wear](../images/screens/wear_plugin.png)
 
-The top line shows the name of the connected watch, or **(No Watch Connected)**. From this screen you can
+Η πάνω γραμμή δείχνει το όνομα του συνδεδεμένου ρολογιού ή **(Χωρίς Σύνδεση Ρολογιού)**. Από αυτή την οθόνη μπορείτε να
 
-* Resend all data. Might be helpful if watch was not connected for some time, and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
-* Choose which watchface **AAPS** installs on the watch (**Watchface installed on watch**: your custom watchface, or the complications watchface). This card is only shown while a **Wear OS 6** or newer watch is connected. See [the watchface AAPS installs](#wearos-aaps-v4-watchface).
-* Manage the **Custom Watchface** (the card is shown while a watch is connected): **Load Watchface** sends a custom watchface to the watch, **Infos Watchface** lists the details of the loaded watchface and the fields it contains, **More watchfaces** opens the [exchange site](../ExchangeSiteCustomWatchfaces/index.md) in your browser, and **Export template** saves a template you can edit. A preview of the loaded watchface is shown below the buttons. See [Changing to an AAPS Watchface](#WearOS_changing-to-AAPS-watchface).
+* Ξαναστείλετε όλα τα δεδομένα. Μπορεί να βοηθήσει αν το ρολόι δεν ήταν συνδεδεμένο για λίγο και θέλετε να στείλετε τις πληροφορίες στο ρολόι.
+* Ανοίξτε τις ρυθμίσεις στο ρολόι σας απευθείας από το τηλέφωνό σας.
+* επιλέξετε ποιο watchface εγκαθιστά το **AAPS** στο ρολόι (**Watchface εγκατεστημένο στο ρολόι**: το προσαρμοσμένο watchface σας ή το Watchface με Complications). Αυτή η κάρτα εμφανίζεται μόνο όσο είναι συνδεδεμένο ένα ρολόι με **Wear OS 6** ή νεότερο. Δείτε [το watchface που εγκαθιστά το AAPS](#wearos-aaps-v4-watchface).
+* διαχειριστείτε το **Προσαρμοσμένο Watchface** (η κάρτα εμφανίζεται όσο είναι συνδεδεμένο ένα ρολόι): το **Φόρτωση Watchface** στέλνει ένα προσαρμοσμένο watchface στο ρολόι, το **Πληροφορίες Watchface** δείχνει τις λεπτομέρειες του φορτωμένου watchface και τα πεδία του, το **Περισσότερα Watchface** ανοίγει τον [ιστότοπο ανταλλαγής](../ExchangeSiteCustomWatchfaces/index.md) στον browser σας και το **Εξαγωγή Προτύπου** αποθηκεύει ένα πρότυπο που μπορείτε να επεξεργαστείτε. Κάτω από τα κουμπιά εμφανίζεται μια προεπισκόπηση του φορτωμένου watchface. Δείτε [Αλλαγή σε watchface του AAPS](#WearOS_changing-to-AAPS-watchface).
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+Βεβαιωθείτε ότι οι ειδοποιήσεις από το AAPS δεν είναι αποκλεισμένες στο ρολόι. Η επιβεβαίωση μιας ενέργειας (π.χ. bolus, προσωρινός στόχος) έρχεται ως ειδοποίηση. Πρέπει να τη σύρετε και να πατήσετε το σημάδι επιλογής.
 
-## Accessing main menu of AAPS
+## Πρόσβαση στο κύριο μενού του AAPS
 
-![AAPS main menu on the watch](../images/wearos/main_menu.png)
+![Το κύριο μενού του AAPS στο ρολόι](../images/wearos/main_menu.png)
 
-To open the main menu of **AAPS**, use one of these:
+Για να ανοίξετε το κύριο μενού του **AAPS**, χρησιμοποιήστε ένα από τα παρακάτω:
 
-* open **AAPS** from the watch's app list
-* tap an **AAPS** complication that opens the menu, see [Complication related settings](#WearOsSmartwatch-complication-settings)
-* tap the **BG Graph** tile with its **Tap action** set to **Main Menu**, see [Tile settings](#WearOsSmartwatch-wear-os-tiles)
-* on a classic **AAPS** watchface, double-tap the glucose value
+* ανοίξτε το **AAPS** από τη λίστα εφαρμογών του ρολογιού
+* πατήστε μια επιπλοκή του **AAPS** που ανοίγει το μενού, δείτε [Ρυθμίσεις για τις επιπλοκές](#WearOsSmartwatch-complication-settings)
+* πατήστε το πλακίδιο **Γράφημα BG** με την **Ενέργεια πατήματος** ορισμένη σε **Κύριο μενού**, δείτε [Ρυθμίσεις πλακιδίων](#WearOsSmartwatch-wear-os-tiles)
+* σε ένα κλασικό watchface του **AAPS**, πατήστε δύο φορές την τιμή γλυκόζης
 
 (WearOsSmartwatch-loop-status)=
 
-## Loop Status screen
+## Οθόνη Κατάσταση κυκλώματος
 
-The **Loop Status** screen gives a summary of what the loop is doing, without taking out your phone. Open it from the AAPS main menu (**Loop status**, or **Status → Loop**), or by tapping the **Blood Glucose** complication. The **Status** menu also has a **Pump** page and a **TDD** page with the total daily doses.
+Η οθόνη **Κατάσταση κυκλώματος** δίνει μια σύνοψη του τι κάνει το κύκλωμα, χωρίς να βγάλετε το τηλέφωνο. Ανοίξτε την από το κύριο μενού του AAPS (**Κατάσταση κυκλώματος** ή **Κατάσταση → Κύκλωμα**) ή πατώντας την επιπλοκή **Γλυκόζη αίματος**. Το μενού **Κατάσταση** έχει επίσης μια σελίδα **Αντλία** και μια σελίδα **TDD** με τις συνολικές ημερήσιες δόσεις.
 
-![Status menu: Pump, Loop and TDD](../images/wearos/status_menu.png)
+![Μενού Κατάσταση: Αντλία, Κύκλωμα και TDD](../images/wearos/status_menu.png)
 
-![Loop Status screen](../images/wearos/loop_status.png)
+![Οθόνη Κατάσταση κυκλώματος](../images/wearos/loop_status.png)
 
-The screen is a list of cards. Scroll down to see them all:
+Η οθόνη είναι μια λίστα από κάρτες. Κάντε κύλιση προς τα κάτω για να τις δείτε όλες:
 
-* **Running mode** — the current mode (closed loop, open loop, LGS, suspended, disconnected…) and, for a temporary mode, how long it still runs.
-* **Loop result** — when the loop last ran, and the temporary basal or SMB it requested.
-* **Scene** — only while a [scene](#scenes-from-watch) is active: its name, the time left (or **Until ended** for a scene without end time) and the **Follow-up** scene that starts when it ends.
-* **Targets** — your target, and the temporary target if one is running.
-* **Profile** — the name of the active profile, with its **Percentage** and **Timeshift** when they are not the default values. A temporary profile switch is highlighted and shows how long it still runs and the profile it **Returns to** when it ends.
-* **Sensitivity** — the same lines as the sensitivity chip on the phone's main screen: the autosens value and the profile, variable and effective ISF.
+* **Τρόπος λειτουργίας** — ο τρέχων τρόπος (κλειστό κύκλωμα, ανοιχτό κύκλωμα, LGS, σε αναστολή, αποσυνδεδεμένο…) και, για έναν προσωρινό τρόπο, πόσο χρόνο θα διαρκέσει ακόμα.
+* **Αποτέλεσμα κυκλώματος** — πότε έτρεξε τελευταία φορά το κύκλωμα, και ο προσωρινός βασικός ρυθμός ή το SMB που ζήτησε.
+* **Σενάριο** — μόνο όσο είναι ενεργό ένα [σενάριο](#scenes-from-watch): το όνομά του, ο χρόνος που απομένει (ή **Μέχρι τη λήξη** για σενάριο χωρίς ώρα λήξης) και το **Επόμενο σενάριο** που ξεκινά όταν λήξει.
+* **Στόχοι** — ο στόχος σας και ο προσωρινός στόχος, αν υπάρχει ενεργός.
+* **Προφίλ** — το όνομα του ενεργού προφίλ, με το **Ποσοστό** και τη **Χρονική μετατόπιση** όταν δεν έχουν τις προεπιλεγμένες τιμές. Μια προσωρινή αλλαγή προφίλ επισημαίνεται. Δείχνει πόσο χρόνο θα διαρκέσει ακόμα και το προφίλ στο οποίο επιστρέφει (**Επιστροφή σε**) όταν λήξει.
+* **Ευαισθησία** — οι ίδιες γραμμές με το chip ευαισθησίας στην κύρια οθόνη του τηλεφώνου: η τιμή autosens και το ISF του προφίλ, το μεταβλητό και το πραγματικό ISF.
 
-A small scene icon next to a running mode, a temporary target or a profile switch means it was **set by the active scene**. The same icon is shown in the **Running mode** picker.
+Ένα μικρό εικονίδιο σεναρίου δίπλα σε έναν τρόπο λειτουργίας, έναν προσωρινό στόχο ή μια αλλαγή προφίλ σημαίνει ότι αυτό **Ορίστηκε από το ενεργό σενάριο**. Το ίδιο εικονίδιο εμφανίζεται και στην επιλογή **Τρόπος λειτουργίας**.
 
-![Profile card with a temporary profile switch set by a scene](../images/wearos/loop_status_profile_scene.png)
+![Κάρτα προφίλ με προσωρινή αλλαγή προφίλ που ορίστηκε από σενάριο](../images/wearos/loop_status_profile_scene.png)
 
 (WearOsSmartwatch-bolus-calculator)=
 
-## The bolus calculator on the watch
+## Ο υπολογιστής bolus στο ρολόι
 
-Open **Calculator** from the **AAPS** main menu, from the [Actions tile](#WearOsSmartwatch-wear-os-tiles) or from a complication set to open the wizard. It walks through a few pages, swipe from right to left to go on:
+Ανοίξτε τον **Υπολογιστής** από το κύριο μενού του **AAPS**, από το [πλακίδιο Ενέργειες](#WearOsSmartwatch-wear-os-tiles) ή από μια επιπλοκή που είναι ρυθμισμένη να ανοίγει τον οδηγό. Έχει μερικές σελίδες. Σύρετε από δεξιά προς τα αριστερά για να προχωρήσετε:
 
-| Υδατάνθρακες                                                    | Request                                                             | Result                                                            | Calculation                                                                       | Confirm                                                             |
-| --------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| ![Carbs page](../images/wearos/calculator/calculator_carbs.png) | ![Request page](../images/wearos/calculator/calculator_request.png) | ![Result page](../images/wearos/calculator/calculator_result.png) | ![Calculation details](../images/wearos/calculator/calculator_result_details.png) | ![Confirm page](../images/wearos/calculator/calculator_confirm.png) |
+| Υδατάνθρακες                                                             | Αίτημα                                                                  | Αποτέλεσμα                                                                 | Υπολογισμός                                                                            | Επιβεβαίωση                                                                |
+| ------------------------------------------------------------------------ | ----------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| ![Σελίδα υδατανθράκων](../images/wearos/calculator/calculator_carbs.png) | ![Σελίδα αιτήματος](../images/wearos/calculator/calculator_request.png) | ![Σελίδα αποτελέσματος](../images/wearos/calculator/calculator_result.png) | ![Λεπτομέρειες υπολογισμού](../images/wearos/calculator/calculator_result_details.png) | ![Σελίδα επιβεβαίωσης](../images/wearos/calculator/calculator_confirm.png) |
 
-1. **Carbs**: enter the carbs with the **+10**, **+5**, **−** and **+** buttons.
-2. **Request**: the last page before the phone takes over. It shows what you entered: the carbs, and the meal type, carb time and percentage when you use them, see [Optional pages](#WearOsSmartwatch-calculator-optional-pages). Tap the check mark to send it to the phone, which runs the calculation.
-3. **Result**: the bolus **AAPS** proposes, with the carbs under it: the carbs now and the eCarbs later, the carb time and the bell of the eat reminder. Adjust the dose with **−** and **+**, see below. Scroll down for the **Calculation** card: tap it to see every line of the calculation, the same as on the phone.
-4. **Confirm**: swipe to the second page and tap the check mark. The phone delivers the bolus and records the carbs.
+1. **Υδατάνθρακες**: εισάγετε τους υδατάνθρακες με τα κουμπιά **+10**, **+5**, **−** και **+**.
+2. **Αίτημα**: η τελευταία σελίδα πριν αναλάβει το τηλέφωνο. Δείχνει τι εισαγάγατε: τους υδατάνθρακες και, όταν τα χρησιμοποιείτε, τον τύπο γεύματος, τον χρόνο υδατανθράκων και το ποσοστό, δείτε [Προαιρετικές σελίδες](#WearOsSmartwatch-calculator-optional-pages). Πατήστε το σημάδι επιλογής για να το στείλετε στο τηλέφωνο, το οποίο κάνει τον υπολογισμό.
+3. **Αποτέλεσμα**: το bolus που προτείνει το **AAPS**, με τους υδατάνθρακες από κάτω: τους υδατάνθρακες τώρα και τους eCarbs αργότερα, τον χρόνο υδατανθράκων και το καμπανάκι της υπενθύμισης φαγητού. Προσαρμόστε τη δόση με τα **−** και **+**, δείτε παρακάτω. Κάντε κύλιση προς τα κάτω για την κάρτα **Υπολογισμός**: πατήστε την για να δείτε κάθε γραμμή του υπολογισμού, όπως και στο τηλέφωνο.
+4. **Επιβεβαίωση**: σύρετε στη δεύτερη σελίδα και πατήστε το σημάδι επιλογής. Το τηλέφωνο χορηγεί το bolus και καταγράφει τους υδατάνθρακες.
 
 (WearOsSmartwatch-calculator-optional-pages)=
 
-### Optional pages
+### Προαιρετικές σελίδες
 
-Three watch settings each add a page after **Carbs**. They are off by default. Open the **AAPS** main menu, then **Settings** > **Interface**, and turn on the ones you want; when more than one is on, the pages come in the order **Meal type**, **Carb time**, **Percentage**. The dots at the bottom of the calculator show how many pages it has.
+Τρεις ρυθμίσεις του ρολογιού προσθέτουν η καθεμία μια σελίδα μετά τους **Υδατάνθρακες**. Είναι απενεργοποιημένες από προεπιλογή. Ανοίξτε το κύριο μενού του **AAPS**, μετά **Ρυθμίσεις** > **Περιβάλλον**, και ενεργοποιήστε αυτές που θέλετε. Όταν είναι ενεργές περισσότερες από μία, οι σελίδες έρχονται με τη σειρά **Τύπος γεύματος**, **Χρόνος υδατανθράκων**, **Ποσοστό**. Οι τελείες στο κάτω μέρος του υπολογιστή δείχνουν πόσες σελίδες έχει.
 
-| Ρυθμίσεις                                                                                | Meal type                                                               | Carb time                                                               | Percentage                                                                |
-| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| ![Calculator settings on the watch](../images/wearos/calculator/calculator_settings.png) | ![Meal type page](../images/wearos/calculator/calculator_meal_type.png) | ![Carb time page](../images/wearos/calculator/calculator_carb_time.png) | ![Percentage page](../images/wearos/calculator/calculator_percentage.png) |
+| Ρυθμίσεις                                                                              | Τύπος γεύματος                                                                 | Χρόνος υδατανθράκων                                                                 | Ποσοστό                                                                   |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| ![Ρυθμίσεις υπολογιστή στο ρολόι](../images/wearos/calculator/calculator_settings.png) | ![Σελίδα τύπου γεύματος](../images/wearos/calculator/calculator_meal_type.png) | ![Σελίδα χρόνου υδατανθράκων](../images/wearos/calculator/calculator_carb_time.png) | ![Σελίδα ποσοστού](../images/wearos/calculator/calculator_percentage.png) |
 
-* **Calculator Meal Type**: **Bread**, **Cake** or **Pizza**, which splits the carbs of a slow meal into carbs now and eCarbs later, see [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
-* **Calculator Carb Time**: the minutes until you eat, with a **Set alarm** bell for the eat reminder, see [Carb time and the eat reminder](#WearOsSmartwatch-wizard-carb-time).
-* **Calculator Percentage**: a percentage of the calculated bolus, for example 70 % when you want a smaller dose. It starts at the **Bolus percentage** of the phone's [Bolus wizard settings](#Preferences-deliver-this-part-of-bolus-wizard-result), 100 % unless you changed it. See also the note under [Adjusting the bolus on the result page](#WearOsSmartwatch-wizard-result).
+* **Τύπος γεύματος στον υπολογιστή δόσης**: **Ψωμί**, **Γλυκό** ή **Πίτσα**. Χωρίζει τους υδατάνθρακες ενός αργού γεύματος σε υδατάνθρακες τώρα και eCarbs αργότερα, δείτε [Επιλογή τύπου γεύματος](#WearOsSmartwatch-wizard-meal-type).
+* **Ώρα υδατανθράκων στον υπολογιστή δόσης**: τα λεπτά μέχρι να φάτε, με ένα καμπανάκι **Ορισμός ειδοποίησης** για την υπενθύμιση φαγητού, δείτε [Χρόνος υδατανθράκων και υπενθύμιση φαγητού](#WearOsSmartwatch-wizard-carb-time).
+* **Ποσοστό Υπολογιστή**: ένα ποσοστό του υπολογισμένου bolus, για παράδειγμα 70% όταν θέλετε μικρότερη δόση. Ξεκινά από το **Ποσοστό bolus** των [ρυθμίσεων του Οδηγού Bolus](#Preferences-deliver-this-part-of-bolus-wizard-result) στο τηλέφωνο, 100% αν δεν το έχετε αλλάξει. Δείτε επίσης τη σημείωση στην ενότητα [Προσαρμογή του bolus στη σελίδα αποτελέσματος](#WearOsSmartwatch-wizard-result).
 
 (WearOsSmartwatch-wizard-result)=
 
-### Adjusting the bolus on the result page
+### Προσαρμογή του bolus στη σελίδα αποτελέσματος
 
-The result page shows the bolus **AAPS** proposes, together with a **−** and a **+** button. Use them to adjust the dose before you confirm it, without going back to the phone.
+Η σελίδα αποτελέσματος δείχνει το bolus που προτείνει το **AAPS**, μαζί με ένα κουμπί **−** και ένα κουμπί **+**. Χρησιμοποιήστε τα για να προσαρμόσετε τη δόση πριν την επιβεβαιώσετε, χωρίς να επιστρέψετε στο τηλέφωνο.
 
-| Proposed                                                                          | More                                                                                | Less                                                                                   |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| ![The proposed bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![The bolus raised by 0.20 U](../images/wearos/calculator/calculator_result_up.png) | ![The bolus lowered by 0.10 U](../images/wearos/calculator/calculator_result_down.png) |
+| Προτεινόμενο                                                                         | Περισσότερο                                                                            | Λιγότερο                                                                                 |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| ![Το προτεινόμενο bolus](../images/wearos/calculator/calculator_result_proposed.png) | ![Το bolus αυξημένο κατά 0,20 U](../images/wearos/calculator/calculator_result_up.png) | ![Το bolus μειωμένο κατά 0,10 U](../images/wearos/calculator/calculator_result_down.png) |
 
-* Each press changes the bolus by **one step of your pump**, so the amounts offered always match what your pump can actually deliver.
-* **Press and hold** a button to keep changing the value. The longer you hold, the faster it goes.
-* You cannot go below **0 U**, nor above your **max bolus** setting.
+* Κάθε πάτημα αλλάζει το bolus κατά **ένα βήμα της αντλίας σας**, έτσι οι ποσότητες ταιριάζουν πάντα με ό,τι μπορεί πραγματικά να χορηγήσει η αντλία σας.
+* **Πατήστε παρατεταμένα** ένα κουμπί για να συνεχίσει να αλλάζει η τιμή. Όσο περισσότερο το κρατάτε, τόσο πιο γρήγορα αλλάζει.
+* Δεν μπορείτε να πάτε κάτω από **0 U** ούτε πάνω από τη ρύθμιση **μέγιστο bolus**.
 
-The running total is shown on the result page, so you always see the amount you are about to confirm. The change is shown after the carbs, for example *(+0.20 U)*, and the button you used turns green for more or red for less.
+Το τρέχον σύνολο εμφανίζεται στη σελίδα αποτελέσματος, έτσι βλέπετε πάντα την ποσότητα που πρόκειται να επιβεβαιώσετε. Η αλλαγή εμφανίζεται μετά τους υδατάνθρακες, για παράδειγμα *(+0,20 U)*, και το κουμπί που χρησιμοποιήσατε γίνεται πράσινο για περισσότερο ή κόκκινο για λιγότερο.
 
-If **AAPS** had to limit the dose, for example because the calculated bolus is above your **max bolus** setting, a warning line in amber below the total says so (for example *"Bolus constraint applied"*). The same applies to a limited carbs amount.
+Αν το **AAPS** χρειάστηκε να περιορίσει τη δόση, για παράδειγμα επειδή το υπολογισμένο bolus είναι πάνω από τη ρύθμιση **μέγιστο bolus**, μια πορτοκαλί γραμμή προειδοποίησης κάτω από το σύνολο το λέει (για παράδειγμα *«Ορίστηκε περιορισμός Bolus»*). Το ίδιο ισχύει για περιορισμένη ποσότητα υδατανθράκων.
 
-```{admonition} This is not the same as Calculator Percentage :class: note The **Calculator Percentage** setting lets you enter a *percentage* of the calculated bolus **before** the result page appears. The **−** and **+** buttons adjust the *final amount* **on** the result page. You can use both.
+```{admonition} Αυτό δεν είναι το ίδιο με το Ποσοστό Υπολογιστή :class: note Η ρύθμιση **Ποσοστό Υπολογιστή** σας επιτρέπει να εισάγετε ένα *ποσοστό* του υπολογισμένου bolus **πριν** εμφανιστεί η σελίδα αποτελέσματος. Τα κουμπιά **−** και **+** προσαρμόζουν την *τελική ποσότητα* **μέσα** στη σελίδα αποτελέσματος. Μπορείτε να χρησιμοποιήσετε και τα δύο.
 
     <br />(WearOsSmartwatch-wizard-meal-type)=
     
-    ### Choosing the meal type
+    ### Επιλογή τύπου γεύματος
     
-    The watch calculator can split the carbs of a slow meal into carbs now and eCarbs later, like the [carbs type](#AapsScreens-carbs-type) of the phone wizard. Turn on **Calculator Meal Type** in the watch's **Settings** > **Interface**. The setting is off by default, and then the **Meal type** page is skipped.
+    Ο υπολογιστής του ρολογιού μπορεί να χωρίσει τους υδατάνθρακες ενός αργού γεύματος σε υδατάνθρακες τώρα και eCarbs αργότερα, όπως ο [τύπος γεύματος](#AapsScreens-carbs-type) στον οδηγό του τηλεφώνου. Ενεργοποιήστε το **Τύπος γεύματος στον υπολογιστή δόσης** στο ρολόι, στις **Ρυθμίσεις** > **Περιβάλλον**. Η ρύθμιση είναι απενεργοποιημένη από προεπιλογή, και τότε η σελίδα **Τύπος γεύματος** παραλείπεται.
     
-    * After you enter the carbs, a **Meal type** page shows three icons: **Bread**, **Cake** and **Pizza**. Tap an icon: its name and the carbs it gives show below the icons, for example *65 g* for bread, or *52+22 g* for pizza (52 g now and 22 g of eCarbs later). **Bread** is the default and keeps all the carbs now.
-    * The request and confirm pages show the carbs in the same way (*52+22 g*). The result page also shows when the eCarbs start and how long they last.
-    * The bolus is calculated only for the carbs eaten now. The split uses the same numbers as the phone wizard.
+    * Αφού εισαγάγετε τους υδατάνθρακες, μια σελίδα **Τύπος γεύματος** δείχνει τρία εικονίδια: **Ψωμί**, **Γλυκό** και **Πίτσα**. Πατήστε ένα εικονίδιο: κάτω από τα εικονίδια εμφανίζεται το όνομά του και οι υδατάνθρακες που δίνει, για παράδειγμα *65 g* για ψωμί ή *52+22 g* για πίτσα (52 g τώρα και 22 g eCarbs αργότερα). Το **Ψωμί** είναι η προεπιλογή και κρατά όλους τους υδατάνθρακες για τώρα.
+    * Οι σελίδες αιτήματος και επιβεβαίωσης δείχνουν τους υδατάνθρακες με τον ίδιο τρόπο (*52+22 g*). Η σελίδα αποτελέσματος δείχνει επίσης πότε ξεκινούν οι eCarbs και πόσο διαρκούν.
+    * Το bolus υπολογίζεται μόνο για τους υδατάνθρακες που τρώτε τώρα. Ο διαχωρισμός χρησιμοποιεί τους ίδιους αριθμούς με τον οδηγό του τηλεφώνου.
     
     (WearOsSmartwatch-wizard-carb-time)=
     
-    ### Carb time and the eat reminder
+    ### Χρόνος υδατανθράκων και υπενθύμιση φαγητού
     
-    With **Calculator Carb Time** turned on in the watch's **Settings** > **Interface**, a **Carb time** page follows the carbs: the minutes until you eat, like the [carb time](#aaps-screens-bolus-wizard) of the phone wizard. **Now** is the default. **−** and **+** move it in steps of 5 minutes, up to an hour before or after now. A time in the past is for carbs you have eaten already.
+    Όταν είναι ενεργοποιημένο το **Ώρα υδατανθράκων στον υπολογιστή δόσης** στο ρολόι, στις **Ρυθμίσεις** > **Περιβάλλον**, μετά τους υδατάνθρακες ακολουθεί μια σελίδα **Χρόνος υδατανθράκων**: τα λεπτά μέχρι να φάτε, όπως ο [χρόνος υδατανθράκων](#aaps-screens-bolus-wizard) στον οδηγό του τηλεφώνου. Το **Τώρα** είναι η προεπιλογή. Τα **−** και **+** τον αλλάζουν σε βήματα των 5 λεπτών, έως μία ώρα πριν ή μετά από τώρα. Ένας χρόνος στο παρελθόν είναι για υδατάνθρακες που έχετε ήδη φάει.
     
-    With a time in the future, a **Set alarm** bell appears under the value. It is on by default, tap it to turn it off. The request and result pages show the carb time, for example *+30 min*, and the bell. The phone records the carbs at that time, moves the eCarbs of the meal type with it, and starts its **time to eat** reminder.
+    Με έναν χρόνο στο μέλλον, εμφανίζεται ένα καμπανάκι **Ορισμός ειδοποίησης** κάτω από την τιμή. Είναι ενεργό από προεπιλογή. Πατήστε το για να το απενεργοποιήσετε. Οι σελίδες αιτήματος και αποτελέσματος δείχνουν τον χρόνο υδατανθράκων, για παράδειγμα *+30 λεπ.*, και το καμπανάκι. Το τηλέφωνο καταγράφει τους υδατάνθρακες σε αυτή την ώρα, μετακινεί μαζί και τους eCarbs του τύπου γεύματος, και ξεκινά την υπενθύμιση **Ώρα για φαγητό**.
     
-    | Result | BG graph | Running | Time to eat |
+    | Αποτέλεσμα | Γράφημα BG | Σε εξέλιξη | Ώρα για φαγητό |
     | --- | --- | --- | --- |
-    | ![Result page with a carb time](../images/wearos/calculator/calculator_result_carb_time.png) | ![The reminder in the BG graph](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![The running reminder](../images/wearos/eat_reminder/eat_reminder_running.png) | ![The reminder rings](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
+    | ![Σελίδα αποτελέσματος με χρόνο υδατανθράκων](../images/wearos/calculator/calculator_result_carb_time.png) | ![Η υπενθύμιση στο γράφημα BG](../images/wearos/eat_reminder/eat_reminder_graph.png) | ![Η υπενθύμιση σε εξέλιξη](../images/wearos/eat_reminder/eat_reminder_running.png) | ![Η υπενθύμιση χτυπά](../images/wearos/eat_reminder/eat_reminder_ringing.png) |
     
-    The reminder also lives on the watch, so it rings when the phone is out of reach too:
+    Η υπενθύμιση υπάρχει και στο ρολόι, έτσι χτυπά ακόμα και όταν το τηλέφωνο δεν είναι κοντά:
     
-    * The **BG Graph** screen, the **BG Graph** tile and the graph of the **Complications watchface** draw a dashed orange line where the reminder rings, with the minutes left next to it.
-    * While it runs, a silent **Time to eat** notification with **Stop** and **+5 min** sits in the notification stream. It comes back when you swipe it away, until the reminder is over.
-    * When the time has come, the watch vibrates, and again every half minute for five minutes until you answer. The notification offers **Silence** and **+5 min**, and swiping it away silences it too.
+    * Η οθόνη **Γράφημα BG**, το πλακίδιο **Γράφημα BG** και το γράφημα του **Watchface με Complications** δείχνουν μια διακεκομμένη πορτοκαλί γραμμή εκεί που θα χτυπήσει η υπενθύμιση, με τα λεπτά που απομένουν δίπλα της.
+    * Όσο τρέχει, μια αθόρυβη ειδοποίηση **Ώρα για φαγητό** με **Διακοπή** και **+5 λεπ.** μένει στη λίστα ειδοποιήσεων. Επανέρχεται αν τη σύρετε για να φύγει, μέχρι να τελειώσει η υπενθύμιση.
+    * Όταν έρθει η ώρα, το ρολόι δονείται, και ξανά κάθε μισό λεπτό για πέντε λεπτά, μέχρι να απαντήσετε. Η ειδοποίηση προσφέρει **Σίγαση** και **+5 λεπ.**. Αν τη σύρετε για να φύγει, σιγεί επίσης.
     
-    **Stop**, **Silence** and **+5 min** do the same on the watch, on the phone and on an **AAPSClient**, and all of them show the same reminder.
+    Τα **Διακοπή**, **Σίγαση** και **+5 λεπ.** κάνουν το ίδιο στο ρολόι, στο τηλέφωνο και σε ένα **AAPSClient**, και όλα δείχνουν την ίδια υπενθύμιση.
     
     (Watchfaces-complications)=
     
-    ## Complications
+    ## Επιπλοκές
     
-    _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+    Η _επιπλοκή_ (complication) είναι όρος από την παραδοσιακή ωρολογοποιία, όπου περιγράφει μια προσθήκη στην κύρια πλάκα του ρολογιού, όπως ένα μικρό παράθυρο ή ένα μικρό καντράν (με ημερομηνία, ημέρα της εβδομάδας, φάση της σελήνης κ.λπ.). Το Wear OS 2.0 χρησιμοποιεί αυτή την ιδέα, ώστε προσαρμοσμένοι πάροχοι δεδομένων (όπως καιρός, ειδοποιήσεις, μετρητές άσκησης και άλλα) να μπορούν να προστεθούν σε κάθε watchface που υποστηρίζει επιπλοκές.
     
-    AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+    Η εφαρμογή Wear OS του AAPS υποστηρίζει επιπλοκές από την έκδοση `2.6` και επιτρέπει σε κάθε watchface τρίτου κατασκευαστή που υποστηρίζει επιπλοκές να ρυθμιστεί ώστε να δείχνει δεδομένα του AAPS (BG με την τάση, IOB, COB κ.λπ.).
     
-    Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+    Οι επιπλοκές λειτουργούν επίσης ως **συντόμευση** σε λειτουργίες του AAPS. Αν τις πατήσετε, ανοίγουν μενού και διάλογοι του AAPS (ανάλογα με τον τύπο και τις ρυθμίσεις της επιπλοκής).
     
-    ![The Complications watchface, every slot filled with an AAPS complication](../images/wearos/complications_on_watchface.png)
+    ![Το Watchface με Complications, κάθε θέση γεμάτη με μια επιπλοκή του AAPS](../images/wearos/complications_on_watchface.png)
     
-    ### Complication Types
+    ### Τύποι επιπλοκών
     
-    AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+    Η εφαρμογή Wear OS του AAPS παρέχει μόνο ακατέργαστα δεδομένα, σύμφωνα με προκαθορισμένες μορφές. Το watchface τρίτου κατασκευαστή αποφασίζει πού και πώς θα δείξει τις επιπλοκές, μαζί με τη διάταξη, το περίγραμμα, το χρώμα και τη γραμματοσειρά. Από τους πολλούς διαθέσιμους τύπους επιπλοκών του Wear OS, το AAPS χρησιμοποιεί:
     
-    * `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-    * `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-    * `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-    * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
-    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - A small icon. In a `SMALL IMAGE` slot AAPS draws it in its own colour; in a `MONOCHROMATIC IMAGE` slot the watchface tints it.
+    * `SHORT TEXT` - Περιέχει δύο γραμμές κειμένου, 7 χαρακτήρων η καθεμία, που μερικές φορές λέγονται τιμή και ετικέτα. Συνήθως εμφανίζεται μέσα σε κύκλο ή μικρή κάψουλα, η μία κάτω από την άλλη ή η μία δίπλα στην άλλη. Είναι μια επιπλοκή με πολύ λίγο χώρο. Το AAPS προσπαθεί να αφαιρεί περιττούς χαρακτήρες για να χωρούν τα δεδομένα: στρογγυλοποιεί τιμές, αφαιρεί μηδενικά στην αρχή και στο τέλος των τιμών κ.λπ.
+    * `LONG TEXT` - Περιέχει δύο γραμμές κειμένου, περίπου 20 χαρακτήρων η καθεμία. Συνήθως εμφανίζεται μέσα σε ορθογώνιο ή μακριά κάψουλα, η μία κάτω από την άλλη. Χρησιμοποιείται για περισσότερες λεπτομέρειες και για κατάσταση σε μορφή κειμένου.
+    * `RANGED VALUE` - Για τιμές από προκαθορισμένο εύρος, όπως ένα ποσοστό. Περιέχει εικονίδιο και ετικέτα και συνήθως εμφανίζεται ως κυκλικός δείκτης προόδου.
+    * `LARGE IMAGE` - Προσαρμοσμένη εικόνα που μπορεί να χρησιμοποιηθεί ως φόντο (όταν το υποστηρίζει το watchface).
+    * `SMALL IMAGE` / `MONOCHROMATIC IMAGE` - Ένα μικρό εικονίδιο. Σε θέση `SMALL IMAGE` το AAPS το σχεδιάζει με το δικό του χρώμα. Σε θέση `MONOCHROMATIC IMAGE` το χρωματίζει το watchface.
     
-    ### Complication Setup
+    ### Ρύθμιση επιπλοκών
     
-    To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+    Για να προσθέσετε μια επιπλοκή στο watchface, ρυθμίστε το με παρατεταμένο πάτημα και πατήστε το εικονίδιο με το γρανάζι από κάτω. Ανάλογα με το πώς τις ρυθμίζει το συγκεκριμένο watchface: είτε πατήστε στις κενές θέσεις είτε ανοίξτε το μενού ρύθμισης επιπλοκών του watchface. Οι επιπλοκές του AAPS είναι ομαδοποιημένες κάτω από την επιλογή μενού AAPS.
     
-    When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+    Όταν ρυθμίζετε επιπλοκές στο watchface, το Wear OS δείχνει και φιλτράρει τη λίστα με τις επιπλοκές που χωρούν στην επιλεγμένη θέση του watchface. Αν μια συγκεκριμένη επιπλοκή δεν υπάρχει στη λίστα, ο λόγος είναι πιθανώς ότι ο τύπος της δεν μπορεί να χρησιμοποιηθεί σε αυτή τη θέση.
     
-    ### Complications provided by AAPS
+    ### Επιπλοκές που παρέχει το AAPS
     
-    AAPS provides the complications below. "Opens" is what a tap does with **Complication Tap Action** left at **Default**, see [Complication related settings](#WearOsSmartwatch-complication-settings).
+    Το AAPS παρέχει τις παρακάτω επιπλοκές. Το «ανοίγει» είναι αυτό που κάνει ένα πάτημα όταν η **Ενέργεια Αφής Επιπλοκής** έχει μείνει στο **Προεπιλογή**, δείτε [Ρυθμίσεις για τις επιπλοκές](#WearOsSmartwatch-complication-settings).
     
-    **Glucose**
+    **Γλυκόζη**
     
-    * **Blood Glucose** (`SHORT TEXT`, opens _Loop Status_): the glucose value with the trend arrow on the first line, the age of the reading and the delta on the second.
-    * **Blood Glucose (large)** (`SHORT TEXT`, opens _BG Graph_): the glucose value alone on the first line, so the watchface can draw it big. The age and the trend arrow are on the second line.
-    * **BG Graph** (`SMALL IMAGE` / `LARGE IMAGE`, opens _BG Graph_): the BG graph as a picture, for watchfaces with an image slot. This is the graph on the **Complications watchface**.
-    * **Full Status** (`LONG TEXT`, opens _Menu_): most of the data in one line: the glucose value with the trend arrow, the delta and the age of the reading, then carbs on board, insulin on board and the basal rate.
-    * **Full Status (flipped)** (`LONG TEXT`, opens _Menu_): the same, with the two lines swapped, for watchfaces that show only one of the two lines of a `LONG TEXT` slot.
+    * **Γλυκόζη αίματος** (`SHORT TEXT`, ανοίγει _Κατάσταση κυκλώματος_): η τιμή γλυκόζης με το βέλος τάσης στην πρώτη γραμμή, η ηλικία της μέτρησης και η διαφορά (delta) στη δεύτερη.
+    * **Γλυκόζη αίματος (μεγάλη)** (`SHORT TEXT`, ανοίγει _Γράφημα BG_): μόνο η τιμή γλυκόζης στην πρώτη γραμμή, ώστε το watchface να μπορεί να τη δείξει μεγάλη. Η ηλικία και το βέλος τάσης είναι στη δεύτερη γραμμή.
+    * **Γράφημα BG** (`SMALL IMAGE` / `LARGE IMAGE`, ανοίγει _Γράφημα BG_): το γράφημα BG ως εικόνα, για watchface με θέση εικόνας. Αυτό είναι το γράφημα του **Watchface με Complications**.
+    * **Πλήρης κατάσταση** (`LONG TEXT`, ανοίγει _Μενού_): τα περισσότερα δεδομένα σε μία γραμμή: η τιμή γλυκόζης με το βέλος τάσης, η διαφορά και η ηλικία της μέτρησης, μετά οι ενεργοί υδατάνθρακες, η ενεργή ινσουλίνη και ο βασικός ρυθμός.
+    * **Πλήρης κατάσταση (ανεστραμμένη)** (`LONG TEXT`, ανοίγει _Μενού_): το ίδιο, με τις δύο γραμμές ανάποδα, για watchface που δείχνουν μόνο μία από τις δύο γραμμές μιας θέσης `LONG TEXT`.
     
-    **Insulin and carbs**
+    **Ινσουλίνη και υδατάνθρακες**
     
-    * **IoB Icon** (`SHORT TEXT`, opens _Bolus_): insulin on board with a syringe icon.
-    * **IoB Detailed** (`SHORT TEXT`, opens _Bolus_): total insulin on board on the first line, the bolus and basal parts on the second.
-    * **CoB Icon** (`SHORT TEXT`, opens _Wizard_): carbs on board with a carbs icon.
-    * **CoB Detailed** (`SHORT TEXT`, opens _Wizard_): the carbs on board now on the first line, the carbs still to come (eCarbs) on the second.
-    * **CoB & IoB** (`SHORT TEXT`, opens _Wizard_): insulin on board on the first line, carbs on board on the second.
+    * **Εικονίδιο IoB** (`SHORT TEXT`, ανοίγει _Bolus_): ενεργή ινσουλίνη με εικονίδιο σύριγγας.
+    * **IoB λεπτομερώς** (`SHORT TEXT`, ανοίγει _Bolus_): η συνολική ενεργή ινσουλίνη στην πρώτη γραμμή, τα μέρη από bolus και βασικό ρυθμό στη δεύτερη.
+    * **Εικονίδιο CoB** (`SHORT TEXT`, ανοίγει _Οδηγός_): ενεργοί υδατάνθρακες με εικονίδιο υδατανθράκων.
+    * **CoB λεπτομερώς** (`SHORT TEXT`, ανοίγει _Οδηγός_): οι ενεργοί υδατάνθρακες τώρα στην πρώτη γραμμή, οι υδατάνθρακες που θα έρθουν ακόμα (eCarbs) στη δεύτερη.
+    * **CoB & IoB** (`SHORT TEXT`, ανοίγει _Οδηγός_): ενεργή ινσουλίνη στην πρώτη γραμμή, ενεργοί υδατάνθρακες στη δεύτερη.
     
-    **Basal and target**
+    **Βασικός ρυθμός και στόχος**
     
-    * **Basal rate** (`SHORT TEXT`, opens _Menu_): the current basal rate.
-    * **BR & IoB** (`SHORT TEXT`, opens _Menu_): insulin on board on the first line, the basal rate on the second.
-    * **BR & Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line, with the time left when a temporary target runs, and the basal rate on the second.
-    * **Target** (`SHORT TEXT`, opens _Temp Target_): the target on the first line and, while a temporary target runs, its time left on the second.
-    * **BR, CoB & IoB** (`SHORT TEXT`, opens _Menu_): the basal rate on the first line, carbs on board and insulin on board on the second.
+    * **Βασικός Ρυθμός** (`SHORT TEXT`, ανοίγει _Μενού_): ο τρέχων βασικός ρυθμός.
+    * **BR & IoB** (`SHORT TEXT`, ανοίγει _Μενού_): ενεργή ινσουλίνη στην πρώτη γραμμή, ο βασικός ρυθμός στη δεύτερη.
+    * **BR & Στόχος** (`SHORT TEXT`, ανοίγει _Προσωρινός στόχος_): ο στόχος στην πρώτη γραμμή, με τον χρόνο που απομένει όταν τρέχει προσωρινός στόχος, και ο βασικός ρυθμός στη δεύτερη.
+    * **Στόχος** (`SHORT TEXT`, ανοίγει _Προσωρινός στόχος_): ο στόχος στην πρώτη γραμμή και, όσο τρέχει προσωρινός στόχος, ο χρόνος που του απομένει στη δεύτερη.
+    * **BR, CoB & IoB** (`SHORT TEXT`, ανοίγει _Μενού_): ο βασικός ρυθμός στην πρώτη γραμμή, ενεργοί υδατάνθρακες και ενεργή ινσουλίνη στη δεύτερη.
     
-    **Loop and phone**
+    **Κύκλωμα και τηλέφωνο**
     
-    * **Running mode** (`SMALL IMAGE` / `ICON`, opens _Running mode picker_): the current loop mode as an icon: closed loop, open loop, low glucose suspend, suspended, disconnected or disabled. A tap opens a picker with the mode changes allowed right now, for example **Suspend loop**, **Disconnect pump**, **Resume loop** or **Reconnect pump**. The same picker is in the **AAPS** main menu under **Running mode**.
-    * **Uploader/Phone Battery** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, opens _Status_): the battery of the **AAPS** phone, as a gauge with a battery icon, as a number, or as the icon alone. It updates together with the other **AAPS** data, usually every 5 minutes with a new reading.
+    * **Τρόπος λειτουργίας** (`SMALL IMAGE` / `ICON`, ανοίγει _Επιλογή τρόπου λειτουργίας_): ο τρέχων τρόπος του κυκλώματος ως εικονίδιο: κλειστό κύκλωμα, ανοιχτό κύκλωμα, αναστολή λόγω χαμηλής γλυκόζης, σε αναστολή, αποσυνδεδεμένο ή απενεργοποιημένο. Ένα πάτημα ανοίγει μια λίστα επιλογής με τις αλλαγές τρόπου που επιτρέπονται εκείνη τη στιγμή, για παράδειγμα **Αναστολή κυκλώματος**, **Αποσύνδεση αντλίας**, **Επαναφορά κυκλώματος** ή **Επανασύνδεση αντλίας**. Η ίδια λίστα επιλογής υπάρχει στο κύριο μενού του **AAPS**, στο **Τρόπος λειτουργίας**.
+    * **Μπαταρία uploader/τηλεφώνου** (`RANGED VALUE` / `SHORT TEXT` / `ICON`, ανοίγει _Κατάσταση_): η μπαταρία του τηλεφώνου του **AAPS**, ως δείκτης με εικονίδιο μπαταρίας, ως αριθμός ή μόνο ως εικονίδιο. Ενημερώνεται μαζί με τα άλλα δεδομένα του **AAPS**, συνήθως κάθε 5 λεπτά με μια νέα μέτρηση.
     
-    The **Running mode** picker, as opened from the complication, the main menu or the Running mode tile:
+    Η λίστα επιλογής **Τρόπος λειτουργίας**, όπως ανοίγει από την επιπλοκή, το κύριο μενού ή το πλακίδιο Τρόπος λειτουργίας:
     
-    ![Running mode picker with the modes you can switch to](../images/wearos/running_mode_picker.png)
+    ![Λίστα επιλογής τρόπου λειτουργίας με τους τρόπους στους οποίους μπορείτε να αλλάξετε](../images/wearos/running_mode_picker.png)
     
     (WearOsSmartwatch-complication-settings)=
     
-    ### Complication related settings
+    ### Ρυθμίσεις για τις επιπλοκές
     
-    In the **AAPS** main menu on the watch, open **Settings** > **Complication**:
+    Στο κύριο μενού του **AAPS** στο ρολόι, ανοίξτε **Ρυθμίσεις** > **Επιπλοκή**:
     
-    ![Settings > Complication on the watch](../images/wearos/settings_complication.png)
+    ![Ρυθμίσεις > Επιπλοκή στο ρολόι](../images/wearos/settings_complication.png)
     
-    * **Complication Tap Action** (default `Default`): what a tap on an **AAPS** complication opens, for all complications at once:
-      * _Default_: what the complication itself opens, see the list above
-      * _Menu_: the **AAPS** main menu
-      * _Calculator_: the bolus calculator
-      * _Treatment_: the treatment dialog, insulin and carbs
-      * _eCarbs_: the eCarbs dialog
-      * _Status_: the status menu
-      * _Running mode_: the running mode picker. Needs **Wear control** turned on in the phone's Wear settings, otherwise the main menu opens instead.
-      * _None_: a tap does nothing
-    * **BG graph time range** (default `3 hours`): how many hours the **BG Graph** complication shows, 1, 3 or 6. The BG Graph tile has its own setting.
-    * **Unicode in Complications** (default `On`): the complications use Unicode symbols like `Δ` for the delta, `⁞` as separator and `⎍` for the basal rate. How they look depends on the font of the watchface. Turn this `Off` when a watchface draws them as boxes or blanks.
+    * **Ενέργεια Αφής Επιπλοκής** (προεπιλογή `Προεπιλογή`): τι ανοίγει ένα πάτημα σε μια επιπλοκή του **AAPS**, για όλες τις επιπλοκές μαζί:
+      * _Προεπιλογή_: ό,τι ανοίγει η ίδια η επιπλοκή, δείτε τη λίστα παραπάνω
+      * _Μενού_: το κύριο μενού του **AAPS**
+      * _Υπολογιστής_: ο υπολογιστής bolus
+      * _Θεραπεία_: ο διάλογος θεραπείας, ινσουλίνη και υδατάνθρακες
+      * _eCarbs_: ο διάλογος eCarbs
+      * _Κατάσταση_: το μενού κατάστασης
+      * _Τρόπος λειτουργίας_: η λίστα επιλογής τρόπου λειτουργίας. Χρειάζεται ενεργοποιημένο το **Έλεγχος από ρολόι** στις ρυθμίσεις Wear του τηλεφώνου, αλλιώς ανοίγει το κύριο μενού.
+      * _Κανένα_: ένα πάτημα δεν κάνει τίποτα
+    * **Εύρος χρόνου γραφήματος BG** (προεπιλογή `3 ώρες`): πόσες ώρες δείχνει η επιπλοκή **Γράφημα BG**, 1, 3 ή 6. Το πλακίδιο Γράφημα BG έχει δική του ρύθμιση.
+    * **Unicode στις Επιπλοκές** (προεπιλογή `On`): οι επιπλοκές χρησιμοποιούν σύμβολα Unicode όπως `Δ` για τη διαφορά (delta), `⁞` ως διαχωριστικό και `⎍` για τον βασικό ρυθμό. Η εμφάνισή τους εξαρτάται από τη γραμματοσειρά του watchface. Ορίστε το σε `Off` όταν ένα watchface τα δείχνει ως κουτάκια ή κενά.
     
     (WearOsSmartwatch-wear-os-tiles)=
     
-    ## Wear OS Tiles
+    ## Πλακίδια Wear OS
     
-    Tiles are the pages you reach by swiping from the watchface. **AAPS** brings seven of them, each a set of up to four buttons. A tap on a button opens the matching dialog on the watch, or asks you to confirm, and the phone then does the work. A tile is a shortcut, not a status display: it does not hold the state of the phone app.
+    Τα πλακίδια είναι οι σελίδες που βλέπετε όταν σύρετε από το watchface. Το **AAPS** έχει επτά πλακίδια, το καθένα με έως τέσσερα κουμπιά. Ένα πάτημα σε κουμπί ανοίγει τον αντίστοιχο διάλογο στο ρολόι ή σας ζητά επιβεβαίωση, και μετά το τηλέφωνο κάνει τη δουλειά. Ένα πλακίδιο είναι συντόμευση, όχι οθόνη κατάστασης: δεν κρατά την κατάσταση της εφαρμογής του τηλεφώνου.
     
-    Before using the tiles, turn on **Wear control** in [Settings > Wear](#preferences-wear).
+    Πριν χρησιμοποιήσετε τα πλακίδια, ενεργοποιήστε το **Έλεγχος από ρολόι** στις [Ρυθμίσεις > Wear](#preferences-wear).
     
-    ### Adding a tile
+    ### Προσθήκη πλακιδίου
     
-    There are two ways, depending on your watch and phone:
+    Υπάρχουν δύο τρόποι, ανάλογα με το ρολόι και το τηλέφωνό σας:
     
-    1. On the watch: swipe from the watchface past the last tile to **Add tile** and pick an **AAPS** tile. On most watches a long-press on a tile also opens the add and remove view.
-    2. On the phone, in the companion app for your watch (**Galaxy Wearable** for Samsung, **Wear OS** for other brands): open **Tiles**, tap **Add** and pick the **AAPS** tiles you want. The order of the tiles can be changed by dragging.
+    1. Στο ρολόι: σύρετε από το watchface πέρα από το τελευταίο πλακίδιο μέχρι το **Add tile** (Προσθήκη πλακιδίου) και επιλέξτε ένα πλακίδιο του **AAPS**. Στα περισσότερα ρολόγια, ένα παρατεταμένο πάτημα σε ένα πλακίδιο ανοίγει επίσης την προβολή προσθήκης και αφαίρεσης.
+    2. Στο τηλέφωνο, στη συνοδευτική εφαρμογή του ρολογιού σας (**Galaxy Wearable** για Samsung, **Wear OS** για άλλες μάρκες): ανοίξτε τα **Tiles** (Πλακίδια), πατήστε **Add** (Προσθήκη) και επιλέξτε τα πλακίδια του **AAPS** που θέλετε. Μπορείτε να αλλάξετε τη σειρά των πλακιδίων σέρνοντάς τα.
     
-    ![The seven AAPS tiles in the companion app](../images/wearos/tiles/tiles_list_companion_app.png)
+    ![Τα επτά πλακίδια του AAPS στη συνοδευτική εφαρμογή](../images/wearos/tiles/tiles_list_companion_app.png)
     
-    ### Tile settings
+    ### Ρυθμίσεις πλακιδίων
     
-    The **Actions**, **Temp Target**, **BG Graph** and **Scene** tiles have settings on the watch. Open the **AAPS** main menu, then **Settings** > **Tiles**, and pick the tile. A long-press on the tile also opens its settings, except on Pixel watches. The other three tiles are filled from the phone and have nothing to set on the watch.
+    Τα πλακίδια **Ενέργειες**, **Προσωρινός στόχος**, **Γράφημα BG** και **Σενάριο** έχουν ρυθμίσεις στο ρολόι. Ανοίξτε το κύριο μενού του **AAPS**, μετά **Ρυθμίσεις** > **Πλακίδια**, και επιλέξτε το πλακίδιο. Ένα παρατεταμένο πάτημα στο πλακίδιο ανοίγει επίσης τις ρυθμίσεις του, εκτός από τα ρολόγια Pixel. Τα άλλα τρία πλακίδια γεμίζουν από το τηλέφωνο και δεν έχουν τίποτα να ρυθμίσετε στο ρολόι.
     
-    | Main menu | Settings | Tiles |
+    | Κύριο μενού | Ρυθμίσεις | Πλακίδια |
     | --- | --- | --- |
-    | ![AAPS main menu, Settings](../images/wearos/tiles/tile_settings_menu.png) | ![Settings, Tiles](../images/wearos/tiles/tile_settings_settings.png) | ![Tiles, pick the tile](../images/wearos/tiles/tile_settings_tiles.png) |
+    | ![Κύριο μενού του AAPS, Ρυθμίσεις](../images/wearos/tiles/tile_settings_menu.png) | ![Ρυθμίσεις, Πλακίδια](../images/wearos/tiles/tile_settings_settings.png) | ![Πλακίδια, επιλογή πλακιδίου](../images/wearos/tiles/tile_settings_tiles.png) |
     
-    The settings of a tile are a list of its four places. Tap a place to pick what it shows, or **None** to leave it empty.
+    Οι ρυθμίσεις ενός πλακιδίου είναι μια λίστα με τις τέσσερις θέσεις του. Πατήστε μια θέση για να επιλέξετε τι δείχνει, ή **Κανένα** για να μείνει κενή.
     
-    | Long-press on the tile | Settings of the Temp Target tile |
+    | Παρατεταμένο πάτημα στο πλακίδιο | Ρυθμίσεις του πλακιδίου Προσωρινός στόχος |
     | --- | --- |
-    | ![Long-press on a tile, tap the pencil](../images/wearos/tiles/tile_settings_long_press.png) | ![Temp Target tile settings, one entry per place](../images/wearos/tiles/tile_settings_temp_target.png) |
+    | ![Παρατεταμένο πάτημα σε πλακίδιο, πατήστε το μολύβι](../images/wearos/tiles/tile_settings_long_press.png) | ![Ρυθμίσεις πλακιδίου Προσωρινός στόχος, μία καταχώριση ανά θέση](../images/wearos/tiles/tile_settings_temp_target.png) |
     
-    Every tile has four places. A tile with more entries than that shows the first four.
+    Κάθε πλακίδιο έχει τέσσερις θέσεις. Ένα πλακίδιο με περισσότερες καταχωρίσεις δείχνει τις πρώτες τέσσερις.
     
-    ### Actions tile
+    ### Πλακίδιο Ενέργειες
     
-    ![Actions tile](../images/wearos/tiles/tile_actions.png)
+    ![Πλακίδιο Ενέργειες](../images/wearos/tiles/tile_actions.png)
     
-    Shortcuts to the dialogs of the **AAPS** watch app. Pick up to four of these in the tile settings:
+    Συντομεύσεις στους διαλόγους της εφαρμογής ρολογιού του **AAPS**. Επιλέξτε έως τέσσερα από αυτά στις ρυθμίσεις του πλακιδίου:
     
-    * **Calc**: the bolus calculator, with a carbs input, an optional percentage [1] and an optional meal type [2]
-    * **Treat**: insulin and carbs in one go
-    * **Insulin**: a bolus, entered in units
-    * **Carbs**: carbs, also extended carbs. A **negative** amount is accepted, down to your current COB, to correct carbs you entered earlier. Carb removals are shown on the watch's BG graph.
-    * **eCarbs**: extended carbs
-    * **TempT**: a temporary target with a custom target and duration
-    * **Profile switch**: a profile switch with percentage, time shift and duration
+    * **Υπολογ**: ο υπολογιστής bolus, με εισαγωγή υδατανθράκων, προαιρετικό ποσοστό [1] και προαιρετικό τύπο γεύματος [2]
+    * **Αντιμετώπιση-Θεραπεία**: ινσουλίνη και υδατάνθρακες μαζί
+    * **Ινσουλίνη**: ένα bolus, σε μονάδες
+    * **Υδατάνθρακες**: υδατάνθρακες, και εκτεταμένοι υδατάνθρακες. Γίνεται δεκτή και **αρνητική** ποσότητα, έως τους τρέχοντες COB σας, για να διορθώσετε υδατάνθρακες που εισαγάγατε νωρίτερα. Οι αφαιρέσεις υδατανθράκων εμφανίζονται στο γράφημα BG του ρολογιού.
+    * **eCarbs**: εκτεταμένοι υδατάνθρακες
+    * **Προσωρινός Στόχος**: προσωρινός στόχος με δικό σας στόχο και διάρκεια
+    * **Αλλαγή Προφίλ**: αλλαγή προφίλ με ποσοστό, χρονική μετατόπιση και διάρκεια
     
-    ![Actions tile settings: one entry per place](../images/wearos/tiles/tile_settings_actions.png)
+    ![Ρυθμίσεις πλακιδίου Ενέργειες: μία καταχώριση ανά θέση](../images/wearos/tiles/tile_settings_actions.png)
     
-    The dialogs the buttons open. Swipe from right to left to reach the next page of a dialog, and tap the check mark on the last page to send the request to the phone:
+    Οι διάλογοι που ανοίγουν τα κουμπιά. Σύρετε από δεξιά προς τα αριστερά για να πάτε στην επόμενη σελίδα ενός διαλόγου, και πατήστε το σημάδι επιλογής στην τελευταία σελίδα για να στείλετε το αίτημα στο τηλέφωνο:
     
-    | Treat | Insulin | Carbs | eCarbs | TempT | Profile switch |
+    | Αντιμετώπιση-Θεραπεία | Ινσουλίνη | Υδατάνθρακες | eCarbs | Προσωρινός Στόχος | Αλλαγή Προφίλ |
     | --- | --- | --- | --- | --- | --- |
-    | ![Treatment dialog, insulin page](../images/wearos/dialogs/dialog_treatment.png) | ![Insulin dialog](../images/wearos/dialogs/dialog_insulin.png) | ![Carbs dialog](../images/wearos/dialogs/dialog_carbs.png) | ![eCarbs dialog](../images/wearos/dialogs/dialog_ecarbs.png) | ![Temp Target dialog, duration page](../images/wearos/dialogs/dialog_temp_target.png) | ![Profile switch dialog](../images/wearos/dialogs/dialog_profile_switch.png) |
+    | ![Διάλογος θεραπείας, σελίδα ινσουλίνης](../images/wearos/dialogs/dialog_treatment.png) | ![Διάλογος ινσουλίνης](../images/wearos/dialogs/dialog_insulin.png) | ![Διάλογος υδατανθράκων](../images/wearos/dialogs/dialog_carbs.png) | ![Διάλογος eCarbs](../images/wearos/dialogs/dialog_ecarbs.png) | ![Διάλογος προσωρινού στόχου, σελίδα διάρκειας](../images/wearos/dialogs/dialog_temp_target.png) | ![Διάλογος αλλαγής προφίλ](../images/wearos/dialogs/dialog_profile_switch.png) |
     
-    [1] In the watch's **Settings** > **Interface**, turn on **Calculator Percentage** to show the percentage input in the bolus calculator. The default percentage comes from the phone's ["Deliver this part of the bolus wizard result %"](#Preferences-deliver-this-part-of-bolus-wizard-result). The other calculator settings are those of the phone under **Settings** > **Bolus wizard settings**.
+    [1] Στο ρολόι, στις **Ρυθμίσεις** > **Περιβάλλον**, ενεργοποιήστε το **Ποσοστό Υπολογιστή** για να εμφανίζεται η εισαγωγή ποσοστού στον υπολογιστή bolus. Το προεπιλεγμένο ποσοστό έρχεται από τη ρύθμιση του τηλεφώνου [«Ποσοστό bolus»](#Preferences-deliver-this-part-of-bolus-wizard-result). Οι άλλες ρυθμίσεις του υπολογιστή είναι αυτές του τηλεφώνου, στις **Ρυθμίσεις** > **Ρυθμίσεις Οδηγού Bolus**.
     
-    [2] In the watch's **Settings** > **Interface**, turn on **Calculator Meal Type** to show the **Meal type** page, where you pick **Bread**, **Cake** or **Pizza** to split the carbs of a slow meal into carbs now and eCarbs later. See [Choosing the meal type](#WearOsSmartwatch-wizard-meal-type).
+    [2] Στο ρολόι, στις **Ρυθμίσεις** > **Περιβάλλον**, ενεργοποιήστε το **Τύπος γεύματος στον υπολογιστή δόσης** για να εμφανίζεται η σελίδα **Τύπος γεύματος**, όπου επιλέγετε **Ψωμί**, **Γλυκό** ή **Πίτσα** για να χωρίσετε τους υδατάνθρακες ενός αργού γεύματος σε υδατάνθρακες τώρα και eCarbs αργότερα. Δείτε [Επιλογή τύπου γεύματος](#WearOsSmartwatch-wizard-meal-type).
     
-    ### Temp Target tile
+    ### Πλακίδιο Προσωρινός στόχος
     
-    ![Temp Target tile](../images/wearos/tiles/tile_temp_target.png)
+    ![Πλακίδιο Προσωρινός στόχος](../images/wearos/tiles/tile_temp_target.png)
     
-    Temporary targets from the phone's presets. Set the duration and the target of each preset on the phone under **Settings** > [Default temp targets](#Preferences-default-temp-targets). Pick up to four of these in the tile settings:
+    Προσωρινοί στόχοι από τις προκαθορισμένες ρυθμίσεις του τηλεφώνου. Ορίστε τη διάρκεια και τον στόχο κάθε προκαθορισμένης ρύθμισης στο τηλέφωνο, στις **Ρυθμίσεις** > [Προεπιλεγμένοι προσωρινοί στόχοι](#Preferences-default-temp-targets). Επιλέξτε έως τέσσερα από αυτά στις ρυθμίσεις του πλακιδίου:
     
-    * **Activity**: for sport
-    * **Eating**: eating soon, a lower target so there is more insulin on board at the meal
-    * **Hypo**: a higher target during a hypo treatment
-    * **Manual**: a custom target and duration
-    * **Cancel**: stops the running temporary target. The button is shown only while a temporary target is running.
+    * **Άσκηση**: για άθληση
+    * **Φαγητό**: φαγητό σύντομα, χαμηλότερος στόχος ώστε να υπάρχει περισσότερη ενεργή ινσουλίνη στο γεύμα
+    * **Υπογλυκαιμία**: υψηλότερος στόχος κατά την αντιμετώπιση υπογλυκαιμίας
+    * **Χειροκίνητα**: δικός σας στόχος και διάρκεια
+    * **Ακύρωση**: σταματά τον τρέχοντα προσωρινό στόχο. Το κουμπί εμφανίζεται μόνο όσο τρέχει προσωρινός στόχος.
     
-    ### Quick Wizard tile
+    ### Πλακίδιο Γρήγορος Οδηγός
     
-    ![Quick Wizard tile](../images/wearos/tiles/tile_quick_wizard.png)
+    ![Πλακίδιο Γρήγορος Οδηγός](../images/wearos/tiles/tile_quick_wizard.png)
     
-    The [QuickWizard](#quickwizards) entries of the phone that have **Show on Watch** turned on, within their valid hours. A carbs entry shows its carbs in g, an insulin entry its fixed dose in U. A tap runs the entry after a confirmation on the watch. There is nothing to set on the watch: edit the entries on the phone, and turn on **Show on Watch** under **Device Selection** for each entry you want on the tile. Outside the valid hours of all your entries, the tile shows **No config available**.
+    Οι καταχωρίσεις [Γρήγορου Οδηγού](#quickwizards) του τηλεφώνου που έχουν ενεργοποιημένο το **Εμφάνιση στο ρολόι**, μέσα στις ώρες ισχύος τους. Μια καταχώριση υδατανθράκων δείχνει τους υδατάνθρακές της σε g, μια καταχώριση ινσουλίνης τη σταθερή της δόση σε U. Ένα πάτημα εκτελεί την καταχώριση μετά από επιβεβαίωση στο ρολόι. Δεν υπάρχει τίποτα να ρυθμίσετε στο ρολόι: επεξεργαστείτε τις καταχωρίσεις στο τηλέφωνο, και ενεργοποιήστε το **Εμφάνιση στο ρολόι** στην **Επιλογή συσκευής** για κάθε καταχώριση που θέλετε στο πλακίδιο. Έξω από τις ώρες ισχύος όλων των καταχωρίσεών σας, το πλακίδιο δείχνει **Δεν υπάρχουν διαθέσιμες ρυθμίσεις**.
     
-    ![A QuickWizard entry with Show on Watch turned on, and the tile it appears on](../images/quickwizard_watch_phone.png)
+    ![Μια καταχώριση Γρήγορου Οδηγού με ενεργοποιημένο το Εμφάνιση στο ρολόι, και το πλακίδιο όπου εμφανίζεται](../images/quickwizard_watch_phone.png)
     
-    ### Scene tile
+    ### Πλακίδιο Σενάριο
     
-    ![Scene tile](../images/wearos/tiles/tile_scene.png)
+    ![Πλακίδιο Σενάριο](../images/wearos/tiles/tile_scene.png)
     
-    The [Scenes](#scenes-from-watch) of the phone. Each of the four places is set to **Automatic**, **None** or one scene in the tile settings. An **Automatic** place takes the next scene from the phone's list that no other place has claimed. A place set to a scene that no longer exists on the phone shows **Unavailable**.
+    Τα [Σενάρια](#scenes-from-watch) του τηλεφώνου. Κάθε μία από τις τέσσερις θέσεις ορίζεται σε **Αυτόματο**, **Κανένα** ή ένα σενάριο στις ρυθμίσεις του πλακιδίου. Μια θέση **Αυτόματο** παίρνει το επόμενο σενάριο από τη λίστα του τηλεφώνου που δεν έχει πάρει άλλη θέση. Μια θέση ορισμένη σε σενάριο που δεν υπάρχει πια στο τηλέφωνο δείχνει **Μη διαθέσιμο**.
     
-    ![Scene tile settings, four places set to Automatic](../images/wearos/tiles/tile_settings_scene.png)
+    ![Ρυθμίσεις πλακιδίου Σενάριο, τέσσερις θέσεις σε Αυτόματο](../images/wearos/tiles/tile_settings_scene.png)
     
-    ### Running mode tile
+    ### Πλακίδιο Τρόπος λειτουργίας
     
-    ![Running mode tile](../images/wearos/tiles/tile_running_mode.png)
+    ![Πλακίδιο Τρόπος λειτουργίας](../images/wearos/tiles/tile_running_mode.png)
     
-    The [running modes](#aaps-screens-running-mode) you can switch to from the current one, with the same icons as on the phone: closed loop, low glucose suspend, open loop, disable loop, suspend loop and disconnect pump, or resume and reconnect while one of those runs. **Suspend loop** and **Disconnect pump** ask for a duration first. The phone decides which modes are offered, the watch shows the first four and leaves out **Disable loop** when **Suspend loop** is on the list.
+    Οι [τρόποι λειτουργίας](#aaps-screens-running-mode) στους οποίους μπορείτε να αλλάξετε από τον τρέχοντα, με τα ίδια εικονίδια όπως στο τηλέφωνο: κλειστό κύκλωμα, αναστολή λόγω χαμηλής γλυκόζης, ανοιχτό κύκλωμα, απενεργοποίηση κυκλώματος, αναστολή κυκλώματος και αποσύνδεση αντλίας, ή επαναφορά και επανασύνδεση όσο τρέχει ένας από αυτούς. Τα **Αναστολή κυκλώματος** και **Αποσύνδεση αντλίας** ζητούν πρώτα διάρκεια. Το τηλέφωνο αποφασίζει ποιοι τρόποι προσφέρονται. Το ρολόι δείχνει τους πρώτους τέσσερις και παραλείπει το **Απενεργοποιήστε κύκλωμα** όταν το **Αναστολή κυκλώματος** είναι στη λίστα.
     
-    ### User Action tile
+    ### Πλακίδιο Ενέργεια χρήστη
     
-    ![User Action tile](../images/wearos/tiles/tile_user_action.png)
+    ![Πλακίδιο Ενέργεια χρήστη](../images/wearos/tiles/tile_user_action.png)
     
-    One button for each [automation](#automations-automation-triggers) on the phone whose trigger is **User action**. A tap asks you to confirm, then the phone runs the automation's actions. The buttons are named after the automations, so give them short names. There is nothing to set on the watch.
+    Ένα κουμπί για κάθε [αυτοματισμό](#automations-automation-triggers) στο τηλέφωνο με έναυσμα **Ενέργεια χρήστη**. Ένα πάτημα σας ζητά επιβεβαίωση και μετά το τηλέφωνο εκτελεί τις ενέργειες του αυτοματισμού. Τα κουμπιά έχουν τα ονόματα των αυτοματισμών, γι' αυτό δώστε τους σύντομα ονόματα. Δεν υπάρχει τίποτα να ρυθμίσετε στο ρολόι.
     
-    ### BG Graph tile
+    ### Πλακίδιο Γράφημα BG
     
-    ![BG Graph tile](../images/wearos/tiles/tile_bg_graph.png)
+    ![Πλακίδιο Γράφημα BG](../images/wearos/tiles/tile_bg_graph.png)
     
-    The glucose value with arrow, delta and age, below it IOB, COB, basal rate and target, and the BG graph with predictions, boluses, carbs and SMBs. Two settings on the watch: **Time range** (1, 3 or 6 hours) and **Tap action**, which opens the full **BG Graph**, the **Main Menu** or the **Loop Status** screen.
+    Η τιμή γλυκόζης με βέλος, διαφορά και ηλικία, από κάτω IOB, COB, βασικός ρυθμός και στόχος, και το γράφημα BG με προβλέψεις, bolus, υδατάνθρακες και SMB. Δύο ρυθμίσεις στο ρολόι: **Εύρος χρόνου** (1, 3 ή 6 ώρες) και **Ενέργεια πατήματος**, που ανοίγει το πλήρες **Γράφημα BG**, το **Κύριο μενού** ή την οθόνη **Κατάσταση κυκλώματος**.
     
-    ![The BG Graph screen](../images/wearos/bg_graph.png)
+    ![Η οθόνη Γράφημα BG](../images/wearos/bg_graph.png)
     
-    ![BG Graph tile settings: Time range and Tap action](../images/wearos/tiles/tile_settings_bg_graph.png)
+    ![Ρυθμίσεις πλακιδίου Γράφημα BG: Εύρος χρόνου και Ενέργεια πατήματος](../images/wearos/tiles/tile_settings_bg_graph.png)
     
-    ## Always on
+    ## Always on (πάντα ενεργή οθόνη)
     
-    This section and the next apply to the classic **AAPS** watchfaces on Wear OS 5 and older. On Wear OS 6 the **Complications watchface** has an always-on display of its own, see [the watchface AAPS installs](#wearos-aaps-v4-watchface).
+    Αυτή η ενότητα και η επόμενη ισχύουν για τα κλασικά watchface του **AAPS** σε Wear OS 5 και παλαιότερα. Στο Wear OS 6, το **Watchface με Complications** έχει δική του οθόνη always-on, δείτε [το watchface που εγκαθιστά το AAPS](#wearos-aaps-v4-watchface).
     
-    Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+    Η μεγάλη διάρκεια μπαταρίας είναι πρόκληση για τα έξυπνα ρολόγια Android Wear OS. Μερικά έξυπνα ρολόγια αντέχουν έως και 30 ώρες πριν χρειαστούν φόρτιση. Για την καλύτερη εξοικονόμηση ενέργειας, η οθόνη πρέπει να σβήνει όταν δεν τη χρησιμοποιείτε. Τα περισσότερα ρολόγια υποστηρίζουν οθόνη «Always on» (πάντα ενεργή).
     
-    Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lighting up fewer pixels to save power on OLED displays.
+    Από την έκδοση 3 του AAPS μπορούμε να χρησιμοποιούμε την «Απλοποίηση UI» στη λειτουργία always-on. Αυτό το UI δείχνει μόνο τη γλυκόζη αίματος, την κατεύθυνση και την ώρα. Αυτό το UI είναι βελτιστοποιημένο για χαμηλή κατανάλωση: ενημερώνεται πιο σπάνια, δείχνει λιγότερες πληροφορίες και ανάβει λιγότερα pixel για να εξοικονομεί ενέργεια στις οθόνες OLED.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “Always On Mode” or “Always On and Charging”.
+    Η απλοποιημένη λειτουργία UI είναι διαθέσιμη για τα watchface Digital Style και Custom. Το απλοποιημένο UI είναι προαιρετικό και ρυθμίζεται από τις ρυθμίσεις του watchface (πατήστε παρατεταμένα το watchface και πατήστε «edit» ή το εικονίδιο με το γρανάζι). Επιλέξτε τη ρύθμιση «Απλοποίηση UI» και ορίστε την σε «Λειτουργία Always On» ή «Πάντα Ενεργό και σε Φόρτιση».
     
-    ### Night-time mode
+    ### Νυχτερινή λειτουργία
     
-    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+    Κατά τη φόρτιση, θα βοηθούσε αν η οθόνη μπορούσε να μένει «always-on» και να δείχνει τη γλυκόζη αίματος κατά τη διάρκεια της νύχτας. Όμως τα κανονικά watchface είναι πολύ φωτεινές και έχουν πολλές πληροφορίες, και οι λεπτομέρειες διαβάζονται δύσκολα με νυσταγμένα μάτια. Γι' αυτό προσθέσαμε μια επιλογή ώστε το watchface να απλοποιεί το UI μόνο κατά τη φόρτιση, όταν αυτό έχει οριστεί στις ρυθμίσεις.
     
-    The simplified UI mode is available for the Digital Style and Custom watchfaces. The simplified UI is optional and is configured through the watch face settings (long press the watch face and click “edit” or the gear icon). Select the configuration “Simplify UI" and set it to “During Charging” or “Always On and Charging”.
+    Η απλοποιημένη λειτουργία UI είναι διαθέσιμη για τα watchface Digital Style και Custom. Το απλοποιημένο UI είναι προαιρετικό και ρυθμίζεται από τις ρυθμίσεις του watchface (πατήστε παρατεταμένα το watchface και πατήστε «edit» ή το εικονίδιο με το γρανάζι). Επιλέξτε τη ρύθμιση «Απλοποίηση UI» και ορίστε την σε «Κατά τη Φόρτιση» ή «Πάντα Ενεργό και σε Φόρτιση».
     
-    The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options”.
+    Οι επιλογές για προγραμματιστές του Android επιτρέπουν στο ρολόι σας να μένει ενεργό κατά τη φόρτιση. Για να ενεργοποιήσετε τις επιλογές για προγραμματιστές, δείτε την [επίσημη τεκμηρίωση](https://developer.android.com/training/wearables/get-started/debugging). Στις επιλογές για προγραμματιστές, ορίστε το «Stay awake when charging» (παραμονή σε λειτουργία κατά τη φόρτιση) σε «on».
     
-    Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+    Σημείωση: δεν αντέχουν όλες οι οθόνες καλά τη λειτουργία always-on. Μπορεί να προκαλέσει «κάψιμο» της οθόνης (burn-in), ειδικά στις παλαιότερες οθόνες OLED. Τα ρολόγια συνήθως χαμηλώνουν τη φωτεινότητα της οθόνης για να αποφύγουν το burn-in. Για συμβουλές, δείτε το εγχειρίδιο χρήσης, τον κατασκευαστή ή το διαδίκτυο.
     
-    ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+    ![Watchface στο κομοδίνο](../images/Watchface_nightstand.jpg)
     
-    ![Simplified UI](../images/Watchface_simplified_ui.png)
+    ![Απλοποιημένο UI](../images/Watchface_simplified_ui.png)
     
     (WearOsSmartwatch-phone-alarms)=
     
-    ## Phone alarms on the watch
+    ## Συναγερμοί του τηλεφώνου στο ρολόι
     
-    ![A phone alarm on the watch](../images/wearos/alarm/phone_alarm_ringing.png)
+    ![Ένας συναγερμός του τηλεφώνου στο ρολόι](../images/wearos/alarm/phone_alarm_ringing.png)
     
-    The watch shows the alarms of the phone, so you see why the phone makes a sound and can answer from the wrist. The watch vibrates, and again every half minute for five minutes until you answer. A notification shows the title and the text of the alarm, with the same answers as the [time to eat](#WearOsSmartwatch-wizard-carb-time) reminder:
+    Το ρολόι δείχνει τους συναγερμούς του τηλεφώνου, έτσι βλέπετε γιατί κάνει ήχο το τηλέφωνο και μπορείτε να απαντήσετε από τον καρπό σας. Το ρολόι δονείται, και ξανά κάθε μισό λεπτό για πέντε λεπτά, μέχρι να απαντήσετε. Μια ειδοποίηση δείχνει τον τίτλο και το κείμενο του συναγερμού, με τις ίδιες απαντήσεις όπως η υπενθύμιση [ώρα για φαγητό](#WearOsSmartwatch-wizard-carb-time):
     
-    * **Silence**, or a swipe: the alarm stops, and the alarm screen on the phone closes.
-    * **Mute 5 min**: the alarm stops and rings again after five minutes, on the phone and on the watch.
+    * **Αθόρυβο**, ή σύρσιμο της ειδοποίησης: ο συναγερμός σταματά και η οθόνη συναγερμού στο τηλέφωνο κλείνει.
+    * **Σίγαση 5 λεπ.**: ο συναγερμός σταματά και χτυπά ξανά μετά από πέντε λεπτά, στο τηλέφωνο και στο ρολόι.
     
-    Two kinds of alarm reach the watch:
+    Στο ρολόι φτάνουν δύο είδη συναγερμών:
     
-    * The alarm screen of the phone (pump errors, automation alarms, BG alarms): **Silence** and **Mute 5 min**.
-    * Urgent notifications with a sound, like *Pump unreachable* or a Nightscout alarm: **Silence** only. The phone has only **Dismiss** for those, and they come back by themselves while their cause lasts.
+    * Η οθόνη συναγερμού του τηλεφώνου (σφάλματα αντλίας, συναγερμοί αυτοματισμών, συναγερμοί BG): **Αθόρυβο** και **Σίγαση 5 λεπ.**
+    * Επείγουσες ειδοποιήσεις με ήχο, όπως *Η αντλία δεν είναι διαθέσιμη* ή ένας συναγερμός του Nightscout: μόνο **Αθόρυβο**. Το τηλέφωνο έχει μόνο **Παράβλεψη** για αυτές, και επανέρχονται μόνες τους όσο υπάρχει η αιτία τους.
     
-    The *time to eat* reminder is not sent this way: the watch rings that one by itself.
+    Η υπενθύμιση *ώρα για φαγητό* δεν στέλνεται με αυτόν τον τρόπο: το ρολόι τη χτυπά μόνο του.
     
-    ## Snooze Alert shortcut
+    ## Συντόμευση Αναβολή Ειδοποίησης
     
-    The watch [shows the alarm](#WearOsSmartwatch-phone-alarms) itself; the shortcut is a second way to silence it, with one press. It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly,  but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+    Το ρολόι [δείχνει τον συναγερμό](#WearOsSmartwatch-phone-alarms) μόνο του. Η συντόμευση είναι ένας δεύτερος τρόπος να τον σιγήσετε, με ένα πάτημα. Μπορείτε να δημιουργήσετε μια συντόμευση για αναβολή των ειδοποιήσεων/συναγερμών του AAPS. Η σίγαση του ήχου από το ρολόι είναι βολική και πιο γρήγορη, χωρίς να πιάσετε το τηλέφωνο. Σημείωση: πρέπει ακόμα να ελέγξετε το μήνυμα του συναγερμού στο τηλέφωνο και να ενεργήσετε ανάλογα, αλλά μπορείτε να το κάνετε αργότερα. Αν το ρολόι σας έχει δύο κουμπιά, μπορείτε να αντιστοιχίσετε ένα κουμπί στο πρόγραμμα `Αναβολή Ειδοποίησης AAPS`.
     
-    To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+    Για να συνδέσετε το κουμπί στο Samsung Watch 4, πηγαίνετε στο `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
     
-    On a watchface with complications, an **App shortcut** complication set to **AAPS Snooze Alert** does the same with a tap. The [alternative setup of the Complications watchface](#wearos-complications-watchface-setup) uses its top-right slot for it.
+    Σε ένα watchface με επιπλοκές, μια επιπλοκή **App shortcut** (συντόμευση εφαρμογής) ορισμένη σε **Αναβολή Ειδοποίησης AAPS** κάνει το ίδιο με ένα πάτημα. Η [εναλλακτική ρύθμιση του Watchface με Complications](#wearos-complications-watchface-setup) χρησιμοποιεί την πάνω δεξιά θέση του για αυτό.
     
-    ### Snooze xDrip
+    ### Αναβολή xDrip
     
-    When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm. 
+    Όταν χρησιμοποιείτε το xDrip και έχετε εγκατεστημένο το xDrip στο ρολόι, η συντόμευση «Αναβολή Ειδοποίησης AAPS» αναβάλλει επίσης κάθε συναγερμό του xDrip. 
     
     
-    ## Performance and battery life tips
+    ## Συμβουλές για απόδοση και διάρκεια μπαταρίας
     
-    Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+    Τα ρολόγια Wear OS είναι συσκευές με πολύ περιορισμένη ενέργεια. Το μέγεθος του ρολογιού περιορίζει τη χωρητικότητα της μπαταρίας του. Παρά τις πρόσφατες βελτιώσεις σε υλικό και λογισμικό, τα ρολόγια Wear OS χρειάζονται ακόμα φόρτιση κάθε μέρα.
     
-    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
+    Αν η μπαταρία σας διαρκεί λιγότερο από μία μέρα (από το πρωί ως το βράδυ), εδώ είναι μερικές συμβουλές για να βρείτε το πρόβλημα.
     
-    Main battery-demanding areas are:
+    Οι κύριοι τομείς που καταναλώνουν μπαταρία είναι:
     
-    * Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-    * Rendering on screen
-    * Radio communication over Bluetooth
+    * Η ενεργή οθόνη με αναμμένο οπίσθιο φωτισμό (για LED) ή σε πλήρη ένταση (για OLED)
+    * Η σχεδίαση στην οθόνη
+    * Η ασύρματη επικοινωνία μέσω Bluetooth
     
-    Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in _display time_ area:
+    Επειδή δεν μπορούμε να κάνουμε συμβιβασμούς στην επικοινωνία (χρειαζόμαστε ενημερωμένα δεδομένα) και θέλουμε να εμφανίζονται τα πιο πρόσφατα δεδομένα, οι περισσότερες βελτιστοποιήσεις μπορούν να γίνουν στον _χρόνο οθόνης_:
     
-    * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-    * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-    * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-    * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-    * Use a dark theme on the watchface. On OLED displays fewer lit pixels mean less power and less burn-in.
-    * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-    * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-    * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-    * Check [list of tested phones and watches](#Phones-list-of-tested-phones) and [ask community](../GettingHelp/WhereCanIGetHelp.md) for other users experiences and reported battery lifetime.
-    * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+    * Τα ενσωματωμένα watchface είναι συνήθως καλύτερα βελτιστοποιημένα από τα προσαρμοσμένα που κατεβάζετε από το store.
+    * Είναι καλύτερα να χρησιμοποιείτε watchface που περιορίζουν τα δεδομένα που εμφανίζονται σε κατάσταση αδράνειας / χαμηλής φωτεινότητας.
+    * Προσέχετε όταν συνδυάζετε άλλες επιπλοκές, όπως widgets καιρού τρίτων ή άλλες που χρησιμοποιούν δεδομένα από εξωτερικές πηγές.
+    * Ξεκινήστε με πιο απλά watchface. Προσθέστε μία επιπλοκή τη φορά και παρατηρήστε πώς επηρεάζει τη διάρκεια της μπαταρίας.
+    * Χρησιμοποιήστε σκούρο θέμα στο watchface. Στις οθόνες OLED, λιγότερα αναμμένα pixel σημαίνουν λιγότερη κατανάλωση και λιγότερο burn-in.
+    * Ελέγξτε τι λειτουργεί καλύτερα στο ρολόι σας: τα ενσωματωμένα watchface του AAPS ή άλλα watchface με επιπλοκές του AAPS.
+    * Παρατηρήστε για λίγες μέρες, με διαφορετικά επίπεδα δραστηριότητας. Τα περισσότερα ρολόγια ανάβουν την οθόνη όταν τα κοιτάτε, όταν κινείστε και με άλλες ενέργειες χρήσης.
+    * Ελέγξτε τις γενικές ρυθμίσεις του συστήματος που επηρεάζουν την απόδοση: ειδοποιήσεις, χρόνος λήξης οπίσθιου φωτισμού/ενεργής οθόνης, πότε ενεργοποιείται το GPS.
+    * Δείτε τη [λίστα με δοκιμασμένα τηλέφωνα και ρολόγια](#Phones-list-of-tested-phones) και [ρωτήστε την κοινότητα](../GettingHelp/WhereCanIGetHelp.md) για τις εμπειρίες άλλων χρηστών και τη διάρκεια μπαταρίας που αναφέρουν.
+    * **Δεν μπορούμε να εγγυηθούμε ότι τα δεδομένα που εμφανίζονται στο watchface ή στην επιπλοκή είναι ενημερωμένα**. Τελικά, το Wear OS αποφασίζει πότε θα ενημερώσει ένα watchface ή μια επιπλοκή. Ακόμα και όταν η εφαρμογή AAPS ζητά ενημέρωση, το σύστημα μπορεί να την αναβάλει ή να την αγνοήσει για να εξοικονομήσει μπαταρία. Αν έχετε αμφιβολίες και η μπαταρία του ρολογιού είναι χαμηλή, ελέγχετε πάντα και στην κύρια εφαρμογή AAPS στο τηλέφωνο.
     
     (Watchfaces-troubleshooting-the-wear-app)=
     
-    ## Troubleshooting the wear app
+    ## Αντιμετώπιση προβλημάτων της εφαρμογής Wear
     
-    If the watch shows no data or old data, first check the connection between the watch and the phone, see [Troubleshooting the AAPS watch - AAPS phone communication](#wear-os-watch-phone-communication). For a watch on Wear OS 5, see also the [general troubleshooting recommendations for Wear OS 5](#wear-os-5-troubleshooting). A complication that does not update has the same causes as a tile or watchface that does not update, so check those first.
+    Αν το ρολόι δεν δείχνει δεδομένα ή δείχνει παλιά δεδομένα, ελέγξτε πρώτα τη σύνδεση μεταξύ ρολογιού και τηλεφώνου, δείτε [Αντιμετώπιση προβλημάτων επικοινωνίας ρολογιού AAPS - τηλεφώνου AAPS](#wear-os-watch-phone-communication). Για ρολόι με Wear OS 5, δείτε επίσης τις [γενικές συστάσεις αντιμετώπισης προβλημάτων για το Wear OS 5](#wear-os-5-troubleshooting). Μια επιπλοκή που δεν ενημερώνεται έχει τις ίδιες αιτίες με ένα πλακίδιο ή ένα watchface που δεν ενημερώνεται, γι' αυτό ελέγξτε πρώτα αυτά.
     
-    ## Additional AAPS custom watchfaces are also available
+    ## Είναι διαθέσιμα και άλλα προσαρμοσμένα watchface για το AAPS
     
-    [Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+    [Εδώ](../ExchangeSiteCustomWatchfaces/index.md) μπορείτε να κατεβάσετε αρχεία Zip με προσαρμοσμένα watchface που έφτιαξαν άλλοι χρήστες.
     
-    ## Build your own watchface
+    ## Φτιάξτε το δικό σας watchface
     
-    If you want to build your own watchface, follow the [guide here](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
+    Αν θέλετε να φτιάξετε το δικό σας watchface, ακολουθήστε τον [οδηγό εδώ](../ExchangeSiteCustomWatchfaces/CustomWatchfaceReference.md).
     
-    Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder  "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+    Όταν φτιάξετε ένα προσαρμοσμένο watchface, μπορείτε να το μοιραστείτε με άλλους: ανεβάστε το αρχείο zip του προσαρμοσμένου watchface του **AAPS** στον φάκελο «ExchangeSiteCustomWatchfaces» με ένα Pull Request στο Github. Κατά τη συγχώνευση του pull request, η ομάδα της τεκμηρίωσης θα εξαγάγει το αρχείο CustomWatchface.png και θα βάλει μπροστά στο όνομά του το όνομα του αρχείου Zip.
     
     (WearOsSmartwatch-complications-watchface-download)=
     
-    ## Make your own version of the Complications watchface
+    ## Φτιάξτε τη δική σας έκδοση του Watchface με Complications
     
-    The **Complications watchface** that **AAPS** installs on Wear OS 6 (see [the watchface AAPS installs](#wearos-aaps-v4-watchface)) is made with Samsung's **Watch Face Studio**. Its project file is free to download, so you can change it to your taste, or use it on a watch with Wear OS 5 or older where **AAPS** does not install it:
+    Το **Watchface με Complications** που εγκαθιστά το **AAPS** σε Wear OS 6 (δείτε [το watchface που εγκαθιστά το AAPS](#wearos-aaps-v4-watchface)) είναι φτιαγμένο με το **Watch Face Studio** της Samsung. Το αρχείο του project διατίθεται δωρεάν, έτσι μπορείτε να το αλλάξετε όπως θέλετε ή να το χρησιμοποιήσετε σε ρολόι με Wear OS 5 ή παλαιότερο, όπου το **AAPS** δεν το εγκαθιστά:
     
-    [Complications watchface (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
+    [Watchface με Complications (AAPS V4), zip](https://github.com/openaps/AndroidAPSdocs/raw/refs/heads/master/docs/_static/wearos/Complications_watchface_AAPS_V4.zip)
     
-    The zip holds four files:
+    Το zip περιέχει τέσσερα αρχεία:
     
-    * `AAPS V4_0_2.wfs`: the project. Open it in [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), change what you like, and install it on the watch from there.
-    * `com.watchfacestudio.aapsv4.apk`: the watchface as it is, ready to install with [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk` with the watch connected over ADB debugging.
-    * `README.txt`: the two recommended complication setups, the same as on the [Wear OS page](#wearos-complications-watchface-setup).
-    * `AAPS V4.png`: a preview.
+    * `AAPS V4_0_2.wfs`: το project. Ανοίξτε το στο [Watch Face Studio](https://developer.samsung.com/watch-face-studio/download.html), αλλάξτε ό,τι θέλετε και εγκαταστήστε το στο ρολόι από εκεί.
+    * `com.watchfacestudio.aapsv4.apk`: το watchface όπως είναι, έτοιμο για εγκατάσταση με [adb](https://developer.android.com/tools/releases/platform-tools): `adb install com.watchfacestudio.aapsv4.apk` με το ρολόι συνδεδεμένο μέσω εντοπισμού σφαλμάτων ADB.
+    * `README.txt`: οι δύο προτεινόμενες ρυθμίσεις επιπλοκών, ίδιες με αυτές στη [σελίδα Wear OS](#wearos-complications-watchface-setup).
+    * `AAPS V4.png`: μια προεπισκόπηση.
     
-    ```{admonition} This is not a custom watchface
+    ```{admonition} Αυτό δεν είναι προσαρμοσμένο watchface
     :class: note
-    The zip is not a custom watchface for **Load Watchface** in the **Wear** plugin, and the phone cannot install it. It must be unzipped and installed on the watch with Watch Face Studio or adb, as above.
+    Το zip δεν είναι προσαρμοσμένο watchface για το **Φόρτωση Watchface** στο πρόσθετο **Wear**, και το τηλέφωνο δεν μπορεί να το εγκαταστήσει. Πρέπει να αποσυμπιεστεί και να εγκατασταθεί στο ρολόι με το Watch Face Studio ή το adb, όπως παραπάνω.
