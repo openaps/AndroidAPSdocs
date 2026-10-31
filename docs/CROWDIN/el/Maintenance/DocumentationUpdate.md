@@ -2,7 +2,7 @@
 
 ## Οκτώβριος 2026
 
-- [Έξυπνα ρολόγια και AAPS](#watches-external-companion-apps): η ενότητα **Samsung Tizen** γίνεται **External Companion Apps** (εξωτερικές συνοδευτικές εφαρμογές) και αναφέρει τις εφαρμογές που διαβάζουν το broadcast του **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). Το [WatchDrip+](#watches-xiaomi-amazfit) 0.5 και νεότερο συνδέεται απευθείας στο **AAPS** χωρίς το xDrip+: προστέθηκαν βήματα ρύθμισης, που υπάρχουν και σε σύνοψη στις σελίδες [Διαμόρφωση](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) και [Απομακρυσμένο σύστημα παρακολούθησης](../RemoteFeatures/RemoteMonitoring.md). Ρολόγια Bluejay: το GTS καταργήθηκε, ενημερώθηκε το τρέχον μοντέλο @psonnera
+- [Έξυπνα ρολόγια και AAPS](#watches-external-companion-apps): η ενότητα **Samsung Tizen** γίνεται **External Companion Apps** (εξωτερικές συνοδευτικές εφαρμογές) και αναφέρει τις εφαρμογές που διαβάζουν το broadcast του **AAPS** (WatchDrip+, GlucoDataHandler, G-Watch). Το [WatchDrip+](#watches-xiaomi-amazfit) 0.5 και νεότερο συνδέεται απευθείας στο **AAPS** χωρίς το xDrip+: προστέθηκαν βήματα ρύθμισης, που υπάρχουν και σε σύνοψη στις σελίδες [Διαμόρφωση](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) και [Απομακρυσμένη παρακολούθηση](../RemoteFeatures/RemoteMonitoring.md). Ρολόγια Bluejay: το GTS καταργήθηκε, ενημερώθηκε το τρέχον μοντέλο @psonnera
 - [Δημιουργία μέσω browser με το AAPS Builder](#aaps-builder): έκδοση 6 του workflow δημιουργίας. Τα βήματα δημιουργίας χρησιμοποιούν τώρα ακριβείς, ελεγμένες εκδόσεις των εργαλείων του GitHub και του μηχανήματος δημιουργίας. Η δημιουργία εξηγεί επίσης καθαρά πότε επικολλήθηκε λάθος κείμενο στο secret `KEYSTORE_SET`. Η [σελίδα ρύθμισης](#aaps-builder-setup) είναι τώρα μέρος της τεκμηρίωσης και μεταφράζεται. Ελέγχει το όνομα χρήστη σας στο GitHub και έχει πιο καθαρή βοήθεια για το secret, για το "Page not found" (404) και για την εφαρμογή GitHub. Αν το `.github/workflows/build.yml` σας γράφει έκδοση 5 ή παλαιότερη, αντικαταστήστε το όπως εξηγείται στο [Ενημέρωση του AAPS](#aaps-builder-updates) @psonnera
 - [Πρόγραμμα εγκατάστασης web του AAPS](#web-installer): είναι τώρα σελίδα της τεκμηρίωσης και μεταφράζεται όπως οι άλλες. Η παλιά διεύθυνση εξακολουθεί να λειτουργεί @psonnera
 - [Δημιουργία μέσω browser με το AAPS Builder](#aaps-builder): η έκδοση 3 του workflow δημιουργίας προσθέτει την παραλλαγή `aapsclient3Release` (**AAPSClient3**, AAPS 4.0 και νεότερο). Για να τη δημιουργήσετε, αντικαταστήστε το `.github/workflows/build.yml` σας όπως εξηγείται στο [Ενημέρωση του AAPS](#aaps-builder-updates) @psonnera
@@ -13,18 +13,18 @@
 
 ## Αύγουστος 2026
 
-- [Μεταφορά και εγκατάσταση του AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md): η σελίδα *Επαλήθευση προγραμματιστή Android* ενσωματώθηκε στον οδηγό εγκατάστασης. Προστέθηκαν το [πρόγραμμα εγκατάστασης web](#android-developer-verification-web) (εγκατάσταση του APK απευθείας από τον browser, χωρίς επαλήθευση) και το ασύρματο ADB @psonnera
+- [Μεταφορά και εγκατάσταση του AAPS στο τηλέφωνό σας](../SettingUpAaps/TransferringAndInstallingAaps.md): η σελίδα *Επαλήθευση προγραμματιστή Android* ενσωματώθηκε στον οδηγό εγκατάστασης. Προστέθηκαν το [πρόγραμμα εγκατάστασης web](#android-developer-verification-web) (εγκατάσταση του APK απευθείας από τον browser, χωρίς επαλήθευση) και το ασύρματο ADB @psonnera
 
 ## Ιούλιος 2026
 
-- [Εισαγωγή](../Getting-Started/Introduction.md): έλεγχος ακρίβειας της ενότητας για τα APS. Διορθώθηκαν ο τίτλος και ο σύνδεσμος της αναφοράς στο Frontiers και η αναφορά παρουσιάζεται πλέον ως γενικό υπόβαθρο και όχι ως τρέχων οδηγός αγοράς. Ενημερώθηκαν οι δηλώσεις για τα συστήματα δύο ορμονών και το πλήρως κλειστό κύκλωμα. Διευκρινίστηκε ότι ο ελεγκτής δεν είναι πάντα εφαρμογή τηλεφώνου. Αφαιρέθηκαν εμπορικές ονομασίες και αριθμοί χρηστών χωρίς πηγή. Το OS-AID διορθώθηκε σε *Open-Source Automated Insulin Delivery* @psonnera
+- [Εισαγωγή στα APS και AAPS](../Getting-Started/Introduction.md): έλεγχος ακρίβειας της ενότητας για τα APS. Διορθώθηκαν ο τίτλος και ο σύνδεσμος της αναφοράς στο Frontiers και η αναφορά παρουσιάζεται πλέον ως γενικό υπόβαθρο και όχι ως τρέχων οδηγός αγοράς. Ενημερώθηκαν οι δηλώσεις για τα συστήματα δύο ορμονών και το πλήρως κλειστό κύκλωμα. Διευκρινίστηκε ότι ο ελεγκτής δεν είναι πάντα εφαρμογή τηλεφώνου. Αφαιρέθηκαν εμπορικές ονομασίες και αριθμοί χρηστών χωρίς πηγή. Το OS-AID διορθώθηκε σε *Open-Source Automated Insulin Delivery* @psonnera
 - [Γλωσσάριο](../UsefulLinks/Glossary.md): προστέθηκαν οι όροι **AID**, **FCL**, **HCL** και **OS-AID**, με συνδέσμους από τους όρους **APS** και **Κλειστό Κύκλωμα** @psonnera
 - Νέα σελίδα [Επαλήθευση προγραμματιστή Android](#android-developer-verification): η επίδραση της επερχόμενης απαίτησης επαλήθευσης της Google στην εγκατάσταση εφαρμογών που δημιουργείτε μόνοι σας, με δωρεάν τρόπους εγκατάστασης (ADB, advanced flow, λογαριασμός περιορισμένης διανομής) @psonnera
 
 ## Ιούνιος 2026
 
 - [Δημιουργία μέσω browser](#browser-build): νέα δομή σε πολλές σελίδες, που ξεκινά από τις επιλογές σας (Fork → keystore Επιλογή 1/Επιλογή 2 με ξεχωριστή σελίδα για κάθε συσκευή → Google Drive → Build → Αντιμετώπιση προβλημάτων). Αφαιρέθηκαν οι ένθετες καρτέλες και η εγκατάσταση του File Manager Plus έγινε ξεχωριστό, εμφανές βήμα @psonnera
-- [Εισαγωγή](../Getting-Started/Introduction.md): η ορολογία άλλαξε από *DIY* σε *OS-AID* (Open-Source Automated Insulin Delivery), προστέθηκαν τα Trio και Stelo, ενημερώθηκε ο πίνακας συμβατότητας αντλιών/CGM @tmhastings
+- [Εισαγωγή στα APS και AAPS](../Getting-Started/Introduction.md): η ορολογία άλλαξε από *DIY* σε *OS-AID* (Open-Source Automated Insulin Delivery), προστέθηκαν τα Trio και Stelo, ενημερώθηκε ο πίνακας συμβατότητας αντλιών/CGM @tmhastings
 
 ## Μάρτιος 2026
 
@@ -76,8 +76,8 @@
 ## Οκτώβριος 2024
 
 - Ενημέρωση αρκετών σελίδων:
-  - [Πόσο χρόνο θα πάρει](#preparing-how-long-will-it-take), [Επισκόπηση των εξαρτημάτων](../Getting-Started/ComponentOverview.md), [Ολοκλήρωση των Βημάτων](../SettingUpAaps/CompletingTheObjectives.md), [Το προφίλ σας στο AAPS](../SettingUpAaps/YourAapsProfile.md), [Διαμόρφωση](../SettingUpAaps/ConfigBuilder.md) και [Επιλογές](../SettingUpAaps/Preferences.md), [Οθόνες του AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [Υπολογισμός COB](../DailyLifeWithAaps/CobCalculation.md), [Δυναμική ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+  - [Πόσο χρόνο θα πάρει](#preparing-how-long-will-it-take), [Επισκόπηση των εξαρτημάτων](../Getting-Started/ComponentOverview.md), [Βήματα](../SettingUpAaps/CompletingTheObjectives.md), [Το προφίλ σας στο AAPS](../SettingUpAaps/YourAapsProfile.md), [Διαμόρφωση](../SettingUpAaps/ConfigBuilder.md) και [Ρυθμίσεις](../SettingUpAaps/Preferences.md), [Οθόνες του AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [Υπολογισμός COB (ενεργοί υδατάνθρακες)](../DailyLifeWithAaps/CobCalculation.md), [Δυναμική ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Οδηγίες δημιουργίας για το Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
 - Τεχνική εργασία (διαδικασία δημοσίευσης της τεκμηρίωσης, οργάνωση αρχείων...) @psonnera και @emilise
 
@@ -253,7 +253,7 @@
 - [Οδηγός Bolus](#AapsScreens-wrong-cob-detection) - αργή απορρόφηση υδατανθράκων
 - [Ασφάλεια του Nightscout](#Nightscout-security-considerations)
 - [Χρονική μετατόπιση προφίλ](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (περισσότερες λεπτομέρειες)
-- [Απομακρυσμένο σύστημα παρακολούθησης](../RemoteFeatures/RemoteMonitoring.md)
+- [Απομακρυσμένη παρακολούθηση](../RemoteFeatures/RemoteMonitoring.md)
 - [Τι είναι ένα σύστημα κλειστού κυκλώματος;](#Introduction-what-does-hybrid-closed-loop-mean)
 
 ## Αύγουστος 2019
