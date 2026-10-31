@@ -71,15 +71,15 @@
 ## November 2024
 
 - Update of [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md) @emilise
-- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnerat
+- Reorganization of [Wear OS Smartwatches](../WearOS/BuildingAapsWearOS.md) content @psonnera
 
 ## October 2024
 
 - Update of several pages:
-  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../DailyLifeWithAaps/CobCalculation.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
+  - [How long will it take](#preparing-how-long-will-it-take), [Component Overview](../Getting-Started/ComponentOverview.md), [Completing the objectives](../SettingUpAaps/CompletingTheObjectives.md), [Your AAPS Profile](../SettingUpAaps/YourAapsProfile.md), [Config Builder](../SettingUpAaps/ConfigBuilder.md) & [Preferences](../SettingUpAaps/Preferences.md), [AAPS screens](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [COB Calculation](../DailyLifeWithAaps/CobCalculation.md), [Dynamic ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Building instructions for Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
-- Technical work (deployment process for the documentation, files organization...) @psonnerat & @emilise
+- Technical work (deployment process for the documentation, files organization...) @psonnera & @emilise
 
 ***
 
@@ -102,7 +102,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 ## Janvier 2022
 
-- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) - update @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md) - update @tanja
 
 ## Décembre 2021
 
@@ -113,7 +113,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 
 - Best practices for calibrating a libre 2 sensor
 - [ISF](../UsefulLinks/FAQ.md) reformulation of impact
-- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio)
+- Update [troubleshooting Android studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
 ## Octobre 2021
@@ -166,7 +166,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 ## Septembre 2020
 
 - Mise à jour majeure pour la nouvelle version AAPS 2.7
-- Pour plus de détails, voir les `notes de version`
+- For details see the [release notes](#Releasenotes-version-2-7-0)
 
 ## Juin 2020
 
@@ -191,7 +191,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Générer l'apk avec Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
 - [Bolus étendus et passage à en boucle ouverte](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Mettre à jour l'apk avec Android Studio 3.6.1](../Maintenance/UpdateToNewVersion)
+- [Mettre à jour l'apk avec Android Studio 3.6.1](../Maintenance/UpdateToNewVersion.md)
 
 ## Février 2020
 
@@ -229,7 +229,7 @@ AAPS 3.1 documentation is available [here](https://androidaps.readthedocs.io/en/
 - [Nouveau tutoriel Freestyle Libre 2](../CompatibleCgms/Libre2.md)
 - [Changement de profil avec pourcentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [Mise à jour commandes SMS](../RemoteFeatures/SMSCommands.md)
-- [Dépannage d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- [Dépannage d'Android Studio](../GettingHelp/TroubleshootingAndroidStudio.md)
 - [Dépannage - collection de liens](../GettingHelp/GeneralTroubleshooting.md)
 - Mise à jour - Accès rapide aux utilisateurs expérimentés
 - Docs - update [edit](#edit-the-docs-code-syntax) and [translation](#translations-translation-of-the-documentation).
