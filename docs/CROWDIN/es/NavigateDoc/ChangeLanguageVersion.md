@@ -1,23 +1,23 @@
-# Change language and version
+# Cambiar idioma y versión
 
-The documentation you are currently reading is available in several languages and is specific to a given version of **AAPS**. Both the language and the version can be changed from the menu at the bottom right of the screen.
+La documentación que estás leyendo está disponible en varios idiomas y corresponde a una versión concreta de **AAPS**. Puedes cambiar el idioma y la versión en el menú de la parte inferior derecha de la pantalla.
 
 ```{note}
-Click on the bar at the bottom right of the screen to open the language and version selection menu.
+Haz clic en la barra de la parte inferior derecha de la pantalla para abrir el menú de idioma y versión.
 ```
 
-![Open language menu](../images/documentation_language_menu.png)
+![Abrir el menú de idioma](../images/documentation_language_menu.png)
 
 ## Cambiar idioma
 
-In the menu, select the language you want to read the documentation in.
+En el menú, selecciona el idioma en el que quieres leer la documentación.
 
-Feel welcome to join [Crowdin](https://crowdin.com/project/androidapsdocs) translators and proofreaders to help translate the documentation into your language.
+Te invitamos a unirte a los traductores y revisores de [Crowdin](https://crowdin.com/project/androidapsdocs) para ayudar a traducir la documentación a tu idioma.
 
-## Change version
+## Cambiar versión
 
-The current version is shown in the bottom right of the screen. To switch to a different version, click on the current version and select the version you need.
+La versión actual se muestra en la parte inferior derecha de la pantalla. Para cambiar a otra versión, haz clic en la versión actual y selecciona la versión que necesitas.
 
 ```{warning}
-When changing language and/or version, you might get a 404 - Page not found, if the language or version page doesn't exist. This will frequently happen when switching version but should not happen when changing language: the page will show in English if not translated yet.
+Al cambiar el idioma o la versión, puedes ver un error 404 - Página no encontrada si la página no existe en ese idioma o en esa versión. Esto pasa a menudo al cambiar de versión, pero no debería pasar al cambiar de idioma: si la página aún no está traducida, se muestra en inglés.
 ```
