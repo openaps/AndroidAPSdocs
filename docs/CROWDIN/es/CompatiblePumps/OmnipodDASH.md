@@ -126,7 +126,7 @@ Y esta es la pantalla con un pod activo:
 
 El icono **Ajustes** (engranaje) de la esquina superior derecha abre los [ajustes de Dash](#omnipod-dash-settings).
 
-***NOTA:** Si un campo de la pantalla de la bomba muestra (inseguro), pulsa **Actualizar** para actualizar el estado del pod.*
+***NOTA:** Si un campo de la pantalla de la bomba muestra (incierto), pulsa **Actualizar** para actualizar el estado del pod.*
 
 ### Campos
 
@@ -160,7 +160,7 @@ El icono **Ajustes** (engranaje) de la esquina superior derecha abre los [ajuste
 
   - *hace XX minutos*: hace más de 1 minuto (y *hace X horas y XX minutos* después de una hora).
 
-- **Último bolo:** La cantidad del último bolo enviado al pod y hace cuánto tiempo se administró. Un bolo no confirmado se marca como (inseguro).
+- **Último bolo:** La cantidad del último bolo enviado al pod y hace cuánto tiempo se administró. Un bolo no confirmado se marca como (incierto).
 
 - **Tasa basal base:** La tasa basal programada para la hora actual en tu **Perfil** basal.
 
@@ -181,7 +181,7 @@ El icono **Ajustes** (engranaje) de la esquina superior derecha abre los [ajuste
 Los botones de la parte inferior de la pantalla de la bomba cambian según el estado del pod. Solo se muestran los botones que tienen sentido en ese momento.
 
 - **Actualizar:** Pide al pod su estado actual.
-  - *Úsalo para actualizar el estado del pod y para limpiar los campos que muestran (inseguro).*
+  - *Úsalo para actualizar el estado del pod y para limpiar los campos que muestran (incierto).*
   - *Consulta la sección [Solución de problemas](#omnipod-dash-troubleshooting) más abajo para más información.*
 
 - **Silenciar alertas:** Para los pitidos de alerta del pod (por ejemplo, caducidad del pod o reservorio bajo). Solo se muestra mientras el pod tiene una alerta activa. Consulta [Silenciar alertas del pod](#omnipod-dash-silencing-pod-alerts).
@@ -306,7 +306,7 @@ Para desactivar un pod (porque ha caducado o porque ha fallado):
 
    ![El botón Desactivar Pod en la pantalla de la bomba DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-2. En el paso **Desactivar Pod**, pulsa **Siguiente**. Un diálogo pregunta *Un POD desactivado no se puede volver a utilizar. ¿Desea desactivar este POD ahora?* Pulsa **OK** para empezar a desactivar el pod, o **Cancelar** para conservarlo. La desactivación suspende toda la administración de insulina y no se puede deshacer.
+2. En el paso **Desactivar Pod**, pulsa **Siguiente**. Un diálogo pregunta *Un POD desactivado no se puede volver a utilizar. ¿Quieres desactivar este POD ahora?* Pulsa **OK** para empezar a desactivar el pod, o **Cancelar** para conservarlo. La desactivación suspende toda la administración de insulina y no se puede deshacer.
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
@@ -367,9 +367,9 @@ Cuando la administración de insulina está suspendida, tienes que decirle al po
    Las capturas de pantalla de arriba son de una versión anterior de **AAPS**, que mostraba un diálogo de confirmación. En **AAPS** 4 compruebas el resultado en la pantalla de la bomba DASH: el campo **Estado del Pod** muestra **Funcionando** y el botón **Reanudar la entrega** ya no está.
    ```
 
-   Si el comando falla, **AAPS** muestra un diálogo de aviso que empieza con *Error al aceptar la entrega*. Pulsa **Actualizar** e inténtalo otra vez.
+   Si el comando falla, **AAPS** muestra un diálogo de aviso que empieza con *Error al reanudar la entrega*. Pulsa **Actualizar** e inténtalo otra vez.
 
-   ![El aviso Error al aceptar la entrega](../images/v4/Pumps/dash_resume_failed.png)
+   ![El aviso Error al reanudar la entrega](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
@@ -440,7 +440,7 @@ Es útil para revisar los bolos, las TBR y los comandos de basal que se enviaron
    La segunda captura de pantalla de arriba es de una versión anterior de **AAPS**, en la que el tipo de comando se elegía en una lista **Type**. En **AAPS** 4 usas los botones de filtro que se ven en la primera captura de pantalla.
    ```
 
-   En los bolos, después de la cantidad aparece el tipo de bolo cuando no es un bolo normal, por ejemplo *0.05 U (SMB)* o *0.05 U (Corrección basal)*. Una corrección basal es un bolo muy pequeño (un pulso del pod, 0,05 U) que el driver envía por sí solo; tú no lo pediste.
+   En los bolos, después de la cantidad aparece el tipo de bolo cuando no es un bolo normal, por ejemplo *0,05 U (SMB)* o *0,05 U (Corrección basal)*. Una corrección basal es un bolo muy pequeño (un pulso del pod, 0,05 U) que el driver envía por sí solo; tú no lo pediste.
 
    ```{admonition} Why basal corrections happen
    :class: note
@@ -690,9 +690,9 @@ Abajo tienes un resumen de las alertas principales que puedes encontrar:
 - *Error del Pod: XXX NOMBRE*, seguido de *Ref: ...*: el pod ha fallado y ha dejado de administrar insulina. Cambia el pod. Consulta [Fallos del pod](#omnipod-dash-pod-failures).
 - *Ningún Pod activo*: no se encontró ninguna sesión de pod. Esta notificación vuelve a aparecer hasta que actives un pod nuevo. Cuando se activa un pod, desaparece automáticamente.
 - *Suspendida la entrega de insulina*: el pod ha suspendido la administración de insulina. Consulta [Reanudar la administración de insulina](#omnipod-dash-resuming-insulin-delivery).
-- *El ajuste del perfil basal puede haber fallado. ¡La administración puede estar suspendida! Actualice manualmente el estado del Pod desde la pestaña Omnipod y reanude el suministro si es necesario* Puede que haya fallado la programación del **Perfil** basal en el pod. Pulsa **Actualizar** en la pantalla de la bomba DASH (el mensaje todavía dice «pestaña Omnipod») y pulsa **Reanudar la entrega** si se muestra.
-- *No se puede verificar si el SMB (X U) tuvo éxito. Actualice el estado del Pod para confirmar o rechazar este comando.* **AAPS** no pudo confirmar que el **SMB** se administró. Pulsa **Actualizar** en la pantalla de la bomba DASH y revisa el campo **Último bolo**.
-- *Estado de entrega de bolo incierto. Actualice el estado del bolo para confirmarlo o rechazarlo* Lo mismo para un bolo normal: pulsa **Actualizar** en la pantalla de la bomba DASH.
+- *El ajuste del perfil basal puede haber fallado. ¡La administración puede estar suspendida! Actualiza manualmente el estado del Pod desde la pestaña Omnipod y reanuda el suministro si es necesario* Puede que haya fallado la programación del **Perfil** basal en el pod. Pulsa **Actualizar** en la pantalla de la bomba DASH (el mensaje todavía dice «pestaña Omnipod») y pulsa **Reanudar la entrega** si se muestra.
+- *No se puede verificar si el SMB (X U) tuvo éxito. Actualiza el estado del Pod para confirmar o denegar este comando.* **AAPS** no pudo confirmar que el **SMB** se administró. Pulsa **Actualizar** en la pantalla de la bomba DASH y revisa el campo **Último bolo**.
+- *Estado de entrega de bolo incierto. Actualiza el estado del bolo para confirmarlo o rechazarlo* Lo mismo para un bolo normal: pulsa **Actualizar** en la pantalla de la bomba DASH.
 - *La zona horaria en pod es diferente de la zona horaria del teléfono. La tasa basal no es correcta. Se debe cambiar el perfil para corregirlo* Consulta la nota sobre horario de verano y zona horaria en [Restricciones y problemas conocidos de Omnipod DASH en AAPS](#omnipod-dash-constraints).
 
 (omnipod-dash-where-to-get-help-for-dash)=
