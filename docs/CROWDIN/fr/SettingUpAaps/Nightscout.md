@@ -4,9 +4,9 @@
 
 ## Remarques sur la sécurité
 
-Nightscout est le serveur de reporting et de surveillance d'**AAPS** : **AAPS** y envoie vos données, et vous ou vos aidants les consultez sur le site web Nightscout ou dans des applications de suivi. Il contient vos données médicales, vos profils et vos traitements. Il est donc important de bien sécuriser votre site Nightscout.
+Nightscout est le serveur de rapports et de surveillance d'**AAPS** : **AAPS** y envoie vos données, et vous ou vos aidants les consultez sur le site web Nightscout ou dans des applications de suivi. Il contient vos données médicales, vos profils et vos traitements. Il est donc important de bien sécuriser votre site Nightscout.
 
-Dans **AAPS** 4, le contrôle à distance ne passe pas par le site web Nightscout. Quand le contrôle par le client est activé ([mode renforcé](#client-master-control-hardened-mode)), les traitements ou les cibles saisis directement dans Nightscout ne sont **pas appliqués** par **AAPS**. Les commandes à distance viennent à la place d'un **AAPSClient** associé. Voir [Contrôle Maître ↔ Client](#client-master-control).
+Dans **AAPS** 4, le contrôle à distance ne passe pas par le site web Nightscout. Quand le contrôle par le client est activé ([mode renforcé](#client-master-control-hardened-mode)), les traitements ou les cibles saisis directement dans Nightscout ne sont **pas appliqués** par **AAPS**. Les commandes à distance viennent à la place d'un **AAPSClient** associé. Voir [Contrôle maître ↔ client](#client-master-control).
 
 Soyez extrêmement prudent si vous utilisez Nightscout comme source de données de glycémie dans AAPS.
 
@@ -23,8 +23,8 @@ L'`API_SECRET` de Nightscout est le mot de passe principal de votre site : ne l
 Accepter des données venant de Nightscout (changements de profil, traitements, ...) est facultatif et désactivé par défaut. Les interrupteurs décrits ci-dessous sont masqués quand le contrôle par le client est activé (mode renforcé) et en [mode simple](#preferences-simple-mode).
 
 * Accédez aux paramètres **Synchronisation** du plugin NSClientV3 de l'une de ces façons : 1) **Paramètres** (icône en forme d'engrenage sur l'écran principal) -> **NSClientV3** -> **Synchronisation**, ou 2) **Configuration** (menu ☰) -> **Communication** -> « **Paramètres** » sous NSClientV3.
-* Activez « Télécharger des données vers NS ».
-* « Télécharger des Gly vers NS » se trouve dans les paramètres de votre source de glycémie (**Configuration → Source GLY → Paramètres**). Activez-le, sauf si votre source de données de glycémie dans AAPS est Nightscout : dans ce cas, **ne l'activez pas**.
+* Activez « Envoyer des données vers NS ».
+* « Envoyer des Gly vers NS » se trouve dans les paramètres de votre source de glycémie (**Configuration → Source GLY → Paramètres**). Activez-le, sauf si votre source de données de glycémie dans AAPS est Nightscout : dans ce cas, **ne l'activez pas**.
 * N'activez pas « Recevoir les données MGC depuis NS », sauf si Nightscout est votre source de données de glycémie.
 
 #### Ne pas synchroniser depuis Nightscout
@@ -52,7 +52,7 @@ Nous supposons que vous avez déjà un site Nightscout. Sinon, consultez la page
 
 * [Modifiez vos variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
-* Ajouter ou modifier les variables comme suit :
+* Ajouter ou modifier les variables comme suit :
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
