@@ -32,7 +32,7 @@
 
 #### 我可以多快降低 HbA1c 而不會冒永久性損害的風險？
 
-一項針對 76 名患者的回顧性[研究](https://pubmed.ncbi.nlm.nih.gov/1464975/)報告稱，如果 HbA1c 在 6 個月內下降 1%、2% 或 3%，視網膜病變進展的風險分別增加 1.6 倍、2.4 倍和 3.8 倍。他們建議**"在任何 6 個月內 HbA1c 的降低幅度應限制在 2% 以內，以防止視網膜病變的進展...在開始血糖控制時，降低過快可能會導致視網膜病變進展的嚴重或暫時性惡化。" **
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. 他們建議**"在任何 6 個月內 HbA1c 的降低幅度應限制在 2% 以內，以防止視網膜病變的進展...在開始血糖控制時，降低過快可能會導致視網膜病變進展的嚴重或暫時性惡化。" **
 
 N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for an HbA1c calculator tool.
 
@@ -123,7 +123,7 @@ How long it takes to get to closed looping depends on the individual; an approxi
 
 
 
-#### [去哪裡尋求幫助](../UsefulLinks/BackgroundReading.md)？
+#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
 
 本節主要在為新用戶提供資源連結，以便獲得幫助，包括由新手和有經驗的用戶組成的社區支援，這些用戶可以幫助解答問題並解決使用 AAPS 時常見的問題。
 
@@ -167,26 +167,26 @@ In order to fully take advantage of **AAPS**, you need to set up a Nightscout se
 
 以下是大致的時間表：
 
-| 任務                                            |      大致時間      |
-| --------------------------------------------- |:--------------:|
-| 初步閱讀文件                                        |     1-2 天      |
-| Configuring GitHub to allow the browser build |   1-4 hours    |
-| 設置報告伺服器                                       |      1 小時      |
-| Installing a CGM app (xDrip, BYODA, …)        |      1 小時      |
-| Configuring CGM → xDrip → APPS initially      |      1 小時      |
-| 初步配置 AAPS → 幫浦                                |      1 小時      |
-| 初步配置 AAPS → Nightscout/Tidepool（僅限報告）         |      1 小時      |
-| 可選：配置 Nightscout ↔ **AAPS** 及 NSFollowers     |      1 小時      |
-| 目標 1：設置可視化和監控                                 |      1 小時      |
-| 目標 2：學習如何控制 AAPS                              |      2 小時      |
-| 目標 3：證明你的知識                                   |    最多 14 天     |
-| 目標 4：開始使用開環                                   |     最少 7 天     |
-| 目標 5：暸解你的開環                                   |      7 天       |
-| 目標 6：開始閉環（LGS - 低血糖暫停）                        | 最少 5 天，最多 14 天 |
-| 目標 7：調整閉環                                     | 最少 1 天，最多 7 天  |
-| 目標 8：調整基礎率和比例，啟用 Autosens                     | 最少 7 天，最多 14 天 |
-| 目標 9：啟用超微量注射 (SMB)                            |    最少 28 天     |
-| 目標 10：自動化                                     |    最少 28 天     |
+| 任務                                                        |      大致時間      |
+| --------------------------------------------------------- |:--------------:|
+| 初步閱讀文件                                                    |     1-2 天      |
+| Configuring GitHub to allow the browser build             |   1-4 hours    |
+| 設置報告伺服器                                                   |      1 小時      |
+| Installing a CGM app (xDrip, BYODA, …)                    |      1 小時      |
+| Configuring CGM → xDrip → AAPS initially                  |      1 小時      |
+| 初步配置 AAPS → 幫浦                                            |      1 小時      |
+| 初步配置 AAPS → Nightscout/Tidepool（僅限報告）                     |      1 小時      |
+| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers |      1 小時      |
+| 目標 1：設置可視化和監控                                             |      1 小時      |
+| 目標 2：學習如何控制 AAPS                                          |    2 hours     |
+| 目標 3：證明你的知識                                               |    最多 14 天     |
+| 目標 4：開始使用開環                                               |     最少 7 天     |
+| 目標 5：暸解你的開環                                               |      7 天       |
+| 目標 6：開始閉環（LGS - 低血糖暫停）                                    | 最少 5 天，最多 14 天 |
+| 目標 7：調整閉環                                                 | 最少 1 天，最多 7 天  |
+| 目標 8：調整基礎率和比例，啟用 Autosens                                 | 最少 7 天，最多 14 天 |
+| 目標 9：啟用超微量注射 (SMB)                                        |    最少 28 天     |
+| 目標 10：自動化                                                 |    最少 28 天     |
 
 當你開始使用**AAPS**，你仍然需要定期調整設定，以持續改善你的糖尿病管理。
 
