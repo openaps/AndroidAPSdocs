@@ -1,6 +1,6 @@
-# Your AAPS profile
+# Ваш профіль AAPS
 
-Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. These are the main parameters **AAPS** is built upon. As you progress through the **Objectives**, you will unlock additional modifiable parameters (like SMB settings), but the performance of these features rely on your underlying **Profile** being correct. The **Profile** incorporates:
+Your **AAPS Profile** is a set of four key parameters which define how **AAPS** should deliver insulin in response to your sensor glucose levels. Це основні параметри, на яких побудовано **AAPS**. Проходячи **Завдання**, ви відкриєте додаткові параметри, які можна змінювати (наприклад, налаштування SMB), але ці функції добре працюють, лише якщо ваш базовий **Профіль** правильний. **Профіль** містить:
 * [glucose targets](#profile-glucose-targets),
 * [basal rates](#your-aaps-profile-basal-rates) (BR),
 * [insulin sensitivity factors](#your-aaps-profile-insulin-sensitivity-factor) (ISF) and
@@ -11,53 +11,53 @@ Your **AAPS Profile** is a set of four key parameters which define how **AAPS** 
 The **duration of insulin action (DIA)** is no longer part of your **Profile**. It is set per insulin instead — see [Manage → Insulin settings](#Config-Builder-insulin-dia).
 ```
 
-As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. It is recommended to take the settings in the order they are presented here. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. Don't forget to activate the new profile after each change. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
+As part of **AAPS**’ management, users should continually assess and scrutinize the accuracy of their **Profile** settings. Рекомендуємо налаштовувати параметри в тому порядку, в якому їх тут подано. Спочатку добре налаштуйте один параметр, а потім змінюйте інший. Робіть невеликі кроки, а не великі зміни одразу. Не забувайте активувати новий профіль після кожної зміни. Regularly [back up your **Profile**](#YourAapsProfile_Profile-backup) settings by exporting your settings.
 
-Your **Profile** settings interact with one another - you can have 'wrong' settings that work well together in certain circumstances but do not in others. For instance, if a too-high basal happens to be at the same time as a too-high **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
+Налаштування вашого **Профілю** впливають одне на одне: можуть бути «неправильні» налаштування, які за одних обставин добре працюють разом, а за інших — ні. Наприклад, якщо завеликий базал збігається в часі із завеликим **CR**. This means that you need to consider the settings individually and check they work harmoniously together in a variety of circumstances.
 
-You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances.
+Ви можете використовувати [Autotune](https://autotuneweb.azurewebsites.net/) як підказку, але не слід сліпо йому довіряти: він може погано працювати для вас або не за всіх обставин.
 
 ```{admonition} Your diabetes may vary
 :class: note
 **Profiles** vary significantly from person-to-person.
 
-For basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
+Для базальних швидкостей (BR), факторів чутливості до інсуліну (ISF) і вуглеводних коефіцієнтів (IC або ICR) абсолютні значення та тенденції потреби в інсуліні дуже різняться від людини до людини. Вони залежать від вашого організму, статі, віку, фізичної форми тощо, а також від короткочасних чинників, як-от хвороба чи недавнє фізичне навантаження. For more guidance on this, the book [“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown is an excellent book to read.
 
 ```
 
-The four last parameters (glucose targets, basal rates, insulin sensitivity factors and insulin-to-carb ratios) can be set to different values, changing hourly if required, over a 24-hour period.
+Чотири останні параметри (цілі глюкози, базальні швидкості, фактори чутливості до інсуліну і вуглеводні коефіцієнти) можна задати різними значеннями протягом 24 годин, за потреби — з погодинною зміною.
 
-![Hourly change of basal](../images/MaxDailyBasal2.png)
+![Погодинна зміна базалу](../images/MaxDailyBasal2.png)
 
-Screenshots from **AAPS** of an _example_ profile are shown below. Please note, this sample profile below shows a large number of timepoints. When you start out with **AAPS**, your profile is likely to be much simpler.
+Screenshots from **AAPS** of an _example_ profile are shown below. Зверніть увагу: у цьому прикладі профілю нижче багато часових точок. Коли ви тільки починаєте працювати з **AAPS**, ваш профіль, найімовірніше, буде набагато простішим.
 
 ![Example active profile](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
 ## Glucose targets
 
-### Description
+### Опис
 
-Your **BG target** is a core value and all of **AAPS** calculations are based on it. It is different from the target range which you usually aim to keep your blood glucose values in. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
+Ваша **цільова ГК** — це основне значення, на якому ґрунтуються всі розрахунки **AAPS**. Вона відрізняється від цільового діапазону, в якому ви зазвичай намагаєтеся утримувати рівень глюкози крові. The target is used in **AAPS** calculations: if **AAPS** predicts that your **BG** will land outside the target range, then it will take action to take you back in said range.
 
 The targets can be defined within those boundaries :
 
-|         | _Low_ target           | _High_ target            |
-| ------- | ---------------------- | ------------------------ |
-| Minimum | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
-| Maximum | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
+|          | _Low_ target           | _High_ target            |
+| -------- | ---------------------- | ------------------------ |
+| Мінімум  | 4.4 mmol/L or 80 mg/dL | 5 mmol/L or 90 mg/dL     |
+| Максимум | 10 mmol/L or 180 mg/dL | 11.1 mmol/L or 200 mg/dL |
 
-### Impact
+### Вплив
 
-If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. This is because **BG** level is predicted to be somewhere in that wide range, and thus temporary basal rate are unlikely to be actioned by **AAPS**.
+If the target in your **Profile** is very wide (say, 3 or more mmol/L [50 mg/dL or more] wide), you will often find little **AAPS** action. Так відбувається тому, що прогнозований рівень **ГК** буде десь у цьому широкому діапазоні, тож **AAPS**, найімовірніше, не змінюватиме тимчасовий базал.
 
-### How to set it
+### Як налаштувати
 
 The **figure below** shows an example of how the target can be set in an **AAPS** profile.
 
 ![Ціль](../images/Profile_Target.png)
 
-**BG** targets are set according to your personal preferences and requirements. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117 mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+**BG** targets are set according to your personal preferences and requirements. Наприклад, якщо ви боїтеся гіпо вночі, можна встановити ціль трохи вище, 117 мг/дл (6,5 ммоль/л), з 21:00 до 7:00. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
 
 When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing through [the first objectives](../SettingUpAaps/CompletingTheObjectives.md), using a wide range target can be a good option while you are learning how **AAPS** behaves and adjusting your **Profile**.<br/> When In [Closed Loop](#KeyAapsFeatures-ClosedLoop) (starting at **[Objective 6](#objectives-objective6)**), it is recommended to reduce the range until you have a single target for each time of the day (_Low_ target = _High_ target), to make sure that **AAPS** reacts promptly to **BG** fluctuations.
 
@@ -65,7 +65,7 @@ When In [Open Loop](#KeyAapsFeatures-OpenLoop), especially when progressing thro
 
 ## Basal rates
 
-### Description
+### Опис
 
 Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
 
@@ -73,11 +73,11 @@ The insulin pump delivers small amounts of rapid acting insulin every few minute
 
 Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimize your ISF and ICR.
 
-### Impact
+### Вплив
 
 Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
 
-Too high basal rate can lead to low BGs. And vice versa.
+Too high basal rate can lead to low BGs. І навпаки.
 
 **AAPS** ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to **AAPS** giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
@@ -85,7 +85,7 @@ So, a basal rate too high will create low **BGs** both with the default rate, bu
 
 Conversely, a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
-### How to set it
+### Як налаштувати
 
 The **figure below** shows an example of how the basal rates can be set in an **AAPS** profile.
 
@@ -95,7 +95,7 @@ Setting your basal rates right is done by trial and error, and should be done in
 
 There are basal testing methods which usually entails observing your basal rates and insulin needs during an <u>intermittent</u> fasting over a 24-hour period. Although you need to test your basal rates for the whole day, it is not recommended to fast during 24h straight. This is because the body triggers mechanisms such as hormones to compensate. A recommended way is to fast over 3 different days for a period of 8 hours.
 
-The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. And vice versa. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
+The recommended method is to suspend the loop (for safety you can set AAPS to [**LGS**](#KeyAapsFeatures-LGS) to avoid lows, as done for achieving [objective 6](#objectives-objective6)), which will revert to your default background basal rate. Observe how your **BG** changes: if it is dropping, basal rate is too high. And vice versa.<br/> An alternative method (may be more tricky) is to keep the loop running, and seeing how **IOB** changes. If **IOB** is negative, your basal rate is too high. І навпаки. Beware that this method relies on **ISF** to correct **BG**, and thus depends on other variables to be set reasonably well for it to be successful.<br/> Another way of adjusting your basal rates is to watch the loop action during the night, when all COB have decayed. This method is particularly useful for children, when fasting is difficult or insulin needs change often. [Dr Saleh Adi from Tidepool](https://www.youtube.com/watch?v=-fpWnGRhLSo) provides useful ways on how to analyze overnight BG lines in order to optimize your basal rates.
 
 See [here](../GettingHelp/ProfileTuning.md) how to tweak your basal profile, analyzing patterns in closed loop.
 
@@ -123,7 +123,7 @@ The profile editor only lets you start basal rates on a full hour. A basal rate 
 
 ## Insulin sensitivity factor (ISF)
 
-### Description
+### Опис
 
 The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
 
@@ -133,13 +133,13 @@ The insulin sensitivity factor (sometimes called correction factor) is a measure
 
 From these examples you can see that the _smaller_ the **ISF** value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dL) or 1.5 to 1.3 (mmol/L), this is often called strengthening your **ISF**. Conversely, increasing the **ISF** value from 40 to 45 (mg/dL) or 1.5 to 1.8 (mmol/L) is weakening your **ISF**.
 
-### Impact
+### Вплив
 
 A **lower / stronger ISF** (i.e. 40 instead of 50) means insulin drops your **BG** less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If your **ISF** is too strong (small value), this can lead to low **BG**.
 
 A **higher / weaker ISF** (i.e. 45 instead of 35) means insulin drops your **BG** more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If your **ISF** is too weak (large value), this can lead to high **BG**.
 
-**Example:**
+**Приклад:**
 * **BG** is 190 mg/dL (10.5 mmol/L) and target is 100 mg/dL (5.6 mmol/L).
 * So, you want a correction of `190 - 100 = 90 mg/dL` or `10.5 - 5.6 = 4.9 mmol/L`
 * If `ISF = 30` -> `90 / 30 = 3` or `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 units of insulin
@@ -151,13 +151,13 @@ An **ISF** that is too low (and therefore more aggressive, not uncommon) can res
 
 Conversely, an **ISF** set too high can result in under-corrections, meaning your **BG** remains above target – particularly noticeable overnight.
 
-### How to set it
+### Як налаштувати
 
 See the **figure below** for an example of how ISF values could be set in an **AAPS** profile.
 
 ![Profile ISF](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. Докладніше про це в розділі 7 книги [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) Гері Шайнера (Gary Scheiner).
 
 | 1700 (if measuring in mg/dL) or 94 (mmol/L)/ TDD = approx ISF.<br/><br/>Example: TDD = 40 U<br/>Approx ISF (mg/dL) = 1700/40 = 43<br/>Approx ISF (mmol/L) = 94/40 = 2.4 |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -173,7 +173,7 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 ## Insulin to Carb ratio (ICR)
 
-### Description
+### Опис
 
 The **ICR** is a measure of how many grams of carbohydrate are covered by one unit of insulin.
 
@@ -193,7 +193,7 @@ It is common to have different **ICR** at different times of day due to hormone 
 > 
 > When using **ICR** the amount of insulin is fixed and the amount of carbs is variable. ("How many g of carbs can be covered by one unit of insulin?")
 > 
-> Example:
+> Приклад:
 > 
 > Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
@@ -203,13 +203,13 @@ It is common to have different **ICR** at different times of day due to hormone 
 > 
 > Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### Вплив
 
 A **lower / stronger ICR** means less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’. If your IC is too strong, you are getting too much insulin, this can lead to low **BGs**.
 
 A **higher / weaker ICR** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’. If your IC is too weak, you are getting less insulin than you need, this can lead to high **BGs**.
 
-### How to set it
+### Як налаштувати
 
 The **figure below** shows an example of a user's **ICR** and how it can be set in an **AAPS Profile**. When entering these values, we enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
@@ -228,13 +228,13 @@ Assuming your basal rates are correct, you can test by checking if **IOB** is ze
 
 ### About the importance of getting your profile right
 
-**Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+**Чому варто намагатися правильно налаштувати профіль? Хіба петля не може просто подбати про це сама?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. This is one of the reasons that **AAPS** uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimize poor glycemic control that results from having incorrect **Profile** values. It can do this, for example, by withholding insulin delivery if you are going to hypo. However, you can achieve much better glycemic control if your **Profile** settings are already as close as possible to what your body needs. Це одна з причин, чому **AAPS** використовує поетапні завдання, щоб перейти від відкритої петлі до гібридної закритої петлі. Крім того, іноді вам доведеться розімкнути петлю (розігрів сенсора, збій сенсора _тощо_), часом посеред ночі, і для таких ситуацій ваші налаштування мають бути правильними.
 
 If you are starting with **AAPS** after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (**BR**), insulin sensitivity factors (**ISF**) and insulin-to-carb ratios (**ICR**).
 
-If you are moving from injections (MDI) to **AAPS**, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+Якщо ви переходите з ін'єкцій (MDI) на **AAPS**, спочатку варто прочитати, як переходити з MDI на помпу, і ретельно спланувати та зробити цей перехід разом з вашою діабетичною командою. Дуже корисні книги [«Pumping insulin»](https://amzn.eu/d/iaCsFa2) Джона Волша (John Walsh) і Рут Робертс (Ruth Roberts) та [«Think like a Pancreas»](https://amzn.eu/d/iVU0RGe) Гері Шайнера (Gary Scheiner).
 
 ### What causes high postprandial peaks in closed loop?
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your **BG** is falling to reach your target after carbs are fully absorbed, try to set an 'eating soon' temp target in **AAPS** some time before the meal or think about an appropriate pre-bolus time with your endocrinologist. <br/> If your **BG** is too high after the meal and still too high after carbs are fully absorbed, consider decreasing your **ICR** with your endocrinologist. If your **BG** is too high while **COB** and too low after carbs are fully absorbed, think about increasing your **ICR** and an appropriate pre-bolus time with your endocrinologist.
@@ -319,23 +319,23 @@ The [Treatments history](#aaps-screens-treatments) shows all past **Profile Swit
 You can now go to the [Profile screen](#your-aaps-profile-create-and-edit-profiles) (**Manage → Profile**) to edit the newly created Profile.
 
 (YourAapsProfile_Profile-backup)=
-### Profile backup
+### Резервна копія профілю
 
 Being a core setting of your looping system, your **Profiles** are highly sensitive and something you really don't want to lose.
 
 * Your **Profiles** are stored in the **AAPS** database.
 * When **NSClientV3** is set up (see [Synchronization](#SetupWizard-synchronization-with-the-reporting-server-and-more)), your **Profiles** are also uploaded to Nightscout automatically.
-* They are also part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
+* Вони також входять до [експортованих налаштувань](../Maintenance/ExportImportSettings.md). Тому зберігайте резервну копію в надійному місці.
 
-### Editing Profiles from Nightscout
+### Редагування профілів з Nightscout
 
 If enabled, **Profile** changes made directly in Nightscout can be received in **AAPS**. The setting is called "**Receive profile store from NS**" and is part of the **Nightscout data acceptance** options (accepting data from Nightscout is turned off by default, see the [Client control step of the Setup Wizard](../SettingUpAaps/SetupWizard.md)); you can find it quickly with the **search bar** on the main screen. While client control is on, the setting is hidden and **AAPS** takes no profile changes from Nightscout ([hardened mode](#client-master-control-hardened-mode)); edit the profile on a paired client instead, or load it once with **Full sync**.
 
-This can be helpful when about to make major changes to a more extensive **Profile**. They can be entered more easily via the web interface, _e.g._ to manually copy data from a spreadsheet.
+This can be helpful when about to make major changes to a more extensive **Profile**. У вебінтерфейсі їх зручніше вводити, _наприклад_, щоб вручну скопіювати дані з електронної таблиці.
 
-To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). The new database records then carries the current date. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
+To do this, however, it is important to clone the whole **database record** consisting of several profiles in the Nightscout editor (blue arrow on the screenshot below). Нові записи бази даних тоді матимуть поточну дату. After saving, the changed/new **Profile** can be activated in **AAPS** with a regular [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Клонування записів бази даних](../images/Nightscout_Profile_Editor.PNG)
 
 (your-aaps-profile-compare-profiles)=
 ### Compare two Profiles
