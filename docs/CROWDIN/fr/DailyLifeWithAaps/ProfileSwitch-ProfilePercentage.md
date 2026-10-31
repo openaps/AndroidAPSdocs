@@ -103,7 +103,7 @@ Si la pompe indique un basal très différent de votre **Profil**, **AAPS** gard
     Au lieu de créer beaucoup de profils semblables, gardez un profil de base et appliquez-le avec un autre **pourcentage** ou **décalage horaire** pour les situations qui reviennent (maladie, activité physique, voyage). C'est exactement ce que les [scénarios](Scenes.md) automatisent.
     
 
-Un changement de profil ne se limite pas à cet écran. Le même changement peut aussi être lancé depuis une **montre Wear OS**, un **client** associé (voir [Contrôle maître / client](../RemoteFeatures/ClientMasterControl.md)), un **[scénario](Scenes.md)** ou une règle d'**Automatisation**.
+Un changement de profil ne se limite pas à cet écran. Le même changement peut aussi être lancé depuis une **montre Wear OS**, un **client** associé (voir [Contrôle maître ↔ client](../RemoteFeatures/ClientMasterControl.md)), un **[scénario](Scenes.md)** ou une règle d'**Automatisation**.
 
 ## Pourcentage de profil
 
@@ -157,7 +157,7 @@ Un « décalage horaire » du **Profil** déplace les paramètres du **Profil*
 
 La question est toujours : les paramètres de quelle heure du **Profil** doivent remplacer les paramètres de l'heure actuelle ? Cette heure doit être décalée de x heures. Faites donc attention au sens du décalage, comme dans l'exemple suivant :
 
-- Heure actuelle : 12:00
+- Heure actuelle : 12:00
 - **Positif** décalage horaire 
     - 2:00 **+10 h** -> 12:00
     - Les paramètres à partir de 2:00 seront utilisés à la place des paramètres normalement utilisés à 12:00 en raison du décalage horaire positif.
