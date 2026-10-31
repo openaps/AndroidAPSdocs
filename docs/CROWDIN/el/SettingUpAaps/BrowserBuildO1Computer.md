@@ -1,39 +1,39 @@
 (aaps-ci-option1-computer)=
 
-# Option 1 · Computer – Generate a new keystore
+# Επιλογή 1 · Υπολογιστής – Δημιουργία νέου keystore
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on a **computer** (Windows / Mac / Linux).
+[Επιλογή 1](BrowserBuildO1.md) (δημιουργία νέου keystore) σε **υπολογιστή** (Windows / Mac / Linux).
 ```
 
-## 1. Download the preparation file
+## 1. Κατεβάστε το αρχείο προετοιμασίας
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Start a local server and generate the keystore
+## 2. Ξεκινήστε έναν τοπικό server και δημιουργήστε το keystore
 
-Use a computer (supports Windows/Mac/Linux)
+Χρησιμοποιήστε υπολογιστή (Windows/Mac/Linux)
 
-Open the webpage [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
+Ανοίξτε την ιστοσελίδα [https://simplewebserver.org/download.html](https://simplewebserver.org/download.html)
 
-Install Simple Web Server</br> If you are a Windows or Mac user, you can install it from the Microsoft Store or the Mac App Store.</br> If your browser asks whether to open the store app, allow it.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br>
+Εγκαταστήστε το Simple Web Server</br> Αν χρησιμοποιείτε Windows ή Mac, μπορείτε να το εγκαταστήσετε από το Microsoft Store ή το Mac App Store.</br> Αν ο browser σας ρωτήσει αν θα ανοίξει την εφαρμογή του store, επιτρέψτε το.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_store.png)</br>
 
-Example on Mac:
+Παράδειγμα σε Mac:
 
 - get → install → open</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server.png)</br></br>
 
-- Click Get Started</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
+- Πατήστε Get Started</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step1.png)</br></br>
 
-- Click New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
+- Πατήστε New Server</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step2.png)</br></br>
 
-- In Folder Path, select the folder where aaps-ci-preparation.html is located, and then click Create Server.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
+- Στο Folder Path επιλέξτε τον φάκελο όπου βρίσκεται το aaps-ci-preparation.html και μετά πατήστε Create Server.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step3.png)</br></br>
 
-- Seeing this screen means the server has been started.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
+- Αν βλέπετε αυτή την οθόνη, ο server έχει ξεκινήσει.</br></br> ![simple_http_server](../images/Building-the-App/CI/aaps_ci_simple_http_server_step4.png)</br></br>
 
-- Do not close Simple Web Server. Please switch to your browser and open</br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
+- Μην κλείσετε το Simple Web Server. Μεταβείτε στον browser σας και ανοίξτε το</br> [http://127.0.0.1:8080/aaps-ci-preparation.html](http://127.0.0.1:8080/aaps-ci-preparation.html)</br></br>
 
-- For the subsequent steps, please refer to the video below, starting from 1 minute 37 seconds.
+- Για τα επόμενα βήματα δείτε το παρακάτω βίντεο, από το 1 λεπτό και 37 δευτερόλεπτα.
 
   <!--crowdin: exclude-->
   <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -50,4 +50,4 @@ Example on Mac:
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Επόμενο: [Βήμα 3 – Εξουσιοδότηση του Google Drive](BrowserBuildGoogleDrive.md) →**
