@@ -1,195 +1,195 @@
-# Reviewing your data
+# Je gegevens bekijken
 
-## AAPS History Browser
+## Historie bekijken in AAPS
 
-**AAPS** keeps all your history (**BG**, treatments, basal, targets, **Profile Switch**, …) in a local database on the phone. This database is not part of the [settings export](../Maintenance/ExportImportSettings.md). You can review it in **AAPS** itself with the **History browser** and the **Statistics** screen described below. For long-term reviews and reports, upload your data to [Nightscout](../SettingUpAaps/Nightscout.md) or [Tidepool](../SettingUpAaps/Tidepool.md).
+**AAPS** bewaart je hele geschiedenis (**BG**, behandelingen, basaal, streefwaarden, **Profiel wissel**, …) in een lokale database op de telefoon. Deze database zit niet in de [export van de instellingen](../Maintenance/ExportImportSettings.md). Je kunt hem in **AAPS** zelf bekijken met **Historie bekijken** en het scherm **Statistieken**, die hieronder worden beschreven. Voor overzichten en rapporten over een lange periode upload je je gegevens naar [Nightscout](../SettingUpAaps/Nightscout.md) of [Tidepool](../SettingUpAaps/Tidepool.md).
 
-**AAPS** history can be reviewed in the **History browser**: open the **menu** (☰) and select **History browser**.
+De geschiedenis van **AAPS** kun je bekijken in **Historie bekijken**: open het **menu** (☰) en kies **Historie bekijken**.
 
-![History browser](../images/v4/Screens/history_browser.png)
+![Historie bekijken](../images/v4/Screens/history_browser.png)
 
-- Tap the **date card** to pick the day you want to review.
-- The graphs open zoomed out to show the **whole selected day**. Pinch to zoom in on part of it.
-- Use the **<** and **>** arrows to move one day back or forward, and **Now** to return to the current day.
-- The graphs show the same data as the main screen graphs (BG, treatments, basal, IOB, COB, activity, deviations...).
+- Tik op de **datumkaart** om de dag te kiezen die je wilt bekijken.
+- De grafieken openen uitgezoomd en tonen de **hele gekozen dag**. Knijp met twee vingers om in te zoomen op een deel ervan.
+- Gebruik de pijlen **<** en **>** om een dag terug of vooruit te gaan, en **Nu** om terug te gaan naar de huidige dag.
+- De grafieken tonen dezelfde gegevens als de grafieken op het hoofdscherm (BG, behandelingen, basaal, IOB, COB, activiteit, afwijkingen...).
 
 (reviewing-statistics)=
-## AAPS Statistics
+## AAPS-statistieken
 
-**AAPS** provides basic monitoring statistics.
+**AAPS** geeft eenvoudige statistieken om je waarden te volgen.
 
-Most values are referenced by ADA 2023 [recommendations](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes).
+De meeste waarden zijn gebaseerd op de [aanbevelingen](https://diabetesjournals.org/care/article/46/Supplement_1/S97/148053/6-Glycemic-Targets-Standards-of-Care-in-Diabetes) van de ADA uit 2023.
 
-To open them, open the **menu** (☰) and select **Statistics**.
+Om ze te openen, open je het **menu** (☰) en kies je **Statistieken**.
 
-![Menu with Statistics](../images/Maintenance/statistics.png)
+![Menu met Statistieken](../images/Maintenance/statistics.png)
 
-The **Statistics** screen has four tabs: **Insulin**, **Time in Range**, **Glucose** and **Cycle**. Tap a tab, or swipe left or right to move between them.
+Het scherm **Statistieken** heeft vier tabbladen: **Insuline**, **Tijd binnen bereik (TIR)**, **Glucose** en **Cyclus**. Tik op een tabblad, of veeg naar links of rechts om tussen de tabbladen te wisselen.
 
 (reviewing-tdd)=
-### Insulin tab: Total Daily Dose
+### Tabblad Insuline: Totale Dagelijkse Dosis
 
-The **Total Daily Dose** card shows one line per day for the previous days (up to one week) for which **AAPS** has insulin data, then their **Average**, then **Today** so far. Right after installing **AAPS**, only **Today** is shown. The columns are:
+De kaart **Totale Dagelijkse Dosis** toont één regel per dag voor de vorige dagen (tot een week) waarvoor **AAPS** insulinegegevens heeft, daarna hun **Gemiddelde** en dan **Vandaag** tot nu toe. Direct na het installeren van **AAPS** wordt alleen **Vandaag** getoond. De kolommen zijn:
 
-- **Basal**: only basal.
-- **Bolus**: the sum of bolus treatments and SMBs.
-- **TDD Total**: the Total Daily Dose of insulin (**TDD**), the sum of bolus and basal insulin delivered during the day.
-- **Carbs**: declared carbs and eCarbs treatments.
+- **Basaal**: alleen basaal.
+- **Bolus**: de som van bolussen en SMB's.
+- **TDD Totaal**: de totale dagelijkse dosis insuline (**TDD**), de som van de bolus- en basale insuline die op die dag is toegediend.
+- **Koolhydraten**: ingevoerde koolhydraten en eCarbs.
 
-The **TDD** section is calculated when you open the page and takes a few seconds to compute. Tap **Recalculate** to compute it again.
+Het deel **TDD** wordt berekend als je de pagina opent. De berekening duurt een paar seconden. Tik op **Herberekenen** om het opnieuw te berekenen.
 
-![Statistics: the Insulin tab with the Total Daily Dose](../images/Maintenance/statistics2.png)
+![Statistieken: het tabblad Insuline met de Totale Dagelijkse Dosis](../images/Maintenance/statistics2.png)
 
-The **TDD** is your bolus plus basal insulin per day. Some doctors use - especially for new pumpers - a basal-bolus ratio of 50:50: the total base basal (**TBB**, the sum of your basal rates over 24 hours) should then be about half of the TDD. Others prefer a TBB of 32 % to 37 % of the TDD.
+De **TDD** is je bolus- plus basale insuline per dag. Sommige artsen gebruiken - vooral bij mensen die net met een pomp beginnen - een verhouding basaal/bolus van 50:50: de totale basale dosis (**TBB**, de som van je basaalstanden over 24 uur) is dan ongeveer de helft van de TDD. Anderen kiezen liever een TBB van 32% tot 37% van de TDD.
 
-Like most rules of thumb, this is of limited real validity. Your diabetes may vary!
+Zoals de meeste vuistregels is ook deze maar beperkt bruikbaar. Jouw diabetes kan anders zijn!
 
-### Time in Range tab
+### Tabblad Tijd binnen bereik
 
-Time In Range (**TIR**): 70-180 mg/dL or 3.9-10 mmol/L.
+Tijd binnen bereik (**TIR**): 70-180 mg/dl of 3,9-10 mmol/l.
 
-**TIR** information is available for 7 and 30 days, depending on the amount of data available within the **AAPS** database.
+**TIR**-informatie is beschikbaar voor 7 en 30 dagen, afhankelijk van hoeveel gegevens er in de **AAPS**-database staan.
 
-Time In Tight Range (TITR) 70-140 mg/dL or 3.9-7.8 mmol/L statistics are available below (the screen shows this range as 70-141).
+Hieronder staan statistieken voor Tijd binnen nauw bereik (TITR), 70-140 mg/dl of 3,9-7,8 mmol/l (het scherm toont dit bereik als 70-141).
 
-**Discuss targets with your endo**
+**Bespreek je streefwaarden met je endocrinoloog**
 
-Your diabetes may vary. Any suggested targets should be discussed with your endocrinologist or supporting medical team. If used correctly, AAPS’ statistics can be an effective tool to follow __BG__ trends and monitor progress .
+Jouw diabetes kan anders zijn. Bespreek alle voorgestelde streefwaarden met je endocrinoloog of je medisch team. Als je de statistieken van AAPS goed gebruikt, zijn ze een handig hulpmiddel om trends in je __BG__ te volgen en je vooruitgang te bekijken.
 
-![Statistics](../images/Maintenance/statistics3.png)
+![Statistieken](../images/Maintenance/statistics3.png)
 
-Below, the **Dexcom TIR** card shows detailed 14 days **TIR** statistics.
+Daaronder toont de kaart **Dexcom TIR** uitgebreide **TIR**-statistieken over 14 dagen.
 
-**SD**: Standard Deviation, an [indicator](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) of BG variability (the highest = the worst).
+**SD**: standaarddeviatie, een [maat](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125941/) voor de schommeling van je BG (hoe hoger, hoe slechter).
 
-HbA1c: the estimate of the resulting glycated hemoglobin, based on the average of CGM measurements. This is an indicative value that might not match blood HbA1c tests.
+HbA1c: een schatting van het geglyceerde hemoglobine, berekend uit het gemiddelde van de CGM-metingen. Dit is een indicatieve waarde. Die kan afwijken van een HbA1c-bloedtest.
 
-![Statistics](../images/Maintenance/statistics4.png)
+![Statistieken](../images/Maintenance/statistics4.png)
 
 (reviewing-statistics-agp)=
-### Glucose tab: Ambulatory Glucose Profile (AGP)
+### Tabblad Glucose: Ambulant Glucose Profiel (AGP)
 
-The **Ambulatory Glucose Profile** (**AGP**) shows how your glucose usually moves over the day. Choose the period with the buttons at the top: **Today**, **24h**, **7d**, **30d** or **90d**.
+Het **Ambulant Glucose Profiel** (**AGP**) laat zien hoe je glucose meestal verloopt over de dag. Kies de periode met de knoppen bovenaan: **Vandaag**, **24u**, **7d**, **30d** of **90d**.
 
-- **The chart**: one day from midnight to midnight. The line is the **Median** (half of your readings at that hour were lower, half were higher). Around it, one band holds the middle half of your readings (**25–75%**) and a wider band most of them (**10–90%**). A narrow band means your glucose is similar from day to day at that hour. Dashed lines mark your **LOW mark**, 140 mg/dL (7.8 mmol/L) and your **HIGH mark**.
-- **Glycemic overview**: the time spent in your range, in the tight range (70–140 mg/dL or 3.9–7.8 mmol/L), above your range and below it, then your **Average** and **Median** glucose. Your range is the **LOW mark** and **HIGH mark** set in [Range for visualization](#Preferences-range-for-visualization).
-- **eA1c** and **GMI**: two estimates of HbA1c calculated from your CGM readings. Like the HbA1c above, they might not match your blood HbA1c tests.
-- **SD** (standard deviation) and **CV** (coefficient of variation): how much your glucose varies. A lower value means steadier glucose.
-- **Days**: how many days of CGM data were used.
+- **De grafiek**: één dag, van middernacht tot middernacht. De lijn is de **Mediaan** (de helft van je metingen op dat uur was lager, de helft was hoger). Daaromheen bevat één band de middelste helft van je metingen (**25–75%**) en een bredere band de meeste metingen (**10–90%**). Een smalle band betekent dat je glucose op dat uur van dag tot dag ongeveer gelijk is. Stippellijnen tonen je **LAAG grens**, 140 mg/dl (7,8 mmol/l) en je **HOOG grens**.
+- **Glycemisch overzicht**: de tijd binnen je bereik, binnen het nauwe bereik (70–140 mg/dl of 3,9–7,8 mmol/l), boven je bereik en eronder, daarna je **Gemiddeld** en **Mediaan** glucose. Je bereik is de **LAAG grens** en **HOOG grens** die zijn ingesteld bij [Bereik voor visualisatie](#Preferences-range-for-visualization).
+- **eA1c** en **GMI**: twee schattingen van de HbA1c, berekend uit je CGM-metingen. Net als de HbA1c hierboven kunnen ze afwijken van je HbA1c-bloedtesten.
+- **SD** (standaarddeviatie) en **CV** (variatiecoëfficiënt): hoeveel je glucose schommelt. Een lagere waarde betekent een stabielere glucose.
+- **Dagen**: hoeveel dagen met CGM-gegevens zijn gebruikt.
 
-![Statistics: the Glucose tab with the AGP chart](../images/Maintenance/statistics_agp.png) ![Statistics: Glycemic overview and glucose metrics](../images/Maintenance/statistics_agp2.png)
+![Statistieken: het tabblad Glucose met de AGP-grafiek](../images/Maintenance/statistics_agp.png) ![Statistieken: Glycemisch overzicht en glucosewaarden](../images/Maintenance/statistics_agp2.png)
 
-Below the AGP, the **Glucose Pentagon (CGP)** card draws five measures of your last 14 days of glucose as a pentagon. A smaller pentagon means better glucose control.
+Onder het AGP tekent de kaart **Glucose Pentagon (CGP)** vijf maten van je glucose van de laatste 14 dagen als een vijfhoek. Een kleinere vijfhoek betekent een betere glucoseregeling.
 
-![Statistics: the Glucose Pentagon](../images/Maintenance/statistics_cgp.png)
+![Statistieken: het Glucose Pentagon](../images/Maintenance/statistics_cgp.png)
 
-### Cycle tab: TDD Cycle Pattern
+### Tabblad Cyclus: TDD-cycluspatroon
 
-**TDD Cycle Pattern** overlays your daily insulin totals in 28-day cycles, to help you spot recurring patterns. Each cycle is drawn as a line (**Individual cycles**), together with their average.
+**TDD-cycluspatroon** legt je dagelijkse insulinetotalen in cycli van 28 dagen over elkaar, zodat je terugkerende patronen kunt zien. Elke cyclus wordt getekend als een lijn (**Individuele cycli**), samen met hun gemiddelde.
 
-- **Raw TDD** / **Cleaned TDD**: choose the total daily dose as delivered, or the TDD minus insulin for carbs.
-- **Cycle offset**: moves the start of the cycle (0 to 27 days).
+- **Onbewerkte TDD** / **Opgeschoond TDD**: kies de totale dagelijkse dosis zoals toegediend, of de TDD min de insuline voor koolhydraten.
+- **Cyclus verschuiving**: verschuift het begin van de cyclus (0 tot 27 dagen).
 
-At least 56 days of data (2 cycles) are needed. With less data, the card shows **Not enough data (need at least 56 days for 2 cycles)**. The pattern is calculated only when you open the **Cycle** tab, because it reads 168 days of data.
+Er zijn minstens 56 dagen aan gegevens (2 cycli) nodig. Met minder gegevens toont de kaart **Niet genoeg gegevens (minstens 56 dagen nodig voor 2 cycli)**. Het patroon wordt pas berekend als je het tabblad **Cyclus** opent, omdat het de gegevens van 168 dagen leest.
 
 (aaps-screens-treatments)=
-## Treatments history
+## Behandelingen geschiedenis
 
-Open the **menu** (☰) in the top-left corner of the main screen and select **Treatments history**. In this view, you can view and alter the history of the following treatments, each on its own tab (swipe the tab row to see all of them):
+Open het **menu** (☰) linksboven op het hoofdscherm en kies **Behandelingen geschiedenis**. Hier kun je de geschiedenis van de volgende behandelingen bekijken en wijzigen, elk op een eigen tabblad (veeg over de rij met tabbladen om ze allemaal te zien):
 
-* Carbs and bolus
+* Koolhydraten en bolus
 * [Vertraagde bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temp basal
-* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
+* Tijdelijk basaal
+* [Tijdelijk streefdoel](../DailyLifeWithAaps/TempTargets.md)
 * [Profiel wissel](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
-* Careportal: notes and careportal entries
-* Running mode : history of loop status
-* User entry: other notes that are not sent to Nightscout
+* Careportal: notities en careportal-invoer
+* Bedrijfsmodus: geschiedenis van de loop-status
+* Gebruikersinvoer: andere notities die niet naar Nightscout worden gestuurd
 
-At the end of each line, small icons show where the data comes from or has been sent to:
-* **Nightscout** icon (the Nightscout logo): the data comes from or has been recorded to Nightscout
-* **Pump** icon: the data comes from the pump history (it has been processed by the pump)
-* **Trash can** icon: the entry has been deleted (it is shown only when you display deleted entries with the **eye** icon at the top right)
+Aan het einde van elke regel tonen kleine pictogrammen waar de gegevens vandaan komen of naartoe zijn gestuurd:
+* Pictogram **Nightscout** (het Nightscout-logo): de gegevens komen uit Nightscout of zijn in Nightscout opgeslagen
+* Pictogram **Pomp**: de gegevens komen uit de pompgeschiedenis (ze zijn door de pomp verwerkt)
+* Pictogram **Prullenbak**: de invoer is verwijderd (dit wordt alleen getoond als je verwijderde invoer laat zien met het **oog**-pictogram rechtsboven)
 
 (screens-bolus-carbs)=
-### Carbs and bolus
+### Koolhydraten en bolus
 
-![Carbs & bolus](../images/TreatmentsView1.png)
+![Koolhydraten & bolus](../images/TreatmentsView1.png)
 
-On this tab you can view the bolus and carbs log. Each bolus (line **1**) shows the remaining associated IOB next to the insulin amount. The origin of the bolus can be either :
-* Meal (manually entered though the Insulin, Quick Wizard or Bolus Wizard buttons)
-* SMB, when using the SMB Functionality
+Op dit tabblad zie je het logboek van bolussen en koolhydraten. Bij elke bolus (regel **1**) staat de resterende IOB van die bolus naast de hoeveelheid insuline. De bolus kan komen van:
+* Maaltijd (handmatig ingevoerd via de knoppen Insuline, QuickWizard of Bolus wizard)
+* SMB, als je de SMB-functie gebruikt
 
-The carbs entries (line **2**) are shown with their amount in grams.
+De ingevoerde koolhydraten (regel **2**) worden getoond met hun hoeveelheid in grammen.
 
-If you have used the [Bolus Wizard](#aaps-screens-bolus-wizard) to calculate insulin dosage, you can press the “Calc” text on the bolus line to show the details of how the bolus was calculated.
+Als je de [Bolus wizard](#aaps-screens-bolus-wizard) hebt gebruikt om de insulinedosis te berekenen, kun je op de tekst "Calc" in de bolusregel drukken. Dan zie je hoe de bolus is berekend.
 
-Depending on the pump used, insulin and carbs can be shown in one single line, or will result in multiple lines: one for the calculation detail, one for the carbs, one for the bolus itself.
+Afhankelijk van de gebruikte pomp worden insuline en koolhydraten in één regel getoond, of in meerdere regels: één voor de details van de berekening, één voor de koolhydraten en één voor de bolus zelf.
 
-The Treatments history can be used to correct faulty carb entries (_i.e._ you over- or underestimated carbs). Note that it is not possible to edit an existing entry, you need to follow the following process:
+De Behandelingen geschiedenis kun je gebruiken om verkeerd ingevoerde koolhydraten te corrigeren (_bijv._ als je de koolhydraten te hoog of te laag hebt geschat). Je kunt een bestaande invoer niet bewerken. Volg daarom deze stappen:
 
-1. Check and remember actual COB and IOB on the main screen.
-2. Depending on pump, carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount: press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.
-4. Make sure carbs are removed successfully by checking COB on the main screen again.
-5. Do the same for IOB if there is just one line including carbs and insulin.
+1. Controleer en onthoud de huidige COB en IOB op het hoofdscherm.
+2. Afhankelijk van de pomp worden koolhydraten samen met insuline in één regel getoond of als aparte invoer (bijv. bij de Dana RS).
+3. Verwijder de invoer met de verkeerde hoeveelheid koolhydraten: druk op het prullenbak-pictogram, kies de regels die je wilt verwijderen en druk nog een keer op het prullenbak-pictogram om te bevestigen.
+4. Controleer of de koolhydraten echt verwijderd zijn door opnieuw de COB op het hoofdscherm te bekijken.
+5. Doe hetzelfde voor IOB als er maar één regel is met koolhydraten en insuline samen.
 
-   → If carbs are not removed as intended, and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   → Als de koolhydraten niet zijn verwijderd zoals bedoeld, en je voegt extra koolhydraten toe zoals hier uitgelegd (6.), dan is de COB te hoog. Dat kan leiden tot te veel insuline.
 
-6. Enter the correct carb amount again (**Treatments → Carbs** in the bottom navigation, or a [QuickLaunch](#quicklaunch) **Carbs** button) and make sure to set the correct event time.
-7. If there is just one line including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on the main screen after confirming the new entry.
+6. Voer de juiste hoeveelheid koolhydraten opnieuw in (**Behandelingen → Koolhydraten** in de navigatie onderaan, of een [QuickLaunch](#quicklaunch)-knop **Koolhydraten**) en zorg dat je de juiste tijd van de gebeurtenis instelt.
+7. Als er maar één regel is met koolhydraten en insuline samen, moet je ook de hoeveelheid insuline invoeren. Zorg dat je de juiste tijd van de gebeurtenis instelt en controleer de IOB op het hoofdscherm nadat je de nieuwe invoer hebt bevestigd.
 
-### Temp basal
+### Tijdelijk basaal
 
-![Temp Basal](../images/TreatmentsView2.png)
+![Tijdelijk basaal](../images/TreatmentsView2.png)
 
-The **temp basals** applied by the loop are shown here. When there is still an impact on the IOB for an entry, the information is shown next to the rate (line **1**). It can be:
-* Positive IOB if the temp basal was higher than the one set in the Profile
-* Negative IOB for a zero-temp (as on line **1**) or if the temp basal was lower than the one set in the Profile
+De **tijdelijke basaalstanden** die de loop heeft ingesteld, worden hier getoond. Als een invoer nog invloed heeft op de IOB, staat die informatie naast de basaalstand (regel **1**). Dit kan zijn:
+* Positieve IOB als de tijdelijke basaal hoger was dan die in het profiel
+* Negatieve IOB bij een tijdelijke basaal van nul (zoals in regel **1**) of als de tijdelijke basaal lager was dan die in het profiel
 
-Deleting the entries only affects your reports in Nightscout and will probably tamper your real IOB - it is not recommended.
+Het verwijderen van invoer verandert alleen je rapporten in Nightscout en maakt je echte IOB waarschijnlijk onjuist - dit wordt afgeraden.
 
-On the left of a line, a red S means “Suspend” : it happens when basal is not currently delivered. This is a normal situation when in the process of changing a pod, for example.
+Links op een regel betekent een rode S "Onderbreken" (Suspend): basaal wordt op dat moment niet toegediend. Dit is normaal, bijvoorbeeld tijdens het wisselen van een pod.
 
-### Temporary target
+### Tijdelijk streefdoel
 
-![Temporary target](../images/TreatmentsView3.png)
+![Tijdelijk streefdoel](../images/TreatmentsView3.png)
 
-The history of temporary targets can be seen here.
+Hier zie je de geschiedenis van tijdelijke streefdoelen.
 
 ### Profiel wissel
 
-![Profile Switch](../images/TreatmentsView4.png)
+![Profiel wissel](../images/TreatmentsView4.png)
 
-The history of profile switches can be seen here. You may see multiple entries each time you switch profile : line **1**, stored both in NS and Pump History, corresponds to the actual switch. Line **2**, stored in Nightscout but not in Pump History, corresponds to the request of a profile switch made by the user.
+Hier zie je de geschiedenis van profielwissels. Je kunt bij elke profielwissel meerdere regels zien: regel **1**, opgeslagen in zowel NS als de pompgeschiedenis, is de echte wissel. Regel **2**, opgeslagen in Nightscout maar niet in de pompgeschiedenis, is het verzoek voor een profielwissel door de gebruiker.
 
-Deleting the entries only affects your reports in Nightscout and will never actually change the current profile.
+Het verwijderen van invoer verandert alleen je rapporten in Nightscout en verandert nooit het huidige profiel.
 
-You can use the **Clone** button shown on line **2** to make a copy of a **Profile Switch**. See [Your AAPS Profile > Manage your profiles](#your-aaps-profile-clone-profile-switch) for more information.
+Met de knop **Dupliceren** in regel **2** kun je een kopie maken van een **Profiel wissel**. Zie [Je AAPS-profiel > Je profielen beheren](#your-aaps-profile-clone-profile-switch) voor meer informatie.
 
 ### Careportal
 
-![Care portal](../images/TreatmentsView5.png)
+![Careportal](../images/TreatmentsView5.png)
 
-This tab shows all notes and careportal entries recorded in Nightscout.
+Dit tabblad toont alle notities en careportal-invoer die in Nightscout zijn opgeslagen.
 
 (AapsScreens-running-mode)= (aaps-screens-running-mode)=
-### Running mode
+### Bedrijfsmodus
 
-![Running mode](../images/TreatmentsView6.png)
+![Bedrijfsmodus](../images/TreatmentsView6.png)
 
-This tab shows the history of [loop status](#AapsScreens-loop-status) changes : open, closed, LGS, suspend, disconnect.
+Dit tabblad toont de geschiedenis van wijzigingen in de [loop-status](#AapsScreens-loop-status): open, gesloten, LGS, onderbreken, loskoppelen.
 
-### User entry
+### Gebruikersinvoer
 
-![User entry](../images/screens/treatments_user_entry.png)
+![Gebruikersinvoer](../images/screens/treatments_user_entry.png)
 
-This tab lists the actions made in **AAPS** by the user or by an **Automation** (loop mode changes, profile switches, treatments, settings exports...). These entries are not sent to Nightscout.
+Dit tabblad toont de acties in **AAPS** die de gebruiker of een **Automatisering** heeft gedaan (wijzigingen van de loop-modus, profielwissels, behandelingen, export van instellingen...). Deze invoer wordt niet naar Nightscout gestuurd.
 
 ------
 
-## What is the difference between Nightscout vs Tidepool?
+## Wat is het verschil tussen Nightscout en Tidepool?
 
-Nightscout can facilitate the user’s storage of **AAPS’** data and offers a wide range of [reporting tools](https://nightscout.github.io/nightscout/reports/).
+Nightscout kan de gegevens van **AAPS** voor je opslaan en heeft veel [rapportages](https://nightscout.github.io/nightscout/reports/).
 
-Whereas, Tidepool allows the user to [review their data](https://www.tidepool.org/viewing-your-data) and provides [simple sharing with your endo team](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
+Tidepool laat je je [gegevens bekijken](https://www.tidepool.org/viewing-your-data) en je kunt ze [eenvoudig delen met je diabetesteam](https://www.tidepool.org/providers/how-it-works#tidepool-data-platform).
