@@ -9,7 +9,7 @@
 
 eCarbs are carbs that are split up over several hours. 对于标准餐食，如果碳水化合物多于脂肪/蛋白质，通常只需提前输入碳水化合物（并根据需要减少初始输注量）就足以防止胰岛素过早输注。但对于吸收较慢的餐食，如果一开始就输入全部碳水化合物会导致SMB产生过多的IOB，此时可以使用eCarbs来更准确地模拟碳水化合物（以及为其他广义上的营养素输入的任何碳水化合物等价物）的吸收过程及其对血糖的影响。有了这些信息，闭环可以逐渐地给予SMBs来处理这些碳水化合物，这可以看作是一个动态的扩展输注（在没有SMBs的情况下也可以使用，但效果可能较差）。
 
-**注意**：eCarbs不仅限于富含脂肪/蛋白质的餐食：它们还可以用于任何影响血糖升高的情况，例如服用皮质类固醇等其他药物。
+**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
 ## 使用eCarbs的机制
 
@@ -62,7 +62,7 @@ For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carb
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## 扩展大剂量及其在闭环环境中为何不起作用？
 
-如上所述，扩展大剂量或多波大剂量在闭环环境中实际上并不起作用。详见[下文](#why-extended-boluses-wont-work-in-a-closed-loop-environment)。
+如上所述，扩展大剂量或多波大剂量在闭环环境中实际上并不起作用。 [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### 扩展大剂量并切换到开环——仅限Dana和Insight泵
