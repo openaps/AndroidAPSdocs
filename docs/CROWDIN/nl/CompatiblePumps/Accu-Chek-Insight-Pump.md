@@ -142,9 +142,9 @@ Roche stopt met insulinepompen om zich bij diabetes te richten op de Accu-Chek S
 
 Configureer alarmen in de pomp als volgt:
 
-* Menu > Instellingen > Apparaatinstellingen > Modus instellingen > Zacht > Signaal > Geluid
-* Menu > Instellingen > Apparaatinstellingen > Instellingen modus > Zacht > Volume > 0 (verwijder alle balken)
-* Menu > Modi > Signaalmodus > Zacht
+* Menu > Settings > Device settings > Mode settings > Quiet > Signal > Sound
+* Menu > Settings > Device settings > Mode settings > Quiet > Volume > 0 (verwijder alle balken)
+* Menu > Modes > Signal mode > Quiet
 
 Hierdoor worden alle alarmen van de pomp stil, zodat AAPS kan beslissen of een alarm voor jou belangrijk is. Als AAPS een alarm niet bevestigt, wordt het alarm sterker (eerst piepen, daarna trillen).
 
