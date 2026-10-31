@@ -2,7 +2,7 @@
 
 Tidepool is een externe tool die gegevens over BG, insuline en koolhydraten verzamelt (en de notities die je aan je behandelingen toevoegt). Je kunt deze gegevens analyseren en delen met je zorgteam. Sinds AAPS versie 3.2 kan het worden gebruikt als alternatief voor Nightscout om aan een deel van Doel 1 te voldoen. Je kunt het ook samen met Nightscout gebruiken als extra rapportageplatform dat goed aansluit bij de klinische zorg. Dit kan de gewenste optie zijn voor kinderen die AAPS gebruiken en de functies van Nightscout voor volgen en bedienen op afstand willen, maar ook een rapportageplatform willen waar hun diabetesteam beter mee overweg kan.
 
-Het is belangrijk om te begrijpen dat Tidepool alleen dient voor rapportage. Het is GEEN app om in realtime te volgen. Als je volgers nodig hebt naast de hoofdtelefoon met AAPS, moet je ook Nightscout instellen.
+Het is belangrijk om te begrijpen dat Tidepool alleen dient voor rapportage. Het is GEEN app om in realtime te volgen. Als je volgers nodig hebt naast de AAPS-telefoon, moet je ook Nightscout instellen.
 
 Let op: de organisatie Tidepool heeft het product Loop voor iOS met FDA-goedkeuring op de markt gebracht. Dit project heeft niets te maken met hun platform voor gegevensrapportage of met AAPS.
 
