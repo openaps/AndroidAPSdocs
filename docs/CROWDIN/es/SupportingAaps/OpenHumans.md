@@ -63,7 +63,7 @@ The screenshots above show an earlier version of the Open Humans website and sti
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+La captura de pantalla de arriba es de una versión anterior de **AAPS**. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
 ```
 
 15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
@@ -98,7 +98,7 @@ Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
 
 ## Data Privacy
 
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but not identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
 
 - [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)
