@@ -1,236 +1,236 @@
-# Temp-Targets
+# Alvos temporários
 
-## What are Temp-Targets and where can I set and configure them?
+## O que são alvos temporários e onde posso defini-los e configurá-los?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their [**BG** target range](#profile-glucose-targets) for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+Um **Alvo temporário** (ou, de forma curta, **TT**) é um recurso do **AAPS** que permite ao usuário mudar a sua [faixa-alvo de **glicose**](#profile-glucose-targets) para atividades planejadas. Isso é feito pelo **AAPS**, que ajusta o uso de insulina do usuário.
 
-A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell **AAPS** to be more or less aggressive, while still keeping your glucose levels in range.
+Um alvo de glicose, principalmente se for só de curto prazo (menos de 4 horas de duração), não precisa ser o *valor real* que você espera ou quer que a sua glicose alcance. Ele é, na verdade, uma boa forma de dizer ao **AAPS** para ser mais ou menos agressivo, mantendo a sua glicose na faixa-alvo.
 
-Temporary targets can be defined within those boundaries :
+Os alvos temporários podem ser definidos dentro destes limites:
 
-|         | Temporary target       |
-| ------- | ---------------------- |
-| Minimum | 4 mmol/L or 72 mg/dL   |
-| Maximum | 10 mmol/L or 180 mg/dL |
+|        | Alvo Temporário        |
+| ------ | ---------------------- |
+| Mínimo | 4 mmol/l ou 72 mg/dl   |
+| Máximo | 10 mmol/l ou 180 mg/dl |
 
-**AAPS** provides three built-in **Temp-Target** presets suitable for exercise (**Activity**), meals (**Eating Soon**) and predicted hypoglycemia (**Hypo**). They live on the **Temp Target** screen (**Manage** → **Temp Target**), which you can also open by simply tapping the **target chip** on the main screen.
+O **AAPS** oferece três predefinições de **Alvo temporário** já incluídas: para exercício (**Atividade**), para refeições (**Comer em breve**) e para hipoglicemia prevista (**Hipo**). Elas ficam na tela **Alvo temporário** (**Gerenciar** → **Alvo temporário**), que você também pode abrir simplesmente tocando no **chip do alvo** na tela principal.
 
-Users should have realistic expectations on the results that can be achieved when selecting a **Temp-Target** in **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Os usuários devem ter expectativas realistas sobre os resultados que podem ser alcançados ao selecionar um **Alvo temporário** no **AAPS**. O sucesso em alcançar o alvo de **glicose** desejado vai variar conforme vários fatores, como: a confiabilidade das configurações do **AAPS** do usuário, o controle geral da **glicose**, a **IOB**, a sensibilidade à insulina, a resistência à insulina, a intensidade do esforço durante o exercício e assim por diante.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Um **Alvo temporário** pode levar cerca de 30 minutos ou mais para alcançar o alvo de **glicose** desejado. É impossível para o **AAPS** alcançar um alvo de **glicose** com efeito imediato, e os usuários devem se lembrar disso ao selecionar um **Alvo temporário**.
 
-The sections below summarize the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**. The values shown are the shipped defaults — you can [adjust each preset](#TempTargets-change-preset-defaults) to your own needs.
+As seções abaixo resumem os recursos do **Alvo temporário - Atividade**, do **Alvo temporário - Comer em breve** e do **Alvo temporário - Hipo**. Os valores mostrados são os padrões de fábrica — você pode [ajustar cada predefinição](#TempTargets-change-preset-defaults) conforme as suas necessidades.
 
-### TT - Activity
+### TT - Atividade
 
-![TT Activity](../images/TempTarget2.png)
+![TT Atividade](../images/TempTarget2.png)
 
-**BG Target (default preset, adjustable)**
+**Alvo de glicose (predefinição padrão, ajustável)**
 
-AAPS will aim to reach 140 mg/dL or 7.8 mmol/L for 1 h 30 min
+O AAPS vai tentar alcançar 140 mg/dl ou 7,8 mmol/l por 1 h 30 min
 
-**Other considerations users may wish to factor in when selecting**:
+**Outros pontos que os usuários podem querer levar em conta ao selecionar**:
 
-Depending on **BG** level, **AAPS** will "decrease" insulin usage in order to reach **BG** target. If **BG** target is not within range (i.e. above the users **Profile's** selected **BG** target), then **AAPS** may keep the basal on.
+Dependendo do nível de **glicose**, o **AAPS** vai "diminuir" o uso de insulina para alcançar o alvo de **glicose**. Se o alvo de **glicose** não estiver na faixa (ou seja, acima do alvo de **glicose** selecionado no **Perfil** do usuário), o **AAPS** pode manter a basal ligada.
 
-In closed loop mode, **SMB**:
+No modo loop fechado, o **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *pode ser* desativado (explicado mais abaixo); e/ou
+- a basal pode ser ativada se o **AAPS** estiver com **IOB** negativa ou <0.
 
-Users may also wish to consider:
+Os usuários também podem considerar:
 
-- *selecting* this **TT** 1-2 hours before the planned exercise to ensure reduced IOB (the correct timing for this TT will vary person to person); and
-- *selecting* a temporary Profile (decrease) for the duration of the planned activity to ensure reduced **IOB**;
-- *ensuring* **TT** is timed to be *deactivated* shortly before the exercise, because **IOB** is already reduced and some users experience a rapid rise in **BG** post exercise.
+- *selecionar* este **TT** 1–2 horas antes do exercício planejado, para garantir uma IOB menor (o momento certo para este TT varia de pessoa para pessoa); e
+- *selecionar* um Perfil temporário (reduzido) durante a atividade planejada, para garantir uma **IOB** menor;
+- *garantir* que o **TT** seja *desativado* pouco antes do exercício, porque a **IOB** já está reduzida e alguns usuários têm uma subida rápida da **glicose** depois do exercício.
 
-### TT - Eating soon
+### TT - Comer em breve
 
-![TT Eating soon](../images/TempTarget1.png)
+![TT Comer em breve](../images/TempTarget1.png)
 
-**BG Target (default preset, adjustable)**
+**Alvo de glicose (predefinição padrão, ajustável)**
 
-AAPS will aim to reach 90 mg/dL or 5.0 mmol/L for 45 minutes
+O AAPS vai tentar alcançar 90 mg/dl ou 5,0 mmol/l por 45 minutos
 
-**Other considerations users may wish to factor in when selecting**:
+**Outros pontos que os usuários podem querer levar em conta ao selecionar**:
 
-In closed loop mode, **SMB**:
+No modo loop fechado, o **SMB**:
 
-- will remain activated; and/or
-- basal may be also activated depending on the user's **Profile's** settings.
+- vai continuar ativado; e/ou
+- a basal também pode ser ativada, dependendo das configurações do **Perfil** do usuário.
 
-Depending on **BG** level, **AAPS** will "increase" insulin usage within the user's **AAPS** setting parameters in order to achieve the desired **BG** target.
+Dependendo do nível de **glicose**, o **AAPS** vai "aumentar" o uso de insulina, dentro dos parâmetros das configurações do **AAPS** do usuário, para alcançar o alvo de **glicose** desejado.
 
-### TT - Hypo
+### TT - Hipo
 
-![TT Hypo](../images/TempTarget3.png)
+![TT hipo](../images/TempTarget3.png)
 
-**BG Target (default preset, adjustable)**
+**Alvo de glicose (predefinição padrão, ajustável)**
 
-AAPS will aim to reach 160 mg/dL or 8.9 mmol/L for 1 hour
+O AAPS vai tentar alcançar 160 mg/dl ou 8,9 mmol/l por 1 hora
 
-**Other considerations users may wish to factor in when selecting**:
+**Outros pontos que os usuários podem querer levar em conta ao selecionar**:
 
-In closed loop mode, **SMB**:
+No modo loop fechado, o **SMB**:
 
-- *may be* deactivated (discussed further below); and/or
-- basal may be activated if **AAPS** is in negative **IOB** or <0.
+- *pode ser* desativado (explicado mais abaixo); e/ou
+- a basal pode ser ativada se o **AAPS** estiver com **IOB** negativa ou <0.
 
 (TempTargets-manage-v4)=
 
-## Setting and managing temporary targets (Manage → Temp Target)
+## Definir e gerenciar alvos temporários (Gerenciar → Alvo temporário)
 
-In **AAPS** v4 you manage your TT **presets** and start a temporary target from the **Manage** screen (bottom navigation) → **Temp Target** (*“Manage and set temporary targets”*).
+No **AAPS** v4, você gerencia as suas **predefinições** de TT e inicia um alvo temporário pela tela **Gerenciar** (navegação inferior) → **Alvo temporário** (*“Gerenciar e definir alvos temporários”*).
 
-![The Temp Target screen — preset carousel, editor and action bar](../images/v4/TempTarget/tt_management.png)
+![A tela Alvo temporário — carrossel de predefinições, editor e barra de ações](../images/v4/TempTarget/tt_management.png)
 
-The screen has three parts:
+A tela tem três partes:
 
-1. **Preset carousel** (top) — swipe through your TT presets. Each card shows the preset's **name**, **target** and **duration**; the currently running TT is highlighted.
-2. **Editor** (middle) — the **Temporary target** and **Duration** that will actually be applied, plus an **Activation** date/time.
-3. **Action bar** (bottom) — **➕ add**, **‘️ delete** and the **▶ activate** button.
+1. **Carrossel de predefinições** (em cima) — deslize entre as suas predefinições de TT. Cada cartão mostra o **nome**, o **alvo** e a **duração** da predefinição; o TT em execução no momento fica destacado.
+2. **Editor** (no meio) — o **Alvo Temporário** e a **Duração** que serão realmente aplicados, além da data/hora de **Ativação**.
+3. **Barra de ações** (embaixo) — os botões **➕ adicionar**, **‘️ excluir** e **▶ ativar**.
 
-Selecting a preset card loads its **target** and **duration** into the editor.
+Selecionar um cartão de predefinição carrega o **alvo** e a **duração** dele no editor.
 
-```{admonition} Built-in vs custom presets :class: note The built-in presets — **Eating Soon**, **Activity** and **Hypo** — always exist and **cannot be deleted** (you can change their values and save, though). Any presets you create yourself are **custom** and can be edited or deleted freely.
+```{admonition} Predefinições incluídas e personalizadas :class: note As predefinições incluídas — **Comer em breve**, **Atividade** e **Hipo** — sempre existem e **não podem ser excluídas** (mas você pode mudar os valores delas e salvar). As predefinições que você mesmo cria são **personalizadas** e podem ser editadas ou excluídas livremente.
 
-    <br />### Activating a temporary target
+    <br />### Ativar um alvo temporário
     
-    Swipe to the preset you want (its values load into the editor), optionally adjust the **target**/**duration** in the editor, then tap **▶ Activate**. A confirmation shows the exact target, duration and reason before anything starts:
+    Deslize até a predefinição que você quer (os valores dela são carregados no editor), se quiser ajuste o **alvo**/a **duração** no editor e toque em **▶ Ativar**. Uma confirmação mostra o alvo, a duração e o motivo exatos antes de qualquer coisa começar:
     
-    ![Activation confirmation](../images/TempTarget8.png)
+    ![Confirmação de ativação](../images/TempTarget8.png)
     
-    After you confirm, the temporary target starts immediately (or at the chosen **Activation** time) and runs for the set **duration**.
+    Depois que você confirma, o alvo temporário começa na hora (ou no horário de **Ativação** escolhido) e dura pelo tempo definido em **duração**.
     
-    ```{admonition} Editing the numbers is a one-off — it does not change the preset
+    ```{admonition} Editar os números vale só uma vez — não muda a predefinição
     :class: important
-    The **target** and **duration** in the editor are the values **Activate** will use *right now*. If you change them, that change is **temporary**: it applies only to this activation and **does not modify the saved preset**. This lets you "tweak and activate" a one-off TT (for example activate *Activity* at a slightly different target today) without permanently altering the preset.
+    O **alvo** e a **duração** no editor são os valores que **Ativar** vai usar *agora*. Se você mudar esses valores, a mudança é **temporária**: vale só para esta ativação e **não altera a predefinição salva**. Assim você pode "ajustar e ativar" um TT uma única vez (por exemplo, ativar *Atividade* hoje com um alvo um pouco diferente) sem mudar a predefinição para sempre.
     
 
-### Saving changes to a preset
+### Salvar mudanças em uma predefinição
 
-If you *do* want to keep an edited value, **Save** it: when the editor differs from the selected preset, a **Save** icon appears in the top toolbar. Tapping it stores the current **target** and **duration** (and name, for custom presets) back into the selected preset. For the built-in presets, a **Revert to defaults** button (↺) also appears in the action bar: it brings back the preset's default values.
+Se você *quer* manter um valor editado, use **Salvar**: quando o editor está diferente da predefinição selecionada, um ícone **Salvar** aparece na barra de ferramentas superior. Tocar nele grava o **alvo** e a **duração** atuais (e o nome, nas predefinições personalizadas) na predefinição selecionada. Nas predefinições incluídas, um botão **Reverter para os padrões** (↺) também aparece na barra de ações: ele traz de volta os valores padrão da predefinição.
 
-![Temp Target screen with the Save icon and the Revert to defaults button](../images/v4/TempTarget/tt_preset_save_revert.png)
+![Tela Alvo temporário com o ícone Salvar e o botão Reverter para os padrões](../images/v4/TempTarget/tt_preset_save_revert.png)
 
-So the rule of thumb is:
+Então a regra prática é:
 
-- **Activate** → use the numbers **once** (preset unchanged).
-- **Save** → make the numbers the preset's **new defaults**.
+- **Ativar** → usa os números **uma vez** (a predefinição não muda).
+- **Salvar** → torna os números os **novos padrões** da predefinição.
 
-To put a built-in preset back the way it shipped, select it and tap the **↺ Revert** button — it appears in the action bar only for a **built-in** preset whose values currently differ from its factory defaults, and it restores that preset's original **target** and **duration**.
+Para deixar uma predefinição incluída como ela veio de fábrica, selecione-a e toque no botão **↺ Reverter**. Ele só aparece na barra de ações para uma predefinição **incluída** cujos valores estão diferentes dos padrões de fábrica, e restaura o **alvo** e a **duração** originais dessa predefinição.
 
-### Adding and removing presets
+### Adicionar e remover predefinições
 
-- **➕ Add** — create a **new custom preset** from the current editor values. The new card appears in the carousel.
-- **‘️ Delete** — remove the selected **custom** preset. Built-in presets (*Eating Soon*, *Activity*, *Hypo*) cannot be deleted.
+- **➕ Adicionar** — cria uma **nova predefinição personalizada** a partir dos valores atuais do editor. O novo cartão aparece no carrossel.
+- **‘️ Excluir** — remove a predefinição **personalizada** selecionada. As predefinições incluídas (*Comer em breve*, *Atividade*, *Hipo*) não podem ser excluídas.
 
-Once you have at least two **custom** presets, you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. The built-in presets keep their places — only custom presets can be moved. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Quando você tem pelo menos duas predefinições **personalizadas**, também pode mudar a ordem delas no carrossel: toque no ícone **Reordenar** (⇅) na barra superior, mova o cartão do centro com os **botões de mover ◀ / ▶** e confirme com **✓**. As predefinições incluídas ficam no mesmo lugar — só as predefinições personalizadas podem ser movidas. (Os controles são iguais aos de [reordenar perfis](ProfileSwitch-ProfilePercentage.md).)
 
-Your presets are part of the synced configuration, so they are shared across your master and paired clients.
+As suas predefinições fazem parte da configuração sincronizada, então são compartilhadas entre o seu dispositivo principal e os clientes pareados.
 
-### Other ways to set a temporary target
+### Outras formas de definir um alvo temporário
 
-A temporary target can also be set without opening this screen:
+Um alvo temporário também pode ser definido sem abrir esta tela:
 
-- with the **TT toggles in the Carbs dialog** — see [below](#TempTargets-carbs-dialog),
-- with a **preset button on the [QuickLaunch toolbar](QuickLaunch.md)** — the *Temp Target Presets* category in *Configure QuickLaunch* offers a one-tap button for each of your presets,
-- from a **Wear OS watch** (the **Temp Target** menu item / tile),
-- from a paired **client** — see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md),
-- as part of a **[scene](Scenes.md)** (the *Temporary target* action), or
-- from an **Automation** rule (*Start temp target* / *Stop temp target*).
+- com as **chaves de TT no diálogo Carboidratos** — veja [abaixo](#TempTargets-carbs-dialog),
+- com um **botão de predefinição na [barra de acesso rápido](QuickLaunch.md)** — a categoria *Predefinições de alvo temporário* em *Configurar acesso rápido* oferece um botão de um toque para cada uma das suas predefinições,
+- a partir de um **relógio Wear OS** (o item de menu / bloco **Alvo temporário**),
+- a partir de um **cliente** pareado — veja [Controle dispositivo principal ↔ cliente](../RemoteFeatures/ClientMasterControl.md),
+- como parte de um **[cenário](Scenes.md)** (a ação *Alvo Temporário*), ou
+- a partir de uma regra de **Automação** (*Iniciar alvo temporário* / *Parar alvo temporário*).
 
 * * *
 
 (TempTargets-where-can-i-select-a-temp-target)=
 
-## Where can I select a Temp-Target?
+## Onde posso selecionar um alvo temporário?
 
-The quickest way is to tap the **target chip** on the main screen (it shows your current target range):
+A forma mais rápida é tocar no **chip do alvo** na tela principal (ele mostra a sua faixa-alvo atual):
 
-![Target chip on the main screen](../images/TempTarget6.png)
+![Chip do alvo na tela principal](../images/TempTarget6.png)
 
-This opens the **Temp Target** screen described above — swipe to a preset and tap **▶ Activate**. The same screen is also reachable via **Manage** → **Temp Target**.
+Isso abre a tela **Alvo temporário** descrita acima — deslize até uma predefinição e toque em **▶ Ativar**. A mesma tela também pode ser aberta por **Gerenciar** → **Alvo temporário**.
 
-(TempTargets-carbs-dialog)= When entering carbs, you don't need to open the **Temp Target** screen at all: the **Carbs dialog** (**Treatments** → **Carbs**) has **Start Hypo TT**, **Start Eating soon TT** and **Start Activity TT** toggles at the top. Switch one on and the corresponding preset is activated together with the carb entry:
+(TempTargets-carbs-dialog)= Ao registrar carboidratos, você nem precisa abrir a tela **Alvo temporário**: o **diálogo Carboidratos** (**Tratamentos** → **Carboidratos**) tem as chaves **Iniciar TT Hipo**, **Iniciar Comer em breve TT** e **Iniciar atividade TT** no topo. Ligue uma delas e a predefinição correspondente é ativada junto com o registro de carboidratos:
 
-![TT toggles in the Carbs dialog](../images/TempTarget5.png)
+![Chaves de TT no diálogo Carboidratos](../images/TempTarget5.png)
 
-    {admonition} Automatic Hypo TT
+    {admonition} TT Hipo automático
     :class: note
-    If you open the **Carbs dialog** while your glucose is below 72 mg/dL (4 mmol/L), **AAPS** pre-selects the **Start Hypo TT** toggle for you (unless a higher temporary target with a longer remaining duration is already running).
+    Se você abrir o **diálogo Carboidratos** quando a sua glicose estiver abaixo de 72 mg/dl (4 mmol/l), o **AAPS** já marca a chave **Iniciar TT Hipo** para você (a menos que já esteja em execução um alvo temporário mais alto com mais tempo restante).
 
 (TempTargets-change-preset-defaults)=
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Onde posso mudar o alvo temporário padrão e substituí-lo pelas minhas próprias preferências?
 
-Each preset's **target** and **duration** are edited directly on the **Temp Target** screen — there is no separate preferences entry for this anymore:
+O **alvo** e a **duração** de cada predefinição são editados diretamente na tela **Alvo temporário** — não existe mais um item separado nas preferências para isso:
 
-1. Open the **Temp Target** screen (tap the target chip, or **Manage** → **Temp Target**).
-2. Swipe to the preset you want to change.
-3. Adjust **Temporary target** and/or **Duration** in the editor.
-4. Tap the **Save** icon that appears in the top toolbar.
+1. Abra a tela **Alvo temporário** (toque no chip do alvo, ou **Gerenciar** → **Alvo temporário**).
+2. Deslize até a predefinição que você quer mudar.
+3. Ajuste o **Alvo Temporário** e/ou a **Duração** no editor.
+4. Toque no ícone **Salvar** que aparece na barra de ferramentas superior.
 
-![Editing a preset — Save icon in the toolbar, Revert in the action bar](../images/TempTarget7.png)
+![Editar uma predefinição — ícone Salvar na barra de ferramentas, Reverter na barra de ações](../images/TempTarget7.png)
 
-While the editor differs from a built-in preset's factory values, a **↺ Revert** button also appears in the action bar — tap it to restore the preset's original target and duration.
+Enquanto o editor estiver diferente dos valores de fábrica de uma predefinição incluída, um botão **↺ Reverter** também aparece na barra de ações — toque nele para restaurar o alvo e a duração originais da predefinição.
 
-## How do I cancel a Temp-Target?
+## Como cancelo um alvo temporário?
 
-While a temporary target is running, the target chip on the main screen shows the target and its remaining time. Tap it — on the **Temp Target** screen the running preset is highlighted as **ACTIVE**, and a red **✗ Cancel** button appears at the end of the toolbar at the bottom, just left of the **▶ Activate** button. Tap it and confirm:
+Enquanto um alvo temporário está em execução, o chip do alvo na tela principal mostra o alvo e o tempo restante. Toque nele — na tela **Alvo temporário**, a predefinição em execução aparece destacada como **ATIVO**, e um botão vermelho **✗ Cancelar** aparece no fim da barra de ferramentas inferior, logo à esquerda do botão **▶ Ativar**. Toque nele e confirme:
 
-![Cancelling a running temp target](../images/TempTarget9.png)
+![Cancelar um alvo temporário em execução](../images/TempTarget9.png)
 
-A running temporary target can also be stopped from a **Wear OS watch**, from a paired **client**, or by an **Automation** rule (*Stop temp target*).
+Um alvo temporário em execução também pode ser parado a partir de um **relógio Wear OS**, de um **cliente** pareado ou por uma regra de **Automação** (*Parar alvo temporário*).
 
 (TempTargets-hypo-temp-target)=
 
-## Hypo Temp-Target
+## Alvo Temporário para hipoglicemia
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+O **Alvo temporário Hipo** permite que o **AAPS** ajude o usuário a evitar uma hipoglicemia, reduzindo a insulina administrada. Se o usuário prevê que a **glicose** vai baixar: normalmente o **AAPS** deve lidar com isso, mas muito vai depender da estabilidade das configurações do **AAPS** do usuário. Um **Alvo temporário Hipo** permite que o usuário se antecipe à hipoglicemia prevista e faça o **AAPS** reduzir a insulina.
 
-Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
+Às vezes, quando carboidratos são comidos para tratar uma hipoglicemia, a **glicose** do usuário pode subir rápido, e o **AAPS** vai corrigir essa subida rápida da **glicose** ativando **SMBs**.
 
-Some users wish to avoid **SMBs** being given during **Temp-Target Hypo**. This is achieved by deactivating *'Enable SMB with high temp target'* in **Settings** → **OpenAPS SMB** (see further below):
+Alguns usuários querem evitar que **SMBs** sejam administrados durante um **Alvo temporário Hipo**. Isso é feito desativando *'Ativar SMB com alvo temporário alto'* em **Configurações** → **SMB OpenAPS** (veja mais abaixo):
 
-- In (Advanced, objective 9): the user can enable *“High temp target raises sensitivity”* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS SMB, **AAPS** will be more sensitive.
+- Em (Avançado, objetivo 9): o usuário pode ativar *“Alvo temporário alto aumenta a sensibilidade”* para **Alvos temporários** de 100 mg/dl (5,6 mmol/l) ou mais no SMB OpenAPS; assim o **AAPS** fica mais sensível.
 
-- In (Advanced, objective 9): the user can deactivate *“Enable SMB with high temp target”*, so that even if **AAPS** has COB > 0, “Enable SMB with low temp target” or “Enable SMB always” enabled and OpenAPS SMB active, **AAPS** will not give SMBs while high temp targets are active.
+- Em (Avançado, objetivo 9): o usuário pode desativar *“Ativar SMB com alvo temporário alto”*, para que, mesmo se o **AAPS** tiver COB > 0, “Ativar SMB com alvo temporário baixo” ou “Ativar SMB sempre” ativados e o SMB OpenAPS ativo, o **AAPS** não administre SMBs enquanto alvos temporários altos estiverem ativos.
 
-Note: if you open the **Carbs dialog** while your blood glucose is less than 72 mg/dL or 4 mmol/L, **AAPS** pre-selects the **Start Hypo TT** toggle automatically.
+Observação: se você abrir o **diálogo Carboidratos** quando a sua glicose estiver abaixo de 72 mg/dl ou 4 mmol/l, o **AAPS** marca automaticamente a chave **Iniciar TT Hipo**.
 
 (TempTargets-activity-temp-target)=
 
-## Activity Temp-Target
+## Alvo temporário de atividade
 
-Before and during exercise, the user may require a higher target to prevent hypoglycemia during the activity.
+Antes e durante o exercício, o usuário pode precisar de um alvo mais alto para evitar hipoglicemia durante a atividade.
 
-To simplify **Temp-Target Activity**, the user can configure a default **Temp-Target - Activity** to raise **BG** levels by reducing insulin usage in order to slow down **BG** fall and avoid hypoglycemia.
+Para simplificar o **Alvo temporário de atividade**, o usuário pode configurar um **Alvo temporário - Atividade** padrão que eleva a **glicose** reduzindo o uso de insulina, para diminuir a queda da **glicose** e evitar hipoglicemia.
 
-New users to **AAPS** may need to experiment and personalize their **Temp-Target Activity** default settings in order to optimize this feature to work best for them. Everyone is different when it comes to attaining stable BG control during exercise. See also the [sports section in FAQ](#FAQ-sports).
+Usuários novos do **AAPS** podem precisar testar e personalizar as configurações padrão do **Alvo temporário de atividade**, para que este recurso funcione melhor para eles. Cada pessoa é diferente quando se trata de manter um controle estável da glicose durante o exercício. Veja também a [seção sobre esportes no FAQ](#FAQ-sports).
 
-Some users also prefer to activate a **Profile switch** (being a Profile decrease < 100% to reduce insulin delivery by **AAPS**) before and while **Temp-Target Activity** is on. You can start both in one step: tap the profile name on the main screen, tap the round **▶** button, set a **Percentage** below 100 % and a **Duration**, then switch on **Temporary target / Activity**. See [Change the Profile Percentage](#ProfileSwitch-change-percentage).
+Alguns usuários também preferem ativar uma **Troca de Perfil** (um perfil reduzido, abaixo de 100%, para diminuir a insulina administrada pelo **AAPS**) antes e durante o **Alvo temporário de atividade**. Você pode iniciar os dois em um passo: toque no nome do perfil na tela principal, toque no botão redondo **▶**, defina uma **Porcentagem** abaixo de 100 % e uma **Duração** e depois ligue **Alvo Temporário / Atividade**. Veja [Alterar a porcentagem do perfil](#ProfileSwitch-change-percentage).
 
-Advanced, objective 9: users can enable *'High temp target raises sensitivity'* for **Temp-Targets** of 100 mg/dL (5.6 mmol/L) or higher in OpenAPS **SMB**. A target of 99 mg/dL (5.5 mmol/L) is a normal target, neither high nor low. Then **AAPS** is more sensitive.
+Avançado, objetivo 9: os usuários podem ativar *'Alvo temporário alto aumenta a sensibilidade'* para **Alvos temporários** de 100 mg/dl (5,6 mmol/l) ou mais no **SMB** OpenAPS. Um alvo de 99 mg/dl (5,5 mmol/l) é um alvo normal, nem alto nem baixo. Assim o **AAPS** fica mais sensível.
 
-Additionally, if *'Enable SMB with high temp target'* is deactivated, **AAPS** will not deliver **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS **SMB** active.
+Além disso, se *'Ativar SMB com alvo temporário alto'* estiver desativado, o **AAPS** não vai administrar **SMBs**, mesmo com COB > 0, *'Ativar SMB com alvo temporário baixo'* ou *'Ativar SMB sempre'* ativados e o **SMB** OpenAPS ativo.
 
 (TempTargets-eating-soon-temp-target)=
 
-## Eating soon Temp-Target
+## Alvo temporário Comer em breve
 
-**Temp-Target -Eating soon** can help accomplish a gentle drive down of **BG** and ensure there is ample **IOB** before eating.
+O **Alvo temporário - Comer em breve** pode ajudar a baixar a **glicose** suavemente e garantir que haja **IOB** suficiente antes de comer.
 
-This can be an important tool for those users who do not pre bolus, however the efficacy of **Temp-Target -Eating soon** will depend on a number of factors including: the user’s settings, if they eat a low carb diet and whether they are using a fast acting insulin (like Fiasp or Lyumjev) in order to eliminate the need to pre bolus. Ordinarily, until users are experienced in **AAPS** they should expect to pre bolus when using **Temp-Target -Eating soon** and this is particularly so, if eating a high carb diet.
+Esta pode ser uma ferramenta importante para os usuários que não fazem pré-bólus. Porém, a eficácia do **Alvo temporário - Comer em breve** vai depender de vários fatores, entre eles: as configurações do usuário, se a alimentação tem poucos carboidratos e se a pessoa usa uma insulina de ação rápida (como Fiasp ou Lyumjev) para não precisar de pré-bólus. Normalmente, até ganharem experiência com o **AAPS**, os usuários devem contar com um pré-bólus ao usar o **Alvo temporário - Comer em breve**, principalmente se a alimentação tiver muitos carboidratos.
 
-You can read more about the “Eating soon mode” in the article ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) or [here](https://diyps.org/tag/eating-soon-mode/).
+Você pode ler mais sobre o “modo Comer em breve” (“eating soon mode”) no artigo ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) (em inglês) ou [aqui](https://diyps.org/tag/eating-soon-mode/).
 
-Advanced, [objective 9](#objectives-objective9): If you use OpenAPS SMB and have *'Low temp target lowers sensitivity'*, **AAPS** works a little bit more aggressively. For this option there is a requirement for **Temp-Target** to be 98 mg/dL (5.4 mmol/L) or lower.
+Avançado, [objetivo 9](#objectives-objective9): se você usa o SMB OpenAPS e tem *'Alvo temporário baixo reduz a sensibilidade'* ativado, o **AAPS** age de forma um pouco mais agressiva. Para esta opção, o **Alvo temporário** precisa ser de 98 mg/dl (5,4 mmol/l) ou menos.
 
-## How do I turn off SMB during Temp-Targets?
+## Como desligo o SMB durante alvos temporários?
 
-To action this open **Settings** → **OpenAPS SMB** and deactivate *'Enable SMB with high temp target'*.
+Para fazer isso, abra **Configurações** → **SMB OpenAPS** e desative *'Ativar SMB com alvo temporário alto'*.
 
-![Enable SMB with high temp target preference](../images/TempTargetSMB.png)
+![Preferência Ativar SMB com alvo temporário alto](../images/TempTargetSMB.png)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'Enable SMB with low temp target'* or *'Enable SMB always'* enabled and OpenAPS SMB active.
+Isso garante que o **AAPS** não vai administrar **SMBs**, mesmo com COB > 0, *'Ativar SMB com alvo temporário baixo'* ou *'Ativar SMB sempre'* ativados e o SMB OpenAPS ativo.
