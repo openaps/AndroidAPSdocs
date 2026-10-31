@@ -1,126 +1,126 @@
 (aaps-ci-troubleshooting)=
 
-# Browser build: troubleshooting
+# Zostavenie v prehliadači: riešenie problémov
 
 ```{note}
-This page collects troubleshooting tips for the [Browser build](../SettingUpAaps/BrowserBuild.md).
+Na tejto stránke sú tipy na riešenie problémov pri [zostavení v prehliadači](../SettingUpAaps/BrowserBuild.md).
 
-Using **AAPS Builder**? Start with its own [troubleshooting section](#aaps-builder-troubleshooting). The Google Drive sections below also apply to it.
+Používate **AAPS Builder**? Začnite jeho vlastnou [časťou o riešení problémov](#aaps-builder-troubleshooting). Časti o Disku Google nižšie platia aj preň.
 ```
 
-## AAPS-CI Troubleshooting
+## Riešenie problémov s AAPS-CI
 
 (aaps-ci-read-the-logs)=
-### First: find out what went wrong
+### Najprv: zistite, čo sa pokazilo
 
-When a build fails, GitHub keeps a log of every step. The log tells you which step failed and why. Read it before you try anything else: the error message is what you look for on this page, and what helpers will ask for.
+Keď zostavenie zlyhá, GitHub uchováva log každého kroku. Log vám povie, ktorý krok zlyhal a prečo. Prečítajte si ho skôr, ako skúsite čokoľvek iné: chybovú správu hľadáte na tejto stránke a na ňu sa vás budú pýtať aj tí, ktorí vám pomáhajú.
 
-1. In your GitHub copy of AndroidAPS, open **Actions**. A failed build has a red cross. Tap its name.
+1. Vo svojej kópii AndroidAPS na GitHube otvorte **Actions**. Zlyhané zostavenie má červený krížik. Ťuknite na jeho názov.
 
-   ![Failed run in the Actions list](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
+   ![Zlyhaný beh v zozname Actions](../images/Building-the-App/CI/aaps_ci_logs_1_runs.png)
 
-2. The run summary shows **Failure** and, below, the job that failed (**Build AAPS**, with a red cross).
+2. Súhrn behu ukazuje **Failure** (zlyhanie) a pod ním úlohu, ktorá zlyhala (**Build AAPS**, s červeným krížikom).
 
-   ![Run summary](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
+   ![Súhrn behu](../images/Building-the-App/CI/aaps_ci_logs_2_summary.png)
 
-3. Scroll down to **Annotations** and tap the red **Build AAPS** line.
+3. Prejdite nižšie na **Annotations** a ťuknite na červený riadok **Build AAPS**.
 
    ![Annotations](../images/Building-the-App/CI/aaps_ci_logs_3_annotations.png)
 
-4. The job opens. Steps with a grey tick worked. The step with the red cross is the one that failed: GitHub opens it for you. The steps after it were skipped (grey circle).
+4. Otvorí sa úloha. Kroky so sivou fajkou prebehli v poriadku. Krok s červeným krížikom je ten, ktorý zlyhal: GitHub ho otvorí za vás. Kroky po ňom boli preskočené (sivý krúžok).
 
-   ![Job steps](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
+   ![Kroky úlohy](../images/Building-the-App/CI/aaps_ci_logs_4_job.png)
 
-5. Read the lines just above `Error: Process completed with exit code 1.`: they explain the problem. In this example, the step **Retrieving Google Drive access token** failed with `invalid_grant` and `Token has been expired or revoked.`, see [Google Refresh Token Expired](#aaps-ci-google-token-expired).
+5. Prečítajte si riadky tesne nad `Error: Process completed with exit code 1.`: vysvetľujú problém. V tomto príklade krok **Retrieving Google Drive access token** zlyhal s `invalid_grant` a `Token has been expired or revoked.`, pozrite [Platnosť obnovovacieho tokenu Google vypršala](#aaps-ci-google-token-expired).
 
-   ![Error in the log](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
+   ![Chyba v logu](../images/Building-the-App/CI/aaps_ci_logs_5_error.png)
 
 ```{tip}
-Asking for help? Share the name of the failed step and the error lines (a screenshot like the one above is fine). Never share the content of your secrets.
+Žiadate o pomoc? Uveďte názov kroku, ktorý zlyhal, a riadky s chybou (stačí snímka obrazovky ako tá vyššie). Nikdy nezdieľajte obsah svojich secretov.
 ```
 
 (aaps-ci-update-secret)=
-#### Update a secret
+#### Aktualizácia secretu
 
-Many fixes mean replacing the value of a secret. In your GitHub copy of AndroidAPS, go to **Settings** → **Secrets and variables** → **Actions** and tap the pencil next to the secret.
+Mnoho opráv znamená nahradiť hodnotu secretu. Vo svojej kópii AndroidAPS na GitHube prejdite do **Settings** → **Secrets and variables** → **Actions** a ťuknite na ceruzku vedľa secretu.
 
-![Secrets list](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
+![Zoznam secretov](../images/Building-the-App/CI/aaps_ci_secret_update_1.png)
 
-Enter or paste the new value and tap **Update secret**. GitHub never shows the old value: the field is always empty.
+Zadajte alebo vložte novú hodnotu a ťuknite na **Update secret**. GitHub nikdy neukáže starú hodnotu: pole je vždy prázdne.
 
 ![Update secret](../images/Building-the-App/CI/aaps_ci_secret_update_2.png)
 
 (aaps-ci-rerun)=
-#### Run the build again after a fix
+#### Po oprave spustite zostavenie znova
 
-Once you have fixed the cause, you do not need to start from scratch: open the failed run, tap **...** (top right), then **Re-run failed jobs**.
+Keď ste príčinu opravili, nemusíte začínať od začiatku: otvorte beh, ktorý zlyhal, ťuknite na **...** (vpravo hore) a potom na **Re-run failed jobs**.
 
-![Re-run menu](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
+![Ponuka Re-run](../images/Building-the-App/CI/aaps_ci_rerun_1.png)
 
-Tap **Re-run jobs**. You can also start a new build from **Run workflow** as usual.
+Ťuknite na **Re-run jobs**. Nové zostavenie môžete spustiť aj ako obvykle cez **Run workflow**.
 
-![Re-run dialog](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
+![Dialóg Re-run](../images/Building-the-App/CI/aaps_ci_rerun_2.png)
 
 (aaps-ci-preparation-web)=
-### aaps-ci-preparation web page
-  - The preparation page is displayed by a temporary local server (for example Simple Web Server on a computer), which also receives the Google refresh token.
-  - If you see the screen below, the local server has stopped or is not reachable.
-  - Close the preparation page, check that the local server is running, then reopen aaps-ci-preparation.html the same way as in Step 2 and complete the remaining steps. This is needed in particular when creating the initial Google connection during setup.
+### Webová stránka aaps-ci-preparation
+  - Prípravnú stránku zobrazuje dočasný lokálny server (napríklad Simple Web Server na počítači), ktorý prijíma aj obnovovací token Google.
+  - Ak vidíte obrazovku nižšie, lokálny server sa zastavil alebo nie je dostupný.
+  - Zatvorte prípravnú stránku, skontrolujte, či lokálny server beží, a potom znova otvorte aaps-ci-preparation.html rovnako ako v kroku 2 a dokončite zvyšné kroky. Je to potrebné najmä pri vytváraní prvého pripojenia ku Google počas nastavenia.
 
   ![aaps_ci_html_not_found](../images/Building-the-App/CI/aaps_ci_html_not_found.png)
 
 (aaps-ci-google-token-expired)=
-### Google Refresh Token Expired
-  - Google OAuth2 refresh tokens will expire if not used for 6 months, and may also become invalid under other conditions (e.g., you have changed your Google account password, or manually revoked access). For more details, see the [Google OAuth2 documentation](https://developers.google.com/identity/protocols/oauth2).
-  - In the [build log](#aaps-ci-read-the-logs), the step **Retrieving Google Drive access token** fails with `invalid_grant` and `Token has been expired or revoked.`:
+### Platnosť obnovovacieho tokenu Google vypršala
+  - Obnovovacie tokeny Google OAuth2 vypršia, ak sa nepoužijú 6 mesiacov. Neplatné sa môžu stať aj z iných dôvodov (napr. ste zmenili heslo k účtu Google alebo ste prístup ručne zrušili). Viac podrobností nájdete v [dokumentácii Google OAuth2](https://developers.google.com/identity/protocols/oauth2).
+  - V [logu zostavenia](#aaps-ci-read-the-logs) zlyhá krok **Retrieving Google Drive access token** s `invalid_grant` a `Token has been expired or revoked.`:
 
   ![aaps_ci_token_expired](../images/Building-the-App/CI/aaps_ci_token_expired.png)
 
-  - If your build fails due to an expired or revoked Google refresh token, you will need to redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps to obtain a new `GDRIVE_OAUTH2` token, [update the secret](#aaps-ci-update-secret) in your GitHub repository, then [re-run the build](#aaps-ci-rerun).
-  - If the authorization fails again, or Google does not ask for your consent anymore, remove the existing AAPS access from your Google Account first, see [below](#aaps-ci-google-remove-access).
+  - Ak vaše zostavenie zlyhá pre obnovovací token Google, ktorý vypršal alebo bol zrušený, musíte zopakovať kroky [Google Drive Auth](#aaps-ci-google-drive-auth), aby ste získali nový token `GDRIVE_OAUTH2`, [aktualizovať secret](#aaps-ci-update-secret) vo svojom repozitári na GitHube a potom [spustiť zostavenie znova](#aaps-ci-rerun).
+  - Ak autorizácia znova zlyhá alebo Google už nežiada váš súhlas, najprv odstráňte existujúci prístup AAPS zo svojho účtu Google, pozrite [nižšie](#aaps-ci-google-remove-access).
 
 (aaps-ci-google-remove-access)=
-### Remove AAPS Access From Your Google Account And Restart The Authorization
-  - If the Google Drive authorization keeps failing, or you want to start again from a clean state, first remove the access you previously gave to AAPS, then redo the authorization.
-  - On your phone, open [https://myaccount.google.com](https://myaccount.google.com), tap **Security**, scroll down to **Your connections to third-party apps & services** and open the list of linked apps. You can also go directly to [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
-  - Tap **AAPS** in the list.
+### Odstráňte prístup AAPS zo svojho účtu Google a spustite autorizáciu znova
+  - Ak autorizácia Disku Google stále zlyháva alebo chcete začať znova od čistého stavu, najprv odstráňte prístup, ktorý ste predtým dali AAPS, a potom autorizáciu zopakujte.
+  - V telefóne otvorte [https://myaccount.google.com](https://myaccount.google.com), ťuknite na **Security** (Zabezpečenie), prejdite nižšie na **Your connections to third-party apps & services** (pripojenia k aplikáciám a službám tretích strán) a otvorte zoznam prepojených aplikácií. Môžete tiež prejsť priamo na [https://myaccount.google.com/connections](https://myaccount.google.com/connections).
+  - V zozname ťuknite na **AAPS**.
 
   ![aaps_ci_google_access_1](../images/Building-the-App/CI/aaps_ci_google_access_1.png)
 
-  - The page shows the access you gave to AAPS (the Google Drive files used with the app). Tap **Delete all** to remove the connection, or tap **See details** to review it first.
+  - Stránka ukazuje prístup, ktorý ste dali AAPS (súbory na Disku Google, ktoré aplikácia používa). Ťuknite na **Delete all** (Odstrániť všetko), aby ste pripojenie odstránili, alebo ťuknite na **See details** (Zobraziť podrobnosti), ak ho chcete najprv skontrolovať.
 
   ![aaps_ci_google_access_2](../images/Building-the-App/CI/aaps_ci_google_access_2.png)
 
-  - On the details page, tap **Remove all access**.
+  - Na stránke s podrobnosťami ťuknite na **Remove all access** (Odstrániť všetok prístup).
 
   ![aaps_ci_google_access_3](../images/Building-the-App/CI/aaps_ci_google_access_3.png)
 
-  - Tap **Confirm**.
+  - Ťuknite na **Confirm** (Potvrdiť).
 
   ![aaps_ci_google_access_4](../images/Building-the-App/CI/aaps_ci_google_access_4_confirm.png)
 
-  - Google confirms that AAPS no longer has access. AAPS no longer appears in the list of linked apps.
+  - Google potvrdí, že AAPS už nemá prístup. AAPS sa už nezobrazuje v zozname prepojených aplikácií.
 
   ![aaps_ci_google_access_5](../images/Building-the-App/CI/aaps_ci_google_access_5_removed.png)
 
-  - Now restart the authorization cleanly: close **both** the preparation page and the file manager app, reopen aaps-ci-preparation.html from the file manager and redo the [Google Drive Auth](#aaps-ci-google-drive-auth) steps. Google will ask you to grant access again and the page will provide a new `GDRIVE_OAUTH2` token.
-  - [Update the `GDRIVE_OAUTH2` secret](#aaps-ci-update-secret) in your GitHub repository with the new token, then [re-run the build](#aaps-ci-rerun).
+  - Teraz spustite autorizáciu znova od začiatku: zatvorte **obe** – prípravnú stránku aj aplikáciu správcu súborov – a potom znova otvorte aaps-ci-preparation.html zo správcu súborov a zopakujte kroky [Google Drive Auth](#aaps-ci-google-drive-auth). Google vás znova požiada o udelenie prístupu a stránka vám dá nový token `GDRIVE_OAUTH2`.
+  - [Aktualizujte secret `GDRIVE_OAUTH2`](#aaps-ci-update-secret) vo svojom repozitári na GitHube novým tokenom a potom [spustite zostavenie znova](#aaps-ci-rerun).
 
 (aaps-ci-disable-software)=
-### Disable Software That May Interfere With OAUTH Verification
-  - Disable any VPN or security app (firewall, antimalware,...) on the phone before trying to get the OAUTH key.
+### Vypnite softvér, ktorý môže rušiť overovanie OAUTH
+  - Pred pokusom o získanie kľúča OAUTH vypnite v telefóne každú VPN aj každú bezpečnostnú aplikáciu (firewall, antimalvér atď.).
 
 (aaps-ci-actions-permission)=
-### Check GitHub Actions Permission Settings
-  - Make sure GitHub Actions policies are set to “Allow all actions and reusable workflows” (Settings → Actions → General). If you change it, press **Save** below the options.
+### Skontrolujte nastavenia povolení GitHub Actions
+  - Uistite sa, že pravidlá GitHub Actions sú nastavené na „Allow all actions and reusable workflows“ (Settings → Actions → General). Ak ho zmeníte, stlačte **Save** pod možnosťami.
 
   ![aaps_ci_actions_permission](../images/Building-the-App/CI/aaps-ci-actions-permission.png)
 
 `actions/checkout@v4` and `actions/setup-java@v4` are not allowed to be used in `xxxxx/AndroidAPS`. Actions in this workflow must be: within a repository owned by `xxxxx`
 
 (aaps-ci-workflow-permissions)=
-### Check GitHub Workflow Permissions Settings
-  - If the build fails immediately with an "Invalid workflow file" error similar to the one below, the default workflow permissions of your repository are too restrictive:
+### Skontrolujte nastavenia povolení workflowov na GitHube
+  - Ak zostavenie hneď zlyhá s chybou „Invalid workflow file“ podobnou tej nižšie, predvolené povolenia workflowov vo vašom repozitári sú príliš prísne:
 
 ```
 Invalid workflow file
@@ -129,19 +129,19 @@ Error calling workflow 'xxxxx/AndroidAPS/.github/workflows/cleanup-workflow-runs
 The nested job 'cleanup' is requesting 'actions: write', but is only allowed 'actions: none'.
 ```
 
-  - Make sure Workflow permissions are set to “Read and write permissions” (Settings → Actions → General → Workflow permissions), then save and re-run the build workflow.
+  - Uistite sa, že Workflow permissions sú nastavené na „Read and write permissions“ (Settings → Actions → General → Workflow permissions). Potom uložte a spustite workflow zostavenia znova.
 
   ![aaps_ci_workflow_permissions](../images/Building-the-App/CI/aaps-ci-workflow-permissions.jpg)
 
 (aaps-ci-password-special-characters)=
-### Build Fails Checking The Keystore Password
-  - In the [build log](#aaps-ci-read-the-logs), the step **Validating keystore, alias and password** fails with `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect`, followed by `Keystore was tampered with, or password was incorrect`. The build stops there: the keystore and passwords are checked before AAPS is built.
+### Zostavenie zlyhá pri kontrole hesla úložiska kľúčov
+  - V [logu zostavenia](#aaps-ci-read-the-logs) zlyhá krok **Validating keystore, alias and password** s `Either KEYSTORE_BASE64, KEYSTORE_PASSWORD, KEY_PASSWORD, or KEY_ALIAS is incorrect` a potom s `Keystore was tampered with, or password was incorrect`. Zostavenie sa tam zastaví: úložisko kľúčov a heslá sa kontrolujú skôr, ako sa AAPS zostaví.
 
-  ![Wrong keystore password in the build log](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
+  ![Nesprávne heslo úložiska kľúčov v logu zostavenia](../images/Building-the-App/CI/aaps_ci_password_wrong.png)
 
-  - The build workflow keeps every character of your passwords intact. Enter `KEYSTORE_PASSWORD` and `KEY_PASSWORD` exactly as they are, without adding a backslash or any other escape character. If you added backslashes, [update the secrets](#aaps-ci-update-secret) with the password exactly as it is. The example below is wrong: the password is `Example2026`, the backslash was added.
+  - Workflow zostavenia zachová každý znak vašich hesiel bez zmeny. Zadajte `KEYSTORE_PASSWORD` a `KEY_PASSWORD` presne tak, ako sú, bez pridania spätnej lomky alebo iného únikového (escape) znaku. Ak ste pridali spätné lomky, [aktualizujte secrety](#aaps-ci-update-secret) heslom presne tak, ako je. Príklad nižšie je nesprávny: heslo je `Example2026`, spätná lomka bola pridaná.
 
-  ![Password entered with an added backslash](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
+  ![Heslo zadané s pridanou spätnou lomkou](../images/Building-the-App/CI/aaps_ci_password_escaped.png)
 
-  - If the build still fails when signing the APK although your password is correct, and the password contains `$`, a backtick, `"` or `\`, the workflow file in your fork is older than September 2026 and still parses these characters. [Sync your fork](#Update-to-new-version-update-your-repo) with the latest dev, then re-run the build workflow.
-  - The vertical bar `|` is a special case. The preparation page of [Option 1](#aaps-ci-option1) combines the keystore, passwords and alias into one `KEYSTORE_SET` secret separated by `|`, and the workflow splits it on that character. The password generated by the preparation page contains only letters and digits, so this cannot happen with Option 1. It can only happen if you assembled a `KEYSTORE_SET` secret yourself from a password containing `|`. In that case, delete `KEYSTORE_SET` and enter the separate secrets of [Option 2](#aaps-ci-option2) instead.
+  - Ak zostavenie stále zlyhá pri podpisovaní APK, hoci je vaše heslo správne, a heslo obsahuje `$`, spätný apostrof (backtick), `"` alebo `\`, súbor workflow vo vašom forku je starší ako september 2026 a tieto znaky ešte spracúva. [Synchronizujte svoj fork](#Update-to-new-version-update-your-repo) s najnovšou verziou dev a potom spustite workflow zostavenia znova.
+  - Zvislá čiara `|` je špeciálny prípad. Prípravná stránka v [možnosti 1](#aaps-ci-option1) spojí úložisko kľúčov, heslá a alias do jedného secretu `KEYSTORE_SET`, kde sú časti oddelené znakom `|`. Workflow ho podľa tohto znaku znova rozdelí. Heslo, ktoré vygeneruje prípravná stránka, obsahuje iba písmená a číslice, takže pri možnosti 1 sa to stať nemôže. Môže sa to stať iba vtedy, ak ste si secret `KEYSTORE_SET` poskladali sami z hesla, ktoré obsahuje `|`. V takom prípade secret `KEYSTORE_SET` vymažte a namiesto neho zadajte samostatné secrety z [možnosti 2](#aaps-ci-option2).
