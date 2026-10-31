@@ -12,7 +12,7 @@ Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3**
 
 * Neustart
 
-Als erste Schritte solltest Du sowohl Nightscout als auch das Smartphone neu starten um zu sehen, ob der Fehler weiter besteht.
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 Wenn Dein Hightscout auf Heroku gehostet ist, kannst Du NS wie folgt neu starten: Melde Dich in Heroku an, klicke auf den Namen Deiner Nightscout App, klicke auf das 'More'- Menü und dann auf 'Restart all dynos'.
 
