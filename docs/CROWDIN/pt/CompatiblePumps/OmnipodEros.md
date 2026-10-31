@@ -828,12 +828,7 @@ Há alguns pontos específicos da forma como o Pod Omnipod é diferente das bomb
 
 As idades da **insulina** e da **cânula** na [linha de estado](#screens-sensor-level-battery) do ecrã principal são **repostas** a 0 dias e 0 horas **depois de cada troca de Pod**. Isto acontece por causa da forma como a bomba Omnipod é construída e funciona. A **bateria da bomba** e o **reservatório de insulina** estão dentro de cada Pod. Como o Pod insere a cânula diretamente na pele, no local onde o Pod é colocado, as bombas Omnipod não usam um tubo tradicional. *Por isso, depois de uma troca de Pod, a idade de cada um destes valores volta automaticamente a zero.* A **idade da bateria da bomba** não é mostrada, porque a bateria do Pod dura sempre mais do que a vida do Pod (máximo de 80 horas).
 
-![Actions_Tab](../images/omnipod/Actions_Tab.png)
-
-```{admonition} Older screenshot
-:class: note
-A captura de ecrã acima é de uma versão anterior do **AAPS**, em que estas idades apareciam na secção **Careportal** do separador **Ações (ACT)**. No **AAPS** 4, aparecem na linha de estado do ecrã principal.
-```
+![Expanded status panel of a patch pump: cannula and insulin ages at 0h after a pod change, no pump battery row](../images/omnipod/Actions_Tab.png)
 
 ### Níveis
 
