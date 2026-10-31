@@ -132,7 +132,7 @@ Als je basaalstand erg laag is, zijn de resulterende **SMB**-grenzen misschien t
 
 **Volg de instructies zodat AAPS je bolus kan nabootsen met een paar SMB's**.
 
-Kijk regelmatig in het scherm van de **APS**-plugin (**Configuratie → APS → Plugin openen**) of je **SMB's** groot genoeg mogen zijn om de insuline te geven die de loop rond het begin van de maaltijd nodig heeft.
+Kijk regelmatig in het scherm van de **APS**-plugin (**Configuratie → APS → Plug-in openen**) of je **SMB's** groot genoeg mogen zijn om de insuline te geven die de loop rond het begin van de maaltijd nodig heeft.
 
 Anders levert je afstemming soms niets op!
 
