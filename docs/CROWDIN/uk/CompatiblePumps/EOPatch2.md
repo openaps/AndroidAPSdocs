@@ -169,7 +169,7 @@
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. В **AAPS** 4 екран помпи відкривають через **Керувати** → **Помпа**, а кнопка на ньому називається **Викинути патч**.
+Знімки екрана вище зроблено в старішій версії **AAPS**. В **AAPS** 4 екран помпи відкривають через **Керувати** → **Помпа**, а кнопка на ньому називається **Викинути патч**.
 ```
 
 ```{admonition} If the patch does not respond
@@ -195,7 +195,7 @@ The screenshots above are from an earlier **AAPS** version. В **AAPS** 4 екр
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. В **AAPS** 4 екран помпи відкривають через **Керувати** → **Помпа**, а кнопка на ньому називається **Призупинити помпу**.
+Знімки екрана вище зроблено в старішій версії **AAPS**. В **AAPS** 4 екран помпи відкривають через **Керувати** → **Помпа**, а кнопка на ньому називається **Призупинити помпу**.
 ```
 
 ### Відновлення введення інсуліну
@@ -207,7 +207,7 @@ The screenshots above are from an earlier **AAPS** version. В **AAPS** 4 екр
 
 ```{admonition} Older screenshot
 :class: note
-The screenshots above are from an earlier **AAPS** version. В **AAPS** 4 екран помпи відкривають через **Керувати** → **Помпа**, а кнопка на ньому називається **Відновити помпу**.
+Знімки екрана вище зроблено в старішій версії **AAPS**. В **AAPS** 4 екран помпи відкривають через **Керувати** → **Помпа**, а кнопка на ньому називається **Відновити помпу**.
 ```
 
 ```{warning}
