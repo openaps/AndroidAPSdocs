@@ -1,57 +1,57 @@
-# How to configure a Huawei phone
+# Як налаштувати телефон Huawei
 
-**Which phones this page covers:** Huawei phones running **EMUI 12 to EMUI 15**. All of these are based on Android 12, the minimum for the current version of **AAPS**. On a phone with an older EMUI version, you can only use an [older AAPS version](#maintenance-android-version-aaps-version).
+**Для яких телефонів ця сторінка:** телефони Huawei з **EMUI 12 – EMUI 15**. Усі ці версії базуються на Android 12 – мінімальній версії для поточної версії **AAPS**. На телефоні зі старішою версією EMUI можна використовувати лише [старішу версію AAPS](#maintenance-android-version-aaps-version).
 
-```{admonition} HarmonyOS NEXT / HarmonyOS 5 phones :class: warning
+```{admonition} Телефони з HarmonyOS NEXT / HarmonyOS 5 :class: warning
 
-Recent Huawei phones sold in China run HarmonyOS NEXT (HarmonyOS 5 and above). This system is not Android anymore and cannot run **AAPS**. ```
+Нові телефони Huawei, що продаються в Китаї, працюють на HarmonyOS NEXT (HarmonyOS 5 і новіші). Ця система вже не є Android і не може запускати **AAPS**. ```
 
-Huawei phones close apps running in the background very aggressively. Apply all the settings below to **AAPS** and to your CGM app (for example xDrip+ or Juggluco), otherwise the loop and glucose readings may stop when the screen is off.
+Телефони Huawei дуже агресивно закривають застосунки, що працюють у фоновому режимі. Застосуйте всі налаштування нижче до **AAPS** і до вашого застосунку CGM (наприклад, xDrip+ або Juggluco). Інакше петля і показники глюкози можуть зупинятися, коли екран вимкнено.
 
-Menu names can differ slightly between models. If you can't find a setting, type its name in the search bar at the top of **Settings**.
+Назви меню можуть трохи відрізнятися на різних моделях. Якщо ви не можете знайти параметр, введіть його назву в рядок пошуку вгорі **Налаштувань**.
 
-The screenshots below come from an older EMUI version. The settings are the same on EMUI 12 to 15.
+Знімки екрана нижче зроблено на старішій версії EMUI. Налаштування однакові в EMUI 12 – 15.
 
-## Ignore battery optimization
+## Ігнорувати оптимізацію батареї
 
-1. Open **Settings > Apps > Apps**.
-2. Tap the menu **⋮** in the top right corner and select **Special access > Battery optimization**.
-3. Tap the arrow at the top of the list and select **All apps**.
-4. Select **AAPS** and choose **Don't allow**. Huawei won't optimize apps in this list anymore.
-5. Repeat for your CGM app.
+1. Відкрийте **Налаштування > Програми > Програми** (Settings > Apps > Apps).
+2. Натисніть меню **⋮** у верхньому правому куті та виберіть **Спеціальний доступ > Оптимізація батареї** (Special access > Battery optimization).
+3. Натисніть стрілку вгорі списку та виберіть **Усі програми** (All apps).
+4. Виберіть **AAPS** і виберіть **Не дозволяти** (Don't allow). Після цього Huawei не оптимізуватиме застосунки з цього списку.
+5. Повторіть для вашого застосунку CGM.
 
-![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+![Huawei – ігнорувати оптимізацію батареї](../images/Huawei_BatteryOptimization.png)
 
-## App launch: allow running in the background
+## Запуск програм: дозволити роботу у фоновому режимі
 
-1. Open **Settings > Battery > App launch** (or **Settings > Apps > Apps >** select the app **> Battery > App launch**).
-2. Find **AAPS** and turn off **Manage automatically**.
-3. In the **Manage manually** window, turn on all three options: 
-    - **Auto-launch**
-    - **Secondary launch** (can be launched by other apps)
-    - **Run in background**
-4. Repeat for your CGM app.
+1. Відкрийте **Налаштування > Батарея > Запуск програм** (Settings > Battery > App launch) (або **Налаштування > Програми > Програми >** виберіть застосунок **> Батарея > Запуск програм**).
+2. Знайдіть **AAPS** і вимкніть **Керувати автоматично** (Manage automatically).
+3. У вікні **Керувати вручну** (Manage manually) увімкніть усі три параметри: 
+    - **Автозапуск (Auto-launch)**
+    - **Вторинний запуск** (Secondary launch – застосунок можуть запускати інші застосунки)
+    - **Робота у фоновому режимі (Run in background)**
+4. Повторіть для вашого застосунку CGM.
 
-![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+![Huawei – параметри батареї](../images/Huawei_BatteryOptions.png)
 
-## Lock AAPS in the recent apps
+## Закріпіть AAPS у списку останніх застосунків
 
-Locked apps are not closed when you clear the recent apps list.
+Закріплені застосунки не закриваються, коли ви очищуєте список останніх застосунків.
 
-1. Open the recent apps list.
-2. Swipe down on the **AAPS** card. A lock symbol appears on the card.
-3. Do the same for your CGM app.
+1. Відкрийте список останніх застосунків.
+2. Проведіть вниз по картці **AAPS**. На картці з'явиться значок замка.
+3. Зробіть те саме для вашого застосунку CGM.
 
-![Huawei - lock app](../images/Huawei_LockApp.png)
+![Huawei – закріпити застосунок](../images/Huawei_LockApp.png)
 
-## Power saving mode
+## Режим енергозбереження
 
-Keep **Power saving mode** and **Ultra power saving** turned off (**Settings > Battery**). They close background apps regardless of the settings above.
+Тримайте **Режим енергозбереження** (Power saving mode) і **Ультраенергозбереження** (Ultra power saving) вимкненими (**Налаштування > Батарея**). Вони закривають фонові застосунки незалежно від налаштувань вище.
 
-## If AAPS still stops in the background
+## Якщо AAPS усе одно зупиняється у фоновому режимі
 
-See [Don't kill my app](https://dontkillmyapp.com/huawei) for more Huawei-specific solutions.
+Більше рішень саме для Huawei дивіться на [Don't kill my app](https://dontkillmyapp.com/huawei).
 
-## Honor phones
+## Телефони Honor
 
-Honor is a separate brand now and its phones run MagicOS instead of EMUI. The background settings are very similar: look for **App launch** in the app's battery settings, turn off **Manage automatically** and allow all three options, then remove the app from battery optimization.
+Honor тепер окремий бренд, і його телефони працюють на MagicOS замість EMUI. Налаштування фонової роботи дуже схожі: знайдіть **Запуск програм** (App launch) у налаштуваннях батареї застосунку, вимкніть **Керувати автоматично** і дозвольте всі три параметри, потім вилучіть застосунок з оптимізації батареї.
