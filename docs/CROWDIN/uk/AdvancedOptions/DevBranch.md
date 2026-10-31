@@ -1,24 +1,24 @@
-# Development branch
+# Гілка розробки
 
 ```{warning}
-Dev branch is for the further development of AAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
+Гілка dev призначена лише для подальшої розробки AAPS. Її слід використовувати на окремому телефоні для тестування, <font color="#FF0000">**а не для реального керування петлею!**</font>
 ```
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). It is advised to stay on the Master branch for actual looping.
+Найстабільніша версія AAPS для використання — у [гілці Master](https://github.com/nightscout/AndroidAPS/tree/master). Для реального керування петлею радимо залишатися на гілці Master.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Therefore many unfinished features are disabled. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Enabling the engineering mode might break the loop entirely.
+Версія dev AAPS призначена лише для розробників і тестувальників, які впевнено працюють зі stacktrace, переглядають файли журналу і, можливо, запускають налагоджувач, щоб створювати корисні для розробників звіти про помилки (коротко: для людей, які знають, що роблять, без сторонньої допомоги!). Тому багато незавершених функцій вимкнено. Щоб увімкнути ці функції, увійдіть у **Режим інженера**: створіть файл з назвою `engineering_mode` у каталозі /AAPS/extra . Увімкнення режиму інженера може повністю зламати петлю.
 
-However, the Dev branch is a good place to see what features are being tested and to help iron out the bugs and give feedback on how the new features work in practice. Often people will test the Dev branch on an old phone and pump until they are confident it is stable - any use of it is at your own risk. When testing any new features, remember that you are choosing to test a still-in-development feature. Do so at your own risk & with due diligence to keep yourself safe.
+Проте гілка Dev — гарне місце, щоб побачити, які функції зараз тестуються, допомогти виправити помилки і дати відгук про те, як нові функції працюють на практиці. Часто люди тестують гілку Dev на старому телефоні та помпі, доки не впевняться, що вона стабільна. Будь-яке її використання — на ваш власний ризик. Коли тестуєте нові функції, пам'ятайте, що ви самі вирішили тестувати функцію, яка ще в розробці. Робіть це на власний ризик і з належною обережністю, щоб залишатися в безпеці.
 
-If you find a bug or think something wrong has happened when using the Dev branch, then view the [issues tab](https://github.com/nightscout/AndroidAPS/issues) to check whether anyone else has found it, or add it yourself if not. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). The new features can also be discussed on [discord](https://discord.gg/4fQUWHZ4Mw).
+Якщо ви знайшли помилку або думаєте, що під час використання гілки Dev щось пішло не так, перегляньте [вкладку issues](https://github.com/nightscout/AndroidAPS/issues), щоб перевірити, чи хтось уже про це повідомив, або додайте повідомлення самі, якщо ні. Що більше інформації ви тут надасте, то краще (не забудьте, що, можливо, треба буде поділитися [файлами журналу](../GettingHelp/AccessingLogFiles.md)). Нові функції також можна обговорити в [discord](https://discord.gg/4fQUWHZ4Mw).
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Версія dev має дату закінчення терміну дії. Це здається незручним, коли вона добре працює, але має свою мету. Коли використовується лише одна версія dev, легше відстежувати помилки, про які повідомляють люди. Розробники не хочуть, щоб одночасно використовувалися три версії dev, у яких помилки виправлені в одних, але не в інших, а люди далі повідомляють про вже виправлені.
 
 (branch-ci-test)=
 
-## Test a specific branch (branch-ci)
+## Тестування певної гілки (branch-ci)
 
-To build a test branch, select branch-ci, which allows you to choose a specific branch for APK creation. You can use this method when you need to test the dev branch.
+Щоб зібрати тестову гілку, виберіть branch-ci: так можна вибрати певну гілку для створення APK. Цей спосіб можна використати, коли потрібно протестувати гілку dev.
 
 ![aaps_ci_branch_ci1](../images/Building-the-App/CI/aaps_ci_branch_ci1.png)
 
@@ -26,11 +26,11 @@ To build a test branch, select branch-ci, which allows you to choose a specific 
 
 (github-pr-test)=
 
-## Test items in a pull request (GitHub CI actions deploy)
+## Тестування змін у pull request (розгортання через GitHub CI actions)
 
-Available from 3.3.2.1.dev
+Доступно з версії 3.3.2.1.dev
 
-- Suitable for testers or those helping with testing.
+- Підходить для тестувальників або тих, хто допомагає з тестуванням.
 
 ```{eval-rst}
 .. raw:: html
@@ -51,22 +51,22 @@ Available from 3.3.2.1.dev
 
 ![aaps_ci_pr_ci](../images/Building-the-App/CI/aaps_ci_pr_ci.png)
 
-- Target repository: the repository that contains the PR, in the format owner/repo. Leave the default **nightscout/AndroidAPS** unless you were told to use another repository (only developers should do this).
+- Target repository (цільовий репозиторій): репозиторій, що містить PR, у форматі owner/repo. Залиште типове значення **nightscout/AndroidAPS**, якщо вам не сказали використати інший репозиторій (це мають робити лише розробники).
 
-- PR number: Please enter the PR number that you want to test.
+- PR number (номер PR): введіть номер PR, який ви хочете протестувати.
 
-- PR reference types: PR reference types include two options:
+- PR reference types (типи посилань на PR): є два варіанти:
     
     - head:
-    - Fetches the actual content from the PR author’s branch (i.e., the original commit history without any merge operations).
-    - This is equivalent to the original state of the PR branch, as if it were fetched directly from a fork or feature branch.
+    - Бере фактичний вміст з гілки автора PR (тобто початкову історію комітів без жодних злиттів).
+    - Це відповідає початковому стану гілки PR, ніби її взяли безпосередньо з fork або гілки функції.
     
     - merge:
     
-    - Fetches the result of GitHub’s pre-simulated merge of the PR into the target branch (e.g., dev).
-    - This is a virtual merge commit automatically created by GitHub.
-    - This commit only exists when the PR has no conflicts and is mergeable.
+    - Бере результат злиття PR з цільовою гілкою (наприклад, dev), яке GitHub заздалегідь змоделював.
+    - Це віртуальний коміт злиття, який GitHub створює автоматично.
+    - Цей коміт існує лише тоді, коли PR не має конфліктів і його можна злити.
     
     - variant:
     
-    - Please refer to [variant](#browserbuild-variant)
+    - Див. [variant](#browserbuild-variant)
