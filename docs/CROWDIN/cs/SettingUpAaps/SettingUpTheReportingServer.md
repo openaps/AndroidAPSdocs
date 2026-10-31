@@ -12,15 +12,15 @@ Doporučujeme používat Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout je webová aplikace, která ukládá a zobrazuje vaše data z CGM a z **AAPS** a vytváří z nich přehledy. Je to výkonná platforma, která je do **AAPS** zapojena už mnoho let. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few seconds may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). Pečovatelům také umožňuje posílat do **AAPS** vzdálené příkazy.
+Nightscout je webová aplikace, která ukládá a zobrazuje vaše data z CGM a z **AAPS** a vytváří z nich přehledy. Je to výkonná platforma, která je do **AAPS** zapojena už mnoho let. Umožňuje uživatelům a pečovatelům sledovat data o diabetu pacienta téměř v reálném čase (pokud je mezi všemi zapojenými součástmi dostatečné internetové připojení, uplyne mezi příjmem dat a jejich zpřístupněním jen několik sekund). Pečovatelům také umožňuje posílat do **AAPS** vzdálené příkazy.
 
 Nightscout je poskytován jako open source software. Kdokoli může vytvořit a provozovat Nightscout server, a to buď zdarma, nebojako placenou službu.
 
 Více informací najdete na [webu projektu Nightscout](http://nightscout.github.io/).
 
-### Option 1 - Set up your Nightscout server yourself
+### Možnost 1 – Nastavte si server Nightscout sami
 
-Vytváření Nightscout reporting serveru může vyžadovat jednu nebo více webových aplikací, které budou vyžadovat údržbu. Aby byla služba zcela zdarma, možná budete muset migrovat vaše stránky Nightscout a data, pokud poskytovatelé přestanou poskytovat servis zdarma.
+Vytvoření reportovacího serveru Nightscout může vyžadovat jednu nebo více webových aplikací, které budou potřebovat údržbu. Aby byla služba zcela zdarma, možná budete muset migrovat vaše stránky Nightscout a data, pokud poskytovatelé přestanou poskytovat servis zdarma.
 
 Popis, jak si Nightscout nastavit, včetně výhod a nevýhod různých možností provozu a odhadu nákladů, najdete [zde](https://nightscout.github.io/nightscout/new_user/#free-diy).
 
@@ -33,7 +33,7 @@ Stávající uživatelé Nightscoutu mohou čas od času přehodnotit, kde a jak
 
 Některé služby, které Nightscout hostují, jsou uvedeny [zde](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
-### Further configuration of Nightscout
+### Další nastavení Nightscoutu
 
 Až budete mít svou instanci Nightscoutu spuštěnou, podívejte se na [stránku Nightscout](../SettingUpAaps/Nightscout.md), kde najdete další důležité informace.
 
@@ -57,6 +57,6 @@ Více informací o nastavení Tidepoolu s AAPS najdete [zde](../SettingUpAaps/Ti
 Aplikaci pro nahrávání do Tidepoolu (Tidepool uploader) **nepotřebujete**: **AAPS** za vás nahraje glykémie, ošetření i bazál. Potřebujete pouze osobní účet na Tidepoolu. Nenahrávejte svá data samostatným nástrojem Tidepool uploader, protože by vznikly duplicitní hodnoty.  
 ```
 
-## Next step
+## Další krok
 
 Až budete mít reportovací server nastavený, můžete **AAPS** v telefonu nakonfigurovat pomocí [Průvodce nastavením](./SetupWizard.md), který také propojí **AAPS** s vaším reportovacím serverem.
