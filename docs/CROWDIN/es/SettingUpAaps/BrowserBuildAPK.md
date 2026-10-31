@@ -88,7 +88,7 @@ Las variantes que terminan en «Debug» indican que el APK se compilará en modo
 Cuando la compilación termina con éxito, el APK se guarda en tu Google Drive. Continúa con [Transferir e instalar AAPS](TransferringAndInstallingAaps.md).
 
 ```{note}
-From September 2026, Google's [Android developer verification](#android-developer-verification) may block installing the APK by tapping the file, depending on your country. Free workarounds are explained on that page.
+Desde septiembre de 2026, la [verificación de desarrolladores de Android](#android-developer-verification) de Google puede bloquear la instalación del APK al tocar el archivo, según tu país. En esa página se explican soluciones gratuitas.
 ```
 
-Si la compilación falla, primero [averigua qué salió mal en el registro de compilación](#aaps-ci-read-the-logs) y luego consulta [Compilación en el navegador: solución de problemas](../GettingHelp/BrowserBuildTroubleshooting.md). Para incluir un commit concreto en tu compilación, consulta [aplicar un commit con cherry-pick](#github-cherry-pick).
+Si la compilación falla, primero [averigua qué salió mal en el log de compilación](#aaps-ci-read-the-logs) y luego consulta [Compilación en el navegador: solución de problemas](../GettingHelp/BrowserBuildTroubleshooting.md). Para incluir un commit concreto en tu compilación, consulta [aplicar un commit con cherry-pick](#github-cherry-pick).
