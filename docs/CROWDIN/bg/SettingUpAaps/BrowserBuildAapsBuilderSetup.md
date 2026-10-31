@@ -141,7 +141,8 @@ The build steps are updated for you: at every build, your repository runs the ve
    Отваря: <code class="aapsb-repoUrl"></code>
 
    Получавате „Page not found“ (404)? Първо проверете дали сте влезли в github.com в този браузър: GitHub показва 404 за частни хранилища, когато не сте влезли. В противен случай потребителското име или името на хранилището в стъпка 1 не съвпада с вашето хранилище: проверете ги в github.com и ги въведете в стъпка 1. Вместо това се отвори приложението GitHub? Докоснете „RUN WORKFLOW“, проверете версията и варианта и докоснете отново „RUN WORKFLOW“. Ако приложението все още показва „Nothing to see here“, дръпнете списъка надолу, за да видите компилацията си.
-2. Ако бъдете попитани, натиснете зеления бутон, за да разрешите работните процеси (workflows).
+2. If asked, click the green button to enable workflows.
+The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
 3. Натиснете „Run workflow“, след това зеления бутон „Run workflow“. „latest“ компилира най-новата версия на AAPS. ***съвет:*** *можете да компилирате друга версия, като въведете името на нейния [таг](https://github.com/nightscout/AndroidAPS/tags) вместо „latest“*
 4. Изчакайте около 15–30 мин. Зелена отметка означава, че компилацията е готова.
 Искате имейл, когато компилацията е готова? GitHub ви изпраща имейл само когато компилацията е неуспешна. За да получавате имейл и при успех: в github.com отворете профилната си снимка → Settings → Notifications → System → Actions и махнете отметката от „Only notify for failed workflows“.
