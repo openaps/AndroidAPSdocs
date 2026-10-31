@@ -148,7 +148,7 @@ Ce que chaque appareil peut mettre dans sa barre dépend quand même de ce qu'il
 
 - Les boutons dont la cible n'existe plus (un Assistant Rapide, un scénario ou un préréglage supprimé, une règle désactivée) sont **ignorés automatiquement**.
 - Les raccourcis d'**Automatisation** ne sont proposés et exécutés que sur le **maître** (l'automatisation s'exécute sur le maître). Les boutons de scénario, d'Assistant Rapide, de cible temporaire et de profil sont disponibles sur un client.
-- Quand vous appuyez sur un bouton d'un client qui doit s'exécuter sur le maître (un bolus, une cible temporaire, un changement de profil ou un scénario), c'est le **maître** qui l'exécute et qui émet la confirmation. Voir [Contrôle maître / client](../RemoteFeatures/ClientMasterControl.md).
+- Quand vous appuyez sur un bouton d'un client qui doit s'exécuter sur le maître (un bolus, une cible temporaire, un changement de profil ou un scénario), c'est le **maître** qui l'exécute et qui émet la confirmation. Voir [Contrôle maître ↔ client](../RemoteFeatures/ClientMasterControl.md).
 
 ---
 
