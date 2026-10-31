@@ -12,8 +12,8 @@ Libre2 OOP (nájdete ho [tu](#Libre2_OOP2)) vytvára rovnaké hodnoty glykémie 
 
 Existuje niekoľko dobrých dôvodov na použitie Bluetooth vysielača:
 
--   Môžete si vybrať rôzne stratégie kalibrácie OOP2 (1): hodnoty ako v čítačke pomocou „no calibration“, kalibráciu senzora ako pri Libre 1 pomocou „calibrate based on raw“ alebo kalibráciu hodnôt podobných čítačke pomocou „calibrate based on glucose“.  
-  OOP1 nechajte vypnutý (2).
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
+  Make sure to leave OOP1 disabled (2).
 
     → Ponuka (☰) → Settings → Less common settings → Other misc. options
 
@@ -30,9 +30,9 @@ Poznámka: Vysielač sa dá používať súčasne s aplikáciou LibreLink a neru
 
 ![xDrip – spustenie vysielača Libre a senzora 3](../images/xDrip_Libre_Transmitter03.png)
 
-Týmto sa fyzicky nespustí žiadny senzor Libre2 ani sa s ním nijako nekomunikuje. Slúži to iba na to, aby xDrip vedel, že nový senzor posiela hodnoty glykémie. Ak je to možné, zadajte na úvodnú kalibráciu dve hodnoty namerané z krvi. Teraz by sa hodnoty glykémie mali v xDrip zobrazovať každých 5 minút. Vynechané hodnoty, napr. preto, že ste boli príliš ďaleko od telefónu, sa nebudú spätne dopĺňať.
+Týmto sa fyzicky nespustí žiadny senzor Libre2 ani sa s ním nijako nekomunikuje. Slúži to iba na to, aby xDrip vedel, že nový senzor posiela hodnoty glykémie. If available, enter two blood-measured values for the initial calibration. Teraz by sa hodnoty glykémie mali v xDrip zobrazovať každých 5 minút. Vynechané hodnoty, napr. preto, že ste boli príliš ďaleko od telefónu, sa nebudú spätne dopĺňať.
 
-Po výmene senzora xDrip automaticky rozpozná nový senzor a vymaže všetky kalibračné dáta. Po aktivácii si môžete skontrolovať glykémiu a urobiť novú úvodnú kalibráciu.
+Po výmene senzora xDrip automaticky rozpozná nový senzor a vymaže všetky kalibračné dáta. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Nastavenie AAPS (iba pre používanie okruhu)
 
