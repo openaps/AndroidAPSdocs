@@ -9,7 +9,7 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
+Zur Aktualisierung auf eine neue Version befolge bitte die Schritte in der [Update Anleitung](UpdateToNewVersion.md). Der Abschnitt Fehlerbehebung bespricht auch die häufigsten Schwierigkeiten, die beim Aktualisieren von **AAPS** mit der Update-Anleitung aufgetreten sind.
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
@@ -24,7 +24,7 @@ Solltest Du bis zum Fälligkeitsdatum das Update nicht durchgeführt haben, wird
 
 Die Enddaten der AAPS-Versionen findest Du unter [Supportende](EndOfLife.md).
 
-**Ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. Vielen Dank für Dein Verständnis.
+**Ignoriere die Benachrichtigung nicht.** Neue **AAPS**-Versionen beheben wichtige Sicherheitsthemen. Deswegen muss jeder **AAPS**-Nutzende so schnell wie möglich auf die neueste Version aktualisieren. So wollen wir die Sicherheit für alle **AAPS**-Nutzenden und die DIY-Community verbessern. Vielen Dank für Dein Verständnis.
 
 (maintenance-android-version-aaps-version)=
 
@@ -52,7 +52,7 @@ Die zu Deiner Android-Version passende **AAPS-Version**, findest in der folgende
 WearOS 5, API Level 34 (Android 14) hat [einige Einschränkungen](#BuildingAapsWearOs-WearOS5).
 ```
 
-**Release notes of the latest version of each major release**. For all other versions, see the [releases on GitHub](https://github.com/nightscout/AndroidAPS/releases).
+**Release Notes der jeweils neuesten Version jedes Hauptreleases**. Alle anderen Versionen findest Du unter den [Releases auf GitHub](https://github.com/nightscout/AndroidAPS/releases).
 
 (latestrelease)=
 
@@ -77,7 +77,7 @@ Erscheinungsdatum: 31.10.2026
 - Insulinmanagement: Insulinkatalog, Spitznamen, Auswahl im Profil und Assistent @Philoul
 - Kalibrierungsmodul @MilosKozak
 - [Glättung](../CompatibleCgms/SmoothingBloodGlucoseData.md): „Unscented Kalman Filter“ (UKF) @piecycle
-- New [automation actions](#automations-automation-action): **Change smoothing** @olorinmaia, and **Run**, **Enable** or **Disable scene** @MilosKozak
+- Neue [Automatisierungsaktionen](#automations-automation-action): **Glättung ändern** @olorinmaia sowie **Szene starten**, **Szene einschalten** oder **Szene ausschalten** @MilosKozak
 - [Site-Rotation](#Aapsscreens-site-rotation): Tracken und wechseln der Setzstellen @Philoul @MilosKozak
 - [Autotune](../AdvancedOptions/Autotune.md) überarbeitet @Philoul
 - Neue [Widgets](../DailyLifeWithAaps/Widgets.md) @MilosKozak @t1dude
@@ -163,7 +163,7 @@ Erscheinungsdatum: 27.03.2025
 
 (version-enforcement)=
 
-**Starting this version, notification and version enforcement has been simplified and softened and works following way:**
+**Ab dieser Version sind die Benachrichtigungen und der Update-Zwang vereinfacht und abgeschwächt. Das funktioniert so:**
 
 *  Frist läuft nicht ab, wenn das Gerät offline ist (wenn keine Verbindung zum Internet besteht). D. h. es gibt keine 60- und 90-Tage „Übergangsfristen“ mehr.
 *  Nach Ablauf wird der LGS-Modus erzwungen
@@ -176,7 +176,7 @@ Erscheinungsdatum: 27.03.2025
    - Neue Version verfügbar (hat keine Auswirkung auf AAPS)
    - Anwendung läuft bald ab (noch keine Auswirkung auf AAPS) / ist abgelaufen (AAPS wird in den LGS-Modus umgestellt)
 
-Other changes: [release notes on GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.3.2.0).
+Weitere Änderungen: [Release Notes auf GitHub](https://github.com/nightscout/AndroidAPS/releases/tag/3.3.2.0).
 
 ---
 
