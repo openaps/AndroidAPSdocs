@@ -50,7 +50,7 @@ Użytkownik ustawił **Automatyzację**, która o 5:00 uruchamia „Cel tymczaso
 
 1. Jak każda technologia, **systemy CGM**, **pompy** i telefony mogą zawieść: problemy techniczne lub błędy sensora mogą zakłócić działanie **Automatyzacji** i może być potrzebna ręczna interwencja.
 
-1. **Potrzebne **Automatyzacje** zwykle zmieniają się, gdy zmieniają się Twoje codzienne zwyczaje**. Gdy zmieniasz okres pracy/szkoły/wakacji, ustaw przypomnienie w kalendarzu, aby sprawdzić, które **Automatyzacje** są teraz aktywne (łatwo je włączyć i wyłączyć). Na przykład gdy jedziesz na wakacje i nie potrzebujesz już Automatyzacji ustawionej na sport w szkole lub codzienne ćwiczenia albo musisz zmienić godziny.
+1. **Requirements for Automations are likely to change as routines change**. Gdy zmieniasz okres pracy/szkoły/wakacji, ustaw przypomnienie w kalendarzu, aby sprawdzić, które **Automatyzacje** są teraz aktywne (łatwo je włączyć i wyłączyć). Na przykład gdy jedziesz na wakacje i nie potrzebujesz już Automatyzacji ustawionej na sport w szkole lub codzienne ćwiczenia albo musisz zmienić godziny.
 
 1. **Automatyzacje** mogą być ze sobą w konflikcie. Dobrze jest dokładnie sprawdzić każde ustawienie nowej **Automatyzacji** w bezpiecznych warunkach i zrozumieć, dlaczego **Automatyzacja** uruchomiła się albo nie uruchomiła się tak, jak oczekujesz.
 
