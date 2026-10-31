@@ -2,7 +2,7 @@
 
 O plugin Autotune é uma implementação do algoritmo autotune do OpenAPS dentro do AAPS. Ele analisa seu histórico recente do AAPS para sugerir ajustes nas suas taxas basais, no ISF e na relação de carboidratos (IC).
 
-O plugin Autotune está disponível nas versões do AAPS desde a [3.4](#version3400), mas fica oculto por padrão.
+Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Como o Autotune calcula os ajustes
@@ -129,7 +129,7 @@ O recurso **Trocar perfil automaticamente** só está disponível no modo Dev/En
 - **Usar IC/ISF circadianos** (padrão: desligado): veja [Perfil com IC ou ISF circadiano](#autotune-circadian-ic-or-isf-profile) abaixo.
 
 (autotune-other-settings)=
-### Other settings
+### Outras configurações
 
 - O Autotune também usa o Máximo do Autosens e o Mínimo do Autosens para limitar a variação. Você pode ver e ajustar esses valores em [**Configurações** > **Configurações de absorção** > **Configurações Avançadas**](../SettingUpAaps/Preferences.md) (**Máximo do Autosens** e **Mínimo do Autosens**).
 
