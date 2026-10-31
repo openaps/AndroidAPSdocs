@@ -4,7 +4,7 @@ Als je AAPS op je telefoon installeert, wordt die telefoon een "medisch hulpmidd
 
 Om je AAPS-installatie terug te zetten op een bestaande of nieuwe telefoon, is het belangrijk om de volgende dingen op een veilige plek te bewaren (dus: niet op je telefoon). Het beste is om ten minste twee aparte back-ups te bewaren: op een lokale harde schijf, een USB-stick en (bij voorkeur) in cloudopslag zoals Google Drive of Microsoft 365 OneDrive. Als je je back-ups in de cloud bewaart, heb je altijd alles vanaf je telefoon bij de hand om je installatie overal en altijd terug te zetten.
 
-Overweeg een tweede telefoon als reserve aan te schaffen en het terugzetten van AAPS te oefenen, zodat je zeker weet dat de reservetelefoon goed werkt. Zo weet je zeker dat je noodplan werkt en dat je zonder problemen verder kunt met AAPS als je hoofdtelefoon niet meer beschikbaar is.
+Overweeg een tweede telefoon als reserve aan te schaffen en het terugzetten van AAPS te oefenen, zodat je zeker weet dat de reservetelefoon goed werkt. Zo weet je zeker dat je noodplan werkt en dat je zonder problemen verder kunt met AAPS als je AAPS-telefoon niet meer beschikbaar is.
 
 Om terug te kunnen zetten, is het belangrijk dat je de volgende dingen bij de hand hebt:
 
@@ -54,7 +54,7 @@ Als je de AAPS-instellingen naar een bestand exporteert, kun je de configuratie 
 
 * Ben je van plan grote wijzigingen in je configuratie te maken (SMB-instellingen wijzigen, ander insulinetype, andere pomp, automatiseringen aanpassen)? Maak dan een back-up van je **Instellingen** vóór en na de wijzigingen. Zo heb je je meest recente instellingen én een kopie van hoe ze vóór de wijzigingen waren, voor het geval je ze terug moet zetten.
 
-* Alleen voor gebruikers van slangloze pompen (zoals Omnipod en Medtrum): het **Instellingen**-bestand bevat de verbindingsgegevens van je huidige pod en kan worden gebruikt om met een nieuwe telefoon de verbinding met die pod te herstellen. Heb je geen kopie van je instellingen die is geëxporteerd nadat je je huidige pod hebt gestart? Dan moet je een nieuwe pod starten als je je huidige telefoon moet vervangen.
+* Alleen voor gebruikers van pompen zonder slang (zoals Omnipod en Medtrum): het **Instellingen**-bestand bevat de verbindingsgegevens van je huidige pod en kan worden gebruikt om met een nieuwe telefoon de verbinding met die pod te herstellen. Heb je geen kopie van je instellingen die is geëxporteerd nadat je je huidige pod hebt gestart? Dan moet je een nieuwe pod starten als je je huidige telefoon moet vervangen.
 
 **Handmatig een back-up maken:**
 
@@ -145,7 +145,7 @@ Standaard laat een import je pompinstellingen met rust: de pomp die gekozen is i
 
 2. Start **AAPS** en geef alle gevraagde machtigingen
 
-3. Sluit de installatiewizard af. We importeren alle benodigde instellingen uit de back-up van de **Instellingen**
+3. Sluit de Setup Wizard af. We importeren alle benodigde instellingen uit de back-up van de **Instellingen**
 
 4. Druk in het hoofdscherm van **AAPS** op **Toestaan** en sta alle machtigingen toe die in het paneel **Vereiste machtigingen** bovenaan staan
 
@@ -179,7 +179,7 @@ Standaard laat een import je pompinstellingen met rust: de pomp die gekozen is i
 
 Als het bestand een pomp kiest die deze versie van **AAPS** niet heeft, schakelt **AAPS** over naar de **Virtuele Pomp** en meldt het dat. Kies je pomp opnieuw in **Configuratie** en controleer de instellingen ervan.
 
-14. Alleen voor gebruikers van slangloze pompen (Omnipod en Medtrum): heb je **Vervang ook de pompinstellingen** aangevinkt en is de back-up van je **Instellingen** niet gemaakt tijdens de pod die je nu gebruikt? Dan moet je een nieuwe pod starten om insuline toe te dienen.
+14. Alleen voor gebruikers van pompen zonder slang (Omnipod en Medtrum): heb je **Vervang ook de pompinstellingen** aangevinkt en is de back-up van je **Instellingen** niet gemaakt tijdens de pod die je nu gebruikt? Dan moet je een nieuwe pod starten om insuline toe te dienen.
 
 **Probleemoplossing:** lukt het niet om een actief profiel in te stellen vanuit het hoofdscherm van **AAPS**? Open dan het **menu** (☰) linksboven > **Configuratie** > **Pomp** > kies **Virtuele Pomp** > kies daarna weer je eigen pomptype
 
