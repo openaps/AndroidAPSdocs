@@ -249,6 +249,7 @@ Toto je hlavní nová funkce ve v4. Bolus spuštěný na klientovi **vydá hlavn
 Klient nikdy sám nerozhoduje o vydaném množství. Hlavní zařízení ho přepočítá a omezí, vy potvrdíte množství připravené hlavním zařízením a teprve pak se vydá.
 ```
 
+(clientmastercontrol-when-the-master-is-offline)=
 ### Když je hlavní zařízení offline
 
 Pokud hlavní zařízení není dostupné (telefon je vypnutý nebo spí, není připojený k Nightscoutu nebo nefungují websockety), akce ovládání jsou na klientovi **zablokované dřív, než se cokoli odešle**, a dostanete jasnou zprávu. Nic se neprovede jen napůl.
@@ -302,7 +303,7 @@ V nastavení označuje stejná malá **ikona mobilu** jednotlivé předvolby, kt
 
 ```{admonition} The master must be online to change synced settings from a client
 :class: note
-Protože o uložené hodnotě rozhoduje hlavní zařízení, úprava položky konfigurace řízené hlavním zařízením nebo obousměrné předvolby z klienta vyžaduje, aby bylo hlavní zařízení **dostupné**. Když je hlavní zařízení offline, jsou tyto ovládací prvky na klientovi vypnuté (viz [Když je hlavní zařízení offline](#when-the-master-is-offline)).
+Protože o uložené hodnotě rozhoduje hlavní zařízení, úprava položky konfigurace řízené hlavním zařízením nebo obousměrné předvolby z klienta vyžaduje, aby bylo hlavní zařízení **dostupné**. When the master is offline those controls are disabled on the client (see [When the master is offline](#clientmastercontrol-when-the-master-is-offline)).
 ```
 
 ---
