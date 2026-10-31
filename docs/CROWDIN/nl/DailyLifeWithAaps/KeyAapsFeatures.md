@@ -16,7 +16,7 @@ Zie [AAPS-schermen > Het hoofdscherm > Loopstatus](#AapsScreens-loop-status) voo
 
 **AAPS** beoordeelt steeds alle beschikbare gegevens (IOB, COB, BG...) en doet behandelvoorstellen (tijdelijke basaalstanden) om je therapie zo nodig aan te passen.
 
-De voorstellen worden niet automatisch uitgevoerd (zoals in de closed loop). De gebruiker moet de voorstellen zelf in de pomp invoeren (bij een virtuele pomp), of met een knop uitvoeren als **AAPS** met een echte pomp is verbonden.
+De voorstellen worden niet automatisch uitgevoerd (zoals in de gesloten loop). De gebruiker moet de voorstellen zelf in de pomp invoeren (bij een virtuele pomp), of met een knop uitvoeren als **AAPS** met een echte pomp is verbonden.
 
 Als **AAPS** een voorstel heeft, verschijnt er onderaan het hoofdscherm in de navigatie een item **Loop** met een badge. Druk erop om het voorstel ("Accepteer nieuw tijdelijk basaal") te lezen, met de hoeveelheid, de duur en de reden. Druk dan op **Uitvoeren** om het uit te voeren:
 
@@ -69,7 +69,7 @@ Closed loop is alleen mogelijk als je bij **[Doel 7](#objectives-objective7)** o
 
 ## Super Micro Bolus (SMB)
 
-**SMB**, de afkorting van **Super micro bolus**, is een functie van OpenAPS uit 2018, onderdeel van het Oref1-algoritme. Anders dan **AMA** gebruikt **SMB** geen tijdelijke basaalstanden om de glucose te regelen, maar vooral **kleine super micro bolussen**. Waar **AMA** 1,0 E insuline extra zou geven met een tijdelijke basaalstand, geeft **SMB** meerdere super micro bolussen in kleine stappen met **tussenpozen van 5 minuten**, bijvoorbeeld 0,4 E, 0,3 E, 0,2 E en 0,1 E. Tegelijk wordt (om veiligheidsredenen) de basaalstand voor een bepaalde tijd op 0 E/uur gezet om een overdosis te voorkomen (**'zero-temping'**). Zo kan het systeem de bloedglucose sneller bijsturen dan met de verhoging van de tijdelijke basaalstand bij **AMA**.
+**SMB**, de afkorting van **Super micro bolus**, is een functie van OpenAPS uit 2018, onderdeel van het Oref1-algoritme. Anders dan **AMA** gebruikt **SMB** geen tijdelijke basaalstanden om de glucose te regelen, maar vooral **kleine super micro bolussen**. Waar **AMA** 1,0 E insuline extra zou geven met een tijdelijke basaalstand, geeft **SMB** meerdere super micro bolussen in kleine stappen met **tussenpozen van 5 minuten**, bijvoorbeeld 0,4 E, 0,3 E, 0,2 E en 0,1 E. Tegelijk wordt (om veiligheidsredenen) de basaalstand voor een bepaalde tijd op 0 E/u gezet om een overdosis te voorkomen (**'zero-temping'**). Zo kan het systeem de bloedglucose sneller bijsturen dan met de verhoging van de tijdelijke basaalstand bij **AMA**.
 
 Dankzij SMB kan het bij maaltijden met alleen "langzame" koolhydraten genoeg zijn om het systeem de geplande hoeveelheid koolhydraten door te geven en de rest aan **AAPS** over te laten. Dit kan wel leiden tot hogere pieken na de maaltijd (postprandiaal), omdat vooraf bolussen (pre-bolus) niet mogelijk is. Of je kunt, zo nodig met een pre-bolus, een **startbolus** geven die de koolhydraten **maar voor een deel** dekt (bijvoorbeeld 2/3 van de geschatte hoeveelheid), en **SMB** de rest van de insuline laten geven.
 
@@ -88,7 +88,7 @@ De functies van **SMB** hebben een aantal veiligheidsmechanismen:
       
 
 2. **Lage tijdelijke basaalstanden**  
-  Lage tijdelijke basaalstanden ('low temps') of tijdelijke basaalstanden van 0 E/uur ('zero-temps') worden bij **SMB** vaker gebruikt. Dit is zo bedoeld om veiligheidsredenen en heeft geen nadelige gevolgen als het **Profiel** goed is ingesteld. In de hoofdgrafiek zegt de IOB-curve (dunne gele lijn) meer dan het verloop van de tijdelijke basaalstanden.
+  Lage tijdelijke basaalstanden ('low temps') of tijdelijke basaalstanden van 0 E/u ('zero-temps') worden bij **SMB** vaker gebruikt. Dit is zo bedoeld om veiligheidsredenen en heeft geen nadelige gevolgen als het **Profiel** goed is ingesteld. In de hoofdgrafiek zegt de IOB-curve (dunne gele lijn) meer dan het verloop van de tijdelijke basaalstanden.
 
 3. **Onaangekondigde maaltijden**  
   Extra berekeningen om het verloop van de glucose te voorspellen, bijvoorbeeld door **UAM** (un-announced meals, onaangekondigde maaltijden). Ook zonder dat je zelf koolhydraten invoert, kan **UAM** automatisch een flinke stijging van de glucose door maaltijden, adrenaline of andere oorzaken herkennen en die proberen bij te sturen met **SMB**. Andersom werkt dit ook: om veilig te kunnen werken zal het systeem eerder stoppen met het geven van SMB als het merkt dat jouw glucosewaarde plotseling daalt. Daarom moet je UAM altijd ingeschakeld hebben wanneer je SMB gebruikt.
@@ -107,11 +107,11 @@ De instellingen voor OpenAPS SMB staan hieronder beschreven.
 
 Deze veiligheidsinstelling bepaalt de maximale tijdelijke basaalstand die je insulinepomp mag geven. Het wordt ook **max-basal** genoemd.
 
-Dit getal wordt weergegeven in eenheden per uur (E/uur). Stel dit in op een verstandige waarde. Een goede aanbeveling voor deze instelling is:
+Dit getal wordt weergegeven in eenheden per uur (E/u). Stel dit in op een verstandige waarde. Een goede aanbeveling voor deze instelling is:
 
 **MAX-BASAL = HOOGSTE BASAALSTAND x 4**
 
-Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, kun je dat vermenigvuldigen met 4. Je krijgt dan een waarde van 2 E/uur.
+Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/u is, kun je dat vermenigvuldigen met 4. Je krijgt dan een waarde van 2 E/u.
 
 **AAPS** beperkt deze waarde met een 'harde limiet' volgens [Instellingen > Veiligheid > Leeftijd patiënt](#preferences-patient-type). De harde limieten zijn:
 
@@ -127,7 +127,7 @@ Als de hoogste basaalstand in je profiel bijvoorbeeld 0,5 E/uur is, kun je dat v
 
 ### Maximale totale IOB waar OpenAPS niet boven mag komen
 
-Deze waarde bepaalt de maximale **Insulin on Board** (IOB van basaal en bolus) waar **AAPS** onder blijft in de closed loop. Deze waarde wordt ook **maxIOB** genoemd.
+Deze waarde bepaalt de maximale **Insulin on Board** (IOB van basaal en bolus) waar **AAPS** onder blijft in de gesloten loop. Deze waarde wordt ook **maxIOB** genoemd.
 
 Als de huidige IOB (bijvoorbeeld na een maaltijd bolus) hoger is dan de door jou ingestelde waarde voor max-IOB, stopt het systeem met insuline geven totdat de IOB onder deze waarde zakt.
 
@@ -202,7 +202,7 @@ Als deze instelling aan staat, is SMB altijd actief (los van COB, tijdelijke str
 
 Deze instelling is alleen beschikbaar als **AAPS** ziet dat je een [betrouwbare BG-bron](#GettingStarted-TrustedBGSource) met geavanceerde filtering gebruikt. FreeStyle Libre 1 geldt niet als betrouwbare bron, omdat bij een sensorfout oude BG-waarden eindeloos herhaald kunnen worden.
 
-Door ruis in de gegevens kan **AAPS** denken dat de BG heel snel stijgt, en dan onnodige SMB's geven. Meer informatie over ruis en het filteren van gegevens vind je [hier](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+Door ruis in de gegevens kan **AAPS** denken dat de BG heel snel stijgt, en dan onnodige SMB's geven. Meer informatie over ruis en het vloeiend maken van gegevens vind je [hier](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
 #### SMB toestaan bij COB
 
@@ -216,7 +216,7 @@ Als deze instelling aan staat, is SMB actief als er een tijdelijk streefdoel is 
 
 Deze instelling is niet zichtbaar als "SMB altijd toestaan" aan staat.
 
-#### Activeren SMB na invoer van koolhydraten
+#### SMB toestaan na koolhydraten
 
 Als dit aan staat, is SMB actief tot 6 uur nadat koolhydraten zijn ingevoerd, ook als de COB al 0 is.
 
@@ -224,7 +224,7 @@ Om veiligheidsredenen is deze instelling alleen beschikbaar als **AAPS** ziet da
 
 Deze instelling is alleen beschikbaar als **AAPS** ziet dat je een [betrouwbare BG-bron](#GettingStarted-TrustedBGSource) met geavanceerde filtering gebruikt. FreeStyle Libre 1 geldt niet als betrouwbare bron, omdat bij een sensorfout oude BG-waarden eindeloos herhaald kunnen worden.
 
-Door ruis in de gegevens kan **AAPS** denken dat de BG heel snel stijgt, en dan onnodige SMB's geven. Meer informatie over ruis en het filteren van gegevens vind je [hier](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
+Door ruis in de gegevens kan **AAPS** denken dat de BG heel snel stijgt, en dan onnodige SMB's geven. Meer informatie over ruis en het vloeiend maken van gegevens vind je [hier](../CompatibleCgms/SmoothingBloodGlucoseData.md).  
 Deze instelling is niet zichtbaar als "SMB altijd toestaan" aan staat.
 
 #### SMB interval
@@ -241,7 +241,7 @@ Dit is een belangrijke veiligheidsinstelling. Deze waarde bepaalt hoeveel SMB ka
 
 Hoe groter deze waarde, hoe agressiever SMB kan zijn. Begin met de standaardwaarde van 30 minuten. Verhoog de waarde na enige ervaring in stappen van 15 minuten en kijk wat het effect is bij meerdere maaltijden.
 
-We raden aan de waarde niet hoger dan 90 minuten te zetten. Anders kan het algoritme een dalende BG misschien niet meer opvangen met een basaal van 0 E/uur ('zero-temp'). Stel ook alarmen in, vooral als je nieuwe instellingen nog aan het testen bent, zodat je ruim voor een hypo gewaarschuwd wordt.
+We raden aan de waarde niet hoger dan 90 minuten te zetten. Anders kan het algoritme een dalende BG misschien niet meer opvangen met een basaal van 0 E/u ('zero-temp'). Stel ook alarmen in, vooral als je nieuwe instellingen nog aan het testen bent, zodat je ruim voor een hypo gewaarschuwd wordt.
 
 Standaardwaarde: 30 min.
 
@@ -279,7 +279,7 @@ Voor alle instellingen (ook die hier niet worden besproken), zie de [documentati
 
 **Gebruik altijd korte gemiddelde delta** Als je deze functie aanzet, gebruikt **AAPS** de korte gemiddelde delta/bloedglucose van de laatste 15 minuten. Dat is meestal het gemiddelde van de laatste drie waarden. Zo werkt **AAPS** stabieler met gegevensbronnen met veel ruis, zoals xDrip en Libre.
 
-**Maximum op basis van profiel** Dit is een belangrijke veiligheidslimiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat **AAPS** nooit een tijdelijke basaalstand mag instellen die hoger is dan 3x de hoogste basaalstand per uur in de pomp en/of het profiel van de gebruiker. Voorbeeld: als je hoogste basaalstand 1,0 E/uur is en deze factor 3 is, dan kan **AAPS** een tijdelijke basaalstand van maximaal 3,0 E/uur instellen (= 3 x 1,0 E/uur).
+**Maximum op basis van profiel** Dit is een belangrijke veiligheidslimiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat **AAPS** nooit een tijdelijke basaalstand mag instellen die hoger is dan 3x de hoogste basaalstand per uur in de pomp en/of het profiel van de gebruiker. Voorbeeld: als je hoogste basaalstand 1,0 E/u is en deze factor 3 is, dan kan **AAPS** een tijdelijke basaalstand van maximaal 3,0 E/u instellen (= 3 x 1,0 E/u).
 
 Standaardwaarde: 3 (verander dit alleen als het echt nodig is en je weet wat je doet)
 
@@ -325,7 +325,7 @@ Meer informatie vind je in de [OpenAPS-documentatie](https://newer-docs.readthed
 
 ### Maximale basaalstand (OpenAPS "max-basal")
 
-Deze veiligheidsinstelling zorgt dat **AAPS** nooit een gevaarlijk hoge basaalstand kan geven en beperkt de tijdelijke basaalstand tot x E/uur. Stel dit in op een verstandige waarde. Een goede aanbeveling is om de hoogste basaalstand van jouw profiel te vermenigvuldigen met 4, of ten minste met 3. Bijvoorbeeld, als de hoogste basaalstand in jouw profiel 1,0 E/uur is dan kun je dat vermenigvuldigen met 4. Je krijgt dan een waarde van 4 E/uur, dus stel je "4" in bij deze veiligheidsinstelling.
+Deze veiligheidsinstelling zorgt dat **AAPS** nooit een gevaarlijk hoge basaalstand kan geven en beperkt de tijdelijke basaalstand tot x E/u. Stel dit in op een verstandige waarde. Een goede aanbeveling is om de hoogste basaalstand van jouw profiel te vermenigvuldigen met 4, of ten minste met 3. Bijvoorbeeld, als de hoogste basaalstand in jouw profiel 1,0 E/u is dan kun je dat vermenigvuldigen met 4. Je krijgt dan een waarde van 4 E/u, dus stel je "4" in bij deze veiligheidsinstelling.
 
 Je kunt niet elke waarde kiezen: om veiligheidsredenen is er een 'harde limiet', die afhangt van de leeftijd van de patiënt. De 'harde limiet' voor max-IOB is lager bij AMA dan bij SMB. Voor kinderen is deze waarde het laagst, voor insuline-resistente volwassenen het hoogst.
 
@@ -368,7 +368,7 @@ Als deze optie aan staat, kan Autosens ook de streefdoelen aanpassen (naast basa
 
 **Gebruik altijd korte gemiddelde delta** Als je deze functie aanzet, gebruikt **AAPS** de korte gemiddelde delta/bloedglucose van de laatste 15 minuten. Dat is meestal het gemiddelde van de laatste drie waarden. Zo werkt **AAPS** stabieler met gegevensbronnen met veel ruis, zoals xDrip en Libre.
 
-**Maximum op basis van profiel** Dit is een belangrijke veiligheidslimiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat **AAPS** nooit een tijdelijke basaalstand mag instellen die hoger is dan 3x de hoogste basaalstand per uur in de pomp van de gebruiker. Voorbeeld: als je hoogste basaalstand 1,0 E/uur is en deze factor 3 is, dan kan **AAPS** een tijdelijke basaalstand van maximaal 3,0 E/uur instellen (= 3 x 1,0 E/uur).
+**Maximum op basis van profiel** Dit is een belangrijke veiligheidslimiet. De standaardinstelling (die je waarschijnlijk niet zult hoeven aanpassen) is 3. Dit betekent dat **AAPS** nooit een tijdelijke basaalstand mag instellen die hoger is dan 3x de hoogste basaalstand per uur in de pomp van de gebruiker. Voorbeeld: als je hoogste basaalstand 1,0 E/u is en deze factor 3 is, dan kan **AAPS** een tijdelijke basaalstand van maximaal 3,0 E/u instellen (= 3 x 1,0 E/u).
 
 Standaardwaarde: 3 (verander dit alleen als het echt nodig is en je weet wat je doet)
 
