@@ -21,7 +21,7 @@ Du hast Deine AAPS-App bereits im Browser erstellt? Folge der Anleitung für die
 
 ## AAPS mit Android Studio aktualisieren
 
-Nutze [diese Anleitung](./UpdateComputerBuild.md).
+Follow [these instructions](./UpdateComputerBuild.md).
 
 ## AAPS über die Befehlszeile aktualisieren
 
