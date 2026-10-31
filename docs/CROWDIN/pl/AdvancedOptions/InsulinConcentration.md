@@ -1,217 +1,217 @@
 (Insulin-Concentration)=
-# Insulin Concentration
+# Stężenie insuliny
 
 ```{warning}
-All commercial pumps are designed to be used with Insulin U100 **ONLY**. Using another insulin concentration in a pump can be dangerous. Although more and more users run AAPS with other concentrations, the conversion must always be managed and often leads to errors (even for very skilled users!).
+Wszystkie komercyjne pompy są przeznaczone **WYŁĄCZNIE** do insuliny U100. Używanie w pompie insuliny o innym stężeniu może być niebezpieczne. Coraz więcej użytkowników używa AAPS z innymi stężeniami, ale przeliczanie trzeba zawsze kontrolować i często prowadzi ono do błędów (nawet u bardzo doświadczonych użytkowników!).
 ```
 
-## Reminder of the basics of insulin
+## Przypomnienie podstaw o insulinie
 
-This chapter covers the essential concepts of insulin measurement and delivery.
+Ten rozdział opisuje podstawowe pojęcia dotyczące mierzenia i podawania insuliny.
 
-### The insulin unit: a measure of action
+### Jednostka insuliny: miara działania
 
-Insulin is measured in **International Units (IU)**, which quantify its biological activity (power to lower blood sugar), not just its physical mass.
+Insulinę mierzy się w **jednostkach międzynarodowych (IU)**. Określają one jej aktywność biologiczną (zdolność obniżania poziomu glukozy), a nie tylko jej masę.
 
-- **Definition:** 1 IU corresponds to the activity of a specific amount of insulin, standardized to **approximately 0.04167 mg**.
-- **Key Point:** A "unit" means the same biological effect across all insulin types, ensuring consistent dosing.
+- **Definicja:** 1 IU to aktywność określonej ilości insuliny, ustalona na **około 0,04167 mg**.
+- **Najważniejsze:** „Jednostka” oznacza ten sam efekt biologiczny we wszystkich rodzajach insuliny. Dzięki temu dawkowanie jest spójne.
 
-### Insulin concentrations
+### Stężenia insuliny
 
-Insulin comes in different strengths, defined by the number of units per millilitre (ml).
+Insulina ma różne stężenia, określone liczbą jednostek na mililitr (ml).
 
-- **U100:** The global standard, containing **100 IU/ml**.
-- **U200-U500:** More concentrated insulins (e.g. U200 has 200 IU/ml) for smaller injection volumes.
-- **U40:** Less common, historical concentrations (40 IU/ml and 50 IU/ml). **U40 requires U40-specific syringes.**
-- **Manual Dilution:** A clinical practice to create highly diluted insulin (e.g. U50, U10) for rare cases like neonatal use or extreme sensitivity. This requires meticulous pharmacy preparation.
+- **U100:** Światowy standard, zawiera **100 IU/ml**.
+- **U200-U500:** Insuliny bardziej stężone (np. U200 ma 200 IU/ml), aby wstrzykiwać mniejszą objętość.
+- **U40:** Rzadziej spotykane, dawne stężenia (40 IU/ml i 50 IU/ml). **U40 wymaga strzykawek przeznaczonych do U40.**
+- **Ręczne rozcieńczanie:** Praktyka kliniczna, w której przygotowuje się mocno rozcieńczoną insulinę (np. U50, U10) w rzadkich przypadkach, np. u noworodków lub przy skrajnej wrażliwości na insulinę. Wymaga to bardzo starannego przygotowania w aptece.
 
 ```{admonition} Critical Warning
 :class: danger
-Using a concentration with a non-matching device is extremely dangerous and can cause a severe overdose or underdose. **Always triple-check that the insulin concentration matches the syringe, pen, or pump specifications.**
+Używanie insuliny o stężeniu niepasującym do urządzenia jest skrajnie niebezpieczne i może spowodować ciężkie przedawkowanie lub zbyt małą dawkę. **Zawsze sprawdź trzy razy, czy stężenie insuliny pasuje do strzykawki, pena lub pompy.**
 ```
 
-## When using a non-standard concentration?
+## Kiedy używa się niestandardowego stężenia?
 
-While insulin pumps are designed for U100 insulin, certain specific medical situations require non-standard concentrations. These scenarios require extreme caution and meticulous management.
+Pompy insulinowe są przeznaczone do insuliny U100, ale w niektórych szczególnych sytuacjach medycznych potrzebne są niestandardowe stężenia. Takie sytuacje wymagają ogromnej ostrożności i bardzo starannego prowadzenia terapii.
 
-### Use Case 1: diluted insulin for very low doses
+### Przypadek 1: rozcieńczona insulina do bardzo małych dawek
 
-- **Scenario:** Managing type 1 diabetes in very young babies and toddlers.
-- **Problem:** Their insulin needs are so low that the pump's minimum deliverable dose (e.g. 0.05 U) may still be too large, leading to difficulty in achieving precise glycemic control and a high risk of hypoglycemia.
-- **Solution:** Use highly diluted insulin (e.g. U10, which is 10 IU/ml).
-- **Effect:** This increases the volume of fluid delivered per unit of insulin. By making the "packages" of insulin larger in volume but weaker in concentration, it allows much finer adjustments and greater dosing accuracy with the pump's existing settings.
+- **Sytuacja:** Leczenie cukrzycy typu 1 u bardzo małych niemowląt i małych dzieci.
+- **Problem:** Ich zapotrzebowanie na insulinę jest tak małe, że najmniejsza dawka, jaką może podać pompa (np. 0,05 U), może nadal być za duża. Utrudnia to dokładną kontrolę glikemii i daje duże ryzyko hipoglikemii.
+- **Rozwiązanie:** Użyj mocno rozcieńczonej insuliny (np. U10, czyli 10 IU/ml).
+- **Efekt:** Zwiększa to objętość płynu podawanego na jednostkę insuliny. „Porcje” insuliny mają wtedy większą objętość, ale mniejsze stężenie. Pozwala to na dużo drobniejsze zmiany i dokładniejsze dawkowanie przy obecnych ustawieniach pompy.
 
 ```{admonition} Critical Safety Note on Dilution
 :class: danger
-Insulin dilution is a high-risk procedure that must never be attempted at home without specific training and medical supervision. It must be performed by a healthcare professional or a trained caregiver using sterile diluent specifically designed for that insulin type. **Never use tap water, saline, or any other fluid**, as this can deactivate the insulin, alter its action, and introduce dangerous contaminants.
+Rozcieńczanie insuliny to procedura wysokiego ryzyka. Nigdy nie próbuj tego w domu bez specjalnego przeszkolenia i nadzoru lekarza. Musi to zrobić pracownik ochrony zdrowia lub przeszkolony opiekun, używając sterylnego rozcieńczalnika przeznaczonego dla danego rodzaju insuliny. **Nigdy nie używaj wody z kranu, soli fizjologicznej ani żadnego innego płynu**, ponieważ może to dezaktywować insulinę, zmienić jej działanie i wprowadzić niebezpieczne zanieczyszczenia.
 ```
 
-### Use Case 2: concentrated insulin for high insulin needs or significant insulin resistance
+### Przypadek 2: stężona insulina przy dużym zapotrzebowaniu na insulinę lub znacznej insulinooporności
 
-- **Scenario:** Managing adults or adolescents with significant insulin resistance, or individuals who experience localized pain from the additives in standard insulin.
+- **Sytuacja:** Leczenie dorosłych lub nastolatków ze znaczną insulinoopornością albo osób, które odczuwają miejscowy ból z powodu dodatków w standardowej insulinie.
 - **Problem:**
-  1. **High Needs:** Very high daily insulin requirements can exceed the pump's maximum bolus or daily delivery limits.
-  1. **Pain:** The preservatives in insulin can cause stinging or irritation upon infusion.
-- **Solution:** Use a more concentrated insulin, such as U200 (200 IU/ml).
-- **Effect:** This delivers the required insulin dose in half the volume. For the user, the pump's internal settings must be adjusted (e.g. basal rates and boluses halved) to account for the doubled concentration, ensuring the correct number of units are delivered. This also reduces the volume of potentially irritating fluid delivered subcutaneously.
+  1. **Duże zapotrzebowanie:** Bardzo duże dzienne zapotrzebowanie na insulinę może przekraczać maksymalny bolus pompy lub jej dzienne limity podawania.
+  1. **Ból:** Konserwanty w insulinie mogą powodować pieczenie lub podrażnienie podczas wlewu.
+- **Rozwiązanie:** Użyj bardziej stężonej insuliny, np. U200 (200 IU/ml).
+- **Efekt:** Potrzebna dawka insuliny jest podawana w połowie objętości. Ze względu na podwójne stężenie trzeba dostosować wewnętrzne ustawienia pompy (np. zmniejszyć o połowę dawki bazowe i bolusy), aby została podana właściwa liczba jednostek. Zmniejsza to też objętość płynu podawanego pod skórę, który może podrażniać.
 
-## How to manage insulin concentration with AAPS (AAPS 3 and earlier)?
+## Jak obsłużyć stężenie insuliny w AAPS (AAPS 3 i starsze)?
 
-Using non-U100 insulin in an AAPS loop requires meticulous configuration to align the software's calculations with the actual insulin being delivered. One common method is "Using a Modified Profile".
+Używanie insuliny innej niż U100 w pętli AAPS wymaga bardzo starannej konfiguracji, aby obliczenia programu zgadzały się z insuliną, która jest naprawdę podawana. Jedna z popularnych metod to „Użycie zmodyfikowanego profilu”.
 
-### Using a modified profile
+### Użycie zmodyfikowanego profilu
 
-This method involves tricking AAPS into thinking the patient's insulin needs are lower than they are, to compensate for the pump delivering more concentrated insulin than it is designed for. The use case below is for U200 concentration put into the pump, designed for U100.
+Ta metoda polega na „oszukaniu” AAPS, aby uważał, że zapotrzebowanie pacjenta na insulinę jest mniejsze niż w rzeczywistości. Wyrównuje to fakt, że pompa podaje insulinę bardziej stężoną niż ta, do której jest przeznaczona. Poniższy przykład dotyczy insuliny U200 w pompie przeznaczonej do U100.
 
-- **The Core Problem:** A pump designed for U100 is calibrated to deliver **10 µL** for **1 unit**. If you fill it with U200 (1 unit of U200 corresponds to **5 µL** of insulin), when you select **1 unit** on the pump it delivers **10 µL** of insulin, but that volume now contains **2 units of U200 insulin**. This leads to a 100% overdose.
-- **The "Profile Switch 50%" Solution:** To correct this, the patient's entire therapy profile is scaled to be "twice as weak" inside AAPS.
-  1. The user creates a new profile based on their standard U100 profile, using the "Profile Switch **50%**" function.
-  1. This creates a new profile where:
-     - **Basal rates** are halved.
-     - **Insulin-to-Carb Ratio (IC)** is doubled (e.g. 1:10g becomes 1:20g).
-     - **Insulin Sensitivity Factor (ISF)** is doubled (e.g. 1 unit lowers BG by 50 mg/dL (2.8 mmol/L) becomes 1 unit lowers it by 100 mg/dL (5.6 mmol/L)).
-- **The Corrected Result:** AAPS now believes the patient only needs half the insulin. When it calculates and commands a **1-unit** bolus, the pump (designed for U100 but filled with U200) delivers the **10 µL**, which contains **2 real units of U200 insulin**. Because AAPS calculated this dose based on a "half-strength" profile, this **2 real-unit** delivery is the correct, intended dose. The loop's "half-strength" math aligns with the pump's "double-strength" delivery.
+- **Główny problem:** Pompa przeznaczona do U100 jest skalibrowana tak, aby podawać **10 µl** na **1 jednostkę**. Jeśli napełnisz ją insuliną U200 (1 jednostka U200 to **5 µl** insuliny), to gdy wybierzesz w pompie **1 jednostkę**, poda ona **10 µl** insuliny. Ta objętość zawiera jednak **2 jednostki insuliny U200**. Prowadzi to do przedawkowania o 100%.
+- **Rozwiązanie „Zmiana profilu 50%”:** Aby to poprawić, cały profil terapii pacjenta jest w AAPS przeskalowany tak, aby był „dwa razy słabszy”.
+  1. Użytkownik tworzy nowy profil na podstawie swojego standardowego profilu U100, używając funkcji „Zmiana profilu **50%**”.
+  1. Powstaje nowy profil, w którym:
+     - **Dawki bazowe** są zmniejszone o połowę.
+     - **Współczynnik insulina/węglowodany (IC)** jest podwojony (np. 1:10 g zmienia się na 1:20 g).
+     - **Współczynnik wrażliwości na insulinę (ISF)** jest podwojony (np. „1 jednostka obniża BG o 50 mg/dl (2,8 mmol/l)” zmienia się na „1 jednostka obniża BG o 100 mg/dl (5,6 mmol/l)”).
+- **Poprawiony wynik:** AAPS uważa teraz, że pacjent potrzebuje tylko połowy insuliny. Gdy AAPS obliczy i zleci bolus **1 jednostki**, pompa (przeznaczona do U100, ale napełniona U200) poda **10 µl**, które zawierają **2 rzeczywiste jednostki insuliny U200**. Ponieważ AAPS obliczył tę dawkę na podstawie profilu „o połowie mocy”, podanie **2 rzeczywistych jednostek** to właściwa, zamierzona dawka. Obliczenia pętli „o połowie mocy” zgadzają się z podawaniem „podwójnej mocy” przez pompę.
 
 ```{admonition} Critical Risks and Common Errors
 :class: caution
 
-This method introduces significant risks by creating a persistent disconnect between the app's data and physical reality.
+Ta metoda niesie duże ryzyko, ponieważ tworzy stały rozdźwięk między danymi w aplikacji a rzeczywistością.
 
-**The Primary Error: The "External Bolus" Mismatch**
+**Główny błąd: niezgodność przy „bolusie zewnętrznym”**
 
-The most common mistake occurs when delivering and logging insulin **outside** of the AAPS-pump system.
+Najczęstszy błąd zdarza się, gdy insulina jest podawana i zapisywana **poza** systemem AAPS i pompy.
 
-- **The Scenario:** AAPS, using the modified profile, calculates a **5-unit** bolus for a meal. The user injects this with a U200 pen.
-- **The Dual Error:**
-  1. **Wrong Dose Selection:** The user thinks "AAPS calculates 5 units" and, because of the U200 pen, expects to deliver **5 real units of U200** without any conversion. However, because the profile is halved, the body actually needs **10 real units**. This is a **50% underdose**, which can lead to hyperglycemia.
-  1. **Wrong Insulin-on-Board (IOB) Calculation (Overestimated IOB):** When the user records this external bolus in AAPS, they log **5 units**. This is incorrect. Since the AAPS profile is for U200, **1 unit in AAPS equals 2 real units**. Therefore, the 5 real units delivered by the pen should be logged as **2.5 units** in the app. By logging 5 units, the user overestimates the IOB by 100%. AAPS now thinks there are 5 "concentrated units" on board (equivalent to 10 real units) when only 5 real units are active. This can cause the loop to suppress basal insulin or reduce future boluses, worsening the hyperglycemia risk from the initial underdose.
+- **Sytuacja:** AAPS ze zmodyfikowanym profilem oblicza bolus **5 jednostek** na posiłek. Użytkownik wstrzykuje go penem U200.
+- **Podwójny błąd:**
+  1. **Wybór złej dawki:** Użytkownik myśli „AAPS oblicza 5 jednostek” i, ponieważ ma pen U200, chce podać **5 rzeczywistych jednostek U200** bez żadnego przeliczania. Jednak ponieważ profil jest zmniejszony o połowę, organizm naprawdę potrzebuje **10 rzeczywistych jednostek**. To jest **dawka mniejsza o 50%**, co może prowadzić do hiperglikemii.
+  1. **Złe obliczenie aktywnej insuliny (IOB) (zawyżona IOB):** Gdy użytkownik zapisuje ten zewnętrzny bolus w AAPS, wpisuje **5 jednostek**. To jest błąd. Ponieważ profil AAPS jest dla U200, **1 jednostka w AAPS to 2 rzeczywiste jednostki**. Dlatego 5 rzeczywistych jednostek podanych penem trzeba zapisać w aplikacji jako **2,5 jednostki**. Wpisując 5 jednostek, użytkownik zawyża IOB o 100%. AAPS uważa teraz, że aktywne jest 5 „jednostek skoncentrowanych” (czyli 10 rzeczywistych jednostek), a naprawdę aktywnych jest tylko 5 rzeczywistych jednostek. Może to sprawić, że pętla ograniczy insulinę bazową lub zmniejszy kolejne bolusy. Zwiększa to ryzyko hiperglikemii po zbyt małej pierwszej dawce.
 
-**Other Risks:**
+**Inne ryzyka:**
 
-- **Misleading Data and Reports:** All data within AAPS or Nightscout - including IOB, total daily dose (TDD), and historical reports - is in "concentrated units". This gives a distorted picture to the user and their medical team. A doctor reviewing a report might see a TDD of 30 units and not realize the patient actually received 60 real units, leading to incorrect therapy assessments.
-- **Altered Mental Model:** After prolonged use, the user begins to "think" in the app's halved values. They internalize that their ISF is 100 mg/dL (5.6 mmol/L) or their basal is 0.5 U/hr, forgetting these are "concentrated". This creates a dangerous dependency on the system and a loss of touch with their actual insulin requirements, which is critical for safety during pump failures or app issues.
+- **Mylące dane i raporty:** Wszystkie dane w AAPS lub Nightscout, w tym IOB, całkowita dawka dobowa (TDD) i raporty historyczne, są w „jednostkach skoncentrowanych”. Daje to użytkownikowi i jego zespołowi diabetologicznemu fałszywy obraz. Lekarz, który przegląda raport, może zobaczyć TDD 30 jednostek i nie zauważyć, że pacjent naprawdę dostał 60 rzeczywistych jednostek. Prowadzi to do błędnej oceny terapii.
+- **Zmieniony sposób myślenia:** Po dłuższym czasie użytkownik zaczyna „myśleć” wartościami z aplikacji, zmniejszonymi o połowę. Zapamiętuje, że jego ISF to 100 mg/dl (5,6 mmol/l) lub jego baza to 0,5 U/godz., i zapomina, że są to wartości „skoncentrowane”. Tworzy to niebezpieczną zależność od systemu i utratę wyczucia rzeczywistego zapotrzebowania na insulinę, co jest kluczowe dla bezpieczeństwa przy awarii pompy lub problemach z aplikacją.
 
-**Conclusion:** This method requires absolute vigilance, forcing the user to constantly convert between a "concentrated world" in the app and the physical world. Any external insulin delivery or data review breaks this mental model and poses a severe risk. It fundamentally changes the meaning of every number in the system.
+**Podsumowanie:** Ta metoda wymaga stałej czujności. Użytkownik musi ciągle przeliczać między „skoncentrowanym światem” w aplikacji a światem rzeczywistym. Każde podanie insuliny poza systemem lub każdy przegląd danych łamie ten sposób myślenia i stwarza poważne ryzyko. Zmienia to od podstaw znaczenie każdej liczby w systemie.
 ```
 
-## Using the concentration parameter (new feature in AAPS 4.0)
+## Użycie parametru stężenia (nowa funkcja w AAPS 4.0)
 
-To mitigate the risks of using a modified profile, a new feature manages insulin concentration directly within AAPS. This feature handles the conversions automatically, allowing the main application to always work in **Real International Units (IU)**.
+Aby zmniejszyć ryzyko związane ze zmodyfikowanym profilem, nowa funkcja obsługuje stężenie insuliny bezpośrednio w AAPS. Ta funkcja wykonuje przeliczenia automatycznie, dzięki czemu główna aplikacja zawsze pracuje na **rzeczywistych jednostkach międzynarodowych (IU)**.
 
-### How it works: automatic conversion
+### Jak to działa: automatyczne przeliczanie
 
-The core principle is a clear separation between the app's logic and the pump's communication:
+Główna zasada to wyraźny podział między logiką aplikacji a komunikacją z pompą:
 
-- **AAPS Uses International Units:** The main AAPS database, algorithms, reports, and logs **always use Real IU**. This means your IOB, TDD, and therapy settings (basal, ISF, IC) reflect the actual biological insulin units.
-- **Pump Driver Uses Concentrated Units:** All values sent to or received from the pump driver are automatically converted to manage "Concentrated Units" within the pump driver, based on the selected concentration.
-  - **Example with U200:** When the user requests a **1 unit bolus**, the pump driver receives **0.5 CU (Concentrated Units)** before sending it to the pump. The pump (set for U100) then delivers **5 µL**, which contains **1 IU of U200 insulin**.
+- **AAPS używa jednostek międzynarodowych:** Główna baza danych AAPS, algorytmy, raporty i logi **zawsze używają rzeczywistych IU**. Oznacza to, że Twoja IOB, TDD i ustawienia terapii (baza, ISF, IC) odpowiadają rzeczywistym biologicznym jednostkom insuliny.
+- **Sterownik pompy używa jednostek skoncentrowanych:** Wszystkie wartości wysyłane do sterownika pompy lub z niego odbierane są automatycznie przeliczane na „jednostki skoncentrowane” wewnątrz sterownika pompy, na podstawie wybranego stężenia.
+  - **Przykład z U200:** Gdy użytkownik zleca **bolus 1 jednostki**, sterownik pompy otrzymuje **0,5 CU (jednostki skoncentrowanej)**, zanim wyśle go do pompy. Pompa (ustawiona na U100) podaje wtedy **5 µl**, które zawierają **1 IU insuliny U200**.
 
-### Benefits and remaining risks
+### Zalety i pozostałe ryzyka
 
-**Benefits:**
+**Zalety:**
 
-- Eliminates the need for a modified profile and its associated mental conversion errors.
-- Users can always "think" in Real IU.
-- For an external bolus with a pen, just select the expected amount of insulin on the pen (whatever the pen and insulin concentration used). No conversion is needed, as pens U100 and U200 always use IU for unit selection.
-- All AAPS reports and data (TDD, IOB) are in Real IU, providing clarity for the user and their medical team.
-- Removes the risk of miscalculating external boluses, as they are logged in Real IU.
+- Nie trzeba używać zmodyfikowanego profilu, więc znikają błędy w przeliczaniu w głowie.
+- Użytkownik zawsze może „myśleć” w rzeczywistych IU.
+- Przy bolusie zewnętrznym penem po prostu wybierz na penie potrzebną ilość insuliny (bez względu na rodzaj pena i stężenie insuliny). Nie trzeba niczego przeliczać, ponieważ peny U100 i U200 zawsze wybierają dawkę w IU.
+- Wszystkie raporty i dane AAPS (TDD, IOB) są w rzeczywistych IU, co daje jasny obraz użytkownikowi i jego zespołowi diabetologicznemu.
+- Znika ryzyko błędnego obliczenia bolusów zewnętrznych, ponieważ zapisuje się je w rzeczywistych IU.
 
-**Remaining Risks:**
+**Pozostałe ryzyka:**
 
-- **Mental Model Transition:** Users switching from the "modified profile" method must switch their profile back to the correct real profile (i.e. twice as strong if they come from U200), and need time to adjust their **mental model**. After being accustomed to "Concentrated" values in the app, they must re-learn to trust the **real, unhidden IU values** displayed everywhere. This period of adjustment carries a risk of misinterpretation.
-- **Manual Pump Bolus:** Using the pump's own bolus function (bypassing AAPS) results in a 100% overdose, as the pump delivers U200 insulin using U100 volume calculations.
-- **General Warning:** Using non-standard concentrations remains an advanced procedure with risks and is not officially recommended.
+- **Zmiana sposobu myślenia:** Użytkownicy, którzy przechodzą z metody „zmodyfikowanego profilu”, muszą przełączyć profil z powrotem na prawidłowy, rzeczywisty profil (czyli dwa razy silniejszy, jeśli używali U200). Potrzebują też czasu, aby zmienić swój **sposób myślenia**. Po przyzwyczajeniu się do wartości „skoncentrowanych” w aplikacji muszą na nowo nauczyć się ufać **rzeczywistym, nieukrytym wartościom w IU**, które są wyświetlane wszędzie. W tym okresie przyzwyczajania się jest ryzyko błędnej interpretacji.
+- **Ręczny bolus z pompy:** Użycie funkcji bolusa w samej pompie (z pominięciem AAPS) powoduje przedawkowanie o 100%, ponieważ pompa podaje insulinę U200 według obliczeń objętości dla U100.
+- **Ostrzeżenie ogólne:** Używanie niestandardowych stężeń pozostaje zaawansowaną procedurą z ryzykiem i nie jest oficjalnie zalecane.
 
 ```{admonition} Never use the pump's own interface (tube pump users) to deliver a bolus manually
 :class: danger
-Stick a permanent note on your pump **"U200 Insulin"** as a reminder, to never forget it!
+Przyklej na pompie stałą etykietę **„U200 Insulin”** jako przypomnienie, aby nigdy o tym nie zapomnieć!
 ```
 
-### User interface display
+### Wyświetlanie w interfejsie
 
-To provide clarity, the user interface shows both real and concentrated units where relevant. Note that the user interface remains unchanged if the current insulin is U100.
+Dla jasności interfejs pokazuje, tam gdzie to ważne, zarówno jednostki rzeczywiste, jak i skoncentrowane. Pamiętaj, że interfejs się nie zmienia, jeśli aktualna insulina to U100.
 
-**Display Examples:**
+**Przykłady wyświetlania:**
 
-- **Bolus Progress Dialog:**
-  - The Bolus Progress dialog is within the core AAPS application, so only the information in IU is shown (consistent with the user selection): **`2.50 U / 10.00 U delivered`**
-- **Pump Driver Interface (Current Status):**
-  - Within the Pump overview, the delivered amount is shown in both units; for example, if `U200` is selected: **`Last Bolus: 10 U (5 CU) (10')`**
+- **Okno postępu bolusa:**
+  - Okno Postęp bolusa jest częścią głównej aplikacji AAPS, więc pokazuje tylko informacje w IU (zgodnie z wyborem użytkownika): **`2.50 U / 10.00 U delivered`**
+- **Interfejs sterownika pompy (aktualny stan):**
+  - Na ekranie przeglądu pompy podana ilość jest pokazana w obu jednostkach. Na przykład, jeśli wybrano `U200`: **`Last Bolus: 10 U (5 CU) (10')`**
 
-**Please Note:** Both units (U and CU) are only visible in the main Pump overview. Depending on your specific pump, you can have other screens where only the Concentrated Units are shown. Historical data within pump drivers will typically remain in "Concentrated Units".
+**Uwaga:** Obie jednostki (U i CU) są widoczne tylko na głównym ekranie przeglądu pompy. W zależności od Twojej pompy mogą być inne ekrany, na których widać tylko jednostki skoncentrowane. Dane historyczne w sterownikach pomp zwykle pozostają w „jednostkach skoncentrowanych”.
 
-### Enabling the feature
+### Włączanie funkcji
 
-Due to the inherent safety risks, this parameter is not enabled by default. To activate it, finish Objective 3 and enable **Insulin concentration support** within General Settings.
+Ze względu na związane z nią ryzyko ta opcja domyślnie jest wyłączona. Aby ją włączyć, ukończ Zadanie 3 i włącz **Obsługa stężenia insuliny** w sekcji Ustawienia ogólne.
 
-### Create a new insulin with another concentration
+### Tworzenie nowej insuliny o innym stężeniu
 
-To create an insulin with another concentration, first open **Manage → Insulin settings**.
+Aby utworzyć insulinę o innym stężeniu, najpierw otwórz **Zarządzaj → Ustawienia insuliny**.
 
-- Click the "+" icon at the bottom of the screen.
-- Select the new expected concentration from the dropdown menu (U10, U20, U50, U100, U200 are available).
-  - diluted concentrations like U10, U20 or U50 are for children with very low basal rates.
-  - U200 is more for adults with high insulin needs.
+- Kliknij ikonę „+” na dole ekranu.
+- Wybierz z listy rozwijanej nowe stężenie (dostępne są U10, U20, U50, U100, U200).
+  - Rozcieńczone stężenia, takie jak U10, U20 lub U50, są dla dzieci z bardzo małymi dawkami bazowymi.
+  - U200 jest raczej dla dorosłych z dużym zapotrzebowaniem na insulinę.
 
-  ![The concentration dropdown in Insulin settings](../images/v4/Insulin/insulin_concentration_dropdown.png)
+  ![Lista rozwijana stężenia w Ustawieniach insuliny](../images/v4/Insulin/insulin_concentration_dropdown.png)
 
-- Adjust peak time, Duration of Insulin Action (DIA), and customize the Insulin Nickname (optional).
-- Use the save button at the top right of the screen.
+- Dostosuj czas szczytu, czas działania insuliny (DIA) i, jeśli chcesz, zmień Pseudonim insuliny.
+- Użyj przycisku zapisu w prawym górnym rogu ekranu.
 
-At this step the insulin has been created, but cannot be selected directly from **Insulin settings**.
+Na tym etapie insulina jest już utworzona, ale nie można jej wybrać bezpośrednio w **Ustawienia insuliny**.
 
-### Switch concentration from U100 to Uxxx (AAPS 4)
+### Zmiana stężenia z U100 na Uxxx (AAPS 4)
 
 ```{admonition} Switching concentration is only allowed during a reservoir or patch/pod change
 :class: warning
-For safety reasons, AAPS only records a concentration switch during a Reservoir Change or Patch/Pod Change.
+Ze względów bezpieczeństwa AAPS zapisuje zmianę stężenia tylko podczas wymiany zbiornika lub wymiany plastra/poda.
 ```
 
-When you start from U100 insulin, all your profile, historical data and reports are consistent with the International Units standard, so the switch is very "easy":
+Gdy zaczynasz od insuliny U100, cały Twój profil, dane historyczne i raporty są zgodne ze standardem jednostek międzynarodowych, więc zmiana jest bardzo „łatwa”:
 
-- For a Patch/Pod pump, you have a dedicated step when you change the pump, to select the insulin you put into it.
-- For a tube pump, click the Prime/Fill button (for Insulin Change) within the Overview (expanded status bar view), then click the "Change" button.
+- W pompie plastrowej/Pod przy wymianie pompy masz osobny krok, w którym wybierasz insulinę, którą do niej wlewasz.
+- W pompie z drenem kliknij przycisk Napełnij/Wypełnij (do wymiany insuliny) na ekranie głównym (rozwinięty widok paska stanu), a potem kliknij przycisk „Zmień”.
 
-1. Select the target concentration in the dropdown menu (e.g. `U200`).
-1. Then select the right insulin below. Until you confirm, the caption above its name says **Will be activated** (instead of **Currently active**).
+1. Wybierz z listy rozwijanej docelowe stężenie (np. `U200`).
+1. Następnie poniżej wybierz właściwą insulinę. Dopóki nie potwierdzisz, napis nad jej nazwą brzmi **Zostanie aktywowana** (zamiast **Aktualnie aktywna**).
 
-   ![An insulin picked but not confirmed yet: Will be activated](../images/v4/Insulin/insulin_will_be_activated.png)
+   ![Insulina wybrana, ale jeszcze niepotwierdzona: Zostanie aktywowana](../images/v4/Insulin/insulin_will_be_activated.png)
 
-1. **Important:** the concentration switch is only recorded within AAPS after the Profile Switch is applied to the pump.
-   - This step is mandatory for all Patch/Pod pumps.
-   - For tube pumps, wait for the Profile Switch to be applied to the pump, or within **Manage → Profile** or **Insulin settings**.
+1. **Ważne:** zmiana stężenia jest zapisywana w AAPS dopiero wtedy, gdy Zmiana profilu zostanie zastosowana w pompie.
+   - Ten krok jest obowiązkowy dla wszystkich pomp plastrowych/Pod.
+   - W pompach z drenem poczekaj, aż Zmiana profilu zostanie zastosowana w pompie, albo zrób to w **Zarządzaj → Profil** lub **Ustawienia insuliny**.
 
-That's all!
+To wszystko!
 
-If a temporary **Profile Switch** (one with a duration) is running when you change the insulin, the new insulin is also given to the profile that comes back when the temporary switch ends. The old insulin does not come back.
+Jeśli podczas zmiany insuliny działa tymczasowa **Zmiana profilu** (z czasem trwania), nowa insulina zostanie też przypisana do profilu, który wróci po końcu tymczasowej zmiany. Stara insulina nie wraca.
 
-### Switch concentration for users with U200 insulin associated with a 50% profile (AAPS 4)
+### Zmiana stężenia dla użytkowników insuliny U200 z profilem 50% (AAPS 4)
 
-When you start from U200 already used in your pump, but associated with a 50% profile, you have to do additional steps compared to the standard switch from U100 insulin.
+Jeśli zaczynasz od insuliny U200, której już używasz w pompie, ale z profilem 50%, musisz wykonać dodatkowe kroki w porównaniu ze standardową zmianą z insuliny U100.
 
-Keep in mind that the most difficult part will probably not be how to manage the switch correctly within AAPS, but rather to train your brain again to think "IU" instead of "CU". All standard values for boluses (breakfast, lunch, dinner...) will be twice as high, the same for your TDDs, basal rates, etc. You have to be very cautious not to make errors during the first several weeks, until you "think again" in International Units.
+Pamiętaj, że najtrudniejsze prawdopodobnie nie będzie poprawne przeprowadzenie zmiany w AAPS, ale nauczenie się na nowo myślenia w „IU” zamiast w „CU”. Wszystkie Twoje standardowe wartości bolusów (śniadanie, obiad, kolacja...) będą dwa razy większe. To samo dotyczy TDD, dawek bazowych itd. Musisz bardzo uważać, aby nie popełniać błędów przez pierwsze kilka tygodni, dopóki znowu nie zaczniesz „myśleć” w jednostkach międzynarodowych.
 
-- First, prepare a new profile with all values consistent with International Units:
-  - Do a temporary Profile Switch 200% of your standard running profile.
-  - Open the menu (☰) → **Treatments**, go to the **Profile switch** tab and clone the new 200% profile (see [Clone a Profile switch](#your-aaps-profile-clone-profile-switch)).
-  - Switch back to your standard profile until the next Reservoir or Patch change.
-  - Go to **Manage → Profile** and rename this new profile with an explicit name (it will be your future profile associated with U200 insulin set in AAPS 4).
-- If you use the Dynamic ISF (DynISF) feature, you have to disable it for at least one week:
-  - All your history recorded within AAPS or Nightscout is in the wrong units (CU), half the real value in International Units. Wait at least one week with the U200 insulin running before re-enabling it.
-- You are now ready to switch insulin (with a new U200 defined within **Insulin settings**) on the following Insulin Change or Pod Change.
-- Once the new U200 insulin is correctly applied, don't forget to apply the new standard profile defined in the first step.
+- Najpierw przygotuj nowy profil ze wszystkimi wartościami zgodnymi z jednostkami międzynarodowymi:
+  - Zrób tymczasową Zmianę profilu na 200% swojego standardowego, działającego profilu.
+  - Otwórz menu (☰) → **Leczenie**, przejdź do zakładki **Zmiana profilu** i sklonuj nowy profil 200% (zobacz [Klonowanie zmiany profilu](#your-aaps-profile-clone-profile-switch)).
+  - Przełącz się z powrotem na swój standardowy profil do następnej wymiany zbiornika lub plastra.
+  - Przejdź do **Zarządzaj → Profil** i zmień nazwę tego nowego profilu na jasną nazwę (to będzie Twój przyszły profil dla insuliny U200 ustawionej w AAPS 4).
+- Jeśli używasz funkcji Dynamiczny ISF (DynISF), musisz ją wyłączyć na co najmniej tydzień:
+  - Cała Twoja historia zapisana w AAPS lub Nightscout jest w złych jednostkach (CU), czyli połowie rzeczywistej wartości w jednostkach międzynarodowych. Poczekaj co najmniej tydzień z działającą insuliną U200, zanim włączysz ją ponownie.
+- Teraz możesz zmienić insulinę (na nową U200 zdefiniowaną w **Ustawienia insuliny**) przy następnej wymianie insuliny lub wymianie poda.
+- Gdy nowa insulina U200 zostanie poprawnie zastosowana, nie zapomnij włączyć nowego standardowego profilu przygotowanego w pierwszym kroku.
 
-## How to manage external boluses with different pens?
+## Jak obsługiwać bolusy zewnętrzne różnymi penami?
 
-### With U200 insulin associated with a 50% profile (AAPS 3)
+### Z insuliną U200 i profilem 50% (AAPS 3)
 
-Keep in mind that all pen graduations are in International Units, so whatever the pen used (U100, U200), if you use a pen for an external bolus you have to manage conversion in both directions:
+Pamiętaj, że wszystkie podziałki na penach są w jednostkach międzynarodowych. Bez względu na to, jakiego pena używasz (U100, U200), przy bolusie zewnętrznym penem musisz przeliczać w obu kierunkach:
 
-- From AAPS to the pen: if the Calculator proposes a bolus, or if you have a specific quantity in mind, multiply by 2 when you select the amount on the pen, compared to the same bolus applied from AAPS.
-- From the pen to AAPS: if you selected an amount on the pen to give an external bolus, divide this amount by 2 to record the right quantity within AAPS (Insulin button, external bolus), to get the correct IOB calculation in CU (Concentrated Units).
+- Z AAPS do pena: jeśli Kalkulator proponuje bolus albo masz na myśli konkretną ilość, pomnóż ją przez 2, gdy wybierasz dawkę na penie, w porównaniu z takim samym bolusem podanym z AAPS.
+- Z pena do AAPS: jeśli wybrałeś na penie ilość do bolusa zewnętrznego, podziel ją przez 2, aby zapisać w AAPS właściwą ilość (przycisk Insulina, bolus zewnętrzny). Dzięki temu IOB będzie poprawnie obliczona w CU (jednostkach skoncentrowanych).
 
-### With U200 insulin using the concentration management included in AAPS 4
+### Z insuliną U200 i obsługą stężenia wbudowaną w AAPS 4
 
-Things are much simpler with the internal management of concentration within AAPS: just select the expected amount on the pen (whatever the pen and corresponding insulin used), and record it within AAPS.
+Z wbudowaną obsługą stężenia w AAPS wszystko jest dużo prostsze: po prostu wybierz na penie potrzebną ilość (bez względu na rodzaj pena i insuliny) i zapisz ją w AAPS.
 
-- Within the Insulin button, if you select an external bolus, you can select any type of insulin defined within **Insulin settings** (mainly U100, U200 for pens). That way you get a very precise calculated IOB, even if the peak/DIA of the insulin used with the pen is very different from the peak/DIA used in the pump.
+- Jeśli w oknie przycisku Insulina wybierzesz bolus zewnętrzny, możesz wybrać dowolny rodzaj insuliny zdefiniowany w **Ustawienia insuliny** (głównie U100, U200 dla penów). Dzięki temu obliczona IOB jest bardzo dokładna, nawet jeśli szczyt/DIA insuliny w penie bardzo się różni od szczytu/DIA insuliny w pompie.
