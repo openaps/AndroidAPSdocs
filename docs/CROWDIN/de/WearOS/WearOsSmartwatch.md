@@ -2,7 +2,7 @@
 
 Die folgenden Anweisungen gelten für die durch Dich zu erstellende **AAPS Wear**-APK. Solltest Du es zum ersten Mal machen, hilft Dir die [Anleitung](../WearOS/BuildingAapsWearOS.md) weiter. Im Erstellprozess ist es wichtig, dass Du die gleiche Keystore-Datei nutzt, die Du schon beim Erstellen der **AAPS**-APK für das Smartphone genutzt hast.
 
-Einige der Informationen können auch für die **AAPSClient**- und die **PumpControl**-**Wear**-APK genutzt werden. Jede der **Wear**-Apps kommuniziert mit der zugehörigen Smartphone-App. Beispiel: Die **AAPSClient Wear**-App kann **AAPSClient**-Daten anzeigen, aber keine **AAPS**-Daten. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+Einige der Informationen können auch für die **AAPSClient**- und die **PumpControl**-**Wear**-APK genutzt werden. Each **Wear** app will communicate with its matching phone app. Beispiel: Die **AAPSClient Wear**-App kann **AAPSClient**-Daten anzeigen, aber keine **AAPS**-Daten. When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
 
 ## Wear OS-Versionen und Kompatibilität
 
@@ -104,7 +104,7 @@ Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 202
 
 Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
 
-## Wie man eine Samsung Galaxy 4 Smartwatch mit **AAPS** einrichtet
+## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
 
 Dieser Abschnitt ist für Neulinge im Umgang mit Smartwatches und gibt zunächst einen ersten Überblick über die beliebte **Galaxy Watch 4** und danach eine Schritt-für-Schritt Anleitung, um **AAPS** auf der Smartwatch einzurichten.
 
@@ -124,7 +124,7 @@ Die App „Galaxy Wearable“ enthält auch ein Benutzerhandbuch. Öffne die Gal
 
 ## Samsung-Konto einrichten
 
-Stelle sicher, dass in dem eMail-Konto, das Du zur Einrichtung des Samsung-Kontos verwendest, ein Geburtsdatum älter als 13 Jahre hinterlegt ist, da die notwendigen Samsung Berechtigungen sonst nur schwer genehmigt werden können. Du kannst ein Gmail Konto eines Kindes (unter 13 Jahren) nicht problemlos in das eines Erwachsenen ändern. Ein möglicher Weg, das zu umgehen ist, das Geburtsdatum auf ein Alter von 12 Jahren und 363 Tagen zu ändern. Am folgenden Tag wird das Konto in ein Erwachsenen-Konto umgewandelt, und Du kannst mit der Einrichtung des Samsung-Kontos weiter machen.
+Stelle sicher, dass in dem eMail-Konto, das Du zur Einrichtung des Samsung-Kontos verwendest, ein Geburtsdatum älter als 13 Jahre hinterlegt ist, da die notwendigen Samsung Berechtigungen sonst nur schwer genehmigt werden können. Du kannst ein Gmail Konto eines Kindes (unter 13 Jahren) nicht problemlos in das eines Erwachsenen ändern. One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. Am folgenden Tag wird das Konto in ein Erwachsenen-Konto umgewandelt, und Du kannst mit der Einrichtung des Samsung-Kontos weiter machen.
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -218,7 +218,7 @@ You will see a Wi-Fi pairing code and IP address and port appearing:
 - Du wirst die Rückmeldung bekommen:<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - Gib im Terminal ein: <br>`adb devices`.<br> Es sollte ungefähr das erscheinen:<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- Gehe jetzt auf Deinem Computer in den Ordner, der die Wear-APKenthält und gib <br> `adb install wear-full.apk` ein, <br>wobei Du wear.apk durch den Namen Deiner APK-Datei ersetzt.
+- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
 - Es erscheint:<br> `Performing Streamed Install`<br> `Success`
 
 
@@ -235,7 +235,7 @@ You will see a Wi-Fi pairing code and IP address and port appearing:
 **Koppeln:**
 
 - Smartwatch: Drahtloses Debugging: Notiere die IP-Adresse.
-- Wear Installer: Gib die IP in der Wear Installer App ein.
+- Wear Installer: Enter the IP in the Wear Installer app.
 - Tippe auf „Pair new“ und notiere den Pairing Code und die Port-Nummer, die angezeigt werden.
 - Wear Installer: enter the pairing code + space + port number.
 - Der Wear Installer sollte „pairing successful“ zurückmelden. Falls nicht, schließe den Wear Installer und versuche es erneut.
