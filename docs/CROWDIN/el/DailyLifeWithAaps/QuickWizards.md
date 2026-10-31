@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# Γρήγορος Οδηγός (bolus με ένα πάτημα)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+Ένας **Γρήγορος Οδηγός** (QuickWizard) είναι ένα αποθηκευμένο κουμπί για ένα γεύμα ή μια κατάσταση που επαναλαμβάνεται. Λειτουργεί με ένα πάτημα. Έχει σταθερή ποσότητα **υδατανθράκων** (και τον τρόπο δοσολογίας τους). Έτσι μπορείτε να κάνετε ένα bolus — ή μόνο να καταγράψετε υδατάνθρακες — με ένα πάτημα και μια επιβεβαίωση, χωρίς να ανοίγετε κάθε φορά τον πλήρη υπολογιστή bolus.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## Άνοιγμα του Γρήγορου Οδηγού
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Ανοίξτε την οθόνη **Διαχείριση** (κάτω γραμμή πλοήγησης) και επιλέξτε **Γρήγορος Οδηγός** (*«Διαχείριση προεπιλογών QuickWizard»*).
 
 ---
 
-## The three modes
+## Διαχείριση των Γρήγορων Οδηγών
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Οι Γρήγοροι Οδηγοί σας εμφανίζονται ως **κάρτες που αλλάζετε με σάρωση** (κάθε κάρτα δείχνει το κείμενο του κουμπιού, τους υδατάνθρακες και το έγκυρο χρονικό διάστημα). Ο επεξεργαστής από κάτω ρυθμίζει τον **επιλεγμένο** Γρήγορο Οδηγό. Η κάτω γραμμή ενεργειών έχει τα κουμπιά **➕ προσθήκη**, **⧉ κλώνος**, **🗑️ διαγραφή** και ένα κουμπί **▶** για να εκτελέσετε τον επιλεγμένο Γρήγορο Οδηγό.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![Ο επεξεργαστής του Γρήγορου Οδηγού — λειτουργία, υδατάνθρακες, χρόνος υδατανθράκων και έγκυρο χρονικό διάστημα](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+Τα κύρια πεδία του επεξεργαστή είναι:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Κείμενο κουμπιού** — το κείμενο που εμφανίζεται στο κουμπί.
+- **Υδατάνθρακες** και **Χρόνος υδατανθράκων** — η ποσότητα υδατανθράκων και η χρονική μετατόπισή της.
+- **Έγκυρο χρονικό διάστημα** — δείτε την ενότητα [Ισχύς](#quickwizard_validity).
+- **Επιλογές υπολογισμού** και **Επιλογή συσκευής** — δείτε παρακάτω.
 
 ---
 
-## Validity — when the button appears
+## Οι τρεις λειτουργίες
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+Η επιλογή στο πάνω μέρος του επεξεργαστή — **Οδηγός / Ινσουλίνη / Υδατάνθρακες** — καθορίζει **τι κάνει το κουμπί** όταν το πατάτε:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Οδηγός** — εκτελεί τον πλήρη **υπολογιστή bolus** για τους ρυθμισμένους υδατάνθρακες, με την τρέχουσα **BG, IOB, COB και τάση** σας (σύμφωνα με τις *Επιλογές υπολογισμού* παρακάτω). Χορηγεί το bolus που *υπολογίστηκε* και καταγράφει τους υδατάνθρακες. Αυτός είναι ο κλασικός Γρήγορος Οδηγός.
+- **Ινσουλίνη** — χορηγεί μια **σταθερή, προκαθορισμένη ποσότητα ινσουλίνης** που ορίζετε εσείς — χωρίς υπολογισμό.
+- **Υδατάνθρακες** — καταγράφει **μόνο τους ρυθμισμένους υδατάνθρακες**, **χωρίς bolus**.
 
 ---
 
-## Invocation points — where you use it
+## Επιλογές υπολογισμού (λειτουργία Οδηγός)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Για ένα κουμπί σε λειτουργία **Οδηγός** επιλέγετε ποια δεδομένα χρησιμοποιεί ο υπολογισμός:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Χρήση BG**, **Χρήση COB**, **Χρήση IOB** (με *Μόνο θετικό IOB*), **Χρήση τάσης** (*Όλα / Μόνο θετικά / Μόνο αρνητικά*), **Χρήση προσωρινού στόχου**, **Χρήση συναγερμού**.
+- **Ποσοστό bolus** — αλλάζει το bolus που υπολογίστηκε κατά ένα ποσοστό.
+- **Προσθήκη eCarbs** — προγραμματίζει επίσης εκτεταμένους υδατάνθρακες.
+
+![Επιλογές υπολογισμού, ποσοστό bolus και επιλογή συσκευής](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Ισχύς — πότε εμφανίζεται το κουμπί
+
+(quickwizard_validity)= Το **Έγκυρο χρονικό διάστημα** (*Από / Έως*) ορίζει **πότε** ένας Γρήγορος Οδηγός εμφανίζεται και μπορεί να χρησιμοποιηθεί. Ένα κουμπί με ρύθμιση, για παράδειγμα, **06:00–10:00** εμφανίζεται μόνο το πρωί. Έτσι ένας Γρήγορος Οδηγός *Πρωινό* δεν γεμίζει την οθόνη σας (και δεν πατιέται κατά λάθος) την ώρα του βραδινού φαγητού. Έξω από το διάστημά του, το κουμπί δεν εμφανίζεται στο φύλλο **Θεραπείες** ούτε στη [γραμμή εργαλείων QuickLaunch](QuickLaunch.md). Ένα κουμπί της γραμμής εργαλείων δεν διαγράφεται: εμφανίζεται ξανά όταν ανοίξει ξανά το διάστημα.
+
+Όταν το έγκυρο χρονικό διάστημα είναι μικρότερο από 4 ώρες, το κουμπί κρύβεται επίσης για 30 λεπτά αφού το χρησιμοποιήσετε. Έτσι το ίδιο γεύμα δεν καταχωρείται δύο φορές κατά λάθος.
+
+---
+
+## Σημεία χρήσης — πού το χρησιμοποιείτε
+
+Οι διακόπτες της **Επιλογής συσκευής** καθορίζουν πού εμφανίζεται κάθε Γρήγορος Οδηγός:
+
+- **Εμφάνιση στο τηλέφωνο** — εμφανίζεται στο **φύλλο [Θεραπείες](../Maintenance/V4Changes.md)** (με τη δόση που υπολογίστηκε να φαίνεται πάνω στο κουμπί). Ένας Γρήγορος Οδηγός που εμφανίζεται στο τηλέφωνο μπορεί επίσης να **καρφιτσωθεί ως κουμπί γρήγορης ενέργειας στην επισκόπηση**: ανοίξτε τη *Ρύθμιση QuickLaunch* (το ⚙ στη γραμμή εργαλείων [QuickLaunch](QuickLaunch.md)) και προσθέστε τον από την κατηγορία **Γρήγορος Οδηγός**.
+- **Εμφάνιση στο ρολόι** — εμφανίζεται στο **πλακίδιο Γρήγορου Οδηγού του Wear OS** (σαρώστε μέχρι αυτό στα πλακίδια του ρολογιού και πατήστε ένα κουμπί για να το εκτελέσετε — όπως ακριβώς το [πλακίδιο Σεναρίων](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+Η ενότητα **Επιλογή συσκευής** εμφανίζεται στον επεξεργαστή μόνο όταν το πρόσθετο **Wear** είναι ενεργό και η ρύθμισή του **Έλεγχος από ρολόι** είναι ενεργή. Χωρίς αυτήν, κάθε Γρήγορος Οδηγός απλώς εμφανίζεται στο τηλέφωνο.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+Στο τηλέφωνο οι Γρήγοροι Οδηγοί εμφανίζονται στο πάνω μέρος του κάτω φύλλου **Θεραπείες**:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![Γρήγοροι Οδηγοί (πάνω) στο ανοιχτό κάτω φύλλο Θεραπείες](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…και ως κουμπί γρήγορης ενέργειας στην επισκόπηση:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![Ένα κουμπί γρήγορης ενέργειας Γρήγορου Οδηγού στην επισκόπηση](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![Το πλακίδιο Γρήγορου Οδηγού σε ρολόι Wear OS](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Ένας συνδεδεμένος **client** (**AAPSClient**) μπορεί επίσης να εκτελέσει έναν Γρήγορο Οδηγό — ο **master** τον υπολογίζει και τον χορηγεί (δείτε [Έλεγχος Master ↔ Client](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Από όπου κι αν τον εκτελέσετε, το πάτημα ενός Γρήγορου Οδηγού δείχνει πάντα μια **επιβεβαίωση** πριν χορηγηθεί οτιδήποτε (την επιβεβαίωση που δημιουργεί ο master, όταν εκτελείται από client ή ρολόι).
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Ένας Γρήγορος Οδηγός απορρίπτεται όταν η δόση του είναι πάνω από το μέγιστο bolus σας, ή όταν οι υδατάνθρακες ή τα eCarbs του είναι πάνω από τους μέγιστους υδατάνθρακές σας (για παράδειγμα αφού μειώσατε το όριο). Όταν οι υδατάνθρακες είναι πάνω από το όριο, το κουμπί στο φύλλο **Θεραπείες** είναι ανενεργό. Αλλάξτε τον Γρήγορο Οδηγό ή το όριο.
 
 ---
 
-## Adding and removing
+## Προσθήκη και αφαίρεση
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Προσθήκη** — δημιουργεί έναν νέο Γρήγορο Οδηγό.
+- **⧉ Κλώνος** — δημιουργεί αντίγραφο ενός Γρήγορου Οδηγού ως σημείο εκκίνησης.
+- **🗑️ Διαγραφή** — αφαιρεί έναν Γρήγορο Οδηγό.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Με δύο ή περισσότερους Γρήγορους Οδηγούς μπορείτε επίσης να αλλάξετε τη σειρά τους στις κάρτες: πατήστε το εικονίδιο **Αναδιάταξη** (⇅) στην πάνω γραμμή, μετακινήστε την κεντρική κάρτα με τα **κουμπιά μετακίνησης ◀ / ▶** και επιβεβαιώστε με **✓**. (Τα κουμπιά είναι ίδια με την [αλλαγή σειράς των προφίλ](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+Οι Γρήγοροι Οδηγοί είναι μέρος της συγχρονισμένης διαμόρφωσης, οπότε είναι κοινοί στον master και στους συνδεδεμένους clients σας.
 
 ---
 
