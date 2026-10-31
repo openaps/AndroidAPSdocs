@@ -40,32 +40,32 @@ Verze Gradle je svázaná se zdrojovým kódem. Při stažení nebo aktualizaci 
 <table class="tg">
 <tbody>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</td>
-    <td class="tg-baqh">Mac OS 10.14 or higher</td>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
+    <th class="tg-baqh">OS (pouze 64bitový)</th>
+    <td class="tg-baqh">Windows 8 nebo novější</td>
+    <td class="tg-baqh">Mac OS 10.14 nebo novější</td>
+    <td class="tg-baqh">Jakýkoli Linux, který podporuje Gnome, KDE nebo Unity DE;&nbsp;&nbsp;GNU C knihovnu 2.31 nebo novější</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <th class="tg-baqh"><p align="center">CPU (pouze 64bitový)</th>
+    <td class="tg-baqh">CPU s architekturou x86_64; Intel Core 2. generace nebo novější, nebo CPU AMD s podporou <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Čipy ARM nebo Intel Core 2. generace či novější s podporou <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">CPU s architekturou x86_64; Intel Core 2. generace nebo novější, nebo procesor AMD s podporou AMD Virtualization (AMD-V) a SSSE3</td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">RAM</th>
     <td class="tg-baqh" colspan="3"><p align="center">16 GB nebo více</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Disk</th>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <th class="tg-baqh"><p align="center">Pevný disk</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Alespoň 30 GB volného místa. Je doporučeno SSD.</td>
   </tr>
   <tr>
-    <th class="tg-baqh"><p align="center">Resolution</th>
+    <th class="tg-baqh"><p align="center">Rozlišení</th>
     <td class="tg-baqh" colspan="3"><p align="center">Minimálně 1280 × 800 <br></td>
   </tr>
   <tr>
     <th class="tg-baqh"><p align="center">Internet</th>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Širokopásmové připojení</td>
   </tr>
 </tbody>
 </table>
@@ -150,9 +150,9 @@ Stáhněte si [aktuální verzi Android Studia](https://developer.android.com/st
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-Once the download is finished, start the downloaded application to install it on your computer. You might need to accept/confirm some warnings about downloaded apps from Windows!
+Po dokončení stahování spusťte staženou aplikaci a nainstalujte ji do počítače. Možná budete muset přijmout nebo potvrdit některá varování Windows ke staženým aplikacím!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. **Nemusíte** měnit žádná nastavení!
+Nainstalujte Android Studio klikáním na „Next“, jak ukazují následující snímky obrazovky. **Nemusíte** měnit žádná nastavení!
 
 ![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
@@ -162,47 +162,47 @@ Pokud chcete ušetřit místo na disku, můžete zrušit zaškrtnutí Android Vi
 
 ![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Now click on "Install":
+Nyní klikněte na „Install“:
 
 ![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-Once it's completed, press "Next"
+Po dokončení stiskněte „Next“
 
 ![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-In the last step, click on "Finished" to start Android Studio for the first time.
+V posledním kroku klikněte na „Finished“, aby se Android Studio poprvé spustilo.
 
 ![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
-You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+Budete dotázáni, zda chcete pomoci zlepšovat Android Studio. Vyberte možnost podle svého uvážení, na další kroky to nemá žádný vliv.
 
 ![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
-The welcome screen greets you to the installation of Android Studio. Press "Next".
+Úvodní obrazovka vás vítá v instalaci Android Studia. Stiskněte „Next“.
 
 ![Vítejte](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
 
-Select "Standard" as installation type.
+Jako typ instalace vyberte „Standard“.
 
 ![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
-Verify the settings by clicking "Next" again.
+Nastavení potvrďte dalším kliknutím na „Next“.
 
 ![Verify_Settings](../images/Building-the-App/024_DefaultInstallation.png)
 
-Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+Nyní musíte přijmout licenční smlouvy. Vlevo jsou dvě sekce (1 + 3). Vyberte je jednu po druhé a u každé vpravo zvolte „Accept“ (2 + 4).
 
-Then the "Finish" (5) button can be clicked.
+Pak můžete kliknout na tlačítko „Finish“ (5).
 
 ![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
-Some Android packages will now be downloaded and installed. Be patient and wait.
+Nyní se stáhnou a nainstalují některé balíčky Androidu. Buďte trpěliví a počkejte.
 
-When it's finished, you will find the following screen where you can select "Finish" again.
+Po dokončení uvidíte následující obrazovku, kde znovu vyberete „Finish“.
 
 ![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
-You will now see the Welcome screen of Android Studio.
+Nyní uvidíte uvítací obrazovku Android Studia.
 
 ![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
@@ -236,7 +236,7 @@ Nyní řekneme Android Studiu, odkud kód získat:
     ```
     a vložte ji do textového pole URL (3).
 
-* Zkontrolujte, že (výchozí) složka pro uložení klonovaného kódu ve vašem počítači ještě neexistuje (4). You can change it to some directory, but please remember where you stored it!
+* Zkontrolujte, že (výchozí) složka pro uložení klonovaného kódu ve vašem počítači ještě neexistuje (4). Můžete ho změnit na jinou složku, ale zapamatujte si, kam jste ho uložili!
 * Nyní spusťte klonování kódu kliknutím na tlačítko "Clone" (5).
 
 ```{admonition} INFORMATION
@@ -248,7 +248,7 @@ Nyní uvidíte obrazovku s informací, že se repozitář klonuje:
 
 ![cloning_repository](../images/Building-the-App/034_CloningProgress.png)
 
-At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Klikněte na "Trust project":
+V určitém okamžiku se Android Studio zavře a znovu spustí. Můžete být dotázáni, zda chcete projektu důvěřovat. Klikněte na "Trust project":
 
   ![Trust project](../images/Building-the-App/035_TrustProject.png)
 
@@ -274,7 +274,7 @@ Pokud volbu **New UI** nenajdete, nevadí: nové rozhraní už používáte!
 
 Až se Android Studio otevře, trpělivě počkejte (může to trvat několik minut) a hlavně projekt **neaktualizujte**, i když to navrhuje vyskakovací okno.
 
-Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
+Android Studio automaticky spustí „Gradle project sync“, který bude trvat několik minut. Můžete vidět, že (stále) běží:
 
 ![AS_download_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
@@ -289,14 +289,14 @@ Jen na počítačích s Windows: může se zobrazit oznámení, že běží Wind
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
 
-You can leave the gradle sync running and follow the next steps already.
+Synchronizaci gradle můžete nechat běžet a už pokračovat dalšími kroky.
 
 (Building-APK-set-git-path-in-preferences)=
-### Set Git path in Android Studio preferences
+### Nastavení cesty ke Gitu v předvolbách Android Studia
 
 Teď Android Studiu řekneme, kde najde Git, který jste nainstalovali [dříve](#install-git-if-you-dont-have-it).
 
-* Jen pro uživatele Windows: ujistěte se, že jste po [instalaci Gitu](#install-git-if-you-dont-have-it) restartovali počítač. If not, restart now and re-open Android Studio
+* Jen pro uživatele Windows: ujistěte se, že jste po [instalaci Gitu](#install-git-if-you-dont-have-it) restartovali počítač. Pokud ne, restartujte nyní počítač a znovu otevřete Android Studio
 
 V levém horním rohu **Android Studia** otevřete hamburger menu a přejděte na **File** > **Settings** (ve Windows) nebo **Android Studio** > **Preferences** (na Macu). Otevře se následující okno. Klikněte na rozbalovací nabídku **Version Control** (1) a vyberte **Git** (2)
 
@@ -334,7 +334,7 @@ Pro naše účely to jen znamená, že vytvoříme podpisový soubor neboli soub
 **Důležité: než budete pokračovat, ujistěte se, že synchronizace gradle (gradle sync) úspěšně skončila!**
 
 
-Click the hamburger menu on the top left to open the menu bar. Vyberte **Build** (1) a pak **Generate Signed App Bundle / APK** (2)
+Kliknutím na hamburger menu vlevo nahoře otevřete panel nabídek. Vyberte **Build** (1) a pak **Generate Signed App Bundle / APK** (2)
 
 ![Sestavení apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
@@ -351,7 +351,7 @@ Pokud chcete vytvořit apk pro hodinky, musíte teď vybrat AndroidAPS.wear!
 ```
 ![Create_key_store](../images/Building-the-App/042_CreateNewKey.png)
 
-Kliknutím na "Create new..." (2) začnete vytvářet váš "keystore" soubor (úložiště klíčů).
+Kliknutím na "Create new..." (2) začnete vytvářet své úložiště klíčů.
 
 ```{admonition} INFORMATION!
 :class: note
@@ -363,7 +363,7 @@ Pokud jste AAPS už dříve sestavovali, NEVYTVÁŘEJTE nové úložiště klí�
 
 ![Vytvořit úložiště klíčů](../images/Building-the-App/043_Keystore.png)
 
-* Click the "folder" symbol (1) to select a path on your computer for your key store.
+* Kliknutím na symbol „složky“ (1) vyberte v počítači cestu pro své úložiště klíčů.
 
   **Nepoužívejte** složku, kde máte uložený zdrojový kód, ale nějakou složku, kterou byste přenesli i do nového počítače.
 
@@ -372,9 +372,9 @@ Pokud jste AAPS už dříve sestavovali, NEVYTVÁŘEJTE nové úložiště klí�
 Poznamenejte si, kde je vaše úložiště klíčů uložené. Budete ho potřebovat, až budete sestavovat další aktualizaci AndroidAPS!
 ```
 
-* Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
+* Nyní zvolte jednoduché heslo (a poznamenejte si ho), zadejte ho do pole pro heslo (2) a potvrďte ho (2).
 
-  Heslo ke keystore souboru a uloženým klíčům nemusí být složité. Pokud v budoucnu ztratíte heslo, podívejte se na [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
+  Hesla k úložišti klíčů a ke klíči nemusí být složitá. Pokud v budoucnu ztratíte heslo, podívejte se na [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
 
 ```{warning}
 **Nepoužívejte v heslech speciální znaky.** Pro hesla k úložišti klíčů i ke klíči používejte jen písmena a číslice. Hlavně nepoužívejte `$`, zpětný apostrof (backtick), `"` ani `\`. Pokud později přejdete na [Sestavení v prohlížeči](#aaps-ci-option2) a použijete toto úložiště klíčů znovu, mohou tyto znaky způsobit selhání kroku podepisování, viz [Sestavení v prohlížeči: řešení problémů](#aaps-ci-password-special-characters).
@@ -382,21 +382,21 @@ Poznamenejte si, kde je vaše úložiště klíčů uložené. Budete ho potřeb
 
 * Výchozí alias (3) pro váš klíč je "key0", ponechte to beze změny.
 
-* Teď potřebujete heslo k vašemu klíči. Pro zjednodušení, pokud chcete, můžete použít stejné heslo jako k vašemu keystore souboru. Enter a password (4) and confirm it.
+* Teď potřebujete heslo k vašemu klíči. Pro zjednodušení můžete, pokud chcete, použít stejné heslo, jaké jste výše použili pro úložiště klíčů. Zadejte heslo (4) a potvrďte ho.
 
 ```{admonition} WARNING!
 :class: warning
 Tato hesla si poznamenejte! Budete je potřebovat, až budete sestavovat další aktualizaci AAPS!
 ```
 
-* The validity is 25 years by default, leave it as it is.
+* Platnost je ve výchozím nastavení 25 let, nechte ji tak.
 
-* Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
+* Zadejte své jméno a příjmení (5). Žádné další údaje není nutné vyplňovat, ale můžete (6–7).
 
 * Pro pokračování klikněte na "OK" (8):
 
 
-Na stránce **Generate signed App Bundle or APK** se teď zobrazí cesta k vašemu úložišti klíčů. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Klikněte na tlačítko "Next" (4):
+Na stránce **Generate signed App Bundle or APK** se teď zobrazí cesta k vašemu úložišti klíčů. Nyní znovu zadejte heslo k úložišti klíčů (1) a heslo ke klíči (2) a zaškrtněte políčko (3) pro zapamatování hesel, abyste je nemuseli zadávat při příštím sestavení apk (tj. při aktualizaci na novou verzi AAPS). Klikněte na tlačítko "Next" (4):
 
 ![Zapamatování hesel](../images/Building-the-App/044_RememberPwd.png)
 
@@ -405,7 +405,7 @@ Na další obrazovce vyberte variantu sestavení „fullRelease“ (1) a klikně
 
    ![Výběr varianty sestavení](../images/Building-the-App/045_BuildPath.png)
 
-Android Studio teď sestaví apk **AAPS**. It will show "Gradle Build running" (2) at the bottom right. Proces nějakou dobu trvá podle vašeho počítače a internetového připojení, takže **buďte trpěliví!** Pokud chcete sledovat průběh sestavení, klikněte dole v Android Studiu na malé kladívko „build“ (1):
+Android Studio teď sestaví apk **AAPS**. Vpravo dole se zobrazí „Gradle Build running“ (2). Proces nějakou dobu trvá podle vašeho počítače a internetového připojení, takže **buďte trpěliví!** Pokud chcete sledovat průběh sestavení, klikněte dole v Android Studiu na malé kladívko „build“ (1):
 
 ![Gradle běží](../images/Building-the-App/046_BuildRunning.png)
 
@@ -425,7 +425,7 @@ V oznámení klikněte na modrý odkaz "locate":
 
    ![Umístění souboru apk](../images/Building-the-App/050_LocateAPK.png)
 
-Congratulations! Teď máte soubor apk **AAPS** sestavený. V další části dokumentace ho přenesete do svého chytrého telefonu.
+Gratulujeme! Teď máte soubor apk **AAPS** sestavený. V další části dokumentace ho přenesete do svého chytrého telefonu.
 
 ```{tip}
 Pokud si myslíte, že byste v budoucnu mohli chtít používat chytré hodinky s Android Wear, je teď nejlepší chvíle sestavit apk AAPS Wear, abyste měli jistotu, že bude sladěné s vaším apk AAPS.
