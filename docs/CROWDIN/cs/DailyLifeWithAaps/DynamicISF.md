@@ -33,7 +33,7 @@ Při použití **Dynamické ISF** se hodnoty **ISF** zadané v **profilu** už v
 
 ![Dyn ISF](../images/DynamicISF/DynISF2.png)
 
-Část zakroužkovaná červeně ukazuje: `profile ISF` -> `ISF as calculated by DynISF` (ISF z profilu a ISF vypočtená pomocí DynISF). <br/> Klepnutím na tuto část se otevře dialog s dalšími informacemi, například s **ISF** použitou pro kalkulačku a absorpci sacharidů (viz [Další použití ISF](#dynisf-other-usages-of-isf) níže).
+Část zakroužkovaná červeně ukazuje: `profile ISF` -> `ISF as calculated by DynISF` (ISF z profilu a ISF vypočtená pomocí DynISF). <br/> Tapping on this section shows a dialog with additional information, such as the **ISF** used for the calculator and carbs absorption (see [Other usages of ISF](#dynisf-other-usages-of-isf) below).
 
 Hodnotu **DynISF** lze zobrazit také v grafu: klepněte na **Přidat graf** pod grafy na hlavní obrazovce a vyberte **VSEN** (proměnlivá citlivost). Zobrazuje se jako bílá čára (dole na obrázku výše).
 
@@ -134,4 +134,4 @@ Toto nastavení (*„Upravit výpočty citlivosti při použití DynamicISF“*)
   * Proměnlivý životní styl (nepravidelné jídlo nebo fyzická aktivita)
   * TDD nebo citlivost se den ode dne výrazně liší.
 * Neexistuje přesný návod, jak nastavit počáteční hodnotu **faktoru úpravy**. Jako výchozí bod ale platí: pokud jsou hodnoty ve vašem **profilu** správné, když jste v cílovém rozmezí a **glykémie** je stabilní, hodnota **DynISF** by měla být přibližně stejná jako hodnota, kterou jste předtím měli v **profilu**.<br/>Pokud vidíte, že je **Dynamická ISF** příliš agresivní, snižte **faktor úpravy**, a naopak.
-* I když **DynISF** vůbec nepoužívá **ISF z profilu**, pokud si všimnete, že se vaše citlivost velmi liší od hodnoty uložené v **profilu**, měli byste ji tam průběžně aktualizovat. To se může hodit, pokud přijdete o data **AAPS** (_např._ nový telefon, nová verze **AAPS**…), protože se pak dalších 7 dní bude jako záloha používat vaše **ISF z profilu**.
+* I když **DynISF** vůbec nepoužívá **ISF z profilu**, pokud si všimnete, že se vaše citlivost velmi liší od hodnoty uložené v **profilu**, měli byste ji tam průběžně aktualizovat. This may be useful in case you lose your **AAPS** data (_e.g._ new phone, new **AAPS** version…), as your **Profile ISF** will be used as fallback for the next 7 days.
