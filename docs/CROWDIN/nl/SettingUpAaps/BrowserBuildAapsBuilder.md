@@ -227,7 +227,10 @@ GitHub toont **Page not found** (404)? Controleer eerst of je in deze browser be
 
    Als in plaats daarvan de **GitHub-app** opent: tik op **RUN WORKFLOW**, controleer de versie en de variant, en tik nog een keer op **RUN WORKFLOW**. De app kan nog steeds **Nothing to see here** tonen: trek de lijst naar beneden om hem te vernieuwen en je build te zien. Ga daarna verder met stap 4 hieronder.
 
-2. Als GitHub erom vraagt, tik dan op de groene knop om workflows aan te zetten.
+2. If GitHub asks, tap the green button to enable workflows.
+
+   The list of workflows shows two entries: use **Build AAPS**. Ignore **AAPS Builder**: it holds the build steps and has no **Run workflow** button.
+
 3. Tik op **Run workflow**. Er opent een klein formulier:
    - **Version**: keep `latest` to build the newest AAPS release, or type a release number such as `4.0.0`.
    - **Variant**: laat `fullRelease` staan voor normaal gebruik met een pomp. De andere varianten worden uitgelegd bij [buildvarianten](#browserbuild-variant). `aapsclient3Release` bouwt **AAPSClient3**, beschikbaar vanaf **AAPS**-versie 4.0 (zie [Over AAPSClient, AAPSClient2 en AAPSClient3](#remotecontrol-aapsclient-versions)).
