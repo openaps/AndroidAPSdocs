@@ -113,8 +113,8 @@ De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 
 
 - **Bolus snelheid** bepaalt hoe snel de pomp een bolus toedient.
 - Als de optie **Reservoir wissel vastleggen** aan staat, worden de gegevens automatisch naar de careportal geüpload bij een gebeurtenis "Insulin Change" (insulinewissel).
-- Als de optie **Infuus wissel noteren** aan staat, worden de gegevens automatisch naar de careportal geüpload bij een gebeurtenis "Site Change" (infuuswissel).
-- Als de optie **Infuuswissel noteren** aan staat, worden de gegevens automatisch als notitie toegevoegd bij een gebeurtenis "Tube Change" (slangwissel).
+- Als de optie **Canulewissel noteren** aan staat, worden de gegevens automatisch naar de careportal geüpload bij een gebeurtenis "Site Change" (infuuswissel).
+- Als de optie **Slangwissel noteren** aan staat, worden de gegevens automatisch als notitie toegevoegd bij een gebeurtenis "Tube Change" (slangwissel).
 - Als de optie **Batterijwissel noteren** aan staat, worden de gegevens automatisch naar de careportal geüpload bij een gebeurtenis "Battery Change" (batterijwissel). Je kunt een batterijwissel ook zelf vastleggen met **Beheren** > **Pomp bat. wissel**. (Let op: stop alle lopende toedieningen voordat je de batterij vervangt.)
 - **Diaconn Cloud Sync** stuurt de pomplogs naar de Diaconn Cloud.
 
