@@ -1,4 +1,4 @@
-# AAPS Setup Wizard
+# Kreator konfiguracji AAPS
 
 ```{contents} In this page
 :backlinks: entry
@@ -7,7 +7,7 @@
 
 Gdy po raz pierwszy uruchomisz **AAPS**, poprowadzi cię „**Kreator konfiguracji**”. Dzięki niemu szybko ustawisz za jednym razem wszystkie podstawowe opcje aplikacji. **Kreator konfiguracji** prowadzi cię krok po kroku, abyś nie zapomniał o niczym ważnym. Na przykład **ustawienia uprawnień** są podstawą poprawnej konfiguracji **AAPS**.
 
-Nie musisz jednak skonfigurować wszystkiego za pierwszym razem w **Kreatorze konfiguracji**. Możesz łatwo wyjść z kreatora i wrócić do niego później. Po **Kreatorze konfiguracji** są trzy sposoby, aby dalej poprawić lub zmienić konfigurację. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Nie musisz jednak skonfigurować wszystkiego za pierwszym razem w **Kreatorze konfiguracji**. Możesz łatwo wyjść z kreatora i wrócić do niego później. Po **Kreatorze konfiguracji** są trzy sposoby, aby dalej poprawić lub zmienić konfigurację. Zostaną one wyjaśnione w następnej sekcji. Możesz więc pominąć niektóre punkty w kreatorze konfiguracji - łatwo skonfigurujesz je później.
 
 W trakcie i zaraz po użyciu **Kreatora konfiguracji** możesz nie zauważyć w **AAPS** żadnych dużych zmian. Aby włączyć pętlę **AAPS**, musisz przejść **Zadania** i włączać funkcje jedna po drugiej. Na końcu Kreatora konfiguracji rozpoczniesz **Zadanie 1**. To ty kontrolujesz **AAPS**, a nie odwrotnie.
 
@@ -23,9 +23,9 @@ Dlatego nie spiesz się z konfiguracją pętli. Korzyści z dobrze działającej
 
 ```{admonition} Ask for Help
 :class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
+Jeśli w dokumentacji jest błąd albo masz lepszy pomysł, jak coś wyjaśnić, możesz poprosić społeczność o pomoc, jak opisano w części [Kontakt z innymi użytkownikami](../GettingHelp/WhereCanIGetHelp.md).
 ```
-## Welcome message
+## Wiadomość powitalna
 
 Po otwarciu Kreator konfiguracji wita cię krótką wiadomością i od razu pokazuje panel „**Wymagane uprawnienia**” na dole ekranu (patrz następna sekcja).
 
@@ -33,13 +33,13 @@ Gdy przyznasz uprawnienia, panel się zamknie, a na ekranie powitalnym pojawi si
 
 ![Witaj](../images/setup-wizard/Wizard-Welcome.png)
 
-## Required permissions
+## Wymagane uprawnienia
 
 **AAPS** potrzebuje kilku uprawnień, aby działać poprawnie. Kreator zbiera je w jednym panelu „**Wymagane uprawnienia**”. Każde ma swój przycisk „**Przyznaj**”. Przyznaj je po kolei — gdy uprawnienie jest gotowe, ikona obok niego zmienia się w znacznik ✓.
 
 ![Uprawnienia](../images/setup-wizard/Wizard-Permissions.png)
 
-### Battery optimization
+### Optymalizacja baterii
 
 Zużycie baterii w smartfonach jest ważne, bo możliwości baterii są nadal dość ograniczone. Dlatego system Android w smartfonie ogranicza aplikacjom działanie i używanie procesora, a przez to baterii.
 
@@ -53,7 +53,7 @@ Naciśnij „**Przyznaj**” obok „**Optymalizacja baterii**”, a potem wybie
 
 ### Katalog AAPS
 
-**AAPS** musi zapisywać swoje ustawienia i logi w pamięci trwałej smartfona. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** musi zapisywać swoje ustawienia i logi w pamięci trwałej smartfona. Pamięć trwała oznacza, że dane będą dostępne także po ponownym uruchomieniu smartfona. Inne informacje po prostu giną, bo nie są zapisane w pamięci trwałej.
 
 Naciśnij „**Przyznaj**” obok „**Katalog AAPS**”. Otworzy się system plików telefonu. Wybierzesz w nim, gdzie **AAPS** ma zapisywać swoje dane.
 
@@ -70,9 +70,9 @@ Potwierdź przyciskiem „**ZEZWÓL**”, że chcesz dać **AAPS** dostęp do wy
 
 ![Zezwolenie na dostęp do folderu](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
-### Notifications
+### Powiadomienia
 
-Android requires special permission for apps if they want to send you notifications.
+Android wymaga specjalnego uprawnienia dla aplikacji, które chcą wysyłać Ci powiadomienia.
 
 Wyłączenie powiadomień _np._ z mediów społecznościowych to dobra rzecz, ale musisz koniecznie pozwolić **AAPS** wysyłać ci powiadomienia.
 
@@ -134,9 +134,9 @@ Wykonaj te kroki w Androidzie 16. W innych wersjach ekrany mogą się trochę r�
 
    ![settings_apps](../images/setup-wizard/app_bluetooth_allow_background_unrestrict.png)
 
-## License agreement
+## Umowa licencyjna
 
-Umowa licencyjna użytkownika końcowego zawiera ważne informacje o prawnych aspektach korzystania z **AAPS**. Please read it carefully.
+Umowa licencyjna użytkownika końcowego zawiera ważne informacje o prawnych aspektach korzystania z **AAPS**. Przeczytaj ją uważnie.
 
 Jeśli nie rozumiesz umowy licencyjnej użytkownika końcowego albo nie możesz się na nią zgodzić, w ogóle nie używaj **AAPS**!
 
@@ -164,7 +164,7 @@ Otworzy się ekran „**Ochrona aplikacji**”. Naciśnij „**Hasło główne**
 
 Wpisz to samo hasło w obu polach i naciśnij „**OK**”:
 
-![Password](../images/setup-wizard/Wizard-Password.png)
+![Hasło](../images/setup-wizard/Wizard-Password.png)
 
 Wróć strzałką w lewym górnym rogu. Kreator pokazuje teraz „**Hasło ustawione!**”:
 
@@ -172,20 +172,20 @@ Wróć strzałką w lewym górnym rogu. Kreator pokazuje teraz „**Hasło ustaw
 
 ```{admonition} Do not lose your Master Password
 :class: danger
-**NIE ZGUB SWOJEGO HASŁA GŁÓWNEGO**. Zapisz je _np._ na Dysku Google. To dobre miejsce, bo Google robi dla ciebie kopię zapasową. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+**NIE ZGUB SWOJEGO HASŁA GŁÓWNEGO**. Zapisz je _np._ na Dysku Google. To dobre miejsce, bo Google robi dla ciebie kopię zapasową. Twój smartfon lub komputer może ulec awarii, a Ty możesz nie mieć aktualnej kopii. Jeśli zapomnisz hasła głównego (Master Password), później odzyskanie konfiguracji profilu i postępu w **Zadaniach** może być trudne.
 ```
 
 Gdy skończysz, naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
 
 (setup-wizard-import-settings)=
-## Zaimportuj ustawienia
+## Importuj ustawienia
 
 Ten ekran pojawia się tylko wtedy, gdy **AAPS** znajdzie w katalogu **AAPS** wcześniej wyeksportowane ustawienia („Znaleziono zapisane ustawienia”), na przykład gdy instalujesz aplikację ponownie albo przenosisz się na nowy telefon.
 
 - Aby przywrócić poprzednią konfigurację, naciśnij „**Importuj ustawienia**” — patrz [Eksport i import ustawień](../Maintenance/ExportImportSettings.md).
 - Aby zacząć z nową konfiguracją, naciśnij „**DALEJ**” i kontynuuj w kreatorze.
 
-![Zaimportuj ustawienia](../images/setup-wizard/Wizard-ImportSettings.png)
+![Importuj ustawienia](../images/setup-wizard/Wizard-ImportSettings.png)
 
 ## Jednostki (mg/dl <-> mmol/l)
 
@@ -197,11 +197,11 @@ Wybierz, czy wartości glukozy mają być w mg/dl czy w mmol/l, a potem naciśni
 
 Tutaj ustawiasz „**Znacznik NISKI**” i „**Znacznik WYSOKI**” dla wyświetlania glukozy z sensora. Wartości glukozy między tymi dwoma znacznikami są pokazane jako „w zakresie”. Na razie możesz zostawić wartości domyślne (72 i 180 mg/dl) i zmienić je później.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Wybrane wartości wpływają tylko na wygląd wykresu i na nic więcej.
 
 Twój cel glikemii _np._ ustawiasz osobno w swoim profilu.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+Zakres do analizy TIR (czas w zakresie) ustawiasz osobno na serwerze raportów.
 
 W razie potrzeby zmień znaczniki przyciskami „−” / „+”, a potem naciśnij przycisk „**DALEJ**”:
 
@@ -229,7 +229,7 @@ Przewiń w dół, aby zobaczyć resztę listy:
 
 Możesz teraz skonfigurować kilka z nich, ale przy pierwszym uruchomieniu skupimy się tylko na serwerze raportów. Jeśli nie możesz go teraz skonfigurować, na razie go pomiń — możesz to zrobić później.
 
-W tym przykładzie jako serwera raportów używamy Nightscout. Zaznacz pole po prawej stronie „**NSClientV3**”, aby go włączyć. For Tidepool it is even simpler, as you only need your personal login information.
+W tym przykładzie jako serwera raportów używamy Nightscout. Zaznacz pole po prawej stronie „**NSClientV3**”, aby go włączyć. W przypadku Tidepool jest jeszcze prościej, bo potrzebujesz tylko swoich danych logowania.
 
 Po włączeniu naciśnij „**Ustawienia**” pod NSClientV3, aby go skonfigurować:
 
@@ -241,7 +241,7 @@ Tutaj konfigurujesz serwer raportów Nightscout. Ustawienia NSClientV3 są pokaz
 
 Naciśnij „**Adres URL strony Nightscout**” i wpisz adres swojego serwera Nightscout (adres URL, który ustawiłeś sam albo dostałeś od swojego dostawcy usługi). Potwierdź przyciskiem „**OK**”.
 
-Naciśnij „**Token dostępu do Nightscout**” i wpisz token dostępu do swojego serwera Nightscout. Without this token, access will not work. Jeśli jeszcze go nie masz, sprawdź dokumentację konfiguracji serwera raportów.
+Naciśnij „**Token dostępu do Nightscout**” i wpisz token dostępu do swojego serwera Nightscout. Bez tego tokenu dostęp nie zadziała. Jeśli jeszcze go nie masz, sprawdź dokumentację konfiguracji serwera raportów.
 
 Zostaw włączoną opcję „**Użyj websockets**”, aby mieć komunikację z Nightscout w czasie rzeczywistym.
 
@@ -283,19 +283,19 @@ Naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
 
 Tutaj wpisujesz imię osoby, która korzysta z tego telefonu. To imię odróżnia tę instancję **AAPS** od innych w raportach i podczas synchronizacji, na przykład gdy dwoje dzieci w rodzinie używa **AAPS**. Jest też używane w nazwach plików z wyeksportowanymi ustawieniami i pokazywana na zegarku.
 
-It can be anything. Możesz je później zmienić w **Ustawienia → Ogólne → Nazwa pacjenta**.
+Może to być cokolwiek. Możesz je później zmienić w **Ustawienia → Ogólne → Nazwa pacjenta**.
 
 Naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
 
 ![Nazwa](../images/setup-wizard/Wizard-Name.png)
 
-## Patient type
+## Typ pacjenta
 
-Tutaj wybierasz „Typ pacjenta”. To ważne, bo oprogramowanie **AAPS** ma różne limity zależnie od wieku pacjenta. This is important for security and safety reasons.
+Tutaj wybierasz „Typ pacjenta”. To ważne, bo oprogramowanie **AAPS** ma różne limity zależnie od wieku pacjenta. Jest to ważne ze względów bezpieczeństwa.
 
-Tutaj ustawiasz też **maksymalny dozwolony bolus** na posiłek. That is, the largest bolus you need to give to cover your typical meals. To funkcja bezpieczeństwa. Pomaga uniknąć przypadkowego przedawkowania, gdy podajesz bolus na posiłek.
+Tutaj ustawiasz też **maksymalny dozwolony bolus** na posiłek. Czyli największy bolus, którego potrzebujesz na typowe posiłki. To funkcja bezpieczeństwa. Pomaga uniknąć przypadkowego przedawkowania, gdy podajesz bolus na posiłek.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+Drugi limit działa podobnie, ale dotyczy maksymalnej ilości węglowodanów, jaką zamierzasz zjeść.
 
 Po ustawieniu tych wartości naciśnij „**DALEJ**”, aby przejść do następnego ekranu:
 
@@ -333,13 +333,13 @@ Jeśli sparowane urządzenie opiekuna (_np._ inny telefon) zmieniło konfiguracj
 
 Naciśnij ikonę zapisu (prawy górny róg), a potem naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
 
-## Blood sugar source
+## Źródło BG
 
 Tutaj wybierasz, skąd **AAPS** pobiera dane o glukozie. Przeczytaj dokumentację swojego [źródła BG](../Getting-Started/CompatiblesCgms.md).
 
 Dostępnych jest wiele źródeł — przewiń listę i wybierz to, którego używasz:
 
-![BG Source](../images/setup-wizard/Wizard-BGSource.png)
+![Źródło BG](../images/setup-wizard/Wizard-BGSource.png)
 
 Gdy wybierzesz źródło, jego karta się rozwinie i pokaże dwa przyciski: „**Ustawienia**”, aby dostosować odbieranie danych, oraz „**Otwórz wtyczkę**”, aby otworzyć ekran tego źródła. W przykładzie poniżej wybrane jest **BYODA**. Niektóre źródła nie wymagają teraz żadnej konfiguracji, więc zwykle możesz od razu przejść do następnego ekranu:
 
@@ -350,13 +350,13 @@ Po dokonaniu wyboru naciśnij „**DALEJ**”, aby przejść do następnego ekra
 (setup-wizard-profile)=
 ## Profil
 
-Now we are entering a very important part of the Setup Wizard.
+Teraz zaczynamy bardzo ważną część kreatora konfiguracji.
 
 Zanim wpiszesz dane profilu na następnym ekranie, przeczytaj dokumentację o [profilach](../SettingUpAaps/YourAapsProfile.md).
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-Dokładny profil jest konieczny, aby **AAPS** działało bezpiecznie.
+Dokładny profil jest konieczny, aby **AAPS** działał bezpiecznie.
 
 Musisz ustalić swój profil i omówić go z lekarzem. Musi on też być sprawdzony w udanych testach dawki bazowej, ISF i IC!
 
@@ -371,7 +371,7 @@ Edytor otwiera się pusty („Brak wpisów”). Naciśnij przycisk „**+**” n
 
 ![Pusty profil](../images/setup-wizard/Wizard-Profile-Empty.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+W dłuższym czasie możesz mieć kilka profili, jeśli zajdzie taka potrzeba. Tutaj tworzymy tylko jeden.
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: note
@@ -402,7 +402,7 @@ Naciśnij „**CEL**” i wpisz swoje docelowe wartości glikemii.
 
 Przy otwartej pętli ten cel może być szerszym zakresem. W przeciwnym razie **AAPS** ciągle powiadamia cię o zmianie dawki bazy tymczasowej lub innego ustawienia, co może być męczące.
 
-Later, for closed looping, you will generally have only one value for top and bottom. Dzięki temu **AAPS** łatwiej osiąga cel i daje ci lepszą ogólną kontrolę cukrzycy.
+Później, przy zamkniętej pętli, zwykle będziesz mieć tylko jedną wartość dla górnego i dolnego celu. Dzięki temu **AAPS** łatwiej osiąga cel i daje ci lepszą ogólną kontrolę cukrzycy.
 
 ![CEL](../images/setup-wizard/Wizard-Profile-TARG.png)
 
@@ -438,13 +438,13 @@ Później nauczysz się używać tego ogólnego okna w sytuacjach takich jak cho
 
 Twój profil jest teraz aktywny. Naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
 
-## Insulin pump
+## Pompa insulinowa
 
 Teraz wybierasz swoją pompę insulinową. Przeczytaj dokumentację swojej [pompy insulinowej](../Getting-Started/CompatiblePumps.md).
 
 Przewiń listę i wybierz swoją pompę. W tym przykładzie używamy „**Pompa wirtualna**”. Przydaje się, gdy jeszcze się uczysz i nie masz podłączonej prawdziwej pompy:
 
-![Pump](../images/setup-wizard/Wizard-Pump.png)
+![Pompa](../images/setup-wizard/Wizard-Pump.png)
 
 Obsługiwanych jest wiele pomp — przewiń w dół, aby znaleźć swoją:
 
@@ -456,13 +456,13 @@ Gdy wybierzesz prawdziwą pompę, **AAPS** poprosi o potwierdzenie, bo skopiuje 
 
 Jeśli wybrana pompa komunikuje się przez Bluetooth, **AAPS** po zakończeniu kreatora poprosi o uprawnienie do łączenia z urządzeniami w pobliżu (patrz [Uprawnienie Bluetooth](#bluetooth-permission)).
 
-Jeśli masz już skonfigurowany profil i wiesz, jak połączyć pompę, możesz ją połączyć teraz. W przeciwnym razie na razie zostaw **Pompa wirtualna** — możesz to zmienić w każdej chwili albo wyjść z Kreatora konfiguracji strzałką w lewym górnym rogu i pozwolić, aby **AAPS** najpierw pokazało ci kilka wartości glikemii.
+Jeśli masz już skonfigurowany profil i wiesz, jak połączyć pompę, możesz ją połączyć teraz. W przeciwnym razie na razie zostaw **Pompa wirtualna** — możesz to zmienić w każdej chwili albo wyjść z Kreatora konfiguracji strzałką w lewym górnym rogu i pozwolić, aby **AAPS** najpierw pokazał ci kilka wartości glikemii.
 
 Naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
 
-## APS algorithm
+## Algorytm APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Mimo nazwy funkcja SMB algorytmu jest wyłączona, dopóki nie poznasz AAPS i nie przejdziesz pierwszych zadań. OpenAPS SMB jest nowszy i ogólnie lepszy niż OpenAPS AMA.
+Jako algorytm APS użyj algorytmu OpenAPS SMB. Mimo nazwy funkcja SMB algorytmu jest wyłączona, dopóki nie poznasz AAPS i nie przejdziesz pierwszych zadań. OpenAPS SMB jest nowszy i ogólnie lepszy niż OpenAPS AMA.
 
 SMB jest na początku wyłączony, bo funkcja SMB szybciej reaguje na wzrost glikemii: podaje Super Mikro Bolus zamiast zwiększać procent dawki bazowej. Na początku twój profil zwykle nie jest tak dobry jak po zdobyciu doświadczenia, dlatego ta funkcja jest najpierw wyłączona.
 
@@ -495,7 +495,7 @@ Gdy naciśniesz „**Ustawienia**”, możesz przejrzeć ustawienia wchłaniania
 
 Naciśnij „**DALEJ**”, aby przejść do następnego ekranu.
 
-## Start Objective 1
+## Rozpocznij Zadanie 1
 
 Teraz zaczynasz Zadania — dzięki nim uzyskasz dostęp do kolejnych funkcji **AAPS**.
 
@@ -503,7 +503,7 @@ Naciśnij „**Otwórz Zadania**”:
 
 ![Zadania](../images/setup-wizard/Wizard-Objectives.png)
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective. But this is the start.
+Tutaj rozpoczynamy Zadanie 1, nawet jeśli w tej chwili konfiguracja nie jest jeszcze gotowa, aby to Zadanie ukończyć. Ale to jest początek.
 
 Naciśnij przycisk „**Start**” obok „**Zadanie 1.**”:
 
@@ -531,7 +531,7 @@ Po zakończeniu Kreatora konfiguracji ekran główny **AAPS** pokaże panel „*
 
 ![Bluetooth – Przyznaj](../images/setup-wizard/Wizard-Bluetooth-Permission.png)
 
-Wybierz „**Zezwól**”, aby **AAPS** mogło znaleźć twoją pompę i się z nią połączyć:
+Wybierz „**Zezwól**”, aby **AAPS** mógł znaleźć twoją pompę i się z nią połączyć:
 
 ![Bluetooth – Zezwól](../images/setup-wizard/Wizard-Bluetooth-Allow.png)
 
