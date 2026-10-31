@@ -21,7 +21,7 @@
 
 ## Актуализиране на AAPS с Android Studio
 
-Следвайте [тези инструкции.](./UpdateComputerBuild.md).
+Follow [these instructions](./UpdateComputerBuild.md).
 
 ## Актуализиране на AAPS от командния ред
 
