@@ -50,7 +50,7 @@ Používateľ nastavil **Automatizáciu**, ktorá o 5:00 spustí „Dočasný ci
 
 1. Ako každá technika, aj **CGM**, **pumpy** a telefóny môžu zlyhať: technické problémy alebo chyby senzora môžu narušiť akcie **Automatizácie** a môže byť potrebný ručný zásah.
 
-1. **Požiadavky na **automatizácie** sa pravdepodobne zmenia, keď sa zmení váš denný režim**. Pri prechode medzi obdobím práce, školy a dovolenky si v kalendári nastavte pripomienku, aby ste skontrolovali, ktoré **Automatizácie** sú práve aktívne (dajú sa ľahko zapnúť aj vypnúť). Napríklad keď idete na dovolenku a už nepotrebujete automatizáciu pre školský šport alebo denné cvičenie, alebo keď treba upraviť časy.
+1. **Requirements for Automations are likely to change as routines change**. Pri prechode medzi obdobím práce, školy a dovolenky si v kalendári nastavte pripomienku, aby ste skontrolovali, ktoré **Automatizácie** sú práve aktívne (dajú sa ľahko zapnúť aj vypnúť). Napríklad keď idete na dovolenku a už nepotrebujete automatizáciu pre školský šport alebo denné cvičenie, alebo keď treba upraviť časy.
 
 1. **Automatizácie** môžu byť navzájom v rozpore. Preto je dobré každé nové nastavenie **Automatizácie** starostlivo skontrolovať v bezpečnom prostredí a pochopiť, prečo sa **Automatizácia** spustila alebo nespustila tak, ako ste očakávali.
 
