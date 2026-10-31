@@ -261,7 +261,7 @@ For this reason, step-by-step instructions cannot be written yet. This section w
 - Your installed **AAPS** app, your settings and your [objectives](CompletingTheObjectives.md).
 - Phones without Google services, and [ADB installations](#android-developer-verification-adb) in general.
 
-## Where to get help
+## Де отримати допомогу
 
 1. **Read** Google's [developer verification FAQ](https://developer.android.com/developer-verification/guides/faq) for questions about the verification itself.
 2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md), if an installation is blocked.
