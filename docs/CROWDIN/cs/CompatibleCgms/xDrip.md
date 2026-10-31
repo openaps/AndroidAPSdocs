@@ -66,7 +66,7 @@ Nezapomeňte vypnout Import Sounds, aby xDrip nevydával vyzváněcí tón poka�
 - Pokud chcete kalibrovat pomocí AAPS, jděte v xDrip do Settings → Interapp Compatibility → Accept Calibrations a zvolte ON. 
 - Můžete také zkontrolovat možnosti v Settings → Less Common Settings → Advanced Calibration Settings.
 
-## Dexcom sensors
+## Senzory Dexcom
 
 Vše, co se týká samotného senzoru a vysílače Dexcom (spuštění, zastavení, výměna, kalibrace, řešení problémů), je popsáno a průběžně aktualizováno v [dokumentaci xDrip pro Dexcom](https://navid200.github.io/xDrip/docs/Dexcom_page.html). Pro senzor se řiďte těmito pokyny; jediná část specifická pro AAPS je nastavení propojení xDrip s **AAPS** (popsané výše na této stránce).
 
