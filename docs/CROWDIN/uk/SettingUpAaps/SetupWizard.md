@@ -70,7 +70,7 @@ Confirm with "**ALLOW**" that you wish to grant access to **AAPS** to the select
 
 ![Allow access to the folder](../images/setup-wizard/Wizard-Permissions-Directory-Allow.png)
 
-### Notifications
+### Сповіщення
 
 Android requires special permission for apps if they want to send you notifications.
 
