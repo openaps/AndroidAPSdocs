@@ -1,42 +1,42 @@
-# Update to a new version or branch
+# Atualizar para uma nova versão ou branch
 
-## Construa você em vez de fazer download
+## Compilar em vez de transferir
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
+O **AAPS** não está disponível para transferência, devido às regras sobre dispositivos médicos. É legal compilar a app para uso próprio, mas não pode dar uma cópia a outras pessoas! Veja a [página FAQ](../UsefulLinks/FAQ.md) para mais detalhes.
 
 ## Notas importantes
 
-- Please update to the new version of **AAPS** as soon as possible after a new release is available.
-- When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-- The new version will also be announced on Facebook at the time of release.
-- Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-- Do not forget to export your **AAPS'** settings.
+- Atualize para a nova versão do **AAPS** o mais cedo possível depois de sair uma nova versão.
+- Quando houver uma nova versão, recebe na própria app **AAPS** uma faixa de informação sobre a nova versão.
+- A nova versão também é anunciada no Facebook no momento da publicação.
+- Depois da publicação, leia as [Notas das Versões](ReleaseNotes.md) com atenção e esclareça as suas dúvidas com a comunidade no Facebook ou no Discord antes de fazer a atualização.
+- Não se esqueça de exportar as definições do **AAPS**.
 
-## Update AAPS with browser build
+## Atualizar o AAPS com a compilação no navegador
 
-You already built your AAPS app with a browser? Follow the instructions for the method you used:
+Já compilou a sua app AAPS com um navegador? Siga as instruções do método que usou:
 
-- **AAPS Builder** (your private repository, usually named `my-aaps`): [Updating AAPS with AAPS Builder](#aaps-builder-updates). There is no fork to sync.
-- **Fork and preparation file** (your own copy of AndroidAPS): [Update with a browser (fork)](./UpdateBrowserBuild.md).
+- **AAPS Builder** (o seu repositório privado, normalmente chamado `my-aaps`): [Atualizar o AAPS com o AAPS Builder](#aaps-builder-updates). Não há fork para sincronizar.
+- **Fork e ficheiro de preparação** (a sua própria cópia do AndroidAPS): [Atualizar com um navegador (fork)](./UpdateBrowserBuild.md).
 
-## Update AAPS with Android Studio
+## Atualizar o AAPS com o Android Studio
 
-Follow [these instructions](./UpdateComputerBuild.md).
+Siga [estas instruções](./UpdateComputerBuild.md).
 
-## Update AAPS with the command-line
+## Atualizar o AAPS com a linha de comandos
 
-Use the [same instructions](../SettingUpAaps/CLIBuild.md) as when building AAPS previously, but pull new changes with git.
+Use as [mesmas instruções](../SettingUpAaps/CLIBuild.md) da compilação anterior do AAPS, mas obtenha as novas alterações com o git.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-### Check AAPS version on phone
+### Verifique a versão do AAPS no telefone
 
-Check in the [Release Notes](../Maintenance/ReleaseNotes.md) if there are any specific instructions after update.
+Veja nas [Notas das Versões](../Maintenance/ReleaseNotes.md) se há instruções específicas depois da atualização.
 
-After you installed the new apk:
+Depois de instalar o novo apk:
 
-- you can check the **AAPS'** version on your phone by opening the **menu** (☰) on the top left and then **About** (as per the screenshot below). The **AAPS'** current version can be viewed;
-- ensure import settings have been actioned; and
-- please check your **AAPS'** settings under **Settings** and ensure these remain accurate.
+- pode ver a versão do **AAPS** no seu telefone: abra o **menu** (☰) no canto superior esquerdo e depois **Sobre** (como na captura de ecrã abaixo). Pode ver a versão atual do **AAPS**;
+- confirme que as definições foram importadas; e
+- verifique as definições do **AAPS** em **Definições** e confirme que continuam corretas.
 
-![About dialog with the AAPS version installed](../images/about_dialog_version.png)
+![Janela Sobre com a versão do AAPS instalada](../images/about_dialog_version.png)
