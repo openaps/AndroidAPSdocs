@@ -27,7 +27,7 @@ Autotune can be run three ways: manually as a one-off from within the plugin (as
 
 在手機的 [AAPS 目錄](#preferences-maintenance-settings) 下的 `extra` 子資料夾中，建立一個名為 `enable_autotune` 的空白檔案。
 
-***注意：請在 **AAPS** 設定中確認你的 AAPS 目錄位置，並確定你把檔案放在正確的目錄裡。已有多人因把檔案放錯資料夾而受影響。***
+***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
 
 ![啟用 Autotune](../images/Autotune/Autotune_0.png)
 
@@ -97,11 +97,11 @@ Tap **Open plugin** on the **Autotune** card to open the Autotune screen:
 
 - 如果你想用 Autotune 結果替換你的輸入設定檔，點擊「更新輸入設定檔」按鈕並在彈出視窗中點擊 OK 確認。
 
-  - 注意：如果你在「更新輸入設定檔」後點擊「啟用設定檔」，那麼你將啟用更新後的設定檔，而不是預設的「調整後」設定檔。
+  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
 
   ![Autotune 更新輸入設定檔。](../images/Autotune/Autotune_9.png)
 
-- 如果你已更新你的輸入設定檔，那麼「更新輸入設定檔」按鈕將被「還原輸入設定檔」按鈕替代（參見下圖）。 You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. 你也可以使用此按鈕恢復未包含 Autotune 結果的輸入設定檔。
+- 如果你已更新你的輸入設定檔，那麼「更新輸入設定檔」按鈕將被「還原輸入設定檔」按鈕替代（參見下圖）。 You can that way immediately see if your current input profile in **Manage → Profile** already includes the result of last run or not. You also have the possibility to recover your input profile without autotune result with this button
 
   ![Autotune 更新輸入設定檔。](../images/Autotune/Autotune_10.png)
 
@@ -157,7 +157,7 @@ The **Auto switch profile** feature is only available in Dev/Engineering mode.
 
 - If you tap the **eye** icon on the right of the **Number of days of data** field, you will see the day selection. 你可以指定 Autotune 計算應包含哪些星期幾（在下方截圖中可以看到「工作日」的範例，週六和週日被排除在 Autotune 計算之外）。
   - If the number of days included in Autotune calculation is lower than the **Number of days of data**, then you will see how many days will be included on the right of the days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
+  - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
 
   ![Autotune 預設畫面](../images/Autotune/Autotune_14b.png)
 
