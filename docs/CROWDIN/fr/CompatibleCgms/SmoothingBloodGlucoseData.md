@@ -1,16 +1,16 @@
 # Lissage des données de glycémie
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Si les données de **glycémie** sautent ou sont bruitées, **AAPS** peut doser l'insuline de façon incorrecte et provoquer des hyperglycémies ou des hypoglycémies. Si vous voyez des erreurs ou si les données de votre MGC sautent, il est important de désactiver la boucle jusqu'à ce que le problème soit résolu. Selon votre MGC, ces problèmes peuvent venir de la configuration du MGC dans **AAPS** (voir plus bas) ou d'un problème au site du capteur MGC (il peut alors falloir remplacer le capteur MGC).
 
 ## Smoothing data within AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** offre la possibilité de lisser les données dans **AAPS** plutôt que dans l'application du MGC. Ouvrez le **menu** (☰), sélectionnez [**Configuration**](../SettingUpAaps/ConfigBuilder.md), puis **Lissage**. Il y a quatre options, et une seule peut être active à la fois : **Pas de lissage**, **Lissage Exponentiel**, **Lissage moyen** et **Filtre de Kalman Unscented**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Configuration > Lissage](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponential smoothing
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+En général, c'est l'option conseillée pour commencer, car c'est elle qui corrige le bruit de la façon la plus forte et elle réécrit la valeur la plus récente. Cependant, consultez le tableau ci-dessous pour d'autres recommandations précises.
 
 ### Average smoothing
 
@@ -18,27 +18,27 @@ This option works similar to back smoothing that was previously implemented on c
 
 ### No Smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Utilisez cette option seulement si les données de votre MGC sont déjà bien lissées par votre application de collecte avant d'être transmises à **AAPS**.
 
-### Unscented Kalman Filter (UKF)
+### Filtre de Kalman Unscented (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Cette option utilise un modèle statistique pour estimer en continu votre vraie valeur de glycémie et sa vitesse de variation à partir des valeurs reçues (qui peuvent être bruitées). Elle s'adapte automatiquement au niveau de bruit actuel de votre capteur. Elle détecte aussi et rejette les valeurs soudaines et aberrantes. C'est une alternative plus avancée au lissage exponentiel et au lissage moyen. Elle est utile si vous voulez que le lissage s'adapte lui-même au niveau de bruit variable de votre capteur, au lieu d'utiliser une méthode fixe.
 
 (smoothing-xdrip-dexcom-g6)=
 
 ## Suggestions to use smoothing
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Vous pouvez aussi changer la méthode de lissage automatiquement, par exemple selon l'âge du capteur, avec l'[action d'automatisation](#automations-automation-action) **Changer le lissage**.
 
 |               | Exponential |  Average  | No Smoothing |
 | ------------- |:-----------:|:---------:|:------------:|
 | G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+| G7/ONE+/Stelo |  If noisy   | Si stable |              |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Les capteurs Libre sont bruités et peuvent avoir besoin d'un lissage. Avec la connexion directe xDrip, ou avec la source de données application patchée (qui reçoit les données d'une autre application, Juggluco compris), [le lissage est déjà fait dans l'application](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| Capteur / Source de données | Juggluco | xDrip direct | xDrip bridge | xDrip application patchée |
+| --------------------------- |:--------:|:------------:|:------------:|:-------------------------:|
+| Libre 1/14 jours/Pro        |   N.A.   |     N.A.     |   Average    |           N.A.            |
+| Libre 2/2+ (UE)             | Average  |     None     |   Average    |           None            |
+| Libre 2/2+/3/3+             | Average  |     N.A.     |     N.A.     |           None            |
