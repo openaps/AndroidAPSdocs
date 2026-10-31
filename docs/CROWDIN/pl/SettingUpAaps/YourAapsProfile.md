@@ -34,13 +34,13 @@ Poniżej są zrzuty ekranu **AAPS** z _przykładowym_ profilem. Uwaga: poniższy
 ![Przykładowy aktywny profil](../images/Profile-Example-Active.png)
 
 (profile-glucose-targets)=
-## Glucose targets
+## Cele glikemii
 
 ### Opis
 
 Twój **cel BG** to podstawowa wartość i wszystkie obliczenia **AAPS** są na nim oparte. Różni się on od zakresu docelowego, w którym zwykle chcesz utrzymywać glikemię. Cel jest używany w obliczeniach **AAPS**: jeśli **AAPS** przewiduje, że Twoja **BG** wyjdzie poza zakres celu, podejmie działania, aby przywrócić ją do tego zakresu.
 
-The targets can be defined within those boundaries :
+Cele można ustawić w tych granicach:
 
 |          | _Dolny_ cel             | _Górny_ cel               |
 | -------- | ----------------------- | ------------------------- |
@@ -57,25 +57,25 @@ Jeśli cel w Twoim **Profilu** jest bardzo szeroki (np. 3 mmol/l lub więcej [50
 
 ![Cel](../images/Profile_Target.png)
 
-Cele **BG** ustawiasz według własnych preferencji i potrzeb. Na przykład, jeśli boisz się hipoglikemii w nocy, możesz ustawić cel nieco wyżej, na 117 mg/dl (6,5 mmol/l), od 21:00 do 7:00. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am.
+Cele **BG** ustawiasz według własnych preferencji i potrzeb. Na przykład, jeśli boisz się hipoglikemii w nocy, możesz ustawić cel nieco wyżej, na 117 mg/dl (6,5 mmol/l), od 21:00 do 7:00. Jeśli chcesz mieć rano dużo aktywnej insuliny (IOB) przed bolusem na śniadanie, możesz ustawić niższy cel 81 mg/dl (4,5 mmol/l) od 7:00 do 8:00.
 
 W trybie [Otwarta pętla](#KeyAapsFeatures-OpenLoop), szczególnie podczas [pierwszych zadań](../SettingUpAaps/CompletingTheObjectives.md), szeroki zakres celu może być dobrym wyborem, gdy uczysz się, jak działa **AAPS**, i dostosowujesz swój **Profil**.<br/> W trybie [Zamknięta pętla](#KeyAapsFeatures-ClosedLoop) (od **[Zadania 6](#objectives-objective6)**) zalecamy zmniejszać zakres, aż będziesz mieć jeden cel dla każdej pory dnia (_Dolny_ cel = _Górny_ cel). Dzięki temu **AAPS** szybko reaguje na wahania **BG**.
 
 (your-aaps-profile-basal-rates)=
 
-## Basal rates
+## Dawki bazowe
 
 ### Opis
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Dawka bazowa insuliny (jednostki/godz.) zapewnia insulinę w tle i utrzymuje stały poziom glukozy, gdy nie jesz i nie ćwiczysz.
 
-The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. Więcej informacji znajdziesz w rozdziale 6 książki [„Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) Gary'ego Scheinera.
+Pompa insulinowa co kilka minut podaje małe ilości szybko działającej insuliny, aby wątroba nie uwalniała zbyt dużo glukozy i aby glukoza mogła wejść do komórek ciała. Insulina bazowa stanowi zwykle 40–50% całkowitej dawki dobowej (TDD), zależnie od diety, i zwykle ma rytm dobowy, z jednym szczytem i jednym dołkiem zapotrzebowania na insulinę w ciągu 24 godzin. Więcej informacji znajdziesz w rozdziale 6 książki [„Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) Gary'ego Scheinera.
 
 Większość edukatorów diabetologicznych (i osób z cukrzycą typu 1!) zgadza się, że najpierw trzeba dobrze ustawić dawki bazowe, a dopiero potem optymalizować ISF i ICR.
 
 ### Wpływ
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low.
+Dobrze ustawione dawki bazowe pozwalają budzić się w zakresie i pominąć posiłek - albo zjeść wcześniej lub później w ciągu dnia - bez wysokiej lub niskiej glikemii.
 
 Za wysoka dawka bazowa może prowadzić do niskich glikemii. I odwrotnie.
 
@@ -89,7 +89,7 @@ I odwrotnie: za niska dawka bazowa może prowadzić do wysokich glikemii i braku
 
 **Rysunek poniżej** pokazuje przykład, jak można ustawić dawki bazowe w profilu **AAPS**.
 
-![Basal rates](../images/Profile_BasalRates.png)
+![Dawki bazowe](../images/Profile_BasalRates.png)
 
 Dawki bazowe ustawia się metodą prób i błędów, w porozumieniu z zespołem diabetologicznym.
 
@@ -121,11 +121,11 @@ Edytor profilu pozwala zaczynać dawki bazowe tylko o pełnej godzinie. Dawka ba
 
 (your-aaps-profile-insulin-sensitivity-factor)=
 
-## Insulin sensitivity factor (ISF)
+## Współczynnik wrażliwości na insulinę (ISF)
 
 ### Opis
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+Współczynnik wrażliwości na insulinę (ISF), czasem nazywany współczynnikiem korekty, mówi, o ile 1 jednostka insuliny obniży poziom glukozy we krwi.
 
 **W jednostkach mg/dl:** Jeśli Twój **ISF** wynosi 40, każda jednostka insuliny obniży glikemię o ok. 40 mg/dl (na przykład glikemia spadnie ze 140 mg/dl do 100 mg/dl).
 
@@ -139,7 +139,7 @@ Z tych przykładów widać, że im _mniejsza_ wartość **ISF**, tym mniej jeste
 
 **Wyższy / słabszy ISF** (np. 45 zamiast 35) oznacza, że jedna jednostka insuliny obniża **BG** bardziej. To prowadzi do mniej agresywnej / słabszej korekty przez pętlę, z **mniejszą ilością insuliny**. Jeśli Twój **ISF** jest za słaby (duża wartość), może to prowadzić do wysokiej **BG**.
 
-**Example:**
+**Przykład:**
 * **BG** wynosi 190 mg/dl (10,5 mmol/l), a cel to 100 mg/dl (5,6 mmol/l).
 * Potrzebujesz więc korekty o `190 - 110 = 90 mg/dL` lub `10,5 - 5,6 = 4.9 mmol/L`
 * Jeśli `ISF = 30` -> `90 / 30 = 3` lub `ISF = 1.63` -> `4.9 / 1.63 = 3`: 3 jednostki insuliny
@@ -157,7 +157,7 @@ Na **rysunku poniżej** zobaczysz przykład, jak można ustawić wartości ISF w
 
 ![ISF w profilu](../images/Profile_ISF.png)
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. Więcej szczegółów znajdziesz w rozdziale 7 książki [„Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) Gary'ego Scheinera.
+Prostym punktem wyjścia do ustalenia dziennego ISF jest całkowita dawka dobowa (TDD) i reguła 1700 (94). Więcej szczegółów znajdziesz w rozdziale 7 książki [„Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) Gary'ego Scheinera.
 
 | 1700 (gdy mierzysz w mg/dl) lub 94 (mmol/l) / TDD = ok. ISF.<br/><br/>Przykład: TDD = 40 U<br/>Ok. ISF (mg/dl) = 1700/40 = 43<br/>Ok. ISF (mmol/l) = 94/40 = 2,4 |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -171,7 +171,7 @@ Uważaj, bo często jest on ustawiony za nisko. Za nisko oznacza, że 1 U obniż
 
 (your-aaps-profile-insulin-to-carbs-ratio)=
 
-## Insulin to Carb ratio (ICR)
+## Współczynnik insulina/węglowodany (ICR)
 
 ### Opis
 
@@ -179,9 +179,9 @@ Uważaj, bo często jest on ustawiony za nisko. Za nisko oznacza, że 1 U obniż
 
 Niektórzy używają też skrótu **I:C** zamiast **ICR** albo mówią o przeliczniku węglowodanów: **CR**.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Na przykład współczynnik insulina/węglowodany 1 do 10 (1:10) oznacza, że bierzesz 1 U insuliny na każde 10 gramów zjedzonych węglowodanów. Posiłek z 25 g węglowodanów wymagałby 2,5 U insuliny.
 
-Jeśli Twój **ICR** jest słabszy (wyższa wartość), np. 1:20, potrzebujesz tylko 0,5 U insuliny na 10 g węglowodanów. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Jeśli Twój **ICR** jest słabszy (wyższa wartość), np. 1:20, potrzebujesz tylko 0,5 U insuliny na 10 g węglowodanów. Posiłek z 25 g węglowodanów wymagałby 25/20 = 1,25 U insuliny.
 
 Często **ICR** jest różny o różnych porach dnia, z powodu poziomu hormonów i aktywności fizycznej. Wiele osób ma najniższy/najsilniejszy **ICR** w porze śniadania, bo wtedy są bardziej insulinooporne. Na przykład **ICR** pewnej dorosłej osoby może wynosić 1:8 na śniadanie, 1:10 na obiad i 1:10 na kolację. Te wzorce nie są jednak takie same u wszystkich – niektórzy są bardziej insulinooporni wieczorem i wtedy potrzebują silniejszego/mniejszego **ICR**.
 
@@ -193,7 +193,7 @@ Często **ICR** jest różny o różnych porach dnia, z powodu poziomu hormonów
 > 
 > Przy **ICR** ilość insuliny jest stała, a ilość węglowodanów zmienna. („Ile g węglowodanów pokrywa jedna jednostka insuliny?”)
 > 
-> Example:
+> Przykład:
 > 
 > Przelicznik WW (WW = 12 g węglowodanów): 2,4 U/WW -> Potrzebujesz 2,4 jednostki insuliny, gdy jesz jeden wymiennik węglowodanowy.
 > 
@@ -226,11 +226,11 @@ Jeśli dawki bazowe są poprawne, możesz to sprawdzić tak: upewnij się, że *
 :local: true
 ```
 
-### About the importance of getting your profile right
+### Dlaczego dobre ustawienie profilu jest ważne
 
 **Dlaczego warto dobrze ustawić profil? Czy pętla nie może po prostu sama się tym zająć?**
 
-Hybrydowa zamknięta pętla _może_ próbować dostosować podawanie insuliny, aby zmniejszyć złą kontrolę glikemii wynikającą z błędnych wartości **Profilu**. It can do this, for example, by withholding insulin delivery if you are going to hypo. Jednak możesz osiągnąć dużo lepszą kontrolę glikemii, jeśli ustawienia **Profilu** są już jak najbliższe temu, czego potrzebuje Twój organizm. To jeden z powodów, dla których **AAPS** używa kolejnych zadań, aby przejść od pompy w otwartej pętli do hybrydowej zamkniętej pętli. Poza tym będą sytuacje, gdy musisz otworzyć pętlę (rozgrzewanie sensora, awaria sensora _itp._), czasem w środku nocy. Wtedy chcesz mieć dobre ustawienia.
+Hybrydowa zamknięta pętla _może_ próbować dostosować podawanie insuliny, aby zmniejszyć złą kontrolę glikemii wynikającą z błędnych wartości **Profilu**. Może to robić na przykład wstrzymując podawanie insuliny, gdy grozi Ci hipoglikemia. Jednak możesz osiągnąć dużo lepszą kontrolę glikemii, jeśli ustawienia **Profilu** są już jak najbliższe temu, czego potrzebuje Twój organizm. To jeden z powodów, dla których **AAPS** używa kolejnych zadań, aby przejść od pompy w otwartej pętli do hybrydowej zamkniętej pętli. Poza tym będą sytuacje, gdy musisz otworzyć pętlę (rozgrzewanie sensora, awaria sensora _itp._), czasem w środku nocy. Wtedy chcesz mieć dobre ustawienia.
 
 Jeśli zaczynasz z **AAPS** po używaniu innego systemu pompowego z otwartą lub zamkniętą pętlą, to już mniej więcej wiesz, jakich wartości użyć dla dawek bazowych (**BR**), współczynników wrażliwości na insulinę (**ISF**) i współczynników insulina/węglowodany (**ICR**).
 
