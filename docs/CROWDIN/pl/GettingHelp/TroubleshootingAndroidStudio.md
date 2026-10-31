@@ -57,9 +57,9 @@ Sklonuj źródła ponownie, jak opisano w dokumentacji, i nie zezwalaj na aktual
 
   * [Sprawdź instalację Git](#BuildingAaps-steps-for-installing-git)
 
-  * Jeśli używasz Windows i Git został właśnie zainstalowany, uruchom ponownie komputer, aby Git był dostępny w całym systemie
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * Jeśli Git jest zainstalowany, ponownie uruchomiłeś komputer (w Windows), a Git nadal nie jest znaleziony:
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * Wyszukaj na komputerze plik „git.exe”.
 
@@ -212,7 +212,7 @@ Jeśli widzisz powyższy komunikat o błędzie, musisz pobrać właściwą wersj
 
 ## Generate Signed APK zakończone sukcesem z 0 wariantami budowania
 
-Gdy generujesz podpisany apk, możesz dostać powiadomienie, że generowanie się udało, ale wygenerowano „0 build variants” (0 wariantów budowania):
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![APK wygenerowany z 0 wariantami budowania](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,13 +237,13 @@ Twój apk został zbudowany poprawnie i możesz go przenieść na telefon!
 
 ## Apk nie został zainstalowany
 
-![aplikacja na telefonie nie została zainstalowana](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * Upewnij się, że plik „app-full-release.apk” jest przeniesiony na telefon.
 * Ten błąd zwykle oznacza, że nowy apk jest podpisany innym magazynem kluczy niż zainstalowany **AAPS**. Jeśli wciąż masz poprzedni magazyn kluczy, wybierz go i zbuduj ponownie. W przeciwnym razie zobacz [Ponowna instalacja AAPS z nowym magazynem kluczy](#reinstall-aaps).
 * Jeśli na telefonie pojawi się „Aplikacja nie została zainstalowana” (App not installed), wykonaj te kroki:
 
-1. [Eksport ustawień](../Maintenance/ExportImportSettings.md) (w wersji AAPS zainstalowanej teraz na Twoim telefonie)
+1. Wyeksportuj ustawienia w wersji AAPS zainstalowanej teraz na Twoim telefonie (zobacz [Tworzenie i przywracanie kopii zapasowych](../Maintenance/ExportImportSettings.md))
 2. Odinstaluj **AAPS** z telefonu.
 3. Włącz tryb samolotowy i wyłącz Bluetooth.
 4. Zainstaluj nową wersję („app-full-release.apk”)
@@ -258,7 +258,7 @@ Jeśli aplikacja zbudowała się poprawnie, przeniosłeś ją na telefon i zains
 
 Jeśli żadna z powyższych porad nie pomogła, rozważ zbudowanie apk od nowa:
 
-1. [Eksport ustawień](../Maintenance/ExportImportSettings.md) (w wersji AAPS zainstalowanej teraz na Twoim telefonie)
+1. Wyeksportuj ustawienia w wersji AAPS zainstalowanej teraz na Twoim telefonie (zobacz [Tworzenie i przywracanie kopii zapasowych](../Maintenance/ExportImportSettings.md))
 
 2. Przygotuj hasło klucza i hasło magazynu kluczy.
 
@@ -267,7 +267,7 @@ Jeśli żadna z powyższych porad nie pomogła, rozważ zbudowanie apk od nowa:
 3. Zbuduj apk od nowa, jak opisano [tutaj](#Building-APK-download-AAPS-code).
 
 4. Gdy zbudujesz apk poprawnie, usuń istniejący apk z telefonu, przenieś nowy apk na telefon i zainstaluj.
-5. Ponownie [zaimportuj ustawienia](../Maintenance/ExportImportSettings.md), aby przywrócić zadania i ustawienia.
+5. Ponownie zaimportuj ustawienia (zobacz [Tworzenie i przywracanie kopii zapasowych](../Maintenance/ExportImportSettings.md)), aby przywrócić zadania i ustawienia.
 6. Sprawdź opcje optymalizacji baterii i ponownie je wyłącz.
 
 ## Najgorszy przypadek
