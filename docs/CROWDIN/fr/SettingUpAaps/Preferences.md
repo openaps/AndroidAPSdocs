@@ -18,7 +18,7 @@ Dans **AAPS** v4, les préférences se trouvent sur l'écran **Paramètres**. Il
 ```
 
 (Preferences-general)=
-## General
+## Généralités
 
 ![Paramètres > Général](../images/preferences/settings_general.png)
 
@@ -333,7 +333,7 @@ Durée après laquelle un repas est considéré comme absorbé ; les glucides r
 - Définit les ratios minimum et maximum pour [Autosens](#Open-APS-features-autosens).
 - Normalement, les valeurs standards (max. 1,2 et min. 0,7) ne devraient pas être modifiées.
 
-## Pump
+## Pompe
 
 ![Paramètres > Pompe](../images/preferences/settings_pump.png)
 
@@ -363,10 +363,10 @@ Le plugin NSClient (affiché comme **NSClientV3** dans le menu de configuration)
 ```{admonition} Data uploaders
 :class: warning
 
-Avec NSClientV3, tous les outils qui envoient des données (uploaders) doivent utiliser l'API v3 de Nightscout. If another uploader (for example your CGM app) is not API v3 compliant, **let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable that uploader.
+Avec NSClientV3, tous les outils qui envoient des données (uploaders) doivent utiliser l'API v3 de Nightscout. Si un autre outil d'envoi (par exemple votre application MGC) n'est pas compatible avec l'API v3, **laissez AAPS envoyer toutes les données** (glycémie, traitements, ...) à Nightscout et désactivez cet outil d'envoi.
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplatform.dom>).
+- Saisissez votre *URL Nightscout* (de type <https://yoursitename.yourplatform.dom>).
 - **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
 - Dans Nightscout, créez un *[jeton Admin](https://nightscout.github.io/nightscout/security/#create-a-token)* (il faut [Nightscout 15](https://nightscout.github.io/update/update/) pour utiliser l'API V3) et saisissez-le dans **Jeton d'accès Nightscout** (pas votre API Secret !). Sur **AAPSClient**, vous pouvez à la place scanner le QR code du téléphone principal, ce qui configure un jeton propre au client. Un client appairé avec le code PIN reçoit son propre jeton du téléphone principal après l'appairage. Voir [Le jeton Nightscout propre au client](#client-master-control-own-token).
 - Cela permet de lire et d'écrire des données entre le site web Nightscout et **AAPS**.
@@ -395,7 +395,7 @@ Quand le contrôle client est activé (toujours en mode simple), ces paramètres
 - Les annonces de NS reprennent les [annonces](https://nightscout.github.io/nightscout/discover/#announcement) de Nightscout dans les notifications d'**AAPS**.
 - Vous pouvez modifier les seuils des alarmes de données anciennes et de données anciennes urgentes, quand aucune donnée n'est reçue de Nightscout après un certain temps.
 
-### Remote control
+### Contrôle à distance
 
 L'interrupteur « **Autoriser le contrôle par un client** » n'est plus dans ces paramètres : il se trouve en haut de **Gestion → Clients autorisés**, où les clients appairés sont gérés. Voir la page dédiée [Contrôle maître / client](../RemoteFeatures/ClientMasterControl.md), avec le [mode renforcé](#client-master-control-hardened-mode), que cet interrupteur active.
 
