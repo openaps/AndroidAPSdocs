@@ -75,7 +75,7 @@ Which strategy you prefer is highly personal, and is best determined by trial an
 
 
 (Aapsscreens-site-rotation)=
-## Site Rotation
+## Zmiana miejsca
 
 **Manage → Site Rotation** opens the Site Rotation Dialog in View mode:
 
