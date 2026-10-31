@@ -98,7 +98,7 @@ Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
 
 ## Gegevensbescherming
 
-Open Humans beschermt jouw privacy door voor elk project een numerieke ID aan jou toe te wijzen. Hierdoor kunnen projecten jou herkennen, maar ze kunnen je niet identificeren. The Application ID uploaded by AAPS is similar and only helps administrate the data. Meer informatie vind je hier:
+Open Humans beschermt jouw privacy door voor elk project een numerieke ID aan jou toe te wijzen. This allows projects to recognize but not identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. Meer informatie vind je hier:
 
 - [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)
