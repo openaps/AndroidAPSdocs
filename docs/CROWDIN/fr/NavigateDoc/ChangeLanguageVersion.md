@@ -19,5 +19,5 @@ N'hésitez pas à rejoindre les traducteurs et relecteurs sur [Crowdin](https://
 La version actuelle est affichée en bas à droite de l'écran. Pour passer à une autre version, cliquez sur la version actuelle et choisissez la version dont vous avez besoin.
 
 ```{warning}
-Lorsque vous changez de langue et/ou de version, vous pouvez obtenir une erreur 404 - Page introuvable, si la page n'existe pas dans cette langue ou cette version. Cela se produit fréquemment lors du changement de version mais ne devrait pas se produire lors du changement de langue : la page s'affichera en anglais si elle n'est pas encore traduite.
+Lorsque vous changez de langue et/ou de version, vous pouvez obtenir une erreur 404 - Page introuvable, si la page n'existe pas dans cette langue ou cette version. Cela se produit fréquemment lors du changement de version mais ne devrait pas se produire lors du changement de langue : la page s'affichera en anglais si elle n'est pas encore traduite.
 ```
