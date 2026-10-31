@@ -40,8 +40,8 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 * Temporary basal rates are limited to 500% of the current basal rate. **AAPS** takes this limit into account.
 * 如果幫浦上的目前活動設定檔不是設定檔 1，則循環模式將被停用。 This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because you tap **Refresh** on the Accu-Chek Combo pump screen), it will notice that profile no. 1 is the current one, and enable the loop again.
 * 如果循環請求取消正在運作的 TBR，Combo 將設置一個 90% 或 110% 的 TBR，持續 15 分鐘。這是因為實際取消 TBR 會在幫浦上觸發警報，並產生大量震動，這些震動無法停用。
-* 藍牙連線的穩定性隨不同手機而異，可能會出現「幫浦無法使用」的警報，這時幫浦無法再建立連線。 If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermitted issue and if still no connection is established, reboot the phone which should usually fix this.
-* 另一個問題是重啟無法解決，必須按幫浦上的按鈕（這會重置幫浦的藍牙堆疊），幫浦才能再次接受來自手機的連線。
+* 藍牙連線的穩定性隨不同手機而異，可能會出現「幫浦無法使用」的警報，這時幫浦無法再建立連線。 If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
+* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
 * 避免在幫浦上設定 TBR，因為循環控制 TBR。在幫浦上偵測到新的 TBR 可能需要長達 20 分鐘，並且 TBR 的效果僅從偵測時開始計算，因此最壞情況下可能有 20 分鐘的 TBR 沒有反應在 IOB 中。
 
 The driver is currently written to support the following languages on the Combo. （這與 AAPS 的語系無關——是顯示在 Combo LCD 上的語系。）
@@ -213,7 +213,7 @@ These autodetections can be turned off in the driver [settings](#combov2-prefere
 (combov2-alerts)=
 ## 警報（警告和錯誤）以及如何處理他們
 
-Combo 以遠端終端螢幕的形式顯示警報。警告會顯示一個“Wx”代碼（x 是一個數字），並附有簡短描述。其中一個例子是“W7”，“TBR OVER”。錯誤類似，但會顯示“Ex”代碼。
+Combo 以遠端終端螢幕的形式顯示警報。 Warnings are shown with a "Wx" code (x is a digit), along with a short description. 其中一個例子是“W7”，“TBR OVER”。錯誤類似，但會顯示“Ex”代碼。
 
 某些警告會被驅動程式自動消除。這些包括：
 
@@ -223,7 +223,7 @@ Combo 以遠端終端螢幕的形式顯示警報。警告會顯示一個“Wx”
 
 其他警告 _不會_ 被自動消除。此外，錯誤 _絕不_ 會被自動消除。這兩者都是以相同方式處理：他們會導致驅動程式在 AAPS 介面上顯示警報對話框，並中止任何正在執行的指令。 The driver then switches to the "error" state (see [the Accu-Chek Combo pump screen contents above](#combov2-tab-contents)). 此狀態不允許任何指令執行。用戶需要在幫浦上處理錯誤；例如，阻塞錯誤可能需要更換套管。 Once the user took care of the error, normal operation can be resumed by tapping **Refresh** on the Accu-Chek Combo pump screen. 然後驅動程式會連線到 Combo 並更新其狀態，檢查畫面上是否仍顯示錯誤等。此外，驅動程式會在稍後自動重新整理幫浦狀態，因此手動按該按鈕並非必要。
 
-注射是一個特殊案例。他在 Combo 的指令模式下執行，此模式下不會在中途報告出現的警報。因此，驅動程式無法在注射期間自動消除警告。這意味著不幸的是，幫浦在注射完成之前會一直發出哔哔聲。最常見的中途警報通常是 W1“儲液槽低”。**不要** 在注射期間手動取消幫浦上的 Comnbo 警告。這會有中斷注射的風險。注射結束後驅動程式會處理警告。
+注射是一個特殊案例。他在 Combo 的指令模式下執行，此模式下不會在中途報告出現的警報。因此，驅動程式無法在注射期間自動消除警告。這意味著不幸的是，幫浦在注射完成之前會一直發出哔哔聲。最常見的中途警報通常是 W1“儲液槽低”。 **Don't** dismiss Combo warnings on the pump itself manually during a bolus. 這會有中斷注射的風險。注射結束後驅動程式會處理警告。
 
 在驅動程式未與 Combo 連線期間發生的警報不會被驅動程式注意到。 Combo 無法自動將該警報推送到手機；始終需要手機發起連線。因此，該警報將持續存在，直到驅動程式連線到幫浦。 You can tap **Refresh** on the pump screen to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
 
@@ -251,8 +251,8 @@ Combo 以遠端終端螢幕的形式顯示警報。警告會顯示一個“Wx”
 
 ### How to ensure smooth operations
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
-* Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
+* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
+* Always make sure that the pump battery is as full as possible. See the battery section for tips regarding the battery.
 * Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys.
 
 ![Keylock](../images/combo/combo-tips-keylock.png)
@@ -287,13 +287,13 @@ Combo 以遠端終端螢幕的形式顯示警報。警告會顯示一個“Wx”
 * After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
 * Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
 * Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop** for 1 hour.
-* Wait for the pump to communicate with the pump and the Bluetooth logo on the pump has faded.
+* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
 
 ![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
 * Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
 * You don't need to re-set the pump's clock after the battery change: AAPS automatically updates the pump's date and time.
-* Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
+* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
@@ -314,9 +314,9 @@ If your battery life is significantly shorter than the ranges given above, pleas
 
 ### Extended bolus, multiwave bolus
 The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
-* Use **e-Carbs** when entering carbs or using the Bolus wizard by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in your blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs.
+* Use **e-Carbs** when entering carbs or using the Bolus wizard by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in your blood. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs.
 * Before eating, set a temporary **Eating Soon** target with glucose 80 for several hours (press the target on the main screen, or **Manage** > **Temp Target**). The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
-* Then use the **Bolus wizard** to enter the full carbs of the meal, but do not directly apply the values it suggests. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max IE / h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+* Then use the **Bolus wizard** to enter the full carbs of the meal, but do not directly apply the values it suggests. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
 
 * Don't use the extended or multiwave bolus directly on the pump. The driver does not support them (see [Before you begin](#combov2-before-you-begin)); if a multiwave bolus is given on the pump anyway, **AAPS** records it from the pump history as a normal bolus plus an extended bolus, so it is counted in IOB. An extended bolus does not work in a closed loop environment (see [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details).
 
