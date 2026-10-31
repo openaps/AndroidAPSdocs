@@ -1,11 +1,11 @@
 # Syai X1
 
 
-## Using X1 And Syai Tag app
+## Χρήση του X1 με την εφαρμογή Syai Tag
 
 -   Εγκαταστήστε το apk από το <https://play.google.com/store/apps/details?id=com.syai.tag>.
 
--   Start X1 sensor
+-   Έναρξη του αισθητήρα X1
 
 - Επιλέξτε **Syai/Ottai** στη [Διαμόρφωση, Πηγή BG](#Config-Builder-bg-source).
 
