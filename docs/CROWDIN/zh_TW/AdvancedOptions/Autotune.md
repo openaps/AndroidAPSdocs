@@ -2,7 +2,7 @@
 
 Autotune 外掛是在 AAPS 中實作的 OpenAPS 自動調整算法。它會分析您近期的 AAPS 紀錄，並建議調整基礎率、ISF 和碳水化合物比率。
 
-Autotune 外掛自 [3.4](#version3400) 版起在 AAPS 釋出中提供，但預設為隱藏。
+Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## Autotune 如何計算調整值
