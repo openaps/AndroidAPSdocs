@@ -160,6 +160,8 @@ You will need all three if you ever build AAPS another way, e.g. with Android St
 
    The GitHub app opened instead? Tap "RUN WORKFLOW", check the version and variant, and tap "RUN WORKFLOW" again. If the app still shows "Nothing to see here", pull the list down to see your build.
 2. If asked, click the green button to enable workflows.
+
+   The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
 3. Click "Run workflow", then the green "Run workflow" button. "latest" builds the newest AAPS version.
    ***tip:*** *you can build another version by typing its [tag](https://github.com/nightscout/AndroidAPS/tags) name instead of "latest"*
 4. Wait about 15–30 minutes. A green check means it is done.
