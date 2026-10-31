@@ -1,43 +1,43 @@
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
-# Troubleshooting NSClient
+# Отстраняване на неизправности с NSClient
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+NSClient разчита на стабилна комуникация с Nightscout. Нестабилната връзка води до грешки при синхронизацията и до голям пренос на данни.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+Ако никой не ви следи в Nightscout, можете да поставите NSClient на пауза, за да пестите батерията, или да настроите NSClient да се свързва само при Wi-Fi и/или по време на зареждане.
 
-* How to detect an unstable connection?
+* Как да разпознаете нестабилна връзка?
 
-Open the NSClient screen (**Configuration** > **Communication** > **NSClientV3** > **Open plugin**) and watch the **Status** and the log. With websockets enabled, the status should stay "connected", with almost no reconnection messages in the log. If you see many reconnections, then there is a problem.
+Отворете екрана на NSClient (**Конфигурация** > **Комуникация** > **NSClientV3** > **Отвори плъгин**) и следете **Статус** и дневника (log). Когато websockets са включени, статусът трябва да остава „connected“ (свързан), а в дневника почти да няма съобщения за повторно свързване. Ако виждате много повторни свързвания, значи има проблем.
 
 * Рестарт
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+Като първа стъпка опитайте да рестартирате и двете: първо Nightscout, а след това телефона, за да видите дали проблемът остава
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+Ако вашият Nightscout се хоства в Heroku, можете да рестартирате Nightscout така: влезте в Heroku, натиснете името на приложението си за Nightscout, натиснете менюто „More“, а след това „Restart all dynos“.
 
-For other hosts, please follow your hosts guidance documentation.
+При други доставчици на хостинг, моля, следвайте тяхната документация.
 
-* Phone issues
+* Проблеми с телефона
 
-Android may put your phone into a sleep mode. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android може да постави телефона ви в режим на заспиване. Проверете дали в опциите за захранване на телефона има изключение за AAPS, което му позволява да работи постоянно във фонов режим.
 
-Check the NSClient again when in strong network signal location.
+Проверете NSClient отново на място със силен сигнал на мрежата.
 
-Try another phone.
+Опитайте с друг телефон.
 
 * Nightscout
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+Ако сайтът ви се хоства в Azure, много хора забелязват, че проблемите с връзката намаляват след преминаване към Heroku.
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Начин да заобиколите проблемите с връзката в Azure е в Application settings да зададете HTTP protocol на 2.0 и Websockets на ON
 
-* No BG reading from Nightscout
+* Няма стойности на КЗ от Nightscout
 
-If **AAPS** connects to Nightscout correctly but BG displays as N/A: in the [NSClientV3 settings](#Preferences-nsclient), open **Synchronization** and turn on **Receive CGM data from NS**. This option is hidden while client control is on ([hardened mode](#client-master-control-hardened-mode)); in that case check that **NSClient BG** is selected in **Configuration** → **BG Source**.
+Ако **AAPS** се свързва правилно с Nightscout, но КЗ се показва като N/A: в [настройките на NSClientV3](#Preferences-nsclient) отворете **Синхронизация** и включете **Получаване на КЗ от Nightscout**. Тази опция е скрита, докато е включен контролът от клиентско приложение ([режим на засилена защита](#client-master-control-hardened-mode)); в този случай проверете дали в **Конфигурация** → **Източник на КЗ** е избрано **КЗ от NS**.
 
-* If you still get an error...
+* Ако все още получавате грешка...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Проверете размера на базата данни в MongoDB (или чрез плъгина за размер на базата данни в Nightscout). Ако използвате безплатния план на MongoDB, 496 MB означава, че базата е пълна и трябва да се изчисти. [Следвайте тези указания на Nightscout, за да проверите размера на базата данни и да изчистите данни](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../SupportingAaps/OpenHumans.md).
+Преди да изчистите данни от базата и ако още не сте го направили, обмислете да дарите данните си от AAPS на проекта Open Humans (за научни изследвания). Указанията са на [страницата за настройка на OpenHumans](../SupportingAaps/OpenHumans.md).
