@@ -86,7 +86,7 @@ Nevýhody (podľa skúseností používateľov)
 
 * Vyžaduje Android 5.0 alebo novší.
 
-* Má tmavé rozhranie, veľké hodnoty a tlačidlá a je navrhnutý na používanie v noci.
+* It has a dark UI, large readings and buttons, designed for usage at night.
 
 ### xDrip (Android)
 
@@ -200,7 +200,7 @@ SugarPixel je zariadenie na doplnkové zobrazenie glykémie a upozornenia pri ko
 ![Sledovanie pomocou Nightscout Clock](../images/FollowingNightscoutClock.png)
 
 * Hodiny podporujú jednotky mmol/l aj mg/dl a majú zvukové alarmy.
-* K dispozícii je viacero zobrazení, prehľad nájdete na [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it).
+* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
 * Nastavenie a konfigurácia zariadenia má iba niekoľko jednoduchých krokov. Po nastavení potrebuje na fungovanie iba napájanie a Wi-Fi.
 * Zariadenie Ulanzi TC001 je výrazne lacnejšie ako SugarPixel.
 * Softvér aj návod na inštaláciu nájdete na [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
