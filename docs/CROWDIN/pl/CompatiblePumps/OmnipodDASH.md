@@ -290,7 +290,7 @@ Zrzut ekranu powyżej pochodzi z wcześniejszej wersji **AAPS**, która miała o
 
     ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-    ***UWAGA:** Dobrą praktyką jest eksport ustawień PO aktywacji Poda. Eksportuj ustawienia po każdej wymianie Poda i raz w miesiącu. Skopiuj plik z wyeksportowanymi ustawieniami do chmury (na przykład na Dysk Google) albo w inne miejsce poza telefonem, na wypadek jego utraty (zobacz [**Eksport ustawień**](../Maintenance/ExportImportSettings.md)).*
+    ***UWAGA:** Dobrą praktyką jest eksport ustawień PO aktywacji Poda. Eksportuj ustawienia po każdej wymianie Poda i raz w miesiącu. Skopiuj plik z wyeksportowanymi ustawieniami do chmury (na przykład na Dysk Google) albo w inne miejsce poza telefonem, na wypadek jego utraty (zobacz [**Tworzenie i przywracanie kopii zapasowych**](../Maintenance/ExportImportSettings.md)).*
 
 Jeśli wcześniejsza aktywacja zatrzymała się po napełnieniu Poda, naciśnięcie **Aktywuj Poda** kontynuuje od kroku **Zamocuj Poda**.
 
@@ -378,7 +378,7 @@ Gdy podawanie insuliny jest wstrzymane, musisz polecić Podowi wznowienie podawa
 Ta część wyjaśnia, jak zatrzymać sygnały dźwiękowe Poda, gdy Pod zbliża się do końca swojej pracy. Kiedy te sygnały się zaczną, zależy od ustawień **Alerty** (zobacz [Ustawienia Dash](#omnipod-dash-settings)):
 
 - **Przypomnienie: godziny przed upływem ważności (72 godz.):** ile godzin przed upływem 72 godzin ważności Pod zaczyna pikać.
-- **Alarm: godziny przed wyłączeniem (80 godz.):** ile godzin przed wyłączeniem po 80 godzinach Pod znów zapika.
+- **Alarm: godziny przed wyłączeniem Poda (80 godz.):** ile godzin przed wyłączeniem po 80 godzinach Pod znów zapika.
 
 Maksymalny czas pracy Poda to 80 godzin (3 dni i 8 godzin). Producent Poda zaleca jednak nie przekraczać 72 godzin (3 dni).
 
@@ -420,7 +420,7 @@ Ta część wyjaśnia, jak przeglądać historię aktywnego Poda i filtrować j�
 
 Przydaje się do sprawdzenia bolusów, TBR i poleceń bazy wysłanych do Poda. Pozostałe kategorie pomagają w rozwiązywaniu problemów i pokazują kolejność zdarzeń, które doprowadziły do awarii.
 
-***UWAGA:** **Tylko ostatnie polecenie może być niepewne**. Nowe polecenia *nie są wysyłane*, dopóki **ostatnie 'niepewne' polecenie nie stanie się 'potwierdzone' lub 'odrzucone'**. Aby „naprawić” niepewne polecenie, naciśnij **Odśwież** na ekranie pompy DASH.*
+**NOTE:** **Only the last command can be uncertain**. New commands *are not sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. To 'fix' an uncertain command, press **Refresh** on the DASH pump screen.
 
 1. Otwórz ekran pompy DASH i naciśnij **Historia Poda**.
 
@@ -497,7 +497,7 @@ Alarmy Poda o końcu ważności, wyłączeniu i niskim poziomie w zbiorniku. Gdy
 
 **Alarm upływu terminu ważności włączony:**   Gdy to jest włączone, Pod pika, gdy nadejdzie czas alarmu, i ponownie 1 godzinę przed wyłączeniem. Domyślnie włączone.
 
-**Alarm: godziny przed wyłączeniem (80 godz.):**  Ile godzin przed wyłączeniem Poda po 80 godzinach zaczyna się alarm (od 1 do 8 godzin; domyślnie 8).
+**Alarm: godziny przed wyłączeniem Poda (80 godz.):**  Ile godzin przed wyłączeniem Poda po 80 godzinach zaczyna się alarm (od 1 do 8 godzin; domyślnie 8).
 
 **Włączony alert o niskim poziomie w zbiorniczku:**    Pod ostrzega Cię, gdy ilość insuliny w zbiorniku spadnie do wartości w **Liczba jednostek**. Domyślnie włączone.
 
@@ -642,7 +642,7 @@ Aby usunąć starą sesję Poda:
 2. Gdy się nie uda, naciśnij **Usuń Poda** i potwierdź (zobacz [Usuwanie Poda](#omnipod-dash-discard-pod)).
 3. Po usunięciu starego Poda możesz aktywować nowy.
 
-### Generic error: java.lan.illegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
+### Generic error: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
 
 Jeśli zobaczysz ten błąd podczas próby inicjalizacji nowego Poda, **AAPS** zawodzi, ponieważ nadal ma w konfiguracji zapisane ustawienia starego Poda.
 
@@ -691,7 +691,7 @@ Poniżej znajdziesz podsumowanie głównych alarmów, które możesz zobaczyć:
 - *Brak akt. Poda*: nie znaleziono sesji Poda. To powiadomienie będzie wracać, dopóki nie aktywujesz nowego Poda. Gdy Pod zostanie aktywowany, powiadomienie zniknie automatycznie.
 - *Podawanie insuliny zawieszone*: Pod wstrzymał podawanie insuliny. Zobacz [Wznowienie podawania insuliny](#omnipod-dash-resuming-insulin-delivery).
 - *Ustawianie profilu bazowego mogło się nie powieść. Podawanie mogło zostać zawieszone! W razie potrzeby proszę ręcznie odświeżyć status Poda na karcie Omnipod i wznowić podawanie.* Ustawienie **Profilu** bazowego w Podzie mogło się nie udać. Naciśnij **Odśwież** na ekranie pompy DASH (komunikat nadal mówi o „karcie Omnipod”) i naciśnij **Wznów podawanie**, jeśli jest widoczny.
-- *Unable to verify whether SMB bolus (X U) succeeded. Refresh pod status to confirm or deny this command.* (nie można sprawdzić, czy SMB został podany) **AAPS** nie mógł potwierdzić, że **SMB** został podany. Naciśnij **Odśwież** na ekranie pompy DASH i sprawdź pole **Ostatni bolus**.
+- *Unable to verify whether SMB (X U) succeeded. Odśwież status Poda, aby potwierdzić lub odrzucić to polecenie.* **AAPS** nie mógł potwierdzić, że **SMB** został podany. Naciśnij **Odśwież** na ekranie pompy DASH i sprawdź pole **Ostatni bolus**.
 - *Status podawania bolusa jest niepewny. Odśwież status Poda aby potwierdzić lub odrzucić.* To samo dotyczy zwykłego bolusa: naciśnij **Odśwież** na ekranie pompy DASH.
 - *Strefa czasowa na Podzie różni się od strefy czasowej na telefonie. Dawka bazowa jest nieprawidłowa. Zmień profil, aby to naprawić* Zobacz uwagę o czasie letnim i strefach czasowych w części [Znane ograniczenia i problemy Omnipod DASH w AAPS](#omnipod-dash-constraints).
 
