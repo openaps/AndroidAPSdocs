@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# QuickWizards (bolus met één tik)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+Een **QuickWizard** is een opgeslagen knop voor een maaltijd of situatie die vaak terugkomt. Je gebruikt hem met één tik. De knop bevat een vaste hoeveelheid **koolhydraten** (en hoe je daarvoor doseert). Zo geef je een bolus — of voer je alleen koolhydraten in — met één tik en een bevestiging. Je hoeft dus niet elke keer de volledige boluscalculator te openen.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## QuickWizards openen
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Open het scherm **Beheren** (navigatie onderaan) en kies **QuickWizard** (*“QuickWizard-instellingen beheren”*).
 
 ---
 
-## The three modes
+## QuickWizards beheren
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Je QuickWizards staan in een **carrousel van kaarten waar je doorheen kunt vegen** (elke kaart toont de knoptekst, de koolhydraten en het geldige tijdsbereik). De editor eronder stelt de **gekozen** QuickWizard in. De actiebalk onderaan heeft **➕ toevoegen**, **⧉ dupliceren**, **🗑️ verwijderen** en een **▶**-knop om de gekozen QuickWizard uit te voeren.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![De QuickWizard-editor — modus, koolhydraten, koolhydraten tijdstip en geldig tijdsbereik](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+De belangrijkste velden van de editor zijn:
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Knop tekst** — de tekst die op de knop staat.
+- **Koolhydraten** en **Koolhydraten tijdstip** — de hoeveelheid koolhydraten en hoeveel later (of eerder) ze worden ingevoerd.
+- **Geldig tijdsbereik** — zie [Geldigheid](#quickwizard_validity).
+- **Calculator opties** en **Apparaatkeuze** — zie hieronder.
 
 ---
 
-## Validity — when the button appears
+## De drie modi
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+De keuze bovenaan de editor — **Wizard / Insuline / Koolhydraten** — bepaalt **wat de knop doet** als je erop tikt:
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Wizard** — voert de volledige **boluscalculator** uit voor de ingestelde koolhydraten. Hij gebruikt je huidige **BG, IOB, COB en trend** (volgens de *Calculator opties* hieronder). Hij geeft de *berekende* bolus en slaat de koolhydraten op. Dit is de klassieke QuickWizard.
+- **Insuline** — geeft een **vaste hoeveelheid insuline die je vooraf instelt** — zonder berekening.
+- **Koolhydraten** — slaat **alleen de ingestelde koolhydraten** op, **zonder bolus**.
 
 ---
 
-## Invocation points — where you use it
+## Calculator opties (Wizard-modus)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Bij een knop in **Wizard**-modus kies je welke gegevens de berekening gebruikt:
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Gebruik BG**, **Gebruik COB**, **Gebruik IOB** (met *Alleen positieve IOB*), **Gebruik trend** (*Alles / Alleen positief / Alleen negatief*), **Gebruik tijdelijk streefdoel**, **Gebruik alarm**.
+- **Bolus percentage** — maakt de berekende bolus groter of kleiner.
+- **Voeg eCarbs toe** — plant ook vertraagde koolhydraten (eCarbs) in.
+
+![Calculator opties, Bolus percentage en Apparaatkeuze](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Geldigheid — wanneer de knop verschijnt
+
+(quickwizard_validity)= Het **Geldig tijdsbereik** (*Van / Tot*) bepaalt **wanneer** een QuickWizard zichtbaar is en gebruikt kan worden. Een knop die bijvoorbeeld op **06:00–10:00** staat, verschijnt alleen 's ochtends. Zo staat een QuickWizard voor het *ontbijt* bij het avondeten niet in de weg op je scherm (en tik je er niet per ongeluk op). Buiten dit tijdsvenster is de knop verborgen in het scherm **Behandelingen** en in de [QuickLaunch-werkbalk](QuickLaunch.md). Een knop in de werkbalk wordt niet verwijderd: hij komt terug als het tijdsvenster weer begint.
+
+Als het geldige tijdsbereik korter is dan 4 uur, is de knop na gebruik ook 30 minuten verborgen. Zo voer je dezelfde maaltijd niet per ongeluk twee keer in.
+
+---
+
+## Waar je hem gebruikt
+
+De schakelaars bij **Apparaatkeuze** bepalen waar elke QuickWizard verschijnt:
+
+- **Weergeven op telefoon** — hij verschijnt in het **scherm [Behandelingen](../Maintenance/V4Changes.md)** (met de berekende dosis direct op de knop). Een QuickWizard die op de telefoon zichtbaar is, kun je ook **als snelknop op het overzicht vastzetten**: open *Configureer QuickLaunch* (het ⚙ op de [QuickLaunch](QuickLaunch.md)-werkbalk) en voeg hem toe uit de categorie **Quick Wizard**.
+- **Weergeven op smartwatch** — hij verschijnt op de **QuickWizard-tegel van Wear OS** (veeg naar de tegel in de tegelcarrousel van je horloge en tik op een knop om hem uit te voeren — net als bij de [Scène-tegel](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+Het onderdeel **Apparaatkeuze** verschijnt alleen in de editor als de plugin **Wear** aan staat en de instelling **Bediening via smartwatch** aan staat. Zonder deze instelling verschijnt elke QuickWizard gewoon op de telefoon.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+Op de telefoon staan de QuickWizards bovenaan het onderste scherm **Behandelingen**:
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![QuickWizards (bovenaan) in het geopende scherm Behandelingen](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…en als snelknop op het overzicht:
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![Een QuickWizard-snelknop op het overzicht](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![De QuickWizard-tegel op een Wear OS-horloge](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Een gekoppelde **client** (**AAPSClient**) kan ook een QuickWizard starten — de **master** berekent en geeft hem (zie [Master ↔ Client besturing](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Waar je hem ook start: als je op een QuickWizard tikt, zie je altijd eerst een **bevestiging** (de bevestiging van de master, als je hem start vanaf een client of horloge). Pas daarna wordt er iets gegeven.
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Een QuickWizard wordt geweigerd als de dosis boven je max bolus ligt, of als de koolhydraten of eCarbs boven je max koolhydraten liggen (bijvoorbeeld nadat je de limiet lager hebt gezet). Als de koolhydraten boven de limiet liggen, is de knop in het scherm **Behandelingen** uitgeschakeld. Pas de QuickWizard of de limiet aan.
 
 ---
 
-## Adding and removing
+## Toevoegen en verwijderen
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Toevoegen** — maak een nieuwe QuickWizard.
+- **⧉ Dupliceren** — kopieer er een als beginpunt.
+- **🗑️ Verwijderen** — verwijder er een.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Met twee of meer QuickWizards kun je ook hun volgorde in de carrousel veranderen: tik op het pictogram **Herschikken** (⇅) in de bovenste balk, verplaats de middelste kaart met de **◀ / ▶ verplaatsknoppen** en bevestig met **✓**. (De knoppen zien er hetzelfde uit als bij [het herschikken van profielen](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+QuickWizards horen bij de gesynchroniseerde configuratie. Ze worden dus gedeeld tussen je master en de gekoppelde clients.
 
 ---
 
