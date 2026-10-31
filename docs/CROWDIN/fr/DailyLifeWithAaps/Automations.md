@@ -50,7 +50,7 @@ L'utilisateur a créé une **Automatisation** qui déclenche à 5 h une « Cible
 
 1. Comme toute technologie, les **MGC**, les **Pompes** et les téléphones peuvent tomber en panne : des problèmes techniques ou des erreurs de capteur peuvent perturber les actions des **Automatisations**, et une intervention manuelle peut être nécessaire.
 
-1. **Requirements for Automations are likely to change as routines change**. Quand vous passez d'une période de travail, d'école ou de vacances à une autre, mettez un rappel dans votre agenda pour vérifier quelles **Automatisations** sont actives (elles sont faciles à activer et à désactiver). Par exemple, si vous partez en vacances et que vous n'avez plus besoin d'une Automatisation pour le sport à l'école ou le sport quotidien, ou si vous devez changer les horaires.
+1. **Les besoins en automatisations vont probablement changer quand vos habitudes changent**. Quand vous passez d'une période de travail, d'école ou de vacances à une autre, mettez un rappel dans votre agenda pour vérifier quelles **Automatisations** sont actives (elles sont faciles à activer et à désactiver). Par exemple, si vous partez en vacances et que vous n'avez plus besoin d'une Automatisation pour le sport à l'école ou le sport quotidien, ou si vous devez changer les horaires.
 
 1. Les **Automatisations** peuvent entrer en conflit entre elles. Il est bon de vérifier avec soin toute nouvelle **Automatisation** dans un environnement sûr, et de comprendre pourquoi une **Automatisation** s'est déclenchée ou non comme vous l'attendiez.
 
@@ -125,7 +125,7 @@ Les **Automatisations** ont des limites de sécurité :
 Soyez prudent quand vous choisissez une valeur négative dans une **Automatisation**
 ```
 
-Soyez prudent quand vous choisissez une « valeur négative » dans une « Condition » comme « inférieur à » dans les **Automatisations**. For example:
+Soyez prudent quand vous choisissez une « valeur négative » dans une « Condition » comme « inférieur à » dans les **Automatisations**. Par exemple :
 
 ![Texte alternatif](../images/Automations/automation_comparison_operators.png)
 
@@ -387,7 +387,7 @@ Dans l'exemple ci-dessous, la règle **Cible temp. Glycémie basse** (1) (voir [
 
 (automations-troubleshooting)=
 
-## Troubleshooting
+## Dépannage
 
 * Problème : __Mes automatisations ne sont pas déclenchées par AAPS ?__
 
