@@ -17,7 +17,7 @@ Deze documentatie legt uit hoe je **AAPS** instelt en gebruikt. Je kunt door de 
 
 Deel **1) Aan de slag**: de [Introductie tot APS en AAPS](Getting-Started/Introduction.md) legt uit waar een kunstmatig pancreassysteem (APS) in het algemeen voor bedoeld is. Het schetst de achtergrond van het loopen in het algemeen, waarom **AAPS** is ontwikkeld, vergelijkt **AAPS** met andere systemen en gaat in op veiligheid. Het geeft suggesties over hoe je met je medisch team over **AAPS** kunt praten, legt uit waarom je de **AAPS** app zelf moet bouwen in plaats van deze gewoon te downloaden, en geeft een overzicht van de typische connectiviteit van een **AAPS**-systeem. Het gaat ook in op toegankelijkheid en wie mogelijk baat zal hebben bij **AAPS**.
 
-[Voorbereiden om te starten met AAPS](./Getting-Started/PreparingForAaps.md) geeft meer uitleg over veiligheid, en over de telefoons, CGM's (Continue Glucose Monitoren) en insulinepompen die compatibel zijn met **AAPS**. Het geeft een overzicht van het proces dat je doorloopt, en een globale tijdlijn tot je alle functies van **AAPS** kunt gebruiken. Dit deel bereidt je technisch voor, zodat je je **AAPS**-systeem zo snel en efficiënt mogelijk kunt opbouwen. Het onderdeel [Compatibele CGM's](./Getting-Started/CompatiblesCgms.md) legt uit hoe je je CGM het beste instelt en welke opties voor filteren (smoothing) het beste zijn.
+[Voorbereiden om te starten met AAPS](./Getting-Started/PreparingForAaps.md) geeft meer uitleg over veiligheid, en over de telefoons, CGM's (Continue Glucose Monitoren) en insulinepompen die compatibel zijn met **AAPS**. Het geeft een overzicht van het proces dat je doorloopt, en een globale tijdlijn tot je alle functies van **AAPS** kunt gebruiken. Dit deel bereidt je technisch voor, zodat je je **AAPS**-systeem zo snel en efficiënt mogelijk kunt opbouwen. Het onderdeel [Compatibele CGM's](./Getting-Started/CompatiblesCgms.md) legt uit hoe je je CGM het beste instelt en welke opties voor vloeiend maken het beste zijn.
 
 Nu je het proces goed begrijpt, kun je beginnen met het opbouwen van je **AAPS**-loop.
 
@@ -36,7 +36,7 @@ Deel **7) [Wear OS smartwatches](./WearOS/BuildingAapsWearOS.md)** geeft informa
 
 Deel **8) [Onderhoud van AAPS](./Maintenance/ExportImportSettings.md)** legt uit hoe je je instellingen exporteert en een back-up maakt (heel belangrijk als je je telefoon verliest of kapot maakt). Het geeft de notities bij de nieuwste versie, legt uit hoe je **AAPS** bijwerkt en wat er gebeurt als een versie niet meer wordt ondersteund. Je kunt per jaar één nieuwe versie en 2–3 verplichte updates verwachten. Net als bij alle software moet je deze updates uitvoeren, omdat kleine fouten worden opgelost en **AAPS** wordt verbeterd. Er is een apart deel over probleemoplossing bij het "bijwerken", met de veelgestelde vragen.
 
-Deel **9) [Hulp & probleemoplossing](GettingHelp/WhereCanIGetHelp.md)** helpt je de beste plekken te vinden voor algemene hulp met **AAPS**. Dit is de plek waar je heen gaat als iets niet werkt: de pagina [Algemene probleemoplossing](GettingHelp/GeneralTroubleshooting.md) verzamelt per onderwerp de oplossingen voor de meest voorkomende problemen, en de [Veelgestelde vragen voor loopers](UsefulLinks/FAQ.md) beantwoorden vaak gestelde vragen. Dit is erg belangrijk, zodat je zo snel mogelijk contact kunt leggen met anderen, vragen kunt stellen en de bekende valkuilen kunt oplossen. Veel mensen gebruiken **AAPS** al met succes, maar iedereen heeft wel eens een vraag die hij niet zelf kan oplossen. Omdat er veel gebruikers zijn, komen antwoorden op vragen meestal snel, vaak al binnen een paar uur. Wees niet bang om hulp te vragen, er bestaan geen domme vragen! We moedigen gebruikers van elk niveau aan om zoveel vragen te stellen als nodig is om veilig van start te gaan. Dit deel bevat algemene probleemoplossing voor **AAPS** en **AAPSClient** (een bijbehorende app om te volgen). Het legt ook uit hoe je je **AAPS**-gegevens (logbestanden) naar de ontwikkelaars stuurt voor onderzoek, als je denkt dat er een technisch probleem met **AAPS** is.
+Deel **9) [Hulp & probleemoplossing](GettingHelp/WhereCanIGetHelp.md)** helpt je de beste plekken te vinden voor algemene hulp met **AAPS**. Dit is de plek waar je heen gaat als iets niet werkt: de pagina [Probleemoplossing](GettingHelp/GeneralTroubleshooting.md) verzamelt per onderwerp de oplossingen voor de meest voorkomende problemen, en de [Veelgestelde vragen voor loopers](UsefulLinks/FAQ.md) beantwoorden vaak gestelde vragen. Dit is erg belangrijk, zodat je zo snel mogelijk contact kunt leggen met anderen, vragen kunt stellen en de bekende valkuilen kunt oplossen. Veel mensen gebruiken **AAPS** al met succes, maar iedereen heeft wel eens een vraag die hij niet zelf kan oplossen. Omdat er veel gebruikers zijn, komen antwoorden op vragen meestal snel, vaak al binnen een paar uur. Wees niet bang om hulp te vragen, er bestaan geen domme vragen! We moedigen gebruikers van elk niveau aan om zoveel vragen te stellen als nodig is om veilig van start te gaan. Dit deel bevat algemene probleemoplossing voor **AAPS** en **AAPSClient** (een bijbehorende app om te volgen). Het legt ook uit hoe je je **AAPS**-gegevens (logbestanden) naar de ontwikkelaars stuurt voor onderzoek, als je denkt dat er een technisch probleem met **AAPS** is.
 
 Deel **10)** behandelt **[Geavanceerde opties van AAPS](./AdvancedOptions/FullClosedLoop.md)**, zoals hoe je overstapt van **AAPS** als hybride gesloten loop (bolussen voor maaltijden _enz._) naar een volledig gesloten loop (geen bolussen), hoe je [je profiel afstelt](./GettingHelp/ProfileTuning.md) en Autotune gebruikt. Het geeft ook details over de ontwikkel- en engineering-modi. De meeste gebruikers kunnen prima met de gewone "Master"-versie van **AAPS** werken zonder deze opties te bekijken. Dit deel is voor gebruikers die hun waarden al goed onder controle hebben en hun systeem verder willen verbeteren.
 
@@ -111,7 +111,7 @@ De rapportageserver instellen <./SettingUpAaps/SettingUpTheReportingServer.md>
 Setup Wizard van AAPS <./SettingUpAaps/SetupWizard.md>
 Je AAPS-profiel <./SettingUpAaps/YourAapsProfile.md>
 Wijzigingen maken in de configuratie van AAPS <./SettingUpAaps/ChangeAapsConfiguration.md>
-- Configuratie <./SettingUpAaps/ConfigBuilder.md>
+- Configuratie (Configurator) <./SettingUpAaps/ConfigBuilder.md>
 - Instellingen (voorkeuren) <./SettingUpAaps/Preferences.md>
 De Doelen voltooien <./SettingUpAaps/CompletingTheObjectives.md>
 ```
@@ -122,7 +122,7 @@ De Doelen voltooien <./SettingUpAaps/CompletingTheObjectives.md>
 AAPS-schermen <./DailyLifeWithAaps/AapsScreens.md>
 Belangrijkste functies van AAPS <./DailyLifeWithAaps/KeyAapsFeatures.md>
 COB berekening <./DailyLifeWithAaps/CobCalculation.md>
-Gevoeligheids detectie (Autosens) <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+Gevoeligheidsdetectie (Autosens) <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
 Dynamische ISF <./DailyLifeWithAaps/DynamicISF.md>
 Profiel wissel & Profiel percentage <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
 Tijdelijk streefdoel <./DailyLifeWithAaps/TempTargets.md>
@@ -181,7 +181,7 @@ Einde van de ondersteuning <./Maintenance/EndOfLife.md>
 :caption: 9) Hulp & probleemoplossing
 
 Waar kan ik hulp krijgen? <./GettingHelp/WhereCanIGetHelp.md>
-Algemene probleemoplossing <./GettingHelp/GeneralTroubleshooting.md>
+Probleemoplossing (begin hier) <./GettingHelp/GeneralTroubleshooting.md>
 - Bluetooth-probleemoplossing <./GettingHelp/BluetoothTroubleshooting.md>
 - Problemen met NSClient oplossen <./GettingHelp/TroubleshootingNsClient.md>
 - Problemen met Android Studio oplossen <./GettingHelp/TroubleshootingAndroidStudio.md>
