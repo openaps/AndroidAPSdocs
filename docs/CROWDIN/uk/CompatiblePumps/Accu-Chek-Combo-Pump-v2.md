@@ -1,11 +1,11 @@
 # Accu-Chek Combo
 
-**This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Це програмне забезпечення є частиною DIY-рішення, а не готовим продуктом. Воно вимагає, щоб ВИ прочитали, вивчили та зрозуміли систему, зокрема як нею користуватися. Воно не керує вашим діабетом замість вас, але допомагає покращити контроль діабету та якість життя, якщо ви готові витратити на це потрібний час. Не поспішайте, дайте собі час навчитися. Лише ви відповідаєте за те, що робите з цією системою.**
 
 ```{admonition} Accu-Chek Combo is being phased out
 :class: note
 
-Roche is withdrawing from the insulin pump market to refocus its diabetes portfolio on the Accu-Chek SmartGuide CGM. It has communicated the end of sales of both the Accu-Chek Combo and Accu-Chek Insight pumps; its remaining Accu-Chek Solo micropump is also being wound down (last deliveries in Germany at the end of 2025). The change is being rolled out by region, starting in Germany, with other European markets expected to follow. If you rely on this pump, plan ahead for a transition to a supported pump.
+Roche виходить з ринку інсулінових помп, щоб зосередити свій напрям діабету на CGM Accu-Chek SmartGuide. Компанія оголосила про припинення продажу помп Accu-Chek Combo і Accu-Chek Insight; її остання мікропомпа Accu-Chek Solo також поступово знімається з виробництва (останні поставки в Німеччині наприкінці 2025 року). Зміни впроваджуються за регіонами, починаючи з Німеччини; очікується, що далі будуть інші європейські ринки. Якщо ви покладаєтеся на цю помпу, заздалегідь сплануйте перехід на підтримувану помпу.
 ```
 
 ```{contents} Table of contents
@@ -13,327 +13,327 @@ Roche is withdrawing from the insulin pump market to refocus its diabetes portfo
 :local: true
 ```
 
-## Pump capabilities with AAPS
+## Можливості помпи з AAPS
 
-* Communicates with **AAPS** over your phone's native Bluetooth, without an additional communication device.
-* Automatic DST and timezone handling.
+* Зв'язується з **AAPS** через вбудований Bluetooth вашого телефону, без додаткового пристрою зв'язку.
+* Автоматична обробка літнього часу (DST) і часового поясу.
 
-## Hardware and software requirements
+## Вимоги до обладнання та програмного забезпечення
 
-* A Roche Accu-Chek Combo (any firmware, they all work).
-* A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
-* A compatible phone running Android 12 or newer. See [release notes](#maintenance-android-version-aaps-version) for details.
-* The **AAPS** app installed on your phone.
+* Помпа Roche Accu-Chek Combo (будь-яка прошивка, працюють усі).
+* Пристрій Smartpix або Realtyme разом із програмою 360 Configuration Software для налаштування помпи. (Roche безкоштовно надсилає своїм клієнтам пристрої Smartpix і програму налаштування на запит.)
+* Сумісний телефон з Android 12 або новішим. Подробиці дивіться в [примітках до випуску](#maintenance-android-version-aaps-version).
+* Застосунок **AAPS**, встановлений на вашому телефоні.
 
-Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. A list of phones can be found in the [AAPS Phones](#Phones-list-of-tested-phones) document. Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
+Деякі телефони можуть працювати краще за інші. Це залежить від якості підтримки Bluetooth і від того, чи мають вони додаткову, дуже агресивну логіку енергозбереження. Список телефонів наведено в документі [Телефони для AAPS](#Phones-list-of-tested-phones). Зверніть увагу: це неповний список, він відображає особистий досвід користувачів. Додайте й ваш досвід і так допоможіть іншим (ці проєкти тримаються на взаємодопомозі).
 
 (combov2-before-you-begin)=
-## Before you begin
+## Перш ніж почати
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Plan on spending about an hour for setting everything up and checking that everything is working properly.
+**БЕЗПЕКА ПОНАД УСЕ** – не виконуйте цей процес там, де ви не зможете виправити помилку. Тримайте під рукою пристрій Smartpix / Realtyme і програму 360 Configuration Software. Заплануйте приблизно годину на налаштування всього і перевірку, що все працює правильно.
 
-Be aware of the following limitations:
+Зверніть увагу на такі обмеження:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
-* Only one basal profile (the first one) is supported.
-* The lowest basal rate in your **Profile** is 0.05 U/h. **AAPS** refuses a **Profile** with a lower rate. The Combo rounds basal rates to its own steps (0.01 U/h below 1 U/h, 0.05 U/h up to 10 U/h, 0.1 U/h above). **AAPS** uses the rates the pump really gives.
-* Temporary basal rates are limited to 500% of the current basal rate. **AAPS** takes this limit into account.
-* The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because you tap **Refresh** on the Accu-Chek Combo pump screen), it will notice that profile no. 1 is the current one, and enable the loop again.
-* If the loop requests a running TBR to be cancelled, the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.
-* Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. If that error occurs, make sure Bluetooth is enabled, tap **Refresh** on the pump screen (**Manage** > **Pump**) to see if this was caused by an intermittent issue and if still no connection is established, reboot the phone which should usually fix this.
-* There is another issue where a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
-* Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB.
+* Подовжений і багатохвильовий болюс наразі не підтримуються (натомість можна використовувати [подовжені вуглеводи](../DailyLifeWithAaps/ExtendedCarbs.md)).
+* Підтримується лише один базальний профіль (перший).
+* Найменша базальна швидкість у вашому **профілі** – 0,05 Од/год. **AAPS** не приймає **профіль** з меншою швидкістю. Combo округлює базальні швидкості до власних кроків (0,01 Од/год нижче 1 Од/год, 0,05 Од/год до 10 Од/год, 0,1 Од/год вище). **AAPS** використовує швидкості, які помпа справді вводить.
+* Тимчасові базальні швидкості обмежені 500 % від поточної базальної швидкості. **AAPS** враховує це обмеження.
+* Петлю вимкнено, якщо поточний активний профіль на помпі не профіль № 1. Так триває, доки профіль № 1 не стане активним. Після цього під час наступного підключення AAPS (самостійно через деякий час або тому, що ви натиснете **Оновити** на екрані помпи Accu-Chek Combo) він побачить, що профіль № 1 поточний, і знову ввімкне петлю.
+* Якщо петля просить скасувати поточний TBR, Combo натомість встановить TBR 90 % або 110 % на 15 хвилин. Причина в тому, що справжнє скасування TBR викликає на помпі сигнал із сильною вібрацією, і цю вібрацію не можна вимкнути.
+* Стабільність з'єднання Bluetooth різна на різних телефонах. Через це бувають сигнали «помпа недоступна», коли з'єднання з помпою більше не встановлюється. Якщо виникла ця помилка, переконайтеся, що Bluetooth увімкнено, натисніть **Оновити** на екрані помпи (**Керувати** > **Помпа**), щоб перевірити, чи це був тимчасовий збій. Якщо з'єднання все ще не встановлюється, перезапустіть телефон – зазвичай це допомагає.
+* Є ще одна проблема, коли перезапуск не допомагає, а треба натиснути кнопку на помпі (це скидає стек Bluetooth помпи), щоб помпа знову приймала з'єднання від телефона.
+* Не встановлюйте TBR на помпі, бо петля бере керування TBR на себе. Виявлення нового TBR на помпі може тривати до 20 хвилин, і дію TBR буде враховано лише з моменту виявлення. Тож у найгіршому випадку до 20 хвилин TBR не буде враховано в IOB.
 
-The driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+Наразі драйвер підтримує такі мови на Combo. (Це не пов'язано з мовою AAPS – ідеться про мову, яку показує сам РК-дисплей Combo.)
 
-* English
-* Spanish
-* French
-* Italian
-* Russian
-* Turkish
-* Polish
-* Czech
-* Hungarian
-* Slovak
-* Romanian
-* Croatian
-* Dutch
-* Greek
-* Finnish
-* Norwegian
-* Portuguese
-* Swedish
-* Danish
-* German
-* Slovenian
-* Lithuanian
+* англійська
+* іспанська
+* французька
+* італійська
+* російська
+* турецька
+* польська
+* чеська
+* угорська
+* словацька
+* румунська
+* хорватська
+* нідерландська
+* грецька
+* фінська
+* норвезька
+* португальська
+* шведська
+* данська
+* німецька
+* словенська
+* литовська
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**Важливо**: якщо на вашій помпі встановлено мову, якої немає в цьому списку, зверніться до розробників і встановіть на помпі мову з цього списку. Інакше драйвер не працюватиме правильно.
 
-## Phone setup
+## Налаштування телефону
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+Дуже важливо переконатися, що оптимізацію батареї вимкнено. AAPS сам виявляє, коли на нього діє така оптимізація, і в інтерфейсі просить її вимкнути. Але на сучасних телефонах Android сам Bluetooth _теж_ є застосунком (системним застосунком). І зазвичай цей «застосунок Bluetooth» працює _з увімкненою за замовчуванням оптимізацією батареї_. Через це Bluetooth може перестати відповідати, коли телефон економить енергію і закриває застосунок Bluetooth. Тому в налаштуваннях системного застосунку Bluetooth теж треба вимкнути оптимізацію батареї. На жаль, шлях до системного застосунку Bluetooth різний на різних телефонах. У стандартному Android перейдіть до Settings -> Apps -> See all N apps (N = кількість застосунків на вашому телефоні). Потім відкрийте меню в правому верхньому куті та натисніть «Show system», «Show system apps» або «All apps». Тепер у розгорнутому списку застосунків знайдіть застосунок «Bluetooth». Виберіть його і на екрані «App info» натисніть «Battery». Там вимкніть оптимізацію батареї (іноді вона називається «battery usage»).
 
-## Combo setup
+## Налаштування Combo
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
+* Налаштуйте помпу за допомогою програми Accu-Chek 360 Configuration Software. Якщо у вас немає цієї програми, зверніться на гарячу лінію Accu-Chek. Зазвичай вони надсилають зареєстрованим користувачам CD з «360° Pump Configuration Software» та USB-інфрачервоний пристрій SmartPix (пристрій Realtyme теж підходить, якщо він у вас є).
 
-  - **Required settings** (marked green in screenshots):
+  - **Обов'язкові налаштування** (позначені зеленим на знімках екрана):
 
-     * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
-     * Enable Bluetooth
+     * Встановіть або залиште конфігурацію меню «Standard». Тоді на помпі будуть видні лише підтримувані меню та дії, а непідтримувані будуть приховані (подовжений/багатохвильовий болюс, кілька базальних профілів). Їх використання обмежує роботу петлі, бо тоді петля не може працювати безпечно.
+     * Перевірте, що _Quick Info Text_ має значення «QUICK INFO» (без лапок, знаходиться в _Insulin Pump Options_).
+     * Встановіть для TBR _Maximum Adjustment_ на 500 %
+     * Вимкніть _Signal End of Temporary Basal Rate_
+     * Встановіть для TBR _Duration increment_ на 15 хв
+     * Увімкніть Bluetooth
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Рекомендовані налаштування** (позначені синім на знімках екрана)
 
-     * Set low cartridge alarm to your liking
-     * Configure a max bolus suited for your therapy to protect against bugs in the software
-     * Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-     * Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+     * Встановіть сигнал низького рівня картриджа на ваш розсуд
+     * Налаштуйте максимальний болюс, що підходить для вашої терапії, для захисту від помилок у програмі
+     * Так само налаштуйте максимальну тривалість TBR як запобіжник. Дозвольте щонайменше 3 години, бо функція від'єднання помпи на 3 години встановлює 0 % на 3 години.
+     * Увімкніть блокування кнопок на помпі, щоб не можна було вводити болюс з помпи, особливо якщо помпу використовували раніше і швидкий болюс став звичкою.
+     * Встановіть тайм-аут дисплея і тайм-аут меню на мінімум: 5,5 і 5 відповідно. Так AAPS швидше відновлюється після помилок і зменшується кількість вібрацій, які можуть бути під час таких помилок
 
-  ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+  ![Знімок екрана налаштувань меню користувача](../images/combo/combo-menu-settings.png)
 
-  ![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+  ![Знімок екрана налаштувань TBR](../images/combo/combo-tbr-settings.png)
 
-  ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+  ![Знімок екрана налаштувань болюса](../images/combo/combo-bolus-settings.png)
 
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![Знімок екрана налаштувань картриджа інсуліну](../images/combo/combo-insulin-settings.png)
 
-## Activating the driver and pairing it with the Combo
+## Активація драйвера і спарювання з Combo
 
-* Open the **menu** (☰) in the top-left corner, go to [**Configuration** > **Pump**](../SettingUpAaps/ConfigBuilder.md) and select **Accu-Chek Combo**.
+* Відкрийте **меню** (☰) у лівому верхньому куті, перейдіть до [**Конфігурація** > **Помпа**](../SettingUpAaps/ConfigBuilder.md) і виберіть **Accu-Chek Combo**.
 
-  ![Configuration > Pump with the Accu-Chek Combo plugin](../images/v4/Configuration/configuration_pump_list_1.png)
+  ![Конфігурація > Помпа з плагіном Accu-Chek Combo](../images/v4/Configuration/configuration_pump_list_1.png)
 
-  Once it is selected, the **Accu-Chek Combo** card shows two buttons, **Settings** and **Open plugin**:
+  Коли його вибрано, картка **Accu-Chek Combo** показує дві кнопки: **Налаштування** і **Відкрити плагін**:
 
-  ![The Accu-Chek Combo plugin selected in Configuration > Pump](../images/v4/Pumps/accu_chek_combo_enabled.png)
+  ![Плагін Accu-Chek Combo, вибраний у Конфігурація > Помпа](../images/v4/Pumps/accu_chek_combo_enabled.png)
 
-  **Settings** opens the settings of the Accu-Chek Combo driver (see [Settings](#combov2-preferences) below):
+  **Налаштування** відкриває налаштування драйвера Accu-Chek Combo (дивіться [Налаштування](#combov2-preferences) нижче):
 
-  ![Accu-Chek Combo driver settings](../images/v4/Pumps/accu_chek_combo_settings.png)
+  ![Налаштування драйвера Accu-Chek Combo](../images/v4/Pumps/accu_chek_combo_settings.png)
 
-  **Open plugin** (or **Manage** > **Pump**) opens the Accu-Chek Combo pump screen. Before a pump is paired it shows **Not paired to a pump**:
+  **Відкрити плагін** (або **Керувати** > **Помпа**) відкриває екран помпи Accu-Chek Combo. Поки помпу не спарено, на ньому показано **Помпа не спарена**:
 
-  ![Accu-Chek Combo pump screen before pairing](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
+  ![Екран помпи Accu-Chek Combo до спарювання](../images/v4/Pumps/accu_chek_combo_pump_screen.png)
 
-* On the pump screen, tap **Pairing**. The **Pair with pump** screen opens. Follow the steps shown on screen, then tap **Start pairing**. When Android asks for permission to make the phone visible to other Bluetooth devices, tap **Allow**. Eventually, the Combo shows a 10-digit pairing PIN on its screen, and **AAPS** asks for it. Enter that PIN in the **10-digit PIN** field.
+* На екрані помпи натисніть **Спарювання**. Відкриється екран **Спарувати з помпою**. Виконайте кроки, показані на екрані, потім натисніть **Почати спарювання**. Коли Android попросить дозвіл зробити телефон видимим для інших пристроїв Bluetooth, натисніть **Дозволити**. Згодом Combo покаже на своєму екрані 10-значний PIN для спарювання, і **AAPS** попросить його ввести. Введіть цей PIN у поле **10-значний PIN**.
 
-  ![The Pair with pump screen with the Start pairing button](../images/combo/combov2-pairing-screen-1.png)
+  ![Екран «Спарувати з помпою» з кнопкою «Почати спарювання»](../images/combo/combov2-pairing-screen-1.png)
 
-  ![Android asking to make the phone visible to other Bluetooth devices](../images/combo/combov2-pairing-bt-visible-prompt.png)
+  ![Android просить зробити телефон видимим для інших пристроїв Bluetooth](../images/combo/combov2-pairing-bt-visible-prompt.png)
 
-  ![Combo pairing in progress, scanning for the pump](../images/combo/combov2-pairing-screen-2.png)
+  ![Спарювання Combo в процесі, пошук помпи](../images/combo/combov2-pairing-screen-2.png)
 
-  The next pictures are from an older **AAPS** version. The steps and texts are the same, but the screens look slightly different.
+  Наступні зображення зі старішої версії **AAPS**. Кроки й тексти ті самі, але екрани виглядають трохи інакше.
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
+  ![Знімок екрана інтерфейсу спарювання Combo 3](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Знімок екрана інтерфейсу спарювання Combo 4](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Знімок екрана інтерфейсу спарювання Combo 4](../images/combo/combov2-pairing-screen-5.png)
 
-* If the PIN is entered incorrectly, **AAPS** shows **PIN did not work. Check if there was a typo. If this keeps happening, cancel and retry pairing.**
+* Якщо PIN введено неправильно, **AAPS** показує **PIN не спрацював. Перевірте на друкарську помилку. Якщо повторюється, скасуйте та спробуйте спарування знову.**
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+  ![Знімок екрана інтерфейсу спарювання Combo 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* When **Successfully paired with Combo** is shown, tap **OK**. You return to the pump screen, which now shows the pump status (see [Accu-Chek Combo pump screen contents](#combov2-tab-contents) below). The **Pairing** button is replaced by **Unpair**.
+* Коли показано **Спарювання з Combo успішне**, натисніть **OK**. Ви повернетеся на екран помпи, який тепер показує статус помпи (дивіться [Вміст екрана помпи Accu-Chek Combo](#combov2-tab-contents) нижче). Кнопку **Спарювання** замінено на **Розпарувати**.
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+* Щоб перевірити налаштування (для безпеки помпа має бути **від'єднана** від будь-якої канюлі!), за допомогою AAPS встановіть TBR 500 % на 15 хв і введіть болюс. Тепер на помпі має працювати TBR, а болюс має бути в історії. AAPS також має показувати активний TBR і введений болюс.
 
-* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
+* На Combo рекомендовано увімкнути блокування кнопок, щоб не можна було вводити болюс з помпи, особливо якщо помпу використовували раніше і функція «швидкий болюс» стала звичкою.
 
-## Notes about pairing
+## Примітки щодо спарювання
 
-The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
+Accu-Chek Combo була розроблена до виходу Bluetooth 4.0 і лише через рік після виходу найпершої версії Android. Тому її спосіб спарювання з іншими пристроями не на 100 % сумісний з тим, як це робить Android сьогодні. Щоб повністю це обійти, AAPS потрібні дозволи системного рівня, які є лише в системних застосунків. Їх встановлюють виробники телефонів – користувачі не можуть встановити системні застосунки.
 
-The consequence of this is that pairing will never be 100% without problems. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+Через це спарювання ніколи не буде на 100 % без проблем. Зокрема, під час спарювання діалог PIN Bluetooth в Android може на мить з'явитися і сам зникнути. Але іноді він залишається на екрані і просить 4-значний PIN. (Не плутайте його з 10-значним PIN для спарювання Combo.) Нічого не вводьте, просто натисніть «Скасувати». Якщо спарювання не продовжується, виконайте інструкції на екрані, щоб спробувати спарувати знову.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo pump screen contents
+## Вміст екрана помпи Accu-Chek Combo
 
-To open the pump screen, go to **Manage** > **Pump**. Once a pump is paired, it shows the following information (items are listed from top to bottom):
+Щоб відкрити екран помпи, перейдіть до **Керувати** > **Помпа**. Коли помпу спарено, екран показує таку інформацію (пункти перелічено згори вниз):
 
-![Screenshot of the Accu-Chek Combo pump screen with pairing (older AAPS version)](../images/combo/combov2-tab-with-pairing.png)
+![Знімок екрана помпи Accu-Chek Combo зі спарюванням (старіша версія AAPS)](../images/combo/combov2-tab-with-pairing.png)
 
-1. **Driver state**: The driver can be in one of the following states:
-   - **Disconnected**: There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - **Connecting**
-   - **Checking pump**: the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - **Ready**: the driver is ready to accept commands from AAPS
-   - **Suspended**: the pump is suspended (shown as "stopped" in the Combo)
-   - A description of the command being executed, for example **Setting basal profile** or **Updating pump status**
-   - **Error**: an error occurred; the connection was terminated, any ongoing command was aborted
-2. **Last connection**: How many minutes ago the driver successfully connected to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. **Battery**: Battery level; the Combo only indicates **Full**, **Low** or **Empty**, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-4. **Reservoir**: How many IU are currently in the Combo's reservoir
-5. **Last bolus**: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is not shown
-6. **Temp basal**: Details about the currently active temporary basal; if none is currently active, this is not shown
-7. **Base basal rate**: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-8. **Serial number**: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-9. **Bluetooth address**: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+1. **Стан драйвера**: драйвер може бути в одному з таких станів:
+   - **Роз'єднано**: з'єднання Bluetooth немає; драйвер більшість часу в цьому стані і підключається до помпи лише за потреби – так економиться енергія
+   - **Підключення**
+   - **Перевірка помпи**: помпа підключена, але драйвер зараз виконує перевірки безпеки, щоб переконатися, що все гаразд і актуально
+   - **Готово**: драйвер готовий приймати команди від AAPS
+   - **Призупинено**: помпу призупинено (на Combo показано як «stopped»)
+   - Опис команди, яка виконується, наприклад **Встановлення базального профілю** або **Оновлення статусу помпи**
+   - **Помилка**: сталася помилка; з'єднання розірвано, будь-яку поточну команду перервано
+2. **Останнє підключення**: скільки хвилин тому драйвер успішно підключився до Combo; якщо минуло понад 30 хвилин, цей пункт показано червоним
+3. **Акумулятор**: рівень заряду батареї; Combo показує лише **Заряджена**, **Низький заряд** або **Розряджена** і не дає точнішої інформації (наприклад, у відсотках), тому тут показано лише ці три рівні
+4. **Резервуар**: скільки Од зараз у резервуарі Combo
+5. **Останній болюс**: скільки хвилин тому було введено останній болюс; якщо після запуску AAPS болюс ще не вводили, цей пункт не показано
+6. **Тимчасовий базал**: дані про поточний активний тимчасовий базал; якщо зараз його немає, цей пункт не показано
+7. **Базова базальна швидкість**: поточна активна базова базальна швидкість («базова» означає базальну швидкість без впливу активного TBR на коефіцієнт базальної швидкості)
+8. **Серійний номер**: серійний номер Combo, який повідомляє помпа (він збігається із серійним номером на задній панелі Combo)
+9. **Адреса Bluetooth**: 6-байтова адреса Bluetooth Combo у форматі `XX:XX:XX:XX:XX:XX`
 
-While the driver is doing something (for example, setting a basal profile), a box below the list describes the current activity, with a thin progress bar showing the progress.
+Поки драйвер щось робить (наприклад, встановлює базальний профіль), поле під списком описує поточну дію, а тонка смуга показує хід виконання.
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing. When the driver switches to the command mode however, that field is left blank.
+Combo може працювати через Bluetooth у режимі _віддаленого терміналу_ або в режимі _команд_. Режим віддаленого терміналу відповідає «режиму дистанційного керування» на глюкометрі Combo, який імітує РК-дисплей помпи і чотири кнопки. Деякі команди драйвер мусить виконувати в цьому режимі, бо в режимі команд для них немає відповідника. Режим команд набагато швидший, але, як уже сказано, має обмежені можливості. Коли активний режим віддаленого терміналу, поточний екран віддаленого терміналу показано в полі просто над зображенням Combo. Однак коли драйвер переходить у режим команд, це поле залишається порожнім.
 
-(You do not influence this; the driver fully decides on its own what mode to use. This is merely a note for you to know why sometimes you can see Combo frames in that field.)
+(Ви на це не впливаєте; драйвер сам вирішує, який режим використовувати. Це лише примітка, щоб ви знали, чому іноді в цьому полі видно кадри з Combo.)
 
-At the bottom, there are these buttons:
+Унизу є такі кнопки:
 
-- **Refresh**: Triggers an immediate pump status update. It is also used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#combov2-alerts)). You can only tap it when the driver is disconnected, suspended or in the error state.
-- **Unpair**: Unpairs the paired Combo from **AAPS** and Android, after you confirm **Do you really want to unpair the pump?**. When no pump is paired, this button is replaced by **Pairing**.
+- **Оновити**: запускає негайне оновлення статусу помпи. Також ця кнопка повідомляє AAPS, що виявлену раніше помилку усунено і AAPS може знову перевірити, що все гаразд (докладніше нижче в [розділі про сигнали](#combov2-alerts)). Натиснути її можна лише тоді, коли драйвер роз'єднаний, призупинений або в стані помилки.
+- **Розпарувати**: розпаровує спарену Combo від **AAPS** і Android, після того як ви підтвердите **Ви дійсно хочете розпарувати помпу?**. Коли жодну помпу не спарено, цю кнопку замінено на **Спарювання**.
 
 (combov2-preferences)=
-## Settings
+## Налаштування
 
-These settings are available for the Combo driver (**Configuration** > **Pump** > **Accu-Chek Combo** > **Settings**, or the settings icon (cog wheel) on the pump screen). Items are listed from top to bottom:
+Для драйвера Combo доступні такі налаштування (**Конфігурація** > **Помпа** > **Accu-Chek Combo** > **Налаштування** або значок налаштувань (шестерня) на екрані помпи). Пункти перелічено згори вниз:
 
-1. **Discovery duration (in seconds)**: When pairing, the driver makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
-2. **Autodetect and automatically enter insulin reservoir change**: If enabled, the driver enters the "reservoir change" that you would normally enter yourself with **Manage** > **Prime/Fill**. This is explained [in further detail below](#combov2-autodetections).
-3. **Autodetect and automatically enter battery change**: If enabled, the driver enters the "battery change" that you would normally enter yourself with **Manage** > **Pump Battery Change**. This is explained [in further detail below](#combov2-autodetections).
-4. **Enable verbose Combo logging**: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to **AAPS** logs and lessen their usefulness.
+1. **Тривалість пошуку (у секундах)**: під час спарювання драйвер робить телефон видимим для помпи. Цей параметр визначає, як довго триває видимість. За замовчуванням вибрано максимум (300 секунд = 5 хвилин). Android не дозволяє видимості тривати безкінечно, тому треба вибрати тривалість.
+2. **Автовиявлення та автоматичний запис зміни резервуара**: якщо ввімкнено, драйвер записує «заміну резервуара», яку ви зазвичай записуєте самі через **Керувати** > **Підготовка/Заповнення**. Докладніше про це [нижче](#combov2-autodetections).
+3. **Автовиявлення та автоматичний запис зміни батареї**: якщо ввімкнено, драйвер записує «заміну батареї», яку ви зазвичай записуєте самі через **Керувати** > **Заміна батареї помпи**. Докладніше про це [нижче](#combov2-autodetections).
+4. **Увімкнути детальний лог Combo**: драйвер записує в лог набагато більше інформації. **УВАГА**: не вмикайте це, якщо вас не попросив розробник. В іншому разі це може додати багато зайвого в логи **AAPS** і зробити їх менш корисними.
 
-Pairing and unpairing are done on the pump screen, not in the settings (see above).
+Спарювання і розпарювання виконуються на екрані помпи, а не в налаштуваннях (дивіться вище).
 
 (combov2-autodetections)=
-## Autodetecting and automatically entering battery and reservoir changes
+## Автовиявлення та автоматичний запис заміни батареї і резервуара
 
-The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
+Драйвер може виявляти заміну батареї та резервуара, стежачи за рівнем батареї та резервуара. Якщо під час останнього оновлення статусу помпи Combo повідомила, що рівень батареї низький, а під час нового оновлення рівень батареї нормальний, драйвер робить висновок, що користувач замінив батарею. Така ж логіка діє для рівня резервуара: якщо зараз він вищий, ніж раніше, це вважається заміною резервуара.
 
-This only works if the battery and reservoir are replaced when these levels are reported as low _and_ the battery and reservoir are sufficiently filled.
+Це працює, лише якщо батарею та резервуар замінюють, коли їх рівень показано як низький, _і_ батарея та резервуар достатньо заповнені.
 
-These autodetections can be turned off in the driver [settings](#combov2-preferences).
+Ці автовиявлення можна вимкнути в [налаштуваннях](#combov2-preferences) драйвера.
 
 (combov2-alerts)=
-## Alerts (warnings and errors) and how they are handled
+## Сигнали (попередження та помилки) і як вони обробляються
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
+Combo показує сигнали як екрани віддаленого терміналу. Попередження показуються з кодом «Wx» (x – цифра) разом із коротким описом. Наприклад, «W7», «TBR OVER». Помилки схожі, але показуються з кодом «Ex».
 
-Certain warnings are automatically dismissed by the driver. These are:
+Деякі попередження драйвер закриває автоматично. Ось вони:
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main screen
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main screen
-- W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
+- W1 «reservoir low»: драйвер перетворює це на попередження «низький рівень резервуара», яке показано на головному екрані AAPS
+- W2 «battery low»: драйвер перетворює це на попередження «низький заряд батареї», яке показано на головному екрані AAPS
+- W3, W6, W7, W8: усі вони лише інформують користувача, тому драйвер може безпечно закривати їх автоматично
 
-Other warnings are _not_ automatically dismissed. Also, errors are _never_ automatically dismissed. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo pump screen contents above](#combov2-tab-contents)). This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by tapping **Refresh** on the Accu-Chek Combo pump screen. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
+Інші попередження _не_ закриваються автоматично. Також помилки _ніколи_ не закриваються автоматично. Обидва типи обробляються однаково: драйвер показує діалог із сигналом поверх інтерфейсу AAPS і перериває виконання будь-якої поточної команди. Потім драйвер переходить у стан «помилка» (дивіться [вміст екрана помпи Accu-Chek Combo вище](#combov2-tab-contents)). У цьому стані жодні команди не виконуються. Користувач мусить усунути помилку на помпі; наприклад, при закупорці може знадобитися замінити канюлю. Коли користувач усунув помилку, звичайну роботу можна відновити, натиснувши **Оновити** на екрані помпи Accu-Chek Combo. Тоді драйвер підключається до Combo і оновлює її статус, перевіряючи, зокрема, чи помилка ще показана на екрані. Також драйвер через деякий час сам оновлює статус помпи, тому натискати цю кнопку вручну не обов'язково.
 
-Bolusing is a special case. It is done in the Combo's command mode, which does not report mid-bolus that an alert appeared. As a consequence, the driver cannot automatically dismiss warnings _during_ a bolus. This means that unfortunately, the pump will be beeping until the bolus is finished. The most common mid-bolus alert typically is W1 "reservoir low". **Don't** dismiss Combo warnings on the pump itself manually during a bolus. You risk interrupting the bolus. The driver will take care of the warning once the bolus is over.
+Болюс – особливий випадок. Він виконується в режимі команд Combo, який під час болюса не повідомляє, що з'явився сигнал. Тому драйвер не може автоматично закривати попередження _під час_ болюса. На жаль, це означає, що помпа подаватиме звукові сигнали, доки болюс не завершиться. Найчастіший сигнал під час болюса – W1 «reservoir low» (низький рівень резервуара). **Не** закривайте попередження Combo вручну на самій помпі під час болюса. Ви ризикуєте перервати болюс. Драйвер обробить попередження, коли болюс завершиться.
 
-Alerts that happen while the driver is not connected to the Combo will not be noticed by the driver. The Combo has no way of automatically pushing that alert to the phone; it is always the phone that has to initiate the connection. As a consequence, the alert will persist until the driver connects to the pump. You can tap **Refresh** on the pump screen to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+Сигнали, які виникають, коли драйвер не підключений до Combo, драйвер не помітить. Combo не може сама надіслати сигнал на телефон; з'єднання завжди починає телефон. Тому сигнал залишатиметься, доки драйвер не підключиться до помпи. Ви можете натиснути **Оновити** на екрані помпи, щоб почати з'єднання і дати драйверу обробити сигнал одразу (а не чекати, доки AAPS сам вирішить підключитися).
 
-**IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by tapping **Refresh** or by the driver's eventual auto-update) and no error is shown anymore.
+**ВАЖЛИВО**: якщо виникає помилка або з'являється попередження, яке не належить до автоматично закриваних, драйвер переходить у стан помилки. У цьому стані петлю **БУДЕ ЗАБЛОКОВАНО**, доки статус помпи не буде оновлено! Петлю розблоковано, коли статус помпи оновлено (натисканням **Оновити** або автоматичним оновленням драйвера) і помилку більше не показано.
 
-## Things to be careful about when using the Combo
+## На що звернути увагу під час використання Combo
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-* Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
-* Don't set or cancel a TBR on the pump. The loop assumes control of TBRs and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-* Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#combov2-before-you-begin)).
-* Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](#combov2-alerts) for a more detailed explanation why.
+* Пам'ятайте, що це не готовий продукт. Особливо на початку користувач мусить стежити за системою і розуміти її, її обмеження і те, як вона може дати збій. Наполегливо радимо НЕ використовувати цю систему, якщо людина, яка нею користується, не може повністю її зрозуміти.
+* Через те, як працює дистанційне керування Combo, деякі операції (особливо встановлення базального профілю) виконуються повільно порівняно з іншими помпами. Це прикре обмеження Combo, яке неможливо обійти.
+* Не встановлюйте і не скасовуйте TBR на помпі. Петля бере керування TBR на себе і інакше не може надійно працювати, бо неможливо визначити час початку TBR, який користувач встановив на помпі.
+* Не натискайте жодних кнопок на помпі, поки AAPS з нею з'єднується (поки помпа підключена до AAPS, на ній показано логотип Bluetooth). Це перерве з'єднання Bluetooth. Робіть це лише тоді, коли є проблеми зі встановленням з'єднання (дивіться [розділ «Перш ніж почати» вище](#combov2-before-you-begin)).
+* Не натискайте жодних кнопок, поки помпа вводить болюс. Зокрема, не намагайтеся закривати сигнали натисканням кнопок. Чому саме, докладніше пояснено в [розділі про сигнали](#combov2-alerts).
 
-## Checklist for when no connection can be established with the Combo
+## Що робити, якщо не вдається встановити з'єднання з Combo
 
-The driver does its best to connect to the Combo, and uses a couple of tricks to maximize reliability. Still, sometimes, connections aren't established. Here are some steps to take for trying to remedy this situation.
+Драйвер робить усе можливе, щоб підключитися до Combo, і використовує кілька прийомів для максимальної надійності. І все ж іноді з'єднання не встановлюється. Ось кілька кроків, які можуть допомогти.
 
-1. Press a button on the Combo. Sometimes, the Combo's Bluetooth stack becomes non-responsive, and does not accept connections anymore. By pressing a button on the Combo and making the LCD show something, the Bluetooth stack is reset. Most of the time, this is the only step that's needed to fix the connection issues.
-2. Restart the phone. This may be needed if there is an issue with the phone's Bluetooth stack itself.
-3. If the Combo's battery cap is old, consider replacing it. Old battery caps can cause issues with the Combo's power supply, which affect Bluetooth.
-4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.
+1. Натисніть кнопку на Combo. Іноді стек Bluetooth у Combo перестає відповідати і більше не приймає з'єднання. Якщо натиснути кнопку на Combo, щоб на РК-дисплеї щось з'явилося, стек Bluetooth скидається. Здебільшого лише цей крок і потрібен, щоб усунути проблеми зі з'єднанням.
+2. Перезапустіть телефон. Це може знадобитися, якщо проблема в самому стеку Bluetooth телефона.
+3. Якщо кришка батарейного відсіку Combo стара, подумайте про її заміну. Старі кришки батарейного відсіку можуть спричиняти проблеми з живленням Combo, що впливає на Bluetooth.
+4. Якщо спроби з'єднання все ще не вдаються, розпаруйте помпу і спаруйте її знову.
 
 (combov2-tips-for-basic-usage)=
-## Tips for basic usage
+## Поради щодо щоденного використання
 
-### How to ensure smooth operations
+### Як забезпечити безперебійну роботу
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under your body while you sleep, a higher position (on a shelf or board) works best.
-* Always make sure that the pump battery is as full as possible. See the battery section for tips regarding the battery.
-* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys.
+* Завжди **носіть смартфон із собою**, а вночі залишайте його біля ліжка. Під час сну помпа може опинитися за вашим тілом або під ним, тому найкраще класти телефон вище (на полицю або дошку).
+* Завжди стежте, щоб батарея помпи була якомога більш заряджена. Поради щодо батареї дивіться в розділі про батарею.
+* Коли можливо, керуйте помпою лише через застосунок AAPS. Для цього увімкніть блокування кнопок на помпі в **PUMP SETTINGS / KEY LOCK / ON**. Кнопки помпи потрібні лише під час заміни батареї або картриджа.
 
-![Keylock](../images/combo/combo-tips-keylock.png)
+![Блокування кнопок](../images/combo/combo-tips-keylock.png)
 
-### Pump not reachable. What to do?
+### Помпа недоступна. Що робити?
 
-#### Activate pump unreachable alarm
-* In **AAPS**, tap the **Settings** (gear) icon at the top right of the main screen, go to **Local alerts**, activate **Alert if pump is unreachable** and set **Pump unreachable threshold** to **31** minutes.
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+#### Увімкніть сигнал недоступності помпи
+* В **AAPS** натисніть значок **Налаштування** (шестерня) у правому верхньому куті головного екрана, перейдіть до **Локальні сповіщення**, увімкніть **Сигнал, якщо помпа недоступна** і встановіть **Поріг недоступності помпи** на **31** хвилину.
+* Так сигнал не спрацює, коли ви виходите з кімнати і залишаєте телефон на столі, але ви дізнаєтеся, якщо помпа недоступна довше, ніж триває тимчасова базальна швидкість.
 
-#### Restore reachability of the pump
+#### Відновлення зв'язку з помпою
 
-* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, tap **Refresh** on the Accu-Chek Combo pump screen (**Manage** > **Pump**). Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump.
+* Коли AAPS повідомляє про сигнал **Помпа недоступна**, спочатку зніміть блокування кнопок і **натисніть будь-яку кнопку на помпі** (наприклад, кнопку «вниз»). Щойно дисплей помпи вимкнеться, натисніть **Оновити** на екрані помпи Accu-Chek Combo (**Керувати** > **Помпа**). Зазвичай після цього зв'язок знову працює.
+* Якщо це не допомагає, перезапустіть смартфон. Після перезапуску AAPS знову запуститься і встановить нове з'єднання з помпою.
 
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. See [AAPS Phones](#Phones-list-of-tested-phones) for successfully tested smartphones.
+* Тести з різними смартфонами показали, що на деяких смартфонах помилка «помпа недоступна» буває частіше, ніж на інших. Успішно перевірені смартфони дивіться в [Телефони для AAPS](#Phones-list-of-tested-phones).
 
-#### Root causes and consequences of frequent communication errors
-* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. You can tell by the fact that the treatment buttons (QuickLaunch toolbar) on the main screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last connection** field of the pump screen (**Manage** > **Pump**), you can check when AAPS last communicated with the pump.
+#### Причини і наслідки частих помилок зв'язку
+* На телефонах з **малим обсягом пам'яті** (або з **агресивним енергозбереженням**) AAPS часто закривається. Це видно з того, що кнопки терапії (панель швидкого запуску) на головному екрані не показані, коли ви відкриваєте AAPS, бо система ініціалізується. Через це під час запуску можуть спрацьовувати сигнали «помпа недоступна». У полі **Останнє підключення** на екрані помпи (**Керувати** > **Помпа**) можна перевірити, коли AAPS востаннє з'єднувався з помпою.
 
-![No connection to pump](../images/combo/combov2-tips-no-connection-to-pump.png)
+![Немає з'єднання з помпою](../images/combo/combov2-tips-no-connection-to-pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
-* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed.
+* Ця помилка може швидше розряджати батарею помпи, бо під час перезапуску застосунку базальний профіль зчитується з помпи.
+* Вона також збільшує ймовірність помилки, через яку помпа відхиляє всі вхідні з'єднання, доки не буде натиснуто кнопку на помпі.
 
-### Cancellation of temporary basal rate fails
-* Occasionally, AAPS cannot automatically cancel a **TBR CANCELED** alert. Then you have to either tap **Refresh** on the Accu-Chek Combo pump screen or the alarm on the pump will need to be confirmed.
+### Не вдається скасувати тимчасову базальну швидкість
+* Іноді AAPS не може автоматично закрити сигнал **TBR CANCELED**. Тоді треба або натиснути **Оновити** на екрані помпи Accu-Chek Combo, або підтвердити сигнал на помпі.
 
-### Pump battery considerations
+### Батарея помпи: що врахувати
 
-#### Changing the battery
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop** for 1 hour.
-* Wait for the phone to communicate with the pump and for the Bluetooth logo on the pump to fade.
+#### Заміна батареї
+* Після сигналу **low battery** (низький заряд батареї) батарею треба замінити якомога швидше, щоб завжди мати достатньо енергії для надійного зв'язку Bluetooth зі смартфоном, навіть якщо телефон далі від помпи.
+* Навіть після сигналу **low battery** батарея може працювати ще досить довго. Однак після сигналу «low battery» рекомендовано завжди мати при собі нову батарею.
+* Перед заміною батареї натисніть на символ **Петля** на головному екрані і виберіть **Призупинити петлю** на 1 годину.
+* Зачекайте, поки телефон з'єднається з помпою і логотип Bluetooth на помпі зникне.
 
-![Bluetooth enabled](../images/combo/combo-tips-compo.png)
+![Bluetooth увімкнено](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* You don't need to re-set the pump's clock after the battery change: AAPS automatically updates the pump's date and time.
-* Then put the pump back in run mode and select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
+* Зніміть блокування кнопок на помпі, переведіть помпу в режим зупинки, підтвердіть можливо скасовану тимчасову базальну швидкість і швидко замініть батарею.
+* Після заміни батареї не треба знову встановлювати годинник помпи: AAPS автоматично оновлює дату та час помпи.
+* Потім знову переведіть помпу в режим роботи і виберіть **Відновити**, натиснувши на значок **Петлю призупинено** на головному екрані.
+* AAPS знову встановить потрібну тимчасову базальну швидкість, коли надійде наступне значення глюкози крові.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
-#### Battery type and causes of short battery life
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries.
+#### Тип батареї і причини короткого терміну роботи
+* Інтенсивний зв'язок Bluetooth споживає багато енергії, тому використовуйте лише **якісні батареї**, як-от Energizer Ultimate Lithium, батареї «power one» з «великого» сервісного набору Accu-Chek, а якщо ви хочете акумулятор – акумулятори Eneloop.
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the service pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+Типовий термін роботи різних типів батарей:
+* **Energizer Ultimate Lithium**: 4–7 тижнів
+* **Power One Alkaline** (Varta) із сервісного набору: 2–4 тижні
+* Акумулятори **Eneloop rechargeable** (BK-3MCCE): 1–3 тижні
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period.
-* The smart phone hardware and software (Android operating system and Bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+Якщо ваша батарея працює значно менше, ніж указано вище, перевірте такі можливі причини:
+* Є кілька варіантів кришки батарейного відсіку помпи Combo, які частково замикають батареї, і ті швидко розряджаються. Кришки без цієї проблеми можна впізнати за золотистими металевими контактами.
+* Якщо годинник помпи «не переживає» коротку заміну батареї, ймовірно, зламаний конденсатор, який підтримує роботу годинника під час короткого вимкнення живлення. У такому разі може допомогти заміна помпи компанією Roche, що не є проблемою протягом гарантійного терміну.
+* Апаратне і програмне забезпечення смартфона (операційна система Android і стек Bluetooth) також впливає на термін роботи батареї помпи, хоча точні чинники ще не повністю відомі. Якщо є можливість, спробуйте інший смартфон і порівняйте термін роботи батареї.
 
-### Extended bolus, multiwave bolus
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
-* Use **e-Carbs** when entering carbs or using the Bolus wizard by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in your blood. The system will then calculate small carbs equally distributed over the whole duration which will cause the algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immediate bolus with e-carbs.
-* Before eating, set a temporary **Eating Soon** target with glucose 80 for several hours (press the target on the main screen, or **Manage** > **Temp Target**). The duration should be based on the interval you would choose for an extended bolus. This will keep your target lower than usual and therefore increase the amount of insulin delivered.
-* Then use the **Bolus wizard** to enter the full carbs of the meal, but do not directly apply the values it suggests. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max U/h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+### Подовжений болюс, багатохвильовий болюс
+Алгоритм OpenAPS не підтримує паралельний подовжений болюс або багатохвильовий болюс. Але схожої терапії можна досягти такими способами:
+* Використовуйте **e-вуглеводи** під час введення вуглеводів або в калькуляторі болюса: введіть вуглеводи всієї їжі і тривалість, протягом якої, як ви очікуєте, вуглеводи потраплятимуть у кров як глюкоза. Тоді система розрахує невеликі порції вуглеводів, рівномірно розподілені на всю тривалість. Через це алгоритм вводитиме відповідну дозу інсуліну і водночас постійно перевірятиме загальне зростання чи зниження рівня глюкози крові. Для підходу, схожого на багатохвильовий болюс, можна також поєднати менший негайний болюс з e-вуглеводами.
+* Перед їжею встановіть тимчасову ціль **Очікуваний прийом їжі** з глюкозою 80 на кілька годин (натисніть на ціль на головному екрані або **Керувати** > **Тимчасова ціль**). Тривалість має відповідати інтервалу, який ви вибрали б для подовженого болюса. Так ваша ціль буде нижчою, ніж зазвичай, і кількість введеного інсуліну збільшиться.
+* Потім у **Калькулятор болюса** введіть усі вуглеводи їжі, але не застосовуйте одразу запропоновані значення. Якщо треба ввести болюс, схожий на багатохвильовий, зменште дозу інсуліну. Залежно від їжі алгоритм тепер мусить вводити додаткові SMB або вищі тимчасові базальні швидкості, щоб протидіяти зростанню глюкози крові. Тут з обмеженнями безпеки для базальної швидкості (Max U/h, максимальний базальний IOB) треба експериментувати дуже обережно і за потреби тимчасово їх змінювати.
 
-* Don't use the extended or multiwave bolus directly on the pump. The driver does not support them (see [Before you begin](#combov2-before-you-begin)); if a multiwave bolus is given on the pump anyway, **AAPS** records it from the pump history as a normal bolus plus an extended bolus, so it is counted in IOB. An extended bolus does not work in a closed loop environment (see [this page](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) for details).
+* Не використовуйте подовжений або багатохвильовий болюс безпосередньо на помпі. Драйвер їх не підтримує (дивіться [Перш ніж почати](#combov2-before-you-begin)); якщо багатохвильовий болюс усе ж введено на помпі, **AAPS** записує його з історії помпи як звичайний болюс плюс подовжений болюс, тож він врахований в IOB. Подовжений болюс не працює в закритій петлі (подробиці дивіться на [цій сторінці](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)).
 
-### Alarms at bolus delivery
-* After each bolus, the driver reads the pump's bolus history. This is a safety mechanism to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump.
-* Before a bolus, if the pump history has a bolus that **AAPS** did not know about (for example, a bolus given directly on the pump), the requested bolus is **not given**, because it was calculated without that insulin. **AAPS** shows **The pump history has a bolus that AAPS did not know about. The requested bolus was not given...** Check the bolus history on the pump and your IOB. If a bolus is still needed, calculate it again. This also applies when the unknown bolus is found on a new connection.
-* If the bolus was given but the pump history also had other boluses that **AAPS** did not know about, they are recorded now and **AAPS** asks you to check IOB before the next bolus.
-* If the connection to the pump is lost **during** a bolus, **AAPS** does not record 0 U: it shows how much the pump had given by then and warns that the pump may still give the rest. **Do not bolus again.** **AAPS** reads the real amount from the pump history at the next connection.
-* If the connection is lost while **AAPS** sends the bolus, it is not known whether the pump got it. Check the bolus history on the pump before the next bolus.
-* If **AAPS** cannot confirm that a bolus was delivered, it shows **Bolus delivery failed. It appears no bolus was delivered. To be sure, please check the pump to avoid a double bolus and then bolus again.** Boluses are never retried automatically.
+### Сигнали під час введення болюса
+* Після кожного болюса драйвер зчитує історію болюсів помпи. Це механізм безпеки для правильного розрахунку активного інсуліну (IOB), навіть коли болюс введено безпосередньо з помпи.
+* Якщо перед болюсом в історії помпи є болюс, про який **AAPS** не знав (наприклад, болюс, введений безпосередньо на помпі), запитаний болюс **не вводиться**, бо його розраховано без цього інсуліну. **AAPS** показує **В історії помпи є болюс, про який AAPS не знав. Запитаний болюс не введено...** Перевірте історію болюсів на помпі та ваш IOB. Якщо болюс ще потрібен, розрахуйте його знову. Це діє також, коли невідомий болюс знайдено під час нового з'єднання.
+* Якщо болюс введено, але в історії помпи були й інші болюси, про які **AAPS** не знав, їх буде записано зараз, і **AAPS** попросить вас перевірити IOB перед наступним болюсом.
+* Якщо з'єднання з помпою втрачено **під час** болюса, **AAPS** не записує 0 Од: він показує, скільки помпа ввела на той момент, і попереджає, що помпа може ще ввести решту. **Не вводьте болюс повторно.** **AAPS** прочитає реальну кількість з історії помпи під час наступного підключення.
+* Якщо з'єднання втрачено, коли **AAPS** надсилає болюс, невідомо, чи помпа його отримала. Перевірте історію болюсів на помпі перед наступним болюсом.
+* Якщо **AAPS** не може підтвердити, що болюс введено, він показує **Помилка введення болюсу. Схоже, болюс не було введено. Щоб бути впевненими, перевірте помпу, щоб уникнути подвійного болюсу, а потім введіть болюс знову.** Болюси ніколи не повторюються автоматично.
 
-## Where to get help
+## Де отримати допомогу
 
-Development of the Combo driver is done by the community on a **volunteer** basis. Before requesting help, please:
+Драйвер Combo розробляє спільнота на **волонтерських** засадах. Перш ніж просити допомоги, будь ласка:
 
-1. **Read** the relevant section of this documentation to confirm how the feature is meant to work.
-2. **Ask** on the *#AAPS* channel on [Discord](https://discord.gg/4fQUWHZ4Mw), or in one of the other [community channels](../GettingHelp/WhereCanIGetHelp.md).
-3. **Report a bug** by searching the [existing issues](https://github.com/nightscout/AndroidAPS/issues); if yours is not listed, open a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
+1. **Прочитайте** відповідний розділ цієї документації, щоб перевірити, як має працювати функція.
+2. **Запитайте** на каналі *#AAPS* у [Discord](https://discord.gg/4fQUWHZ4Mw) або в інших [каналах спільноти](../GettingHelp/WhereCanIGetHelp.md).
+3. **Повідомте про помилку**: спершу пошукайте серед [наявних issues](https://github.com/nightscout/AndroidAPS/issues); якщо вашої проблеми там немає, створіть [нову issue](https://github.com/nightscout/AndroidAPS/issues) і додайте ваші [файли журналів](../GettingHelp/AccessingLogFiles.md).
 
-When asking for help, include your phone make and model, Android version, **AAPS** version, and a plain-English description of the problem (what changed, when it last worked).
+Коли просите про допомогу, вкажіть марку і модель телефону, версію Android, версію **AAPS** і простий опис проблеми (що змінилося, коли востаннє все працювало).
