@@ -6,7 +6,7 @@
 
 Nightscout to serwer raportów i monitorowania dla **AAPS**: **AAPS** wysyła do niego Twoje dane, a Ty lub Twoi opiekunowie oglądacie je na stronie Nightscout albo w aplikacjach dla obserwujących. Przechowuje on Twoje dane medyczne, profile i leczenie, więc warto pomyśleć o zabezpieczeniu swojej strony Nightscout.
 
-W **AAPS** 4 zdalne sterowanie nie odbywa się przez stronę Nightscout. Gdy kontrola z urządzenia opiekuna jest włączona ([tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode)), leczenie lub cele wpisane bezpośrednio w Nightscout **nie są stosowane** przez **AAPS**. Zamiast tego zdalne polecenia przychodzą ze sparowanej aplikacji **AAPSClient** — zobacz [Sterowanie Master ↔ Client](#client-master-control).
+W **AAPS** 4 zdalne sterowanie nie odbywa się przez stronę Nightscout. Gdy sterowanie z urządzenia opiekuna jest włączone ([tryb silniejszych zabezpieczeń](#client-master-control-hardened-mode)), leczenie lub cele wpisane bezpośrednio w Nightscout **nie są stosowane** przez **AAPS**. Zamiast tego zdalne polecenia przychodzą ze sparowanej aplikacji **AAPSClient** — zobacz [Sterowanie Master ↔ Client](#client-master-control).
 
 Zachowaj największą ostrożność, jeśli używasz Nightscout jako źródła danych BG dla AAPS.
 
@@ -20,7 +20,7 @@ Możesz zablokować publiczny dostęp do swojej strony Nightscout za pomocą [r�
 
 ### Ustawienia AAPS
 
-Akceptowanie danych z Nightscout (zmiany profilu, leczenie, ...) jest opcjonalne i domyślnie wyłączone. Przełączniki opisane poniżej są ukryte, gdy włączona jest kontrola z urządzenia opiekuna (tryb silniejszych zabezpieczeń) oraz w [trybie uproszczonym](#preferences-simple-mode).
+Akceptowanie danych z Nightscout (zmiany profilu, leczenie, ...) jest opcjonalne i domyślnie wyłączone. Przełączniki opisane poniżej są ukryte, gdy włączone jest sterowanie z urządzenia opiekuna (tryb silniejszych zabezpieczeń) oraz w [trybie uproszczonym](#preferences-simple-mode).
 
 * Otwórz ustawienia **Synchronizacja** wtyczki NSClientV3 na jeden z dwóch sposobów: 1) **Ustawienia** (ikona koła zębatego na ekranie głównym) -> **NSClientV3** -> **Synchronizacja** albo 2) **Konfiguracja** (menu ☰) -> **Komunikacja** -> „**Ustawienia**” pod NSClientV3.
 * Włącz „Przesyłaj dane do NS”.
@@ -35,7 +35,7 @@ Jeśli wszystkie opcje „Odbieraj ... z NS” pozostaną wyłączone, AAPS nie 
 
 #### Akceptuj zmiany z Nightscout
 
-Włączenie tych opcji pozwala zmieniać ustawienia AAPS przez Nightscout, na przykład zmieniać i przełączać profile, ustawiać cele tymczasowe i dodawać węglowodany, które AAPS weźmie pod uwagę. Są widoczne tylko wtedy, gdy kontrola z urządzenia opiekuna i tryb uproszczony są wyłączone.  
+Włączenie tych opcji pozwala zmieniać ustawienia AAPS przez Nightscout, na przykład zmieniać i przełączać profile, ustawiać cele tymczasowe i dodawać węglowodany, które AAPS weźmie pod uwagę. Są widoczne tylko wtedy, gdy sterowanie z urządzenia opiekuna i tryb uproszczony są wyłączone.  
 Pamiętaj, że leczenie insuliną będzie używane tylko do obliczeń, jak przy „Nie podawaj bolusa, tylko zapisz”.
 
 ![Włączone opcje odbierania z Nightscout](../images/NSsafety3.png)
