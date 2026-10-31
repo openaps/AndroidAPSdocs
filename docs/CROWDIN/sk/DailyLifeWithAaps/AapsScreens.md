@@ -131,7 +131,7 @@ Po každom výbere je potrebné potvrdenie.
 
 Musíte zistiť, prečo máte duplicitné hodnoty glykémie:
 
-* Je Dexcom bridge povolený na vašej Nightscout stránke? Vypnutie bridge je možné cez administračný panel vašej Nightscout stránky: nájdite premennú „enable“ a z nej odstráňte hodnotu „bridge“. (Pre heroku [viac podrobností nájdete tu](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Je Dexcom bridge povolený na vašej Nightscout stránke? Vypnutie bridge je možné cez administračný panel vašej Nightscout stránky: nájdite premennú „enable“ a z nej odstráňte hodnotu „bridge“. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * Nahráva sa viacero zdrojov vašej glykémie do Nightscoutu? Ak používate aplikáciu BYODA, povoľte nahrávanie v **AAPS**, ale nepovoľujte ho v xDripe, ak ho používate.
 * Máte nejakých sledujúcich, ktorí prijímajú údaje o vašej glykémii, ale zároveň ich aj odosielajú na vašu Nightscout stránku?
 * Posledná možnosť: v [nastaveniach NSClienta](#Preferences-nsclient) vyberte nastavenia synchronizácie a vypnite možnosť „Prijímať CGM dáta z NS“.
@@ -578,7 +578,7 @@ Riadok ikon pod hlavičkou ukazuje, ktoré vstupy idú do výpočtu (glykémia, 
 * Z bezpečnostných dôvodov nemožno vstup IOB vypnúť, keď je zapnutý COB, pretože by hrozilo riziko príliš veľa inzulínu, keďže **AAPS** by nezohľadnil už podaný inzulín.
 * Ak zapnete COB a IOB, zohľadnia sa nevstrebané sacharidy, ktoré ešte nie sú pokryté inzulínom, + všetok inzulín podaný ako TBR alebo SMB.
 * Ak zapnete IOB bez COB, **AAPS** zohľadní už podaný inzulín, ale neodpočíta ho voči sacharidom, ktoré sa ešte majú vstrebať. To vedie k upozorneniu na „chýbajúce sacharidy“.
-* Ak podávate bolus na **ďalšie jedlo** krátko po boluse k jedlu (napr. dodatočný dezert), môže byť užitočné **vypnúť všetky vstupy**. Takto sa pridávajú iba nové sacharidy, pretože hlavné jedlo sa nemusí hneď vstrebať, a preto sa IOB krátko po boluse k jedlu nebude presne zhodovať s COB.
+* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. Takto sa pridávajú iba nové sacharidy, pretože hlavné jedlo sa nemusí hneď vstrebať, a preto sa IOB krátko po boluse k jedlu nebude presne zhodovať s COB.
 * Z bezpečnostných dôvodov sa **dočasný cieľ** zahrnie do výpočtu, iba ak jeho vstup zapnete ručne.
 
 (AapsScreens-section-j)=
