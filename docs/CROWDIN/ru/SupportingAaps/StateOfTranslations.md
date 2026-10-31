@@ -3,14 +3,14 @@
 Состояние обновляется один раз в час и отражает только объем документации переведенной на ресурсе Crowdin.
 
 ```{tip}
-Будьте внимательны, процент отредактированного должен быть ниже доли переводов, но было решено показывать его поверх переводов.
+Be careful the percentage of proofreading must be lower than the percentage of translations but they decided to show it on top of the translations.
 Следует смотреть только на процент переведенного, чтобы понять потребность в выполнении перевода.
 ```
 
 ```{admonition} needed time for final publication
 Примечание После перевода на Crowdin синхронизация с Github происходит ежедневно по графику в виде запроса на внесение изменений Pull Request (PR)
 
-Одобрение запроса на внесение изменений происходит в ручном режиме в максимально возможные сжатые сроки.
+The acceptance of the PR is a manual task which will be done as fast as possible.
 ```
 
 ## состояния перевода приложения
