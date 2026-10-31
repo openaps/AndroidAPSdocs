@@ -327,31 +327,31 @@ Als de opdracht mislukt, toont een venster **Waarschuwing** de tekst "Hervatten 
 
 ### Pod-alarmen stilzetten
 
-*LET OP - De knop **Alarmen Stil** staat alleen op het Omnipod-pompscherm als de pod een actieve waarschuwing heeft (bijvoorbeeld de waarschuwing dat de pod verloopt of dat het reservoir bijna leeg is), en alleen als **Podwaarschuwingen automatisch bevestigen** uit staat.*
+*LET OP - De knop **Alarmen dempen** staat alleen op het Omnipod-pompscherm als de pod een actieve waarschuwing heeft (bijvoorbeeld de waarschuwing dat de pod verloopt of dat het reservoir bijna leeg is), en alleen als **Podwaarschuwingen automatisch bevestigen** uit staat.*
 
 Hieronder lees je hoe je de pieptonen van de pod stil zet die beginnen als de pod de waarschuwingstijd voor het verlopen bereikt. Deze waarschuwingstijd stel je in met **Waarschuwing op uren voor uitschakelen (80 uur)** in de Omnipod-instellingen onder **Waarschuwingen**. Een pod gaat maximaal 80 uur mee (3 dagen en 8 uur), maar Insulet raadt aan de grens van 72 uur (3 dagen) niet te overschrijden.
 
 *LET OP - Heb je **Podwaarschuwingen automatisch bevestigen** aangezet in de Omnipod-instellingen onder **Waarschuwingen**, dan zet **AAPS** de waarschuwing automatisch stil bij de volgende communicatie met de pod. Je hoeft het dan NIET met de hand te doen.*
 
-1. Als de waarschuwingstijd is bereikt, piept de pod om je te vertellen dat hij binnenkort verloopt en vervangen moet worden. Op het Omnipod-pompscherm toont **Pod verloopt** het precieze tijdstip waarop de pod verloopt (72 uur na het activeren); 4 uur daarvoor wordt het **geel**. **Harde einddatum Pod** toont wanneer de pod stopt met het toedienen van insuline. **Actieve pod alarmen** toont **Pod verloopt binnenkort**, en de knop **Alarmen Stil** verschijnt. **AAPS** toont ook een melding dat de pod binnenkort verloopt.
+1. Als de waarschuwingstijd is bereikt, piept de pod om je te vertellen dat hij binnenkort verloopt en vervangen moet worden. Op het Omnipod-pompscherm toont **Pod verloopt** het precieze tijdstip waarop de pod verloopt (72 uur na het activeren); 4 uur daarvoor wordt het **geel**. **Harde einddatum Pod** toont wanneer de pod stopt met het toedienen van insuline. **Actieve pod alarmen** toont **Pod verloopt binnenkort**, en de knop **Alarmen dempen** verschijnt. **AAPS** toont ook een melding dat de pod binnenkort verloopt.
 
    > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    De schermafbeeldingen hierboven komen uit een eerdere versie van **AAPS**. In **AAPS** 4 heet de knop **ACK ALERTS** nu **Alarmen Stil** en staat hij op het Omnipod-pompscherm.
+   >    De schermafbeeldingen hierboven komen uit een eerdere versie van **AAPS**. In **AAPS** 4 heet de knop **ACK ALERTS** nu **Alarmen dempen** en staat hij op het Omnipod-pompscherm.
    > ```
 
-2. Druk op **Alarmen Stil**. De RileyLink stuurt de opdracht naar de pod om de pieptonen voor het verlopen te stoppen.
+2. Druk op **Alarmen dempen**. De RileyLink stuurt de opdracht naar de pod om de pieptonen voor het verlopen te stoppen.
 
    > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 heet de knop **Alarmen Stil**.
+   >    De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 4 heet de knop **Alarmen dempen**.
    > ```
 
-3. Als de waarschuwingen stil zijn gezet, piept de pod twee keer. **Actieve pod alarmen** toont de waarschuwing niet meer, de knop **Alarmen Stil** verdwijnt en de pod stopt met de pieptonen voor het verlopen.
+3. Als de waarschuwingen stil zijn gezet, piept de pod twee keer. **Actieve pod alarmen** toont de waarschuwing niet meer, de knop **Alarmen dempen** verdwijnt en de pod stopt met de pieptonen voor het verlopen.
 
    > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png) 
    > 
@@ -401,9 +401,9 @@ Dit is handig om te controleren of bolussen, TBR's en basaalwijzigingen echt zij
 
 ### RileyLink-instellingen en -geschiedenis bekijken
 
-Het scherm **RileyLink status** toont de instellingen van je RileyLink en de actieve pod, en de communicatiegeschiedenis van allebei. Het heeft twee tabbladen: **Instellingen** en **Geschiedenis**.
+Het scherm **RileyLink statistieken** toont de instellingen van je RileyLink en de actieve pod, en de communicatiegeschiedenis van allebei. Het heeft twee tabbladen: **Instellingen** en **Geschiedenis**.
 
-De knop **RileyLink status** is standaard verborgen. Om de knop op het Omnipod-pompscherm te tonen, zet je **Knop voor RileyLink statistieken weergeven in het Omnipod-tabblad** aan in de [Omnipod-instellingen](#OmnipodEros-omnipod-settings) onder **Andere**.
+De knop **RileyLink statistieken** is standaard verborgen. Om de knop op het Omnipod-pompscherm te tonen, zet je **Knop voor RileyLink statistieken weergeven in het Omnipod-tabblad** aan in de [Omnipod-instellingen](#OmnipodEros-omnipod-settings) onder **Andere**.
 
 #### De Bluetooth-verbinding met het pod-communicatieapparaat handmatig herstellen
 
@@ -417,7 +417,7 @@ Als je pod-communicatieapparaat een tijd buiten het Bluetooth-bereik van je tele
 
 4. Komt de verbinding nog steeds niet terug, druk dan op **Koppel RileyLink** en kies je RileyLink opnieuw.
 
-5. Na een gelukte nieuwe verbinding toont **RileyLink Status** de tekst **Verbonden**. Je kunt ook **Verbindingsstatus** controleren op het tabblad **Instellingen** van het scherm **RileyLink status**. Gefeliciteerd, je pod-communicatieapparaat is weer verbonden met AAPS!
+5. Na een gelukte nieuwe verbinding toont **RileyLink Status** de tekst **Verbonden**. Je kunt ook **Verbindingsstatus** controleren op het tabblad **Instellingen** van het scherm **RileyLink statistieken**. Gefeliciteerd, je pod-communicatieapparaat is weer verbonden met AAPS!
 
 ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
@@ -436,13 +436,13 @@ De schermafbeeldingen hierboven komen uit een eerdere versie van **AAPS**. In **
 
 Dit scherm toont informatie en status van het pod-communicatieapparaat dat nu gekoppeld is en van de Omnipod Eros-pod die nu actief is. De informatie wordt automatisch vernieuwd.
 
-1. Open het Omnipod-pompscherm (**Beheren** > **Pomp**) en druk op **RileyLink status**. Het tabblad **Instellingen** toont je gekoppelde **RileyLink** en de actieve pod (**Apparaat**).
+1. Open het Omnipod-pompscherm (**Beheren** > **Pomp**) en druk op **RileyLink statistieken**. Het tabblad **Instellingen** toont je gekoppelde **RileyLink** en de actieve pod (**Apparaat**).
 
    > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    De schermafbeeldingen hierboven komen uit een eerdere versie van **AAPS**. In **AAPS** 4 is **RileyLink status** een knop op het Omnipod-pompscherm, in plaats van in het menu **POD MGMT**.
+   >    De schermafbeeldingen hierboven komen uit een eerdere versie van **AAPS**. In **AAPS** 4 is **RileyLink statistieken** een knop op het Omnipod-pompscherm, in plaats van in het menu **POD MGMT**.
    > ```
 
    > ![RileyLink_Statistics_Settings_3](../images/omnipod/RileyLink_Statistics_Settings_3.png)
@@ -471,13 +471,13 @@ Dit scherm toont informatie en status van het pod-communicatieapparaat dat nu ge
 
 Dit tabblad toont, de nieuwste eerst, elke status of actie van de RileyLink of van de pod die nu verbonden is. De geschiedenis is alleen beschikbaar voor de pod die nu actief is. Na een podwissel wordt deze geschiedenis gewist, en worden alleen gebeurtenissen van de nieuw geactiveerde pod vastgelegd en getoond.
 
-1. Open het Omnipod-pompscherm (**Beheren** > **Pomp**), druk op **RileyLink status** en tik dan op het tabblad **Geschiedenis**.
+1. Open het Omnipod-pompscherm (**Beheren** > **Pomp**), druk op **RileyLink statistieken** en tik dan op het tabblad **Geschiedenis**.
 
    > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png) 
    > 
    > ```{admonition} Older screenshot
    >    :class: note
-   >    De schermafbeeldingen hierboven komen uit een eerdere versie van **AAPS**. In **AAPS** 4 is **RileyLink status** een knop op het Omnipod-pompscherm, in plaats van in het menu **POD MGMT**.
+   >    De schermafbeeldingen hierboven komen uit een eerdere versie van **AAPS**. In **AAPS** 4 is **RileyLink statistieken** een knop op het Omnipod-pompscherm, in plaats van in het menu **POD MGMT**.
    > ```
 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
@@ -573,13 +573,13 @@ De knoppen onderaan het pompscherm veranderen afhankelijk van de situatie. Knopp
   De schermafbeelding hierboven komt uit een eerdere versie van **AAPS**. In **AAPS** 4 is dit een tekstknop met de naam **Vernieuwen** op het Omnipod-pompscherm.
   ```
 
-- **Alarmen Stil:** zet de pieptonen en meldingen voor het verlopen van de pod en een bijna leeg reservoir stil. Alleen zichtbaar als de pod een actieve waarschuwing heeft en **Podwaarschuwingen automatisch bevestigen** uit staat. Nadat de waarschuwingen stil zijn gezet, verdwijnt de knop.
+- **Alarmen dempen:** zet de pieptonen en meldingen voor het verlopen van de pod en een bijna leeg reservoir stil. Alleen zichtbaar als de pod een actieve waarschuwing heeft en **Podwaarschuwingen automatisch bevestigen** uit staat. Nadat de waarschuwingen stil zijn gezet, verdwijnt de knop.
 
   ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
 
   ```{admonition} Older screenshot
   :class: note
-  De schermafbeelding hierboven komt uit een eerdere versie van **AAPS**. In **AAPS** 4 heet deze knop **Alarmen Stil**.
+  De schermafbeelding hierboven komt uit een eerdere versie van **AAPS**. In **AAPS** 4 heet deze knop **Alarmen dempen**.
   ```
 
 - **Tijd instellen:** zet de tijd op de pod gelijk aan de huidige tijd op je telefoon. Alleen zichtbaar als de tijd op de pod meer dan 5 minuten afwijkt van de tijd op de telefoon.
@@ -659,7 +659,7 @@ De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 
 
 - **Koppel RileyLink:** zoekt naar je pod-communicatieapparaat en koppelt het. Zie [RileyLink instellen](#OmnipodEros-rileylink-setup).
 
-- **RileyLink status:** opent het scherm RileyLink status met twee tabbladen. Alleen zichtbaar als dit aan staat in de instellingen (**Knop voor RileyLink statistieken weergeven in het Omnipod-tabblad**).
+- **RileyLink statistieken:** opent het scherm RileyLink statistieken met twee tabbladen. Alleen zichtbaar als dit aan staat in de instellingen (**Knop voor RileyLink statistieken weergeven in het Omnipod-tabblad**).
 
 - **Instellingen** - toont informatie over de instellingen van de RileyLink en de actieve pod
 - **Geschiedenis** - toont de communicatiegeschiedenis van de RileyLink en de pod
@@ -668,7 +668,7 @@ De schermafbeelding hierboven komt uit een eerdere **AAPS**-versie. In **AAPS** 
 
   ```{admonition} Older screenshot
   :class: note
-  De schermafbeelding hierboven komt uit een eerdere versie van **AAPS**. In **AAPS** 4 is **RileyLink status** een knop op het Omnipod-pompscherm, in plaats van in het menu Podbeheer.
+  De schermafbeelding hierboven komt uit een eerdere versie van **AAPS**. In **AAPS** 4 is **RileyLink statistieken** een knop op het Omnipod-pompscherm, in plaats van in het menu Podbeheer.
   ```
 
 - **Reset RileyLink:** zet de configuratie van het pod-communicatieapparaat dat nu verbonden is opnieuw. Als de communicatie start, worden bepaalde gegevens naar de RileyLink gestuurd en daarin ingesteld:
@@ -760,7 +760,7 @@ De pod geeft bevestigingspieptonen bij toediening en wijziging van bolus, basaal
 
 Geeft AAPS-waarschuwingen en Nightscout-meldingen bij het verlopen van de pod, het uitschakelen van de pod en een bijna leeg reservoir, volgens de ingestelde drempel in eenheden.
 
-*Let op: AAPS geeft ALTIJD een melding voor elke waarschuwing, na de eerste communicatie met de pod sinds de waarschuwing begon. De melding wegdrukken zet de waarschuwing NIET stil, BEHALVE als **Podwaarschuwingen automatisch bevestigen** aan staat. Om de waarschuwing MET DE HAND stil te zetten, open je het Omnipod-pompscherm en druk je op **Alarmen Stil**.*
+*Let op: AAPS geeft ALTIJD een melding voor elke waarschuwing, na de eerste communicatie met de pod sinds de waarschuwing begon. De melding wegdrukken zet de waarschuwing NIET stil, BEHALVE als **Podwaarschuwingen automatisch bevestigen** aan staat. Om de waarschuwing MET DE HAND stil te zetten, open je het Omnipod-pompscherm en druk je op **Alarmen dempen**.*
 
 - **\*Herinnering vervaldatum ingeschakeld:** als dit aan staat, piept de pod als de tijd die hieronder is ingesteld wordt bereikt.
 - **Waarschuwing op uren voor uitschakelen (80 uur):** het aantal uren voordat de pod uitschakelt (80 uur na het activeren) waarop de herinnering voor het verlopen afgaat (1 tot 8 uur, standaard 8).
@@ -785,7 +785,7 @@ Geavanceerde instellingen die helpen bij het zoeken naar fouten.
 - **Knop voor het onderbreken van insuline toediening weergeven op het Omnipod-tabblad:** verbergt of toont de knop **Onderbreken** op het Omnipod-pompscherm.
 - **Knop voor het uitlezen van het Pulslog weergeven in het Podbeheer menu:** deze instelling staat nog in de lijst, maar het huidige pompscherm heeft geen knop **Pulse Log**.
 
-- **Knop voor RileyLink statistieken weergeven in het Omnipod-tabblad:** verbergt of toont de knop **RileyLink status** op het Omnipod-pompscherm.
+- **Knop voor RileyLink statistieken weergeven in het Omnipod-tabblad:** verbergt of toont de knop **RileyLink statistieken** op het Omnipod-pompscherm.
 - **\*Zomertijd-/tijdzonedetectie ingeschakeld:** zorgt dat wijzigingen van de tijdzone automatisch worden herkend als de telefoon wordt gebruikt in een gebied met zomertijd.
 
 ### Een actief pod-communicatieapparaat (RileyLink) wisselen of verwijderen
@@ -878,7 +878,7 @@ We raden aan om waarschuwingen voor een onbereikbare pomp op **120 minuten** te 
 
 ```{admonition} Importing settings can end your active Pod
 :class: warning
-Laat op de telefoon die de Pod al gebruikt **Vervang ook de pompinstellingen** uitgevinkt: de Pod-sessie blijft dan behouden en alleen de andere instellingen worden geïmporteerd. Vink dit alleen aan bij een bestand dat is geëxporteerd tijdens de Pod die je nu draagt. Zie [Slangloze pompen](#ExportImportSettings-tubeless-pumps).
+Laat op de telefoon die de Pod al gebruikt **Vervang ook de pompinstellingen** uitgevinkt: de Pod-sessie blijft dan behouden en alleen de andere instellingen worden geïmporteerd. Vink dit alleen aan bij een bestand dat is geëxporteerd tijdens de Pod die je nu draagt. Zie [Pompen zonder slang](#ExportImportSettings-tubeless-pumps).
 ```
 
 De veiligste manier om **AAPS** opnieuw te installeren is tussen twee Pods:
