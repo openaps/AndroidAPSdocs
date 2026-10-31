@@ -27,7 +27,7 @@ Autotune można uruchomić na trzy sposoby: ręcznie, jednorazowo z poziomu wtyc
 
 Utwórz pusty plik o nazwie `enable_autotune` w podfolderze `extra` [katalogu AAPS](#preferences-maintenance-settings) na telefonie.
 
-***UWAGA: Sprawdź w ustawieniach **AAPS**, gdzie jest twój katalog AAPS, i upewnij się, że plik jest we właściwym folderze. Kilka osób umieściło plik w złym folderze.***
+***NOTE: Ensure you check in the AAPS settings where your AAPS Directory is, and that you placed the file in the correct one. Several users have put the file into the wrong folder.***
 
 ![Włączanie Autotune](../images/Autotune/Autotune_0.png)
 
@@ -97,11 +97,11 @@ Dotknij **Otwórz wtyczkę** na karcie **Autotune**, aby otworzyć ekran Autotun
 
 - Jeśli chcesz zastąpić profil wejściowy wynikiem Autotune, kliknij przycisk „Zaktualizuj profil wejściowy” i potwierdź okno, klikając OK
 
-  - Uwaga: jeśli klikniesz „Aktywuj profil” po „Zaktualizuj profil wejściowy”, aktywujesz swój zaktualizowany profil, a nie domyślny profil „Dostrojono”.
+  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile.
 
   ![Autotune: Zaktualizuj profil wejściowy](../images/Autotune/Autotune_9.png)
 
-- Jeśli zaktualizowałeś profil wejściowy, przycisk „Zaktualizuj profil wejściowy” zostaje zastąpiony przyciskiem „Przywróć profil wejściowy” (zobacz zrzut ekranu poniżej). W ten sposób od razu widzisz, czy twój obecny profil wejściowy w **Zarządzaj → Profil** zawiera już wynik ostatniego obliczenia, czy nie. Tym przyciskiem możesz też odzyskać swój profil wejściowy bez wyniku Autotune
+- Jeśli zaktualizowałeś profil wejściowy, przycisk „Zaktualizuj profil wejściowy” zostaje zastąpiony przyciskiem „Przywróć profil wejściowy” (zobacz zrzut ekranu poniżej). W ten sposób od razu widzisz, czy twój obecny profil wejściowy w **Zarządzaj → Profil** zawiera już wynik ostatniego obliczenia, czy nie. You also have the possibility to recover your input profile without autotune result with this button
 
   ![Autotune: Zaktualizuj profil wejściowy](../images/Autotune/Autotune_10.png)
 
@@ -157,7 +157,7 @@ Funkcja **Automatyczna zmiana profilu** jest dostępna tylko w trybie Dev/Inżyn
 
 - Jeśli dotkniesz ikony **oka** po prawej stronie pola **Liczba uwzględnianych dni danych**, zobaczysz wybór dni. Możesz wskazać, które dni tygodnia mają być uwzględnione w obliczeniu Autotune (na zrzucie ekranu poniżej widać przykład dla „dni roboczych”, z sobotą i niedzielą usuniętymi z obliczenia Autotune)
   - Jeśli liczba dni uwzględnionych w obliczeniu Autotune jest mniejsza niż **Liczba uwzględnianych dni danych**, po prawej stronie wyboru dni zobaczysz, ile dni zostanie uwzględnionych (w przykładzie poniżej 10 dni)
-  - To ustawienie daje dobre wyniki tylko wtedy, gdy liczba pozostałych dni nie jest zbyt mała (na przykład jeśli dostrajasz osobny profil na weekend i wybierasz tylko sobotę i niedzielę, ustaw **Liczbę uwzględnianych dni danych** na co najmniej 21 lub 28, aby w obliczeniu Autotune było 6 lub 8 dni)
+  - This setting gives good results only if the number of remaining days is not too small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should set **Number of days of data** to at least 21 or 28 to have 6 or 8 days included in Autotune calculation)
 
   ![Domyślny ekran Autotune](../images/Autotune/Autotune_14b.png)
 
