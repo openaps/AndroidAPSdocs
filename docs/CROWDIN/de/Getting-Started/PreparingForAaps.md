@@ -32,7 +32,7 @@ Dieser Schaden kann **Sehverlust und dauerhafte Neuropathie (Schmerz)** beinhalt
 
 #### Wie schnell kann ich meinen HbA1c reduzieren, ohne dauerhaften Schaden zu riskieren?
 
-Eine retrospektive [Studie](https://pubmed.ncbi.nlm.nih.gov/1464975/) von 76 Patienten berichtet davon, dass das Risiko einer fortschreitenden Retinopathie um das 1,6 bis 2,4-fache und 3,8-fache steigt, wenn der HbA1c innerhalb eines Zeitraums von 6 Monaten um 1%, 2% bzw. 3% gesunken ist. Sie schlugen vor, dass die **"Verringerung des HbA1c-Wertes während eines Zeitraums von 6 Monaten auf weniger als 2% beschränkt werden sollte, um das Fortschreiten der Retinopathie zu verhindern. ..Ein zu schneller Rückgang beim Beginn der glykämischen Kontrolle kann zu einer schwerwiegenden oder vorübergehenden Verschärfung des Fortschreitens der Retinopathie führen.“**
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the HbA1c dropped 1%, 2% or 3% respectively over a 6 month period. Sie schlugen vor, dass die **"Verringerung des HbA1c-Wertes während eines Zeitraums von 6 Monaten auf weniger als 2% beschränkt werden sollte, um das Fortschreiten der Retinopathie zu verhindern. ..Ein zu schneller Rückgang beim Beginn der glykämischen Kontrolle kann zu einer schwerwiegenden oder vorübergehenden Verschärfung des Fortschreitens der Retinopathie führen.“**
 
 Nachbemerkung: If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for an HbA1c calculator tool.
 
@@ -123,7 +123,7 @@ Wenn Du Dir bei irgendetwas unsicher bist, gehe bitte auf die AAPS-Community zu 
 
 
 
-#### [Wo finde ich Hilfe](../UsefulLinks/BackgroundReading.md)?
+#### [Where to go for help](../GettingHelp/WhereCanIGetHelp.md)?
 
 Dieser Abschnitt zielt darauf ab, neuen Benutzern Links zu Ressourcen bereitzustellen, um Hilfe zu erhalten, einschließlich des Zugriffs auf den Community Support, welcher aus neuen und erfahrenen Benutzern besteht, die Fragen klären und die üblichen Fallstricke lösen können, die mit AAPS einhergehen.
 
@@ -173,12 +173,12 @@ Ein ungefährer Zeitrahmen ist:
 | Configuring GitHub to allow the browser build                                  |        1-4 hours         |
 | Einen Berichtsserver einrichten                                                |         1 Stunde         |
 | Installing a CGM app (xDrip, BYODA, …)                                         |         1 Stunde         |
-| Configuring CGM → xDrip → APPS initially                                       |         1 Stunde         |
+| Configuring CGM → xDrip → AAPS initially                                       |         1 Stunde         |
 | AAPS → Pumpe initial konfigurieren                                             |         1 Stunde         |
 | AAPS → Nightscout/Tidepool (nur für Berichte) initial konfigurieren            |         1 Stunde         |
-| Optional: Nightscout ↔ **AAPS** & NS-Follower konfigurieren                    |         1 Stunde         |
+| Optional: Configuring Nightscout ↔ **AAPS** & NSFollowers                      |         1 Stunde         |
 | Ziel 1: Visualisierung und Überwachung einrichten                              |         1 Stunde         |
-| Ziel 2: Lerne, wie AAPS bedient wird                                           |         2 Stunde         |
+| Ziel 2: Lerne, wie AAPS bedient wird                                           |         2 hours          |
 | Ziel 3: Belege Dein Wissen                                                     |     bis zu 14 Tagen      |
 | Ziel 4: Starte den Open Loop                                                   |    Mindestens 7 Tage     |
 | Ziel 5: Deinen Open Loop verstehen                                             |  wurden 7 Tage erreicht  |
