@@ -15,7 +15,7 @@ Tato stránka také vysvětluje [ověřování vývojářů Androidu](#android-d
 
 Dnes **AAPS** nainstalujete tak, že soubor APK přenesete do telefonu a otevřete ho (klepnete na něj). Soubor APK aplikace **AAPS** můžete z počítače do chytrého telefonu přenést několika způsoby. Zde popíšeme dva různé způsoby:
 
-* Možnost 1 - Přenos pomocí Google drive (Gdrive)
+* Možnost 1 – Přenos pomocí Disku Google (Gdrive)
 * Možnost 2 - Přenos pomocí USB kabelu
 
 Vezměte prosím na vědomí, že přenos e-mailem může způsobit potíže, a není doporučován.
@@ -25,7 +25,7 @@ Vezměte prosím na vědomí, že přenos e-mailem může způsobit potíže, a 
 Google zavádí [ověřování vývojářů Androidu](#android-developer-verification) od září 2026 (nejprve v Brazílii, Indonésii, Singapuru a Thajsku; po celém světě v roce 2027). Tam, kde už platí, je instalace APK klepnutím na soubor – jak ji popisují obě možnosti níže – zablokována. V takovém případě použijte jeden z [bezplatných způsobů instalace](#android-developer-verification-free-methods) níže na této stránce.
 ```
 
-### Možnost 1. Přenos pomoví Google drive (Gdrive)
+### Možnost 1. Přenos souborů pomocí Disku Google
 
 Ve webovém prohlížeči otevřete [Google.com](https://www.google.com/) a přihlaste se ke svému účtu Google.
 
@@ -37,11 +37,11 @@ Klikněte vlevo nahoře na **New** (Nový) (nebo klikněte pravým tlačítkem d
 
 ![Nahrání souboru apk do aplikace Disk Google](../images/GoogleDriveUploadFile.png)
 
-Váš APK soubor by teď měl být nahrán ve vašem Google Drive.
+Soubor APK by teď měl být nahraný na Disku Google.
 
-#### Use the Google Drive app to execute the apk file for installation
+#### K instalaci spusťte soubor apk pomocí aplikace Disk Google
 
-Vezměte si váš telefon a spusťte aplikaci Google Drive. Jedná se předinstalovanou aplikaci a najdete ji na stejném místě, kde se nachází všechny vaše Google aplikace nebo pomocí vyhledávání.
+Vezměte telefon a spusťte aplikaci Disk Google. Jedná se předinstalovanou aplikaci a najdete ji na stejném místě, kde se nachází všechny vaše Google aplikace nebo pomocí vyhledávání.
 
 ![spusťte aplikaci Disk Google](../images/GoogleDriveMobileAPPLaunch.png)
 
