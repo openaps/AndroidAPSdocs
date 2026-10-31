@@ -400,7 +400,7 @@ Pokud **AAPS** musel dávku omezit, například protože vypočtený bolus je vy
     
     Hodinky s Wear OS jsou zařízení s velmi omezenou energií. Velikost hodinek omezuje kapacitu vestavěné baterie. Navzdory nedávnému vylepšení na straně hardwaru i softwaru hodinky Wear OS stále vyžadují denní nabíjení.
     
-    Pokud je výdrž baterie hodinek kratší než jeden den (od rána do večera), existuje pár tipů, jak se s tím vypořádat.
+    If an experienced battery span is shorter than a day (from dawn to dusk), here are some tips to troubleshoot the issues.
     
     Nejvíce baterii spotřebovávají:
     
