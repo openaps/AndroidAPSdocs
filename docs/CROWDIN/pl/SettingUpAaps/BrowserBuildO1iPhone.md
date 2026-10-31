@@ -1,19 +1,19 @@
 (aaps-ci-ios-ipad)=
 
-# Option 1 · iPhone / iPad – Generate a new keystore
+# Opcja 1 · iPhone / iPad – Wygeneruj nowy magazyn kluczy
 
 ```{note}
-[Option 1](BrowserBuildO1.md) (generate a new keystore) on **iPhone / iPad** (iPad shown as an example).
+[Opcja 1](BrowserBuildO1.md) (wygenerowanie nowego magazynu kluczy) na **iPhonie / iPadzie** (jako przykład pokazano iPada).
 ```
 
-## 1. Download the preparation file
+## 1. Pobierz plik przygotowania
 
 :::{include} BrowserBuildDownloadPrep.md
 :::
 
-## 2. Open the preparation file and generate the keystore
+## 2. Otwórz plik przygotowania i wygeneruj magazyn kluczy
 
-Compatible with iOS (using iPad as an example)
+Działa w systemie iOS (przykład na iPadzie)
 <!--crowdin: exclude-->
 
 <div align="center" style="max-width: 360px; margin: auto; margin-bottom: 2em;">
@@ -30,4 +30,4 @@ Compatible with iOS (using iPad as an example)
 
 ----
 
-**Next: [Step 3 – Authorize Google Drive](BrowserBuildGoogleDrive.md) →**
+**Dalej: [Krok 3 – Autoryzuj Dysk Google](BrowserBuildGoogleDrive.md) →**
