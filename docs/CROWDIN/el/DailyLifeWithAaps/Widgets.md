@@ -1,7 +1,7 @@
 (widgets)=
-# Home screen widgets
+# Widgets αρχικής οθόνης
 
-**AAPS** provides widgets that you can add to your phone's home screen. A widget shows your current data without opening the app. Tap a widget to open **AAPS**.
+Το **AAPS** έχει widgets που μπορείτε να προσθέσετε στην αρχική οθόνη του τηλεφώνου σας. Ένα widget δείχνει τα τρέχοντα δεδομένα σας χωρίς να ανοίξετε την εφαρμογή. Πατήστε ένα widget για να ανοίξει το **AAPS**.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,70 +10,70 @@
 
 ---
 
-## Available widgets
+## Διαθέσιμα widgets
 
-Five widgets are available. They are listed under **AAPS** in the Android widget picker:
+Υπάρχουν πέντε widgets. Θα τα βρείτε κάτω από το **AAPS** στη λίστα επιλογής widgets του Android:
 
-![AAPS widgets in the Android widget picker](../images/widgets/widget_picker_aaps.png)
+![Τα widgets του AAPS στη λίστα επιλογής widgets του Android](../images/widgets/widget_picker_aaps.png)
 
-| Widget                            | Default size | What it shows                                                                                                                          |
-| --------------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **AAPS widget**                   | 5 × 2        | The status block of the main screen: BG with trend and delta, loop mode, profile, target, sensitivity, IOB and COB.                    |
-| **AAPS glucose circle**           | 2 × 2        | The BG circle of the main screen: a ring in the BG colour, the trend arc, the delta, the BG value and the time since the last reading. |
-| **AAPS Small**                    | 2 × 2        | Profile name, BG with trend arrow, time since the last reading, delta, IOB and COB.                                                    |
-| **AAPS BG + IOB + COB (compact)** | 4 × 1        | One line with BG and trend arrow, IOB and COB.                                                                                         |
-| **AAPS BG graph**                 | 3 × 1        | The BG value with a small graph of the recent readings.                                                                                |
+| Widget                             | Προεπιλεγμένο μέγεθος | Τι δείχνει                                                                                                                                          |
+| ---------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **AAPS widget**                    | 5 × 2                 | Το μπλοκ κατάστασης της κύριας οθόνης: BG με τάση και διαφορά (delta), λειτουργία κυκλώματος, προφίλ, στόχος, ευαισθησία, IOB και COB.              |
+| **Κύκλος γλυκόζης AAPS**           | 2 × 2                 | Ο κύκλος BG της κύριας οθόνης: ένας δακτύλιος στο χρώμα της BG, το τόξο τάσης, η διαφορά (delta), η τιμή BG και ο χρόνος από την τελευταία μέτρηση. |
+| **AAPS Μικρό**                     | 2 × 2                 | Όνομα προφίλ, BG με βέλος τάσης, χρόνος από την τελευταία μέτρηση, διαφορά (delta), IOB και COB.                                                    |
+| **AAPS BG + IOB + COB (συμπαγές)** | 4 × 1                 | Μία γραμμή με BG και βέλος τάσης, IOB και COB.                                                                                                      |
+| **Γράφημα BG του AAPS**            | 3 × 1                 | Η τιμή BG με ένα μικρό γράφημα των πρόσφατων μετρήσεων.                                                                                             |
 
-The **AAPS widget**, the **glucose circle** and the **Small** widget on a home screen:
+Το **AAPS widget**, ο **Κύκλος γλυκόζης** και το widget **Μικρό** σε μια αρχική οθόνη:
 
-![AAPS widget, glucose circle and Small widget on the home screen](../images/widgets/home_widgets_full_circle_small.png)
+![AAPS widget, Κύκλος γλυκόζης και widget Μικρό στην αρχική οθόνη](../images/widgets/home_widgets_full_circle_small.png)
 
-The **compact** widget and the **BG graph** widget:
+Το widget **συμπαγές** και το widget **Γράφημα BG**:
 
-![Compact widget and BG graph widget on the home screen](../images/widgets/home_widgets_compact_graph.png)
+![Το widget συμπαγές και το widget Γράφημα BG στην αρχική οθόνη](../images/widgets/home_widgets_compact_graph.png)
 
-BG values use the same colours as in **AAPS**: green in range, yellow above range, red below range.
-
----
-
-## Adding a widget
-
-The exact steps depend on your phone and its launcher. On most phones:
-
-1. Long-press an empty area of the home screen and select **Widgets**.
-
-   ![The widget picker](../images/widgets/widget_picker_list.png)
-
-2. Open **AAPS** in the list and tap the widget you want.
-3. Press **Add** (or drag the widget to the place you want).
-
-   ![The Add button below the selected widget](../images/widgets/widget_picker_add_button.png)
-
-The widget is placed on the home screen. Right after adding it, it is shown with handles: drag a handle to **resize** the widget, or drag the widget to move it. The glucose circle can be resized to any size.
-
-![A widget just added, with its resize handles and the settings button](../images/widgets/widget_glucose_circle_added.png)
-
-If the home screen page is full, the phone puts the widget on a new page.
+Οι τιμές BG έχουν τα ίδια χρώματα όπως στο **AAPS**: πράσινο εντός στόχου, κίτρινο πάνω από τον στόχο, κόκκινο κάτω από τον στόχο.
 
 ---
 
-## Widget configuration
+## Προσθήκη widget
 
-Tap the **pencil** button shown on the widget just after you added it. Later, long-press the widget to get the handles and the pencil back.
+Τα ακριβή βήματα εξαρτώνται από το τηλέφωνό σας και τον launcher του. Στα περισσότερα τηλέφωνα:
 
-The **Widget configuration** dialog has two settings:
+1. Πατήστε παρατεταμένα σε ένα κενό σημείο της αρχικής οθόνης και επιλέξτε **Widgets** (Γραφικά στοιχεία).
 
-- **Configure opacity** — how opaque the background of the widget is. A low value lets the wallpaper show through.
-- **Use black color** — use a black background instead of the default one.
+   ![Η λίστα επιλογής widgets](../images/widgets/widget_picker_list.png)
 
-![Widget configuration](../images/widgets/widget_configuration.png)
+2. Ανοίξτε το **AAPS** στη λίστα και πατήστε το widget που θέλετε.
+3. Πατήστε **Προσθήκη** (ή σύρετε το widget στο σημείο που θέλετε).
 
-Each widget has its own configuration.
+   ![Το κουμπί Προσθήκη κάτω από το επιλεγμένο widget](../images/widgets/widget_picker_add_button.png)
+
+Το widget μπαίνει στην αρχική οθόνη. Αμέσως μετά την προσθήκη, το widget εμφανίζεται με λαβές: σύρετε μια λαβή για να **αλλάξετε το μέγεθος** του widget ή σύρετε το widget για να το μετακινήσετε. Ο Κύκλος γλυκόζης μπορεί να πάρει οποιοδήποτε μέγεθος.
+
+![Ένα widget που μόλις προστέθηκε, με τις λαβές αλλαγής μεγέθους και το κουμπί ρυθμίσεων](../images/widgets/widget_glucose_circle_added.png)
+
+Αν η σελίδα της αρχικής οθόνης είναι γεμάτη, το τηλέφωνο βάζει το widget σε μια νέα σελίδα.
 
 ---
 
-## Good to know
+## Ρύθμιση widget
 
-- A widget only **displays** data. You cannot bolus or change anything from a widget.
-- The widget is refreshed by **AAPS**. If **AAPS** is not running, or if Android restricts it in the background, the widget may show old data. Check the time since the last reading, and make sure **AAPS** is excluded from [battery optimization](#SetupWizard-StoragePermission).
-- With **AAPSClient**, **AAPSClient2** and **AAPSClient3**, the widget background is yellow, blue or green, so that you can tell the apps apart. Raise the opacity in the widget configuration if the color is hard to see. See [About AAPSClient, AAPSClient2 and AAPSClient3](#remotecontrol-aapsclient-versions).
+Πατήστε το κουμπί με το **μολύβι** που εμφανίζεται στο widget αμέσως μετά την προσθήκη του. Αργότερα, πατήστε παρατεταμένα το widget για να εμφανιστούν ξανά οι λαβές και το μολύβι.
+
+Το παράθυρο **Ρύθμιση widget** έχει δύο ρυθμίσεις:
+
+- **Ρύθμιση διαφάνειας** — πόσο αδιαφανές είναι το φόντο του widget. Με μια χαμηλή τιμή φαίνεται η ταπετσαρία από πίσω.
+- **Χρήση μαύρου χρώματος** — χρήση μαύρου φόντου αντί για το προεπιλεγμένο.
+
+![Ρύθμιση widget](../images/widgets/widget_configuration.png)
+
+Κάθε widget έχει τις δικές του ρυθμίσεις.
+
+---
+
+## Καλό να ξέρετε
+
+- Ένα widget μόνο **εμφανίζει** δεδομένα. Δεν μπορείτε να κάνετε bolus ή να αλλάξετε κάτι από ένα widget.
+- Το widget ανανεώνεται από το **AAPS**. Αν το **AAPS** δεν τρέχει ή αν το Android το περιορίζει στο παρασκήνιο, το widget μπορεί να δείχνει παλιά δεδομένα. Ελέγξτε τον χρόνο από την τελευταία μέτρηση και βεβαιωθείτε ότι το **AAPS** είναι εξαιρεμένο από τη [βελτιστοποίηση μπαταρίας](#SetupWizard-StoragePermission).
+- Με το **AAPSClient**, το **AAPSClient2** και το **AAPSClient3**, το φόντο του widget είναι κίτρινο, μπλε ή πράσινο, ώστε να ξεχωρίζετε τις εφαρμογές. Αυξήστε την αδιαφάνεια στη ρύθμιση του widget, αν το χρώμα φαίνεται δύσκολα. Δείτε [Σχετικά με τα AAPSClient, AAPSClient2 και AAPSClient3](#remotecontrol-aapsclient-versions).
