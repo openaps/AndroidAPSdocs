@@ -1,6 +1,6 @@
-# Compatible Pumps
+# Kompatibilní pumpy
 
-AAPS works with a number of insulin pumps. Následující seznam ukazuje nyní podporovaná zařízení. V závorce je uvedeno, zda AAPS komunikuje s pumpou přes vestavěný Bluetooth vašeho telefonu, nebo zda je potřeba zařízení kompatibilní s RileyLink.
+AAPS funguje s řadou inzulínových pump. Následující seznam ukazuje nyní podporovaná zařízení. V závorce je uvedeno, zda AAPS komunikuje s pumpou přes vestavěný Bluetooth vašeho telefonu, nebo zda je potřeba zařízení kompatibilní s RileyLink.
 
 <!-- List of hidden pages to avoid overcrowding the menu -->
 
@@ -38,12 +38,12 @@ AAPS works with a number of insulin pumps. Následující seznam ukazuje nyní p
 - [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md) (Bluetooth)
 - [Omnipod Eros](../CompatiblePumps/OmnipodEros.md) (je potřeba [další komunikační zařízení](#CompatiblePumps-additional-communication-device))
 
-## My pump is not listed
+## Moje pumpa není v seznamu
 
 Informace o stavu dalších pump, které by mohly s AAPS fungovat, najdete na stránce [Budoucí (možné) pumpy](../CompatiblePumps/Future-possible-Pump-Drivers.md).
 
 (CompatiblePumps-additional-communication-device)=
-## Additional communication device
+## Další komunikační zařízení
 
 Pokud není uvedeno další komunikační zařízení, komunikace mezi inzulínovou pumpou a **AAPS** probíhá přes vestavěný Bluetooth v Androidu. Není potřeba žádné další zařízení, které by překládalo komunikační protokol.
 
@@ -54,8 +54,8 @@ Pro staré pumpy Medtronic a Omnipod Eros je potřeba další komunikační zař
 
 Dostupná komunikační zařízení:
 
-- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  [Web OrangeLink](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![EmaLink](../images/omnipod/EmaLink.png)  [Web Emalink](https://github.com/sks01/EmaLink) - [Kontakt](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Kontakt](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [Web LoopLink](https://www.getlooplink.org/) - [Kontakt](https://jameswedding.substack.com/) - Netestováno
