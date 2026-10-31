@@ -4,9 +4,11 @@
 
 ## 安全考虑
 
-除了报告功能外，Nightscout还可以用于控制AAPS。例如，您可以设置临时目标或添加未来碳水化合物摄入量。这些信息将被AAPS接收，并据此做出相应操作。因此，有必要考虑保护您的Nightscout网站的安全。
+Nightscout is the reporting and monitoring server of **AAPS**: **AAPS** uploads your data to it, and you or your caregivers look at it on the Nightscout website or in follower apps. It holds your medical data, profiles and treatments, so it is worth thinking about securing your Nightscout website.
 
-如果使用Nightscout作为AAPS的数据源，请务必格外小心。
+In **AAPS** 4, remote control does not go through the Nightscout website. While client control is on ([hardened mode](#client-master-control-hardened-mode)), treatments or targets typed directly into Nightscout are **not applied** by **AAPS**. Remote commands come from a paired **AAPSClient** instead — see [Master ↔ Client control](#client-master-control).
+
+Exercise maximum caution if using Nightscout as your AAPS BG data source.
 
 ### Nightscout设置
 
@@ -18,26 +20,25 @@ Nightscout的`API_SECRET`是您的站点主密码：请勿公开分享。
 
 ### AAPS设置
 
-您可以设置AAPS以接受Nightscout的命令（如配置文件更改、治疗等），或完全禁用它。
+Accepting data from Nightscout (profile changes, treatments, ...) is optional and turned off by default. The switches described below are hidden while client control is on (hardened mode) and in [simple mode](#preferences-simple-mode).
 
-* 通过以下方式访问NSClient或NSClientV3插件设置： 1) 主视图 -> 配置构建器 -> 同步 -> NSClient齿轮图标 2) NSCLIENT选项卡 -> 三个点菜单 -> 插件偏好设置
-* 启用所有数据上传到Nightscout（3），因为除非您的BG（血糖）数据源是Nightscout，否则这是标准方法。如果您的AAPS BG数据源是Nightscout，则**不要**启用“上传BG数据到NS”（3）。
-* 除非Nightscout是您的BG数据源，否则不要启用“接收/回填数据”（4）。
-
-![Nightscout仅上传](../images/NSsafety.png)
+* Access the **Synchronization** settings of the NSClientV3 plugin with either 1) **Settings** (gear icon on the main screen) -> **NSClientV3** -> **Synchronization**, or 2) **Configuration** (☰ menu) -> **Communication** -> "**Settings**" under NSClientV3.
+* Enable "Upload data to NS".
+* "Upload BG data to NS" is in the settings of your BG source (**Configuration → BG Source → Settings**). Enable it, unless your AAPS BG data source is Nightscout: in that case **do not** enable it.
+* Do not enable "Receive CGM data from NS" unless Nightscout is your BG data source.
 
 #### 不要从Nightscout同步
 
-禁用这些选项可确保AAPS不会使用Nightscout的更改。
+Keeping all the "Receive ... from NS" options disabled makes sure no Nightscout change will be used by AAPS:
 
-![Nightscout仅上传](../images/NSsafety2.png)
+![Nightscout仅上传](../images/preferences/settings_nsclient_sync.png)
 
 #### 接受来自Nightscout的更改
 
-启用这些选项后，您可以通过Nightscout远程更改AAPS设置，如配置文件修改和切换、临时目标和添加碳水化合物等，AAPS  
-将会考虑这些更改。 请注意，胰岛素治疗（treatment）将仅用于计算，如“仅记录，不输注”。
+Enabling these options allows you to change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS. They are only shown when client control and simple mode are off.  
+Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
 
-![Nightscout仅上传](../images/NSsafety3.png)
+![Nightscout receive options enabled](../images/NSsafety3.png)
 
 ### 其他安全设置
 
@@ -47,7 +48,7 @@ Nightscout的`API_SECRET`是您的站点主密码：请勿公开分享。
 
 ## 手动Nightscout设置
 
-假设您已经有一个Nightscout站点，如果没有，请访问[Nightscout](http://nightscout.github.io/nightscout/new_user/)页面，了解有关设置的完整说明，以下是需要添加到您的Nightscout站点的设置。您的Nightscout站点至少需要是15版才能与AAPS 3.2一起使用，因此请检查您是否正在运行[最新版本](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version)，否则您的AAPS应用程序将显示错误消息。
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on setup. The instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
 
 * [编辑您的变量](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
