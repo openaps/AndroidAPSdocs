@@ -10,9 +10,9 @@ Vývojová (dev) verzia AAPS je iba pre vývojárov a testerov, ktorým nerobí 
 
 Vetva dev je však dobré miesto, kde vidíte, ktoré funkcie sa testujú, môžete pomôcť odstrániť chyby a dať spätnú väzbu o tom, ako nové funkcie fungujú v praxi. Ľudia často testujú vetvu dev na starom telefóne a pumpe, kým si nie sú istí, že je stabilná – akékoľvek jej použitie je na vaše vlastné riziko. Pri testovaní nových funkcií pamätajte, že ste sa rozhodli testovať funkciu, ktorá je ešte vo vývoji. Robíte to na vlastné riziko a s náležitou starostlivosťou o svoju bezpečnosť.
 
-Ak nájdete chybu alebo si myslíte, že sa pri používaní vetvy dev stalo niečo nesprávne, pozrite si [kartu issues](https://github.com/nightscout/AndroidAPS/issues), či ju už niekto iný nenašiel, alebo ju sami pridajte, ak nie. Čím viac informácií tu môžete uviesť, tým lepšie (nezabudnite, že možno budete musieť poskytnúť svoje [log súbory](../GettingHelp/AccessingLogFiles.md). O nových funkciách sa dá diskutovať aj na [Discorde](https://discord.gg/4fQUWHZ4Mw).
+Ak nájdete chybu alebo si myslíte, že sa pri používaní vetvy dev stalo niečo nesprávne, pozrite si [kartu issues](https://github.com/nightscout/AndroidAPS/issues), či ju už niekto iný nenašiel, alebo ju sami pridajte, ak nie. The more information you can share here the better (don't forget you may need to share your [log files](../GettingHelp/AccessingLogFiles.md)). O nových funkciách sa dá diskutovať aj na [Discorde](https://discord.gg/4fQUWHZ4Mw).
 
-Verzia dev má dátum ukončenia platnosti. Keď ju používate k spokojnosti, môže sa to zdať nepohodlné, ale má to svoj účel. Keď je v obehu iba jedna verzia dev, je ľahšie sledovať chyby, ktoré ľudia hlásia. Vývojári sa nechcú dostať do situácie, keď sú v obehu tri verzie dev, v niektorých sú chyby opravené a v iných nie, a ľudia stále hlásia už opravené chyby.
+Verzia dev má dátum ukončenia platnosti. Keď ju používate k spokojnosti, môže sa to zdať nepohodlné, ale má to svoj účel. When a single dev version is doing the rounds, it is easier to keep track of bugs that people are reporting. Vývojári sa nechcú dostať do situácie, keď sú v obehu tri verzie dev, v niektorých sú chyby opravené a v iných nie, a ľudia stále hlásia už opravené chyby.
 
 (branch-ci-test)=
 
