@@ -29,7 +29,7 @@ Dit deel geeft een kort overzicht van alle **CGM's/FGM's** die je met **AAPS** k
 ```
 
 * [Algemene aanbevelingen](../CompatibleCgms/GeneralCGMRecommendation.md)
-* [Data filteren](../CompatibleCgms/SmoothingBloodGlucoseData.md)
+* [Gegevens vloeiend maken](../CompatibleCgms/SmoothingBloodGlucoseData.md)
 * [xDrip-instellingen](../CompatibleCgms/xDrip.md)
 * [Nightscout als BG-bron](../CompatibleCgms/CgmNightscoutUpload.md): Je kunt Nightscout gebruiken als BG-bron voor insulinetoediening in een gesloten loop, maar **deze methode wordt niet aanbevolen**. Ze is namelijk afhankelijk van een stabiele verbinding via mobiele data of wifi. Dit betekent dat **AAPS** je **CGM**-gegevens alleen ontvangt als je online verbonden bent met je Nightscout-site. Een betrouwbaardere opzet is een CGM die de waarden lokaal vanaf de ontvanger naar **AAPS** stuurt (zie de lijst hieronder). Dat is een veel betere keuze.
 
