@@ -80,7 +80,7 @@
 * DanaRS固件v3及Dana-i的默认密码采用生产日期MMDD格式（例如'0124'表示1月24日生产）。
     
     * 从主菜单选择查看功能，然后打开子菜单中的运输信息
-    * 第三项为生产日期。 
+    * Number 3 is manufacturing date. 
     * v3/i版本中该密码仅用于锁定泵体菜单。该密码不用于通信交互，也无需在AAPS中输入。
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
