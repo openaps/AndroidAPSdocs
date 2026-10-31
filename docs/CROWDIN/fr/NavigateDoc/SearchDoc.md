@@ -1,25 +1,25 @@
-# Search the documentation
+# Rechercher dans la documentation
 
-The documentation contains a lot of information. If you are looking for a specific topic, term or setting, using the search feature is often faster than browsing through the menu.
+La documentation contient beaucoup d'informations. Si vous cherchez un sujet, un terme ou un paramètre précis, la fonction de recherche est souvent plus rapide que de parcourir le menu.
 
-## How to search
+## Comment rechercher
 
-The search box is located at the top of the navigation panel on the left side of the screen.
+Le champ de recherche se trouve en haut du panneau de navigation, sur le côté gauche de l'écran.
 
 ```{note}
-On smaller screens (such as a phone) the navigation panel is hidden. Tap the menu (☰) icon in the top left corner to open it and reveal the search box.
+Sur les petits écrans (par exemple un téléphone), le panneau de navigation est masqué. Appuyez sur l'icône de menu (☰) en haut à gauche pour l'ouvrir et afficher le champ de recherche.
 ```
 
-1. Type one or more keywords into the search box.
-2. Press `Enter` or tap the search icon.
-3. A results page opens, listing every page where your keywords appear. Click a result to jump to the matching page.
+1. Tapez un ou plusieurs mots-clés dans le champ de recherche.
+2. Appuyez sur la touche `Enter` (Entrée) ou sur l'icône de recherche.
+3. Une page de résultats s'ouvre. Elle liste toutes les pages où vos mots-clés apparaissent. Cliquez sur un résultat pour aller à la page correspondante.
 
-## Tips for better results
+## Conseils pour de meilleurs résultats
 
-- Use specific terms (for example `temp target` or `autosens`) rather than full sentences.
-- Searching with several keywords returns the pages containing those words. Start broad and add keywords to narrow the results.
-- The search only covers the language and version of the documentation you are currently reading. If you cannot find something, try switching to the English version, which is the most complete (see [Change language and version](./ChangeLanguageVersion.md)).
+- Utilisez des termes précis (par exemple `temp target` ou `autosens`) plutôt que des phrases entières.
+- Une recherche avec plusieurs mots-clés renvoie les pages qui contiennent ces mots. Commencez de façon large, puis ajoutez des mots-clés pour affiner les résultats.
+- La recherche couvre seulement la langue et la version de la documentation que vous lisez. Si vous ne trouvez pas quelque chose, essayez de passer à la version anglaise, qui est la plus complète (voir [Changer la langue et la version](./ChangeLanguageVersion.md)).
 
 ```{note}
-The search index is built automatically. Very recently added content may take some time to become searchable.
+L'index de recherche est créé automatiquement. Un contenu ajouté très récemment peut prendre un peu de temps avant d'apparaître dans la recherche.
 ```
