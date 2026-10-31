@@ -28,7 +28,7 @@ Je kunt de app op je computer bouwen met Android Studio. Vroeger was dit de enig
 
 ### Bouwen via de opdrachtregel
 
-Deze optie is bedoeld voor wie AAPS liever lokaal via de opdrachtregel (command-line) bouwt, zonder Android Studio te installeren.
+Deze optie is bedoeld voor wie AAPS liever lokaal via de opdrachtregel bouwt, zonder Android Studio te installeren.
 
 **[Volg deze instructies.](./CLIBuild.md)**
 
