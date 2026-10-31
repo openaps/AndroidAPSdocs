@@ -39,7 +39,7 @@ Estas instruções são para configurar a bomba de insulina Medtrum.
 
 Uma taxa basal zero temporária pode ser obtida com a função "Desconectar bomba" ou com uma combinação de Desativar loop/Basal temporária ou Suspender loop/Basal temporária.
 
-## Setup
+## Configuração
 
 ```{caution}
 Quando você ativa um patch com o **AAPS**, você **PRECISA** desligar todos os outros dispositivos que podem se comunicar com a base da bomba Medtrum, por exemplo, um PDM ativo ou o app Medtrum.
@@ -151,17 +151,17 @@ Estas configurações não fazem parte do driver Medtrum. Abra-as pelo ícone de
 
 Abra **Configurações** > **Bomba**:
 
-![Settings > Pump](../images/preferences/settings_pump.png)
+![Configurações > Bomba](../images/preferences/settings_pump.png)
 
 O **Monitor BT** desliga o Bluetooth do telefone por um segundo se o **AAPS** não conseguir se conectar à bomba. Isso pode ajudar em alguns telefones em que o Bluetooth trava.
 
 Ative esta configuração se você tem problemas de conexão frequentes com a sua bomba.
 
-#### Local alerts
+#### Alertas locais
 
 Abra **Configurações** > **Alertas locais**:
 
-![Settings > Local alerts](../images/preferences/settings_local_alerts.png)
+![Configurações > Alertas locais](../images/preferences/settings_local_alerts.png)
 
 ##### Avisar se a bomba estiver inacessível
 
