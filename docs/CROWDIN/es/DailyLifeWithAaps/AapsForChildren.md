@@ -2,7 +2,7 @@
 
 **AAPS** también se puede usar con éxito en niños con diabetes tipo 1. Sin embargo, hay algunas cosas a tener en cuenta.
 
-## Things to consider
+## Cosas a tener en cuenta
 
 ### Perfil inicial
 
