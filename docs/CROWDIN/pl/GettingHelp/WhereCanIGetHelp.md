@@ -58,7 +58,7 @@ Uwaga: Facebook niedawno usunął linki zewnętrzne udostępnione w grupie **AAP
 
 ### Polska
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl) (polska społeczność AAPS i wsparcia cukrzycowego)
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabetes support group
 
 ### Szwecja
 
