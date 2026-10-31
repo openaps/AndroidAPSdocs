@@ -12,8 +12,8 @@ Libre2 OOP (находится [здесь](#Libre2_OOP2)) создает те �
 
 Есть несколько веских причин пользоваться передатчиком Bluetooth:
 
--   Вы можете выбрать различные стратегии калибровки OOP2 (1): получать значения с ридера, "без калибровки", калибровать сенсор, как Libre 1 "на основе необработанных данных", или, в конечном счете, калибровать значения "на основе глюкозы".  
-  Убедитесь, что OOP1 отключен (2).
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
+  Make sure to leave OOP1 disabled (2).
 
     → Сэндвич-меню → Настройки →Менее распространенные настройки → Другие разные настройки. Варианты
 
@@ -30,9 +30,9 @@ Libre2 OOP (находится [здесь](#Libre2_OOP2)) создает те �
 
 ![xDrip Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-На самом деле эта команда физически не запустит сенсор Libre2 и не начнет взаимодействие с ним. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. Если доступно, введите два замера крови для начальной калибровки. Now the blood glucose values should be displayed in xDrip every 5 minutes. Пропущенные данные, например из-за того, что вы были далеко от телефона, не будут восстановлены.
+На самом деле эта команда физически не запустит сенсор Libre2 и не начнет взаимодействие с ним. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Пропущенные данные, например из-за того, что вы были далеко от телефона, не будут восстановлены.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. После активации можно измерить ГК и выполнить новую начальную калибровку.
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Настройка AAPS (только для замкнутого цикла)
 
