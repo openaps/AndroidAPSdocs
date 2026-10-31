@@ -12,7 +12,7 @@ Te recomendamos usar Nightscout.
 (SettingUpTheReportingServer-nightscout)=
 ## Nightscout
 
-Nightscout es una aplicación web que puede registrar y mostrar tus datos del CGM y de **AAPS**, y crea informes. Es una plataforma potente que lleva muchos años integrada en **AAPS**. Permite a los usuarios y cuidadores seguir los datos de diabetes del paciente casi en tiempo real (si hay una buena conexión a Internet entre todos los componentes, solo pasan unos segundos entre la recepción de los datos y su publicación). También transmite los comandos remotos que los cuidadores envían a **AAPS** desde **AAPSClient** (consulta [Control máster ↔ cliente](#client-master-control)).
+Nightscout es una aplicación web que puede registrar y mostrar tus datos del MCG y de **AAPS**, y crea informes. Es una plataforma potente que lleva muchos años integrada en **AAPS**. Permite a los usuarios y cuidadores seguir los datos de diabetes del paciente casi en tiempo real (si hay una buena conexión a Internet entre todos los componentes, solo pasan unos segundos entre la recepción de los datos y su publicación). También transmite los comandos remotos que los cuidadores envían a **AAPS** desde **AAPSClient** (consulta [Control máster ↔ cliente](#client-master-control)).
 
 Nightscout es software de código abierto. Cualquier persona puede crear y mantener un servidor Nightscout, con servicios gratuitos o de pago.
 
