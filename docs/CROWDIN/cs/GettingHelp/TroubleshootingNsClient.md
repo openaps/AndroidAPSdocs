@@ -12,7 +12,7 @@ Otevřete obrazovku NSClient (**Konfigurace** > **Komunikace** > **NSClientV3** 
 
 * Restart
 
-Co byste měli zkusit jako první krok je restart obojího: Nightscoutu i telefonu, abyste zjistili, jestli je problém trvalý
+As a first step, restart Nightscout and then your phone to see if the issue is permanent.
 
 Pokud máte Nightscout hostovaný na Heroku, můžete ho restartovat takto: Přihlašte se do Heroku, klikněte na jméno své nightscoutí aplikace, klikněte na nabídku 'More' a pak na 'Restart all dynos'.
 
