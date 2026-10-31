@@ -53,7 +53,7 @@ Ta sekcja daje krótki przegląd wszystkich systemów **CGM/FGM** zgodnych z **A
 | Sinocare                                                                                                          | Sino App (ze zmodyfikowaną aplikacją Sino App (patched))                                                                              |
 | MicroTech (Aidex, LinX, LinX Vista, Equil G. Smart 2, Diaexpert 2)                                                | Aplikacja MicroTech CGM                                                                                                               |
 | Instara                                                                                                           | Instara (z aplikacją Instara)                                                                                                         |
-| [Caresens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide                                       | Aplikacja xDrip Companion lub [Juggluco](../CompatibleCgms/Juggluco.md)                                                               |
+| [CareSens](../CompatibleCgms/Caresens.md), Simplera, iCan, LinX, SmartGuide                                       | Aplikacja xDrip Companion lub [Juggluco](../CompatibleCgms/Juggluco.md)                                                               |
 | Każdy CGM, którego oficjalna aplikacja pokazuje wartość glukozy w powiadomieniu (Dexcom, Medtronic, Eversense, …) | Odczyt powiadomień                                                                                                                    |
 
 (GettingStarted-TrustedBGSource)=
