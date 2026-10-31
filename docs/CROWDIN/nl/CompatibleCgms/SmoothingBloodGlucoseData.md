@@ -1,10 +1,10 @@
-# Filteren van bloed glucose waardes
+# Vloeiend maken van bloedglucosewaarden
 
 Als de **BG**-gegevens springerig of onrustig zijn, kan **AAPS** verkeerd insuline doseren. Dit kan leiden tot hoge of lage waarden. Zie je fouten of springerige gegevens van je CGM? Zet dan de loop uit tot het probleem is opgelost. Afhankelijk van je CGM kunnen zulke problemen komen door de CGM-instellingen in **AAPS** (zie verderop), of door een probleem met de plek van de CGM-sensor (dan moet je de sensor misschien vervangen).
 
 ## Gegevens vloeiend maken in AAPS
 
-**AAPS** kan de gegevens zelf vloeiend maken in **AAPS**, in plaats van in de CGM-app. Open het **menu** (☰), kies [**Configuratie**](../SettingUpAaps/ConfigBuilder.md) en dan **Vloeiend maken**. Er zijn vier opties en er kan er maar één tegelijk actief zijn: **Niet vloeiend maken**, **Exponentiëel vloeiend maken**, **Gemiddeld vloeiend maken** en **Unscented Kalman Filter**.
+**AAPS** kan de gegevens zelf vloeiend maken in **AAPS**, in plaats van in de CGM-app. Open het **menu** (☰), kies [**Configuratie**](../SettingUpAaps/ConfigBuilder.md) en dan **Vloeiend maken**. Er zijn vier opties en er kan er maar één tegelijk actief zijn: **Niet vloeiend maken**, **Exponentieel vloeiend maken**, **Gemiddeld vloeiend maken** en **Unscented Kalman Filter**.
 
 ![Configuratie > Vloeiend maken](../images/v4/Configuration/configuration_smoothing.png)
 
@@ -22,7 +22,7 @@ Gebruik deze optie alleen als je CGM-gegevens al goed vloeiend gemaakt worden do
 
 ### Unscented Kalman Filter (UKF)
 
-Deze optie gebruikt een statistisch model. Het schat steeds je echte glucosewaarde en hoe snel die verandert, op basis van de binnenkomende (mogelijk onrustige) metingen. Het past zich vanzelf aan aan hoeveel ruis je sensor op dat moment geeft. Het herkent ook plotselinge uitschieters en negeert die. Het is een meer geavanceerd alternatief voor Exponentiëel en Gemiddeld vloeiend maken. Het is handig als je wilt dat het vloeiend maken zich zelf aanpast aan de wisselende ruis van je sensor, in plaats van een vaste methode te gebruiken.
+Deze optie gebruikt een statistisch model. Het schat steeds je echte glucosewaarde en hoe snel die verandert, op basis van de binnenkomende (mogelijk onrustige) metingen. Het past zich vanzelf aan aan hoeveel ruis je sensor op dat moment geeft. Het herkent ook plotselinge uitschieters en negeert die. Het is een meer geavanceerd alternatief voor Exponentieel en Gemiddeld vloeiend maken. Het is handig als je wilt dat het vloeiend maken zich zelf aanpast aan de wisselende ruis van je sensor, in plaats van een vaste methode te gebruiken.
 
 (smoothing-xdrip-dexcom-g6)=
 
