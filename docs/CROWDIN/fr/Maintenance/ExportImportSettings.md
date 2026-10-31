@@ -131,14 +131,14 @@ Si nécessaire, [configurez votre récepteur MGC / source de glycémie](../Getti
 :class: warning
 Le fichier **Préférences** contient la session du pod ou du patch qui était actif au moment de l'export.
 - **Exportez juste après chaque activation de pod ou de patch** et copiez le fichier hors de votre téléphone.
-- **Même téléphone, pod toujours en marche :** laissez **Remplacer aussi les paramètres de la pompe** décoché. Votre pod actuel est conservé et seuls les autres paramètres sont importés.
-- **Nouveau téléphone qui reprend le pod :** cochez **Remplacer aussi les paramètres de la pompe**, et utilisez uniquement un fichier exporté pendant le pod que vous portez maintenant. Un fichier d'un pod précédent remplace la session de votre pod actuel, et vous devrez démarrer un nouveau pod.
+- **Même téléphone, pod toujours en marche :** laissez **Remplacer aussi les paramètres de pompe** décoché. Votre pod actuel est conservé et seuls les autres paramètres sont importés.
+- **Nouveau téléphone qui reprend le pod :** cochez **Remplacer aussi les paramètres de pompe**, et utilisez uniquement un fichier exporté pendant le pod que vous portez maintenant. Un fichier d'un pod précédent remplace la session de votre pod actuel, et vous devrez démarrer un nouveau pod.
 - **Une ancienne session de pod a été importée par erreur :** **AAPS** continue d'essayer de joindre ce pod et vous ne pouvez pas en activer un nouveau. Désactivez-le ; si cela échoue, abandonnez-le (voir par exemple [Abandonner un pod](#omnipod-dash-discard-pod) pour Omnipod DASH).
 ```
 
 ```{admonition} Pump settings are kept unless you say otherwise
 :class: note
-Par défaut, un import ne touche pas aux paramètres de votre pompe : la pompe choisie dans **Configuration**, son appairage et tous ses autres paramètres restent tels qu'ils sont sur ce téléphone. Cochez **Remplacer aussi les paramètres de la pompe** sur l'écran d'import uniquement si vous restaurez sur un nouveau téléphone qui doit reprendre la même pompe. Un import ne supprime jamais les paramètres qui ne sont pas dans le fichier.
+Par défaut, un import ne touche pas aux paramètres de votre pompe : la pompe choisie dans **Configuration**, son appairage et tous ses autres paramètres restent tels qu'ils sont sur ce téléphone. Cochez **Remplacer aussi les paramètres de pompe** sur l'écran d'import uniquement si vous restaurez sur un nouveau téléphone qui doit reprendre la même pompe. Un import ne supprime jamais les paramètres qui ne sont pas dans le fichier.
 ```
 
 1. Avec la copie de sauvegarde de votre APK (voir ci-dessus), suivez les instructions pour une [nouvelle installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
@@ -163,15 +163,15 @@ Par défaut, un import ne touche pas aux paramètres de votre pompe : la pompe 
 
     ![Liste des fichiers de paramètres à importer](../images/Maintenance/import_settings_files.png)
 
-    **AAPS** affiche les détails du fichier. Saisissez le mot de passe principal défini ci-dessus et appuyez sur **Décrypter & Revue**.
+    **AAPS** affiche les détails du fichier. Saisissez le mot de passe principal défini ci-dessus et appuyez sur **Déchiffrer et vérifier**.
 
-11. Une fois le fichier décrypté, décidez quoi faire des paramètres de la pompe. Sur un nouveau téléphone qui reprend la même pompe, cochez **Remplacer aussi les paramètres de la pompe** pour que l'appairage et les paramètres de la pompe viennent du fichier. Laissez la case décochée pour garder la pompe avec laquelle ce téléphone est déjà appairé. Appuyez ensuite sur **Import**.
+11. Une fois le fichier décrypté, décidez quoi faire des paramètres de la pompe. Sur un nouveau téléphone qui reprend la même pompe, cochez **Remplacer aussi les paramètres de pompe** pour que l'appairage et les paramètres de la pompe viennent du fichier. Laissez la case décochée pour garder la pompe avec laquelle ce téléphone est déjà appairé. Appuyez ensuite sur **Import**.
 
-    ![Fichier de paramètres décrypté avec la case Remplacer aussi les paramètres de la pompe et le bouton Import](../images/Maintenance/import_settings_review.png)
+    ![Fichier de paramètres décrypté avec la case Remplacer aussi les paramètres de pompe et le bouton Import](../images/Maintenance/import_settings_review.png)
 
 12. **AAPS** demande **Appliquer les paramètres importés ?** et indique combien de paramètres vont changer et, si vous avez laissé la case décochée, combien de paramètres de la pompe sont conservés. Rien n'a encore été écrit, donc **Annuler** laisse votre téléphone exactement comme il était. Appuyez sur **OK** pour appliquer.
 
-    ![Appliquer les paramètres importés ? dialogue](../images/Maintenance/import_settings_apply.png)
+    ![Appliquer les paramètres importés ? dialogue](../images/Maintenance/import_settings_apply.png)
 
 13. **AAPS** applique les paramètres importés tout de suite, sans redémarrer. Seuls les plugins dont les paramètres ont changé sont redémarrés. Pendant ce temps, **AAPS** affiche **Application des paramètres…** ; si la pompe est occupée, il affiche **En attente de la pompe…** et applique les paramètres dès que la pompe est libre. Si la pompe est toujours occupée après une minute, **AAPS** propose de réessayer. Un message **Paramètres appliqués** confirme que les paramètres importés sont utilisés. Tout traitement mis en file d'attente pendant l'import est abandonné et **AAPS** vous indique qu'il a été annulé, afin que rien ne soit envoyé deux fois à la pompe.
 
@@ -179,11 +179,11 @@ Par défaut, un import ne touche pas aux paramètres de votre pompe : la pompe 
 
 Si le fichier a choisi une pompe que cette version d'**AAPS** ne possède pas, **AAPS** passe à la **Pompe virtuelle** et vous le signale. Choisissez à nouveau votre pompe dans **Configuration** et vérifiez ses paramètres.
 
-14. Utilisateurs de pompes sans tubulure (Omnipod et Medtrum) uniquement : si vous avez coché **Remplacer aussi les paramètres de la pompe** et que vos **Préférences** n'ont pas été sauvegardées avec le pod que vous utilisez actuellement, vous devrez démarrer un nouveau pod pour commencer l'administration d'insuline.
+14. Utilisateurs de pompes sans tubulure (Omnipod et Medtrum) uniquement : si vous avez coché **Remplacer aussi les paramètres de pompe** et que vos **Préférences** n'ont pas été sauvegardées avec le pod que vous utilisez actuellement, vous devrez démarrer un nouveau pod pour commencer l'administration d'insuline.
 
-**Résolution de problèmes :** si vous n'arrivez pas à activer un profil depuis l'écran principal d'**AAPS**, ouvrez le **menu** (☰) en haut à gauche > **Configuration** > **Pompe** > passez à **Pompe virtuelle** > puis revenez à votre type de pompe
+**Dépannage :** si vous n'arrivez pas à activer un profil depuis l'écran principal d'**AAPS**, ouvrez le **menu** (☰) en haut à gauche > **Configuration** > **Pompe** > passez à **Pompe virtuelle** > puis revenez à votre type de pompe
 
 ### Remarque pour les utilisateurs de Dana RS
 
-- Si vous avez coché **Remplacer aussi les paramètres de la pompe**, les paramètres de connexion de la pompe sont aussi importés : **AAPS** sur votre nouveau téléphone « connaîtra » déjà la pompe et ne lancera donc pas de recherche Bluetooth.
+- Si vous avez coché **Remplacer aussi les paramètres de pompe**, les paramètres de connexion de la pompe sont aussi importés : **AAPS** sur votre nouveau téléphone « connaîtra » déjà la pompe et ne lancera donc pas de recherche Bluetooth.
 - Veuillez associer manuellement le nouveau téléphone et la pompe.
