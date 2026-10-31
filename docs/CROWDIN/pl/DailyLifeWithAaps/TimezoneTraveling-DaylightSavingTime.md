@@ -42,7 +42,7 @@ Aby tego uniknąć, masz dwie możliwości:
 
 * Wyłącz „Automatyczna data i godzina” w ustawieniach telefonu (ręczna zmiana strefy czasowej)
 
-Po wyjściu z samolotu:
+When you get off the plane:
 
 * wyłącz pompę
 * zmień strefę czasową w telefonie
@@ -62,7 +62,7 @@ Insight zapisuje też w historii wpisy o tym, w którym momencie zmieniono czas 
 
 Może to spowodować niedokładności w **TDD** (dziennych dawkach insuliny). Nie powinno to jednak być problemem.
 
-Dlatego użytkownik pompy Insight nie musi martwić się zmianami strefy czasowej ani zmianami czasu. Od tej zasady jest jeden wyjątek: pompa Insight ma małą wewnętrzną baterię, która zasila m.in. zegar podczas wymiany „prawdziwej” baterii. Jeśli wymiana baterii trwa zbyt długo, ta wewnętrzna bateria się wyczerpie, zegar zostanie zresetowany i po włożeniu nowej baterii pompa poprosi Cię o wpisanie godziny i daty. W takim przypadku wszystkie wpisy sprzed wymiany baterii są pomijane w obliczeniach AAPS, ponieważ nie da się ustalić ich poprawnego czasu.
+Dlatego użytkownik pompy Insight nie musi martwić się zmianami strefy czasowej ani zmianami czasu. Od tej zasady jest jeden wyjątek: pompa Insight ma małą wewnętrzną baterię, która zasila m.in. zegar podczas wymiany „prawdziwej” baterii. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. W takim przypadku wszystkie wpisy sprzed wymiany baterii są pomijane w obliczeniach AAPS, ponieważ nie da się ustalić ich poprawnego czasu.
 
 ## Zmiana strefy czasowej dla Accu-Chek Combo
 
