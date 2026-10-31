@@ -73,7 +73,7 @@ Closed loop is alleen mogelijk als je bij **[Doel 7](#objectives-objective7)** o
 
 Dankzij SMB kan het bij maaltijden met alleen "langzame" koolhydraten genoeg zijn om het systeem de geplande hoeveelheid koolhydraten door te geven en de rest aan **AAPS** over te laten. Dit kan wel leiden tot hogere pieken na de maaltijd (postprandiaal), omdat vooraf bolussen (pre-bolus) niet mogelijk is. Of je kunt, zo nodig met een pre-bolus, een **startbolus** geven die de koolhydraten **maar voor een deel** dekt (bijvoorbeeld 2/3 van de geschatte hoeveelheid), en **SMB** de rest van de insuline laten geven.
 
-![SMB's in de hoofdgrafiek](../images/SMBs.png)
+![SMBs on the IOB graph](../images/SMBs.png)
 
 SMB's worden in de [IOB-grafiek](#aaps-screens-iob) getoond als blauwe driehoekjes. [Houd](#aaps-screens-graph-press-and-hold) de grafiek op een driehoekje ingedrukt om te zien hoeveel insuline er is gegeven, of gebruik de [Behandelingen geschiedenis](#aaps-screens-treatments).
 
