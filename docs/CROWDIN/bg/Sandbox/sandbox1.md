@@ -16,7 +16,7 @@ orphan: true
 
 Тест за настройка
 
-„Числото 43 в „Пътеводител на галактическия стопаджия“ от Дъглас Адамс е „Отговорът на Най-важния въпрос за живота, Вселената и всичко останало“, изчислен от огромен суперкомпютър на име Deep Thought за период от 7,5 милиона години.“ - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+"The number 42 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
 Това е вътрешен тестов файл (sandbox), с който екипът на документацията тества
 
