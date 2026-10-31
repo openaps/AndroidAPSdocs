@@ -20,7 +20,7 @@
 
 **Autosens** = Berechnung der Insulinempfindlichkeit für Zeiträume von 24 bis 8 Stunden etc. Further info → [DIABETTECH - **Autosens**](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
-**Azure** Cloud Computing-Plattform zum Hosten der **Nightscout** Web-App Azure → siehe auch **Nightscout**.
+**Azure** = cloud computing platform to host **Nightscout** web app → see also **Nightscout**.
 
 **BAT** = status light for low pump battery, shown in the status row of **AAPS'** main screen → see also **CAN** / **RES** / **SEN**.
 
@@ -54,17 +54,17 @@
 
 **Dynamic ISF (or DynISF)** = a feature within **AAPS** that adapts the insulin sensitivity factor (**ISF**) dynamically based on the user’s **TDD** and **BG**.
 
-**eCarbs** = extended Carbs (dt. verzögerte Kohlenhydrate). Kohlenhydrate werden über mehrere Stunden aufgeteilt, um Protein zu berücksichtigen und **AAPS** zu ermöglichen verlängerte Bolusdosen abzugeben. Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
+**eCarbs** = extended Carbs (dt. verzögerte Kohlenhydrate). Carbs split up over several hours (e.g. to cover fat/protein), which lets **AAPS** spread the insulin like an extended bolus. Further info → [Wiki - 'Extended Carbs'](../DailyLifeWithAaps/ExtendedCarbs.md)
 
 **FCL** = Full Closed Loop. A loop which needs no mealtime input from the user: no carb counting and no meal bolus. Further info → Wiki - 'full closed loop' and see also **HCL**.
 
-**FGM** = Flash Glucose Monitor von Freestyle Libre hergestellt. Weitere Informationen → Wiki - 'BZ-Quelle' und vgl. auch 'CGM'.
+**FGM** = Flash Glucose Monitor such as the Abbott Freestyle Libre. Weitere Informationen → Wiki - 'BZ-Quelle' und vgl. auch 'CGM'.
 
 **git** = ein Werkzeug, das verwendet wird, um den **AAPS**-Quellcode zu speichern und herunterzuladen.
 
-**GitHub** = ein webbasierter Hosting-Service und Build-Prozess für die **AAPS'**-Software. Ein Versionierungssystem, um Änderungen an Computerdateien nachhalten zu können und die Arbeit an diesen Dateien - insbesondere für Teams - koordinieren zu können. Es ist auch für **APK**-Updates erforderlich. Weitere Informationen → Wiki - 'Update auf eine neue Version'.
+**GitHub** = a web-based service that hosts the **AAPS** source code and its version control (tracking changes in files and coordinating work on them, especially for teams), and can also build the app. It is also necessary for **APK** updates. Weitere Informationen → Wiki - 'Update auf eine neue Version'.
 
-**Glimp** = Eine App mit der Werte vom Freestyle Libre empfangen werden können Glimp.
+**Glimp** = an app to collect values from Freestyle Libre.
 
 **HCL (or Hybrid Closed Loop)** = a loop which automates insulin delivery between meals, but still requires the user to bolus for meals. Nearly every system in everyday use, including **AAPS**, is a hybrid closed loop → see also **FCL** / **Closed Loop**.
 
@@ -74,7 +74,7 @@
 
 **ISF** = Insulin Sensitivitäts-Faktor ("Korrektur-Faktor"). Die durch eine Insulineinheit zu erwartende Glukosewert-Senkung. Unit is either mg/dL/U or mmol/L/U. These are not equivalent without a conversion!
 
-**Keystore (oder JKS)** = ein Java Key Store, der eine verschlüsselte Datei ist, in der die benötigten persönlichen Entwicklerzertifikate und Schlüssel für die **AAPS**-Erstellung (Build und Rebuild) enthält.
+**Keystore (or JKS)** = a Java Key Store which is an encrypted file where your personal developer certificates and keys will be stored required for your **AAPS'** build (and rebuild).
 
 **LGS** = Low Glucose Suspend (dt. "Abschaltung vor Niedrig"). See [Wiki - Low Glucose Suspend](#KeyAapsFeatures-LGS)
 
@@ -86,7 +86,7 @@
 
 **min_5m_carbimpact** = Sicherheitsmerkmal, das eine Berechnung des Standardkohlenhydratabbaus (Verstoffwechselung) darstellt. Dieser Wert wird genutzt, wenn die Kohlenhydrat-Aufnahme nicht anhand der Reaktionen des Blutes bestimmt werden kann. Further info → [Wiki - 'Preferences'](#Preferences-min_5m_carbimpact).
 
-**Nightscout** Open Source Projekt zur Anzeige und Auswertung der CGM-Daten. The central data hub for the user’ **AAPS** data and can generate reports to view the user’s historical **Nightscout** data expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
+**Nightscout** Open Source Projekt zur Anzeige und Auswertung der CGM-Daten. The central data hub for the user’s **AAPS** data and can generate reports to view the user’s historical **Nightscout** data, such as expected HbA1c, time in range or search for patterns in the data via percentile chart etc.
 
 **Nightscout** → siehe auch **Nightscout Reporter**. Dies ist besonders für Eltern, die das Diabetesmanagement ihres Kindes begleiten, hilfreich.
 
@@ -110,19 +110,19 @@
 
 **Profile** (dt. Profil) = Alle grundlegenden Einstellungen zur Behandlung Deines Diabetes (Basalrate, **DIA**, **IC**, **ISF**, **BZ**-Ziel). **AAPS** only uses profiles created within **AAPS** (**Manage** → **Profile**), but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → [Wiki - 'Your AAPS profile'](../SettingUpAaps/YourAapsProfile.md).
 
-**Profile switch** (dt. Profilwechsel) = (temporärer) Wechsel von Deinem aktiven **Profil** auf ein anderes in **AAPS** gespeichertes **Profil**.
+**Profile switch** = (temporary) switch of the user’s **Profile** to a different **Profile** saved within **AAPS**.
 
-**Profile Percentage** (dt. prozentuale Profilanpassung) = Eine (vorübergehende) prozentuale Änderung (Erhöhung oder Verringerung) des Profils für einen bestimmten Zeitraum.
+**Profile Percentage** = a (temporary) percentage increase or decrease applied to a user’s **Profile** for a selected time period.
 
 **RES** = status light for overdue reservoir change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **SEN**.
 
-**RileyLink** = Open-Source-Hardware zur Umwandlung von Bluetooth Low Energy (BLE) in 916 MHz Funksignale (wird für ältere Medtronic-Pumpen verwendet) RileyLink.
+**RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication.
 
 **SAGE** = sensor age (dt. Sensoralter). This is displayed on the main screen of **AAPS** and in **Nightscout**, based on the user's **Sensor Insert** careportal entries → see also **Nightscout**.
 
 **SEN** = status light for overdue sensor change, shown in the status row of **AAPS'** main screen → see also **BAT** / **CAN** / **RES**.
 
-**Sensivity detection** (dt.: Sensitivitätserkennung) = Berechnung der geänderten Insulinempfindlichkeit als Folge von Bewegung, Hormonen etc. see also → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
+**Sensitivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. see also → [DIABETTECH - 'Autosens'](https://www.diabettech.com/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/).
 
 **Sensor noise** (dt. Sensorrauschen) = ein Begriff, der verwendet wird, um die instabilen **CGM**-Werte zu beschreiben, die zu "springenden" **Glukosewerten** führen. Further info → [Wiki - 'Smoothing blood glucose data'](../CompatibleCgms/SmoothingBloodGlucoseData.md).
 
