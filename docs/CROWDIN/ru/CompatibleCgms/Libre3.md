@@ -44,11 +44,11 @@ The blood glucose values are received by the xDrip app on the smartphone.
 
 ### Шаг 3: Запуск сенсора в xDrip
 
-In xDrip start the sensor with "Start Sensor" and "not today". Нет необходимости прикладывать мобильный телефон к сенсору. На самом деле "Запуск сенсора" физически не запускает сенсор Libre3 и не начинает взаимодействие с ним. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. Если доступно, введите два замера крови для начальной калибровки. Now the blood glucose values should be displayed in xDrip every 5 minutes. Пропущенные данные, например из-за того, что вы были далеко от телефона, не будут восстановлены.
+In xDrip start the sensor with "Start Sensor" and "not today". Нет необходимости прикладывать мобильный телефон к сенсору. На самом деле "Запуск сенсора" физически не запускает сенсор Libre3 и не начинает взаимодействие с ним. This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. Пропущенные данные, например из-за того, что вы были далеко от телефона, не будут восстановлены.
 
 Подождите не менее 15-20 минут, если данных нет.
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. После активации измерьте ГК и сделайте первоначальную калибровку.
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Step 4: Configure AAPS
 
