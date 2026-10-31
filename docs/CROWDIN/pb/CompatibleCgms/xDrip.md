@@ -59,7 +59,7 @@ Lembre-se de desativar Import Sounds para evitar que o xDrip toque um som toda v
 - Se você encontrar problemas com a transmissão local (o AAPS não recebe valores de BG do xDrip), vá em → Menu hambúrguer (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) e digite `info.nightscout.androidaps` para a compilação do AAPS (se você usa a compilação PumpControl, digite `info.nightscout.aapspumpcontrol`!!).
 - Atenção: a correção automática às vezes muda o i para letra maiúscula. Você **deve usar somente letras minúsculas** ao digitar `info.nightscout.androidaps` (ou `info.nightscout.aapspumpcontrol` para o PumpControl). Um I maiúsculo impediria o aplicativo de receber valores de BG do xDrip.
     
-    ![xDrip Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+    ![Configurações Inter-app do xDrip: Identify receiver](../images/xDrip_InterApp_NS.png)
 
 ## Usar o AAPS para calibrar no xDrip
 
