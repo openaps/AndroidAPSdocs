@@ -252,7 +252,7 @@ Si vous vous sentez peu soutenu par votre équipe pour boucler avec **AAPS**, le
 
 a) Le système **AAPS** a été conçu PAR des patients et leurs aidants. Il a été conçu avant tout pour la sûreté, mais aussi en s'inspirant de l'expérience "dans la vie réelle" des patients. Il y a plusieurs milliers d'utilisateurs d'**AAPS** dans le monde. Il est donc probable que d'autres patients de votre clinique utilisent une boucle OS-AID (que l'équipe le sache ou non).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
+b) Des recommandations récentes, revues par les pairs et publiées dans la grande revue médicale internationale [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_), ont confirmé que les boucles OS-AID sont **sûres** et **efficaces pour améliorer le contrôle du diabète**, y compris le temps dans la cible. Des revues de premier plan comme [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) publient régulièrement des articles qui montrent les progrès de la communauté OS-AID.
 
 c) La mise en place d'**AAPS** se fait par étapes _progressives_ : partant d'une pompe en boucle "ouverte", en passant par l'arrêt avant hypo, jusqu'à la boucle "fermée" hybride. Cette évolution se fait en atteignant successivement un certain nombre d'objectifs. Il existe donc un programme structuré, exigeant de l'utilisateur qu'il démontre un niveau de compétence à chaque étape et qu'il ajuste ses paramètres de base (basal, SI et G/I) avant de pouvoir fermer la boucle.
 
@@ -264,7 +264,7 @@ f) Si votre équipe reste fortement opposée, donnez à votre médecin des copie
 
 #### Soutien à la boucle OS-AID par d'autres médecins
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+L'article publié dans le [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (codirigé par King’s et le Guy’s and St Thomas’ NHS Foundation Trust, et codirigé par le Dr Sufyan Hussain, diabétologue consultant et maître de conférences honoraire à King’s à Londres) apporte :
 
 a) L'**assurance** pour les professionnels que les systèmes de pancréas artificiel OS-AID / open source sont une option de « traitement sûr et efficace » du diabète de type 1, ainsi que des conseils sur les recommandations, les discussions, le soutien et la documentation ;
 
