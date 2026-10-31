@@ -30,7 +30,7 @@ Depois de selecionado, o cartão **Diaconn G8** mostra dois botões, **Configura
 
 ![Tela da bomba Diaconn G8 antes do pareamento](../images/v4/Pumps/diaconn_g8_pump_screen.png)
 
-![image](../images/DiaconnG8/DiaconnG8_04.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -47,11 +47,11 @@ A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, o
 1. Os últimos 5 dígitos do número de série (SN) na parte de trás da bomba.
 2. Clique no botão O > Information > BLE > últimos 5 dígitos.
 
-![image](../images/DiaconnG8/DiaconnG8_06.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Depois de selecionar sua bomba, aparece uma janela pedindo um código PIN. Digite o número PIN mostrado na sua bomba para concluir a conexão.
 
- ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![imagem](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 - Quando aparecer **Pareamento concluído!**, toque em **OK** para voltar à tela da bomba.
 
@@ -61,7 +61,7 @@ A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, o
 - Toque em **Atualizar** para conectar à bomba, atualizar o status e sincronizar os logs.
 - Toque em **Histórico da Bomba** para ver o histórico lido da bomba.
 
-![image](../images/DiaconnG8/DiaconnG8_08.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ```{admonition} Older screenshot
 :class: note
@@ -87,15 +87,15 @@ A captura de tela acima é de uma versão anterior do **AAPS**. No **AAPS** 4, o
 
 - Pressione e segure o botão Bluetooth na parte de cima por cerca de 3 segundos.
 
-![image](../images/DiaconnG8/DiaconnG8_11.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Clique no botão de configuração da bomba de insulina Diaconn G8 pareada.
 
-![image](../images/DiaconnG8/DiaconnG8_12.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Desfaça o pareamento.
 
-![image](../images/DiaconnG8/DiaconnG8_13.jpg)
+![imagem](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - No **AAPS**, abra a tela da bomba (**Gerenciar** > **Bomba**), toque em **Desfazer pareamento** e confirme **Redefinir informações de pareamento?**.
 - Repita o processo de pareamento Bluetooth da bomba (veja acima).
