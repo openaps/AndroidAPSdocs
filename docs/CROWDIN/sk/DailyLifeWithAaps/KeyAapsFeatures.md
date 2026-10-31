@@ -59,7 +59,7 @@ Uzavretý okruh je možný iba vtedy, ak ste v **[Cieli 7](#objectives-objective
 - Výmena kanyly alebo zmena profilu vráti pomer Autosens späť na 100 % (percentuálne prepnutie profilu s trvaním Autosens nevynuluje).
 - Funkcia Autosens upravuje vašu bazálnu dávku a ISF (t. j. napodobňuje to, čo robí zmena profilu).
 - Ak dlhší čas nepretržite jete sacharidy, Autosens bude v tomto období menej účinný, pretože sacharidy sú vylúčené z výpočtov delty **glykémie**.
-- Odchýlky sa prevedú na **pomer citlivosti** (percento): pomer pod 100 % znamená, že AAPS vás považuje za citlivejších na inzulín, než predpokladá váš **profil** (preto zníži účinný bazál a zvýši hodnotu ISF), pomer nad 100 % znamená, že ste rezistentnejší (preto zvýši bazál a zníži hodnotu ISF).
+- The deviations are converted into a **sensitivity ratio** (a percentage): a ratio below 100% means AAPS thinks you're more sensitive to insulin than your **Profile** assumes (so it lowers effective basal and raises the ISF value), while a ratio above 100% means you're more resistant (so it raises basal and lowers the ISF value).
 - Predvolene sa tento pomer drží medzi 0,7 (70 %, citlivejší) a 1,2 (120 %, rezistentnejší), takže séria nezvyčajných údajov nemôže posunúť vaše dávkovanie príliš ďaleko od vášho **profilu**. Tieto hranice sa dajú upraviť v rozšírených nastaveniach detekcie citlivosti.
 - Autosens a [Autotune](../AdvancedOptions/Autotune.md) riešia ten istý základný problém v rôznom časovom rozsahu: Autosens priebežne jemne upravuje vaše *aktuálne* dávkovanie podľa posledných 8–24 h, zatiaľ čo Autotune pomaly upravuje samotný váš *profil* podľa histórie za niekoľko týždňov. Používať oba naraz je normálne a očakávané – navzájom sa dopĺňajú, nezdvojujú sa.
 
@@ -103,7 +103,7 @@ Nastavenia pre OpenAPS SMB sú opísané nižšie.
 
 (Open-APS-features-max-u-h-a-temp-basal-can-be-set-to)=
 
-### Max. U/h, na ktoré je možné nastaviť dočasný bazál
+### Maximum basal rate
 
 Toto bezpečnostné nastavenie určuje maximálny dočasný bazál, ktorý môže inzulínová pumpa podať. Je známe aj ako **max-basal**.
 
@@ -190,9 +190,9 @@ Po povolení sa sprístupnia nové nastavenia.
 
 Ak je toto nastavenie zapnuté, **SMB** sa budú podávať aj vtedy, keď používateľ zvolil vysoký **dočasný cieľ** (definovaný ako 100 mg/dl alebo 5,6 mmol/l a vyššie, bez ohľadu na cieľ v **profile**). Pri zapínaní buďte opatrní: **SMB** môžu byť príliš agresívne, ak vaše nastavenia nie sú dobre vyladené alebo ak sa váš **profil** často mení (napríklad u detí).
 
-Táto možnosť slúži na vypnutie SMB, keď je toto nastavenie deaktivované. Napríklad, ak je táto možnosť vypnutá, **SMB** sa dajú vypnúť nastavením **dočasného cieľa** 100 mg/dl alebo 5,6 mmol/l a vyššie. Táto možnosť tiež vypne **SMB** bez ohľadu na to, ktorá iná podmienka sa snaží SMB zapnúť – okrem nízkeho **dočasného cieľa**, ako je **Pred jedlom** (alebo akýkoľvek **dočasný cieľ** 98 mg/dl alebo 5,4 mmol/l a nižšie), pri ktorom sa **SMB** môžu stále podávať, aby priviedli **glykémiu** k cieľu.
+When this setting is disabled, a high **Temp Target** turns **SMBs** off. Napríklad, ak je táto možnosť vypnutá, **SMB** sa dajú vypnúť nastavením **dočasného cieľa** 100 mg/dl alebo 5,6 mmol/l a vyššie. Táto možnosť tiež vypne **SMB** bez ohľadu na to, ktorá iná podmienka sa snaží SMB zapnúť – okrem nízkeho **dočasného cieľa**, ako je **Pred jedlom** (alebo akýkoľvek **dočasný cieľ** 98 mg/dl alebo 5,4 mmol/l a nižšie), pri ktorom sa **SMB** môžu stále podávať, aby priviedli **glykémiu** k cieľu.
 
-Ak je toto nastavenie zapnuté, **SMB** sa pri vysokom dočasnom cieli zapne iba vtedy, ak je zapnutá aj možnosť **Povoliť SMB s nízkymi dočasnými cieľmi**.
+This setting does not turn **SMB** on by itself. With a high temp target, **SMB** is only given if one of the other settings below (for example **Enable SMB always** or **Enable SMB with COB**) also allows it.
 
 (Open-APS-features-enable-smb-always)=
 
@@ -323,7 +323,7 @@ AMA, skrátená forma „advanced meal assist“ (pokročilý asistent pri jedle
 
 Viac informácií nájdete v [dokumentácii OpenAPS](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Max. U/h, na ktoré je možné nastaviť dočasný bazál (OpenAPS „max-basal“)
+### Maximum basal rate (OpenAPS "max-basal")
 
 Toto bezpečnostné nastavenie zabraňuje tomu, aby **AAPS** niekedy podal nebezpečne vysokú bazálnu dávku, a obmedzuje dočasný bazál na x U/h. Odporúča sa ho nastaviť na rozumnú hodnotu. Dobré odporúčanie je vziať najvyššiu bazálnu dávku vo vašom profile a vynásobiť ju 4, najmenej však 3. Napríklad, ak je najvyššia bazálna dávka vo vašom profile 1,0 U/h, môžete ju vynásobiť štyrmi, aby ste získali hodnotu 4 U/h, a nastaviť 4 ako bezpečnostný parameter.
 
