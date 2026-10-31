@@ -57,9 +57,9 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * [Проверка на инсталацията на Git](#BuildingAaps-steps-for-installing-git)
 
-  * ако сте на Windows и Git току-що е инсталиран, трябва да рестартирате компютъра си, за да стане Git достъпен навсякъде след инсталацията
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * Ако Git е инсталиран, рестартирали сте компютъра (ако сте на Windows) и Git все още не може да бъде намерен:
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * Потърсете на компютъра си файл „git.exe“.
 
@@ -212,7 +212,7 @@ Cause: error: invalid source release: 21
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-Когато създавате подписания apk, може да получите известие, че създаването е успешно, но че са създадени „0 build variants“:
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ Cause: error: invalid source release: 21
 
 ## Apk не е инсталиран
 
-![Приложението не е инсталирано на телефона](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * Уверете се, че сте прехвърлили файла „app-full-release.apk“ на телефона си.
 * Тази грешка обикновено означава, че новият apk е подписан с различно хранилище за ключове от инсталирания ви **AAPS**. Ако все още имате предишното си хранилище за ключове, изберете го и компилирайте отново. В противен случай вижте [Преинсталиране на AAPS с ново хранилище за ключове](#reinstall-aaps).
