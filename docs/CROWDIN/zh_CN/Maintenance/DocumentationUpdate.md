@@ -2,11 +2,29 @@
 
 ## October 2026
 
-- [Browser build with AAPS Builder](#aaps-builder): build workflow version 6. The build steps now use exact, reviewed versions of GitHub's tools and build machine, and the build explains clearly when the wrong text was pasted into the `KEYSTORE_SET` secret. The [setup page](#aaps-builder-setup) is now part of the documentation and translated, checks your GitHub username, and has clearer help for the secret, "Page not found" (404), Chrome tabs and the GitHub app. If your `.github/workflows/build.yml` says version 5 or earlier, replace it as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
+- [Smartwatches and AAPS](#watches-external-companion-apps): the **Samsung Tizen** section becomes **External Companion Apps** and lists the apps that read the **AAPS** broadcast (WatchDrip+, GlucoDataHandler, G-Watch). [WatchDrip+](#watches-xiaomi-amazfit) 0.5 and later connect directly to **AAPS** without xDrip+: setup steps added, also summarized in [Configuration](#external-companion-apps), [Wear OS](../WearOS/WearOsSmartwatch.md) and [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md). Bluejay watches: GTS discontinued, current model updated @psonnera
+- [Browser build with AAPS Builder](#aaps-builder): build workflow version 6. The build steps now use exact, reviewed versions of GitHub's tools and build machine, and the build explains clearly when the wrong text was pasted into the `KEYSTORE_SET` secret. The [setup page](#aaps-builder-setup) is now part of the documentation and translated, checks your GitHub username, and has clearer help for the secret, "Page not found" (404) and the GitHub app. If your `.github/workflows/build.yml` says version 5 or earlier, replace it as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
+- [AAPS web installer](#web-installer): now a documentation page, translated like the others. The old address still works @psonnera
+- [Browser build with AAPS Builder](#aaps-builder): build workflow version 3 adds the `aapsclient3Release` variant (**AAPSClient3**, AAPS 4.0 and later). To build it, replace your `.github/workflows/build.yml` as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
+- [Dexcom G7](../CompatibleCgms/DexcomG7.md): removed the patched Dexcom G7 app (DiaKEM), which no longer works for new installs @psonnera
+- [Browser build with AAPS Builder](#aaps-builder): build workflow version 2. Automatic weekly builds are removed (no schedule, no `AUTO_BUILD` / `AUTO_VARIANT` variables, no `built/…` tags): every build is started by you, with the version and variant you choose, and the workflow only has read access to your repository. If your `.github/workflows/build.yml` says version 1, replace it as explained in [Updating AAPS](#aaps-builder-updates). Added screenshots for every step @psonnera
+- [Browser build with AAPS Builder](#aaps-builder): the build workflow is now part of this documentation. No template repository: you create an empty private repository and add the workflow from the setup page (new step 2). The workflow no longer checks an outside repository for updates. If you created your repository from the earlier template, replace `.github/workflows/build.yml` with the workflow from the setup page as explained in [Updating AAPS](#aaps-builder-updates) @psonnera
+- New page [Browser build with AAPS Builder](#aaps-builder): build AAPS from an Android phone with a setup page hosted on this site, with automatic weekly builds and no preparation file. It replaces the Android instructions of the browser build (File Manager Plus pages removed). AAPS Builder created by @dio99, docs @psonnera
+
+## August 2026
+
+- [Transferring and Installing AAPS](../SettingUpAaps/TransferringAndInstallingAaps.md): merged the *Android developer verification* page into the installation guide, added the [web installer](#android-developer-verification-web) (install the APK straight from the browser, exempt from verification) and wireless ADB @psonnera
+
+## July 2026
+
+- [Introduction](../Getting-Started/Introduction.md): accuracy review of the APS section. Corrected the Frontiers citation title and link, reframed it as background rather than a current market guide, updated the dual-hormone and full closed loop statements, clarified that the controller is not always a phone app, removed commercial brand names and unsourced user counts, and fixed OS-AID to *Open-Source Automated Insulin Delivery* @psonnera
+- [Glossary](../UsefulLinks/Glossary.md): added **AID**, **FCL**, **HCL** and **OS-AID** entries, cross-linked from **APS** and **Closed Loop** @psonnera
+- New page [Android developer verification](#android-developer-verification): impact of Google's upcoming verification requirement on installing self-built apps, with free installation methods (ADB, advanced flow, limited distribution account) @psonnera
 
 ## June 2026
 
 - [Browser Build](#browser-build): restructured into a decision-first, multi-page flow (Fork → keystore Option 1/Option 2 with a dedicated page per device → Google Drive → Build → Troubleshooting); removed nested tabs and made installing File Manager Plus a prominent step @psonnera
+- [Introduction](../Getting-Started/Introduction.md): terminology switched from *DIY* to *OS-AID* (Open-Source Automated Insulin Delivery), added Trio and Stelo, updated pump/CGM compatibility table @tmhastings
 
 ## March 2026
 
@@ -61,7 +79,7 @@
   - [需要多长时间](#preparing-how-long-will-it-take)、[组件概览](../DailyLifeWithAaps/CobCalculation.md)、[完成目标](../SettingUpAaps/CompletingTheObjectives.md)、[您的AAPS个人资料](../SettingUpAaps/YourAapsProfile.md)、[配置构建器](../SettingUpAaps/ConfigBuilder.md)与[偏好设置](../SettingUpAaps/Preferences.md)、[AAPS屏幕](../DailyLifeWithAaps/AapsScreens.md) @emilise
   - [活性碳水化合物计算](../DailyLifeWithAaps/CobCalculation.md)、[动态ISF](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Android Studio Ladybug的构建说明](../SettingUpAaps/BuildingAaps.md) @tanja
-- 技术工作（文档部署流程、文件组织等）@psonnerat & @emilise
+- Technical work (deployment process for the documentation, files organization...) @psonnerat & @emilise
 
 ***
 
@@ -121,7 +139,7 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 
 ## 2021年2月
 
-- 新导航栏和[语言切换](../NavigateDoc/ChangeLanguage.md)
+- New navigation bar and [language switch](../NavigateDoc/ChangeLanguageVersion.md)
 
 ## 2021年1月
 
@@ -152,8 +170,8 @@ AAPS 3.1版文档[在此处](https://androidaps.readthedocs.io/en/3.1/index.html
 
 ## 2020年6月
 
-- Libre 2 - more details patched Libre Link app & use of bluetooth transmitters
-- [跨时区旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) 使用Libre 2注意事项
+- Libre 2 - more details patched Libre Link app & use of Bluetooth transmitters
+- [Time zone traveling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
 
 ## 2020年5月
 
