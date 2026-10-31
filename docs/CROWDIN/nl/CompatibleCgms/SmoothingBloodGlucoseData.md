@@ -1,16 +1,16 @@
 # Filteren van bloed glucose waardes
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors or experience jumpy data with your CGM it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Als de **BG**-gegevens springerig of onrustig zijn, kan **AAPS** verkeerd insuline doseren. Dit kan leiden tot hoge of lage waarden. Zie je fouten of springerige gegevens van je CGM? Zet dan de loop uit tot het probleem is opgelost. Afhankelijk van je CGM kunnen zulke problemen komen door de CGM-instellingen in **AAPS** (zie verderop), of door een probleem met de plek van de CGM-sensor (dan moet je de sensor misschien vervangen).
 
 ## Smoothing data within AAPS
 
-**AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Open the **menu** (☰), select [**Configuration**](../SettingUpAaps/ConfigBuilder.md), then **Smoothing**. There are four options, and only one can be active at a time: **No smoothing**, **Exponential smoothing**, **Average smoothing** and **Unscented Kalman Filter**.
+**AAPS** kan de gegevens zelf vloeiend maken in **AAPS**, in plaats van in de CGM-app. Open het **menu** (☰), kies [**Configuratie**](../SettingUpAaps/ConfigBuilder.md) en dan **Vloeiend maken**. Er zijn vier opties en er kan er maar één tegelijk actief zijn: **Niet vloeiend maken**, **Exponentiëel vloeiend maken**, **Gemiddeld vloeiend maken** en **Unscented Kalman Filter**.
 
-![Configuration > Smoothing](../images/v4/Configuration/configuration_smoothing.png)
+![Configuratie > Vloeiend maken](../images/v4/Configuration/configuration_smoothing.png)
 
 ### Exponential smoothing
 
-In general, this is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value. However, see the table below for other specific recommendations.
+Dit is in het algemeen de aanbevolen optie om mee te beginnen. Deze optie verwijdert ruis het sterkst en past de laatste waarde aan. Zie wel de tabel hieronder voor andere, specifieke aanbevelingen.
 
 ### Average smoothing
 
@@ -18,27 +18,27 @@ This option works similar to back smoothing that was previously implemented on c
 
 ### No Smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Gebruik deze optie alleen als je CGM-gegevens al goed vloeiend gemaakt worden door je ontvanger-app, voordat ze naar **AAPS** gaan.
 
 ### Unscented Kalman Filter (UKF)
 
-This option uses a statistical model to continuously estimate your true glucose value and its rate of change from the incoming (possibly noisy) readings, automatically adapting to how noisy your sensor currently is. It also detects and rejects sudden outlier readings. It is a more advanced alternative to Exponential and Average smoothing, useful if you want the smoothing to adjust itself to your sensor's changing noise level rather than using a fixed method.
+Deze optie gebruikt een statistisch model. Het schat steeds je echte glucosewaarde en hoe snel die verandert, op basis van de binnenkomende (mogelijk onrustige) metingen. Het past zich vanzelf aan aan hoeveel ruis je sensor op dat moment geeft. Het herkent ook plotselinge uitschieters en negeert die. Het is een meer geavanceerd alternatief voor Exponentiëel en Gemiddeld vloeiend maken. Het is handig als je wilt dat het vloeiend maken zich zelf aanpast aan de wisselende ruis van je sensor, in plaats van een vaste methode te gebruiken.
 
 (smoothing-xdrip-dexcom-g6)=
 
 ## Suggestions to use smoothing
 
-You can also change the smoothing method automatically, for example depending on the sensor age, with the **Change smoothing** [Automation action](#automations-automation-action).
+Je kunt de methode voor vloeiend maken ook automatisch wijzigen, bijvoorbeeld afhankelijk van de leeftijd van de sensor, met de [Automatisering-actie](#automations-automation-action) **Vloeiend maken wijzigen**.
 
-|               | Exponential |  Average  | No Smoothing |
-| ------------- |:-----------:|:---------:|:------------:|
-| G5/G6/ONE     |  If noisy   |           | Recommended  |
-| G7/ONE+/Stelo |  If noisy   | If stable |              |
+|               | Exponential |   Average   | No Smoothing |
+| ------------- |:-----------:|:-----------:|:------------:|
+| G5/G6/ONE     |  If noisy   |             | Recommended  |
+| G7/ONE+/Stelo |  If noisy   | Als stabiel |              |
 
-Libre sensors are noisy and can require smoothing. When using xDrip direct connection, or the patched app data source (receiving from another app, Juggluco included), [smoothing is already done inside the app](#libre2-value-smoothing-raw-values).
+Libre-sensoren geven veel ruis en moeten soms vloeiend gemaakt worden. Bij xDrip direct connection, of bij de gegevensbron patched app (ontvangen van een andere app, ook Juggluco), [wordt het vloeiend maken al in de app gedaan](#libre2-value-smoothing-raw-values).
 
-| Sensor / Data source | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
-| -------------------- |:--------:|:------------:|:------------:|:-----------------:|
-| Libre 1/14 days/Pro  |   N.A.   |     N.A.     |   Average    |       N.A.        |
-| Libre 2/2+ (EU)      | Average  |     None     |   Average    |       None        |
-| Libre 2/2+/3/3+      | Average  |     N.A.     |     N.A.     |       None        |
+| Sensor / gegevensbron | Juggluco | xDrip direct | xDrip bridge | xDrip patched app |
+| --------------------- |:--------:|:------------:|:------------:|:-----------------:|
+| Libre 1/14 days/Pro   |  N.v.t.  |    N.v.t.    |   Average    |      N.v.t.       |
+| Libre 2/2+ (EU)       | Average  |     None     |   Average    |       None        |
+| Libre 2/2+/3/3+       | Average  |    N.v.t.    |    N.v.t.    |       None        |
