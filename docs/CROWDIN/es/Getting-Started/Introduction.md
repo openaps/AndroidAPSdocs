@@ -252,7 +252,7 @@ Si sientes que tu equipo no te apoya para hacer lazo con **AAPS**, estos argumen
 
 a) El sistema **AAPS** ha sido diseñado POR pacientes y sus cuidadores. Ha sido diseñado sobre todo para la seguridad, pero también basándose en una experiencia profunda de los pacientes. Hay muchos miles de usuarios de **AAPS** en todo el mundo. Por eso es probable que haya otros pacientes en tu clínica que usan un lazo OS-AID (lo sepan los médicos o no).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
+b) Una guía reciente, revisada por expertos y publicada en la revista médica internacional líder [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_), ha confirmado que los lazos OS-AID son **seguros** y **eficaces para mejorar el control de la diabetes**, incluido el tiempo en rango. Revistas líderes como [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) publican con regularidad artículos que destacan el progreso de la comunidad de lazo OS-AID.
 
 c) Empezar con **AAPS** supone un paso _gradual_ desde la bomba en lazo «abierto», pasando por la suspensión por glucosa baja, hasta el lazo «cerrado» híbrido, completando una serie de objetivos. Por eso hay un programa estructurado: el usuario tiene que demostrar un nivel de competencia en cada etapa y ajustar sus configuraciones básicas (basal, ISF e ICR) antes de poder cerrar el lazo.
 
@@ -264,7 +264,7 @@ f) Si tu equipo sigue muy en contra, dale a tu médico copias impresas de los ar
 
 #### Apoyo de otros médicos al lazo OS-AID
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+El artículo publicado en [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (codirigido por King’s y el Guy’s and St Thomas’ NHS Foundation Trust, y codirigido por el Dr. Sufyan Hussain, diabetólogo consultor y profesor titular honorario del King’s en Londres) aporta:
 
 a) **Garantía** para los profesionales de que los sistemas de páncreas artificial OS-AID / de código abierto son una opción de «tratamiento seguro y eficaz» para la diabetes tipo 1, con orientación sobre recomendaciones, conversaciones, apoyo y documentación;
 
