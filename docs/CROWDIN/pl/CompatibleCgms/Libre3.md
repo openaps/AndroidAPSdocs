@@ -44,11 +44,11 @@ Wartości glukozy odbiera aplikacja xDrip na smartfonie.
 
 ### Krok 3: Uruchomienie sensora w xDrip
 
-W xDrip uruchom sensor przez „Start Sensor” i „not today”. Nie musisz przykładać telefonu do sensora. W rzeczywistości „Start Sensor” nie uruchamia fizycznie żadnego sensora Libre 3 i w żadnym wypadku nie komunikuje się z nim. To tylko informuje xDrip, że nowy sensor dostarcza wartości glukozy. Jeśli masz, wpisz dwa pomiary z krwi (z palca) do pierwszej kalibracji. Teraz wartości glukozy powinny pojawiać się w xDrip co 5 minut. Pominięte wartości, np. gdy byłeś za daleko od telefonu, nie zostaną uzupełnione później.
+W xDrip uruchom sensor przez „Start Sensor” i „not today”. Nie musisz przykładać telefonu do sensora. W rzeczywistości „Start Sensor” nie uruchamia fizycznie żadnego sensora Libre 3 i w żadnym wypadku nie komunikuje się z nim. To tylko informuje xDrip, że nowy sensor dostarcza wartości glukozy. If available, enter two blood-measured values for the initial calibration. Teraz wartości glukozy powinny pojawiać się w xDrip co 5 minut. Pominięte wartości, np. gdy byłeś za daleko od telefonu, nie zostaną uzupełnione później.
 
 Jeśli nadal nie ma danych, poczekaj co najmniej 15–20 minut.
 
-Po wymianie sensora xDrip automatycznie wykryje nowy sensor i usunie wszystkie dane kalibracji. Po aktywacji możesz sprawdzić glikemię pomiarem z palca i wykonać nową pierwszą kalibrację.
+Po wymianie sensora xDrip automatycznie wykryje nowy sensor i usunie wszystkie dane kalibracji. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Krok 4: Konfiguracja AAPS
 
