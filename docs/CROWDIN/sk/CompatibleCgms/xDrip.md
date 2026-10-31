@@ -99,7 +99,7 @@ Postupujte podľa pokynov:
 #### Výmena vysielača
 
 - Vypnite pôvodný prijímač Dexcom (ak ho používate) a nezapínajte ho, kým xDrip nezobrazuje hodnoty.
-- Odstráňte zariadenie v xDrip (System Status → Forget Device) A AJ v nastaveniach Bluetooth v smartfóne (zobrazuje sa ako Dexcom?? , kde ?? sú posledné dve číslice sériového čísla vysielača).
+- Forget the device in xDrip (System Status → Forget Device) AND in the smartphone's Bluetooth settings (shown as DexcomXX where XX are the last two digits of the transmitter serial number).
 - Starý vysielač držte mimo dosahu Bluetooth, aby sa znova nepripojil.
 - Potom postupujte podľa návodu [Spustenie vysielača G6 alebo ONE](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
