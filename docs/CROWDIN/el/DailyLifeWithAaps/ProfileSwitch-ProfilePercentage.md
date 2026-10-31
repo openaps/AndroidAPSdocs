@@ -1,178 +1,178 @@
-# Profile switch & Profile Percentage
+# Αλλαγή προφίλ και ποσοστό προφίλ
 
-This section will explain what is a **Profile Switch** and **Profile Percentage**. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
+Αυτή η ενότητα εξηγεί τι είναι η **Αλλαγή Προφίλ** και το **Ποσοστό προφίλ**. Μπορείτε να μάθετε πώς δημιουργείτε ένα **Προφίλ** στη σελίδα [Το προφίλ σας στο AAPS](#your-aaps-profile-create-and-edit-profiles).
 
-When first embarking on your **AAPS** journey, you will need to create a **Profile**, understand how to action a **Profile Switch** and learn the impact of a **Profile Percentage** within **AAPS**. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
+Όταν ξεκινάτε με το **AAPS**, θα χρειαστεί να δημιουργήσετε ένα **Προφίλ**, να μάθετε πώς κάνετε μια **Αλλαγή Προφίλ** και να καταλάβετε την επίδραση ενός **Ποσοστού προφίλ** στο **AAPS**. Οι λειτουργίες της **Αλλαγής Προφίλ** ή του **Ποσοστού προφίλ** μπορεί να είναι ιδιαίτερα χρήσιμες για:
 
-- the Menstrual Cycle - a percentage adjustment within a **Profile** can be set up in **Automations** in order to allow **AAPS** to accommodate for different stages of the hormone cycle and with predicted insulin resistance.
+- Έμμηνος κύκλος - μια προσαρμογή με ποσοστό στο **Προφίλ** μπορεί να ρυθμιστεί στους **Αυτοματισμούς**, ώστε το **AAPS** να προσαρμόζεται στις διάφορες φάσεις του ορμονικού κύκλου και στην αναμενόμενη αντίσταση στην ινσουλίνη.
 
-- Exercise - a percentage adjustment within a **Profile** can be set up in **Automations** for exercise in order to reduce basal intake.
+- Άσκηση - μια προσαρμογή με ποσοστό στο **Προφίλ** μπορεί να ρυθμιστεί στους **Αυτοματισμούς** για την άσκηση, ώστε να μειωθεί ο βασικός ρυθμός.
 
-- Night or pattern shift workers - a time shift in **Profile** can be set up for pattern shift workers by altering the number of hours in the **Profile** to how much later/earlier the user will go to bed or wake up.
+- Νυχτερινή εργασία ή εργασία σε βάρδιες - μια χρονική μετατόπιση στο **Προφίλ** μπορεί να ρυθμιστεί για όσους δουλεύουν σε βάρδιες: ορίζετε στο **Προφίλ** πόσες ώρες αργότερα/νωρίτερα θα πάει ο χρήστης για ύπνο ή θα ξυπνήσει.
 
-Why use a **Profile Percentage** rather than a temporary basal adjustment? To be more effective in its application a **Profile Percentage** applies a proportionate reduction or increase across: basal, ISF and I:C. This ensures a balanced approach is calculated by **AAPS** when administering the user’s insulin intake. Little benefit can be gained in a user’s **Profile** in **AAPS** by a basal reduction if the algorithm continues to deliver the same ratios for ISF and I:C.
+Γιατί να χρησιμοποιήσετε **Ποσοστό προφίλ** και όχι μια προσωρινή αλλαγή του βασικού ρυθμού; Για να είναι πιο αποτελεσματικό, το **Ποσοστό προφίλ** μειώνει ή αυξάνει αναλογικά: τον βασικό ρυθμό, το ISF και το I:C. Έτσι το **AAPS** υπολογίζει με ισορροπημένο τρόπο την ινσουλίνη που χορηγεί στον χρήστη. Μια μείωση μόνο του βασικού ρυθμού στο **Προφίλ** του χρήστη στο **AAPS** βοηθά λίγο, αν ο αλγόριθμος συνεχίζει να χρησιμοποιεί τους ίδιους λόγους ISF και I:C.
 
 (ProfileSwitch-change-percentage)=
 
-## Change the Profile Percentage from the main screen
+## Αλλαγή του ποσοστού προφίλ από την κύρια οθόνη
 
-You need at least one saved **Profile**. A **Profile Percentage** is always applied through a **Profile Switch**: you activate a **Profile** again, this time with a percentage.
+Χρειάζεστε τουλάχιστον ένα αποθηκευμένο **Προφίλ**. Ένα **Ποσοστό προφίλ** εφαρμόζεται πάντα μέσω μιας **Αλλαγής Προφίλ**: ενεργοποιείτε ξανά ένα **Προφίλ**, αυτή τη φορά με ποσοστό.
 
-```{admonition} Coming from AAPS 3? :class: note A long press on the profile name no longer opens the profile switch dialog. **Tap** the profile name, then tap the round **▶** button at the bottom right: it opens the same settings (percentage, duration, Activity temp target).
+```{admonition} Έρχεστε από το AAPS 3; :class: note Το παρατεταμένο πάτημα στο όνομα του προφίλ δεν ανοίγει πια τον διάλογο αλλαγής προφίλ. **Πατήστε** το όνομα του προφίλ και μετά πατήστε το στρογγυλό κουμπί **▶** κάτω δεξιά: ανοίγει τις ίδιες ρυθμίσεις (ποσοστό, διάρκεια, προσωρινός στόχος Άσκηση).
 
-    <br />1. On the main screen, **tap the profile name** (next to the star icon). The [Profile screen](#ProfileSwitch-manage-v4) opens on the card of the running **Profile**, marked **ACTIVE**.
+    <br />1. Στην κύρια οθόνη, **πατήστε το όνομα του προφίλ** (δίπλα στο εικονίδιο με το αστέρι). Η [οθόνη Προφίλ](#ProfileSwitch-manage-v4) ανοίγει στην κάρτα του **Προφίλ** που τρέχει, με την ένδειξη **ΕΝΕΡΓΟ**.
     
-       ![Tap the profile name on the main screen to open the Profile screen](../images/ProfileSwitch2.png)
+       ![Πατήστε το όνομα του προφίλ στην κύρια οθόνη για να ανοίξει η οθόνη Προφίλ](../images/ProfileSwitch2.png)
     
-    2. To keep the same **Profile**, leave the **ACTIVE** card selected. To change **Profile** at the same time, swipe to another card.
-    3. Tap the round **▶** button (**Activate**) at the bottom right. The **Activate** screen opens.
-    4. Set the **Percentage** with **−** / **+** (steps of 5 %), or type it in (30 to 250 %). The field always starts at **100 %**: it does not show the percentage that is running now. For example, enter **80** for 20 % less insulin, or **120** for 20 % more.
-    5. Set the **Duration** in minutes:
-       * **0** keeps the new percentage until you make another **Profile Switch**;
-       * any other value ends the switch after that time, and **AAPS** goes back to the **Profile** that was running before.
+    2. Για να κρατήσετε το ίδιο **Προφίλ**, αφήστε επιλεγμένη την κάρτα **ΕΝΕΡΓΟ**. Για να αλλάξετε και **Προφίλ** ταυτόχρονα, σύρετε σε άλλη κάρτα.
+    3. Πατήστε το στρογγυλό κουμπί **▶** (**Ενεργοποίηση**) κάτω δεξιά. Ανοίγει η οθόνη **Ενεργοποίηση**.
+    4. Ορίστε το **Ποσοστό** με **−** / **+** (βήματα του 5%) ή πληκτρολογήστε το (30 έως 250%). Το πεδίο ξεκινά πάντα από **100%**: δεν δείχνει το ποσοστό που τρέχει τώρα. Για παράδειγμα, εισάγετε **80** για 20% λιγότερη ινσουλίνη ή **120** για 20% περισσότερη.
+    5. Ορίστε τη **Διάρκεια** σε λεπτά:
+       * το **0** κρατά το νέο ποσοστό μέχρι να κάνετε άλλη **Αλλαγή Προφίλ**·
+       * κάθε άλλη τιμή τερματίζει την αλλαγή μετά από αυτόν τον χρόνο και το **AAPS** επιστρέφει στο **Προφίλ** που έτρεχε πριν.
     
-       ![The Activate screen set to 80 % for 60 minutes](../images/v4/Profiles/profile_activate_percentage.png)
+       ![Η οθόνη Ενεργοποίηση ρυθμισμένη στο 80% για 60 λεπτά](../images/v4/Profiles/profile_activate_percentage.png)
     
-    6. Tap **▶ Activate** at the bottom of the screen. Check the summary in the **Profile switch** dialog and tap **OK**.
+    6. Πατήστε **▶ Ενεργοποίηση** στο κάτω μέρος της οθόνης. Ελέγξτε τη σύνοψη στον διάλογο **Αλλαγή Προφίλ** και πατήστε **OK**.
     
-       ![The confirmation dialog — profile, percentage and duration](../images/v4/Profiles/profile_activate_confirm.png)
+       ![Ο διάλογος επιβεβαίωσης — προφίλ, ποσοστό και διάρκεια](../images/v4/Profiles/profile_activate_confirm.png)
     
-    Back on the main screen, the profile name shows the percentage and the remaining time, for example *Normal (80%) (59')*, and turns yellow while a switch with a duration is running. A star marks the switch on the glucose graph. See [the main screen](#aaps-screens-profile--target).
+    Πίσω στην κύρια οθόνη, το όνομα του προφίλ δείχνει το ποσοστό και τον χρόνο που απομένει, για παράδειγμα *Normal (80%) (59')*, και γίνεται κίτρινο όσο τρέχει μια αλλαγή με διάρκεια. Ένα αστέρι σημειώνει την αλλαγή στο γράφημα γλυκόζης. Δείτε [την κύρια οθόνη](#aaps-screens-profile--target).
     
-    ![The main screen while an 80 % profile switch is running](../images/v4/Profiles/profile_switch_running.png)
+    ![Η κύρια οθόνη όσο τρέχει μια αλλαγή προφίλ στο 80%](../images/v4/Profiles/profile_switch_running.png)
     
-    To **go back to 100 %** before the end, repeat the steps and keep **Percentage** at 100 and **Duration** at 0.
+    Για να **επιστρέψετε στο 100%** πριν το τέλος, επαναλάβετε τα βήματα και αφήστε το **Ποσοστό** στο 100 και τη **Διάρκεια** στο 0.
     
-    ```{admonition} One-tap percentages
+    ```{admonition} Ποσοστά με ένα πάτημα
     :class: tip
-    If you often use the same percentage (sport, illness), add a [Profile shortcut](#profile-shortcuts) to the Quick Launch bar, or create a [scene](Scenes.md). Both apply a profile with a preset percentage and duration in one tap.
+    Αν χρησιμοποιείτε συχνά το ίδιο ποσοστό (άσκηση, ασθένεια), προσθέστε μια [συντόμευση προφίλ](#profile-shortcuts) στη γραμμή QuickLaunch ή δημιουργήστε ένα [σενάριο](Scenes.md). Και τα δύο εφαρμόζουν ένα προφίλ με προκαθορισμένο ποσοστό και διάρκεια με ένα πάτημα.
     
 
 (ProfileSwitch-manage-v4)=
 
-## Managing and activating profiles (Manage → Profile)
+## Διαχείριση και ενεργοποίηση προφίλ (Διαχείριση → Προφίλ)
 
-In **AAPS** v4 profiles are managed and activated from the **Manage** screen (bottom navigation) → **Profile** (*“Manage and activate profiles”*).
+Στο **AAPS** v4 τα προφίλ τα διαχειρίζεστε και τα ενεργοποιείτε από την οθόνη **Διαχείριση** (κάτω πλοήγηση) → **Προφίλ** (*«Διαχείριση και ενεργοποίηση προφίλ»*).
 
-The Profile screen shows your profiles as a **swipeable card carousel**. The card of the running profile is marked **ACTIVE** and shows its total daily basal (e.g. *∑ 30.15 U*). Below the selected card you see that profile's details — **Units**, **Insulin** type, and the **IC**, **ISF**, **basal** and **target** schedules with graphs.
+Η οθόνη Προφίλ δείχνει τα προφίλ σας ως **καρουζέλ καρτών που σύρετε**. Η κάρτα του προφίλ που τρέχει έχει την ένδειξη **ΕΝΕΡΓΟ** και δείχνει τον συνολικό ημερήσιο βασικό ρυθμό του (π.χ. *∑ 30,15 U*). Κάτω από την επιλεγμένη κάρτα βλέπετε τις λεπτομέρειες του προφίλ — **Μονάδες**, τύπο **Ινσουλίνης** και τα προγράμματα **IC**, **ISF**, **βασικού ρυθμού** και **στόχου** με γραφήματα.
 
-![The Profile screen — profile carousel, details and action bar](../images/v4/Profiles/profile_manage.png)
+![Η οθόνη Προφίλ — καρουζέλ προφίλ, λεπτομέρειες και γραμμή ενεργειών](../images/v4/Profiles/profile_manage.png)
 
-The buttons at the bottom act on the **selected** profile: **➕ Add**, **✏️ Edit**, **⧉ Clone** and **‘️ Delete**, and the round **▶ Activate** button on the right. For how to fill in the four schedules in the editor (IC / ISF / BAS / TARG), see [Create and edit Profiles](#your-aaps-profile-create-and-edit-profiles).
+Τα κουμπιά στο κάτω μέρος ενεργούν στο **επιλεγμένο** προφίλ: **➕ Προσθήκη**, **✏️ Επεξεργασία**, **⧉ Κλώνος** και **‘️ Διαγραφή**, και το στρογγυλό κουμπί **▶ Ενεργοποίηση** δεξιά. Για το πώς συμπληρώνετε τα τέσσερα προγράμματα στον επεξεργαστή (IC / ISF / BAS / TARG), δείτε [Δημιουργία και επεξεργασία προφίλ](#your-aaps-profile-create-and-edit-profiles).
 
-**⧉ Clone** uses the two-squares icon often used for *copy*, but there is nothing to paste: it makes the duplicate in one step. Confirm *Clone profile "Normal"?* and a new profile named *Normal copy* is added at the end of the carousel and selected, ready for **✏️ Edit** (where you can also rename it). This is not the same as cloning a past **Profile Switch** from the Treatments history, which creates a new profile *with the percentage and time shift applied*. See [Keep a profile switch for later use](#ProfileSwitch-keep-for-later).
+Το **⧉ Κλώνος** χρησιμοποιεί το εικονίδιο με τα δύο τετράγωνα, που συχνά σημαίνει *αντιγραφή*, αλλά δεν υπάρχει επικόλληση: δημιουργεί το αντίγραφο με ένα βήμα. Επιβεβαιώστε το *Κλωνοποίηση του προφίλ "Normal";* και ένα νέο προφίλ με όνομα *Normal αντίγραφο* προστίθεται στο τέλος του καρουζέλ και επιλέγεται, έτοιμο για **✏️ Επεξεργασία** (όπου μπορείτε και να το μετονομάσετε). Αυτό δεν είναι το ίδιο με την κλωνοποίηση μιας παλιάς **Αλλαγής Προφίλ** από το Ιστορικό θεραπειών, που δημιουργεί ένα νέο προφίλ *με εφαρμοσμένα το ποσοστό και τη χρονική μετατόπιση*. Δείτε [Κρατήστε μια αλλαγή προφίλ για μελλοντική χρήση](#ProfileSwitch-keep-for-later).
 
-(ProfileSwitch-read-only-mode)= **Only the ▶ Activate button?** Your settings are protected, so the screen opens read-only. Tap the **✏️ pencil** in the top bar and enter your settings password. Δείτε [Η προστασία ρυθμίσεων κλειδώνει πλέον και τις οθόνες διαχείρισης](#v4changes-read-only-management).
+(ProfileSwitch-read-only-mode)= **Μόνο το κουμπί ▶ Ενεργοποίηση;** Οι ρυθμίσεις σας είναι προστατευμένες, γι' αυτό η οθόνη ανοίγει μόνο για ανάγνωση. Πατήστε το **✏️ μολύβι** στην επάνω γραμμή και εισάγετε τον κωδικό των ρυθμίσεών σας. Δείτε [Η προστασία ρυθμίσεων κλειδώνει πλέον και τις οθόνες διαχείρισης](#v4changes-read-only-management).
 
-### Reordering profiles
+### Αλλαγή σειράς των προφίλ
 
-If you have more than one profile you can choose their order in the carousel: tap the **Reorder** icon (⇅, two arrows pointing up and down) in the top bar. The page indicator is replaced by **◀ / ▶ move buttons** with a *position / total* readout — step the centred card earlier or later, then confirm with **✓** (or discard with **✕**). The new order is saved once, when you confirm.
+Αν έχετε περισσότερα από ένα προφίλ, μπορείτε να επιλέξετε τη σειρά τους στο καρουζέλ: πατήστε το εικονίδιο **Αναδιάταξη** (⇅, δύο βέλη προς τα πάνω και προς τα κάτω) στην επάνω γραμμή. Η ένδειξη σελίδας αντικαθίσταται από **κουμπιά μετακίνησης ◀ / ▶** με ένδειξη *θέση / σύνολο* — μετακινήστε την κεντρική κάρτα πιο μπροστά ή πιο πίσω και επιβεβαιώστε με **✓** (ή ακυρώστε με **✕**). Η νέα σειρά αποθηκεύεται μία φορά, όταν επιβεβαιώσετε.
 
-![Reorder mode — move buttons and position readout](../images/v4/Profiles/profile_reorder.png)
+![Λειτουργία αναδιάταξης — κουμπιά μετακίνησης και ένδειξη θέσης](../images/v4/Profiles/profile_reorder.png)
 
-### Activating a profile
+### Ενεργοποίηση ενός προφίλ
 
-Select a profile and tap **▶ Activate**. The **Activate** screen lets you tailor how the **Profile Switch** is applied:
+Επιλέξτε ένα προφίλ και πατήστε **▶ Ενεργοποίηση**. Η οθόνη **Ενεργοποίηση** σας επιτρέπει να ορίσετε πώς θα εφαρμοστεί η **Αλλαγή Προφίλ**:
 
-![The Activate screen — percentage, duration, time shift, time](../images/v4/Profiles/profile_activate.png)
+![Η οθόνη Ενεργοποίηση — ποσοστό, διάρκεια, χρονική μετατόπιση, χρόνος](../images/v4/Profiles/profile_activate.png)
 
-- **Percentage** (30–250 %, starts at 100 % every time) — scale the whole profile. 100 % uses it as-is; for example 70 % reduces basal and the calculated insulin dose (both meal boluses and corrections) by 30 %. It does not change your glucose targets or carb absorption. See [Profile Percentage](#profile-percentage) for the full effect.
-- **Duration** (0–10080 minutes, that is up to 7 days) — how long the switch lasts. **0 = indefinite** (until you switch again); a non-zero value reverts to the previous profile when it ends.
-- **Temporary target / Activity** — appears only when you set a **Duration** and a **Percentage** below 100 %. Switch it on to also start an [Activity temp target](#TempTargets-activity-temp-target) for the same duration, as you would before exercise.
-- **Time shift** — shows *0h*; tap **Change** to move the schedule forward or back by up to 23 hours (useful for shift work or travel). See [Time shift](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
-- **Reuse** — appears when the running switch has a percentage other than 100 % or a time shift, for example **Reuse 80% 0h**. Tap it to fill in the same percentage and time shift, for instance to prolong a switch that is about to end.
+- **Ποσοστό** (30–250%, ξεκινά κάθε φορά από 100%) — αλλάζει την κλίμακα όλου του προφίλ. Το 100% το χρησιμοποιεί όπως είναι· για παράδειγμα, το 70% μειώνει τον βασικό ρυθμό και την υπολογισμένη δόση ινσουλίνης (και τα bolus γευμάτων και τις διορθώσεις) κατά 30%. Δεν αλλάζει τους στόχους γλυκόζης ούτε την απορρόφηση υδατανθράκων. Δείτε [Ποσοστό προφίλ](#profile-percentage) για την πλήρη επίδραση.
+- **Διάρκεια** (0–10080 λεπτά, δηλαδή έως 7 ημέρες) — πόσο διαρκεί η αλλαγή. **0 = χωρίς λήξη** (μέχρι να κάνετε νέα αλλαγή)· μια τιμή διάφορη του μηδενός επιστρέφει στο προηγούμενο προφίλ όταν λήξει.
+- **Προσωρινός στόχος / Άσκηση** — εμφανίζεται μόνο όταν ορίσετε **Διάρκεια** και **Ποσοστό** κάτω από 100%. Ενεργοποιήστε το για να ξεκινήσει επίσης ένας [προσωρινός στόχος Άσκηση](#TempTargets-activity-temp-target) για την ίδια διάρκεια, όπως θα κάνατε πριν από άσκηση.
+- **Χρονική μετατόπιση** — δείχνει *0h*· πατήστε **Αλλαγή** για να μετακινήσετε το πρόγραμμα μπροστά ή πίσω έως 23 ώρες (χρήσιμο για εργασία σε βάρδιες ή ταξίδια). Δείτε [Χρονική μετατόπιση](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile).
+- **Επαναχρησιμοποίηση** — εμφανίζεται όταν η αλλαγή που τρέχει έχει ποσοστό διαφορετικό από 100% ή χρονική μετατόπιση, για παράδειγμα **Επαναχρησιμοποίηση 80% 0h**. Πατήστε το για να συμπληρωθούν το ίδιο ποσοστό και η ίδια χρονική μετατόπιση, για παράδειγμα για να παρατείνετε μια αλλαγή που πρόκειται να λήξει.
     
-    ![The Reuse button while an 80 % switch is running](../images/v4/Profiles/profile_activate_reuse.png)
+    ![Το κουμπί Επαναχρησιμοποίηση όσο τρέχει μια αλλαγή στο 80%](../images/v4/Profiles/profile_activate_reuse.png)
 
-- **Time** — *Now* by default. You can pick another time, up to 24 hours before or after now. A switch set in the future starts at that time; an Activity temp target set with it then also starts at that time.
+- **Χρόνος** — από προεπιλογή *Τώρα*. Μπορείτε να επιλέξετε άλλη ώρα, έως 24 ώρες πριν ή μετά από τώρα. Μια αλλαγή με ώρα στο μέλλον ξεκινά εκείνη την ώρα· ένας προσωρινός στόχος Άσκηση που ορίστηκε μαζί της ξεκινά επίσης εκείνη την ώρα.
     
-    ![Choosing the time of a profile switch](../images/v4/Profiles/profile_activate_time_picker.png)
+    ![Επιλογή της ώρας μιας αλλαγής προφίλ](../images/v4/Profiles/profile_activate_time_picker.png)
 
-- **Notes** — only shown if [Show notes in dialogs](#Preferences-show-notes-field-in-treatments-dialogs) is on.
+- **Σημειώσεις** — εμφανίζεται μόνο αν είναι ενεργό το [Εμφάνιση σημειώσεων στους διαλόγους](#Preferences-show-notes-field-in-treatments-dialogs).
 
-If the basal rates at the chosen percentage are not compatible with your pump, a warning appears at the top and **▶ Activate** stays disabled: choose another percentage.
+Αν οι βασικοί ρυθμοί στο επιλεγμένο ποσοστό δεν είναι συμβατοί με την αντλία σας, εμφανίζεται μια προειδοποίηση στην κορυφή και το **▶ Ενεργοποίηση** μένει ανενεργό: επιλέξτε άλλο ποσοστό.
 
-Tap **▶ Activate**, then **OK** in the confirmation dialog. The running profile then carries the **ACTIVE** badge on its card.
+Πατήστε **▶ Ενεργοποίηση** και μετά **OK** στον διάλογο επιβεβαίωσης. Το προφίλ που τρέχει έχει τότε την ένδειξη **ΕΝΕΡΓΟ** στην κάρτα του.
 
-```{admonition} Your pump may round the basal rates :class: note Each pump can only give basal rates in its own steps (for example 0.05 U/h), so it rounds the rates of your **Profile**. **AAPS** then uses the basal the pump really gives, so IOB and TDD stay correct. If the pump gives a little more or less insulin per day than your **Profile**, the notice *"Basal profile in pump updated"* tells you how much, for example *"it gives 10.00 U per day instead of 10.12 U"*.
+```{admonition} Η αντλία σας μπορεί να στρογγυλοποιεί τους βασικούς ρυθμούς :class: note Κάθε αντλία μπορεί να δίνει βασικούς ρυθμούς μόνο στα δικά της βήματα (για παράδειγμα 0,05 U/h), γι' αυτό στρογγυλοποιεί τους ρυθμούς του **Προφίλ** σας. Το **AAPS** χρησιμοποιεί τότε τον βασικό ρυθμό που δίνει πραγματικά η αντλία, ώστε το IOB και η TDD να μένουν σωστά. Αν η αντλία δίνει λίγο περισσότερη ή λιγότερη ινσουλίνη την ημέρα από το **Προφίλ** σας, η ειδοποίηση *«Το βασικό προφίλ στην αντλία ενημερώθηκε»* σας λέει πόση, για παράδειγμα *«δίνει 10,00 U την ημέρα αντί για 10,12 U»*.
 
-If the pump reports a basal that is far from your **Profile**, **AAPS** keeps the **Profile** basal and asks you to check the basal rates in the pump.
+Αν η αντλία αναφέρει βασικό ρυθμό που απέχει πολύ από το **Προφίλ** σας, το **AAPS** κρατά τον βασικό ρυθμό του **Προφίλ** και σας ζητά να ελέγξετε τους βασικούς ρυθμούς στην αντλία.
 
-    <br />```{admonition} Percentage and time shift make one profile go a long way
+    <br />```{admonition} Με ποσοστό και χρονική μετατόπιση ένα προφίλ αρκεί για πολλά
     :class: note
-    Rather than building many similar profiles, keep one base profile and apply it at a different **percentage** or **time shift** for recurring situations (illness, exercise, travel). This is exactly what [scenes](Scenes.md) automate.
+    Αντί να φτιάχνετε πολλά παρόμοια προφίλ, κρατήστε ένα βασικό προφίλ και εφαρμόστε το με διαφορετικό **ποσοστό** ή **χρονική μετατόπιση** για καταστάσεις που επαναλαμβάνονται (ασθένεια, άσκηση, ταξίδια). Αυτό ακριβώς αυτοματοποιούν τα [σενάρια](Scenes.md).
     
 
-A profile switch is not limited to this screen. The same switch can also be triggered from a **Wear OS watch**, a paired **client** (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)), a **[scene](Scenes.md)**, or an **Automation** rule.
+Μια αλλαγή προφίλ δεν γίνεται μόνο από αυτή την οθόνη. Η ίδια αλλαγή μπορεί να γίνει επίσης από ένα **ρολόι Wear OS**, έναν συζευγμένο **πελάτη** (δείτε [Έλεγχος Master ↔ Client](../RemoteFeatures/ClientMasterControl.md)), ένα **[σενάριο](Scenes.md)** ή έναν κανόνα **Αυτοματισμού**.
 
-## Profile Percentage
+## Ποσοστό προφίλ
 
-It is important that a user understands the essential features of a **Profile Percentage**. By applying a percentage increase or decrease to a **Profile Switch** this will apply in the same percentage to either raise or lower the user’s settings parameters as set within the **Profile**.
+Είναι σημαντικό ο χρήστης να καταλαβαίνει τα βασικά χαρακτηριστικά του **Ποσοστού προφίλ**. Όταν εφαρμόζετε μια αύξηση ή μείωση σε ποσοστό σε μια **Αλλαγή Προφίλ**, οι ρυθμίσεις του χρήστη στο **Προφίλ** αυξάνονται ή μειώνονται κατά το ίδιο ποσοστό.
 
-For example: a **Profile Switch** to 130% (means the user is 30% more insulin resistant) will instruct **AAPS** to
+Για παράδειγμα: μια **Αλλαγή Προφίλ** στο 130% (δηλαδή ο χρήστης έχει 30% περισσότερη αντίσταση στην ινσουλίνη) θα κάνει το **AAPS** να
 
-- **increase** the basal rate by 30%; 
-- **lower** the **ISF**: by dividing by 1.3;
-- **lower** the **I:C** by dividing by 1.3.
+- **αυξήσει** τον βασικό ρυθμό κατά 30%· 
+- **μειώσει** το **ISF**: διαιρώντας με 1,3·
+- **μειώσει** το **I:C** διαιρώντας με 1,3.
 
-Remember lowering the **ISF** or **I:C** means a stronger ratio and more insulin being administered. This fact can be easily overlooked by new users to **AAPS**.
+Θυμηθείτε: χαμηλότερο **ISF** ή **I:C** σημαίνει ισχυρότερο λόγο και περισσότερη ινσουλίνη. Οι νέοι χρήστες του **AAPS** το ξεχνούν εύκολα.
 
-Once selected, **AAPS** readjusts the default basal rate, and **AAPS** (open or closed) will continue to work on top of the selected percentage **Profile**.
+Μόλις το επιλέξετε, το **AAPS** προσαρμόζει ξανά τον βασικό ρυθμό και το **AAPS** (ανοιχτό ή κλειστό κύκλωμα) συνεχίζει να δουλεύει με βάση το επιλεγμένο ποσοστό του **Προφίλ**.
 
-The effect of a **Profile** Percentage is summarized in the table below:
+Η επίδραση ενός ποσοστού **Προφίλ** φαίνεται στον παρακάτω πίνακα:
 
-| Profile Switch  
-Percentage |    Effect    |     I:C  
-g/U     | example  
+| Αλλαγή Προφίλ  
+Ποσοστό |   Επίδραση   |     I:C  
+g/U     | παράδειγμα  
 15g |          ISF  
 mmol/L/U  
-mg/dL/U          | U to lower  
+mg/dL/U          | U για μείωση  
 2mmol/L  
 40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:-------------:|:------------------------------------------:|:------------------------------:|
-|             90%             |    Weaker    | 5/0.9  
-=**5.55** |     2.7 U     | 2.2/0.9  
-=**2.4**  
+|:-----------------------:|:------------:|:-----------------:|:----------------:|:------------------------------------------:|:--------------------------------:|
+|           90%           | Πιο ασθενές  | 5/0,9  
+=**5,55** |      2,7 U       | 2,2/0,9  
+=**2,4**  
   
-40/0.9  
-=**44.4** |             0.8 U              |
-|          **100%**           | **Standard** |       **5**       |    **3 U**    |                **2.2  
-40**                |           **0.9** U            |
-|            130%             |   Stronger   | 5/1.3  
-=**3.85** |     3.9 U     | 2.2/1.3  
-=**1.7**  
+40/0,9  
+=**44,4** |              0,8 U               |
+|        **100%**         | **Κανονικό** |       **5**       |     **3 U**      |                **2,2  
+40**                |            **0,9** U             |
+|          130%           |  Πιο ισχυρό  | 5/1,3  
+=**3,85** |      3,9 U       | 2,2/1,3  
+=**1,7**  
   
-40/1.3  
-=**30.8** |             1.2 U              |
+40/1,3  
+=**30,8** |              1,2 U               |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
-## Time shift of the Circadian Percentage Profile
+## Χρονική μετατόπιση του κιρκαδικού ποσοστιαίου προφίλ
 
-A ‘time shift’ within a user’s **Profile** feature will move the user’s **Profile’s** settings around the day-to-day clock (‘circadian’) to the desired number of hours entered. This can be helpful for:
+Μια «χρονική μετατόπιση» στο **Προφίλ** του χρήστη μετακινεί τις ρυθμίσεις του **Προφίλ** μέσα στο 24ωρο («κιρκαδικό») ρολόι κατά τον αριθμό ωρών που εισάγετε. Αυτό μπορεί να βοηθήσει:
 
-- **night shift or pattern workers**: work night shifts by altering the number of hours to how much later/earlier in the **Profile** the user will go to bed or wake up; 
-- **users changing time zones during travelling**; or
-- **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
+- **όσους δουλεύουν νυχτερινές βάρδιες ή σε βάρδιες**: για νυχτερινές βάρδιες ορίζετε στο **Προφίλ** πόσες ώρες αργότερα/νωρίτερα θα πάει ο χρήστης για ύπνο ή θα ξυπνήσει· 
+- **όσους αλλάζουν ζώνη ώρας σε ταξίδια**· ή
+- **παιδιά με διαβήτη τύπου 1**: που έχουν σταθερό πρόγραμμα ύπνου και η αντίσταση στην ινσουλίνη τους έχει ρυθμιστεί στο **Προφίλ**. Αν για κάποιο λόγο το παιδί αναμένεται να κοιμηθεί αργότερα, ο φροντιστής μπορεί να εφαρμόσει μια «χρονική μετατόπιση» στο **Προφίλ** του παιδιού, ώστε το **AAPS** να αντιδράσει στην αντίσταση στην ινσουλίνη στο χρονικό διάστημα που ορίζει ο χρήστης.
 
-It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. This time must be shifted by x hours. So please be mindful of the directions as described in the following example:
+Το ερώτημα είναι πάντα: οι ρυθμίσεις ποιας ώρας του **Προφίλ** θα αντικαταστήσουν τις ρυθμίσεις της τρέχουσας ώρας. Αυτή η ώρα πρέπει να μετατοπιστεί κατά x ώρες. Γι' αυτό προσέξτε την κατεύθυνση, όπως περιγράφεται στο παρακάτω παράδειγμα:
 
-- Current time: 12:00
-- **Positive** time shift 
+- Τρέχουσα ώρα: 12:00
+- **Θετική** χρονική μετατόπιση 
     - 2:00 **+10 h** -> 12:00
-    - Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-- **Negative** time shift 
+    - Θα χρησιμοποιηθούν ρυθμίσεις από τις 2:00 αντί για τις ρυθμίσεις που χρησιμοποιούνται κανονικά στις 12:00 λόγω της θετικής χρονικής μετατόπισης.
+- **Αρνητική** χρονική μετατόπιση 
     - 22:00 **-10 h** -> 12:00
-    - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    - Θα χρησιμοποιηθούν οι ρυθμίσεις από τις 22:00 (10 μ.μ.) αντί των ρυθμίσεων που χρησιμοποιούνται κανονικά στις 12:00 λόγω της αρνητικής χρονικής μετατόπισης.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Κατεύθυνση της χρονικής μετατόπισης στην αλλαγή προφίλ](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.
+Αυτός ο μηχανισμός, που κρατά στιγμιότυπα του **Προφίλ**, επιτρέπει πολύ πιο ακριβή υπολογισμό του παρελθόντος και τη δυνατότητα να παρακολουθείτε τις αλλαγές του **Προφίλ**.
 
 (ProfileSwitch-keep-for-later)=
 
-## Keep a profile switch for later use
+## Κρατήστε μια αλλαγή προφίλ για μελλοντική χρήση
 
-Once you have performed a profile switch with percentage and/or timeshift, you can make a copy of this temporary profile into a new profile.
+Αφού κάνετε μια αλλαγή προφίλ με ποσοστό ή/και χρονική μετατόπιση, μπορείτε να αντιγράψετε αυτό το προσωρινό προφίλ σε ένα νέο προφίλ.
 
-To do this, open the menu (☰) → **Treatments** and go to the **Profile switch** tab, see [Clone a Profile switch to a new Profile](#your-aaps-profile-clone-profile-switch).
+Για να το κάνετε, ανοίξτε το μενού (☰) → **Θεραπείες** και πηγαίνετε στην καρτέλα **Αλλαγή Προφίλ**, δείτε [Κλωνοποίηση μιας αλλαγής προφίλ σε νέο προφίλ](#your-aaps-profile-clone-profile-switch).
