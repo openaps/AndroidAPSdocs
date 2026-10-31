@@ -141,7 +141,8 @@ Wszystkie trzy będą Ci potrzebne, jeśli kiedyś zbudujesz AAPS w inny sposób
    Otwiera: <code class="aapsb-repoUrl"></code>
 
    Widzisz „Page not found” (404)? Najpierw sprawdź, czy jesteś zalogowany do github.com w tej przeglądarce: GitHub pokazuje 404 dla prywatnych repozytoriów, gdy nie jesteś zalogowany. W przeciwnym razie Twoja nazwa użytkownika lub nazwa repozytorium w kroku 1 nie pasuje do Twojego repozytorium: sprawdź je na github.com i wpisz je w kroku 1. Zamiast tego otworzyła się aplikacja GitHub? Dotknij „RUN WORKFLOW”, sprawdź wersję i wariant, a potem znowu dotknij „RUN WORKFLOW”. Jeśli aplikacja dalej pokazuje „Nothing to see here”, przeciągnij listę w dół, aby zobaczyć swoje budowanie.
-2. Jeśli pojawi się pytanie, kliknij zielony przycisk, aby włączyć workflow.
+2. If asked, click the green button to enable workflows.
+The list of workflows shows two entries: use "Build AAPS". Ignore "AAPS Builder": it holds the build steps and has no "Run workflow" button.
 3. Kliknij „Run workflow”, a potem zielony przycisk „Run workflow”. „latest” buduje najnowszą wersję AAPS. ***wskazówka:*** *możesz zbudować inną wersję, wpisując nazwę jej [tagu](https://github.com/nightscout/AndroidAPS/tags) zamiast „latest”*
 4. Poczekaj około 15–30 minut. Zielony znaczek oznacza, że budowanie jest gotowe.
 Chcesz dostać e-mail, gdy budowanie się skończy? GitHub wysyła e-mail tylko wtedy, gdy budowanie się nie uda. Aby dostać e-mail także po udanym budowaniu: na github.com otwórz swoje zdjęcie profilowe → Settings → Notifications → System → Actions i odznacz „Only notify for failed workflows”.
