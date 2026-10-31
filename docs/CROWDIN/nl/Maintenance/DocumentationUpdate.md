@@ -28,7 +28,7 @@
 
 ## Maart 2026
 
-- [Optie om te bouwen via de command-line toegevoegd](../SettingUpAaps/CLIBuild.md) @je-l
+- [Optie om te bouwen via de opdrachtregel toegevoegd](../SettingUpAaps/CLIBuild.md) @je-l
 - *Computer Build* hernoemd naar *Android Studio Build*. Bestandsnamen in URL's behouden.
 
 ## Januari 2025
@@ -198,7 +198,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 - Automatisering - waarschuwingen
 - [Autosens](#Open-APS-features-autosens) - korte uitleg
 - Alternatieven voor Careportal
-- Functie [Vertraagde bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - closed loop wordt uitgeschakeld
+- Functie [Vertraagde bolus](#Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - gesloten loop wordt uitgeschakeld
 - Nieuwe [Lokaal profiel plugin](../SettingUpAaps/ConfigBuilder.md)
 - Voorbeeldsetup - update Dexcom G6
 - [Versie 2.6.0](#Releasenotes-version-2-6-0) - grote nieuwe functies
@@ -254,7 +254,7 @@ De documentatie van AAPS 3.1 staat [hier](https://androidaps.readthedocs.io/en/3
 - [Beveiliging van Nightscout](#Nightscout-security-considerations)
 - [Tijdverschuiving van het profiel](#ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile) (meer details)
 - [Volgen op afstand](../RemoteFeatures/RemoteMonitoring.md)
-- [Wat is een closed loop systeem?](#Introduction-what-does-hybrid-closed-loop-mean)
+- [Wat is een gesloten loop-systeem?](#Introduction-what-does-hybrid-closed-loop-mean)
 
 ## Augustus 2019
 
