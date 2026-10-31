@@ -9,7 +9,7 @@ Update3_0.md
 UpdateAaps3204.md
 ```
 
-Please follow the instructions in the [update manual](UpdateToNewVersion) to update to a new version. 故障排除部分也涵盖了在**AAPS**更新手册页面上更新时遇到的最常见问题。
+Please follow the instructions in the [update manual](UpdateToNewVersion.md) to update to a new version. 故障排除部分也涵盖了在**AAPS**更新手册页面上更新时遇到的最常见问题。
 
 ```{admonition} Upgrading from AAPS v3?
 :class: tip
@@ -24,7 +24,7 @@ You will receive a notification like this when a new update is available:
 
 See [End of life](EndOfLife.md) for AAPS version end dates.
 
-**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This an effort to try to improve the safety for each **AAPS** user and the DIY community. 感谢您的理解。
+**Do not ignore the notification.** New versions of **AAPS** provide important safety fixes. Therefore, every **AAPS** user must update to the latest version as soon as possible. This is an effort to try to improve the safety for each **AAPS** user and the DIY community. 感谢您的理解。
 
 (maintenance-android-version-aaps-version)=
 
@@ -141,7 +141,7 @@ Full changelog: <https://github.com/nightscout/AndroidAPS/compare/3.4.2.6...4.0.
 - NSClientV3: Fix gap after reconnection @MilosKozak
 - Automation: Fix deserialization @MilosKozak
 - Equil: Fix battery report @MilosKozak
-- Cleanup worflow @vanelsberg
+- Cleanup workflow @vanelsberg
 - Equil: improve error recovery @MilosKozak
 - DanaRS: fix domestic pump communication @MilosKozak
 - Insight: Fix TBR sync @MilosKozak
@@ -168,7 +168,7 @@ Release date: 04-02-2026
 
 - Equil: Fix resistance for different models @hhfcvmars
 - Tidepool: Fix session @MilosKozak
-- Medtrum: Fix activation path by preveting double fill @MilosKozak
+- Medtrum: Fix activation path by preventing double fill @MilosKozak
 - COB: Fix COB calculation (covers dangerous edge case) @MilosKozak
 
 (version3410)=
@@ -261,7 +261,7 @@ Release date: 31-12-2025
 * Improved deduplication on NS failure @MilosKozak
 
 ### UI/UX Improvements
-* various improvemnts @MilosKozak @Philoul @olorinmaia
+* various improvements @MilosKozak @Philoul @olorinmaia
 
 ### 自动操作
 * New SMB control action - enable/disable SMB via automation @MilosKozak
@@ -300,7 +300,7 @@ Release date: 13-08-2025
 
 (version-enforcement)=
 
-### 从此版本起，通知和版本强制机制已简化并调整如下：
+### Starting this version, notification and version enforcement has been simplified and softened and works following way:
 *  设备离线时（无网络连接）不会过期，即取消60天和90天的宽限期。
 *  过期后强制进入LGS模式
 *  减少通知频率：
@@ -322,7 +322,7 @@ Release date: 13-08-2025
 * 单选按钮UI优化 @olorinmaia
 * 自动化：通过地图选择位置 @MilosKozak
 * 主屏幕显示版本号 @MilosKozak
-* 强制使用现有git系统编译（禁用zip下载）
+* Compilation with existing git system is enforced (no zip downloads)
 * 主界面显示版本 @MilosKozak
 * Tidepool上传优化 @ConstantinMatheis
 
@@ -342,7 +342,7 @@ Release date: 13-08-2025
 ### 问题修复
 
 * Dash：绑定改为可选（默认关闭）@MilosKozak
-* Equil：修复10+U大剂量，报警优化 @EquilHack
+* Equil: fixed bolus 10+U, alarm improvements @EquilHack
 * Garmin：手表功能改进 @swissalpine
 * 手表功能优化 @olorinmaia
 * 通过手表控制闭环状态 @tdrkDev
@@ -558,21 +558,21 @@ Release date: 13-08-2025
 v1是用于在NS网站和NS服务器之间交换数据的旧协议，它有许多限制
 - v1仅发送2天的数据
 - 每次重新连接时都会发送所有2天的数据
-- 必须使用WebSocket = 需保持持久连接，导致更高的电池消耗。
+- using websockets is mandatory = permanent connection, more battery consumption
 - 当与Nightscout频繁断连时，连接将暂停15分钟以防止数据用量过高。
 
 v3为新协议，更加安全高效
 - 在使用令牌时，您可以更好地定义访问权限
 - 协议在双方（AAPS和NS）都更高效
 - 可以从NS读取最多3个月的数据
-- 每个设备均可独立选择是否启用WebSocket​​（启用即实时更新更快；不启用虽降低功耗，但数据同步会延迟，例如数分钟）。
+- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power consumption, but slower updates ie. minutes)
 - NSClient在断开连接时不会暂停
 
 限制：
 - AAPS 3.2需搭配NS 15使用
 - v3无法读取v1数据（未来NS版本可能解决）
-- 反之，由于v1接口追踪数据变化的方法老旧低效，可能导致v1无法及时识别v3接口所做的更改。​
-- 请留意：目前Nightscout内部仍采用v1接口，因此若你使用v3接口，将无法通过Nightscout网页界面手动输入数据。​ 若需远程输入数据，必须通过短信使用AAPS客户端。​
+- in the opposite direction, because of the old ineffective method of tracking changes, v1 sees changes done by v3
+- 请留意：目前Nightscout内部仍采用v1接口，因此若你使用v3接口，将无法通过Nightscout网页界面手动输入数据。​ You must use AAPSClient or SMS if you want to enter data remotely
 
 推荐设置：
 - 基于上述原因，你应在所有设备上统一选择并仅使用一种接口方案（请注意，目前其他数据上传工具均仍在使用v1接口）。如果您决定使用v3，请在AAPS和所有AAPSClient中选择v3
