@@ -57,9 +57,9 @@ Clone sources again as described in wiki and do not allow gradle update
 
   * [Kontrola instalace Gitu](#BuildingAaps-steps-for-installing-git)
 
-  * Pokud používáte Windows a Git jste právě nainstalovali, restartujte po instalaci počítač, aby byl Git dostupný v celém systému
+  * If you are on Windows and Git was just installed, you should restart your computer to make Git globally available after the installation
 
-  * Pokud je Git nainstalovaný, restartovali jste (ve Windows) a Git stále nelze najít:
+  * If Git is installed, you have restarted (if on windows), and Git still cannot be found:
 
   * Vyhledejte v počítači soubor „git.exe“.
 
@@ -212,7 +212,7 @@ Pokud se zobrazí výše uvedená chybová zpráva, musíte před novým pokusem
 
 ## Generate Signed APK: úspěšně vytvořeno s 0 variantami sestavení
 
-Když vytváříte podepsané apk, může se zobrazit oznámení, že vytvoření bylo úspěšné, ale s informací, že bylo vytvořeno „0 build variants“ (0 variant sestavení):
+When you generate the signed apk, you might get the notification that generation was successful but that '0 build variants' were generated:
 
 ![APK vytvořeno s 0 variantami sestavení](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
@@ -237,7 +237,7 @@ Vaše apk bylo úspěšně sestaveno a můžete ho přenést do telefonu!
 
 ## Apk není nainstalováno
 
-![aplikace v telefonu není nainstalována](../images/Update_AppNotInstalled.png)
+![phone app not installed](../images/Update_AppNotInstalled.png)
 
 * Ujistěte se, že jste do telefonu přenesli soubor „app-full-release.apk“.
 * Tato chyba obvykle znamená, že nové apk je podepsané jiným úložištěm klíčů než vaše nainstalovaná aplikace **AAPS**. Pokud ještě máte své předchozí úložiště klíčů, vyberte ho a sestavte znovu. Jinak viz [Přeinstalace AAPS s novým úložištěm klíčů](#reinstall-aaps).
