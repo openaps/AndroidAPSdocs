@@ -131,7 +131,7 @@ Después de cada selección hay que confirmar.
 
 Tienes que averiguar por qué recibes datos de glucosa duplicados:
 
-* ¿Está activado Dexcom bridge en tu sitio de Nightscout? Desactiva el bridge en el panel de administración de tu instancia de Nightscout: edita la variable «enable» y quita la parte «bridge». (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
+* ¿Está activado Dexcom bridge en tu sitio de Nightscout? Desactiva el bridge en el panel de administración de tu instancia de Nightscout: edita la variable «enable» y quita la parte «bridge». (Para Heroku, [aquí encontrarás los detalles](https://nightscout.github.io/troubleshoot/troubleshoot/#heroku).)
 * ¿Varias fuentes suben tu glucosa a Nightscout? Si usas la app BYODA, activa la subida en **AAPS**, pero no la actives en xDrip, si lo usas.
 * ¿Tienes algún seguidor que recibe tu glucosa pero también la vuelve a subir a tu sitio de Nightscout?
 * Último recurso: en los [ajustes de NSClient](#Preferences-nsclient), elige los ajustes de Sincronización y desactiva la opción «Recibir datos de MCG desde NS».
@@ -421,7 +421,7 @@ Insulina activa, incluyendo bolos **y basal**.
 
 (aaps-screens-iob)=
 
-#### Insulin on board (IOB)
+#### Insulina activa (IOB)
 
 Muestra la insulina que tienes "a bordo" (la insulina activa que tiene tu cuerpo). Esto incluye la insulina de bolos y de basales temporales (**pero quedan excluidas las tasas basales establecidas en tu perfil**).
 
@@ -578,7 +578,7 @@ La fila de iconos debajo del encabezado muestra qué datos entran en el cálculo
 * Por seguridad, el dato de IOB no se puede desactivar cuando COB está activado, porque podrías correr el riesgo de demasiada insulina, ya que **AAPS** no tendría en cuenta lo que ya se ha administrado.
 * Si activas COB e IOB, se tienen en cuenta los carbohidratos no absorbidos que aún no están cubiertos con insulina + toda la insulina administrada como TBR o SMB.
 * Si activas IOB sin COB, **AAPS** tiene en cuenta la insulina ya administrada, pero no la descuenta de los carbohidratos que aún quedan por absorber. Esto se traduce en que nos aparecerán los "carbohidratos faltantes".
-* If you bolus for **additional food** shortly after a meal bolus (e.g. additional dessert) it can be helpful to **disable all inputs**. De esta manera, solo se añaden los nuevos carbohidratos, ya que la comida principal no necesariamente está absorbida, por lo que la IOB no coincidirá con precisión con los COB poco después de un bolo de comida.
+* Si pones un bolo para **comida adicional** poco después de un bolo de comida (p. ej., un postre extra), puede ser útil **desactivar todas las entradas**. De esta manera, solo se añaden los nuevos carbohidratos, ya que la comida principal no necesariamente está absorbida, por lo que la IOB no coincidirá con precisión con los COB poco después de un bolo de comida.
 * Por seguridad, un **objetivo temporal** solo se incluye en el cálculo si activas su dato a mano.
 
 (AapsScreens-section-j)=
@@ -613,7 +613,7 @@ El campo **Glucosa** normalmente ya contiene la última lectura de tu MCG. Si no
 
 El botón de resultado de abajo muestra el bolo propuesto; al pulsarlo, pide confirmación antes de administrar insulina.
 
-Good to know:
+Conviene saber:
 
 * Si el bolo calculado es mayor que tu **[Bolo máximo](#Preferences-maximum-bolus)**, se reduce al bolo máximo, y la confirmación muestra el aviso «Bolus constraint applied» (restricción de bolo aplicada). En cambio, un [Asistente rápido](../DailyLifeWithAaps/QuickWizards.md) se rechaza.
 * Cuando el bolo solo se registra (por ejemplo, mientras la bomba está desconectada), el aviso «**El bolo sólo se anotará**» se queda en la parte superior del diálogo, también cuando te desplazas.
@@ -746,9 +746,9 @@ Te permite volver atrás en el historial de **AAPS**. Consulta la página dedica
 
 (aaps-screens-statistics)=
 
-## Statistics
+## Estadísticas
 
-![Statistics](../images/v4/Screens/statistics.png)
+![Estadísticas](../images/v4/Screens/statistics.png)
 
 Abre el **menú** (☰) y elige **Estadísticas**.
 
@@ -756,7 +756,7 @@ Te da estadísticas sobre tu dosis diaria total, el tiempo en rango, tu perfil d
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Ayudante de perfil
 
 Abre el **menú** (☰) y elige **Ayudante de perfil**.
 
