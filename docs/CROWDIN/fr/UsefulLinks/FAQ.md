@@ -6,7 +6,7 @@ Comment ajouter des questions à la FAQ : suivez ces [instructions](../Supporti
 
 ### Puis-je simplement télécharger le fichier d'installation d'AAPS ?
 
-Non. Il n'existe pas de fichier apk d'AAPS à télécharger. Vous devez le [compiler](../SettingUpAaps/BuildingAaps.md) vous-même. En voici la raison :
+Non. Il n'existe pas de fichier apk d'AAPS à télécharger. Vous devez le [compiler](../SettingUpAaps/BuildingAaps.md) vous-même. En voici la raison :
 
 AAPS est utilisé pour contrôler votre pompe et fournir de l'insuline. Selon la réglementation actuelle en Europe, tous les systèmes de classe IIa ou IIb sont des dispositifs médicaux qui nécessitent une approbation réglementaire (un marquage CE), ce qui demande diverses études et validations. La distribution d'un dispositif non homologué est illégale. Des réglementations similaires existent dans d'autres parties du monde.
 
@@ -20,7 +20,7 @@ C'est pourquoi les apk ne sont pas disponibles.
 
 Commencez par [Se préparer à démarrer avec AAPS](../Getting-Started/PreparingForAaps.md) : cette page vous guide en détail pour tout ce qui suit.
 
-Tout d'abord, vous devez **obtenir des composants matériels de la boucle** :
+Tout d'abord, vous devez **obtenir des composants matériels de la boucle** :
 
 * Une [pompe à insuline compatible](../Getting-Started/CompatiblePumps.md), 
 * un [smartphone Android](../Getting-Started/Phones.md) (Apple iOS n'est pas pris en charge par AAPS - vous pouvez regarder [iOS Loop](https://loopkit.github.io/loopdocs/)) et
@@ -30,7 +30,7 @@ Ensuite, vous devez **configurer vos composants logiciels** : [AAPS](../Setting
 
 Enfin, vous devez apprendre et **comprendre la conception de référence OpenAPS pour vérifier vos paramètres de traitement**. Le principe de base de la boucle fermée est que votre [débit basal et votre ratio glucides](../SettingUpAaps/YourAapsProfile.md) sont justes. Toutes les recommandations supposent que vos besoins en basal sont satisfaits et que les pics ou les creux que vous voyez sont le résultat d'autres facteurs qui nécessitent par conséquent des ajustements (exercices, stress, etc.). Les ajustements que la boucle fermée peut effectuer ont été limités pour des raisons de sécurité (voir Débit Basal Temporaire maximum autorisé dans [Conception de référence OpenAPS](https://openaps.org/reference-design/)), ce qui signifie que vous ne devez pas perdre de la marge de manœuvre pour corriger un débit de basal erroné. Si, par exemple, la boucle règle souvent un débit basal temporaire bas à l'approche d'un repas, il est probable que votre débit basal doive être ajusté. Vous pouvez utiliser [Autotune](#autotune-how-autotune-calculates-adjustments) pour analyser un grand nombre de données et savoir si et comment les débits basaux et/ou la SI doivent être ajustés, et aussi si le ratio glucides doit être modifié. Vous pouvez aussi tester et régler votre débit basal [à l'ancienne](https://integrateddiabetes.com/basal-testing/).
 
-### Quels sont les aspects pratiques de la boucle ?
+### Quels sont les aspects pratiques de la boucle ?
 
 #### Protection par mot de passe
 
@@ -64,9 +64,9 @@ Plusieurs blogs donnent de bons conseils pour vous aider à comprendre les aspec
 
 (what-emergency-equipment-is-recommended-to-take-with-me)= (FAQ-emergency-equipment)=
 
-### Quel équipement d'urgence est-il recommandé d'avoir sur soi ?
+### Quel équipement d'urgence est-il recommandé d'avoir sur soi ?
 
-Vous devez avoir avec vous le même équipement d'urgence que toute autre personne diabétique de type 1 traitée par pompe à insuline. Quand vous bouclez avec AAPS, il est fortement recommandé d'avoir les équipements supplémentaires suivants avec ou près de vous :
+Vous devez avoir avec vous le même équipement d'urgence que toute autre personne diabétique de type 1 traitée par pompe à insuline. Quand vous bouclez avec AAPS, il est fortement recommandé d'avoir les équipements supplémentaires suivants avec ou près de vous :
 
 * Batterie externe et câbles pour charger votre smartphone, votre montre et, si besoin, votre lecteur BT ou votre Link
 * Piles de la Pompe
@@ -84,9 +84,9 @@ Exportez les paramètres très régulièrement : après chaque changement de po
 
 **AAPS** peut le faire pour vous : il peut exporter vos paramètres automatiquement (par exemple avec une [Automatisation](#ExportImportSettings-Automating-Settings-Export) après chaque changement de pod) et enregistrer l'export directement dans un dossier cloud (Google Drive). Voir [Créer et restaurer des sauvegardes](../Maintenance/ExportImportSettings.md).
 
-### Comment puis-je fixer le capteur MGC/MGF en toute sécurité ?
+### Comment puis-je fixer le capteur MGC/MGF en toute sécurité ?
 
-Vous pouvez le coller. Il existe plusieurs « overpatchs » pré-troués adaptés aux systèmes MGC disponibles (recherchez sur Google, eBay ou Amazon). Certains utilisateurs de la boucle utilisent du ruban de kinésiologie standard ou du Rocktape, moins chers.
+Vous pouvez le coller. Il existe plusieurs « overpatchs » pré-troués adaptés aux systèmes MGC disponibles (recherchez sur Google, eBay ou Amazon). Certains utilisateurs de la boucle utilisent du ruban de kinésiologie standard ou du Rocktape, moins chers.
 
 Vous pouvez le fixer. Vous pouvez également acheter un brassard pour maintenir le MGC/MGF en place (recherche Google, eBay ou Amazon).
 
@@ -106,7 +106,7 @@ Dans l'AMA, DAI ne signifie pas "Durée d'Action de l'Insuline". C'est un param�
 
 (FAQ-nsclient-blocked)=
 
-#### AAPSClient (ou AAPS) n'envoie pas de données : « Bloqué par… ». Que puis-je faire ?
+#### AAPSClient (ou AAPS) n'envoie pas de données : « Bloqué par… ». Que puis-je faire ?
 
 Le statut NSClient indique pourquoi aucune donnée n'est envoyée :
 
@@ -128,7 +128,7 @@ Vérifiez les [paramètres de connexion NSClient](#Preferences-nsclient) : **Ut
 
 #### Piles
 
-La boucle peut vider la pile de la pompe plus vite qu'une utilisation normale, car le système communique beaucoup plus souvent par Bluetooth qu'un utilisateur en mode manuel. Il est préférable de changer la pile à 25 %, car la communication devient alors difficile. Vous pouvez définir des alarmes d'avertissement pour la pile de la pompe à l'aide de la variable PUMP_WARN_BATT_P dans votre site Nightscout. Les astuces pour augmenter la durée de vie de la pile sont les suivantes :
+La boucle peut vider la pile de la pompe plus vite qu'une utilisation normale, car le système communique beaucoup plus souvent par Bluetooth qu'un utilisateur en mode manuel. Il est préférable de changer la pile à 25 %, car la communication devient alors difficile. Vous pouvez définir des alarmes d'avertissement pour la pile de la pompe à l'aide de la variable PUMP_WARN_BATT_P dans votre site Nightscout. Les astuces pour augmenter la durée de vie de la pile sont les suivantes :
 
 * réduire la durée d'affichage de l'écran LCD (dans le menu des paramètres de la pompe)
 * réduire la durée du rétro-éclairage (dans le menu des paramètres de la pompe)
@@ -173,7 +173,7 @@ Vous devez retravailler vos vieilles habitudes sportives à partir de l'époque 
 
 Vous auriez donc plus de glucides actifs, mais en même temps la boucle les compenserait en délivrant de l'insuline.
 
-Lors de la boucle, vous devriez essayer ces étapes :
+Lors de la boucle, vous devriez essayer ces étapes :
 
 * Faites un [changement de profil](#ProfileSwitch-change-percentage) < 100 % : appuyez sur le nom du profil sur l'écran principal, appuyez sur le bouton rond **▶**, puis réglez **Pourcentage** et **Durée**.
 * Réglez une [cible temporaire d'activité](#TempTargets-activity-temp-target) au-dessus de votre cible habituelle. Avec un pourcentage inférieur à 100 % et une durée, le même écran **Activer** propose un interrupteur **Cible Temp / Activité** qui lance les deux en même temps.
@@ -256,15 +256,15 @@ Consultez la page de dépannage correspondant à votre façon de compiler **AAPS
 
 (FAQ-build-error-file-name-too-long)=
 
-#### Erreur de compilation : file name too long
+#### Erreur de compilation : file name too long
 
 Cette erreur peut arriver lors de la compilation avec Android Studio : la compilation s'arrête avec une erreur qui indique que le nom de fichier est trop long. Solutions possibles : Déplacez vos sources dans un dossier plus proche de la racine de votre disque (par ex. "C:\src\AndroidAPS").
 
-Depuis Android Studio : Assurez-vous que la synchronisation et l'indexage "Gradle" sont terminés après avoir ouvert le projet et effectué un Pull depuis GitHub. Exécutez Build->Clean Project avant de faire un Rebuild Project. Exécutez File->Invalidate Caches and Restart Android Studio.
+Depuis Android Studio : Assurez-vous que la synchronisation et l'indexage "Gradle" sont terminés après avoir ouvert le projet et effectué un Pull depuis GitHub. Exécutez Build->Clean Project avant de faire un Rebuild Project. Exécutez File->Invalidate Caches and Restart Android Studio.
 
 (FAQ-running-dev-version)=
 
-#### Alerte : Version Dev. La boucle fermée est désactivée
+#### Alerte : Version Dev. La boucle fermée est désactivée
 
 **AAPS** affiche ce message quand vous utilisez une version de développement (dev) sans le mode ingénierie : dans une version dev, la boucle fermée fonctionne seulement en mode ingénierie.
 
@@ -306,7 +306,7 @@ Cela réinitialise seulement le mot de passe principal. Un mot de passe ou code 
 
 (FAQ-where-are-settings-files)=
 
-#### Où puis-je trouver les fichiers de paramètres ?
+#### Où puis-je trouver les fichiers de paramètres ?
 
 Les fichiers de paramètres sont enregistrés dans le sous-dossier `preferences` du répertoire AAPS choisi dans l'[assistant de configuration](#SetupWizard-StoragePermission) (par exemple `/internal storage/AAPS/preferences`). Si vous avez configuré un dossier cloud (Google Drive), vos exports peuvent aussi y être enregistrés. Voir [Créer et restaurer des sauvegardes](../Maintenance/ExportImportSettings.md).
 
@@ -340,7 +340,7 @@ Ouvrez le **menu** (☰) et choisissez **Historique Traitements**. Faites un app
 
 (FAQ-battery-savings)=
 
-#### Comment configurer les économies de batterie ?
+#### Comment configurer les économies de batterie ?
 
 Votre téléphone peut mettre en pause **AAPS** et les applications liées (application MGC, Bluetooth) quand vous ne l'utilisez pas. **AAPS** ne peut alors plus faire son travail, et les connexions Bluetooth avec le capteur et la pompe (ou le RileyLink) peuvent être coupées, ce qui provoque des alertes « pompe hors de portée » et des erreurs de communication.
 
@@ -386,7 +386,7 @@ Essayez d'abord le bouton **Réinitialiser le RileyLink** sur l'écran de la pom
 **AAPSClient** est une application séparée qui permet à un aidant de suivre et de contrôler **AAPS** à distance. Depuis **AAPS** v4, contrôler **AAPS** depuis AAPSClient nécessite un appairage unique entre les deux applications. Voir :
 
 * [L'application AAPSClient](#aapsclient-app) : installation, premier démarrage et appairage,
-* [Contrôle Maître ↔ Client](#client-master-control) : ce qui peut être contrôlé et comment fonctionne l'appairage,
+* [Contrôle maître ↔ client](#client-master-control) : ce qui peut être contrôlé et comment fonctionne l'appairage,
 * [AAPSClient sur une montre connectée](#remotecontrol-smartwatches).
 
 (FAQ-hardened-mode)=
@@ -419,5 +419,5 @@ L'état du Pod est inclus dans les paramètres exportés : un Pod actif peut do
 
 Lisez d'abord ces sections :
 
-* [Exporter et importer les paramètres](#omnipod-dash-export-import) sur la page Omnipod DASH, et [Pompes sans tubulure](#ExportImportSettings-tubeless-pumps) : sur le nouveau téléphone, cochez **Also replace pump settings** (Remplacer aussi les paramètres de la pompe) et utilisez un fichier exporté pendant le Pod que vous portez actuellement,
+* [Exporter et importer les paramètres](#omnipod-dash-export-import) sur la page Omnipod DASH, et [Pompes sans tubulure](#ExportImportSettings-tubeless-pumps) : sur le nouveau téléphone, cochez **Remplacer aussi les paramètres de pompe** et utilisez un fichier exporté pendant le Pod que vous portez actuellement,
 * [Jeter un pod](#omnipod-dash-discard-pod), pour retirer ensuite le Pod de l'ancien téléphone. Gardez l'ancien téléphone en mode avion jusqu'à ce que le Pod soit jeté, pour que les deux téléphones ne communiquent jamais avec le Pod en même temps.
