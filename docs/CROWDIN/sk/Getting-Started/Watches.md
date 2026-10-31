@@ -6,60 +6,60 @@ Priame ovládanie **AAPS** (pumpa a senzor) inteligentnými hodinkami sa dá dos
 
 Niektoré inteligentné hodinky vám umožňujú zadávať ošetrenia alebo iné veci ale samotný telefón stále spravuje **AAPS**.
 
-Inteligentné hodinky sa čoraz viac používajú s **AAPS** ako aj u dospelých s cukrovkou, tak aj u opatrovateľov/rodičov detí s cukrovkou.
+Inteligentné hodinky sa s **AAPS** používajú čoraz viac, a to _ako_ u dospelých s diabetom, tak aj u opatrovateľov/rodičov detí s diabetom.
 
 ## Všeobecné výhody používania inteligentných hodiniek s **AAPS**
 
 
-Inteligentné hodinky – v závislosti od modelu – sa dajú s technológiou **AAPS** používať mnohými rôznymi spôsobmi. Môžu sa použiť na úplné alebo čiastočné ovládanie **AAPS** alebo jednoducho na diaľkovú kontrolu hladiny glukózy, inzulínu v krvi a ďalších parametrov.
+Inteligentné hodinky – v závislosti od modelu – sa dajú s technológiou **AAPS** používať mnohými rôznymi spôsobmi. Môžu sa použiť na úplné alebo čiastočné ovládanie **AAPS** alebo jednoducho na vzdialenú kontrolu glykémie, aktívneho inzulínu (IOB) a ďalších parametrov.
 
-Integrácia inteligentných hodiniek s **AAPS** môže byť užitočná v mnohých situáciách vrátane šoférovania auta alebo (motorky) a počas cvičenia. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking at a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling the user to keep their **AAPS** phone stored out of sight (like inside a bag), while still using the smartwatch for remote control.
+Prepojenie inteligentných hodiniek s **AAPS** môže byť užitočné v mnohých situáciách, napríklad pri riadení auta, pri jazde na (motorke) bicykli a počas cvičenia. Niektorí ľudia majú pocit, že pohľad na hodinky (na stretnutí, večierku, pri stole a pod.) je nenápadnejší ako pohľad na telefón. Z hľadiska bezpečnosti môžu byť inteligentné hodinky užitočné aj na cestách: telefón s **AAPS** môžete mať schovaný (napríklad v taške) a na vzdialené ovládanie pritom používať hodinky.
 
 ## Konkrétne výhody pre rodičov/opatrovateľov používajúcich **AAPS**
 
 Pre dieťa – ak má telefón s funkciou **AAPS** nablízku – môže opatrovateľ použiť inteligentné hodinky na monitorovanie alebo vykonávanie úprav bez nutnosti používať telefón s **AAPS**. Toto môže byť užitočné napríklad, ak je telefón **AAPS** skrytý v opasku s pumpou.
 
-Hodinky môžete použiť spolu s mobilom alebo aj namiesto neho či už chcete cez ne ovládať _AAPS_ na diaľku alebo len [sledovať dáta](../RemoteFeatures/FollowingOnly.md).
+Inteligentné hodinky sa dajú použiť _popri_ možnostiach cez TELEFÓN pre vzdialené ovládanie alebo [iba sledovanie](../RemoteFeatures/FollowingOnly.md), alebo ako ich _náhrada_.
 
-Navyše, na rozdiel od telefónov pre rodičov/opatrovateľov (ktoré sa spoliehajú na mobilnú sieť alebo Wi-Fi pripojenie), inteligentné hodinky s pripojením Bluetooth môžu byť užitočné na odľahlých miestach, ako je jaskyňa, na lodi alebo turistike. If both devices (**AAPS** phone and smartwatch) are on the same Wi-Fi network, they can also use Wi-Fi.
+Navyše, na rozdiel od telefónov rodičov/opatrovateľov na sledovanie (ktoré závisia od mobilnej siete alebo pripojenia Wi-Fi), môžu byť inteligentné hodinky pripojené cez Bluetooth užitočné na odľahlých miestach, napríklad v jaskyni, na lodi alebo v polovici cesty na horu. Ak sú obe zariadenia (telefón s **AAPS** a inteligentné hodinky) v rovnakej sieti Wi-Fi, môžu komunikovať aj cez Wi-Fi.
 
 ## Rôzne typy interakcií inteligentných hodiniek a AAPS
 
 V súčasnosti existuje päť hlavných spôsobov, akými sa inteligentné hodinky používajú v spojení s **AAPS**. Tieto sú uvedené v tabuľke nižšie: 
 
-| Nastavenie hodiniek          | Vlastnosti                                     | Požiadavky                                                                                                                                                                                                                                                                                                          |
-| ---------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Samostatne                   | AAPS bez telefónu                              | Full Android smartwatch (check min Android)</br> Running **app-fullRelease**                                                                                                                                                                                                                                        |
-| Kompletné diaľkové ovládanie | Väčšina funkcií AAPS                           | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease**                                                                                                                                                                                                                                      |
-| Vzdialené ovládanie          | AAPSClient functions                           | Android **Wear OS** watch (check Android/API)</br>Running **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                           |
-| Vzdialené ovládanie          | Niektoré funkcie AAPSClienta                   | Garmin watches</br>(older Samsung Tizen and Fitbit setups only, not recommended)</br>See below.                                                                                                                                                                                                                     |
-| Displej                      | Glucose, trend, IOB, COB, loop and pump status | Many smartwatches, through a companion app on the **AAPS** phone fed by the [External Companion Apps](#watches-external-companion-apps) broadcast: [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>See below. |
+| Nastavenie hodiniek       | Vlastnosti                                     | Požiadavky                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Samostatne                | AAPS bez telefónu                              | Plnohodnotné inteligentné hodinky s Androidom (overte min. verziu Androidu)</br> so spustenou aplikáciou **app-fullRelease**                                                                                                                                                                                                                                    |
+| Úplné vzdialené ovládanie | Väčšina funkcií AAPS                           | Hodinky s Android **Wear OS** (overte verziu Androidu/API)</br>so spustenou aplikáciou **wear-fullRelease**                                                                                                                                                                                                                                                     |
+| Vzdialené ovládanie       | Funkcie AAPSClienta                            | Hodinky s Android **Wear OS** (overte verziu Androidu/API)</br>so spustenou aplikáciou **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                                          |
+| Vzdialené ovládanie       | Niektoré funkcie AAPSClienta                   | Hodinky Garmin</br>(Samsung Tizen a Fitbit iba v starších nastaveniach, neodporúča sa)</br>Pozrite nižšie.                                                                                                                                                                                                                                                      |
+| Displej                   | Glykémia, trend, IOB, COB, stav okruhu a pumpy | Mnohé inteligentné hodinky, cez sprievodnú aplikáciu v telefóne s **AAPS**, ktorá dostáva dáta z vysielania [Externé sprievodné (Companion) aplikácie](#watches-external-companion-apps): [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>Pozrite nižšie. |
 
 ## Pred kúpou inteligentných hodiniek…
 
-Presný model inteligentných hodiniek, ktorý si môžete kúpiť, závisí od požadovaných funkcií. You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list of tested phones that also contains some smartwatches.
+Presný model inteligentných hodiniek, ktorý si kúpite, závisí od požadovaných funkcií. Užitočné informácie môžete nájsť na [stránke Telefóny](#Phones-list-of-tested-phones) vrátane zoznamu testovaných telefónov, ktorý obsahuje aj niektoré inteligentné hodinky.
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. Možnosti zhrnuté v tabuľke vyššie sú podrobnejšie vysvetlené nižšie, aby ste sa mohli rozhodnúť, ktoré inteligentné hodinky sú pre vašu situáciu tie pravé.
+Medzi obľúbené značky hodiniek patria Samsung Galaxy, Garmin, Fossil a Mi Band. Možnosti zhrnuté v tabuľke vyššie sú podrobnejšie vysvetlené nižšie, aby ste sa mohli rozhodnúť, ktoré inteligentné hodinky sú pre vašu situáciu tie pravé.
 
-Ak integrujete hodinky s **AAPS** do telefónu s úmyslom vzdialene ovládať **AAPS**, musíte zvážiť aj to, či sú tieto dve zariadenia navzájom kompatibilné, najmä ak máte starší alebo neobvyklý telefón.
+Ak prepájate inteligentné hodinky s **AAPS** v telefóne, aby ste mohli **AAPS** ovládať na diaľku, musíte zvážiť aj to, či sú tieto dve zariadenia navzájom kompatibilné, najmä ak máte starší alebo neobvyklý telefón.
 
-Vo všeobecnosti, ak chcete sledovať iba hodnoty glukózy a nechcete interagovať s **AAPS**, existuje širšia škála cenovo dostupných a jednoduchších hodiniek, ktoré môžete použiť.
+Vo všeobecnosti, ak chcete iba sledovať hodnoty glykémie a nechcete **AAPS** ovládať, existuje širší výber cenovo dostupných a jednoduchších hodiniek, ktoré môžete použiť.
 
-Najlepší spôsob, ako si vybrať inteligentné hodinky, je vyhľadať príspevky s názvom „hodinky“ v skupinách Discord alebo Facebook **AAPS**. Have a read of others' experiences, and post any specific questions if your query isn't answered by older posts.
+Najlepší spôsob, ako si vybrať inteligentné hodinky, je vyhľadať príspevky so slovom „watch“ v skupinách **AAPS** na Discorde alebo na Facebooku. Prečítajte si skúsenosti ostatných a ak staršie príspevky neodpovedajú na vašu otázku, položte ju.
 
-## Čistý android
+## Plnohodnotný Android
 
-Znie to ako atraktívna možnosť, však? V súčasnosti však len niekoľko nadšencov experimentuje s **AAPS** na samostatných hodinkách. There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. Do hodiniek budete musieť nahrať „plnohodnotnú“ apk od **AAPS** (apk, ktorá sa zvyčajne inštaluje do smartfónu), a nie „wear“ apk od **AAPS**.
+Znie to ako atraktívna možnosť, však? V súčasnosti však len niekoľko nadšencov experimentuje s **AAPS** na samostatných hodinkách. Inteligentných hodiniek s rozumným rozhraním, ktoré navyše dobre fungujú pri samostatnom používaní **AAPS** a vašej aplikácie pre CGM, je málo. Medzi obľúbené modely patria LEMFO LEM 15 Pro a 16. Do hodiniek budete musieť nahrať „plnohodnotnú“ apk od **AAPS** (apk, ktorá sa zvyčajne inštaluje do smartfónu), a nie „wear“ apk od **AAPS**.
 
 Hoci neexistuje jasná špecifikácia, ktorá by vám pomohla zistiť, či hodinky budú dobre fungovať na samostatné použitie s **AAPS**, nasledujúce parametre vám môžu pomôcť:
 
-1)  Android 12 or newer. 2) Možnosť vypnúť štvorcový režim ciferníka, aby bol text väčší a ľahšie čitateľný. 3) Veľmi dobrá výdrž batérie. 4) Dobrý dosah Bluetooth.
+1) Android 12 alebo novší. 2) Možnosť vypnúť štvorcový režim ciferníka, aby bol text väčší a ľahšie čitateľný. 3) Veľmi dobrá výdrž batérie. 4) Dobrý dosah Bluetooth.
 
 Väčšina frustrácií zo samostatných hodiniek **AAPS** pramení z interakcie s malou obrazovkou a zo skutočnosti, že súčasné rozhranie plnej aplikácie AAPS nebolo navrhnuté pre hodinky. Na úpravu nastavení **AAPS** na hodinkách môžete uprednostniť použitie stylusu kvôli obmedzenej veľkosti obrazovky a niektoré tlačidlá AAPS nemusia byť na obrazovke hodiniek viditeľné.
 
-Ďalšou výzvou je, že je ťažké dosiahnuť dostatočnú výdrž batérie a hodinky s dostatočnou výdržou batérie sú často objemné a hrubé. Používatelia hlásia problémy s operačným systémom a nastaveniami úspory energie, ťažkosti so spustením senzorov na hodinkách, slabý dosah Bluetooth (na udržiavanie spojenia so senzorom aj pumpou). Na fotografiách nižšie je zopár príkladov.
+Ďalšou výzvou je, že je ťažké dosiahnuť dostatočnú výdrž batérie a hodinky s dostatočnou výdržou batérie sú často objemné a hrubé. Používatelia hlásia boj s operačným systémom a nastaveniami úspory energie, ťažkosti so spustením senzorov na hodinkách, slabý dosah Bluetooth (na udržanie spojenia so senzorom aj s pumpou) a pochybnú odolnosť voči vode. Na fotografiách nižšie je zopár príkladov.
 
-![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![obrázok](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
 Ak máte záujem o nastavenie samostatných hodiniek, prečítajte si príspevky a komentáre v skupine **AAPS** na Facebooku (skúste hľadať „standalone“ a „Lemfo“) a na Discorde, kde nájdete ďalšie informácie.
 
@@ -67,20 +67,20 @@ Ak máte záujem o nastavenie samostatných hodiniek, prečítajte si príspevky
 
 Kód **AAPS** obsahuje rozšírenie aplikácie, ktoré je možné nainštalovať na inteligentné hodinky [**Wear OS**](https://wearos.google.com/#oem-carousel).
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Konfigurácia > Komunikácia so zapnutým Wear](../images/v4/Configuration/configuration_communication_wear.png)
 
-Overte si či vaše hodinky spĺňajú **AAPS** [požiadavky](#maintenance-android-version-aaps-version).
+Overte si, či vaše inteligentné hodinky spĺňajú [požiadavky](#maintenance-android-version-aaps-version) **AAPS**.
 
-### Čo je Wear OS?
+### Čo _je_ Wear OS?
 
-Prvé tri možnosti inteligentných hodiniek vyžadujú, aby boli v hodinkách nainštalované operačné systémy **Wear OS**.
+Prvé tri možnosti vyžadujú, aby bol v inteligentných hodinkách nainštalovaný operačný systém **Wear OS**.
 
-**Wear OS** je operačný systém, ktorý beží na niektorých moderných inteligentných hodinkách so systémom Android. Ak popis inteligentných hodiniek uvádza iba _kompatibilitu_ so systémom Android a iOS, neznamená to, že používajú systém Wear OS. Môže ísť o iný druh operačného systému špecifického pre dodávateľa, ktorý nie je kompatibilný s **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch must be running **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer**. Each Wear OS release follows the Android version it is based on: **Wear OS 3** is Android 11 (API level 30), **Wear OS 4** is Android 13 (API level 33), **Wear OS 5** is Android 14 (API level 34) and **Wear OS 6** is Android 16 (API level 36). Watches on Wear OS 2 cannot run **AAPS**.
+**Wear OS** je operačný systém, ktorý beží na niektorých moderných inteligentných hodinkách so systémom Android. Ak popis inteligentných hodiniek uvádza iba _kompatibilitu_ so systémom Android a iOS, neznamená to, že používajú systém Wear OS. Môže ísť o iný druh operačného systému špecifického pre dodávateľa, ktorý nie je kompatibilný s **AAPS**. Na inštaláciu a používanie akejkoľvek verzie **AAPS** alebo **AAPSClient** musia mať inteligentné hodinky **Wear OS 3.0, 3.2 alebo 3.5** (Android 11, úroveň API 30) **alebo novší**. Každé vydanie Wear OS zodpovedá verzii Androidu, na ktorej je založené: **Wear OS 3** je Android 11 (úroveň API 30), **Wear OS 4** je Android 13 (úroveň API 33), **Wear OS 5** je Android 14 (úroveň API 34) a **Wear OS 6** je Android 16 (úroveň API 36). Hodinky s Wear OS 2 nedokážu spustiť **AAPS**.
 
-Ak si nainštalujete súbor **AAPS** wear.apk na hodinky **Wear OS**, môžete si vybrať z rôznych vlastných ciferníkov **AAPS**. Prípadne môžete použiť štandardný ciferník pre smartfóny s informáciami o **AAPS** zobrazenými v mini okienkach na ciferníku známych ako „complications“. Je to akákoľvek funkcia, ktorá sa zobrazuje na ciferníku okrem času.
+Ak si nainštalujete súbor **AAPS** wear.apk na hodinky **Wear OS**, môžete si vybrať z rôznych vlastných ciferníkov **AAPS**. Prípadne môžete použiť štandardný ciferník a informácie z **AAPS** zobraziť v malých okienkach na ciferníku, ktoré sa nazývajú „komplikácie“. Komplikácia je akákoľvek funkcia, ktorá sa na ciferníku zobrazuje okrem času.
 
 ```{note}
-Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (the higher the Wear OS version, the more severe), although **complications** keep working. Before buying or updating a watch, read [Wear OS watch face changes](#wearos-watchface-changes).
+Nedávne zmeny vo **Wear OS** postupne pokazia vlastné ciferníky **AAPS** (čím vyššia verzia Wear OS, tým viac), **komplikácie** však fungujú ďalej. Pred kúpou alebo aktualizáciou hodiniek si prečítajte [Zmeny ciferníkov vo Wear OS](#wearos-watchface-changes).
 ```
 
 
@@ -88,59 +88,59 @@ Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (t
 
 Po [nainštalovaní **AAPS** do hodiniek](../WearOS/WearOsSmartwatch.md) si budete môcť automaticky vybrať preferovaný ciferník z ciferníkov určených pre **AAPS**. Na väčšine hodiniek jednoducho stačí dlho stlačiť domovskú obrazovku, kým sa nezmenší, a potom potiahnutím prstom doprava vyberte alternatívnu obrazovku:
 
-![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![obrázok](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
-Toto sú základné obrazovky vložené do **AAPS**, existuje [viac ciferníkov](#WearOS_changing-to-AAPS-watchface) a môžete použiť aj [complications](#Watchfaces-complications).
+Toto sú základné obrazovky vložené do **AAPS**. Existuje [viac ciferníkov](#WearOS_changing-to-AAPS-watchface) a môžete použiť aj [komplikácie](#Watchfaces-complications).
 
 ### Ako by som mal používať hodinky Wear OS v každodennom živote?
 
-Ďalšie podrobnosti o ciferníkoch a ich každodennom používaní vrátane toho, ako si vytvoriť (a zdieľať) vlastný prispôsobený ciferník, nájdete v časti [Ovládanie Wear AAPS na inteligentných hodinkách](../WearOS/WearOsSmartwatch.md).
+Ďalšie podrobnosti o ciferníkoch a ich každodennom používaní vrátane toho, ako si vytvoriť (a zdieľať) vlastný prispôsobený ciferník, nájdete v časti [Nastavenie AAPS na hodinkách s Wear OS](../WearOS/WearOsSmartwatch.md).
 
 (Watchfaces-tizen)= (watches-external-companion-apps)=
 
-## External Companion Apps
+## Externé sprievodné (Companion) aplikácie
 
-**AAPS** can broadcast its status to other apps installed on the same phone: glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Several watch companion apps read this broadcast and display the data on watches that **AAPS** does not support directly. To send the data, enable **External Companion Apps** in **Configuration** > **Communication** (see [External Companion Apps](#external-companion-apps) on the Configuration page). The broadcast is sent with each new reading and cannot be requested: a refresh button in the companion app has no effect on **AAPS**.
+**AAPS** môže vysielať svoj stav iným aplikáciám v tom istom telefóne: glykémiu a trend, IOB, COB, bazál a dočasný bazál, názov profilu, stav okruhu, batériu telefónu a pumpy, množstvo inzulínu v zásobníku a priebeh bolusu. Niekoľko sprievodných aplikácií pre hodinky toto vysielanie číta a zobrazuje dáta na hodinkách, ktoré **AAPS** priamo nepodporuje. Ak chcete dáta odosielať, zapnite **Externé sprievodné (Companion) aplikácie** v **Konfigurácia** > **Komunikácia** (pozrite [Externé sprievodné (Companion) aplikácie](#external-companion-apps) na stránke o konfigurácii). Vysielanie sa odošle s každou novou hodnotou a nedá sa vyžiadať: tlačidlo obnovenia v sprievodnej aplikácii nemá na **AAPS** žiadny vplyv.
 
-![Configuration > Communication: the External Companion Apps card](../images/v4/Configuration/configuration_external_companion_apps.png)
+![Konfigurácia > Komunikácia: karta Externé sprievodné (Companion) aplikácie](../images/v4/Configuration/configuration_external_companion_apps.png)
 
-Companion apps known to use this broadcast:
+Sprievodné aplikácie, o ktorých vieme, že toto vysielanie používajú:
 
-- [WatchDrip+](https://bigdigital.home.blog/) for Xiaomi and Amazfit watches, see [Xiaomi and Amazfit watches](#watches-xiaomi-amazfit) below.
-- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) for Wear OS watches, as a complication or a widget. It is a useful fallback on Wear OS versions where the **AAPS** watchfaces are unreliable, see [Set up AAPS on your Wear OS watch](../WearOS/WearOsSmartwatch.md). Its companion app GlucoDataAuto shows the same data in a car with Android Auto.
-- [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) for Samsung Tizen watches, and its later Wear OS port. In earlier **AAPS** versions the plugin was named **Samsung Tizen** after this app.
+- [WatchDrip+](https://bigdigital.home.blog/) pre hodinky Xiaomi a Amazfit, pozrite [Hodinky Xiaomi a Amazfit](#watches-xiaomi-amazfit) nižšie.
+- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) pre hodinky s Wear OS, ako komplikácia alebo widget. Je to užitočná záloha vo verziách Wear OS, kde ciferníky **AAPS** nefungujú spoľahlivo, pozrite [Nastavenie AAPS na hodinkách s Wear OS](../WearOS/WearOsSmartwatch.md). Jeho sprievodná aplikácia GlucoDataAuto zobrazuje rovnaké dáta v aute s Android Auto.
+- [Aplikácia G-Watch](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) pre hodinky Samsung Tizen a jej neskoršia verzia pre Wear OS. V starších verziách **AAPS** sa plugin podľa tejto aplikácie volal **Samsung Tizen**.
 
 ```{warning}
-The **G-Watch app** and its **Wear OS** port are no longer maintained, and Samsung has moved its smartwatches from Tizen to Wear OS. G-Watch is only relevant for existing, older setups and is not recommended for a new installation. Check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for the latest news.
+**Aplikácia G-Watch** a jej verzia pre **Wear OS** sa už neudržiavajú a Samsung presunul svoje inteligentné hodinky z Tizen na Wear OS. G-Watch má význam iba pre existujúce staršie nastavenia a pre novú inštaláciu sa neodporúča. Najnovšie správy nájdete v samostatnej [skupine na Facebooku](https://www.facebook.com/groups/gwatchapp).
 ```
 
 (Watchfaces-garmin)=
 
 ## Garmin
 
-There are some watch faces for Garmin that integrate with [AAPS](https://apps.garmin.com/search?keywords=androidaps), on the Garmin ConnectIQ store.
+V obchode Garmin ConnectIQ sú ciferníky pre Garmin, ktoré sa prepájajú s [AAPS](https://apps.garmin.com/search?keywords=androidaps).
 
-![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
+![Konfigurácia > Komunikácia: karta Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-Hodinky [AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) sú priamo prepojené s **AAPS**. Zobrazujú údaje o stave slučky (IOB, dočasný bazál) okrem hodnôt glukózy a odosielajú údaje o srdcovej frekvencii do **AAPS**. It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/Garmin_WF-annotated.png)
+Ciferník [AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) sa priamo prepája s **AAPS**. Okrem hodnôt glykémie zobrazuje údaje o stave okruhu (aktívny inzulín, dočasný bazál) a odosiela údaje o srdcovej frekvencii do **AAPS**. Je dostupný v obchode ConnectIQ; zapnite plugin **Garmin** v **Konfigurácia → Komunikácia**. ![Ciferník AAPS Glucose Watch s očíslovanými poľami](../images/Garmin_WF-annotated.png)
 
-1. Highest and lowest glucose values on the graph
-2. Glucose change per minute
-3. Insulin on board (IOB)
-4. Time since the last glucose reading (minutes:seconds)
-5. Temporary basal rate, as a percentage of the profile basal rate
-6. Glucose graph of the last 2 hours
-7. Current glucose value
+1. Najvyššia a najnižšia hodnota glykémie v grafe
+2. Zmena glykémie za minútu
+3. Aktívny inzulín (IOB)
+4. Čas od poslednej hodnoty glykémie (minúty:sekundy)
+5. Dočasný bazál v percentách bazálnej dávky z profilu
+6. Graf glykémie za posledné 2 hodiny
+7. Aktuálna hodnota glykémie
 
 
 
 ## Fitbit
 
 ```{warning}
-Google is moving Fitbit into Google Health and is removing third-party apps and watch faces from Fitbit watches in the EU. Fitbit watchfaces are therefore **no longer a recommended option**, and buying a Fitbit for use with **AAPS** is not recommended.
+Google presúva Fitbit do Google Health a z hodiniek Fitbit v EÚ odstraňuje aplikácie a ciferníky tretích strán. Ciferníky Fitbit preto **už nie sú odporúčanou možnosťou** a kúpa hodiniek Fitbit na použitie s **AAPS** sa neodporúča.
 ```
 
-For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github.io/nightscout/wearable/#fitbit) list some monitoring-only options, such as [Glance](https://glancewatchface.com/). These are third-party watchfaces too, so the same EU restriction applies.
+Pre existujúce hodinky Fitbit uvádzajú [stránky Nightscout](https://nightscout.github.io/nightscout/wearable/#fitbit) niekoľko možností iba na sledovanie, napríklad [Glance](https://glancewatchface.com/). Aj to sú ciferníky tretích strán, takže platí rovnaké obmedzenie v EÚ.
 
 ## Iba sledovanie
 
@@ -153,41 +153,41 @@ Nižšie sú uvedené niektoré z možností hodiniek určených iba na sledovan
 (watches-xiaomi-amazfit)=
 ### Hodinky Xiaomi a Amazfit
 
-**WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
+**WatchDrip+** je sprievodná aplikácia vyvinutá komunitou, ktorá zobrazuje glykémiu a dáta okruhu na rôznych modeloch inteligentných hodiniek, hlavne značiek Xiaomi (_napr._ Mi Band) a Amazfit:
 
-![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![obrázok](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
-Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
+Od verzie 0.5 číta **WatchDrip+** dáta priamo z **AAPS**, bez xDrip+ ako sprostredkovateľa. V telefóne s **AAPS**:
 
-1. Enable **External Companion Apps** in **Configuration** > **Communication**, see [above](#watches-external-companion-apps). It provides the current glucose, delta, trend arrow, IOB and pump status.
-2. Enable the **xDrip** plugin in **Configuration** > **Communication** and turn on **Send status to xDrip+** in its settings. It provides the IOB/COB status line, and the glucose graph on the watch fills in after a few readings.
-3. If xDrip+ is installed on the phone, disable its **Broadcast Service API** (xDrip+ > Settings > Inter-app settings) so that the watch does not receive the data twice. If xDrip+ was only relaying data to the watch, you can uninstall it.
+1. Zapnite **Externé sprievodné (Companion) aplikácie** v **Konfigurácia** > **Komunikácia**, pozrite [vyššie](#watches-external-companion-apps). Poskytuje aktuálnu glykémiu, deltu, šípku trendu, IOB a stav pumpy.
+2. Zapnite plugin **xDrip** v **Konfigurácia** > **Komunikácia** a v jeho nastaveniach zapnite **Odosielať stav do xDrip+**. Poskytuje riadok so stavom IOB/COB a graf glykémie na hodinkách sa doplní po niekoľkých hodnotách.
+3. Ak je v telefóne nainštalovaný xDrip+, vypnite v ňom **Broadcast Service API** (xDrip+ > Settings > Inter-app settings), aby hodinky nedostávali dáta dvakrát. Ak xDrip+ iba posielal dáta do hodiniek, môžete ho odinštalovať.
 
-The refresh button of WatchDrip+ has no effect with **AAPS**: the data arrives with each new reading.
+Tlačidlo obnovenia vo WatchDrip+ nemá pri **AAPS** žiadny účinok: dáta prichádzajú s každou novou hodnotou.
 
 
-You can read more about them, including how to set them up, on the [WatchDrip+ website](https://bigdigital.home.blog/). Výhodou týchto hodiniek je, že sú malé a relatívne cenovo dostupné. Sú obľúbenou voľbou najmä pre deti a osoby s menšími zápästiami.
+Viac o nich, vrátane ich nastavenia, si môžete prečítať na [webovej stránke WatchDrip+](https://bigdigital.home.blog/). Výhodou týchto hodiniek je, že sú malé a relatívne cenovo dostupné. Sú obľúbenou voľbou najmä pre deti a osoby s menšími zápästiami.
 
 ### Pebble hodinky
 
-![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![obrázok](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
-![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![obrázok](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Hodinky Pebble ([už sa nevyrábajú](https://en.wikipedia.org/wiki/Pebble_(watch))) boli v bežnom výpredaji od roku 2013 do roku 2016 a stále môžu byť dostupné z druhej ruky. Fitbit prevzal majetok spoločnosti Pebble. Používatelia Pebble môžu na zobrazenie údajov Nightscout použiť ciferník Urchin. Medzi zobrazené možnosti údajov patrí IOB, aktívny dočasný bazál a predikcie. V prípade otvorenej slučky môžete použiť IFTTT na vytvorenie appletu, ktorý po prijatí oznámenia od **AAPS** odošle buď SMS, alebo pushover oznámenie.
+Hodinky Pebble ([už sa nevyrábajú](https://en.wikipedia.org/wiki/Pebble_(watch))) boli v bežnom predaji v rokoch 2013 až 2016 a stále môžu byť dostupné z druhej ruky. Fitbit prevzal majetok spoločnosti Pebble. Používatelia Pebble môžu na zobrazenie údajov Nightscout použiť ciferník Urchin. Medzi zobrazené možnosti údajov patrí IOB, aktívny dočasný bazál a predikcie. Pri otvorenom okruhu môžete pomocou IFTTT vytvoriť applet, ktorý po prijatí notifikácie z **AAPS** odošle SMS alebo notifikáciu cez Pushover.
 
 ### [Hodinky Bluejay](https://bluejay.website/)
 
 
-![BlueJay U3 watch](../images/watches/bluejay_u3.png)
+![Hodinky BlueJay U3](../images/watches/bluejay_u3.png)
 
 
-Ide o unikátne technológie, ktoré dokážu prijímať údaje o glukóze **priamo** z vysielača Dexcom. It is not widely known that Dexcom G6/G7 transmitters actually broadcast the current glucose data on _two_ separate channels, a phone channel and a medical channel. The Bluejay watches can be set to receive glucose data on either channel, so if **AAPS** is using the phone channel, then the Bluejay watches can use the medical channel.
+Ide o unikátne technológie, ktoré dokážu prijímať údaje o glykémii **priamo** z vysielača Dexcom. Málokto vie, že vysielače Dexcom G6/G7 v skutočnosti vysielajú aktuálne dáta glykémie na _dvoch_ samostatných kanáloch: na kanáli pre telefón a na zdravotníckom kanáli. Hodinky Bluejay sa dajú nastaviť na príjem dát glykémie z ktoréhokoľvek kanála, takže ak **AAPS** používa kanál pre telefón, hodinky Bluejay môžu používať zdravotnícky kanál.
 
-The key advantage is that the watch is independent of both the phone and the looping system. Takže napríklad, ak odpojíte pumpu a telefón **AAPS** na pláži alebo v zábavnom parku a ste mimo dosahu telefónu **AAPS**, stále môžete získavať údaje z vášho Dexcomu priamo do hodiniek Bluejay.
+Hlavnou výhodou je, že hodinky sú nezávislé od telefónu aj od systému okruhu. Takže napríklad, ak odpojíte pumpu a telefón **AAPS** na pláži alebo v zábavnom parku a ste mimo dosahu telefónu **AAPS**, stále môžete získavať údaje z vášho Dexcomu priamo do hodiniek Bluejay.
 
-The original **Bluejay GTS** is discontinued and cannot read the Dexcom G7. The later models (U1, then the current **U3**, sold as early access at the time of writing) are full Android watches running xDrip, which collect from the Dexcom G6 and G7 directly. The vendor describes the watch as a research tool, not for medical use. Reported disadvantages are that it does not always pick up a reading every 5 minutes and that the battery needs frequent charging. Check the [Bluejay website](https://bluejay.website/) for the current model and availability.
+Pôvodné hodinky **Bluejay GTS** sa už nevyrábajú a Dexcom G7 čítať nedokážu. Neskoršie modely (U1, potom súčasné **U3**, v čase písania predávané v predbežnom prístupe) sú plnohodnotné hodinky s Androidom s aplikáciou xDrip, ktoré zbierajú dáta priamo z Dexcom G6 a G7. Výrobca opisuje hodinky ako výskumný nástroj, nie na zdravotnícke použitie. Uvádzané nevýhody sú, že nie vždy zachytia hodnotu každých 5 minút a že batériu treba často nabíjať. Aktuálny model a dostupnosť nájdete na [webovej stránke Bluejay](https://bluejay.website/).
 
 ### Apple hodinky
 
