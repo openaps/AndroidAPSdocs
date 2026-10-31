@@ -1,60 +1,60 @@
 # Mogelijk toekomstige insulinepompen
 
-Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor één van de beschikbare doe-het-zelf closed loop systemen (AndroidAPS, OpenAPS of Loop). Op het einde van deze pagina staat algemene info over welke software-mogelijkheden een pomp moet beschikken om überhaupt "loopbaar" te kunnen zijn.
+Dit is een lijst van insulinepompen die in omloop zijn, met de status van hun ondersteuning in loopsystemen en de status in AAPS. Op het einde van deze pagina staat algemene info over welke software-mogelijkheden een pomp moet beschikken om überhaupt "loopbaar" te kunnen zijn.
 
-    {contents} Table of contents
+    {contents} Inhoudsopgave
     :depth: 1
     :local: true
 
-## Pumps in AAPS integration phase
+## Pompen die in AAPS worden geïntegreerd
 
-**Coming soon:** drivers for these pumps are in development and already running in test builds.
+**Binnenkort:** drivers voor deze pompen worden ontwikkeld en draaien al in testversies.
 
 Omnipod 5 ([Homepage](https://www.omnipod.com/))
 
-![Omnipod 5 driver in development](../images/future-pumps/omnipod5-driver.png)
+![Driver voor Omnipod 5 in ontwikkeling](../images/future-pumps/omnipod5-driver.png)
 
 Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
-![Tandem t:Mobi driver in development](../images/future-pumps/tandem-mobi-driver.png)
+![Driver voor Tandem t:Mobi in ontwikkeling](../images/future-pumps/tandem-mobi-driver.png)
 
-## 
+## Pompen die loopbaar zijn
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop status:** Pump is a Loop candidate, but protocol is unknown at the time. No interest in open source from the vendor.
+**Loopstatus:** De pomp is geschikt om mee te loopen, maar het protocol is op dit moment onbekend. De fabrikant heeft geen interesse in open source.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Hardware-eisen voor AAPS:** Geen. Het lijkt erop dat hij Bluetooth gebruikt.
 
 ### Tandem: t:slim X3 ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Possible future Loop candidate. The hope is that t:slim X3 will allow full control from a phone, which would enable AAPS support, but the timeline and features are still unknown.
+**Loopstatus:** Mogelijk in de toekomst geschikt om mee te loopen. De hoop is dat de t:slim X3 volledige bediening vanaf een telefoon toestaat, wat ondersteuning in AAPS mogelijk maakt, maar de planning en de functies zijn nog onbekend.
 
-**Hardware requirement for AAPS:** None. It is expected to be Bluetooth enabled.
+**Hardware-eisen voor AAPS:** Geen. Naar verwachting heeft hij Bluetooth.
 
-**Comments:** Not yet released. t:slim X3 appears to be repeatedly deprioritized on Tandem's roadmap in favour of t:Mobi (including a tubeless version) and Sigi (their patch pump).
+**Opmerking:** Nog niet uitgebracht. De t:slim X3 lijkt op de planning van Tandem steeds lager te komen dan de t:Mobi (ook een versie zonder slang) en Sigi (hun patchpomp).
 
 ### Twiist ([Homepage](https://www.twiist.com/))
 
-**Loop status:** Loop candidate.
+**Loopstatus:** Geschikt om mee te loopen.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Hardware-eisen voor AAPS:** Geen. Hij heeft Bluetooth.
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Willcare insulinepomp ([Homepage](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Loopstatus:** Op dit moment niet geschikt om mee te loopen, maar hun medewerkers hebben contact met ons opgenomen en ze willen hun pomp loopbaar maken (op dit moment ontbreken volgens mij alleen de commando's om het profiel uit te lezen/in te stellen).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Hardware-eisen voor AAPS:** Geen. Het lijkt erop dat hij Bluetooth gebruikt.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Opmerking:** Aangezien het bedrijf is geïnteresseerd in integratie met AAPS, kunnen ze het wellicht zelf implementeren.
 
 ### Ypsopump ([Homepage](https://www.ypsomed.com/))
 
-**Loop status:** Loop candidate. The pump's Bluetooth protocol has been reverse-engineered by the community, so communicating with it is possible in principle.
+**Loopstatus:** Geschikt om mee te loopen. De community heeft het Bluetooth-protocol van de pomp ontcijferd (reverse-engineered), dus communicatie is in principe mogelijk.
 
-**Hardware requirement for AAPS:** None. It is Bluetooth enabled.
+**Hardware-eisen voor AAPS:** Geen. Hij heeft Bluetooth.
 
-**Comments:** The Ypsopump protects its Bluetooth communication with heavy third-party encryption. Working with it is technically demanding, which makes building and maintaining a reliable driver hard. There is no production-ready AAPS driver yet.
+**Opmerking:** De Ypsopump beschermt zijn Bluetooth-communicatie met zware versleuteling van een derde partij. Dit is technisch lastig, en daardoor is een betrouwbare driver moeilijk te bouwen en te onderhouden. Er is nog geen AAPS-driver die klaar is voor dagelijks gebruik.
 
 ## Pompen die niet meer worden verkocht (fabrikanten zijn gestopt)
 
@@ -66,53 +66,53 @@ Tandem: t:Mobi ([Homepage](https://www.tandemdiabetes.com/))
 
 ### Accu-Chek Insight
 
-**Comments:** End of support March 2025.
+**Opmerking:** Ondersteuning gestopt in maart 2025.
 
 ## Pompen die niet loopbaar zijn
 
 ### Medtronic Bluetooth
 
-**Comments:** Medtronic [withdrew](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
+**Opmerking:** Medtronic heeft zich [teruggetrokken](https://www.tidepool.org/blog/tidepool-loop-partner-update-ace-pumps).
 
 ### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
 
-**Comments:** The Tandem Bluetooth protocol has been reverse-engineered, but on the t:slim X2 only boluses can be delivered — basal delivery cannot be controlled — so it cannot be used safely for looping. This is unlikely to change unless Tandem allows full control of the X2 from a phone, which would more probably arrive with the t:slim X3 instead.
+**Opmerking:** Het Bluetooth-protocol van Tandem is ontcijferd, maar op de t:slim X2 kunnen alleen bolussen worden gegeven — de basale toediening kan niet worden bestuurd — dus de pomp kan niet veilig worden gebruikt om mee te loopen. Dit verandert waarschijnlijk niet, tenzij Tandem volledige bediening van de X2 vanaf een telefoon toestaat; dat komt eerder met de t:slim X3.
 
 ### Accu-Chek Solo
 
-**Comments:** No community success in communicating with the Solo pump.
+**Opmerking:** De community is er niet in geslaagd om met de Solo-pomp te communiceren.
 
 ## Eisen aan pompen die loopbaar zijn
 
-**Prerequisite**
+**Randvoorwaarden**
 
 - Pomp moet op één of andere manier op afstand bedienbaar zijn. (Bluetooth, radiofrequentie, etc)
 - Communicatie-protocol is gehackt/gedocumenteerd/etc.
 
-**Minimal requirement**
+**Minimale vereisten**
 
 - Heeft een mogelijkheid voor het instellen van Tijdelijke Basaalstanden
 - De Pompstatus kan worden uitgelezen
 - Heeft een mogelijkheid voor het annuleren van Tijdelijke Basaalstanden
 
-**For oref1(SMB) or Bolusing:**
+**Voor oref1 (SMB) of bolussen:**
 
 - Bolus kunnen instellen
 
-**Good to have**
+**Fijn om te hebben**
 
 - Annuleer Bolus
 - Lees Basaalprofiel uit (is haast een vereiste)
 - Stel Basaalprofiel in (leuk om te hebben)
 - Lees geschiedenis uit 
 
-**Other (not required but good to have)**
+**Overige (niet verplicht maar goed om te hebben)**
 
 - Vertraagde bolus instellen
 - Vertraagde bolus annuleren
 - Lees geschiedenis uit
-- 
+- TDD uitlezen
 
-### Other pumps support
+### Ondersteuning overige pompen
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Als er andere pompen zijn waarvan je wilt weten wat de status is, neem dan contact op via discord.
