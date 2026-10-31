@@ -1,28 +1,28 @@
 (github-cherry-pick)=
 
-# Browser build: cherry-pick a commit
+# Compilation dans le navigateur : cherry-pick d'un commit
 
 ```{note}
-This is an optional, advanced operation. It only works if you build with a **fork** ([Browser build steps 1–4](../SettingUpAaps/BrowserBuild.md)). **AAPS Builder** repositories do not include this workflow.
+Cette opération est facultative et avancée. Elle fonctionne seulement si vous compilez avec un **fork** ([étapes 1 à 4 de la compilation dans le navigateur](../SettingUpAaps/BrowserBuild.md)). Les dépôts **AAPS Builder** n'ont pas ce workflow.
 ```
 
-Use this only when a developer asks you to test a specific change (they give you one or more commit hashes) before it is in a released version.
+Utilisez-la seulement quand un développeur vous demande de tester une modification précise (il vous donne un ou plusieurs hashs de commit) avant qu'elle soit dans une version publiée.
 
 ## Before you start
 
-- [Sync your fork](#Update-to-new-version-update-your-repo): this workflow builds the current state of your branch, not a version you pick from a list.
-- Google Drive must be authorized ([Step 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)): the built app is saved there, like a normal build.
+- [Synchronisez votre fork](#Update-to-new-version-update-your-repo) : ce workflow compile l'état actuel de votre branche, pas une version choisie dans une liste.
+- Google Drive doit être autorisé ([étape 3](../SettingUpAaps/BrowserBuildGoogleDrive.md)) : l'application compilée y est enregistrée, comme pour une compilation normale.
 
-## Run the workflow
+## Lancer le workflow
 
-1. In your GitHub fork of AndroidAPS, open **Actions**.
-2. Expand **All workflows** and select **Cherry Pick CI (Pre-release Feature Backport)**.
-3. Tap **Run workflow** and fill in:
+1. Dans votre fork GitHub d'AndroidAPS, ouvrez **Actions**.
+2. Dépliez **All workflows** (tous les workflows) et choisissez **Cherry Pick CI (Pre-release Feature Backport)**.
+3. Appuyez sur **Run workflow** (lancer le workflow) et remplissez :
 
    ![aaps_cherry-pick_ci](../images/Building-the-App/CI/aaps_cherry_pick_ci.png)
 
-   - **Use workflow from**: the branch to add the commits to, normally `master`.
-   - **Upstream repository**: where the commits come from. Keep `nightscout/AndroidAPS` unless the developer told you otherwise.
-   - **Commit hash(es) to cherry-pick**: the hash(es) you were given, separated by spaces.
-   - **Select Build Variant**: see [variants](#browserbuild-variant) (normally `fullRelease`).
-4. Tap **Run workflow**. When it completes, the app is in your Google Drive, as after a [normal build](../SettingUpAaps/BrowserBuildAPK.md).
+   - **Use workflow from** : la branche à laquelle ajouter les commits, normalement `master`.
+   - **Upstream repository** : le dépôt d'où viennent les commits. Gardez `nightscout/AndroidAPS`, sauf si le développeur vous a dit autre chose.
+   - **Commit hash(es) to cherry-pick** : le ou les hashs que vous avez reçus, séparés par des espaces.
+   - **Select Build Variant** : voir les [variantes](#browserbuild-variant) (normalement `fullRelease`).
+4. Tap **Run workflow**. Quand il est terminé, l'application est dans votre Google Drive, comme après une [compilation normale](../SettingUpAaps/BrowserBuildAPK.md).
