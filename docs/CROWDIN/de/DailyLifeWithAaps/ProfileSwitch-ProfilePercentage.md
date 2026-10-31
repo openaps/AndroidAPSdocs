@@ -2,7 +2,7 @@
 
 Dieser Abschnitt erklärt was ein **Profilwechsel** und eine **prozentuale Anpassung des Profils** sind. You can learn how to create a **Profile** in [Your AAPS Profile](#your-aaps-profile-create-and-edit-profiles).
 
-Zu Beginn Deiner **AAPS**-Reise, musst Du ein **Profil** erstellen, verstehen, wie Du einen **Profilwechsel** durchführst und die Auswirkungen eines **Prozentsatzes im Profil** innerhalb von **AAPS** verstehen lernen. Die Funktionen **Profilwechsel** oder **Prozentsatz des Profils** (anteiliges Profil) können Dir in den folgenden Situationen das Leben einfacher machen:
+Zu Beginn Deiner **AAPS**-Reise, musst Du ein **Profil** erstellen, verstehen, wie Du einen **Profilwechsel** durchführst und die Auswirkungen eines **Prozentsatzes im Profil** innerhalb von **AAPS** verstehen lernen. The features of a **Profile Switch** or **Profile Percentage** can be particularly beneficial for:
 
 - Der Menstruationszyklus - eine prozentuale Anpassung innerhalb eines **Profils** kann im Reiter **Automatisierung** eingerichtet werden. Damit erhält **AAPS** die Möglichkeit sich an die verschiedene Phasen des Hormonzyklus und an die vorhergesagte Insulinresistenz anpassen.
 
@@ -122,28 +122,28 @@ Nach der Auswahl passt **AAPS** die Basalrate entsprechend an, und wird von da a
 Die Wirkung einer prozentualen **Profil**anpassung wird in der unten stehenden Tabelle zusammengefasst:
 
 | Profilwechsel  
-Prozentsatz |    Effekt    |    I:C  
-g/IE     | Beispiel  
-15g |         ISF  
-mmol/L/UI  
-mg/dL/UI         | UI to lower  
+Prozentsatz |    Effekt    |     I:C  
+g/U     | Beispiel  
+15g |          ISF  
+mmol/L/U  
+mg/dL/U          | U to lower  
 2mmol/L  
 40mg/dL |
-|:---------------------------:|:------------:|:-----------------:|:--------------:|:------------------------------------------:|:-------------------------------:|
+|:---------------------------:|:------------:|:-----------------:|:--------------:|:------------------------------------------:|:------------------------------:|
 |            90 %             |  Schwächer   | 5/0,9  
-=**5,55** |     2,7 IE     | 2,2/0,9  
+=**5,55** |     2.7 U      | 2,2/0,9  
 =**2,4**  
   
 40/0,9  
-=**44,4** |             0,8 IE              |
-|          **100%**           | **Standard** |       **5**       |    **3 IE**    |                **2,2  
-40**                |           **0,9** IE            |
+=**44,4** |             0.8 U              |
+|          **100%**           | **Standard** |       **5**       |    **3 U**     |                **2,2  
+40**                |           **0.9** U            |
 |            130%             |   Stärker    | 5/1,3  
-=**3,85** |     3,9 IE     | 2,2/1,3  
+=**3,85** |     3.9 U      | 2,2/1,3  
 =**1,7**  
   
 40/1,3  
-=**30,8** |             1,2 IE              |
+=**30,8** |             1.2 U              |
 
 (ProfileSwitch-ProfilePercentage-time-shift-of-the-circadian-percentage-profile)=
 
