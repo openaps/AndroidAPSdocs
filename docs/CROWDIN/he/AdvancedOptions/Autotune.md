@@ -1,8 +1,8 @@
-# How to use Autotune plugin
+# שימוש בתוסף Autotune
 
 Autotune plugin is an implementation of OpenAPS autotune algorithm within AAPS. It analyzes your recent AAPS history to suggest adjustments to your basal rates, ISF and carb ratio.
 
-Autotune Plugin is available in AAPS releases since [3.4](#version3400) but is hidden by default.
+Autotune Plugin is available in AAPS releases since [3.4](https://github.com/nightscout/AndroidAPS/releases/tag/3.4.0.0) but is hidden by default.
 
 (autotune-how-autotune-calculates-adjustments)=
 ## How Autotune calculates adjustments
