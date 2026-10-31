@@ -252,7 +252,7 @@ Ak máte pocit, že vás váš tím pri používaní okruhu s **AAPS** nepodporu
 
 a) Systém **AAPS** navrhli pacienti a ich opatrovatelia. Bol navrhnutý predovšetkým s ohľadom na bezpečnosť, ale aj na základe rozsiahlych skúseností pacientov. Na celom svete sú mnohé tisíce používateľov **AAPS**. Preto je pravdepodobné, že aj medzi pacientmi vašej ambulancie sú ďalší ľudia s okruhom OS-AID (či o tom vedia, alebo nie).
 
-b) Nedávne recenzované odporúčania publikované v poprednom medzinárodnom lekárskom časopise [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ potvrdili, že okruhy OS-AID sú **bezpečné** a **účinne zlepšujú kontrolu diabetu**, vrátane času v rozsahu. V popredných časopisoch, ako je [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_, pravidelne vychádzajú články, ktoré opisujú pokrok komunity okruhov OS-AID.
+b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)(_1_) has confirmed that OS-AID loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)(_3_) which highlight the progress of the OS-AID looping community.
 
 c) Začiatok s **AAPS** znamená _postupný_ prechod z liečby pumpou s „otvoreným“ okruhom cez Ochranu pred nízkou glykémiou až po hybridný „uzavretý“ okruh, a to splnením viacerých cieľov. Preto existuje štruktúrovaný program, ktorý od používateľa vyžaduje, aby v každej fáze preukázal určitú úroveň zručností a doladil svoje základné nastavenia (bazál, ISF a ICR) predtým, ako môže uzavrieť okruh.
 
@@ -264,7 +264,7 @@ f) Ak váš lekár stále namieta, odovzdajte mu výtlačky referenčných člá
 
 #### Podpora okruhov OS-AID zo strany iných lekárov
 
-Článok publikovaný v časopise [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)[ (vedený s účasťou King's and Guy's and St Thomas' NHS Foundation Trust a Dr. Sufyana Hussaina, konzultanta diabetológa a čestného hlavného lektora z King's v Londýne) uvádza:
+The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_) (co-led by King’s and Guy’s and St Thomas’ NHS Foundation Trust, and co-led by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
 
 a) **Uistenie** pre odborníkov, že systémy umelého pankreasu OS-AID / s otvoreným zdrojovým kódom sú „bezpečnou a účinnou možnosťou liečby“ diabetu 1. typu, a usmernenia k odporúčaniam, rozhovorom, podpore a dokumentácii;
 
