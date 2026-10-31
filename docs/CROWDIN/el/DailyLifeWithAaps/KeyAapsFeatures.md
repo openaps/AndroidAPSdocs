@@ -152,7 +152,7 @@
 
 ### Χρήση δυναμικής ευαισθησίας
 
-Αυτή είναι η λειτουργία [DynamicISF](../DailyLifeWithAaps/DynamicISF.md). Όταν είναι ενεργή, εμφανίζονται νέες ρυθμίσεις. Οι ρυθμίσεις εξηγούνται στη σελίδα [DynamicISF](#dyn-isf-preferences).
+Αυτή είναι η λειτουργία [Δυναμική ISF](../DailyLifeWithAaps/DynamicISF.md). Όταν είναι ενεργή, εμφανίζονται νέες ρυθμίσεις. Οι ρυθμίσεις εξηγούνται στη σελίδα [DynamicISF](#dyn-isf-preferences).
 
 ### Χρήση Autosens
 
