@@ -98,7 +98,7 @@ Ayrıca Bakınız [Open Humans Kullanım Koşulları](https://www.openhumans.org
 
 ## Veri Gizliliği
 
-Open Humans, her proje için size sayısal bir kimlik atayarak gizliliğinizi korumaya özen gösterir. Bu projelerin sizi tanımasını sağlar ancak sizi tanımlamaz. The Application ID uploaded by AAPS is similar and only helps administrate the data. Daha fazla bilgi için:
+Open Humans, her proje için size sayısal bir kimlik atayarak gizliliğinizi korumaya özen gösterir. This allows projects to recognize but not identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. Daha fazla bilgi için:
 
 - [Open Humans Veri Kullanımı Politikası](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)
