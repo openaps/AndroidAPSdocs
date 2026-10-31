@@ -22,7 +22,7 @@ Juggluco peut envoyer la glycémie directement à AAPS. Les SMB sont alors toujo
 
 Avec un capteur Libre 2/2+/3/3+, des valeurs toutes les minutes sont envoyées à AAPS, mais elles ne déclenchent pas de calcul toutes les minutes dans AAPS.
 
-Activez « xDrip broadcast » dans Juggluco (n'activez pas « Patched Libre »), confirmez et enregistrez les informations du paquet AAPS. Sélectionnez la source de glycémie xDrip dans AAPS.
+Activez « xDrip broadcast » dans Juggluco (n'activez pas « Patched Libre »), confirmez et enregistrez les informations du paquet AAPS. Sélectionnez la source de glycémie xDrip dans AAPS.
 
 Appliquez un [lissage](./SmoothingBloodGlucoseData.md) suffisant dans AAPS.
 
@@ -34,7 +34,7 @@ Appliquez un [lissage](./SmoothingBloodGlucoseData.md) suffisant dans AAPS.
 
 Juggluco peut envoyer la glycémie à xDrip, qui l'envoie ensuite à AAPS.
 
-Activez « Patched Libre » dans Juggluco (n'activez pas « xDrip broadcast »), confirmez et enregistrez les informations du paquet dexdrip. Sélectionnez la source de glycémie xDrip dans AAPS.
+Activez « Patched Libre » dans Juggluco (n'activez pas « xDrip broadcast »), confirmez et enregistrez les informations du paquet dexdrip. Sélectionnez la source de glycémie xDrip dans AAPS.
 
 Si nécessaire, appliquez un [lissage](./SmoothingBloodGlucoseData.md) suffisant dans AAPS. Avec un capteur Libre 2/2+/3/3+, xDrip fait la moyenne des valeurs de chaque minute sur 5 minutes et les [lisse aussi](#libre2-value-smoothing-raw-values).
 
