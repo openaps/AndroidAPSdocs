@@ -1,31 +1,31 @@
 # AAPS pre deti
 
-**AAPS** sa dá dobre používať aj u detí s diabetom 1. typu. However, there are some things to consider.
+**AAPS** sa dá dobre používať aj u detí s diabetom 1. typu. Treba však myslieť na niekoľko vecí.
 
-## Things to consider
+## Veci, ktoré treba zvážiť
 
 ### Počiatočný profil
 
-Setting the correct [**Profile**](../SettingUpAaps/YourAapsProfile.md) (basal rate, ISF, I:C...) and [insulin type](#Config-Builder-insulin-dia) (DIA) may prove difficult for children with type 1, especially when growth hormones are involved. Take your time to test and ensure that you are happy with your child’s basal, I:C, ISF and DIA. Pred tým ako začnete vaše dieťa monitorovať na diaľku otestujte svoje nastavenia naživo s dieťaťom vedľa seba. Víkendy alebo školské prázdniny by na to mohli byť vhodné.
+Nastaviť správny [**profil**](../SettingUpAaps/YourAapsProfile.md) (bazálna dávka, ISF, I:C...) a [typ inzulínu](#Config-Builder-insulin-dia) (DIA) môže byť u detí s diabetom 1. typu ťažké, najmä keď pôsobia rastové hormóny. Dajte si čas na testovanie a uistite sa, že ste s bazálom, I:C, ISF a DIA vášho dieťaťa spokojní. Pred začatím vzdialeného sledovania a vzdialenej liečby ich otestujte v bežnom živote, keď je dieťa pri vás. Víkendy alebo školské prázdniny by na to mohli byť vhodné.
 
 ### Sledujte a v prípade potreby upravujte profil vášho dieťaťa
 
-Ako dieťa rastie, bude potrebné upraviť **profil** pretože sa menia aj požiadavky a potreby jeho tela. Tento problém je však u všetkých detí s diabetom 1. typu vrátane tých, ktoré používajú iné pumpy alebo injekcie.
+Ako dieťa rastie, bude potrebné upravovať **profil**, pretože sa menia požiadavky a potreby jeho tela. Tento problém je však u všetkých detí s diabetom 1. typu vrátane tých, ktoré používajú iné pumpy alebo injekcie.
 
 ### Telefón držte v dosahu
 
-Dôležité je držať telefón dieťaťa v dosahu jeho pumpy a systému **CGM**. To môže byť náročné s deťmi, ktoré sú príliš malé na to, aby si uvedomili zodpovednosť za telefón. An **AAPS** phone with a good Bluetooth connection range should be selected as well as finding a comfortable way for the child to carry the pump and phone. Existuje mnoho riešení, ako napríklad opasky na inzulínovú pumpu, ktoré majú aj priestor na telefón, alebo postroj na nosenie ako batoh.
+Dôležité je držať telefón dieťaťa v dosahu jeho pumpy a systému **CGM**. To môže byť náročné s deťmi, ktoré sú príliš malé na to, aby si uvedomili zodpovednosť za telefón. Vyberte telefón pre **AAPS** s dobrým dosahom Bluetooth a nájdite pohodlný spôsob, ako môže dieťa nosiť pumpu a telefón. Existuje mnoho riešení, ako napríklad opasky na inzulínovú pumpu, ktoré majú aj priestor na telefón, alebo postroj na nosenie ako batoh.
 
 ### Ako chrániť AAPS vášho dieťaťa pred zneužitím?
 
-There are several protection settings available in **AAPS** to prevent the child or a stranger from misusing **AAPS**. See [Settings → Protection](#Preferences-protection) to add password or biometric protection to boluses, settings changes, or even **AAPS** itself.
+V **AAPS** je niekoľko nastavení ochrany, ktoré zabránia tomu, aby dieťa alebo cudzia osoba **AAPS** zneužili. V časti [Nastavenia → Ochrana](#Preferences-protection) môžete pridať ochranu heslom alebo biometriou pre bolusy, zmeny nastavení alebo aj pre samotný **AAPS**.
 
-## Vzdialený monitoring a ovládanie
+## Vzdialené sledovanie a vzdialené ovládanie
 
-Vzdialené monitorovanie je základnou funkciou pri používaní systému **AAPS** pre deti. Viacej otom nájdete v časti [Vzdialené monitorovanie](../RemoteFeatures/RemoteMonitoring.md), kde nájdete zoznam možných možností.
+Vzdialené sledovanie je pri používaní **AAPS** u detí nevyhnutná funkcia. Možnosti nájdete v samostatnej časti [Vzdialené sledovanie](../RemoteFeatures/RemoteMonitoring.md).
 
-Vzdialené monitorovanie a ovládanie AAPS môžu byť mimoriadne prospešné pre rodičov dieťaťa s diabetom 1. typu, a to platí najmä vtedy, keď dieťa navštevuje materskú školku a základnú školu. But make sure the teachers and educators are aware of your kid's treatment plan.
+Vzdialené sledovanie a liečba môžu byť pre rodičov dieťaťa s diabetom 1. typu veľmi užitočné, a to najmä vtedy, keď dieťa chodí do materskej školy a do základnej školy. Uistite sa však, že učitelia a vychovávatelia poznajú liečebný plán vášho dieťaťa.
 
-Work out how adding in remote control is going to work with/enhance the existing plan. Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher "follow" phone.
+Premyslite si, ako bude vzdialené ovládanie fungovať spolu s existujúcim plánom a ako ho môže zlepšiť. Mnohým rodičom pomáha mať samostatný komunikačný kanál s osobami, ktoré sa o dieťa starajú, napríklad lacný malý telefón na sledovanie („follow“) pre učiteľa.
 
-Examples for school care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook. 
+Príklady školských plánov starostlivosti nájdete v [sekcii súborov skupiny AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) na Facebooku. 
