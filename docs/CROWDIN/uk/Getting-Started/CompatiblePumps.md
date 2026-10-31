@@ -54,8 +54,8 @@ For old Medtronic pumps and Omnipod Eros, an additional communication device (be
 
 Available communication devices:
 
-- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
-- ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  [Сайт OrangeLink](https://getrileylink.org/product/orangelink)
+- ![RileyLink](../images/omnipod/RileyLink.png) [RileyLink 433 МГц](https://getrileylink.org/product/rileylink433)
+- ![EmaLink](../images/omnipod/EmaLink.png)  [Сайт Emalink](https://github.com/sks01/EmaLink) - [Контакти](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Контакти](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [Сайт LoopLink](https://www.getlooplink.org/) - [Контакти](https://jameswedding.substack.com/) - не перевірено
