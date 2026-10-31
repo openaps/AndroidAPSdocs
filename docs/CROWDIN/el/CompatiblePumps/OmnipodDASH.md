@@ -1,362 +1,362 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The DASH driver is a well-established way to loop with Omnipod.
+Αυτές οι οδηγίες είναι για τη ρύθμιση της αντλίας γενιάς **Omnipod DASH** **(ΟΧΙ Omnipod Eros)**. Ο οδηγός DASH είναι ένας δοκιμασμένος τρόπος για κλειστό κύκλωμα με το Omnipod.
 
 ```{contents} Table of contents
 :depth: 1
 :local: true
 ```
 
-## Omnipod DASH specifications
+## Προδιαγραφές Omnipod DASH
 
-Key characteristics of the **Omnipod DASH** ('DASH'):
+Βασικά χαρακτηριστικά του **Omnipod DASH** («DASH»):
 
-- The DASH pods are identified by a **blue needle cap** (the older EROS pod has a clear needle cap). The pods are otherwise identical in terms of physical dimensions.
-- DASH does not require a BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-- The DASH's Bluetooth connection is used only when sending a command (e.g a Bolus), and disconnects right after issuing the command.
-- **AAPS** will wait for pod's accessibility to send commands.
-- On pod activation, **AAPS** will find and connect to a new DASH pod.
-- Expected range from phone: 5-10 meters (YMMV).
+- Τα Pod DASH αναγνωρίζονται από το **μπλε καπάκι της βελόνας** (το παλαιότερο Pod EROS έχει διάφανο καπάκι βελόνας). Κατά τα άλλα, τα Pod έχουν ακριβώς τις ίδιες φυσικές διαστάσεις.
+- Το DASH δεν χρειάζεται συσκευή γέφυρας BLE (ΔΕΝ χρειάζεται RileyLink, OrangeLink ή EmaLink).
+- Η σύνδεση Bluetooth του DASH χρησιμοποιείται μόνο όταν στέλνεται μια εντολή (π.χ. ένα bolus) και αποσυνδέεται αμέσως μετά την εντολή.
+- Το **AAPS** θα περιμένει μέχρι το Pod να είναι προσβάσιμο για να στείλει εντολές.
+- Κατά την ενεργοποίηση του Pod, το **AAPS** θα βρει ένα νέο Pod DASH και θα συνδεθεί με αυτό.
+- Αναμενόμενη εμβέλεια από το τηλέφωνο: 5-10 μέτρα (μπορεί να διαφέρει).
 
 (omnipod-dash-constraints)=
 
-## Omnipod DASH known AAPS constraints/issues
-- General advice is to run **AAPS** on Android 14 or 16. Android 15 has many reported [issues](https://github.com/nightscout/AndroidAPS/issues/3471) from the community. However, if you do run on Android 15 you will likely need to turn on **Bluetooth bonding** (in the **Advanced Settings** section of the [Dash settings](#omnipod-dash-advanced-settings)) to successfully activate and use Pods, see [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) for more info on the Bonding settings.
-- DST and timezone changes are not applied automatically. After a clock change you must update the pod manually: press **Refresh** on the DASH pump screen, then press **Set time** (shown when the pod and phone time zones differ) or perform a **Profile Switch** (see [Timezone change for Omnipod Dash](#timezone-traveling-with-pumps)).
-- Dash only supports basal rate in 0.05 U/h steps. If you try to set Basal with 0.01 steps in your **AAPS profile**, AAPS will not give a warning even though the pod will round up the rate into 0.05 steps. If you open **Pod History** on the DASH pump screen, it will display that 0.05 basal was set. This also means the lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
-- The settings file contains the active Pod session. Export your settings after each Pod activation, and see [Export and import settings](#omnipod-dash-export-import) before importing settings.
-- When setting a new basal profile, DASH will suspend delivery before setting the new basal **Profile**. If there is a communication interruption or error, the basal profile won't automatically re-start. See section [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery) for details.
-- If alerts are configured, and the pod is about to expire, the pod will keep beeping until alerts are silenced, see [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts) for details.
-- There are a number of known issues with Bluetooth which can cause pod activation problems. See [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md) for the known issue and solutions to these problems.
+## Γνωστοί περιορισμοί/προβλήματα του Omnipod DASH στο AAPS
+- Η γενική συμβουλή είναι να χρησιμοποιείτε το **AAPS** σε Android 14 ή 16. Στο Android 15 η κοινότητα έχει αναφέρει πολλά [προβλήματα](https://github.com/nightscout/AndroidAPS/issues/3471). Αν όμως χρησιμοποιείτε Android 15, πιθανότατα θα χρειαστεί να ενεργοποιήσετε το **Bluetooth bonding** (στο τμήμα **Ρυθμίσεις για Προχωρημένους** των [ρυθμίσεων Dash](#omnipod-dash-advanced-settings)) για να ενεργοποιείτε και να χρησιμοποιείτε σωστά τα Pod. Δείτε το [Αντιμετώπιση προβλημάτων](../GettingHelp/GeneralTroubleshooting.md) για περισσότερες πληροφορίες για τις ρυθμίσεις bonding.
+- Οι αλλαγές θερινής ώρας και ζώνης ώρας δεν εφαρμόζονται αυτόματα. Μετά από αλλαγή ώρας πρέπει να ενημερώσετε το Pod χειροκίνητα: πατήστε **Ανανέωση** στην οθόνη αντλίας DASH και μετά πατήστε **Ρύθμιση ώρας** (εμφανίζεται όταν οι ζώνες ώρας του Pod και του τηλεφώνου διαφέρουν) ή κάντε μια **Αλλαγή Προφίλ** (δείτε [Αλλαγή ζώνης ώρας για το Omnipod Dash](#timezone-traveling-with-pumps)).
+- Το Dash υποστηρίζει βασικό ρυθμό μόνο σε βήματα των 0,05 U/h. Αν προσπαθήσετε να ορίσετε βασικό ρυθμό με βήματα 0,01 στο **προφίλ του AAPS**, το AAPS δεν θα σας προειδοποιήσει, παρόλο που το Pod θα στρογγυλέψει τον ρυθμό προς τα πάνω σε βήματα των 0,05. Αν ανοίξετε το **Ιστορικό Pod** στην οθόνη αντλίας DASH, θα δείτε ότι ορίστηκε βασικός ρυθμός 0,05. Αυτό σημαίνει επίσης ότι ο χαμηλότερος βασικός ρυθμός που επιτρέπει το DASH στο **AAPS** είναι 0,05 U/h.
+- Το αρχείο ρυθμίσεων περιέχει την ενεργή περίοδο χρήσης Pod. Κάντε εξαγωγή των ρυθμίσεών σας μετά από κάθε ενεργοποίηση Pod και διαβάστε το [Εξαγωγή και εισαγωγή ρυθμίσεων](#omnipod-dash-export-import) πριν εισαγάγετε ρυθμίσεις.
+- Όταν ορίζεται ένα νέο βασικό προφίλ, το DASH κάνει αναστολή της χορήγησης πριν ορίσει το νέο βασικό **Προφίλ**. Αν υπάρξει διακοπή ή σφάλμα στην επικοινωνία, το βασικό προφίλ δεν θα ξεκινήσει ξανά αυτόματα. Δείτε το τμήμα [Συνέχιση της χορήγησης ινσουλίνης](#omnipod-dash-resuming-insulin-delivery) για λεπτομέρειες.
+- Αν έχουν ρυθμιστεί ειδοποιήσεις και το Pod πλησιάζει στη λήξη, το Pod θα συνεχίσει να βγάζει μπιπ μέχρι να γίνει σίγαση των ειδοποιήσεων. Δείτε το [Σίγαση ειδοποιήσεων του Pod](#omnipod-dash-silencing-pod-alerts) για λεπτομέρειες.
+- Υπάρχουν αρκετά γνωστά προβλήματα με το Bluetooth που μπορεί να προκαλέσουν προβλήματα στην ενεργοποίηση του Pod. Δείτε το [Αντιμετώπιση προβλημάτων Bluetooth](../GettingHelp/BluetoothTroubleshooting.md) για το γνωστό πρόβλημα και τις λύσεις.
 
 (hardware-software-requirements)=
 
 (omnipod-dash-hardware-software-requirements)=
 ## Απαιτήσεις υλικού και λογισμικού
 
-- Omnipod DASH is identified by the blue needle cap.
+- Το Omnipod DASH αναγνωρίζεται από το μπλε καπάκι της βελόνας.
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-- **A Compatible Android phone** with a Bluetooth Low Energy (BLE) (see [Phones](../Getting-Started/Phones.md) for more info), additionally the following information will help guide you on other key considerations around successfully activating and using the DASH on a compatible phone:
-    -  The **AAPS** Omnipod Dash driver connects with the DASH Pod using Bluetooth.  
-      **AAPS** will automatically establish a new Bluetooth connection to the Pod every time it needs to send a command (e.g a Bolus), after sending the command the Bluetooth connection is immediately disconnected.
-       - **NOTE:**
-         - The Bluetooth connection can be interrupted/disturbed by other Bluetooth devices linked to the phone that is running **AAPS**, like earbuds etc... Devices like this can cause connection errors or pod activation issues on some models of phones. It's a good idea to review the [tested hardware setups](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) list for known working configurations when choosing the phone for an Omnipod DASH setup.
-         - There are a number of known issues with Bluetooth which can cause pod activation problems (See [Troubleshooting](#troubleshooting) for advice on other Bluetooth issues) specifically the [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues) section.
-    - The phone must run **Android 12 or newer**, with **AAPS** built and installed using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions. Always run the latest released version.
-- A supported [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
+- **Ένα συμβατό τηλέφωνο Android** με Bluetooth Low Energy (BLE) (δείτε [Τηλέφωνα](../Getting-Started/Phones.md) για περισσότερες πληροφορίες). Οι παρακάτω πληροφορίες θα σας βοηθήσουν επίσης σε άλλα σημαντικά θέματα για να ενεργοποιήσετε και να χρησιμοποιήσετε σωστά το DASH σε ένα συμβατό τηλέφωνο:
+    -  Ο οδηγός Omnipod Dash του **AAPS** συνδέεται με το Pod DASH μέσω Bluetooth.  
+      Το **AAPS** δημιουργεί αυτόματα μια νέα σύνδεση Bluetooth με το Pod κάθε φορά που χρειάζεται να στείλει μια εντολή (π.χ. ένα bolus). Μετά την αποστολή της εντολής, η σύνδεση Bluetooth κλείνει αμέσως.
+       - **ΣΗΜΕΙΩΣΗ:**
+         - Η σύνδεση Bluetooth μπορεί να διακοπεί ή να διαταραχθεί από άλλες συσκευές Bluetooth που είναι συνδεδεμένες με το τηλέφωνο όπου τρέχει το **AAPS**, όπως ακουστικά κ.λπ. Τέτοιες συσκευές μπορεί να προκαλέσουν σφάλματα σύνδεσης ή προβλήματα ενεργοποίησης του Pod σε ορισμένα μοντέλα τηλεφώνων. Καλό είναι να δείτε τη λίστα [δοκιμασμένων συνδυασμών υλικού](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vScCNaIguEZVTVFAgpv1kXHdsHl3fs6xT6RB2Z1CeVJ561AvvqGwxMhlmSHk4J056gMCAQE02sAWJvT/pubhtml?gid=683363241&single=true) με γνωστές λειτουργικές διαμορφώσεις, όταν διαλέγετε τηλέφωνο για το Omnipod DASH.
+         - Υπάρχουν αρκετά γνωστά προβλήματα με το Bluetooth που μπορεί να προκαλέσουν προβλήματα στην ενεργοποίηση του Pod (δείτε το [Αντιμετώπιση προβλημάτων](#troubleshooting) για συμβουλές για άλλα θέματα Bluetooth), και ειδικά το τμήμα [Προβλήματα σχετικά με το Bluetooth](#omnipod-dash-bluetooth-related-issues).
+    - Το τηλέφωνο πρέπει να έχει **Android 12 ή νεότερο**, με το **AAPS** δημιουργημένο και εγκατεστημένο σύμφωνα με τις οδηγίες [**Δημιουργία του AAPS**](../SettingUpAaps/BuildingAaps.md). Χρησιμοποιείτε πάντα την τελευταία κυκλοφορημένη έκδοση.
+- Ένα υποστηριζόμενο [**σύστημα συνεχούς καταγραφής γλυκόζης (CGM)**](../Getting-Started/CompatiblesCgms.md)
 
-The instructions below explain how to activate a new pod session using **AAPS**. You should wait for your current Pod to be close expiry, as you will need to activate a new Pod with **AAPS**. Once a pod is de-activated it cannot be reused/re-activated, the de-activation is final.
+Οι παρακάτω οδηγίες εξηγούν πώς να ξεκινήσετε μια νέα περίοδο χρήσης Pod με το **AAPS**. Καλό είναι να περιμένετε μέχρι το τρέχον Pod σας να πλησιάσει στη λήξη, γιατί θα χρειαστεί να ενεργοποιήσετε ένα νέο Pod με το **AAPS**. Όταν ένα Pod απενεργοποιηθεί, δεν μπορεί να χρησιμοποιηθεί ή να ενεργοποιηθεί ξανά. Η απενεργοποίηση είναι οριστική.
 
-## Before you begin
+## Πριν ξεκινήσετε
 
-Ensure you have read and understand this whole guide, have read and understand the **Before You Begin** section, as well as  **[Omnipod and AAPS Constraints and Issues](#omnipod-dash-constraints)** to avoid running into a known problem.
+Βεβαιωθείτε ότι έχετε διαβάσει και καταλάβει όλο αυτόν τον οδηγό, το τμήμα **Πριν ξεκινήσετε**, καθώς και το **[Περιορισμοί και προβλήματα του Omnipod και του AAPS](#omnipod-dash-constraints)**, για να μην πέσετε σε κάποιο γνωστό πρόβλημα.
 
-### **SAFETY FIRST** - You **SHOULD NOT** try to connect **AAPS** to a pod for the first time without having access to all of the following:
-1. Extra pods (3 or more spare)
-2. Spare Insulin and MDI equipment
-3. A working Omnipod PDM (In case **AAPS** fails)
-4. Supported Phones are a must! (See [Hardware/Software Requirements](#hardware-software-requirements))
-5. Correct version of AAPS built and installed
+### **ΑΣΦΑΛΕΙΑ ΠΡΩΤΑ ΑΠ' ΟΛΑ** - **ΔΕΝ ΠΡΕΠΕΙ** να συνδέσετε το **AAPS** με ένα Pod για πρώτη φορά, αν δεν έχετε πρόσβαση σε όλα τα παρακάτω:
+1. Επιπλέον Pod (3 ή περισσότερα εφεδρικά)
+2. Εφεδρική ινσουλίνη και εξοπλισμός για πολλαπλές ενέσεις (MDI)
+3. Ένα PDM Omnipod που λειτουργεί (σε περίπτωση που το **AAPS** αποτύχει)
+4. Τα υποστηριζόμενα τηλέφωνα είναι απαραίτητα! (Δείτε [Απαιτήσεις υλικού/λογισμικού](#hardware-software-requirements))
+5. Η σωστή έκδοση του AAPS, δημιουργημένη και εγκατεστημένη
 
-### Your Omnipod Dash PDM will become redundant after the AAPS Dash driver activates your pod.
-- Before using **AAPS** you or your care giver would have had to manage the Pod using the Omnipod PDM (or in some regions a Phone app) to send commands to your DASH (e.g a Bolus).
-- The DASH can only facilitate a single Bluetooth device (e.g PDM or Phone) connection to manage and send commands.
-- The device that successfully activates the pod is the only device allowed to communicate with that Pod from that point forward. This means that once you activate a DASH with your Android phone using **AAPS**, **you will no longer be able to use your PDM with that pod!** For the time that Pod is active the **AAPS** Dash driver running on your Android phone is now the new PDM for your pod.
-- **DO NOT Throw away your PDM!** It is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or **AAPS** is not working correctly.
+### Το PDM του Omnipod Dash δεν θα χρειάζεται πια, αφού ο οδηγός Dash του AAPS ενεργοποιήσει το Pod σας.
+- Πριν χρησιμοποιήσετε το **AAPS**, εσείς ή ο φροντιστής σας διαχειριζόσασταν το Pod με το PDM του Omnipod (ή σε ορισμένες χώρες με μια εφαρμογή τηλεφώνου) για να στέλνετε εντολές στο DASH (π.χ. ένα bolus).
+- Το DASH μπορεί να συνδεθεί μόνο με μία συσκευή Bluetooth (π.χ. PDM ή τηλέφωνο) για διαχείριση και αποστολή εντολών.
+- Η συσκευή που ενεργοποιεί με επιτυχία το Pod είναι από εκεί και πέρα η μόνη συσκευή που επιτρέπεται να επικοινωνεί με αυτό το Pod. Αυτό σημαίνει ότι όταν ενεργοποιήσετε ένα DASH με το τηλέφωνο Android σας μέσω του **AAPS**, **δεν θα μπορείτε πια να χρησιμοποιήσετε το PDM σας με αυτό το Pod!** Όσο αυτό το Pod είναι ενεργό, ο οδηγός Dash του **AAPS** στο τηλέφωνό σας Android είναι πλέον το νέο PDM του Pod σας.
+- **ΜΗΝ πετάξετε το PDM σας!** Συνιστάται να το κρατάτε ως εφεδρικό και για έκτακτες ανάγκες, για παράδειγμα αν χάσετε το τηλέφωνό σας ή αν το **AAPS** δεν λειτουργεί σωστά.
 
-### Your pod **WILL NOT** stop delivering insulin when it is not connected to AAPS.
-Default basal rates are programmed on the pod on activation as defined in the current active [**Profile**](../SettingUpAaps/YourAapsProfile.md).  
-As long as **AAPS** is operational it will send basal rate adjustment commands that run for a maximum of 120 minutes.  
-When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod ➜ phone distance) the pod will automatically fall back to default basal rates as defined in your [**Profile**](../SettingUpAaps/YourAapsProfile.md).
+### Το Pod σας **ΔΕΝ** θα σταματήσει τη χορήγηση ινσουλίνης όταν δεν είναι συνδεδεμένο με το AAPS.
+Οι προεπιλεγμένοι βασικοί ρυθμοί προγραμματίζονται στο Pod κατά την ενεργοποίηση, όπως ορίζονται στο τρέχον ενεργό [**Προφίλ**](../SettingUpAaps/YourAapsProfile.md).  
+Όσο το **AAPS** λειτουργεί, θα στέλνει εντολές προσαρμογής του βασικού ρυθμού που διαρκούν το πολύ 120 λεπτά.  
+Όταν για κάποιο λόγο το Pod δεν λαμβάνει νέες εντολές (για παράδειγμα επειδή χάθηκε η επικοινωνία λόγω απόστασης Pod ➜ τηλεφώνου), το Pod επιστρέφει αυτόματα στους προεπιλεγμένους βασικούς ρυθμούς, όπως ορίζονται στο [**Προφίλ**](../SettingUpAaps/YourAapsProfile.md) σας.
 
-### AAPS Profile(s) do not support 30 minute basal rate time frames
-If you are new to **AAPS** and are setting up your basal rate [**Profile**](../SettingUpAaps/YourAapsProfile.md) for the first time, please be aware that basal rates starting on a half-hour basis are not supported. For example, on your Omnipod PDM, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, it is not possible replicate this exact Basal **Profile** in **AAPS**.  
-You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the DASH hardware itself supports the 30 minute basal rate **Profile** increments, **AAPS** does NOT support this feature.
+### Τα προφίλ του AAPS δεν υποστηρίζουν χρονικά διαστήματα βασικού ρυθμού των 30 λεπτών
+Αν είστε νέοι στο **AAPS** και ρυθμίζετε το [**Προφίλ**](../SettingUpAaps/YourAapsProfile.md) βασικού ρυθμού για πρώτη φορά, να ξέρετε ότι βασικοί ρυθμοί που ξεκινούν στη μισή ώρα δεν υποστηρίζονται. Για παράδειγμα, αν στο PDM του Omnipod έχετε βασικό ρυθμό 1,1 μονάδες που ξεκινά στις 09:30 και διαρκεί 2 ώρες, μέχρι τις 11:30, δεν μπορείτε να φτιάξετε ακριβώς το ίδιο βασικό **Προφίλ** στο **AAPS**.  
+Θα πρέπει να αλλάξετε αυτόν τον βασικό ρυθμό των 1,1 μονάδων στο χρονικό διάστημα 9:00-11:00 ή 10:00-12:00. Παρόλο που το ίδιο το υλικό του DASH υποστηρίζει βήματα 30 λεπτών στο βασικό **Προφίλ**, το **AAPS** ΔΕΝ υποστηρίζει αυτή τη λειτουργία.
 
-### 0U/h Profile basal rates are NOT supported in AAPS
-While the DASH does support a zero basal rate, **AAPS** uses multiples of the user's **Profile** basal rate to determine automated treatment; it cannot function with a zero basal rate.  
-Instead a temporary zero basal rate can be achieved through the "Disconnect pump" function, or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.  
-**NOTE:** The lowest basal rate allowed by the DASH in **AAPS** is 0.05U/h.
+### Βασικοί ρυθμοί 0 U/h στο προφίλ ΔΕΝ υποστηρίζονται στο AAPS
+Αν και το DASH υποστηρίζει μηδενικό βασικό ρυθμό, το **AAPS** χρησιμοποιεί πολλαπλάσια του βασικού ρυθμού του **Προφίλ** του χρήστη για να αποφασίσει την αυτόματη θεραπεία. Γι' αυτό δεν μπορεί να λειτουργήσει με μηδενικό βασικό ρυθμό.  
+Αντί γι' αυτό, ένας προσωρινός μηδενικός βασικός ρυθμός μπορεί να γίνει με τη λειτουργία «Αποσύνδεση αντλίας» ή με συνδυασμό απενεργοποίησης κυκλώματος/προσωρινού βασικού ρυθμού ή αναστολής κυκλώματος/προσωρινού βασικού ρυθμού.  
+**ΣΗΜΕΙΩΣΗ:** Ο χαμηλότερος βασικός ρυθμός που επιτρέπει το DASH στο **AAPS** είναι 0,05 U/h.
 
-## Selecting Dash in AAPS
+## Επιλογή του Dash στο AAPS
 
-There are **two** ways to select the Omnipod DASH driver in **AAPS**:
+Υπάρχουν **δύο** τρόποι να επιλέξετε τον οδηγό Omnipod DASH στο **AAPS**:
 
-### Option 1: New installations
+### Επιλογή 1: Νέες εγκαταστάσεις
 
-When you install **AAPS** for the first time, the **Setup Wizard** guides you through the key features and installation requirements of **AAPS**. When you reach the **Pump** step, select **Omnipod Dash**.
+Όταν εγκαθιστάτε το **AAPS** για πρώτη φορά, ο **Οδηγός εγκατάστασης** σας καθοδηγεί στις βασικές λειτουργίες και στις απαιτήσεις εγκατάστασης του **AAPS**. Όταν φτάσετε στο βήμα **Αντλία**, επιλέξτε **Omnipod Dash**.
 
-![The Pump step of the setup wizard with Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
+![Το βήμα Αντλία του οδηγού εγκατάστασης με το Omnipod Dash](../images/setup-wizard/Wizard-Pump-Omnipod.png)
 
-If you are not sure yet, you can select **Virtual Pump** for now and select **Omnipod Dash** later, after setting up **AAPS** (see Option 2).
+Αν δεν είστε ακόμα σίγουροι, μπορείτε να επιλέξετε προς το παρόν **Εικονική Αντλία** και να επιλέξετε **Omnipod Dash** αργότερα, αφού ρυθμίσετε το **AAPS** (δείτε την Επιλογή 2).
 
 (omnipod-dash-option-2-config-builder)=
-### Option 2: The Configuration screen
+### Επιλογή 2: Η οθόνη Διαμόρφωση
 
-On an existing installation you can select the **Omnipod Dash** pump from the **Configuration** screen:
+Σε μια υπάρχουσα εγκατάσταση μπορείτε να επιλέξετε την αντλία **Omnipod Dash** από την οθόνη **Διαμόρφωση**:
 
-1. Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration**.
-2. Tap **Pump** and select the radio button of **Omnipod Dash** (*"Pump integration for Omnipod Dash (the new, Bluetooth-enabled model with a blue needle cap)"*).
+1. Ανοίξτε το **μενού** (☰) πάνω αριστερά στην κύρια οθόνη και επιλέξτε **Διαμόρφωση**.
+2. Πατήστε **Αντλία** και επιλέξτε το κουμπί επιλογής του **Omnipod Dash** (*«Ενσωμάτωση αντλίας Omnipod Dash (το νέο μοντέλο με μπλε καπάκι βελόνας - Bluetooth ενεργοποιημένο)»*).
 
-3. Once it is selected, the **Omnipod Dash** card shows two buttons:
-   - **Settings** opens the [Dash settings](#omnipod-dash-settings).
-   - **Open plugin** opens the [DASH pump screen](#omnipod-dash-tab).
+3. Όταν επιλεγεί, η κάρτα **Omnipod Dash** δείχνει δύο κουμπιά:
+   - Το **Ρυθμίσεις** ανοίγει τις [ρυθμίσεις Dash](#omnipod-dash-settings).
+   - Το **Άνοιγμα πρόσθετου** ανοίγει την [οθόνη αντλίας DASH](#omnipod-dash-tab).
 
-   ![The Omnipod Dash plugin enabled in Configuration > Pump](../images/v4/Pumps/dash_enabled.png)
+   ![Το πρόσθετο Omnipod Dash ενεργοποιημένο στη Διαμόρφωση > Αντλία](../images/v4/Pumps/dash_enabled.png)
 
-### Verification of Omnipod Driver Selection
+### Έλεγχος της επιλογής του οδηγού Omnipod
 
-To check that **Omnipod Dash** is selected, open **Manage** (bottom navigation of the main screen) and tap **Pump**. The DASH pump screen opens, as shown in the next section.
+Για να ελέγξετε ότι έχει επιλεγεί το **Omnipod Dash**, ανοίξτε τη **Διαχείριση** (κάτω γραμμή πλοήγησης της κύριας οθόνης) και πατήστε **Αντλία**. Ανοίγει η οθόνη αντλίας DASH, όπως φαίνεται στο επόμενο τμήμα.
 
 (omnipod-dash-tab)=
 
-## The DASH pump screen
+## Η οθόνη της αντλίας DASH
 
-The DASH pump screen is where you manage your pods: activate and deactivate them, refresh the pod status, silence alerts and look at the pod history. Open it with **Manage** > **Pump**, or with **Open plugin** on the **Omnipod Dash** card in **Configuration** > **Pump**.
+Η οθόνη αντλίας DASH είναι το σημείο όπου διαχειρίζεστε τα Pod σας: τα ενεργοποιείτε και απενεργοποιείτε, ανανεώνετε την κατάσταση του Pod, κάνετε σίγαση ειδοποιήσεων και βλέπετε το ιστορικό του Pod. Ανοίξτε την με **Διαχείριση** > **Αντλία** ή με το **Άνοιγμα πρόσθετου** στην κάρτα **Omnipod Dash** στη **Διαμόρφωση** > **Αντλία**.
 
-This is the screen without an active pod:
+Αυτή είναι η οθόνη χωρίς ενεργό Pod:
 
-![The DASH pump screen without an active pod](../images/v4/Pumps/dash_pump_screen.png)
+![Η οθόνη αντλίας DASH χωρίς ενεργό Pod](../images/v4/Pumps/dash_pump_screen.png)
 
-And this is the screen with an active pod:
+Και αυτή είναι η οθόνη με ενεργό Pod:
 
-![The DASH pump screen with an active pod](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
+![Η οθόνη αντλίας DASH με ενεργό Pod](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-The **Settings** (gear) icon in the top-right corner opens the [Dash settings](#omnipod-dash-settings).
+Το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά ανοίγει τις [ρυθμίσεις Dash](#omnipod-dash-settings).
 
-***NOTE:** If a field on the pump screen shows (uncertain), press **Refresh** to update the pod status.*
+***ΣΗΜΕΙΩΣΗ:** Αν ένα πεδίο στην οθόνη της αντλίας δείχνει (αβέβαιο), πατήστε **Ανανέωση** για να ενημερωθεί η κατάσταση του Pod.*
 
-### Fields
+### Πεδία
 
-- **Bluetooth Address:** The Bluetooth address of the pod.
+- **Διεύθυνση Bluetooth:** Η διεύθυνση Bluetooth του Pod.
 
-- **Connection quality:** How reliably **AAPS** connects to the pod, shown as *successful connections / all connection attempts :: success rate*, for example `412/420 :: 98.10 %`. After more than 50 successful connections, the value turns yellow below 90 % and red below 70 %. A low value points to a Bluetooth problem (see [Bluetooth related issues](#omnipod-dash-bluetooth-related-issues)).
+- **Ποιότητα σύνδεσης:** Πόσο αξιόπιστα συνδέεται το **AAPS** με το Pod, ως *επιτυχημένες συνδέσεις / όλες οι προσπάθειες σύνδεσης :: ποσοστό επιτυχίας*, για παράδειγμα `412/420 :: 98.10 %`. Μετά από περισσότερες από 50 επιτυχημένες συνδέσεις, η τιμή γίνεται κίτρινη κάτω από 90% και κόκκινη κάτω από 70%. Μια χαμηλή τιμή δείχνει πρόβλημα με το Bluetooth (δείτε [Προβλήματα σχετικά με το Bluetooth](#omnipod-dash-bluetooth-related-issues)).
 
-- **Delivery Status:** The raw delivery status reported by the pod. This field is shown only in engineering mode builds.
+- **Κατάσταση Παράδοσης:** Η ακατέργαστη κατάσταση χορήγησης που αναφέρει το Pod. Αυτό το πεδίο εμφανίζεται μόνο σε builds με λειτουργία engineering mode.
 
-- **Unique ID:** The unique ID **AAPS** gave to the pod during activation.
+- **Μοναδικό ID:** Το μοναδικό ID που έδωσε το **AAPS** στο Pod κατά την ενεργοποίηση.
 
-- **LOT Number:** The production lot number of the pod.
+- **Αριθμός Παρτίδας:** Ο αριθμός παρτίδας παραγωγής του Pod.
 
-- **Sequence Number:** The sequence number of the pod.
+- **Αριθμός Ακολουθίας:** Ο αριθμός ακολουθίας του Pod.
 
-- **Firmware Version:** The firmware and Bluetooth versions of the pod.
+- **Έκδοση Υλικολογισμικού:** Οι εκδόσεις υλικολογισμικού και Bluetooth του Pod.
 
-- **Time on Pod:** The current time on the pod, with its time zone. The text turns red when the time zone of the pod is different from the time zone of the phone, and yellow when the pod time is more than 10 minutes off.
+- **Ώρα στο Pod:** Η τρέχουσα ώρα στο Pod, με τη ζώνη ώρας του. Το κείμενο γίνεται κόκκινο όταν η ζώνη ώρας του Pod είναι διαφορετική από τη ζώνη ώρας του τηλεφώνου, και κίτρινο όταν η ώρα του Pod διαφέρει περισσότερο από 10 λεπτά.
 
-- **Pod Expires:** The date and time when the pod expires (72 hours after activation). The text turns yellow in the last 4 hours before this time. It never turns red, because the pod keeps delivering insulin after it.
+- **Το Pod Λήγει:** Η ημερομηνία και η ώρα που λήγει το Pod (72 ώρες μετά την ενεργοποίηση). Το κείμενο γίνεται κίτρινο τις τελευταίες 4 ώρες πριν από αυτή την ώρα. Δεν γίνεται ποτέ κόκκινο, γιατί το Pod συνεχίζει να χορηγεί ινσουλίνη και μετά από αυτή.
 
-- **Pod Hard End:** The end of the pod's grace period (8 hours after **Pod Expires**, for a maximum pod life of 80 hours). The text turns yellow when the grace period starts (at **Pod Expires**) and red in the last 4 hours before the hard end. During the grace period it also shows the time left, for example *(17m remaining)*. The pod stops delivering insulin at the hard end and must be changed.
+- **Οριστικό τέλος Pod:** Το τέλος της περιόδου χάριτος του Pod (8 ώρες μετά το **Το Pod Λήγει**, για μέγιστη διάρκεια ζωής του Pod 80 ώρες). Το κείμενο γίνεται κίτρινο όταν ξεκινά η περίοδος χάριτος (στο **Το Pod Λήγει**) και κόκκινο τις τελευταίες 4 ώρες πριν από το οριστικό τέλος. Κατά την περίοδο χάριτος δείχνει επίσης τον χρόνο που απομένει, για παράδειγμα *(Απομένουν 17 λεπ.)*. Το Pod σταματά να χορηγεί ινσουλίνη στο οριστικό τέλος και πρέπει να αλλαχθεί.
 
-- **Pod Status:** The state of the pod: **No Active Pod**, **Setup in progress**, **Running**, **Suspended** or, after a pod fault, **ALARM**.
+- **Κατάσταση Pod:** Η κατάσταση του Pod: **Χωρίς Ενεργό Pod**, **Ρύθμιση σε εξέλιξη**, **Σε λειτουργία**, **Σε αναστολή** ή, μετά από σφάλμα του Pod, **ALARM**.
 
-- **Last Connection:** How long ago **AAPS** last communicated with the pod.
+- **Τελευταία Σύνδεση:** Πόσο πριν επικοινώνησε τελευταία φορά το **AAPS** με το Pod.
 
-  - *Moments ago* - less than 10 seconds ago.
+  - *Στιγμές πριν* - λιγότερο από 10 δευτερόλεπτα πριν.
 
-  - *Less than a minute ago* - between 10 and 60 seconds ago.
+  - *Λιγότερο από 1 λεπτό πριν* - από 10 έως 60 δευτερόλεπτα πριν.
 
-  - *XX minutes ago* - more than 1 minute ago (and *X hours and XX minutes ago* after an hour).
+  - *XX λεπτά πριν* - περισσότερο από 1 λεπτό πριν (και *X ώρες και XX λεπτά πριν* μετά από μία ώρα).
 
-- **Last bolus:** The amount of the last bolus sent to the pod and how long ago it was given. An unconfirmed bolus is marked (uncertain).
+- **Τελευταίο Bolus:** Η ποσότητα του τελευταίου bolus που στάλθηκε στο Pod και πόσο πριν δόθηκε. Ένα bolus που δεν επιβεβαιώθηκε σημειώνεται ως (αβέβαιο).
 
-- **Base Basal Rate:** The basal rate programmed for the current time in your basal **Profile**.
+- **Βάση Βασικού Ρυθμού:** Ο βασικός ρυθμός που είναι προγραμματισμένος για την τρέχουσα ώρα στο βασικό **Προφίλ** σας.
 
-- **Temp Basal Rate:** The temporary basal rate (TBR) that is currently running, with its start time and duration. This field is only shown while a TBR is running.
+- **Προσωρινός Βασικός Ρυθμός:** Ο προσωρινός βασικός ρυθμός (TBR) που τρέχει τώρα, με την ώρα έναρξης και τη διάρκειά του. Αυτό το πεδίο εμφανίζεται μόνο όσο τρέχει ένας TBR.
 
-- **Reservoir:** Shows *Over 50 U left* when more than 50 units are left in the reservoir. Below 50 units, the exact amount is shown. The value turns red below 20 units.
+- **Δεξαμενή:** Δείχνει *Πάνω από 50 U* όταν στη δεξαμενή έχουν μείνει περισσότερες από 50 μονάδες. Κάτω από 50 μονάδες, εμφανίζεται η ακριβής ποσότητα. Η τιμή γίνεται κόκκινη κάτω από 20 μονάδες.
 
-- **Total Delivered:** The total amount of insulin delivered from the reservoir. This includes the insulin used for priming.
+- **Σύνολο Χορηγήσεων:** Η συνολική ποσότητα ινσουλίνης που χορηγήθηκε από τη δεξαμενή. Περιλαμβάνει και την ινσουλίνη που χρησιμοποιήθηκε για την πλήρωση.
 
-- **Active Pod Alerts:** Alerts that are currently active on the pod, for example *Pod will expire soon* or *Low Reservoir*.
+- **Ειδοποιήσεις Ενεργού Pod:** Ειδοποιήσεις που είναι ενεργές τώρα στο Pod, για παράδειγμα *Το Pod θα λήξει σύντομα* ή *Χαμηλή Δεξαμενή*.
 
-- **Errors:** The pod fault, if the pod has failed, shown in red as *Pod Fault:* followed by the fault code and name, for example *Pod Fault: 020 ALARM_OCCLUDED*. Review the [Pod History](#omnipod-dash-view-pod-history) and the log files for past errors and more detailed information. See [Pod Failures](#omnipod-dash-pod-failures).
+- **Σφάλματα:** Το σφάλμα του Pod, αν το Pod έχει αποτύχει, με κόκκινο ως *Σφάλμα Pod:* και μετά τον κωδικό και το όνομα του σφάλματος, για παράδειγμα *Σφάλμα Pod: 020 ALARM_OCCLUDED*. Δείτε το [Ιστορικό Pod](#omnipod-dash-view-pod-history) και τα αρχεία καταγραφής για παλαιότερα σφάλματα και πιο λεπτομερείς πληροφορίες. Δείτε [Αποτυχίες Pod](#omnipod-dash-pod-failures).
 
-- **PDM Notification:** Shown only after a pod fault. It shows the fault the way the Omnipod PDM would have shown it: a title (for example *Occlusion Detected*, *Empty Reservoir* or *Pod Expired*), what happened (for example *Insulin delivery stopped. Change Pod now.*) and a *Ref:* code.
+- **Ειδοποίηση PDM:** Εμφανίζεται μόνο μετά από σφάλμα του Pod. Δείχνει το σφάλμα όπως θα το έδειχνε το PDM του Omnipod: έναν τίτλο (για παράδειγμα *Εντοπίστηκε έμφραξη*, *Άδεια δεξαμενή* ή *Το Pod έληξε*), τι συνέβη (για παράδειγμα *Η χορήγηση ινσουλίνης σταμάτησε. Αλλάξτε τώρα το Pod.*) και έναν κωδικό *Ref:*.
 
-### Buttons
+### Κουμπιά
 
-The buttons at the bottom of the pump screen change with the state of the pod. Only the buttons that make sense at that moment are shown.
+Τα κουμπιά στο κάτω μέρος της οθόνης της αντλίας αλλάζουν ανάλογα με την κατάσταση του Pod. Εμφανίζονται μόνο τα κουμπιά που έχουν νόημα εκείνη τη στιγμή.
 
-- **Refresh:** Asks the pod for its current status.
-  - *Use it to update the pod status and to clear fields that show (uncertain).*
-  - *See the [Troubleshooting](#omnipod-dash-troubleshooting) section below for more information.*
+- **Ανανέωση:** Ζητά από το Pod την τρέχουσα κατάστασή του.
+  - *Χρησιμοποιήστε το για να ενημερώσετε την κατάσταση του Pod και να καθαρίσετε πεδία που δείχνουν (αβέβαιο).*
+  - *Δείτε το τμήμα [Αντιμετώπιση προβλημάτων](#omnipod-dash-troubleshooting) παρακάτω για περισσότερες πληροφορίες.*
 
-- **Silence Alerts:** Stops the pod alert beeps (for example pod expiry or low reservoir). Shown only while the pod has an active alert. See [Silencing Pod Alerts](#omnipod-dash-silencing-pod-alerts).
+- **Σίγαση Ειδοποιήσεων:** Σταματά τα μπιπ των ειδοποιήσεων του Pod (για παράδειγμα λήξη του Pod ή χαμηλή δεξαμενή). Εμφανίζεται μόνο όσο το Pod έχει ενεργή ειδοποίηση. Δείτε [Σίγαση ειδοποιήσεων του Pod](#omnipod-dash-silencing-pod-alerts).
 
-- **Resume Delivery:** Resumes insulin delivery on a suspended pod. Shown only when delivery is suspended. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
+- **Συνέχιση Έγχυσης:** Συνεχίζει τη χορήγηση ινσουλίνης σε ένα Pod που είναι σε αναστολή. Εμφανίζεται μόνο όταν η χορήγηση είναι σε αναστολή. Δείτε [Συνέχιση της χορήγησης ινσουλίνης](#omnipod-dash-resuming-insulin-delivery).
 
-- **Set time:** Updates the pod to the time zone of your phone by sending your basal **Profile** again. Shown only when the time zone of the pod differs from the time zone of your phone.
+- **Ρύθμιση ώρας:** Ενημερώνει το Pod στη ζώνη ώρας του τηλεφώνου σας, στέλνοντας ξανά το βασικό **Προφίλ** σας. Εμφανίζεται μόνο όταν η ζώνη ώρας του Pod διαφέρει από τη ζώνη ώρας του τηλεφώνου σας.
 
-- [**Activate Pod**](#omnipod-dash-activate-pod): Primes and activates a new pod. Shown when no pod is active.
+- [**Ενεργοποίηση Pod**](#omnipod-dash-activate-pod): Κάνει πλήρωση και ενεργοποίηση ενός νέου Pod. Εμφανίζεται όταν δεν υπάρχει ενεργό Pod.
 
-- [**Deactivate Pod**](#omnipod-dash-deactivate-pod): Deactivates the active pod. Shown as soon as a pod is paired with **AAPS**, also when an activation stopped part-way (for example because the pod failed during activation). **AAPS** asks you to confirm before it deactivates the pod.
+- [**Απενεργοποίηση Pod**](#omnipod-dash-deactivate-pod): Απενεργοποιεί το ενεργό Pod. Εμφανίζεται μόλις ένα Pod γίνει σύζευξη με το **AAPS**, και επίσης όταν μια ενεργοποίηση σταμάτησε στη μέση (για παράδειγμα επειδή το Pod απέτυχε κατά την ενεργοποίηση). Το **AAPS** σας ζητά επιβεβαίωση πριν απενεργοποιήσει το Pod.
 
-- **Play Test Beep:** Makes the pod play a single test beep.
+- **Δοκιμαστικός ήχος:** Το Pod παίζει ένα δοκιμαστικό μπιπ.
 
-- [**Pod History**](#omnipod-dash-view-pod-history): Shows the activity history of the active pod.
+- [**Ιστορικό Pod**](#omnipod-dash-view-pod-history): Δείχνει το ιστορικό δραστηριότητας του ενεργού Pod.
 
-- **Discard Pod:** Removes an unfinished pod from **AAPS**. Shown only when a pod activation stopped part-way. **AAPS** asks you to confirm. After discarding, **AAPS** can no longer communicate with that pod: remove it from your body.
+- **Απόρριψη Pod:** Αφαιρεί ένα Pod με μισοτελειωμένη ενεργοποίηση από το **AAPS**. Εμφανίζεται μόνο όταν μια ενεργοποίηση Pod σταμάτησε στη μέση. Το **AAPS** σας ζητά επιβεβαίωση. Μετά την απόρριψη, το **AAPS** δεν μπορεί πια να επικοινωνήσει με αυτό το Pod: αφαιρέστε το από το σώμα σας.
 
-![The Pod Management menu](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+![Το μενού Διαχείριση Pod](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, which had a separate **Pod Management** menu. In **AAPS** 4 all these actions, including **Activate Pod**, **Deactivate Pod**, **Play Test Beep** and **Pod History**, are buttons with text labels directly on the pump screen.
+Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**, που είχε ξεχωριστό μενού **Διαχείριση Pod**. Στο **AAPS** 4 όλες αυτές οι ενέργειες, μαζί με τα **Ενεργοποίηση Pod**, **Απενεργοποίηση Pod**, **Δοκιμαστικός ήχος** και **Ιστορικό Pod**, είναι κουμπιά με κείμενο απευθείας στην οθόνη της αντλίας.
 ```
 
 (omnipod-dash-activate-pod)=
 
-## Activate Pod
+## Ενεργοποίηση Pod
 
-1. Open the DASH pump screen (**Manage** > **Pump**) and press **Activate Pod**. The activation wizard opens.
+1. Ανοίξτε την οθόνη αντλίας DASH (**Διαχείριση** > **Αντλία**) και πατήστε **Ενεργοποίηση Pod**. Ανοίγει ο οδηγός ενεργοποίησης.
 
    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Activate Pod** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 το **Ενεργοποίηση Pod** είναι κουμπί απευθείας στην οθόνη αντλίας DASH και όχι στο μενού **Διαχείριση Pod**.
    ```
 
-   If you have never activated a **Profile** in **AAPS** before, the wizard first shows the **Profile required** step: select the profile to apply on activation and continue.
+   Αν δεν έχετε ενεργοποιήσει ποτέ πριν ένα **Προφίλ** στο **AAPS**, ο οδηγός δείχνει πρώτα το βήμα **Απαιτείται προφίλ**: επιλέξτε το προφίλ που θα εφαρμοστεί κατά την ενεργοποίηση και συνεχίστε.
 
-2. The **Fill Pod** step is shown. Fill a new pod with enough insulin for 3 days, **at least 80 units**. Listen for two beeps from the pod: they mean the minimum amount of 80 units has been filled. Empty the fill syringe completely, even after hearing the two beeps. Do not remove the pod's needle cap yet.
+2. Εμφανίζεται το βήμα **Γέμισμα Pod**. Γεμίστε ένα νέο Pod με αρκετή ινσουλίνη για 3 ημέρες, **τουλάχιστον 80 μονάδες**. Ακούστε για δύο μπιπ από το Pod: σημαίνουν ότι έχει γεμίσει η ελάχιστη ποσότητα των 80 μονάδων. Αδειάστε τελείως τη σύριγγα γεμίσματος, ακόμα και αφού ακούσετε τα δύο μπιπ. Μην αφαιρέσετε ακόμα το καπάκι της βελόνας του Pod.
 
-   ***NOTE:** When you calculate the amount of insulin you need for 3 days, remember that priming the pod uses about 3-10 units.*
+   ***ΣΗΜΕΙΩΣΗ:** Όταν υπολογίζετε την ποσότητα ινσουλίνης που χρειάζεστε για 3 ημέρες, να θυμάστε ότι η πλήρωση του Pod χρησιμοποιεί περίπου 3-10 μονάδες.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)
 
    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-   Make sure that the new pod and the phone running **AAPS** are close to each other and press **Next**.
+   Βεβαιωθείτε ότι το νέο Pod και το τηλέφωνο με το **AAPS** είναι κοντά το ένα στο άλλο και πατήστε **Επόμενο**.
 
-3. If you use more than one insulin in **AAPS**, the **Select Insulin** step is shown. It shows the **Currently active** insulin. If you filled the pod with a different insulin, press **Change** and select it. **AAPS** applies a **Profile Switch** with this insulin when the activation is finished. Press **Next**.
+3. Αν χρησιμοποιείτε περισσότερες από μία ινσουλίνες στο **AAPS**, εμφανίζεται το βήμα **Επιλογή ινσουλίνης**. Δείχνει την ινσουλίνη **Ενεργή τώρα**. Αν γεμίσατε το Pod με διαφορετική ινσουλίνη, πατήστε **Αλλαγή** και επιλέξτε την. Το **AAPS** κάνει μια **Αλλαγή Προφίλ** με αυτή την ινσουλίνη όταν τελειώσει η ενεργοποίηση. Πατήστε **Επόμενο**.
 
-   ![The Select Insulin step](../images/v4/Pumps/dash_wizard_select_insulin.png)
+   ![Το βήμα Επιλογή ινσουλίνης](../images/v4/Pumps/dash_wizard_select_insulin.png)
 
-4. On the **Initialize Pod** step, **AAPS** pairs with the new pod and primes it. You hear a click followed by a series of ticking sounds as the pod primes itself. When this has finished successfully, the **Next** button appears. Press **Next**.
+4. Στο βήμα **Αρχικοποίηση Pod**, το **AAPS** κάνει σύζευξη με το νέο Pod και πλήρωση του Pod. Ακούτε ένα κλικ και μετά μια σειρά από ήχους «τικ» καθώς το Pod κάνει πλήρωση. Όταν αυτό τελειώσει με επιτυχία, εμφανίζεται το κουμπί **Επόμενο**. Πατήστε **Επόμενο**.
 
    ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-   ***NOTE**: If an error message such as _Scan failed_ or _'Could not find an available pod for activation'_ appears (this can happen), do not panic. Press **Retry**. In most cases the activation then continues successfully.*
+   ***ΣΗΜΕΙΩΣΗ**: Αν εμφανιστεί ένα μήνυμα σφάλματος όπως _Η αναζήτηση απέτυχε_ ή _'Could not find an available pod for activation'_ (αυτό μπορεί να συμβεί), μην πανικοβληθείτε. Πατήστε **Επανάληψη**. Στις περισσότερες περιπτώσεις η ενεργοποίηση μετά συνεχίζεται με επιτυχία.*
 
    ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-   If the pod has failed (for example because its activation time was exceeded), **Deactivate Pod** is shown instead of **Retry**. Use it and start again with a new pod.
+   Αν το Pod έχει αποτύχει (για παράδειγμα επειδή πέρασε ο χρόνος ενεργοποίησής του), εμφανίζεται το **Απενεργοποίηση Pod** αντί για το **Επανάληψη**. Χρησιμοποιήστε το και ξεκινήστε ξανά με νέο Pod.
 
-   If you press **Cancel** before the activation is finished, **AAPS** asks you to confirm that you want to exit. Press **OK** to leave the wizard, or **Cancel** to stay.
+   Αν πατήσετε **Ακύρωση** πριν τελειώσει η ενεργοποίηση, το **AAPS** σας ζητά να επιβεβαιώσετε ότι θέλετε να βγείτε. Πατήστε **ΟΚ** για να βγείτε από τον οδηγό ή **Ακύρωση** για να μείνετε.
 
-   ![The Exit confirmation](../images/v4/Pumps/dash_wizard_exit_confirm.png)
+   ![Η επιβεβαίωση εξόδου](../images/v4/Pumps/dash_wizard_exit_confirm.png)
 
-5. If you manage pump site rotation in **AAPS** (**Manage pump site rotation** in the [Site Rotation](#Aapsscreens-site-rotation) settings), the **Site location** step is shown. Select where you are going to place the pod on the body diagram and press **Next**, or press **Skip**.
+5. Αν διαχειρίζεστε την εναλλαγή σημείων της αντλίας στο **AAPS** (**Διαχείριση εναλλαγής σημείων αντλίας** στις ρυθμίσεις [Εναλλαγή σημείων](#Aapsscreens-site-rotation)), εμφανίζεται το βήμα **Σημείο τοποθέτησης**. Επιλέξτε στο διάγραμμα του σώματος πού θα τοποθετήσετε το Pod και πατήστε **Επόμενο** ή πατήστε **Παράλειψη**.
 
-   ![The Site location step](../images/v4/Pumps/dash_wizard_site_location.png)
+   ![Το βήμα Σημείο τοποθέτησης](../images/v4/Pumps/dash_wizard_site_location.png)
 
-6. Next, prepare the infusion site for the new pod. Wash your hands to avoid any risk of infection. Clean the infusion site with soap and water or an alcohol wipe, and let the skin air dry completely before you continue. If the adhesive irritates your skin, consider using a barrier wipe or barrier spray.
+6. Μετά, προετοιμάστε το σημείο έγχυσης για το νέο Pod. Πλύνετε τα χέρια σας για να αποφύγετε κάθε κίνδυνο μόλυνσης. Καθαρίστε το σημείο έγχυσης με σαπούνι και νερό ή με μαντηλάκι οινοπνεύματος, και αφήστε το δέρμα να στεγνώσει τελείως στον αέρα πριν συνεχίσετε. Αν η κόλλα ερεθίζει το δέρμα σας, σκεφτείτε να χρησιμοποιήσετε προστατευτικό μαντηλάκι ή σπρέι (barrier).
 
-   On the **Attach Pod** step, remove the pod's blue plastic needle cap. If the cannula or anything else sticks out of the pod, or it looks unusual, **STOP**: press **Cancel** and start again with a new pod. If everything looks **OK**, take off the white paper backing from the adhesive and stick the pod to the chosen site on your body.
+   Στο βήμα **Τοποθέτηση Pod**, αφαιρέστε το μπλε πλαστικό καπάκι της βελόνας του Pod. Αν ο καθετήρας ή κάτι άλλο εξέχει από το Pod, ή αν το Pod φαίνεται ασυνήθιστο, **ΣΤΑΜΑΤΗΣΤΕ**: πατήστε **Ακύρωση** και ξεκινήστε ξανά με νέο Pod. Αν όλα φαίνονται **εντάξει**, αφαιρέστε το λευκό χαρτί από την κόλλα και κολλήστε το Pod στο σημείο του σώματος που διαλέξατε.
 
-   When finished, press **Next**.
+   Όταν τελειώσετε, πατήστε **Επόμενο**.
 
    ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-7. A confirmation dialog appears: *When you press OK, the cannula will be inserted.* **Press OK ONLY if you are ready to insert the cannula!**
+7. Εμφανίζεται ένα παράθυρο επιβεβαίωσης: *Όταν πιέσετε OK, θα γίνει εισαγωγή του καθετήρα.* **Πατήστε OK ΜΟΝΟ αν είστε έτοιμοι για την εισαγωγή του καθετήρα!**
 
    ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-8. On the **Insert Cannula** step, **AAPS** sets your basal schedule and the pod inserts the cannula. This can take some time (1-2 minutes maximum). **Be patient!**
+8. Στο βήμα **Εισαγωγή Καθετήρα**, το **AAPS** ορίζει το πρόγραμμα του βασικού ρυθμού σας και το Pod εισάγει τον καθετήρα. Αυτό μπορεί να πάρει λίγο χρόνο (το πολύ 1-2 λεπτά). **Κάντε υπομονή!**
 
-   ***NOTE:** It is good practice to pinch the skin near the cannula insertion point before the cannula is inserted. This helps the needle go in smoothly and lowers your chance of occlusions (blockages).*
+   ***ΣΗΜΕΙΩΣΗ:** Καλό είναι να τσιμπήσετε το δέρμα κοντά στο σημείο εισαγωγής πριν μπει ο καθετήρας. Αυτό βοηθά τη βελόνα να μπει ομαλά και μειώνει την πιθανότητα έμφραξης (απόφραξης).*
 
    ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-9. When the cannula has been inserted successfully, the **Next** button appears. Press **Next**.
+9. Όταν ο καθετήρας εισαχθεί με επιτυχία, εμφανίζεται το κουμπί **Επόμενο**. Πατήστε **Επόμενο**.
 
    ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-10. The **Pod Activated** step is shown. Check that the cannula has been inserted correctly, and change the pod if you think it has not.
+10. Εμφανίζεται το βήμα **Pod Ενεργοποιημένο**. Ελέγξτε ότι ο καθετήρας έχει εισαχθεί σωστά, και αλλάξτε το Pod αν πιστεύετε ότι δεν έχει εισαχθεί σωστά.
 
-    Press **Finish**.
+    Πατήστε **Τέλος**.
 
-    Congratulations! You have now started a new pod session.
+    Συγχαρητήρια! Έχετε τώρα ξεκινήσει μια νέα περίοδο χρήσης Pod.
 
     ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-11. You are back on the DASH pump screen. It now shows the information of your active pod, including the current basal rate, reservoir level, insulin delivered, pod errors and alerts. **Activate Pod** is replaced by **Deactivate Pod**: you cannot activate another pod without deactivating the active pod first.
+11. Επιστρέφετε στην οθόνη αντλίας DASH. Τώρα δείχνει τις πληροφορίες του ενεργού Pod σας, μαζί με τον τρέχοντα βασικό ρυθμό, το επίπεδο της δεξαμενής, την ινσουλίνη που χορηγήθηκε, τα σφάλματα και τις ειδοποιήσεις του Pod. Το **Ενεργοποίηση Pod** αντικαθίσταται από το **Απενεργοποίηση Pod**: δεν μπορείτε να ενεργοποιήσετε άλλο Pod χωρίς να απενεργοποιήσετε πρώτα το ενεργό Pod.
 
-    ***NOTE:** For more details on the information shown, see [The DASH pump screen](#omnipod-dash-tab).*
+    ***ΣΗΜΕΙΩΣΗ:** Για περισσότερες λεπτομέρειες για τις πληροφορίες που εμφανίζονται, δείτε [Η οθόνη αντλίας DASH](#omnipod-dash-tab).*
 
     ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-    ***NOTE:** It is good practice to export your settings AFTER activating the pod. Export your settings after each pod change and once a month. Copy the exported settings file to a cloud storage location (for example Google Drive) or somewhere off your phone in case you lose your phone (see [**Export settings**](../Maintenance/ExportImportSettings.md)).*
+    ***ΣΗΜΕΙΩΣΗ:** Καλό είναι να κάνετε εξαγωγή των ρυθμίσεών σας ΜΕΤΑ την ενεργοποίηση του Pod. Κάντε εξαγωγή των ρυθμίσεών σας μετά από κάθε αλλαγή Pod και μία φορά τον μήνα. Αντιγράψτε το αρχείο εξαγωγής ρυθμίσεων σε μια υπηρεσία cloud (για παράδειγμα Google Drive) ή κάπου εκτός του τηλεφώνου σας, σε περίπτωση που χάσετε το τηλέφωνό σας (δείτε [**Εξαγωγή ρυθμίσεων**](../Maintenance/ExportImportSettings.md)).*
 
-If an earlier activation stopped after the pod was primed, pressing **Activate Pod** continues from the **Attach Pod** step.
+Αν μια προηγούμενη ενεργοποίηση σταμάτησε αφού έγινε η πλήρωση του Pod, πατώντας **Ενεργοποίηση Pod** συνεχίζετε από το βήμα **Τοποθέτηση Pod**.
 
 (omnipod-dash-deactivate-pod)=
 
-## Deactivate Pod
+## Απενεργοποίηση Pod
 
-Under normal circumstances, a pod lasts three days (72 hours), plus a grace period of 8 hours after the pod expiry warning: 80 hours in total.
+Σε κανονικές συνθήκες, ένα Pod διαρκεί τρεις ημέρες (72 ώρες), συν μια περίοδο χάριτος 8 ωρών μετά την προειδοποίηση λήξης του Pod: συνολικά 80 ώρες.
 
-To deactivate a pod (either because it expired or because it failed):
+Για να απενεργοποιήσετε ένα Pod (είτε επειδή έληξε είτε επειδή απέτυχε):
 
-1. Open the DASH pump screen (**Manage** > **Pump**) and press **Deactivate Pod**.
+1. Ανοίξτε την οθόνη αντλίας DASH (**Διαχείριση** > **Αντλία**) και πατήστε **Απενεργοποίηση Pod**.
 
-   ![The Deactivate Pod button on the DASH pump screen](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+   ![Το κουμπί Απενεργοποίηση Pod στην οθόνη αντλίας DASH](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-2. On the **Deactivate Pod** step, press **Next**. A dialog asks *A deactivated Pod can not be used again. Deactivate this Pod now?* Press **OK** to start deactivating the pod, or **Cancel** to keep it. Deactivation suspends all insulin delivery and cannot be undone.
+2. Στο βήμα **Απενεργοποίηση Pod**, πατήστε **Επόμενο**. Ένα παράθυρο ρωτά *Ένα απενεργοποιημένο Pod δεν μπορεί να χρησιμοποιηθεί ξανά. Απενεργοποίηση αυτού του Pod τώρα;* Πατήστε **ΟΚ** για να ξεκινήσει η απενεργοποίηση του Pod ή **Ακύρωση** για να το κρατήσετε. Η απενεργοποίηση σταματά κάθε χορήγηση ινσουλίνης και δεν μπορεί να αναιρεθεί.
 
    ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg)
 
-3. The **Deactivating Pod** step is shown while **AAPS** deactivates the pod. The pod beeps to confirm that deactivation was successful.
+3. Το βήμα **Απενεργοποίηση Pod** εμφανίζεται όσο το **AAPS** απενεργοποιεί το Pod. Το Pod βγάζει μπιπ για να επιβεβαιώσει ότι η απενεργοποίηση έγινε με επιτυχία.
 
    ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the wizard shows its progress as a row of dots at the top instead of a progress bar.
+   Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 ο οδηγός δείχνει την πρόοδό του με μια σειρά από τελείες στο πάνω μέρος αντί για μπάρα προόδου.
    ```
 
-   When deactivation has finished successfully, the **Next** button appears. Press **Next**.
+   Όταν η απενεργοποίηση τελειώσει με επιτυχία, εμφανίζεται το κουμπί **Επόμενο**. Πατήστε **Επόμενο**.
 
    ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-   If deactivation fails, an error message and a **Discard Pod** button are shown. See [Discarding a pod](#omnipod-dash-discard-pod) below before you use it. You can also press **Cancel** and try **Deactivate Pod** again later.
+   Αν η απενεργοποίηση αποτύχει, εμφανίζεται ένα μήνυμα σφάλματος και ένα κουμπί **Απόρριψη Pod**. Διαβάστε το [Απόρριψη ενός Pod](#omnipod-dash-discard-pod) παρακάτω πριν το χρησιμοποιήσετε. Μπορείτε επίσης να πατήσετε **Ακύρωση** και να δοκιμάσετε ξανά το **Απενεργοποίηση Pod** αργότερα.
 
-4. The **Pod Deactivated** step is shown. Remove the pod from your body and press **Finish**.
+4. Εμφανίζεται το βήμα **Pod Απενεργοποιημένο**. Αφαιρέστε το Pod από το σώμα σας και πατήστε **Τέλος**.
 
    ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. You are back on the DASH pump screen. Check that the **Pod Status** field shows **No Active Pod** and that the **Activate Pod** button is shown again.
+5. Επιστρέφετε στην οθόνη αντλίας DASH. Ελέγξτε ότι το πεδίο **Κατάσταση Pod** δείχνει **Χωρίς Ενεργό Pod** και ότι εμφανίζεται ξανά το κουμπί **Ενεργοποίηση Pod**.
 
-   ![The DASH pump screen showing No Active Pod](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
+   ![Η οθόνη αντλίας DASH δείχνει Χωρίς Ενεργό Pod](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 (omnipod-dash-discard-pod)=
 
-### Discarding a pod
+### Απόρριψη ενός Pod
 
-Only discard a pod when all communication with it keeps failing. If **AAPS** can still communicate with the pod, use **Deactivate Pod** instead.
+Απορρίψτε ένα Pod μόνο όταν κάθε επικοινωνία με αυτό αποτυγχάνει συνεχώς. Αν το **AAPS** μπορεί ακόμα να επικοινωνήσει με το Pod, χρησιμοποιήστε το **Απενεργοποίηση Pod**.
 
-- **AAPS** asks you to confirm before it discards the pod.
-- After that, **AAPS** can no longer communicate with that pod.
-- **Insulin delivery has NOT been suspended**, because the pod was not deactivated properly. **Remove the pod from your body!**
-- The **Pod Discarded** step confirms that the pod state has been discarded. Press **Finish**. You can now activate a new pod.
+- Το **AAPS** σας ζητά επιβεβαίωση πριν απορρίψει το Pod.
+- Μετά από αυτό, το **AAPS** δεν μπορεί πια να επικοινωνήσει με αυτό το Pod.
+- **Η χορήγηση ινσουλίνης ΔΕΝ έχει σταματήσει**, γιατί το Pod δεν απενεργοποιήθηκε σωστά. **Αφαιρέστε το Pod από το σώμα σας!**
+- Το βήμα **Το Pod Απορρίφθηκε** επιβεβαιώνει ότι η κατάσταση του Pod έχει απορριφθεί. Πατήστε **Τέλος**. Τώρα μπορείτε να ενεργοποιήσετε ένα νέο Pod.
 
 (omnipod-dash-resuming-insulin-delivery)=
 
-## Resuming Insulin Delivery
+## Συνέχιση της χορήγησης ινσουλίνης
 
-**NOTE**: During **Profile Switches**, like when using the PDM, **AAPS** must suspend delivery on the pod before setting the new basal **Profile**. If communication fails between the suspend and resume commands, delivery can stay suspended. Read [**Delivery suspended**](#omnipod-dash-delivery-suspended) in the troubleshooting section for more details.
+**ΣΗΜΕΙΩΣΗ**: Κατά τις **Αλλαγές Προφίλ**, όπως και με το PDM, το **AAPS** πρέπει να κάνει αναστολή της χορήγησης στο Pod πριν ορίσει το νέο βασικό **Προφίλ**. Αν η επικοινωνία αποτύχει ανάμεσα στις εντολές αναστολής και συνέχισης, η χορήγηση μπορεί να μείνει σε αναστολή. Διαβάστε το [**Η χορήγηση είναι σε αναστολή**](#omnipod-dash-delivery-suspended) στο τμήμα αντιμετώπισης προβλημάτων για περισσότερες λεπτομέρειες.
 
-When insulin delivery is suspended, you need to tell the pod to resume insulin delivery. When the command has been processed successfully, the pod delivers insulin again using the basal rate for the current time from your active basal **Profile**. The pod again accepts commands for bolus, **TBR** and **SMB**.
+Όταν η χορήγηση ινσουλίνης είναι σε αναστολή, πρέπει να πείτε στο Pod να συνεχίσει τη χορήγηση ινσουλίνης. Όταν η εντολή εκτελεστεί με επιτυχία, το Pod χορηγεί ξανά ινσουλίνη με τον βασικό ρυθμό της τρέχουσας ώρας από το ενεργό βασικό **Προφίλ** σας. Το Pod δέχεται ξανά εντολές για bolus, **TBR** και **SMB**.
 
-1. Open the DASH pump screen and check that the **Pod Status** field shows **Suspended**. Press **Resume Delivery** to tell the pod to resume normal insulin delivery.
+1. Ανοίξτε την οθόνη αντλίας DASH και ελέγξτε ότι το πεδίο **Κατάσταση Pod** δείχνει **Σε αναστολή**. Πατήστε **Συνέχιση Έγχυσης** για να πείτε στο Pod να συνεχίσει την κανονική χορήγηση ινσουλίνης.
 
    ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)
 
-2. When the command was successful, the **Pod Status** field shows **Running** and the **Resume Delivery** button disappears.
+2. Όταν η εντολή πετύχει, το πεδίο **Κατάσταση Pod** δείχνει **Σε λειτουργία** και το κουμπί **Συνέχιση Έγχυσης** εξαφανίζεται.
 
    ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
@@ -364,357 +364,357 @@ When insulin delivery is suspended, you need to tell the pod to resume insulin d
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshots above are from an earlier **AAPS** version, which showed a confirmation dialog. In **AAPS** 4 you confirm the result on the DASH pump screen: the **Pod Status** field shows **Running** and the **Resume Delivery** button is gone.
+   Οι παραπάνω εικόνες είναι από παλαιότερη έκδοση του **AAPS**, που έδειχνε παράθυρο επιβεβαίωσης. Στο **AAPS** 4 επιβεβαιώνετε το αποτέλεσμα στην οθόνη αντλίας DASH: το πεδίο **Κατάσταση Pod** δείχνει **Σε λειτουργία** και το κουμπί **Συνέχιση Έγχυσης** έχει εξαφανιστεί.
    ```
 
-   If the command fails, **AAPS** shows a warning dialog starting with *Failed to resume delivery*. Press **Refresh** and try again.
+   Αν η εντολή αποτύχει, το **AAPS** δείχνει ένα παράθυρο προειδοποίησης που ξεκινά με *Απέτυχε η συνέχιση έγχυσης*. Πατήστε **Ανανέωση** και δοκιμάστε ξανά.
 
-   ![The Failed to resume delivery warning](../images/v4/Pumps/dash_resume_failed.png)
+   ![Η προειδοποίηση Απέτυχε η συνέχιση έγχυσης](../images/v4/Pumps/dash_resume_failed.png)
 
 (omnipod-dash-silencing-pod-alerts)=
 
-## Silencing Pod Alerts
+## Σίγαση ειδοποιήσεων του Pod
 
-This section explains how to stop the pod beeps when the pod approaches the end of its life. When these beeps start depends on the **Alerts** settings (see [Dash Settings](#omnipod-dash-settings)):
+Αυτό το τμήμα εξηγεί πώς να σταματήσετε τα μπιπ του Pod όταν το Pod πλησιάζει στο τέλος της ζωής του. Το πότε ξεκινούν αυτά τα μπιπ εξαρτάται από τις ρυθμίσεις **Ειδοποιήσεις** (δείτε [Ρυθμίσεις Dash](#omnipod-dash-settings)):
 
-- **Reminder at hours before expiry (72 Hours):** how many hours before the 72-hour expiry the pod starts to beep.
-- **Alert at hours before shutdown (80 Hours):** how many hours before the 80-hour shutdown the pod beeps again.
+- **Υπενθύμιση σε ώρες πριν από τη λήξη (72 ώρες):** πόσες ώρες πριν από τη λήξη των 72 ωρών το Pod αρχίζει να βγάζει μπιπ.
+- **Ειδοποίηση σε ώρες πριν από τη διακοπή λειτουργίας (80 Ώρες):** πόσες ώρες πριν από τη διακοπή λειτουργίας στις 80 ώρες το Pod βγάζει ξανά μπιπ.
 
-The maximum life of a pod is 80 hours (3 days 8 hours). However, the pod manufacturer recommends not going beyond 72 hours (3 days).
+Η μέγιστη διάρκεια ζωής ενός Pod είναι 80 ώρες (3 ημέρες και 8 ώρες). Όμως ο κατασκευαστής του Pod συνιστά να μην ξεπερνάτε τις 72 ώρες (3 ημέρες).
 
-***NOTE**: The **Silence Alerts** button is only shown on the DASH pump screen while the pod has an active alert, for example pod expiry or low reservoir. If the **Silence Alerts** button is not shown but you hear the pod beeping, press **Refresh**.*
+***ΣΗΜΕΙΩΣΗ**: Το κουμπί **Σίγαση Ειδοποιήσεων** εμφανίζεται στην οθόνη αντλίας DASH μόνο όσο το Pod έχει ενεργή ειδοποίηση, για παράδειγμα λήξη του Pod ή χαμηλή δεξαμενή. Αν το κουμπί **Σίγαση Ειδοποιήσεων** δεν εμφανίζεται αλλά ακούτε το Pod να βγάζει μπιπ, πατήστε **Ανανέωση**.*
 
-1. When the reminder time is reached, the pod beeps to tell you that it will expire soon and that you need to change it. On the DASH pump screen, the **Pod Expires (1)** field shows the exact time the pod will expire (72 hours after activation). The text turns yellow 4 hours before this time. After it, **Pod Hard End** turns yellow and shows the time left until the pod stops delivering insulin. The **Active Pod Alerts (2)** field shows **Pod will expire soon**, and the **Silence Alerts (3)** button is shown.
+1. Όταν έρθει η ώρα της υπενθύμισης, το Pod βγάζει μπιπ για να σας πει ότι θα λήξει σύντομα και ότι πρέπει να το αλλάξετε. Στην οθόνη αντλίας DASH, το πεδίο **Το Pod Λήγει (1)** δείχνει την ακριβή ώρα που θα λήξει το Pod (72 ώρες μετά την ενεργοποίηση). Το κείμενο γίνεται κίτρινο 4 ώρες πριν από αυτή την ώρα. Μετά από αυτή, το **Οριστικό τέλος Pod** γίνεται κίτρινο και δείχνει τον χρόνο που απομένει μέχρι το Pod να σταματήσει να χορηγεί ινσουλίνη. Το πεδίο **Ειδοποιήσεις Ενεργού Pod (2)** δείχνει **Το Pod θα λήξει σύντομα** και εμφανίζεται το κουμπί **Σίγαση Ειδοποιήσεων (3)**.
 
    ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Press **Silence Alerts**. **AAPS** sends the command to the pod to stop the expiry beeps.
+2. Πατήστε **Σίγαση Ειδοποιήσεων**. Το **AAPS** στέλνει την εντολή στο Pod να σταματήσει τα μπιπ λήξης.
 
    ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version, where this screen was the **DASH** tab. In **AAPS** 4 the **Silence Alerts** button is on the DASH pump screen (**Manage** > **Pump**).
+   Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**, όπου αυτή η οθόνη ήταν η καρτέλα **DASH**. Στο **AAPS** 4 το κουμπί **Σίγαση Ειδοποιήσεων** είναι στην οθόνη αντλίας DASH (**Διαχείριση** > **Αντλία**).
    ```
 
-3. When the alerts have been silenced, the alert is no longer shown in the **Active Pod Alerts** field, the **Silence Alerts** button disappears, and the pod stops its expiry beeps.
+3. Όταν γίνει η σίγαση των ειδοποιήσεων, η ειδοποίηση δεν εμφανίζεται πια στο πεδίο **Ειδοποιήσεις Ενεργού Pod**, το κουμπί **Σίγαση Ειδοποιήσεων** εξαφανίζεται και το Pod σταματά τα μπιπ λήξης.
 
    ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version, which showed a confirmation dialog. In **AAPS** 4 you confirm the result on the DASH pump screen: the alert is gone from the **Active Pod Alerts** field.
+   Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**, που έδειχνε παράθυρο επιβεβαίωσης. Στο **AAPS** 4 επιβεβαιώνετε το αποτέλεσμα στην οθόνη αντλίας DASH: η ειδοποίηση δεν υπάρχει πια στο πεδίο **Ειδοποιήσεις Ενεργού Pod**.
    ```
 
-   If the command fails, **AAPS** shows a warning dialog starting with *Failed to silence alerts*. Press **Refresh** and try again.
+   Αν η εντολή αποτύχει, το **AAPS** δείχνει ένα παράθυρο προειδοποίησης που ξεκινά με *Απέτυχε η σίγαση ειδοποιήσεων*. Πατήστε **Ανανέωση** και δοκιμάστε ξανά.
 
-The low reservoir alert works the same way. When the insulin left in the pod drops to the **Number of units** set in the **Alerts** settings, the pod beeps. The **Reservoir** field shows the amount left, the **Active Pod Alerts** field shows **Low Reservoir**, and the **Silence Alerts** button is shown. Press **Silence Alerts** to stop the beeps, and plan your next pod change.
+Η ειδοποίηση χαμηλής δεξαμενής λειτουργεί με τον ίδιο τρόπο. Όταν η ινσουλίνη που έχει μείνει στο Pod πέσει στον **Αριθμός μονάδων** που έχει οριστεί στις ρυθμίσεις **Ειδοποιήσεις**, το Pod βγάζει μπιπ. Το πεδίο **Δεξαμενή** δείχνει την ποσότητα που έχει μείνει, το πεδίο **Ειδοποιήσεις Ενεργού Pod** δείχνει **Χαμηλή Δεξαμενή** και εμφανίζεται το κουμπί **Σίγαση Ειδοποιήσεων**. Πατήστε **Σίγαση Ειδοποιήσεων** για να σταματήσουν τα μπιπ, και σχεδιάστε την επόμενη αλλαγή Pod.
 
-![The DASH pump screen with a Low Reservoir alert](../images/v4/Pumps/dash_low_reservoir_alert.png)
+![Η οθόνη αντλίας DASH με ειδοποίηση Χαμηλή Δεξαμενή](../images/v4/Pumps/dash_low_reservoir_alert.png)
 
 (omnipod-dash-view-pod-history)=
 
-## View Pod History
+## Προβολή ιστορικού του Pod
 
-This section explains how to look at the history of your active pod and filter it by type of action. The pod history shows the commands sent to your active pod and their results during its three-day (72 - 80 hours) life.
+Αυτό το τμήμα εξηγεί πώς να δείτε το ιστορικό του ενεργού Pod σας και να το φιλτράρετε ανά τύπο ενέργειας. Το ιστορικό του Pod δείχνει τις εντολές που στάλθηκαν στο ενεργό Pod σας και τα αποτελέσματά τους κατά τη διάρκεια ζωής του των τριών ημερών (72 - 80 ώρες).
 
-It is useful to check the boluses, TBRs and basal commands that were sent to the pod. The other categories help with troubleshooting and show the order of events that led up to a failure.
+Είναι χρήσιμο για να ελέγξετε τα bolus, τους TBR και τις εντολές βασικού ρυθμού που στάλθηκαν στο Pod. Οι άλλες κατηγορίες βοηθούν στην αντιμετώπιση προβλημάτων και δείχνουν τη σειρά των γεγονότων που οδήγησαν σε μια αποτυχία.
 
-**NOTE:** **Only the last command can be uncertain**. New commands *are not sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. To 'fix' an uncertain command, press **Refresh** on the DASH pump screen.
+**ΣΗΜΕΙΩΣΗ:** **Μόνο η τελευταία εντολή μπορεί να είναι αβέβαιη**. Νέες εντολές *δεν στέλνονται* μέχρι η **τελευταία «αβέβαιη» εντολή να γίνει «επιβεβαιωμένη» ή «απορριφθείσα»**. Για να «διορθώσετε» μια αβέβαιη εντολή, πατήστε **Ανανέωση** στην οθόνη αντλίας DASH.
 
-1. Open the DASH pump screen and press **Pod History**.
+1. Ανοίξτε την οθόνη αντλίας DASH και πατήστε **Ιστορικό Pod**.
 
    ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 **Pod History** is a button directly on the DASH pump screen instead of in the **Pod Management** menu.
+   Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 το **Ιστορικό Pod** είναι κουμπί απευθείας στην οθόνη αντλίας DASH και όχι στο μενού **Διαχείριση Pod**.
    ```
 
-2. The **Pod History** screen opens with the **All** filter selected. It lists every command with its time and result, newest first, grouped by day. Use the filter buttons at the top (for example **Boluses** or **Basals**) to show only one type of command. Press the back arrow to return to the DASH pump screen.
+2. Η οθόνη **Ιστορικό Pod** ανοίγει με επιλεγμένο το φίλτρο **Όλα**. Δείχνει κάθε εντολή με την ώρα και το αποτέλεσμά της, τις νεότερες πρώτες, ομαδοποιημένες ανά ημέρα. Χρησιμοποιήστε τα κουμπιά φίλτρου στο πάνω μέρος (για παράδειγμα **Bolus** ή **Βασικοί**) για να δείτε μόνο έναν τύπο εντολής. Πατήστε το βέλος επιστροφής για να γυρίσετε στην οθόνη αντλίας DASH.
 
    ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
    ```{admonition} Older screenshot
    :class: note
-   The second screenshot above is from an earlier **AAPS** version, where you picked the type of command from a **Type** list. In **AAPS** 4 you use the filter buttons shown in the first screenshot.
+   Η δεύτερη παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**, όπου διαλέγατε τον τύπο εντολής από μια λίστα **Τύπος**. Στο **AAPS** 4 χρησιμοποιείτε τα κουμπιά φίλτρου που φαίνονται στην πρώτη εικόνα.
    ```
 
-   For boluses, the amount is followed by the bolus type when it is not a normal bolus, for example *0.05 U (SMB)* or *0.05 U (Basal correction)*. A basal correction is a very small bolus (one pod pulse, 0.05 U) that the driver sends by itself; you did not request it.
+   Στα bolus, μετά την ποσότητα εμφανίζεται ο τύπος του bolus, όταν δεν είναι κανονικό bolus, για παράδειγμα *0,05 U (SMB)* ή *0,05 U (Διόρθωση βασικού)*. Η διόρθωση βασικού είναι ένα πολύ μικρό bolus (ένας παλμός του Pod, 0,05 U) που στέλνει ο οδηγός μόνος του. Δεν το ζητήσατε εσείς.
 
    ```{admonition} Why basal corrections happen
    :class: note
-   The pod delivers basal insulin in pulses of 0.05 U, timed by an internal clock. Each time the basal rate changes (for example when the loop sets a new **TBR**), the pod restarts this clock, and the pulse it was counting towards is lost. Because the loop changes the basal rate often, especially overnight, the pod can end up delivering less basal insulin than expected.
+   Το Pod χορηγεί τη βασική ινσουλίνη σε παλμούς των 0,05 U, με χρονισμό από ένα εσωτερικό ρολόι. Κάθε φορά που αλλάζει ο βασικός ρυθμός (για παράδειγμα όταν το κύκλωμα ορίζει νέο **TBR**), το Pod ξεκινά ξανά αυτό το ρολόι, και ο παλμός που μετρούσε χάνεται. Επειδή το κύκλωμα αλλάζει συχνά τον βασικό ρυθμό, ειδικά τη νύχτα, το Pod μπορεί τελικά να χορηγήσει λιγότερη βασική ινσουλίνη από την αναμενόμενη.
 
-   **AAPS** compares the basal insulin the pod reports as delivered with what it should have delivered. When the shortfall reaches half a pulse or more, the driver delivers one extra pulse as a basal correction, so you still get the basal insulin your profile and the loop asked for. No correction is sent while the pod is suspended, or while a zero **TBR** is running.
+   Το **AAPS** συγκρίνει τη βασική ινσουλίνη που το Pod αναφέρει ότι χορήγησε με αυτή που έπρεπε να είχε χορηγήσει. Όταν η διαφορά φτάσει μισό παλμό ή περισσότερο, ο οδηγός χορηγεί έναν επιπλέον παλμό ως διόρθωση βασικού, ώστε να παίρνετε τη βασική ινσουλίνη που ζήτησαν το προφίλ σας και το κύκλωμα. Δεν στέλνεται διόρθωση όσο το Pod είναι σε αναστολή ή όσο τρέχει μηδενικός **TBR**.
    ```
 
 (omnipod-dash-settings)=
 
-## Dash Settings
+## Ρυθμίσεις Dash
 
-There are two ways to open the Dash driver settings:
+Υπάρχουν δύο τρόποι να ανοίξετε τις ρυθμίσεις του οδηγού Dash:
 
-- Press the **Settings** (gear) icon in the top-right corner of the [DASH pump screen](#omnipod-dash-tab).
-- Open the **menu** (☰) in the top-left corner of the main screen and select **Configuration** > **Pump**. On the **Omnipod Dash** card, press **Settings**.
+- Πατήστε το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά στην [οθόνη αντλίας DASH](#omnipod-dash-tab).
+- Ανοίξτε το **μενού** (☰) πάνω αριστερά στην κύρια οθόνη και επιλέξτε **Διαμόρφωση** > **Αντλία**. Στην κάρτα **Omnipod Dash**, πατήστε **Ρυθμίσεις**.
 
-The settings are grouped into four expandable sections: **Confirmation Beeps**, **Alerts**, **Notifications** and **Advanced Settings**. Tap a section to open it:
+Οι ρυθμίσεις είναι χωρισμένες σε τέσσερα τμήματα που ανοίγουν: **Ήχοι Επιβεβαίωσης**, **Ειδοποιήσεις**, **Ειδοποιήσεις** και **Ρυθμίσεις για Προχωρημένους**. Πατήστε ένα τμήμα για να το ανοίξετε:
 
-![The Dash settings](../images/v4/Pumps/dash_settings.png)
+![Οι ρυθμίσεις Dash](../images/v4/Pumps/dash_settings.png)
 
-Most settings are on/off switches.
+Οι περισσότερες ρυθμίσεις είναι διακόπτες ενεργό/ανενεργό.
 
-### Confirmation Beeps
+### Ήχοι Επιβεβαίωσης
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
-Confirmation beeps from the pod for bolus, basal, SMB and TBR delivery and changes.
+Ήχοι επιβεβαίωσης από το Pod για χορήγηση και αλλαγές bolus, βασικού ρυθμού, SMB και TBR.
 
-**Bolus beeps enabled:**    The pod beeps when a bolus is delivered. On by default.
+**Ηχητικά σήματα Bolus ενεργοποιημένα:**    Το Pod βγάζει μπιπ όταν χορηγείται ένα bolus. Ενεργό από προεπιλογή.
 
-**Basal beeps enabled:**    The pod beeps when a new basal rate is set, or when the active basal rate is canceled or changed. Off by default.
+**Ηχητικά σήματα βασικού ενεργοποιημένα:**    Το Pod βγάζει μπιπ όταν ορίζεται νέος βασικός ρυθμός ή όταν ο ενεργός βασικός ρυθμός ακυρώνεται ή αλλάζει. Ανενεργό από προεπιλογή.
 
-**SMB beeps enabled:**  The pod beeps when an SMB is delivered. On by default.
+**Ηχητικά σήματα SMB ενεργοποιημένα:**  Το Pod βγάζει μπιπ όταν χορηγείται ένα SMB. Ενεργό από προεπιλογή.
 
-**TBR beeps enabled:**  The pod beeps when a TBR is set or canceled. Off by default.
+**Ηχητικά σήματα TBR ενεργοποιημένα:**  Το Pod βγάζει μπιπ όταν ορίζεται ή ακυρώνεται ένας TBR. Ανενεργό από προεπιλογή.
 
-### Alerts
+### Ειδοποιήσεις
 
 ![Dash_settings_5](../images/DASH_images/Dash_settings/Dash_settings_5.jpg)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 these settings are in the expandable **Alerts** section.
+Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**. Στο **AAPS** 4 αυτές οι ρυθμίσεις είναι στο τμήμα **Ειδοποιήσεις** που ανοίγει.
 ```
 
-Pod alerts for pod expiry, shutdown and low reservoir. When you change these settings while a pod is active, **AAPS** sends the new alert settings to the pod.
+Ειδοποιήσεις του Pod για λήξη του Pod, διακοπή λειτουργίας και χαμηλή δεξαμενή. Όταν αλλάζετε αυτές τις ρυθμίσεις ενώ ένα Pod είναι ενεργό, το **AAPS** στέλνει τις νέες ρυθμίσεις ειδοποιήσεων στο Pod.
 
-***NOTE:** An **AAPS** notification is ALWAYS shown for any alert once **AAPS** has communicated with the pod after the alert was triggered. Dismissing the notification does NOT stop the pod alert. To stop the alert, open the DASH pump screen and press **Silence Alerts**.*
+***ΣΗΜΕΙΩΣΗ:** Μια ειδοποίηση του **AAPS** εμφανίζεται ΠΑΝΤΑ για κάθε ειδοποίηση, μόλις το **AAPS** επικοινωνήσει με το Pod μετά την ενεργοποίηση της ειδοποίησης. Το κλείσιμο της ειδοποίησης ΔΕΝ σταματά την ειδοποίηση του Pod. Για να σταματήσετε την ειδοποίηση, ανοίξτε την οθόνη αντλίας DASH και πατήστε **Σίγαση Ειδοποιήσεων**.*
 
-**Expiration reminder enabled:**    When this is on, the pod beeps when the reminder time is reached. On by default.
+**Ενεργοποιημένη υπενθύμιση λήξης:**    Όταν είναι ενεργό, το Pod βγάζει μπιπ όταν έρθει η ώρα της υπενθύμισης. Ενεργό από προεπιλογή.
 
-**Reminder at hours before expiry (72 Hours):** How many hours before the 72-hour pod expiry the reminder starts (1 to 24 hours; default 4).
+**Υπενθύμιση σε ώρες πριν από τη λήξη (72 ώρες):** Πόσες ώρες πριν από τη λήξη του Pod στις 72 ώρες ξεκινά η υπενθύμιση (1 έως 24 ώρες, προεπιλογή 4).
 
-**Expiration alert enabled:**   When this is on, the pod beeps when the alert time is reached, and again 1 hour before shutdown. On by default.
+**Ειδοποίηση λήξης ενεργοποιήθηκε:**   Όταν είναι ενεργό, το Pod βγάζει μπιπ όταν έρθει η ώρα της ειδοποίησης, και ξανά 1 ώρα πριν από τη διακοπή λειτουργίας. Ενεργό από προεπιλογή.
 
-**Alert at hours before shutdown (80 Hours):**  How many hours before the 80-hour pod shutdown the alert starts (1 to 8 hours; default 8).
+**Ειδοποίηση σε ώρες πριν από τη διακοπή λειτουργίας (80 Ώρες):**  Πόσες ώρες πριν από τη διακοπή λειτουργίας του Pod στις 80 ώρες ξεκινά η ειδοποίηση (1 έως 8 ώρες, προεπιλογή 8).
 
-**Low reservoir alert enabled:**    The pod alerts you when the insulin left in the reservoir drops to the value in **Number of units**. On by default.
+**Ειδοποίηση χαμηλής δεξαμενής ενεργοποιημένη:**    Το Pod σας ειδοποιεί όταν η ινσουλίνη που έχει μείνει στη δεξαμενή πέσει στην τιμή του **Αριθμός μονάδων**. Ενεργό από προεπιλογή.
 
-**Number of units:**    The number of units at which the low reservoir alert is triggered (5 to 50 units; default 20).
+**Αριθμός μονάδων:**    Ο αριθμός μονάδων στον οποίο ενεργοποιείται η ειδοποίηση χαμηλής δεξαμενής (5 έως 50 μονάδες, προεπιλογή 20).
 
-### Notifications
+### Ειδοποιήσεις
 
 ![Dash_settings_6](../images/DASH_images/Dash_settings/Dash_settings_6.jpg)
 
-Choose whether **AAPS** plays a sound with its notifications when it is uncertain whether a TBR, SMB or bolus was delivered, and when delivery is suspended.
+Επιλέξτε αν το **AAPS** θα παίζει ήχο με τις ειδοποιήσεις του όταν δεν είναι βέβαιο αν χορηγήθηκε ένας TBR, ένα SMB ή ένα bolus, και όταν η χορήγηση είναι σε αναστολή.
 
-***NOTE:** These are phone notifications only; the pod itself does not beep.*
+***ΣΗΜΕΙΩΣΗ:** Αυτές είναι μόνο ειδοποιήσεις του τηλεφώνου. Το ίδιο το Pod δεν βγάζει μπιπ.*
 
-**Sound for uncertain TBR notifications enabled:**  Plays a sound with the notification when **AAPS** is uncertain whether a TBR was set.
+**Ήχος για αβέβαιες ειδοποιήσεις TBR ενεργοποιημένος:**  Παίζει ήχο με την ειδοποίηση όταν το **AAPS** δεν είναι βέβαιο αν ορίστηκε ένας TBR.
 
-**Sound for uncertain SMB notifications enabled:**  Plays a sound with the notification when **AAPS** is uncertain whether an SMB was delivered.
+**Ήχος για αβέβαιες ειδοποιήσεις SMB ενεργοποιημένος:**  Παίζει ήχο με την ειδοποίηση όταν το **AAPS** δεν είναι βέβαιο αν χορηγήθηκε ένα SMB.
 
-**Sound for uncertain bolus notifications enabled:**    Plays a sound with the notification when **AAPS** is uncertain whether a bolus was delivered.
+**Ήχος για αβέβαιες ειδοποιήσεις bolus ενεργοποιημένος:**    Παίζει ήχο με την ειδοποίηση όταν το **AAPS** δεν είναι βέβαιο αν χορηγήθηκε ένα bolus.
 
-**Sound when delivery suspended notification enabled:**     Plays a sound with the notification when insulin delivery is suspended.
+**Ήχος για ειδοποίηση αναστολής χορήγησης ενεργοποιημένος:**     Παίζει ήχο με την ειδοποίηση όταν η χορήγηση ινσουλίνης είναι σε αναστολή.
 
 (omnipod-dash-advanced-settings)=
 
 ### Ρυθμίσεις για Προχωρημένους
 
-![The Advanced Settings section](../images/v4/Pumps/dash_settings_advanced.png)
+![Το τμήμα Ρυθμίσεις για Προχωρημένους](../images/v4/Pumps/dash_settings_advanced.png)
 
-**Bluetooth bonding:**  Bonds the pod with the phone over Bluetooth. Try it only if the pod cannot keep a stable connection, for example on Android 15 (see [Omnipod DASH known AAPS constraints/issues](#omnipod-dash-constraints)). When it is on, the phone shows pairing requests that you must accept. Leave it off if the pod connects fine. It has no effect below Android 15. Off by default.
+**Bluetooth bonding:**  Κάνει bonding (μόνιμη σύζευξη) του Pod με το τηλέφωνο μέσω Bluetooth. Δοκιμάστε το μόνο αν το Pod δεν μπορεί να κρατήσει σταθερή σύνδεση, για παράδειγμα σε Android 15 (δείτε [Γνωστοί περιορισμοί/προβλήματα του Omnipod DASH στο AAPS](#omnipod-dash-constraints)). Όταν είναι ενεργό, το τηλέφωνο εμφανίζει αιτήματα σύζευξης που πρέπει να αποδεχτείτε. Αφήστε το απενεργοποιημένο αν το Pod συνδέεται κανονικά. Δεν έχει καμία επίδραση σε εκδόσεις κάτω από Android 15. Ανενεργό από προεπιλογή.
 
-## Insulin and cannula age
+## Ηλικία ινσουλίνης και καθετήρα
 
-The [status row](#screens-sensor-level-battery) on the main screen shows the age of your insulin and cannula. With Omnipod, these work a little differently than with tube-based pumps.
+Η [γραμμή κατάστασης](#screens-sensor-level-battery) στην κύρια οθόνη δείχνει την ηλικία της ινσουλίνης και του καθετήρα σας. Με το Omnipod, αυτές λειτουργούν λίγο διαφορετικά από ό,τι με αντλίες με σωληνάκι.
 
-**AAPS** records a cannula change and an insulin change automatically each time you activate a pod. This resets the **Insulin** and **Cannula** ages to zero after every pod change. You do not need to record them yourself with **Prime/Fill**. This is because the pod inserts the cannula directly into the skin where it is attached: Omnipod does not use a tube.
+Το **AAPS** καταγράφει αυτόματα αλλαγή καθετήρα και αλλαγή ινσουλίνης κάθε φορά που ενεργοποιείτε ένα Pod. Έτσι οι ηλικίες **Ινσουλίνη** και **Καθετήρας** μηδενίζονται μετά από κάθε αλλαγή Pod. Δεν χρειάζεται να τις καταγράψετε μόνοι σας με το **Πλήρωση/Γέμισμα**. Αυτό συμβαίνει γιατί το Pod εισάγει τον καθετήρα απευθείας στο δέρμα εκεί όπου είναι κολλημένο: το Omnipod δεν χρησιμοποιεί σωληνάκι.
 
-**Pump battery** age is not reported: the battery and the insulin reservoir are built into each pod, and the battery always lasts longer than the pod itself (maximum 80 hours).
+Η ηλικία της **Μπαταρία αντλίας** δεν αναφέρεται: η μπαταρία και η δεξαμενή ινσουλίνης είναι ενσωματωμένες σε κάθε Pod, και η μπαταρία διαρκεί πάντα περισσότερο από το ίδιο το Pod (το πολύ 80 ώρες).
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version, where these ages were shown in the **Careportal** section of the **Actions** tab. In **AAPS** 4 they are shown in the status row on the main screen.
+Η παραπάνω εικόνα είναι από παλαιότερη έκδοση του **AAPS**, όπου αυτές οι ηλικίες εμφανίζονταν στο τμήμα **Careportal** της καρτέλας **Ενέργειες**. Στο **AAPS** 4 εμφανίζονται στη γραμμή κατάστασης στην κύρια οθόνη.
 ```
 
-### Level
+### Επίπεδο
 
-**Insulin Level**
+**Επίπεδο ινσουλίνης**
 
-The insulin level shown is the amount reported by the pod. However, the pod only reports the actual reservoir level when it is below 50 units. Until then, *Over 50 U left* is shown. The amount reported is not exact: when the pod reports 'empty', in most cases the reservoir still has a few units of insulin left.
+Το επίπεδο ινσουλίνης που εμφανίζεται είναι η ποσότητα που αναφέρει το Pod. Όμως το Pod αναφέρει το πραγματικό επίπεδο της δεξαμενής μόνο όταν είναι κάτω από 50 μονάδες. Μέχρι τότε εμφανίζεται *Πάνω από 50 U*. Η ποσότητα που αναφέρεται δεν είναι ακριβής: όταν το Pod αναφέρει «άδειο», στις περισσότερες περιπτώσεις η δεξαμενή έχει ακόμα λίγες μονάδες ινσουλίνης.
 
-The DASH pump screen shows the level as follows:
+Η οθόνη αντλίας DASH δείχνει το επίπεδο ως εξής:
 
-  * **Over 50 U left** - The pod reports more than 50 units in the reservoir.
-  * **Below 50 units** - The exact amount of insulin left in the reservoir, as reported by the pod.
+  * **Πάνω από 50 U** - Το Pod αναφέρει περισσότερες από 50 μονάδες στη δεξαμενή.
+  * **Κάτω από 50 μονάδες** - Η ακριβής ποσότητα ινσουλίνης που έχει μείνει στη δεξαμενή, όπως την αναφέρει το Pod.
 
-Additional note:
-  * **SMS** - Returns the value, or 50+U when over 50 units, in SMS responses.
-  * **Nightscout** - Uploads a value of 50 when over 50 units to Nightscout (version 14.07 and older). Newer versions report a value of 50+ when over 50 units.
+Επιπλέον σημείωση:
+  * **SMS** - Επιστρέφει την τιμή, ή 50+U όταν είναι πάνω από 50 μονάδες, στις απαντήσεις SMS.
+  * **Nightscout** - Ανεβάζει στο Nightscout τιμή 50 όταν είναι πάνω από 50 μονάδες (έκδοση 14.07 και παλαιότερες). Οι νεότερες εκδόσεις αναφέρουν τιμή 50+ όταν είναι πάνω από 50 μονάδες.
 
 (omnipod-dash-troubleshooting)=
 
-## Troubleshooting
+## Αντιμετώπιση προβλημάτων
 
-This section covers common known issues and solutions for Omnipod DASH use with AAPS. There is also [General Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) section in the documentation that should be reviewed as it covers relevant topics for some Pod issues too.
+Αυτό το τμήμα καλύπτει συνηθισμένα γνωστά προβλήματα και λύσεις για τη χρήση του Omnipod DASH με το AAPS. Υπάρχει επίσης το τμήμα [Αντιμετώπιση προβλημάτων](../GettingHelp/GeneralTroubleshooting.md) στην τεκμηρίωση, που καλό είναι να το διαβάσετε, γιατί καλύπτει θέματα που αφορούν και ορισμένα προβλήματα με το Pod.
 
 ---
 
 (omnipod-dash-bluetooth-related-issues)=
 
-## Bluetooth related issues
+## Προβλήματα σχετικά με το Bluetooth
 
-For known issues with Bluetooth connections, dropouts of pump/pods, or activation and connection issues [Bluetooth Troubleshooting](../GettingHelp/BluetoothTroubleshooting.md)
+Για γνωστά προβλήματα με συνδέσεις Bluetooth, διακοπές σύνδεσης με αντλίες/Pod ή προβλήματα ενεργοποίησης και σύνδεσης, δείτε το [Αντιμετώπιση προβλημάτων Bluetooth](../GettingHelp/BluetoothTroubleshooting.md)
 
 ---
 
 (omnipod-dash-delivery-suspended)=
 
-### Delivery suspended
+### Η χορήγηση είναι σε αναστολή
 
-  - There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero **TBR** for x minutes.
-  - During **Profile Switches**, DASH must suspend delivery before setting the new basal **Profile**. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
-     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
-     - **AAPS** will try to set the new basal profile every 15 minutes.
-     - **AAPS** will show a notification informing that the delivery is suspended every 15 minutes, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume Delivery**](#omnipod-dash-resuming-insulin-delivery) button is shown on the DASH pump screen if you want to resume delivery manually.
-     - If **AAPS** fails to resume delivery on its own (this happens if the pod is unreachable, sound is muted, etc), the pod will start beeping 4 times every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20 minutes.
-  - For unconfirmed commands, press **Refresh** on the DASH pump screen to confirm or deny them.
+  - Δεν υπάρχει πια κουμπί αναστολής. Αν θέλετε να κάνετε «αναστολή» του Pod, μπορείτε να ορίσετε μηδενικό **TBR** για x λεπτά.
+  - Κατά τις **Αλλαγές Προφίλ**, το DASH πρέπει να κάνει αναστολή της χορήγησης πριν ορίσει το νέο βασικό **Προφίλ**. Αν η επικοινωνία αποτύχει ανάμεσα στις δύο εντολές, η χορήγηση μπορεί να μείνει σε αναστολή. Όταν συμβεί αυτό:
+     - Δεν θα γίνεται καμία χορήγηση ινσουλίνης, ούτε βασικός ρυθμός, ούτε SMB, ούτε χειροκίνητο bolus κ.λπ.
+     - Μπορεί να εμφανιστεί ειδοποίηση ότι μία από τις εντολές δεν επιβεβαιώθηκε: αυτό εξαρτάται από τη στιγμή που έγινε η αποτυχία.
+     - Το **AAPS** θα προσπαθεί να ορίσει το νέο βασικό προφίλ κάθε 15 λεπτά.
+     - Το **AAPS** θα εμφανίζει κάθε 15 λεπτά μια ειδοποίηση ότι η χορήγηση είναι σε αναστολή, αν η χορήγηση είναι ακόμα σε αναστολή (η συνέχιση της χορήγησης απέτυχε).
+     - Το κουμπί [**Συνέχιση Έγχυσης**](#omnipod-dash-resuming-insulin-delivery) εμφανίζεται στην οθόνη αντλίας DASH αν θέλετε να συνεχίσετε τη χορήγηση χειροκίνητα.
+     - Αν το **AAPS** δεν καταφέρει να συνεχίσει τη χορήγηση μόνο του (αυτό συμβαίνει αν το Pod δεν είναι προσβάσιμο, ο ήχος είναι σε σίγαση κ.λπ.), το Pod θα αρχίσει να βγάζει 4 μπιπ κάθε λεπτό για 3 λεπτά, και αυτό θα επαναλαμβάνεται κάθε 15 λεπτά, αν η χορήγηση είναι ακόμα σε αναστολή για περισσότερο από 20 λεπτά.
+  - Για εντολές που δεν επιβεβαιώθηκαν, πατήστε **Ανανέωση** στην οθόνη αντλίας DASH για να επιβεβαιωθούν ή να απορριφθούν.
 
-*****NOTE:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, ***so you need to check !******
+*****ΣΗΜΕΙΩΣΗ:** Όταν ακούτε μπιπ από το Pod, μην υποθέτετε ότι η χορήγηση θα συνεχιστεί χωρίς να ελέγξετε το τηλέφωνο. Η χορήγηση μπορεί να μείνει σε αναστολή, ***γι' αυτό πρέπει να ελέγξετε!******
 
 ---
 (omnipod-dash-pod-failures)=
 
-### Pod Failures
+### Αποτυχίες Pod
 
-- Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself.
-- It is best practice not to raise support / replacement cases with Insulet, since AAPS is not an approved method of using the Pods.
-- A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+- Τα Pod αποτυγχάνουν κάποιες φορές για διάφορους λόγους, μαζί και λόγω προβλημάτων υλικού στο ίδιο το Pod.
+- Είναι καλύτερο να μην ανοίγετε αιτήματα υποστήριξης ή αντικατάστασης στην Insulet, γιατί το AAPS δεν είναι εγκεκριμένος τρόπος χρήσης των Pod.
+- Μια λίστα με κωδικούς σφαλμάτων [**υπάρχει εδώ**](https://github.com/openaps/openomni/wiki/Fault-event-codes) και βοηθά να βρείτε την αιτία.
 
-When a pod fails, it stops delivering insulin and beeps continuously. **AAPS** shows a notification on the main screen with the fault code and name, and the *Ref:* code, for example *Pod Fault: 020 ALARM_OCCLUDED*. Press **Dismiss** to close the notification. This does not stop the pod beeping.
+Όταν ένα Pod αποτυγχάνει, σταματά να χορηγεί ινσουλίνη και βγάζει συνεχώς μπιπ. Το **AAPS** δείχνει μια ειδοποίηση στην κύρια οθόνη με τον κωδικό και το όνομα του σφάλματος και τον κωδικό *Ref:*, για παράδειγμα *Σφάλμα Pod: 020 ALARM_OCCLUDED*. Πατήστε **Παράβλεψη** για να κλείσει η ειδοποίηση. Αυτό δεν σταματά τα μπιπ του Pod.
 
-![A pod fault notification](../images/v4/Pumps/dash_pod_fault_notification.png)
+![Μια ειδοποίηση σφάλματος Pod](../images/v4/Pumps/dash_pod_fault_notification.png)
 
-On the DASH pump screen, the **Pod Status** field shows **ALARM**, the **Errors** field shows the pod fault, and the **PDM Notification** field explains it, for example *Occlusion Detected. Insulin delivery stopped. Change Pod now. Check your BG*.
+Στην οθόνη αντλίας DASH, το πεδίο **Κατάσταση Pod** δείχνει **ALARM**, το πεδίο **Σφάλματα** δείχνει το σφάλμα του Pod, και το πεδίο **Ειδοποίηση PDM** το εξηγεί, για παράδειγμα *Εντοπίστηκε έμφραξη. Η χορήγηση ινσουλίνης σταμάτησε. Αλλάξτε τώρα το Pod. Ελέγξτε τη γλυκόζη αίματος*.
 
-![The DASH pump screen after a pod fault](../images/v4/Pumps/dash_pump_screen_pod_fault.png)
+![Η οθόνη αντλίας DASH μετά από σφάλμα του Pod](../images/v4/Pumps/dash_pump_screen_pod_fault.png)
 
-A failed pod cannot be used again. Check your blood glucose, then [deactivate the pod](#omnipod-dash-deactivate-pod) and activate a new one.
-
----
-### Preventing error 49 pod failures
-
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a built-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
+Ένα Pod που απέτυχε δεν μπορεί να χρησιμοποιηθεί ξανά. Ελέγξτε τη γλυκόζη αίματός σας, μετά [απενεργοποιήστε το Pod](#omnipod-dash-deactivate-pod) και ενεργοποιήστε ένα νέο.
 
 ---
+### Πρόληψη αποτυχιών Pod με σφάλμα 49
 
-### Pump Unreachable Alerts
+Αυτή η αποτυχία σχετίζεται με λάθος κατάσταση του Pod για μια εντολή ή με σφάλμα κατά τη διάρκεια μιας εντολής χορήγησης ινσουλίνης. Αυτό συμβαίνει όταν ο οδηγός και το Pod διαφωνούν για την πραγματική κατάσταση. Το Pod (ως ενσωματωμένο μέτρο ασφάλειας) αντιδρά τότε με έναν μη αναστρέψιμο κωδικό σφάλματος 49 (0x31) και καταλήγει σε αυτό που λέγεται «screamer»: ένα μακρύ, ενοχλητικό μπιπ που σταματά μόνο αν ανοίξετε μια τρύπα στο σωστό σημείο στο πίσω μέρος του Pod. Η ακριβής αιτία μιας «αποτυχίας Pod 49» συχνά είναι δύσκολο να βρεθεί. Σε καταστάσεις όπου υπάρχει υποψία ότι μπορεί να συμβεί αυτή η αποτυχία (για παράδειγμα όταν η εφαρμογή κολλάει, όταν τρέχετε έκδοση ανάπτυξης ή μετά από επανεγκατάσταση).
 
-When no communication can be established with the pod for a pre-configured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by pressing the **Settings** (gear) icon on the top right of the main screen, then selecting **Local Alerts** ➜ **Pump unreachable threshold**. Recommended value is alerting after **120** minutes.
+---
+
+### Ειδοποιήσεις «Η αντλία δεν είναι διαθέσιμη»
+
+Όταν δεν μπορεί να γίνει επικοινωνία με το Pod για έναν προκαθορισμένο χρόνο, εμφανίζεται η ειδοποίηση «Η αντλία δεν είναι διαθέσιμη». Οι ειδοποιήσεις «Η αντλία δεν είναι διαθέσιμη» ρυθμίζονται αν πατήσετε το εικονίδιο **Ρυθμίσεις** (γρανάζι) πάνω δεξιά στην κύρια οθόνη και μετά επιλέξετε **Τοπικές ειδοποιήσεις** ➜ **Όριο μη προσβάσιμης αντλίας**. Η προτεινόμενη τιμή είναι ειδοποίηση μετά από **120** λεπτά.
 
 ---
 (omnipod-dash-export-import)=
-### Export and import settings
+### Εξαγωγή και εισαγωγή ρυθμίσεων
 
-Exporting **AAPS** settings lets you restore all your settings and Objectives, for example after reinstalling **AAPS** or on a new phone. **Export your settings right after each Pod activation** and copy the file to a safe place off your phone (for example Google Drive), so the active Pod can be restored too. See [Creating and restoring back-ups](#ExportImportSettings-Settings-Export).
+Η εξαγωγή των ρυθμίσεων του **AAPS** σας επιτρέπει να επαναφέρετε όλες τις ρυθμίσεις σας και τα Βήματα, για παράδειγμα μετά από επανεγκατάσταση του **AAPS** ή σε νέο τηλέφωνο. **Κάντε εξαγωγή των ρυθμίσεών σας αμέσως μετά από κάθε ενεργοποίηση Pod** και αντιγράψτε το αρχείο σε ασφαλές μέρος εκτός του τηλεφώνου σας (για παράδειγμα Google Drive), ώστε να μπορεί να επαναφερθεί και το ενεργό Pod. Δείτε [Δημιουργία και επαναφορά αντιγράφων ασφαλείας](#ExportImportSettings-Settings-Export).
 
 ```{admonition} Importing settings can end your active Pod
 :class: warning
-On the phone that is already running the Pod, leave **Also replace pump settings** unticked: the Pod session is kept and only the other settings are imported. Tick it only on a new phone, with a file exported during the Pod you are wearing now. See [Tubeless pumps](#ExportImportSettings-tubeless-pumps).
+Στο τηλέφωνο που ήδη λειτουργεί με το Pod, αφήστε το **Αντικατάσταση και των ρυθμίσεων αντλίας** χωρίς τσεκ: η περίοδος χρήσης του Pod διατηρείται και εισάγονται μόνο οι άλλες ρυθμίσεις. Τσεκάρετέ το μόνο σε νέο τηλέφωνο, με αρχείο που εξαγάγατε κατά τη διάρκεια του Pod που φοράτε τώρα. Δείτε [Αντλίες χωρίς σωληνάκι](#ExportImportSettings-tubeless-pumps).
 ```
 
-If the imported settings contain a Pod that is no longer active, see the next section.
+Αν οι ρυθμίσεις που εισαγάγατε περιέχουν ένα Pod που δεν είναι πια ενεργό, δείτε το επόμενο τμήμα.
 
 ---
-### Importing settings that contain Pod state from an inactive Pod
+### Εισαγωγή ρυθμίσεων που περιέχουν την κατάσταση ενός ανενεργού Pod
 
-When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You cannot activate a new Pod in this situation.
+Όταν εισάγετε ρυθμίσεις που περιέχουν δεδομένα για ένα Pod που δεν είναι πια ενεργό, το AAPS θα προσπαθήσει να συνδεθεί με αυτό, και φυσικά αυτό θα αποτύχει. Σε αυτή την περίπτωση δεν μπορείτε να ενεργοποιήσετε νέο Pod.
 
-To remove the old pod session:
-1. On the DASH pump screen, press **Deactivate Pod**. The deactivation will most likely fail.
-2. When it fails, press **Discard Pod** and confirm (see [Discarding a pod](#omnipod-dash-discard-pod)).
-3. Once the old pod is removed, you can activate a new pod.
+Για να αφαιρέσετε την παλιά περίοδο χρήσης Pod:
+1. Στην οθόνη αντλίας DASH, πατήστε **Απενεργοποίηση Pod**. Η απενεργοποίηση πιθανότατα θα αποτύχει.
+2. Όταν αποτύχει, πατήστε **Απόρριψη Pod** και επιβεβαιώστε (δείτε [Απόρριψη ενός Pod](#omnipod-dash-discard-pod)).
+3. Όταν αφαιρεθεί το παλιό Pod, μπορείτε να ενεργοποιήσετε ένα νέο Pod.
 
-### Generic error: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
+### Γενικό σφάλμα: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
 
-If you receive this error when attempting to Initialize a new pod **AAPS** fails as it still has settings for an old pod stored in configuration.
+Αν δείτε αυτό το σφάλμα όταν προσπαθείτε να κάνετε αρχικοποίηση ενός νέου Pod, το **AAPS** αποτυγχάνει γιατί έχει ακόμα αποθηκευμένες στη διαμόρφωση ρυθμίσεις για ένα παλιό Pod.
 
 ![omnipod_address_in_use](../images/DASH_images/Errors/omnipod_address_in_use.png)
 
-This can happen if you restore from a backup, or a pod deactivation fails.
+Αυτό μπορεί να συμβεί αν κάνετε επαναφορά από αντίγραφο ασφαλείας ή αν αποτύχει η απενεργοποίηση ενός Pod.
 
-To resolve it, press **Cancel** to leave the activation. On the DASH pump screen, press **Discard Pod** if it is shown. Otherwise press **Deactivate Pod**, and when the deactivation fails, press **Discard Pod** (see [Discarding a pod](#omnipod-dash-discard-pod)).
+Για να το λύσετε, πατήστε **Ακύρωση** για να βγείτε από την ενεργοποίηση. Στην οθόνη αντλίας DASH, πατήστε **Απόρριψη Pod**, αν εμφανίζεται. Αλλιώς πατήστε **Απενεργοποίηση Pod**, και όταν η απενεργοποίηση αποτύχει, πατήστε **Απόρριψη Pod** (δείτε [Απόρριψη ενός Pod](#omnipod-dash-discard-pod)).
 
-You should now be able to Activate a new pod.
-
----
-### Reinstalling AAPS
-
-When uninstalling **AAPS** you will lose all your settings, objectives and the current Pod session. **To restore them make sure you have a recent exported settings file available!**
-
-When on an active Pod, use an export made during the current Pod session (see [Export and import settings](#omnipod-dash-export-import)).
-
-1. Export your settings and store a copy in a safe place (e.g Google Drive).
-2. Uninstall **AAPS** and restart your phone.
-3. Install the new version of **AAPS**.
-4. Import your settings.
-5. Verify all preferences (optionally import settings again).
-6. Activate a new pod.
-7. When done: Export current settings.
+Τώρα θα μπορείτε να ενεργοποιήσετε ένα νέο Pod.
 
 ---
-### Updating AAPS to a newer version
+### Επανεγκατάσταση του AAPS
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod session.
+Όταν απεγκαθιστάτε το **AAPS**, θα χάσετε όλες τις ρυθμίσεις σας, τα Βήματα και την τρέχουσα περίοδο χρήσης Pod. **Για να τα επαναφέρετε, βεβαιωθείτε ότι έχετε ένα πρόσφατο αρχείο εξαγωγής ρυθμίσεων!**
 
-1. Export your settings.
-2. Install the new **AAPS** version.
-3. Verify the installation was successful
-4. RESUME the Pod or activate a new pod.
-5. When done: Export current settings.
+Όταν έχετε ενεργό Pod, χρησιμοποιήστε μια εξαγωγή που έγινε κατά την τρέχουσα περίοδο χρήσης του Pod (δείτε [Εξαγωγή και εισαγωγή ρυθμίσεων](#omnipod-dash-export-import)).
+
+1. Κάντε εξαγωγή των ρυθμίσεών σας και κρατήστε ένα αντίγραφο σε ασφαλές μέρος (π.χ. Google Drive).
+2. Απεγκαταστήστε το **AAPS** και επανεκκινήστε το τηλέφωνό σας.
+3. Εγκαταστήστε τη νέα έκδοση του **AAPS**.
+4. Εισαγάγετε τις ρυθμίσεις σας.
+5. Ελέγξτε όλες τις ρυθμίσεις (αν θέλετε, εισαγάγετε ξανά τις ρυθμίσεις).
+6. Ενεργοποιήστε ένα νέο Pod.
+7. Όταν τελειώσετε: κάντε εξαγωγή των τρεχουσών ρυθμίσεων.
 
 ---
-### Omnipod driver alerts
+### Ενημέρωση του AAPS σε νεότερη έκδοση
 
-The Omnipod Dash driver presents a variety of unique alerts on the **main screen**, most of them are informational and can be dismissed while some provide the user with an action requiring their input to resolve the cause of the triggered alert.
+Στις περισσότερες περιπτώσεις δεν χρειάζεται απεγκατάσταση. Μπορείτε να κάνετε εγκατάσταση «από πάνω», ξεκινώντας απλώς την εγκατάσταση της νέας έκδοσης. Αυτό είναι δυνατό και όταν έχετε ενεργό Pod.
 
-A summary of the main alerts that you may encounter is listed below:
+1. Εξαγάγετε τις ρυθμίσεις σας.
+2. Εγκαταστήστε τη νέα έκδοση του **AAPS**.
+3. Ελέγξτε ότι η εγκατάσταση έγινε σωστά
+4. Κάντε ΕΠΑΝΑΦΟΡΑ στο Pod ή ενεργοποιήστε ένα νέο Pod.
+5. Όταν τελειώσετε: κάντε εξαγωγή των τρεχουσών ρυθμίσεων.
 
-- *Pod Fault: XXX NAME*, followed by *Ref: ...*: the pod has failed and stopped delivering insulin. Change the pod. See [Pod Failures](#omnipod-dash-pod-failures).
-- *No Active Pod*: no pod session was found. This notification keeps coming back until you activate a new pod. Once a pod is activated, it disappears automatically.
-- *Insulin delivery suspended*: the pod has suspended insulin delivery. See [Resuming Insulin Delivery](#omnipod-dash-resuming-insulin-delivery).
-- *Setting basal profile might have failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.* Setting the basal **Profile** on the pod may have failed. Press **Refresh** on the DASH pump screen (the message still says "Omnipod tab"), and press **Resume Delivery** if it is shown.
-- *Unable to verify whether SMB (X U) succeeded. Refresh pod status to confirm or deny this command.* **AAPS** could not confirm that the **SMB** was delivered. Press **Refresh** on the DASH pump screen and check the **Last bolus** field.
-- *Bolus delivery status uncertain. Refresh pod status to confirm or deny.* The same for a normal bolus: press **Refresh** on the DASH pump screen.
-- *Timezone on pod is different from the timezone on phone. Basal rate is incorrect. Switch profile to fix* See the DST and timezone note in [Omnipod DASH known AAPS constraints/issues](#omnipod-dash-constraints).
+---
+### Ειδοποιήσεις του οδηγού Omnipod
+
+Ο οδηγός Omnipod Dash εμφανίζει διάφορες ειδικές ειδοποιήσεις στην **κύρια οθόνη**. Οι περισσότερες είναι πληροφοριακές και μπορούν να κλείσουν, ενώ κάποιες ζητούν από τον χρήστη μια ενέργεια για να λυθεί η αιτία της ειδοποίησης.
+
+Παρακάτω υπάρχει μια σύνοψη των κύριων ειδοποιήσεων που μπορεί να δείτε:
+
+- *Σφάλμα Pod: XXX NAME*, και μετά *Ref: ...*: το Pod απέτυχε και σταμάτησε να χορηγεί ινσουλίνη. Αλλάξτε το Pod. Δείτε [Αποτυχίες Pod](#omnipod-dash-pod-failures).
+- *Χωρίς Ενεργό Pod*: δεν βρέθηκε περίοδος χρήσης Pod. Αυτή η ειδοποίηση εμφανίζεται ξανά και ξανά μέχρι να ενεργοποιήσετε ένα νέο Pod. Όταν ενεργοποιηθεί ένα Pod, εξαφανίζεται αυτόματα.
+- *Αναστολή χορήγησης ινσουλίνης*: το Pod έχει κάνει αναστολή της χορήγησης ινσουλίνης. Δείτε [Συνέχιση της χορήγησης ινσουλίνης](#omnipod-dash-resuming-insulin-delivery).
+- *Η ρύθμιση του βασικού προφίλ μπορεί να έχει αποτύχει. Η χορήγηση μπορεί να έχει ανασταλεί! Παρακαλώ ανανεώστε την κατάσταση του Pod χειροκίνητα από την καρτέλα Omnipod και συνεχίστε την χορήγηση αν χρειαστεί.* Ο ορισμός του βασικού **Προφίλ** στο Pod μπορεί να έχει αποτύχει. Πατήστε **Ανανέωση** στην οθόνη αντλίας DASH (το μήνυμα λέει ακόμα «καρτέλα Omnipod») και πατήστε **Συνέχιση Έγχυσης**, αν εμφανίζεται.
+- *Δεν είναι δυνατό να επιβεβαιωθεί αν το SMB (X U) πέτυχε. Ανανεώστε την κατάσταση του Pod για να επιβεβαιωθεί ή να απορριφθεί αυτή η εντολή.* Το **AAPS** δεν μπόρεσε να επιβεβαιώσει ότι χορηγήθηκε το **SMB**. Πατήστε **Ανανέωση** στην οθόνη αντλίας DASH και ελέγξτε το πεδίο **Τελευταίο Bolus**.
+- *Αβέβαιη κατάσταση παράδοσης Bolus. Ανανεώστε την κατάσταση του pod για να επιβεβαιώσετε ή αρνηθείτε.* Το ίδιο ισχύει για ένα κανονικό bolus: πατήστε **Ανανέωση** στην οθόνη αντλίας DASH.
+- *Η ζώνη ώρας στο pod είναι διαφορετική από τη ζώνη ώρας στο τηλέφωνο. Ο βασικός ρυθμός είναι εσφαλμένος. Αλλάξτε το προφίλ για διόρθωση* Δείτε τη σημείωση για τη θερινή ώρα και τη ζώνη ώρας στο [Γνωστοί περιορισμοί/προβλήματα του Omnipod DASH στο AAPS](#omnipod-dash-constraints).
 
 (omnipod-dash-where-to-get-help-for-dash)=
 
-## Where to get help
+## Πού θα βρείτε βοήθεια
 
-All of the development work for the DASH is done by the community on a **volunteer** basis; please keep this in mind and use the following guidelines before requesting assistance:
+Όλη η εργασία ανάπτυξης για το DASH γίνεται από την κοινότητα σε **εθελοντική** βάση. Να το θυμάστε αυτό και να ακολουθείτε τις παρακάτω οδηγίες πριν ζητήσετε βοήθεια:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw). There are also numerous Facebook and other groups you can ask in too (see [**Getting Help**](../GettingHelp/WhereCanIGetHelp.md))
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Επίπεδο 0:** Διαβάστε το σχετικό τμήμα αυτής της τεκμηρίωσης, για να καταλάβετε πώς πρέπει να λειτουργεί η λειτουργία με την οποία έχετε πρόβλημα.
+-  **Επίπεδο 1:** Αν έχετε ακόμα προβλήματα που δεν μπορείτε να λύσετε με αυτό το έγγραφο, πηγαίνετε στο κανάλι *#AAPS* στο **Discord** με [αυτόν τον σύνδεσμο πρόσκλησης](https://discord.gg/4fQUWHZ4Mw). Υπάρχουν επίσης πολλές ομάδες στο Facebook και αλλού όπου μπορείτε να ρωτήσετε (δείτε [**Πού μπορώ να βρω βοήθεια;**](../GettingHelp/WhereCanIGetHelp.md))
+-  **Επίπεδο 2:** Αναζητήστε στα υπάρχοντα ζητήματα αν το πρόβλημά σας έχει ήδη αναφερθεί στα [Issues](https://github.com/nightscout/AndroidAPS/issues) αν υπάρχει, επιβεβαιώστε το, σχολιάστε ή προσθέστε πληροφορίες για το πρόβλημά σας. Αν όχι, δημιουργήστε ένα [νέο θέμα (issue)](https://github.com/nightscout/AndroidAPS/issues) και επισυνάψτε [τα αρχεία καταγραφής σας](../GettingHelp/AccessingLogFiles.md).
+-  **Κάντε υπομονή - τα περισσότερα μέλη της κοινότητάς μας είναι καλοπροαίρετοι εθελοντές, και η λύση των προβλημάτων συχνά χρειάζεται χρόνο και υπομονή τόσο από τους χρήστες όσο και από τους προγραμματιστές.**
 
-When requesting help come prepared with the following information to help those in the community with your specific questions and problems:
-- Android phone make and model
-- Android OS version (e.g 15 or 16)
-  - Did you recently upgrade your Android OS version?
-- The version of **AAPS** you are running
-- Plain english description of the problem you are facing considering some of the following things
-   - Was it working before now?
-   - When did it work or not work?
-   - Did you make any changes to configuration or profile settings?
-   - Did you pair a new Bluetooth device?
-   - Did you upgrade or install a new app?
-   - How long was it working before it stopped working?
+Όταν ζητάτε βοήθεια, ετοιμάστε τις παρακάτω πληροφορίες, για να βοηθήσετε την κοινότητα με τις δικές σας ερωτήσεις και προβλήματα:
+- Μάρκα και μοντέλο του τηλεφώνου Android
+- Έκδοση Android (π.χ. 15 ή 16)
+  - Αναβαθμίσατε πρόσφατα την έκδοση Android;
+- Η έκδοση του **AAPS** που χρησιμοποιείτε
+- Απλή περιγραφή του προβλήματος που έχετε, λαμβάνοντας υπόψη μερικά από τα παρακάτω
+   - Λειτουργούσε πριν;
+   - Πότε λειτουργούσε και πότε όχι;
+   - Κάνατε αλλαγές στη διαμόρφωση ή στις ρυθμίσεις του προφίλ;
+   - Κάνατε σύζευξη με μια νέα συσκευή Bluetooth;
+   - Αναβαθμίσατε ή εγκαταστήσατε κάποια νέα εφαρμογή;
+   - Πόσο καιρό λειτουργούσε πριν σταματήσει;
