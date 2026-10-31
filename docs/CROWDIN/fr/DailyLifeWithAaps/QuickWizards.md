@@ -12,7 +12,7 @@ Un **Assistant Rapide** est un bouton enregistré, utilisable en un seul appui, 
 
 ## Ouvrir les assistants rapides
 
-Ouvrez l'écran **Gestion** (barre de navigation en bas) et choisissez **Assistant Rapide** (*« Gérer les préréglages de l'assistant rapide »*).
+Ouvrez l'écran **Gestion** (barre de navigation en bas) et choisissez **Assistant Rapide** (*« Gérer les préréglages de l'assistant rapide »*).
 
 ---
 
@@ -22,7 +22,7 @@ Vos assistants rapides sont affichés sous forme de **carrousel de cartes que vo
 
 ![L'éditeur d'assistant rapide — mode, glucides, heure des glucides et période valide](../images/v4/QuickWizard/quickwizard_editor.png)
 
-Les principaux champs de l'éditeur sont :
+Les principaux champs de l'éditeur sont :
 
 - **Texte du bouton** — le nom affiché sur le bouton.
 - **Glucides** et **Heure des glucides** — la quantité de glucides et son décalage dans le temps.
@@ -33,7 +33,7 @@ Les principaux champs de l'éditeur sont :
 
 ## Les trois modes
 
-Le sélecteur en haut de l'éditeur — **Assistant / Insuline / Glucides** — décide **ce que fait le bouton** quand vous appuyez dessus :
+Le sélecteur en haut de l'éditeur — **Assistant / Insuline / Glucides** — décide **ce que fait le bouton** quand vous appuyez dessus :
 
 - **Assistant** — exécute l'**assistant bolus** complet pour les glucides configurés, avec vos valeurs actuelles de **glycémie, IA, GA et tendance** (selon les *Options de Calculateur* ci-dessous). Il injecte le bolus *calculé* et enregistre les glucides. C'est l'assistant rapide classique.
 - **Insuline** — injecte une **quantité d'insuline fixe, définie à l'avance** par vous — sans calcul.
@@ -43,7 +43,7 @@ Le sélecteur en haut de l'éditeur — **Assistant / Insuline / Glucides** — 
 
 ## Options de Calculateur (mode Assistant)
 
-Pour un bouton en mode **Assistant**, vous choisissez les données utilisées par le calcul :
+Pour un bouton en mode **Assistant**, vous choisissez les données utilisées par le calcul :
 
 - **Utiliser Gly**, **Utiliser GA**, **Utiliser IA** (avec *IA positive uniquement*), **Utiliser Tendance** (*Tous / Positif uniquement / Négatif uniquement*), **Utiliser Cible Temp**, **Utiliser Alarme**.
 - **Pourcentage de Bolus** — ajuste le bolus calculé.
@@ -55,7 +55,7 @@ Pour un bouton en mode **Assistant**, vous choisissez les données utilisées pa
 
 ## Validité — quand le bouton apparaît
 
-(quickwizard_validity)= La **Période valide** (*De / À*) contrôle **quand** un assistant rapide est affiché et utilisable. Un bouton réglé par exemple sur **06:00–10:00** n'apparaît que le matin. Ainsi, un assistant rapide *Petit-déjeuner* n'encombre pas votre écran au dîner (et vous ne l'utilisez pas par erreur). En dehors de sa période, le bouton est masqué dans le panneau **Traitements** et dans la [barre QuickLaunch](QuickLaunch.md). Un bouton de la barre n'est pas supprimé : il revient quand la période recommence.
+(quickwizard_validity)= La **Période valide** (*De / À*) contrôle **quand** un assistant rapide est affiché et utilisable. Un bouton réglé par exemple sur **06:00–10:00** n'apparaît que le matin. Ainsi, un assistant rapide *Petit-déjeuner* n'encombre pas votre écran au dîner (et vous ne l'utilisez pas par erreur). En dehors de sa période, le bouton est masqué dans le panneau **Traitements** et dans la [barre QuickLaunch](QuickLaunch.md). Un bouton de la barre n'est pas supprimé : il revient quand la période recommence.
 
 Quand la période valide dure moins de 4 heures, le bouton est aussi masqué pendant 30 minutes après son utilisation. Ainsi, le même repas n'est pas saisi deux fois par erreur.
 
@@ -63,9 +63,9 @@ Quand la période valide dure moins de 4 heures, le bouton est aussi masqué pen
 
 ## Points d'appel — où vous l'utilisez
 
-Les options de **Sélection du périphérique** décident où chaque assistant rapide apparaît :
+Les options de **Sélection du périphérique** décident où chaque assistant rapide apparaît :
 
-- **Afficher sur le téléphone** — il apparaît dans le **panneau [Traitements](../Maintenance/V4Changes.md)** (la dose calculée est affichée directement sur le bouton). Un assistant rapide affiché sur le téléphone peut aussi être **épinglé comme bouton d'action rapide sur l'écran principal** : ouvrez *Configurer le lancement rapide* (le ⚙ de la barre [QuickLaunch](QuickLaunch.md)) et ajoutez-le depuis la catégorie **Assistant rapide**.
+- **Afficher sur le téléphone** — il apparaît dans le **panneau [Traitements](../Maintenance/V4Changes.md)** (la dose calculée est affichée directement sur le bouton). Un assistant rapide affiché sur le téléphone peut aussi être **épinglé comme bouton d'action rapide sur l'écran principal** : ouvrez *Configurer le lancement rapide* (le ⚙ de la barre [QuickLaunch](QuickLaunch.md)) et ajoutez-le depuis la catégorie **Assistant rapide**.
 - **Afficher sur la montre** — il apparaît sur la **tuile Assistant Rapide de Wear OS** (faites glisser jusqu'à elle dans le carrousel de tuiles de la montre, puis appuyez sur un bouton pour l'exécuter — comme la [tuile Scénario](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
@@ -73,17 +73,17 @@ Les options de **Sélection du périphérique** décident où chaque assistant r
 La section **Sélection du périphérique** n'apparaît dans l'éditeur que si le plugin **Montre** est activé et si son option **Contrôle Montre** est activée. Sinon, chaque assistant rapide s'affiche simplement sur le téléphone.
 ```
 
-Sur le téléphone, les assistants rapides apparaissent en haut du panneau **Traitements** :
+Sur le téléphone, les assistants rapides apparaissent en haut du panneau **Traitements** :
 
 ![Les assistants rapides (en haut) dans le panneau Traitements ouvert](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…et comme bouton d'action rapide sur l'écran principal :
+…et comme bouton d'action rapide sur l'écran principal :
 
 ![Un bouton d'action rapide Assistant Rapide sur l'écran principal](../images/v4/QuickWizard/quickwizard_overview.png)
 
 ![La tuile Assistant Rapide sur une montre Wear OS](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-Un **client** associé (**AAPSClient**) peut aussi lancer un assistant rapide — le **maître** le calcule et l'injecte (voir [Contrôle maître / client](../RemoteFeatures/ClientMasterControl.md)).
+Un **client** associé (**AAPSClient**) peut aussi lancer un assistant rapide — le **maître** le calcule et l'injecte (voir [Contrôle maître ↔ client](../RemoteFeatures/ClientMasterControl.md)).
 
 Quel que soit l'endroit d'où il est lancé, un appui sur un assistant rapide affiche toujours une **confirmation** avant toute injection (la confirmation créée par le maître, quand il est lancé depuis un client ou une montre).
 
@@ -97,7 +97,7 @@ Un assistant rapide est refusé quand sa dose dépasse votre bolus max, ou quand
 - **⧉ Dupliquer** — copie un assistant rapide comme point de départ.
 - **🗑️ Supprimer** — supprime un assistant rapide.
 
-Avec deux assistants rapides ou plus, vous pouvez aussi changer leur ordre dans le carrousel : appuyez sur l'icône **Réordonner** (⇅) dans la barre du haut, déplacez la carte du centre avec les **boutons de déplacement ◀ / ▶**, puis confirmez avec **✓**. (Les commandes sont les mêmes que pour [réordonner les profils](ProfileSwitch-ProfilePercentage.md).)
+Avec deux assistants rapides ou plus, vous pouvez aussi changer leur ordre dans le carrousel : appuyez sur l'icône **Réordonner** (⇅) dans la barre du haut, déplacez la carte du centre avec les **boutons de déplacement ◀ / ▶**, puis confirmez avec **✓**. (Les commandes sont les mêmes que pour [réordonner les profils](ProfileSwitch-ProfilePercentage.md).)
 
 Les assistants rapides font partie de la configuration synchronisée. Ils sont donc partagés entre votre maître et les clients associés.
 
