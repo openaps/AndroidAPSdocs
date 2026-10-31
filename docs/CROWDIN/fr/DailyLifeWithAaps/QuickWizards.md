@@ -1,7 +1,7 @@
 (quickwizards)=
-# QuickWizards (one-tap boluses)
+# Assistants rapides (bolus en un seul appui)
 
-A **QuickWizard** is a saved one-tap button for a recurring meal or situation. It carries a fixed amount of **carbs** (and how to dose for them), so you can deliver a bolus — or just log carbs — with a single tap and a confirmation, instead of opening the full bolus calculator every time.
+Un **Assistant Rapide** est un bouton enregistré, utilisable en un seul appui, pour un repas ou une situation qui revient souvent. Il contient une quantité fixe de **glucides** (et la façon de les doser). Vous pouvez ainsi faire un bolus — ou seulement enregistrer des glucides — avec un seul appui et une confirmation, sans ouvrir à chaque fois l'assistant bolus complet.
 
 ```{contents} Table of contents
 :depth: 2
@@ -10,96 +10,96 @@ A **QuickWizard** is a saved one-tap button for a recurring meal or situation. I
 
 ---
 
-## Opening QuickWizards
+## Ouvrir les assistants rapides
 
-Open the **Manage** screen (bottom navigation) and choose **QuickWizard** (*“Manage quick wizard presets”*).
-
----
-
-## Managing QuickWizards
-
-Your QuickWizards are shown as a **swipeable card carousel** (each card shows the button text, carbs and valid time range). The editor below configures the **selected** one; the bottom action bar has **➕ add**, **⧉ clone**, **🗑️ delete** and a **▶** button to run the selected QuickWizard.
-
-![The QuickWizard editor — mode, carbs, carb time and valid time range](../images/v4/QuickWizard/quickwizard_editor.png)
-
-The editor's main fields are:
-
-- **Button text** — the label shown on the button.
-- **Carbs** and **Carb Time** — the carb amount and its time offset.
-- **Valid Time Range** — see [Validity](#quickwizard_validity).
-- **Calculator Options** and **Device Selection** — see below.
+Ouvrez l'écran **Gestion** (barre de navigation en bas) et choisissez **Assistant Rapide** (*« Gérer les préréglages de l'assistant rapide »*).
 
 ---
 
-## The three modes
+## Gérer les assistants rapides
 
-The selector at the top of the editor — **Wizard / Insulin / Carbs** — decides **what the button does** when tapped:
+Vos assistants rapides sont affichés sous forme de **carrousel de cartes que vous faites glisser** (chaque carte montre le texte du bouton, les glucides et la période valide). L'éditeur en dessous configure l'assistant rapide **sélectionné**. La barre d'actions en bas contient **➕ ajouter**, **⧉ dupliquer**, **🗑️ supprimer** et un bouton **▶** pour exécuter l'assistant rapide sélectionné.
 
-- **Wizard** — runs the full **bolus calculator** for the configured carbs, using your current **BG, IOB, COB and trend** (per the *Calculator Options* below). It delivers the *calculated* bolus and records the carbs. This is the classic quick wizard.
-- **Insulin** — delivers a **fixed, preset insulin amount** that you set — no calculation.
-- **Carbs** — records the configured **carbs only**, with **no bolus**.
+![L'éditeur d'assistant rapide — mode, glucides, heure des glucides et période valide](../images/v4/QuickWizard/quickwizard_editor.png)
 
----
+Les principaux champs de l'éditeur sont :
 
-## Calculator Options (Wizard mode)
-
-For a **Wizard**-mode button you choose which inputs the calculation uses:
-
-- **Use BG**, **Use COB**, **Use IOB** (with *Positive IOB only*), **Use Trend** (*All / Positive only / Negative only*), **Use Temp Target**, **Use Alarm**.
-- **Bolus percentage** — scale the calculated bolus.
-- **Add eCarbs** — also schedule extended carbs.
-
-![Calculator Options, Bolus percentage and Device Selection](../images/v4/QuickWizard/quickwizard_options.png)
+- **Texte du bouton** — le nom affiché sur le bouton.
+- **Glucides** et **Heure des glucides** — la quantité de glucides et son décalage dans le temps.
+- **Période valide** — voir [Validité](#quickwizard_validity).
+- **Options de Calculateur** et **Sélection du périphérique** — voir plus bas.
 
 ---
 
-## Validity — when the button appears
+## Les trois modes
 
-(quickwizard_validity)= The **Valid Time Range** (*From / To*) controls **when** a QuickWizard is shown and usable. A button set to, say, **06:00–10:00** only appears in the morning — so a *Breakfast* QuickWizard does not clutter your screen (or get tapped by mistake) at dinner. Outside its window the button is hidden from the **Treatments** sheet and from the [QuickLaunch toolbar](QuickLaunch.md). A toolbar button is not deleted: it comes back when the window opens again.
+Le sélecteur en haut de l'éditeur — **Assistant / Insuline / Glucides** — décide **ce que fait le bouton** quand vous appuyez dessus :
 
-When the valid time range is shorter than 4 hours, the button is also hidden for 30 minutes after you use it, so that the same meal is not entered twice by mistake.
+- **Assistant** — exécute l'**assistant bolus** complet pour les glucides configurés, avec vos valeurs actuelles de **glycémie, IA, GA et tendance** (selon les *Options de Calculateur* ci-dessous). Il injecte le bolus *calculé* et enregistre les glucides. C'est l'assistant rapide classique.
+- **Insuline** — injecte une **quantité d'insuline fixe, définie à l'avance** par vous — sans calcul.
+- **Glucides** — enregistre **seulement les glucides** configurés, **sans bolus**.
 
 ---
 
-## Invocation points — where you use it
+## Options de Calculateur (mode Assistant)
 
-The **Device Selection** toggles decide where each QuickWizard appears:
+Pour un bouton en mode **Assistant**, vous choisissez les données utilisées par le calcul :
 
-- **Show on Phone** — it appears in the **[Treatments](../Maintenance/V4Changes.md) sheet** (with the calculated dose shown right on the button). A QuickWizard shown on the phone can also be **pinned as a quick-action button on the overview**: open *Configure QuickLaunch* (the ⚙ on the [QuickLaunch](QuickLaunch.md) toolbar) and add it from the **Quick Wizard** category.
-- **Show on Watch** — it appears on the **Wear OS QuickWizard tile** (swipe to it in the watch's tile carousel, then tap a button to run it — just like the [Scene tile](#scenes-from-watch)).
+- **Utiliser Gly**, **Utiliser GA**, **Utiliser IA** (avec *IA positive uniquement*), **Utiliser Tendance** (*Tous / Positif uniquement / Négatif uniquement*), **Utiliser Cible Temp**, **Utiliser Alarme**.
+- **Pourcentage de Bolus** — ajuste le bolus calculé.
+- **Ajouter eGlucides** — planifie aussi des glucides étendus.
+
+![Options de Calculateur, Pourcentage de Bolus et Sélection du périphérique](../images/v4/QuickWizard/quickwizard_options.png)
+
+---
+
+## Validité — quand le bouton apparaît
+
+(quickwizard_validity)= La **Période valide** (*De / À*) contrôle **quand** un assistant rapide est affiché et utilisable. Un bouton réglé par exemple sur **06:00–10:00** n'apparaît que le matin. Ainsi, un assistant rapide *Petit-déjeuner* n'encombre pas votre écran au dîner (et vous ne l'utilisez pas par erreur). En dehors de sa période, le bouton est masqué dans le panneau **Traitements** et dans la [barre QuickLaunch](QuickLaunch.md). Un bouton de la barre n'est pas supprimé : il revient quand la période recommence.
+
+Quand la période valide dure moins de 4 heures, le bouton est aussi masqué pendant 30 minutes après son utilisation. Ainsi, le même repas n'est pas saisi deux fois par erreur.
+
+---
+
+## Points d'appel — où vous l'utilisez
+
+Les options de **Sélection du périphérique** décident où chaque assistant rapide apparaît :
+
+- **Afficher sur le téléphone** — il apparaît dans le **panneau [Traitements](../Maintenance/V4Changes.md)** (la dose calculée est affichée directement sur le bouton). Un assistant rapide affiché sur le téléphone peut aussi être **épinglé comme bouton d'action rapide sur l'écran principal** : ouvrez *Configurer le lancement rapide* (le ⚙ de la barre [QuickLaunch](QuickLaunch.md)) et ajoutez-le depuis la catégorie **Assistant rapide**.
+- **Afficher sur la montre** — il apparaît sur la **tuile Assistant Rapide de Wear OS** (faites glisser jusqu'à elle dans le carrousel de tuiles de la montre, puis appuyez sur un bouton pour l'exécuter — comme la [tuile Scénario](#scenes-from-watch)).
 
 ```{admonition} Don't see Device Selection?
 :class: note
-The **Device Selection** section only appears in the editor when the **Wear** plugin is enabled and its **Wear control** preference is on. Without it, every QuickWizard simply shows on the phone.
+La section **Sélection du périphérique** n'apparaît dans l'éditeur que si le plugin **Montre** est activé et si son option **Contrôle Montre** est activée. Sinon, chaque assistant rapide s'affiche simplement sur le téléphone.
 ```
 
-On the phone the QuickWizards appear at the top of the **Treatments** bottom sheet:
+Sur le téléphone, les assistants rapides apparaissent en haut du panneau **Traitements** :
 
-![QuickWizards (top) in the open Treatments bottom sheet](../images/v4/QuickWizard/quickwizard_in_treatments.png)
+![Les assistants rapides (en haut) dans le panneau Traitements ouvert](../images/v4/QuickWizard/quickwizard_in_treatments.png)
 
-…and as a quick-action button on the overview:
+…et comme bouton d'action rapide sur l'écran principal :
 
-![A QuickWizard quick-action button on the overview](../images/v4/QuickWizard/quickwizard_overview.png)
+![Un bouton d'action rapide Assistant Rapide sur l'écran principal](../images/v4/QuickWizard/quickwizard_overview.png)
 
-![The QuickWizard tile on a Wear OS watch](../images/v4/QuickWizard/quickwizard_watch_tile.png)
+![La tuile Assistant Rapide sur une montre Wear OS](../images/v4/QuickWizard/quickwizard_watch_tile.png)
 
-A paired **client** (**AAPSClient**) can also trigger a QuickWizard — the **master** computes and delivers it (see [Master ↔ Client control](../RemoteFeatures/ClientMasterControl.md)).
+Un **client** associé (**AAPSClient**) peut aussi lancer un assistant rapide — le **maître** le calcule et l'injecte (voir [Contrôle maître / client](../RemoteFeatures/ClientMasterControl.md)).
 
-Wherever it is triggered, tapping a QuickWizard always shows a **confirmation** (the master-authored confirmation, when triggered from a client or watch) before anything is delivered.
+Quel que soit l'endroit d'où il est lancé, un appui sur un assistant rapide affiche toujours une **confirmation** avant toute injection (la confirmation créée par le maître, quand il est lancé depuis un client ou une montre).
 
-A QuickWizard is refused when its dose is above your max bolus, or when its carbs or eCarbs are above your max carbs (for example after you lowered the limit). When the carbs are above the limit, the button in the **Treatments** sheet is disabled. Edit the QuickWizard or the limit.
+Un assistant rapide est refusé quand sa dose dépasse votre bolus max, ou quand ses glucides ou eGlucides dépassent votre maximum de glucides (par exemple après que vous avez baissé la limite). Quand les glucides dépassent la limite, le bouton du panneau **Traitements** est désactivé. Modifiez l'assistant rapide ou la limite.
 
 ---
 
-## Adding and removing
+## Ajouter et supprimer
 
-- **➕ Add** — create a new QuickWizard.
-- **⧉ Clone** — duplicate one as a starting point.
-- **🗑️ Delete** — remove one.
+- **➕ Ajouter** — crée un nouvel assistant rapide.
+- **⧉ Dupliquer** — copie un assistant rapide comme point de départ.
+- **🗑️ Supprimer** — supprime un assistant rapide.
 
-With two or more QuickWizards you can also change their order in the carousel: tap the **Reorder** icon (⇅) in the top bar, step the centred card with the **◀ / ▶ move buttons**, then confirm with **✓**. (The controls look the same as [reordering profiles](ProfileSwitch-ProfilePercentage.md).)
+Avec deux assistants rapides ou plus, vous pouvez aussi changer leur ordre dans le carrousel : appuyez sur l'icône **Réordonner** (⇅) dans la barre du haut, déplacez la carte du centre avec les **boutons de déplacement ◀ / ▶**, puis confirmez avec **✓**. (Les commandes sont les mêmes que pour [réordonner les profils](ProfileSwitch-ProfilePercentage.md).)
 
-QuickWizards are part of the synced configuration, so they are shared across your master and paired clients.
+Les assistants rapides font partie de la configuration synchronisée. Ils sont donc partagés entre votre maître et les clients associés.
 
 ---
 
