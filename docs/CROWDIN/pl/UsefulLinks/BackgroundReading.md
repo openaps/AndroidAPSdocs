@@ -1,12 +1,12 @@
 # Przydatne materiały zanim zaczniesz
 
-Zanim zbudujesz swoją pętlę, będziesz musiał dużo czytać, aby zrozumieć, jak to wszystko działa i jak najlepiej z tego korzystać. Przygotowaliśmy listę miejsc, od których powinieneś zacząć, i które mam nadzieję, odpowiedzą Ci na wiele pytań.
+Zanim zbudujesz swoją pętlę, będziesz musiał dużo czytać, aby zrozumieć, jak to wszystko działa i jak najlepiej z tego korzystać. Przygotowaliśmy listę miejsc, od których możesz zacząć. Mamy nadzieję, że odpowiedzą one na wiele Twoich pytań.
 
 ## Dodatkowo przeczytaj
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[Dokumentacja OpenAPS - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
@@ -26,11 +26,11 @@ Zanim zbudujesz swoją pętlę, będziesz musiał dużo czytać, aby zrozumieć,
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[“Brights Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/), Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe), Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+["Pumping insulin"](https://amzn.eu/d/iaCsFa2), John Walsh i Ruth Roberts
 
 ## Dodatkowe artykuły na temat zamkniętej pętli DIY
 
@@ -44,4 +44,4 @@ Zanim zbudujesz swoją pętlę, będziesz musiał dużo czytać, aby zrozumieć,
 
 [Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[Wywiad na żywo z Daną Lewis, twórczynią systemu Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
