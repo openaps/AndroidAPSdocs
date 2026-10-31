@@ -1,102 +1,102 @@
 (Extended-Carbs-extended-carbs-ecarbs)=
 # Carbohidratos Extendidos/eCarbs
 
-## What are eCarbs and when are they useful?
+## ¿Qué son los eCarbs y cuándo son útiles?
 
-Con una terapia de bomba normal, los bolos extendidos son una buena manera de tratar comidas grasas o de absorción lenta que aumentan la glucosa en sangre por más tiempo que el efecto de la insulina. En un contexto de lazo cerrado, sin embargo, los bolos extendidos no tienen tanto sentido (y plantean dificultades técnicas), ya que son básicamente una basal temporal alta fija, que va en contra de cómo funciona el lazo, que está ajustando la tasa basal de forma dinámica. For details see [extended bolus](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) below.
+Con una terapia de bomba normal, los bolos extendidos son una buena manera de tratar comidas grasas o de absorción lenta que aumentan la glucosa en sangre por más tiempo que el efecto de la insulina. En un contexto de lazo cerrado, sin embargo, los bolos extendidos no tienen tanto sentido (y plantean dificultades técnicas), ya que son básicamente una basal temporal alta fija, que va en contra de cómo funciona el lazo, que está ajustando la tasa basal de forma dinámica. Para más detalles, consulta [bolo extendido](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) más abajo.
 
-La necesidad de lidiar con tales comidas todavía existe. Which is why AAPS supports so called extended carbs or eCarbs.
+La necesidad de lidiar con tales comidas todavía existe. Por eso AAPS admite los llamados carbohidratos extendidos o eCarbs.
 
-eCarbs are carbs that are split up over several hours. Esto simula cómo se absorben los carbohidratos e influye en la glucosa en sangre.  Pero para las comidas de absorción más lenta en las que la entrada completa de carbohidratos por adelantado genera demasiada IOB de SMB, los eCarbs se pueden usar para simular con mayor precisión cómo los carbohidratos (y cualquier equivalente de carbohidratos que ingrese para otros macronutrientes) se absorben e influyen en la glucosa en sangre. Con esta información, el lazo puede administrar SMB para tratar esos carbohidratos, lo que se puede ver como un bolo extendido dinámico (esto también debería funcionar sin SMB, pero probablemente sea menos efectivo).
+Los eCarbs son carbohidratos repartidos a lo largo de varias horas. Para comidas normales con más carbohidratos que grasas o proteínas, suele bastar con introducir los carbohidratos al principio (y reducir el bolo inicial si hace falta) para evitar que la insulina se administre demasiado pronto.  Pero para las comidas de absorción más lenta en las que la entrada completa de carbohidratos por adelantado genera demasiada IOB de SMB, los eCarbs se pueden usar para simular con mayor precisión cómo los carbohidratos (y cualquier equivalente de carbohidratos que ingrese para otros macronutrientes) se absorben e influyen en la glucosa en sangre. Con esta información, el lazo puede administrar SMB de forma más gradual para tratar esos carbohidratos, lo que se puede ver como un bolo extendido dinámico (esto también debería funcionar sin SMB, pero probablemente es menos eficaz).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Nota:** los eCarbs no son solo para comidas ricas en grasas o proteínas: también se pueden usar en cualquier situación en la que algo suba la glucosa, p. ej. otros medicamentos como los corticosteroides.
 
-## Mechanics of using eCarbs
+## Cómo usar los eCarbs
 
-To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+Para introducir eCarbs, abre el diálogo **Carbohidratos** (**Tratamientos** → **Carbohidratos**), introduce el total de carbohidratos, fija una **Duración** y, si quieres, retrasa el inicio con **Hora de los carbohidratos** (*los números de abajo son solo ejemplos; tendrás que probar tus propios valores hasta conseguir una respuesta de glucosa satisfactoria en tus casos*):
 
-![Enter carbs](../images/eCarbs_Dialog.png)
+![Introducir carbohidratos](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
+Los eCarbs en la pantalla principal: el número entre paréntesis en el campo **COB** muestra los carbohidratos que aún están por llegar, y el gráfico **COB** muestra cada entrada futura de eCarbs como una marca naranja. Si no ves un gráfico **COB**, añade uno con **Añadir gráfico** debajo de los gráficos (consulta [Pantallas de AAPS](../DailyLifeWithAaps/AapsScreens.md)).
 
-![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
+![eCarbs en el campo COB y en el gráfico COB](../images/eCarbs_Graph.png)
 
 (AapsScreens-carbs-type)=
-## Carbs type in the Bolus wizard: bread, cake or pizza
+## Tipo de carbohidratos en el Asistente de bolo: pan, pastel o pizza
 
-In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+En el [Asistente de bolo](#aaps-screens-bolus-wizard), tres botones debajo del campo **Carbohidratos** te permiten elegir la rapidez con la que se absorbe tu comida. Elige uno antes de confirmar. Según el tipo, **AAPS** toma una parte de los carbohidratos que has escrito como carbohidratos normales y añade [carbohidratos extendidos («eCarbs»)](#Extended-Carbs-extended-carbs-ecarbs) más tarde para comidas lentas y copiosas. Pulsa el icono **(i)** junto a los botones para ver los alimentos típicos del tipo elegido y qué hace con tus carbohidratos.
 
-| Type                | Typical foods (as listed in the app)                                                                 | Carbs now, used for the bolus | eCarbs added                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | None                                                 |
-| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
-| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+| Tipo                     | Alimentos típicos (como aparecen en la app)                                                                                      | Carbohidratos ahora, usados para el bolo | eCarbs añadidos                                            |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------- |
+| **Pan** (predeterminado) | Pan, pastas saladas, yogur, fruta, patatas, arroz, avena, verduras                                                               | 100 %                                    | None                                                       |
+| **Pastel**               | Empanadillas, pasta, platos asiáticos ricos en hidratos y grasas, bollería dulce y de masa fermentada, cereales, miel, mermelada | 90 %                                     | 20 %, empiezan 60 minutos más tarde, repartidos en 2 horas |
+| **Pizza**                | Lasaña, pizza, hamburguesas, patatas fritas, patatas al horno, patatas de bolsa                                                  | 80 %                                     | 35 %, empiezan 60 minutos más tarde, repartidos en 3 horas |
 
-**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+**Ejemplo**: escribes 100 g y eliges **Pizza**. El bolo se calcula para 80 g, registrados ahora. 35 g de eCarbs empiezan 1 hora más tarde y se reparten en 3 horas.
 
 Good to know:
-* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
-* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
-* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
-* Grams are rounded down to whole numbers.
-* The percentages, delays and durations are fixed; they can't be changed in the settings.
-* The choice is not remembered: the wizard opens on **Bread** every time.
+* No es un simple reparto: con **Pastel** y **Pizza**, los carbohidratos registrados suman **más de lo que escribiste** (110 % y 115 %). La parte extra está solo en los eCarbs.
+* El bolo solo cubre los carbohidratos que se toman ahora. **AAPS** no da un bolo por adelantado para los eCarbs: el lazo los tiene en cuenta cuando empiezan, como cualquier otro [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
+* Si fijas una **Hora de los carbohidratos**, los eCarbs empiezan 60 minutos después de esa hora.
+* El diálogo de confirmación muestra los eCarbs en su propia línea, _p. ej._ "eCarbs 35g / 3h (+60min)".
+* Los gramos se redondean hacia abajo a números enteros.
+* Los porcentajes, retrasos y duraciones son fijos; no se pueden cambiar en los ajustes.
+* La elección no se recuerda: el asistente se abre siempre con **Pan**.
 
 ______________________________________________________________________
 
-A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+Aquí se describe una forma de tratar las grasas y las proteínas con esta función: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
 ______________________________________________________________________
 
-## Recommended setup, example scenario, and important notes
+## Configuración recomendada, ejemplo y notas importantes
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+La configuración recomendada es usar el complemento APS OpenAPS SMB, con los SMB activados y también con la preferencia *Habilitar SMB con COB* activada.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+Un ejemplo, p. ej. para una pizza, sería dar un bolo (parcial) al principio con el *Asistente de bolo* y después usar el diálogo *Carbohidratos* para introducir el resto de los carbohidratos con una duración de 4–6 horas, empezando después de 1 o 2 horas.
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+Para empezar más rápido, el *Asistente de bolo* puede añadir los eCarbs por ti: elige el [tipo de carbohidratos](#AapsScreens-carbs-type) **Pastel** o **Pizza** debajo del campo **Carbohidratos** (ver arriba). Las cantidades y los tiempos son fijos, así que usa el diálogo *Carbohidratos* si quieres otros valores.
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Con comidas bajas en carbohidratos, altas en grasas y proteínas, puede ser suficiente usar solo eCarbs sin bolos manuales (consulte el post arriba mencionado). Cuando los eCarbs son generados, se genera una nota en el Careportal para documentar los inputs, para así hacer más fácil la iteración y mejorar los inputs.
+**Notas importantes:** Por supuesto, tendrás que probar qué valores concretos te funcionan. También puedes ajustar con cuidado el ajuste *máximo de minutos de basal para limitar el SMB* para que el algoritmo sea más o menos agresivo. Con comidas bajas en carbohidratos, altas en grasas y proteínas, puede ser suficiente usar solo eCarbs sin bolos manuales (consulte el post arriba mencionado). Cuando se generan eCarbs, también se crea una nota en el Portal de cuidados que documenta todos los datos introducidos, para que sea más fácil repetirlos y mejorarlos.
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## Extended bolus and why they won't work in closed-loop environment?
+## ¿Bolo extendido y por qué no funciona en un entorno de lazo cerrado?
 
-Como se ha mencionado anteriormente, los bolos extendidos o de onda múltiple no funcionan realmente en un entorno de lazo cerrado. [See below](#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
+Como se ha mencionado anteriormente, los bolos extendidos o de onda múltiple no funcionan realmente en un entorno de lazo cerrado. [Más abajo](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) encontrarás los detalles
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
-### Extended bolus and switch to open loop - Dana and Insight pump only
+### Bolo extendido y cambio a lazo abierto: solo bombas Dana e Insight
 
-Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
+Algunas personas pidieron una opción para usar el bolo extendido en AAPS de todos modos, porque querían tratar algunas comidas especiales como están acostumbradas.
 
-That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
+Por eso **AAPS** ofrece un bolo extendido para usuarios de bombas Dana e Insight: abre **Administrar** y selecciona **Bolo extendido**.
 
-**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
+**AAPS** primero te avisa de que el lazo cerrado se detendrá mientras dure el bolo extendido. Toca **OK** para continuar:
 
-![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+![Advertencia: el bolo extendido detiene el modo de lazo cerrado](../images/extended_bolus_stops_loop.png)
 
-Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+Introduce la cantidad de **Insulina** y la **Duración**, después toca el botón de confirmar abajo y **OK**:
 
-![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+![Diálogo de bolo extendido con 2 U en 60 minutos](../images/extended_bolus_dialog.png)
 
-On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+En la bomba Insight, el bolo extendido *no está disponible* si se usa la [emulación de TBR](#Accu-Chek-Insight-Pump-settings-in-aaps).
 
-While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+Mientras el bolo extendido está en curso, el lazo funciona en modo **Lazo abierto** (cambia el icono del lazo en la pantalla principal), y el lazo cerrado se activa de nuevo automáticamente cuando termina el bolo extendido:
 
-![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+![Icono de lazo abierto en la pantalla principal mientras hay un bolo extendido en curso](../images/extended_bolus_main_screen.png)
 
-The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+El menú **Administrar** muestra un botón **Cancelar** con la tasa y el tiempo transcurrido / total (por ejemplo **Cancelar 2.00 U/h 1/60'**). Tócalo para detener el bolo extendido antes de tiempo:
 
-![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
+![Botón Cancelar de un bolo extendido en curso en el menú Administrar](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
-### Why extended boluses won't work in a closed loop environment
+### Por qué los bolos extendidos no funcionan en un entorno de lazo cerrado
 
-1. El lazo determina que ahora se van a entregar 1.55U/h. Si se entrega como un bolus ampliado o TBR no importa al algoritmo. De hecho, algunas de las bombas utilizan el bolo extendido. ¿Qué debería pasar entonces? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
+1. El lazo determina que ahora se deben administrar 1,55 U/h. Para el algoritmo no importa si esto se administra como bolo extendido o como TBR. De hecho, algunas de las bombas utilizan el bolo extendido. ¿Qué debería pasar entonces? Después, la mayoría de los controladores de bomba detienen el bolo extendido -> ni siquiera hacía falta iniciarlo.
 
 2. Si tuvieras el bolo extendido como entrada, ¿qué debería pasar en el modelo?
 
-   1. Debe ser considerado neutral, junto con la BR y el lazo en él? Entonces, el ciclo también debería ser capaz de reducir el bolo si, por ejemplo, se baja demasiado y se quita toda la insulina "neutral"?
+   1. ¿Debería considerarse neutral junto con la tasa basal (BR) y hacer el lazo sobre él? Entonces, ¿el lazo también debería poder reducir el bolo si, por ejemplo, la glucosa baja demasiado y se quita toda la insulina «neutral»?
    2. ¿Se debe añadir simplemente el bolo extendido? ¿Entonces simplemente se debe permitir que el lazo continúe? ¿Incluso en la peor hipoglucemia? No creo que esto sea tan bueno: ¿Se ha previsto una hipoglucemia, pero no se debe evitar?
 
-3. El IOB que se acumula del bolo ampliado se materializa después de 5 minutos en la siguiente ejecución. Por consiguiente, el lazo daría menos basal. So not much changes... except that the possibility of hypo avoidance is taken.
+3. La IOB que genera el bolo extendido aparece después de 5 minutos, en la siguiente ejecución. Por consiguiente, el lazo daría menos basal. Así que no cambia mucho... excepto que se pierde la posibilidad de evitar la hipoglucemia.
