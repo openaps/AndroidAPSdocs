@@ -1,4 +1,4 @@
-# Automation
+# Автоматизація
 
 ```{contents} In this page
 :backlinks: entry
@@ -125,7 +125,7 @@
 Будьте обережні, коли вибираєте від'ємне значення в **автоматизації**
 ```
 
-Будьте обережні, коли вибираєте «від'ємне значення» в «Умові», наприклад «менше ніж», в **автоматизації**. For example:
+Будьте обережні, коли вибираєте «від'ємне значення» в «Умові», наприклад «менше ніж», в **автоматизації**. Наприклад:
 
 ![Альтернативний текст](../images/Automations/automation_comparison_operators.png)
 
@@ -144,7 +144,7 @@
 
 ![Тригери автоматизації](../images/Automations/automation_triggers.png)
 
-Scroll down to see the rest of the list:
+Прокрутіть вниз, щоб побачити решту списку:
 
 ![Тригери автоматизації, продовження](../images/Automations/automation_trigger_picker_2.png)
 
@@ -178,7 +178,7 @@ Scroll down to see the rest of the list:
 
 * Використовувати пасивне розташування: **AAPS** отримує розташування лише тоді, коли його запитують інші застосунки.
 * Використовувати мережеве розташування: розташування вашої мережі Wi-Fi.
-* Use GPS location (Attention! Це може дуже швидко розряджати батарею!)
+* Використовувати GPS-розташування (Увага! Це може дуже швидко розряджати батарею!)
 
 **Тригери**: дані помпи та сенсора
 
@@ -198,7 +198,7 @@ Scroll down to see the rest of the list:
 
 ![Дії автоматизації](../images/Automations/automation_actions.png)
 
-Scroll down to see the rest of the list:
+Прокрутіть вниз, щоб побачити решту списку:
 
 ![Дії автоматизації, продовження](../images/Automations/automation_action_picker_2.png)
 
