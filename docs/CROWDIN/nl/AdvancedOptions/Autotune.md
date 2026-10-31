@@ -19,7 +19,7 @@ Daarna kijkt het naar het patroon van afwijkingen in elke groep (met percentiele
 
 Om te voorkomen dat één berekening te veel corrigeert, verschuift elke Autotune berekening een waarde maar een deel van de weg naar wat de gegevens aangeven: tot 10% voor ISF en koolhydraatratio, en tot 20% voor elk basaaldeel. De totale verschuiving wordt ook begrensd door de instellingen **Max autosens ratio** / **Min autosens ratio** (zie [Andere instellingen](#autotune-other-settings) hieronder): dezelfde grenzen die ook Autosens begrenzen. Daarom is Autotune bedoeld om steeds opnieuw te draaien (dag na dag, of elke nacht) en niet om na één berekening te vertrouwen: de resultaten moeten langzaam naar elkaar toe komen. Een grote sprong bij één berekening is een teken om je gegevens nog eens te controleren (vergeten koolhydraten, een slechte sensordag, _enz._) en niet om er blind op te vertrouwen.
 
-Autotune kan op drie manieren draaien: handmatig, eenmalig vanuit de plugin (zoals hieronder beschreven), automatisch elke nacht via een [automatiseringsregel](#autotune-run-autotune-with-an-automation-rule), of helemaal buiten AAPS als losse command-line tool met geëxporteerde gegevens. Zo beschrijven sommige community-handleidingen het gebruik zonder telefoon waarop AAPS draait.
+Autotune kan op drie manieren draaien: handmatig, eenmalig vanuit de plugin (zoals hieronder beschreven), automatisch elke nacht via een [automatiseringsregel](#autotune-run-autotune-with-an-automation-rule), of helemaal buiten AAPS als losse opdrachtregeltool met geëxporteerde gegevens. Zo beschrijven sommige community-handleidingen het gebruik zonder telefoon waarop AAPS draait.
 
 *Voor het onderliggende oref0 algoritme met alle wiskundige details, zie [de Autotune documentatie van OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).*
 
@@ -31,13 +31,13 @@ Maak een leeg bestand met de naam `enable_autotune` in de submap `extra` van de 
 
 ![Autotune inschakelen](../images/Autotune/Autotune_0.png)
 
-Start **AAPS** opnieuw. Open daarna het **menu** (☰), kies **Configuration**, dan de categorie **General**, en vink **Autotune** aan. De kaart toont dan **Instellingen** en **Open plugin**:
+Start **AAPS** opnieuw. Open daarna het **menu** (☰), kies **Configuratie**, dan de categorie **Algemeen**, en vink **Autotune** aan. De kaart toont dan **Instellingen** en **Plug-in openen**:
 
-![Autotune aangevinkt in Configuration > General](../images/v4/Configuration/configuration_general_autotune.png)
+![Autotune aangevinkt in Configuratie > Algemeen](../images/v4/Configuration/configuration_general_autotune.png)
 
 ## Autotune gebruikersinterface
 
-Tik op **Open plugin** op de kaart **Autotune** om het Autotune scherm te openen:
+Tik op **Plug-in openen** op de kaart **Autotune** om het Autotune scherm te openen:
 
 ![Autotune scherm met het profiel, het aantal dagen data en een waarschuwing over het gekozen profiel](../images/Autotune/Autotune_1b.png)
 
@@ -76,20 +76,20 @@ Tik op **Open plugin** op de kaart **Autotune** om het Autotune scherm te openen
 
   ![Autotune Vergelijk profielen](../images/Autotune/Autotune_5.png)
 
-- Vertrouw je de resultaten (klein percentage verschil tussen invoerprofiel en uitvoerprofiel), dan kun je op de knop "Activate profile" klikken en daarna op OK klikken om te bevestigen.
+- Vertrouw je de resultaten (klein percentage verschil tussen invoerprofiel en uitvoerprofiel), dan kun je op de knop "Activeer profiel" klikken en daarna op OK klikken om te bevestigen.
 
-  - Het activeren van het afgestemde profiel maakt automatisch een nieuw profiel "Tuned" in je profielenlijst (**Manage → Profiel**).
-  - Heb je al een profiel met de naam "Tuned" in **Manage → Profiel**, dan wordt dat profiel vóór het activeren bijgewerkt met het berekende Autotune profiel
+  - Het activeren van het afgestemde profiel maakt automatisch een nieuw profiel "Tuned" in je profielenlijst (**Beheren → Profiel**).
+  - Heb je al een profiel met de naam "Tuned" in **Beheren → Profiel**, dan wordt dat profiel vóór het activeren bijgewerkt met het berekende Autotune profiel
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+  ![Autotune Activeer profiel](../images/Autotune/Autotune_6.png)
 
 - Vind je dat het afgestemde profiel moet worden aangepast (bijvoorbeeld omdat sommige verschillen te groot zijn), dan kun je op de knop "Kopiëren naar lokaal profiel" klikken
 
-  - Er wordt een nieuw profiel gemaakt in **Manage → Profiel**, met het voorvoegsel "Tuned" en de datum en tijd van de berekening
+  - Er wordt een nieuw profiel gemaakt in **Beheren → Profiel**, met het voorvoegsel "Tuned" en de datum en tijd van de berekening
 
   ![Autotune Kopiëren naar lokaal profiel](../images/Autotune/Autotune_7.png)
 
-- Daarna kun je het afgestemde profiel bewerken: open **Manage** > **Profiel**, veeg naar de kaart met de naam "Tuned" en de datum en tijd van de berekening, en tik op de knop **Bewerk** (potlood)
+- Daarna kun je het afgestemde profiel bewerken: open **Beheren** > **Profiel**, veeg naar de kaart met de naam "Tuned" en de datum en tijd van de berekening, en tik op de knop **Bewerk** (potlood)
 
   - de waarden in het profiel worden in het scherm afgerond op wat je pomp kan
 
@@ -97,11 +97,11 @@ Tik op **Open plugin** op de kaart **Autotune** om het Autotune scherm te openen
 
 - Wil je je invoerprofiel vervangen door het Autotune resultaat, klik dan op de knop "Invoerprofiel bijwerken" en bevestig het venster met OK
 
-  - Let op: als je op "Activate profile" klikt na "Invoerprofiel bijwerken", activeer je je bijgewerkte profiel en niet het standaardprofiel "Tuned".
+  - Let op: als je op "Activeer profiel" klikt na "Invoerprofiel bijwerken", activeer je je bijgewerkte profiel en niet het standaardprofiel "Tuned".
 
   ![Autotune Invoerprofiel bijwerken](../images/Autotune/Autotune_9.png)
 
-- Als je je invoerprofiel hebt bijgewerkt, wordt de knop "Invoerprofiel bijwerken" vervangen door de knop "Invoerprofiel ongedaan maken" (zie schermafbeelding hieronder). Zo zie je meteen of je huidige invoerprofiel in **Manage → Profiel** het resultaat van de laatste berekening al bevat of niet. Met deze knop kun je ook je invoerprofiel zonder Autotune resultaat terughalen
+- Als je je invoerprofiel hebt bijgewerkt, wordt de knop "Invoerprofiel bijwerken" vervangen door de knop "Invoerprofiel ongedaan maken" (zie schermafbeelding hieronder). Zo zie je meteen of je huidige invoerprofiel in **Beheren → Profiel** het resultaat van de laatste berekening al bevat of niet. Met deze knop kun je ook je invoerprofiel zonder Autotune resultaat terughalen
 
   ![Autotune Invoerprofiel bijwerken](../images/Autotune/Autotune_10.png)
 
@@ -117,16 +117,16 @@ Tik op **Open plugin** op de kaart **Autotune** om het Autotune scherm te openen
 
 ```{admonition} Only DEV
 :class: note
-De functie **Auto switch profile** is alleen beschikbaar in Dev/Engineering mode.
+De functie **Automatisch wisselen van profiel** is alleen beschikbaar in Dev/Engineering-modus.
 ```
 
-- **Auto switch profile** (standaard Uit): zie [Autotune uitvoeren met een automatiseringsregel](#autotune-run-autotune-with-an-automation-rule) hieronder. Als je deze instelling op Aan zet, wordt het invoerprofiel automatisch bijgewerkt met het afgestemde profiel ("Tuned"), en wordt het geactiveerd.
+- **Automatisch wisselen van profiel** (standaard Uit): zie [Autotune uitvoeren met een automatiseringsregel](#autotune-run-autotune-with-an-automation-rule) hieronder. Als je deze instelling op Aan zet, wordt het invoerprofiel automatisch bijgewerkt met het afgestemde profiel ("Tuned"), en wordt het geactiveerd.
   - **Wees voorzichtig: na het bijwerken en activeren van het afgestemde profiel zonder wijzigingen moet je de volgende dagen controleren dat het je loop echt verbetert, voordat je erop vertrouwt**
 
-- **Categorize UAM as basal** (standaard Uit): deze instelling is voor gebruikers die AndroidAPS gebruiken zonder koolhydraten in te voeren (volledig UAM). Als deze instelling Uit staat, wordt UAM niet als basaal ingedeeld.
+- **UAM als basaal aanmerken** (standaard Uit): deze instelling is voor gebruikers die AndroidAPS gebruiken zonder koolhydraten in te voeren (volledig UAM). Als deze instelling Uit staat, wordt UAM niet als basaal ingedeeld.
   - Let op: als er op een dag minstens één uur opname van koolhydraten is gemeten, worden alle gegevens die als "UAM" zijn ingedeeld als basaal ingedeeld, wat deze instelling ook is (Aan of Uit)
-- **Default tune days** (standaard 5): met deze instelling bepaal je de standaardwaarde. Elke keer dat je een nieuw profiel kiest in de Autotune plugin, wordt het **Aantal dagen data** vervangen door deze standaardwaarde
-- **Use circadian IC/ISF** (standaard Uit): zie [Circadiaan IC- of ISF-profiel](#autotune-circadian-ic-or-isf-profile) hieronder.
+- **Standaardperiode** (standaard 5): met deze instelling bepaal je de standaardwaarde. Elke keer dat je een nieuw profiel kiest in de Autotune plugin, wordt het **Aantal dagen data** vervangen door deze standaardwaarde
+- **Circadiane IC/ISF gebruiken** (standaard Uit): zie [Circadiaan IC- of ISF-profiel](#autotune-circadian-ic-or-isf-profile) hieronder.
 
 (autotune-other-settings)=
 ### Overige instellingen
@@ -143,7 +143,7 @@ De functie **Auto switch profile** is alleen beschikbaar in Dev/Engineering mode
 
 ### Circadiaan IC- of ISF-profiel
 
-- Heb je grote verschillen in IC en/of ISF in je profiel over de dag, en vertrouw je volledig op je tijden en verschillen over de dag, dan kun je **Use circadian IC/ISF** inschakelen (in oudere versies "Apply average result in circadian IC/ISF")
+- Heb je grote verschillen in IC en/of ISF in je profiel over de dag, en vertrouw je volledig op je tijden en verschillen over de dag, dan kun je **Circadiane IC/ISF gebruiken** inschakelen (in oudere versies "Apply average result in circadian IC/ISF")
 
   - Let op: de Autotune berekening wordt altijd gedaan met één waarde. Verschillen over de dag worden niet door Autotune afgestemd. Deze instelling past alleen het gemiddelde verschil dat voor IC en/of ISF is berekend toe op je waarden over de dag
 
@@ -173,7 +173,7 @@ De functie **Auto switch profile** is alleen beschikbaar in Dev/Engineering mode
 
 ```{admonition} Only DEV
 :class: note
-De functie **Auto switch profile** is alleen beschikbaar in Dev/Engineering mode.
+De functie **Automatisch wisselen van profiel** is alleen beschikbaar in Dev/Engineering-modus.
 ```
 
 De eerste stap is de juiste trigger kiezen voor een automatiseringsregel met Autotune:
@@ -188,7 +188,7 @@ Let op: zie [hier](../DailyLifeWithAaps/Automations.md) voor meer informatie ove
 
   ![Autotune standaardscherm](../images/Autotune/Autotune_17.png)
 
-- Daarna kun je de actie **Autotune profile** kiezen (in de groep **Loop & insulin**)
+- Daarna kun je de actie **Autotune profiel** kiezen (in de groep **Loop & insuline**)
 
   ![Autotune standaardscherm](../images/Autotune/Autotune_18.png)
 
@@ -196,7 +196,7 @@ Let op: zie [hier](../DailyLifeWithAaps/Automations.md) voor meer informatie ove
 
   ![Autotune standaardscherm](../images/Autotune/Autotune_19b.png)
 
-- Vertrouw je na een paar dagen de Autotune resultaten volledig en is het percentage verandering klein, dan kun je in de [Autotune instellingen](#autotune-plugin-settings) "**Auto switch profile**" inschakelen. Dan wordt het afgestemde profiel na de berekening automatisch bijgewerkt en geactiveerd.
+- Vertrouw je na een paar dagen de Autotune resultaten volledig en is het percentage verandering klein, dan kun je in de [Autotune instellingen](#autotune-plugin-settings) "**Automatisch wisselen van profiel**" inschakelen. Dan wordt het afgestemde profiel na de berekening automatisch bijgewerkt en geactiveerd.
 
 Let op: wil je automatisch profielen afstemmen voor bepaalde dagen van de week (bijvoorbeeld een profiel voor "weekenddagen" en een ander voor "werkdagen"), maak dan één regel per profiel. Kies dezelfde dagen in de trigger en in de Autotune actie. Het aantal afstemdagen moet hoog genoeg zijn, zodat de afstemming wordt gedaan met minstens 6 of 8 dagen. En vergeet niet in de trigger een tijd na 4:00 uur te kiezen...
 
