@@ -1,10 +1,10 @@
 # Tidepool
 
-Tidepool je nástroj třetí strany, který shromažďuje data o glykémii, inzulínu a sacharidech (a poznámky, které přidáte k ošetřením). Můžete ho používat k analýze těchto dat a k jejich sdílení s vaším lékařským týmem. Od verze AAPS 3.2 ho lze použít místo Nightscoutu pro splnění části Cíle 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool je nástroj třetí strany, který shromažďuje data o glykémii, inzulínu a sacharidech (a poznámky, které přidáte k ošetřením). Můžete ho používat k analýze těchto dat a k jejich sdílení s vaším lékařským týmem. Od verze AAPS 3.2 ho lze použít místo Nightscoutu pro splnění části Cíle 1. Lze ho také používat spolu s Nightscoutem jako alternativní reportovací platformu, která dobře zapadá do klinické praxe. To může být vhodná volba pro děti používající AAPS, které chtějí možnosti vzdáleného dohledu a ovládání z Nightscoutu, ale zároveň reportovací platformu, se kterou jejich lékařský tým raději pracuje.
 
-Je důležité vědět, že Tidepool slouží jen k reportování. It is NOT a real-time follow app. Pokud potřebujete sledující mimo hlavní telefon s AAPS, musíte nastavit také Nightscout.
+Je důležité vědět, že Tidepool slouží jen k reportování. NENÍ to aplikace pro sledování v reálném čase. Pokud potřebujete sledující mimo hlavní telefon s AAPS, musíte nastavit také Nightscout.
 
-Poznámka: organizace Tidepool uvedla na trh produkt iOS Loop se schválením FDA. This effort has nothing to do with their data reporting platform or AAPS.
+Poznámka: organizace Tidepool uvedla na trh produkt iOS Loop se schválením FDA. Tato snaha nemá nic společného s jejich platformou pro reportování dat ani s AAPS.
 
 
 ## Krok 1 – Vytvořte si účet Tidepool
@@ -30,7 +30,7 @@ Poznámka: organizace Tidepool uvedla na trh produkt iOS Loop se schválením FD
 
 ![Zapnutí Tidepoolu](../images/v4/Tidepool/tidepool_enable.png)
 
-- Klepněte na „**Otevřít modul**“ pod Tidepoolem a potom klepněte na ikonu **Přihlášení** (šipka vedoucí do dveří) v pravém horním rohu
+- Klepněte na „**Otevřít plugin**“ pod Tidepoolem a potom klepněte na ikonu **Přihlášení** (šipka vedoucí do dveří) v pravém horním rohu
 
 - Otevře se okno prohlížeče s přihlašovací stránkou Tidepoolu. Přihlaste se e-mailovou adresou a heslem, které jste vytvořili v kroku 1 výše:
 
