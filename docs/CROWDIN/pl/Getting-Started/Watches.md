@@ -1,197 +1,197 @@
-# Smartwatches and AAPS
+# Smartwatche i AAPS
 
-Various smartwatches can be used to display some of the information available in **AAPS** or perform remote actions.
+Różne smartwatche mogą pokazywać część informacji dostępnych w **AAPS** albo wykonywać działania zdalne.
 
-Having a smartwatch directly control **AAPS** (pump and sensor) is achieved using full Android watches (that are considered like small [smartphones](./Phones.md)).
+Bezpośrednie sterowanie **AAPS** (pompą i sensorem) przez smartwatch jest możliwe na zegarkach z pełnym Androidem (które są traktowane jak małe [smartfony](./Phones.md)).
 
-Some smartwatches can allow you to enter treatments, or more, but with the phone itself still managing **AAPS**.
+Niektóre smartwatche pozwalają wprowadzać leczenie i więcej, ale **AAPS** nadal działa na telefonie.
 
-Smartwatches are becoming increasingly used with **AAPS** _both_ for adults with diabetes and carers/parents of children with diabetes.
+Smartwatche są coraz częściej używane z **AAPS** _zarówno_ przez dorosłych z cukrzycą, jak i przez opiekunów/rodziców dzieci z cukrzycą.
 
-## General advantages of using smartwatches with **AAPS**
+## Ogólne zalety używania smartwatchy z **AAPS**
 
 
-Smartwatches - depending on the model - can be used in many different ways with **AAPS**. They can be used to fully or partly control **AAPS**, or simply to remotely check glucose levels, insulin-on-board, and other parameters.
+Smartwatche – zależnie od modelu – można używać z **AAPS** na wiele różnych sposobów. Mogą służyć do pełnego lub częściowego sterowania **AAPS** albo tylko do zdalnego sprawdzania poziomu glukozy, aktywnej insuliny (IOB) i innych parametrów.
 
-Integrating a smartwatch with **AAPS** can be useful in many situations, including driving a car or (motor) bike and during exercise. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking at a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling the user to keep their **AAPS** phone stored out of sight (like inside a bag), while still using the smartwatch for remote control.
+Połączenie smartwatcha z **AAPS** może być przydatne w wielu sytuacjach, np. podczas jazdy samochodem, (moto)cyklem lub podczas ćwiczeń. Niektórzy uważają, że spojrzenie na zegarek (na spotkaniu, imprezie, przy stole itp.) jest bardziej dyskretne niż spojrzenie na telefon. Ze względów bezpieczeństwa smartwatch może być też przydatny w drodze: telefon **AAPS** może być schowany (np. w torbie), a Ty nadal używasz smartwatcha do zdalnego sterowania.
 
-## Specific advantages for parents/carers using **AAPS**
+## Szczególne zalety dla rodziców/opiekunów używających **AAPS**
 
-For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS**  phone. This can be useful, for example, if the **AAPS** phone is hidden away in a pump belt.
+Jeśli telefon **AAPS** dziecka jest w pobliżu, opiekun może używać smartwatcha do monitorowania lub wprowadzania zmian bez używania telefonu **AAPS**. Może to być przydatne na przykład wtedy, gdy telefon **AAPS** jest schowany w pasku na pompę.
 
-A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for remote control or [following only](../RemoteFeatures/FollowingOnly.md).
+Smartwatcha można używać _obok_ opcji opartych na TELEFONIE albo _zamiast_ nich, zarówno do zdalnego sterowania, jak i do [samego obserwowania](../RemoteFeatures/FollowingOnly.md).
 
-Additionally, unlike parent/caregiver follower phones (which rely on the mobile network or Wi-Fi connection), Bluetooth connected smartwatches can be useful in remote locations, like a cave, in a boat, or half-way up a mountain. If both devices (**AAPS** phone and smartwatch) are on the same Wi-Fi network, they can also use Wi-Fi.
+Poza tym, w przeciwieństwie do telefonów obserwujących rodzica/opiekuna (które potrzebują sieci komórkowej lub Wi-Fi), smartwatche połączone przez Bluetooth mogą być przydatne w odległych miejscach, np. w jaskini, na łodzi albo w połowie drogi na szczyt góry. Jeśli oba urządzenia (telefon **AAPS** i smartwatch) są w tej samej sieci Wi-Fi, mogą też używać Wi-Fi.
 
-## Different types of Smartwatch-AAPS interactions
+## Różne sposoby współpracy smartwatcha z AAPS
 
-There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
+Obecnie jest pięć głównych sposobów używania smartwatchy razem z **AAPS**. Pokazuje je poniższa tabela: 
 
-| Watch Setup         | Features                                       | Requirements                                                                                                                                                                                                                                                                                                        |
-| ------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Standalone          | AAPS without a phone                           | Full Android smartwatch (check min Android)</br> Running **app-fullRelease**                                                                                                                                                                                                                                        |
-| Full remote control | Most AAPS functions                            | Android **Wear OS** watch (check Android/API)</br>Running **wear-fullRelease**                                                                                                                                                                                                                                      |
-| Remote control      | AAPSClient functions                           | Android **Wear OS** watch (check Android/API)</br>Running **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                           |
-| Remote control      | Some AAPSClient functions                      | Garmin watches</br>(older Samsung Tizen and Fitbit setups only, not recommended)</br>See below.                                                                                                                                                                                                                     |
-| Display             | Glucose, trend, IOB, COB, loop and pump status | Many smartwatches, through a companion app on the **AAPS** phone fed by the [External Companion Apps](#watches-external-companion-apps) broadcast: [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>See below. |
+| Rodzaj zegarka          | Funkcje                                      | Wymagania                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Samodzielny             | AAPS bez telefonu                            | Zegarek z pełnym Androidem (sprawdź minimalną wersję Androida)</br> Z aplikacją **app-fullRelease**                                                                                                                                                                                                                                         |
+| Pełne zdalne sterowanie | Większość funkcji AAPS                       | Zegarek z Androidem **Wear OS** (sprawdź wersję Androida/API)</br>Z aplikacją **wear-fullRelease**                                                                                                                                                                                                                                          |
+| Zdalne sterowanie       | Funkcje AAPSClient                           | Zegarek z Androidem **Wear OS** (sprawdź wersję Androida/API)</br>Z aplikacją **[wear-aapsclientRelease](https://github.com/nightscout/AndroidAPS/releases)**                                                                                                                                                                               |
+| Zdalne sterowanie       | Niektóre funkcje AAPSClient                  | Zegarki Garmin</br>(tylko starsze zestawy Samsung Tizen i Fitbit, niezalecane)</br>Zobacz poniżej.                                                                                                                                                                                                                                          |
+| Wyświetlanie            | Glukoza, trend, IOB, COB, stan pętli i pompy | Wiele smartwatchy przez aplikację towarzyszącą na telefonie **AAPS**, która odbiera dane z [Zewnętrznych aplikacji towarzyszących](#watches-external-companion-apps): [WatchDrip+](https://bigdigital.home.blog/) (Xiaomi, Amazfit), [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) (Wear OS), G-Watch</br>Zobacz poniżej. |
 
-## Before you buy a smartwatch…
+## Zanim kupisz smartwatch…
 
-The exact model of smartwatch you buy depends on the desired function(s). You may find useful information on the [Phones page](#Phones-list-of-tested-phones), including a list of tested phones that also contains some smartwatches.
+Konkretny model smartwatcha zależy od tego, do czego ma służyć. Przydatne informacje znajdziesz na [stronie Telefony](#Phones-list-of-tested-phones), w tym listę przetestowanych telefonów, na której są też niektóre smartwatche.
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil and Mi band. The different options summarized in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
+Popularne marki zegarków to m.in. Samsung Galaxy, Garmin, Fossil i Mi Band. Opcje zebrane w powyższej tabeli są dokładniej opisane poniżej. Pomoże Ci to wybrać smartwatch odpowiedni do Twojej sytuacji.
 
-If you are integrating a smartwatch with **AAPS** on a phone with the intention to remotely interact with **AAPS**, you also need to consider if the two devices are compatible with each other, particularly if you have an older, or an unusual phone.
+Jeśli łączysz smartwatch z **AAPS** na telefonie, aby zdalnie obsługiwać **AAPS**, sprawdź też, czy oba urządzenia ze sobą współpracują, zwłaszcza gdy masz starszy lub nietypowy telefon.
 
-In general, if you only want to follow glucose numbers and not interact with **AAPS**, there are a wider range of affordable and simpler watches you can use.
+Ogólnie, jeśli chcesz tylko obserwować wartości glukozy bez obsługi **AAPS**, masz do wyboru więcej tańszych i prostszych zegarków.
 
-The best way to choose a smartwatch is to search for "watch" posts on either Discord or Facebook **AAPS** groups. Have a read of others' experiences, and post any specific questions if your query isn't answered by older posts.
+Najlepszy sposób na wybór smartwatcha to wyszukanie postów o zegarkach („watch”) w grupach **AAPS** na Discordzie lub Facebooku. Przeczytaj doświadczenia innych osób i zadaj konkretne pytania, jeśli starsze posty nie odpowiadają na Twoje pytanie.
 
-## Full Android
+## Pełny Android
 
-It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 15 Pro and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
+Brzmi atrakcyjnie, prawda? Jednak obecnie tylko nieliczni entuzjaści eksperymentują z **AAPS** na samodzielnym zegarku. Jest niewiele smartwatchy z rozsądnym interfejsem, które dobrze działają z samodzielnym **AAPS** i Twoją aplikacją CGM. Popularne modele to m.in. LEMFO LEM 15 Pro i 16. Na zegarku musisz zainstalować plik apk **AAPS** „full” (ten, który zwykle instaluje się na smartfonie), a nie plik apk **AAPS** „wear”.
 
-While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
+Nie ma jasnej specyfikacji, która mówi, czy zegarek będzie dobrze działał z samodzielnym **AAPS**, ale pomogą te parametry:
 
-1)  Android 12 or newer. 2)  Being able to take the watchface off “square” mode to make text larger and easier to read. 3)  Very good battery life. 4)  Good Bluetooth range.
+1)  Android 12 lub nowszy. 2)  Możliwość wyłączenia trybu „kwadratowego” tarczy zegarka, aby tekst był większy i łatwiejszy do czytania. 3)  Bardzo dobry czas pracy na baterii. 4)  Dobry zasięg Bluetooth.
 
-Most of the frustrations of standalone **AAPS** watches come from interacting with a tiny screen, and the fact that the current AAPS full app interface has not been designed for a watch. You may prefer to use a stylus to edit **AAPS**  settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+Większość frustracji z samodzielnymi zegarkami **AAPS** wynika z obsługi bardzo małego ekranu i z tego, że obecny interfejs pełnej aplikacji AAPS nie był projektowany dla zegarka. Z powodu małego ekranu możesz woleć używać rysika do zmiany ustawień **AAPS** na zegarku. Niektóre przyciski AAPS mogą nie być widoczne na ekranie zegarka.
 
-Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor Bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below.
+Kolejne trudności: trudno uzyskać wystarczający czas pracy na baterii, a zegarki z wystarczającą baterią są często duże i grube. Użytkownicy zgłaszają walkę z systemem i ustawieniami oszczędzania energii, trudności z uruchamianiem sensorów na zegarku, słaby zasięg Bluetooth (potrzebny do utrzymania połączenia z sensorem i pompą) oraz wątpliwą wodoodporność. Przykłady pokazują poniższe zdjęcia.
 
 ![image](../images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Jeśli chcesz skonfigurować samodzielny zegarek, przeczytaj posty i komentarze w grupie **AAPS** na Facebooku (dobre słowa do wyszukiwania to „standalone” i „Lemfo”) oraz na Discordzie.
 
 ## Wear OS
 
-**AAPS** code contains an app extension that can be installed on [**Wear OS** smartwatches](https://wearos.google.com/#oem-carousel).
+Kod **AAPS** zawiera rozszerzenie aplikacji, które można zainstalować na [smartwatchach z **Wear OS**](https://wearos.google.com/#oem-carousel).
 
-![Configuration > Communication with Wear enabled](../images/v4/Configuration/configuration_communication_wear.png)
+![Konfiguracja > Komunikacja z włączonym Wear](../images/v4/Configuration/configuration_communication_wear.png)
 
-Verify your smartwatch satisfies **AAPS** [prerequisites](#maintenance-android-version-aaps-version).
+Sprawdź, czy Twój smartwatch spełnia [wymagania](#maintenance-android-version-aaps-version) **AAPS**.
 
-### What _is_ Wear OS?
+### Czym _jest_ Wear OS?
 
-The first three smartwatch options require the smartwatch to have **Wear OS** installed.
+Pierwsze trzy opcje wymagają smartwatcha z systemem **Wear OS**.
 
-**Wear OS** is the operating system which runs on some modern Android smartwatches. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch must be running **Wear OS 3.0, 3.2 or 3.5** (Android 11, API level 30) **or newer**. Each Wear OS release follows the Android version it is based on: **Wear OS 3** is Android 11 (API level 30), **Wear OS 4** is Android 13 (API level 33), **Wear OS 5** is Android 14 (API level 34) and **Wear OS 6** is Android 16 (API level 36). Watches on Wear OS 2 cannot run **AAPS**.
+**Wear OS** to system operacyjny działający na niektórych nowoczesnych smartwatchach z Androidem. Jeśli opis smartwatcha mówi tylko o _zgodności_ z Androidem i iOS, nie znaczy to, że działa na nim Wear OS. Może to być inny system operacyjny producenta, który nie współpracuje z **AAPS**. Aby można było zainstalować i używać dowolnej wersji **AAPS** lub **AAPSClient**, smartwatch musi mieć **Wear OS 3.0, 3.2 lub 3.5** (Android 11, poziom API 30) **lub nowszy**. Każde wydanie Wear OS odpowiada wersji Androida, na której jest oparte: **Wear OS 3** to Android 11 (poziom API 30), **Wear OS 4** to Android 13 (poziom API 33), **Wear OS 5** to Android 14 (poziom API 34), a **Wear OS 6** to Android 16 (poziom API 36). Zegarki z Wear OS 2 nie mogą uruchomić **AAPS**.
 
-If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which can be selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watchface in addition to the time.
+Jeśli zainstalujesz wear.apk **AAPS** na zegarku z **Wear OS**, możesz wybrać jedną z wielu własnych tarcz zegarka **AAPS**. Możesz też użyć zwykłej tarczy zegarka i pokazywać informacje **AAPS** w małych polach na tarczy, nazywanych „komplikacjami” (complications). Komplikacja to każdy element wyświetlany na tarczy zegarka oprócz godziny.
 
 ```{note}
-Recent **Wear OS** changes progressively break the custom **AAPS** watchfaces (the higher the Wear OS version, the more severe), although **complications** keep working. Before buying or updating a watch, read [Wear OS watch face changes](#wearos-watchface-changes).
+Ostatnie zmiany w **Wear OS** stopniowo psują własne tarcze zegarka **AAPS** (im wyższa wersja Wear OS, tym bardziej), ale **komplikacje** nadal działają. Zanim kupisz lub zaktualizujesz zegarek, przeczytaj [Zmiany tarcz zegarka w Wear OS](#wearos-watchface-changes).
 ```
 
 
-### What could my smartwatch look like?
+### Jak może wyglądać mój smartwatch?
 
-After [installing **AAPS** onto your watch](../WearOS/WearOsSmartwatch.md), you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the home screen until the screen shrinks and swipe right to select an alternative screen:
+Po [zainstalowaniu **AAPS** na zegarku](../WearOS/WearOsSmartwatch.md) od razu możesz wybrać ulubioną tarczę spośród tych tarcz przygotowanych dla **AAPS**. Na większości zegarków wystarczy przytrzymać ekran główny, aż się zmniejszy, i przesunąć w prawo, aby wybrać inny ekran:
 
 ![image](../images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
-These are the basic screens embedded in **AAPS**, there are [more watchfaces](#WearOS_changing-to-AAPS-watchface) and you can also use [complications](#Watchfaces-complications).
+To podstawowe ekrany wbudowane w **AAPS**. Jest też [więcej tarcz zegarka](#WearOS_changing-to-AAPS-watchface) i możesz również używać [komplikacji](#Watchfaces-complications).
 
-### How would I operate a Wear OS watch from day-to-day?
+### Jak na co dzień obsługiwać zegarek z Wear OS?
 
-Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customized watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../WearOS/WearOsSmartwatch.md).
+Więcej informacji o tarczach zegarka i codziennym używaniu, w tym o tym, jak stworzyć (i udostępnić) własną tarczę, znajdziesz w sekcji [Smartwatch z Wear OS](../WearOS/WearOsSmartwatch.md).
 
 (Watchfaces-tizen)= (watches-external-companion-apps)=
 
-## External Companion Apps
+## Zewnętrzne aplikacje towarzyszące
 
-**AAPS** can broadcast its status to other apps installed on the same phone: glucose and trend, IOB, COB, basal and temp basal, profile name, loop status, phone and pump battery, reservoir level and bolus progress. Several watch companion apps read this broadcast and display the data on watches that **AAPS** does not support directly. To send the data, enable **External Companion Apps** in **Configuration** > **Communication** (see [External Companion Apps](#external-companion-apps) on the Configuration page). The broadcast is sent with each new reading and cannot be requested: a refresh button in the companion app has no effect on **AAPS**.
+**AAPS** może wysyłać swój stan do innych aplikacji zainstalowanych na tym samym telefonie: glukozę i trend, IOB, COB, bazę i bazę tymczasową, nazwę profilu, stan pętli, baterię telefonu i pompy, poziom zbiornika i postęp bolusa. Kilka aplikacji towarzyszących dla zegarków odbiera te dane i pokazuje je na zegarkach, których **AAPS** nie obsługuje bezpośrednio. Aby wysyłać dane, włącz **Zewnętrzne aplikacje towarzyszące** w **Konfiguracja** > **Komunikacja** (zobacz [Zewnętrzne aplikacje towarzyszące](#external-companion-apps) na stronie Konfiguracja). Dane są wysyłane przy każdym nowym odczycie i nie można o nie poprosić: przycisk odświeżania w aplikacji towarzyszącej nie działa na **AAPS**.
 
-![Configuration > Communication: the External Companion Apps card](../images/v4/Configuration/configuration_external_companion_apps.png)
+![Konfiguracja > Komunikacja: karta Zewnętrzne aplikacje towarzyszące](../images/v4/Configuration/configuration_external_companion_apps.png)
 
-Companion apps known to use this broadcast:
+Aplikacje towarzyszące, o których wiadomo, że odbierają te dane:
 
-- [WatchDrip+](https://bigdigital.home.blog/) for Xiaomi and Amazfit watches, see [Xiaomi and Amazfit watches](#watches-xiaomi-amazfit) below.
-- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) for Wear OS watches, as a complication or a widget. It is a useful fallback on Wear OS versions where the **AAPS** watchfaces are unreliable, see [Set up AAPS on your Wear OS watch](../WearOS/WearOsSmartwatch.md). Its companion app GlucoDataAuto shows the same data in a car with Android Auto.
-- [G-Watch app](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) for Samsung Tizen watches, and its later Wear OS port. In earlier **AAPS** versions the plugin was named **Samsung Tizen** after this app.
+- [WatchDrip+](https://bigdigital.home.blog/) dla zegarków Xiaomi i Amazfit, zobacz [Zegarki Xiaomi i Amazfit](#watches-xiaomi-amazfit) poniżej.
+- [GlucoDataHandler](https://github.com/pachi81/GlucoDataHandler) dla zegarków z Wear OS, jako komplikacja lub widżet. To dobre rozwiązanie zapasowe na wersjach Wear OS, na których tarcze zegarka **AAPS** działają niepewnie, zobacz [Konfiguracja AAPS na zegarku z Wear OS](../WearOS/WearOsSmartwatch.md). Jej aplikacja towarzysząca GlucoDataAuto pokazuje te same dane w samochodzie z Android Auto.
+- [Aplikacja G-Watch](https://play.google.com/store/apps/details?id=sk.trupici.g_watch) dla zegarków Samsung Tizen i jej późniejsza wersja na Wear OS. We wcześniejszych wersjach **AAPS** wtyczka nazywała się od tej aplikacji **Samsung Tizen**.
 
 ```{warning}
-The **G-Watch app** and its **Wear OS** port are no longer maintained, and Samsung has moved its smartwatches from Tizen to Wear OS. G-Watch is only relevant for existing, older setups and is not recommended for a new installation. Check the dedicated [Facebook group](https://www.facebook.com/groups/gwatchapp) for the latest news.
+**Aplikacja G-Watch** i jej wersja na **Wear OS** nie są już rozwijane, a Samsung przeniósł swoje smartwatche z Tizen na Wear OS. G-Watch ma znaczenie tylko dla istniejących, starszych zestawów i nie jest zalecany do nowej instalacji. Najnowsze informacje znajdziesz w dedykowanej [grupie na Facebooku](https://www.facebook.com/groups/gwatchapp).
 ```
 
 (Watchfaces-garmin)=
 
 ## Garmin
 
-There are some watch faces for Garmin that integrate with [AAPS](https://apps.garmin.com/search?keywords=androidaps), on the Garmin ConnectIQ store.
+W sklepie Garmin ConnectIQ jest kilka tarcz zegarka dla Garmin, które współpracują z [AAPS](https://apps.garmin.com/search?keywords=androidaps).
 
-![Configuration > Communication: the Garmin card](../images/v4/Configuration/configuration_garmin.png)
+![Konfiguracja > Komunikacja: karta Garmin](../images/v4/Configuration/configuration_garmin.png)
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with **AAPS**. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to **AAPS**. It is available in the ConnectIQ store; enable the **Garmin** plugin in **Configuration → Communication**. ![AAPS Glucose Watch watchface with numbered fields](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) współpracuje bezpośrednio z **AAPS**. Oprócz odczytów glukozy pokazuje dane o stanie pętli (aktywna insulina, baza tymczasowa) i wysyła do **AAPS** odczyty tętna. Jest dostępna w sklepie ConnectIQ; włącz wtyczkę **Garmin** w **Konfiguracja → Komunikacja**. ![Tarcza AAPS Glucose Watch z ponumerowanymi polami](../images/Garmin_WF-annotated.png)
 
-1. Highest and lowest glucose values on the graph
-2. Glucose change per minute
-3. Insulin on board (IOB)
-4. Time since the last glucose reading (minutes:seconds)
-5. Temporary basal rate, as a percentage of the profile basal rate
-6. Glucose graph of the last 2 hours
-7. Current glucose value
+1. Najwyższa i najniższa wartość glukozy na wykresie
+2. Zmiana glukozy na minutę
+3. Aktywna insulina (IOB)
+4. Czas od ostatniego odczytu glukozy (minuty:sekundy)
+5. Baza tymczasowa jako procent dawki bazowej z profilu
+6. Wykres glukozy z ostatnich 2 godzin
+7. Aktualna wartość glukozy
 
 
 
 ## Fitbit
 
 ```{warning}
-Google is moving Fitbit into Google Health and is removing third-party apps and watch faces from Fitbit watches in the EU. Fitbit watchfaces are therefore **no longer a recommended option**, and buying a Fitbit for use with **AAPS** is not recommended.
+Google przenosi Fitbit do Google Health i w UE usuwa z zegarków Fitbit aplikacje i tarcze innych firm. Dlatego tarcze zegarka Fitbit **nie są już zalecaną opcją** i nie zalecamy kupowania Fitbit do używania z **AAPS**.
 ```
 
-For existing Fitbit watches, the [Nightscout webpages](https://nightscout.github.io/nightscout/wearable/#fitbit) list some monitoring-only options, such as [Glance](https://glancewatchface.com/). These are third-party watchfaces too, so the same EU restriction applies.
+Dla istniejących zegarków Fitbit [strony Nightscout](https://nightscout.github.io/nightscout/wearable/#fitbit) podają kilka opcji tylko do monitorowania, np. [Glance](https://glancewatchface.com/). To też są tarcze innych firm, więc dotyczy ich to samo ograniczenie w UE.
 
-## Following only
+## Tylko obserwowanie
 
-These smartwatches will reflect some **AAPS** information, some will require other apps.
+Te smartwatche pokazują część informacji **AAPS**, niektóre potrzebują innych aplikacji.
 
-There are a wide range of affordable smartwatches which can provide display only. If you are using Nightscout, then a good overview of all the options is [here](https://nightscout.github.io/nightscout/wearable/#)
+Jest wiele tanich smartwatchy, które mogą tylko wyświetlać dane. Jeśli używasz Nightscout, dobry przegląd wszystkich opcji znajdziesz [tutaj](https://nightscout.github.io/nightscout/wearable/#)
 
-Here below some of the follow-only watch options popular with **AAPS** users:
+Poniżej kilka zegarków do samego obserwowania, popularnych wśród użytkowników **AAPS**:
 
 (watches-xiaomi-amazfit)=
-### Xiaomi and Amazfit watches
+### Zegarki Xiaomi i Amazfit
 
-**WatchDrip+** is a community-developed companion app that displays glucose and loop data on various smartwatch models, mostly Xiaomi (_e.g._ Mi Band) and Amazfit brands:
+**WatchDrip+** to aplikacja towarzysząca tworzona przez społeczność. Pokazuje dane o glukozie i pętli na różnych modelach smartwatchy, głównie marek Xiaomi (_np._ Mi Band) i Amazfit:
 
 ![image](../images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
-Since version 0.5, **WatchDrip+** reads its data directly from **AAPS**, without xDrip+ as a relay. On the **AAPS** phone:
+Od wersji 0.5 **WatchDrip+** odczytuje dane bezpośrednio z **AAPS**, bez pośrednictwa xDrip+. Na telefonie **AAPS**:
 
-1. Enable **External Companion Apps** in **Configuration** > **Communication**, see [above](#watches-external-companion-apps). It provides the current glucose, delta, trend arrow, IOB and pump status.
-2. Enable the **xDrip** plugin in **Configuration** > **Communication** and turn on **Send status to xDrip+** in its settings. It provides the IOB/COB status line, and the glucose graph on the watch fills in after a few readings.
-3. If xDrip+ is installed on the phone, disable its **Broadcast Service API** (xDrip+ > Settings > Inter-app settings) so that the watch does not receive the data twice. If xDrip+ was only relaying data to the watch, you can uninstall it.
+1. Włącz **Zewnętrzne aplikacje towarzyszące** w **Konfiguracja** > **Komunikacja**, zobacz [powyżej](#watches-external-companion-apps). Dostarcza to aktualną glukozę, deltę, strzałkę trendu, IOB i stan pompy.
+2. Włącz wtyczkę **xDrip** w **Konfiguracja** > **Komunikacja** i w jej ustawieniach włącz **Wyślij status do xDrip+**. Dostarcza to linię stanu IOB/COB, a wykres glukozy na zegarku wypełni się po kilku odczytach.
+3. Jeśli xDrip+ jest zainstalowany na telefonie, wyłącz w nim **Broadcast Service API** (xDrip+ > Settings > Inter-app settings), aby zegarek nie dostawał danych dwa razy. Jeśli xDrip+ tylko przekazywał dane do zegarka, możesz go odinstalować.
 
-The refresh button of WatchDrip+ has no effect with **AAPS**: the data arrives with each new reading.
+Przycisk odświeżania w WatchDrip+ nie działa z **AAPS**: dane przychodzą z każdym nowym odczytem.
 
 
-You can read more about them, including how to set them up, on the [WatchDrip+ website](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable. They are a popular option especially for kids and those with smaller wrists to wear.
+Więcej o nich, w tym o tym, jak je skonfigurować, przeczytasz na [stronie WatchDrip+](https://bigdigital.home.blog/). Zaletą tych zegarków jest to, że są małe i stosunkowo tanie. Są popularne zwłaszcza wśród dzieci i osób z mniejszym nadgarstkiem.
 
-### Pebble watch
+### Zegarek Pebble
 
 ![image](../images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
 ![image](../images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 to 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS**  then send either an SMS or pushover notification.
+Zegarki Pebble ([już nieprodukowane](https://en.wikipedia.org/wiki/Pebble_(watch))) były w sprzedaży od 2013 do 2016 roku i nadal można je kupić z drugiej ręki. Fitbit przejął majątek firmy Pebble. Użytkownicy Pebble mogą oglądać dane z Nightscout na tarczy Urchin. Wyświetlane dane to m.in. IOB, aktualna baza tymczasowa i prognozy. Przy otwartej pętli możesz użyć IFTTT, aby utworzyć aplet, który po otrzymaniu powiadomienia z **AAPS** wyśle SMS lub powiadomienie pushover.
 
-### [Bluejay watches](https://bluejay.website/)
-
-
-![BlueJay U3 watch](../images/watches/bluejay_u3.png)
+### [Zegarki Bluejay](https://bluejay.website/)
 
 
-These are unique pieces of technology which can receive glucose data **directly** from the Dexcom transmitter. It is not widely known that Dexcom G6/G7 transmitters actually broadcast the current glucose data on _two_ separate channels, a phone channel and a medical channel. The Bluejay watches can be set to receive glucose data on either channel, so if **AAPS** is using the phone channel, then the Bluejay watches can use the medical channel.
+![Zegarek BlueJay U3](../images/watches/bluejay_u3.png)
 
-The key advantage is that the watch is independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS** phone at the beach or theme park, and are out of range of the **AAPS** phone, you can still get readings from your Dexcom directly to the Bluejay watch.
 
-The original **Bluejay GTS** is discontinued and cannot read the Dexcom G7. The later models (U1, then the current **U3**, sold as early access at the time of writing) are full Android watches running xDrip, which collect from the Dexcom G6 and G7 directly. The vendor describes the watch as a research tool, not for medical use. Reported disadvantages are that it does not always pick up a reading every 5 minutes and that the battery needs frequent charging. Check the [Bluejay website](https://bluejay.website/) for the current model and availability.
+To wyjątkowe urządzenia, które mogą odbierać dane o glukozie **bezpośrednio** z nadajnika Dexcom. Mało kto wie, że nadajniki Dexcom G6/G7 wysyłają aktualne dane o glukozie _dwoma_ osobnymi kanałami: kanałem telefonu i kanałem medycznym. Zegarki Bluejay można ustawić tak, aby odbierały dane o glukozie z dowolnego kanału. Jeśli więc **AAPS** używa kanału telefonu, zegarki Bluejay mogą używać kanału medycznego.
 
-### Apple watch
+Główna zaleta to niezależność zegarka zarówno od telefonu, jak i od systemu pętli. Na przykład jeśli na plaży lub w parku rozrywki odłączysz pompę i telefon **AAPS** i będziesz poza zasięgiem telefonu **AAPS**, nadal dostaniesz odczyty z Dexcom bezpośrednio na zegarek Bluejay.
 
-Check [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#).
+Pierwszy model **Bluejay GTS** nie jest już produkowany i nie odczytuje Dexcom G7. Późniejsze modele (U1, a potem obecny **U3**, w chwili pisania sprzedawany we wczesnym dostępie) to zegarki z pełnym Androidem i xDrip, które odbierają dane bezpośrednio z Dexcom G6 i G7. Producent opisuje zegarek jako narzędzie badawcze, nie do użytku medycznego. Zgłaszane wady: nie zawsze odbiera odczyt co 5 minut, a baterię trzeba często ładować. Aktualny model i dostępność sprawdzisz na [stronie Bluejay](https://bluejay.website/).
 
-The Apple watch now supports G7 direct connection and can be used simultaneously with **AAPS**.
+### Apple Watch
+
+Zobacz [Nightscout na Twoim zegarku](https://nightscout.github.io/nightscout/wearable/#).
+
+Apple Watch obsługuje teraz bezpośrednie połączenie z G7 i może być używany jednocześnie z **AAPS**.
 
