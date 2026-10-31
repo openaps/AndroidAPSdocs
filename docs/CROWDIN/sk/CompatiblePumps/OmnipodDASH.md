@@ -420,7 +420,7 @@ Táto časť vysvetľuje, ako si prezrieť históriu aktívneho Podu a filtrova�
 
 Je užitočná na kontrolu bolusov, dočasných bazálov (TBR) a bazálnych príkazov odoslaných do Podu. Ostatné kategórie pomáhajú pri riešení problémov a ukazujú poradie udalostí, ktoré viedli k zlyhaniu.
 
-***POZNÁMKA:** **Neistý môže byť iba posledný príkaz**. Nové príkazy *sa neodosielajú*, kým sa **posledný „neistý“ príkaz nestane „potvrdeným“ alebo „zamietnutým“**. Ak chcete „opraviť“ neistý príkaz, stlačte **Obnoviť** na obrazovke pumpy DASH.*
+**NOTE:** **Only the last command can be uncertain**. New commands *are not sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. To 'fix' an uncertain command, press **Refresh** on the DASH pump screen.
 
 1. Otvorte obrazovku pumpy DASH a stlačte **História Podu**.
 
@@ -642,7 +642,7 @@ Odstránenie starej relácie Podu:
 2. Keď zlyhá, stlačte **Vyradiť Pod** a potvrďte (pozrite [Vyradenie Podu](#omnipod-dash-discard-pod)).
 3. Keď je starý Pod odstránený, môžete aktivovať nový Pod.
 
-### Všeobecná chyba: java.lan.illegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
+### Generic error: java.lang.IllegalStateException: Trying to set a Bluetooth Address to ***, but it is already set to ***.
 
 Ak sa vám táto chyba zobrazí pri pokuse o inicializáciu nového Podu, **AAPS** zlyhá, pretože má v konfigurácii stále uložené nastavenia starého Podu.
 
@@ -691,7 +691,7 @@ Prehľad hlavných výstrah, s ktorými sa môžete stretnúť, je uvedený niž
 - *Žiadny aktívny Pod*: nenašla sa žiadna relácia Podu. Táto notifikácia sa bude znova zobrazovať, kým neaktivujete nový Pod. Po aktivácii Podu automaticky zmizne.
 - *Podávanie inzulínu je pozastavené*: Pod pozastavil podávanie inzulínu. Pozrite [Obnovenie podávania inzulínu](#omnipod-dash-resuming-insulin-delivery).
 - *Nastavenie bazálneho profilu pravdepodobne zlyhalo. Podávanie môže byť pozastavené! Manuálne obnovte stav Podu zo záložky Omnipod a pokračujte v podávaní inzulínu, ak je to potrebné.* Nastavenie bazálneho **profilu** v Pode možno zlyhalo. Na obrazovke pumpy DASH stlačte **Obnoviť** (hlásenie stále hovorí „záložka Omnipod“) a ak sa zobrazuje, stlačte **Obnoviť podávanie**.
-- *Nepodarilo sa overiť, či bol SMB bolus (X U) úspešný. Na potvrdenie alebo zamietnutie tohto príkazu aktualizujte stav Podu.* **AAPS** nedokázal potvrdiť, že bol podaný **SMB**. Na obrazovke pumpy DASH stlačte **Obnoviť** a skontrolujte pole **Posledný bolus**.
+- *Unable to verify whether SMB (X U) succeeded. Na potvrdenie alebo zamietnutie tohto príkazu aktualizujte stav Podu.* **AAPS** nedokázal potvrdiť, že bol podaný **SMB**. Na obrazovke pumpy DASH stlačte **Obnoviť** a skontrolujte pole **Posledný bolus**.
 - *Stav podávania inzulínu je neurčitý. Na potvrdenie alebo zamietnutie aktualizujte stav Podu.* Rovnako pri normálnom boluse: stlačte **Obnoviť** na obrazovke pumpy DASH.
 - *Časové pásmo Podu je iné ako časové pásmo telefónu. Bazálna dávka je nesprávna. Pre nápravu prepnite profil* Pozrite poznámku o letnom čase a časovom pásme v časti [Známe obmedzenia/problémy Omnipod DASH v AAPS](#omnipod-dash-constraints).
 
