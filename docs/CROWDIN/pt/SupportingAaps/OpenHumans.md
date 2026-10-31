@@ -63,7 +63,7 @@ The screenshots above show an earlier version of the Open Humans website and sti
 
 ```{admonition} Older screenshot
 :class: note
-The screenshot above is from an earlier **AAPS** version. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
+A captura de ecrã acima é de uma versão anterior do **AAPS**. In **AAPS** 4 the confirmation screens are **Final touches** and **We're done!**, there is no queue size, and the buttons are **Upload now** and **Logout**.
 ```
 
 15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
