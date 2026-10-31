@@ -1,50 +1,50 @@
 (aaps-ci-google-drive-auth)=
 
-# Browser build – Step 3: Authorize Google Drive
+# 瀏覽器建置－步驟 3：授權 Google 雲端硬碟
 
 ```{note}
-This is **Step 3** of the [Browser build](BrowserBuild.md). First complete [Step 2 – Create your signing keystore](BrowserBuildKeystore.md).
+這是<a href="BrowserBuild.md">瀏覽器建置</a>的**步驟 3**。請先完成<a href="BrowserBuildKeystore.md">步驟 2－建立簽署金鑰庫</a>。
 ```
 
 ```{warning}
-No matter which of the prior sets of instructions you followed (Option 1 or Option 2), you MUST add the Google Drive authorization to successfully use the Browser Build.
+無論您是按照前述哪一組指示（選項 1 或選項 2）操作，都<strong x-id="1">必須</strong>新增 Google 雲端硬碟授權，才能順利使用瀏覽器建置。
 ```
 
-Note: If you already followed this part in the video, you can now skip to [Step 4 – Build the APK](BrowserBuildAPK.md).
+注意：如果您已經按照影片完成這個部分，現在可以直接前往[步驟 4－建置 APK](BrowserBuildAPK.md)。
 
 ```{warning}
-If the Google authorization does not start or the preparation page fails, close the preparation page, open `aaps-ci-preparation.html` again the same way as in Step 2, and start this step again. See [troubleshooting](#aaps-ci-preparation-web).
+如果 Google 授權程序沒有開始，或準備頁面無法正常運作，請關閉準備頁面，按照步驟 2 的相同方式重新開啟 `aaps-ci-preparation.html`，然後重新執行這個步驟。請參閱<a href="#aaps-ci-preparation-web">疑難排解</a>。
 ```
 
-Return to the preparation page tab.
+切回準備頁面的分頁。
 
-Scroll down to the Google Drive Auth section and tap Start Auth.
+向下滾動到 Google Drive 認證部分，然後點擊開始認證。
 
 ![](../images/Building-the-App/CI/BrowserBuildStep44.png)
 
-Select your Google account.
+選擇您的 Google 帳號。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH1.png)
 
-Scroll down and accept the access. The web page needs it to obtain the Google Drive authentication key.
+向下滾動並接受存取權限。該網頁需要此存取權以獲取 Google Drive 認證金鑰。
 
-Tap Continue.
+點擊繼續。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH2.png)
 
-The `GDRIVE_OAUTH2` field will populate, tap the top Copy button.
+`GDRIVE_OAUTH2` 欄位將會填寫，請點擊上方的複製按鈕。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH3.png)
 
 切換回 GitHub 頁籤。
 
-Scroll down to Repository secrets and tap New repository secret.
+向下滾動到儲存庫密碼並點擊新增儲存庫密碼。
 
-If you followed Option 1 you should see this:
+如果您遵循了選項 1，應該會看到這個：
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4.png)
 
-If you followed Option 2 there will be more keys:
+如果您遵循了選項 2，將會有更多金鑰：
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH4b.png)
 
@@ -52,7 +52,7 @@ If you followed Option 2 there will be more keys:
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH5.png)
 
-Switch to the preparation page tab.
+切換至準備頁面的分頁。
 
 點擊第二個複製按鈕。
 
@@ -66,12 +66,12 @@ Switch to the preparation page tab.
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH7.png)
 
-You should have either two (option 1) or five (option 2) secrets entries now.
+現在你應該有兩個（選項 1）或五個（選項 2）Secrets 項目。
 
 ![](../images/Building-the-App/CI/BrowserBuildGAUTH8.png)
 
-GitHub will now be able to store the AAPS apk file in your Google Drive, once built.
+GitHub 現在將能夠將 AAPS apk 檔案儲存在您的 Google Drive 中，一旦建立完成。
 
 ----
 
-**Next: [Step 4 – Build the APK](BrowserBuildAPK.md) →**
+**下一步：[步驟 4－建置 APK](BrowserBuildAPK.md) →**
