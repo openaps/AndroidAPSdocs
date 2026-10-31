@@ -64,14 +64,14 @@
 
 ----
 
-**Ξεκινήστε με το [Βήμα 1 – Δημιουργήστε το fork σας στο GitHub](BrowserBuildFork.md) →**
+**Ξεκινήστε με το [Βήμα 1 – Δημιουργία του fork σας στο GitHub](BrowserBuildFork.md) →**
 
 ```{toctree}
 :hidden:
 
 AAPS Builder <BrowserBuildAapsBuilder.md>
-Βήμα 1: Δημιουργήστε το fork σας <BrowserBuildFork.md>
-Βήμα 2: Δημιουργήστε το keystore σας <BrowserBuildKeystore.md>
-Βήμα 3: Εξουσιοδοτήστε το Google Drive <BrowserBuildGoogleDrive.md>
-Βήμα 4: Δημιουργήστε το APK <BrowserBuildAPK.md>
+Βήμα 1: Δημιουργία του fork σας <BrowserBuildFork.md>
+Βήμα 2: Δημιουργία του keystore σας <BrowserBuildKeystore.md>
+Βήμα 3: Εξουσιοδότηση του Google Drive <BrowserBuildGoogleDrive.md>
+Βήμα 4: Δημιουργία του APK <BrowserBuildAPK.md>
 ```
