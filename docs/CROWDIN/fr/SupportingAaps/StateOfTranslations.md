@@ -1,9 +1,9 @@
-# état de la traduction de l'application et de la documentation
+# État de la traduction de l'application et de la documentation
 
 L'état est mis à jour une fois par heure et ne reflète que l'état dans Crowdin.
 
 ```{tip}
-Attention : le pourcentage de relecture est forcément plus bas que le pourcentage de traduction, mais il est affiché au-dessus des traductions.
+Attention : le pourcentage de relecture est forcément plus bas que le pourcentage de traduction, mais il est affiché au-dessus des traductions.
 Il est préférable de ne regarder que le pourcentage de traductions pour voir s'il y a du travail à faire.
 ```
 
