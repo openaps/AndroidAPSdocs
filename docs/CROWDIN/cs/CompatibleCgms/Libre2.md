@@ -12,8 +12,8 @@ Libre2 OOP (najdete ho [zde](#Libre2_OOP2)) vytváří stejné hodnoty glykémie
 
 Pro použití Bluetooth vysílače existuje několik dobrých důvodů:
 
--   Můžete zvolit různé strategie kalibrace OOP2 (1): hodnoty jako ve čtečce pomocí „no calibration“, kalibraci senzoru jako u Libre 1 pomocí „calibrate based on raw“, nebo kalibraci hodnot podobných čtečce pomocí „calibrate based on glucose“.  
-  OOP1 nechte vypnutý (2).
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the reader-like values with "calibrate based on glucose".  
+  Make sure to leave OOP1 disabled (2).
 
     → Nabídka (☰) → Settings → Less common settings → Other misc. options
 
@@ -30,9 +30,9 @@ Poznámka: Vysílač lze používat souběžně s aplikací LibreLink, aniž by 
 
 ![xDrip – spuštění vysílače Libre a senzoru 3](../images/xDrip_Libre_Transmitter03.png)
 
-Tím se žádný senzor Libre2 fyzicky nespustí a xDrip s ním nijak nekomunikuje. Tím se xDrip jen sděluje, že nový senzor posílá hodnoty glykémie. Pokud je to možné, zadejte pro úvodní kalibraci dvě hodnoty naměřené z krve. Nyní by se hodnoty glykémie měly v xDrip zobrazovat každých 5 minut. Vynechané hodnoty, např. protože jste byli příliš daleko od telefonu, se zpětně nedoplní.
+Tím se žádný senzor Libre2 fyzicky nespustí a xDrip s ním nijak nekomunikuje. Tím se xDrip jen sděluje, že nový senzor posílá hodnoty glykémie. If available, enter two blood-measured values for the initial calibration. Nyní by se hodnoty glykémie měly v xDrip zobrazovat každých 5 minut. Vynechané hodnoty, např. protože jste byli příliš daleko od telefonu, se zpětně nedoplní.
 
-Po výměně senzoru xDrip nový senzor automaticky rozpozná a smaže všechna kalibrační data. Po aktivaci si můžete zkontrolovat glykémii a provést novou úvodní kalibraci.
+Po výměně senzoru xDrip nový senzor automaticky rozpozná a smaže všechna kalibrační data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Konfigurace AAPS (jen pro smyčku)
 
