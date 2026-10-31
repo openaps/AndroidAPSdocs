@@ -1,4 +1,4 @@
-# Completing the Objectives
+# Completar os objetivos
 
 O **AAPS** tem uma série de **Objetivos** que devem ser concluídos para ajudar o usuário a avançar do loop aberto básico até o loop fechado híbrido e todas as funções do **AAPS**. Concluir os **Objetivos** serve para garantir que você:
 
