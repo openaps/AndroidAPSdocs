@@ -41,7 +41,7 @@ In **AAPS** 3.4: open **Maintenance** and tap **Export options**. Under **User S
 
 ![Export options with User Settings set to Local Storage](../images/ReinstallAaps/reinstall_export_options_local.png)
 
-The button now reads **Export settings (local)**. Tap it.
+The button now reads **Export settings (local)**. Натисніть її.
 
 ![Maintenance with the Export settings (local) button](../images/ReinstallAaps/reinstall_export_settings_local.png)
 
