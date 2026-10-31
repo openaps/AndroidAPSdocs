@@ -216,7 +216,7 @@ Tot slot een vergelijking waarbij DIA en piek tegelijk worden aangepast. Het ide
     
     ![Configuratie > Vloeiend maken](../images/v4/Configuration/configuration_smoothing.png)
     
-    Zie [Filteren van bloed glucose waardes](../CompatibleCgms/SmoothingBloodGlucoseData.md).
+    Zie [Vloeiend maken van bloedglucosewaarden](../CompatibleCgms/SmoothingBloodGlucoseData.md).
     
     ## Kalibratie
     
@@ -371,7 +371,7 @@ Zie [Open Humans](../SupportingAaps/OpenHumans.md).
 
 ### Wear
 
-Volg en bedien **AAPS** vanaf een Wear OS-horloge. Het instellen van het horloge wordt uitgelegd op [Wear AAPS gebruiken op een smartwatch](../WearOS/WearOsSmartwatch.md). Kies na het aanzetten van de plugin de opties in [Instellingen > Wear](#preferences-wear). Het gebruik van het horloge wordt uitgelegd op [AAPS bedienen via je Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
+Volg en bedien **AAPS** vanaf een Wear OS-horloge. Het instellen van het horloge wordt uitgelegd op [AAPS instellen op je Wear OS-horloge](../WearOS/WearOsSmartwatch.md). Kies na het aanzetten van de plugin de opties in [Instellingen > Wear](#preferences-wear). Het gebruik van het horloge wordt uitgelegd op [AAPS bedienen via je Wear OS smartwatch](../RemoteFeatures/RemoteControlWearOS.md).
 
 (external-companion-apps)=
 
