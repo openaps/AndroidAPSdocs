@@ -5,43 +5,43 @@
 
 在一般幫浦療法中，延長注射（延長胰島素注射）是應對高脂肪或慢速吸收餐食的好方法，這些餐食會讓血糖在胰島素效果結束後仍然上升。然而，在循環系統中，延長注射並不那麼適用（且技術上有困難），因為他基本上是一個固定的高臨時基礎率，而循環系統的工作原理是動態調整基礎率。有關詳細資訊，請參見以下[延長注射](#extended-bolus-and-why-they-wont-work-in-closed-loop-environment)。
 
-然而，處理這類餐食的需求仍然存在。 Which is why AAPS supports so called extended carbs or eCarbs.
+然而，處理這類餐食的需求仍然存在。因此，AAPS 支援所謂的延長碳水化合物（eCarbs）。
 
-eCarbs are carbs that are split up over several hours. 對於高碳水化合物的標準餐食，提前輸入碳水化合物（如果需要，可以減少初始注射量）通常足以避免過早的胰島素注射。但是對於吸收較慢的餐食，如果完全提前輸入碳水化合物會導致來自 SMB 的 IOB 過多，eCarbs 可以更準確地模擬碳水化合物（以及你為其他營養素輸入的任何碳水化合物等效物）的吸收，並影響血糖。有了這些資訊，循環系統可以更逐步地管理 SMB 來處理這些碳水化合物，這可以被視為一種動態的延長注射（即使沒有 SMB 也應該有效，但可能不如有 SMB 時效果好）。
+eCarbs 是分散在數小時內攝取的碳水化合物。對於高碳水化合物的標準餐食，提前輸入碳水化合物（如果需要，可以減少初始注射量）通常足以避免過早的胰島素注射。但是對於吸收較慢的餐食，如果完全提前輸入碳水化合物會導致來自 SMB 的 IOB 過多，eCarbs 可以更準確地模擬碳水化合物（以及你為其他營養素輸入的任何碳水化合物等效物）的吸收，並影響血糖。有了這些資訊，循環系統可以更逐步地管理 SMB 來處理這些碳水化合物，這可以被視為一種動態的延長注射（即使沒有 SMB 也應該有效，但可能不如有 SMB 時效果好）。
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**注意：**eCarbs 不只適用於高脂肪或高蛋白質的餐點，也可以用於任何會使血糖升高的情況，例如使用皮質類固醇等其他藥物時。
 
 ## 使用 eCarbs 的操作方式
 
-To enter eCarbs, open the **Carbs** dialog (**Treatments** → **Carbs**), enter the total carbs, set a **Duration**, and optionally shift the start with **Carb time** (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+要輸入 eCarbs，請開啟**碳水化合物**對話方塊（**治療** → **碳水化合物**），輸入碳水化合物總量，設定**持續時間**，並可選擇透過**碳水化合物時間**調整開始時間（*以下數值僅供示範，請依照個人情況嘗試不同數值，找出合適的血糖反應*）：
 
 ![輸入碳水化合物](../images/eCarbs_Dialog.png)
 
-The eCarbs on the main screen: the number in brackets in the **COB** field shows the carbs still to come, and the **COB** graph shows each future eCarbs entry as an orange marker. If you don't see a **COB** graph, add one with **Add graph** below the graphs (see [AAPS screens](../DailyLifeWithAaps/AapsScreens.md)).
+主畫面上的 eCarbs：**COB**欄位括號中的數字表示尚未作用的碳水化合物量，而**COB**圖表會以橘色標記顯示每筆未來的 eCarbs 資料。如果看不到 **COB** 圖表，請在下方的圖表清單中，使用 **新增圖表** 加入圖表（請參閱 [AAPS 畫面](../DailyLifeWithAaps/AapsScreens.md)）。
 
-![eCarbs in the COB field and on the COB graph](../images/eCarbs_Graph.png)
+![COB 欄位和 COB 圖表中的 eCarbs](../images/eCarbs_Graph.png)
 
 (AapsScreens-carbs-type)=
-## Carbs type in the Bolus wizard: bread, cake or pizza
+## 注射嚮導中的碳水類型：麵包、蛋糕或披薩
 
-In the [Bolus wizard](#aaps-screens-bolus-wizard), three buttons below the **Carbs** field let you choose how fast your meal is absorbed. Pick one before you confirm. Depending on the type, **AAPS** takes a part of the carbs you typed as normal carbs, and adds [extended carbs ("eCarbs")](#Extended-Carbs-extended-carbs-ecarbs) later for slow, rich meals. Press the **(i)** icon next to the buttons to see the typical foods for the selected type and what it does to your carbs.
+在[注射嚮導](#aaps-screens-bolus-wizard)中，**碳水**欄位下方有三個按鈕，可讓您選擇餐點吸收的速度。請先選擇一種，再確認。依據您選擇的類型，**AAPS** 會將您輸入的部分碳水化合物列為一般碳水化合物，並在稍後為吸收較慢、較豐盛的餐點加入[延長碳水化合物（「eCarbs」）](#Extended-Carbs-extended-carbs-ecarbs)。按一下按鈕旁的 **(i)** 圖示，即可查看所選類型的常見食物，以及這個選項會如何影響您輸入的碳水化合物。
 
-| Type                | Typical foods (as listed in the app)                                                                 | Carbs now, used for the bolus | eCarbs added                                         |
-| ------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------- | ---------------------------------------------------- |
-| **Bread** (default) | Bread, savory pastries, yogurt, fruit, potatoes, rice, oatmeal, vegetables                           | 100 %                         | 無平滑處理                                                |
-| **Cake**            | Dumplings, pasta, Asian dishes rich in carbs and fats, sweet and yeast pastries, cereals, honey, jam | 90 %                          | 20 %, starting 60 minutes later, spread over 2 hours |
-| **Pizza**           | Lasagna, pizza, hamburgers, fries, baked potatoes, chips                                             | 80 %                          | 35 %, starting 60 minutes later, spread over 3 hours |
+| 類型         | 常見食物（如應用程式所列）                              | 立即計入、用於計算注射量的碳水化合物 | 新增的 eCarbs            |
+| ---------- | ------------------------------------------ | ------------------ | --------------------- |
+| **麵包**（預設） | 麵包、鹹味糕點、優格、水果、馬鈴薯、米飯、燕麥粥、蔬菜                | 100 %              | 無平滑處理                 |
+| **蛋糕**     | 水餃、義大利麵、富含碳水化合物和脂肪的亞洲料理、甜味糕點和發酵糕點、穀片、蜂蜜、果醬 | 90 %               | 20%，60 分鐘後開始，分 2 小時計入 |
+| **披薩**     | 千層麵、披薩、漢堡、薯條、烤馬鈴薯、洋芋片                      | 80%                | 35%，60 分鐘後開始，分 3 小時計入 |
 
-**Example**: you type 100 g and choose **Pizza**. The bolus is calculated for 80 g, recorded now. 35 g of eCarbs start 1 hour later and are spread over 3 hours.
+**範例**：輸入 100 g，並選擇**披薩**。注射量會以 80 g 計算，並立即記錄。 35 g 的 eCarbs 會在 1 小時後開始計入，並分 3 小時計入。
 
-Good to know:
-* This is not a simple split: with **Cake** and **Pizza**, the carbs recorded add up to **more than you typed** (110 % and 115 %). The extra is only in the eCarbs.
-* The bolus only covers the carbs taken now. **AAPS** does not bolus up front for the eCarbs: the loop takes them into account once they start, like any other [eCarbs](#Extended-Carbs-extended-carbs-ecarbs).
-* If you set a **Carb time**, the eCarbs start 60 minutes after that time.
-* The confirmation dialog shows the eCarbs on their own line, _e.g._ "eCarbs 35g / 3h (+60min)".
-* Grams are rounded down to whole numbers.
-* The percentages, delays and durations are fixed; they can't be changed in the settings.
-* The choice is not remembered: the wizard opens on **Bread** every time.
+請注意：
+* 這並不是簡單的拆分：選擇**蛋糕**和**披薩**時，記錄的碳水化合物總量會**超過您輸入的數量**（分別為 110% 和 115%）。增加的部分只會計入 eCarbs。
+* 注射量只會涵蓋立即攝取的碳水化合物。 **AAPS** 不會預先為 eCarbs 注射胰島素：eCarbs 開始計入後，循環系統才會將其納入考量，就像其他[eCarbs](#Extended-Carbs-extended-carbs-ecarbs)一樣。
+* 如果您設定了**碳水時間**，eCarbs 會在該時間的 60 分鐘後開始計入。
+* 確認對話方塊會在獨立一行顯示 eCarbs，例如：「eCarbs 35g / 3h (+60min)」。
+* 克數會無條件捨去至整數。
+* 百分比、延遲時間和持續時間都是固定值，無法在設定中變更。
+* 系統不會記住您的選擇：每次開啟嚮導時，都會預設選擇**麵包**。
 
 ______________________________________________________________________
 
@@ -53,41 +53,41 @@ ______________________________________________________________________
 
 推薦設置是使用 OpenAPS SMB APS 外掛，啟用 SMB 並啟用 *COB 啟用 SMB* 偏好設定。
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *Bolus wizard* and then use the *Carbs* dialog to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+例如，吃披薩時，可以先透過*注射嚮導*注射部分胰島素，再使用*碳水*對話方塊，輸入其餘碳水化合物，設定 4 到 6 小時的持續時間，並延遲 1 或 2 小時開始計入。
 
-For a quicker start, the *Bolus wizard* can add eCarbs for you: choose the [carbs type](#AapsScreens-carbs-type) **Cake** or **Pizza** below the **Carbs** field (see above). The amounts and timing are fixed, so use the *Carbs* dialog instead if you want other values.
+若要快速開始，*注射嚮導*可以為您加入 eCarbs：在**碳水**欄位下方選擇**蛋糕**或**披薩**這種[碳水類型](#AapsScreens-carbs-type)（請參閱上方說明）。用量和時間都是固定的；如果您想使用其他數值，請改用*碳水*對話方塊。
 
 **重要注意事項：**當然，你需要嘗試看看哪些具體數值對你有效。你還可以仔細調整*限制 SMB 的最大基礎率分鐘數*設置，以使演算法更積極或較不積極。對於低碳水化合物、高脂肪/高蛋白餐食，可能僅使用 eCarbs 就足夠，不需要手動注射（詳情請參閱上述的部落格文章）。當生成 eCarbs 時，系統也會在 Careportal 中生成一個筆記來紀錄所有輸入，這樣可以更容易地進行調整和改進。
 
 (extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## 延長注射及其為何在閉環系統中無法運作？
 
-如上所述，延長或多波段注射在閉環系統中並不真正有效。 [See below](#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+如上所述，延長或多波段注射在閉環系統中並不真正有效。[請參閱下方詳情](#why-extended-boluses-won-t-work-in-a-closed-loop-environment)
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### 延長注射與切換至開放循環 - 僅限 Dana 與 Insight 幫浦
 
 一些人希望 AAPS 能提供延長注射選項，因為他們希望以自己習慣的方式處理特殊食物。
 
-That's why **AAPS** offers an extended bolus for users of Dana and Insight pumps: open **Manage** and select **Extended Bolus**.
+因此，**AAPS** 為使用 Dana 和 Insight 幫浦的使用者提供延長注射功能：開啟**管理**，然後選擇**延長注射**。
 
-**AAPS** first warns you that the closed loop will be stopped while the extended bolus runs. Tap **OK** to continue:
+**AAPS** 會先提醒您，延長注射執行期間，閉迴路會停止。點選**確定**以繼續：
 
-![Warning: extended bolus stops closed loop mode](../images/extended_bolus_stops_loop.png)
+![警告：延長注射會停止閉迴路模式](../images/extended_bolus_stops_loop.png)
 
-Enter the **Insulin** amount and the **Duration**, then tap the confirm button at the bottom and **OK**:
+輸入**胰島素**用量和**持續時間**，然後點選底部的確認按鈕，再點選**確定**：
 
-![Extended bolus dialog with 2 U over 60 minutes](../images/extended_bolus_dialog.png)
+![延長注射對話方塊，設定為 2 U，持續 60 分鐘](../images/extended_bolus_dialog.png)
 
-On the Insight pump, the extended bolus is *not available* if [TBR emulation](#Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+如果使用[TBR 模擬](#Accu-Chek-Insight-Pump-settings-in-aaps)，Insight 幫浦將*無法使用*延長注射功能。
 
-While the extended bolus is running, the loop runs in **Open Loop** mode (the loop icon on the main screen changes), and closed loop is switched on again automatically when the extended bolus ends:
+延長注射執行期間，循環系統會以**開放迴路**模式運作（主畫面上的循環圖示會變更）。延長注射結束後，閉迴路會自動重新啟用：
 
-![Open Loop icon on the main screen while an extended bolus is running](../images/extended_bolus_main_screen.png)
+![延長注射執行期間，主畫面上的開放迴路圖示](../images/extended_bolus_main_screen.png)
 
-The **Manage** menu shows a **Cancel** button with the rate and the elapsed / total time (for example **Cancel 2.00 U/h 1/60'**). Tap it to stop the extended bolus early:
+**管理**選單會顯示**取消**按鈕，以及注射速率和已經過／總時間（例如：**取消 2.00 U/h 1/60'**）。點選此按鈕即可提前停止延長注射：
 
-![Cancel button of a running extended bolus in the Manage menu](../images/extended_bolus_running_manage.png)
+![管理選單中，正在執行的延長注射之取消按鈕](../images/extended_bolus_running_manage.png)
 
 (why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### 為什麼延長注射在閉環系統中無法運作
