@@ -50,7 +50,7 @@ There are a wide range of Automation options, and users are encouraged to study 
 
 1. Как и любая другая техника, **НМГ**, **помпы** и телефоны не безупречны: Технические проблемы или ошибки сенсоров могут нарушать работу **автоматизаций**, требуя возможного ручного вмешательства.
 
-1. **Требования к автоматизациям** могут меняться в течение жизни. При смене периодов работы/учебы/отдыха, устанавливайте себе напоминание о проверке того, какие **автоматизации** у вас на данный момент активны (их легко включить и выключить). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
+1. **Requirements for Automations are likely to change as routines change**. При смене периодов работы/учебы/отдыха, устанавливайте себе напоминание о проверке того, какие **автоматизации** у вас на данный момент активны (их легко включить и выключить). For example, if you go on holiday, and no longer need an Automation set up for school sports or daily exercise, or need to adjust the timings.
 
 1. **Автоматизации** могут конфликтовать друг с другом, так что их рекомендуется проверять в безопасной обстановке с пониманием того, какие из них сработали с ожидаемым результатом, а какие - нет.
 
