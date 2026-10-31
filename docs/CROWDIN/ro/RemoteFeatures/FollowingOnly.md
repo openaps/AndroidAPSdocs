@@ -86,7 +86,7 @@ Dezavantaje (așa cum au fost raportate de utilizatori)
 
 * Necesită Android 5.0 și mai mare.
 
-* Acesta are o interfață de utilizator de culoare închisă, afișaje și butoane mari, fiind conceput pentru a fi utilizat pe timpul nopții.
+* It has a dark UI, large readings and buttons, designed for usage at night.
 
 ### xDrip (Android)
 
@@ -200,7 +200,7 @@ SugarPixel este un dispozitiv pentru un sistem secundar de alertă pentru afișa
 ![Urmărirea ceasului Nightscout](../images/FollowingNightscoutClock.png)
 
 * Ceasul acceptă atât unități mmol/l, cât și mg/dl și include alarme sonore.
-* Mai multe afișaje disponibile, vedeți [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) pentru o prezentare generală.
+* Several displays are available, see [Github nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file#more-information-for-people-who-needs-it) for an overview.
 * Setarea și configurarea dispozitivului implică doar câțiva pași simpli. Odată configurat, are nevoie doar de pornire și Wi-Fi pentru a funcționa.
 * Dispozitivul Ulanzi TC001 este semnificativ mai ieftin decât SugarPixel.
 * Programul și instrucțiunile de instalare pot fi găsite pe [Github Nightscout-clock](https://github.com/ktomy/nightscout-clock?tab=readme-ov-file).
