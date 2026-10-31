@@ -2,7 +2,7 @@
 
 以下說明適用於您需要自行建置的 **AAPS Wear** APK。如果您尚未建置，請參閱 [此處](../WearOS/BuildingAapsWearOS.md)連結的指南在建置時，請確保使用與手機版 **AAPS** APK 相同的金鑰庫（keystore）檔案。
 
-您也可以將其中部分資訊應用於 **AAPSClient** 與 **PumpControl** 的 **Wear** APK。每個 **Wear** 應用程式都會與其對應的手機應用程式進行通訊。例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。 When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
+您也可以將其中部分資訊應用於 **AAPSClient** 與 **PumpControl** 的 **Wear** APK。 Each **Wear** app will communicate with its matching phone app. 例如：**AAPSClient Wear**應用可用於顯示**AAPSClient**資料，而不是**AAPS**資料。 When several client flavors (**AAPSClient**, **AAPSClient2**, **AAPSClient3**) are installed side by side, each one's tiles carry a small header in that flavor's accent colour so you can tell them apart while swiping.
 
 ## Wear OS 版本和相容性
 
@@ -104,7 +104,7 @@ Example: Galaxy Watch 4 and newer with One UI 8 Watch, Pixel Watch after the 202
 
 Install the **AAPS Wear** apk using [Wear Installer 2](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV). The classic watchfaces are not available; **AAPS** installs the watchface selected on the phone automatically, see [the watchface AAPS installs](#wearos-aaps-v4-watchface). No limitation in **AAPS Wear** operations.
 
-## 如何設置 Samsung Galaxy 4 智慧型手錶與 **AAPS** 搭配使用
+## How to set up a Samsung Galaxy Watch 4 smartwatch with **AAPS**
 
 本節假設你對智慧型手錶完全陌生，將向你介紹一款流行手錶（**Galaxy Watch 4**）的基本操作，隨後是逐步設置 **AAPS** 在手錶上運作的指南。
 
@@ -124,7 +124,7 @@ _This guide was written for a Galaxy Watch running Wear OS 3._ On Wear OS 4 and 
 
 ## 設置 Samsung 帳號
 
-你需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。如果你已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，你無法簡單地將其更改為成人帳戶。解決此問題的一種方法是將目前的出生日期修改為使目前年齡為 12 歲零 363 天。第二天，該帳戶將被轉換為成人帳戶，然後你可以繼續設置 Samsung 帳戶。
+你需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。如果你已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，你無法簡單地將其更改為成人帳戶。 One way around this is to modify the current date-of-birth to make the current age 12 years and 364 days old. 第二天，該帳戶將被轉換為成人帳戶，然後你可以繼續設置 Samsung 帳戶。
 
 (remote-control-transferring-the-aaps-wear-app-onto-your-aaps-phone)=
 
@@ -217,7 +217,7 @@ You will see a Wi-Fi pairing code and IP address and port appearing:
 - 你會看到以下回應：<br> `Successfully paired to 10.10.1.125:36299 [guid=adb-RXXXW20LMKJY-eh5zBj]`<br>
 - 在終端機中輸入： <br>`adb devices`。<br> 你應該會看到類似以下的內容：<br> `List of devices attached`<br> `10.10.1.125:36299  offline`<br> `adb-RFAW20LMKJY-eh5zBj._adb-tls-connect._tcp   device`<br>
 
-- 現在前往你電腦中存放 Wear APK 的資料夾，然後輸入<br> `adb install wear-full.apk` <br>將其中的 wear.apk 替換為你的 APK 檔名。
+- Now go to the folder on your computer where the Wear apk is and type<br> `adb install wear-full.apk` <br>with wear-full.apk replaced by the name of your apk file.
 - 你會看到：<br> `Performing Streamed Install`<br> `Success`
 
 
@@ -234,7 +234,7 @@ You will see a Wi-Fi pairing code and IP address and port appearing:
 **配對中 :**
 
 - 手錶：無線偵錯：記下 IP 地址。
-- Wear Installer：在 Wear Installer 應用程式中輸入 IP 地址。
+- Wear Installer: Enter the IP in the Wear Installer app.
 - 選擇配對新設備，記下顯示的配對碼和埠號。
 - Wear Installer: enter the pairing code + space + port number.
 - Wear Installer 應該報告配對成功。如果沒有，請退出 Wear Installer，然後重試。
