@@ -46,7 +46,7 @@ Pro stažení **AAPSClient** přejděte do [repozitáře na GitHubu](https://git
 
 ![obrázek](../images/remote_control_and_following/AAPSClient_download_02.png)
 
-Pak na počítači otevřete _stažené soubory_. Ve Windows se po otevření -downloads_ (stažené soubory) zobrazí panel vpravo:
+Pak na počítači otevřete _stažené soubory_. On Windows, _downloads_ will show in the right hand ribbon:
 
 ![obrázek](../images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
@@ -62,7 +62,7 @@ Stejné pravidlo platí, když na jeden telefon sledujícího instalujete více 
 
 ### Synchronizace: nastavení AAPSClient a AAPS
 
-Jakmile je apk __AAPSClient__ nainstalováno v telefonu sledujícího, ujistěte se, že **NSClientV3** je pro Nightscout 15 nastaven na obou telefonech stejně (viz [poznámky k aktualizaci](../Maintenance/UpdateToNewVersion)). Příklad níže ukazuje nastavení synchronizace s NSClientV3 a Nightscoutem 15; v __AAPS__ jsou k dispozici i jiné zdroje dat (např. xDrip).
+Once the __AAPSClient__ apk is installed on the follower phone, make sure **NSClientV3** is set up the same way on both phones for Nightscout 15 (see the [update notes](../Maintenance/UpdateToNewVersion.md)). Příklad níže ukazuje nastavení synchronizace s NSClientV3 a Nightscoutem 15; v __AAPS__ jsou k dispozici i jiné zdroje dat (např. xDrip).
 
 V **Konfigurace** > **Komunikace** uživatel synchronizuje svá data s Nightscoutem přes __NSClientV3__ (s API v3), nastavený stejně v __AAPS__ i v telefonu sledujícího.
 
@@ -279,7 +279,7 @@ b)  Uživatel nechce zadávat ověřovací kód (který SMS příkazy vyžadují
 
 Aby mohly chytré hodinky ovládat **AAPS**, potřebují **Wear OS 3 nebo novější**. Zkontrolujte prosím technické parametry hodinek a podívejte se na stránku [Chytré hodinky a AAPS](../Getting-Started/Watches.md). Pokud si nejste jistí, hledejte nebo se zeptejte ve skupinách **AAPS** na Facebooku/Discordu.
 
-Konkrétní návody jak nastavit **AAPS** na Samsung Galaxy Watch 4 (40 mm) jsou uvedeny níže. Hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) jsou také oblíbenou volbou. Pokud máte zkušenost s nastavením jiných chytrých hodinek, která by podle vás mohla pomoci ostatním, přidejte ji na tyto stránky ([úprava dokumentace](../SupportingAaps/HowToEditTheDocs.md)) a sdílejte svá zjištění s celou komunitou **AAPS**.
+Specific How-to guides for setting up **AAPS** on the popular Samsung Galaxy Watch 4 (40mm) are given below. Hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) jsou také oblíbenou volbou. Pokud máte zkušenost s nastavením jiných chytrých hodinek, která by podle vás mohla pomoci ostatním, přidejte ji na tyto stránky ([úprava dokumentace](../SupportingAaps/HowToEditTheDocs.md)) a sdílejte svá zjištění s celou komunitou **AAPS**.
 
 ### Možnost 3) AAPSClient na hodinkách ke vzdálenému řízení **AAPS** na telefonu
 
