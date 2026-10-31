@@ -44,11 +44,11 @@ The blood glucose values are received by the xDrip app on the smartphone.
 
 ### 步驟 3：在 xDrip 中啟動傳感器
 
-In xDrip start the sensor with "Start Sensor" and "not today". 無需將手機靠近傳感器。事實上，「啟動傳感器」不會實際啟動任何 Libre 3 傳感器，也不會與他們進行任何互動。 This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. 如果可用，請輸入兩個指血測量值作為初始校正。 Now the blood glucose values should be displayed in xDrip every 5 minutes. 跳過的讀取值，例如因為你離手機太遠，將不會被回填。
+In xDrip start the sensor with "Start Sensor" and "not today". 無需將手機靠近傳感器。事實上，「啟動傳感器」不會實際啟動任何 Libre 3 傳感器，也不會與他們進行任何互動。 This is simply to indicate xDrip that a new sensor is delivering blood sugar levels. If available, enter two blood-measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip every 5 minutes. 跳過的讀取值，例如因為你離手機太遠，將不會被回填。
 
 如果仍然沒有資料，請等待至少 15-20 分鐘。
 
-After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. 啟動後，你可以檢查你的指血血糖並進行新的初始校正。
+After a sensor change xDrip will automatically detect the new sensor and will delete all calibration data. You may check your blood glucose after activation and make a new initial calibration.
 
 ### Step 4: Configure AAPS
 
