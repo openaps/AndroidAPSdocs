@@ -89,7 +89,7 @@ De meest gemaakte fout gebeurt bij het toedienen en vastleggen van insuline **bu
 **Andere risico's:**
 
 - **Misleidende gegevens en rapporten:** Alle gegevens in AAPS of Nightscout - ook IOB, de totale dagdosis (TDD) en historische rapporten - zijn in "geconcentreerde eenheden". Dit geeft de gebruiker en het medisch team een vertekend beeld. Een arts die een rapport bekijkt, ziet misschien een TDD van 30 eenheden en beseft niet dat de patiënt eigenlijk 60 echte eenheden kreeg. Dat leidt tot een verkeerde beoordeling van de therapie.
-- **Veranderd denkbeeld:** Na langer gebruik gaat de gebruiker "denken" in de gehalveerde waarden van de app. Hij onthoudt dat zijn ISF 100 mg/dl (5,6 mmol/l) is of zijn basaal 0,5 E/uur, en vergeet dat dit "geconcentreerde" waarden zijn. Dit maakt de gebruiker gevaarlijk afhankelijk van het systeem, en hij verliest het gevoel voor zijn echte insulinebehoefte. Dat is juist belangrijk voor de veiligheid als de pomp uitvalt of de app problemen heeft.
+- **Veranderd denkbeeld:** Na langer gebruik gaat de gebruiker "denken" in de gehalveerde waarden van de app. Hij onthoudt dat zijn ISF 100 mg/dl (5,6 mmol/l) is of zijn basaal 0,5 E/u, en vergeet dat dit "geconcentreerde" waarden zijn. Dit maakt de gebruiker gevaarlijk afhankelijk van het systeem, en hij verliest het gevoel voor zijn echte insulinebehoefte. Dat is juist belangrijk voor de veiligheid als de pomp uitvalt of de app problemen heeft.
 
 **Conclusie:** Deze methode vraagt absolute waakzaamheid. De gebruiker moet steeds omrekenen tussen een "geconcentreerde wereld" in de app en de fysieke wereld. Elke externe insulinetoediening en elke keer dat iemand de gegevens bekijkt, doorbreekt dit denkbeeld en geeft een ernstig risico. Het verandert de betekenis van elk getal in het systeem.
 ```
@@ -146,19 +146,19 @@ Vanwege de veiligheidsrisico's staat deze parameter standaard niet aan. Om hem a
 
 ### Een nieuwe insuline met een andere concentratie maken
 
-Om een insuline met een andere concentratie te maken, open je eerst **Beheer → Insuline-instellingen**.
+Om een insuline met een andere concentratie te maken, open je eerst **Beheren → Insuline instellingen**.
 
 - Klik op het "+"-icoon onder aan het scherm.
 - Kies de nieuwe gewenste concentratie in het keuzemenu (U10, U20, U50, U100 en U200 zijn beschikbaar).
   - Verdunde concentraties zoals U10, U20 of U50 zijn voor kinderen met zeer lage basaalstanden.
   - U200 is vooral voor volwassenen met een hoge insulinebehoefte.
 
-  ![Het keuzemenu voor de concentratie in Insuline-instellingen](../images/v4/Insulin/insulin_concentration_dropdown.png)
+  ![Het keuzemenu voor de concentratie in Insuline instellingen](../images/v4/Insulin/insulin_concentration_dropdown.png)
 
 - Pas de piektijd en de Duur van insuline activiteit (DIA) aan, en geef de insuline eventueel een eigen naam (optioneel).
 - Gebruik de knop Opslaan rechtsboven in het scherm.
 
-Nu is de insuline gemaakt, maar je kunt hem niet direct kiezen in **Insuline-instellingen**.
+Nu is de insuline gemaakt, maar je kunt hem niet direct kiezen in **Insuline instellingen**.
 
 ### Concentratie wisselen van U100 naar Uxxx (AAPS 4)
 
@@ -170,7 +170,7 @@ Om veiligheidsredenen legt AAPS een concentratiewissel alleen vast bij een reser
 Als je begint met U100-insuline, passen je profiel, historische gegevens en rapporten al bij de standaard van internationale eenheden. De wissel is dan heel "makkelijk":
 
 - Bij een patch/pod-pomp is er een aparte stap bij het wisselen van de pomp, waarin je de insuline kiest die je erin doet.
-- Bij een slangpomp klik je in het Overzicht (uitgevouwen statusbalk) op de knop Prime/Vul (voor de insulinewissel) en daarna op de knop "Wijzigen".
+- Bij een slangpomp klik je in het Overzicht (uitgevouwen statusbalk) op de knop Prime/Vul (voor de insulinewissel) en daarna op de knop "Wissel".
 
 1. Kies de gewenste concentratie in het keuzemenu (bijv. `U200`).
 1. Kies daaronder de juiste insuline. Totdat je bevestigt, staat boven de naam **Wordt geactiveerd** (in plaats van **Momenteel actief**).
@@ -179,7 +179,7 @@ Als je begint met U100-insuline, passen je profiel, historische gegevens en rapp
 
 1. **Belangrijk:** de concentratiewissel wordt pas in AAPS vastgelegd nadat de profiel wissel op de pomp is toegepast.
    - Deze stap is verplicht voor alle patch/pod-pompen.
-   - Bij slangpompen wacht je tot de profiel wissel op de pomp is toegepast, of doe je dit in **Beheer → Profiel** of **Insuline-instellingen**.
+   - Bij slangpompen wacht je tot de profiel wissel op de pomp is toegepast, of doe je dit in **Beheren → Profiel** of **Insuline instellingen**.
 
 Dat is alles!
 
@@ -195,10 +195,10 @@ Onthoud: het moeilijkste is waarschijnlijk niet de wissel goed doen in AAPS, maa
   - Doe een tijdelijke profiel wissel van 200% op je standaard lopende profiel.
   - Open het menu (☰) → **Behandelingen**, ga naar het tabblad **Profiel wissel** en dupliceer het nieuwe profiel van 200% (zie [Een profiel wissel dupliceren](#your-aaps-profile-clone-profile-switch)).
   - Ga terug naar je standaardprofiel tot de volgende reservoir- of patchwissel.
-  - Ga naar **Beheer → Profiel** en geef dit nieuwe profiel een duidelijke naam (dit wordt je toekomstige profiel bij de U200-insuline die in AAPS 4 is ingesteld).
+  - Ga naar **Beheren → Profiel** en geef dit nieuwe profiel een duidelijke naam (dit wordt je toekomstige profiel bij de U200-insuline die in AAPS 4 is ingesteld).
 - Als je de functie Dynamische ISF (DynISF) gebruikt, moet je die minstens een week uitschakelen:
   - Al je geschiedenis in AAPS of Nightscout staat in de verkeerde eenheden (CU): de helft van de echte waarde in internationale eenheden. Wacht minstens een week met de U200-insuline in gebruik voordat je het weer inschakelt.
-- Nu ben je klaar om bij de volgende insulinewissel of podwissel van insuline te wisselen (met een nieuwe U200 die is ingesteld in **Insuline-instellingen**).
+- Nu ben je klaar om bij de volgende insulinewissel of podwissel van insuline te wisselen (met een nieuwe U200 die is ingesteld in **Insuline instellingen**).
 - Als de nieuwe U200-insuline goed is toegepast, vergeet dan niet het nieuwe standaardprofiel uit de eerste stap toe te passen.
 
 ## Hoe beheer je externe bolussen met verschillende pennen?
@@ -214,4 +214,4 @@ Onthoud dat alle schaalverdelingen op pennen in internationale eenheden zijn. We
 
 Met het interne concentratiebeheer in AAPS is het veel eenvoudiger: kies gewoon de gewenste hoeveelheid op de pen (welke pen en welke insuline je ook gebruikt) en leg die vast in AAPS.
 
-- Als je bij de knop Insuline een externe bolus kiest, kun je elk type insuline kiezen dat in **Insuline-instellingen** is ingesteld (vooral U100 en U200 voor pennen). Zo krijg je een zeer nauwkeurig berekende IOB, ook als de piek/DIA van de insuline in de pen heel anders is dan de piek/DIA van de insuline in de pomp.
+- Als je bij de knop Insuline een externe bolus kiest, kun je elk type insuline kiezen dat in **Insuline instellingen** is ingesteld (vooral U100 en U200 voor pennen). Zo krijg je een zeer nauwkeurig berekende IOB, ook als de piek/DIA van de insuline in de pen heel anders is dan de piek/DIA van de insuline in de pomp.
