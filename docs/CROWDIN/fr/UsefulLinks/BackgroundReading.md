@@ -1,12 +1,12 @@
 # Ressources utiles à lire avant de commencer
 
-Avant de construire votre plateforme, vous devez faire beaucoup de lecture pour comprendre comment tout fonctionne et pour en tirer le meilleur parti. Nous avons dressé une liste des endroits où vous pouvez vous rendre et nous espérons répondre à bon nombre de vos questions.
+Avant de construire votre plateforme, vous devez faire beaucoup de lecture pour comprendre comment tout fonctionne et pour en tirer le meilleur parti. Nous avons dressé une liste de ressources pour vous aider à démarrer. Elles répondront, nous l'espérons, à beaucoup de vos questions.
 
 ## Lectures complémentaires
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documentation - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[Documentation OpenAPS - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Documentation Loop - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
@@ -26,11 +26,11 @@ Avant de construire votre plateforme, vous devez faire beaucoup de lecture pour 
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) by Adam Brown
+[“Bright Spots and Landmines”](https://diatribe.org/bright-spots-and-landmines/) d'Adam Brown
 
-[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner
+[“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) de Gary Scheiner
 
-["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts
+["Pumping insulin"](https://amzn.eu/d/iaCsFa2) de John Walsh & Ruth Roberts
 
 ## Articles de fond concernant la boucle fermée DIY
 
@@ -44,4 +44,4 @@ Avant de construire votre plateforme, vous devez faire beaucoup de lecture pour 
 
 [Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[Interview en direct avec Dana Lewis, créatrice du Système de Pancreas Artificiel DIY - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[Interview en direct avec Dana Lewis, créatrice du Do-It-Yourself Pancreas System (système de pancréas artificiel DIY) - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
