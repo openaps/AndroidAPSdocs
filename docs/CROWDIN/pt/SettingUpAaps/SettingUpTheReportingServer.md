@@ -1,4 +1,4 @@
-# Setting up the Reporting Server
+# Configurar o servidor de relatórios
 
 Neste momento existem dois servidores de relatórios que pode usar com o **AAPS**:
 
