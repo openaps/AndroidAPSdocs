@@ -305,7 +305,7 @@ In de standaard build van de AAPS Wear OS APK zitten een aantal watchfaces. Zodr
 
 4. Klik op de knop "Laad Watchface" en kies de watchface die je mooi vindt
 
-![Lijst om een aangepaste wijzerplaat te kiezen](../images/wearos/select_custom_watchface.png)
+![Lijst om een aangepaste watchface te kiezen](../images/wearos/select_custom_watchface.png)
 
 5. Kijk op je horloge: de watchface "AAPS (Custom)" toont nu de skin die je hebt gekozen. Wacht een paar seconden tot het scherm is bijgewerkt. Het scherm **Wear** op de telefoon toont nu de naam van de geladen watchface en een voorbeeld ervan. **Watchface informatie** toont de details en de velden die erin zitten. **Meer wijzerplaten** opent de [uitwisselsite](../ExchangeSiteCustomWatchfaces/index.md) waar je andere aangepaste watchfaces kunt downloaden. Je kunt nu de complicaties enz. aanpassen: druk lang op de watchface en druk dan op de knop "Aanpassen" op de afbeelding van de watchface.
 
