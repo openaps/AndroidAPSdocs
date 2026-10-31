@@ -24,7 +24,7 @@ Ten krok jest obowiązkowy tylko za pierwszym razem. Przy kolejnych aktualizacja
 :local: true
 ```
 
-Jeśli masz problemy, zobacz osobną stronę [Rozwiązywanie problemów z Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+In case you experience problems, see separate page for [browser build troubleshooting](../GettingHelp/BrowserBuildTroubleshooting.md).
 
 ### Wyeksportuj swoje ustawienia
 
