@@ -77,7 +77,7 @@
 
 - Actualización de varias páginas:
   - [¿Cuánto tiempo llevará?](#preparing-how-long-will-it-take), [Resumen de componentes](../Getting-Started/ComponentOverview.md), [Completar los objetivos](../SettingUpAaps/CompletingTheObjectives.md), [Tu perfil de AAPS](../SettingUpAaps/YourAapsProfile.md), [Tabla de configuraciones](../SettingUpAaps/ConfigBuilder.md) y [Preferencias](../SettingUpAaps/Preferences.md), [Pantallas de AAPS](../DailyLifeWithAaps/AapsScreens.md) @emilise
-  - [Cálculo de COB](../DailyLifeWithAaps/CobCalculation.md), [ISF Dinámico](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
+  - [Cálculo de carbohidratos (COB)](../DailyLifeWithAaps/CobCalculation.md), [ISF Dinámico](../DailyLifeWithAaps/DynamicISF.md) @UnderCliffe10
 - [Instrucciones de compilación para Android Studio Ladybug](../SettingUpAaps/BuildingAaps.md) @tanja
 - Trabajo técnico (proceso de publicación de la documentación, organización de archivos...) @psonnera y @emilise
 
