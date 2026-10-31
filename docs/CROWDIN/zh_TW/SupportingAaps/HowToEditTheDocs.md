@@ -34,7 +34,7 @@
 
 3. 這兩種選擇中的任何一個都將在你的庫中建立一個新分支，你的編輯將儲存在該分支中。對文件進行編輯。
 
-我們使用Markdown語法來編寫文件頁面。 The files have the suffix ".md". The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. 請確保使用正確的語法，如[以下所述](#code-syntax)。
+我們使用Markdown語法來編寫文件頁面。檔案的副檔名是「.md」。 Markdown 規格並非固定不變；目前我們使用 myst_parser 處理 Markdown 檔案。請確保使用正確的語法，如[以下所述](#code-syntax)。
 
 ![編輯分支](../images/PR3.png)
 
@@ -147,10 +147,10 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 圖像類型應為PNG或JPEG。
 
-Image names should conform to one of the following naming rules. 在示例中，我使用png作為後綴。如果使用JPEG，請使用jpeg作為後綴。
+圖片名稱應符合下列其中一種命名規則。在示例中，我使用png作為後綴。如果使用JPEG，請使用jpeg作為後綴。
 
 - `filename-image-xx.png` 其中xx是該文件中圖像的唯一雙位數字。
-- `filename-image-xx.png` where xx is a meaningful name chosen by the author of the md file.
+- `filename-image-xx.png`，其中 xx 是由 Markdown 檔案作者選定且具意義的名稱。
 
 圖像位於英文語系的圖像文件夾中，並透過Crowdin自動傳播到其他語系。你無需為此做任何事！
 
@@ -161,7 +161,7 @@ Image names should conform to one of the following naming rules. 在示例中，
 - 來自網頁的截圖圖像寬度應達到**1050像素**。
 - 流程圖的寬度應達到**1050像素**。
 - 應用程序的截圖寬度應達到**500像素**。如果沒有必要，請不要將它們並排放置。
-- Screenshots from the watch (**Wear OS**) should be up to **360 pixels wide**. Never upscale a screenshot that is smaller.
+- **Wear OS** 手錶的螢幕截圖寬度應不超過 **360 像素**。請勿放大較小的螢幕截圖。
 
 ### 連結
 
@@ -199,7 +199,7 @@ Image names should conform to one of the following naming rules. 在示例中，
 
 你可以在文件中添加註釋和警告框。
 
-Furthermore you can add collapsing notes for detailed information, so that users who are not interested in the details are not put off reading the text. 請謹慎使用這些功能，因為文件應儘可能易於閱讀。
+此外，你可以加入可收合的補充說明，提供詳細資訊，避免讓對細節不感興趣的使用者因此不想繼續閱讀。請謹慎使用這些功能，因為文件應儘可能易於閱讀。
 
 #### 註釋
 
@@ -312,7 +312,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 - *“胰島素（主語）由幫浦（賓語）輸送（動詞）。”*
 
-*“delivered”* is a passive verb here. 與主動動詞句子相比，主語和賓語位置調換了。我們不得不引入“由”和“被”使句子變得更長。還要考慮以主動動詞開頭。
+*「delivered」（已輸送）*在此處是被動語態。與主動動詞句子相比，主語和賓語位置調換了。我們不得不引入“由”和“被”使句子變得更長。還要考慮以主動動詞開頭。
 
 例如：*“你可以透過AAPS幫浦選單將幫浦與手機連線，並且有多種幫浦可供連線。”*
 
@@ -527,7 +527,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
     
     *w 比 z 更好，因為…*
     
-    Offer judgements and even opinions where appropriate.
+    適當時，請提出判斷，甚至表達意見。
     
     *系統 y 中的 x 類似於系統 z 中的 w。然而…*
     
@@ -553,7 +553,7 @@ Furthermore you can add collapsing notes for detailed information, so that users
 
 #### AAPS 常見要點
 
-- For glucose values, state both mg/dL and mmol/L in each occurrence (also consider this for screenshots, if possible).
+- 每次提到血糖值時，請同時標示 mg/dL 和 mmol/L（如果可行，也請在螢幕截圖中一併標示）。
 
 - 為了保持一致性，使用 “AAPS” 而不是 “Android APS”。
 
