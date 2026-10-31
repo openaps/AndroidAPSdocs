@@ -42,7 +42,7 @@ Abychom se tomu vyhnuli, existují dvě možnosti:
 
 * Na telefonu v nastavení vypněte 'Automatická změna data a času' (ruční změna časového pásma)
 
-Když vysednete z letadla:
+When you get off the plane:
 
 * vypněte pumpu
 * změňte časové pásmo na telefonu
@@ -62,7 +62,7 @@ Insight také do historie zaznamenává, v kterém okamžiku byl čas změněn a
 
 Může to způsobit nepřesnosti v **CDD**. Neměl by to však být problém.
 
-Uživatel pumpy Insight se tedy nemusí obávat změn časového pásma a změn času. K tomuto pravidlu existuje jedna výjimka: pumpa Insight má malou vnitřní baterii k napájení času atd. zatímco měníte "skutečnou" baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. V takovém případě se všechny záznamy před výměnou baterie ve výpočtech AAPS vynechají, protože správný čas nelze spolehlivě určit.
+Uživatel pumpy Insight se tedy nemusí obávat změn časového pásma a změn času. K tomuto pravidlu existuje jedna výjimka: pumpa Insight má malou vnitřní baterii k napájení času atd. zatímco měníte "skutečnou" baterii. If changing battery takes too long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. V takovém případě se všechny záznamy před výměnou baterie ve výpočtech AAPS vynechají, protože správný čas nelze spolehlivě určit.
 
 ## Změna časového pásma u Accu-Chek Combo
 
