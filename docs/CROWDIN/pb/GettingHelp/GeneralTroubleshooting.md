@@ -34,7 +34,7 @@ If none of the links solve your problem, see [Where can I get help](WhereCanIGet
 * [Google Play Protect warning](#transferring-installing-play-protect-warning): the app is reported as unsafe.
 * Installation **blocked** with a message about an unverified developer: see [Android developer verification](#android-developer-verification) for the free installation methods.
 
-### Settings
+### Configurações
 
 * [Profile: "Basal rate is not compatible with the current pump"](#your-aaps-profile-basal-not-compatible)
 * [Pump: "Data is coming from different pump"](#config-builder-wrong-pump-data)
