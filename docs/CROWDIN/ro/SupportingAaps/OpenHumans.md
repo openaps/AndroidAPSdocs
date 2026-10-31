@@ -98,7 +98,7 @@ Consultați de asemenea [Termeni de Utilizare Open Humans](https://www.openhuman
 
 ## Confidențialitatea datelor
 
-Open Humans iti protejeaza intimitatea prin atribuirea unui ID numeric pentru fiecare proiect. Aceasta permite proiectelor să recunoască sursa fara sa te idntifice. The Application ID uploaded by AAPS is similar and only helps administrate the data. Mai multe informații pot fi gasite aici:
+Open Humans iti protejeaza intimitatea prin atribuirea unui ID numeric pentru fiecare proiect. This allows projects to recognize but not identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. Mai multe informații pot fi gasite aici:
 
 - [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)
