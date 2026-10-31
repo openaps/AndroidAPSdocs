@@ -15,7 +15,7 @@ To pierwszy ekran, który zobaczysz po otwarciu **AAPS**. Zawiera większość i
 
 ### Sekcja A – Górny pasek
 
-* **Menu** (☰) po lewej otwiera panel nawigacji z pozycjami **Historia leczenia**, **Przegląd historii**, **Statystyki**, **Pomocnik profilu**, **Konserwacja**, **Kreator konfiguracji**, **Ustawienia** i innymi.
+* **Menu** (☰) po lewej otwiera panel nawigacji z pozycjami **Historia leczenia**, **Przegląd historii**, **Statystyki**, **Pomocnik profilu**, **Konserwacja**, **Kreator konfiguracji**, **Konfiguracja** i innymi.
 * **Pasek wyszukiwania** znajduje ustawienia, okna i dokumentację – po prostu zacznij pisać (zobacz [Wyszukiwanie globalne](../DailyLifeWithAaps/GlobalSearch.md)).
 * Ikona **Ustawienia** (koło zębate) po prawej otwiera wszystkie [ustawienia](../SettingUpAaps/Preferences.md).
 
@@ -421,7 +421,7 @@ Aktywna insulina razem z bolusami **i bazą**.
 
 (aaps-screens-iob)=
 
-#### Insulin on board (IOB)
+#### Aktywna insulina (IOB)
 
 Pokazuje insulinę aktywną (= insulinę, która nadal działa w Twoim organizmie). Obejmuje insulinę z bolusów i baz tymczasowych (**ale nie dawki bazowe ustawione w profilu**).
 
@@ -537,7 +537,7 @@ Dolny pasek nawigacji daje dostęp do:
 
 * **Sceny** – widoczne tylko wtedy, gdy masz co najmniej jedną [scenę](../DailyLifeWithAaps/Scenes.md) albo regułę **Automatyzacji** oznaczoną jako **Akcja użytkownika**. Otwiera panel, z którego możesz je uruchomić; znaczek pokazuje, ile możesz uruchomić w tej chwili. **Ołówek** na górze panelu otwiera **Zarządzaj → Sceny**.
 
-* **Zarządzaj** – miejsce na wszystko, czym zarządzasz w **AAPS**: Profil, Ustawienia insuliny, Cel tymczasowy, Szybki bolus, Sceny, Automatyzacja, Żywność, Zmiana miejsca, Pompa i Autoryzowani opiekunowie. Pod nimi są akcje urządzeń i bazy, np. Założenie sensora i Baza tymczasowa. Niektóre pozycje pojawiają się tylko wtedy, gdy pasują do Twojego zestawu – np. Napełnij/Wypełnij i zmiana baterii zależą od pompy, a Baza tymczasowa, Bolus Przedłużony i wpisy portalu opieki są ukryte w [trybie uproszczonym](#preferences-simple-mode):
+* **Zarządzaj** – miejsce na wszystko, czym zarządzasz w **AAPS**: Profil, Ustawienia insuliny, Cel tymczasowy, Szybki kalkulator, Sceny, Automatyzacja, Żywność, Zmiana miejsca, Pompa i Autoryzowani opiekunowie. Pod nimi są akcje urządzeń i bazy, np. Założenie sensora i Baza tymczasowa. Niektóre pozycje pojawiają się tylko wtedy, gdy pasują do Twojego zestawu – np. Napełnij/Wypełnij i zmiana baterii zależą od pompy, a Baza tymczasowa, Bolus Przedłużony i wpisy portalu opieki są ukryte w [trybie uproszczonym](#preferences-simple-mode):
     
     ![Panel Zarządzaj](../images/v4/Screens/manage_sheet.png)
 
@@ -545,7 +545,7 @@ Dolny pasek nawigacji daje dostęp do:
 
 (aaps-screens-notifications)=
 
-#### Notifications
+#### Powiadomienia
 
 Nad dolnym paskiem, po prawej, może pojawić się **dymek powiadomień**. Zbiera aktywne powiadomienia **AAPS**; mała liczba pokazuje, ile ich jest. Jego kolor zależy od najważniejszego z nich: czerwony dla pilnej wiadomości, zielony dla zwykłej informacji.
 
@@ -589,7 +589,7 @@ W polu **Węglowodany** wpisujesz szacowaną ilość węglowodanów **w gramach*
 
 #### Typ węglowodanów: pieczywo, ciasto lub pizza
 
-Pod polem **Węglowodany** przyciski **Pieczywo**, **Ciasto** i **Pizza** mówią **AAPS**, jak szybko wchłania się posiłek. Przy **Ciasto** i **Pizza** bolus pokrywa teraz tylko część węglowodanów, a reszta jest dodawana później jako wirtualne węgle (eCarbs). Procenty i czasy znajdziesz w części [Typ węglowodanów: pieczywo, ciasto lub pizza](#AapsScreens-carbs-type) na stronie o przedłużonych węglowodanach.
+Pod polem **Węglowodany** przyciski **Pieczywo**, **Ciasto** i **Pizza** mówią **AAPS**, jak szybko wchłania się posiłek. Przy **Ciasto** i **Pizza** bolus pokrywa teraz tylko część węglowodanów, a reszta jest dodawana później jako eCarbs. Procenty i czasy znajdziesz w części [Typ węglowodanów: pieczywo, ciasto lub pizza](#AapsScreens-carbs-type) na stronie o przedłużonych węglowodanach.
 
 Wiersz **Korekta** służy do zmiany końcowej dawki, jeśli z jakiegoś powodu tego chcesz.
 
@@ -613,7 +613,7 @@ Pole **BG** jest zwykle już wypełnione ostatnim odczytem z CGM. Jeśli nie mas
 
 Przycisk wyniku na dole pokazuje proponowany bolus; po jego naciśnięciu musisz potwierdzić, zanim zostanie podana jakakolwiek insulina.
 
-Good to know:
+Warto wiedzieć:
 
 * Jeśli obliczony bolus jest większy niż Twój **[Maksymalny bolus](#Preferences-maximum-bolus)**, zostaje zmniejszony do maksymalnego bolusa, a potwierdzenie pokazuje ostrzeżenie "Zastosowano ograniczenie bolusa". [Szybki kalkulator](../DailyLifeWithAaps/QuickWizards.md) jest w takim przypadku odrzucany.
 * Gdy bolus jest tylko zapisywany (np. gdy pompa jest odłączona), ostrzeżenie "**Bolus zostanie jedynie odnotowany**" zostaje na górze okna, także podczas przewijania.
@@ -685,18 +685,18 @@ Zobacz [Czas działania insuliny](#Config-Builder-insulin-dia), aby dowiedzieć 
 
 ![Ekran stanu wirtualnej pompy](../images/v4/Pumps/virtual_pump_screen.png)
 
-**Zarządzaj → Pompa** (lub **Ustawienia → Pompa → Otwórz wtyczkę**) pokazuje stan Twojej pompy: ostatnie połączenie, podstawową dawkę bazową, baterię, zbiornik...
+**Zarządzaj → Pompa** (lub **Konfiguracja → Pompa → Otwórz wtyczkę**) pokazuje stan Twojej pompy: ostatnie połączenie, podstawową dawkę bazową, baterię, zbiornik...
 
 * Pokazane informacje zależą od modelu pompy.
 * Szczegóły znajdziesz na [stronie o pompach](../Getting-Started/CompatiblePumps.md).
 
 ## Pętla, AMA / SMB
 
-**Ustawienia → Pętla → Otwórz wtyczkę** (i **Ustawienia → APS → Otwórz wtyczkę**) pokazują szczegóły obliczeń algorytmu i dlaczego **AAPS** działa tak, a nie inaczej: ostatnie uruchomienie, wynikające z niego żądanie i ograniczenia. Ekran **Pętla** pokazuje tylko ograniczenia, które naprawdę ograniczyły podaną bazę tymczasową lub SMB (i dlaczego zamknięta pętla nie jest dozwolona, jeśli tak jest); ekran **APS** pokazuje wszystkie ograniczenia użyte w obliczeniu.
+**Konfiguracja → Pętla → Otwórz wtyczkę** (i **Konfiguracja → APS → Otwórz wtyczkę**) pokazują szczegóły obliczeń algorytmu i dlaczego **AAPS** działa tak, a nie inaczej: ostatnie uruchomienie, wynikające z niego żądanie i ograniczenia. Ekran **Pętla** pokazuje tylko ograniczenia, które naprawdę ograniczyły podaną bazę tymczasową lub SMB (i dlaczego zamknięta pętla nie jest dozwolona, jeśli tak jest); ekran **APS** pokazuje wszystkie ograniczenia użyte w obliczeniu.
 
 Obliczenia są wykonywane za każdym razem, gdy system dostanie nowy odczyt z CGM.
 
-Więcej szczegółów znajdziesz w [części APS na stronie Ustawienia](#Config-Builder-aps).
+Więcej szczegółów znajdziesz w [części APS na stronie Konfiguracja (Config Builder)](#Config-Builder-aps).
 
 (aaps-screens-profile)=
 
@@ -718,7 +718,7 @@ Profil zawiera Twoje indywidualne ustawienia cukrzycy. Więcej informacji znajdz
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-**Ustawienia → Komunikacja → NSClientV3 → Otwórz wtyczkę** pokazuje stan połączenia z Twoją stroną Nightscout: URL, stan websocket, kolejkę i dziennik synchronizacji.
+**Konfiguracja → Komunikacja → NSClientV3 → Otwórz wtyczkę** pokazuje stan połączenia z Twoją stroną Nightscout: URL, stan websocket, kolejkę i dziennik synchronizacji.
 
 Ustawienia możesz zmienić w [ustawieniach NSClient](#Preferences-nsclient).
 
@@ -730,7 +730,7 @@ Rozwiązywanie problemów opisuje ta [strona](../GettingHelp/TroubleshootingNsCl
 
 ![Ekran źródła BG](../images/Screenshots_BGSource.png)
 
-**Ustawienia → Źródło BG → Otwórz wtyczkę** pokazuje historię odczytów CGM i pozwala usunąć odczyty w razie błędu (np. fałszywie niski odczyt z ucisku) lub duplikatów.
+**Konfiguracja → Źródło BG → Otwórz wtyczkę** pokazuje historię odczytów CGM i pozwala usunąć odczyty w razie błędu (np. fałszywie niski odczyt z ucisku) lub duplikatów.
 
 ## Historia leczenia
 
@@ -746,9 +746,9 @@ Pozwala cofnąć się w historii **AAPS**. Zobacz osobną stronę [Przegląd dan
 
 (aaps-screens-statistics)=
 
-## Statistics
+## Statystyki
 
-![Statistics](../images/v4/Screens/statistics.png)
+![Statystyki](../images/v4/Screens/statistics.png)
 
 Otwórz **menu** (☰) i wybierz **Statystyki**.
 
@@ -756,7 +756,7 @@ Pokazuje na czterech zakładkach statystyki dobowej dawki insuliny, czasu w zakr
 
 (aaps-screens-profile-helper)=
 
-## Profile Helper
+## Pomocnik profilu
 
 Otwórz **menu** (☰) i wybierz **Pomocnik profilu**.
 
