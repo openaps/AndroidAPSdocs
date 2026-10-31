@@ -1,4 +1,4 @@
 # PocTech CT-100
 
-- Install [PocTech App](https://play.google.com/store/apps/details?id=com.poctechcorp.pocct)
-- Select PocTech App in [**Configuration → BG Source**](#Config-Builder-bg-source).
+- Instala la [app PocTech](https://play.google.com/store/apps/details?id=com.poctechcorp.pocct)
+- Selecciona PocTech App en [**Configuración → Fuente de glucosa**](#Config-Builder-bg-source).
